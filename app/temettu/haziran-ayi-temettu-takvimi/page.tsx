@@ -1,0 +1,79 @@
+import Link from "next/link";
+
+const haziranTemettuleri = [
+  { sembol: "LOGO", tarih: "30 Haziran 2026", verim: "% 3,74", brut: "₺5,26", net: "₺4,4737", toplam: "₺499.999.991", oran: "%33" },
+  { sembol: "ISSEN", tarih: "30 Haziran 2026", verim: "% 0,50", brut: "₺0,04", net: "₺0,0340", toplam: "₺16.975.919", oran: "" },
+  { sembol: "ISKPL", tarih: "26 Haziran 2026", verim: "% 0,00", brut: "₺0,00", net: "₺0,0004", toplam: "₺646.650", oran: "%1" },
+  { sembol: "AVPGY", tarih: "24 Haziran 2026", verim: "% 4,68", brut: "₺2,50", net: "₺2,5000", toplam: "₺1.000.000.000", oran: "%62" },
+  { sembol: "CEMTS", tarih: "24 Haziran 2026", verim: "% 2,74", brut: "₺0,30", net: "₺0,2550", toplam: "₺150.000.000", oran: "" },
+  { sembol: "EKGYO", tarih: "24 Haziran 2026", verim: "% 2,79", brut: "₺0,60", net: "₺0,6000", toplam: "₺2.280.000.000", oran: "%37" },
+  { sembol: "PAGYO", tarih: "24 Haziran 2026", verim: "% 3,08", brut: "₺3,90", net: "₺3,9000", toplam: "₺339.300.000", oran: "%22" },
+  { sembol: "BIMAS", tarih: "17 Haziran 2026", verim: "% 0,53", brut: "₺4,00", net: "₺3,4000", toplam: "₺2.400.000.000", oran: "%13" },
+  { sembol: "INDES", tarih: "15 Haziran 2026", verim: "% 2,30", brut: "₺0,22", net: "₺0,1847", toplam: "₺163.000.875", oran: "%34" },
+  { sembol: "ATATP", tarih: "10 Haziran 2026", verim: "% 0,69", brut: "₺1,00", net: "₺0,8500", toplam: "₺93.750.000", oran: "%5" },
+  { sembol: "YAPRK", tarih: "10 Haziran 2026", verim: "% 0,16", brut: "₺0,03", net: "₺0,0213", toplam: "₺7.455.000", oran: "%38" },
+  { sembol: "AVPGY", tarih: "3 Haziran 2026", verim: "% 4,68", brut: "₺2,50", net: "₺2,5000", toplam: "₺1.000.000.000", oran: "%62" },
+  { sembol: "SISE", tarih: "1 Haziran 2026", verim: "% 1,24", brut: "₺0,59", net: "₺0,4995", toplam: "₺1.799.999.717", oran: "%19" },
+  { sembol: "AYES", tarih: "1 Haziran 2026", verim: "% 1,15", brut: "₺0,35", net: "₺0,3000", toplam: "₺52.941.165", oran: "%52" },
+  { sembol: "MACKO", tarih: "1 Haziran 2026", verim: "% 7,38", brut: "₺2,70", net: "₺2,2950", toplam: "₺270.000.000", oran: "%84" },
+];
+
+export default function HaziranAyiTemettuTakvimiPage() {
+  return (
+    <main className="min-h-screen bg-white px-4 py-6 md:px-6">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-6 flex gap-3">
+          <Link
+            href="/"
+            className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
+          >
+            Ana Sayfa
+          </Link>
+
+          <Link
+            href="/temettu"
+            className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
+          >
+            Geri
+          </Link>
+        </div>
+
+        <h1 className="mb-6 text-3xl font-bold text-zinc-900">
+          Haziran Ayı Temettü Takvimi
+        </h1>
+
+        <div className="overflow-x-auto rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
+          <table className="min-w-full overflow-hidden rounded-xl border border-zinc-200 bg-white text-sm">
+            <thead className="bg-green-100 text-zinc-700">
+              <tr>
+                <th className="px-4 py-3 text-left">Sembol</th>
+                <th className="px-4 py-3 text-left">Tarih</th>
+                <th className="px-4 py-3 text-right">Temettü Verim (%)</th>
+                <th className="px-4 py-3 text-right">Hisse Başı Brüt TL</th>
+                <th className="px-4 py-3 text-right">Hisse Başı Net TL</th>
+                <th className="px-4 py-3 text-right">Toplam Temettü (TL)</th>
+                <th className="px-4 py-3 text-right">Dağıtma Oranı (%)</th>
+              </tr>
+            </thead>
+            <tbody>
+              {haziranTemettuleri.map((item, index) => (
+                <tr
+                  key={`${item.sembol}-${item.tarih}`}
+                  className={`border-t border-zinc-100 ${index % 2 === 1 ? "bg-sky-50" : "bg-white"}`}
+                >
+                  <td className="px-4 py-3 font-semibold text-zinc-900">{item.sembol}</td>
+                  <td className="px-4 py-3 text-zinc-700">{item.tarih}</td>
+                  <td className="px-4 py-3 text-right text-zinc-700">{item.verim}</td>
+                  <td className="px-4 py-3 text-right font-semibold text-zinc-900">{item.brut}</td>
+                  <td className="px-4 py-3 text-right font-semibold text-zinc-900">{item.net}</td>
+                  <td className="px-4 py-3 text-right text-zinc-700">{item.toplam}</td>
+                  <td className="px-4 py-3 text-right text-zinc-700">{item.oran}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  );
+}
