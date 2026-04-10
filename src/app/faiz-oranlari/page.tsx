@@ -29,25 +29,25 @@ const sectionCards = [
     title: "Mevduat Faizi",
     description:
       "Bankaların mevduat faiz oranlarını, vade yapılarını ve net getiri alanlarını düzenli şekilde takip edin.",
-    href: "/faiz-oranlari/mevduat-faizi",
+    href: "/mevduat-kredi-faizleri/mevduat-faizi-oranlari",
   },
   {
     title: "İhtiyaç Kredisi",
     description:
       "İhtiyaç kredisi faiz oranlarını ve örnek geri ödeme yapılarını karşılaştırmalı şekilde inceleyin.",
-    href: "/faiz-oranlari/ihtiyac-kredisi",
+    href: "/mevduat-kredi-faizleri/tuketici-faizi-oranlari",
   },
   {
     title: "Konut Kredisi",
     description:
       "Konut kredisi faiz oranlarını ve uzun vadeli ödeme yapısını tek sayfada daha rahat görün.",
-    href: "/faiz-oranlari/konut-kredisi",
+    href: "/mevduat-kredi-faizleri/konut-kredisi-oranlari",
   },
   {
     title: "Taşıt Kredisi",
     description:
       "Taşıt kredisi oranlarını, örnek maliyet yapısını ve banka karşılaştırmalarını düzenli görünümle takip edin.",
-    href: "/faiz-oranlari/tasit-kredisi",
+    href: "/mevduat-kredi-faizleri/tasit-kredisi-oranlari",
   },
 ];
 
