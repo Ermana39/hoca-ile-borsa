@@ -85,7 +85,7 @@ function writeJsonFile<T>(filePath: string, data: T) {
   try {
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2), "utf8");
   } catch {
-    // Canlıda yazılamazsa sayfayı düşürme
+    // canlıda yazılamazsa sayfayı düşürme
   }
 }
 
@@ -246,7 +246,7 @@ export function addView(page: string) {
 
     writeJsonFile(historyFile, history);
   } catch {
-    // Hata olsa bile sayfa açılmaya devam etsin
+    // hata olsa bile sayfa açılmaya devam etsin
   }
 }
 
@@ -279,7 +279,7 @@ export function addClick(source: string, pathValue: string, label?: string) {
 
     writeJsonFile(filePath, clicks);
   } catch {
-    // Hata olsa bile sayfa açılmaya devam etsin
+    // sessiz geç
   }
 }
 
@@ -450,6 +450,24 @@ export function getAllViews() {
   }
 }
 
+export function countViewsSince(since: Date) {
+  const sinceDate = toDateKey(since);
+  const history = readViewsHistory();
+
+  return history
+    .filter((item) => item.date >= sinceDate)
+    .reduce((sum, item) => sum + item.count, 0);
+}
+
+export function countClicksSince(since: Date) {
+  const sinceDate = toDateKey(since);
+  const clicks = readClicks();
+
+  return clicks
+    .filter((item) => item.date >= sinceDate)
+    .reduce((sum, item) => sum + item.count, 0);
+}
+
 export function groupViewsByPath() {
   const views = readViews();
 
@@ -480,6 +498,22 @@ export function groupViewsByPathSince(since: Date) {
     .sort((a, b) => b.count - a.count);
 }
 
+export function groupClicksBySource() {
+  const clicks = readClicks();
+  const grouped = new Map<string, number>();
+
+  for (const item of clicks) {
+    grouped.set(item.source, (grouped.get(item.source) || 0) + item.count);
+  }
+
+  return Array.from(grouped.entries())
+    .map(([source, count]) => ({
+      source,
+      count,
+    }))
+    .sort((a, b) => b.count - a.count);
+}
+
 export function groupClicksBySourceSince(since: Date) {
   const sinceDate = toDateKey(since);
   const clicks = readClicks();
@@ -497,4 +531,84 @@ export function groupClicksBySourceSince(since: Date) {
       count,
     }))
     .sort((a, b) => b.count - a.count);
+}
+
+export function groupClicksByLabel() {
+  const clicks = readClicks();
+  const grouped = new Map<string, number>();
+
+  for (const item of clicks) {
+    const key = item.label || "(etiketsiz)";
+    grouped.set(key, (grouped.get(key) || 0) + item.count);
+  }
+
+  return Array.from(grouped.entries())
+    .map(([label, count]) => ({
+      label,
+      count,
+    }))
+    .sort((a, b) => b.count - a.count);
+}
+
+export function groupClicksByLabelSince(since: Date) {
+  const sinceDate = toDateKey(since);
+  const clicks = readClicks();
+  const grouped = new Map<string, number>();
+
+  for (const item of clicks) {
+    if (item.date >= sinceDate) {
+      const key = item.label || "(etiketsiz)";
+      grouped.set(key, (grouped.get(key) || 0) + item.count);
+    }
+  }
+
+  return Array.from(grouped.entries())
+    .map(([label, count]) => ({
+      label,
+      count,
+    }))
+    .sort((a, b) => b.count - a.count);
+}
+
+export function getDailySeries(since: Date) {
+  const sinceDate = toDateKey(since);
+  const viewHistory = readViewsHistory();
+  const clicks = readClicks();
+
+  const grouped = new Map<
+    string,
+    {
+      date: string;
+      views: number;
+      clicks: number;
+    }
+  >();
+
+  for (const item of viewHistory) {
+    if (item.date >= sinceDate) {
+      const current = grouped.get(item.date) || {
+        date: item.date,
+        views: 0,
+        clicks: 0,
+      };
+
+      current.views += item.count;
+      grouped.set(item.date, current);
+    }
+  }
+
+  for (const item of clicks) {
+    if (item.date >= sinceDate) {
+      const current = grouped.get(item.date) || {
+        date: item.date,
+        views: 0,
+        clicks: 0,
+      };
+
+      current.clicks += item.count;
+      grouped.set(item.date, current);
+    }
+  }
+
+  return Array.from(grouped.values()).sort((a, b) => a.date.localeCompare(b.date));
 }
