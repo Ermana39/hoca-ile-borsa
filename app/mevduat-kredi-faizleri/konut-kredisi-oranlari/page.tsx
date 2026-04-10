@@ -6,11 +6,11 @@ import { addView } from "@/lib/page-stats";
 import { KrediHesaplayici } from "@/components/faiz-hesaplayicilar";
 
 export const metadata: Metadata = {
-  title: "Tüketici Faizi Oranları | Hoca İle Borsa",
+  title: "Konut Kredisi Oranları | Hoca İle Borsa",
   description:
-    "Bankalara göre güncel ihtiyaç kredisi ve finansmanı faiz oranları listesi. Banka adı ve minimum faiz oranı bilgileri.",
+    "Bankalara göre güncel konut kredisi oranları listesi. Banka adı ve minimum faiz oranı bilgileri.",
   alternates: {
-    canonical: "/mevduat-kredi-faizleri/tuketici-faizi-oranlari",
+    canonical: "/mevduat-kredi-faizleri/konut-kredisi-oranlari",
   },
 };
 
@@ -28,25 +28,23 @@ type GunlukFaizKaydi = {
 };
 
 const bankaFaizListesi: BankaFaiz[] = [
-  { banka: "Akbank", minFaiz: "%4,29" },
-  { banka: "alBaraka", minFaiz: "%0,00" },
-  { banka: "Alternatif Bank", minFaiz: "%3,39" },
-  { banka: "CEPTETEB", minFaiz: "%3,89" },
-  { banka: "DenizBank", minFaiz: "%4,31" },
-  { banka: "Dünya Katılım", minFaiz: "%3,95" },
-  { banka: "ING", minFaiz: "%2,99" },
-  { banka: "Enpara.com", minFaiz: "%3,39" },
-  { banka: "getirfinans", minFaiz: "%2,89" },
-  { banka: "Türkiye İş Bankası", minFaiz: "%4,09" },
-  { banka: "ON Dijital Bankacılık", minFaiz: "%3,19" },
-  { banka: "N Kolay", minFaiz: "%3,79" },
-  { banka: "QNB", minFaiz: "%0,00" },
-  { banka: "TEB", minFaiz: "%3,89" },
-  { banka: "Türkiye Finans", minFaiz: "%3,89" },
-  { banka: "Vakıf Katılım", minFaiz: "%4,03" },
-  { banka: "Yapı Kredi", minFaiz: "%3,79" },
-  { banka: "Ziraat Katılım", minFaiz: "%3,69" },
-  { banka: "Ziraat Dinamik", minFaiz: "%1,99" },
+  { banka: "Akbank", minFaiz: "%2,89" },
+  { banka: "Albaraka", minFaiz: "%2,85" },
+  { banka: "Alternatif Bank", minFaiz: "%3,10" },
+  { banka: "Anadolubank", minFaiz: "%3,05" },
+  { banka: "DenizBank", minFaiz: "%3,19" },
+  { banka: "Garanti BBVA", minFaiz: "%2,99" },
+  { banka: "Halkbank", minFaiz: "%2,79" },
+  { banka: "ING", minFaiz: "%3,14" },
+  { banka: "İş Bankası", minFaiz: "%3,09" },
+  { banka: "Kuveyt Türk", minFaiz: "%2,95" },
+  { banka: "QNB", minFaiz: "%3,12" },
+  { banka: "TEB", minFaiz: "%3,08" },
+  { banka: "VakıfBank", minFaiz: "%2,74" },
+  { banka: "Vakıf Katılım", minFaiz: "%2,88" },
+  { banka: "Yapı Kredi", minFaiz: "%3,15" },
+  { banka: "Ziraat Bankası", minFaiz: "%2,69" },
+  { banka: "Ziraat Katılım", minFaiz: "%2,83" },
 ];
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
@@ -70,7 +68,7 @@ function faizMetniniSayiyaCevir(faiz: string) {
 }
 
 function grafikDosyaYolu() {
-  return path.join(process.cwd(), "data", "tuketici-faizi-gunluk.json");
+  return path.join(process.cwd(), "data", "konut-kredisi-gunluk.json");
 }
 
 function grafikVerisiniOku(): GunlukFaizKaydi[] {
@@ -182,7 +180,7 @@ function GrafikAlani({ veri }: { veri: GunlukFaizKaydi[] }) {
     <div className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
       <div className="mb-4">
         <h2 className="text-2xl font-bold text-zinc-900">
-          Günlük Ortalama Tüketici Faizi Grafiği
+          Günlük Ortalama Konut Kredisi Grafiği
         </h2>
         <p className="mt-2 text-sm text-zinc-600">
           Günlük ortalama değerler ile grafik hazırlanmıştır.
@@ -220,8 +218,8 @@ function GrafikAlani({ veri }: { veri: GunlukFaizKaydi[] }) {
   );
 }
 
-export default function TuketiciFaiziOranlariPage() {
-  addView("/mevduat-kredi-faizleri/tuketici-faizi-oranlari");
+export default function KonutKredisiOranlariPage() {
+  addView("/mevduat-kredi-faizleri/konut-kredisi-oranlari");
 
   const tumGrafikVerisi = bugununKaydiniEkle();
   const grafikVerisi = son30GunGrafikVerisi(tumGrafikVerisi);
@@ -240,11 +238,11 @@ export default function TuketiciFaiziOranlariPage() {
         </div>
 
         <h1 className="mb-2 text-3xl font-bold text-zinc-900">
-          Tüketici Faizi Oranları
+          Konut Kredisi Oranları
         </h1>
 
         <p className="mb-8 text-base text-zinc-600">
-          Banka adı ve minimum ihtiyaç kredisi faizi listesi.
+          Banka adı ve minimum konut kredisi faizi listesi.
         </p>
 
         <section className="mb-8">
@@ -291,11 +289,11 @@ export default function TuketiciFaiziOranlariPage() {
 
         <section className="mt-8">
           <KrediHesaplayici
-            baslik="İhtiyaç Kredisi Hesaplayıcı"
+            baslik="Konut Kredisi Hesaplayıcı"
             aciklama="Kredi tutarı, aylık faiz oranı ve vade bilgisine göre tahmini ödeme planı hesaplanır."
-            varsayilanTutar={100000}
-            varsayilanOran={3.89}
-            varsayilanVade={24}
+            varsayilanTutar={1000000}
+            varsayilanOran={2.89}
+            varsayilanVade={120}
           />
         </section>
       </div>
