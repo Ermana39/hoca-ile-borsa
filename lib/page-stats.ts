@@ -1,3 +1,4 @@
+import crypto from "crypto";
 import fs from "fs";
 import path from "path";
 
@@ -15,6 +16,19 @@ type ClickItem = {
   label?: string;
   date: string;
   count: number;
+};
+
+type ApiRequestItem = {
+  key: string;
+  date: string;
+  count: number;
+};
+
+type FailedLoginItem = {
+  key: string;
+  date: string;
+  count: number;
+  lastAttemptAt: string;
 };
 
 function ensureDataDir() {
@@ -39,6 +53,14 @@ function getClicksFilePath() {
   return path.join(ensureDataDir(), "page-clicks.json");
 }
 
+function getApiRequestsFilePath() {
+  return path.join(ensureDataDir(), "api-requests.json");
+}
+
+function getFailedLoginsFilePath() {
+  return path.join(ensureDataDir(), "failed-logins.json");
+}
+
 function ensureJsonFile(filePath: string, fallback: string) {
   if (!fs.existsSync(filePath)) {
     fs.writeFileSync(filePath, fallback, "utf8");
@@ -53,8 +75,7 @@ function readJsonFile<T>(filePath: string, fallback: T): T {
     );
 
     const raw = fs.readFileSync(filePath, "utf8");
-    const parsed = JSON.parse(raw) as T;
-    return parsed;
+    return JSON.parse(raw) as T;
   } catch {
     return fallback;
   }
@@ -70,6 +91,10 @@ function writeJsonFile<T>(filePath: string, data: T) {
 
 function todayKey() {
   return new Date().toISOString().slice(0, 10);
+}
+
+function toDateKey(date: Date) {
+  return date.toISOString().slice(0, 10);
 }
 
 export function startOfToday() {
@@ -90,9 +115,44 @@ export function startOfMonth() {
   return new Date(now.getFullYear(), now.getMonth(), 1);
 }
 
+export const Ayin_baslangici = startOfMonth;
+export const Haftanin_baslangici = startOfWeek;
+
+export function normalizePagePath(input?: string | null) {
+  if (!input) return "/";
+
+  let value = String(input).trim();
+
+  if (!value) return "/";
+
+  value = value.replace(/^https?:\/\/[^/]+/i, "");
+
+  if (!value.startsWith("/")) {
+    value = `/${value}`;
+  }
+
+  value = value.replace(/\/{2,}/g, "/");
+
+  if (value.length > 1 && value.endsWith("/")) {
+    value = value.slice(0, -1);
+  }
+
+  return value || "/";
+}
+
+export function getAdminStatsPath() {
+  return path.join(ensureDataDir(), "admin-stats.json");
+}
+
 export function readViews(): ViewsMap {
   const filePath = getViewsFilePath();
-  return readJsonFile<ViewsMap>(filePath, {});
+  const data = readJsonFile<ViewsMap>(filePath, {});
+
+  if (!data || typeof data !== "object" || Array.isArray(data)) {
+    return {};
+  }
+
+  return data;
 }
 
 function readViewsHistory(): ViewHistoryItem[] {
@@ -126,25 +186,59 @@ export function readClicks(): ClickItem[] {
   );
 }
 
+function readApiRequests(): ApiRequestItem[] {
+  const filePath = getApiRequestsFilePath();
+  const data = readJsonFile<ApiRequestItem[]>(filePath, []);
+
+  if (!Array.isArray(data)) return [];
+
+  return data.filter(
+    (item) =>
+      item &&
+      typeof item.key === "string" &&
+      typeof item.date === "string" &&
+      typeof item.count === "number"
+  );
+}
+
+function readFailedLogins(): FailedLoginItem[] {
+  const filePath = getFailedLoginsFilePath();
+  const data = readJsonFile<FailedLoginItem[]>(filePath, []);
+
+  if (!Array.isArray(data)) return [];
+
+  return data.filter(
+    (item) =>
+      item &&
+      typeof item.key === "string" &&
+      typeof item.date === "string" &&
+      typeof item.count === "number" &&
+      typeof item.lastAttemptAt === "string"
+  );
+}
+
 export function addView(page: string) {
   try {
+    const normalized = normalizePagePath(page);
     const viewsFile = getViewsFilePath();
     const historyFile = getViewsHistoryFilePath();
 
     const views = readViews();
-    views[page] = (views[page] || 0) + 1;
+    views[normalized] = (views[normalized] || 0) + 1;
     writeJsonFile(viewsFile, views);
 
     const history = readViewsHistory();
     const today = todayKey();
 
-    const existing = history.find((item) => item.path === page && item.date === today);
+    const existing = history.find(
+      (item) => item.path === normalized && item.date === today
+    );
 
     if (existing) {
       existing.count += 1;
     } else {
       history.push({
-        path: page,
+        path: normalized,
         date: today,
         count: 1,
       });
@@ -161,11 +255,12 @@ export function addClick(source: string, pathValue: string, label?: string) {
     const filePath = getClicksFilePath();
     const clicks = readClicks();
     const today = todayKey();
+    const normalizedPath = normalizePagePath(pathValue);
 
     const existing = clicks.find(
       (item) =>
         item.source === source &&
-        item.path === pathValue &&
+        item.path === normalizedPath &&
         item.label === label &&
         item.date === today
     );
@@ -175,7 +270,7 @@ export function addClick(source: string, pathValue: string, label?: string) {
     } else {
       clicks.push({
         source,
-        path: pathValue,
+        path: normalizedPath,
         label,
         date: today,
         count: 1,
@@ -188,10 +283,160 @@ export function addClick(source: string, pathValue: string, label?: string) {
   }
 }
 
+export function registerApiRequest(key: string) {
+  try {
+    const filePath = getApiRequestsFilePath();
+    const list = readApiRequests();
+    const today = todayKey();
+
+    const existing = list.find((item) => item.key === key && item.date === today);
+
+    if (existing) {
+      existing.count += 1;
+    } else {
+      list.push({
+        key,
+        date: today,
+        count: 1,
+      });
+    }
+
+    writeJsonFile(filePath, list);
+  } catch {
+    // sessiz geç
+  }
+}
+
+export function checkSimpleApiRateLimit(
+  key: string,
+  limit = 60
+): {
+  allowed: boolean;
+  remaining: number;
+  count: number;
+  limit: number;
+} {
+  try {
+    const today = todayKey();
+    const list = readApiRequests();
+    const existing = list.find((item) => item.key === key && item.date === today);
+    const count = existing?.count || 0;
+    const allowed = count < limit;
+    const remaining = Math.max(0, limit - count);
+
+    return {
+      allowed,
+      remaining,
+      count,
+      limit,
+    };
+  } catch {
+    return {
+      allowed: true,
+      remaining: limit,
+      count: 0,
+      limit,
+    };
+  }
+}
+
+export function registerFailedLogin(key: string) {
+  try {
+    const filePath = getFailedLoginsFilePath();
+    const list = readFailedLogins();
+    const today = todayKey();
+    const now = new Date().toISOString();
+
+    const existing = list.find((item) => item.key === key && item.date === today);
+
+    if (existing) {
+      existing.count += 1;
+      existing.lastAttemptAt = now;
+    } else {
+      list.push({
+        key,
+        date: today,
+        count: 1,
+        lastAttemptAt: now,
+      });
+    }
+
+    writeJsonFile(filePath, list);
+  } catch {
+    // sessiz geç
+  }
+}
+
+export function getLoginRateLimitStatus(
+  key: string,
+  limit = 10
+): {
+  allowed: boolean;
+  remaining: number;
+  count: number;
+  limit: number;
+} {
+  try {
+    const today = todayKey();
+    const list = readFailedLogins();
+    const existing = list.find((item) => item.key === key && item.date === today);
+    const count = existing?.count || 0;
+    const allowed = count < limit;
+    const remaining = Math.max(0, limit - count);
+
+    return {
+      allowed,
+      remaining,
+      count,
+      limit,
+    };
+  } catch {
+    return {
+      allowed: true,
+      remaining: limit,
+      count: 0,
+      limit,
+    };
+  }
+}
+
+export function clearLoginAttempts(key: string) {
+  try {
+    const filePath = getFailedLoginsFilePath();
+    const list = readFailedLogins().filter((item) => item.key !== key);
+    writeJsonFile(filePath, list);
+  } catch {
+    // sessiz geç
+  }
+}
+
+export function makeAdminToken() {
+  const secret =
+    process.env.ADMIN_TOKEN_SECRET ||
+    process.env.ADMIN_TOKEN ||
+    process.env.NEXT_PUBLIC_ADMIN_TOKEN ||
+    "hoca-ile-borsa-admin";
+
+  const payload = `${secret}:${Date.now()}:${Math.random()}`;
+  return crypto.createHash("sha256").update(payload).digest("hex");
+}
+
+export function isValidAdminToken(token?: string | null) {
+  const expected =
+    process.env.ADMIN_TOKEN ||
+    process.env.NEXT_PUBLIC_ADMIN_TOKEN ||
+    "";
+
+  if (!expected) return false;
+  if (!token) return false;
+
+  return token === expected;
+}
+
 export function getViews(page: string) {
   try {
     const views = readViews();
-    return views[page] || 0;
+    return views[normalizePagePath(page)] || 0;
   } catch {
     return 0;
   }
@@ -217,9 +462,8 @@ export function groupViewsByPath() {
 }
 
 export function groupViewsByPathSince(since: Date) {
-  const sinceDate = since.toISOString().slice(0, 10);
+  const sinceDate = toDateKey(since);
   const history = readViewsHistory();
-
   const grouped = new Map<string, number>();
 
   for (const item of history) {
@@ -237,9 +481,8 @@ export function groupViewsByPathSince(since: Date) {
 }
 
 export function groupClicksBySourceSince(since: Date) {
-  const sinceDate = since.toISOString().slice(0, 10);
+  const sinceDate = toDateKey(since);
   const clicks = readClicks();
-
   const grouped = new Map<string, number>();
 
   for (const item of clicks) {
@@ -254,16 +497,4 @@ export function groupClicksBySourceSince(since: Date) {
       count,
     }))
     .sort((a, b) => b.count - a.count);
-}
-
-export function isValidAdminToken(token?: string | null) {
-  const expected =
-    process.env.ADMIN_TOKEN ||
-    process.env.NEXT_PUBLIC_ADMIN_TOKEN ||
-    "";
-
-  if (!expected) return false;
-  if (!token) return false;
-
-  return token === expected;
 }
