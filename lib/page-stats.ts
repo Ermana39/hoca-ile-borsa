@@ -31,6 +31,14 @@ type FailedLoginItem = {
   lastAttemptAt: string;
 };
 
+type RateLimitStatus = {
+  allowed: boolean;
+  remaining: number;
+  count: number;
+  limit: number;
+  retryAfterSeconds: number;
+};
+
 function ensureDataDir() {
   const dirPath = path.join(process.cwd(), "data");
 
@@ -310,12 +318,7 @@ export function registerApiRequest(key: string) {
 export function checkSimpleApiRateLimit(
   key: string,
   limit = 60
-): {
-  allowed: boolean;
-  remaining: number;
-  count: number;
-  limit: number;
-} {
+): RateLimitStatus {
   try {
     const today = todayKey();
     const list = readApiRequests();
@@ -329,6 +332,7 @@ export function checkSimpleApiRateLimit(
       remaining,
       count,
       limit,
+      retryAfterSeconds: allowed ? 0 : 60,
     };
   } catch {
     return {
@@ -336,6 +340,7 @@ export function checkSimpleApiRateLimit(
       remaining: limit,
       count: 0,
       limit,
+      retryAfterSeconds: 0,
     };
   }
 }
@@ -370,12 +375,7 @@ export function registerFailedLogin(key: string) {
 export function getLoginRateLimitStatus(
   key: string,
   limit = 10
-): {
-  allowed: boolean;
-  remaining: number;
-  count: number;
-  limit: number;
-} {
+): RateLimitStatus {
   try {
     const today = todayKey();
     const list = readFailedLogins();
@@ -389,6 +389,7 @@ export function getLoginRateLimitStatus(
       remaining,
       count,
       limit,
+      retryAfterSeconds: allowed ? 0 : 300,
     };
   } catch {
     return {
@@ -396,6 +397,7 @@ export function getLoginRateLimitStatus(
       remaining: limit,
       count: 0,
       limit,
+      retryAfterSeconds: 0,
     };
   }
 }
