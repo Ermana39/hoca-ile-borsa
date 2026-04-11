@@ -1,14 +1,13 @@
 import Link from "next/link";
 
-const formasyonlar = [
+const haberler = [
   {
-    kod: "KRVGD",
-    tur: "Düşen Genişleyen Takoz Formasyonu",
-    href: "/borsa/formasyonlar/krvgd-dusen-genisleyen-takoz",
+    title: "Kazancı ile dikkat çeken Fonlar",
+    href: "/borsa/dikkat-cekenler/haber-1",
   },
 ];
 
-export default function FormasyonlarPage() {
+export default function DikkatCekenlerPage() {
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-5xl">
@@ -27,17 +26,16 @@ export default function FormasyonlarPage() {
           </Link>
         </div>
 
-        <h1 className="mb-6 text-3xl font-bold text-zinc-900">Formasyonlar</h1>
+        <h1 className="mb-6 text-3xl font-bold text-zinc-900">Dikkat Çekenler</h1>
 
         <div className="space-y-3">
-          {formasyonlar.map((item) => (
+          {haberler.map((item) => (
             <Link
-              key={item.href}
+              key={item.title}
               href={item.href}
-              className="grid grid-cols-2 rounded-xl border border-green-200 bg-green-50 px-4 py-4 text-base font-semibold text-zinc-900 transition hover:bg-green-100"
+              className="block rounded-xl border border-blue-200 bg-blue-50 px-4 py-4 text-base font-bold text-zinc-900 transition hover:bg-blue-100 md:text-lg"
             >
-              <div>{item.kod}</div>
-              <div className="text-right">{item.tur}</div>
+              {item.title}
             </Link>
           ))}
         </div>
