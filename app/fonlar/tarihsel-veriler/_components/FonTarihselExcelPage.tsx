@@ -19,12 +19,19 @@ type Props = {
   searchParams: SearchParams;
 };
 
-function ReklamAlani({ height = "h-[90px]" }: { height?: string }) {
+function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
+  const alanClass =
+    variant === "icerik"
+      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
+      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
+
   return (
-    <div
-      className={`w-full rounded-2xl border border-dashed border-zinc-300 bg-zinc-50 ${height}`}
+    <section
       aria-label="Reklam alanı"
-    />
+      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
+    >
+      <div className={`w-full ${alanClass}`} />
+    </section>
   );
 }
 
@@ -125,7 +132,7 @@ export default async function FonTarihselExcelPage({
         <p className="mb-6 max-w-3xl text-base text-zinc-600">{description}</p>
 
         <section className="mb-6">
-          <ReklamAlani />
+          <ReklamAlani variant="yatay" />
         </section>
 
         <section className="mb-6 rounded-2xl border border-zinc-200 bg-white p-4">
@@ -143,7 +150,7 @@ export default async function FonTarihselExcelPage({
         <FonTarihselTableClient headers={headers} rows={filteredRows} />
 
         <section className="mt-6">
-          <ReklamAlani />
+          <ReklamAlani variant="icerik" />
         </section>
       </div>
     </main>
