@@ -48,15 +48,18 @@ export default function Haber1Page() {
             <div className="mt-6 space-y-4 text-base leading-8 text-zinc-700 md:text-lg">
               <p>
                 Ancak gün sonu karanlık odada gelen satışlar sonucunda tavanda lot kalmadı.
-Önümüzdeki hafta aksiyon dolu günler olacak gibi.
+
               </p>
 
               <p>
-                xxxxxxxx
+                Önümüzdeki hafta aksiyon dolu günler olacak gibi.
               </p>
             </div>
           </div>
         </article>
+        <section className="mt-8">
+  <ReklamAlani variant="icerik" />
+</section>
       </div>
     </main>
   );

@@ -57,6 +57,9 @@ export default function Haber1Page() {
             </div>
           </div>
         </article>
+        <section className="mt-8">
+  <ReklamAlani variant="icerik" />
+</section>
       </div>
     </main>
   );
