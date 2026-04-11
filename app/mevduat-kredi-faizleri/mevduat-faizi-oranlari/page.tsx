@@ -58,13 +58,41 @@ function formatRate(value: unknown) {
   return `%${num.toFixed(2).replace(".", ",")}`;
 }
 
+function excelSerialToDate(serial: number) {
+  const utcDays = Math.floor(serial - 25569);
+  const utcValue = utcDays * 86400;
+  const dateInfo = new Date(utcValue * 1000);
+
+  const fractionalDay = serial - Math.floor(serial) + 0.0000001;
+  const totalSeconds = Math.floor(86400 * fractionalDay);
+
+  dateInfo.setUTCSeconds(totalSeconds);
+  return dateInfo;
+}
+
 function formatDateLabel(value: unknown) {
+  if (value === null || value === undefined || value === "") return "";
+
+  if (typeof value === "number" && !Number.isNaN(value)) {
+    const d = excelSerialToDate(value);
+    return d.toLocaleDateString("tr-TR");
+  }
+
   const text = cleanText(value);
   if (!text) return "";
 
-  const asDate = new Date(text);
-  if (!Number.isNaN(asDate.getTime())) {
-    return asDate.toLocaleDateString("tr-TR");
+  if (/^\d{1,2}\.\d{1,2}\.\d{4}$/.test(text)) {
+    return text;
+  }
+
+  if (/^\d{4}-\d{2}-\d{2}$/.test(text)) {
+    const [y, m, d] = text.split("-");
+    return `${d}.${m}.${y}`;
+  }
+
+  const parsed = new Date(text);
+  if (!Number.isNaN(parsed.getTime())) {
+    return parsed.toLocaleDateString("tr-TR");
   }
 
   return text;
@@ -136,7 +164,7 @@ function MevduatGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
           Günlük Ortalama Mevduat Faizi Grafiği
         </h2>
         <p className="mt-2 text-sm text-zinc-600">
-          Excel dosyasındaki günlük ortalama değerler baz alınır.
+          Günlük ortalama mevduat faiz değişimini gösterir.
         </p>
       </div>
 
@@ -186,8 +214,8 @@ function MevduatGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
           </svg>
 
           <div className="mt-3 grid grid-cols-5 gap-2 text-center text-[11px] text-zinc-500 md:grid-cols-10">
-            {data.map((item) => (
-              <div key={item.tarih}>{item.tarih}</div>
+            {data.map((item, index) => (
+              <div key={`${item.tarih}-${index}`}>{item.tarih}</div>
             ))}
           </div>
         </div>
@@ -215,7 +243,11 @@ export default function MevduatFaiziOranlariPage() {
         }
 
         const arrayBuffer = await response.arrayBuffer();
-        const workbook = XLSX.read(arrayBuffer, { type: "array", raw: true });
+        const workbook = XLSX.read(arrayBuffer, {
+          type: "array",
+          raw: true,
+          cellDates: false,
+        });
 
         const targetSheetName =
           workbook.SheetNames.find(
@@ -392,13 +424,13 @@ export default function MevduatFaiziOranlariPage() {
           Mevduat Faizi Oranları
         </h1>
 
-       <p className="mb-8 text-base text-zinc-600">
-  Güncel mevduat faizi oranları, banka banka karşılaştırma tablosu ve günlük ortalama faiz grafiği.
-</p>
+        <p className="mb-8 text-base text-zinc-600">
+          Güncel mevduat faizi oranları, banka banka karşılaştırma tablosu ve günlük ortalama faiz grafiği.
+        </p>
 
         {hata ? (
           <section className="mb-8 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
-            Excel okunurken hata oluştu: {hata}
+            {hata}
           </section>
         ) : null}
 
