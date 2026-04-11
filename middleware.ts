@@ -1,87 +1,89 @@
 import { NextRequest, NextResponse } from "next/server";
+import { kv, normalizePagePath } from "@/lib/kv";
 
-const hiddenAdminPath = process.env.ADMIN_STATS_PATH?.trim() || "kontrol-paneli-4827";
-const ADMIN_IDLE_TIMEOUT_MS = 1000 * 60 * 30;
+function shouldSkip(request: NextRequest, pathname: string) {
+  if (request.method !== "GET") return true;
 
-function buildNoIndexHeaders(response: NextResponse) {
-  response.headers.set("Cache-Control", "no-store, no-cache, must-revalidate, proxy-revalidate");
-  response.headers.set("Pragma", "no-cache");
-  response.headers.set("Expires", "0");
-  response.headers.set("X-Robots-Tag", "noindex, nofollow, noarchive, nosnippet");
-  return response;
-}
-
-function clearAdminCookies(response: NextResponse) {
-  response.cookies.set("hib_admin_token", "", {
-    httpOnly: true,
-    sameSite: "strict",
-    secure: process.env.NODE_ENV === "production",
-    path: "/",
-    maxAge: 0,
-  });
-
-  response.cookies.set("hib_admin_seen", "", {
-    httpOnly: true,
-    sameSite: "strict",
-    secure: process.env.NODE_ENV === "production",
-    path: "/",
-    maxAge: 0,
-  });
-
-  return response;
-}
-
-export function middleware(request: NextRequest) {
-  const { pathname } = request.nextUrl;
-
-  if (pathname.startsWith("/yonetim")) {
-    return new NextResponse("404", {
-      status: 404,
-      headers: {
-        "Content-Type": "text/plain; charset=utf-8",
-        "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
-        Pragma: "no-cache",
-        Expires: "0",
-        "X-Robots-Tag": "noindex, nofollow, noarchive, nosnippet",
-      },
-    });
+  if (
+    pathname.startsWith("/api") ||
+    pathname.startsWith("/_next") ||
+    pathname.startsWith("/kontrol-paneli-4827") ||
+    pathname.startsWith("/yonetim") ||
+    pathname.startsWith("/giris") ||
+    pathname.startsWith("/uye") ||
+    pathname.startsWith("/profil") ||
+    pathname.startsWith("/mesajlar") ||
+    pathname.startsWith("/guvenlik-kayitlari")
+  ) {
+    return true;
   }
 
-  if (pathname === `/${hiddenAdminPath}` || pathname.startsWith(`/${hiddenAdminPath}/`)) {
-    const token = request.cookies.get("hib_admin_token")?.value;
-    const seen = request.cookies.get("hib_admin_seen")?.value;
-    const now = Date.now();
+  if (
+    pathname === "/favicon.ico" ||
+    pathname === "/robots.txt" ||
+    pathname === "/sitemap.xml" ||
+    pathname === "/manifest.webmanifest"
+  ) {
+    return true;
+  }
 
-    if (token && seen) {
-      const seenMs = Number(seen);
+  if (/\.(png|jpg|jpeg|gif|webp|svg|ico|css|js|map|txt|xml|woff|woff2)$/i.test(pathname)) {
+    return true;
+  }
 
-      if (!Number.isFinite(seenMs) || now - seenMs > ADMIN_IDLE_TIMEOUT_MS) {
-        const response = NextResponse.redirect(new URL(`/${hiddenAdminPath}`, request.url));
-        buildNoIndexHeaders(response);
-        clearAdminCookies(response);
-        return response;
-      }
+  const prefetch =
+    request.headers.get("x-middleware-prefetch") ||
+    request.headers.get("next-router-prefetch") ||
+    request.headers.get("purpose");
+
+  if (prefetch) return true;
+
+  const secFetchDest = request.headers.get("sec-fetch-dest") || "";
+  const accept = request.headers.get("accept") || "";
+
+  const isHtmlRequest =
+    secFetchDest === "document" || accept.includes("text/html");
+
+  if (!isHtmlRequest) return true;
+
+  return false;
+}
+
+export async function middleware(request: NextRequest) {
+  const pathname = normalizePagePath(request.nextUrl.pathname);
+
+  if (shouldSkip(request, pathname)) {
+    return NextResponse.next();
+  }
+
+  const response = NextResponse.next();
+
+  try {
+    if (!kv) {
+      return response;
     }
 
-    const response = NextResponse.next();
-    buildNoIndexHeaders(response);
+    const ip =
+      request.ip ||
+      request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
+      "unknown";
 
-    if (token) {
-      response.cookies.set("hib_admin_seen", String(now), {
-        httpOnly: true,
-        sameSite: "strict",
-        secure: process.env.NODE_ENV === "production",
-        path: "/",
-        maxAge: 60 * 30,
-      });
+    const sessionKey = `pv:seen:${pathname}:${ip}`;
+    const alreadySeen = await kv.get(sessionKey);
+
+    if (!alreadySeen) {
+      await kv.multi()
+        .hincrby("stats:pageviews", pathname, 1)
+        .set(sessionKey, "1", { ex: 60 * 30 })
+        .exec();
     }
-
+  } catch {
     return response;
   }
 
-  return NextResponse.next();
+  return response;
 }
 
 export const config = {
-  matcher: ["/yonetim/:path*", "/:path*"],
+  matcher: "/:path*",
 };
