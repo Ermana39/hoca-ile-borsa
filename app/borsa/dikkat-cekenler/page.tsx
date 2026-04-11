@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const haberler = [
   {
-    title: "BIST100’de gün sonuna doğru hacim artışı dikkat çekti",
+    title: "Kazancı ile dikkat çeken Fonlar",
     href: "/borsa/dikkat-cekenler/haber-1",
   },
   {
