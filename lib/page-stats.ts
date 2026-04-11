@@ -120,6 +120,10 @@ function resolveRateLimitArgs(
   return { scope: "default", limit: typeof b === "number" ? b : 60 };
 }
 
+function resolveScopeKey(baseKey: string, scope?: string) {
+  return scope && scope !== "default" ? `${scope}:${baseKey}` : baseKey;
+}
+
 export function startOfToday() {
   const now = new Date();
   return new Date(now.getFullYear(), now.getMonth(), now.getDate());
@@ -306,19 +310,22 @@ export function addClick(source: string, pathValue: string, label?: string) {
   }
 }
 
-export function registerApiRequest(key: string) {
+export function registerApiRequest(key: string, scope?: string) {
   try {
     const filePath = getApiRequestsFilePath();
     const list = readApiRequests();
     const today = todayKey();
+    const compoundKey = resolveScopeKey(key, scope);
 
-    const existing = list.find((item) => item.key === key && item.date === today);
+    const existing = list.find(
+      (item) => item.key === compoundKey && item.date === today
+    );
 
     if (existing) {
       existing.count += 1;
     } else {
       list.push({
-        key,
+        key: compoundKey,
         date: today,
         count: 1,
       });
@@ -338,7 +345,7 @@ export function checkSimpleApiRateLimit(
   try {
     const { scope, limit } = resolveRateLimitArgs(scopeOrLimit, maybeLimit);
     const today = todayKey();
-    const compoundKey = `${scope}:${key}`;
+    const compoundKey = resolveScopeKey(key, scope);
     const list = readApiRequests();
     const existing = list.find(
       (item) => item.key === compoundKey && item.date === today
@@ -402,7 +409,7 @@ export function getLoginRateLimitStatus(
   try {
     const { scope, limit } = resolveRateLimitArgs(scopeOrLimit, maybeLimit);
     const today = todayKey();
-    const compoundKey = `${scope}:${key}`;
+    const compoundKey = resolveScopeKey(key, scope);
     const list = readFailedLogins();
     const existing = list.find(
       (item) => item.key === compoundKey && item.date === today
@@ -434,7 +441,9 @@ export function getLoginRateLimitStatus(
 export function clearLoginAttempts(key: string) {
   try {
     const filePath = getFailedLoginsFilePath();
-    const list = readFailedLogins().filter((item) => !item.key.endsWith(`:${key}`) && item.key !== key);
+    const list = readFailedLogins().filter(
+      (item) => !item.key.endsWith(`:${key}`) && item.key !== key
+    );
     writeJsonFile(filePath, list);
   } catch {
     // sessiz geç
