@@ -4,7 +4,7 @@ const formasyonlar = [
   {
     kod: "KRVGD",
     tur: "Düşen Genişleyen Takoz Formasyonu",
-    href: "/borsa/formasyonlar/krvgd-dusen-genisleyen-takoz",
+    href: "/borsa/formasyonlar/formasyon1",
   },
 ];
 
