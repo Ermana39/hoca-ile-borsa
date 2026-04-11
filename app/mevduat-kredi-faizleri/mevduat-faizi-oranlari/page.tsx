@@ -16,8 +16,6 @@ export const metadata: Metadata = {
 
 export const dynamic = "force-dynamic";
 
-type SheetRow = Record<string, string | number | null | undefined>;
-
 type BankaSatiri = {
   banka: string;
   faiz: string;
@@ -80,6 +78,19 @@ function formatDateLabel(value: unknown) {
   return text;
 }
 
+function cleanCell(value: unknown) {
+  return String(value ?? "").trim();
+}
+
+function findHeaderRow(rows: unknown[][]) {
+  return rows.findIndex((row) => {
+    const normalized = row.map((cell) => cleanCell(cell).toLowerCase());
+    const hasTarih = normalized.some((cell) => cell.includes("tarih"));
+    const hasOrtalama = normalized.some((cell) => cell.includes("ortalama"));
+    return hasTarih && hasOrtalama;
+  });
+}
+
 function loadMevduatData() {
   try {
     if (!fs.existsSync(EXCEL_FILE)) {
@@ -93,72 +104,96 @@ function loadMevduatData() {
     const fileBuffer = fs.readFileSync(EXCEL_FILE);
     const workbook = XLSX.read(fileBuffer, { type: "buffer" });
 
-    if (!workbook.SheetNames.length) {
-      return {
-        bankaListesi: [] as BankaSatiri[],
-        grafikVerisi: [] as GunlukOrtalamaSatiri[],
-        hata: "Excel içinde hiç sayfa bulunamadı.",
-      };
-    }
+    const targetSheetName =
+      workbook.SheetNames.find(
+        (name) => name.trim().toLowerCase() === "mevduat"
+      ) || workbook.SheetNames[0];
 
-    const targetSheetName = workbook.SheetNames.find(
-      (name) => name.trim().toLowerCase() === "mevduat"
-    );
-
-    const selectedSheetName = targetSheetName || workbook.SheetNames[0];
-    const sheet = workbook.Sheets[selectedSheetName];
+    const sheet = workbook.Sheets[targetSheetName];
 
     if (!sheet) {
       return {
         bankaListesi: [] as BankaSatiri[],
         grafikVerisi: [] as GunlukOrtalamaSatiri[],
-        hata: `Seçilen sayfa açılamadı: ${selectedSheetName}`,
+        hata: `Sayfa bulunamadı: ${targetSheetName}`,
       };
     }
 
-    const rows = XLSX.utils.sheet_to_json<SheetRow>(sheet, {
+    const rawRows = XLSX.utils.sheet_to_json<(string | number | null)[]>(sheet, {
+      header: 1,
       defval: "",
       raw: false,
+    }) as unknown[][];
+
+    if (!rawRows.length) {
+      return {
+        bankaListesi: [] as BankaSatiri[],
+        grafikVerisi: [] as GunlukOrtalamaSatiri[],
+        hata: "Excel sayfasında veri bulunamadı.",
+      };
+    }
+
+    const headerRowIndex = findHeaderRow(rawRows);
+
+    if (headerRowIndex === -1) {
+      return {
+        bankaListesi: [] as BankaSatiri[],
+        grafikVerisi: [] as GunlukOrtalamaSatiri[],
+        hata: "Başlık satırı bulunamadı. Tarih ve Günlük Ortalama başlıkları gerekli.",
+      };
+    }
+
+    const headerRow = rawRows[headerRowIndex].map((cell) => cleanCell(cell));
+    const dataRows = rawRows.slice(headerRowIndex + 1);
+
+    const tarihIndex = headerRow.findIndex((cell) =>
+      cell.toLowerCase().includes("tarih")
+    );
+    const ortalamaIndex = headerRow.findIndex((cell) =>
+      cell.toLowerCase().includes("ortalama")
+    );
+
+    if (tarihIndex === -1 || ortalamaIndex === -1) {
+      return {
+        bankaListesi: [] as BankaSatiri[],
+        grafikVerisi: [] as GunlukOrtalamaSatiri[],
+        hata: "Tarih veya Günlük Ortalama sütunu bulunamadı.",
+      };
+    }
+
+    const bankaIndexes = headerRow
+      .map((name, index) => ({ name, index }))
+      .filter(
+        (item) =>
+          item.index !== tarihIndex &&
+          item.index !== ortalamaIndex &&
+          item.name !== ""
+      );
+
+    const validDataRows = dataRows.filter((row) => {
+      const tarih = cleanCell(row[tarihIndex]);
+      return tarih !== "";
     });
 
-    if (!rows.length) {
+    if (!validDataRows.length) {
       return {
         bankaListesi: [] as BankaSatiri[],
         grafikVerisi: [] as GunlukOrtalamaSatiri[],
-        hata: `"${selectedSheetName}" sayfasında veri bulunamadı.`,
+        hata: "Veri satırı bulunamadı.",
       };
     }
 
-    const headers = Object.keys(rows[0] || {});
+    const sonSatir = validDataRows[validDataRows.length - 1];
 
-    if (headers.length < 3) {
-      return {
-        bankaListesi: [] as BankaSatiri[],
-        grafikVerisi: [] as GunlukOrtalamaSatiri[],
-        hata: `Başlıklar okunamadı. Bulunan başlık sayısı: ${headers.length}`,
-      };
-    }
-
-    const tarihKey =
-      headers.find((h) => h.toLowerCase().includes("tarih")) || headers[0];
-
-    const ortalamaKey =
-      headers.find((h) => h.toLowerCase().includes("ortalama")) ||
-      headers[headers.length - 1];
-
-    const bankaKeys = headers.filter((h) => h !== tarihKey && h !== ortalamaKey);
-
-    const sonSatir = rows[rows.length - 1];
-
-    const bankaListesi: BankaSatiri[] = bankaKeys.map((key) => ({
-      banka: key,
-      faiz: formatFaiz(sonSatir[key]),
+    const bankaListesi: BankaSatiri[] = bankaIndexes.map((item) => ({
+      banka: item.name,
+      faiz: formatFaiz(sonSatir[item.index]),
     }));
 
-    const grafikVerisi: GunlukOrtalamaSatiri[] = rows
+    const grafikVerisi: GunlukOrtalamaSatiri[] = validDataRows
       .map((row) => ({
-        tarih: formatDateLabel(row[tarihKey]),
-        ortalama: parseNumber(row[ortalamaKey]),
+        tarih: formatDateLabel(row[tarihIndex]),
+        ortalama: parseNumber(row[ortalamaIndex]),
       }))
       .filter((item) => item.tarih && !Number.isNaN(item.ortalama))
       .slice(-30);
