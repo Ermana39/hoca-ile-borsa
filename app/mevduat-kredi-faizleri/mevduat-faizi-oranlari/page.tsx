@@ -14,6 +14,8 @@ export const metadata: Metadata = {
   },
 };
 
+export const dynamic = "force-dynamic";
+
 type SheetRow = Record<string, string | number | null | undefined>;
 
 type BankaSatiri = {
@@ -28,6 +30,7 @@ type GunlukOrtalamaSatiri = {
 
 const EXCEL_FILE = path.join(
   process.cwd(),
+  "public",
   "data",
   "hoca-ile-borsa-faiz-takip-sablonu-guncel.xlsx"
 );
@@ -78,8 +81,8 @@ function formatDateLabel(value: unknown) {
   }
 
   const text = String(value).trim();
-
   const asDate = new Date(text);
+
   if (!Number.isNaN(asDate.getTime())) {
     return asDate.toLocaleDateString("tr-TR");
   }
@@ -88,67 +91,75 @@ function formatDateLabel(value: unknown) {
 }
 
 function loadMevduatData() {
-  if (!fs.existsSync(EXCEL_FILE)) {
+  try {
+    if (!fs.existsSync(EXCEL_FILE)) {
+      return {
+        bankaListesi: [] as BankaSatiri[],
+        grafikVerisi: [] as GunlukOrtalamaSatiri[],
+        hata: "Excel dosyası bulunamadı.",
+      };
+    }
+
+    const workbook = XLSX.readFile(EXCEL_FILE, { cellDates: true });
+    const sheet = workbook.Sheets["Mevduat"];
+
+    if (!sheet) {
+      return {
+        bankaListesi: [] as BankaSatiri[],
+        grafikVerisi: [] as GunlukOrtalamaSatiri[],
+        hata: "Excel içinde Mevduat sayfası bulunamadı.",
+      };
+    }
+
+    const rows = XLSX.utils.sheet_to_json<SheetRow>(sheet, {
+      defval: "",
+      raw: false,
+    });
+
+    if (!rows.length) {
+      return {
+        bankaListesi: [] as BankaSatiri[],
+        grafikVerisi: [] as GunlukOrtalamaSatiri[],
+        hata: "Mevduat sayfasında veri bulunamadı.",
+      };
+    }
+
+    const headers = Object.keys(rows[0]);
+    const tarihKey =
+      headers.find((h) => h.toLowerCase().includes("tarih")) || headers[0];
+    const ortalamaKey =
+      headers.find((h) => h.toLowerCase().includes("ortalama")) ||
+      headers[headers.length - 1];
+
+    const bankaKeys = headers.filter((h) => h !== tarihKey && h !== ortalamaKey);
+
+    const sonSatir = rows[rows.length - 1];
+
+    const bankaListesi: BankaSatiri[] = bankaKeys.map((key) => ({
+      banka: key,
+      faiz: formatFaiz(sonSatir[key]),
+    }));
+
+    const grafikVerisi: GunlukOrtalamaSatiri[] = rows
+      .map((row) => ({
+        tarih: formatDateLabel(row[tarihKey]),
+        ortalama: parseNumber(row[ortalamaKey]),
+      }))
+      .filter((item) => item.tarih && !Number.isNaN(item.ortalama))
+      .slice(-30);
+
+    return {
+      bankaListesi,
+      grafikVerisi,
+      hata: "",
+    };
+  } catch {
     return {
       bankaListesi: [] as BankaSatiri[],
       grafikVerisi: [] as GunlukOrtalamaSatiri[],
-      hata: "Excel dosyası bulunamadı.",
+      hata: "Excel okunurken hata oluştu.",
     };
   }
-
-  const workbook = XLSX.readFile(EXCEL_FILE, { cellDates: true });
-  const sheet = workbook.Sheets["Mevduat"];
-
-  if (!sheet) {
-    return {
-      bankaListesi: [] as BankaSatiri[],
-      grafikVerisi: [] as GunlukOrtalamaSatiri[],
-      hata: "Excel içinde Mevduat sayfası bulunamadı.",
-    };
-  }
-
-  const rows = XLSX.utils.sheet_to_json<SheetRow>(sheet, {
-    defval: "",
-    raw: false,
-  });
-
-  if (!rows.length) {
-    return {
-      bankaListesi: [] as BankaSatiri[],
-      grafikVerisi: [] as GunlukOrtalamaSatiri[],
-      hata: "Mevduat sayfasında veri bulunamadı.",
-    };
-  }
-
-  const headers = Object.keys(rows[0]);
-  const tarihKey =
-    headers.find((h) => h.toLowerCase().includes("tarih")) || headers[0];
-  const ortalamaKey =
-    headers.find((h) => h.toLowerCase().includes("ortalama")) ||
-    headers[headers.length - 1];
-
-  const bankaKeys = headers.filter((h) => h !== tarihKey && h !== ortalamaKey);
-
-  const sonSatir = rows[rows.length - 1];
-
-  const bankaListesi: BankaSatiri[] = bankaKeys.map((key) => ({
-    banka: key,
-    faiz: formatFaiz(sonSatir[key]),
-  }));
-
-  const grafikVerisi: GunlukOrtalamaSatiri[] = rows
-    .map((row) => ({
-      tarih: formatDateLabel(row[tarihKey]),
-      ortalama: parseNumber(row[ortalamaKey]),
-    }))
-    .filter((item) => item.tarih && !Number.isNaN(item.ortalama))
-    .slice(-30);
-
-  return {
-    bankaListesi,
-    grafikVerisi,
-    hata: "",
-  };
 }
 
 function MevduatGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
