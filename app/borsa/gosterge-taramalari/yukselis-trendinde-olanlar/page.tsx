@@ -58,7 +58,7 @@ export default function YukselisTrendindeOlanlarPage() {
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-6xl">
         <div className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
@@ -78,9 +78,12 @@ export default function YukselisTrendindeOlanlarPage() {
         <h1 className="mb-2 text-3xl font-bold text-zinc-900">
           Yükseliş Trendinde Olan Hisseler
         </h1>
-        <p className="mb-8 max-w-3xl text-base text-zinc-600">
+        <p className="mb-3 max-w-3xl text-base text-zinc-600">
           13, 21, 55 hareketli ortalama üzerinde olan hisseler
         </p>
+        <div className="mb-8 text-sm font-semibold text-zinc-700 md:text-base">
+          Toplam {hisseler.length} hisse
+        </div>
 
         <section className="mb-8">
           <ReklamAlani variant="yatay" />
@@ -88,7 +91,7 @@ export default function YukselisTrendindeOlanlarPage() {
 
         <section className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
           {hisseler.length > 0 ? (
-            <div className="space-y-3">
+            <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
               {hisseler.map((hisse, index) => (
                 <div
                   key={`${hisse}-${index}`}

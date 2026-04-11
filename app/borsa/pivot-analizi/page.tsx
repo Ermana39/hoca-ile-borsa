@@ -46,6 +46,22 @@ const pivotVerileri: PivotRow[] = [
   { sembol: "YKBNK", fark: 9.07, son: 37.76, pivot: 34.62, destek1: 33.9, destek2: 33.46, destek3: 32.74, direnc1: 35.06, direnc2: 35.78, direnc3: 36.22 },
 ];
 
+function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
+  const alanClass =
+    variant === "icerik"
+      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
+      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
+
+  return (
+    <section
+      aria-label="Reklam alanı"
+      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
+    >
+      <div className={`w-full ${alanClass}`} />
+    </section>
+  );
+}
+
 function formatNumber(value: number) {
   const hasDecimal = !Number.isInteger(value);
   return new Intl.NumberFormat("tr-TR", {
@@ -55,45 +71,17 @@ function formatNumber(value: number) {
 }
 
 function getDurum(row: PivotRow) {
-  if (row.son > row.direnc3) {
+  if (row.son > row.pivot) {
     return {
-      text: "Üçüncü direnç seviyesinin üstüne çıktı.",
-      bg: "bg-green-900",
+      text: "Pivot değerinin üstünde seyrediyor.",
+      bg: "bg-[#10b44a]",
     };
   }
 
-  if (row.son > row.direnc2) {
+  if (row.son < row.pivot) {
     return {
-      text: "İkinci direnç seviyesinin üstüne çıktı.",
-      bg: "bg-green-800",
-    };
-  }
-
-  if (row.son > row.direnc1) {
-    return {
-      text: "İlk direnç seviyesinin üstüne çıktı.",
-      bg: "bg-green-700",
-    };
-  }
-
-  if (row.son < row.destek3) {
-    return {
-      text: "Üçüncü destek seviyesinin altına indi.",
-      bg: "bg-red-900",
-    };
-  }
-
-  if (row.son < row.destek2) {
-    return {
-      text: "İkinci destek seviyesinin altına indi.",
-      bg: "bg-red-800",
-    };
-  }
-
-  if (row.son < row.destek1) {
-    return {
-      text: "İlk destek seviyesinin altına indi.",
-      bg: "bg-red-700",
+      text: "Pivot değerinin altında seyrediyor.",
+      bg: "bg-[#ff4a22]",
     };
   }
 
@@ -103,168 +91,113 @@ function getDurum(row: PivotRow) {
   };
 }
 
-const xu100Ozet = {
-  pivot: 12992.6,
-  destek1: 12805.27,
-  destek2: 12688.99,
-  destek3: 12501.66,
-  direnc1: 13108.88,
-  direnc2: 13296.21,
-  direnc3: 13412.49,
-  fark: 5.15,
-};
-
 export default function PivotAnaliziPage() {
   return (
-    <main className="min-h-screen bg-[#1b1d21] px-3 py-4 text-white md:px-5">
+    <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-[1500px]">
-        <div className="mb-4 flex flex-wrap gap-3">
+        <div className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
-            className="inline-block rounded-lg border border-zinc-600 bg-zinc-800 px-4 py-2 text-sm font-semibold text-white hover:bg-zinc-700"
+            className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Ana Sayfa
           </Link>
 
           <Link
             href="/borsa"
-            className="inline-block rounded-lg border border-zinc-600 bg-zinc-800 px-4 py-2 text-sm font-semibold text-white hover:bg-zinc-700"
+            className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Geri
           </Link>
         </div>
 
-        <div className="mb-3 overflow-x-auto rounded-t-xl border border-[#ff7a00] bg-[#202329]">
-          <div className="min-w-[1200px]">
-            <div className="grid grid-cols-[140px_repeat(7,minmax(120px,1fr))] border-b border-zinc-700 bg-[#101215] text-sm">
-              <div className="border-r border-zinc-700 px-3 py-2 font-bold text-[#f59e0b]">
-                XU100
-              </div>
-              <div className="border-r border-zinc-700 px-3 py-2">Pivot</div>
-              <div className="border-r border-zinc-700 px-3 py-2 font-semibold">
-                {formatNumber(xu100Ozet.pivot)}
-              </div>
-              <div className="border-r border-zinc-700 px-3 py-2">Destek 1</div>
-              <div className="border-r border-zinc-700 px-3 py-2 font-semibold">
-                {formatNumber(xu100Ozet.destek1)}
-              </div>
-              <div className="border-r border-zinc-700 px-3 py-2">Destek 2</div>
-              <div className="border-r border-zinc-700 px-3 py-2 font-semibold">
-                {formatNumber(xu100Ozet.destek2)}
-              </div>
-              <div className="px-3 py-2">Destek 3</div>
-            </div>
+        <h1 className="mb-2 text-3xl font-bold text-zinc-900">Pivot Analizi</h1>
+        <p className="mb-8 max-w-3xl text-base text-zinc-600">
+          Pivot, destek ve direnç seviyelerine göre hazırlanan görünüm tablosu.
+        </p>
 
-            <div className="grid grid-cols-[140px_repeat(7,minmax(120px,1fr))] border-b border-zinc-700 bg-[#101215] text-sm">
-              <div className="border-r border-zinc-700 px-3 py-2"></div>
-              <div className="border-r border-zinc-700 px-3 py-2"></div>
-              <div className="border-r border-zinc-700 px-3 py-2"></div>
-              <div className="border-r border-zinc-700 px-3 py-2"></div>
-              <div className="border-r border-zinc-700 px-3 py-2"></div>
-              <div className="border-r border-zinc-700 px-3 py-2"></div>
-              <div className="border-r border-zinc-700 px-3 py-2"></div>
-              <div className="px-3 py-2 font-semibold">
-                {formatNumber(xu100Ozet.destek3)}
-              </div>
-            </div>
+        <section className="mb-8">
+          <ReklamAlani variant="yatay" />
+        </section>
 
-            <div className="bg-green-800 px-3 py-2 text-center text-sm font-semibold text-white">
-              Üçüncü direnç seviyesinin üstüne çıktı.
-            </div>
+        <section className="overflow-hidden rounded-2xl border border-zinc-700 bg-[#202329] shadow-sm">
+          <div className="overflow-x-auto">
+            <table className="min-w-[1400px] w-full border-collapse text-sm text-white">
+              <thead className="bg-[#2a2d33] text-zinc-200">
+                <tr>
+                  <th className="border border-zinc-700 px-3 py-2 text-left">Sembol</th>
+                  <th className="border border-zinc-700 px-3 py-2 text-left">Pivota Göre Fark %</th>
+                  <th className="border border-zinc-700 px-3 py-2 text-left">Son</th>
+                  <th className="border border-zinc-700 px-3 py-2 text-left">Pivot</th>
+                  <th className="border border-zinc-700 px-3 py-2 text-left">Destek 1</th>
+                  <th className="border border-zinc-700 px-3 py-2 text-left">Destek 2</th>
+                  <th className="border border-zinc-700 px-3 py-2 text-left">Destek 3</th>
+                  <th className="border border-zinc-700 px-3 py-2 text-left">Direnç 1</th>
+                  <th className="border border-zinc-700 px-3 py-2 text-left">Direnç 2</th>
+                  <th className="border border-zinc-700 px-3 py-2 text-left">Direnç 3</th>
+                </tr>
+              </thead>
 
-            <div className="grid grid-cols-[140px_repeat(7,minmax(120px,1fr))] border-t border-zinc-700 bg-[#101215] text-sm">
-              <div className="border-r border-zinc-700 px-3 py-2">Pivota Göre Fark %</div>
-              <div className="border-r border-zinc-700 px-3 py-2 font-semibold">
-                {formatNumber(xu100Ozet.fark)}
-              </div>
-              <div className="border-r border-zinc-700 px-3 py-2">Direnç 1</div>
-              <div className="border-r border-zinc-700 px-3 py-2 font-semibold">
-                {formatNumber(xu100Ozet.direnc1)}
-              </div>
-              <div className="border-r border-zinc-700 px-3 py-2">Direnç 2</div>
-              <div className="border-r border-zinc-700 px-3 py-2 font-semibold">
-                {formatNumber(xu100Ozet.direnc2)}
-              </div>
-              <div className="border-r border-zinc-700 px-3 py-2">Direnç 3</div>
-              <div className="px-3 py-2 font-semibold">
-                {formatNumber(xu100Ozet.direnc3)}
-              </div>
-            </div>
-          </div>
-        </div>
+              <tbody>
+                {pivotVerileri.map((row, index) => {
+                  const durum = getDurum(row);
 
-        <div className="overflow-x-auto rounded-b-xl border border-zinc-700 bg-[#202329]">
-          <table className="min-w-[1400px] w-full border-collapse text-sm">
-            <thead className="bg-[#2a2d33] text-zinc-200">
-              <tr>
-                <th className="border border-zinc-700 px-3 py-2 text-left">Sembol</th>
-                <th className="border border-zinc-700 px-3 py-2 text-left">Pivota Göre Fark %</th>
-                <th className="border border-zinc-700 px-3 py-2 text-left">Son</th>
-                <th className="border border-zinc-700 px-3 py-2 text-left">Pivot</th>
-                <th className="border border-zinc-700 px-3 py-2 text-left">Destek 1</th>
-                <th className="border border-zinc-700 px-3 py-2 text-left">Destek 2</th>
-                <th className="border border-zinc-700 px-3 py-2 text-left">Destek 3</th>
-                <th className="border border-zinc-700 px-3 py-2 text-left">Direnç 1</th>
-                <th className="border border-zinc-700 px-3 py-2 text-left">Direnç 2</th>
-                <th className="border border-zinc-700 px-3 py-2 text-left">Direnç 3</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              {pivotVerileri.map((row, index) => {
-                const durum = getDurum(row);
-
-                return (
-                  <>
-                    <tr
-                      key={`${row.sembol}-veri`}
-                      className={index % 2 === 0 ? "bg-[#2f3338]" : "bg-[#24272c]"}
-                    >
-                      <td className="border border-zinc-700 px-3 py-2 font-semibold">
-                        {row.sembol}
-                      </td>
-                      <td className="border border-zinc-700 px-3 py-2">
-                        {formatNumber(row.fark)}
-                      </td>
-                      <td className="border border-zinc-700 px-3 py-2">
-                        {formatNumber(row.son)}
-                      </td>
-                      <td className="border border-zinc-700 px-3 py-2">
-                        {formatNumber(row.pivot)}
-                      </td>
-                      <td className="border border-zinc-700 px-3 py-2">
-                        {formatNumber(row.destek1)}
-                      </td>
-                      <td className="border border-zinc-700 px-3 py-2">
-                        {formatNumber(row.destek2)}
-                      </td>
-                      <td className="border border-zinc-700 px-3 py-2">
-                        {formatNumber(row.destek3)}
-                      </td>
-                      <td className="border border-zinc-700 px-3 py-2">
-                        {formatNumber(row.direnc1)}
-                      </td>
-                      <td className="border border-zinc-700 px-3 py-2">
-                        {formatNumber(row.direnc2)}
-                      </td>
-                      <td className="border border-zinc-700 px-3 py-2">
-                        {formatNumber(row.direnc3)}
-                      </td>
-                    </tr>
-                    <tr key={`${row.sembol}-durum`}>
-                      <td
-                        colSpan={10}
-                        className={`${durum.bg} border border-zinc-700 px-3 py-1.5 text-center text-sm font-semibold text-white`}
+                  return (
+                    <>
+                      <tr
+                        key={`${row.sembol}-veri`}
+                        className={index % 2 === 0 ? "bg-[#2f3338]" : "bg-[#24272c]"}
                       >
-                        {durum.text}
-                      </td>
-                    </tr>
-                  </>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
+                        <td className="border border-zinc-700 px-3 py-2 font-semibold">
+                          {row.sembol}
+                        </td>
+                        <td className="border border-zinc-700 px-3 py-2">
+                          {formatNumber(row.fark)}
+                        </td>
+                        <td className="border border-zinc-700 px-3 py-2">
+                          {formatNumber(row.son)}
+                        </td>
+                        <td className="border border-zinc-700 px-3 py-2">
+                          {formatNumber(row.pivot)}
+                        </td>
+                        <td className="border border-zinc-700 px-3 py-2">
+                          {formatNumber(row.destek1)}
+                        </td>
+                        <td className="border border-zinc-700 px-3 py-2">
+                          {formatNumber(row.destek2)}
+                        </td>
+                        <td className="border border-zinc-700 px-3 py-2">
+                          {formatNumber(row.destek3)}
+                        </td>
+                        <td className="border border-zinc-700 px-3 py-2">
+                          {formatNumber(row.direnc1)}
+                        </td>
+                        <td className="border border-zinc-700 px-3 py-2">
+                          {formatNumber(row.direnc2)}
+                        </td>
+                        <td className="border border-zinc-700 px-3 py-2">
+                          {formatNumber(row.direnc3)}
+                        </td>
+                      </tr>
+                      <tr key={`${row.sembol}-durum`}>
+                        <td
+                          colSpan={10}
+                          className={`${durum.bg} border border-zinc-700 px-3 py-1.5 text-center text-sm font-semibold text-white`}
+                        >
+                          {durum.text}
+                        </td>
+                      </tr>
+                    </>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section className="mt-8">
+          <ReklamAlani variant="icerik" />
+        </section>
       </div>
     </main>
   );
