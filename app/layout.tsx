@@ -15,14 +15,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr">
-      <body>
+      <head>
         <Script
           id="google-adsense"
           async
-          strategy="afterInteractive"
+          strategy="beforeInteractive"
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9613627679911162"
           crossOrigin="anonymous"
         />
+      </head>
+      <body>
         <PageViewTracker />
         {children}
       </body>
