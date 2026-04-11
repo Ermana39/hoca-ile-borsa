@@ -47,7 +47,7 @@ function hisseleriOku() {
 
     return rawRows
       .map((row) => metinCevir(row[0]))
-      .filter((item) => item);
+      .filter((item) => item && item.toLocaleLowerCase("tr-TR") !== "sembol");
   } catch {
     return [];
   }
@@ -79,7 +79,7 @@ export default function YukselisTrendindeOlanlarPage() {
           Yükseliş Trendinde Olan Hisseler
         </h1>
         <p className="mb-3 max-w-3xl text-base text-zinc-600">
-          13, 21, 55 hareketli ortalama üzerinde olan hisseler
+          5, 13, 21, 55, 89, 144, 233 hareketli ortalama üzerinde olan hisseler
         </p>
         <div className="mb-8 text-sm font-semibold text-zinc-700 md:text-base">
           Toplam {hisseler.length} hisse
