@@ -1,47 +1,36 @@
+import fs from "fs";
+import path from "path";
 import Link from "next/link";
 import type { Metadata } from "next";
+import * as XLSX from "xlsx";
 import { MevduatHesaplayici } from "@/components/faiz-hesaplayicilar";
 
 export const metadata: Metadata = {
   title: "Mevduat Faizi Oranları | Hoca İle Borsa",
   description:
-    "Bankalara göre güncel mevduat faizi oranları listesi. Banka adı ve maksimum faiz oranı bilgileri.",
+    "Excel dosyasından okunan güncel mevduat faizi oranları ve günlük ortalama grafik görünümü.",
   alternates: {
     canonical: "/mevduat-kredi-faizleri/mevduat-faizi-oranlari",
   },
 };
 
-type BankaFaiz = {
+type SheetRow = Record<string, string | number | null | undefined>;
+
+type BankaSatiri = {
   banka: string;
-  maxFaiz: string;
+  faiz: string;
 };
 
-const bankaFaizListesi: BankaFaiz[] = [
-  { banka: "Ziraat Dinamik", maxFaiz: "%47" },
-  { banka: "Hayat Finans", maxFaiz: "%46,06" },
-  { banka: "Fibabanka", maxFaiz: "%46" },
-  { banka: "Türk Ticaret Bankası", maxFaiz: "%45,25" },
-  { banka: "Alternatif Bank", maxFaiz: "%45" },
-  { banka: "Anadolubank", maxFaiz: "%45" },
-  { banka: "CEPTETEB", maxFaiz: "%45" },
-  { banka: "ING", maxFaiz: "%45" },
-  { banka: "Odea", maxFaiz: "%45" },
-  { banka: "ON Dijital Bankacılık", maxFaiz: "%45" },
-  { banka: "TEB - Türk Ekonomi Bankası", maxFaiz: "%45" },
-  { banka: "QNB", maxFaiz: "%44,5" },
-  { banka: "HSBC", maxFaiz: "%44" },
-  { banka: "DenizBank", maxFaiz: "%43,5" },
-  { banka: "Akbank", maxFaiz: "%43" },
-  { banka: "getirfinans", maxFaiz: "%43" },
-  { banka: "Yapı Kredi", maxFaiz: "%43" },
-  { banka: "Garanti BBVA", maxFaiz: "%42" },
-  { banka: "Ziraat Bankası", maxFaiz: "%41" },
-  { banka: "N Kolay", maxFaiz: "%40" },
-  { banka: "İş Bankası", maxFaiz: "%40" },
-  { banka: "Enpara.com", maxFaiz: "%39,5" },
-  { banka: "Şekerbank", maxFaiz: "%37" },
-  { banka: "Halkbank", maxFaiz: "%36" },
-];
+type GunlukOrtalamaSatiri = {
+  tarih: string;
+  ortalama: number;
+};
+
+const EXCEL_FILE = path.join(
+  process.cwd(),
+  "data",
+  "hoca-ile-borsa-faiz-takip-sablonu-guncel.xlsx"
+);
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
@@ -59,58 +48,224 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
-function faizToNumber(value: string) {
-  return Number(value.replace("%", "").replace(",", ".").trim()) || 0;
+function formatFaiz(value: unknown) {
+  if (value === null || value === undefined || value === "") return "-";
+
+  const text = String(value).trim().replace(",", ".");
+  const num = Number(text);
+
+  if (Number.isNaN(num)) return String(value);
+
+  const clean = Number.isInteger(num)
+    ? `${num}`
+    : num.toFixed(2).replace(".", ",");
+
+  return `%${clean}`;
 }
 
-function MevduatGrafik() {
-  const grafikVerisi = bankaFaizListesi
-    .map((item) => ({
-      banka: item.banka,
-      oran: faizToNumber(item.maxFaiz),
-    }))
-    .sort((a, b) => b.oran - a.oran)
-    .slice(0, 10);
+function parseNumber(value: unknown) {
+  if (value === null || value === undefined || value === "") return NaN;
 
-  const maxDeger = Math.max(...grafikVerisi.map((item) => item.oran), 1);
+  const num = Number(String(value).replace("%", "").replace(",", ".").trim());
+  return Number.isNaN(num) ? NaN : num;
+}
+
+function formatDateLabel(value: unknown) {
+  if (!value) return "";
+
+  if (value instanceof Date && !Number.isNaN(value.getTime())) {
+    return value.toLocaleDateString("tr-TR");
+  }
+
+  const text = String(value).trim();
+
+  const asDate = new Date(text);
+  if (!Number.isNaN(asDate.getTime())) {
+    return asDate.toLocaleDateString("tr-TR");
+  }
+
+  return text;
+}
+
+function loadMevduatData() {
+  if (!fs.existsSync(EXCEL_FILE)) {
+    return {
+      bankaListesi: [] as BankaSatiri[],
+      grafikVerisi: [] as GunlukOrtalamaSatiri[],
+      hata: "Excel dosyası bulunamadı.",
+    };
+  }
+
+  const workbook = XLSX.readFile(EXCEL_FILE, { cellDates: true });
+  const sheet = workbook.Sheets["Mevduat"];
+
+  if (!sheet) {
+    return {
+      bankaListesi: [] as BankaSatiri[],
+      grafikVerisi: [] as GunlukOrtalamaSatiri[],
+      hata: "Excel içinde Mevduat sayfası bulunamadı.",
+    };
+  }
+
+  const rows = XLSX.utils.sheet_to_json<SheetRow>(sheet, {
+    defval: "",
+    raw: false,
+  });
+
+  if (!rows.length) {
+    return {
+      bankaListesi: [] as BankaSatiri[],
+      grafikVerisi: [] as GunlukOrtalamaSatiri[],
+      hata: "Mevduat sayfasında veri bulunamadı.",
+    };
+  }
+
+  const headers = Object.keys(rows[0]);
+  const tarihKey =
+    headers.find((h) => h.toLowerCase().includes("tarih")) || headers[0];
+  const ortalamaKey =
+    headers.find((h) => h.toLowerCase().includes("ortalama")) ||
+    headers[headers.length - 1];
+
+  const bankaKeys = headers.filter((h) => h !== tarihKey && h !== ortalamaKey);
+
+  const sonSatir = rows[rows.length - 1];
+
+  const bankaListesi: BankaSatiri[] = bankaKeys.map((key) => ({
+    banka: key,
+    faiz: formatFaiz(sonSatir[key]),
+  }));
+
+  const grafikVerisi: GunlukOrtalamaSatiri[] = rows
+    .map((row) => ({
+      tarih: formatDateLabel(row[tarihKey]),
+      ortalama: parseNumber(row[ortalamaKey]),
+    }))
+    .filter((item) => item.tarih && !Number.isNaN(item.ortalama))
+    .slice(-30);
+
+  return {
+    bankaListesi,
+    grafikVerisi,
+    hata: "",
+  };
+}
+
+function MevduatGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
+  if (!data.length) {
+    return (
+      <section className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
+        <h2 className="text-2xl font-bold text-zinc-900">
+          Günlük Ortalama Mevduat Faizi Grafiği
+        </h2>
+        <p className="mt-3 text-sm text-zinc-600">
+          Grafik için yeterli veri bulunamadı.
+        </p>
+      </section>
+    );
+  }
+
+  const width = 960;
+  const height = 320;
+  const padding = 42;
+
+  const minValue = Math.min(...data.map((item) => item.ortalama));
+  const maxValue = Math.max(...data.map((item) => item.ortalama));
+  const range = Math.max(maxValue - minValue, 1);
+
+  const points = data.map((item, index) => {
+    const x =
+      data.length === 1
+        ? width / 2
+        : padding + (index * (width - padding * 2)) / (data.length - 1);
+
+    const y =
+      height -
+      padding -
+      ((item.ortalama - minValue) / range) * (height - padding * 2);
+
+    return {
+      x,
+      y,
+      label: item.tarih,
+      value: item.ortalama,
+    };
+  });
+
+  const pathD = points
+    .map((point, index) => `${index === 0 ? "M" : "L"} ${point.x} ${point.y}`)
+    .join(" ");
 
   return (
     <section className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
       <div className="mb-5">
         <h2 className="text-2xl font-bold text-zinc-900">
-          En Yüksek Mevduat Faizi Sunan Bankalar
+          Günlük Ortalama Mevduat Faizi Grafiği
         </h2>
         <p className="mt-2 text-sm text-zinc-600">
-          En yüksek oran veren ilk 10 bankanın karşılaştırmalı görünümü.
+          Excel dosyasındaki günlük ortalama değerler baz alınır.
         </p>
       </div>
 
-      <div className="space-y-4">
-        {grafikVerisi.map((item) => {
-          const widthPercent = (item.oran / maxDeger) * 100;
+      <div className="overflow-x-auto">
+        <div className="min-w-[960px]">
+          <svg viewBox={`0 0 ${width} ${height}`} className="h-[320px] w-full">
+            <line
+              x1={padding}
+              y1={height - padding}
+              x2={width - padding}
+              y2={height - padding}
+              stroke="#d4d4d8"
+              strokeWidth="1"
+            />
+            <line
+              x1={padding}
+              y1={padding}
+              x2={padding}
+              y2={height - padding}
+              stroke="#d4d4d8"
+              strokeWidth="1"
+            />
 
-          return (
-            <div key={item.banka}>
-              <div className="mb-2 flex items-center justify-between gap-3 text-sm">
-                <span className="font-medium text-zinc-800">{item.banka}</span>
-                <span className="font-semibold text-zinc-900">%{item.oran}</span>
-              </div>
+            <path
+              d={pathD}
+              fill="none"
+              stroke="#111827"
+              strokeWidth="3"
+              strokeLinejoin="round"
+              strokeLinecap="round"
+            />
 
-              <div className="h-4 overflow-hidden rounded-full bg-zinc-100">
-                <div
-                  className="h-full rounded-full bg-zinc-900"
-                  style={{ width: `${widthPercent}%` }}
-                />
-              </div>
-            </div>
-          );
-        })}
+            {points.map((point, index) => (
+              <g key={`${point.label}-${index}`}>
+                <circle cx={point.x} cy={point.y} r="4" fill="#111827" />
+                <text
+                  x={point.x}
+                  y={point.y - 12}
+                  textAnchor="middle"
+                  fontSize="11"
+                  fill="#52525b"
+                >
+                  %{point.value.toFixed(2).replace(".", ",")}
+                </text>
+              </g>
+            ))}
+          </svg>
+
+          <div className="mt-3 grid grid-cols-5 gap-2 text-center text-[11px] text-zinc-500 md:grid-cols-10">
+            {data.map((item) => (
+              <div key={item.tarih}>{item.tarih}</div>
+            ))}
+          </div>
+        </div>
       </div>
     </section>
   );
 }
 
 export default function MevduatFaiziOranlariPage() {
+  const { bankaListesi, grafikVerisi, hata } = loadMevduatData();
+
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-7xl">
@@ -135,8 +290,14 @@ export default function MevduatFaiziOranlariPage() {
         </h1>
 
         <p className="mb-8 text-base text-zinc-600">
-          Banka adı ve maksimum mevduat faiz oranı listesi.
+          Excel dosyasından okunan banka verileri ve günlük ortalama grafik görünümü.
         </p>
+
+        {hata ? (
+          <section className="mb-8 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+            {hata}
+          </section>
+        ) : null}
 
         <section className="mb-8">
           <ReklamAlani variant="yatay" />
@@ -157,7 +318,7 @@ export default function MevduatFaiziOranlariPage() {
               </thead>
 
               <tbody>
-                {bankaFaizListesi.map((item, index) => (
+                {bankaListesi.map((item, index) => (
                   <tr
                     key={item.banka}
                     className={index % 2 === 0 ? "bg-white" : "bg-sky-50/60"}
@@ -166,7 +327,7 @@ export default function MevduatFaiziOranlariPage() {
                       {item.banka}
                     </td>
                     <td className="px-4 py-3 text-right font-semibold text-zinc-900">
-                      {item.maxFaiz}
+                      {item.faiz}
                     </td>
                   </tr>
                 ))}
@@ -180,7 +341,7 @@ export default function MevduatFaiziOranlariPage() {
         </section>
 
         <section className="mt-8">
-          <MevduatGrafik />
+          <MevduatGrafik data={grafikVerisi} />
         </section>
 
         <section className="mt-8">
