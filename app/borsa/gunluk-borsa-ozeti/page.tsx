@@ -1,82 +1,98 @@
+import Image from "next/image";
 import Link from "next/link";
 
+const bugunTarihi = new Intl.DateTimeFormat("tr-TR", {
+  timeZone: "Europe/Istanbul",
+  day: "2-digit",
+  month: "2-digit",
+  year: "numeric",
+}).format(new Date());
+
 const bistVeri = {
-  tarih: "08.04.2026",
-  kapanis: "10.245,18",
-  degisimYuzde: -1.24,
-  pivot: "29.293",
-  pivotFark: "-1,55",
-  destek1: "28.387",
-  destek2: "27.933",
-  destek3: "27.027",
-  direnc1: "29.747",
-  direnc2: "30.653",
-  direnc3: "31.107",
+  tarih: bugunTarihi,
+  kapanis: "14073.79",
+  degisimYuzde: 2.81,
 };
 
 const enCokYukselenler = [
-  { kod: "ASELS", fark: "+9,98%" },
-  { kod: "ALARK", fark: "+8,45%" },
-  { kod: "KONTR", fark: "+7,92%" },
-  { kod: "CWENE", fark: "+6,88%" },
-  { kod: "ODAS", fark: "+5,64%" },
+  { kod: "KONTR", fark: "+10,00%" },
+  { kod: "AAGYO", fark: "+10,00%" },
+  { kod: "DMRGD", fark: "+10,00%" },
+  { kod: "ATATR", fark: "+10,00%" },
+  { kod: "ALKLC", fark: "+9,99%" },
 ];
 
 const enCokDusenler = [
-  { kod: "HEKTS", fark: "-9,91%" },
-  { kod: "SASA", fark: "-8,73%" },
-  { kod: "SMRTG", fark: "-7,42%" },
-  { kod: "MIATK", fark: "-6,95%" },
-  { kod: "IZENR", fark: "-5,88%" },
+  { kod: "BLCYT", fark: "-9,97%" },
+  { kod: "RUBNS", fark: "-9,96%" },
+  { kod: "ZERGY", fark: "-9,95%" },
+  { kod: "EFOR", fark: "-9,95%" },
+  { kod: "MEKAG", fark: "-8,69%" },
 ];
 
 const enHacimliler = [
-  { kod: "THYAO", hacim: "8,42 Mr TL" },
-  { kod: "EREGL", hacim: "7,15 Mr TL" },
-  { kod: "ISCTR", hacim: "6,84 Mr TL" },
-  { kod: "YKBNK", hacim: "6,12 Mr TL" },
-  { kod: "AKBNK", hacim: "5,96 Mr TL" },
+  { kod: "ASELS", hacim: "13,318 Mr TL" },
+  { kod: "THYAO", hacim: "12,800 Mr TL" },
+  { kod: "SASA", hacim: "11,692 Mr TL" },
+  { kod: "ISCTR", hacim: "9,910 Mr TL" },
+  { kod: "AKBNK", hacim: "9,414 Mr TL" },
 ];
 
 const paraGirisi = [
-  { kod: "THYAO", tutar: "+425 Mn TL" },
-  { kod: "ASELS", tutar: "+318 Mn TL" },
-  { kod: "EREGL", tutar: "+276 Mn TL" },
-  { kod: "TUPRS", tutar: "+241 Mn TL" },
-  { kod: "BIMAS", tutar: "+198 Mn TL" },
+  { kod: "EREGL", tutar: "+345 Mn TL" },
+  { kod: "ASELS", tutar: "+271 Mn TL" },
+  { kod: "SASA", tutar: "+255 Mn TL" },
+  { kod: "AKBNK", tutar: "+197 Mn TL" },
+  { kod: "TERA", tutar: "+142 Mn TL" },
 ];
 
 const paraCikisi = [
-  { kod: "SASA", tutar: "-352 Mn TL" },
-  { kod: "HEKTS", tutar: "-301 Mn TL" },
-  { kod: "KONTR", tutar: "-244 Mn TL" },
-  { kod: "MIATK", tutar: "-219 Mn TL" },
-  { kod: "SMRTG", tutar: "-184 Mn TL" },
+  { kod: "KRDMD", tutar: "-123 Mn TL" },
+  { kod: "THEOL", tutar: "-64 Mn TL" },
+  { kod: "TKFEN", tutar: "-48 Mn TL" },
+  { kod: "ASTOR", tutar: "-42 Mn TL" },
+  { kod: "EFOR", tutar: "-42 Mn TL" },
 ];
 
 const enCokAlisYapanKurumlar = [
-  { kurum: "İş Yatırım", hacim: "1,24 Mr TL", oran: "%12,8" },
-  { kurum: "Bank of America", hacim: "1,10 Mr TL", oran: "%11,4" },
-  { kurum: "Yapı Kredi", hacim: "986 Mn TL", oran: "%10,2" },
-  { kurum: "Garanti BBVA", hacim: "842 Mn TL", oran: "%8,7" },
-  { kurum: "Ak Yatırım", hacim: "765 Mn TL", oran: "%7,9" },
+  { kurum: "BANK OF AMERICA", hacim: "5,372,995,622", oran: "%44,41" },
+  { kurum: "GLOBAL", hacim: "1,239,983,739", oran: "%10,25" },
+  { kurum: "HSBC", hacim: "1,208,765,215", oran: "%9,99" },
+  { kurum: "TERA", hacim: "1,193,255,235", oran: "%9,86" },
+  { kurum: "AK", hacim: "917,291,190", oran: "%7,58" },
 ];
 
 const enCokSatisYapanKurumlar = [
-  { kurum: "Ziraat Yatırım", hacim: "1,18 Mr TL", oran: "%12,1" },
-  { kurum: "QNB Invest", hacim: "1,03 Mr TL", oran: "%10,6" },
-  { kurum: "A1 Capital", hacim: "912 Mn TL", oran: "%9,4" },
-  { kurum: "Oyak Yatırım", hacim: "854 Mn TL", oran: "%8,8" },
-  { kurum: "Gedik Yatırım", hacim: "798 Mn TL", oran: "%8,2" },
+  { kurum: "GARANTI BBVA", hacim: "-1,731,110,388", oran: "%14,31" },
+  { kurum: "IS", hacim: "-1,578,262,320", oran: "%13,05" },
+  { kurum: "INFO", hacim: "-1,481,676,894", oran: "%12,25" },
+  { kurum: "TEB", hacim: "-1,155,547,470", oran: "%9,55" },
+  { kurum: "ZIRAAT", hacim: "-781,025,475", oran: "%6,46" },
 ];
 
 const enCokHacimYapanKurumlar = [
-  { kurum: "İş Yatırım", hacim: "2,31 Mr TL", oran: "%11,9" },
-  { kurum: "Bank of America", hacim: "2,08 Mr TL", oran: "%10,7" },
-  { kurum: "Yapı Kredi", hacim: "1,94 Mr TL", oran: "%10,0" },
-  { kurum: "Garanti BBVA", hacim: "1,76 Mr TL", oran: "%9,1" },
-  { kurum: "Ak Yatırım", hacim: "1,54 Mr TL", oran: "%8,0" },
+  { kurum: "YAPI KREDI", hacim: "76,463,571,458", oran: "%13,60" },
+  { kurum: "BANK OF AMERICA", hacim: "74,042,732,118", oran: "%13,17" },
+  { kurum: "IS", hacim: "53,541,655,437", oran: "%9,52" },
+  { kurum: "AK", hacim: "45,606,416,277", oran: "%8,11" },
+  { kurum: "DENIZ", hacim: "23,327,070,339", oran: "%4,15" },
 ];
+
+function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
+  const alanClass =
+    variant === "icerik"
+      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
+      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
+
+  return (
+    <section
+      aria-label="Reklam alanı"
+      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
+    >
+      <div className={`w-full ${alanClass}`} />
+    </section>
+  );
+}
 
 function ListeKutusu({
   baslik,
@@ -147,7 +163,7 @@ function KurumKutusu({
       <div className="overflow-hidden rounded-xl border border-zinc-200 bg-white">
         <div className="grid grid-cols-3 border-b border-zinc-200 bg-zinc-100 px-4 py-3 text-sm font-bold text-zinc-700">
           <div>Kurum</div>
-          <div className="text-right">Hacim</div>
+          <div className="text-right">Net Hacim</div>
           <div className="text-right">Yüzde</div>
         </div>
 
@@ -172,9 +188,26 @@ function KurumKutusu({
   );
 }
 
+function OnemKutulari({ tip }: { tip: "sari" | "kirmizi" }) {
+  const renkler =
+    tip === "kirmizi"
+      ? ["bg-red-500", "bg-red-500", "bg-red-500"]
+      : ["bg-yellow-400", "bg-yellow-400", "bg-zinc-300"];
+
+  return (
+    <div className="flex items-center gap-1">
+      {renkler.map((renk, index) => (
+        <span
+          key={index}
+          className={`h-3.5 w-3.5 rounded-sm border border-zinc-500 ${renk}`}
+        />
+      ))}
+    </div>
+  );
+}
+
 export default function GunlukBorsaOzetiPage() {
   const pozitif = bistVeri.degisimYuzde >= 0;
-  const pivotPozitif = !String(bistVeri.pivotFark).includes("-");
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -197,10 +230,21 @@ export default function GunlukBorsaOzetiPage() {
 
         <h1 className="mb-6 text-3xl font-bold text-zinc-900">Günlük Borsa Özeti</h1>
 
+        <section className="mb-8">
+          <ReklamAlani variant="yatay" />
+        </section>
+
         <div className="mb-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
-          <div className="mb-4 text-xl font-bold text-zinc-900">Grafik Alanı</div>
-          <div className="flex min-h-[320px] items-center justify-center rounded-2xl border border-dashed border-zinc-300 bg-white text-lg font-semibold text-zinc-500">
-            Buraya grafik görseli eklenecek
+          <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
+            <div className="relative aspect-[16/9] w-full">
+              <Image
+                src="/günlük-özet.png"
+                alt="Günlük özet görseli"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
           </div>
         </div>
 
@@ -208,7 +252,7 @@ export default function GunlukBorsaOzetiPage() {
           <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
             <div className="flex min-h-[180px] flex-col justify-between">
               <div className="text-center">
-                <div className="mb-3 text-sm font-semibold text-zinc-600">BIST100 Kapanış</div>
+                <div className="mb-3 text-sm font-semibold text-zinc-600">XU100</div>
                 <div className="text-4xl font-bold text-zinc-900">{bistVeri.kapanis}</div>
               </div>
 
@@ -233,43 +277,43 @@ export default function GunlukBorsaOzetiPage() {
           </div>
 
           <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
-            <div className="mb-3 text-center text-sm font-semibold text-zinc-600">
-              Pivot / Destek / Direnç Alanı
+            <div className="mb-4 text-center text-sm font-semibold text-zinc-600">
+              Ekonomik Takvim
             </div>
 
             <div className="overflow-hidden rounded-xl border border-zinc-200 bg-white">
-              <div className="grid grid-cols-4 border-b border-zinc-200 bg-zinc-100 px-3 py-3 text-center text-xs font-bold text-zinc-700">
-                <div>Pivot</div>
-                <div>Destek 1</div>
-                <div>Destek 2</div>
-                <div>Destek 3</div>
+              <div className="grid grid-cols-[90px_70px_minmax(220px,1fr)_90px_110px_110px_110px] border-b border-zinc-200 bg-zinc-100 px-3 py-3 text-xs font-bold text-zinc-700">
+                <div>Saat</div>
+                <div>Ülke</div>
+                <div>Ekonomik Gösterge</div>
+                <div>Önem</div>
+                <div className="text-center">Açıklanan</div>
+                <div className="text-center">Beklenti</div>
+                <div className="text-center">Önceki</div>
               </div>
 
-              <div className="grid grid-cols-4 border-b border-zinc-100 px-3 py-3 text-center text-base">
-                <div className="font-semibold text-zinc-900">{bistVeri.pivot}</div>
-                <div className="font-semibold text-zinc-900">{bistVeri.destek1}</div>
-                <div className="font-semibold text-zinc-900">{bistVeri.destek2}</div>
-                <div className="font-semibold text-zinc-900">{bistVeri.destek3}</div>
-              </div>
-
-              <div className="grid grid-cols-4 border-b border-zinc-200 bg-zinc-100 px-3 py-3 text-center text-xs font-bold text-zinc-700">
-                <div>Pivot Fark %</div>
-                <div>Direnç 1</div>
-                <div>Direnç 2</div>
-                <div>Direnç 3</div>
-              </div>
-
-              <div className="grid grid-cols-4 px-3 py-3 text-center text-base">
-                <div
-                  className={`font-semibold ${
-                    pivotPozitif ? "text-green-700" : "text-red-700"
-                  }`}
-                >
-                  {bistVeri.pivotFark}
+              <div className="grid grid-cols-[90px_70px_minmax(220px,1fr)_90px_110px_110px_110px] items-center border-b border-zinc-100 px-3 py-3 text-sm">
+                <div className="font-semibold text-zinc-900">10:00</div>
+                <div className="font-semibold text-zinc-900">TR</div>
+                <div className="font-semibold text-zinc-900">Toplam Ciro Endeksi (Yıllık %)</div>
+                <div>
+                  <OnemKutulari tip="sari" />
                 </div>
-                <div className="font-semibold text-zinc-900">{bistVeri.direnc1}</div>
-                <div className="font-semibold text-zinc-900">{bistVeri.direnc2}</div>
-                <div className="font-semibold text-zinc-900">{bistVeri.direnc3}</div>
+                <div className="text-center font-semibold text-zinc-700">-</div>
+                <div className="text-center font-semibold text-zinc-700">-</div>
+                <div className="text-center font-semibold text-zinc-700">35,8%</div>
+              </div>
+
+              <div className="grid grid-cols-[90px_70px_minmax(220px,1fr)_90px_110px_110px_110px] items-center px-3 py-3 text-sm">
+                <div className="font-semibold text-zinc-900">10:00</div>
+                <div className="font-semibold text-zinc-900">TR</div>
+                <div className="font-semibold text-zinc-900">Cari İşlemler Dengesi (Milyon USD)</div>
+                <div>
+                  <OnemKutulari tip="kirmizi" />
+                </div>
+                <div className="text-center font-semibold text-zinc-700">-</div>
+                <div className="text-center font-semibold text-zinc-700">-7.350</div>
+                <div className="text-center font-semibold text-zinc-700">-6.807</div>
               </div>
             </div>
           </div>
@@ -334,6 +378,10 @@ export default function GunlukBorsaOzetiPage() {
             />
           </div>
         </div>
+
+        <section className="mt-8">
+          <ReklamAlani variant="icerik" />
+        </section>
       </div>
     </main>
   );
