@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import * as XLSX from "xlsx";
-import { KonutKredisiHesaplayici } from "@/components/faiz-hesaplayicilar";
+import * as FaizAraclari from "@/components/faiz-hesaplayicilar";
 
 type BankaSatiri = {
   banka: string;
@@ -115,7 +115,7 @@ function KonutGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
     return (
       <section className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
         <h2 className="text-2xl font-bold text-zinc-900">
-          Günlük Ortalama Konut Kredisi Faiz Grafiği
+          Günlük Ortalama Konut Kredisi Grafiği
         </h2>
         <p className="mt-3 text-sm text-zinc-600">
           Grafik için yeterli veri bulunamadı.
@@ -159,10 +159,10 @@ function KonutGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
     <section className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
       <div className="mb-5">
         <h2 className="text-2xl font-bold text-zinc-900">
-          Günlük Ortalama Konut Kredisi Faiz Grafiği
+          Günlük Ortalama Konut Kredisi Grafiği
         </h2>
         <p className="mt-2 text-sm text-zinc-600">
-          Günlük ortalama konut kredisi faiz değişimini gösterir.
+          Günlük ortalama konut oran değişimini gösterir.
         </p>
       </div>
 
@@ -192,6 +192,28 @@ function KonutGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
       </div>
     </section>
   );
+}
+
+function HesaplayiciAlani() {
+  const Comp =
+    (FaizAraclari as any).KonutKredisiHesaplayici ??
+    (FaizAraclari as any).KrediHesaplayici ??
+    null;
+
+  if (!Comp) {
+    return (
+      <section className="rounded-2xl border border-zinc-200 bg-white p-6">
+        <h2 className="text-2xl font-bold text-zinc-900">
+          Konut Kredisi Hesaplayıcı
+        </h2>
+        <p className="mt-3 text-sm text-zinc-600">
+          Hesaplayıcı bileşeni şu anda bulunamadı.
+        </p>
+      </section>
+    );
+  }
+
+  return <Comp />;
 }
 
 export default function KonutKredisiOranlariPage() {
@@ -354,7 +376,7 @@ export default function KonutKredisiOranlariPage() {
         </h1>
 
         <p className="mb-8 text-base text-zinc-600">
-          Güncel konut kredisi oranları, banka banka karşılaştırma tablosu ve günlük ortalama faiz grafiği.
+          Güncel konut kredisi oranları, banka karşılaştırmaları ve günlük ortalama faiz grafiği.
         </p>
 
         {hata ? (
@@ -390,7 +412,7 @@ export default function KonutKredisiOranlariPage() {
         </section>
 
         <section className="mt-8">
-          <KonutKredisiHesaplayici />
+          <HesaplayiciAlani />
         </section>
       </div>
     </main>

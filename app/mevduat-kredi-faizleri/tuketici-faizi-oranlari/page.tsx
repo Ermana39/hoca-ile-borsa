@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import * as XLSX from "xlsx";
-import { IhtiyacKredisiHesaplayici } from "@/components/faiz-hesaplayicilar";
+import * as FaizAraclari from "@/components/faiz-hesaplayicilar";
 
 type BankaSatiri = {
   banka: string;
@@ -81,9 +81,7 @@ function formatDateLabel(value: unknown) {
   const text = cleanText(value);
   if (!text) return "";
 
-  if (/^\d{1,2}\.\d{1,2}\.\d{4}$/.test(text)) {
-    return text;
-  }
+  if (/^\d{1,2}\.\d{1,2}\.\d{4}$/.test(text)) return text;
 
   if (/^\d{4}-\d{2}-\d{2}$/.test(text)) {
     const [y, m, d] = text.split("-");
@@ -117,7 +115,7 @@ function TuketiciGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
     return (
       <section className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
         <h2 className="text-2xl font-bold text-zinc-900">
-          Günlük Ortalama Tüketici Kredisi Faiz Grafiği
+          Günlük Ortalama Tüketici Faizi Grafiği
         </h2>
         <p className="mt-3 text-sm text-zinc-600">
           Grafik için yeterli veri bulunamadı.
@@ -161,10 +159,10 @@ function TuketiciGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
     <section className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
       <div className="mb-5">
         <h2 className="text-2xl font-bold text-zinc-900">
-          Günlük Ortalama Tüketici Kredisi Faiz Grafiği
+          Günlük Ortalama Tüketici Faizi Grafiği
         </h2>
         <p className="mt-2 text-sm text-zinc-600">
-          Günlük ortalama tüketici kredisi faiz değişimini gösterir.
+          Günlük ortalama tüketici oran değişimini gösterir.
         </p>
       </div>
 
@@ -173,7 +171,6 @@ function TuketiciGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
           <svg viewBox={`0 0 ${width} ${height}`} className="h-[320px] w-full">
             <line x1={padding} y1={height - padding} x2={width - padding} y2={height - padding} stroke="#d4d4d8" strokeWidth="1" />
             <line x1={padding} y1={padding} x2={padding} y2={height - padding} stroke="#d4d4d8" strokeWidth="1" />
-
             <path d={pathD} fill="none" stroke="#111827" strokeWidth="3" strokeLinejoin="round" strokeLinecap="round" />
 
             {points.map((point, index) => (
@@ -195,6 +192,28 @@ function TuketiciGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
       </div>
     </section>
   );
+}
+
+function HesaplayiciAlani() {
+  const Comp =
+    (FaizAraclari as any).IhtiyacKredisiHesaplayici ??
+    (FaizAraclari as any).KrediHesaplayici ??
+    null;
+
+  if (!Comp) {
+    return (
+      <section className="rounded-2xl border border-zinc-200 bg-white p-6">
+        <h2 className="text-2xl font-bold text-zinc-900">
+          Tüketici Faizi Hesaplayıcı
+        </h2>
+        <p className="mt-3 text-sm text-zinc-600">
+          Hesaplayıcı bileşeni şu anda bulunamadı.
+        </p>
+      </section>
+    );
+  }
+
+  return <Comp />;
 }
 
 export default function TuketiciFaiziOranlariPage() {
@@ -228,9 +247,7 @@ export default function TuketiciFaiziOranlariPage() {
           }) || workbook.SheetNames[1];
 
         const sheet = workbook.Sheets[targetSheetName];
-        if (!sheet) {
-          throw new Error(`Sayfa bulunamadı: ${targetSheetName}`);
-        }
+        if (!sheet) throw new Error(`Sayfa bulunamadı: ${targetSheetName}`);
 
         const rawRows = XLSX.utils.sheet_to_json<(string | number | null)[]>(sheet, {
           header: 1,
@@ -239,9 +256,7 @@ export default function TuketiciFaiziOranlariPage() {
         }) as unknown[][];
 
         const headerRowIndex = findHeaderRow(rawRows);
-        if (headerRowIndex === -1) {
-          throw new Error("Başlık satırı bulunamadı.");
-        }
+        if (headerRowIndex === -1) throw new Error("Başlık satırı bulunamadı.");
 
         const headerRow = rawRows[headerRowIndex].map((cell) => cleanText(cell));
         const dataRows = rawRows.slice(headerRowIndex + 1);
@@ -285,9 +300,7 @@ export default function TuketiciFaiziOranlariPage() {
           })
           .filter((row) => row.tarih && row.numericCount > 0);
 
-        if (!preparedRows.length) {
-          throw new Error("Dolu veri satırı bulunamadı.");
-        }
+        if (!preparedRows.length) throw new Error("Dolu veri satırı bulunamadı.");
 
         const sonSatir = preparedRows[preparedRows.length - 1];
 
@@ -368,7 +381,7 @@ export default function TuketiciFaiziOranlariPage() {
         </h1>
 
         <p className="mb-8 text-base text-zinc-600">
-          Güncel tüketici kredisi oranları, banka karşılaştırmaları ve günlük ortalama faiz grafiği.
+          Güncel tüketici oranları, banka karşılaştırmaları ve günlük ortalama faiz grafiği.
         </p>
 
         {hata ? (
@@ -404,7 +417,7 @@ export default function TuketiciFaiziOranlariPage() {
         </section>
 
         <section className="mt-8">
-          <IhtiyacKredisiHesaplayici />
+          <HesaplayiciAlani />
         </section>
       </div>
     </main>

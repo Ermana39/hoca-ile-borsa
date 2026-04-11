@@ -3,7 +3,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import * as XLSX from "xlsx";
-import { TasitKredisiHesaplayici } from "@/components/faiz-hesaplayicilar";
+import * as FaizAraclari from "@/components/faiz-hesaplayicilar";
 
 type BankaSatiri = {
   banka: string;
@@ -115,7 +115,7 @@ function TasitGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
     return (
       <section className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
         <h2 className="text-2xl font-bold text-zinc-900">
-          Günlük Ortalama Taşıt Kredisi Faiz Grafiği
+          Günlük Ortalama Taşıt Kredisi Grafiği
         </h2>
         <p className="mt-3 text-sm text-zinc-600">
           Grafik için yeterli veri bulunamadı.
@@ -159,10 +159,10 @@ function TasitGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
     <section className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
       <div className="mb-5">
         <h2 className="text-2xl font-bold text-zinc-900">
-          Günlük Ortalama Taşıt Kredisi Faiz Grafiği
+          Günlük Ortalama Taşıt Kredisi Grafiği
         </h2>
         <p className="mt-2 text-sm text-zinc-600">
-          Günlük ortalama taşıt kredisi faiz değişimini gösterir.
+          Günlük ortalama taşıt oran değişimini gösterir.
         </p>
       </div>
 
@@ -194,6 +194,29 @@ function TasitGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
   );
 }
 
+function HesaplayiciAlani() {
+  const Comp =
+    (FaizAraclari as any).TasitKredisiHesaplamaAraci ??
+    (FaizAraclari as any).TasitKredisiHesaplayici ??
+    (FaizAraclari as any).KrediHesaplayici ??
+    null;
+
+  if (!Comp) {
+    return (
+      <section className="rounded-2xl border border-zinc-200 bg-white p-6">
+        <h2 className="text-2xl font-bold text-zinc-900">
+          Taşıt Kredisi Hesaplayıcı
+        </h2>
+        <p className="mt-3 text-sm text-zinc-600">
+          Hesaplayıcı bileşeni şu anda bulunamadı.
+        </p>
+      </section>
+    );
+  }
+
+  return <Comp />;
+}
+
 export default function TasitKredisiOranlariPage() {
   const [bankaListesi, setBankaListesi] = useState<BankaSatiri[]>([]);
   const [grafikVerisi, setGrafikVerisi] = useState<GunlukOrtalamaSatiri[]>([]);
@@ -217,9 +240,10 @@ export default function TasitKredisiOranlariPage() {
         });
 
         const targetSheetName =
-          workbook.SheetNames.find((name) => name.trim().toLowerCase() === "taşıt kredisi") ||
-          workbook.SheetNames.find((name) => name.trim().toLowerCase() === "tasit kredisi") ||
-          workbook.SheetNames[3];
+          workbook.SheetNames.find((name) => {
+            const n = name.trim().toLowerCase();
+            return n === "taşıt kredisi" || n === "tasit kredisi";
+          }) || workbook.SheetNames[3];
 
         const sheet = workbook.Sheets[targetSheetName];
         if (!sheet) throw new Error(`Sayfa bulunamadı: ${targetSheetName}`);
@@ -391,7 +415,7 @@ export default function TasitKredisiOranlariPage() {
         </section>
 
         <section className="mt-8">
-          <TasitKredisiHesaplayici />
+          <HesaplayiciAlani />
         </section>
       </div>
     </main>
