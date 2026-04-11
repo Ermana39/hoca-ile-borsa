@@ -3,11 +3,11 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AEFES Düşüş Trendini Kırdı | Hoca İle Borsa",
+  title: "AEFES Grafik Analiz | Hoca İle Borsa",
   description:
-    "AEFES hissesinde düşüş trendinin kırılmasına dair kısa teknik değerlendirme.",
+    "AEFES için grafik analiz görünümü ve kısa teknik değerlendirme.",
   alternates: {
-    canonical: "/borsa/dikkat-cekenler/haber-2",
+    canonical: "/borsa/grafik-analiz/aefes",
   },
 };
 
@@ -27,7 +27,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
-export default function Haber2Page() {
+export default function AefesGrafikAnalizPage() {
   return (
     <main className="min-h-screen bg-white">
       <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
@@ -40,7 +40,7 @@ export default function Haber2Page() {
           </Link>
 
           <Link
-            href="/borsa/dikkat-cekenler"
+            href="/borsa/grafik-analiz"
             className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Geri
@@ -54,7 +54,7 @@ export default function Haber2Page() {
             </h1>
 
             <p className="mt-3 text-sm leading-7 text-zinc-600 md:text-base">
-              AEFES için kısa teknik görünüm değerlendirmesi.
+              AEFES için kısa grafik analiz değerlendirmesi.
             </p>
           </header>
 
@@ -66,8 +66,8 @@ export default function Haber2Page() {
             <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50">
               <div className="relative aspect-[16/10] w-full">
                 <Image
-                  src="/dikkat-cekenler-2.png"
-                  alt="AEFES dikkat çekenler görseli"
+                  src="/analiz-1.png"
+                  alt="AEFES analiz görseli"
                   fill
                   className="object-contain"
                   priority

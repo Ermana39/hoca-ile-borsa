@@ -1,11 +1,7 @@
 import Link from "next/link";
 
 const hisseler = [
-  { kod: "THYAO", href: "/borsa/grafik-analiz/thyao" },
-  { kod: "ASELS", href: "/borsa/grafik-analiz/asels" },
-  { kod: "EREGL", href: "/borsa/grafik-analiz/eregl" },
-  { kod: "TUPRS", href: "/borsa/grafik-analiz/tuprs" },
-  { kod: "BIMAS", href: "/borsa/grafik-analiz/bimas" },
+  { kod: "AEFES Düşüş trendini kırdı", href: "/borsa/grafik-analiz/aefes" },
 ];
 
 export default function GrafikAnalizPage() {
@@ -34,7 +30,7 @@ export default function GrafikAnalizPage() {
             <Link
               key={item.kod}
               href={item.href}
-              className="block rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-4 text-base font-medium text-zinc-900 transition hover:bg-zinc-100"
+              className="block rounded-xl border border-blue-200 bg-blue-50 px-4 py-4 text-base font-semibold text-zinc-900 transition hover:bg-blue-100"
             >
               {item.kod}
             </Link>
