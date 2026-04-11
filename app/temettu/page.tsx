@@ -18,7 +18,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
       : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
 
   return (
-    <section aria-label="Reklam alanı" className={`w-full overflow-hidden rounded-2xl border border-dashed border-zinc-300 bg-zinc-50 ${alanClass}`}>
+    <section aria-label="Reklam alanı" className={`w-full overflow-hidden rounded-2xl ${alanClass}`}>
       <div className={`w-full ${alanClass}`} />
     </section>
   );
