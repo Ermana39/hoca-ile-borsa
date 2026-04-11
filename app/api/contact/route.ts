@@ -83,13 +83,8 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ ok: true, message: "Mesajınız alındı." });
     }
 
-    if (!startedAt || Date.now() - startedAt < 3000) {
-      addSecurityLog("contact_fast_submit", ip, "Form çok hızlı gönderildi");
-      return NextResponse.json(
-        { ok: false, message: "Form çok hızlı gönderildi." },
-        { status: 400 }
-      );
-    }
+    // Eskiden 3 saniye altını direkt reddediyordu.
+    // Test ve gerçek kullanımda gereksiz hata ürettiği için kaldırıldı.
 
     const name = sanitizeText(String(body?.name || ""), 120);
     const email = sanitizeText(String(body?.email || ""), 160);
@@ -148,6 +143,8 @@ export async function POST(request: NextRequest) {
       },
     });
 
+    await transporter.verify();
+
     await transporter.sendMail({
       from: `"Hoca İle Borsa Site Formu" <${smtpUser}>`,
       to: contactToEmail,
@@ -175,10 +172,15 @@ export async function POST(request: NextRequest) {
     addSecurityLog("contact_sent", ip, `Mesaj gönderildi: ${subject}`);
 
     return NextResponse.json({ ok: true, message: "Mesajınız gönderildi." });
-  } catch {
+  } catch (error) {
+    console.error("CONTACT_FORM_ERROR:", error);
+
+    const message =
+      error instanceof Error ? error.message : "Mesaj gönderilemedi.";
+
     return NextResponse.json(
-      { ok: false, message: "Mesaj gönderilemedi." },
-      { status: 400 }
+      { ok: false, message },
+      { status: 500 }
     );
   }
 }
