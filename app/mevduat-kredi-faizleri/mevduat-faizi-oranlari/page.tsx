@@ -59,6 +59,57 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
+function faizToNumber(value: string) {
+  return Number(value.replace("%", "").replace(",", ".").trim()) || 0;
+}
+
+function MevduatGrafik() {
+  const grafikVerisi = bankaFaizListesi
+    .map((item) => ({
+      banka: item.banka,
+      oran: faizToNumber(item.maxFaiz),
+    }))
+    .sort((a, b) => b.oran - a.oran)
+    .slice(0, 10);
+
+  const maxDeger = Math.max(...grafikVerisi.map((item) => item.oran), 1);
+
+  return (
+    <section className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
+      <div className="mb-5">
+        <h2 className="text-2xl font-bold text-zinc-900">
+          En Yüksek Mevduat Faizi Sunan Bankalar
+        </h2>
+        <p className="mt-2 text-sm text-zinc-600">
+          En yüksek oran veren ilk 10 bankanın karşılaştırmalı görünümü.
+        </p>
+      </div>
+
+      <div className="space-y-4">
+        {grafikVerisi.map((item) => {
+          const widthPercent = (item.oran / maxDeger) * 100;
+
+          return (
+            <div key={item.banka}>
+              <div className="mb-2 flex items-center justify-between gap-3 text-sm">
+                <span className="font-medium text-zinc-800">{item.banka}</span>
+                <span className="font-semibold text-zinc-900">%{item.oran}</span>
+              </div>
+
+              <div className="h-4 overflow-hidden rounded-full bg-zinc-100">
+                <div
+                  className="h-full rounded-full bg-zinc-900"
+                  style={{ width: `${widthPercent}%` }}
+                />
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
 export default function MevduatFaiziOranlariPage() {
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -126,6 +177,10 @@ export default function MevduatFaiziOranlariPage() {
 
         <section className="mt-8">
           <ReklamAlani variant="icerik" />
+        </section>
+
+        <section className="mt-8">
+          <MevduatGrafik />
         </section>
 
         <section className="mt-8">
