@@ -9,7 +9,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
 
   return (
     <div
-      className={`w-full rounded-2xl border border-dashed border-zinc-300 bg-zinc-50 ${alanClass}`}
+      className={`w-full rounded-2xl ${alanClass}`}
       aria-label="Reklam alanı"
     />
   );

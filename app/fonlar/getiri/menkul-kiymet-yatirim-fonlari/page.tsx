@@ -15,7 +15,7 @@ export default async function MenkulKiymetYatirimFonlariPage({
     <FonGetiriExcelPage
       title="Menkul Kıymet Yatırım Fonları"
       description="Menkul kıymet yatırım fonlarının getiri verilerini dönemsel olarak inceleyin."
-      excelRelativePath="app/fonlar/getiri/data/menkul-kiymet-yatirim-fonlari.xlsx"
+      excelRelativePath="app/fonlar/getiri/menkul-kiymet-yatirim-fonlari/data/menkul-kiymet-yatirim-fonlari-getiri.xlsx"
       pageBasePath="/fonlar/getiri/menkul-kiymet-yatirim-fonlari"
       backHref="/fonlar/getiri"
       searchParams={searchParams}
