@@ -12,6 +12,11 @@ type DipZirveSatiri = {
   zirveDip: number | null;
 };
 
+type SearchParams = Promise<{
+  sort?: string;
+  dir?: string;
+}>;
+
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
     variant === "icerik"
@@ -138,8 +143,66 @@ function verileriOku(): DipZirveSatiri[] {
   }
 }
 
-export default function DipZirveAnaliziPage() {
+function toSortableNumber(value: number | null) {
+  if (value === null || Number.isNaN(value)) return -999999999;
+  return value;
+}
+
+function sortArrow(active: boolean, direction: "asc" | "desc") {
+  if (!active) return "↕";
+  return direction === "asc" ? "↑" : "↓";
+}
+
+export default async function DipZirveAnaliziPage({
+  searchParams,
+}: {
+  searchParams: SearchParams;
+}) {
+  const params = await searchParams;
   const dipZirveVerileri = verileriOku();
+
+  const allowedSorts = [
+    "sembol",
+    "yuzdeDibeUzaklik",
+    "gunDibeUzaklik",
+    "yuzdeZirveyeUzaklik",
+    "gunZirveyeUzaklik",
+    "zirveDip",
+  ] as const;
+
+  const sort = allowedSorts.includes((params.sort ?? "sembol") as never)
+    ? (params.sort as (typeof allowedSorts)[number])
+    : "sembol";
+
+  const dir: "asc" | "desc" = params.dir === "desc" ? "desc" : "asc";
+
+  const sortedVeriler = [...dipZirveVerileri].sort((a, b) => {
+    const aValue = a[sort];
+    const bValue = b[sort];
+
+    if (sort === "sembol") {
+      return dir === "asc"
+        ? String(aValue).localeCompare(String(bValue), "tr")
+        : String(bValue).localeCompare(String(aValue), "tr");
+    }
+
+    const aNum = toSortableNumber(aValue as number | null);
+    const bNum = toSortableNumber(bValue as number | null);
+
+    return dir === "asc" ? aNum - bNum : bNum - aNum;
+  });
+
+  const nextDir = (column: string) => {
+    if (sort === column) return dir === "asc" ? "desc" : "asc";
+    return column === "sembol" ? "asc" : "desc";
+  };
+
+  const sortLink = (column: string) => {
+    const sp = new URLSearchParams();
+    sp.set("sort", column);
+    sp.set("dir", nextDir(column));
+    return `/borsa/dip-zirve-analizi?${sp.toString()}`;
+  };
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -174,18 +237,54 @@ export default function DipZirveAnaliziPage() {
             <table className="w-full min-w-[980px] border-collapse text-sm">
               <thead className="bg-zinc-100 text-zinc-800">
                 <tr>
-                  <th className="px-4 py-4 text-left font-semibold">Sembol</th>
-                  <th className="px-4 py-4 text-right font-semibold">% Dibe Uzaklık</th>
-                  <th className="px-4 py-4 text-right font-semibold">Gün Dibe Uzaklık</th>
-                  <th className="px-4 py-4 text-right font-semibold">% Zirveye Uzaklık</th>
-                  <th className="px-4 py-4 text-right font-semibold">Gün Zirveye Uzaklık</th>
-                  <th className="px-4 py-4 text-right font-semibold">Zirve / Dip</th>
+                  <th className="px-4 py-4 text-left font-semibold">
+                    <Link href={sortLink("sembol")} className="inline-flex items-center gap-1">
+                      Sembol {sortArrow(sort === "sembol", dir)}
+                    </Link>
+                  </th>
+                  <th className="px-4 py-4 text-right font-semibold">
+                    <Link
+                      href={sortLink("yuzdeDibeUzaklik")}
+                      className="inline-flex items-center gap-1"
+                    >
+                      % Dibe Uzaklık {sortArrow(sort === "yuzdeDibeUzaklik", dir)}
+                    </Link>
+                  </th>
+                  <th className="px-4 py-4 text-right font-semibold">
+                    <Link
+                      href={sortLink("gunDibeUzaklik")}
+                      className="inline-flex items-center gap-1"
+                    >
+                      Gün Dibe Uzaklık {sortArrow(sort === "gunDibeUzaklik", dir)}
+                    </Link>
+                  </th>
+                  <th className="px-4 py-4 text-right font-semibold">
+                    <Link
+                      href={sortLink("yuzdeZirveyeUzaklik")}
+                      className="inline-flex items-center gap-1"
+                    >
+                      % Zirveye Uzaklık {sortArrow(sort === "yuzdeZirveyeUzaklik", dir)}
+                    </Link>
+                  </th>
+                  <th className="px-4 py-4 text-right font-semibold">
+                    <Link
+                      href={sortLink("gunZirveyeUzaklik")}
+                      className="inline-flex items-center gap-1"
+                    >
+                      Gün Zirveye Uzaklık {sortArrow(sort === "gunZirveyeUzaklik", dir)}
+                    </Link>
+                  </th>
+                  <th className="px-4 py-4 text-right font-semibold">
+                    <Link href={sortLink("zirveDip")} className="inline-flex items-center gap-1">
+                      Zirve / Dip {sortArrow(sort === "zirveDip", dir)}
+                    </Link>
+                  </th>
                 </tr>
               </thead>
 
               <tbody>
-                {dipZirveVerileri.length > 0 ? (
-                  dipZirveVerileri.map((item, index) => (
+                {sortedVeriler.length > 0 ? (
+                  sortedVeriler.map((item, index) => (
                     <tr
                       key={`${item.sembol}-${index}`}
                       className={index % 2 === 0 ? "bg-white" : "bg-sky-50/60"}
