@@ -120,21 +120,21 @@ export default function PivotAnaliziPage() {
           <ReklamAlani variant="yatay" />
         </section>
 
-        <section className="overflow-hidden rounded-2xl border border-zinc-700 bg-[#202329] shadow-sm">
+        <section className="overflow-hidden rounded-2xl border border-sky-200 bg-sky-50 shadow-sm">
           <div className="overflow-x-auto">
-            <table className="min-w-[1400px] w-full border-collapse text-sm text-white">
-              <thead className="bg-[#2a2d33] text-zinc-200">
+            <table className="min-w-[1400px] w-full border-collapse text-sm text-zinc-900">
+              <thead className="bg-sky-100 text-zinc-800">
                 <tr>
-                  <th className="border border-zinc-700 px-3 py-2 text-left">Sembol</th>
-                  <th className="border border-zinc-700 px-3 py-2 text-left">Pivota Göre Fark %</th>
-                  <th className="border border-zinc-700 px-3 py-2 text-left">Son</th>
-                  <th className="border border-zinc-700 px-3 py-2 text-left">Pivot</th>
-                  <th className="border border-zinc-700 px-3 py-2 text-left">Destek 1</th>
-                  <th className="border border-zinc-700 px-3 py-2 text-left">Destek 2</th>
-                  <th className="border border-zinc-700 px-3 py-2 text-left">Destek 3</th>
-                  <th className="border border-zinc-700 px-3 py-2 text-left">Direnç 1</th>
-                  <th className="border border-zinc-700 px-3 py-2 text-left">Direnç 2</th>
-                  <th className="border border-zinc-700 px-3 py-2 text-left">Direnç 3</th>
+                  <th className="border border-sky-200 px-3 py-2 text-left">Sembol</th>
+                  <th className="border border-sky-200 px-3 py-2 text-left">Pivota Göre Fark %</th>
+                  <th className="border border-sky-200 px-3 py-2 text-left">Son</th>
+                  <th className="border border-sky-200 px-3 py-2 text-left">Pivot</th>
+                  <th className="border border-sky-200 px-3 py-2 text-left">Destek 1</th>
+                  <th className="border border-sky-200 px-3 py-2 text-left">Destek 2</th>
+                  <th className="border border-sky-200 px-3 py-2 text-left">Destek 3</th>
+                  <th className="border border-sky-200 px-3 py-2 text-left">Direnç 1</th>
+                  <th className="border border-sky-200 px-3 py-2 text-left">Direnç 2</th>
+                  <th className="border border-sky-200 px-3 py-2 text-left">Direnç 3</th>
                 </tr>
               </thead>
 
@@ -146,43 +146,43 @@ export default function PivotAnaliziPage() {
                     <>
                       <tr
                         key={`${row.sembol}-veri`}
-                        className={index % 2 === 0 ? "bg-[#2f3338]" : "bg-[#24272c]"}
+                        className={index % 2 === 0 ? "bg-sky-50" : "bg-sky-100/70"}
                       >
-                        <td className="border border-zinc-700 px-3 py-2 font-semibold">
+                        <td className="border border-sky-200 px-3 py-2 font-semibold">
                           {row.sembol}
                         </td>
-                        <td className="border border-zinc-700 px-3 py-2">
+                        <td className="border border-sky-200 px-3 py-2">
                           {formatNumber(row.fark)}
                         </td>
-                        <td className="border border-zinc-700 px-3 py-2">
+                        <td className="border border-sky-200 px-3 py-2">
                           {formatNumber(row.son)}
                         </td>
-                        <td className="border border-zinc-700 px-3 py-2">
+                        <td className="border border-sky-200 px-3 py-2">
                           {formatNumber(row.pivot)}
                         </td>
-                        <td className="border border-zinc-700 px-3 py-2">
+                        <td className="border border-sky-200 px-3 py-2">
                           {formatNumber(row.destek1)}
                         </td>
-                        <td className="border border-zinc-700 px-3 py-2">
+                        <td className="border border-sky-200 px-3 py-2">
                           {formatNumber(row.destek2)}
                         </td>
-                        <td className="border border-zinc-700 px-3 py-2">
+                        <td className="border border-sky-200 px-3 py-2">
                           {formatNumber(row.destek3)}
                         </td>
-                        <td className="border border-zinc-700 px-3 py-2">
+                        <td className="border border-sky-200 px-3 py-2">
                           {formatNumber(row.direnc1)}
                         </td>
-                        <td className="border border-zinc-700 px-3 py-2">
+                        <td className="border border-sky-200 px-3 py-2">
                           {formatNumber(row.direnc2)}
                         </td>
-                        <td className="border border-zinc-700 px-3 py-2">
+                        <td className="border border-sky-200 px-3 py-2">
                           {formatNumber(row.direnc3)}
                         </td>
                       </tr>
                       <tr key={`${row.sembol}-durum`}>
                         <td
                           colSpan={10}
-                          className={`${durum.bg} border border-zinc-700 px-3 py-1.5 text-center text-sm font-semibold text-white`}
+                          className={`${durum.bg} border border-sky-200 px-3 py-1.5 text-center text-sm font-semibold text-white`}
                         >
                           {durum.text}
                         </td>
