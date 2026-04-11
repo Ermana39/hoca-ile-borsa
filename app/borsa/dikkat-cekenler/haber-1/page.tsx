@@ -72,6 +72,15 @@ Yatırım tavsiyesi değil genel inceleme önerisidir.`}
           </section>
 
           <section className="pt-8">
+            <Link
+              href="/fonlar"
+              className="inline-flex rounded-xl border border-zinc-300 bg-white px-4 py-3 text-sm font-semibold text-zinc-800 transition hover:bg-zinc-100"
+            >
+              Fonlar Sayfasına Git
+            </Link>
+          </section>
+
+          <section className="pt-8">
             <ReklamAlani variant="icerik" />
           </section>
         </article>
