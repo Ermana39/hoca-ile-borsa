@@ -410,7 +410,7 @@ export default function HomePage() {
               <div className="space-y-3 text-sm text-slate-300">
                 <div className="flex items-center gap-2">
                   <MailIcon />
-                  <span>hocaileborsa@gmial.com</span>
+                  <span>hocaileborsa@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <LocationIcon />
