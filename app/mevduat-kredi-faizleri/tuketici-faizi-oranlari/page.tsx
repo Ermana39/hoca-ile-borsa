@@ -381,7 +381,7 @@ export default function TuketiciFaiziOranlariPage() {
         </h1>
 
         <p className="mb-8 text-base text-zinc-600">
-          Güncel tüketici oranları, banka karşılaştırmaları ve günlük ortalama faiz grafiği.
+          Güncel tüketici kredisi oranları, banka karşılaştırmaları ve günlük ortalama faiz grafiği.
         </p>
 
         {hata ? (
