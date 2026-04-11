@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import PageViewTracker from "@/components/page-view-tracker";
-import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Hoca İle Borsa",
   description: "Borsa, halka arz, temettü, fonlar ve finans içerikleri",
+  other: {
+    "google-adsense-account": "ca-pub-9613627679911162",
+  },
 };
 
 export default function RootLayout({
@@ -15,15 +17,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr">
-      <head>
-        <Script
-          id="google-adsense"
-          async
-          strategy="beforeInteractive"
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9613627679911162"
-          crossOrigin="anonymous"
-        />
-      </head>
       <body>
         <PageViewTracker />
         {children}
