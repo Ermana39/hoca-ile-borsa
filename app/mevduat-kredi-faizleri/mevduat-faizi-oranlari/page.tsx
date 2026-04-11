@@ -392,9 +392,9 @@ export default function MevduatFaiziOranlariPage() {
           Mevduat Faizi Oranları
         </h1>
 
-        <p className="mb-8 text-base text-zinc-600">
-          Excel dosyasından okunan banka verileri ve günlük ortalama grafik görünümü.
-        </p>
+       <p className="mb-8 text-base text-zinc-600">
+  Güncel mevduat faizi oranları, banka banka karşılaştırma tablosu ve günlük ortalama faiz grafiği.
+</p>
 
         {hata ? (
           <section className="mb-8 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
