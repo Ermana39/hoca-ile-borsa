@@ -1,61 +1,78 @@
 import { NextRequest, NextResponse } from "next/server";
-import {
-  addView,
-  checkSimpleApiRateLimit,
-  getAdminStatsPath,
-  normalizePagePath,
-  registerApiRequest,
-} from "@/lib/page-stats";
-import { isSameOriginRequest } from "@/lib/request-security";
-import { addSecurityLog } from "@/lib/security-log";
+import { kv, normalizePagePath } from "@/lib/kv";
 
-function getClientIp(request: NextRequest) {
-  const forwardedFor = request.headers.get("x-forwarded-for");
-  if (forwardedFor) return forwardedFor.split(",")[0].trim();
+const STATS_KEY = "stats:pageviews:v2";
 
-  const realIp = request.headers.get("x-real-ip");
-  if (realIp) return realIp.trim();
+function shouldSkip(pathname: string, userAgent: string) {
+  if (
+    pathname.startsWith("/api") ||
+    pathname.startsWith("/_next") ||
+    pathname.startsWith("/kontrol-paneli-4827") ||
+    pathname.startsWith("/yonetim") ||
+    pathname.startsWith("/giris") ||
+    pathname.startsWith("/uye") ||
+    pathname.startsWith("/profil") ||
+    pathname.startsWith("/mesajlar") ||
+    pathname.startsWith("/guvenlik-kayitlari") ||
+    pathname.startsWith("/wp-admin") ||
+    pathname.startsWith("/wp-login")
+  ) {
+    return true;
+  }
 
-  return "unknown";
+  if (
+    pathname === "/favicon.ico" ||
+    pathname === "/robots.txt" ||
+    pathname === "/sitemap.xml" ||
+    pathname === "/manifest.webmanifest"
+  ) {
+    return true;
+  }
+
+  if (
+    /\.(png|jpg|jpeg|gif|webp|svg|ico|css|js|map|txt|xml|woff|woff2)$/i.test(
+      pathname
+    )
+  ) {
+    return true;
+  }
+
+  const ua = userAgent.toLowerCase();
+
+  if (
+    ua.includes("bot") ||
+    ua.includes("spider") ||
+    ua.includes("crawler") ||
+    ua.includes("curl") ||
+    ua.includes("wget") ||
+    ua.includes("python") ||
+    ua.includes("scanner") ||
+    ua.includes("headless")
+  ) {
+    return true;
+  }
+
+  return false;
 }
 
 export async function POST(request: NextRequest) {
   try {
-    const ip = getClientIp(request);
+    const body = await request.json().catch(() => null);
+    const pathname = normalizePagePath(body?.pathname);
+    const userAgent = request.headers.get("user-agent") || "";
 
-    if (!isSameOriginRequest(request)) {
-      addSecurityLog("page_view_blocked", ip, "Geçersiz istek kaynağı");
-      return NextResponse.json({ ok: false }, { status: 403 });
+    if (shouldSkip(pathname, userAgent)) {
+      return NextResponse.json({ ok: true, skipped: true });
     }
 
-    const limit = checkSimpleApiRateLimit(ip, "page-view");
-
-    if (!limit.allowed) {
-      addSecurityLog("page_view_rate_limit", ip, "Sayfa görüntüleme limiti");
-      return NextResponse.json({ ok: false }, { status: 429 });
+    if (!kv) {
+      return NextResponse.json({ ok: true, skipped: true });
     }
 
-    const body = await request.json();
-    const pagePath = normalizePagePath(String(body?.path || "/"));
-    const hiddenAdminPath = `/${getAdminStatsPath()}`;
-
-    if (pagePath.startsWith(hiddenAdminPath)) {
-      return NextResponse.json({ ok: true });
-    }
-
-    if (pagePath.startsWith("/yonetim")) {
-      return NextResponse.json({ ok: true });
-    }
-
-    if (pagePath.startsWith("/api")) {
-      return NextResponse.json({ ok: true });
-    }
-
-    registerApiRequest(ip, "page-view");
-    addView(pagePath);
+    await kv.hincrby(STATS_KEY, pathname, 1);
 
     return NextResponse.json({ ok: true });
   } catch {
-    return NextResponse.json({ ok: false }, { status: 400 });
+    return NextResponse.json({ ok: false }, { status: 200 });
   }
 }

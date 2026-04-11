@@ -7,6 +7,8 @@ export const metadata: Metadata = {
   description: "Sayfa bazlı görüntülenme istatistikleri.",
 };
 
+const STATS_KEY = "stats:pageviews:v2";
+
 function formatNumber(value: number) {
   return new Intl.NumberFormat("tr-TR").format(value);
 }
@@ -20,7 +22,7 @@ async function getPageViews(): Promise<PageViewRow[]> {
   if (!kv) return [];
 
   try {
-    const raw = await kv.hgetall<Record<string, number | string>>("stats:pageviews");
+    const raw = await kv.hgetall<Record<string, number | string>>(STATS_KEY);
 
     if (!raw) return [];
 
