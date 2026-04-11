@@ -41,11 +41,9 @@ type RateLimitStatus = {
 
 function ensureDataDir() {
   const dirPath = path.join(process.cwd(), "data");
-
   if (!fs.existsSync(dirPath)) {
     fs.mkdirSync(dirPath, { recursive: true });
   }
-
   return dirPath;
 }
 
@@ -81,7 +79,6 @@ function readJsonFile<T>(filePath: string, fallback: T): T {
       filePath,
       Array.isArray(fallback) ? "[]" : JSON.stringify(fallback, null, 2)
     );
-
     const raw = fs.readFileSync(filePath, "utf8");
     return JSON.parse(raw) as T;
   } catch {
@@ -124,6 +121,10 @@ function resolveScopeKey(baseKey: string, scope?: string) {
   return scope && scope !== "default" ? `${scope}:${baseKey}` : baseKey;
 }
 
+function isDate(value: unknown): value is Date {
+  return value instanceof Date;
+}
+
 export function startOfToday() {
   const now = new Date();
   return new Date(now.getFullYear(), now.getMonth(), now.getDate());
@@ -149,7 +150,6 @@ export function normalizePagePath(input?: string | null) {
   if (!input) return "/";
 
   let value = String(input).trim();
-
   if (!value) return "/";
 
   value = value.replace(/^https?:\/\/[^/]+/i, "");
@@ -174,18 +174,15 @@ export function getAdminStatsPath() {
 export function readViews(): ViewsMap {
   const filePath = getViewsFilePath();
   const data = readJsonFile<ViewsMap>(filePath, {});
-
   if (!data || typeof data !== "object" || Array.isArray(data)) {
     return {};
   }
-
   return data;
 }
 
 function readViewsHistory(): ViewHistoryItem[] {
   const filePath = getViewsHistoryFilePath();
   const data = readJsonFile<ViewHistoryItem[]>(filePath, []);
-
   if (!Array.isArray(data)) return [];
 
   return data.filter(
@@ -200,7 +197,6 @@ function readViewsHistory(): ViewHistoryItem[] {
 export function readClicks(): ClickItem[] {
   const filePath = getClicksFilePath();
   const data = readJsonFile<ClickItem[]>(filePath, []);
-
   if (!Array.isArray(data)) return [];
 
   return data.filter(
@@ -216,7 +212,6 @@ export function readClicks(): ClickItem[] {
 function readApiRequests(): ApiRequestItem[] {
   const filePath = getApiRequestsFilePath();
   const data = readJsonFile<ApiRequestItem[]>(filePath, []);
-
   if (!Array.isArray(data)) return [];
 
   return data.filter(
@@ -231,7 +226,6 @@ function readApiRequests(): ApiRequestItem[] {
 function readFailedLogins(): FailedLoginItem[] {
   const filePath = getFailedLoginsFilePath();
   const data = readJsonFile<FailedLoginItem[]>(filePath, []);
-
   if (!Array.isArray(data)) return [];
 
   return data.filter(
@@ -363,7 +357,6 @@ export function checkSimpleApiRateLimit(
     };
   } catch {
     const { limit } = resolveRateLimitArgs(scopeOrLimit, maybeLimit);
-
     return {
       allowed: true,
       remaining: limit,
@@ -427,7 +420,6 @@ export function getLoginRateLimitStatus(
     };
   } catch {
     const { limit } = resolveRateLimitArgs(scopeOrLimit, maybeLimit);
-
     return {
       allowed: true,
       remaining: limit,
@@ -466,10 +458,8 @@ export function isValidAdminToken(token?: string | null) {
     process.env.ADMIN_TOKEN ||
     process.env.NEXT_PUBLIC_ADMIN_TOKEN ||
     "";
-
   if (!expected) return false;
   if (!token) return false;
-
   return token === expected;
 }
 
@@ -495,25 +485,15 @@ export function countViewsSince(
   maybeSince?: Date
 ) {
   try {
-    if (viewsOrSince instanceof Date) {
-      const sinceDate = toDateKey(viewsOrSince);
-      const history = readViewsHistory();
+    const since = isDate(viewsOrSince) ? viewsOrSince : maybeSince;
+    if (!since) return 0;
 
-      return history
-        .filter((item) => item.date >= sinceDate)
-        .reduce((sum, item) => sum + item.count, 0);
-    }
+    const sinceDate = toDateKey(since);
+    const history = readViewsHistory();
 
-    if (maybeSince instanceof Date) {
-      const sinceDate = toDateKey(maybeSince);
-      const history = readViewsHistory();
-
-      return history
-        .filter((item) => item.date >= sinceDate)
-        .reduce((sum, item) => sum + item.count, 0);
-    }
-
-    return 0;
+    return history
+      .filter((item) => item.date >= sinceDate)
+      .reduce((sum, item) => sum + item.count, 0);
   } catch {
     return 0;
   }
@@ -524,34 +504,24 @@ export function countClicksSince(
   maybeSince?: Date
 ) {
   try {
-    if (clicksOrSince instanceof Date) {
-      const sinceDate = toDateKey(clicksOrSince);
-      const clicks = readClicks();
+    const since = isDate(clicksOrSince) ? clicksOrSince : maybeSince;
+    if (!since) return 0;
 
-      return clicks
-        .filter((item) => item.date >= sinceDate)
-        .reduce((sum, item) => sum + item.count, 0);
-    }
+    const sinceDate = toDateKey(since);
+    const clicks = Array.isArray(clicksOrSince) ? clicksOrSince : readClicks();
 
-    if (maybeSince instanceof Date) {
-      const sinceDate = toDateKey(maybeSince);
-      const clicks = Array.isArray(clicksOrSince) ? clicksOrSince : readClicks();
-
-      return clicks
-        .filter((item) => item.date >= sinceDate)
-        .reduce((sum, item) => sum + item.count, 0);
-    }
-
-    return 0;
+    return clicks
+      .filter((item) => item.date >= sinceDate)
+      .reduce((sum, item) => sum + item.count, 0);
   } catch {
     return 0;
   }
 }
 
-export function groupViewsByPath() {
-  const views = readViews();
+export function groupViewsByPath(views?: ViewsMap) {
+  const source = views ?? readViews();
 
-  return Object.entries(views)
+  return Object.entries(source)
     .map(([pathValue, count]) => ({
       path: pathValue,
       count,
@@ -559,7 +529,13 @@ export function groupViewsByPath() {
     .sort((a, b) => b.count - a.count);
 }
 
-export function groupViewsByPathSince(since: Date) {
+export function groupViewsByPathSince(
+  viewsOrSince?: ViewsMap | Date,
+  maybeSince?: Date
+) {
+  const since = isDate(viewsOrSince) ? viewsOrSince : maybeSince;
+  if (!since) return [];
+
   const sinceDate = toDateKey(since);
   const history = readViewsHistory();
   const grouped = new Map<string, number>();
@@ -578,25 +554,31 @@ export function groupViewsByPathSince(since: Date) {
     .sort((a, b) => b.count - a.count);
 }
 
-export function groupClicksBySource() {
-  const clicks = readClicks();
+export function groupClicksBySource(clicks?: ClickItem[]) {
+  const source = clicks ?? readClicks();
   const grouped = new Map<string, number>();
 
-  for (const item of clicks) {
+  for (const item of source) {
     grouped.set(item.source, (grouped.get(item.source) || 0) + item.count);
   }
 
   return Array.from(grouped.entries())
-    .map(([source, count]) => ({
-      source,
+    .map(([sourceKey, count]) => ({
+      source: sourceKey,
       count,
     }))
     .sort((a, b) => b.count - a.count);
 }
 
-export function groupClicksBySourceSince(since: Date) {
+export function groupClicksBySourceSince(
+  clicksOrSince?: ClickItem[] | Date,
+  maybeSince?: Date
+) {
+  const since = isDate(clicksOrSince) ? clicksOrSince : maybeSince;
+  if (!since) return [];
+
   const sinceDate = toDateKey(since);
-  const clicks = readClicks();
+  const clicks = Array.isArray(clicksOrSince) ? clicksOrSince : readClicks();
   const grouped = new Map<string, number>();
 
   for (const item of clicks) {
@@ -606,18 +588,18 @@ export function groupClicksBySourceSince(since: Date) {
   }
 
   return Array.from(grouped.entries())
-    .map(([source, count]) => ({
-      source,
+    .map(([sourceKey, count]) => ({
+      source: sourceKey,
       count,
     }))
     .sort((a, b) => b.count - a.count);
 }
 
-export function groupClicksByLabel() {
-  const clicks = readClicks();
+export function groupClicksByLabel(clicks?: ClickItem[]) {
+  const source = clicks ?? readClicks();
   const grouped = new Map<string, number>();
 
-  for (const item of clicks) {
+  for (const item of source) {
     const key = item.label || "(etiketsiz)";
     grouped.set(key, (grouped.get(key) || 0) + item.count);
   }
@@ -630,9 +612,15 @@ export function groupClicksByLabel() {
     .sort((a, b) => b.count - a.count);
 }
 
-export function groupClicksByLabelSince(since: Date) {
+export function groupClicksByLabelSince(
+  clicksOrSince?: ClickItem[] | Date,
+  maybeSince?: Date
+) {
+  const since = isDate(clicksOrSince) ? clicksOrSince : maybeSince;
+  if (!since) return [];
+
   const sinceDate = toDateKey(since);
-  const clicks = readClicks();
+  const clicks = Array.isArray(clicksOrSince) ? clicksOrSince : readClicks();
   const grouped = new Map<string, number>();
 
   for (const item of clicks) {
@@ -671,7 +659,6 @@ export function getDailySeries(since: Date) {
         views: 0,
         clicks: 0,
       };
-
       current.views += item.count;
       grouped.set(item.date, current);
     }
@@ -684,7 +671,6 @@ export function getDailySeries(since: Date) {
         views: 0,
         clicks: 0,
       };
-
       current.clicks += item.count;
       grouped.set(item.date, current);
     }
