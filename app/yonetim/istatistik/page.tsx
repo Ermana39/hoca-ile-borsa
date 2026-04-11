@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import ResetStatsButton from "@/components/reset-stats-button";
 import { kv, normalizePagePath } from "@/lib/kv";
 
 export const metadata: Metadata = {
@@ -58,6 +59,8 @@ export default async function YonetimIstatistikPage() {
           >
             Yönetim Paneli
           </Link>
+
+          <ResetStatsButton />
         </div>
 
         <section className="mb-6 rounded-2xl border border-zinc-200 bg-white p-6">
