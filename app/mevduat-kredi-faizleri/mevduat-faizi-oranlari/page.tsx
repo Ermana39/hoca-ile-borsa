@@ -76,17 +76,7 @@ function parseNumber(value: unknown) {
 function formatDateLabel(value: unknown) {
   if (!value) return "";
 
-  if (value instanceof Date && !Number.isNaN(value.getTime())) {
-    return value.toLocaleDateString("tr-TR");
-  }
-
   const text = String(value).trim();
-  const asDate = new Date(text);
-
-  if (!Number.isNaN(asDate.getTime())) {
-    return asDate.toLocaleDateString("tr-TR");
-  }
-
   return text;
 }
 
@@ -96,18 +86,33 @@ function loadMevduatData() {
       return {
         bankaListesi: [] as BankaSatiri[],
         grafikVerisi: [] as GunlukOrtalamaSatiri[],
-        hata: "Excel dosyası bulunamadı.",
+        hata: `Excel dosyası bulunamadı: ${EXCEL_FILE}`,
       };
     }
 
-    const workbook = XLSX.readFile(EXCEL_FILE, { cellDates: true });
-    const sheet = workbook.Sheets["Mevduat"];
+    const fileBuffer = fs.readFileSync(EXCEL_FILE);
+    const workbook = XLSX.read(fileBuffer, { type: "buffer" });
+
+    if (!workbook.SheetNames.length) {
+      return {
+        bankaListesi: [] as BankaSatiri[],
+        grafikVerisi: [] as GunlukOrtalamaSatiri[],
+        hata: "Excel içinde hiç sayfa bulunamadı.",
+      };
+    }
+
+    const targetSheetName = workbook.SheetNames.find(
+      (name) => name.trim().toLowerCase() === "mevduat"
+    );
+
+    const selectedSheetName = targetSheetName || workbook.SheetNames[0];
+    const sheet = workbook.Sheets[selectedSheetName];
 
     if (!sheet) {
       return {
         bankaListesi: [] as BankaSatiri[],
         grafikVerisi: [] as GunlukOrtalamaSatiri[],
-        hata: "Excel içinde Mevduat sayfası bulunamadı.",
+        hata: `Seçilen sayfa açılamadı: ${selectedSheetName}`,
       };
     }
 
@@ -120,13 +125,23 @@ function loadMevduatData() {
       return {
         bankaListesi: [] as BankaSatiri[],
         grafikVerisi: [] as GunlukOrtalamaSatiri[],
-        hata: "Mevduat sayfasında veri bulunamadı.",
+        hata: `"${selectedSheetName}" sayfasında veri bulunamadı.`,
       };
     }
 
-    const headers = Object.keys(rows[0]);
+    const headers = Object.keys(rows[0] || {});
+
+    if (headers.length < 3) {
+      return {
+        bankaListesi: [] as BankaSatiri[],
+        grafikVerisi: [] as GunlukOrtalamaSatiri[],
+        hata: `Başlıklar okunamadı. Bulunan başlık sayısı: ${headers.length}`,
+      };
+    }
+
     const tarihKey =
       headers.find((h) => h.toLowerCase().includes("tarih")) || headers[0];
+
     const ortalamaKey =
       headers.find((h) => h.toLowerCase().includes("ortalama")) ||
       headers[headers.length - 1];
@@ -153,11 +168,14 @@ function loadMevduatData() {
       grafikVerisi,
       hata: "",
     };
-  } catch {
+  } catch (error) {
+    const message =
+      error instanceof Error ? error.message : "Bilinmeyen Excel okuma hatası";
+
     return {
       bankaListesi: [] as BankaSatiri[],
       grafikVerisi: [] as GunlukOrtalamaSatiri[],
-      hata: "Excel okunurken hata oluştu.",
+      hata: `Excel okunurken hata oluştu: ${message}`,
     };
   }
 }
