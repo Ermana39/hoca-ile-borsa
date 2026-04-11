@@ -26,6 +26,13 @@ const newsItems = [
     image: "/haber-3v.png",
     alt: "Haftalık en çok kazandıran fonlar haber görseli",
   },
+  {
+    id: 4,
+    title: "Fitch Ratings Türkiye’nin not görünümünü düşürdü",
+    href: "/haberler/haber-4",
+    image: "/haber-4.png",
+    alt: "Fitch Ratings Türkiye’nin not görünümünü düşürdü haber görseli",
+  },
 ];
 
 const kategoriKutulari = [
