@@ -4,14 +4,14 @@ import Link from "next/link";
 const taramalar = [
   {
     title: "Yükseliş trendinde olan hisseler",
-    description: "13, 21, 55 hareketli ortalama üzerinde olanlar",
+    description: "5, 13, 21, 55, 89, 144, 233 hareketli ortalama üzerinde olanlar",
     href: "/borsa/gosterge-taramalari/yukselis-trendinde-olanlar",
     image: "/yukselis-trendinde-olanlar-yatay.png",
     alt: "Yükseliş trendinde olan hisseler görseli",
   },
   {
     title: "Düşüş trendinde olan hisseler",
-    description: "13, 21, 55 hareketli ortalama altında olanlar",
+    description: "5, 13, 21, 55, 89, 144, 233 hareketli ortalama altında olanlar",
     href: "/borsa/gosterge-taramalari/dusus-trendinde-olanlar",
     image: "/dusus-trendinde-olanlar-yatay.png",
     alt: "Düşüş trendinde olan hisseler görseli",
