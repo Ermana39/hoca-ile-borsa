@@ -30,7 +30,7 @@ const newsItems = [
     id: 4,
     title: "Fitch Ratings Türkiye’nin not görünümünü düşürdü",
     href: "/haberler/haber-4",
-    image: "/haber-4.png",
+    image: "/haber-4v.png",
     alt: "Fitch Ratings Türkiye’nin not görünümünü düşürdü haber görseli",
   },
 ];
