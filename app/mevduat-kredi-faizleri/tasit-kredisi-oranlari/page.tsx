@@ -1,44 +1,21 @@
-import fs from "fs";
-import path from "path";
+"use client";
+
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import type { Metadata } from "next";
-import { addView } from "@/lib/page-stats";
-import { KrediHesaplayici } from "@/components/faiz-hesaplayicilar";
+import * as XLSX from "xlsx";
+import { TasitKredisiHesaplayici } from "@/components/faiz-hesaplayicilar";
 
-export const metadata: Metadata = {
-  title: "Taşıt Kredisi Oranları | Hoca İle Borsa",
-  description:
-    "Bankalara göre güncel taşıt kredisi ve finansmanı faiz oranları listesi. Banka adı ve minimum faiz oranı bilgileri.",
-  alternates: {
-    canonical: "/mevduat-kredi-faizleri/tasit-kredisi-oranlari",
-  },
-};
-
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
-
-type BankaFaiz = {
+type BankaSatiri = {
   banka: string;
-  minFaiz: string;
+  faiz: string;
 };
 
-type GunlukFaizKaydi = {
-  date: string;
-  ortalamaFaiz: number;
+type GunlukOrtalamaSatiri = {
+  tarih: string;
+  ortalama: number;
 };
 
-const bankaFaizListesi: BankaFaiz[] = [
-  { banka: "Akbank", minFaiz: "%0,00" },
-  { banka: "alBaraka", minFaiz: "%2,99" },
-  { banka: "Garanti BBVA", minFaiz: "%3,15" },
-  { banka: "Türkiye İş Bankası", minFaiz: "%3,35" },
-  { banka: "KuveytTürk", minFaiz: "%3,43" },
-  { banka: "TEB", minFaiz: "%0,00" },
-  { banka: "Vakıf Katılım", minFaiz: "%3,11" },
-  { banka: "Dünya Katılım", minFaiz: "%3,50" },
-  { banka: "Türkiye Finans", minFaiz: "%3,55" },
-  { banka: "Ziraat Katılım", minFaiz: "%2,99" },
-];
+const EXCEL_URL = "/data/hoca-ile-borsa-faiz-takip-sablonu-guncel.xlsx";
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
@@ -56,167 +33,309 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
-function faizMetniniSayiyaCevir(faiz: string) {
-  return Number(faiz.replace("%", "").replace(",", ".").trim()) || 0;
+function cleanText(value: unknown) {
+  return String(value ?? "").trim();
 }
 
-function grafikDosyaYolu() {
-  return path.join(process.cwd(), "data", "tasit-kredisi-gunluk.json");
+function parseRate(value: unknown) {
+  const text = cleanText(value);
+  if (!text) return NaN;
+
+  const normalized = text.replace("%", "").replace(/\s/g, "").replace(",", ".");
+  const num = Number(normalized);
+
+  return Number.isNaN(num) ? NaN : num;
 }
 
-function grafikVerisiniOku(): GunlukFaizKaydi[] {
-  const filePath = grafikDosyaYolu();
+function formatRate(value: unknown) {
+  const num = parseRate(value);
+  if (Number.isNaN(num)) return "-";
 
-  try {
-    if (!fs.existsSync(path.dirname(filePath))) {
-      fs.mkdirSync(path.dirname(filePath), { recursive: true });
-    }
-
-    if (!fs.existsSync(filePath)) {
-      fs.writeFileSync(filePath, "[]", "utf8");
-      return [];
-    }
-
-    const raw = fs.readFileSync(filePath, "utf8");
-    const parsed = JSON.parse(raw) as GunlukFaizKaydi[];
-
-    if (!Array.isArray(parsed)) return [];
-
-    return parsed.filter(
-      (item) =>
-        item &&
-        typeof item.date === "string" &&
-        typeof item.ortalamaFaiz === "number"
-    );
-  } catch {
-    return [];
-  }
-}
-
-function grafikVerisiniYaz(veri: GunlukFaizKaydi[]) {
-  const filePath = grafikDosyaYolu();
-
-  if (!fs.existsSync(path.dirname(filePath))) {
-    fs.mkdirSync(path.dirname(filePath), { recursive: true });
+  if (Number.isInteger(num)) {
+    return `%${num}`;
   }
 
-  fs.writeFileSync(filePath, JSON.stringify(veri, null, 2), "utf8");
+  return `%${num.toFixed(2).replace(".", ",")}`;
 }
 
-function bugununKaydiniEkle() {
-  const bugun = new Date().toISOString().slice(0, 10);
+function excelSerialToDate(serial: number) {
+  const utcDays = Math.floor(serial - 25569);
+  const utcValue = utcDays * 86400;
+  const dateInfo = new Date(utcValue * 1000);
 
-  const faizler = bankaFaizListesi.map((item) => faizMetniniSayiyaCevir(item.minFaiz));
-  const toplamFaiz = faizler.reduce((toplam, item) => toplam + item, 0);
-  const ortalamaFaiz =
-    faizler.length > 0 ? Number((toplamFaiz / faizler.length).toFixed(2)) : 0;
+  const fractionalDay = serial - Math.floor(serial) + 0.0000001;
+  const totalSeconds = Math.floor(86400 * fractionalDay);
 
-  const mevcut = grafikVerisiniOku();
-  const bugunVar = mevcut.some((item) => item.date === bugun);
+  dateInfo.setUTCSeconds(totalSeconds);
+  return dateInfo;
+}
 
-  if (!bugunVar) {
-    mevcut.push({
-      date: bugun,
-      ortalamaFaiz,
-    });
+function formatDateLabel(value: unknown) {
+  if (value === null || value === undefined || value === "") return "";
 
-    const sirali = mevcut.sort((a, b) => a.date.localeCompare(b.date)).slice(-90);
-    grafikVerisiniYaz(sirali);
-    return sirali;
+  if (typeof value === "number" && !Number.isNaN(value)) {
+    const d = excelSerialToDate(value);
+    return d.toLocaleDateString("tr-TR");
   }
 
-  return mevcut.sort((a, b) => a.date.localeCompare(b.date)).slice(-90);
+  const text = cleanText(value);
+  if (!text) return "";
+
+  if (/^\d{1,2}\.\d{1,2}\.\d{4}$/.test(text)) return text;
+
+  if (/^\d{4}-\d{2}-\d{2}$/.test(text)) {
+    const [y, m, d] = text.split("-");
+    return `${d}.${m}.${y}`;
+  }
+
+  const parsed = new Date(text);
+  if (!Number.isNaN(parsed.getTime())) {
+    return parsed.toLocaleDateString("tr-TR");
+  }
+
+  return text;
 }
 
-function son30GunGrafikVerisi(veri: GunlukFaizKaydi[]) {
-  return veri.slice(-30);
+function average(values: number[]) {
+  if (!values.length) return NaN;
+  return values.reduce((sum, value) => sum + value, 0) / values.length;
 }
 
-function tarihEtiketi(date: string) {
-  const [, month, day] = date.split("-");
-  return `${day}.${month}`;
+function findHeaderRow(rows: unknown[][]) {
+  return rows.findIndex((row) => {
+    const normalized = row.map((cell) => cleanText(cell).toLowerCase());
+    const hasTarih = normalized.some((cell) => cell.includes("tarih"));
+    const hasOrtalama = normalized.some((cell) => cell.includes("ortalama"));
+    return hasTarih && hasOrtalama;
+  });
 }
 
-function GrafikAlani({ veri }: { veri: GunlukFaizKaydi[] }) {
-  if (veri.length === 0) {
+function TasitGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
+  if (!data.length) {
     return (
-      <div className="rounded-2xl border border-zinc-200 bg-white px-4 py-10 text-center text-zinc-500">
-        Henüz grafik verisi yok.
-      </div>
+      <section className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
+        <h2 className="text-2xl font-bold text-zinc-900">
+          Günlük Ortalama Taşıt Kredisi Faiz Grafiği
+        </h2>
+        <p className="mt-3 text-sm text-zinc-600">
+          Grafik için yeterli veri bulunamadı.
+        </p>
+      </section>
     );
   }
 
-  const width = 900;
-  const height = 280;
-  const padding = 28;
+  const width = 960;
+  const height = 320;
+  const padding = 42;
 
-  const minVal = Math.min(...veri.map((item) => item.ortalamaFaiz));
-  const maxVal = Math.max(...veri.map((item) => item.ortalamaFaiz));
-  const range = Math.max(maxVal - minVal, 1);
+  const minValue = Math.min(...data.map((item) => item.ortalama));
+  const maxValue = Math.max(...data.map((item) => item.ortalama));
+  const range = Math.max(maxValue - minValue, 1);
 
-  const points = veri.map((item, index) => {
+  const points = data.map((item, index) => {
     const x =
-      veri.length === 1
+      data.length === 1
         ? width / 2
-        : padding + (index * (width - padding * 2)) / (veri.length - 1);
+        : padding + (index * (width - padding * 2)) / (data.length - 1);
 
     const y =
       height -
       padding -
-      ((item.ortalamaFaiz - minVal) / range) * (height - padding * 2);
+      ((item.ortalama - minValue) / range) * (height - padding * 2);
 
-    return { x, y, value: item.ortalamaFaiz, label: tarihEtiketi(item.date) };
+    return {
+      x,
+      y,
+      label: item.tarih,
+      value: item.ortalama,
+    };
   });
 
-  const polylinePoints = points.map((p) => `${p.x},${p.y}`).join(" ");
+  const pathD = points
+    .map((point, index) => `${index === 0 ? "M" : "L"} ${point.x} ${point.y}`)
+    .join(" ");
 
   return (
-    <div className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
-      <div className="mb-4">
+    <section className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
+      <div className="mb-5">
         <h2 className="text-2xl font-bold text-zinc-900">
-          Günlük Ortalama Taşıt Kredisi Faizi Grafiği
+          Günlük Ortalama Taşıt Kredisi Faiz Grafiği
         </h2>
         <p className="mt-2 text-sm text-zinc-600">
-          Günlük ortalama değerler ile grafik hazırlanmıştır.
+          Günlük ortalama taşıt kredisi faiz değişimini gösterir.
         </p>
       </div>
 
       <div className="overflow-x-auto">
-        <div className="min-w-[900px]">
-          <svg viewBox={`0 0 ${width} ${height}`} className="h-[280px] w-full">
+        <div className="min-w-[960px]">
+          <svg viewBox={`0 0 ${width} ${height}`} className="h-[320px] w-full">
             <line x1={padding} y1={height - padding} x2={width - padding} y2={height - padding} stroke="#d4d4d8" strokeWidth="1" />
             <line x1={padding} y1={padding} x2={padding} y2={height - padding} stroke="#d4d4d8" strokeWidth="1" />
-
-            <polyline fill="none" stroke="#18181b" strokeWidth="3" points={polylinePoints} />
+            <path d={pathD} fill="none" stroke="#111827" strokeWidth="3" strokeLinejoin="round" strokeLinecap="round" />
 
             {points.map((point, index) => (
               <g key={`${point.label}-${index}`}>
-                <circle cx={point.x} cy={point.y} r="4" fill="#18181b" />
-                <text x={point.x} y={point.y - 12} textAnchor="middle" fontSize="12" fill="#52525b">
-                  %{point.value}
+                <circle cx={point.x} cy={point.y} r="4" fill="#111827" />
+                <text x={point.x} y={point.y - 12} textAnchor="middle" fontSize="11" fill="#52525b">
+                  %{point.value.toFixed(2).replace(".", ",")}
                 </text>
               </g>
             ))}
           </svg>
 
-          <div className="mt-2 grid grid-cols-6 gap-2 text-xs text-zinc-500 md:grid-cols-10 xl:grid-cols-15">
-            {veri.map((item) => (
-              <div key={item.date} className="text-center">
-                {tarihEtiketi(item.date)}
-              </div>
+          <div className="mt-3 grid grid-cols-5 gap-2 text-center text-[11px] text-zinc-500 md:grid-cols-10">
+            {data.map((item, index) => (
+              <div key={`${item.tarih}-${index}`}>{item.tarih}</div>
             ))}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
 export default function TasitKredisiOranlariPage() {
-  addView("/mevduat-kredi-faizleri/tasit-kredisi-oranlari");
+  const [bankaListesi, setBankaListesi] = useState<BankaSatiri[]>([]);
+  const [grafikVerisi, setGrafikVerisi] = useState<GunlukOrtalamaSatiri[]>([]);
+  const [hata, setHata] = useState("");
+  const [yukleniyor, setYukleniyor] = useState(true);
 
-  const tumGrafikVerisi = bugununKaydiniEkle();
-  const grafikVerisi = son30GunGrafikVerisi(tumGrafikVerisi);
+  useEffect(() => {
+    async function loadExcel() {
+      try {
+        setYukleniyor(true);
+        setHata("");
+
+        const response = await fetch(EXCEL_URL, { cache: "no-store" });
+        if (!response.ok) throw new Error(`Excel dosyası alınamadı. Kod: ${response.status}`);
+
+        const arrayBuffer = await response.arrayBuffer();
+        const workbook = XLSX.read(arrayBuffer, {
+          type: "array",
+          raw: true,
+          cellDates: false,
+        });
+
+        const targetSheetName =
+          workbook.SheetNames.find((name) => name.trim().toLowerCase() === "taşıt kredisi") ||
+          workbook.SheetNames.find((name) => name.trim().toLowerCase() === "tasit kredisi") ||
+          workbook.SheetNames[3];
+
+        const sheet = workbook.Sheets[targetSheetName];
+        if (!sheet) throw new Error(`Sayfa bulunamadı: ${targetSheetName}`);
+
+        const rawRows = XLSX.utils.sheet_to_json<(string | number | null)[]>(sheet, {
+          header: 1,
+          defval: "",
+          raw: true,
+        }) as unknown[][];
+
+        const headerRowIndex = findHeaderRow(rawRows);
+        if (headerRowIndex === -1) throw new Error("Başlık satırı bulunamadı.");
+
+        const headerRow = rawRows[headerRowIndex].map((cell) => cleanText(cell));
+        const dataRows = rawRows.slice(headerRowIndex + 1);
+
+        const tarihIndex = headerRow.findIndex((cell) => cell.toLowerCase().includes("tarih"));
+        const ortalamaIndex = headerRow.findIndex((cell) => cell.toLowerCase().includes("ortalama"));
+
+        if (tarihIndex === -1 || ortalamaIndex === -1) {
+          throw new Error("Tarih veya Günlük Ortalama sütunu bulunamadı.");
+        }
+
+        const bankaColumns = headerRow
+          .map((name, index) => ({ name, index }))
+          .filter((item) => item.name && item.index !== tarihIndex && item.index !== ortalamaIndex);
+
+        const preparedRows = dataRows
+          .map((row) => {
+            const tarih = formatDateLabel(row[tarihIndex]);
+            const bankaRates = bankaColumns.map((col) => ({
+              banka: col.name,
+              rawValue: row[col.index],
+              value: parseRate(row[col.index]),
+            }));
+
+            const numericRates = bankaRates
+              .map((item) => item.value)
+              .filter((value) => !Number.isNaN(value));
+
+            const ortalamaHucre = parseRate(row[ortalamaIndex]);
+            const ortalamaDegeri = !Number.isNaN(ortalamaHucre)
+              ? ortalamaHucre
+              : average(numericRates);
+
+            return {
+              tarih,
+              bankaRates,
+              numericCount: numericRates.length,
+              ortalama: ortalamaDegeri,
+            };
+          })
+          .filter((row) => row.tarih && row.numericCount > 0);
+
+        if (!preparedRows.length) throw new Error("Dolu veri satırı bulunamadı.");
+
+        const sonSatir = preparedRows[preparedRows.length - 1];
+
+        setBankaListesi(
+          sonSatir.bankaRates.map((item) => ({
+            banka: item.banka,
+            faiz: formatRate(item.rawValue),
+          }))
+        );
+
+        setGrafikVerisi(
+          preparedRows
+            .filter((row) => !Number.isNaN(row.ortalama))
+            .slice(-30)
+            .map((row) => ({
+              tarih: row.tarih,
+              ortalama: row.ortalama,
+            }))
+        );
+      } catch (error) {
+        const message =
+          error instanceof Error ? error.message : "Bilinmeyen Excel okuma hatası";
+        setHata(message);
+        setBankaListesi([]);
+        setGrafikVerisi([]);
+      } finally {
+        setYukleniyor(false);
+      }
+    }
+
+    loadExcel();
+  }, []);
+
+  const tabloIcerik = useMemo(() => {
+    if (yukleniyor) {
+      return (
+        <tr>
+          <td colSpan={2} className="px-4 py-6 text-center text-zinc-500">
+            Veriler yükleniyor...
+          </td>
+        </tr>
+      );
+    }
+
+    if (!bankaListesi.length) {
+      return (
+        <tr>
+          <td colSpan={2} className="px-4 py-6 text-center text-zinc-500">
+            Gösterilecek veri bulunamadı.
+          </td>
+        </tr>
+      );
+    }
+
+    return bankaListesi.map((item, index) => (
+      <tr key={item.banka} className={index % 2 === 0 ? "bg-white" : "bg-sky-50/60"}>
+        <td className="px-4 py-3 font-medium text-zinc-800">{item.banka}</td>
+        <td className="px-4 py-3 text-right font-semibold text-zinc-900">{item.faiz}</td>
+      </tr>
+    ));
+  }, [bankaListesi, yukleniyor]);
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -236,8 +355,14 @@ export default function TasitKredisiOranlariPage() {
         </h1>
 
         <p className="mb-8 text-base text-zinc-600">
-          Banka adı ve minimum taşıt kredisi faizi listesi.
+          Güncel taşıt kredisi oranları, banka karşılaştırmaları ve günlük ortalama faiz grafiği.
         </p>
+
+        {hata ? (
+          <section className="mb-8 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
+            {hata}
+          </section>
+        ) : null}
 
         <section className="mb-8">
           <ReklamAlani variant="yatay" />
@@ -248,27 +373,11 @@ export default function TasitKredisiOranlariPage() {
             <table className="w-full min-w-[320px] text-sm md:text-base">
               <thead className="bg-zinc-100">
                 <tr>
-                  <th className="px-4 py-3 text-left font-semibold text-zinc-900">
-                    Banka
-                  </th>
-                  <th className="px-4 py-3 text-right font-semibold text-zinc-900">
-                    Minimum Faiz
-                  </th>
+                  <th className="px-4 py-3 text-left font-semibold text-zinc-900">Banka</th>
+                  <th className="px-4 py-3 text-right font-semibold text-zinc-900">Minimum Faiz</th>
                 </tr>
               </thead>
-
-              <tbody>
-                {bankaFaizListesi.map((item, index) => (
-                  <tr key={item.banka} className={index % 2 === 0 ? "bg-white" : "bg-sky-50/60"}>
-                    <td className="px-4 py-3 font-medium text-zinc-800">
-                      {item.banka}
-                    </td>
-                    <td className="px-4 py-3 text-right font-semibold text-zinc-900">
-                      {item.minFaiz}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
+              <tbody>{tabloIcerik}</tbody>
             </table>
           </div>
         </section>
@@ -278,17 +387,11 @@ export default function TasitKredisiOranlariPage() {
         </section>
 
         <section className="mt-8">
-          <GrafikAlani veri={grafikVerisi} />
+          <TasitGrafik data={grafikVerisi} />
         </section>
 
         <section className="mt-8">
-          <KrediHesaplayici
-            baslik="Taşıt Kredisi Hesaplayıcı"
-            aciklama="Kredi tutarı, aylık faiz oranı ve vade bilgisine göre tahmini ödeme planı hesaplanır."
-            varsayilanTutar={500000}
-            varsayilanOran={3.15}
-            varsayilanVade={36}
-          />
+          <TasitKredisiHesaplayici />
         </section>
       </div>
     </main>
