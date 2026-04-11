@@ -5,6 +5,10 @@ const haberler = [
     title: "Kazancı ile dikkat çeken Fonlar",
     href: "/borsa/dikkat-cekenler/haber-1",
   },
+  {
+    title: "AEFES Düşüş trendini kırdı",
+    href: "/borsa/dikkat-cekenler/haber-2",
+  },
 ];
 
 export default function DikkatCekenlerPage() {
