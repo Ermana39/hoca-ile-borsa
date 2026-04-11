@@ -48,8 +48,8 @@ export default function Haber1Page() {
         <article className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
-              src="/haber-1v.png"
-              alt="Bu yıl işleme başlayan 15 halka arzın hepsi halka arz fiyatının üzerinde işlem görüyor görseli"
+              src="/haber-2v.png"
+              alt="Avrasya GYO 2. işlem gününü tavan fiyat ile kapattı. görseli"
               fill
               unoptimized
               className="object-contain"
@@ -58,17 +58,15 @@ export default function Haber1Page() {
 
           <div className="p-5 md:p-8">
             <h1 className="text-2xl font-bold leading-tight text-zinc-900 md:text-4xl">
-              Bu yıl işleme başlayan 15 halka arzın hepsi halka arz fiyatının
-              üzerinde işlem görüyor
+              Avrasya GYO 2. işlem gününü tavan fiyat ile kapattı.
             </h1>
 
             <div className="mt-6 space-y-4 text-base leading-8 text-zinc-700 md:text-lg">
               <p>
-                Bu yıl işleme başlayan 15 halka arzın hepsi halka arz fiyatının
-                üzerinde işlem görüyor.
+                Ancak gün sonu karanlık odada gelen satışlar sonucunda tavanda lot kalmadı.
               </p>
 
-              <p>15 halka arzın ortalama kazancı %111 seviyesinde.</p>
+              <p>Önümüzdeki hafta aksiyon dolu günler olacak gibi.</p>
             </div>
           </div>
         </article>
