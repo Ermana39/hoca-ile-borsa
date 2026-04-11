@@ -7,7 +7,7 @@ import TrackedLink from "@/components/tracked-link";
 const newsItems = [
   {
     id: 1,
-    title: "Bu yıl işleme başlayan 15 halka arzın tamamı halka arz fiyatının üzerinde işlem görüyor",
+    title: "Bu yıl işleme başlayan halka arzların performansı",
     href: "/haberler/haber-1",
     image: "/haber-1v.png",
     alt: "Bu yıl işleme başlayan 15 halka arzın tamamı halka arz fiyatının üzerinde işlem görüyor haber görseli",
