@@ -490,22 +490,62 @@ export function getAllViews() {
   }
 }
 
-export function countViewsSince(since: Date) {
-  const sinceDate = toDateKey(since);
-  const history = readViewsHistory();
+export function countViewsSince(
+  viewsOrSince: ViewsMap | Date,
+  maybeSince?: Date
+) {
+  try {
+    if (viewsOrSince instanceof Date) {
+      const sinceDate = toDateKey(viewsOrSince);
+      const history = readViewsHistory();
 
-  return history
-    .filter((item) => item.date >= sinceDate)
-    .reduce((sum, item) => sum + item.count, 0);
+      return history
+        .filter((item) => item.date >= sinceDate)
+        .reduce((sum, item) => sum + item.count, 0);
+    }
+
+    if (maybeSince instanceof Date) {
+      const sinceDate = toDateKey(maybeSince);
+      const history = readViewsHistory();
+
+      return history
+        .filter((item) => item.date >= sinceDate)
+        .reduce((sum, item) => sum + item.count, 0);
+    }
+
+    return 0;
+  } catch {
+    return 0;
+  }
 }
 
-export function countClicksSince(since: Date) {
-  const sinceDate = toDateKey(since);
-  const clicks = readClicks();
+export function countClicksSince(
+  clicksOrSince: ClickItem[] | Date,
+  maybeSince?: Date
+) {
+  try {
+    if (clicksOrSince instanceof Date) {
+      const sinceDate = toDateKey(clicksOrSince);
+      const clicks = readClicks();
 
-  return clicks
-    .filter((item) => item.date >= sinceDate)
-    .reduce((sum, item) => sum + item.count, 0);
+      return clicks
+        .filter((item) => item.date >= sinceDate)
+        .reduce((sum, item) => sum + item.count, 0);
+    }
+
+    if (maybeSince instanceof Date) {
+      const sinceDate = toDateKey(maybeSince);
+      const clicks = Array.isArray(clicksOrSince) ? clicksOrSince : readClicks();
+
+      return clicks
+        .filter((item) => item.date >= sinceDate)
+        .reduce((sum, item) => sum + item.count, 0);
+    }
+
+    return 0;
+  } catch {
+    return 0;
+  }
 }
 
 export function groupViewsByPath() {
