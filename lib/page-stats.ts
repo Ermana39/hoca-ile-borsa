@@ -39,6 +39,16 @@ type RateLimitStatus = {
   retryAfterSeconds: number;
 };
 
+type SummaryRow = {
+  path?: string;
+  source?: string;
+  label?: string;
+  date?: string;
+  views?: number;
+  clicks?: number;
+  count: number;
+};
+
 type DailySeriesItem = {
   date: string;
   label: string;
@@ -49,9 +59,11 @@ type DailySeriesItem = {
 
 function ensureDataDir() {
   const dirPath = path.join(process.cwd(), "data");
+
   if (!fs.existsSync(dirPath)) {
     fs.mkdirSync(dirPath, { recursive: true });
   }
+
   return dirPath;
 }
 
@@ -91,6 +103,7 @@ function readJsonFile<T>(filePath: string, fallback: T): T {
       filePath,
       Array.isArray(fallback) ? "[]" : JSON.stringify(fallback, null, 2)
     );
+
     const raw = fs.readFileSync(filePath, "utf8");
     return JSON.parse(raw) as T;
   } catch {
@@ -102,7 +115,7 @@ function writeJsonFile<T>(filePath: string, data: T) {
   try {
     fs.writeFileSync(filePath, JSON.stringify(data, null, 2), "utf8");
   } catch {
-    // Canlı ortamda dosya yazılamazsa sayfayı düşürme.
+    // Canlıda yazılamazsa build veya sayfa düşmesin.
   }
 }
 
@@ -120,29 +133,6 @@ function isDate(value: unknown): value is Date {
 
 function isViewsMap(value: unknown): value is ViewsMap {
   return !!value && typeof value === "object" && !Array.isArray(value);
-}
-
-function normalizeMaybeUrl(value: string) {
-  let output = value.trim();
-
-  output = output.replace(/^https?:\/\/[^/]+/i, "");
-
-  if (!output.startsWith("/")) {
-    output = `/${output}`;
-  }
-
-  output = output.replace(/\/{2,}/g, "/");
-
-  if (output.length > 1 && output.endsWith("/")) {
-    output = output.slice(0, -1);
-  }
-
-  return output || "/";
-}
-
-export function normalizePagePath(input?: string | null) {
-  if (!input) return "/";
-  return normalizeMaybeUrl(String(input));
 }
 
 function resolveRateLimitArgs(
@@ -184,6 +174,28 @@ export function startOfMonth() {
 
 export const Ayin_baslangici = startOfMonth;
 export const Haftanin_baslangici = startOfWeek;
+
+export function normalizePagePath(input?: string | null) {
+  if (!input) return "/";
+
+  let value = String(input).trim();
+
+  if (!value) return "/";
+
+  value = value.replace(/^https?:\/\/[^/]+/i, "");
+
+  if (!value.startsWith("/")) {
+    value = `/${value}`;
+  }
+
+  value = value.replace(/\/{2,}/g, "/");
+
+  if (value.length > 1 && value.endsWith("/")) {
+    value = value.slice(0, -1);
+  }
+
+  return value || "/";
+}
 
 export function readViews(): ViewsMap {
   const filePath = getViewsFilePath();
@@ -261,6 +273,7 @@ function readFailedLogins(): FailedLoginItem[] {
 export function addView(page: string) {
   try {
     const normalized = normalizePagePath(page);
+
     const views = readViews();
     views[normalized] = (views[normalized] || 0) + 1;
     writeJsonFile(getViewsFilePath(), views);
@@ -284,7 +297,7 @@ export function addView(page: string) {
 
     writeJsonFile(getViewsHistoryFilePath(), history);
   } catch {
-    // Sayfayı düşürme.
+    // sessiz geç
   }
 }
 
@@ -316,7 +329,7 @@ export function addClick(source: string, pathValue: string, label?: string) {
 
     writeJsonFile(getClicksFilePath(), clicks);
   } catch {
-    // Sayfayı düşürme.
+    // sessiz geç
   }
 }
 
@@ -457,6 +470,7 @@ export function clearLoginAttempts(key: string) {
     const filtered = readFailedLogins().filter(
       (item) => item.key !== key && !item.key.endsWith(`:${key}`)
     );
+
     writeJsonFile(getFailedLoginsFilePath(), filtered);
   } catch {
     // sessiz geç
@@ -541,12 +555,14 @@ export function countClicksSince(
   }
 }
 
-export function groupViewsByPath(views?: ViewsMap) {
+export function groupViewsByPath(views?: ViewsMap): SummaryRow[] {
   const source = isViewsMap(views) ? views : readViews();
 
   return Object.entries(source)
     .map(([pathValue, count]) => ({
       path: pathValue,
+      label: pathValue,
+      source: pathValue,
       count,
     }))
     .sort((a, b) => b.count - a.count);
@@ -555,7 +571,7 @@ export function groupViewsByPath(views?: ViewsMap) {
 export function groupViewsByPathSince(
   viewsOrSince?: ViewsMap | Date,
   maybeSince?: Date
-) {
+): SummaryRow[] {
   const since = isDate(viewsOrSince) ? viewsOrSince : maybeSince;
   if (!since) return [];
 
@@ -572,12 +588,14 @@ export function groupViewsByPathSince(
   return Array.from(grouped.entries())
     .map(([pathValue, count]) => ({
       path: pathValue,
+      label: pathValue,
+      source: pathValue,
       count,
     }))
     .sort((a, b) => b.count - a.count);
 }
 
-export function groupClicksBySource(clicks?: ClickItem[]) {
+export function groupClicksBySource(clicks?: ClickItem[]): SummaryRow[] {
   const source = Array.isArray(clicks) ? clicks : readClicks();
   const grouped = new Map<string, number>();
 
@@ -588,6 +606,7 @@ export function groupClicksBySource(clicks?: ClickItem[]) {
   return Array.from(grouped.entries())
     .map(([sourceKey, count]) => ({
       source: sourceKey,
+      label: sourceKey,
       count,
     }))
     .sort((a, b) => b.count - a.count);
@@ -596,7 +615,7 @@ export function groupClicksBySource(clicks?: ClickItem[]) {
 export function groupClicksBySourceSince(
   clicksOrSince?: ClickItem[] | Date,
   maybeSince?: Date
-) {
+): SummaryRow[] {
   const since = isDate(clicksOrSince) ? clicksOrSince : maybeSince;
   if (!since) return [];
 
@@ -613,12 +632,13 @@ export function groupClicksBySourceSince(
   return Array.from(grouped.entries())
     .map(([sourceKey, count]) => ({
       source: sourceKey,
+      label: sourceKey,
       count,
     }))
     .sort((a, b) => b.count - a.count);
 }
 
-export function groupClicksByLabel(clicks?: ClickItem[]) {
+export function groupClicksByLabel(clicks?: ClickItem[]): SummaryRow[] {
   const source = Array.isArray(clicks) ? clicks : readClicks();
   const grouped = new Map<string, number>();
 
@@ -630,6 +650,7 @@ export function groupClicksByLabel(clicks?: ClickItem[]) {
   return Array.from(grouped.entries())
     .map(([label, count]) => ({
       label,
+      source: label,
       count,
     }))
     .sort((a, b) => b.count - a.count);
@@ -638,7 +659,7 @@ export function groupClicksByLabel(clicks?: ClickItem[]) {
 export function groupClicksByLabelSince(
   clicksOrSince?: ClickItem[] | Date,
   maybeSince?: Date
-) {
+): SummaryRow[] {
   const since = isDate(clicksOrSince) ? clicksOrSince : maybeSince;
   if (!since) return [];
 
@@ -656,6 +677,7 @@ export function groupClicksByLabelSince(
   return Array.from(grouped.entries())
     .map(([label, count]) => ({
       label,
+      source: label,
       count,
     }))
     .sort((a, b) => b.count - a.count);
@@ -681,18 +703,17 @@ export function getDailySeries(
 
   const viewHistory = readViewsHistory();
   const clicks = readClicks();
-
   const grouped = new Map<string, DailySeriesItem>();
 
   for (const item of viewHistory) {
     if (item.date >= sinceDate) {
-     const current = grouped.get(item.date) || {
-  date: item.date,
-  label: item.date,
-  views: 0,
-  clicks: 0,
-  count: 0,
-};
+      const current: DailySeriesItem = grouped.get(item.date) ?? {
+        date: item.date,
+        label: item.date,
+        views: 0,
+        clicks: 0,
+        count: 0,
+      };
 
       current.views += item.count;
       current.count += item.count;
@@ -702,8 +723,9 @@ export function getDailySeries(
 
   for (const item of clicks) {
     if (item.date >= sinceDate) {
-      const current = grouped.get(item.date) || {
+      const current: DailySeriesItem = grouped.get(item.date) ?? {
         date: item.date,
+        label: item.date,
         views: 0,
         clicks: 0,
         count: 0,
@@ -714,5 +736,7 @@ export function getDailySeries(
     }
   }
 
-  return Array.from(grouped.values()).sort((a, b) => a.date.localeCompare(b.date));
+  return Array.from(grouped.values()).sort((a, b) =>
+    a.date.localeCompare(b.date)
+  );
 }
