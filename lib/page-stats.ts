@@ -41,6 +41,7 @@ type RateLimitStatus = {
 
 type DailySeriesItem = {
   date: string;
+  label: string;
   views: number;
   clicks: number;
   count: number;
@@ -685,12 +686,13 @@ export function getDailySeries(
 
   for (const item of viewHistory) {
     if (item.date >= sinceDate) {
-      const current = grouped.get(item.date) || {
-        date: item.date,
-        views: 0,
-        clicks: 0,
-        count: 0,
-      };
+     const current = grouped.get(item.date) || {
+  date: item.date,
+  label: item.date,
+  views: 0,
+  clicks: 0,
+  count: 0,
+};
 
       current.views += item.count;
       current.count += item.count;
