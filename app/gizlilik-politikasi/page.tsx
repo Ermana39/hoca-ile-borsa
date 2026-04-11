@@ -73,7 +73,7 @@ export default function GizlilikPolitikasiPage() {
 
           <h2 className="text-xl font-semibold text-zinc-900">7. Başvuru</h2>
           <p>
-            Gizlilik ve kişisel veri talepleriniz için hocaileborsa@gmial.com
+            Gizlilik ve kişisel veri talepleriniz için hocaileborsa@gmail.com
             adresine e-posta gönderebilirsiniz.
           </p>
         </div>
