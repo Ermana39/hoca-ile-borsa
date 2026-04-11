@@ -7,24 +7,24 @@ import TrackedLink from "@/components/tracked-link";
 const newsItems = [
   {
     id: 1,
-    title: "Avrasya GYO İşleme Başlıyor",
+    title: "Bu yıl işleme başlayan 15 halka arzın tamamı halka arz fiyatının üzerinde işlem görüyor",
     href: "/haberler/haber-1",
     image: "/haber-1.png",
-    alt: "Avrasya GYO İşleme Başlıyor haber görseli",
+    alt: "Bu yıl işleme başlayan 15 halka arzın tamamı halka arz fiyatının üzerinde işlem görüyor haber görseli",
   },
   {
     id: 2,
-    title: "Yatırım Fonlarında En Çok Kazandıranlar",
+    title: "Avrasya GYO 2. işlem gününü tavan fiyat ile kapattı",
     href: "/haberler/haber-2",
     image: "/haber-2.png",
-    alt: "Yatırım Fonlarında En Çok Kazandıranlar haber görseli",
+    alt: "Avrasya GYO 2. işlem gününü tavan fiyat ile kapattı haber görseli",
   },
   {
     id: 3,
-    title: "Savur GYO Brüt Takas Uygulaması",
+    title: "Haftalık en çok kazandıran fonlar",
     href: "/haberler/haber-3",
     image: "/haber-3.png",
-    alt: "Savur GYO Brüt Takas Uygulaması haber görseli",
+    alt: "Haftalık en çok kazandıran fonlar haber görseli",
   },
 ];
 
