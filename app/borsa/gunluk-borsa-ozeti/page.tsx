@@ -48,7 +48,7 @@ const paraGirisi = [
 
 const paraCikisi = [
   { kod: "KRDMD", tutar: "-123 Mn TL" },
-  { kod: "THEOL", tutar: "-64 Mn TL" },
+  { kod: "TEHOL", tutar: "-64 Mn TL" },
   { kod: "TKFEN", tutar: "-48 Mn TL" },
   { kod: "ASTOR", tutar: "-42 Mn TL" },
   { kod: "EFOR", tutar: "-42 Mn TL" },
@@ -248,7 +248,7 @@ export default function GunlukBorsaOzetiPage() {
           </div>
         </div>
 
-        <div className="mb-6 grid gap-4 xl:grid-cols-[1fr_1fr_2fr]">
+        <div className="mb-6 grid gap-4 xl:grid-cols-[1fr_1fr_1.5fr]">
           <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
             <div className="flex min-h-[180px] flex-col justify-between">
               <div className="text-center">
@@ -281,39 +281,41 @@ export default function GunlukBorsaOzetiPage() {
               Ekonomik Takvim
             </div>
 
-            <div className="overflow-hidden rounded-xl border border-zinc-200 bg-white">
-              <div className="grid grid-cols-[90px_70px_minmax(220px,1fr)_90px_110px_110px_110px] border-b border-zinc-200 bg-zinc-100 px-3 py-3 text-xs font-bold text-zinc-700">
-                <div>Saat</div>
-                <div>Ülke</div>
-                <div>Ekonomik Gösterge</div>
-                <div>Önem</div>
-                <div className="text-center">Açıklanan</div>
-                <div className="text-center">Beklenti</div>
-                <div className="text-center">Önceki</div>
-              </div>
-
-              <div className="grid grid-cols-[90px_70px_minmax(220px,1fr)_90px_110px_110px_110px] items-center border-b border-zinc-100 px-3 py-3 text-sm">
-                <div className="font-semibold text-zinc-900">10:00</div>
-                <div className="font-semibold text-zinc-900">TR</div>
-                <div className="font-semibold text-zinc-900">Toplam Ciro Endeksi (Yıllık %)</div>
-                <div>
-                  <OnemKutulari tip="sari" />
+            <div className="overflow-x-auto rounded-xl border border-zinc-200 bg-white">
+              <div className="min-w-[720px]">
+                <div className="grid grid-cols-[70px_55px_minmax(220px,1fr)_70px_95px_95px_95px] border-b border-zinc-200 bg-zinc-100 px-3 py-3 text-xs font-bold text-zinc-700">
+                  <div>Saat</div>
+                  <div>Ülke</div>
+                  <div>Ekonomik Gösterge</div>
+                  <div>Önem</div>
+                  <div className="text-center">Açıklanan</div>
+                  <div className="text-center">Beklenti</div>
+                  <div className="text-center">Önceki</div>
                 </div>
-                <div className="text-center font-semibold text-zinc-700">-</div>
-                <div className="text-center font-semibold text-zinc-700">-</div>
-                <div className="text-center font-semibold text-zinc-700">35,8%</div>
-              </div>
 
-              <div className="grid grid-cols-[90px_70px_minmax(220px,1fr)_90px_110px_110px_110px] items-center px-3 py-3 text-sm">
-                <div className="font-semibold text-zinc-900">10:00</div>
-                <div className="font-semibold text-zinc-900">TR</div>
-                <div className="font-semibold text-zinc-900">Cari İşlemler Dengesi (Milyon USD)</div>
-                <div>
-                  <OnemKutulari tip="kirmizi" />
+                <div className="grid grid-cols-[70px_55px_minmax(220px,1fr)_70px_95px_95px_95px] items-center border-b border-zinc-100 px-3 py-3 text-sm">
+                  <div className="font-semibold text-zinc-900">10:00</div>
+                  <div className="font-semibold text-zinc-900">TR</div>
+                  <div className="font-semibold text-zinc-900">Toplam Ciro Endeksi (Yıllık %)</div>
+                  <div>
+                    <OnemKutulari tip="sari" />
+                  </div>
+                  <div className="text-center font-semibold text-zinc-700">-</div>
+                  <div className="text-center font-semibold text-zinc-700">-</div>
+                  <div className="text-center font-semibold text-zinc-700">35,8%</div>
                 </div>
-                <div className="text-center font-semibold text-zinc-700">-</div>
-                <div className="text-center font-semibold text-zinc-700">-7.350</div>
-                <div className="text-center font-semibold text-zinc-700">-6.807</div>
+
+                <div className="grid grid-cols-[70px_55px_minmax(220px,1fr)_70px_95px_95px_95px] items-center px-3 py-3 text-sm">
+                  <div className="font-semibold text-zinc-900">10:00</div>
+                  <div className="font-semibold text-zinc-900">TR</div>
+                  <div className="font-semibold text-zinc-900">Cari İşlemler Dengesi (Milyon USD)</div>
+                  <div>
+                    <OnemKutulari tip="kirmizi" />
+                  </div>
+                  <div className="text-center font-semibold text-zinc-700">-</div>
+                  <div className="text-center font-semibold text-zinc-700">-7.350</div>
+                  <div className="text-center font-semibold text-zinc-700">-6.807</div>
+                </div>
               </div>
             </div>
           </div>
