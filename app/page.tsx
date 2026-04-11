@@ -77,7 +77,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   return (
     <section
       aria-label="Reklam alanı"
-   className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
+      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
     >
       <div className={`w-full ${alanClass}`} />
     </section>
@@ -353,6 +353,66 @@ export default function HomePage() {
         <section className="px-4 pb-6 md:px-6">
           <ReklamAlani variant="icerik" />
         </section>
+
+        <section className="px-4 pb-6 md:px-6">
+          <div className="rounded-2xl border border-zinc-200 bg-white p-5 md:p-7">
+            <h2 className="mb-4 text-xl font-bold text-zinc-900 md:text-2xl">
+              Hoca İle Borsa Hakkında
+            </h2>
+
+            <div className="space-y-4 text-sm leading-7 text-zinc-700 md:text-base">
+              <p>
+                Hoca İle Borsa; borsa, halka arz, temettü, fonlar, faiz oranları ve
+                finans içeriklerini daha düzenli ve anlaşılır şekilde sunmak amacıyla
+                hazırlanmış bir finans içerik platformudur.
+              </p>
+
+              <p>
+                Sitede yer alan içerikler; genel bilgilendirme, haber, eğitim, veri
+                derleme, listeleme ve karşılaştırma amacı taşır. Yayınlanan içerikler
+                yatırım danışmanlığı kapsamında değildir ve kişiye özel alım-satım
+                önerisi niteliği taşımaz.
+              </p>
+
+              <p>
+                Platform üzerinde yer alan tablo, oran, liste, takvim ve analiz
+                içerikleri belirli kaynaklar ve düzenli veri güncellemeleri ile
+                hazırlanır. Buna rağmen zaman zaman gecikme, eksiklik veya yazım
+                hatası oluşabilir. Bu nedenle önemli kararlar öncesinde resmi
+                kaynaklardan ayrıca kontrol yapılması önerilir.
+              </p>
+
+              <p>
+                Hoca İle Borsa; finans içeriklerini sade, erişilebilir ve takip
+                edilebilir bir yapıda sunmayı hedefler. Detaylı bilgi için{" "}
+                <TrackedLink
+                  href="/hakkimizda"
+                  label="Hakkımızda"
+                  className="font-medium text-blue-600 underline underline-offset-4 hover:text-blue-700"
+                >
+                  Hakkımızda
+                </TrackedLink>
+                ,{" "}
+                <TrackedLink
+                  href="/yasal-uyari"
+                  label="Yasal Uyarı"
+                  className="font-medium text-blue-600 underline underline-offset-4 hover:text-blue-700"
+                >
+                  Yasal Uyarı
+                </TrackedLink>{" "}
+                ve{" "}
+                <TrackedLink
+                  href="/iletisim"
+                  label="İletişim"
+                  className="font-medium text-blue-600 underline underline-offset-4 hover:text-blue-700"
+                >
+                  İletişim
+                </TrackedLink>{" "}
+                sayfaları incelenebilir.
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
 
       <footer className="mt-8 bg-slate-950 text-slate-200">
@@ -410,7 +470,7 @@ export default function HomePage() {
               <div className="space-y-3 text-sm text-slate-300">
                 <div className="flex items-center gap-2">
                   <MailIcon />
-                  <span>hocaileborsa@gmail.com</span>
+                  <span>destekhocaileborsa@gmail.com</span>
                 </div>
                 <div className="flex items-center gap-2">
                   <LocationIcon />
