@@ -70,28 +70,18 @@ function formatNumber(value: number) {
   }).format(value);
 }
 
-function getDurum(row: PivotRow) {
-  if (row.son > row.pivot) {
-    return {
-      text: "Pivot değerinin üstünde seyrediyor.",
-      bg: "bg-[#10b44a]",
-    };
-  }
-
-  if (row.son < row.pivot) {
-    return {
-      text: "Pivot değerinin altında seyrediyor.",
-      bg: "bg-[#ff4a22]",
-    };
-  }
-
-  return {
-    text: "Pivot seviyesine yakın fiyatlanıyor.",
-    bg: "bg-zinc-700",
-  };
+function getSatirRenk(row: PivotRow) {
+  return row.son >= row.pivot ? "bg-green-100" : "bg-red-100";
 }
 
 export default function PivotAnaliziPage() {
+  const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
+    timeZone: "Europe/Istanbul",
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+  }).format(new Date());
+
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-[1500px]">
@@ -112,9 +102,12 @@ export default function PivotAnaliziPage() {
         </div>
 
         <h1 className="mb-2 text-3xl font-bold text-zinc-900">Pivot Analizi</h1>
-        <p className="mb-8 max-w-3xl text-base text-zinc-600">
+        <p className="mb-2 max-w-3xl text-base text-zinc-600">
           Pivot, destek ve direnç seviyelerine göre hazırlanan görünüm tablosu.
         </p>
+        <div className="mb-8 text-sm font-semibold text-zinc-700">
+          Güncelleme Tarihi: {guncellemeTarihi}
+        </div>
 
         <section className="mb-8">
           <ReklamAlani variant="yatay" />
@@ -139,57 +132,43 @@ export default function PivotAnaliziPage() {
               </thead>
 
               <tbody>
-                {pivotVerileri.map((row, index) => {
-                  const durum = getDurum(row);
-
-                  return (
-                    <>
-                      <tr
-                        key={`${row.sembol}-veri`}
-                        className={index % 2 === 0 ? "bg-sky-50" : "bg-sky-100/70"}
-                      >
-                        <td className="border border-sky-200 px-3 py-2 font-semibold">
-                          {row.sembol}
-                        </td>
-                        <td className="border border-sky-200 px-3 py-2">
-                          {formatNumber(row.fark)}
-                        </td>
-                        <td className="border border-sky-200 px-3 py-2">
-                          {formatNumber(row.son)}
-                        </td>
-                        <td className="border border-sky-200 px-3 py-2">
-                          {formatNumber(row.pivot)}
-                        </td>
-                        <td className="border border-sky-200 px-3 py-2">
-                          {formatNumber(row.destek1)}
-                        </td>
-                        <td className="border border-sky-200 px-3 py-2">
-                          {formatNumber(row.destek2)}
-                        </td>
-                        <td className="border border-sky-200 px-3 py-2">
-                          {formatNumber(row.destek3)}
-                        </td>
-                        <td className="border border-sky-200 px-3 py-2">
-                          {formatNumber(row.direnc1)}
-                        </td>
-                        <td className="border border-sky-200 px-3 py-2">
-                          {formatNumber(row.direnc2)}
-                        </td>
-                        <td className="border border-sky-200 px-3 py-2">
-                          {formatNumber(row.direnc3)}
-                        </td>
-                      </tr>
-                      <tr key={`${row.sembol}-durum`}>
-                        <td
-                          colSpan={10}
-                          className={`${durum.bg} border border-sky-200 px-3 py-1.5 text-center text-sm font-semibold text-white`}
-                        >
-                          {durum.text}
-                        </td>
-                      </tr>
-                    </>
-                  );
-                })}
+                {pivotVerileri.map((row) => (
+                  <tr
+                    key={row.sembol}
+                    className={getSatirRenk(row)}
+                  >
+                    <td className="border border-sky-200 px-3 py-2 font-semibold">
+                      {row.sembol}
+                    </td>
+                    <td className="border border-sky-200 px-3 py-2">
+                      {formatNumber(row.fark)}
+                    </td>
+                    <td className="border border-sky-200 px-3 py-2">
+                      {formatNumber(row.son)}
+                    </td>
+                    <td className="border border-sky-200 px-3 py-2">
+                      {formatNumber(row.pivot)}
+                    </td>
+                    <td className="border border-sky-200 px-3 py-2">
+                      {formatNumber(row.destek1)}
+                    </td>
+                    <td className="border border-sky-200 px-3 py-2">
+                      {formatNumber(row.destek2)}
+                    </td>
+                    <td className="border border-sky-200 px-3 py-2">
+                      {formatNumber(row.destek3)}
+                    </td>
+                    <td className="border border-sky-200 px-3 py-2">
+                      {formatNumber(row.direnc1)}
+                    </td>
+                    <td className="border border-sky-200 px-3 py-2">
+                      {formatNumber(row.direnc2)}
+                    </td>
+                    <td className="border border-sky-200 px-3 py-2">
+                      {formatNumber(row.direnc3)}
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
