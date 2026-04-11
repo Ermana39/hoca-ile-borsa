@@ -26,7 +26,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   return (
     <section
       aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
+   className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
     >
       <div className={`w-full ${alanClass}`} />
     </section>
