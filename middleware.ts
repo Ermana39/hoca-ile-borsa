@@ -27,16 +27,20 @@ function shouldSkip(request: NextRequest, pathname: string) {
     return true;
   }
 
-  if (/\.(png|jpg|jpeg|gif|webp|svg|ico|css|js|map|txt|xml|woff|woff2)$/i.test(pathname)) {
+  if (
+    /\.(png|jpg|jpeg|gif|webp|svg|ico|css|js|map|txt|xml|woff|woff2)$/i.test(
+      pathname
+    )
+  ) {
     return true;
   }
 
-  const prefetch =
+  const prefetchHeader =
     request.headers.get("x-middleware-prefetch") ||
     request.headers.get("next-router-prefetch") ||
     request.headers.get("purpose");
 
-  if (prefetch) return true;
+  if (prefetchHeader) return true;
 
   const secFetchDest = request.headers.get("sec-fetch-dest") || "";
   const accept = request.headers.get("accept") || "";
@@ -47,6 +51,22 @@ function shouldSkip(request: NextRequest, pathname: string) {
   if (!isHtmlRequest) return true;
 
   return false;
+}
+
+function getClientIdentifier(request: NextRequest) {
+  const forwardedFor = request.headers.get("x-forwarded-for");
+  if (forwardedFor) {
+    const firstIp = forwardedFor.split(",")[0]?.trim();
+    if (firstIp) return firstIp;
+  }
+
+  const realIp = request.headers.get("x-real-ip");
+  if (realIp) return realIp.trim();
+
+  const forwarded = request.headers.get("forwarded");
+  if (forwarded) return forwarded;
+
+  return "unknown";
 }
 
 export async function middleware(request: NextRequest) {
@@ -63,16 +83,14 @@ export async function middleware(request: NextRequest) {
       return response;
     }
 
-    const ip =
-      request.ip ||
-      request.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-      "unknown";
+    const clientId = getClientIdentifier(request);
+    const sessionKey = `pv:seen:${pathname}:${clientId}`;
 
-    const sessionKey = `pv:seen:${pathname}:${ip}`;
     const alreadySeen = await kv.get(sessionKey);
 
     if (!alreadySeen) {
-      await kv.multi()
+      await kv
+        .multi()
         .hincrby("stats:pageviews", pathname, 1)
         .set(sessionKey, "1", { ex: 60 * 30 })
         .exec();
