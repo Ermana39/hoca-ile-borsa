@@ -105,6 +105,21 @@ function toDateKey(date: Date) {
   return date.toISOString().slice(0, 10);
 }
 
+function resolveRateLimitArgs(
+  a?: string | number,
+  b?: number
+): { scope: string; limit: number } {
+  if (typeof a === "number") {
+    return { scope: "default", limit: a };
+  }
+
+  if (typeof a === "string") {
+    return { scope: a, limit: typeof b === "number" ? b : 60 };
+  }
+
+  return { scope: "default", limit: typeof b === "number" ? b : 60 };
+}
+
 export function startOfToday() {
   const now = new Date();
   return new Date(now.getFullYear(), now.getMonth(), now.getDate());
@@ -317,12 +332,17 @@ export function registerApiRequest(key: string) {
 
 export function checkSimpleApiRateLimit(
   key: string,
-  limit = 60
+  scopeOrLimit?: string | number,
+  maybeLimit?: number
 ): RateLimitStatus {
   try {
+    const { scope, limit } = resolveRateLimitArgs(scopeOrLimit, maybeLimit);
     const today = todayKey();
+    const compoundKey = `${scope}:${key}`;
     const list = readApiRequests();
-    const existing = list.find((item) => item.key === key && item.date === today);
+    const existing = list.find(
+      (item) => item.key === compoundKey && item.date === today
+    );
     const count = existing?.count || 0;
     const allowed = count < limit;
     const remaining = Math.max(0, limit - count);
@@ -335,6 +355,8 @@ export function checkSimpleApiRateLimit(
       retryAfterSeconds: allowed ? 0 : 60,
     };
   } catch {
+    const { limit } = resolveRateLimitArgs(scopeOrLimit, maybeLimit);
+
     return {
       allowed: true,
       remaining: limit,
@@ -374,12 +396,17 @@ export function registerFailedLogin(key: string) {
 
 export function getLoginRateLimitStatus(
   key: string,
-  limit = 10
+  scopeOrLimit?: string | number,
+  maybeLimit?: number
 ): RateLimitStatus {
   try {
+    const { scope, limit } = resolveRateLimitArgs(scopeOrLimit, maybeLimit);
     const today = todayKey();
+    const compoundKey = `${scope}:${key}`;
     const list = readFailedLogins();
-    const existing = list.find((item) => item.key === key && item.date === today);
+    const existing = list.find(
+      (item) => item.key === compoundKey && item.date === today
+    );
     const count = existing?.count || 0;
     const allowed = count < limit;
     const remaining = Math.max(0, limit - count);
@@ -392,6 +419,8 @@ export function getLoginRateLimitStatus(
       retryAfterSeconds: allowed ? 0 : 300,
     };
   } catch {
+    const { limit } = resolveRateLimitArgs(scopeOrLimit, maybeLimit);
+
     return {
       allowed: true,
       remaining: limit,
@@ -405,7 +434,7 @@ export function getLoginRateLimitStatus(
 export function clearLoginAttempts(key: string) {
   try {
     const filePath = getFailedLoginsFilePath();
-    const list = readFailedLogins().filter((item) => item.key !== key);
+    const list = readFailedLogins().filter((item) => !item.key.endsWith(`:${key}`) && item.key !== key);
     writeJsonFile(filePath, list);
   } catch {
     // sessiz geç
