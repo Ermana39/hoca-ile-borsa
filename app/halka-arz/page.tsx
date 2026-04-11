@@ -34,7 +34,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   return (
     <section
       aria-label="Reklam alanı"
-     className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
+      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
     >
       <div className={`w-full ${alanClass}`} />
     </section>
@@ -253,6 +253,7 @@ export default function HalkaArzPage() {
   const hacimciler = hacimListesi(veri);
 
   const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
+    timeZone: "Europe/Istanbul",
     day: "2-digit",
     month: "2-digit",
     year: "numeric",
