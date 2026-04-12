@@ -9825,6 +9825,23 @@ function formatText(value: string | number | null) {
   return String(value);
 }
 
+
+function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
+  const alanClass =
+    variant === "icerik"
+      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
+      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
+
+  return (
+    <section
+      aria-label="Reklam alanı"
+      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
+    >
+      <div className={`w-full ${alanClass}`} />
+    </section>
+  );
+}
+
 export default function HaftalikFonTercihleriPage() {
   const [sortKey, setSortKey] = useState<SortKey>("degisim");
   const [sortDirection, setSortDirection] = useState<"asc" | "desc">("desc");
@@ -9941,6 +9958,10 @@ export default function HaftalikFonTercihleriPage() {
           </Link>
         </div>
 
+        <section className="mb-6">
+          <ReklamAlani variant="yatay" />
+        </section>
+
         <h1 className="mb-2 text-3xl font-bold text-zinc-900">
           Haftalık Yatırım Fonlarının En Çok Tercih Ettiği Hisseler
         </h1>
@@ -10047,6 +10068,10 @@ export default function HaftalikFonTercihleriPage() {
             <div ref={stickyScrollContentRef} className="h-4" />
           </div>
         </div>
+
+        <section className="mt-8">
+          <ReklamAlani variant="icerik" />
+        </section>
       </div>
     </main>
   );
