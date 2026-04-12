@@ -1,7 +1,11 @@
 import Link from "next/link";
 
 const onayliIzahnameler = [
-  { kod: "AAGYO", sirket: "AVRASYA GYO", href: "/halka-arz/onayli-1" },
+  {
+    kod: "AAGYO",
+    sirket: "AVRASYA GYO",
+    href: "/halka-arz/onayli-izahnameler/onayli-1",
+  },
 ];
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
