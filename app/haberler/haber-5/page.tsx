@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Bu yıl işleme başlayan 15 halka arzın hepsi halka arz fiyatının üzerinde işlem görüyor | Hoca İle Borsa",
+    "Borsada açığa satış yasağı 24 Nisan’a kadar uzatıldı",
   description:
-    "Bu yıl işleme başlayan 15 halka arzın hepsi halka arz fiyatının üzerinde işlem görüyor. 15 halka arzın ortalama kazancı %111.",
+    "Borsada açığa satış yasağı 24 Nisan’a kadar uzatıldı",
 };
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
@@ -49,7 +49,7 @@ export default function Haber1Page() {
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
               src="/haber-5v.png"
-              alt="Bu yıl işleme başlayan 15 halka arzın hepsi halka arz fiyatının üzerinde işlem görüyor görseli"
+              alt="Borsada açığa satış yasağı 24 Nisan’a kadar uzatıldı"
               fill
               unoptimized
               className="object-contain"
