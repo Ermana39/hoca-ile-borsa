@@ -1,12 +1,5 @@
+import Image from "next/image";
 import Link from "next/link";
-
-const onayliIzahnameler = [
-  {
-    kod: "AAGYO",
-    sirket: "AVRASYA GYO",
-    href: "/halka-arz/onayli-izahnameler/onayli-1",
-  },
-];
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
@@ -24,7 +17,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
-export default function OnayliIzahnamelerPage() {
+export default function Onayli1Page() {
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-5xl">
@@ -37,7 +30,7 @@ export default function OnayliIzahnamelerPage() {
           </Link>
 
           <Link
-            href="/halka-arz"
+            href="/halka-arz/onayli-izahnameler"
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Geri
@@ -48,25 +41,19 @@ export default function OnayliIzahnamelerPage() {
           <ReklamAlani variant="yatay" />
         </section>
 
-        <h1 className="mb-6 text-3xl font-bold text-zinc-900">
-          Onaylı İzahnameler
-        </h1>
-
-        <div className="space-y-3">
-          {onayliIzahnameler.map((item) => (
-            <Link
-              key={`${item.kod}-${item.sirket}`}
-              href={item.href}
-              className="flex items-center gap-4 rounded-xl border border-green-200 bg-green-50 px-4 py-4 transition hover:bg-green-100"
-            >
-              <div className="w-24 shrink-0 text-base font-bold text-zinc-900">
-                {item.kod}
-              </div>
-              <div className="text-base font-medium text-zinc-900">
-                {item.sirket}
-              </div>
-            </Link>
-          ))}
+        <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50 p-3 md:p-4">
+          <div className="overflow-hidden rounded-2xl bg-white p-2">
+            <div className="relative mx-auto w-full max-w-4xl">
+              <Image
+                src="/onayli-1.png"
+                alt="Onaylı izahname görseli"
+                width={1600}
+                height={2600}
+                priority
+                className="h-auto w-full rounded-xl object-contain"
+              />
+            </div>
+          </div>
         </div>
 
         <section className="mt-8">
