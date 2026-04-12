@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Bu yıl işleme başlayan 15 halka arzın hepsi halka arz fiyatının üzerinde işlem görüyor | Hoca İle Borsa",
+    "Fitch, Türkiye’nin kredi notunu “BB-” seviyesinde teyit etti; görünüm “durağan” oldu",
   description:
-    "Bu yıl işleme başlayan 15 halka arzın hepsi halka arz fiyatının üzerinde işlem görüyor. 15 halka arzın ortalama kazancı %111.",
+    "Fitch, Türkiye’nin kredi notunu “BB-” seviyesinde teyit etti; görünüm “durağan” oldu",
 };
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
