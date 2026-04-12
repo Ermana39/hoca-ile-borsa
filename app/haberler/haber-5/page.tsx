@@ -62,7 +62,7 @@ export default function Haber1Page() {
             </h1>
 
             <div className="mt-6 space-y-4 text-base leading-8 text-zinc-700 md:text-lg">
-              <p>Sermaye Piyasası Kurulu (SPK), Borsa İstanbul pay piyasalarında uygulanan açığa satış yasağının süresini 24 Nisan 2026 seans sonuna kadar uzattı.Hisse senedi fonları tarafında Hedef Portföy Başak Hisse Senedi Fonu (HKM) %22’nin üzerinde getiri sağlarken, Pardus Portföy Model Portföy Hisse Senedi Fonu (PMP) ile Foneva Portföy Birinci Hisse Senedi Fonu (FRC) da %22 civarındaki performanslarıyla öne çıktı.
+              <p>SSermaye Piyasası Kurulu (SPK), Borsa İstanbul pay piyasalarında uygulanan açığa satış yasağının süresini 24 Nisan 2026 seans sonuna kadar uzattı.
               </p>
 
               <p>Kararla birlikte, kredili işlemlerde öz kaynak oranına ilişkin esnek uygulamanın da aynı tarihe kadar devam edeceği açıklandı. SPK’nın adımı, piyasadaki oynaklığı sınırlamaya yönelik tedbirlerin sürdüğüne işaret etti.</p>
