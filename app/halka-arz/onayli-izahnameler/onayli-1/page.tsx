@@ -8,10 +8,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
       : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
 
   return (
-    <section
-      aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl border border-dashed border-zinc-300 bg-zinc-50 ${alanClass}`}
-    >
+    <section aria-label="Reklam alanı" className={`w-full ${alanClass}`}>
       <div className={`w-full ${alanClass}`} />
     </section>
   );
@@ -41,19 +38,15 @@ export default function Onayli1Page() {
           <ReklamAlani variant="yatay" />
         </section>
 
-        <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50 p-3 md:p-4">
-          <div className="overflow-hidden rounded-2xl bg-white p-2">
-            <div className="relative mx-auto w-full max-w-4xl">
-              <Image
-                src="/onayli-1.png"
-                alt="Onaylı izahname görseli"
-                width={1600}
-                height={2600}
-                priority
-                className="h-auto w-full rounded-xl object-contain"
-              />
-            </div>
-          </div>
+        <div className="relative mx-auto w-full max-w-4xl">
+          <Image
+            src="/onayli-1.png"
+            alt="Onaylı izahname görseli"
+            width={1600}
+            height={2600}
+            priority
+            className="h-auto w-full object-contain"
+          />
         </div>
 
         <section className="mt-8">
