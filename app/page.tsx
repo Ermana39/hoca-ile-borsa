@@ -1,39 +1,16 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TrackedLink from "@/components/tracked-link";
 
-const newsItems = [
-  {
-    id: 1,
-    title: "Bu yıl işleme başlayan halka arzların performansı",
-    href: "/haberler/haber-1",
-    image: "/haber-1v.png",
-    alt: "Bu yıl işleme başlayan 15 halka arzın tamamı halka arz fiyatının üzerinde işlem görüyor haber görseli",
-  },
-  {
-    id: 2,
-    title: "Avrasya GYO 2. işlem gününü tavan fiyat ile kapattı",
-    href: "/haberler/haber-2",
-    image: "/haber-2v.png",
-    alt: "Avrasya GYO 2. işlem gününü tavan fiyat ile kapattı haber görseli",
-  },
-  {
-    id: 3,
-    title: "Haftalık en çok kazandıran fonlar",
-    href: "/haberler/haber-3",
-    image: "/haber-3v.png",
-    alt: "Haftalık en çok kazandıran fonlar haber görseli",
-  },
-  {
-    id: 4,
-    title: "Fitch Ratings Türkiye’nin not görünümünü düşürdü",
-    href: "/haberler/haber-4",
-    image: "/haber-4v.png",
-    alt: "Fitch Ratings Türkiye’nin not görünümünü düşürdü haber görseli",
-  },
-];
+type NewsItem = {
+  id: number;
+  title: string;
+  href: string;
+  image: string;
+  alt: string;
+};
 
 const kategoriKutulari = [
   {
@@ -125,16 +102,7 @@ function KategoriKutusu({
   );
 }
 
-function YanHaberKutusu({
-  item,
-}: {
-  item: {
-    title: string;
-    href: string;
-    image: string;
-    alt: string;
-  };
-}) {
+function YanHaberKutusu({ item }: { item: NewsItem }) {
   return (
     <div className="hidden w-[190px] shrink-0 md:flex">
       <div className="flex w-full flex-col justify-start rounded-2xl border border-zinc-200 bg-white p-3">
@@ -253,19 +221,44 @@ function FooterLinkColumn({
 }
 
 export default function HomePage() {
+  const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  useEffect(() => {
+    const loadNews = async () => {
+      try {
+        const res = await fetch("/api/news", { cache: "no-store" });
+        const data = await res.json();
+        if (Array.isArray(data)) {
+          setNewsItems(data);
+        }
+      } catch (error) {
+        console.error("NEWS_LOAD_ERROR:", error);
+      }
+    };
+
+    loadNews();
+  }, []);
+
   const prevNews = () => {
+    if (newsItems.length === 0) return;
     setCurrentIndex((prev) => (prev - 1 + newsItems.length) % newsItems.length);
   };
 
   const nextNews = () => {
+    if (newsItems.length === 0) return;
     setCurrentIndex((prev) => (prev + 1) % newsItems.length);
   };
 
-  const currentNews = newsItems[currentIndex];
-  const prevItem = newsItems[(currentIndex - 1 + newsItems.length) % newsItems.length];
-  const nextItem = newsItems[(currentIndex + 1) % newsItems.length];
+  const currentNews = newsItems.length > 0 ? newsItems[currentIndex] : null;
+  const prevItem =
+    newsItems.length > 0
+      ? newsItems[(currentIndex - 1 + newsItems.length) % newsItems.length]
+      : null;
+  const nextItem =
+    newsItems.length > 0
+      ? newsItems[(currentIndex + 1) % newsItems.length]
+      : null;
 
   return (
     <main className="min-h-screen bg-white">
@@ -304,49 +297,55 @@ export default function HomePage() {
               </h1>
             </div>
 
-            <div className="flex items-center justify-between gap-3">
-              <button
-                type="button"
-                onClick={prevNews}
-                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-zinc-300 bg-white text-2xl font-bold text-zinc-700 hover:bg-zinc-100 md:h-12 md:w-12"
-                aria-label="Önceki haber"
-              >
-                ←
-              </button>
-
-              <div className="flex flex-1 items-stretch justify-center gap-4 overflow-hidden">
-                <YanHaberKutusu item={prevItem} />
-
-                <TrackedLink
-                  href={currentNews.href}
-                  label={currentNews.title}
-                  className="flex min-h-[220px] flex-1 flex-col items-center justify-center rounded-2xl border border-zinc-200 bg-white p-6 text-center hover:bg-zinc-50"
+            {currentNews ? (
+              <div className="flex items-center justify-between gap-3">
+                <button
+                  type="button"
+                  onClick={prevNews}
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-zinc-300 bg-white text-2xl font-bold text-zinc-700 hover:bg-zinc-100 md:h-12 md:w-12"
+                  aria-label="Önceki haber"
                 >
-                  <div className="mb-6 w-full max-w-[320px] overflow-hidden rounded-xl bg-zinc-100">
-                    <img
-                      src={currentNews.image}
-                      alt={currentNews.alt}
-                      className="block aspect-[16/10] w-full object-cover"
-                    />
-                  </div>
+                  ←
+                </button>
 
-                  <h2 className="max-w-4xl text-2xl font-semibold leading-tight text-zinc-900 md:text-4xl">
-                    {currentNews.title}
-                  </h2>
-                </TrackedLink>
+                <div className="flex flex-1 items-stretch justify-center gap-4 overflow-hidden">
+                  {prevItem && <YanHaberKutusu item={prevItem} />}
 
-                <YanHaberKutusu item={nextItem} />
+                  <TrackedLink
+                    href={currentNews.href}
+                    label={currentNews.title}
+                    className="flex min-h-[220px] flex-1 flex-col items-center justify-center rounded-2xl border border-zinc-200 bg-white p-6 text-center hover:bg-zinc-50"
+                  >
+                    <div className="mb-6 w-full max-w-[320px] overflow-hidden rounded-xl bg-zinc-100">
+                      <img
+                        src={currentNews.image}
+                        alt={currentNews.alt}
+                        className="block aspect-[16/10] w-full object-cover"
+                      />
+                    </div>
+
+                    <h2 className="max-w-4xl text-2xl font-semibold leading-tight text-zinc-900 md:text-4xl">
+                      {currentNews.title}
+                    </h2>
+                  </TrackedLink>
+
+                  {nextItem && <YanHaberKutusu item={nextItem} />}
+                </div>
+
+                <button
+                  type="button"
+                  onClick={nextNews}
+                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-zinc-300 bg-white text-2xl font-bold text-zinc-700 hover:bg-zinc-100 md:h-12 md:w-12"
+                  aria-label="Sonraki haber"
+                >
+                  →
+                </button>
               </div>
-
-              <button
-                type="button"
-                onClick={nextNews}
-                className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-zinc-300 bg-white text-2xl font-bold text-zinc-700 hover:bg-zinc-100 md:h-12 md:w-12"
-                aria-label="Sonraki haber"
-              >
-                →
-              </button>
-            </div>
+            ) : (
+              <div className="rounded-2xl border border-zinc-200 bg-white p-6 text-center text-zinc-500">
+                Haber bulunamadı.
+              </div>
+            )}
           </div>
         </section>
 
