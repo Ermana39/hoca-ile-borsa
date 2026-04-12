@@ -25,7 +25,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
-export default function Haber4Page() {
+export default function Haber1Page() {
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-4xl">
@@ -48,8 +48,8 @@ export default function Haber4Page() {
         <article className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
-              src="/haber-4v.png"
-              alt="fitch not"
+              src="/haber-3v.png"
+              alt="Bu yıl işleme başlayan 15 halka arzın hepsi halka arz fiyatının üzerinde işlem görüyor görseli"
               fill
               unoptimized
               className="object-contain"
@@ -58,15 +58,14 @@ export default function Haber4Page() {
 
           <div className="p-5 md:p-8">
             <h1 className="text-2xl font-bold leading-tight text-zinc-900 md:text-4xl">
-              Fitch, Türkiye’nin kredi notunu “BB-” seviyesinde teyit etti; görünüm “durağan” oldu
+              Borsada açığa satış yasağı 24 Nisan’a kadar uzatıldı
             </h1>
 
             <div className="mt-6 space-y-4 text-base leading-8 text-zinc-700 md:text-lg">
-              <p>
-                Uluslararası kredi derecelendirme kuruluşu Fitch Ratings, Türkiye’nin uzun vadeli yabancı para cinsinden kredi notunu “BB-” seviyesinde teyit etti. Kuruluş, not görünümünü ise “pozitif”ten “durağan”a çekti.
+              <p>Sermaye Piyasası Kurulu (SPK), Borsa İstanbul pay piyasalarında uygulanan açığa satış yasağının süresini 24 Nisan 2026 seans sonuna kadar uzattı.Hisse senedi fonları tarafında Hedef Portföy Başak Hisse Senedi Fonu (HKM) %22’nin üzerinde getiri sağlarken, Pardus Portföy Model Portföy Hisse Senedi Fonu (PMP) ile Foneva Portföy Birinci Hisse Senedi Fonu (FRC) da %22 civarındaki performanslarıyla öne çıktı.
               </p>
 
-              <p>Fitch, kararında yüksek enflasyon, dış finansman ihtiyacı, rezervlerdeki zayıflama ve dış kırılganlıklara dikkat çekti. Böylece Türkiye’nin kredi notu korunurken, kısa vadede yeni bir not artışı beklentisinin zayıfladığı mesajı verildi.</p>
+              <p>Kararla birlikte, kredili işlemlerde öz kaynak oranına ilişkin esnek uygulamanın da aynı tarihe kadar devam edeceği açıklandı. SPK’nın adımı, piyasadaki oynaklığı sınırlamaya yönelik tedbirlerin sürdüğüne işaret etti.</p>
             </div>
           </div>
         </article>
