@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 type SearchParams = Promise<{ sirket?: string }>;
 
@@ -78,6 +79,10 @@ const taslakIzahnameler = [
   "Dünya Varlık Yönetim A.Ş.",
 ];
 
+function getImagePath(companyName: string) {
+  return `/taslak/${companyName}.png`;
+}
+
 export default async function TaslakIzahnamelerPage({
   searchParams,
 }: {
@@ -89,6 +94,8 @@ export default async function TaslakIzahnamelerPage({
     : null;
 
   if (secilenSirket) {
+    const imagePath = getImagePath(secilenSirket);
+
     return (
       <main className="min-h-screen bg-white px-4 py-6 md:px-6">
         <div className="mx-auto max-w-5xl">
@@ -120,14 +127,16 @@ export default async function TaslakIzahnamelerPage({
           </h1>
 
           <div className="overflow-hidden rounded-2xl border border-red-200 bg-red-50 p-4 md:p-6">
-            <div className="flex min-h-[420px] items-center justify-center rounded-2xl border border-dashed border-red-300 bg-white p-6 text-center">
-              <div>
-                <div className="mb-4 text-lg font-semibold text-zinc-700">
-                  Buraya görsel gelecek
-                </div>
-                <div className="text-sm text-zinc-500">
-                  Bu şirkete ait görseli daha sonra ekleyeceğiz.
-                </div>
+            <div className="overflow-hidden rounded-2xl bg-white p-2">
+              <div className="relative mx-auto w-full max-w-4xl">
+                <Image
+                  src={imagePath}
+                  alt={secilenSirket}
+                  width={1600}
+                  height={2200}
+                  unoptimized
+                  className="h-auto w-full rounded-xl object-contain"
+                />
               </div>
             </div>
           </div>
