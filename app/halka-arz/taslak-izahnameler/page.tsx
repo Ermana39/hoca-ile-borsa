@@ -79,6 +79,22 @@ const taslakIzahnameler = [
   "Dünya Varlık Yönetim A.Ş.",
 ];
 
+function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
+  const alanClass =
+    variant === "icerik"
+      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
+      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
+
+  return (
+    <section
+      aria-label="Reklam alanı"
+      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
+    >
+      <div className={`w-full ${alanClass}`} />
+    </section>
+  );
+}
+
 function getImagePath(companyName: string) {
   return `/taslak/${companyName}.png`;
 }
@@ -108,19 +124,16 @@ export default async function TaslakIzahnamelerPage({
             </Link>
 
             <Link
-              href="/halka-arz"
-              className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
-            >
-              Halka Arz
-            </Link>
-
-            <Link
               href="/halka-arz/taslak-izahnameler"
               className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
             >
               Geri
             </Link>
           </div>
+
+          <section className="mb-6">
+            <ReklamAlani variant="yatay" />
+          </section>
 
           <h1 className="mb-6 text-2xl font-bold text-zinc-900 md:text-3xl">
             {secilenSirket}
@@ -140,10 +153,17 @@ export default async function TaslakIzahnamelerPage({
               </div>
             </div>
           </div>
+
+          <section className="mt-8">
+            <ReklamAlani variant="icerik" />
+          </section>
         </div>
       </main>
     );
   }
+
+  const firstSplitIndex = 24;
+  const secondSplitIndex = 48;
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -164,21 +184,34 @@ export default async function TaslakIzahnamelerPage({
           </Link>
         </div>
 
+        <section className="mb-6">
+          <ReklamAlani variant="yatay" />
+        </section>
+
         <h1 className="mb-6 text-3xl font-bold text-zinc-900">
           Taslak İzahnameler
         </h1>
 
         <div className="space-y-3">
           {taslakIzahnameler.map((sirket, index) => (
-            <Link
-              key={`${sirket}-${index}`}
-              href={`/halka-arz/taslak-izahnameler?sirket=${encodeURIComponent(
-                sirket
-              )}`}
-              className="block rounded-xl border border-red-200 bg-red-50 px-4 py-4 text-base font-medium text-zinc-900 transition hover:bg-red-100"
-            >
-              {sirket}
-            </Link>
+            <div key={`${sirket}-${index}`} className="space-y-3">
+              <Link
+                href={`/halka-arz/taslak-izahnameler?sirket=${encodeURIComponent(
+                  sirket
+                )}`}
+                className="block rounded-xl border border-red-200 bg-red-50 px-4 py-4 text-base font-medium text-zinc-900 transition hover:bg-red-100"
+              >
+                {sirket}
+              </Link>
+
+              {index === firstSplitIndex && (
+                <ReklamAlani variant="yatay" />
+              )}
+
+              {index === secondSplitIndex && (
+                <ReklamAlani variant="yatay" />
+              )}
+            </div>
           ))}
         </div>
       </div>

@@ -5,7 +5,23 @@ const haberler = [
     title: "Kazancı ile dikkat çeken Fonlar",
     href: "/borsa/dikkat-cekenler/haber-1",
   },
-  ];
+];
+
+function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
+  const alanClass =
+    variant === "icerik"
+      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
+      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
+
+  return (
+    <section
+      aria-label="Reklam alanı"
+      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
+    >
+      <div className={`w-full ${alanClass}`} />
+    </section>
+  );
+}
 
 export default function DikkatCekenlerPage() {
   return (
@@ -26,6 +42,10 @@ export default function DikkatCekenlerPage() {
           </Link>
         </div>
 
+        <section className="mb-6">
+          <ReklamAlani variant="yatay" />
+        </section>
+
         <h1 className="mb-6 text-3xl font-bold text-zinc-900">Dikkat Çekenler</h1>
 
         <div className="space-y-3">
@@ -39,6 +59,10 @@ export default function DikkatCekenlerPage() {
             </Link>
           ))}
         </div>
+
+        <section className="mt-8">
+          <ReklamAlani variant="icerik" />
+        </section>
       </div>
     </main>
   );

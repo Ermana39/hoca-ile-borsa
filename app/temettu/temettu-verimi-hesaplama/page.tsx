@@ -23,6 +23,22 @@ function formatPercent(value: number) {
   });
 }
 
+function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
+  const alanClass =
+    variant === "icerik"
+      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
+      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
+
+  return (
+    <section
+      aria-label="Reklam alanı"
+      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
+    >
+      <div className={`w-full ${alanClass}`} />
+    </section>
+  );
+}
+
 export default function TemettuVerimiHesaplamaPage() {
   const [hisseFiyati, setHisseFiyati] = useState("");
   const [lotBasiBrutTemettu, setLotBasiBrutTemettu] = useState("");
@@ -143,21 +159,24 @@ export default function TemettuVerimiHesaplamaPage() {
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-4xl">
         <div className="mb-6 flex gap-3">
-  <Link
-    href="/"
-    className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
-  >
-    Ana Sayfa
-  </Link>
+          <Link
+            href="/"
+            className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
+          >
+            Ana Sayfa
+          </Link>
 
-  <Link
-    href="/temettu"
-    className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
-  >
-    Geri
-  </Link>
-</div>
-       
+          <Link
+            href="/temettu"
+            className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
+          >
+            Geri
+          </Link>
+        </div>
+
+        <section className="mb-6">
+          <ReklamAlani variant="yatay" />
+        </section>
 
         <h1 className="mb-6 text-3xl font-bold text-zinc-900">
           Temettü Verimi Hesaplama
@@ -303,6 +322,10 @@ export default function TemettuVerimiHesaplamaPage() {
             </div>
           </>
         )}
+
+        <section className="mt-8">
+          <ReklamAlani variant="icerik" />
+        </section>
       </div>
     </main>
   );
