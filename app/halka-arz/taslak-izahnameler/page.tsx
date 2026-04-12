@@ -204,197 +204,7 @@ Polifarma İlaç San. ve Tic. A.Ş.
 
 Efg Elektrik Enerji A.Ş.
 
-Eti Elektrometalurji A.Ş.
-
-Büyük Hekimoğulları Gıda San. ve Tic. A.Ş.
-
-Deniz Eko Enerji ve Geri Dönüşüm A.Ş.
-
-Fcr Gayrimenkul Yatırım Ortaklığı A.Ş.
-
-Fide Konserve Gıda San. A.Ş.
-
-Biem İlaç San. ve Tic. A.Ş.
-
-İntetra Teknoloji ve Bilişim Hizmetleri A.Ş.
-
-Zebrano Mobilya Teknolojileri A.Ş.
-
-Hür Çelik Sanayi ve Dış Tic. A.Ş.
-
-Makel Elektrik Malzemeleri San. ve Tic. A.Ş.
-
-İhlas Girişim Sermayesi Yatırım Ortaklığı A.Ş.
-
-Dbe Elektrik Mühendislik Proje ve Danışmanlık A.Ş.
-
-Nmt Lojistik A.Ş.
-
-Milk Academy Süt Ürünleri San. ve Tic. A.Ş.
-
-Aksam Otogong İç ve Dış Tic. A.Ş.
-
-Anadolu Mikronize Kimya San. ve Tic. A.Ş.
-
-Kisan İnşaat Mühendislik San. ve Tic. A.Ş.
-
-Pürsan Pigment Ürünleri San. ve Tic. A.Ş.
-
-Club Jolly Turizm ve Tic. A.Ş.
-
-Türker Vangölü Enerji Yatırım A.Ş.
-
-Kale Jet Motorları Sanayi A.Ş.
-
-Haver Farma İlaç A.Ş.
-
-Teknika Plast Teknik Kalıp Plastik San. ve Tic. A.Ş.
-
-Çitlekçi Mağazacılık Gıda A.Ş.
-
-Altun Gıda A.Ş.
-
-Ekiciler Süt Gıda Tarım Hayvancılık San. ve Tic. A.Ş.
-
-Aksa Elektrik Perakende Satış A.Ş.
-
-Karesi Polyester ve Petrokimya Sanayi A.Ş.
-
-Saytek Medikal ve Plastik San. Tic. A.Ş.
-
-Özpet Plastik Global San. Tic. A.Ş.
-
-Bewen Enerji A.Ş.
-
-Cevher Jant Sanayii A.Ş.
-
-Masfen Enerji A.Ş.
-
-Kapeks Kimya Sanayi A.Ş.
-
-Metgün Enerji Yatırımları A.Ş.
-
-Albayrak Hazır Beton San. ve Tic. A.Ş.
-
-Hakan Faydasıçok Çelik A.Ş.
-
-Pakun Üretim Gıda San. ve Tic. A.Ş.
-
-Beta Enerji ve Teknoloji A.Ş.
-
-İsvea Seramik ve Banyo Ürünleri Sanayi A.Ş.
-
-Şa-Ra Enerji İnşaat Tic. ve San. A.Ş.
-
-Quick Sigorta A.Ş.
-
-Elin Elektrik İnşaat Müşavirlik Proje Taahhüt Tic. ve San. A.Ş.
-
-Kardemir Çelik Sanayi A.Ş.
-
-X Koren Elektrik A.Ş.
-
-Ekinciler Demir ve Çelik Sanayi A.Ş.
-
-Soho Giyim ve Enerji A.Ş.
-
-Yeşil Global Enerji A.Ş.
-
-FIBAF
-Fiba Faktoring A.Ş.
-
-Saat ve Saat San. ve Tic. A.Ş.
-
-Orzaks İlaç ve Kimya San. Tic. A.Ş.
-
-Eston Yapı A.Ş.
-
-Flo Mağazacılık ve Pazarlama A.Ş.
-
-Enerjeo Kemaliye Enerji Üretim A.Ş.
-
-Allbatross Girişim Sermayesi Yatırım Ortaklığı A.Ş.
-
-Uçak Tekstil Turizm İthalat İhracat San. ve Tic. A.Ş.
-
-Alcas Metal Sanayi A.Ş.
-
-Golda Gıda San. ve Tic. A.Ş.
-
-Kırlıoğlu Kimya San. ve Tic. A.Ş.
-
-Soybaş Demir Çelik San. ve Tic. A.Ş.
-
-Acacia Maden İşletmeleri A.Ş.
-
-Gdz Elektrik Dağıtım A.Ş.
-
-Çimko Çimento ve Beton San. Tic. A.Ş.
-
-TEKYP
-Teknik Yapı Teknik Yapılar San. ve Tic. A.Ş.
-
-Birleşim Yeşil Enerji A.Ş.
-
-Uras Kimya San. ve Tic. A.Ş.
-
-EKIM
-(Intercity) Ekim Turizm Tic. ve San. A.Ş.
-
-Zen Girişim Sermayesi Yatırım Ortaklığı A.Ş.
-
-NARFE
-Narlı Feribot İşletmeciliği A.Ş.
-
-YESOT
-(enterprise) Yes Oto Kiralama ve Turizm Yatırımları A.Ş.
-
-Arkopa Ahşap Panel Sanayi A.Ş.
-
-Multınet Kurumsal Hizmetler A.Ş.
-
-Mega Teks Tekstil Ürünleri İmalat San. ve Tic. A.Ş.
-
-Uslu Çsm Demir Çelik A.Ş.
-
-(Penti) Penca Tekstil Çorap San. ve Tic. A.Ş.
-
-Gama Recycle Sürdürülebilir Teknolojiler A.Ş.
-
-AKCEL
-Akçelik Demir Çelik San. ve Tic. A.Ş.
-
-TMGSY
-Techmine Girişim Sermayesi Yatırım Ortaklığı A.Ş.
-
-TVKDN
-Tavuk Dünyası Gıda San. ve Tic. A.Ş.
-
-KZLYI
-Kızılay İçecek San. ve Tic. A.Ş.
-
-SMMAS
-Smm Tekstil A.Ş.
-
-HDMCB
-Hdm Çelik Boru San. ve Tic. A.Ş.
-
-CAVDC
-Çavuşoğlu Demir Çelik Geri Dönüşüm San. Tic. A.Ş.
-
-TEZKM
-Tezkim Tarımsal Kimya San. ve Tic. A.Ş.
-
-KAYMT
-Kaymet Metal İmalat San. ve Tic. A.Ş.
-
-Mikro Yazılımevi Yazılım Hizmetleri Bilgisayar San. ve Tic. A.Ş.
-
-Sümer Faktoring A.Ş.
-
-Omega Elektrik Pano A.Ş.
-
-OutMedya İletişim A.Ş.`;
+Eti Elektrometalurji A.Ş.`;
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
@@ -409,6 +219,15 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
+function temizSirketAdi(deger: string) {
+  return deger.replace(/^\([^)]+\)\s*/g, "").trim();
+}
+
+function kodSatiriMi(satir: string) {
+  const temiz = satir.trim();
+  return /^[A-Z0-9ÇĞİÖŞÜ]{3,10}$/.test(temiz);
+}
+
 function getTaslakListesi() {
   return taslakMetin
     .split(/\n\s*\n/)
@@ -420,11 +239,16 @@ function getTaslakListesi() {
         .map((satir) => satir.trim())
         .filter(Boolean);
 
+      const sonSatir = satirlar[satirlar.length - 1];
+      const gorunenSirket = temizSirketAdi(sonSatir);
+      const dosyaAdi = temizSirketAdi(sonSatir);
+
       return {
-        label: satirlar.join("\n"),
-        dosyaAdi: satirlar[satirlar.length - 1],
+        label: gorunenSirket,
+        dosyaAdi,
       };
-    });
+    })
+    .filter((item) => item.label && !kodSatiriMi(item.label));
 }
 
 function getImagePath(dosyaAdi: string) {
@@ -472,7 +296,7 @@ export default async function TaslakIzahnamelerPage({
             <ReklamAlani variant="yatay" />
           </section>
 
-          <h1 className="mb-6 whitespace-pre-line text-2xl font-bold text-zinc-900 md:text-3xl">
+          <h1 className="mb-6 text-2xl font-bold text-zinc-900 md:text-3xl">
             {secilenSirket}
           </h1>
 
@@ -538,7 +362,7 @@ export default async function TaslakIzahnamelerPage({
                 )}&dosya=${encodeURIComponent(item.dosyaAdi)}`}
                 className="block rounded-xl border border-red-200 bg-red-50 px-4 py-4 text-base font-medium text-zinc-900 transition hover:bg-red-100"
               >
-                <span className="whitespace-pre-line">{item.label}</span>
+                {item.label}
               </Link>
 
               {index === firstSplitIndex && (
