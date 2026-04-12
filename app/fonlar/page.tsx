@@ -42,6 +42,27 @@ const fonKutulari = [
   },
 ];
 
+const videoKartlari = [
+  {
+    title: "TLY Tera Portföy Birinci Serbest Fonu: Dağılım ve Strateji",
+    href: "https://youtu.be/S6xt7GxWWJ8",
+    image: "https://img.youtube.com/vi/S6xt7GxWWJ8/hqdefault.jpg",
+    alt: "TLY Tera Portföy Birinci Serbest Fonu video kapak görseli",
+  },
+  {
+    title: "PHE Pusula Portföy Hisse Senedi Fonu Detaylı İnceleme | Strateji, Risk, Getiri",
+    href: "https://youtu.be/MgVAiBFZvto",
+    image: "https://img.youtube.com/vi/MgVAiBFZvto/hqdefault.jpg",
+    alt: "PHE Pusula Portföy Hisse Senedi Fonu video kapak görseli",
+  },
+  {
+    title: "DFI Atlas Portföy İkinci Serbest Fon",
+    href: "https://youtu.be/flipVqvQMDA",
+    image: "https://img.youtube.com/vi/flipVqvQMDA/hqdefault.jpg",
+    alt: "DFI Atlas Portföy İkinci Serbest Fon video kapak görseli",
+  },
+];
+
 export default function FonlarPage() {
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -102,6 +123,50 @@ export default function FonlarPage() {
 
         <section className="mt-8">
           <ReklamAlani variant="icerik" />
+        </section>
+
+        <section className="mt-10">
+          <div className="mb-5">
+            <h2 className="text-2xl font-bold text-zinc-900 md:text-3xl">
+              YouTube Videoları
+            </h2>
+            <p className="mt-2 text-sm text-zinc-600 md:text-base">
+              Fonlarla ilgili hazırladığım videolara buradan ulaşabilirsiniz.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
+            {videoKartlari.map((video) => (
+              <a
+                key={video.href}
+                href={video.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex overflow-hidden rounded-2xl border border-zinc-200 bg-white transition hover:border-zinc-300 hover:bg-zinc-50"
+                aria-label={video.title}
+              >
+                <div className="w-full">
+                  <div className="overflow-hidden rounded-t-2xl bg-zinc-100">
+                    <img
+                      src={video.image}
+                      alt={video.alt}
+                      className="block aspect-video w-full object-cover transition duration-300 group-hover:scale-[1.02]"
+                    />
+                  </div>
+
+                  <div className="p-4">
+                    <h3 className="line-clamp-2 min-h-[56px] text-lg font-semibold leading-7 text-zinc-900">
+                      {video.title}
+                    </h3>
+
+                    <div className="mt-4 inline-flex rounded-xl border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold text-red-700 transition group-hover:bg-red-100">
+                      Videoyu Aç
+                    </div>
+                  </div>
+                </div>
+              </a>
+            ))}
+          </div>
         </section>
       </div>
     </main>
