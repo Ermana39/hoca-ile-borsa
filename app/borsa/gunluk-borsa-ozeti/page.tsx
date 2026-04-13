@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const bistVeri = {
-  tarih: "15.04.2026",
+  tarih: "13.04.2026",
   kapanis: "14058.51",
   degisimYuzde: -0.11,
 };
@@ -280,23 +280,17 @@ export default function GunlukBorsaOzetiPage() {
 
         <div className="mb-6 grid gap-4 xl:grid-cols-[1fr_2.5fr]">
           <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
-            <div className="flex min-h-[180px] flex-col justify-between">
-              <div className="text-center">
-                <div className="mb-3 text-sm font-semibold text-zinc-600">XU100</div>
-                <div className="text-4xl font-bold text-zinc-900">{bistVeri.kapanis}</div>
-                <div className="mt-3 text-base font-semibold text-zinc-700">{bistVeri.tarih}</div>
+            <div className="flex min-h-[220px] flex-col items-center justify-center text-center">
+              <div className="mb-3 text-sm font-semibold text-zinc-600">XU100</div>
+              <div className="text-4xl font-bold text-zinc-900">{bistVeri.kapanis}</div>
+              <div
+                className={`mt-4 text-3xl font-bold ${
+                  pozitif ? "text-green-700" : "text-red-700"
+                }`}
+              >
+                %{bistVeri.degisimYuzde.toFixed(2)}
               </div>
-
-              <div className="mt-4 border-t border-zinc-200 pt-4 text-center">
-                <div className="mb-3 text-sm font-semibold text-zinc-600">Günlük Değişim</div>
-                <div
-                  className={`text-3xl font-bold ${
-                    pozitif ? "text-green-700" : "text-red-700"
-                  }`}
-                >
-                  %{bistVeri.degisimYuzde.toFixed(2)}
-                </div>
-              </div>
+              <div className="mt-4 text-base font-semibold text-zinc-700">{bistVeri.tarih}</div>
             </div>
           </div>
 
@@ -317,7 +311,7 @@ export default function GunlukBorsaOzetiPage() {
                   <div className="text-center">Önceki</div>
                 </div>
 
-                <TakvimTarihSatiri tarih="15.04.2026" />
+                <TakvimTarihSatiri tarih="13.04.2026" />
                 <TakvimSatiri
                   saat="11:00"
                   ulke="TR"
