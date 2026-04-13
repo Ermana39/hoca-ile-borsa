@@ -278,15 +278,16 @@ export default function GunlukBorsaOzetiPage() {
           </div>
         </div>
 
-        <div className="mb-6 grid gap-4 xl:grid-cols-[1fr_1fr_1.5fr]">
+        <div className="mb-6 grid gap-4 xl:grid-cols-[1fr_2.5fr]">
           <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
             <div className="flex min-h-[180px] flex-col justify-between">
               <div className="text-center">
                 <div className="mb-3 text-sm font-semibold text-zinc-600">XU100</div>
                 <div className="text-4xl font-bold text-zinc-900">{bistVeri.kapanis}</div>
+                <div className="mt-3 text-base font-semibold text-zinc-700">{bistVeri.tarih}</div>
               </div>
 
-              <div className="border-t border-zinc-200 pt-4 text-center">
+              <div className="mt-4 border-t border-zinc-200 pt-4 text-center">
                 <div className="mb-3 text-sm font-semibold text-zinc-600">Günlük Değişim</div>
                 <div
                   className={`text-3xl font-bold ${
@@ -296,13 +297,6 @@ export default function GunlukBorsaOzetiPage() {
                   %{bistVeri.degisimYuzde.toFixed(2)}
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
-            <div className="flex min-h-[180px] flex-col items-center justify-center text-center">
-              <div className="mb-4 text-sm font-semibold text-zinc-600">Tarih</div>
-              <div className="text-4xl font-bold text-zinc-900">{bistVeri.tarih}</div>
             </div>
           </div>
 
