@@ -2,7 +2,12 @@ import fs from "fs";
 import path from "path";
 import Link from "next/link";
 import * as XLSX from "xlsx";
-
+const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
+  timeZone: "Europe/Istanbul",
+  day: "2-digit",
+  month: "2-digit",
+  year: "numeric",
+}).format(new Date());
 type FonSatiri = {
   sembol: string | null;
   degisim: string | number | null;
@@ -204,7 +209,9 @@ export default function HaftalikYatirimFonlarininEnCokTercihEttigiHisselerPage()
         <p className="mb-6 text-sm text-zinc-600">
           Veriler Excel dosyasından otomatik okunur.
         </p>
-
+<div className="mb-8 text-sm font-semibold text-zinc-700">
+  Güncelleme Tarihi: {guncellemeTarihi}
+</div>
         <div className="rounded-2xl border border-zinc-200 bg-white">
           <div className="w-full overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <div className="inline-block min-w-full align-top">
