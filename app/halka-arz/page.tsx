@@ -73,17 +73,6 @@ function formatYuzde(deger: number) {
   }).format(deger);
 }
 
-function renkClass(index: number) {
-  const renkler = [
-    "bg-[#2e5fa8]",
-    "bg-[#6e8f3f]",
-    "bg-[#8d4b4b]",
-    "bg-[#6b5aa7]",
-    "bg-[#3f7c8b]",
-  ];
-  return renkler[index % renkler.length];
-}
-
 function bosSatir(): ListeSatiri {
   return {
     kurum: "",
@@ -225,14 +214,7 @@ function KurumTablosu({
               return (
                 <tr key={`${item.kurum || "bos"}-${index}`} className="bg-[#2a2a2a]">
                   <td className="border-b border-r border-zinc-700 px-3 py-2 text-left text-[12px] font-semibold md:text-[13px]">
-                    {bosMu ? (
-                      <span className="block min-h-[20px]"></span>
-                    ) : (
-                      <div className="flex items-center gap-2">
-                        <span className={`h-5 w-1.5 rounded-sm ${renkClass(index)}`} />
-                        <span>{item.kurum}</span>
-                      </div>
-                    )}
+                    {bosMu ? <span className="block min-h-[20px]"></span> : <span>{item.kurum}</span>}
                   </td>
                   <td className="border-b border-r border-zinc-700 px-3 py-2 text-right text-[12px] text-zinc-100 md:text-[13px]">
                     {item.lot}
