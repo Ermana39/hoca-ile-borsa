@@ -79,8 +79,13 @@ export default function AefesGrafikAnalizPage() {
           <section className="pt-6">
             <div className="rounded-2xl bg-zinc-50 p-4 md:p-6">
               <p className="text-base leading-8 text-zinc-700 md:text-lg">
-                AEFES 16 Şubat'tan bu yana süren düşüş trendini Geçtiğimiz cuma
-                günü yaşanan %8,43'lük yükseliş ile kırdı.
+                AEFES 16 Şubat&apos;tan bu yana süren düşüş trendini geçtiğimiz cuma
+                günü yaşanan %8,43&apos;lük yükseliş ile kırdı.
+              </p>
+
+              <p className="mt-4 border-t border-zinc-200 pt-4 text-sm text-zinc-500 md:text-base">
+                Bu içerikte yer alan teknik değerlendirmeler genel niteliktedir
+                ve yatırım danışmanlığı kapsamında değildir.
               </p>
             </div>
           </section>
