@@ -280,17 +280,26 @@ export default function GunlukBorsaOzetiPage() {
 
         <div className="mb-6 grid gap-4 xl:grid-cols-[1fr_2.5fr]">
           <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
-            <div className="flex min-h-[220px] flex-col items-center justify-center text-center">
-              <div className="mb-3 text-sm font-semibold text-zinc-600">XU100</div>
-              <div className="text-4xl font-bold text-zinc-900">{bistVeri.kapanis}</div>
-              <div
-                className={`mt-4 text-3xl font-bold ${
-                  pozitif ? "text-green-700" : "text-red-700"
-                }`}
-              >
-                %{bistVeri.degisimYuzde.toFixed(2)}
+            <div className="grid min-h-[220px] grid-rows-3 text-center">
+              <div className="flex flex-col items-center justify-center border-b border-zinc-200">
+                <div className="mb-3 text-sm font-semibold text-zinc-600">XU100</div>
+                <div className="text-4xl font-bold text-zinc-900">{bistVeri.kapanis}</div>
               </div>
-              <div className="mt-4 text-base font-semibold text-zinc-700">{bistVeri.tarih}</div>
+
+              <div className="flex flex-col items-center justify-center border-b border-zinc-200">
+                <div className="mb-3 text-sm font-semibold text-zinc-600">Günlük Değişim</div>
+                <div
+                  className={`text-3xl font-bold ${
+                    pozitif ? "text-green-700" : "text-red-700"
+                  }`}
+                >
+                  %{bistVeri.degisimYuzde.toFixed(2)}
+                </div>
+              </div>
+
+              <div className="flex items-center justify-center">
+                <div className="text-xl font-semibold text-zinc-700">{bistVeri.tarih}</div>
+              </div>
             </div>
           </div>
 
@@ -311,7 +320,7 @@ export default function GunlukBorsaOzetiPage() {
                   <div className="text-center">Önceki</div>
                 </div>
 
-                <TakvimTarihSatiri tarih="13.04.2026" />
+                <TakvimTarihSatiri tarih="15.04.2026" />
                 <TakvimSatiri
                   saat="11:00"
                   ulke="TR"
