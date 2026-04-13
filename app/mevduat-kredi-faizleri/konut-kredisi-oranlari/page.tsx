@@ -4,7 +4,12 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import * as XLSX from "xlsx";
 import * as FaizAraclari from "@/components/faiz-hesaplayicilar";
-
+const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
+  timeZone: "Europe/Istanbul",
+  day: "2-digit",
+  month: "2-digit",
+  year: "numeric",
+}).format(new Date());
 type BankaSatiri = {
   banka: string;
   faiz: string;
@@ -378,7 +383,9 @@ export default function KonutKredisiOranlariPage() {
         <p className="mb-8 text-base text-zinc-600">
           Güncel konut kredisi oranları, banka karşılaştırmaları ve günlük ortalama faiz grafiği.
         </p>
-
+<div className="mb-8 text-sm font-semibold text-zinc-700">
+  Güncelleme Tarihi: {guncellemeTarihi}
+</div>
         {hata ? (
           <section className="mb-8 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
             {hata}
