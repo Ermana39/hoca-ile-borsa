@@ -87,7 +87,7 @@ Formasyon yapısının yukarı kırılması halinde 23,00 bölgesi ara direnç o
 
 Aşağı yönlü senaryoda ise destek alanlarının korunması önem taşıyor.
 
-Genel teknik değerlendirmedir.`}
+Burada yer alan bilgi, yorum ve teknik değerlendirmeler genel niteliktedir. Yatırım danışmanlığı kapsamında değildir.`}
               </p>
             </div>
           </section>

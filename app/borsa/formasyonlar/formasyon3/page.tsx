@@ -3,11 +3,11 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "BIOEN Düşen Genişleyen Takoz Formasyonu | Hoca İle Borsa",
+  title: "EGGUB Yükselen Bayrak Formasyonu",
   description:
-    "BIOEN günlük grafik teknik değerlendirmesi, destek ve direnç seviyeleri.",
+    "EGGUB günlük grafik teknik değerlendirmesi, destek ve direnç seviyeleri.",
   alternates: {
-    canonical: "/borsa/formasyonlar/formasyon2",
+    canonical: "/borsa/formasyonlar/formasyon1",
   },
 };
 
@@ -27,7 +27,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
-export default function Formasyon2Page() {
+export default function Formasyon1Page() {
   return (
     <main className="min-h-screen bg-white">
       <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
@@ -50,11 +50,11 @@ export default function Formasyon2Page() {
         <article className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
           <header>
             <h1 className="text-2xl font-bold leading-tight text-zinc-900 md:text-4xl">
-              BIOEN Düşen Genişleyen Takoz Formasyonu
+              EGGUB Yükselen Bayrak Formasyonu
             </h1>
 
             <p className="mt-3 text-sm leading-7 text-zinc-600 md:text-base">
-              BIOEN teknik görünümüne dair kısa değerlendirme.
+              EGGUB teknik görünümüne dair kısa değerlendirme.
             </p>
           </header>
 
@@ -66,8 +66,8 @@ export default function Formasyon2Page() {
             <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50">
               <div className="relative aspect-[16/10] w-full">
                 <Image
-                  src="/formasyon-2.png"
-                  alt="BIOEN düşen genişleyen takoz formasyonu görseli"
+                  src="/formasyon-1.png"
+                  alt="EGGUB yükselen bayrak formasyonu görseli"
                   fill
                   className="object-contain"
                   priority
@@ -79,13 +79,9 @@ export default function Formasyon2Page() {
           <section className="pt-6">
             <div className="rounded-2xl bg-zinc-50 p-4 md:p-6">
               <p className="whitespace-pre-line text-base leading-8 text-zinc-700 md:text-lg">
-                {`#BIOEN
+                {`#EGGUB
 
-Günlük grafikte düşen genişleyen takoz yapısı dikkat çekiyor.
-
-Formasyon yapısının yukarı kırılması halinde direnç bölgeleri kademeli olarak izlenebilir. Yukarı yönlü hareketin güç kazanması durumunda formasyon projeksiyonu açısından üst bant seviyeleri takip edilebilir.
-
-Aşağı yönlü senaryoda ise destek alanlarının korunması önem taşıyor.
+Günlük grafikte yükselen bayrak yapısı izleniyor. Güçlü yükseliş sonrası oluşan sıkışma alanında fiyat hareketi yön arayışını sürdürüyor. Yukarı yönlü devam senaryosunda 144,40 seviyesi ara direnç bölgesi olarak öne çıkarken, formasyon projeksiyonu açısından 170,60 seviyesi izlenebilecek üst bölge olarak takip edilebilir. Olası zayıflamada ise bayrak yapısının alt bandının korunması kısa vadeli görünüm açısından önem taşıyor.
 
 Burada yer alan bilgi, yorum ve teknik değerlendirmeler genel niteliktedir. Yatırım danışmanlığı kapsamında değildir.`}
               </p>
