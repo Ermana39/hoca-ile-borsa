@@ -88,5 +88,6 @@ export default function BorsaPage() {
           <ReklamAlani variant="icerik" />
         </section>
       </div>
-    </main>  );
+    </main>
+  );
 }
