@@ -2,7 +2,12 @@ import fs from "fs";
 import path from "path";
 import Link from "next/link";
 import * as XLSX from "xlsx";
-
+const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
+  timeZone: "Europe/Istanbul",
+  day: "2-digit",
+  month: "2-digit",
+  year: "numeric",
+}).format(new Date());
 type YeniIsSatiri = {
   sembol: string;
   tarih: string;
@@ -181,7 +186,9 @@ export default function YeniIsAnlasmalariPage() {
         <p className="mb-8 max-w-3xl text-base text-zinc-600">
           Yeni İş Anlaşmalası Yapan Şirketler
         </p>
-
+<div className="mb-8 text-sm font-semibold text-zinc-700">
+  Güncelleme Tarihi: {guncellemeTarihi}
+</div>
         <section className="mb-8">
           <ReklamAlani variant="yatay" />
         </section>

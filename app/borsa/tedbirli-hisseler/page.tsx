@@ -2,7 +2,12 @@ import fs from "fs";
 import path from "path";
 import Link from "next/link";
 import * as XLSX from "xlsx";
-
+const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
+  timeZone: "Europe/Istanbul",
+  day: "2-digit",
+  month: "2-digit",
+  year: "numeric",
+}).format(new Date());
 type TedbirRow = {
   sembol: string;
   fiyat: number | null;
@@ -188,7 +193,9 @@ export default function TedbirliHisselerPage() {
         <p className="mb-6 text-base text-zinc-600">
           Tedbirli Hisseleri Bu Sayfadan Takip Edebelirsiniz.
         </p>
-
+<div className="mb-8 text-sm font-semibold text-zinc-700">
+  Güncelleme Tarihi: {guncellemeTarihi}
+</div>
         <section className="mb-8">
           <ReklamAlani variant="yatay" />
         </section>
