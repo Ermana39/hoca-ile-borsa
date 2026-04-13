@@ -45,7 +45,11 @@ function sayiCevir(deger: unknown) {
   if (typeof deger === "number") return deger;
   if (deger === null || deger === undefined || deger === "") return 0;
 
-  const metin = String(deger).trim().replace(/\s/g, "").replace(/\./g, "").replace(",", ".");
+  const metin = String(deger)
+    .trim()
+    .replace(/\s/g, "")
+    .replace(/\./g, "")
+    .replace(",", ".");
   const sayi = Number(metin);
   return Number.isNaN(sayi) ? 0 : sayi;
 }
@@ -133,14 +137,16 @@ function excelOku() {
 }
 
 function aliciListesi(veri: ExcelSatiri[]): ListeSatiri[] {
-  const liste = veri
-    .filter((item) => item.net > 0)
+  const pozitifler = veri.filter((item) => item.net > 0);
+  const toplamPozitifNet = pozitifler.reduce((sum, item) => sum + item.net, 0);
+
+  const liste = pozitifler
     .sort((a, b) => b.net - a.net)
     .slice(0, 5)
     .map((item) => ({
       kurum: item.kurum,
       lot: formatSayi(item.net, 0),
-      yuzde: formatYuzde(item.yuzde),
+      yuzde: formatYuzde(toplamPozitifNet > 0 ? (item.net / toplamPozitifNet) * 100 : 0),
       maliyet: formatSayi(item.maliyet, 3),
       sagDeger: formatSayi(item.toplam, 0),
     }));
@@ -149,14 +155,20 @@ function aliciListesi(veri: ExcelSatiri[]): ListeSatiri[] {
 }
 
 function saticiListesi(veri: ExcelSatiri[]): ListeSatiri[] {
-  const liste = veri
-    .filter((item) => item.net < 0)
+  const negatifler = veri.filter((item) => item.net < 0);
+  const toplamNegatifNet = Math.abs(
+    negatifler.reduce((sum, item) => sum + item.net, 0)
+  );
+
+  const liste = negatifler
     .sort((a, b) => a.net - b.net)
     .slice(0, 5)
     .map((item) => ({
       kurum: item.kurum,
       lot: formatSayi(Math.abs(item.net), 0),
-      yuzde: formatYuzde(item.yuzde),
+      yuzde: formatYuzde(
+        toplamNegatifNet > 0 ? (Math.abs(item.net) / toplamNegatifNet) * 100 : 0
+      ),
       maliyet: formatSayi(item.maliyet, 3),
       sagDeger: formatSayi(item.toplam, 0),
     }));
@@ -165,13 +177,15 @@ function saticiListesi(veri: ExcelSatiri[]): ListeSatiri[] {
 }
 
 function hacimListesi(veri: ExcelSatiri[]): ListeSatiri[] {
-  const liste = veri
+  const toplamIslemLotu = veri.reduce((sum, item) => sum + item.toplam, 0);
+
+  const liste = [...veri]
     .sort((a, b) => b.toplam - a.toplam)
     .slice(0, 5)
     .map((item) => ({
       kurum: item.kurum,
       lot: formatSayi(item.toplam, 0),
-      yuzde: formatYuzde(item.yuzde),
+      yuzde: formatYuzde(toplamIslemLotu > 0 ? (item.toplam / toplamIslemLotu) * 100 : 0),
       maliyet: formatSayi(item.maliyet, 3),
       sagDeger: formatSayi(item.net, 0),
     }));
