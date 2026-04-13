@@ -156,7 +156,9 @@ function KurumKutusu({
       <div className="overflow-hidden rounded-xl border border-zinc-200 bg-white">
         <div className="grid grid-cols-3 border-b border-zinc-200 bg-zinc-100 px-4 py-3 text-sm font-bold text-zinc-700">
           <div>Kurum</div>
-          <div className="text-right">Net Hacim</div>
+          <div className="text-right">
+            {baslik === "En Çok Hacim Yapanlar" ? "Toplam Hacim" : "Net Hacim"}
+          </div>
           <div className="text-right">Yüzde</div>
         </div>
 
@@ -181,13 +183,8 @@ function KurumKutusu({
   );
 }
 
-function OnemKutulari({ tip }: { tip: "sari" | "kirmizi" | "turuncu" }) {
-  const renkler =
-    tip === "kirmizi"
-      ? ["bg-red-500", "bg-red-500", "bg-red-500"]
-      : tip === "turuncu"
-        ? ["bg-orange-500", "bg-orange-500", "bg-zinc-300"]
-        : ["bg-yellow-400", "bg-yellow-400", "bg-zinc-300"];
+function OnemKutulari({ tip }: { tip: "kirmizi" }) {
+  const renkler = ["bg-red-500", "bg-red-500", "bg-red-500"];
 
   return (
     <div className="flex items-center gap-1">
@@ -213,7 +210,6 @@ function TakvimSatiri({
   saat,
   ulke,
   gosterge,
-  onem,
   aciklanan,
   beklenti,
   onceki,
@@ -221,7 +217,6 @@ function TakvimSatiri({
   saat: string;
   ulke: string;
   gosterge: string;
-  onem: "sari" | "kirmizi" | "turuncu";
   aciklanan: string;
   beklenti: string;
   onceki: string;
@@ -232,7 +227,7 @@ function TakvimSatiri({
       <div className="font-semibold text-zinc-900">{ulke}</div>
       <div className="font-semibold text-zinc-900">{gosterge}</div>
       <div>
-        <OnemKutulari tip={onem} />
+        <OnemKutulari tip="kirmizi" />
       </div>
       <div className="text-center font-semibold text-zinc-700">{aciklanan}</div>
       <div className="text-center font-semibold text-zinc-700">{beklenti}</div>
@@ -333,7 +328,6 @@ export default function GunlukBorsaOzetiPage() {
                   saat="11:00"
                   ulke="TR"
                   gosterge="Merkezi Yönetim Bütçe Giderleri (aylık, mln tl)"
-                  onem="kirmizi"
                   aciklanan="-"
                   beklenti="-"
                   onceki="1.329.226"
@@ -342,7 +336,6 @@ export default function GunlukBorsaOzetiPage() {
                   saat="11:00"
                   ulke="TR"
                   gosterge="Merkezi Yönetim Gelirleri (aylık, mln tl)"
-                  onem="kirmizi"
                   aciklanan="-"
                   beklenti="-"
                   onceki="1.353.593"
@@ -351,7 +344,6 @@ export default function GunlukBorsaOzetiPage() {
                   saat="11:00"
                   ulke="TR"
                   gosterge="Merkezi Yönetim Bütçe Dengesi (aylık, mln tl)"
-                  onem="kirmizi"
                   aciklanan="-"
                   beklenti="-"
                   onceki="24.366"
@@ -360,68 +352,9 @@ export default function GunlukBorsaOzetiPage() {
                   saat="11:00"
                   ulke="TR"
                   gosterge="Merkezi Yönetim Bütçe Faiz Dışı Dengesi (aylık, milyon TL)"
-                  onem="kirmizi"
                   aciklanan="-"
                   beklenti="-"
                   onceki="208.062"
-                />
-
-                <TakvimTarihSatiri tarih="16.04.2026" />
-                <TakvimSatiri
-                  saat="10:00"
-                  ulke="TR"
-                  gosterge="Trafiğe Kaydedilen Motorlu Taşıtlar (adet)"
-                  onem="sari"
-                  aciklanan="-"
-                  beklenti="-"
-                  onceki="121.791"
-                />
-                <TakvimSatiri
-                  saat="10:00"
-                  ulke="TR"
-                  gosterge="Türkiye Konut Fiyat Endeksi (%) yıllık"
-                  onem="turuncu"
-                  aciklanan="-"
-                  beklenti="-"
-                  onceki="26.35%"
-                />
-
-                <TakvimTarihSatiri tarih="17.04.2026" />
-                <TakvimSatiri
-                  saat="10:00"
-                  ulke="TR"
-                  gosterge="Yeni Kurulan Şirket Sayısı (adet)"
-                  onem="sari"
-                  aciklanan="-"
-                  beklenti="-"
-                  onceki="9.432"
-                />
-                <TakvimSatiri
-                  saat="10:00"
-                  ulke="TR"
-                  gosterge="Kapanan Şirket Sayısı (adet)"
-                  onem="sari"
-                  aciklanan="-"
-                  beklenti="-"
-                  onceki="1.621"
-                />
-                <TakvimSatiri
-                  saat="10:00"
-                  ulke="TR"
-                  gosterge="Konut Satışları"
-                  onem="turuncu"
-                  aciklanan="-"
-                  beklenti="-"
-                  onceki="124.549"
-                />
-                <TakvimSatiri
-                  saat="23:00"
-                  ulke="TR"
-                  gosterge="Türkiye'nin Uzun Vadeli Döviz Cinsi Kredi Notu (Standard & Poor's)"
-                  onem="kirmizi"
-                  aciklanan="-"
-                  beklenti="-"
-                  onceki="BB- durağan"
                 />
               </div>
             </div>

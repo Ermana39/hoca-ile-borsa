@@ -13,37 +13,51 @@ type PivotRow = {
   direnc3: number;
 };
 
+const bist100Pivot = {
+  sembol: "BIST100",
+  durum: "Pivot değerinin üstünde seyrediyor.",
+  fark: 0.42,
+  son: 14058.51,
+  pivot: 14000.16,
+  destek1: 13901.12,
+  destek2: 13743.73,
+  destek3: 13644.69,
+  direnc1: 14157.55,
+  direnc2: 14256.59,
+  direnc3: 14413.98,
+};
+
 const pivotVerileri: PivotRow[] = [
-  { sembol: "AEFES", fark: 4.76, son: 17.66, pivot: 16.857, destek1: 16.313, destek2: 16.017, destek3: 15.473, direnc1: 17.153, direnc2: 17.697, direnc3: 17.993 },
-  { sembol: "AKBNK", fark: 9.6, son: 76.15, pivot: 69.483, destek1: 68.267, destek2: 66.067, destek3: 64.85, direnc1: 70.467, direnc2: 71.683, direnc3: 72.667 },
-  { sembol: "ASELS", fark: 7.03, son: 365.25, pivot: 341.25, destek1: 337.75, destek2: 333.5, destek3: 330, direnc1: 345.5, direnc2: 349, direnc3: 353.25 },
-  { sembol: "ASTOR", fark: 1.66, son: 209.8, pivot: 206.367, destek1: 201.333, destek2: 197.967, destek3: 192.933, direnc1: 209.733, direnc2: 214.767, direnc3: 218.133 },
-  { sembol: "BIMAS", fark: 7.07, son: 737.5, pivot: 688.833, destek1: 680.167, destek2: 674.833, destek3: 666.167, direnc1: 694.167, direnc2: 702.833, direnc3: 708.167 },
-  { sembol: "DSTKF", fark: 1.61, son: 2000, pivot: 1968.333, destek1: 1949.667, destek2: 1938.333, destek3: 1919.667, direnc1: 1979.667, direnc2: 1998.333, direnc3: 2009.667 },
-  { sembol: "EKGYO", fark: 7.15, son: 20.82, pivot: 19.43, destek1: 18.96, destek2: 18.65, destek3: 18.18, direnc1: 19.74, direnc2: 20.21, direnc3: 20.52 },
-  { sembol: "ENKAI", fark: 4.52, son: 96, pivot: 91.849, destek1: 89.715, destek2: 88.33, destek3: 86.196, direnc1: 93.234, direnc2: 95.368, direnc3: 96.753 },
-  { sembol: "EREGL", fark: 2.07, son: 29.9, pivot: 29.293, destek1: 28.387, destek2: 27.933, destek3: 27.027, direnc1: 29.747, direnc2: 30.653, direnc3: 31.107 },
-  { sembol: "FROTO", fark: 4.88, son: 102.7, pivot: 97.917, destek1: 95.333, destek2: 93.967, destek3: 91.383, direnc1: 99.283, direnc2: 101.867, direnc3: 103.233 },
-  { sembol: "GARAN", fark: 8.73, son: 139.5, pivot: 128.3, destek1: 125.6, destek2: 124.1, destek3: 121.4, direnc1: 129.8, direnc2: 132.5, direnc3: 134 },
-  { sembol: "GUBRF", fark: 2.88, son: 491, pivot: 477.25, destek1: 468.75, destek2: 463.5, destek3: 455, direnc1: 482.5, direnc2: 491, direnc3: 496.25 },
-  { sembol: "ISCTR", fark: 9, son: 14.37, pivot: 13.183, destek1: 12.957, destek2: 12.813, destek3: 12.587, direnc1: 13.327, direnc2: 13.553, direnc3: 13.697 },
-  { sembol: "KCHOL", fark: 6.79, son: 204.9, pivot: 191.867, destek1: 187.733, destek2: 185.367, destek3: 181.233, direnc1: 194.233, direnc2: 198.367, direnc3: 200.733 },
-  { sembol: "KRDMD", fark: 2.31, son: 34.54, pivot: 33.76, destek1: 33.06, destek2: 32.68, destek3: 31.98, direnc1: 34.14, direnc2: 34.84, direnc3: 35.22 },
-  { sembol: "MGROS", fark: 6.22, son: 637.5, pivot: 600.167, destek1: 592.833, destek2: 585.667, destek3: 578.333, direnc1: 607.333, direnc2: 614.667, direnc3: 621.833 },
-  { sembol: "PETKM", fark: -5.39, son: 20.58, pivot: 21.753, destek1: 21.387, destek2: 20.853, destek3: 20.487, direnc1: 22.287, direnc2: 22.653, direnc3: 23.187 },
-  { sembol: "PGSUS", fark: 7.78, son: 189.8, pivot: 176.1, destek1: 173.1, destek2: 171.2, destek3: 168.2, direnc1: 178, direnc2: 181, direnc3: 182.9 },
-  { sembol: "SAHOL", fark: 8.36, son: 97.9, pivot: 90.35, destek1: 87.75, destek2: 86.2, destek3: 83.6, direnc1: 91.9, direnc2: 94.5, direnc3: 96.05 },
-  { sembol: "SASA", fark: 3.14, son: 2.53, pivot: 2.453, destek1: 2.387, destek2: 2.343, destek3: 2.277, direnc1: 2.497, direnc2: 2.563, direnc3: 2.607 },
-  { sembol: "SISE", fark: 7.16, son: 47.46, pivot: 44.287, destek1: 43.033, destek2: 42.267, destek3: 41.013, direnc1: 45.053, direnc2: 46.307, direnc3: 47.073 },
-  { sembol: "TAVHL", fark: 8.61, son: 343.75, pivot: 316.5, destek1: 308, destek2: 303.25, destek3: 294.75, direnc1: 321.25, direnc2: 329.75, direnc3: 334.5 },
-  { sembol: "TCELL", fark: 6.38, son: 112.9, pivot: 106.133, destek1: 103.267, destek2: 101.633, destek3: 98.767, direnc1: 107.767, direnc2: 110.633, direnc3: 112.267 },
-  { sembol: "THYAO", fark: 8.81, son: 320.25, pivot: 294.333, destek1: 289.417, destek2: 286.833, destek3: 281.917, direnc1: 296.917, direnc2: 301.833, direnc3: 304.417 },
-  { sembol: "TOASO", fark: 6.78, son: 274.25, pivot: 256.833, destek1: 247.167, destek2: 242.333, destek3: 232.667, direnc1: 261.667, direnc2: 271.333, direnc3: 276.167 },
-  { sembol: "TRALT", fark: 4.55, son: 44.62, pivot: 42.68, destek1: 40.72, destek2: 39.54, destek3: 37.58, direnc1: 43.86, direnc2: 45.82, direnc3: 47 },
-  { sembol: "TTKOM", fark: 7, son: 61.9, pivot: 57.85, destek1: 56.55, destek2: 55.9, destek3: 54.6, direnc1: 58.5, direnc2: 59.8, direnc3: 60.45 },
-  { sembol: "TUPRS", fark: -4.02, son: 249.8, pivot: 260.25, destek1: 256, destek2: 252, destek3: 247.75, direnc1: 264.25, direnc2: 268.5, direnc3: 272.5 },
-  { sembol: "VAKBN", fark: 9.11, son: 34, pivot: 31.16, destek1: 30.56, destek2: 30.2, destek3: 29.6, direnc1: 31.52, direnc2: 32.12, direnc3: 32.48 },
-  { sembol: "YKBNK", fark: 9.07, son: 37.76, pivot: 34.62, destek1: 33.9, destek2: 33.46, destek3: 32.74, direnc1: 35.06, direnc2: 35.78, direnc3: 36.22 },
+  { sembol: "AEFES", fark: -0.81, son: 18.44, pivot: 18.59, destek1: 18.09, destek2: 17.74, destek3: 17.24, direnc1: 18.94, direnc2: 19.44, direnc3: 19.79 },
+  { sembol: "AKBNK", fark: 0.78, son: 77.4, pivot: 76.8, destek1: 75.9, destek2: 74.4, destek3: 73.5, direnc1: 78.3, direnc2: 79.2, direnc3: 80.7 },
+  { sembol: "ASELS", fark: 1.05, son: 415.25, pivot: 410.917, destek1: 392.833, destek2: 370.417, destek3: 352.333, direnc1: 433.333, direnc2: 451.417, direnc3: 473.833 },
+  { sembol: "ASTOR", fark: -1.24, son: 199.2, pivot: 201.7, destek1: 195.5, destek2: 191.8, destek3: 185.6, direnc1: 205.4, direnc2: 211.6, direnc3: 215.3 },
+  { sembol: "BIMAS", fark: 0.63, son: 744.0, pivot: 739.333, destek1: 734.667, destek2: 725.333, destek3: 720.667, direnc1: 748.667, direnc2: 753.333, direnc3: 762.667 },
+  { sembol: "DSTKF", fark: -1.94, son: 2077.0, pivot: 2118.0, destek1: 2036.0, destek2: 1995.0, destek3: 1913.0, direnc1: 2159.0, direnc2: 2241.0, direnc3: 2282.0 },
+  { sembol: "EKGYO", fark: 0.1, son: 21.0, pivot: 20.98, destek1: 20.78, destek2: 20.56, destek3: 20.36, direnc1: 21.2, direnc2: 21.4, direnc3: 21.62 },
+  { sembol: "ENKAI", fark: 0.05, son: 100.3, pivot: 100.25, destek1: 98.8, destek2: 97.3, destek3: 95.85, direnc1: 101.75, direnc2: 103.2, direnc3: 104.7 },
+  { sembol: "EREGL", fark: 1.14, son: 32.0, pivot: 31.64, destek1: 31.06, destek2: 30.12, destek3: 29.54, direnc1: 32.58, direnc2: 33.16, direnc3: 34.1 },
+  { sembol: "FROTO", fark: -0.22, son: 104.9, pivot: 105.133, destek1: 103.967, destek2: 103.033, destek3: 101.867, direnc1: 106.067, direnc2: 107.233, direnc3: 108.167 },
+  { sembol: "GARAN", fark: 0.58, son: 138.7, pivot: 137.9, destek1: 136.7, destek2: 134.7, destek3: 133.5, direnc1: 139.9, direnc2: 141.1, direnc3: 143.1 },
+  { sembol: "GUBRF", fark: -0.21, son: 483.0, pivot: 484.0, destek1: 477.25, destek2: 471.5, destek3: 464.75, direnc1: 489.75, direnc2: 496.5, direnc3: 502.25 },
+  { sembol: "ISCTR", fark: 0.85, son: 14.61, pivot: 14.487, destek1: 14.363, destek2: 14.117, destek3: 13.993, direnc1: 14.733, direnc2: 14.857, direnc3: 15.103 },
+  { sembol: "KCHOL", fark: 0.69, son: 204.1, pivot: 202.7, destek1: 200.4, destek2: 196.7, destek3: 194.4, direnc1: 206.4, direnc2: 208.7, direnc3: 212.4 },
+  { sembol: "KRDMD", fark: -0.11, son: 36.1, pivot: 36.14, destek1: 35.64, destek2: 35.18, destek3: 34.68, direnc1: 36.6, direnc2: 37.1, direnc3: 37.56 },
+  { sembol: "MGROS", fark: -0.05, son: 641.0, pivot: 641.333, destek1: 633.667, destek2: 626.333, destek3: 618.667, direnc1: 648.667, direnc2: 656.333, direnc3: 663.667 },
+  { sembol: "PETKM", fark: 0.21, son: 22.2, pivot: 22.153, destek1: 21.827, destek2: 21.453, destek3: 21.127, direnc1: 22.527, direnc2: 22.853, direnc3: 23.227 },
+  { sembol: "PGSUS", fark: -2.2, son: 183.7, pivot: 187.833, destek1: 187.067, destek2: 185.733, destek3: 184.967, direnc1: 189.167, direnc2: 189.933, direnc3: 191.267 },
+  { sembol: "SAHOL", fark: 0.12, son: 99.1, pivot: 98.983, destek1: 97.967, destek2: 96.833, destek3: 95.817, direnc1: 100.117, direnc2: 101.133, direnc3: 102.267 },
+  { sembol: "SASA", fark: -0.5, son: 2.6, pivot: 2.613, destek1: 2.557, destek2: 2.513, destek3: 2.457, direnc1: 2.657, direnc2: 2.713, direnc3: 2.757 },
+  { sembol: "SISE", fark: 0.6, son: 47.76, pivot: 47.473, destek1: 46.827, destek2: 45.893, destek3: 45.247, direnc1: 48.407, direnc2: 49.053, direnc3: 49.987 },
+  { sembol: "TAVHL", fark: -0.86, son: 328.5, pivot: 331.333, destek1: 323.417, destek2: 318.333, destek3: 310.417, direnc1: 336.417, direnc2: 344.333, direnc3: 349.417 },
+  { sembol: "TCELL", fark: 0.87, son: 115.7, pivot: 114.7, destek1: 113.7, destek2: 111.7, destek3: 110.7, direnc1: 116.7, direnc2: 117.7, direnc3: 119.7 },
+  { sembol: "THYAO", fark: 0.05, son: 316.75, pivot: 316.583, destek1: 314.417, destek2: 312.083, destek3: 309.917, direnc1: 318.917, direnc2: 321.083, direnc3: 323.417 },
+  { sembol: "TOASO", fark: 0.68, son: 283.75, pivot: 281.833, destek1: 279.667, destek2: 275.583, destek3: 273.417, direnc1: 285.917, direnc2: 288.083, direnc3: 292.167 },
+  { sembol: "TRALT", fark: -0.27, son: 43.68, pivot: 43.8, destek1: 43.3, destek2: 42.92, destek3: 42.42, direnc1: 44.18, direnc2: 44.68, direnc3: 45.06 },
+  { sembol: "TTKOM", fark: 0.62, son: 62.35, pivot: 61.967, destek1: 61.433, destek2: 60.517, destek3: 59.983, direnc1: 62.883, direnc2: 63.417, direnc3: 64.333 },
+  { sembol: "TUPRS", fark: 0.0, son: 264.0, pivot: 264.0, destek1: 259.5, destek2: 255.0, destek3: 250.5, direnc1: 268.5, direnc2: 273.0, direnc3: 277.5 },
+  { sembol: "VAKBN", fark: 0.68, son: 34.28, pivot: 34.047, destek1: 33.793, destek2: 33.307, destek3: 33.053, direnc1: 34.533, direnc2: 34.787, direnc3: 35.273 },
+  { sembol: "YKBNK", fark: 0.63, son: 38.06, pivot: 37.82, destek1: 37.4, destek2: 36.74, destek3: 36.32, direnc1: 38.48, direnc2: 38.9, direnc3: 39.56 },
 ];
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
@@ -71,16 +85,13 @@ function formatNumber(value: number) {
 }
 
 function getSatirRenk(row: PivotRow) {
+  if (row.son < row.destek3) return "bg-red-200";
+  if (row.son === row.pivot) return "bg-zinc-200";
   return row.son >= row.pivot ? "bg-green-100" : "bg-red-100";
 }
 
 export default function PivotAnaliziPage() {
-  const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
-    timeZone: "Europe/Istanbul",
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-  }).format(new Date());
+  const guncellemeTarihi = "15.04.2026";
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -113,6 +124,51 @@ export default function PivotAnaliziPage() {
           <ReklamAlani variant="yatay" />
         </section>
 
+        <section className="mb-8 overflow-hidden rounded-2xl border border-sky-200 bg-sky-50 shadow-sm">
+          <div
+            className={`px-4 py-3 text-center text-sm font-bold ${
+              bist100Pivot.son >= bist100Pivot.pivot
+                ? "bg-green-600 text-white"
+                : "bg-red-600 text-white"
+            }`}
+          >
+            {bist100Pivot.durum}
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="min-w-[1200px] w-full border-collapse text-sm text-zinc-900">
+              <thead className="bg-sky-100 text-zinc-800">
+                <tr>
+                  <th className="border border-sky-200 px-3 py-2 text-left">Sembol</th>
+                  <th className="border border-sky-200 px-3 py-2 text-left">Pivota Göre Fark %</th>
+                  <th className="border border-sky-200 px-3 py-2 text-left">Son</th>
+                  <th className="border border-sky-200 px-3 py-2 text-left">Pivot</th>
+                  <th className="border border-sky-200 px-3 py-2 text-left">Destek 1</th>
+                  <th className="border border-sky-200 px-3 py-2 text-left">Destek 2</th>
+                  <th className="border border-sky-200 px-3 py-2 text-left">Destek 3</th>
+                  <th className="border border-sky-200 px-3 py-2 text-left">Direnç 1</th>
+                  <th className="border border-sky-200 px-3 py-2 text-left">Direnç 2</th>
+                  <th className="border border-sky-200 px-3 py-2 text-left">Direnç 3</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="bg-white">
+                  <td className="border border-sky-200 px-3 py-2 font-semibold">{bist100Pivot.sembol}</td>
+                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.fark)}</td>
+                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.son)}</td>
+                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.pivot)}</td>
+                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.destek1)}</td>
+                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.destek2)}</td>
+                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.destek3)}</td>
+                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.direnc1)}</td>
+                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.direnc2)}</td>
+                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.direnc3)}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+
         <section className="overflow-hidden rounded-2xl border border-sky-200 bg-sky-50 shadow-sm">
           <div className="overflow-x-auto">
             <table className="min-w-[1400px] w-full border-collapse text-sm text-zinc-900">
@@ -133,10 +189,7 @@ export default function PivotAnaliziPage() {
 
               <tbody>
                 {pivotVerileri.map((row) => (
-                  <tr
-                    key={row.sembol}
-                    className={getSatirRenk(row)}
-                  >
+                  <tr key={row.sembol} className={getSatirRenk(row)}>
                     <td className="border border-sky-200 px-3 py-2 font-semibold">
                       {row.sembol}
                     </td>
