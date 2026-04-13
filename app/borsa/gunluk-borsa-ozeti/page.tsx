@@ -280,16 +280,17 @@ export default function GunlukBorsaOzetiPage() {
 
         <div className="mb-6 grid gap-4 xl:grid-cols-[1fr_2.5fr]">
           <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
-            <div className="grid min-h-[220px] grid-rows-3 text-center">
-              <div className="flex flex-col items-center justify-center border-b border-zinc-200">
-                <div className="mb-3 text-sm font-semibold text-zinc-600">XU100</div>
-                <div className="text-4xl font-bold text-zinc-900">{bistVeri.kapanis}</div>
+            <div className="grid min-h-[320px] grid-rows-3 text-center">
+              <div className="flex items-center justify-center border-b border-zinc-200">
+                <div>
+                  <div className="text-2xl font-semibold text-zinc-700">XU100</div>
+                  <div className="mt-3 text-4xl font-bold text-zinc-900">{bistVeri.kapanis}</div>
+                </div>
               </div>
 
-              <div className="flex flex-col items-center justify-center border-b border-zinc-200">
-                <div className="mb-3 text-sm font-semibold text-zinc-600">Günlük Değişim</div>
+              <div className="flex items-center justify-center border-b border-zinc-200">
                 <div
-                  className={`text-3xl font-bold ${
+                  className={`text-4xl font-semibold ${
                     pozitif ? "text-green-700" : "text-red-700"
                   }`}
                 >
@@ -298,7 +299,7 @@ export default function GunlukBorsaOzetiPage() {
               </div>
 
               <div className="flex items-center justify-center">
-                <div className="text-xl font-semibold text-zinc-700">{bistVeri.tarih}</div>
+                <div className="text-2xl font-semibold text-zinc-700">{bistVeri.tarih}</div>
               </div>
             </div>
           </div>
