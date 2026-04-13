@@ -1,7 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import TrackedLink from "@/components/tracked-link";
-
+const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
+  timeZone: "Europe/Istanbul",
+  day: "2-digit",
+  month: "2-digit",
+  year: "numeric",
+}).format(new Date());
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
     variant === "icerik"
@@ -34,7 +39,9 @@ export default function FonGetiriLandingPage() {
 
         <h1 className="mb-2 text-3xl font-bold text-zinc-900">Fon Getiri Analizi</h1>
         <p className="mb-8 max-w-3xl text-base text-zinc-600">Getiri analizini fon tipine göre ayırarak inceleyin.</p>
-
+<div className="mb-8 text-sm font-semibold text-zinc-700">
+  Güncelleme Tarihi: {guncellemeTarihi}
+</div>
         <section className="mb-8">
           <ReklamAlani variant="yatay" />
         </section>
