@@ -3,11 +3,11 @@ import Link from "next/link";
 const analizler = [
   {
     baslik: "AEFES Grafik Analiz",
-    href: "/analiz/aefes",
+    href: "/borsa/grafik-analiz/aefes",
   },
   {
-    baslik: "AKBNK Teknik Analiz",
-    href: "/analiz/akbnk",
+    baslik: "AKBNK Direnç Hattına Ulaştı",
+    href: "/borsa/grafik-analiz/akbnk",
   },
 ];
 
@@ -24,7 +24,7 @@ export default function GrafikAnalizPage() {
           </Link>
 
           <Link
-            href="/"
+            href="/borsa"
             className="rounded-xl border border-gray-300 bg-white px-5 py-3 text-sm font-semibold transition hover:bg-gray-50"
           >
             Geri
@@ -39,7 +39,7 @@ export default function GrafikAnalizPage() {
               <Link
                 key={analiz.href}
                 href={analiz.href}
-                className="block rounded-2xl border border-gray-300 bg-white px-4 py-5 text-xl font-semibold text-black transition hover:bg-gray-50"
+                className="block rounded-2xl border border-sky-200 bg-sky-50 px-4 py-5 text-xl font-semibold text-black transition hover:bg-sky-100"
               >
                 {analiz.baslik}
               </Link>
