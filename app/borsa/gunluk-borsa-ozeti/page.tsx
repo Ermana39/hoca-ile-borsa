@@ -1,81 +1,74 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const bugunTarihi = new Intl.DateTimeFormat("tr-TR", {
-  timeZone: "Europe/Istanbul",
-  day: "2-digit",
-  month: "2-digit",
-  year: "numeric",
-}).format(new Date());
-
 const bistVeri = {
-  tarih: bugunTarihi,
-  kapanis: "14073.79",
-  degisimYuzde: 2.81,
+  tarih: "15.04.2026",
+  kapanis: "14058.51",
+  degisimYuzde: -0.11,
 };
 
 const enCokYukselenler = [
-  { kod: "KONTR", fark: "+10,00%" },
-  { kod: "AAGYO", fark: "+10,00%" },
-  { kod: "DMRGD", fark: "+10,00%" },
-  { kod: "ATATR", fark: "+10,00%" },
-  { kod: "ALKLC", fark: "+9,99%" },
+  { kod: "SMRVA", fark: "+10,00%" },
+  { kod: "ANELE", fark: "+9,98%" },
+  { kod: "KTSKR", fark: "+9,98%" },
+  { kod: "SURGY", fark: "+9,98%" },
+  { kod: "ULUSE", fark: "+9,96%" },
 ];
 
 const enCokDusenler = [
-  { kod: "BLCYT", fark: "-9,97%" },
-  { kod: "RUBNS", fark: "-9,96%" },
-  { kod: "ZERGY", fark: "-9,95%" },
-  { kod: "EFOR", fark: "-9,95%" },
-  { kod: "MEKAG", fark: "-8,69%" },
+  { kod: "HPARTF2", fark: "-9,99%" },
+  { kod: "BLCYT", fark: "-9,98%" },
+  { kod: "SVGYO", fark: "-9,97%" },
+  { kod: "MEKAG", fark: "-9,85%" },
+  { kod: "AAGYO", fark: "-8,93%" },
 ];
 
 const enHacimliler = [
-  { kod: "ASELS", hacim: "13,318 Mr TL" },
-  { kod: "THYAO", hacim: "12,800 Mr TL" },
-  { kod: "SASA", hacim: "11,692 Mr TL" },
-  { kod: "ISCTR", hacim: "9,910 Mr TL" },
-  { kod: "AKBNK", hacim: "9,414 Mr TL" },
+  { kod: "ASELS", hacim: "31.936.965.237" },
+  { kod: "THYAO", hacim: "18.950.723.789" },
+  { kod: "TUPRS", hacim: "15.121.480.781" },
+  { kod: "AKBNK", hacim: "9.827.155.058" },
+  { kod: "SASA", hacim: "9.392.377.926" },
 ];
 
 const paraGirisi = [
-  { kod: "EREGL", tutar: "+345 Mn TL" },
-  { kod: "ASELS", tutar: "+271 Mn TL" },
-  { kod: "SASA", tutar: "+255 Mn TL" },
-  { kod: "AKBNK", tutar: "+197 Mn TL" },
-  { kod: "TERA", tutar: "+142 Mn TL" },
+  { kod: "TUPRS", tutar: "+251.894.747" },
+  { kod: "EREGL", tutar: "+149.361.752" },
+  { kod: "ISCTR", tutar: "+90.443.241" },
+  { kod: "AKBNK", tutar: "+75.463.891" },
+  { kod: "ASELS", tutar: "+73.391.524" },
 ];
 
 const paraCikisi = [
-  { kod: "KRDMD", tutar: "-123 Mn TL" },
-  { kod: "TEHOL", tutar: "-64 Mn TL" },
-  { kod: "TKFEN", tutar: "-48 Mn TL" },
-  { kod: "ASTOR", tutar: "-42 Mn TL" },
-  { kod: "EFOR", tutar: "-42 Mn TL" },
+  { kod: "THYAO", tutar: "-151.715.228" },
+  { kod: "ASTOR", tutar: "-143.902.331" },
+  { kod: "MIATK", tutar: "-103.463.148" },
+  { kod: "AAGYO", tutar: "-85.368.898" },
+  { kod: "SASA", tutar: "-67.367.882" },
 ];
 
 const enCokAlisYapanKurumlar = [
-  { kurum: "BANK OF AMERICA", hacim: "5,372,995,622", oran: "%44,41" },
-  { kurum: "GLOBAL", hacim: "1,239,983,739", oran: "%10,25" },
-  { kurum: "HSBC", hacim: "1,208,765,215", oran: "%9,99" },
-  { kurum: "TERA", hacim: "1,193,255,235", oran: "%9,86" },
-  { kurum: "AK", hacim: "917,291,190", oran: "%7,58" },
+  { kurum: "DENIZ", hacim: "1.863.995.767", oran: "%21,41" },
+  { kurum: "TERA", hacim: "1.444.363.490", oran: "%16,59" },
+  { kurum: "PUSULA YAT.", hacim: "1.179.609.932", oran: "%13,55" },
+  { kurum: "IS", hacim: "617.424.686", oran: "%7,09" },
+  { kurum: "MIDAS", hacim: "552.826.377", oran: "%6,35" },
 ];
 
 const enCokSatisYapanKurumlar = [
-  { kurum: "GARANTI BBVA", hacim: "-1,731,110,388", oran: "%14,31" },
-  { kurum: "IS", hacim: "-1,578,262,320", oran: "%13,05" },
-  { kurum: "INFO", hacim: "-1,481,676,894", oran: "%12,25" },
-  { kurum: "TEB", hacim: "-1,155,547,470", oran: "%9,55" },
-  { kurum: "ZIRAAT", hacim: "-781,025,475", oran: "%6,46" },
+  { kurum: "HALK", hacim: "-2.013.977.599", oran: "%23,13" },
+  { kurum: "GEDIK", hacim: "-1.128.826.035", oran: "%12,97" },
+  { kurum: "ZIRAAT", hacim: "-990.662.780", oran: "%11,38" },
+  { kurum: "BANK OF AMERICA", hacim: "-885.614.988", oran: "%10,17" },
+  { kurum: "A1 CAPITAL", hacim: "-814.825.195", oran: "%9,36" },
 ];
 
 const enCokHacimYapanKurumlar = [
-  { kurum: "YAPI KREDI", hacim: "76,463,571,458", oran: "%13,60" },
-  { kurum: "BANK OF AMERICA", hacim: "74,042,732,118", oran: "%13,17" },
-  { kurum: "IS", hacim: "53,541,655,437", oran: "%9,52" },
-  { kurum: "AK", hacim: "45,606,416,277", oran: "%8,11" },
-  { kurum: "DENIZ", hacim: "23,327,070,339", oran: "%4,15" },
+  { kurum: "YAPI KREDI", hacim: "85.095.285.154", oran: "%13,96" },
+  { kurum: "BANK OF AMERICA", hacim: "80.082.098.354", oran: "%13,14" },
+  { kurum: "IS", hacim: "60.547.631.879", oran: "%9,93" },
+  { kurum: "AK", hacim: "51.410.116.995", oran: "%8,43" },
+  { kurum: "DENIZ", hacim: "23.253.756.368", oran: "%3,81" },
 ];
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
@@ -188,11 +181,13 @@ function KurumKutusu({
   );
 }
 
-function OnemKutulari({ tip }: { tip: "sari" | "kirmizi" }) {
+function OnemKutulari({ tip }: { tip: "sari" | "kirmizi" | "turuncu" }) {
   const renkler =
     tip === "kirmizi"
       ? ["bg-red-500", "bg-red-500", "bg-red-500"]
-      : ["bg-yellow-400", "bg-yellow-400", "bg-zinc-300"];
+      : tip === "turuncu"
+        ? ["bg-orange-500", "bg-orange-500", "bg-zinc-300"]
+        : ["bg-yellow-400", "bg-yellow-400", "bg-zinc-300"];
 
   return (
     <div className="flex items-center gap-1">
@@ -202,6 +197,46 @@ function OnemKutulari({ tip }: { tip: "sari" | "kirmizi" }) {
           className={`h-3.5 w-3.5 rounded-sm border border-zinc-500 ${renk}`}
         />
       ))}
+    </div>
+  );
+}
+
+function TakvimTarihSatiri({ tarih }: { tarih: string }) {
+  return (
+    <div className="border-y border-zinc-200 bg-zinc-100 px-3 py-2 text-center text-sm font-bold text-zinc-800">
+      {tarih}
+    </div>
+  );
+}
+
+function TakvimSatiri({
+  saat,
+  ulke,
+  gosterge,
+  onem,
+  aciklanan,
+  beklenti,
+  onceki,
+}: {
+  saat: string;
+  ulke: string;
+  gosterge: string;
+  onem: "sari" | "kirmizi" | "turuncu";
+  aciklanan: string;
+  beklenti: string;
+  onceki: string;
+}) {
+  return (
+    <div className="grid grid-cols-[70px_55px_minmax(220px,1fr)_70px_95px_95px_95px] items-center border-b border-zinc-100 px-3 py-3 text-sm last:border-b-0">
+      <div className="font-semibold text-zinc-900">{saat}</div>
+      <div className="font-semibold text-zinc-900">{ulke}</div>
+      <div className="font-semibold text-zinc-900">{gosterge}</div>
+      <div>
+        <OnemKutulari tip={onem} />
+      </div>
+      <div className="text-center font-semibold text-zinc-700">{aciklanan}</div>
+      <div className="text-center font-semibold text-zinc-700">{beklenti}</div>
+      <div className="text-center font-semibold text-zinc-700">{onceki}</div>
     </div>
   );
 }
@@ -293,29 +328,101 @@ export default function GunlukBorsaOzetiPage() {
                   <div className="text-center">Önceki</div>
                 </div>
 
-                <div className="grid grid-cols-[70px_55px_minmax(220px,1fr)_70px_95px_95px_95px] items-center border-b border-zinc-100 px-3 py-3 text-sm">
-                  <div className="font-semibold text-zinc-900">10:00</div>
-                  <div className="font-semibold text-zinc-900">TR</div>
-                  <div className="font-semibold text-zinc-900">Toplam Ciro Endeksi (Yıllık %)</div>
-                  <div>
-                    <OnemKutulari tip="sari" />
-                  </div>
-                  <div className="text-center font-semibold text-zinc-700">-</div>
-                  <div className="text-center font-semibold text-zinc-700">-</div>
-                  <div className="text-center font-semibold text-zinc-700">35,8%</div>
-                </div>
+                <TakvimTarihSatiri tarih="15.04.2026" />
+                <TakvimSatiri
+                  saat="11:00"
+                  ulke="TR"
+                  gosterge="Merkezi Yönetim Bütçe Giderleri (aylık, mln tl)"
+                  onem="kirmizi"
+                  aciklanan="-"
+                  beklenti="-"
+                  onceki="1.329.226"
+                />
+                <TakvimSatiri
+                  saat="11:00"
+                  ulke="TR"
+                  gosterge="Merkezi Yönetim Gelirleri (aylık, mln tl)"
+                  onem="kirmizi"
+                  aciklanan="-"
+                  beklenti="-"
+                  onceki="1.353.593"
+                />
+                <TakvimSatiri
+                  saat="11:00"
+                  ulke="TR"
+                  gosterge="Merkezi Yönetim Bütçe Dengesi (aylık, mln tl)"
+                  onem="kirmizi"
+                  aciklanan="-"
+                  beklenti="-"
+                  onceki="24.366"
+                />
+                <TakvimSatiri
+                  saat="11:00"
+                  ulke="TR"
+                  gosterge="Merkezi Yönetim Bütçe Faiz Dışı Dengesi (aylık, milyon TL)"
+                  onem="kirmizi"
+                  aciklanan="-"
+                  beklenti="-"
+                  onceki="208.062"
+                />
 
-                <div className="grid grid-cols-[70px_55px_minmax(220px,1fr)_70px_95px_95px_95px] items-center px-3 py-3 text-sm">
-                  <div className="font-semibold text-zinc-900">10:00</div>
-                  <div className="font-semibold text-zinc-900">TR</div>
-                  <div className="font-semibold text-zinc-900">Cari İşlemler Dengesi (Milyon USD)</div>
-                  <div>
-                    <OnemKutulari tip="kirmizi" />
-                  </div>
-                  <div className="text-center font-semibold text-zinc-700">-</div>
-                  <div className="text-center font-semibold text-zinc-700">-7.350</div>
-                  <div className="text-center font-semibold text-zinc-700">-6.807</div>
-                </div>
+                <TakvimTarihSatiri tarih="16.04.2026" />
+                <TakvimSatiri
+                  saat="10:00"
+                  ulke="TR"
+                  gosterge="Trafiğe Kaydedilen Motorlu Taşıtlar (adet)"
+                  onem="sari"
+                  aciklanan="-"
+                  beklenti="-"
+                  onceki="121.791"
+                />
+                <TakvimSatiri
+                  saat="10:00"
+                  ulke="TR"
+                  gosterge="Türkiye Konut Fiyat Endeksi (%) yıllık"
+                  onem="turuncu"
+                  aciklanan="-"
+                  beklenti="-"
+                  onceki="26.35%"
+                />
+
+                <TakvimTarihSatiri tarih="17.04.2026" />
+                <TakvimSatiri
+                  saat="10:00"
+                  ulke="TR"
+                  gosterge="Yeni Kurulan Şirket Sayısı (adet)"
+                  onem="sari"
+                  aciklanan="-"
+                  beklenti="-"
+                  onceki="9.432"
+                />
+                <TakvimSatiri
+                  saat="10:00"
+                  ulke="TR"
+                  gosterge="Kapanan Şirket Sayısı (adet)"
+                  onem="sari"
+                  aciklanan="-"
+                  beklenti="-"
+                  onceki="1.621"
+                />
+                <TakvimSatiri
+                  saat="10:00"
+                  ulke="TR"
+                  gosterge="Konut Satışları"
+                  onem="turuncu"
+                  aciklanan="-"
+                  beklenti="-"
+                  onceki="124.549"
+                />
+                <TakvimSatiri
+                  saat="23:00"
+                  ulke="TR"
+                  gosterge="Türkiye'nin Uzun Vadeli Döviz Cinsi Kredi Notu (Standard & Poor's)"
+                  onem="kirmizi"
+                  aciklanan="-"
+                  beklenti="-"
+                  onceki="BB- durağan"
+                />
               </div>
             </div>
           </div>
