@@ -66,7 +66,7 @@ export default function Formasyon3Page() {
             <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50">
               <div className="relative aspect-[16/10] w-full">
                 <Image
-                  src="/formasyon-1.png"
+                  src="/formasyon-3.png"
                   alt="EGGUB yükselen bayrak formasyonu görseli"
                   fill
                   className="object-contain"
