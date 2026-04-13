@@ -3,9 +3,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "KRVGD Düşen Genişleyen Takoz Formasyonu | Hoca İle Borsa",
+  title: "BIOEN Düşen Genişleyen Takoz Formasyonu | Hoca İle Borsa",
   description:
-    "KRVGD günlük grafik teknik değerlendirmesi, destek ve direnç seviyeleri.",
+    "BIOEN günlük grafik teknik değerlendirmesi, destek ve direnç seviyeleri.",
   alternates: {
     canonical: "/borsa/formasyonlar/formasyon2",
   },
@@ -66,8 +66,8 @@ export default function Formasyon2Page() {
             <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50">
               <div className="relative aspect-[16/10] w-full">
                 <Image
-                  src="/formasyon-1.png"
-                  alt="KRVGD düşen genişleyen takoz formasyonu görseli"
+                  src="/formasyon2.png"
+                  alt="BIOEN düşen genişleyen takoz formasyonu görseli"
                   fill
                   className="object-contain"
                   priority
@@ -79,9 +79,14 @@ export default function Formasyon2Page() {
           <section className="pt-6">
             <div className="rounded-2xl bg-zinc-50 p-4 md:p-6">
               <p className="whitespace-pre-line text-base leading-8 text-zinc-700 md:text-lg">
-{`#KRVGD
-Günlük grafikte alçalan daralan takoz yapısı dikkat çekiyor.
-Formasyon yapısının yukarı kırılması halinde 23 bölgesi ara direnç, 27,96 seviyesi ise formasyon projeksiyonu açısından izlenebilecek üst bant olarak takip edilebilir. Aşağı yönlü senaryoda ise destek alanlarının korunması önem taşır.”
+                {`#BIOEN
+
+Günlük grafikte düşen genişleyen takoz yapısı dikkat çekiyor.
+
+Formasyon yapısının yukarı kırılması halinde direnç bölgeleri kademeli olarak izlenebilir. Yukarı yönlü hareketin güç kazanması durumunda formasyon projeksiyonu açısından üst bant seviyeleri takip edilebilir.
+
+Aşağı yönlü senaryoda ise destek alanlarının korunması önem taşıyor.
+
 Genel teknik değerlendirmedir.`}
               </p>
             </div>

@@ -79,11 +79,14 @@ export default function Formasyon1Page() {
           <section className="pt-6">
             <div className="rounded-2xl bg-zinc-50 p-4 md:p-6">
               <p className="whitespace-pre-line text-base leading-8 text-zinc-700 md:text-lg">
-{`#KRVGD
-Günlük grafikte daralan baskı sonrası tepki arayışı izleniyor.
-Kısa vadede 3,07 bölgesi ilk önemli direnç,
-üzerinde 3,21 bölgesi gündeme gelebilir.
-Aşağıda 2,87 seviyesi görünüm açısından kritik eşik olarak takip edilebilir.
+                {`#KRVGD
+
+Günlük grafikte düşen genişleyen takoz yapısı dikkat çekiyor.
+
+Formasyon yapısının yukarı kırılması halinde 23,00 bölgesi ara direnç olarak izlenebilir. 27,96 seviyesi ise formasyon projeksiyonu açısından takip edilebilecek üst bant olarak öne çıkıyor.
+
+Aşağı yönlü senaryoda ise destek alanlarının korunması önem taşıyor.
+
 Genel teknik değerlendirmedir.`}
               </p>
             </div>
