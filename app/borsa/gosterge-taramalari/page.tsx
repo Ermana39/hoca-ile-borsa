@@ -93,15 +93,15 @@ export default function GostergeTaramalariPage() {
             <Link
               key={item.href}
               href={item.href}
-              className="group flex min-h-[240px] flex-col rounded-2xl bg-zinc-50 p-3 transition hover:bg-zinc-100"
+              className="group flex min-h-[320px] flex-col rounded-2xl bg-zinc-50 p-2 transition hover:bg-zinc-100"
             >
-              <div className="relative mb-4 overflow-hidden rounded-2xl">
-                <div className="relative aspect-[16/10] w-full">
+              <div className="relative mb-3 overflow-hidden rounded-2xl">
+                <div className="relative aspect-[16/8] w-full">
                   <Image
                     src={item.image}
                     alt={item.alt}
                     fill
-                    className="object-contain transition duration-300 group-hover:scale-[1.03]"
+                    className="object-cover transition duration-300 group-hover:scale-[1.03]"
                   />
                 </div>
               </div>
