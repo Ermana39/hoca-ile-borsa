@@ -11,29 +11,54 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
     updatedAt: "14.04.2026 18:25",
   },
   {
+    title: "Dikkat Çekenler",
+    href: "/borsa/dikkat-cekenler",
+    updatedAt: "14.04.2026 19:36",
+  },
+  {
+    title: "Dip Zirve Analizi",
+    href: "/borsa/dip-zirve-analizi",
+    updatedAt: "14.04.2026 19:36",
+  },
+  {
+    title: "Eğitim Videolerı",
+    href: "/borsa/egitim-videolari",
+    updatedAt: "14.04.2026 12:36",
+  },
+  {
+    title: "Formasyonlar",
+    href: "/borsa/formasyonlar",
+    updatedAt: "14.04.2026 19:36",
+  },
+    {
+    title: "Geri Alım Programları",
+    href: "/borsa/geri-alim-programlari",
+    updatedAt: "14.04.2026 19:36",
+  },
+  {
+    title: "Gösterge Taramaları",
+    href: "/borsa/gosterge-taramalari",
+    updatedAt: "14.04.2026 19:00",
+  },
+   {
+    title: "Grafik Analiz",
+    href: "/borsa/grafik-analiz",
+    updatedAt: "14.04.2026 19:00",
+  },
+   {
+    title: "Hacim Artışı Analizi",
+    href: "/borsa/hacim-artisi-analizi",
+    updatedAt: "14.04.2026 19:00",
+  },
+  {
     title: "Pivot Analizi",
     href: "/borsa/pivot-analizi",
     updatedAt: "14.04.2026 19:36",
   },
   {
-    title: "RSI 30 Altı",
-    href: "/borsa/gosterge-taramalari/rsi30-alti",
-    updatedAt: "14.04.2026 19:00",
-  },
-  {
-    title: "RSI 70 Üstü",
-    href: "/borsa/gosterge-taramalari/rsi70-ustu",
+    title: "Tedbirli Hisseler",
+    href: "/borsa/tedbirli-hisseler",
     updatedAt: "14.04.2026 19:24",
-  },
-  {
-    title: "Gösterge Taramaları",
-    href: "/borsa/gosterge-taramalari",
-    updatedAt: "14.04.2026 19:20",
-  },
-  {
-    title: "Grafik Analiz",
-    href: "/borsa/grafik-analiz",
-    updatedAt: "14.04.2026 19:14",
   },
   {
     title: "Halka Arz",
@@ -41,8 +66,33 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
     updatedAt: "14.04.2026 18:15",
   },
   {
-    title: "Fonlar",
-    href: "/fonlar",
-    updatedAt: "14.04.2026 18:41",
+    title: "Onaylı İzahnameler",
+    href: "/halka-arz/onayli-izahnameler",
+    updatedAt: "12.04.2026 18:41",
+  },
+   {
+    title: "Taslak İzahnameler",
+    href: "/halka-arz/taslak-izahnameler",
+    updatedAt: "13.04.2026 18:41",
+  },
+   {
+    title: "Fonların Haftalık En Çok Tercih Ettiği Hisseler",
+    href: "/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler",
+    updatedAt: "14.04.2026 18:48",
+  },
+    {
+    title: "Fon Getiri Analizi",
+    href: "/fonlar/getiri",
+    updatedAt: "14.04.2026 18:48",
+  },
+    {
+    title: "Fon Tarihsel Veriler",
+    href: "/fonlar/tarihsel-veriler",
+    updatedAt: "14.04.2026 18:48",
+  },
+    {
+    title: "Günlük Faiz Oranları",
+    href: "/mevduat-kredi-faizleri",
+    updatedAt: "14.04.2026 18:48",
   },
 ];
