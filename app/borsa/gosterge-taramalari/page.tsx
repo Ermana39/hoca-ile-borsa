@@ -1,11 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
+
 const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
   timeZone: "Europe/Istanbul",
   day: "2-digit",
   month: "2-digit",
   year: "numeric",
 }).format(new Date());
+
 const taramalar = [
   {
     title: "Yükseliş trendinde olan hisseler",
@@ -20,6 +22,20 @@ const taramalar = [
     href: "/borsa/gosterge-taramalari/dusus-trendinde-olanlar",
     image: "/dusus-trendinde-olanlar-yatay.png",
     alt: "Düşüş trendinde olan hisseler görseli",
+  },
+  {
+    title: "RSI 30 Altı",
+    description: "RSI değeri 30 seviyesinin altında olan hisseler",
+    href: "/borsa/gosterge-taramalari/rsi30-alti",
+    image: "/rsi30-alti-yatay.png",
+    alt: "RSI 30 altı hisseler görseli",
+  },
+  {
+    title: "RSI 70 Üstü",
+    description: "RSI değeri 70 seviyesinin üzerinde olan hisseler",
+    href: "/borsa/gosterge-taramalari/rsi70-ustu",
+    image: "/rsi70-ustu-yatay.png",
+    alt: "RSI 70 üstü hisseler görseli",
   },
 ];
 
@@ -63,9 +79,11 @@ export default function GostergeTaramalariPage() {
         <p className="mb-8 max-w-3xl text-base text-zinc-600">
           Gösterge taramalarını aşağıdaki kutulardan inceleyebilirsiniz.
         </p>
-<div className="mb-8 text-sm font-semibold text-zinc-700">
-  Güncelleme Tarihi: {guncellemeTarihi}
-</div>
+
+        <div className="mb-8 text-sm font-semibold text-zinc-700">
+          Güncelleme Tarihi: {guncellemeTarihi}
+        </div>
+
         <section className="mb-8">
           <ReklamAlani variant="yatay" />
         </section>
