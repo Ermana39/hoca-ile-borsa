@@ -46,7 +46,7 @@ export default function Haber1Page() {
         <article className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
-              src="/haber-1.png"
+              src="/haber-1v.png"
               alt="IMF, Türkiye büyüme tahminini düşürdü görseli"
               fill
               unoptimized

@@ -13,6 +13,13 @@ type PivotRow = {
   direnc3: number;
 };
 
+const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
+  timeZone: "Europe/Istanbul",
+  day: "2-digit",
+  month: "2-digit",
+  year: "numeric",
+}).format(new Date());
+
 const bist100Pivot = {
   sembol: "BIST100",
   fark: 1.44,
@@ -89,8 +96,6 @@ function getSatirRenk(row: PivotRow) {
 }
 
 export default function PivotAnaliziPage() {
-  const guncellemeTarihi = "15.04.2026";
-
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-[1500px]">
