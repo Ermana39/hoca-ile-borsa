@@ -51,39 +51,6 @@ const kategoriKutulari = [
   },
 ];
 
-const sonGuncellemeler: GuncellemeItem[] = [
-  {
-    title: "Günlük Borsa Özeti",
-    href: "/borsa/gunluk-borsa-ozeti",
-    time: "14:32",
-  },
-  {
-    title: "Pivot Analizi",
-    href: "/borsa/pivot-analizi",
-    time: "14:24",
-  },
-  {
-    title: "RSI 30 Altı",
-    href: "/borsa/gosterge-taramalari/rsi30-alti",
-    time: "14:18",
-  },
-  {
-    title: "RSI 70 Üstü",
-    href: "/borsa/gosterge-taramalari/rsi70-ustu",
-    time: "14:15",
-  },
-  {
-    title: "Grafik Analiz",
-    href: "/borsa/grafik-analiz",
-    time: "14:09",
-  },
-  {
-    title: "Halka Arz",
-    href: "/halka-arz",
-    time: "13:58",
-  },
-];
-
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
     variant === "icerik"
@@ -163,8 +130,46 @@ function YanHaberKutusu({ item }: { item: NewsItem }) {
   );
 }
 
-function SonGuncellemelerBar() {
-  const akisanListe = [...sonGuncellemeler, ...sonGuncellemeler];
+function SonGuncellemelerBar({
+  items,
+  loading,
+}: {
+  items: GuncellemeItem[];
+  loading: boolean;
+}) {
+  if (loading) {
+    return (
+      <section className="px-4 pb-6 md:px-6">
+        <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
+          <div className="flex flex-col md:flex-row md:items-center">
+            <div className="shrink-0 border-b border-zinc-200 bg-zinc-900 px-4 py-3 text-sm font-bold text-white md:border-b-0 md:border-r">
+              Son Güncellemeler
+            </div>
+            <div className="px-4 py-3 text-sm text-zinc-500">Yükleniyor...</div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  if (items.length === 0) {
+    return (
+      <section className="px-4 pb-6 md:px-6">
+        <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
+          <div className="flex flex-col md:flex-row md:items-center">
+            <div className="shrink-0 border-b border-zinc-200 bg-zinc-900 px-4 py-3 text-sm font-bold text-white md:border-b-0 md:border-r">
+              Son Güncellemeler
+            </div>
+            <div className="px-4 py-3 text-sm text-zinc-500">
+              Güncelleme verisi bulunamadı.
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
+  const akisanListe = [...items, ...items];
 
   return (
     <section className="px-4 pb-6 md:px-6">
@@ -196,7 +201,7 @@ function SonGuncellemelerBar() {
 
       <style jsx>{`
         .ticker-track {
-          animation: ticker-scroll 32s linear infinite;
+          animation: ticker-scroll 35s linear infinite;
         }
 
         .ticker-wrap:hover .ticker-track {
@@ -315,6 +320,8 @@ function FooterLinkColumn({
 export default function HomePage() {
   const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [guncellemeler, setGuncellemeler] = useState<GuncellemeItem[]>([]);
+  const [guncellemelerLoading, setGuncellemelerLoading] = useState(true);
 
   useEffect(() => {
     const loadNews = async () => {
@@ -329,7 +336,22 @@ export default function HomePage() {
       }
     };
 
+    const loadUpdates = async () => {
+      try {
+        const res = await fetch("/api/recent-updates", { cache: "no-store" });
+        const data = await res.json();
+        if (Array.isArray(data)) {
+          setGuncellemeler(data);
+        }
+      } catch (error) {
+        console.error("RECENT_UPDATES_LOAD_ERROR:", error);
+      } finally {
+        setGuncellemelerLoading(false);
+      }
+    };
+
     loadNews();
+    loadUpdates();
   }, []);
 
   const prevNews = () => {
@@ -441,7 +463,10 @@ export default function HomePage() {
           </div>
         </section>
 
-        <SonGuncellemelerBar />
+        <SonGuncellemelerBar
+          items={guncellemeler}
+          loading={guncellemelerLoading}
+        />
 
         <section className="px-4 pb-6 md:px-6">
           <ReklamAlani variant="icerik" />
