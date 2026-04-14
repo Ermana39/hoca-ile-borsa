@@ -1,43 +1,7 @@
-import Image from "next/image";
+import fs from "fs";
+import path from "path";
 import Link from "next/link";
-
-const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
-  timeZone: "Europe/Istanbul",
-  day: "2-digit",
-  month: "2-digit",
-  year: "numeric",
-}).format(new Date());
-
-const taramalar = [
-  {
-    title: "Yükseliş trendinde olan hisseler",
-    description: "5, 13, 21, 55, 89, 144, 233 hareketli ortalama üzerinde olanlar",
-    href: "/borsa/gosterge-taramalari/yukselis-trendinde-olanlar",
-    image: "/yukselis-trendinde-olanlar-yatay.png",
-    alt: "Yükseliş trendinde olan hisseler görseli",
-  },
-  {
-    title: "Düşüş trendinde olan hisseler",
-    description: "5, 13, 21, 55, 89, 144, 233 hareketli ortalama altında olanlar",
-    href: "/borsa/gosterge-taramalari/dusus-trendinde-olanlar",
-    image: "/dusus-trendinde-olanlar-yatay.png",
-    alt: "Düşüş trendinde olan hisseler görseli",
-  },
-  {
-    title: "RSI 30 Altı",
-    description: "RSI değeri 30 seviyesinin altında olan hisseler",
-    href: "/borsa/gosterge-taramalari/rsi30-alti",
-    image: "/rsi30-alti-yatay.png",
-    alt: "RSI 30 altı hisseler görseli",
-  },
-  {
-    title: "RSI 70 Üstü",
-    description: "RSI değeri 70 seviyesinin üzerinde olan hisseler",
-    href: "/borsa/gosterge-taramalari/rsi70-ustu",
-    image: "/rsi70-ustu-yatay.png",
-    alt: "RSI 70 üstü hisseler görseli",
-  },
-];
+import * as XLSX from "xlsx";
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
@@ -55,10 +19,46 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
-export default function GostergeTaramalariPage() {
+function metinCevir(deger: unknown) {
+  if (deger === null || deger === undefined) return "";
+  return String(deger).trim();
+}
+
+function hisseleriOku() {
+  try {
+    const dosyaYolu = path.join(
+      process.cwd(),
+      "app",
+      "borsa",
+      "gosterge-taramalari",
+      "data",
+      "rsi30-alti.xlsx"
+    );
+
+    const buffer = fs.readFileSync(dosyaYolu);
+    const workbook = XLSX.read(buffer, { type: "buffer" });
+    const sheetName = workbook.SheetNames[0];
+    const ws = workbook.Sheets[sheetName];
+
+    const rawRows = XLSX.utils.sheet_to_json<(string | number)[]>(ws, {
+      header: 1,
+      defval: "",
+    }) as (string | number)[][];
+
+    return rawRows
+      .map((row) => metinCevir(row[0]))
+      .filter((item) => item && item.toLowerCase() !== "sembol");
+  } catch {
+    return [];
+  }
+}
+
+export default function Rsi30AltiPage() {
+  const hisseler = hisseleriOku();
+
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-6xl">
         <div className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
@@ -68,54 +68,44 @@ export default function GostergeTaramalariPage() {
           </Link>
 
           <Link
-            href="/borsa"
+            href="/borsa/gosterge-taramalari"
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Geri
           </Link>
         </div>
 
-        <h1 className="mb-2 text-3xl font-bold text-zinc-900">Gösterge Taramaları</h1>
-        <p className="mb-8 max-w-3xl text-base text-zinc-600">
-          Gösterge taramalarını aşağıdaki kutulardan inceleyebilirsiniz.
+        <h1 className="mb-2 text-3xl font-bold text-zinc-900">
+          RSI 30 Altı Hisseler
+        </h1>
+        <p className="mb-3 max-w-3xl text-base text-zinc-600">
+          RSI değeri 30 seviyesinin altında olan hisseler
         </p>
-
-        <div className="mb-8 text-sm font-semibold text-zinc-700">
-          Güncelleme Tarihi: {guncellemeTarihi}
+        <div className="mb-8 text-sm font-semibold text-zinc-700 md:text-base">
+          Toplam {hisseler.length} hisse
         </div>
 
         <section className="mb-8">
           <ReklamAlani variant="yatay" />
         </section>
 
-        <section className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {taramalar.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="group flex min-h-[240px] flex-col rounded-2xl border border-zinc-200 bg-zinc-50 p-3 transition hover:bg-zinc-100"
-            >
-              <div className="relative mb-4 overflow-hidden rounded-2xl bg-white">
-                <div className="relative aspect-[16/10] w-full">
-                  <Image
-                    src={item.image}
-                    alt={item.alt}
-                    fill
-                    className="object-cover transition duration-300 group-hover:scale-[1.03]"
-                  />
+        <section className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
+          {hisseler.length > 0 ? (
+            <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
+              {hisseler.map((hisse, index) => (
+                <div
+                  key={`${hisse}-${index}`}
+                  className="rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-4 text-base font-semibold text-zinc-900"
+                >
+                  {hisse}
                 </div>
-              </div>
-
-              <div className="flex flex-1 flex-col items-center justify-center px-2 pb-2 text-center">
-                <h2 className="text-xl font-semibold leading-tight text-zinc-900 md:text-2xl">
-                  {item.title}
-                </h2>
-                <p className="mt-3 text-sm leading-6 text-zinc-600 md:text-base">
-                  {item.description}
-                </p>
-              </div>
-            </Link>
-          ))}
+              ))}
+            </div>
+          ) : (
+            <div className="rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-8 text-center text-sm text-zinc-500">
+              Excel verisi okunamadı.
+            </div>
+          )}
         </section>
 
         <section className="mt-8">
