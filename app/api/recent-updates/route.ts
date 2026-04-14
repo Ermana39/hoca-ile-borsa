@@ -3,6 +3,7 @@ import { sonGuncellemeler } from "@/lib/son-guncellemeler";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 function parseUpdatedAt(value: string) {
   const match = value.match(
@@ -25,15 +26,13 @@ function parseUpdatedAt(value: string) {
 export async function GET() {
   const sorted = [...sonGuncellemeler]
     .sort((a, b) => parseUpdatedAt(b.updatedAt) - parseUpdatedAt(a.updatedAt))
-    .slice(0, 30)
-    .map((item) => {
-      const [, time = ""] = item.updatedAt.split(" ");
-      return {
-        title: item.title,
-        href: item.href,
-        time,
-      };
-    });
+    .slice(0, 30);
 
-  return NextResponse.json(sorted);
+  return NextResponse.json(
+    sorted.map((item) => ({
+      title: item.title,
+      href: item.href,
+      time: item.updatedAt.split(" ")[1] || "",
+    }))
+  );
 }
