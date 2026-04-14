@@ -12,6 +12,12 @@ type NewsItem = {
   alt: string;
 };
 
+type GuncellemeItem = {
+  title: string;
+  href: string;
+  time: string;
+};
+
 const kategoriKutulari = [
   {
     title: "Borsa Analiz",
@@ -42,6 +48,39 @@ const kategoriKutulari = [
     href: "/mevduat-kredi-faizleri",
     alt: "Faiz oranları sayfası görseli",
     image: "/Mevduat-kredi-faiz.png?v=2",
+  },
+];
+
+const sonGuncellemeler: GuncellemeItem[] = [
+  {
+    title: "Günlük Borsa Özeti",
+    href: "/borsa/gunluk-borsa-ozeti",
+    time: "14:32",
+  },
+  {
+    title: "Pivot Analizi",
+    href: "/borsa/pivot-analizi",
+    time: "14:24",
+  },
+  {
+    title: "RSI 30 Altı",
+    href: "/borsa/gosterge-taramalari/rsi30-alti",
+    time: "14:18",
+  },
+  {
+    title: "RSI 70 Üstü",
+    href: "/borsa/gosterge-taramalari/rsi70-ustu",
+    time: "14:15",
+  },
+  {
+    title: "Grafik Analiz",
+    href: "/borsa/grafik-analiz",
+    time: "14:09",
+  },
+  {
+    title: "Halka Arz",
+    href: "/halka-arz",
+    time: "13:58",
   },
 ];
 
@@ -121,6 +160,59 @@ function YanHaberKutusu({ item }: { item: NewsItem }) {
         </div>
       </div>
     </div>
+  );
+}
+
+function SonGuncellemelerBar() {
+  const akisanListe = [...sonGuncellemeler, ...sonGuncellemeler];
+
+  return (
+    <section className="px-4 pb-6 md:px-6">
+      <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
+        <div className="flex flex-col md:flex-row md:items-center">
+          <div className="shrink-0 border-b border-zinc-200 bg-zinc-900 px-4 py-3 text-sm font-bold text-white md:border-b-0 md:border-r">
+            Son Güncellemeler
+          </div>
+
+          <div className="ticker-wrap relative min-w-0 flex-1 overflow-hidden">
+            <div className="ticker-track flex min-w-max items-center gap-6 px-4 py-3">
+              {akisanListe.map((item, index) => (
+                <TrackedLink
+                  key={`${item.href}-${item.time}-${index}`}
+                  href={item.href}
+                  label={item.title}
+                  className="inline-flex shrink-0 items-center gap-2 text-sm text-zinc-700 hover:text-zinc-900"
+                >
+                  <span className="font-semibold">{item.title}</span>
+                  <span className="rounded-md bg-zinc-100 px-2 py-0.5 text-xs font-semibold text-zinc-600">
+                    {item.time}
+                  </span>
+                </TrackedLink>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <style jsx>{`
+        .ticker-track {
+          animation: ticker-scroll 32s linear infinite;
+        }
+
+        .ticker-wrap:hover .ticker-track {
+          animation-play-state: paused;
+        }
+
+        @keyframes ticker-scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-50%);
+          }
+        }
+      `}</style>
+    </section>
   );
 }
 
@@ -348,6 +440,8 @@ export default function HomePage() {
             )}
           </div>
         </section>
+
+        <SonGuncellemelerBar />
 
         <section className="px-4 pb-6 md:px-6">
           <ReklamAlani variant="icerik" />
