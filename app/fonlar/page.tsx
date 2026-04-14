@@ -23,6 +23,8 @@ const fonKutulari = [
     image: "/fonlar-haftalik-tercih.png",
     alt: "Haftalık yatırım fonlarının en çok tercih ettiği hisseler görseli",
     titleClassName: "text-[19px] md:text-[21px]",
+    seoDescription:
+      "Yatırım fonlarının haftalık bazda en çok yöneldiği hisseleri tek ekranda görerek fon tercihlerini daha yakından takip etmenizi sağlar.",
   },
   {
     title: "Fon Getiri Analizi",
@@ -31,6 +33,8 @@ const fonKutulari = [
     image: "/fonlar-getiri.png",
     alt: "Fon getiri analizi görseli",
     titleClassName: "text-[22px] md:text-[24px]",
+    seoDescription:
+      "Fon türlerine göre ayrılmış getiri ekranları sayesinde yatırım fonlarının performansını daha düzenli ve karşılaştırmalı şekilde inceleyebilirsiniz.",
   },
   {
     title: "Fon Tarihsel Veriler",
@@ -39,6 +43,8 @@ const fonKutulari = [
     image: "/fonlar-tarihsel-veriler.png",
     alt: "Fon tarihsel veriler görseli",
     titleClassName: "text-[22px] md:text-[24px]",
+    seoDescription:
+      "Fonların geçmiş dönem verilerini inceleyerek tarihsel performans, fiyat hareketi ve dönemsel değişimleri daha detaylı takip edebilirsiniz.",
   },
 ];
 
@@ -76,10 +82,18 @@ export default function FonlarPage() {
           </Link>
         </div>
 
-        <h1 className="mb-2 text-3xl font-bold text-zinc-900">Fonlar</h1>
-        <p className="mb-8 max-w-3xl text-base text-zinc-600">
-          Yatırım fonlarında haftalık tercihler, getiri analizi ve tarihsel veri ekranlarına buradan ulaşabilirsiniz.
-        </p>
+        <header className="mb-8">
+          <h1 className="mb-3 text-3xl font-bold text-zinc-900 md:text-4xl">
+            Fonlar
+          </h1>
+          <p className="max-w-4xl text-base leading-7 text-zinc-600 md:text-lg">
+            Yatırım fonları ile ilgili haftalık tercihler, fon getiri analizi,
+            fon tarihsel verileri ve fonlara dair içeriklere bu sayfa üzerinden
+            toplu şekilde ulaşabilirsiniz. Farklı fon başlıklarını tek sayfada
+            görmek isteyen kullanıcılar için daha düzenli ve erişilebilir bir
+            yapı sunulmuştur.
+          </p>
+        </header>
 
         <section className="mb-8">
           <ReklamAlani variant="yatay" />
@@ -91,7 +105,7 @@ export default function FonlarPage() {
               key={item.href}
               href={item.href}
               label={item.title}
-              className="group flex h-[320px] flex-col rounded-2xl bg-white text-center"
+              className="group flex h-[380px] flex-col rounded-2xl bg-white text-center"
               ariaLabel={item.title}
             >
               <div className="h-[110px] w-full overflow-hidden rounded-2xl bg-zinc-100">
@@ -116,6 +130,12 @@ export default function FonlarPage() {
                     {item.desc}
                   </p>
                 </div>
+
+                <div className="mt-4 w-full max-w-[340px]">
+                  <p className="text-sm leading-6 text-zinc-600 md:text-base">
+                    {item.seoDescription}
+                  </p>
+                </div>
               </div>
             </TrackedLink>
           ))}
@@ -123,6 +143,39 @@ export default function FonlarPage() {
 
         <section className="mt-8">
           <ReklamAlani variant="icerik" />
+        </section>
+
+        <section className="mt-10 rounded-2xl border border-zinc-200 bg-white p-5 md:p-7">
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+            Fonlar sayfasında neler bulunur?
+          </h2>
+
+          <div className="space-y-4 text-sm leading-7 text-zinc-700 md:text-base">
+            <p>
+              Bu sayfa, yatırım fonları ile ilgili farklı başlıkları tek yerde
+              toplamak amacıyla hazırlanmıştır. Kullanıcılar haftalık fon
+              tercihleri, fon getiri analizi ve fon tarihsel verileri gibi ana
+              başlıklara buradan hızlı şekilde ulaşabilir.
+            </p>
+
+            <p>
+              Özellikle yatırım fonları, fon getirileri, fon karşılaştırmaları,
+              fon performansı ve fon verileri arayan kullanıcılar için daha
+              düzenli ve erişilebilir bir yapı sunulması hedeflenmiştir. Böylece
+              farklı fon sayfaları arasında geçiş yapmak daha kolay hale gelir.
+            </p>
+
+            <p>
+              Fonlarla ilgili içeriklerin tek merkezde toplanması hem kullanıcı
+              deneyimini güçlendirir hem de sayfanın SEO açısından daha güçlü
+              bir konu merkezi olmasına katkı sağlar.
+            </p>
+
+            <p className="text-zinc-500">
+              Bu sayfada yer alan içerikler genel bilgilendirme amacı taşır ve
+              yatırım danışmanlığı kapsamında değildir.
+            </p>
+          </div>
         </section>
 
         <section className="mt-10">
