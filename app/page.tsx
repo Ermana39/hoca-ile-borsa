@@ -453,6 +453,7 @@ export default function HomePage() {
                   aria-label="Sonraki haber"
                 >
                   →
+
                 </button>
               </div>
             ) : (
