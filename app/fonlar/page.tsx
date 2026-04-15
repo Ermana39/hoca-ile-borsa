@@ -99,43 +99,39 @@ export default function FonlarPage() {
           <ReklamAlani variant="yatay" />
         </section>
 
-        <section className="grid grid-cols-1 items-stretch gap-8 md:grid-cols-2 xl:grid-cols-3">
+        <section className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
           {fonKutulari.map((item) => (
             <TrackedLink
               key={item.href}
               href={item.href}
               label={item.title}
-              className="group flex h-[380px] flex-col rounded-2xl bg-white text-center"
+              className="group flex min-h-[320px] flex-col rounded-2xl bg-zinc-50 p-3 transition hover:bg-zinc-100"
               ariaLabel={item.title}
             >
-              <div className="h-[110px] w-full overflow-hidden rounded-2xl bg-zinc-100">
-                <img
-                  src={item.image}
-                  alt={item.alt}
-                  className="block h-[110px] w-full rounded-2xl object-cover object-center transition duration-300 group-hover:scale-[1.02]"
-                />
+              <div className="relative mb-4 overflow-hidden rounded-2xl bg-zinc-100">
+                <div className="relative aspect-[16/10] w-full">
+                  <img
+                    src={item.image}
+                    alt={item.alt}
+                    className="block h-full w-full object-cover object-center transition duration-300 group-hover:scale-[1.03]"
+                  />
+                </div>
               </div>
 
-              <div className="flex flex-1 flex-col items-center px-4 pt-5">
-                <div className="h-[78px] w-full max-w-[360px] overflow-hidden">
-                  <h2
-                    className={`line-clamp-2 font-semibold leading-tight text-zinc-900 ${item.titleClassName}`}
-                  >
-                    {item.title}
-                  </h2>
-                </div>
+              <div className="flex flex-1 flex-col items-center justify-start px-2 pb-2 text-center">
+                <h2
+                  className={`font-semibold leading-tight text-zinc-900 ${item.titleClassName}`}
+                >
+                  {item.title}
+                </h2>
 
-                <div className="mt-3 h-[52px] w-full max-w-[340px] overflow-hidden">
-                  <p className="line-clamp-2 text-sm leading-6 text-zinc-600 md:text-base">
-                    {item.desc}
-                  </p>
-                </div>
+                <p className="mt-3 text-sm leading-6 text-zinc-600 md:text-base">
+                  {item.desc}
+                </p>
 
-                <div className="mt-4 w-full max-w-[340px]">
-                  <p className="text-sm leading-6 text-zinc-600 md:text-base">
-                    {item.seoDescription}
-                  </p>
-                </div>
+                <p className="mt-3 text-sm leading-6 text-zinc-600 md:text-base">
+                  {item.seoDescription}
+                </p>
               </div>
             </TrackedLink>
           ))}
@@ -145,7 +141,7 @@ export default function FonlarPage() {
           <ReklamAlani variant="icerik" />
         </section>
 
-        <section className="mt-10 rounded-2xl border border-zinc-200 bg-white p-5 md:p-7">
+        <section className="mt-10 rounded-2xl bg-white p-5 md:p-7">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">
             Fonlar sayfasında neler bulunur?
           </h2>
@@ -195,7 +191,7 @@ export default function FonlarPage() {
                 href={video.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex overflow-hidden rounded-2xl border border-zinc-200 bg-white transition hover:border-zinc-300 hover:bg-zinc-50"
+                className="group flex overflow-hidden rounded-2xl bg-white transition hover:bg-zinc-50"
                 aria-label={video.title}
               >
                 <div className="w-full">
