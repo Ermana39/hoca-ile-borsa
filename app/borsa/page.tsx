@@ -108,75 +108,100 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
       : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
 
   return (
-    <section className={`w-full overflow-hidden rounded-2xl ${alanClass}`}>
+    <section
+      aria-label="Reklam alanı"
+      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
+    >
       <div className={`w-full ${alanClass}`} />
     </section>
   );
 }
 
+function AnalizKutusu({
+  title,
+  href,
+  image,
+  alt,
+  description,
+}: {
+  title: string;
+  href: string;
+  image: string;
+  alt: string;
+  description: string;
+}) {
+  return (
+    <TrackedLink
+      href={href}
+      label={title}
+      className="group flex min-h-[320px] flex-col rounded-2xl bg-white transition hover:bg-zinc-50"
+      ariaLabel={title}
+    >
+      <div className="p-2 pb-1 md:p-3 md:pb-1">
+        <div className="relative overflow-hidden rounded-2xl bg-zinc-50">
+          <div className="relative aspect-[16/10] w-full">
+            <Image
+              src={image}
+              alt={alt}
+              fill
+              className="object-cover transition duration-300 group-hover:scale-[1.03]"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-1 flex-col items-center justify-start px-3 pb-3 pt-0 text-center md:px-4 md:pb-3">
+        <h2 className="text-xl font-semibold text-zinc-900 md:text-2xl">
+          {title}
+        </h2>
+        <p className="mt-3 text-sm leading-6 text-zinc-600 md:text-base">
+          {description}
+        </p>
+      </div>
+    </TrackedLink>
+  );
+}
+
 export default function BorsaPage() {
   return (
-    <main className="min-h-screen bg-white px-4 py-6 md:px-6">
-      <div className="mx-auto max-w-7xl">
-
-        <div className="mb-6 flex flex-wrap gap-3">
+    <main className="min-h-screen bg-white">
+      <div className="mx-auto max-w-7xl px-4 py-6 md:px-6">
+        <section className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
-            className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
+            className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Ana Sayfa
           </Link>
-        </div>
+        </section>
 
-        <header className="mb-8">
-          <h1 className="mb-3 text-3xl font-bold text-zinc-900 md:text-4xl">
+        <section className="rounded-2xl bg-white p-5 md:p-8">
+          <h1 className="text-2xl font-bold text-zinc-900 md:text-4xl">
             Borsa Analiz
           </h1>
-          <p className="max-w-4xl text-base leading-7 text-zinc-600 md:text-lg">
+
+          <p className="mt-3 max-w-4xl text-sm leading-7 text-zinc-600 md:text-base">
             Borsa analiz içeriklerine bu sayfa üzerinden toplu şekilde
             ulaşabilirsiniz. Günlük borsa özeti, grafik analiz, gösterge
             taramaları, pivot analizi, dip zirve analizi, hacim artışı analizi,
             geri alım programları ve diğer teknik başlıklar burada bir araya
             getirilmiştir.
           </p>
-        </header>
-
-        <section className="mb-8">
-          <ReklamAlani />
         </section>
 
-        <section className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-4">
-          {analizKutulari.map((item) => (
-            <TrackedLink
-              key={item.href}
-              href={item.href}
-              label={item.title}
-              className="group flex min-h-[320px] flex-col rounded-2xl bg-zinc-50 p-3 transition hover:bg-zinc-100"
-            >
-              <div className="relative mb-4 overflow-hidden rounded-2xl">
-                <div className="relative aspect-[16/10] w-full">
-                  <Image
-                    src={item.image}
-                    alt={item.alt}
-                    fill
-                    className="object-cover transition duration-300 group-hover:scale-[1.03]"
-                  />
-                </div>
-              </div>
-
-              <div className="flex flex-1 flex-col items-center text-center px-2 pb-2">
-                <h2 className="text-xl font-semibold text-zinc-900 md:text-2xl">
-                  {item.title}
-                </h2>
-                <p className="mt-3 text-sm text-zinc-600 md:text-base">
-                  {item.description}
-                </p>
-              </div>
-            </TrackedLink>
-          ))}
+        <section className="pt-6">
+          <ReklamAlani variant="yatay" />
         </section>
 
-        <section className="mt-10 rounded-2xl bg-white p-5 md:p-7">
+        <section className="py-6">
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4">
+            {analizKutulari.map((item) => (
+              <AnalizKutusu key={item.href} {...item} />
+            ))}
+          </div>
+        </section>
+
+        <section className="rounded-2xl bg-white p-5 md:p-7">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">
             Borsa analiz sayfasında neler bulunur?
           </h2>
@@ -203,10 +228,9 @@ export default function BorsaPage() {
           </div>
         </section>
 
-        <section className="mt-8">
+        <section className="pt-6">
           <ReklamAlani variant="icerik" />
         </section>
-
       </div>
     </main>
   );
