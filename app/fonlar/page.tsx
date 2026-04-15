@@ -76,7 +76,7 @@ function FonKutusu({
   href,
   image,
   alt,
-  description,
+  desc,
   seoDescription,
   titleClassName,
 }: {
@@ -84,7 +84,7 @@ function FonKutusu({
   href: string;
   image: string;
   alt: string;
-  description: string;
+  desc: string;
   seoDescription: string;
   titleClassName: string;
 }) {
@@ -113,7 +113,7 @@ function FonKutusu({
         </h2>
 
         <p className="mt-3 text-sm leading-6 text-zinc-600 md:text-base">
-          {description}
+          {desc}
         </p>
 
         <p className="mt-3 text-sm leading-6 text-zinc-600 md:text-base">
