@@ -5,10 +5,7 @@ const analizler = [
     baslik: "AEFES Grafik Analiz",
     href: "/borsa/grafik-analiz/aefes",
   },
-  {
-    baslik: "AKBNK Direnç Hattına Ulaştı",
-    href: "/borsa/grafik-analiz/akbnk",
-  },
+
 ];
 
 export default function GrafikAnalizPage() {
