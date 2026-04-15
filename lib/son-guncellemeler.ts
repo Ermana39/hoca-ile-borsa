@@ -13,7 +13,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Dikkat Çekenler",
     href: "/borsa/dikkat-cekenler",
-    updatedAt: "15.04.2026 18:48",
+    updatedAt: "14.04.2026 18:48",
   },
   {
     title: "Dip Zirve Analizi",
@@ -38,7 +38,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Gösterge Taramaları",
     href: "/borsa/gosterge-taramalari",
-    updatedAt: "14.04.2026 19:00",
+    updatedAt: "15.04.2026 19:05",
   },
    {
     title: "Grafik Analiz",
@@ -78,17 +78,17 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
    {
     title: "Fonların Haftalık En Çok Tercih Ettiği Hisseler",
     href: "/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler",
-    updatedAt: "14.04.2026 18:48",
+    updatedAt: "15.04.2026 19:03",
   },
     {
     title: "Fon Getiri Analizi",
     href: "/fonlar/getiri",
-    updatedAt: "14.04.2026 18:48",
+    updatedAt: "15.04.2026 19:03",
   },
     {
     title: "Fon Tarihsel Veriler",
     href: "/fonlar/tarihsel-veriler",
-    updatedAt: "14.04.2026 18:48",
+    updatedAt: "15.04.2026 19:03",
   },
     {
     title: "Günlük Faiz Oranları",
