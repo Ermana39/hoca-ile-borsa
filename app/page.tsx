@@ -15,8 +15,8 @@ type NewsItem = {
 type GuncellemeItem = {
   title: string;
   href: string;
-  time: string;
-};
+  updatedAt: string;
+}
 
 const kategoriKutulari = [
   {
