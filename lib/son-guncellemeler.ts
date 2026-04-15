@@ -63,7 +63,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Halka Arz",
     href: "/halka-arz",
-    updatedAt: "15.04.2026 10:18",
+    updatedAt: "15.04.2026 15:15",
   },
   {
     title: "Onaylı İzahnameler",
@@ -93,6 +93,6 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
     {
     title: "Günlük Faiz Oranları",
     href: "/mevduat-kredi-faizleri",
-    updatedAt: "14.04.2026 18:48",
+    updatedAt: "15.04.2026 11:15",
   },
 ];
