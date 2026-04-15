@@ -8,22 +8,22 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Günlük Borsa Özeti",
     href: "/borsa/gunluk-borsa-ozeti",
-    updatedAt: "14.04.2026 18:25",
+    updatedAt: "15.04.2026 18:48",
   },
   {
     title: "Dikkat Çekenler",
     href: "/borsa/dikkat-cekenler",
-    updatedAt: "14.04.2026 19:36",
+    updatedAt: "15.04.2026 18:48",
   },
   {
     title: "Dip Zirve Analizi",
     href: "/borsa/dip-zirve-analizi",
-    updatedAt: "14.04.2026 19:36",
+    updatedAt: "15.04.2026 18:48",
   },
   {
     title: "Eğitim Videolerı",
     href: "/borsa/egitim-videolari",
-    updatedAt: "14.04.2026 12:36",
+    updatedAt: "14.04.2026 12:50",
   },
   {
     title: "Formasyonlar",
@@ -33,7 +33,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
     {
     title: "Geri Alım Programları",
     href: "/borsa/geri-alim-programlari",
-    updatedAt: "14.04.2026 19:36",
+    updatedAt: "15.04.2026 18:48",
   },
   {
     title: "Gösterge Taramaları",
@@ -53,17 +53,17 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Pivot Analizi",
     href: "/borsa/pivot-analizi",
-    updatedAt: "14.04.2026 19:36",
+    updatedAt: "15.04.2026 18:48",
   },
   {
     title: "Tedbirli Hisseler",
     href: "/borsa/tedbirli-hisseler",
-    updatedAt: "14.04.2026 19:24",
+    updatedAt: "15.04.2026 18:48",
   },
   {
     title: "Halka Arz",
     href: "/halka-arz",
-    updatedAt: "15.04.2026 16:35",
+    updatedAt: "15.04.2026 18:15",
   },
   {
     title: "Onaylı İzahnameler",
