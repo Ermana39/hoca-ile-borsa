@@ -190,9 +190,19 @@ function SonGuncellemelerBar({
                   className="inline-flex shrink-0 items-center gap-2 text-sm text-zinc-700 hover:text-zinc-900"
                 >
                   <span className="font-semibold">{item.title}</span>
-                  <span className="rounded-md bg-zinc-100 px-2 py-0.5 text-xs font-semibold text-zinc-600">
-                    {item.time}
-                  </span>
+                 <span className="rounded-md bg-zinc-100 px-2 py-0.5 text-xs font-semibold text-zinc-600">
+  {(() => {
+    const date = new Date(item.time);
+    return (
+      date.toLocaleDateString("tr-TR") +
+      " " +
+      date.toLocaleTimeString("tr-TR", {
+        hour: "2-digit",
+        minute: "2-digit",
+      })
+    );
+  })()}
+</span>
                 </TrackedLink>
               ))}
             </div>
