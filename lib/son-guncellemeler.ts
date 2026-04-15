@@ -8,7 +8,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Günlük Borsa Özeti",
     href: "/borsa/gunluk-borsa-ozeti",
-    updatedAt: "14.04.2026 18:25",
+    updatedAt: "14-04-2026 18:25",
   },
   {
     title: "Dikkat Çekenler",
@@ -83,7 +83,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
     {
     title: "Fon Getiri Analizi",
     href: "/fonlar/getiri",
-    updatedAt: "2026-04-14T18:48:00",
+    updatedAt: "14.04.2026 18:48",
   },
     {
     title: "Fon Tarihsel Veriler",
