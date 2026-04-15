@@ -184,7 +184,7 @@ function SonGuncellemelerBar({
             <div className="ticker-track flex min-w-max items-center gap-6 px-4 py-3">
               {items.map((item, index) => (
                 <TrackedLink
-                  key={`${item.href}-${item.time}-${index}`}
+                  key={`${item.href}-${item.updatedAt}-${index}`}
                   href={item.href}
                   label={item.title}
                   className="inline-flex shrink-0 items-center gap-2 text-sm text-zinc-700 hover:text-zinc-900"
@@ -192,7 +192,7 @@ function SonGuncellemelerBar({
                   <span className="font-semibold">{item.title}</span>
                  <span className="rounded-md bg-zinc-100 px-2 py-0.5 text-xs font-semibold text-zinc-600">
   {(() => {
-    const date = new Date(item.time);
+    const date = new Date(item.updatedAt);
     return (
       date.toLocaleDateString("tr-TR") +
       " " +
