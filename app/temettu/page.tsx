@@ -66,11 +66,55 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
+function TemettuKutusu({
+  title,
+  href,
+  image,
+  alt,
+  description,
+}: {
+  title: string;
+  href: string;
+  image: string;
+  alt: string;
+  description: string;
+}) {
+  return (
+    <TrackedLink
+      href={href}
+      label={title}
+      className="group flex min-h-[320px] flex-col rounded-2xl bg-white transition hover:bg-zinc-50"
+      ariaLabel={title}
+    >
+      <div className="p-2 pb-1 md:p-3 md:pb-1">
+        <div className="relative overflow-hidden rounded-2xl bg-zinc-50">
+          <div className="relative aspect-[16/10] w-full">
+            <Image
+              src={image}
+              alt={alt}
+              fill
+              className="object-cover transition duration-300 group-hover:scale-[1.03]"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-1 flex-col items-center justify-start px-3 pb-3 pt-0 text-center md:px-4 md:pb-3">
+        <h2 className="text-xl font-semibold text-zinc-900 md:text-2xl">
+          {title}
+        </h2>
+        <p className="mt-3 text-sm leading-6 text-zinc-600 md:text-base">
+          {description}
+        </p>
+      </div>
+    </TrackedLink>
+  );
+}
+
 export default function TemettuPage() {
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-7xl">
-
         <div className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
@@ -87,16 +131,16 @@ export default function TemettuPage() {
           <p className="max-w-4xl text-base leading-7 text-zinc-600 md:text-lg">
             Temettü eğitimi, aylara göre temettü takvimi, temettü hesaplama aracı
             ve temettü verimi hesaplama bölümlerine bu sayfa üzerinden toplu
-            şekilde ulaşabilirsiniz.
+            şekilde ulaşabilirsiniz. Temettü yatırımını daha düzenli takip etmek
+            isteyen kullanıcılar için sade ve erişilebilir bir yapı sunulmuştur.
           </p>
         </header>
 
-        {/* ÜST KUTULAR */}
         <div className="mb-8 grid grid-cols-1 gap-3 md:grid-cols-2">
           <TrackedLink
             href="/temettu/temettu-hesaplama-araci"
             label="Temettü Hesaplama Aracı"
-            className="rounded-xl bg-blue-100 px-4 py-4 text-center text-base font-semibold text-zinc-900 hover:bg-blue-200"
+            className="rounded-xl bg-blue-100 px-4 py-4 text-center text-base font-semibold text-zinc-900 transition hover:bg-blue-200"
           >
             Temettü Hesaplama Aracı
           </TrackedLink>
@@ -104,7 +148,7 @@ export default function TemettuPage() {
           <TrackedLink
             href="/temettu/temettu-verimi-hesaplama"
             label="Temettü Verimi Hesaplama"
-            className="rounded-xl bg-purple-100 px-4 py-4 text-center text-base font-semibold text-zinc-900 hover:bg-purple-200"
+            className="rounded-xl bg-purple-100 px-4 py-4 text-center text-base font-semibold text-zinc-900 transition hover:bg-purple-200"
           >
             Temettü Verimi Hesaplama
           </TrackedLink>
@@ -114,50 +158,36 @@ export default function TemettuPage() {
           <ReklamAlani />
         </section>
 
-        {/* ANA KARTLAR (DÜZELTİLDİ) */}
-        <section className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+        <section className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
           {temettuKutulari.map((item) => (
-            <TrackedLink
-              key={item.href}
-              href={item.href}
-              label={item.title}
-              className="group flex min-h-[320px] flex-col rounded-2xl bg-zinc-50 p-3 transition hover:bg-zinc-100"
-            >
-              <div className="relative mb-4 overflow-hidden rounded-2xl">
-                <div className="relative aspect-[16/10] w-full">
-                  <Image
-                    src={item.image}
-                    alt={item.alt}
-                    fill
-                    className="object-cover transition duration-300 group-hover:scale-[1.03]"
-                  />
-                </div>
-              </div>
-
-              <div className="flex flex-1 flex-col items-center text-center px-2 pb-2">
-                <h2 className="text-xl font-semibold text-zinc-900 md:text-2xl">
-                  {item.title}
-                </h2>
-
-                <p className="mt-3 text-sm text-zinc-600 md:text-base">
-                  {item.description}
-                </p>
-              </div>
-            </TrackedLink>
+            <TemettuKutusu key={item.href} {...item} />
           ))}
         </section>
 
-        {/* ALT AÇIKLAMA */}
         <section className="mt-10 rounded-2xl bg-white p-5 md:p-7">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">
             Temettü sayfasında neler bulunur?
           </h2>
 
-          <div className="space-y-4 text-sm text-zinc-700 md:text-base">
-            <p>Bu sayfa temettü içeriklerini toplar.</p>
-            <p>Takip kolaylığı sağlar.</p>
+          <div className="space-y-4 text-sm leading-7 text-zinc-700 md:text-base">
+            <p>
+              Bu sayfa, temettü ile ilgili farklı başlıkları tek yerde toplamak
+              amacıyla hazırlanmıştır. Kullanıcılar temettü eğitimi, temettü
+              takvimi, aylara göre temettü veren şirketler, temettü hesaplama
+              aracı ve temettü verimi hesaplama gibi başlıklara bu sayfadan hızlı
+              şekilde ulaşabilir.
+            </p>
+
+            <p>
+              Özellikle temettü hisseleri, temettü takvimi, temettü veren
+              şirketler, temettü verimi ve temettü yatırımına dair temel bilgiler
+              arayan kullanıcılar için daha düzenli ve erişilebilir bir yapı
+              sunulması hedeflenmiştir.
+            </p>
+
             <p className="text-zinc-500">
-              Yatırım tavsiyesi değildir.
+              Bu sayfada yer alan içerikler genel bilgilendirme amacı taşır ve
+              yatırım tavsiyesi değildir.
             </p>
           </div>
         </section>
@@ -165,7 +195,6 @@ export default function TemettuPage() {
         <section className="mt-8">
           <ReklamAlani variant="icerik" />
         </section>
-
       </div>
     </main>
   );
