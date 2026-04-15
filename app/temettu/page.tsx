@@ -38,7 +38,7 @@ const temettuKutulari = [
   {
     title: "Temmuz Ayı Temettü Verenler",
     href: "/temettu/temmuz-ayi-temettu-takvimi",
-    image: "/temmuz-ayi-temettu-verenler-yatay.png",
+    image: "/temettu-temmuz-ayi-temettu-verenler-yatay.png",
     alt: "Temmuz Ayı Temettü Verenler görseli",
     description:
       "Temmuz ayında temettü veren şirketleri görüntüleyerek yaz dönemindeki temettü fırsatlarını takip edebilirsiniz.",
@@ -60,10 +60,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
       : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
 
   return (
-    <section
-      aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
-    >
+    <section className={`w-full overflow-hidden rounded-2xl ${alanClass}`}>
       <div className={`w-full ${alanClass}`} />
     </section>
   );
@@ -86,61 +83,46 @@ export default function TemettuPage() {
           <h1 className="mb-3 text-3xl font-bold text-zinc-900 md:text-4xl">
             Temettü
           </h1>
-          <p className="max-w-4xl text-base leading-7 text-zinc-600 md:text-lg">
-            Temettü eğitimi, aylara göre temettü takvimi, temettü hesaplama aracı
-            ve temettü verimi hesaplama bölümlerine bu sayfa üzerinden toplu
-            şekilde ulaşabilirsiniz. Temettü yatırımını daha düzenli takip etmek
-            isteyen kullanıcılar için sade ve erişilebilir bir yapı sunulmuştur.
-          </p>
         </header>
 
+        {/* ÜST KUTULAR */}
         <div className="mb-8 grid grid-cols-1 gap-3 md:grid-cols-2">
           <TrackedLink
             href="/temettu/temettu-hesaplama-araci"
-            label="Temettü Hesaplama Aracı"
-            className="rounded-xl border border-blue-200 bg-blue-100 px-4 py-4 text-center text-base font-semibold text-zinc-900 transition hover:bg-blue-200"
+            className="rounded-xl bg-blue-100 px-4 py-4 text-center font-semibold hover:bg-blue-200"
           >
             Temettü Hesaplama Aracı
           </TrackedLink>
 
           <TrackedLink
             href="/temettu/temettu-verimi-hesaplama"
-            label="Temettü Verimi Hesaplama"
-            className="rounded-xl border border-purple-200 bg-purple-100 px-4 py-4 text-center text-base font-semibold text-zinc-900 transition hover:bg-purple-200"
+            className="rounded-xl bg-purple-100 px-4 py-4 text-center font-semibold hover:bg-purple-200"
           >
             Temettü Verimi Hesaplama
           </TrackedLink>
         </div>
 
         <section className="mb-8">
-          <ReklamAlani variant="yatay" />
+          <ReklamAlani />
         </section>
 
-        <section className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+        {/* ANA KARTLAR */}
+        <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
           {temettuKutulari.map((item) => (
             <TrackedLink
               key={item.href}
               href={item.href}
-              label={item.title}
-              className="group flex min-h-[320px] flex-col rounded-2xl border border-zinc-200 bg-zinc-50 p-3 transition hover:bg-zinc-100"
-              ariaLabel={item.title}
+              className="group flex min-h-[320px] flex-col rounded-2xl bg-zinc-50 p-3 hover:bg-zinc-100"
             >
-              <div className="relative mb-4 overflow-hidden rounded-2xl bg-white">
+              <div className="mb-4 overflow-hidden rounded-2xl">
                 <div className="relative aspect-[16/10] w-full">
-                  <Image
-                    src={item.image}
-                    alt={item.alt}
-                    fill
-                    className="object-cover transition duration-300 group-hover:scale-[1.03]"
-                  />
+                  <Image src={item.image} alt={item.alt} fill className="object-cover" />
                 </div>
               </div>
 
-              <div className="flex flex-1 flex-col items-center justify-start px-2 pb-2 text-center">
-                <h2 className="text-xl font-semibold leading-tight text-zinc-900 md:text-2xl">
-                  {item.title}
-                </h2>
-                <p className="mt-3 text-sm leading-6 text-zinc-600 md:text-base">
+              <div className="text-center">
+                <h2 className="text-xl font-semibold">{item.title}</h2>
+                <p className="mt-3 text-sm text-zinc-600">
                   {item.description}
                 </p>
               </div>
@@ -148,39 +130,9 @@ export default function TemettuPage() {
           ))}
         </section>
 
-        <section className="mt-10 rounded-2xl border border-zinc-200 bg-white p-5 md:p-7">
-          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
-            Temettü sayfasında neler bulunur?
-          </h2>
-
-          <div className="space-y-4 text-sm leading-7 text-zinc-700 md:text-base">
-            <p>
-              Bu sayfa, temettü ile ilgili farklı başlıkları tek yerde toplamak
-              amacıyla hazırlanmıştır. Kullanıcılar temettü eğitimi, temettü
-              takvimi, aylara göre temettü veren şirketler, temettü hesaplama
-              aracı ve temettü verimi hesaplama gibi başlıklara bu sayfadan hızlı
-              şekilde ulaşabilir.
-            </p>
-
-            <p>
-              Özellikle temettü hisseleri, temettü takvimi, temettü veren
-              şirketler, temettü verimi ve temettü yatırımına dair temel bilgiler
-              arayan kullanıcılar için daha düzenli ve erişilebilir bir yapı
-              sunulması hedeflenmiştir. Böylece farklı temettü sayfaları arasında
-              geçiş yapmak daha kolay hale gelir.
-            </p>
-
-            <p>
-              Temettü içeriklerinin tek merkezde toplanması hem kullanıcı
-              deneyimini güçlendirir hem de sayfanın SEO açısından daha güçlü bir
-              konu merkezi olmasına katkı sağlar.
-            </p>
-
-            <p className="text-zinc-500">
-              Bu sayfada yer alan içerikler genel bilgilendirme amacı taşır ve
-              yatırım danışmanlığı kapsamında değildir.
-            </p>
-          </div>
+        {/* ALT KUTU */}
+        <section className="mt-10 rounded-2xl bg-white p-5">
+          <h2 className="text-2xl font-bold">Temettü sayfası</h2>
         </section>
 
         <section className="mt-8">
