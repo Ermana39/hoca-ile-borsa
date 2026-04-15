@@ -113,7 +113,7 @@ export default function FonlarPage() {
                   <img
                     src={item.image}
                     alt={item.alt}
-                    className="block h-full w-full object-cover object-center transition duration-300 group-hover:scale-[1.03]"
+                    className="block h-full w-full object-contain object-center transition duration-300 group-hover:scale-[1.02]"
                   />
                 </div>
               </div>
