@@ -110,6 +110,7 @@ export default function MevduatKrediFaizleriPage() {
   return (
     <main className="min-h-screen bg-white">
       <div className="mx-auto max-w-7xl px-4 py-6 md:px-6">
+
         <section className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
@@ -119,7 +120,8 @@ export default function MevduatKrediFaizleriPage() {
           </Link>
         </section>
 
-        <section className="rounded-2xl border border-zinc-200 bg-white p-5 md:p-8">
+        {/* ÜST AÇIKLAMA - BORDER KALDIRILDI */}
+        <section className="rounded-2xl bg-white p-5 md:p-8">
           <h1 className="text-2xl font-bold text-zinc-900 md:text-4xl">
             Mevduat ve Kredi Faiz Oranları
           </h1>
@@ -127,9 +129,7 @@ export default function MevduatKrediFaizleriPage() {
           <p className="mt-3 max-w-4xl text-sm leading-7 text-zinc-600 md:text-base">
             Mevduat faizi oranları, tüketici kredisi faiz oranları, konut kredisi
             oranları ve taşıt kredisi oranları gibi güncel finansman başlıklarına
-            bu sayfa üzerinden toplu şekilde ulaşabilirsiniz. Farklı faiz
-            kategorilerini tek ekranda görmek isteyen kullanıcılar için daha
-            düzenli ve erişilebilir bir yapı sunulmuştur.
+            bu sayfa üzerinden toplu şekilde ulaşabilirsiniz.
           </p>
         </section>
 
@@ -145,36 +145,18 @@ export default function MevduatKrediFaizleriPage() {
           </div>
         </section>
 
-        <section className="rounded-2xl border border-zinc-200 bg-white p-5 md:p-7">
+        {/* ALT AÇIKLAMA - BORDER KALDIRILDI */}
+        <section className="rounded-2xl bg-white p-5 md:p-7">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">
             Faiz oranları sayfasında neler bulunur?
           </h2>
 
           <div className="space-y-4 text-sm leading-7 text-zinc-700 md:text-base">
-            <p>
-              Bu sayfa, mevduat ve kredi faiz oranları ile ilgili farklı
-              başlıkları tek yerde toplamak amacıyla hazırlanmıştır. Kullanıcılar
-              mevduat faizi, ihtiyaç kredisi, konut kredisi ve taşıt kredisi gibi
-              temel faiz kategorilerine bu sayfadan hızlı şekilde ulaşabilir.
-            </p>
-
-            <p>
-              Özellikle güncel faiz oranları, banka faiz karşılaştırmaları,
-              mevduat getirisi, kredi maliyeti, konut kredisi faiz oranları ve
-              taşıt kredisi oranları arayan kullanıcılar için daha düzenli ve
-              erişilebilir bir yapı sunulması hedeflenmiştir. Böylece farklı faiz
-              sayfaları arasında geçiş yapmak daha kolay hale gelir.
-            </p>
-
-            <p>
-              Faiz içeriklerinin tek merkezde toplanması hem kullanıcı deneyimini
-              güçlendirir hem de sayfanın SEO açısından daha güçlü bir konu
-              merkezi olmasına katkı sağlar.
-            </p>
-
+            <p>Bu sayfa faiz verilerini toplar.</p>
+            <p>Karşılaştırma yapmanı sağlar.</p>
+            <p>SEO katkısı sağlar.</p>
             <p className="text-zinc-500">
-              Bu sayfada yer alan içerikler genel bilgilendirme amacı taşır ve
-              yatırım danışmanlığı kapsamında değildir.
+              Yatırım tavsiyesi değildir.
             </p>
           </div>
         </section>
@@ -182,6 +164,7 @@ export default function MevduatKrediFaizleriPage() {
         <section className="pt-6">
           <ReklamAlani variant="icerik" />
         </section>
+
       </div>
     </main>
   );
