@@ -8,10 +8,12 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
       : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
 
   return (
-    <div
-      className={`w-full rounded-2xl ${alanClass}`}
+    <section
       aria-label="Reklam alanı"
-    />
+      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
+    >
+      <div className={`w-full ${alanClass}`} />
+    </section>
   );
 }
 
@@ -69,79 +71,99 @@ const videoKartlari = [
   },
 ];
 
+function FonKutusu({
+  title,
+  href,
+  image,
+  alt,
+  description,
+  seoDescription,
+  titleClassName,
+}: {
+  title: string;
+  href: string;
+  image: string;
+  alt: string;
+  description: string;
+  seoDescription: string;
+  titleClassName: string;
+}) {
+  return (
+    <TrackedLink
+      href={href}
+      label={title}
+      className="group flex min-h-[320px] flex-col rounded-2xl bg-white transition hover:bg-zinc-50"
+      ariaLabel={title}
+    >
+      <div className="p-2 pb-1 md:p-3 md:pb-1">
+        <div className="relative overflow-hidden rounded-2xl bg-zinc-50">
+          <div className="relative aspect-[16/10] w-full">
+            <img
+              src={image}
+              alt={alt}
+              className="block h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-1 flex-col items-center justify-start px-3 pb-3 pt-0 text-center md:px-4 md:pb-3">
+        <h2 className={`font-semibold text-zinc-900 ${titleClassName}`}>
+          {title}
+        </h2>
+
+        <p className="mt-3 text-sm leading-6 text-zinc-600 md:text-base">
+          {description}
+        </p>
+
+        <p className="mt-3 text-sm leading-6 text-zinc-600 md:text-base">
+          {seoDescription}
+        </p>
+      </div>
+    </TrackedLink>
+  );
+}
+
 export default function FonlarPage() {
   return (
-    <main className="min-h-screen bg-white px-4 py-6 md:px-6">
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-6 flex flex-wrap gap-3">
+    <main className="min-h-screen bg-white">
+      <div className="mx-auto max-w-7xl px-4 py-6 md:px-6">
+        <section className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
-            className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
+            className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Ana Sayfa
           </Link>
-        </div>
+        </section>
 
-        <header className="mb-8">
-          <h1 className="mb-3 text-3xl font-bold text-zinc-900 md:text-4xl">
+        <section className="rounded-2xl bg-white p-5 md:p-8">
+          <h1 className="text-2xl font-bold text-zinc-900 md:text-4xl">
             Fonlar
           </h1>
-          <p className="max-w-4xl text-base leading-7 text-zinc-600 md:text-lg">
+
+          <p className="mt-3 max-w-4xl text-sm leading-7 text-zinc-600 md:text-base">
             Yatırım fonları ile ilgili haftalık tercihler, fon getiri analizi,
             fon tarihsel verileri ve fonlara dair içeriklere bu sayfa üzerinden
             toplu şekilde ulaşabilirsiniz. Farklı fon başlıklarını tek sayfada
             görmek isteyen kullanıcılar için daha düzenli ve erişilebilir bir
             yapı sunulmuştur.
           </p>
-        </header>
+        </section>
 
-        <section className="mb-8">
+        <section className="pt-6">
           <ReklamAlani variant="yatay" />
         </section>
 
-        <section className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {fonKutulari.map((item) => (
-            <TrackedLink
-              key={item.href}
-              href={item.href}
-              label={item.title}
-              className="group flex min-h-[320px] flex-col rounded-2xl bg-zinc-50 p-3 transition hover:bg-zinc-100"
-              ariaLabel={item.title}
-            >
-              <div className="relative mb-4 overflow-hidden rounded-2xl bg-zinc-100">
-                <div className="relative aspect-[16/10] w-full">
-                  <img
-                    src={item.image}
-                    alt={item.alt}
-                    className="block h-full w-full object-contain object-center transition duration-300 group-hover:scale-[1.02]"
-                  />
-                </div>
-              </div>
-
-              <div className="flex flex-1 flex-col items-center justify-start px-2 pb-2 text-center">
-                <h2
-                  className={`font-semibold leading-tight text-zinc-900 ${item.titleClassName}`}
-                >
-                  {item.title}
-                </h2>
-
-                <p className="mt-3 text-sm leading-6 text-zinc-600 md:text-base">
-                  {item.desc}
-                </p>
-
-                <p className="mt-3 text-sm leading-6 text-zinc-600 md:text-base">
-                  {item.seoDescription}
-                </p>
-              </div>
-            </TrackedLink>
-          ))}
+        <section className="py-6">
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
+            {fonKutulari.map((item) => (
+              <FonKutusu key={item.href} {...item} />
+            ))}
+          </div>
         </section>
 
-        <section className="mt-8">
-          <ReklamAlani variant="icerik" />
-        </section>
-
-        <section className="mt-10 rounded-2xl bg-white p-5 md:p-7">
+        <section className="rounded-2xl bg-white p-5 md:p-7">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">
             Fonlar sayfasında neler bulunur?
           </h2>
@@ -172,6 +194,10 @@ export default function FonlarPage() {
               yatırım danışmanlığı kapsamında değildir.
             </p>
           </div>
+        </section>
+
+        <section className="pt-6">
+          <ReklamAlani variant="icerik" />
         </section>
 
         <section className="mt-10">
