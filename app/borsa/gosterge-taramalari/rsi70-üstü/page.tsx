@@ -32,7 +32,7 @@ function hisseleriOku() {
       "borsa",
       "gosterge-taramalari",
       "data",
-      "rsı70-üstü.xlsx"
+      "rsi70-üstü.xlsx"
     );
 
     const buffer = fs.readFileSync(dosyaYolu);
