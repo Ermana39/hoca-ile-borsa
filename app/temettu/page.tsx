@@ -60,7 +60,10 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
       : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
 
   return (
-    <section className={`w-full overflow-hidden rounded-2xl ${alanClass}`}>
+    <section
+      aria-label="Reklam alanı"
+      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
+    >
       <div className={`w-full ${alanClass}`} />
     </section>
   );
@@ -113,58 +116,63 @@ function TemettuKutusu({
 
 export default function TemettuPage() {
   return (
-    <main className="min-h-screen bg-white px-4 py-6 md:px-6">
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-6 flex flex-wrap gap-3">
+    <main className="min-h-screen bg-white">
+      <div className="mx-auto max-w-7xl px-4 py-6 md:px-6">
+        <section className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
-            className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
+            className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Ana Sayfa
           </Link>
-        </div>
+        </section>
 
-        <header className="mb-8">
-          <h1 className="mb-3 text-3xl font-bold text-zinc-900 md:text-4xl">
+        <section className="rounded-2xl bg-white p-5 md:p-8">
+          <h1 className="text-2xl font-bold text-zinc-900 md:text-4xl">
             Temettü
           </h1>
-          <p className="max-w-4xl text-base leading-7 text-zinc-600 md:text-lg">
+
+          <p className="mt-3 max-w-4xl text-sm leading-7 text-zinc-600 md:text-base">
             Temettü eğitimi, aylara göre temettü takvimi, temettü hesaplama aracı
             ve temettü verimi hesaplama bölümlerine bu sayfa üzerinden toplu
             şekilde ulaşabilirsiniz. Temettü yatırımını daha düzenli takip etmek
             isteyen kullanıcılar için sade ve erişilebilir bir yapı sunulmuştur.
           </p>
-        </header>
-
-        <div className="mb-8 grid grid-cols-1 gap-3 md:grid-cols-2">
-          <TrackedLink
-            href="/temettu/temettu-hesaplama-araci"
-            label="Temettü Hesaplama Aracı"
-            className="rounded-xl bg-blue-100 px-4 py-4 text-center text-base font-semibold text-zinc-900 transition hover:bg-blue-200"
-          >
-            Temettü Hesaplama Aracı
-          </TrackedLink>
-
-          <TrackedLink
-            href="/temettu/temettu-verimi-hesaplama"
-            label="Temettü Verimi Hesaplama"
-            className="rounded-xl bg-purple-100 px-4 py-4 text-center text-base font-semibold text-zinc-900 transition hover:bg-purple-200"
-          >
-            Temettü Verimi Hesaplama
-          </TrackedLink>
-        </div>
-
-        <section className="mb-8">
-          <ReklamAlani />
         </section>
 
-        <section className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
-          {temettuKutulari.map((item) => (
-            <TemettuKutusu key={item.href} {...item} />
-          ))}
+        <section className="pt-6">
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
+            <TrackedLink
+              href="/temettu/temettu-hesaplama-araci"
+              label="Temettü Hesaplama Aracı"
+              className="rounded-xl bg-blue-100 px-4 py-4 text-center text-base font-semibold text-zinc-900 transition hover:bg-blue-200"
+            >
+              Temettü Hesaplama Aracı
+            </TrackedLink>
+
+            <TrackedLink
+              href="/temettu/temettu-verimi-hesaplama"
+              label="Temettü Verimi Hesaplama"
+              className="rounded-xl bg-purple-100 px-4 py-4 text-center text-base font-semibold text-zinc-900 transition hover:bg-purple-200"
+            >
+              Temettü Verimi Hesaplama
+            </TrackedLink>
+          </div>
         </section>
 
-        <section className="mt-10 rounded-2xl bg-white p-5 md:p-7">
+        <section className="pt-6">
+          <ReklamAlani variant="yatay" />
+        </section>
+
+        <section className="py-6">
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
+            {temettuKutulari.map((item) => (
+              <TemettuKutusu key={item.href} {...item} />
+            ))}
+          </div>
+        </section>
+
+        <section className="rounded-2xl bg-white p-5 md:p-7">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">
             Temettü sayfasında neler bulunur?
           </h2>
@@ -182,17 +190,24 @@ export default function TemettuPage() {
               Özellikle temettü hisseleri, temettü takvimi, temettü veren
               şirketler, temettü verimi ve temettü yatırımına dair temel bilgiler
               arayan kullanıcılar için daha düzenli ve erişilebilir bir yapı
-              sunulması hedeflenmiştir.
+              sunulması hedeflenmiştir. Böylece farklı temettü sayfaları arasında
+              geçiş yapmak daha kolay hale gelir.
+            </p>
+
+            <p>
+              Temettü içeriklerinin tek merkezde toplanması hem kullanıcı
+              deneyimini güçlendirir hem de sayfanın SEO açısından daha güçlü bir
+              konu merkezi olmasına katkı sağlar.
             </p>
 
             <p className="text-zinc-500">
               Bu sayfada yer alan içerikler genel bilgilendirme amacı taşır ve
-              yatırım tavsiyesi değildir.
+              yatırım danışmanlığı kapsamında değildir.
             </p>
           </div>
         </section>
 
-        <section className="mt-8">
+        <section className="pt-6">
           <ReklamAlani variant="icerik" />
         </section>
       </div>
