@@ -11,58 +11,55 @@ type PivotRow = {
   direnc1: number;
   direnc2: number;
   direnc3: number;
+  yorum: string;
 };
 
-const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
-  timeZone: "Europe/Istanbul",
-  day: "2-digit",
-  month: "2-digit",
-  year: "numeric",
-}).format(new Date());
+const guncellemeTarihi = "16.04.2026";
 
 const bist100Pivot = {
   sembol: "BIST100",
-  fark: 1.44,
-  son: 14202.24,
-  pivot: 14000.16,
-  destek1: 13901.12,
-  destek2: 13743.73,
-  destek3: 13644.69,
-  direnc1: 14157.55,
-  direnc2: 14256.59,
-  direnc3: 14413.98,
+  fark: 0.24,
+  son: 14253.05,
+  pivot: 14218.92,
+  destek1: 14081.67,
+  destek2: 13961.09,
+  destek3: 13823.84,
+  direnc1: 14339.5,
+  direnc2: 14476.75,
+  direnc3: 14597.33,
 };
 
 const pivotVerileri: PivotRow[] = [
-  { sembol: "AEFES", fark: 1.67, son: 18.9, pivot: 18.59, destek1: 18.09, destek2: 17.74, destek3: 17.24, direnc1: 18.94, direnc2: 19.44, direnc3: 19.79 },
-  { sembol: "AKBNK", fark: 2.15, son: 78.45, pivot: 76.8, destek1: 75.9, destek2: 74.4, destek3: 73.5, direnc1: 78.3, direnc2: 79.2, direnc3: 80.7 },
-  { sembol: "ASELS", fark: 0.2, son: 411.75, pivot: 410.917, destek1: 392.833, destek2: 370.417, destek3: 352.333, direnc1: 433.333, direnc2: 451.417, direnc3: 473.833 },
-  { sembol: "ASTOR", fark: 0.99, son: 203.7, pivot: 201.7, destek1: 195.5, destek2: 191.8, destek3: 185.6, direnc1: 205.4, direnc2: 211.6, direnc3: 215.3 },
-  { sembol: "BIMAS", fark: 1.71, son: 752.0, pivot: 739.333, destek1: 734.667, destek2: 725.333, destek3: 720.667, direnc1: 748.667, direnc2: 753.333, direnc3: 762.667 },
-  { sembol: "DSTKF", fark: -0.14, son: 2115.0, pivot: 2118.0, destek1: 2036.0, destek2: 1995.0, destek3: 1913.0, direnc1: 2159.0, direnc2: 2241.0, direnc3: 2282.0 },
-  { sembol: "EKGYO", fark: 0.86, son: 21.16, pivot: 20.98, destek1: 20.78, destek2: 20.56, destek3: 20.36, direnc1: 21.2, direnc2: 21.4, direnc3: 21.62 },
-  { sembol: "ENKAI", fark: 4.34, son: 104.6, pivot: 100.25, destek1: 98.8, destek2: 97.3, destek3: 95.85, direnc1: 101.75, direnc2: 103.2, direnc3: 104.7 },
-  { sembol: "EREGL", fark: -0.57, son: 31.46, pivot: 31.64, destek1: 31.06, destek2: 30.12, destek3: 29.54, direnc1: 32.58, direnc2: 33.16, direnc3: 34.1 },
-  { sembol: "FROTO", fark: 0.92, son: 106.1, pivot: 105.133, destek1: 103.967, destek2: 103.033, destek3: 101.867, direnc1: 106.067, direnc2: 107.233, direnc3: 108.167 },
-  { sembol: "GARAN", fark: 1.52, son: 140.0, pivot: 137.9, destek1: 136.7, destek2: 134.7, destek3: 133.5, direnc1: 139.9, direnc2: 141.1, direnc3: 143.1 },
-  { sembol: "GUBRF", fark: 1.76, son: 492.5, pivot: 484.0, destek1: 477.25, destek2: 471.5, destek3: 464.75, direnc1: 489.75, direnc2: 496.5, direnc3: 502.25 },
-  { sembol: "ISCTR", fark: 0.43, son: 14.55, pivot: 14.487, destek1: 14.363, destek2: 14.117, destek3: 13.993, direnc1: 14.733, direnc2: 14.857, direnc3: 15.103 },
-  { sembol: "KCHOL", fark: 1.78, son: 206.3, pivot: 202.7, destek1: 200.4, destek2: 196.7, destek3: 194.4, direnc1: 206.4, direnc2: 208.7, direnc3: 212.4 },
-  { sembol: "KRDMD", fark: -2.05, son: 35.4, pivot: 36.14, destek1: 35.64, destek2: 35.18, destek3: 34.68, direnc1: 36.6, direnc2: 37.1, direnc3: 37.56 },
-  { sembol: "MGROS", fark: 1.2, son: 649.0, pivot: 641.333, destek1: 633.667, destek2: 626.333, destek3: 618.667, direnc1: 648.667, direnc2: 656.333, direnc3: 663.667 },
-  { sembol: "PETKM", fark: -0.42, son: 22.06, pivot: 22.153, destek1: 21.827, destek2: 21.453, destek3: 21.127, direnc1: 22.527, direnc2: 22.853, direnc3: 23.227 },
-  { sembol: "PGSUS", fark: 1.85, son: 187.1, pivot: 183.7, destek1: 182.6, destek2: 181.5, destek3: 180.4, direnc1: 184.8, direnc2: 185.9, direnc3: 187.0 },
-  { sembol: "SAHOL", fark: 1.53, son: 100.5, pivot: 98.983, destek1: 97.967, destek2: 96.833, destek3: 95.817, direnc1: 100.117, direnc2: 101.133, direnc3: 102.267 },
-  { sembol: "SASA", fark: 4.09, son: 2.72, pivot: 2.613, destek1: 2.557, destek2: 2.513, destek3: 2.457, direnc1: 2.657, direnc2: 2.713, direnc3: 2.757 },
-  { sembol: "SISE", fark: 1.28, son: 48.08, pivot: 47.473, destek1: 46.827, destek2: 45.893, destek3: 45.247, direnc1: 48.407, direnc2: 49.053, direnc3: 49.987 },
-  { sembol: "TAVHL", fark: -0.33, son: 330.25, pivot: 331.333, destek1: 323.417, destek2: 318.333, destek3: 310.417, direnc1: 336.417, direnc2: 344.333, direnc3: 349.417 },
-  { sembol: "TCELL", fark: 1.39, son: 116.3, pivot: 114.7, destek1: 113.7, destek2: 111.7, destek3: 110.7, direnc1: 116.7, direnc2: 117.7, direnc3: 119.7 },
-  { sembol: "THYAO", fark: 2.34, son: 324.0, pivot: 316.583, destek1: 314.417, destek2: 312.083, destek3: 309.917, direnc1: 318.917, direnc2: 321.083, direnc3: 323.417 },
-  { sembol: "TOASO", fark: 5.74, son: 298.0, pivot: 281.833, destek1: 279.667, destek2: 275.583, destek3: 273.417, direnc1: 285.917, direnc2: 288.083, direnc3: 292.167 },
-  { sembol: "TRALT", fark: 4.34, son: 45.7, pivot: 43.8, destek1: 43.3, destek2: 42.92, destek3: 42.42, direnc1: 44.18, direnc2: 44.68, direnc3: 45.06 },
-  { sembol: "TTKOM", fark: 1.18, son: 62.7, pivot: 61.967, destek1: 61.433, destek2: 60.517, destek3: 59.983, direnc1: 62.883, direnc2: 63.417, direnc3: 64.333 },
-  { sembol: "TUPRS", fark: 1.33, son: 267.5, pivot: 264.0, destek1: 259.5, destek2: 255.0, destek3: 250.5, direnc1: 268.5, direnc2: 273.0, direnc3: 277.5 },
-  { sembol: "VAKBN", fark: 0.63, son: 34.26, pivot: 34.047, destek1: 33.793, destek2: 33.307, destek3: 33.053, direnc1: 34.533, direnc2: 34.787, direnc3: 35.273 },
+  { sembol: "AEFES", fark: 0.37, son: 18.82, pivot: 18.75, destek1: 18.52, destek2: 18.14, destek3: 17.91, direnc1: 19.13, direnc2: 19.36, direnc3: 19.74, yorum: "Pivot değerinin üstünde seyrediyor." },
+  { sembol: "AKBNK", fark: 0.0, son: 78.9, pivot: 78.9, destek1: 76.7, destek2: 74.95, destek3: 72.75, direnc1: 80.65, direnc2: 82.85, direnc3: 84.6, yorum: "Pivot değerine eşit." },
+  { sembol: "ASELS", fark: 0.38, son: 416.75, pivot: 415.167, destek1: 405.083, destek2: 398.417, destek3: 388.333, direnc1: 421.833, direnc2: 431.917, direnc3: 438.583, yorum: "Pivot değerinin üstünde seyrediyor." },
+  { sembol: "ASTOR", fark: -4.29, son: 195.0, pivot: 203.733, destek1: 200.167, destek2: 196.633, destek3: 193.067, direnc1: 207.267, direnc2: 210.833, direnc3: 214.367, yorum: "İkinci destek seviyesinin altına indi." },
+  { sembol: "BIMAS", fark: 0.0, son: 753.0, pivot: 753.0, destek1: 742.5, destek2: 733.0, destek3: 722.5, direnc1: 762.5, direnc2: 773.0, direnc3: 782.5, yorum: "Pivot değerine eşit." },
+  { sembol: "DSTKF", fark: 1.53, son: 2130.0, pivot: 2098.0, destek1: 2074.0, destek2: 2033.0, destek3: 2009.0, direnc1: 2139.0, direnc2: 2163.0, direnc3: 2204.0, yorum: "Pivot değerinin üstünde seyrediyor." },
+  { sembol: "EKGYO", fark: 0.03, son: 21.2, pivot: 21.193, destek1: 20.867, destek2: 20.573, destek3: 20.247, direnc1: 21.487, direnc2: 21.813, direnc3: 22.107, yorum: "Pivot değerinin üstünde seyrediyor." },
+  { sembol: "ENKAI", fark: -0.48, son: 104.2, pivot: 104.7, destek1: 101.4, destek2: 98.2, destek3: 94.9, direnc1: 107.9, direnc2: 111.2, direnc3: 114.4, yorum: "Pivot değerinin altında seyrediyor." },
+  { sembol: "EREGL", fark: -0.19, son: 31.64, pivot: 31.7, destek1: 30.96, destek2: 30.46, destek3: 29.72, direnc1: 32.2, direnc2: 32.94, direnc3: 33.44, yorum: "Pivot değerinin altında seyrediyor." },
+  { sembol: "FROTO", fark: 0.82, son: 106.8, pivot: 105.933, destek1: 104.267, destek2: 102.433, destek3: 100.767, direnc1: 107.767, direnc2: 109.433, direnc3: 111.267, yorum: "Pivot değerinin üstünde seyrediyor." },
+  { sembol: "GARAN", fark: -1.37, son: 138.8, pivot: 140.733, destek1: 137.267, destek2: 134.533, destek3: 131.067, direnc1: 143.467, direnc2: 146.933, direnc3: 149.667, yorum: "Pivot değerinin altında seyrediyor." },
+  { sembol: "GUBRF", fark: 8.21, son: 529.5, pivot: 489.333, destek1: 484.417, destek2: 476.333, destek3: 471.417, direnc1: 497.417, direnc2: 502.333, direnc3: 510.417, yorum: "Üçüncü direnç seviyesinin üstüne çıktı." },
+  { sembol: "ISCTR", fark: -0.68, son: 14.55, pivot: 14.65, destek1: 14.18, destek2: 13.81, destek3: 13.34, direnc1: 15.02, direnc2: 15.49, direnc3: 15.86, yorum: "Pivot değerinin altında seyrediyor." },
+  { sembol: "KCHOL", fark: 0.27, son: 207.8, pivot: 207.233, destek1: 205.067, destek2: 203.833, destek3: 201.667, direnc1: 208.467, direnc2: 210.633, direnc3: 211.867, yorum: "Pivot değerinin üstünde seyrediyor." },
+  { sembol: "KRDMD", fark: 1.79, son: 36.46, pivot: 35.82, destek1: 34.8, destek2: 34.2, destek3: 33.18, direnc1: 36.42, direnc2: 37.44, direnc3: 38.04, yorum: "İlk direnç seviyesinin üstüne çıktı." },
+  { sembol: "MGROS", fark: 0.84, son: 656.5, pivot: 651.0, destek1: 644.0, destek2: 639.0, destek3: 632.0, direnc1: 656.0, direnc2: 663.0, direnc3: 668.0, yorum: "İlk direnç seviyesinin üstüne çıktı." },
+  { sembol: "PETKM", fark: -0.45, son: 22.0, pivot: 22.1, destek1: 21.76, destek2: 21.46, destek3: 21.12, direnc1: 22.4, direnc2: 22.74, direnc3: 23.04, yorum: "Pivot değerinin altında seyrediyor." },
+  { sembol: "PGSUS", fark: 0.62, son: 188.3, pivot: 187.133, destek1: 185.467, destek2: 183.833, destek3: 182.167, direnc1: 188.767, direnc2: 190.433, direnc3: 192.067, yorum: "Pivot değerinin üstünde seyrediyor." },
+  { sembol: "SAHOL", fark: 0.02, son: 100.6, pivot: 100.583, destek1: 99.267, destek2: 98.033, destek3: 96.717, direnc1: 101.817, direnc2: 103.133, direnc3: 104.367, yorum: "Pivot değerinin üstünde seyrediyor." },
+  { sembol: "SASA", fark: 11.44, son: 2.99, pivot: 2.683, destek1: 2.627, destek2: 2.533, destek3: 2.477, direnc1: 2.777, direnc2: 2.833, direnc3: 2.927, yorum: "Üçüncü direnç seviyesinin üstüne çıktı." },
+  { sembol: "SISE", fark: -0.21, son: 48.22, pivot: 48.32, destek1: 47.56, destek2: 47.04, destek3: 46.28, direnc1: 48.84, direnc2: 49.6, direnc3: 50.12, yorum: "Pivot değerinin altında seyrediyor." },
+  { sembol: "TAVHL", fark: -2.67, son: 321.5, pivot: 330.333, destek1: 325.667, destek2: 321.083, destek3: 316.417, direnc1: 334.917, direnc2: 339.583, direnc3: 344.167, yorum: "İlk destek seviyesinin altına indi." },
+  { sembol: "TCELL", fark: 0.2, son: 117.1, pivot: 116.867, destek1: 115.233, destek2: 114.167, destek3: 112.533, direnc1: 117.933, direnc2: 119.567, direnc3: 120.633, yorum: "Pivot değerinin üstünde seyrediyor." },
+  { sembol: "THYAO", fark: -1.26, son: 319.25, pivot: 323.333, destek1: 320.167, destek2: 316.333, destek3: 313.167, direnc1: 327.167, direnc2: 330.333, direnc3: 334.167, yorum: "İlk destek seviyesinin altına indi." },
+  { sembol: "TOASO", fark: 1.18, son: 299.0, pivot: 295.5, destek1: 289.0, destek2: 280.0, destek3: 273.5, direnc1: 304.5, direnc2: 311.0, direnc3: 320.0, yorum: "Pivot değerinin üstünde seyrediyor." },
+  { sembol: "TRALT", fark: 5.32, son: 47.48, pivot: 45.08, destek1: 43.74, destek2: 41.78, destek3: 40.44, direnc1: 47.04, direnc2: 48.38, direnc3: 50.34, yorum: "İlk direnç seviyesinin üstüne çıktı." },
+  { sembol: "TTKOM", fark: 0.08, son: 62.95, pivot: 62.9, destek1: 62.05, destek2: 61.4, destek3: 60.55, direnc1: 63.55, direnc2: 64.4, direnc3: 65.05, yorum: "Pivot değerinin üstünde seyrediyor." },
+  { sembol: "TUPRS", fark: -2.12, son: 261.25, pivot: 266.917, destek1: 261.333, destek2: 255.167, destek3: 249.583, direnc1: 273.083, direnc2: 278.667, direnc3: 284.833, yorum: "İlk destek seviyesinin altına indi." },
+  { sembol: "VAKBN", fark: -0.79, son: 34.12, pivot: 34.393, destek1: 33.627, destek2: 32.993, destek3: 32.227, direnc1: 35.027, direnc2: 35.793, direnc3: 36.427, yorum: "Pivot değerinin altında seyrediyor." },
+  { sembol: "YKBNK", fark: -1.16, son: 37.58, pivot: 38.02, destek1: 36.78, destek2: 35.88, destek3: 34.64, direnc1: 38.92, direnc2: 40.16, direnc3: 41.06, yorum: "Pivot değerinin altında seyrediyor." },
 ];
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
@@ -89,10 +86,20 @@ function formatNumber(value: number) {
   }).format(value);
 }
 
-function getSatirRenk(row: PivotRow) {
-  if (row.son < row.destek3) return "bg-red-200";
-  if (row.son === row.pivot) return "bg-zinc-200";
-  return row.son >= row.pivot ? "bg-green-100" : "bg-red-100";
+function getDurumClass(yorum: string) {
+  if (
+    yorum.includes("üstünde seyrediyor") ||
+    yorum.includes("İlk direnç seviyesinin üstüne çıktı") ||
+    yorum.includes("Üçüncü direnç seviyesinin üstüne çıktı")
+  ) {
+    return "bg-green-600 text-white";
+  }
+
+  if (yorum.includes("eşit")) {
+    return "bg-zinc-500 text-white";
+  }
+
+  return "bg-red-600 text-white";
 }
 
 export default function PivotAnaliziPage() {
@@ -127,93 +134,87 @@ export default function PivotAnaliziPage() {
           <ReklamAlani variant="yatay" />
         </section>
 
-        <section className="mb-8 overflow-hidden rounded-2xl border border-sky-200 bg-sky-50 shadow-sm">
-          <div className="overflow-x-auto">
-            <table className="min-w-[1200px] w-full border-collapse text-sm text-zinc-900">
-              <thead className="bg-sky-100 text-zinc-800">
-                <tr>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Sembol</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Pivota Göre Fark %</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Son</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Pivot</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Destek 1</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Destek 2</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Destek 3</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Direnç 1</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Direnç 2</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Direnç 3</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-white">
-                  <td className="border border-sky-200 px-3 py-2 font-semibold">{bist100Pivot.sembol}</td>
-                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.fark)}</td>
-                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.son)}</td>
-                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.pivot)}</td>
-                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.destek1)}</td>
-                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.destek2)}</td>
-                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.destek3)}</td>
-                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.direnc1)}</td>
-                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.direnc2)}</td>
-                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.direnc3)}</td>
-                </tr>
-              </tbody>
-            </table>
+        <section className="mb-8 overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
+          <div className="grid gap-px bg-zinc-200 md:grid-cols-8">
+            <div className="bg-zinc-900 px-4 py-3 text-white">
+              <div className="text-xs text-zinc-300">PIVOT</div>
+              <div className="text-xl font-bold">{formatNumber(bist100Pivot.pivot)}</div>
+            </div>
+            <div className="bg-zinc-900 px-4 py-3 text-white">
+              <div className="text-xs text-zinc-300">Destek 1</div>
+              <div className="text-xl font-bold">{formatNumber(bist100Pivot.destek1)}</div>
+            </div>
+            <div className="bg-zinc-900 px-4 py-3 text-white">
+              <div className="text-xs text-zinc-300">Destek 2</div>
+              <div className="text-xl font-bold">{formatNumber(bist100Pivot.destek2)}</div>
+            </div>
+            <div className="bg-zinc-900 px-4 py-3 text-white">
+              <div className="text-xs text-zinc-300">Destek 3</div>
+              <div className="text-xl font-bold">{formatNumber(bist100Pivot.destek3)}</div>
+            </div>
+            <div className="bg-zinc-900 px-4 py-3 text-white">
+              <div className="text-xs text-zinc-300">Pivota Göre Fark %</div>
+              <div className="text-xl font-bold">{formatNumber(bist100Pivot.fark)}</div>
+            </div>
+            <div className="bg-zinc-900 px-4 py-3 text-white">
+              <div className="text-xs text-zinc-300">Direnç 1</div>
+              <div className="text-xl font-bold">{formatNumber(bist100Pivot.direnc1)}</div>
+            </div>
+            <div className="bg-zinc-900 px-4 py-3 text-white">
+              <div className="text-xs text-zinc-300">Direnç 2</div>
+              <div className="text-xl font-bold">{formatNumber(bist100Pivot.direnc2)}</div>
+            </div>
+            <div className="bg-zinc-900 px-4 py-3 text-white">
+              <div className="text-xs text-zinc-300">Direnç 3</div>
+              <div className="text-xl font-bold">{formatNumber(bist100Pivot.direnc3)}</div>
+            </div>
           </div>
         </section>
 
-        <section className="overflow-hidden rounded-2xl border border-sky-200 bg-sky-50 shadow-sm">
+        <section className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
           <div className="overflow-x-auto">
-            <table className="min-w-[1400px] w-full border-collapse text-sm text-zinc-900">
-              <thead className="bg-sky-100 text-zinc-800">
+            <table className="min-w-[1480px] w-full border-collapse text-sm text-zinc-900">
+              <thead className="bg-zinc-900 text-white">
                 <tr>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Sembol</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Pivota Göre Fark %</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Son</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Pivot</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Destek 1</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Destek 2</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Destek 3</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Direnç 1</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Direnç 2</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Direnç 3</th>
+                  <th className="border border-zinc-700 px-3 py-2 text-left">Sembol</th>
+                  <th className="border border-zinc-700 px-3 py-2 text-left">Pivota Göre Fark %</th>
+                  <th className="border border-zinc-700 px-3 py-2 text-left">Son</th>
+                  <th className="border border-zinc-700 px-3 py-2 text-left">Pivot</th>
+                  <th className="border border-zinc-700 px-3 py-2 text-left">Destek 1</th>
+                  <th className="border border-zinc-700 px-3 py-2 text-left">Destek 2</th>
+                  <th className="border border-zinc-700 px-3 py-2 text-left">Destek 3</th>
+                  <th className="border border-zinc-700 px-3 py-2 text-left">Direnç 1</th>
+                  <th className="border border-zinc-700 px-3 py-2 text-left">Direnç 2</th>
+                  <th className="border border-zinc-700 px-3 py-2 text-left">Direnç 3</th>
                 </tr>
               </thead>
 
               <tbody>
                 {pivotVerileri.map((row) => (
-                  <tr key={row.sembol} className={getSatirRenk(row)}>
-                    <td className="border border-sky-200 px-3 py-2 font-semibold">
-                      {row.sembol}
-                    </td>
-                    <td className="border border-sky-200 px-3 py-2">
-                      {formatNumber(row.fark)}
-                    </td>
-                    <td className="border border-sky-200 px-3 py-2">
-                      {formatNumber(row.son)}
-                    </td>
-                    <td className="border border-sky-200 px-3 py-2">
-                      {formatNumber(row.pivot)}
-                    </td>
-                    <td className="border border-sky-200 px-3 py-2">
-                      {formatNumber(row.destek1)}
-                    </td>
-                    <td className="border border-sky-200 px-3 py-2">
-                      {formatNumber(row.destek2)}
-                    </td>
-                    <td className="border border-sky-200 px-3 py-2">
-                      {formatNumber(row.destek3)}
-                    </td>
-                    <td className="border border-sky-200 px-3 py-2">
-                      {formatNumber(row.direnc1)}
-                    </td>
-                    <td className="border border-sky-200 px-3 py-2">
-                      {formatNumber(row.direnc2)}
-                    </td>
-                    <td className="border border-sky-200 px-3 py-2">
-                      {formatNumber(row.direnc3)}
-                    </td>
-                  </tr>
+                  <>
+                    <tr key={row.sembol} className="bg-zinc-50">
+                      <td className="border border-zinc-200 px-3 py-2 font-semibold">{row.sembol}</td>
+                      <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.fark)}</td>
+                      <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.son)}</td>
+                      <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.pivot)}</td>
+                      <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.destek1)}</td>
+                      <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.destek2)}</td>
+                      <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.destek3)}</td>
+                      <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.direnc1)}</td>
+                      <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.direnc2)}</td>
+                      <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.direnc3)}</td>
+                    </tr>
+                    <tr>
+                      <td
+                        colSpan={10}
+                        className={`px-3 py-2 text-center text-sm font-semibold ${getDurumClass(
+                          row.yorum
+                        )}`}
+                      >
+                        {row.yorum}
+                      </td>
+                    </tr>
+                  </>
                 ))}
               </tbody>
             </table>
