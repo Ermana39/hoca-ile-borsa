@@ -32,7 +32,7 @@ export async function GET() {
     sorted.map((item) => ({
       title: item.title,
       href: item.href,
-      time: item.updatedAt.split(" ")[1] || "",
+      time: item.updatedAt, // ✅ TAM TARİH + SAAT
     }))
   );
 }
