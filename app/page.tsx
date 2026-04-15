@@ -108,25 +108,28 @@ function KategoriKutusu({
   );
 }
 
-function YanHaberKutusu({ item }: { item: NewsItem }) {
+function HaberKutusu({ item }: { item: NewsItem }) {
   return (
-    <div className="hidden w-[190px] shrink-0 md:flex">
-      <div className="flex w-full flex-col justify-start rounded-2xl border border-zinc-200 bg-white p-3">
-        <div className="mb-3 overflow-hidden rounded-xl bg-zinc-100">
-          <img
-            src={item.image}
-            alt={item.alt}
-            className="block aspect-[16/10] w-full object-cover"
-          />
-        </div>
-
-        <div className="flex min-h-[72px] items-center justify-center text-center">
-          <div className="text-base font-bold leading-6 text-zinc-800">
-            {item.title}
-          </div>
-        </div>
+    <TrackedLink
+      href={item.href}
+      label={item.title}
+      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white transition hover:bg-zinc-50"
+      ariaLabel={item.title}
+    >
+      <div className="overflow-hidden bg-zinc-100">
+        <img
+          src={item.image}
+          alt={item.alt}
+          className="block aspect-[16/10] w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+        />
       </div>
-    </div>
+
+      <div className="flex flex-1 items-center justify-center p-4 text-center">
+        <h2 className="text-lg font-semibold leading-7 text-zinc-900 md:text-2xl">
+          {item.title}
+        </h2>
+      </div>
+    </TrackedLink>
   );
 }
 
@@ -169,8 +172,6 @@ function SonGuncellemelerBar({
     );
   }
 
-  const akisanListe = [...items, ...items];
-
   return (
     <section className="px-4 pb-6 md:px-6">
       <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
@@ -181,7 +182,7 @@ function SonGuncellemelerBar({
 
           <div className="ticker-wrap relative min-w-0 flex-1 overflow-hidden">
             <div className="ticker-track flex min-w-max items-center gap-6 px-4 py-3">
-              {akisanListe.map((item, index) => (
+              {items.map((item, index) => (
                 <TrackedLink
                   key={`${item.href}-${item.time}-${index}`}
                   href={item.href}
@@ -201,7 +202,9 @@ function SonGuncellemelerBar({
 
       <style jsx>{`
         .ticker-track {
-          animation: ticker-scroll 35s linear infinite;
+          width: max-content;
+          padding-left: 100%;
+          animation: ticker-scroll 55s linear infinite;
         }
 
         .ticker-wrap:hover .ticker-track {
@@ -213,7 +216,7 @@ function SonGuncellemelerBar({
             transform: translateX(0);
           }
           100% {
-            transform: translateX(-50%);
+            transform: translateX(-100%);
           }
         }
       `}</style>
@@ -319,7 +322,6 @@ function FooterLinkColumn({
 
 export default function HomePage() {
   const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
-  const [currentIndex, setCurrentIndex] = useState(0);
   const [guncellemeler, setGuncellemeler] = useState<GuncellemeItem[]>([]);
   const [guncellemelerLoading, setGuncellemelerLoading] = useState(true);
 
@@ -353,26 +355,6 @@ export default function HomePage() {
     loadNews();
     loadUpdates();
   }, []);
-
-  const prevNews = () => {
-    if (newsItems.length === 0) return;
-    setCurrentIndex((prev) => (prev - 1 + newsItems.length) % newsItems.length);
-  };
-
-  const nextNews = () => {
-    if (newsItems.length === 0) return;
-    setCurrentIndex((prev) => (prev + 1) % newsItems.length);
-  };
-
-  const currentNews = newsItems.length > 0 ? newsItems[currentIndex] : null;
-  const prevItem =
-    newsItems.length > 0
-      ? newsItems[(currentIndex - 1 + newsItems.length) % newsItems.length]
-      : null;
-  const nextItem =
-    newsItems.length > 0
-      ? newsItems[(currentIndex + 1) % newsItems.length]
-      : null;
 
   return (
     <main className="min-h-screen bg-white">
@@ -411,50 +393,11 @@ export default function HomePage() {
               </h1>
             </div>
 
-            {currentNews ? (
-              <div className="flex items-center justify-between gap-3">
-                <button
-                  type="button"
-                  onClick={prevNews}
-                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-zinc-300 bg-white text-2xl font-bold text-zinc-700 hover:bg-zinc-100 md:h-12 md:w-12"
-                  aria-label="Önceki haber"
-                >
-                  ←
-                </button>
-
-                <div className="flex flex-1 items-stretch justify-center gap-4 overflow-hidden">
-                  {prevItem && <YanHaberKutusu item={prevItem} />}
-
-                  <TrackedLink
-                    href={currentNews.href}
-                    label={currentNews.title}
-                    className="flex min-h-[220px] flex-1 flex-col items-center justify-center rounded-2xl border border-zinc-200 bg-white p-6 text-center hover:bg-zinc-50"
-                  >
-                    <div className="mb-6 w-full max-w-[320px] overflow-hidden rounded-xl bg-zinc-100">
-                      <img
-                        src={currentNews.image}
-                        alt={currentNews.alt}
-                        className="block aspect-[16/10] w-full object-cover"
-                      />
-                    </div>
-
-                    <h2 className="max-w-4xl text-2xl font-semibold leading-tight text-zinc-900 md:text-4xl">
-                      {currentNews.title}
-                    </h2>
-                  </TrackedLink>
-
-                  {nextItem && <YanHaberKutusu item={nextItem} />}
-                </div>
-
-                <button
-                  type="button"
-                  onClick={nextNews}
-                  className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-zinc-300 bg-white text-2xl font-bold text-zinc-700 hover:bg-zinc-100 md:h-12 md:w-12"
-                  aria-label="Sonraki haber"
-                >
-                  →
-
-                </button>
+            {newsItems.length > 0 ? (
+              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+                {newsItems.map((item) => (
+                  <HaberKutusu key={item.id || item.href} item={item} />
+                ))}
               </div>
             ) : (
               <div className="rounded-2xl border border-zinc-200 bg-white p-6 text-center text-zinc-500">
