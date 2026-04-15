@@ -8,91 +8,91 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Günlük Borsa Özeti",
     href: "/borsa/gunluk-borsa-ozeti",
-    updatedAt: "2026-04-14T18:25:00",
+    updatedAt: "14.04.2026 18:25",
   },
   {
     title: "Dikkat Çekenler",
     href: "/borsa/dikkat-cekenler",
-    updatedAt: "2026-04-14T19:36:00",
+    updatedAt: "14.04.2026 19:36",
   },
   {
     title: "Dip Zirve Analizi",
     href: "/borsa/dip-zirve-analizi",
-    updatedAt: "2026-04-14T19:36:00",
+    updatedAt: "14.04.2026 19:36",
   },
   {
-    title: "Eğitim Videoları",
+    title: "Eğitim Videolerı",
     href: "/borsa/egitim-videolari",
-    updatedAt: "2026-04-14T12:36:00",
+    updatedAt: "14.04.2026 12:36",
   },
   {
     title: "Formasyonlar",
     href: "/borsa/formasyonlar",
-    updatedAt: "2026-04-14T19:36:00",
+    updatedAt: "14.04.2026 19:36",
   },
-  {
+    {
     title: "Geri Alım Programları",
     href: "/borsa/geri-alim-programlari",
-    updatedAt: "2026-04-14T19:36:00",
+    updatedAt: "14.04.2026 19:36",
   },
   {
     title: "Gösterge Taramaları",
     href: "/borsa/gosterge-taramalari",
-    updatedAt: "2026-04-14T19:00:00",
+    updatedAt: "14.04.2026 19:00",
   },
-  {
+   {
     title: "Grafik Analiz",
     href: "/borsa/grafik-analiz",
-    updatedAt: "2026-04-14T19:00:00",
+    updatedAt: "14.04.2026 19:00",
   },
-  {
+   {
     title: "Hacim Artışı Analizi",
     href: "/borsa/hacim-artisi-analizi",
-    updatedAt: "2026-04-14T19:00:00",
+    updatedAt: "14.04.2026 19:00",
   },
   {
     title: "Pivot Analizi",
     href: "/borsa/pivot-analizi",
-    updatedAt: "2026-04-14T19:36:00",
+    updatedAt: "14.04.2026 19:36",
   },
   {
     title: "Tedbirli Hisseler",
     href: "/borsa/tedbirli-hisseler",
-    updatedAt: "2026-04-14T19:24:00",
+    updatedAt: "14.04.2026 19:24",
   },
   {
     title: "Halka Arz",
     href: "/halka-arz",
-    updatedAt: "2026-04-15T13:39:00",
+    updatedAt: "15.04.2026 10:18",
   },
   {
     title: "Onaylı İzahnameler",
     href: "/halka-arz/onayli-izahnameler",
-    updatedAt: "2026-04-12T18:41:00",
+    updatedAt: "12.04.2026 18:41",
   },
-  {
+   {
     title: "Taslak İzahnameler",
     href: "/halka-arz/taslak-izahnameler",
-    updatedAt: "2026-04-13T18:41:00",
+    updatedAt: "13.04.2026 18:41",
   },
-  {
-    title: "Fon Haftalık Tercihler",
+   {
+    title: "Fonların Haftalık En Çok Tercih Ettiği Hisseler",
     href: "/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler",
-    updatedAt: "2026-04-14T18:48:00",
+    updatedAt: "14.04.2026 18:48",
   },
-  {
+    {
     title: "Fon Getiri Analizi",
     href: "/fonlar/getiri",
-    updatedAt: "2026-04-14T18:48:00",
+    updatedAt: "14.04.2026 18:48",
   },
-  {
+    {
     title: "Fon Tarihsel Veriler",
     href: "/fonlar/tarihsel-veriler",
-    updatedAt: "2026-04-14T18:48:00",
+    updatedAt: "14.04.2026 18:48",
   },
-  {
+    {
     title: "Günlük Faiz Oranları",
     href: "/mevduat-kredi-faizleri",
-    updatedAt: "2026-04-15T13:15:00",
+    updatedAt: "14.04.2026 18:48",
   },
 ];
