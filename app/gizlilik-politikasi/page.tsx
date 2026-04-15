@@ -1,5 +1,10 @@
 import Link from "next/link";
-
+export const metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 function ReklamAlani() {
   return (
     <section

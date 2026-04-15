@@ -1,6 +1,11 @@
 import Link from "next/link";
 import ContactForm from "@/components/contact-form";
-
+export const metadata = {
+  robots: {
+    index: false,
+    follow: true,
+  },
+};
 function ReklamAlani() {
   return (
     <section
