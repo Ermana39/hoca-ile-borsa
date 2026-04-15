@@ -25,7 +25,7 @@ const analizKutulari = [
     image: "/dip-zirve-analizi-yatay.png",
     alt: "Dip Zirve Analizi görseli",
     description:
-      "Hisselerin dip ve zirve bölgelerine uzaklığını takip ederek teknik görünümü yorumlamanıza yardımcı olur.",
+      "Hisselerin dip ve zirve bölgelerine uzaklığını takip ederek teknik görünümü daha hızlı yorumlamanıza yardımcı olur.",
   },
   {
     title: "Eğitim Videoları",
@@ -33,7 +33,7 @@ const analizKutulari = [
     image: "/egitim-videolari-yatay.png",
     alt: "Eğitim Videoları görseli",
     description:
-      "Borsa ve teknik analiz eğitim içeriklerine ulaşabilirsiniz.",
+      "Borsa, halka arz, teknik analiz ve finans başlıklarında hazırlanan eğitim içeriklerine ulaşabilirsiniz.",
   },
   {
     title: "Formasyonlar",
@@ -41,7 +41,7 @@ const analizKutulari = [
     image: "/formasyonlar-yatay.png",
     alt: "Formasyonlar görseli",
     description:
-      "Grafik formasyonlarına göre öne çıkan hisseleri inceleyin.",
+      "Grafik formasyonlarına göre öne çıkan hisseleri liste halinde inceleyerek teknik görünümü takip edebilirsiniz.",
   },
   {
     title: "Geri Alım Programları",
@@ -49,7 +49,7 @@ const analizKutulari = [
     image: "/geri-alim-programlari-yatay.png",
     alt: "Geri Alım Programları görseli",
     description:
-      "Şirketlerin pay geri alım programlarını takip edin.",
+      "Şirketlerin pay geri alım programlarını ve piyasaya olası etkilerini düzenli şekilde izleyebilirsiniz.",
   },
   {
     title: "Gösterge Taramaları",
@@ -57,7 +57,7 @@ const analizKutulari = [
     image: "/gosterge-taramalari-yatay.png",
     alt: "Gösterge Taramaları görseli",
     description:
-      "RSI ve teknik göstergelere göre hisse taramaları.",
+      "RSI, trend ve teknik filtrelere göre hazırlanmış hisse taramaları ile belirli kriterleri karşılayan hisseleri görün.",
   },
   {
     title: "Grafik Analiz",
@@ -65,7 +65,7 @@ const analizKutulari = [
     image: "/grafik-analiz-yatay.png",
     alt: "Grafik Analiz görseli",
     description:
-      "Destek-direnç ve teknik yorumları takip edin.",
+      "Hisselere ait güncel grafik yorumları, destek-direnç bölgeleri ve kısa teknik değerlendirmeleri takip edin.",
   },
   {
     title: "Hacim Artışı Analizi",
@@ -73,7 +73,7 @@ const analizKutulari = [
     image: "/hacim-artisi-analizi-yatay.png",
     alt: "Hacim Artışı Analizi görseli",
     description:
-      "Hacim artışı olan hisseleri tespit edin.",
+      "İşlem hacmindeki artışı izleyerek piyasada ilginin yoğunlaştığı hisseleri daha kolay fark edebilirsiniz.",
   },
   {
     title: "Yeni İş Anlaşmaları",
@@ -81,7 +81,7 @@ const analizKutulari = [
     image: "/yeni-is-anlasmalari-yatay.png",
     alt: "Yeni İş Anlaşmaları görseli",
     description:
-      "Şirketlerin yeni iş anlaşmalarını inceleyin.",
+      "Şirketlerin açıkladığı yeni iş ilişkileri ve sözleşmelerin hisseler üzerindeki etkisini takip etmeye yardımcı olur.",
   },
   {
     title: "Pivot Analizi",
@@ -89,7 +89,7 @@ const analizKutulari = [
     image: "/pivot-analizi-yatay.png",
     alt: "Pivot Analizi görseli",
     description:
-      "Pivot, destek ve direnç seviyelerini inceleyin.",
+      "Pivot, destek ve direnç seviyelerine göre hisselerin teknik görünümünü tablo halinde inceleyebilirsiniz.",
   },
   {
     title: "Tedbirli Hisseler",
@@ -97,7 +97,7 @@ const analizKutulari = [
     image: "/tedbirli-hisseler-yatay.png",
     alt: "Tedbirli Hisseler görseli",
     description:
-      "Tedbir kapsamındaki hisseleri takip edin.",
+      "Tedbir kapsamındaki hisseleri takip ederek işlem öncesi daha dikkatli ve kontrollü karar verebilirsiniz.",
   },
 ];
 
@@ -120,17 +120,24 @@ export default function BorsaPage() {
       <div className="mx-auto max-w-7xl">
 
         <div className="mb-6 flex flex-wrap gap-3">
-          <Link href="/" className="rounded-xl border border-zinc-300 px-4 py-2 text-sm font-semibold">
+          <Link
+            href="/"
+            className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
+          >
             Ana Sayfa
           </Link>
         </div>
 
         <header className="mb-8">
-          <h1 className="mb-3 text-3xl font-bold text-zinc-900">
+          <h1 className="mb-3 text-3xl font-bold text-zinc-900 md:text-4xl">
             Borsa Analiz
           </h1>
-          <p className="text-zinc-600">
-            Tüm analiz içerikleri tek sayfada.
+          <p className="max-w-4xl text-base leading-7 text-zinc-600 md:text-lg">
+            Borsa analiz içeriklerine bu sayfa üzerinden toplu şekilde
+            ulaşabilirsiniz. Günlük borsa özeti, grafik analiz, gösterge
+            taramaları, pivot analizi, dip zirve analizi, hacim artışı analizi,
+            geri alım programları ve diğer teknik başlıklar burada bir araya
+            getirilmiştir.
           </p>
         </header>
 
@@ -146,24 +153,54 @@ export default function BorsaPage() {
               label={item.title}
               className="group flex min-h-[320px] flex-col rounded-2xl bg-zinc-50 p-3 transition hover:bg-zinc-100"
             >
-              <div className="mb-4 overflow-hidden rounded-2xl">
+              <div className="relative mb-4 overflow-hidden rounded-2xl">
                 <div className="relative aspect-[16/10] w-full">
-                  <Image src={item.image} alt={item.alt} fill className="object-cover" />
+                  <Image
+                    src={item.image}
+                    alt={item.alt}
+                    fill
+                    className="object-cover transition duration-300 group-hover:scale-[1.03]"
+                  />
                 </div>
               </div>
 
-              <div className="text-center">
-                <h2 className="text-xl font-semibold">{item.title}</h2>
-                <p className="mt-3 text-sm text-zinc-600">{item.description}</p>
+              <div className="flex flex-1 flex-col items-center text-center px-2 pb-2">
+                <h2 className="text-xl font-semibold text-zinc-900 md:text-2xl">
+                  {item.title}
+                </h2>
+                <p className="mt-3 text-sm text-zinc-600 md:text-base">
+                  {item.description}
+                </p>
               </div>
             </TrackedLink>
           ))}
         </section>
 
-        <section className="mt-10 rounded-2xl bg-white p-5">
-          <h2 className="text-2xl font-bold text-zinc-900">
-            Borsa analiz sayfası
+        <section className="mt-10 rounded-2xl bg-white p-5 md:p-7">
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+            Borsa analiz sayfasında neler bulunur?
           </h2>
+
+          <div className="space-y-4 text-sm leading-7 text-zinc-700 md:text-base">
+            <p>
+              Bu sayfa, Borsa İstanbul ile ilgili farklı analiz başlıklarını tek
+              yerde toplamak amacıyla hazırlanmıştır. Kullanıcılar günlük borsa
+              özeti, teknik analiz, hisse taramaları, pivot seviyeleri, dip zirve
+              görünümü, hacim artışı ve yeni iş anlaşmaları gibi farklı veri
+              başlıklarına tek ekrandan ulaşabilir.
+            </p>
+
+            <p>
+              Özellikle borsa analiz, hisse analizi, teknik analiz, BIST hisse
+              filtreleri, gösterge taramaları ve güncel borsa verileri arayan
+              kullanıcılar için daha düzenli ve erişilebilir bir yapı sunulması
+              hedeflenmiştir.
+            </p>
+
+            <p className="text-zinc-500">
+              Bu sayfada yer alan içerikler yatırım tavsiyesi değildir.
+            </p>
+          </div>
         </section>
 
         <section className="mt-8">

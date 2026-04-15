@@ -38,7 +38,7 @@ const temettuKutulari = [
   {
     title: "Temmuz Ayı Temettü Verenler",
     href: "/temettu/temmuz-ayi-temettu-takvimi",
-    image: "/temettu-temmuz-ayi-temettu-verenler-yatay.png",
+    image: "/temmuz-ayi-temettu-verenler-yatay.png",
     alt: "Temmuz Ayı Temettü Verenler görseli",
     description:
       "Temmuz ayında temettü veren şirketleri görüntüleyerek yaz dönemindeki temettü fırsatlarını takip edebilirsiniz.",
@@ -70,6 +70,7 @@ export default function TemettuPage() {
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-7xl">
+
         <div className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
@@ -83,20 +84,28 @@ export default function TemettuPage() {
           <h1 className="mb-3 text-3xl font-bold text-zinc-900 md:text-4xl">
             Temettü
           </h1>
+          <p className="max-w-4xl text-base leading-7 text-zinc-600 md:text-lg">
+            Temettü eğitimi, aylara göre temettü takvimi, temettü hesaplama aracı
+            ve temettü verimi hesaplama bölümlerine bu sayfa üzerinden toplu
+            şekilde ulaşabilirsiniz. Temettü yatırımını daha düzenli takip etmek
+            isteyen kullanıcılar için sade ve erişilebilir bir yapı sunulmuştur.
+          </p>
         </header>
 
         {/* ÜST KUTULAR */}
         <div className="mb-8 grid grid-cols-1 gap-3 md:grid-cols-2">
           <TrackedLink
             href="/temettu/temettu-hesaplama-araci"
-            className="rounded-xl bg-blue-100 px-4 py-4 text-center font-semibold hover:bg-blue-200"
+            label="Temettü Hesaplama Aracı"
+            className="rounded-xl bg-blue-100 px-4 py-4 text-center text-base font-semibold text-zinc-900 hover:bg-blue-200"
           >
             Temettü Hesaplama Aracı
           </TrackedLink>
 
           <TrackedLink
             href="/temettu/temettu-verimi-hesaplama"
-            className="rounded-xl bg-purple-100 px-4 py-4 text-center font-semibold hover:bg-purple-200"
+            label="Temettü Verimi Hesaplama"
+            className="rounded-xl bg-purple-100 px-4 py-4 text-center text-base font-semibold text-zinc-900 hover:bg-purple-200"
           >
             Temettü Verimi Hesaplama
           </TrackedLink>
@@ -107,11 +116,12 @@ export default function TemettuPage() {
         </section>
 
         {/* ANA KARTLAR */}
-        <section className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        <section className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
           {temettuKutulari.map((item) => (
             <TrackedLink
               key={item.href}
               href={item.href}
+              label={item.title}
               className="group flex min-h-[320px] flex-col rounded-2xl bg-zinc-50 p-3 hover:bg-zinc-100"
             >
               <div className="mb-4 overflow-hidden rounded-2xl">
@@ -130,14 +140,38 @@ export default function TemettuPage() {
           ))}
         </section>
 
-        {/* ALT KUTU */}
-        <section className="mt-10 rounded-2xl bg-white p-5">
-          <h2 className="text-2xl font-bold">Temettü sayfası</h2>
+        {/* ALT AÇIKLAMA */}
+        <section className="mt-10 rounded-2xl bg-white p-5 md:p-7">
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+            Temettü sayfasında neler bulunur?
+          </h2>
+
+          <div className="space-y-4 text-sm text-zinc-700 md:text-base">
+            <p>
+              Bu sayfa, temettü ile ilgili farklı başlıkları tek yerde toplamak
+              amacıyla hazırlanmıştır. Kullanıcılar temettü eğitimi, temettü
+              takvimi, aylara göre temettü veren şirketler, temettü hesaplama
+              aracı ve temettü verimi hesaplama gibi başlıklara bu sayfadan hızlı
+              şekilde ulaşabilir.
+            </p>
+
+            <p>
+              Özellikle temettü hisseleri, temettü takvimi, temettü veren
+              şirketler, temettü verimi ve temettü yatırımına dair temel bilgiler
+              arayan kullanıcılar için daha düzenli ve erişilebilir bir yapı
+              sunulması hedeflenmiştir.
+            </p>
+
+            <p className="text-zinc-500">
+              Bu sayfada yer alan içerikler genel bilgilendirme amacı taşır ve yatırım tavsiyesi değildir.
+            </p>
+          </div>
         </section>
 
         <section className="mt-8">
           <ReklamAlani variant="icerik" />
         </section>
+
       </div>
     </main>
   );
