@@ -191,8 +191,8 @@ export default function PivotAnaliziPage() {
 
               <tbody>
                 {pivotVerileri.map((row) => (
-                  <>
-                    <tr key={row.sembol} className="bg-zinc-50">
+                  <tbody key={row.sembol}>
+                    <tr className="bg-zinc-50">
                       <td className="border border-zinc-200 px-3 py-2 font-semibold">{row.sembol}</td>
                       <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.fark)}</td>
                       <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.son)}</td>
@@ -214,7 +214,7 @@ export default function PivotAnaliziPage() {
                         {row.yorum}
                       </td>
                     </tr>
-                  </>
+                  </tbody>
                 ))}
               </tbody>
             </table>
@@ -223,6 +223,41 @@ export default function PivotAnaliziPage() {
 
         <section className="mt-8">
           <ReklamAlani variant="icerik" />
+        </section>
+
+        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+            Pivot Analizi Hakkında
+          </h2>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Pivot analizi sayfası, Borsa İstanbul’da işlem gören hisselerin günlük
+            pivot, destek ve direnç seviyelerini takip etmek isteyen yatırımcılar
+            için hazırlanmıştır. Bu sayfada hisselerin pivot noktasına göre mevcut
+            fiyat konumu, destek seviyeleri ve direnç seviyeleri detaylı şekilde
+            incelenebilir.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Pivot noktaları, teknik analizde gün içi yön tayini ve önemli fiyat
+            bölgelerini belirlemek için sık kullanılan göstergeler arasında yer alır.
+            Hisselerin pivot seviyesinin üstünde veya altında işlem görmesi,
+            yatırımcılar tarafından kısa vadeli trend hakkında önemli bir sinyal
+            olarak değerlendirilir.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Destek ve direnç seviyeleri sayesinde fiyatın hangi bölgelerde tepki
+            verebileceği daha net görülebilir. Bu sayfadaki pivot analiz tablosu,
+            hem BIST 100 endeksi hem de hisse bazlı teknik görünüm takibi yapmak
+            isteyen kullanıcılar için hızlı ve pratik bir referans sunar.
+          </p>
+
+          <p className="leading-7 text-zinc-700">
+            Güncel pivot seviyeleri, destek direnç noktaları, hisse bazlı teknik
+            görünüm analizleri ve Borsa İstanbul pivot tablosu için bu sayfayı
+            düzenli olarak takip edebilirsiniz.
+          </p>
         </section>
       </div>
     </main>

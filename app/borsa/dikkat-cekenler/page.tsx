@@ -34,6 +34,7 @@ export default function DikkatCekenlerPage() {
           >
             Ana Sayfa
           </Link>
+
           <Link
             href="/borsa"
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
@@ -46,7 +47,9 @@ export default function DikkatCekenlerPage() {
           <ReklamAlani variant="yatay" />
         </section>
 
-        <h1 className="mb-6 text-3xl font-bold text-zinc-900">Dikkat Çekenler</h1>
+        <h1 className="mb-6 text-3xl font-bold text-zinc-900">
+          Dikkat Çekenler
+        </h1>
 
         <div className="space-y-3">
           {haberler.map((item) => (
@@ -62,6 +65,41 @@ export default function DikkatCekenlerPage() {
 
         <section className="mt-8">
           <ReklamAlani variant="icerik" />
+        </section>
+
+        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+            Dikkat Çekenler Hakkında
+          </h2>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Dikkat çekenler sayfası, Borsa İstanbul ve finans piyasalarında öne
+            çıkan gelişmeleri hızlı şekilde takip etmek isteyen kullanıcılar için
+            hazırlanmıştır. Bu sayfada yatırımcıların ilgisini çeken fonlar,
+            hisseler, piyasa hareketleri ve güncel fırsatlar tek alanda
+            listelenmektedir.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Gün içerisinde yükselişiyle öne çıkan varlıklar, işlem hacmi artan
+            hisseler, dikkat çeken fon performansları ve piyasada konuşulan önemli
+            başlıklar yatırım kararlarında yol gösterici olabilir. Bu nedenle
+            güncel fırsatları takip etmek isteyen kullanıcılar için dikkat çekenler
+            bölümü önemli bir kaynak sunar.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Borsa yatırımcıları için hızlı bilgi akışı büyük önem taşır. Bu sayfa
+            sayesinde öne çıkan gelişmeleri tek ekranda görebilir, piyasadaki
+            fırsatları daha erken fark ederek kendi yatırım stratejinize göre
+            değerlendirme yapabilirsiniz.
+          </p>
+
+          <p className="leading-7 text-zinc-700">
+            Güncel borsa haberleri, dikkat çeken fonlar, öne çıkan hisseler,
+            yatırım fırsatları ve piyasadaki önemli gelişmeler için bu sayfayı
+            düzenli olarak takip edebilirsiniz.
+          </p>
         </section>
       </div>
     </main>

@@ -2,12 +2,14 @@ import fs from "fs";
 import path from "path";
 import Link from "next/link";
 import * as XLSX from "xlsx";
+
 const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
   timeZone: "Europe/Istanbul",
   day: "2-digit",
   month: "2-digit",
   year: "numeric",
 }).format(new Date());
+
 type TedbirRow = {
   sembol: string;
   fiyat: number | null;
@@ -193,9 +195,11 @@ export default function TedbirliHisselerPage() {
         <p className="mb-6 text-base text-zinc-600">
           Tedbirli Hisseleri Bu Sayfadan Takip Edebelirsiniz.
         </p>
-<div className="mb-8 text-sm font-semibold text-zinc-700">
-  Güncelleme Tarihi: {guncellemeTarihi}
-</div>
+
+        <div className="mb-8 text-sm font-semibold text-zinc-700">
+          Güncelleme Tarihi: {guncellemeTarihi}
+        </div>
+
         <section className="mb-8">
           <ReklamAlani variant="yatay" />
         </section>
@@ -281,6 +285,42 @@ export default function TedbirliHisselerPage() {
 
         <section className="mt-8">
           <ReklamAlani variant="icerik" />
+        </section>
+
+        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+            Tedbirli Hisseler Hakkında
+          </h2>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Tedbirli hisseler sayfası, Borsa İstanbul’da çeşitli piyasa tedbirleri
+            uygulanan hisseleri takip etmek isteyen yatırımcılar için hazırlanmıştır.
+            Bu sayfada brüt takas, açığa satış yasağı, kredili işlem yasağı, piyasa
+            emri kısıtı ve emir iptal azaltma tedbiri gibi uygulamalara tabi olan
+            hisseleri toplu şekilde inceleyebilirsiniz.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Borsada tedbir kararı uygulanan hisseler, genellikle yüksek volatilite,
+            olağandışı fiyat hareketleri veya piyasa düzeni açısından dikkat çeken
+            durumlar sonrasında öne çıkar. Bu nedenle tedbirli hisseler listesi,
+            işlem yapmadan önce risk değerlendirmesi yapmak isteyen yatırımcılar
+            için önemli bir referans niteliği taşır.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Sayfada yer alan başlangıç ve bitiş tarihleri sayesinde tedbir süresini,
+            uygulanan kısıt türleri sayesinde de ilgili hisse üzerindeki işlem
+            kurallarını kolayca görebilirsiniz. Böylece yatırımcılar tedbirli
+            hisselerde işlem yaparken hangi şartların geçerli olduğunu daha net
+            anlayabilir.
+          </p>
+
+          <p className="leading-7 text-zinc-700">
+            Güncel tedbirli hisseler listesi, BIST piyasa tedbirleri, brüt takas
+            uygulanan hisseler, açığa satış yasağı bulunan hisseler ve detaylı
+            borsa takip ekranları için bu sayfayı düzenli olarak takip edebilirsiniz.
+          </p>
         </section>
       </div>
     </main>

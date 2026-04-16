@@ -2,12 +2,14 @@ import fs from "fs";
 import path from "path";
 import Link from "next/link";
 import * as XLSX from "xlsx";
+
 const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
   timeZone: "Europe/Istanbul",
   day: "2-digit",
   month: "2-digit",
   year: "numeric",
 }).format(new Date());
+
 type GeriAlimSatiri = {
   sembol: string;
   ykkTarihi: string;
@@ -31,7 +33,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   return (
     <section
       aria-label="Reklam alanı"
-     className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
+      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
     >
       <div className={`w-full ${alanClass}`} />
     </section>
@@ -123,18 +125,31 @@ function verileriOku(): GeriAlimSatiri[] {
     const headers = Object.keys(rows[0] || {});
 
     const sembolKolonu =
-      kolonBul(headers, ["sembol", "kod", "hisse", "ticker", "symbol"]) || headers[0];
+      kolonBul(headers, ["sembol", "kod", "hisse", "ticker", "symbol"]) ||
+      headers[0];
 
     const ykkTarihiKolonu =
-      kolonBul(headers, ["ykk tarihi", "ykk tarihi", "karar tarihi", "tarih"]) || headers[1] || "";
+      kolonBul(headers, ["ykk tarihi", "karar tarihi", "tarih"]) ||
+      headers[1] ||
+      "";
 
     const geriAlinanAdetKolonu =
-      kolonBul(headers, ["geri alinan adet", "geri alınan adet", "alinan adet", "geri alım adet"]) ||
+      kolonBul(headers, [
+        "geri alinan adet",
+        "geri alınan adet",
+        "alinan adet",
+        "geri alım adet",
+      ]) ||
       headers[2] ||
       "";
 
     const alinacakAdetKolonu =
-      kolonBul(headers, ["alinacak adet", "alınacak adet", "program adet", "hedef adet"]) ||
+      kolonBul(headers, [
+        "alinacak adet",
+        "alınacak adet",
+        "program adet",
+        "hedef adet",
+      ]) ||
       headers[3] ||
       "";
 
@@ -144,17 +159,32 @@ function verileriOku(): GeriAlimSatiri[] {
       "";
 
     const geriAlinanHacimKolonu =
-      kolonBul(headers, ["geri alinan hacim", "geri alınan hacim", "alinan hacim", "tutar"]) ||
+      kolonBul(headers, [
+        "geri alinan hacim",
+        "geri alınan hacim",
+        "alinan hacim",
+        "tutar",
+      ]) ||
       headers[5] ||
       "";
 
     const alinacakOranKolonu =
-      kolonBul(headers, ["alinacak oran", "alınacak oran", "hedef oran", "program oran"]) ||
+      kolonBul(headers, [
+        "alinacak oran",
+        "alınacak oran",
+        "hedef oran",
+        "program oran",
+      ]) ||
       headers[6] ||
       "";
 
     const alinanOranKolonu =
-      kolonBul(headers, ["alinan oran", "alınan oran", "geri alinan oran", "geri alınan oran"]) ||
+      kolonBul(headers, [
+        "alinan oran",
+        "alınan oran",
+        "geri alinan oran",
+        "geri alınan oran",
+      ]) ||
       headers[7] ||
       "";
 
@@ -164,12 +194,22 @@ function verileriOku(): GeriAlimSatiri[] {
       "";
 
     const alisOrtFiyatKolonu =
-      kolonBul(headers, ["alis ort fiyat", "alış ort fiyat", "ortalama fiyat", "alis ort. fiyat"]) ||
+      kolonBul(headers, [
+        "alis ort fiyat",
+        "alış ort fiyat",
+        "ortalama fiyat",
+        "alis ort. fiyat",
+      ]) ||
       headers[9] ||
       "";
 
     const sonIslemTarihiKolonu =
-      kolonBul(headers, ["son islem tarihi", "son işlem tarihi", "islem tarihi", "işlem tarihi"]) ||
+      kolonBul(headers, [
+        "son islem tarihi",
+        "son işlem tarihi",
+        "islem tarihi",
+        "işlem tarihi",
+      ]) ||
       headers[10] ||
       "";
 
@@ -215,13 +255,17 @@ export default function GeriAlimProgramlariPage() {
           </Link>
         </div>
 
-        <h1 className="mb-2 text-3xl font-bold text-zinc-900">Geri Alım Programları</h1>
+        <h1 className="mb-2 text-3xl font-bold text-zinc-900">
+          Geri Alım Programları
+        </h1>
         <p className="mb-8 max-w-3xl text-base text-zinc-600">
           Şirketlerin Geri Alım Programları
         </p>
-<div className="mb-8 text-sm font-semibold text-zinc-700">
-  Güncelleme Tarihi: {guncellemeTarihi}
-</div>
+
+        <div className="mb-8 text-sm font-semibold text-zinc-700">
+          Güncelleme Tarihi: {guncellemeTarihi}
+        </div>
+
         <section className="mb-8">
           <ReklamAlani variant="yatay" />
         </section>
@@ -232,16 +276,36 @@ export default function GeriAlimProgramlariPage() {
               <thead className="bg-zinc-100 text-zinc-800">
                 <tr>
                   <th className="px-4 py-4 text-left font-semibold">Sembol</th>
-                  <th className="px-4 py-4 text-left font-semibold">YKK Tarihi</th>
-                  <th className="px-4 py-4 text-right font-semibold">Geri Alınan Adet</th>
-                  <th className="px-4 py-4 text-right font-semibold">Alınacak Adet</th>
-                  <th className="px-4 py-4 text-right font-semibold">Ayrılan Fon</th>
-                  <th className="px-4 py-4 text-right font-semibold">Geri Alınan Hacim</th>
-                  <th className="px-4 py-4 text-right font-semibold">Alınacak Oran</th>
-                  <th className="px-4 py-4 text-right font-semibold">Alınan Oran</th>
-                  <th className="px-4 py-4 text-right font-semibold">Son Fiyat</th>
-                  <th className="px-4 py-4 text-right font-semibold">Alış Ort. Fiyat</th>
-                  <th className="px-4 py-4 text-left font-semibold">Son İşlem Tarihi</th>
+                  <th className="px-4 py-4 text-left font-semibold">
+                    YKK Tarihi
+                  </th>
+                  <th className="px-4 py-4 text-right font-semibold">
+                    Geri Alınan Adet
+                  </th>
+                  <th className="px-4 py-4 text-right font-semibold">
+                    Alınacak Adet
+                  </th>
+                  <th className="px-4 py-4 text-right font-semibold">
+                    Ayrılan Fon
+                  </th>
+                  <th className="px-4 py-4 text-right font-semibold">
+                    Geri Alınan Hacim
+                  </th>
+                  <th className="px-4 py-4 text-right font-semibold">
+                    Alınacak Oran
+                  </th>
+                  <th className="px-4 py-4 text-right font-semibold">
+                    Alınan Oran
+                  </th>
+                  <th className="px-4 py-4 text-right font-semibold">
+                    Son Fiyat
+                  </th>
+                  <th className="px-4 py-4 text-right font-semibold">
+                    Alış Ort. Fiyat
+                  </th>
+                  <th className="px-4 py-4 text-left font-semibold">
+                    Son İşlem Tarihi
+                  </th>
                 </tr>
               </thead>
 
@@ -252,8 +316,12 @@ export default function GeriAlimProgramlariPage() {
                       key={`${item.sembol}-${item.ykkTarihi}-${index}`}
                       className={index % 2 === 0 ? "bg-white" : "bg-sky-50/60"}
                     >
-                      <td className="px-4 py-3 font-semibold text-zinc-900">{item.sembol}</td>
-                      <td className="px-4 py-3 text-zinc-700">{item.ykkTarihi || "-"}</td>
+                      <td className="px-4 py-3 font-semibold text-zinc-900">
+                        {item.sembol}
+                      </td>
+                      <td className="px-4 py-3 text-zinc-700">
+                        {item.ykkTarihi || "-"}
+                      </td>
                       <td className="px-4 py-3 text-right text-zinc-700">
                         {formatNumber(item.geriAlinanAdet, 0)}
                       </td>
@@ -278,12 +346,17 @@ export default function GeriAlimProgramlariPage() {
                       <td className="px-4 py-3 text-right text-zinc-700">
                         {formatPrice(item.alisOrtFiyat)}
                       </td>
-                      <td className="px-4 py-3 text-zinc-700">{item.sonIslemTarihi || "-"}</td>
+                      <td className="px-4 py-3 text-zinc-700">
+                        {item.sonIslemTarihi || "-"}
+                      </td>
                     </tr>
                   ))
                 ) : (
                   <tr>
-                    <td colSpan={11} className="px-4 py-8 text-center text-sm text-zinc-500">
+                    <td
+                      colSpan={11}
+                      className="px-4 py-8 text-center text-sm text-zinc-500"
+                    >
                       Excel verisi okunamadı.
                     </td>
                   </tr>
@@ -295,6 +368,42 @@ export default function GeriAlimProgramlariPage() {
 
         <section className="mt-8">
           <ReklamAlani variant="icerik" />
+        </section>
+
+        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+            Geri Alım Programları Hakkında
+          </h2>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Geri alım programları sayfası, Borsa İstanbul’da işlem gören
+            şirketlerin pay geri alım kararlarını ve uygulama süreçlerini takip
+            etmek isteyen yatırımcılar için hazırlanmıştır. Bu sayfada şirketlerin
+            geri alınan pay adetleri, ayrılan fon tutarları, hedef oranları ve son
+            işlem tarihleri gibi önemli verileri toplu şekilde inceleyebilirsiniz.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Hisse geri alım programları, şirketlerin kendi paylarını piyasadan
+            toplaması anlamına gelir ve çoğu zaman yatırımcılar tarafından olumlu
+            bir sinyal olarak değerlendirilir. Geri alım kararları, şirketin kendi
+            hisselerini ucuz bulduğuna dair algı oluşturabilir ve piyasa güveni
+            açısından dikkat çekici olabilir.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Bu sayfadaki veriler sayesinde hangi şirketlerin aktif geri alım
+            programı yürüttüğünü, geri alım oranlarının ne seviyede olduğunu ve
+            ayrılan fon büyüklüklerini detaylı şekilde karşılaştırabilirsiniz.
+            Özellikle sermaye yapısı, piyasa değeri ve hisse performansı açısından
+            geri alım programları yatırımcılar için önemli bir takip alanıdır.
+          </p>
+
+          <p className="leading-7 text-zinc-700">
+            Güncel geri alım programları, şirket pay geri alım verileri, ayrılan
+            fon tutarları, alınan oranlar ve detaylı borsa şirket analizleri için
+            bu sayfayı düzenli olarak takip edebilirsiniz.
+          </p>
         </section>
       </div>
     </main>

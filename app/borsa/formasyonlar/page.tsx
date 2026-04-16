@@ -105,6 +105,40 @@ export default async function FormasyonlarPage() {
         <section className="mt-8">
           <ReklamAlani variant="icerik" />
         </section>
+
+        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+            Borsa Formasyonları Hakkında
+          </h2>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Borsa formasyonları sayfası, teknik analizde sık kullanılan fiyat
+            formasyonlarını takip etmek isteyen yatırımcılar için hazırlanmıştır.
+            Bu sayfada hisselerde oluşan teknik formasyonları tek ekranda
+            inceleyebilir, grafik yapılarında öne çıkan görünüm türlerini daha
+            kolay değerlendirebilirsiniz.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Teknik analiz formasyonları, yatırımcılara olası trend değişimleri,
+            devam formasyonları ve önemli fiyat kırılımları hakkında fikir verebilir.
+            Omuz baş omuz, çanak, flama, üçgen ve benzeri grafik yapıları piyasa
+            yönünü anlamaya çalışan kullanıcılar için önemli sinyaller sunar.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Hisse bazlı formasyon takibi yapmak isteyen kullanıcılar için bu sayfa,
+            farklı hisselerde görülen teknik yapıları listeleyerek analiz sürecini
+            kolaylaştırır. Böylece hem kısa vadeli işlem yapanlar hem de orta vadeli
+            yatırımcılar dikkat çeken teknik görünümleri daha hızlı takip edebilir.
+          </p>
+
+          <p className="leading-7 text-zinc-700">
+            Güncel borsa formasyonları, teknik analiz sinyalleri, hisse bazlı grafik
+            görünümleri ve dikkat çeken teknik yapılar için bu sayfayı düzenli
+            olarak takip edebilirsiniz.
+          </p>
+        </section>
       </div>
     </main>
   );

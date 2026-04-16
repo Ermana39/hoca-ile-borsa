@@ -2,12 +2,14 @@ import fs from "fs";
 import path from "path";
 import Link from "next/link";
 import * as XLSX from "xlsx";
+
 const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
   timeZone: "Europe/Istanbul",
   day: "2-digit",
   month: "2-digit",
   year: "numeric",
 }).format(new Date());
+
 type YeniIsSatiri = {
   sembol: string;
   tarih: string;
@@ -116,31 +118,55 @@ function verileriOku(): YeniIsSatiri[] {
     const headers = Object.keys(rows[0] || {});
 
     const sembolKolonu =
-      kolonBul(headers, ["sembol", "kod", "hisse", "ticker", "symbol"]) || headers[0];
+      kolonBul(headers, ["sembol", "kod", "hisse", "ticker", "symbol"]) ||
+      headers[0];
 
     const tarihKolonu =
-      kolonBul(headers, ["tarih", "is iliskisi tarihi", "iş ilişkisi tarihi"]) || headers[1] || "";
+      kolonBul(headers, ["tarih", "is iliskisi tarihi", "iş ilişkisi tarihi"]) ||
+      headers[1] ||
+      "";
 
     const tutarKolonu =
-      kolonBul(headers, ["yeni is iliskisi tutari", "yeni iş ilişkisi tutarı", "tutar", "is iliskisi tutari"]) ||
+      kolonBul(headers, [
+        "yeni is iliskisi tutari",
+        "yeni iş ilişkisi tutarı",
+        "tutar",
+        "is iliskisi tutari",
+      ]) ||
       headers[2] ||
       "";
 
     const paraBirimiKolonu =
-      kolonBul(headers, ["para birimi", "doviz", "döviz", "pb"]) || headers[3] || "";
+      kolonBul(headers, ["para birimi", "doviz", "döviz", "pb"]) ||
+      headers[3] ||
+      "";
 
     const bilancoKolonu =
-      kolonBul(headers, ["bilanco donemi", "bilanço dönemi", "bilanco", "bilanço"]) ||
+      kolonBul(headers, [
+        "bilanco donemi",
+        "bilanço dönemi",
+        "bilanco",
+        "bilanço",
+      ]) ||
       headers[4] ||
       "";
 
     const yillikSatislarKolonu =
-      kolonBul(headers, ["yillik satislar", "yıllık satışlar", "satislar", "satışlar"]) ||
+      kolonBul(headers, [
+        "yillik satislar",
+        "yıllık satışlar",
+        "satislar",
+        "satışlar",
+      ]) ||
       headers[5] ||
       "";
 
     const oranKolonu =
-      kolonBul(headers, ["yeni is iliskisi / yillik satislar", "yeni iş ilişkisi / yıllık satışlar", "oran"]) ||
+      kolonBul(headers, [
+        "yeni is iliskisi / yillik satislar",
+        "yeni iş ilişkisi / yıllık satışlar",
+        "oran",
+      ]) ||
       headers[6] ||
       "";
 
@@ -182,13 +208,18 @@ export default function YeniIsAnlasmalariPage() {
           </Link>
         </div>
 
-        <h1 className="mb-2 text-3xl font-bold text-zinc-900">Yeni İş Anlaşmaları</h1>
+        <h1 className="mb-2 text-3xl font-bold text-zinc-900">
+          Yeni İş Anlaşmaları
+        </h1>
+
         <p className="mb-8 max-w-3xl text-base text-zinc-600">
-          Yeni İş Anlaşmalası Yapan Şirketler
+          Yeni İş Anlaşması Yapan Şirketler
         </p>
-<div className="mb-8 text-sm font-semibold text-zinc-700">
-  Güncelleme Tarihi: {guncellemeTarihi}
-</div>
+
+        <div className="mb-8 text-sm font-semibold text-zinc-700">
+          Güncelleme Tarihi: {guncellemeTarihi}
+        </div>
+
         <section className="mb-8">
           <ReklamAlani variant="yatay" />
         </section>
@@ -200,11 +231,15 @@ export default function YeniIsAnlasmalariPage() {
                 <tr>
                   <th className="px-4 py-3 text-left">Sembol</th>
                   <th className="px-4 py-3 text-left">Tarih</th>
-                  <th className="px-4 py-3 text-right">Yeni İş İlişkisi Tutarı</th>
+                  <th className="px-4 py-3 text-right">
+                    Yeni İş İlişkisi Tutarı
+                  </th>
                   <th className="px-4 py-3 text-left">Para Birimi</th>
                   <th className="px-4 py-3 text-left">Bilanço Dönemi</th>
                   <th className="px-4 py-3 text-right">Yıllık Satışlar</th>
-                  <th className="px-4 py-3 text-right">Yeni İş İlişkisi / Yıllık Satışlar</th>
+                  <th className="px-4 py-3 text-right">
+                    Yeni İş İlişkisi / Yıllık Satışlar
+                  </th>
                 </tr>
               </thead>
 
@@ -213,15 +248,27 @@ export default function YeniIsAnlasmalariPage() {
                   satirlar.map((item, index) => (
                     <tr
                       key={`${item.sembol}-${item.tarih}-${index}`}
-                      className={index % 2 === 0 ? "border-t border-zinc-100 bg-white" : "border-t border-zinc-100 bg-sky-50/60"}
+                      className={
+                        index % 2 === 0
+                          ? "border-t border-zinc-100 bg-white"
+                          : "border-t border-zinc-100 bg-sky-50/60"
+                      }
                     >
-                      <td className="px-4 py-3 font-semibold text-zinc-900">{item.sembol}</td>
-                      <td className="px-4 py-3 text-zinc-700">{item.tarih || "-"}</td>
+                      <td className="px-4 py-3 font-semibold text-zinc-900">
+                        {item.sembol}
+                      </td>
+                      <td className="px-4 py-3 text-zinc-700">
+                        {item.tarih || "-"}
+                      </td>
                       <td className="px-4 py-3 text-right font-semibold text-zinc-900">
                         {formatNumber(item.tutar, 0)}
                       </td>
-                      <td className="px-4 py-3 text-zinc-700">{item.paraBirimi || "-"}</td>
-                      <td className="px-4 py-3 text-zinc-700">{item.bilanco || "-"}</td>
+                      <td className="px-4 py-3 text-zinc-700">
+                        {item.paraBirimi || "-"}
+                      </td>
+                      <td className="px-4 py-3 text-zinc-700">
+                        {item.bilanco || "-"}
+                      </td>
                       <td className="px-4 py-3 text-right text-zinc-700">
                         {formatNumber(item.yillikSatislar, 0)}
                       </td>
@@ -232,7 +279,10 @@ export default function YeniIsAnlasmalariPage() {
                   ))
                 ) : (
                   <tr>
-                    <td colSpan={7} className="px-4 py-8 text-center text-sm text-zinc-500">
+                    <td
+                      colSpan={7}
+                      className="px-4 py-8 text-center text-sm text-zinc-500"
+                    >
                       Excel verisi okunamadı.
                     </td>
                   </tr>
@@ -244,6 +294,40 @@ export default function YeniIsAnlasmalariPage() {
 
         <section className="mt-8">
           <ReklamAlani variant="icerik" />
+        </section>
+
+        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+            Yeni İş Anlaşmaları Hakkında
+          </h2>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Yeni iş anlaşmaları sayfası, Borsa İstanbul’da işlem gören şirketlerin
+            duyurduğu yeni sözleşmeleri, iş ilişkilerini ve ticari anlaşmaları
+            takip etmek isteyen yatırımcılar için hazırlanmıştır. Bu sayfada
+            şirketlerin açıkladığı yeni iş tutarları, bilanço dönemleri, yıllık
+            satışlara oranları ve anlaşma tarihleri detaylı şekilde incelenebilir.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Şirketlerin yaptığı yeni iş anlaşmaları, gelecekteki gelir beklentileri
+            açısından yatırımcılar tarafından yakından takip edilir. Özellikle büyük
+            tutarlı sözleşmeler, ihracat bağlantıları, kamu ihaleleri ve uzun vadeli
+            projeler şirket değerlemeleri üzerinde etkili olabilir.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Bu sayfadaki veriler sayesinde hangi şirketlerin yeni iş anlaşması
+            açıkladığını, anlaşma büyüklüğünü ve yıllık satışlara etkisini kolayca
+            karşılaştırabilirsiniz. Böylece büyüme potansiyeli taşıyan şirketleri
+            daha yakından izlemek mümkün hale gelir.
+          </p>
+
+          <p className="leading-7 text-zinc-700">
+            Güncel yeni iş anlaşmaları, şirket KAP bildirimleri, sözleşme tutarları,
+            gelir etkisi analizleri ve borsa şirket haberleri için bu sayfayı
+            düzenli olarak takip edebilirsiniz.
+          </p>
         </section>
       </div>
     </main>

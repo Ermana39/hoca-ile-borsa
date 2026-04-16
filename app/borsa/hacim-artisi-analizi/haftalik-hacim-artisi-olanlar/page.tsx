@@ -53,6 +53,22 @@ const veriler = [
   { sembol: "AYEN", islemHacmi: "650,833,952", ortHacim: "341,300,104", artis: "90.69" },
 ];
 
+function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
+  const alanClass =
+    variant === "icerik"
+      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
+      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
+
+  return (
+    <section
+      aria-label="Reklam alanı"
+      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
+    >
+      <div className={`w-full ${alanClass}`} />
+    </section>
+  );
+}
+
 export default function HaftalikHacimArtisiPage() {
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -72,6 +88,10 @@ export default function HaftalikHacimArtisiPage() {
           </Link>
         </div>
 
+        <section className="mb-8">
+          <ReklamAlani variant="yatay" />
+        </section>
+
         <h1 className="mb-6 text-3xl font-bold text-zinc-900">
           Haftalık Hacim Artışı Olanlar
         </h1>
@@ -90,17 +110,66 @@ export default function HaftalikHacimArtisiPage() {
               {veriler.map((item, index) => (
                 <tr
                   key={item.sembol}
-                  className={`border-t border-zinc-100 ${index % 2 === 1 ? "bg-sky-50" : "bg-white"}`}
+                  className={`border-t border-zinc-100 ${
+                    index % 2 === 1 ? "bg-sky-50" : "bg-white"
+                  }`}
                 >
-                  <td className="px-4 py-3 font-semibold text-zinc-900">{item.sembol}</td>
-                  <td className="px-4 py-3 text-right text-zinc-700">{item.islemHacmi}</td>
-                  <td className="px-4 py-3 text-right text-zinc-700">{item.ortHacim}</td>
-                  <td className="px-4 py-3 text-right font-semibold text-green-600">{item.artis}</td>
+                  <td className="px-4 py-3 font-semibold text-zinc-900">
+                    {item.sembol}
+                  </td>
+                  <td className="px-4 py-3 text-right text-zinc-700">
+                    {item.islemHacmi}
+                  </td>
+                  <td className="px-4 py-3 text-right text-zinc-700">
+                    {item.ortHacim}
+                  </td>
+                  <td className="px-4 py-3 text-right font-semibold text-green-600">
+                    {item.artis}
+                  </td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
+
+        <section className="mt-8">
+          <ReklamAlani variant="icerik" />
+        </section>
+
+        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+            Haftalık Hacim Artışı Olan Hisseler Hakkında
+          </h2>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Haftalık hacim artışı olan hisseler sayfası, son işlem hacmi ile haftalık
+            ortalama hacim arasında dikkat çekici fark bulunan hisseleri takip etmek
+            isteyen yatırımcılar için hazırlanmıştır. Bu sayfada işlem hacmi kısa
+            vadede öne çıkan hisseleri toplu şekilde inceleyebilir, piyasadaki güncel
+            hareketliliği daha hızlı analiz edebilirsiniz.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Haftalık bazda artan işlem hacmi, yatırımcı ilgisinin belirli hisselerde
+            yoğunlaştığını gösterebilir. Özellikle fiyat hareketi ile birlikte görülen
+            hacim artışı, teknik analizde güçlü sinyal olarak değerlendirilebilir ve
+            hissede oluşan momentumun daha yakından takip edilmesine yardımcı olur.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Sayfada yer alan işlem hacmi, ortalama hacim ve artış oranı verileri
+            sayesinde hangi hisselerin kısa vadede normal işlem düzeninin üzerine
+            çıktığını kolayca görebilirsiniz. Bu veriler hem kısa vadeli traderlar
+            hem de dikkat çeken hisse hareketlerini erkenden yakalamak isteyen
+            yatırımcılar için önemli bir referans sunar.
+          </p>
+
+          <p className="leading-7 text-zinc-700">
+            Güncel haftalık hacim artışı olan hisseler, BIST işlem hacmi
+            karşılaştırmaları, kısa vadeli hacim hareketleri ve teknik takip
+            ekranları için bu sayfayı düzenli olarak takip edebilirsiniz.
+          </p>
+        </section>
       </div>
     </main>
   );

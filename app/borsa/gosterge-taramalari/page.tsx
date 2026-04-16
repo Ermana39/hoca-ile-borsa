@@ -147,6 +147,43 @@ export default function GostergeTaramalariPage() {
         <section className="pt-6">
           <ReklamAlani variant="icerik" />
         </section>
+
+        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+            Gösterge Taramaları Hakkında
+          </h2>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Gösterge taramaları sayfası, teknik analizde kullanılan popüler
+            göstergelere göre öne çıkan hisseleri hızlı şekilde incelemek isteyen
+            yatırımcılar için hazırlanmıştır. Bu sayfada yükseliş trendinde olan
+            hisseler, düşüş trendinde olan hisseler, RSI 30 altı hisseler ve RSI
+            70 üstü hisseler gibi farklı teknik tarama sonuçlarına kolayca
+            ulaşabilirsiniz.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Borsa gösterge taramaları, yatırımcıların yüzlerce hisse arasından
+            belirli teknik kriterlere uyan şirketleri daha hızlı filtrelemesine
+            yardımcı olur. Hareketli ortalamalara göre trend analizi yapmak,
+            aşırı satım ve aşırı alım bölgelerini tespit etmek isteyen kullanıcılar
+            için bu taramalar önemli bir avantaj sağlar.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            RSI 30 altı hisseler genellikle aşırı satım bölgesinde değerlendirilen
+            hisseleri gösterirken, RSI 70 üstü hisseler aşırı alım bölgesine yaklaşan
+            şirketleri öne çıkarabilir. Benzer şekilde yükseliş ve düşüş trendi
+            taramaları da teknik görünümü güçlü veya zayıf olan hisseleri tek ekranda
+            karşılaştırma imkanı sunar.
+          </p>
+
+          <p className="leading-7 text-zinc-700">
+            Güncel teknik analiz taramaları, hareketli ortalama bazlı hisse
+            filtreleri, RSI taramaları ve trend odaklı borsa ekranları için bu
+            sayfayı düzenli olarak takip edebilirsiniz.
+          </p>
+        </section>
       </div>
     </main>
   );

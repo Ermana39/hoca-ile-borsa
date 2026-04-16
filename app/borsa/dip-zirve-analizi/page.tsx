@@ -2,12 +2,14 @@ import fs from "fs";
 import path from "path";
 import Link from "next/link";
 import * as XLSX from "xlsx";
+
 const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
   timeZone: "Europe/Istanbul",
   day: "2-digit",
   month: "2-digit",
   year: "numeric",
 }).format(new Date());
+
 type DipZirveSatiri = {
   sembol: string;
   yuzdeDibeUzaklik: number | null;
@@ -108,30 +110,24 @@ function verileriOku(): DipZirveSatiri[] {
     const headers = Object.keys(rows[0] || {});
 
     const sembolKolonu =
-      kolonBul(headers, ["sembol", "kod", "hisse", "ticker", "symbol"]) || headers[0];
+      kolonBul(headers, ["sembol", "kod", "hisse"]) || headers[0];
 
     const yuzdeDibeUzaklikKolonu =
-      kolonBul(headers, ["% dibe uzaklik", "yuzde dibe uzaklik", "dibe uzaklik %", "dip %"]) ||
-      headers[1] ||
-      "";
+      kolonBul(headers, ["% dibe uzaklik", "yuzde dibe uzaklik"]) ||
+      headers[1];
 
     const gunDibeUzaklikKolonu =
-      kolonBul(headers, ["gun dibe uzaklik", "dibe uzaklik gun", "dip gun", "gün dibe uzaklık"]) ||
-      headers[2] ||
-      "";
+      kolonBul(headers, ["gun dibe uzaklik"]) || headers[2];
 
     const yuzdeZirveyeUzaklikKolonu =
-      kolonBul(headers, ["% zirveye uzaklik", "yuzde zirveye uzaklik", "zirveye uzaklik %", "zirve %"]) ||
-      headers[3] ||
-      "";
+      kolonBul(headers, ["% zirveye uzaklik", "yuzde zirveye uzaklik"]) ||
+      headers[3];
 
     const gunZirveyeUzaklikKolonu =
-      kolonBul(headers, ["gun zirveye uzaklik", "zirveye uzaklik gun", "zirve gun", "gün zirveye uzaklık"]) ||
-      headers[4] ||
-      "";
+      kolonBul(headers, ["gun zirveye uzaklik"]) || headers[4];
 
     const zirveDipKolonu =
-      kolonBul(headers, ["zirve / dip", "zirve/dip", "zirve dip"]) || headers[5] || "";
+      kolonBul(headers, ["zirve / dip", "zirve/dip"]) || headers[5];
 
     return rows
       .map((row) => ({
@@ -228,13 +224,18 @@ export default async function DipZirveAnaliziPage({
           </Link>
         </div>
 
-        <h1 className="mb-2 text-3xl font-bold text-zinc-900">Dip Zirve Analizi</h1>
+        <h1 className="mb-2 text-3xl font-bold text-zinc-900">
+          Dip Zirve Analizi
+        </h1>
+
         <p className="mb-8 max-w-3xl text-base text-zinc-600">
           Dip ve zirve uzaklık verileri
         </p>
-<div className="mb-8 text-sm font-semibold text-zinc-700">
-  Güncelleme Tarihi: {guncellemeTarihi}
-</div>
+
+        <div className="mb-8 text-sm font-semibold text-zinc-700">
+          Güncelleme Tarihi: {guncellemeTarihi}
+        </div>
+
         <section className="mb-8">
           <ReklamAlani variant="yatay" />
         </section>
@@ -245,44 +246,36 @@ export default async function DipZirveAnaliziPage({
               <thead className="bg-zinc-100 text-zinc-800">
                 <tr>
                   <th className="px-4 py-4 text-left font-semibold">
-                    <Link href={sortLink("sembol")} className="inline-flex items-center gap-1">
+                    <Link href={sortLink("sembol")}>
                       Sembol {sortArrow(sort === "sembol", dir)}
                     </Link>
                   </th>
                   <th className="px-4 py-4 text-right font-semibold">
-                    <Link
-                      href={sortLink("yuzdeDibeUzaklik")}
-                      className="inline-flex items-center gap-1"
-                    >
-                      % Dibe Uzaklık {sortArrow(sort === "yuzdeDibeUzaklik", dir)}
+                    <Link href={sortLink("yuzdeDibeUzaklik")}>
+                      % Dibe Uzaklık{" "}
+                      {sortArrow(sort === "yuzdeDibeUzaklik", dir)}
                     </Link>
                   </th>
                   <th className="px-4 py-4 text-right font-semibold">
-                    <Link
-                      href={sortLink("gunDibeUzaklik")}
-                      className="inline-flex items-center gap-1"
-                    >
-                      Gün Dibe Uzaklık {sortArrow(sort === "gunDibeUzaklik", dir)}
+                    <Link href={sortLink("gunDibeUzaklik")}>
+                      Gün Dibe Uzaklık{" "}
+                      {sortArrow(sort === "gunDibeUzaklik", dir)}
                     </Link>
                   </th>
                   <th className="px-4 py-4 text-right font-semibold">
-                    <Link
-                      href={sortLink("yuzdeZirveyeUzaklik")}
-                      className="inline-flex items-center gap-1"
-                    >
-                      % Zirveye Uzaklık {sortArrow(sort === "yuzdeZirveyeUzaklik", dir)}
+                    <Link href={sortLink("yuzdeZirveyeUzaklik")}>
+                      % Zirveye Uzaklık{" "}
+                      {sortArrow(sort === "yuzdeZirveyeUzaklik", dir)}
                     </Link>
                   </th>
                   <th className="px-4 py-4 text-right font-semibold">
-                    <Link
-                      href={sortLink("gunZirveyeUzaklik")}
-                      className="inline-flex items-center gap-1"
-                    >
-                      Gün Zirveye Uzaklık {sortArrow(sort === "gunZirveyeUzaklik", dir)}
+                    <Link href={sortLink("gunZirveyeUzaklik")}>
+                      Gün Zirveye Uzaklık{" "}
+                      {sortArrow(sort === "gunZirveyeUzaklik", dir)}
                     </Link>
                   </th>
                   <th className="px-4 py-4 text-right font-semibold">
-                    <Link href={sortLink("zirveDip")} className="inline-flex items-center gap-1">
+                    <Link href={sortLink("zirveDip")}>
                       Zirve / Dip {sortArrow(sort === "zirveDip", dir)}
                     </Link>
                   </th>
@@ -290,37 +283,31 @@ export default async function DipZirveAnaliziPage({
               </thead>
 
               <tbody>
-                {sortedVeriler.length > 0 ? (
-                  sortedVeriler.map((item, index) => (
-                    <tr
-                      key={`${item.sembol}-${index}`}
-                      className={index % 2 === 0 ? "bg-white" : "bg-sky-50/60"}
-                    >
-                      <td className="px-4 py-3 font-semibold text-zinc-900">{item.sembol}</td>
-                      <td className="px-4 py-3 text-right text-zinc-700">
-                        {sayiFormatla(item.yuzdeDibeUzaklik, true)}
-                      </td>
-                      <td className="px-4 py-3 text-right text-zinc-700">
-                        {sayiFormatla(item.gunDibeUzaklik)}
-                      </td>
-                      <td className="px-4 py-3 text-right text-zinc-700">
-                        {sayiFormatla(item.yuzdeZirveyeUzaklik, true)}
-                      </td>
-                      <td className="px-4 py-3 text-right text-zinc-700">
-                        {sayiFormatla(item.gunZirveyeUzaklik)}
-                      </td>
-                      <td className="px-4 py-3 text-right text-zinc-700">
-                        {sayiFormatla(item.zirveDip)}
-                      </td>
-                    </tr>
-                  ))
-                ) : (
-                  <tr>
-                    <td colSpan={6} className="px-4 py-8 text-center text-sm text-zinc-500">
-                      Excel verisi okunamadı.
+                {sortedVeriler.map((item, index) => (
+                  <tr
+                    key={`${item.sembol}-${index}`}
+                    className={index % 2 === 0 ? "bg-white" : "bg-sky-50/60"}
+                  >
+                    <td className="px-4 py-3 font-semibold text-zinc-900">
+                      {item.sembol}
+                    </td>
+                    <td className="px-4 py-3 text-right text-zinc-700">
+                      {sayiFormatla(item.yuzdeDibeUzaklik, true)}
+                    </td>
+                    <td className="px-4 py-3 text-right text-zinc-700">
+                      {sayiFormatla(item.gunDibeUzaklik)}
+                    </td>
+                    <td className="px-4 py-3 text-right text-zinc-700">
+                      {sayiFormatla(item.yuzdeZirveyeUzaklik, true)}
+                    </td>
+                    <td className="px-4 py-3 text-right text-zinc-700">
+                      {sayiFormatla(item.gunZirveyeUzaklik)}
+                    </td>
+                    <td className="px-4 py-3 text-right text-zinc-700">
+                      {sayiFormatla(item.zirveDip)}
                     </td>
                   </tr>
-                )}
+                ))}
               </tbody>
             </table>
           </div>
@@ -328,6 +315,40 @@ export default async function DipZirveAnaliziPage({
 
         <section className="mt-8">
           <ReklamAlani variant="icerik" />
+        </section>
+
+        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+            Dip Zirve Analizi Hakkında
+          </h2>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Dip zirve analizi sayfası, Borsa İstanbul hisselerinin geçmiş dip ve
+            zirve seviyelerine olan uzaklığını incelemek isteyen yatırımcılar için
+            hazırlanmıştır. Bu sayfada hisselerin dip noktalarına ne kadar yakın
+            olduğu, zirve seviyelerinden ne kadar uzaklaştığı ve fiyat hareketleri
+            detaylı şekilde görüntülenebilir.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Hisse senedi dip zirve verileri, teknik analiz yapan yatırımcılar için
+            önemli göstergeler arasında yer alır. Dip seviyelerine yakın hisseler
+            potansiyel fırsat olarak değerlendirilebilirken, zirve seviyelerine
+            yakın hisseler momentum açısından dikkat çekebilir.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Gün bazlı dip ve zirve uzaklık analizleri sayesinde hisselerin son
+            dönemdeki performansını karşılaştırabilir, farklı sektörlerde öne çıkan
+            fırsatları daha kolay belirleyebilirsiniz. Bu veriler kısa vadeli ve
+            uzun vadeli yatırım stratejileri oluştururken faydalı olabilir.
+          </p>
+
+          <p className="leading-7 text-zinc-700">
+            Güncel dip zirve analizi, BIST hisse karşılaştırmaları, teknik görünüm
+            verileri ve detaylı piyasa incelemeleri için bu sayfayı düzenli olarak
+            takip edebilirsiniz.
+          </p>
         </section>
       </div>
     </main>

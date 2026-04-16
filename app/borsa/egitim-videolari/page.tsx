@@ -146,6 +146,41 @@ export default async function EgitimVideolariPage() {
         <section className="mt-8">
           <ReklamAlani variant="icerik" />
         </section>
+
+        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+            Borsa Eğitim Videoları Hakkında
+          </h2>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Borsa eğitim videoları sayfası, yatırım dünyasına yeni adım atanlar ve
+            mevcut bilgisini geliştirmek isteyenler için hazırlanmıştır. Bu sayfada
+            hisse senedi, teknik analiz, temel analiz, yatırım stratejileri ve
+            piyasa okuryazarlığı gibi konularda hazırlanan eğitim videolarına kolayca
+            ulaşabilirsiniz.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Borsa hakkında doğru bilgiye ulaşmak, yatırım kararlarını daha bilinçli
+            vermek açısından büyük önem taşır. Eğitim videoları sayesinde piyasaların
+            nasıl çalıştığını, hisse seçiminde nelere dikkat edilmesi gerektiğini ve
+            yatırım sürecinde kullanılan temel kavramları daha anlaşılır şekilde
+            öğrenebilirsiniz.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Yeni başlayan yatırımcılar için borsa eğitimi içerikleri önemli bir
+            rehber niteliği taşırken, deneyimli kullanıcılar için de farklı bakış
+            açıları sunabilir. Video içerikler sayesinde hem teorik bilgileri hem de
+            uygulamaya dönük örnekleri pratik şekilde takip etmek mümkün olur.
+          </p>
+
+          <p className="leading-7 text-zinc-700">
+            Güncel borsa eğitim videoları, hisse senedi analiz içerikleri, yatırım
+            stratejileri ve finansal okuryazarlık videoları için bu sayfayı düzenli
+            olarak takip edebilirsiniz.
+          </p>
+        </section>
       </div>
     </main>
   );

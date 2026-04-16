@@ -5,7 +5,6 @@ const analizler = [
     baslik: "AEFES Grafik Analiz",
     href: "/borsa/grafik-analiz/aefes",
   },
-
 ];
 
 export default function GrafikAnalizPage() {
@@ -42,6 +41,40 @@ export default function GrafikAnalizPage() {
               </Link>
             ))}
           </div>
+        </section>
+
+        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+            Grafik Analiz Hakkında
+          </h2>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Grafik analiz sayfası, Borsa İstanbul’da işlem gören hisselerin teknik
+            görünümünü incelemek isteyen yatırımcılar için hazırlanmıştır. Bu
+            sayfada hisse bazlı grafik analiz içeriklerine ulaşabilir, fiyat
+            hareketlerini teknik göstergeler ve destek direnç seviyeleriyle birlikte
+            değerlendirebilirsiniz.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Teknik analiz, yatırımcıların geçmiş fiyat hareketlerinden yararlanarak
+            olası yön arayışını anlamasına yardımcı olur. Grafik analiz içerikleri
+            sayesinde trend yapısı, formasyon görünümü, hareketli ortalamalar ve
+            önemli fiyat seviyeleri daha kolay takip edilebilir.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Hisse senedi grafik analizi, kısa vadeli işlem yapan yatırımcılar kadar
+            orta ve uzun vadeli pozisyon almak isteyen kullanıcılar için de önemli
+            bir referans sunar. Özellikle işlem hacmi, kırılım bölgeleri ve teknik
+            görünüm değişimleri yatırım kararlarında dikkatle izlenir.
+          </p>
+
+          <p className="leading-7 text-zinc-700">
+            Güncel hisse grafik analizleri, teknik görünüm değerlendirmeleri,
+            destek direnç seviyeleri ve borsa teknik analiz içerikleri için bu
+            sayfayı düzenli olarak takip edebilirsiniz.
+          </p>
         </section>
       </div>
     </main>
