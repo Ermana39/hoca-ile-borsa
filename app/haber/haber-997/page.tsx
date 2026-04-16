@@ -25,7 +25,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
-export default function Haber2Page() {
+export default function Haber997Page() {
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-4xl">
@@ -48,7 +48,7 @@ export default function Haber2Page() {
         <article className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
-              src="/haber-2v.png"
+              src="/haber997.png"
               alt="Bu yıl işleme başlayan 15 halka arzın hepsi halka arz fiyatının üzerinde işlem görüyor görseli"
               fill
               unoptimized
