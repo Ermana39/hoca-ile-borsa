@@ -447,18 +447,10 @@ function formatNumber(value: number) {
   }).format(value);
 }
 
-function getYorumRenk(yorum: string) {
-  const lower = yorum.toLocaleLowerCase("tr-TR");
-
-  if (lower.includes("direnç") || lower.includes("üstünde")) {
-    return "bg-green-600 text-white";
-  }
-
-  if (lower.includes("destek") || lower.includes("altında")) {
-    return "bg-red-600 text-white";
-  }
-
-  return "bg-zinc-600 text-white";
+function getSatirRenk(son: number, pivot: number) {
+  if (son > pivot) return "bg-green-100";
+  if (son < pivot) return "bg-red-100";
+  return "bg-white";
 }
 
 export default function PivotAnaliziPage() {
@@ -511,7 +503,7 @@ export default function PivotAnaliziPage() {
                 </tr>
               </thead>
               <tbody>
-                <tr className="bg-white">
+                <tr className={getSatirRenk(xu100Pivot.son, xu100Pivot.pivot)}>
                   <td className="border border-sky-200 px-3 py-2 font-semibold">
                     {xu100Pivot.sembol}
                   </td>
@@ -543,12 +535,6 @@ export default function PivotAnaliziPage() {
                     {formatNumber(xu100Pivot.direnc3)}
                   </td>
                 </tr>
-                <tr className={getYorumRenk(xu100Pivot.yorum)}>
-                  <td className="px-3 py-2 font-semibold"></td>
-                  <td colSpan={9} className="px-3 py-2 text-center font-semibold">
-                    {xu100Pivot.yorum}
-                  </td>
-                </tr>
               </tbody>
             </table>
           </div>
@@ -574,46 +560,41 @@ export default function PivotAnaliziPage() {
 
               <tbody>
                 {pivotVerileri.map((row) => (
-                  <>
-                    <tr key={`${row.sembol}-data`} className="bg-white">
-                      <td className="border border-sky-200 px-3 py-2 font-semibold">
-                        {row.sembol}
-                      </td>
-                      <td className="border border-sky-200 px-3 py-2">
-                        {formatNumber(row.fark)}
-                      </td>
-                      <td className="border border-sky-200 px-3 py-2">
-                        {formatNumber(row.son)}
-                      </td>
-                      <td className="border border-sky-200 px-3 py-2">
-                        {formatNumber(row.pivot)}
-                      </td>
-                      <td className="border border-sky-200 px-3 py-2">
-                        {formatNumber(row.destek1)}
-                      </td>
-                      <td className="border border-sky-200 px-3 py-2">
-                        {formatNumber(row.destek2)}
-                      </td>
-                      <td className="border border-sky-200 px-3 py-2">
-                        {formatNumber(row.destek3)}
-                      </td>
-                      <td className="border border-sky-200 px-3 py-2">
-                        {formatNumber(row.direnc1)}
-                      </td>
-                      <td className="border border-sky-200 px-3 py-2">
-                        {formatNumber(row.direnc2)}
-                      </td>
-                      <td className="border border-sky-200 px-3 py-2">
-                        {formatNumber(row.direnc3)}
-                      </td>
-                    </tr>
-                    <tr key={`${row.sembol}-yorum`} className={getYorumRenk(row.yorum)}>
-                      <td className="px-3 py-2 font-semibold"></td>
-                      <td colSpan={9} className="px-3 py-2 text-center font-semibold">
-                        {row.yorum}
-                      </td>
-                    </tr>
-                  </>
+                  <tr
+                    key={row.sembol}
+                    className={getSatirRenk(row.son, row.pivot)}
+                  >
+                    <td className="border border-sky-200 px-3 py-2 font-semibold">
+                      {row.sembol}
+                    </td>
+                    <td className="border border-sky-200 px-3 py-2">
+                      {formatNumber(row.fark)}
+                    </td>
+                    <td className="border border-sky-200 px-3 py-2">
+                      {formatNumber(row.son)}
+                    </td>
+                    <td className="border border-sky-200 px-3 py-2">
+                      {formatNumber(row.pivot)}
+                    </td>
+                    <td className="border border-sky-200 px-3 py-2">
+                      {formatNumber(row.destek1)}
+                    </td>
+                    <td className="border border-sky-200 px-3 py-2">
+                      {formatNumber(row.destek2)}
+                    </td>
+                    <td className="border border-sky-200 px-3 py-2">
+                      {formatNumber(row.destek3)}
+                    </td>
+                    <td className="border border-sky-200 px-3 py-2">
+                      {formatNumber(row.direnc1)}
+                    </td>
+                    <td className="border border-sky-200 px-3 py-2">
+                      {formatNumber(row.direnc2)}
+                    </td>
+                    <td className="border border-sky-200 px-3 py-2">
+                      {formatNumber(row.direnc3)}
+                    </td>
+                  </tr>
                 ))}
               </tbody>
             </table>

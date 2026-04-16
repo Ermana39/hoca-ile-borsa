@@ -53,7 +53,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Pivot Analizi",
     href: "/borsa/pivot-analizi",
-    updatedAt: "15.04.2026 18:48",
+    updatedAt: "15.04.2026 16:45",
   },
   {
     title: "Tedbirli Hisseler",
