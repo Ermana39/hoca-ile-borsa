@@ -91,7 +91,7 @@ function MevduatGrafik({
             />
 
             {points.map((point, index) => (
-              <g key={`${point.label}-${index}`}>
+              <g key={index}>
                 <circle cx={point.x} cy={point.y} r="4" fill="#111827" />
 
                 <text
@@ -120,4 +120,8 @@ function MevduatGrafik({
       </div>
     </section>
   );
+}
+
+export default function Page() {
+  return <MevduatFaiziOranlariPage />;
 }
