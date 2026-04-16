@@ -8,7 +8,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Günlük Borsa Özeti",
     href: "/borsa/gunluk-borsa-ozeti",
-    updatedAt: "15.04.2026 18:48",
+    updatedAt: "16.04.2026 18:48",
   },
   {
     title: "Dikkat Çekenler",
@@ -18,7 +18,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Dip Zirve Analizi",
     href: "/borsa/dip-zirve-analizi",
-    updatedAt: "15.04.2026 18:25",
+    updatedAt: "16.04.2026 18:25",
   },
   {
     title: "Eğitim Videolerı",
@@ -33,12 +33,12 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
     {
     title: "Geri Alım Programları",
     href: "/borsa/geri-alim-programlari",
-    updatedAt: "15.04.2026 18:25",
+    updatedAt: "16.04.2026 18:25",
   },
   {
     title: "Gösterge Taramaları",
     href: "/borsa/gosterge-taramalari",
-    updatedAt: "15.04.2026 19:05",
+    updatedAt: "16.04.2026 19:05",
   },
    {
     title: "Grafik Analiz",
@@ -53,12 +53,12 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Pivot Analizi",
     href: "/borsa/pivot-analizi",
-    updatedAt: "15.04.2026 18:25",
+    updatedAt: "16.04.2026 18:25",
   },
   {
     title: "Tedbirli Hisseler",
     href: "/borsa/tedbirli-hisseler",
-    updatedAt: "15.04.2026 18:25",
+    updatedAt: "16.04.2026 18:25",
   },
   {
     title: "Halka Arz",
@@ -78,17 +78,17 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
    {
     title: "Fonların Haftalık En Çok Tercih Ettiği Hisseler",
     href: "/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler",
-    updatedAt: "15.04.2026 19:03",
+    updatedAt: "16.04.2026 19:00",
   },
     {
     title: "Fon Getiri Analizi",
     href: "/fonlar/getiri",
-    updatedAt: "15.04.2026 19:03",
+    updatedAt: "16.04.2026 19:00",
   },
     {
     title: "Fon Tarihsel Veriler",
     href: "/fonlar/tarihsel-veriler",
-    updatedAt: "15.04.2026 19:03",
+    updatedAt: "16.04.2026 19:00",
   },
     {
     title: "Günlük Faiz Oranları",
