@@ -5,7 +5,27 @@ const analizler = [
     baslik: "AEFES Grafik Analiz",
     href: "/borsa/grafik-analiz/aefes",
   },
+  {
+    baslik: "ODAS Grafik Analiz",
+    href: "/borsa/grafik-analiz/odas",
+  },
 ];
+
+function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
+  const alanClass =
+    variant === "icerik"
+      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
+      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
+
+  return (
+    <section
+      aria-label="Reklam alanı"
+      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
+    >
+      <div className={`w-full ${alanClass}`} />
+    </section>
+  );
+}
 
 export default function GrafikAnalizPage() {
   return (
@@ -26,6 +46,10 @@ export default function GrafikAnalizPage() {
             Geri
           </Link>
         </div>
+
+        <section className="mb-6">
+          <ReklamAlani variant="yatay" />
+        </section>
 
         <section className="pt-8 md:pt-16">
           <h1 className="mb-8 text-3xl font-bold md:text-4xl">Grafik Analiz</h1>
