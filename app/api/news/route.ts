@@ -10,6 +10,11 @@ type NewsItem = {
   alt: string;
 };
 
+function getIdFromFolderName(folderName: string) {
+  const match = folderName.match(/^haber-(\d+)$/i);
+  return match ? Number(match[1]) : 0;
+}
+
 function getTitleFromFileContent(content: string) {
   const metadataTitleMatch = content.match(/title\s*:\s*"([^"]+)"/i);
   if (metadataTitleMatch?.[1]) {
@@ -24,23 +29,22 @@ function getTitleFromFileContent(content: string) {
   return "";
 }
 
-function getIdFromFolderName(folderName: string) {
-  const match = folderName.match(/(\d+)$/);
-  return match ? Number(match[1]) : 0;
-}
-
 export async function GET() {
   try {
     const haberDir = path.join(process.cwd(), "app", "haber");
 
     if (!fs.existsSync(haberDir)) {
-      return NextResponse.json([]);
+      return NextResponse.json([], {
+        headers: {
+          "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
+        },
+      });
     }
 
     const entries = fs.readdirSync(haberDir, { withFileTypes: true });
 
     const newsItems: NewsItem[] = entries
-      .filter((entry) => entry.isDirectory())
+      .filter((entry) => entry.isDirectory() && /^haber-\d+$/i.test(entry.name))
       .map((entry) => {
         const folderName = entry.name;
         const id = getIdFromFolderName(folderName);
