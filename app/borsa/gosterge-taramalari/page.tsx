@@ -40,14 +40,14 @@ const taramalar = [
   {
     title: "MACD Al verenler",
     description: "MACD göstergesine göre al sinyali üreten hisseler",
-    href: "/borsa/gosterge-taramalari/macd-al-verenler",
+    href: "/borsa/gosterge-taramalari/macd-al",
     image: "/macd-al.png",
     alt: "MACD al verenler görseli",
   },
   {
     title: "MACD Sat verenler",
     description: "MACD göstergesine göre sat sinyali üreten hisseler",
-    href: "/borsa/gosterge-taramalari/macd-sat-verenler",
+    href: "/borsa/gosterge-taramalari/macd-sat",
     image: "/macd-sat.png",
     alt: "MACD sat verenler görseli",
   },
