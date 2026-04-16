@@ -15,18 +15,40 @@ function getIdFromFolderName(folderName: string) {
   return match ? Number(match[1]) : 0;
 }
 
-function getTitleFromFileContent(content: string) {
-  const metadataTitleMatch = content.match(/title\s*:\s*"([^"]+)"/i);
-  if (metadataTitleMatch?.[1]) {
-    return metadataTitleMatch[1].trim();
-  }
+function cleanText(value: string) {
+  return value.replace(/\s+/g, " ").trim();
+}
 
-  const h1Match = content.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i);
-  if (h1Match?.[1]) {
-    return h1Match[1].replace(/<[^>]+>/g, "").trim();
+function getTitleFromFileContent(content: string) {
+  const patterns = [
+    /title\s*:\s*"([^"]+)"/is,
+    /title\s*:\s*'([^']+)'/is,
+    /title\s*:\s*`([^`]+)`/is,
+    /<h1[^>]*>([\s\S]*?)<\/h1>/is,
+  ];
+
+  for (const pattern of patterns) {
+    const match = content.match(pattern);
+    if (match?.[1]) {
+      const title = cleanText(match[1].replace(/<[^>]+>/g, ""));
+      if (title) return title;
+    }
   }
 
   return "";
+}
+
+function getPageFilePath(folderPath: string) {
+  const candidates = ["page.tsx", "page.jsx", "page.ts", "page.js"];
+
+  for (const fileName of candidates) {
+    const fullPath = path.join(folderPath, fileName);
+    if (fs.existsSync(fullPath)) {
+      return fullPath;
+    }
+  }
+
+  return null;
 }
 
 export async function GET() {
@@ -44,7 +66,7 @@ export async function GET() {
     const entries = fs.readdirSync(haberDir, { withFileTypes: true });
 
     const newsItems: NewsItem[] = entries
-      .filter((entry) => entry.isDirectory() && /^haber-\d+$/i.test(entry.name))
+      .filter((entry) => entry.isDirectory())
       .map((entry) => {
         const folderName = entry.name;
         const id = getIdFromFolderName(folderName);
@@ -53,17 +75,23 @@ export async function GET() {
           return null;
         }
 
-        const pageFilePath = path.join(haberDir, folderName, "page.tsx");
+        const folderPath = path.join(haberDir, folderName);
+        const pageFilePath = getPageFilePath(folderPath);
 
-        if (!fs.existsSync(pageFilePath)) {
+        if (!pageFilePath) {
           return null;
         }
 
-        const fileContent = fs.readFileSync(pageFilePath, "utf-8");
-        const title = getTitleFromFileContent(fileContent);
+        let title = `Haber ${id}`;
 
-        if (!title) {
-          return null;
+        try {
+          const fileContent = fs.readFileSync(pageFilePath, "utf-8");
+          const extractedTitle = getTitleFromFileContent(fileContent);
+          if (extractedTitle) {
+            title = extractedTitle;
+          }
+        } catch {
+          title = `Haber ${id}`;
         }
 
         return {
