@@ -287,10 +287,6 @@ export default async function FonGetiriExcelPage({
         </section>
 
         <FonGetiriTableClient rows={sorted} headers={headers} />
-
-        <section className="mt-6">
-          <ReklamAlani variant="icerik" />
-        </section>
       </div>
     </main>
   );
