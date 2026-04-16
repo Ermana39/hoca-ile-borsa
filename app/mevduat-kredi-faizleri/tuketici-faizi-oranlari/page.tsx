@@ -4,12 +4,14 @@ import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import * as XLSX from "xlsx";
 import * as FaizAraclari from "@/components/faiz-hesaplayicilar";
+
 const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
   timeZone: "Europe/Istanbul",
   day: "2-digit",
   month: "2-digit",
   year: "numeric",
 }).format(new Date());
+
 type BankaSatiri = {
   banka: string;
   faiz: string;
@@ -31,7 +33,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   return (
     <section
       aria-label="Reklam alanı"
-   className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
+      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
     >
       <div className={`w-full ${alanClass}`} />
     </section>
@@ -130,8 +132,9 @@ function TuketiciGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
   }
 
   const width = 960;
-  const height = 320;
+  const height = 360;
   const padding = 42;
+  const bottomSpace = 50;
 
   const minValue = Math.min(...data.map((item) => item.ortalama));
   const maxValue = Math.max(...data.map((item) => item.ortalama));
@@ -145,8 +148,9 @@ function TuketiciGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
 
     const y =
       height -
-      padding -
-      ((item.ortalama - minValue) / range) * (height - padding * 2);
+      bottomSpace -
+      ((item.ortalama - minValue) / range) *
+        (height - padding - bottomSpace - 20);
 
     return {
       x,
@@ -173,26 +177,56 @@ function TuketiciGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
 
       <div className="overflow-x-auto">
         <div className="min-w-[960px]">
-          <svg viewBox={`0 0 ${width} ${height}`} className="h-[320px] w-full">
-            <line x1={padding} y1={height - padding} x2={width - padding} y2={height - padding} stroke="#d4d4d8" strokeWidth="1" />
-            <line x1={padding} y1={padding} x2={padding} y2={height - padding} stroke="#d4d4d8" strokeWidth="1" />
-            <path d={pathD} fill="none" stroke="#111827" strokeWidth="3" strokeLinejoin="round" strokeLinecap="round" />
+          <svg viewBox={`0 0 ${width} ${height}`} className="h-[360px] w-full">
+            <line
+              x1={padding}
+              y1={height - bottomSpace}
+              x2={width - padding}
+              y2={height - bottomSpace}
+              stroke="#d4d4d8"
+              strokeWidth="1"
+            />
+            <line
+              x1={padding}
+              y1={padding}
+              x2={padding}
+              y2={height - bottomSpace}
+              stroke="#d4d4d8"
+              strokeWidth="1"
+            />
+            <path
+              d={pathD}
+              fill="none"
+              stroke="#111827"
+              strokeWidth="3"
+              strokeLinejoin="round"
+              strokeLinecap="round"
+            />
 
             {points.map((point, index) => (
               <g key={`${point.label}-${index}`}>
                 <circle cx={point.x} cy={point.y} r="4" fill="#111827" />
-                <text x={point.x} y={point.y - 12} textAnchor="middle" fontSize="11" fill="#52525b">
+                <text
+                  x={point.x}
+                  y={point.y - 12}
+                  textAnchor="middle"
+                  fontSize="11"
+                  fill="#52525b"
+                >
                   %{point.value.toFixed(2).replace(".", ",")}
+                </text>
+                <text
+                  x={point.x}
+                  y={height - 18}
+                  textAnchor="middle"
+                  fontSize="11"
+                  fill="#71717a"
+                >
+                  {point.label}
                 </text>
               </g>
             ))}
           </svg>
-
-          <div className="mt-3 grid grid-cols-5 gap-2 text-center text-[11px] text-zinc-500 md:grid-cols-10">
-            {data.map((item, index) => (
-              <div key={`${item.tarih}-${index}`}>{item.tarih}</div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
@@ -254,11 +288,14 @@ export default function TuketiciFaiziOranlariPage() {
         const sheet = workbook.Sheets[targetSheetName];
         if (!sheet) throw new Error(`Sayfa bulunamadı: ${targetSheetName}`);
 
-        const rawRows = XLSX.utils.sheet_to_json<(string | number | null)[]>(sheet, {
-          header: 1,
-          defval: "",
-          raw: true,
-        }) as unknown[][];
+        const rawRows = XLSX.utils.sheet_to_json<(string | number | null)[]>(
+          sheet,
+          {
+            header: 1,
+            defval: "",
+            raw: true,
+          }
+        ) as unknown[][];
 
         const headerRowIndex = findHeaderRow(rawRows);
         if (headerRowIndex === -1) throw new Error("Başlık satırı bulunamadı.");
@@ -266,8 +303,12 @@ export default function TuketiciFaiziOranlariPage() {
         const headerRow = rawRows[headerRowIndex].map((cell) => cleanText(cell));
         const dataRows = rawRows.slice(headerRowIndex + 1);
 
-        const tarihIndex = headerRow.findIndex((cell) => cell.toLowerCase().includes("tarih"));
-        const ortalamaIndex = headerRow.findIndex((cell) => cell.toLowerCase().includes("ortalama"));
+        const tarihIndex = headerRow.findIndex((cell) =>
+          cell.toLowerCase().includes("tarih")
+        );
+        const ortalamaIndex = headerRow.findIndex((cell) =>
+          cell.toLowerCase().includes("ortalama")
+        );
 
         if (tarihIndex === -1 || ortalamaIndex === -1) {
           throw new Error("Tarih veya Günlük Ortalama sütunu bulunamadı.");
@@ -275,7 +316,12 @@ export default function TuketiciFaiziOranlariPage() {
 
         const bankaColumns = headerRow
           .map((name, index) => ({ name, index }))
-          .filter((item) => item.name && item.index !== tarihIndex && item.index !== ortalamaIndex);
+          .filter(
+            (item) =>
+              item.name &&
+              item.index !== tarihIndex &&
+              item.index !== ortalamaIndex
+          );
 
         const preparedRows = dataRows
           .map((row) => {
@@ -361,9 +407,14 @@ export default function TuketiciFaiziOranlariPage() {
     }
 
     return bankaListesi.map((item, index) => (
-      <tr key={item.banka} className={index % 2 === 0 ? "bg-white" : "bg-sky-50/60"}>
+      <tr
+        key={item.banka}
+        className={index % 2 === 0 ? "bg-white" : "bg-sky-50/60"}
+      >
         <td className="px-4 py-3 font-medium text-zinc-800">{item.banka}</td>
-        <td className="px-4 py-3 text-right font-semibold text-zinc-900">{item.faiz}</td>
+        <td className="px-4 py-3 text-right font-semibold text-zinc-900">
+          {item.faiz}
+        </td>
       </tr>
     ));
   }, [bankaListesi, yukleniyor]);
@@ -372,11 +423,17 @@ export default function TuketiciFaiziOranlariPage() {
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-7xl">
         <div className="mb-6 flex flex-wrap gap-3">
-          <Link href="/" className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100">
+          <Link
+            href="/"
+            className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
+          >
             Ana Sayfa
           </Link>
 
-          <Link href="/mevduat-kredi-faizleri" className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100">
+          <Link
+            href="/mevduat-kredi-faizleri"
+            className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
+          >
             Geri
           </Link>
         </div>
@@ -386,11 +443,14 @@ export default function TuketiciFaiziOranlariPage() {
         </h1>
 
         <p className="mb-8 text-base text-zinc-600">
-          Güncel tüketici kredisi oranları, banka karşılaştırmaları ve günlük ortalama faiz grafiği.
+          Güncel tüketici kredisi oranları, banka karşılaştırmaları ve günlük
+          ortalama faiz grafiği.
         </p>
-<div className="mb-8 text-sm font-semibold text-zinc-700">
-  Güncelleme Tarihi: {guncellemeTarihi}
-</div>
+
+        <div className="mb-8 text-sm font-semibold text-zinc-700">
+          Güncelleme Tarihi: {guncellemeTarihi}
+        </div>
+
         {hata ? (
           <section className="mb-8 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
             {hata}
@@ -406,8 +466,12 @@ export default function TuketiciFaiziOranlariPage() {
             <table className="w-full min-w-[320px] text-sm md:text-base">
               <thead className="bg-zinc-100">
                 <tr>
-                  <th className="px-4 py-3 text-left font-semibold text-zinc-900">Banka</th>
-                  <th className="px-4 py-3 text-right font-semibold text-zinc-900">Minimum Faiz</th>
+                  <th className="px-4 py-3 text-left font-semibold text-zinc-900">
+                    Banka
+                  </th>
+                  <th className="px-4 py-3 text-right font-semibold text-zinc-900">
+                    Minimum Faiz
+                  </th>
                 </tr>
               </thead>
               <tbody>{tabloIcerik}</tbody>
