@@ -1,6 +1,8 @@
-"use client";
-
-function MevduatGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
+function MevduatGrafik({
+  data,
+}: {
+  data: { tarih: string; ortalama: number }[];
+}) {
   if (!data.length) {
     return (
       <section className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
@@ -119,5 +121,3 @@ function MevduatGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
     </section>
   );
 }
-
-export default MevduatGrafik;
