@@ -144,6 +144,42 @@ export default function FonGetiriLandingPage() {
         <section className="pt-6">
           <ReklamAlani variant="icerik" />
         </section>
+
+        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+            Fon Getiri Analizi Hakkında
+          </h2>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Fon getiri analizi, yatırımcıların farklı fon türlerinin performansını
+            karşılaştırarak daha bilinçli yatırım kararları almasına yardımcı olur.
+            Bu sayfada menkul kıymet yatırım fonları, emeklilik fonları, borsa
+            yatırım fonları, gayrimenkul yatırım fonları ve girişim sermayesi
+            yatırım fonları gibi farklı kategorileri ayrı ayrı inceleyebilirsiniz.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Fon türlerine göre ayrılmış getiri analizleri sayesinde hangi fon
+            grubunun daha yüksek performans gösterdiğini daha kolay görebilir,
+            risk ve getiri dengesini daha sağlıklı değerlendirebilirsiniz. Bu yapı,
+            yatırım fonları karşılaştırması yapmak isteyen kullanıcılar için hızlı
+            ve pratik bir analiz imkanı sunar.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Güncel fon getirileri, geçmiş performans karşılaştırmaları ve fon
+            kategorilerine göre detaylı incelemeler yatırım kararlarında önemli rol
+            oynar. Özellikle uzun vadeli yatırım planı yapanlar için emeklilik
+            fonları, borsa yatırım fonları ve diğer yatırım fonu türlerinin
+            düzenli takibi büyük avantaj sağlar.
+          </p>
+
+          <p className="leading-7 text-zinc-700">
+            Güncel fon getirileri, yatırım fonu karşılaştırmaları, fon performans
+            analizi ve kategorilere göre detaylı incelemeler için bu sayfayı
+            düzenli olarak takip edebilirsiniz.
+          </p>
+        </section>
       </div>
     </main>
   );

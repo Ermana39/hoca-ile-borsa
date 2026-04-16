@@ -144,6 +144,43 @@ export default function FonTarihselVerilerLandingPage() {
         <section className="pt-6">
           <ReklamAlani variant="icerik" />
         </section>
+
+        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+            Fon Tarihsel Veriler Hakkında
+          </h2>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Fon tarihsel veriler sayfası, yatırım fonlarının geçmiş performansını
+            detaylı şekilde incelemek isteyen kullanıcılar için hazırlanmıştır.
+            Bu sayfada menkul kıymet yatırım fonları, emeklilik fonları, borsa
+            yatırım fonları, gayrimenkul yatırım fonları ve girişim sermayesi
+            yatırım fonları gibi farklı fon türlerinin tarihsel verilerine kolayca
+            ulaşabilirsiniz.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Tarihsel fon verileri, yatırımcıların geçmiş fiyat hareketlerini,
+            performans değişimlerini ve fonların farklı dönemlerdeki seyrini analiz
+            etmesine yardımcı olur. Böylece kısa vadeli dalgalanmalar ile uzun
+            vadeli trendler daha net görülebilir ve yatırım kararları daha sağlam
+            verilerle desteklenebilir.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Fon türlerine göre ayrılmış tarihsel veri ekranları sayesinde belirli
+            bir kategoriye odaklanarak analiz yapmak daha kolay hale gelir. Bu yapı,
+            özellikle fon karşılaştırması yapmak, geçmiş performansı incelemek ve
+            yatırım stratejisini buna göre oluşturmak isteyen kullanıcılar için
+            önemli avantaj sağlar.
+          </p>
+
+          <p className="leading-7 text-zinc-700">
+            Güncel ve geçmiş fon verileri, fon performans analizi, yatırım fonu
+            karşılaştırmaları ve kategori bazlı detaylı incelemeler için bu sayfayı
+            düzenli olarak takip edebilirsiniz.
+          </p>
+        </section>
       </div>
     </main>
   );

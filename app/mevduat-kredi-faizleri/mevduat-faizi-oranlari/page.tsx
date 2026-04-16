@@ -487,6 +487,41 @@ export default function MevduatFaiziOranlariPage() {
         <section className="mt-8">
           <MevduatHesaplayici />
         </section>
+
+        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+            Mevduat Faizi Oranları Hakkında
+          </h2>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Mevduat faizi oranları, birikimlerini vadeli hesapta değerlendirmek
+            isteyen yatırımcılar için en önemli kriterlerden biridir. Bu sayfada
+            bankaların güncel mevduat faizi oranlarını karşılaştırabilir, en yüksek
+            faiz veren bankaları kolayca görebilir ve kazanç fırsatlarını takip
+            edebilirsiniz.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Banka banka listelenen vadeli mevduat faiz oranları düzenli olarak
+            güncellenir. Böylece kullanıcılar en yüksek mevduat faizi sunan
+            bankaları tek ekranda inceleyebilir. Günlük ortalama faiz grafiği
+            sayesinde faiz oranlarındaki değişimleri geçmiş verilerle birlikte
+            analiz edebilirsiniz.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Mevduat hesaplama aracı ile yatırım tutarı, vade süresi ve faiz oranına
+            göre tahmini kazancınızı hesaplayabilirsiniz. Net getiri, brüt kazanç
+            ve vade sonunda elde edilecek toplam tutarı hızlı şekilde
+            öğrenebilirsiniz.
+          </p>
+
+          <p className="leading-7 text-zinc-700">
+            Güncel mevduat faiz oranları, en yüksek faiz veren bankalar, vadeli
+            hesap getirileri ve banka karşılaştırmaları için bu sayfayı düzenli
+            olarak takip edebilirsiniz.
+          </p>
+        </section>
       </div>
     </main>
   );

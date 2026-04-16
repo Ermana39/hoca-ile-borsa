@@ -488,6 +488,41 @@ export default function KonutKredisiOranlariPage() {
         <section className="mt-8">
           <HesaplayiciAlani />
         </section>
+
+        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+            Konut Kredisi Faiz Oranları Hakkında
+          </h2>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Konut kredisi faiz oranları, ev satın almak isteyenler için aylık
+            taksit ve toplam geri ödeme tutarını doğrudan etkileyen en önemli
+            unsurlardan biridir. Bu sayfada bankaların güncel konut kredisi faiz
+            oranlarını karşılaştırabilir, günlük değişimleri inceleyebilir ve en
+            uygun kredi seçeneğini değerlendirebilirsiniz.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Banka banka listelenen konut kredisi oranları düzenli olarak
+            güncellenir. Böylece kullanıcılar en düşük konut kredisi faizi sunan
+            bankaları tek ekranda görebilir. Özellikle faizlerin sık değiştiği
+            dönemlerde günlük ortalama grafik bölümü piyasa hareketlerini takip
+            etmek açısından fayda sağlar.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Konut kredisi hesaplayıcı aracını kullanarak kredi tutarı, vade
+            süresi ve faiz oranına göre aylık ödeme planınızı hesaplayabilirsiniz.
+            Bu sayede ev kredisi çekmeden önce bütçenize en uygun ödeme planını
+            kolayca oluşturabilirsiniz.
+          </p>
+
+          <p className="leading-7 text-zinc-700">
+            Güncel konut kredisi faiz oranları, en uygun ev kredisi seçenekleri,
+            banka karşılaştırmaları ve ödeme hesaplamaları için bu sayfayı düzenli
+            olarak takip edebilirsiniz.
+          </p>
+        </section>
       </div>
     </main>
   );
