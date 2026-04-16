@@ -66,7 +66,7 @@ export default function Haber1Page() {
               <p className="whitespace-pre-line text-base leading-8 text-zinc-700 md:text-lg">
 {`Son dönemlerde öne çıkan kazandıran fonlar; para piyasası fonlarında TP2 olurken, serbest fonlarda DFI, TLY, Değişken fonlarda PBR ve Hisse senedi yoğun fonlarda da PHE oldu.
 Fon sayfamızdan fonların kazançlarını inceleyebilirsiniz.
-Yatırım tavsiyesi değil genel inceleme önerisidir.`}
+Burada yer alan değerlendirmeler genel bilgilendirme amaçlıdır. Herhangi bir yatırım tavsiyesi niteliği taşımaz.`}
               </p>
             </div>
           </section>
