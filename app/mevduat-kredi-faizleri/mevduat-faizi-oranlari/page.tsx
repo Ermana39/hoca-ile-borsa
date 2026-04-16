@@ -1,3 +1,5 @@
+"use client";
+
 function MevduatGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
   if (!data.length) {
     return (
@@ -15,6 +17,7 @@ function MevduatGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
   const width = 960;
   const height = 360;
   const padding = 42;
+  const bottomSpace = 50;
 
   const minValue = Math.min(...data.map((item) => item.ortalama));
   const maxValue = Math.max(...data.map((item) => item.ortalama));
@@ -28,8 +31,9 @@ function MevduatGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
 
     const y =
       height -
-      60 -
-      ((item.ortalama - minValue) / range) * (height - padding - 80);
+      bottomSpace -
+      ((item.ortalama - minValue) / range) *
+        (height - padding - bottomSpace - 20);
 
     return {
       x,
@@ -59,9 +63,9 @@ function MevduatGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
           <svg viewBox={`0 0 ${width} ${height}`} className="h-[360px] w-full">
             <line
               x1={padding}
-              y1={height - 50}
+              y1={height - bottomSpace}
               x2={width - padding}
-              y2={height - 50}
+              y2={height - bottomSpace}
               stroke="#d4d4d8"
               strokeWidth="1"
             />
@@ -70,7 +74,7 @@ function MevduatGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
               x1={padding}
               y1={padding}
               x2={padding}
-              y2={height - 50}
+              y2={height - bottomSpace}
               stroke="#d4d4d8"
               strokeWidth="1"
             />
@@ -115,3 +119,5 @@ function MevduatGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
     </section>
   );
 }
+
+export default MevduatGrafik;
