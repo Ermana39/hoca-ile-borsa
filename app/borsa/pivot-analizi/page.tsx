@@ -191,30 +191,30 @@ export default function PivotAnaliziPage() {
 
               <tbody>
                 {pivotVerileri.map((row) => (
-                  <tbody key={row.sembol}>
-                    <tr className="bg-zinc-50">
-                      <td className="border border-zinc-200 px-3 py-2 font-semibold">{row.sembol}</td>
-                      <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.fark)}</td>
-                      <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.son)}</td>
-                      <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.pivot)}</td>
-                      <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.destek1)}</td>
-                      <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.destek2)}</td>
-                      <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.destek3)}</td>
-                      <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.direnc1)}</td>
-                      <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.direnc2)}</td>
-                      <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.direnc3)}</td>
-                    </tr>
-                    <tr>
-                      <td
-                        colSpan={10}
-                        className={`px-3 py-2 text-center text-sm font-semibold ${getDurumClass(
-                          row.yorum
-                        )}`}
-                      >
-                        {row.yorum}
-                      </td>
-                    </tr>
-                  </tbody>
+                  <tr key={`${row.sembol}-values`} className="bg-zinc-50">
+                    <td className="border border-zinc-200 px-3 py-2 font-semibold">{row.sembol}</td>
+                    <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.fark)}</td>
+                    <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.son)}</td>
+                    <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.pivot)}</td>
+                    <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.destek1)}</td>
+                    <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.destek2)}</td>
+                    <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.destek3)}</td>
+                    <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.direnc1)}</td>
+                    <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.direnc2)}</td>
+                    <td className="border border-zinc-200 px-3 py-2">{formatNumber(row.direnc3)}</td>
+                  </tr>
+                ))}
+                {pivotVerileri.map((row) => (
+                  <tr key={`${row.sembol}-yorum`}>
+                    <td
+                      colSpan={10}
+                      className={`px-3 py-2 text-center text-sm font-semibold ${getDurumClass(
+                        row.yorum
+                      )}`}
+                    >
+                      {row.yorum}
+                    </td>
+                  </tr>
                 ))}
               </tbody>
             </table>

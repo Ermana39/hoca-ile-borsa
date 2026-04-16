@@ -292,10 +292,6 @@ export default function YeniIsAnlasmalariPage() {
           </div>
         </section>
 
-        <section className="mt-8">
-          <ReklamAlani variant="icerik" />
-        </section>
-
         <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">
             Yeni İş Anlaşmaları Hakkında

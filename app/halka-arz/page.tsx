@@ -187,23 +187,28 @@ function KurumTablosu({
   rows,
   lotBaslik,
   sagBaslik,
+  bgColor,
 }: {
   title: string;
   rows: ListeSatiri[];
   lotBaslik: string;
   sagBaslik: string;
+  bgColor: string;
 }) {
   return (
-    <div className="overflow-hidden rounded-2xl border border-zinc-700 bg-[#232323] shadow-sm">
+    <div
+      className="overflow-hidden rounded-2xl border border-zinc-300 shadow-sm"
+      style={{ backgroundColor: bgColor }}
+    >
       <div className="overflow-x-auto">
-        <table className="w-full min-w-[470px] border-collapse text-white">
+        <table className="w-full min-w-[470px] border-collapse text-zinc-900">
           <thead>
-            <tr className="bg-[#1b1b1b] text-[11px] font-medium text-zinc-300 md:text-xs">
-              <th className="border-b border-r border-zinc-700 px-3 py-2 text-left">Kurum</th>
-              <th className="border-b border-r border-zinc-700 px-3 py-2 text-right">{lotBaslik}</th>
-              <th className="border-b border-r border-zinc-700 px-3 py-2 text-right">%</th>
-              <th className="border-b border-r border-zinc-700 px-3 py-2 text-right">Maliyet</th>
-              <th className="border-b border-zinc-700 px-3 py-2 text-right">{sagBaslik}</th>
+            <tr className="bg-white/60 text-[11px] font-medium text-zinc-700 md:text-xs">
+              <th className="border-b border-r border-zinc-300 px-3 py-2 text-left">Kurum</th>
+              <th className="border-b border-r border-zinc-300 px-3 py-2 text-right">{lotBaslik}</th>
+              <th className="border-b border-r border-zinc-300 px-3 py-2 text-right">%</th>
+              <th className="border-b border-r border-zinc-300 px-3 py-2 text-right">Maliyet</th>
+              <th className="border-b border-zinc-300 px-3 py-2 text-right">{sagBaslik}</th>
             </tr>
           </thead>
 
@@ -212,20 +217,20 @@ function KurumTablosu({
               const bosMu = !item.kurum;
 
               return (
-                <tr key={`${item.kurum || "bos"}-${index}`} className="bg-[#2a2a2a]">
-                  <td className="border-b border-r border-zinc-700 px-3 py-2 text-left text-[12px] font-semibold md:text-[13px]">
+                <tr key={`${item.kurum || "bos"}-${index}`} className="bg-transparent">
+                  <td className="border-b border-r border-zinc-300 px-3 py-2 text-left text-[12px] font-semibold md:text-[13px]">
                     {bosMu ? <span className="block min-h-[20px]"></span> : <span>{item.kurum}</span>}
                   </td>
-                  <td className="border-b border-r border-zinc-700 px-3 py-2 text-right text-[12px] text-zinc-100 md:text-[13px]">
+                  <td className="border-b border-r border-zinc-300 px-3 py-2 text-right text-[12px] text-zinc-900 md:text-[13px]">
                     {item.lot}
                   </td>
-                  <td className="border-b border-r border-zinc-700 px-3 py-2 text-right text-[12px] text-zinc-100 md:text-[13px]">
+                  <td className="border-b border-r border-zinc-300 px-3 py-2 text-right text-[12px] text-zinc-900 md:text-[13px]">
                     {item.yuzde}
                   </td>
-                  <td className="border-b border-r border-zinc-700 px-3 py-2 text-right text-[12px] text-zinc-100 md:text-[13px]">
+                  <td className="border-b border-r border-zinc-300 px-3 py-2 text-right text-[12px] text-zinc-900 md:text-[13px]">
                     {item.maliyet}
                   </td>
-                  <td className="border-b border-zinc-700 px-3 py-2 text-right text-[12px] text-zinc-100 md:text-[13px]">
+                  <td className="border-b border-zinc-300 px-3 py-2 text-right text-[12px] text-zinc-900 md:text-[13px]">
                     {item.sagDeger}
                   </td>
                 </tr>
@@ -235,7 +240,10 @@ function KurumTablosu({
         </table>
       </div>
 
-      <div className="border-t border-zinc-700 bg-[#1f1f1f] px-4 py-2 text-xs font-semibold text-zinc-300">
+      <div
+        className="border-t border-zinc-300 px-4 py-2 text-xs font-semibold text-zinc-800"
+        style={{ backgroundColor: bgColor }}
+      >
         {title}
       </div>
     </div>
@@ -376,18 +384,21 @@ export default function HalkaArzPage() {
                   rows={alicilar}
                   lotBaslik="Net Lot"
                   sagBaslik="Toplam"
+                  bgColor="#dcfce7"
                 />
                 <KurumTablosu
                   title="En Çok Satıcı Kurumlar"
                   rows={saticilar}
                   lotBaslik="Net Lot"
                   sagBaslik="Toplam"
+                  bgColor="#fee2e2"
                 />
                 <KurumTablosu
                   title="En Çok İşlem Yapan Kurumlar"
                   rows={hacimciler}
                   lotBaslik="Toplam Lot"
                   sagBaslik="Net"
+                  bgColor="#dbeafe"
                 />
               </div>
             </div>
