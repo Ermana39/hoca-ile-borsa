@@ -148,10 +148,6 @@ export default async function FonTarihselExcelPage({
         </section>
 
         <FonTarihselTableClient headers={headers} rows={filteredRows} />
-
-        <section className="mt-6">
-          <ReklamAlani variant="icerik" />
-        </section>
       </div>
     </main>
   );
