@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import TrackedLink from "@/components/tracked-link";
 
 type NewsItem = {
@@ -108,34 +108,31 @@ function KategoriKutusu({
   );
 }
 
-function getNumericIdFromHref(href: string) {
-  const match = href.match(/haber(\d+)/i);
+function getIdFromHref(href: string) {
+  const match = href.match(/(\d+)(?!.*\d)/);
   return match ? Number(match[1]) : 0;
 }
 
-function getNewsImage(item: NewsItem) {
-  if (item.image && item.image.trim() !== "") {
-    return item.image;
-  }
-
-  if (typeof item.id === "number" && item.id > 0) {
-    return `/haber${item.id}.png`;
-  }
-
-  const hrefId = getNumericIdFromHref(item.href);
-  if (hrefId > 0) {
-    return `/haber${hrefId}.png`;
-  }
-
-  return "/placeholder.png";
-}
-
 function HaberKutusu({ item }: { item: NewsItem }) {
-  const [imgSrc, setImgSrc] = useState(getNewsImage(item));
+  const initialImage =
+    item.image && item.image.trim() !== ""
+      ? item.image
+      : item.id
+        ? `/haber${item.id}.png`
+        : "/placeholder.png";
+
+  const [imgSrc, setImgSrc] = useState(initialImage);
 
   useEffect(() => {
-    setImgSrc(getNewsImage(item));
-  }, [item]);
+    const nextImage =
+      item.image && item.image.trim() !== ""
+        ? item.image
+        : item.id
+          ? `/haber${item.id}.png`
+          : "/placeholder.png";
+
+    setImgSrc(nextImage);
+  }, [item.id, item.image]);
 
   return (
     <TrackedLink
@@ -368,24 +365,29 @@ export default function HomePage() {
           const normalized = data
             .map((item: Partial<NewsItem>) => {
               const href = item.href || "/";
-              const derivedId =
+              const id =
                 typeof item.id === "number" && item.id > 0
                   ? item.id
-                  : getNumericIdFromHref(href);
+                  : getIdFromHref(href);
 
               return {
-                id: derivedId,
+                id,
                 title: item.title || "",
                 href,
                 image:
                   item.image && item.image.trim() !== ""
                     ? item.image
-                    : `/haber${derivedId}.png`,
+                    : id
+                      ? `/haber${id}.png`
+                      : "/placeholder.png",
                 alt: item.alt || item.title || "",
               };
             })
-            .filter((item: NewsItem) => item.id > 0 && item.title && item.href)
-            .sort((a: NewsItem, b: NewsItem) => b.id - a.id);
+            .filter(
+              (item: NewsItem) =>
+                item.id > 0 && item.title.trim() !== "" && item.href.trim() !== ""
+            )
+            .sort((a: NewsItem, b: NewsItem) => a.id - b.id);
 
           setNewsItems(normalized);
         }
@@ -411,11 +413,6 @@ export default function HomePage() {
     loadNews();
     loadUpdates();
   }, []);
-
-  const sortedNewsItems = useMemo(
-    () => [...newsItems].sort((a, b) => b.id - a.id),
-    [newsItems]
-  );
 
   return (
     <main className="min-h-screen bg-white">
@@ -454,9 +451,9 @@ export default function HomePage() {
               </h1>
             </div>
 
-            {sortedNewsItems.length > 0 ? (
+            {newsItems.length > 0 ? (
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-                {sortedNewsItems.map((item) => (
+                {newsItems.map((item) => (
                   <HaberKutusu key={item.id || item.href} item={item} />
                 ))}
               </div>
@@ -554,10 +551,16 @@ export default function HomePage() {
                 <SosyalIkon href="https://x.com/HocaileBorsa" label="X">
                   <XIcon />
                 </SosyalIkon>
-                <SosyalIkon href="https://www.instagram.com/hocaileborsa/" label="Instagram">
+                <SosyalIkon
+                  href="https://www.instagram.com/hocaileborsa/"
+                  label="Instagram"
+                >
                   <InstagramIcon />
                 </SosyalIkon>
-                <SosyalIkon href="https://t.me/borsa_halkaarz_endeks" label="Telegram">
+                <SosyalIkon
+                  href="https://t.me/borsa_halkaarz_endeks"
+                  label="Telegram"
+                >
                   <TelegramIcon />
                 </SosyalIkon>
               </div>

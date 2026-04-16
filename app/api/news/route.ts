@@ -11,12 +11,12 @@ type NewsItem = {
 };
 
 function getTitleFromFileContent(content: string) {
-  const metadataTitleMatch = content.match(/title:\s*"([^"]+)"/);
+  const metadataTitleMatch = content.match(/title\s*:\s*"([^"]+)"/i);
   if (metadataTitleMatch?.[1]) {
     return metadataTitleMatch[1].trim();
   }
 
-  const h1Match = content.match(/<h1[^>]*>([\s\S]*?)<\/h1>/);
+  const h1Match = content.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i);
   if (h1Match?.[1]) {
     return h1Match[1].replace(/<[^>]+>/g, "").trim();
   }
@@ -24,24 +24,34 @@ function getTitleFromFileContent(content: string) {
   return "";
 }
 
-function getNumericIdFromFolderName(folderName: string) {
-  const match = folderName.match(/^haber(\d+)$/i);
+function getIdFromFolderName(folderName: string) {
+  const match = folderName.match(/(\d+)$/);
   return match ? Number(match[1]) : 0;
 }
 
 export async function GET() {
   try {
-    const appDir = path.join(process.cwd(), "app");
-    const entries = fs.readdirSync(appDir, { withFileTypes: true });
+    const haberDir = path.join(process.cwd(), "app", "haber");
+
+    if (!fs.existsSync(haberDir)) {
+      return NextResponse.json([]);
+    }
+
+    const entries = fs.readdirSync(haberDir, { withFileTypes: true });
 
     const newsItems: NewsItem[] = entries
-      .filter((entry) => entry.isDirectory() && /^haber\d+$/i.test(entry.name))
+      .filter((entry) => entry.isDirectory())
       .map((entry) => {
         const folderName = entry.name;
-        const id = getNumericIdFromFolderName(folderName);
-        const pageFilePath = path.join(appDir, folderName, "page.tsx");
+        const id = getIdFromFolderName(folderName);
 
-        if (!fs.existsSync(pageFilePath) || id <= 0) {
+        if (!id) {
+          return null;
+        }
+
+        const pageFilePath = path.join(haberDir, folderName, "page.tsx");
+
+        if (!fs.existsSync(pageFilePath)) {
           return null;
         }
 
@@ -55,13 +65,13 @@ export async function GET() {
         return {
           id,
           title,
-          href: `/${folderName}`,
-          image: `/${folderName}.png`,
+          href: `/haber/${folderName}`,
+          image: `/haber${id}.png`,
           alt: title,
         };
       })
       .filter((item): item is NewsItem => item !== null)
-      .sort((a, b) => b.id - a.id);
+      .sort((a, b) => a.id - b.id);
 
     return NextResponse.json(newsItems, {
       headers: {
