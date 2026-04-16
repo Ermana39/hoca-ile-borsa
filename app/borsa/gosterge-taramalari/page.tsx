@@ -37,6 +37,20 @@ const taramalar = [
     image: "/rsi70-tarama.png",
     alt: "RSI 70 üstü hisseler görseli",
   },
+  {
+    title: "MACD Al verenler",
+    description: "MACD göstergesine göre al sinyali üreten hisseler",
+    href: "/borsa/gosterge-taramalari/macd-al-verenler",
+    image: "/macd-al.png",
+    alt: "MACD al verenler görseli",
+  },
+  {
+    title: "MACD Sat verenler",
+    description: "MACD göstergesine göre sat sinyali üreten hisseler",
+    href: "/borsa/gosterge-taramalari/macd-sat-verenler",
+    image: "/macd-sat.png",
+    alt: "MACD sat verenler görseli",
+  },
 ];
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
@@ -157,31 +171,34 @@ export default function GostergeTaramalariPage() {
             Gösterge taramaları sayfası, teknik analizde kullanılan popüler
             göstergelere göre öne çıkan hisseleri hızlı şekilde incelemek isteyen
             yatırımcılar için hazırlanmıştır. Bu sayfada yükseliş trendinde olan
-            hisseler, düşüş trendinde olan hisseler, RSI 30 altı hisseler ve RSI
-            70 üstü hisseler gibi farklı teknik tarama sonuçlarına kolayca
-            ulaşabilirsiniz.
+            hisseler, düşüş trendinde olan hisseler, RSI 30 altı hisseler, RSI 70
+            üstü hisseler, MACD al veren hisseler ve MACD sat veren hisseler gibi
+            farklı teknik tarama sonuçlarına kolayca ulaşabilirsiniz.
           </p>
 
           <p className="mb-4 leading-7 text-zinc-700">
             Borsa gösterge taramaları, yatırımcıların yüzlerce hisse arasından
             belirli teknik kriterlere uyan şirketleri daha hızlı filtrelemesine
             yardımcı olur. Hareketli ortalamalara göre trend analizi yapmak,
-            aşırı satım ve aşırı alım bölgelerini tespit etmek isteyen kullanıcılar
-            için bu taramalar önemli bir avantaj sağlar.
+            aşırı satım ve aşırı alım bölgelerini tespit etmek ya da MACD sinyallerini
+            takip etmek isteyen kullanıcılar için bu taramalar önemli bir avantaj
+            sağlar.
           </p>
 
           <p className="mb-4 leading-7 text-zinc-700">
             RSI 30 altı hisseler genellikle aşırı satım bölgesinde değerlendirilen
             hisseleri gösterirken, RSI 70 üstü hisseler aşırı alım bölgesine yaklaşan
             şirketleri öne çıkarabilir. Benzer şekilde yükseliş ve düşüş trendi
-            taramaları da teknik görünümü güçlü veya zayıf olan hisseleri tek ekranda
-            karşılaştırma imkanı sunar.
+            taramaları teknik görünümü güçlü veya zayıf olan hisseleri tek ekranda
+            karşılaştırma imkanı sunarken, MACD al ve sat taramaları da momentumu
+            değişen hisseleri yakından izlemek isteyenler için faydalı bir görünüm
+            sağlar.
           </p>
 
           <p className="leading-7 text-zinc-700">
             Güncel teknik analiz taramaları, hareketli ortalama bazlı hisse
-            filtreleri, RSI taramaları ve trend odaklı borsa ekranları için bu
-            sayfayı düzenli olarak takip edebilirsiniz.
+            filtreleri, RSI taramaları, MACD sinyalleri ve trend odaklı borsa
+            ekranları için bu sayfayı düzenli olarak takip edebilirsiniz.
           </p>
         </section>
       </div>
