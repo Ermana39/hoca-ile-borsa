@@ -18,7 +18,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Dip Zirve Analizi",
     href: "/borsa/dip-zirve-analizi",
-    updatedAt: "15.04.2026 18:48",
+    updatedAt: "15.04.2026 18:25",
   },
   {
     title: "Eğitim Videolerı",
@@ -33,7 +33,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
     {
     title: "Geri Alım Programları",
     href: "/borsa/geri-alim-programlari",
-    updatedAt: "15.04.2026 18:48",
+    updatedAt: "15.04.2026 18:25",
   },
   {
     title: "Gösterge Taramaları",
@@ -53,17 +53,17 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Pivot Analizi",
     href: "/borsa/pivot-analizi",
-    updatedAt: "15.04.2026 16:45",
+    updatedAt: "15.04.2026 18:25",
   },
   {
     title: "Tedbirli Hisseler",
     href: "/borsa/tedbirli-hisseler",
-    updatedAt: "15.04.2026 18:48",
+    updatedAt: "15.04.2026 18:25",
   },
   {
     title: "Halka Arz",
     href: "/halka-arz",
-    updatedAt: "16.04.2026 15:07",
+    updatedAt: "16.04.2026 18:25",
   },
   {
     title: "Onaylı İzahnameler",
