@@ -25,7 +25,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
-export default function Haber1Page() {
+export default function Haber999Page() {
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-4xl">
@@ -48,7 +48,7 @@ export default function Haber1Page() {
         <article className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
-              src="/haber-5v.png"
+              src="/haber999.png"
               alt="Borsada açığa satış yasağı 24 Nisan’a kadar uzatıldı"
               fill
               unoptimized
