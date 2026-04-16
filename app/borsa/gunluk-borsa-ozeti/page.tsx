@@ -2,96 +2,137 @@ import Image from "next/image";
 import Link from "next/link";
 
 const bistVeri = {
-  tarih: "16.04.2026",
-  kapanis: "14252.38",
-  degisimYuzde: 0.35,
+  tarih: "17.04.2026",
+  kapanis: "14201.05",
+  degisimYuzde: -0.36,
 };
 
 const tumYukselenler = [
-  { kod: "ADESE", fark: "+10,00%" },
-  { kod: "GZNMI", fark: "+10,00%" },
-  { kod: "EGEEN", fark: "+10,00%" },
-  { kod: "DYOBY", fark: "+10,00%" },
-  { kod: "VSNMD", fark: "+9,99%" },
-  { kod: "BORLS", fark: "+9,98%" },
-  { kod: "GIPTA", fark: "+9,97%" },
-  { kod: "SMRVA", fark: "+9,97%" },
-  { kod: "HPARTF2", fark: "+9,97%" },
-  { kod: "EFOR", fark: "+9,97%" },
+  { kod: "MERCN", fark: "+10,00%" },
+  { kod: "GZNMI", fark: "+9,99%" },
+  { kod: "SDTTR", fark: "+9,99%" },
+  { kod: "CRFSA", fark: "+9,97%" },
+  { kod: "SUNTK", fark: "+9,96%" },
+  { kod: "EFOR", fark: "+9,95%" },
+  { kod: "KONTR", fark: "+9,95%" },
+  { kod: "PRZMA", fark: "+9,95%" },
+  { kod: "IZFAS", fark: "+9,95%" },
+  { kod: "GIPTA", fark: "+9,95%" },
 ];
 
 const tumDusenler = [
-  { kod: "NIBAS", fark: "-10,00%" },
-  { kod: "RUBNS", fark: "-9,94%" },
-  { kod: "SERNT", fark: "-9,91%" },
-  { kod: "MEKAG", fark: "-9,88%" },
-  { kod: "ECILC", fark: "-7,85%" },
-  { kod: "ENSRI", fark: "-7,69%" },
-  { kod: "EUPWR", fark: "-7,65%" },
-  { kod: "ZERGY", fark: "-7,32%" },
-  { kod: "ZGYO", fark: "-6,00%" },
-  { kod: "KAPLM", fark: "-5,82%" },
+  { kod: "ENSRI", fark: "-10,00%" },
+  { kod: "DFGSF2", fark: "-10,00%" },
+  { kod: "ARZUM", fark: "-9,80%" },
+  { kod: "ATAPYF2", fark: "-9,66%" },
+  { kod: "AGROT", fark: "-8,98%" },
+  { kod: "DYOBY", fark: "-7,64%" },
+  { kod: "HTPSBF2", fark: "-6,61%" },
+  { kod: "SERNT", fark: "-6,03%" },
+  { kod: "DAPGM", fark: "-4,89%" },
+  { kod: "ARZSAF2", fark: "-4,58%" },
 ];
 
 const tumHacimliler = [
-  { kod: "SASA", hacim: "17.871.371.996" },
-  { kod: "THYAO", hacim: "16.417.747.703" },
-  { kod: "ASELS", hacim: "8.811.297.344" },
-  { kod: "ISCTR", hacim: "7.556.916.139" },
-  { kod: "TRALT", hacim: "7.432.674.721" },
-  { kod: "ASTOR", hacim: "7.194.019.665" },
-  { kod: "TUPRS", hacim: "6.396.067.100" },
-  { kod: "AKBNK", hacim: "5.724.877.254" },
-  { kod: "ECILC", hacim: "5.046.425.194" },
-  { kod: "YKBNK", hacim: "5.024.956.215" },
+  { kod: "ASTOR", hacim: "24.028.587.680" },
+  { kod: "SASA", hacim: "20.724.706.253" },
+  { kod: "THYAO", hacim: "13.587.321.550" },
+  { kod: "TUPRS", hacim: "7.532.523.543" },
+  { kod: "AKBNK", hacim: "6.650.656.283" },
+  { kod: "ISCTR", hacim: "6.561.945.657" },
+  { kod: "ASELS", hacim: "6.393.477.984" },
+  { kod: "TEHOL", hacim: "4.891.196.612" },
+  { kod: "YKBNK", hacim: "4.437.244.890" },
+  { kod: "TRALT", hacim: "4.211.997.769" },
 ];
 
 const tumParaGirisi = [
-  { kod: "SASA", tutar: "+251.791.133" },
-  { kod: "ISCTR", tutar: "+117.262.378" },
-  { kod: "ASELS", tutar: "+115.836.942" },
-  { kod: "TRALT", tutar: "+100.510.631" },
-  { kod: "AKBNK", tutar: "+97.768.733" },
-  { kod: "TERA", tutar: "+96.025.083" },
-  { kod: "KCHOL", tutar: "+73.369.007" },
-  { kod: "EREGL", tutar: "+64.500.641" },
-  { kod: "GUBRF", tutar: "+59.328.545" },
-  { kod: "TCELL", tutar: "+55.700.779" },
+  { kod: "TUPRS", tutar: "+284.556.279" },
+  { kod: "TEHOL", tutar: "+84.992.953" },
+  { kod: "TERA", tutar: "+64.227.417" },
+  { kod: "CWENE", tutar: "+63.703.502" },
+  { kod: "KONTR", tutar: "+63.554.794" },
+  { kod: "MGROS", tutar: "+34.342.665" },
 ];
 
 const tumParaCikisi = [
-  { kod: "THYAO", tutar: "-484.103.465" },
-  { kod: "ECILC", tutar: "-177.573.930" },
-  { kod: "TUPRS", tutar: "-104.927.114" },
-  { kod: "GARAN", tutar: "-60.050.929" },
-  { kod: "CWENE", tutar: "-45.728.517" },
-  { kod: "BRSAN", tutar: "-42.313.016" },
-  { kod: "GRTHO", tutar: "-38.526.510" },
-  { kod: "GESAN", tutar: "-32.085.514" },
+  { kod: "ASTOR", tutar: "-501.112.699" },
+  { kod: "ASELS", tutar: "-120.340.542" },
+  { kod: "ISCTR", tutar: "-114.671.335" },
+  { kod: "THYAO", tutar: "-106.778.778" },
+  { kod: "GARAN", tutar: "-102.396.834" },
+  { kod: "TRALT", tutar: "-86.078.887" },
+  { kod: "AGROT", tutar: "-84.044.462" },
+  { kod: "KCHOL", tutar: "-70.465.804" },
+  { kod: "ECILC", tutar: "-57.190.431" },
 ];
 
 const enCokAlisYapanKurumlar = [
-  { kurum: "TERA", hacim: "1.203.601.887", oran: "%25,67" },
-  { kurum: "DENIZ", hacim: "677.349.149", oran: "%14,45" },
-  { kurum: "BULLS YATIRIM", hacim: "662.690.490", oran: "%14,14" },
-  { kurum: "YAPI KREDI", hacim: "522.506.176", oran: "%11,15" },
-  { kurum: "MIDAS", hacim: "240.791.868", oran: "%5,14" },
+  { kurum: "YAPI KREDI", hacim: "5.601.908.909", oran: "%39,63" },
+  { kurum: "TEB", hacim: "1.029.149.204", oran: "%7,28" },
+  { kurum: "DENIZ", hacim: "1.023.860.509", oran: "%7,24" },
+  { kurum: "UNLU", hacim: "764.675.402", oran: "%5,41" },
+  { kurum: "YATIRIM FINA", hacim: "721.930.219", oran: "%5,11" },
 ];
 
 const enCokSatisYapanKurumlar = [
-  { kurum: "HSBC", hacim: "-774.067.922", oran: "%16,50" },
-  { kurum: "BANK OF AMERICA", hacim: "-652.154.052", oran: "%13,91" },
-  { kurum: "INFO", hacim: "-505.329.442", oran: "%10,78" },
-  { kurum: "HALK", hacim: "-343.906.006", oran: "%7,34" },
-  { kurum: "YATIRIM FINANSMAN", hacim: "-321.451.971", oran: "%6,86" },
+  { kurum: "HSBC", hacim: "-6.537.982.309", oran: "%46,26" },
+  { kurum: "BANK OF AME", hacim: "-2.612.977.642", oran: "%18,49" },
+  { kurum: "AK", hacim: "-994.056.715", oran: "%7,03" },
+  { kurum: "IS", hacim: "-943.670.902", oran: "%6,68" },
+  { kurum: "TACIRLER", hacim: "-635.481.688", oran: "%4,50" },
 ];
 
 const enCokHacimYapanKurumlar = [
-  { kurum: "YAPI KREDI", hacim: "66.530.854.018", oran: "%12,73" },
-  { kurum: "BANK OF AMERICA", hacim: "62.705.778.893", oran: "%11,99" },
-  { kurum: "IS", hacim: "48.825.863.937", oran: "%9,34" },
-  { kurum: "AK", hacim: "38.611.935.233", oran: "%7,39" },
-  { kurum: "DENIZ", hacim: "22.476.202.593", oran: "%4,30" },
+  { kurum: "YAPI KREDI", hacim: "80.004.546.158", oran: "%14,08" },
+  { kurum: "BANK OF AME", hacim: "68.741.939.839", oran: "%12,10" },
+  { kurum: "IS", hacim: "51.642.571.292", oran: "%9,09" },
+  { kurum: "AK", hacim: "43.229.844.136", oran: "%7,61" },
+  { kurum: "DENIZ", hacim: "23.946.329.111", oran: "%4,21" },
+];
+
+const ekonomikTakvimVerileri = [
+  {
+    tarih: "17.04.2026",
+    kayitlar: [
+      {
+        saat: "10:00",
+        ulke: "TR",
+        gosterge: "Yeni Kurulan Şirket Sayısı (adet)",
+        onem: "sari" as const,
+        aciklanan: "-",
+        beklenti: "-",
+        onceki: "9.432",
+      },
+      {
+        saat: "10:00",
+        ulke: "TR",
+        gosterge: "Kapanan Şirket Sayısı (adet)",
+        onem: "sari" as const,
+        aciklanan: "-",
+        beklenti: "-",
+        onceki: "1.621",
+      },
+      {
+        saat: "10:00",
+        ulke: "TR",
+        gosterge: "Konut Satışları",
+        onem: "turuncu" as const,
+        aciklanan: "-",
+        beklenti: "-",
+        onceki: "124.549",
+      },
+      {
+        saat: "23:00",
+        ulke: "TR",
+        gosterge: "Türkiye'nin Uzun Vadeli Döviz Cinsi Kredi Notu (Standard & Poor's)",
+        onem: "kirmizi" as const,
+        aciklanan: "-",
+        beklenti: "-",
+        onceki: "BB- durağan",
+      },
+    ],
+  },
 ];
 
 function ilkBesKisaKodlu<T extends { kod: string }>(liste: T[]) {
@@ -218,8 +259,13 @@ function KurumKutusu({
   );
 }
 
-function OnemKutulari({ tip }: { tip: "kirmizi" }) {
-  const renkler = ["bg-red-500", "bg-red-500", "bg-red-500"];
+function OnemKutulari({ tip }: { tip: "sari" | "turuncu" | "kirmizi" }) {
+  const renkler =
+    tip === "sari"
+      ? ["bg-yellow-400", "bg-yellow-400", "bg-zinc-300"]
+      : tip === "turuncu"
+        ? ["bg-orange-500", "bg-orange-500", "bg-zinc-300"]
+        : ["bg-red-500", "bg-red-500", "bg-red-500"];
 
   return (
     <div className="flex items-center gap-1">
@@ -245,6 +291,7 @@ function TakvimSatiri({
   saat,
   ulke,
   gosterge,
+  onem,
   aciklanan,
   beklenti,
   onceki,
@@ -252,6 +299,7 @@ function TakvimSatiri({
   saat: string;
   ulke: string;
   gosterge: string;
+  onem: "sari" | "turuncu" | "kirmizi";
   aciklanan: string;
   beklenti: string;
   onceki: string;
@@ -262,7 +310,7 @@ function TakvimSatiri({
       <div className="font-semibold text-zinc-900">{ulke}</div>
       <div className="font-semibold text-zinc-900">{gosterge}</div>
       <div>
-        <OnemKutulari tip="kirmizi" />
+        <OnemKutulari tip={onem} />
       </div>
       <div className="text-center font-semibold text-zinc-700">{aciklanan}</div>
       <div className="text-center font-semibold text-zinc-700">{beklenti}</div>
@@ -356,23 +404,23 @@ export default function GunlukBorsaOzetiPage() {
                   <div className="text-center">Önceki</div>
                 </div>
 
-                <TakvimTarihSatiri tarih="16.04.2026" />
-                <TakvimSatiri
-                  saat="10:00"
-                  ulke="TR"
-                  gosterge="Trafiğe Kaydedilen Motorlu Taşıtlar (adet)"
-                  aciklanan="-"
-                  beklenti="-"
-                  onceki="121.791"
-                />
-                <TakvimSatiri
-                  saat="10:00"
-                  ulke="TR"
-                  gosterge="Türkiye Konut Fiyat Endeksi (yıllık)"
-                  aciklanan="-"
-                  beklenti="-"
-                  onceki="26,35%"
-                />
+                {ekonomikTakvimVerileri.map((grup) => (
+                  <div key={grup.tarih}>
+                    <TakvimTarihSatiri tarih={grup.tarih} />
+                    {grup.kayitlar.map((kayit) => (
+                      <TakvimSatiri
+                        key={`${kayit.saat}-${kayit.gosterge}`}
+                        saat={kayit.saat}
+                        ulke={kayit.ulke}
+                        gosterge={kayit.gosterge}
+                        onem={kayit.onem}
+                        aciklanan={kayit.aciklanan}
+                        beklenti={kayit.beklenti}
+                        onceki={kayit.onceki}
+                      />
+                    ))}
+                  </div>
+                ))}
               </div>
             </div>
           </div>
