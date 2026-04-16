@@ -5,6 +5,10 @@ const haberler = [
     title: "Kazancı ile dikkat çeken Fonlar",
     href: "/borsa/dikkat-cekenler/haber-1",
   },
+  {
+    title: "Banka hisselerinde önemli direnç noktası",
+    href: "/borsa/dikkat-cekenler/haber-2",
+  },
 ];
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
