@@ -1,15 +1,15 @@
 "use client";
 
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import TrackedLink from "@/components/tracked-link";
 
 type NewsItem = {
   id: number;
   title: string;
   href: string;
-  image: string;
-  alt: string;
+  image?: string;
+  alt?: string;
 };
 
 type GuncellemeItem = {
@@ -108,7 +108,35 @@ function KategoriKutusu({
   );
 }
 
+function getNumericIdFromHref(href: string) {
+  const match = href.match(/haber(\d+)/i);
+  return match ? Number(match[1]) : 0;
+}
+
+function getNewsImage(item: NewsItem) {
+  if (item.image && item.image.trim() !== "") {
+    return item.image;
+  }
+
+  if (typeof item.id === "number" && item.id > 0) {
+    return `/haber${item.id}.png`;
+  }
+
+  const hrefId = getNumericIdFromHref(item.href);
+  if (hrefId > 0) {
+    return `/haber${hrefId}.png`;
+  }
+
+  return "/placeholder.png";
+}
+
 function HaberKutusu({ item }: { item: NewsItem }) {
+  const [imgSrc, setImgSrc] = useState(getNewsImage(item));
+
+  useEffect(() => {
+    setImgSrc(getNewsImage(item));
+  }, [item]);
+
   return (
     <TrackedLink
       href={item.href}
@@ -118,9 +146,14 @@ function HaberKutusu({ item }: { item: NewsItem }) {
     >
       <div className="overflow-hidden bg-zinc-100">
         <img
-          src={item.image}
-          alt={item.alt}
+          src={imgSrc}
+          alt={item.alt || item.title}
           className="block aspect-[16/10] w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+          onError={() => {
+            if (imgSrc !== "/placeholder.png") {
+              setImgSrc("/placeholder.png");
+            }
+          }}
         />
       </div>
 
@@ -330,8 +363,31 @@ export default function HomePage() {
       try {
         const res = await fetch("/api/news", { cache: "no-store" });
         const data = await res.json();
+
         if (Array.isArray(data)) {
-          setNewsItems(data);
+          const normalized = data
+            .map((item: Partial<NewsItem>) => {
+              const href = item.href || "/";
+              const derivedId =
+                typeof item.id === "number" && item.id > 0
+                  ? item.id
+                  : getNumericIdFromHref(href);
+
+              return {
+                id: derivedId,
+                title: item.title || "",
+                href,
+                image:
+                  item.image && item.image.trim() !== ""
+                    ? item.image
+                    : `/haber${derivedId}.png`,
+                alt: item.alt || item.title || "",
+              };
+            })
+            .filter((item: NewsItem) => item.id > 0 && item.title && item.href)
+            .sort((a: NewsItem, b: NewsItem) => b.id - a.id);
+
+          setNewsItems(normalized);
         }
       } catch (error) {
         console.error("NEWS_LOAD_ERROR:", error);
@@ -355,6 +411,11 @@ export default function HomePage() {
     loadNews();
     loadUpdates();
   }, []);
+
+  const sortedNewsItems = useMemo(
+    () => [...newsItems].sort((a, b) => b.id - a.id),
+    [newsItems]
+  );
 
   return (
     <main className="min-h-screen bg-white">
@@ -393,9 +454,9 @@ export default function HomePage() {
               </h1>
             </div>
 
-            {newsItems.length > 0 ? (
+            {sortedNewsItems.length > 0 ? (
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-                {newsItems.map((item) => (
+                {sortedNewsItems.map((item) => (
                   <HaberKutusu key={item.id || item.href} item={item} />
                 ))}
               </div>
