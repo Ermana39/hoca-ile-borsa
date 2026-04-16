@@ -1,6 +1,6 @@
-import fs from "fs";
-import path from "path";
 import { NextResponse } from "next/server";
+import fs from "node:fs";
+import path from "node:path";
 
 type NewsItem = {
   id: number;
@@ -10,66 +10,72 @@ type NewsItem = {
   alt: string;
 };
 
-function parseField(source: string, fieldName: string) {
-  const regex = new RegExp(`${fieldName}\\s*:\\s*["'\`]([^"'\`]+)["'\`]`);
-  const match = source.match(regex);
-  return match ? match[1].trim() : "";
+function getTitleFromFileContent(content: string) {
+  const metadataTitleMatch = content.match(/title:\s*"([^"]+)"/);
+  if (metadataTitleMatch?.[1]) {
+    return metadataTitleMatch[1].trim();
+  }
+
+  const h1Match = content.match(/<h1[^>]*>([\s\S]*?)<\/h1>/);
+  if (h1Match?.[1]) {
+    return h1Match[1].replace(/<[^>]+>/g, "").trim();
+  }
+
+  return "";
+}
+
+function getNumericIdFromFolderName(folderName: string) {
+  const match = folderName.match(/^haber(\d+)$/i);
+  return match ? Number(match[1]) : 0;
 }
 
 export async function GET() {
   try {
-    const haberlerDir = path.join(process.cwd(), "app", "haberler");
+    const appDir = path.join(process.cwd(), "app");
+    const entries = fs.readdirSync(appDir, { withFileTypes: true });
 
-    if (!fs.existsSync(haberlerDir)) {
-      return NextResponse.json([]);
-    }
+    const newsItems: NewsItem[] = entries
+      .filter((entry) => entry.isDirectory() && /^haber\d+$/i.test(entry.name))
+      .map((entry) => {
+        const folderName = entry.name;
+        const id = getNumericIdFromFolderName(folderName);
+        const pageFilePath = path.join(appDir, folderName, "page.tsx");
 
-    const klasorler = fs
-      .readdirSync(haberlerDir, { withFileTypes: true })
-      .filter((item) => item.isDirectory() && /^haber-\d+$/.test(item.name))
-      .map((item) => item.name)
-      .sort((a, b) => {
-        const aNo = Number(a.replace("haber-", ""));
-        const bNo = Number(b.replace("haber-", ""));
-        return bNo - aNo;
-      });
+        if (!fs.existsSync(pageFilePath) || id <= 0) {
+          return null;
+        }
 
-    const newsItems: NewsItem[] = [];
+        const fileContent = fs.readFileSync(pageFilePath, "utf-8");
+        const title = getTitleFromFileContent(fileContent);
 
-    for (const klasor of klasorler) {
-      const pagePath = path.join(haberlerDir, klasor, "page.tsx");
+        if (!title) {
+          return null;
+        }
 
-      if (!fs.existsSync(pagePath)) continue;
+        return {
+          id,
+          title,
+          href: `/${folderName}`,
+          image: `/${folderName}.png`,
+          alt: title,
+        };
+      })
+      .filter((item): item is NewsItem => item !== null)
+      .sort((a, b) => b.id - a.id);
 
-      const source = fs.readFileSync(pagePath, "utf8");
-
-      const title =
-        parseField(source, "title") ||
-        parseField(source, "haberBasligi") ||
-        parseField(source, "heading") ||
-        klasor.replace("-", " ");
-
-      const image =
-        parseField(source, "image") ||
-        parseField(source, "kapakGorseli") ||
-        `/${klasor}v.png`;
-
-      const alt =
-        parseField(source, "alt") ||
-        `${title} haber görseli`;
-
-      newsItems.push({
-        id: Number(klasor.replace("haber-", "")),
-        title,
-        href: `/haberler/${klasor}`,
-        image,
-        alt,
-      });
-    }
-
-    return NextResponse.json(newsItems);
+    return NextResponse.json(newsItems, {
+      headers: {
+        "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
+      },
+    });
   } catch (error) {
     console.error("NEWS_API_ERROR:", error);
-    return NextResponse.json([]);
+
+    return NextResponse.json([], {
+      status: 500,
+      headers: {
+        "Cache-Control": "no-store, no-cache, must-revalidate, proxy-revalidate",
+      },
+    });
   }
 }
