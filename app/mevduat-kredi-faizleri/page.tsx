@@ -110,7 +110,6 @@ export default function MevduatKrediFaizleriPage() {
   return (
     <main className="min-h-screen bg-white">
       <div className="mx-auto max-w-7xl px-4 py-6 md:px-6">
-
         <section className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
@@ -120,7 +119,6 @@ export default function MevduatKrediFaizleriPage() {
           </Link>
         </section>
 
-        {/* ÜST AÇIKLAMA - BORDER KALDIRILDI */}
         <section className="rounded-2xl bg-white p-5 md:p-8">
           <h1 className="text-2xl font-bold text-zinc-900 md:text-4xl">
             Mevduat ve Kredi Faiz Oranları
@@ -145,18 +143,39 @@ export default function MevduatKrediFaizleriPage() {
           </div>
         </section>
 
-        {/* ALT AÇIKLAMA - BORDER KALDIRILDI */}
         <section className="rounded-2xl bg-white p-5 md:p-7">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">
-            Faiz oranları sayfasında neler bulunur?
+            Güncel Mevduat ve Kredi Faiz Oranları Hakkında
           </h2>
 
           <div className="space-y-4 text-sm leading-7 text-zinc-700 md:text-base">
-            <p>Bu sayfa faiz verilerini toplar.</p>
-            <p>Karşılaştırma yapmanı sağlar.</p>
-            <p>SEO katkısı sağlar.</p>
-            <p className="text-zinc-500">
-              Yatırım tavsiyesi değildir.
+            <p>
+              Mevduat ve kredi faiz oranları, bireysel yatırım ve finansman
+              kararlarında en çok takip edilen ekonomik göstergeler arasında yer
+              alır. Bu sayfada bankaların güncel mevduat faizi oranları ile
+              tüketici kredisi, konut kredisi ve taşıt kredisi faiz oranlarını
+              tek ekranda karşılaştırabilirsiniz.
+            </p>
+
+            <p>
+              Mevduat faizi oranları, birikimlerini vadeli hesapta değerlendirmek
+              isteyen kullanıcılar için önemli fırsatlar sunar. En yüksek mevduat
+              faizi veren bankaları takip ederek birikimlerinizi daha verimli
+              şekilde değerlendirebilirsiniz.
+            </p>
+
+            <p>
+              Kredi faiz oranları ise ihtiyaç kredisi, konut kredisi ve taşıt
+              kredisi kullanmayı planlayan kişiler için toplam geri ödeme tutarını
+              doğrudan etkiler. Güncel kredi oranlarını inceleyerek bankalar
+              arasındaki farkları görebilir ve bütçenize uygun finansman seçeneğini
+              belirleyebilirsiniz.
+            </p>
+
+            <p>
+              Güncel mevduat faizleri, ihtiyaç kredisi faiz oranları, konut kredisi
+              kampanyaları ve taşıt kredisi karşılaştırmaları için bu sayfayı
+              düzenli olarak takip edebilirsiniz.
             </p>
           </div>
         </section>
@@ -164,7 +183,6 @@ export default function MevduatKrediFaizleriPage() {
         <section className="pt-6">
           <ReklamAlani variant="icerik" />
         </section>
-
       </div>
     </main>
   );

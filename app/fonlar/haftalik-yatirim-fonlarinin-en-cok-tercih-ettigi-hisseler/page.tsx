@@ -2,12 +2,14 @@ import fs from "fs";
 import path from "path";
 import Link from "next/link";
 import * as XLSX from "xlsx";
+
 const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
   timeZone: "Europe/Istanbul",
   day: "2-digit",
   month: "2-digit",
   year: "numeric",
 }).format(new Date());
+
 type FonSatiri = {
   sembol: string | null;
   degisim: string | number | null;
@@ -71,6 +73,7 @@ function temizMetin(deger: unknown) {
 
 function parseNumber(deger: unknown) {
   if (typeof deger === "number") return deger;
+
   const metin = temizMetin(deger);
   if (!metin) return 0;
 
@@ -92,6 +95,7 @@ function formatPercent(deger: unknown) {
   }
 
   const sayi = parseNumber(deger);
+
   return `${new Intl.NumberFormat("tr-TR", {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
@@ -102,6 +106,7 @@ function formatTl(deger: unknown) {
   if (deger === null || deger === undefined || deger === "") return "-";
 
   const sayi = parseNumber(deger);
+
   return new Intl.NumberFormat("tr-TR", {
     minimumFractionDigits: 0,
     maximumFractionDigits: 0,
@@ -209,9 +214,11 @@ export default function HaftalikYatirimFonlarininEnCokTercihEttigiHisselerPage()
         <p className="mb-6 text-sm text-zinc-600">
           Veriler Excel dosyasından otomatik okunur.
         </p>
-<div className="mb-8 text-sm font-semibold text-zinc-700">
-  Güncelleme Tarihi: {guncellemeTarihi}
-</div>
+
+        <div className="mb-8 text-sm font-semibold text-zinc-700">
+          Güncelleme Tarihi: {guncellemeTarihi}
+        </div>
+
         <div className="rounded-2xl border border-zinc-200 bg-white">
           <div className="w-full overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             <div className="inline-block min-w-full align-top">
@@ -243,7 +250,11 @@ export default function HaftalikYatirimFonlarininEnCokTercihEttigiHisselerPage()
                             key={column.key}
                             className={`border-b border-zinc-100 px-4 py-3 text-zinc-700 ${
                               column.align === "right" ? "text-right" : "text-left"
-                            } ${column.key === "sembol" ? "font-semibold text-zinc-900" : ""}`}
+                            } ${
+                              column.key === "sembol"
+                                ? "font-semibold text-zinc-900"
+                                : ""
+                            }`}
                           >
                             {hucreDegeri(row, column.key)}
                           </td>
@@ -266,8 +277,39 @@ export default function HaftalikYatirimFonlarininEnCokTercihEttigiHisselerPage()
           </div>
         </div>
 
-        <section className="mt-8">
-          <ReklamAlani variant="icerik" />
+        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+            Haftalık Yatırım Fonlarının En Çok Tercih Ettiği Hisseler Hakkında
+          </h2>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Haftalık yatırım fonlarının en çok tercih ettiği hisseler tablosu,
+            yatırım fonlarının son haftada yoğun şekilde yöneldiği hisse
+            senetlerini gösterir. Bu veriler, profesyonel fon yöneticilerinin
+            hangi şirket hisselerine ilgi gösterdiğini takip etmek isteyen
+            yatırımcılar için önemli bir referans niteliğindedir.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Yatırım fonlarının en çok aldığı hisseler, piyasadaki kurumsal para
+            akışını analiz etmek açısından büyük önem taşır. Fonların tercih ettiği
+            hisseler genellikle güçlü bilanço beklentisi, sektör potansiyeli veya
+            büyüme fırsatları nedeniyle öne çıkabilir. Bu nedenle haftalık fon
+            hareketleri yatırım stratejileri oluştururken yakından takip edilir.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Sayfada yer alan değişim oranları, toplam takas tutarları ve emeklilik
+            fonu ile yatırım fonu dağılımları sayesinde detaylı analiz yapabilir,
+            hangi hisselerde kurumsal talebin arttığını görebilirsiniz. Bu veriler,
+            hisse karşılaştırması ve piyasa eğilimi takibi için faydalıdır.
+          </p>
+
+          <p className="leading-7 text-zinc-700">
+            Güncel fon hareketleri, yatırım fonlarının tercih ettiği hisseler,
+            haftalık kurumsal para girişleri ve hisse bazlı detaylı analizler için
+            bu sayfayı düzenli olarak takip edebilirsiniz.
+          </p>
         </section>
       </div>
     </main>
