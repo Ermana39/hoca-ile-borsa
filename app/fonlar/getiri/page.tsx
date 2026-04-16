@@ -1,12 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import TrackedLink from "@/components/tracked-link";
+
 const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
   timeZone: "Europe/Istanbul",
   day: "2-digit",
   month: "2-digit",
   year: "numeric",
 }).format(new Date());
+
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
     variant === "icerik"
@@ -14,61 +16,132 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
       : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
 
   return (
-    <section aria-label="Reklam alanı" className={`w-full overflow-hidden rounded-2xl ${alanClass}`}>
+    <section
+      aria-label="Reklam alanı"
+      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
+    >
       <div className={`w-full ${alanClass}`} />
     </section>
   );
 }
 
 const fonTipleri = [
-  { title: "Menkul Kıymet Yatırım Fonları", href: "/fonlar/getiri/menkul-kiymet-yatirim-fonlari", image: "/menkul-kiymet-yatirim-fonlari-yatay.png", alt: "Menkul Kıymet Yatırım Fonları görseli" },
-  { title: "Emeklilik Fonları", href: "/fonlar/getiri/emeklilik-fonlari-getiri", image: "/emeklilik-fonlari-yatay.png", alt: "Emeklilik Fonları görseli" },
-  { title: "Borsa Yatırım Fonları", href: "/fonlar/getiri/borsa-yatirim-fonlari-getiri", image: "/borsa-yatirim-fonlari-yatay.png", alt: "Borsa Yatırım Fonları görseli" },
-  { title: "Gayrimenkul Yatırım Fonları", href: "/fonlar/getiri/gayrimenkul-yatirim-fonlari-getiri", image: "/gayrimenkul-yatirim-fonlari-yatay.png", alt: "Gayrimenkul Yatırım Fonları görseli" },
-  { title: "Girişim Sermayesi Yatırım Fonları", href: "/fonlar/getiri/girisim-sermayesi-yatirim-fonlari-getiri", image: "/girisim-sermayesi-yatirim-fonlari-yatay.png", alt: "Girişim Sermayesi Yatırım Fonları görseli" },
+  {
+    title: "Menkul Kıymet Yatırım Fonları",
+    href: "/fonlar/getiri/menkul-kiymet-yatirim-fonlari",
+    image: "/menkul-kiymet-yatirim-fonlari-yatay.png",
+    alt: "Menkul Kıymet Yatırım Fonları görseli",
+  },
+  {
+    title: "Emeklilik Fonları",
+    href: "/fonlar/getiri/emeklilik-fonlari-getiri",
+    image: "/emeklilik-fonlari-yatay.png",
+    alt: "Emeklilik Fonları görseli",
+  },
+  {
+    title: "Borsa Yatırım Fonları",
+    href: "/fonlar/getiri/borsa-yatirim-fonlari-getiri",
+    image: "/borsa-yatirim-fonlari-yatay.png",
+    alt: "Borsa Yatırım Fonları görseli",
+  },
+  {
+    title: "Gayrimenkul Yatırım Fonları",
+    href: "/fonlar/getiri/gayrimenkul-yatirim-fonlari-getiri",
+    image: "/gayrimenkul-yatirim-fonlari-yatay.png",
+    alt: "Gayrimenkul Yatırım Fonları görseli",
+  },
+  {
+    title: "Girişim Sermayesi Yatırım Fonları",
+    href: "/fonlar/getiri/girisim-sermayesi-yatirim-fonlari-getiri",
+    image: "/girisim-sermayesi-yatirim-fonlari-yatay.png",
+    alt: "Girişim Sermayesi Yatırım Fonları görseli",
+  },
 ];
+
+function FonTipiKutusu({
+  title,
+  href,
+  image,
+  alt,
+}: {
+  title: string;
+  href: string;
+  image: string;
+  alt: string;
+}) {
+  return (
+    <TrackedLink
+      href={href}
+      label={title}
+      className="group flex min-h-[320px] flex-col rounded-2xl bg-white transition hover:bg-zinc-50"
+      ariaLabel={title}
+    >
+      <div className="p-2 pb-1 md:p-3 md:pb-1">
+        <div className="relative overflow-hidden rounded-2xl bg-zinc-50">
+          <div className="relative aspect-[16/10] w-full">
+            <Image
+              src={image}
+              alt={alt}
+              fill
+              className="object-cover transition duration-300 group-hover:scale-[1.03]"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div className="flex flex-1 flex-col items-center justify-start px-3 pb-3 pt-0 text-center md:px-4 md:pb-3">
+        <h2 className="text-xl font-semibold leading-tight text-zinc-900 md:text-2xl">
+          {title}
+        </h2>
+      </div>
+    </TrackedLink>
+  );
+}
 
 export default function FonGetiriLandingPage() {
   return (
-    <main className="min-h-screen bg-white px-4 py-6 md:px-6">
-      <div className="mx-auto max-w-7xl">
-        <div className="mb-6 flex flex-wrap gap-3">
-          <Link href="/" className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100">Ana Sayfa</Link>
-          <Link href="/fonlar" className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100">Geri</Link>
-        </div>
+    <main className="min-h-screen bg-white">
+      <div className="mx-auto max-w-7xl px-4 py-6 md:px-6">
+        <section className="mb-6 flex flex-wrap gap-3">
+          <Link
+            href="/"
+            className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
+          >
+            Ana Sayfa
+          </Link>
+          <Link
+            href="/fonlar"
+            className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
+          >
+            Geri
+          </Link>
+        </section>
 
-        <h1 className="mb-2 text-3xl font-bold text-zinc-900">Fon Getiri Analizi</h1>
-        <p className="mb-8 max-w-3xl text-base text-zinc-600">Getiri analizini fon tipine göre ayırarak inceleyin.</p>
-<div className="mb-8 text-sm font-semibold text-zinc-700">
-  Güncelleme Tarihi: {guncellemeTarihi}
-</div>
-        <section className="mb-8">
+        <section className="rounded-2xl bg-white p-5 md:p-8">
+          <h1 className="text-2xl font-bold text-zinc-900 md:text-4xl">
+            Fon Getiri Analizi
+          </h1>
+          <p className="mt-3 max-w-4xl text-sm leading-7 text-zinc-600 md:text-base">
+            Getiri analizini fon tipine göre ayırarak inceleyin.
+          </p>
+          <div className="mt-4 text-sm font-semibold text-zinc-700">
+            Güncelleme Tarihi: {guncellemeTarihi}
+          </div>
+        </section>
+
+        <section className="pt-6">
           <ReklamAlani variant="yatay" />
         </section>
 
-        <section className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
-          {fonTipleri.map((item) => (
-            <TrackedLink
-              key={item.href}
-              href={item.href}
-              label={item.title}
-              className="group flex min-h-[240px] flex-col rounded-2xl border border-zinc-200 bg-white p-6 transition hover:bg-zinc-50"
-              ariaLabel={item.title}
-            >
-              <div className="relative mb-4 overflow-hidden rounded-2xl bg-zinc-100">
-                <div className="relative aspect-[16/10] w-full">
-                  <Image src={item.image} alt={item.alt} fill className="object-cover transition duration-300 group-hover:scale-[1.03]" />
-                </div>
-              </div>
-
-              <div className="flex flex-1 items-center">
-                <h2 className="text-2xl font-semibold leading-tight text-zinc-900">{item.title}</h2>
-              </div>
-            </TrackedLink>
-          ))}
+        <section className="py-6">
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
+            {fonTipleri.map((item) => (
+              <FonTipiKutusu key={item.href} {...item} />
+            ))}
+          </div>
         </section>
 
-        <section className="mt-8">
+        <section className="pt-6">
           <ReklamAlani variant="icerik" />
         </section>
       </div>
