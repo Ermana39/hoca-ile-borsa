@@ -20,19 +20,24 @@ function cleanText(value: string) {
 }
 
 function getTitleFromFileContent(content: string) {
-  const patterns = [
-    /title\s*:\s*"([^"]+)"/is,
-    /title\s*:\s*'([^']+)'/is,
-    /title\s*:\s*`([^`]+)`/is,
-    /<h1[^>]*>([\s\S]*?)<\/h1>/is,
-  ];
+  const doubleQuoteMatch = content.match(/title\s*:\s*"([^"]+)"/i);
+  if (doubleQuoteMatch?.[1]) {
+    return cleanText(doubleQuoteMatch[1]);
+  }
 
-  for (const pattern of patterns) {
-    const match = content.match(pattern);
-    if (match?.[1]) {
-      const title = cleanText(match[1].replace(/<[^>]+>/g, ""));
-      if (title) return title;
-    }
+  const singleQuoteMatch = content.match(/title\s*:\s*'([^']+)'/i);
+  if (singleQuoteMatch?.[1]) {
+    return cleanText(singleQuoteMatch[1]);
+  }
+
+  const backtickMatch = content.match(/title\s*:\s*`([^`]+)`/i);
+  if (backtickMatch?.[1]) {
+    return cleanText(backtickMatch[1]);
+  }
+
+  const h1Match = content.match(/<h1[^>]*>([\s\S]*?)<\/h1>/i);
+  if (h1Match?.[1]) {
+    return cleanText(h1Match[1].replace(/<[^>]+>/g, ""));
   }
 
   return "";
