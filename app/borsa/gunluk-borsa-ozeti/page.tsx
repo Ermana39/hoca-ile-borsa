@@ -104,11 +104,13 @@ const enHacimliler = ilkBesKisaKodlu(tumHacimliler);
 const paraGirisi = ilkBesKisaKodlu(tumParaGirisi);
 const paraCikisi = ilkBesKisaKodlu(tumParaCikisi);
 
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
+function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" | "buyuk" }) {
   const alanClass =
     variant === "icerik"
       ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
+      : variant === "buyuk"
+        ? "min-h-[260px] sm:min-h-[320px] lg:min-h-[420px]"
+        : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
 
   return (
     <section
@@ -436,7 +438,11 @@ export default function GunlukBorsaOzetiPage() {
           </div>
         </div>
 
-        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
+        <section className="mt-12 mb-8">
+          <ReklamAlani variant="buyuk" />
+        </section>
+
+        <section className="rounded-2xl border border-zinc-200 bg-white p-6">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">
             Günlük Borsa Özeti Hakkında
           </h2>
