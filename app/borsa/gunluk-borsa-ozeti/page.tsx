@@ -1,72 +1,116 @@
+import Image from "next/image";
 import Link from "next/link";
 
-type PivotRow = {
-  sembol: string;
-  fark: number;
-  son: number;
-  pivot: number;
-  destek1: number;
-  destek2: number;
-  destek3: number;
-  direnc1: number;
-  direnc2: number;
-  direnc3: number;
-  yorum: string;
+const bistVeri = {
+  tarih: "16.04.2026",
+  kapanis: "14252.38",
+  degisimYuzde: 0.35,
 };
 
-const guncellemeTarihi = "16.04.2026";
-
-const bist100Pivot = {
-  sembol: "BIST100",
-  fark: 0.24,
-  son: 14253.05,
-  pivot: 14218.92,
-  destek1: 14081.67,
-  destek2: 13961.09,
-  destek3: 13823.84,
-  direnc1: 14339.5,
-  direnc2: 14476.75,
-  direnc3: 14597.33,
-};
-
-const pivotVerileri: PivotRow[] = [
-  { sembol: "AEFES", fark: 0.37, son: 18.82, pivot: 18.75, destek1: 18.52, destek2: 18.14, destek3: 17.91, direnc1: 19.13, direnc2: 19.36, direnc3: 19.74, yorum: "Pivot değerinin üstünde seyrediyor." },
-  { sembol: "AKBNK", fark: 0.0, son: 78.9, pivot: 78.9, destek1: 76.7, destek2: 74.95, destek3: 72.75, direnc1: 80.65, direnc2: 82.85, direnc3: 84.6, yorum: "Pivot değerine eşit." },
-  { sembol: "ASELS", fark: 0.38, son: 416.75, pivot: 415.167, destek1: 405.083, destek2: 398.417, destek3: 388.333, direnc1: 421.833, direnc2: 431.917, direnc3: 438.583, yorum: "Pivot değerinin üstünde seyrediyor." },
-  { sembol: "ASTOR", fark: -4.29, son: 195.0, pivot: 203.733, destek1: 200.167, destek2: 196.633, destek3: 193.067, direnc1: 207.267, direnc2: 210.833, direnc3: 214.367, yorum: "İkinci destek seviyesinin altına indi." },
-  { sembol: "BIMAS", fark: 0.0, son: 753.0, pivot: 753.0, destek1: 742.5, destek2: 733.0, destek3: 722.5, direnc1: 762.5, direnc2: 773.0, direnc3: 782.5, yorum: "Pivot değerine eşit." },
-  { sembol: "DSTKF", fark: 1.53, son: 2130.0, pivot: 2098.0, destek1: 2074.0, destek2: 2033.0, destek3: 2009.0, direnc1: 2139.0, direnc2: 2163.0, direnc3: 2204.0, yorum: "Pivot değerinin üstünde seyrediyor." },
-  { sembol: "EKGYO", fark: 0.03, son: 21.2, pivot: 21.193, destek1: 20.867, destek2: 20.573, destek3: 20.247, direnc1: 21.487, direnc2: 21.813, direnc3: 22.107, yorum: "Pivot değerinin üstünde seyrediyor." },
-  { sembol: "ENKAI", fark: -0.48, son: 104.2, pivot: 104.7, destek1: 101.4, destek2: 98.2, destek3: 94.9, direnc1: 107.9, direnc2: 111.2, direnc3: 114.4, yorum: "Pivot değerinin altında seyrediyor." },
-  { sembol: "EREGL", fark: -0.19, son: 31.64, pivot: 31.7, destek1: 30.96, destek2: 30.46, destek3: 29.72, direnc1: 32.2, direnc2: 32.94, direnc3: 33.44, yorum: "Pivot değerinin altında seyrediyor." },
-  { sembol: "FROTO", fark: 0.82, son: 106.8, pivot: 105.933, destek1: 104.267, destek2: 102.433, destek3: 100.767, direnc1: 107.767, direnc2: 109.433, direnc3: 111.267, yorum: "Pivot değerinin üstünde seyrediyor." },
-  { sembol: "GARAN", fark: -1.37, son: 138.8, pivot: 140.733, destek1: 137.267, destek2: 134.533, destek3: 131.067, direnc1: 143.467, direnc2: 146.933, direnc3: 149.667, yorum: "Pivot değerinin altında seyrediyor." },
-  { sembol: "GUBRF", fark: 8.21, son: 529.5, pivot: 489.333, destek1: 484.417, destek2: 476.333, destek3: 471.417, direnc1: 497.417, direnc2: 502.333, direnc3: 510.417, yorum: "Üçüncü direnç seviyesinin üstüne çıktı." },
-  { sembol: "ISCTR", fark: -0.68, son: 14.55, pivot: 14.65, destek1: 14.18, destek2: 13.81, destek3: 13.34, direnc1: 15.02, direnc2: 15.49, direnc3: 15.86, yorum: "Pivot değerinin altında seyrediyor." },
-  { sembol: "KCHOL", fark: 0.27, son: 207.8, pivot: 207.233, destek1: 205.067, destek2: 203.833, destek3: 201.667, direnc1: 208.467, direnc2: 210.633, direnc3: 211.867, yorum: "Pivot değerinin üstünde seyrediyor." },
-  { sembol: "KRDMD", fark: 1.79, son: 36.46, pivot: 35.82, destek1: 34.8, destek2: 34.2, destek3: 33.18, direnc1: 36.42, direnc2: 37.44, direnc3: 38.04, yorum: "İlk direnç seviyesinin üstüne çıktı." },
-  { sembol: "MGROS", fark: 0.84, son: 656.5, pivot: 651.0, destek1: 644.0, destek2: 639.0, destek3: 632.0, direnc1: 656.0, direnc2: 663.0, direnc3: 668.0, yorum: "İlk direnç seviyesinin üstüne çıktı." },
-  { sembol: "PETKM", fark: -0.45, son: 22.0, pivot: 22.1, destek1: 21.76, destek2: 21.46, destek3: 21.12, direnc1: 22.4, direnc2: 22.74, direnc3: 23.04, yorum: "Pivot değerinin altında seyrediyor." },
-  { sembol: "PGSUS", fark: 0.62, son: 188.3, pivot: 187.133, destek1: 185.467, destek2: 183.833, destek3: 182.167, direnc1: 188.767, direnc2: 190.433, direnc3: 192.067, yorum: "Pivot değerinin üstünde seyrediyor." },
-  { sembol: "SAHOL", fark: 0.02, son: 100.6, pivot: 100.583, destek1: 99.267, destek2: 98.033, destek3: 96.717, direnc1: 101.817, direnc2: 103.133, direnc3: 104.367, yorum: "Pivot değerinin üstünde seyrediyor." },
-  { sembol: "SASA", fark: 11.44, son: 2.99, pivot: 2.683, destek1: 2.627, destek2: 2.533, destek3: 2.477, direnc1: 2.777, direnc2: 2.833, direnc3: 2.927, yorum: "Üçüncü direnç seviyesinin üstüne çıktı." },
-  { sembol: "SISE", fark: -0.21, son: 48.22, pivot: 48.32, destek1: 47.56, destek2: 47.04, destek3: 46.28, direnc1: 48.84, direnc2: 49.6, direnc3: 50.12, yorum: "Pivot değerinin altında seyrediyor." },
-  { sembol: "TAVHL", fark: -2.67, son: 321.5, pivot: 330.333, destek1: 325.667, destek2: 321.083, destek3: 316.417, direnc1: 334.917, direnc2: 339.583, direnc3: 344.167, yorum: "İlk destek seviyesinin altına indi." },
-  { sembol: "TCELL", fark: 0.2, son: 117.1, pivot: 116.867, destek1: 115.233, destek2: 114.167, destek3: 112.533, direnc1: 117.933, direnc2: 119.567, direnc3: 120.633, yorum: "Pivot değerinin üstünde seyrediyor." },
-  { sembol: "THYAO", fark: -1.26, son: 319.25, pivot: 323.333, destek1: 320.167, destek2: 316.333, destek3: 313.167, direnc1: 327.167, direnc2: 330.333, direnc3: 334.167, yorum: "İlk destek seviyesinin altına indi." },
-  { sembol: "TOASO", fark: 1.18, son: 299.0, pivot: 295.5, destek1: 289.0, destek2: 280.0, destek3: 273.5, direnc1: 304.5, direnc2: 311.0, direnc3: 320.0, yorum: "Pivot değerinin üstünde seyrediyor." },
-  { sembol: "TRALT", fark: 5.32, son: 47.48, pivot: 45.08, destek1: 43.74, destek2: 41.78, destek3: 40.44, direnc1: 47.04, direnc2: 48.38, direnc3: 50.34, yorum: "İlk direnç seviyesinin üstüne çıktı." },
-  { sembol: "TTKOM", fark: 0.08, son: 62.95, pivot: 62.9, destek1: 62.05, destek2: 61.4, destek3: 60.55, direnc1: 63.55, direnc2: 64.4, direnc3: 65.05, yorum: "Pivot değerinin üstünde seyrediyor." },
-  { sembol: "TUPRS", fark: -2.12, son: 261.25, pivot: 266.917, destek1: 261.333, destek2: 255.167, destek3: 249.583, direnc1: 273.083, direnc2: 278.667, direnc3: 284.833, yorum: "İlk destek seviyesinin altına indi." },
-  { sembol: "VAKBN", fark: -0.79, son: 34.12, pivot: 34.393, destek1: 33.627, destek2: 32.993, destek3: 32.227, direnc1: 35.027, direnc2: 35.793, direnc3: 36.427, yorum: "Pivot değerinin altında seyrediyor." },
-  { sembol: "YKBNK", fark: -1.16, son: 37.58, pivot: 38.02, destek1: 36.78, destek2: 35.88, destek3: 34.64, direnc1: 38.92, direnc2: 40.16, direnc3: 41.06, yorum: "Pivot değerinin altında seyrediyor." },
+const tumYukselenler = [
+  { kod: "ADESE", fark: "+10,00%" },
+  { kod: "GZNMI", fark: "+10,00%" },
+  { kod: "EGEEN", fark: "+10,00%" },
+  { kod: "DYOBY", fark: "+10,00%" },
+  { kod: "VSNMD", fark: "+9,99%" },
+  { kod: "BORLS", fark: "+9,98%" },
+  { kod: "GIPTA", fark: "+9,97%" },
+  { kod: "SMRVA", fark: "+9,97%" },
+  { kod: "HPARTF2", fark: "+9,97%" },
+  { kod: "EFOR", fark: "+9,97%" },
 ];
 
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
+const tumDusenler = [
+  { kod: "NIBAS", fark: "-10,00%" },
+  { kod: "RUBNS", fark: "-9,94%" },
+  { kod: "SERNT", fark: "-9,91%" },
+  { kod: "MEKAG", fark: "-9,88%" },
+  { kod: "ECILC", fark: "-7,85%" },
+  { kod: "ENSRI", fark: "-7,69%" },
+  { kod: "EUPWR", fark: "-7,65%" },
+  { kod: "ZERGY", fark: "-7,32%" },
+  { kod: "ZGYO", fark: "-6,00%" },
+  { kod: "KAPLM", fark: "-5,82%" },
+];
+
+const tumHacimliler = [
+  { kod: "SASA", hacim: "17.871.371.996" },
+  { kod: "THYAO", hacim: "16.417.747.703" },
+  { kod: "ASELS", hacim: "8.811.297.344" },
+  { kod: "ISCTR", hacim: "7.556.916.139" },
+  { kod: "TRALT", hacim: "7.432.674.721" },
+  { kod: "ASTOR", hacim: "7.194.019.665" },
+  { kod: "TUPRS", hacim: "6.396.067.100" },
+  { kod: "AKBNK", hacim: "5.724.877.254" },
+  { kod: "ECILC", hacim: "5.046.425.194" },
+  { kod: "YKBNK", hacim: "5.024.956.215" },
+];
+
+const tumParaGirisi = [
+  { kod: "SASA", tutar: "+251.791.133" },
+  { kod: "ISCTR", tutar: "+117.262.378" },
+  { kod: "ASELS", tutar: "+115.836.942" },
+  { kod: "TRALT", tutar: "+100.510.631" },
+  { kod: "AKBNK", tutar: "+97.768.733" },
+  { kod: "TERA", tutar: "+96.025.083" },
+  { kod: "KCHOL", tutar: "+73.369.007" },
+  { kod: "EREGL", tutar: "+64.500.641" },
+  { kod: "GUBRF", tutar: "+59.328.545" },
+  { kod: "TCELL", tutar: "+55.700.779" },
+];
+
+const tumParaCikisi = [
+  { kod: "THYAO", tutar: "-484.103.465" },
+  { kod: "ECILC", tutar: "-177.573.930" },
+  { kod: "TUPRS", tutar: "-104.927.114" },
+  { kod: "GARAN", tutar: "-60.050.929" },
+  { kod: "CWENE", tutar: "-45.728.517" },
+  { kod: "BRSAN", tutar: "-42.313.016" },
+  { kod: "GRTHO", tutar: "-38.526.510" },
+  { kod: "GESAN", tutar: "-32.085.514" },
+];
+
+const enCokAlisYapanKurumlar = [
+  { kurum: "TERA", hacim: "1.203.601.887", oran: "%25,67" },
+  { kurum: "DENIZ", hacim: "677.349.149", oran: "%14,45" },
+  { kurum: "BULLS YATIRIM", hacim: "662.690.490", oran: "%14,14" },
+  { kurum: "YAPI KREDI", hacim: "522.506.176", oran: "%11,15" },
+  { kurum: "MIDAS", hacim: "240.791.868", oran: "%5,14" },
+];
+
+const enCokSatisYapanKurumlar = [
+  { kurum: "HSBC", hacim: "-774.067.922", oran: "%16,50" },
+  { kurum: "BANK OF AMERICA", hacim: "-652.154.052", oran: "%13,91" },
+  { kurum: "INFO", hacim: "-505.329.442", oran: "%10,78" },
+  { kurum: "HALK", hacim: "-343.906.006", oran: "%7,34" },
+  { kurum: "YATIRIM FINANSMAN", hacim: "-321.451.971", oran: "%6,86" },
+];
+
+const enCokHacimYapanKurumlar = [
+  { kurum: "YAPI KREDI", hacim: "66.530.854.018", oran: "%12,73" },
+  { kurum: "BANK OF AMERICA", hacim: "62.705.778.893", oran: "%11,99" },
+  { kurum: "IS", hacim: "48.825.863.937", oran: "%9,34" },
+  { kurum: "AK", hacim: "38.611.935.233", oran: "%7,39" },
+  { kurum: "DENIZ", hacim: "22.476.202.593", oran: "%4,30" },
+];
+
+function ilkBesKisaKodlu<T extends { kod: string }>(liste: T[]) {
+  return liste.filter((item) => item.kod.length <= 5).slice(0, 5);
+}
+
+const enCokYukselenler = ilkBesKisaKodlu(tumYukselenler);
+const enCokDusenler = ilkBesKisaKodlu(tumDusenler);
+const enHacimliler = ilkBesKisaKodlu(tumHacimliler);
+const paraGirisi = ilkBesKisaKodlu(tumParaGirisi);
+const paraCikisi = ilkBesKisaKodlu(tumParaCikisi);
+
+function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" | "buyuk" }) {
   const alanClass =
     variant === "icerik"
       ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
+      : variant === "buyuk"
+        ? "min-h-[260px] sm:min-h-[320px] lg:min-h-[420px]"
+        : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
 
   return (
     <section
@@ -78,25 +122,162 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
-function formatNumber(value: number) {
-  const hasDecimal = !Number.isInteger(value);
-  return new Intl.NumberFormat("tr-TR", {
-    minimumFractionDigits: hasDecimal ? 2 : 0,
-    maximumFractionDigits: 3,
-  }).format(value);
+function ListeKutusu({
+  baslik,
+  veriler,
+  renk,
+  degerBaslik,
+}: {
+  baslik: string;
+  veriler: { kod: string; fark?: string; hacim?: string; tutar?: string }[];
+  renk: "yesil" | "kirmizi" | "gri";
+  degerBaslik: string;
+}) {
+  const renkSinifi =
+    renk === "yesil"
+      ? "border-green-200 bg-green-50"
+      : renk === "kirmizi"
+        ? "border-red-200 bg-red-50"
+        : "border-zinc-200 bg-zinc-50";
+
+  return (
+    <div className={`rounded-2xl border p-4 ${renkSinifi}`}>
+      <h2 className="mb-4 text-center text-xl font-bold text-zinc-900">{baslik}</h2>
+
+      <div className="overflow-hidden rounded-xl border border-zinc-200 bg-white">
+        <div className="grid grid-cols-2 border-b border-zinc-200 bg-zinc-100 px-4 py-3 text-sm font-bold text-zinc-700">
+          <div>Hisse</div>
+          <div className="text-right">{degerBaslik}</div>
+        </div>
+
+        {veriler.map((item, index) => (
+          <div
+            key={item.kod}
+            className="grid grid-cols-2 border-b border-zinc-100 px-4 py-3 text-sm last:border-b-0"
+          >
+            <div className="font-semibold text-zinc-900">
+              {index + 1}. {item.kod}
+            </div>
+            <div className="text-right font-semibold text-zinc-700">
+              {item.fark || item.hacim || item.tutar}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
-function getSatirRenk(row: PivotRow) {
-  if (row.son < row.destek3) return "bg-red-200";
-  if (row.son === row.pivot) return "bg-zinc-200";
-  return row.son >= row.pivot ? "bg-green-100" : "bg-red-100";
+function KurumKutusu({
+  baslik,
+  veriler,
+  renk,
+}: {
+  baslik: string;
+  veriler: { kurum: string; hacim: string; oran: string }[];
+  renk: "yesil" | "kirmizi" | "gri";
+}) {
+  const renkSinifi =
+    renk === "yesil"
+      ? "border-green-200 bg-green-50"
+      : renk === "kirmizi"
+        ? "border-red-200 bg-red-50"
+        : "border-zinc-200 bg-zinc-50";
+
+  return (
+    <div className={`rounded-2xl border p-4 ${renkSinifi}`}>
+      <h2 className="mb-4 text-center text-xl font-bold text-zinc-900">{baslik}</h2>
+
+      <div className="overflow-hidden rounded-xl border border-zinc-200 bg-white">
+        <div className="grid grid-cols-3 border-b border-zinc-200 bg-zinc-100 px-4 py-3 text-sm font-bold text-zinc-700">
+          <div>Kurum</div>
+          <div className="text-right">
+            {baslik === "En Çok Hacim Yapanlar" ? "Toplam Hacim" : "Net Hacim"}
+          </div>
+          <div className="text-right">Yüzde</div>
+        </div>
+
+        {veriler.map((item, index) => (
+          <div
+            key={item.kurum}
+            className="grid grid-cols-3 border-b border-zinc-100 px-4 py-3 text-sm last:border-b-0"
+          >
+            <div className="font-semibold text-zinc-900">
+              {index + 1}. {item.kurum}
+            </div>
+            <div className="text-right font-semibold text-zinc-700">
+              {item.hacim}
+            </div>
+            <div className="text-right font-semibold text-zinc-700">
+              {item.oran}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
 }
 
-export default function PivotAnaliziPage() {
+function OnemKutulari({ tip }: { tip: "kirmizi" }) {
+  const renkler = ["bg-red-500", "bg-red-500", "bg-red-500"];
+
+  return (
+    <div className="flex items-center gap-1">
+      {renkler.map((renk, index) => (
+        <span
+          key={index}
+          className={`h-3.5 w-3.5 rounded-sm border border-zinc-500 ${renk}`}
+        />
+      ))}
+    </div>
+  );
+}
+
+function TakvimTarihSatiri({ tarih }: { tarih: string }) {
+  return (
+    <div className="border-y border-zinc-200 bg-zinc-100 px-3 py-2 text-center text-sm font-bold text-zinc-800">
+      {tarih}
+    </div>
+  );
+}
+
+function TakvimSatiri({
+  saat,
+  ulke,
+  gosterge,
+  aciklanan,
+  beklenti,
+  onceki,
+}: {
+  saat: string;
+  ulke: string;
+  gosterge: string;
+  aciklanan: string;
+  beklenti: string;
+  onceki: string;
+}) {
+  return (
+    <div className="grid grid-cols-[70px_55px_minmax(220px,1fr)_70px_95px_95px_95px] items-center border-b border-zinc-100 px-3 py-3 text-sm last:border-b-0">
+      <div className="font-semibold text-zinc-900">{saat}</div>
+      <div className="font-semibold text-zinc-900">{ulke}</div>
+      <div className="font-semibold text-zinc-900">{gosterge}</div>
+      <div>
+        <OnemKutulari tip="kirmizi" />
+      </div>
+      <div className="text-center font-semibold text-zinc-700">{aciklanan}</div>
+      <div className="text-center font-semibold text-zinc-700">{beklenti}</div>
+      <div className="text-center font-semibold text-zinc-700">{onceki}</div>
+    </div>
+  );
+}
+
+export default function GunlukBorsaOzetiPage() {
+  const pozitif = bistVeri.degisimYuzde >= 0;
+
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
-      <div className="mx-auto max-w-[1500px]">
-        <div className="mb-6 flex flex-wrap gap-3">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-6 flex gap-3">
           <Link
             href="/"
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
@@ -112,147 +293,189 @@ export default function PivotAnaliziPage() {
           </Link>
         </div>
 
-        <h1 className="mb-2 text-3xl font-bold text-zinc-900">Pivot Analizi</h1>
-        <p className="mb-2 max-w-3xl text-base text-zinc-600">
-          Pivot, destek ve direnç seviyelerine göre hazırlanan görünüm tablosu.
-        </p>
-        <div className="mb-8 text-sm font-semibold text-zinc-700">
-          Güncelleme Tarihi: {guncellemeTarihi}
-        </div>
+        <h1 className="mb-6 text-3xl font-bold text-zinc-900">Günlük Borsa Özeti</h1>
 
         <section className="mb-8">
           <ReklamAlani variant="yatay" />
         </section>
 
-        <section className="mb-8 overflow-hidden rounded-2xl border border-sky-200 bg-sky-50 shadow-sm">
-          <div className="overflow-x-auto">
-            <table className="min-w-[1200px] w-full border-collapse text-sm text-zinc-900">
-              <thead className="bg-sky-100 text-zinc-800">
-                <tr>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Sembol</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Pivota Göre Fark %</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Son</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Pivot</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Destek 1</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Destek 2</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Destek 3</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Direnç 1</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Direnç 2</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Direnç 3</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr className="bg-white">
-                  <td className="border border-sky-200 px-3 py-2 font-semibold">{bist100Pivot.sembol}</td>
-                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.fark)}</td>
-                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.son)}</td>
-                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.pivot)}</td>
-                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.destek1)}</td>
-                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.destek2)}</td>
-                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.destek3)}</td>
-                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.direnc1)}</td>
-                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.direnc2)}</td>
-                  <td className="border border-sky-200 px-3 py-2">{formatNumber(bist100Pivot.direnc3)}</td>
-                </tr>
-              </tbody>
-            </table>
+        <div className="mb-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
+          <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
+            <div className="relative aspect-[16/9] w-full">
+              <Image
+                src="/günlük-özet.png"
+                alt="Günlük özet görseli"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
           </div>
-        </section>
+        </div>
 
-        <section className="overflow-hidden rounded-2xl border border-sky-200 bg-sky-50 shadow-sm">
-          <div className="overflow-x-auto">
-            <table className="min-w-[1400px] w-full border-collapse text-sm text-zinc-900">
-              <thead className="bg-sky-100 text-zinc-800">
-                <tr>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Sembol</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Pivota Göre Fark %</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Son</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Pivot</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Destek 1</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Destek 2</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Destek 3</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Direnç 1</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Direnç 2</th>
-                  <th className="border border-sky-200 px-3 py-2 text-left">Direnç 3</th>
-                </tr>
-              </thead>
+        <div className="mb-6 grid gap-4 xl:grid-cols-[1fr_2.5fr]">
+          <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
+            <div className="grid min-h-[320px] grid-rows-3 text-center">
+              <div className="flex items-center justify-center border-b border-zinc-200">
+                <div>
+                  <div className="text-2xl font-semibold text-zinc-700">XU100</div>
+                  <div className="mt-3 text-4xl font-bold text-zinc-900">{bistVeri.kapanis}</div>
+                </div>
+              </div>
 
-              <tbody>
-                {pivotVerileri.map((row) => (
-                  <tr key={row.sembol} className={getSatirRenk(row)}>
-                    <td className="border border-sky-200 px-3 py-2 font-semibold">
-                      {row.sembol}
-                    </td>
-                    <td className="border border-sky-200 px-3 py-2">
-                      {formatNumber(row.fark)}
-                    </td>
-                    <td className="border border-sky-200 px-3 py-2">
-                      {formatNumber(row.son)}
-                    </td>
-                    <td className="border border-sky-200 px-3 py-2">
-                      {formatNumber(row.pivot)}
-                    </td>
-                    <td className="border border-sky-200 px-3 py-2">
-                      {formatNumber(row.destek1)}
-                    </td>
-                    <td className="border border-sky-200 px-3 py-2">
-                      {formatNumber(row.destek2)}
-                    </td>
-                    <td className="border border-sky-200 px-3 py-2">
-                      {formatNumber(row.destek3)}
-                    </td>
-                    <td className="border border-sky-200 px-3 py-2">
-                      {formatNumber(row.direnc1)}
-                    </td>
-                    <td className="border border-sky-200 px-3 py-2">
-                      {formatNumber(row.direnc2)}
-                    </td>
-                    <td className="border border-sky-200 px-3 py-2">
-                      {formatNumber(row.direnc3)}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+              <div className="flex items-center justify-center border-b border-zinc-200">
+                <div
+                  className={`text-4xl font-semibold ${
+                    pozitif ? "text-green-700" : "text-red-700"
+                  }`}
+                >
+                  %{bistVeri.degisimYuzde.toFixed(2)}
+                </div>
+              </div>
+
+              <div className="flex items-center justify-center">
+                <div className="text-2xl font-semibold text-zinc-700">{bistVeri.tarih}</div>
+              </div>
+            </div>
           </div>
+
+          <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
+            <div className="mb-4 text-center text-sm font-semibold text-zinc-600">
+              Ekonomik Takvim
+            </div>
+
+            <div className="overflow-x-auto rounded-xl border border-zinc-200 bg-white">
+              <div className="min-w-[720px]">
+                <div className="grid grid-cols-[70px_55px_minmax(220px,1fr)_70px_95px_95px_95px] border-b border-zinc-200 bg-zinc-100 px-3 py-3 text-xs font-bold text-zinc-700">
+                  <div>Saat</div>
+                  <div>Ülke</div>
+                  <div>Ekonomik Gösterge</div>
+                  <div>Önem</div>
+                  <div className="text-center">Açıklanan</div>
+                  <div className="text-center">Beklenti</div>
+                  <div className="text-center">Önceki</div>
+                </div>
+
+                <TakvimTarihSatiri tarih="16.04.2026" />
+                <TakvimSatiri
+                  saat="10:00"
+                  ulke="TR"
+                  gosterge="Trafiğe Kaydedilen Motorlu Taşıtlar (adet)"
+                  aciklanan="-"
+                  beklenti="-"
+                  onceki="121.791"
+                />
+                <TakvimSatiri
+                  saat="10:00"
+                  ulke="TR"
+                  gosterge="Türkiye Konut Fiyat Endeksi (yıllık)"
+                  aciklanan="-"
+                  beklenti="-"
+                  onceki="26,35%"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-6 grid gap-4 xl:grid-cols-3">
+          <ListeKutusu
+            baslik="En Çok Yükselen"
+            veriler={enCokYukselenler}
+            renk="yesil"
+            degerBaslik="Fark %"
+          />
+          <ListeKutusu
+            baslik="En Çok Düşen"
+            veriler={enCokDusenler}
+            renk="kirmizi"
+            degerBaslik="Fark %"
+          />
+          <ListeKutusu
+            baslik="En Hacimliler"
+            veriler={enHacimliler}
+            renk="gri"
+            degerBaslik="Hacim"
+          />
+        </div>
+
+        <div className="mb-6 grid gap-4 xl:grid-cols-2">
+          <ListeKutusu
+            baslik="İlk 5 Para Girişi"
+            veriler={paraGirisi}
+            renk="yesil"
+            degerBaslik="Tutar"
+          />
+          <ListeKutusu
+            baslik="İlk 5 Para Çıkışı"
+            veriler={paraCikisi}
+            renk="kirmizi"
+            degerBaslik="Tutar"
+          />
+        </div>
+
+        <div className="rounded-2xl border border-zinc-200 bg-white p-1 md:p-2">
+          <h2 className="px-3 py-4 text-center text-2xl font-bold text-zinc-900">
+            En Çok İşlem Yapan Kurumlar
+          </h2>
+
+          <div className="grid gap-4 xl:grid-cols-3">
+            <KurumKutusu
+              baslik="En Çok Alış Yapanlar"
+              veriler={enCokAlisYapanKurumlar}
+              renk="yesil"
+            />
+            <KurumKutusu
+              baslik="En Çok Satış Yapanlar"
+              veriler={enCokSatisYapanKurumlar}
+              renk="kirmizi"
+            />
+            <KurumKutusu
+              baslik="En Çok Hacim Yapanlar"
+              veriler={enCokHacimYapanKurumlar}
+              renk="gri"
+            />
+          </div>
+        </div>
+
+        <section className="mt-12 mb-8">
+          <ReklamAlani variant="buyuk" />
         </section>
 
-        <section className="mt-8">
-          <ReklamAlani variant="icerik" />
-        </section>
-
-        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
+        <section className="rounded-2xl border border-zinc-200 bg-white p-6">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">
-            Pivot Analizi Hakkında
+            Günlük Borsa Özeti Hakkında
           </h2>
 
           <p className="mb-4 leading-7 text-zinc-700">
-            Pivot analizi sayfası, Borsa İstanbul’da işlem gören hisselerin günlük
-            pivot, destek ve direnç seviyelerini takip etmek isteyen yatırımcılar
-            için hazırlanmıştır. Bu sayfada hisselerin pivot noktasına göre mevcut
-            fiyat konumu, destek seviyeleri ve direnç seviyeleri detaylı şekilde
-            incelenebilir.
+            Günlük borsa özeti sayfası, Borsa İstanbul piyasalarında yaşanan güncel
+            gelişmeleri tek ekranda takip etmek isteyen yatırımcılar için
+            hazırlanmıştır. Bu sayfada BIST 100 endeksi kapanış verileri, günlük
+            değişim oranları, en çok yükselen hisseler, en çok düşen hisseler,
+            para girişi ve para çıkışı yaşanan hisseler gibi önemli piyasa
+            verilerine hızlı şekilde ulaşabilirsiniz.
           </p>
 
           <p className="mb-4 leading-7 text-zinc-700">
-            Pivot noktaları, teknik analizde gün içi yön tayini ve önemli fiyat
-            bölgelerini belirlemek için sık kullanılan göstergeler arasında yer alır.
-            Hisselerin pivot seviyesinin üstünde veya altında işlem görmesi,
-            yatırımcılar tarafından kısa vadeli trend hakkında önemli bir sinyal
-            olarak değerlendirilir.
+            Günlük borsa verileri, yatırımcıların piyasa yönünü anlaması ve kısa
+            vadeli fiyat hareketlerini değerlendirmesi açısından büyük önem taşır.
+            Özellikle işlem hacmi yüksek hisseler, para girişi yaşanan şirketler,
+            kurumsal işlemler ve dikkat çeken sektör hareketleri yatırım
+            kararlarında önemli sinyaller verebilir.
           </p>
 
           <p className="mb-4 leading-7 text-zinc-700">
-            Destek ve direnç seviyeleri sayesinde fiyatın hangi bölgelerde tepki
-            verebileceği daha net görülebilir. Bu sayfadaki pivot analiz tablosu,
-            hem BIST 100 endeksi hem de hisse bazlı teknik görünüm takibi yapmak
-            isteyen kullanıcılar için hızlı ve pratik bir referans sunar.
+            Sayfada yer alan ekonomik takvim, en çok yükselen ve düşen hisseler,
+            en hacimli hisseler ve kurum bazlı işlem dağılımları sayesinde piyasanın
+            gün içindeki genel görünümünü daha detaylı inceleyebilirsiniz. Bu yapı,
+            hem kısa vadeli traderlar hem de uzun vadeli yatırımcılar için pratik
+            bir takip ekranı sunar.
           </p>
 
           <p className="leading-7 text-zinc-700">
-            Güncel pivot seviyeleri, destek direnç noktaları, hisse bazlı teknik
-            görünüm analizleri ve Borsa İstanbul pivot tablosu için bu sayfayı
-            düzenli olarak takip edebilirsiniz.
+            Güncel BIST 100 verileri, günlük hisse performansları, işlem hacmi
+            sıralamaları, para giriş çıkış analizleri, ekonomik takvim ve kurum
+            bazlı piyasa özeti için bu sayfayı düzenli olarak takip edebilirsiniz.
           </p>
         </section>
       </div>
