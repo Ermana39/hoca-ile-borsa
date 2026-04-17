@@ -1,7 +1,4 @@
 import Link from "next/link";
-import Image from "next/image";
-
-type SearchParams = Promise<{ sirket?: string; dosya?: string }>;
 
 const taslakMetin = `Türkiye Emlak Katılım Bankası A.Ş.
 
@@ -228,6 +225,30 @@ function kodSatiriMi(satir: string) {
   return /^[A-Z0-9ÇĞİÖŞÜ]{3,10}$/.test(temiz);
 }
 
+function slugify(text: string) {
+  return text
+    .trim()
+    .toLocaleLowerCase("tr")
+    .replace(/ı/g, "i")
+    .replace(/İ/g, "i")
+    .replace(/ğ/g, "g")
+    .replace(/Ğ/g, "g")
+    .replace(/ü/g, "u")
+    .replace(/Ü/g, "u")
+    .replace(/ş/g, "s")
+    .replace(/Ş/g, "s")
+    .replace(/ö/g, "o")
+    .replace(/Ö/g, "o")
+    .replace(/ç/g, "c")
+    .replace(/Ç/g, "c")
+    .replace(/&/g, "ve")
+    .replace(/['".,()]/g, "")
+    .replace(/[^a-z0-9\s-]/g, "")
+    .replace(/\s+/g, "-")
+    .replace(/-+/g, "-")
+    .replace(/^-|-$/g, "");
+}
+
 function getTaslakListesi() {
   return taslakMetin
     .split(/\n\s*\n/)
@@ -241,87 +262,17 @@ function getTaslakListesi() {
 
       const sonSatir = satirlar[satirlar.length - 1];
       const gorunenSirket = temizSirketAdi(sonSatir);
-      const dosyaAdi = temizSirketAdi(sonSatir);
 
       return {
         label: gorunenSirket,
-        dosyaAdi,
+        slug: slugify(gorunenSirket),
       };
     })
     .filter((item) => item.label && !kodSatiriMi(item.label));
 }
 
-function getImagePath(dosyaAdi: string) {
-  return `/taslak/${dosyaAdi}.png`;
-}
-
-export default async function TaslakIzahnamelerPage({
-  searchParams,
-}: {
-  searchParams: SearchParams;
-}) {
-  const params = await searchParams;
-  const secilenSirket = params?.sirket
-    ? decodeURIComponent(params.sirket)
-    : null;
-  const secilenDosya = params?.dosya
-    ? decodeURIComponent(params.dosya)
-    : null;
-
+export default function TaslakIzahnamelerPage() {
   const taslakIzahnameler = getTaslakListesi();
-
-  if (secilenSirket && secilenDosya) {
-    const imagePath = getImagePath(secilenDosya);
-
-    return (
-      <main className="min-h-screen bg-white px-4 py-6 md:px-6">
-        <div className="mx-auto max-w-5xl">
-          <div className="mb-6 flex flex-wrap gap-3">
-            <Link
-              href="/"
-              className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
-            >
-              Ana Sayfa
-            </Link>
-
-            <Link
-              href="/halka-arz/taslak-izahnameler"
-              className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
-            >
-              Geri
-            </Link>
-          </div>
-
-          <section className="mb-6">
-            <ReklamAlani variant="yatay" />
-          </section>
-
-          <h1 className="mb-6 text-2xl font-bold text-zinc-900 md:text-3xl">
-            {secilenSirket}
-          </h1>
-
-          <div className="overflow-hidden rounded-2xl border border-red-200 bg-red-50 p-4 md:p-6">
-            <div className="overflow-hidden rounded-2xl bg-white p-2">
-              <div className="relative mx-auto w-full max-w-4xl">
-                <Image
-                  src={imagePath}
-                  alt={secilenSirket}
-                  width={1600}
-                  height={2200}
-                  unoptimized
-                  className="h-auto w-full rounded-xl object-contain"
-                />
-              </div>
-            </div>
-          </div>
-
-          <section className="mt-8">
-            <ReklamAlani variant="icerik" />
-          </section>
-        </div>
-      </main>
-    );
-  }
 
   const firstSplitIndex = 24;
   const secondSplitIndex = 48;
@@ -354,33 +305,24 @@ export default async function TaslakIzahnamelerPage({
         </h1>
 
         <div className="space-y-3">
-          {taslakIzahnameler.map((item, index) => {
-            const href =
-              item.label === "Kutup Yenilenebilir Enerji Üretim A.Ş."
-                ? "/halka-arz/taslak-izahnameler/kutup-yenilenebilir-enerji-uretim-a-s"
-                : `/halka-arz/taslak-izahnameler?sirket=${encodeURIComponent(
-                    item.label
-                  )}&dosya=${encodeURIComponent(item.dosyaAdi)}`;
+          {taslakIzahnameler.map((item, index) => (
+            <div key={`${item.slug}-${index}`} className="space-y-3">
+              <Link
+                href={`/halka-arz/taslak-izahnameler/${item.slug}`}
+                className="block rounded-xl border border-red-200 bg-red-50 px-4 py-4 text-base font-medium text-zinc-900 transition hover:bg-red-100"
+              >
+                {item.label}
+              </Link>
 
-            return (
-              <div key={`${item.label}-${index}`} className="space-y-3">
-                <Link
-                  href={href}
-                  className="block rounded-xl border border-red-200 bg-red-50 px-4 py-4 text-base font-medium text-zinc-900 transition hover:bg-red-100"
-                >
-                  {item.label}
-                </Link>
+              {index === firstSplitIndex && (
+                <ReklamAlani variant="yatay" />
+              )}
 
-                {index === firstSplitIndex && (
-                  <ReklamAlani variant="yatay" />
-                )}
-
-                {index === secondSplitIndex && (
-                  <ReklamAlani variant="yatay" />
-                )}
-              </div>
-            );
-          })}
+              {index === secondSplitIndex && (
+                <ReklamAlani variant="yatay" />
+              )}
+            </div>
+          ))}
         </div>
       </div>
     </main>
