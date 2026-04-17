@@ -26,6 +26,22 @@ const mayisTemettuleri = [
   { sembol: "ALARK", tarih: "4 Mayıs 2026", verim: "% 3,20", brut: "₺3,05", net: "₺2,6227", toplam: "₺1.328.144.958", oran: "" },
 ];
 
+function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
+  const alanClass =
+    variant === "icerik"
+      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
+      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
+
+  return (
+    <section
+      aria-label="Reklam alanı"
+      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
+    >
+      <div className={`w-full ${alanClass}`} />
+    </section>
+  );
+}
+
 export default function MayisAyiTemettuTakvimiPage() {
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -46,6 +62,10 @@ export default function MayisAyiTemettuTakvimiPage() {
           </Link>
         </div>
 
+        <section className="mb-8">
+          <ReklamAlani variant="yatay" />
+        </section>
+
         <h1 className="mb-6 text-3xl font-bold text-zinc-900">
           Mayıs Ayı Temettü Takvimi
         </h1>
@@ -65,10 +85,10 @@ export default function MayisAyiTemettuTakvimiPage() {
             </thead>
             <tbody>
               {mayisTemettuleri.map((item, index) => (
-  <tr
-    key={`${item.sembol}-${item.tarih}`}
-    className={`border-t border-zinc-100 ${index % 2 === 1 ? "bg-sky-50" : "bg-white"}`}
-  >
+                <tr
+                  key={`${item.sembol}-${item.tarih}`}
+                  className={`border-t border-zinc-100 ${index % 2 === 1 ? "bg-sky-50" : "bg-white"}`}
+                >
                   <td className="px-4 py-3 font-semibold text-zinc-900">{item.sembol}</td>
                   <td className="px-4 py-3 text-zinc-700">{item.tarih}</td>
                   <td className="px-4 py-3 text-right text-zinc-700">{item.verim}</td>
@@ -81,6 +101,46 @@ export default function MayisAyiTemettuTakvimiPage() {
             </tbody>
           </table>
         </div>
+
+        <section className="mt-8">
+          <ReklamAlani variant="icerik" />
+        </section>
+
+        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+            Mayıs Ayı Temettü Takvimi Hakkında
+          </h2>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Mayıs ayı temettü takvimi sayfası, Borsa İstanbul&apos;da işlem gören şirketlerin
+            Mayıs 2026 dönemindeki temettü dağıtım tarihlerini ve hisse başına ödeme
+            detaylarını tek ekranda takip etmek isteyen yatırımcılar için hazırlanmıştır.
+            Bu sayfada temettü verimi, hisse başı brüt temettü, hisse başı net temettü,
+            toplam temettü tutarı ve dağıtma oranı gibi önemli verilere hızlı şekilde
+            ulaşabilirsiniz.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Temettü yatırımcıları için dağıtım tarihi kadar temettü verimi ve şirketin
+            kâr dağıtım politikası da büyük önem taşır. Özellikle düzenli temettü veren
+            hisseler, uzun vadeli yatırım stratejilerinde öne çıkarken, yüksek dağıtma
+            oranı ve güçlü nakit akışı yatırım kararlarında belirleyici olabilir.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Sayfada yer alan Mayıs 2026 temettü takvimi sayesinde hangi şirketin ne zaman
+            temettü dağıtacağını, hisse başına ne kadar brüt ve net ödeme yapacağını ve
+            toplam temettü büyüklüğünü karşılaştırmalı olarak inceleyebilirsiniz. Bu yapı,
+            hem temettü emekliliği hedefleyen yatırımcılar hem de temettü odaklı portföy
+            oluşturan kullanıcılar için pratik bir takip ekranı sunar.
+          </p>
+
+          <p className="leading-7 text-zinc-700">
+            Güncel Mayıs ayı temettü takvimi, BIST temettü veren hisseler, hisse başı
+            temettü tutarları, net ve brüt temettü ödemeleri ile şirketlerin dağıtım
+            oranlarını takip etmek için bu sayfayı düzenli olarak inceleyebilirsiniz.
+          </p>
+        </section>
       </div>
     </main>
   );
