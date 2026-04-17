@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Güllük Mandalya Turizm Liman İşletmeleri A.Ş. Halka Arz Detayları 2026 | Taslak İzahname ve Finansal Veriler",
+    "Point Solar Elektrik Üretim Sanayi Tic. A.Ş. Halka Arz Detayları 2026 | Taslak İzahname ve Finansal Veriler",
   description:
-    "Güllük Mandalya Turizm Liman İşletmeleri A.Ş. halka arz detayları, taslak izahname özeti, halka arz tarihi, fiyat aralığı, lot miktarı, bist kodu, dağıtım yöntemi, fon kullanım alanları ve finansal veriler.",
+    "Point Solar Elektrik Üretim Sanayi Tic. A.Ş. halka arz detayları, taslak izahname özeti, halka arz tarihi, fiyat aralığı, lot miktarı, dağıtım yöntemi, fon kullanım alanları ve finansal veriler.",
 };
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "buyuk" }) {
@@ -21,65 +21,73 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "buyuk" }) {
   );
 }
 
-export default function GullukMandalyaTurizmLimanIsletmeleriASPage() {
+export default function PointSolarElektrikUretimSanayiTicASPage() {
   const summaryItems = [
     { label: "Halka Arz Tarihi", value: "Hazırlanıyor" },
     { label: "Halka Arz Fiyatı / Aralığı", value: "Hazırlanıyor" },
     { label: "Dağıtım Yöntemi", value: "Eşit Dağıtım" },
-    { label: "Pay", value: "25.650.000 Lot" },
-    { label: "Aracı Kurum", value: "Global Menkul Değerler A.Ş." },
-    { label: "Bist Kodu", value: "GLMND" },
-    { label: "Pazar", value: "Yıldız Pazar" },
+    { label: "Pay", value: "42.000.000 Lot" },
+    { label: "Aracı Kurum", value: "InvestAZ Yatırım Menkul Değerler A.Ş." },
+    { label: "Pazar", value: "Hazırlanıyor" },
   ];
 
   const halkaArzSekli = [
-    "Sermaye Artırımı: 20.520.000 Lot",
-    "Ortak Satışı: 2.565.000 Lot (Gülport Liman Hizmetleri Tic. A.Ş.)",
-    "Ortak Satışı: 2.565.000 Lot (Maruf İnşaat ve Tic. A.Ş.)",
+    "Sermaye Artırımı: 28.000.000 Lot",
+    "Ortak Satışı: 3.659.600 Lot (Mehmet Yasir Uslu)",
+    "Ortak Satışı: 1.276.800 Lot (Ömer Faruk Kaplan)",
+    "Ortak Satışı: 3.831.800 Lot (Seyda Mamalioğlu)",
+    "Ortak Satışı: 3.115.000 Lot (Emin Eymen Yeşilbaş)",
+    "Ortak Satışı: 1.276.800 Lot (Muhammed Ali Kaplan)",
+    "Ortak Satışı: 840.000 Lot (Hasan Cem Taşkaldıran)",
   ];
 
-  const fonKullanim = ["%100 Yatırımların finansmanı"];
+  const fonKullanim = [
+    "%50 Yatırım finansmanı",
+    "%50 İşletme sermayesi",
+  ];
 
   const tahsisat = [
     "Yurt İçi Bireysel Yatırımcı: Açıklanmadı",
     "Yurt İçi Kurumsal Yatırımcı: Açıklanmadı",
+    "Yurt Dışı Kurumsal Yatırımcı: Açıklanmadı",
+    "Yüksek Başvurulu Yatırımcı: Açıklanmadı",
   ];
 
   const finansalVeriler = [
     {
       kalem: "Hasılat",
-      d2025_6: "742,9 Milyon TL",
-      d2024: "1,2 Milyar TL",
-      d2023: "739,4 Milyon TL",
+      d2025_6: "288,1 Milyon TL",
+      d2024: "1,5 Milyar TL",
+      d2023: "1,2 Milyar TL",
     },
     {
       kalem: "Brüt Kâr",
-      d2025_6: "465,1 Milyon TL",
-      d2024: "393,1 Milyon TL",
-      d2023: "560,1 Milyon TL",
+      d2025_6: "5,8 Milyon TL",
+      d2024: "258,8 Milyon TL",
+      d2023: "263,6 Milyon TL",
     },
   ];
 
   const oneCikanlar = [
     {
       title: "Halka Açıklık",
-      value: "%15,04",
+      value: "%27,81",
       desc: "Şirketin halka açık olması planlanan oranı.",
     },
     {
-      title: "BIST Kodu",
-      value: "GLMND",
-      desc: "Taslak izahnamede yer alan işlem kodu.",
-    },
-    {
       title: "Fiyat İstikrarı",
-      value: "30 Gün",
-      desc: "30 gün fiyat istikrarı planlanıyor.",
+      value: "Planlanmıyor",
+      desc: "Fiyat istikrarı işleminin planlanmadığı belirtiliyor.",
     },
     {
       title: "Satmama Taahhüdü",
       value: "1 Yıl",
       desc: "İhraççı ve ortaklar için 1 yıl satmama taahhüdü bulunuyor.",
+    },
+    {
+      title: "T1-T2 Kullanımı",
+      value: "Kullanılamaz",
+      desc: "T1-T2 kullanılamaz bilgisi yer alıyor.",
     },
   ];
 
@@ -110,7 +118,7 @@ export default function GullukMandalyaTurizmLimanIsletmeleriASPage() {
                   Halka Arz İncelemesi
                 </p>
                 <h1 className="text-2xl font-bold sm:text-3xl">
-                  Güllük Mandalya Turizm Liman İşletmeleri A.Ş.
+                  Point Solar Elektrik Üretim Sanayi Tic. A.Ş.
                 </h1>
                 <p className="mt-2 text-sm text-blue-100 sm:text-base">
                   Taslak izahname verilerine göre hazırlanmış özet halka arz sayfası
@@ -120,11 +128,11 @@ export default function GullukMandalyaTurizmLimanIsletmeleriASPage() {
               <div className="grid grid-cols-2 gap-3 md:min-w-[300px]">
                 <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
                   <div className="text-xs text-blue-100">Toplam Pay</div>
-                  <div className="mt-1 text-lg font-bold">25.650.000</div>
+                  <div className="mt-1 text-lg font-bold">42.000.000</div>
                 </div>
                 <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
-                  <div className="text-xs text-blue-100">BIST Kodu</div>
-                  <div className="mt-1 text-lg font-bold">GLMND</div>
+                  <div className="text-xs text-blue-100">Durum</div>
+                  <div className="mt-1 text-lg font-bold">Taslak</div>
                 </div>
               </div>
             </div>
@@ -193,11 +201,20 @@ export default function GullukMandalyaTurizmLimanIsletmeleriASPage() {
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
               <h2 className="mb-5 text-xl font-bold text-slate-900">Fon Kullanım Yeri</h2>
 
-              <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4">
-                <div className="mb-2 text-sm font-semibold text-emerald-800">
-                  Yatırımların finansmanı
+              <div className="grid gap-4 md:grid-cols-2">
+                <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4">
+                  <div className="mb-2 text-sm font-semibold text-emerald-800">
+                    Yatırım finansmanı
+                  </div>
+                  <div className="text-sm text-emerald-900">{fonKullanim[0]}</div>
                 </div>
-                <div className="text-sm text-emerald-900">{fonKullanim[0]}</div>
+
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                  <div className="mb-2 text-sm font-semibold text-slate-800">
+                    İşletme sermayesi
+                  </div>
+                  <div className="text-sm text-slate-700">{fonKullanim[1]}</div>
+                </div>
               </div>
             </section>
 
@@ -248,14 +265,14 @@ export default function GullukMandalyaTurizmLimanIsletmeleriASPage() {
 
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
               <h2 className="mb-4 text-xl font-bold text-slate-900">
-                Güllük Mandalya Turizm Liman İşletmeleri A.Ş. Halka Arz Yorumu
+                Point Solar Elektrik Üretim Sanayi Tic. A.Ş. Halka Arz Yorumu
               </h2>
               <p className="text-sm leading-7 text-slate-600">
-                Güllük Mandalya Turizm Liman İşletmeleri A.Ş. halka arz sürecinde yatırımcıların en
+                Point Solar Elektrik Üretim Sanayi Tic. A.Ş. halka arz sürecinde yatırımcıların en
                 çok takip ettiği başlıklar arasında halka arz tarihi, fiyat aralığı, pay miktarı,
-                bist kodu, dağıtım yöntemi, fon kullanım alanları ve finansal görünüm yer alıyor.
-                Bu sayfada şirketin taslak izahname verileri daha sade ve analiz edilebilir bir
-                yapıda sunulmuştur.
+                dağıtım yöntemi, tahsisat oranları, fon kullanım alanları ve finansal görünüm yer
+                alıyor. Bu sayfada şirketin taslak izahname verileri daha sade ve analiz edilebilir
+                bir yapıda sunulmuştur.
               </p>
             </section>
           </div>
@@ -280,6 +297,9 @@ export default function GullukMandalyaTurizmLimanIsletmeleriASPage() {
                   Bireysele Eşit Dağıtım.
                 </div>
                 <div className="rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm font-medium text-amber-900">
+                  Yüksek Başvurulu Oransal Dağıtım.
+                </div>
+                <div className="rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm font-medium text-amber-900">
                   T1-T2 Kullanılamaz.
                 </div>
               </div>
@@ -294,7 +314,7 @@ export default function GullukMandalyaTurizmLimanIsletmeleriASPage() {
                     Dağıtılacak Pay Miktarı (Olası)
                   </div>
                   <p className="mt-2 text-sm text-slate-700 italic">
-                    İlerleyen aşamalarda güncellenecektir.
+                    İlerleyen aşamalarda tamamlanacaktır.
                   </p>
                 </div>
               </div>
@@ -306,7 +326,7 @@ export default function GullukMandalyaTurizmLimanIsletmeleriASPage() {
               <div className="space-y-4">
                 <div className="rounded-2xl border border-blue-200 bg-blue-50 p-4">
                   <div className="text-sm font-semibold text-blue-800">Fiyat İstikrarı</div>
-                  <p className="mt-2 text-sm text-blue-900">30 gün.</p>
+                  <p className="mt-2 text-sm text-blue-900">Planlanmamaktadır.</p>
                 </div>
 
                 <div className="rounded-2xl border border-indigo-200 bg-indigo-50 p-4">
@@ -318,7 +338,7 @@ export default function GullukMandalyaTurizmLimanIsletmeleriASPage() {
 
                 <div className="rounded-2xl border border-cyan-200 bg-cyan-50 p-4">
                   <div className="text-sm font-semibold text-cyan-800">Halka Açıklık</div>
-                  <p className="mt-2 text-sm text-cyan-900">%15,04</p>
+                  <p className="mt-2 text-sm text-cyan-900">%27,81</p>
                 </div>
               </div>
             </section>
@@ -331,13 +351,13 @@ export default function GullukMandalyaTurizmLimanIsletmeleriASPage() {
 
         <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <h2 className="mb-3 text-lg font-bold text-slate-900">
-            Güllük Mandalya Turizm Liman İşletmeleri A.Ş. Halka Arz Değerlendirmesi
+            Point Solar Elektrik Üretim Sanayi Tic. A.Ş. Halka Arz Değerlendirmesi
           </h2>
           <p className="text-sm leading-7 text-slate-600">
-            Güllük Mandalya Turizm Liman İşletmeleri A.Ş. halka arz sayfasında yatırımcıların hızlı
-            analiz yapabilmesi için halka arz tarihi, halka arz fiyatı, lot miktarı, bist kodu,
-            dağıtım yöntemi, halka açıklık oranı, fon kullanım alanları, finansal veriler ve
-            taahhüt detayları bir arada sunulmuştur. Sayfadaki bilgiler taslak izahnameye göre
+            Point Solar Elektrik Üretim Sanayi Tic. A.Ş. halka arz sayfasında yatırımcıların hızlı
+            analiz yapabilmesi için halka arz tarihi, halka arz fiyatı, lot miktarı, dağıtım
+            yöntemi, halka açıklık oranı, fon kullanım alanları, finansal veriler ve taahhüt
+            detayları bir arada sunulmuştur. Sayfadaki bilgiler taslak izahnameye göre
             hazırlanmıştır ve resmi veriler açıklandıkça güncellenmelidir.
           </p>
         </section>

@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Güllük Mandalya Turizm Liman İşletmeleri A.Ş. Halka Arz Detayları 2026 | Taslak İzahname ve Finansal Veriler",
+    "Özel İskenderun Gelişim Hastanesi San. ve Tic. A.Ş. Halka Arz Detayları 2026 | Taslak İzahname ve Finansal Veriler",
   description:
-    "Güllük Mandalya Turizm Liman İşletmeleri A.Ş. halka arz detayları, taslak izahname özeti, halka arz tarihi, fiyat aralığı, lot miktarı, bist kodu, dağıtım yöntemi, fon kullanım alanları ve finansal veriler.",
+    "Özel İskenderun Gelişim Hastanesi San. ve Tic. A.Ş. halka arz detayları, taslak izahname özeti, halka arz tarihi, fiyat aralığı, lot miktarı, dağıtım yöntemi, fon kullanım alanları ve finansal veriler.",
 };
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "buyuk" }) {
@@ -21,24 +21,30 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "buyuk" }) {
   );
 }
 
-export default function GullukMandalyaTurizmLimanIsletmeleriASPage() {
+export default function OzelIskenderunGelisimHastanesiSanVeTicASPage() {
   const summaryItems = [
     { label: "Halka Arz Tarihi", value: "Hazırlanıyor" },
     { label: "Halka Arz Fiyatı / Aralığı", value: "Hazırlanıyor" },
     { label: "Dağıtım Yöntemi", value: "Eşit Dağıtım" },
-    { label: "Pay", value: "25.650.000 Lot" },
-    { label: "Aracı Kurum", value: "Global Menkul Değerler A.Ş." },
-    { label: "Bist Kodu", value: "GLMND" },
-    { label: "Pazar", value: "Yıldız Pazar" },
+    { label: "Pay", value: "30.000.000 Lot" },
+    { label: "Aracı Kurum", value: "Halk Yatırım Menkul Değerler A.Ş." },
+    { label: "Pazar", value: "Hazırlanıyor" },
   ];
 
   const halkaArzSekli = [
-    "Sermaye Artırımı: 20.520.000 Lot",
-    "Ortak Satışı: 2.565.000 Lot (Gülport Liman Hizmetleri Tic. A.Ş.)",
-    "Ortak Satışı: 2.565.000 Lot (Maruf İnşaat ve Tic. A.Ş.)",
+    "Sermaye Artırımı: 21.000.000 Lot",
+    "Ortak Satışı: 3.000.000 Lot (Metin Yıldız)",
+    "Ortak Satışı: 2.400.000 Lot (Yalım Dış Ticaret A.Ş.)",
+    "Ortak Satışı: 3.600.000 Lot (Ayın Holding A.Ş.)",
   ];
 
-  const fonKullanim = ["%100 Yatırımların finansmanı"];
+  const fonKullanim = [
+    "%15-20 Modernizasyon",
+    "%30-35 Kapasite artırımı",
+    "%15-20 GES (Güneş Enerjisi Santrali) yatırımı",
+    "%20-25 Nükleer tıp yatırımı",
+    "%5-10 İşletme sermayesi",
+  ];
 
   const tahsisat = [
     "Yurt İçi Bireysel Yatırımcı: Açıklanmadı",
@@ -48,38 +54,38 @@ export default function GullukMandalyaTurizmLimanIsletmeleriASPage() {
   const finansalVeriler = [
     {
       kalem: "Hasılat",
-      d2025_6: "742,9 Milyon TL",
-      d2024: "1,2 Milyar TL",
-      d2023: "739,4 Milyon TL",
+      d2025_6: "936,8 Milyon TL",
+      d2024: "1,8 Milyar TL",
+      d2023: "1,2 Milyar TL",
     },
     {
       kalem: "Brüt Kâr",
-      d2025_6: "465,1 Milyon TL",
-      d2024: "393,1 Milyon TL",
-      d2023: "560,1 Milyon TL",
+      d2025_6: "67,2 Milyon TL",
+      d2024: "214,5 Milyon TL",
+      d2023: "(-)9,1 Milyon TL",
     },
   ];
 
   const oneCikanlar = [
     {
       title: "Halka Açıklık",
-      value: "%15,04",
+      value: "%24,79",
       desc: "Şirketin halka açık olması planlanan oranı.",
-    },
-    {
-      title: "BIST Kodu",
-      value: "GLMND",
-      desc: "Taslak izahnamede yer alan işlem kodu.",
     },
     {
       title: "Fiyat İstikrarı",
       value: "30 Gün",
-      desc: "30 gün fiyat istikrarı planlanıyor.",
+      desc: "Brüt halka arz gelirinin %20'si ile fiyat istikrarı planlanıyor.",
     },
     {
       title: "Satmama Taahhüdü",
       value: "1 Yıl",
       desc: "İhraççı ve ortaklar için 1 yıl satmama taahhüdü bulunuyor.",
+    },
+    {
+      title: "T1-T2 Kullanımı",
+      value: "Kullanılamaz",
+      desc: "T1-T2 kullanılamaz bilgisi yer alıyor.",
     },
   ];
 
@@ -110,7 +116,7 @@ export default function GullukMandalyaTurizmLimanIsletmeleriASPage() {
                   Halka Arz İncelemesi
                 </p>
                 <h1 className="text-2xl font-bold sm:text-3xl">
-                  Güllük Mandalya Turizm Liman İşletmeleri A.Ş.
+                  Özel İskenderun Gelişim Hastanesi San. ve Tic. A.Ş.
                 </h1>
                 <p className="mt-2 text-sm text-blue-100 sm:text-base">
                   Taslak izahname verilerine göre hazırlanmış özet halka arz sayfası
@@ -120,11 +126,11 @@ export default function GullukMandalyaTurizmLimanIsletmeleriASPage() {
               <div className="grid grid-cols-2 gap-3 md:min-w-[300px]">
                 <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
                   <div className="text-xs text-blue-100">Toplam Pay</div>
-                  <div className="mt-1 text-lg font-bold">25.650.000</div>
+                  <div className="mt-1 text-lg font-bold">30.000.000</div>
                 </div>
                 <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
-                  <div className="text-xs text-blue-100">BIST Kodu</div>
-                  <div className="mt-1 text-lg font-bold">GLMND</div>
+                  <div className="text-xs text-blue-100">Dağıtım</div>
+                  <div className="mt-1 text-lg font-bold">Eşit</div>
                 </div>
               </div>
             </div>
@@ -193,11 +199,45 @@ export default function GullukMandalyaTurizmLimanIsletmeleriASPage() {
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
               <h2 className="mb-5 text-xl font-bold text-slate-900">Fon Kullanım Yeri</h2>
 
-              <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4">
-                <div className="mb-2 text-sm font-semibold text-emerald-800">
-                  Yatırımların finansmanı
+              <div className="space-y-4">
+                <div className="grid gap-4 md:grid-cols-2">
+                  <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                    <div className="mb-2 text-sm font-semibold text-slate-800">
+                      Modernizasyon
+                    </div>
+                    <div className="text-sm text-slate-700">{fonKullanim[0]}</div>
+                  </div>
+
+                  <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4">
+                    <div className="mb-2 text-sm font-semibold text-emerald-800">
+                      Kapasite artırımı
+                    </div>
+                    <div className="text-sm text-emerald-900">{fonKullanim[1]}</div>
+                  </div>
                 </div>
-                <div className="text-sm text-emerald-900">{fonKullanim[0]}</div>
+
+                <div className="grid gap-4 md:grid-cols-3">
+                  <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                    <div className="mb-2 text-sm font-semibold text-slate-800">
+                      GES yatırımı
+                    </div>
+                    <div className="text-sm text-slate-700">{fonKullanim[2]}</div>
+                  </div>
+
+                  <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                    <div className="mb-2 text-sm font-semibold text-slate-800">
+                      Nükleer tıp yatırımı
+                    </div>
+                    <div className="text-sm text-slate-700">{fonKullanim[3]}</div>
+                  </div>
+
+                  <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                    <div className="mb-2 text-sm font-semibold text-slate-800">
+                      İşletme sermayesi
+                    </div>
+                    <div className="text-sm text-slate-700">{fonKullanim[4]}</div>
+                  </div>
+                </div>
               </div>
             </section>
 
@@ -248,14 +288,14 @@ export default function GullukMandalyaTurizmLimanIsletmeleriASPage() {
 
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
               <h2 className="mb-4 text-xl font-bold text-slate-900">
-                Güllük Mandalya Turizm Liman İşletmeleri A.Ş. Halka Arz Yorumu
+                Özel İskenderun Gelişim Hastanesi San. ve Tic. A.Ş. Halka Arz Yorumu
               </h2>
               <p className="text-sm leading-7 text-slate-600">
-                Güllük Mandalya Turizm Liman İşletmeleri A.Ş. halka arz sürecinde yatırımcıların en
-                çok takip ettiği başlıklar arasında halka arz tarihi, fiyat aralığı, pay miktarı,
-                bist kodu, dağıtım yöntemi, fon kullanım alanları ve finansal görünüm yer alıyor.
-                Bu sayfada şirketin taslak izahname verileri daha sade ve analiz edilebilir bir
-                yapıda sunulmuştur.
+                Özel İskenderun Gelişim Hastanesi San. ve Tic. A.Ş. halka arz sürecinde yatırımcıların
+                en çok takip ettiği başlıklar arasında halka arz tarihi, fiyat aralığı, pay miktarı,
+                dağıtım yöntemi, tahsisat oranları, fon kullanım alanları ve finansal görünüm yer
+                alıyor. Bu sayfada şirketin taslak izahname verileri daha sade ve analiz edilebilir
+                bir yapıda sunulmuştur.
               </p>
             </section>
           </div>
@@ -294,7 +334,7 @@ export default function GullukMandalyaTurizmLimanIsletmeleriASPage() {
                     Dağıtılacak Pay Miktarı (Olası)
                   </div>
                   <p className="mt-2 text-sm text-slate-700 italic">
-                    İlerleyen aşamalarda güncellenecektir.
+                    İlerleyen aşamalarda tamamlanacaktır.
                   </p>
                 </div>
               </div>
@@ -306,7 +346,9 @@ export default function GullukMandalyaTurizmLimanIsletmeleriASPage() {
               <div className="space-y-4">
                 <div className="rounded-2xl border border-blue-200 bg-blue-50 p-4">
                   <div className="text-sm font-semibold text-blue-800">Fiyat İstikrarı</div>
-                  <p className="mt-2 text-sm text-blue-900">30 gün.</p>
+                  <p className="mt-2 text-sm text-blue-900">
+                    30 gün, brüt halka arz gelirinin %20'si.
+                  </p>
                 </div>
 
                 <div className="rounded-2xl border border-indigo-200 bg-indigo-50 p-4">
@@ -318,7 +360,7 @@ export default function GullukMandalyaTurizmLimanIsletmeleriASPage() {
 
                 <div className="rounded-2xl border border-cyan-200 bg-cyan-50 p-4">
                   <div className="text-sm font-semibold text-cyan-800">Halka Açıklık</div>
-                  <p className="mt-2 text-sm text-cyan-900">%15,04</p>
+                  <p className="mt-2 text-sm text-cyan-900">%24,79</p>
                 </div>
               </div>
             </section>
@@ -331,13 +373,13 @@ export default function GullukMandalyaTurizmLimanIsletmeleriASPage() {
 
         <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <h2 className="mb-3 text-lg font-bold text-slate-900">
-            Güllük Mandalya Turizm Liman İşletmeleri A.Ş. Halka Arz Değerlendirmesi
+            Özel İskenderun Gelişim Hastanesi San. ve Tic. A.Ş. Halka Arz Değerlendirmesi
           </h2>
           <p className="text-sm leading-7 text-slate-600">
-            Güllük Mandalya Turizm Liman İşletmeleri A.Ş. halka arz sayfasında yatırımcıların hızlı
-            analiz yapabilmesi için halka arz tarihi, halka arz fiyatı, lot miktarı, bist kodu,
-            dağıtım yöntemi, halka açıklık oranı, fon kullanım alanları, finansal veriler ve
-            taahhüt detayları bir arada sunulmuştur. Sayfadaki bilgiler taslak izahnameye göre
+            Özel İskenderun Gelişim Hastanesi San. ve Tic. A.Ş. halka arz sayfasında yatırımcıların
+            hızlı analiz yapabilmesi için halka arz tarihi, halka arz fiyatı, lot miktarı, dağıtım
+            yöntemi, halka açıklık oranı, fon kullanım alanları, finansal veriler ve taahhüt
+            detayları bir arada sunulmuştur. Sayfadaki bilgiler taslak izahnameye göre
             hazırlanmıştır ve resmi veriler açıklandıkça güncellenmelidir.
           </p>
         </section>
