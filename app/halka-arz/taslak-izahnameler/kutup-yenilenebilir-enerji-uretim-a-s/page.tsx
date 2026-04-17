@@ -1,3 +1,9 @@
+export const metadata = {
+  title: "Şirket Adı Halka Arz Detayları 2026 | Taslak İzahname ve Finansal Veriler",
+  description:
+    "Şirket Adı halka arz detayları, taslak izahname özeti, halka arz tarihi, fiyat aralığı, lot miktarı, dağıtım yöntemi, fon kullanım alanları ve finansal veriler.",
+};
+
 function ReklamAlani({ buyuk = false }: { buyuk?: boolean }) {
   return (
     <section
@@ -17,71 +23,80 @@ function ReklamAlani({ buyuk = false }: { buyuk?: boolean }) {
   );
 }
 
-export default function KutupYenilenebilirEnerjiUretimASPage() {
+export default function HalkaArzStandartSayfa() {
   const summaryItems = [
     { label: "Halka Arz Tarihi", value: "Hazırlanıyor" },
     { label: "Halka Arz Fiyatı / Aralığı", value: "Hazırlanıyor" },
     { label: "Dağıtım Yöntemi", value: "Eşit Dağıtım" },
-    { label: "Pay", value: "77.000.000 Lot" },
-    { label: "Aracı Kurum", value: "İnfo Yatırım Menkul Değerler A.Ş." },
+    { label: "Pay", value: "0 Lot" },
+    { label: "Aracı Kurum", value: "Hazırlanıyor" },
     { label: "Pazar", value: "Ana Pazar" },
-  ];
-
-  const halkaArzSekli = [
-    "Sermaye Artırımı: 55.000.000 Lot",
-    "Ortak Satışı: 6.930.000 Lot (Şahin Sezgin)",
-    "Ortak Satışı: 6.930.000 Lot (Levent Duru Başaran)",
-    "Ortak Satışı: 6.930.000 Lot (Hakkı Kubilay Şakar)",
-    "Ortak Satışı: 1.210.000 Lot (Sedat Aktürk)",
-  ];
-
-  const fonKullanim = [
-    "%55-65 RES (Rüzgar Enerjisi Santrali), aynı alanda şirket yatırımları",
-    "%25-35 GES (Güneş Enerjisi Santrali) yatırımı",
-    "%5-15 İşletme sermayesi",
-  ];
-
-  const tahsisat = [
-    "Yurt İçi Bireysel Yatırımcı: Açıklanmadı",
-    "Yurt İçi Kurumsal Yatırımcı: Açıklanmadı",
-    "Yurt Dışı Kurumsal Yatırımcı: Açıklanmadı",
-  ];
-
-  const finansalVeriler = [
-    {
-      kalem: "Hasılat",
-      "2025/3": "145,4 Milyon TL",
-      "2024": "759,8 Milyon TL",
-      "2023": "1,2 Milyar TL",
-    },
-    {
-      kalem: "Brüt Kâr",
-      "2025/3": "13,6 Milyon TL",
-      "2024": "134,3 Milyon TL",
-      "2023": "304,4 Milyon TL",
-    },
   ];
 
   const oneCikanlar = [
     {
       title: "Halka Açıklık",
-      value: "%37,56",
+      value: "%0,00",
       desc: "Şirketin halka açık olması planlanan oranı.",
     },
     {
       title: "Fiyat İstikrarı",
-      value: "Planlanmaktadır",
-      desc: "Fiyat istikrarı işlemleri düşünülüyor.",
+      value: "Hazırlanıyor",
+      desc: "Fiyat istikrarı işlemleri planlanıyorsa burada yer alır.",
     },
     {
       title: "Satmama Taahhüdü",
-      value: "1 Yıl",
+      value: "Hazırlanıyor",
       desc: "İhraççı ve ortaklar için taahhüt süresi.",
     },
     {
       title: "Günlük Alım Emri",
-      value: "5 Gün / 4.400.000 Adet",
-      desc: "Günlük alım emri taahhüdü bulunuyor.",
+      value: "Hazırlanıyor",
+      desc: "Varsa günlük alım emri taahhüdü bilgisi.",
+    },
+  ];
+
+  const halkaArzSekli = [
+    "Sermaye artırımı: Hazırlanıyor",
+    "Ortak satışı: Hazırlanıyor",
+  ];
+
+  const fonKullanim = [
+    "Ana yatırım alanı: Hazırlanıyor",
+    "İkinci kullanım alanı: Hazırlanıyor",
+    "İşletme sermayesi: Hazırlanıyor",
+  ];
+
+  const tahsisat = [
+    "Yurt İçi Bireysel Yatırımcı: Hazırlanıyor",
+    "Yurt İçi Kurumsal Yatırımcı: Hazırlanıyor",
+    "Yurt Dışı Kurumsal Yatırımcı: Hazırlanıyor",
+  ];
+
+  const finansalVeriler = [
+    {
+      kalem: "Hasılat",
+      "2025/3": "-",
+      "2024": "-",
+      "2023": "-",
+    },
+    {
+      kalem: "Brüt Kâr",
+      "2025/3": "-",
+      "2024": "-",
+      "2023": "-",
+    },
+    {
+      kalem: "Net Dönem Kârı",
+      "2025/3": "-",
+      "2024": "-",
+      "2023": "-",
+    },
+    {
+      kalem: "Özkaynaklar",
+      "2025/3": "-",
+      "2024": "-",
+      "2023": "-",
     },
   ];
 
@@ -97,17 +112,17 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
                   Halka Arz İncelemesi
                 </p>
                 <h1 className="text-2xl font-bold sm:text-3xl">
-                  Kutup Yenilenebilir Enerji Üretim A.Ş.
+                  Şirket Adı Halka Arz Detayları
                 </h1>
                 <p className="mt-2 text-sm text-blue-100 sm:text-base">
-                  Taslak izahname verilerine göre hazırlanmış özet halka arz sayfası
+                  Taslak izahname, finansal veriler, tahsisat oranları ve halka arz detayları
                 </p>
               </div>
 
               <div className="grid grid-cols-2 gap-3 md:min-w-[300px]">
                 <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
                   <div className="text-xs text-blue-100">Toplam Pay</div>
-                  <div className="mt-1 text-lg font-bold">77.000.000</div>
+                  <div className="mt-1 text-lg font-bold">0</div>
                 </div>
                 <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
                   <div className="text-xs text-blue-100">Dağıtım</div>
@@ -162,7 +177,7 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
         <section className="grid gap-8 xl:grid-cols-3">
           <div className="space-y-8 xl:col-span-2">
             {/* Halka Arz Şekli */}
-            <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
               <div className="mb-5 flex items-center justify-between">
                 <h2 className="text-xl font-bold text-slate-900">Halka Arz Şekli</h2>
                 <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
@@ -181,13 +196,11 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
                 ))}
               </div>
 
-              <p className="mt-4 text-xs italic text-slate-500">
-                Kaynak: Taslak İzahname, Sayfa 2
-              </p>
-            </div>
+              <p className="mt-4 text-xs italic text-slate-500">Kaynak: Taslak İzahname</p>
+            </section>
 
             {/* Fon Kullanım Yeri */}
-            <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
               <h2 className="mb-5 text-xl font-bold text-slate-900">Fon Kullanım Yeri</h2>
 
               <div className="space-y-4">
@@ -214,18 +227,14 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
                   </div>
                 </div>
               </div>
-
-              <p className="mt-4 text-xs italic text-slate-500">
-                Kaynak: Taslak İzahname, Sayfa 246
-              </p>
-            </div>
+            </section>
 
             {/* Finansal Tablo */}
-            <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
               <div className="mb-5 flex items-center justify-between">
                 <h2 className="text-xl font-bold text-slate-900">Finansal Görünüm</h2>
                 <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
-                  2025/3 - 2024 - 2023
+                  Dönemsel Veriler
                 </span>
               </div>
 
@@ -264,17 +273,25 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
                   </tbody>
                 </table>
               </div>
+            </section>
 
-              <p className="mt-4 text-xs italic text-slate-500">
-                Kaynak: Taslak İzahname, Sayfa 150
+            {/* SEO için ek metin alanı */}
+            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h2 className="mb-4 text-xl font-bold text-slate-900">
+                Şirket Adı Halka Arz Yorumu
+              </h2>
+              <p className="text-sm leading-7 text-slate-600">
+                Şirket Adı halka arz sürecinde yatırımcıların en çok takip ettiği başlıklar;
+                halka arz tarihi, fiyat aralığı, lot miktarı, dağıtım yöntemi, tahsisat oranları,
+                fon kullanım alanları ve finansal görünüm olmaktadır. Bu sayfada yer alan veriler
+                taslak izahname ve halka açık bilgiler esas alınarak özetlenmiştir.
               </p>
-            </div>
+            </section>
           </div>
 
           {/* Sağ Kolon */}
           <aside className="space-y-8">
-            {/* Tahsisat */}
-            <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
               <h2 className="mb-5 text-xl font-bold text-slate-900">Tahsisat Grupları</h2>
 
               <div className="space-y-3">
@@ -287,66 +304,48 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
                   </div>
                 ))}
               </div>
+            </section>
 
-              <p className="mt-4 text-xs italic text-slate-500">
-                Kaynak: Taslak İzahname, Sayfa 236
-              </p>
-            </div>
-
-            {/* Diğer Bilgiler */}
-            <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
               <h2 className="mb-5 text-xl font-bold text-slate-900">Diğer Bilgiler</h2>
 
               <div className="space-y-4">
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                   <div className="text-sm font-semibold text-slate-800">
-                    Dağıtılacak Pay Miktarı (Olası)
+                    Dağıtılacak Pay Miktarı
                   </div>
-                  <p className="mt-2 text-sm text-slate-700">
-                    İlerleyen aşamalarda tamamlanacaktır.
-                  </p>
+                  <p className="mt-2 text-sm text-slate-700">Hazırlanıyor</p>
                 </div>
 
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                   <div className="text-sm font-semibold text-slate-800">Bireysel Dağıtım</div>
-                  <p className="mt-2 text-sm text-slate-700">Bireysele eşit dağıtım.</p>
+                  <p className="mt-2 text-sm text-slate-700">Hazırlanıyor</p>
                 </div>
 
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                   <div className="text-sm font-semibold text-slate-800">T1-T2 Kullanımı</div>
-                  <p className="mt-2 text-sm text-slate-700">T1-T2 kullanılamaz.</p>
+                  <p className="mt-2 text-sm text-slate-700">Hazırlanıyor</p>
                 </div>
               </div>
-            </div>
+            </section>
 
-            {/* Satmama ve Alım Emri */}
-            <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
               <h2 className="mb-5 text-xl font-bold text-slate-900">Taahhüt Özeti</h2>
 
               <div className="space-y-4">
                 <div className="rounded-2xl border border-blue-200 bg-blue-50 p-4">
                   <div className="text-sm font-semibold text-blue-800">Satmama Taahhüdü</div>
-                  <p className="mt-2 text-sm text-blue-900">
-                    1 yıl ihraççı, 1 yıl ortaklar.
-                  </p>
-                  <p className="mt-2 text-xs italic text-blue-700">
-                    Kaynak: Taslak İzahname, Sayfa 243
-                  </p>
+                  <p className="mt-2 text-sm text-blue-900">Hazırlanıyor</p>
                 </div>
 
                 <div className="rounded-2xl border border-indigo-200 bg-indigo-50 p-4">
                   <div className="text-sm font-semibold text-indigo-800">
                     Günlük Alım Emri Taahhüdü
                   </div>
-                  <p className="mt-2 text-sm text-indigo-900">
-                    5 gün boyunca 4.400.000 adet günlük alım emri girilecek.
-                  </p>
-                  <p className="mt-2 text-xs italic text-indigo-700">
-                    Kaynak: Taslak İzahname, Sayfa 244
-                  </p>
+                  <p className="mt-2 text-sm text-indigo-900">Hazırlanıyor</p>
                 </div>
               </div>
-            </div>
+            </section>
           </aside>
         </section>
 
@@ -358,15 +357,14 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
         {/* Alt Açıklama */}
         <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <h2 className="mb-3 text-lg font-bold text-slate-900">
-            Kutup Yenilenebilir Enerji Üretim A.Ş. Halka Arz Değerlendirmesi
+            Şirket Adı Halka Arz Değerlendirmesi
           </h2>
           <p className="text-sm leading-7 text-slate-600">
-            Kutup Yenilenebilir Enerji Üretim A.Ş. halka arz sayfasında yatırımcıların en hızlı
-            şekilde analiz yapabilmesi için halka arz tarihi, halka arz fiyatı, pay miktarı,
-            dağıtım yöntemi, halka açıklık oranı, fon kullanım alanları, finansal veriler ve
-            taahhüt detayları sade bir yapıda sunulmuştur. Sayfadaki bilgiler taslak izahname
-            verilerine göre hazırlanmıştır. Kesinleşen veriler açıklandığında fiyat, tarih,
-            tahsisat oranları ve diğer detaylar güncellenmelidir.
+            Şirket Adı halka arz sayfasında yatırımcıların hızlı analiz yapabilmesi için halka arz
+            tarihi, halka arz fiyatı, lot miktarı, dağıtım yöntemi, halka açıklık oranı, fon
+            kullanım alanları, finansal veriler ve taahhüt detayları bir arada sunulmuştur.
+            Sayfadaki bilgiler taslak izahname veya açıklanan resmi veriler doğrultusunda
+            güncellenmelidir.
           </p>
         </section>
       </div>
