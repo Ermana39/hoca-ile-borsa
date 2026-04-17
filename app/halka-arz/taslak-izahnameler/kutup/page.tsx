@@ -7,21 +7,15 @@ export const metadata: Metadata = {
     "Kutup Yenilenebilir Enerji Üretim A.Ş. halka arz detayları, taslak izahname özeti, halka arz tarihi, fiyat aralığı, lot miktarı, dağıtım yöntemi, fon kullanım alanları ve finansal veriler.",
 };
 
-function ReklamAlani({ buyuk = false }: { buyuk?: boolean }) {
+function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "buyuk" }) {
+  const alanClass =
+    variant === "buyuk"
+      ? "min-h-[220px] sm:min-h-[260px] lg:min-h-[320px]"
+      : "min-h-[110px] sm:min-h-[120px] lg:min-h-[140px]";
+
   return (
-    <section
-      aria-label="Reklam alanı"
-      className={`overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm ${
-        buyuk ? "p-4 sm:p-5" : "p-3 sm:p-4"
-      }`}
-    >
-      <div
-        className={`w-full rounded-2xl border border-dashed border-slate-300 bg-slate-50 ${
-          buyuk
-            ? "min-h-[220px] sm:min-h-[260px] lg:min-h-[320px]"
-            : "min-h-[110px] sm:min-h-[120px] lg:min-h-[140px]"
-        }`}
-      />
+    <section aria-label="Reklam alanı" className={`w-full ${alanClass}`}>
+      <div className={`w-full ${alanClass}`} />
     </section>
   );
 }
@@ -97,6 +91,7 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        {/* Üst Başlık */}
         <section className="mb-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
           <div className="border-b border-slate-200 bg-gradient-to-r from-indigo-600 to-blue-600 px-6 py-7 text-white">
             <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
@@ -125,6 +120,7 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
             </div>
           </div>
 
+          {/* Hızlı Özet */}
           <div className="grid gap-4 p-6 sm:grid-cols-2 xl:grid-cols-3">
             {summaryItems.map((item) => (
               <div
@@ -140,10 +136,12 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
           </div>
         </section>
 
+        {/* Öne Çıkanlar Üstü Reklam */}
         <section className="mb-8">
           <ReklamAlani />
         </section>
 
+        {/* Öne Çıkanlar */}
         <section className="mb-8">
           <div className="mb-4 flex items-center justify-between">
             <h2 className="text-xl font-bold text-slate-900">Öne Çıkan Noktalar</h2>
@@ -163,6 +161,7 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
           </div>
         </section>
 
+        {/* Ana İçerik */}
         <section className="grid gap-8 xl:grid-cols-3">
           <div className="space-y-8 xl:col-span-2">
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -270,6 +269,19 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
                 Kaynak: Taslak İzahname, Sayfa 150
               </p>
             </section>
+
+            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h2 className="mb-4 text-xl font-bold text-slate-900">
+                Kutup Yenilenebilir Enerji Üretim A.Ş. Halka Arz Yorumu
+              </h2>
+              <p className="text-sm leading-7 text-slate-600">
+                Kutup Yenilenebilir Enerji Üretim A.Ş. halka arz sürecinde yatırımcıların en çok
+                takip ettiği başlıklar arasında halka arz tarihi, fiyat aralığı, lot miktarı,
+                dağıtım yöntemi, tahsisat oranları, fon kullanım alanları ve finansal görünüm yer
+                alıyor. Bu sayfada şirketin taslak izahname verileri özetlenerek daha kolay analiz
+                edilebilir bir yapıda sunulmuştur.
+              </p>
+            </section>
           </div>
 
           <aside className="space-y-8">
@@ -345,21 +357,22 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
           </aside>
         </section>
 
+        {/* Alt Büyük Reklam */}
         <section className="mt-8">
-          <ReklamAlani buyuk />
+          <ReklamAlani variant="buyuk" />
         </section>
 
+        {/* Alt Açıklama */}
         <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <h2 className="mb-3 text-lg font-bold text-slate-900">
             Kutup Yenilenebilir Enerji Üretim A.Ş. Halka Arz Değerlendirmesi
           </h2>
           <p className="text-sm leading-7 text-slate-600">
-            Kutup Yenilenebilir Enerji Üretim A.Ş. halka arz sayfasında yatırımcıların en hızlı
-            şekilde analiz yapabilmesi için halka arz tarihi, halka arz fiyatı, pay miktarı,
-            dağıtım yöntemi, halka açıklık oranı, fon kullanım alanları, finansal veriler ve
-            taahhüt detayları sade bir yapıda sunulmuştur. Sayfadaki bilgiler taslak izahname
-            verilerine göre hazırlanmıştır. Kesinleşen veriler açıklandığında fiyat, tarih,
-            tahsisat oranları ve diğer detaylar güncellenmelidir.
+            Kutup Yenilenebilir Enerji Üretim A.Ş. halka arz sayfasında yatırımcıların hızlı analiz
+            yapabilmesi için halka arz tarihi, halka arz fiyatı, lot miktarı, dağıtım yöntemi,
+            halka açıklık oranı, fon kullanım alanları, finansal veriler ve taahhüt detayları bir
+            arada sunulmuştur. Sayfadaki bilgiler taslak izahnameye göre hazırlanmıştır ve resmi
+            veriler açıklandıkça güncellenmelidir.
           </p>
         </section>
       </div>
