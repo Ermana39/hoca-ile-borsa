@@ -179,11 +179,7 @@ export default function TemettuPage() {
 
           <div className="space-y-4 text-sm leading-7 text-zinc-700 md:text-base">
             <p>
-              Bu sayfa, temettü ile ilgili farklı başlıkları tek yerde toplamak
-              amacıyla hazırlanmıştır. Kullanıcılar temettü eğitimi, temettü
-              takvimi, aylara göre temettü veren şirketler, temettü hesaplama
-              aracı ve temettü verimi hesaplama gibi başlıklara bu sayfadan hızlı
-              şekilde ulaşabilir.
+              Hoca İle Borsa Temettü sayfasında temettü takvimi, aylara göre temettü dağıtacak şirketler, temettü tarihleri, temettü hesaplama aracı ve temettü verimi hesaplama içerikleri bir arada sunulur.
             </p>
 
             <p>
@@ -195,9 +191,7 @@ export default function TemettuPage() {
             </p>
 
             <p>
-              Temettü içeriklerinin tek merkezde toplanması hem kullanıcı
-              deneyimini güçlendirir hem de sayfanın SEO açısından daha güçlü bir
-              konu merkezi olmasına katkı sağlar.
+             Temettü yatırımıyla ilgilenen yatırımcılar bu sayfa üzerinden yaklaşan temettü ödemelerini takip edebilir, hisse bazlı temettü verilerini inceleyebilir ve temettü gelirine yönelik temel hesaplamaları daha pratik şekilde yapabilir.
             </p>
 
             <p className="text-zinc-500">

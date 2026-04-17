@@ -170,10 +170,7 @@ export default function FonlarPage() {
 
           <div className="space-y-4 text-sm leading-7 text-zinc-700 md:text-base">
             <p>
-              Bu sayfa, yatırım fonları ile ilgili farklı başlıkları tek yerde
-              toplamak amacıyla hazırlanmıştır. Kullanıcılar haftalık fon
-              tercihleri, fon getiri analizi ve fon tarihsel verileri gibi ana
-              başlıklara buradan hızlı şekilde ulaşabilir.
+              Hoca İle Borsa Fonlar sayfasında yatırım fonları, emeklilik fonları, para piyasası fonları, hisse senedi fonları, borçlanma araçları fonları ve farklı fon türlerine ait güncel içerikler bir arada sunulur.
             </p>
 
             <p>
@@ -184,9 +181,7 @@ export default function FonlarPage() {
             </p>
 
             <p>
-              Fonlarla ilgili içeriklerin tek merkezde toplanması hem kullanıcı
-              deneyimini güçlendirir hem de sayfanın SEO açısından daha güçlü
-              bir konu merkezi olmasına katkı sağlar.
+             Fon yatırımına ilgi duyan kullanıcılar bu sayfa üzerinden fon kategorilerini daha kolay inceleyebilir, fon getirilerini karşılaştırabilir, risk ve dağılım yapıları hakkında genel bilgi edinebilir ve kendi yatırım tercihlerine uygun fon seçeneklerini daha pratik şekilde değerlendirebilir.
             </p>
 
             <p className="text-zinc-500">

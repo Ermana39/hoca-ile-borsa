@@ -408,6 +408,38 @@ export default function HalkaArzPage() {
         <section className="mt-8">
           <ReklamAlani variant="icerik" />
         </section>
+
+        <section className="mt-8">
+          <div className="rounded-2xl border border-zinc-200 bg-white p-5 md:p-7">
+            <h2 className="mb-4 text-xl font-bold text-zinc-900 md:text-2xl">
+              Halka Arz Sayfasında Neler Var?
+            </h2>
+
+            <div className="space-y-4 text-sm leading-7 text-zinc-700 md:text-base">
+              <p>
+                Hoca İle Borsa Halka Arz sayfasında güncel halka arz gelişmeleri, onaylı
+                izahnameler, taslak izahnameler, halka arz kazanç hesaplama aracı ve talep
+                hesaplama bölümleri bir arada sunulur. Halka arz sürecini takip etmek isteyen
+                yatırımcılar bu sayfa üzerinden yeni başvuruları, izahname detaylarını ve öne
+                çıkan verileri daha kolay inceleyebilir.
+              </p>
+
+              <p>
+                Sayfada ayrıca halka arz sonrası işlem gören şirketlere ait güncel kurum
+                dağılımları, en çok alıcı kurumlar, en çok satıcı kurumlar ve en çok işlem
+                yapan kurumlar listeleri yer alır. Bu veriler sayesinde halka arz hisselerinde
+                gün içi dağılımın nasıl şekillendiği daha net görülebilir.
+              </p>
+
+              <p>
+                Halka arz takibi yapan kullanıcılar için hazırlanan bu bölüm; izahname
+                inceleme, talep hesaplama, olası lot dağılımını değerlendirme ve işlem
+                sonrası kurum hareketlerini takip etme gibi başlıklarda pratik bir kaynak
+                sunar.
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );
