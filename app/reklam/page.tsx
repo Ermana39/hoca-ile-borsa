@@ -1,10 +1,12 @@
 import Link from "next/link";
+
 export const metadata = {
   robots: {
     index: false,
     follow: true,
   },
 };
+
 function ReklamAlani() {
   return (
     <section
@@ -57,22 +59,28 @@ export default function ReklamPage() {
             gibi farklı reklam modelleri değerlendirilebilir.
           </p>
 
-          <h2 className="text-xl font-semibold text-zinc-900">İş birliği seçenekleri</h2>
+          <h2 className="text-xl font-semibold text-zinc-900">
+            İş birliği seçenekleri
+          </h2>
           <p>
             Marka tanıtımı, finans temalı sponsorluk çalışmaları, özel kampanya
             duyuruları, içerik destekli görünürlük çalışmaları ve uzun dönemli reklam
             planlamaları için iletişime geçilebilir.
           </p>
 
-          <h2 className="text-xl font-semibold text-zinc-900">Şeffaflık ilkesi</h2>
+          <h2 className="text-xl font-semibold text-zinc-900">
+            Şeffaflık ilkesi
+          </h2>
           <p>
-            Ücretli iş birlikleri, sponsorlu içerikler ve reklam çalışmaları editoryal
-            içeriklerden ayrı değerlendirilir. Kullanıcıyı yanıltmayacak bir yapı
-            korunmaya çalışılır ve reklam niteliğindeki çalışmalar mümkün olduğu
-            ölçüde açık şekilde ayrıştırılır.
+            Ücretli iş birlikleri, sponsorlu içerikler ve reklam çalışmaları
+            editoryal içeriklerden ayrı değerlendirilir. Kullanıcıyı yanıltmayacak
+            bir yapı korunmaya çalışılır ve reklam niteliğindeki çalışmalar mümkün
+            olduğu ölçüde açık şekilde ayrıştırılır.
           </p>
 
-          <h2 className="text-xl font-semibold text-zinc-900">İçerik uygunluğu</h2>
+          <h2 className="text-xl font-semibold text-zinc-900">
+            İçerik uygunluğu
+          </h2>
           <p>
             Site yapısına, kullanıcı kitlesine ve yayın ilkelerine uygun olmayan
             reklam talepleri değerlendirmeye alınmayabilir.
@@ -89,7 +97,9 @@ export default function ReklamPage() {
             </a>
           </p>
 
-          <h2 className="text-xl font-semibold text-zinc-900">Ticari ileti notu</h2>
+          <h2 className="text-xl font-semibold text-zinc-900">
+            Ticari ileti notu
+          </h2>
           <p>
             Reklam ve pazarlama amaçlı iletişim süreçlerinde, gerekli olduğu durumda
             ilgili yasal izin ve onay süreçleri esas alınır.
