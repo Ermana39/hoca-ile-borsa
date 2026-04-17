@@ -40,7 +40,7 @@ export default function GizlilikPolitikasiPage() {
           <h2 className="text-xl font-semibold text-zinc-900">1. Veri sorumlusu</h2>
           <p>
             Site kapsamında veri sorumlusu Hoca İle Borsa’dır. İletişim için:
-            hocaileborsa@gmail.com
+            destekhocaileborsa@gmail.com
           </p>
 
           <h2 className="text-xl font-semibold text-zinc-900">2. İşlenebilecek veriler</h2>
@@ -78,7 +78,7 @@ export default function GizlilikPolitikasiPage() {
 
           <h2 className="text-xl font-semibold text-zinc-900">7. Başvuru</h2>
           <p>
-            Gizlilik ve kişisel veri talepleriniz için hocaileborsa@gmail.com
+            Gizlilik ve kişisel veri talepleriniz için destekhocaileborsa@gmail.com
             adresine e-posta gönderebilirsiniz.
           </p>
         </div>
