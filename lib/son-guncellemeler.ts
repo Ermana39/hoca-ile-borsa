@@ -63,7 +63,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Halka Arz",
     href: "/halka-arz",
-    updatedAt: "17.04.2026 10:13",
+    updatedAt: "17.04.2026 11:27",
   },
   {
     title: "Onaylı İzahnameler",
