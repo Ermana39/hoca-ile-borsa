@@ -249,6 +249,15 @@ function slugify(text: string) {
     .replace(/^-|-$/g, "");
 }
 
+function getSirketSlug(label: string) {
+  const ozelSluglar: Record<string, string> = {
+    "Kutup Yenilenebilir Enerji Üretim A.Ş.":
+      "kutup-yenilenebilir-enerji-uretim-a-s",
+  };
+
+  return ozelSluglar[label] || slugify(label);
+}
+
 function getTaslakListesi() {
   return taslakMetin
     .split(/\n\s*\n/)
@@ -265,7 +274,7 @@ function getTaslakListesi() {
 
       return {
         label: gorunenSirket,
-        slug: slugify(gorunenSirket),
+        slug: getSirketSlug(gorunenSirket),
       };
     })
     .filter((item) => item.label && !kodSatiriMi(item.label));
