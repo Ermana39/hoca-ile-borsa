@@ -162,12 +162,8 @@ function ilkBesKisaKodlu<T extends { kod: string }>(liste: T[]) {
   return liste.filter((item) => item.kod.length <= 5).slice(0, 5);
 }
 
-function ilkBesBesHaneliyiAtla<T extends { kod: string }>(liste: T[]) {
-  return liste.filter((item) => item.kod.length !== 5).slice(0, 5);
-}
-
 const enCokYukselenler = ilkBesKisaKodlu(tumYukselenler);
-const enCokDusenler = ilkBesBesHaneliyiAtla(tumDusenler);
+const enCokDusenler = ilkBesKisaKodlu(tumDusenler);
 const enHacimliler = ilkBesKisaKodlu(tumHacimliler);
 const paraGirisi = ilkBesKisaKodlu(tumParaGirisi);
 const paraCikisi = ilkBesKisaKodlu(tumParaCikisi);
