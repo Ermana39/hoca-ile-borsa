@@ -1,3 +1,22 @@
+function ReklamAlani({ buyuk = false }: { buyuk?: boolean }) {
+  return (
+    <section
+      aria-label="Reklam alanı"
+      className={`overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm ${
+        buyuk ? "p-4 sm:p-5" : "p-3 sm:p-4"
+      }`}
+    >
+      <div
+        className={`w-full rounded-2xl border border-dashed border-slate-300 bg-slate-50 ${
+          buyuk
+            ? "min-h-[220px] sm:min-h-[260px] lg:min-h-[320px]"
+            : "min-h-[110px] sm:min-h-[120px] lg:min-h-[140px]"
+        }`}
+      />
+    </section>
+  );
+}
+
 export default function KutupYenilenebilirEnerjiUretimASPage() {
   const summaryItems = [
     { label: "Halka Arz Tarihi", value: "Hazırlanıyor" },
@@ -112,6 +131,11 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
               </div>
             ))}
           </div>
+        </section>
+
+        {/* Öne Çıkanlar Üstü Reklam */}
+        <section className="mb-8">
+          <ReklamAlani />
         </section>
 
         {/* Öne Çıkanlar */}
@@ -324,6 +348,11 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
               </div>
             </div>
           </aside>
+        </section>
+
+        {/* Alt Büyük Reklam */}
+        <section className="mt-8">
+          <ReklamAlani buyuk />
         </section>
 
         {/* Alt Açıklama */}
