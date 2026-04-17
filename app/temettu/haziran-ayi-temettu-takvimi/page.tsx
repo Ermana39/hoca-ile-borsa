@@ -20,6 +20,22 @@ const haziranTemettuleri = [
   { sembol: "MACKO", tarih: "1 Haziran 2026", verim: "% 6,48", brut: "₺2,70", net: "₺2,2950", toplam: "₺270.000.000", oran: "%84" },
 ];
 
+function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
+  const alanClass =
+    variant === "icerik"
+      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
+      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
+
+  return (
+    <section
+      aria-label="Reklam alanı"
+      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
+    >
+      <div className={`w-full ${alanClass}`} />
+    </section>
+  );
+}
+
 export default function HaziranAyiTemettuTakvimiPage() {
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -39,6 +55,10 @@ export default function HaziranAyiTemettuTakvimiPage() {
             Geri
           </Link>
         </div>
+
+        <section className="mb-8">
+          <ReklamAlani variant="yatay" />
+        </section>
 
         <h1 className="mb-6 text-3xl font-bold text-zinc-900">
           Haziran Ayı Temettü Takvimi
@@ -75,6 +95,45 @@ export default function HaziranAyiTemettuTakvimiPage() {
             </tbody>
           </table>
         </div>
+
+        <section className="mt-8">
+          <ReklamAlani variant="icerik" />
+        </section>
+
+        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+            Haziran Ayı Temettü Takvimi Hakkında
+          </h2>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Haziran ayı temettü takvimi sayfası, Borsa İstanbul’da işlem gören şirketlerin
+            Haziran 2026 dönemindeki temettü dağıtım tarihlerini, hisse başına brüt ve net
+            temettü ödemelerini ve toplam dağıtım tutarlarını tek ekranda takip etmek isteyen
+            yatırımcılar için hazırlanmıştır. Bu sayfa sayesinde temettü veren hisseleri tarih,
+            verim ve ödeme tutarına göre detaylı şekilde inceleyebilirsiniz.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Temettü yatırımı yapan kullanıcılar için dağıtım tarihi, temettü verimi, hisse başına
+            net ödeme ve şirketlerin dağıtma oranı oldukça önemlidir. Özellikle düzenli kâr payı
+            ödeyen şirketler uzun vadeli yatırımcıların radarında yer alırken, yüksek temettü
+            verimine sahip hisseler de temettü odaklı portföylerde öne çıkmaktadır.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Sayfada yer alan Haziran 2026 temettü takvimi verileri sayesinde hangi şirketin hangi
+            tarihte temettü vereceğini, hisse başına ne kadar brüt ve net ödeme yapacağını ve
+            toplam temettü büyüklüğünü karşılaştırmalı olarak görebilirsiniz. Bu yapı, hem temettü
+            emekliliği hedefleyen yatırımcılar hem de şirket bazlı kâr dağıtım takibi yapan
+            kullanıcılar için pratik bir referans sunar.
+          </p>
+
+          <p className="leading-7 text-zinc-700">
+            Güncel Haziran ayı temettü takvimi, BIST temettü veren hisseler, hisse başı brüt ve
+            net temettü tutarları, dağıtma oranları ve şirket bazlı kâr payı ödemelerini takip
+            etmek için bu sayfayı düzenli olarak inceleyebilirsiniz.
+          </p>
+        </section>
       </div>
     </main>
   );

@@ -32,6 +32,22 @@ const nisanTemettuleri = [
   { sembol: "ASGYO", tarih: "1 Nisan 2026", verim: "% 1,64", brut: "₺0,17", net: "₺0,1683", toplam: "₺110.921.957", oran: "%18" },
 ];
 
+function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
+  const alanClass =
+    variant === "icerik"
+      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
+      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
+
+  return (
+    <section
+      aria-label="Reklam alanı"
+      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
+    >
+      <div className={`w-full ${alanClass}`} />
+    </section>
+  );
+}
+
 export default function NisanAyiTemettuTakvimiPage() {
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -51,6 +67,10 @@ export default function NisanAyiTemettuTakvimiPage() {
             Geri
           </Link>
         </div>
+
+        <section className="mb-8">
+          <ReklamAlani variant="yatay" />
+        </section>
 
         <h1 className="mb-6 text-3xl font-bold text-zinc-900">
           Nisan Ayı Temettü Takvimi
@@ -87,6 +107,46 @@ export default function NisanAyiTemettuTakvimiPage() {
             </tbody>
           </table>
         </div>
+
+        <section className="mt-8">
+          <ReklamAlani variant="icerik" />
+        </section>
+
+        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+            Nisan Ayı Temettü Takvimi Hakkında
+          </h2>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Nisan ayı temettü takvimi sayfası, Borsa İstanbul’da işlem gören şirketlerin
+            Nisan 2026 dönemindeki temettü dağıtım tarihlerini, hisse başına brüt ve net
+            temettü tutarlarını ve toplam dağıtım büyüklüklerini takip etmek isteyen
+            yatırımcılar için hazırlanmıştır. Bu sayfa sayesinde temettü veren hisseleri
+            tek tabloda inceleyebilir ve ödeme detaylarını kolayca karşılaştırabilirsiniz.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Temettü yatırımı yapan kullanıcılar için dağıtım tarihi, temettü verimi,
+            brüt ve net ödeme tutarı ile şirketlerin dağıtma oranı oldukça önemlidir.
+            Özellikle düzenli kâr payı ödeyen şirketler, uzun vadeli temettü stratejisi
+            kuran yatırımcılar açısından öne çıkarken, yüksek temettü verimi sunan
+            hisseler de yakından takip edilmektedir.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Sayfada yer alan Nisan 2026 temettü takvimi verileri sayesinde hangi şirketin
+            hangi tarihte temettü vereceğini, hisse başına ne kadar ödeme yapacağını ve
+            toplam temettü tutarını detaylı şekilde görebilirsiniz. Bu yapı, hem temettü
+            emekliliği hedefleyen yatırımcılar hem de bilanço ve kâr dağıtım takibi yapan
+            kullanıcılar için pratik bir referans ekranı sunar.
+          </p>
+
+          <p className="leading-7 text-zinc-700">
+            Güncel Nisan ayı temettü takvimi, BIST temettü veren hisseler, hisse başı
+            brüt ve net temettü ödemeleri, dağıtma oranları ve şirket bazlı temettü
+            detaylarını takip etmek için bu sayfayı düzenli olarak inceleyebilirsiniz.
+          </p>
+        </section>
       </div>
     </main>
   );
