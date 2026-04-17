@@ -38,7 +38,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Gösterge Taramaları",
     href: "/borsa/gosterge-taramalari",
-    updatedAt: "16.04.2026 19:05",
+    updatedAt: "17.04.2026 19:05",
   },
    {
     title: "Grafik Analiz",
@@ -48,7 +48,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
    {
     title: "Hacim Artışı Analizi",
     href: "/borsa/hacim-artisi-analizi",
-    updatedAt: "14.04.2026 19:00",
+    updatedAt: "17.04.2026 19:05",
   },
   {
     title: "Pivot Analizi",
