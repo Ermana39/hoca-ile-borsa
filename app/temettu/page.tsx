@@ -183,11 +183,7 @@ export default function TemettuPage() {
             </p>
 
             <p>
-              Özellikle temettü hisseleri, temettü takvimi, temettü veren
-              şirketler, temettü verimi ve temettü yatırımına dair temel bilgiler
-              arayan kullanıcılar için daha düzenli ve erişilebilir bir yapı
-              sunulması hedeflenmiştir. Böylece farklı temettü sayfaları arasında
-              geçiş yapmak daha kolay hale gelir.
+              Borsa yatırımcıları için hazırlanan bu bölümde, hisse senetlerinin temettü ödeme dönemlerini daha kolay takip edebilir, temettü gelirine yönelik hesaplamaları pratik şekilde yapabilir ve güncel temettü verilerini düzenli olarak inceleyebilirsiniz.
             </p>
 
             <p>

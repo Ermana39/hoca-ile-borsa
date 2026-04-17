@@ -174,14 +174,12 @@ export default function FonlarPage() {
             </p>
 
             <p>
-              Özellikle yatırım fonları, fon getirileri, fon karşılaştırmaları,
-              fon performansı ve fon verileri arayan kullanıcılar için daha
-              düzenli ve erişilebilir bir yapı sunulması hedeflenmiştir. Böylece
-              farklı fon sayfaları arasında geçiş yapmak daha kolay hale gelir.
+              Fon yatırımına ilgi duyan kullanıcılar bu sayfa üzerinden fon kategorilerini daha kolay inceleyebilir, fon getirilerini karşılaştırabilir, risk ve dağılım yapıları hakkında genel bilgi edinebilir ve kendi yatırım tercihlerine uygun fon seçeneklerini daha pratik şekilde değerlendirebilir.
+
             </p>
 
             <p>
-             Fon yatırımına ilgi duyan kullanıcılar bu sayfa üzerinden fon kategorilerini daha kolay inceleyebilir, fon getirilerini karşılaştırabilir, risk ve dağılım yapıları hakkında genel bilgi edinebilir ve kendi yatırım tercihlerine uygun fon seçeneklerini daha pratik şekilde değerlendirebilir.
+             Fon piyasasını takip eden kullanıcılar için hazırlanan bu bölüm, farklı fon başlıklarına tek sayfadan ulaşmayı kolaylaştırır ve güncel fon içeriklerini daha düzenli şekilde inceleme imkânı sunar.
             </p>
 
             <p className="text-zinc-500">
