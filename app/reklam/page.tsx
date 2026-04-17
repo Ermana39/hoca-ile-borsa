@@ -7,17 +7,6 @@ export const metadata = {
   },
 };
 
-function ReklamAlani() {
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className="w-full overflow-hidden rounded-2xl border border-dashed border-zinc-300 bg-zinc-50 min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-    >
-      <div className="w-full min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]" />
-    </section>
-  );
-}
-
 export default function ReklamPage() {
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -105,10 +94,6 @@ export default function ReklamPage() {
             ilgili yasal izin ve onay süreçleri esas alınır.
           </p>
         </div>
-
-        <section className="mt-8">
-          <ReklamAlani />
-        </section>
       </div>
     </main>
   );
