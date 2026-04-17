@@ -65,10 +65,10 @@ export default function MayisAyiTemettuTakvimiPage() {
             </thead>
             <tbody>
               {mayisTemettuleri.map((item, index) => (
-                <tr
-                  key={`${item.sembol}-${item.tarih}`}
-                  className={`border-t border-zinc-100 ${index % 2 === 1 ? "bg-sky-50" : "bg-white"}`}
-                >
+  <tr
+    key={`${item.sembol}-${item.tarih}`}
+    className={`border-t border-zinc-100 ${index % 2 === 1 ? "bg-sky-50" : "bg-white"}`}
+  >
                   <td className="px-4 py-3 font-semibold text-zinc-900">{item.sembol}</td>
                   <td className="px-4 py-3 text-zinc-700">{item.tarih}</td>
                   <td className="px-4 py-3 text-right text-zinc-700">{item.verim}</td>
