@@ -228,6 +228,16 @@ function kodSatiriMi(satir: string) {
   return /^[A-Z0-9ÇĞİÖŞÜ]{3,10}$/.test(temiz);
 }
 
+function getTaslakHref(label: string, dosyaAdi: string) {
+  if (label === "Kutup Yenilenebilir Enerji Üretim A.Ş.") {
+    return "/halka-arz/taslak-izahnameler/kutup-yenilenebilir-enerji-uretim-a-s";
+  }
+
+  return `/halka-arz/taslak-izahnameler?sirket=${encodeURIComponent(
+    label
+  )}&dosya=${encodeURIComponent(dosyaAdi)}`;
+}
+
 function getTaslakListesi() {
   return taslakMetin
     .split(/\n\s*\n/)
@@ -246,6 +256,7 @@ function getTaslakListesi() {
       return {
         label: gorunenSirket,
         dosyaAdi,
+        href: getTaslakHref(gorunenSirket, dosyaAdi),
       };
     })
     .filter((item) => item.label && !kodSatiriMi(item.label));
@@ -357,9 +368,7 @@ export default async function TaslakIzahnamelerPage({
           {taslakIzahnameler.map((item, index) => (
             <div key={`${item.label}-${index}`} className="space-y-3">
               <Link
-                href={`/halka-arz/taslak-izahnameler?sirket=${encodeURIComponent(
-                  item.label
-                )}&dosya=${encodeURIComponent(item.dosyaAdi)}`}
+                href={item.href}
                 className="block rounded-xl border border-red-200 bg-red-50 px-4 py-4 text-base font-medium text-zinc-900 transition hover:bg-red-100"
               >
                 {item.label}

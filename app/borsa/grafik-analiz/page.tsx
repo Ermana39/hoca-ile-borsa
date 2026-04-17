@@ -5,11 +5,7 @@ const analizler = [
     baslik: "AEFES Grafik Analiz",
     href: "/borsa/grafik-analiz/aefes",
   },
-  {
-    baslik: "ODAS Grafik Analiz",
-    href: "/borsa/grafik-analiz/odas",
-  },
-];
+  ];
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
