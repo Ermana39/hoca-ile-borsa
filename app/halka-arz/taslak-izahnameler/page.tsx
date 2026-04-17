@@ -48,7 +48,6 @@ Mercanlar Otomotiv Tic. A.Ş.
 
 Inavıtas Enerji A.Ş.
 
-OTOSR
 Otosor Otomotiv A.Ş.
 
 Baycan Elektrik Müteahhitlik San. ve Tic. A.Ş.
@@ -61,19 +60,16 @@ Reis Makina Tic. ve San. A.Ş.
 
 Fortis Enerji Elektrik Üretim A.Ş.
 
-TIMUR
 (nef) Timur Gayrimenkul Geliştirme Yapı ve Yatırım A.Ş.
 
 Çimstone İnşaat Malzemeleri San. ve Tic. A.Ş.
 
-GLMND
 Güllük Mandalya Turizm Liman İşletmeleri A.Ş.
 
 Point Solar Elektrik Üretim Sanayi Tic. A.Ş.
 
 Özel İskenderun Gelişim Hastanesi San. ve Tic. A.Ş.
 
-TV8TV
 Tv8 Tv Yayıncılık A.Ş.
 
 Dorçe Prefabrik Yapı ve İnşaat Sanayii Tic. A.Ş.
@@ -100,8 +96,6 @@ Mar Gayrimenkul Yatırım Ortaklığı A.Ş.
 
 Ic Gayrimenkul Yatırım Ortaklığı A.Ş.
 
-Bizzcar Filo Kiralama Hizmetleri A.Ş.
-
 Selectum Gayrimenkul Yatırım Ortaklığı A.Ş.
 
 Taksim Holding A.Ş.
@@ -116,7 +110,6 @@ Naturel Holding A.Ş.
 
 Evofone Teknoloji A.Ş.
 
-QYHOL
 Q Yatırım Holding A.Ş.
 
 Kon-Tek Kontrol Teknolojileri ve Otomasyon San. ve Tic. A.Ş.
