@@ -21,7 +21,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
     updatedAt: "17.04.2026 18:30",
   },
   {
-    title: "Eğitim Videolerı",
+    title: "Eğitim Videoları",
     href: "/borsa/egitim-videolari",
     updatedAt: "14.04.2026 12:50",
   },
