@@ -18,6 +18,8 @@ type GuncellemeItem = {
   time: string;
 };
 
+const NEWS_CACHE_KEY = "home-news-cache-v1";
+
 const kategoriKutulari = [
   {
     title: "Borsa Analiz",
@@ -111,6 +113,69 @@ function KategoriKutusu({
 function getIdFromHref(href: string) {
   const match = href.match(/(\d+)(?!.*\d)/);
   return match ? Number(match[1]) : 0;
+}
+
+function normalizeNewsItems(data: unknown): NewsItem[] {
+  if (!Array.isArray(data)) return [];
+
+  return data
+    .map((item: Partial<NewsItem>) => {
+      const href = item.href || "/";
+      const id =
+        typeof item.id === "number" && item.id > 0
+          ? item.id
+          : getIdFromHref(href);
+
+      return {
+        id,
+        title: item.title || "",
+        href,
+        image:
+          item.image && item.image.trim() !== ""
+            ? item.image
+            : id
+              ? `/haber${id}.png`
+              : "/placeholder.png",
+        alt: item.alt || item.title || "",
+      };
+    })
+    .filter(
+      (item: NewsItem) =>
+        item.id > 0 && item.title.trim() !== "" && item.href.trim() !== ""
+    )
+    .sort((a: NewsItem, b: NewsItem) => a.id - b.id);
+}
+
+function getCachedNews(): NewsItem[] {
+  if (typeof window === "undefined") return [];
+
+  try {
+    const raw = window.localStorage.getItem(NEWS_CACHE_KEY);
+    if (!raw) return [];
+
+    const parsed = JSON.parse(raw);
+    if (!parsed || !Array.isArray(parsed.items)) return [];
+
+    return normalizeNewsItems(parsed.items);
+  } catch {
+    return [];
+  }
+}
+
+function setCachedNews(items: NewsItem[]) {
+  if (typeof window === "undefined" || items.length === 0) return;
+
+  try {
+    window.localStorage.setItem(
+      NEWS_CACHE_KEY,
+      JSON.stringify({
+        items,
+        savedAt: Date.now(),
+      })
+    );
+  } catch {
+    // ignore localStorage errors
+  }
 }
 
 function HaberKutusu({ item }: { item: NewsItem }) {
@@ -357,48 +422,41 @@ export default function HomePage() {
   const [guncellemelerLoading, setGuncellemelerLoading] = useState(true);
 
   useEffect(() => {
+    let isMounted = true;
+    const cachedNews = getCachedNews();
+    const hasCachedNews = cachedNews.length > 0;
+
+    if (hasCachedNews) {
+      setNewsItems(cachedNews);
+      setNewsLoading(false);
+    }
+
     const loadNews = async () => {
       try {
         const res = await fetch("/api/news", { cache: "no-store" });
         const data = await res.json();
+        const normalized = normalizeNewsItems(data);
 
-        if (Array.isArray(data)) {
-          const normalized = data
-            .map((item: Partial<NewsItem>) => {
-              const href = item.href || "/";
-              const id =
-                typeof item.id === "number" && item.id > 0
-                  ? item.id
-                  : getIdFromHref(href);
+        if (!isMounted) return;
 
-              return {
-                id,
-                title: item.title || "",
-                href,
-                image:
-                  item.image && item.image.trim() !== ""
-                    ? item.image
-                    : id
-                      ? `/haber${id}.png`
-                      : "/placeholder.png",
-                alt: item.alt || item.title || "",
-              };
-            })
-            .filter(
-              (item: NewsItem) =>
-                item.id > 0 && item.title.trim() !== "" && item.href.trim() !== ""
-            )
-            .sort((a: NewsItem, b: NewsItem) => a.id - b.id);
-
+        if (normalized.length > 0) {
           setNewsItems(normalized);
-        } else {
+          setCachedNews(normalized);
+        } else if (!hasCachedNews) {
           setNewsItems([]);
         }
       } catch (error) {
         console.error("NEWS_LOAD_ERROR:", error);
-        setNewsItems([]);
+
+        if (!isMounted) return;
+
+        if (!hasCachedNews) {
+          setNewsItems([]);
+        }
       } finally {
-        setNewsLoading(false);
+        if (isMounted) {
+          setNewsLoading(false);
+        }
       }
     };
 
@@ -406,18 +464,25 @@ export default function HomePage() {
       try {
         const res = await fetch("/api/recent-updates", { cache: "no-store" });
         const data = await res.json();
-        if (Array.isArray(data)) {
+
+        if (isMounted && Array.isArray(data)) {
           setGuncellemeler(data);
         }
       } catch (error) {
         console.error("RECENT_UPDATES_LOAD_ERROR:", error);
       } finally {
-        setGuncellemelerLoading(false);
+        if (isMounted) {
+          setGuncellemelerLoading(false);
+        }
       }
     };
 
     loadNews();
     loadUpdates();
+
+    return () => {
+      isMounted = false;
+    };
   }, []);
 
   return (
