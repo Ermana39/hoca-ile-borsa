@@ -1,8 +1,9 @@
 import Link from "next/link";
 
 const agustosTemettuleri = [
-  { sembol: "SUWEN", tarih: "31 Ağustos 2026", verim: "% 1,95", brut: "₺0,18", net: "₺0,1518", toplam: "₺99.999.984", oran: "%93" },
-  { sembol: "TURSG", tarih: "27 Ağustos 2026", verim: "% 2,24", brut: "₺0,30", net: "₺0,2550", toplam: "₺3.000.000.000", oran: "%16" },
+  { sembol: "SUWEN", tarih: "31 Ağustos 2026", verim: "% 1,80", brut: "₺0,18", net: "₺0,1518", toplam: "₺99.999.984", oran: "%93" },
+  { sembol: "TURSG", tarih: "27 Ağustos 2026", verim: "% 2,04", brut: "₺0,30", net: "₺0,2550", toplam: "₺3.000.000.000", oran: "%16" },
+  { sembol: "DOAS", tarih: "13 Ağustos 2026", verim: "% 7,86", brut: "₺15,00", net: "₺12,7500", toplam: "₺3.300.000.000", oran: "%56" },
 ];
 
 export default function AgustosAyiTemettuTakvimiPage() {

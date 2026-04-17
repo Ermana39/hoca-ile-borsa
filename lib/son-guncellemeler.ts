@@ -78,17 +78,22 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
    {
     title: "Fonların Haftalık En Çok Tercih Ettiği Hisseler",
     href: "/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler",
-    updatedAt: "16.04.2026 19:00",
+    updatedAt: "17.04.2026 19:35",
   },
     {
     title: "Fon Getiri Analizi",
     href: "/fonlar/getiri",
-    updatedAt: "16.04.2026 19:00",
+    updatedAt: "17.04.2026 19:35",
   },
     {
     title: "Fon Tarihsel Veriler",
     href: "/fonlar/tarihsel-veriler",
-    updatedAt: "16.04.2026 19:00",
+    updatedAt: "17.04.2026 19:35",
+  },
+    {
+    title: "Temettü Takvimi",
+    href: "/temettü",
+    updatedAt: "17.04.2026 19:35",
   },
     {
     title: "Günlük Faiz Oranları",

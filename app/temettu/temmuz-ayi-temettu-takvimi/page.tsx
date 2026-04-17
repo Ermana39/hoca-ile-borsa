@@ -1,12 +1,14 @@
 import Link from "next/link";
 
 const temmuzTemettuleri = [
-  { sembol: "OSMEN", tarih: "29 Temmuz 2026", verim: "% 0,67", brut: "₺0,05", net: "₺0,0424", toplam: "₺19.999.992", oran: "%12" },
-  { sembol: "GRTHO", tarih: "22 Temmuz 2026", verim: "% 0,16", brut: "₺0,45", net: "₺0,3817", toplam: "₺56.133.900", oran: "%4" },
-  { sembol: "TAVHL", tarih: "21 Temmuz 2026", verim: "% 0,52", brut: "₺1,80", net: "₺1,5342", toplam: "₺655.718.977", oran: "%23" },
-  { sembol: "EGPRO", tarih: "16 Temmuz 2026", verim: "% 2,05", brut: "₺0,64", net: "₺0,5459", toplam: "₺349.999.981", oran: "%33" },
-  { sembol: "LIDER", tarih: "8 Temmuz 2026", verim: "% 0,03", brut: "₺0,04", net: "₺0,0303", toplam: "₺29.411.745", oran: "%2" },
-  { sembol: "LILAK", tarih: "6 Temmuz 2026", verim: "% 3,63", brut: "₺1,53", net: "₺1,2966", toplam: "₺900.025.000", oran: "%53" },
+  { sembol: "OSMEN", tarih: "29 Temmuz 2026", verim: "% 0,60", brut: "₺0,05", net: "₺0,0424", toplam: "₺19.999.992", oran: "%12" },
+  { sembol: "MERCN", tarih: "28 Temmuz 2026", verim: "% 1,05", brut: "₺0,21", net: "₺0,1786", toplam: "₺39.999.981", oran: "%29" },
+  { sembol: "GRTHO", tarih: "22 Temmuz 2026", verim: "% 0,18", brut: "₺0,45", net: "₺0,3817", toplam: "₺56.133.900", oran: "%4" },
+  { sembol: "KTLEV", tarih: "21 Temmuz 2026", verim: "% 0,11", brut: "₺0,10", net: "₺0,0821", toplam: "₺199.999.881", oran: "%2" },
+  { sembol: "TAVHL", tarih: "21 Temmuz 2026", verim: "% 0,56", brut: "₺1,80", net: "₺1,5342", toplam: "₺655.718.977", oran: "%23" },
+  { sembol: "EGPRO", tarih: "16 Temmuz 2026", verim: "% 1,69", brut: "₺0,64", net: "₺0,5459", toplam: "₺349.999.981", oran: "%33" },
+  { sembol: "LIDER", tarih: "8 Temmuz 2026", verim: "% 0,02", brut: "₺0,04", net: "₺0,0303", toplam: "₺29.411.745", oran: "%2" },
+  { sembol: "LILAK", tarih: "6 Temmuz 2026", verim: "% 3,84", brut: "₺1,53", net: "₺1,2966", toplam: "₺900.025.000", oran: "%53" },
 ];
 
 export default function TemmuzAyiTemettuTakvimiPage() {

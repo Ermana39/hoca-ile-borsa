@@ -1,21 +1,23 @@
 import Link from "next/link";
 
 const haziranTemettuleri = [
-  { sembol: "LOGO", tarih: "30 Haziran 2026", verim: "% 3,74", brut: "₺5,26", net: "₺4,4737", toplam: "₺499.999.991", oran: "%33" },
-  { sembol: "ISSEN", tarih: "30 Haziran 2026", verim: "% 0,50", brut: "₺0,04", net: "₺0,0340", toplam: "₺16.975.919", oran: "" },
+  { sembol: "LOGO", tarih: "30 Haziran 2026", verim: "% 3,65", brut: "₺5,26", net: "₺4,4737", toplam: "₺499.999.991", oran: "%33" },
+  { sembol: "ISSEN", tarih: "30 Haziran 2026", verim: "% 0,48", brut: "₺0,04", net: "₺0,0340", toplam: "₺16.975.919", oran: "" },
   { sembol: "ISKPL", tarih: "26 Haziran 2026", verim: "% 0,00", brut: "₺0,00", net: "₺0,0004", toplam: "₺646.650", oran: "%1" },
-  { sembol: "AVPGY", tarih: "24 Haziran 2026", verim: "% 4,68", brut: "₺2,50", net: "₺2,5000", toplam: "₺1.000.000.000", oran: "%62" },
-  { sembol: "CEMTS", tarih: "24 Haziran 2026", verim: "% 2,74", brut: "₺0,30", net: "₺0,2550", toplam: "₺150.000.000", oran: "" },
-  { sembol: "EKGYO", tarih: "24 Haziran 2026", verim: "% 2,79", brut: "₺0,60", net: "₺0,6000", toplam: "₺2.280.000.000", oran: "%37" },
-  { sembol: "PAGYO", tarih: "24 Haziran 2026", verim: "% 3,08", brut: "₺3,90", net: "₺3,9000", toplam: "₺339.300.000", oran: "%22" },
-  { sembol: "BIMAS", tarih: "17 Haziran 2026", verim: "% 0,53", brut: "₺4,00", net: "₺3,4000", toplam: "₺2.400.000.000", oran: "%13" },
-  { sembol: "INDES", tarih: "15 Haziran 2026", verim: "% 2,30", brut: "₺0,22", net: "₺0,1847", toplam: "₺163.000.875", oran: "%34" },
-  { sembol: "ATATP", tarih: "10 Haziran 2026", verim: "% 0,69", brut: "₺1,00", net: "₺0,8500", toplam: "₺93.750.000", oran: "%5" },
-  { sembol: "YAPRK", tarih: "10 Haziran 2026", verim: "% 0,16", brut: "₺0,03", net: "₺0,0213", toplam: "₺7.455.000", oran: "%38" },
-  { sembol: "AVPGY", tarih: "3 Haziran 2026", verim: "% 4,68", brut: "₺2,50", net: "₺2,5000", toplam: "₺1.000.000.000", oran: "%62" },
-  { sembol: "SISE", tarih: "1 Haziran 2026", verim: "% 1,24", brut: "₺0,59", net: "₺0,4995", toplam: "₺1.799.999.717", oran: "%19" },
-  { sembol: "AYES", tarih: "1 Haziran 2026", verim: "% 1,15", brut: "₺0,35", net: "₺0,3000", toplam: "₺52.941.165", oran: "%52" },
-  { sembol: "MACKO", tarih: "1 Haziran 2026", verim: "% 7,38", brut: "₺2,70", net: "₺2,2950", toplam: "₺270.000.000", oran: "%84" },
+  { sembol: "AVPGY", tarih: "24 Haziran 2026", verim: "% 4,42", brut: "₺2,50", net: "₺2,5000", toplam: "₺1.000.000.000", oran: "%62" },
+  { sembol: "CEMTS", tarih: "24 Haziran 2026", verim: "% 2,62", brut: "₺0,30", net: "₺0,2550", toplam: "₺150.000.000", oran: "" },
+  { sembol: "EKGYO", tarih: "24 Haziran 2026", verim: "% 2,69", brut: "₺0,60", net: "₺0,6000", toplam: "₺2.280.000.000", oran: "%37" },
+  { sembol: "PAGYO", tarih: "24 Haziran 2026", verim: "% 3,01", brut: "₺3,90", net: "₺3,9000", toplam: "₺339.300.000", oran: "%22" },
+  { sembol: "KTLEV", tarih: "23 Haziran 2026", verim: "% 0,11", brut: "₺0,10", net: "₺0,0821", toplam: "₺199.999.881", oran: "%2" },
+  { sembol: "BIMAS", tarih: "17 Haziran 2026", verim: "% 0,52", brut: "₺4,00", net: "₺3,4000", toplam: "₺2.400.000.000", oran: "%13" },
+  { sembol: "BULGS", tarih: "15 Haziran 2026", verim: "% 0,21", brut: "₺0,09", net: "₺0,0933", toplam: "₺24.999.978", oran: "%2" },
+  { sembol: "INDES", tarih: "15 Haziran 2026", verim: "% 2,17", brut: "₺0,22", net: "₺0,1847", toplam: "₺163.000.875", oran: "%34" },
+  { sembol: "ATATP", tarih: "10 Haziran 2026", verim: "% 0,68", brut: "₺1,00", net: "₺0,8500", toplam: "₺93.750.000", oran: "%5" },
+  { sembol: "YAPRK", tarih: "10 Haziran 2026", verim: "% 0,15", brut: "₺0,03", net: "₺0,0213", toplam: "₺7.455.000", oran: "%38" },
+  { sembol: "AVPGY", tarih: "3 Haziran 2026", verim: "% 4,42", brut: "₺2,50", net: "₺2,5000", toplam: "₺1.000.000.000", oran: "%62" },
+  { sembol: "SISE", tarih: "1 Haziran 2026", verim: "% 1,22", brut: "₺0,59", net: "₺0,4995", toplam: "₺1.799.999.717", oran: "%19" },
+  { sembol: "AYES", tarih: "1 Haziran 2026", verim: "% 1,08", brut: "₺0,35", net: "₺0,3000", toplam: "₺52.941.165", oran: "%52" },
+  { sembol: "MACKO", tarih: "1 Haziran 2026", verim: "% 6,48", brut: "₺2,70", net: "₺2,2950", toplam: "₺270.000.000", oran: "%84" },
 ];
 
 export default function HaziranAyiTemettuTakvimiPage() {
