@@ -7,6 +7,13 @@ export type NewsItem = {
 };
 
 export const newsItems: NewsItem[] = [
+   {
+    id: 993,
+    title: "Türkiye İstatistik Kurumu, 2026 yılı Mart ayı Konut ve İşyeri Satış İstatistiklerini açıkladı.",
+    href: "/haber/haber-993",
+    image: "/haber993.png",
+    alt: "Haber 993 görseli",
+  },
      {
     id: 994,
     title: "TCMB rezervlerinde hızlı toparlanma görüldü.",
@@ -42,11 +49,5 @@ export const newsItems: NewsItem[] = [
     image: "/haber998.png",
     alt: "Fitch, Türkiye’nin kredi notunu “BB-” seviyesinde teyit etti; görünüm “durağan” oldu",
   },
-  {
-    id: 999,
-    title: "Borsada açığa satış yasağı 24 Nisan’a kadar uzatıldı",
-    href: "/haber/haber-999",
-    image: "/haber999.png",
-    alt: "Borsada açığa satış yasağı 24 Nisan’a kadar uzatıldı",
-  },
+  
 ];
