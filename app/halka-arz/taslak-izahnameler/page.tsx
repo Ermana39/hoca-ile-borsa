@@ -268,7 +268,7 @@ function getTaslakListesi() {
 
       return {
         label: gorunenSirket,
-        slug: getSirketKlasorAdi(gorunenSirket),
+        klasor: getSirketKlasorAdi(gorunenSirket),
       };
     })
     .filter((item) => item.label && !kodSatiriMi(item.label));
@@ -309,21 +309,16 @@ export default function TaslakIzahnamelerPage() {
 
         <div className="space-y-3">
           {taslakIzahnameler.map((item, index) => (
-            <div key={`${item.slug}-${index}`} className="space-y-3">
+            <div key={`${item.klasor}-${index}`} className="space-y-3">
               <Link
-                href={`/halka-arz/taslak-izahnameler/${item.slug}`}
+                href={`/halka-arz/taslak-izahnameler/${item.klasor}`}
                 className="block rounded-xl border border-red-200 bg-red-50 px-4 py-4 text-base font-medium text-zinc-900 transition hover:bg-red-100"
               >
                 {item.label}
               </Link>
 
-              {index === firstSplitIndex && (
-                <ReklamAlani variant="yatay" />
-              )}
-
-              {index === secondSplitIndex && (
-                <ReklamAlani variant="yatay" />
-              )}
+              {index === firstSplitIndex && <ReklamAlani variant="yatay" />}
+              {index === secondSplitIndex && <ReklamAlani variant="yatay" />}
             </div>
           ))}
         </div>
