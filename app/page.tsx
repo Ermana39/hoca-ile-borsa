@@ -352,6 +352,7 @@ function FooterLinkColumn({
 
 export default function HomePage() {
   const [newsItems, setNewsItems] = useState<NewsItem[]>([]);
+  const [newsLoading, setNewsLoading] = useState(true);
   const [guncellemeler, setGuncellemeler] = useState<GuncellemeItem[]>([]);
   const [guncellemelerLoading, setGuncellemelerLoading] = useState(true);
 
@@ -390,9 +391,14 @@ export default function HomePage() {
             .sort((a: NewsItem, b: NewsItem) => a.id - b.id);
 
           setNewsItems(normalized);
+        } else {
+          setNewsItems([]);
         }
       } catch (error) {
         console.error("NEWS_LOAD_ERROR:", error);
+        setNewsItems([]);
+      } finally {
+        setNewsLoading(false);
       }
     };
 
@@ -451,7 +457,11 @@ export default function HomePage() {
               </h1>
             </div>
 
-            {newsItems.length > 0 ? (
+            {newsLoading ? (
+              <div className="rounded-2xl border border-zinc-200 bg-white p-6 text-center text-zinc-500">
+                Yükleniyor...
+              </div>
+            ) : newsItems.length > 0 ? (
               <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
                 {newsItems.map((item) => (
                   <HaberKutusu key={item.id || item.href} item={item} />
