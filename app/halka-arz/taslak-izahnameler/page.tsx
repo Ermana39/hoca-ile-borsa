@@ -241,21 +241,15 @@ function slugify(text: string) {
     .replace(/Ö/g, "o")
     .replace(/ç/g, "c")
     .replace(/Ç/g, "c")
-    .replace(/&/g, "ve")
-    .replace(/['".,()]/g, "")
     .replace(/[^a-z0-9\s-]/g, "")
     .replace(/\s+/g, "-")
     .replace(/-+/g, "-")
     .replace(/^-|-$/g, "");
 }
 
-function getSirketSlug(label: string) {
-  const ozelSluglar: Record<string, string> = {
-    "Kutup Yenilenebilir Enerji Üretim A.Ş.":
-      "kutup-yenilenebilir-enerji-uretim-a-s",
-  };
-
-  return ozelSluglar[label] || slugify(label);
+function getSirketKlasorAdi(label: string) {
+  const ilkKelime = label.trim().split(/\s+/)[0] || "";
+  return slugify(ilkKelime);
 }
 
 function getTaslakListesi() {
@@ -274,7 +268,7 @@ function getTaslakListesi() {
 
       return {
         label: gorunenSirket,
-        slug: getSirketSlug(gorunenSirket),
+        slug: getSirketKlasorAdi(gorunenSirket),
       };
     })
     .filter((item) => item.label && !kodSatiriMi(item.label));
