@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
@@ -91,6 +92,23 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        {/* En üst butonlar */}
+        <div className="mb-6 flex flex-wrap gap-3">
+          <Link
+            href="/"
+            className="inline-flex items-center rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 transition hover:bg-zinc-100"
+          >
+            Ana Sayfa
+          </Link>
+
+          <Link
+            href="/halka-arz/taslak-izahnameler"
+            className="inline-flex items-center rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 transition hover:bg-zinc-100"
+          >
+            Geri
+          </Link>
+        </div>
+
         {/* Üst Başlık */}
         <section className="mb-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
           <div className="border-b border-slate-200 bg-gradient-to-r from-indigo-600 to-blue-600 px-6 py-7 text-white">
@@ -120,7 +138,6 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
             </div>
           </div>
 
-          {/* Hızlı Özet */}
           <div className="grid gap-4 p-6 sm:grid-cols-2 xl:grid-cols-3">
             {summaryItems.map((item) => (
               <div
@@ -136,12 +153,10 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
           </div>
         </section>
 
-        {/* Öne Çıkanlar Üstü Reklam */}
         <section className="mb-8">
           <ReklamAlani />
         </section>
 
-        {/* Öne Çıkanlar */}
         <section className="mb-8">
           <div className="mb-4 flex items-center justify-between">
             <h2 className="text-xl font-bold text-slate-900">Öne Çıkan Noktalar</h2>
@@ -161,7 +176,6 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
           </div>
         </section>
 
-        {/* Ana İçerik */}
         <section className="grid gap-8 xl:grid-cols-3">
           <div className="space-y-8 xl:col-span-2">
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -357,12 +371,10 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
           </aside>
         </section>
 
-        {/* Alt Büyük Reklam */}
         <section className="mt-8">
           <ReklamAlani variant="buyuk" />
         </section>
 
-        {/* Alt Açıklama */}
         <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <h2 className="mb-3 text-lg font-bold text-slate-900">
             Kutup Yenilenebilir Enerji Üretim A.Ş. Halka Arz Değerlendirmesi
