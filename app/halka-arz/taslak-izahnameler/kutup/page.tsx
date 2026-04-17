@@ -92,7 +92,6 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        {/* En üst butonlar */}
         <div className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
@@ -109,7 +108,6 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
           </Link>
         </div>
 
-        {/* Üst Başlık */}
         <section className="mb-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
           <div className="border-b border-slate-200 bg-gradient-to-r from-indigo-600 to-blue-600 px-6 py-7 text-white">
             <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
@@ -196,10 +194,6 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
                   </div>
                 ))}
               </div>
-
-              <p className="mt-4 text-xs italic text-slate-500">
-                Kaynak: Taslak İzahname, Sayfa 2
-              </p>
             </section>
 
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -229,10 +223,6 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
                   </div>
                 </div>
               </div>
-
-              <p className="mt-4 text-xs italic text-slate-500">
-                Kaynak: Taslak İzahname, Sayfa 246
-              </p>
             </section>
 
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -278,10 +268,6 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
                   </tbody>
                 </table>
               </div>
-
-              <p className="mt-4 text-xs italic text-slate-500">
-                Kaynak: Taslak İzahname, Sayfa 150
-              </p>
             </section>
 
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -312,10 +298,6 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
                   </div>
                 ))}
               </div>
-
-              <p className="mt-4 text-xs italic text-slate-500">
-                Kaynak: Taslak İzahname, Sayfa 236
-              </p>
             </section>
 
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -350,9 +332,6 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
                 <div className="rounded-2xl border border-blue-200 bg-blue-50 p-4">
                   <div className="text-sm font-semibold text-blue-800">Satmama Taahhüdü</div>
                   <p className="mt-2 text-sm text-blue-900">1 yıl ihraççı, 1 yıl ortaklar.</p>
-                  <p className="mt-2 text-xs italic text-blue-700">
-                    Kaynak: Taslak İzahname, Sayfa 243
-                  </p>
                 </div>
 
                 <div className="rounded-2xl border border-indigo-200 bg-indigo-50 p-4">
@@ -361,9 +340,6 @@ export default function KutupYenilenebilirEnerjiUretimASPage() {
                   </div>
                   <p className="mt-2 text-sm text-indigo-900">
                     5 gün boyunca 4.400.000 adet günlük alım emri girilecek.
-                  </p>
-                  <p className="mt-2 text-xs italic text-indigo-700">
-                    Kaynak: Taslak İzahname, Sayfa 244
                   </p>
                 </div>
               </div>

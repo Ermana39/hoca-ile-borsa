@@ -194,10 +194,6 @@ export default function TurkiyeEmlakKatilimBankasiASPage() {
                   </div>
                 ))}
               </div>
-
-              <p className="mt-4 text-xs italic text-slate-500">
-                Kaynak: Taslak İzahname, Sayfa 1
-              </p>
             </section>
 
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -227,10 +223,6 @@ export default function TurkiyeEmlakKatilimBankasiASPage() {
                   </div>
                 </div>
               </div>
-
-              <p className="mt-4 text-xs italic text-slate-500">
-                Kaynak: Taslak İzahname, Sayfa 330
-              </p>
             </section>
 
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -291,10 +283,6 @@ export default function TurkiyeEmlakKatilimBankasiASPage() {
                   </tbody>
                 </table>
               </div>
-
-              <p className="mt-4 text-xs italic text-slate-500">
-                Kaynak: Taslak İzahname, Sayfa 217
-              </p>
             </section>
 
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -325,10 +313,6 @@ export default function TurkiyeEmlakKatilimBankasiASPage() {
                   </div>
                 ))}
               </div>
-
-              <p className="mt-4 text-xs italic text-slate-500">
-                Kaynak: Taslak İzahname, Sayfa 319
-              </p>
             </section>
 
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -365,9 +349,6 @@ export default function TurkiyeEmlakKatilimBankasiASPage() {
                   <p className="mt-2 text-sm text-blue-900">
                     30 gün, brüt halka arz gelirinin %20'si.
                   </p>
-                  <p className="mt-2 text-xs italic text-blue-700">
-                    Kaynak: Taslak İzahname, Sayfa 327
-                  </p>
                 </div>
 
                 <div className="rounded-2xl border border-indigo-200 bg-indigo-50 p-4">
@@ -375,17 +356,11 @@ export default function TurkiyeEmlakKatilimBankasiASPage() {
                   <p className="mt-2 text-sm text-indigo-900">
                     1 yıl ihraççı, 1 yıl ortaklar.
                   </p>
-                  <p className="mt-2 text-xs italic text-indigo-700">
-                    Kaynak: Taslak İzahname, Sayfa 328
-                  </p>
                 </div>
 
                 <div className="rounded-2xl border border-cyan-200 bg-cyan-50 p-4">
                   <div className="text-sm font-semibold text-cyan-800">Halka Açıklık</div>
                   <p className="mt-2 text-sm text-cyan-900">%10,71</p>
-                  <p className="mt-2 text-xs italic text-cyan-700">
-                    Kaynak: Taslak İzahname, Sayfa 304
-                  </p>
                 </div>
               </div>
             </section>
