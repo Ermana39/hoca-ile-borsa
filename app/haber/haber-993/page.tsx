@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "Borsada açığa satış yasağı 24 Nisan’a kadar uzatıldı",
+    "Türkiye İstatistik Kurumu, 2026 yılı Mart ayı Konut ve İşyeri Satış İstatistiklerini açıkladı.",
   description:
-    "Borsada açığa satış yasağı 24 Nisan’a kadar uzatıldı",
+    "Türkiye İstatistik Kurumu, 2026 yılı Mart ayı Konut ve İşyeri Satış İstatistiklerini açıkladı.",
 };
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
@@ -25,7 +25,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
-export default function Haber999Page() {
+export default function Haber993Page() {
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-4xl">
@@ -48,8 +48,8 @@ export default function Haber999Page() {
         <article className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
-              src="/haber999.png"
-              alt="Borsada açığa satış yasağı 24 Nisan’a kadar uzatıldı"
+              src="/haber993.png"
+              alt="fitch not"
               fill
               unoptimized
               className="object-contain"
@@ -58,14 +58,22 @@ export default function Haber999Page() {
 
           <div className="p-5 md:p-8">
             <h1 className="text-2xl font-bold leading-tight text-zinc-900 md:text-4xl">
-              Borsada açığa satış yasağı 24 Nisan’a kadar uzatıldı
+              Türkiye İstatistik Kurumu, 2026 yılı Mart ayı Konut ve İşyeri Satış İstatistiklerini açıkladı.
             </h1>
 
             <div className="mt-6 space-y-4 text-base leading-8 text-zinc-700 md:text-lg">
-              <p>SSermaye Piyasası Kurulu (SPK), Borsa İstanbul pay piyasalarında uygulanan açığa satış yasağının süresini 24 Nisan 2026 seans sonuna kadar uzattı.
+              <p>
+                Mart 2026’da konut tarafında toplam satışların büyük kısmını ikinci el oluşturdu. 
+İlk el satışlar yıllık bazda sınırlı artarken, ikinci el satışlar geriledi.
+ İpotekli konut satışlarında ise belirgin yükseliş görüldü. 
+Takvim ve mevsim etkilerinden arındırılmış veriler, hem ilk el hem ikinci el konut satışlarında ivme kaybına işaret etti.
               </p>
 
-              <p>Kararla birlikte, kredili işlemlerde öz kaynak oranına ilişkin esnek uygulamanın da aynı tarihe kadar devam edeceği açıklandı. SPK’nın adımı, piyasadaki oynaklığı sınırlamaya yönelik tedbirlerin sürdüğüne işaret etti.</p>
+              <p>Yabancılara konut satışı düşüşünü sürdürdü. 
+Martta yabancılara 1.353 konut satılırken, en fazla satış Rusya, İran ve Almanya vatandaşlarına yapıldı.
+
+İş yeri satışlarında da zayıf görünüm öne çıktı. Hem ilk el hem ikinci el iş yeri satışları yıllık bazda azalırken, ipotekli iş yeri satışları güçlü artış gösterdi. 
+Arındırılmış veriler, iş yeri tarafında da aylık ve yıllık bazda gerilemeye işaret etti.</p>
             </div>
           </div>
         </article>
