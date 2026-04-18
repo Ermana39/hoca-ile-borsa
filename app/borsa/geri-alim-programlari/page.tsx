@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
+import Script from "next/script";
 import * as XLSX from "xlsx";
 
 const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
@@ -236,8 +237,13 @@ function verileriOku(): GeriAlimSatiri[] {
 export default function GeriAlimProgramlariPage() {
   const geriAlimVerileri = verileriOku();
 
+  const tableOuterId = "geri-alim-table-outer";
+  const tableWidthId = "geri-alim-table-width";
+  const bottomScrollId = "geri-alim-bottom-scroll";
+  const bottomContentId = "geri-alim-bottom-content";
+
   return (
-    <main className="min-h-screen bg-white px-4 py-6 md:px-6">
+    <main className="min-h-screen bg-white px-4 py-6 pb-24 md:px-6">
       <div className="mx-auto max-w-7xl">
         <div className="mb-6 flex flex-wrap gap-3">
           <Link
@@ -271,98 +277,111 @@ export default function GeriAlimProgramlariPage() {
         </section>
 
         <section className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
-          <div className="overflow-x-auto">
-            <table className="w-full min-w-[1500px] border-collapse text-sm">
-              <thead className="bg-zinc-100 text-zinc-800">
-                <tr>
-                  <th className="px-4 py-4 text-left font-semibold">Sembol</th>
-                  <th className="px-4 py-4 text-left font-semibold">
-                    YKK Tarihi
-                  </th>
-                  <th className="px-4 py-4 text-right font-semibold">
-                    Geri Alınan Adet
-                  </th>
-                  <th className="px-4 py-4 text-right font-semibold">
-                    Alınacak Adet
-                  </th>
-                  <th className="px-4 py-4 text-right font-semibold">
-                    Ayrılan Fon
-                  </th>
-                  <th className="px-4 py-4 text-right font-semibold">
-                    Geri Alınan Hacim
-                  </th>
-                  <th className="px-4 py-4 text-right font-semibold">
-                    Alınacak Oran
-                  </th>
-                  <th className="px-4 py-4 text-right font-semibold">
-                    Alınan Oran
-                  </th>
-                  <th className="px-4 py-4 text-right font-semibold">
-                    Son Fiyat
-                  </th>
-                  <th className="px-4 py-4 text-right font-semibold">
-                    Alış Ort. Fiyat
-                  </th>
-                  <th className="px-4 py-4 text-left font-semibold">
-                    Son İşlem Tarihi
-                  </th>
-                </tr>
-              </thead>
+          <div id={tableOuterId} className="overflow-x-auto">
+            <div id={tableWidthId} className="min-w-max">
+              <table className="w-full min-w-[1500px] border-collapse text-sm">
+                <thead className="text-zinc-800">
+                  <tr>
+                    <th className="sticky top-0 left-0 z-40 bg-zinc-100 px-4 py-4 text-left font-semibold whitespace-nowrap shadow-[8px_0_12px_-12px_rgba(0,0,0,0.25)]">
+                      Sembol
+                    </th>
+                    <th className="sticky top-0 z-30 bg-zinc-100 px-4 py-4 text-left font-semibold whitespace-nowrap">
+                      YKK Tarihi
+                    </th>
+                    <th className="sticky top-0 z-30 bg-zinc-100 px-4 py-4 text-right font-semibold whitespace-nowrap">
+                      Geri Alınan Adet
+                    </th>
+                    <th className="sticky top-0 z-30 bg-zinc-100 px-4 py-4 text-right font-semibold whitespace-nowrap">
+                      Alınacak Adet
+                    </th>
+                    <th className="sticky top-0 z-30 bg-zinc-100 px-4 py-4 text-right font-semibold whitespace-nowrap">
+                      Ayrılan Fon
+                    </th>
+                    <th className="sticky top-0 z-30 bg-zinc-100 px-4 py-4 text-right font-semibold whitespace-nowrap">
+                      Geri Alınan Hacim
+                    </th>
+                    <th className="sticky top-0 z-30 bg-zinc-100 px-4 py-4 text-right font-semibold whitespace-nowrap">
+                      Alınacak Oran
+                    </th>
+                    <th className="sticky top-0 z-30 bg-zinc-100 px-4 py-4 text-right font-semibold whitespace-nowrap">
+                      Alınan Oran
+                    </th>
+                    <th className="sticky top-0 z-30 bg-zinc-100 px-4 py-4 text-right font-semibold whitespace-nowrap">
+                      Son Fiyat
+                    </th>
+                    <th className="sticky top-0 z-30 bg-zinc-100 px-4 py-4 text-right font-semibold whitespace-nowrap">
+                      Alış Ort. Fiyat
+                    </th>
+                    <th className="sticky top-0 z-30 bg-zinc-100 px-4 py-4 text-left font-semibold whitespace-nowrap">
+                      Son İşlem Tarihi
+                    </th>
+                  </tr>
+                </thead>
 
-              <tbody>
-                {geriAlimVerileri.length > 0 ? (
-                  geriAlimVerileri.map((item, index) => (
-                    <tr
-                      key={`${item.sembol}-${item.ykkTarihi}-${index}`}
-                      className={index % 2 === 0 ? "bg-white" : "bg-sky-50/60"}
-                    >
-                      <td className="px-4 py-3 font-semibold text-zinc-900">
-                        {item.sembol}
-                      </td>
-                      <td className="px-4 py-3 text-zinc-700">
-                        {item.ykkTarihi || "-"}
-                      </td>
-                      <td className="px-4 py-3 text-right text-zinc-700">
-                        {formatNumber(item.geriAlinanAdet, 0)}
-                      </td>
-                      <td className="px-4 py-3 text-right text-zinc-700">
-                        {formatNumber(item.alinacakAdet, 0)}
-                      </td>
-                      <td className="px-4 py-3 text-right text-zinc-700">
-                        {formatNumber(item.ayrilanFon, 0)}
-                      </td>
-                      <td className="px-4 py-3 text-right text-zinc-700">
-                        {formatNumber(item.geriAlinanHacim, 0)}
-                      </td>
-                      <td className="px-4 py-3 text-right text-zinc-700">
-                        {formatPercent(item.alinacakOran)}
-                      </td>
-                      <td className="px-4 py-3 text-right text-zinc-700">
-                        {formatPercent(item.alinanOran)}
-                      </td>
-                      <td className="px-4 py-3 text-right text-zinc-700">
-                        {formatPrice(item.sonFiyat)}
-                      </td>
-                      <td className="px-4 py-3 text-right text-zinc-700">
-                        {formatPrice(item.alisOrtFiyat)}
-                      </td>
-                      <td className="px-4 py-3 text-zinc-700">
-                        {item.sonIslemTarihi || "-"}
+                <tbody>
+                  {geriAlimVerileri.length > 0 ? (
+                    geriAlimVerileri.map((item, index) => {
+                      const satirArkaPlan =
+                        index % 2 === 0 ? "bg-white" : "bg-sky-50/60";
+                      const stickyArkaPlan =
+                        index % 2 === 0 ? "bg-white" : "bg-sky-50/60";
+
+                      return (
+                        <tr
+                          key={`${item.sembol}-${item.ykkTarihi}-${index}`}
+                          className={satirArkaPlan}
+                        >
+                          <td
+                            className={`sticky left-0 z-10 px-4 py-3 font-semibold text-zinc-900 whitespace-nowrap ${stickyArkaPlan} shadow-[8px_0_12px_-12px_rgba(0,0,0,0.25)]`}
+                          >
+                            {item.sembol}
+                          </td>
+                          <td className="px-4 py-3 text-zinc-700 whitespace-nowrap">
+                            {item.ykkTarihi || "-"}
+                          </td>
+                          <td className="px-4 py-3 text-right text-zinc-700 whitespace-nowrap">
+                            {formatNumber(item.geriAlinanAdet, 0)}
+                          </td>
+                          <td className="px-4 py-3 text-right text-zinc-700 whitespace-nowrap">
+                            {formatNumber(item.alinacakAdet, 0)}
+                          </td>
+                          <td className="px-4 py-3 text-right text-zinc-700 whitespace-nowrap">
+                            {formatNumber(item.ayrilanFon, 0)}
+                          </td>
+                          <td className="px-4 py-3 text-right text-zinc-700 whitespace-nowrap">
+                            {formatNumber(item.geriAlinanHacim, 0)}
+                          </td>
+                          <td className="px-4 py-3 text-right text-zinc-700 whitespace-nowrap">
+                            {formatPercent(item.alinacakOran)}
+                          </td>
+                          <td className="px-4 py-3 text-right text-zinc-700 whitespace-nowrap">
+                            {formatPercent(item.alinanOran)}
+                          </td>
+                          <td className="px-4 py-3 text-right text-zinc-700 whitespace-nowrap">
+                            {formatPrice(item.sonFiyat)}
+                          </td>
+                          <td className="px-4 py-3 text-right text-zinc-700 whitespace-nowrap">
+                            {formatPrice(item.alisOrtFiyat)}
+                          </td>
+                          <td className="px-4 py-3 text-zinc-700 whitespace-nowrap">
+                            {item.sonIslemTarihi || "-"}
+                          </td>
+                        </tr>
+                      );
+                    })
+                  ) : (
+                    <tr>
+                      <td
+                        colSpan={11}
+                        className="px-4 py-8 text-center text-sm text-zinc-500"
+                      >
+                        Excel verisi okunamadı.
                       </td>
                     </tr>
-                  ))
-                ) : (
-                  <tr>
-                    <td
-                      colSpan={11}
-                      className="px-4 py-8 text-center text-sm text-zinc-500"
-                    >
-                      Excel verisi okunamadı.
-                    </td>
-                  </tr>
-                )}
-              </tbody>
-            </table>
+                  )}
+                </tbody>
+              </table>
+            </div>
           </div>
         </section>
 
@@ -406,6 +425,64 @@ export default function GeriAlimProgramlariPage() {
           </p>
         </section>
       </div>
+
+      <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-zinc-200 bg-white/95 backdrop-blur">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <div id={bottomScrollId} className="overflow-x-auto">
+            <div id={bottomContentId} className="h-5 min-w-max" />
+          </div>
+        </div>
+      </div>
+
+      <Script id="geri-alim-scroll-sync" strategy="afterInteractive">
+        {`
+          (function () {
+            const outer = document.getElementById("${tableOuterId}");
+            const widthBox = document.getElementById("${tableWidthId}");
+            const bottom = document.getElementById("${bottomScrollId}");
+            const bottomContent = document.getElementById("${bottomContentId}");
+            if (!outer || !widthBox || !bottom || !bottomContent) return;
+
+            let syncingTop = false;
+            let syncingBottom = false;
+
+            function syncWidths() {
+              bottomContent.style.width = widthBox.scrollWidth + "px";
+              bottom.scrollLeft = outer.scrollLeft;
+            }
+
+            function syncFromTop() {
+              if (syncingBottom) {
+                syncingBottom = false;
+                return;
+              }
+              syncingTop = true;
+              bottom.scrollLeft = outer.scrollLeft;
+            }
+
+            function syncFromBottom() {
+              if (syncingTop) {
+                syncingTop = false;
+                return;
+              }
+              syncingBottom = true;
+              outer.scrollLeft = bottom.scrollLeft;
+            }
+
+            outer.addEventListener("scroll", syncFromTop, { passive: true });
+            bottom.addEventListener("scroll", syncFromBottom, { passive: true });
+
+            syncWidths();
+
+            if (typeof ResizeObserver !== "undefined") {
+              const observer = new ResizeObserver(syncWidths);
+              observer.observe(widthBox);
+            }
+
+            window.addEventListener("resize", syncWidths);
+          })();
+        `}
+      </Script>
     </main>
   );
 }
