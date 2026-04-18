@@ -1,4 +1,7 @@
+"use client";
+
 import Link from "next/link";
+import { useMemo, useState } from "react";
 
 const taslakMetin = `Türkiye Emlak Katılım Bankası A.Ş.
 
@@ -417,6 +420,25 @@ function getSirketKlasorAdi(label: string) {
   return slugify(ilkKelime);
 }
 
+function aramaIcinTemizle(text: string) {
+  return text
+    .toLocaleLowerCase("tr")
+    .replace(/ı/g, "i")
+    .replace(/İ/g, "i")
+    .replace(/ğ/g, "g")
+    .replace(/Ğ/g, "g")
+    .replace(/ü/g, "u")
+    .replace(/Ü/g, "u")
+    .replace(/ş/g, "s")
+    .replace(/Ş/g, "s")
+    .replace(/ö/g, "o")
+    .replace(/Ö/g, "o")
+    .replace(/ç/g, "c")
+    .replace(/Ç/g, "c")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
 function getTaslakListesi() {
   return taslakMetin
     .split(/\n\s*\n/)
@@ -440,7 +462,17 @@ function getTaslakListesi() {
 }
 
 export default function TaslakIzahnamelerPage() {
-  const taslakIzahnameler = getTaslakListesi();
+  const [arama, setArama] = useState("");
+  const taslakIzahnameler = useMemo(() => getTaslakListesi(), []);
+  const filtrelenmisIzahnameler = useMemo(() => {
+    const temizArama = aramaIcinTemizle(arama);
+
+    if (!temizArama) return taslakIzahnameler;
+
+    return taslakIzahnameler.filter((item) =>
+      aramaIcinTemizle(item.label).includes(temizArama)
+    );
+  }, [arama, taslakIzahnameler]);
 
   const firstSplitIndex = 24;
   const secondSplitIndex = 48;
@@ -472,20 +504,45 @@ export default function TaslakIzahnamelerPage() {
           Taslak İzahnameler
         </h1>
 
-        <div className="space-y-3">
-          {taslakIzahnameler.map((item, index) => (
-            <div key={`${item.klasor}-${index}`} className="space-y-3">
-              <Link
-                href={`/halka-arz/taslak-izahnameler/${item.klasor}`}
-                className="block rounded-xl border border-red-200 bg-red-50 px-4 py-4 text-base font-medium text-zinc-900 transition hover:bg-red-100"
-              >
-                {item.label}
-              </Link>
+        <section className="mb-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-4 md:p-5">
+          <div className="mb-3 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
+            <h2 className="text-lg font-semibold text-zinc-900">
+              Şirket Ara
+            </h2>
+            <span className="text-sm text-zinc-500">
+              {filtrelenmisIzahnameler.length} sonuç
+            </span>
+          </div>
 
-              {index === firstSplitIndex && <ReklamAlani variant="yatay" />}
-              {index === secondSplitIndex && <ReklamAlani variant="yatay" />}
+          <input
+            type="text"
+            value={arama}
+            onChange={(e) => setArama(e.target.value)}
+            placeholder="Şirket adı yazın..."
+            className="w-full rounded-xl border border-zinc-300 bg-white px-4 py-3 text-sm text-zinc-900 outline-none transition placeholder:text-zinc-400 focus:border-zinc-400"
+          />
+        </section>
+
+        <div className="space-y-3">
+          {filtrelenmisIzahnameler.length > 0 ? (
+            filtrelenmisIzahnameler.map((item, index) => (
+              <div key={`${item.klasor}-${index}`} className="space-y-3">
+                <Link
+                  href={`/halka-arz/taslak-izahnameler/${item.klasor}`}
+                  className="block rounded-xl border border-red-200 bg-red-50 px-4 py-4 text-base font-medium text-zinc-900 transition hover:bg-red-100"
+                >
+                  {item.label}
+                </Link>
+
+                {index === firstSplitIndex && <ReklamAlani variant="yatay" />}
+                {index === secondSplitIndex && <ReklamAlani variant="yatay" />}
+              </div>
+            ))
+          ) : (
+            <div className="rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-8 text-center text-sm text-zinc-500">
+              Aramanıza uygun şirket bulunamadı.
             </div>
-          ))}
+          )}
         </div>
       </div>
     </main>
