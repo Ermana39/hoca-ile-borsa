@@ -1,10 +1,14 @@
+import fs from "node:fs/promises";
+import path from "node:path";
 import Link from "next/link";
+import * as XLSX from "xlsx";
 
-const agustosTemettuleri = [
-  { sembol: "SUWEN", tarih: "31 Ağustos 2026", verim: "% 1,80", brut: "₺0,18", net: "₺0,1518", toplam: "₺99.999.984", oran: "%93" },
-  { sembol: "TURSG", tarih: "27 Ağustos 2026", verim: "% 2,04", brut: "₺0,30", net: "₺0,2550", toplam: "₺3.000.000.000", oran: "%16" },
-  { sembol: "DOAS", tarih: "13 Ağustos 2026", verim: "% 7,86", brut: "₺15,00", net: "₺12,7500", toplam: "₺3.300.000.000", oran: "%56" },
-];
+type SearchParams = {
+  sort?: string;
+  order?: "asc" | "desc";
+};
+
+type RowData = Record<string, string | number | null>;
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
@@ -22,7 +26,149 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
-export default function AgustosAyiTemettuTakvimiPage() {
+function temizHucreDegeri(value: unknown): string | number | null {
+  if (value === undefined || value === null || value === "") return null;
+  if (typeof value === "number") return value;
+  if (typeof value === "string") {
+    const trimmed = value.trim();
+    if (!trimmed) return null;
+    return trimmed;
+  }
+  return String(value);
+}
+
+function sayisalDeger(value: string | number | null): number | null {
+  if (value === null) return null;
+  if (typeof value === "number") return Number.isFinite(value) ? value : null;
+
+  const normalized = value
+    .replace(/\s/g, "")
+    .replace(/₺|\$|€|£|%/g, "")
+    .replace(/\.(?=\d{3}(\D|$))/g, "")
+    .replace(",", ".");
+
+  const parsed = Number(normalized);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+function formatDeger(value: string | number | null) {
+  if (value === null) return "-";
+  if (typeof value === "number") {
+    return new Intl.NumberFormat("tr-TR", {
+      minimumFractionDigits: Number.isInteger(value) ? 0 : 2,
+      maximumFractionDigits: 4,
+    }).format(value);
+  }
+  return value;
+}
+
+function siraliVeri(
+  rows: RowData[],
+  sortKey: string | undefined,
+  order: "asc" | "desc"
+) {
+  if (!sortKey) return rows;
+
+  return [...rows].sort((a, b) => {
+    const aVal = a[sortKey] ?? null;
+    const bVal = b[sortKey] ?? null;
+
+    const aNum = sayisalDeger(aVal);
+    const bNum = sayisalDeger(bVal);
+
+    if (aNum !== null && bNum !== null) {
+      return order === "asc" ? aNum - bNum : bNum - aNum;
+    }
+
+    const aStr = String(aVal ?? "").toLocaleLowerCase("tr");
+    const bStr = String(bVal ?? "").toLocaleLowerCase("tr");
+
+    return order === "asc"
+      ? aStr.localeCompare(bStr, "tr")
+      : bStr.localeCompare(aStr, "tr");
+  });
+}
+
+async function excelVerisiniOku() {
+  const filePath = path.join(
+    process.cwd(),
+    "app",
+    "borsa",
+    "oran-analizi",
+    "data",
+    "oran-analizi.xlsx"
+  );
+
+  const buffer = await fs.readFile(filePath);
+  const workbook = XLSX.read(buffer, { type: "buffer" });
+  const firstSheetName = workbook.SheetNames[0];
+  const sheet = workbook.Sheets[firstSheetName];
+
+  const rawRows = XLSX.utils.sheet_to_json<Record<string, unknown>>(sheet, {
+    defval: null,
+  });
+
+  const columns =
+    rawRows.length > 0
+      ? Object.keys(rawRows[0]).filter((key) => key && key.trim() !== "")
+      : [];
+
+  const rows: RowData[] = rawRows.map((row) => {
+    const normalized: RowData = {};
+    for (const col of columns) {
+      normalized[col] = temizHucreDegeri(row[col]);
+    }
+    return normalized;
+  });
+
+  return { columns, rows };
+}
+
+function SiralamaLinki({
+  label,
+  sortKey,
+  activeSort,
+  activeOrder,
+}: {
+  label: string;
+  sortKey: string;
+  activeSort?: string;
+  activeOrder: "asc" | "desc";
+}) {
+  const isActive = activeSort === sortKey;
+  const nextOrder: "asc" | "desc" =
+    isActive && activeOrder === "asc" ? "desc" : "asc";
+
+  return (
+    <div className="flex items-center justify-between gap-2">
+      <span>{label}</span>
+      <Link
+        href={`/borsa/oran-analizi?sort=${encodeURIComponent(sortKey)}&order=${nextOrder}`}
+        className={`rounded-md px-2 py-1 text-[11px] font-semibold ${
+          isActive
+            ? "bg-emerald-100 text-emerald-700"
+            : "bg-zinc-100 text-zinc-600 hover:bg-zinc-200"
+        }`}
+      >
+        {isActive ? (activeOrder === "asc" ? "Artan" : "Azalan") : "Sırala"}
+      </Link>
+    </div>
+  );
+}
+
+export default async function OranAnaliziPage({
+  searchParams,
+}: {
+  searchParams?: Promise<SearchParams>;
+}) {
+  const resolvedSearchParams = (await searchParams) ?? {};
+  const aktifSort = resolvedSearchParams.sort;
+  const aktifOrder: "asc" | "desc" =
+    resolvedSearchParams.order === "asc" ? "asc" : "desc";
+
+  const { columns, rows } = await excelVerisiniOku();
+  const sortedRows = siraliVeri(rows, aktifSort, aktifOrder);
+
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-7xl">
@@ -35,90 +181,121 @@ export default function AgustosAyiTemettuTakvimiPage() {
           </Link>
 
           <Link
-            href="/temettu"
+            href="/borsa"
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Geri
           </Link>
         </div>
 
+        <h1 className="mb-6 text-3xl font-bold text-zinc-900">Oran Analizi</h1>
+
         <section className="mb-8">
           <ReklamAlani variant="yatay" />
         </section>
 
-        <h1 className="mb-6 text-3xl font-bold text-zinc-900">
-          Ağustos Ayı Temettü Takvimi
-        </h1>
+        <section className="mb-8 rounded-2xl border border-zinc-200 bg-white p-4 md:p-5">
+          <div className="mb-4 flex flex-wrap items-center gap-3">
+            <div className="rounded-xl bg-zinc-100 px-3 py-2 text-sm font-semibold text-zinc-700">
+              Sıralama: {aktifSort ? `${aktifSort} / ${aktifOrder === "asc" ? "Artan" : "Azalan"}` : "Yok"}
+            </div>
 
-        <div className="overflow-x-auto rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
-          <table className="min-w-full overflow-hidden rounded-xl border border-zinc-200 bg-white text-sm">
-            <thead className="bg-green-100 text-zinc-700">
-              <tr>
-                <th className="px-4 py-3 text-left">Sembol</th>
-                <th className="px-4 py-3 text-left">Tarih</th>
-                <th className="px-4 py-3 text-right">Temettü Verim (%)</th>
-                <th className="px-4 py-3 text-right">Hisse Başı Brüt TL</th>
-                <th className="px-4 py-3 text-right">Hisse Başı Net TL</th>
-                <th className="px-4 py-3 text-right">Toplam Temettü (TL)</th>
-                <th className="px-4 py-3 text-right">Dağıtma Oranı (%)</th>
-              </tr>
-            </thead>
-            <tbody>
-              {agustosTemettuleri.map((item, index) => (
-                <tr
-                  key={`${item.sembol}-${item.tarih}`}
-                  className={`border-t border-zinc-100 ${index % 2 === 1 ? "bg-sky-50" : "bg-white"}`}
-                >
-                  <td className="px-4 py-3 font-semibold text-zinc-900">{item.sembol}</td>
-                  <td className="px-4 py-3 text-zinc-700">{item.tarih}</td>
-                  <td className="px-4 py-3 text-right text-zinc-700">{item.verim}</td>
-                  <td className="px-4 py-3 text-right font-semibold text-zinc-900">{item.brut}</td>
-                  <td className="px-4 py-3 text-right font-semibold text-zinc-900">{item.net}</td>
-                  <td className="px-4 py-3 text-right text-zinc-700">{item.toplam}</td>
-                  <td className="px-4 py-3 text-right text-zinc-700">{item.oran}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
+            {(aktifSort || resolvedSearchParams.order) && (
+              <Link
+                href="/borsa/oran-analizi"
+                className="rounded-xl border border-zinc-300 bg-white px-3 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
+              >
+                Sıralamayı Temizle
+              </Link>
+            )}
+          </div>
 
-        <section className="mt-8">
+          <div className="overflow-hidden rounded-2xl border border-zinc-200">
+            <div className="sticky top-0 z-10 border-b border-zinc-200 bg-zinc-50 px-4 py-3 text-sm text-zinc-600">
+              Başlıklardaki butonlarla sütunları artan veya azalan şekilde sıralayabilirsiniz.
+            </div>
+
+            <div className="overflow-x-auto">
+              <table className="min-w-[1200px] w-full bg-white text-sm">
+                <thead className="bg-zinc-100 text-zinc-700">
+                  <tr>
+                    {columns.map((column) => (
+                      <th
+                        key={column}
+                        className="border-b border-zinc-200 px-4 py-3 text-left font-bold whitespace-nowrap"
+                      >
+                        <SiralamaLinki
+                          label={column}
+                          sortKey={column}
+                          activeSort={aktifSort}
+                          activeOrder={aktifOrder}
+                        />
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+
+                <tbody>
+                  {sortedRows.map((row, rowIndex) => (
+                    <tr
+                      key={`row-${rowIndex}`}
+                      className={rowIndex % 2 === 1 ? "bg-sky-50" : "bg-white"}
+                    >
+                      {columns.map((column) => (
+                        <td
+                          key={`${rowIndex}-${column}`}
+                          className="border-b border-zinc-100 px-4 py-3 whitespace-nowrap text-zinc-700"
+                        >
+                          {formatDeger(row[column] ?? null)}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="sticky bottom-0 overflow-x-auto border-t border-zinc-200 bg-zinc-50">
+              <div className="h-6 min-w-[1200px]" />
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-8">
           <ReklamAlani variant="icerik" />
         </section>
 
-        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
+        <section className="rounded-2xl border border-zinc-200 bg-white p-6">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">
-            Ağustos Ayı Temettü Takvimi Hakkında
+            Oran Analizi Hakkında
           </h2>
 
           <p className="mb-4 leading-7 text-zinc-700">
-            Ağustos ayı temettü takvimi sayfası, Borsa İstanbul’da işlem gören şirketlerin
-            Ağustos 2026 dönemindeki temettü dağıtım tarihlerini, hisse başına brüt ve net
-            temettü ödemelerini ve toplam dağıtım tutarlarını takip etmek isteyen yatırımcılar
-            için hazırlanmıştır. Bu sayfa sayesinde temettü veren hisseleri tek tabloda
-            inceleyebilir ve ödeme detaylarını tarih bazlı olarak karşılaştırabilirsiniz.
+            Oran analizi sayfası, Borsa İstanbul&apos;da işlem gören şirketlerin finansal
+            verilerini daha hızlı karşılaştırmak isteyen yatırımcılar için hazırlanmıştır.
+            Bu sayfada şirketlerin değerleme, kârlılık, borçluluk, likidite ve faaliyet
+            verimliliği gibi temel oranlarını tek tablo üzerinde inceleyebilirsiniz.
           </p>
 
           <p className="mb-4 leading-7 text-zinc-700">
-            Temettü yatırımı yapan kullanıcılar için dağıtım tarihi, temettü verimi, hisse
-            başına net ödeme ve şirketlerin dağıtma oranı oldukça önemlidir. Özellikle düzenli
-            kâr payı ödeyen şirketler uzun vadeli yatırımcıların radarında yer alırken, yüksek
-            temettü verimi sunan hisseler de temettü odaklı portföy oluşturan yatırımcılar
-            tarafından yakından takip edilmektedir.
+            Finansal oranlar, şirketlerin bilanço ve gelir tablosu performansını sayısal
+            olarak değerlendirmek için en çok kullanılan analiz araçları arasında yer alır.
+            Özellikle F/K, PD/DD, cari oran, net kâr marjı, özsermaye kârlılığı ve benzeri
+            göstergeler şirket karşılaştırmalarında yatırımcılara önemli bir bakış açısı sağlar.
           </p>
 
           <p className="mb-4 leading-7 text-zinc-700">
-            Sayfada yer alan Ağustos 2026 temettü takvimi verileri sayesinde hangi şirketin hangi
-            tarihte temettü vereceğini, hisse başına ne kadar brüt ve net ödeme yapacağını ve
-            toplam temettü büyüklüğünü kolayca görebilirsiniz. Bu yapı, hem temettü emekliliği
-            hedefleyen yatırımcılar hem de şirket bazlı kâr dağıtım takibi yapan kullanıcılar
-            için pratik bir referans sunar.
+            Sayfada yer alan oran analizi tablosu sayesinde sütunları artan veya azalan
+            şekilde sıralayabilir, farklı şirketleri aynı ekranda karşılaştırabilir ve
+            dikkat çeken finansal görünümleri daha hızlı tespit edebilirsiniz. Bu yapı hem
+            temel analiz yapan kullanıcılar hem de hisse seçim sürecinde finansal filtreleri
+            kullanan yatırımcılar için pratik bir takip ekranı sunar.
           </p>
 
           <p className="leading-7 text-zinc-700">
-            Güncel Ağustos ayı temettü takvimi, BIST temettü veren hisseler, hisse başı brüt ve
-            net temettü tutarları, dağıtma oranları ve şirket bazlı kâr payı ödemelerini takip
-            etmek için bu sayfayı düzenli olarak inceleyebilirsiniz.
+            Güncel oran analizi verileri, BIST şirket karşılaştırmaları, temel analiz
+            metrikleri, finansal oranlar ve şirket bazlı değerleme göstergeleri için bu
+            sayfayı düzenli olarak takip edebilirsiniz.
           </p>
         </section>
       </div>
