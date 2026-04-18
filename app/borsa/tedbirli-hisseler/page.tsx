@@ -25,6 +25,13 @@ type TedbirRow = {
   veriYayini: string;
 };
 
+type ColumnDef = {
+  key: keyof TedbirRow;
+  label: string;
+  width: string;
+  align: "left" | "right";
+};
+
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
     variant === "icerik"
@@ -170,18 +177,18 @@ function verileriOku(): TedbirRow[] {
   }
 }
 
-const columns = [
-  { key: "sembol", label: "Sembol", width: "min-w-[130px]", align: "left" as const },
-  { key: "fiyat", label: "Fiyat", width: "min-w-[110px]", align: "left" as const },
-  { key: "degisim", label: "Değişim %", width: "min-w-[130px]", align: "left" as const },
-  { key: "baslangicTarihi", label: "Başlangıç Tarihi", width: "min-w-[160px]", align: "left" as const },
-  { key: "bitisTarihi", label: "Bitiş Tarihi", width: "min-w-[140px]", align: "left" as const },
-  { key: "brutTakas", label: "Brüt Takas", width: "min-w-[130px]", align: "left" as const },
-  { key: "acigaSatis", label: "Açığa Satış", width: "min-w-[140px]", align: "left" as const },
-  { key: "krediliIslem", label: "Kredili İşlem", width: "min-w-[150px]", align: "left" as const },
-  { key: "piyasaEmri", label: "Piyasa Emri", width: "min-w-[130px]", align: "left" as const },
-  { key: "emirIptalAzaltma", label: "Emir İptal / Azaltma", width: "min-w-[180px]", align: "left" as const },
-  { key: "veriYayini", label: "Veri Yayını", width: "min-w-[130px]", align: "left" as const },
+const columns: ColumnDef[] = [
+  { key: "sembol", label: "Sembol", width: "min-w-[130px]", align: "left" },
+  { key: "fiyat", label: "Fiyat", width: "min-w-[110px]", align: "left" },
+  { key: "degisim", label: "Değişim %", width: "min-w-[130px]", align: "left" },
+  { key: "baslangicTarihi", label: "Başlangıç Tarihi", width: "min-w-[160px]", align: "left" },
+  { key: "bitisTarihi", label: "Bitiş Tarihi", width: "min-w-[140px]", align: "left" },
+  { key: "brutTakas", label: "Brüt Takas", width: "min-w-[130px]", align: "left" },
+  { key: "acigaSatis", label: "Açığa Satış", width: "min-w-[140px]", align: "left" },
+  { key: "krediliIslem", label: "Kredili İşlem", width: "min-w-[150px]", align: "left" },
+  { key: "piyasaEmri", label: "Piyasa Emri", width: "min-w-[130px]", align: "left" },
+  { key: "emirIptalAzaltma", label: "Emir İptal / Azaltma", width: "min-w-[180px]", align: "left" },
+  { key: "veriYayini", label: "Veri Yayını", width: "min-w-[130px]", align: "left" },
 ];
 
 export default function TedbirliHisselerPage() {
