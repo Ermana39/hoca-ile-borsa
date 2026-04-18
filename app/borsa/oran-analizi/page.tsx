@@ -340,6 +340,21 @@ export default async function OranAnaliziPage() {
             }
 
             window.addEventListener("resize", syncWidths);
+
+            const thead = outer.querySelector("thead");
+            if (thead) {
+              const handleScroll = () => {
+                const rect = outer.getBoundingClientRect();
+                if (rect.top <= 0) {
+                  thead.style.transform = "translateY(" + Math.abs(rect.top) + "px)";
+                } else {
+                  thead.style.transform = "translateY(0px)";
+                }
+              };
+
+              window.addEventListener("scroll", handleScroll, { passive: true });
+              handleScroll();
+            }
           })();
         `}
       </Script>
