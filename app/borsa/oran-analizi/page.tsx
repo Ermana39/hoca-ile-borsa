@@ -174,8 +174,8 @@ export default async function OranAnaliziPage() {
         </section>
 
         <section className="py-6">
-          <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
-            <div id={tableOuterId} className="overflow-x-auto">
+          <div className="rounded-2xl border border-zinc-200 bg-white">
+            <div id={tableOuterId} className="overflow-x-auto rounded-2xl">
               <div id={tableWidthId} className="min-w-max">
                 <table className="w-full border-collapse text-sm">
                   <thead className="text-zinc-700">
