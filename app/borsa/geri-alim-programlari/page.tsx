@@ -234,12 +234,28 @@ function verileriOku(): GeriAlimSatiri[] {
   }
 }
 
+const columns = [
+  { key: "sembol", label: "Sembol", align: "left" as const, width: "min-w-[140px]" },
+  { key: "ykkTarihi", label: "YKK Tarihi", align: "left" as const, width: "min-w-[160px]" },
+  { key: "geriAlinanAdet", label: "Geri Alınan Adet", align: "right" as const, width: "min-w-[170px]" },
+  { key: "alinacakAdet", label: "Alınacak Adet", align: "right" as const, width: "min-w-[160px]" },
+  { key: "ayrilanFon", label: "Ayrılan Fon", align: "right" as const, width: "min-w-[170px]" },
+  { key: "geriAlinanHacim", label: "Geri Alınan Hacim", align: "right" as const, width: "min-w-[180px]" },
+  { key: "alinacakOran", label: "Alınacak Oran", align: "right" as const, width: "min-w-[150px]" },
+  { key: "alinanOran", label: "Alınan Oran", align: "right" as const, width: "min-w-[150px]" },
+  { key: "sonFiyat", label: "Son Fiyat", align: "right" as const, width: "min-w-[130px]" },
+  { key: "alisOrtFiyat", label: "Alış Ort. Fiyat", align: "right" as const, width: "min-w-[150px]" },
+  { key: "sonIslemTarihi", label: "Son İşlem Tarihi", align: "left" as const, width: "min-w-[170px]" },
+];
+
 export default function GeriAlimProgramlariPage() {
   const geriAlimVerileri = verileriOku();
 
-  const tableOuterId = "geri-alim-table-outer";
-  const tableWidthId = "geri-alim-table-width";
+  const headerScrollId = "geri-alim-header-scroll";
+  const bodyScrollId = "geri-alim-body-scroll";
   const bottomScrollId = "geri-alim-bottom-scroll";
+  const headerWidthId = "geri-alim-header-width";
+  const bodyWidthId = "geri-alim-body-width";
   const bottomContentId = "geri-alim-bottom-content";
 
   return (
@@ -276,48 +292,37 @@ export default function GeriAlimProgramlariPage() {
           <ReklamAlani variant="yatay" />
         </section>
 
-        <section className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
-          <div id={tableOuterId} className="overflow-x-auto">
-            <div id={tableWidthId} className="min-w-max">
-              <table className="w-full min-w-[1500px] border-collapse text-sm">
-                <thead className="text-zinc-800">
-                  <tr>
-                    <th className="sticky top-0 left-0 z-40 bg-zinc-100 px-4 py-4 text-left font-semibold whitespace-nowrap shadow-[8px_0_12px_-12px_rgba(0,0,0,0.25)]">
-                      Sembol
-                    </th>
-                    <th className="sticky top-0 z-30 bg-zinc-100 px-4 py-4 text-left font-semibold whitespace-nowrap">
-                      YKK Tarihi
-                    </th>
-                    <th className="sticky top-0 z-30 bg-zinc-100 px-4 py-4 text-right font-semibold whitespace-nowrap">
-                      Geri Alınan Adet
-                    </th>
-                    <th className="sticky top-0 z-30 bg-zinc-100 px-4 py-4 text-right font-semibold whitespace-nowrap">
-                      Alınacak Adet
-                    </th>
-                    <th className="sticky top-0 z-30 bg-zinc-100 px-4 py-4 text-right font-semibold whitespace-nowrap">
-                      Ayrılan Fon
-                    </th>
-                    <th className="sticky top-0 z-30 bg-zinc-100 px-4 py-4 text-right font-semibold whitespace-nowrap">
-                      Geri Alınan Hacim
-                    </th>
-                    <th className="sticky top-0 z-30 bg-zinc-100 px-4 py-4 text-right font-semibold whitespace-nowrap">
-                      Alınacak Oran
-                    </th>
-                    <th className="sticky top-0 z-30 bg-zinc-100 px-4 py-4 text-right font-semibold whitespace-nowrap">
-                      Alınan Oran
-                    </th>
-                    <th className="sticky top-0 z-30 bg-zinc-100 px-4 py-4 text-right font-semibold whitespace-nowrap">
-                      Son Fiyat
-                    </th>
-                    <th className="sticky top-0 z-30 bg-zinc-100 px-4 py-4 text-right font-semibold whitespace-nowrap">
-                      Alış Ort. Fiyat
-                    </th>
-                    <th className="sticky top-0 z-30 bg-zinc-100 px-4 py-4 text-left font-semibold whitespace-nowrap">
-                      Son İşlem Tarihi
-                    </th>
-                  </tr>
-                </thead>
+        <section className="rounded-2xl border border-zinc-200 bg-white">
+          <div className="sticky top-0 z-30 border-b border-zinc-200 bg-white">
+            <div id={headerScrollId} className="overflow-x-auto">
+              <div id={headerWidthId} className="min-w-max">
+                <table className="w-full min-w-[1500px] border-collapse text-sm">
+                  <thead className="bg-zinc-100 text-zinc-800">
+                    <tr>
+                      {columns.map((column, index) => (
+                        <th
+                          key={column.key}
+                          className={`${column.width} px-4 py-4 font-semibold whitespace-nowrap ${
+                            column.align === "right" ? "text-right" : "text-left"
+                          } ${
+                            index === 0
+                              ? "sticky left-0 z-40 bg-zinc-100 shadow-[8px_0_12px_-12px_rgba(0,0,0,0.25)]"
+                              : ""
+                          }`}
+                        >
+                          {column.label}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+            </div>
+          </div>
 
+          <div id={bodyScrollId} className="overflow-x-auto rounded-b-2xl">
+            <div id={bodyWidthId} className="min-w-max">
+              <table className="w-full min-w-[1500px] border-collapse text-sm">
                 <tbody>
                   {geriAlimVerileri.length > 0 ? (
                     geriAlimVerileri.map((item, index) => {
@@ -332,38 +337,38 @@ export default function GeriAlimProgramlariPage() {
                           className={satirArkaPlan}
                         >
                           <td
-                            className={`sticky left-0 z-10 px-4 py-3 font-semibold text-zinc-900 whitespace-nowrap ${stickyArkaPlan} shadow-[8px_0_12px_-12px_rgba(0,0,0,0.25)]`}
+                            className={`min-w-[140px] px-4 py-3 font-semibold text-zinc-900 whitespace-nowrap sticky left-0 z-10 ${stickyArkaPlan} shadow-[8px_0_12px_-12px_rgba(0,0,0,0.25)]`}
                           >
                             {item.sembol}
                           </td>
-                          <td className="px-4 py-3 text-zinc-700 whitespace-nowrap">
+                          <td className="min-w-[160px] px-4 py-3 text-zinc-700 whitespace-nowrap">
                             {item.ykkTarihi || "-"}
                           </td>
-                          <td className="px-4 py-3 text-right text-zinc-700 whitespace-nowrap">
+                          <td className="min-w-[170px] px-4 py-3 text-right text-zinc-700 whitespace-nowrap">
                             {formatNumber(item.geriAlinanAdet, 0)}
                           </td>
-                          <td className="px-4 py-3 text-right text-zinc-700 whitespace-nowrap">
+                          <td className="min-w-[160px] px-4 py-3 text-right text-zinc-700 whitespace-nowrap">
                             {formatNumber(item.alinacakAdet, 0)}
                           </td>
-                          <td className="px-4 py-3 text-right text-zinc-700 whitespace-nowrap">
+                          <td className="min-w-[170px] px-4 py-3 text-right text-zinc-700 whitespace-nowrap">
                             {formatNumber(item.ayrilanFon, 0)}
                           </td>
-                          <td className="px-4 py-3 text-right text-zinc-700 whitespace-nowrap">
+                          <td className="min-w-[180px] px-4 py-3 text-right text-zinc-700 whitespace-nowrap">
                             {formatNumber(item.geriAlinanHacim, 0)}
                           </td>
-                          <td className="px-4 py-3 text-right text-zinc-700 whitespace-nowrap">
+                          <td className="min-w-[150px] px-4 py-3 text-right text-zinc-700 whitespace-nowrap">
                             {formatPercent(item.alinacakOran)}
                           </td>
-                          <td className="px-4 py-3 text-right text-zinc-700 whitespace-nowrap">
+                          <td className="min-w-[150px] px-4 py-3 text-right text-zinc-700 whitespace-nowrap">
                             {formatPercent(item.alinanOran)}
                           </td>
-                          <td className="px-4 py-3 text-right text-zinc-700 whitespace-nowrap">
+                          <td className="min-w-[130px] px-4 py-3 text-right text-zinc-700 whitespace-nowrap">
                             {formatPrice(item.sonFiyat)}
                           </td>
-                          <td className="px-4 py-3 text-right text-zinc-700 whitespace-nowrap">
+                          <td className="min-w-[150px] px-4 py-3 text-right text-zinc-700 whitespace-nowrap">
                             {formatPrice(item.alisOrtFiyat)}
                           </td>
-                          <td className="px-4 py-3 text-zinc-700 whitespace-nowrap">
+                          <td className="min-w-[170px] px-4 py-3 text-zinc-700 whitespace-nowrap">
                             {item.sonIslemTarihi || "-"}
                           </td>
                         </tr>
@@ -437,46 +442,69 @@ export default function GeriAlimProgramlariPage() {
       <Script id="geri-alim-scroll-sync" strategy="afterInteractive">
         {`
           (function () {
-            const outer = document.getElementById("${tableOuterId}");
-            const widthBox = document.getElementById("${tableWidthId}");
+            const header = document.getElementById("${headerScrollId}");
+            const body = document.getElementById("${bodyScrollId}");
+            const headerWidth = document.getElementById("${headerWidthId}");
+            const bodyWidth = document.getElementById("${bodyWidthId}");
             const bottom = document.getElementById("${bottomScrollId}");
             const bottomContent = document.getElementById("${bottomContentId}");
-            if (!outer || !widthBox || !bottom || !bottomContent) return;
 
-            let syncingTop = false;
+            if (!header || !body || !headerWidth || !bodyWidth || !bottom || !bottomContent) return;
+
+            let syncingHeader = false;
+            let syncingBody = false;
             let syncingBottom = false;
 
-            function syncWidths() {
-              bottomContent.style.width = widthBox.scrollWidth + "px";
-              bottom.scrollLeft = outer.scrollLeft;
+            function maxWidth() {
+              return Math.max(headerWidth.scrollWidth, bodyWidth.scrollWidth);
             }
 
-            function syncFromTop() {
-              if (syncingBottom) {
+            function syncWidths() {
+              const width = maxWidth();
+              bottomContent.style.width = width + "px";
+              header.scrollLeft = body.scrollLeft;
+              bottom.scrollLeft = body.scrollLeft;
+            }
+
+            header.addEventListener("scroll", function () {
+              if (syncingBody || syncingBottom) {
+                syncingBody = false;
                 syncingBottom = false;
                 return;
               }
-              syncingTop = true;
-              bottom.scrollLeft = outer.scrollLeft;
-            }
+              syncingHeader = true;
+              body.scrollLeft = header.scrollLeft;
+              bottom.scrollLeft = header.scrollLeft;
+            }, { passive: true });
 
-            function syncFromBottom() {
-              if (syncingTop) {
-                syncingTop = false;
+            body.addEventListener("scroll", function () {
+              if (syncingHeader || syncingBottom) {
+                syncingHeader = false;
+                syncingBottom = false;
+                return;
+              }
+              syncingBody = true;
+              header.scrollLeft = body.scrollLeft;
+              bottom.scrollLeft = body.scrollLeft;
+            }, { passive: true });
+
+            bottom.addEventListener("scroll", function () {
+              if (syncingHeader || syncingBody) {
+                syncingHeader = false;
+                syncingBody = false;
                 return;
               }
               syncingBottom = true;
-              outer.scrollLeft = bottom.scrollLeft;
-            }
-
-            outer.addEventListener("scroll", syncFromTop, { passive: true });
-            bottom.addEventListener("scroll", syncFromBottom, { passive: true });
+              header.scrollLeft = bottom.scrollLeft;
+              body.scrollLeft = bottom.scrollLeft;
+            }, { passive: true });
 
             syncWidths();
 
             if (typeof ResizeObserver !== "undefined") {
               const observer = new ResizeObserver(syncWidths);
-              observer.observe(widthBox);
+              observer.observe(headerWidth);
+              observer.observe(bodyWidth);
             }
 
             window.addEventListener("resize", syncWidths);
