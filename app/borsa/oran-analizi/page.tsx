@@ -178,15 +178,15 @@ export default async function OranAnaliziPage() {
             <div id={tableOuterId} className="overflow-x-auto">
               <div id={tableWidthId} className="min-w-max">
                 <table className="w-full border-collapse text-sm">
-                  <thead className="bg-zinc-100 text-zinc-700">
+                  <thead className="text-zinc-700">
                     <tr>
                       {columns.map((column, columnIndex) => (
                         <th
                           key={column}
-                          className={`border-b border-zinc-200 px-4 py-3 text-left font-bold whitespace-nowrap ${
+                          className={`border-b border-zinc-200 px-4 py-3 text-left font-bold whitespace-nowrap sticky top-0 z-30 ${
                             columnIndex === 0
-                              ? "sticky left-0 z-20 bg-zinc-100 shadow-[8px_0_12px_-12px_rgba(0,0,0,0.25)]"
-                              : ""
+                              ? "left-0 z-40 bg-zinc-100 shadow-[8px_0_12px_-12px_rgba(0,0,0,0.25)]"
+                              : "bg-zinc-100"
                           }`}
                         >
                           {column}
@@ -201,7 +201,9 @@ export default async function OranAnaliziPage() {
 
                       if (rowType === "sector_header") {
                         const sektorAdi = String(
-                          columns.map((column) => row[column]).find((value) => value !== null && value !== "") ?? ""
+                          columns
+                            .map((column) => row[column])
+                            .find((value) => value !== null && value !== "") ?? ""
                         );
 
                         return (
