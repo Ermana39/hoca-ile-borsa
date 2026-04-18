@@ -251,6 +251,8 @@ const columns = [
 export default function GeriAlimProgramlariPage() {
   const geriAlimVerileri = verileriOku();
 
+  const headerScrollId = "geri-alim-header-scroll";
+  const headerWidthId = "geri-alim-header-width";
   const bodyScrollId = "geri-alim-body-scroll";
   const bodyWidthId = "geri-alim-body-width";
   const bottomScrollId = "geri-alim-bottom-scroll";
@@ -291,28 +293,40 @@ export default function GeriAlimProgramlariPage() {
         </section>
 
         <section className="rounded-2xl border border-zinc-200 bg-white">
-          <div className="overflow-x-auto rounded-2xl" id={bodyScrollId}>
+          <div className="sticky top-0 z-30 rounded-t-2xl border-b border-zinc-200 bg-white">
+            <div
+              id={headerScrollId}
+              className="overflow-x-auto [&::-webkit-scrollbar]:hidden"
+              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            >
+              <div id={headerWidthId} className="min-w-max">
+                <table className="w-full min-w-[1500px] border-collapse text-sm">
+                  <thead className="bg-zinc-100 text-zinc-800">
+                    <tr>
+                      {columns.map((column, index) => (
+                        <th
+                          key={column.key}
+                          className={`${column.width} px-4 py-4 font-semibold whitespace-nowrap ${
+                            column.align === "right" ? "text-right" : "text-left"
+                          } ${
+                            index === 0
+                              ? "sticky left-0 z-40 bg-zinc-100 shadow-[8px_0_12px_-12px_rgba(0,0,0,0.25)]"
+                              : ""
+                          }`}
+                        >
+                          {column.label}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div id={bodyScrollId} className="overflow-x-auto rounded-b-2xl">
             <div id={bodyWidthId} className="min-w-max">
               <table className="w-full min-w-[1500px] border-collapse text-sm">
-                <thead className="bg-zinc-100 text-zinc-800">
-                  <tr>
-                    {columns.map((column, index) => (
-                      <th
-                        key={column.key}
-                        className={`${column.width} px-4 py-4 font-semibold whitespace-nowrap ${
-                          column.align === "right" ? "text-right" : "text-left"
-                        } sticky top-0 z-30 ${
-                          index === 0
-                            ? "left-0 z-40 bg-zinc-100 shadow-[8px_0_12px_-12px_rgba(0,0,0,0.25)]"
-                            : "bg-zinc-100"
-                        }`}
-                      >
-                        {column.label}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
-
                 <tbody>
                   {geriAlimVerileri.length > 0 ? (
                     geriAlimVerileri.map((item, index) => {
@@ -432,36 +446,51 @@ export default function GeriAlimProgramlariPage() {
       <Script id="geri-alim-scroll-sync" strategy="afterInteractive">
         {`
           (function () {
+            const header = document.getElementById("${headerScrollId}");
+            const headerWidth = document.getElementById("${headerWidthId}");
             const body = document.getElementById("${bodyScrollId}");
             const bodyWidth = document.getElementById("${bodyWidthId}");
             const bottom = document.getElementById("${bottomScrollId}");
             const bottomContent = document.getElementById("${bottomContentId}");
 
-            if (!body || !bodyWidth || !bottom || !bottomContent) return;
+            if (!header || !headerWidth || !body || !bodyWidth || !bottom || !bottomContent) return;
 
-            let syncingBody = false;
-            let syncingBottom = false;
+            let source = "";
 
             function syncWidths() {
-              bottomContent.style.width = bodyWidth.scrollWidth + "px";
+              const width = Math.max(headerWidth.scrollWidth, bodyWidth.scrollWidth);
+              bottomContent.style.width = width + "px";
+              header.scrollLeft = body.scrollLeft;
               bottom.scrollLeft = body.scrollLeft;
             }
 
-            body.addEventListener("scroll", function () {
-              if (syncingBottom) {
-                syncingBottom = false;
+            header.addEventListener("scroll", function () {
+              if (source === "body" || source === "bottom") {
+                source = "";
                 return;
               }
-              syncingBody = true;
+              source = "header";
+              body.scrollLeft = header.scrollLeft;
+              bottom.scrollLeft = header.scrollLeft;
+            }, { passive: true });
+
+            body.addEventListener("scroll", function () {
+              if (source === "header" || source === "bottom") {
+                source = "";
+                return;
+              }
+              source = "body";
+              header.scrollLeft = body.scrollLeft;
               bottom.scrollLeft = body.scrollLeft;
             }, { passive: true });
 
             bottom.addEventListener("scroll", function () {
-              if (syncingBody) {
-                syncingBody = false;
+              if (source === "header" || source === "body") {
+                source = "";
                 return;
               }
-              syncingBottom = true;
+              source = "bottom";
+              header.scrollLeft = bottom.scrollLeft;
               body.scrollLeft = bottom.scrollLeft;
             }, { passive: true });
 
@@ -469,6 +498,7 @@ export default function GeriAlimProgramlariPage() {
 
             if (typeof ResizeObserver !== "undefined") {
               const observer = new ResizeObserver(syncWidths);
+              observer.observe(headerWidth);
               observer.observe(bodyWidth);
             }
 
