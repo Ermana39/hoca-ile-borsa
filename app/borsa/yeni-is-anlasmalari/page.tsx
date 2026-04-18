@@ -229,15 +229,25 @@ export default function YeniIsAnlasmalariPage() {
             <table className="min-w-full overflow-hidden rounded-xl border border-zinc-200 bg-white text-sm">
               <thead className="bg-zinc-100 text-zinc-700">
                 <tr>
-                  <th className="px-4 py-3 text-left">Sembol</th>
-                  <th className="px-4 py-3 text-left">Tarih</th>
-                  <th className="px-4 py-3 text-right">
+                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-left">
+                    Sembol
+                  </th>
+                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-left">
+                    Tarih
+                  </th>
+                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-right">
                     Yeni İş İlişkisi Tutarı
                   </th>
-                  <th className="px-4 py-3 text-left">Para Birimi</th>
-                  <th className="px-4 py-3 text-left">Bilanço Dönemi</th>
-                  <th className="px-4 py-3 text-right">Yıllık Satışlar</th>
-                  <th className="px-4 py-3 text-right">
+                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-left">
+                    Para Birimi
+                  </th>
+                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-left">
+                    Bilanço Dönemi
+                  </th>
+                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-right">
+                    Yıllık Satışlar
+                  </th>
+                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-right">
                     Yeni İş İlişkisi / Yıllık Satışlar
                   </th>
                 </tr>
