@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
+import Script from "next/script";
 import * as XLSX from "xlsx";
 
 const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
@@ -169,8 +170,27 @@ function verileriOku(): TedbirRow[] {
   }
 }
 
+const columns = [
+  { key: "sembol", label: "Sembol", width: "min-w-[130px]", align: "left" as const },
+  { key: "fiyat", label: "Fiyat", width: "min-w-[110px]", align: "left" as const },
+  { key: "degisim", label: "Değişim %", width: "min-w-[130px]", align: "left" as const },
+  { key: "baslangicTarihi", label: "Başlangıç Tarihi", width: "min-w-[160px]", align: "left" as const },
+  { key: "bitisTarihi", label: "Bitiş Tarihi", width: "min-w-[140px]", align: "left" as const },
+  { key: "brutTakas", label: "Brüt Takas", width: "min-w-[130px]", align: "left" as const },
+  { key: "acigaSatis", label: "Açığa Satış", width: "min-w-[140px]", align: "left" as const },
+  { key: "krediliIslem", label: "Kredili İşlem", width: "min-w-[150px]", align: "left" as const },
+  { key: "piyasaEmri", label: "Piyasa Emri", width: "min-w-[130px]", align: "left" as const },
+  { key: "emirIptalAzaltma", label: "Emir İptal / Azaltma", width: "min-w-[180px]", align: "left" as const },
+  { key: "veriYayini", label: "Veri Yayını", width: "min-w-[130px]", align: "left" as const },
+];
+
 export default function TedbirliHisselerPage() {
   const tedbirVerileri = verileriOku();
+
+  const headerScrollId = "tedbir-header-scroll";
+  const headerWidthId = "tedbir-header-width";
+  const bodyScrollId = "tedbir-body-scroll";
+  const bodyWidthId = "tedbir-body-width";
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -204,83 +224,98 @@ export default function TedbirliHisselerPage() {
           <ReklamAlani variant="yatay" />
         </section>
 
-        <div className="overflow-x-auto rounded-2xl border border-zinc-200 bg-white">
-          <table className="min-w-[1400px] w-full border-collapse text-sm">
-            <thead className="bg-zinc-100 text-zinc-800">
-              <tr>
-                <th className="border-b border-zinc-200 px-4 py-4 text-left font-semibold">Sembol</th>
-                <th className="border-b border-zinc-200 px-4 py-4 text-left font-semibold">Fiyat</th>
-                <th className="border-b border-zinc-200 px-4 py-4 text-left font-semibold">Değişim %</th>
-                <th className="border-b border-zinc-200 px-4 py-4 text-left font-semibold">Başlangıç Tarihi</th>
-                <th className="border-b border-zinc-200 px-4 py-4 text-left font-semibold">Bitiş Tarihi</th>
-                <th className="border-b border-zinc-200 px-4 py-4 text-left font-semibold">Brüt Takas</th>
-                <th className="border-b border-zinc-200 px-4 py-4 text-left font-semibold">Açığa Satış</th>
-                <th className="border-b border-zinc-200 px-4 py-4 text-left font-semibold">Kredili İşlem</th>
-                <th className="border-b border-zinc-200 px-4 py-4 text-left font-semibold">Piyasa Emri</th>
-                <th className="border-b border-zinc-200 px-4 py-4 text-left font-semibold">Emir İptal / Azaltma</th>
-                <th className="border-b border-zinc-200 px-4 py-4 text-left font-semibold">Veri Yayını</th>
-              </tr>
-            </thead>
+        <div className="rounded-2xl border border-zinc-200 bg-white">
+          <div className="sticky top-0 z-30 overflow-hidden rounded-t-2xl border-b border-zinc-200 bg-white">
+            <div
+              id={headerScrollId}
+              className="overflow-x-auto [&::-webkit-scrollbar]:hidden"
+              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            >
+              <div id={headerWidthId} className="min-w-max">
+                <table className="min-w-[1400px] w-full border-collapse text-sm">
+                  <thead className="bg-zinc-100 text-zinc-800">
+                    <tr>
+                      {columns.map((column) => (
+                        <th
+                          key={column.key}
+                          className={`${column.width} border-b border-zinc-200 px-4 py-4 font-semibold ${
+                            column.align === "right" ? "text-right" : "text-left"
+                          }`}
+                        >
+                          {column.label}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+            </div>
+          </div>
 
-            <tbody>
-              {tedbirVerileri.length > 0 ? (
-                tedbirVerileri.map((item, index) => (
-                  <tr
-                    key={`${item.sembol}-${index}`}
-                    className={index % 2 === 0 ? "bg-white" : "bg-sky-50"}
-                  >
-                    <td className="border-b border-zinc-100 px-4 py-4 font-semibold text-zinc-900">
-                      {item.sembol}
-                    </td>
-                    <td className="border-b border-zinc-100 px-4 py-4 text-zinc-700">
-                      {formatNumber(item.fiyat)}
-                    </td>
-                    <td
-                      className={`border-b border-zinc-100 px-4 py-4 font-medium ${
-                        (item.degisim ?? 0) > 0
-                          ? "text-green-600"
-                          : (item.degisim ?? 0) < 0
-                          ? "text-red-600"
-                          : "text-zinc-700"
-                      }`}
-                    >
-                      {item.degisim === null ? "-" : `%${formatNumber(item.degisim)}`}
-                    </td>
-                    <td className="border-b border-zinc-100 px-4 py-4 text-zinc-700">
-                      {item.baslangicTarihi || "-"}
-                    </td>
-                    <td className="border-b border-zinc-100 px-4 py-4 text-zinc-700">
-                      {item.bitisTarihi || "-"}
-                    </td>
-                    <td className="border-b border-zinc-100 px-4 py-4 text-zinc-700">
-                      {item.brutTakas}
-                    </td>
-                    <td className="border-b border-zinc-100 px-4 py-4 text-zinc-700">
-                      {item.acigaSatis}
-                    </td>
-                    <td className="border-b border-zinc-100 px-4 py-4 text-zinc-700">
-                      {item.krediliIslem}
-                    </td>
-                    <td className="border-b border-zinc-100 px-4 py-4 text-zinc-700">
-                      {item.piyasaEmri}
-                    </td>
-                    <td className="border-b border-zinc-100 px-4 py-4 text-zinc-700">
-                      {item.emirIptalAzaltma}
-                    </td>
-                    <td className="border-b border-zinc-100 px-4 py-4 text-zinc-700">
-                      {item.veriYayini}
-                    </td>
-                  </tr>
-                ))
-              ) : (
-                <tr>
-                  <td colSpan={11} className="px-4 py-8 text-center text-sm text-zinc-500">
-                    Excel verisi okunamadı.
-                  </td>
-                </tr>
-              )}
-            </tbody>
-          </table>
+          <div id={bodyScrollId} className="overflow-x-auto rounded-b-2xl">
+            <div id={bodyWidthId} className="min-w-max">
+              <table className="min-w-[1400px] w-full border-collapse text-sm">
+                <tbody>
+                  {tedbirVerileri.length > 0 ? (
+                    tedbirVerileri.map((item, index) => (
+                      <tr
+                        key={`${item.sembol}-${index}`}
+                        className={index % 2 === 0 ? "bg-white" : "bg-sky-50"}
+                      >
+                        <td className="min-w-[130px] border-b border-zinc-100 px-4 py-4 font-semibold text-zinc-900">
+                          {item.sembol}
+                        </td>
+                        <td className="min-w-[110px] border-b border-zinc-100 px-4 py-4 text-zinc-700">
+                          {formatNumber(item.fiyat)}
+                        </td>
+                        <td
+                          className={`min-w-[130px] border-b border-zinc-100 px-4 py-4 font-medium ${
+                            (item.degisim ?? 0) > 0
+                              ? "text-green-600"
+                              : (item.degisim ?? 0) < 0
+                              ? "text-red-600"
+                              : "text-zinc-700"
+                          }`}
+                        >
+                          {item.degisim === null ? "-" : `%${formatNumber(item.degisim)}`}
+                        </td>
+                        <td className="min-w-[160px] border-b border-zinc-100 px-4 py-4 text-zinc-700">
+                          {item.baslangicTarihi || "-"}
+                        </td>
+                        <td className="min-w-[140px] border-b border-zinc-100 px-4 py-4 text-zinc-700">
+                          {item.bitisTarihi || "-"}
+                        </td>
+                        <td className="min-w-[130px] border-b border-zinc-100 px-4 py-4 text-zinc-700">
+                          {item.brutTakas}
+                        </td>
+                        <td className="min-w-[140px] border-b border-zinc-100 px-4 py-4 text-zinc-700">
+                          {item.acigaSatis}
+                        </td>
+                        <td className="min-w-[150px] border-b border-zinc-100 px-4 py-4 text-zinc-700">
+                          {item.krediliIslem}
+                        </td>
+                        <td className="min-w-[130px] border-b border-zinc-100 px-4 py-4 text-zinc-700">
+                          {item.piyasaEmri}
+                        </td>
+                        <td className="min-w-[180px] border-b border-zinc-100 px-4 py-4 text-zinc-700">
+                          {item.emirIptalAzaltma}
+                        </td>
+                        <td className="min-w-[130px] border-b border-zinc-100 px-4 py-4 text-zinc-700">
+                          {item.veriYayini}
+                        </td>
+                      </tr>
+                    ))
+                  ) : (
+                    <tr>
+                      <td colSpan={11} className="px-4 py-8 text-center text-sm text-zinc-500">
+                        Excel verisi okunamadı.
+                      </td>
+                    </tr>
+                  )}
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
 
         <section className="mt-8">
@@ -323,6 +358,64 @@ export default function TedbirliHisselerPage() {
           </p>
         </section>
       </div>
+
+      <Script id="tedbir-header-scroll-sync" strategy="afterInteractive">
+        {`
+          (function () {
+            const header = document.getElementById("${headerScrollId}");
+            const headerWidth = document.getElementById("${headerWidthId}");
+            const body = document.getElementById("${bodyScrollId}");
+            const bodyWidth = document.getElementById("${bodyWidthId}");
+
+            if (!header || !headerWidth || !body || !bodyWidth) return;
+
+            let source = "";
+
+            function syncWidths() {
+              const width = Math.max(headerWidth.scrollWidth, bodyWidth.scrollWidth);
+              headerWidth.style.width = width + "px";
+              bodyWidth.style.width = width + "px";
+              header.scrollLeft = body.scrollLeft;
+            }
+
+            header.addEventListener(
+              "scroll",
+              function () {
+                if (source === "body") {
+                  source = "";
+                  return;
+                }
+                source = "header";
+                body.scrollLeft = header.scrollLeft;
+              },
+              { passive: true }
+            );
+
+            body.addEventListener(
+              "scroll",
+              function () {
+                if (source === "header") {
+                  source = "";
+                  return;
+                }
+                source = "body";
+                header.scrollLeft = body.scrollLeft;
+              },
+              { passive: true }
+            );
+
+            syncWidths();
+
+            if (typeof ResizeObserver !== "undefined") {
+              const observer = new ResizeObserver(syncWidths);
+              observer.observe(headerWidth);
+              observer.observe(bodyWidth);
+            }
+
+            window.addEventListener("resize", syncWidths);
+          })();
+        `}
+      </Script>
     </main>
   );
 }
