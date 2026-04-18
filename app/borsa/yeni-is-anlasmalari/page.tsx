@@ -224,30 +224,20 @@ export default function YeniIsAnlasmalariPage() {
           <ReklamAlani variant="yatay" />
         </section>
 
-        <section className="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
+        <section className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
           <div className="overflow-x-auto">
-            <table className="min-w-full overflow-hidden rounded-xl border border-zinc-200 bg-white text-sm">
-              <thead className="bg-zinc-100 text-zinc-700">
+            <table className="min-w-full rounded-xl border border-zinc-200 bg-white text-sm">
+              <thead className="sticky top-0 z-20 bg-zinc-100 text-zinc-700">
                 <tr>
-                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-left">
-                    Sembol
-                  </th>
-                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-left">
-                    Tarih
-                  </th>
-                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-right">
+                  <th className="px-4 py-3 text-left bg-zinc-100">Sembol</th>
+                  <th className="px-4 py-3 text-left bg-zinc-100">Tarih</th>
+                  <th className="px-4 py-3 text-right bg-zinc-100">
                     Yeni İş İlişkisi Tutarı
                   </th>
-                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-left">
-                    Para Birimi
-                  </th>
-                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-left">
-                    Bilanço Dönemi
-                  </th>
-                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-right">
-                    Yıllık Satışlar
-                  </th>
-                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-right">
+                  <th className="px-4 py-3 text-left bg-zinc-100">Para Birimi</th>
+                  <th className="px-4 py-3 text-left bg-zinc-100">Bilanço Dönemi</th>
+                  <th className="px-4 py-3 text-right bg-zinc-100">Yıllık Satışlar</th>
+                  <th className="px-4 py-3 text-right bg-zinc-100">
                     Yeni İş İlişkisi / Yıllık Satışlar
                   </th>
                 </tr>
