@@ -50,11 +50,11 @@ export default function Formasyon1Page() {
         <article className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
           <header>
             <h1 className="text-2xl font-bold leading-tight text-zinc-900 md:text-4xl">
-              BIOEN Düşen Genişleyen Takoz Formasyonu
+              AKCNS Yükselen bayrak formasyonu
             </h1>
 
             <p className="mt-3 text-sm leading-7 text-zinc-600 md:text-base">
-              BIOEN teknik görünümüne dair kısa değerlendirme.
+              AKCNS Yükselen bayrak formasyonu değerlendirme
             </p>
           </header>
 
@@ -79,7 +79,7 @@ export default function Formasyon1Page() {
           <section className="pt-6">
             <div className="rounded-2xl bg-zinc-50 p-4 md:p-6">
               <p className="whitespace-pre-line text-base leading-8 text-zinc-700 md:text-lg">
-                {`#BIOEN
+                {`#AKCNS
 
 İlgili hissede yükselen bayrak formasyonu görünümü izlenmektedir. Formasyonun yukarı yönlü teyidini koruması halinde teknik olarak 230 TL seviyesi ara hedef, 265 TL seviyesi ise ana hedef olarak takip edilebilir.
 Ancak bu görünüm yalnızca teknik formasyon çerçevesinde bir olasılık senaryosunu ifade eder.
