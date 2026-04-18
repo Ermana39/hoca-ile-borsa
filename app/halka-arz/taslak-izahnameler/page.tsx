@@ -100,10 +100,6 @@ Selectum Gayrimenkul Yatırım Ortaklığı A.Ş.
 
 Taksim Holding A.Ş.
 
-Mpg Makine Prodüksiyon Grubu Makine İmalat San. ve Tic. A.Ş.
-
-İdç Liman İşletmeleri A.Ş.
-
 Gümüşoğlu Tekstil San. ve Tic. A.Ş.
 
 Naturel Holding A.Ş.
@@ -194,7 +190,183 @@ Polifarma İlaç San. ve Tic. A.Ş.
 
 Efg Elektrik Enerji A.Ş.
 
-Eti Elektrometalurji A.Ş.`;
+Eti Elektrometalurji A.Ş.
+
+Büyük Hekimoğulları Gıda San. ve Tic.A.Ş.
+
+Deniz Eko Enerji ve Geri Dönüşüm A.Ş.
+
+Fcr Gayrimenkul Yatırım Ortaklığı A.Ş.
+
+Fide Konserve Gıda San. A.Ş.
+
+Biem İlaç San. ve Tic. A.Ş.
+
+İntetra Teknoloji ve Bilişim Hizmetleri A.Ş.
+
+Zebrano Mobilya Teknolojileri A.Ş.
+
+Hür Çelik Sanayi ve Dış Tic. A.Ş.
+
+Makel Elektrik Malzemeleri San. ve Tic. A.Ş.
+
+İhlas Girişim Sermayesi Yatırım Ortaklığı A.Ş.
+
+Dbe Elektrik Mühendislik Proje ve Danışmanlık A.Ş.
+
+Nmt Lojistik A.Ş.
+
+Milk Academy Süt Ürünleri San. ve Tic. A.Ş.
+
+Aksam Otogong İç ve Dış Tic. A.Ş.
+
+Anadolu Mikronize Kimya San. ve Tic. A.Ş.
+
+Kisan İnşaat Mühendislik San. ve Tic. A.Ş.
+
+Pürsan Pigment Ürünleri San. ve Tic. A.Ş.
+
+Club Jolly Turizm ve Tic. A.Ş.
+
+Türker Vangölü Enerji Yatırım A.Ş.
+
+Kale Jet Motorları Sanayi A.Ş.
+
+Haver Farma İlaç A.Ş.
+
+Teknika Plast Teknik Kalıp Plastik San. ve Tic. A.Ş.
+
+Çitlekçi Mağazacılık Gıda A.Ş.
+
+Altun Gıda A.Ş.
+
+Ekiciler Süt Gıda Tarım Hayvancılık San. ve Tic. A.Ş.
+
+Aksa Elektrik Perakende Satış A.Ş.
+
+Karesi Polyester ve Petrokimya Sanayi A.Ş.
+
+Saytek Medikal ve Plastik San. Tic. A.Ş.
+
+Özpet Plastik Global San. Tic. A.Ş.
+
+Bewen Enerji A.Ş.
+
+Cevher Jant Sanayii A.Ş.
+
+Masfen Enerji A.Ş.
+
+Kapeks Kimya Sanayi A.Ş.
+
+Metgün Enerji Yatırımları A.Ş.
+
+Toros Tarım San. ve Tic. A.Ş.
+
+Albayrak Hazır Beton San. ve Tic. A.Ş.
+
+Hakan Faydasıçok Çelik A.Ş.
+
+Pakun Üretim Gıda San. ve Tic. A.Ş.
+
+Beta Enerji ve Teknoloji A.Ş.
+
+İsvea Seramik ve Banyo Ürünleri Sanayi A.Ş.
+
+Şa-Ra Enerji İnşaat Tic. ve San. A.Ş.
+
+Quick Sigorta A.Ş.
+
+Elin Elektrik İnşaat Müşavirlik Proje Taahhüt Tic. ve San. A.Ş.
+
+Kardemir Çelik Sanayi A.Ş.
+
+X Koren Elektrik A.Ş.
+
+Ekinciler Demir ve Çelik Sanayi A.Ş.
+
+Soho Giyim ve Enerji A.Ş.
+
+Yeşil Global Enerji A.Ş.
+
+Saat ve Saat San. ve Tic. A.Ş.
+
+Orzaks İlaç ve Kimya San. Tic. A.Ş.
+
+Eston Yapı A.Ş.
+
+Flo Mağazacılık ve Pazarlama A.Ş.
+
+Enerjeo Kemaliye Enerji Üretim A.Ş.
+
+Allbatross Girişim Sermayesi Yatırım Ortaklığı A.Ş.
+
+Uçak Tekstil Turizm İthalat İhracat San. ve Tic. A.Ş.
+
+Alcas Metal Sanayi A.Ş.
+
+Golda Gıda San. ve Tic. A.Ş.
+
+Kırlıoğlu Kimya San. ve Tic. A.Ş.
+
+Soybaş Demir Çelik San. ve Tic. A.Ş.
+
+Acacia Maden İşletmeleri A.Ş.
+
+Gdz Elektrik Dağıtım A.Ş.
+
+Çimko Çimento ve Beton San. Tic. A.Ş.
+
+Teknik Yapı Teknik Yapılar San. ve Tic. A.Ş.
+
+Birleşim Yeşil Enerji A.Ş.
+
+Uras Kimya San. ve Tic. A.Ş.
+
+(Intercity) Ekim Turizm Tic. ve San. A.Ş.
+
+Zen Girişim Sermayesi Yatırım Ortaklığı A.Ş.
+
+Narlı Feribot İşletmeciliği A.Ş.
+
+(enterprise) Yes Oto Kiralama ve Turizm Yatırımları A.Ş.
+
+Arkopa Ahşap Panel Sanayi A.Ş.
+
+Multınet Kurumsal Hizmetler A.Ş.
+
+Mega Teks Tekstil Ürünleri İmalat San. ve Tic. A.Ş.
+
+Uslu Çsm Demir Çelik A.Ş.
+
+(Penti) Penca Tekstil Çorap San. ve Tic. A.Ş.
+
+Gama Recycle Sürdürülebilir Teknolojiler A.Ş.
+
+Akçelik Demir Çelik San. ve Tic. A.Ş.
+
+Techmine Girişim Sermayesi Yatırım Ortaklığı A.Ş.
+
+Tavuk Dünyası Gıda San. ve Tic. A.Ş.
+
+Kızılay İçecek San. ve Tic. A.Ş.
+
+Smm Tekstil A.Ş.
+
+Hdm Çelik Boru San. ve Tic. A.Ş.
+
+Çavuşoğlu Demir Çelik Geri Dönüşüm San. Tic. A.Ş.
+
+Tezkim Tarımsal Kimya San. ve Tic. A.Ş.
+
+Kaymet Metal İmalat San. ve Tic. A.Ş.
+
+Mikro Yazılımevi Yazılım Hizmetleri Bilgisayar San. ve Tic. A.Ş.
+
+Sümer Faktoring A.Ş.
+
+Omega Elektrik Pano A.Ş.
+
+OutMedya İletişim A.Ş.`;
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
