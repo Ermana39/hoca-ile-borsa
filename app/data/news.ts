@@ -8,6 +8,13 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
    {
+    id: 992,
+    title: "S&P Türkiye'nin kredi notunu teyit etti",
+    href: "/haber/haber-992",
+    image: "/haber993.png",
+    alt: "Haber 992 görseli",
+  },
+   {
     id: 993,
     title: "Türkiye İstatistik Kurumu, 2026 yılı Mart ayı Konut ve İşyeri Satış İstatistiklerini açıkladı.",
     href: "/haber/haber-993",
