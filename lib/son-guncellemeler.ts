@@ -100,4 +100,9 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
     href: "/mevduat-kredi-faizleri",
     updatedAt: "17.04.2026 09:13",
   },
+   {
+    title: "Oran Analizi",
+    href: "/borsa/oran-analizi",
+    updatedAt: "18.04.2026 21:30",
+  },
 ];

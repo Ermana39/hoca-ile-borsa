@@ -293,7 +293,7 @@ export default function GeriAlimProgramlariPage() {
         </section>
 
         <section className="rounded-2xl border border-zinc-200 bg-white">
-          <div className="sticky top-0 z-30 border-b border-zinc-200 bg-white">
+          <div className="sticky top-0 z-30 overflow-hidden rounded-t-2xl border-b border-zinc-200 bg-white">
             <div id={headerScrollId} className="overflow-x-auto">
               <div id={headerWidthId} className="min-w-max">
                 <table className="w-full min-w-[1500px] border-collapse text-sm">
