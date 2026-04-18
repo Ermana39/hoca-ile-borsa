@@ -7,10 +7,9 @@ import * as XLSX from "xlsx";
 export const metadata = {
   title: "Oran Analizi | Hoca İle Borsa",
   description:
-    "Borsa İstanbul şirketlerini finansal oran verilerine göre artan ve azalan şekilde sıralayarak karşılaştırın.",
+    "Borsa İstanbul şirketlerini finansal oran verilerine göre karşılaştırın.",
 };
 
-type SearchParamValue = string | string[] | undefined;
 type RowData = Record<string, string | number | null>;
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
@@ -29,13 +28,10 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
-function getParam(value: SearchParamValue) {
-  return Array.isArray(value) ? value[0] : value;
-}
-
 function temizHucre(value: unknown): string | number | null {
   if (value === null || value === undefined || value === "") return null;
   if (typeof value === "number") return value;
+
   const metin = String(value).trim();
   return metin === "" ? null : metin;
 }
@@ -67,73 +63,18 @@ function formatValue(value: string | number | null) {
   return value;
 }
 
-function getSektorAdi(row: RowData, columns: string[]) {
+function isSektorSatiri(row: RowData, columns: string[]) {
   const doluHucreler = columns
     .map((column) => row[column])
     .filter((value) => value !== null && value !== "");
 
-  if (doluHucreler.length !== 1) return null;
+  if (doluHucreler.length <= 1) return true;
 
-  const ilkDeger = String(doluHucreler[0] ?? "").trim();
-  if (!ilkDeger) return null;
-  if (parseNumeric(ilkDeger) !== null) return null;
+  const ilkDeger = String(row[columns[0]] ?? "").trim();
+  if (!ilkDeger) return false;
 
-  return ilkDeger;
-}
-
-function sortRows(
-  rows: RowData[],
-  sortKey: string | undefined,
-  dir: "asc" | "desc",
-  columns: string[]
-) {
-  if (!sortKey) return rows;
-
-  const sektorSatirlari: { index: number; row: RowData }[] = [];
-  const normalSatirlar: RowData[] = [];
-
-  rows.forEach((row, index) => {
-    if (getSektorAdi(row, columns)) {
-      sektorSatirlari.push({ index, row });
-    } else {
-      normalSatirlar.push(row);
-    }
-  });
-
-  const sortedNormalRows = [...normalSatirlar].sort((a, b) => {
-    const aVal = a[sortKey] ?? null;
-    const bVal = b[sortKey] ?? null;
-
-    const aNum = parseNumeric(aVal);
-    const bNum = parseNumeric(bVal);
-
-    if (aNum !== null && bNum !== null) {
-      return dir === "asc" ? aNum - bNum : bNum - aNum;
-    }
-
-    const aStr = String(aVal ?? "").toLocaleLowerCase("tr");
-    const bStr = String(bVal ?? "").toLocaleLowerCase("tr");
-
-    return dir === "asc"
-      ? aStr.localeCompare(bStr, "tr")
-      : bStr.localeCompare(aStr, "tr");
-  });
-
-  const result: RowData[] = [];
-  let normalIndex = 0;
-  let sektorIndex = 0;
-
-  for (let i = 0; i < rows.length; i += 1) {
-    if (sektorIndex < sektorSatirlari.length && sektorSatirlari[sektorIndex].index === i) {
-      result.push(sektorSatirlari[sektorIndex].row);
-      sektorIndex += 1;
-    } else {
-      result.push(sortedNormalRows[normalIndex]);
-      normalIndex += 1;
-    }
-  }
-
-  return result;
+  const ilkDegerSayisal = parseNumeric(ilkDeger);
+  return ilkDegerSayisal === null && doluHucreler.length <= 2;
 }
 
 async function getExcelData() {
@@ -146,7 +87,11 @@ async function getExcelData() {
     "oran-analizi.xlsx"
   );
 
-  const buffer = await fs.readFile(filePath);
+  const [buffer, stat] = await Promise.all([
+    fs.readFile(filePath),
+    fs.stat(filePath),
+  ]);
+
   const workbook = XLSX.read(buffer, { type: "buffer" });
   const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
 
@@ -159,62 +104,27 @@ async function getExcelData() {
       ? Object.keys(rawRows[0]).filter((item) => item && item.trim() !== "")
       : [];
 
-  const rows: RowData[] = rawRows.map((row) => {
-    const normalized: RowData = {};
-    for (const column of columns) {
-      normalized[column] = temizHucre(row[column]);
-    }
-    return normalized;
-  });
+  const rows: RowData[] = rawRows
+    .map((row) => {
+      const normalized: RowData = {};
+      for (const column of columns) {
+        normalized[column] = temizHucre(row[column]);
+      }
+      return normalized;
+    })
+    .filter((row) => !isSektorSatiri(row, columns));
 
-  return { columns, rows };
+  const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+  }).format(stat.mtime);
+
+  return { columns, rows, guncellemeTarihi };
 }
 
-function HeaderSortLink({
-  basePath,
-  column,
-  activeSort,
-  activeDir,
-}: {
-  basePath: string;
-  column: string;
-  activeSort?: string;
-  activeDir: "asc" | "desc";
-}) {
-  const isActive = activeSort === column;
-  const nextDir: "asc" | "desc" =
-    isActive && activeDir === "desc" ? "asc" : "desc";
-
-  return (
-    <Link
-      href={`${basePath}?sort=${encodeURIComponent(column)}&dir=${nextDir}`}
-      className={`flex w-full items-center justify-between gap-2 rounded-lg px-1 py-1 text-left transition ${
-        isActive ? "text-emerald-700" : "text-zinc-700 hover:text-zinc-900"
-      }`}
-    >
-      <span>{column}</span>
-      <span
-        className={`text-xs font-semibold ${
-          isActive ? "text-emerald-700" : "text-zinc-500"
-        }`}
-      >
-        {isActive ? (activeDir === "asc" ? "▲" : "▼") : "↕"}
-      </span>
-    </Link>
-  );
-}
-
-export default async function OranAnaliziPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ sort?: SearchParamValue; dir?: SearchParamValue }>;
-}) {
-  const params = await searchParams;
-  const aktifSort = getParam(params.sort);
-  const aktifDir = getParam(params.dir) === "asc" ? "asc" : "desc";
-
-  const { columns, rows } = await getExcelData();
-  const sortedRows = sortRows(rows, aktifSort, aktifDir, columns);
+export default async function OranAnaliziPage() {
+  const { columns, rows, guncellemeTarihi } = await getExcelData();
 
   const tableOuterId = "oran-analizi-table-outer";
   const tableWidthId = "oran-analizi-table-width";
@@ -222,7 +132,7 @@ export default async function OranAnaliziPage({
   const bottomContentId = "oran-analizi-bottom-content";
 
   return (
-    <main className="min-h-screen bg-white px-4 py-6 md:px-6">
+    <main className="min-h-screen bg-white px-4 py-6 pb-24 md:px-6">
       <div className="mx-auto max-w-7xl">
         <div className="mb-6 flex gap-3">
           <Link
@@ -247,9 +157,13 @@ export default async function OranAnaliziPage({
 
           <p className="mt-3 max-w-4xl text-sm leading-7 text-zinc-600 md:text-base">
             Oran analizi sayfası üzerinden şirketlerin finansal oran verilerini
-            toplu şekilde inceleyebilir, sütun başlıklarına tıklayarak verileri
-            artan ve azalan olarak sıralayabilirsiniz.
+            toplu şekilde inceleyebilir ve farklı şirketleri daha hızlı
+            karşılaştırabilirsiniz.
           </p>
+
+          <div className="mt-4 text-sm font-semibold text-zinc-700">
+            Güncelleme Tarihi: {guncellemeTarihi}
+          </div>
         </section>
 
         <section className="pt-6">
@@ -258,10 +172,6 @@ export default async function OranAnaliziPage({
 
         <section className="py-6">
           <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
-            <div className="border-b border-zinc-200 bg-zinc-50 px-4 py-3 text-sm text-zinc-600">
-              Sütun başlıklarına tıklayarak tabloyu sıralayabilirsiniz.
-            </div>
-
             <div id={tableOuterId} className="overflow-x-auto">
               <div id={tableWidthId} className="min-w-max">
                 <table className="w-full border-collapse text-sm">
@@ -272,58 +182,30 @@ export default async function OranAnaliziPage({
                           key={column}
                           className="border-b border-zinc-200 px-4 py-3 text-left font-bold whitespace-nowrap"
                         >
-                          <HeaderSortLink
-                            basePath="/borsa/oran-analizi"
-                            column={column}
-                            activeSort={aktifSort}
-                            activeDir={aktifDir}
-                          />
+                          {column}
                         </th>
                       ))}
                     </tr>
                   </thead>
 
                   <tbody>
-                    {sortedRows.map((row, index) => {
-                      const sektorAdi = getSektorAdi(row, columns);
-
-                      if (sektorAdi) {
-                        return (
-                          <tr key={`row-${index}`} className="bg-red-50">
-                            <td
-                              colSpan={columns.length}
-                              className="border-b border-red-100 px-4 py-3 font-semibold text-red-700 whitespace-nowrap"
-                            >
-                              {sektorAdi}
-                            </td>
-                          </tr>
-                        );
-                      }
-
-                      return (
-                        <tr
-                          key={`row-${index}`}
-                          className={index % 2 === 1 ? "bg-sky-50" : "bg-white"}
-                        >
-                          {columns.map((column) => (
-                            <td
-                              key={`${index}-${column}`}
-                              className="border-b border-zinc-100 px-4 py-3 whitespace-nowrap text-zinc-700"
-                            >
-                              {formatValue(row[column] ?? null)}
-                            </td>
-                          ))}
-                        </tr>
-                      );
-                    })}
+                    {rows.map((row, index) => (
+                      <tr
+                        key={`row-${index}`}
+                        className={index % 2 === 1 ? "bg-sky-50" : "bg-white"}
+                      >
+                        {columns.map((column) => (
+                          <td
+                            key={`${index}-${column}`}
+                            className="border-b border-zinc-100 px-4 py-3 whitespace-nowrap text-zinc-700"
+                          >
+                            {formatValue(row[column] ?? null)}
+                          </td>
+                        ))}
+                      </tr>
+                    ))}
                   </tbody>
                 </table>
-              </div>
-            </div>
-
-            <div className="sticky bottom-0 z-20 border-t border-zinc-200 bg-white">
-              <div id={bottomScrollId} className="overflow-x-auto">
-                <div id={bottomContentId} className="h-5 min-w-max" />
               </div>
             </div>
           </div>
@@ -355,19 +237,27 @@ export default async function OranAnaliziPage({
           </p>
 
           <p className="mb-4 leading-7 text-zinc-700">
-            Sayfada yer alan oran analizi tablosu sayesinde sütunları artan veya
-            azalan şekilde sıralayabilir, şirketleri aynı ekranda karşılaştırabilir
-            ve dikkat çeken finansal görünümleri daha hızlı fark edebilirsiniz.
-            Açık kırmızı ile gösterilen sektör satırları ise tablo içinde bölümleri
-            daha kolay ayırt etmenize yardımcı olur.
+            Sayfada yer alan oran analizi tablosu sayesinde şirketleri aynı
+            ekranda karşılaştırabilir ve dikkat çeken finansal görünümleri daha
+            hızlı fark edebilirsiniz. Bu yapı hem temel analiz yapan kullanıcılar
+            hem de hisse seçim sürecinde finansal filtreleri kullanan yatırımcılar
+            için pratik bir takip ekranı sunar.
           </p>
 
           <p className="leading-7 text-zinc-700">
             Güncel oran analizi verileri, BIST şirket karşılaştırmaları, temel
-            analiz metrikleri, finansal oranlar ve sektör bazlı şirket değerlendirmeleri
-            için bu sayfayı düzenli olarak takip edebilirsiniz.
+            analiz metrikleri, finansal oranlar ve şirket bazlı değerleme
+            göstergeleri için bu sayfayı düzenli olarak takip edebilirsiniz.
           </p>
         </section>
+      </div>
+
+      <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-zinc-200 bg-white/95 backdrop-blur">
+        <div className="mx-auto max-w-7xl px-4 md:px-6">
+          <div id={bottomScrollId} className="overflow-x-auto">
+            <div id={bottomContentId} className="h-5 min-w-max" />
+          </div>
+        </div>
       </div>
 
       <Script id="oran-analizi-scroll-sync" strategy="afterInteractive">
