@@ -416,6 +416,14 @@ function slugify(text: string) {
 }
 
 function getSirketKlasorAdi(label: string) {
+  const ozelKlasorler: Record<string, string> = {
+    "Başakkent Girişim Sermayesi Yatırım Ortaklığı A.Ş.": "basakkentgsyo",
+  };
+
+  if (ozelKlasorler[label]) {
+    return ozelKlasorler[label];
+  }
+
   const ilkKelime = label.trim().split(/\s+/)[0] || "";
   return slugify(ilkKelime);
 }
@@ -506,9 +514,7 @@ export default function TaslakIzahnamelerPage() {
 
         <section className="mb-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-4 md:p-5">
           <div className="mb-3 flex flex-col gap-2 md:flex-row md:items-center md:justify-between">
-            <h2 className="text-lg font-semibold text-zinc-900">
-              Şirket Ara
-            </h2>
+            <h2 className="text-lg font-semibold text-zinc-900">Şirket Ara</h2>
             <span className="text-sm text-zinc-500">
               {filtrelenmisIzahnameler.length} sonuç
             </span>
