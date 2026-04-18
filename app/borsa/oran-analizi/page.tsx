@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 import Link from "next/link";
+import Script from "next/script";
 import * as XLSX from "xlsx";
 
 export const metadata = {
@@ -66,47 +67,37 @@ function formatValue(value: string | number | null) {
   return value;
 }
 
-function isSektorSatiri(row: RowData, columns: string[]) {
-  const ilkKolon = row[columns[0]];
-  const ilkMetin = String(ilkKolon ?? "").trim().toLocaleLowerCase("tr");
+function getSektorAdi(row: RowData, columns: string[]) {
+  const doluHucreler = columns
+    .map((column) => row[column])
+    .filter((value) => value !== null && value !== "");
 
-  const sektorIfadeleri = [
-    "sektör",
-    "sektor",
-    "endeks",
-    "banka",
-    "holding",
-    "ulaştırma",
-    "ulastirma",
-    "sigorta",
-    "gıda",
-    "gida",
-    "metal",
-    "enerji",
-    "çimento",
-    "cimento",
-    "petrokimya",
-    "madencilik",
-    "telekom",
-    "teknoloji",
-    "turizm",
-    "gayrimenkul",
-  ];
+  if (doluHucreler.length !== 1) return null;
 
-  const ifadeEslesmesi = sektorIfadeleri.some((ifade) => ilkMetin.includes(ifade));
+  const ilkDeger = String(doluHucreler[0] ?? "").trim();
+  if (!ilkDeger) return null;
 
-  const doluHucreSayisi = columns.reduce((adet, column) => {
-    const value = row[column];
-    return value !== null && value !== "" ? adet + 1 : adet;
-  }, 0);
+  const sayisalMi = parseNumeric(ilkDeger);
+  if (sayisalMi !== null) return null;
 
-  return ifadeEslesmesi || doluHucreSayisi <= 2;
+  return ilkDeger;
 }
 
-function sortRows(rows: RowData[], sortKey: string | undefined, dir: "asc" | "desc") {
+function sortRows(rows: RowData[], sortKey: string | undefined, dir: "asc" | "desc", columns: string[]) {
   if (!sortKey) return rows;
 
-  return [...rows].sort((a, b) => {
+  const sektorSatirlari: { index: number; row: RowData }[] = [];
+  const normalSatirlar: RowData[] = [];
+
+  rows.forEach((row, index) => {
+    if (getSektorAdi(row, columns)) {
+      sektorSatirlari.push({ index, row });
+    } else {
+      normalSatirlar.push(row);
+    }
+  });
+
+  const sortedNormalRows = [...normalSatirlar].sort((a, b) => {
     const aVal = a[sortKey] ?? null;
     const bVal = b[sortKey] ?? null;
 
@@ -124,9 +115,25 @@ function sortRows(rows: RowData[], sortKey: string | undefined, dir: "asc" | "de
       ? aStr.localeCompare(bStr, "tr")
       : bStr.localeCompare(aStr, "tr");
   });
+
+  const result: RowData[] = [];
+  let normalIndex = 0;
+  let sektorIndex = 0;
+
+  for (let i = 0; i < rows.length; i += 1) {
+    if (sektorIndex < sektorSatirlari.length && sektorSatirlari[sektorIndex].index === i) {
+      result.push(sektorSatirlari[sektorIndex].row);
+      sektorIndex += 1;
+    } else {
+      result.push(sortedNormalRows[normalIndex]);
+      normalIndex += 1;
+    }
+  }
+
+  return result;
 }
 
-function SortButton({
+function SortButtons({
   basePath,
   column,
   activeSort,
@@ -137,21 +144,32 @@ function SortButton({
   activeSort?: string;
   activeDir: "asc" | "desc";
 }) {
-  const isActive = activeSort === column;
-  const nextDir: "asc" | "desc" =
-    isActive && activeDir === "asc" ? "desc" : "asc";
+  const aktifArtan = activeSort === column && activeDir === "asc";
+  const aktifAzalan = activeSort === column && activeDir === "desc";
 
   return (
-    <Link
-      href={`${basePath}?sort=${encodeURIComponent(column)}&dir=${nextDir}`}
-      className={`ml-2 inline-flex rounded-md px-2 py-1 text-[11px] font-semibold ${
-        isActive
-          ? "bg-emerald-100 text-emerald-700"
-          : "bg-zinc-100 text-zinc-600 hover:bg-zinc-200"
-      }`}
-    >
-      {isActive ? (activeDir === "asc" ? "Artan" : "Azalan") : "Sırala"}
-    </Link>
+    <div className="ml-2 flex items-center gap-1">
+      <Link
+        href={`${basePath}?sort=${encodeURIComponent(column)}&dir=asc`}
+        className={`rounded-md px-2 py-1 text-[11px] font-semibold ${
+          aktifArtan
+            ? "bg-emerald-100 text-emerald-700"
+            : "bg-zinc-100 text-zinc-600 hover:bg-zinc-200"
+        }`}
+      >
+        Artan
+      </Link>
+      <Link
+        href={`${basePath}?sort=${encodeURIComponent(column)}&dir=desc`}
+        className={`rounded-md px-2 py-1 text-[11px] font-semibold ${
+          aktifAzalan
+            ? "bg-emerald-100 text-emerald-700"
+            : "bg-zinc-100 text-zinc-600 hover:bg-zinc-200"
+        }`}
+      >
+        Azalan
+      </Link>
+    </div>
   );
 }
 
@@ -199,10 +217,10 @@ export default async function OranAnaliziPage({
   const aktifDir = getParam(params.dir) === "asc" ? "asc" : "desc";
 
   const { columns, rows } = await getExcelData();
-  const sortedRows = sortRows(rows, aktifSort, aktifDir);
+  const sortedRows = sortRows(rows, aktifSort, aktifDir, columns);
 
   const tableOuterId = "oran-analizi-table-outer";
-  const tableInnerId = "oran-analizi-table-inner";
+  const tableWidthId = "oran-analizi-table-width";
   const bottomScrollId = "oran-analizi-bottom-scroll";
   const bottomContentId = "oran-analizi-bottom-content";
 
@@ -244,15 +262,12 @@ export default async function OranAnaliziPage({
         <section className="py-6">
           <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
             <div className="border-b border-zinc-200 bg-zinc-50 px-4 py-3 text-sm text-zinc-600">
-              Sütun başlıklarındaki sıralama butonları ile verileri artan veya
-              azalan şekilde sıralayabilirsiniz.
+              Sütun başlıklarındaki artan ve azalan butonları ile verileri
+              sıralayabilirsiniz.
             </div>
 
-            <div
-              id={tableOuterId}
-              className="overflow-x-auto"
-            >
-              <div id={tableInnerId} className="min-w-max">
+            <div id={tableOuterId} className="overflow-x-auto">
+              <div id={tableWidthId} className="min-w-max">
                 <table className="w-full border-collapse text-sm">
                   <thead className="bg-zinc-100 text-zinc-700">
                     <tr>
@@ -263,7 +278,7 @@ export default async function OranAnaliziPage({
                         >
                           <div className="flex items-center justify-between gap-2">
                             <span>{column}</span>
-                            <SortButton
+                            <SortButtons
                               basePath="/borsa/oran-analizi"
                               column={column}
                               activeSort={aktifSort}
@@ -277,27 +292,30 @@ export default async function OranAnaliziPage({
 
                   <tbody>
                     {sortedRows.map((row, index) => {
-                      const sektorSatiri = isSektorSatiri(row, columns);
+                      const sektorAdi = getSektorAdi(row, columns);
+
+                      if (sektorAdi) {
+                        return (
+                          <tr key={`row-${index}`} className="bg-red-50">
+                            <td
+                              colSpan={columns.length}
+                              className="border-b border-red-100 px-4 py-3 font-semibold text-red-700 whitespace-nowrap"
+                            >
+                              {sektorAdi}
+                            </td>
+                          </tr>
+                        );
+                      }
 
                       return (
                         <tr
                           key={`row-${index}`}
-                          className={
-                            sektorSatiri
-                              ? "bg-red-50"
-                              : index % 2 === 1
-                                ? "bg-sky-50"
-                                : "bg-white"
-                          }
+                          className={index % 2 === 1 ? "bg-sky-50" : "bg-white"}
                         >
                           {columns.map((column) => (
                             <td
                               key={`${index}-${column}`}
-                              className={`border-b border-zinc-100 px-4 py-3 whitespace-nowrap ${
-                                sektorSatiri
-                                  ? "font-semibold text-red-700"
-                                  : "text-zinc-700"
-                              }`}
+                              className="border-b border-zinc-100 px-4 py-3 whitespace-nowrap text-zinc-700"
                             >
                               {formatValue(row[column] ?? null)}
                             </td>
@@ -311,10 +329,7 @@ export default async function OranAnaliziPage({
             </div>
 
             <div className="sticky bottom-0 z-20 border-t border-zinc-200 bg-white">
-              <div
-                id={bottomScrollId}
-                className="overflow-x-auto"
-              >
+              <div id={bottomScrollId} className="overflow-x-auto">
                 <div id={bottomContentId} className="h-5 min-w-max" />
               </div>
             </div>
@@ -362,50 +377,55 @@ export default async function OranAnaliziPage({
         </section>
       </div>
 
-      <script
-        dangerouslySetInnerHTML={{
-          __html: `
-            (function () {
-              const outer = document.getElementById("${tableOuterId}");
-              const inner = document.getElementById("${tableInnerId}");
-              const bottom = document.getElementById("${bottomScrollId}");
-              const bottomContent = document.getElementById("${bottomContentId}");
-              if (!outer || !inner || !bottom || !bottomContent) return;
+      <Script id="oran-analizi-scroll-sync" strategy="afterInteractive">
+        {`
+          (function () {
+            const outer = document.getElementById("${tableOuterId}");
+            const widthBox = document.getElementById("${tableWidthId}");
+            const bottom = document.getElementById("${bottomScrollId}");
+            const bottomContent = document.getElementById("${bottomContentId}");
+            if (!outer || !widthBox || !bottom || !bottomContent) return;
 
-              let syncingFromTop = false;
-              let syncingFromBottom = false;
+            let syncingTop = false;
+            let syncingBottom = false;
 
-              function syncWidth() {
-                bottomContent.style.width = inner.scrollWidth + "px";
+            function syncWidths() {
+              bottomContent.style.width = widthBox.scrollWidth + "px";
+            }
+
+            function syncFromTop() {
+              if (syncingBottom) {
+                syncingBottom = false;
+                return;
               }
+              syncingTop = true;
+              bottom.scrollLeft = outer.scrollLeft;
+            }
 
-              outer.addEventListener("scroll", function () {
-                if (syncingFromBottom) {
-                  syncingFromBottom = false;
-                  return;
-                }
-                syncingFromTop = true;
-                bottom.scrollLeft = outer.scrollLeft;
-              });
+            function syncFromBottom() {
+              if (syncingTop) {
+                syncingTop = false;
+                return;
+              }
+              syncingBottom = true;
+              outer.scrollLeft = bottom.scrollLeft;
+            }
 
-              bottom.addEventListener("scroll", function () {
-                if (syncingFromTop) {
-                  syncingFromTop = false;
-                  return;
-                }
-                syncingFromBottom = true;
-                outer.scrollLeft = bottom.scrollLeft;
-              });
+            outer.addEventListener("scroll", syncFromTop, { passive: true });
+            bottom.addEventListener("scroll", syncFromBottom, { passive: true });
 
-              syncWidth();
-              window.addEventListener("resize", syncWidth);
+            syncWidths();
+            bottom.scrollLeft = outer.scrollLeft;
 
-              const resizeObserver = new ResizeObserver(syncWidth);
-              resizeObserver.observe(inner);
-            })();
-          `,
-        }}
-      />
+            if (typeof ResizeObserver !== "undefined") {
+              const observer = new ResizeObserver(syncWidths);
+              observer.observe(widthBox);
+            }
+
+            window.addEventListener("resize", syncWidths);
+          })();
+        `}
+      </Script>
     </main>
   );
 }
