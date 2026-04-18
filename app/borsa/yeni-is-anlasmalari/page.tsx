@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
+import Script from "next/script";
 import * as XLSX from "xlsx";
 
 const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
@@ -186,8 +187,33 @@ function verileriOku(): YeniIsSatiri[] {
   }
 }
 
+const columns = [
+  { key: "sembol", label: "Sembol", align: "left" as const, width: "min-w-[140px]" },
+  { key: "tarih", label: "Tarih", align: "left" as const, width: "min-w-[150px]" },
+  {
+    key: "tutar",
+    label: "Yeni İş İlişkisi Tutarı",
+    align: "right" as const,
+    width: "min-w-[220px]",
+  },
+  { key: "paraBirimi", label: "Para Birimi", align: "left" as const, width: "min-w-[140px]" },
+  { key: "bilanco", label: "Bilanço Dönemi", align: "left" as const, width: "min-w-[170px]" },
+  { key: "yillikSatislar", label: "Yıllık Satışlar", align: "right" as const, width: "min-w-[170px]" },
+  {
+    key: "oran",
+    label: "Yeni İş İlişkisi / Yıllık Satışlar",
+    align: "right" as const,
+    width: "min-w-[250px]",
+  },
+];
+
 export default function YeniIsAnlasmalariPage() {
   const satirlar = verileriOku();
+
+  const headerScrollId = "yeni-is-header-scroll";
+  const headerWidthId = "yeni-is-header-width";
+  const bodyScrollId = "yeni-is-body-scroll";
+  const bodyWidthId = "yeni-is-body-width";
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -225,80 +251,85 @@ export default function YeniIsAnlasmalariPage() {
         </section>
 
         <section className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
-          <div className="overflow-x-auto rounded-xl border border-zinc-200 bg-white">
-            <table className="min-w-full border-collapse text-sm">
-              <thead className="text-zinc-700">
-                <tr>
-                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-left">
-                    Sembol
-                  </th>
-                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-left">
-                    Tarih
-                  </th>
-                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-right">
-                    Yeni İş İlişkisi Tutarı
-                  </th>
-                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-left">
-                    Para Birimi
-                  </th>
-                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-left">
-                    Bilanço Dönemi
-                  </th>
-                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-right">
-                    Yıllık Satışlar
-                  </th>
-                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-right">
-                    Yeni İş İlişkisi / Yıllık Satışlar
-                  </th>
-                </tr>
-              </thead>
+          <div className="rounded-xl border border-zinc-200 bg-white">
+            <div className="sticky top-0 z-30 rounded-t-xl border-b border-zinc-200 bg-white">
+              <div
+                id={headerScrollId}
+                className="overflow-x-auto [&::-webkit-scrollbar]:hidden"
+                style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+              >
+                <div id={headerWidthId} className="min-w-max">
+                  <table className="min-w-full border-collapse text-sm">
+                    <thead className="bg-zinc-100 text-zinc-700">
+                      <tr>
+                        {columns.map((column) => (
+                          <th
+                            key={column.key}
+                            className={`${column.width} px-4 py-3 ${
+                              column.align === "right" ? "text-right" : "text-left"
+                            }`}
+                          >
+                            {column.label}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                  </table>
+                </div>
+              </div>
+            </div>
 
-              <tbody>
-                {satirlar.length > 0 ? (
-                  satirlar.map((item, index) => (
-                    <tr
-                      key={`${item.sembol}-${item.tarih}-${index}`}
-                      className={
-                        index % 2 === 0
-                          ? "border-t border-zinc-100 bg-white"
-                          : "border-t border-zinc-100 bg-sky-50/60"
-                      }
-                    >
-                      <td className="px-4 py-3 font-semibold text-zinc-900">
-                        {item.sembol}
-                      </td>
-                      <td className="px-4 py-3 text-zinc-700">
-                        {item.tarih || "-"}
-                      </td>
-                      <td className="px-4 py-3 text-right font-semibold text-zinc-900">
-                        {formatNumber(item.tutar, 0)}
-                      </td>
-                      <td className="px-4 py-3 text-zinc-700">
-                        {item.paraBirimi || "-"}
-                      </td>
-                      <td className="px-4 py-3 text-zinc-700">
-                        {item.bilanco || "-"}
-                      </td>
-                      <td className="px-4 py-3 text-right text-zinc-700">
-                        {formatNumber(item.yillikSatislar, 0)}
-                      </td>
-                      <td className="px-4 py-3 text-right text-zinc-700">
-                        {formatOran(item.oran)}
-                      </td>
-                    </tr>
-                  ))
-                ) : (
-                  <tr>
-                    <td
-                      colSpan={7}
-                      className="px-4 py-8 text-center text-sm text-zinc-500"
-                    >
-                      Excel verisi okunamadı.
-                    </td>
-                  </tr>
-                )}
-              </tbody>
-            </table>
+            <div id={bodyScrollId} className="overflow-x-auto rounded-b-xl">
+              <div id={bodyWidthId} className="min-w-max">
+                <table className="min-w-full border-collapse text-sm bg-white">
+                  <tbody>
+                    {satirlar.length > 0 ? (
+                      satirlar.map((item, index) => (
+                        <tr
+                          key={`${item.sembol}-${item.tarih}-${index}`}
+                          className={
+                            index % 2 === 0
+                              ? "border-t border-zinc-100 bg-white"
+                              : "border-t border-zinc-100 bg-sky-50/60"
+                          }
+                        >
+                          <td className="min-w-[140px] px-4 py-3 font-semibold text-zinc-900">
+                            {item.sembol}
+                          </td>
+                          <td className="min-w-[150px] px-4 py-3 text-zinc-700">
+                            {item.tarih || "-"}
+                          </td>
+                          <td className="min-w-[220px] px-4 py-3 text-right font-semibold text-zinc-900">
+                            {formatNumber(item.tutar, 0)}
+                          </td>
+                          <td className="min-w-[140px] px-4 py-3 text-zinc-700">
+                            {item.paraBirimi || "-"}
+                          </td>
+                          <td className="min-w-[170px] px-4 py-3 text-zinc-700">
+                            {item.bilanco || "-"}
+                          </td>
+                          <td className="min-w-[170px] px-4 py-3 text-right text-zinc-700">
+                            {formatNumber(item.yillikSatislar, 0)}
+                          </td>
+                          <td className="min-w-[250px] px-4 py-3 text-right text-zinc-700">
+                            {formatOran(item.oran)}
+                          </td>
+                        </tr>
+                      ))
+                    ) : (
+                      <tr>
+                        <td
+                          colSpan={7}
+                          className="px-4 py-8 text-center text-sm text-zinc-500"
+                        >
+                          Excel verisi okunamadı.
+                        </td>
+                      </tr>
+                    )}
+                  </tbody>
+                </table>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -336,6 +367,64 @@ export default function YeniIsAnlasmalariPage() {
           </p>
         </section>
       </div>
+
+      <Script id="yeni-is-header-scroll-sync" strategy="afterInteractive">
+        {`
+          (function () {
+            const header = document.getElementById("${headerScrollId}");
+            const body = document.getElementById("${bodyScrollId}");
+            const headerWidth = document.getElementById("${headerWidthId}");
+            const bodyWidth = document.getElementById("${bodyWidthId}");
+
+            if (!header || !body || !headerWidth || !bodyWidth) return;
+
+            let source = "";
+
+            function syncWidths() {
+              const width = Math.max(headerWidth.scrollWidth, bodyWidth.scrollWidth);
+              headerWidth.style.width = width + "px";
+              bodyWidth.style.width = width + "px";
+              header.scrollLeft = body.scrollLeft;
+            }
+
+            header.addEventListener(
+              "scroll",
+              function () {
+                if (source === "body") {
+                  source = "";
+                  return;
+                }
+                source = "header";
+                body.scrollLeft = header.scrollLeft;
+              },
+              { passive: true }
+            );
+
+            body.addEventListener(
+              "scroll",
+              function () {
+                if (source === "header") {
+                  source = "";
+                  return;
+                }
+                source = "body";
+                header.scrollLeft = body.scrollLeft;
+              },
+              { passive: true }
+            );
+
+            syncWidths();
+
+            if (typeof ResizeObserver !== "undefined") {
+              const observer = new ResizeObserver(syncWidths);
+              observer.observe(headerWidth);
+              observer.observe(bodyWidth);
+            }
+
+            window.addEventListener("resize", syncWidths);
+          })();
+        `}
+      </Script>
     </main>
   );
 }
