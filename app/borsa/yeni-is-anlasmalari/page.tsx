@@ -225,19 +225,29 @@ export default function YeniIsAnlasmalariPage() {
         </section>
 
         <section className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
-          <div className="overflow-x-auto">
-            <table className="min-w-full rounded-xl border border-zinc-200 bg-white text-sm">
-              <thead className="sticky top-0 z-20 bg-zinc-100 text-zinc-700">
+          <div className="overflow-x-auto rounded-xl border border-zinc-200 bg-white">
+            <table className="min-w-full border-collapse text-sm">
+              <thead className="text-zinc-700">
                 <tr>
-                  <th className="px-4 py-3 text-left bg-zinc-100">Sembol</th>
-                  <th className="px-4 py-3 text-left bg-zinc-100">Tarih</th>
-                  <th className="px-4 py-3 text-right bg-zinc-100">
+                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-left">
+                    Sembol
+                  </th>
+                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-left">
+                    Tarih
+                  </th>
+                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-right">
                     Yeni İş İlişkisi Tutarı
                   </th>
-                  <th className="px-4 py-3 text-left bg-zinc-100">Para Birimi</th>
-                  <th className="px-4 py-3 text-left bg-zinc-100">Bilanço Dönemi</th>
-                  <th className="px-4 py-3 text-right bg-zinc-100">Yıllık Satışlar</th>
-                  <th className="px-4 py-3 text-right bg-zinc-100">
+                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-left">
+                    Para Birimi
+                  </th>
+                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-left">
+                    Bilanço Dönemi
+                  </th>
+                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-right">
+                    Yıllık Satışlar
+                  </th>
+                  <th className="sticky top-0 z-20 bg-zinc-100 px-4 py-3 text-right">
                     Yeni İş İlişkisi / Yıllık Satışlar
                   </th>
                 </tr>
