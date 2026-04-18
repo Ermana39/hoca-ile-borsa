@@ -63,18 +63,21 @@ function formatValue(value: string | number | null) {
   return value;
 }
 
-function isSektorSatiri(row: RowData, columns: string[]) {
+function getRowType(row: RowData, columns: string[]) {
   const doluHucreler = columns
     .map((column) => row[column])
     .filter((value) => value !== null && value !== "");
 
-  if (doluHucreler.length <= 1) return true;
+  if (doluHucreler.length !== 1) return "normal";
 
-  const ilkDeger = String(row[columns[0]] ?? "").trim();
-  if (!ilkDeger) return false;
+  const ilkDeger = String(doluHucreler[0] ?? "").trim();
+  if (!ilkDeger) return "normal";
+  if (parseNumeric(ilkDeger) !== null) return "normal";
 
-  const ilkDegerSayisal = parseNumeric(ilkDeger);
-  return ilkDegerSayisal === null && doluHucreler.length <= 2;
+  const normalized = ilkDeger.toLocaleLowerCase("tr");
+  if (normalized === "sektör" || normalized === "sektor") return "remove";
+
+  return "sector_header";
 }
 
 async function getExcelData() {
@@ -112,7 +115,7 @@ async function getExcelData() {
       }
       return normalized;
     })
-    .filter((row) => !isSektorSatiri(row, columns));
+    .filter((row) => getRowType(row, columns) !== "remove");
 
   const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
     day: "2-digit",
@@ -177,10 +180,14 @@ export default async function OranAnaliziPage() {
                 <table className="w-full border-collapse text-sm">
                   <thead className="bg-zinc-100 text-zinc-700">
                     <tr>
-                      {columns.map((column) => (
+                      {columns.map((column, columnIndex) => (
                         <th
                           key={column}
-                          className="border-b border-zinc-200 px-4 py-3 text-left font-bold whitespace-nowrap"
+                          className={`border-b border-zinc-200 px-4 py-3 text-left font-bold whitespace-nowrap ${
+                            columnIndex === 0
+                              ? "sticky left-0 z-20 bg-zinc-100 shadow-[8px_0_12px_-12px_rgba(0,0,0,0.25)]"
+                              : ""
+                          }`}
                         >
                           {column}
                         </th>
@@ -189,21 +196,46 @@ export default async function OranAnaliziPage() {
                   </thead>
 
                   <tbody>
-                    {rows.map((row, index) => (
-                      <tr
-                        key={`row-${index}`}
-                        className={index % 2 === 1 ? "bg-sky-50" : "bg-white"}
-                      >
-                        {columns.map((column) => (
-                          <td
-                            key={`${index}-${column}`}
-                            className="border-b border-zinc-100 px-4 py-3 whitespace-nowrap text-zinc-700"
-                          >
-                            {formatValue(row[column] ?? null)}
-                          </td>
-                        ))}
-                      </tr>
-                    ))}
+                    {rows.map((row, index) => {
+                      const rowType = getRowType(row, columns);
+
+                      if (rowType === "sector_header") {
+                        const sektorAdi = String(
+                          columns.map((column) => row[column]).find((value) => value !== null && value !== "") ?? ""
+                        );
+
+                        return (
+                          <tr key={`row-${index}`} className="bg-red-50">
+                            <td
+                              colSpan={columns.length}
+                              className="border-b border-red-100 px-4 py-3 font-semibold text-red-700 whitespace-nowrap"
+                            >
+                              {sektorAdi}
+                            </td>
+                          </tr>
+                        );
+                      }
+
+                      const satirArkaPlan = index % 2 === 1 ? "bg-sky-50" : "bg-white";
+                      const stickyArkaPlan = index % 2 === 1 ? "bg-sky-50" : "bg-white";
+
+                      return (
+                        <tr key={`row-${index}`} className={satirArkaPlan}>
+                          {columns.map((column, columnIndex) => (
+                            <td
+                              key={`${index}-${column}`}
+                              className={`border-b border-zinc-100 px-4 py-3 whitespace-nowrap text-zinc-700 ${
+                                columnIndex === 0
+                                  ? `sticky left-0 z-10 ${stickyArkaPlan} font-semibold text-zinc-900 shadow-[8px_0_12px_-12px_rgba(0,0,0,0.25)]`
+                                  : ""
+                              }`}
+                            >
+                              {formatValue(row[column] ?? null)}
+                            </td>
+                          ))}
+                        </tr>
+                      );
+                    })}
                   </tbody>
                 </table>
               </div>
@@ -239,9 +271,9 @@ export default async function OranAnaliziPage() {
           <p className="mb-4 leading-7 text-zinc-700">
             Sayfada yer alan oran analizi tablosu sayesinde şirketleri aynı
             ekranda karşılaştırabilir ve dikkat çeken finansal görünümleri daha
-            hızlı fark edebilirsiniz. Bu yapı hem temel analiz yapan kullanıcılar
-            hem de hisse seçim sürecinde finansal filtreleri kullanan yatırımcılar
-            için pratik bir takip ekranı sunar.
+            hızlı fark edebilirsiniz. Sektör başlıklarının ayrı satırlarda
+            gösterilmesi ise tablo içinde bölümleri daha kolay ayırt etmenize
+            yardımcı olur.
           </p>
 
           <p className="leading-7 text-zinc-700">
