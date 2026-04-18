@@ -28,7 +28,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Formasyonlar",
     href: "/borsa/formasyonlar",
-    updatedAt: "14.04.2026 19:36",
+    updatedAt: "18.04.2026 12:28",
   },
     {
     title: "Geri Alım Programları",
