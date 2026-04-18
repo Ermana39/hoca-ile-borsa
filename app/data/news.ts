@@ -7,6 +7,13 @@ export type NewsItem = {
 };
 
 export const newsItems: NewsItem[] = [
+  {
+    id: 991,
+    title: "A101 halka arz mı oldu? Perakendede dev anlaşmanın perde arkası",
+    href: "/haber/haber-991",
+    image: "/haber991.png",
+    alt: "Haber 991 görseli",
+  },
    {
     id: 992,
     title: "S&P Türkiye'nin kredi notunu teyit etti",
