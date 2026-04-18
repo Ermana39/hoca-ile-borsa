@@ -92,6 +92,14 @@ const analizKutulari = [
       "Pivot, destek ve direnç seviyelerine göre hisselerin teknik görünümünü tablo halinde inceleyebilirsiniz.",
   },
   {
+    title: "Oran Analizi",
+    href: "/borsa/oran-analizi",
+    image: "/oran-analizi.png",
+    alt: "Oran Analizi görseli",
+    description:
+      "Şirketlerin finansal oranlarını inceleyerek değerleme, kârlılık, borçluluk ve verimlilik açısından karşılaştırma yapabilirsiniz.",
+  },
+  {
     title: "Tedbirli Hisseler",
     href: "/borsa/tedbirli-hisseler",
     image: "/tedbirli-hisseler-yatay.png",
