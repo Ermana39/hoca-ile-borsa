@@ -76,14 +76,17 @@ function getSektorAdi(row: RowData, columns: string[]) {
 
   const ilkDeger = String(doluHucreler[0] ?? "").trim();
   if (!ilkDeger) return null;
-
-  const sayisalMi = parseNumeric(ilkDeger);
-  if (sayisalMi !== null) return null;
+  if (parseNumeric(ilkDeger) !== null) return null;
 
   return ilkDeger;
 }
 
-function sortRows(rows: RowData[], sortKey: string | undefined, dir: "asc" | "desc", columns: string[]) {
+function sortRows(
+  rows: RowData[],
+  sortKey: string | undefined,
+  dir: "asc" | "desc",
+  columns: string[]
+) {
   if (!sortKey) return rows;
 
   const sektorSatirlari: { index: number; row: RowData }[] = [];
@@ -133,46 +136,6 @@ function sortRows(rows: RowData[], sortKey: string | undefined, dir: "asc" | "de
   return result;
 }
 
-function SortButtons({
-  basePath,
-  column,
-  activeSort,
-  activeDir,
-}: {
-  basePath: string;
-  column: string;
-  activeSort?: string;
-  activeDir: "asc" | "desc";
-}) {
-  const aktifArtan = activeSort === column && activeDir === "asc";
-  const aktifAzalan = activeSort === column && activeDir === "desc";
-
-  return (
-    <div className="ml-2 flex items-center gap-1">
-      <Link
-        href={`${basePath}?sort=${encodeURIComponent(column)}&dir=asc`}
-        className={`rounded-md px-2 py-1 text-[11px] font-semibold ${
-          aktifArtan
-            ? "bg-emerald-100 text-emerald-700"
-            : "bg-zinc-100 text-zinc-600 hover:bg-zinc-200"
-        }`}
-      >
-        Artan
-      </Link>
-      <Link
-        href={`${basePath}?sort=${encodeURIComponent(column)}&dir=desc`}
-        className={`rounded-md px-2 py-1 text-[11px] font-semibold ${
-          aktifAzalan
-            ? "bg-emerald-100 text-emerald-700"
-            : "bg-zinc-100 text-zinc-600 hover:bg-zinc-200"
-        }`}
-      >
-        Azalan
-      </Link>
-    </div>
-  );
-}
-
 async function getExcelData() {
   const filePath = path.join(
     process.cwd(),
@@ -205,6 +168,40 @@ async function getExcelData() {
   });
 
   return { columns, rows };
+}
+
+function HeaderSortLink({
+  basePath,
+  column,
+  activeSort,
+  activeDir,
+}: {
+  basePath: string;
+  column: string;
+  activeSort?: string;
+  activeDir: "asc" | "desc";
+}) {
+  const isActive = activeSort === column;
+  const nextDir: "asc" | "desc" =
+    isActive && activeDir === "desc" ? "asc" : "desc";
+
+  return (
+    <Link
+      href={`${basePath}?sort=${encodeURIComponent(column)}&dir=${nextDir}`}
+      className={`flex w-full items-center justify-between gap-2 rounded-lg px-1 py-1 text-left transition ${
+        isActive ? "text-emerald-700" : "text-zinc-700 hover:text-zinc-900"
+      }`}
+    >
+      <span>{column}</span>
+      <span
+        className={`text-xs font-semibold ${
+          isActive ? "text-emerald-700" : "text-zinc-500"
+        }`}
+      >
+        {isActive ? (activeDir === "asc" ? "▲" : "▼") : "↕"}
+      </span>
+    </Link>
+  );
 }
 
 export default async function OranAnaliziPage({
@@ -250,8 +247,8 @@ export default async function OranAnaliziPage({
 
           <p className="mt-3 max-w-4xl text-sm leading-7 text-zinc-600 md:text-base">
             Oran analizi sayfası üzerinden şirketlerin finansal oran verilerini
-            toplu şekilde inceleyebilir, sütunları artan ve azalan olarak
-            sıralayarak farklı şirketleri daha hızlı karşılaştırabilirsiniz.
+            toplu şekilde inceleyebilir, sütun başlıklarına tıklayarak verileri
+            artan ve azalan olarak sıralayabilirsiniz.
           </p>
         </section>
 
@@ -262,8 +259,7 @@ export default async function OranAnaliziPage({
         <section className="py-6">
           <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
             <div className="border-b border-zinc-200 bg-zinc-50 px-4 py-3 text-sm text-zinc-600">
-              Sütun başlıklarındaki artan ve azalan butonları ile verileri
-              sıralayabilirsiniz.
+              Sütun başlıklarına tıklayarak tabloyu sıralayabilirsiniz.
             </div>
 
             <div id={tableOuterId} className="overflow-x-auto">
@@ -276,15 +272,12 @@ export default async function OranAnaliziPage({
                           key={column}
                           className="border-b border-zinc-200 px-4 py-3 text-left font-bold whitespace-nowrap"
                         >
-                          <div className="flex items-center justify-between gap-2">
-                            <span>{column}</span>
-                            <SortButtons
-                              basePath="/borsa/oran-analizi"
-                              column={column}
-                              activeSort={aktifSort}
-                              activeDir={aktifDir}
-                            />
-                          </div>
+                          <HeaderSortLink
+                            basePath="/borsa/oran-analizi"
+                            column={column}
+                            activeSort={aktifSort}
+                            activeDir={aktifDir}
+                          />
                         </th>
                       ))}
                     </tr>
@@ -391,6 +384,7 @@ export default async function OranAnaliziPage({
 
             function syncWidths() {
               bottomContent.style.width = widthBox.scrollWidth + "px";
+              bottom.scrollLeft = outer.scrollLeft;
             }
 
             function syncFromTop() {
@@ -415,7 +409,6 @@ export default async function OranAnaliziPage({
             bottom.addEventListener("scroll", syncFromBottom, { passive: true });
 
             syncWidths();
-            bottom.scrollLeft = outer.scrollLeft;
 
             if (typeof ResizeObserver !== "undefined") {
               const observer = new ResizeObserver(syncWidths);
