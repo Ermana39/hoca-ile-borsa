@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Babacan Gayrimenkul Yatırım Ortaklığı A.Ş. Halka Arz Detayları 2026 | Taslak İzahname ve Finansal Veriler",
+    "Şa-Ra Enerji İnşaat Tic. ve San. A.Ş. Halka Arz Detayları 2026 | Taslak İzahname ve Finansal Veriler",
   description:
-    "Babacan Gayrimenkul Yatırım Ortaklığı A.Ş. halka arz detayları, taslak izahname özeti, halka arz tarihi, fiyat aralığı, lot miktarı, dağıtım yöntemi, tahsisat grupları, fon kullanım alanları ve finansal veriler.",
+    "Şa-Ra Enerji İnşaat Tic. ve San. A.Ş. halka arz detayları, taslak izahname özeti, halka arz tarihi, fiyat aralığı, fiili dolaşımdaki pay, dağıtım yöntemi, fon kullanım alanları ve finansal veriler.",
 };
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "buyuk" }) {
@@ -21,30 +21,26 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "buyuk" }) {
   );
 }
 
-export default function BabacanGayrimenkulYatirimOrtakligiASPage() {
+export default function SaRaEnerjiInsaatTicVeSanASPage() {
   const summaryItems = [
     { label: "Halka Arz Tarihi", value: "Hazırlanıyor" },
     { label: "Halka Arz Fiyatı / Aralığı", value: "Hazırlanıyor" },
     { label: "Dağıtım Yöntemi", value: "Eşit Dağıtım" },
-    { label: "Pay", value: "210.600.000 Lot" },
-    {
-      label: "Aracı Kurum",
-      value:
-        "Ziraat Yatırım Menkul Kıymetler A.Ş.\nİntegral Yatırım Menkul Değerler A.Ş.",
-    },
+    { label: "Aracı Kurum", value: "Tera Yatırım Menkul Değerler A.Ş." },
+    { label: "Fiili Dolaşımdaki Pay", value: "22.250.000 Lot" },
     { label: "Pazar", value: "Yıldız Pazar" },
   ];
 
   const halkaArzSekli = [
-    "Sermaye Artırımı: 146.600.000 Lot",
-    "Ortak Satışı: 34.560.000 Lot (İbrahim Halil Babacan)",
-    "Ortak Satışı: 29.440.000 Lot (Mehmet Babacan)",
+    "Sermaye Artırımı: 11.125.000 Lot",
+    "Ortak Satışı: 8.900.000 Lot (Şadi Türk)",
+    "Ortak Satışı: 2.225.000 Lot (Hilkat Mor)",
   ];
 
   const fonKullanim = [
-    "%45-65 Devam eden projelerin finansmanı",
-    "%20-30 İşletme sermayesi",
-    "%15-25 Yeni yatırımların finansmanı",
+    "%15 Yatırım harcamaları",
+    "%55 İşletme sermayesi",
+    "%30 Finansal borç ödemesi",
   ];
 
   const tahsisat = [
@@ -57,33 +53,33 @@ export default function BabacanGayrimenkulYatirimOrtakligiASPage() {
   const finansalVeriler = [
     {
       kalem: "Hasılat",
-      d2025: "143,6 Milyon TL",
-      d2024: "50,8 Milyon TL",
-      d2023: "-",
+      d2024_6: "4,2 Milyar TL",
+      d2023: "7,7 Milyar TL",
+      d2022: "6,6 Milyar TL",
     },
     {
       kalem: "Brüt Kâr",
-      d2025: "84,3 Milyon TL",
-      d2024: "10,3 Milyon TL",
-      d2023: "-",
+      d2024_6: "965,4 Milyon TL",
+      d2023: "1,8 Milyar TL",
+      d2022: "1,6 Milyar TL",
     },
   ];
 
   const oneCikanlar = [
     {
-      title: "Halka Açıklık",
-      value: "%25,01",
-      desc: "Şirketin halka açık olması planlanan oranı.",
+      title: "Fiili Dolaşım",
+      value: "22,25 Milyon",
+      desc: "Fiili dolaşımdaki pay miktarı olarak belirtilen lot sayısı.",
     },
     {
-      title: "Satış Yöntemi",
-      value: "Sabit Fiyat",
-      desc: "Sabit fiyatla talep toplama ve en iyi gayret aracılığı yöntemi yer alıyor.",
+      title: "Halka Açıklık",
+      value: "%20,02",
+      desc: "Şirketin halka açık olması planlanan oranı.",
     },
     {
       title: "Fiyat İstikrarı",
       value: "Belirlenecek",
-      desc: "Süre bilgisi henüz netleşmemiş, İntegral Yatırım Menkul Değerler A.Ş. bilgisi yer alıyor.",
+      desc: "Fiyat istikrarı detaylarının ilerleyen aşamalarda netleşmesi bekleniyor.",
     },
     {
       title: "Satmama Taahhüdü",
@@ -119,7 +115,7 @@ export default function BabacanGayrimenkulYatirimOrtakligiASPage() {
                   Halka Arz İncelemesi
                 </p>
                 <h1 className="text-2xl font-bold sm:text-3xl">
-                  Babacan Gayrimenkul Yatırım Ortaklığı A.Ş.
+                  Şa-Ra Enerji İnşaat Tic. ve San. A.Ş.
                 </h1>
                 <p className="mt-2 text-sm text-blue-100 sm:text-base">
                   Taslak izahname verilerine göre hazırlanmış özet halka arz sayfası
@@ -128,8 +124,8 @@ export default function BabacanGayrimenkulYatirimOrtakligiASPage() {
 
               <div className="grid grid-cols-2 gap-3 md:min-w-[320px]">
                 <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
-                  <div className="text-xs text-blue-100">Toplam Pay</div>
-                  <div className="mt-1 text-lg font-bold">210.600.000</div>
+                  <div className="text-xs text-blue-100">Fiili Dolaşımdaki Pay</div>
+                  <div className="mt-1 text-lg font-bold">22.250.000</div>
                 </div>
                 <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
                   <div className="text-xs text-blue-100">Pazar</div>
@@ -203,23 +199,23 @@ export default function BabacanGayrimenkulYatirimOrtakligiASPage() {
               <h2 className="mb-5 text-xl font-bold text-slate-900">Fon Kullanım Yeri</h2>
 
               <div className="grid gap-4 md:grid-cols-3">
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                  <div className="mb-2 text-sm font-semibold text-slate-800">
+                    Yatırım harcamaları
+                  </div>
+                  <div className="text-sm text-slate-700">{fonKullanim[0]}</div>
+                </div>
+
                 <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4">
                   <div className="mb-2 text-sm font-semibold text-emerald-800">
-                    Devam eden projeler
-                  </div>
-                  <div className="text-sm text-emerald-900">{fonKullanim[0]}</div>
-                </div>
-
-                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                  <div className="mb-2 text-sm font-semibold text-slate-800">
                     İşletme sermayesi
                   </div>
-                  <div className="text-sm text-slate-700">{fonKullanim[1]}</div>
+                  <div className="text-sm text-emerald-900">{fonKullanim[1]}</div>
                 </div>
 
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                   <div className="mb-2 text-sm font-semibold text-slate-800">
-                    Yeni yatırımlar
+                    Finansal borç ödemesi
                   </div>
                   <div className="text-sm text-slate-700">{fonKullanim[2]}</div>
                 </div>
@@ -230,7 +226,7 @@ export default function BabacanGayrimenkulYatirimOrtakligiASPage() {
               <div className="mb-5 flex items-center justify-between">
                 <h2 className="text-xl font-bold text-slate-900">Finansal Görünüm</h2>
                 <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
-                  2025 - 2024 - 2023
+                  2024/6 - 2023 - 2022
                 </span>
               </div>
 
@@ -242,13 +238,13 @@ export default function BabacanGayrimenkulYatirimOrtakligiASPage() {
                         Kalem
                       </th>
                       <th className="px-4 py-3 text-left text-sm font-bold text-slate-700">
-                        2025
-                      </th>
-                      <th className="px-4 py-3 text-left text-sm font-bold text-slate-700">
-                        2024
+                        2024/6
                       </th>
                       <th className="px-4 py-3 text-left text-sm font-bold text-slate-700">
                         2023
+                      </th>
+                      <th className="px-4 py-3 text-left text-sm font-bold text-slate-700">
+                        2022
                       </th>
                     </tr>
                   </thead>
@@ -261,9 +257,9 @@ export default function BabacanGayrimenkulYatirimOrtakligiASPage() {
                         <td className="px-4 py-4 text-sm font-semibold text-slate-800">
                           {row.kalem}
                         </td>
-                        <td className="px-4 py-4 text-sm text-slate-700">{row.d2025}</td>
-                        <td className="px-4 py-4 text-sm text-slate-700">{row.d2024}</td>
+                        <td className="px-4 py-4 text-sm text-slate-700">{row.d2024_6}</td>
                         <td className="px-4 py-4 text-sm text-slate-700">{row.d2023}</td>
+                        <td className="px-4 py-4 text-sm text-slate-700">{row.d2022}</td>
                       </tr>
                     ))}
                   </tbody>
@@ -273,11 +269,11 @@ export default function BabacanGayrimenkulYatirimOrtakligiASPage() {
 
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
               <h2 className="mb-4 text-xl font-bold text-slate-900">
-                Babacan Gayrimenkul Yatırım Ortaklığı A.Ş. Halka Arz Yorumu
+                Şa-Ra Enerji İnşaat Tic. ve San. A.Ş. Halka Arz Yorumu
               </h2>
               <p className="text-sm leading-7 text-slate-600">
-                Babacan Gayrimenkul Yatırım Ortaklığı A.Ş. halka arz sürecinde yatırımcıların en çok
-                takip ettiği başlıklar arasında halka arz tarihi, fiyat aralığı, pay miktarı,
+                Şa-Ra Enerji İnşaat Tic. ve San. A.Ş. halka arz sürecinde yatırımcıların en çok takip
+                ettiği başlıklar arasında halka arz tarihi, fiyat aralığı, fiili dolaşımdaki pay,
                 dağıtım yöntemi, tahsisat oranları, fon kullanım alanları ve finansal görünüm yer
                 alıyor. Bu sayfada şirketin taslak izahname verileri daha sade ve analiz edilebilir
                 bir yapıda sunulmuştur.
@@ -318,13 +314,6 @@ export default function BabacanGayrimenkulYatirimOrtakligiASPage() {
 
               <div className="space-y-4">
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                  <div className="text-sm font-semibold text-slate-800">Halka Arz Satış Yöntemi</div>
-                  <p className="mt-2 text-sm text-slate-700">
-                    Sabit fiyatla talep toplama. En iyi gayret aracılığı.
-                  </p>
-                </div>
-
-                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                   <div className="text-sm font-semibold text-slate-800">
                     Dağıtılacak Pay Miktarı (Olası)
                   </div>
@@ -342,7 +331,7 @@ export default function BabacanGayrimenkulYatirimOrtakligiASPage() {
                 <div className="rounded-2xl border border-blue-200 bg-blue-50 p-4">
                   <div className="text-sm font-semibold text-blue-800">Fiyat İstikrarı</div>
                   <p className="mt-2 text-sm text-blue-900">
-                    Süre bilgisi henüz netleşmemiştir. İntegral Yatırım Menkul Değerler A.Ş.
+                    İlerleyen aşamalarda tamamlanacaktır.
                   </p>
                 </div>
 
@@ -355,7 +344,7 @@ export default function BabacanGayrimenkulYatirimOrtakligiASPage() {
 
                 <div className="rounded-2xl border border-cyan-200 bg-cyan-50 p-4">
                   <div className="text-sm font-semibold text-cyan-800">Halka Açıklık</div>
-                  <p className="mt-2 text-sm text-cyan-900">%25,01</p>
+                  <p className="mt-2 text-sm text-cyan-900">%20,02</p>
                 </div>
               </div>
             </section>
@@ -368,11 +357,11 @@ export default function BabacanGayrimenkulYatirimOrtakligiASPage() {
 
         <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <h2 className="mb-3 text-lg font-bold text-slate-900">
-            Babacan Gayrimenkul Yatırım Ortaklığı A.Ş. Halka Arz Değerlendirmesi
+            Şa-Ra Enerji İnşaat Tic. ve San. A.Ş. Halka Arz Değerlendirmesi
           </h2>
           <p className="text-sm leading-7 text-slate-600">
-            Babacan Gayrimenkul Yatırım Ortaklığı A.Ş. halka arz sayfasında yatırımcıların hızlı
-            analiz yapabilmesi için halka arz tarihi, halka arz fiyatı, lot miktarı, dağıtım
+            Şa-Ra Enerji İnşaat Tic. ve San. A.Ş. halka arz sayfasında yatırımcıların hızlı analiz
+            yapabilmesi için halka arz tarihi, halka arz fiyatı, fiili dolaşımdaki pay, dağıtım
             yöntemi, halka açıklık oranı, fon kullanım alanları, finansal veriler ve taahhüt
             detayları bir arada sunulmuştur. Sayfadaki bilgiler taslak izahnameye göre
             hazırlanmıştır ve resmi veriler açıklandıkça güncellenmelidir.

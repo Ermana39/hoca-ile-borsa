@@ -418,6 +418,7 @@ function slugify(text: string) {
 function getSirketKlasorAdi(label: string) {
   const ozelKlasorler: Record<string, string> = {
     "Başakkent Girişim Sermayesi Yatırım Ortaklığı A.Ş.": "basakkentgsyo",
+     "Türker Van Gölü Enerji Yatırım A.Ş.": "turkervangolu",
   };
 
   if (ozelKlasorler[label]) {
