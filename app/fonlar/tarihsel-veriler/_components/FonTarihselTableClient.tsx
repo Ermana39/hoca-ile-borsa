@@ -101,35 +101,35 @@ export default function FonTarihselTableClient({
 
   return (
     <>
-      <section className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
-        <div className="sticky top-0 z-30 overflow-hidden rounded-t-2xl border-b border-zinc-200 bg-white">
-          <div
-            ref={headerScrollRef}
-            className="overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+      <div className="sticky top-0 z-30 rounded-t-2xl border border-zinc-200 border-b-0 bg-white">
+        <div
+          ref={headerScrollRef}
+          className="overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+        >
+          <table
+            ref={headerTableRef}
+            className="w-full min-w-[1320px] border-collapse text-sm"
           >
-            <table
-              ref={headerTableRef}
-              className="w-full min-w-[1320px] border-collapse text-sm"
-            >
-              <thead className="bg-zinc-100 text-zinc-800">
-                <tr>
-                  {headers.map((header, index) => (
-                    <th
-                      key={`${header}-${index}`}
-                      className="px-4 py-4 text-left font-semibold whitespace-nowrap"
-                    >
-                      {header}
-                    </th>
-                  ))}
-                </tr>
-              </thead>
-            </table>
-          </div>
+            <thead className="bg-zinc-100 text-zinc-800">
+              <tr>
+                {headers.map((header, index) => (
+                  <th
+                    key={`${header}-${index}`}
+                    className="border-b border-zinc-200 px-4 py-4 text-left font-semibold whitespace-nowrap"
+                  >
+                    {header}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+          </table>
         </div>
+      </div>
 
+      <section className="overflow-hidden rounded-b-2xl border border-zinc-200 bg-white">
         <div
           ref={bodyScrollRef}
-          className="overflow-x-auto rounded-b-2xl [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+          className="overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
         >
           <table
             ref={bodyTableRef}
