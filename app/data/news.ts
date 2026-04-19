@@ -8,6 +8,13 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 990,
+    title: "Astor’da 11,2 Milyar TL’lik Hisse Satışı: %5,99 Pay Yabancı Kurumsallara Devredildi",
+    href: "/haber/haber-990",
+    image: "/haber990.png",
+    alt: "Haber 990 görseli",
+  },
+  {
     id: 991,
     title: "A101 halka arz mı oldu? Perakendede dev anlaşmanın perde arkası",
     href: "/haber/haber-991",
