@@ -89,7 +89,9 @@ export default function FonGetiriTableClient({
             ref={tableRef}
             className="w-full min-w-[1320px] border-collapse text-sm"
           >
-            <thead className="bg-zinc-100 text-zinc-800">{headers}</thead>
+            <thead className="sticky top-0 z-30 bg-zinc-100 text-zinc-800 shadow-[0_1px_0_0_rgba(228,228,231,1)]">
+              {headers}
+            </thead>
 
             <tbody>
               {rows.map((item, index) => (
