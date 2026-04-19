@@ -11,78 +11,131 @@ export default function FonTarihselTableClient({
   headers: string[];
   rows: CellValue[][];
 }) {
-  const tableScrollRef = useRef<HTMLDivElement | null>(null);
+  const headerScrollRef = useRef<HTMLDivElement | null>(null);
+  const bodyScrollRef = useRef<HTMLDivElement | null>(null);
   const fixedScrollRef = useRef<HTMLDivElement | null>(null);
   const fixedInnerRef = useRef<HTMLDivElement | null>(null);
-  const tableRef = useRef<HTMLTableElement | null>(null);
+  const headerTableRef = useRef<HTMLTableElement | null>(null);
+  const bodyTableRef = useRef<HTMLTableElement | null>(null);
 
   useEffect(() => {
-    const tableScroll = tableScrollRef.current;
+    const headerScroll = headerScrollRef.current;
+    const bodyScroll = bodyScrollRef.current;
     const fixedScroll = fixedScrollRef.current;
     const fixedInner = fixedInnerRef.current;
-    const table = tableRef.current;
+    const headerTable = headerTableRef.current;
+    const bodyTable = bodyTableRef.current;
 
-    if (!tableScroll || !fixedScroll || !fixedInner || !table) return;
+    if (
+      !headerScroll ||
+      !bodyScroll ||
+      !fixedScroll ||
+      !fixedInner ||
+      !headerTable ||
+      !bodyTable
+    ) {
+      return;
+    }
 
-    let syncingTable = false;
-    let syncingFixed = false;
+    let source: "header" | "body" | "fixed" | "" = "";
 
     const syncWidths = () => {
-      fixedInner.style.width = `${table.scrollWidth}px`;
-      fixedScroll.scrollLeft = tableScroll.scrollLeft;
+      const width = Math.max(headerTable.scrollWidth, bodyTable.scrollWidth);
+      fixedInner.style.width = `${width}px`;
+      headerScroll.scrollLeft = bodyScroll.scrollLeft;
+      fixedScroll.scrollLeft = bodyScroll.scrollLeft;
     };
 
-    const onTableScroll = () => {
-      if (syncingFixed) return;
-      syncingTable = true;
-      fixedScroll.scrollLeft = tableScroll.scrollLeft;
-      syncingTable = false;
+    const onHeaderScroll = () => {
+      if (source === "body" || source === "fixed") {
+        source = "";
+        return;
+      }
+      source = "header";
+      bodyScroll.scrollLeft = headerScroll.scrollLeft;
+      fixedScroll.scrollLeft = headerScroll.scrollLeft;
+    };
+
+    const onBodyScroll = () => {
+      if (source === "header" || source === "fixed") {
+        source = "";
+        return;
+      }
+      source = "body";
+      headerScroll.scrollLeft = bodyScroll.scrollLeft;
+      fixedScroll.scrollLeft = bodyScroll.scrollLeft;
     };
 
     const onFixedScroll = () => {
-      if (syncingTable) return;
-      syncingFixed = true;
-      tableScroll.scrollLeft = fixedScroll.scrollLeft;
-      syncingFixed = false;
+      if (source === "header" || source === "body") {
+        source = "";
+        return;
+      }
+      source = "fixed";
+      headerScroll.scrollLeft = fixedScroll.scrollLeft;
+      bodyScroll.scrollLeft = fixedScroll.scrollLeft;
     };
 
     syncWidths();
 
-    tableScroll.addEventListener("scroll", onTableScroll);
-    fixedScroll.addEventListener("scroll", onFixedScroll);
+    headerScroll.addEventListener("scroll", onHeaderScroll, { passive: true });
+    bodyScroll.addEventListener("scroll", onBodyScroll, { passive: true });
+    fixedScroll.addEventListener("scroll", onFixedScroll, { passive: true });
     window.addEventListener("resize", syncWidths);
 
+    let resizeObserver: ResizeObserver | null = null;
+    if (typeof ResizeObserver !== "undefined") {
+      resizeObserver = new ResizeObserver(syncWidths);
+      resizeObserver.observe(headerTable);
+      resizeObserver.observe(bodyTable);
+    }
+
     return () => {
-      tableScroll.removeEventListener("scroll", onTableScroll);
+      headerScroll.removeEventListener("scroll", onHeaderScroll);
+      bodyScroll.removeEventListener("scroll", onBodyScroll);
       fixedScroll.removeEventListener("scroll", onFixedScroll);
       window.removeEventListener("resize", syncWidths);
+      resizeObserver?.disconnect();
     };
   }, [headers, rows]);
 
   return (
     <>
       <section className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
+        <div className="sticky top-0 z-30 overflow-hidden rounded-t-2xl border-b border-zinc-200 bg-white">
+          <div
+            ref={headerScrollRef}
+            className="overflow-x-auto [&::-webkit-scrollbar]:hidden"
+            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+          >
+            <table
+              ref={headerTableRef}
+              className="w-full min-w-[1320px] border-collapse text-sm"
+            >
+              <thead className="bg-zinc-100 text-zinc-800">
+                <tr>
+                  {headers.map((header, index) => (
+                    <th
+                      key={`${header}-${index}`}
+                      className="px-4 py-4 text-left font-semibold whitespace-nowrap"
+                    >
+                      {header}
+                    </th>
+                  ))}
+                </tr>
+              </thead>
+            </table>
+          </div>
+        </div>
+
         <div
-          ref={tableScrollRef}
-          className="overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          ref={bodyScrollRef}
+          className="overflow-x-auto rounded-b-2xl [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           <table
-            ref={tableRef}
+            ref={bodyTableRef}
             className="w-full min-w-[1320px] border-collapse text-sm"
           >
-            <thead className="bg-zinc-100 text-zinc-800">
-              <tr>
-                {headers.map((header, index) => (
-                  <th
-                    key={`${header}-${index}`}
-                    className="px-4 py-4 text-left font-semibold whitespace-nowrap"
-                  >
-                    {header}
-                  </th>
-                ))}
-              </tr>
-            </thead>
-
             <tbody>
               {rows.map((row, rowIndex) => (
                 <tr
