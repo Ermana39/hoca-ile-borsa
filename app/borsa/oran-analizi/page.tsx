@@ -161,7 +161,7 @@ export default async function OranAnaliziPage() {
           <p className="mt-3 max-w-4xl text-sm leading-7 text-zinc-600 md:text-base">
             Oran analizi sayfası üzerinden şirketlerin finansal oran verilerini
             toplu şekilde inceleyebilir ve farklı şirketleri daha hızlı
-            karşılaştırabilirsiniz.
+            karşılaştırabilirsiniz. Ekranı sağa kaydırarak diğer sütunları inceleyebilirsiniz.
           </p>
 
           <div className="mt-4 text-sm font-semibold text-zinc-700">

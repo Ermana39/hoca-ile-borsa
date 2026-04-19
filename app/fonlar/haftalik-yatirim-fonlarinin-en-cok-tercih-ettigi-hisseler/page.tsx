@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
+import Script from "next/script";
 import * as XLSX from "xlsx";
 
 const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
@@ -184,6 +185,11 @@ function hucreDegeri(row: FonSatiri, key: ColumnKey) {
 export default function HaftalikYatirimFonlarininEnCokTercihEttigiHisselerPage() {
   const fonVerileri = excelOku();
 
+  const headerScrollId = "fon-tercih-header-scroll";
+  const headerWidthId = "fon-tercih-header-width";
+  const bodyScrollId = "fon-tercih-body-scroll";
+  const bodyWidthId = "fon-tercih-body-width";
+
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-[1600px]">
@@ -220,24 +226,36 @@ export default function HaftalikYatirimFonlarininEnCokTercihEttigiHisselerPage()
         </div>
 
         <div className="rounded-2xl border border-zinc-200 bg-white">
-          <div className="w-full overflow-x-auto pb-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-            <div className="inline-block min-w-full align-top">
-              <table className="min-w-[1900px] border-collapse text-sm whitespace-nowrap">
-                <thead className="bg-zinc-100">
-                  <tr>
-                    {columns.map((column) => (
-                      <th
-                        key={column.key}
-                        className={`border-b border-zinc-200 px-4 py-3 font-semibold text-zinc-800 ${
-                          column.align === "right" ? "text-right" : "text-left"
-                        }`}
-                      >
-                        {column.label}
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
+          <div className="sticky top-0 z-30 overflow-hidden rounded-t-2xl border-b border-zinc-200 bg-white">
+            <div
+              id={headerScrollId}
+              className="overflow-x-auto [&::-webkit-scrollbar]:hidden"
+              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+            >
+              <div id={headerWidthId} className="min-w-max">
+                <table className="min-w-[1900px] border-collapse text-sm whitespace-nowrap">
+                  <thead className="bg-zinc-100">
+                    <tr>
+                      {columns.map((column) => (
+                        <th
+                          key={column.key}
+                          className={`border-b border-zinc-200 px-4 py-3 font-semibold text-zinc-800 ${
+                            column.align === "right" ? "text-right" : "text-left"
+                          }`}
+                        >
+                          {column.label}
+                        </th>
+                      ))}
+                    </tr>
+                  </thead>
+                </table>
+              </div>
+            </div>
+          </div>
 
+          <div id={bodyScrollId} className="w-full overflow-x-auto pb-2">
+            <div id={bodyWidthId} className="inline-block min-w-full align-top">
+              <table className="min-w-[1900px] border-collapse text-sm whitespace-nowrap">
                 <tbody>
                   {fonVerileri.length > 0 ? (
                     fonVerileri.map((row, index) => (
@@ -312,6 +330,64 @@ export default function HaftalikYatirimFonlarininEnCokTercihEttigiHisselerPage()
           </p>
         </section>
       </div>
+
+      <Script id="fon-tercih-header-scroll-sync" strategy="afterInteractive">
+        {`
+          (function () {
+            const header = document.getElementById("${headerScrollId}");
+            const headerWidth = document.getElementById("${headerWidthId}");
+            const body = document.getElementById("${bodyScrollId}");
+            const bodyWidth = document.getElementById("${bodyWidthId}");
+
+            if (!header || !headerWidth || !body || !bodyWidth) return;
+
+            let source = "";
+
+            function syncWidths() {
+              const width = Math.max(headerWidth.scrollWidth, bodyWidth.scrollWidth);
+              headerWidth.style.width = width + "px";
+              bodyWidth.style.width = width + "px";
+              header.scrollLeft = body.scrollLeft;
+            }
+
+            header.addEventListener(
+              "scroll",
+              function () {
+                if (source === "body") {
+                  source = "";
+                  return;
+                }
+                source = "header";
+                body.scrollLeft = header.scrollLeft;
+              },
+              { passive: true }
+            );
+
+            body.addEventListener(
+              "scroll",
+              function () {
+                if (source === "header") {
+                  source = "";
+                  return;
+                }
+                source = "body";
+                header.scrollLeft = body.scrollLeft;
+              },
+              { passive: true }
+            );
+
+            syncWidths();
+
+            if (typeof ResizeObserver !== "undefined") {
+              const observer = new ResizeObserver(syncWidths);
+              observer.observe(headerWidth);
+              observer.observe(bodyWidth);
+            }
+
+            window.addEventListener("resize", syncWidths);
+          })();
+        `}
+      </Script>
     </main>
   );
 }
