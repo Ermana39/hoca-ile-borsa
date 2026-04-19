@@ -1,43 +1,24 @@
 import Link from "next/link";
 
 const egitimIcerikleri = [
-  {
-    title: "Temettü Nedir?",
-    href: "/temettu/temettu-egitimi/temettu-nedir",
-    description:
-      "Temettü, bir şirketin elde ettiği kârın belirli kısmını ortaklarıyla nakit veya bedelsiz pay şeklinde paylaşmasıdır. Borsada temettü yatırımı denildiğinde genelde yatırımcının hesabına nakit geçen kâr payı anlaşılır. Temettü almak, sadece hisseyi taşımaktan ibaret değildir; şirketin kârlılığı, nakit üretme gücü ve dağıtım politikası da önemlidir.",
-  },
-  {
-    title: "Brüt / Net Temettü Farkı",
-    href: "/temettu/temettu-egitimi/brut-net-temettu-farki",
-    description:
-      "Brüt temettü, şirketin hisse başına açıkladığı toplam kâr payıdır. Net temettü ise yasal kesintiler sonrası yatırımcının hesabına geçen gerçek tutardır. Yani ekranda gördüğünüz temettü miktarı ile hesabınıza geçen para her zaman aynı olmayabilir. Bu farkı bilmek, gerçek nakit getiriyi doğru hesaplamak için önemlidir.",
-  },
-  {
-    title: "Hak Kullanım Tarihi Ne Demek?",
-    href: "/temettu/temettu-egitimi/hak-kullanim-tarihi-ne-demek",
-    description:
-      "Hak kullanım tarihi, temettü alma hakkının resmen devreye girdiği gündür. Bir yatırımcının temettüden yararlanabilmesi için ilgili tarihten önce hisseye sahip olması gerekir. Bu tarih geldiğinde hisse fiyatında teorik bir düzeltme görülür. Bu nedenle temettüde en çok karıştırılan konulardan biri hak kullanım gününün ne zaman olduğu ve yatırımcıyı nasıl etkilediğidir.",
-  },
-  {
-    title: "Ödeme Tarihi Ne Demek?",
-    href: "/temettu/temettu-egitimi/odeme-tarihi-ne-demek",
-    description:
-      "Ödeme tarihi, hak kazanılan temettünün yatırımcı hesabına fiilen geçtiği gündür. Hak kullanım tarihi ile ödeme tarihi aynı gün olmayabilir. Bu yüzden bir yatırımcı temettü hakkını kazanmış olsa bile nakdin hesabına geçmesini birkaç gün bekleyebilir. Süreci doğru anlamak, portföy planlaması açısından önem taşır.",
-  },
-  {
-    title: "Temettü Verimi Nasıl Hesaplanır?",
-    href: "/temettu/temettu-egitimi/temettu-verimi-nasil-hesaplanir",
-    description:
-      "Temettü verimi, dağıtılan temettünün hisse fiyatına oranlanmasıyla hesaplanır ve yatırımcının aldığı kâr payının fiyata göre ne kadar güçlü olduğunu gösterir. Ancak yüksek temettü verimi tek başına yeterli değildir. Şirketin düzenli kâr üretip üretmediği, borçluluğu ve gelecekte de benzer dağıtım yapıp yapamayacağı birlikte değerlendirilmelidir.",
-  },
-  {
-    title: "Temettüden Sonra Fiyat Neden Düşer?",
-    href: "/temettu/temettu-egitimi/temettuden-sonra-fiyat-neden-duser",
-    description:
-      "Temettü sonrası hisse fiyatında görülen düşüş, çoğu zaman panik yapılacak bir durum değildir. Bunun nedeni, dağıtılan nakdin şirket bünyesinden çıkması ve teorik olarak hisse fiyatından düşülmesidir. Yani fiyatın geri gelmesi çoğu zaman teknik bir düzeltmedir. Bu mantığı bilmek, temettü günlerinde yanlış yorum yapmayı önler.",
-  },
+  { title: "Temettü nedir", href: "/temettu/temettu-egitimi/temettu-nedir" },
+  { title: "Brüt / net temettü farkı", href: "/temettu/temettu-egitimi/brut-net-temettu-farki" },
+  { title: "Hak kullanım tarihi ne demek", href: "/temettu/temettu-egitimi/hak-kullanim-tarihi-ne-demek" },
+  { title: "Ödeme tarihi ne demek", href: "/temettu/temettu-egitimi/odeme-tarihi-ne-demek" },
+  { title: "Temettü verimi nasıl hesaplanır", href: "/temettu/temettu-egitimi/temettu-verimi-nasil-hesaplanir" },
+  { title: "Temettüden sonra fiyat neden düşer", href: "/temettu/temettu-egitimi/temettuden-sonra-fiyat-neden-duser" },
 ];
+
+function ReklamAlani({ buyuk = false }: { buyuk?: boolean }) {
+  return (
+    <section
+      aria-label="Reklam alanı"
+      className={buyuk ? "min-h-[260px] w-full" : "min-h-[120px] w-full"}
+    >
+      <div className={buyuk ? "min-h-[260px] w-full" : "min-h-[120px] w-full"} />
+    </section>
+  );
+}
 
 export default function TemettuEgitimiPage() {
   return (
@@ -59,20 +40,47 @@ export default function TemettuEgitimiPage() {
           </Link>
         </div>
 
-        <h1 className="mb-6 text-3xl font-bold text-zinc-900">Temettü Eğitimi</h1>
+        <section className="mb-8 rounded-2xl bg-zinc-50 p-6">
+          <h1 className="mb-3 text-3xl font-bold text-zinc-900">Temettü Eğitimi</h1>
+          <p className="text-base leading-7 text-zinc-700">
+            Temettü eğitimi sayfasında, temettü yatırımında en çok merak edilen temel
+            kavramları daha sade ve anlaşılır şekilde inceleyebilirsiniz. Temettü nedir,
+            brüt ve net temettü farkı nasıl oluşur, hak kullanım tarihi ne anlama gelir,
+            ödeme tarihi neden önemlidir, temettü verimi nasıl hesaplanır ve temettü sonrası
+            hisse fiyatı neden düşer gibi konular bu bölümde adım adım ele alınır.
+          </p>
+        </section>
 
-        <div className="space-y-4">
+        <section className="mb-8">
+          <ReklamAlani />
+        </section>
+
+        <div className="space-y-3">
           {egitimIcerikleri.map((item) => (
             <Link
               key={item.title}
               href={item.href}
-              className="block rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-4 transition hover:bg-zinc-100"
+              className="block rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-4 text-base font-medium text-zinc-900 transition hover:bg-zinc-100"
             >
-              <div className="text-base font-semibold text-zinc-900">{item.title}</div>
-              <p className="mt-2 text-sm leading-7 text-zinc-600">{item.description}</p>
+              {item.title}
             </Link>
           ))}
         </div>
+
+        <section className="mt-8">
+          <ReklamAlani buyuk />
+        </section>
+
+        <section className="mt-8 rounded-2xl bg-zinc-50 p-6">
+          <h2 className="mb-3 text-xl font-bold text-zinc-900">Temettü Eğitimi Hakkında</h2>
+          <p className="text-base leading-7 text-zinc-700">
+            Bu temettü eğitimi bölümü, borsada temettü mantığını öğrenmek isteyen yatırımcılar
+            için hazırlanmıştır. Sayfada yer alan başlıklar; temettü kavramının temelini,
+            ödeme sürecini, verim hesaplamasını ve fiyat üzerindeki etkilerini daha bilinçli
+            yorumlayabilmeniz için düzenlenmiştir. Temettü hisseleriyle ilgilenen yatırımcılar
+            için temel bilgiler bu eğitim sayfasında toplu ve erişilebilir şekilde sunulmaktadır.
+          </p>
+        </section>
       </div>
     </main>
   );
