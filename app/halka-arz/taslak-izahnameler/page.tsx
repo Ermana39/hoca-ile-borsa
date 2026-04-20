@@ -363,14 +363,6 @@ Tezkim Tarımsal Kimya San. ve Tic. A.Ş.
 
 Kaymet Metal İmalat San. ve Tic. A.Ş.
 
-Mikro Yazılımevi Yazılım Hizmetleri Bilgisayar San. ve Tic. A.Ş.
-
-Sümer Faktoring A.Ş.
-
-Omega Elektrik Pano A.Ş.
-
-OutMedya İletişim A.Ş.`;
-
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
     variant === "icerik"

@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Multinet Kurumsal Hizmetler A.Ş. Halka Arz Detayları | Taslak İzahname ve Finansal Veriler",
+    "Akçelik Demir Çelik San. ve Tic. A.Ş. Halka Arz Detayları | Taslak İzahname ve Finansal Veriler",
   description:
-    "Multinet Kurumsal Hizmetler A.Ş. halka arz detayları, taslak izahname özeti, halka arz tarihi, fiyat aralığı, lot miktarı, dağıtım yöntemi, fon kullanım alanları ve finansal veriler.",
+    "Akçelik Demir Çelik San. ve Tic. A.Ş. halka arz detayları, taslak izahname özeti, halka arz tarihi, fiyat aralığı, lot miktarı, dağıtım yöntemi, aracı kurum bilgileri, finansal veriler ve halka açıklık oranı.",
 };
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "buyuk" }) {
@@ -21,71 +21,79 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "buyuk" }) {
   );
 }
 
-export default function MultinetKurumsalHizmetlerASPage() {
+export default function AkcelikDemirCelikSanVeTicASPage() {
   const summaryItems = [
     { label: "Halka Arz Tarihi", value: "Hazırlanıyor..." },
     { label: "Halka Arz Fiyatı / Aralığı", value: "Hazırlanıyor..." },
-    { label: "Dağıtım Yöntemi", value: "Eşit Dağıtım" },
-    { label: "Pay", value: "24.153.780 Lot" },
+    { label: "Dağıtım Yöntemi", value: "Oransal Dağıtım" },
+    { label: "Pay", value: "26.250.000 Lot" },
     {
       label: "Aracı Kurum",
-      value: "İnfo Yatırım Menkul Değerler A.Ş.",
+      value:
+        "A1 Capital Yatırım Menkul Değerler A.Ş.\nHalk Yatırım Menkul Değerler A.Ş.",
     },
-    { label: "Pazar", value: "Yıldız Pazar" },
-    { label: "Halka Açıklık", value: "%30" },
-    { label: "Fiyat İstikrarı", value: "Planlanmamaktadır" },
+    { label: "Aracılık Yapısı", value: "Konsorsiyum" },
+    { label: "BIST Kodu", value: "AKCEL" },
+    { label: "Halka Açıklık", value: "%15,58" },
   ];
 
   const halkaArzSekli = [
-    "Ortak Satışı: 24.153.780 Lot (Fin Tech Invest B.V.)",
+    "Sermaye Artırımı: 18.500.000 Lot",
+    "Ortak Satışı: 7.750.000 Lot (Salih Kılıç)",
   ];
 
   const fonKullanim = [
-    "Halka arz, mevcut ortak paylarının halka arz kapsamında satılması yoluyla gerçekleştirileceğinden Şirket herhangi bir gelir elde etmeyecektir.",
+    "%25-30 Makine ve ekipman yatırımlarının finansmanı.",
+    "%35-40 Hammadde tedariki ve işletme sermayesi finansmanı.",
+    "%30-35 Finansal borç ödemeleri.",
   ];
 
   const tahsisat = [
-    "... Lot (...) Yurt İçi Bireysel Yatırımcı",
-    "... Lot (...) Yurt İçi Kurumsal Yatırımcı",
-    "... Lot (...) Yurt Dışı Kurumsal Yatırımcı",
+    "... Lot - Yurtiçi Bireysel Yatırımcı",
+    "... Lot - Yurtiçi Kurumsal Yatırımcı",
   ];
 
   const finansalVeriler = [
     {
       kalem: "Hasılat",
-      d2023_6: "771,9 Milyon TL",
-      d2022: "847,8 Milyon TL",
-      d2021: "341,8 Milyon TL",
+      d2022: "4,1 Milyar TL",
+      d2021: "2,2 Milyar TL",
+      d2020: "828 Milyon TL",
     },
     {
       kalem: "Brüt Kar",
-      d2023_6: "441,1 Milyon TL",
-      d2022: "387,1 Milyon TL",
-      d2021: "162,6 Milyon TL",
+      d2022: "1 Milyar TL",
+      d2021: "565,3 Milyon TL",
+      d2020: "174 Milyon TL",
     },
   ];
 
   const oneCikanlar = [
     {
-      title: "Toplam Pay",
-      value: "24,15 Mn",
-      desc: "Taslak izahnamede yer alan toplam ortak satışı miktarı.",
+      title: "BIST Kodu",
+      value: "AKCEL",
+      desc: "Taslak izahnamede yer alan işlem kodu bilgisi.",
     },
     {
       title: "Halka Açıklık",
-      value: "%30",
+      value: "%15,58",
       desc: "Planlanan halka açıklık oranı.",
     },
     {
       title: "Dağıtım",
-      value: "Eşit",
-      desc: "Bireysele eşit dağıtım yöntemi uygulanacaktır.",
+      value: "Oransal",
+      desc: "Oransal dağıtım yöntemi ile planlanmaktadır.",
     },
     {
       title: "Fiyat İstikrarı",
-      value: "Yok",
-      desc: "Taslak izahnameye göre fiyat istikrarı planlanmamaktadır.",
+      value: "30 Gün",
+      desc: "Taslak izahnameye göre 30 gün fiyat istikrarı planlanmaktadır.",
     },
+  ];
+
+  const dagitimNotlari = [
+    "T1-T2 Kullanılamaz.",
+    "Dağıtılacak pay miktarı ilerleyen aşamalarda güncellenecektir.",
   ];
 
   return (
@@ -115,7 +123,7 @@ export default function MultinetKurumsalHizmetlerASPage() {
                   Halka Arz İncelemesi
                 </p>
                 <h1 className="text-2xl font-bold sm:text-3xl">
-                  Multinet Kurumsal Hizmetler A.Ş.
+                  Akçelik Demir Çelik San. ve Tic. A.Ş.
                 </h1>
                 <p className="mt-2 text-sm text-blue-100 sm:text-base">
                   Taslak izahname verilerine göre hazırlanmış özet halka arz sayfası
@@ -125,11 +133,11 @@ export default function MultinetKurumsalHizmetlerASPage() {
               <div className="grid grid-cols-2 gap-3 md:min-w-[320px]">
                 <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
                   <div className="text-xs text-blue-100">Toplam Pay</div>
-                  <div className="mt-1 text-lg font-bold">24.153.780</div>
+                  <div className="mt-1 text-lg font-bold">26.250.000</div>
                 </div>
                 <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
-                  <div className="text-xs text-blue-100">Halka Açıklık</div>
-                  <div className="mt-1 text-lg font-bold">%30</div>
+                  <div className="text-xs text-blue-100">BIST Kodu</div>
+                  <div className="mt-1 text-lg font-bold">AKCEL</div>
                 </div>
               </div>
             </div>
@@ -179,7 +187,7 @@ export default function MultinetKurumsalHizmetlerASPage() {
               <div className="mb-5 flex items-center justify-between">
                 <h2 className="text-xl font-bold text-slate-900">Halka Arz Şekli</h2>
                 <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
-                
+                  Taslak İzahname
                 </span>
               </div>
 
@@ -193,34 +201,28 @@ export default function MultinetKurumsalHizmetlerASPage() {
                   </div>
                 ))}
               </div>
-
-              <p className="mt-4 text-xs italic font-semibold text-slate-500">
-           
-              </p>
             </section>
 
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
               <h2 className="mb-5 text-xl font-bold text-slate-900">Fon Kullanım Yeri</h2>
 
-              <div className="grid gap-4">
-                <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4">
-                  <div className="mb-2 text-sm font-semibold text-emerald-800">
-                    Halka arz geliri durumu
+              <div className="grid gap-3">
+                {fonKullanim.map((item, index) => (
+                  <div
+                    key={index}
+                    className="rounded-2xl border border-emerald-200 bg-emerald-50 px-4 py-3 text-sm text-emerald-900"
+                  >
+                    {item}
                   </div>
-                  <div className="text-sm text-emerald-900">{fonKullanim[0]}</div>
-                </div>
+                ))}
               </div>
-
-              <p className="mt-4 text-xs italic font-semibold text-slate-500">
-                
-              </p>
             </section>
 
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
               <div className="mb-5 flex items-center justify-between">
                 <h2 className="text-xl font-bold text-slate-900">Finansal Görünüm</h2>
                 <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
-                  2023/6 - 2022 - 2021
+                  2022 - 2021 - 2020
                 </span>
               </div>
 
@@ -232,13 +234,13 @@ export default function MultinetKurumsalHizmetlerASPage() {
                         Kalem
                       </th>
                       <th className="px-4 py-3 text-left text-sm font-bold text-slate-700">
-                        2023/6
-                      </th>
-                      <th className="px-4 py-3 text-left text-sm font-bold text-slate-700">
                         2022
                       </th>
                       <th className="px-4 py-3 text-left text-sm font-bold text-slate-700">
                         2021
+                      </th>
+                      <th className="px-4 py-3 text-left text-sm font-bold text-slate-700">
+                        2020
                       </th>
                     </tr>
                   </thead>
@@ -251,30 +253,26 @@ export default function MultinetKurumsalHizmetlerASPage() {
                         <td className="px-4 py-4 text-sm font-semibold text-slate-800">
                           {row.kalem}
                         </td>
-                        <td className="px-4 py-4 text-sm text-slate-700">{row.d2023_6}</td>
                         <td className="px-4 py-4 text-sm text-slate-700">{row.d2022}</td>
                         <td className="px-4 py-4 text-sm text-slate-700">{row.d2021}</td>
+                        <td className="px-4 py-4 text-sm text-slate-700">{row.d2020}</td>
                       </tr>
                     ))}
                   </tbody>
                 </table>
               </div>
-
-              <p className="mt-4 text-xs italic font-semibold text-slate-500">
-              
-              </p>
             </section>
 
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
               <h2 className="mb-4 text-xl font-bold text-slate-900">
-                Multinet Kurumsal Hizmetler A.Ş. Halka Arz Yorumu
+                Akçelik Demir Çelik San. ve Tic. A.Ş. Halka Arz Yorumu
               </h2>
               <p className="text-sm leading-7 text-slate-600">
-                Multinet Kurumsal Hizmetler A.Ş. halka arz sürecinde yatırımcıların en çok takip
-                ettiği başlıklar arasında halka arz tarihi, fiyat aralığı, pay miktarı, dağıtım
-                yöntemi, halka açıklık oranı, fiyat istikrarı, satmama taahhüdü ve finansal görünüm
-                yer alıyor. Bu sayfada şirketin taslak izahname verileri daha sade ve analiz
-                edilebilir bir yapıda sunulmuştur.
+                Akçelik Demir Çelik San. ve Tic. A.Ş. halka arz sürecinde yatırımcıların en çok
+                takip ettiği başlıklar arasında halka arz tarihi, fiyat aralığı, pay miktarı,
+                dağıtım yöntemi, aracı kurum bilgileri, halka açıklık oranı, tahsisat yapısı ve
+                finansal görünüm yer alıyor. Bu sayfada şirketin taslak izahname verileri daha sade
+                ve analiz edilebilir bir yapıda sunulmuştur.
               </p>
             </section>
           </div>
@@ -294,17 +292,15 @@ export default function MultinetKurumsalHizmetlerASPage() {
                 ))}
               </div>
 
-              <p className="mt-4 text-xs italic font-semibold text-slate-500">
-              
-              </p>
-
               <div className="mt-4 space-y-3">
-                <div className="rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm font-medium text-amber-900">
-                  Bireysele Eşit Dağıtım.
-                </div>
-                <div className="rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm font-medium text-amber-900">
-                  T1-T2 Kullanılamaz.
-                </div>
+                {dagitimNotlari.map((item, index) => (
+                  <div
+                    key={index}
+                    className="rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm font-medium text-amber-900"
+                  >
+                    {item}
+                  </div>
+                ))}
               </div>
             </section>
 
@@ -324,13 +320,16 @@ export default function MultinetKurumsalHizmetlerASPage() {
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                   <div className="text-sm font-semibold text-slate-800">Aracı Kurum</div>
                   <p className="mt-2 text-sm text-slate-700">
-                    İnfo Yatırım Menkul Değerler A.Ş.
+                    A1 Capital Yatırım Menkul Değerler A.Ş.
+                  </p>
+                  <p className="mt-1 text-sm text-slate-700">
+                    Halk Yatırım Menkul Değerler A.Ş.
                   </p>
                 </div>
 
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                  <div className="text-sm font-semibold text-slate-800">Pazar</div>
-                  <p className="mt-2 text-sm text-slate-700">Yıldız Pazar</p>
+                  <div className="text-sm font-semibold text-slate-800">Aracılık Yapısı</div>
+                  <p className="mt-2 text-sm text-slate-700">Konsorsiyum</p>
                 </div>
               </div>
             </section>
@@ -341,27 +340,18 @@ export default function MultinetKurumsalHizmetlerASPage() {
               <div className="space-y-4">
                 <div className="rounded-2xl border border-blue-200 bg-blue-50 p-4">
                   <div className="text-sm font-semibold text-blue-800">Fiyat İstikrarı</div>
-                  <p className="mt-2 text-sm text-blue-900">Planlanmamaktadır.</p>
-                  <p className="mt-2 text-xs italic font-semibold text-blue-700">
-                  
-                  </p>
+                  <p className="mt-2 text-sm text-blue-900">30 gün.</p>
                 </div>
 
                 <div className="rounded-2xl border border-indigo-200 bg-indigo-50 p-4">
                   <div className="text-sm font-semibold text-indigo-800">Satmama Taahhüdü</div>
                   <p className="mt-2 text-sm text-indigo-900">1 Yıl, İhraççı.</p>
                   <p className="mt-1 text-sm text-indigo-900">1 Yıl, Ortaklar.</p>
-                  <p className="mt-2 text-xs italic font-semibold text-indigo-700">
-                 
-                  </p>
                 </div>
 
                 <div className="rounded-2xl border border-cyan-200 bg-cyan-50 p-4">
                   <div className="text-sm font-semibold text-cyan-800">Halka Açıklık</div>
-                  <p className="mt-2 text-sm text-cyan-900">%30.</p>
-                  <p className="mt-2 text-xs italic font-semibold text-cyan-700">
-            
-                  </p>
+                  <p className="mt-2 text-sm text-cyan-900">%15,58.</p>
                 </div>
               </div>
             </section>
@@ -374,13 +364,13 @@ export default function MultinetKurumsalHizmetlerASPage() {
 
         <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <h2 className="mb-3 text-lg font-bold text-slate-900">
-            Multinet Kurumsal Hizmetler A.Ş. Halka Arz Değerlendirmesi
+            Akçelik Demir Çelik San. ve Tic. A.Ş. Halka Arz Değerlendirmesi
           </h2>
           <p className="text-sm leading-7 text-slate-600">
-            Multinet Kurumsal Hizmetler A.Ş. halka arz sayfasında yatırımcıların hızlı analiz
+            Akçelik Demir Çelik San. ve Tic. A.Ş. halka arz sayfasında yatırımcıların hızlı analiz
             yapabilmesi için halka arz tarihi, halka arz fiyatı, lot miktarı, dağıtım yöntemi,
-            halka açıklık oranı, fiyat istikrarı, satmama taahhüdü, tahsisat yapısı ve finansal
-            veriler bir arada sunulmuştur. Sayfadaki bilgiler taslak izahnameye göre hazırlanmıştır.
+            aracı kurum bilgileri, halka açıklık oranı, tahsisat yapısı ve finansal veriler bir
+            arada sunulmuştur. Sayfadaki bilgiler taslak izahnameye göre hazırlanmıştır.
           </p>
         </section>
       </div>
