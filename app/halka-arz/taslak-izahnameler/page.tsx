@@ -361,7 +361,7 @@ Hdm Çelik Boru San. ve Tic. A.Ş.
 
 Tezkim Tarımsal Kimya San. ve Tic. A.Ş.
 
-Kaymet Metal İmalat San. ve Tic. A.Ş.
+Kaymet Metal İmalat San. ve Tic. A.Ş.`;
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
@@ -410,7 +410,7 @@ function slugify(text: string) {
 function getSirketKlasorAdi(label: string) {
   const ozelKlasorler: Record<string, string> = {
     "Başakkent Girişim Sermayesi Yatırım Ortaklığı A.Ş.": "basakkentgsyo",
-     "Türker Vangölü Enerji Yatırım A.Ş.": "turkervangolu",
+    "Türker Vangölü Enerji Yatırım A.Ş.": "turkervangolu",
   };
 
   if (ozelKlasorler[label]) {
