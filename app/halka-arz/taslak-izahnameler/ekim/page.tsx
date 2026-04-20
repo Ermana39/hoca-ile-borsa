@@ -1,0 +1,385 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+
+export const metadata: Metadata = {
+  title:
+    "(Intercity) Ekim Turizm Tic. ve San. A.Ş. Halka Arz Detayları 2026 | Taslak İzahname ve Finansal Veriler",
+  description:
+    "(Intercity) Ekim Turizm Tic. ve San. A.Ş. halka arz detayları, taslak izahname özeti, halka arz tarihi, fiyat aralığı, lot miktarı, ek pay, bist kodu, dağıtım yöntemi, fon kullanım alanları ve finansal veriler.",
+};
+
+function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "buyuk" }) {
+  const alanClass =
+    variant === "buyuk"
+      ? "min-h-[220px] sm:min-h-[260px] lg:min-h-[320px]"
+      : "min-h-[110px] sm:min-h-[120px] lg:min-h-[140px]";
+
+  return (
+    <section aria-label="Reklam alanı" className={`w-full ${alanClass}`}>
+      <div className={`w-full ${alanClass}`} />
+    </section>
+  );
+}
+
+export default function IntercityEkimTurizmTicVeSanASPage() {
+  const summaryItems = [
+    { label: "Halka Arz Tarihi", value: "Hazırlanıyor" },
+    { label: "Halka Arz Fiyatı / Aralığı", value: "Hazırlanıyor" },
+    { label: "Dağıtım Yöntemi", value: "Eşit Dağıtım" },
+    { label: "Pay", value: "24.890.068 Lot" },
+    { label: "Ek Pay", value: "3.829.241 Lot" },
+    {
+      label: "Aracı Kurum",
+      value:
+        "Ak Yatırım Menkul Değerler A.Ş.\nVakıf Yatırım Menkul Değerler A.Ş.",
+    },
+    { label: "BIST Kodu", value: "EKIM" },
+    { label: "Pazar", value: "Yıldız Pazar" },
+  ];
+
+  const halkaArzSekli = [
+    "Sermaye Artırımı: 19.146.205 Lot",
+    "Ortak Satışı: 5.743.861 Lot (Ali Vural Ak)",
+    "Ek Ortak Satışı: 3.829.241 Lot (Ali Vural Ak)",
+  ];
+
+  const fonKullanim = [
+    "%65 Kiralamada kullanılacak kara araçlarının satın alınması",
+    "%10 İşletme sermayesi",
+    "%25 Kredi borçlarının ödenmesi",
+  ];
+
+  const tahsisat = [
+    "Yurt İçi Bireysel Yatırımcı: Açıklanmadı",
+    "Grup Çalışanları: Açıklanmadı",
+    "Yurt İçi Kurumsal Yatırımcı: Açıklanmadı",
+    "Ek satış için herhangi bir sınırlama yoktur.",
+  ];
+
+  const finansalVeriler = [
+    {
+      kalem: "Hasılat",
+      d2023_9: "4,2 Milyar TL",
+      d2022: "3,1 Milyar TL",
+      d2021: "1,8 Milyar TL",
+    },
+    {
+      kalem: "Brüt Kâr",
+      d2023_9: "3,0 Milyar TL",
+      d2022: "2,1 Milyar TL",
+      d2021: "932,9 Milyon TL",
+    },
+  ];
+
+  const oneCikanlar = [
+    {
+      title: "BIST Kodu",
+      value: "EKIM",
+      desc: "Taslak izahnamede yer alan işlem kodu bilgisi.",
+    },
+    {
+      title: "Halka Açıklık",
+      value: "%25",
+      desc: "Ek satış dahil planlanan halka açıklık oranı.",
+    },
+    {
+      title: "Fiyat İstikrarı",
+      value: "30 Gün",
+      desc: "30 gün fiyat istikrarı planlanıyor. Ek satıştan elde edilen gelir kullanılacaktır.",
+    },
+    {
+      title: "Tahmini Takvim",
+      value: "2024 1. Yarı",
+      desc: "2024 yılının birinci yarısında tamamlanması planlanmaktadır.",
+    },
+  ];
+
+  return (
+    <main className="min-h-screen bg-slate-50 text-slate-900">
+      <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <div className="mb-6 flex flex-wrap gap-3">
+          <Link
+            href="/"
+            className="inline-flex items-center rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 transition hover:bg-zinc-100"
+          >
+            Ana Sayfa
+          </Link>
+
+          <Link
+            href="/halka-arz/taslak-izahnameler"
+            className="inline-flex items-center rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 transition hover:bg-zinc-100"
+          >
+            Geri
+          </Link>
+        </div>
+
+        <section className="mb-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+          <div className="border-b border-slate-200 bg-gradient-to-r from-indigo-600 to-blue-600 px-6 py-7 text-white">
+            <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+              <div>
+                <p className="mb-2 inline-flex rounded-full bg-white/15 px-3 py-1 text-xs font-semibold tracking-wide">
+                  Halka Arz İncelemesi
+                </p>
+                <h1 className="text-2xl font-bold sm:text-3xl">
+                  (Intercity) Ekim Turizm Tic. ve San. A.Ş.
+                </h1>
+                <p className="mt-2 text-sm text-blue-100 sm:text-base">
+                  Taslak izahname verilerine göre hazırlanmış özet halka arz sayfası
+                </p>
+              </div>
+
+              <div className="grid grid-cols-2 gap-3 md:min-w-[320px]">
+                <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
+                  <div className="text-xs text-blue-100">Toplam Pay</div>
+                  <div className="mt-1 text-lg font-bold">24.890.068</div>
+                </div>
+                <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
+                  <div className="text-xs text-blue-100">BIST Kodu</div>
+                  <div className="mt-1 text-lg font-bold">EKIM</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="grid gap-4 p-6 sm:grid-cols-2 xl:grid-cols-3">
+            {summaryItems.map((item) => (
+              <div
+                key={item.label}
+                className="rounded-2xl border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-300 hover:bg-white"
+              >
+                <div className="text-sm font-medium text-slate-500">{item.label}</div>
+                <div className="mt-2 whitespace-pre-line text-base font-semibold text-slate-900">
+                  {item.value}
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-8">
+          <ReklamAlani />
+        </section>
+
+        <section className="mb-8">
+          <div className="mb-4 flex items-center justify-between">
+            <h2 className="text-xl font-bold text-slate-900">Öne Çıkan Noktalar</h2>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+            {oneCikanlar.map((item) => (
+              <div
+                key={item.title}
+                className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm"
+              >
+                <div className="text-sm font-medium text-slate-500">{item.title}</div>
+                <div className="mt-2 text-2xl font-bold text-blue-700">{item.value}</div>
+                <p className="mt-3 text-sm leading-6 text-slate-600">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="grid gap-8 xl:grid-cols-3">
+          <div className="space-y-8 xl:col-span-2">
+            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <div className="mb-5 flex items-center justify-between">
+                <h2 className="text-xl font-bold text-slate-900">Halka Arz Şekli</h2>
+                <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
+                  Taslak İzahname
+                </span>
+              </div>
+
+              <div className="grid gap-3">
+                {halkaArzSekli.map((item, index) => (
+                  <div
+                    key={index}
+                    className="rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm font-medium text-slate-700"
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </section>
+
+            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h2 className="mb-5 text-xl font-bold text-slate-900">Fon Kullanım Yeri</h2>
+
+              <div className="grid gap-4 md:grid-cols-3">
+                <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4">
+                  <div className="mb-2 text-sm font-semibold text-emerald-800">
+                    Araç alımları
+                  </div>
+                  <div className="text-sm text-emerald-900">{fonKullanim[0]}</div>
+                </div>
+
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                  <div className="mb-2 text-sm font-semibold text-slate-800">
+                    İşletme sermayesi
+                  </div>
+                  <div className="text-sm text-slate-700">{fonKullanim[1]}</div>
+                </div>
+
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                  <div className="mb-2 text-sm font-semibold text-slate-800">
+                    Kredi borçları
+                  </div>
+                  <div className="text-sm text-slate-700">{fonKullanim[2]}</div>
+                </div>
+              </div>
+            </section>
+
+            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <div className="mb-5 flex items-center justify-between">
+                <h2 className="text-xl font-bold text-slate-900">Finansal Görünüm</h2>
+                <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
+                  2023/9 - 2022 - 2021
+                </span>
+              </div>
+
+              <div className="overflow-x-auto">
+                <table className="min-w-full overflow-hidden rounded-2xl border border-slate-200">
+                  <thead className="bg-slate-100">
+                    <tr>
+                      <th className="px-4 py-3 text-left text-sm font-bold text-slate-700">
+                        Kalem
+                      </th>
+                      <th className="px-4 py-3 text-left text-sm font-bold text-slate-700">
+                        2023/9
+                      </th>
+                      <th className="px-4 py-3 text-left text-sm font-bold text-slate-700">
+                        2022
+                      </th>
+                      <th className="px-4 py-3 text-left text-sm font-bold text-slate-700">
+                        2021
+                      </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {finansalVeriler.map((row, index) => (
+                      <tr
+                        key={row.kalem}
+                        className={index % 2 === 0 ? "bg-white" : "bg-slate-50"}
+                      >
+                        <td className="px-4 py-4 text-sm font-semibold text-slate-800">
+                          {row.kalem}
+                        </td>
+                        <td className="px-4 py-4 text-sm text-slate-700">{row.d2023_9}</td>
+                        <td className="px-4 py-4 text-sm text-slate-700">{row.d2022}</td>
+                        <td className="px-4 py-4 text-sm text-slate-700">{row.d2021}</td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </section>
+
+            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h2 className="mb-4 text-xl font-bold text-slate-900">
+                (Intercity) Ekim Turizm Tic. ve San. A.Ş. Halka Arz Yorumu
+              </h2>
+              <p className="text-sm leading-7 text-slate-600">
+                (Intercity) Ekim Turizm Tic. ve San. A.Ş. halka arz sürecinde yatırımcıların en çok
+                takip ettiği başlıklar arasında halka arz tarihi, fiyat aralığı, pay miktarı, ek
+                pay, bist kodu, dağıtım yöntemi, fon kullanım alanları ve finansal görünüm yer
+                alıyor. Bu sayfada şirketin taslak izahname verileri daha sade ve analiz edilebilir
+                bir yapıda sunulmuştur.
+              </p>
+            </section>
+          </div>
+
+          <aside className="space-y-8">
+            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h2 className="mb-5 text-xl font-bold text-slate-900">Tahsisat Grupları</h2>
+
+              <div className="space-y-3">
+                {tahsisat.map((item, index) => (
+                  <div
+                    key={index}
+                    className="rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900"
+                  >
+                    {item}
+                  </div>
+                ))}
+              </div>
+
+              <div className="mt-4 space-y-3">
+                <div className="rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm font-medium text-amber-900">
+                  Bireysel / Grup Çalışanları Eşit Dağıtım.
+                </div>
+                <div className="rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm font-medium text-amber-900">
+                  T1-T2 Kullanılamaz.
+                </div>
+              </div>
+            </section>
+
+            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h2 className="mb-5 text-xl font-bold text-slate-900">Diğer Bilgiler</h2>
+
+              <div className="space-y-4">
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                  <div className="text-sm font-semibold text-slate-800">
+                    Dağıtılacak Pay Miktarı (Olası)
+                  </div>
+                  <p className="mt-2 text-sm text-slate-700 italic">
+                    İlerleyen aşamalarda tamamlanacaktır.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                  <div className="text-sm font-semibold text-slate-800">
+                    Tahmini Halka Arz Takvimi
+                  </div>
+                  <p className="mt-2 text-sm text-slate-700">
+                    2024 yılının birinci yarısında tamamlanması planlanmaktadır.
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h2 className="mb-5 text-xl font-bold text-slate-900">Taahhüt Özeti</h2>
+
+              <div className="space-y-4">
+                <div className="rounded-2xl border border-blue-200 bg-blue-50 p-4">
+                  <div className="text-sm font-semibold text-blue-800">Fiyat İstikrarı</div>
+                  <p className="mt-2 text-sm text-blue-900">
+                    30 gün. Ek satıştan elde edilen gelir kullanılacaktır.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-indigo-200 bg-indigo-50 p-4">
+                  <div className="text-sm font-semibold text-indigo-800">Satmama Taahhüdü</div>
+                  <p className="mt-2 text-sm text-indigo-900">
+                    1 yıl ihraççı, 1 yıl ortaklar.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-cyan-200 bg-cyan-50 p-4">
+                  <div className="text-sm font-semibold text-cyan-800">Halka Açıklık</div>
+                  <p className="mt-2 text-sm text-cyan-900">%25, ek satış dahil.</p>
+                </div>
+              </div>
+            </section>
+          </aside>
+        </section>
+
+        <section className="mt-8">
+          <ReklamAlani variant="buyuk" />
+        </section>
+
+        <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h2 className="mb-3 text-lg font-bold text-slate-900">
+            (Intercity) Ekim Turizm Tic. ve San. A.Ş. Halka Arz Değerlendirmesi
+          </h2>
+          <p className="text-sm leading-7 text-slate-600">
+            (Intercity) Ekim Turizm Tic. ve San. A.Ş. halka arz sayfasında yatırımcıların hızlı
+            analiz yapabilmesi için halka arz tarihi, halka arz fiyatı, lot miktarı, ek pay, bist
+            kodu, dağıtım yöntemi, halka açıklık oranı, fon kullanım alanları, finansal veriler ve
+            taahhüt detayları bir arada sunulmuştur. Sayfadaki bilgiler taslak izahnameye göre
+            hazırlanmıştır ve resmi veriler açıklandıkça güncellenmelidir.
+          </p>
+        </section>
+      </div>
+    </main>
+  );
+}
