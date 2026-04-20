@@ -49,26 +49,4 @@ export const newsItems: NewsItem[] = [
     image: "/haber995.png",
     alt: "Haber 995 görseli",
   },
-    {
-    id: 996,
-    title: "IMF, Türkiye büyüme tahminini düşürdü",
-    href: "/haber/haber-996",
-    image: "/haber996.png",
-    alt: "Haber 996 görseli",
-  },
-  {
-    id: 997,
-    title: "Morgan Stanley: S&P 500 Endeksini İran Gerginliğine Karşı Şirket Karları Koruyor",
-    href: "/haber/haber-997",
-    image: "/haber997.png",
-    alt: "Morgan Stanley: S&P 500 Endeksini İran Gerginliğine Karşı Şirket Karları Koruyor",
-  },
-  {
-    id: 998,
-    title: "Fitch, Türkiye’nin kredi notunu “BB-” seviyesinde teyit etti; görünüm “durağan” oldu",
-    href: "/haber/haber-998",
-    image: "/haber998.png",
-    alt: "Fitch, Türkiye’nin kredi notunu “BB-” seviyesinde teyit etti; görünüm “durağan” oldu",
-  },
-  
 ];
