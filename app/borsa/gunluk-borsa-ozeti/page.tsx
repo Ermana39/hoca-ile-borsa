@@ -2,120 +2,128 @@ import Image from "next/image";
 import Link from "next/link";
 
 const bistVeri = {
-  tarih: "20.04.2026",
-  kapanis: "14587.93",
-  degisimYuzde: 2.72,
+  tarih: "21.04.2026",
+  kapanis: "14484.91",
+  degisimYuzde: -0.71,
 };
 
 const tumYukselenler = [
-  { kod: "HDFGS", fark: "+10,00%" },
-  { kod: "BURCE", fark: "+10,00%" },
-  { kod: "EFOR", fark: "+10,00%" },
-  { kod: "KLRHO", fark: "+10,00%" },
-  { kod: "CLEBI", fark: "+9,99%" },
- 
+  { kod: "ZGYO", fark: "+10,00%" },
+  { kod: "ANELI", fark: "+10,00%" },
+  { kod: "DOFRB", fark: "+10,00%" },
+   { kod: "TKNSA", fark: "+10,00%" },
+  { kod: "KONTR", fark: "+9,98%" },
+
 ];
 
 const tumDusenler = [
-  
-  { kod: "ARZUM", fark: "-9,94%" },
-  { kod: "MAALT", fark: "-9,68%" },
-  { kod: "ENSRI", fark: "-7,74%" },
-  { kod: "AGYAZ", fark: "-7,16%" },
-  { kod: "NIBAS", fark: "-6,89%" },
-  
+  { kod: "SVGYO", fark: "-10,00%" },
+  { kod: "CRFSA", fark: "-10,00%" },
+  { kod: "OZATD", fark: "-9,99%" },
+  { kod: "TERA", fark: "-9,97%" },
+  { kod: "FENER", fark: "-9,97%" },
+ 
 ];
 
 const tumHacimliler = [
-  { kod: "THYAO", hacim: "35.570.677.074" },
-  { kod: "SASA", hacim: "34.031.655.624" },
-  { kod: "YKBNK", hacim: "15.254.096.577" },
-  { kod: "ISCTR", hacim: "14.631.400.961" },
-  { kod: "AKBNK", hacim: "13.834.492.750" },
+  { kod: "THYAO", hacim: "20.431.250.587" },
+  { kod: "SASA", hacim: "16.548.260.648" },
+  { kod: "ASTOR", hacim: "11.601.184.380" },
+  { kod: "AKBNK", hacim: "10.006.141.505" },
+  { kod: "TEHOL", hacim: "9.865.036.272" },
 
 ];
 
 const tumParaGirisi = [
-  { kod: "AKBNK", tutar: "+353.324.474" },
-  { kod: "GARAN", tutar: "+288.468.031" },
-  { kod: "ISCTR", tutar: "+250.750.646" },
-  { kod: "EREGL", tutar: "+244.191.767" },
-  { kod: "TERA", tutar: "+189.832.507" },
- 
+  { kod: "ASTOR", tutar: "+279.103.098" },
+  { kod: "THYAO", tutar: "+231.512.965" },
+  { kod: "KTLEV", tutar: "+159.451.672" },
+  { kod: "TUPRS", tutar: "+97.170.981" },
+  { kod: "ISCTR", tutar: "+90.852.207" },
+
 ];
 
 const tumParaCikisi = [
-  { kod: "TUPRS", tutar: "-319.423.360" },
-  { kod: "TAVHL", tutar: "-150.857.221" },
-  { kod: "THYAO", tutar: "-79.857.345" },
-  { kod: "OYAKC", tutar: "-33.687.349" },
-  { kod: "ARZUM", tutar: "-32.260.954" },
+  { kod: "SASA", tutar: "-272.578.386" },
+  { kod: "AKBNK", tutar: "-239.272.341" },
+  { kod: "ASELS", tutar: "-187.375.207" },
+  { kod: "GLRMK", tutar: "-90.310.216" },
+  { kod: "SAHOL", tutar: "-80.400.087" },
 
 ];
 
 const enCokAlisYapanKurumlar = [
-  { kurum: "BANK OF AME", hacim: "13.566.519.622", oran: "%69,92" },
-  { kurum: "TERA", hacim: "2.318.881.556", oran: "%11,95" },
-  { kurum: "TACIRLER", hacim: "905.646.886", oran: "%4,67" },
-  { kurum: "QNB YATIRIM", hacim: "778.593.128", oran: "%4,01" },
-  { kurum: "UNLU", hacim: "492.188.897", oran: "%2,54" },
+  { kurum: "TERA", hacim: "3.828.464.964", oran: "%42,59" },
+  { kurum: "HSBC", hacim: "1.052.164.938", oran: "%11,70" },
+  { kurum: "MIDAS", hacim: "754.801.914", oran: "%8,40" },
+  { kurum: "GARANTI BBVA", hacim: "642.853.269", oran: "%7,15" },
+  { kurum: "A1 CAPITAL", hacim: "445.265.424", oran: "%4,95" },
 ];
 
 const enCokSatisYapanKurumlar = [
-  { kurum: "GARANTI BBV.", hacim: "-2.968.726.394", oran: "%15,30" },
-  { kurum: "BULLS YATIRIM", hacim: "-2.139.873.969", oran: "%11,03" },
-  { kurum: "IS", hacim: "-1.868.978.007", oran: "%9,63" },
-  { kurum: "DESTEK", hacim: "-1.282.338.495", oran: "%6,61" },
-  { kurum: "TEB", hacim: "-1.121.467.437", oran: "%5,78" },
+  { kurum: "INFO", hacim: "-2.279.768.996", oran: "%25,36" },
+  { kurum: "BANK OF AMER", hacim: "-1.857.598.418", oran: "%20,66" },
+  { kurum: "YATIRIM FINAN", hacim: "-1.242.176.587", oran: "%13,82" },
+  { kurum: "UNLU", hacim: "-797.553.080", oran: "%8,87" },
+  { kurum: "TACIRLER", hacim: "-450.720.603", oran: "%5,01" },
 ];
 
 const enCokHacimYapanKurumlar = [
-  { kurum: "YAPI KREDI", hacim: "118.148.862.294", oran: "%14,72" },
-  { kurum: "BANK OF AME", hacim: "111.013.649.456", oran: "%13,83" },
-  { kurum: "IS", hacim: "71.417.299.099", oran: "%8,90" },
-  { kurum: "AK", hacim: "62.486.371.431", oran: "%7,78" },
-  { kurum: "TACIRLER", hacim: "40.087.513.069", oran: "%4,99" },
+  { kurum: "YAPI KREDI", hacim: "87.475.337.293", oran: "%13,99" },
+  { kurum: "BANK OF AMER", hacim: "75.961.995.353", oran: "%12,14" },
+  { kurum: "IS", hacim: "60.888.659.872", oran: "%9,73" },
+  { kurum: "AK", hacim: "50.662.568.364", oran: "%8,10" },
+  { kurum: "DENIZ", hacim: "26.392.740.914", oran: "%4,22" },
 ];
 
 const ekonomikTakvimVerileri = [
   {
-    tarih: "17.04.2026",
+    tarih: "20.04.2026",
     kayitlar: [
       {
         saat: "10:00",
         ulke: "TR",
-        gosterge: "Yeni Kurulan Şirket Sayısı (adet)",
-        onem: "sari" as const,
-        aciklanan: "8.379",
-        beklenti: "-",
-        onceki: "9.432",
-      },
-      {
-        saat: "10:00",
-        ulke: "TR",
-        gosterge: "Kapanan Şirket Sayısı (adet)",
-        onem: "sari" as const,
-        aciklanan: "1.809",
-        beklenti: "-",
-        onceki: "1.621",
-      },
-      {
-        saat: "10:00",
-        ulke: "TR",
-        gosterge: "Konut Satışları",
+        gosterge: "Uluslararası Yatırım Pozisyonu (milyar usd)",
         onem: "turuncu" as const,
-        aciklanan: "113.367",
+        aciklanan: "-347.6",
         beklenti: "-",
-        onceki: "124.549",
+        onceki: "-345.2",
       },
       {
-        saat: "23:00",
+        saat: "10:00",
         ulke: "TR",
-        gosterge: "Türkiye'nin Uzun Vadeli Döviz Cinsi Kredi Notu (Standard & Poor's)",
-        onem: "kirmizi" as const,
-        aciklanan: "-",
+        gosterge: "Türkiye'nin Uluslararası Yükümlülükleri (milyar usd)",
+        onem: "turuncu" as const,
+        aciklanan: "786.8",
         beklenti: "-",
-        onceki: "BB- durağan",
+        onceki: "791.5",
+      },
+      {
+        saat: "17:00",
+        ulke: "TR",
+        gosterge: "Merkezi Yönetim Borç Stoku (milyar tl)",
+        onem: "turuncu" as const,
+        aciklanan: "14.447",
+        beklenti: "-",
+        onceki: "14.396",
+      },
+      {
+        saat: "17:00",
+        ulke: "TR",
+        gosterge: "Merkezi Yönetim İç Borç Stoku (milyar tl)",
+        onem: "turuncu" as const,
+        aciklanan: "10.339",
+        beklenti: "-",
+        onceki: "10.574",
+      },
+      {
+        saat: "17:00",
+        ulke: "TR",
+        gosterge: "Merkezi Yönetim Dış Borç Stoku (milyar usd)",
+        onem: "turuncu" as const,
+        aciklanan: "129.6",
+        beklenti: "-",
+        onceki: "130.6",
       },
     ],
   },
