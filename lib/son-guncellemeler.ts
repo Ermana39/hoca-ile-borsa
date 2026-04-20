@@ -38,7 +38,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Gösterge Taramaları",
     href: "/borsa/gosterge-taramalari",
-    updatedAt: "20.04.2026 19:05",
+    updatedAt: "20.04.2026 20:30",
   },
   {
     title: "Grafik Analiz",
