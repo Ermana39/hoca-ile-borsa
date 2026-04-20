@@ -60,6 +60,11 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
     href: "/borsa/tedbirli-hisseler",
     updatedAt: "17.04.2026 18:30",
   },
+   {
+    title: "Oran Analizi",
+    href: "/borsa/oran-analizi",
+    updatedAt: "18.04.2026 21:30",
+  },
   {
     title: "Halka Arz",
     href: "/halka-arz",
@@ -98,11 +103,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
     {
     title: "Günlük Faiz Oranları",
     href: "/mevduat-kredi-faizleri",
-    updatedAt: "17.04.2026 09:13",
+    updatedAt: "20.04.2026 09:00",
   },
-   {
-    title: "Oran Analizi",
-    href: "/borsa/oran-analizi",
-    updatedAt: "18.04.2026 21:30",
-  },
+
 ];
