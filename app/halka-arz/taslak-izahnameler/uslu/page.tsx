@@ -184,7 +184,7 @@ export default function UsluCsmDemirCelikASPage() {
               <div className="mb-5 flex items-center justify-between">
                 <h2 className="text-xl font-bold text-slate-900">Halka Arz Şekli</h2>
                 <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
-                  Taslak İzahname
+            
                 </span>
               </div>
 
@@ -200,7 +200,7 @@ export default function UsluCsmDemirCelikASPage() {
               </div>
 
               <p className="mt-4 text-xs italic font-semibold text-slate-500">
-                Taslak İzahname, Sayfa 1.
+          
               </p>
             </section>
 
@@ -219,7 +219,7 @@ export default function UsluCsmDemirCelikASPage() {
               </div>
 
               <p className="mt-4 text-xs italic font-semibold text-slate-500">
-                Taslak İzahname, Sayfa 216.
+          
               </p>
             </section>
 
@@ -268,7 +268,7 @@ export default function UsluCsmDemirCelikASPage() {
               </div>
 
               <p className="mt-4 text-xs italic font-semibold text-slate-500">
-                Taslak İzahname, Sayfa 126.
+                
               </p>
             </section>
 
@@ -335,7 +335,7 @@ export default function UsluCsmDemirCelikASPage() {
                     2023 yılının ikinci yarısında tamamlanması planlanmaktadır.
                   </p>
                   <p className="mt-2 text-xs italic font-semibold text-slate-500">
-                    Taslak İzahname, Sayfa 199.
+                  
                   </p>
                 </div>
               </div>
@@ -349,7 +349,7 @@ export default function UsluCsmDemirCelikASPage() {
                   <div className="text-sm font-semibold text-blue-800">Fiyat İstikrarı</div>
                   <p className="mt-2 text-sm text-blue-900">30 gün.</p>
                   <p className="mt-2 text-xs italic font-semibold text-blue-700">
-                    Taslak İzahname, Sayfa 211.
+                  
                   </p>
                 </div>
 
@@ -358,7 +358,7 @@ export default function UsluCsmDemirCelikASPage() {
                   <p className="mt-2 text-sm text-indigo-900">1 Yıl, İhraççı.</p>
                   <p className="mt-1 text-sm text-indigo-900">1 Yıl, Ortaklar.</p>
                   <p className="mt-2 text-xs italic font-semibold text-indigo-700">
-                    Taslak İzahname, Sayfa 213.
+                  
                   </p>
                 </div>
 
@@ -366,7 +366,7 @@ export default function UsluCsmDemirCelikASPage() {
                   <div className="text-sm font-semibold text-cyan-800">Halka Açıklık</div>
                   <p className="mt-2 text-sm text-cyan-900">%20,66.</p>
                   <p className="mt-2 text-xs italic font-semibold text-cyan-700">
-                    Taslak İzahname, Sayfa 199.
+                   
                   </p>
                 </div>
               </div>

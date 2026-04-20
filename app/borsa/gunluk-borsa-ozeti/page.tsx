@@ -13,38 +13,17 @@ const tumYukselenler = [
   { kod: "EFOR", fark: "+10,00%" },
   { kod: "KLRHO", fark: "+10,00%" },
   { kod: "CLEBI", fark: "+9,99%" },
-  { kod: "PAPIL", fark: "+9,99%" },
-  { kod: "ANELE", fark: "+9,99%" },
-  { kod: "BORLS", fark: "+9,98%" },
-  { kod: "KARTN", fark: "+9,98%" },
-  { kod: "ARFYE", fark: "+9,98%" },
-  { kod: "KONTR", fark: "+9,97%" },
-  { kod: "KONYA", fark: "+9,95%" },
-  { kod: "REEDR", fark: "+9,95%" },
-  { kod: "ZGYO", fark: "+9,95%" },
-  { kod: "EMKEL", fark: "+9,93%" },
-  { kod: "KTSKR", fark: "+9,93%" },
-  { kod: "DGNMO", fark: "+9,91%" },
+ 
 ];
 
 const tumDusenler = [
-  { kod: "TPKGYF1", fark: "-10,00%" },
-  { kod: "FTPGSF2", fark: "-10,00%" },
+  
   { kod: "ARZUM", fark: "-9,94%" },
   { kod: "MAALT", fark: "-9,68%" },
   { kod: "ENSRI", fark: "-7,74%" },
   { kod: "AGYAZ", fark: "-7,16%" },
   { kod: "NIBAS", fark: "-6,89%" },
-  { kod: "APYMDF2", fark: "-6,09%" },
-  { kod: "TUPRS", fark: "-5,60%" },
-  { kod: "GIPTA", fark: "-5,27%" },
-  { kod: "OZATD", fark: "-5,09%" },
-  { kod: "GUNDG", fark: "-4,94%" },
-  { kod: "KBORU", fark: "-3,90%" },
-  { kod: "FZLGY", fark: "-3,76%" },
-  { kod: "SMART", fark: "-3,71%" },
-  { kod: "YAPRK", fark: "-3,66%" },
-  { kod: "PETKM", fark: "-3,09%" },
+  
 ];
 
 const tumHacimliler = [
@@ -53,18 +32,7 @@ const tumHacimliler = [
   { kod: "YKBNK", hacim: "15.254.096.577" },
   { kod: "ISCTR", hacim: "14.631.400.961" },
   { kod: "AKBNK", hacim: "13.834.492.750" },
-  { kod: "TUPRS", hacim: "11.087.905.604" },
-  { kod: "ASTOR", hacim: "9.713.283.315" },
-  { kod: "TRALT", hacim: "8.690.169.004" },
-  { kod: "ASELS", hacim: "8.666.389.884" },
-  { kod: "GARAN", hacim: "6.961.880.832" },
-  { kod: "EREGL", hacim: "6.839.382.729" },
-  { kod: "KCHOL", hacim: "6.733.839.969" },
-  { kod: "PGSUS", hacim: "6.309.243.486" },
-  { kod: "KONTR", hacim: "6.194.283.169" },
-  { kod: "TEHOL", hacim: "5.594.979.074" },
-  { kod: "SAHOL", hacim: "5.466.872.780" },
-  { kod: "BIMAS", hacim: "4.533.040.324" },
+
 ];
 
 const tumParaGirisi = [
@@ -73,9 +41,7 @@ const tumParaGirisi = [
   { kod: "ISCTR", tutar: "+250.750.646" },
   { kod: "EREGL", tutar: "+244.191.767" },
   { kod: "TERA", tutar: "+189.832.507" },
-  { kod: "SASA", tutar: "+134.716.411" },
-  { kod: "TRALT", tutar: "+129.627.367" },
-  { kod: "SAHOL", tutar: "+94.179.865" },
+ 
 ];
 
 const tumParaCikisi = [
@@ -84,10 +50,7 @@ const tumParaCikisi = [
   { kod: "THYAO", tutar: "-79.857.345" },
   { kod: "OYAKC", tutar: "-33.687.349" },
   { kod: "ARZUM", tutar: "-32.260.954" },
-  { kod: "MANAS", tutar: "-18.918.914" },
-  { kod: "GIPTA", tutar: "-18.609.372" },
-  { kod: "GWIND", tutar: "-16.544.475" },
-  { kod: "VAKBN", tutar: "-16.497.203" },
+
 ];
 
 const enCokAlisYapanKurumlar = [
