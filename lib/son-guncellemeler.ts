@@ -68,7 +68,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Halka Arz",
     href: "/halka-arz",
-    updatedAt: "17.04.2026 18:30",
+    updatedAt: "20.04.2026 10:14",
   },
   {
     title: "Onaylı İzahnameler",
@@ -78,7 +78,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
    {
     title: "Taslak İzahnameler",
     href: "/halka-arz/taslak-izahnameler",
-    updatedAt: "17.04.2026 18:00",
+    updatedAt: "20.04.2026 10:10",
   },
    {
     title: "Fonların Haftalık En Çok Tercih Ettiği Hisseler",
