@@ -109,17 +109,35 @@ function KategoriKutusu({
   );
 }
 
+function getIdFromHref(href: string) {
+  const match = href.match(/(\d+)(?!.*\d)/);
+  return match ? Number(match[1]) : 0;
+}
+
 function normalizeNewsItems(data: unknown): NewsItem[] {
   if (!Array.isArray(data)) return [];
 
   return data
-    .map((item: Partial<NewsItem>) => ({
-      id: typeof item.id === "number" ? item.id : 0,
-      title: item.title || "",
-      href: item.href || "/",
-      image: item.image || "",
-      alt: item.alt || item.title || "",
-    }))
+    .map((item: Partial<NewsItem>) => {
+      const href = item.href || "/";
+      const id =
+        typeof item.id === "number" && item.id > 0
+          ? item.id
+          : getIdFromHref(href);
+
+      return {
+        id,
+        title: item.title || "",
+        href,
+        image:
+          item.image && item.image.trim() !== ""
+            ? item.image
+            : id
+              ? `/haber${id}.png`
+              : "/placeholder.png",
+        alt: item.alt || item.title || "",
+      };
+    })
     .filter(
       (item: NewsItem) =>
         item.id > 0 && item.title.trim() !== "" && item.href.trim() !== ""
@@ -128,14 +146,35 @@ function normalizeNewsItems(data: unknown): NewsItem[] {
 }
 
 function HaberSatiri({ item }: { item: NewsItem }) {
+  const haberGorseli =
+    item.image && item.image.trim() !== ""
+      ? item.image
+      : item.id
+        ? `/haber${item.id}.png`
+        : "/placeholder.png";
+
   return (
     <TrackedLink
       href={item.href}
       label={item.title}
       ariaLabel={item.title}
-      className="block rounded-xl border border-zinc-200 bg-white px-4 py-4 text-base font-medium text-zinc-900 transition hover:bg-zinc-50 md:px-5 md:py-5 md:text-lg"
+      className="flex items-center gap-4 rounded-xl border border-zinc-200 bg-white px-4 py-4 text-zinc-900 transition hover:bg-zinc-50 md:px-5 md:py-5"
     >
-      {item.title}
+      <div className="relative h-14 w-20 shrink-0 overflow-hidden rounded-lg bg-zinc-100 sm:h-16 sm:w-24">
+        <img
+          src={haberGorseli}
+          alt={item.alt || item.title}
+          loading="lazy"
+          decoding="async"
+          className="h-full w-full object-cover"
+        />
+      </div>
+
+      <div className="min-w-0 flex-1">
+        <h2 className="text-base font-medium leading-7 text-zinc-900 md:text-lg">
+          {item.title}
+        </h2>
+      </div>
     </TrackedLink>
   );
 }
