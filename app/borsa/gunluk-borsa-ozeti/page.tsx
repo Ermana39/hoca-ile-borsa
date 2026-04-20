@@ -11,9 +11,9 @@ const tumYukselenler = [
   { kod: "ZGYO", fark: "+10,00%" },
   { kod: "ANELI", fark: "+10,00%" },
   { kod: "DOFRB", fark: "+10,00%" },
-   { kod: "TKNSA", fark: "+10,00%" },
+  { kod: "TKNSA", fark: "+10,00%" },
   { kod: "KONTR", fark: "+9,98%" },
-
+  
 ];
 
 const tumDusenler = [
@@ -31,7 +31,7 @@ const tumHacimliler = [
   { kod: "ASTOR", hacim: "11.601.184.380" },
   { kod: "AKBNK", hacim: "10.006.141.505" },
   { kod: "TEHOL", hacim: "9.865.036.272" },
-
+ 
 ];
 
 const tumParaGirisi = [
@@ -40,7 +40,7 @@ const tumParaGirisi = [
   { kod: "KTLEV", tutar: "+159.451.672" },
   { kod: "TUPRS", tutar: "+97.170.981" },
   { kod: "ISCTR", tutar: "+90.852.207" },
-
+ 
 ];
 
 const tumParaCikisi = [
@@ -49,7 +49,7 @@ const tumParaCikisi = [
   { kod: "ASELS", tutar: "-187.375.207" },
   { kod: "GLRMK", tutar: "-90.310.216" },
   { kod: "SAHOL", tutar: "-80.400.087" },
-
+  
 ];
 
 const enCokAlisYapanKurumlar = [
@@ -78,52 +78,34 @@ const enCokHacimYapanKurumlar = [
 
 const ekonomikTakvimVerileri = [
   {
-    tarih: "20.04.2026",
+    tarih: "21.04.2026",
     kayitlar: [
       {
         saat: "10:00",
         ulke: "TR",
-        gosterge: "Uluslararası Yatırım Pozisyonu (milyar usd)",
-        onem: "turuncu" as const,
-        aciklanan: "-347.6",
+        gosterge: "İmalat Sanayi Kapasite Kullanım Oranı (MEA)",
+        onem: "kirmizi" as const,
+        aciklanan: "-",
         beklenti: "-",
-        onceki: "-345.2",
+        onceki: "74,0%",
       },
       {
         saat: "10:00",
         ulke: "TR",
-        gosterge: "Türkiye'nin Uluslararası Yükümlülükleri (milyar usd)",
+        gosterge: "TCMB Reel Kesim Güven Endeksi",
         onem: "turuncu" as const,
-        aciklanan: "786.8",
+        aciklanan: "-",
         beklenti: "-",
-        onceki: "791.5",
+        onceki: "100,0",
       },
       {
-        saat: "17:00",
+        saat: "10:00",
         ulke: "TR",
-        gosterge: "Merkezi Yönetim Borç Stoku (milyar tl)",
-        onem: "turuncu" as const,
-        aciklanan: "14.447",
+        gosterge: "Kapasite Kullanım Oranı",
+        onem: "sari" as const,
+        aciklanan: "-",
         beklenti: "-",
-        onceki: "14.396",
-      },
-      {
-        saat: "17:00",
-        ulke: "TR",
-        gosterge: "Merkezi Yönetim İç Borç Stoku (milyar tl)",
-        onem: "turuncu" as const,
-        aciklanan: "10.339",
-        beklenti: "-",
-        onceki: "10.574",
-      },
-      {
-        saat: "17:00",
-        ulke: "TR",
-        gosterge: "Merkezi Yönetim Dış Borç Stoku (milyar usd)",
-        onem: "turuncu" as const,
-        aciklanan: "129.6",
-        beklenti: "-",
-        onceki: "130.6",
+        onceki: "73,30%",
       },
     ],
   },
