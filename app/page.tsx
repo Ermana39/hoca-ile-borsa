@@ -206,17 +206,21 @@ function HaberKutusu({ item }: { item: NewsItem }) {
       className="group flex h-full flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white transition hover:bg-zinc-50"
       ariaLabel={item.title}
     >
-      <div className="overflow-hidden bg-zinc-100">
-        <img
-          src={imgSrc}
-          alt={item.alt || item.title}
-          className="block aspect-[16/10] w-full object-cover transition duration-300 group-hover:scale-[1.03]"
-          onError={() => {
-            if (imgSrc !== "/placeholder.png") {
-              setImgSrc("/placeholder.png");
-            }
-          }}
-        />
+      <div className="px-4 pt-4">
+        <div className="mx-auto w-full max-w-[260px] overflow-hidden rounded-xl bg-zinc-100">
+          <img
+            src={imgSrc}
+            alt={item.alt || item.title}
+            loading="lazy"
+            decoding="async"
+            className="block aspect-[16/10] w-full object-cover transition duration-300 group-hover:scale-[1.03]"
+            onError={() => {
+              if (imgSrc !== "/placeholder.png") {
+                setImgSrc("/placeholder.png");
+              }
+            }}
+          />
+        </div>
       </div>
 
       <div className="flex flex-1 items-center justify-center p-4 text-center">
