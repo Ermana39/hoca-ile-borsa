@@ -178,56 +178,15 @@ function setCachedNews(items: NewsItem[]) {
   }
 }
 
-function HaberKutusu({ item }: { item: NewsItem }) {
-  const initialImage =
-    item.image && item.image.trim() !== ""
-      ? item.image
-      : item.id
-        ? `/haber${item.id}.png`
-        : "/placeholder.png";
-
-  const [imgSrc, setImgSrc] = useState(initialImage);
-
-  useEffect(() => {
-    const nextImage =
-      item.image && item.image.trim() !== ""
-        ? item.image
-        : item.id
-          ? `/haber${item.id}.png`
-          : "/placeholder.png";
-
-    setImgSrc(nextImage);
-  }, [item.id, item.image]);
-
+function HaberSatiri({ item }: { item: NewsItem }) {
   return (
     <TrackedLink
       href={item.href}
       label={item.title}
-      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-zinc-200 bg-white transition hover:bg-zinc-50"
       ariaLabel={item.title}
+      className="block rounded-xl border border-zinc-200 bg-white px-4 py-4 text-base font-medium text-zinc-900 transition hover:bg-zinc-50 md:px-5 md:py-5 md:text-lg"
     >
-      <div className="px-4 pt-4">
-        <div className="mx-auto w-full max-w-[260px] overflow-hidden rounded-xl bg-zinc-100">
-          <img
-            src={imgSrc}
-            alt={item.alt || item.title}
-            loading="lazy"
-            decoding="async"
-            className="block aspect-[16/10] w-full object-cover transition duration-300 group-hover:scale-[1.03]"
-            onError={() => {
-              if (imgSrc !== "/placeholder.png") {
-                setImgSrc("/placeholder.png");
-              }
-            }}
-          />
-        </div>
-      </div>
-
-      <div className="flex flex-1 items-center justify-center p-4 text-center">
-        <h2 className="text-lg font-semibold leading-7 text-zinc-900 md:text-2xl">
-          {item.title}
-        </h2>
-      </div>
+      {item.title}
     </TrackedLink>
   );
 }
@@ -531,9 +490,9 @@ export default function HomePage() {
                 Yükleniyor...
               </div>
             ) : newsItems.length > 0 ? (
-              <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+              <div className="space-y-3">
                 {newsItems.map((item) => (
-                  <HaberKutusu key={item.id || item.href} item={item} />
+                  <HaberSatiri key={item.id || item.href} item={item} />
                 ))}
               </div>
             ) : (
