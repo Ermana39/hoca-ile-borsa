@@ -19,15 +19,14 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
-type TaramaSatiri = {
-  Sembol?: string;
-  Periyod?: string;
-  Birim?: string;
-};
+function metinCevir(deger: unknown) {
+  if (deger === null || deger === undefined) return "";
+  return String(deger).trim();
+}
 
-function getMacdAlData() {
+function hisseleriOku() {
   try {
-    const filePath = path.join(
+    const dosyaYolu = path.join(
       process.cwd(),
       "app",
       "borsa",
@@ -36,37 +35,26 @@ function getMacdAlData() {
       "macd-al.xlsx"
     );
 
-    const fileBuffer = fs.readFileSync(filePath);
-    const workbook = XLSX.read(fileBuffer, { type: "buffer" });
+    const buffer = fs.readFileSync(dosyaYolu);
+    const workbook = XLSX.read(buffer, { type: "buffer" });
+    const sheetName = workbook.SheetNames[0];
+    const ws = workbook.Sheets[sheetName];
 
-    const firstSheetName = workbook.SheetNames[0];
-    const worksheet = workbook.Sheets[firstSheetName];
-
-    const rows = XLSX.utils.sheet_to_json<TaramaSatiri>(worksheet, {
+    const rawRows = XLSX.utils.sheet_to_json<(string | number)[]>(ws, {
+      header: 1,
       defval: "",
-    });
+    }) as (string | number)[][];
 
-    return rows
-      .map((row) => ({
-        sembol: String(row.Sembol || "").trim(),
-        periyod: String(row.Periyod || "").trim(),
-        birim: String(row.Birim || "").trim(),
-      }))
-      .filter((row) => row.sembol);
+    return rawRows
+      .map((row) => metinCevir(row[0]))
+      .filter((item) => item && item.toLocaleLowerCase("tr-TR") !== "sembol");
   } catch {
     return [];
   }
 }
 
 export default function MacdAlPage() {
-  const hisseler = getMacdAlData();
-
-  const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
-    timeZone: "Europe/Istanbul",
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-  }).format(new Date());
+  const hisseler = hisseleriOku();
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -88,17 +76,13 @@ export default function MacdAlPage() {
         </div>
 
         <h1 className="mb-2 text-3xl font-bold text-zinc-900">
-          MACD Al Verenler
+          MACD Al Veren Hisseler
         </h1>
-
         <p className="mb-3 max-w-3xl text-base text-zinc-600">
           MACD göstergesine göre al sinyali üreten hisseler
         </p>
-
         <div className="mb-8 text-sm font-semibold text-zinc-700 md:text-base">
           Toplam {hisseler.length} hisse
-          <span className="mx-2">•</span>
-          Güncelleme Tarihi: {guncellemeTarihi}
         </div>
 
         <section className="mb-8">
@@ -108,21 +92,12 @@ export default function MacdAlPage() {
         <section className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
           {hisseler.length > 0 ? (
             <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
-              {hisseler.map((item, index) => (
+              {hisseler.map((hisse, index) => (
                 <div
-                  key={`${item.sembol}-${item.periyod}-${item.birim}-${index}`}
-                  className="rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-4"
+                  key={`${hisse}-${index}`}
+                  className="rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-4 text-base font-semibold text-zinc-900"
                 >
-                  <div className="text-base font-semibold text-zinc-900">
-                    {item.sembol}
-                  </div>
-
-                  {(item.periyod || item.birim) && (
-                    <div className="mt-2 space-y-1 text-sm text-zinc-600">
-                      {item.periyod ? <div>Periyod: {item.periyod}</div> : null}
-                      {item.birim ? <div>Birim: {item.birim}</div> : null}
-                    </div>
-                  )}
+                  {hisse}
                 </div>
               ))}
             </div>
