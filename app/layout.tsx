@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import PageViewTracker from "@/components/page-view-tracker";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.hocaileborsa.com"),
@@ -24,6 +25,7 @@ export default function RootLayout({
       <body>
         <PageViewTracker />
         {children}
+        <Analytics />
       </body>
     </html>
   );
