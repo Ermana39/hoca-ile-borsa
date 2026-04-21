@@ -1,7 +1,5 @@
-"use client";
-
 import Image from "next/image";
-import { useEffect, useState } from "react";
+import { headers } from "next/headers";
 import TrackedLink from "@/components/tracked-link";
 import { newsItems as tumHaberler } from "@/app/data/news";
 
@@ -142,7 +140,36 @@ function normalizeNewsItems(data: unknown): NewsItem[] {
       (item: NewsItem) =>
         item.id > 0 && item.title.trim() !== "" && item.href.trim() !== ""
     )
-    .sort((a: NewsItem, b: NewsItem) => a.id - b.id);
+    .sort((a: NewsItem, b: NewsItem) => b.id - a.id);
+}
+
+async function getRecentUpdates(): Promise<GuncellemeItem[]> {
+  try {
+    const headerList = await headers();
+    const host =
+      headerList.get("x-forwarded-host") ?? headerList.get("host");
+    const protocol =
+      headerList.get("x-forwarded-proto") ??
+      (host?.includes("localhost") ? "http" : "https");
+
+    const origin = host
+      ? `${protocol}://${host}`
+      : "https://www.hocaileborsa.com";
+
+    const res = await fetch(`${origin}/api/recent-updates`, {
+      cache: "no-store",
+    });
+
+    if (!res.ok) {
+      return [];
+    }
+
+    const data = await res.json();
+    return Array.isArray(data) ? data : [];
+  } catch (error) {
+    console.error("RECENT_UPDATES_LOAD_ERROR:", error);
+    return [];
+  }
 }
 
 function HaberSatiri({ item }: { item: NewsItem }) {
@@ -179,28 +206,7 @@ function HaberSatiri({ item }: { item: NewsItem }) {
   );
 }
 
-function SonGuncellemelerBar({
-  items,
-  loading,
-}: {
-  items: GuncellemeItem[];
-  loading: boolean;
-}) {
-  if (loading) {
-    return (
-      <section className="px-4 pb-6 md:px-6">
-        <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
-          <div className="flex flex-col md:flex-row md:items-center">
-            <div className="shrink-0 border-b border-zinc-200 bg-zinc-900 px-4 py-3 text-sm font-bold text-white md:border-b-0 md:border-r">
-              Son Güncellemeler
-            </div>
-            <div className="px-4 py-3 text-sm text-zinc-500">Yükleniyor...</div>
-          </div>
-        </div>
-      </section>
-    );
-  }
-
+function SonGuncellemelerBar({ items }: { items: GuncellemeItem[] }) {
   if (items.length === 0) {
     return (
       <section className="px-4 pb-6 md:px-6">
@@ -366,38 +372,9 @@ function FooterLinkColumn({
   );
 }
 
-export default function HomePage() {
-  const [guncellemeler, setGuncellemeler] = useState<GuncellemeItem[]>([]);
-  const [guncellemelerLoading, setGuncellemelerLoading] = useState(true);
-
+export default async function HomePage() {
+  const guncellemeler = await getRecentUpdates();
   const newsItems = normalizeNewsItems(tumHaberler);
-
-  useEffect(() => {
-    let isMounted = true;
-
-    const loadUpdates = async () => {
-      try {
-        const res = await fetch("/api/recent-updates", { cache: "no-store" });
-        const data = await res.json();
-
-        if (isMounted && Array.isArray(data)) {
-          setGuncellemeler(data);
-        }
-      } catch (error) {
-        console.error("RECENT_UPDATES_LOAD_ERROR:", error);
-      } finally {
-        if (isMounted) {
-          setGuncellemelerLoading(false);
-        }
-      }
-    };
-
-    loadUpdates();
-
-    return () => {
-      isMounted = false;
-    };
-  }, []);
 
   return (
     <main className="min-h-screen bg-white">
@@ -450,10 +427,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <SonGuncellemelerBar
-          items={guncellemeler}
-          loading={guncellemelerLoading}
-        />
+        <SonGuncellemelerBar items={guncellemeler} />
 
         <section className="px-4 pb-6 md:px-6">
           <ReklamAlani variant="icerik" />
