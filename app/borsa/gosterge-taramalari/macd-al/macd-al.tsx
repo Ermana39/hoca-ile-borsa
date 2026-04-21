@@ -19,14 +19,15 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
-function metinCevir(deger: unknown) {
-  if (deger === null || deger === undefined) return "";
-  return String(deger).trim();
-}
+type TaramaSatiri = {
+  Sembol?: string;
+  Periyod?: string;
+  Birim?: string;
+};
 
-function hisseleriOku() {
+function getMacdAlData() {
   try {
-    const dosyaYolu = path.join(
+    const filePath = path.join(
       process.cwd(),
       "app",
       "borsa",
@@ -35,26 +36,37 @@ function hisseleriOku() {
       "macd-al.xlsx"
     );
 
-    const buffer = fs.readFileSync(dosyaYolu);
-    const workbook = XLSX.read(buffer, { type: "buffer" });
-    const sheetName = workbook.SheetNames[0];
-    const ws = workbook.Sheets[sheetName];
+    const fileBuffer = fs.readFileSync(filePath);
+    const workbook = XLSX.read(fileBuffer, { type: "buffer" });
 
-    const rawRows = XLSX.utils.sheet_to_json<(string | number)[]>(ws, {
-      header: 1,
+    const firstSheetName = workbook.SheetNames[0];
+    const worksheet = workbook.Sheets[firstSheetName];
+
+    const rows = XLSX.utils.sheet_to_json<TaramaSatiri>(worksheet, {
       defval: "",
-    }) as (string | number)[][];
+    });
 
-    return rawRows
-      .map((row) => metinCevir(row[0]))
-      .filter((item) => item && item.toLocaleLowerCase("tr-TR") !== "sembol");
+    return rows
+      .map((row) => ({
+        sembol: String(row.Sembol || "").trim(),
+        periyod: String(row.Periyod || "").trim(),
+        birim: String(row.Birim || "").trim(),
+      }))
+      .filter((row) => row.sembol);
   } catch {
     return [];
   }
 }
 
 export default function MacdAlPage() {
-  const hisseler = hisseleriOku();
+  const hisseler = getMacdAlData();
+
+  const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
+    timeZone: "Europe/Istanbul",
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+  }).format(new Date());
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -75,15 +87,22 @@ export default function MacdAlPage() {
           </Link>
         </div>
 
-        <h1 className="mb-2 text-3xl font-bold text-zinc-900">
-          MACD Al Verenler
-        </h1>
-        <p className="mb-3 max-w-3xl text-base text-zinc-600">
-          MACD göstergesine göre al sinyali üreten hisseler
-        </p>
-        <div className="mb-8 text-sm font-semibold text-zinc-700 md:text-base">
-          Toplam {hisseler.length} hisse
-        </div>
+        <section className="rounded-2xl bg-white">
+          <h1 className="mb-2 text-3xl font-bold text-zinc-900">
+            MACD Al Verenler
+          </h1>
+
+          <p className="mb-3 max-w-3xl text-base text-zinc-600">
+            MACD göstergesine göre al sinyali üreten hisseleri aşağıdaki listeden
+            inceleyebilirsiniz.
+          </p>
+
+          <div className="mb-8 text-sm font-semibold text-zinc-700 md:text-base">
+            Toplam {hisseler.length} hisse
+            <span className="mx-2">•</span>
+            Güncelleme Tarihi: {guncellemeTarihi}
+          </div>
+        </section>
 
         <section className="mb-8">
           <ReklamAlani variant="yatay" />
@@ -92,12 +111,21 @@ export default function MacdAlPage() {
         <section className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
           {hisseler.length > 0 ? (
             <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
-              {hisseler.map((hisse, index) => (
+              {hisseler.map((item, index) => (
                 <div
-                  key={`${hisse}-${index}`}
-                  className="rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-4 text-base font-semibold text-zinc-900"
+                  key={`${item.sembol}-${item.periyod}-${item.birim}-${index}`}
+                  className="rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-4"
                 >
-                  {hisse}
+                  <div className="text-base font-semibold text-zinc-900">
+                    {item.sembol}
+                  </div>
+
+                  {(item.periyod || item.birim) && (
+                    <div className="mt-2 space-y-1 text-sm text-zinc-600">
+                      {item.periyod ? <div>Periyod: {item.periyod}</div> : null}
+                      {item.birim ? <div>Birim: {item.birim}</div> : null}
+                    </div>
+                  )}
                 </div>
               ))}
             </div>
@@ -110,6 +138,39 @@ export default function MacdAlPage() {
 
         <section className="mt-8">
           <ReklamAlani variant="icerik" />
+        </section>
+
+        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+            MACD Al Verenler Hakkında
+          </h2>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            MACD al verenler sayfası, teknik analizde MACD göstergesine göre al
+            sinyali üreten hisseleri hızlı şekilde görüntülemek isteyen
+            yatırımcılar için hazırlanmıştır. Bu sayfada MACD kesişimi ile dikkat
+            çeken hisseleri tek ekranda takip edebilirsiniz.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            MACD göstergesi, trend yönü ve momentum değişimini birlikte
+            değerlendirmeye yardımcı olan en yaygın teknik analiz araçlarından
+            biridir. Özellikle MACD çizgisinin sinyal çizgisini yukarı yönlü
+            kesmesi, yatırımcılar tarafından potansiyel al sinyali olarak
+            izlenebilir.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Bu tarama sayfası sayesinde çok sayıda hisse arasından MACD açısından
+            öne çıkan şirketleri daha hızlı filtreleyebilir, teknik görünümü
+            güçlenen hisseleri kendi analizinizle birlikte değerlendirebilirsiniz.
+          </p>
+
+          <p className="leading-7 text-zinc-700">
+            Güncel MACD al sinyali veren hisseler, teknik tarama sonuçları ve
+            gösterge bazlı borsa ekranları için bu sayfayı düzenli olarak takip
+            edebilirsiniz.
+          </p>
         </section>
       </div>
     </main>
