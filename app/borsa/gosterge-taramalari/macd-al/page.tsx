@@ -87,22 +87,19 @@ export default function MacdAlPage() {
           </Link>
         </div>
 
-        <section className="rounded-2xl bg-white">
-          <h1 className="mb-2 text-3xl font-bold text-zinc-900">
-            MACD Al Verenler
-          </h1>
+        <h1 className="mb-2 text-3xl font-bold text-zinc-900">
+          MACD Al Verenler
+        </h1>
 
-          <p className="mb-3 max-w-3xl text-base text-zinc-600">
-            MACD göstergesine göre al sinyali üreten hisseleri aşağıdaki listeden
-            inceleyebilirsiniz.
-          </p>
+        <p className="mb-3 max-w-3xl text-base text-zinc-600">
+          MACD göstergesine göre al sinyali üreten hisseler
+        </p>
 
-          <div className="mb-8 text-sm font-semibold text-zinc-700 md:text-base">
-            Toplam {hisseler.length} hisse
-            <span className="mx-2">•</span>
-            Güncelleme Tarihi: {guncellemeTarihi}
-          </div>
-        </section>
+        <div className="mb-8 text-sm font-semibold text-zinc-700 md:text-base">
+          Toplam {hisseler.length} hisse
+          <span className="mx-2">•</span>
+          Güncelleme Tarihi: {guncellemeTarihi}
+        </div>
 
         <section className="mb-8">
           <ReklamAlani variant="yatay" />
@@ -138,39 +135,6 @@ export default function MacdAlPage() {
 
         <section className="mt-8">
           <ReklamAlani variant="icerik" />
-        </section>
-
-        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
-          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
-            MACD Al Verenler Hakkında
-          </h2>
-
-          <p className="mb-4 leading-7 text-zinc-700">
-            MACD al verenler sayfası, teknik analizde MACD göstergesine göre al
-            sinyali üreten hisseleri hızlı şekilde görüntülemek isteyen
-            yatırımcılar için hazırlanmıştır. Bu sayfada MACD kesişimi ile dikkat
-            çeken hisseleri tek ekranda takip edebilirsiniz.
-          </p>
-
-          <p className="mb-4 leading-7 text-zinc-700">
-            MACD göstergesi, trend yönü ve momentum değişimini birlikte
-            değerlendirmeye yardımcı olan en yaygın teknik analiz araçlarından
-            biridir. Özellikle MACD çizgisinin sinyal çizgisini yukarı yönlü
-            kesmesi, yatırımcılar tarafından potansiyel al sinyali olarak
-            izlenebilir.
-          </p>
-
-          <p className="mb-4 leading-7 text-zinc-700">
-            Bu tarama sayfası sayesinde çok sayıda hisse arasından MACD açısından
-            öne çıkan şirketleri daha hızlı filtreleyebilir, teknik görünümü
-            güçlenen hisseleri kendi analizinizle birlikte değerlendirebilirsiniz.
-          </p>
-
-          <p className="leading-7 text-zinc-700">
-            Güncel MACD al sinyali veren hisseler, teknik tarama sonuçları ve
-            gösterge bazlı borsa ekranları için bu sayfayı düzenli olarak takip
-            edebilirsiniz.
-          </p>
         </section>
       </div>
     </main>
