@@ -226,8 +226,8 @@ function SonGuncellemelerBar({
             Son Güncellemeler
           </div>
 
-          <div className="relative min-w-0 flex-1 overflow-hidden">
-            <div className="ticker-track flex min-w-max items-center gap-6 px-4 py-3">
+          <div className="relative min-w-0 flex-1 overflow-x-auto">
+            <div className="flex min-w-max items-center gap-6 px-4 py-3">
               {items.map((item, index) => (
                 <TrackedLink
                   key={`${item.href}-${item.time}-${index}`}
@@ -596,27 +596,6 @@ export default function HomePage() {
           </div>
         </div>
       </footer>
-
-      <style jsx global>{`
-        .ticker-track {
-          width: max-content;
-          padding-left: 100%;
-          animation: ticker-scroll 55s linear infinite;
-        }
-
-        .ticker-track:hover {
-          animation-play-state: paused;
-        }
-
-        @keyframes ticker-scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-100%);
-          }
-        }
-      `}</style>
     </main>
   );
 }
