@@ -103,6 +103,6 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Günlük Faiz Oranları",
     href: "/mevduat-kredi-faizleri",
-    updatedAt: "20.04.2026 09:00",
+    updatedAt: "21.04.2026 09:20",
   },
 ];
