@@ -1,5 +1,7 @@
+"use client";
+
 import Image from "next/image";
-import { headers } from "next/headers";
+import { useEffect, useState } from "react";
 import TrackedLink from "@/components/tracked-link";
 import { newsItems as tumHaberler } from "@/app/data/news";
 
@@ -143,35 +145,6 @@ function normalizeNewsItems(data: unknown): NewsItem[] {
     .sort((a: NewsItem, b: NewsItem) => b.id - a.id);
 }
 
-async function getRecentUpdates(): Promise<GuncellemeItem[]> {
-  try {
-    const headerList = await headers();
-    const host =
-      headerList.get("x-forwarded-host") ?? headerList.get("host");
-    const protocol =
-      headerList.get("x-forwarded-proto") ??
-      (host?.includes("localhost") ? "http" : "https");
-
-    const origin = host
-      ? `${protocol}://${host}`
-      : "https://www.hocaileborsa.com";
-
-    const res = await fetch(`${origin}/api/recent-updates`, {
-      cache: "no-store",
-    });
-
-    if (!res.ok) {
-      return [];
-    }
-
-    const data = await res.json();
-    return Array.isArray(data) ? data : [];
-  } catch (error) {
-    console.error("RECENT_UPDATES_LOAD_ERROR:", error);
-    return [];
-  }
-}
-
 function HaberSatiri({ item }: { item: NewsItem }) {
   const haberGorseli =
     item.image && item.image.trim() !== ""
@@ -206,7 +179,28 @@ function HaberSatiri({ item }: { item: NewsItem }) {
   );
 }
 
-function SonGuncellemelerBar({ items }: { items: GuncellemeItem[] }) {
+function SonGuncellemelerBar({
+  items,
+  loading,
+}: {
+  items: GuncellemeItem[];
+  loading: boolean;
+}) {
+  if (loading) {
+    return (
+      <section className="px-4 pb-6 md:px-6">
+        <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
+          <div className="flex flex-col md:flex-row md:items-center">
+            <div className="shrink-0 border-b border-zinc-200 bg-zinc-900 px-4 py-3 text-sm font-bold text-white md:border-b-0 md:border-r">
+              Son Güncellemeler
+            </div>
+            <div className="px-4 py-3 text-sm text-zinc-500">Yükleniyor...</div>
+          </div>
+        </div>
+      </section>
+    );
+  }
+
   if (items.length === 0) {
     return (
       <section className="px-4 pb-6 md:px-6">
@@ -232,7 +226,7 @@ function SonGuncellemelerBar({ items }: { items: GuncellemeItem[] }) {
             Son Güncellemeler
           </div>
 
-          <div className="ticker-wrap relative min-w-0 flex-1 overflow-hidden">
+          <div className="relative min-w-0 flex-1 overflow-hidden">
             <div className="ticker-track flex min-w-max items-center gap-6 px-4 py-3">
               {items.map((item, index) => (
                 <TrackedLink
@@ -251,27 +245,6 @@ function SonGuncellemelerBar({ items }: { items: GuncellemeItem[] }) {
           </div>
         </div>
       </div>
-
-      <style jsx>{`
-        .ticker-track {
-          width: max-content;
-          padding-left: 100%;
-          animation: ticker-scroll 55s linear infinite;
-        }
-
-        .ticker-wrap:hover .ticker-track {
-          animation-play-state: paused;
-        }
-
-        @keyframes ticker-scroll {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-100%);
-          }
-        }
-      `}</style>
     </section>
   );
 }
@@ -302,16 +275,36 @@ function TelegramIcon() {
 
 function MailIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4 stroke-current" fill="none" aria-hidden="true">
-      <path d="M4 6h16v12H4z" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
-      <path d="m4 8 8 6 8-6" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+    <svg
+      viewBox="0 0 24 24"
+      className="h-4 w-4 stroke-current"
+      fill="none"
+      aria-hidden="true"
+    >
+      <path
+        d="M4 6h16v12H4z"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="m4 8 8 6 8-6"
+        strokeWidth="1.8"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
     </svg>
   );
 }
 
 function LocationIcon() {
   return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4 stroke-current" fill="none" aria-hidden="true">
+    <svg
+      viewBox="0 0 24 24"
+      className="h-4 w-4 stroke-current"
+      fill="none"
+      aria-hidden="true"
+    >
       <path
         d="M12 21s6-4.35 6-10a6 6 0 1 0-12 0c0 5.65 6 10 6 10Z"
         strokeWidth="1.8"
@@ -372,9 +365,38 @@ function FooterLinkColumn({
   );
 }
 
-export default async function HomePage() {
-  const guncellemeler = await getRecentUpdates();
+export default function HomePage() {
+  const [guncellemeler, setGuncellemeler] = useState<GuncellemeItem[]>([]);
+  const [guncellemelerLoading, setGuncellemelerLoading] = useState(true);
+
   const newsItems = normalizeNewsItems(tumHaberler);
+
+  useEffect(() => {
+    let isMounted = true;
+
+    const loadUpdates = async () => {
+      try {
+        const res = await fetch("/api/recent-updates", { cache: "no-store" });
+        const data = await res.json();
+
+        if (isMounted && Array.isArray(data)) {
+          setGuncellemeler(data);
+        }
+      } catch (error) {
+        console.error("RECENT_UPDATES_LOAD_ERROR:", error);
+      } finally {
+        if (isMounted) {
+          setGuncellemelerLoading(false);
+        }
+      }
+    };
+
+    loadUpdates();
+
+    return () => {
+      isMounted = false;
+    };
+  }, []);
 
   return (
     <main className="min-h-screen bg-white">
@@ -427,7 +449,10 @@ export default async function HomePage() {
           </div>
         </section>
 
-        <SonGuncellemelerBar items={guncellemeler} />
+        <SonGuncellemelerBar
+          items={guncellemeler}
+          loading={guncellemelerLoading}
+        />
 
         <section className="px-4 pb-6 md:px-6">
           <ReklamAlani variant="icerik" />
@@ -571,6 +596,27 @@ export default async function HomePage() {
           </div>
         </div>
       </footer>
+
+      <style jsx global>{`
+        .ticker-track {
+          width: max-content;
+          padding-left: 100%;
+          animation: ticker-scroll 55s linear infinite;
+        }
+
+        .ticker-track:hover {
+          animation-play-state: paused;
+        }
+
+        @keyframes ticker-scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+      `}</style>
     </main>
   );
 }
