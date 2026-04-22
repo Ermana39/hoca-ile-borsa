@@ -6,7 +6,13 @@ export type NewsItem = {
   alt: string;
 };
 
-export const newsItems: NewsItem[] = [
+export const newsItems: NewsItem[] = [{
+    id: 989,
+    title: "Merkez Bankası faizi Sabit bıraktı",
+    href: "/haber/haber-989",
+    image: "/haber989.png",
+    alt: "Haber 989 görseli",
+  },
   {
     id: 990,
     title: "Astor’da 11,2 Milyar TL’lik Hisse Satışı: %5,99 Pay Yabancı Kurumsallara Devredildi",
