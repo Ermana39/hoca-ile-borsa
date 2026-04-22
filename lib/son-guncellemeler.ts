@@ -8,7 +8,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Günlük Borsa Özeti",
     href: "/borsa/gunluk-borsa-ozeti",
-    updatedAt: "21.04.2026 19:30",
+    updatedAt: "22.04.2026 18:30",
   },
   {
     title: "Dikkat Çekenler",
@@ -18,8 +18,8 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Dip Zirve Analizi",
     href: "/borsa/dip-zirve-analizi",
-    updatedAt: "21.04.2026 19:30",
-  },
+    updatedAt: "22.04.2026 18:30",
+  }
   {
     title: "Eğitim Videoları",
     href: "/borsa/egitim-videolari",
@@ -33,12 +33,12 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Geri Alım Programları",
     href: "/borsa/geri-alim-programlari",
-    updatedAt: "21.04.2026 19:30",
+    updatedAt: "22.04.2026 18:30",
   },
   {
     title: "Gösterge Taramaları",
     href: "/borsa/gosterge-taramalari",
-    updatedAt: "21.04.2026 19:30",
+    updatedAt: "22.04.2026 18:30",
   },
   {
     title: "Grafik Analiz",
@@ -53,17 +53,17 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Pivot Analizi",
     href: "/borsa/pivot-analizi",
-    updatedAt: "21.04.2026 19:30",
+    updatedAt: "22.04.2026 18:30",
   },
   {
     title: "Tedbirli Hisseler",
     href: "/borsa/tedbirli-hisseler",
-    updatedAt: "21.04.2026 19:30",
+    updatedAt: "22.04.2026 18:30",
   },
   {
     title: "Oran Analizi",
     href: "/borsa/oran-analizi",
-    updatedAt: "21.04.2026 19:30",
+    updatedAt: "22.04.2026 18:30",
   },
   {
     title: "Halka Arz",
