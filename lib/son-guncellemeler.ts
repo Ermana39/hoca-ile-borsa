@@ -48,7 +48,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Hacim Artışı Analizi",
     href: "/borsa/hacim-artisi-analizi",
-    updatedAt: "17.04.2026 19:05",
+    updatedAt: "24.04.2026 19:33",
   },
   {
     title: "Pivot Analizi",
