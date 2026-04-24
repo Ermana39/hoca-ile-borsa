@@ -46,6 +46,10 @@ export default function Haber3Page() {
           </div>
 
           <div className="p-6 md:p-8">
+            <div className="mb-4 text-sm font-medium text-zinc-500 md:text-base">
+              Oluşturulma Tarihi: 21.04.2026
+            </div>
+
             <h1 className="mb-6 text-3xl font-bold text-zinc-900 md:text-4xl">
               BİST100 Önemli Direnç Noktasında Negatif Uyumsuzluk
             </h1>
@@ -64,12 +68,12 @@ export default function Haber3Page() {
               </p>
 
               <p>
-                 Benim bu grafikten okuduğum fiyatın aşağıya olan ivme ihtimali daha ağır basıyor gibi. Aşağıdaki desteklerimiz 14.100-13.700-13.350 puan bölgeleri olacaktır. Yukarıya yaşanabilecek hareketlerde 14.600 üzerinde kapanışlar alabilirsek, 14.800 ve 15.100 seviyeleri hedef noktaları olacaktır.
+                Benim bu grafikten okuduğum fiyatın aşağıya olan ivme ihtimali daha ağır basıyor gibi. Aşağıdaki desteklerimiz 14.100-13.700-13.350 puan bölgeleri olacaktır. Yukarıya yaşanabilecek hareketlerde 14.600 üzerinde kapanışlar alabilirsek, 14.800 ve 15.100 seviyeleri hedef noktaları olacaktır.
               </p>
 
               <p className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-4 text-sm font-medium leading-7 text-zinc-800 md:text-base">
                 Burada yer alan değerlendirmeler genel bilgilendirme amaçlıdır.
-Herhangi bir yatırım tavsiyesi niteliği taşımaz.
+                Herhangi bir yatırım tavsiyesi niteliği taşımaz.
               </p>
             </div>
           </div>
