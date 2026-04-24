@@ -23,6 +23,7 @@ const tumDusenler = [
   { kod: "KRONT", fark: "-9,97%" },
   { kod: "ALKLC", fark: "-9,96%" },
   { kod: "TERA", fark: "-9,95%" },
+  { kod: "ULUFA", fark: "-9,84%" },
 ];
 
 const tumHacimliler = [
