@@ -1,13 +1,17 @@
 import Link from "next/link";
 
 const haberler = [
-  {
-    title: "Kazancı ile dikkat çeken Fonlar",
-    href: "/borsa/dikkat-cekenler/haber-1",
+    {
+    title: "BİST100 Önemli Direnç Noktasında Negatif Uyumsuzluk",
+    href: "/borsa/dikkat-cekenler/haber-3",
   },
   {
     title: "Banka hisselerinde önemli direnç noktası",
     href: "/borsa/dikkat-cekenler/haber-2",
+  },
+  {
+    title: "Kazancı ile dikkat çeken Fonlar",
+    href: "/borsa/dikkat-cekenler/haber-1",
   },
 ];
 
