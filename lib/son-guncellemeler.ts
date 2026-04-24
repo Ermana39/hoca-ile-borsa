@@ -19,7 +19,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
     title: "Dip Zirve Analizi",
     href: "/borsa/dip-zirve-analizi",
     updatedAt: "22.04.2026 18:30",
-  }
+  },
   {
     title: "Eğitim Videoları",
     href: "/borsa/egitim-videolari",
