@@ -2,52 +2,53 @@ import Image from "next/image";
 import Link from "next/link";
 
 const bistVeri = {
-  tarih: "24.04.2026",
-  kapanis: "14335.49",
-  degisimYuzde: -0.28,
+  tarih: "29.04.2026",
+  kapanis: "14409.07",
+  degisimYuzde: 0.51,
 };
 
 const tumYukselenler = [
-  { kod: "HOROZ", fark: "+10,00%" },
-  { kod: "DGNMO", fark: "+10,00%" },
-  { kod: "HATEK", fark: "+9,99%" },
-  { kod: "ANELE", fark: "+9,98%" },
-  { kod: "DUNYH", fark: "+9,97%" },
-  { kod: "PLTUR", fark: "+9,97%" },
-  { kod: "GEREL", fark: "+9,97%" },
+  { kod: "YESIL", fark: "+10,00%" },
+  { kod: "YAYLA", fark: "+10,00%" },
+  { kod: "SEGMN", fark: "+10,00%" },
+  { kod: "AVGYO", fark: "+9,99%" },
+  { kod: "ENSRI", fark: "+9,99%" },
 ];
 
 const tumDusenler = [
-  { kod: "NATEN", fark: "-10,00%" },
-  { kod: "EDATA", fark: "-9,99%" },
-  { kod: "BORLS", fark: "-9,97%" },
-  { kod: "TERA", fark: "-9,97%" },
-  { kod: "KONTR", fark: "-9,93%" },
+  { kod: "KONTR", fark: "-10,00%" },
+  { kod: "FTPGSF2", fark: "-9,99%" },
+  { kod: "KRONT", fark: "-9,97%" },
+  { kod: "ALKLC", fark: "-9,96%" },
+  { kod: "TERA", fark: "-9,95%" },
 ];
 
 const tumHacimliler = [
-  { kod: "GLRMK", hacim: "16.507.233.742" },
-  { kod: "THYAO", hacim: "12.312.817.280" },
-  { kod: "ASELS", hacim: "9.283.983.379" },
-  { kod: "TUPRS", hacim: "8.321.352.306" },
-  { kod: "SASA", hacim: "8.200.125.017" },
-  { kod: "AKBNK", hacim: "7.854.106.051" },
+  { kod: "THYAO", hacim: "12.228.796.146" },
+  { kod: "SASA", hacim: "11.827.412.492" },
+  { kod: "PASEU", hacim: "10.014.074.813" },
+  { kod: "ASTOR", hacim: "9.914.951.824" },
+  { kod: "TUPRS", hacim: "7.396.650.058" },
+  { kod: "AKBNK", hacim: "7.248.698.761" },
 ];
 
 const tumParaGirisi = [
-  { kod: "TUPRS", tutar: "+206.957.732" },
-  { kod: "TEHOL", tutar: "+116.925.840" },
-  { kod: "BIMAS", tutar: "+84.101.392" },
-  { kod: "PEKGY", tutar: "+72.164.020" },
-  { kod: "DOFRB", tutar: "+53.735.037" },
+  { kod: "TUPRS", tutar: "+285.593.638" },
+  { kod: "ASTOR", tutar: "+280.611.872" },
+  { kod: "TEHOL", tutar: "+192.922.731" },
+  { kod: "PEKGY", tutar: "+93.288.712" },
+  { kod: "DSTKF", tutar: "+61.709.823" },
+  { kod: "THYAO", tutar: "+55.989.834" },
 ];
 
 const tumParaCikisi = [
-  { kod: "GLRMK", tutar: "-564.264.997" },
-  { kod: "ASELS", tutar: "-291.203.700" },
-  { kod: "AKBNK", tutar: "-289.969.189" },
-  { kod: "EREGL", tutar: "-231.687.950" },
-  { kod: "YKBNK", tutar: "-187.009.778" },
+  { kod: "AKBNK", tutar: "-267.039.866" },
+  { kod: "ASELS", tutar: "-194.289.946" },
+  { kod: "ISCTR", tutar: "-153.358.204" },
+  { kod: "DOFRB", tutar: "-99.681.879" },
+  { kod: "ESEN", tutar: "-70.378.137" },
+  { kod: "KONTR", tutar: "-65.031.494" },
+  { kod: "GLRMK", tutar: "-58.705.040" },
 ];
 
 const enCokAlisYapanKurumlar = [
@@ -76,34 +77,25 @@ const enCokHacimYapanKurumlar = [
 
 const ekonomikTakvimVerileri = [
   {
-    tarih: "24.04.2026",
+    tarih: "29.04.2026",
     kayitlar: [
       {
         saat: "10:00",
         ulke: "TR",
-        gosterge: "TÜİK Hizmet Sektörü Güven Endeksi",
-        onem: "turuncu-gri" as const,
+        gosterge: "İşsizlik Oranı",
+        onem: "kirmizi" as const,
         aciklanan: "-",
         beklenti: "-",
-        onceki: "113.2",
+        onceki: "8.5%",
       },
       {
         saat: "10:00",
         ulke: "TR",
-        gosterge: "TÜİK Perakende Sektörü Güven Endeksi",
+        gosterge: "TÜİK Ekonomik Güven Endeksi",
         onem: "turuncu-gri" as const,
         aciklanan: "-",
         beklenti: "-",
-        onceki: "113.6",
-      },
-      {
-        saat: "10:00",
-        ulke: "TR",
-        gosterge: "TÜİK İnşaat Sektörü Güven Endeksi",
-        onem: "turuncu-gri" as const,
-        aciklanan: "-",
-        beklenti: "-",
-        onceki: "80.6",
+        onceki: "97.9",
       },
     ],
   },
@@ -423,7 +415,7 @@ export default function GunlukBorsaOzetiPage() {
           />
           <ListeKutusu
             baslik="En Hacimliler"
-            veriler={enHacimliler}
+            veriler={enCokHacimliler}
             renk="gri"
             degerBaslik="Hacim"
           />
