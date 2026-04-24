@@ -11,6 +11,7 @@ const tumYukselenler = [
   { kod: "YESIL", fark: "+10,00%" },
   { kod: "YAYLA", fark: "+10,00%" },
   { kod: "SEGMN", fark: "+10,00%" },
+  { kod: "TPKGYF1", fark: "+10,00%" },
   { kod: "AVGYO", fark: "+9,99%" },
   { kod: "ENSRI", fark: "+9,99%" },
 ];
@@ -18,6 +19,7 @@ const tumYukselenler = [
 const tumDusenler = [
   { kod: "KONTR", fark: "-10,00%" },
   { kod: "FTPGSF2", fark: "-9,99%" },
+  { kod: "HPARTF2", fark: "-9,98%" },
   { kod: "KRONT", fark: "-9,97%" },
   { kod: "ALKLC", fark: "-9,96%" },
   { kod: "TERA", fark: "-9,95%" },
@@ -415,7 +417,7 @@ export default function GunlukBorsaOzetiPage() {
           />
           <ListeKutusu
             baslik="En Hacimliler"
-            veriler={enCokHacimliler}
+            veriler={enHacimliler}
             renk="gri"
             degerBaslik="Hacim"
           />
