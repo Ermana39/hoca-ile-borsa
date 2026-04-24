@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const haberler = [
     {
-    title: "BİST100 Önemli Direnç Noktasında Negatif Uyumsuzluk",
+    title: "BİST100 Önemli direnç noktasında negatif uyumsuzluk",
     href: "/borsa/dikkat-cekenler/haber-3",
   },
   {
