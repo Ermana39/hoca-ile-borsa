@@ -1,15 +1,15 @@
-import fs from "fs";
-import path from "path";
 import Link from "next/link";
 import Script from "next/script";
-import * as XLSX from "xlsx";
+import fonTercihData from "./data/tercih-edilen-hisseler.json";
 
-const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
-  timeZone: "Europe/Istanbul",
-  day: "2-digit",
-  month: "2-digit",
-  year: "numeric",
-}).format(new Date());
+export const metadata = {
+  title:
+    "Haftalık Yatırım Fonlarının En Çok Tercih Ettiği Hisseler | Hoca İle Borsa",
+  description:
+    "Yatırım fonlarının haftalık olarak en çok tercih ettiği Borsa İstanbul hisselerini inceleyin.",
+};
+
+export const revalidate = 3600;
 
 type FonSatiri = {
   sembol: string | null;
@@ -29,6 +29,7 @@ type FonSatiri = {
 };
 
 type ColumnKey = keyof FonSatiri;
+type JsonRow = Record<string, string | number | null>;
 
 const columns: {
   key: ColumnKey;
@@ -114,52 +115,34 @@ function formatTl(deger: unknown) {
   }).format(sayi);
 }
 
-function excelOku(): FonSatiri[] {
-  try {
-    const dosyaYolu = path.join(
-      process.cwd(),
-      "app",
-      "fonlar",
-      "haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler",
-      "data",
-      "tercih-edilen-hisseler.xlsx"
-    );
+function fonVerileriniOku(): FonSatiri[] {
+  const rows = (fonTercihData.rows || []) as JsonRow[];
 
-    const buffer = fs.readFileSync(dosyaYolu);
-    const workbook = XLSX.read(buffer, { type: "buffer" });
-    const ws = workbook.Sheets[workbook.SheetNames[0]];
+  if (!rows.length) return [];
 
-    const rawRows = XLSX.utils.sheet_to_json<(string | number | null)[]>(ws, {
-      header: 1,
-      defval: "",
-      raw: true,
-    }) as (string | number | null)[][];
+  const headers =
+    Array.isArray(fonTercihData.columns) && fonTercihData.columns.length > 0
+      ? fonTercihData.columns
+      : Object.keys(rows[0] || {});
 
-    if (!rawRows.length) return [];
-
-    const dataRows = rawRows.slice(1);
-
-    return dataRows
-      .map((row) => ({
-        sembol: temizMetin(row[0]) || null,
-        degisim: row[1] ?? null,
-        sonToplamYuzde: row[2] ?? null,
-        ilkToplamYuzde: row[3] ?? null,
-        sonToplamTakasTl: row[4] ?? null,
-        ilkToplamTakasTl: row[5] ?? null,
-        takasTlSonEmeklilikFon: row[6] ?? null,
-        yuzdeSonEmeklilikFon: row[7] ?? null,
-        takasTlIlkEmeklilikFon: row[8] ?? null,
-        yuzdeIlkEmeklilikFon: row[9] ?? null,
-        takasTlSonYatirimFon: row[10] ?? null,
-        yuzdeSonYatirimFon: row[11] ?? null,
-        takasTlIlkYatirimFon: row[12] ?? null,
-        yuzdeIlkYatirimFon: row[13] ?? null,
-      }))
-      .filter((item) => item.sembol);
-  } catch {
-    return [];
-  }
+  return rows
+    .map((row) => ({
+      sembol: temizMetin(row[headers[0]]) || null,
+      degisim: row[headers[1]] ?? null,
+      sonToplamYuzde: row[headers[2]] ?? null,
+      ilkToplamYuzde: row[headers[3]] ?? null,
+      sonToplamTakasTl: row[headers[4]] ?? null,
+      ilkToplamTakasTl: row[headers[5]] ?? null,
+      takasTlSonEmeklilikFon: row[headers[6]] ?? null,
+      yuzdeSonEmeklilikFon: row[headers[7]] ?? null,
+      takasTlIlkEmeklilikFon: row[headers[8]] ?? null,
+      yuzdeIlkEmeklilikFon: row[headers[9]] ?? null,
+      takasTlSonYatirimFon: row[headers[10]] ?? null,
+      yuzdeSonYatirimFon: row[headers[11]] ?? null,
+      takasTlIlkYatirimFon: row[headers[12]] ?? null,
+      yuzdeIlkYatirimFon: row[headers[13]] ?? null,
+    }))
+    .filter((item) => item.sembol);
 }
 
 function hucreDegeri(row: FonSatiri, key: ColumnKey) {
@@ -183,7 +166,8 @@ function hucreDegeri(row: FonSatiri, key: ColumnKey) {
 }
 
 export default function HaftalikYatirimFonlarininEnCokTercihEttigiHisselerPage() {
-  const fonVerileri = excelOku();
+  const fonVerileri = fonVerileriniOku();
+  const guncellemeTarihi = fonTercihData.guncellemeTarihi || "-";
 
   const headerScrollId = "fon-tercih-header-scroll";
   const headerWidthId = "fon-tercih-header-width";
@@ -196,6 +180,7 @@ export default function HaftalikYatirimFonlarininEnCokTercihEttigiHisselerPage()
         <div className="mb-6 flex gap-3">
           <Link
             href="/"
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Ana Sayfa
@@ -203,6 +188,7 @@ export default function HaftalikYatirimFonlarininEnCokTercihEttigiHisselerPage()
 
           <Link
             href="/fonlar"
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Geri
@@ -218,7 +204,7 @@ export default function HaftalikYatirimFonlarininEnCokTercihEttigiHisselerPage()
         </h1>
 
         <p className="mb-6 text-sm text-zinc-600">
-          Veriler Excel dosyasından otomatik okunur.
+          Veriler düzenli olarak güncellenen fon hareketleri tablosundan alınır.
         </p>
 
         <div className="mb-8 text-sm font-semibold text-zinc-700">

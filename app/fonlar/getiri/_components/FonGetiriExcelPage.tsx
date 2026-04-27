@@ -1,7 +1,6 @@
 import fs from "fs/promises";
 import path from "path";
 import Link from "next/link";
-import * as XLSX from "xlsx";
 import FonGetiriTableClient from "./FonGetiriTableClient";
 
 type SearchParams = Promise<{
@@ -21,6 +20,14 @@ type FonRow = {
   birYil: number | null;
   ucYil: number | null;
   besYil: number | null;
+};
+
+type JsonRow = Record<string, string | number | null>;
+
+type JsonData = {
+  columns?: string[];
+  rows?: JsonRow[];
+  guncellemeTarihi?: string;
 };
 
 type Props = {
@@ -50,6 +57,17 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
 
 function normalizeText(value: unknown) {
   return String(value ?? "").replace(/\s+/g, " ").trim();
+}
+
+function normalizeKey(value: unknown) {
+  return normalizeText(value)
+    .toLocaleLowerCase("tr-TR")
+    .replace(/ı/g, "i")
+    .replace(/ğ/g, "g")
+    .replace(/ü/g, "u")
+    .replace(/ş/g, "s")
+    .replace(/ö/g, "o")
+    .replace(/ç/g, "c");
 }
 
 function parseNumber(value: unknown): number | null {
@@ -90,38 +108,88 @@ function toSortableNumber(value: unknown) {
   return Number.isFinite(normalized) ? normalized : -999999999;
 }
 
-async function getExcelData(excelRelativePath: string): Promise<FonRow[]> {
-  const filePath = path.join(process.cwd(), excelRelativePath);
+function kolonBul(headers: string[], adaylar: string[]) {
+  return (
+    headers.find((header) => {
+      const h = normalizeKey(header);
+      return adaylar.some((aday) => h.includes(normalizeKey(aday)));
+    }) || ""
+  );
+}
 
-  const buffer = await fs.readFile(filePath);
-  const workbook = XLSX.read(buffer, { type: "buffer" });
-  const firstSheetName = workbook.SheetNames[0];
-  const sheet = workbook.Sheets[firstSheetName];
+function getValue(row: JsonRow, column: string, fallbackIndex: number) {
+  if (column && row[column] !== undefined) return row[column];
 
-  const rows = XLSX.utils.sheet_to_json<(string | number | null)[]>(sheet, {
-    header: 1,
-    defval: "",
-    raw: true,
-  });
+  const values = Object.values(row);
+  return values[fallbackIndex] ?? null;
+}
 
-  if (rows.length < 3) return [];
+async function getJsonData(excelRelativePath: string): Promise<{
+  rows: FonRow[];
+  guncellemeTarihi: string;
+}> {
+  const jsonRelativePath = excelRelativePath.replace(/\.xlsx$/i, ".json");
+  const filePath = path.join(process.cwd(), jsonRelativePath);
 
-  const dataRows = rows.slice(2);
+  const file = await fs.readFile(filePath, "utf-8");
+  const data = JSON.parse(file) as JsonData;
 
-  return dataRows
+  const rows = data.rows || [];
+
+  if (!rows.length) {
+    return {
+      rows: [],
+      guncellemeTarihi: data.guncellemeTarihi || "-",
+    };
+  }
+
+  const headers =
+    Array.isArray(data.columns) && data.columns.length > 0
+      ? data.columns
+      : Object.keys(rows[0] || {});
+
+  const kodKolonu = kolonBul(headers, ["fon kodu", "kod"]);
+  const adKolonu = kolonBul(headers, ["fon adi", "fon adı", "ad"]);
+  const kategoriKolonu = kolonBul(headers, [
+    "semsiye fon turu",
+    "şemsiye fon türü",
+    "kategori",
+  ]);
+  const birAyKolonu = kolonBul(headers, ["1 ay", "bir ay"]);
+  const ucAyKolonu = kolonBul(headers, ["3 ay", "uc ay", "üç ay"]);
+  const altiAyKolonu = kolonBul(headers, ["6 ay", "alti ay", "altı ay"]);
+  const yilbasiKolonu = kolonBul(headers, ["yilbasi", "yılbaşı"]);
+  const birYilKolonu = kolonBul(headers, ["1 yil", "1 yıl", "bir yil"]);
+  const ucYilKolonu = kolonBul(headers, ["3 yil", "3 yıl", "uc yil", "üç yıl"]);
+  const besYilKolonu = kolonBul(headers, ["5 yil", "5 yıl", "bes yil", "beş yıl"]);
+
+  const parsedRows = rows
     .map((row) => ({
-      kod: normalizeText(row[0]),
-      ad: normalizeText(row[1]),
-      kategori: normalizeText(row[2]),
-      birAy: parseNumber(row[3]),
-      ucAy: parseNumber(row[4]),
-      altiAy: parseNumber(row[5]),
-      yilbasi: parseNumber(row[6]),
-      birYil: parseNumber(row[7]),
-      ucYil: parseNumber(row[8]),
-      besYil: parseNumber(row[9]),
+      kod: normalizeText(getValue(row, kodKolonu, 0)),
+      ad: normalizeText(getValue(row, adKolonu, 1)),
+      kategori: normalizeText(getValue(row, kategoriKolonu, 2)),
+      birAy: parseNumber(getValue(row, birAyKolonu, 3)),
+      ucAy: parseNumber(getValue(row, ucAyKolonu, 4)),
+      altiAy: parseNumber(getValue(row, altiAyKolonu, 5)),
+      yilbasi: parseNumber(getValue(row, yilbasiKolonu, 6)),
+      birYil: parseNumber(getValue(row, birYilKolonu, 7)),
+      ucYil: parseNumber(getValue(row, ucYilKolonu, 8)),
+      besYil: parseNumber(getValue(row, besYilKolonu, 9)),
     }))
-    .filter((item) => item.kod || item.ad);
+    .filter((item) => {
+      const kod = normalizeKey(item.kod);
+      const ad = normalizeKey(item.ad);
+
+      if (!item.kod && !item.ad) return false;
+      if (kod === "fon kodu" || ad === "fon adi") return false;
+
+      return true;
+    });
+
+  return {
+    rows: parsedRows,
+    guncellemeTarihi: data.guncellemeTarihi || "-",
+  };
 }
 
 export default async function FonGetiriExcelPage({
@@ -154,7 +222,7 @@ export default async function FonGetiriExcelPage({
 
   const dir: "asc" | "desc" = params.dir === "asc" ? "asc" : "desc";
 
-  const data = await getExcelData(excelRelativePath);
+  const { rows: data, guncellemeTarihi } = await getJsonData(excelRelativePath);
 
   const filtered = data.filter((item) => {
     if (!q) return true;
@@ -196,52 +264,52 @@ export default async function FonGetiriExcelPage({
   const headers = (
     <tr>
       <th className="px-4 py-4 text-left font-semibold">
-        <Link href={sortLink("kod")}>
+        <Link href={sortLink("kod")} prefetch={false}>
           Fon Kodu {sortArrow(sort === "kod", dir)}
         </Link>
       </th>
       <th className="px-4 py-4 text-left font-semibold">
-        <Link href={sortLink("ad")}>
+        <Link href={sortLink("ad")} prefetch={false}>
           Fon Adı {sortArrow(sort === "ad", dir)}
         </Link>
       </th>
       <th className="px-4 py-4 text-left font-semibold">
-        <Link href={sortLink("kategori")}>
+        <Link href={sortLink("kategori")} prefetch={false}>
           Şemsiye Fon Türü {sortArrow(sort === "kategori", dir)}
         </Link>
       </th>
       <th className="px-4 py-4 text-left font-semibold">
-        <Link href={sortLink("birAy")}>
+        <Link href={sortLink("birAy")} prefetch={false}>
           1 Ay % {sortArrow(sort === "birAy", dir)}
         </Link>
       </th>
       <th className="px-4 py-4 text-left font-semibold">
-        <Link href={sortLink("ucAy")}>
+        <Link href={sortLink("ucAy")} prefetch={false}>
           3 Ay % {sortArrow(sort === "ucAy", dir)}
         </Link>
       </th>
       <th className="px-4 py-4 text-left font-semibold">
-        <Link href={sortLink("altiAy")}>
+        <Link href={sortLink("altiAy")} prefetch={false}>
           6 Ay % {sortArrow(sort === "altiAy", dir)}
         </Link>
       </th>
       <th className="px-4 py-4 text-left font-semibold">
-        <Link href={sortLink("yilbasi")}>
+        <Link href={sortLink("yilbasi")} prefetch={false}>
           Yılbaşı % {sortArrow(sort === "yilbasi", dir)}
         </Link>
       </th>
       <th className="px-4 py-4 text-left font-semibold">
-        <Link href={sortLink("birYil")}>
+        <Link href={sortLink("birYil")} prefetch={false}>
           1 Yıl % {sortArrow(sort === "birYil", dir)}
         </Link>
       </th>
       <th className="px-4 py-4 text-left font-semibold">
-        <Link href={sortLink("ucYil")}>
+        <Link href={sortLink("ucYil")} prefetch={false}>
           3 Yıl % {sortArrow(sort === "ucYil", dir)}
         </Link>
       </th>
       <th className="px-4 py-4 text-left font-semibold">
-        <Link href={sortLink("besYil")}>
+        <Link href={sortLink("besYil")} prefetch={false}>
           5 Yıl % {sortArrow(sort === "besYil", dir)}
         </Link>
       </th>
@@ -254,6 +322,7 @@ export default async function FonGetiriExcelPage({
         <div className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Ana Sayfa
@@ -261,6 +330,7 @@ export default async function FonGetiriExcelPage({
 
           <Link
             href={backHref}
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Geri
@@ -268,7 +338,11 @@ export default async function FonGetiriExcelPage({
         </div>
 
         <h1 className="mb-2 text-3xl font-bold text-zinc-900">{title}</h1>
-        <p className="mb-6 max-w-3xl text-base text-zinc-600">{description}</p>
+        <p className="mb-3 max-w-3xl text-base text-zinc-600">{description}</p>
+
+        <div className="mb-6 text-sm font-semibold text-zinc-700">
+          Güncelleme Tarihi: {guncellemeTarihi}
+        </div>
 
         <section className="mb-6">
           <ReklamAlani variant="yatay" />

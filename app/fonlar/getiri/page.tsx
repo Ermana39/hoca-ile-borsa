@@ -44,18 +44,6 @@ const fonTipleri = [
     image: "/borsa-yatirim-fonlari-yatay.png",
     alt: "Borsa Yatırım Fonları görseli",
   },
-  {
-    title: "Gayrimenkul Yatırım Fonları",
-    href: "/fonlar/getiri/gayrimenkul-yatirim-fonlari-getiri",
-    image: "/gayrimenkul-yatirim-fonlari-yatay.png",
-    alt: "Gayrimenkul Yatırım Fonları görseli",
-  },
-  {
-    title: "Girişim Sermayesi Yatırım Fonları",
-    href: "/fonlar/getiri/girisim-sermayesi-yatirim-fonlari-getiri",
-    image: "/girisim-sermayesi-yatirim-fonlari-yatay.png",
-    alt: "Girişim Sermayesi Yatırım Fonları görseli",
-  },
 ];
 
 function FonTipiKutusu({

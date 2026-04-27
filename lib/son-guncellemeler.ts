@@ -38,7 +38,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Gösterge Taramaları",
     href: "/borsa/gosterge-taramalari",
-    updatedAt: "24.04.2026 18:30",
+    updatedAt: "27.04.2026 18:30",
   },
   {
     title: "Grafik Analiz",
@@ -83,17 +83,17 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Fonların Haftalık En Çok Tercih Ettiği Hisseler",
     href: "/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler",
-    updatedAt: "24.04.2026 18:30",
+    updatedAt: "27.04.2026 18:55",
   },
   {
     title: "Fon Getiri Analizi",
     href: "/fonlar/getiri",
-    updatedAt: "24.04.2026 18:30",
+    updatedAt: "27.04.2026 18:55",
   },
   {
     title: "Fon Tarihsel Veriler",
     href: "/fonlar/tarihsel-veriler",
-    updatedAt: "24.04.2026 18:30",
+    updatedAt: "27.04.2026 18:55",
   },
   {
     title: "Temettü Takvimi",

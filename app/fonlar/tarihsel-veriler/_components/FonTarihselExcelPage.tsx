@@ -1,7 +1,6 @@
 import fs from "fs/promises";
 import path from "path";
 import Link from "next/link";
-import * as XLSX from "xlsx";
 import FonTarihselTableClient from "./FonTarihselTableClient";
 
 type SearchParams = Promise<{
@@ -9,6 +8,14 @@ type SearchParams = Promise<{
 }>;
 
 type CellValue = string | number | null;
+
+type JsonRow = Record<string, string | number | null>;
+
+type JsonData = {
+  columns?: string[];
+  rows?: JsonRow[];
+  guncellemeTarihi?: string;
+};
 
 type Props = {
   title: string;
@@ -45,49 +52,27 @@ function parseCell(value: unknown): CellValue {
   return normalizeText(value);
 }
 
-function findHeaderRow(rows: CellValue[][]) {
-  let bestIndex = 0;
-  let bestCount = 0;
+async function getJsonData(excelRelativePath: string) {
+  const jsonRelativePath = excelRelativePath.replace(/\.xlsx$/i, ".json");
+  const filePath = path.join(process.cwd(), jsonRelativePath);
 
-  for (let i = 0; i < Math.min(rows.length, 10); i++) {
-    const count = rows[i].filter((cell) => cell !== null && cell !== "").length;
-    if (count > bestCount) {
-      bestCount = count;
-      bestIndex = i;
-    }
-  }
+  const file = await fs.readFile(filePath, "utf-8");
+  const data = JSON.parse(file) as JsonData;
 
-  return bestIndex;
-}
+  const headers =
+    Array.isArray(data.columns) && data.columns.length > 0
+      ? data.columns.map((item, index) => normalizeText(item) || `Sütun ${index + 1}`)
+      : [];
 
-async function getExcelData(excelRelativePath: string) {
-  const filePath = path.join(process.cwd(), excelRelativePath);
-  const buffer = await fs.readFile(filePath);
-  const workbook = XLSX.read(buffer, { type: "buffer" });
-  const firstSheetName = workbook.SheetNames[0];
-  const sheet = workbook.Sheets[firstSheetName];
-
-  const rawRows = XLSX.utils.sheet_to_json<(string | number | null)[]>(sheet, {
-    header: 1,
-    defval: "",
-    raw: true,
-  });
-
-  const rows = rawRows.map((row) => row.map((cell) => parseCell(cell)));
-  if (rows.length === 0) {
-    return { headers: [] as string[], rows: [] as CellValue[][] };
-  }
-
-  const headerRowIndex = findHeaderRow(rows);
-  const headers = rows[headerRowIndex].map((cell, index) =>
-    normalizeText(cell) || `Sütun ${index + 1}`
-  );
-
-  const dataRows = rows
-    .slice(headerRowIndex + 1)
+  const rows = (data.rows || [])
+    .map((row) => headers.map((header) => parseCell(row[header])))
     .filter((row) => row.some((cell) => cell !== null && cell !== ""));
 
-  return { headers, rows: dataRows };
+  return {
+    headers,
+    rows,
+    guncellemeTarihi: data.guncellemeTarihi || "-",
+  };
 }
 
 export default async function FonTarihselExcelPage({
@@ -101,11 +86,16 @@ export default async function FonTarihselExcelPage({
   const params = await searchParams;
   const q = (params.q ?? "").toLocaleLowerCase("tr-TR").trim();
 
-  const { headers, rows } = await getExcelData(excelRelativePath);
+  const { headers, rows, guncellemeTarihi } = await getJsonData(excelRelativePath);
 
   const filteredRows = rows.filter((row) => {
     if (!q) return true;
-    const text = row.map((cell) => String(cell ?? "")).join(" ").toLocaleLowerCase("tr-TR");
+
+    const text = row
+      .map((cell) => String(cell ?? ""))
+      .join(" ")
+      .toLocaleLowerCase("tr-TR");
+
     return text.includes(q);
   });
 
@@ -115,6 +105,7 @@ export default async function FonTarihselExcelPage({
         <div className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Ana Sayfa
@@ -122,6 +113,7 @@ export default async function FonTarihselExcelPage({
 
           <Link
             href={backHref}
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Geri
@@ -129,7 +121,11 @@ export default async function FonTarihselExcelPage({
         </div>
 
         <h1 className="mb-2 text-3xl font-bold text-zinc-900">{title}</h1>
-        <p className="mb-6 max-w-3xl text-base text-zinc-600">{description}</p>
+        <p className="mb-3 max-w-3xl text-base text-zinc-600">{description}</p>
+
+        <div className="mb-6 text-sm font-semibold text-zinc-700">
+          Güncelleme Tarihi: {guncellemeTarihi}
+        </div>
 
         <section className="mb-6">
           <ReklamAlani variant="yatay" />
