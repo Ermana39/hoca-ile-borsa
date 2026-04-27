@@ -142,7 +142,7 @@ function normalizeNewsItems(data: unknown): NewsItem[] {
       (item: NewsItem) =>
         item.id > 0 && item.title.trim() !== "" && item.href.trim() !== ""
     )
-    .sort((a: NewsItem, b: NewsItem) => b.id - a.id);
+    .sort((a: NewsItem, b: NewsItem) => a.id - b.id);
 }
 
 function HaberSatiri({ item }: { item: NewsItem }) {
