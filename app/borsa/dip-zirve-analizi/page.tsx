@@ -1,14 +1,13 @@
-import fs from "fs";
-import path from "path";
 import Link from "next/link";
-import * as XLSX from "xlsx";
+import dipZirveData from "./data/dip-zirve.json";
 
-const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
-  timeZone: "Europe/Istanbul",
-  day: "2-digit",
-  month: "2-digit",
-  year: "numeric",
-}).format(new Date());
+export const metadata = {
+  title: "Dip Zirve Analizi | Hoca İle Borsa",
+  description:
+    "Borsa İstanbul hisselerinin dip ve zirve seviyelerine uzaklıklarını karşılaştırın.",
+};
+
+export const revalidate = 3600;
 
 type DipZirveSatiri = {
   sembol: string;
@@ -18,6 +17,8 @@ type DipZirveSatiri = {
   gunZirveyeUzaklik: number | null;
   zirveDip: number | null;
 };
+
+type JsonRow = Record<string, string | number | null>;
 
 type SearchParams = Promise<{
   sort?: string;
@@ -86,62 +87,43 @@ function kolonBul(headers: string[], adaylar: string[]) {
 }
 
 function verileriOku(): DipZirveSatiri[] {
-  try {
-    const dosyaYolu = path.join(
-      process.cwd(),
-      "app",
-      "borsa",
-      "dip-zirve-analizi",
-      "data",
-      "dip-zirve.xlsx"
-    );
+  const rows = (dipZirveData.rows || []) as JsonRow[];
 
-    const buffer = fs.readFileSync(dosyaYolu);
-    const workbook = XLSX.read(buffer, { type: "buffer" });
-    const sheetName = workbook.SheetNames[0];
-    const ws = workbook.Sheets[sheetName];
+  if (!rows.length) return [];
 
-    const rows = XLSX.utils.sheet_to_json<Record<string, unknown>>(ws, {
-      defval: "",
-    });
+  const headers =
+    Array.isArray(dipZirveData.columns) && dipZirveData.columns.length > 0
+      ? dipZirveData.columns
+      : Object.keys(rows[0] || {});
 
-    if (!rows.length) return [];
+  const sembolKolonu = kolonBul(headers, ["sembol", "kod", "hisse"]) || headers[0];
 
-    const headers = Object.keys(rows[0] || {});
+  const yuzdeDibeUzaklikKolonu =
+    kolonBul(headers, ["% dibe uzaklik", "yuzde dibe uzaklik"]) || headers[1];
 
-    const sembolKolonu =
-      kolonBul(headers, ["sembol", "kod", "hisse"]) || headers[0];
+  const gunDibeUzaklikKolonu =
+    kolonBul(headers, ["gun dibe uzaklik"]) || headers[2];
 
-    const yuzdeDibeUzaklikKolonu =
-      kolonBul(headers, ["% dibe uzaklik", "yuzde dibe uzaklik"]) ||
-      headers[1];
+  const yuzdeZirveyeUzaklikKolonu =
+    kolonBul(headers, ["% zirveye uzaklik", "yuzde zirveye uzaklik"]) ||
+    headers[3];
 
-    const gunDibeUzaklikKolonu =
-      kolonBul(headers, ["gun dibe uzaklik"]) || headers[2];
+  const gunZirveyeUzaklikKolonu =
+    kolonBul(headers, ["gun zirveye uzaklik"]) || headers[4];
 
-    const yuzdeZirveyeUzaklikKolonu =
-      kolonBul(headers, ["% zirveye uzaklik", "yuzde zirveye uzaklik"]) ||
-      headers[3];
+  const zirveDipKolonu =
+    kolonBul(headers, ["zirve / dip", "zirve/dip"]) || headers[5];
 
-    const gunZirveyeUzaklikKolonu =
-      kolonBul(headers, ["gun zirveye uzaklik"]) || headers[4];
-
-    const zirveDipKolonu =
-      kolonBul(headers, ["zirve / dip", "zirve/dip"]) || headers[5];
-
-    return rows
-      .map((row) => ({
-        sembol: String(row[sembolKolonu] ?? "").trim(),
-        yuzdeDibeUzaklik: sayiCevir(row[yuzdeDibeUzaklikKolonu]),
-        gunDibeUzaklik: sayiCevir(row[gunDibeUzaklikKolonu]),
-        yuzdeZirveyeUzaklik: sayiCevir(row[yuzdeZirveyeUzaklikKolonu]),
-        gunZirveyeUzaklik: sayiCevir(row[gunZirveyeUzaklikKolonu]),
-        zirveDip: sayiCevir(row[zirveDipKolonu]),
-      }))
-      .filter((item) => item.sembol);
-  } catch {
-    return [];
-  }
+  return rows
+    .map((row) => ({
+      sembol: String(row[sembolKolonu] ?? "").trim(),
+      yuzdeDibeUzaklik: sayiCevir(row[yuzdeDibeUzaklikKolonu]),
+      gunDibeUzaklik: sayiCevir(row[gunDibeUzaklikKolonu]),
+      yuzdeZirveyeUzaklik: sayiCevir(row[yuzdeZirveyeUzaklikKolonu]),
+      gunZirveyeUzaklik: sayiCevir(row[gunZirveyeUzaklikKolonu]),
+      zirveDip: sayiCevir(row[zirveDipKolonu]),
+    }))
+    .filter((item) => item.sembol);
 }
 
 function toSortableNumber(value: number | null) {
@@ -161,6 +143,7 @@ export default async function DipZirveAnaliziPage({
 }) {
   const params = await searchParams;
   const dipZirveVerileri = verileriOku();
+  const guncellemeTarihi = dipZirveData.guncellemeTarihi || "-";
 
   const allowedSorts = [
     "sembol",
