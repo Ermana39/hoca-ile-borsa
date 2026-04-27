@@ -6,7 +6,15 @@ export type NewsItem = {
   alt: string;
 };
 
-export const newsItems: NewsItem[] = [{
+export const newsItems: NewsItem[] = [
+   {
+    id: 988,
+    title: "Üçay Mühendislik, Avrupa Birliği pazarındaki büyüme hedefleri doğrultusunda önemli bir adım attı.",
+    href: "/haber/haber-988",
+    image: "/haber988.png",
+    alt: "Haber 988 görseli",
+  },
+  {
     id: 989,
     title: "Merkez Bankası faizi Sabit bıraktı",
     href: "/haber/haber-989",
