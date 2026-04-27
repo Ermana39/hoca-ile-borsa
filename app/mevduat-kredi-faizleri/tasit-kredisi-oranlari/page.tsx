@@ -1,16 +1,14 @@
-"use client";
-
-import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
-import * as XLSX from "xlsx";
 import * as FaizAraclari from "@/components/faiz-hesaplayicilar";
+import faizData from "../data/hoca-ile-borsa-faiz-takip-sablonu-guncel.json";
 
-const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
-  timeZone: "Europe/Istanbul",
-  day: "2-digit",
-  month: "2-digit",
-  year: "numeric",
-}).format(new Date());
+export const metadata = {
+  title: "Taşıt Kredisi Oranları | Hoca İle Borsa",
+  description:
+    "Güncel taşıt kredisi faiz oranlarını, banka karşılaştırmalarını ve günlük ortalama faiz grafiğini inceleyin.",
+};
+
+export const revalidate = 3600;
 
 type BankaSatiri = {
   banka: string;
@@ -22,7 +20,14 @@ type GunlukOrtalamaSatiri = {
   ortalama: number;
 };
 
-const EXCEL_URL = "/data/hoca-ile-borsa-faiz-takip-sablonu-guncel.xlsx";
+type SheetData = {
+  rawRows?: (string | number | null)[][];
+};
+
+type FaizJsonData = {
+  guncellemeTarihi?: string;
+  sheets?: Record<string, SheetData>;
+};
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
@@ -110,11 +115,119 @@ function average(values: number[]) {
 
 function findHeaderRow(rows: unknown[][]) {
   return rows.findIndex((row) => {
-    const normalized = row.map((cell) => cleanText(cell).toLowerCase());
+    const normalized = row.map((cell) =>
+      cleanText(cell).toLocaleLowerCase("tr-TR")
+    );
     const hasTarih = normalized.some((cell) => cell.includes("tarih"));
     const hasOrtalama = normalized.some((cell) => cell.includes("ortalama"));
     return hasTarih && hasOrtalama;
   });
+}
+
+function getTasitSheetRows() {
+  const data = faizData as FaizJsonData;
+  const sheets = data.sheets || {};
+
+  const sheetName =
+    Object.keys(sheets).find((name) => {
+      const n = name.trim().toLocaleLowerCase("tr-TR");
+      return n === "taşıt kredisi" || n === "tasit kredisi";
+    }) || Object.keys(sheets)[3];
+
+  return sheetName && sheets[sheetName]?.rawRows ? sheets[sheetName].rawRows! : [];
+}
+
+function getTasitVerileri() {
+  try {
+    const rawRows = getTasitSheetRows();
+
+    const headerRowIndex = findHeaderRow(rawRows);
+    if (headerRowIndex === -1) {
+      throw new Error("Başlık satırı bulunamadı.");
+    }
+
+    const headerRow = rawRows[headerRowIndex].map((cell) => cleanText(cell));
+    const dataRows = rawRows.slice(headerRowIndex + 1);
+
+    const tarihIndex = headerRow.findIndex((cell) =>
+      cell.toLocaleLowerCase("tr-TR").includes("tarih")
+    );
+    const ortalamaIndex = headerRow.findIndex((cell) =>
+      cell.toLocaleLowerCase("tr-TR").includes("ortalama")
+    );
+
+    if (tarihIndex === -1 || ortalamaIndex === -1) {
+      throw new Error("Tarih veya Günlük Ortalama sütunu bulunamadı.");
+    }
+
+    const bankaColumns = headerRow
+      .map((name, index) => ({ name, index }))
+      .filter(
+        (item) =>
+          item.name &&
+          item.index !== tarihIndex &&
+          item.index !== ortalamaIndex
+      );
+
+    const preparedRows = dataRows
+      .map((row) => {
+        const tarih = formatDateLabel(row[tarihIndex]);
+
+        const bankaRates = bankaColumns.map((col) => ({
+          banka: col.name,
+          rawValue: row[col.index],
+          value: parseRate(row[col.index]),
+        }));
+
+        const numericRates = bankaRates
+          .map((item) => item.value)
+          .filter((value) => !Number.isNaN(value));
+
+        const ortalamaHucre = parseRate(row[ortalamaIndex]);
+        const ortalamaDegeri = !Number.isNaN(ortalamaHucre)
+          ? ortalamaHucre
+          : average(numericRates);
+
+        return {
+          tarih,
+          bankaRates,
+          numericCount: numericRates.length,
+          ortalama: ortalamaDegeri,
+        };
+      })
+      .filter((row) => row.tarih && row.numericCount > 0);
+
+    if (!preparedRows.length) {
+      throw new Error("Dolu veri satırı bulunamadı.");
+    }
+
+    const sonSatir = preparedRows[preparedRows.length - 1];
+
+    const bankaListesi: BankaSatiri[] = sonSatir.bankaRates.map((item) => ({
+      banka: item.banka,
+      faiz: formatRate(item.rawValue),
+    }));
+
+    const grafikVerisi: GunlukOrtalamaSatiri[] = preparedRows
+      .filter((row) => !Number.isNaN(row.ortalama))
+      .slice(-30)
+      .map((row) => ({
+        tarih: row.tarih,
+        ortalama: row.ortalama,
+      }));
+
+    return {
+      bankaListesi,
+      grafikVerisi,
+      hata: "",
+    };
+  } catch (error) {
+    return {
+      bankaListesi: [] as BankaSatiri[],
+      grafikVerisi: [] as GunlukOrtalamaSatiri[],
+      hata: error instanceof Error ? error.message : "Veri okuma hatası.",
+    };
+  }
 }
 
 function TasitGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
@@ -257,167 +370,9 @@ function HesaplayiciAlani() {
 }
 
 export default function TasitKredisiOranlariPage() {
-  const [bankaListesi, setBankaListesi] = useState<BankaSatiri[]>([]);
-  const [grafikVerisi, setGrafikVerisi] = useState<GunlukOrtalamaSatiri[]>([]);
-  const [hata, setHata] = useState("");
-  const [yukleniyor, setYukleniyor] = useState(true);
-
-  useEffect(() => {
-    async function loadExcel() {
-      try {
-        setYukleniyor(true);
-        setHata("");
-
-        const response = await fetch(EXCEL_URL, { cache: "no-store" });
-        if (!response.ok) {
-          throw new Error(`Excel dosyası alınamadı. Kod: ${response.status}`);
-        }
-
-        const arrayBuffer = await response.arrayBuffer();
-        const workbook = XLSX.read(arrayBuffer, {
-          type: "array",
-          raw: true,
-          cellDates: false,
-        });
-
-        const targetSheetName =
-          workbook.SheetNames.find((name) => {
-            const n = name.trim().toLowerCase();
-            return n === "taşıt kredisi" || n === "tasit kredisi";
-          }) || workbook.SheetNames[3];
-
-        const sheet = workbook.Sheets[targetSheetName];
-        if (!sheet) throw new Error(`Sayfa bulunamadı: ${targetSheetName}`);
-
-        const rawRows = XLSX.utils.sheet_to_json<(string | number | null)[]>(
-          sheet,
-          {
-            header: 1,
-            defval: "",
-            raw: true,
-          }
-        ) as unknown[][];
-
-        const headerRowIndex = findHeaderRow(rawRows);
-        if (headerRowIndex === -1) throw new Error("Başlık satırı bulunamadı.");
-
-        const headerRow = rawRows[headerRowIndex].map((cell) => cleanText(cell));
-        const dataRows = rawRows.slice(headerRowIndex + 1);
-
-        const tarihIndex = headerRow.findIndex((cell) =>
-          cell.toLowerCase().includes("tarih")
-        );
-        const ortalamaIndex = headerRow.findIndex((cell) =>
-          cell.toLowerCase().includes("ortalama")
-        );
-
-        if (tarihIndex === -1 || ortalamaIndex === -1) {
-          throw new Error("Tarih veya Günlük Ortalama sütunu bulunamadı.");
-        }
-
-        const bankaColumns = headerRow
-          .map((name, index) => ({ name, index }))
-          .filter(
-            (item) =>
-              item.name &&
-              item.index !== tarihIndex &&
-              item.index !== ortalamaIndex
-          );
-
-        const preparedRows = dataRows
-          .map((row) => {
-            const tarih = formatDateLabel(row[tarihIndex]);
-            const bankaRates = bankaColumns.map((col) => ({
-              banka: col.name,
-              rawValue: row[col.index],
-              value: parseRate(row[col.index]),
-            }));
-
-            const numericRates = bankaRates
-              .map((item) => item.value)
-              .filter((value) => !Number.isNaN(value));
-
-            const ortalamaHucre = parseRate(row[ortalamaIndex]);
-            const ortalamaDegeri = !Number.isNaN(ortalamaHucre)
-              ? ortalamaHucre
-              : average(numericRates);
-
-            return {
-              tarih,
-              bankaRates,
-              numericCount: numericRates.length,
-              ortalama: ortalamaDegeri,
-            };
-          })
-          .filter((row) => row.tarih && row.numericCount > 0);
-
-        if (!preparedRows.length) throw new Error("Dolu veri satırı bulunamadı.");
-
-        const sonSatir = preparedRows[preparedRows.length - 1];
-
-        setBankaListesi(
-          sonSatir.bankaRates.map((item) => ({
-            banka: item.banka,
-            faiz: formatRate(item.rawValue),
-          }))
-        );
-
-        setGrafikVerisi(
-          preparedRows
-            .filter((row) => !Number.isNaN(row.ortalama))
-            .slice(-30)
-            .map((row) => ({
-              tarih: row.tarih,
-              ortalama: row.ortalama,
-            }))
-        );
-      } catch (error) {
-        const message =
-          error instanceof Error ? error.message : "Bilinmeyen Excel okuma hatası";
-        setHata(message);
-        setBankaListesi([]);
-        setGrafikVerisi([]);
-      } finally {
-        setYukleniyor(false);
-      }
-    }
-
-    loadExcel();
-  }, []);
-
-  const tabloIcerik = useMemo(() => {
-    if (yukleniyor) {
-      return (
-        <tr>
-          <td colSpan={2} className="px-4 py-6 text-center text-zinc-500">
-            Veriler yükleniyor...
-          </td>
-        </tr>
-      );
-    }
-
-    if (!bankaListesi.length) {
-      return (
-        <tr>
-          <td colSpan={2} className="px-4 py-6 text-center text-zinc-500">
-            Gösterilecek veri bulunamadı.
-          </td>
-        </tr>
-      );
-    }
-
-    return bankaListesi.map((item, index) => (
-      <tr
-        key={item.banka}
-        className={index % 2 === 0 ? "bg-white" : "bg-sky-50/60"}
-      >
-        <td className="px-4 py-3 font-medium text-zinc-800">{item.banka}</td>
-        <td className="px-4 py-3 text-right font-semibold text-zinc-900">
-          {item.faiz}
-        </td>
-      </tr>
-    ));
-  }, [bankaListesi, yukleniyor]);
+  const { bankaListesi, grafikVerisi, hata } = getTasitVerileri();
+  const data = faizData as FaizJsonData;
+  const guncellemeTarihi = data.guncellemeTarihi || "-";
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -425,6 +380,7 @@ export default function TasitKredisiOranlariPage() {
         <div className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Ana Sayfa
@@ -432,6 +388,7 @@ export default function TasitKredisiOranlariPage() {
 
           <Link
             href="/mevduat-kredi-faizleri"
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Geri
@@ -474,7 +431,29 @@ export default function TasitKredisiOranlariPage() {
                   </th>
                 </tr>
               </thead>
-              <tbody>{tabloIcerik}</tbody>
+              <tbody>
+                {bankaListesi.length > 0 ? (
+                  bankaListesi.map((item, index) => (
+                    <tr
+                      key={item.banka}
+                      className={index % 2 === 0 ? "bg-white" : "bg-sky-50/60"}
+                    >
+                      <td className="px-4 py-3 font-medium text-zinc-800">
+                        {item.banka}
+                      </td>
+                      <td className="px-4 py-3 text-right font-semibold text-zinc-900">
+                        {item.faiz}
+                      </td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td colSpan={2} className="px-4 py-6 text-center text-zinc-500">
+                      Gösterilecek veri bulunamadı.
+                    </td>
+                  </tr>
+                )}
+              </tbody>
             </table>
           </div>
         </section>
