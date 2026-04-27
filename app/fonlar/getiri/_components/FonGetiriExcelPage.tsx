@@ -1,27 +1,11 @@
 import fs from "fs/promises";
 import path from "path";
 import Link from "next/link";
-import FonGetiriTableClient from "./FonGetiriTableClient";
+import FonGetiriTableClient, { type FonRow } from "./FonGetiriTableClient";
 
 type SearchParams = Promise<{
   q?: string;
-  sort?: string;
-  dir?: string;
 }>;
-
-type FonRow = {
-  kod: string;
-  ad: string;
-  kategori: string;
-  riskDegeri: number | null;
-  birAy: number | null;
-  ucAy: number | null;
-  altiAy: number | null;
-  yilbasi: number | null;
-  birYil: number | null;
-  ucYil: number | null;
-  besYil: number | null;
-};
 
 type JsonRow = Record<string, string | number | null>;
 
@@ -86,27 +70,6 @@ function parseNumber(value: unknown): number | null {
 
   const parsed = Number(cleaned);
   return Number.isFinite(parsed) ? parsed : null;
-}
-
-function sortArrow(active: boolean, direction: "asc" | "desc") {
-  if (!active) return "↕";
-  return direction === "asc" ? "↑" : "↓";
-}
-
-function toSortableNumber(value: unknown) {
-  if (typeof value === "number") {
-    return Number.isFinite(value) ? value : -999999999;
-  }
-
-  if (value === null || value === undefined || value === "") {
-    return -999999999;
-  }
-
-  const normalized = Number(
-    String(value).trim().replace(/\./g, "").replace(",", ".")
-  );
-
-  return Number.isFinite(normalized) ? normalized : -999999999;
 }
 
 function kolonBul(headers: string[], adaylar: string[]) {
@@ -184,9 +147,7 @@ async function getJsonData(excelRelativePath: string): Promise<{
       const ad = normalizeKey(item.ad);
 
       if (!item.kod && !item.ad) return false;
-
       if (kod === "fon kodu" || ad === "fon adi") return false;
-
       if (kod.includes("disa aktarim tarihi")) return false;
       if (kod.includes("toplam kayit sayisi")) return false;
 
@@ -210,26 +171,6 @@ export default async function FonGetiriExcelPage({
   const params = await searchParams;
   const q = (params.q ?? "").toLocaleLowerCase("tr-TR").trim();
 
-  const allowedSorts = [
-    "kod",
-    "ad",
-    "kategori",
-    "riskDegeri",
-    "birAy",
-    "ucAy",
-    "altiAy",
-    "yilbasi",
-    "birYil",
-    "ucYil",
-    "besYil",
-  ] as const;
-
-  const sort = allowedSorts.includes((params.sort ?? "birAy") as never)
-    ? (params.sort as (typeof allowedSorts)[number])
-    : "birAy";
-
-  const dir: "asc" | "desc" = params.dir === "asc" ? "asc" : "desc";
-
   const { rows: data, guncellemeTarihi } = await getJsonData(excelRelativePath);
 
   const filtered = data.filter((item) => {
@@ -237,97 +178,6 @@ export default async function FonGetiriExcelPage({
     const text = `${item.kod} ${item.ad} ${item.kategori}`.toLocaleLowerCase("tr-TR");
     return text.includes(q);
   });
-
-  const sorted = [...filtered].sort((a, b) => {
-    const aValue = a[sort];
-    const bValue = b[sort];
-
-    if (typeof aValue === "string" && typeof bValue === "string") {
-      return dir === "asc"
-        ? aValue.localeCompare(bValue, "tr")
-        : bValue.localeCompare(aValue, "tr");
-    }
-
-    const aNum = toSortableNumber(aValue);
-    const bNum = toSortableNumber(bValue);
-
-    return dir === "asc" ? aNum - bNum : bNum - aNum;
-  });
-
-  const nextDir = (column: string) => {
-    if (sort === column) return dir === "asc" ? "desc" : "asc";
-    return column === "kod" || column === "ad" || column === "kategori"
-      ? "asc"
-      : "desc";
-  };
-
-  const sortLink = (column: string) => {
-    const sp = new URLSearchParams();
-    if (q) sp.set("q", q);
-    sp.set("sort", column);
-    sp.set("dir", nextDir(column));
-    return `${pageBasePath}?${sp.toString()}`;
-  };
-
-  const headers = (
-    <tr>
-      <th className="px-4 py-4 text-left font-semibold">
-        <Link href={sortLink("kod")} prefetch={false}>
-          Fon Kodu {sortArrow(sort === "kod", dir)}
-        </Link>
-      </th>
-      <th className="px-4 py-4 text-left font-semibold">
-        <Link href={sortLink("ad")} prefetch={false}>
-          Fon Adı {sortArrow(sort === "ad", dir)}
-        </Link>
-      </th>
-      <th className="px-4 py-4 text-left font-semibold">
-        <Link href={sortLink("kategori")} prefetch={false}>
-          Şemsiye Fon Türü {sortArrow(sort === "kategori", dir)}
-        </Link>
-      </th>
-      <th className="px-4 py-4 text-left font-semibold">
-        <Link href={sortLink("riskDegeri")} prefetch={false}>
-          Risk Değeri {sortArrow(sort === "riskDegeri", dir)}
-        </Link>
-      </th>
-      <th className="px-4 py-4 text-left font-semibold">
-        <Link href={sortLink("birAy")} prefetch={false}>
-          1 Ay % {sortArrow(sort === "birAy", dir)}
-        </Link>
-      </th>
-      <th className="px-4 py-4 text-left font-semibold">
-        <Link href={sortLink("ucAy")} prefetch={false}>
-          3 Ay % {sortArrow(sort === "ucAy", dir)}
-        </Link>
-      </th>
-      <th className="px-4 py-4 text-left font-semibold">
-        <Link href={sortLink("altiAy")} prefetch={false}>
-          6 Ay % {sortArrow(sort === "altiAy", dir)}
-        </Link>
-      </th>
-      <th className="px-4 py-4 text-left font-semibold">
-        <Link href={sortLink("yilbasi")} prefetch={false}>
-          Yılbaşı % {sortArrow(sort === "yilbasi", dir)}
-        </Link>
-      </th>
-      <th className="px-4 py-4 text-left font-semibold">
-        <Link href={sortLink("birYil")} prefetch={false}>
-          1 Yıl % {sortArrow(sort === "birYil", dir)}
-        </Link>
-      </th>
-      <th className="px-4 py-4 text-left font-semibold">
-        <Link href={sortLink("ucYil")} prefetch={false}>
-          3 Yıl % {sortArrow(sort === "ucYil", dir)}
-        </Link>
-      </th>
-      <th className="px-4 py-4 text-left font-semibold">
-        <Link href={sortLink("besYil")} prefetch={false}>
-          5 Yıl % {sortArrow(sort === "besYil", dir)}
-        </Link>
-      </th>
-    </tr>
-  );
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -373,7 +223,7 @@ export default async function FonGetiriExcelPage({
           </form>
         </section>
 
-        <FonGetiriTableClient rows={sorted} headers={headers} />
+        <FonGetiriTableClient rows={filtered} />
       </div>
     </main>
   );

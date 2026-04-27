@@ -1,11 +1,92 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import Link from "next/link";
+import { useEffect, useMemo, useRef, useState } from "react";
 
 type CellValue = string | number | null;
+type SortDir = "asc" | "desc";
 
-function sortArrow(active: boolean, direction: "asc" | "desc") {
+function normalizeText(value: unknown) {
+  return String(value ?? "").replace(/\s+/g, " ").trim();
+}
+
+function parseDateForSort(value: CellValue) {
+  const text = normalizeText(value);
+
+  const trDate = text.match(/^(\d{1,2})[./-](\d{1,2})[./-](\d{4})$/);
+  if (trDate) {
+    const [, day, month, year] = trDate;
+    return new Date(Number(year), Number(month) - 1, Number(day)).getTime();
+  }
+
+  const isoDate = text.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (isoDate) {
+    const [, year, month, day] = isoDate;
+    return new Date(Number(year), Number(month) - 1, Number(day)).getTime();
+  }
+
+  return null;
+}
+
+function parseNumberForSort(value: CellValue) {
+  if (typeof value === "number") return Number.isFinite(value) ? value : null;
+
+  const text = normalizeText(value);
+  if (!text) return null;
+
+  const cleaned = text
+    .replace(/%/g, "")
+    .replace(/\s/g, "")
+    .replace(/\./g, "")
+    .replace(",", ".")
+    .replace(/[^\d.-]/g, "");
+
+  if (!cleaned) return null;
+
+  const parsed = Number(cleaned);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+function compareCells(a: CellValue, b: CellValue, dir: SortDir) {
+  const aDate = parseDateForSort(a);
+  const bDate = parseDateForSort(b);
+
+  if (aDate !== null && bDate !== null) {
+    return dir === "asc" ? aDate - bDate : bDate - aDate;
+  }
+
+  const aNum = parseNumberForSort(a);
+  const bNum = parseNumberForSort(b);
+
+  if (aNum !== null && bNum !== null) {
+    return dir === "asc" ? aNum - bNum : bNum - aNum;
+  }
+
+  const aText = normalizeText(a);
+  const bText = normalizeText(b);
+
+  return dir === "asc"
+    ? aText.localeCompare(bText, "tr")
+    : bText.localeCompare(aText, "tr");
+}
+
+function getDefaultDir(rows: CellValue[][], columnIndex: number) {
+  const sample = rows.find((row) => {
+    const value = row[columnIndex];
+    return value !== null && value !== "";
+  });
+
+  if (!sample) return "asc";
+
+  const value = sample[columnIndex];
+
+  if (parseNumberForSort(value) !== null || parseDateForSort(value) !== null) {
+    return "desc";
+  }
+
+  return "asc";
+}
+
+function sortArrow(active: boolean, direction: SortDir) {
   if (!active) return "↕";
   return direction === "asc" ? "↑" : "↓";
 }
@@ -13,22 +94,25 @@ function sortArrow(active: boolean, direction: "asc" | "desc") {
 export default function FonTarihselTableClient({
   headers,
   rows,
-  pageBasePath,
-  q,
-  sort,
-  dir,
 }: {
   headers: string[];
   rows: CellValue[][];
-  pageBasePath: string;
-  q: string;
-  sort: string;
-  dir: "asc" | "desc";
 }) {
+  const [sortIndex, setSortIndex] = useState<number | null>(null);
+  const [dir, setDir] = useState<SortDir>("asc");
+
   const tableScrollRef = useRef<HTMLDivElement | null>(null);
   const fixedScrollRef = useRef<HTMLDivElement | null>(null);
   const fixedInnerRef = useRef<HTMLDivElement | null>(null);
   const tableRef = useRef<HTMLTableElement | null>(null);
+
+  const sortedRows = useMemo(() => {
+    if (sortIndex === null) return rows;
+
+    return [...rows].sort((a, b) =>
+      compareCells(a[sortIndex] ?? null, b[sortIndex] ?? null, dir)
+    );
+  }, [rows, sortIndex, dir]);
 
   useEffect(() => {
     const tableScroll = tableScrollRef.current;
@@ -78,19 +162,18 @@ export default function FonTarihselTableClient({
       window.removeEventListener("resize", syncWidths);
       resizeObserver?.disconnect();
     };
-  }, [headers, rows]);
+  }, [headers, rows, sortedRows]);
 
   const tableMinWidth = Math.max(headers.length * 170, 1320);
 
-  const sortLink = (index: number) => {
-    const sp = new URLSearchParams();
+  const handleSort = (index: number) => {
+    if (sortIndex === index) {
+      setDir((prev) => (prev === "asc" ? "desc" : "asc"));
+      return;
+    }
 
-    if (q) sp.set("q", q);
-
-    sp.set("sort", String(index));
-    sp.set("dir", sort === String(index) && dir === "asc" ? "desc" : "asc");
-
-    return `${pageBasePath}?${sp.toString()}`;
+    setSortIndex(index);
+    setDir(getDefaultDir(rows, index));
   };
 
   return (
@@ -112,16 +195,20 @@ export default function FonTarihselTableClient({
                     key={`${header}-${index}`}
                     className="sticky top-0 z-20 border-b border-zinc-200 bg-zinc-100 px-4 py-4 text-left font-semibold whitespace-nowrap"
                   >
-                    <Link href={sortLink(index)} prefetch={false}>
-                      {header} {sortArrow(sort === String(index), dir)}
-                    </Link>
+                    <button
+                      type="button"
+                      onClick={() => handleSort(index)}
+                      className="text-left"
+                    >
+                      {header} {sortArrow(sortIndex === index, dir)}
+                    </button>
                   </th>
                 ))}
               </tr>
             </thead>
 
             <tbody>
-              {rows.map((row, rowIndex) => (
+              {sortedRows.map((row, rowIndex) => (
                 <tr
                   key={`row-${rowIndex}`}
                   className={rowIndex % 2 === 0 ? "bg-white" : "bg-sky-50"}
@@ -145,7 +232,7 @@ export default function FonTarihselTableClient({
                 </tr>
               ))}
 
-              {rows.length === 0 && (
+              {sortedRows.length === 0 && (
                 <tr>
                   <td
                     colSpan={headers.length || 1}
