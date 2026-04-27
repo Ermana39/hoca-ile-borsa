@@ -5,6 +5,8 @@ import FonTarihselTableClient from "./FonTarihselTableClient";
 
 type SearchParams = Promise<{
   q?: string;
+  sort?: string;
+  dir?: string;
 }>;
 
 type CellValue = string | number | null;
@@ -122,6 +124,59 @@ function isDateHeader(header: string) {
   return normalizeKey(header).includes("tarih");
 }
 
+function parseDateForSort(value: CellValue) {
+  const text = normalizeText(value);
+  const match = text.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})$/);
+
+  if (!match) return null;
+
+  const [, day, month, year] = match;
+
+  return new Date(Number(year), Number(month) - 1, Number(day)).getTime();
+}
+
+function parseNumberForSort(value: CellValue) {
+  if (typeof value === "number") return Number.isFinite(value) ? value : null;
+
+  const text = normalizeText(value);
+  if (!text) return null;
+
+  const cleaned = text
+    .replace(/%/g, "")
+    .replace(/\s/g, "")
+    .replace(/\./g, "")
+    .replace(",", ".")
+    .replace(/[^\d.-]/g, "");
+
+  if (!cleaned) return null;
+
+  const parsed = Number(cleaned);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+function compareCells(a: CellValue, b: CellValue, dir: "asc" | "desc") {
+  const aDate = parseDateForSort(a);
+  const bDate = parseDateForSort(b);
+
+  if (aDate !== null && bDate !== null) {
+    return dir === "asc" ? aDate - bDate : bDate - aDate;
+  }
+
+  const aNum = parseNumberForSort(a);
+  const bNum = parseNumberForSort(b);
+
+  if (aNum !== null && bNum !== null) {
+    return dir === "asc" ? aNum - bNum : bNum - aNum;
+  }
+
+  const aText = normalizeText(a);
+  const bText = normalizeText(b);
+
+  return dir === "asc"
+    ? aText.localeCompare(bText, "tr")
+    : bText.localeCompare(aText, "tr");
+}
+
 async function getJsonData(excelRelativePath: string) {
   const jsonRelativePath = excelRelativePath.replace(/\.xlsx$/i, ".json");
   const filePath = path.join(process.cwd(), jsonRelativePath);
@@ -214,6 +269,23 @@ export default async function FonTarihselExcelPage({
     return text.includes(q);
   });
 
+  const sortIndexRaw = Number(params.sort);
+  const sortIndex =
+    Number.isInteger(sortIndexRaw) &&
+    sortIndexRaw >= 0 &&
+    sortIndexRaw < headers.length
+      ? sortIndexRaw
+      : -1;
+
+  const dir: "asc" | "desc" = params.dir === "desc" ? "desc" : "asc";
+
+  const sortedRows =
+    sortIndex >= 0
+      ? [...filteredRows].sort((a, b) =>
+          compareCells(a[sortIndex], b[sortIndex], dir)
+        )
+      : filteredRows;
+
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-7xl pb-24">
@@ -258,7 +330,14 @@ export default async function FonTarihselExcelPage({
           </form>
         </section>
 
-        <FonTarihselTableClient headers={headers} rows={filteredRows} />
+        <FonTarihselTableClient
+          headers={headers}
+          rows={sortedRows}
+          pageBasePath={pageBasePath}
+          q={q}
+          sort={sortIndex >= 0 ? String(sortIndex) : ""}
+          dir={dir}
+        />
       </div>
     </main>
   );
