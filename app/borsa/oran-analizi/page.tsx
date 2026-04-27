@@ -1,8 +1,8 @@
-import fs from "node:fs/promises";
-import path from "node:path";
 import Link from "next/link";
 import Script from "next/script";
-import * as XLSX from "xlsx";
+import oranAnaliziJson from "./data/oran-analizi.json";
+
+export const dynamic = "force-static";
 
 export const metadata = {
   title: "Oran Analizi | Hoca İle Borsa",
@@ -11,6 +11,14 @@ export const metadata = {
 };
 
 type RowData = Record<string, string | number | null>;
+
+type OranAnaliziData = {
+  columns: string[];
+  rows: RowData[];
+  guncellemeTarihi: string;
+};
+
+const oranAnaliziData = oranAnaliziJson as OranAnaliziData;
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
@@ -26,14 +34,6 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
       <div className={`w-full ${alanClass}`} />
     </section>
   );
-}
-
-function temizHucre(value: unknown): string | number | null {
-  if (value === null || value === undefined || value === "") return null;
-  if (typeof value === "number") return value;
-
-  const metin = String(value).trim();
-  return metin === "" ? null : metin;
 }
 
 function parseNumeric(value: string | number | null) {
@@ -80,54 +80,21 @@ function getRowType(row: RowData, columns: string[]) {
   return "sector_header";
 }
 
-async function getExcelData() {
-  const filePath = path.join(
-    process.cwd(),
-    "app",
-    "borsa",
-    "oran-analizi",
-    "data",
-    "oran-analizi.xlsx"
+function getOranAnaliziData() {
+  const columns = oranAnaliziData.columns;
+  const rows = oranAnaliziData.rows.filter(
+    (row) => getRowType(row, columns) !== "remove"
   );
 
-  const [buffer, stat] = await Promise.all([
-    fs.readFile(filePath),
-    fs.stat(filePath),
-  ]);
-
-  const workbook = XLSX.read(buffer, { type: "buffer" });
-  const firstSheet = workbook.Sheets[workbook.SheetNames[0]];
-
-  const rawRows = XLSX.utils.sheet_to_json<Record<string, unknown>>(firstSheet, {
-    defval: null,
-  });
-
-  const columns =
-    rawRows.length > 0
-      ? Object.keys(rawRows[0]).filter((item) => item && item.trim() !== "")
-      : [];
-
-  const rows: RowData[] = rawRows
-    .map((row) => {
-      const normalized: RowData = {};
-      for (const column of columns) {
-        normalized[column] = temizHucre(row[column]);
-      }
-      return normalized;
-    })
-    .filter((row) => getRowType(row, columns) !== "remove");
-
-  const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-  }).format(stat.mtime);
-
-  return { columns, rows, guncellemeTarihi };
+  return {
+    columns,
+    rows,
+    guncellemeTarihi: oranAnaliziData.guncellemeTarihi,
+  };
 }
 
-export default async function OranAnaliziPage() {
-  const { columns, rows, guncellemeTarihi } = await getExcelData();
+export default function OranAnaliziPage() {
+  const { columns, rows, guncellemeTarihi } = getOranAnaliziData();
 
   const tableOuterId = "oran-analizi-table-outer";
   const tableWidthId = "oran-analizi-table-width";
