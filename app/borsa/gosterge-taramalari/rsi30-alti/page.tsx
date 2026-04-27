@@ -1,7 +1,15 @@
-import fs from "fs";
-import path from "path";
 import Link from "next/link";
-import * as XLSX from "xlsx";
+import rsi30AltiData from "../data/rsi30-alti.json";
+
+export const metadata = {
+  title: "RSI 30 Altı Hisseler | Hoca İle Borsa",
+  description:
+    "RSI değeri 30 seviyesinin altında olan Borsa İstanbul hisselerini inceleyin.",
+};
+
+export const revalidate = 3600;
+
+type JsonRow = Record<string, string | number | null>;
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
@@ -24,33 +32,35 @@ function metinCevir(deger: unknown) {
   return String(deger).trim();
 }
 
+function normalizeText(metin: string) {
+  return metin
+    .toLocaleLowerCase("tr-TR")
+    .replace(/ı/g, "i")
+    .replace(/ğ/g, "g")
+    .replace(/ü/g, "u")
+    .replace(/ş/g, "s")
+    .replace(/ö/g, "o")
+    .replace(/ç/g, "c")
+    .trim();
+}
+
 function hisseleriOku() {
-  try {
-    const dosyaYolu = path.join(
-      process.cwd(),
-      "app",
-      "borsa",
-      "gosterge-taramalari",
-      "data",
-      "rsi30-alti.xlsx"
-    );
+  const rows = (rsi30AltiData.rows || []) as JsonRow[];
 
-    const buffer = fs.readFileSync(dosyaYolu);
-    const workbook = XLSX.read(buffer, { type: "buffer" });
-    const sheetName = workbook.SheetNames[0];
-    const ws = workbook.Sheets[sheetName];
+  if (!rows.length) return [];
 
-    const rawRows = XLSX.utils.sheet_to_json<(string | number)[]>(ws, {
-      header: 1,
-      defval: "",
-    }) as (string | number)[][];
+  const columns =
+    Array.isArray(rsi30AltiData.columns) && rsi30AltiData.columns.length > 0
+      ? rsi30AltiData.columns
+      : Object.keys(rows[0] || {});
 
-    return rawRows
-      .map((row) => metinCevir(row[0]))
-      .filter((item) => item && item.toLocaleLowerCase("tr-TR") !== "sembol");
-  } catch {
-    return [];
-  }
+  const sembolKolonu =
+    columns.find((column) => normalizeText(column).includes("sembol")) ||
+    columns[0];
+
+  return rows
+    .map((row) => metinCevir(row[sembolKolonu]))
+    .filter((item) => item && normalizeText(item) !== "sembol");
 }
 
 export default function Rsi30AltiPage() {
@@ -62,6 +72,7 @@ export default function Rsi30AltiPage() {
         <div className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Ana Sayfa
@@ -69,6 +80,7 @@ export default function Rsi30AltiPage() {
 
           <Link
             href="/borsa/gosterge-taramalari"
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Geri
@@ -78,9 +90,11 @@ export default function Rsi30AltiPage() {
         <h1 className="mb-2 text-3xl font-bold text-zinc-900">
           RSI 30 Altı Hisseler
         </h1>
+
         <p className="mb-3 max-w-3xl text-base text-zinc-600">
           RSI değeri 30 seviyesinin altında olan hisseler
         </p>
+
         <div className="mb-8 text-sm font-semibold text-zinc-700 md:text-base">
           Toplam {hisseler.length} hisse
         </div>
@@ -103,7 +117,7 @@ export default function Rsi30AltiPage() {
             </div>
           ) : (
             <div className="rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-8 text-center text-sm text-zinc-500">
-              Excel verisi okunamadı.
+              Veri bulunamadı.
             </div>
           )}
         </section>

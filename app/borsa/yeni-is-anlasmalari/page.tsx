@@ -1,25 +1,15 @@
-import fs from "fs";
-import path from "path";
 import Link from "next/link";
-import Script from "next/script";
-import * as XLSX from "xlsx";
+import rsi70UstuData from "../data/rsi70-ustu.json";
 
-const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
-  timeZone: "Europe/Istanbul",
-  day: "2-digit",
-  month: "2-digit",
-  year: "numeric",
-}).format(new Date());
-
-type YeniIsSatiri = {
-  sembol: string;
-  tarih: string;
-  tutar: number | null;
-  paraBirimi: string;
-  bilanco: string;
-  yillikSatislar: number | null;
-  oran: number | null;
+export const metadata = {
+  title: "RSI 70 Üstü Hisseler | Hoca İle Borsa",
+  description:
+    "RSI değeri 70 seviyesinin üzerinde olan Borsa İstanbul hisselerini inceleyin.",
 };
+
+export const revalidate = 3600;
+
+type JsonRow = Record<string, string | number | null>;
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
@@ -37,6 +27,11 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
+function metinCevir(deger: unknown) {
+  if (deger === null || deger === undefined) return "";
+  return String(deger).trim();
+}
+
 function normalizeText(metin: string) {
   return metin
     .toLocaleLowerCase("tr-TR")
@@ -49,185 +44,43 @@ function normalizeText(metin: string) {
     .trim();
 }
 
-function sayiCevir(deger: unknown): number | null {
-  if (deger === null || deger === undefined || deger === "") return null;
-  if (typeof deger === "number") return Number.isNaN(deger) ? null : deger;
+function hisseleriOku() {
+  const rows = (rsi70UstuData.rows || []) as JsonRow[];
 
-  const metin = String(deger).trim();
-  if (!metin) return null;
+  if (!rows.length) return [];
 
-  const temiz = metin.replace(/\s/g, "").replace(/\./g, "").replace(",", ".");
-  const sayi = Number(temiz);
+  const columns =
+    Array.isArray(rsi70UstuData.columns) && rsi70UstuData.columns.length > 0
+      ? rsi70UstuData.columns
+      : Object.keys(rows[0] || {});
 
-  return Number.isNaN(sayi) ? null : sayi;
+  const sembolKolonu =
+    columns.find((column) => normalizeText(column).includes("sembol")) ||
+    columns[0];
+
+  return rows
+    .map((row) => metinCevir(row[sembolKolonu]))
+    .filter((item) => item && normalizeText(item) !== "sembol");
 }
 
-function metinCevir(deger: unknown): string {
-  if (deger === null || deger === undefined) return "";
-  return String(deger).trim();
-}
-
-function formatNumber(deger: number | null, fractionDigits = 2) {
-  if (deger === null || Number.isNaN(deger)) return "-";
-
-  return new Intl.NumberFormat("tr-TR", {
-    minimumFractionDigits: 0,
-    maximumFractionDigits: fractionDigits,
-  }).format(deger);
-}
-
-function formatOran(deger: number | null) {
-  if (deger === null || Number.isNaN(deger)) return "-";
-
-  return new Intl.NumberFormat("tr-TR", {
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 4,
-  }).format(deger);
-}
-
-function kolonBul(headers: string[], adaylar: string[]) {
-  return (
-    headers.find((header) => {
-      const h = normalizeText(header);
-      return adaylar.some((aday) => h.includes(normalizeText(aday)));
-    }) || ""
-  );
-}
-
-function verileriOku(): YeniIsSatiri[] {
-  try {
-    const dosyaYolu = path.join(
-      process.cwd(),
-      "app",
-      "borsa",
-      "yeni-is-anlasmalari",
-      "data",
-      "yeni-is-anlasmalari.xlsx"
-    );
-
-    const buffer = fs.readFileSync(dosyaYolu);
-    const workbook = XLSX.read(buffer, { type: "buffer" });
-    const sheetName = workbook.SheetNames[0];
-    const ws = workbook.Sheets[sheetName];
-
-    const rows = XLSX.utils.sheet_to_json<Record<string, unknown>>(ws, {
-      defval: "",
-    });
-
-    if (!rows.length) return [];
-
-    const headers = Object.keys(rows[0] || {});
-
-    const sembolKolonu =
-      kolonBul(headers, ["sembol", "kod", "hisse", "ticker", "symbol"]) ||
-      headers[0];
-
-    const tarihKolonu =
-      kolonBul(headers, ["tarih", "is iliskisi tarihi", "iş ilişkisi tarihi"]) ||
-      headers[1] ||
-      "";
-
-    const tutarKolonu =
-      kolonBul(headers, [
-        "yeni is iliskisi tutari",
-        "yeni iş ilişkisi tutarı",
-        "tutar",
-        "is iliskisi tutari",
-      ]) ||
-      headers[2] ||
-      "";
-
-    const paraBirimiKolonu =
-      kolonBul(headers, ["para birimi", "doviz", "döviz", "pb"]) ||
-      headers[3] ||
-      "";
-
-    const bilancoKolonu =
-      kolonBul(headers, [
-        "bilanco donemi",
-        "bilanço dönemi",
-        "bilanco",
-        "bilanço",
-      ]) ||
-      headers[4] ||
-      "";
-
-    const yillikSatislarKolonu =
-      kolonBul(headers, [
-        "yillik satislar",
-        "yıllık satışlar",
-        "satislar",
-        "satışlar",
-      ]) ||
-      headers[5] ||
-      "";
-
-    const oranKolonu =
-      kolonBul(headers, [
-        "yeni is iliskisi / yillik satislar",
-        "yeni iş ilişkisi / yıllık satışlar",
-        "oran",
-      ]) ||
-      headers[6] ||
-      "";
-
-    return rows
-      .map((row) => ({
-        sembol: metinCevir(row[sembolKolonu]),
-        tarih: metinCevir(row[tarihKolonu]),
-        tutar: sayiCevir(row[tutarKolonu]),
-        paraBirimi: metinCevir(row[paraBirimiKolonu]),
-        bilanco: metinCevir(row[bilancoKolonu]),
-        yillikSatislar: sayiCevir(row[yillikSatislarKolonu]),
-        oran: sayiCevir(row[oranKolonu]),
-      }))
-      .filter((item) => item.sembol);
-  } catch {
-    return [];
-  }
-}
-
-const columns = [
-  { key: "sembol", label: "Sembol", align: "left" as const, width: "min-w-[140px]" },
-  { key: "tarih", label: "Tarih", align: "left" as const, width: "min-w-[150px]" },
-  {
-    key: "tutar",
-    label: "Yeni İş İlişkisi Tutarı",
-    align: "right" as const,
-    width: "min-w-[220px]",
-  },
-  { key: "paraBirimi", label: "Para Birimi", align: "left" as const, width: "min-w-[140px]" },
-  { key: "bilanco", label: "Bilanço Dönemi", align: "left" as const, width: "min-w-[170px]" },
-  { key: "yillikSatislar", label: "Yıllık Satışlar", align: "right" as const, width: "min-w-[170px]" },
-  {
-    key: "oran",
-    label: "Yeni İş İlişkisi / Yıllık Satışlar",
-    align: "right" as const,
-    width: "min-w-[250px]",
-  },
-];
-
-export default function YeniIsAnlasmalariPage() {
-  const satirlar = verileriOku();
-
-  const headerScrollId = "yeni-is-header-scroll";
-  const headerWidthId = "yeni-is-header-width";
-  const bodyScrollId = "yeni-is-body-scroll";
-  const bodyWidthId = "yeni-is-body-width";
+export default function Rsi70UstuPage() {
+  const hisseler = hisseleriOku();
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
-      <div className="mx-auto max-w-7xl">
+      <div className="mx-auto max-w-6xl">
         <div className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Ana Sayfa
           </Link>
 
           <Link
-            href="/borsa"
+            href="/borsa/gosterge-taramalari"
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Geri
@@ -235,196 +88,44 @@ export default function YeniIsAnlasmalariPage() {
         </div>
 
         <h1 className="mb-2 text-3xl font-bold text-zinc-900">
-          Yeni İş Anlaşmaları
+          RSI 70 Üstü Hisseler
         </h1>
 
-        <p className="mb-8 max-w-3xl text-base text-zinc-600">
-          Yeni İş Anlaşması Yapan Şirketler
+        <p className="mb-3 max-w-3xl text-base text-zinc-600">
+          RSI değeri 70 seviyesinin üzerinde olan hisseler
         </p>
 
-        <div className="mb-8 text-sm font-semibold text-zinc-700">
-          Güncelleme Tarihi: {guncellemeTarihi}
+        <div className="mb-8 text-sm font-semibold text-zinc-700 md:text-base">
+          Toplam {hisseler.length} hisse
         </div>
 
         <section className="mb-8">
           <ReklamAlani variant="yatay" />
         </section>
 
-        <section className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
-          <div className="rounded-xl border border-zinc-200 bg-white">
-            <div className="sticky top-0 z-30 rounded-t-xl border-b border-zinc-200 bg-white">
-              <div
-                id={headerScrollId}
-                className="overflow-x-auto [&::-webkit-scrollbar]:hidden"
-                style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-              >
-                <div id={headerWidthId} className="min-w-max">
-                  <table className="min-w-full border-collapse text-sm">
-                    <thead className="bg-zinc-100 text-zinc-700">
-                      <tr>
-                        {columns.map((column) => (
-                          <th
-                            key={column.key}
-                            className={`${column.width} px-4 py-3 ${
-                              column.align === "right" ? "text-right" : "text-left"
-                            }`}
-                          >
-                            {column.label}
-                          </th>
-                        ))}
-                      </tr>
-                    </thead>
-                  </table>
+        <section className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
+          {hisseler.length > 0 ? (
+            <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
+              {hisseler.map((hisse, index) => (
+                <div
+                  key={`${hisse}-${index}`}
+                  className="rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-4 text-base font-semibold text-zinc-900"
+                >
+                  {hisse}
                 </div>
-              </div>
+              ))}
             </div>
-
-            <div id={bodyScrollId} className="overflow-x-auto rounded-b-xl">
-              <div id={bodyWidthId} className="min-w-max">
-                <table className="min-w-full border-collapse text-sm bg-white">
-                  <tbody>
-                    {satirlar.length > 0 ? (
-                      satirlar.map((item, index) => (
-                        <tr
-                          key={`${item.sembol}-${item.tarih}-${index}`}
-                          className={
-                            index % 2 === 0
-                              ? "border-t border-zinc-100 bg-white"
-                              : "border-t border-zinc-100 bg-sky-50/60"
-                          }
-                        >
-                          <td className="min-w-[140px] px-4 py-3 font-semibold text-zinc-900">
-                            {item.sembol}
-                          </td>
-                          <td className="min-w-[150px] px-4 py-3 text-zinc-700">
-                            {item.tarih || "-"}
-                          </td>
-                          <td className="min-w-[220px] px-4 py-3 text-right font-semibold text-zinc-900">
-                            {formatNumber(item.tutar, 0)}
-                          </td>
-                          <td className="min-w-[140px] px-4 py-3 text-zinc-700">
-                            {item.paraBirimi || "-"}
-                          </td>
-                          <td className="min-w-[170px] px-4 py-3 text-zinc-700">
-                            {item.bilanco || "-"}
-                          </td>
-                          <td className="min-w-[170px] px-4 py-3 text-right text-zinc-700">
-                            {formatNumber(item.yillikSatislar, 0)}
-                          </td>
-                          <td className="min-w-[250px] px-4 py-3 text-right text-zinc-700">
-                            {formatOran(item.oran)}
-                          </td>
-                        </tr>
-                      ))
-                    ) : (
-                      <tr>
-                        <td
-                          colSpan={7}
-                          className="px-4 py-8 text-center text-sm text-zinc-500"
-                        >
-                          Excel verisi okunamadı.
-                        </td>
-                      </tr>
-                    )}
-                  </tbody>
-                </table>
-              </div>
+          ) : (
+            <div className="rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-8 text-center text-sm text-zinc-500">
+              Veri bulunamadı.
             </div>
-          </div>
+          )}
         </section>
 
-        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
-          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
-            Yeni İş Anlaşmaları Hakkında
-          </h2>
-
-          <p className="mb-4 leading-7 text-zinc-700">
-            Yeni iş anlaşmaları sayfası, Borsa İstanbul’da işlem gören şirketlerin
-            duyurduğu yeni sözleşmeleri, iş ilişkilerini ve ticari anlaşmaları
-            takip etmek isteyen yatırımcılar için hazırlanmıştır. Bu sayfada
-            şirketlerin açıkladığı yeni iş tutarları, bilanço dönemleri, yıllık
-            satışlara oranları ve anlaşma tarihleri detaylı şekilde incelenebilir.
-          </p>
-
-          <p className="mb-4 leading-7 text-zinc-700">
-            Şirketlerin yaptığı yeni iş anlaşmaları, gelecekteki gelir beklentileri
-            açısından yatırımcılar tarafından yakından takip edilir. Özellikle büyük
-            tutarlı sözleşmeler, ihracat bağlantıları, kamu ihaleleri ve uzun vadeli
-            projeler şirket değerlemeleri üzerinde etkili olabilir.
-          </p>
-
-          <p className="mb-4 leading-7 text-zinc-700">
-            Bu sayfadaki veriler sayesinde hangi şirketlerin yeni iş anlaşması
-            açıkladığını, anlaşma büyüklüğünü ve yıllık satışlara etkisini kolayca
-            karşılaştırabilirsiniz. Böylece büyüme potansiyeli taşıyan şirketleri
-            daha yakından izlemek mümkün hale gelir.
-          </p>
-
-          <p className="leading-7 text-zinc-700">
-            Güncel yeni iş anlaşmaları, şirket KAP bildirimleri, sözleşme tutarları,
-            gelir etkisi analizleri ve borsa şirket haberleri için bu sayfayı
-            düzenli olarak takip edebilirsiniz.
-          </p>
+        <section className="mt-8">
+          <ReklamAlani variant="icerik" />
         </section>
       </div>
-
-      <Script id="yeni-is-header-scroll-sync" strategy="afterInteractive">
-        {`
-          (function () {
-            const header = document.getElementById("${headerScrollId}");
-            const body = document.getElementById("${bodyScrollId}");
-            const headerWidth = document.getElementById("${headerWidthId}");
-            const bodyWidth = document.getElementById("${bodyWidthId}");
-
-            if (!header || !body || !headerWidth || !bodyWidth) return;
-
-            let source = "";
-
-            function syncWidths() {
-              const width = Math.max(headerWidth.scrollWidth, bodyWidth.scrollWidth);
-              headerWidth.style.width = width + "px";
-              bodyWidth.style.width = width + "px";
-              header.scrollLeft = body.scrollLeft;
-            }
-
-            header.addEventListener(
-              "scroll",
-              function () {
-                if (source === "body") {
-                  source = "";
-                  return;
-                }
-                source = "header";
-                body.scrollLeft = header.scrollLeft;
-              },
-              { passive: true }
-            );
-
-            body.addEventListener(
-              "scroll",
-              function () {
-                if (source === "header") {
-                  source = "";
-                  return;
-                }
-                source = "body";
-                header.scrollLeft = body.scrollLeft;
-              },
-              { passive: true }
-            );
-
-            syncWidths();
-
-            if (typeof ResizeObserver !== "undefined") {
-              const observer = new ResizeObserver(syncWidths);
-              observer.observe(headerWidth);
-              observer.observe(bodyWidth);
-            }
-
-            window.addEventListener("resize", syncWidths);
-          })();
-        `}
-      </Script>
     </main>
   );
 }

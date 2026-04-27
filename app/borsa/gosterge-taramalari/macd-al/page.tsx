@@ -1,7 +1,15 @@
-import fs from "fs";
-import path from "path";
 import Link from "next/link";
-import * as XLSX from "xlsx";
+import macdAlData from "../data/macd-al.json";
+
+export const metadata = {
+  title: "MACD Al Veren Hisseler | Hoca İle Borsa",
+  description:
+    "MACD göstergesine göre al sinyali üreten Borsa İstanbul hisselerini inceleyin.",
+};
+
+export const revalidate = 3600;
+
+type JsonRow = Record<string, string | number | null>;
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
@@ -24,33 +32,35 @@ function metinCevir(deger: unknown) {
   return String(deger).trim();
 }
 
+function normalizeText(metin: string) {
+  return metin
+    .toLocaleLowerCase("tr-TR")
+    .replace(/ı/g, "i")
+    .replace(/ğ/g, "g")
+    .replace(/ü/g, "u")
+    .replace(/ş/g, "s")
+    .replace(/ö/g, "o")
+    .replace(/ç/g, "c")
+    .trim();
+}
+
 function hisseleriOku() {
-  try {
-    const dosyaYolu = path.join(
-      process.cwd(),
-      "app",
-      "borsa",
-      "gosterge-taramalari",
-      "data",
-      "macd-al.xlsx"
-    );
+  const rows = (macdAlData.rows || []) as JsonRow[];
 
-    const buffer = fs.readFileSync(dosyaYolu);
-    const workbook = XLSX.read(buffer, { type: "buffer" });
-    const sheetName = workbook.SheetNames[0];
-    const ws = workbook.Sheets[sheetName];
+  if (!rows.length) return [];
 
-    const rawRows = XLSX.utils.sheet_to_json<(string | number)[]>(ws, {
-      header: 1,
-      defval: "",
-    }) as (string | number)[][];
+  const columns =
+    Array.isArray(macdAlData.columns) && macdAlData.columns.length > 0
+      ? macdAlData.columns
+      : Object.keys(rows[0] || {});
 
-    return rawRows
-      .map((row) => metinCevir(row[0]))
-      .filter((item) => item && item.toLocaleLowerCase("tr-TR") !== "sembol");
-  } catch {
-    return [];
-  }
+  const sembolKolonu =
+    columns.find((column) => normalizeText(column).includes("sembol")) ||
+    columns[0];
+
+  return rows
+    .map((row) => metinCevir(row[sembolKolonu]))
+    .filter((item) => item && normalizeText(item) !== "sembol");
 }
 
 export default function MacdAlPage() {
@@ -62,6 +72,7 @@ export default function MacdAlPage() {
         <div className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Ana Sayfa
@@ -69,6 +80,7 @@ export default function MacdAlPage() {
 
           <Link
             href="/borsa/gosterge-taramalari"
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Geri
@@ -78,9 +90,11 @@ export default function MacdAlPage() {
         <h1 className="mb-2 text-3xl font-bold text-zinc-900">
           MACD Al Veren Hisseler
         </h1>
+
         <p className="mb-3 max-w-3xl text-base text-zinc-600">
           MACD göstergesine göre al sinyali üreten hisseler
         </p>
+
         <div className="mb-8 text-sm font-semibold text-zinc-700 md:text-base">
           Toplam {hisseler.length} hisse
         </div>
@@ -103,7 +117,7 @@ export default function MacdAlPage() {
             </div>
           ) : (
             <div className="rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-8 text-center text-sm text-zinc-500">
-              Excel verisi okunamadı.
+              Veri bulunamadı.
             </div>
           )}
         </section>

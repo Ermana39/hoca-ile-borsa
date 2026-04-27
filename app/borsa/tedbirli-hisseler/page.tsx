@@ -1,15 +1,14 @@
-import fs from "fs";
-import path from "path";
 import Link from "next/link";
 import Script from "next/script";
-import * as XLSX from "xlsx";
+import tedbirData from "./data/tedbir.json";
 
-const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
-  timeZone: "Europe/Istanbul",
-  day: "2-digit",
-  month: "2-digit",
-  year: "numeric",
-}).format(new Date());
+export const metadata = {
+  title: "Tedbirli Hisseler | Hoca İle Borsa",
+  description:
+    "Borsa İstanbul’da tedbir uygulanan hisseleri, başlangıç ve bitiş tarihlerini, brüt takas ve işlem kısıtlarını takip edin.",
+};
+
+export const revalidate = 3600;
 
 type TedbirRow = {
   sembol: string;
@@ -24,6 +23,8 @@ type TedbirRow = {
   emirIptalAzaltma: string;
   veriYayini: string;
 };
+
+type JsonRow = Record<string, string | number | null>;
 
 type ColumnDef = {
   key: keyof TedbirRow;
@@ -97,102 +98,135 @@ function kolonBul(headers: string[], adaylar: string[]) {
 }
 
 function verileriOku(): TedbirRow[] {
-  try {
-    const dosyaYolu = path.join(
-      process.cwd(),
-      "app",
-      "borsa",
-      "tedbirli-hisseler",
-      "data",
-      "tedbir.xlsx"
-    );
+  const rows = (tedbirData.rows || []) as JsonRow[];
 
-    const buffer = fs.readFileSync(dosyaYolu);
-    const workbook = XLSX.read(buffer, { type: "buffer" });
-    const sheetName = workbook.SheetNames[0];
-    const ws = workbook.Sheets[sheetName];
+  if (!rows.length) return [];
 
-    const rows = XLSX.utils.sheet_to_json<Record<string, unknown>>(ws, {
-      defval: "",
-    });
+  const headers =
+    Array.isArray(tedbirData.columns) && tedbirData.columns.length > 0
+      ? tedbirData.columns
+      : Object.keys(rows[0] || {});
 
-    if (!rows.length) return [];
+  const sembolKolonu =
+    kolonBul(headers, ["sembol", "kod", "hisse", "ticker", "symbol"]) ||
+    headers[0];
 
-    const headers = Object.keys(rows[0] || {});
+  const fiyatKolonu =
+    kolonBul(headers, ["fiyat", "son fiyat", "kapanis", "kapanış"]) ||
+    headers[1] ||
+    "";
 
-    const sembolKolonu =
-      kolonBul(headers, ["sembol", "kod", "hisse", "ticker", "symbol"]) || headers[0];
+  const degisimKolonu =
+    kolonBul(headers, ["degisim", "değişim", "degisim %", "değişim %"]) ||
+    headers[2] ||
+    "";
 
-    const fiyatKolonu =
-      kolonBul(headers, ["fiyat", "son fiyat", "kapanis", "kapanış"]) || headers[1] || "";
+  const baslangicKolonu =
+    kolonBul(headers, [
+      "baslangic tarihi",
+      "başlangıç tarihi",
+      "baslangic",
+      "başlangıç",
+    ]) ||
+    headers[3] ||
+    "";
 
-    const degisimKolonu =
-      kolonBul(headers, ["degisim", "değişim", "degisim %", "değişim %"]) || headers[2] || "";
+  const bitisKolonu =
+    kolonBul(headers, ["bitis tarihi", "bitiş tarihi", "bitis", "bitiş"]) ||
+    headers[4] ||
+    "";
 
-    const baslangicKolonu =
-      kolonBul(headers, ["baslangic tarihi", "başlangıç tarihi", "baslangic", "başlangıç"]) ||
-      headers[3] ||
-      "";
+  const brutTakasKolonu =
+    kolonBul(headers, ["brut takas", "brüt takas"]) || headers[5] || "";
 
-    const bitisKolonu =
-      kolonBul(headers, ["bitis tarihi", "bitiş tarihi", "bitis", "bitiş"]) || headers[4] || "";
+  const acigaSatisKolonu =
+    kolonBul(headers, [
+      "aciga satis",
+      "açığa satış",
+      "aciga satış",
+      "açığa satis",
+    ]) ||
+    headers[6] ||
+    "";
 
-    const brutTakasKolonu =
-      kolonBul(headers, ["brut takas", "brüt takas"]) || headers[5] || "";
+  const krediliIslemKolonu =
+    kolonBul(headers, ["kredili islem", "kredili işlem"]) || headers[7] || "";
 
-    const acigaSatisKolonu =
-      kolonBul(headers, ["aciga satis", "açığa satış", "aciga satış", "açığa satis"]) ||
-      headers[6] ||
-      "";
+  const piyasaEmriKolonu =
+    kolonBul(headers, ["piyasa emri"]) || headers[8] || "";
 
-    const krediliIslemKolonu =
-      kolonBul(headers, ["kredili islem", "kredili işlem"]) || headers[7] || "";
+  const emirIptalAzaltmaKolonu =
+    kolonBul(headers, ["emir iptal", "emir iptal azaltma", "emir azaltma"]) ||
+    headers[9] ||
+    "";
 
-    const piyasaEmriKolonu =
-      kolonBul(headers, ["piyasa emri"]) || headers[8] || "";
+  const veriYayiniKolonu =
+    kolonBul(headers, ["veri yayini", "veri yayını"]) || headers[10] || "";
 
-    const emirIptalAzaltmaKolonu =
-      kolonBul(headers, ["emir iptal", "emir iptal azaltma", "emir azaltma"]) || headers[9] || "";
-
-    const veriYayiniKolonu =
-      kolonBul(headers, ["veri yayini", "veri yayını"]) || headers[10] || "";
-
-    return rows
-      .map((row) => ({
-        sembol: metinCevir(row[sembolKolonu]),
-        fiyat: sayiCevir(row[fiyatKolonu]),
-        degisim: sayiCevir(row[degisimKolonu]),
-        baslangicTarihi: metinCevir(row[baslangicKolonu]),
-        bitisTarihi: metinCevir(row[bitisKolonu]),
-        brutTakas: metinCevir(row[brutTakasKolonu]) || "-",
-        acigaSatis: metinCevir(row[acigaSatisKolonu]) || "-",
-        krediliIslem: metinCevir(row[krediliIslemKolonu]) || "-",
-        piyasaEmri: metinCevir(row[piyasaEmriKolonu]) || "-",
-        emirIptalAzaltma: metinCevir(row[emirIptalAzaltmaKolonu]) || "-",
-        veriYayini: metinCevir(row[veriYayiniKolonu]) || "-",
-      }))
-      .filter((item) => item.sembol);
-  } catch {
-    return [];
-  }
+  return rows
+    .map((row) => ({
+      sembol: metinCevir(row[sembolKolonu]),
+      fiyat: sayiCevir(row[fiyatKolonu]),
+      degisim: sayiCevir(row[degisimKolonu]),
+      baslangicTarihi: metinCevir(row[baslangicKolonu]),
+      bitisTarihi: metinCevir(row[bitisKolonu]),
+      brutTakas: metinCevir(row[brutTakasKolonu]) || "-",
+      acigaSatis: metinCevir(row[acigaSatisKolonu]) || "-",
+      krediliIslem: metinCevir(row[krediliIslemKolonu]) || "-",
+      piyasaEmri: metinCevir(row[piyasaEmriKolonu]) || "-",
+      emirIptalAzaltma: metinCevir(row[emirIptalAzaltmaKolonu]) || "-",
+      veriYayini: metinCevir(row[veriYayiniKolonu]) || "-",
+    }))
+    .filter((item) => item.sembol);
 }
 
 const columns: ColumnDef[] = [
   { key: "sembol", label: "Sembol", width: "min-w-[130px]", align: "left" },
   { key: "fiyat", label: "Fiyat", width: "min-w-[110px]", align: "left" },
   { key: "degisim", label: "Değişim %", width: "min-w-[130px]", align: "left" },
-  { key: "baslangicTarihi", label: "Başlangıç Tarihi", width: "min-w-[160px]", align: "left" },
-  { key: "bitisTarihi", label: "Bitiş Tarihi", width: "min-w-[140px]", align: "left" },
+  {
+    key: "baslangicTarihi",
+    label: "Başlangıç Tarihi",
+    width: "min-w-[160px]",
+    align: "left",
+  },
+  {
+    key: "bitisTarihi",
+    label: "Bitiş Tarihi",
+    width: "min-w-[140px]",
+    align: "left",
+  },
   { key: "brutTakas", label: "Brüt Takas", width: "min-w-[130px]", align: "left" },
-  { key: "acigaSatis", label: "Açığa Satış", width: "min-w-[140px]", align: "left" },
-  { key: "krediliIslem", label: "Kredili İşlem", width: "min-w-[150px]", align: "left" },
-  { key: "piyasaEmri", label: "Piyasa Emri", width: "min-w-[130px]", align: "left" },
-  { key: "emirIptalAzaltma", label: "Emir İptal / Azaltma", width: "min-w-[180px]", align: "left" },
+  {
+    key: "acigaSatis",
+    label: "Açığa Satış",
+    width: "min-w-[140px]",
+    align: "left",
+  },
+  {
+    key: "krediliIslem",
+    label: "Kredili İşlem",
+    width: "min-w-[150px]",
+    align: "left",
+  },
+  {
+    key: "piyasaEmri",
+    label: "Piyasa Emri",
+    width: "min-w-[130px]",
+    align: "left",
+  },
+  {
+    key: "emirIptalAzaltma",
+    label: "Emir İptal / Azaltma",
+    width: "min-w-[180px]",
+    align: "left",
+  },
   { key: "veriYayini", label: "Veri Yayını", width: "min-w-[130px]", align: "left" },
 ];
 
 export default function TedbirliHisselerPage() {
   const tedbirVerileri = verileriOku();
+  const guncellemeTarihi = tedbirData.guncellemeTarihi || "-";
 
   const headerScrollId = "tedbir-header-scroll";
   const headerWidthId = "tedbir-header-width";
@@ -205,6 +239,7 @@ export default function TedbirliHisselerPage() {
         <div className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Ana Sayfa
@@ -212,6 +247,7 @@ export default function TedbirliHisselerPage() {
 
           <Link
             href="/borsa"
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Geri
@@ -280,8 +316,8 @@ export default function TedbirliHisselerPage() {
                             (item.degisim ?? 0) > 0
                               ? "text-green-600"
                               : (item.degisim ?? 0) < 0
-                              ? "text-red-600"
-                              : "text-zinc-700"
+                                ? "text-red-600"
+                                : "text-zinc-700"
                           }`}
                         >
                           {item.degisim === null ? "-" : `%${formatNumber(item.degisim)}`}
@@ -315,7 +351,7 @@ export default function TedbirliHisselerPage() {
                   ) : (
                     <tr>
                       <td colSpan={11} className="px-4 py-8 text-center text-sm text-zinc-500">
-                        Excel verisi okunamadı.
+                        Veri bulunamadı.
                       </td>
                     </tr>
                   )}

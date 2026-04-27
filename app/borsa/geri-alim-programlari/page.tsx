@@ -1,15 +1,14 @@
-import fs from "fs";
-import path from "path";
 import Link from "next/link";
 import Script from "next/script";
-import * as XLSX from "xlsx";
+import geriAlimData from "./data/geri-alim.json";
 
-const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
-  timeZone: "Europe/Istanbul",
-  day: "2-digit",
-  month: "2-digit",
-  year: "numeric",
-}).format(new Date());
+export const metadata = {
+  title: "Geri Alım Programları | Hoca İle Borsa",
+  description:
+    "Borsa İstanbul şirketlerinin geri alım programlarını ve pay geri alım verilerini takip edin.",
+};
+
+export const revalidate = 3600;
 
 type GeriAlimSatiri = {
   sembol: string;
@@ -24,6 +23,8 @@ type GeriAlimSatiri = {
   alisOrtFiyat: number | null;
   sonIslemTarihi: string;
 };
+
+type JsonRow = Record<string, string | number | null>;
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
@@ -86,6 +87,7 @@ function formatPrice(deger: number | null) {
 
 function formatPercent(deger: number | null) {
   if (deger === null || Number.isNaN(deger)) return "-";
+
   return `%${new Intl.NumberFormat("tr-TR", {
     minimumFractionDigits: 0,
     maximumFractionDigits: 2,
@@ -102,154 +104,193 @@ function kolonBul(headers: string[], adaylar: string[]) {
 }
 
 function verileriOku(): GeriAlimSatiri[] {
-  try {
-    const dosyaYolu = path.join(
-      process.cwd(),
-      "app",
-      "borsa",
-      "geri-alim-programlari",
-      "data",
-      "geri-alim.xlsx"
-    );
+  const rows = (geriAlimData.rows || []) as JsonRow[];
 
-    const buffer = fs.readFileSync(dosyaYolu);
-    const workbook = XLSX.read(buffer, { type: "buffer" });
-    const sheetName = workbook.SheetNames[0];
-    const ws = workbook.Sheets[sheetName];
+  if (!rows.length) return [];
 
-    const rows = XLSX.utils.sheet_to_json<Record<string, unknown>>(ws, {
-      defval: "",
-    });
+  const headers =
+    Array.isArray(geriAlimData.columns) && geriAlimData.columns.length > 0
+      ? geriAlimData.columns
+      : Object.keys(rows[0] || {});
 
-    if (!rows.length) return [];
+  const sembolKolonu =
+    kolonBul(headers, ["sembol", "kod", "hisse", "ticker", "symbol"]) ||
+    headers[0];
 
-    const headers = Object.keys(rows[0] || {});
+  const ykkTarihiKolonu =
+    kolonBul(headers, ["ykk tarihi", "karar tarihi", "tarih"]) ||
+    headers[1] ||
+    "";
 
-    const sembolKolonu =
-      kolonBul(headers, ["sembol", "kod", "hisse", "ticker", "symbol"]) ||
-      headers[0];
+  const geriAlinanAdetKolonu =
+    kolonBul(headers, [
+      "geri alinan adet",
+      "geri alınan adet",
+      "alinan adet",
+      "geri alım adet",
+    ]) ||
+    headers[2] ||
+    "";
 
-    const ykkTarihiKolonu =
-      kolonBul(headers, ["ykk tarihi", "karar tarihi", "tarih"]) ||
-      headers[1] ||
-      "";
+  const alinacakAdetKolonu =
+    kolonBul(headers, [
+      "alinacak adet",
+      "alınacak adet",
+      "program adet",
+      "hedef adet",
+    ]) ||
+    headers[3] ||
+    "";
 
-    const geriAlinanAdetKolonu =
-      kolonBul(headers, [
-        "geri alinan adet",
-        "geri alınan adet",
-        "alinan adet",
-        "geri alım adet",
-      ]) ||
-      headers[2] ||
-      "";
+  const ayrilanFonKolonu =
+    kolonBul(headers, ["ayrilan fon", "ayrılan fon", "fon", "ayrilan tutar"]) ||
+    headers[4] ||
+    "";
 
-    const alinacakAdetKolonu =
-      kolonBul(headers, [
-        "alinacak adet",
-        "alınacak adet",
-        "program adet",
-        "hedef adet",
-      ]) ||
-      headers[3] ||
-      "";
+  const geriAlinanHacimKolonu =
+    kolonBul(headers, [
+      "geri alinan hacim",
+      "geri alınan hacim",
+      "alinan hacim",
+      "tutar",
+    ]) ||
+    headers[5] ||
+    "";
 
-    const ayrilanFonKolonu =
-      kolonBul(headers, ["ayrilan fon", "ayrılan fon", "fon", "ayrilan tutar"]) ||
-      headers[4] ||
-      "";
+  const alinacakOranKolonu =
+    kolonBul(headers, [
+      "alinacak oran",
+      "alınacak oran",
+      "hedef oran",
+      "program oran",
+    ]) ||
+    headers[6] ||
+    "";
 
-    const geriAlinanHacimKolonu =
-      kolonBul(headers, [
-        "geri alinan hacim",
-        "geri alınan hacim",
-        "alinan hacim",
-        "tutar",
-      ]) ||
-      headers[5] ||
-      "";
+  const alinanOranKolonu =
+    kolonBul(headers, [
+      "alinan oran",
+      "alınan oran",
+      "geri alinan oran",
+      "geri alınan oran",
+    ]) ||
+    headers[7] ||
+    "";
 
-    const alinacakOranKolonu =
-      kolonBul(headers, [
-        "alinacak oran",
-        "alınacak oran",
-        "hedef oran",
-        "program oran",
-      ]) ||
-      headers[6] ||
-      "";
+  const sonFiyatKolonu =
+    kolonBul(headers, ["son fiyat", "fiyat", "son kapanis", "son kapanış"]) ||
+    headers[8] ||
+    "";
 
-    const alinanOranKolonu =
-      kolonBul(headers, [
-        "alinan oran",
-        "alınan oran",
-        "geri alinan oran",
-        "geri alınan oran",
-      ]) ||
-      headers[7] ||
-      "";
+  const alisOrtFiyatKolonu =
+    kolonBul(headers, [
+      "alis ort fiyat",
+      "alış ort fiyat",
+      "ortalama fiyat",
+      "alis ort. fiyat",
+    ]) ||
+    headers[9] ||
+    "";
 
-    const sonFiyatKolonu =
-      kolonBul(headers, ["son fiyat", "fiyat", "son kapanis", "son kapanış"]) ||
-      headers[8] ||
-      "";
+  const sonIslemTarihiKolonu =
+    kolonBul(headers, [
+      "son islem tarihi",
+      "son işlem tarihi",
+      "islem tarihi",
+      "işlem tarihi",
+    ]) ||
+    headers[10] ||
+    "";
 
-    const alisOrtFiyatKolonu =
-      kolonBul(headers, [
-        "alis ort fiyat",
-        "alış ort fiyat",
-        "ortalama fiyat",
-        "alis ort. fiyat",
-      ]) ||
-      headers[9] ||
-      "";
-
-    const sonIslemTarihiKolonu =
-      kolonBul(headers, [
-        "son islem tarihi",
-        "son işlem tarihi",
-        "islem tarihi",
-        "işlem tarihi",
-      ]) ||
-      headers[10] ||
-      "";
-
-    return rows
-      .map((row) => ({
-        sembol: metinCevir(row[sembolKolonu]),
-        ykkTarihi: metinCevir(row[ykkTarihiKolonu]),
-        geriAlinanAdet: sayiCevir(row[geriAlinanAdetKolonu]),
-        alinacakAdet: sayiCevir(row[alinacakAdetKolonu]),
-        ayrilanFon: sayiCevir(row[ayrilanFonKolonu]),
-        geriAlinanHacim: sayiCevir(row[geriAlinanHacimKolonu]),
-        alinacakOran: sayiCevir(row[alinacakOranKolonu]),
-        alinanOran: sayiCevir(row[alinanOranKolonu]),
-        sonFiyat: sayiCevir(row[sonFiyatKolonu]),
-        alisOrtFiyat: sayiCevir(row[alisOrtFiyatKolonu]),
-        sonIslemTarihi: metinCevir(row[sonIslemTarihiKolonu]),
-      }))
-      .filter((item) => item.sembol);
-  } catch {
-    return [];
-  }
+  return rows
+    .map((row) => ({
+      sembol: metinCevir(row[sembolKolonu]),
+      ykkTarihi: metinCevir(row[ykkTarihiKolonu]),
+      geriAlinanAdet: sayiCevir(row[geriAlinanAdetKolonu]),
+      alinacakAdet: sayiCevir(row[alinacakAdetKolonu]),
+      ayrilanFon: sayiCevir(row[ayrilanFonKolonu]),
+      geriAlinanHacim: sayiCevir(row[geriAlinanHacimKolonu]),
+      alinacakOran: sayiCevir(row[alinacakOranKolonu]),
+      alinanOran: sayiCevir(row[alinanOranKolonu]),
+      sonFiyat: sayiCevir(row[sonFiyatKolonu]),
+      alisOrtFiyat: sayiCevir(row[alisOrtFiyatKolonu]),
+      sonIslemTarihi: metinCevir(row[sonIslemTarihiKolonu]),
+    }))
+    .filter((item) => item.sembol);
 }
 
 const columns = [
-  { key: "sembol", label: "Sembol", align: "left" as const, width: "min-w-[140px]" },
-  { key: "ykkTarihi", label: "YKK Tarihi", align: "left" as const, width: "min-w-[160px]" },
-  { key: "geriAlinanAdet", label: "Geri Alınan Adet", align: "right" as const, width: "min-w-[170px]" },
-  { key: "alinacakAdet", label: "Alınacak Adet", align: "right" as const, width: "min-w-[160px]" },
-  { key: "ayrilanFon", label: "Ayrılan Fon", align: "right" as const, width: "min-w-[170px]" },
-  { key: "geriAlinanHacim", label: "Geri Alınan Hacim", align: "right" as const, width: "min-w-[180px]" },
-  { key: "alinacakOran", label: "Alınacak Oran", align: "right" as const, width: "min-w-[150px]" },
-  { key: "alinanOran", label: "Alınan Oran", align: "right" as const, width: "min-w-[150px]" },
-  { key: "sonFiyat", label: "Son Fiyat", align: "right" as const, width: "min-w-[130px]" },
-  { key: "alisOrtFiyat", label: "Alış Ort. Fiyat", align: "right" as const, width: "min-w-[150px]" },
-  { key: "sonIslemTarihi", label: "Son İşlem Tarihi", align: "left" as const, width: "min-w-[170px]" },
+  {
+    key: "sembol",
+    label: "Sembol",
+    align: "left" as const,
+    width: "min-w-[140px]",
+  },
+  {
+    key: "ykkTarihi",
+    label: "YKK Tarihi",
+    align: "left" as const,
+    width: "min-w-[160px]",
+  },
+  {
+    key: "geriAlinanAdet",
+    label: "Geri Alınan Adet",
+    align: "right" as const,
+    width: "min-w-[170px]",
+  },
+  {
+    key: "alinacakAdet",
+    label: "Alınacak Adet",
+    align: "right" as const,
+    width: "min-w-[160px]",
+  },
+  {
+    key: "ayrilanFon",
+    label: "Ayrılan Fon",
+    align: "right" as const,
+    width: "min-w-[170px]",
+  },
+  {
+    key: "geriAlinanHacim",
+    label: "Geri Alınan Hacim",
+    align: "right" as const,
+    width: "min-w-[180px]",
+  },
+  {
+    key: "alinacakOran",
+    label: "Alınacak Oran",
+    align: "right" as const,
+    width: "min-w-[150px]",
+  },
+  {
+    key: "alinanOran",
+    label: "Alınan Oran",
+    align: "right" as const,
+    width: "min-w-[150px]",
+  },
+  {
+    key: "sonFiyat",
+    label: "Son Fiyat",
+    align: "right" as const,
+    width: "min-w-[130px]",
+  },
+  {
+    key: "alisOrtFiyat",
+    label: "Alış Ort. Fiyat",
+    align: "right" as const,
+    width: "min-w-[150px]",
+  },
+  {
+    key: "sonIslemTarihi",
+    label: "Son İşlem Tarihi",
+    align: "left" as const,
+    width: "min-w-[170px]",
+  },
 ];
 
 export default function GeriAlimProgramlariPage() {
   const geriAlimVerileri = verileriOku();
+  const guncellemeTarihi = geriAlimData.guncellemeTarihi || "-";
 
   const headerScrollId = "geri-alim-header-scroll";
   const headerWidthId = "geri-alim-header-width";
@@ -280,6 +321,7 @@ export default function GeriAlimProgramlariPage() {
         <h1 className="mb-2 text-3xl font-bold text-zinc-900">
           Geri Alım Programları
         </h1>
+
         <p className="mb-8 max-w-3xl text-base text-zinc-600">
           Şirketlerin Geri Alım Programları
         </p>
@@ -384,7 +426,7 @@ export default function GeriAlimProgramlariPage() {
                         colSpan={11}
                         className="px-4 py-8 text-center text-sm text-zinc-500"
                       >
-                        Excel verisi okunamadı.
+                        Veri bulunamadı.
                       </td>
                     </tr>
                   )}
