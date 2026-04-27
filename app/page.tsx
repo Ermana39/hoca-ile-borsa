@@ -1,9 +1,10 @@
-"use client";
-
 import Image from "next/image";
-import { useEffect, useState } from "react";
-import TrackedLink from "@/components/tracked-link";
+import Link from "next/link";
+import type { ReactNode } from "react";
 import { newsItems as tumHaberler } from "@/app/data/news";
+import { sonGuncellemeler } from "@/lib/son-guncellemeler";
+
+export const revalidate = 3600;
 
 type NewsItem = {
   id: number;
@@ -18,6 +19,9 @@ type GuncellemeItem = {
   href: string;
   time: string;
 };
+
+const ANA_SAYFA_HABER_LIMIT = 6;
+const SON_GUNCELLEME_LIMIT = 12;
 
 const kategoriKutulari = [
   {
@@ -80,11 +84,11 @@ function KategoriKutusu({
   image: string;
 }) {
   return (
-    <TrackedLink
+    <Link
       href={href}
-      label={title}
+      prefetch={false}
       className="group flex min-h-[210px] flex-col rounded-2xl bg-white transition hover:bg-zinc-50 xl:min-h-[225px]"
-      ariaLabel={title}
+      aria-label={title}
     >
       <div className="p-2 pb-1 md:p-3 md:pb-1">
         <div className="relative overflow-hidden rounded-2xl bg-zinc-50">
@@ -105,7 +109,7 @@ function KategoriKutusu({
           {title}
         </h2>
       </div>
-    </TrackedLink>
+    </Link>
   );
 }
 
@@ -145,6 +149,35 @@ function normalizeNewsItems(data: unknown): NewsItem[] {
     .sort((a: NewsItem, b: NewsItem) => a.id - b.id);
 }
 
+function parseUpdatedAt(value: string) {
+  const match = value.match(
+    /^(\d{2})\.(\d{2})\.(\d{4})(?:\s+(\d{2}):(\d{2}))?$/
+  );
+
+  if (!match) return 0;
+
+  const [, day, month, year, hour = "0", minute = "0"] = match;
+
+  return new Date(
+    Number(year),
+    Number(month) - 1,
+    Number(day),
+    Number(hour),
+    Number(minute)
+  ).getTime();
+}
+
+function getSonGuncellemeler(): GuncellemeItem[] {
+  return [...sonGuncellemeler]
+    .sort((a, b) => parseUpdatedAt(b.updatedAt) - parseUpdatedAt(a.updatedAt))
+    .slice(0, SON_GUNCELLEME_LIMIT)
+    .map((item) => ({
+      title: item.title,
+      href: item.href,
+      time: item.updatedAt,
+    }));
+}
+
 function HaberSatiri({ item }: { item: NewsItem }) {
   const haberGorseli =
     item.image && item.image.trim() !== ""
@@ -154,10 +187,10 @@ function HaberSatiri({ item }: { item: NewsItem }) {
         : "/placeholder.png";
 
   return (
-    <TrackedLink
+    <Link
       href={item.href}
-      label={item.title}
-      ariaLabel={item.title}
+      prefetch={false}
+      aria-label={item.title}
       className="flex items-center gap-4 rounded-xl border border-zinc-200 bg-white px-4 py-4 text-zinc-900 transition hover:bg-zinc-50 md:px-5 md:py-5"
     >
       <div className="relative h-14 w-20 shrink-0 overflow-hidden rounded-lg bg-zinc-100 sm:h-16 sm:w-24">
@@ -166,6 +199,9 @@ function HaberSatiri({ item }: { item: NewsItem }) {
           alt={item.alt || item.title}
           loading="lazy"
           decoding="async"
+          fetchPriority="low"
+          width={96}
+          height={64}
           className="h-full w-full object-cover"
         />
       </div>
@@ -175,32 +211,11 @@ function HaberSatiri({ item }: { item: NewsItem }) {
           {item.title}
         </h2>
       </div>
-    </TrackedLink>
+    </Link>
   );
 }
 
-function SonGuncellemelerBar({
-  items,
-  loading,
-}: {
-  items: GuncellemeItem[];
-  loading: boolean;
-}) {
-  if (loading) {
-    return (
-      <section className="px-4 pb-6 md:px-6">
-        <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
-          <div className="flex flex-col md:flex-row md:items-center">
-            <div className="shrink-0 border-b border-zinc-200 bg-zinc-900 px-4 py-3 text-sm font-bold text-white md:border-b-0 md:border-r">
-              Son Güncellemeler
-            </div>
-            <div className="px-4 py-3 text-sm text-zinc-500">Yükleniyor...</div>
-          </div>
-        </div>
-      </section>
-    );
-  }
-
+function SonGuncellemelerBar({ items }: { items: GuncellemeItem[] }) {
   if (items.length === 0) {
     return (
       <section className="px-4 pb-6 md:px-6">
@@ -229,17 +244,17 @@ function SonGuncellemelerBar({
           <div className="relative min-w-0 flex-1 overflow-x-auto">
             <div className="flex min-w-max items-center gap-6 px-4 py-3">
               {items.map((item, index) => (
-                <TrackedLink
+                <Link
                   key={`${item.href}-${item.time}-${index}`}
                   href={item.href}
-                  label={item.title}
+                  prefetch={false}
                   className="inline-flex shrink-0 items-center gap-2 text-sm text-zinc-700 hover:text-zinc-900"
                 >
                   <span className="font-semibold">{item.title}</span>
                   <span className="rounded-md bg-zinc-100 px-2 py-0.5 text-xs font-semibold text-zinc-600">
                     {item.time}
                   </span>
-                </TrackedLink>
+                </Link>
               ))}
             </div>
           </div>
@@ -323,7 +338,7 @@ function SosyalIkon({
 }: {
   href: string;
   label: string;
-  children: React.ReactNode;
+  children: ReactNode;
 }) {
   return (
     <a
@@ -351,13 +366,13 @@ function FooterLinkColumn({
       <ul className="space-y-3">
         {links.map((item) => (
           <li key={item.label}>
-            <TrackedLink
+            <Link
               href={item.href}
-              label={item.label}
+              prefetch={false}
               className="text-sm text-slate-300 transition hover:text-white"
             >
               {item.label}
-            </TrackedLink>
+            </Link>
           </li>
         ))}
       </ul>
@@ -366,37 +381,11 @@ function FooterLinkColumn({
 }
 
 export default function HomePage() {
-  const [guncellemeler, setGuncellemeler] = useState<GuncellemeItem[]>([]);
-  const [guncellemelerLoading, setGuncellemelerLoading] = useState(true);
-
-  const newsItems = normalizeNewsItems(tumHaberler);
-
-  useEffect(() => {
-    let isMounted = true;
-
-    const loadUpdates = async () => {
-      try {
-        const res = await fetch("/api/recent-updates", { cache: "no-store" });
-        const data = await res.json();
-
-        if (isMounted && Array.isArray(data)) {
-          setGuncellemeler(data);
-        }
-      } catch (error) {
-        console.error("RECENT_UPDATES_LOAD_ERROR:", error);
-      } finally {
-        if (isMounted) {
-          setGuncellemelerLoading(false);
-        }
-      }
-    };
-
-    loadUpdates();
-
-    return () => {
-      isMounted = false;
-    };
-  }, []);
+  const newsItems = normalizeNewsItems(tumHaberler).slice(
+    0,
+    ANA_SAYFA_HABER_LIMIT
+  );
+  const guncellemeler = getSonGuncellemeler();
 
   return (
     <main className="min-h-screen bg-white">
@@ -449,10 +438,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        <SonGuncellemelerBar
-          items={guncellemeler}
-          loading={guncellemelerLoading}
-        />
+        <SonGuncellemelerBar items={guncellemeler} />
 
         <section className="px-4 pb-6 md:px-6">
           <ReklamAlani variant="icerik" />
@@ -466,16 +452,17 @@ export default function HomePage() {
 
             <div className="space-y-4 text-sm leading-7 text-zinc-700 md:text-base">
               <p>
-                Hoca İle Borsa; borsa, halka arz, temettü, fonlar, faiz oranları ve
-                finans içeriklerini daha düzenli ve anlaşılır şekilde sunmak amacıyla
-                hazırlanmış bir finans içerik platformudur.
+                Hoca İle Borsa; borsa, halka arz, temettü, fonlar, faiz
+                oranları ve finans içeriklerini daha düzenli ve anlaşılır
+                şekilde sunmak amacıyla hazırlanmış bir finans içerik
+                platformudur.
               </p>
 
               <p>
-                Sitede yer alan içerikler; genel bilgilendirme, haber, eğitim, veri
-                derleme, listeleme ve karşılaştırma amacı taşır. Yayınlanan içerikler
-                yatırım danışmanlığı kapsamında değildir ve kişiye özel alım-satım
-                önerisi niteliği taşımaz.
+                Sitede yer alan içerikler; genel bilgilendirme, haber, eğitim,
+                veri derleme, listeleme ve karşılaştırma amacı taşır.
+                Yayınlanan içerikler yatırım danışmanlığı kapsamında değildir ve
+                kişiye özel alım-satım önerisi niteliği taşımaz.
               </p>
 
               <p>
@@ -489,29 +476,29 @@ export default function HomePage() {
               <p>
                 Hoca İle Borsa; finans içeriklerini sade, erişilebilir ve takip
                 edilebilir bir yapıda sunmayı hedefler. Detaylı bilgi için{" "}
-                <TrackedLink
+                <Link
                   href="/hakkimizda"
-                  label="Hakkımızda"
+                  prefetch={false}
                   className="font-medium text-blue-600 underline underline-offset-4 hover:text-blue-700"
                 >
                   Hakkımızda
-                </TrackedLink>
+                </Link>
                 ,{" "}
-                <TrackedLink
+                <Link
                   href="/yasal-uyari"
-                  label="Yasal Uyarı"
+                  prefetch={false}
                   className="font-medium text-blue-600 underline underline-offset-4 hover:text-blue-700"
                 >
                   Yasal Uyarı
-                </TrackedLink>{" "}
+                </Link>{" "}
                 ve{" "}
-                <TrackedLink
+                <Link
                   href="/iletisim"
-                  label="İletişim"
+                  prefetch={false}
                   className="font-medium text-blue-600 underline underline-offset-4 hover:text-blue-700"
                 >
                   İletişim
-                </TrackedLink>{" "}
+                </Link>{" "}
                 sayfaları incelenebilir.
               </p>
             </div>
@@ -527,8 +514,8 @@ export default function HomePage() {
                 Hoca İle Borsa – Borsa, Halka Arz ve Finans İçerikleri
               </h3>
               <p className="mb-6 max-w-sm text-sm leading-7 text-slate-400">
-                Borsa, halka arz, temettü, fonlar ve finans içeriklerini tek yerde
-                takip edebileceğiniz güncel bilgi platformu.
+                Borsa, halka arz, temettü, fonlar ve finans içeriklerini tek
+                yerde takip edebileceğiniz güncel bilgi platformu.
               </p>
 
               <div className="flex gap-3">
@@ -576,7 +563,9 @@ export default function HomePage() {
             />
 
             <div>
-              <h3 className="mb-4 text-base font-semibold text-white">İletişim</h3>
+              <h3 className="mb-4 text-base font-semibold text-white">
+                İletişim
+              </h3>
               <div className="space-y-3 text-sm text-slate-300">
                 <div className="flex items-center gap-2">
                   <MailIcon />
