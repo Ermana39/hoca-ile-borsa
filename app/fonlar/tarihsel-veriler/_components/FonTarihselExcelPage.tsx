@@ -65,8 +65,19 @@ async function getJsonData(excelRelativePath: string) {
       : [];
 
   const rows = (data.rows || [])
-    .map((row) => headers.map((header) => parseCell(row[header])))
-    .filter((row) => row.some((cell) => cell !== null && cell !== ""));
+  .map((row) => headers.map((header) => parseCell(row[header])))
+  .filter((row) => {
+    if (!row.some((cell) => cell !== null && cell !== "")) return false;
+
+    const ilkHucre = normalizeText(row[0]).toLocaleLowerCase("tr-TR");
+
+    if (ilkHucre.includes("dışa aktarım tarihi")) return false;
+    if (ilkHucre.includes("disa aktarim tarihi")) return false;
+    if (ilkHucre.includes("toplam kayıt sayısı")) return false;
+    if (ilkHucre.includes("toplam kayit sayisi")) return false;
+
+    return true;
+  });
 
   return {
     headers,

@@ -177,14 +177,18 @@ async function getJsonData(excelRelativePath: string): Promise<{
       besYil: parseNumber(getValue(row, besYilKolonu, 9)),
     }))
     .filter((item) => {
-      const kod = normalizeKey(item.kod);
-      const ad = normalizeKey(item.ad);
+  const kod = normalizeKey(item.kod);
+  const ad = normalizeKey(item.ad);
 
-      if (!item.kod && !item.ad) return false;
-      if (kod === "fon kodu" || ad === "fon adi") return false;
+  if (!item.kod && !item.ad) return false;
 
-      return true;
-    });
+  if (kod === "fon kodu" || ad === "fon adi") return false;
+
+  if (kod.includes("disa aktarim tarihi")) return false;
+  if (kod.includes("toplam kayit sayisi")) return false;
+
+  return true;
+});
 
   return {
     rows: parsedRows,
