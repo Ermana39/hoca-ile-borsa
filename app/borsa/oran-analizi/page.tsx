@@ -1,6 +1,6 @@
 import Link from "next/link";
-import Script from "next/script";
 import oranAnaliziJson from "./data/oran-analizi.json";
+import OranAnaliziTableClient from "./_components/OranAnaliziTableClient";
 
 export const dynamic = "force-static";
 
@@ -50,19 +50,6 @@ function parseNumeric(value: string | number | null) {
   return Number.isFinite(sayi) ? sayi : null;
 }
 
-function formatValue(value: string | number | null) {
-  if (value === null) return "-";
-
-  if (typeof value === "number") {
-    return new Intl.NumberFormat("tr-TR", {
-      minimumFractionDigits: Number.isInteger(value) ? 0 : 2,
-      maximumFractionDigits: 4,
-    }).format(value);
-  }
-
-  return value;
-}
-
 function getRowType(row: RowData, columns: string[]) {
   const doluHucreler = columns
     .map((column) => row[column])
@@ -96,17 +83,13 @@ function getOranAnaliziData() {
 export default function OranAnaliziPage() {
   const { columns, rows, guncellemeTarihi } = getOranAnaliziData();
 
-  const tableOuterId = "oran-analizi-table-outer";
-  const tableWidthId = "oran-analizi-table-width";
-  const bottomScrollId = "oran-analizi-bottom-scroll";
-  const bottomContentId = "oran-analizi-bottom-content";
-
   return (
     <main className="min-h-screen bg-white px-4 py-6 pb-24 md:px-6">
       <div className="mx-auto max-w-7xl">
         <div className="mb-6 flex gap-3">
           <Link
             href="/"
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Ana Sayfa
@@ -114,6 +97,7 @@ export default function OranAnaliziPage() {
 
           <Link
             href="/borsa"
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Geri
@@ -141,75 +125,7 @@ export default function OranAnaliziPage() {
         </section>
 
         <section className="py-6">
-          <div className="rounded-2xl border border-zinc-200 bg-white">
-            <div id={tableOuterId} className="overflow-x-auto rounded-2xl">
-              <div id={tableWidthId} className="min-w-max">
-                <table className="w-full border-collapse text-sm">
-                  <thead className="text-zinc-700">
-                    <tr>
-                      {columns.map((column, columnIndex) => (
-                        <th
-                          key={column}
-                          className={`border-b border-zinc-200 px-4 py-3 text-left font-bold whitespace-nowrap sticky top-0 z-30 ${
-                            columnIndex === 0
-                              ? "left-0 z-40 bg-zinc-100 shadow-[8px_0_12px_-12px_rgba(0,0,0,0.25)]"
-                              : "bg-zinc-100"
-                          }`}
-                        >
-                          {column}
-                        </th>
-                      ))}
-                    </tr>
-                  </thead>
-
-                  <tbody>
-                    {rows.map((row, index) => {
-                      const rowType = getRowType(row, columns);
-
-                      if (rowType === "sector_header") {
-                        const sektorAdi = String(
-                          columns
-                            .map((column) => row[column])
-                            .find((value) => value !== null && value !== "") ?? ""
-                        );
-
-                        return (
-                          <tr key={`row-${index}`} className="bg-red-50">
-                            <td
-                              colSpan={columns.length}
-                              className="border-b border-red-100 px-4 py-3 font-semibold text-red-700 whitespace-nowrap"
-                            >
-                              {sektorAdi}
-                            </td>
-                          </tr>
-                        );
-                      }
-
-                      const satirArkaPlan = index % 2 === 1 ? "bg-sky-50" : "bg-white";
-                      const stickyArkaPlan = index % 2 === 1 ? "bg-sky-50" : "bg-white";
-
-                      return (
-                        <tr key={`row-${index}`} className={satirArkaPlan}>
-                          {columns.map((column, columnIndex) => (
-                            <td
-                              key={`${index}-${column}`}
-                              className={`border-b border-zinc-100 px-4 py-3 whitespace-nowrap text-zinc-700 ${
-                                columnIndex === 0
-                                  ? `sticky left-0 z-10 ${stickyArkaPlan} font-semibold text-zinc-900 shadow-[8px_0_12px_-12px_rgba(0,0,0,0.25)]`
-                                  : ""
-                              }`}
-                            >
-                              {formatValue(row[column] ?? null)}
-                            </td>
-                          ))}
-                        </tr>
-                      );
-                    })}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
+          <OranAnaliziTableClient columns={columns} rows={rows} />
         </section>
 
         <section className="pt-6">
@@ -252,79 +168,6 @@ export default function OranAnaliziPage() {
           </p>
         </section>
       </div>
-
-      <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-zinc-200 bg-white/95 backdrop-blur">
-        <div className="mx-auto max-w-7xl px-4 md:px-6">
-          <div id={bottomScrollId} className="overflow-x-auto">
-            <div id={bottomContentId} className="h-5 min-w-max" />
-          </div>
-        </div>
-      </div>
-
-      <Script id="oran-analizi-scroll-sync" strategy="afterInteractive">
-        {`
-          (function () {
-            const outer = document.getElementById("${tableOuterId}");
-            const widthBox = document.getElementById("${tableWidthId}");
-            const bottom = document.getElementById("${bottomScrollId}");
-            const bottomContent = document.getElementById("${bottomContentId}");
-            if (!outer || !widthBox || !bottom || !bottomContent) return;
-
-            let syncingTop = false;
-            let syncingBottom = false;
-
-            function syncWidths() {
-              bottomContent.style.width = widthBox.scrollWidth + "px";
-              bottom.scrollLeft = outer.scrollLeft;
-            }
-
-            function syncFromTop() {
-              if (syncingBottom) {
-                syncingBottom = false;
-                return;
-              }
-              syncingTop = true;
-              bottom.scrollLeft = outer.scrollLeft;
-            }
-
-            function syncFromBottom() {
-              if (syncingTop) {
-                syncingTop = false;
-                return;
-              }
-              syncingBottom = true;
-              outer.scrollLeft = bottom.scrollLeft;
-            }
-
-            outer.addEventListener("scroll", syncFromTop, { passive: true });
-            bottom.addEventListener("scroll", syncFromBottom, { passive: true });
-
-            syncWidths();
-
-            if (typeof ResizeObserver !== "undefined") {
-              const observer = new ResizeObserver(syncWidths);
-              observer.observe(widthBox);
-            }
-
-            window.addEventListener("resize", syncWidths);
-
-            const thead = outer.querySelector("thead");
-            if (thead) {
-              const handleScroll = () => {
-                const rect = outer.getBoundingClientRect();
-                if (rect.top <= 0) {
-                  thead.style.transform = "translateY(" + Math.abs(rect.top) + "px)";
-                } else {
-                  thead.style.transform = "translateY(0px)";
-                }
-              };
-
-              window.addEventListener("scroll", handleScroll, { passive: true });
-              handleScroll();
-            }
-          })();
-        `}
-      </Script>
     </main>
   );
 }

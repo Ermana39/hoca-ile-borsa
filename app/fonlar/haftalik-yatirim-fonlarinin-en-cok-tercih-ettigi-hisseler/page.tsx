@@ -1,6 +1,8 @@
 import Link from "next/link";
-import Script from "next/script";
 import fonTercihData from "./data/tercih-edilen-hisseler.json";
+import FonTercihTableClient, {
+  type FonSatiri,
+} from "./_components/FonTercihTableClient";
 
 export const metadata = {
   title:
@@ -11,46 +13,7 @@ export const metadata = {
 
 export const revalidate = 3600;
 
-type FonSatiri = {
-  sembol: string | null;
-  degisim: string | number | null;
-  sonToplamYuzde: string | number | null;
-  ilkToplamYuzde: string | number | null;
-  sonToplamTakasTl: string | number | null;
-  ilkToplamTakasTl: string | number | null;
-  takasTlSonEmeklilikFon: string | number | null;
-  yuzdeSonEmeklilikFon: string | number | null;
-  takasTlIlkEmeklilikFon: string | number | null;
-  yuzdeIlkEmeklilikFon: string | number | null;
-  takasTlSonYatirimFon: string | number | null;
-  yuzdeSonYatirimFon: string | number | null;
-  takasTlIlkYatirimFon: string | number | null;
-  yuzdeIlkYatirimFon: string | number | null;
-};
-
-type ColumnKey = keyof FonSatiri;
 type JsonRow = Record<string, string | number | null>;
-
-const columns: {
-  key: ColumnKey;
-  label: string;
-  align?: "left" | "right";
-}[] = [
-  { key: "sembol", label: "Sembol", align: "left" },
-  { key: "degisim", label: "Değişim", align: "right" },
-  { key: "sonToplamYuzde", label: "Son Toplam %", align: "right" },
-  { key: "ilkToplamYuzde", label: "İlk Toplam %", align: "right" },
-  { key: "sonToplamTakasTl", label: "Son Toplam Takas TL", align: "right" },
-  { key: "ilkToplamTakasTl", label: "İlk Toplam Takas TL", align: "right" },
-  { key: "takasTlSonEmeklilikFon", label: "Son Emeklilik Fon Takas TL", align: "right" },
-  { key: "yuzdeSonEmeklilikFon", label: "Son Emeklilik Fon %", align: "right" },
-  { key: "takasTlIlkEmeklilikFon", label: "İlk Emeklilik Fon Takas TL", align: "right" },
-  { key: "yuzdeIlkEmeklilikFon", label: "İlk Emeklilik Fon %", align: "right" },
-  { key: "takasTlSonYatirimFon", label: "Son Yatırım Fon Takas TL", align: "right" },
-  { key: "yuzdeSonYatirimFon", label: "Son Yatırım Fon %", align: "right" },
-  { key: "takasTlIlkYatirimFon", label: "İlk Yatırım Fon Takas TL", align: "right" },
-  { key: "yuzdeIlkYatirimFon", label: "İlk Yatırım Fon %", align: "right" },
-];
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
@@ -71,48 +34,6 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
 function temizMetin(deger: unknown) {
   if (deger === null || deger === undefined) return "";
   return String(deger).trim();
-}
-
-function parseNumber(deger: unknown) {
-  if (typeof deger === "number") return deger;
-
-  const metin = temizMetin(deger);
-  if (!metin) return 0;
-
-  const normalize = metin
-    .replace("%", "")
-    .replace(/\s/g, "")
-    .replace(/\./g, "")
-    .replace(",", ".");
-
-  const sayi = Number(normalize);
-  return Number.isNaN(sayi) ? 0 : sayi;
-}
-
-function formatPercent(deger: unknown) {
-  if (deger === null || deger === undefined || deger === "") return "-";
-
-  if (typeof deger === "string" && deger.includes("%")) {
-    return deger.trim();
-  }
-
-  const sayi = parseNumber(deger);
-
-  return `${new Intl.NumberFormat("tr-TR", {
-    minimumFractionDigits: 2,
-    maximumFractionDigits: 2,
-  }).format(sayi)} %`;
-}
-
-function formatTl(deger: unknown) {
-  if (deger === null || deger === undefined || deger === "") return "-";
-
-  const sayi = parseNumber(deger);
-
-  return new Intl.NumberFormat("tr-TR", {
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 0,
-  }).format(sayi);
 }
 
 function fonVerileriniOku(): FonSatiri[] {
@@ -145,37 +66,12 @@ function fonVerileriniOku(): FonSatiri[] {
     .filter((item) => item.sembol);
 }
 
-function hucreDegeri(row: FonSatiri, key: ColumnKey) {
-  const value = row[key];
-
-  if (key === "sembol") return temizMetin(value) || "-";
-
-  if (
-    key === "degisim" ||
-    key === "sonToplamYuzde" ||
-    key === "ilkToplamYuzde" ||
-    key === "yuzdeSonEmeklilikFon" ||
-    key === "yuzdeIlkEmeklilikFon" ||
-    key === "yuzdeSonYatirimFon" ||
-    key === "yuzdeIlkYatirimFon"
-  ) {
-    return formatPercent(value);
-  }
-
-  return formatTl(value);
-}
-
 export default function HaftalikYatirimFonlarininEnCokTercihEttigiHisselerPage() {
   const fonVerileri = fonVerileriniOku();
   const guncellemeTarihi = fonTercihData.guncellemeTarihi || "-";
 
-  const headerScrollId = "fon-tercih-header-scroll";
-  const headerWidthId = "fon-tercih-header-width";
-  const bodyScrollId = "fon-tercih-body-scroll";
-  const bodyWidthId = "fon-tercih-body-width";
-
   return (
-    <main className="min-h-screen bg-white px-4 py-6 md:px-6">
+    <main className="min-h-screen bg-white px-4 py-6 pb-24 md:px-6">
       <div className="mx-auto max-w-[1600px]">
         <div className="mb-6 flex gap-3">
           <Link
@@ -211,75 +107,7 @@ export default function HaftalikYatirimFonlarininEnCokTercihEttigiHisselerPage()
           Güncelleme Tarihi: {guncellemeTarihi}
         </div>
 
-        <div className="rounded-2xl border border-zinc-200 bg-white">
-          <div className="sticky top-0 z-30 overflow-hidden rounded-t-2xl border-b border-zinc-200 bg-white">
-            <div
-              id={headerScrollId}
-              className="overflow-x-auto [&::-webkit-scrollbar]:hidden"
-              style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-            >
-              <div id={headerWidthId} className="min-w-max">
-                <table className="min-w-[1900px] border-collapse text-sm whitespace-nowrap">
-                  <thead className="bg-zinc-100">
-                    <tr>
-                      {columns.map((column) => (
-                        <th
-                          key={column.key}
-                          className={`border-b border-zinc-200 px-4 py-3 font-semibold text-zinc-800 ${
-                            column.align === "right" ? "text-right" : "text-left"
-                          }`}
-                        >
-                          {column.label}
-                        </th>
-                      ))}
-                    </tr>
-                  </thead>
-                </table>
-              </div>
-            </div>
-          </div>
-
-          <div id={bodyScrollId} className="w-full overflow-x-auto pb-2">
-            <div id={bodyWidthId} className="inline-block min-w-full align-top">
-              <table className="min-w-[1900px] border-collapse text-sm whitespace-nowrap">
-                <tbody>
-                  {fonVerileri.length > 0 ? (
-                    fonVerileri.map((row, index) => (
-                      <tr
-                        key={`${row.sembol}-${index}`}
-                        className={index % 2 === 0 ? "bg-white" : "bg-sky-50/60"}
-                      >
-                        {columns.map((column) => (
-                          <td
-                            key={column.key}
-                            className={`border-b border-zinc-100 px-4 py-3 text-zinc-700 ${
-                              column.align === "right" ? "text-right" : "text-left"
-                            } ${
-                              column.key === "sembol"
-                                ? "font-semibold text-zinc-900"
-                                : ""
-                            }`}
-                          >
-                            {hucreDegeri(row, column.key)}
-                          </td>
-                        ))}
-                      </tr>
-                    ))
-                  ) : (
-                    <tr>
-                      <td
-                        colSpan={columns.length}
-                        className="px-4 py-8 text-center text-sm text-zinc-500"
-                      >
-                        Gösterilecek veri bulunamadı.
-                      </td>
-                    </tr>
-                  )}
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </div>
+        <FonTercihTableClient rows={fonVerileri} />
 
         <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">
@@ -316,64 +144,6 @@ export default function HaftalikYatirimFonlarininEnCokTercihEttigiHisselerPage()
           </p>
         </section>
       </div>
-
-      <Script id="fon-tercih-header-scroll-sync" strategy="afterInteractive">
-        {`
-          (function () {
-            const header = document.getElementById("${headerScrollId}");
-            const headerWidth = document.getElementById("${headerWidthId}");
-            const body = document.getElementById("${bodyScrollId}");
-            const bodyWidth = document.getElementById("${bodyWidthId}");
-
-            if (!header || !headerWidth || !body || !bodyWidth) return;
-
-            let source = "";
-
-            function syncWidths() {
-              const width = Math.max(headerWidth.scrollWidth, bodyWidth.scrollWidth);
-              headerWidth.style.width = width + "px";
-              bodyWidth.style.width = width + "px";
-              header.scrollLeft = body.scrollLeft;
-            }
-
-            header.addEventListener(
-              "scroll",
-              function () {
-                if (source === "body") {
-                  source = "";
-                  return;
-                }
-                source = "header";
-                body.scrollLeft = header.scrollLeft;
-              },
-              { passive: true }
-            );
-
-            body.addEventListener(
-              "scroll",
-              function () {
-                if (source === "header") {
-                  source = "";
-                  return;
-                }
-                source = "body";
-                header.scrollLeft = body.scrollLeft;
-              },
-              { passive: true }
-            );
-
-            syncWidths();
-
-            if (typeof ResizeObserver !== "undefined") {
-              const observer = new ResizeObserver(syncWidths);
-              observer.observe(headerWidth);
-              observer.observe(bodyWidth);
-            }
-
-            window.addEventListener("resize", syncWidths);
-          })();
-        `}
-      </Script>
     </main>
   );
 }
