@@ -42,11 +42,4 @@ export const newsItems: NewsItem[] = [
     image: "/haber991.png",
     alt: "Haber 991 görseli",
   },
-   {
-    id: 992,
-    title: "S&P Türkiye'nin kredi notunu teyit etti",
-    href: "/haber/haber-992",
-    image: "/haber992.png",
-    alt: "Haber 992 görseli",
-  },
 ];
