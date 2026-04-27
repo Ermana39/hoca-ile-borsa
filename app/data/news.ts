@@ -7,6 +7,13 @@ export type NewsItem = {
 };
 
 export const newsItems: NewsItem[] = [
+  {
+    id: 987,
+    title: "2026 yılı ilk çeyrek bilançolarının olası açıklanma tarihleri",
+    href: "/haber/haber-987",
+    image: "/haber987.png",
+    alt: "Haber 987 görseli",
+  },
    {
     id: 988,
     title: "Üçay Mühendislik, Avrupa Birliği pazarındaki büyüme hedefleri doğrultusunda önemli bir adım attı.",
@@ -41,26 +48,5 @@ export const newsItems: NewsItem[] = [
     href: "/haber/haber-992",
     image: "/haber992.png",
     alt: "Haber 992 görseli",
-  },
-   {
-    id: 993,
-    title: "Türkiye İstatistik Kurumu, 2026 yılı Mart ayı Konut ve İşyeri Satış İstatistiklerini açıkladı.",
-    href: "/haber/haber-993",
-    image: "/haber993.png",
-    alt: "Haber 993 görseli",
-  },
-     {
-    id: 994,
-    title: "TCMB rezervlerinde hızlı toparlanma görüldü.",
-    href: "/haber/haber-994",
-    image: "/haber994.png",
-    alt: "Haber 994 görseli",
-  },
-     {
-    id: 995,
-    title: "Türkiye CDS primi 240 baz puan seviyesinde",
-    href: "/haber/haber-995",
-    image: "/haber995.png",
-    alt: "Haber 995 görseli",
   },
 ];
