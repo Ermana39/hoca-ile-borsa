@@ -1,140 +1,125 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 
 type CellValue = string | number | null;
+
+function sortArrow(active: boolean, direction: "asc" | "desc") {
+  if (!active) return "↕";
+  return direction === "asc" ? "↑" : "↓";
+}
 
 export default function FonTarihselTableClient({
   headers,
   rows,
+  pageBasePath,
+  q,
+  sort,
+  dir,
 }: {
   headers: string[];
   rows: CellValue[][];
+  pageBasePath: string;
+  q: string;
+  sort: string;
+  dir: "asc" | "desc";
 }) {
-  const headerScrollRef = useRef<HTMLDivElement | null>(null);
-  const bodyScrollRef = useRef<HTMLDivElement | null>(null);
+  const tableScrollRef = useRef<HTMLDivElement | null>(null);
   const fixedScrollRef = useRef<HTMLDivElement | null>(null);
   const fixedInnerRef = useRef<HTMLDivElement | null>(null);
-  const headerTableRef = useRef<HTMLTableElement | null>(null);
-  const bodyTableRef = useRef<HTMLTableElement | null>(null);
+  const tableRef = useRef<HTMLTableElement | null>(null);
 
   useEffect(() => {
-    const headerScroll = headerScrollRef.current;
-    const bodyScroll = bodyScrollRef.current;
+    const tableScroll = tableScrollRef.current;
     const fixedScroll = fixedScrollRef.current;
     const fixedInner = fixedInnerRef.current;
-    const headerTable = headerTableRef.current;
-    const bodyTable = bodyTableRef.current;
+    const table = tableRef.current;
 
-    if (
-      !headerScroll ||
-      !bodyScroll ||
-      !fixedScroll ||
-      !fixedInner ||
-      !headerTable ||
-      !bodyTable
-    ) {
-      return;
-    }
+    if (!tableScroll || !fixedScroll || !fixedInner || !table) return;
 
-    let source: "header" | "body" | "fixed" | "" = "";
+    let syncingTable = false;
+    let syncingFixed = false;
 
     const syncWidths = () => {
-      const width = Math.max(headerTable.scrollWidth, bodyTable.scrollWidth, 1320);
-      fixedInner.style.width = `${width}px`;
-      headerScroll.scrollLeft = bodyScroll.scrollLeft;
-      fixedScroll.scrollLeft = bodyScroll.scrollLeft;
+      fixedInner.style.width = `${table.scrollWidth}px`;
+      fixedScroll.scrollLeft = tableScroll.scrollLeft;
     };
 
-    const onHeaderScroll = () => {
-      if (source === "body" || source === "fixed") {
-        source = "";
-        return;
-      }
-      source = "header";
-      bodyScroll.scrollLeft = headerScroll.scrollLeft;
-      fixedScroll.scrollLeft = headerScroll.scrollLeft;
-    };
-
-    const onBodyScroll = () => {
-      if (source === "header" || source === "fixed") {
-        source = "";
-        return;
-      }
-      source = "body";
-      headerScroll.scrollLeft = bodyScroll.scrollLeft;
-      fixedScroll.scrollLeft = bodyScroll.scrollLeft;
+    const onTableScroll = () => {
+      if (syncingFixed) return;
+      syncingTable = true;
+      fixedScroll.scrollLeft = tableScroll.scrollLeft;
+      syncingTable = false;
     };
 
     const onFixedScroll = () => {
-      if (source === "header" || source === "body") {
-        source = "";
-        return;
-      }
-      source = "fixed";
-      headerScroll.scrollLeft = fixedScroll.scrollLeft;
-      bodyScroll.scrollLeft = fixedScroll.scrollLeft;
+      if (syncingTable) return;
+      syncingFixed = true;
+      tableScroll.scrollLeft = fixedScroll.scrollLeft;
+      syncingFixed = false;
     };
 
     syncWidths();
 
-    headerScroll.addEventListener("scroll", onHeaderScroll, { passive: true });
-    bodyScroll.addEventListener("scroll", onBodyScroll, { passive: true });
+    tableScroll.addEventListener("scroll", onTableScroll, { passive: true });
     fixedScroll.addEventListener("scroll", onFixedScroll, { passive: true });
     window.addEventListener("resize", syncWidths);
 
     let resizeObserver: ResizeObserver | null = null;
     if (typeof ResizeObserver !== "undefined") {
       resizeObserver = new ResizeObserver(syncWidths);
-      resizeObserver.observe(headerTable);
-      resizeObserver.observe(bodyTable);
+      resizeObserver.observe(table);
     }
 
     return () => {
-      headerScroll.removeEventListener("scroll", onHeaderScroll);
-      bodyScroll.removeEventListener("scroll", onBodyScroll);
+      tableScroll.removeEventListener("scroll", onTableScroll);
       fixedScroll.removeEventListener("scroll", onFixedScroll);
       window.removeEventListener("resize", syncWidths);
       resizeObserver?.disconnect();
     };
   }, [headers, rows]);
 
+  const tableMinWidth = Math.max(headers.length * 170, 1320);
+
+  const sortLink = (index: number) => {
+    const sp = new URLSearchParams();
+
+    if (q) sp.set("q", q);
+
+    sp.set("sort", String(index));
+    sp.set("dir", sort === String(index) && dir === "asc" ? "desc" : "asc");
+
+    return `${pageBasePath}?${sp.toString()}`;
+  };
+
   return (
     <>
-      <div className="sticky top-0 z-30 rounded-t-2xl border border-zinc-200 border-b-0 bg-white">
+      <section className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
         <div
-          ref={headerScrollRef}
+          ref={tableScrollRef}
           className="overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
         >
           <table
-            ref={headerTableRef}
-            className="w-full min-w-[1320px] border-collapse text-sm"
+            ref={tableRef}
+            className="w-full border-collapse text-sm"
+            style={{ minWidth: `${tableMinWidth}px` }}
           >
             <thead className="bg-zinc-100 text-zinc-800">
               <tr>
                 {headers.map((header, index) => (
                   <th
                     key={`${header}-${index}`}
-                    className="border-b border-zinc-200 px-4 py-4 text-left font-semibold whitespace-nowrap"
+                    className="sticky top-0 z-20 border-b border-zinc-200 bg-zinc-100 px-4 py-4 text-left font-semibold whitespace-nowrap"
                   >
-                    {header}
+                    <Link href={sortLink(index)} prefetch={false}>
+                      {header} {sortArrow(sort === String(index), dir)}
+                    </Link>
                   </th>
                 ))}
               </tr>
             </thead>
-          </table>
-        </div>
-      </div>
 
-      <section className="overflow-hidden rounded-b-2xl border border-zinc-200 bg-white">
-        <div
-          ref={bodyScrollRef}
-          className="overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
-        >
-          <table
-            ref={bodyTableRef}
-            className="w-full min-w-[1320px] border-collapse text-sm"
-          >
             <tbody>
               {rows.map((row, rowIndex) => (
                 <tr
@@ -143,11 +128,14 @@ export default function FonTarihselTableClient({
                 >
                   {headers.map((_, colIndex) => {
                     const cell = row[colIndex];
+
                     return (
                       <td
                         key={`cell-${rowIndex}-${colIndex}`}
                         className={`border-t border-zinc-100 px-4 py-4 whitespace-nowrap ${
-                          colIndex === 0 ? "font-bold text-zinc-900" : "text-zinc-700"
+                          colIndex === 0
+                            ? "font-bold text-zinc-900"
+                            : "text-zinc-700"
                         }`}
                       >
                         {cell === null || cell === "" ? "-" : String(cell)}
@@ -178,7 +166,7 @@ export default function FonTarihselTableClient({
             ref={fixedScrollRef}
             className="overflow-x-auto rounded-full border border-zinc-200 bg-zinc-100"
           >
-            <div ref={fixedInnerRef} className="h-4 min-w-[1320px]" />
+            <div ref={fixedInnerRef} className="h-4" />
           </div>
         </div>
       </div>
