@@ -1,5 +1,8 @@
 import Link from "next/link";
 import dipZirveData from "./data/dip-zirve.json";
+import DipZirveTableClient, {
+  type DipZirveSatiri,
+} from "./_components/DipZirveTableClient";
 
 export const metadata = {
   title: "Dip Zirve Analizi | Hoca İle Borsa",
@@ -9,21 +12,7 @@ export const metadata = {
 
 export const revalidate = 3600;
 
-type DipZirveSatiri = {
-  sembol: string;
-  yuzdeDibeUzaklik: number | null;
-  gunDibeUzaklik: number | null;
-  yuzdeZirveyeUzaklik: number | null;
-  gunZirveyeUzaklik: number | null;
-  zirveDip: number | null;
-};
-
 type JsonRow = Record<string, string | number | null>;
-
-type SearchParams = Promise<{
-  sort?: string;
-  dir?: string;
-}>;
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
@@ -66,17 +55,6 @@ function sayiCevir(deger: unknown): number | null {
   return Number.isNaN(sayi) ? null : sayi;
 }
 
-function sayiFormatla(deger: number | null, yuzde = false) {
-  if (deger === null || Number.isNaN(deger)) return "-";
-
-  const formatted = new Intl.NumberFormat("tr-TR", {
-    minimumFractionDigits: Number.isInteger(deger) ? 0 : 2,
-    maximumFractionDigits: 2,
-  }).format(deger);
-
-  return yuzde ? `%${formatted}` : formatted;
-}
-
 function kolonBul(headers: string[], adaylar: string[]) {
   return (
     headers.find((header) => {
@@ -96,7 +74,8 @@ function verileriOku(): DipZirveSatiri[] {
       ? dipZirveData.columns
       : Object.keys(rows[0] || {});
 
-  const sembolKolonu = kolonBul(headers, ["sembol", "kod", "hisse"]) || headers[0];
+  const sembolKolonu =
+    kolonBul(headers, ["sembol", "kod", "hisse"]) || headers[0];
 
   const yuzdeDibeUzaklikKolonu =
     kolonBul(headers, ["% dibe uzaklik", "yuzde dibe uzaklik"]) || headers[1];
@@ -126,67 +105,9 @@ function verileriOku(): DipZirveSatiri[] {
     .filter((item) => item.sembol);
 }
 
-function toSortableNumber(value: number | null) {
-  if (value === null || Number.isNaN(value)) return -999999999;
-  return value;
-}
-
-function sortArrow(active: boolean, direction: "asc" | "desc") {
-  if (!active) return "↕";
-  return direction === "asc" ? "↑" : "↓";
-}
-
-export default async function DipZirveAnaliziPage({
-  searchParams,
-}: {
-  searchParams: SearchParams;
-}) {
-  const params = await searchParams;
+export default function DipZirveAnaliziPage() {
   const dipZirveVerileri = verileriOku();
   const guncellemeTarihi = dipZirveData.guncellemeTarihi || "-";
-
-  const allowedSorts = [
-    "sembol",
-    "yuzdeDibeUzaklik",
-    "gunDibeUzaklik",
-    "yuzdeZirveyeUzaklik",
-    "gunZirveyeUzaklik",
-    "zirveDip",
-  ] as const;
-
-  const sort = allowedSorts.includes((params.sort ?? "sembol") as never)
-    ? (params.sort as (typeof allowedSorts)[number])
-    : "sembol";
-
-  const dir: "asc" | "desc" = params.dir === "desc" ? "desc" : "asc";
-
-  const sortedVeriler = [...dipZirveVerileri].sort((a, b) => {
-    const aValue = a[sort];
-    const bValue = b[sort];
-
-    if (sort === "sembol") {
-      return dir === "asc"
-        ? String(aValue).localeCompare(String(bValue), "tr")
-        : String(bValue).localeCompare(String(aValue), "tr");
-    }
-
-    const aNum = toSortableNumber(aValue as number | null);
-    const bNum = toSortableNumber(bValue as number | null);
-
-    return dir === "asc" ? aNum - bNum : bNum - aNum;
-  });
-
-  const nextDir = (column: string) => {
-    if (sort === column) return dir === "asc" ? "desc" : "asc";
-    return column === "sembol" ? "asc" : "desc";
-  };
-
-  const sortLink = (column: string) => {
-    const sp = new URLSearchParams();
-    sp.set("sort", column);
-    sp.set("dir", nextDir(column));
-    return `/borsa/dip-zirve-analizi?${sp.toString()}`;
-  };
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -194,6 +115,7 @@ export default async function DipZirveAnaliziPage({
         <div className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Ana Sayfa
@@ -201,6 +123,7 @@ export default async function DipZirveAnaliziPage({
 
           <Link
             href="/borsa"
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Geri
@@ -223,78 +146,7 @@ export default async function DipZirveAnaliziPage({
           <ReklamAlani variant="yatay" />
         </section>
 
-        <section className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
-          <div className="overflow-x-auto">
-            <table className="w-full min-w-[980px] border-collapse text-sm">
-              <thead className="bg-zinc-100 text-zinc-800">
-                <tr>
-                  <th className="px-4 py-4 text-left font-semibold">
-                    <Link href={sortLink("sembol")}>
-                      Sembol {sortArrow(sort === "sembol", dir)}
-                    </Link>
-                  </th>
-                  <th className="px-4 py-4 text-right font-semibold">
-                    <Link href={sortLink("yuzdeDibeUzaklik")}>
-                      % Dibe Uzaklık{" "}
-                      {sortArrow(sort === "yuzdeDibeUzaklik", dir)}
-                    </Link>
-                  </th>
-                  <th className="px-4 py-4 text-right font-semibold">
-                    <Link href={sortLink("gunDibeUzaklik")}>
-                      Gün Dibe Uzaklık{" "}
-                      {sortArrow(sort === "gunDibeUzaklik", dir)}
-                    </Link>
-                  </th>
-                  <th className="px-4 py-4 text-right font-semibold">
-                    <Link href={sortLink("yuzdeZirveyeUzaklik")}>
-                      % Zirveye Uzaklık{" "}
-                      {sortArrow(sort === "yuzdeZirveyeUzaklik", dir)}
-                    </Link>
-                  </th>
-                  <th className="px-4 py-4 text-right font-semibold">
-                    <Link href={sortLink("gunZirveyeUzaklik")}>
-                      Gün Zirveye Uzaklık{" "}
-                      {sortArrow(sort === "gunZirveyeUzaklik", dir)}
-                    </Link>
-                  </th>
-                  <th className="px-4 py-4 text-right font-semibold">
-                    <Link href={sortLink("zirveDip")}>
-                      Zirve / Dip {sortArrow(sort === "zirveDip", dir)}
-                    </Link>
-                  </th>
-                </tr>
-              </thead>
-
-              <tbody>
-                {sortedVeriler.map((item, index) => (
-                  <tr
-                    key={`${item.sembol}-${index}`}
-                    className={index % 2 === 0 ? "bg-white" : "bg-sky-50/60"}
-                  >
-                    <td className="px-4 py-3 font-semibold text-zinc-900">
-                      {item.sembol}
-                    </td>
-                    <td className="px-4 py-3 text-right text-zinc-700">
-                      {sayiFormatla(item.yuzdeDibeUzaklik, true)}
-                    </td>
-                    <td className="px-4 py-3 text-right text-zinc-700">
-                      {sayiFormatla(item.gunDibeUzaklik)}
-                    </td>
-                    <td className="px-4 py-3 text-right text-zinc-700">
-                      {sayiFormatla(item.yuzdeZirveyeUzaklik, true)}
-                    </td>
-                    <td className="px-4 py-3 text-right text-zinc-700">
-                      {sayiFormatla(item.gunZirveyeUzaklik)}
-                    </td>
-                    <td className="px-4 py-3 text-right text-zinc-700">
-                      {sayiFormatla(item.zirveDip)}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
+        <DipZirveTableClient rows={dipZirveVerileri} />
 
         <section className="mt-8">
           <ReklamAlani variant="icerik" />
