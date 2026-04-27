@@ -14,6 +14,7 @@ type JsonRow = Record<string, string | number | null>;
 type JsonData = {
   columns?: string[];
   rows?: JsonRow[];
+  rawRows?: (string | number | null)[][];
   guncellemeTarihi?: string;
 };
 
@@ -46,10 +47,79 @@ function normalizeText(value: unknown) {
   return String(value ?? "").replace(/\s+/g, " ").trim();
 }
 
+function normalizeKey(value: unknown) {
+  return normalizeText(value)
+    .toLocaleLowerCase("tr-TR")
+    .replace(/ı/g, "i")
+    .replace(/ğ/g, "g")
+    .replace(/ü/g, "u")
+    .replace(/ş/g, "s")
+    .replace(/ö/g, "o")
+    .replace(/ç/g, "c");
+}
+
 function parseCell(value: unknown): CellValue {
   if (value === null || value === undefined || value === "") return null;
   if (typeof value === "number") return value;
   return normalizeText(value);
+}
+
+function excelSerialToDate(serial: number) {
+  const utcDays = Math.floor(serial - 25569);
+  const utcValue = utcDays * 86400;
+  const dateInfo = new Date(utcValue * 1000);
+  return dateInfo.toLocaleDateString("tr-TR");
+}
+
+function formatDateCell(value: CellValue) {
+  if (value === null || value === "") return null;
+
+  if (typeof value === "number" && Number.isFinite(value)) {
+    return excelSerialToDate(value);
+  }
+
+  const text = normalizeText(value);
+
+  if (/^\d{1,2}\.\d{1,2}\.\d{4}$/.test(text)) return text;
+
+  if (/^\d{4}-\d{2}-\d{2}$/.test(text)) {
+    const [y, m, d] = text.split("-");
+    return `${d}.${m}.${y}`;
+  }
+
+  return text;
+}
+
+function findHeaderRow(rows: CellValue[][]) {
+  for (let i = 0; i < Math.min(rows.length, 30); i++) {
+    const normalized = rows[i].map((cell) => normalizeKey(cell));
+
+    const hasFonKodu = normalized.some((cell) => cell.includes("fon kodu"));
+    const hasFonAdi = normalized.some(
+      (cell) => cell.includes("fon adi") || cell.includes("fon ad")
+    );
+
+    if (hasFonKodu && hasFonAdi) return i;
+  }
+
+  return 0;
+}
+
+function isMetaRow(row: CellValue[]) {
+  const firstCell = normalizeKey(row[0]);
+
+  if (!firstCell) return false;
+
+  if (firstCell.includes("disa aktarim tarihi")) return true;
+  if (firstCell.includes("toplam kayit sayisi")) return true;
+  if (firstCell.includes("rapor bilgileri")) return true;
+  if (firstCell === "fon kodu") return true;
+
+  return false;
+}
+
+function isDateHeader(header: string) {
+  return normalizeKey(header).includes("tarih");
 }
 
 async function getJsonData(excelRelativePath: string) {
@@ -59,25 +129,59 @@ async function getJsonData(excelRelativePath: string) {
   const file = await fs.readFile(filePath, "utf-8");
   const data = JSON.parse(file) as JsonData;
 
-  const headers =
-    Array.isArray(data.columns) && data.columns.length > 0
-      ? data.columns.map((item, index) => normalizeText(item) || `Sütun ${index + 1}`)
-      : [];
+  const rawRows = (data.rawRows || []).map((row) =>
+    row.map((cell) => parseCell(cell))
+  );
 
-  const rows = (data.rows || [])
-  .map((row) => headers.map((header) => parseCell(row[header])))
-  .filter((row) => {
-    if (!row.some((cell) => cell !== null && cell !== "")) return false;
+  if (!rawRows.length) {
+    return {
+      headers: [] as string[],
+      rows: [] as CellValue[][],
+      guncellemeTarihi: data.guncellemeTarihi || "-",
+    };
+  }
 
-    const ilkHucre = normalizeText(row[0]).toLocaleLowerCase("tr-TR");
+  const headerRowIndex = findHeaderRow(rawRows);
+  const headerRow = rawRows[headerRowIndex] || [];
 
-    if (ilkHucre.includes("dışa aktarım tarihi")) return false;
-    if (ilkHucre.includes("disa aktarim tarihi")) return false;
-    if (ilkHucre.includes("toplam kayıt sayısı")) return false;
-    if (ilkHucre.includes("toplam kayit sayisi")) return false;
+  const columnIndexes = headerRow
+    .map((header, index) => ({
+      header: normalizeText(header),
+      index,
+    }))
+    .filter((item) => {
+      const key = normalizeKey(item.header);
+      if (!key) return false;
+      if (key.startsWith("__empty")) return false;
+      if (key.includes("rapor bilgileri")) return false;
+      return true;
+    })
+    .map((item) => item.index);
 
-    return true;
+  const headers = columnIndexes.map((index, order) => {
+    const header = normalizeText(headerRow[index]);
+    return header || `Sütun ${order + 1}`;
   });
+
+  const rows = rawRows
+    .slice(headerRowIndex + 1)
+    .map((row) =>
+      columnIndexes.map((sourceIndex, colIndex) => {
+        const value = parseCell(row[sourceIndex]);
+        const header = headers[colIndex];
+
+        if (isDateHeader(header)) {
+          return formatDateCell(value);
+        }
+
+        return value;
+      })
+    )
+    .filter((row) => {
+      if (!row.some((cell) => cell !== null && cell !== "")) return false;
+      if (isMetaRow(row)) return false;
+      return true;
+    });
 
   return {
     headers,

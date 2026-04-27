@@ -13,6 +13,7 @@ type FonRow = {
   kod: string;
   ad: string;
   kategori: string;
+  riskDegeri: number | null;
   birAy: number | null;
   ucAy: number | null;
   altiAy: number | null;
@@ -155,6 +156,7 @@ async function getJsonData(excelRelativePath: string): Promise<{
     "şemsiye fon türü",
     "kategori",
   ]);
+  const riskKolonu = kolonBul(headers, ["risk degeri", "risk değeri"]);
   const birAyKolonu = kolonBul(headers, ["1 ay", "bir ay"]);
   const ucAyKolonu = kolonBul(headers, ["3 ay", "uc ay", "üç ay"]);
   const altiAyKolonu = kolonBul(headers, ["6 ay", "alti ay", "altı ay"]);
@@ -168,27 +170,28 @@ async function getJsonData(excelRelativePath: string): Promise<{
       kod: normalizeText(getValue(row, kodKolonu, 0)),
       ad: normalizeText(getValue(row, adKolonu, 1)),
       kategori: normalizeText(getValue(row, kategoriKolonu, 2)),
-      birAy: parseNumber(getValue(row, birAyKolonu, 3)),
-      ucAy: parseNumber(getValue(row, ucAyKolonu, 4)),
-      altiAy: parseNumber(getValue(row, altiAyKolonu, 5)),
-      yilbasi: parseNumber(getValue(row, yilbasiKolonu, 6)),
-      birYil: parseNumber(getValue(row, birYilKolonu, 7)),
-      ucYil: parseNumber(getValue(row, ucYilKolonu, 8)),
-      besYil: parseNumber(getValue(row, besYilKolonu, 9)),
+      riskDegeri: parseNumber(getValue(row, riskKolonu, 3)),
+      birAy: parseNumber(getValue(row, birAyKolonu, 4)),
+      ucAy: parseNumber(getValue(row, ucAyKolonu, 5)),
+      altiAy: parseNumber(getValue(row, altiAyKolonu, 6)),
+      yilbasi: parseNumber(getValue(row, yilbasiKolonu, 7)),
+      birYil: parseNumber(getValue(row, birYilKolonu, 8)),
+      ucYil: parseNumber(getValue(row, ucYilKolonu, 9)),
+      besYil: parseNumber(getValue(row, besYilKolonu, 10)),
     }))
     .filter((item) => {
-  const kod = normalizeKey(item.kod);
-  const ad = normalizeKey(item.ad);
+      const kod = normalizeKey(item.kod);
+      const ad = normalizeKey(item.ad);
 
-  if (!item.kod && !item.ad) return false;
+      if (!item.kod && !item.ad) return false;
 
-  if (kod === "fon kodu" || ad === "fon adi") return false;
+      if (kod === "fon kodu" || ad === "fon adi") return false;
 
-  if (kod.includes("disa aktarim tarihi")) return false;
-  if (kod.includes("toplam kayit sayisi")) return false;
+      if (kod.includes("disa aktarim tarihi")) return false;
+      if (kod.includes("toplam kayit sayisi")) return false;
 
-  return true;
-});
+      return true;
+    });
 
   return {
     rows: parsedRows,
@@ -211,6 +214,7 @@ export default async function FonGetiriExcelPage({
     "kod",
     "ad",
     "kategori",
+    "riskDegeri",
     "birAy",
     "ucAy",
     "altiAy",
@@ -280,6 +284,11 @@ export default async function FonGetiriExcelPage({
       <th className="px-4 py-4 text-left font-semibold">
         <Link href={sortLink("kategori")} prefetch={false}>
           Şemsiye Fon Türü {sortArrow(sort === "kategori", dir)}
+        </Link>
+      </th>
+      <th className="px-4 py-4 text-left font-semibold">
+        <Link href={sortLink("riskDegeri")} prefetch={false}>
+          Risk Değeri {sortArrow(sort === "riskDegeri", dir)}
         </Link>
       </th>
       <th className="px-4 py-4 text-left font-semibold">

@@ -6,6 +6,7 @@ type FonRow = {
   kod: string;
   ad: string;
   kategori: string;
+  riskDegeri: number | null;
   birAy: number | null;
   ucAy: number | null;
   altiAy: number | null;
@@ -19,6 +20,14 @@ function formatPercent(value: number | null) {
   if (value === null) return "-";
   return new Intl.NumberFormat("tr-TR", {
     minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(value);
+}
+
+function formatRisk(value: number | null) {
+  if (value === null) return "-";
+  return new Intl.NumberFormat("tr-TR", {
+    minimumFractionDigits: 0,
     maximumFractionDigits: 2,
   }).format(value);
 }
@@ -87,7 +96,7 @@ export default function FonGetiriTableClient({
         >
           <table
             ref={tableRef}
-            className="w-full min-w-[1320px] border-collapse text-sm"
+            className="w-full min-w-[1460px] border-collapse text-sm"
           >
             <thead className="bg-zinc-100 text-zinc-800">{headers}</thead>
 
@@ -105,6 +114,9 @@ export default function FonGetiriTableClient({
                   </td>
                   <td className="border-t border-zinc-100 px-4 py-4 text-zinc-700">
                     {item.kategori || "-"}
+                  </td>
+                  <td className="border-t border-zinc-100 px-4 py-4 font-semibold text-zinc-800">
+                    {formatRisk(item.riskDegeri)}
                   </td>
                   <td
                     className={`border-t border-zinc-100 px-4 py-4 font-semibold ${
@@ -169,7 +181,7 @@ export default function FonGetiriTableClient({
               {rows.length === 0 && (
                 <tr>
                   <td
-                    colSpan={10}
+                    colSpan={11}
                     className="border-t border-zinc-100 px-4 py-8 text-center text-zinc-500"
                   >
                     Sonuç bulunamadı.
@@ -187,7 +199,7 @@ export default function FonGetiriTableClient({
             ref={fixedScrollRef}
             className="overflow-x-auto rounded-full border border-zinc-200 bg-zinc-100"
           >
-            <div ref={fixedInnerRef} className="h-4 min-w-[1320px]" />
+            <div ref={fixedInnerRef} className="h-4 min-w-[1460px]" />
           </div>
         </div>
       </div>
