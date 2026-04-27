@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import PageViewTracker from "@/components/page-view-tracker";
 import { Analytics } from "@vercel/analytics/next";
 
 export const metadata: Metadata = {
@@ -23,7 +22,6 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <body>
-        <PageViewTracker />
         {children}
         <Analytics />
       </body>
