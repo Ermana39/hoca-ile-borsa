@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import TrackedLink from "@/components/tracked-link";
 
 const analizKutulari = [
   {
@@ -139,11 +138,11 @@ function AnalizKutusu({
   description: string;
 }) {
   return (
-    <TrackedLink
+    <Link
       href={href}
-      label={title}
+      prefetch={false}
+      aria-label={title}
       className="group flex min-h-[320px] flex-col rounded-2xl bg-white transition hover:bg-zinc-50"
-      ariaLabel={title}
     >
       <div className="p-2 pb-1 md:p-3 md:pb-1">
         <div className="relative overflow-hidden rounded-2xl bg-zinc-50">
@@ -166,7 +165,7 @@ function AnalizKutusu({
           {description}
         </p>
       </div>
-    </TrackedLink>
+    </Link>
   );
 }
 
@@ -177,6 +176,7 @@ export default function BorsaPage() {
         <section className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
+            prefetch={false}
             className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Ana Sayfa

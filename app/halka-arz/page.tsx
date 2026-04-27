@@ -3,7 +3,6 @@ import path from "path";
 import Image from "next/image";
 import Link from "next/link";
 import * as XLSX from "xlsx";
-import TrackedLink from "@/components/tracked-link";
 
 type ExcelSatiri = {
   kurum: string;
@@ -93,7 +92,13 @@ function besSatiraTamamla(liste: ListeSatiri[]) {
 
 function excelOku() {
   try {
-    const dosyaYolu = path.join(process.cwd(), "app", "halka-arz", "data", "halkaarz.xlsx");
+    const dosyaYolu = path.join(
+      process.cwd(),
+      "app",
+      "halka-arz",
+      "data",
+      "halkaarz.xlsx"
+    );
     const buffer = fs.readFileSync(dosyaYolu);
     const workbook = XLSX.read(buffer, { type: "buffer" });
     const sheetName = workbook.SheetNames[0];
@@ -135,7 +140,9 @@ function aliciListesi(veri: ExcelSatiri[]): ListeSatiri[] {
     .map((item) => ({
       kurum: item.kurum,
       lot: formatSayi(item.net, 0),
-      yuzde: formatYuzde(toplamPozitifNet > 0 ? (item.net / toplamPozitifNet) * 100 : 0),
+      yuzde: formatYuzde(
+        toplamPozitifNet > 0 ? (item.net / toplamPozitifNet) * 100 : 0
+      ),
       maliyet: formatSayi(item.maliyet, 3),
       sagDeger: formatSayi(item.toplam, 0),
     }));
@@ -156,7 +163,9 @@ function saticiListesi(veri: ExcelSatiri[]): ListeSatiri[] {
       kurum: item.kurum,
       lot: formatSayi(Math.abs(item.net), 0),
       yuzde: formatYuzde(
-        toplamNegatifNet > 0 ? (Math.abs(item.net) / toplamNegatifNet) * 100 : 0
+        toplamNegatifNet > 0
+          ? (Math.abs(item.net) / toplamNegatifNet) * 100
+          : 0
       ),
       maliyet: formatSayi(item.maliyet, 3),
       sagDeger: formatSayi(item.toplam, 0),
@@ -174,7 +183,9 @@ function hacimListesi(veri: ExcelSatiri[]): ListeSatiri[] {
     .map((item) => ({
       kurum: item.kurum,
       lot: formatSayi(item.toplam, 0),
-      yuzde: formatYuzde(toplamIslemLotu > 0 ? (item.toplam / toplamIslemLotu) * 100 : 0),
+      yuzde: formatYuzde(
+        toplamIslemLotu > 0 ? (item.toplam / toplamIslemLotu) * 100 : 0
+      ),
       maliyet: formatSayi(item.maliyet, 3),
       sagDeger: formatSayi(item.net, 0),
     }));
@@ -204,11 +215,21 @@ function KurumTablosu({
         <table className="w-full min-w-[470px] border-collapse text-zinc-900">
           <thead>
             <tr className="bg-white/60 text-[11px] font-medium text-zinc-700 md:text-xs">
-              <th className="border-b border-r border-zinc-300 px-3 py-2 text-left">Kurum</th>
-              <th className="border-b border-r border-zinc-300 px-3 py-2 text-right">{lotBaslik}</th>
-              <th className="border-b border-r border-zinc-300 px-3 py-2 text-right">%</th>
-              <th className="border-b border-r border-zinc-300 px-3 py-2 text-right">Maliyet</th>
-              <th className="border-b border-zinc-300 px-3 py-2 text-right">{sagBaslik}</th>
+              <th className="border-b border-r border-zinc-300 px-3 py-2 text-left">
+                Kurum
+              </th>
+              <th className="border-b border-r border-zinc-300 px-3 py-2 text-right">
+                {lotBaslik}
+              </th>
+              <th className="border-b border-r border-zinc-300 px-3 py-2 text-right">
+                %
+              </th>
+              <th className="border-b border-r border-zinc-300 px-3 py-2 text-right">
+                Maliyet
+              </th>
+              <th className="border-b border-zinc-300 px-3 py-2 text-right">
+                {sagBaslik}
+              </th>
             </tr>
           </thead>
 
@@ -217,9 +238,16 @@ function KurumTablosu({
               const bosMu = !item.kurum;
 
               return (
-                <tr key={`${item.kurum || "bos"}-${index}`} className="bg-transparent">
+                <tr
+                  key={`${item.kurum || "bos"}-${index}`}
+                  className="bg-transparent"
+                >
                   <td className="border-b border-r border-zinc-300 px-3 py-2 text-left text-[12px] font-semibold md:text-[13px]">
-                    {bosMu ? <span className="block min-h-[20px]"></span> : <span>{item.kurum}</span>}
+                    {bosMu ? (
+                      <span className="block min-h-[20px]"></span>
+                    ) : (
+                      <span>{item.kurum}</span>
+                    )}
                   </td>
                   <td className="border-b border-r border-zinc-300 px-3 py-2 text-right text-[12px] text-zinc-900 md:text-[13px]">
                     {item.lot}
@@ -271,6 +299,7 @@ export default function HalkaArzPage() {
         <div className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Ana Sayfa
@@ -280,75 +309,71 @@ export default function HalkaArzPage() {
         <h1 className="mb-6 text-3xl font-bold text-zinc-900">Halka Arz</h1>
 
         <div className="mb-8 grid grid-cols-1 gap-3 md:grid-cols-2">
-          <TrackedLink
+          <Link
             href="/halka-arz/kazanc-hesapla"
-            label="Kazanç Hesapla"
+            prefetch={false}
             className="rounded-xl border border-blue-200 bg-blue-100 px-4 py-4 text-center text-base font-semibold text-zinc-900 transition hover:bg-blue-200"
           >
             Kazanç Hesapla
-          </TrackedLink>
+          </Link>
 
-          <TrackedLink
+          <Link
             href="/halka-arz/talep-hesapla"
-            label="Talep Hesapla"
+            prefetch={false}
             className="rounded-xl border border-purple-200 bg-purple-100 px-4 py-4 text-center text-base font-semibold text-zinc-900 transition hover:bg-purple-200"
           >
             Talep Hesapla
-          </TrackedLink>
+          </Link>
         </div>
 
         <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
-          <TrackedLink
+          <Link
             href="/halka-arz/onayli-izahnameler"
-            label="Onaylı İzahnameler"
+            prefetch={false}
+            aria-label="Onaylı İzahnameler"
             className="group flex min-h-[240px] flex-col rounded-2xl border border-zinc-200 bg-zinc-50 p-3 transition hover:bg-zinc-100"
-            ariaLabel="Onaylı İzahnameler"
           >
-            <>
-              <div className="relative mb-4 overflow-hidden rounded-2xl bg-white">
-                <div className="relative aspect-[16/10] w-full">
-                  <Image
-                    src="/onayli-izahnameler.png"
-                    alt="Onaylı izahnameler görseli"
-                    fill
-                    className="object-cover transition duration-300 group-hover:scale-[1.03]"
-                  />
-                </div>
+            <div className="relative mb-4 overflow-hidden rounded-2xl bg-white">
+              <div className="relative aspect-[16/10] w-full">
+                <Image
+                  src="/onayli-izahnameler.png"
+                  alt="Onaylı izahnameler görseli"
+                  fill
+                  className="object-cover transition duration-300 group-hover:scale-[1.03]"
+                />
               </div>
+            </div>
 
-              <div className="flex flex-1 items-center justify-center px-2 pb-2 text-center">
-                <h2 className="text-2xl font-semibold leading-tight text-zinc-900 md:text-3xl">
-                  Onaylı İzahnameler
-                </h2>
-              </div>
-            </>
-          </TrackedLink>
+            <div className="flex flex-1 items-center justify-center px-2 pb-2 text-center">
+              <h2 className="text-2xl font-semibold leading-tight text-zinc-900 md:text-3xl">
+                Onaylı İzahnameler
+              </h2>
+            </div>
+          </Link>
 
-          <TrackedLink
+          <Link
             href="/halka-arz/taslak-izahnameler"
-            label="Taslak İzahnameler"
+            prefetch={false}
+            aria-label="Taslak İzahnameler"
             className="group flex min-h-[240px] flex-col rounded-2xl border border-zinc-200 bg-zinc-50 p-3 transition hover:bg-zinc-100"
-            ariaLabel="Taslak İzahnameler"
           >
-            <>
-              <div className="relative mb-4 overflow-hidden rounded-2xl bg-white">
-                <div className="relative aspect-[16/10] w-full">
-                  <Image
-                    src="/taslak-izahnameler.png"
-                    alt="Taslak izahnameler görseli"
-                    fill
-                    className="object-cover transition duration-300 group-hover:scale-[1.03]"
-                  />
-                </div>
+            <div className="relative mb-4 overflow-hidden rounded-2xl bg-white">
+              <div className="relative aspect-[16/10] w-full">
+                <Image
+                  src="/taslak-izahnameler.png"
+                  alt="Taslak izahnameler görseli"
+                  fill
+                  className="object-cover transition duration-300 group-hover:scale-[1.03]"
+                />
               </div>
+            </div>
 
-              <div className="flex flex-1 items-center justify-center px-2 pb-2 text-center">
-                <h2 className="text-2xl font-semibold leading-tight text-zinc-900 md:text-3xl">
-                  Taslak İzahnameler
-                </h2>
-              </div>
-            </>
-          </TrackedLink>
+            <div className="flex flex-1 items-center justify-center px-2 pb-2 text-center">
+              <h2 className="text-2xl font-semibold leading-tight text-zinc-900 md:text-3xl">
+                Taslak İzahnameler
+              </h2>
+            </div>
+          </Link>
         </section>
 
         <section className="mt-8">
@@ -417,25 +442,27 @@ export default function HalkaArzPage() {
 
             <div className="space-y-4 text-sm leading-7 text-zinc-700 md:text-base">
               <p>
-                Hoca İle Borsa Halka Arz sayfasında güncel halka arz gelişmeleri, onaylı
-                izahnameler, taslak izahnameler, halka arz kazanç hesaplama aracı ve talep
-                hesaplama bölümleri bir arada sunulur. Halka arz sürecini takip etmek isteyen
-                yatırımcılar bu sayfa üzerinden yeni başvuruları, izahname detaylarını ve öne
-                çıkan verileri daha kolay inceleyebilir.
+                Hoca İle Borsa Halka Arz sayfasında güncel halka arz gelişmeleri,
+                onaylı izahnameler, taslak izahnameler, halka arz kazanç
+                hesaplama aracı ve talep hesaplama bölümleri bir arada sunulur.
+                Halka arz sürecini takip etmek isteyen yatırımcılar bu sayfa
+                üzerinden yeni başvuruları, izahname detaylarını ve öne çıkan
+                verileri daha kolay inceleyebilir.
               </p>
 
               <p>
-                Sayfada ayrıca halka arz sonrası işlem gören şirketlere ait güncel kurum
-                dağılımları, en çok alıcı kurumlar, en çok satıcı kurumlar ve en çok işlem
-                yapan kurumlar listeleri yer alır. Bu veriler sayesinde halka arz hisselerinde
-                gün içi dağılımın nasıl şekillendiği daha net görülebilir.
+                Sayfada ayrıca halka arz sonrası işlem gören şirketlere ait güncel
+                kurum dağılımları, en çok alıcı kurumlar, en çok satıcı kurumlar ve
+                en çok işlem yapan kurumlar listeleri yer alır. Bu veriler
+                sayesinde halka arz hisselerinde gün içi dağılımın nasıl
+                şekillendiği daha net görülebilir.
               </p>
 
               <p>
-                Halka arz takibi yapan kullanıcılar için hazırlanan bu bölüm; izahname
-                inceleme, talep hesaplama, olası lot dağılımını değerlendirme ve işlem
-                sonrası kurum hareketlerini takip etme gibi başlıklarda pratik bir kaynak
-                sunar.
+                Halka arz takibi yapan kullanıcılar için hazırlanan bu bölüm;
+                izahname inceleme, talep hesaplama, olası lot dağılımını
+                değerlendirme ve işlem sonrası kurum hareketlerini takip etme gibi
+                başlıklarda pratik bir kaynak sunar.
               </p>
             </div>
           </div>

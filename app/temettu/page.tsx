@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Link from "next/link";
-import TrackedLink from "@/components/tracked-link";
 
 const temettuKutulari = [
   {
@@ -83,11 +82,11 @@ function TemettuKutusu({
   description: string;
 }) {
   return (
-    <TrackedLink
+    <Link
       href={href}
-      label={title}
+      prefetch={false}
+      aria-label={title}
       className="group flex min-h-[320px] flex-col rounded-2xl bg-white transition hover:bg-zinc-50"
-      ariaLabel={title}
     >
       <div className="p-2 pb-1 md:p-3 md:pb-1">
         <div className="relative overflow-hidden rounded-2xl bg-zinc-50">
@@ -110,7 +109,7 @@ function TemettuKutusu({
           {description}
         </p>
       </div>
-    </TrackedLink>
+    </Link>
   );
 }
 
@@ -121,6 +120,7 @@ export default function TemettuPage() {
         <section className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
+            prefetch={false}
             className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Ana Sayfa
@@ -142,21 +142,21 @@ export default function TemettuPage() {
 
         <section className="pt-6">
           <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
-            <TrackedLink
+            <Link
               href="/temettu/temettu-hesaplama-araci"
-              label="Temettü Hesaplama Aracı"
+              prefetch={false}
               className="rounded-xl bg-blue-100 px-4 py-4 text-center text-base font-semibold text-zinc-900 transition hover:bg-blue-200"
             >
               Temettü Hesaplama Aracı
-            </TrackedLink>
+            </Link>
 
-            <TrackedLink
+            <Link
               href="/temettu/temettu-verimi-hesaplama"
-              label="Temettü Verimi Hesaplama"
+              prefetch={false}
               className="rounded-xl bg-purple-100 px-4 py-4 text-center text-base font-semibold text-zinc-900 transition hover:bg-purple-200"
             >
               Temettü Verimi Hesaplama
-            </TrackedLink>
+            </Link>
           </div>
         </section>
 
@@ -179,15 +179,23 @@ export default function TemettuPage() {
 
           <div className="space-y-4 text-sm leading-7 text-zinc-700 md:text-base">
             <p>
-              Hoca İle Borsa Temettü sayfasında temettü takvimi, aylara göre temettü dağıtacak şirketler, temettü tarihleri, temettü hesaplama aracı ve temettü verimi hesaplama içerikleri bir arada sunulur.
+              Hoca İle Borsa Temettü sayfasında temettü takvimi, aylara göre
+              temettü dağıtacak şirketler, temettü tarihleri, temettü hesaplama
+              aracı ve temettü verimi hesaplama içerikleri bir arada sunulur.
             </p>
 
             <p>
-              Borsa yatırımcıları için hazırlanan bu bölümde, hisse senetlerinin temettü ödeme dönemlerini daha kolay takip edebilir, temettü gelirine yönelik hesaplamaları pratik şekilde yapabilir ve güncel temettü verilerini düzenli olarak inceleyebilirsiniz.
+              Borsa yatırımcıları için hazırlanan bu bölümde, hisse senetlerinin
+              temettü ödeme dönemlerini daha kolay takip edebilir, temettü gelirine
+              yönelik hesaplamaları pratik şekilde yapabilir ve güncel temettü
+              verilerini düzenli olarak inceleyebilirsiniz.
             </p>
 
             <p>
-             Temettü yatırımıyla ilgilenen yatırımcılar bu sayfa üzerinden yaklaşan temettü ödemelerini takip edebilir, hisse bazlı temettü verilerini inceleyebilir ve temettü gelirine yönelik temel hesaplamaları daha pratik şekilde yapabilir.
+              Temettü yatırımıyla ilgilenen yatırımcılar bu sayfa üzerinden
+              yaklaşan temettü ödemelerini takip edebilir, hisse bazlı temettü
+              verilerini inceleyebilir ve temettü gelirine yönelik temel
+              hesaplamaları daha pratik şekilde yapabilir.
             </p>
 
             <p className="text-zinc-500">

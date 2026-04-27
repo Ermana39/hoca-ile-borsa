@@ -1,5 +1,4 @@
 import Link from "next/link";
-import TrackedLink from "@/components/tracked-link";
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
@@ -58,7 +57,8 @@ const videoKartlari = [
     alt: "TLY Tera Portföy Birinci Serbest Fonu video kapak görseli",
   },
   {
-    title: "PHE Pusula Portföy Hisse Senedi Fonu Detaylı İnceleme | Strateji, Risk, Getiri",
+    title:
+      "PHE Pusula Portföy Hisse Senedi Fonu Detaylı İnceleme | Strateji, Risk, Getiri",
     href: "https://youtu.be/MgVAiBFZvto",
     image: "https://img.youtube.com/vi/MgVAiBFZvto/hqdefault.jpg",
     alt: "PHE Pusula Portföy Hisse Senedi Fonu video kapak görseli",
@@ -89,11 +89,11 @@ function FonKutusu({
   titleClassName: string;
 }) {
   return (
-    <TrackedLink
+    <Link
       href={href}
-      label={title}
+      prefetch={false}
+      aria-label={title}
       className="group flex min-h-[320px] flex-col rounded-2xl bg-white transition hover:bg-zinc-50"
-      ariaLabel={title}
     >
       <div className="p-2 pb-1 md:p-3 md:pb-1">
         <div className="relative overflow-hidden rounded-2xl bg-zinc-50">
@@ -120,7 +120,7 @@ function FonKutusu({
           {seoDescription}
         </p>
       </div>
-    </TrackedLink>
+    </Link>
   );
 }
 
@@ -131,6 +131,7 @@ export default function FonlarPage() {
         <section className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
+            prefetch={false}
             className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Ana Sayfa
@@ -170,16 +171,24 @@ export default function FonlarPage() {
 
           <div className="space-y-4 text-sm leading-7 text-zinc-700 md:text-base">
             <p>
-              Hoca İle Borsa Fonlar sayfasında yatırım fonları, emeklilik fonları, para piyasası fonları, hisse senedi fonları, borçlanma araçları fonları ve farklı fon türlerine ait güncel içerikler bir arada sunulur.
+              Hoca İle Borsa Fonlar sayfasında yatırım fonları, emeklilik
+              fonları, para piyasası fonları, hisse senedi fonları, borçlanma
+              araçları fonları ve farklı fon türlerine ait güncel içerikler bir
+              arada sunulur.
             </p>
 
             <p>
-              Fon yatırımına ilgi duyan kullanıcılar bu sayfa üzerinden fon kategorilerini daha kolay inceleyebilir, fon getirilerini karşılaştırabilir, risk ve dağılım yapıları hakkında genel bilgi edinebilir ve kendi yatırım tercihlerine uygun fon seçeneklerini daha pratik şekilde değerlendirebilir.
-
+              Fon yatırımına ilgi duyan kullanıcılar bu sayfa üzerinden fon
+              kategorilerini daha kolay inceleyebilir, fon getirilerini
+              karşılaştırabilir, risk ve dağılım yapıları hakkında genel bilgi
+              edinebilir ve kendi yatırım tercihlerine uygun fon seçeneklerini
+              daha pratik şekilde değerlendirebilir.
             </p>
 
             <p>
-             Fon piyasasını takip eden kullanıcılar için hazırlanan bu bölüm, farklı fon başlıklarına tek sayfadan ulaşmayı kolaylaştırır ve güncel fon içeriklerini daha düzenli şekilde inceleme imkânı sunar.
+              Fon piyasasını takip eden kullanıcılar için hazırlanan bu bölüm,
+              farklı fon başlıklarına tek sayfadan ulaşmayı kolaylaştırır ve
+              güncel fon içeriklerini daha düzenli şekilde inceleme imkânı sunar.
             </p>
 
             <p className="text-zinc-500">
