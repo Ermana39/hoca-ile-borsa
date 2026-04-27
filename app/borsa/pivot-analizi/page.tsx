@@ -14,7 +14,7 @@ type PivotRow = {
   yorum: string;
 };
 
-const guncellemeTarihi = "21.04.2026";
+const guncellemeTarihi = "27.04.2026";
 
 const xu100Pivot: PivotRow = {
   sembol: "XU100",
