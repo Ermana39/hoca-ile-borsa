@@ -2,89 +2,88 @@ import Image from "next/image";
 import Link from "next/link";
 
 const bistVeri = {
-  tarih: "27.04.2026",
-  kapanis: "14594.01",
-  degisimYuzde: 1.28,
+  tarih: "30.04.2026",
+  kapanis: "14329.34",
+  degisimYuzde: -1.81,
 };
 
 const tumYukselenler = [
-  { kod: "MERCN", fark: "+10,00%" },
-  { kod: "DAPGM", fark: "+10,00%" },
-  { kod: "MEYSU", fark: "+10,00%" },
+  { kod: "SMRVA", fark: "+10,00%" },
   { kod: "TPKGYF1", fark: "+10,00%" },
-  { kod: "OZATD", fark: "+9,99%" },
-  { kod: "PEKGY", fark: "+9,98%" },
-  { kod: "ICUGS", fark: "+9,98%" },
-  { kod: "ASTOR", fark: "+9,98%" },
-  { kod: "KLSYN", fark: "+9,97%" },
+  { kod: "EUPWR", fark: "+10,00%" },
+  { kod: "GWIND", fark: "+9,98%" },
+  { kod: "QPERPF1", fark: "+9,98%" },
+  { kod: "BIGEN", fark: "+9,98%" },
+  { kod: "SAYAS", fark: "+9,98%" },
+  { kod: "OZATD", fark: "+9,97%" },
 ];
 
 const tumDusenler = [
-  { kod: "ENSRI", fark: "-9,98%" },
-  { kod: "KGYO", fark: "-9,97%" },
-  { kod: "ARMGD", fark: "-9,96%" },
+  { kod: "PRZMA", fark: "-10,00%" },
+  { kod: "BORLS", fark: "-10,00%" },
+  { kod: "ANELE", fark: "-10,00%" },
+  { kod: "ENSRI", fark: "-9,99%" },
+  { kod: "GZNMI", fark: "-9,97%" },
+  { kod: "AVGYO", fark: "-9,97%" },
   { kod: "ALKLC", fark: "-9,94%" },
-  { kod: "TMPOL", fark: "-9,93%" },
-  { kod: "SELVA", fark: "-9,83%" },
-  { kod: "TERA", fark: "-9,66%" },
- 
+  { kod: "BIENY", fark: "-9,93%" },
 ];
 
 const tumHacimliler = [
-  { kod: "SASA", hacim: "22.085.260.306" },
-  { kod: "THYAO", hacim: "12.879.970.606" },
-  { kod: "ASELS", hacim: "12.766.055.870" },
-  { kod: "KONTR", hacim: "11.078.608.300" },
-  { kod: "ASTOR", hacim: "10.531.061.881" },
-  { kod: "ISCTR", hacim: "7.100.661.161" },
-  { kod: "TERA", hacim: "6.907.936.708" },
-  { kod: "AKBNK", hacim: "6.727.059.790" },
-  { kod: "TUPRS", hacim: "6.619.278.739" },
+  { kod: "ASTOR", hacim: "19.517.604.709" },
+  { kod: "ASELS", hacim: "12.043.070.585" },
+  { kod: "PEKGY", hacim: "6.881.745.126" },
+  { kod: "AKBNK", hacim: "6.393.060.381" },
+  { kod: "ISCTR", hacim: "4.837.484.845" },
+  { kod: "TERA", hacim: "4.799.596.926" },
+  { kod: "KTLEV", hacim: "4.701.389.884" },
+  { kod: "KCHOL", hacim: "4.644.542.775" },
 ];
 
 const tumParaGirisi = [
-  { kod: "ASTOR", tutar: "+348.066.925" },
-  { kod: "ASELS", tutar: "+266.986.087" },
-  { kod: "OZATD", tutar: "+113.409.657" },
-  { kod: "PEKGY", tutar: "+106.520.189" },
-  { kod: "PETKM", tutar: "+55.492.064" },
-  { kod: "AKBNK", tutar: "+54.954.874" },
-  { kod: "BRSAN", tutar: "+52.449.332" },
-  { kod: "TKFEN", tutar: "+40.624.571" },
+  { kod: "ASTOR", tutar: "+143.526.326" },
+  { kod: "TERA", tutar: "+105.316.119" },
+  { kod: "ASELS", tutar: "+92.266.254" },
+  { kod: "EUPWR", tutar: "+73.764.735" },
+  { kod: "PETKM", tutar: "+32.296.569" },
+  { kod: "CANTE", tutar: "+26.200.879" },
+  { kod: "MANAS", tutar: "+25.067.101" },
 ];
 
 const tumParaCikisi = [
-  { kod: "GARAN", tutar: "-151.596.989" },
-  { kod: "ISCTR", tutar: "-150.854.258" },
-  { kod: "TERA", tutar: "-128.360.529" },
-  { kod: "THYAO", tutar: "-89.517.891" },
-  { kod: "SISE", tutar: "-87.498.457" },
-  { kod: "HALKB", tutar: "-66.914.709" },
-  { kod: "TCELL", tutar: "-61.402.626" },
+  { kod: "SASA", tutar: "-145.389.402" },
+  { kod: "FROTO", tutar: "-70.357.481" },
+  { kod: "BIMAS", tutar: "-64.715.886" },
+  { kod: "EUREN", tutar: "-63.207.260" },
+  { kod: "GARAN", tutar: "-60.909.481" },
+  { kod: "PGSUS", tutar: "-60.565.844" },
+  { kod: "TAVHL", tutar: "-57.224.242" },
+  { kod: "GLRMK", tutar: "-55.015.309" },
+  { kod: "PASEU", tutar: "-51.886.511" },
 ];
 
 const enCokAlisYapanKurumlar = [
-  { kurum: "TERA", hacim: "2.996.674.538", oran: "%35,8" },
-  { kurum: "IS", hacim: "1.151.375.109", oran: "%13,77" },
-  { kurum: "QNB YATIRIM", hacim: "649.284.599", oran: "%7,77" },
-  { kurum: "PUSULA YAT.", hacim: "573.471.407", oran: "%6,86" },
-  { kurum: "TACIRLER", hacim: "489.966.601", oran: "%5,86" },
+  { kurum: "TERA", hacim: "2.807.670.530", oran: "%25,61" },
+  { kurum: "DENIZ", hacim: "1.272.321.996", oran: "%11,62" },
+  { kurum: "YATIRIM FINA", hacim: "999.665.482", oran: "%9,13" },
+  { kurum: "TEB", hacim: "917.213.290", oran: "%8,38" },
+  { kurum: "MIDAS", hacim: "723.878.348", oran: "%6,61" },
 ];
 
 const enCokSatisYapanKurumlar = [
-  { kurum: "A1 CAPITAL", hacim: "-1.232.733.957", oran: "%14,75" },
-  { kurum: "AK", hacim: "-997.494.038", oran: "%11,94" },
-  { kurum: "DENIZ", hacim: "-884.808.516", oran: "%10,59" },
-  { kurum: "TEB", hacim: "-838.246.600", oran: "%10,03" },
-  { kurum: "BULLS YATIRIM", hacim: "-671.572.136", oran: "%8,04" },
+  { kurum: "BANK OF AME", hacim: "-5.374.923.819", oran: "%49,10" },
+  { kurum: "INFO", hacim: "-1.013.121.757", oran: "%9,25" },
+  { kurum: "GEDIK", hacim: "-841.106.084", oran: "%7,68" },
+  { kurum: "A1 CAPITAL", hacim: "-633.823.159", oran: "%5,79" },
+  { kurum: "AK", hacim: "-453.186.256", oran: "%4,14" },
 ];
 
 const enCokHacimYapanKurumlar = [
-  { kurum: "YAPI KREDI", hacim: "85.463.965.916", oran: "%14,73" },
-  { kurum: "BANK OF AME", hacim: "70.866.381.989", oran: "%12,21" },
-  { kurum: "IS", hacim: "54.761.212.056", oran: "%9,44" },
-  { kurum: "AK", hacim: "45.940.611.598", oran: "%7,92" },
-  { kurum: "TACIRLER", hacim: "23.715.193.254", oran: "%4,09" },
+  { kurum: "YAPI KREDI", hacim: "74.591.040.945", oran: "%13,70" },
+  { kurum: "BANK OF AME", hacim: "72.828.460.008", oran: "%13,38" },
+  { kurum: "IS", hacim: "48.585.994.993", oran: "%8,92" },
+  { kurum: "AK", hacim: "45.082.120.125", oran: "%8,28" },
+  { kurum: "TACIRLER", hacim: "23.095.734.283", oran: "%4,24" },
 ];
 
 const ekonomikTakvimVerileri = [
