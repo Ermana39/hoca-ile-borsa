@@ -37,7 +37,7 @@ export default function Haber2Page() {
         <article className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
           <div className="relative aspect-[16/9] w-full">
             <Image
-              src="/dikkat-ceken-2.png"
+              src="/dikkat-ceken-2.jpg"
               alt="Banka hisselerinde önemli direnç noktası"
               fill
               className="object-cover"

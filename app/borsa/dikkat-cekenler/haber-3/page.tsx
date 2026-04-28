@@ -37,7 +37,7 @@ export default function Haber3Page() {
         <article className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
           <div className="relative aspect-[16/9] w-full">
             <Image
-              src="/dikkat-ceken-3.png"
+              src="/dikkat-ceken-3.jpg"
               alt="BİST100 Önemli direnç noktasında negatif uyumsuzluk"
               fill
               className="object-cover"

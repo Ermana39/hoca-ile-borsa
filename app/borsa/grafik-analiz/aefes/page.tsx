@@ -66,7 +66,7 @@ export default function AefesGrafikAnalizPage() {
             <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50">
               <div className="relative aspect-[16/10] w-full">
                 <Image
-                  src="/analiz-1.png"
+                  src="/analiz-1.jpg"
                   alt="AEFES analiz görseli"
                   fill
                   className="object-contain"
