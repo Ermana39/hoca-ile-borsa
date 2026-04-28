@@ -337,7 +337,7 @@ export default function GunlukBorsaOzetiPage() {
           <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
             <div className="relative aspect-[16/9] w-full">
               <Image
-                src="/günlük-özet.png"
+                src="/günlük-özet.jpg"
                 alt="Günlük özet görseli"
                 fill
                 className="object-contain"

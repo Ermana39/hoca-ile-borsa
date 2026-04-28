@@ -40,7 +40,7 @@ export default function Onayli1Page() {
 
         <div className="relative mx-auto w-full max-w-4xl">
           <Image
-            src="/onayli-1.png"
+            src="/onayli-1.jpg"
             alt="Onaylı izahname görseli"
             width={1600}
             height={2600}
