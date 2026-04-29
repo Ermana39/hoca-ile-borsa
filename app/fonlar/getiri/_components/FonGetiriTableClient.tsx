@@ -41,10 +41,12 @@ const columns: {
 function formatPercent(value: number | null) {
   if (value === null) return "-";
 
+  const percentValue = value * 100;
+
   return new Intl.NumberFormat("tr-TR", {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
-  }).format(value);
+  }).format(percentValue);
 }
 
 function formatRisk(value: number | null) {
@@ -196,7 +198,9 @@ export default function FonGetiriTableClient({ rows }: { rows: FonRow[] }) {
                     <button
                       type="button"
                       onClick={() => handleSort(column.key)}
-                      className={column.align === "right" ? "text-right" : "text-left"}
+                      className={
+                        column.align === "right" ? "text-right" : "text-left"
+                      }
                     >
                       {column.label} {sortArrow(sort === column.key, dir)}
                     </button>
@@ -214,15 +218,19 @@ export default function FonGetiriTableClient({ rows }: { rows: FonRow[] }) {
                   <td className="border-t border-zinc-100 px-4 py-4 font-bold text-zinc-900">
                     {item.kod || "-"}
                   </td>
+
                   <td className="border-t border-zinc-100 px-4 py-4 text-zinc-800">
                     {item.ad || "-"}
                   </td>
+
                   <td className="border-t border-zinc-100 px-4 py-4 text-zinc-700">
                     {item.kategori || "-"}
                   </td>
+
                   <td className="border-t border-zinc-100 px-4 py-4 font-semibold text-zinc-800">
                     {formatRisk(item.riskDegeri)}
                   </td>
+
                   <td
                     className={`border-t border-zinc-100 px-4 py-4 font-semibold ${getPercentClass(
                       item.birAy
@@ -230,6 +238,7 @@ export default function FonGetiriTableClient({ rows }: { rows: FonRow[] }) {
                   >
                     {item.birAy === null ? "-" : `%${formatPercent(item.birAy)}`}
                   </td>
+
                   <td
                     className={`border-t border-zinc-100 px-4 py-4 font-semibold ${getPercentClass(
                       item.ucAy
@@ -237,40 +246,55 @@ export default function FonGetiriTableClient({ rows }: { rows: FonRow[] }) {
                   >
                     {item.ucAy === null ? "-" : `%${formatPercent(item.ucAy)}`}
                   </td>
+
                   <td
                     className={`border-t border-zinc-100 px-4 py-4 font-semibold ${getPercentClass(
                       item.altiAy
                     )}`}
                   >
-                    {item.altiAy === null ? "-" : `%${formatPercent(item.altiAy)}`}
+                    {item.altiAy === null
+                      ? "-"
+                      : `%${formatPercent(item.altiAy)}`}
                   </td>
+
                   <td
                     className={`border-t border-zinc-100 px-4 py-4 font-semibold ${getPercentClass(
                       item.yilbasi
                     )}`}
                   >
-                    {item.yilbasi === null ? "-" : `%${formatPercent(item.yilbasi)}`}
+                    {item.yilbasi === null
+                      ? "-"
+                      : `%${formatPercent(item.yilbasi)}`}
                   </td>
+
                   <td
                     className={`border-t border-zinc-100 px-4 py-4 font-semibold ${getPercentClass(
                       item.birYil
                     )}`}
                   >
-                    {item.birYil === null ? "-" : `%${formatPercent(item.birYil)}`}
+                    {item.birYil === null
+                      ? "-"
+                      : `%${formatPercent(item.birYil)}`}
                   </td>
+
                   <td
                     className={`border-t border-zinc-100 px-4 py-4 font-semibold ${getPercentClass(
                       item.ucYil
                     )}`}
                   >
-                    {item.ucYil === null ? "-" : `%${formatPercent(item.ucYil)}`}
+                    {item.ucYil === null
+                      ? "-"
+                      : `%${formatPercent(item.ucYil)}`}
                   </td>
+
                   <td
                     className={`border-t border-zinc-100 px-4 py-4 font-semibold ${getPercentClass(
                       item.besYil
                     )}`}
                   >
-                    {item.besYil === null ? "-" : `%${formatPercent(item.besYil)}`}
+                    {item.besYil === null
+                      ? "-"
+                      : `%${formatPercent(item.besYil)}`}
                   </td>
                 </tr>
               ))}
