@@ -21,6 +21,7 @@ const stableImageCacheFiles = [
   "/pivot-analizi-yatay.png",
   "/tedbirli-hisseler-yatay.png",
   "/oran-analizi.png",
+  "/Guclu-trend-ve-momentum-taramasi.png",
 
   "/fonlar-haftalik-tercih.png",
   "/fonlar-getiri.png",

@@ -5,16 +5,6 @@ export const metadata = {
     follow: true,
   },
 };
-function ReklamAlani() {
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className="w-full overflow-hidden rounded-2xl border border-dashed border-zinc-300 bg-zinc-50 min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-    >
-      <div className="w-full min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]" />
-    </section>
-  );
-}
 
 export default function YasalUyariPage() {
   return (
@@ -90,9 +80,6 @@ export default function YasalUyariPage() {
           </p>
         </div>
 
-        <section className="mt-8">
-          <ReklamAlani />
-        </section>
       </div>
     </main>
   );
