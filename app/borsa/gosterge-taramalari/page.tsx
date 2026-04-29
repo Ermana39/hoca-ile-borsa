@@ -51,6 +51,13 @@ const taramalar = [
     image: "/macd-sat.png",
     alt: "MACD sat verenler görseli",
   },
+   {
+    title: "Güçlü Trend ve Momentum Taraması",
+    description: "Hareketli ortalama dizilimi, StochRSI ve MACD göstergelerine göre güçlü yükseliş trendi ve pozitif momentum gösteren hisseler",
+  href: "/borsa/gosterge-taramalari/guclu-trend-momentum",
+  image: "/Guclu-trend-ve-momentum-taramasi.png",
+  alt: "Güçlü trend ve momentum taraması görseli",
+  },
 ];
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
