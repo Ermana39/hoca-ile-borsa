@@ -9,7 +9,7 @@ export type NewsItem = {
 export const newsItems: NewsItem[] = [
   {
     id: 986,
-    title: "FED, beklentilere paralel olarak politika faizini sabit bıraktı.",
+    title: "FED, beklentilere paralel olarak politika faizini sabit bıraktı",
     href: "/haber/haber-986",
     image: "/haber986.png",
     alt: "Haber 986 görseli",
@@ -23,7 +23,7 @@ export const newsItems: NewsItem[] = [
   },
    {
     id: 988,
-    title: "Üçay Mühendislik, Avrupa Birliği pazarındaki büyüme hedefleri doğrultusunda önemli bir adım attı.",
+    title: "Üçay Mühendislik, Avrupa Birliği pazarındaki büyüme hedefleri doğrultusunda önemli bir adım attı",
     href: "/haber/haber-988",
     image: "/haber988.png",
     alt: "Haber 988 görseli",
