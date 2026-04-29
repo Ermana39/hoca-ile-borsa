@@ -1,6 +1,10 @@
 import Link from "next/link";
 
 const haberler = [
+   {
+    title: "Son 1 yılda tüm fon türleri borsaya yenildi",
+    href: "/borsa/dikkat-cekenler/haber-4",
+  },
     {
     title: "BİST100 Önemli direnç noktasında negatif uyumsuzluk",
     href: "/borsa/dikkat-cekenler/haber-3",
@@ -9,10 +13,7 @@ const haberler = [
     title: "Banka hisselerinde önemli direnç noktası",
     href: "/borsa/dikkat-cekenler/haber-2",
   },
-  {
-    title: "Kazancı ile dikkat çeken Fonlar",
-    href: "/borsa/dikkat-cekenler/haber-1",
-  },
+ 
 ];
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {

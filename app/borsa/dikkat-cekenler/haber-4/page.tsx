@@ -1,10 +1,11 @@
 import Link from "next/link";
+import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Kazancı ile Dikkat Çeken Fonlar | Hoca İle Borsa",
+  title: "Son 1 yılda Bist100 karşısında tüm fon türleri daha az getiri elde etti.",
   description:
-    "Son dönemde öne çıkan kazandıran fonlara dair genel inceleme.",
+    "Son 1 yılda Bist100 karşısında tüm fon türleri daha az getiri elde etti.",
   alternates: {
     canonical: "/borsa/dikkat-cekenler/haber-1",
   },
@@ -49,13 +50,26 @@ export default function Haber1Page() {
         <article className="rounded-2xl border border-zinc-200 bg-white p-5 md:p-8">
           <header>
             <h1 className="text-2xl font-bold leading-tight text-zinc-900 md:text-4xl">
-              Kazancı ile Dikkat Çeken Fonlar
+              Stopaj Sonrası Gerçek Getiri: Fonlar BIST 100’ün Gerisinde mi Kaldı?
             </h1>
 
             <p className="mt-3 text-sm leading-7 text-zinc-600 md:text-base">
-              Son dönemde öne çıkan kazandıran fonlara dair kısa genel inceleme.
+              Son 1 yıllık dönemde BIST 100 %55,36 yükselirken, fon türleri brüt performansta yakın görünse de stopaj sonrası tablo değişiyor. %17,5 stopaj etkisiyle birçok fon türü net getiride BIST 100’ün gerisinde kalırken, yalnızca Serbest Şemsiye Fonları sınırlı farkla BIST 100’ün üzerinde kalabiliyor.
             </p>
           </header>
+
+          <section className="pt-6">
+            <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50">
+              <Image
+                src="/dikkat-ceken-4.png"
+                alt="Stopaj sonrası fon türleri ve BIST 100 karşılaştırması"
+                width={1200}
+                height={1500}
+                className="h-auto w-full object-cover"
+                priority
+              />
+            </div>
+          </section>
 
           <section className="pt-6">
             <ReklamAlani variant="yatay" />
