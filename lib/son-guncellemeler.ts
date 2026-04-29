@@ -98,7 +98,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Temettü Takvimi",
     href: "/temettü",
-    updatedAt: "17.04.2026 19:35",
+    updatedAt: "29.04.2026 19:05",
   },
   {
     title: "Günlük Faiz Oranları",

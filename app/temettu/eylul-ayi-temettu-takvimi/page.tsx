@@ -1,16 +1,18 @@
 import Link from "next/link";
 
-const temmuzTemettuleri = [
-  { sembol: "OSMEN", tarih: "29 Temmuz 2026", verim: "% 0,67", brut: "₺0,05", net: "₺0,0424", toplam: "₺19.999.992", oran: "%12" },
-  { sembol: "MERCN", tarih: "28 Temmuz 2026", verim: "% 0,88", brut: "₺0,21", net: "₺0,1786", toplam: "₺39.999.981", oran: "%29" },
-  { sembol: "GRTHO", tarih: "22 Temmuz 2026", verim: "% 0,18", brut: "₺0,45", net: "₺0,3817", toplam: "₺56.133.900", oran: "%4" },
-  { sembol: "KTLEV", tarih: "21 Temmuz 2026", verim: "% 0,09", brut: "₺0,10", net: "₺0,0821", toplam: "₺199.999.881", oran: "%2" },
-  { sembol: "TAVHL", tarih: "21 Temmuz 2026", verim: "% 0,65", brut: "₺1,80", net: "₺1,5342", toplam: "₺655.718.977", oran: "%23" },
-  { sembol: "EGPRO", tarih: "16 Temmuz 2026", verim: "% 1,43", brut: "₺0,64", net: "₺0,5459", toplam: "₺349.999.981", oran: "%33" },
-  { sembol: "GIPTA", tarih: "14 Temmuz 2026", verim: "% 0,01", brut: "₺0,01", net: "₺0,0066", toplam: "₺1.024.993", oran: "%0" },
-  { sembol: "PNLSN", tarih: "8 Temmuz 2026", verim: "% 1,55", brut: "₺0,69", net: "₺0,5848", toplam: "₺51.596.257", oran: "%20" },
-  { sembol: "LIDER", tarih: "8 Temmuz 2026", verim: "% 0,03", brut: "₺0,04", net: "₺0,0303", toplam: "₺29.411.745", oran: "%2" },
-  { sembol: "LILAK", tarih: "6 Temmuz 2026", verim: "% 4,30", brut: "₺1,53", net: "₺1,2966", toplam: "₺900.025.000", oran: "%53" },
+const eylulTemettuleri = [
+  { sembol: "KIMMR", tarih: "30 Eylül 2026", verim: "% 1,27", brut: "₺0,21", net: "₺0,1771", toplam: "₺49.999.992", oran: "%8" },
+  { sembol: "DESA", tarih: "30 Eylül 2026", verim: "% 0,59", brut: "₺0,08", net: "₺0,0714", toplam: "₺41.176.464", oran: "%7" },
+  { sembol: "TUPRS", tarih: "30 Eylül 2026", verim: "% 2,45", brut: "₺6,75", net: "₺5,7349", toplam: "₺13.001.761.617", oran: "%42" },
+  { sembol: "LKMNH", tarih: "28 Eylül 2026", verim: "% 1,54", brut: "₺0,23", net: "₺0,1968", toplam: "₺49.999.982", oran: "%34" },
+  { sembol: "GIPTA", tarih: "22 Eylül 2026", verim: "% 0,01", brut: "₺0,01", net: "₺0,0066", toplam: "₺1.024.993", oran: "%0" },
+  { sembol: "TAVHL", tarih: "22 Eylül 2026", verim: "% 0,65", brut: "₺1,80", net: "₺1,5342", toplam: "₺655.718.977", oran: "%23" },
+  { sembol: "MACKO", tarih: "22 Eylül 2026", verim: "% 4,37", brut: "₺1,80", net: "₺1,5360", toplam: "₺180.000.000", oran: "%58" },
+  { sembol: "PETUN", tarih: "21 Eylül 2026", verim: "% 1,98", brut: "₺0,25", net: "₺0,2083", toplam: "₺74.319.525", oran: "%43" },
+  { sembol: "BIGCH", tarih: "18 Eylül 2026", verim: "% 1,34", brut: "₺0,10", net: "₺0,0850", toplam: "₺53.500.000", oran: "%2397" },
+  { sembol: "BIMAS", tarih: "16 Eylül 2026", verim: "% 0,69", brut: "₺5,00", net: "₺4,2500", toplam: "₺3.000.000.000", oran: "%16" },
+  { sembol: "BULGS", tarih: "15 Eylül 2026", verim: "% 0,21", brut: "₺0,09", net: "₺0,0933", toplam: "₺24.999.978", oran: "%2" },
+  { sembol: "LIDER", tarih: "8 Eylül 2026", verim: "% 0,03", brut: "₺0,04", net: "₺0,0303", toplam: "₺29.411.745", oran: "%2" },
 ];
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
@@ -29,7 +31,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
-export default function TemmuzAyiTemettuTakvimiPage() {
+export default function EylulAyiTemettuTakvimiPage() {
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-7xl">
@@ -54,7 +56,7 @@ export default function TemmuzAyiTemettuTakvimiPage() {
         </section>
 
         <h1 className="mb-6 text-3xl font-bold text-zinc-900">
-          Temmuz Ayı Temettü Takvimi
+          Eylül Ayı Temettü Takvimi
         </h1>
 
         <div className="overflow-x-auto rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
@@ -71,7 +73,7 @@ export default function TemmuzAyiTemettuTakvimiPage() {
               </tr>
             </thead>
             <tbody>
-              {temmuzTemettuleri.map((item, index) => (
+              {eylulTemettuleri.map((item, index) => (
                 <tr
                   key={`${item.sembol}-${item.tarih}`}
                   className={`border-t border-zinc-100 ${index % 2 === 1 ? "bg-sky-50" : "bg-white"}`}
@@ -95,12 +97,12 @@ export default function TemmuzAyiTemettuTakvimiPage() {
 
         <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">
-            Temmuz Ayı Temettü Takvimi Hakkında
+            Eylül Ayı Temettü Takvimi Hakkında
           </h2>
 
           <p className="mb-4 leading-7 text-zinc-700">
-            Temmuz ayı temettü takvimi sayfası, Borsa İstanbul’da işlem gören şirketlerin
-            Temmuz 2026 dönemindeki temettü dağıtım tarihlerini, hisse başına brüt ve net
+            Eylül ayı temettü takvimi sayfası, Borsa İstanbul’da işlem gören şirketlerin
+            Eylül 2026 dönemindeki temettü dağıtım tarihlerini, hisse başına brüt ve net
             temettü ödemelerini ve toplam dağıtım tutarlarını takip etmek isteyen yatırımcılar
             için hazırlanmıştır. Bu sayfa sayesinde temettü veren hisseleri tek tabloda
             inceleyebilir ve ödeme detaylarını tarih bazlı olarak karşılaştırabilirsiniz.
@@ -115,7 +117,7 @@ export default function TemmuzAyiTemettuTakvimiPage() {
           </p>
 
           <p className="mb-4 leading-7 text-zinc-700">
-            Sayfada yer alan Temmuz 2026 temettü takvimi verileri sayesinde hangi şirketin hangi
+            Sayfada yer alan Eylül 2026 temettü takvimi verileri sayesinde hangi şirketin hangi
             tarihte temettü vereceğini, hisse başına ne kadar brüt ve net ödeme yapacağını ve
             toplam temettü büyüklüğünü kolayca görebilirsiniz. Bu yapı, hem temettü emekliliği
             hedefleyen yatırımcılar hem de şirket bazlı kâr dağıtım takibi yapan kullanıcılar
@@ -123,7 +125,7 @@ export default function TemmuzAyiTemettuTakvimiPage() {
           </p>
 
           <p className="leading-7 text-zinc-700">
-            Güncel Temmuz ayı temettü takvimi, BIST temettü veren hisseler, hisse başı brüt ve
+            Güncel Eylül ayı temettü takvimi, BIST temettü veren hisseler, hisse başı brüt ve
             net temettü tutarları, dağıtma oranları ve şirket bazlı kâr payı ödemelerini takip
             etmek için bu sayfayı düzenli olarak inceleyebilirsiniz.
           </p>
