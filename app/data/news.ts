@@ -8,6 +8,13 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 986,
+    title: "FED, beklentilere paralel olarak politika faizini sabit bıraktı.",
+    href: "/haber/haber-986",
+    image: "/haber986.png",
+    alt: "Haber 986 görseli",
+  },
+  {
     id: 987,
     title: "2026 yılı ilk çeyrek bilançolarının olası açıklanma tarihleri",
     href: "/haber/haber-987",
