@@ -88,12 +88,12 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Fon Getiri Analizi",
     href: "/fonlar/getiri",
-    updatedAt: "28.04.2026 18:45",
+    updatedAt: "29.04.2026 18:53",
   },
   {
     title: "Fon Tarihsel Veriler",
     href: "/fonlar/tarihsel-veriler",
-    updatedAt: "28.04.2026 18:45",
+    updatedAt: "29.04.2026 18:53",
   },
   {
     title: "Temettü Takvimi",
