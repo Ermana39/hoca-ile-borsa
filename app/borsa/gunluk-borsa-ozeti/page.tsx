@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 const bistVeri = {
-  tarih: "30.04.2026",
+  tarih: "29.04.2026",
   kapanis: "14311.19",
   degisimYuzde: -0.13,
 };
