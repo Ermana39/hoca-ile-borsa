@@ -3,11 +3,11 @@ import Image from "next/image";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Son 1 yılda Bist100 karşısında tüm fon türleri daha az getiri elde etti.",
+  title: "Stopaj Sonrası Gerçek Getiri: Fonlar BIST 100’ün Gerisinde mi Kaldı?",
   description:
-    "Son 1 yılda Bist100 karşısında tüm fon türleri daha az getiri elde etti.",
+    "Stopaj Sonrası Gerçek Getiri: Fonlar BIST 100’ün Gerisinde mi Kaldı?",
   alternates: {
-    canonical: "/borsa/dikkat-cekenler/haber-1",
+    canonical: "/borsa/dikkat-cekenler/haber-4",
   },
 };
 
@@ -78,9 +78,7 @@ export default function Haber1Page() {
           <section className="pt-6">
             <div className="rounded-2xl bg-zinc-50 p-4 md:p-6">
               <p className="whitespace-pre-line text-base leading-8 text-zinc-700 md:text-lg">
-{`Son dönemlerde öne çıkan kazandıran fonlar; para piyasası fonlarında TP2 olurken, serbest fonlarda DFI, TLY, Değişken fonlarda PBR ve Hisse senedi yoğun fonlarda da PHE oldu.
-Fon sayfamızdan fonların kazançlarını inceleyebilirsiniz.
-Burada yer alan değerlendirmeler genel bilgilendirme amaçlıdır. Herhangi bir yatırım tavsiyesi niteliği taşımaz.`}
+{``}
               </p>
             </div>
           </section>

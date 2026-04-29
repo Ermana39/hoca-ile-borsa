@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const haberler = [
    {
-    title: "Son 1 yılda tüm fon türleri borsaya yenildi",
+    title: "Stopaj Sonrası Gerçek Getiri: Fonlar BIST 100’ün Gerisinde mi Kaldı?",
     href: "/borsa/dikkat-cekenler/haber-4",
   },
     {

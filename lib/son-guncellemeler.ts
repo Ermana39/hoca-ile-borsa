@@ -13,7 +13,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   {
     title: "Dikkat Çekenler",
     href: "/borsa/dikkat-cekenler",
-    updatedAt: "24.04.2026 20:05",
+    updatedAt: "29.04.2026 22:26",
   },
   {
     title: "Dip Zirve Analizi",
