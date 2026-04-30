@@ -191,25 +191,45 @@ function HaberSatiri({ item }: { item: NewsItem }) {
       href={item.href}
       prefetch={false}
       aria-label={item.title}
-      className="flex items-center gap-4 rounded-xl border border-zinc-200 bg-white px-4 py-4 text-zinc-900 transition hover:bg-zinc-50 md:px-5 md:py-5"
+      className="group relative flex min-h-[112px] overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:bg-blue-50/30 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
     >
-      <div className="relative h-14 w-20 shrink-0 overflow-hidden rounded-lg bg-zinc-100 sm:h-16 sm:w-24">
-        <img
-          src={haberGorseli}
-          alt={item.alt || item.title}
-          loading="lazy"
-          decoding="async"
-          fetchPriority="low"
-          width={96}
-          height={64}
-          className="h-full w-full object-cover"
-        />
-      </div>
+      <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-blue-600 via-sky-500 to-emerald-500 opacity-90" />
 
-      <div className="min-w-0 flex-1">
-        <h2 className="text-base font-medium leading-7 text-zinc-900 md:text-lg">
-          {item.title}
-        </h2>
+      <div className="flex w-full items-center gap-4 px-4 py-4 pl-5 sm:gap-5 sm:px-5 sm:py-5 sm:pl-6">
+        <div className="relative h-20 w-28 shrink-0 overflow-hidden rounded-2xl bg-zinc-100 shadow-sm ring-1 ring-zinc-200 sm:h-24 sm:w-36">
+          <img
+            src={haberGorseli}
+            alt={item.alt || item.title}
+            loading="lazy"
+            decoding="async"
+            fetchPriority="low"
+            width={144}
+            height={96}
+            className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.05]"
+          />
+        </div>
+
+        <div className="min-w-0 flex-1">
+          <div className="mb-2 flex flex-wrap items-center gap-2">
+            <span className="inline-flex rounded-full bg-zinc-900 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-white">
+              Güncel Haber
+            </span>
+            <span className="inline-flex rounded-full bg-zinc-100 px-3 py-1 text-[11px] font-semibold text-zinc-600 transition group-hover:bg-white">
+              Hoca İle Borsa
+            </span>
+          </div>
+
+          <h2 className="line-clamp-2 text-base font-bold leading-6 text-zinc-900 transition group-hover:text-blue-700 md:text-lg md:leading-7">
+            {item.title}
+          </h2>
+
+          <div className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-blue-700">
+            <span>Haberi oku</span>
+            <span className="transition duration-300 group-hover:translate-x-1">
+              →
+            </span>
+          </div>
+        </div>
       </div>
     </Link>
   );
@@ -417,15 +437,33 @@ export default function HomePage() {
         </section>
 
         <section className="px-4 pb-6 md:px-6">
-          <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4 md:p-6">
-            <div className="mb-4 flex items-center justify-between gap-3">
-              <h1 className="text-lg font-semibold text-zinc-900 md:text-2xl">
-                Güncel Borsa Haberleri
-              </h1>
+          <div className="overflow-hidden rounded-3xl border border-zinc-200 bg-gradient-to-br from-zinc-50 via-white to-blue-50/50 p-4 shadow-sm md:p-6">
+            <div className="mb-5 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+              <div>
+                <p className="mb-2 inline-flex rounded-full bg-blue-600 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                  Piyasa Gündemi
+                </p>
+                <h1 className="text-xl font-black tracking-tight text-zinc-950 md:text-3xl">
+                  Güncel Borsa Haberleri
+                </h1>
+                <p className="mt-2 text-sm leading-6 text-zinc-600 md:text-base">
+                  Borsa, şirket haberleri ve finans gündeminden öne çıkan son
+                  başlıklar.
+                </p>
+              </div>
+
+              <div className="hidden rounded-2xl bg-white px-4 py-3 text-right shadow-sm ring-1 ring-zinc-200 md:block">
+                <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">
+                  Yayındaki Haber
+                </p>
+                <p className="text-2xl font-black text-zinc-950">
+                  {newsItems.length}
+                </p>
+              </div>
             </div>
 
             {newsItems.length > 0 ? (
-              <div className="space-y-3">
+              <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
                 {newsItems.map((item) => (
                   <HaberSatiri key={item.id || item.href} item={item} />
                 ))}
