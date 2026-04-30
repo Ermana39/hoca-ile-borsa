@@ -5,7 +5,7 @@ const analizler = [
     baslik: "AEFES Grafik Analiz",
     href: "/borsa/grafik-analiz/aefes",
   },
-  ];
+];
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
@@ -25,7 +25,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
 
 export default function GrafikAnalizPage() {
   return (
-    <main className="min-h-screen bg-white text-black">
+    <main className="min-h-screen text-black">
       <div className="mx-auto w-full max-w-6xl px-4 py-6 md:px-6 md:py-10">
         <div className="mb-8 flex flex-wrap gap-3">
           <Link
@@ -44,12 +44,22 @@ export default function GrafikAnalizPage() {
         </div>
 
         <section className="mb-6">
+          <h1 className="text-3xl font-bold text-zinc-900 md:text-4xl">
+            Grafik Analiz
+          </h1>
+
+          <p className="mt-3 max-w-3xl text-sm leading-7 text-zinc-700 md:text-base">
+            Borsa İstanbul hisselerine ait güncel grafik analizlerini, teknik
+            görünüm değerlendirmelerini ve destek direnç bölgelerini bu sayfadan
+            takip edebilirsiniz.
+          </p>
+        </section>
+
+        <section className="mb-6">
           <ReklamAlani variant="yatay" />
         </section>
 
-        <section className="pt-8 md:pt-16">
-          <h1 className="mb-8 text-3xl font-bold md:text-4xl">Grafik Analiz</h1>
-
+        <section>
           <div className="space-y-4">
             {analizler.map((analiz) => (
               <Link
@@ -61,6 +71,10 @@ export default function GrafikAnalizPage() {
               </Link>
             ))}
           </div>
+        </section>
+
+        <section className="mt-8">
+          <ReklamAlani variant="icerik" />
         </section>
 
         <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">

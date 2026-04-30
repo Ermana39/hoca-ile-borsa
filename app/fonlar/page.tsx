@@ -164,40 +164,6 @@ export default function FonlarPage() {
           </div>
         </section>
 
-        <section className="rounded-2xl bg-white p-5 md:p-7">
-          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
-            Fonlar sayfasında neler bulunur?
-          </h2>
-
-          <div className="space-y-4 text-sm leading-7 text-zinc-700 md:text-base">
-            <p>
-              Hoca İle Borsa Fonlar sayfasında yatırım fonları, emeklilik
-              fonları, para piyasası fonları, hisse senedi fonları, borçlanma
-              araçları fonları ve farklı fon türlerine ait güncel içerikler bir
-              arada sunulur.
-            </p>
-
-            <p>
-              Fon yatırımına ilgi duyan kullanıcılar bu sayfa üzerinden fon
-              kategorilerini daha kolay inceleyebilir, fon getirilerini
-              karşılaştırabilir, risk ve dağılım yapıları hakkında genel bilgi
-              edinebilir ve kendi yatırım tercihlerine uygun fon seçeneklerini
-              daha pratik şekilde değerlendirebilir.
-            </p>
-
-            <p>
-              Fon piyasasını takip eden kullanıcılar için hazırlanan bu bölüm,
-              farklı fon başlıklarına tek sayfadan ulaşmayı kolaylaştırır ve
-              güncel fon içeriklerini daha düzenli şekilde inceleme imkânı sunar.
-            </p>
-
-            <p className="text-zinc-500">
-              Bu sayfada yer alan içerikler genel bilgilendirme amacı taşır ve
-              yatırım danışmanlığı kapsamında değildir.
-            </p>
-          </div>
-        </section>
-
         <section className="pt-6">
           <ReklamAlani variant="icerik" />
         </section>
@@ -243,6 +209,40 @@ export default function FonlarPage() {
                 </div>
               </a>
             ))}
+          </div>
+        </section>
+
+        <section className="mt-12 rounded-2xl bg-white p-5 md:p-7">
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+            Fonlar sayfasında neler bulunur?
+          </h2>
+
+          <div className="space-y-4 text-sm leading-7 text-zinc-700 md:text-base">
+            <p>
+              Hoca İle Borsa Fonlar sayfasında yatırım fonları, emeklilik
+              fonları, para piyasası fonları, hisse senedi fonları, borçlanma
+              araçları fonları ve farklı fon türlerine ait güncel içerikler bir
+              arada sunulur.
+            </p>
+
+            <p>
+              Fon yatırımına ilgi duyan kullanıcılar bu sayfa üzerinden fon
+              kategorilerini daha kolay inceleyebilir, fon getirilerini
+              karşılaştırabilir, risk ve dağılım yapıları hakkında genel bilgi
+              edinebilir ve kendi yatırım tercihlerine uygun fon seçeneklerini
+              daha pratik şekilde değerlendirebilir.
+            </p>
+
+            <p>
+              Fon piyasasını takip eden kullanıcılar için hazırlanan bu bölüm,
+              farklı fon başlıklarına tek sayfadan ulaşmayı kolaylaştırır ve
+              güncel fon içeriklerini daha düzenli şekilde inceleme imkânı sunar.
+            </p>
+
+            <p className="text-zinc-500">
+              Bu sayfada yer alan içerikler genel bilgilendirme amacı taşır ve
+              yatırım danışmanlığı kapsamında değildir.
+            </p>
           </div>
         </section>
       </div>

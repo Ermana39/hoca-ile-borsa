@@ -1,11 +1,11 @@
 import Link from "next/link";
 
 const haberler = [
-   {
+  {
     title: "Stopaj Sonrası Gerçek Getiri: Fonlar BIST 100’ün Gerisinde mi Kaldı?",
     href: "/borsa/dikkat-cekenler/haber-4",
   },
-    {
+  {
     title: "BİST100 Önemli direnç noktasında negatif uyumsuzluk",
     href: "/borsa/dikkat-cekenler/haber-3",
   },
@@ -13,7 +13,6 @@ const haberler = [
     title: "Banka hisselerinde önemli direnç noktası",
     href: "/borsa/dikkat-cekenler/haber-2",
   },
- 
 ];
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
@@ -34,7 +33,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
 
 export default function DikkatCekenlerPage() {
   return (
-    <main className="min-h-screen bg-white px-4 py-6 md:px-6">
+    <main className="min-h-screen px-4 py-6 md:px-6">
       <div className="mx-auto max-w-5xl">
         <div className="mb-6 flex gap-3">
           <Link
@@ -53,12 +52,20 @@ export default function DikkatCekenlerPage() {
         </div>
 
         <section className="mb-6">
-          <ReklamAlani variant="yatay" />
+          <h1 className="text-3xl font-bold text-zinc-900">
+            Dikkat Çekenler
+          </h1>
+
+          <p className="mt-3 max-w-3xl text-sm leading-7 text-zinc-700 md:text-base">
+            Borsa ve finans gündeminde öne çıkan haberleri, dikkat çeken
+            piyasa hareketlerini ve yatırımcıların takip ettiği önemli
+            başlıkları bu sayfadan inceleyebilirsiniz.
+          </p>
         </section>
 
-        <h1 className="mb-6 text-3xl font-bold text-zinc-900">
-          Dikkat Çekenler
-        </h1>
+        <section className="mb-6">
+          <ReklamAlani variant="yatay" />
+        </section>
 
         <div className="space-y-3">
           {haberler.map((item) => (

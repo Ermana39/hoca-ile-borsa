@@ -66,7 +66,7 @@ export default async function FormasyonlarPage() {
   const formasyonlar = await getFormasyonlar();
 
   return (
-    <main className="min-h-screen bg-white px-4 py-6 md:px-6">
+    <main className="min-h-screen px-4 py-6 md:px-6">
       <div className="mx-auto max-w-5xl">
         <div className="mb-6 flex gap-3">
           <Link
@@ -84,10 +84,17 @@ export default async function FormasyonlarPage() {
         </div>
 
         <section className="mb-6">
-          <ReklamAlani variant="yatay" />
+          <h1 className="text-3xl font-bold text-zinc-900">Formasyonlar</h1>
+
+          <p className="mt-3 max-w-3xl text-sm leading-7 text-zinc-700 md:text-base">
+            Borsa İstanbul hisselerinde oluşan teknik formasyonları, hisse kodu
+            ve formasyon türüyle birlikte bu sayfadan takip edebilirsiniz.
+          </p>
         </section>
 
-        <h1 className="mb-6 text-3xl font-bold text-zinc-900">Formasyonlar</h1>
+        <section className="mb-6">
+          <ReklamAlani variant="yatay" />
+        </section>
 
         <div className="space-y-3">
           {formasyonlar.map((item) => (
