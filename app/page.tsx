@@ -87,11 +87,11 @@ function KategoriKutusu({
     <Link
       href={href}
       prefetch={false}
-      className="group flex min-h-[210px] flex-col rounded-3xl border border-white/70 bg-white/75 shadow-[0_8px_30px_rgba(15,23,42,0.06)] backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:bg-white/90 hover:shadow-[0_12px_35px_rgba(15,23,42,0.10)] xl:min-h-[225px]"
+      className="group flex min-h-[210px] flex-col rounded-3xl bg-white/70 shadow-[0_10px_35px_rgba(15,23,42,0.06)] backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:bg-white/85 hover:shadow-[0_14px_40px_rgba(15,23,42,0.10)] xl:min-h-[225px]"
       aria-label={title}
     >
       <div className="p-2 pb-1 md:p-3 md:pb-1">
-        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-white via-slate-50 to-blue-50/70">
+        <div className="relative overflow-hidden rounded-2xl bg-white/35">
           <div className="relative aspect-[16/10] w-full">
             <Image
               src={image}
@@ -459,12 +459,10 @@ export default function HomePage() {
         </section>
 
         <section className="px-4 py-6 md:px-6">
-          <div className="rounded-[2rem] bg-gradient-to-br from-white/35 via-white/20 to-blue-100/20 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] backdrop-blur-[2px] md:p-5">
-            <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-5">
-              {kategoriKutulari.map((item) => (
-                <KategoriKutusu key={item.href} {...item} />
-              ))}
-            </div>
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-5">
+            {kategoriKutulari.map((item) => (
+              <KategoriKutusu key={item.href} {...item} />
+            ))}
           </div>
         </section>
 
