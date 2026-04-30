@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
+import SayfaGuncellemeBilgisi from "@/components/SayfaGuncellemeBilgisi";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.hocaileborsa.com"),
@@ -22,6 +23,7 @@ export default function RootLayout({
   return (
     <html lang="tr">
       <body className="site-background">
+        <SayfaGuncellemeBilgisi />
         {children}
         <Analytics />
       </body>

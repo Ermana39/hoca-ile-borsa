@@ -1,6 +1,6 @@
 "use client";
 
-import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 import pageUpdates from "@/lib/page-updates.generated.json";
 
 type PageUpdateItem = {
@@ -14,41 +14,10 @@ type PageUpdatesData = {
   pages?: PageUpdateItem[];
 };
 
-function normalizePathname(pathname: string) {
-  if (!pathname || pathname === "/") return "/";
-  return pathname.endsWith("/") ? pathname.slice(0, -1) : pathname;
-}
-
-function routeToRegex(route: string) {
-  const normalized = normalizePathname(route);
-
-  if (!normalized.includes("[")) {
-    return null;
-  }
-
-  const escaped = normalized
-    .replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
-    .replace(/\\\[\\.\\.\\.([^/]+)\\\]/g, ".+")
-    .replace(/\\\[([^/]+)\\\]/g, "[^/]+");
-
-  return new RegExp(`^${escaped}$`);
-}
-
-function findPageUpdate(pathname: string) {
-  const data = pageUpdates as PageUpdatesData;
-  const pages = Array.isArray(data.pages) ? data.pages : [];
-  const normalizedPathname = normalizePathname(pathname);
-
-  const exactMatch = pages.find(
-    (item) => normalizePathname(item.route) === normalizedPathname
-  );
-
-  if (exactMatch) return exactMatch;
-
-  return pages.find((item) => {
-    const regex = routeToRegex(item.route);
-    return regex ? regex.test(normalizedPathname) : false;
-  });
+function normalizePath(path: string) {
+  if (!path || path === "/") return "/";
+  const clean = path.split("?")[0].split("#")[0];
+  return clean.endsWith("/") && clean !== "/" ? clean.slice(0, -1) : clean;
 }
 
 function formatDate(value: string) {
@@ -66,16 +35,56 @@ function formatDate(value: string) {
   }).format(date);
 }
 
+function findUpdate(pathname: string) {
+  const data = pageUpdates as PageUpdatesData;
+  const pages = Array.isArray(data.pages) ? data.pages : [];
+  const currentPath = normalizePath(pathname);
+
+  const exact = pages.find((item) => normalizePath(item.route) === currentPath);
+
+  if (exact) return exact;
+
+  return null;
+}
+
 export default function SayfaGuncellemeBilgisi() {
-  const pathname = usePathname();
-  const pageUpdate = findPageUpdate(pathname || "/");
-  const formattedDate = pageUpdate ? formatDate(pageUpdate.updatedAt) : "";
+  const [formattedDate, setFormattedDate] = useState("");
+
+  useEffect(() => {
+    const currentPath = window.location.pathname;
+    const update = findUpdate(currentPath);
+
+    if (!update?.updatedAt) return;
+
+    setFormattedDate(formatDate(update.updatedAt));
+  }, []);
 
   if (!formattedDate) return null;
 
   return (
-    <div className="fixed right-3 top-3 z-50">
-      <div className="rounded-full bg-white/85 px-3 py-1.5 text-[11px] font-semibold text-slate-700 shadow-sm ring-1 ring-slate-200 backdrop-blur-md">
+    <div
+      style={{
+        position: "fixed",
+        top: "10px",
+        right: "10px",
+        zIndex: 999999,
+        pointerEvents: "none",
+      }}
+    >
+      <div
+        style={{
+          borderRadius: "999px",
+          background: "rgba(255,255,255,0.92)",
+          border: "1px solid rgba(148,163,184,0.35)",
+          boxShadow: "0 8px 24px rgba(15,23,42,0.12)",
+          backdropFilter: "blur(10px)",
+          padding: "6px 11px",
+          fontSize: "11px",
+          fontWeight: 700,
+          color: "#334155",
+          lineHeight: "1",
+        }}
+      >
         Güncellendi: {formattedDate}
       </div>
     </div>
