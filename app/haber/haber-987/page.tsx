@@ -58,36 +58,19 @@ export default function Haber987Page() {
 
           <div className="p-5 md:p-8">
             <h1 className="text-2xl font-bold leading-tight text-zinc-900 md:text-4xl">
-              2026 yılı ilk çeyrek bilançolarının olası açıklanma tarihleri;
+              2026 İlk Çeyrek Bilanço Takvimi Netleşiyor
             </h1>
 
             <div className="mt-6 space-y-4 text-base leading-8 text-zinc-700 md:text-lg">
-              <p>
-                27.04.2026 AFYON, TAVHL
-28.04.2026 AKBNK, ASELS, BIGCH
-28.04.2026 EREGL, LILAK
-29.04.2026 AGESA, ANSGR, CIMSA, GARAN
-29.04.2026 ISGYO, THYAO, TKNSA
-29.04.2026 TSKB, TTRAK, YKBNK
-30.04.2026 EBEBK, KLYPV, TRALT
-04.05.2026 CCOLA, ENJSA
-05.05.2026 AEFES, BRISA, FROTO
-05.05.2026 ISCTR, MGROS, OTKAR
-05.05.2026 TATGD, TOASO
-06.05.2026 AYGAZ, MPARK, SAHOL
-06.05.2026 TTKOM, TUPRS 
-07.05.2026 AKMGY, AKSA, BIZIM
-07.05.2026 BRSAN, DOHOL, RGYAS
-08.05.2026 ALARK, ALBRK, KCHOL, OZYSR
-04-08.05.2026 KOTON
-09.05.2026 AGHOL
-11.05.2026 BIMAS, DOAS, ENKAI
-11.05.2026 KFEIN, PGSUS, TCELL
-11.05.2026 TRMET, ULKER
-07-11.05.2026 YATAS
-              </p>
-
               <p></p>
+<p>Borsa İstanbul’da işlem gören şirketlerin 2026 yılı ilk çeyrek finansal sonuçlarına ilişkin olası açıklanma tarihleri paylaşılmaya devam ediyor. Nisan ayının son haftasında başlayan bilanço açıklama süreci, Mayıs ayının ikinci haftasında yoğunlaşacak.</p>
+<p>Takvime göre 27 Nisan’da AFYON ve TAVHL ile başlayan süreçte, 28 Nisan’da AKBNK, ASELS, BIGCH, EREGL ve LILAK finansal sonuçlarını açıklaması beklenen şirketler arasında yer aldı.</p>
+<p>29 Nisan’da ise bilanço gündemi oldukça yoğun olacak. AGESA, ANSGR, CIMSA, GARAN, ISGYO, THYAO, TKNSA, TSKB, TTRAK ve YKBNK için ilk çeyrek sonuçlarının açıklanması öngörülüyor. 30 Nisan’da ise EBEBK, KLYPV ve TRALT takip edilecek.</p>
+<p>Mayıs ayının ilk haftasında bilanço trafiği hız kazanacak. 4 Mayıs’ta CCOLA ve ENJSA, 5 Mayıs’ta AEFES, BRISA, FROTO, ISCTR, MGROS, OTKAR, TATGD ve TOASO öne çıkan şirketler arasında bulunuyor.</p>
+<p>6 Mayıs’ta AYGAZ, MPARK, SAHOL, TTKOM ve TUPRS; 7 Mayıs’ta ise AKMGY, AKSA, BIZIM, BRSAN, DOHOL ve RGYAS finansal sonuçlarını açıklaması beklenen şirketler arasında yer alıyor.</p>
+              <p>8 Mayıs’ta ALARK, ALBRK, KCHOL ve OZYSR bilançoları izlenecek. KOTON için olası açıklanma aralığı 4-8 Mayıs olarak paylaşılırken, 9 Mayıs’ta AGHOL bilançosu takip edilecek.</p>
+              <p>11 Mayıs haftasında ise BIMAS, DOAS, ENKAI, KFEIN, PGSUS, TCELL, TRMET ve ULKER öne çıkıyor. YATAS için olası bilanço açıklama aralığı ise 7-11 Mayıs olarak belirtiliyor.</p>
+              <p>Bilanço döneminde özellikle bankacılık, havacılık, otomotiv, holding, perakende ve enerji şirketlerinden gelecek sonuçlar piyasa fiyatlamaları açısından yakından izlenecek.</p>
               <p></p>
             </div>
           </div>
