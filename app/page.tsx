@@ -239,15 +239,8 @@ function SonGuncellemelerBar({ items }: { items: GuncellemeItem[] }) {
   if (items.length === 0) {
     return (
       <section className="px-4 pb-6 md:px-6">
-        <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
-          <div className="flex flex-col md:flex-row md:items-center">
-            <div className="shrink-0 border-b border-zinc-200 bg-zinc-900 px-4 py-3 text-sm font-bold text-white md:border-b-0 md:border-r">
-              Son Güncellemeler
-            </div>
-            <div className="px-4 py-3 text-sm text-zinc-500">
-              Güncelleme verisi bulunamadı.
-            </div>
-          </div>
+        <div className="rounded-3xl border border-zinc-200 bg-white p-5 text-center text-zinc-500 shadow-sm md:p-6">
+          Güncelleme verisi bulunamadı.
         </div>
       </section>
     );
@@ -255,29 +248,50 @@ function SonGuncellemelerBar({ items }: { items: GuncellemeItem[] }) {
 
   return (
     <section className="px-4 pb-6 md:px-6">
-      <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
-        <div className="flex flex-col md:flex-row md:items-center">
-          <div className="shrink-0 border-b border-zinc-200 bg-zinc-900 px-4 py-3 text-sm font-bold text-white md:border-b-0 md:border-r">
-            Son Güncellemeler
+      <div className="overflow-hidden rounded-3xl border border-zinc-200 bg-gradient-to-br from-slate-950 via-slate-900 to-zinc-900 p-4 shadow-sm md:p-6">
+        <div className="mb-5 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+          <div>
+            <p className="mb-2 inline-flex rounded-full bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-wide text-slate-200 ring-1 ring-white/10">
+              Güncelleme Paneli
+            </p>
+            <h2 className="text-xl font-black tracking-tight text-white md:text-3xl">
+              Son Güncellemeler
+            </h2>
+            <p className="mt-2 text-sm leading-6 text-slate-300 md:text-base">
+              Sitedeki son veri, tablo ve analiz yenilemeleri.
+            </p>
           </div>
 
-          <div className="relative min-w-0 flex-1 overflow-x-auto">
-            <div className="flex min-w-max items-center gap-6 px-4 py-3">
-              {items.map((item, index) => (
-                <Link
-                  key={`${item.href}-${item.time}-${index}`}
-                  href={item.href}
-                  prefetch={false}
-                  className="inline-flex shrink-0 items-center gap-2 text-sm text-zinc-700 hover:text-zinc-900"
-                >
-                  <span className="font-semibold">{item.title}</span>
-                  <span className="rounded-md bg-zinc-100 px-2 py-0.5 text-xs font-semibold text-zinc-600">
-                    {item.time}
-                  </span>
-                </Link>
-              ))}
-            </div>
+          <div className="hidden rounded-2xl bg-white/10 px-4 py-3 text-right ring-1 ring-white/10 md:block">
+            <p className="text-xs font-semibold uppercase tracking-wide text-slate-300">
+              Güncelleme
+            </p>
+            <p className="text-2xl font-black text-white">{items.length}</p>
           </div>
+        </div>
+
+        <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
+          {items.map((item, index) => (
+            <Link
+              key={`${item.href}-${item.time}-${index}`}
+              href={item.href}
+              prefetch={false}
+              className="group flex min-h-[92px] items-center justify-between gap-4 rounded-2xl border border-white/10 bg-white/[0.07] px-4 py-4 text-white transition duration-300 hover:-translate-y-0.5 hover:border-blue-300/40 hover:bg-white/[0.12] hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-offset-2 focus:ring-offset-slate-950"
+            >
+              <div className="min-w-0">
+                <h3 className="line-clamp-2 text-sm font-bold leading-6 text-white md:text-base">
+                  {item.title}
+                </h3>
+                <div className="mt-2 inline-flex rounded-full bg-white/10 px-3 py-1 text-xs font-semibold text-slate-200 ring-1 ring-white/10">
+                  {item.time}
+                </div>
+              </div>
+
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white text-slate-950 shadow-sm transition duration-300 group-hover:translate-x-1">
+                →
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </section>
