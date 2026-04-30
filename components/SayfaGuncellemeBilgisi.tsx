@@ -14,6 +14,15 @@ type PageUpdatesData = {
   pages?: PageUpdateItem[];
 };
 
+const GUNCELLEME_GIZLENECEK_SAYFALAR = new Set([
+  "/",
+  "/borsa",
+  "/fonlar",
+  "/halka-arz",
+  "/temettu",
+  "/mevduat-kredi-faizleri",
+]);
+
 function normalizePath(path: string) {
   if (!path || path === "/") return "/";
   const clean = path.split("?")[0].split("#")[0];
@@ -51,7 +60,13 @@ export default function SayfaGuncellemeBilgisi() {
   const [formattedDate, setFormattedDate] = useState("");
 
   useEffect(() => {
-    const currentPath = window.location.pathname;
+    const currentPath = normalizePath(window.location.pathname);
+
+    if (GUNCELLEME_GIZLENECEK_SAYFALAR.has(currentPath)) {
+      setFormattedDate("");
+      return;
+    }
+
     const update = findUpdate(currentPath);
 
     if (!update?.updatedAt) return;
