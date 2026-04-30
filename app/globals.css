@@ -8,7 +8,7 @@ body {
 }
 
 html {
-  background: #eef4ff;
+  background: #f8fafc;
 }
 
 body {
@@ -16,28 +16,30 @@ body {
   color: #111827;
   font-family: Arial, Helvetica, sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(37, 99, 235, 0.16), transparent 34%),
-    radial-gradient(circle at top right, rgba(14, 165, 233, 0.12), transparent 30%),
-    linear-gradient(180deg, #f1f7ff 0%, #ffffff 42%, #f8fafc 100%);
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.12), transparent 32%),
+    radial-gradient(circle at top right, rgba(14, 165, 233, 0.08), transparent 28%),
+    linear-gradient(180deg, #f8fbff 0%, #ffffff 42%, #f8fafc 100%);
 }
 
 .site-background {
   min-height: 100vh;
 }
 
-/* Sayfalardaki ana beyaz zeminleri global arka fonu kapatmasın diye şeffaf yapar */
-body.site-background main,
-body.site-background main.min-h-screen,
-body.site-background main[class*="bg-white"],
-body.site-background div.min-h-screen[class*="bg-white"] {
+/* Sadece sayfanın en dış main beyaz zeminini şeffaflaştırır.
+   İç kartlar, Hakkımızda alanı ve footer bozulmaz. */
+body.site-background > main.bg-white,
+body.site-background > main[class*="bg-white"] {
   background: transparent !important;
 }
 
-/* İç kartlar beyaz kalmaya devam eder */
-body.site-background section .bg-white,
-body.site-background article.bg-white,
-body.site-background footer.bg-slate-950 {
-  background-color: inherit;
+/* Footer kesinlikle koyu kalacak */
+footer.bg-slate-950 {
+  background-color: #020617 !important;
+}
+
+/* Beyaz kartlar bozulmasın */
+.bg-white {
+  background-color: #ffffff;
 }
 
 a {
