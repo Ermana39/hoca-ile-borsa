@@ -139,8 +139,7 @@ export default function DipZirveAnaliziPage() {
         </p>
 
         <div className="mb-8 text-sm font-semibold text-zinc-700">
-          Güncelleme Tarihi: {guncellemeTarihi}
-        </div>
+                  </div>
 
         <section className="mb-8">
           <ReklamAlani variant="yatay" />
