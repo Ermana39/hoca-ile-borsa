@@ -87,11 +87,11 @@ function KategoriKutusu({
     <Link
       href={href}
       prefetch={false}
-      className="group flex min-h-[210px] flex-col rounded-2xl bg-white transition hover:bg-zinc-50 xl:min-h-[225px]"
+      className="group flex min-h-[210px] flex-col rounded-3xl border border-white/70 bg-white/75 shadow-[0_8px_30px_rgba(15,23,42,0.06)] backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:bg-white/90 hover:shadow-[0_12px_35px_rgba(15,23,42,0.10)] xl:min-h-[225px]"
       aria-label={title}
     >
       <div className="p-2 pb-1 md:p-3 md:pb-1">
-        <div className="relative overflow-hidden rounded-2xl bg-zinc-50">
+        <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-white via-slate-50 to-blue-50/70">
           <div className="relative aspect-[16/10] w-full">
             <Image
               src={image}
@@ -178,35 +178,13 @@ function getSonGuncellemeler(): GuncellemeItem[] {
     }));
 }
 
-function getGuncellemeRenkleri(index: number) {
-  const renkler = [
-    {
-      card: "border-blue-100 bg-gradient-to-br from-blue-50 via-white to-sky-50 hover:border-blue-300 hover:bg-blue-50",
-      accent: "bg-blue-600",
-      date: "bg-blue-100 text-blue-700 ring-blue-200",
-      arrow: "bg-blue-600 text-white",
-    },
-    {
-      card: "border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-teal-50 hover:border-emerald-300 hover:bg-emerald-50",
-      accent: "bg-emerald-600",
-      date: "bg-emerald-100 text-emerald-700 ring-emerald-200",
-      arrow: "bg-emerald-600 text-white",
-    },
-    {
-      card: "border-amber-100 bg-gradient-to-br from-amber-50 via-white to-orange-50 hover:border-amber-300 hover:bg-amber-50",
-      accent: "bg-amber-500",
-      date: "bg-amber-100 text-amber-700 ring-amber-200",
-      arrow: "bg-amber-500 text-white",
-    },
-    {
-      card: "border-violet-100 bg-gradient-to-br from-violet-50 via-white to-fuchsia-50 hover:border-violet-300 hover:bg-violet-50",
-      accent: "bg-violet-600",
-      date: "bg-violet-100 text-violet-700 ring-violet-200",
-      arrow: "bg-violet-600 text-white",
-    },
-  ];
-
-  return renkler[index % renkler.length];
+function getGuncellemeRenkleri() {
+  return {
+    card: "border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-teal-50 hover:border-emerald-300 hover:bg-emerald-50",
+    accent: "bg-emerald-600",
+    date: "bg-emerald-100 text-emerald-700 ring-emerald-200",
+    arrow: "bg-emerald-600 text-white",
+  };
 }
 
 function HaberSatiri({ item }: { item: NewsItem }) {
@@ -302,7 +280,7 @@ function SonGuncellemelerBar({ items }: { items: GuncellemeItem[] }) {
 
         <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4">
           {items.map((item, index) => {
-            const renk = getGuncellemeRenkleri(index);
+            const renk = getGuncellemeRenkleri();
 
             return (
               <Link
@@ -481,10 +459,12 @@ export default function HomePage() {
         </section>
 
         <section className="px-4 py-6 md:px-6">
-          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-5">
-            {kategoriKutulari.map((item) => (
-              <KategoriKutusu key={item.href} {...item} />
-            ))}
+          <div className="rounded-[2rem] bg-gradient-to-br from-white/35 via-white/20 to-blue-100/20 p-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.7)] backdrop-blur-[2px] md:p-5">
+            <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-5">
+              {kategoriKutulari.map((item) => (
+                <KategoriKutusu key={item.href} {...item} />
+              ))}
+            </div>
           </div>
         </section>
 
