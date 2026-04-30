@@ -183,7 +183,7 @@ export default function BorsaPage() {
           </Link>
         </section>
 
-        <section className="rounded-2xl bg-white p-5 md:p-8">
+        <section className="mb-6">
           <h1 className="text-2xl font-bold text-zinc-900 md:text-4xl">
             Borsa Analiz
           </h1>

@@ -203,9 +203,7 @@ export default async function FonGetiriExcelPage({
         <h1 className="mb-2 text-3xl font-bold text-zinc-900">{title}</h1>
         <p className="mb-3 max-w-3xl text-base text-zinc-600">{description}</p>
 
-        <div className="mb-6 text-sm font-semibold text-zinc-700">
-          Güncelleme Tarihi: {guncellemeTarihi}
-        </div>
+        
 
         <section className="mb-6">
           <ReklamAlani variant="yatay" />

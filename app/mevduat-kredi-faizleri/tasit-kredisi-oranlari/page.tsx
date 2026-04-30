@@ -404,9 +404,7 @@ export default function TasitKredisiOranlariPage() {
           ortalama faiz grafiği.
         </p>
 
-        <div className="mb-8 text-sm font-semibold text-zinc-700">
-          Güncelleme Tarihi: {guncellemeTarihi}
-        </div>
+       
 
         {hata ? (
           <section className="mb-8 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">

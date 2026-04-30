@@ -68,7 +68,6 @@ function fonVerileriniOku(): FonSatiri[] {
 
 export default function HaftalikYatirimFonlarininEnCokTercihEttigiHisselerPage() {
   const fonVerileri = fonVerileriniOku();
-  const guncellemeTarihi = fonTercihData.guncellemeTarihi || "-";
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 pb-24 md:px-6">
@@ -91,10 +90,6 @@ export default function HaftalikYatirimFonlarininEnCokTercihEttigiHisselerPage()
           </Link>
         </div>
 
-        <section className="mb-6">
-          <ReklamAlani variant="yatay" />
-        </section>
-
         <h1 className="mb-2 text-3xl font-bold text-zinc-900">
           Haftalık Yatırım Fonlarının En Çok Tercih Ettiği Hisseler
         </h1>
@@ -103,9 +98,9 @@ export default function HaftalikYatirimFonlarininEnCokTercihEttigiHisselerPage()
           Veriler düzenli olarak güncellenen fon hareketleri tablosundan alınır.
         </p>
 
-        <div className="mb-8 text-sm font-semibold text-zinc-700">
-          Güncelleme Tarihi: {guncellemeTarihi}
-        </div>
+        <section className="mb-8">
+          <ReklamAlani variant="yatay" />
+        </section>
 
         <FonTercihTableClient rows={fonVerileri} />
 
