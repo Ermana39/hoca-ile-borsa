@@ -178,6 +178,37 @@ function getSonGuncellemeler(): GuncellemeItem[] {
     }));
 }
 
+function getGuncellemeRenkleri(index: number) {
+  const renkler = [
+    {
+      card: "border-blue-100 bg-gradient-to-br from-blue-50 via-white to-sky-50 hover:border-blue-300 hover:bg-blue-50",
+      accent: "bg-blue-600",
+      date: "bg-blue-100 text-blue-700 ring-blue-200",
+      arrow: "bg-blue-600 text-white",
+    },
+    {
+      card: "border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-teal-50 hover:border-emerald-300 hover:bg-emerald-50",
+      accent: "bg-emerald-600",
+      date: "bg-emerald-100 text-emerald-700 ring-emerald-200",
+      arrow: "bg-emerald-600 text-white",
+    },
+    {
+      card: "border-amber-100 bg-gradient-to-br from-amber-50 via-white to-orange-50 hover:border-amber-300 hover:bg-amber-50",
+      accent: "bg-amber-500",
+      date: "bg-amber-100 text-amber-700 ring-amber-200",
+      arrow: "bg-amber-500 text-white",
+    },
+    {
+      card: "border-violet-100 bg-gradient-to-br from-violet-50 via-white to-fuchsia-50 hover:border-violet-300 hover:bg-violet-50",
+      accent: "bg-violet-600",
+      date: "bg-violet-100 text-violet-700 ring-violet-200",
+      arrow: "bg-violet-600 text-white",
+    },
+  ];
+
+  return renkler[index % renkler.length];
+}
+
 function HaberSatiri({ item }: { item: NewsItem }) {
   const haberGorseli =
     item.image && item.image.trim() !== ""
@@ -248,9 +279,9 @@ function SonGuncellemelerBar({ items }: { items: GuncellemeItem[] }) {
 
   return (
     <section className="px-4 pb-5 md:px-6">
-      <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm md:p-4">
+      <div className="overflow-hidden rounded-2xl border border-blue-100 bg-gradient-to-br from-white via-blue-50/50 to-slate-50 p-3 shadow-sm md:p-4">
         <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-2">
-          <span className="inline-flex shrink-0 rounded-full bg-zinc-900 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-white">
+          <span className="inline-flex shrink-0 rounded-full bg-blue-700 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-white shadow-sm">
             Güncelleme Paneli
           </span>
 
@@ -258,39 +289,51 @@ function SonGuncellemelerBar({ items }: { items: GuncellemeItem[] }) {
             Son Güncellemeler
           </h2>
 
-          <span className="hidden text-sm text-zinc-300 sm:inline">•</span>
+          <span className="hidden text-sm text-blue-300 sm:inline">•</span>
 
-          <p className="text-xs font-medium text-zinc-500 md:text-sm">
+          <p className="text-xs font-medium text-slate-600 md:text-sm">
             Sitedeki son veri, tablo ve analiz yenilemeleri.
           </p>
 
-          <span className="ml-auto hidden rounded-full bg-zinc-50 px-3 py-1 text-xs font-bold text-zinc-700 ring-1 ring-zinc-200 md:inline-flex">
+          <span className="ml-auto hidden rounded-full bg-white px-3 py-1 text-xs font-bold text-blue-700 shadow-sm ring-1 ring-blue-100 md:inline-flex">
             Son {items.length} güncelleme
           </span>
         </div>
 
         <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4">
-          {items.map((item, index) => (
-            <Link
-              key={`${item.href}-${item.time}-${index}`}
-              href={item.href}
-              prefetch={false}
-              className="group flex min-h-[56px] items-center justify-between gap-2 rounded-xl border border-zinc-200 bg-zinc-50 px-3 py-2 text-zinc-900 transition duration-300 hover:border-blue-200 hover:bg-blue-50/50 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-            >
-              <div className="min-w-0">
-                <h3 className="line-clamp-1 text-xs font-bold leading-5 text-zinc-900 md:text-sm">
-                  {item.title}
-                </h3>
-                <div className="mt-0.5 inline-flex rounded-full bg-white px-2 py-0.5 text-[10px] font-semibold text-zinc-600 ring-1 ring-zinc-200">
-                  {item.time}
-                </div>
-              </div>
+          {items.map((item, index) => {
+            const renk = getGuncellemeRenkleri(index);
 
-              <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-zinc-900 text-xs font-bold text-white transition duration-300 group-hover:translate-x-0.5">
-                →
-              </div>
-            </Link>
-          ))}
+            return (
+              <Link
+                key={`${item.href}-${item.time}-${index}`}
+                href={item.href}
+                prefetch={false}
+                className={`group relative flex min-h-[56px] items-center justify-between gap-2 overflow-hidden rounded-xl border px-3 py-2 text-zinc-900 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${renk.card}`}
+              >
+                <span
+                  className={`absolute inset-y-0 left-0 w-1 ${renk.accent}`}
+                />
+
+                <div className="min-w-0 pl-1">
+                  <h3 className="line-clamp-1 text-xs font-bold leading-5 text-zinc-900 md:text-sm">
+                    {item.title}
+                  </h3>
+                  <div
+                    className={`mt-0.5 inline-flex rounded-full px-2 py-0.5 text-[10px] font-semibold ring-1 ${renk.date}`}
+                  >
+                    {item.time}
+                  </div>
+                </div>
+
+                <div
+                  className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold shadow-sm transition duration-300 group-hover:translate-x-0.5 ${renk.arrow}`}
+                >
+                  →
+                </div>
+              </Link>
+            );
+          })}
         </div>
       </div>
     </section>
@@ -421,7 +464,7 @@ export default function HomePage() {
   const guncellemeler = getSonGuncellemeler();
 
   return (
-    <main className="min-h-screen bg-[radial-gradient(circle_at_top_left,#eff6ff_0,#ffffff_32%,#f8fafc_100%)]">
+    <main className="min-h-screen">
       <div className="mx-auto max-w-7xl">
         <section className="px-4 pt-4 md:px-6 md:pt-6">
           <div className="overflow-hidden rounded-2xl">
