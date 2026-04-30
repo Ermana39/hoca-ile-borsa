@@ -115,9 +115,7 @@ export default function OranAnaliziPage() {
             karşılaştırabilirsiniz. Ekranı sağa kaydırarak diğer sütunları inceleyebilirsiniz.
           </p>
 
-          <div className="mt-4 text-sm font-semibold text-zinc-700">
-            Güncelleme Tarihi: {guncellemeTarihi}
-          </div>
+         
         </section>
 
         <section className="pt-6">

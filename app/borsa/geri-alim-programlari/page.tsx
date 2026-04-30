@@ -327,7 +327,7 @@ export default function GeriAlimProgramlariPage() {
         </p>
 
         <div className="mb-8 text-sm font-semibold text-zinc-700">
-          Güncelleme Tarihi: {guncellemeTarihi}
+         
         </div>
 
         <section className="mb-8">

@@ -1,12 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
-  timeZone: "Europe/Istanbul",
-  day: "2-digit",
-  month: "2-digit",
-  year: "numeric",
-}).format(new Date());
+
 
 const taramalar = [
   {
@@ -148,9 +143,7 @@ export default function GostergeTaramalariPage() {
             Gösterge taramalarını aşağıdaki kutulardan inceleyebilirsiniz.
           </p>
 
-          <div className="mt-4 text-sm font-semibold text-zinc-700">
-            Güncelleme Tarihi: {guncellemeTarihi}
-          </div>
+        
         </section>
 
         <section className="pt-6">

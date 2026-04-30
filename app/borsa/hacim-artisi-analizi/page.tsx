@@ -1,12 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
-  timeZone: "Europe/Istanbul",
-  day: "2-digit",
-  month: "2-digit",
-  year: "numeric",
-}).format(new Date());
 
 const hacimKutulari = [
   {
@@ -110,10 +104,7 @@ export default function HacimArtisiAnaliziPage() {
           <p className="mt-3 max-w-4xl text-sm leading-7 text-zinc-600 md:text-base">
             Hacim artışı analizlerini aşağıdaki kutulardan inceleyebilirsiniz.
           </p>
-          <div className="mt-4 text-sm font-semibold text-zinc-700">
-            Güncelleme Tarihi: {guncellemeTarihi}
-          </div>
-        </section>
+                 </section>
 
         <section className="pt-6">
           <ReklamAlani variant="yatay" />
