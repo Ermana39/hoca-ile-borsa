@@ -1,6 +1,7 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useMemo } from "react";
+import { usePathname } from "next/navigation";
 import pageUpdates from "@/lib/page-updates.generated.json";
 
 type PageUpdateItem = {
@@ -25,8 +26,40 @@ const GUNCELLEME_GIZLENECEK_SAYFALAR = new Set([
 
 function normalizePath(path: string) {
   if (!path || path === "/") return "/";
+
   const clean = path.split("?")[0].split("#")[0];
+
   return clean.endsWith("/") && clean !== "/" ? clean.slice(0, -1) : clean;
+}
+
+function routeToRegex(route: string) {
+  const normalized = normalizePath(route);
+
+  if (!normalized.includes("[")) {
+    return null;
+  }
+
+  const escaped = normalized
+    .replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    .replace(/\\\[\\.\\.\\.([^/]+)\\\]/g, ".+")
+    .replace(/\\\[([^/]+)\\\]/g, "[^/]+");
+
+  return new RegExp(`^${escaped}$`);
+}
+
+function findUpdate(pathname: string) {
+  const data = pageUpdates as PageUpdatesData;
+  const pages = Array.isArray(data.pages) ? data.pages : [];
+  const currentPath = normalizePath(pathname);
+
+  const exact = pages.find((item) => normalizePath(item.route) === currentPath);
+
+  if (exact) return exact;
+
+  return pages.find((item) => {
+    const regex = routeToRegex(item.route);
+    return regex ? regex.test(currentPath) : false;
+  });
 }
 
 function formatDate(value: string) {
@@ -44,35 +77,22 @@ function formatDate(value: string) {
   }).format(date);
 }
 
-function findUpdate(pathname: string) {
-  const data = pageUpdates as PageUpdatesData;
-  const pages = Array.isArray(data.pages) ? data.pages : [];
-  const currentPath = normalizePath(pathname);
-
-  const exact = pages.find((item) => normalizePath(item.route) === currentPath);
-
-  if (exact) return exact;
-
-  return null;
-}
-
 export default function SayfaGuncellemeBilgisi() {
-  const [formattedDate, setFormattedDate] = useState("");
+  const pathname = usePathname();
 
-  useEffect(() => {
-    const currentPath = normalizePath(window.location.pathname);
+  const formattedDate = useMemo(() => {
+    const currentPath = normalizePath(pathname || "/");
 
     if (GUNCELLEME_GIZLENECEK_SAYFALAR.has(currentPath)) {
-      setFormattedDate("");
-      return;
+      return "";
     }
 
     const update = findUpdate(currentPath);
 
-    if (!update?.updatedAt) return;
+    if (!update?.updatedAt) return "";
 
-    setFormattedDate(formatDate(update.updatedAt));
-  }, []);
+    return formatDate(update.updatedAt);
+  }, [pathname]);
 
   if (!formattedDate) return null;
 
