@@ -238,8 +238,8 @@ function HaberSatiri({ item }: { item: NewsItem }) {
 function SonGuncellemelerBar({ items }: { items: GuncellemeItem[] }) {
   if (items.length === 0) {
     return (
-      <section className="px-4 pb-6 md:px-6">
-        <div className="rounded-2xl border border-zinc-200 bg-white p-4 text-center text-sm text-zinc-500 shadow-sm">
+      <section className="px-4 pb-5 md:px-6">
+        <div className="rounded-2xl border border-zinc-200 bg-white p-3 text-center text-sm text-zinc-500 shadow-sm">
           Güncelleme verisi bulunamadı.
         </div>
       </section>
@@ -247,27 +247,26 @@ function SonGuncellemelerBar({ items }: { items: GuncellemeItem[] }) {
   }
 
   return (
-    <section className="px-4 pb-6 md:px-6">
-      <div className="overflow-hidden rounded-3xl border border-zinc-200 bg-white p-4 shadow-sm md:p-5">
-        <div className="mb-4 flex flex-col gap-1 md:flex-row md:items-end md:justify-between">
-          <div>
-            <p className="mb-1 inline-flex rounded-full bg-zinc-900 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-white">
-              Güncelleme Paneli
-            </p>
-            <h2 className="text-lg font-black tracking-tight text-zinc-950 md:text-2xl">
-              Son Güncellemeler
-            </h2>
-            <p className="mt-1 text-xs leading-5 text-zinc-500 md:text-sm">
-              Sitedeki son veri, tablo ve analiz yenilemeleri.
-            </p>
-          </div>
+    <section className="px-4 pb-5 md:px-6">
+      <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 shadow-sm md:p-4">
+        <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-2">
+          <span className="inline-flex shrink-0 rounded-full bg-zinc-900 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-white">
+            Güncelleme Paneli
+          </span>
 
-          <div className="hidden rounded-xl bg-zinc-50 px-3 py-2 text-right ring-1 ring-zinc-200 md:block">
-            <p className="text-[10px] font-semibold uppercase tracking-wide text-zinc-500">
-              Güncelleme
-            </p>
-            <p className="text-xl font-black text-zinc-950">{items.length}</p>
-          </div>
+          <h2 className="shrink-0 text-base font-black tracking-tight text-zinc-950 md:text-lg">
+            Son Güncellemeler
+          </h2>
+
+          <span className="hidden text-sm text-zinc-300 sm:inline">•</span>
+
+          <p className="text-xs font-medium text-zinc-500 md:text-sm">
+            Sitedeki son veri, tablo ve analiz yenilemeleri.
+          </p>
+
+          <span className="ml-auto hidden rounded-full bg-zinc-50 px-3 py-1 text-xs font-bold text-zinc-700 ring-1 ring-zinc-200 md:inline-flex">
+            {items.length} güncelleme
+          </span>
         </div>
 
         <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4">
@@ -276,18 +275,18 @@ function SonGuncellemelerBar({ items }: { items: GuncellemeItem[] }) {
               key={`${item.href}-${item.time}-${index}`}
               href={item.href}
               prefetch={false}
-              className="group flex min-h-[68px] items-center justify-between gap-3 rounded-2xl border border-zinc-200 bg-zinc-50 px-3 py-3 text-zinc-900 transition duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:bg-blue-50/50 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="group flex min-h-[56px] items-center justify-between gap-2 rounded-xl border border-zinc-200 bg-zinc-50 px-3 py-2 text-zinc-900 transition duration-300 hover:border-blue-200 hover:bg-blue-50/50 hover:shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
             >
               <div className="min-w-0">
-                <h3 className="line-clamp-2 text-xs font-bold leading-5 text-zinc-900 md:text-sm">
+                <h3 className="line-clamp-1 text-xs font-bold leading-5 text-zinc-900 md:text-sm">
                   {item.title}
                 </h3>
-                <div className="mt-1 inline-flex rounded-full bg-white px-2.5 py-0.5 text-[11px] font-semibold text-zinc-600 ring-1 ring-zinc-200">
+                <div className="mt-0.5 inline-flex rounded-full bg-white px-2 py-0.5 text-[10px] font-semibold text-zinc-600 ring-1 ring-zinc-200">
                   {item.time}
                 </div>
               </div>
 
-              <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-zinc-900 text-sm font-bold text-white transition duration-300 group-hover:translate-x-0.5">
+              <div className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-zinc-900 text-xs font-bold text-white transition duration-300 group-hover:translate-x-0.5">
                 →
               </div>
             </Link>
