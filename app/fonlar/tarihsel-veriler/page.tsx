@@ -1,13 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
-  timeZone: "Europe/Istanbul",
-  day: "2-digit",
-  month: "2-digit",
-  year: "numeric",
-}).format(new Date());
-
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
     variant === "icerik"
@@ -87,7 +80,7 @@ function FonTipiKutusu({
 
 export default function FonTarihselVerilerLandingPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen">
       <div className="mx-auto max-w-7xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link
@@ -106,16 +99,13 @@ export default function FonTarihselVerilerLandingPage() {
           </Link>
         </section>
 
-        <section className="rounded-2xl bg-white p-5 md:p-8">
+        <section className="mb-6">
           <h1 className="text-2xl font-bold text-zinc-900 md:text-4xl">
             Fon Tarihsel Veriler
           </h1>
-          <p className="mt-3 max-w-4xl text-sm leading-7 text-zinc-600 md:text-base">
+          <p className="mt-3 max-w-4xl text-sm leading-7 text-zinc-700 md:text-base">
             Tarihsel veri ekranını fon tipine göre ayırarak inceleyin.
           </p>
-          <div className="mt-4 text-sm font-semibold text-zinc-700">
-            Güncelleme Tarihi: {guncellemeTarihi}
-          </div>
         </section>
 
         <section className="pt-6">
