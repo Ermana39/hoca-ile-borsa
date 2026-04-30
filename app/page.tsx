@@ -467,33 +467,22 @@ export default function HomePage() {
         </section>
 
         <section className="px-4 pb-6 md:px-6">
-          <ReklamAlani variant="yatay" />
-        </section>
-
-        <section className="px-4 pb-6 md:px-6">
           <div className="overflow-hidden rounded-3xl border border-zinc-200 bg-gradient-to-br from-zinc-50 via-white to-blue-50/50 p-4 shadow-sm md:p-6">
-            <div className="mb-5 flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
-              <div>
-                <p className="mb-2 inline-flex rounded-full bg-blue-600 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
-                  Piyasa Gündemi
-                </p>
-                <h1 className="text-xl font-black tracking-tight text-zinc-950 md:text-3xl">
-                  Güncel Borsa Haberleri
-                </h1>
-                <p className="mt-2 text-sm leading-6 text-zinc-600 md:text-base">
-                  Borsa, şirket haberleri ve finans gündeminden öne çıkan son
-                  başlıklar.
-                </p>
-              </div>
+            <div className="mb-5 flex flex-wrap items-center gap-x-3 gap-y-2">
+              <span className="inline-flex shrink-0 rounded-full bg-blue-600 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
+                Piyasa Gündemi
+              </span>
 
-              <div className="hidden rounded-2xl bg-white px-4 py-3 text-right shadow-sm ring-1 ring-zinc-200 md:block">
-                <p className="text-xs font-semibold uppercase tracking-wide text-zinc-500">
-                  Yayındaki Haber
-                </p>
-                <p className="text-2xl font-black text-zinc-950">
-                  {newsItems.length}
-                </p>
-              </div>
+              <h1 className="shrink-0 text-lg font-black tracking-tight text-zinc-950 md:text-2xl">
+                Güncel Borsa Haberleri
+              </h1>
+
+              <span className="hidden text-sm text-blue-300 sm:inline">•</span>
+
+              <p className="text-xs font-medium text-zinc-600 md:text-sm">
+                Borsa, şirket haberleri ve finans gündeminden öne çıkan son
+                başlıklar.
+              </p>
             </div>
 
             {newsItems.length > 0 ? (
@@ -510,11 +499,11 @@ export default function HomePage() {
           </div>
         </section>
 
-        <SonGuncellemelerBar items={guncellemeler} />
-
         <section className="px-4 pb-6 md:px-6">
           <ReklamAlani variant="icerik" />
         </section>
+
+        <SonGuncellemelerBar items={guncellemeler} />
 
         <section className="px-4 pb-6 md:px-6">
           <div className="rounded-2xl border border-zinc-200 bg-white p-5 md:p-7">
