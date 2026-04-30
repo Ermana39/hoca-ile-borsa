@@ -265,7 +265,7 @@ function SonGuncellemelerBar({ items }: { items: GuncellemeItem[] }) {
           </p>
 
           <span className="ml-auto hidden rounded-full bg-zinc-50 px-3 py-1 text-xs font-bold text-zinc-700 ring-1 ring-zinc-200 md:inline-flex">
-            {items.length} güncelleme
+            Son {items.length} güncelleme
           </span>
         </div>
 

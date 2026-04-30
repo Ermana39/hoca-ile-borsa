@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr">
-      <body>
+      <body className="site-background">
         {children}
         <Analytics />
       </body>
