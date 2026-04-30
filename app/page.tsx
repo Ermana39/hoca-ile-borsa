@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { newsItems as tumHaberler } from "@/app/data/news";
-import { sonGuncellemeler } from "@/lib/son-guncellemeler";
+import pageUpdates from "@/lib/page-updates.generated.json";
 
 export const revalidate = 3600;
 
@@ -18,6 +18,17 @@ type GuncellemeItem = {
   title: string;
   href: string;
   time: string;
+};
+
+type PageUpdateItem = {
+  route: string;
+  updatedAt: string;
+  file?: string;
+};
+
+type PageUpdatesData = {
+  generatedAt?: string;
+  pages?: PageUpdateItem[];
 };
 
 const ANA_SAYFA_HABER_LIMIT = 6;
@@ -55,6 +66,91 @@ const kategoriKutulari = [
     image: "/Mevduat-kredi-faiz.png?v=2",
   },
 ];
+
+const gizlenecekGuncellemeSayfalari = new Set([
+  "/",
+  "/borsa",
+  "/fonlar",
+  "/halka-arz",
+  "/temettu",
+  "/mevduat-kredi-faizleri",
+  "/hakkimizda",
+  "/gizlilik-politikasi",
+  "/cerez-politikasi",
+  "/kullanim-sartlari",
+  "/yasal-uyari",
+  "/iletisim",
+  "/reklam",
+]);
+
+const sayfaBasliklari: Record<string, string> = {
+  "/borsa/dikkat-cekenler": "Dikkat Çekenler",
+  "/borsa/dikkat-cekenler/haber-2": "Banka Hisselerinde Önemli Direnç Noktası",
+  "/borsa/dikkat-cekenler/haber-3": "BİST100 Negatif Uyumsuzluk",
+  "/borsa/dikkat-cekenler/haber-4":
+    "Stopaj Sonrası Gerçek Getiri Analizi",
+
+  "/borsa/dip-zirve-analizi": "Dip Zirve Analizi",
+  "/borsa/egitim-videolari": "Eğitim Videoları",
+  "/borsa/formasyonlar": "Formasyonlar",
+  "/borsa/formasyonlar/formasyon1": "Formasyon Analizi",
+  "/borsa/formasyonlar/formasyon2": "Formasyon Analizi",
+  "/borsa/formasyonlar/formasyon3": "Formasyon Analizi",
+  "/borsa/formasyonlar/formasyon4": "Formasyon Analizi",
+  "/borsa/geri-alim-programlari": "Geri Alım Programları",
+  "/borsa/gosterge-taramalari": "Gösterge Taramaları",
+  "/borsa/gosterge-taramalari/dusus-trendinde-olanlar":
+    "Düşüş Trendinde Olan Hisseler",
+  "/borsa/gosterge-taramalari/guclu-trend-momentum":
+    "Güçlü Trend ve Momentum Taraması",
+  "/borsa/gosterge-taramalari/macd-al": "MACD Al Veren Hisseler",
+  "/borsa/gosterge-taramalari/macd-sat": "MACD Sat Veren Hisseler",
+  "/borsa/gosterge-taramalari/rsi30-alti": "RSI 30 Altı Hisseler",
+  "/borsa/gosterge-taramalari/rsi70-ustu": "RSI 70 Üstü Hisseler",
+  "/borsa/gosterge-taramalari/yukselis-trendinde-olanlar":
+    "Yükseliş Trendinde Olan Hisseler",
+  "/borsa/grafik-analiz": "Grafik Analiz",
+  "/borsa/grafik-analiz/aefes": "AEFES Grafik Analiz",
+  "/borsa/gunluk-borsa-ozeti": "Günlük Borsa Özeti",
+  "/borsa/hacim-artisi-analizi": "Hacim Artışı Analizi",
+  "/borsa/hacim-artisi-analizi/aylik-hacim-artisi-olanlar":
+    "Aylık Hacim Artışı Olan Hisseler",
+  "/borsa/hacim-artisi-analizi/haftalik-hacim-artisi-olanlar":
+    "Haftalık Hacim Artışı Olan Hisseler",
+  "/borsa/hacim-artisi-analizi/yillik-hacim-artisi-olanlar":
+    "Yıllık Hacim Artışı Olan Hisseler",
+  "/borsa/oran-analizi": "Oran Analizi",
+  "/borsa/pivot-analizi": "Pivot Analizi",
+  "/borsa/tedbirli-hisseler": "Tedbirli Hisseler",
+  "/borsa/yeni-is-anlasmalari": "Yeni İş Anlaşmaları",
+
+  "/fonlar/getiri": "Fon Getiri Analizi",
+  "/fonlar/getiri/borsa-yatirim-fonlari-getiri":
+    "Borsa Yatırım Fonları Getiri Analizi",
+  "/fonlar/getiri/emeklilik-fonlari-getiri":
+    "Emeklilik Fonları Getiri Analizi",
+  "/fonlar/getiri/menkul-kiymet-yatirim-fonlari":
+    "Menkul Kıymet Yatırım Fonları Getiri Analizi",
+  "/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler":
+    "Fonların En Çok Tercih Ettiği Hisseler",
+  "/fonlar/tarihsel-veriler": "Fon Tarihsel Veriler",
+  "/fonlar/tarihsel-veriler/borsa-yatirim-fonlari-tarihsel":
+    "Borsa Yatırım Fonları Tarihsel Veriler",
+  "/fonlar/tarihsel-veriler/emeklilik-fonlari-tarihsel":
+    "Emeklilik Fonları Tarihsel Veriler",
+  "/fonlar/tarihsel-veriler/menkul-kiymet-yatirim-fonlari":
+    "Menkul Kıymet Yatırım Fonları Tarihsel Veriler",
+
+  "/halka-arz/kazanc-hesapla": "Halka Arz Kazanç Hesaplama",
+  "/halka-arz/onayli-izahnameler": "Onaylı İzahnameler",
+  "/halka-arz/onayli-izahnameler/onayli-1": "Onaylı İzahname Detayı",
+  "/halka-arz/talep-hesapla": "Halka Arz Talep Hesaplama",
+  "/halka-arz/taslak-izahnameler": "Taslak İzahnameler",
+
+  "/haber/haber-985": "Güncel Haber",
+  "/haber/haber-986": "Güncel Haber",
+  "/haber/haber-987": "Güncel Haber",
+};
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
@@ -149,32 +245,76 @@ function normalizeNewsItems(data: unknown): NewsItem[] {
     .sort((a: NewsItem, b: NewsItem) => a.id - b.id);
 }
 
-function parseUpdatedAt(value: string) {
-  const match = value.match(
-    /^(\d{2})\.(\d{2})\.(\d{4})(?:\s+(\d{2}):(\d{2}))?$/
-  );
+function normalizePath(route: string) {
+  if (!route || route === "/") return "/";
+  return route.endsWith("/") ? route.slice(0, -1) : route;
+}
 
-  if (!match) return 0;
+function slugBaslikYap(slug: string) {
+  return slug
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (harf) => harf.toLocaleUpperCase("tr-TR"));
+}
 
-  const [, day, month, year, hour = "0", minute = "0"] = match;
+function routeBasligiBul(route: string) {
+  const temizRoute = normalizePath(route);
 
-  return new Date(
-    Number(year),
-    Number(month) - 1,
-    Number(day),
-    Number(hour),
-    Number(minute)
-  ).getTime();
+  if (sayfaBasliklari[temizRoute]) {
+    return sayfaBasliklari[temizRoute];
+  }
+
+  if (temizRoute.startsWith("/halka-arz/taslak-izahnameler/")) {
+    const slug = temizRoute.split("/").filter(Boolean).at(-1) || "";
+    return `${slugBaslikYap(slug)} Taslak İzahname`;
+  }
+
+  if (temizRoute.startsWith("/haber/")) {
+    const slug = temizRoute.split("/").filter(Boolean).at(-1) || "";
+    return slugBaslikYap(slug);
+  }
+
+  const sonParca = temizRoute.split("/").filter(Boolean).at(-1) || "Sayfa";
+  return slugBaslikYap(sonParca);
+}
+
+function formatUpdateDate(value: string) {
+  const date = new Date(value);
+
+  if (Number.isNaN(date.getTime())) return "";
+
+  return new Intl.DateTimeFormat("tr-TR", {
+    timeZone: "Europe/Istanbul",
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(date);
 }
 
 function getSonGuncellemeler(): GuncellemeItem[] {
-  return [...sonGuncellemeler]
-    .sort((a, b) => parseUpdatedAt(b.updatedAt) - parseUpdatedAt(a.updatedAt))
+  const data = pageUpdates as PageUpdatesData;
+  const pages = Array.isArray(data.pages) ? data.pages : [];
+
+  return pages
+    .filter((item) => {
+      const route = normalizePath(item.route);
+
+      if (!route || route.includes("[") || gizlenecekGuncellemeSayfalari.has(route)) {
+        return false;
+      }
+
+      return Boolean(item.updatedAt);
+    })
+    .sort(
+      (a, b) =>
+        new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime()
+    )
     .slice(0, SON_GUNCELLEME_LIMIT)
     .map((item) => ({
-      title: item.title,
-      href: item.href,
-      time: item.updatedAt,
+      title: routeBasligiBul(item.route),
+      href: normalizePath(item.route),
+      time: formatUpdateDate(item.updatedAt),
     }));
 }
 
@@ -270,7 +410,7 @@ function SonGuncellemelerBar({ items }: { items: GuncellemeItem[] }) {
           <span className="hidden text-sm text-blue-300 sm:inline">•</span>
 
           <p className="text-xs font-medium text-slate-600 md:text-sm">
-            Sitedeki son veri, tablo ve analiz yenilemeleri.
+            Otomatik olarak en son güncellenen sayfalar.
           </p>
 
           <span className="ml-auto hidden rounded-full bg-white px-3 py-1 text-xs font-bold text-blue-700 shadow-sm ring-1 ring-blue-100 md:inline-flex">
