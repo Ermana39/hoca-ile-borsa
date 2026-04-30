@@ -2,147 +2,113 @@ import Image from "next/image";
 import Link from "next/link";
 
 const bistVeri = {
-  tarih: "29.04.2026",
-  kapanis: "14311.19",
-  degisimYuzde: -0.13,
+  tarih: "30.04.2026",
+  kapanis: "14594.01",
+  degisimYuzde: 1.28,
 };
 
 const tumYukselenler = [
-  { kod: "CELHA", fark: "+10,00%" },
-  { kod: "KMPUR", fark: "+10,00%" },
-  { kod: "BORLS", fark: "+10,00%" },
-  { kod: "BEYAZ", fark: "+10,00%" },
-  { kod: "AHSGY", fark: "+10,00%" },
-  { kod: "BYDNR", fark: "+10,00%" },
-  { kod: "ESCOM", fark: "+10,00%" },
-  { kod: "PKART", fark: "+10,00%" },
+  { kod: "MERCN", fark: "+10,00%" },
+  { kod: "DAPGM", fark: "+10,00%" },
+  { kod: "MEYSU", fark: "+10,00%" },
+  { kod: "TPKGYF1", fark: "+10,00%" },
+  { kod: "OZATD", fark: "+9,99%" },
+  { kod: "PEKGY", fark: "+9,98%" },
+  { kod: "ICUGS", fark: "+9,98%" },
+  { kod: "ASTOR", fark: "+9,98%" },
+  { kod: "KLSYN", fark: "+9,97%" },
 ];
 
 const tumDusenler = [
-  { kod: "METRO", fark: "-10,00%" },
-  { kod: "AYCES", fark: "-10,00%" },
-  { kod: "LXGYO", fark: "-10,00%" },
-  { kod: "ANELE", fark: "-10,00%" },
-  { kod: "TMPOL", fark: "-10,00%" },
-  { kod: "HTPSBF2", fark: "-9,99%" },
-  { kod: "RALYH", fark: "-9,99%" },
-  { kod: "ENSRI", fark: "-9,99%" },
+  { kod: "ENSRI", fark: "-9,98%" },
+  { kod: "KGYO", fark: "-9,97%" },
+  { kod: "ARMGD", fark: "-9,96%" },
+  { kod: "ALKLC", fark: "-9,94%" },
+  { kod: "TMPOL", fark: "-9,93%" },
+  { kod: "SELVA", fark: "-9,83%" },
+  { kod: "TERA", fark: "-9,66%" },
+  { kod: "HTPSBF2", fark: "-9,66%" },
+  { kod: "GMTAS", fark: "-8,82%" },
 ];
 
 const tumHacimliler = [
-  { kod: "PASEU", hacim: "24.171.444.966" },
-  { kod: "SASA", hacim: "16.878.935.272" },
-  { kod: "ASELS", hacim: "16.344.344.114" },
-  { kod: "ASTOR", hacim: "10.275.465.800" },
-  { kod: "THYAO", hacim: "9.528.355.383" },
-  { kod: "EREGL", hacim: "9.037.181.638" },
-  { kod: "AKBNK", hacim: "8.423.795.549" },
-  { kod: "YKBNK", hacim: "5.797.576.605" },
+  { kod: "SASA", hacim: "22.085.260.306" },
+  { kod: "THYAO", hacim: "12.879.970.606" },
+  { kod: "ASELS", hacim: "12.766.055.870" },
+  { kod: "KONTR", hacim: "11.078.608.300" },
+  { kod: "ASTOR", hacim: "10.531.061.881" },
+  { kod: "ISCTR", hacim: "7.100.661.161" },
+  { kod: "TERA", hacim: "6.907.936.708" },
+  { kod: "AKBNK", hacim: "6.727.059.790" },
+  { kod: "TUPRS", hacim: "6.619.278.739" },
 ];
 
 const tumParaGirisi = [
-  { kod: "ASELS", tutar: "+228.929.849" },
-  { kod: "EREGL", tutar: "+205.843.801" },
-  { kod: "PEKGY", tutar: "+121.417.880" },
-  { kod: "TUPRS", tutar: "+88.420.947" },
-  { kod: "ULKER", tutar: "+64.139.841" },
-  { kod: "TERA", tutar: "+63.762.336" },
-  { kod: "EFOR", tutar: "+61.163.329" },
+  { kod: "ASTOR", tutar: "+348.066.925" },
+  { kod: "ASELS", tutar: "+266.986.087" },
+  { kod: "OZATD", tutar: "+113.409.657" },
+  { kod: "PEKGY", tutar: "+106.520.189" },
+  { kod: "PETKM", tutar: "+55.492.064" },
+  { kod: "AKBNK", tutar: "+54.954.874" },
+  { kod: "BRSAN", tutar: "+52.449.332" },
+  { kod: "TKFEN", tutar: "+40.624.571" },
 ];
 
 const tumParaCikisi = [
-  { kod: "AKBNK", tutar: "-221.046.420" },
-  { kod: "PASEU", tutar: "-131.577.709" },
-  { kod: "TRALT", tutar: "-101.292.693" },
-  { kod: "SASA", tutar: "-87.063.147" },
-  { kod: "PGSYO", tutar: "-59.612.533" },
-  { kod: "GARAN", tutar: "-58.466.680" },
-  { kod: "BIMAS", tutar: "-57.525.275" },
-  { kod: "TCELL", tutar: "-56.434.682" },
-  { kod: "EUPWR", tutar: "-52.500.957" },
+  { kod: "GARAN", tutar: "-151.596.989" },
+  { kod: "ISCTR", tutar: "-150.854.258" },
+  { kod: "TERA", tutar: "-128.360.529" },
+  { kod: "THYAO", tutar: "-89.517.891" },
+  { kod: "SISE", tutar: "-87.498.457" },
+  { kod: "HALKB", tutar: "-66.914.709" },
+  { kod: "TCELL", tutar: "-61.402.626" },
 ];
 
 const enCokAlisYapanKurumlar = [
-  { kurum: "PUSULA YAT.", hacim: "8.923.165.388", oran: "%57,86" },
-  { kurum: "BULLS YATIRI", hacim: "1.855.132.595", oran: "%12,03" },
-  { kurum: "TERA", hacim: "1.603.854.132", oran: "%10,40" },
-  { kurum: "GARANTI BBV", hacim: "821.597.284", oran: "%5,33" },
-  { kurum: "YATIRIM FINA", hacim: "698.010.810", oran: "%4,53" },
+  { kurum: "TERA", hacim: "2.996.674.538", oran: "%35,8" },
+  { kurum: "IS", hacim: "1.151.375.109", oran: "%13,77" },
+  { kurum: "QNB YATIRIM", hacim: "649.284.599", oran: "%7,77" },
+  { kurum: "PUSULA YAT.", hacim: "573.471.407", oran: "%6,86" },
+  { kurum: "TACIRLER", hacim: "489.966.601", oran: "%5,86" },
 ];
 
 const enCokSatisYapanKurumlar = [
-  { kurum: "HALK", hacim: "-9.021.447.618", oran: "%58,50" },
-  { kurum: "BANK OF AME", hacim: "-1.698.939.122", oran: "%11,02" },
-  { kurum: "AK", hacim: "-1.681.105.889", oran: "%10,90" },
-  { kurum: "TACIRLER", hacim: "-654.211.216", oran: "%4,24" },
-  { kurum: "UNLU", hacim: "-370.210.786", oran: "%2,40" },
+  { kurum: "A1 CAPITAL", hacim: "-1.232.733.957", oran: "%14,75" },
+  { kurum: "AK", hacim: "-997.494.038", oran: "%11,94" },
+  { kurum: "DENIZ", hacim: "-884.808.516", oran: "%10,59" },
+  { kurum: "TEB", hacim: "-838.246.600", oran: "%10,03" },
+  { kurum: "BULLS YATIRIM", hacim: "-671.572.136", oran: "%8,04" },
 ];
 
 const enCokHacimYapanKurumlar = [
-  { kurum: "YAPI KREDI", hacim: "76.626.872.048", oran: "%13,57" },
-  { kurum: "BANK OF AME", hacim: "67.003.013.889", oran: "%11,87" },
-  { kurum: "IS", hacim: "49.646.148.518", oran: "%8,79" },
-  { kurum: "AK", hacim: "42.514.535.264", oran: "%7,53" },
-  { kurum: "DENIZ", hacim: "22.871.830.047", oran: "%4,05" },
+  { kurum: "YAPI KREDI", hacim: "85.463.965.916", oran: "%14,73" },
+  { kurum: "BANK OF AME", hacim: "70.866.381.989", oran: "%12,21" },
+  { kurum: "IS", hacim: "54.761.212.056", oran: "%9,44" },
+  { kurum: "AK", hacim: "45.940.611.598", oran: "%7,92" },
+  { kurum: "TACIRLER", hacim: "23.715.193.254", oran: "%4,09" },
 ];
 
 const ekonomikTakvimVerileri = [
   {
-    tarih: "30.04.2026",
+    tarih: "29.04.2026",
     kayitlar: [
       {
         saat: "10:00",
         ulke: "TR",
-        gosterge: "Toplam İhracat (milyon usd/aylık)",
+        gosterge: "İşsizlik Oranı",
         onem: "kirmizi" as const,
         aciklanan: "-",
-        beklenti: "21.918",
-        onceki: "21.049",
+        beklenti: "-",
+        onceki: "8.5%",
       },
       {
         saat: "10:00",
         ulke: "TR",
-        gosterge: "Toplam İthalat (milyon usd /aylık)",
-        onem: "kirmizi" as const,
-        aciklanan: "-",
-        beklenti: "33.181",
-        onceki: "30.080",
-      },
-      {
-        saat: "10:00",
-        ulke: "TR",
-        gosterge: "Dış Ticaret Dengesi (milyon $/aylık)",
-        onem: "kirmizi" as const,
-        aciklanan: "-",
-        beklenti: "-11.263",
-        onceki: "-9031",
-      },
-      {
-        saat: "10:00",
-        ulke: "TR",
-        gosterge: "İhracatın İthalatı Karşılama Oranı % (aylık)",
-        onem: "kirmizi" as const,
-        aciklanan: "-",
-        beklenti: "66.1%",
-        onceki: "70.0%",
-      },
-      {
-        saat: "10:00",
-        ulke: "TR",
-        gosterge: "Turizm Geliri (milyon dolar,yıllık)",
+        gosterge: "TÜİK Ekonomik Güven Endeksi",
         onem: "turuncu-gri" as const,
         aciklanan: "-",
         beklenti: "-",
-        onceki: "15.152",
-      },
-      {
-        saat: "11:00",
-        ulke: "TR",
-        gosterge: "Yabancı Ziyaretçiler (bin kişi)",
-        onem: "turuncu-gri" as const,
-        aciklanan: "-",
-        beklenti: "-",
-        onceki: "2.127",
+        onceki: "97.9",
       },
     ],
   },
@@ -372,7 +338,7 @@ export default function GunlukBorsaOzetiPage() {
           <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
             <div className="relative aspect-[16/9] w-full">
               <Image
-                src="/günlük-özet.jpg"
+                src="/günlük-özet.png"
                 alt="Günlük özet görseli"
                 fill
                 className="object-contain"
