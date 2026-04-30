@@ -8,28 +8,36 @@ body {
 }
 
 html {
-  background:
-    radial-gradient(circle at top left, #dbeafe 0, #ffffff 34%, #f1f5f9 100%);
+  background: #eef4ff;
 }
 
 body {
   min-height: 100vh;
-  background:
-    radial-gradient(circle at top left, #dbeafe 0, #ffffff 34%, #f1f5f9 100%);
   color: #111827;
   font-family: Arial, Helvetica, sans-serif;
+  background:
+    radial-gradient(circle at top left, rgba(37, 99, 235, 0.16), transparent 34%),
+    radial-gradient(circle at top right, rgba(14, 165, 233, 0.12), transparent 30%),
+    linear-gradient(180deg, #f1f7ff 0%, #ffffff 42%, #f8fafc 100%);
 }
 
 .site-background {
   min-height: 100vh;
-  background:
-    radial-gradient(circle at top left, #dbeafe 0, #ffffff 34%, #f1f5f9 100%);
-  background-attachment: fixed;
 }
 
-/* Sayfalarda main içindeki bg-white global arka fonu kapatıyorsa bunu engeller */
-body.site-background > main {
+/* Sayfalardaki ana beyaz zeminleri global arka fonu kapatmasın diye şeffaf yapar */
+body.site-background main,
+body.site-background main.min-h-screen,
+body.site-background main[class*="bg-white"],
+body.site-background div.min-h-screen[class*="bg-white"] {
   background: transparent !important;
+}
+
+/* İç kartlar beyaz kalmaya devam eder */
+body.site-background section .bg-white,
+body.site-background article.bg-white,
+body.site-background footer.bg-slate-950 {
+  background-color: inherit;
 }
 
 a {
