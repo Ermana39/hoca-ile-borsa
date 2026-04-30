@@ -8,7 +8,7 @@ body {
 }
 
 html {
-  background: #eef6ff;
+  background: #eaf4ff;
 }
 
 body {
@@ -16,27 +16,26 @@ body {
   color: #111827;
   font-family: Arial, Helvetica, sans-serif;
   background:
-    radial-gradient(circle at top left, rgba(37, 99, 235, 0.18), transparent 34%),
-    radial-gradient(circle at top right, rgba(14, 165, 233, 0.13), transparent 30%),
-    linear-gradient(180deg, #eef6ff 0%, #f8fbff 38%, #ffffff 68%, #f8fafc 100%);
+    radial-gradient(circle at 0% 0%, rgba(37, 99, 235, 0.28), transparent 36%),
+    radial-gradient(circle at 100% 0%, rgba(14, 165, 233, 0.22), transparent 32%),
+    linear-gradient(180deg, #eaf4ff 0%, #f3f9ff 36%, #ffffff 72%, #f8fafc 100%);
 }
 
 .site-background {
   min-height: 100vh;
 }
 
-/* Sadece en dış beyaz main zeminini şeffaflaştırır */
-body.site-background > main.bg-white,
-body.site-background > main[class*="bg-white"] {
+/* Sadece en dış main arka planını şeffaf bırakır */
+body.site-background > main {
   background: transparent !important;
 }
 
-/* Footer kesinlikle koyu kalacak */
+/* Footer koyu kalır */
 footer.bg-slate-950 {
   background-color: #020617 !important;
 }
 
-/* Beyaz kartlar bozulmasın */
+/* Kartlar beyaz kalır */
 .bg-white {
   background-color: #ffffff;
 }
