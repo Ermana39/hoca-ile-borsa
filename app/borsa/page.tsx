@@ -209,6 +209,10 @@ export default function BorsaPage() {
           </div>
         </section>
 
+        <section className="pb-6">
+          <ReklamAlani variant="icerik" />
+        </section>
+
         <section className="rounded-2xl bg-white p-5 md:p-7">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">
             Borsa analiz sayfasında neler bulunur?
@@ -234,10 +238,6 @@ export default function BorsaPage() {
               Bu sayfada yer alan içerikler yatırım tavsiyesi değildir.
             </p>
           </div>
-        </section>
-
-        <section className="pt-6">
-          <ReklamAlani variant="icerik" />
         </section>
       </div>
     </main>
