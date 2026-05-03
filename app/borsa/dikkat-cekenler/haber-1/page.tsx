@@ -1,24 +1,5 @@
+import Image from "next/image";
 import Link from "next/link";
-
-const haberler = [
-  {
-    title:
-      "BIST100 Haftayı 14.442 Puanla Kapattı: Sentimentte Zayıflayan Negatif Momentum Dikkat Çekiyor",
-    href: "/borsa/dikkat-cekenler/haber-1",
-  },
-  {
-    title: "Stopaj Sonrası Gerçek Getiri: Fonlar BIST 100’ün Gerisinde mi Kaldı?",
-    href: "/borsa/dikkat-cekenler/haber-4",
-  },
-  {
-    title: "BİST100 Önemli direnç noktasında negatif uyumsuzluk",
-    href: "/borsa/dikkat-cekenler/haber-3",
-  },
-  {
-    title: "Banka hisselerinde önemli direnç noktası",
-    href: "/borsa/dikkat-cekenler/haber-2",
-  },
-];
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
@@ -36,20 +17,13 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
-export default function DikkatCekenlerPage() {
+export default function Haber1Page() {
   return (
-    <main className="min-h-screen px-4 py-6 md:px-6">
+    <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-5xl">
         <div className="mb-6 flex gap-3">
           <Link
-            href="/"
-            className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
-          >
-            Ana Sayfa
-          </Link>
-
-          <Link
-            href="/borsa"
+            href="/borsa/dikkat-cekenler"
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Geri
@@ -57,95 +31,62 @@ export default function DikkatCekenlerPage() {
         </div>
 
         <section className="mb-6">
-          <h1 className="text-3xl font-bold text-zinc-900">
-            Dikkat Çekenler
-          </h1>
-
-          <p className="mt-3 max-w-3xl text-sm leading-7 text-zinc-700 md:text-base">
-            Borsa ve finans gündeminde öne çıkan haberleri, dikkat çeken
-            piyasa hareketlerini ve yatırımcıların takip ettiği önemli
-            başlıkları bu sayfadan inceleyebilirsiniz.
-          </p>
-        </section>
-
-        <section className="mb-6">
           <ReklamAlani variant="yatay" />
         </section>
 
-        <div className="space-y-4">
-          {haberler.map((item, index) => (
-            <Link
-              key={item.title}
-              href={item.href}
-              className="group relative block overflow-hidden rounded-2xl border border-slate-200 bg-white/85 px-5 py-5 shadow-sm backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-blue-300 hover:bg-blue-50/70 hover:shadow-lg md:px-6 md:py-6"
-            >
-              <span className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-blue-700 via-sky-500 to-emerald-500" />
+        <article className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
+          <div className="relative aspect-[16/9] w-full">
+            <Image
+              src="/dikkat-ceken-1.png"
+              alt="Banka hisselerinde önemli direnç noktası"
+              fill
+              className="object-cover"
+              priority
+            />
+          </div>
 
-              <div className="flex items-center gap-4 pl-1">
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-slate-900 text-sm font-black text-white shadow-sm md:h-12 md:w-12">
-                  {String(index + 1).padStart(2, "0")}
-                </div>
+          <div className="p-6 md:p-8">
+            <h1 className="mb-6 text-3xl font-bold text-zinc-900 md:text-4xl">
+              Sentimentte Zayıflayan Negatif Momentum Dikkat Çekiyor
+            </h1>
 
-                <div className="min-w-0 flex-1">
-                  <div className="mb-2 flex flex-wrap items-center gap-2">
-                    <span className="inline-flex rounded-full bg-blue-100 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-blue-700">
-                      Piyasa Notu
-                    </span>
-                    <span className="inline-flex rounded-full bg-emerald-100 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-emerald-700">
-                      Dikkat Çeken
-                    </span>
-                  </div>
+            <div className="space-y-4 text-base leading-8 text-zinc-700 md:text-lg">
+              <p>
+                BIST100 endeksi haftayı 14.442,56 puan seviyesinde kapatırken, BIST30 endeksi ise haftayı 16.601,12 seviyesinde tamamladı.
+              </p>
 
-                  <h2 className="text-lg font-black leading-7 tracking-tight text-zinc-950 transition group-hover:text-blue-700 md:text-xl md:leading-8">
-                    {item.title}
-                  </h2>
-                </div>
+              <p>
+                BIST100 STP: 14.429,95
 
-                <div className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-full bg-slate-900 text-lg font-bold text-white transition duration-300 group-hover:translate-x-1 group-hover:bg-blue-700 sm:flex">
-                  →
-                </div>
-              </div>
-            </Link>
-          ))}
-        </div>
+BIST30 STP: 16.592,56
+              </p>
+
+              <p>
+                Günlük sentiment haftayı 5,26 seviyesinde kapattı. 
+                Sentiment momentum grafiğinde uzun süredir devam eden mavi barların ardından kırmızı bölgeye geçiş dikkat çekiyor. 
+                Özellikle son 3 işlem gününde kırmızı barların kısalarak devam etmesi, piyasadaki negatif baskının şimdilik zayıflama eğiliminde olabileceğini gösteriyor.
+              </p>
+
+              <p>
+                Endeks ağırlıklı görünüme baktığımızda hisselerin;
+
+%32,29’u yeşil bölgede,
+
+%46,08’i sarı bölgede,
+
+%20,27’si ise kırmızı bölgede yer alıyor.
+              </p>
+
+              <p className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-4 text-sm font-medium leading-7 text-zinc-800 md:text-base">
+                Genel görünümde piyasa tamamen güçlenmiş diyemeyiz ancak kırmızı bölgede zayıflayan momentum, önümüzdeki hafta için takip edilmesi gereken önemli sinyallerden biri olarak öne çıkıyor.
+              </p>
+              <p>Yatırım tavsiyesi değildir.</p>
+            </div>
+          </div>
+        </article>
 
         <section className="mt-8">
           <ReklamAlani variant="icerik" />
-        </section>
-
-        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
-          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
-            Dikkat Çekenler Hakkında
-          </h2>
-
-          <p className="mb-4 leading-7 text-zinc-700">
-            Dikkat çekenler sayfası, Borsa İstanbul ve finans piyasalarında öne
-            çıkan gelişmeleri hızlı şekilde takip etmek isteyen kullanıcılar için
-            hazırlanmıştır. Bu sayfada yatırımcıların ilgisini çeken fonlar,
-            hisseler, piyasa hareketleri ve güncel fırsatlar tek alanda
-            listelenmektedir.
-          </p>
-
-          <p className="mb-4 leading-7 text-zinc-700">
-            Gün içerisinde yükselişiyle öne çıkan varlıklar, işlem hacmi artan
-            hisseler, dikkat çeken fon performansları ve piyasada konuşulan önemli
-            başlıklar yatırım kararlarında yol gösterici olabilir. Bu nedenle
-            güncel fırsatları takip etmek isteyen kullanıcılar için dikkat çekenler
-            bölümü önemli bir kaynak sunar.
-          </p>
-
-          <p className="mb-4 leading-7 text-zinc-700">
-            Borsa yatırımcıları için hızlı bilgi akışı büyük önem taşır. Bu sayfa
-            sayesinde öne çıkan gelişmeleri tek ekranda görebilir, piyasadaki
-            fırsatları daha erken fark ederek kendi yatırım stratejinize göre
-            değerlendirme yapabilirsiniz.
-          </p>
-
-          <p className="leading-7 text-zinc-700">
-            Güncel borsa haberleri, dikkat çeken fonlar, öne çıkan hisseler,
-            yatırım fırsatları ve piyasadaki önemli gelişmeler için bu sayfayı
-            düzenli olarak takip edebilirsiniz.
-          </p>
         </section>
       </div>
     </main>
