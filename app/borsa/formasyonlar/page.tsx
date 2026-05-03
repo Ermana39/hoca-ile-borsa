@@ -75,6 +75,7 @@ export default async function FormasyonlarPage() {
           >
             Ana Sayfa
           </Link>
+
           <Link
             href="/borsa"
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
@@ -96,18 +97,44 @@ export default async function FormasyonlarPage() {
           <ReklamAlani variant="yatay" />
         </section>
 
-        <div className="space-y-3">
-          {formasyonlar.map((item) => (
+        <section className="space-y-4">
+          {formasyonlar.map((item, index) => (
             <Link
               key={item.href}
               href={item.href}
-              className="grid grid-cols-2 rounded-xl border border-green-200 bg-green-50 px-4 py-4 text-base font-semibold text-zinc-900 transition hover:bg-green-100"
+              className="group relative block overflow-hidden rounded-2xl bg-white/80 px-5 py-5 shadow-[0_10px_30px_rgba(15,23,42,0.08)] ring-1 ring-slate-200/80 backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:bg-white hover:shadow-[0_18px_45px_rgba(15,23,42,0.13)] md:px-6 md:py-6"
             >
-              <div>{item.kod}</div>
-              <div className="text-right">{item.tur}</div>
+              <div className="absolute inset-x-0 top-0 h-[3px] bg-gradient-to-r from-slate-900 via-blue-700 to-emerald-500" />
+
+              <div className="flex items-center gap-4 md:gap-5">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl bg-slate-950 text-lg font-black text-white shadow-[0_8px_20px_rgba(15,23,42,0.25)] md:h-16 md:w-16 md:text-xl">
+                  {String(index + 1).padStart(2, "0")}
+                </div>
+
+                <div className="min-w-0 flex-1">
+                  <p className="mb-1 text-xs font-bold uppercase tracking-[0.18em] text-blue-700">
+                    Teknik Formasyon
+                  </p>
+
+                  <div className="flex flex-col gap-1 md:flex-row md:items-center md:justify-between md:gap-6">
+                    <h2 className="text-xl font-black leading-8 tracking-tight text-slate-950 transition group-hover:text-blue-700 md:text-2xl md:leading-9">
+                      {item.kod}
+                    </h2>
+
+                    <p className="text-base font-bold leading-7 text-zinc-700 md:text-lg md:text-right">
+                      {item.tur}
+                    </p>
+                  </div>
+                </div>
+
+                <div className="hidden shrink-0 items-center gap-2 rounded-full bg-slate-950 px-4 py-2 text-sm font-bold text-white shadow-sm transition duration-300 group-hover:bg-blue-700 md:flex">
+                  İncele
+                  <span className="transition group-hover:translate-x-1">→</span>
+                </div>
+              </div>
             </Link>
           ))}
-        </div>
+        </section>
 
         <section className="mt-8">
           <ReklamAlani variant="icerik" />
@@ -128,22 +155,24 @@ export default async function FormasyonlarPage() {
 
           <p className="mb-4 leading-7 text-zinc-700">
             Teknik analiz formasyonları, yatırımcılara olası trend değişimleri,
-            devam formasyonları ve önemli fiyat kırılımları hakkında fikir verebilir.
-            Omuz baş omuz, çanak, flama, üçgen ve benzeri grafik yapıları piyasa
-            yönünü anlamaya çalışan kullanıcılar için önemli sinyaller sunar.
+            devam formasyonları ve önemli fiyat kırılımları hakkında fikir
+            verebilir. Omuz baş omuz, çanak, flama, üçgen ve benzeri grafik
+            yapıları piyasa yönünü anlamaya çalışan kullanıcılar için önemli
+            sinyaller sunar.
           </p>
 
           <p className="mb-4 leading-7 text-zinc-700">
-            Hisse bazlı formasyon takibi yapmak isteyen kullanıcılar için bu sayfa,
-            farklı hisselerde görülen teknik yapıları listeleyerek analiz sürecini
-            kolaylaştırır. Böylece hem kısa vadeli işlem yapanlar hem de orta vadeli
-            yatırımcılar dikkat çeken teknik görünümleri daha hızlı takip edebilir.
+            Hisse bazlı formasyon takibi yapmak isteyen kullanıcılar için bu
+            sayfa, farklı hisselerde görülen teknik yapıları listeleyerek analiz
+            sürecini kolaylaştırır. Böylece hem kısa vadeli işlem yapanlar hem de
+            orta vadeli yatırımcılar dikkat çeken teknik görünümleri daha hızlı
+            takip edebilir.
           </p>
 
           <p className="leading-7 text-zinc-700">
-            Güncel borsa formasyonları, teknik analiz sinyalleri, hisse bazlı grafik
-            görünümleri ve dikkat çeken teknik yapılar için bu sayfayı düzenli
-            olarak takip edebilirsiniz.
+            Güncel borsa formasyonları, teknik analiz sinyalleri, hisse bazlı
+            grafik görünümleri ve dikkat çeken teknik yapılar için bu sayfayı
+            düzenli olarak takip edebilirsiniz.
           </p>
         </section>
       </div>
