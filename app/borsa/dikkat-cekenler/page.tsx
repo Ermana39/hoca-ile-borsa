@@ -4,19 +4,19 @@ const haberler = [
   {
     title:
       "BIST100 Haftayı 14.442 Puanla Kapattı: Sentimentte Zayıflayan Negatif Momentum Dikkat Çekiyor",
-    href: "/borsa/dikkat-cekenler/haber-1",
+    href: "/borsa/dikkat-cekenler/dikkat-cekenler-1",
   },
   {
     title: "Stopaj Sonrası Gerçek Getiri: Fonlar BIST 100’ün Gerisinde mi Kaldı?",
-    href: "/borsa/dikkat-cekenler/haber-4",
+    href: "/borsa/dikkat-cekenler/dikkat-cekenler-4",
   },
   {
     title: "BİST100 Önemli direnç noktasında negatif uyumsuzluk",
-    href: "/borsa/dikkat-cekenler/haber-3",
+    href: "/borsa/dikkat-cekenler/dikkat-cekenler-3",
   },
   {
     title: "Banka hisselerinde önemli direnç noktası",
-    href: "/borsa/dikkat-cekenler/haber-2",
+    href: "/borsa/dikkat-cekenler/dikkat-cekenler-2",
   },
 ];
 
