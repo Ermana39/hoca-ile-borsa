@@ -94,7 +94,7 @@ export default function GRTHOGrafikAnalizPage() {
                 Genel görünümde hisse, sert düşüş sonrası taban oluşturma ve yeniden yön arayışı sürecinde takip edilebilir bir teknik yapıya sahip.
               </p>
               <p className="mt-4 border-t border-zinc-200 pt-4 text-sm text-zinc-500 md:text-base">
-                Bu içerikte yer alan teknik değerlendirmeler genel niteliktedir
+                03.05.2026 - Bu içerikte yer alan teknik değerlendirmeler genel niteliktedir
                 ve yatırım danışmanlığı kapsamında değildir.
               </p>
             </div>
