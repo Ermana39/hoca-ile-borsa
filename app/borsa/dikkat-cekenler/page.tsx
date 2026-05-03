@@ -1,8 +1,9 @@
 import Link from "next/link";
 
 const haberler = [
-   {
-    title: "BIST100 Haftayı 14.442 Puanla Kapattı: Sentimentte Zayıflayan Negatif Momentum Dikkat Çekiyor",
+  {
+    title:
+      "BIST100 Haftayı 14.442 Puanla Kapattı: Sentimentte Zayıflayan Negatif Momentum Dikkat Çekiyor",
     href: "/borsa/dikkat-cekenler/haber-1",
   },
   {
@@ -38,7 +39,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
 export default function DikkatCekenlerPage() {
   return (
     <main className="min-h-screen px-4 py-6 md:px-6">
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-6xl">
         <div className="mb-6 flex gap-3">
           <Link
             href="/"
@@ -71,17 +72,50 @@ export default function DikkatCekenlerPage() {
           <ReklamAlani variant="yatay" />
         </section>
 
-        <div className="space-y-3">
-          {haberler.map((item) => (
+        <section className="space-y-5">
+          {haberler.map((item, index) => (
             <Link
               key={item.title}
               href={item.href}
-              className="block rounded-xl border border-blue-200 bg-blue-50 px-4 py-4 text-base font-bold text-zinc-900 transition hover:bg-blue-100 md:text-lg"
+              className="group relative block overflow-hidden rounded-3xl border border-slate-200 bg-gradient-to-br from-white via-slate-50 to-blue-50/70 p-5 shadow-[0_12px_35px_rgba(15,23,42,0.08)] transition duration-300 hover:-translate-y-1 hover:border-blue-300 hover:shadow-[0_18px_45px_rgba(15,23,42,0.14)] md:p-6"
             >
-              {item.title}
+              <div className="absolute inset-y-0 left-0 w-2 bg-gradient-to-b from-blue-700 via-sky-500 to-emerald-500" />
+
+              <div className="flex items-center gap-5 pl-2">
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-slate-950 text-xl font-black text-white shadow-md md:h-20 md:w-20 md:text-2xl">
+                  {String(index + 1).padStart(2, "0")}
+                </div>
+
+                <div className="min-w-0 flex-1">
+                  <div className="mb-3 flex flex-wrap items-center gap-2">
+                    <span className="inline-flex rounded-full bg-blue-700 px-3 py-1 text-[11px] font-black uppercase tracking-wide text-white shadow-sm">
+                      Piyasa Notu
+                    </span>
+
+                    <span className="inline-flex rounded-full bg-emerald-100 px-3 py-1 text-[11px] font-black uppercase tracking-wide text-emerald-700 ring-1 ring-emerald-200">
+                      Dikkat Çeken
+                    </span>
+                  </div>
+
+                  <h2 className="text-xl font-black leading-8 tracking-tight text-slate-950 transition group-hover:text-blue-700 md:text-2xl md:leading-9">
+                    {item.title}
+                  </h2>
+
+                  <div className="mt-4 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-bold text-blue-700 shadow-sm ring-1 ring-blue-100 transition group-hover:bg-blue-700 group-hover:text-white">
+                    Haberi incele
+                    <span className="transition group-hover:translate-x-1">
+                      →
+                    </span>
+                  </div>
+                </div>
+
+                <div className="hidden h-14 w-14 shrink-0 items-center justify-center rounded-full bg-slate-950 text-2xl font-black text-white shadow-md transition duration-300 group-hover:translate-x-1 group-hover:bg-blue-700 md:flex">
+                  →
+                </div>
+              </div>
             </Link>
           ))}
-        </div>
+        </section>
 
         <section className="mt-8">
           <ReklamAlani variant="icerik" />
