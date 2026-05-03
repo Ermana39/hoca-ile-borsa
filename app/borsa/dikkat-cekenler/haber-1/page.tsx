@@ -1,8 +1,9 @@
 import Link from "next/link";
 
 const haberler = [
-   {
-    title: "BIST100 Haftayı 14.442 Puanla Kapattı: Sentimentte Zayıflayan Negatif Momentum Dikkat Çekiyor",
+  {
+    title:
+      "BIST100 Haftayı 14.442 Puanla Kapattı: Sentimentte Zayıflayan Negatif Momentum Dikkat Çekiyor",
     href: "/borsa/dikkat-cekenler/haber-1",
   },
   {
@@ -71,14 +72,39 @@ export default function DikkatCekenlerPage() {
           <ReklamAlani variant="yatay" />
         </section>
 
-        <div className="space-y-3">
-          {haberler.map((item) => (
+        <div className="space-y-4">
+          {haberler.map((item, index) => (
             <Link
               key={item.title}
               href={item.href}
-              className="block rounded-xl border border-blue-200 bg-blue-50 px-4 py-4 text-base font-bold text-zinc-900 transition hover:bg-blue-100 md:text-lg"
+              className="group relative block overflow-hidden rounded-2xl border border-slate-200 bg-white/85 px-5 py-5 shadow-sm backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:border-blue-300 hover:bg-blue-50/70 hover:shadow-lg md:px-6 md:py-6"
             >
-              {item.title}
+              <span className="absolute inset-y-0 left-0 w-1.5 bg-gradient-to-b from-blue-700 via-sky-500 to-emerald-500" />
+
+              <div className="flex items-center gap-4 pl-1">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-slate-900 text-sm font-black text-white shadow-sm md:h-12 md:w-12">
+                  {String(index + 1).padStart(2, "0")}
+                </div>
+
+                <div className="min-w-0 flex-1">
+                  <div className="mb-2 flex flex-wrap items-center gap-2">
+                    <span className="inline-flex rounded-full bg-blue-100 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-blue-700">
+                      Piyasa Notu
+                    </span>
+                    <span className="inline-flex rounded-full bg-emerald-100 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-emerald-700">
+                      Dikkat Çeken
+                    </span>
+                  </div>
+
+                  <h2 className="text-lg font-black leading-7 tracking-tight text-zinc-950 transition group-hover:text-blue-700 md:text-xl md:leading-8">
+                    {item.title}
+                  </h2>
+                </div>
+
+                <div className="hidden h-10 w-10 shrink-0 items-center justify-center rounded-full bg-slate-900 text-lg font-bold text-white transition duration-300 group-hover:translate-x-1 group-hover:bg-blue-700 sm:flex">
+                  →
+                </div>
+              </div>
             </Link>
           ))}
         </div>
