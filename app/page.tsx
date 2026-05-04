@@ -24,6 +24,7 @@ type PageUpdateItem = {
   route: string;
   updatedAt: string;
   file?: string;
+  trackedFiles?: string[];
 };
 
 type PageUpdatesData = {
@@ -67,29 +68,20 @@ const kategoriKutulari = [
   },
 ];
 
-const gizlenecekGuncellemeSayfalari = new Set([
-  "/",
-  "/borsa",
-  "/fonlar",
-  "/halka-arz",
-  "/temettu",
-  "/mevduat-kredi-faizleri",
-  "/hakkimizda",
-  "/gizlilik-politikasi",
-  "/cerez-politikasi",
-  "/kullanim-sartlari",
-  "/yasal-uyari",
-  "/iletisim",
-  "/reklam",
-]);
-
 const sayfaBasliklari: Record<string, string> = {
-  "/borsa/dikkat-cekenler": "Dikkat Çekenler",
-  "/borsa/dikkat-cekenler/haber-2": "Banka Hisselerinde Önemli Direnç Noktası",
-  "/borsa/dikkat-cekenler/haber-3": "BİST100 Negatif Uyumsuzluk",
-  "/borsa/dikkat-cekenler/haber-4":
-    "Stopaj Sonrası Gerçek Getiri Analizi",
+  "/": "Ana Sayfa",
+  "/borsa": "Borsa Analiz",
+  "/fonlar": "Fonlar",
+  "/halka-arz": "Halka Arz",
+  "/temettu": "Temettü",
+  "/mevduat-kredi-faizleri": "Mevduat ve Kredi Faizleri",
+  "/faiz-oranlari": "Faiz Oranları",
 
+  "/borsa/dikkat-cekenler": "Dikkat Çekenler",
+  "/borsa/dikkat-cekenler/haber-1": "BIST100 Haftalık Sentiment Analizi",
+  "/borsa/dikkat-cekenler/haber-2": "Banka Hisselerinde Önemli Direnç Noktası",
+  "/borsa/dikkat-cekenler/haber-3": "BIST100 Negatif Uyumsuzluk",
+  "/borsa/dikkat-cekenler/haber-4": "Stopaj Sonrası Gerçek Getiri Analizi",
   "/borsa/dip-zirve-analizi": "Dip Zirve Analizi",
   "/borsa/egitim-videolari": "Eğitim Videoları",
   "/borsa/formasyonlar": "Formasyonlar",
@@ -147,9 +139,13 @@ const sayfaBasliklari: Record<string, string> = {
   "/halka-arz/talep-hesapla": "Halka Arz Talep Hesaplama",
   "/halka-arz/taslak-izahnameler": "Taslak İzahnameler",
 
-  "/haber/haber-985": "Güncel Haber",
-  "/haber/haber-986": "Güncel Haber",
-  "/haber/haber-987": "Güncel Haber",
+  "/hakkimizda": "Hakkımızda",
+  "/gizlilik-politikasi": "Gizlilik Politikası",
+  "/cerez-politikasi": "Çerez Politikası",
+  "/kullanim-sartlari": "Kullanım Şartları",
+  "/yasal-uyari": "Yasal Uyarı",
+  "/iletisim": "İletişim",
+  "/reklam": "Reklam",
 };
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
@@ -256,11 +252,25 @@ function slugBaslikYap(slug: string) {
     .replace(/\b\w/g, (harf) => harf.toLocaleUpperCase("tr-TR"));
 }
 
+function haberBasligiBul(route: string) {
+  const haber = normalizeNewsItems(tumHaberler).find(
+    (item) => normalizePath(item.href) === route
+  );
+
+  return haber?.title || "";
+}
+
 function routeBasligiBul(route: string) {
   const temizRoute = normalizePath(route);
 
   if (sayfaBasliklari[temizRoute]) {
     return sayfaBasliklari[temizRoute];
+  }
+
+  const haberBasligi = haberBasligiBul(temizRoute);
+
+  if (haberBasligi) {
+    return haberBasligi;
   }
 
   if (temizRoute.startsWith("/halka-arz/taslak-izahnameler/")) {
@@ -273,7 +283,7 @@ function routeBasligiBul(route: string) {
     return slugBaslikYap(slug);
   }
 
-  const sonParca = temizRoute.split("/").filter(Boolean).at(-1) || "Sayfa";
+  const sonParca = temizRoute.split("/").filter(Boolean).at(-1) || "Ana Sayfa";
   return slugBaslikYap(sonParca);
 }
 
@@ -300,7 +310,7 @@ function getSonGuncellemeler(): GuncellemeItem[] {
     .filter((item) => {
       const route = normalizePath(item.route);
 
-      if (!route || route.includes("[") || gizlenecekGuncellemeSayfalari.has(route)) {
+      if (!route || route.includes("[")) {
         return false;
       }
 
@@ -410,7 +420,7 @@ function SonGuncellemelerBar({ items }: { items: GuncellemeItem[] }) {
           <span className="hidden text-sm text-blue-300 sm:inline">•</span>
 
           <p className="text-xs font-medium text-slate-600 md:text-sm">
-            En son güncellenen sayfalar.
+            Otomatik olarak en son güncellenen sayfalar.
           </p>
 
           <span className="ml-auto hidden rounded-full bg-white px-3 py-1 text-xs font-bold text-blue-700 shadow-sm ring-1 ring-blue-100 md:inline-flex">
