@@ -20,7 +20,6 @@ const takipEdilecekVeriUzantilari = new Set([
   ".xls",
   ".xlsm",
   ".csv",
-  ".json",
   ".ts",
 ]);
 
@@ -47,9 +46,27 @@ function getRouteFromPageFile(filePath) {
   return cleaned ? `/${cleaned}` : "/";
 }
 
-function getGitUpdatedAt(filePath) {
+function isGitTracked(filePath) {
   try {
     const relative = toPosixPath(path.relative(rootDir, filePath));
+
+    execSync(`git ls-files --error-unmatch -- "${relative}"`, {
+      cwd: rootDir,
+      stdio: ["ignore", "ignore", "ignore"],
+    });
+
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+function getGitUpdatedAt(filePath) {
+  try {
+    if (!isGitTracked(filePath)) return "";
+
+    const relative = toPosixPath(path.relative(rootDir, filePath));
+
     const result = execSync(`git log -1 --format=%cI -- "${relative}"`, {
       cwd: rootDir,
       stdio: ["ignore", "pipe", "ignore"],
@@ -60,26 +77,6 @@ function getGitUpdatedAt(filePath) {
   } catch {
     return "";
   }
-}
-
-function getFileUpdatedAt(filePath) {
-  try {
-    const stat = fs.statSync(filePath);
-    return stat.mtime.toISOString();
-  } catch {
-    return "";
-  }
-}
-
-function getBestUpdatedAt(filePath) {
-  const gitUpdatedAt = getGitUpdatedAt(filePath);
-  const fileUpdatedAt = getFileUpdatedAt(filePath);
-
-  const dates = [gitUpdatedAt, fileUpdatedAt]
-    .filter(Boolean)
-    .sort((a, b) => new Date(b).getTime() - new Date(a).getTime());
-
-  return dates[0] || "";
 }
 
 function walkPages(dir, results = []) {
@@ -154,20 +151,13 @@ function getRelatedFilesForPage(pageFilePath) {
   return [...new Set(relatedFiles)];
 }
 
-function getNewestUpdatedAt(files) {
-  let newest = "";
+function getNewestGitUpdatedAt(files) {
+  const dates = files
+    .map((file) => getGitUpdatedAt(file))
+    .filter(Boolean)
+    .sort((a, b) => new Date(b).getTime() - new Date(a).getTime());
 
-  for (const file of files) {
-    const updatedAt = getBestUpdatedAt(file);
-
-    if (!updatedAt) continue;
-
-    if (!newest || new Date(updatedAt).getTime() > new Date(newest).getTime()) {
-      newest = updatedAt;
-    }
-  }
-
-  return newest || new Date().toISOString();
+  return dates[0] || "";
 }
 
 const pageFiles = walkPages(appDir);
@@ -176,7 +166,7 @@ const pages = pageFiles
   .map((filePath) => {
     const route = getRouteFromPageFile(filePath);
     const relatedFiles = getRelatedFilesForPage(filePath);
-    const updatedAt = getNewestUpdatedAt(relatedFiles);
+    const updatedAt = getNewestGitUpdatedAt(relatedFiles);
 
     return {
       route,
@@ -187,6 +177,7 @@ const pages = pageFiles
       ),
     };
   })
+  .filter((item) => item.updatedAt)
   .sort((a, b) => a.route.localeCompare(b.route, "tr"));
 
 const output = {

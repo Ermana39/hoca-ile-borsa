@@ -1,158 +1,197 @@
 import Image from "next/image";
 import Link from "next/link";
-import type { ReactNode } from "react";
-import { newsItems as tumHaberler } from "@/app/data/news";
-import pageUpdates from "@/lib/page-updates.generated.json";
 
-export const revalidate = 3600;
-
-type NewsItem = {
-  id: number;
-  title: string;
-  href: string;
-  image?: string;
-  alt?: string;
+const bistVeri = {
+  tarih: "04.05.2026",
+  kapanis: "14369.61",
+  degisimYuzde: -0.51,
 };
 
-type GuncellemeItem = {
-  title: string;
-  href: string;
-  time: string;
-};
+const tumYukselenler = [
+  { kod: "CELHA", fark: "+10,00%" },
+  { kod: "KMPUR", fark: "+10,00%" },
+  { kod: "BORLS", fark: "+10,00%" },
+  { kod: "BEYAZ", fark: "+10,00%" },
+  { kod: "AHSGY", fark: "+10,00%" },
+  { kod: "BYDNR", fark: "+10,00%" },
+  { kod: "ESCOM", fark: "+10,00%" },
+  { kod: "PKART", fark: "+10,00%" },
+];
 
-type PageUpdateItem = {
-  route: string;
-  updatedAt: string;
-  file?: string;
-  trackedFiles?: string[];
-};
+const tumDusenler = [
+  { kod: "METRO", fark: "-10,00%" },
+  { kod: "AYCES", fark: "-10,00%" },
+  { kod: "LXGYO", fark: "-10,00%" },
+  { kod: "ANELE", fark: "-10,00%" },
+  { kod: "TMPOL", fark: "-10,00%" },
+  { kod: "HTPSBF2", fark: "-9,99%" },
+  { kod: "RALYH", fark: "-9,99%" },
+  { kod: "ENSRI", fark: "-9,99%" },
+];
 
-type PageUpdatesData = {
-  generatedAt?: string;
-  pages?: PageUpdateItem[];
-};
+const tumHacimliler = [
+  { kod: "PASEU", hacim: "24.171.444.966" },
+  { kod: "SASA", hacim: "16.878.935.272" },
+  { kod: "ASELS", hacim: "16.344.344.114" },
+  { kod: "ASTOR", hacim: "10.275.465.800" },
+  { kod: "THYAO", hacim: "9.528.355.383" },
+  { kod: "EREGL", hacim: "9.037.181.638" },
+  { kod: "AKBNK", hacim: "8.423.795.549" },
+  { kod: "YKBNK", hacim: "5.797.576.605" },
+];
 
-const ANA_SAYFA_HABER_LIMIT = 6;
-const SON_GUNCELLEME_LIMIT = 12;
+const tumParaGirisi = [
+  { kod: "ASELS", tutar: "+208.793.477" },
+  { kod: "PEKGY", tutar: "+144.142.241" },
+  { kod: "EREGL", tutar: "+95.834.003" },
+  { kod: "THYAO", tutar: "+88.935.897" },
+  { kod: "PASEU", tutar: "+69.885.370" },
+  { kod: "ISKPL", tutar: "+48.105.474" },
+  { kod: "ASTOR", tutar: "+38.749.288" },
+  { kod: "EUPWR", tutar: "+29.929.762" },
+  { kod: "IYEHO", tutar: "+26.666.429" },
+];
 
-const kategoriKutulari = [
+const tumParaCikisi = [
+  { kod: "AKBNK", tutar: "-183.214.390" },
+  { kod: "KTLEV", tutar: "-166.990.421" },
+  { kod: "GARAN", tutar: "-97.204.467" },
+  { kod: "BIMAS", tutar: "-89.096.332" },
+  { kod: "SISE", tutar: "-80.507.590" },
+  { kod: "GLRMK", tutar: "-65.646.334" },
+  { kod: "SASA", tutar: "-48.792.445" },
+  { kod: "TERA", tutar: "-48.137.693" },
+  { kod: "FROTO", tutar: "-40.591.900" },
+  { kod: "MIATK", tutar: "-37.153.239" },
+  { kod: "YKBNK", tutar: "-34.288.597" },
+];
+
+const enCokAlisYapanKurumlar = [
+  { kurum: "MIDAS", hacim: "1.053.137.383", oran: "%11,49" },
+  { kurum: "YATIRIM FINA", hacim: "950.691.964", oran: "%10,37" },
+  { kurum: "BULLS YATIRIM", hacim: "926.514.992", oran: "%10,11" },
+  { kurum: "TERA", hacim: "900.928.720", oran: "%9,83" },
+  { kurum: "DENIZ", hacim: "813.827.711", oran: "%8,88" },
+];
+
+const enCokSatisYapanKurumlar = [
+  { kurum: "BANK OF AME", hacim: "-3.313.562.438", oran: "%36,15" },
+  { kurum: "HSBC", hacim: "-1.191.710.219", oran: "%13,00" },
+  { kurum: "GEDIK", hacim: "-997.706.585", oran: "%10,88" },
+  { kurum: "TACIRLER", hacim: "-837.714.833", oran: "%9,14" },
+  { kurum: "UNLU", hacim: "-677.270.858", oran: "%7,39" },
+];
+
+const enCokHacimYapanKurumlar = [
+  { kurum: "YAPI KREDI", hacim: "92.468.265.209", oran: "%15,02" },
+  { kurum: "BANK OF AME", hacim: "81.412.856.692", oran: "%13,22" },
+  { kurum: "IS", hacim: "59.526.048.685", oran: "%9,67" },
+  { kurum: "AK", hacim: "49.347.062.402", oran: "%8,02" },
+  { kurum: "TACIRLER", hacim: "24.236.412.577", oran: "%3,94" },
+];
+
+const ekonomikTakvimVerileri = [
   {
-    title: "Borsa Analiz",
-    href: "/borsa",
-    alt: "Borsa analiz sayfası görseli",
-    image: "/kategori-borsa-analiz.png",
+    tarih: "04.05.2026",
+    kayitlar: [
+      {
+        saat: "10:00",
+        ulke: "TR",
+        gosterge: "Yurt İçi Üretici Fiyat Endeksi (aylık)",
+        onem: "turuncu-gri" as const,
+        aciklanan: "3.17%",
+        beklenti: "-",
+        onceki: "2.30%",
+      },
+      {
+        saat: "10:00",
+        ulke: "TR",
+        gosterge: "Yurt İçi Üretici Fiyat Endeksi (Yıllık)",
+        onem: "kirmizi" as const,
+        aciklanan: "28.59%",
+        beklenti: "-",
+        onceki: "28.08%",
+      },
+      {
+        saat: "10:00",
+        ulke: "TR",
+        gosterge: "TÜFE (Aylık)",
+        onem: "kirmizi" as const,
+        aciklanan: "4.18%",
+        beklenti: "3.21%",
+        onceki: "1.94%",
+      },
+      {
+        saat: "10:00",
+        ulke: "TR",
+        gosterge: "İSO Türkiye İmalat PMI",
+        onem: "turuncu-gri" as const,
+        aciklanan: "45.7",
+        beklenti: "-",
+        onceki: "47.9",
+      },
+      {
+        saat: "10:00",
+        ulke: "TR",
+        gosterge: "TÜFE (Yıllık)",
+        onem: "kirmizi" as const,
+        aciklanan: "32.37%",
+        beklenti: "31.14%",
+        onceki: "30.87%",
+      },
+      {
+        saat: "11:00",
+        ulke: "TR",
+        gosterge: "İbrazında Karşılıksız Kalan Çek (adet)",
+        onem: "sari-tek" as const,
+        aciklanan: "18.131",
+        beklenti: "-",
+        onceki: "24.306",
+      },
+    ],
   },
   {
-    title: "Halka Arz",
-    href: "/halka-arz",
-    alt: "Halka arz sayfası görseli",
-    image: "/kategori-halka-arz.png",
-  },
-  {
-    title: "Fonlar",
-    href: "/fonlar",
-    alt: "Fonlar sayfası görseli",
-    image: "/kategori-fonlar.png",
-  },
-  {
-    title: "Temettü",
-    href: "/temettu",
-    alt: "Temettü sayfası görseli",
-    image: "/kategori-temettu.png",
-  },
-  {
-    title: "Faiz Oranları",
-    href: "/mevduat-kredi-faizleri",
-    alt: "Faiz oranları sayfası görseli",
-    image: "/Mevduat-kredi-faiz.png?v=2",
+    tarih: "05.05.2026",
+    kayitlar: [
+      {
+        saat: "14:30",
+        ulke: "TR",
+        gosterge: "TÜFE Bazlı Reel Efektif Döviz Kuru",
+        onem: "kirmizi" as const,
+        aciklanan: "-",
+        beklenti: "-",
+        onceki: "104.61",
+      },
+      {
+        saat: "14:30",
+        ulke: "TR",
+        gosterge: "ÜFE Bazlı Reel Efektif Döviz Kuru",
+        onem: "kirmizi" as const,
+        aciklanan: "-",
+        beklenti: "-",
+        onceki: "102.03",
+      },
+    ],
   },
 ];
 
-const sayfaBasliklari: Record<string, string> = {
-  "/": "Ana Sayfa",
-  "/borsa": "Borsa Analiz",
-  "/fonlar": "Fonlar",
-  "/halka-arz": "Halka Arz",
-  "/temettu": "Temettü",
-  "/mevduat-kredi-faizleri": "Mevduat ve Kredi Faizleri",
-  "/faiz-oranlari": "Faiz Oranları",
+function ilkBesKisaKodlu<T extends { kod: string }>(liste: T[]) {
+  return liste.filter((item) => item.kod.length <= 5).slice(0, 5);
+}
 
-  "/borsa/dikkat-cekenler": "Dikkat Çekenler",
-  "/borsa/dikkat-cekenler/haber-1": "BIST100 Haftalık Sentiment Analizi",
-  "/borsa/dikkat-cekenler/haber-2": "Banka Hisselerinde Önemli Direnç Noktası",
-  "/borsa/dikkat-cekenler/haber-3": "BIST100 Negatif Uyumsuzluk",
-  "/borsa/dikkat-cekenler/haber-4": "Stopaj Sonrası Gerçek Getiri Analizi",
-  "/borsa/dip-zirve-analizi": "Dip Zirve Analizi",
-  "/borsa/egitim-videolari": "Eğitim Videoları",
-  "/borsa/formasyonlar": "Formasyonlar",
-  "/borsa/formasyonlar/formasyon1": "Formasyon Analizi",
-  "/borsa/formasyonlar/formasyon2": "Formasyon Analizi",
-  "/borsa/formasyonlar/formasyon3": "Formasyon Analizi",
-  "/borsa/formasyonlar/formasyon4": "Formasyon Analizi",
-  "/borsa/geri-alim-programlari": "Geri Alım Programları",
-  "/borsa/gosterge-taramalari": "Gösterge Taramaları",
-  "/borsa/gosterge-taramalari/dusus-trendinde-olanlar":
-    "Düşüş Trendinde Olan Hisseler",
-  "/borsa/gosterge-taramalari/guclu-trend-momentum":
-    "Güçlü Trend ve Momentum Taraması",
-  "/borsa/gosterge-taramalari/macd-al": "MACD Al Veren Hisseler",
-  "/borsa/gosterge-taramalari/macd-sat": "MACD Sat Veren Hisseler",
-  "/borsa/gosterge-taramalari/rsi30-alti": "RSI 30 Altı Hisseler",
-  "/borsa/gosterge-taramalari/rsi70-ustu": "RSI 70 Üstü Hisseler",
-  "/borsa/gosterge-taramalari/yukselis-trendinde-olanlar":
-    "Yükseliş Trendinde Olan Hisseler",
-  "/borsa/grafik-analiz": "Grafik Analiz",
-  "/borsa/grafik-analiz/aefes": "AEFES Grafik Analiz",
-  "/borsa/gunluk-borsa-ozeti": "Günlük Borsa Özeti",
-  "/borsa/hacim-artisi-analizi": "Hacim Artışı Analizi",
-  "/borsa/hacim-artisi-analizi/aylik-hacim-artisi-olanlar":
-    "Aylık Hacim Artışı Olan Hisseler",
-  "/borsa/hacim-artisi-analizi/haftalik-hacim-artisi-olanlar":
-    "Haftalık Hacim Artışı Olan Hisseler",
-  "/borsa/hacim-artisi-analizi/yillik-hacim-artisi-olanlar":
-    "Yıllık Hacim Artışı Olan Hisseler",
-  "/borsa/oran-analizi": "Oran Analizi",
-  "/borsa/pivot-analizi": "Pivot Analizi",
-  "/borsa/tedbirli-hisseler": "Tedbirli Hisseler",
-  "/borsa/yeni-is-anlasmalari": "Yeni İş Anlaşmaları",
+const enCokYukselenler = ilkBesKisaKodlu(tumYukselenler);
+const enCokDusenler = ilkBesKisaKodlu(tumDusenler);
+const enHacimliler = ilkBesKisaKodlu(tumHacimliler);
+const paraGirisi = ilkBesKisaKodlu(tumParaGirisi);
+const paraCikisi = ilkBesKisaKodlu(tumParaCikisi);
 
-  "/fonlar/getiri": "Fon Getiri Analizi",
-  "/fonlar/getiri/borsa-yatirim-fonlari-getiri":
-    "Borsa Yatırım Fonları Getiri Analizi",
-  "/fonlar/getiri/emeklilik-fonlari-getiri":
-    "Emeklilik Fonları Getiri Analizi",
-  "/fonlar/getiri/menkul-kiymet-yatirim-fonlari":
-    "Menkul Kıymet Yatırım Fonları Getiri Analizi",
-  "/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler":
-    "Fonların En Çok Tercih Ettiği Hisseler",
-  "/fonlar/tarihsel-veriler": "Fon Tarihsel Veriler",
-  "/fonlar/tarihsel-veriler/borsa-yatirim-fonlari-tarihsel":
-    "Borsa Yatırım Fonları Tarihsel Veriler",
-  "/fonlar/tarihsel-veriler/emeklilik-fonlari-tarihsel":
-    "Emeklilik Fonları Tarihsel Veriler",
-  "/fonlar/tarihsel-veriler/menkul-kiymet-yatirim-fonlari":
-    "Menkul Kıymet Yatırım Fonları Tarihsel Veriler",
-
-  "/halka-arz/kazanc-hesapla": "Halka Arz Kazanç Hesaplama",
-  "/halka-arz/onayli-izahnameler": "Onaylı İzahnameler",
-  "/halka-arz/onayli-izahnameler/onayli-1": "Onaylı İzahname Detayı",
-  "/halka-arz/talep-hesapla": "Halka Arz Talep Hesaplama",
-  "/halka-arz/taslak-izahnameler": "Taslak İzahnameler",
-
-  "/hakkimizda": "Hakkımızda",
-  "/gizlilik-politikasi": "Gizlilik Politikası",
-  "/cerez-politikasi": "Çerez Politikası",
-  "/kullanim-sartlari": "Kullanım Şartları",
-  "/yasal-uyari": "Yasal Uyarı",
-  "/iletisim": "İletişim",
-  "/reklam": "Reklam",
-};
-
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
+function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" | "buyuk" }) {
   const alanClass =
     variant === "icerik"
       ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
+      : variant === "buyuk"
+        ? "min-h-[260px] sm:min-h-[320px] lg:min-h-[420px]"
+        : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
 
   return (
     <section
@@ -164,638 +203,384 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
-function KategoriKutusu({
-  title,
-  href,
-  alt,
-  image,
+function ListeKutusu({
+  baslik,
+  veriler,
+  renk,
+  degerBaslik,
 }: {
-  title: string;
-  href: string;
-  alt: string;
-  image: string;
+  baslik: string;
+  veriler: { kod: string; fark?: string; hacim?: string; tutar?: string }[];
+  renk: "yesil" | "kirmizi" | "gri";
+  degerBaslik: string;
 }) {
-  return (
-    <Link
-      href={href}
-      prefetch={false}
-      className="group flex min-h-[210px] flex-col rounded-3xl bg-white/70 shadow-[0_10px_35px_rgba(15,23,42,0.06)] backdrop-blur-sm transition duration-300 hover:-translate-y-0.5 hover:bg-white/85 hover:shadow-[0_14px_40px_rgba(15,23,42,0.10)] xl:min-h-[225px]"
-      aria-label={title}
-    >
-      <div className="p-2 pb-1 md:p-3 md:pb-1">
-        <div className="relative overflow-hidden rounded-2xl bg-white/35">
-          <div className="relative aspect-[16/10] w-full">
-            <Image
-              src={image}
-              alt={alt}
-              fill
-              unoptimized
-              className="object-cover transition duration-300 group-hover:scale-[1.03]"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div className="flex items-center justify-center px-3 pb-3 pt-0 text-center md:px-4 md:pb-3">
-        <h2 className="text-xl font-semibold text-zinc-900 md:text-2xl">
-          {title}
-        </h2>
-      </div>
-    </Link>
-  );
-}
-
-function getIdFromHref(href: string) {
-  const match = href.match(/(\d+)(?!.*\d)/);
-  return match ? Number(match[1]) : 0;
-}
-
-function normalizeNewsItems(data: unknown): NewsItem[] {
-  if (!Array.isArray(data)) return [];
-
-  return data
-    .map((item: Partial<NewsItem>) => {
-      const href = item.href || "/";
-      const id =
-        typeof item.id === "number" && item.id > 0
-          ? item.id
-          : getIdFromHref(href);
-
-      return {
-        id,
-        title: item.title || "",
-        href,
-        image:
-          item.image && item.image.trim() !== ""
-            ? item.image
-            : id
-              ? `/haber${id}.png`
-              : "/placeholder.png",
-        alt: item.alt || item.title || "",
-      };
-    })
-    .filter(
-      (item: NewsItem) =>
-        item.id > 0 && item.title.trim() !== "" && item.href.trim() !== ""
-    )
-    .sort((a: NewsItem, b: NewsItem) => a.id - b.id);
-}
-
-function normalizePath(route: string) {
-  if (!route || route === "/") return "/";
-  return route.endsWith("/") ? route.slice(0, -1) : route;
-}
-
-function slugBaslikYap(slug: string) {
-  return slug
-    .replace(/-/g, " ")
-    .replace(/\b\w/g, (harf) => harf.toLocaleUpperCase("tr-TR"));
-}
-
-function haberBasligiBul(route: string) {
-  const haber = normalizeNewsItems(tumHaberler).find(
-    (item) => normalizePath(item.href) === route
-  );
-
-  return haber?.title || "";
-}
-
-function routeBasligiBul(route: string) {
-  const temizRoute = normalizePath(route);
-
-  if (sayfaBasliklari[temizRoute]) {
-    return sayfaBasliklari[temizRoute];
-  }
-
-  const haberBasligi = haberBasligiBul(temizRoute);
-
-  if (haberBasligi) {
-    return haberBasligi;
-  }
-
-  if (temizRoute.startsWith("/halka-arz/taslak-izahnameler/")) {
-    const slug = temizRoute.split("/").filter(Boolean).at(-1) || "";
-    return `${slugBaslikYap(slug)} Taslak İzahname`;
-  }
-
-  if (temizRoute.startsWith("/haber/")) {
-    const slug = temizRoute.split("/").filter(Boolean).at(-1) || "";
-    return slugBaslikYap(slug);
-  }
-
-  const sonParca = temizRoute.split("/").filter(Boolean).at(-1) || "Ana Sayfa";
-  return slugBaslikYap(sonParca);
-}
-
-function formatUpdateDate(value: string) {
-  const date = new Date(value);
-
-  if (Number.isNaN(date.getTime())) return "";
-
-  return new Intl.DateTimeFormat("tr-TR", {
-    timeZone: "Europe/Istanbul",
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-  }).format(date);
-}
-
-function getSonGuncellemeler(): GuncellemeItem[] {
-  const data = pageUpdates as PageUpdatesData;
-  const pages = Array.isArray(data.pages) ? data.pages : [];
-
-  return pages
-    .filter((item) => {
-      const route = normalizePath(item.route);
-
-      if (!route || route.includes("[")) {
-        return false;
-      }
-
-      return Boolean(item.updatedAt);
-    })
-    .sort(
-      (a, b) =>
-        new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime()
-    )
-    .slice(0, SON_GUNCELLEME_LIMIT)
-    .map((item) => ({
-      title: routeBasligiBul(item.route),
-      href: normalizePath(item.route),
-      time: formatUpdateDate(item.updatedAt),
-    }));
-}
-
-function getGuncellemeRenkleri() {
-  return {
-    card: "border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-teal-50 hover:border-emerald-300 hover:bg-emerald-50",
-    accent: "bg-emerald-600",
-    date: "bg-emerald-100 text-emerald-700 ring-emerald-200",
-    arrow: "bg-emerald-600 text-white",
-  };
-}
-
-function HaberSatiri({ item }: { item: NewsItem }) {
-  const haberGorseli =
-    item.image && item.image.trim() !== ""
-      ? item.image
-      : item.id
-        ? `/haber${item.id}.png`
-        : "/placeholder.png";
+  const renkSinifi =
+    renk === "yesil"
+      ? "border-green-200 bg-green-50"
+      : renk === "kirmizi"
+        ? "border-red-200 bg-red-50"
+        : "border-zinc-200 bg-zinc-50";
 
   return (
-    <Link
-      href={item.href}
-      prefetch={false}
-      aria-label={item.title}
-      className="group relative flex min-h-[112px] overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:bg-blue-50/30 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
-    >
-      <div className="absolute inset-y-0 left-0 w-1 bg-gradient-to-b from-blue-600 via-sky-500 to-emerald-500 opacity-90" />
+    <div className={`rounded-2xl border p-4 ${renkSinifi}`}>
+      <h2 className="mb-4 text-center text-xl font-bold text-zinc-900">{baslik}</h2>
 
-      <div className="flex w-full items-center gap-4 px-4 py-4 pl-5 sm:gap-5 sm:px-5 sm:py-5 sm:pl-6">
-        <div className="relative h-20 w-28 shrink-0 overflow-hidden rounded-2xl bg-zinc-100 shadow-sm ring-1 ring-zinc-200 sm:h-24 sm:w-36">
-          <img
-            src={haberGorseli}
-            alt={item.alt || item.title}
-            loading="lazy"
-            decoding="async"
-            fetchPriority="low"
-            width={144}
-            height={96}
-            className="h-full w-full object-cover transition duration-300 group-hover:scale-[1.05]"
-          />
+      <div className="overflow-hidden rounded-xl border border-zinc-200 bg-white">
+        <div className="grid grid-cols-2 border-b border-zinc-200 bg-zinc-100 px-4 py-3 text-sm font-bold text-zinc-700">
+          <div>Hisse</div>
+          <div className="text-right">{degerBaslik}</div>
         </div>
 
-        <div className="min-w-0 flex-1">
-          <div className="mb-2 flex flex-wrap items-center gap-2">
-            <span className="inline-flex rounded-full bg-zinc-900 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-white">
-              Güncel Haber
-            </span>
-            <span className="inline-flex rounded-full bg-zinc-100 px-3 py-1 text-[11px] font-semibold text-zinc-600 transition group-hover:bg-white">
-              Hoca İle Borsa
-            </span>
-          </div>
-
-          <h2 className="line-clamp-2 text-base font-bold leading-6 text-zinc-900 transition group-hover:text-blue-700 md:text-lg md:leading-7">
-            {item.title}
-          </h2>
-
-          <div className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-blue-700">
-            <span>Haberi oku</span>
-            <span className="transition duration-300 group-hover:translate-x-1">
-              →
-            </span>
-          </div>
-        </div>
-      </div>
-    </Link>
-  );
-}
-
-function SonGuncellemelerBar({ items }: { items: GuncellemeItem[] }) {
-  if (items.length === 0) {
-    return (
-      <section className="px-4 pb-5 md:px-6">
-        <div className="rounded-2xl border border-zinc-200 bg-white p-3 text-center text-sm text-zinc-500 shadow-sm">
-          Güncelleme verisi bulunamadı.
-        </div>
-      </section>
-    );
-  }
-
-  return (
-    <section className="px-4 pb-5 md:px-6">
-      <div className="overflow-hidden rounded-2xl border border-blue-100 bg-gradient-to-br from-white via-blue-50/50 to-slate-50 p-3 shadow-sm md:p-4">
-        <div className="mb-3 flex flex-wrap items-center gap-x-3 gap-y-2">
-          <span className="inline-flex shrink-0 rounded-full bg-blue-700 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-white shadow-sm">
-            Güncelleme Paneli
-          </span>
-
-          <h2 className="shrink-0 text-base font-black tracking-tight text-zinc-950 md:text-lg">
-            Son Güncellemeler
-          </h2>
-
-          <span className="hidden text-sm text-blue-300 sm:inline">•</span>
-
-          <p className="text-xs font-medium text-slate-600 md:text-sm">
-            Otomatik olarak en son güncellenen sayfalar.
-          </p>
-
-          <span className="ml-auto hidden rounded-full bg-white px-3 py-1 text-xs font-bold text-blue-700 shadow-sm ring-1 ring-blue-100 md:inline-flex">
-            Son {items.length} güncelleme
-          </span>
-        </div>
-
-        <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-4">
-          {items.map((item, index) => {
-            const renk = getGuncellemeRenkleri();
-
-            return (
-              <Link
-                key={`${item.href}-${item.time}-${index}`}
-                href={item.href}
-                prefetch={false}
-                className={`group relative flex min-h-[56px] items-center justify-between gap-2 overflow-hidden rounded-xl border px-3 py-2 text-zinc-900 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:shadow-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 ${renk.card}`}
-              >
-                <span
-                  className={`absolute inset-y-0 left-0 w-1 ${renk.accent}`}
-                />
-
-                <div className="min-w-0 pl-1">
-                  <h3 className="line-clamp-1 text-xs font-bold leading-5 text-zinc-900 md:text-sm">
-                    {item.title}
-                  </h3>
-                  <div
-                    className={`mt-0.5 inline-flex rounded-full px-2 py-0.5 text-[10px] font-semibold ring-1 ${renk.date}`}
-                  >
-                    {item.time}
-                  </div>
-                </div>
-
-                <div
-                  className={`flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs font-bold shadow-sm transition duration-300 group-hover:translate-x-0.5 ${renk.arrow}`}
-                >
-                  →
-                </div>
-              </Link>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-  );
-}
-
-function XIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden="true">
-      <path d="M18.244 2H21l-6.46 7.383L22.136 22H16.19l-4.657-6.104L6.19 22H3.43l6.908-7.894L2 2h6.097l4.21 5.564L18.244 2Zm-1.043 18h1.527L7.268 3.895H5.63L17.2 20Z" />
-    </svg>
-  );
-}
-
-function InstagramIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden="true">
-      <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.75A4 4 0 0 0 3.75 7.75v8.5a4 4 0 0 0 4 4h8.5a4 4 0 0 0 4-4v-8.5a4 4 0 0 0-4-4h-8.5Zm8.875 1.5a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.75A3.25 3.25 0 1 0 12 15.25 3.25 3.25 0 0 0 12 8.75Z" />
-    </svg>
-  );
-}
-
-function TelegramIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden="true">
-      <path d="M21.944 4.507a1.5 1.5 0 0 0-1.746-.184L3.68 12.35a1.5 1.5 0 0 0 .176 2.764l3.63 1.34 1.34 3.63a1.5 1.5 0 0 0 2.764.176l8.026-16.52a1.5 1.5 0 0 0-.672-2.033ZM9.24 15.94l-.924 2.505-.924-2.505 7.622-6.28L9.24 15.94Z" />
-    </svg>
-  );
-}
-
-function MailIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      className="h-4 w-4 stroke-current"
-      fill="none"
-      aria-hidden="true"
-    >
-      <path
-        d="M4 6h16v12H4z"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <path
-        d="m4 8 8 6 8-6"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
-function LocationIcon() {
-  return (
-    <svg
-      viewBox="0 0 24 24"
-      className="h-4 w-4 stroke-current"
-      fill="none"
-      aria-hidden="true"
-    >
-      <path
-        d="M12 21s6-4.35 6-10a6 6 0 1 0-12 0c0 5.65 6 10 6 10Z"
-        strokeWidth="1.8"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-      <circle cx="12" cy="11" r="2.5" strokeWidth="1.8" />
-    </svg>
-  );
-}
-
-function SosyalIkon({
-  href,
-  label,
-  children,
-}: {
-  href: string;
-  label: string;
-  children: ReactNode;
-}) {
-  return (
-    <a
-      href={href}
-      aria-label={label}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-700 bg-slate-800 text-slate-200 transition hover:bg-slate-700"
-    >
-      {children}
-    </a>
-  );
-}
-
-function FooterLinkColumn({
-  title,
-  links,
-}: {
-  title: string;
-  links: { label: string; href: string }[];
-}) {
-  return (
-    <div>
-      <h3 className="mb-4 text-base font-semibold text-white">{title}</h3>
-      <ul className="space-y-3">
-        {links.map((item) => (
-          <li key={item.label}>
-            <Link
-              href={item.href}
-              prefetch={false}
-              className="text-sm text-slate-300 transition hover:text-white"
+        {veriler.length > 0 ? (
+          veriler.map((item, index) => (
+            <div
+              key={item.kod}
+              className="grid grid-cols-2 border-b border-zinc-100 px-4 py-3 text-sm last:border-b-0"
             >
-              {item.label}
-            </Link>
-          </li>
-        ))}
-      </ul>
+              <div className="font-semibold text-zinc-900">
+                {index + 1}. {item.kod}
+              </div>
+              <div className="text-right font-semibold text-zinc-700">
+                {item.fark || item.hacim || item.tutar}
+              </div>
+            </div>
+          ))
+        ) : (
+          <div className="px-4 py-6 text-center text-sm font-semibold text-zinc-500">
+            Veri bulunamadı
+          </div>
+        )}
+      </div>
     </div>
   );
 }
 
-export default function HomePage() {
-  const newsItems = normalizeNewsItems(tumHaberler).slice(
-    0,
-    ANA_SAYFA_HABER_LIMIT
-  );
-  const guncellemeler = getSonGuncellemeler();
+function KurumKutusu({
+  baslik,
+  veriler,
+  renk,
+}: {
+  baslik: string;
+  veriler: { kurum: string; hacim: string; oran: string }[];
+  renk: "yesil" | "kirmizi" | "gri";
+}) {
+  const renkSinifi =
+    renk === "yesil"
+      ? "border-green-200 bg-green-50"
+      : renk === "kirmizi"
+        ? "border-red-200 bg-red-50"
+        : "border-zinc-200 bg-zinc-50";
 
   return (
-    <main className="min-h-screen">
-      <div className="mx-auto max-w-7xl">
-        <section className="px-4 pt-4 md:px-6 md:pt-6">
-          <div className="overflow-hidden rounded-2xl">
-            <img
-              src="/banner.png"
-              alt="Hoca İle Borsa banner görseli"
-              className="block h-auto w-full rounded-2xl"
-            />
-          </div>
-        </section>
+    <div className={`rounded-2xl border p-4 ${renkSinifi}`}>
+      <h2 className="mb-4 text-center text-xl font-bold text-zinc-900">{baslik}</h2>
 
-        <section className="px-4 pt-6 md:px-6">
+      <div className="overflow-hidden rounded-xl border border-zinc-200 bg-white">
+        <div className="grid grid-cols-3 border-b border-zinc-200 bg-zinc-100 px-4 py-3 text-sm font-bold text-zinc-700">
+          <div>Kurum</div>
+          <div className="text-right">
+            {baslik === "En Çok Hacim Yapanlar" ? "Toplam Hacim" : "Net Hacim"}
+          </div>
+          <div className="text-right">Yüzde</div>
+        </div>
+
+        {veriler.map((item, index) => (
+          <div
+            key={item.kurum}
+            className="grid grid-cols-3 border-b border-zinc-100 px-4 py-3 text-sm last:border-b-0"
+          >
+            <div className="font-semibold text-zinc-900">
+              {index + 1}. {item.kurum}
+            </div>
+            <div className="text-right font-semibold text-zinc-700">
+              {item.hacim}
+            </div>
+            <div className="text-right font-semibold text-zinc-700">
+              {item.oran}
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
+function OnemKutulari({
+  tip,
+}: {
+  tip: "sari" | "sari-tek" | "turuncu" | "turuncu-gri" | "kirmizi";
+}) {
+  const renkler =
+    tip === "sari"
+      ? ["bg-yellow-400", "bg-yellow-400", "bg-zinc-300"]
+      : tip === "sari-tek"
+        ? ["bg-yellow-400", "bg-zinc-300", "bg-zinc-300"]
+        : tip === "turuncu"
+          ? ["bg-orange-500", "bg-orange-500", "bg-orange-500"]
+          : tip === "turuncu-gri"
+            ? ["bg-orange-500", "bg-orange-500", "bg-zinc-300"]
+            : ["bg-red-500", "bg-red-500", "bg-red-500"];
+
+  return (
+    <div className="flex items-center gap-1">
+      {renkler.map((renk, index) => (
+        <span
+          key={index}
+          className={`h-3.5 w-3.5 rounded-sm border border-zinc-500 ${renk}`}
+        />
+      ))}
+    </div>
+  );
+}
+
+function TakvimTarihSatiri({ tarih }: { tarih: string }) {
+  return (
+    <div className="border-y border-zinc-200 bg-zinc-100 px-3 py-2 text-center text-sm font-bold text-zinc-800">
+      {tarih}
+    </div>
+  );
+}
+
+function TakvimSatiri({
+  saat,
+  ulke,
+  gosterge,
+  onem,
+  aciklanan,
+  beklenti,
+  onceki,
+}: {
+  saat: string;
+  ulke: string;
+  gosterge: string;
+  onem: "sari" | "sari-tek" | "turuncu" | "turuncu-gri" | "kirmizi";
+  aciklanan: string;
+  beklenti: string;
+  onceki: string;
+}) {
+  return (
+    <div className="grid grid-cols-[70px_55px_minmax(220px,1fr)_70px_95px_95px_95px] items-center border-b border-zinc-100 px-3 py-3 text-sm last:border-b-0">
+      <div className="font-semibold text-zinc-900">{saat}</div>
+      <div className="font-semibold text-zinc-900">{ulke}</div>
+      <div className="font-semibold text-zinc-900">{gosterge}</div>
+      <div>
+        <OnemKutulari tip={onem} />
+      </div>
+      <div className="text-center font-semibold text-zinc-700">{aciklanan}</div>
+      <div className="text-center font-semibold text-zinc-700">{beklenti}</div>
+      <div className="text-center font-semibold text-zinc-700">{onceki}</div>
+    </div>
+  );
+}
+
+export default function GunlukBorsaOzetiPage() {
+  const pozitif = bistVeri.degisimYuzde >= 0;
+
+  return (
+    <main className="min-h-screen bg-white px-4 py-6 md:px-6">
+      <div className="mx-auto max-w-7xl">
+        <div className="mb-6 flex gap-3">
+          <Link
+            href="/"
+            className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
+          >
+            Ana Sayfa
+          </Link>
+
+          <Link
+            href="/borsa"
+            className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
+          >
+            Geri
+          </Link>
+        </div>
+
+        <h1 className="mb-6 text-3xl font-bold text-zinc-900">Günlük Borsa Özeti</h1>
+
+        <section className="mb-8">
           <ReklamAlani variant="yatay" />
         </section>
 
-        <section className="px-4 py-6 md:px-6">
-          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-5">
-            {kategoriKutulari.map((item) => (
-              <KategoriKutusu key={item.href} {...item} />
-            ))}
-          </div>
-        </section>
-
-        <section className="px-4 pb-6 md:px-6">
-          <div className="overflow-hidden rounded-3xl border border-zinc-200 bg-gradient-to-br from-zinc-50 via-white to-blue-50/50 p-4 shadow-sm md:p-6">
-            <div className="mb-5 flex flex-wrap items-center gap-x-3 gap-y-2">
-              <span className="inline-flex shrink-0 rounded-full bg-blue-600 px-3 py-1 text-xs font-bold uppercase tracking-wide text-white">
-                Piyasa Gündemi
-              </span>
-
-              <h1 className="shrink-0 text-lg font-black tracking-tight text-zinc-950 md:text-2xl">
-                Güncel Borsa Haberleri
-              </h1>
-
-              <span className="hidden text-sm text-blue-300 sm:inline">•</span>
-
-              <p className="text-xs font-medium text-zinc-600 md:text-sm">
-                Borsa, şirket haberleri ve finans gündeminden öne çıkan son
-                başlıklar.
-              </p>
+        <div className="mb-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
+          <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
+            <div className="relative aspect-[16/9] w-full">
+              <Image
+                src="/günlük-özet.jpg"
+                alt="Günlük özet görseli"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
-
-            {newsItems.length > 0 ? (
-              <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
-                {newsItems.map((item) => (
-                  <HaberSatiri key={item.id || item.href} item={item} />
-                ))}
-              </div>
-            ) : (
-              <div className="rounded-2xl border border-zinc-200 bg-white p-6 text-center text-zinc-500">
-                Haber bulunamadı.
-              </div>
-            )}
-          </div>
-        </section>
-
-        <section className="px-4 pb-6 md:px-6">
-          <ReklamAlani variant="icerik" />
-        </section>
-
-        <SonGuncellemelerBar items={guncellemeler} />
-
-        <section className="px-4 pb-6 md:px-6">
-          <div className="rounded-2xl border border-zinc-200 bg-white p-5 md:p-7">
-            <h2 className="mb-4 text-xl font-bold text-zinc-900 md:text-2xl">
-              Hoca İle Borsa Hakkında
-            </h2>
-
-            <div className="space-y-4 text-sm leading-7 text-zinc-700 md:text-base">
-              <p>
-                Hoca İle Borsa; borsa, halka arz, temettü, fonlar, faiz
-                oranları ve finans içeriklerini daha düzenli ve anlaşılır
-                şekilde sunmak amacıyla hazırlanmış bir finans içerik
-                platformudur.
-              </p>
-
-              <p>
-                Sitede yer alan içerikler; genel bilgilendirme, haber, eğitim,
-                veri derleme, listeleme ve karşılaştırma amacı taşır.
-                Yayınlanan içerikler yatırım danışmanlığı kapsamında değildir ve
-                kişiye özel alım-satım önerisi niteliği taşımaz.
-              </p>
-
-              <p>
-                Platform üzerinde yer alan tablo, oran, liste, takvim ve analiz
-                içerikleri belirli kaynaklar ve düzenli veri güncellemeleri ile
-                hazırlanır. Buna rağmen zaman zaman gecikme, eksiklik veya yazım
-                hatası oluşabilir. Bu nedenle önemli kararlar öncesinde resmi
-                kaynaklardan ayrıca kontrol yapılması önerilir.
-              </p>
-
-              <p>
-                Hoca İle Borsa; finans içeriklerini sade, erişilebilir ve takip
-                edilebilir bir yapıda sunmayı hedefler. Detaylı bilgi için{" "}
-                <Link
-                  href="/hakkimizda"
-                  prefetch={false}
-                  className="font-medium text-blue-600 underline underline-offset-4 hover:text-blue-700"
-                >
-                  Hakkımızda
-                </Link>
-                ,{" "}
-                <Link
-                  href="/yasal-uyari"
-                  prefetch={false}
-                  className="font-medium text-blue-600 underline underline-offset-4 hover:text-blue-700"
-                >
-                  Yasal Uyarı
-                </Link>{" "}
-                ve{" "}
-                <Link
-                  href="/iletisim"
-                  prefetch={false}
-                  className="font-medium text-blue-600 underline underline-offset-4 hover:text-blue-700"
-                >
-                  İletişim
-                </Link>{" "}
-                sayfaları incelenebilir.
-              </p>
-            </div>
-          </div>
-        </section>
-      </div>
-
-      <footer className="mt-8 bg-slate-950 text-slate-200">
-        <div className="mx-auto max-w-7xl px-4 py-12 md:px-6">
-          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-4">
-            <div>
-              <h3 className="mb-4 text-xl font-semibold leading-snug text-white">
-                Hoca İle Borsa – Borsa, Halka Arz ve Finans İçerikleri
-              </h3>
-              <p className="mb-6 max-w-sm text-sm leading-7 text-slate-400">
-                Borsa, halka arz, temettü, fonlar ve finans içeriklerini tek
-                yerde takip edebileceğiniz güncel bilgi platformu.
-              </p>
-
-              <div className="flex gap-3">
-                <SosyalIkon href="https://x.com/HocaileBorsa" label="X">
-                  <XIcon />
-                </SosyalIkon>
-                <SosyalIkon
-                  href="https://www.instagram.com/hocaileborsa/"
-                  label="Instagram"
-                >
-                  <InstagramIcon />
-                </SosyalIkon>
-                <SosyalIkon
-                  href="https://t.me/borsa_halkaarz_endeks"
-                  label="Telegram"
-                >
-                  <TelegramIcon />
-                </SosyalIkon>
-              </div>
-            </div>
-
-            <FooterLinkColumn
-              title="Kategoriler"
-              links={[
-                { label: "Ana Sayfa", href: "/" },
-                { label: "Halka Arz", href: "/halka-arz" },
-                { label: "Fonlar", href: "/fonlar" },
-                { label: "Temettü", href: "/temettu" },
-                { label: "Borsa Analiz", href: "/borsa" },
-                { label: "Faiz Oranları", href: "/mevduat-kredi-faizleri" },
-              ]}
-            />
-
-            <FooterLinkColumn
-              title="Kurumsal"
-              links={[
-                { label: "Hakkımızda", href: "/hakkimizda" },
-                { label: "Gizlilik Politikası", href: "/gizlilik-politikasi" },
-                { label: "Çerez Politikası", href: "/cerez-politikasi" },
-                { label: "Kullanım Şartları", href: "/kullanim-sartlari" },
-                { label: "Yasal Uyarı", href: "/yasal-uyari" },
-                { label: "İletişim", href: "/iletisim" },
-                { label: "Reklam", href: "/reklam" },
-              ]}
-            />
-
-            <div>
-              <h3 className="mb-4 text-base font-semibold text-white">
-                İletişim
-              </h3>
-              <div className="space-y-3 text-sm text-slate-300">
-                <div className="flex items-center gap-2">
-                  <MailIcon />
-                  <span>destekhocaileborsa@gmail.com</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <LocationIcon />
-                  <span>Kırklareli, Türkiye</span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="mt-10 flex flex-col gap-3 border-t border-slate-800 pt-6 text-xs text-slate-400 md:flex-row md:items-center md:justify-between">
-            <p>© 2026 Hoca İle Borsa. Tüm hakları saklıdır.</p>
-            <p>Sitede yer alan içerikler izinsiz kullanılamaz.</p>
           </div>
         </div>
-      </footer>
+
+        <div className="mb-6 grid gap-4 xl:grid-cols-[1fr_2.5fr]">
+          <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
+            <div className="grid min-h-[320px] grid-rows-3 text-center">
+              <div className="flex items-center justify-center border-b border-zinc-200">
+                <div>
+                  <div className="text-2xl font-semibold text-zinc-700">XU100</div>
+                  <div className="mt-3 text-4xl font-bold text-zinc-900">{bistVeri.kapanis}</div>
+                </div>
+              </div>
+
+              <div className="flex items-center justify-center border-b border-zinc-200">
+                <div
+                  className={`text-4xl font-semibold ${
+                    pozitif ? "text-green-700" : "text-red-700"
+                  }`}
+                >
+                  %{bistVeri.degisimYuzde.toFixed(2)}
+                </div>
+              </div>
+
+              <div className="flex items-center justify-center">
+                <div className="text-2xl font-semibold text-zinc-700">{bistVeri.tarih}</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
+            <div className="mb-4 text-center text-sm font-semibold text-zinc-600">
+              Ekonomik Takvim
+            </div>
+
+            <div className="overflow-x-auto rounded-xl border border-zinc-200 bg-white">
+              <div className="min-w-[720px]">
+                <div className="grid grid-cols-[70px_55px_minmax(220px,1fr)_70px_95px_95px_95px] border-b border-zinc-200 bg-zinc-100 px-3 py-3 text-xs font-bold text-zinc-700">
+                  <div>Saat</div>
+                  <div>Ülke</div>
+                  <div>Ekonomik Gösterge</div>
+                  <div>Önem</div>
+                  <div className="text-center">Açıklanan</div>
+                  <div className="text-center">Beklenti</div>
+                  <div className="text-center">Önceki</div>
+                </div>
+
+                {ekonomikTakvimVerileri.map((grup) => (
+                  <div key={grup.tarih}>
+                    <TakvimTarihSatiri tarih={grup.tarih} />
+                    {grup.kayitlar.map((kayit) => (
+                      <TakvimSatiri
+                        key={`${kayit.saat}-${kayit.gosterge}`}
+                        saat={kayit.saat}
+                        ulke={kayit.ulke}
+                        gosterge={kayit.gosterge}
+                        onem={kayit.onem}
+                        aciklanan={kayit.aciklanan}
+                        beklenti={kayit.beklenti}
+                        onceki={kayit.onceki}
+                      />
+                    ))}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="mb-6 grid gap-4 xl:grid-cols-3">
+          <ListeKutusu
+            baslik="En Çok Yükselen"
+            veriler={enCokYukselenler}
+            renk="yesil"
+            degerBaslik="Fark %"
+          />
+          <ListeKutusu
+            baslik="En Çok Düşen"
+            veriler={enCokDusenler}
+            renk="kirmizi"
+            degerBaslik="Fark %"
+          />
+          <ListeKutusu
+            baslik="En Hacimliler"
+            veriler={enHacimliler}
+            renk="gri"
+            degerBaslik="Hacim"
+          />
+        </div>
+
+        <div className="mb-6 grid gap-4 xl:grid-cols-2">
+          <ListeKutusu
+            baslik="İlk 5 Para Girişi"
+            veriler={paraGirisi}
+            renk="yesil"
+            degerBaslik="Tutar"
+          />
+          <ListeKutusu
+            baslik="İlk 5 Para Çıkışı"
+            veriler={paraCikisi}
+            renk="kirmizi"
+            degerBaslik="Tutar"
+          />
+        </div>
+
+        <div className="rounded-2xl border border-zinc-200 bg-white p-1 md:p-2">
+          <h2 className="px-3 py-4 text-center text-2xl font-bold text-zinc-900">
+            En Çok İşlem Yapan Kurumlar
+          </h2>
+
+          <div className="grid gap-4 xl:grid-cols-3">
+            <KurumKutusu
+              baslik="En Çok Alış Yapanlar"
+              veriler={enCokAlisYapanKurumlar}
+              renk="yesil"
+            />
+            <KurumKutusu
+              baslik="En Çok Satış Yapanlar"
+              veriler={enCokSatisYapanKurumlar}
+              renk="kirmizi"
+            />
+            <KurumKutusu
+              baslik="En Çok Hacim Yapanlar"
+              veriler={enCokHacimYapanKurumlar}
+              renk="gri"
+            />
+          </div>
+        </div>
+
+        <section className="mt-12 mb-8">
+          <ReklamAlani variant="buyuk" />
+        </section>
+
+        <section className="rounded-2xl border border-zinc-200 bg-white p-6">
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+            Günlük Borsa Özeti Hakkında
+          </h2>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Günlük borsa özeti sayfası, Borsa İstanbul piyasalarında yaşanan güncel
+            gelişmeleri tek ekranda takip etmek isteyen yatırımcılar için
+            hazırlanmıştır. Bu sayfada BIST 100 endeksi kapanış verileri, günlük
+            değişim oranları, en çok yükselen hisseler, en çok düşen hisseler,
+            para girişi ve para çıkışı yaşanan hisseler gibi önemli piyasa
+            verilerine hızlı şekilde ulaşabilirsiniz.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Günlük borsa verileri, yatırımcıların piyasa yönünü anlaması ve kısa
+            vadeli fiyat hareketlerini değerlendirmesi açısından büyük önem taşır.
+            Özellikle işlem hacmi yüksek hisseler, para girişi yaşanan şirketler,
+            kurumsal işlemler ve dikkat çeken sektör hareketleri yatırım
+            kararlarında önemli sinyaller verebilir.
+          </p>
+
+          <p className="mb-4 leading-7 text-zinc-700">
+            Sayfada yer alan ekonomik takvim, en çok yükselen ve düşen hisseler,
+            en hacimli hisseler ve kurum bazlı işlem dağılımları sayesinde piyasanın
+            gün içindeki genel görünümünü daha detaylı inceleyebilirsiniz. Bu yapı,
+            hem kısa vadeli traderlar hem de uzun vadeli yatırımcılar için pratik
+            bir takip ekranı sunar.
+          </p>
+
+          <p className="leading-7 text-zinc-700">
+            Güncel BIST 100 verileri, günlük hisse performansları, işlem hacmi
+            sıralamaları, para giriş çıkış analizleri, ekonomik takvim ve kurum
+            bazlı piyasa özeti için bu sayfayı düzenli olarak takip edebilirsiniz.
+          </p>
+        </section>
+      </div>
     </main>
   );
 }
