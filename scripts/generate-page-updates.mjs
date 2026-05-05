@@ -3,7 +3,7 @@ import path from "path";
 import crypto from "crypto";
 import { execSync } from "child_process";
 
-const VERSION = 3;
+const VERSION = 4;
 
 const rootDir = process.cwd();
 const appDir = path.join(rootDir, "app");
@@ -27,9 +27,7 @@ const takipEdilecekVeriUzantilari = new Set([
   ".ts",
 ]);
 
-const yokSayilacakDosyalar = new Set([
-  "page-updates.generated.json",
-]);
+const yokSayilacakDosyalar = new Set(["page-updates.generated.json"]);
 
 function toPosixPath(value) {
   return value.split(path.sep).join("/");
@@ -49,6 +47,12 @@ function normalizeText(value) {
     .replace(/ö/g, "o")
     .replace(/ç/g, "c")
     .trim();
+}
+
+function slugify(value) {
+  return normalizeText(value)
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "");
 }
 
 function stableJson(value) {
@@ -264,8 +268,101 @@ function getImportedDataFiles(pageFilePath) {
   return relatedFiles;
 }
 
+function getStringReferencedDataFiles(pageFilePath) {
+  const relatedFiles = [];
+
+  try {
+    const content = fs.readFileSync(pageFilePath, "utf8");
+    const pageDir = path.dirname(pageFilePath);
+
+    const matches = [
+      ...content.matchAll(/["'`]([^"'`]+?\.(xlsx|xls|xlsm|csv|json|ts))["'`]/gi),
+    ];
+
+    for (const match of matches) {
+      const ref = match[1];
+
+      let resolved = "";
+
+      if (ref.startsWith(".")) {
+        resolved = path.resolve(pageDir, ref);
+      } else if (ref.startsWith("@/")) {
+        resolved = path.resolve(rootDir, ref.replace("@/", ""));
+      } else if (ref.startsWith("/")) {
+        resolved = path.resolve(rootDir, ref.replace(/^\/+/, ""));
+      } else if (ref.includes("data/")) {
+        resolved = path.resolve(pageDir, ref);
+      } else {
+        continue;
+      }
+
+      if (
+        fs.existsSync(resolved) &&
+        fs.statSync(resolved).isFile() &&
+        !yokSayilacakDosyalar.has(path.basename(resolved))
+      ) {
+        relatedFiles.push(resolved);
+      }
+    }
+  } catch {
+    return relatedFiles;
+  }
+
+  return relatedFiles;
+}
+
+function getRouteSpecificSharedDataFiles(route) {
+  const relatedFiles = [];
+  const normalizedRoute = normalizeText(route);
+  const routeParts = route.split("/").filter(Boolean);
+  const lastSlug = routeParts[routeParts.length - 1] || "";
+
+  if (!lastSlug) return relatedFiles;
+
+  const lastSlugNormalized = slugify(lastSlug);
+
+  const sharedDataDirs = [];
+
+  if (normalizedRoute.startsWith("/borsa/gosterge-taramalari/")) {
+    sharedDataDirs.push(path.join(appDir, "borsa", "gosterge-taramalari", "data"));
+  }
+
+  if (normalizedRoute.startsWith("/borsa/hacim-artisi-analizi/")) {
+    sharedDataDirs.push(path.join(appDir, "borsa", "hacim-artisi-analizi", "data"));
+  }
+
+  if (normalizedRoute.startsWith("/fonlar/getiri/")) {
+    sharedDataDirs.push(path.join(appDir, "fonlar", "getiri", "data"));
+  }
+
+  if (normalizedRoute.startsWith("/fonlar/tarihsel-veriler/")) {
+    sharedDataDirs.push(path.join(appDir, "fonlar", "tarihsel-veriler", "data"));
+  }
+
+  for (const dataDir of sharedDataDirs) {
+    if (!fs.existsSync(dataDir)) continue;
+
+    const files = walkDataFiles(dataDir);
+
+    for (const file of files) {
+      const fileBase = slugify(path.basename(file, path.extname(file)));
+
+      if (
+        fileBase === lastSlugNormalized ||
+        fileBase.includes(lastSlugNormalized) ||
+        lastSlugNormalized.includes(fileBase)
+      ) {
+        relatedFiles.push(file);
+      }
+    }
+  }
+
+  return relatedFiles;
+}
+
 function getRelatedFilesForPage(pageFilePath) {
   const pageDir = path.dirname(pageFilePath);
+  const route = getRouteFromPageFile(pageFilePath);
   const relatedFiles = [pageFilePath];
 
   const ownDataDir = path.join(pageDir, "data");
@@ -289,6 +386,8 @@ function getRelatedFilesForPage(pageFilePath) {
   }
 
   relatedFiles.push(...getImportedDataFiles(pageFilePath));
+  relatedFiles.push(...getStringReferencedDataFiles(pageFilePath));
+  relatedFiles.push(...getRouteSpecificSharedDataFiles(route));
 
   return [...new Set(relatedFiles)];
 }
