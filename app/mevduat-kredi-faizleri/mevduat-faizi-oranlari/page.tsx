@@ -115,7 +115,9 @@ function average(values: number[]) {
 
 function findHeaderRow(rows: unknown[][]) {
   return rows.findIndex((row) => {
-    const normalized = row.map((cell) => cleanText(cell).toLocaleLowerCase("tr-TR"));
+    const normalized = row.map((cell) =>
+      cleanText(cell).toLocaleLowerCase("tr-TR")
+    );
     const hasTarih = normalized.some((cell) => cell.includes("tarih"));
     const hasOrtalama = normalized.some((cell) => cell.includes("ortalama"));
     return hasTarih && hasOrtalama;
@@ -315,31 +317,38 @@ function MevduatGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
               strokeLinecap="round"
             />
 
-            {points.map((point, index) => (
-              <g key={`${point.label}-${index}`}>
-                <circle cx={point.x} cy={point.y} r="4" fill="#111827" />
+            {points.map((point, index) => {
+              const tarihGoster =
+                index === 0 || index === points.length - 1 || index % 7 === 0;
 
-                <text
-                  x={point.x}
-                  y={point.y - 12}
-                  textAnchor="middle"
-                  fontSize="11"
-                  fill="#52525b"
-                >
-                  %{point.value.toFixed(2).replace(".", ",")}
-                </text>
+              return (
+                <g key={`${point.label}-${index}`}>
+                  <circle cx={point.x} cy={point.y} r="4" fill="#111827" />
 
-                <text
-                  x={point.x}
-                  y={height - 18}
-                  textAnchor="middle"
-                  fontSize="11"
-                  fill="#71717a"
-                >
-                  {point.label}
-                </text>
-              </g>
-            ))}
+                  <text
+                    x={point.x}
+                    y={point.y - 12}
+                    textAnchor="middle"
+                    fontSize="11"
+                    fill="#52525b"
+                  >
+                    %{point.value.toFixed(2).replace(".", ",")}
+                  </text>
+
+                  {tarihGoster ? (
+                    <text
+                      x={point.x}
+                      y={height - 18}
+                      textAnchor="middle"
+                      fontSize="11"
+                      fill="#71717a"
+                    >
+                      {point.label}
+                    </text>
+                  ) : null}
+                </g>
+              );
+            })}
           </svg>
         </div>
       </div>
@@ -349,8 +358,6 @@ function MevduatGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
 
 export default function MevduatFaiziOranlariPage() {
   const { bankaListesi, grafikVerisi, hata } = getMevduatVerileri();
-  const data = faizData as FaizJsonData;
-  const guncellemeTarihi = data.guncellemeTarihi || "-";
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -382,7 +389,6 @@ export default function MevduatFaiziOranlariPage() {
           günlük ortalama faiz grafiği.
         </p>
 
-        
         {hata ? (
           <section className="mb-8 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
             {hata}
@@ -423,7 +429,10 @@ export default function MevduatFaiziOranlariPage() {
                   ))
                 ) : (
                   <tr>
-                    <td colSpan={2} className="px-4 py-6 text-center text-zinc-500">
+                    <td
+                      colSpan={2}
+                      className="px-4 py-6 text-center text-zinc-500"
+                    >
                       Gösterilecek veri bulunamadı.
                     </td>
                   </tr>

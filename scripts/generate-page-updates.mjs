@@ -20,7 +20,12 @@ const takipEdilecekVeriUzantilari = new Set([
   ".xls",
   ".xlsm",
   ".csv",
+  ".json",
   ".ts",
+]);
+
+const yokSayilacakDosyalar = new Set([
+  "page-updates.generated.json",
 ]);
 
 function toPosixPath(value) {
@@ -114,6 +119,7 @@ function walkDataFiles(dir, results = []) {
     }
 
     if (!entry.isFile()) continue;
+    if (yokSayilacakDosyalar.has(entry.name)) continue;
 
     const ext = path.extname(entry.name).toLowerCase();
 
@@ -139,6 +145,7 @@ function getRelatedFilesForPage(pageFilePath) {
 
   for (const entry of directEntries) {
     if (!entry.isFile()) continue;
+    if (yokSayilacakDosyalar.has(entry.name)) continue;
 
     const fullPath = path.join(pageDir, entry.name);
     const ext = path.extname(entry.name).toLowerCase();
