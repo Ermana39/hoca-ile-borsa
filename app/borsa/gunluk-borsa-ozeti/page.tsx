@@ -19,8 +19,8 @@ const tumDusenler = [
   { kod: "PASEU", fark: "-10,00%" },
   { kod: "BIGEN", fark: "-9,99%" },
   { kod: "AYCES", fark: "-9,97%" },
-  { kod: "APYVCF2", fark: "-9,08%" },
-  { kod: "HTPSBF2", fark: "-8,04%" },
+  { kod: "SMRVA", fark: "-7,59%" },
+  { kod: "TMPOL", fark: "-7,20%" },
 ];
 
 const tumHacimliler = [
