@@ -4,7 +4,7 @@ import macdAlData from "../data/macd-al.json";
 export const metadata = {
   title: "MACD Al Veren Hisseler | Hoca İle Borsa",
   description:
-    "MACD göstergesine göre al sinyali üreten Borsa İstanbul hisselerini inceleyin.",
+    "MACD göstergesine göre al sinyali üreten Borsa İstanbul hisselerini inceleyin. MACD sıfır değerinin üzerinde ortalamanın yukarıya doğru kesişimi",
 };
 
 export const revalidate = 3600;
