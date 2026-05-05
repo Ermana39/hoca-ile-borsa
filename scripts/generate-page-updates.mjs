@@ -1,6 +1,9 @@
 import fs from "fs";
 import path from "path";
+import crypto from "crypto";
 import { execSync } from "child_process";
+
+const VERSION = 3;
 
 const rootDir = process.cwd();
 const appDir = path.join(rootDir, "app");
@@ -30,6 +33,70 @@ const yokSayilacakDosyalar = new Set([
 
 function toPosixPath(value) {
   return value.split(path.sep).join("/");
+}
+
+function hashValue(value) {
+  return crypto.createHash("sha256").update(value).digest("hex");
+}
+
+function normalizeText(value) {
+  return String(value || "")
+    .toLocaleLowerCase("tr-TR")
+    .replace(/ı/g, "i")
+    .replace(/ğ/g, "g")
+    .replace(/ü/g, "u")
+    .replace(/ş/g, "s")
+    .replace(/ö/g, "o")
+    .replace(/ç/g, "c")
+    .trim();
+}
+
+function stableJson(value) {
+  if (Array.isArray(value)) {
+    return value.map(stableJson);
+  }
+
+  if (value && typeof value === "object") {
+    const temiz = {};
+
+    for (const key of Object.keys(value).sort()) {
+      const normalizedKey = normalizeText(key);
+
+      if (
+        normalizedKey === "generatedat" ||
+        normalizedKey === "updatedat" ||
+        normalizedKey === "guncellemetarihi" ||
+        normalizedKey === "lastupdated" ||
+        normalizedKey === "createdat" ||
+        normalizedKey === "olusturmatarihi"
+      ) {
+        continue;
+      }
+
+      temiz[key] = stableJson(value[key]);
+    }
+
+    return temiz;
+  }
+
+  return value;
+}
+
+function readPreviousOutput() {
+  try {
+    if (!fs.existsSync(outputFile)) {
+      return { version: 0, pages: [] };
+    }
+
+    const parsed = JSON.parse(fs.readFileSync(outputFile, "utf8"));
+
+    return {
+      version: Number(parsed.version || 0),
+      pages: Array.isArray(parsed.pages) ? parsed.pages : [],
+    };
+  } catch {
+    return { version: 0, pages: [] };
+  }
 }
 
 function getRouteFromPageFile(filePath) {
@@ -66,22 +133,6 @@ function isGitTracked(filePath) {
   }
 }
 
-function isGitDirty(filePath) {
-  try {
-    const relative = toPosixPath(path.relative(rootDir, filePath));
-
-    const result = execSync(`git status --porcelain -- "${relative}"`, {
-      cwd: rootDir,
-      stdio: ["ignore", "pipe", "ignore"],
-      encoding: "utf8",
-    }).trim();
-
-    return Boolean(result);
-  } catch {
-    return false;
-  }
-}
-
 function getGitUpdatedAt(filePath) {
   try {
     if (!isGitTracked(filePath)) return "";
@@ -102,28 +153,10 @@ function getGitUpdatedAt(filePath) {
 
 function getFileUpdatedAt(filePath) {
   try {
-    const stat = fs.statSync(filePath);
-    return stat.mtime.toISOString();
+    return fs.statSync(filePath).mtime.toISOString();
   } catch {
     return "";
   }
-}
-
-function getBestUpdatedAt(filePath) {
-  if (!fs.existsSync(filePath)) return "";
-
-  const tracked = isGitTracked(filePath);
-  const dirty = isGitDirty(filePath);
-
-  if (tracked && dirty) {
-    return getFileUpdatedAt(filePath);
-  }
-
-  if (tracked) {
-    return getGitUpdatedAt(filePath);
-  }
-
-  return "";
 }
 
 function walkPages(dir, results = []) {
@@ -260,11 +293,105 @@ function getRelatedFilesForPage(pageFilePath) {
   return [...new Set(relatedFiles)];
 }
 
-function getNewestUpdatedAt(files) {
+function getFaizSheetNamesForRoute(route) {
+  const normalizedRoute = normalizeText(route);
+
+  if (!normalizedRoute.includes("mevduat-kredi-faizleri")) return [];
+
+  if (normalizedRoute.includes("mevduat")) {
+    return ["mevduat"];
+  }
+
+  if (normalizedRoute.includes("konut")) {
+    return ["konut kredisi"];
+  }
+
+  if (normalizedRoute.includes("tasit")) {
+    return ["tasit kredisi", "taşıt kredisi"];
+  }
+
+  if (
+    normalizedRoute.includes("tuketici") ||
+    normalizedRoute.includes("ihtiyac")
+  ) {
+    return ["ihtiyac kredisi", "ihtiyaç kredisi"];
+  }
+
+  return [];
+}
+
+function getRelevantJsonPayloadForRoute(filePath, route) {
+  const raw = fs.readFileSync(filePath, "utf8");
+  const ext = path.extname(filePath).toLowerCase();
+
+  if (ext !== ".json") {
+    return raw;
+  }
+
+  try {
+    const parsed = JSON.parse(raw);
+    const wantedSheets = getFaizSheetNamesForRoute(route);
+
+    if (
+      wantedSheets.length > 0 &&
+      parsed &&
+      typeof parsed === "object" &&
+      parsed.sheets &&
+      typeof parsed.sheets === "object"
+    ) {
+      const sheetKeys = Object.keys(parsed.sheets);
+      const targetKey = sheetKeys.find((key) =>
+        wantedSheets.includes(normalizeText(key))
+      );
+
+      if (targetKey) {
+        const sheet = parsed.sheets[targetKey];
+        const payload = sheet?.rawRows ?? sheet?.rows ?? sheet;
+
+        return JSON.stringify(
+          stableJson({
+            route,
+            sheet: targetKey,
+            payload,
+          })
+        );
+      }
+    }
+
+    return JSON.stringify(stableJson(parsed));
+  } catch {
+    return raw;
+  }
+}
+
+function getFileSignature(filePath, route) {
+  try {
+    if (!fs.existsSync(filePath)) return "";
+
+    const content = getRelevantJsonPayloadForRoute(filePath, route);
+
+    return hashValue(
+      `${toPosixPath(path.relative(rootDir, filePath))}:${content}`
+    );
+  } catch {
+    return "";
+  }
+}
+
+function getPageSignature(route, files) {
+  const parts = files
+    .map((file) => getFileSignature(file, route))
+    .filter(Boolean)
+    .sort();
+
+  return hashValue(parts.join("|"));
+}
+
+function getNewestGitUpdatedAt(files) {
   let newest = "";
 
   for (const file of files) {
-    const updatedAt = getBestUpdatedAt(file);
+    const updatedAt = getGitUpdatedAt(file);
 
     if (!updatedAt) continue;
 
@@ -276,17 +403,59 @@ function getNewestUpdatedAt(files) {
   return newest;
 }
 
+function getNewestFileUpdatedAt(files) {
+  let newest = "";
+
+  for (const file of files) {
+    const updatedAt = getFileUpdatedAt(file);
+
+    if (!updatedAt) continue;
+
+    if (!newest || new Date(updatedAt).getTime() > new Date(newest).getTime()) {
+      newest = updatedAt;
+    }
+  }
+
+  return newest;
+}
+
+const previousOutput = readPreviousOutput();
+const previousByRoute = new Map(
+  previousOutput.pages.map((item) => [item.route, item])
+);
+
+const eskiSistemdenGecis = previousOutput.version !== VERSION;
+
 const pageFiles = walkPages(appDir);
 
 const pages = pageFiles
   .map((filePath) => {
     const route = getRouteFromPageFile(filePath);
     const relatedFiles = getRelatedFilesForPage(filePath);
-    const updatedAt = getNewestUpdatedAt(relatedFiles);
+    const signature = getPageSignature(route, relatedFiles);
+    const previous = previousByRoute.get(route);
+
+    let updatedAt = "";
+
+    if (!eskiSistemdenGecis && previous?.signature) {
+      updatedAt =
+        previous.signature === signature
+          ? previous.updatedAt
+          : getNewestFileUpdatedAt(relatedFiles) ||
+            getNewestGitUpdatedAt(relatedFiles) ||
+            new Date().toISOString();
+    } else {
+      updatedAt =
+        getNewestGitUpdatedAt(relatedFiles) ||
+        previous?.updatedAt ||
+        getNewestFileUpdatedAt(relatedFiles) ||
+        new Date().toISOString();
+    }
 
     return {
       route,
       updatedAt,
+      signature,
       file: toPosixPath(path.relative(rootDir, filePath)),
       trackedFiles: relatedFiles.map((item) =>
         toPosixPath(path.relative(rootDir, item))
@@ -297,6 +466,7 @@ const pages = pageFiles
   .sort((a, b) => a.route.localeCompare(b.route, "tr"));
 
 const output = {
+  version: VERSION,
   generatedAt: new Date().toISOString(),
   pages,
 };
