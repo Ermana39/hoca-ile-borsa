@@ -108,6 +108,44 @@ function formatDateLabel(value: unknown) {
   return text;
 }
 
+function parseTrDateToUtc(value: string) {
+  const match = value.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})$/);
+
+  if (!match) return null;
+
+  const [, day, month, year] = match;
+
+  return Date.UTC(Number(year), Number(month) - 1, Number(day));
+}
+
+function getWeeklyLabelDates(dateValues: number[]) {
+  const sortedDates = [...new Set(dateValues)].sort((a, b) => a - b);
+  const visibleDates = new Set<number>();
+
+  if (!sortedDates.length) return visibleDates;
+
+  const weekMs = 7 * 24 * 60 * 60 * 1000;
+  const fixedStart = Date.UTC(2026, 3, 11);
+  const maxDate = sortedDates[sortedDates.length - 1];
+
+  let targetDate = fixedStart;
+  let cursor = 0;
+
+  while (targetDate <= maxDate) {
+    while (cursor < sortedDates.length && sortedDates[cursor] < targetDate) {
+      cursor += 1;
+    }
+
+    if (cursor < sortedDates.length) {
+      visibleDates.add(sortedDates[cursor]);
+    }
+
+    targetDate += weekMs;
+  }
+
+  return visibleDates;
+}
+
 function average(values: number[]) {
   if (!values.length) return NaN;
   return values.reduce((sum, value) => sum + value, 0) / values.length;
@@ -247,17 +285,39 @@ function TasitGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
   const width = 960;
   const height = 360;
   const padding = 42;
-  const bottomSpace = 50;
+  const bottomSpace = 56;
 
   const minValue = Math.min(...data.map((item) => item.ortalama));
   const maxValue = Math.max(...data.map((item) => item.ortalama));
   const range = Math.max(maxValue - minValue, 1);
 
+  const parsedDates = data.map((item) => parseTrDateToUtc(item.tarih));
+  const allDatesValid = parsedDates.every((item) => item !== null);
+
+  const dateNumbers = parsedDates.filter(
+    (item): item is number => typeof item === "number"
+  );
+
+  const weeklyLabelDates = getWeeklyLabelDates(dateNumbers);
+
+  const useDateScale = allDatesValid && dateNumbers.length > 1;
+  const minDate = useDateScale ? Math.min(...dateNumbers) : 0;
+  const maxDate = useDateScale ? Math.max(...dateNumbers) : 0;
+  const dateRange = Math.max(maxDate - minDate, 1);
+
+  function getXByDate(dateValue: number) {
+    return padding + ((dateValue - minDate) / dateRange) * (width - padding * 2);
+  }
+
   const points = data.map((item, index) => {
+    const dateValue = parsedDates[index];
+
     const x =
-      data.length === 1
-        ? width / 2
-        : padding + (index * (width - padding * 2)) / (data.length - 1);
+      useDateScale && dateValue !== null
+        ? getXByDate(dateValue)
+        : data.length === 1
+          ? width / 2
+          : padding + (index * (width - padding * 2)) / (data.length - 1);
 
     const y =
       height -
@@ -270,6 +330,7 @@ function TasitGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
       y,
       label: item.tarih,
       value: item.ortalama,
+      dateValue,
     };
   });
 
@@ -299,6 +360,7 @@ function TasitGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
               stroke="#d4d4d8"
               strokeWidth="1"
             />
+
             <line
               x1={padding}
               y1={padding}
@@ -307,6 +369,7 @@ function TasitGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
               stroke="#d4d4d8"
               strokeWidth="1"
             />
+
             <path
               d={pathD}
               fill="none"
@@ -316,29 +379,48 @@ function TasitGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
               strokeLinecap="round"
             />
 
-            {points.map((point, index) => (
-              <g key={`${point.label}-${index}`}>
-                <circle cx={point.x} cy={point.y} r="4" fill="#111827" />
-                <text
-                  x={point.x}
-                  y={point.y - 12}
-                  textAnchor="middle"
-                  fontSize="11"
-                  fill="#52525b"
-                >
-                  %{point.value.toFixed(2).replace(".", ",")}
-                </text>
-                <text
-                  x={point.x}
-                  y={height - 18}
-                  textAnchor="middle"
-                  fontSize="11"
-                  fill="#71717a"
-                >
-                  {point.label}
-                </text>
-              </g>
-            ))}
+            {points.map((point, index) => {
+              const tarihGoster =
+                point.dateValue !== null && weeklyLabelDates.has(point.dateValue);
+
+              return (
+                <g key={`${point.label}-${index}`}>
+                  <circle cx={point.x} cy={point.y} r="4" fill="#111827" />
+
+                  <text
+                    x={point.x}
+                    y={point.y - 12}
+                    textAnchor="middle"
+                    fontSize="11"
+                    fill="#52525b"
+                  >
+                    %{point.value.toFixed(2).replace(".", ",")}
+                  </text>
+
+                  {tarihGoster ? (
+                    <>
+                      <line
+                        x1={point.x}
+                        y1={height - bottomSpace}
+                        x2={point.x}
+                        y2={height - bottomSpace + 6}
+                        stroke="#a1a1aa"
+                        strokeWidth="1"
+                      />
+                      <text
+                        x={point.x}
+                        y={height - 18}
+                        textAnchor="middle"
+                        fontSize="11"
+                        fill="#71717a"
+                      >
+                        {point.label}
+                      </text>
+                    </>
+                  ) : null}
+                </g>
+              );
+            })}
           </svg>
         </div>
       </div>
@@ -371,8 +453,6 @@ function HesaplayiciAlani() {
 
 export default function TasitKredisiOranlariPage() {
   const { bankaListesi, grafikVerisi, hata } = getTasitVerileri();
-  const data = faizData as FaizJsonData;
-  const guncellemeTarihi = data.guncellemeTarihi || "-";
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -403,8 +483,6 @@ export default function TasitKredisiOranlariPage() {
           Güncel taşıt kredisi oranları, banka karşılaştırmaları ve günlük
           ortalama faiz grafiği.
         </p>
-
-       
 
         {hata ? (
           <section className="mb-8 rounded-2xl border border-red-200 bg-red-50 p-4 text-sm text-red-700">
@@ -446,7 +524,10 @@ export default function TasitKredisiOranlariPage() {
                   ))
                 ) : (
                   <tr>
-                    <td colSpan={2} className="px-4 py-6 text-center text-zinc-500">
+                    <td
+                      colSpan={2}
+                      className="px-4 py-6 text-center text-zinc-500"
+                    >
                       Gösterilecek veri bulunamadı.
                     </td>
                   </tr>
