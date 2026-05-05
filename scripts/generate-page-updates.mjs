@@ -51,6 +51,11 @@ function getRouteFromPageFile(filePath) {
   return cleaned ? `/${cleaned}` : "/";
 }
 
+function isInsideApp(filePath) {
+  const relative = path.relative(appDir, filePath);
+  return relative && !relative.startsWith("..") && !path.isAbsolute(relative);
+}
+
 function isGitTracked(filePath) {
   try {
     const relative = toPosixPath(path.relative(rootDir, filePath));
@@ -61,6 +66,22 @@ function isGitTracked(filePath) {
     });
 
     return true;
+  } catch {
+    return false;
+  }
+}
+
+function isGitDirty(filePath) {
+  try {
+    const relative = toPosixPath(path.relative(rootDir, filePath));
+
+    const result = execSync(`git status --porcelain -- "${relative}"`, {
+      cwd: rootDir,
+      stdio: ["ignore", "pipe", "ignore"],
+      encoding: "utf8",
+    }).trim();
+
+    return Boolean(result);
   } catch {
     return false;
   }
@@ -82,6 +103,32 @@ function getGitUpdatedAt(filePath) {
   } catch {
     return "";
   }
+}
+
+function getFileUpdatedAt(filePath) {
+  try {
+    const stat = fs.statSync(filePath);
+    return stat.mtime.toISOString();
+  } catch {
+    return "";
+  }
+}
+
+function getBestUpdatedAt(filePath) {
+  if (!fs.existsSync(filePath)) return "";
+
+  const tracked = isGitTracked(filePath);
+  const dirty = isGitDirty(filePath);
+
+  if (tracked && dirty) {
+    return getFileUpdatedAt(filePath);
+  }
+
+  if (tracked) {
+    return getGitUpdatedAt(filePath);
+  }
+
+  return "";
 }
 
 function walkPages(dir, results = []) {
@@ -131,13 +178,76 @@ function walkDataFiles(dir, results = []) {
   return results;
 }
 
+function getAncestorDataDirs(pageFilePath) {
+  const dirs = [];
+  let currentDir = path.dirname(pageFilePath);
+
+  while (isInsideApp(currentDir) || currentDir === appDir) {
+    const dataDir = path.join(currentDir, "data");
+
+    if (fs.existsSync(dataDir)) {
+      dirs.push(dataDir);
+    }
+
+    if (currentDir === appDir) break;
+
+    currentDir = path.dirname(currentDir);
+  }
+
+  return dirs;
+}
+
+function getImportedDataFiles(pageFilePath) {
+  const relatedFiles = [];
+
+  try {
+    const content = fs.readFileSync(pageFilePath, "utf8");
+    const pageDir = path.dirname(pageFilePath);
+
+    const importMatches = [...content.matchAll(/from\s+["']([^"']+)["']/g)];
+
+    for (const match of importMatches) {
+      const importPath = match[1];
+
+      if (!importPath.startsWith(".")) continue;
+
+      const resolvedBase = path.resolve(pageDir, importPath);
+      const ext = path.extname(resolvedBase).toLowerCase();
+
+      if (fs.existsSync(resolvedBase) && fs.statSync(resolvedBase).isFile()) {
+        if (
+          takipEdilecekVeriUzantilari.has(ext) &&
+          !yokSayilacakDosyalar.has(path.basename(resolvedBase))
+        ) {
+          relatedFiles.push(resolvedBase);
+        }
+        continue;
+      }
+
+      for (const possibleExt of takipEdilecekVeriUzantilari) {
+        const possibleFile = `${resolvedBase}${possibleExt}`;
+
+        if (
+          fs.existsSync(possibleFile) &&
+          fs.statSync(possibleFile).isFile() &&
+          !yokSayilacakDosyalar.has(path.basename(possibleFile))
+        ) {
+          relatedFiles.push(possibleFile);
+        }
+      }
+    }
+  } catch {
+    return relatedFiles;
+  }
+
+  return relatedFiles;
+}
+
 function getRelatedFilesForPage(pageFilePath) {
   const pageDir = path.dirname(pageFilePath);
   const relatedFiles = [pageFilePath];
 
-  const dataDir = path.join(pageDir, "data");
-
-  if (fs.existsSync(dataDir)) {
+  for (const dataDir of getAncestorDataDirs(pageFilePath)) {
     relatedFiles.push(...walkDataFiles(dataDir));
   }
 
@@ -155,16 +265,25 @@ function getRelatedFilesForPage(pageFilePath) {
     }
   }
 
+  relatedFiles.push(...getImportedDataFiles(pageFilePath));
+
   return [...new Set(relatedFiles)];
 }
 
-function getNewestGitUpdatedAt(files) {
-  const dates = files
-    .map((file) => getGitUpdatedAt(file))
-    .filter(Boolean)
-    .sort((a, b) => new Date(b).getTime() - new Date(a).getTime());
+function getNewestUpdatedAt(files) {
+  let newest = "";
 
-  return dates[0] || "";
+  for (const file of files) {
+    const updatedAt = getBestUpdatedAt(file);
+
+    if (!updatedAt) continue;
+
+    if (!newest || new Date(updatedAt).getTime() > new Date(newest).getTime()) {
+      newest = updatedAt;
+    }
+  }
+
+  return newest;
 }
 
 const pageFiles = walkPages(appDir);
@@ -173,7 +292,7 @@ const pages = pageFiles
   .map((filePath) => {
     const route = getRouteFromPageFile(filePath);
     const relatedFiles = getRelatedFilesForPage(filePath);
-    const updatedAt = getNewestGitUpdatedAt(relatedFiles);
+    const updatedAt = getNewestUpdatedAt(relatedFiles);
 
     return {
       route,
