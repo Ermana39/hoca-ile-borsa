@@ -118,16 +118,32 @@ function parseTrDateToUtc(value: string) {
   return Date.UTC(Number(year), Number(month) - 1, Number(day));
 }
 
-function haftalikTarihGoster(value: string) {
-  const currentDate = parseTrDateToUtc(value);
-  const startDate = Date.UTC(2026, 3, 11);
+function getWeeklyLabelDates(dateValues: number[]) {
+  const sortedDates = [...new Set(dateValues)].sort((a, b) => a - b);
+  const visibleDates = new Set<number>();
 
-  if (currentDate === null) return false;
-  if (currentDate < startDate) return false;
+  if (!sortedDates.length) return visibleDates;
 
-  const diffDays = Math.round((currentDate - startDate) / 86400000);
+  const weekMs = 7 * 24 * 60 * 60 * 1000;
+  const fixedStart = Date.UTC(2026, 3, 11);
+  const maxDate = sortedDates[sortedDates.length - 1];
 
-  return diffDays % 7 === 0;
+  let targetDate = fixedStart;
+  let cursor = 0;
+
+  while (targetDate <= maxDate) {
+    while (cursor < sortedDates.length && sortedDates[cursor] < targetDate) {
+      cursor += 1;
+    }
+
+    if (cursor < sortedDates.length) {
+      visibleDates.add(sortedDates[cursor]);
+    }
+
+    targetDate += weekMs;
+  }
+
+  return visibleDates;
 }
 
 function average(values: number[]) {
@@ -268,17 +284,39 @@ function MevduatGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
   const width = 960;
   const height = 360;
   const padding = 42;
-  const bottomSpace = 50;
+  const bottomSpace = 56;
 
   const minValue = Math.min(...data.map((item) => item.ortalama));
   const maxValue = Math.max(...data.map((item) => item.ortalama));
   const range = Math.max(maxValue - minValue, 1);
 
+  const parsedDates = data.map((item) => parseTrDateToUtc(item.tarih));
+  const allDatesValid = parsedDates.every((item) => item !== null);
+
+  const dateNumbers = parsedDates.filter(
+    (item): item is number => typeof item === "number"
+  );
+
+  const weeklyLabelDates = getWeeklyLabelDates(dateNumbers);
+
+  const useDateScale = allDatesValid && dateNumbers.length > 1;
+  const minDate = useDateScale ? Math.min(...dateNumbers) : 0;
+  const maxDate = useDateScale ? Math.max(...dateNumbers) : 0;
+  const dateRange = Math.max(maxDate - minDate, 1);
+
+  function getXByDate(dateValue: number) {
+    return padding + ((dateValue - minDate) / dateRange) * (width - padding * 2);
+  }
+
   const points = data.map((item, index) => {
+    const dateValue = parsedDates[index];
+
     const x =
-      data.length === 1
-        ? width / 2
-        : padding + (index * (width - padding * 2)) / (data.length - 1);
+      useDateScale && dateValue !== null
+        ? getXByDate(dateValue)
+        : data.length === 1
+          ? width / 2
+          : padding + (index * (width - padding * 2)) / (data.length - 1);
 
     const y =
       height -
@@ -291,6 +329,7 @@ function MevduatGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
       y,
       label: item.tarih,
       value: item.ortalama,
+      dateValue,
     };
   });
 
@@ -340,7 +379,8 @@ function MevduatGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
             />
 
             {points.map((point, index) => {
-              const tarihGoster = haftalikTarihGoster(point.label);
+              const tarihGoster =
+                point.dateValue !== null && weeklyLabelDates.has(point.dateValue);
 
               return (
                 <g key={`${point.label}-${index}`}>
@@ -357,15 +397,25 @@ function MevduatGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
                   </text>
 
                   {tarihGoster ? (
-                    <text
-                      x={point.x}
-                      y={height - 18}
-                      textAnchor="middle"
-                      fontSize="11"
-                      fill="#71717a"
-                    >
-                      {point.label}
-                    </text>
+                    <>
+                      <line
+                        x1={point.x}
+                        y1={height - bottomSpace}
+                        x2={point.x}
+                        y2={height - bottomSpace + 6}
+                        stroke="#a1a1aa"
+                        strokeWidth="1"
+                      />
+                      <text
+                        x={point.x}
+                        y={height - 18}
+                        textAnchor="middle"
+                        fontSize="11"
+                        fill="#71717a"
+                      >
+                        {point.label}
+                      </text>
+                    </>
                   ) : null}
                 </g>
               );
