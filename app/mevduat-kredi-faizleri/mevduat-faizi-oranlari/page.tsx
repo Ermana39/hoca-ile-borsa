@@ -108,6 +108,28 @@ function formatDateLabel(value: unknown) {
   return text;
 }
 
+function parseTrDateToUtc(value: string) {
+  const match = value.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})$/);
+
+  if (!match) return null;
+
+  const [, day, month, year] = match;
+
+  return Date.UTC(Number(year), Number(month) - 1, Number(day));
+}
+
+function haftalikTarihGoster(value: string) {
+  const currentDate = parseTrDateToUtc(value);
+  const startDate = Date.UTC(2026, 3, 11);
+
+  if (currentDate === null) return false;
+  if (currentDate < startDate) return false;
+
+  const diffDays = Math.round((currentDate - startDate) / 86400000);
+
+  return diffDays % 7 === 0;
+}
+
 function average(values: number[]) {
   if (!values.length) return NaN;
   return values.reduce((sum, value) => sum + value, 0) / values.length;
@@ -318,8 +340,7 @@ function MevduatGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
             />
 
             {points.map((point, index) => {
-              const tarihGoster =
-                index === 0 || index === points.length - 1 || index % 7 === 0;
+              const tarihGoster = haftalikTarihGoster(point.label);
 
               return (
                 <g key={`${point.label}-${index}`}>
