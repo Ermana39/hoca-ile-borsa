@@ -420,7 +420,7 @@ function SonGuncellemelerBar({ items }: { items: GuncellemeItem[] }) {
           <span className="hidden text-sm text-blue-300 sm:inline">•</span>
 
           <p className="text-xs font-medium text-slate-600 md:text-sm">
-            Otomatik olarak en son güncellenen sayfalar.
+            En son güncellenen sayfalar.
           </p>
 
           <span className="ml-auto hidden rounded-full bg-white px-3 py-1 text-xs font-bold text-blue-700 shadow-sm ring-1 ring-blue-100 md:inline-flex">

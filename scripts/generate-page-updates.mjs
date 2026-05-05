@@ -51,11 +51,6 @@ function getRouteFromPageFile(filePath) {
   return cleaned ? `/${cleaned}` : "/";
 }
 
-function isInsideApp(filePath) {
-  const relative = path.relative(appDir, filePath);
-  return relative && !relative.startsWith("..") && !path.isAbsolute(relative);
-}
-
 function isGitTracked(filePath) {
   try {
     const relative = toPosixPath(path.relative(rootDir, filePath));
@@ -178,25 +173,6 @@ function walkDataFiles(dir, results = []) {
   return results;
 }
 
-function getAncestorDataDirs(pageFilePath) {
-  const dirs = [];
-  let currentDir = path.dirname(pageFilePath);
-
-  while (isInsideApp(currentDir) || currentDir === appDir) {
-    const dataDir = path.join(currentDir, "data");
-
-    if (fs.existsSync(dataDir)) {
-      dirs.push(dataDir);
-    }
-
-    if (currentDir === appDir) break;
-
-    currentDir = path.dirname(currentDir);
-  }
-
-  return dirs;
-}
-
 function getImportedDataFiles(pageFilePath) {
   const relatedFiles = [];
 
@@ -204,14 +180,25 @@ function getImportedDataFiles(pageFilePath) {
     const content = fs.readFileSync(pageFilePath, "utf8");
     const pageDir = path.dirname(pageFilePath);
 
-    const importMatches = [...content.matchAll(/from\s+["']([^"']+)["']/g)];
+    const importMatches = [
+      ...content.matchAll(/from\s+["']([^"']+)["']/g),
+      ...content.matchAll(/import\s*\(\s*["']([^"']+)["']\s*\)/g),
+      ...content.matchAll(/require\s*\(\s*["']([^"']+)["']\s*\)/g),
+    ];
 
     for (const match of importMatches) {
       const importPath = match[1];
 
-      if (!importPath.startsWith(".")) continue;
+      let resolvedBase = "";
 
-      const resolvedBase = path.resolve(pageDir, importPath);
+      if (importPath.startsWith(".")) {
+        resolvedBase = path.resolve(pageDir, importPath);
+      } else if (importPath.startsWith("@/")) {
+        resolvedBase = path.resolve(rootDir, importPath.replace("@/", ""));
+      } else {
+        continue;
+      }
+
       const ext = path.extname(resolvedBase).toLowerCase();
 
       if (fs.existsSync(resolvedBase) && fs.statSync(resolvedBase).isFile()) {
@@ -221,6 +208,7 @@ function getImportedDataFiles(pageFilePath) {
         ) {
           relatedFiles.push(resolvedBase);
         }
+
         continue;
       }
 
@@ -247,8 +235,10 @@ function getRelatedFilesForPage(pageFilePath) {
   const pageDir = path.dirname(pageFilePath);
   const relatedFiles = [pageFilePath];
 
-  for (const dataDir of getAncestorDataDirs(pageFilePath)) {
-    relatedFiles.push(...walkDataFiles(dataDir));
+  const ownDataDir = path.join(pageDir, "data");
+
+  if (fs.existsSync(ownDataDir)) {
+    relatedFiles.push(...walkDataFiles(ownDataDir));
   }
 
   const directEntries = fs.readdirSync(pageDir, { withFileTypes: true });
