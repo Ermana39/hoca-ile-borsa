@@ -21,18 +21,4 @@ export const newsItems: NewsItem[] = [
     image: "/haber985.png",
     alt: "Haber 985 görseli",
   },
-  {
-    id: 986,
-    title: "FED, beklentilere paralel olarak politika faizini sabit bıraktı",
-    href: "/haber/haber-986",
-    image: "/haber986.png",
-    alt: "Haber 986 görseli",
-  },
-  {
-    id: 987,
-    title: "2026 yılı ilk çeyrek bilançolarının olası açıklanma tarihleri",
-    href: "/haber/haber-987",
-    image: "/haber987.png",
-    alt: "Haber 987 görseli",
-  },
-];
+ ];
