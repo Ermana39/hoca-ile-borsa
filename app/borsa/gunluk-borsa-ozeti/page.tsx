@@ -2,49 +2,69 @@ import Image from "next/image";
 import Link from "next/link";
 
 const bistVeri = {
-  tarih: "05.05.2026",
-  kapanis: "14495.77",
-  degisimYuzde: 0.88,
+  tarih: "06.05.2026",
+  kapanis: "14917.43",
+  degisimYuzde: 2.91,
 };
 
 const tumYukselenler = [
-  { kod: "DOFRB", fark: "+10,00%" },
-  { kod: "OZATD", fark: "+9,99%" },
-  { kod: "NETCD", fark: "+9,98%" },
-  { kod: "AHSGY", fark: "+9,98%" },
-  { kod: "EMPAE", fark: "+9,98%" },
+  { kod: "APYVCF2", fark: "+10,00%" },
+  { kod: "DOCO", fark: "+10,00%" },
+  { kod: "TATGD", fark: "+9,99%" },
+  { kod: "GEDZA", fark: "+9,99%" },
+  { kod: "GSDDE", fark: "+9,99%" },
+  { kod: "KLSER", fark: "+9,98%" },
+  { kod: "SDTTR", fark: "+9,98%" },
+  { kod: "KLRHO", fark: "+9,98%" },
+  { kod: "PAGYO", fark: "+9,97%" },
+  { kod: "ENSRI", fark: "+9,97%" },
+  { kod: "OZATD", fark: "+9,97%" },
 ];
 
 const tumDusenler = [
-  { kod: "PASEU", fark: "-10,00%" },
-  { kod: "BIGEN", fark: "-9,99%" },
-  { kod: "AYCES", fark: "-9,97%" },
-  { kod: "SMRVA", fark: "-7,59%" },
-  { kod: "TMPOL", fark: "-7,20%" },
+  { kod: "HPARTF2", fark: "-10,00%" },
+  { kod: "HTPSBF2", fark: "-9,99%" },
+  { kod: "QPERPF1", fark: "-9,99%" },
+  { kod: "BORLS", fark: "-9,99%" },
+  { kod: "ADEL", fark: "-9,98%" },
+  { kod: "AYCES", fark: "-9,96%" },
+  { kod: "KAPLM", fark: "-9,95%" },
+  { kod: "IZFAS", fark: "-8,81%" },
+  { kod: "FTPGSF2", fark: "-8,53%" },
+  { kod: "BORSK", fark: "-7,17%" },
 ];
 
 const tumHacimliler = [
-  { kod: "SASA", hacim: "17.386.562.898" },
-  { kod: "THYAO", hacim: "11.872.828.075" },
-  { kod: "ASTOR", hacim: "10.842.857.813" },
-  { kod: "EREGL", hacim: "8.732.736.808" },
-  { kod: "AKBNK", hacim: "8.082.777.343" },
+  { kod: "THYAO", hacim: "31.974.354.975" },
+  { kod: "SASA", hacim: "22.876.843.206" },
+  { kod: "AKBNK", hacim: "19.490.611.458" },
+  { kod: "ISCTR", hacim: "16.913.834.433" },
+  { kod: "YKBNK", hacim: "13.629.367.538" },
+  { kod: "ASELS", hacim: "13.211.481.713" },
+  { kod: "ASTOR", hacim: "12.365.998.945" },
+  { kod: "EREGL", hacim: "11.601.623.935" },
+  { kod: "TUPRS", hacim: "10.961.448.520" },
+  { kod: "SISE", hacim: "10.576.543.188" },
+  { kod: "GARAN", hacim: "10.044.921.276" },
 ];
 
 const tumParaGirisi = [
-  { kod: "ASTOR", tutar: "+268.365.007" },
-  { kod: "EREGL", tutar: "+251.511.384" },
-  { kod: "TERA", tutar: "+188.585.854" },
-  { kod: "PEKGY", tutar: "+146.280.529" },
-  { kod: "TUPRS", tutar: "+142.069.307" },
+  { kod: "AKBNK", tutar: "+287.002.320" },
+  { kod: "ASTOR", tutar: "+246.506.487" },
+  { kod: "GARAN", tutar: "+240.195.519" },
+  { kod: "PEKGY", tutar: "+201.993.477" },
+  { kod: "KCHOL", tutar: "+178.494.601" },
+  { kod: "YKBNK", tutar: "+168.168.122" },
+  { kod: "ASELS", tutar: "+163.928.120" },
 ];
 
 const tumParaCikisi = [
-  { kod: "ASELS", tutar: "-230.619.866" },
-  { kod: "SASA", tutar: "-226.219.443" },
-  { kod: "PASEU", tutar: "-153.989.554" },
-  { kod: "THYAO", tutar: "-121.424.429" },
-  { kod: "EFOR", tutar: "-74.886.872" },
+  { kod: "THYAO", tutar: "-176.634.006" },
+  { kod: "PASEU", tutar: "-173.294.864" },
+  { kod: "FROTO", tutar: "-148.270.857" },
+  { kod: "YKBNK", tutar: "-133.833.116" },
+  { kod: "ISKPL", tutar: "-83.709.065" },
+  { kod: "DOFRB", tutar: "-77.522.311" },
 ];
 
 const enCokAlisYapanKurumlar = [
