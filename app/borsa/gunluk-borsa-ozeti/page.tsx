@@ -68,27 +68,27 @@ const tumParaCikisi = [
 ];
 
 const enCokAlisYapanKurumlar = [
-  { kurum: "BANK OF AME", hacim: "3.805.462.526", oran: "%44,03" },
-  { kurum: "YATIRIM FINA", hacim: "1.417.234.305", oran: "%16,40" },
-  { kurum: "PUSULA YAT.", hacim: "1.109.099.434", oran: "%12,83" },
-  { kurum: "BULLS YATIRIM", hacim: "612.454.210", oran: "%7,09" },
-  { kurum: "TERA", hacim: "486.828.258", oran: "%5,63" },
+  { kurum: "BANK OF AMERI", hacim: "8.031.520.122", oran: "%46,59" },
+  { kurum: "TERA", hacim: "2.146.187.847", oran: "%12,45" },
+  { kurum: "QNB YATIRIM", hacim: "1.684.101.708", oran: "%9,77" },
+  { kurum: "YAPI KREDI", hacim: "1.508.076.519", oran: "%8,75" },
+  { kurum: "HSBC", hacim: "1.352.118.644", oran: "%7,84" },
 ];
 
 const enCokSatisYapanKurumlar = [
-  { kurum: "AK", hacim: "-2.518.746.040", oran: "%29,15" },
-  { kurum: "GEDIK", hacim: "-1.170.242.225", oran: "%13,54" },
-  { kurum: "TEB", hacim: "-854.700.108", oran: "%9,89" },
-  { kurum: "A1 CAPITAL", hacim: "-500.334.576", oran: "%5,79" },
-  { kurum: "GLOBAL", hacim: "-488.749.077", oran: "%5,66" },
+  { kurum: "BULLS YATIRIM", hacim: "-2.775.294.927", oran: "%16,10" },
+  { kurum: "DENIZ", hacim: "-2.350.589.004", oran: "%13,64" },
+  { kurum: "IS", hacim: "-2.099.375.876", oran: "%12,18" },
+  { kurum: "GARANTI BBVA", hacim: "-1.796.593.101", oran: "%10,42" },
+  { kurum: "YATIRIM FINANS", hacim: "-1.246.981.054", oran: "%7,23" },
 ];
 
 const enCokHacimYapanKurumlar = [
-  { kurum: "YAPI KREDI", hacim: "85.545.913.513", oran: "%14,71" },
-  { kurum: "BANK OF AME", hacim: "72.497.425.362", oran: "%12,47" },
-  { kurum: "IS", hacim: "56.281.995.512", oran: "%9,68" },
-  { kurum: "AK", hacim: "44.749.931.426", oran: "%7,70" },
-  { kurum: "DENIZ", hacim: "24.307.966.764", oran: "%4,18" },
+  { kurum: "YAPI KREDI", hacim: "127.986.026.235", oran: "%15,17" },
+  { kurum: "BANK OF AMERI", hacim: "106.303.290.759", oran: "%12,60" },
+  { kurum: "IS", hacim: "76.304.157.095", oran: "%9,05" },
+  { kurum: "AK", hacim: "65.412.329.287", oran: "%7,76" },
+  { kurum: "TACIRLER", hacim: "35.556.439.741", oran: "%4,22" },
 ];
 
 const ekonomikTakvimVerileri = [
