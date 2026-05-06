@@ -139,6 +139,22 @@ const sayfaBasliklari: Record<string, string> = {
   "/halka-arz/talep-hesapla": "Halka Arz Talep Hesaplama",
   "/halka-arz/taslak-izahnameler": "Taslak İzahnameler",
 
+  "/temettu/temettu-egitimi": "Temettü Eğitimi",
+  "/temettu/mayis-ayi-temettu-verenler": "Mayıs Ayı Temettü Verenler",
+  "/temettu/haziran-ayi-temettu-verenler": "Haziran Ayı Temettü Verenler",
+  "/temettu/temmuz-ayi-temettu-verenler": "Temmuz Ayı Temettü Verenler",
+  "/temettu/agustos-ayi-temettu-verenler": "Ağustos Ayı Temettü Verenler",
+  "/temettu/eylul-ayi-temettu-verenler": "Eylül Ayı Temettü Verenler",
+
+  "/mevduat-kredi-faizleri/mevduat-faizi-oranlari":
+    "Mevduat Faizi Oranları",
+  "/mevduat-kredi-faizleri/tuketici-faizi-oranlari":
+    "Tüketici Faizi Oranları",
+  "/mevduat-kredi-faizleri/konut-kredisi-oranlari":
+    "Konut Kredisi Oranları",
+  "/mevduat-kredi-faizleri/tasit-kredisi-oranlari":
+    "Taşıt Kredisi Oranları",
+
   "/hakkimizda": "Hakkımızda",
   "/gizlilik-politikasi": "Gizlilik Politikası",
   "/cerez-politikasi": "Çerez Politikası",
@@ -274,8 +290,7 @@ function routeBasligiBul(route: string) {
   }
 
   if (temizRoute.startsWith("/halka-arz/taslak-izahnameler/")) {
-    const slug = temizRoute.split("/").filter(Boolean).at(-1) || "";
-    return `${slugBaslikYap(slug)} Taslak İzahname`;
+    return "Taslak İzahnameler";
   }
 
   if (temizRoute.startsWith("/haber/")) {
@@ -285,6 +300,59 @@ function routeBasligiBul(route: string) {
 
   const sonParca = temizRoute.split("/").filter(Boolean).at(-1) || "Ana Sayfa";
   return slugBaslikYap(sonParca);
+}
+
+function getGuncellemeAnaRoute(route: string) {
+  const temizRoute = normalizePath(route);
+
+  const anaRouteEslesmeleri: { prefix: string; target: string }[] = [
+    {
+      prefix: "/borsa/dikkat-cekenler/",
+      target: "/borsa/dikkat-cekenler",
+    },
+    {
+      prefix: "/borsa/formasyonlar/",
+      target: "/borsa/formasyonlar",
+    },
+    {
+      prefix: "/borsa/gosterge-taramalari/",
+      target: "/borsa/gosterge-taramalari",
+    },
+    {
+      prefix: "/borsa/grafik-analiz/",
+      target: "/borsa/grafik-analiz",
+    },
+    {
+      prefix: "/borsa/hacim-artisi-analizi/",
+      target: "/borsa/hacim-artisi-analizi",
+    },
+    {
+      prefix: "/fonlar/getiri/",
+      target: "/fonlar/getiri",
+    },
+    {
+      prefix: "/fonlar/tarihsel-veriler/",
+      target: "/fonlar/tarihsel-veriler",
+    },
+    {
+      prefix: "/halka-arz/onayli-izahnameler/",
+      target: "/halka-arz/onayli-izahnameler",
+    },
+    {
+      prefix: "/halka-arz/taslak-izahnameler/",
+      target: "/halka-arz/taslak-izahnameler",
+    },
+    {
+      prefix: "/temettu/temettu-egitimi/",
+      target: "/temettu/temettu-egitimi",
+    },
+  ];
+
+  const eslesen = anaRouteEslesmeleri.find((item) =>
+    temizRoute.startsWith(item.prefix)
+  );
+
+  return eslesen ? eslesen.target : temizRoute;
 }
 
 function formatUpdateDate(value: string) {
@@ -305,26 +373,41 @@ function formatUpdateDate(value: string) {
 function getSonGuncellemeler(): GuncellemeItem[] {
   const data = pageUpdates as PageUpdatesData;
   const pages = Array.isArray(data.pages) ? data.pages : [];
+  const grouped = new Map<string, GuncellemeItem & { rawTime: number }>();
 
-  return pages
-    .filter((item) => {
-      const route = normalizePath(item.route);
+  pages.forEach((item) => {
+    const route = normalizePath(item.route);
 
-      if (!route || route.includes("[")) {
-        return false;
-      }
+    if (!route || route.includes("[") || !item.updatedAt) {
+      return;
+    }
 
-      return Boolean(item.updatedAt);
-    })
-    .sort(
-      (a, b) =>
-        new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime()
-    )
+    const anaRoute = getGuncellemeAnaRoute(route);
+    const rawTime = new Date(item.updatedAt).getTime();
+
+    if (Number.isNaN(rawTime)) {
+      return;
+    }
+
+    const mevcut = grouped.get(anaRoute);
+
+    if (!mevcut || rawTime > mevcut.rawTime) {
+      grouped.set(anaRoute, {
+        title: routeBasligiBul(anaRoute),
+        href: anaRoute,
+        time: formatUpdateDate(item.updatedAt),
+        rawTime,
+      });
+    }
+  });
+
+  return Array.from(grouped.values())
+    .sort((a, b) => b.rawTime - a.rawTime)
     .slice(0, SON_GUNCELLEME_LIMIT)
-    .map((item) => ({
-      title: routeBasligiBul(item.route),
-      href: normalizePath(item.route),
-      time: formatUpdateDate(item.updatedAt),
+    .map(({ title, href, time }) => ({
+      title,
+      href,
+      time,
     }));
 }
 
