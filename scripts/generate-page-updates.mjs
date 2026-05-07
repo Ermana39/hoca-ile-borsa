@@ -1,9 +1,10 @@
 import fs from "fs";
 import path from "path";
 import crypto from "crypto";
-import { execSync } from "child_process";
+import { execFileSync } from "child_process";
 
-const VERSION = 4;
+const XLSX_MODULE = await import("xlsx").catch(() => null);
+const XLSX = XLSX_MODULE?.default || XLSX_MODULE;
 
 const rootDir = process.cwd();
 const appDir = path.join(rootDir, "app");
@@ -86,23 +87,6 @@ function stableJson(value) {
   return value;
 }
 
-function readPreviousOutput() {
-  try {
-    if (!fs.existsSync(outputFile)) {
-      return { version: 0, pages: [] };
-    }
-
-    const parsed = JSON.parse(fs.readFileSync(outputFile, "utf8"));
-
-    return {
-      version: Number(parsed.version || 0),
-      pages: Array.isArray(parsed.pages) ? parsed.pages : [],
-    };
-  } catch {
-    return { version: 0, pages: [] };
-  }
-}
-
 function getRouteFromPageFile(filePath) {
   const relative = toPosixPath(path.relative(appDir, filePath));
   const routePart = relative.replace(/\/?page\.(tsx|ts|jsx|js|mdx)$/i, "");
@@ -126,7 +110,7 @@ function isGitTracked(filePath) {
   try {
     const relative = toPosixPath(path.relative(rootDir, filePath));
 
-    execSync(`git ls-files --error-unmatch -- "${relative}"`, {
+    execFileSync("git", ["ls-files", "--error-unmatch", "--", relative], {
       cwd: rootDir,
       stdio: ["ignore", "ignore", "ignore"],
     });
@@ -137,21 +121,55 @@ function isGitTracked(filePath) {
   }
 }
 
-function getGitUpdatedAt(filePath) {
+function isGitDirty(filePath) {
   try {
-    if (!isGitTracked(filePath)) return "";
-
     const relative = toPosixPath(path.relative(rootDir, filePath));
 
-    const result = execSync(`git log -1 --format=%cI -- "${relative}"`, {
+    const result = execFileSync("git", ["status", "--porcelain", "--", relative], {
       cwd: rootDir,
       stdio: ["ignore", "pipe", "ignore"],
       encoding: "utf8",
     }).trim();
 
-    return result || "";
+    return Boolean(result);
   } catch {
-    return "";
+    return false;
+  }
+}
+
+function getGitLog(filePath) {
+  try {
+    const relative = toPosixPath(path.relative(rootDir, filePath));
+
+    const result = execFileSync("git", ["log", "--format=%H|%cI", "--", relative], {
+      cwd: rootDir,
+      stdio: ["ignore", "pipe", "ignore"],
+      encoding: "utf8",
+      maxBuffer: 1024 * 1024 * 20,
+    }).trim();
+
+    if (!result) return [];
+
+    return result.split("\n").map((line) => {
+      const [hash, date] = line.split("|");
+      return { hash, date };
+    });
+  } catch {
+    return [];
+  }
+}
+
+function getGitFileBuffer(ref, filePath) {
+  try {
+    const relative = toPosixPath(path.relative(rootDir, filePath));
+
+    return execFileSync("git", ["show", `${ref}:${relative}`], {
+      cwd: rootDir,
+      stdio: ["ignore", "pipe", "ignore"],
+      maxBuffer: 1024 * 1024 * 80,
+    });
+  } catch {
+    return null;
   }
 }
 
@@ -208,6 +226,198 @@ function walkDataFiles(dir, results = []) {
   }
 
   return results;
+}
+
+function getFaizSheetNamesForRoute(route) {
+  const normalizedRoute = normalizeText(route);
+
+  if (!normalizedRoute.includes("mevduat-kredi-faizleri")) return [];
+
+  if (normalizedRoute.includes("mevduat")) {
+    return ["mevduat"];
+  }
+
+  if (normalizedRoute.includes("konut")) {
+    return ["konut kredisi"];
+  }
+
+  if (normalizedRoute.includes("tasit")) {
+    return ["tasit kredisi"];
+  }
+
+  if (
+    normalizedRoute.includes("tuketici") ||
+    normalizedRoute.includes("ihtiyac")
+  ) {
+    return ["ihtiyac kredisi"];
+  }
+
+  return [];
+}
+
+function getJsonPayload(buffer, route) {
+  const raw = buffer.toString("utf8");
+
+  try {
+    const parsed = JSON.parse(raw);
+    const wantedSheets = getFaizSheetNamesForRoute(route);
+
+    if (
+      wantedSheets.length > 0 &&
+      parsed &&
+      typeof parsed === "object" &&
+      parsed.sheets &&
+      typeof parsed.sheets === "object"
+    ) {
+      const sheetKeys = Object.keys(parsed.sheets);
+      const targetKey = sheetKeys.find((key) =>
+        wantedSheets.includes(normalizeText(key))
+      );
+
+      if (targetKey) {
+        const sheet = parsed.sheets[targetKey];
+        const payload = sheet?.rawRows ?? sheet?.rows ?? sheet;
+
+        return JSON.stringify(
+          stableJson({
+            sheet: targetKey,
+            payload,
+          })
+        );
+      }
+    }
+
+    return JSON.stringify(stableJson(parsed));
+  } catch {
+    return raw;
+  }
+}
+
+function getExcelPayload(buffer, route) {
+  if (!XLSX?.read || !XLSX?.utils?.sheet_to_json) {
+    return buffer.toString("base64");
+  }
+
+  try {
+    const workbook = XLSX.read(buffer, {
+      type: "buffer",
+      cellDates: false,
+    });
+
+    const wantedSheets = getFaizSheetNamesForRoute(route);
+    let sheetNames = workbook.SheetNames || [];
+
+    if (wantedSheets.length > 0) {
+      const targetSheet = sheetNames.find((name) =>
+        wantedSheets.includes(normalizeText(name))
+      );
+
+      sheetNames = targetSheet ? [targetSheet] : [];
+    }
+
+    const payload = {};
+
+    for (const sheetName of sheetNames) {
+      const worksheet = workbook.Sheets[sheetName];
+
+      payload[sheetName] = XLSX.utils.sheet_to_json(worksheet, {
+        header: 1,
+        raw: false,
+        defval: "",
+      });
+    }
+
+    return JSON.stringify(stableJson(payload));
+  } catch {
+    return buffer.toString("base64");
+  }
+}
+
+function getRouteAwarePayloadFromBuffer(buffer, filePath, route) {
+  const ext = path.extname(filePath).toLowerCase();
+
+  if (ext === ".json") {
+    return getJsonPayload(buffer, route);
+  }
+
+  if (ext === ".xlsx" || ext === ".xls" || ext === ".xlsm") {
+    return getExcelPayload(buffer, route);
+  }
+
+  return buffer.toString("utf8");
+}
+
+function getRouteAwarePayloadFromFile(filePath, route) {
+  try {
+    if (!fs.existsSync(filePath)) return "";
+
+    const buffer = fs.readFileSync(filePath);
+    return getRouteAwarePayloadFromBuffer(buffer, filePath, route);
+  } catch {
+    return "";
+  }
+}
+
+function getRouteAwarePayloadFromGit(ref, filePath, route) {
+  const buffer = getGitFileBuffer(ref, filePath);
+
+  if (!buffer) return "";
+
+  return getRouteAwarePayloadFromBuffer(buffer, filePath, route);
+}
+
+function getRouteAwareGitUpdatedAt(filePath, route) {
+  if (!isGitTracked(filePath)) return "";
+
+  const commits = getGitLog(filePath);
+
+  for (const commit of commits) {
+    const currentPayload = getRouteAwarePayloadFromGit(
+      commit.hash,
+      filePath,
+      route
+    );
+
+    if (!currentPayload) continue;
+
+    const previousPayload = getRouteAwarePayloadFromGit(
+      `${commit.hash}^`,
+      filePath,
+      route
+    );
+
+    if (!previousPayload || currentPayload !== previousPayload) {
+      return commit.date;
+    }
+  }
+
+  return commits[0]?.date || "";
+}
+
+function getRouteAwareUpdatedAt(filePath, route) {
+  if (!fs.existsSync(filePath)) return "";
+
+  const ext = path.extname(filePath).toLowerCase();
+  const tracked = isGitTracked(filePath);
+
+  if (!tracked && ext === ".json") {
+    return "";
+  }
+
+  if (!tracked) {
+    return getFileUpdatedAt(filePath);
+  }
+
+  if (isGitDirty(filePath)) {
+    const currentPayload = getRouteAwarePayloadFromFile(filePath, route);
+    const headPayload = getRouteAwarePayloadFromGit("HEAD", filePath, route);
+
+    if (!headPayload || currentPayload !== headPayload) {
+      return getFileUpdatedAt(filePath);
+    }
+  }
+
+  return getRouteAwareGitUpdatedAt(filePath, route);
 }
 
 function getImportedDataFiles(pageFilePath) {
@@ -316,12 +526,13 @@ function getRouteSpecificSharedDataFiles(route) {
   const normalizedRoute = normalizeText(route);
   const routeParts = route.split("/").filter(Boolean);
   const lastSlug = routeParts[routeParts.length - 1] || "";
-
-  if (!lastSlug) return relatedFiles;
-
   const lastSlugNormalized = slugify(lastSlug);
 
   const sharedDataDirs = [];
+
+  if (normalizedRoute.startsWith("/mevduat-kredi-faizleri")) {
+    sharedDataDirs.push(path.join(appDir, "mevduat-kredi-faizleri", "data"));
+  }
 
   if (normalizedRoute.startsWith("/borsa/gosterge-taramalari/")) {
     sharedDataDirs.push(path.join(appDir, "borsa", "gosterge-taramalari", "data"));
@@ -346,6 +557,11 @@ function getRouteSpecificSharedDataFiles(route) {
 
     for (const file of files) {
       const fileBase = slugify(path.basename(file, path.extname(file)));
+
+      if (normalizedRoute.startsWith("/mevduat-kredi-faizleri")) {
+        relatedFiles.push(file);
+        continue;
+      }
 
       if (
         fileBase === lastSlugNormalized ||
@@ -392,89 +608,14 @@ function getRelatedFilesForPage(pageFilePath) {
   return [...new Set(relatedFiles)];
 }
 
-function getFaizSheetNamesForRoute(route) {
-  const normalizedRoute = normalizeText(route);
-
-  if (!normalizedRoute.includes("mevduat-kredi-faizleri")) return [];
-
-  if (normalizedRoute.includes("mevduat")) {
-    return ["mevduat"];
-  }
-
-  if (normalizedRoute.includes("konut")) {
-    return ["konut kredisi"];
-  }
-
-  if (normalizedRoute.includes("tasit")) {
-    return ["tasit kredisi", "taşıt kredisi"];
-  }
-
-  if (
-    normalizedRoute.includes("tuketici") ||
-    normalizedRoute.includes("ihtiyac")
-  ) {
-    return ["ihtiyac kredisi", "ihtiyaç kredisi"];
-  }
-
-  return [];
-}
-
-function getRelevantJsonPayloadForRoute(filePath, route) {
-  const raw = fs.readFileSync(filePath, "utf8");
-  const ext = path.extname(filePath).toLowerCase();
-
-  if (ext !== ".json") {
-    return raw;
-  }
-
-  try {
-    const parsed = JSON.parse(raw);
-    const wantedSheets = getFaizSheetNamesForRoute(route);
-
-    if (
-      wantedSheets.length > 0 &&
-      parsed &&
-      typeof parsed === "object" &&
-      parsed.sheets &&
-      typeof parsed.sheets === "object"
-    ) {
-      const sheetKeys = Object.keys(parsed.sheets);
-      const targetKey = sheetKeys.find((key) =>
-        wantedSheets.includes(normalizeText(key))
-      );
-
-      if (targetKey) {
-        const sheet = parsed.sheets[targetKey];
-        const payload = sheet?.rawRows ?? sheet?.rows ?? sheet;
-
-        return JSON.stringify(
-          stableJson({
-            route,
-            sheet: targetKey,
-            payload,
-          })
-        );
-      }
-    }
-
-    return JSON.stringify(stableJson(parsed));
-  } catch {
-    return raw;
-  }
-}
-
 function getFileSignature(filePath, route) {
-  try {
-    if (!fs.existsSync(filePath)) return "";
+  const payload = getRouteAwarePayloadFromFile(filePath, route);
 
-    const content = getRelevantJsonPayloadForRoute(filePath, route);
+  if (!payload) return "";
 
-    return hashValue(
-      `${toPosixPath(path.relative(rootDir, filePath))}:${content}`
-    );
-  } catch {
-    return "";
-  }
+  return hashValue(
+    `${toPosixPath(path.relative(rootDir, filePath))}:${payload}`
+  );
 }
 
 function getPageSignature(route, files) {
@@ -486,11 +627,11 @@ function getPageSignature(route, files) {
   return hashValue(parts.join("|"));
 }
 
-function getNewestGitUpdatedAt(files) {
+function getNewestRouteAwareUpdatedAt(route, files) {
   let newest = "";
 
   for (const file of files) {
-    const updatedAt = getGitUpdatedAt(file);
+    const updatedAt = getRouteAwareUpdatedAt(file, route);
 
     if (!updatedAt) continue;
 
@@ -501,29 +642,6 @@ function getNewestGitUpdatedAt(files) {
 
   return newest;
 }
-
-function getNewestFileUpdatedAt(files) {
-  let newest = "";
-
-  for (const file of files) {
-    const updatedAt = getFileUpdatedAt(file);
-
-    if (!updatedAt) continue;
-
-    if (!newest || new Date(updatedAt).getTime() > new Date(newest).getTime()) {
-      newest = updatedAt;
-    }
-  }
-
-  return newest;
-}
-
-const previousOutput = readPreviousOutput();
-const previousByRoute = new Map(
-  previousOutput.pages.map((item) => [item.route, item])
-);
-
-const eskiSistemdenGecis = previousOutput.version !== VERSION;
 
 const pageFiles = walkPages(appDir);
 
@@ -531,30 +649,14 @@ const pages = pageFiles
   .map((filePath) => {
     const route = getRouteFromPageFile(filePath);
     const relatedFiles = getRelatedFilesForPage(filePath);
-    const signature = getPageSignature(route, relatedFiles);
-    const previous = previousByRoute.get(route);
-
-    let updatedAt = "";
-
-    if (!eskiSistemdenGecis && previous?.signature) {
-      updatedAt =
-        previous.signature === signature
-          ? previous.updatedAt
-          : getNewestFileUpdatedAt(relatedFiles) ||
-            getNewestGitUpdatedAt(relatedFiles) ||
-            new Date().toISOString();
-    } else {
-      updatedAt =
-        getNewestGitUpdatedAt(relatedFiles) ||
-        previous?.updatedAt ||
-        getNewestFileUpdatedAt(relatedFiles) ||
-        new Date().toISOString();
-    }
+    const updatedAt =
+      getNewestRouteAwareUpdatedAt(route, relatedFiles) ||
+      new Date().toISOString();
 
     return {
       route,
       updatedAt,
-      signature,
+      signature: getPageSignature(route, relatedFiles),
       file: toPosixPath(path.relative(rootDir, filePath)),
       trackedFiles: relatedFiles.map((item) =>
         toPosixPath(path.relative(rootDir, item))
@@ -565,7 +667,6 @@ const pages = pageFiles
   .sort((a, b) => a.route.localeCompare(b.route, "tr"));
 
 const output = {
-  version: VERSION,
   generatedAt: new Date().toISOString(),
   pages,
 };
