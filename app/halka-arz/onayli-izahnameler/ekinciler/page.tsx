@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Ekinciler Demir ve Çelik Sanayi A.Ş. Halka Arz Detayları 2026 | Taslak İzahname ve Finansal Veriler",
+    "Ekinciler Demir ve Çelik Sanayi A.Ş. Halka Arz Detayları 2026 | Onaylı İzahname ve Finansal Veriler",
   description:
-    "Ekinciler Demir ve Çelik Sanayi A.Ş. halka arz detayları, taslak izahname özeti, halka arz tarihi, fiyat aralığı, lot miktarı, dağıtım yöntemi, fon kullanım alanları ve finansal veriler.",
+    "Ekinciler Demir ve Çelik Sanayi A.Ş. halka arz detayları, onaylı izahname özeti, halka arz tarihi, fiyatı, lot miktarı, sermaye artırımı, ortak satışı ve finansal veriler.",
 };
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "buyuk" }) {
@@ -24,74 +24,69 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "buyuk" }) {
 export default function EkincilerDemirVeCelikSanayiASPage() {
   const summaryItems = [
     { label: "Halka Arz Tarihi", value: "Hazırlanıyor" },
-    { label: "Halka Arz Fiyatı / Aralığı", value: "Hazırlanıyor" },
+    { label: "Halka Arz Fiyatı / Aralığı", value: "45,00 TL" },
     { label: "Dağıtım Yöntemi", value: "Eşit Dağıtım" },
-    { label: "Pay", value: "52.000.000 Lot" },
-    { label: "Aracı Kurum", value: "A1 Capital Yatırım Menkul Değerler A.Ş." },
-    { label: "Pazar", value: "Yıldız Pazar" },
+    { label: "Pay", value: "12.000.000 Lot" },
+    { label: "Aracı Kurum", value: "InvestAZ Yatırım Menkul Değerler A.Ş." },
+    { label: "Pazar", value: "Hazırlanıyor" },
   ];
 
   const halkaArzSekli = [
     "Sermaye Artırımı: 40.000.000 Lot",
-    "Ortak Satışı: 1.713.972 Lot (Namık Kemal Ekinci)",
-    "Ortak Satışı: 1.713.972 Lot (Faruk Ekinci)",
-    "Ortak Satışı: 1.713.972 Lot (Haluk Ekinci)",
-    "Ortak Satışı: 1.713.972 Lot (Tarık Ekinci)",
-    "Ortak Satışı: 1.713.972 Lot (Nezihe Ekinci)",
-    "Ortak Satışı: 1.713.972 Lot (Sıdkı Baytan)",
-    "Ortak Satışı: 571.324 Lot (İlker Eker)",
-    "Ortak Satışı: 571.324 Lot (İlkay Eker)",
-    "Ortak Satışı: 571.324 Lot (Soner Eker)",
-    "Ortak Satışı: 21.96 Lot (Recep Ekinci)",
+    "Mevcut Sermaye: 280.000.000 TL",
+    "Yeni Sermaye: 320.000.000 TL",
+    "Mevcut Pay Satışı: 12.000.000 Lot",
+    "Ek Pay Satışı: Yok",
   ];
 
   const fonKullanim = [
-    "%60 Yenilenebilir enerji yatırımları",
-    "%30 Hammadde tedariki ve işletme sermayesi finansmanı",
-    "%5 Hurda işleme ve hazırlama tesisi yatırımı",
-    "%5 Kütük kaynatma ve kangal sistemi yatırımı",
+    "%20 Kapasite artırım yatırımı",
+    "%25 İşletme sermayesi",
+    "%50 Finansal borçluluk seviyesinin azaltılması",
+    "%5 Yenilenebilir enerji yatırımı",
   ];
 
   const tahsisat = [
     "Yurt İçi Bireysel Yatırımcı: Açıklanmadı",
     "Yurt İçi Kurumsal Yatırımcı: Açıklanmadı",
+    "Yurt Dışı Kurumsal Yatırımcı: Açıklanmadı",
   ];
 
   const finansalVeriler = [
     {
       kalem: "Hasılat",
-      d2024_6: "7,5 Milyar TL",
-      d2023: "11,0 Milyar TL",
-      d2022: "8,7 Milyar TL",
+      d2024: "2,0 Milyar TL",
+      d2023: "4,6 Milyar TL",
+      d2022: "3,9 Milyar TL",
     },
     {
       kalem: "Brüt Kâr",
-      d2024_6: "564,6 Milyon TL",
-      d2023: "754,9 Milyon TL",
-      d2022: "263,1 Milyon TL",
+      d2024: "403,1 Milyon TL",
+      d2023: "757,0 Milyon TL",
+      d2022: "506,0 Milyon TL",
     },
   ];
 
   const oneCikanlar = [
     {
-      title: "Halka Açıklık",
-      value: "%16,25",
-      desc: "Şirketin halka açık olması planlanan oranı.",
+      title: "Satış Fiyatı",
+      value: "45,00 TL",
+      desc: "1 TL nominal değerli paylar 45,00 TL sabit fiyat üzerinden satışa sunulacaktır.",
     },
     {
-      title: "Fiyat İstikrarı",
-      value: "Planlanmıyor",
-      desc: "Taslak izahnamede fiyat istikrarı planlanmadığı belirtiliyor.",
+      title: "Sermaye Artırımı",
+      value: "40 Milyon",
+      desc: "Bedelli sermaye artırımı ile yeni pay ihracı yapılacaktır.",
     },
     {
-      title: "Satmama Taahhüdü",
-      value: "1 Yıl",
-      desc: "İhraççı ve ortaklar için 1 yıl satmama taahhüdü bulunuyor.",
+      title: "Mevcut Pay Satışı",
+      value: "12 Milyon",
+      desc: "Ortak satışına konu mevcut pay miktarı 12.000.000 lot olarak yer almaktadır.",
     },
     {
-      title: "Yenilenebilir Enerji",
-      value: "%60",
-      desc: "Fon kullanımında en yüksek pay yenilenebilir enerji yatırımlarına ayrılıyor.",
+      title: "Yeni Sermaye",
+      value: "320 Milyon TL",
+      desc: "Şirketin halka arz sonrası yeni sermayesi 320.000.000 TL olacaktır.",
     },
   ];
 
@@ -107,7 +102,7 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
           </Link>
 
           <Link
-            href="/halka-arz/taslak-izahnameler"
+            href="/halka-arz/onayli-izahnameler"
             className="inline-flex items-center rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 transition hover:bg-zinc-100"
           >
             Geri
@@ -119,24 +114,24 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
             <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
               <div>
                 <p className="mb-2 inline-flex rounded-full bg-white/15 px-3 py-1 text-xs font-semibold tracking-wide">
-                  Halka Arz İncelemesi
+                  Onaylı İzahname
                 </p>
                 <h1 className="text-2xl font-bold sm:text-3xl">
                   Ekinciler Demir ve Çelik Sanayi A.Ş.
                 </h1>
                 <p className="mt-2 text-sm text-blue-100 sm:text-base">
-                  Taslak izahname verilerine göre hazırlanmış özet halka arz sayfası
+                  Onaylanan halka arz verilerine göre hazırlanmış özet sayfa
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-3 md:min-w-[320px]">
+              <div className="grid grid-cols-2 gap-3 md:min-w-[300px]">
                 <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
-                  <div className="text-xs text-blue-100">Toplam Pay</div>
-                  <div className="mt-1 text-lg font-bold">52.000.000</div>
+                  <div className="text-xs text-blue-100">Satış Fiyatı</div>
+                  <div className="mt-1 text-lg font-bold">45,00 TL</div>
                 </div>
                 <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
-                  <div className="text-xs text-blue-100">Pazar</div>
-                  <div className="mt-1 text-lg font-bold">Yıldız</div>
+                  <div className="text-xs text-blue-100">Yeni Sermaye</div>
+                  <div className="mt-1 text-lg font-bold">320.000.000 TL</div>
                 </div>
               </div>
             </div>
@@ -186,7 +181,7 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
               <div className="mb-5 flex items-center justify-between">
                 <h2 className="text-xl font-bold text-slate-900">Halka Arz Şekli</h2>
                 <span className="rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
-                  Taslak İzahname
+                  Onaylı İzahname
                 </span>
               </div>
 
@@ -208,30 +203,22 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
               <div className="grid gap-4 md:grid-cols-2">
                 <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4">
                   <div className="mb-2 text-sm font-semibold text-emerald-800">
-                    Yenilenebilir enerji
+                    Operasyonel ve yatırım kalemleri
                   </div>
-                  <div className="text-sm text-emerald-900">{fonKullanim[0]}</div>
+                  <div className="space-y-2 text-sm text-emerald-900">
+                    <p>{fonKullanim[0]}</p>
+                    <p>{fonKullanim[1]}</p>
+                  </div>
                 </div>
 
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                   <div className="mb-2 text-sm font-semibold text-slate-800">
-                    Hammadde ve işletme sermayesi
+                    Borç ve enerji yatırımları
                   </div>
-                  <div className="text-sm text-slate-700">{fonKullanim[1]}</div>
-                </div>
-
-                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                  <div className="mb-2 text-sm font-semibold text-slate-800">
-                    Hurda işleme tesisi
+                  <div className="space-y-2 text-sm text-slate-700">
+                    <p>{fonKullanim[2]}</p>
+                    <p>{fonKullanim[3]}</p>
                   </div>
-                  <div className="text-sm text-slate-700">{fonKullanim[2]}</div>
-                </div>
-
-                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                  <div className="mb-2 text-sm font-semibold text-slate-800">
-                    Kütük ve kangal sistemi
-                  </div>
-                  <div className="text-sm text-slate-700">{fonKullanim[3]}</div>
                 </div>
               </div>
             </section>
@@ -271,7 +258,7 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
                         <td className="px-4 py-4 text-sm font-semibold text-slate-800">
                           {row.kalem}
                         </td>
-                        <td className="px-4 py-4 text-sm text-slate-700">{row.d2024_6}</td>
+                        <td className="px-4 py-4 text-sm text-slate-700">{row.d2024}</td>
                         <td className="px-4 py-4 text-sm text-slate-700">{row.d2023}</td>
                         <td className="px-4 py-4 text-sm text-slate-700">{row.d2022}</td>
                       </tr>
@@ -286,11 +273,7 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
                 Ekinciler Demir ve Çelik Sanayi A.Ş. Halka Arz Yorumu
               </h2>
               <p className="text-sm leading-7 text-slate-600">
-                Ekinciler Demir ve Çelik Sanayi A.Ş. halka arz sürecinde yatırımcıların en çok
-                takip ettiği başlıklar arasında halka arz tarihi, fiyat aralığı, pay miktarı,
-                dağıtım yöntemi, tahsisat oranları, fon kullanım alanları ve finansal görünüm yer
-                alıyor. Bu sayfada şirketin taslak izahname verileri daha sade ve analiz edilebilir
-                bir yapıda sunulmuştur.
+                Ekinciler Demir ve Çelik Sanayi A.Ş. için onaylanan halka arz verilerinde 1 TL nominal değerli payların 45,00 TL sabit fiyatla satışa sunulacağı görülmektedir. Şirketin mevcut sermayesi 280.000.000 TL iken halka arz sonrası yeni sermayesi 320.000.000 TL olacaktır. Sayfada onaylı izahnameye göre güncellenen sermaye artırımı, mevcut pay satışı ve finansal veriler birlikte sunulmuştur.
               </p>
             </section>
           </div>
@@ -325,12 +308,20 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
 
               <div className="space-y-4">
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                  <div className="text-sm font-semibold text-slate-800">Mevcut Sermaye</div>
+                  <p className="mt-2 text-sm text-slate-700">280.000.000 TL</p>
+                </div>
+
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                  <div className="text-sm font-semibold text-slate-800">Yeni Sermaye</div>
+                  <p className="mt-2 text-sm text-slate-700">320.000.000 TL</p>
+                </div>
+
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                   <div className="text-sm font-semibold text-slate-800">
                     Dağıtılacak Pay Miktarı (Olası)
                   </div>
-                  <p className="mt-2 text-sm text-slate-700 italic">
-                    İlerleyen aşamalarda tamamlanacaktır.
-                  </p>
+                  <p className="mt-2 text-sm text-slate-700">12.000.000 Lot</p>
                 </div>
               </div>
             </section>
@@ -340,20 +331,18 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
 
               <div className="space-y-4">
                 <div className="rounded-2xl border border-blue-200 bg-blue-50 p-4">
-                  <div className="text-sm font-semibold text-blue-800">Fiyat İstikrarı</div>
-                  <p className="mt-2 text-sm text-blue-900">Planlanmamaktadır.</p>
+                  <div className="text-sm font-semibold text-blue-800">Satış Fiyatı</div>
+                  <p className="mt-2 text-sm text-blue-900">45,00 TL</p>
                 </div>
 
                 <div className="rounded-2xl border border-indigo-200 bg-indigo-50 p-4">
-                  <div className="text-sm font-semibold text-indigo-800">Satmama Taahhüdü</div>
-                  <p className="mt-2 text-sm text-indigo-900">
-                    1 yıl ihraççı, 1 yıl ortaklar.
-                  </p>
+                  <div className="text-sm font-semibold text-indigo-800">Sermaye Artırımı</div>
+                  <p className="mt-2 text-sm text-indigo-900">40.000.000 Lot</p>
                 </div>
 
                 <div className="rounded-2xl border border-cyan-200 bg-cyan-50 p-4">
-                  <div className="text-sm font-semibold text-cyan-800">Halka Açıklık</div>
-                  <p className="mt-2 text-sm text-cyan-900">%16,25</p>
+                  <div className="text-sm font-semibold text-cyan-800">Mevcut Pay Satışı</div>
+                  <p className="mt-2 text-sm text-cyan-900">12.000.000 Lot</p>
                 </div>
               </div>
             </section>
@@ -366,14 +355,10 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
 
         <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <h2 className="mb-3 text-lg font-bold text-slate-900">
-            Ekinciler Demir ve Çelik Sanayi A.Ş. Halka Arz Değerlendirmesi
+            Ekinciler Demir ve Çelik Sanayi A.Ş. Onaylı Halka Arz Değerlendirmesi
           </h2>
           <p className="text-sm leading-7 text-slate-600">
-            Ekinciler Demir ve Çelik Sanayi A.Ş. halka arz sayfasında yatırımcıların hızlı analiz
-            yapabilmesi için halka arz tarihi, halka arz fiyatı, lot miktarı, dağıtım yöntemi,
-            halka açıklık oranı, fon kullanım alanları, finansal veriler ve taahhüt detayları bir
-            arada sunulmuştur. Sayfadaki bilgiler taslak izahnameye göre hazırlanmıştır ve resmi
-            veriler açıklandıkça güncellenmelidir.
+            Ekinciler Demir ve Çelik Sanayi A.Ş. onaylı izahname sayfasında yatırımcıların hızlı analiz yapabilmesi için halka arz fiyatı, sermaye artırımı, mevcut pay satışı, yeni sermaye, finansal veriler ve fon kullanım alanları bir arada sunulmuştur. Sayfadaki veriler onaylanan halka arz bilgilerine göre güncellenmiştir.
           </p>
         </section>
       </div>

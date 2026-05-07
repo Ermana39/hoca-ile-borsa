@@ -285,8 +285,6 @@ Kardemir Çelik Sanayi A.Ş.
 
 X Koren Elektrik A.Ş.
 
-Ekinciler Demir ve Çelik Sanayi A.Ş.
-
 Soho Giyim ve Enerji A.Ş.
 
 Yeşil Global Enerji A.Ş.
