@@ -379,7 +379,7 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
             yapabilmesi için halka arz tarihi, halka arz fiyatı, lot miktarı, ortak satışı, dağıtım
             yöntemi, halka açıklık oranı, tahsisat dağılımı, fon kullanım alanları, finansal
             veriler ve taahhüt detayları bir arada sunulmuştur. Sayfadaki bilgiler taslak
-            izahnameye göre hazırlanmıştır ve resmi veriler açıklandıkça güncellenmelidir.
+            izahnameye göre hazırlanmıştır ve resmi veriler açıklandıkça güncellenecektir.
           </p>
         </section>
       </div>

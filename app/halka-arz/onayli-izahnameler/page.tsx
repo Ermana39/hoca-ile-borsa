@@ -1,16 +1,18 @@
 import Link from "next/link";
 
 const onayliIzahnameler = [
+
+   {
+    kod: "EKNDC",
+    sirket: "Akademi Çevre Entegre Atık Yönetimi Endüstri A.Ş.",
+    href: "/halka-arz/onayli-izahnameler/ekinciler",
+  },
   {
     kod: "AAGYO",
     sirket: "AVRASYA GYO",
     href: "/halka-arz/onayli-izahnameler/onayli-1",
   },
-  {
-    kod: "EKNDC",
-    sirket: "Akademi Çevre Entegre Atık Yönetimi Endüstri A.Ş.",
-    href: "/halka-arz/onayli-izahnameler/ekinciler",
-  },
+ 
 ];
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
