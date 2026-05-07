@@ -6,6 +6,8 @@ import { execFileSync } from "child_process";
 const XLSX_MODULE = await import("xlsx").catch(() => null);
 const XLSX = XLSX_MODULE?.default || XLSX_MODULE;
 
+const VERSION = 10;
+
 const rootDir = process.cwd();
 const appDir = path.join(rootDir, "app");
 const outputDir = path.join(rootDir, "lib");
@@ -27,6 +29,8 @@ const takipEdilecekVeriUzantilari = new Set([
   ".json",
   ".ts",
 ]);
+
+const excelUzantilari = new Set([".xlsx", ".xls", ".xlsm"]);
 
 const yokSayilacakDosyalar = new Set(["page-updates.generated.json"]);
 
@@ -148,7 +152,7 @@ function getGitLog(filePath) {
         cwd: rootDir,
         stdio: ["ignore", "pipe", "ignore"],
         encoding: "utf8",
-        maxBuffer: 1024 * 1024 * 50,
+        maxBuffer: 1024 * 1024 * 80,
       }
     ).trim();
 
@@ -170,7 +174,7 @@ function getGitFileBuffer(ref, filePath) {
     return execFileSync("git", ["show", `${ref}:${relative}`], {
       cwd: rootDir,
       stdio: ["ignore", "pipe", "ignore"],
-      maxBuffer: 1024 * 1024 * 100,
+      maxBuffer: 1024 * 1024 * 120,
     });
   } catch {
     return null;
@@ -344,7 +348,7 @@ function getRouteAwarePayloadFromBuffer(buffer, filePath, route) {
     return getJsonPayload(buffer, route);
   }
 
-  if (ext === ".xlsx" || ext === ".xls" || ext === ".xlsm") {
+  if (excelUzantilari.has(ext)) {
     return getExcelPayload(buffer, route);
   }
 
@@ -419,6 +423,8 @@ function getRouteAwareUpdatedAt(filePath, route) {
     if (!headPayload || currentPayload !== headPayload) {
       return getFileUpdatedAt(filePath);
     }
+
+    return getRouteAwareGitUpdatedAt(filePath, route);
   }
 
   return getRouteAwareGitUpdatedAt(filePath, route);
@@ -560,7 +566,8 @@ function getRouteSpecificSharedDataFiles(route) {
     const files = walkDataFiles(dataDir);
 
     for (const file of files) {
-      const fileBase = slugify(path.basename(file, path.extname(file)));
+      const ext = path.extname(file).toLowerCase();
+      const fileBase = slugify(path.basename(file, ext));
 
       if (normalizedRoute.startsWith("/mevduat-kredi-faizleri")) {
         relatedFiles.push(file);
@@ -578,6 +585,33 @@ function getRouteSpecificSharedDataFiles(route) {
   }
 
   return relatedFiles;
+}
+
+function filtreleUretilmisJsonDosyalari(files) {
+  const uniqueFiles = [...new Set(files)];
+  const excelFiles = uniqueFiles.filter((file) =>
+    excelUzantilari.has(path.extname(file).toLowerCase())
+  );
+
+  return uniqueFiles.filter((file) => {
+    const ext = path.extname(file).toLowerCase();
+
+    if (ext !== ".json") {
+      return true;
+    }
+
+    const fileDir = path.dirname(file);
+
+    const ayniKlasordeExcelVar = excelFiles.some(
+      (excelFile) => path.dirname(excelFile) === fileDir
+    );
+
+    if (!ayniKlasordeExcelVar) {
+      return true;
+    }
+
+    return false;
+  });
 }
 
 function getRelatedFilesForPage(pageFilePath) {
@@ -609,7 +643,7 @@ function getRelatedFilesForPage(pageFilePath) {
   relatedFiles.push(...getStringReferencedDataFiles(pageFilePath));
   relatedFiles.push(...getRouteSpecificSharedDataFiles(route));
 
-  return [...new Set(relatedFiles)];
+  return filtreleUretilmisJsonDosyalari(relatedFiles);
 }
 
 function getFileSignature(filePath, route) {
@@ -653,9 +687,7 @@ const pages = pageFiles
   .map((filePath) => {
     const route = getRouteFromPageFile(filePath);
     const relatedFiles = getRelatedFilesForPage(filePath);
-    const updatedAt =
-      getNewestRouteAwareUpdatedAt(route, relatedFiles) ||
-      new Date().toISOString();
+    const updatedAt = getNewestRouteAwareUpdatedAt(route, relatedFiles);
 
     return {
       route,
@@ -671,6 +703,7 @@ const pages = pageFiles
   .sort((a, b) => a.route.localeCompare(b.route, "tr"));
 
 const output = {
+  version: VERSION,
   generatedAt: new Date().toISOString(),
   pages,
 };
