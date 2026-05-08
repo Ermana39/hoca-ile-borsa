@@ -2,140 +2,95 @@ import Image from "next/image";
 import Link from "next/link";
 
 const bistVeri = {
-  tarih: "07.05.2026",
-  kapanis: "15040.25",
-  degisimYuzde: 0.82,
+  tarih: "08.05.2026",
+  kapanis: "15062.65",
+  degisimYuzde: 0.15,
 };
 
 const tumYukselenler = [
-  { kod: "EMPAE", fark: "+10,00%" },
-  { kod: "SAYAS", fark: "+10,00%" },
-  { kod: "SKBNK", fark: "+10,00%" },
-  { kod: "PRZMA", fark: "+9,98%" },
-  { kod: "NIBAS", fark: "+9,98%" },
-  { kod: "YEOTK", fark: "+9,98%" },
-  { kod: "MEYSU", fark: "+9,97%" },
-  { kod: "DGATE", fark: "+9,97%" },
+  { kod: "SURGY", fark: "+10,00%" },
+  { kod: "IZINV", fark: "+10,00%" },
+  { kod: "SMRTG", fark: "+10,00%" },
+  { kod: "ALTNY", fark: "+9,99%" },
+  { kod: "OZATD", fark: "+9,98%" },
+  { kod: "NETCD", fark: "+9,98%" },
+  { kod: "AKENR", fark: "+9,97%" },
   { kod: "KLRHO", fark: "+9,97%" },
-  { kod: "RTALB", fark: "+9,97%" },
 ];
 
 const tumDusenler = [
-  { kod: "ADEL", fark: "-10,00%" },
-  { kod: "HPARTF2", fark: "-9,99%" },
-  { kod: "HTPSBF2", fark: "-9,99%" },
-  { kod: "TMPOL", fark: "-9,97%" },
-  { kod: "BORLS", fark: "-9,96%" },
-  { kod: "AYCES", fark: "-9,95%" },
-  { kod: "ENSRI", fark: "-9,93%" },
-  { kod: "RPTEKF2", fark: "-9,86%" },
-  { kod: "KGYO", fark: "-6,51%" },
-  { kod: "BYDNR", fark: "-5,23%" },
+  { kod: "APYMDF2", fark: "-10,00%" },
+  { kod: "TMPOL", fark: "-9,99%" },
+  { kod: "ENSRI", fark: "-9,98%" },
+  { kod: "DSTKF", fark: "-9,98%" },
+  { kod: "ANELE", fark: "-9,93%" },
+  { kod: "DAGI", fark: "-9,64%" },
+  { kod: "DESA", fark: "-9,55%" },
+  { kod: "ULUSE", fark: "-8,70%" },
 ];
 
 const tumHacimliler = [
-  { kod: "SASA", hacim: "29.147.254.785" },
-  { kod: "THYAO", hacim: "17.258.887.094" },
-  { kod: "ASTOR", hacim: "12.850.526.810" },
-  { kod: "AKBNK", hacim: "11.829.896.149" },
-  { kod: "ISCTR", hacim: "9.703.646.162" },
-  { kod: "TUPRS", hacim: "7.944.274.486" },
-  { kod: "ASELS", hacim: "7.366.597.606" },
-  { kod: "YKBNK", hacim: "6.743.321.055" },
-  { kod: "GARAN", hacim: "6.540.218.953" },
-  { kod: "EREGL", hacim: "6.006.137.755" },
+  { kod: "SASA", hacim: "31.516.780.100" },
+  { kod: "THYAO", hacim: "16.347.509.447" },
+  { kod: "ASTOR", hacim: "11.683.254.186" },
+  { kod: "EREGL", hacim: "10.792.842.542" },
+  { kod: "AKBNK", hacim: "9.913.742.524" },
+  { kod: "ISCTR", hacim: "7.958.029.888" },
+  { kod: "ASELS", hacim: "7.715.886.666" },
+  { kod: "SISE", hacim: "6.462.173.710" },
 ];
 
 const tumParaGirisi = [
-  { kod: "SASA", tutar: "+228.577.862" },
-  { kod: "YKBNK", tutar: "+157.463.299" },
-  { kod: "PEKGY", tutar: "+91.694.263" },
-  { kod: "PAHOL", tutar: "+74.703.664" },
-  { kod: "TATEN", tutar: "+63.601.141" },
-  { kod: "PASEU", tutar: "+62.643.401" },
-  { kod: "KLRHO", tutar: "+62.593.286" },
-  { kod: "PGSYO", tutar: "+51.871.056" },
-  { kod: "DMRGD", tutar: "+50.543.858" },
+  { kod: "EREGL", tutar: "+431.915.239" },
+  { kod: "SASA", tutar: "+176.385.989" },
+  { kod: "SISE", tutar: "+167.034.175" },
+  { kod: "EFOR", tutar: "+164.551.493" },
+  { kod: "ASTOR", tutar: "+164.233.229" },
 ];
 
 const tumParaCikisi = [
-  { kod: "TUPRS", tutar: "-283.624.543" },
-  { kod: "ASELS", tutar: "-180.420.858" },
-  { kod: "ISCTR", tutar: "-135.246.243" },
-  { kod: "GARAN", tutar: "-114.071.705" },
-  { kod: "SISE", tutar: "-86.553.757" },
-  { kod: "AKBNK", tutar: "-84.370.624" },
-  { kod: "FROTO", tutar: "-75.903.822" },
-  { kod: "TERA", tutar: "-72.655.197" },
-  { kod: "TTKOM", tutar: "-58.828.141" },
+  { kod: "ASELS", tutar: "-146.063.755" },
+  { kod: "TRILC", tutar: "-123.024.518" },
+  { kod: "GENIL", tutar: "-113.258.121" },
+  { kod: "OYAKC", tutar: "-107.380.795" },
+  { kod: "FROTO", tutar: "-75.146.739" },
+  { kod: "SOKM", tutar: "-57.344.345" },
 ];
 
 const enCokAlisYapanKurumlar = [
-  { kurum: "TERA", hacim: "2.184.790.160", oran: "%26,46" },
-  { kurum: "BANK OF AME", hacim: "1.730.495.098", oran: "%20,96" },
-  { kurum: "YAPI KREDI", hacim: "1.398.037.185", oran: "%16,93" },
-  { kurum: "TACIRLER", hacim: "524.390.745", oran: "%6,35" },
-  { kurum: "PUSULA YAT.", hacim: "348.886.750", oran: "%4,23" },
+  { kurum: "DENIZ", hacim: "2.032.122.683", oran: "%20,05" },
+  { kurum: "TERA", hacim: "1.803.135.103", oran: "%17,79" },
+  { kurum: "BANK OF AME", hacim: "1.345.625.080", oran: "%13,28" },
+  { kurum: "PUSULA YAT.", hacim: "1.065.136.148", oran: "%10,51" },
+  { kurum: "AK", hacim: "983.074.116", oran: "%9,70" },
 ];
 
 const enCokSatisYapanKurumlar = [
-  { kurum: "AK", hacim: "-1.925.786.070", oran: "%23,33" },
-  { kurum: "YATIRIM FINA", hacim: "-918.632.828", oran: "%11,13" },
-  { kurum: "BULLS YATIRIM", hacim: "-784.325.195", oran: "%9,50" },
-  { kurum: "IS", hacim: "-478.481.549", oran: "%5,80" },
-  { kurum: "INFO", hacim: "-417.203.526", oran: "%5,05" },
+  { kurum: "IS", hacim: "-1.657.861.202", oran: "%16,36" },
+  { kurum: "A1 CAPITAL", hacim: "-1.117.755.403", oran: "%11,03" },
+  { kurum: "ZIRAAT", hacim: "-1.108.323.618", oran: "%10,94" },
+  { kurum: "GEDIK", hacim: "-1.063.509.445", oran: "%10,50" },
+  { kurum: "DESTEK", hacim: "-787.857.477", oran: "%7,77" },
 ];
 
 const enCokHacimYapanKurumlar = [
-  { kurum: "YAPI KREDI", hacim: "105.520.818.154", oran: "%15,24" },
-  { kurum: "BANK OF AME", hacim: "85.540.446.096", oran: "%12,36" },
-  { kurum: "IS", hacim: "65.196.652.673", oran: "%9,42" },
-  { kurum: "AK", hacim: "52.807.113.709", oran: "%7,63" },
-  { kurum: "TACIRLER", hacim: "30.507.891.385", oran: "%4,41" },
+  { kurum: "YAPI KREDI", hacim: "107.426.715.195", oran: "%14,90" },
+  { kurum: "BANK OF AME", hacim: "88.003.396.395", oran: "%12,20" },
+  { kurum: "IS", hacim: "66.596.509.030", oran: "%9,23" },
+  { kurum: "AK", hacim: "56.241.134.328", oran: "%7,80" },
+  { kurum: "TACIRLER", hacim: "36.717.468.994", oran: "%5,09" },
 ];
 
 const ekonomikTakvimVerileri = [
-  {
-    tarih: "05.05.2026",
-    kayitlar: [
-      {
-        saat: "14:30",
-        ulke: "TR",
-        gosterge: "TÜFE Bazlı Reel Efektif Döviz Kuru",
-        onem: "kirmizi" as const,
-        aciklanan: "106.30",
-        beklenti: "-",
-        onceki: "104.61",
-      },
-      {
-        saat: "14:30",
-        ulke: "TR",
-        gosterge: "ÜFE Bazlı Reel Efektif Döviz Kuru",
-        onem: "kirmizi" as const,
-        aciklanan: "102.16",
-        beklenti: "-",
-        onceki: "102.03",
-      },
-    ],
-  },
   {
     tarih: "08.05.2026",
     kayitlar: [
       {
         saat: "10:00",
         ulke: "TR",
-        gosterge: "Sanayi Üretimi MD (Yıllık)",
-        onem: "sari-tek" as const,
-        aciklanan: "-",
-        beklenti: "-",
-        onceki: "-1,10%",
-      },
-      {
-        saat: "10:00",
-        ulke: "TR",
         gosterge: "Sanayi Üretimi (TEA)",
         onem: "sari-tek" as const,
-        aciklanan: "-",
+        aciklanan: "-1.1%",
         beklenti: "-",
         onceki: "2.2%",
       },
