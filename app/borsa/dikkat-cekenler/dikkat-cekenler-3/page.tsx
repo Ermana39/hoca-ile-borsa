@@ -1,5 +1,15 @@
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Ak Portföy Yeni Teknolojiler Yabancı Hisse Senedi Fonu Son 1 Haftada %9,90 Artış Gösterdi",
+  description:
+    "Ak Portföy Yeni Teknolojiler Yabancı Hisse Senedi Fonu Son 1 Haftada %9,90 Artış Gösterdi",
+  alternates: {
+    canonical: "/borsa/dikkat-cekenler/haber-4",
+  },
+};
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
@@ -17,71 +27,109 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
-export default function Haber3Page() {
+export default function Haber1Page() {
   return (
-    <main className="min-h-screen bg-white px-4 py-6 md:px-6">
-      <div className="mx-auto max-w-5xl">
-        <div className="mb-6 flex gap-3">
+    <main className="min-h-screen bg-white">
+      <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
+        <section className="mb-6 overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50">
+          <Image
+            src="/dikkat-ceken-3a.jpg"
+            alt="Sentiment görünümü üst görseli"
+            width={1200}
+            height={675}
+            className="h-auto w-full object-cover"
+            priority
+          />
+        </section>
+
+        <section className="mb-6 flex flex-wrap gap-3">
+          <Link
+            href="/"
+            className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
+          >
+            Ana Sayfa
+          </Link>
+
           <Link
             href="/borsa/dikkat-cekenler"
-            className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
+            className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Geri
           </Link>
-        </div>
-
-        <section className="mb-6">
-          <ReklamAlani variant="yatay" />
         </section>
 
-        <article className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-sm">
-          <div className="relative aspect-[16/9] w-full">
-            <Image
-              src="/dikkat-ceken-3.jpg"
-              alt="BİST100 Önemli direnç noktasında negatif uyumsuzluk"
-              fill
-              className="object-cover"
-              priority
-            />
-          </div>
-
-          <div className="p-6 md:p-8">
-            <div className="mb-4 text-sm font-medium text-zinc-500 md:text-base">
-              Oluşturulma Tarihi: 21.04.2026
-            </div>
-
-            <h1 className="mb-6 text-3xl font-bold text-zinc-900 md:text-4xl">
-              BİST100 Önemli Direnç Noktasında Negatif Uyumsuzluk
+        <article className="rounded-2xl border border-zinc-200 bg-white p-5 md:p-8">
+          <header>
+            <h1 className="text-2xl font-bold leading-tight text-zinc-900 md:text-4xl">
+              AFT - Ak Portföy Yeni Teknolojiler Yabancı Hisse Senedi Fonu Son 1 Haftada %9,90 Artış Gösterdi
             </h1>
 
-            <div className="space-y-4 text-base leading-8 text-zinc-700 md:text-lg">
-              <p>
-                Bist100 Günlük grafiğinde savaş öncesinde RSI göstergesinde oluşan negatif uyumsuzluk ile endeks ABD-İsrail_İran savaşınında başlaması ile zirvesinden %15 düşüş yaşamıştı.
-              </p>
+            <p className="mt-3 text-sm leading-7 text-zinc-600 md:text-base">
+              AK Portföy Yeni Teknolojiler Yabancı Hisse Senedi Fonu AFT, son bir haftada yaklaşık %9,90 yükseliş göstererek yatırım fonları tarafında dikkat çeken fonlar arasında öne çıktı.
+            </p>
+            <p>Fonun performans tablosuna bakıldığında yalnızca kısa vadeli yükseliş değil, daha uzun vadeli getiriler de dikkat çekiyor. AFT’nin son 1 aylık getirisi %24,62, son 1 yıllık getirisi ise %88,91 seviyesinde bulunuyor. Daha uzun vadede ise son 3 yılda %438,73, son 5 yılda %918,31 getiri ile güçlü bir performans sergilediği görülüyor.</p>
+            <p>Karşılaştırma tablosunda AFT’nin son 1 yıllık performansı; BIST100, BIST30, altın, Euro/TL ve Dolar/TL gibi önemli göstergelerin üzerinde yer alıyor. Bu görünüm, fonun özellikle teknoloji odaklı yabancı hisse senedi yatırımları sayesinde son dönemde güçlü bir ivme yakaladığını gösteriyor.</p>
+            <p>
+              Fon portföyünün büyük bölümünün yabancı hisse senetlerinden oluşması nedeniyle AFT, hem küresel teknoloji hisselerindeki hareketlerden hem de döviz bazlı fiyatlamalardan etkilenebilen bir yapıya sahip. Bu nedenle getiriler dikkat çekici olsa da, fonun risk seviyesi ve dalgalanma potansiyeli de yatırımcılar tarafından ayrıca değerlendirilmelidir.
+            </p>
+            <p>
+              
+            </p>
+            <p>
+              
+            </p>
+            <p>08.05.2026 - Bu paylaşım yatırım tavsiyesi değildir.</p>
 
-              <p>
-                Bu dönemde savaşın devam etmesine rağmen endeks yeniden savaş öncesi değerlerine geldi.
-              </p>
+            <div className="mt-5">
+              <Link
+                href="/fonlar"
+                className="inline-flex rounded-xl bg-zinc-900 px-5 py-3 text-sm font-semibold text-white hover:bg-zinc-700"
+              >
+                Fonlar sayfasına git
+              </Link>
+            </div>
+          </header>
 
-              <p>
-                Burada da savaş öncesindeki kadar belirgin olmasa da RSI göstergesinde bir miktar negatif uyumsuzluk yeniden belirmiş durumda. TD Sequential direnç noktası olan 14.610 bölgesi geçilmedikçe endekste geri çekilme yaşanabileceğini düşünüyorum.
-              </p>
+          <section className="pt-6">
+            <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50">
+              <Image
+                src="/dikkat-ceken-1.png"
+                alt="Stopaj sonrası fon türleri ve BIST 100 karşılaştırması"
+                width={1200}
+                height={1500}
+                className="h-auto w-full object-cover"
+              />
+            </div>
+          </section>
 
-              <p>
-                Benim bu grafikten okuduğum fiyatın aşağıya olan ivme ihtimali daha ağır basıyor gibi. Aşağıdaki desteklerimiz 14.100-13.700-13.350 puan bölgeleri olacaktır. Yukarıya yaşanabilecek hareketlerde 14.600 üzerinde kapanışlar alabilirsek, 14.800 ve 15.100 seviyeleri hedef noktaları olacaktır.
-              </p>
+          <section className="pt-6">
+            <ReklamAlani variant="yatay" />
+          </section>
 
-              <p className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-4 text-sm font-medium leading-7 text-zinc-800 md:text-base">
-                Burada yer alan değerlendirmeler genel bilgilendirme amaçlıdır.
-                Herhangi bir yatırım tavsiyesi niteliği taşımaz.
+          <section className="pt-6">
+            <div className="rounded-2xl bg-zinc-50 p-4 md:p-6">
+              <p className="whitespace-pre-line text-base leading-8 text-zinc-700 md:text-lg">
+{``}
               </p>
             </div>
-          </div>
-        </article>
+          </section>
 
-        <section className="mt-8">
-          <ReklamAlani variant="icerik" />
-        </section>
+          <section className="pt-8">
+            <ReklamAlani variant="icerik" />
+          </section>
+
+          <section className="pt-8">
+            <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50">
+              <Image
+                src="/dikkat-ceken-3b.jpg"
+                alt="Sentiment görünümü alt görseli"
+                width={1200}
+                height={675}
+                className="h-auto w-full object-cover"
+              />
+            </div>
+          </section>
+        </article>
       </div>
     </main>
   );
