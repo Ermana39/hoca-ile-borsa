@@ -115,11 +115,7 @@ export default function Haber1Page() {
             </div>
           </header>
 
-          <section className="pt-8">
-            <ReklamAlani variant="icerik" />
-          </section>
-
-          <section className="pt-8">
+                   <section className="pt-8">
             <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50">
               <Image
                 src="/dikkat-ceken-3b.jpg"
