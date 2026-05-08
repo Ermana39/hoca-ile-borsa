@@ -274,6 +274,26 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
             </section>
 
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h2 className="mb-4 text-xl font-bold text-slate-900">YouTube Video</h2>
+              <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+                <div className="relative w-full overflow-hidden pt-[56.25%]">
+                  <iframe
+                    className="absolute left-0 top-0 h-full w-full"
+                    src="https://www.youtube.com/embed/Hs__b6dgmZY"
+                    title="Ekinciler Demir ve Çelik Sanayi A.Ş. YouTube Videosu"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <ReklamAlani />
+            </section>
+
+            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
               <h2 className="mb-4 text-xl font-bold text-slate-900">
                 Ekinciler Demir ve Çelik Sanayi A.Ş. Halka Arz Yorumu
               </h2>
@@ -333,9 +353,7 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
                 </div>
 
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                  <div className="text-sm font-semibold text-slate-800">
-                    Fiyat İstikrarı
-                  </div>
+                  <div className="text-sm font-semibold text-slate-800">Fiyat İstikrarı</div>
                   <p className="mt-2 text-sm text-slate-700">Planlanmamaktadır.</p>
                 </div>
               </div>
