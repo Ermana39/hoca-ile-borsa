@@ -89,6 +89,8 @@ Formasyonun yukarı yönlü teyidini koruması halinde 17,43 TL seviyesi yarı h
 
 Bundan sonraki süreçte fiyatın formasyon yapısını koruyup koruyamayacağı, hacim desteği ve genel piyasa görünümü yakından takip edilmeli. Teknik görünümde bozulma yaşanması halinde beklentiler geçerliliğini yitirebilir.
 
+14.55 TL 08.05.2026
+
 Burada yer alan bilgi, yorum ve teknik değerlendirmeler genel niteliktedir. Yatırım danışmanlığı kapsamında değildir.`}
               </p>
             </div>
