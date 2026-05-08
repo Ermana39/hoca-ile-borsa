@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Club Jolly Turizm ve Tic. A.Ş. Halka Arz Detayları 2026 | Taslak İzahname ve Finansal Veriler",
+    "Türker Vangölü Enerji Yatırım A.Ş. Halka Arz Detayları 2026 | Taslak İzahname ve Finansal Veriler",
   description:
-    "Club Jolly Turizm ve Tic. A.Ş. halka arz detayları, taslak izahname özeti, halka arz tarihi, fiyat aralığı, lot miktarı, ortak satışı, dağıtım yöntemi, pazar bilgisi, fon kullanım alanları ve finansal veriler.",
+    "Türker Vangölü Enerji Yatırım A.Ş. halka arz detayları, taslak izahname özeti, halka arz tarihi, fiyat aralığı, lot miktarı, dağıtım yöntemi, fon kullanım alanları ve finansal veriler.",
 };
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "buyuk" }) {
@@ -21,69 +21,71 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "buyuk" }) {
   );
 }
 
-export default function ClubJollyTurizmVeTicASPage() {
+export default function TurkervangoluPage() {
   const summaryItems = [
     { label: "Halka Arz Tarihi", value: "Hazırlanıyor" },
     { label: "Halka Arz Fiyatı / Aralığı", value: "Hazırlanıyor" },
     { label: "Dağıtım Yöntemi", value: "Eşit Dağıtım" },
-    { label: "Pay", value: "22.240.000 Lot" },
-    { label: "Aracı Kurum", value: "Yapı Kredi Yatırım Menkul Değerler A.Ş." },
+    { label: "Pay", value: "123.000.000 Lot" },
+    {
+      label: "Aracı Kurum",
+      value:
+        "Halk Yatırım Menkul Değerler A.Ş.\nZiraat Yatırım Menkul Değerler A.Ş.\nVakıf Yatırım Menkul Değerler A.Ş.",
+    },
     { label: "Pazar", value: "Yıldız Pazar" },
   ];
 
   const halkaArzSekli = [
-    "Sermaye Artırımı: 11.120.000 Lot",
-    "Ortak Satışı: 4.834.052 Lot (Ahmet Mete Vardar)",
-    "Ortak Satışı: 4.834.052 Lot (Mert Vardar)",
-    "Ortak Satışı: 1.451.896 Lot (Sinan Vardar)",
+    "Sermaye Artırımı: 61.500.000 Lot",
+    "Ortak Satışı: 61.500.000 Lot (Türkerler İnşaat Turizm Madencilik Enerji Üretim Tic. ve San. A.Ş.)",
   ];
 
   const fonKullanim = [
-    "%55-60 İşletme sermayesi",
-    "%40-45 Stratejik pazarlama ve büyüme yatırımları",
+    "%60-70 VEDAŞ'ın yatırım harcamaları",
+    "%30-40 İşletme sermayesi",
   ];
 
   const tahsisat = [
     "Yurt İçi Bireysel Yatırımcı: Açıklanmadı",
-    "Yüksek Başvurulu Yatırımcı: Açıklanmadı",
     "Yurt İçi Kurumsal Yatırımcı: Açıklanmadı",
+    "Yüksek Başvurulu Yatırımcı: Açıklanmadı",
   ];
 
   const finansalVeriler = [
     {
       kalem: "Hasılat",
-      d2024: "11,4 Milyar TL",
-      d2023: "9,5 Milyar TL",
-      d2022: "5,7 Milyar TL",
+      d2024_9: "9,6 Milyar TL",
+      d2023: "17,6 Milyar TL",
+      d2022: "23,8 Milyar TL",
     },
     {
       kalem: "Brüt Kâr",
-      d2024: "1,6 Milyar TL",
-      d2023: "1,1 Milyar TL",
-      d2022: "804,3 Milyon TL",
+      d2024_9: "3,4 Milyar TL",
+      d2023: "3,8 Milyar TL",
+      d2022: "2,8 Milyar TL",
     },
   ];
 
   const oneCikanlar = [
     {
-      title: "Pazar",
-      value: "Yıldız Pazar",
-      desc: "Payların Yıldız Pazar'da işlem görmesi planlanmaktadır.",
-    },
-    {
       title: "Halka Açıklık",
-      value: "%20,01",
-      desc: "Planlanan halka açıklık oranı %20,01 seviyesindedir.",
+      value: "%20,8",
+      desc: "Şirketin halka açık olması planlanan oranı.",
     },
     {
       title: "Fiyat İstikrarı",
       value: "30 Gün",
-      desc: "Halka arz sonrası 30 gün fiyat istikrarı planlanıyor.",
+      desc: "30 gün boyunca brüt halka arz gelirinin %20'si ile fiyat istikrarı planlanıyor.",
     },
     {
-      title: "Dağıtım",
-      value: "Eşit / Oransal",
-      desc: "Bireyselde eşit, yüksek başvuruluda oransal dağıtım yapısı öne çıkmaktadır.",
+      title: "Tahmini Takvim",
+      value: "2025 Son Çeyrek",
+      desc: "2025 yılının ilk çeyreğinde tamamlanması planlanmaktadır.",
+    },
+    {
+      title: "Satmama Taahhüdü",
+      value: "1 Yıl",
+      desc: "İhraççı ve ortaklar için 1 yıl satmama taahhüdü bulunuyor.",
     },
   ];
 
@@ -114,21 +116,21 @@ export default function ClubJollyTurizmVeTicASPage() {
                   Halka Arz İncelemesi
                 </p>
                 <h1 className="text-2xl font-bold sm:text-3xl">
-                  Club Jolly Turizm ve Tic. A.Ş.
+                  Türker Vangölü Enerji Yatırım A.Ş.
                 </h1>
                 <p className="mt-2 text-sm text-blue-100 sm:text-base">
                   Taslak izahname verilerine göre hazırlanmış özet halka arz sayfası
                 </p>
               </div>
 
-              <div className="grid grid-cols-2 gap-3 md:min-w-[300px]">
+              <div className="grid grid-cols-2 gap-3 md:min-w-[320px]">
                 <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
                   <div className="text-xs text-blue-100">Toplam Pay</div>
-                  <div className="mt-1 text-lg font-bold">22.240.000</div>
+                  <div className="mt-1 text-lg font-bold">123.000.000</div>
                 </div>
                 <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
-                  <div className="text-xs text-blue-100">Halka Açıklık</div>
-                  <div className="mt-1 text-lg font-bold">%20,01</div>
+                  <div className="text-xs text-blue-100">Pazar</div>
+                  <div className="mt-1 text-lg font-bold">Yıldız</div>
                 </div>
               </div>
             </div>
@@ -198,18 +200,18 @@ export default function ClubJollyTurizmVeTicASPage() {
               <h2 className="mb-5 text-xl font-bold text-slate-900">Fon Kullanım Yeri</h2>
 
               <div className="grid gap-4 md:grid-cols-2">
+                <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4">
+                  <div className="mb-2 text-sm font-semibold text-emerald-800">
+                    Yatırım harcamaları
+                  </div>
+                  <div className="text-sm text-emerald-900">{fonKullanim[0]}</div>
+                </div>
+
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                   <div className="mb-2 text-sm font-semibold text-slate-800">
                     İşletme sermayesi
                   </div>
-                  <div className="text-sm text-slate-700">{fonKullanim[0]}</div>
-                </div>
-
-                <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4">
-                  <div className="mb-2 text-sm font-semibold text-emerald-800">
-                    Pazarlama ve büyüme
-                  </div>
-                  <div className="text-sm text-emerald-900">{fonKullanim[1]}</div>
+                  <div className="text-sm text-slate-700">{fonKullanim[1]}</div>
                 </div>
               </div>
             </section>
@@ -249,7 +251,7 @@ export default function ClubJollyTurizmVeTicASPage() {
                         <td className="px-4 py-4 text-sm font-semibold text-slate-800">
                           {row.kalem}
                         </td>
-                        <td className="px-4 py-4 text-sm text-slate-700">{row.d2024}</td>
+                        <td className="px-4 py-4 text-sm text-slate-700">{row.d2024_9}</td>
                         <td className="px-4 py-4 text-sm text-slate-700">{row.d2023}</td>
                         <td className="px-4 py-4 text-sm text-slate-700">{row.d2022}</td>
                       </tr>
@@ -261,14 +263,14 @@ export default function ClubJollyTurizmVeTicASPage() {
 
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
               <h2 className="mb-4 text-xl font-bold text-slate-900">
-                Club Jolly Turizm ve Tic. A.Ş. Halka Arz Yorumu
+                Türker Vangölü Enerji Yatırım A.Ş. Halka Arz Yorumu
               </h2>
               <p className="text-sm leading-7 text-slate-600">
-                Club Jolly Turizm ve Tic. A.Ş. halka arz sürecinde yatırımcıların en çok takip ettiği
-                başlıklar arasında halka arz tarihi, fiyat aralığı, pay miktarı, ortak satışı,
-                dağıtım yöntemi, tahsisat yapısı, fon kullanım alanları ve finansal görünüm yer
-                alıyor. Bu sayfada şirketin taslak izahname verileri daha sade ve analiz edilebilir
-                bir yapıda sunulmuştur.
+                Türker Vangölü Enerji Yatırım A.Ş. halka arz sürecinde yatırımcıların en çok takip
+                ettiği başlıklar arasında halka arz tarihi, fiyat aralığı, pay miktarı, dağıtım
+                yöntemi, tahsisat yapısı, fon kullanım alanları ve finansal görünüm yer alıyor. Bu
+                sayfada şirketin taslak izahname verileri daha sade ve analiz edilebilir bir yapıda
+                sunulmuştur.
               </p>
             </section>
           </div>
@@ -316,9 +318,11 @@ export default function ClubJollyTurizmVeTicASPage() {
 
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                   <div className="text-sm font-semibold text-slate-800">
-                    Fiyat İstikrarı
+                    Tahmini Halka Arz Takvimi
                   </div>
-                  <p className="mt-2 text-sm text-slate-700">30 gün.</p>
+                  <p className="mt-2 text-sm text-slate-700">
+                    2025 yılının ilk çeyreğinde tamamlanması planlanmaktadır.
+                  </p>
                 </div>
               </div>
             </section>
@@ -329,7 +333,9 @@ export default function ClubJollyTurizmVeTicASPage() {
               <div className="space-y-4">
                 <div className="rounded-2xl border border-blue-200 bg-blue-50 p-4">
                   <div className="text-sm font-semibold text-blue-800">Fiyat İstikrarı</div>
-                  <p className="mt-2 text-sm text-blue-900">30 gün.</p>
+                  <p className="mt-2 text-sm text-blue-900">
+                    30 gün. Brüt halka arz gelirinin %20'si. (Halk Yatırım Menkul Değerler A.Ş.)
+                  </p>
                 </div>
 
                 <div className="rounded-2xl border border-indigo-200 bg-indigo-50 p-4">
@@ -341,7 +347,7 @@ export default function ClubJollyTurizmVeTicASPage() {
 
                 <div className="rounded-2xl border border-cyan-200 bg-cyan-50 p-4">
                   <div className="text-sm font-semibold text-cyan-800">Halka Açıklık</div>
-                  <p className="mt-2 text-sm text-cyan-900">%20,01.</p>
+                  <p className="mt-2 text-sm text-cyan-900">%20,8</p>
                 </div>
               </div>
             </section>
@@ -354,13 +360,13 @@ export default function ClubJollyTurizmVeTicASPage() {
 
         <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <h2 className="mb-3 text-lg font-bold text-slate-900">
-            Club Jolly Turizm ve Tic. A.Ş. Halka Arz Değerlendirmesi
+            Türker Vangölü Enerji Yatırım A.Ş. Halka Arz Değerlendirmesi
           </h2>
           <p className="text-sm leading-7 text-slate-600">
-            Club Jolly Turizm ve Tic. A.Ş. halka arz sayfasında yatırımcıların hızlı analiz
-            yapabilmesi için halka arz tarihi, halka arz fiyatı, lot miktarı, ortak satışı, dağıtım
-            yöntemi, halka açıklık oranı, tahsisat dağılımı, fon kullanım alanları, finansal veriler
-            ve taahhüt detayları bir arada sunulmuştur. Sayfadaki bilgiler taslak izahnameye göre
+            Türker Vangölü Enerji Yatırım A.Ş. halka arz sayfasında yatırımcıların hızlı analiz
+            yapabilmesi için halka arz tarihi, halka arz fiyatı, lot miktarı, dağıtım yöntemi,
+            halka açıklık oranı, tahsisat dağılımı, fon kullanım alanları, finansal veriler ve
+            taahhüt detayları bir arada sunulmuştur. Sayfadaki bilgiler taslak izahnameye göre
             hazırlanmıştır ve resmi veriler açıklandıkça güncellenmelidir.
           </p>
         </section>

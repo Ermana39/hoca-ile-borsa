@@ -35,8 +35,7 @@ export default function TalepHesaplaPage() {
     const bireyselYuzdeValue = parseNumber(bireyselYuzde);
     const katilimciSayisiValue = parseNumber(katilimciSayisi);
 
-    const bireyseleAyrilanLot =
-      toplamLotValue * (bireyselYuzdeValue / 100);
+    const bireyseleAyrilanLot = toplamLotValue * (bireyselYuzdeValue / 100);
 
     const muhtemelLot =
       katilimciSayisiValue > 0
@@ -72,9 +71,15 @@ export default function TalepHesaplaPage() {
           <ReklamAlani variant="yatay" />
         </section>
 
-        <h1 className="mb-6 text-3xl font-bold text-zinc-900">
-          Talep Hesapla
+        <h1 className="mb-3 text-3xl font-bold text-zinc-900">
+          Halka Arz Talep Hesaplama
         </h1>
+
+        <p className="mb-6 text-sm leading-7 text-zinc-600">
+          Halka arz talep hesaplama aracı, toplam lot sayısı, bireysele ayrılan pay oranı ve
+          muhtemel katılımcı sayısına göre yatırımcı başına düşebilecek tahmini lot miktarını
+          hesaplamak için hazırlanmıştır.
+        </p>
 
         <div className="space-y-4 rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
           <div>
@@ -142,6 +147,24 @@ export default function TalepHesaplaPage() {
 
         <section className="mt-8">
           <ReklamAlani variant="icerik" />
+        </section>
+
+        <section className="mt-8 rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
+          <h2 className="mb-3 text-xl font-bold text-zinc-900">
+            Halka Arz Talep Hesaplama Nasıl Yapılır?
+          </h2>
+          <p className="text-sm leading-7 text-zinc-600">
+            Halka arzlarda yatırımcıya düşebilecek tahmini lot miktarı; toplam halka arz edilen
+            lot sayısı, bireysel yatırımcıya ayrılan oran ve talebe katılan kişi sayısına göre
+            değişebilir. Bu hesaplama aracı, özellikle eşit dağıtım yöntemiyle gerçekleşen halka
+            arzlarda yaklaşık lot beklentisini hızlı şekilde görmek isteyen yatırımcılar için
+            hazırlanmıştır.
+          </p>
+          <p className="mt-3 text-sm leading-7 text-zinc-600">
+            Hesaplama sonucu kesin dağıtım anlamına gelmez. Nihai lot miktarı, halka arza gelen
+            toplam talep, yatırımcı gruplarına ayrılan tahsisat, dağıtım yöntemi ve resmi sonuçlara
+            göre değişebilir. Bu sayfadaki bilgiler yatırım tavsiyesi değildir.
+          </p>
         </section>
       </div>
     </main>

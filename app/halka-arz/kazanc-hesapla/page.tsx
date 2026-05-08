@@ -97,9 +97,15 @@ export default function KazancHesaplaPage() {
           <ReklamAlani variant="yatay" />
         </section>
 
-        <h1 className="mb-6 text-3xl font-bold text-zinc-900">
-          Kazanç Hesapla
+        <h1 className="mb-3 text-3xl font-bold text-zinc-900">
+          Halka Arz Kazanç Hesaplama
         </h1>
+
+        <p className="mb-6 text-sm leading-7 text-zinc-600">
+          Halka arz kazanç hesaplama aracı, halka arz fiyatı, alınan lot sayısı ve tavan serisi
+          beklentisine göre tahmini kâr, toplam değer ve yüzdelik getiri hesaplamak için
+          hazırlanmıştır.
+        </p>
 
         <div className="space-y-4 rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
           <div>
@@ -188,6 +194,24 @@ export default function KazancHesaplaPage() {
 
         <section className="mt-8">
           <ReklamAlani variant="icerik" />
+        </section>
+
+        <section className="mt-8 rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
+          <h2 className="mb-3 text-xl font-bold text-zinc-900">
+            Halka Arz Kazanç Hesaplama Nasıl Yapılır?
+          </h2>
+          <p className="text-sm leading-7 text-zinc-600">
+            Halka arz kazanç hesaplama işlemi, yatırımcının aldığı lot sayısı ile halka arz
+            fiyatının çarpılması sonucu oluşan maliyet üzerinden yapılır. Hissenin tavan serisi
+            devam ettikçe teorik fiyat her gün yüzde 10 artış varsayımıyla hesaplanır ve yatırımın
+            tahmini toplam değeri buna göre gösterilir.
+          </p>
+          <p className="mt-3 text-sm leading-7 text-zinc-600">
+            Bu araç, halka arz sonrası oluşabilecek tahmini kazancı hızlı şekilde görmek isteyen
+            kullanıcılar için hazırlanmıştır. Hesaplama sonuçları kesin getiri anlamına gelmez.
+            Piyasa koşulları, emir dengesi, işlem hacmi, şirket haberleri ve genel borsa görünümü
+            fiyat hareketlerini değiştirebilir. Bu sayfadaki bilgiler yatırım tavsiyesi değildir.
+          </p>
         </section>
       </div>
     </main>

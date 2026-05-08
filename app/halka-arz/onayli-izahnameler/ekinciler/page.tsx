@@ -107,7 +107,7 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
           </Link>
 
           <Link
-            href="/halka-arz/onaylı-izahnameler"
+            href="/halka-arz/onayli-izahnameler"
             className="inline-flex items-center rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 transition hover:bg-zinc-100"
           >
             Geri
@@ -154,6 +154,12 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="mx-6 mb-6 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-7 text-amber-900">
+            Ekinciler Demir ve Çelik Sanayi A.Ş. halka arzı SPK tarafından onaylanmıştır.
+            Ancak onaylı izahname ve kesin halka arz takvimi henüz yayımlanmadığı için bazı
+            bilgiler güncellendikçe sayfaya eklenecektir.
           </div>
         </section>
 
