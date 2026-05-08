@@ -4,14 +4,10 @@ const onayliIzahnameler = [
 
    {
     kod: "EKNDC",
-    sirket: "Akademi Çevre Entegre Atık Yönetimi Endüstri A.Ş.",
+    sirket: "Ekinciler Demir ve Çelik Sanayi A.Ş.",
     href: "/halka-arz/onayli-izahnameler/ekinciler",
   },
-  {
-    kod: "AAGYO",
-    sirket: "AVRASYA GYO",
-    href: "/halka-arz/onayli-izahnameler/onayli-1",
-  },
+
  
 ];
 

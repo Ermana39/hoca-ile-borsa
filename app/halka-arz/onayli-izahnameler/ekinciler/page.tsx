@@ -107,7 +107,7 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
           </Link>
 
           <Link
-            href="/halka-arz/taslak-izahnameler"
+            href="/halka-arz/onaylı-izahnameler"
             className="inline-flex items-center rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 transition hover:bg-zinc-100"
           >
             Geri
