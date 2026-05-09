@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title:
     "Ekinciler Demir ve Çelik Sanayi A.Ş. Halka Arz Detayları 2026 | EKDMR Onaylı İzahname",
   description:
-    "Ekinciler Demir ve Çelik Sanayi A.Ş. EKDMR halka arz tarihi, fiyatı, lot miktarı, arz büyüklüğü, dağıtım yöntemi, tahmini lot ve fon kullanım alanları.",
+    "Ekinciler Demir ve Çelik Sanayi A.Ş. EKDMR halka arz tarihi, fiyatı, lot miktarı, arz büyüklüğü, dağıtım yöntemi, tahmini lot dağılımı, fon kullanım alanları ve onaylı izahname bilgileri.",
 };
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "buyuk" }) {
@@ -25,13 +25,16 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
   const summaryItems = [
     { label: "İşlem Kodu", value: "EKDMR" },
     { label: "Talep Toplama", value: "13-14-15 Mayıs 2026" },
+    { label: "Saat", value: "09.00 - 17.00" },
     { label: "Halka Arz Fiyatı", value: "45,00 TL" },
+    { label: "İskonto Oranı", value: "%37,72" },
     { label: "Toplam Lot", value: "52.000.000 Lot" },
     { label: "Arz Büyüklüğü", value: "2.340.000.000 TL" },
     { label: "Halka Açıklık", value: "%16,25" },
-    { label: "Dağıtım Yöntemi", value: "Bireysele Eşit / Yüksek Başvuruluya Oransal" },
     { label: "Katılım Endeksi", value: "Uygun Değil" },
     { label: "Pazar", value: "Yıldız Pazar" },
+    { label: "Aracı Kurum", value: "A1 Capital Yatırım Menkul Değerler A.Ş." },
+    { label: "T1 - T2", value: "Kullanılamaz" },
   ];
 
   const oneCikanlar = [
@@ -43,7 +46,7 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
     {
       title: "Talep Toplama",
       value: "13-15 Mayıs",
-      desc: "Talep toplama 3 işlem günü sürecek.",
+      desc: "Talep toplama 3 gün sürecek.",
     },
     {
       title: "Toplam Lot",
@@ -58,24 +61,101 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
   ];
 
   const tahsisat = [
-    { grup: "Yurt İçi Bireysel Yatırımcı", oran: "%40", lot: "20.800.000 Lot" },
-    { grup: "Yüksek Başvurulu Yatırımcı", oran: "%10", lot: "5.200.000 Lot" },
-    { grup: "Yurt İçi Kurumsal Yatırımcı", oran: "%30", lot: "15.600.000 Lot" },
-    { grup: "Yurt Dışı Kurumsal Yatırımcı", oran: "%20", lot: "10.400.000 Lot" },
+    {
+      grup: "Yurt İçi Bireysel Yatırımcılar",
+      oran: "%40",
+      lot: "20.800.000 Lot",
+      detay: "10.000 lot ve altı başvurular için bireysele eşit dağıtım.",
+    },
+    {
+      grup: "Yüksek Başvurulu Yatırımcı",
+      oran: "%10",
+      lot: "5.200.000 Lot",
+      detay: "10.001 lot ve üzeri başvurular için oransal dağıtım.",
+    },
+    {
+      grup: "Yurt İçi Kurumsal Yatırımcılar",
+      oran: "%30",
+      lot: "15.600.000 Lot",
+      detay: "Kurumsal yatırımcı grubu için ayrılan pay.",
+    },
+    {
+      grup: "Yurt Dışı Kurumsal Yatırımcılar",
+      oran: "%20",
+      lot: "10.400.000 Lot",
+      detay: "Yurt dışı kurumsal yatırımcı grubu için ayrılan pay.",
+    },
+  ];
+
+  const toplamLot = [
+    { label: "Sermaye Artırımı", value: "40.000.000 Lot" },
+    { label: "Ortak Satışı", value: "12.000.000 Lot" },
+    { label: "Toplam Dağıtılacak Pay", value: "52.000.000 Lot" },
   ];
 
   const fonKullanim = [
-    { oran: "%40", alan: "Hammadde tedariki ve işletme sermayesi finansmanı" },
-    { oran: "%25", alan: "Yenilenebilir enerji yatırımları" },
+    {
+      oran: "%40",
+      alan: "Hammadde tedariki ve işletme sermayesi ihtiyacının finansmanı",
+    },
     {
       oran: "%25",
-      alan: "Yeşil Çelik Haddehane modernizasyonu ve kapasite artışı yatırımları",
+      alan: "Yenilenebilir enerji yatırımları",
     },
-    { oran: "%10", alan: "Kütük kaynatma sistemi yatırımı" },
+    {
+      oran: "%25",
+      alan:
+        "Yeşil Çelik Haddehane modernizasyonu ve mevcut üretim tesislerinde kapasite artışı yatırımları",
+    },
+    {
+      oran: "%10",
+      alan: "Kütük kaynatma sistemi yatırımı",
+    },
   ];
 
   const finansalOzet = [
-    { kalem: "Hasılat", d2023: "11 Milyar TL", d2024: "16 Milyar TL", d2025: "20 Milyar TL" },
+    {
+      kalem: "Dönen Varlıklar",
+      d2023: "2,3 Milyar TL",
+      d2024: "4,3 Milyar TL",
+      d2025: "5 Milyar TL",
+    },
+    {
+      kalem: "Duran Varlıklar",
+      d2023: "10 Milyar TL",
+      d2024: "12 Milyar TL",
+      d2025: "16 Milyar TL",
+    },
+    {
+      kalem: "Toplam Varlıklar",
+      d2023: "12 Milyar TL",
+      d2024: "16 Milyar TL",
+      d2025: "21 Milyar TL",
+    },
+    {
+      kalem: "Kısa Vadeli Yükümlülükler",
+      d2023: "2,7 Milyar TL",
+      d2024: "4,6 Milyar TL",
+      d2025: "5,2 Milyar TL",
+    },
+    {
+      kalem: "Uzun Vadeli Yükümlülükler",
+      d2023: "475 Milyon TL",
+      d2024: "911 Milyon TL",
+      d2025: "1,5 Milyar TL",
+    },
+    {
+      kalem: "Özkaynaklar",
+      d2023: "9 Milyar TL",
+      d2024: "11 Milyar TL",
+      d2025: "14 Milyar TL",
+    },
+    {
+      kalem: "Hasılat",
+      d2023: "11 Milyar TL",
+      d2024: "16 Milyar TL",
+      d2025: "20 Milyar TL",
+    },
     {
       kalem: "Esas Faaliyet Kârı",
       d2023: "416 Milyon TL",
@@ -88,12 +168,6 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
       d2024: "621 Milyon TL",
       d2025: "446 Milyon TL",
     },
-    {
-      kalem: "Özkaynaklar",
-      d2023: "9 Milyar TL",
-      d2024: "11 Milyar TL",
-      d2025: "14 Milyar TL",
-    },
   ];
 
   const tahminiLotDagilimi = [
@@ -105,6 +179,9 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
     { katilimci: "950.000", lot: "22 Lot", tutar: "990 TL" },
     { katilimci: "1.000.000", lot: "21 Lot", tutar: "945 TL" },
   ];
+
+  const konsorsiyum =
+    "A1 Capital Yatırım liderliğinde; Acar, Ahlatcı, Ak Yatırım, Alnus, Alternatif, Ata, Bizim, BTC Türk, Bulls, Burgan, Colendi, Deniz, Destek, Dinamik, Fiba, Garanti, Gedik, Global, Halk, ICBC, ING, Investaz, İnfo, Integral, İş Yatırım, Kuveyt, Marbaş, Meksa, Osmanlı, Oyak, PhillipCapital, Piramit, Pusula, QNB, Şeker, Tacirler, TEB, Tera, Trive, Turkish, Ünlü, Vakıf, Yapı Kredi, Yatırım Finansman ve Ziraat Yatırım yer almaktadır.";
 
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
@@ -190,38 +267,55 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
         <section className="grid gap-8 xl:grid-cols-3">
           <div className="space-y-8 xl:col-span-2">
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-              <h2 className="mb-5 text-xl font-bold text-slate-900">Tahsisat Grupları</h2>
+              <h2 className="mb-5 text-xl font-bold text-slate-900">
+                Dağıtım ve Alım Şekli
+              </h2>
 
-              <div className="overflow-x-auto">
-                <table className="min-w-full overflow-hidden rounded-2xl border border-slate-200">
-                  <thead className="bg-slate-100">
-                    <tr>
-                      <th className="px-4 py-3 text-left text-sm font-bold text-slate-700">
-                        Yatırımcı Grubu
-                      </th>
-                      <th className="px-4 py-3 text-left text-sm font-bold text-slate-700">
-                        Oran
-                      </th>
-                      <th className="px-4 py-3 text-left text-sm font-bold text-slate-700">
-                        Lot
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {tahsisat.map((row, index) => (
-                      <tr
-                        key={row.grup}
-                        className={index % 2 === 0 ? "bg-white" : "bg-slate-50"}
-                      >
-                        <td className="px-4 py-4 text-sm font-semibold text-slate-800">
-                          {row.grup}
-                        </td>
-                        <td className="px-4 py-4 text-sm text-slate-700">{row.oran}</td>
-                        <td className="px-4 py-4 text-sm text-slate-700">{row.lot}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+              <div className="grid gap-4 md:grid-cols-2">
+                {tahsisat.map((item) => (
+                  <div
+                    key={item.grup}
+                    className="rounded-2xl border border-slate-200 bg-slate-50 p-4"
+                  >
+                    <div className="flex items-start justify-between gap-4">
+                      <div>
+                        <h3 className="text-sm font-bold text-slate-900">{item.grup}</h3>
+                        <p className="mt-2 text-sm leading-6 text-slate-600">{item.detay}</p>
+                      </div>
+                      <div className="shrink-0 text-right">
+                        <div className="text-lg font-bold text-blue-700">{item.oran}</div>
+                        <div className="mt-1 text-xs font-semibold text-slate-600">
+                          {item.lot}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              <p className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-7 text-amber-900">
+                Halka arzda bireysel yatırımcı tarafında 10.000 lot ve altı başvurular için
+                eşit dağıtım uygulanacaktır. Yüksek başvurulu yatırımcı grubunda ise 10.001 lot
+                ve üzeri başvurular için oransal dağıtım yapılacaktır. T1 ve T2 bakiye
+                kullanılamaz.
+              </p>
+            </section>
+
+            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h2 className="mb-5 text-xl font-bold text-slate-900">
+                Toplam Dağıtılacak Lot
+              </h2>
+
+              <div className="grid gap-4 sm:grid-cols-3">
+                {toplamLot.map((item) => (
+                  <div
+                    key={item.label}
+                    className="rounded-2xl border border-blue-200 bg-blue-50 p-4"
+                  >
+                    <div className="text-sm font-semibold text-blue-800">{item.label}</div>
+                    <div className="mt-2 text-xl font-bold text-blue-950">{item.value}</div>
+                  </div>
+                ))}
               </div>
             </section>
 
@@ -242,47 +336,31 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
             </section>
 
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-              <div className="mb-5 flex items-center justify-between">
-                <h2 className="text-xl font-bold text-slate-900">Finansal Özet</h2>
-                <span className="rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold text-slate-700">
-                  2023 - 2024 - 2025
-                </span>
-              </div>
+              <h2 className="mb-5 text-xl font-bold text-slate-900">Finansal Görünüm</h2>
 
-              <div className="overflow-x-auto">
-                <table className="min-w-full overflow-hidden rounded-2xl border border-slate-200">
-                  <thead className="bg-slate-100">
-                    <tr>
-                      <th className="px-4 py-3 text-left text-sm font-bold text-slate-700">
-                        Kalem
-                      </th>
-                      <th className="px-4 py-3 text-left text-sm font-bold text-slate-700">
-                        2023
-                      </th>
-                      <th className="px-4 py-3 text-left text-sm font-bold text-slate-700">
-                        2024
-                      </th>
-                      <th className="px-4 py-3 text-left text-sm font-bold text-slate-700">
-                        2025
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {finansalOzet.map((row, index) => (
-                      <tr
-                        key={row.kalem}
-                        className={index % 2 === 0 ? "bg-white" : "bg-slate-50"}
-                      >
-                        <td className="px-4 py-4 text-sm font-semibold text-slate-800">
-                          {row.kalem}
-                        </td>
-                        <td className="px-4 py-4 text-sm text-slate-700">{row.d2023}</td>
-                        <td className="px-4 py-4 text-sm text-slate-700">{row.d2024}</td>
-                        <td className="px-4 py-4 text-sm text-slate-700">{row.d2025}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+              <div className="grid gap-4">
+                {finansalOzet.map((item) => (
+                  <div
+                    key={item.kalem}
+                    className="rounded-2xl border border-slate-200 bg-slate-50 p-4"
+                  >
+                    <h3 className="text-sm font-bold text-slate-900">{item.kalem}</h3>
+                    <div className="mt-3 grid grid-cols-3 gap-2 text-sm">
+                      <div className="rounded-xl bg-white p-3">
+                        <div className="text-xs font-semibold text-slate-500">2023</div>
+                        <div className="mt-1 font-bold text-slate-900">{item.d2023}</div>
+                      </div>
+                      <div className="rounded-xl bg-white p-3">
+                        <div className="text-xs font-semibold text-slate-500">2024</div>
+                        <div className="mt-1 font-bold text-slate-900">{item.d2024}</div>
+                      </div>
+                      <div className="rounded-xl bg-white p-3">
+                        <div className="text-xs font-semibold text-slate-500">2025</div>
+                        <div className="mt-1 font-bold text-slate-900">{item.d2025}</div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
             </section>
 
@@ -291,42 +369,53 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
                 Tahmini Lot Dağılımı
               </h2>
 
-              <div className="overflow-x-auto">
-                <table className="min-w-full overflow-hidden rounded-2xl border border-slate-200">
-                  <thead className="bg-slate-100">
-                    <tr>
-                      <th className="px-4 py-3 text-left text-sm font-bold text-slate-700">
-                        Katılımcı Sayısı
-                      </th>
-                      <th className="px-4 py-3 text-left text-sm font-bold text-slate-700">
-                        Lot
-                      </th>
-                      <th className="px-4 py-3 text-left text-sm font-bold text-slate-700">
-                        Tutar
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {tahminiLotDagilimi.map((row, index) => (
-                      <tr
-                        key={row.katilimci}
-                        className={index % 2 === 0 ? "bg-white" : "bg-slate-50"}
-                      >
-                        <td className="px-4 py-4 text-sm font-semibold text-slate-800">
-                          {row.katilimci}
-                        </td>
-                        <td className="px-4 py-4 text-sm text-slate-700">{row.lot}</td>
-                        <td className="px-4 py-4 text-sm text-slate-700">{row.tutar}</td>
-                      </tr>
-                    ))}
-                  </tbody>
-                </table>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {tahminiLotDagilimi.map((row) => (
+                  <div
+                    key={row.katilimci}
+                    className="rounded-2xl border border-slate-200 bg-slate-50 p-4"
+                  >
+                    <div className="text-sm font-semibold text-slate-500">
+                      Katılımcı Sayısı: {row.katilimci}
+                    </div>
+                    <div className="mt-3 flex items-center justify-between gap-4">
+                      <div>
+                        <div className="text-xs font-semibold text-slate-500">Tahmini Lot</div>
+                        <div className="mt-1 text-lg font-bold text-slate-900">{row.lot}</div>
+                      </div>
+                      <div className="text-right">
+                        <div className="text-xs font-semibold text-slate-500">Tutar</div>
+                        <div className="mt-1 text-lg font-bold text-blue-700">{row.tutar}</div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
               </div>
 
               <p className="mt-4 text-xs leading-6 text-slate-500">
                 Tahmini lot dağılımı, bireysel yatırımcı katılım sayısına göre yaklaşık
                 hesaplanmıştır. Kesin dağıtım sonuçları resmi açıklama sonrasında netleşir.
               </p>
+            </section>
+
+            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h2 className="mb-4 text-xl font-bold text-slate-900">YouTube Video</h2>
+              <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+                <div className="relative w-full overflow-hidden pt-[56.25%]">
+                  <iframe
+                    className="absolute left-0 top-0 h-full w-full"
+                    src="https://www.youtube.com/embed/Hs__b6dgmZY"
+                    title="Ekinciler Demir ve Çelik Sanayi A.Ş. YouTube Videosu"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <ReklamAlani />
             </section>
 
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -341,53 +430,37 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
                 arz büyüklüğü 2,34 milyar TL, halka açıklık oranı ise %16,25 olarak
                 açıklanmıştır.
               </p>
+              <p className="mt-3 text-sm leading-7 text-slate-600">
+                Halka arz gelirinin %40’ının hammadde tedariki ve işletme sermayesi
+                finansmanında, %25’inin yenilenebilir enerji yatırımlarında, %25’inin Yeşil
+                Çelik Haddehane modernizasyonu ve kapasite artışında, %10’unun ise kütük
+                kaynatma sistemi yatırımında kullanılması planlanmaktadır.
+              </p>
             </section>
           </div>
 
           <aside className="space-y-8">
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-              <h2 className="mb-5 text-xl font-bold text-slate-900">Alım Bilgileri</h2>
+              <h2 className="mb-5 text-xl font-bold text-slate-900">Kısa Özet</h2>
 
               <div className="space-y-4">
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                  <div className="text-sm font-semibold text-slate-800">
-                    Bireysel Yatırımcı
-                  </div>
-                  <p className="mt-2 text-sm text-slate-700">
-                    10.000 lot ve altı başvurular için eşit dağıtım.
-                  </p>
+                  <div className="text-sm font-semibold text-slate-800">Fiyat / İskonto</div>
+                  <p className="mt-2 text-sm text-slate-700">45,00 TL / %37,72 iskonto.</p>
                 </div>
 
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                  <div className="text-sm font-semibold text-slate-800">
-                    Yüksek Başvurulu Yatırımcı
-                  </div>
+                  <div className="text-sm font-semibold text-slate-800">Katılım Endeksi</div>
                   <p className="mt-2 text-sm text-slate-700">
-                    10.001 lot ve üstü başvurular için oransal dağıtım.
-                  </p>
-                </div>
-
-                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                  <div className="text-sm font-semibold text-slate-800">T1 - T2</div>
-                  <p className="mt-2 text-sm text-slate-700">T1 ve T2 bakiye kullanılamaz.</p>
-                </div>
-              </div>
-            </section>
-
-            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-              <h2 className="mb-5 text-xl font-bold text-slate-900">Diğer Bilgiler</h2>
-
-              <div className="space-y-4">
-                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                  <div className="text-sm font-semibold text-slate-800">Aracı Kurum</div>
-                  <p className="mt-2 text-sm text-slate-700">
-                    A1 Capital Yatırım Menkul Değerler A.Ş.
+                    BIST Katılım Endeksi’ne uygun değildir.
                   </p>
                 </div>
 
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                   <div className="text-sm font-semibold text-slate-800">Fiyat İstikrarı</div>
-                  <p className="mt-2 text-sm text-slate-700">Planlanmamaktadır.</p>
+                  <p className="mt-2 text-sm text-slate-700">
+                    Fiyat istikrarı sağlayıcı işlem planlanmamaktadır.
+                  </p>
                 </div>
 
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
@@ -404,8 +477,9 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
                 <div className="rounded-2xl border border-blue-200 bg-blue-50 p-4">
                   <div className="text-sm font-semibold text-blue-800">Şirket ve Ortaklar</div>
                   <p className="mt-2 text-sm leading-6 text-blue-900">
-                    1 yıl boyunca pay satışı ve halka arz fiyatının altında satış yapılmayacağına
-                    ilişkin taahhüt bulunmaktadır.
+                    1 yıl boyunca bedelli ve bedelsiz sermaye artırımı yapılmayacağı,
+                    dolaşımdaki payların artmasına sebep olacak satış yapılmayacağı ve halka
+                    arz fiyatının altında pay satılmayacağı taahhüt edilmiştir.
                   </p>
                 </div>
 
@@ -416,6 +490,11 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
                   </p>
                 </div>
               </div>
+            </section>
+
+            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+              <h2 className="mb-5 text-xl font-bold text-slate-900">Konsorsiyum</h2>
+              <p className="text-sm leading-7 text-slate-600">{konsorsiyum}</p>
             </section>
           </aside>
         </section>
