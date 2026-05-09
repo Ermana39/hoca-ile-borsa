@@ -176,27 +176,27 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
   const carpanlar = [
     {
       carpan: "PD / Hasılat",
-      d2023: "1,31x",
-      d2024: "0,90x",
-      d2025: "0,72x",
+      d2023: "1,31",
+      d2024: "0,90",
+      d2025: "0,72",
     },
     {
       carpan: "F/K",
-      d2023: "52,9x",
-      d2024: "23,2x",
-      d2025: "32,3x",
+      d2023: "52,9",
+      d2024: "23,2",
+      d2025: "32,3",
     },
     {
       carpan: "PD / Defter Değeri",
-      d2023: "1,60x",
-      d2024: "1,31x",
-      d2025: "1,03x",
+      d2023: "1,60",
+      d2024: "1,31",
+      d2025: "1,03",
     },
     {
       carpan: "PD / Esas Faaliyet Kârı",
-      d2023: "34,6x",
-      d2024: "16,5x",
-      d2025: "17,8x",
+      d2023: "34,6",
+      d2024: "16,5",
+      d2025: "17,8",
     },
   ];
 
@@ -408,7 +408,7 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
             </div>
 
             <div className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-7 text-amber-900">
-              <strong>Kısa değerlendirme:</strong> EKDMR halka arzında 14,4 milyar TL civarı piyasa değeriyle 2025 verilerine göre PD/Hasılat 0,72x, PD/DD 1,03x seviyesinde oluşuyor. Ancak 2025 dönem kârına göre F/K yaklaşık 32x seviyesinde. Bu nedenle şirket satış ve özkaynak tarafında makul görünürken, kârlılık çarpanı tarafında daha dikkatli değerlendirme gerektiriyor.
+              <strong>Kısa değerlendirme:</strong> EKDMR halka arzında 14,4 milyar TL civarı piyasa değeriyle 2025 verilerine göre PD/Hasılat 0,72, PD/DD 1,03 seviyesinde oluşuyor. Ancak 2025 dönem kârına göre F/K yaklaşık 32 seviyesinde. Bu nedenle şirket satış ve özkaynak tarafında makul görünürken, kârlılık çarpanı tarafında daha dikkatli değerlendirme gerektiriyor.
 
 Yatırım tavsiyesi değildir.
             </div>
