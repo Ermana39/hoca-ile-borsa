@@ -178,7 +178,7 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
       carpan: "PD / Hasılat",
       d2023: "1,31",
       d2024: "0,90",
-      d2025: "0,72",
+      d2025: "0,72x",
     },
     {
       carpan: "F/K",
@@ -202,11 +202,8 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
 
   const tahminiLot = [
     { katilimci: "700.000", lot: "30 Lot", tutar: "1.350 TL" },
-    { katilimci: "750.000", lot: "28 Lot", tutar: "1.260 TL" },
     { katilimci: "800.000", lot: "26 Lot", tutar: "1.170 TL" },
-    { katilimci: "850.000", lot: "25 Lot", tutar: "1.125 TL" },
     { katilimci: "900.000", lot: "23 Lot", tutar: "1.035 TL" },
-    { katilimci: "950.000", lot: "22 Lot", tutar: "990 TL" },
     { katilimci: "1.000.000", lot: "21 Lot", tutar: "945 TL" },
   ];
 
