@@ -408,10 +408,9 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
             </div>
 
             <div className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-7 text-amber-900">
-              <strong>Kısa değerlendirme:</strong> EKDMR halka arzında satış ve özkaynak
-              tarafı makul görünürken, net kâr çarpanı daha dikkatli değerlendirme
-              gerektiriyor. 2025 verilerine göre PD/Hasılat 0,72x ve PD/DD 1,03x seviyesinde
-              oluşurken, F/K yaklaşık 32,3x seviyesinde hesaplanıyor.
+              <strong>Kısa değerlendirme:</strong> EKDMR halka arzında 14,4 milyar TL civarı piyasa değeriyle 2025 verilerine göre PD/Hasılat 0,72x, PD/DD 1,03x seviyesinde oluşuyor. Ancak 2025 dönem kârına göre F/K yaklaşık 32x seviyesinde. Bu nedenle şirket satış ve özkaynak tarafında makul görünürken, kârlılık çarpanı tarafında daha dikkatli değerlendirme gerektiriyor.
+
+Yatırım tavsiyesi değildir.
             </div>
           </Section>
 
