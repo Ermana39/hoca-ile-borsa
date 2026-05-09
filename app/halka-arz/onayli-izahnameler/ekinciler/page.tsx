@@ -6,7 +6,7 @@ export const metadata: Metadata = {
   title:
     "Ekinciler Demir ve Çelik Sanayi A.Ş. Halka Arz Detayları 2026 | EKDMR Onaylı İzahname",
   description:
-    "Ekinciler Demir ve Çelik Sanayi A.Ş. EKDMR onaylı izahname bilgileri, talep toplama tarihleri, halka arz fiyatı, lot dağılımı, finansal görünüm ve tahmini lot tablosu.",
+    "Ekinciler Demir ve Çelik Sanayi A.Ş. EKDMR onaylı izahname bilgileri, talep toplama tarihleri, halka arz fiyatı, lot dağılımı, finansal görünüm, çarpan analizi ve tahmini lot tablosu.",
 };
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "buyuk" }) {
@@ -173,6 +173,33 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
     },
   ];
 
+  const carpanlar = [
+    {
+      carpan: "PD / Hasılat",
+      d2023: "1,31x",
+      d2024: "0,90x",
+      d2025: "0,72x",
+    },
+    {
+      carpan: "F/K",
+      d2023: "52,9x",
+      d2024: "23,2x",
+      d2025: "32,3x",
+    },
+    {
+      carpan: "PD / Defter Değeri",
+      d2023: "1,60x",
+      d2024: "1,31x",
+      d2025: "1,03x",
+    },
+    {
+      carpan: "PD / Esas Faaliyet Kârı",
+      d2023: "34,6x",
+      d2024: "16,5x",
+      d2025: "17,8x",
+    },
+  ];
+
   const tahminiLot = [
     { katilimci: "700.000", lot: "30 Lot", tutar: "1.350 TL" },
     { katilimci: "750.000", lot: "28 Lot", tutar: "1.260 TL" },
@@ -215,8 +242,9 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
           </h1>
 
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600">
-            EKDMR halka arzına ait temel bilgiler, tahsisat dağılımı, finansal görünüm
-            ve tahmini lot tablosu aşağıda sade ve kolay anlaşılır şekilde yer almaktadır.
+            EKDMR halka arzına ait temel bilgiler, tahsisat dağılımı, finansal görünüm,
+            çarpan analizi ve tahmini lot tablosu aşağıda sade ve kolay anlaşılır şekilde
+            yer almaktadır.
           </p>
         </section>
 
@@ -326,6 +354,65 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
                 </tbody>
               </table>
             </div>
+
+            <div className="mt-6 rounded-2xl border border-blue-100 bg-blue-50 p-4">
+              <div className="text-sm font-bold text-blue-900">
+                Yaklaşık halka arz sonrası piyasa değeri
+              </div>
+              <div className="mt-1 text-xl font-bold text-blue-700">14,4 Milyar TL</div>
+              <p className="mt-2 text-xs leading-6 text-blue-900">
+                Hesaplama: 2,34 milyar TL arz büyüklüğü / %16,25 halka açıklık oranı.
+              </p>
+            </div>
+
+            <div className="mt-6 overflow-x-auto">
+              <table className="min-w-full overflow-hidden rounded-2xl border border-slate-200">
+                <thead className="bg-slate-100">
+                  <tr>
+                    <th className="px-3 py-3 text-left text-xs font-bold text-slate-700 sm:px-4 sm:text-sm">
+                      Çarpan
+                    </th>
+                    <th className="px-3 py-3 text-left text-xs font-bold text-slate-700 sm:px-4 sm:text-sm">
+                      2023
+                    </th>
+                    <th className="px-3 py-3 text-left text-xs font-bold text-slate-700 sm:px-4 sm:text-sm">
+                      2024
+                    </th>
+                    <th className="px-3 py-3 text-left text-xs font-bold text-slate-700 sm:px-4 sm:text-sm">
+                      2025
+                    </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {carpanlar.map((row, index) => (
+                    <tr
+                      key={row.carpan}
+                      className={index % 2 === 0 ? "bg-white" : "bg-slate-50"}
+                    >
+                      <td className="px-3 py-3 text-xs font-semibold text-slate-900 sm:px-4 sm:text-sm">
+                        {row.carpan}
+                      </td>
+                      <td className="px-3 py-3 text-xs text-slate-700 sm:px-4 sm:text-sm">
+                        {row.d2023}
+                      </td>
+                      <td className="px-3 py-3 text-xs text-slate-700 sm:px-4 sm:text-sm">
+                        {row.d2024}
+                      </td>
+                      <td className="px-3 py-3 text-xs text-slate-700 sm:px-4 sm:text-sm">
+                        {row.d2025}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+
+            <div className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-7 text-amber-900">
+              <strong>Kısa değerlendirme:</strong> EKDMR halka arzında satış ve özkaynak
+              tarafı makul görünürken, net kâr çarpanı daha dikkatli değerlendirme
+              gerektiriyor. 2025 verilerine göre PD/Hasılat 0,72x ve PD/DD 1,03x seviyesinde
+              oluşurken, F/K yaklaşık 32,3x seviyesinde hesaplanıyor.
+            </div>
           </Section>
 
           <Section title="Tahmini Lot Tablosu">
@@ -415,8 +502,8 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
             <p className="text-sm leading-7 text-slate-600">
               Bu sayfada EKDMR halka arzına ait onaylı izahname bilgileri sade ve kolay
               anlaşılır şekilde bir araya getirilmiştir. Halka arz tarihi, fiyat, lot
-              dağılımı, finansal görünüm ve tahmini lot tablosu tek sayfada özetlenmiştir.
-              Bu bilgiler yatırım tavsiyesi değildir.
+              dağılımı, finansal görünüm, çarpan analizi ve tahmini lot tablosu tek sayfada
+              özetlenmiştir. Bu bilgiler yatırım tavsiyesi değildir.
             </p>
           </Section>
         </div>
