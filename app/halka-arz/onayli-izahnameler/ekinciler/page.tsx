@@ -405,9 +405,14 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
             </div>
 
             <div className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-7 text-amber-900">
-              <strong>Kısa değerlendirme:</strong> EKDMR halka arzında 14,4 milyar TL civarı piyasa değeriyle 2025 verilerine göre PD/Hasılat 0,72, PD/DD 1,03 seviyesinde oluşuyor. Ancak 2025 dönem kârına göre F/K yaklaşık 32 seviyesinde. Bu nedenle şirket satış ve özkaynak tarafında makul görünürken, kârlılık çarpanı tarafında daha dikkatli değerlendirme gerektiriyor.
-
-Yatırım tavsiyesi değildir.
+              <strong>Kısa değerlendirme:</strong> EKDMR halka arzında 14,4 milyar TL
+              civarı piyasa değeriyle 2025 verilerine göre PD/Hasılat 0,72, PD/DD 1,03
+              seviyesinde oluşuyor. Ancak 2025 dönem kârına göre F/K yaklaşık 32
+              seviyesinde. Bu nedenle şirket satış ve özkaynak tarafında makul görünürken,
+              kârlılık çarpanı tarafında daha dikkatli değerlendirme gerektiriyor.
+              <br />
+              <br />
+              Yatırım tavsiyesi değildir.
             </div>
           </Section>
 
@@ -471,17 +476,32 @@ Yatırım tavsiyesi değildir.
             <p className="text-sm leading-7 text-slate-600">{konsorsiyum}</p>
           </Section>
 
-          <Section title="YouTube Video">
-            <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
-              <div className="relative w-full overflow-hidden pt-[56.25%]">
-                <iframe
-                  className="absolute left-0 top-0 h-full w-full"
-                  src="https://www.youtube.com/embed/Hs__b6dgmZY"
-                  title="Ekinciler Demir ve Çelik Sanayi A.Ş. YouTube Videosu"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                  referrerPolicy="strict-origin-when-cross-origin"
-                  allowFullScreen
-                />
+          <Section title="YouTube Videoları">
+            <div className="grid gap-4 md:grid-cols-2">
+              <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+                <div className="relative w-full overflow-hidden pt-[56.25%]">
+                  <iframe
+                    className="absolute left-0 top-0 h-full w-full"
+                    src="https://www.youtube.com/embed/Hs__b6dgmZY"
+                    title="Ekinciler Demir ve Çelik Sanayi A.Ş. YouTube Videosu"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
+                </div>
+              </div>
+
+              <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+                <div className="relative w-full overflow-hidden pt-[56.25%]">
+                  <iframe
+                    className="absolute left-0 top-0 h-full w-full"
+                    src="https://www.youtube.com/embed/VzyUd5CE1qI"
+                    title="Ekinciler Demir ve Çelik Sanayi A.Ş. Halka Arz YouTube Videosu"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
+                </div>
               </div>
             </div>
           </Section>
