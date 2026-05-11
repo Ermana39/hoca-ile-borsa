@@ -475,10 +475,6 @@ export default function PivotAnaliziPage() {
         <p className="mb-2 max-w-3xl text-base text-zinc-600">
           Pivot, destek ve direnç seviyelerine göre hazırlanan görünüm tablosu.
         </p>
-        <div className="mb-8 text-sm font-semibold text-zinc-700">
-          Güncelleme Tarihi: {guncellemeTarihi}
-        </div>
-
         <section className="mb-8">
           <ReklamAlani variant="yatay" />
         </section>
