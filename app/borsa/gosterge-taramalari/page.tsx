@@ -53,6 +53,13 @@ const taramalar = [
   image: "/Guclu-trend-ve-momentum-taramasi.png",
   alt: "Güçlü trend ve momentum taraması görseli",
   },
+  {
+    title: "Yükseliş Trendi + Hacim Artışı",
+    description: "Hareketli ortalama dizilimi, son 3 günlük hacim ortalaması son 21 günlük hacim ortalamasının üzerinde olan hisseler",
+  href: "/borsa/gosterge-taramalari/yukselis-hacim",
+  image: "/yükselis-hacim-tarama.png",
+  alt: " Yükseliş Trendi + Hacim Artışı taraması görseli",
+  },
 ];
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
