@@ -1,13 +1,23 @@
 User-agent: *
 Allow: /
 Allow: /ads.txt
-
-User-agent: Googlebot
-Allow: /
-Allow: /ads.txt
+Disallow: /api/
+Disallow: /kontrol-paneli-4827
+Disallow: /kontrol-paneli-4827/
+Disallow: /giris
+Disallow: /uye
+Disallow: /profil
+Disallow: /mesajlar
+Disallow: /istatistik
+Disallow: /guvenlik-kayitlari
 
 User-agent: Mediapartners-Google
 Allow: /
 Allow: /ads.txt
 
+User-agent: Googlebot
+Allow: /
+Allow: /ads.txt
+
+Host: https://www.hocaileborsa.com
 Sitemap: https://www.hocaileborsa.com/sitemap.xml
