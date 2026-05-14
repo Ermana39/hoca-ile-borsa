@@ -1,5 +1,5 @@
 import Link from "next/link";
-import macdAlData from "../data/macd-al.json";
+import yukselisHacimData from "../data/yukselis-hacim.json";
 
 export const metadata = {
   title: "Yükseliş Trendi + Hacim Artışı | Hoca İle Borsa",
@@ -45,13 +45,13 @@ function normalizeText(metin: string) {
 }
 
 function hisseleriOku() {
-  const rows = (macdAlData.rows || []) as JsonRow[];
+  const rows = (yukselisHacimData.rows || []) as JsonRow[];
 
   if (!rows.length) return [];
 
   const columns =
-    Array.isArray(macdAlData.columns) && macdAlData.columns.length > 0
-      ? macdAlData.columns
+    Array.isArray(yukselisHacimData.columns) && yukselisHacimData.columns.length > 0
+      ? yukselisHacimData.columns
       : Object.keys(rows[0] || {});
 
   const sembolKolonu =
@@ -63,7 +63,7 @@ function hisseleriOku() {
     .filter((item) => item && normalizeText(item) !== "sembol");
 }
 
-export default function MacdAlPage() {
+export default function YukselisHacimPage() {
   const hisseler = hisseleriOku();
 
   return (
@@ -92,7 +92,7 @@ export default function MacdAlPage() {
         </h1>
 
         <p className="mb-3 max-w-3xl text-base text-zinc-600">
-          Yükseliş Trendi + Hacim Artışı taması sonuçları
+          Yükseliş Trendi + Hacim Artışı taraması sonuçları
         </p>
 
         <div className="mb-8 text-sm font-semibold text-zinc-700 md:text-base">
