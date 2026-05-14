@@ -92,7 +92,7 @@ export default function YukselisHacimPage() {
         </h1>
 
         <p className="mb-3 max-w-3xl text-base text-zinc-600">
-          Yükseliş Trendi + Hacim Artışı taraması sonuçları
+          Hareketli ortalama dizilimi, son 3 günlük hacim ortalaması son 21 günlük hacim ortalamasının üzerinde olan hisseler
         </p>
 
         <div className="mb-8 text-sm font-semibold text-zinc-700 md:text-base">
