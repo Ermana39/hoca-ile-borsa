@@ -5,6 +5,7 @@ const bistVeri = {
   tarih: "15.05.2026",
   kapanis: "14644.70",
   degisimYuzde: 0.32,
+  gunlukHacim: "281,752,987,279",
 };
 
 const tumYukselenler = [
@@ -360,6 +361,64 @@ function TakvimSatiri({
   );
 }
 
+function TakvimMobilKart({
+  tarih,
+  kayitlar,
+}: {
+  tarih: string;
+  kayitlar: {
+    saat: string;
+    ulke: string;
+    gosterge: string;
+    onem: "sari" | "sari-tek" | "turuncu" | "turuncu-gri" | "kirmizi";
+    aciklanan: string;
+    beklenti: string;
+    onceki: string;
+  }[];
+}) {
+  return (
+    <div className="rounded-xl border border-zinc-200 bg-white overflow-hidden">
+      <div className="border-b border-zinc-200 bg-zinc-100 px-4 py-3 text-center text-sm font-bold text-zinc-800">
+        {tarih}
+      </div>
+
+      <div className="divide-y divide-zinc-100">
+        {kayitlar.map((kayit) => (
+          <div key={`${kayit.saat}-${kayit.gosterge}`} className="p-4">
+            <div className="mb-3 flex items-center justify-between gap-3">
+              <div className="text-sm font-bold text-zinc-900">{kayit.saat}</div>
+              <div className="text-xs font-semibold text-zinc-600">{kayit.ulke}</div>
+            </div>
+
+            <div className="mb-3 text-sm font-semibold leading-6 text-zinc-900">
+              {kayit.gosterge}
+            </div>
+
+            <div className="mb-3">
+              <OnemKutulari tip={kayit.onem} />
+            </div>
+
+            <div className="grid grid-cols-3 gap-2 text-center">
+              <div className="rounded-lg bg-zinc-50 p-2">
+                <div className="text-[11px] font-semibold text-zinc-500">Açıklanan</div>
+                <div className="mt-1 text-sm font-bold text-zinc-800">{kayit.aciklanan}</div>
+              </div>
+              <div className="rounded-lg bg-zinc-50 p-2">
+                <div className="text-[11px] font-semibold text-zinc-500">Beklenti</div>
+                <div className="mt-1 text-sm font-bold text-zinc-800">{kayit.beklenti}</div>
+              </div>
+              <div className="rounded-lg bg-zinc-50 p-2">
+                <div className="text-[11px] font-semibold text-zinc-500">Önceki</div>
+                <div className="mt-1 text-sm font-bold text-zinc-800">{kayit.onceki}</div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 export default function GunlukBorsaOzetiPage() {
   const pozitif = bistVeri.degisimYuzde >= 0;
 
@@ -388,7 +447,7 @@ export default function GunlukBorsaOzetiPage() {
           <ReklamAlani variant="yatay" />
         </section>
 
-        <div className="mb-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
+        <div className="mb-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-4 sm:p-5">
           <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
             <div className="relative aspect-[16/9] w-full">
               <Image
@@ -404,7 +463,7 @@ export default function GunlukBorsaOzetiPage() {
 
         <div className="mb-6 grid gap-4 xl:grid-cols-[1fr_2.5fr]">
           <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
-            <div className="grid min-h-[320px] grid-rows-3 text-center">
+            <div className="grid min-h-[420px] grid-rows-4 text-center">
               <div className="flex items-center justify-center border-b border-zinc-200">
                 <div>
                   <div className="text-2xl font-semibold text-zinc-700">XU100</div>
@@ -422,18 +481,33 @@ export default function GunlukBorsaOzetiPage() {
                 </div>
               </div>
 
+              <div className="flex items-center justify-center border-b border-zinc-200 px-4">
+                <div>
+                  <div className="text-sm font-semibold text-zinc-500">Günlük Hacim</div>
+                  <div className="mt-2 text-xl font-bold text-zinc-800 sm:text-2xl">
+                    {bistVeri.gunlukHacim}
+                  </div>
+                </div>
+              </div>
+
               <div className="flex items-center justify-center">
                 <div className="text-2xl font-semibold text-zinc-700">{bistVeri.tarih}</div>
               </div>
             </div>
           </div>
 
-          <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
+          <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4 sm:p-5">
             <div className="mb-4 text-center text-sm font-semibold text-zinc-600">
               Ekonomik Takvim
             </div>
 
-            <div className="overflow-x-auto rounded-xl border border-zinc-200 bg-white">
+            <div className="md:hidden space-y-4">
+              {ekonomikTakvimVerileri.map((grup) => (
+                <TakvimMobilKart key={grup.tarih} tarih={grup.tarih} kayitlar={grup.kayitlar} />
+              ))}
+            </div>
+
+            <div className="hidden md:block overflow-x-auto rounded-xl border border-zinc-200 bg-white">
               <div className="min-w-[720px]">
                 <div className="grid grid-cols-[70px_55px_minmax(220px,1fr)_70px_95px_95px_95px] border-b border-zinc-200 bg-zinc-100 px-3 py-3 text-xs font-bold text-zinc-700">
                   <div>Saat</div>
