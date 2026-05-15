@@ -156,7 +156,7 @@ function TaramaExcelTablosu({
                 ))
               ) : (
                 <div className="px-4 py-8 text-sm text-zinc-500 md:text-base">
-                  Veri bulunamadı.
+                  Tarama sonucunda hiçbir hisse bulunnmadı.
                 </div>
               )}
             </div>
