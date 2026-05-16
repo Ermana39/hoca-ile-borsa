@@ -6,7 +6,14 @@ export type NewsItem = {
   alt: string;
 };
 
-export const newsItems: NewsItem[] = [
+export const newsItems: NewsItem[] = [ 
+   {
+    id: 983,
+    title: "EKİNCİLER DEMİR VE ÇELİK SANAYİ A.Ş. Dağıtımları Sonuçlandı",
+    href: "/haber/haber-983",
+    image: "/haber983.png",
+    alt: "Haber 983 görseli",
+  },
   {
     id: 984,
     title: "TÜİK Nisan 2026 enflasyonu beklenene göre (%3,30) yüksek geldi",
