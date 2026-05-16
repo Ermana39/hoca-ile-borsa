@@ -48,7 +48,7 @@ export default function Haber983Page() {
         <article className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
-              src="/haber983.png"
+              src="/haber983.jpg"
               alt="fitch not"
               fill
               unoptimized

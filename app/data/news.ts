@@ -11,7 +11,7 @@ export const newsItems: NewsItem[] = [
     id: 983,
     title: "EKİNCİLER DEMİR VE ÇELİK SANAYİ A.Ş. Dağıtımları Sonuçlandı",
     href: "/haber/haber-983",
-    image: "/haber983.png",
+    image: "/haber983.jpg",
     alt: "Haber 983 görseli",
   },
   {
