@@ -1,1300 +1,2415 @@
 {
-  "generatedAt": "2026-04-30T16:57:56.376Z",
+  "version": 10,
+  "generatedAt": "2026-05-18T16:47:50.527Z",
   "pages": [
     {
       "route": "/",
-      "updatedAt": "2026-04-30T19:39:00+03:00",
-      "file": "app/page.tsx"
+      "updatedAt": "2026-05-16T09:54:40+03:00",
+      "signature": "3b897253f02d666245ab00d3bde5ceaa77d9651bd1b0a0066deb045ff1053f2e",
+      "file": "app/page.tsx",
+      "trackedFiles": [
+        "app/page.tsx",
+        "app/data/news.ts",
+        "app/manifest.ts",
+        "app/robots.ts",
+        "app/sitemap.ts"
+      ]
     },
     {
       "route": "/borsa",
-      "updatedAt": "2026-04-27T21:04:04+03:00",
-      "file": "app/borsa/page.tsx"
+      "updatedAt": "2026-04-30T20:59:05+03:00",
+      "signature": "4c70342da4d69e59f256e95d61822f0891e1298e938eeaf573dc2d3c8753521c",
+      "file": "app/borsa/page.tsx",
+      "trackedFiles": [
+        "app/borsa/page.tsx"
+      ]
     },
     {
       "route": "/borsa/dikkat-cekenler",
-      "updatedAt": "2026-04-29T22:30:00+03:00",
-      "file": "app/borsa/dikkat-cekenler/page.tsx"
+      "updatedAt": "2026-05-08T13:02:59+03:00",
+      "signature": "a1e6806527ee1299772bb993302fee9df9a86ecce990b93f38ad41b3085697e9",
+      "file": "app/borsa/dikkat-cekenler/page.tsx",
+      "trackedFiles": [
+        "app/borsa/dikkat-cekenler/page.tsx"
+      ]
     },
     {
-      "route": "/borsa/dikkat-cekenler/haber-2",
-      "updatedAt": "2026-04-28T12:39:15+03:00",
-      "file": "app/borsa/dikkat-cekenler/haber-2/page.tsx"
+      "route": "/borsa/dikkat-cekenler/dikkat-cekenler-1",
+      "updatedAt": "2026-05-08T13:00:02+03:00",
+      "signature": "a70acc2f86543180b7e838ee6425da8d3fd3e4094b796c455938aeaa427af6bb",
+      "file": "app/borsa/dikkat-cekenler/dikkat-cekenler-1/page.tsx",
+      "trackedFiles": [
+        "app/borsa/dikkat-cekenler/dikkat-cekenler-1/page.tsx"
+      ]
     },
     {
-      "route": "/borsa/dikkat-cekenler/haber-3",
-      "updatedAt": "2026-04-28T12:39:15+03:00",
-      "file": "app/borsa/dikkat-cekenler/haber-3/page.tsx"
-    },
-    {
-      "route": "/borsa/dikkat-cekenler/haber-4",
-      "updatedAt": "2026-04-29T22:30:00+03:00",
-      "file": "app/borsa/dikkat-cekenler/haber-4/page.tsx"
+      "route": "/borsa/dikkat-cekenler/dikkat-cekenler-4",
+      "updatedAt": "2026-05-08T12:50:32+03:00",
+      "signature": "c5a4ff55a13997ee756d3f2f9dc848998bbab738b3a14f798cacca57c7b94aee",
+      "file": "app/borsa/dikkat-cekenler/dikkat-cekenler-4/page.tsx",
+      "trackedFiles": [
+        "app/borsa/dikkat-cekenler/dikkat-cekenler-4/page.tsx"
+      ]
     },
     {
       "route": "/borsa/dip-zirve-analizi",
-      "updatedAt": "2026-04-27T21:34:40+03:00",
-      "file": "app/borsa/dip-zirve-analizi/page.tsx"
+      "updatedAt": "2026-05-18T18:31:02+03:00",
+      "signature": "ef7f719306ab46dddff84af09e47ad9f5e9b5e2de480f754c20390e8c1221465",
+      "file": "app/borsa/dip-zirve-analizi/page.tsx",
+      "trackedFiles": [
+        "app/borsa/dip-zirve-analizi/page.tsx",
+        "app/borsa/dip-zirve-analizi/data/dip-zirve.xlsx"
+      ]
     },
     {
       "route": "/borsa/egitim-videolari",
       "updatedAt": "2026-04-16T14:49:46+03:00",
-      "file": "app/borsa/egitim-videolari/page.tsx"
+      "signature": "35ff91a8d7c84aad6aaf1911b68a856ab64a6c4b2dd6a002f8f00250643d5017",
+      "file": "app/borsa/egitim-videolari/page.tsx",
+      "trackedFiles": [
+        "app/borsa/egitim-videolari/page.tsx"
+      ]
     },
     {
       "route": "/borsa/formasyonlar",
-      "updatedAt": "2026-04-16T14:49:46+03:00",
-      "file": "app/borsa/formasyonlar/page.tsx"
+      "updatedAt": "2026-05-13T19:53:02+03:00",
+      "signature": "3dceb8a3a36b04d5d85c3bbbc81da8ba84a780f455220bd7686cfa4ce4172fdf",
+      "file": "app/borsa/formasyonlar/page.tsx",
+      "trackedFiles": [
+        "app/borsa/formasyonlar/page.tsx",
+        "app/borsa/formasyonlar/data.ts"
+      ]
     },
     {
       "route": "/borsa/formasyonlar/[slug]",
       "updatedAt": "2026-04-10T22:05:41+03:00",
-      "file": "app/borsa/formasyonlar/[slug]/page.tsx"
+      "signature": "1a2f3c564de5fb8ee5ca1d6963efa9964ce25c79eee57f26691d80e8205b8db3",
+      "file": "app/borsa/formasyonlar/[slug]/page.tsx",
+      "trackedFiles": [
+        "app/borsa/formasyonlar/[slug]/page.tsx"
+      ]
     },
     {
       "route": "/borsa/formasyonlar/formasyon1",
-      "updatedAt": "2026-04-28T12:39:15+03:00",
-      "file": "app/borsa/formasyonlar/formasyon1/page.tsx"
+      "updatedAt": "2026-05-08T14:41:44+03:00",
+      "signature": "e9af8622cb0cc15c41a979fafb88c3155c991c39479ad589f71654bad4d3edc5",
+      "file": "app/borsa/formasyonlar/formasyon1/page.tsx",
+      "trackedFiles": [
+        "app/borsa/formasyonlar/formasyon1/page.tsx",
+        "app/borsa/formasyonlar/formasyon1/data.ts"
+      ]
     },
     {
       "route": "/borsa/formasyonlar/formasyon2",
       "updatedAt": "2026-04-28T12:39:15+03:00",
-      "file": "app/borsa/formasyonlar/formasyon2/page.tsx"
+      "signature": "5c304721b4da6188d9ecd511f2f56c902edb9b27186944b0f8a284d208015eaf",
+      "file": "app/borsa/formasyonlar/formasyon2/page.tsx",
+      "trackedFiles": [
+        "app/borsa/formasyonlar/formasyon2/page.tsx",
+        "app/borsa/formasyonlar/formasyon2/data.ts"
+      ]
     },
     {
       "route": "/borsa/formasyonlar/formasyon3",
-      "updatedAt": "2026-04-28T12:39:15+03:00",
-      "file": "app/borsa/formasyonlar/formasyon3/page.tsx"
-    },
-    {
-      "route": "/borsa/formasyonlar/formasyon4",
-      "updatedAt": "2026-04-28T12:39:15+03:00",
-      "file": "app/borsa/formasyonlar/formasyon4/page.tsx"
+      "updatedAt": "2026-05-13T19:53:02+03:00",
+      "signature": "4e50015eaeb949c4d9d61874177c1c3656257feee98cc85a14f86910f3a68cc6",
+      "file": "app/borsa/formasyonlar/formasyon3/page.tsx",
+      "trackedFiles": [
+        "app/borsa/formasyonlar/formasyon3/page.tsx",
+        "app/borsa/formasyonlar/formasyon3/data.ts"
+      ]
     },
     {
       "route": "/borsa/geri-alim-programlari",
-      "updatedAt": "2026-04-27T18:20:48+03:00",
-      "file": "app/borsa/geri-alim-programlari/page.tsx"
+      "updatedAt": "2026-05-18T18:31:02+03:00",
+      "signature": "da875a3e992f2533a1f221d747fa00ecbb4ea1980f28f1b4451e3c878ed0ce73",
+      "file": "app/borsa/geri-alim-programlari/page.tsx",
+      "trackedFiles": [
+        "app/borsa/geri-alim-programlari/page.tsx",
+        "app/borsa/geri-alim-programlari/data/geri-alim.xlsx"
+      ]
     },
     {
       "route": "/borsa/gosterge-taramalari",
-      "updatedAt": "2026-04-29T11:31:01+03:00",
-      "file": "app/borsa/gosterge-taramalari/page.tsx"
+      "updatedAt": "2026-05-18T18:26:22+03:00",
+      "signature": "3f8520fd77721e62040f0552b4f09b1b5006054c0a9f9b440fb7f89089b8071a",
+      "file": "app/borsa/gosterge-taramalari/page.tsx",
+      "trackedFiles": [
+        "app/borsa/gosterge-taramalari/page.tsx",
+        "app/borsa/gosterge-taramalari/data/düsüs-trendi.xlsx",
+        "app/borsa/gosterge-taramalari/data/guclu-trend-momentum.xlsx",
+        "app/borsa/gosterge-taramalari/data/macd-al.xlsx",
+        "app/borsa/gosterge-taramalari/data/macd-sat.xlsx",
+        "app/borsa/gosterge-taramalari/data/rsi30-alti.xlsx",
+        "app/borsa/gosterge-taramalari/data/rsi70-ustu.xlsx",
+        "app/borsa/gosterge-taramalari/data/yükselis-hacim.xlsx",
+        "app/borsa/gosterge-taramalari/data/Yükselis-trendi.xlsx"
+      ]
     },
     {
       "route": "/borsa/gosterge-taramalari/[slug]",
-      "updatedAt": "2026-04-16T22:13:02+03:00",
-      "file": "app/borsa/gosterge-taramalari/[slug]/page.tsx"
+      "updatedAt": "2026-05-15T18:30:22+03:00",
+      "signature": "cf5997cde7ac70914fbcab7ce49d6f05c80b805f86535f4ab672a743610cd443",
+      "file": "app/borsa/gosterge-taramalari/[slug]/page.tsx",
+      "trackedFiles": [
+        "app/borsa/gosterge-taramalari/[slug]/page.tsx"
+      ]
     },
     {
       "route": "/borsa/gosterge-taramalari/dusus-trendinde-olanlar",
-      "updatedAt": "2026-04-27T18:20:48+03:00",
-      "file": "app/borsa/gosterge-taramalari/dusus-trendinde-olanlar/page.tsx"
+      "updatedAt": "2026-05-18T18:26:22+03:00",
+      "signature": "b26c5ba591d9b85b0b6a9885ed658aea1c58c5d7af042b39e00285d27074cacc",
+      "file": "app/borsa/gosterge-taramalari/dusus-trendinde-olanlar/page.tsx",
+      "trackedFiles": [
+        "app/borsa/gosterge-taramalari/dusus-trendinde-olanlar/page.tsx",
+        "app/borsa/gosterge-taramalari/data/düsüs-trendi.xlsx"
+      ]
     },
     {
       "route": "/borsa/gosterge-taramalari/guclu-trend-momentum",
-      "updatedAt": "2026-04-29T11:38:20+03:00",
-      "file": "app/borsa/gosterge-taramalari/guclu-trend-momentum/page.tsx"
+      "updatedAt": "2026-05-18T18:26:22+03:00",
+      "signature": "a09eff1d726fbe584680540179ac0014f47c1c3c991a990bd208482ea7874221",
+      "file": "app/borsa/gosterge-taramalari/guclu-trend-momentum/page.tsx",
+      "trackedFiles": [
+        "app/borsa/gosterge-taramalari/guclu-trend-momentum/page.tsx",
+        "app/borsa/gosterge-taramalari/data/guclu-trend-momentum.xlsx"
+      ]
     },
     {
       "route": "/borsa/gosterge-taramalari/macd-al",
-      "updatedAt": "2026-04-27T18:20:48+03:00",
-      "file": "app/borsa/gosterge-taramalari/macd-al/page.tsx"
+      "updatedAt": "2026-05-18T18:26:22+03:00",
+      "signature": "1fee52fc94e1aa5bcef4d7f811afd4cba49d69dd8a6736192724ef21543f7397",
+      "file": "app/borsa/gosterge-taramalari/macd-al/page.tsx",
+      "trackedFiles": [
+        "app/borsa/gosterge-taramalari/macd-al/page.tsx",
+        "app/borsa/gosterge-taramalari/data/macd-al.xlsx"
+      ]
     },
     {
       "route": "/borsa/gosterge-taramalari/macd-sat",
-      "updatedAt": "2026-04-27T18:20:48+03:00",
-      "file": "app/borsa/gosterge-taramalari/macd-sat/page.tsx"
+      "updatedAt": "2026-05-18T18:26:22+03:00",
+      "signature": "6314e89fd7a5907c3f501bb627184db342c4e938dec4754b349ecff902adbdfa",
+      "file": "app/borsa/gosterge-taramalari/macd-sat/page.tsx",
+      "trackedFiles": [
+        "app/borsa/gosterge-taramalari/macd-sat/page.tsx",
+        "app/borsa/gosterge-taramalari/data/macd-sat.xlsx"
+      ]
     },
     {
       "route": "/borsa/gosterge-taramalari/rsi30-alti",
-      "updatedAt": "2026-04-27T18:20:48+03:00",
-      "file": "app/borsa/gosterge-taramalari/rsi30-alti/page.tsx"
+      "updatedAt": "2026-05-18T18:26:22+03:00",
+      "signature": "483bf86148c841923a34e86a903a23902f026094a807a3723229f11b9007ca34",
+      "file": "app/borsa/gosterge-taramalari/rsi30-alti/page.tsx",
+      "trackedFiles": [
+        "app/borsa/gosterge-taramalari/rsi30-alti/page.tsx",
+        "app/borsa/gosterge-taramalari/data/rsi30-alti.xlsx"
+      ]
     },
     {
       "route": "/borsa/gosterge-taramalari/rsi70-ustu",
-      "updatedAt": "2026-04-27T18:20:48+03:00",
-      "file": "app/borsa/gosterge-taramalari/rsi70-ustu/page.tsx"
+      "updatedAt": "2026-05-18T18:26:22+03:00",
+      "signature": "be0bd72fb746e3a2a942ea3f44be98630d7c8a6a31fc145291088f6462139671",
+      "file": "app/borsa/gosterge-taramalari/rsi70-ustu/page.tsx",
+      "trackedFiles": [
+        "app/borsa/gosterge-taramalari/rsi70-ustu/page.tsx",
+        "app/borsa/gosterge-taramalari/data/rsi70-ustu.xlsx"
+      ]
+    },
+    {
+      "route": "/borsa/gosterge-taramalari/yukselis-hacim",
+      "updatedAt": "2026-05-15T18:21:43+03:00",
+      "signature": "862ecce308a4a8e03305ca4dde344767b6ef36b30a639706164115268fd5cffe",
+      "file": "app/borsa/gosterge-taramalari/yukselis-hacim/page.tsx",
+      "trackedFiles": [
+        "app/borsa/gosterge-taramalari/yukselis-hacim/page.tsx",
+        "app/borsa/gosterge-taramalari/data/yükselis-hacim.xlsx"
+      ]
     },
     {
       "route": "/borsa/gosterge-taramalari/yukselis-trendinde-olanlar",
-      "updatedAt": "2026-04-27T18:20:48+03:00",
-      "file": "app/borsa/gosterge-taramalari/yukselis-trendinde-olanlar/page.tsx"
+      "updatedAt": "2026-05-18T18:26:22+03:00",
+      "signature": "40dd2a807f3593913f93529408539c29b6037647f449fd52ce7981814c868636",
+      "file": "app/borsa/gosterge-taramalari/yukselis-trendinde-olanlar/page.tsx",
+      "trackedFiles": [
+        "app/borsa/gosterge-taramalari/yukselis-trendinde-olanlar/page.tsx",
+        "app/borsa/gosterge-taramalari/data/Yükselis-trendi.xlsx"
+      ]
     },
     {
       "route": "/borsa/grafik-analiz",
-      "updatedAt": "2026-04-17T11:19:40+03:00",
-      "file": "app/borsa/grafik-analiz/page.tsx"
+      "updatedAt": "2026-05-04T17:31:16+03:00",
+      "signature": "2614a27e098d35a0083458b041cbfb6e9b0d32dc8a37656d58d8e3900a5b5c56",
+      "file": "app/borsa/grafik-analiz/page.tsx",
+      "trackedFiles": [
+        "app/borsa/grafik-analiz/page.tsx"
+      ]
     },
     {
       "route": "/borsa/grafik-analiz/[slug]",
       "updatedAt": "2026-04-10T22:05:41+03:00",
-      "file": "app/borsa/grafik-analiz/[slug]/page.tsx"
+      "signature": "07f99e1fbea3abe12cf12f67f743562fa47bcff058a094da369f771c08575877",
+      "file": "app/borsa/grafik-analiz/[slug]/page.tsx",
+      "trackedFiles": [
+        "app/borsa/grafik-analiz/[slug]/page.tsx"
+      ]
     },
     {
       "route": "/borsa/grafik-analiz/aefes",
       "updatedAt": "2026-04-28T12:39:15+03:00",
-      "file": "app/borsa/grafik-analiz/aefes/page.tsx"
+      "signature": "3e008b82bc98bb616d286447466b43e39d71227d2ed9221b267887fe2a17537b",
+      "file": "app/borsa/grafik-analiz/aefes/page.tsx",
+      "trackedFiles": [
+        "app/borsa/grafik-analiz/aefes/page.tsx"
+      ]
     },
     {
       "route": "/borsa/gunluk-borsa-ozeti",
-      "updatedAt": "2026-04-30T18:45:04+03:00",
-      "file": "app/borsa/gunluk-borsa-ozeti/page.tsx"
+      "updatedAt": "2026-05-18T18:26:22+03:00",
+      "signature": "9d3bb174d0add41c85e543dd22800654d368cdc7c8497b4907a76b2670269151",
+      "file": "app/borsa/gunluk-borsa-ozeti/page.tsx",
+      "trackedFiles": [
+        "app/borsa/gunluk-borsa-ozeti/page.tsx"
+      ]
     },
     {
       "route": "/borsa/hacim-artisi-analizi",
-      "updatedAt": "2026-04-16T14:49:46+03:00",
-      "file": "app/borsa/hacim-artisi-analizi/page.tsx"
+      "updatedAt": "2026-04-30T20:59:05+03:00",
+      "signature": "32da4f668187a12195fbe87d29b9eff25fd1e546c2078d3fc086427902bf94ad",
+      "file": "app/borsa/hacim-artisi-analizi/page.tsx",
+      "trackedFiles": [
+        "app/borsa/hacim-artisi-analizi/page.tsx"
+      ]
     },
     {
       "route": "/borsa/hacim-artisi-analizi/aylik-hacim-artisi-olanlar",
-      "updatedAt": "2026-04-24T19:31:21+03:00",
-      "file": "app/borsa/hacim-artisi-analizi/aylik-hacim-artisi-olanlar/page.tsx"
+      "updatedAt": "2026-05-18T18:45:30+03:00",
+      "signature": "630c2467a42cfee474797f7ff8e36393656c1abc6d013faedc81fd4bbbd89eee",
+      "file": "app/borsa/hacim-artisi-analizi/aylik-hacim-artisi-olanlar/page.tsx",
+      "trackedFiles": [
+        "app/borsa/hacim-artisi-analizi/aylik-hacim-artisi-olanlar/page.tsx"
+      ]
     },
     {
       "route": "/borsa/hacim-artisi-analizi/haftalik-hacim-artisi-olanlar",
-      "updatedAt": "2026-04-24T19:31:21+03:00",
-      "file": "app/borsa/hacim-artisi-analizi/haftalik-hacim-artisi-olanlar/page.tsx"
+      "updatedAt": "2026-05-18T18:45:30+03:00",
+      "signature": "75d67c89f4e89425f26b281d606b2a998fe6caea2efcd26bef89b761464ca95c",
+      "file": "app/borsa/hacim-artisi-analizi/haftalik-hacim-artisi-olanlar/page.tsx",
+      "trackedFiles": [
+        "app/borsa/hacim-artisi-analizi/haftalik-hacim-artisi-olanlar/page.tsx"
+      ]
     },
     {
       "route": "/borsa/hacim-artisi-analizi/yillik-hacim-artisi-olanlar",
-      "updatedAt": "2026-04-24T19:31:21+03:00",
-      "file": "app/borsa/hacim-artisi-analizi/yillik-hacim-artisi-olanlar/page.tsx"
+      "updatedAt": "2026-05-18T18:45:30+03:00",
+      "signature": "2c3fc853526f12a2ed1ca2719a2f050839bc1558053c2484c611c32a4bcf0a82",
+      "file": "app/borsa/hacim-artisi-analizi/yillik-hacim-artisi-olanlar/page.tsx",
+      "trackedFiles": [
+        "app/borsa/hacim-artisi-analizi/yillik-hacim-artisi-olanlar/page.tsx"
+      ]
     },
     {
       "route": "/borsa/oran-analizi",
-      "updatedAt": "2026-04-27T21:51:26+03:00",
-      "file": "app/borsa/oran-analizi/page.tsx"
+      "updatedAt": "2026-05-18T18:31:02+03:00",
+      "signature": "1e1ab9a39b11fe8c5adff0c744ef70b08e496b305aeda755568cb696f1f0b4d4",
+      "file": "app/borsa/oran-analizi/page.tsx",
+      "trackedFiles": [
+        "app/borsa/oran-analizi/page.tsx",
+        "app/borsa/oran-analizi/data/oran-analizi.xlsx"
+      ]
     },
     {
       "route": "/borsa/pivot-analizi",
-      "updatedAt": "2026-04-30T18:23:26+03:00",
-      "file": "app/borsa/pivot-analizi/page.tsx"
+      "updatedAt": "2026-05-18T18:33:55+03:00",
+      "signature": "4583d29a42ee213c2ac470ee1ba0f67e621f66aeac6b2a940d4227f4067c83c0",
+      "file": "app/borsa/pivot-analizi/page.tsx",
+      "trackedFiles": [
+        "app/borsa/pivot-analizi/page.tsx"
+      ]
     },
     {
       "route": "/borsa/tedbirli-hisseler",
-      "updatedAt": "2026-04-27T18:20:48+03:00",
-      "file": "app/borsa/tedbirli-hisseler/page.tsx"
+      "updatedAt": "2026-05-18T18:31:02+03:00",
+      "signature": "5f6c04dd78f9953c049c678333ec2253a9a907ba4cd82f4cd43dd179cbba275a",
+      "file": "app/borsa/tedbirli-hisseler/page.tsx",
+      "trackedFiles": [
+        "app/borsa/tedbirli-hisseler/page.tsx",
+        "app/borsa/tedbirli-hisseler/data/tedbir.xlsx"
+      ]
     },
     {
       "route": "/borsa/yeni-is-anlasmalari",
-      "updatedAt": "2026-04-27T18:24:58+03:00",
-      "file": "app/borsa/yeni-is-anlasmalari/page.tsx"
+      "updatedAt": "2026-05-18T18:31:02+03:00",
+      "signature": "f4a53fdb93c3f2856059187f03812a234e5d8df72ba04e62c0648608f7d5b345",
+      "file": "app/borsa/yeni-is-anlasmalari/page.tsx",
+      "trackedFiles": [
+        "app/borsa/yeni-is-anlasmalari/page.tsx",
+        "app/borsa/yeni-is-anlasmalari/data/yeni-is-anlasmalari.xlsx"
+      ]
     },
     {
       "route": "/cerez-politikasi",
       "updatedAt": "2026-04-29T16:24:43+03:00",
-      "file": "app/cerez-politikasi/page.tsx"
+      "signature": "eeb7fc011d5e04237acfc435b32ca02d462ce51edd78b67f7bf5eb2d5d911b33",
+      "file": "app/cerez-politikasi/page.tsx",
+      "trackedFiles": [
+        "app/cerez-politikasi/page.tsx"
+      ]
     },
     {
       "route": "/fonlar",
-      "updatedAt": "2026-04-27T21:04:04+03:00",
-      "file": "app/fonlar/page.tsx"
+      "updatedAt": "2026-04-30T21:10:03+03:00",
+      "signature": "f6986f06fe89bd0c484d2d54a7df5ec5dc470e5d22d1d36799b34906637979c6",
+      "file": "app/fonlar/page.tsx",
+      "trackedFiles": [
+        "app/fonlar/page.tsx"
+      ]
     },
     {
       "route": "/fonlar/getiri",
-      "updatedAt": "2026-04-27T19:56:45+03:00",
-      "file": "app/fonlar/getiri/page.tsx"
+      "updatedAt": "2026-04-30T21:15:47+03:00",
+      "signature": "3f5b2afc83bc7e9e8fa1b673d0d0b0cebeeb080f986295021bb83e9cb7e1288f",
+      "file": "app/fonlar/getiri/page.tsx",
+      "trackedFiles": [
+        "app/fonlar/getiri/page.tsx"
+      ]
     },
     {
       "route": "/fonlar/getiri/borsa-yatirim-fonlari-getiri",
-      "updatedAt": "2026-04-16T14:02:32+03:00",
-      "file": "app/fonlar/getiri/borsa-yatirim-fonlari-getiri/page.tsx"
+      "updatedAt": "2026-05-18T12:27:08+03:00",
+      "signature": "ff5151d9fc54ad10f0e94094fd55022f83e6b09225a209357834a7dcc5dcdc51",
+      "file": "app/fonlar/getiri/borsa-yatirim-fonlari-getiri/page.tsx",
+      "trackedFiles": [
+        "app/fonlar/getiri/borsa-yatirim-fonlari-getiri/page.tsx",
+        "app/fonlar/getiri/borsa-yatirim-fonlari-getiri/data/borsa-yatirim-fonlari-getiri.xlsx"
+      ]
     },
     {
       "route": "/fonlar/getiri/emeklilik-fonlari-getiri",
-      "updatedAt": "2026-04-16T14:02:32+03:00",
-      "file": "app/fonlar/getiri/emeklilik-fonlari-getiri/page.tsx"
+      "updatedAt": "2026-05-18T12:27:08+03:00",
+      "signature": "edd8b4c99981ac254cfadacb34300d5cf986e9ff96b9790d43bc701c88b67622",
+      "file": "app/fonlar/getiri/emeklilik-fonlari-getiri/page.tsx",
+      "trackedFiles": [
+        "app/fonlar/getiri/emeklilik-fonlari-getiri/page.tsx",
+        "app/fonlar/getiri/emeklilik-fonlari-getiri/data/emeklilik-fonlari-getiri.xlsx"
+      ]
     },
     {
       "route": "/fonlar/getiri/menkul-kiymet-yatirim-fonlari",
-      "updatedAt": "2026-04-16T14:02:32+03:00",
-      "file": "app/fonlar/getiri/menkul-kiymet-yatirim-fonlari/page.tsx"
+      "updatedAt": "2026-05-18T12:27:08+03:00",
+      "signature": "280a0ffe84dcdc80b8f1aee4eb7459b87781dd33e9489fae9360d9dc58606ff5",
+      "file": "app/fonlar/getiri/menkul-kiymet-yatirim-fonlari/page.tsx",
+      "trackedFiles": [
+        "app/fonlar/getiri/menkul-kiymet-yatirim-fonlari/page.tsx",
+        "app/fonlar/getiri/menkul-kiymet-yatirim-fonlari/data/menkul-kiymet-yatirim-fonlari-getiri.xlsx"
+      ]
     },
     {
       "route": "/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler",
-      "updatedAt": "2026-04-27T21:51:26+03:00",
-      "file": "app/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler/page.tsx"
+      "updatedAt": "2026-05-18T18:26:22+03:00",
+      "signature": "e7e9e5654151c660a458efd2d354f5ab82e6a8e25b32f6023d886c3df8350518",
+      "file": "app/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler/page.tsx",
+      "trackedFiles": [
+        "app/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler/page.tsx",
+        "app/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler/data/tercih-edilen-hisseler.xlsx"
+      ]
     },
     {
       "route": "/fonlar/tarihsel-veriler",
-      "updatedAt": "2026-04-27T19:56:45+03:00",
-      "file": "app/fonlar/tarihsel-veriler/page.tsx"
+      "updatedAt": "2026-04-30T21:15:47+03:00",
+      "signature": "7f86acc27323b35ab535d97e7a1fe3429ff62c900e64495c634f0e448240259f",
+      "file": "app/fonlar/tarihsel-veriler/page.tsx",
+      "trackedFiles": [
+        "app/fonlar/tarihsel-veriler/page.tsx"
+      ]
     },
     {
       "route": "/fonlar/tarihsel-veriler/borsa-yatirim-fonlari-tarihsel",
-      "updatedAt": "2026-04-16T14:02:32+03:00",
-      "file": "app/fonlar/tarihsel-veriler/borsa-yatirim-fonlari-tarihsel/page.tsx"
+      "updatedAt": "2026-05-18T12:27:08+03:00",
+      "signature": "091c114672bac47e70bf1e1bf257704f3b44f4ef391deb6ef62ecc376a8c7032",
+      "file": "app/fonlar/tarihsel-veriler/borsa-yatirim-fonlari-tarihsel/page.tsx",
+      "trackedFiles": [
+        "app/fonlar/tarihsel-veriler/borsa-yatirim-fonlari-tarihsel/page.tsx",
+        "app/fonlar/tarihsel-veriler/borsa-yatirim-fonlari-tarihsel/data/borsa-yatirim-fonlari-tarihsel.xlsx"
+      ]
     },
     {
       "route": "/fonlar/tarihsel-veriler/emeklilik-fonlari-tarihsel",
-      "updatedAt": "2026-04-16T14:02:32+03:00",
-      "file": "app/fonlar/tarihsel-veriler/emeklilik-fonlari-tarihsel/page.tsx"
+      "updatedAt": "2026-05-18T12:27:08+03:00",
+      "signature": "559ad888cfb32ec16758aa37670a8d6adfbb05edf6602be4ffe98eb96ececd98",
+      "file": "app/fonlar/tarihsel-veriler/emeklilik-fonlari-tarihsel/page.tsx",
+      "trackedFiles": [
+        "app/fonlar/tarihsel-veriler/emeklilik-fonlari-tarihsel/page.tsx",
+        "app/fonlar/tarihsel-veriler/emeklilik-fonlari-tarihsel/data/emeklilik-fonlari-tarihsel.xlsx"
+      ]
     },
     {
       "route": "/fonlar/tarihsel-veriler/menkul-kiymet-yatirim-fonlari",
-      "updatedAt": "2026-04-16T14:02:32+03:00",
-      "file": "app/fonlar/tarihsel-veriler/menkul-kiymet-yatirim-fonlari/page.tsx"
+      "updatedAt": "2026-05-18T12:27:08+03:00",
+      "signature": "7ce357a202d84cffc3fcfd88fefd13562280345bddf7f1253d90064b71d70ec3",
+      "file": "app/fonlar/tarihsel-veriler/menkul-kiymet-yatirim-fonlari/page.tsx",
+      "trackedFiles": [
+        "app/fonlar/tarihsel-veriler/menkul-kiymet-yatirim-fonlari/page.tsx",
+        "app/fonlar/tarihsel-veriler/menkul-kiymet-yatirim-fonlari/data/menkul-kiymet-yatirim-fonlari-tarihsel.xlsx"
+      ]
     },
     {
       "route": "/gizlilik-politikasi",
-      "updatedAt": "2026-04-29T16:24:43+03:00",
-      "file": "app/gizlilik-politikasi/page.tsx"
+      "updatedAt": "2026-05-08T22:12:31+03:00",
+      "signature": "ff713ce9899bc1a8bc4320d5d7d032652b2d2a5dd33e6145200182025283a5fb",
+      "file": "app/gizlilik-politikasi/page.tsx",
+      "trackedFiles": [
+        "app/gizlilik-politikasi/page.tsx"
+      ]
+    },
+    {
+      "route": "/haber/haber-983",
+      "updatedAt": "2026-05-16T09:54:40+03:00",
+      "signature": "074772263a40e61a1124c16d6eeb16a8cb88b5b691db783c8270a0203c8d8f3d",
+      "file": "app/haber/haber-983/page.tsx",
+      "trackedFiles": [
+        "app/haber/haber-983/page.tsx"
+      ]
+    },
+    {
+      "route": "/haber/haber-984",
+      "updatedAt": "2026-05-04T10:33:07+03:00",
+      "signature": "b4cddecbfdf795553d1bdfa123e923bde0b8879625a9bf05eeb1b5f879ad4819",
+      "file": "app/haber/haber-984/page.tsx",
+      "trackedFiles": [
+        "app/haber/haber-984/page.tsx"
+      ]
     },
     {
       "route": "/haber/haber-985",
       "updatedAt": "2026-04-30T11:27:53+03:00",
-      "file": "app/haber/haber-985/page.tsx"
-    },
-    {
-      "route": "/haber/haber-986",
-      "updatedAt": "2026-04-29T21:34:47+03:00",
-      "file": "app/haber/haber-986/page.tsx"
-    },
-    {
-      "route": "/haber/haber-987",
-      "updatedAt": "2026-04-30T11:32:56+03:00",
-      "file": "app/haber/haber-987/page.tsx"
+      "signature": "a9d89fc7f29d58e14aa6bb72c9bc085734a2ce1e2cb0f66dc29bf396004cd5ac",
+      "file": "app/haber/haber-985/page.tsx",
+      "trackedFiles": [
+        "app/haber/haber-985/page.tsx"
+      ]
     },
     {
       "route": "/hakkimizda",
       "updatedAt": "2026-04-29T16:24:43+03:00",
-      "file": "app/hakkimizda/page.tsx"
+      "signature": "dc4018861c41ec21ebfbc0e93dcdcb94a9235090b09b891f9df986521cf1b6d0",
+      "file": "app/hakkimizda/page.tsx",
+      "trackedFiles": [
+        "app/hakkimizda/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz",
       "updatedAt": "2026-04-28T14:29:41+03:00",
-      "file": "app/halka-arz/page.tsx"
+      "signature": "4d7731bcff56eea4e9a12d5833099fa9e2c357fa198f7f2283e88f58b5495091",
+      "file": "app/halka-arz/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/[slug]",
       "updatedAt": "2026-04-10T22:05:41+03:00",
-      "file": "app/halka-arz/[slug]/page.tsx"
+      "signature": "a6f8b794a82f4f1a7932d567686387b7b78bdc0848dd4d16514b5fd501a2c440",
+      "file": "app/halka-arz/[slug]/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/[slug]/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/kazanc-hesapla",
-      "updatedAt": "2026-04-12T18:52:20+03:00",
-      "file": "app/halka-arz/kazanc-hesapla/page.tsx"
+      "updatedAt": "2026-05-08T21:55:17+03:00",
+      "signature": "1692dd2820b1e551242d19340e609b34a61a6013fe44f287118ef21a97d57985",
+      "file": "app/halka-arz/kazanc-hesapla/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/kazanc-hesapla/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/onayli-izahnameler",
-      "updatedAt": "2026-04-12T20:41:47+03:00",
-      "file": "app/halka-arz/onayli-izahnameler/page.tsx"
+      "updatedAt": "2026-05-08T21:46:08+03:00",
+      "signature": "4a6a6c2717d4097ea4edefc67d3583ec3ae372c2c1aeab117f6f9f0cf41b734a",
+      "file": "app/halka-arz/onayli-izahnameler/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/onayli-izahnameler/page.tsx"
+      ]
     },
     {
-      "route": "/halka-arz/onayli-izahnameler/onayli-1",
-      "updatedAt": "2026-04-28T12:50:05+03:00",
-      "file": "app/halka-arz/onayli-izahnameler/onayli-1/page.tsx"
+      "route": "/halka-arz/onayli-izahnameler/ekinciler",
+      "updatedAt": "2026-05-10T21:45:31+03:00",
+      "signature": "52e343e7de192b66c36e8444d71ef330b7ebdbb7e9ab0c52719a3c01c97757fc",
+      "file": "app/halka-arz/onayli-izahnameler/ekinciler/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/onayli-izahnameler/ekinciler/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/talep-hesapla",
-      "updatedAt": "2026-04-12T18:52:20+03:00",
-      "file": "app/halka-arz/talep-hesapla/page.tsx"
+      "updatedAt": "2026-05-08T21:55:17+03:00",
+      "signature": "98b00047cba1a913372efcc8b602b45e98e6178a374a0273ec4d43963d23d0f0",
+      "file": "app/halka-arz/talep-hesapla/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/talep-hesapla/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler",
-      "updatedAt": "2026-04-20T14:26:05+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/page.tsx"
+      "updatedAt": "2026-05-18T18:18:42+03:00",
+      "signature": "73dfcbff6fdcb09b9e0502692d24f1a4f4c6230001d242ee01719251fce10eb9",
+      "file": "app/halka-arz/taslak-izahnameler/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/acacia",
       "updatedAt": "2026-04-19T21:46:22+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/acacia/page.tsx"
+      "signature": "06e59817c3194e7b70072e869d6014b188e64f6ea97f948a179236379c352dca",
+      "file": "app/halka-arz/taslak-izahnameler/acacia/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/acacia/page.tsx"
+      ]
+    },
+    {
+      "route": "/halka-arz/taslak-izahnameler/adm",
+      "updatedAt": "2026-05-18T18:18:42+03:00",
+      "signature": "c1b0769dade24880a6ab85135ed7db06472c7c072c7c838ff76c03af0d0e15da",
+      "file": "app/halka-arz/taslak-izahnameler/adm/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/adm/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/adra",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/adra/page.tsx"
+      "signature": "be2a791adcff03cf880b3013da0456944ab03f0f077d5c2fbf371db0aafd3f88",
+      "file": "app/halka-arz/taslak-izahnameler/adra/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/adra/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/akademi",
-      "updatedAt": "2026-04-28T18:48:14+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/akademi/page.tsx"
+      "updatedAt": "2026-05-18T17:40:20+03:00",
+      "signature": "5e8fda3d095a036441dce6338d5ea1d1500d254bb168429138ad2870ab8b1822",
+      "file": "app/halka-arz/taslak-izahnameler/akademi/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/akademi/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/akcelik",
       "updatedAt": "2026-04-20T14:14:43+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/akcelik/page.tsx"
+      "signature": "0b15723dbaaa133c76228dc38e8ebde89a0ff3dc070207416118c68470b137ed",
+      "file": "app/halka-arz/taslak-izahnameler/akcelik/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/akcelik/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/aksa",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/aksa/page.tsx"
+      "signature": "cca07752316b9dffed6e545b84fb8e75a50e6f7c4aa8e0a4b4802eb5f3474e71",
+      "file": "app/halka-arz/taslak-izahnameler/aksa/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/aksa/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/aksam",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/aksam/page.tsx"
+      "signature": "dde818f56fc45075e14ec4a5c264937e651b7b9b67e24149d005ce3f46c242e3",
+      "file": "app/halka-arz/taslak-izahnameler/aksam/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/aksam/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/albayrak",
       "updatedAt": "2026-04-19T16:53:38+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/albayrak/page.tsx"
+      "signature": "bb3d41e309d4fa14b063439977478eedd1439f66f5e9dbe0bcb96d029c0b89f8",
+      "file": "app/halka-arz/taslak-izahnameler/albayrak/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/albayrak/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/alcas",
       "updatedAt": "2026-04-19T21:46:22+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/alcas/page.tsx"
+      "signature": "f7e107d1e62ee5f19c8347d180c1d969f41b74bc0c4a65e5f2cc9e353f050b35",
+      "file": "app/halka-arz/taslak-izahnameler/alcas/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/alcas/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/allbatross",
       "updatedAt": "2026-04-19T21:46:22+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/allbatross/page.tsx"
+      "signature": "9bc4aaf155eae2c0cecf19230c612de2dbf4aab77f03a4cefe3e4ca778b19713",
+      "file": "app/halka-arz/taslak-izahnameler/allbatross/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/allbatross/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/altun",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/altun/page.tsx"
+      "signature": "7b84829f613a37558d8d7f5ecfc0b117c8ac3120f1f8ae183a10b55639cc2aa9",
+      "file": "app/halka-arz/taslak-izahnameler/altun/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/altun/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/anadolu",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/anadolu/page.tsx"
+      "signature": "754909ea572dccf4234d8d7b1824bf54e85eaca3c78d0ed930cbae9a0c46ff48",
+      "file": "app/halka-arz/taslak-izahnameler/anadolu/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/anadolu/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/anemon",
       "updatedAt": "2026-04-17T14:17:46+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/anemon/page.tsx"
+      "signature": "2af3766ed0f5d2e83743991330750056217a8b8cefe3ae39704397ceca4b469a",
+      "file": "app/halka-arz/taslak-izahnameler/anemon/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/anemon/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/aras",
       "updatedAt": "2026-04-17T13:34:39+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/aras/page.tsx"
+      "signature": "88d44d5e8d3e6c0df91ef467f6403c68e4850470d802642fd5f3bb3906a4fb12",
+      "file": "app/halka-arz/taslak-izahnameler/aras/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/aras/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/arkapo",
       "updatedAt": "2026-04-20T14:14:43+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/arkapo/page.tsx"
+      "signature": "7155e232241269105278c6a152af3a3f58fa8c0d8fd84d7053561cf86c51ddca",
+      "file": "app/halka-arz/taslak-izahnameler/arkapo/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/arkapo/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/arkoz",
       "updatedAt": "2026-04-17T14:17:46+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/arkoz/page.tsx"
+      "signature": "954f2552bab737c97a8f91efad8cdb67e5346dcf6ba923012ddf466bdbe4397b",
+      "file": "app/halka-arz/taslak-izahnameler/arkoz/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/arkoz/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/as",
       "updatedAt": "2026-04-17T13:34:39+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/as/page.tsx"
+      "signature": "8c60de9737d32dba097b0c106433cb08e3e7f3ccf04f0bae1abc289422e66508",
+      "file": "app/halka-arz/taslak-izahnameler/as/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/as/page.tsx"
+      ]
+    },
+    {
+      "route": "/halka-arz/taslak-izahnameler/asos",
+      "updatedAt": "2026-05-18T18:18:42+03:00",
+      "signature": "ba1998bfc4465ff8dc37c901df37112676ce0eca6eb4796db0ae6a3dfc061743",
+      "file": "app/halka-arz/taslak-izahnameler/asos/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/asos/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/atel",
       "updatedAt": "2026-04-17T14:17:46+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/atel/page.tsx"
+      "signature": "b9a2f3eb77ca67b0760e0bcc486a44728b9b036fc6196263e3c70932b62d04cb",
+      "file": "app/halka-arz/taslak-izahnameler/atel/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/atel/page.tsx"
+      ]
+    },
+    {
+      "route": "/halka-arz/taslak-izahnameler/aycan",
+      "updatedAt": "2026-05-18T17:51:03+03:00",
+      "signature": "f820ad9e88e441e5f0f1f11161c198ea235ede2e241b138cfb4b90ea35d21eeb",
+      "file": "app/halka-arz/taslak-izahnameler/aycan/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/aycan/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/babacan",
       "updatedAt": "2026-04-19T16:53:38+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/babacan/page.tsx"
+      "signature": "51d95bf66ae5e8bf3f22545c340ca2c1042ef5261032ac883e5962d6c9decf31",
+      "file": "app/halka-arz/taslak-izahnameler/babacan/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/babacan/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/bakirci",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/bakirci/page.tsx"
+      "signature": "ea73b91fa58b8dacf2dfa0375a99c94f3efbd2bdfdc4dfbcc5f6f2043dc177ee",
+      "file": "app/halka-arz/taslak-izahnameler/bakirci/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/bakirci/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/basakkent",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/basakkent/page.tsx"
+      "signature": "554c083158295a707d564b7578e073ced2e368cad0a110548b8cf1f8ecd32386",
+      "file": "app/halka-arz/taslak-izahnameler/basakkent/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/basakkent/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/basakkentgsyo",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/basakkentgsyo/page.tsx"
+      "signature": "8f9f771efcaf1f2fe480dc9a9c169edf5b7c2165764800a1973ca96c215a2fbe",
+      "file": "app/halka-arz/taslak-izahnameler/basakkentgsyo/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/basakkentgsyo/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/baycan",
       "updatedAt": "2026-04-17T15:19:45+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/baycan/page.tsx"
+      "signature": "4c82178a390c27dabf1f4affe3c36d2f97139095ae90cdec2e740d3caceff3ef",
+      "file": "app/halka-arz/taslak-izahnameler/baycan/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/baycan/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/baytuna",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/baytuna/page.tsx"
+      "signature": "077c49e73247f276aca5f8b31c894f4f58c4e592162cd5dc54860207665270a0",
+      "file": "app/halka-arz/taslak-izahnameler/baytuna/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/baytuna/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/besler",
       "updatedAt": "2026-04-17T18:00:12+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/besler/page.tsx"
+      "signature": "d4828a9b2372c7867bc831fd9b6768859854cff98dfaec6afc7cfa3d530e7112",
+      "file": "app/halka-arz/taslak-izahnameler/besler/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/besler/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/beta",
       "updatedAt": "2026-04-19T16:53:38+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/beta/page.tsx"
+      "signature": "5851b33b77a1cfd2d7ae50ebcd6512e25816bd6397e2c64b9d0f532870315c6f",
+      "file": "app/halka-arz/taslak-izahnameler/beta/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/beta/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/bewen",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/bewen/page.tsx"
+      "signature": "92404447da408e896e86a76bc3ca22b75808b1e2248998fdf5f4255e59e464ef",
+      "file": "app/halka-arz/taslak-izahnameler/bewen/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/bewen/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/beyoglu",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/beyoglu/page.tsx"
+      "signature": "d79e54a3093bb1fb84966a86db75477ec2301ce9ecf945b981f27208b30dcdcb",
+      "file": "app/halka-arz/taslak-izahnameler/beyoglu/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/beyoglu/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/biem",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/biem/page.tsx"
+      "signature": "4868c105722211b75c895347cb678422bf600d7c29dcca088494f0b020d6b082",
+      "file": "app/halka-arz/taslak-izahnameler/biem/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/biem/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/biosys",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/biosys/page.tsx"
+      "signature": "33ab0e847e3baabfdddf093a511f636ab8d46f7348512c6ba2c2f142a847f45c",
+      "file": "app/halka-arz/taslak-izahnameler/biosys/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/biosys/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/birlesim",
       "updatedAt": "2026-04-20T12:42:06+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/birlesim/page.tsx"
+      "signature": "65a62b0abc3340364eeec9bbfaf5003d101371e6ba466c9aa8eb90cabab501ae",
+      "file": "app/halka-arz/taslak-izahnameler/birlesim/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/birlesim/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/borsan",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/borsan/page.tsx"
+      "signature": "65e299e9b7187347ad066ab51331c41d9a0b96739f048fec66f151c9315e240d",
+      "file": "app/halka-arz/taslak-izahnameler/borsan/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/borsan/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/buyuk",
       "updatedAt": "2026-04-18T15:49:07+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/buyuk/page.tsx"
+      "signature": "01256820f6a1b60098db65e9a2e3b18de591da311548d43f0e91f41788898387",
+      "file": "app/halka-arz/taslak-izahnameler/buyuk/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/buyuk/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/cavusoglu",
       "updatedAt": "2026-04-20T14:14:43+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/cavusoglu/page.tsx"
+      "signature": "972c63f01208a6d1be487672e2565576dd1ef5da9d60257fd5a734b3e51c041b",
+      "file": "app/halka-arz/taslak-izahnameler/cavusoglu/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/cavusoglu/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/cevher",
       "updatedAt": "2026-04-19T16:53:38+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/cevher/page.tsx"
+      "signature": "d5b20271613caa0e7e1f7a3402ceb8078c205586ab5a860339203bd36486b428",
+      "file": "app/halka-arz/taslak-izahnameler/cevher/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/cevher/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/cilekci",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/cilekci/page.tsx"
+      "signature": "e7d5c969fca4e2d0d69ee900113586fd283c1426621fa22b04825f08882869cc",
+      "file": "app/halka-arz/taslak-izahnameler/cilekci/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/cilekci/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/cimko",
       "updatedAt": "2026-04-20T12:42:06+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/cimko/page.tsx"
+      "signature": "faa92d16dbd7c63d18600e69123484cd916951e19c9be11df0c3a338b5a51e56",
+      "file": "app/halka-arz/taslak-izahnameler/cimko/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/cimko/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/cimstone",
       "updatedAt": "2026-04-17T15:54:24+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/cimstone/page.tsx"
+      "signature": "4eb02fc3d046fc9f03691c381b87bbe4b92d8bdb73ba27f2d2cf882b7768859b",
+      "file": "app/halka-arz/taslak-izahnameler/cimstone/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/cimstone/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/club",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/club/page.tsx"
+      "signature": "f078c7515898e766559c2665dedb83bd850ff9cdf9b008418e4f24b462c0e04d",
+      "file": "app/halka-arz/taslak-izahnameler/club/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/club/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/dag",
       "updatedAt": "2026-04-17T18:00:12+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/dag/page.tsx"
+      "signature": "18d888752f1ddcd337d116aa16ea66e802e63a70bf69b81a2e72badfe94f4736",
+      "file": "app/halka-arz/taslak-izahnameler/dag/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/dag/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/dbe",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/dbe/page.tsx"
+      "signature": "d832557cb1d5c17f85105157b8ac2af0c1bd10aad34d01c941dd7dee5388f132",
+      "file": "app/halka-arz/taslak-izahnameler/dbe/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/dbe/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/deba",
       "updatedAt": "2026-04-17T18:00:12+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/deba/page.tsx"
+      "signature": "d1d2ee3193ef0a1d95ac84ba530eec2fa1c093ead2b43dca8a21c1b5325d0b27",
+      "file": "app/halka-arz/taslak-izahnameler/deba/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/deba/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/demes",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/demes/page.tsx"
+      "signature": "74d4da1f8031c147bd9c27805674923b48f29e6d7c08bae14524d2f068c9f8fc",
+      "file": "app/halka-arz/taslak-izahnameler/demes/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/demes/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/deniz",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/deniz/page.tsx"
+      "signature": "2e74e31bcdac089c74a8f16448f4fa60bb985e10bffa635311c58b3960d2b16c",
+      "file": "app/halka-arz/taslak-izahnameler/deniz/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/deniz/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/doga",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/doga/page.tsx"
+      "signature": "73604a7bcc50af6cfb0c807a2f897c7d2c0729e778181fd05b6569a23c0f509d",
+      "file": "app/halka-arz/taslak-izahnameler/doga/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/doga/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/dogkar",
       "updatedAt": "2026-04-17T15:19:45+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/dogkar/page.tsx"
+      "signature": "3f85457cc921af8b81d961ef59f18f7d77c2a1a625d35edb6e68dc8464920154",
+      "file": "app/halka-arz/taslak-izahnameler/dogkar/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/dogkar/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/dorce",
       "updatedAt": "2026-04-17T18:00:12+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/dorce/page.tsx"
+      "signature": "7ef0c4d065c5c3b59022ee3582045c58b2cf5a72e8b6f81f38da8f18ea7195fa",
+      "file": "app/halka-arz/taslak-izahnameler/dorce/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/dorce/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/effective",
       "updatedAt": "2026-04-17T14:17:46+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/effective/page.tsx"
+      "signature": "83efc0b207a3b1565b37960bd3664a544a5179979f334de10e124df38c1a7fb6",
+      "file": "app/halka-arz/taslak-izahnameler/effective/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/effective/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/efg",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/efg/page.tsx"
+      "signature": "98dd8b9b939c33f8175a683f4c0d909afa4af851b09c28727a95b7f67dba9c2a",
+      "file": "app/halka-arz/taslak-izahnameler/efg/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/efg/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/efor",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/efor/page.tsx"
+      "signature": "e79dbef971e18f46366081ebd299578248d2616ec5944db7187ee3296f79369d",
+      "file": "app/halka-arz/taslak-izahnameler/efor/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/efor/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/ekiciler",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/ekiciler/page.tsx"
+      "signature": "fc107fdce9b1938461ec7acc791ea04510f292e11ab32d74cd1e185d88f11268",
+      "file": "app/halka-arz/taslak-izahnameler/ekiciler/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/ekiciler/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/ekim",
       "updatedAt": "2026-04-20T12:42:06+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/ekim/page.tsx"
-    },
-    {
-      "route": "/halka-arz/taslak-izahnameler/ekinciler",
-      "updatedAt": "2026-04-19T21:46:22+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/ekinciler/page.tsx"
+      "signature": "ec9d2805f5643a1939828b6b84b5a5147b497168f0ceb91ee904a038a3b959a0",
+      "file": "app/halka-arz/taslak-izahnameler/ekim/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/ekim/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/ekol",
       "updatedAt": "2026-04-17T13:21:07+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/ekol/page.tsx"
+      "signature": "571b35fbf3c18e41f5df4ccb1417b9e73becbcc191a4fb09c4d8c66c4e74d9f7",
+      "file": "app/halka-arz/taslak-izahnameler/ekol/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/ekol/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/elin",
       "updatedAt": "2026-04-19T17:03:26+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/elin/page.tsx"
+      "signature": "76afd2694a5a98f96cae5844328978f11840302814ba6962e1d91c4822acab8b",
+      "file": "app/halka-arz/taslak-izahnameler/elin/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/elin/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/enerjeo",
       "updatedAt": "2026-04-19T21:46:22+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/enerjeo/page.tsx"
+      "signature": "8f24d9688e5b2a93d2f4cde28030bde32b684e4ce5105b6829e0889820b8ac75",
+      "file": "app/halka-arz/taslak-izahnameler/enerjeo/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/enerjeo/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/esasburda",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/esasburda/page.tsx"
+      "signature": "ccd457165006630e539acbb6a0e5c04f679c7d77e17f464c80572a4ea5aa8901",
+      "file": "app/halka-arz/taslak-izahnameler/esasburda/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/esasburda/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/eston",
       "updatedAt": "2026-04-19T21:46:22+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/eston/page.tsx"
+      "signature": "03b6b10c2b366fb67033c2ab8f9a85e991a13f10aedea3874c7650ff41d74dca",
+      "file": "app/halka-arz/taslak-izahnameler/eston/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/eston/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/eti",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/eti/page.tsx"
+      "signature": "2aff845461c12e630c8e63a6a515fcb9b9a05ac203128217684d8b3b37209e67",
+      "file": "app/halka-arz/taslak-izahnameler/eti/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/eti/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/evofone",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/evofone/page.tsx"
+      "signature": "527f68849f67160c30b2756a8e88f07c773f1d2a0389e34f44dbb31ac2e3f2f4",
+      "file": "app/halka-arz/taslak-izahnameler/evofone/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/evofone/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/fcr",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/fcr/page.tsx"
+      "signature": "4ee04fc35342e793f98c6a89324d55b492f90d955d14fe536d59575d4685e1dd",
+      "file": "app/halka-arz/taslak-izahnameler/fcr/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/fcr/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/fiba",
       "updatedAt": "2026-04-19T21:46:22+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/fiba/page.tsx"
+      "signature": "bbed67346ed76f3588a1a3d75fa301fd733b454014aa741289d1a8a790ee7ac5",
+      "file": "app/halka-arz/taslak-izahnameler/fiba/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/fiba/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/fide",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/fide/page.tsx"
+      "signature": "c2462f42c36815b764d62471dec9a44e17332fa4190da8a836e7188674d9969d",
+      "file": "app/halka-arz/taslak-izahnameler/fide/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/fide/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/flo",
       "updatedAt": "2026-04-19T21:46:22+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/flo/page.tsx"
+      "signature": "4667e7a4e875e7c60a809490e9ce36803cd3f68bc7584ad307c82c9e32f26cb8",
+      "file": "app/halka-arz/taslak-izahnameler/flo/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/flo/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/fortis",
       "updatedAt": "2026-04-17T15:54:24+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/fortis/page.tsx"
+      "signature": "cda310cb7238baa43fafe42e0a0aa6793389086e5e22e4cefb0d031c6ce6e438",
+      "file": "app/halka-arz/taslak-izahnameler/fortis/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/fortis/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/gama",
       "updatedAt": "2026-04-20T14:14:43+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/gama/page.tsx"
+      "signature": "eb81b187241d53c459f15103fd6334fa1ba5f9526c3138a9ccd927f94cd89e7c",
+      "file": "app/halka-arz/taslak-izahnameler/gama/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/gama/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/gdz",
       "updatedAt": "2026-04-19T21:46:22+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/gdz/page.tsx"
+      "signature": "0bf3622834e5a4817eb1167812cd44fd5d05d6defa5b0b1708703bbca469bde5",
+      "file": "app/halka-arz/taslak-izahnameler/gdz/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/gdz/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/golda",
       "updatedAt": "2026-04-19T21:46:22+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/golda/page.tsx"
+      "signature": "1d884173b4f9a16a412667c6e1352268eac29c978adc44d0ad1a17243fe3bca8",
+      "file": "app/halka-arz/taslak-izahnameler/golda/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/golda/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/gulluk",
       "updatedAt": "2026-04-17T16:34:30+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/gulluk/page.tsx"
+      "signature": "6d04d3c68305bd2db4929a7a844e2721ab9551ec3db3fdb8eb0420e7398cf037",
+      "file": "app/halka-arz/taslak-izahnameler/gulluk/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/gulluk/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/gumusoglu",
       "updatedAt": "2026-04-18T13:02:38+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/gumusoglu/page.tsx"
+      "signature": "9c67654027ecb138e9d19e7f41b007689ed19ff20713dcdcbc8cdf6ef6be0ab7",
+      "file": "app/halka-arz/taslak-izahnameler/gumusoglu/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/gumusoglu/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/hakan",
       "updatedAt": "2026-04-19T16:53:38+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/hakan/page.tsx"
+      "signature": "cfd20646f64df835037a7ee7ac01034fe4558e20d66ff4f842a95075902a3f22",
+      "file": "app/halka-arz/taslak-izahnameler/hakan/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/hakan/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/hastavuk",
       "updatedAt": "2026-04-17T18:00:12+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/hastavuk/page.tsx"
+      "signature": "2f795fc0b7bd15f974c35d66ed1523693b94655db2201a4db7eec38c414f1d70",
+      "file": "app/halka-arz/taslak-izahnameler/hastavuk/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/hastavuk/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/haver",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/haver/page.tsx"
+      "signature": "afca1de2af6140b414f020c8345b57c54f7ff903fa9225abbe09c658a3312a63",
+      "file": "app/halka-arz/taslak-izahnameler/haver/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/haver/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/hdm",
       "updatedAt": "2026-04-20T14:14:43+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/hdm/page.tsx"
+      "signature": "e6685c3d2bd957ebdc41b26dc21fd021c2294b476bb85c18d0648d189c84e15b",
+      "file": "app/halka-arz/taslak-izahnameler/hdm/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/hdm/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/hur",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/hur/page.tsx"
+      "signature": "5c32f13072c7e48f7bba59aaebc243da1f20a8fff2abd47caab67ab0359fe98f",
+      "file": "app/halka-arz/taslak-izahnameler/hur/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/hur/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/ic",
       "updatedAt": "2026-04-17T18:00:12+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/ic/page.tsx"
+      "signature": "a00bdb420b6508e0c2f276b537fbd79e4e6f536b2083d6d5897c92364628ef7c",
+      "file": "app/halka-arz/taslak-izahnameler/ic/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/ic/page.tsx"
+      ]
+    },
+    {
+      "route": "/halka-arz/taslak-izahnameler/idc",
+      "updatedAt": "2026-05-18T18:18:42+03:00",
+      "signature": "a39e9b4ae264239421f49c5d0b77df8a5359f40c769f309328d3457663a6f21c",
+      "file": "app/halka-arz/taslak-izahnameler/idc/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/idc/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/ihlas",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/ihlas/page.tsx"
+      "signature": "ab86eec374c0eff119ef50fc2478765e7afdf26c9d821f11534069800ae86fee",
+      "file": "app/halka-arz/taslak-izahnameler/ihlas/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/ihlas/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/inavitas",
       "updatedAt": "2026-04-17T15:19:45+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/inavitas/page.tsx"
+      "signature": "4de4d87ce4db48015bf219070116a9b4b061c8358a6f6809475a430b3b693ec7",
+      "file": "app/halka-arz/taslak-izahnameler/inavitas/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/inavitas/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/infinia",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/infinia/page.tsx"
+      "signature": "a5f684c3c7a53c83e3d6167da9c8aa88d4571f4a44d1bc12dd84dd9b4000bc0e",
+      "file": "app/halka-arz/taslak-izahnameler/infinia/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/infinia/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/innovance",
       "updatedAt": "2026-04-17T18:00:12+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/innovance/page.tsx"
+      "signature": "bc3ace9cbce53889cb06c747c83d8d4e01f94c1d9f67825a6ff50a80050ceb83",
+      "file": "app/halka-arz/taslak-izahnameler/innovance/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/innovance/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/intetra",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/intetra/page.tsx"
+      "signature": "1486a2cc447d3e6dff63b741be75ca96aab0093b24d44dda635207595d665d51",
+      "file": "app/halka-arz/taslak-izahnameler/intetra/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/intetra/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/ion",
       "updatedAt": "2026-04-17T13:21:07+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/ion/page.tsx"
+      "signature": "3bc8c3d0629254937997dfbc44c0d5e71d34f4edd28ad5e026ee833b120b26c0",
+      "file": "app/halka-arz/taslak-izahnameler/ion/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/ion/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/istinyepark",
       "updatedAt": "2026-04-17T18:00:12+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/istinyepark/page.tsx"
+      "signature": "cc5bc21056e49d6f41a2d4caed11a0157cbf756b13970f439dc8fa6a3f04c6d8",
+      "file": "app/halka-arz/taslak-izahnameler/istinyepark/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/istinyepark/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/isvea",
       "updatedAt": "2026-04-19T16:53:38+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/isvea/page.tsx"
+      "signature": "f61fd7eb4d990f40f3e7d5c7931033a4c94a73c104325ae8833a57139a7ad59a",
+      "file": "app/halka-arz/taslak-izahnameler/isvea/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/isvea/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/iz",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/iz/page.tsx"
+      "signature": "8369230651cacc4f925c10d3d74e02e323cc269aac90b73e99e1a5b3dc264a26",
+      "file": "app/halka-arz/taslak-izahnameler/iz/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/iz/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/joygame",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/joygame/page.tsx"
+      "signature": "de6274d977aabcd82c52fa4d5a1d328fa63d06506778dd09d96fc3bd85cb113e",
+      "file": "app/halka-arz/taslak-izahnameler/joygame/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/joygame/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/kale",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/kale/page.tsx"
+      "signature": "468db8ab6da754ad20f6887a1060cf1be6779d02d05bbfd11d8d6645c747db8e",
+      "file": "app/halka-arz/taslak-izahnameler/kale/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/kale/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/kardemir",
       "updatedAt": "2026-04-19T21:46:22+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/kardemir/page.tsx"
+      "signature": "9afb2c805f6385db38737029a78f1a0d3ac8141789250d789b63806d0db6ab79",
+      "file": "app/halka-arz/taslak-izahnameler/kardemir/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/kardemir/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/karesi",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/karesi/page.tsx"
+      "signature": "21637ee27505fc86ab5c4f0eb96ca0c1b5f4d7c23cbfacb71c191296887c04f9",
+      "file": "app/halka-arz/taslak-izahnameler/karesi/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/karesi/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/kaymet",
       "updatedAt": "2026-04-20T14:14:43+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/kaymet/page.tsx"
+      "signature": "d19df92633bd71e44521bb4db91d69d780ed6b756d3753a291810871a0385cc9",
+      "file": "app/halka-arz/taslak-izahnameler/kaymet/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/kaymet/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/kepeks",
       "updatedAt": "2026-04-19T16:53:38+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/kepeks/page.tsx"
+      "signature": "3e8e9d51723330d2f03f571f807ccf4d5192f53f6eeeecf7fe77302e0b19a89e",
+      "file": "app/halka-arz/taslak-izahnameler/kepeks/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/kepeks/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/kirlioglu",
       "updatedAt": "2026-04-19T21:46:22+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/kirlioglu/page.tsx"
+      "signature": "36c8a9e57465f8a70ec138696c2d6f1b36294b544aa81658f6dd37703697a24a",
+      "file": "app/halka-arz/taslak-izahnameler/kirlioglu/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/kirlioglu/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/kisan",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/kisan/page.tsx"
+      "signature": "2d0b4a356731788a93fa2ed31f912d46d34ad6e5e536de94c82f5c8534ff527e",
+      "file": "app/halka-arz/taslak-izahnameler/kisan/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/kisan/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/kizilay",
       "updatedAt": "2026-04-20T14:14:43+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/kizilay/page.tsx"
+      "signature": "28bf34150c8524953a9506bf6c3e190eeb1f4f933ae59ed30c8e277585bd58ad",
+      "file": "app/halka-arz/taslak-izahnameler/kizilay/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/kizilay/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/koc",
       "updatedAt": "2026-04-17T18:00:12+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/koc/page.tsx"
+      "signature": "0eb97065b7220fa6c567e4fb733dd5fe6ad7f4d5bd8ea48397555e5ca1487463",
+      "file": "app/halka-arz/taslak-izahnameler/koc/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/koc/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/kon-tek",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/kon-tek/page.tsx"
+      "signature": "c75e63809e4e92fde7e4beab6d000503f315e1368c9decf46ee7a7b1fb6d647a",
+      "file": "app/halka-arz/taslak-izahnameler/kon-tek/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/kon-tek/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/konelsis",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/konelsis/page.tsx"
+      "signature": "486df90d77c5d62ae7b469aa5c10d3ce63eccfd19556ece1c35c950c0aa0d0d1",
+      "file": "app/halka-arz/taslak-izahnameler/konelsis/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/konelsis/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/koray",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/koray/page.tsx"
+      "signature": "814bc5dc00b39788b1efb378d0b753fbf87f24a5c059f4936e5777e56c5affc1",
+      "file": "app/halka-arz/taslak-izahnameler/koray/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/koray/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/kutup",
       "updatedAt": "2026-04-17T12:45:26+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/kutup/page.tsx"
+      "signature": "2e22e3570940a5b3a1f15c18630f3dc52f1e3dbc3df1db6f0bb2a708f9936711",
+      "file": "app/halka-arz/taslak-izahnameler/kutup/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/kutup/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/kuzuoglu",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/kuzuoglu/page.tsx"
+      "signature": "601eb31c6a530229ede42e8e12d2b5efc2bc53aad5e29a9e2d5db671df564efa",
+      "file": "app/halka-arz/taslak-izahnameler/kuzuoglu/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/kuzuoglu/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/lider",
       "updatedAt": "2026-04-17T15:19:45+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/lider/page.tsx"
+      "signature": "c1023227f14e47851ff9f5cef4fe906a4bba0a6af3f44d3520bd2867840b734c",
+      "file": "app/halka-arz/taslak-izahnameler/lider/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/lider/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/makel",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/makel/page.tsx"
+      "signature": "1b725a251565a7dba7fc33c00d5d0787222106697862e990ab7fd4b1945c53e6",
+      "file": "app/halka-arz/taslak-izahnameler/makel/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/makel/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/mar",
       "updatedAt": "2026-04-17T18:00:12+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/mar/page.tsx"
+      "signature": "683995c826fcd77a0b561994bf4679d57a1a81b65f46f4d21f8a11416330f17a",
+      "file": "app/halka-arz/taslak-izahnameler/mar/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/mar/page.tsx"
+      ]
+    },
+    {
+      "route": "/halka-arz/taslak-izahnameler/marbas",
+      "updatedAt": "2026-05-18T18:18:42+03:00",
+      "signature": "98bf183db8ac17d8d402ad3f3210803c32bdcb08fcf3ef6310d4c22143a26c71",
+      "file": "app/halka-arz/taslak-izahnameler/marbas/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/marbas/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/masfen",
       "updatedAt": "2026-04-19T16:53:38+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/masfen/page.tsx"
+      "signature": "0f5e63e42df69282247d86e74945264d0a81e98db58cc70d936c8f614837747a",
+      "file": "app/halka-arz/taslak-izahnameler/masfen/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/masfen/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/mega",
       "updatedAt": "2026-04-20T14:14:43+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/mega/page.tsx"
+      "signature": "9c3c1864e2abf02d43dd7dd1f7d040846a2d3fcb5bb1e3650ab327fd39799173",
+      "file": "app/halka-arz/taslak-izahnameler/mega/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/mega/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/mercanlar",
       "updatedAt": "2026-04-17T15:19:45+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/mercanlar/page.tsx"
+      "signature": "108f36f75b9513ecad3fb4ecf2d5009016b9816e8faa15704ddeb35984dedfbb",
+      "file": "app/halka-arz/taslak-izahnameler/mercanlar/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/mercanlar/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/metgun",
       "updatedAt": "2026-04-19T16:53:38+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/metgun/page.tsx"
+      "signature": "a37011673d01cb421440108a3b0ef0f916c0600a706da750e9c89c6f258f04a8",
+      "file": "app/halka-arz/taslak-izahnameler/metgun/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/metgun/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/milk",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/milk/page.tsx"
+      "signature": "1832b1976d4e8900fdfb3e986c301962937f1df2a2f6fc0cb5a10565240b249e",
+      "file": "app/halka-arz/taslak-izahnameler/milk/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/milk/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/multinet",
       "updatedAt": "2026-04-20T14:14:43+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/multinet/page.tsx"
+      "signature": "cbc4af2fd4bfd7b708f3d233281d4c2d157dde44ec764b9cd7ed0799e4d92c61",
+      "file": "app/halka-arz/taslak-izahnameler/multinet/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/multinet/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/namet",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/namet/page.tsx"
+      "signature": "d58b337a47b483355456bd39b3646c5ac79d21c9d05f12f2ec1ea5674ba0fc63",
+      "file": "app/halka-arz/taslak-izahnameler/namet/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/namet/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/narli",
       "updatedAt": "2026-04-20T12:42:06+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/narli/page.tsx"
+      "signature": "bdaa90b196710157cd553fd6750445d6eccdec600e8468b87c9a83125a9d1666",
+      "file": "app/halka-arz/taslak-izahnameler/narli/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/narli/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/naturel",
       "updatedAt": "2026-04-18T13:02:38+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/naturel/page.tsx"
+      "signature": "c2752b2d377542db44db0a59056d4be86d2f8637cc1fe594fc4c650273e938a5",
+      "file": "app/halka-arz/taslak-izahnameler/naturel/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/naturel/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/net",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/net/page.tsx"
+      "signature": "f0fbef8737f822de8207b3cfda2b6c982147f1cb58636934e1c27afa2d908507",
+      "file": "app/halka-arz/taslak-izahnameler/net/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/net/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/nmt",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/nmt/page.tsx"
+      "signature": "e5f6f889bb04aa8190043d906c07bd437b27a65040a937fec074e1a6aa74ff92",
+      "file": "app/halka-arz/taslak-izahnameler/nmt/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/nmt/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/noksel",
       "updatedAt": "2026-04-17T18:00:12+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/noksel/page.tsx"
+      "signature": "7b35b7a5b098fedee3d47de1b1700b20550e332c13901047a4a7b4582523c032",
+      "file": "app/halka-arz/taslak-izahnameler/noksel/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/noksel/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/odeon",
       "updatedAt": "2026-04-17T15:19:45+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/odeon/page.tsx"
+      "signature": "784492e81d4e920a8e5adec5ac72e9be690a8fca13541c15212be008ef41cab5",
+      "file": "app/halka-arz/taslak-izahnameler/odeon/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/odeon/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/oguzata",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/oguzata/page.tsx"
+      "signature": "64c0898af636e4f9e18f920056cc24df1ff4db41597f1f76c46d6f9e5b9256d3",
+      "file": "app/halka-arz/taslak-izahnameler/oguzata/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/oguzata/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/oltan",
       "updatedAt": "2026-04-17T14:17:46+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/oltan/page.tsx"
+      "signature": "47a57b066d9400f847651e44e2a44f81cb708dd8a1c852bd945c6615a18c871a",
+      "file": "app/halka-arz/taslak-izahnameler/oltan/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/oltan/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/orzaks",
       "updatedAt": "2026-04-19T21:46:22+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/orzaks/page.tsx"
+      "signature": "b00560aeaf51442b8a4a499ed3b442d7a3a425c7a71f8c1a47104ba33ce804a3",
+      "file": "app/halka-arz/taslak-izahnameler/orzaks/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/orzaks/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/otosor",
       "updatedAt": "2026-04-17T15:19:45+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/otosor/page.tsx"
+      "signature": "902daae4b8310e85b964623c855193ecdebeafea8cb6cf8d5241772537574f4b",
+      "file": "app/halka-arz/taslak-izahnameler/otosor/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/otosor/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/ozel",
       "updatedAt": "2026-04-17T16:23:12+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/ozel/page.tsx"
+      "signature": "d5b095a405336c5104e15fba4ec5854a2854d999809b085f6bdd4f0802aa8642",
+      "file": "app/halka-arz/taslak-izahnameler/ozel/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/ozel/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/ozlem",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/ozlem/page.tsx"
+      "signature": "a2ef0863af4d02cf351ca63040265ab84edb25c42e6bceaab0feb960dcc96473",
+      "file": "app/halka-arz/taslak-izahnameler/ozlem/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/ozlem/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/ozova",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/ozova/page.tsx"
+      "signature": "7e23a392c66a3dc265f489e15ecbdc10e2c4e7966f195232d546d320ff99a167",
+      "file": "app/halka-arz/taslak-izahnameler/ozova/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/ozova/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/ozpet",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/ozpet/page.tsx"
+      "signature": "f963ebd8f3d6fe5daf52bf3976b304c3956c7ea55a1f66765d48f07e2e306df3",
+      "file": "app/halka-arz/taslak-izahnameler/ozpet/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/ozpet/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/ozsec",
       "updatedAt": "2026-04-18T17:00:37+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/ozsec/page.tsx"
+      "signature": "b38e7fead68112387f1f1574c490bbf1cc968c0d5a54f8e2ae9ff706a560f298",
+      "file": "app/halka-arz/taslak-izahnameler/ozsec/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/ozsec/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/pakun",
       "updatedAt": "2026-04-19T16:53:38+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/pakun/page.tsx"
+      "signature": "5875315e202e07ea0ff9cc0513d32f348bcd5db6dbe013ab09ca98970f75198b",
+      "file": "app/halka-arz/taslak-izahnameler/pakun/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/pakun/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/panda",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/panda/page.tsx"
+      "signature": "09fc70fb6425bb00a5ad94db5122b839b80a8a3eae536be4080468b87dee5b3b",
+      "file": "app/halka-arz/taslak-izahnameler/panda/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/panda/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/pek",
       "updatedAt": "2026-04-17T15:19:45+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/pek/page.tsx"
+      "signature": "a7c908733b2d50305cece3c187780108e9dbd349df4d35e076e509776f64b34b",
+      "file": "app/halka-arz/taslak-izahnameler/pek/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/pek/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/penca",
       "updatedAt": "2026-04-20T14:14:43+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/penca/page.tsx"
+      "signature": "53957f3e1fc505f7c98027110f20f59e974eaab2e9e48354fd04424fc1dbb629",
+      "file": "app/halka-arz/taslak-izahnameler/penca/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/penca/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/pilsan",
       "updatedAt": "2026-04-17T14:17:46+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/pilsan/page.tsx"
+      "signature": "445b9a65bcee91e801e3c28eb2b97164bd2753ea579bd41039ffab3a6077cc7b",
+      "file": "app/halka-arz/taslak-izahnameler/pilsan/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/pilsan/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/point",
       "updatedAt": "2026-04-17T16:23:12+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/point/page.tsx"
+      "signature": "ba9497aae26567d68604e971de7f034c4fe5d2ee5653acad6d5c5f14f0f2c315",
+      "file": "app/halka-arz/taslak-izahnameler/point/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/point/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/polifarma",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/polifarma/page.tsx"
+      "signature": "204941ceea9e1474b58c1cf12dfdbc58fa0b22484b8f4a38f01b59867e0c0b5c",
+      "file": "app/halka-arz/taslak-izahnameler/polifarma/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/polifarma/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/proline",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/proline/page.tsx"
+      "signature": "ef0b78cf480f6f5e46d1e4bfbd694cefd7920759fec633610381cdc5f67205d5",
+      "file": "app/halka-arz/taslak-izahnameler/proline/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/proline/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/pttem",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/pttem/page.tsx"
+      "signature": "38cdd07990fd2e53029558978cf1734f129c65bee38c9cb61187c4f2ba6dab5e",
+      "file": "app/halka-arz/taslak-izahnameler/pttem/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/pttem/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/pursan",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/pursan/page.tsx"
+      "signature": "9ed8f01a293ddfe3bcf38d4a1c9ca33b2461ebf9ac5f73ccd02e8b0d00f9f981",
+      "file": "app/halka-arz/taslak-izahnameler/pursan/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/pursan/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/q",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/q/page.tsx"
+      "signature": "d55a5671d05927c44b9e5aa2a7e3b7db8ec211668af3a3fa0cc67ae9007b6d42",
+      "file": "app/halka-arz/taslak-izahnameler/q/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/q/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/quick",
       "updatedAt": "2026-04-19T17:03:26+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/quick/page.tsx"
+      "signature": "68b0f80365ee699bfdcb82de56a53abc116f3e4af73789f20c9ccb9f8d5674d7",
+      "file": "app/halka-arz/taslak-izahnameler/quick/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/quick/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/ral",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/ral/page.tsx"
+      "signature": "f45d26a3ae1f800b53d1b5ceb98e02b6ea594972d25febb4436b4b1cc30f22ef",
+      "file": "app/halka-arz/taslak-izahnameler/ral/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/ral/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/re",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/re/page.tsx"
+      "signature": "0e9b22b668db4239c02896e49f1545b6a4378c62049d033f8ff3f8e9168f61d1",
+      "file": "app/halka-arz/taslak-izahnameler/re/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/re/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/reis",
       "updatedAt": "2026-04-17T15:54:24+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/reis/page.tsx"
+      "signature": "c3dd5580079f0a1d9c7ff319ee43353922e4ae76856e4aac6ceb26fab8d8ebeb",
+      "file": "app/halka-arz/taslak-izahnameler/reis/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/reis/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/sa-ra",
       "updatedAt": "2026-04-19T16:53:38+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/sa-ra/page.tsx"
+      "signature": "5b081b14667991eb6a61d3e4b8e1231f9d5bd9f12e7819290dafe808271bd526",
+      "file": "app/halka-arz/taslak-izahnameler/sa-ra/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/sa-ra/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/saat",
       "updatedAt": "2026-04-19T21:46:22+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/saat/page.tsx"
+      "signature": "b2a4a209b40a918193772b0c9f8c1093317484d04fc4cafdf312aee3e6489f72",
+      "file": "app/halka-arz/taslak-izahnameler/saat/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/saat/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/sakarya",
       "updatedAt": "2026-04-17T15:19:45+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/sakarya/page.tsx"
+      "signature": "33f697dd8e481267abd113a9279a2e381428b643b627cf4933ff4807354a8631",
+      "file": "app/halka-arz/taslak-izahnameler/sakarya/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/sakarya/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/sanat",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/sanat/page.tsx"
+      "signature": "ae4950bc9d40fdf5275d20339eedc49ff1101020e233797db8b25fd6c5cca2e9",
+      "file": "app/halka-arz/taslak-izahnameler/sanat/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/sanat/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/sapro",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/sapro/page.tsx"
+      "signature": "d704db1d16f4be411132761232f478a9f1e5d50ebe4dd2e7db8628f6c6391c3e",
+      "file": "app/halka-arz/taslak-izahnameler/sapro/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/sapro/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/saytek",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/saytek/page.tsx"
+      "signature": "618dd13c9a3a3c0cbed9273a857cc590cbeb4329028cc170d29956f8d87e058b",
+      "file": "app/halka-arz/taslak-izahnameler/saytek/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/saytek/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/schmid",
       "updatedAt": "2026-04-17T14:17:46+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/schmid/page.tsx"
+      "signature": "8a9d86836715c5e87b721a4c3c83c03ef805886f6caf0f03c3e65c53997ac31c",
+      "file": "app/halka-arz/taslak-izahnameler/schmid/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/schmid/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/sector",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/sector/page.tsx"
+      "signature": "44b82335b2251e5410a8fd36ae2b7c66245de1c196670eb6dcd83b6c449ebf09",
+      "file": "app/halka-arz/taslak-izahnameler/sector/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/sector/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/selectum",
       "updatedAt": "2026-04-17T18:00:12+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/selectum/page.tsx"
+      "signature": "da43e2fa001148c2df9da60f1dd69c35564113f706b4380ba032dda14c67f670",
+      "file": "app/halka-arz/taslak-izahnameler/selectum/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/selectum/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/separ",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/separ/page.tsx"
+      "signature": "efbb5faee9f6ef069741e70cc72b93c466cdf324fdc515bfe4be36201a0feead",
+      "file": "app/halka-arz/taslak-izahnameler/separ/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/separ/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/sinbo",
       "updatedAt": "2026-04-17T14:17:46+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/sinbo/page.tsx"
+      "signature": "7ff00093e75c0dda11e6a6a3dc4f2c09a5eb0588b9c2d2673ddc24b7329b9a15",
+      "file": "app/halka-arz/taslak-izahnameler/sinbo/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/sinbo/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/smm",
       "updatedAt": "2026-04-20T14:14:43+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/smm/page.tsx"
+      "signature": "1e575d5cb8b78f365442eb906caa9d94bda12f9a6f97a18f9fc5ec9a4f645d82",
+      "file": "app/halka-arz/taslak-izahnameler/smm/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/smm/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/soho",
       "updatedAt": "2026-04-19T21:46:22+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/soho/page.tsx"
+      "signature": "1ce103647d8b1517a6e5b25db9d20bec70c8ac19f775368b49e4003abefaf7b5",
+      "file": "app/halka-arz/taslak-izahnameler/soho/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/soho/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/sonmez",
       "updatedAt": "2026-04-17T13:21:07+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/sonmez/page.tsx"
+      "signature": "9881b67b315512866e94a54ae7938ab764859080cba5d8998cb08f94b8329696",
+      "file": "app/halka-arz/taslak-izahnameler/sonmez/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/sonmez/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/soybas",
       "updatedAt": "2026-04-19T21:46:22+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/soybas/page.tsx"
+      "signature": "4779da2512f92c590569a7c6e02f63bae4e8a5f35146fe86f373d6160a92e5d0",
+      "file": "app/halka-arz/taslak-izahnameler/soybas/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/soybas/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/taksim",
       "updatedAt": "2026-04-17T21:53:38+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/taksim/page.tsx"
+      "signature": "2a7e39ba7ffaac9e70cc203e522fe86291da8ff7a205ddc1c9192360f972e9f6",
+      "file": "app/halka-arz/taslak-izahnameler/taksim/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/taksim/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/tatilbudur",
       "updatedAt": "2026-04-17T13:21:07+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/tatilbudur/page.tsx"
+      "signature": "38721c39ee86fc9dfd2d82e26c2de91450db759606af6615bd8e971f955abcd8",
+      "file": "app/halka-arz/taslak-izahnameler/tatilbudur/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/tatilbudur/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/tavuk",
       "updatedAt": "2026-04-20T14:14:43+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/tavuk/page.tsx"
+      "signature": "4fd7aa5dde05408e7aaff1742549c89d53baeb36b17bf9e0e90c19646b87fc62",
+      "file": "app/halka-arz/taslak-izahnameler/tavuk/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/tavuk/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/techmine",
       "updatedAt": "2026-04-20T14:14:43+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/techmine/page.tsx"
+      "signature": "975f113b73391ff6de043556bb15f44882d37905e90440a77e554c51f85bd83f",
+      "file": "app/halka-arz/taslak-izahnameler/techmine/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/techmine/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/teknik",
       "updatedAt": "2026-04-20T12:42:06+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/teknik/page.tsx"
+      "signature": "650cf2828d3ca9450b1cd8886071f6d3632ce861c526cf19e358acb937cb0d90",
+      "file": "app/halka-arz/taslak-izahnameler/teknik/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/teknik/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/teknika",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/teknika/page.tsx"
+      "signature": "daec9ff83b5e23953b78cd528208dd01a4fe8ebe0326cb6ed4a2fdd2d2695498",
+      "file": "app/halka-arz/taslak-izahnameler/teknika/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/teknika/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/tellioglu",
       "updatedAt": "2026-04-17T14:17:46+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/tellioglu/page.tsx"
+      "signature": "272fe391b3099065d866310379df6844dfa40b520d363ba911545c9acd973446",
+      "file": "app/halka-arz/taslak-izahnameler/tellioglu/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/tellioglu/page.tsx"
+      ]
+    },
+    {
+      "route": "/halka-arz/taslak-izahnameler/termopet",
+      "updatedAt": "2026-05-18T18:18:42+03:00",
+      "signature": "622734f2c9bec412d9a8f64009e8af157b65cd38b77274ba7ca368f7c0160ce8",
+      "file": "app/halka-arz/taslak-izahnameler/termopet/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/termopet/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/tezkim",
       "updatedAt": "2026-04-20T14:14:43+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/tezkim/page.tsx"
+      "signature": "84216bd42fb6fb070c78eded42943ef20bd66bdb1bd61d7640aa62f72c42fae1",
+      "file": "app/halka-arz/taslak-izahnameler/tezkim/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/tezkim/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/timur",
       "updatedAt": "2026-04-17T16:31:12+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/timur/page.tsx"
+      "signature": "1527298ea27da3fd1d172e973fa664dbda0fd06154653fff6a84cea4aff49f71",
+      "file": "app/halka-arz/taslak-izahnameler/timur/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/timur/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/tiryaki",
       "updatedAt": "2026-04-17T15:19:45+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/tiryaki/page.tsx"
+      "signature": "04c74dc9f67d223b529197df99149bd3a54559ecb4fbab882632a2bafc11274c",
+      "file": "app/halka-arz/taslak-izahnameler/tiryaki/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/tiryaki/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/trakya",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/trakya/page.tsx"
+      "signature": "0ae09e5358278c56f7bdfcf53c76237500d2ceb390cdddeebea9ec5e6d960912",
+      "file": "app/halka-arz/taslak-izahnameler/trakya/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/trakya/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/turk",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/turk/page.tsx"
+      "signature": "2a6c914e1459f99c7000e8edb7f25ebf9a9feb57b9c67407017beb851562939d",
+      "file": "app/halka-arz/taslak-izahnameler/turk/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/turk/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/turker",
       "updatedAt": "2026-04-17T13:24:07+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/turker/page.tsx"
+      "signature": "a056f3f70f5229a9bbc5dacfb20dfd7c63829c3047e5d30a97a159c10e5b88ef",
+      "file": "app/halka-arz/taslak-izahnameler/turker/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/turker/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/turkervangolu",
-      "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/turkervangolu/page.tsx"
+      "updatedAt": "2026-05-08T21:55:17+03:00",
+      "signature": "0dd4417f5061e07a02616acf9c0049000bf0892425dadc324ff318ce21cd6099",
+      "file": "app/halka-arz/taslak-izahnameler/turkervangolu/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/turkervangolu/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/turkiye",
       "updatedAt": "2026-04-17T12:45:26+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/turkiye/page.tsx"
+      "signature": "6e55b8cf11291c6a65868defcd0d05fbaf2dd2fb38f3c7f42b587a92d004a270",
+      "file": "app/halka-arz/taslak-izahnameler/turkiye/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/turkiye/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/tv8",
       "updatedAt": "2026-04-17T18:00:12+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/tv8/page.tsx"
+      "signature": "12a049c26af90bba5bad3818e6cf52ebd7f18af904d250b9d160eec19ec6c117",
+      "file": "app/halka-arz/taslak-izahnameler/tv8/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/tv8/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/ucak",
       "updatedAt": "2026-04-19T21:46:22+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/ucak/page.tsx"
+      "signature": "57078da8d19b5b1c18e4ba8edad6fdbf38e967fe469f5f25faa9fcd97a41eedb",
+      "file": "app/halka-arz/taslak-izahnameler/ucak/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/ucak/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/uras",
       "updatedAt": "2026-04-20T12:42:06+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/uras/page.tsx"
+      "signature": "de100b92d87a61b7725fcae76e12d900484c820b7f7f9872ff3fda53d9a82b8d",
+      "file": "app/halka-arz/taslak-izahnameler/uras/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/uras/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/uslu",
       "updatedAt": "2026-04-20T18:23:10+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/uslu/page.tsx"
+      "signature": "78b50e1642a0069664a5b120063fed89569ebc9c93a69d0630a19d199287dbc6",
+      "file": "app/halka-arz/taslak-izahnameler/uslu/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/uslu/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/vaden",
       "updatedAt": "2026-04-18T15:44:33+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/vaden/page.tsx"
+      "signature": "4388314ad315313d65ae6c2e8729de3e750cb62c4597305fb36a357ad3981eb7",
+      "file": "app/halka-arz/taslak-izahnameler/vaden/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/vaden/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/x",
       "updatedAt": "2026-04-19T21:46:22+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/x/page.tsx"
+      "signature": "e6d18fedd4c2bb61d30392436fe6b3e4665e90d910c3051bd44659542b8cf972",
+      "file": "app/halka-arz/taslak-izahnameler/x/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/x/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/yes",
       "updatedAt": "2026-04-20T12:42:06+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/yes/page.tsx"
+      "signature": "50b9556c29faf5e08d976f7e6ab3384c74ebc8e26108e7836c6705df1efc4631",
+      "file": "app/halka-arz/taslak-izahnameler/yes/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/yes/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/yesil",
       "updatedAt": "2026-04-19T21:46:22+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/yesil/page.tsx"
+      "signature": "8aebbcfb8e0e04531938f70ecf5390803e439f8103db1cb4328f57183c5b8366",
+      "file": "app/halka-arz/taslak-izahnameler/yesil/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/yesil/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/zebrano",
       "updatedAt": "2026-04-18T20:19:53+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/zebrano/page.tsx"
+      "signature": "917146ddca9a0a81be9b4dc317041a7ac188defbf2cf4de89ec39debf8777083",
+      "file": "app/halka-arz/taslak-izahnameler/zebrano/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/zebrano/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/zen",
       "updatedAt": "2026-04-20T12:42:06+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/zen/page.tsx"
+      "signature": "b262eeb9e73147d93da4a91b21b5c18f8d21509ddf23fc8a57f1491e410f60f6",
+      "file": "app/halka-arz/taslak-izahnameler/zen/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/zen/page.tsx"
+      ]
     },
     {
       "route": "/halka-arz/taslak-izahnameler/zms",
       "updatedAt": "2026-04-17T18:00:12+03:00",
-      "file": "app/halka-arz/taslak-izahnameler/zms/page.tsx"
+      "signature": "82a6723a6d34f04c2e583d33c2e7067596efe2e21b3eedb3880478b754376c3b",
+      "file": "app/halka-arz/taslak-izahnameler/zms/page.tsx",
+      "trackedFiles": [
+        "app/halka-arz/taslak-izahnameler/zms/page.tsx"
+      ]
     },
     {
       "route": "/iletisim",
       "updatedAt": "2026-04-29T16:24:43+03:00",
-      "file": "app/iletisim/page.tsx"
+      "signature": "7395a48cf9deea700467e82af93975519978c0ff1ab1b332b986bba9da4b0170",
+      "file": "app/iletisim/page.tsx",
+      "trackedFiles": [
+        "app/iletisim/page.tsx"
+      ]
     },
     {
       "route": "/kullanim-sartlari",
       "updatedAt": "2026-04-29T16:24:43+03:00",
-      "file": "app/kullanim-sartlari/page.tsx"
+      "signature": "ea05ebe1b029b41eafa996b14e1f654e9cd6d1059712f32ebd92802aa3c626ed",
+      "file": "app/kullanim-sartlari/page.tsx",
+      "trackedFiles": [
+        "app/kullanim-sartlari/page.tsx"
+      ]
     },
     {
       "route": "/mevduat-kredi-faizleri",
-      "updatedAt": "2026-04-27T21:04:04+03:00",
-      "file": "app/mevduat-kredi-faizleri/page.tsx"
+      "updatedAt": "2026-05-18T11:35:44+03:00",
+      "signature": "8fe8470e04f210901898df562dc9bbea1be0ad933c26ffaf0319944741524289",
+      "file": "app/mevduat-kredi-faizleri/page.tsx",
+      "trackedFiles": [
+        "app/mevduat-kredi-faizleri/page.tsx",
+        "app/mevduat-kredi-faizleri/data/hoca-ile-borsa-faiz-takip-sablonu-guncel.xlsx"
+      ]
     },
     {
       "route": "/mevduat-kredi-faizleri/konut-kredisi-oranlari",
-      "updatedAt": "2026-04-27T19:37:33+03:00",
-      "file": "app/mevduat-kredi-faizleri/konut-kredisi-oranlari/page.tsx"
+      "updatedAt": "2026-05-18T11:35:44+03:00",
+      "signature": "a21c4897a0a744d7944f289c03ef3628cb16e004786e9c321938c1e4c206d697",
+      "file": "app/mevduat-kredi-faizleri/konut-kredisi-oranlari/page.tsx",
+      "trackedFiles": [
+        "app/mevduat-kredi-faizleri/konut-kredisi-oranlari/page.tsx",
+        "app/mevduat-kredi-faizleri/data/hoca-ile-borsa-faiz-takip-sablonu-guncel.xlsx"
+      ]
     },
     {
       "route": "/mevduat-kredi-faizleri/mevduat-faizi-oranlari",
-      "updatedAt": "2026-04-27T19:37:33+03:00",
-      "file": "app/mevduat-kredi-faizleri/mevduat-faizi-oranlari/page.tsx"
+      "updatedAt": "2026-05-18T11:35:44+03:00",
+      "signature": "0a446e7ecd587d1adfeb43edeef28d6ba9e1f3d6c7d3745e3944d11299825958",
+      "file": "app/mevduat-kredi-faizleri/mevduat-faizi-oranlari/page.tsx",
+      "trackedFiles": [
+        "app/mevduat-kredi-faizleri/mevduat-faizi-oranlari/page.tsx",
+        "app/mevduat-kredi-faizleri/data/hoca-ile-borsa-faiz-takip-sablonu-guncel.xlsx"
+      ]
     },
     {
       "route": "/mevduat-kredi-faizleri/tasit-kredisi-oranlari",
-      "updatedAt": "2026-04-27T19:37:33+03:00",
-      "file": "app/mevduat-kredi-faizleri/tasit-kredisi-oranlari/page.tsx"
+      "updatedAt": "2026-05-18T11:35:44+03:00",
+      "signature": "f920f3bda9f244d458b58dae361f6543edf3c2edf7a4fbb1ce80d6a57fe39f0e",
+      "file": "app/mevduat-kredi-faizleri/tasit-kredisi-oranlari/page.tsx",
+      "trackedFiles": [
+        "app/mevduat-kredi-faizleri/tasit-kredisi-oranlari/page.tsx",
+        "app/mevduat-kredi-faizleri/data/hoca-ile-borsa-faiz-takip-sablonu-guncel.xlsx"
+      ]
     },
     {
       "route": "/mevduat-kredi-faizleri/tuketici-faizi-oranlari",
-      "updatedAt": "2026-04-27T19:37:33+03:00",
-      "file": "app/mevduat-kredi-faizleri/tuketici-faizi-oranlari/page.tsx"
+      "updatedAt": "2026-05-18T11:35:44+03:00",
+      "signature": "8ecfc2e623c8b35953a2f2a51eb1e95bb64c102dc5bf168cab5623e0b5abda5e",
+      "file": "app/mevduat-kredi-faizleri/tuketici-faizi-oranlari/page.tsx",
+      "trackedFiles": [
+        "app/mevduat-kredi-faizleri/tuketici-faizi-oranlari/page.tsx",
+        "app/mevduat-kredi-faizleri/data/hoca-ile-borsa-faiz-takip-sablonu-guncel.xlsx"
+      ]
     },
     {
       "route": "/reklam",
       "updatedAt": "2026-04-17T10:53:15+03:00",
-      "file": "app/reklam/page.tsx"
+      "signature": "7e5d5fe4d22f8d5aa2a7e7ecdb27b3d7248033756615704f8ca26ea04397b55e",
+      "file": "app/reklam/page.tsx",
+      "trackedFiles": [
+        "app/reklam/page.tsx"
+      ]
     },
     {
       "route": "/temettu",
-      "updatedAt": "2026-04-29T19:09:14+03:00",
-      "file": "app/temettu/page.tsx"
+      "updatedAt": "2026-04-30T20:59:05+03:00",
+      "signature": "858a0a6aaec8391fee12501e356f997c721ab8c184497912867fe2fbfbb1ceb1",
+      "file": "app/temettu/page.tsx",
+      "trackedFiles": [
+        "app/temettu/page.tsx"
+      ]
     },
     {
       "route": "/temettu/agustos-ayi-temettu-takvimi",
       "updatedAt": "2026-04-17T20:11:34+03:00",
-      "file": "app/temettu/agustos-ayi-temettu-takvimi/page.tsx"
+      "signature": "29a44d93db97b30589a0bbfca4303ce6640977a8fa9b3656b59094c0b4798c91",
+      "file": "app/temettu/agustos-ayi-temettu-takvimi/page.tsx",
+      "trackedFiles": [
+        "app/temettu/agustos-ayi-temettu-takvimi/page.tsx"
+      ]
     },
     {
       "route": "/temettu/eylul-ayi-temettu-takvimi",
       "updatedAt": "2026-04-29T19:03:37+03:00",
-      "file": "app/temettu/eylul-ayi-temettu-takvimi/page.tsx"
+      "signature": "ea00842c99d9920c06a553b0f546016b530277f6ebfa651d76e507a8e469c390",
+      "file": "app/temettu/eylul-ayi-temettu-takvimi/page.tsx",
+      "trackedFiles": [
+        "app/temettu/eylul-ayi-temettu-takvimi/page.tsx"
+      ]
     },
     {
       "route": "/temettu/haziran-ayi-temettu-takvimi",
       "updatedAt": "2026-04-29T19:03:37+03:00",
-      "file": "app/temettu/haziran-ayi-temettu-takvimi/page.tsx"
+      "signature": "66113b694fe8c436aba67d68769751d0b2815ce43d86a817b4dffa28f84bb7ee",
+      "file": "app/temettu/haziran-ayi-temettu-takvimi/page.tsx",
+      "trackedFiles": [
+        "app/temettu/haziran-ayi-temettu-takvimi/page.tsx"
+      ]
     },
     {
       "route": "/temettu/mayis-ayi-temettu-takvimi",
-      "updatedAt": "2026-04-29T19:03:37+03:00",
-      "file": "app/temettu/mayis-ayi-temettu-takvimi/page.tsx"
+      "updatedAt": "2026-05-14T11:20:45+03:00",
+      "signature": "273690321ddffab89fd0377ca8e030c670864e0ee876250d700483d46d0d8cac",
+      "file": "app/temettu/mayis-ayi-temettu-takvimi/page.tsx",
+      "trackedFiles": [
+        "app/temettu/mayis-ayi-temettu-takvimi/page.tsx"
+      ]
     },
     {
       "route": "/temettu/temettu-egitimi",
-      "updatedAt": "2026-04-19T12:47:29+03:00",
-      "file": "app/temettu/temettu-egitimi/page.tsx"
+      "updatedAt": "2026-04-30T21:26:09+03:00",
+      "signature": "20d1512b5585defa7081ee577695cb82f02dab51943fd2b70eb62713cb3cced1",
+      "file": "app/temettu/temettu-egitimi/page.tsx",
+      "trackedFiles": [
+        "app/temettu/temettu-egitimi/page.tsx"
+      ]
     },
     {
       "route": "/temettu/temettu-egitimi/[slug]",
       "updatedAt": "2026-04-19T12:47:29+03:00",
-      "file": "app/temettu/temettu-egitimi/[slug]/page.tsx"
+      "signature": "c6cc094048f415db992df8aab76cc358e0cbff1b12a07617190e45f33b837d4b",
+      "file": "app/temettu/temettu-egitimi/[slug]/page.tsx",
+      "trackedFiles": [
+        "app/temettu/temettu-egitimi/[slug]/page.tsx"
+      ]
     },
     {
       "route": "/temettu/temettu-hesaplama-araci",
       "updatedAt": "2026-04-12T18:52:20+03:00",
-      "file": "app/temettu/temettu-hesaplama-araci/page.tsx"
+      "signature": "ee5f0aba3572532728702bc1fef95779789a615a14107e989d80bce1bacc8f69",
+      "file": "app/temettu/temettu-hesaplama-araci/page.tsx",
+      "trackedFiles": [
+        "app/temettu/temettu-hesaplama-araci/page.tsx"
+      ]
     },
     {
       "route": "/temettu/temettu-verimi-hesaplama",
       "updatedAt": "2026-04-12T18:52:20+03:00",
-      "file": "app/temettu/temettu-verimi-hesaplama/page.tsx"
+      "signature": "a39c46f93862c7087b704535b4801c161ddd9ecec33a48679a3f2d3498dbf06e",
+      "file": "app/temettu/temettu-verimi-hesaplama/page.tsx",
+      "trackedFiles": [
+        "app/temettu/temettu-verimi-hesaplama/page.tsx"
+      ]
     },
     {
       "route": "/temettu/temmuz-ayi-temettu-takvimi",
       "updatedAt": "2026-04-29T19:03:37+03:00",
-      "file": "app/temettu/temmuz-ayi-temettu-takvimi/page.tsx"
+      "signature": "efccec5f994e0d26252f9589fa778d60e5c2f59c1b9c49ef839c8fee5a5f9845",
+      "file": "app/temettu/temmuz-ayi-temettu-takvimi/page.tsx",
+      "trackedFiles": [
+        "app/temettu/temmuz-ayi-temettu-takvimi/page.tsx"
+      ]
     },
     {
       "route": "/yasal-uyari",
       "updatedAt": "2026-04-29T16:24:43+03:00",
-      "file": "app/yasal-uyari/page.tsx"
+      "signature": "d2044d7b6f4d541aace3c1cc9c89974920c75b2e2a2bd36c2de9890351b6658c",
+      "file": "app/yasal-uyari/page.tsx",
+      "trackedFiles": [
+        "app/yasal-uyari/page.tsx"
+      ]
     },
     {
       "route": "/yonetim/mesajlar",
-      "updatedAt": "2026-04-10T22:05:41+03:00",
-      "file": "app/yonetim/mesajlar/page.tsx"
+      "updatedAt": "2026-04-11T11:12:21+03:00",
+      "signature": "41f0ac36f60a2613a40930e0bd9d0f055788654b820b0fff0a5daa43ed9d4995",
+      "file": "app/yonetim/mesajlar/page.tsx",
+      "trackedFiles": [
+        "app/yonetim/mesajlar/page.tsx",
+        "lib/page-stats.ts"
+      ]
     }
   ]
 }
