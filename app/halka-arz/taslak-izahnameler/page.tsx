@@ -3,7 +3,9 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 
-const taslakMetin = `Türkiye Emlak Katılım Bankası A.Ş.
+const taslakMetin = `Aycan Entegre Gıda A.Ş.
+
+Türkiye Emlak Katılım Bankası A.Ş.
 
 Aras Elektrik Dağıtım A.Ş.
 
