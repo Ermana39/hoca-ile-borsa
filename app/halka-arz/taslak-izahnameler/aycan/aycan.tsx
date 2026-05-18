@@ -3,9 +3,9 @@ import Link from "next/link";
 
 export const metadata: Metadata = {
   title:
-    "Akademi Çevre Entegre Atık Yönetimi Endüstri A.Ş. Halka Arz Detayları 2026 | Taslak İzahname ve Finansal Veriler",
+    "Aycan Entegre Gıda A.Ş. Halka Arz Detayları 2026 | Taslak İzahname ve Finansal Veriler",
   description:
-    "Akademi Çevre Entegre Atık Yönetimi Endüstri A.Ş. halka arz detayları, taslak izahname özeti, halka arz tarihi, fiyat aralığı, lot miktarı, dağıtım yöntemi, fon kullanım alanları ve finansal veriler.",
+    "Aycan Entegre Gıda A.Ş. halka arz detayları, taslak izahname özeti, halka arz tarihi, fiyat aralığı, lot miktarı, dağıtım yöntemi, fon kullanım alanları ve finansal veriler.",
 };
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "buyuk" }) {
@@ -21,31 +21,26 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "buyuk" }) {
   );
 }
 
-export default function AkademiCevreEntegreAtikYonetimiEndustriASPage() {
+export default function AycanEntegreGidaASPage() {
   const summaryItems = [
     { label: "Halka Arz Tarihi", value: "Hazırlanıyor" },
     { label: "Halka Arz Fiyatı / Aralığı", value: "Hazırlanıyor" },
     { label: "Dağıtım Yöntemi", value: "Eşit Dağıtım" },
-    { label: "Pay", value: "70.000.000 Lot" },
+    { label: "Pay", value: "50.000.000 Lot" },
     {
       label: "Aracı Kurum",
-      value:
-        "İnfo Yatırım Menkul Değerler A.Ş.\nKuveyt Türk Yatırım Menkul Değerler A.Ş.",
+      value: "İnfo Yatırım Menkul Değerler A.Ş.",
     },
-    { label: "Pazar", value: "Yıldız Pazar" },
+    { label: "Pazar", value: "Ana Pazar" },
   ];
 
-  const halkaArzSekli = [
-    "Sermaye Artırımı: 48.800.000 Lot",
-    "Ortak Satışı: 10.600.000 Lot (Uğur Işık)",
-    "Ortak Satışı: 10.600.000 Lot (Ufuk Işık)",
-  ];
+  const halkaArzSekli = ["Sermaye Artırımı: 50.000.000 Lot"];
 
   const fonKullanim = [
-    "%55-70 İşletme sermayesi",
-    "%10-25 Tesis ve makine yatırımları",
-    "%5-15 Yenilenebilir enerji yatırımları",
-    "%5-15 Finansal borçluluk seviyesinin azaltılması",
+    "%25 Entegre tesis yatırımı",
+    "%35 Finansal borç anapara ve faiz ödemeleri",
+    "%35 İşletme sermayesi",
+    "%5 Çatı üzeri güneş enerjisi santralı (GES) yatırımı",
   ];
 
   const tahsisat = [
@@ -57,22 +52,22 @@ export default function AkademiCevreEntegreAtikYonetimiEndustriASPage() {
   const finansalVeriler = [
     {
       kalem: "Hasılat",
-      d2025: "2,6 Milyar TL",
-      d2024: "2,5 Milyar TL",
-      d2023: "2,2 Milyar TL",
+      d2025: "7,8 Milyar TL",
+      d2024: "6,9 Milyar TL",
+      d2023: "4,3 Milyar TL",
     },
     {
       kalem: "Brüt Kâr",
-      d2025: "872,8 Milyon TL",
-      d2024: "712,6 Milyon TL",
-      d2023: "241,2 Milyon TL",
+      d2025: "1,2 Milyar TL",
+      d2024: "759,5 Milyon TL",
+      d2023: "314,6 Milyon TL",
     },
   ];
 
   const oneCikanlar = [
     {
       title: "Halka Açıklık",
-      value: "%28",
+      value: "%20",
       desc: "Şirketin halka açık olması planlanan oranı.",
     },
     {
@@ -81,14 +76,14 @@ export default function AkademiCevreEntegreAtikYonetimiEndustriASPage() {
       desc: "Taslak izahnamede fiyat istikrarı planlanmadığı belirtiliyor.",
     },
     {
-      title: "Günlük Alım Emri",
-      value: "5 Gün",
-      desc: "5 gün boyunca 2.800.000 adet günlük alım emri girilecek.",
-    },
-    {
       title: "Satmama Taahhüdü",
       value: "1 Yıl",
       desc: "İhraççı ve ortaklar için 1 yıl satmama taahhüdü bulunuyor.",
+    },
+    {
+      title: "Dağıtım Yöntemi",
+      value: "Eşit Dağıtım",
+      desc: "Halka arzda bireysele eşit dağıtım yöntemi uygulanacaktır.",
     },
   ];
 
@@ -119,7 +114,7 @@ export default function AkademiCevreEntegreAtikYonetimiEndustriASPage() {
                   Halka Arz İncelemesi
                 </p>
                 <h1 className="text-2xl font-bold sm:text-3xl">
-                  Akademi Çevre Entegre Atık Yönetimi Endüstri A.Ş.
+                  Aycan Entegre Gıda A.Ş.
                 </h1>
                 <p className="mt-2 text-sm text-blue-100 sm:text-base">
                   Taslak izahname verilerine göre hazırlanmış özet halka arz sayfası
@@ -129,11 +124,11 @@ export default function AkademiCevreEntegreAtikYonetimiEndustriASPage() {
               <div className="grid grid-cols-2 gap-3 md:min-w-[320px]">
                 <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
                   <div className="text-xs text-blue-100">Toplam Pay</div>
-                  <div className="mt-1 text-lg font-bold">70.000.000</div>
+                  <div className="mt-1 text-lg font-bold">50.000.000</div>
                 </div>
                 <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
                   <div className="text-xs text-blue-100">Pazar</div>
-                  <div className="mt-1 text-lg font-bold">Yıldız</div>
+                  <div className="mt-1 text-lg font-bold">Ana</div>
                 </div>
               </div>
             </div>
@@ -205,7 +200,7 @@ export default function AkademiCevreEntegreAtikYonetimiEndustriASPage() {
               <div className="grid gap-4 md:grid-cols-2">
                 <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4">
                   <div className="mb-2 text-sm font-semibold text-emerald-800">
-                    İşletme ve yatırımlar
+                    Yatırım ve borç ödemeleri
                   </div>
                   <div className="space-y-2 text-sm text-emerald-900">
                     <p>{fonKullanim[0]}</p>
@@ -215,7 +210,7 @@ export default function AkademiCevreEntegreAtikYonetimiEndustriASPage() {
 
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                   <div className="mb-2 text-sm font-semibold text-slate-800">
-                    Enerji ve borç azaltımı
+                    İşletme ve enerji yatırımı
                   </div>
                   <div className="space-y-2 text-sm text-slate-700">
                     <p>{fonKullanim[2]}</p>
@@ -272,14 +267,14 @@ export default function AkademiCevreEntegreAtikYonetimiEndustriASPage() {
 
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
               <h2 className="mb-4 text-xl font-bold text-slate-900">
-                Akademi Çevre Entegre Atık Yönetimi Endüstri A.Ş. Halka Arz Yorumu
+                Aycan Entegre Gıda A.Ş. Halka Arz Yorumu
               </h2>
               <p className="text-sm leading-7 text-slate-600">
-                Akademi Çevre Entegre Atık Yönetimi Endüstri A.Ş. halka arz sürecinde yatırımcıların
-                en çok takip ettiği başlıklar arasında halka arz tarihi, fiyat aralığı, pay miktarı,
-                dağıtım yöntemi, satış yöntemi, fon kullanım alanları ve finansal görünüm yer
-                alıyor. Bu sayfada şirketin taslak izahname verileri daha sade ve analiz edilebilir
-                bir yapıda sunulmuştur.
+                Aycan Entegre Gıda A.Ş. halka arz sürecinde yatırımcıların en çok takip ettiği
+                başlıklar arasında halka arz tarihi, fiyat aralığı, pay miktarı, dağıtım yöntemi,
+                satış yöntemi, fon kullanım alanları ve finansal görünüm yer alıyor. Bu sayfada
+                şirketin taslak izahname verileri daha sade ve analiz edilebilir bir yapıda
+                sunulmuştur.
               </p>
             </section>
           </div>
@@ -321,13 +316,6 @@ export default function AkademiCevreEntegreAtikYonetimiEndustriASPage() {
                 </div>
 
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                  <div className="text-sm font-semibold text-slate-800">Günlük Alım Emri Taahhüdü</div>
-                  <p className="mt-2 text-sm text-slate-700">
-                    5 gün, 2.800.000 adet günlük alım emri girilecek.
-                  </p>
-                </div>
-
-                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                   <div className="text-sm font-semibold text-slate-800">
                     Dağıtılacak Pay Miktarı (Olası)
                   </div>
@@ -356,7 +344,7 @@ export default function AkademiCevreEntegreAtikYonetimiEndustriASPage() {
 
                 <div className="rounded-2xl border border-cyan-200 bg-cyan-50 p-4">
                   <div className="text-sm font-semibold text-cyan-800">Halka Açıklık</div>
-                  <p className="mt-2 text-sm text-cyan-900">%28</p>
+                  <p className="mt-2 text-sm text-cyan-900">%20</p>
                 </div>
               </div>
             </section>
@@ -369,14 +357,14 @@ export default function AkademiCevreEntegreAtikYonetimiEndustriASPage() {
 
         <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <h2 className="mb-3 text-lg font-bold text-slate-900">
-            Akademi Çevre Entegre Atık Yönetimi Endüstri A.Ş. Halka Arz Değerlendirmesi
+            Aycan Entegre Gıda A.Ş. Halka Arz Değerlendirmesi
           </h2>
           <p className="text-sm leading-7 text-slate-600">
-            Akademi Çevre Entegre Atık Yönetimi Endüstri A.Ş. halka arz sayfasında yatırımcıların
-            hızlı analiz yapabilmesi için halka arz tarihi, halka arz fiyatı, lot miktarı, dağıtım
-            yöntemi, halka açıklık oranı, fon kullanım alanları, finansal veriler ve taahhüt
-            detayları bir arada sunulmuştur. Sayfadaki bilgiler taslak izahnameye göre
-            hazırlanmıştır ve resmi veriler açıklandıkça güncellenmelidir.
+            Aycan Entegre Gıda A.Ş. halka arz sayfasında yatırımcıların hızlı analiz yapabilmesi
+            için halka arz tarihi, halka arz fiyatı, lot miktarı, dağıtım yöntemi, halka açıklık
+            oranı, fon kullanım alanları, finansal veriler ve taahhüt detayları bir arada
+            sunulmuştur. Sayfadaki bilgiler taslak izahnameye göre hazırlanmıştır ve resmi
+            veriler açıklandıkça güncellenmelidir.
           </p>
         </section>
       </div>
