@@ -3,7 +3,18 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 
-const taslakMetin = `Aycan Entegre Gıda A.Ş.
+const taslakMetin = `
+Asos Proses Makina San. ve Tic. A.Ş.
+
+Termopet Akaryakıt Nakliyat ve Tic. A.Ş.
+
+Marbaş Menkul Değerler A.Ş.
+
+Adm Energy Elektrik Yatırımları A.Ş.
+
+İdç Liman İşletmeleri A.Ş.
+
+Aycan Entegre Gıda A.Ş.
 
 Türkiye Emlak Katılım Bankası A.Ş.
 
