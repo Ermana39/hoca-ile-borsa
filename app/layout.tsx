@@ -22,6 +22,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="tr">
+      <head>
+        <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9613627671991162"
+          crossOrigin="anonymous"
+        ></script>
+      </head>
+
       <body className="site-background">
         <SayfaGuncellemeBilgisi />
         {children}
