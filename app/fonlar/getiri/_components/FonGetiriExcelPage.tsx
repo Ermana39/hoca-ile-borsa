@@ -103,7 +103,7 @@ async function getJsonData(excelRelativePath: string): Promise<{
   if (!rows.length) {
     return {
       rows: [],
-      guncellemeTarihi: data.guncellemeTarihi || "-",
+      guncellemeTarihi: "-",
     };
   }
 
@@ -154,9 +154,18 @@ async function getJsonData(excelRelativePath: string): Promise<{
       return true;
     });
 
+  const exportRow = rows.find(
+    (row) =>
+      String(row["Rapor Bilgileri"] || "")
+        .toLocaleLowerCase("tr-TR")
+        .includes("dışa aktarım tarihi")
+  );
+
+  const guncellemeTarihi = String(exportRow?.["__EMPTY"] || "-");
+
   return {
     rows: parsedRows,
-    guncellemeTarihi: data.guncellemeTarihi || "-",
+    guncellemeTarihi,
   };
 }
 
@@ -203,7 +212,9 @@ export default async function FonGetiriExcelPage({
         <h1 className="mb-2 text-3xl font-bold text-zinc-900">{title}</h1>
         <p className="mb-3 max-w-3xl text-base text-zinc-600">{description}</p>
 
-        
+        <p className="mb-6 text-sm text-zinc-500">
+          Son güncelleme: {guncellemeTarihi}
+        </p>
 
         <section className="mb-6">
           <ReklamAlani variant="yatay" />

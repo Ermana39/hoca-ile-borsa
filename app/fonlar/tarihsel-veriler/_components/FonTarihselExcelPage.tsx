@@ -137,7 +137,7 @@ async function getJsonData(excelRelativePath: string) {
     return {
       headers: [] as string[],
       rows: [] as CellValue[][],
-      guncellemeTarihi: data.guncellemeTarihi || "-",
+      guncellemeTarihi: "-",
     };
   }
 
@@ -183,10 +183,16 @@ async function getJsonData(excelRelativePath: string) {
       return true;
     });
 
+  const exportRow = rawRows.find((row) =>
+    normalizeKey(row[0]).includes("disa aktarim tarihi")
+  );
+
+  const guncellemeTarihi = String(exportRow?.[1] || data.guncellemeTarihi || "-");
+
   return {
     headers,
     rows,
-    guncellemeTarihi: data.guncellemeTarihi || "-",
+    guncellemeTarihi,
   };
 }
 
@@ -238,7 +244,9 @@ export default async function FonTarihselExcelPage({
         <h1 className="mb-2 text-3xl font-bold text-zinc-900">{title}</h1>
         <p className="mb-3 max-w-3xl text-base text-zinc-600">{description}</p>
 
-        
+        <p className="mb-6 text-sm text-zinc-500">
+          Son güncelleme: {guncellemeTarihi}
+        </p>
 
         <section className="mb-6">
           <ReklamAlani variant="yatay" />
