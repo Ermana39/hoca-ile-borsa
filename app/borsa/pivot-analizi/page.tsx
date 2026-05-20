@@ -14,6 +14,8 @@ type PivotRow = {
   yorum: string;
 };
 
+const guncellemeTarihi = "18.05.2026";
+
 const xu100Pivot: PivotRow = {
   sembol: "XU100",
   fark: -2.51,
@@ -108,7 +110,7 @@ export default function PivotAnaliziPage() {
         </p>
 
         <div className="mb-8 text-sm font-semibold text-zinc-700">
-          Güncelleme Tarihi: {guncellemeTarihi}
+          Güncelleme Tarihi: {new Date().toLocaleDateString("tr-TR")}
         </div>
 
         <section className="mb-8">
