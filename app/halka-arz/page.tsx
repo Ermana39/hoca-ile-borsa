@@ -112,9 +112,7 @@ export default function HalkaArzPage() {
             </h2>
 
             <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-zinc-700 md:text-base">
-              Yeni halka arz geldiğinde şirket bilgileri, talep toplama
-              detayları, fiyat aralığı, lot dağılımı ve öne çıkan veriler bu
-              bölümde paylaşılacaktır.
+              Ekinciler Demir ve Çelik 22 Mayıs Cuma günü işleme başlıyor. Halka arzın seans içi güncel verilerini buradan takip edebilirsiniz.
             </p>
           </div>
         </section>
