@@ -307,11 +307,25 @@ export default function GunlukBorsaOzetiPage() {
           </Link>
         </div>
 
-        <h1 className="mb-6 text-3xl font-bold text-zinc-900">Günlük Borsa Özeti</h1>
+       <h1 className="mb-6 text-3xl font-bold text-zinc-900">
+  Günlük Borsa Özeti
+</h1>
 
-        <section className="mb-8">
-          <ReklamAlani variant="yatay" />
-        </section>
+<div className="mb-8 overflow-hidden rounded-2xl border border-zinc-200 bg-white">
+  <div className="relative aspect-[16/9] w-full">
+    <Image
+      src="/gunluk-borsa-ozeti.jpg"
+      alt="Günlük Borsa Özeti"
+      fill
+      priority
+      className="object-cover"
+    />
+  </div>
+</div>
+
+<section className="mb-8">
+  <ReklamAlani variant="yatay" />
+</section>
 
         <div className="mb-6 grid gap-4 xl:grid-cols-[1fr_2.5fr]">
           <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
