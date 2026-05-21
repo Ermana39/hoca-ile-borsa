@@ -1,334 +1,219 @@
-import Link from "next/link";
-
-type PivotData = {
-  sembol: string;
-  fark: number;
-  son: number;
-  pivot: number;
-  destek1: number;
-  destek2: number;
-  destek3: number;
-  direnc1: number;
-  direnc2: number;
-  direnc3: number;
-  yorum: string;
+const bistVeri = {
+  tarih: "21.05.2026",
+  kapanis: "13163.88",
+  degisimYuzde: -6.05,
+  gunlukHacim: "255,469,253,517",
 };
 
-const xu100 = {
-  pivot: 13985.96,
-  destek1: 13882.17,
-  destek2: 13752.32,
-  destek3: 13648.53,
-  direnc1: 14115.81,
-  direnc2: 14219.6,
-  direnc3: 14349.45,
-  fark: -5.88,
-  yorum: "Üçüncü destek seviyesinin altına indi.",
-};
-
-const hisseler: PivotData[] = [
-  {
-    sembol: "AEFES",
-    fark: -4.82,
-    son: 18.58,
-    pivot: 19.52,
-    destek1: 19.18,
-    destek2: 18.61,
-    destek3: 18.27,
-    direnc1: 20.09,
-    direnc2: 20.43,
-    direnc3: 21,
-    yorum: "İkinci destek seviyesinin altına indi.",
-  },
-  {
-    sembol: "AKBNK",
-    fark: -10.14,
-    son: 62.2,
-    pivot: 69.217,
-    destek1: 68.633,
-    destek2: 68.167,
-    destek3: 67.583,
-    direnc1: 69.683,
-    direnc2: 70.267,
-    direnc3: 70.733,
-    yorum: "Üçüncü destek seviyesinin altına indi.",
-  },
-  {
-    sembol: "ASELS",
-    fark: -4.45,
-    son: 377.75,
-    pivot: 395.333,
-    destek1: 387.417,
-    destek2: 381.333,
-    destek3: 373.417,
-    direnc1: 401.417,
-    direnc2: 409.333,
-    direnc3: 415.417,
-    yorum: "İkinci destek seviyesinin altına indi.",
-  },
-  {
-    sembol: "ASTOR",
-    fark: -6.04,
-    son: 313.75,
-    pivot: 333.917,
-    destek1: 323.583,
-    destek2: 302.917,
-    destek3: 292.583,
-    direnc1: 354.583,
-    direnc2: 364.917,
-    direnc3: 385.583,
-    yorum: "İlk destek seviyesinin altına indi.",
-  },
-  {
-    sembol: "BIMAS",
-    fark: -4.08,
-    son: 376.5,
-    pivot: 392.5,
-    destek1: 385.75,
-    destek2: 378.75,
-    destek3: 372,
-    direnc1: 399.5,
-    direnc2: 406.25,
-    direnc3: 413.25,
-    yorum: "İkinci destek seviyesinin altına indi.",
-  },
-  {
-    sembol: "DSTKF",
-    fark: -2.89,
-    son: 1860,
-    pivot: 1915.333,
-    destek1: 1874.667,
-    destek2: 1849.333,
-    destek3: 1808.667,
-    direnc1: 1940.667,
-    direnc2: 1981.333,
-    direnc3: 2006.667,
-    yorum: "İlk destek seviyesinin altına indi.",
-  },
-  {
-    sembol: "EKGYO",
-    fark: -7.16,
-    son: 18.41,
-    pivot: 19.83,
-    destek1: 19.62,
-    destek2: 19.4,
-    destek3: 19.19,
-    direnc1: 20.05,
-    direnc2: 20.26,
-    direnc3: 20.48,
-    yorum: "Üçüncü destek seviyesinin altına indi.",
-  },
-  {
-    sembol: "ENKAI",
-    fark: -3,
-    son: 95.25,
-    pivot: 98.2,
-    destek1: 96.75,
-    destek2: 94.7,
-    destek3: 93.25,
-    direnc1: 100.25,
-    direnc2: 101.7,
-    direnc3: 103.75,
-    yorum: "İlk destek seviyesinin altına indi.",
-  },
-  {
-    sembol: "EREGL",
-    fark: -8.84,
-    son: 35.18,
-    pivot: 38.593,
-    destek1: 37.967,
-    destek2: 37.333,
-    destek3: 36.727,
-    direnc1: 39.247,
-    direnc2: 39.853,
-    direnc3: 40.507,
-    yorum: "Üçüncü destek seviyesinin altına indi.",
-  },
-  {
-    sembol: "FROTO",
-    fark: -4.78,
-    son: 82.35,
-    pivot: 86.4833,
-    destek1: 85.6166,
-    destek2: 84.5833,
-    destek3: 83.7166,
-    direnc1: 87.5166,
-    direnc2: 88.3833,
-    direnc3: 89.4166,
-    yorum: "Üçüncü destek seviyesinin altına indi.",
-  },
+const tumYukselenler = [
+  { kod: "HPSEL2", fark: "+10,00%" },
+  { kod: "ICBCT", fark: "+9,94%" },
+  { kod: "HPARTF2", fark: "+9,88%" },
+  { kod: "IPINVF2", fark: "+9,65%" },
+  { kod: "GUNDG", fark: "+8,02%" },
+  { kod: "APYVCF2", fark: "+6,00%" },
+  { kod: "AKCNS", fark: "+4,91%" },
+  { kod: "RYSAS", fark: "+4,73%" },
+  { kod: "MAALT", fark: "+3,97%" },
+  { kod: "IEYHO", fark: "+3,19%" },
+  { kod: "ULUSE", fark: "+3,01%" },
 ];
 
-function yorumRenk(yorum: string) {
-  if (yorum.includes("Üçüncü")) return "bg-red-900";
-  if (yorum.includes("İkinci")) return "bg-red-700";
-  if (yorum.includes("İlk")) return "bg-red-500";
-  if (yorum.includes("üstünde")) return "bg-green-700";
-  return "bg-orange-500";
-}
+const tumDusenler = [
+  { kod: "SKBNK", fark: "-10,00%" },
+  { kod: "HEKTS", fark: "-10,00%" },
+  { kod: "ANELE", fark: "-10,00%" },
+  { kod: "DUNYH", fark: "-10,00%" },
+  { kod: "RPTEKF2", fark: "-10,00%" },
+  { kod: "QUAGR", fark: "-10,00%" },
+  { kod: "REEDR", fark: "-10,00%" },
+  { kod: "ONCSM", fark: "-10,00%" },
+  { kod: "TEHOL", fark: "-10,00%" },
+  { kod: "OTTO", fark: "-10,00%" },
+  { kod: "ALGYO", fark: "-10,00%" },
+];
 
-function format(value: number) {
-  return value.toLocaleString("tr-TR", {
-    minimumFractionDigits: 0,
-    maximumFractionDigits: 4,
-  });
-}
+const tumHacimliler = [
+  { kod: "THYAO", hacim: "16,359,129,293" },
+  { kod: "ASTOR", hacim: "14,392,133,204" },
+  { kod: "SASA", hacim: "9,666,102,052" },
+  { kod: "ASELS", hacim: "7,930,369,145" },
+  { kod: "AKBNK", hacim: "6,604,915,619" },
+  { kod: "ISCTR", hacim: "5,994,364,829" },
+  { kod: "YKBNK", hacim: "5,172,320,804" },
+  { kod: "PEKGY", hacim: "5,169,857,149" },
+  { kod: "KCHOL", hacim: "5,002,826,773" },
+  { kod: "EREGL", hacim: "4,657,626,258" },
+  { kod: "TRALT", hacim: "3,919,577,457" },
+];
 
-export default function Page() {
-  return (
-    <main className="min-h-screen bg-[#1a1a1a] text-white p-2 md:p-4">
-      <div className="mx-auto max-w-[1700px]">
-        <div className="mb-4 flex gap-2">
-          <Link
-            href="/"
-            className="bg-zinc-800 hover:bg-zinc-700 px-4 py-2 rounded text-sm"
-          >
-            Ana Sayfa
-          </Link>
+const tumParaGirisi = [
+  { kod: "PEKGY", tutar: "+137,241,434" },
+  { kod: "BIMAS", tutar: "+103,051,641" },
+  { kod: "TEHOL", tutar: "+103,007,191" },
+  { kod: "YEOTK", tutar: "+87,061,829" },
+  { kod: "GESAN", tutar: "+84,083,370" },
+  { kod: "EUPWR", tutar: "+64,758,152" },
+  { kod: "TERA", tutar: "+62,251,160" },
+  { kod: "TUPRS", tutar: "+59,460,296" },
+  { kod: "CVKMD", tutar: "+38,714,343" },
+];
 
-          <Link
-            href="/borsa"
-            className="bg-zinc-800 hover:bg-zinc-700 px-4 py-2 rounded text-sm"
-          >
-            Geri
-          </Link>
-        </div>
+const tumParaCikisi = [
+  { kod: "THYAO", tutar: "-598,182,748" },
+  { kod: "AKBNK", tutar: "-307,229,911" },
+  { kod: "ASTOR", tutar: "-227,749,847" },
+  { kod: "KCHOL", tutar: "-169,878,677" },
+  { kod: "ISCTR", tutar: "-102,663,638" },
+  { kod: "EREGL", tutar: "-91,671,277" },
+  { kod: "EKGYO", tutar: "-74,761,364" },
+  { kod: "YKBNK", tutar: "-69,537,242" },
+  { kod: "BRSAN", tutar: "-59,312,765" },
+  { kod: "TRALT", tutar: "-56,916,712" },
+  { kod: "ASELS", tutar: "-55,011,822" },
+];
 
-        <div className="overflow-x-auto border border-zinc-700">
-          <div className={`${yorumRenk(xu100.yorum)} text-center py-2 font-bold`}>
-            {xu100.yorum}
-          </div>
+const enCokAlisYapanKurumlar = [
+  { kurum: "AK", hacim: "2,219,418,376", oran: "%18,00" },
+  { kurum: "TERA", hacim: "1,898,368,047", oran: "%15,40" },
+  { kurum: "GARANTI BBVA", hacim: "1,529,379,393", oran: "%12,40" },
+  { kurum: "YATIRIM FINANSMAN", hacim: "1,071,060,079", oran: "%8,69" },
+  { kurum: "YAPI KREDI", hacim: "973,373,291", oran: "%7,89" },
+];
 
-          <table className="w-full border-collapse text-xs md:text-sm">
-            <thead className="bg-[#2a2a2a]">
-              <tr>
-                <th className="border border-zinc-700 px-2 py-2">PIVOT</th>
-                <th className="border border-zinc-700 px-2 py-2">
-                  {format(xu100.pivot)}
-                </th>
+const enCokSatisYapanKurumlar = [
+  { kurum: "BANK OF AMERICA", hacim: "-4,567,975,756", oran: "%37,05" },
+  { kurum: "DENIZ", hacim: "-2,861,649,314", oran: "%23,21" },
+  { kurum: "DESTEK", hacim: "-1,659,309,886", oran: "%13,46" },
+  { kurum: "GEDIK", hacim: "-558,442,499", oran: "%4,53" },
+  { kurum: "HSBC", hacim: "-503,497,326", oran: "%4,08" },
+];
 
-                <th className="border border-zinc-700 px-2 py-2">Destek 1</th>
-                <th className="border border-zinc-700 px-2 py-2">
-                  {format(xu100.destek1)}
-                </th>
+const enCokHacimYapanKurumlar = [
+  { kurum: "YAPI KREDI", hacim: "72,513,466,271", oran: "%14,19" },
+  { kurum: "BANK OF AMERICA", hacim: "69,111,334,305", oran: "%13,53" },
+  { kurum: "IS", hacim: "55,311,600,577", oran: "%10,83" },
+  { kurum: "AK", hacim: "40,424,129,032", oran: "%7,91" },
+  { kurum: "TACIRLER", hacim: "20,899,164,507", oran: "%4,09" },
+];
 
-                <th className="border border-zinc-700 px-2 py-2">Destek 2</th>
-                <th className="border border-zinc-700 px-2 py-2">
-                  {format(xu100.destek2)}
-                </th>
-
-                <th className="border border-zinc-700 px-2 py-2">Destek 3</th>
-                <th className="border border-zinc-700 px-2 py-2">
-                  {format(xu100.destek3)}
-                </th>
-              </tr>
-
-              <tr>
-                <th className="border border-zinc-700 px-2 py-2">
-                  PIVOTA GÖRE FARK %
-                </th>
-
-                <th className="border border-zinc-700 px-2 py-2 text-red-400">
-                  {format(xu100.fark)}
-                </th>
-
-                <th className="border border-zinc-700 px-2 py-2">Direnç 1</th>
-                <th className="border border-zinc-700 px-2 py-2">
-                  {format(xu100.direnc1)}
-                </th>
-
-                <th className="border border-zinc-700 px-2 py-2">Direnç 2</th>
-                <th className="border border-zinc-700 px-2 py-2">
-                  {format(xu100.direnc2)}
-                </th>
-
-                <th className="border border-zinc-700 px-2 py-2">Direnç 3</th>
-                <th className="border border-zinc-700 px-2 py-2">
-                  {format(xu100.direnc3)}
-                </th>
-              </tr>
-            </thead>
-          </table>
-
-          <table className="w-full border-collapse text-xs md:text-sm">
-            <thead className="bg-[#222222]">
-              <tr>
-                <th className="border border-zinc-700 px-2 py-2">Sembol</th>
-                <th className="border border-zinc-700 px-2 py-2">
-                  Pivota Göre Fark %
-                </th>
-                <th className="border border-zinc-700 px-2 py-2">Son</th>
-                <th className="border border-zinc-700 px-2 py-2">Pivot</th>
-                <th className="border border-zinc-700 px-2 py-2">Destek 1</th>
-                <th className="border border-zinc-700 px-2 py-2">Destek 2</th>
-                <th className="border border-zinc-700 px-2 py-2">Destek 3</th>
-                <th className="border border-zinc-700 px-2 py-2">Direnç 1</th>
-                <th className="border border-zinc-700 px-2 py-2">Direnç 2</th>
-                <th className="border border-zinc-700 px-2 py-2">Direnç 3</th>
-              </tr>
-            </thead>
-
-            <tbody>
-              {hisseler.map((item) => (
-                <tbody key={item.sembol}>
-                  <tr className="bg-[#1f1f1f]">
-                    <td className="border border-zinc-700 px-2 py-2 font-semibold">
-                      {item.sembol}
-                    </td>
-
-                    <td className="border border-zinc-700 px-2 py-2">
-                      {format(item.fark)}
-                    </td>
-
-                    <td className="border border-zinc-700 px-2 py-2">
-                      {format(item.son)}
-                    </td>
-
-                    <td className="border border-zinc-700 px-2 py-2">
-                      {format(item.pivot)}
-                    </td>
-
-                    <td className="border border-zinc-700 px-2 py-2">
-                      {format(item.destek1)}
-                    </td>
-
-                    <td className="border border-zinc-700 px-2 py-2">
-                      {format(item.destek2)}
-                    </td>
-
-                    <td className="border border-zinc-700 px-2 py-2">
-                      {format(item.destek3)}
-                    </td>
-
-                    <td className="border border-zinc-700 px-2 py-2">
-                      {format(item.direnc1)}
-                    </td>
-
-                    <td className="border border-zinc-700 px-2 py-2">
-                      {format(item.direnc2)}
-                    </td>
-
-                    <td className="border border-zinc-700 px-2 py-2">
-                      {format(item.direnc3)}
-                    </td>
-                  </tr>
-
-                  <tr>
-                    <td
-                      colSpan={10}
-                      className={`${yorumRenk(
-                        item.yorum
-                      )} border border-zinc-700 px-2 py-2 text-center font-semibold`}
-                    >
-                      {item.yorum}
-                    </td>
-                  </tr>
-                </tbody>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </main>
-  );
-}
+const ekonomikTakvimVerileri = [
+  {
+    tarih: "21.05.2026",
+    kayitlar: [
+      {
+        saat: "10:00",
+        ulke: "TR",
+        gosterge: "TÜİK Hizmet Sektörü Güven Endeksi",
+        onem: "turuncu-gri" as const,
+        aciklanan: "109.0",
+        beklenti: "-",
+        onceki: "109.7",
+      },
+      {
+        saat: "10:00",
+        ulke: "TR",
+        gosterge: "TÜİK Perakende Sektörü Güven Endeksi",
+        onem: "turuncu-gri" as const,
+        aciklanan: "112.5",
+        beklenti: "-",
+        onceki: "111.6",
+      },
+      {
+        saat: "10:00",
+        ulke: "TR",
+        gosterge: "TÜİK İnşaat Sektörü Güven Endeksi",
+        onem: "turuncu-gri" as const,
+        aciklanan: "82.1",
+        beklenti: "-",
+        onceki: "83.6",
+      },
+    ],
+  },
+  {
+    tarih: "22.05.2026",
+    kayitlar: [
+      {
+        saat: "10:00",
+        ulke: "TR",
+        gosterge: "İmalat Sanayi Kapasite Kullanım Oranı (MEA)",
+        onem: "kirmizi" as const,
+        aciklanan: "-",
+        beklenti: "-",
+        onceki: "74.0%",
+      },
+      {
+        saat: "10:00",
+        ulke: "TR",
+        gosterge: "Saatlik İşgücü Maliyet Endeksi (Yıllık)",
+        onem: "sari-tek" as const,
+        aciklanan: "-",
+        beklenti: "-",
+        onceki: "34.2%",
+      },
+      {
+        saat: "10:00",
+        ulke: "TR",
+        gosterge: "Saatlik Kazanç Endeksi (Yıllık %)",
+        onem: "sari-tek" as const,
+        aciklanan: "-",
+        beklenti: "-",
+        onceki: "35.0%",
+      },
+      {
+        saat: "10:00",
+        ulke: "TR",
+        gosterge: "Toplam İhracat (milyon usd/aylık)",
+        onem: "kirmizi" as const,
+        aciklanan: "-",
+        beklenti: "25.403",
+        onceki: "21.899",
+      },
+      {
+        saat: "10:00",
+        ulke: "TR",
+        gosterge: "Toplam İthalat (milyon usd /aylık)",
+        onem: "kirmizi" as const,
+        aciklanan: "-",
+        beklenti: "33.909",
+        onceki: "33.120",
+      },
+      {
+        saat: "10:00",
+        ulke: "TR",
+        gosterge: "Dış Ticaret Dengesi (milyon $/aylık)",
+        onem: "kirmizi" as const,
+        aciklanan: "-",
+        beklenti: "-8.506",
+        onceki: "-11.221",
+      },
+      {
+        saat: "10:00",
+        ulke: "TR",
+        gosterge: "İhracatın İthalatı Karşılama Oranı % (aylık)",
+        onem: "kirmizi" as const,
+        aciklanan: "-",
+        beklenti: "74.4%",
+        onceki: "66.1%",
+      },
+      {
+        saat: "10:00",
+        ulke: "TR",
+        gosterge: "Uluslararası Yatırım Pozisyonu (milyar usd)",
+        onem: "turuncu-gri" as const,
+        aciklanan: "-",
+        beklenti: "-",
+        onceki: "347.6",
+      },
+      {
+        saat: "10:00",
+        ulke: "TR",
+        gosterge: "Türkiye'nin Uluslararası Yükümlülükleri (milyar usd)",
+        onem: "turuncu-gri" as const,
+        aciklanan: "-",
+        beklenti: "-",
+        onceki: "786.8",
+      },
+    ],
+  },
+];
