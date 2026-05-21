@@ -12,7 +12,7 @@ export const newsItems: NewsItem[] = [
     id: 982,
     title: "CHP KURULTAY DAVASI'NDA 'MUTLAK BUTLAN' KARARI ÇIKTI",
     href: "/haber/haber-982",
-    image: "/haber982.JPG",
+    image: "/haber982.jpg",
     alt: "Haber 982 görseli",
   },
    {
