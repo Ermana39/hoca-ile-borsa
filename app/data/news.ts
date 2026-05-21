@@ -7,6 +7,14 @@ export type NewsItem = {
 };
 
 export const newsItems: NewsItem[] = [ 
+
+  {
+    id: 982,
+    title: "CHP KURULTAY DAVASI'NDA 'MUTLAK BUTLAN' KARARI ÇIKTI",
+    href: "/haber/haber-982",
+    image: "/haber982.JPG",
+    alt: "Haber 982 görseli",
+  },
    {
     id: 983,
     title: "EKİNCİLER DEMİR VE ÇELİK SANAYİ A.Ş. Dağıtımları Sonuçlandı",
