@@ -1,4 +1,23 @@
-const xu100Pivot = {
+import Link from "next/link";
+
+type PivotRow = {
+  sembol: string;
+  fark: number;
+  son: number;
+  pivot: number;
+  destek1: number;
+  destek2: number;
+  destek3: number;
+  direnc1: number;
+  direnc2: number;
+  direnc3: number;
+  yorum: string;
+};
+
+const xu100Pivot: PivotRow = {
+  sembol: "XU100",
+  fark: -5.88,
+  son: 13163.88,
   pivot: 13985.96,
   destek1: 13882.17,
   destek2: 13752.32,
@@ -6,11 +25,10 @@ const xu100Pivot = {
   direnc1: 14115.81,
   direnc2: 14219.6,
   direnc3: 14349.45,
-  fark: -5.88,
   yorum: "Üçüncü destek seviyesinin altına indi.",
 };
 
-const pivotVerileri = [
+const pivotVerileri: PivotRow[] = [
   {
     sembol: "AEFES",
     fark: -4.82,
@@ -271,134 +289,187 @@ const pivotVerileri = [
     direnc3: 2.9866,
     yorum: "Üçüncü destek seviyesinin altına indi.",
   },
-  {
-    sembol: "SISE",
-    fark: -6.54,
-    son: 42.9,
-    pivot: 45.9,
-    destek1: 45.48,
-    destek2: 44.78,
-    destek3: 44.36,
-    direnc1: 46.5999,
-    direnc2: 47.0199,
-    direnc3: 47.7199,
-    yorum: "Üçüncü destek seviyesinin altına indi.",
-  },
-  {
-    sembol: "TAVHL",
-    fark: -4.64,
-    son: 244.8,
-    pivot: 256.7,
-    destek1: 252.65,
-    destek2: 244.55,
-    destek3: 240.5,
-    direnc1: 264.8,
-    direnc2: 268.85,
-    direnc3: 276.95,
-    yorum: "İlk destek seviyesinin altına indi.",
-  },
-  {
-    sembol: "TCELL",
-    fark: -1.46,
-    son: 106,
-    pivot: 107.567,
-    destek1: 106.333,
-    destek2: 104.067,
-    destek3: 102.833,
-    direnc1: 109.833,
-    direnc2: 111.067,
-    direnc3: 113.333,
-    yorum: "İlk destek seviyesinin altına indi.",
-  },
-  {
-    sembol: "THYAO",
-    fark: -7.12,
-    son: 274,
-    pivot: 295,
-    destek1: 289.75,
-    destek2: 284.5,
-    destek3: 279.25,
-    direnc1: 300.25,
-    direnc2: 305.5,
-    direnc3: 310.75,
-    yorum: "Üçüncü destek seviyesinin altına indi.",
-  },
-  {
-    sembol: "TOASO",
-    fark: -3.22,
-    son: 280.25,
-    pivot: 289.583,
-    destek1: 284.167,
-    destek2: 278.833,
-    destek3: 273.417,
-    direnc1: 294.917,
-    direnc2: 300.333,
-    direnc3: 305.667,
-    yorum: "İlk destek seviyesinin altına indi.",
-  },
-  {
-    sembol: "TRALT",
-    fark: -9.72,
-    son: 40.8,
-    pivot: 45.1933,
-    destek1: 43.9866,
-    destek2: 43.0133,
-    destek3: 41.8066,
-    direnc1: 46.1666,
-    direnc2: 47.3733,
-    direnc3: 48.3466,
-    yorum: "Üçüncü destek seviyesinin altına indi.",
-  },
-  {
-    sembol: "TTKOM",
-    fark: -7.34,
-    son: 57.45,
-    pivot: 62,
-    destek1: 61.3,
-    destek2: 60.45,
-    destek3: 59.75,
-    direnc1: 62.85,
-    direnc2: 63.55,
-    direnc3: 64.4,
-    yorum: "Üçüncü destek seviyesinin altına indi.",
-  },
-  {
-    sembol: "TUPRS",
-    fark: -3.62,
-    son: 241.7,
-    pivot: 250.783,
-    destek1: 247.817,
-    destek2: 245.633,
-    destek3: 242.667,
-    direnc1: 252.967,
-    direnc2: 255.933,
-    direnc3: 258.117,
-    yorum: "Üçüncü destek seviyesinin altına indi.",
-  },
-  {
-    sembol: "VAKBN",
-    fark: -2.94,
-    son: 29.74,
-    pivot: 30.64,
-    destek1: 30.18,
-    destek2: 29.94,
-    destek3: 29.48,
-    direnc1: 30.88,
-    direnc2: 31.34,
-    direnc3: 31.58,
-    yorum: "İkinci destek seviyesinin altına indi.",
-  },
-  {
-    sembol: "YKBNK",
-    fark: -10.21,
-    son: 32.12,
-    pivot: 35.773,
-    destek1: 35.187,
-    destek2: 34.693,
-    destek3: 34.107,
-    direnc1: 36.267,
-    direnc2: 36.853,
-    direnc3: 37.347,
-    yorum: "İkinci destek seviyesinin altına indi.",
-  },
 ];
+
+function formatNumber(value: number) {
+  return new Intl.NumberFormat("tr-TR", {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 4,
+  }).format(value);
+}
+
+function getYorumRenk(yorum: string) {
+  if (yorum.includes("direnç")) {
+    return "bg-green-700";
+  }
+
+  if (yorum.includes("Pivot değerinin üstünde")) {
+    return "bg-green-600";
+  }
+
+  if (yorum.includes("Üçüncü destek")) {
+    return "bg-red-900";
+  }
+
+  if (yorum.includes("İkinci destek")) {
+    return "bg-red-700";
+  }
+
+  if (yorum.includes("İlk destek")) {
+    return "bg-red-500";
+  }
+
+  return "bg-orange-500";
+}
+
+export default function PivotAnaliziPage() {
+  return (
+    <main className="min-h-screen bg-[#111111] px-2 py-4 text-white md:px-4">
+      <div className="mx-auto max-w-[1600px]">
+        <div className="mb-4 flex gap-3">
+          <Link
+            href="/"
+            className="rounded-lg bg-zinc-800 px-4 py-2 text-sm font-semibold hover:bg-zinc-700"
+          >
+            Ana Sayfa
+          </Link>
+
+          <Link
+            href="/borsa"
+            className="rounded-lg bg-zinc-800 px-4 py-2 text-sm font-semibold hover:bg-zinc-700"
+          >
+            Geri
+          </Link>
+        </div>
+
+        <div className="overflow-x-auto border border-zinc-700">
+          <div className={`${getYorumRenk(xu100Pivot.yorum)} px-4 py-2 text-center text-lg font-bold`}>
+            {xu100Pivot.yorum}
+          </div>
+
+          <table className="min-w-full border-collapse text-sm">
+            <thead className="bg-[#1c1c1c]">
+              <tr>
+                <th className="border border-zinc-700 px-3 py-2 text-left">PIVOT</th>
+                <th className="border border-zinc-700 px-3 py-2">
+                  {formatNumber(xu100Pivot.pivot)}
+                </th>
+                <th className="border border-zinc-700 px-3 py-2 text-left">Destek 1</th>
+                <th className="border border-zinc-700 px-3 py-2">
+                  {formatNumber(xu100Pivot.destek1)}
+                </th>
+                <th className="border border-zinc-700 px-3 py-2 text-left">Destek 2</th>
+                <th className="border border-zinc-700 px-3 py-2">
+                  {formatNumber(xu100Pivot.destek2)}
+                </th>
+                <th className="border border-zinc-700 px-3 py-2 text-left">Destek 3</th>
+                <th className="border border-zinc-700 px-3 py-2">
+                  {formatNumber(xu100Pivot.destek3)}
+                </th>
+              </tr>
+
+              <tr>
+                <th className="border border-zinc-700 px-3 py-2 text-left">
+                  PIVOTA GÖRE FARK %
+                </th>
+                <th className="border border-zinc-700 px-3 py-2 text-red-400">
+                  {formatNumber(xu100Pivot.fark)}
+                </th>
+                <th className="border border-zinc-700 px-3 py-2 text-left">Direnç 1</th>
+                <th className="border border-zinc-700 px-3 py-2">
+                  {formatNumber(xu100Pivot.direnc1)}
+                </th>
+                <th className="border border-zinc-700 px-3 py-2 text-left">Direnç 2</th>
+                <th className="border border-zinc-700 px-3 py-2">
+                  {formatNumber(xu100Pivot.direnc2)}
+                </th>
+                <th className="border border-zinc-700 px-3 py-2 text-left">Direnç 3</th>
+                <th className="border border-zinc-700 px-3 py-2">
+                  {formatNumber(xu100Pivot.direnc3)}
+                </th>
+              </tr>
+            </thead>
+          </table>
+
+          <table className="min-w-full border-collapse text-sm">
+            <thead className="bg-[#1a1a1a] text-zinc-300">
+              <tr>
+                <th className="border border-zinc-700 px-3 py-2 text-left">Sembol</th>
+                <th className="border border-zinc-700 px-3 py-2 text-left">
+                  Pivota Göre Fark %
+                </th>
+                <th className="border border-zinc-700 px-3 py-2 text-left">Son</th>
+                <th className="border border-zinc-700 px-3 py-2 text-left">Pivot</th>
+                <th className="border border-zinc-700 px-3 py-2 text-left">Destek 1</th>
+                <th className="border border-zinc-700 px-3 py-2 text-left">Destek 2</th>
+                <th className="border border-zinc-700 px-3 py-2 text-left">Destek 3</th>
+                <th className="border border-zinc-700 px-3 py-2 text-left">Direnç 1</th>
+                <th className="border border-zinc-700 px-3 py-2 text-left">Direnç 2</th>
+                <th className="border border-zinc-700 px-3 py-2 text-left">Direnç 3</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              {pivotVerileri.map((item) => (
+                <>
+                  <tr key={item.sembol} className="bg-[#222222]">
+                    <td className="border border-zinc-700 px-3 py-3 font-semibold">
+                      {item.sembol}
+                    </td>
+
+                    <td className="border border-zinc-700 px-3 py-3">
+                      {formatNumber(item.fark)}
+                    </td>
+
+                    <td className="border border-zinc-700 px-3 py-3">
+                      {formatNumber(item.son)}
+                    </td>
+
+                    <td className="border border-zinc-700 px-3 py-3">
+                      {formatNumber(item.pivot)}
+                    </td>
+
+                    <td className="border border-zinc-700 px-3 py-3">
+                      {formatNumber(item.destek1)}
+                    </td>
+
+                    <td className="border border-zinc-700 px-3 py-3">
+                      {formatNumber(item.destek2)}
+                    </td>
+
+                    <td className="border border-zinc-700 px-3 py-3">
+                      {formatNumber(item.destek3)}
+                    </td>
+
+                    <td className="border border-zinc-700 px-3 py-3">
+                      {formatNumber(item.direnc1)}
+                    </td>
+
+                    <td className="border border-zinc-700 px-3 py-3">
+                      {formatNumber(item.direnc2)}
+                    </td>
+
+                    <td className="border border-zinc-700 px-3 py-3">
+                      {formatNumber(item.direnc3)}
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td
+                      colSpan={10}
+                      className={`${getYorumRenk(
+                        item.yorum
+                      )} border border-zinc-700 px-3 py-2 text-center font-semibold`}
+                    >
+                      {item.yorum}
+                    </td>
+                  </tr>
+                </>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  );
+}
