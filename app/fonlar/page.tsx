@@ -69,6 +69,13 @@ const videoKartlari = [
     image: "https://img.youtube.com/vi/flipVqvQMDA/hqdefault.jpg",
     alt: "DFI Atlas Portföy İkinci Serbest Fon video kapak görseli",
   },
+  {
+    title:
+      "Yeni YouTube Videosu | Fonlar, Borsa ve Yatırım Üzerine Detaylı İnceleme",
+    href: "https://youtu.be/chZfm2FpiHg",
+    image: "https://img.youtube.com/vi/chZfm2FpiHg/hqdefault.jpg",
+    alt: "Yeni YouTube video kapak görseli",
+  },
 ];
 
 function FonKutusu({
@@ -173,6 +180,7 @@ export default function FonlarPage() {
             <h2 className="text-2xl font-bold text-zinc-900 md:text-3xl">
               YouTube Videoları
             </h2>
+
             <p className="mt-2 text-sm text-zinc-600 md:text-base">
               Fonlarla ilgili hazırladığım videolara buradan ulaşabilirsiniz.
             </p>
