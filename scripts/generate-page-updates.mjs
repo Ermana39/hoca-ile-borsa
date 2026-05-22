@@ -35,11 +35,12 @@ const excelUzantilari = new Set([".xlsx", ".xls", ".xlsm"]);
 const yokSayilacakDosyalar = new Set(["page-updates.generated.json"]);
 
 function toPosixPath(value) {
+  if (typeof value !== "string") return "";
   return value.split(path.sep).join("/");
 }
 
 function hashValue(value) {
-  return crypto.createHash("sha256").update(value).digest("hex");
+  return crypto.createHash("sha256").update(String(value ?? "")).digest("hex");
 }
 
 function normalizeText(value) {
@@ -92,6 +93,8 @@ function stableJson(value) {
 }
 
 function getRouteFromPageFile(filePath) {
+  if (typeof filePath !== "string") return "/";
+
   const relative = toPosixPath(path.relative(appDir, filePath));
   const routePart = relative.replace(/\/?page\.(tsx|ts|jsx|js|mdx)$/i, "");
 
@@ -111,6 +114,8 @@ function getRouteFromPageFile(filePath) {
 }
 
 function isGitTracked(filePath) {
+  if (typeof filePath !== "string") return false;
+
   try {
     const relative = toPosixPath(path.relative(rootDir, filePath));
 
@@ -126,6 +131,8 @@ function isGitTracked(filePath) {
 }
 
 function isGitDirty(filePath) {
+  if (typeof filePath !== "string") return false;
+
   try {
     const relative = toPosixPath(path.relative(rootDir, filePath));
 
@@ -142,6 +149,8 @@ function isGitDirty(filePath) {
 }
 
 function getGitLog(filePath) {
+  if (typeof filePath !== "string") return [];
+
   try {
     const relative = toPosixPath(path.relative(rootDir, filePath));
 
@@ -158,16 +167,21 @@ function getGitLog(filePath) {
 
     if (!result) return [];
 
-    return result.split("\n").map((line) => {
-      const [hash, date] = line.split("|");
-      return { hash, date };
-    });
+    return result
+      .split("\n")
+      .map((line) => {
+        const [hash, date] = line.split("|");
+        return { hash, date };
+      })
+      .filter((item) => item.hash && item.date);
   } catch {
     return [];
   }
 }
 
 function getGitFileBuffer(ref, filePath) {
+  if (!ref || typeof filePath !== "string") return null;
+
   try {
     const relative = toPosixPath(path.relative(rootDir, filePath));
 
@@ -182,6 +196,8 @@ function getGitFileBuffer(ref, filePath) {
 }
 
 function getFileUpdatedAt(filePath) {
+  if (typeof filePath !== "string") return "";
+
   try {
     return fs.statSync(filePath).mtime.toISOString();
   } catch {
@@ -190,7 +206,7 @@ function getFileUpdatedAt(filePath) {
 }
 
 function walkPages(dir, results = []) {
-  if (!fs.existsSync(dir)) return results;
+  if (typeof dir !== "string" || !fs.existsSync(dir)) return results;
 
   const entries = fs.readdirSync(dir, { withFileTypes: true });
 
@@ -211,7 +227,7 @@ function walkPages(dir, results = []) {
 }
 
 function walkDataFiles(dir, results = []) {
-  if (!fs.existsSync(dir)) return results;
+  if (typeof dir !== "string" || !fs.existsSync(dir)) return results;
 
   const entries = fs.readdirSync(dir, { withFileTypes: true });
 
@@ -342,6 +358,8 @@ function getExcelPayload(buffer, route) {
 }
 
 function getRouteAwarePayloadFromBuffer(buffer, filePath, route) {
+  if (!buffer || typeof filePath !== "string") return "";
+
   const ext = path.extname(filePath).toLowerCase();
 
   if (ext === ".json") {
@@ -356,6 +374,8 @@ function getRouteAwarePayloadFromBuffer(buffer, filePath, route) {
 }
 
 function getRouteAwarePayloadFromFile(filePath, route) {
+  if (typeof filePath !== "string") return "";
+
   try {
     if (!fs.existsSync(filePath)) return "";
 
@@ -375,6 +395,7 @@ function getRouteAwarePayloadFromGit(ref, filePath, route) {
 }
 
 function getRouteAwareGitUpdatedAt(filePath, route) {
+  if (typeof filePath !== "string") return "";
   if (!isGitTracked(filePath)) return "";
 
   const commits = getGitLog(filePath);
@@ -403,6 +424,7 @@ function getRouteAwareGitUpdatedAt(filePath, route) {
 }
 
 function getRouteAwareUpdatedAt(filePath, route) {
+  if (typeof filePath !== "string") return "";
   if (!fs.existsSync(filePath)) return "";
 
   const ext = path.extname(filePath).toLowerCase();
@@ -432,6 +454,8 @@ function getRouteAwareUpdatedAt(filePath, route) {
 
 function getImportedDataFiles(pageFilePath) {
   const relatedFiles = [];
+
+  if (typeof pageFilePath !== "string") return relatedFiles;
 
   try {
     const content = fs.readFileSync(pageFilePath, "utf8");
@@ -491,6 +515,8 @@ function getImportedDataFiles(pageFilePath) {
 function getStringReferencedDataFiles(pageFilePath) {
   const relatedFiles = [];
 
+  if (typeof pageFilePath !== "string") return relatedFiles;
+
   try {
     const content = fs.readFileSync(pageFilePath, "utf8");
     const pageDir = path.dirname(pageFilePath);
@@ -534,7 +560,7 @@ function getStringReferencedDataFiles(pageFilePath) {
 function getRouteSpecificSharedDataFiles(route) {
   const relatedFiles = [];
   const normalizedRoute = normalizeText(route);
-  const routeParts = route.split("/").filter(Boolean);
+  const routeParts = String(route || "").split("/").filter(Boolean);
   const lastSlug = routeParts[routeParts.length - 1] || "";
   const lastSlugNormalized = slugify(lastSlug);
 
@@ -561,11 +587,13 @@ function getRouteSpecificSharedDataFiles(route) {
   }
 
   for (const dataDir of sharedDataDirs) {
-    if (!fs.existsSync(dataDir)) continue;
+    if (!dataDir || !fs.existsSync(dataDir)) continue;
 
     const files = walkDataFiles(dataDir);
 
     for (const file of files) {
+      if (typeof file !== "string") continue;
+
       const ext = path.extname(file).toLowerCase();
       const fileBase = slugify(path.basename(file, ext));
 
@@ -588,7 +616,10 @@ function getRouteSpecificSharedDataFiles(route) {
 }
 
 function filtreleUretilmisJsonDosyalari(files) {
-  const uniqueFiles = [...new Set(files)];
+  const uniqueFiles = [...new Set(files)].filter(
+    (file) => typeof file === "string" && file
+  );
+
   const excelFiles = uniqueFiles.filter((file) =>
     excelUzantilari.has(path.extname(file).toLowerCase())
   );
@@ -615,9 +646,16 @@ function filtreleUretilmisJsonDosyalari(files) {
 }
 
 function getRelatedFilesForPage(pageFilePath) {
+  const relatedFiles = [];
+
+  if (typeof pageFilePath !== "string") {
+    return relatedFiles;
+  }
+
   const pageDir = path.dirname(pageFilePath);
   const route = getRouteFromPageFile(pageFilePath);
-  const relatedFiles = [pageFilePath];
+
+  relatedFiles.push(pageFilePath);
 
   const ownDataDir = path.join(pageDir, "data");
 
@@ -625,19 +663,21 @@ function getRelatedFilesForPage(pageFilePath) {
     relatedFiles.push(...walkDataFiles(ownDataDir));
   }
 
-  const directEntries = fs.readdirSync(pageDir, { withFileTypes: true });
+  try {
+    const directEntries = fs.readdirSync(pageDir, { withFileTypes: true });
 
-  for (const entry of directEntries) {
-    if (!entry.isFile()) continue;
-    if (yokSayilacakDosyalar.has(entry.name)) continue;
+    for (const entry of directEntries) {
+      if (!entry.isFile()) continue;
+      if (yokSayilacakDosyalar.has(entry.name)) continue;
 
-    const fullPath = path.join(pageDir, entry.name);
-    const ext = path.extname(entry.name).toLowerCase();
+      const fullPath = path.join(pageDir, entry.name);
+      const ext = path.extname(entry.name).toLowerCase();
 
-    if (takipEdilecekVeriUzantilari.has(ext)) {
-      relatedFiles.push(fullPath);
+      if (takipEdilecekVeriUzantilari.has(ext)) {
+        relatedFiles.push(fullPath);
+      }
     }
-  }
+  } catch {}
 
   relatedFiles.push(...getImportedDataFiles(pageFilePath));
   relatedFiles.push(...getStringReferencedDataFiles(pageFilePath));
@@ -647,6 +687,8 @@ function getRelatedFilesForPage(pageFilePath) {
 }
 
 function getFileSignature(filePath, route) {
+  if (typeof filePath !== "string") return "";
+
   const payload = getRouteAwarePayloadFromFile(filePath, route);
 
   if (!payload) return "";
@@ -658,6 +700,7 @@ function getFileSignature(filePath, route) {
 
 function getPageSignature(route, files) {
   const parts = files
+    .filter((file) => typeof file === "string" && file)
     .map((file) => getFileSignature(file, route))
     .filter(Boolean)
     .sort();
@@ -669,6 +712,8 @@ function getNewestRouteAwareUpdatedAt(route, files) {
   let newest = "";
 
   for (const file of files) {
+    if (typeof file !== "string" || !file) continue;
+
     const updatedAt = getRouteAwareUpdatedAt(file, route);
 
     if (!updatedAt) continue;
@@ -684,6 +729,7 @@ function getNewestRouteAwareUpdatedAt(route, files) {
 const pageFiles = walkPages(appDir);
 
 const pages = pageFiles
+  .filter((filePath) => typeof filePath === "string" && filePath)
   .map((filePath) => {
     const route = getRouteFromPageFile(filePath);
     const relatedFiles = getRelatedFilesForPage(filePath);
@@ -694,9 +740,9 @@ const pages = pageFiles
       updatedAt,
       signature: getPageSignature(route, relatedFiles),
       file: toPosixPath(path.relative(rootDir, filePath)),
-      trackedFiles: relatedFiles.map((item) =>
-        toPosixPath(path.relative(rootDir, item))
-      ),
+      trackedFiles: relatedFiles
+        .filter((item) => typeof item === "string" && item)
+        .map((item) => toPosixPath(path.relative(rootDir, item))),
     };
   })
   .filter((item) => item.updatedAt)
