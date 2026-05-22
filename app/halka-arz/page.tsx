@@ -1,5 +1,28 @@
+import fs from "fs";
+import path from "path";
 import Image from "next/image";
 import Link from "next/link";
+import * as XLSX from "xlsx";
+
+type ExcelSatiri = {
+  kurum: string;
+  alis: number;
+  ortalamaAlis: number;
+  satis: number;
+  ortalamaSatis: number;
+  toplam: number;
+  yuzde: number;
+  net: number;
+  maliyet: number;
+};
+
+type ListeSatiri = {
+  kurum: string;
+  lot: string;
+  yuzde: string;
+  maliyet: string;
+  sagDeger: string;
+};
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
@@ -17,7 +40,264 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
+function sayiCevir(deger: unknown) {
+  if (typeof deger === "number") return deger;
+  if (deger === null || deger === undefined || deger === "") return 0;
+
+  const metin = String(deger)
+    .trim()
+    .replace(/\s/g, "")
+    .replace(/\./g, "")
+    .replace(",", ".");
+
+  const sayi = Number(metin);
+  return Number.isNaN(sayi) ? 0 : sayi;
+}
+
+function metinCevir(deger: unknown) {
+  if (deger === null || deger === undefined) return "";
+  return String(deger).trim();
+}
+
+function formatSayi(deger: number, maxFraction = 0) {
+  return new Intl.NumberFormat("tr-TR", {
+    minimumFractionDigits: 0,
+    maximumFractionDigits: maxFraction,
+  }).format(deger);
+}
+
+function formatYuzde(deger: number) {
+  return new Intl.NumberFormat("tr-TR", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(deger);
+}
+
+function bosSatir(): ListeSatiri {
+  return {
+    kurum: "",
+    lot: "",
+    yuzde: "",
+    maliyet: "",
+    sagDeger: "",
+  };
+}
+
+function besSatiraTamamla(liste: ListeSatiri[]) {
+  const sonuc = [...liste];
+
+  while (sonuc.length < 5) {
+    sonuc.push(bosSatir());
+  }
+
+  return sonuc.slice(0, 5);
+}
+
+function excelOku() {
+  try {
+    const dosyaYolu = path.join(
+      process.cwd(),
+      "app",
+      "halka-arz",
+      "data",
+      "ekdemir-araci-kurum.xlsx"
+    );
+
+    const buffer = fs.readFileSync(dosyaYolu);
+    const workbook = XLSX.read(buffer, { type: "buffer" });
+    const sheetName = workbook.SheetNames[0];
+    const ws = workbook.Sheets[sheetName];
+
+    const rawRows = XLSX.utils.sheet_to_json<(string | number)[]>(ws, {
+      header: 1,
+      defval: "",
+    }) as (string | number)[][];
+
+    const veri = rawRows
+      .slice(1)
+      .map((row) => ({
+        kurum: metinCevir(row[0]),
+        alis: sayiCevir(row[1]),
+        ortalamaAlis: sayiCevir(row[2]),
+        satis: sayiCevir(row[3]),
+        ortalamaSatis: sayiCevir(row[4]),
+        toplam: sayiCevir(row[5]),
+        yuzde: sayiCevir(row[6]),
+        net: sayiCevir(row[7]),
+        maliyet: sayiCevir(row[8]),
+      }))
+      .filter((item) => item.kurum);
+
+    return veri;
+  } catch {
+    return [] as ExcelSatiri[];
+  }
+}
+
+function aliciListesi(veri: ExcelSatiri[]): ListeSatiri[] {
+  const pozitifler = veri.filter((item) => item.net > 0);
+  const toplamPozitifNet = pozitifler.reduce((sum, item) => sum + item.net, 0);
+
+  const liste = pozitifler
+    .sort((a, b) => b.net - a.net)
+    .slice(0, 5)
+    .map((item) => ({
+      kurum: item.kurum,
+      lot: formatSayi(item.net, 0),
+      yuzde: formatYuzde(
+        toplamPozitifNet > 0 ? (item.net / toplamPozitifNet) * 100 : 0
+      ),
+      maliyet: formatSayi(item.maliyet, 3),
+      sagDeger: formatSayi(item.toplam, 0),
+    }));
+
+  return besSatiraTamamla(liste);
+}
+
+function saticiListesi(veri: ExcelSatiri[]): ListeSatiri[] {
+  const negatifler = veri.filter((item) => item.net < 0);
+  const toplamNegatifNet = Math.abs(
+    negatifler.reduce((sum, item) => sum + item.net, 0)
+  );
+
+  const liste = negatifler
+    .sort((a, b) => a.net - b.net)
+    .slice(0, 5)
+    .map((item) => ({
+      kurum: item.kurum,
+      lot: formatSayi(Math.abs(item.net), 0),
+      yuzde: formatYuzde(
+        toplamNegatifNet > 0
+          ? (Math.abs(item.net) / toplamNegatifNet) * 100
+          : 0
+      ),
+      maliyet: formatSayi(item.maliyet, 3),
+      sagDeger: formatSayi(item.toplam, 0),
+    }));
+
+  return besSatiraTamamla(liste);
+}
+
+function hacimListesi(veri: ExcelSatiri[]): ListeSatiri[] {
+  const toplamIslemLotu = veri.reduce((sum, item) => sum + item.toplam, 0);
+
+  const liste = [...veri]
+    .sort((a, b) => b.toplam - a.toplam)
+    .slice(0, 5)
+    .map((item) => ({
+      kurum: item.kurum,
+      lot: formatSayi(item.toplam, 0),
+      yuzde: formatYuzde(
+        toplamIslemLotu > 0 ? (item.toplam / toplamIslemLotu) * 100 : 0
+      ),
+      maliyet: formatSayi(item.maliyet, 3),
+      sagDeger: formatSayi(item.net, 0),
+    }));
+
+  return besSatiraTamamla(liste);
+}
+
+function KurumTablosu({
+  title,
+  rows,
+  lotBaslik,
+  sagBaslik,
+  bgColor,
+}: {
+  title: string;
+  rows: ListeSatiri[];
+  lotBaslik: string;
+  sagBaslik: string;
+  bgColor: string;
+}) {
+  return (
+    <div
+      className="overflow-hidden rounded-2xl border border-zinc-300 shadow-sm"
+      style={{ backgroundColor: bgColor }}
+    >
+      <div className="overflow-x-auto">
+        <table className="w-full min-w-[470px] border-collapse text-zinc-900">
+          <thead>
+            <tr className="bg-white/60 text-[11px] font-medium text-zinc-700 md:text-xs">
+              <th className="border-b border-r border-zinc-300 px-3 py-2 text-left">
+                Kurum
+              </th>
+              <th className="border-b border-r border-zinc-300 px-3 py-2 text-right">
+                {lotBaslik}
+              </th>
+              <th className="border-b border-r border-zinc-300 px-3 py-2 text-right">
+                %
+              </th>
+              <th className="border-b border-r border-zinc-300 px-3 py-2 text-right">
+                Maliyet
+              </th>
+              <th className="border-b border-zinc-300 px-3 py-2 text-right">
+                {sagBaslik}
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {rows.map((item, index) => {
+              const bosMu = !item.kurum;
+
+              return (
+                <tr key={`${item.kurum || "bos"}-${index}`}>
+                  <td className="border-b border-r border-zinc-300 px-3 py-2 text-left text-[12px] font-semibold md:text-[13px]">
+                    {bosMu ? (
+                      <span className="block min-h-[20px]" />
+                    ) : (
+                      <span>{item.kurum}</span>
+                    )}
+                  </td>
+
+                  <td className="border-b border-r border-zinc-300 px-3 py-2 text-right text-[12px] md:text-[13px]">
+                    {item.lot}
+                  </td>
+
+                  <td className="border-b border-r border-zinc-300 px-3 py-2 text-right text-[12px] md:text-[13px]">
+                    {item.yuzde}
+                  </td>
+
+                  <td className="border-b border-r border-zinc-300 px-3 py-2 text-right text-[12px] md:text-[13px]">
+                    {item.maliyet}
+                  </td>
+
+                  <td className="border-b border-zinc-300 px-3 py-2 text-right text-[12px] md:text-[13px]">
+                    {item.sagDeger}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+
+      <div
+        className="border-t border-zinc-300 px-4 py-2 text-xs font-semibold text-zinc-800"
+        style={{ backgroundColor: bgColor }}
+      >
+        {title}
+      </div>
+    </div>
+  );
+}
+
 export default function HalkaArzPage() {
+  const veri = excelOku();
+  const alicilar = aliciListesi(veri);
+  const saticilar = saticiListesi(veri);
+  const hacimciler = hacimListesi(veri);
+
+  const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
+    timeZone: "Europe/Istanbul",
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(new Date());
+
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-7xl">
@@ -106,14 +386,55 @@ export default function HalkaArzPage() {
         </section>
 
         <section className="mt-8">
-          <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-5 text-center md:p-7">
-            <h2 className="text-2xl font-bold text-zinc-900 md:text-3xl">
-              Güncel Halka Arz Bilgileri
-            </h2>
+          <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4 md:p-6">
+            <div className="mb-5 text-center">
+              <h2 className="text-2xl font-bold text-zinc-900 md:text-3xl">
+                EKDMR Güncel Veriler
+              </h2>
 
-            <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-zinc-700 md:text-base">
-              Ekinciler Demir ve Çelik 22 Mayıs Cuma günü işleme başlıyor. Halka arzın seans içi güncel verilerini buradan takip edebilirsiniz.
-            </p>
+              <div className="mt-2 text-sm font-medium text-zinc-500">
+                Güncelleme: {guncellemeTarihi}
+              </div>
+            </div>
+
+            <div className="grid grid-cols-1 gap-4 xl:grid-cols-[minmax(0,1.02fr)_minmax(0,1.18fr)]">
+              <div className="flex items-center justify-center overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 md:p-5">
+                <Image
+                  src="/ekdemir.jpg"
+                  alt="EKDMR halka arz görseli"
+                  width={900}
+                  height={1200}
+                  className="h-auto max-h-[900px] w-auto max-w-full object-contain"
+                  priority
+                />
+              </div>
+
+              <div className="grid grid-cols-1 gap-4">
+                <KurumTablosu
+                  title="En Çok Alıcı Kurumlar"
+                  rows={alicilar}
+                  lotBaslik="Net Lot"
+                  sagBaslik="Toplam"
+                  bgColor="#dcfce7"
+                />
+
+                <KurumTablosu
+                  title="En Çok Satıcı Kurumlar"
+                  rows={saticilar}
+                  lotBaslik="Net Lot"
+                  sagBaslik="Toplam"
+                  bgColor="#fee2e2"
+                />
+
+                <KurumTablosu
+                  title="En Çok İşlem Yapan Kurumlar"
+                  rows={hacimciler}
+                  lotBaslik="Toplam Lot"
+                  sagBaslik="Net"
+                  bgColor="#dbeafe"
+                />
+              </div>
+            </div>
           </div>
         </section>
 
@@ -129,12 +450,10 @@ export default function HalkaArzPage() {
 
             <div className="space-y-4 text-sm leading-7 text-zinc-700 md:text-base">
               <p>
-                Hoca İle Borsa Halka Arz sayfasında güncel halka arz gelişmeleri,
-                onaylı izahnameler, taslak izahnameler, halka arz kazanç
-                hesaplama aracı ve talep hesaplama bölümleri bir arada sunulur.
-                Halka arz sürecini takip etmek isteyen yatırımcılar bu sayfa
-                üzerinden yeni başvuruları, izahname detaylarını ve öne çıkan
-                verileri daha kolay inceleyebilir.
+                Hoca İle Borsa Halka Arz sayfasında güncel halka arz
+                gelişmeleri, onaylı izahnameler, taslak izahnameler, halka arz
+                kazanç hesaplama aracı ve talep hesaplama bölümleri bir arada
+                sunulur.
               </p>
 
               <p>
