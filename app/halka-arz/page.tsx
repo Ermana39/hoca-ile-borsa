@@ -42,7 +42,10 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
 
 function sayiCevir(deger: unknown) {
   if (typeof deger === "number") return deger;
-  if (deger === null || deger === undefined || deger === "") return 0;
+
+  if (deger === null || deger === undefined || deger === "") {
+    return 0;
+  }
 
   const metin = String(deger)
     .trim()
@@ -51,11 +54,13 @@ function sayiCevir(deger: unknown) {
     .replace(",", ".");
 
   const sayi = Number(metin);
+
   return Number.isNaN(sayi) ? 0 : sayi;
 }
 
 function metinCevir(deger: unknown) {
   if (deger === null || deger === undefined) return "";
+
   return String(deger).trim();
 }
 
@@ -93,19 +98,22 @@ function besSatiraTamamla(liste: ListeSatiri[]) {
   return sonuc.slice(0, 5);
 }
 
+const excelDosyaYolu = path.join(
+  process.cwd(),
+  "app",
+  "halka-arz",
+  "data",
+  "ekdemir-araci-kurum.xlsx"
+);
+
 function excelOku() {
   try {
-    const dosyaYolu = path.join(
-      process.cwd(),
-      "app",
-      "halka-arz",
-      "data",
-      "ekdemir-araci-kurum.xlsx"
-    );
+    const buffer = fs.readFileSync(excelDosyaYolu);
 
-    const buffer = fs.readFileSync(dosyaYolu);
     const workbook = XLSX.read(buffer, { type: "buffer" });
+
     const sheetName = workbook.SheetNames[0];
+
     const ws = workbook.Sheets[sheetName];
 
     const rawRows = XLSX.utils.sheet_to_json<(string | number)[]>(ws, {
@@ -136,7 +144,11 @@ function excelOku() {
 
 function aliciListesi(veri: ExcelSatiri[]): ListeSatiri[] {
   const pozitifler = veri.filter((item) => item.net > 0);
-  const toplamPozitifNet = pozitifler.reduce((sum, item) => sum + item.net, 0);
+
+  const toplamPozitifNet = pozitifler.reduce(
+    (sum, item) => sum + item.net,
+    0
+  );
 
   const liste = pozitifler
     .sort((a, b) => b.net - a.net)
@@ -145,7 +157,9 @@ function aliciListesi(veri: ExcelSatiri[]): ListeSatiri[] {
       kurum: item.kurum,
       lot: formatSayi(item.net, 0),
       yuzde: formatYuzde(
-        toplamPozitifNet > 0 ? (item.net / toplamPozitifNet) * 100 : 0
+        toplamPozitifNet > 0
+          ? (item.net / toplamPozitifNet) * 100
+          : 0
       ),
       maliyet: formatSayi(item.maliyet, 3),
       sagDeger: formatSayi(item.toplam, 0),
@@ -156,6 +170,7 @@ function aliciListesi(veri: ExcelSatiri[]): ListeSatiri[] {
 
 function saticiListesi(veri: ExcelSatiri[]): ListeSatiri[] {
   const negatifler = veri.filter((item) => item.net < 0);
+
   const toplamNegatifNet = Math.abs(
     negatifler.reduce((sum, item) => sum + item.net, 0)
   );
@@ -179,7 +194,10 @@ function saticiListesi(veri: ExcelSatiri[]): ListeSatiri[] {
 }
 
 function hacimListesi(veri: ExcelSatiri[]): ListeSatiri[] {
-  const toplamIslemLotu = veri.reduce((sum, item) => sum + item.toplam, 0);
+  const toplamIslemLotu = veri.reduce(
+    (sum, item) => sum + item.toplam,
+    0
+  );
 
   const liste = [...veri]
     .sort((a, b) => b.toplam - a.toplam)
@@ -188,7 +206,9 @@ function hacimListesi(veri: ExcelSatiri[]): ListeSatiri[] {
       kurum: item.kurum,
       lot: formatSayi(item.toplam, 0),
       yuzde: formatYuzde(
-        toplamIslemLotu > 0 ? (item.toplam / toplamIslemLotu) * 100 : 0
+        toplamIslemLotu > 0
+          ? (item.toplam / toplamIslemLotu) * 100
+          : 0
       ),
       maliyet: formatSayi(item.maliyet, 3),
       sagDeger: formatSayi(item.net, 0),
@@ -222,15 +242,19 @@ function KurumTablosu({
               <th className="border-b border-r border-zinc-300 px-3 py-2 text-left">
                 Kurum
               </th>
+
               <th className="border-b border-r border-zinc-300 px-3 py-2 text-right">
                 {lotBaslik}
               </th>
+
               <th className="border-b border-r border-zinc-300 px-3 py-2 text-right">
                 %
               </th>
+
               <th className="border-b border-r border-zinc-300 px-3 py-2 text-right">
                 Maliyet
               </th>
+
               <th className="border-b border-zinc-300 px-3 py-2 text-right">
                 {sagBaslik}
               </th>
@@ -285,9 +309,14 @@ function KurumTablosu({
 
 export default function HalkaArzPage() {
   const veri = excelOku();
+
   const alicilar = aliciListesi(veri);
+
   const saticilar = saticiListesi(veri);
+
   const hacimciler = hacimListesi(veri);
+
+  const dosyaStat = fs.statSync(excelDosyaYolu);
 
   const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
     timeZone: "Europe/Istanbul",
@@ -296,7 +325,7 @@ export default function HalkaArzPage() {
     year: "numeric",
     hour: "2-digit",
     minute: "2-digit",
-  }).format(new Date());
+  }).format(dosyaStat.mtime);
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -311,7 +340,9 @@ export default function HalkaArzPage() {
           </Link>
         </div>
 
-        <h1 className="mb-6 text-3xl font-bold text-zinc-900">Halka Arz</h1>
+        <h1 className="mb-6 text-3xl font-bold text-zinc-900">
+          Halka Arz
+        </h1>
 
         <div className="mb-8 grid grid-cols-1 gap-3 md:grid-cols-2">
           <Link
@@ -440,37 +471,6 @@ export default function HalkaArzPage() {
 
         <section className="mt-8">
           <ReklamAlani variant="icerik" />
-        </section>
-
-        <section className="mt-8">
-          <div className="rounded-2xl border border-zinc-200 bg-white p-5 md:p-7">
-            <h2 className="mb-4 text-xl font-bold text-zinc-900 md:text-2xl">
-              Halka Arz Sayfasında Neler Var?
-            </h2>
-
-            <div className="space-y-4 text-sm leading-7 text-zinc-700 md:text-base">
-              <p>
-                Hoca İle Borsa Halka Arz sayfasında güncel halka arz
-                gelişmeleri, onaylı izahnameler, taslak izahnameler, halka arz
-                kazanç hesaplama aracı ve talep hesaplama bölümleri bir arada
-                sunulur.
-              </p>
-
-              <p>
-                Yeni halka arz süreçlerinde şirket bilgileri, talep toplama
-                tarihleri, halka arz fiyatı, dağıtım yöntemi ve yatırımcıların
-                takip etmesi gereken temel başlıklar bu bölüm üzerinden
-                paylaşılır.
-              </p>
-
-              <p>
-                Halka arz takibi yapan kullanıcılar için hazırlanan bu bölüm;
-                izahname inceleme, talep hesaplama, olası lot dağılımını
-                değerlendirme ve güncel halka arz haberlerini takip etme gibi
-                başlıklarda pratik bir kaynak sunar.
-              </p>
-            </div>
-          </div>
         </section>
       </div>
     </main>
