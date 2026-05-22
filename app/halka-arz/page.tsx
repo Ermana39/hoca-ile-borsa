@@ -4,9 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import * as XLSX from "xlsx";
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
-
 type ExcelSatiri = {
   kurum: string;
   alis: number;
@@ -27,11 +24,15 @@ type ListeSatiri = {
   sagDeger: string;
 };
 
-function ReklamAlani({
-  variant = "yatay",
-}: {
-  variant?: "yatay" | "icerik";
-}) {
+const excelDosyaYolu = path.join(
+  process.cwd(),
+  "app",
+  "halka-arz",
+  "data",
+  "ekdemir-araci-kurum.xlsx"
+);
+
+function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
     variant === "icerik"
       ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
@@ -49,10 +50,7 @@ function ReklamAlani({
 
 function sayiCevir(deger: unknown) {
   if (typeof deger === "number") return deger;
-
-  if (deger === null || deger === undefined || deger === "") {
-    return 0;
-  }
+  if (deger === null || deger === undefined || deger === "") return 0;
 
   const metin = String(deger)
     .trim()
@@ -61,13 +59,11 @@ function sayiCevir(deger: unknown) {
     .replace(",", ".");
 
   const sayi = Number(metin);
-
   return Number.isNaN(sayi) ? 0 : sayi;
 }
 
 function metinCevir(deger: unknown) {
   if (deger === null || deger === undefined) return "";
-
   return String(deger).trim();
 }
 
@@ -105,25 +101,19 @@ function besSatiraTamamla(liste: ListeSatiri[]) {
   return sonuc.slice(0, 5);
 }
 
-const excelDosyaYolu = path.join(
-  process.cwd(),
-  "app",
-  "halka-arz",
-  "data",
-  "ekdemir-araci-kurum.xlsx"
-);
+function excelWorkbookOku() {
+  const buffer = fs.readFileSync(excelDosyaYolu);
+
+  return XLSX.read(buffer, {
+    type: "buffer",
+    cellDates: true,
+  });
+}
 
 function excelOku() {
   try {
-    const buffer = fs.readFileSync(excelDosyaYolu);
-
-    const workbook = XLSX.read(buffer, {
-      type: "buffer",
-      cellDates: true,
-    });
-
+    const workbook = excelWorkbookOku();
     const sheetName = workbook.SheetNames[0];
-
     const ws = workbook.Sheets[sheetName];
 
     const rawRows = XLSX.utils.sheet_to_json<(string | number)[]>(ws, {
@@ -131,7 +121,7 @@ function excelOku() {
       defval: "",
     }) as (string | number)[][];
 
-    const veri = rawRows
+    return rawRows
       .slice(1)
       .map((row) => ({
         kurum: metinCevir(row[0]),
@@ -145,20 +135,38 @@ function excelOku() {
         maliyet: sayiCevir(row[8]),
       }))
       .filter((item) => item.kurum);
-
-    return veri;
   } catch {
     return [] as ExcelSatiri[];
   }
 }
 
+function excelGuncellemeTarihiAl() {
+  try {
+    const workbook = excelWorkbookOku();
+
+    const tarih =
+      workbook.Props?.Modified ||
+      workbook.Props?.Created ||
+      null;
+
+    if (!tarih) return "Excel tarihi bulunamadı";
+
+    return new Intl.DateTimeFormat("tr-TR", {
+      timeZone: "Europe/Istanbul",
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    }).format(new Date(tarih));
+  } catch {
+    return "Excel tarihi okunamadı";
+  }
+}
+
 function aliciListesi(veri: ExcelSatiri[]): ListeSatiri[] {
   const pozitifler = veri.filter((item) => item.net > 0);
-
-  const toplamPozitifNet = pozitifler.reduce(
-    (sum, item) => sum + item.net,
-    0
-  );
+  const toplamPozitifNet = pozitifler.reduce((sum, item) => sum + item.net, 0);
 
   const liste = pozitifler
     .sort((a, b) => b.net - a.net)
@@ -167,9 +175,7 @@ function aliciListesi(veri: ExcelSatiri[]): ListeSatiri[] {
       kurum: item.kurum,
       lot: formatSayi(item.net, 0),
       yuzde: formatYuzde(
-        toplamPozitifNet > 0
-          ? (item.net / toplamPozitifNet) * 100
-          : 0
+        toplamPozitifNet > 0 ? (item.net / toplamPozitifNet) * 100 : 0
       ),
       maliyet: formatSayi(item.maliyet, 3),
       sagDeger: formatSayi(item.toplam, 0),
@@ -180,7 +186,6 @@ function aliciListesi(veri: ExcelSatiri[]): ListeSatiri[] {
 
 function saticiListesi(veri: ExcelSatiri[]): ListeSatiri[] {
   const negatifler = veri.filter((item) => item.net < 0);
-
   const toplamNegatifNet = Math.abs(
     negatifler.reduce((sum, item) => sum + item.net, 0)
   );
@@ -204,10 +209,7 @@ function saticiListesi(veri: ExcelSatiri[]): ListeSatiri[] {
 }
 
 function hacimListesi(veri: ExcelSatiri[]): ListeSatiri[] {
-  const toplamIslemLotu = veri.reduce(
-    (sum, item) => sum + item.toplam,
-    0
-  );
+  const toplamIslemLotu = veri.reduce((sum, item) => sum + item.toplam, 0);
 
   const liste = [...veri]
     .sort((a, b) => b.toplam - a.toplam)
@@ -216,9 +218,7 @@ function hacimListesi(veri: ExcelSatiri[]): ListeSatiri[] {
       kurum: item.kurum,
       lot: formatSayi(item.toplam, 0),
       yuzde: formatYuzde(
-        toplamIslemLotu > 0
-          ? (item.toplam / toplamIslemLotu) * 100
-          : 0
+        toplamIslemLotu > 0 ? (item.toplam / toplamIslemLotu) * 100 : 0
       ),
       maliyet: formatSayi(item.maliyet, 3),
       sagDeger: formatSayi(item.net, 0),
@@ -249,25 +249,11 @@ function KurumTablosu({
         <table className="w-full min-w-[470px] border-collapse text-zinc-900">
           <thead>
             <tr className="bg-white/60 text-[11px] font-medium text-zinc-700 md:text-xs">
-              <th className="border-b border-r border-zinc-300 px-3 py-2 text-left">
-                Kurum
-              </th>
-
-              <th className="border-b border-r border-zinc-300 px-3 py-2 text-right">
-                {lotBaslik}
-              </th>
-
-              <th className="border-b border-r border-zinc-300 px-3 py-2 text-right">
-                %
-              </th>
-
-              <th className="border-b border-r border-zinc-300 px-3 py-2 text-right">
-                Maliyet
-              </th>
-
-              <th className="border-b border-zinc-300 px-3 py-2 text-right">
-                {sagBaslik}
-              </th>
+              <th className="border-b border-r border-zinc-300 px-3 py-2 text-left">Kurum</th>
+              <th className="border-b border-r border-zinc-300 px-3 py-2 text-right">{lotBaslik}</th>
+              <th className="border-b border-r border-zinc-300 px-3 py-2 text-right">%</th>
+              <th className="border-b border-r border-zinc-300 px-3 py-2 text-right">Maliyet</th>
+              <th className="border-b border-zinc-300 px-3 py-2 text-right">{sagBaslik}</th>
             </tr>
           </thead>
 
@@ -278,25 +264,17 @@ function KurumTablosu({
               return (
                 <tr key={`${item.kurum || "bos"}-${index}`}>
                   <td className="border-b border-r border-zinc-300 px-3 py-2 text-left text-[12px] font-semibold md:text-[13px]">
-                    {bosMu ? (
-                      <span className="block min-h-[20px]" />
-                    ) : (
-                      <span>{item.kurum}</span>
-                    )}
+                    {bosMu ? <span className="block min-h-[20px]" /> : item.kurum}
                   </td>
-
                   <td className="border-b border-r border-zinc-300 px-3 py-2 text-right text-[12px] md:text-[13px]">
                     {item.lot}
                   </td>
-
                   <td className="border-b border-r border-zinc-300 px-3 py-2 text-right text-[12px] md:text-[13px]">
                     {item.yuzde}
                   </td>
-
                   <td className="border-b border-r border-zinc-300 px-3 py-2 text-right text-[12px] md:text-[13px]">
                     {item.maliyet}
                   </td>
-
                   <td className="border-b border-zinc-300 px-3 py-2 text-right text-[12px] md:text-[13px]">
                     {item.sagDeger}
                   </td>
@@ -319,23 +297,10 @@ function KurumTablosu({
 
 export default function HalkaArzPage() {
   const veri = excelOku();
-
   const alicilar = aliciListesi(veri);
-
   const saticilar = saticiListesi(veri);
-
   const hacimciler = hacimListesi(veri);
-
-  const excelStat = fs.statSync(excelDosyaYolu);
-
-  const excelGuncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
-    timeZone: "Europe/Istanbul",
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-  }).format(new Date(excelStat.mtimeMs));
+  const guncellemeTarihi = excelGuncellemeTarihiAl();
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -350,9 +315,7 @@ export default function HalkaArzPage() {
           </Link>
         </div>
 
-        <h1 className="mb-6 text-3xl font-bold text-zinc-900">
-          Halka Arz
-        </h1>
+        <h1 className="mb-6 text-3xl font-bold text-zinc-900">Halka Arz</h1>
 
         <div className="mb-8 grid grid-cols-1 gap-3 md:grid-cols-2">
           <Link
@@ -434,7 +397,7 @@ export default function HalkaArzPage() {
               </h2>
 
               <div className="mt-2 text-sm font-medium text-zinc-500">
-                Güncelleme: {excelGuncellemeTarihi}
+                Güncelleme: {guncellemeTarihi}
               </div>
             </div>
 
