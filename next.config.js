@@ -14,6 +14,7 @@ const stableImageCacheFiles = [
   "/egitim-videolari-yatay.png",
   "/formasyonlar-yatay.png",
   "/geri-alim-programlari-yatay.png",
+  "/geri-alim-programlari-yatay.png",
   "/gosterge-taramalari-yatay.png",
   "/grafik-analiz-yatay.png",
   "/hacim-artisi-analizi-yatay.png",
@@ -51,6 +52,10 @@ const nextConfig = {
   outputFileTracingIncludes: {
     "/mevduat-kredi-faizleri/mevduat-faizi-oranlari": [
       "./data/**/*.xlsx",
+    ],
+
+    "/halka-arz": [
+      "./app/halka-arz/data/**/*.xlsx",
     ],
   },
 
