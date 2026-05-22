@@ -24,19 +24,7 @@ type ListeSatiri = {
   sagDeger: string;
 };
 
-const excelDosyaYolu = path.join(
-  process.cwd(),
-  "app",
-  "halka-arz",
-  "data",
-  "ekdemir-araci-kurum.xlsx"
-);
-
-function ReklamAlani({
-  variant = "yatay",
-}: {
-  variant?: "yatay" | "icerik";
-}) {
+function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
     variant === "icerik"
       ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
@@ -110,17 +98,19 @@ function besSatiraTamamla(liste: ListeSatiri[]) {
   return sonuc.slice(0, 5);
 }
 
+const excelDosyaYolu = path.join(
+  process.cwd(),
+  "app",
+  "halka-arz",
+  "data",
+  "ekdemir-araci-kurum.xlsx"
+);
+
 function excelOku() {
   try {
-    if (!fs.existsSync(excelDosyaYolu)) {
-      return [] as ExcelSatiri[];
-    }
-
     const buffer = fs.readFileSync(excelDosyaYolu);
 
-    const workbook = XLSX.read(buffer, {
-      type: "buffer",
-    });
+    const workbook = XLSX.read(buffer, { type: "buffer" });
 
     const sheetName = workbook.SheetNames[0];
 
@@ -227,27 +217,6 @@ function hacimListesi(veri: ExcelSatiri[]): ListeSatiri[] {
   return besSatiraTamamla(liste);
 }
 
-function guncellemeTarihiAl() {
-  try {
-    if (!fs.existsSync(excelDosyaYolu)) {
-      return "-";
-    }
-
-    const dosyaStat = fs.statSync(excelDosyaYolu);
-
-    return new Intl.DateTimeFormat("tr-TR", {
-      timeZone: "Europe/Istanbul",
-      day: "2-digit",
-      month: "2-digit",
-      year: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
-    }).format(dosyaStat.mtime);
-  } catch {
-    return "-";
-  }
-}
-
 function KurumTablosu({
   title,
   rows,
@@ -347,7 +316,16 @@ export default function HalkaArzPage() {
 
   const hacimciler = hacimListesi(veri);
 
-  const guncellemeTarihi = guncellemeTarihiAl();
+  const dosyaStat = fs.statSync(excelDosyaYolu);
+
+  const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
+    timeZone: "Europe/Istanbul",
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(dosyaStat.mtime);
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
