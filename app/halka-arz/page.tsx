@@ -3,6 +3,7 @@ import path from "path";
 import Image from "next/image";
 import Link from "next/link";
 import * as XLSX from "xlsx";
+import { execFileSync } from "child_process";
 
 type ExcelSatiri = {
   kurum: string;
@@ -24,6 +25,16 @@ type ListeSatiri = {
   sagDeger: string;
 };
 
+const excelDosyaYolu = path.join(
+  process.cwd(),
+  "app",
+  "halka-arz",
+  "data",
+  "ekdemir-araci-kurum.xlsx"
+);
+
+const excelGitYolu = "app/halka-arz/data/ekdemir-araci-kurum.xlsx";
+
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
     variant === "icerik"
@@ -42,10 +53,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
 
 function sayiCevir(deger: unknown) {
   if (typeof deger === "number") return deger;
-
-  if (deger === null || deger === undefined || deger === "") {
-    return 0;
-  }
+  if (deger === null || deger === undefined || deger === "") return 0;
 
   const metin = String(deger)
     .trim()
@@ -54,13 +62,11 @@ function sayiCevir(deger: unknown) {
     .replace(",", ".");
 
   const sayi = Number(metin);
-
   return Number.isNaN(sayi) ? 0 : sayi;
 }
 
 function metinCevir(deger: unknown) {
   if (deger === null || deger === undefined) return "";
-
   return String(deger).trim();
 }
 
@@ -98,22 +104,11 @@ function besSatiraTamamla(liste: ListeSatiri[]) {
   return sonuc.slice(0, 5);
 }
 
-const excelDosyaYolu = path.join(
-  process.cwd(),
-  "app",
-  "halka-arz",
-  "data",
-  "ekdemir-araci-kurum.xlsx"
-);
-
 function excelOku() {
   try {
     const buffer = fs.readFileSync(excelDosyaYolu);
-
     const workbook = XLSX.read(buffer, { type: "buffer" });
-
     const sheetName = workbook.SheetNames[0];
-
     const ws = workbook.Sheets[sheetName];
 
     const rawRows = XLSX.utils.sheet_to_json<(string | number)[]>(ws, {
@@ -121,7 +116,7 @@ function excelOku() {
       defval: "",
     }) as (string | number)[][];
 
-    const veri = rawRows
+    return rawRows
       .slice(1)
       .map((row) => ({
         kurum: metinCevir(row[0]),
@@ -135,20 +130,41 @@ function excelOku() {
         maliyet: sayiCevir(row[8]),
       }))
       .filter((item) => item.kurum);
-
-    return veri;
   } catch {
     return [] as ExcelSatiri[];
   }
 }
 
+function guncellemeTarihiAl() {
+  try {
+    const gitTarihi = execFileSync(
+      "git",
+      ["log", "-1", "--format=%cI", "--", excelGitYolu],
+      {
+        cwd: process.cwd(),
+        encoding: "utf8",
+        stdio: ["ignore", "pipe", "ignore"],
+      }
+    ).trim();
+
+    if (!gitTarihi) return "-";
+
+    return new Intl.DateTimeFormat("tr-TR", {
+      timeZone: "Europe/Istanbul",
+      day: "2-digit",
+      month: "2-digit",
+      year: "numeric",
+      hour: "2-digit",
+      minute: "2-digit",
+    }).format(new Date(gitTarihi));
+  } catch {
+    return "-";
+  }
+}
+
 function aliciListesi(veri: ExcelSatiri[]): ListeSatiri[] {
   const pozitifler = veri.filter((item) => item.net > 0);
-
-  const toplamPozitifNet = pozitifler.reduce(
-    (sum, item) => sum + item.net,
-    0
-  );
+  const toplamPozitifNet = pozitifler.reduce((sum, item) => sum + item.net, 0);
 
   const liste = pozitifler
     .sort((a, b) => b.net - a.net)
@@ -157,9 +173,7 @@ function aliciListesi(veri: ExcelSatiri[]): ListeSatiri[] {
       kurum: item.kurum,
       lot: formatSayi(item.net, 0),
       yuzde: formatYuzde(
-        toplamPozitifNet > 0
-          ? (item.net / toplamPozitifNet) * 100
-          : 0
+        toplamPozitifNet > 0 ? (item.net / toplamPozitifNet) * 100 : 0
       ),
       maliyet: formatSayi(item.maliyet, 3),
       sagDeger: formatSayi(item.toplam, 0),
@@ -170,7 +184,6 @@ function aliciListesi(veri: ExcelSatiri[]): ListeSatiri[] {
 
 function saticiListesi(veri: ExcelSatiri[]): ListeSatiri[] {
   const negatifler = veri.filter((item) => item.net < 0);
-
   const toplamNegatifNet = Math.abs(
     negatifler.reduce((sum, item) => sum + item.net, 0)
   );
@@ -194,10 +207,7 @@ function saticiListesi(veri: ExcelSatiri[]): ListeSatiri[] {
 }
 
 function hacimListesi(veri: ExcelSatiri[]): ListeSatiri[] {
-  const toplamIslemLotu = veri.reduce(
-    (sum, item) => sum + item.toplam,
-    0
-  );
+  const toplamIslemLotu = veri.reduce((sum, item) => sum + item.toplam, 0);
 
   const liste = [...veri]
     .sort((a, b) => b.toplam - a.toplam)
@@ -206,9 +216,7 @@ function hacimListesi(veri: ExcelSatiri[]): ListeSatiri[] {
       kurum: item.kurum,
       lot: formatSayi(item.toplam, 0),
       yuzde: formatYuzde(
-        toplamIslemLotu > 0
-          ? (item.toplam / toplamIslemLotu) * 100
-          : 0
+        toplamIslemLotu > 0 ? (item.toplam / toplamIslemLotu) * 100 : 0
       ),
       maliyet: formatSayi(item.maliyet, 3),
       sagDeger: formatSayi(item.net, 0),
@@ -242,19 +250,15 @@ function KurumTablosu({
               <th className="border-b border-r border-zinc-300 px-3 py-2 text-left">
                 Kurum
               </th>
-
               <th className="border-b border-r border-zinc-300 px-3 py-2 text-right">
                 {lotBaslik}
               </th>
-
               <th className="border-b border-r border-zinc-300 px-3 py-2 text-right">
                 %
               </th>
-
               <th className="border-b border-r border-zinc-300 px-3 py-2 text-right">
                 Maliyet
               </th>
-
               <th className="border-b border-zinc-300 px-3 py-2 text-right">
                 {sagBaslik}
               </th>
@@ -274,19 +278,15 @@ function KurumTablosu({
                       <span>{item.kurum}</span>
                     )}
                   </td>
-
                   <td className="border-b border-r border-zinc-300 px-3 py-2 text-right text-[12px] md:text-[13px]">
                     {item.lot}
                   </td>
-
                   <td className="border-b border-r border-zinc-300 px-3 py-2 text-right text-[12px] md:text-[13px]">
                     {item.yuzde}
                   </td>
-
                   <td className="border-b border-r border-zinc-300 px-3 py-2 text-right text-[12px] md:text-[13px]">
                     {item.maliyet}
                   </td>
-
                   <td className="border-b border-zinc-300 px-3 py-2 text-right text-[12px] md:text-[13px]">
                     {item.sagDeger}
                   </td>
@@ -309,23 +309,10 @@ function KurumTablosu({
 
 export default function HalkaArzPage() {
   const veri = excelOku();
-
   const alicilar = aliciListesi(veri);
-
   const saticilar = saticiListesi(veri);
-
   const hacimciler = hacimListesi(veri);
-
-  const dosyaStat = fs.statSync(excelDosyaYolu);
-
-  const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
-    timeZone: "Europe/Istanbul",
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-  }).format(dosyaStat.mtime);
+  const guncellemeTarihi = guncellemeTarihiAl();
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
