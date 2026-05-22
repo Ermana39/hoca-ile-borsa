@@ -4,6 +4,9 @@ import Image from "next/image";
 import Link from "next/link";
 import * as XLSX from "xlsx";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 type ExcelSatiri = {
   kurum: string;
   alis: number;
@@ -24,7 +27,11 @@ type ListeSatiri = {
   sagDeger: string;
 };
 
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
+function ReklamAlani({
+  variant = "yatay",
+}: {
+  variant?: "yatay" | "icerik";
+}) {
   const alanClass =
     variant === "icerik"
       ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
@@ -110,7 +117,10 @@ function excelOku() {
   try {
     const buffer = fs.readFileSync(excelDosyaYolu);
 
-    const workbook = XLSX.read(buffer, { type: "buffer" });
+    const workbook = XLSX.read(buffer, {
+      type: "buffer",
+      cellDates: true,
+    });
 
     const sheetName = workbook.SheetNames[0];
 
@@ -316,16 +326,16 @@ export default function HalkaArzPage() {
 
   const hacimciler = hacimListesi(veri);
 
-  const dosyaStat = fs.statSync(excelDosyaYolu);
+  const excelStat = fs.statSync(excelDosyaYolu);
 
-  const guncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
+  const excelGuncellemeTarihi = new Intl.DateTimeFormat("tr-TR", {
     timeZone: "Europe/Istanbul",
     day: "2-digit",
     month: "2-digit",
     year: "numeric",
     hour: "2-digit",
     minute: "2-digit",
-  }).format(dosyaStat.mtime);
+  }).format(new Date(excelStat.mtimeMs));
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -424,7 +434,7 @@ export default function HalkaArzPage() {
               </h2>
 
               <div className="mt-2 text-sm font-medium text-zinc-500">
-                Güncelleme: {guncellemeTarihi}
+                Güncelleme: {excelGuncellemeTarihi}
               </div>
             </div>
 
