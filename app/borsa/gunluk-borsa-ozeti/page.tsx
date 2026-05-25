@@ -48,7 +48,7 @@ const tumHacimliler = [
 ];
 
 const tumParaGirisi = [
-  { kod: "THYAO", tutar: "+88.024.882" },
+  { kod: "KTLEV", tutar: "+88.024.882" },
   { kod: "AKBNK", tutar: "+81.208.788" },
   { kod: "GARAN", tutar: "+78.059.934" },
   { kod: "THYAO", tutar: "+55.069.706" },
