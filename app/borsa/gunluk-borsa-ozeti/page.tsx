@@ -2,248 +2,101 @@ import Image from "next/image";
 import Link from "next/link";
 
 const bistVeri = {
-  tarih: "22.05.2026",
-  kapanis: "13808.20",
-  degisimYuzde: 4.89,
-  toplamHacim: "351.316.661.806",
+  tarih: "25.05.2026",
+  kapanis: "13890.91",
+  degisimYuzde: 0.6,
+  toplamHacim: "236.002.181.903",
 };
 
 const tumYukselenler = [
-  { kod: "EKDMR", fark: "+10,00%" },
-  { kod: "HPSOL2", fark: "+10,00%" },
-  { kod: "DGATE", fark: "+10,00%" },
-  { kod: "BAYRK", fark: "+10,00%" },
-  { kod: "KAREL", fark: "+10,00%" },
+  { kod: "HATSN", fark: "+10,00%" },
+  { kod: "DITAS", fark: "+10,00%" },
+  { kod: "LINK", fark: "+10,00%" },
   { kod: "MAALT", fark: "+10,00%" },
   { kod: "UCAYM", fark: "+10,00%" },
-  { kod: "APYMTF2", fark: "+10,00%" },
-  { kod: "KCAER", fark: "+9,99%" },
-  { kod: "TEKTU", fark: "+9,99%" },
+  { kod: "QUAGR", fark: "+10,00%" },
+  { kod: "EKDMR", fark: "+10,00%" },
+  { kod: "CWENE", fark: "+9,99%" },
+  { kod: "HRKET", fark: "+9,99%" },
+  { kod: "ICBCT", fark: "+9,99%" },
 ];
 
 const tumDusenler = [
+  { kod: "TPKGYF1", fark: "-10,00%" },
+  { kod: "ISKPL", fark: "-10,00%" },
   { kod: "QPERPF1", fark: "-9,99%" },
-  { kod: "ISKPL", fark: "-9,97%" },
-  { kod: "DUNYH", fark: "-9,96%" },
-  { kod: "NIBAS", fark: "-9,95%" },
-  { kod: "RPSTPF2", fark: "-9,92%" },
-  { kod: "DCTTR", fark: "-9,48%" },
-  { kod: "HTPSBF2", fark: "-9,38%" },
-  { kod: "LIDER", fark: "-8,51%" },
-  { kod: "ALVES", fark: "-4,95%" },
-  { kod: "OTTO", fark: "-3,38%" },
+  { kod: "APYMDF2", fark: "-9,97%" },
+  { kod: "GUNDG", fark: "-9,96%" },
+  { kod: "ONCSM", fark: "-9,95%" },
+  { kod: "DUNYH", fark: "-9,41%" },
+  { kod: "BORSK", fark: "-7,81%" },
+  { kod: "GEDZA", fark: "-6,77%" },
+  { kod: "NIBAS", fark: "-4,97%" },
 ];
 
 const tumHacimliler = [
-  { kod: "AKBNK", hacim: "25.590.719.103" },
-  { kod: "THYAO", hacim: "17.739.665.908" },
-  { kod: "YKBNK", hacim: "14.697.159.165" },
-  { kod: "SASA", hacim: "11.401.091.616" },
-  { kod: "ASELS", hacim: "11.191.330.763" },
-  { kod: "ASTOR", hacim: "10.536.132.911" },
-  { kod: "ISCTR", hacim: "10.387.123.889" },
-  { kod: "EREGL", hacim: "7.930.713.733" },
-  { kod: "TUPRS", hacim: "7.474.495.945" },
-  { kod: "GARAN", hacim: "7.284.057.401" },
+  { kod: "THYAO", hacim: "13.153.259.974" },
+  { kod: "SASA", hacim: "8.970.753.496" },
+  { kod: "ASTOR", hacim: "8.339.934.435" },
+  { kod: "AKBNK", hacim: "8.089.260.171" },
+  { kod: "EREGL", hacim: "7.497.846.350" },
+  { kod: "ISCTR", hacim: "6.418.302.278" },
+  { kod: "ASELS", hacim: "6.147.024.877" },
+  { kod: "YKBNK", hacim: "5.135.923.278" },
+  { kod: "TUPRS", hacim: "4.816.626.139" },
+  { kod: "GARAN", hacim: "4.721.539.978" },
 ];
 
 const tumParaGirisi = [
-  { kod: "ASTOR", tutar: "+198.519.416" },
-  { kod: "TRALT", tutar: "+109.000.099" },
-  { kod: "ISCTR", tutar: "+99.881.529" },
-  { kod: "TERA", tutar: "+93.075.040" },
-  { kod: "ASELS", tutar: "+83.119.637" },
-  { kod: "CVKMD", tutar: "+64.617.299" },
-  { kod: "KCHOL", tutar: "+62.467.531" },
-  { kod: "DOFRB", tutar: "+49.463.896" },
+  { kod: "THYAO", tutar: "+88.024.882" },
+  { kod: "AKBNK", tutar: "+81.208.788" },
+  { kod: "GARAN", tutar: "+78.059.934" },
+  { kod: "THYAO", tutar: "+55.069.706" },
+  { kod: "MIATK", tutar: "+41.410.393" },
+  { kod: "EREGL", tutar: "+28.267.024" },
+  { kod: "PASEU", tutar: "+27.490.420" },
+  { kod: "SISE", tutar: "+24.741.336" },
+  { kod: "EFOR", tutar: "+23.156.364" },
+  { kod: "VAKBN", tutar: "+22.445.246" },
 ];
 
 const tumParaCikisi = [
-  { kod: "AKBNK", tutar: "-302.964.584" },
-  { kod: "GARAN", tutar: "-235.200.610" },
-  { kod: "YKBNK", tutar: "-134.601.417" },
-  { kod: "TUPRS", tutar: "-119.237.866" },
-  { kod: "PEKGY", tutar: "-96.226.411" },
-  { kod: "TCELL", tutar: "-83.237.997" },
-  { kod: "KONTR", tutar: "-66.713.367" },
-  { kod: "IZENR", tutar: "-50.931.501" },
-  { kod: "VAKBN", tutar: "-49.001.925" },
+  { kod: "BIMAS", tutar: "-313.522.300" },
+  { kod: "ASTOR", tutar: "-246.701.151" },
+  { kod: "ASELS", tutar: "-127.404.399" },
+  { kod: "TUPRS", tutar: "-110.840.347" },
+  { kod: "ISKPL", tutar: "-109.072.724" },
+  { kod: "ISCTR", tutar: "-98.453.998" },
+  { kod: "TAVHL", tutar: "-55.485.145" },
+  { kod: "KRDMD", tutar: "-53.693.990" },
+  { kod: "FROTO", tutar: "-46.054.077" },
 ];
 
 const enCokAlisYapanKurumlar = [
-  { kurum: "BANK OF AMERICA", hacim: "6.363.339.742", oran: "%52,68" },
-  { kurum: "TERA", hacim: "1.100.873.395", oran: "%9,11" },
-  { kurum: "DESTEK", hacim: "792.517.623", oran: "%6,56" },
-  { kurum: "VAKIF", hacim: "615.310.993", oran: "%5,09" },
-  { kurum: "YAPI KREDI", hacim: "569.402.161", oran: "%4,71" },
+  { kurum: "ZIRAAT", hacim: "1.333.253.882", oran: "%12,23" },
+  { kurum: "VAKIF", hacim: "1.154.239.071", oran: "%10,59" },
+  { kurum: "DESTEK", hacim: "1.132.345.530", oran: "%10,39" },
+  { kurum: "IS", hacim: "922.387.540", oran: "%8,46" },
+  { kurum: "TERA", hacim: "710.371.213", oran: "%6,52" },
 ];
 
 const enCokSatisYapanKurumlar = [
-  { kurum: "AK", hacim: "-2.011.612.239", oran: "%16,65" },
-  { kurum: "DENIZ", hacim: "-1.994.067.118", oran: "%16,51" },
-  { kurum: "INFO", hacim: "-1.351.982.383", oran: "%11,19" },
-  { kurum: "QNB YATIRIM", hacim: "-960.593.952", oran: "%7,95" },
-  { kurum: "TEB", hacim: "-787.670.280", oran: "%6,52" },
+  { kurum: "BANK OF AMERICA", hacim: "-5.915.043.715", oran: "%54,27" },
+  { kurum: "TACIRLER", hacim: "-2.219.229.945", oran: "%20,36" },
+  { kurum: "GLOBAL", hacim: "-650.289.248", oran: "%5,97" },
+  { kurum: "UNLU", hacim: "-623.531.647", oran: "%5,72" },
+  { kurum: "KUVEYT TURK", hacim: "-361.134.797", oran: "%3,31" },
 ];
 
 const enCokHacimYapanKurumlar = [
-  { kurum: "BANK OF AMERICA", hacim: "109.059.177.917", oran: "%15,52" },
-  { kurum: "YAPI KREDI", hacim: "102.006.352.982", oran: "%14,52" },
-  { kurum: "IS", hacim: "77.598.063.924", oran: "%11,04" },
-  { kurum: "AK", hacim: "61.595.860.144", oran: "%8,77" },
-  { kurum: "MIDAS", hacim: "27.739.718.917", oran: "%3,95" },
+  { kurum: "BANK OF AMERICA", hacim: "64.119.090.850", oran: "%13,58" },
+  { kurum: "YAPI KREDI", hacim: "63.287.150.922", oran: "%13,41" },
+  { kurum: "IS", hacim: "51.451.069.394", oran: "%10,90" },
+  { kurum: "AK", hacim: "35.590.005.708", oran: "%7,54" },
+  { kurum: "TACIRLER", hacim: "20.261.918.699", oran: "%4,29" },
 ];
 
 const ekonomikTakvimVerileri = [
-  {
-    tarih: "22.05.2026",
-    kayitlar: [
-      {
-        saat: "10:00",
-        ulke: "TR",
-        gosterge: "İmalat Sanayi Kapasite Kullanım Oranı (MEA)",
-        onem: "kirmizi" as const,
-        aciklanan: "74.2%",
-        beklenti: "-",
-        onceki: "74.0%",
-      },
-      {
-        saat: "10:00",
-        ulke: "TR",
-        gosterge: "Saatlik İşgücü Maliyet Endeksi (Yıllık)",
-        onem: "sari-tek" as const,
-        aciklanan: "41.4%",
-        beklenti: "-",
-        onceki: "34.2%",
-      },
-      {
-        saat: "10:00",
-        ulke: "TR",
-        gosterge: "Saatlik Kazanç Endeksi (Yıllık, %)",
-        onem: "sari-tek" as const,
-        aciklanan: "39.4%",
-        beklenti: "-",
-        onceki: "35.0%",
-      },
-      {
-        saat: "10:00",
-        ulke: "TR",
-        gosterge: "Toplam İhracat (milyon usd/aylık)",
-        onem: "kirmizi" as const,
-        aciklanan: "25.408",
-        beklenti: "25.403",
-        onceki: "21.899",
-      },
-      {
-        saat: "10:00",
-        ulke: "TR",
-        gosterge: "Toplam İthalat (milyon usd /aylık)",
-        onem: "kirmizi" as const,
-        aciklanan: "33.900",
-        beklenti: "33.909",
-        onceki: "33.120",
-      },
-      {
-        saat: "10:00",
-        ulke: "TR",
-        gosterge: "Dış Ticaret Dengesi (milyon $/aylık)",
-        onem: "kirmizi" as const,
-        aciklanan: "-8.500",
-        beklenti: "-8.506",
-        onceki: "-11.221",
-      },
-      {
-        saat: "10:00",
-        ulke: "TR",
-        gosterge: "İhracatın İthalatı Karşılama Oranı % (aylık)",
-        onem: "kirmizi" as const,
-        aciklanan: "74.9%",
-        beklenti: "74.4%",
-        onceki: "66.1%",
-      },
-      {
-        saat: "10:00",
-        ulke: "TR",
-        gosterge: "Uluslararası Yatırım Pozisyonu (milyar usd)",
-        onem: "turuncu-gri" as const,
-        aciklanan: "360.8",
-        beklenti: "-",
-        onceki: "347.6",
-      },
-      {
-        saat: "10:00",
-        ulke: "TR",
-        gosterge: "Türkiye'nin Uluslararası Yükümlülükleri (milyar usd)",
-        onem: "turuncu-gri" as const,
-        aciklanan: "755.8",
-        beklenti: "-",
-        onceki: "786.8",
-      },
-      {
-        saat: "10:00",
-        ulke: "TR",
-        gosterge: "TCMB Reel Kesim Güven Endeksi",
-        onem: "turuncu-gri" as const,
-        aciklanan: "101.1",
-        beklenti: "-",
-        onceki: "98.6",
-      },
-      {
-        saat: "10:00",
-        ulke: "TR",
-        gosterge: "Yeni Kurulan Şirket Sayısı (adet)",
-        onem: "sari" as const,
-        aciklanan: "10.853",
-        beklenti: "-",
-        onceki: "8.379",
-      },
-      {
-        saat: "10:00",
-        ulke: "TR",
-        gosterge: "Kapanan Şirket Sayısı (adet)",
-        onem: "sari" as const,
-        aciklanan: "3.085",
-        beklenti: "-",
-        onceki: "1.809",
-      },
-      {
-        saat: "10:00",
-        ulke: "TR",
-        gosterge: "Yapı Ruhsatı Verilen Bina Sayısı (yıllık)",
-        onem: "turuncu-gri" as const,
-        aciklanan: "34.579",
-        beklenti: "-",
-        onceki: "50.998",
-      },
-      {
-        saat: "10:00",
-        ulke: "TR",
-        gosterge: "Toplam İstihdam Endeksi (Yıllık)",
-        onem: "sari" as const,
-        aciklanan: "1.2%",
-        beklenti: "-",
-        onceki: "1.1%",
-      },
-      {
-        saat: "10:00",
-        ulke: "TR",
-        gosterge: "Kapasite Kullanım Oranı",
-        onem: "sari-tek" as const,
-        aciklanan: "74.2%",
-        beklenti: "-",
-        onceki: "73.8%",
-      },
-      {
-        saat: "11:00",
-        ulke: "TR",
-        gosterge: "Yabancı Ziyaretçiler (bin kişi)",
-        onem: "turuncu-gri" as const,
-        aciklanan: "3.533",
-        beklenti: "-",
-        onceki: "2.464",
-      },
-    ],
-  },
   {
     tarih: "25.05.2026",
     kayitlar: [
@@ -252,7 +105,7 @@ const ekonomikTakvimVerileri = [
         ulke: "TR",
         gosterge: "TÜİK Ekonomik Güven Endeksi",
         onem: "turuncu-gri" as const,
-        aciklanan: "-",
+        aciklanan: "97.2",
         beklenti: "-",
         onceki: "96.4",
       },
@@ -270,7 +123,11 @@ const enHacimliler = ilkBesKisaKodlu(tumHacimliler);
 const paraGirisi = ilkBesKisaKodlu(tumParaGirisi);
 const paraCikisi = ilkBesKisaKodlu(tumParaCikisi);
 
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" | "buyuk" }) {
+function ReklamAlani({
+  variant = "yatay",
+}: {
+  variant?: "yatay" | "icerik" | "buyuk";
+}) {
   const alanClass =
     variant === "icerik"
       ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
@@ -308,7 +165,9 @@ function ListeKutusu({
 
   return (
     <div className={`rounded-2xl border p-4 ${renkSinifi}`}>
-      <h2 className="mb-4 text-center text-xl font-bold text-zinc-900">{baslik}</h2>
+      <h2 className="mb-4 text-center text-xl font-bold text-zinc-900">
+        {baslik}
+      </h2>
 
       <div className="overflow-hidden rounded-xl border border-zinc-200 bg-white">
         <div className="grid grid-cols-2 border-b border-zinc-200 bg-zinc-100 px-4 py-3 text-sm font-bold text-zinc-700">
@@ -319,7 +178,7 @@ function ListeKutusu({
         {veriler.length > 0 ? (
           veriler.map((item, index) => (
             <div
-              key={item.kod}
+              key={`${item.kod}-${index}`}
               className="grid grid-cols-2 border-b border-zinc-100 px-4 py-3 text-sm last:border-b-0"
             >
               <div className="font-semibold text-zinc-900">
@@ -358,7 +217,9 @@ function KurumKutusu({
 
   return (
     <div className={`rounded-2xl border p-4 ${renkSinifi}`}>
-      <h2 className="mb-4 text-center text-xl font-bold text-zinc-900">{baslik}</h2>
+      <h2 className="mb-4 text-center text-xl font-bold text-zinc-900">
+        {baslik}
+      </h2>
 
       <div className="overflow-hidden rounded-xl border border-zinc-200 bg-white">
         <div className="grid grid-cols-3 border-b border-zinc-200 bg-zinc-100 px-4 py-3 text-sm font-bold text-zinc-700">
@@ -451,7 +312,9 @@ function TakvimSatiri({
       <div>
         <OnemKutulari tip={onem} />
       </div>
-      <div className="text-center font-semibold text-zinc-700">{aciklanan}</div>
+      <div className="text-center font-semibold text-zinc-700">
+        {aciklanan}
+      </div>
       <div className="text-center font-semibold text-zinc-700">{beklenti}</div>
       <div className="text-center font-semibold text-zinc-700">{onceki}</div>
     </div>
@@ -480,7 +343,9 @@ export default function GunlukBorsaOzetiPage() {
           </Link>
         </div>
 
-        <h1 className="mb-6 text-3xl font-bold text-zinc-900">Günlük Borsa Özeti</h1>
+        <h1 className="mb-6 text-3xl font-bold text-zinc-900">
+          Günlük Borsa Özeti
+        </h1>
 
         <section className="mb-8">
           <ReklamAlani variant="yatay" />
@@ -505,7 +370,9 @@ export default function GunlukBorsaOzetiPage() {
             <div className="grid min-h-[320px] grid-rows-4 text-center">
               <div className="flex items-center justify-center border-b border-zinc-200">
                 <div>
-                  <div className="text-2xl font-semibold text-zinc-700">XU100</div>
+                  <div className="text-2xl font-semibold text-zinc-700">
+                    XU100
+                  </div>
                   <div className="mt-3 text-4xl font-bold text-zinc-900">
                     {bistVeri.kapanis}
                   </div>
@@ -587,12 +454,14 @@ export default function GunlukBorsaOzetiPage() {
             renk="yesil"
             degerBaslik="Fark %"
           />
+
           <ListeKutusu
             baslik="En Çok Düşen"
             veriler={enCokDusenler}
             renk="kirmizi"
             degerBaslik="Fark %"
           />
+
           <ListeKutusu
             baslik="En Hacimliler"
             veriler={enHacimliler}
@@ -608,6 +477,7 @@ export default function GunlukBorsaOzetiPage() {
             renk="yesil"
             degerBaslik="Tutar"
           />
+
           <ListeKutusu
             baslik="İlk 5 Para Çıkışı"
             veriler={paraCikisi}
@@ -627,11 +497,13 @@ export default function GunlukBorsaOzetiPage() {
               veriler={enCokAlisYapanKurumlar}
               renk="yesil"
             />
+
             <KurumKutusu
               baslik="En Çok Satış Yapanlar"
               veriler={enCokSatisYapanKurumlar}
               renk="kirmizi"
             />
+
             <KurumKutusu
               baslik="En Çok Hacim Yapanlar"
               veriler={enCokHacimYapanKurumlar}
@@ -650,8 +522,8 @@ export default function GunlukBorsaOzetiPage() {
           </h2>
 
           <p className="mb-4 leading-7 text-zinc-700">
-            Günlük borsa özeti sayfası, Borsa İstanbul piyasalarında yaşanan güncel
-            gelişmeleri tek ekranda takip etmek isteyen yatırımcılar için
+            Günlük borsa özeti sayfası, Borsa İstanbul piyasalarında yaşanan
+            güncel gelişmeleri tek ekranda takip etmek isteyen yatırımcılar için
             hazırlanmıştır. Bu sayfada BIST 100 endeksi kapanış verileri, günlük
             değişim oranları, en çok yükselen hisseler, en çok düşen hisseler,
             para girişi ve para çıkışı yaşanan hisseler gibi önemli piyasa
@@ -660,24 +532,25 @@ export default function GunlukBorsaOzetiPage() {
 
           <p className="mb-4 leading-7 text-zinc-700">
             Günlük borsa verileri, yatırımcıların piyasa yönünü anlaması ve kısa
-            vadeli fiyat hareketlerini değerlendirmesi açısından büyük önem taşır.
-            Özellikle işlem hacmi yüksek hisseler, para girişi yaşanan şirketler,
-            kurumsal işlemler ve dikkat çeken sektör hareketleri yatırım
-            kararlarında önemli sinyaller verebilir.
+            vadeli fiyat hareketlerini değerlendirmesi açısından büyük önem
+            taşır. Özellikle işlem hacmi yüksek hisseler, para girişi yaşanan
+            şirketler, kurumsal işlemler ve dikkat çeken sektör hareketleri
+            yatırım kararlarında önemli sinyaller verebilir.
           </p>
 
           <p className="mb-4 leading-7 text-zinc-700">
             Sayfada yer alan ekonomik takvim, en çok yükselen ve düşen hisseler,
-            en hacimli hisseler ve kurum bazlı işlem dağılımları sayesinde piyasanın
-            gün içindeki genel görünümünü daha detaylı inceleyebilirsiniz. Bu yapı,
-            hem kısa vadeli traderlar hem de uzun vadeli yatırımcılar için pratik
-            bir takip ekranı sunar.
+            en hacimli hisseler ve kurum bazlı işlem dağılımları sayesinde
+            piyasanın gün içindeki genel görünümünü daha detaylı
+            inceleyebilirsiniz. Bu yapı, hem kısa vadeli traderlar hem de uzun
+            vadeli yatırımcılar için pratik bir takip ekranı sunar.
           </p>
 
           <p className="leading-7 text-zinc-700">
             Güncel BIST 100 verileri, günlük hisse performansları, işlem hacmi
             sıralamaları, para giriş çıkış analizleri, ekonomik takvim ve kurum
-            bazlı piyasa özeti için bu sayfayı düzenli olarak takip edebilirsiniz.
+            bazlı piyasa özeti için bu sayfayı düzenli olarak takip
+            edebilirsiniz.
           </p>
         </section>
       </div>
