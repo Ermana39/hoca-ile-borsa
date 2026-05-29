@@ -2,8 +2,8 @@ import Link from "next/link";
 
 const analizler = [
    {
-    baslik: "AEFES Grafik Analiz",
-    href: "/borsa/grafik-analiz/aefes",
+    baslik: "TCELL Grafik Analiz",
+    href: "/borsa/grafik-analiz/tcell",
   },
 ];
 
