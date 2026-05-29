@@ -131,6 +131,7 @@ export default async function EgitimVideolariPage() {
         <h1 className="mb-2 text-3xl font-bold text-zinc-900">
           Eğitim Videoları
         </h1>
+
         <p className="mb-8 max-w-3xl text-base text-zinc-600">
           Borsa eğitim videolarına aşağıdaki kartlardan ulaşabilirsiniz.
         </p>
@@ -169,6 +170,8 @@ export default async function EgitimVideolariPage() {
             </a>
           ))}
         </section>
+
+        <ViopEgitimBanner />
 
         <section className="mt-8">
           <ReklamAlani variant="icerik" />
@@ -209,8 +212,6 @@ export default async function EgitimVideolariPage() {
             sayfayı düzenli olarak takip edebilirsiniz.
           </p>
         </section>
-
-        <ViopEgitimBanner />
       </div>
     </main>
   );
