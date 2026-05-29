@@ -289,8 +289,8 @@ function MevduatGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
   const bottomPadding = 56;
 
   const yAxisMin = 41;
-  const yAxisMax = 45;
-  const yAxisTicks = [41, 42, 43, 44, 45];
+  const yAxisMax = 44;
+  const yAxisTicks = [41, 42, 43, 44];
   const chartInnerWidth = width - leftPadding - rightPadding;
   const chartInnerHeight = height - topPadding - bottomPadding;
   const yRange = yAxisMax - yAxisMin;

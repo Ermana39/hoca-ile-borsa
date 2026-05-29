@@ -282,20 +282,15 @@ function KonutGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
   }
 
   const width = 960;
-  const height = 360;
+  const height = 460;
   const leftPadding = 72;
   const rightPadding = 24;
-  const topPadding = 24;
-  const bottomPadding = 56;
+  const topPadding = 28;
+  const bottomPadding = 64;
 
-  const minValue = Math.min(...data.map((item) => item.ortalama));
-  const maxValue = Math.max(...data.map((item) => item.ortalama));
-  const yAxisMin = Math.floor(minValue);
-  const yAxisMax = Math.max(Math.ceil(maxValue), yAxisMin + 1);
-  const yAxisTicks = Array.from(
-    { length: yAxisMax - yAxisMin + 1 },
-    (_, index) => yAxisMin + index
-  );
+  const yAxisMin = 2.5;
+  const yAxisMax = 3;
+  const yAxisTicks = [2.5, 2.6, 2.7, 2.8, 2.9, 3];
 
   const chartInnerWidth = width - leftPadding - rightPadding;
   const chartInnerHeight = height - topPadding - bottomPadding;
@@ -322,6 +317,10 @@ function KonutGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
   function getYByValue(value: number) {
     const normalized = (value - yAxisMin) / yRange;
     return topPadding + (1 - normalized) * chartInnerHeight;
+  }
+
+  function formatAxisRate(value: number) {
+    return `%${value.toFixed(1).replace(".0", "").replace(".", ",")}`;
   }
 
   const points = data.map((item, index) => {
@@ -362,7 +361,7 @@ function KonutGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
 
       <div className="overflow-x-auto">
         <div className="min-w-[960px]">
-          <svg viewBox={`0 0 ${width} ${height}`} className="h-[360px] w-full">
+          <svg viewBox={`0 0 ${width} ${height}`} className="h-[460px] w-full">
             {yAxisTicks.map((tick) => {
               const y = getYByValue(tick);
 
@@ -383,7 +382,7 @@ function KonutGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
                     fontSize="12"
                     fill="#71717a"
                   >
-                    %{tick}
+                    {formatAxisRate(tick)}
                   </text>
                 </g>
               );
@@ -436,7 +435,7 @@ function KonutGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
                       />
                       <text
                         x={point.x}
-                        y={height - 18}
+                        y={height - 22}
                         textAnchor="middle"
                         fontSize="11"
                         fill="#71717a"
