@@ -46,6 +46,29 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
+function ViopEgitimBanner() {
+  return (
+    <section className="mt-8">
+      <Link
+        href="/viop-egitim"
+        prefetch={false}
+        aria-label="VİOP eğitim serisi detay sayfasına git"
+        className="group block overflow-hidden rounded-2xl shadow-[0_10px_35px_rgba(15,23,42,0.12)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_45px_rgba(15,23,42,0.18)] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+      >
+        <Image
+          src="/viop-egitim-banner.png"
+          alt="Yaşayan VİOP eğitim seti lansman bannerı"
+          width={2112}
+          height={512}
+          unoptimized
+          className="block h-auto w-full rounded-2xl"
+          priority={false}
+        />
+      </Link>
+    </section>
+  );
+}
+
 async function getVideoMeta(video: VideoItem): Promise<ResolvedVideo> {
   const fallback: ResolvedVideo = {
     id: video.id,
@@ -55,7 +78,9 @@ async function getVideoMeta(video: VideoItem): Promise<ResolvedVideo> {
   };
 
   try {
-    const oembedUrl = `https://www.youtube.com/oembed?url=${encodeURIComponent(video.url)}&format=json`;
+    const oembedUrl = `https://www.youtube.com/oembed?url=${encodeURIComponent(
+      video.url
+    )}&format=json`;
 
     const response = await fetch(oembedUrl, {
       next: { revalidate: 3600 },
@@ -103,7 +128,9 @@ export default async function EgitimVideolariPage() {
           </Link>
         </div>
 
-        <h1 className="mb-2 text-3xl font-bold text-zinc-900">Eğitim Videoları</h1>
+        <h1 className="mb-2 text-3xl font-bold text-zinc-900">
+          Eğitim Videoları
+        </h1>
         <p className="mb-8 max-w-3xl text-base text-zinc-600">
           Borsa eğitim videolarına aşağıdaki kartlardan ulaşabilirsiniz.
         </p>
@@ -153,34 +180,37 @@ export default async function EgitimVideolariPage() {
           </h2>
 
           <p className="mb-4 leading-7 text-zinc-700">
-            Borsa eğitim videoları sayfası, yatırım dünyasına yeni adım atanlar ve
-            mevcut bilgisini geliştirmek isteyenler için hazırlanmıştır. Bu sayfada
-            hisse senedi, teknik analiz, temel analiz, yatırım stratejileri ve
-            piyasa okuryazarlığı gibi konularda hazırlanan eğitim videolarına kolayca
-            ulaşabilirsiniz.
+            Borsa eğitim videoları sayfası, yatırım dünyasına yeni adım atanlar
+            ve mevcut bilgisini geliştirmek isteyenler için hazırlanmıştır. Bu
+            sayfada hisse senedi, teknik analiz, temel analiz, yatırım
+            stratejileri ve piyasa okuryazarlığı gibi konularda hazırlanan
+            eğitim videolarına kolayca ulaşabilirsiniz.
           </p>
 
           <p className="mb-4 leading-7 text-zinc-700">
-            Borsa hakkında doğru bilgiye ulaşmak, yatırım kararlarını daha bilinçli
-            vermek açısından büyük önem taşır. Eğitim videoları sayesinde piyasaların
-            nasıl çalıştığını, hisse seçiminde nelere dikkat edilmesi gerektiğini ve
-            yatırım sürecinde kullanılan temel kavramları daha anlaşılır şekilde
-            öğrenebilirsiniz.
+            Borsa hakkında doğru bilgiye ulaşmak, yatırım kararlarını daha
+            bilinçli vermek açısından büyük önem taşır. Eğitim videoları
+            sayesinde piyasaların nasıl çalıştığını, hisse seçiminde nelere
+            dikkat edilmesi gerektiğini ve yatırım sürecinde kullanılan temel
+            kavramları daha anlaşılır şekilde öğrenebilirsiniz.
           </p>
 
           <p className="mb-4 leading-7 text-zinc-700">
             Yeni başlayan yatırımcılar için borsa eğitimi içerikleri önemli bir
             rehber niteliği taşırken, deneyimli kullanıcılar için de farklı bakış
-            açıları sunabilir. Video içerikler sayesinde hem teorik bilgileri hem de
-            uygulamaya dönük örnekleri pratik şekilde takip etmek mümkün olur.
+            açıları sunabilir. Video içerikler sayesinde hem teorik bilgileri hem
+            de uygulamaya dönük örnekleri pratik şekilde takip etmek mümkün
+            olur.
           </p>
 
           <p className="leading-7 text-zinc-700">
-            Güncel borsa eğitim videoları, hisse senedi analiz içerikleri, yatırım
-            stratejileri ve finansal okuryazarlık videoları için bu sayfayı düzenli
-            olarak takip edebilirsiniz.
+            Güncel borsa eğitim videoları, hisse senedi analiz içerikleri,
+            yatırım stratejileri ve finansal okuryazarlık videoları için bu
+            sayfayı düzenli olarak takip edebilirsiniz.
           </p>
         </section>
+
+        <ViopEgitimBanner />
       </div>
     </main>
   );
