@@ -283,12 +283,23 @@ function KonutGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
 
   const width = 960;
   const height = 360;
-  const padding = 42;
-  const bottomSpace = 56;
+  const leftPadding = 72;
+  const rightPadding = 24;
+  const topPadding = 24;
+  const bottomPadding = 56;
 
   const minValue = Math.min(...data.map((item) => item.ortalama));
   const maxValue = Math.max(...data.map((item) => item.ortalama));
-  const range = Math.max(maxValue - minValue, 1);
+  const yAxisMin = Math.floor(minValue);
+  const yAxisMax = Math.max(Math.ceil(maxValue), yAxisMin + 1);
+  const yAxisTicks = Array.from(
+    { length: yAxisMax - yAxisMin + 1 },
+    (_, index) => yAxisMin + index
+  );
+
+  const chartInnerWidth = width - leftPadding - rightPadding;
+  const chartInnerHeight = height - topPadding - bottomPadding;
+  const yRange = yAxisMax - yAxisMin;
 
   const parsedDates = data.map((item) => parseTrDateToUtc(item.tarih));
   const allDatesValid = parsedDates.every((item) => item !== null);
@@ -305,7 +316,12 @@ function KonutGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
   const dateRange = Math.max(maxDate - minDate, 1);
 
   function getXByDate(dateValue: number) {
-    return padding + ((dateValue - minDate) / dateRange) * (width - padding * 2);
+    return leftPadding + ((dateValue - minDate) / dateRange) * chartInnerWidth;
+  }
+
+  function getYByValue(value: number) {
+    const normalized = (value - yAxisMin) / yRange;
+    return topPadding + (1 - normalized) * chartInnerHeight;
   }
 
   const points = data.map((item, index) => {
@@ -315,14 +331,10 @@ function KonutGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
       useDateScale && dateValue !== null
         ? getXByDate(dateValue)
         : data.length === 1
-          ? width / 2
-          : padding + (index * (width - padding * 2)) / (data.length - 1);
+          ? leftPadding + chartInnerWidth / 2
+          : leftPadding + (index * chartInnerWidth) / (data.length - 1);
 
-    const y =
-      height -
-      bottomSpace -
-      ((item.ortalama - minValue) / range) *
-        (height - padding - bottomSpace - 20);
+    const y = getYByValue(item.ortalama);
 
     return {
       x,
@@ -351,20 +363,46 @@ function KonutGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
       <div className="overflow-x-auto">
         <div className="min-w-[960px]">
           <svg viewBox={`0 0 ${width} ${height}`} className="h-[360px] w-full">
+            {yAxisTicks.map((tick) => {
+              const y = getYByValue(tick);
+
+              return (
+                <g key={tick}>
+                  <line
+                    x1={leftPadding}
+                    y1={y}
+                    x2={width - rightPadding}
+                    y2={y}
+                    stroke="#e5e7eb"
+                    strokeWidth="1"
+                  />
+                  <text
+                    x={leftPadding - 10}
+                    y={y + 4}
+                    textAnchor="end"
+                    fontSize="12"
+                    fill="#71717a"
+                  >
+                    %{tick}
+                  </text>
+                </g>
+              );
+            })}
+
             <line
-              x1={padding}
-              y1={height - bottomSpace}
-              x2={width - padding}
-              y2={height - bottomSpace}
+              x1={leftPadding}
+              y1={topPadding}
+              x2={leftPadding}
+              y2={height - bottomPadding}
               stroke="#d4d4d8"
               strokeWidth="1"
             />
 
             <line
-              x1={padding}
-              y1={padding}
-              x2={padding}
-              y2={height - bottomSpace}
+              x1={leftPadding}
+              y1={height - bottomPadding}
+              x2={width - rightPadding}
+              y2={height - bottomPadding}
               stroke="#d4d4d8"
               strokeWidth="1"
             />
@@ -386,23 +424,13 @@ function KonutGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
                 <g key={`${point.label}-${index}`}>
                   <circle cx={point.x} cy={point.y} r="4" fill="#111827" />
 
-                  <text
-                    x={point.x}
-                    y={point.y - 12}
-                    textAnchor="middle"
-                    fontSize="11"
-                    fill="#52525b"
-                  >
-                    %{point.value.toFixed(2).replace(".", ",")}
-                  </text>
-
                   {tarihGoster ? (
                     <>
                       <line
                         x1={point.x}
-                        y1={height - bottomSpace}
+                        y1={height - bottomPadding}
                         x2={point.x}
-                        y2={height - bottomSpace + 6}
+                        y2={height - bottomPadding + 6}
                         stroke="#a1a1aa"
                         strokeWidth="1"
                       />
