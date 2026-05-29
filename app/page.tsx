@@ -221,6 +221,76 @@ function KategoriKutusu({
   );
 }
 
+function ViopEgitimBanner() {
+  return (
+    <section className="px-4 pb-6 md:px-6">
+      <Link
+        href="/viop-egitim"
+        prefetch={false}
+        aria-label="VİOP eğitim serisi sayfasına git"
+        className="group relative block overflow-hidden rounded-3xl border border-emerald-200 bg-gradient-to-br from-slate-950 via-blue-950 to-emerald-900 p-5 shadow-[0_14px_45px_rgba(15,23,42,0.18)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_18px_55px_rgba(15,23,42,0.25)] md:p-7"
+      >
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(16,185,129,0.35),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(59,130,246,0.30),transparent_35%)]" />
+
+        <div className="relative grid gap-6 lg:grid-cols-[1.25fr_0.75fr] lg:items-center">
+          <div>
+            <div className="mb-4 flex flex-wrap items-center gap-2">
+              <span className="inline-flex rounded-full bg-emerald-400 px-3 py-1 text-[11px] font-black uppercase tracking-wide text-slate-950">
+                Yeni Eğitim
+              </span>
+              <span className="inline-flex rounded-full border border-white/20 bg-white/10 px-3 py-1 text-[11px] font-bold uppercase tracking-wide text-emerald-100">
+                Yaşayan VİOP Arşivi
+              </span>
+            </div>
+
+            <h2 className="text-2xl font-black leading-tight tracking-tight text-white md:text-4xl">
+              VİOP’u Sıfırdan Öğrenmek İsteyenler İçin Yaşayan Eğitim Serisi
+            </h2>
+
+            <p className="mt-4 max-w-3xl text-sm leading-7 text-slate-200 md:text-base">
+              Sadece 12 videoluk klasik bir kurs değil; zaman içinde ömür boyu
+              yeni örnek işlem analizleri, piyasa örnekleri ve risk yönetimi
+              değerlendirmeleriyle büyümeye devam edecek bir eğitim arşivi.
+            </p>
+
+            <div className="mt-5 flex flex-wrap gap-2 text-xs font-bold text-white md:text-sm">
+              <span className="rounded-full bg-white/10 px-3 py-2 ring-1 ring-white/15">
+                Long-Short
+              </span>
+              <span className="rounded-full bg-white/10 px-3 py-2 ring-1 ring-white/15">
+                Kaldıraç
+              </span>
+              <span className="rounded-full bg-white/10 px-3 py-2 ring-1 ring-white/15">
+                Stop Disiplini
+              </span>
+              <span className="rounded-full bg-white/10 px-3 py-2 ring-1 ring-white/15">
+                Risk Yönetimi
+              </span>
+            </div>
+          </div>
+
+          <div className="rounded-3xl border border-white/15 bg-white/10 p-4 text-white backdrop-blur md:p-5">
+            <p className="text-sm font-semibold text-slate-300 line-through">
+              Standart fiyat: 2.950 TL
+            </p>
+            <p className="mt-2 text-4xl font-black text-emerald-300 md:text-5xl">
+              1.475 TL
+            </p>
+            <p className="mt-2 text-sm font-bold text-orange-200">
+              Lansmana özel %50 indirim
+            </p>
+
+            <div className="mt-5 inline-flex w-full items-center justify-center rounded-2xl bg-white px-5 py-3 text-center text-sm font-black text-slate-950 transition group-hover:bg-emerald-300 md:text-base">
+              Eğitim Detaylarını Gör →
+            </div>
+          </div>
+        </div>
+      </Link>
+    </section>
+  );
+}
+
+
 function getIdFromHref(href: string) {
   const match = href.match(/(\d+)(?!.*\d)/);
   return match ? Number(match[1]) : 0;
@@ -698,6 +768,8 @@ export default function HomePage() {
             ))}
           </div>
         </section>
+
+        <ViopEgitimBanner />
 
         <section className="px-4 pb-6 md:px-6">
           <div className="overflow-hidden rounded-3xl border border-zinc-200 bg-gradient-to-br from-zinc-50 via-white to-blue-50/50 p-4 shadow-sm md:p-6">
