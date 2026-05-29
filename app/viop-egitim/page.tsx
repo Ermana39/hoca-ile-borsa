@@ -1,194 +1,458 @@
 import Link from "next/link";
 
+export const metadata = {
+  title: "VİOP Eğitim Serisi | Hoca İle Borsa",
+  description:
+    "VİOP’u sıfırdan öğrenmek isteyenler için yaşayan eğitim serisi. 12 bölümlük temel eğitim ve zaman içinde eklenecek örnek işlem analizleri.",
+};
+
+const egitimKonulari = [
+  "VİOP nedir?",
+  "Long-short mantığı",
+  "Teminat ve kaldıraç",
+  "Günlük uzlaşma",
+  "Emir ekranı",
+  "Kontrat seçimi",
+  "Vade sonu",
+  "Rollover",
+  "Risk yönetimi",
+  "Stop disiplini",
+  "Spekülatif işlem mantığı",
+  "En sık yapılan hatalar",
+];
+
+const yasayanArsivMaddeleri = [
+  "Örnek işlem analizleri",
+  "Piyasa içinden gerçek örneklendirmeler",
+  "İşlem öncesi düşünce mantığı",
+  "İşlem sonrası değerlendirme",
+  "Risk yönetimi ve stop örnekleri",
+  "Doğru ve hatalı karar noktaları",
+];
+
+const bolumler = [
+  {
+    number: "01",
+    title: "VİOP Nedir?",
+    items: ["VİOP’un mantığı", "Spot piyasadan farkı", "Ne işe yarar?"],
+  },
+  {
+    number: "02",
+    title: "Vadeli İşlem Sözleşmesi",
+    items: ["Sözleşme nedir?", "Vade nedir?", "Dayanak varlık nedir?"],
+  },
+  {
+    number: "03",
+    title: "Long ve Short Mantığı",
+    items: [
+      "Long işlem nedir?",
+      "Short işlem nedir?",
+      "Yükseliş ve düşüşten kazanma mantığı",
+    ],
+  },
+  {
+    number: "04",
+    title: "Teminat ve Kaldıraç",
+    items: ["Teminat sistemi", "Kaldıraç nedir?", "Risk nasıl büyür?"],
+  },
+  {
+    number: "05",
+    title: "Günlük Uzlaşma",
+    items: [
+      "Kâr-zarar nasıl işler?",
+      "Gün sonu hesap mantığı",
+      "Teminata etkisi",
+    ],
+  },
+  {
+    number: "06",
+    title: "Emir Sistemi ve İşlem Ekranı",
+    items: [
+      "VİOP ekranı nasıl okunur?",
+      "Alış-satış kademeleri",
+      "Limit emir ve piyasa emir mantığı",
+    ],
+  },
+  {
+    number: "07",
+    title: "Vade Sonu İşleyişi",
+    items: [
+      "Vade sonu günü ne olur?",
+      "Nakdi uzlaşma mantığı",
+      "Son güne pozisyon taşımanın riskleri",
+    ],
+  },
+  {
+    number: "08",
+    title: "Pozisyon Taşıma ve Rollover",
+    items: [
+      "Rollover nedir?",
+      "Yeni vadeye geçiş mantığı",
+      "Likidite neden yeni vadeye kayar?",
+    ],
+  },
+  {
+    number: "09",
+    title: "VİOP’ta Risk Yönetimi",
+    items: [
+      "İşlem başına risk belirleme",
+      "Pozisyon boyutu ayarlama",
+      "Kaldıraç kontrolü",
+    ],
+  },
+  {
+    number: "10",
+    title: "Stop Mantığı ve Zarar Kes Disiplini",
+    items: [
+      "Stop neden gerekir?",
+      "Teknik stop ve parasal stop farkı",
+      "Stop kullanırken yapılan hatalar",
+    ],
+  },
+  {
+    number: "11",
+    title: "Spekülatif Amaçlı VİOP Kullanımı",
+    items: [
+      "Yön beklentisiyle işlem açmak",
+      "Trend yönünde işlem almak",
+      "Haber etkisiyle işlem açmanın riski",
+    ],
+  },
+  {
+    number: "12",
+    title: "VİOP’ta En Sık Yapılan Hatalar",
+    items: [
+      "Teminatın tamamını kullanmak",
+      "Stopsuz işlem yapmak",
+      "Spot mantıkla VİOP işlemeye çalışmak",
+    ],
+  },
+];
+
 export default function ViopEgitimPage() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white">
-      <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#1e40af_0%,transparent_35%),radial-gradient(circle_at_bottom_right,#16a34a_0%,transparent_30%)] opacity-30" />
-
-        <div className="relative mx-auto max-w-6xl px-5 py-12 sm:py-16 lg:py-20">
-          <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+    <main className="min-h-screen bg-[#f5f7fb] text-slate-950">
+      <section className="border-b border-slate-200 bg-white">
+        <div className="mx-auto max-w-7xl px-4 py-10 md:px-6 lg:py-14">
+          <div className="grid gap-8 lg:grid-cols-[1.25fr_0.75fr] lg:items-center">
             <div>
-              <div className="mb-5 inline-flex rounded-full border border-emerald-400/40 bg-emerald-400/10 px-4 py-2 text-sm font-semibold text-emerald-300">
-                Yaşayan VİOP Eğitim Serisi
+              <div className="mb-5 flex flex-wrap items-center gap-2">
+                <span className="rounded-full bg-emerald-100 px-4 py-2 text-sm font-black text-emerald-700">
+                  Yaşayan Eğitim Serisi
+                </span>
+                <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-bold text-blue-700">
+                  VİOP’u Sıfırdan Öğren
+                </span>
               </div>
 
-              <h1 className="text-3xl font-black leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-                VİOP’u Sıfırdan Öğrenmek İsteyenler İçin Yaşayan Eğitim Serisi 📊
+              <h1 className="max-w-4xl text-3xl font-black leading-tight tracking-tight text-slate-950 md:text-5xl">
+                VİOP’u Sıfırdan Öğrenmek İsteyenler İçin Yaşayan Eğitim Serisi
               </h1>
 
-              <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-300">
-                Bu eğitim sadece 12 videoluk klasik bir kurs değil. Bu, zaman
-                içinde büyümeye devam edecek yaşayan bir VİOP eğitim arşivi.
+              <p className="mt-6 max-w-3xl text-lg leading-8 text-slate-700">
+                Bu eğitim sadece 12 videoluk klasik bir kurs değil. Zaman
+                içinde büyümeye devam edecek, örnek işlem analizleriyle
+                güçlenecek yaşayan bir VİOP eğitim arşividir.
               </p>
 
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <a
-                  href="mailto:destekhocaileborsa@gmail.com?subject=VİOP Eğitim Serisi Katılım Talebi"
-                  className="rounded-2xl bg-emerald-500 px-6 py-4 text-center text-base font-bold text-slate-950 shadow-lg shadow-emerald-500/20 transition hover:bg-emerald-400"
-                >
-                  Katılmak İçin Mail Gönder
-                </a>
+              <div className="mt-7 grid gap-3 sm:grid-cols-3">
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-2xl font-black text-slate-950">12</p>
+                  <p className="mt-1 text-sm font-semibold text-slate-600">
+                    Temel eğitim bölümü
+                  </p>
+                </div>
 
-                <a
-                  href="#icerik"
-                  className="rounded-2xl border border-white/15 bg-white/5 px-6 py-4 text-center text-base font-bold text-white transition hover:bg-white/10"
-                >
-                  Eğitim İçeriğini Gör
-                </a>
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-2xl font-black text-slate-950">6-10 dk</p>
+                  <p className="mt-1 text-sm font-semibold text-slate-600">
+                    Ortalama video süresi
+                  </p>
+                </div>
+
+                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                  <p className="text-2xl font-black text-slate-950">Ömür Boyu</p>
+                  <p className="mt-1 text-sm font-semibold text-slate-600">
+                    Yeni örnek işlem içerikleri
+                  </p>
+                </div>
               </div>
             </div>
 
-            <div className="rounded-3xl border border-white/10 bg-white/10 p-6 shadow-2xl backdrop-blur">
-              <div className="rounded-2xl bg-slate-950/80 p-6">
-                <p className="text-sm font-semibold uppercase tracking-widest text-slate-400">
-                  Lansmana Özel
+            <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-xl shadow-slate-200/70">
+              <div className="rounded-2xl bg-slate-950 p-6 text-white">
+                <p className="text-sm font-bold uppercase tracking-wide text-emerald-300">
+                  Lansmana Özel Fırsat
                 </p>
 
-                <div className="mt-4">
-                  <p className="text-slate-400 line-through">
+                <div className="mt-5">
+                  <p className="text-base font-semibold text-slate-400 line-through">
                     Standart fiyat: 2.950 TL
                   </p>
-                  <p className="mt-2 text-5xl font-black text-emerald-400">
+                  <p className="mt-2 text-5xl font-black text-emerald-300">
                     1.475 TL
                   </p>
-                  <p className="mt-2 text-sm font-semibold text-orange-300">
+                  <p className="mt-2 text-sm font-bold text-orange-300">
                     %50 indirimli lansman fiyatı
                   </p>
                 </div>
 
-                <div className="mt-6 rounded-2xl border border-emerald-400/20 bg-emerald-400/10 p-4 text-sm leading-6 text-emerald-100">
-                  Erişim, YouTube gizli video oynatma listesi üzerinden mail
-                  hesabınıza tanımlanacaktır.
+                <div className="mt-6 rounded-2xl border border-emerald-400/30 bg-emerald-400/10 p-4">
+                  <p className="text-sm leading-6 text-emerald-50">
+                    Katılmak isteyenler mail yoluyla iletişime geçebilir.
+                    Erişim, YouTube gizli video oynatma listesi üzerinden mail
+                    hesabınıza tanımlanacaktır.
+                  </p>
                 </div>
 
                 <a
                   href="mailto:destekhocaileborsa@gmail.com?subject=VİOP Eğitim Serisi Katılım Talebi"
-                  className="mt-6 block rounded-2xl bg-white px-5 py-4 text-center font-black text-slate-950 transition hover:bg-slate-200"
+                  className="mt-6 block rounded-2xl bg-emerald-400 px-5 py-4 text-center text-base font-black text-slate-950 transition hover:bg-emerald-300"
                 >
-                  destekhocaileborsa@gmail.com
+                  Katılım İçin Mail Gönder
                 </a>
+
+                <p className="mt-4 break-words text-center text-sm font-semibold text-slate-300">
+                  destekhocaileborsa@gmail.com
+                </p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      <section id="icerik" className="mx-auto max-w-6xl px-5 py-12">
-        <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 sm:p-8">
-          <h2 className="text-2xl font-black sm:text-3xl">
-            Sıfırdan başlayacağız:
-          </h2>
+      <section className="mx-auto max-w-7xl px-4 py-10 md:px-6">
+        <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
+          <div className="max-w-3xl">
+            <span className="rounded-full bg-slate-100 px-4 py-2 text-sm font-black text-slate-700">
+              Eğitimin Amacı
+            </span>
 
-          <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              "VİOP nedir?",
-              "Long-short mantığı",
-              "Teminat ve kaldıraç",
-              "Günlük uzlaşma",
-              "Emir ekranı",
-              "Kontrat seçimi",
-              "Vade sonu",
-              "Rollover",
-              "Risk yönetimi",
-              "Stop disiplini",
-              "Spekülatif işlem mantığı",
-              "En sık yapılan hatalar",
-            ].map((item) => (
+            <h2 className="mt-5 text-2xl font-black tracking-tight text-slate-950 md:text-4xl">
+              Sıfırdan başlayıp VİOP’u bilinçli kullanabilecek seviyeye gelmek
+            </h2>
+
+            <p className="mt-5 text-lg leading-8 text-slate-700">
+              Eğitimin amacı; VİOP’u hiç bilmeyen birinin önce sistemi anlaması,
+              sonrasında ise VİOP’u bilinçli, kontrollü ve en verimli şekilde
+              kullanabilecek seviyeye gelmesidir.
+            </p>
+          </div>
+
+          <div className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+            {egitimKonulari.map((item) => (
               <div
                 key={item}
-                className="rounded-2xl border border-white/10 bg-slate-900/80 p-4"
+                className="rounded-2xl border border-slate-200 bg-slate-50 p-4"
               >
-                <p className="font-bold text-slate-100">✅ {item}</p>
+                <p className="text-base font-bold text-slate-900">✅ {item}</p>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 pb-12">
-        <div className="grid gap-6 lg:grid-cols-2">
-          <div className="rounded-3xl border border-white/10 bg-slate-900 p-6 sm:p-8">
-            <h2 className="text-2xl font-black text-white">
-              Eğitimin Amacı
+      <section className="mx-auto max-w-7xl px-4 pb-10 md:px-6">
+        <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="rounded-3xl border border-emerald-200 bg-emerald-50 p-6 md:p-8">
+            <span className="rounded-full bg-emerald-600 px-4 py-2 text-sm font-black text-white">
+              En Önemli Fark
+            </span>
+
+            <h2 className="mt-5 text-2xl font-black tracking-tight text-slate-950 md:text-4xl">
+              Bu seri yaşayan bir eğitim olacak
             </h2>
 
-            <p className="mt-5 text-lg leading-8 text-slate-300">
-              Eğitimin amacı; VİOP’u hiç bilmeyen birinin önce sistemi
-              anlaması, sonra da VİOP’u bilinçli, kontrollü ve en verimli
-              şekilde kullanabilecek seviyeye gelmesi.
-            </p>
-          </div>
-
-          <div className="rounded-3xl border border-emerald-400/20 bg-emerald-400/10 p-6 sm:p-8">
-            <h2 className="text-2xl font-black text-emerald-300">
-              En Önemli Farkı
-            </h2>
-
-            <p className="mt-5 text-lg leading-8 text-emerald-50">
-              Bu seri yaşayan bir eğitim olacak. Zaman içinde ömür boyu yeni
-              örnek işlem analizleri, piyasa örnekleri, işlem öncesi/sonrası
+            <p className="mt-5 text-lg leading-8 text-slate-700">
+              Eğitim tamamlandıktan sonra da zaman içinde yeni örnek işlem
+              analizleri, piyasa örnekleri, işlem öncesi/sonrası
               değerlendirmeler ve risk yönetimi örnekleri aynı oynatma listesine
               eklenmeye devam edecek.
             </p>
           </div>
+
+          <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
+            <h3 className="text-xl font-black text-slate-950">
+              Yaşayan arşive eklenecek örnek içerikler
+            </h3>
+
+            <div className="mt-6 grid gap-3 sm:grid-cols-2">
+              {yasayanArsivMaddeleri.map((item) => (
+                <div
+                  key={item}
+                  className="rounded-2xl border border-slate-200 bg-slate-50 p-4"
+                >
+                  <p className="font-bold text-slate-800">📌 {item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 pb-12">
-        <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 sm:p-8">
-          <h2 className="text-2xl font-black sm:text-3xl">
-            Katılım ve Erişim Bilgisi
+      <section className="mx-auto max-w-7xl px-4 pb-10 md:px-6">
+        <div className="mb-6">
+          <span className="rounded-full bg-blue-100 px-4 py-2 text-sm font-black text-blue-700">
+            Eğitim İçeriği
+          </span>
+
+          <h2 className="mt-5 text-2xl font-black tracking-tight text-slate-950 md:text-4xl">
+            12 bölümlük VİOP eğitim planı
           </h2>
 
-          <div className="mt-6 grid gap-5 lg:grid-cols-3">
-            <div className="rounded-2xl bg-slate-900 p-5">
-              <p className="text-sm font-semibold text-slate-400">
-                Standart Fiyat
-              </p>
-              <p className="mt-2 text-3xl font-black line-through text-slate-500">
-                2.950 TL
-              </p>
+          <p className="mt-4 max-w-3xl text-base leading-7 text-slate-700">
+            Konular en temelden başlayarak, işlem ekranı, vade sonu, rollover,
+            risk yönetimi ve stop disiplinine kadar adım adım ilerler.
+          </p>
+        </div>
+
+        <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+          {bolumler.map((bolum) => (
+            <article
+              key={bolum.number}
+              className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md"
+            >
+              <div className="flex items-start gap-4">
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-slate-950 text-base font-black text-white">
+                  {bolum.number}
+                </div>
+
+                <div>
+                  <h3 className="text-lg font-black leading-6 text-slate-950">
+                    {bolum.title}
+                  </h3>
+
+                  <ul className="mt-4 space-y-2">
+                    {bolum.items.map((item) => (
+                      <li
+                        key={item}
+                        className="flex gap-2 text-sm leading-6 text-slate-700"
+                      >
+                        <span className="mt-0.5 text-emerald-600">•</span>
+                        <span>{item}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 pb-10 md:px-6">
+        <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
+          <div className="grid gap-6 lg:grid-cols-3">
+            <div className="lg:col-span-2">
+              <span className="rounded-full bg-orange-100 px-4 py-2 text-sm font-black text-orange-700">
+                Katılım ve Erişim
+              </span>
+
+              <h2 className="mt-5 text-2xl font-black tracking-tight text-slate-950 md:text-4xl">
+                Eğitim erişimi nasıl sağlanacak?
+              </h2>
+
+              <div className="mt-6 grid gap-4 md:grid-cols-3">
+                <div className="rounded-2xl bg-slate-50 p-5">
+                  <p className="text-2xl font-black text-slate-950">1</p>
+                  <p className="mt-2 font-bold text-slate-800">
+                    Mail gönderin
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    Katılım talebinizi mail üzerinden iletin.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl bg-slate-50 p-5">
+                  <p className="text-2xl font-black text-slate-950">2</p>
+                  <p className="mt-2 font-bold text-slate-800">
+                    Bilgilendirme alın
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    Ödeme ve erişim bilgileri size iletilir.
+                  </p>
+                </div>
+
+                <div className="rounded-2xl bg-slate-50 p-5">
+                  <p className="text-2xl font-black text-slate-950">3</p>
+                  <p className="mt-2 font-bold text-slate-800">
+                    Erişim tanımlanır
+                  </p>
+                  <p className="mt-2 text-sm leading-6 text-slate-600">
+                    YouTube gizli oynatma listesi mail hesabınıza açılır.
+                  </p>
+                </div>
+              </div>
             </div>
 
-            <div className="rounded-2xl bg-emerald-500 p-5 text-slate-950">
-              <p className="text-sm font-black">Lansmana Özel %50 İndirim</p>
-              <p className="mt-2 text-4xl font-black">1.475 TL</p>
-            </div>
-
-            <div className="rounded-2xl bg-slate-900 p-5">
-              <p className="text-sm font-semibold text-slate-400">
-                Katılım İçin
+            <div className="rounded-3xl bg-slate-950 p-6 text-white">
+              <p className="text-sm font-bold text-slate-400 line-through">
+                Standart fiyat: 2.950 TL
               </p>
+              <p className="mt-2 text-4xl font-black text-emerald-300">
+                1.475 TL
+              </p>
+              <p className="mt-2 text-sm font-bold text-orange-300">
+                Lansmana özel %50 indirim
+              </p>
+
               <a
                 href="mailto:destekhocaileborsa@gmail.com?subject=VİOP Eğitim Serisi Katılım Talebi"
-                className="mt-2 block break-words text-lg font-black text-emerald-400 hover:text-emerald-300"
+                className="mt-6 block rounded-2xl bg-white px-5 py-4 text-center text-base font-black text-slate-950 transition hover:bg-emerald-300"
               >
-                destekhocaileborsa@gmail.com
+                Mail Gönder
               </a>
-            </div>
-          </div>
 
-          <div className="mt-8 rounded-2xl border border-white/10 bg-slate-950 p-5">
-            <p className="leading-7 text-slate-300">
-              Erişim, YouTube gizli video oynatma listesi üzerinden mail
-              hesabınıza tanımlanacaktır. Eğitime katılmak isteyenler yukarıdaki
-              mail adresi üzerinden iletişime geçebilir.
-            </p>
+              <p className="mt-4 break-words text-center text-sm font-semibold text-slate-300">
+                destekhocaileborsa@gmail.com
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-5 pb-16">
-        <div className="rounded-3xl border border-orange-400/20 bg-orange-400/10 p-6 sm:p-8">
-          <h2 className="text-xl font-black text-orange-300">
+      <section className="mx-auto max-w-7xl px-4 pb-14 md:px-6">
+        <div className="rounded-3xl border border-orange-200 bg-orange-50 p-6 md:p-8">
+          <h2 className="text-xl font-black text-orange-800">
             Önemli Bilgilendirme
           </h2>
 
-          <p className="mt-4 leading-7 text-orange-50">
+          <p className="mt-4 leading-7 text-orange-950">
             Bu eğitim yatırım tavsiyesi değildir. Al-sat sinyali veya portföy
             yönetimi hizmeti içermez. Eğitim ve bilgilendirme amacı taşır.
+            Finansal piyasalarda yapılan işlemler risk içerir; işlem kararları
+            kişinin kendi sorumluluğundadır.
           </p>
+        </div>
+      </section>
+
+      <section className="bg-slate-950">
+        <div className="mx-auto max-w-7xl px-4 py-10 text-center md:px-6">
+          <h2 className="text-2xl font-black text-white md:text-4xl">
+            VİOP’u sıfırdan öğrenmek ve yaşayan eğitim arşivine dahil olmak
+            ister misiniz?
+          </h2>
+
+          <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-300">
+            Katılım talebi için mail gönderebilir, eğitim detaylarını ve erişim
+            sürecini öğrenebilirsiniz.
+          </p>
+
+          <div className="mt-7 flex justify-center">
+            <a
+              href="mailto:destekhocaileborsa@gmail.com?subject=VİOP Eğitim Serisi Katılım Talebi"
+              className="rounded-2xl bg-emerald-400 px-7 py-4 text-base font-black text-slate-950 transition hover:bg-emerald-300"
+            >
+              Katılım İçin Mail Gönder
+            </a>
+          </div>
+
+          <Link
+            href="/"
+            className="mt-6 inline-block text-sm font-semibold text-slate-400 transition hover:text-white"
+          >
+            Ana sayfaya dön
+          </Link>
         </div>
       </section>
     </main>
