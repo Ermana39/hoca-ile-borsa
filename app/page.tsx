@@ -34,6 +34,7 @@ type PageUpdatesData = {
 
 const ANA_SAYFA_HABER_LIMIT = 6;
 const SON_GUNCELLEME_LIMIT = 12;
+const SON_GUNCELLEME_HARIC_ROUTES = new Set(["/viop-egitim"]);
 
 const kategoriKutulari = [
   {
@@ -407,6 +408,11 @@ function getSonGuncellemeler(): GuncellemeItem[] {
     }
 
     const anaRoute = getGuncellemeAnaRoute(route);
+
+    if (SON_GUNCELLEME_HARIC_ROUTES.has(anaRoute)) {
+      return;
+    }
+
     const rawTime = new Date(item.updatedAt).getTime();
 
     if (Number.isNaN(rawTime)) {

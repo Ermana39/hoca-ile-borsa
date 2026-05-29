@@ -196,7 +196,7 @@ export default function ViopEgitimPage() {
             <div className="rounded-3xl border border-slate-200 bg-white p-5 shadow-xl shadow-slate-200/70">
               <div className="rounded-2xl bg-slate-950 p-6 text-white">
                 <p className="text-sm font-bold uppercase tracking-wide text-emerald-300">
-                  Lansmana Özel Fırsat
+                  Lansmana Özel Kısa Süreli Fırsat
                 </p>
 
                 <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-4">
@@ -210,7 +210,7 @@ export default function ViopEgitimPage() {
                   <div className="mt-4 h-px w-full bg-white/10" />
 
                   <p className="mt-4 text-sm font-semibold text-emerald-300">
-                    Lansmana Özel %50 İndirimli Fiyat
+                    Lansmana Özel Kısa Süre %50 İndirimli Fiyat
                   </p>
                   <p className="mt-1 text-5xl font-black text-emerald-300 md:text-6xl">
                     1.475 TL
