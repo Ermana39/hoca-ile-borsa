@@ -5,6 +5,10 @@ const analizler = [
     baslik: "TCELL Grafik Analiz",
     href: "/borsa/grafik-analiz/tcell",
   },
+   {
+    baslik: "SOKM Grafik Analiz",
+    href: "/borsa/grafik-analiz/sokm",
+  },
 ];
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
