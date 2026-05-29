@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ContactForm from "@/components/contact-form";
 
 export const metadata = {
   title: "VİOP Eğitim Serisi | Hoca İle Borsa",
@@ -25,7 +26,7 @@ const yasayanArsivMaddeleri = [
   "Örnek işlem analizleri",
   "Piyasa içinden gerçek örneklendirmeler",
   "İşlem öncesi düşünce mantığı",
-  "İşlem sonrası değerlendirme",
+  "İşlem sonrası değerlendirmeler",
   "Risk yönetimi ve stop örnekleri",
   "Doğru ve hatalı karar noktaları",
 ];
@@ -69,7 +70,7 @@ const bolumler = [
     title: "Emir Sistemi ve İşlem Ekranı",
     items: [
       "VİOP ekranı nasıl okunur?",
-      "Alış-satış kademeleri",
+      "Alış ve satış kademeleri",
       "Limit emir ve piyasa emir mantığı",
     ],
   },
@@ -78,7 +79,7 @@ const bolumler = [
     title: "Vade Sonu İşleyişi",
     items: [
       "Vade sonu günü ne olur?",
-      "Nakdi uzlaşma mantığı",
+      "Endeks kontratlarında nakdi uzlaşma",
       "Son güne pozisyon taşımanın riskleri",
     ],
   },
@@ -88,7 +89,7 @@ const bolumler = [
     items: [
       "Rollover nedir?",
       "Yeni vadeye geçiş mantığı",
-      "Likidite neden yeni vadeye kayar?",
+      "Likiditenin yeni vadeye kayması",
     ],
   },
   {
@@ -133,8 +134,19 @@ export default function ViopEgitimPage() {
   return (
     <main className="min-h-screen bg-[#f5f7fb] text-slate-950">
       <section className="border-b border-slate-200 bg-white">
+        <div className="mx-auto max-w-7xl px-4 py-5 md:px-6">
+          <Link
+            href="/"
+            className="inline-flex items-center gap-2 rounded-xl border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-bold text-slate-700 transition hover:bg-slate-100 hover:text-slate-950"
+          >
+            ← Ana Sayfa
+          </Link>
+        </div>
+      </section>
+
+      <section className="border-b border-slate-200 bg-white">
         <div className="mx-auto max-w-7xl px-4 py-10 md:px-6 lg:py-14">
-          <div className="grid gap-8 lg:grid-cols-[1.25fr_0.75fr] lg:items-center">
+          <div className="grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
             <div>
               <div className="mb-5 flex flex-wrap items-center gap-2">
                 <span className="rounded-full bg-emerald-100 px-4 py-2 text-sm font-black text-emerald-700">
@@ -164,16 +176,18 @@ export default function ViopEgitimPage() {
                 </div>
 
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                  <p className="text-2xl font-black text-slate-950">6-10 dk</p>
+                  <p className="text-2xl font-black text-slate-950">Ömür Boyu</p>
                   <p className="mt-1 text-sm font-semibold text-slate-600">
-                    Ortalama video süresi
+                    Yeni örnek işlem içerikleri
                   </p>
                 </div>
 
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                  <p className="text-2xl font-black text-slate-950">Ömür Boyu</p>
+                  <p className="text-2xl font-black text-slate-950">
+                    Uygulamalı
+                  </p>
                   <p className="mt-1 text-sm font-semibold text-slate-600">
-                    Yeni örnek işlem içerikleri
+                    Pratik ve anlaşılır anlatım
                   </p>
                 </div>
               </div>
@@ -185,31 +199,37 @@ export default function ViopEgitimPage() {
                   Lansmana Özel Fırsat
                 </p>
 
-                <div className="mt-5">
-                  <p className="text-base font-semibold text-slate-400 line-through">
-                    Standart fiyat: 2.950 TL
+                <div className="mt-5 rounded-2xl border border-white/10 bg-white/5 p-4">
+                  <p className="text-sm font-semibold text-slate-300">
+                    Standart Fiyat
                   </p>
-                  <p className="mt-2 text-5xl font-black text-emerald-300">
+                  <p className="mt-1 text-3xl font-black text-white line-through md:text-4xl">
+                    2.950 TL
+                  </p>
+
+                  <div className="mt-4 h-px w-full bg-white/10" />
+
+                  <p className="mt-4 text-sm font-semibold text-emerald-300">
+                    Lansmana Özel %50 İndirimli Fiyat
+                  </p>
+                  <p className="mt-1 text-5xl font-black text-emerald-300 md:text-6xl">
                     1.475 TL
-                  </p>
-                  <p className="mt-2 text-sm font-bold text-orange-300">
-                    %50 indirimli lansman fiyatı
                   </p>
                 </div>
 
                 <div className="mt-6 rounded-2xl border border-emerald-400/30 bg-emerald-400/10 p-4">
                   <p className="text-sm leading-6 text-emerald-50">
-                    Katılmak isteyenler mail yoluyla iletişime geçebilir.
-                    Erişim, YouTube gizli video oynatma listesi üzerinden mail
-                    hesabınıza tanımlanacaktır.
+                    Eğitim serisini satın almak için aşağıdaki formdan mesaj
+                    gönderebilirsiniz. Erişim, YouTube gizli video oynatma
+                    listesi üzerinden mail hesabınıza tanımlanacaktır.
                   </p>
                 </div>
 
                 <a
-                  href="mailto:destekhocaileborsa@gmail.com?subject=VİOP Eğitim Serisi Katılım Talebi"
+                  href="#basvuru-formu"
                   className="mt-6 block rounded-2xl bg-emerald-400 px-5 py-4 text-center text-base font-black text-slate-950 transition hover:bg-emerald-300"
                 >
-                  Katılım İçin Mail Gönder
+                  Mesaj Gönder
                 </a>
 
                 <p className="mt-4 break-words text-center text-sm font-semibold text-slate-300">
@@ -233,9 +253,9 @@ export default function ViopEgitimPage() {
             </h2>
 
             <p className="mt-5 text-lg leading-8 text-slate-700">
-              Eğitimin amacı; VİOP’u hiç bilmeyen birinin önce sistemi anlaması,
-              sonrasında ise VİOP’u bilinçli, kontrollü ve en verimli şekilde
-              kullanabilecek seviyeye gelmesidir.
+              Eğitimin amacı; VİOP’u hiç bilmeyen birinin önce sistemi
+              anlaması, sonrasında ise VİOP’u bilinçli, kontrollü ve en verimli
+              şekilde kullanabilecek seviyeye gelmesidir.
             </p>
           </div>
 
@@ -340,26 +360,37 @@ export default function ViopEgitimPage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-4 pb-10 md:px-6">
+      <section id="basvuru-formu" className="mx-auto max-w-7xl px-4 pb-10 md:px-6">
         <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
-          <div className="grid gap-6 lg:grid-cols-3">
-            <div className="lg:col-span-2">
+          <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
+            <div>
               <span className="rounded-full bg-orange-100 px-4 py-2 text-sm font-black text-orange-700">
-                Katılım ve Erişim
+                Katılım ve Mesaj Formu
               </span>
 
               <h2 className="mt-5 text-2xl font-black tracking-tight text-slate-950 md:text-4xl">
-                Eğitim erişimi nasıl sağlanacak?
+                Eğitim serisini satın almak için mesaj gönderin
               </h2>
+
+              <p className="mt-5 text-base leading-7 text-slate-700">
+                Form üzerinden mesaj gönderirken mesaj kısmına şu ifadeyi
+                yazabilirsiniz:
+              </p>
+
+              <div className="mt-5 rounded-2xl border border-emerald-200 bg-emerald-50 p-5">
+                <p className="text-lg font-black text-emerald-800">
+                  “VİOP eğitim serisini satın almak istiyorum.”
+                </p>
+              </div>
 
               <div className="mt-6 grid gap-4 md:grid-cols-3">
                 <div className="rounded-2xl bg-slate-50 p-5">
                   <p className="text-2xl font-black text-slate-950">1</p>
                   <p className="mt-2 font-bold text-slate-800">
-                    Mail gönderin
+                    Mesaj gönderin
                   </p>
                   <p className="mt-2 text-sm leading-6 text-slate-600">
-                    Katılım talebinizi mail üzerinden iletin.
+                    Formdan katılım talebinizi iletin.
                   </p>
                 </div>
 
@@ -385,22 +416,52 @@ export default function ViopEgitimPage() {
               </div>
             </div>
 
+            <div className="rounded-3xl border border-slate-200 bg-slate-50 p-4 md:p-5">
+              <ContactForm />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-4 pb-10 md:px-6">
+        <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
+          <div className="grid gap-6 lg:grid-cols-[1fr_0.6fr] lg:items-center">
+            <div>
+              <span className="rounded-full bg-emerald-100 px-4 py-2 text-sm font-black text-emerald-700">
+                Lansman Fiyatı
+              </span>
+
+              <h2 className="mt-5 text-2xl font-black tracking-tight text-slate-950 md:text-4xl">
+                Standart fiyat ile lansman fiyatı arasındaki avantaj
+              </h2>
+
+              <p className="mt-4 text-base leading-7 text-slate-700">
+                Eğitim setinin standart fiyatı 2.950 TL’dir. Lansmana özel
+                takipçiler için %50 indirimli fiyat 1.475 TL olarak
+                belirlenmiştir.
+              </p>
+            </div>
+
             <div className="rounded-3xl bg-slate-950 p-6 text-white">
-              <p className="text-sm font-bold text-slate-400 line-through">
-                Standart fiyat: 2.950 TL
+              <p className="text-sm font-semibold text-slate-300">
+                Standart Fiyat
               </p>
-              <p className="mt-2 text-4xl font-black text-emerald-300">
-                1.475 TL
+              <p className="mt-1 text-3xl font-black text-white line-through md:text-4xl">
+                2.950 TL
               </p>
-              <p className="mt-2 text-sm font-bold text-orange-300">
+
+              <p className="mt-5 text-sm font-semibold text-emerald-300">
                 Lansmana özel %50 indirim
+              </p>
+              <p className="mt-1 text-5xl font-black text-emerald-300 md:text-6xl">
+                1.475 TL
               </p>
 
               <a
-                href="mailto:destekhocaileborsa@gmail.com?subject=VİOP Eğitim Serisi Katılım Talebi"
-                className="mt-6 block rounded-2xl bg-white px-5 py-4 text-center text-base font-black text-slate-950 transition hover:bg-emerald-300"
+                href="#basvuru-formu"
+                className="mt-6 block rounded-2xl bg-emerald-400 px-5 py-4 text-center text-base font-black text-slate-950 transition hover:bg-emerald-300"
               >
-                Mail Gönder
+                Mesaj Gönder
               </a>
 
               <p className="mt-4 break-words text-center text-sm font-semibold text-slate-300">
@@ -434,16 +495,16 @@ export default function ViopEgitimPage() {
           </h2>
 
           <p className="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-300">
-            Katılım talebi için mail gönderebilir, eğitim detaylarını ve erişim
-            sürecini öğrenebilirsiniz.
+            Eğitim serisini satın almak için mesaj formundan katılım talebinizi
+            gönderebilirsiniz.
           </p>
 
           <div className="mt-7 flex justify-center">
             <a
-              href="mailto:destekhocaileborsa@gmail.com?subject=VİOP Eğitim Serisi Katılım Talebi"
+              href="#basvuru-formu"
               className="rounded-2xl bg-emerald-400 px-7 py-4 text-base font-black text-slate-950 transition hover:bg-emerald-300"
             >
-              Katılım İçin Mail Gönder
+              Mesaj Gönder
             </a>
           </div>
 
