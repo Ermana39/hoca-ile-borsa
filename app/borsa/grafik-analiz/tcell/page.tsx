@@ -61,7 +61,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
 export default function TcellGrafikAnalizPage() {
   return (
     <main className="min-h-screen bg-white">
-      <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
+      <div className="mx-auto max-w-7xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
@@ -94,8 +94,8 @@ export default function TcellGrafikAnalizPage() {
           </section>
 
           <section className="pt-6">
-            <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50">
-              <div className="relative aspect-[16/10] w-full">
+            <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-950">
+              <div className="relative aspect-video w-full">
                 <Image
                   src="/analiz-1.jpg"
                   alt="TCELL analiz görseli"

@@ -101,16 +101,6 @@ export default function SokmGrafikAnalizPage() {
                 />
               </div>
             </div>
-
-            <div className="mt-4 flex justify-center">
-              <Link
-                href="/analiz-2.jpg"
-                target="_blank"
-                className="rounded-xl bg-zinc-900 px-5 py-3 text-sm font-semibold text-white hover:bg-zinc-700"
-              >
-                Grafiği Büyük Görüntüle
-              </Link>
-            </div>
           </section>
 
           <section className="pt-6">
