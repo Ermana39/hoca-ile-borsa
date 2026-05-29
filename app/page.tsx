@@ -221,6 +221,7 @@ function KategoriKutusu({
   );
 }
 
+
 function ViopEgitimBanner() {
   return (
     <section className="px-4 pb-6 md:px-6">
@@ -230,17 +231,15 @@ function ViopEgitimBanner() {
         aria-label="VİOP eğitim serisi detay sayfasına git"
         className="group block overflow-hidden rounded-2xl shadow-[0_10px_35px_rgba(15,23,42,0.12)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_45px_rgba(15,23,42,0.18)] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
       >
-        <div className="relative aspect-[21/5] w-full bg-slate-950">
-          <Image
-            src="/viop-egitim-banner.png"
-            alt="Yaşayan VİOP eğitim seti lansman bannerı"
-            fill
-            unoptimized
-            className="object-cover transition duration-300 group-hover:scale-[1.01]"
-            sizes="(min-width: 1280px) 1216px, calc(100vw - 32px)"
-            priority={false}
-          />
-        </div>
+        <Image
+          src="/viop-egitim-banner.png"
+          alt="Yaşayan VİOP eğitim seti lansman bannerı"
+          width={2112}
+          height={512}
+          unoptimized
+          className="block h-auto w-full rounded-2xl"
+          priority={false}
+        />
       </Link>
     </section>
   );
