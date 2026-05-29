@@ -45,7 +45,7 @@ const temettuKutulari = [
   {
     title: "Ekim Ayı Temettü Verenler",
     href: "/temettu/ekim-ayi-temettu-takvimi",
-    image: "/ekim-ayi-temettu-verenler-yatay.png",
+    image: "/ekim-ayi-temettü.png",
     alt: "Ekim Ayı Temettü Verenler görseli",
     description:
       "Mayıs ayında temettü ödemesi yapan şirketleri liste halinde görerek dönemsel temettü planlamasını takip edebilirsiniz.",
