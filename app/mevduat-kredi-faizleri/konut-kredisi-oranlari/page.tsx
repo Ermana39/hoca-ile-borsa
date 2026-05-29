@@ -288,9 +288,9 @@ function KonutGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
   const topPadding = 28;
   const bottomPadding = 64;
 
-  const yAxisMin = 2.5;
+  const yAxisMin = 2.6;
   const yAxisMax = 3;
-  const yAxisTicks = [2.5, 2.6, 2.7, 2.8, 2.9, 3];
+  const yAxisTicks = [2.6, 2.7, 2.8, 2.9, 3];
 
   const chartInnerWidth = width - leftPadding - rightPadding;
   const chartInnerHeight = height - topPadding - bottomPadding;

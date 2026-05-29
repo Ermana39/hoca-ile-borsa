@@ -289,9 +289,9 @@ function TuketiciGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
   const topPadding = 28;
   const bottomPadding = 64;
 
-  const yAxisMin = 3;
-  const yAxisMax = 3.6;
-  const yAxisTicks = [3, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6];
+  const yAxisMin = 3.2;
+  const yAxisMax = 3.9;
+  const yAxisTicks = [3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9];
 
   const chartInnerWidth = width - leftPadding - rightPadding;
   const chartInnerHeight = height - topPadding - bottomPadding;

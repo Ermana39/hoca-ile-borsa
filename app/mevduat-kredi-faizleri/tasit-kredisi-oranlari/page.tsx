@@ -289,9 +289,9 @@ function TasitGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
   const topPadding = 28;
   const bottomPadding = 64;
 
-  const yAxisMin = 3;
-  const yAxisMax = 3.6;
-  const yAxisTicks = [3, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6];
+  const yAxisMin = 3.1;
+  const yAxisMax = 3.5;
+  const yAxisTicks = [3.1, 3.2, 3.3, 3.4, 3.5];
 
   const chartInnerWidth = width - leftPadding - rightPadding;
   const chartInnerHeight = height - topPadding - bottomPadding;
