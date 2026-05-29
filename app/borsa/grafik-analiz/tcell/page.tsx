@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   },
 };
 
-const analizMetni = `Destek ve Direnç Seviyeleri
+const analizMetni = `Destek ve Direnç Seviyeleri (Anlık fiyat 101 TL)
 Son barda gelen sert kırmızı mum, hisseyi teknik olarak önemli bir eşiğe taşımış durumda:
 
 Ana Destek Bölgesi (~98.00 - 100.00 TL): Psikolojik olarak 100.00 TL sınırı en sıcak destek noktasıdır. Grafik geçmişine baktığımızda (Şubat-Mart ayları civarındaki sarkmalarda) fiyatın kabaca 98.00 - 100.00 TL bandından daha önce de güçlü alıcılar bulduğunu ve oradan yukarı yönlü tepki verdiğini görebiliyoruz.
