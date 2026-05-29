@@ -1,12 +1,12 @@
 import Link from "next/link";
 
-const agustosTemettuleri = [
-  { sembol: "SUWEN", tarih: "31 Ağustos 2026", verim: "% 2,34", brut: "₺0,18", net: "₺0,1518", toplam: "₺99.999.984", oran: "%93" },
-  { sembol: "TURSG", tarih: "27 Ağustos 2026", verim: "% 2,38", brut: "₺0,30", net: "₺0,2550", toplam: "₺3.000.000.000", oran: "%16" },
-  { sembol: "ENERY", tarih: "25 Ağustos 2026", verim: "% 0,19", brut: "₺0,02", net: "₺0,0142", toplam: "₺149.999.400", oran: "%3" },
-  { sembol: "AHGAZ", tarih: "24 Ağustos 2026", verim: "% 0,18", brut: "₺0,06", net: "₺0,0490", toplam: "₺149.999.980", oran: "%5" },
-  { sembol: "DOAS", tarih: "13 Ağustos 2026", verim: "% 8,12", brut: "₺15,00", net: "₺12,7500", toplam: "₺3.300.000.000", oran: "%56" },
-  { sembol: "BOBET", tarih: "5 Ağustos 2026", verim: "% 2,14", brut: "₺0,40", net: "₺0,3400", toplam: "₺152.000.000", oran: "" },
+const ekimTemettuleri = [
+  { sembol: "DESA", tarih: "30 Ekim 2026", verim: "% 0,77", brut: "₺0,10", net: "₺0,0816", toplam: "₺47.058.816", oran: "%8" },
+  { sembol: "SRVGY", tarih: "26 Ekim 2026", verim: "% 2,55", brut: "₺0,08", net: "₺0,0769", toplam: "₺249.999.750", oran: "%6" },
+  { sembol: "OSMEN", tarih: "26 Ekim 2026", verim: "% 0,66", brut: "₺0,05", net: "₺0,0424", toplam: "₺19.999.992", oran: "%12" },
+  { sembol: "BASCM", tarih: "21 Ekim 2026", verim: "% 7,31", brut: "₺1,06", net: "₺0,9015", toplam: "₺699.999.960", oran: "%198" },
+  { sembol: "EBEBK", tarih: "15 Ekim 2026", verim: "% 0,77", brut: "₺0,63", net: "₺0,5313", toplam: "₺100.000.000", oran: "%100" },
+  { sembol: "AEFES", tarih: "5 Ekim 2026", verim: "% 0,88", brut: "₺0,17", net: "₺0,1443", toplam: "₺1.005.098.684", oran: "%6" },
 ];
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
@@ -25,7 +25,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
-export default function AgustosAyiTemettuTakvimiPage() {
+export default function EkimAyiTemettuTakvimiPage() {
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-7xl">
@@ -50,7 +50,7 @@ export default function AgustosAyiTemettuTakvimiPage() {
         </section>
 
         <h1 className="mb-6 text-3xl font-bold text-zinc-900">
-          Ağustos Ayı Temettü Takvimi
+          Ekim Ayı Temettü Takvimi
         </h1>
 
         <div className="overflow-x-auto rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
@@ -67,7 +67,7 @@ export default function AgustosAyiTemettuTakvimiPage() {
               </tr>
             </thead>
             <tbody>
-              {agustosTemettuleri.map((item, index) => (
+              {ekimTemettuleri.map((item, index) => (
                 <tr
                   key={`${item.sembol}-${item.tarih}`}
                   className={`border-t border-zinc-100 ${index % 2 === 1 ? "bg-sky-50" : "bg-white"}`}
@@ -91,12 +91,12 @@ export default function AgustosAyiTemettuTakvimiPage() {
 
         <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">
-            Ağustos Ayı Temettü Takvimi Hakkında
+            Ekim Ayı Temettü Takvimi Hakkında
           </h2>
 
           <p className="mb-4 leading-7 text-zinc-700">
-            Ağustos ayı temettü takvimi sayfası, Borsa İstanbul’da işlem gören şirketlerin
-            Ağustos 2026 dönemindeki temettü dağıtım tarihlerini, hisse başına brüt ve net
+            Ekim ayı temettü takvimi sayfası, Borsa İstanbul’da işlem gören şirketlerin
+            Ekim 2026 dönemindeki temettü dağıtım tarihlerini, hisse başına brüt ve net
             temettü ödemelerini ve toplam dağıtım tutarlarını takip etmek isteyen yatırımcılar
             için hazırlanmıştır. Bu sayfa sayesinde temettü veren hisseleri tek tabloda
             inceleyebilir ve ödeme detaylarını tarih bazlı olarak karşılaştırabilirsiniz.
@@ -111,7 +111,7 @@ export default function AgustosAyiTemettuTakvimiPage() {
           </p>
 
           <p className="mb-4 leading-7 text-zinc-700">
-            Sayfada yer alan Ağustos 2026 temettü takvimi verileri sayesinde hangi şirketin hangi
+            Sayfada yer alan Ekim 2026 temettü takvimi verileri sayesinde hangi şirketin hangi
             tarihte temettü vereceğini, hisse başına ne kadar brüt ve net ödeme yapacağını ve
             toplam temettü büyüklüğünü kolayca görebilirsiniz. Bu yapı, hem temettü emekliliği
             hedefleyen yatırımcılar hem de şirket bazlı kâr dağıtım takibi yapan kullanıcılar
@@ -119,7 +119,7 @@ export default function AgustosAyiTemettuTakvimiPage() {
           </p>
 
           <p className="leading-7 text-zinc-700">
-            Güncel Ağustos ayı temettü takvimi, BIST temettü veren hisseler, hisse başı brüt ve
+            Güncel Ekim ayı temettü takvimi, BIST temettü veren hisseler, hisse başı brüt ve
             net temettü tutarları, dağıtma oranları ve şirket bazlı kâr payı ödemelerini takip
             etmek için bu sayfayı düzenli olarak inceleyebilirsiniz.
           </p>
