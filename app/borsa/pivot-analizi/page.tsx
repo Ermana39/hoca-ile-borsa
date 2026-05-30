@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Pivot Analizi | Hoca İle Borsa",
+  description: "Pivot, destek ve direnç seviyelerine göre hisselerin teknik görünümünü tablo halinde inceleyin.",
+  alternates: { canonical: "https://www.hocaileborsa.com/borsa/pivot-analizi" },
+};
 import Link from "next/link";
 
 type PivotRow = {
