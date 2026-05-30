@@ -9,12 +9,6 @@ import DipZirveTableClient, {
   type DipZirveSatiri,
 } from "./_components/DipZirveTableClient";
 
-export const metadata = {
-  title: "Dip Zirve Analizi | Hoca İle Borsa",
-  description:
-    "Borsa İstanbul hisselerinin dip ve zirve seviyelerine uzaklıklarını karşılaştırın.",
-};
-
 export const revalidate = 3600;
 
 type JsonRow = Record<string, string | number | null>;
