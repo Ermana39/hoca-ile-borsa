@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Grafik Formasyonları | Hoca İle Borsa",
+  description: "Grafik formasyonlarına göre öne çıkan hisseleri liste halinde inceleyin.",
+  alternates: { canonical: "https://www.hocaileborsa.com/borsa/formasyonlar" },
+};
 import fs from "fs/promises";
 import path from "path";
 import Link from "next/link";
