@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Gösterge Taramaları | Hoca İle Borsa",
+  description: "RSI, trend ve teknik filtrelere göre hazırlanmış hisse taramaları ile belirli kriterleri karşılayan hisseleri görün.",
+  alternates: { canonical: "https://www.hocaileborsa.com/borsa/gosterge-taramalari" },
+};
 import Image from "next/image";
 import Link from "next/link";
 
