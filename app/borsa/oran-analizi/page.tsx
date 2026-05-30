@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Finansal Oran Analizi | Hoca İle Borsa",
+  description: "Şirketlerin finansal oranlarını inceleyerek değerleme, kârlılık ve borçluluk açısından karşılaştırın.",
+  alternates: { canonical: "https://www.hocaileborsa.com/borsa/oran-analizi" },
+};
 import Link from "next/link";
 import oranAnaliziJson from "./data/oran-analizi.json";
 import OranAnaliziTableClient from "./_components/OranAnaliziTableClient";
