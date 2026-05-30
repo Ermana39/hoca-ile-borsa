@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Halka Arz | Hoca İle Borsa",
+  description: "Güncel halka arz verileri, kazanç hesaplama, talep hesaplama ve izahname bilgileri.",
+  alternates: { canonical: "https://www.hocaileborsa.com/halka-arz" },
+};
 import fs from "fs";
 import path from "path";
 import Image from "next/image";
