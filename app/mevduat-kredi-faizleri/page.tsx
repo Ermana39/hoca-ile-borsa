@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "Mevduat faizi oranları, tüketici faizi oranları, konut kredisi oranları ve taşıt kredisi oranları sayfası.",
   alternates: {
-    canonical: "/mevduat-kredi-faizleri",
+    canonical: "https://www.hocaileborsa.com/mevduat-kredi-faizleri",
   },
 };
 
