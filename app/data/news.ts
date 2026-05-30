@@ -7,6 +7,13 @@ export type NewsItem = {
 };
 
 export const newsItems: NewsItem[] = [
+   {
+    id: 980,
+    title: "26 Mayıs 2026 Salı KAP Bildirimleri Özeti",
+    href: "/haber/haber-980",
+    image: "/haber980.jpg",
+    alt: "Haber 980 görseli",
+  },
   {
     id: 981,
     title: "Borsada açığa satış yasağı 12 Haziran'a uzatıldı",
