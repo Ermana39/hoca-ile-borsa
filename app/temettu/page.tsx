@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Temettü | Hoca İle Borsa",
+  description: "Temettü takvimi, aylara göre temettü veren şirketler, temettü hesaplama aracı ve temettü verimi hesaplama.",
+  alternates: { canonical: "https://www.hocaileborsa.com/temettu" },
+};
 import Image from "next/image";
 import Link from "next/link";
 
