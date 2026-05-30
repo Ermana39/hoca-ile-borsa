@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Borsa Analiz | Hoca İle Borsa",
+  description: "BIST hisse analizleri, teknik analiz, gösterge taramaları, pivot analizi ve günlük borsa verileri.",
+  alternates: { canonical: "https://www.hocaileborsa.com/borsa" },
+};
 import Image from "next/image";
 import Link from "next/link";
 
