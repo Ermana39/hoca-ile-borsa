@@ -9,11 +9,6 @@ import OranAnaliziTableClient from "./_components/OranAnaliziTableClient";
 
 export const dynamic = "force-static";
 
-export const metadata = {
-  title: "Oran Analizi | Hoca İle Borsa",
-  description:
-    "Borsa İstanbul şirketlerini finansal oran verilerine göre karşılaştırın.",
-};
 
 type RowData = Record<string, string | number | null>;
 
