@@ -21,19 +21,6 @@ export const newsItems: NewsItem[] = [
     image: "/haber982.jpg",
     alt: "Haber 982 görseli",
   },
-   {
-    id: 983,
-    title: "EKİNCİLER DEMİR VE ÇELİK SANAYİ A.Ş. Dağıtımları Sonuçlandı",
-    href: "/haber/haber-983",
-    image: "/haber983.jpg",
-    alt: "Haber 983 görseli",
-  },
-  {
-    id: 984,
-    title: "TÜİK Nisan 2026 enflasyonu beklenene göre (%3,30) yüksek geldi",
-    href: "/haber/haber-984",
-    image: "/haber984.png",
-    alt: "Haber 984 görseli",
-  },
+   
   
  ];
