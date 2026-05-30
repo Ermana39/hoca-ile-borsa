@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Yatırım Fonları | Hoca İle Borsa",
+  description: "Yatırım fonları getiri analizi, tarihsel veriler ve haftalık fon tercihlerini tek sayfada takip edin.",
+  alternates: { canonical: "https://www.hocaileborsa.com/fonlar" },
+};
 import Link from "next/link";
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
