@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Yeni İş Anlaşmaları | Hoca İle Borsa",
+  description: "Şirketlerin açıkladığı yeni iş ilişkileri ve sözleşmelerin hisseler üzerindeki etkisini takip edin.",
+  alternates: { canonical: "https://www.hocaileborsa.com/borsa/yeni-is-anlasmalari" },
+};
 import Link from "next/link";
 import Script from "next/script";
 import yeniIsData from "./data/yeni-is-anlasmalari.json";
