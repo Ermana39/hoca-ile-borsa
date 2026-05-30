@@ -7,10 +7,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://www.hocaileborsa.com"),
   title: "Hoca İle Borsa",
   description: "Borsa, halka arz, temettü, fonlar ve finans içerikleri",
-  alternates: {
-    canonical: "/",
-  },
-  other: {
+   other: {
     "google-adsense-account": "ca-pub-9613627671991162",
   },
 };
