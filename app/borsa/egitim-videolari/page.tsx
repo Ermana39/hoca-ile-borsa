@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Borsa Eğitim Videoları | Hoca İle Borsa",
+  description: "Borsa, halka arz, teknik analiz ve finans başlıklarında hazırlanan eğitim videoları.",
+  alternates: { canonical: "https://www.hocaileborsa.com/borsa/egitim-videolari" },
+};
 import Image from "next/image";
 import Link from "next/link";
 
