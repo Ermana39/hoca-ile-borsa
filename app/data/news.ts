@@ -8,7 +8,7 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
-    id: 985,
+    id: 981,
     title: "Borsada açığa satış yasağı 12 Haziran'a uzatıldı",
     href: "/haber/haber-981",
     image: "/haber981.png",
