@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Hacim Artışı Analizi | Hoca İle Borsa",
+  description: "İşlem hacmindeki artışı izleyerek piyasada ilginin yoğunlaştığı hisseleri fark edin.",
+  alternates: { canonical: "https://www.hocaileborsa.com/borsa/hacim-artisi-analizi" },
+};
 import Image from "next/image";
 import Link from "next/link";
 
