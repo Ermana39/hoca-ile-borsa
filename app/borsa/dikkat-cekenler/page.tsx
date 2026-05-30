@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Dikkat Çeken Hisseler | Hoca İle Borsa",
+  description: "Gün içinde öne çıkan hisseler, dikkat çeken fiyat hareketleri ve yatırımcı ilgisinin arttığı alanlar.",
+  alternates: { canonical: "https://www.hocaileborsa.com/borsa/dikkat-cekenler" },
+};
 import Link from "next/link";
 
 const haberler = [
