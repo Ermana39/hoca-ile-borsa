@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const metadata = {
   robots: {
-    index: false,
+    index: true,
     follow: true,
   },
 };
