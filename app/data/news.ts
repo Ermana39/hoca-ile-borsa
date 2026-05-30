@@ -11,7 +11,7 @@ export const newsItems: NewsItem[] = [
     id: 980,
     title: "26 Mayıs 2026 Salı KAP Bildirimleri Özeti",
     href: "/haber/haber-980",
-    image: "/haber980.jpg",
+    image: "/haber980.png",
     alt: "Haber 980 görseli",
   },
   {
