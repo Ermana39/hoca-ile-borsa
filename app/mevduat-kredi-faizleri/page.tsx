@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Mevduat ve Kredi Faiz Oranları | Hoca İle Borsa",
+  description: "Güncel mevduat faiz oranları, kredi faizleri ve banka bazlı faiz karşılaştırmaları.",
+  alternates: { canonical: "https://www.hocaileborsa.com/mevduat-kredi-faizleri" },
+};
 import Link from "next/link";
 import type { Metadata } from "next";
 
