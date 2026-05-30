@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Pay Geri Alım Programları | Hoca İle Borsa",
+  description: "Şirketlerin pay geri alım programlarını ve piyasaya olası etkilerini düzenli şekilde izleyin.",
+  alternates: { canonical: "https://www.hocaileborsa.com/borsa/geri-alim-programlari" },
+};
 import Link from "next/link";
 import Script from "next/script";
 import geriAlimData from "./data/geri-alim.json";
