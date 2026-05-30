@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Dip Zirve Analizi | Hoca İle Borsa",
+  description: "Hisselerin dip ve zirve bölgelerine uzaklığını takip ederek teknik görünümü daha hızlı yorumlayın.",
+  alternates: { canonical: "https://www.hocaileborsa.com/borsa/dip-zirve-analizi" },
+};
 import Link from "next/link";
 import dipZirveData from "./data/dip-zirve.json";
 import DipZirveTableClient, {
