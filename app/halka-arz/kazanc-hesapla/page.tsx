@@ -1,3 +1,4 @@
+https://github.com/Ermana39/hoca-ile-borsa/blob/main/app/halka-arz/talep-hesapla/page.tsx
 export const metadata = {
   title: "Halka Arz Kazanç Hesaplama | Hoca İle Borsa",
   description: "Halka arz işlemlerinde kazancınızı kolayca hesaplayın.",
