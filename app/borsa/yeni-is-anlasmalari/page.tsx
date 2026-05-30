@@ -7,11 +7,6 @@ import Link from "next/link";
 import Script from "next/script";
 import yeniIsData from "./data/yeni-is-anlasmalari.json";
 
-export const metadata = {
-  title: "Yeni İş Anlaşmaları | Hoca İle Borsa",
-  description:
-    "Borsa İstanbul şirketlerinin yeni iş anlaşmalarını, sözleşme tutarlarını ve yıllık satışlara oranlarını takip edin.",
-};
 
 export const revalidate = 3600;
 
