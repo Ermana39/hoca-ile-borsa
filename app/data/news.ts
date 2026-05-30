@@ -6,8 +6,14 @@ export type NewsItem = {
   alt: string;
 };
 
-export const newsItems: NewsItem[] = [ 
-
+export const newsItems: NewsItem[] = [
+  {
+    id: 985,
+    title: "Borsada açığa satış yasağı 12 Haziran'a uzatıldı",
+    href: "/haber/haber-981",
+    image: "/haber981.png",
+    alt: "Haber 981 görseli",
+  }, 
   {
     id: 982,
     title: "CHP KURULTAY DAVASI'NDA 'MUTLAK BUTLAN' KARARI ÇIKTI",
@@ -29,11 +35,5 @@ export const newsItems: NewsItem[] = [
     image: "/haber984.png",
     alt: "Haber 984 görseli",
   },
-  {
-    id: 985,
-    title: "TÜRK-İŞ Nisan 2026 Açlık ve Yoksulluk Sınırını Açıkladı",
-    href: "/haber/haber-985",
-    image: "/haber985.png",
-    alt: "Haber 985 görseli",
-  },
+  
  ];

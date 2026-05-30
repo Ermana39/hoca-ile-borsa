@@ -4,9 +4,9 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title:
-    "TÜRK-İŞ Nisan 2026 Açlık ve Yoksulluk Sınırını Açıkladı;",
+    "Borsada açığa satış yasağı 12 Haziran'a uzatıldı;",
   description:
-    "TÜRK-İŞ Nisan 2026 Açlık ve Yoksulluk Sınırını Açıkladı;",
+    "Borsada açığa satış yasağı 12 Haziran'a uzatıldı.;",
 };
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
@@ -25,7 +25,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   );
 }
 
-export default function Haber985Page() {
+export default function Haber980Page() {
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-4xl">
@@ -48,7 +48,7 @@ export default function Haber985Page() {
         <article className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
-              src="/haber985.png"
+              src="/haber980.png"
               alt="fitch not"
               fill
               unoptimized
@@ -58,18 +58,26 @@ export default function Haber985Page() {
 
           <div className="p-5 md:p-8">
             <h1 className="text-2xl font-bold leading-tight text-zinc-900 md:text-4xl">
-              TÜRK-İŞ Nisan 2026 Açlık ve Yoksulluk Sınırını Açıkladı;
+              Borsada açığa satış yasağı 12 Haziran'a uzatıldı
             </h1>
 
             <div className="mt-6 space-y-4 text-base leading-8 text-zinc-700 md:text-lg">
               <p>
                 TÜRK-İŞ, çalışanların geçim koşullarını ve temel ihtiyaç maddelerindeki fiyat değişimlerinin aile bütçesine etkisini ölçen Nisan 2026 Açlık ve Yoksulluk Sınırı Araştırması sonuçlarını yayımladı.
               </p>
-<p>Araştırmaya göre Ankara’da yaşayan dört kişilik bir ailenin sağlıklı, dengeli ve yeterli beslenebilmesi için yapması gereken aylık gıda harcaması, yani açlık sınırı 34.586,86 TL oldu.</p>
-<p>Gıda harcamasına ek olarak kira, elektrik, su, ulaşım, eğitim, sağlık, giyim ve benzeri temel ihtiyaçların da dahil edildiği yoksulluk sınırı ise 112.660,80 TL’ye yükseldi.</p>
-<p>Bekâr bir çalışanın aylık yaşama maliyeti de 44.802,03 TL olarak hesaplandı.</p>
-              <p>TÜRK-İŞ’in “mutfak enflasyonu” verilerine göre, dört kişilik bir ailenin sadece gıda için yapması gereken asgari harcama tutarı bir önceki aya göre %5,47 arttı. On iki aylık artış oranı %43,90, yıllık ortalama artış %40,00, dört aylık artış ise %14,74 olarak gerçekleşti.</p>
-              <p>Nisan ayı verileri, temel gıda harcamalarındaki yükselişin hane bütçeleri üzerindeki baskıyı artırmaya devam ettiğini gösteriyor. Özellikle yoksulluk sınırının 112 bin TL seviyesini aşması, dört kişilik bir ailenin temel yaşam giderlerini karşılayabilmesi için ihtiyaç duyduğu gelir düzeyinin oldukça yükseldiğini ortaya koyuyor.</p>
+<p>A. DUYURU VE İLKE KARARLARI
+
+Kurul Karar Organı’nın 30/05/2026 tarih ve 33/993 sayılı Kararı Uyarınca Yapılan Duyuru:
+
+Kurulumuzun 09.05.2026 tarihli ve 2026/30 sayılı bülteni ile duyurulan Kurul Karar Organı’nın 08.05.2026 tarihli ve 30/903 sayılı Kararı’nda öngörülen;
+
+- Borsa İstanbul AŞ pay piyasalarında açığa satış işlemlerinin yasaklanmasına,
+
+- Kredili sermaye piyasası işlemlerinde devamı süresince öz kaynak oranının esnetilerek uygulanmasına,
+
+ilişkin tedbir ve uygulamaların 12.06.2026 tarihli seans sonuna kadar uygulanmasının devam edilmesine karar verilmiştir.</p>
+              <p></p>
+              <p></p>
               <p></p>
             </div>
           </div>
