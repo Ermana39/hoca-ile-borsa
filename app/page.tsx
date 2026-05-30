@@ -1,3 +1,10 @@
+export const metadata = {
+  title: "Hoca İle Borsa | Borsa, Halka Arz ve Finans İçerikleri",
+  description: "Borsa analiz, halka arz, temettü takvimi, yatırım fonları ve finans içeriklerini tek yerde takip edin.",
+  alternates: {
+    canonical: "https://www.hocaileborsa.com",
+  },
+};
 import Image from "next/image";
 import Link from "next/link";
 import type { ReactNode } from "react";
