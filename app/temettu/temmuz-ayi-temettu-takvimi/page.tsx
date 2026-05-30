@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Temmuz Ayı Temettü Takvimi | Hoca İle Borsa",
+  description: "Temmuz ayında temettü veren BIST şirketleri, ödeme tarihleri ve temettü miktarları.",
+  alternates: { canonical: "https://www.hocaileborsa.com/temettu/temmuz-ayi-temettu-takvimi" },
+};
 import Link from "next/link";
 
 const temmuzTemettuleri = [
