@@ -1,3 +1,8 @@
+export const metadata = {
+  title: "Halka Arz Kazanç Hesaplama | Hoca İle Borsa",
+  description: "Halka arz işlemlerinde kazancınızı kolayca hesaplayın.",
+  alternates: { canonical: "https://www.hocaileborsa.com/halka-arz/kazanc-hesapla" },
+};
 "use client";
 
 import Link from "next/link";
