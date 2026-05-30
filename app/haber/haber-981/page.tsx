@@ -63,7 +63,7 @@ export default function Haber981Page() {
 
             <div className="mt-6 space-y-4 text-base leading-8 text-zinc-700 md:text-lg">
               <p>
-                TÜRK-İŞ, çalışanların geçim koşullarını ve temel ihtiyaç maddelerindeki fiyat değişimlerinin aile bütçesine etkisini ölçen Nisan 2026 Açlık ve Yoksulluk Sınırı Araştırması sonuçlarını yayımladı.
+                
               </p>
 <p>A. DUYURU VE İLKE KARARLARI
 
