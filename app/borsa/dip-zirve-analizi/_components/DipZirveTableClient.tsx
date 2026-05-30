@@ -72,18 +72,18 @@ export default function DipZirveTableClient({
   };
 
   return (
-    <section className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
-      <div className="overflow-x-auto">
-        <table className="w-full min-w-[980px] border-collapse text-sm">
-          <thead className="bg-zinc-100 text-zinc-800">
+    <section className="rounded-2xl border border-zinc-200 bg-white">
+      <div className="overflow-x-auto rounded-2xl">
+        <table className="w-full min-w-[980px] border-separate border-spacing-0 text-sm">
+          <thead className="text-zinc-800">
             <tr>
-              <th className="px-4 py-4 text-left font-semibold">
+              <th className="sticky top-0 z-30 border-b border-zinc-200 bg-zinc-100 px-4 py-4 text-left font-semibold shadow-sm">
                 <button type="button" onClick={() => handleSort("sembol")}>
                   Sembol {sortArrow(sort === "sembol", dir)}
                 </button>
               </th>
 
-              <th className="px-4 py-4 text-right font-semibold">
+              <th className="sticky top-0 z-30 border-b border-zinc-200 bg-zinc-100 px-4 py-4 text-right font-semibold shadow-sm">
                 <button
                   type="button"
                   onClick={() => handleSort("yuzdeDibeUzaklik")}
@@ -93,7 +93,7 @@ export default function DipZirveTableClient({
                 </button>
               </th>
 
-              <th className="px-4 py-4 text-right font-semibold">
+              <th className="sticky top-0 z-30 border-b border-zinc-200 bg-zinc-100 px-4 py-4 text-right font-semibold shadow-sm">
                 <button
                   type="button"
                   onClick={() => handleSort("gunDibeUzaklik")}
@@ -103,7 +103,7 @@ export default function DipZirveTableClient({
                 </button>
               </th>
 
-              <th className="px-4 py-4 text-right font-semibold">
+              <th className="sticky top-0 z-30 border-b border-zinc-200 bg-zinc-100 px-4 py-4 text-right font-semibold shadow-sm">
                 <button
                   type="button"
                   onClick={() => handleSort("yuzdeZirveyeUzaklik")}
@@ -113,7 +113,7 @@ export default function DipZirveTableClient({
                 </button>
               </th>
 
-              <th className="px-4 py-4 text-right font-semibold">
+              <th className="sticky top-0 z-30 border-b border-zinc-200 bg-zinc-100 px-4 py-4 text-right font-semibold shadow-sm">
                 <button
                   type="button"
                   onClick={() => handleSort("gunZirveyeUzaklik")}
@@ -123,7 +123,7 @@ export default function DipZirveTableClient({
                 </button>
               </th>
 
-              <th className="px-4 py-4 text-right font-semibold">
+              <th className="sticky top-0 z-30 border-b border-zinc-200 bg-zinc-100 px-4 py-4 text-right font-semibold shadow-sm">
                 <button type="button" onClick={() => handleSort("zirveDip")}>
                   Zirve / Dip {sortArrow(sort === "zirveDip", dir)}
                 </button>
