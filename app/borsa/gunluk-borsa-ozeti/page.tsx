@@ -1,3 +1,10 @@
+export const metadata = {
+  title: "Günlük Borsa Özeti | Hoca İle Borsa",
+  description: "BIST 100 kapanışı, en çok yükselen ve düşen hisseler, para girişi çıkışı ve kurum bazlı günlük borsa verileri.",
+  alternates: {
+    canonical: "https://www.hocaileborsa.com/borsa/gunluk-borsa-ozeti",
+  },
+};
 import Image from "next/image";
 import Link from "next/link";
 
