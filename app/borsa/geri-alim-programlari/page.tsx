@@ -7,11 +7,6 @@ import Link from "next/link";
 import Script from "next/script";
 import geriAlimData from "./data/geri-alim.json";
 
-export const metadata = {
-  title: "Geri Alım Programları | Hoca İle Borsa",
-  description:
-    "Borsa İstanbul şirketlerinin geri alım programlarını ve pay geri alım verilerini takip edin.",
-};
 
 export const revalidate = 3600;
 
