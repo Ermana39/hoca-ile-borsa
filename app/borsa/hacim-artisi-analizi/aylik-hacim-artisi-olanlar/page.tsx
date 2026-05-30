@@ -93,7 +93,7 @@ export default function YillikHacimArtisiPage() {
         </section>
 
         <h1 className="mb-6 text-3xl font-bold text-zinc-900">
-          Yıllık Hacim Artışı Olanlar
+          Aylık Hacim Artışı Olanlar
         </h1>
 
         <div className="overflow-x-auto rounded-2xl border border-blue-200 bg-blue-50 p-4">
