@@ -7,6 +7,13 @@ export type NewsItem = {
 };
 
 export const newsItems: NewsItem[] = [
+  {
+    id: 979,
+    title: "TÜRK-İŞ Açlık ve yoksulluk sınırı' araştırması yayınlandı",
+    href: "/haber/haber-979",
+    image: "/haber979.png",
+    alt: "Haber 979 görseli",
+  },
    {
     id: 980,
     title: "26 Mayıs 2026 Salı KAP Bildirimleri Özeti",
