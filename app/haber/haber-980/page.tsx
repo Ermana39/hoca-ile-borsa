@@ -3,8 +3,8 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "26 Mayıs 2026 Salı KAP Bildirimleri Özeti",
-  description: "26 Mayıs 2026 Salı KAP Bildirimleri Özeti",
+  title: "01 Haziran 2026 Pazartesi KAP Bildirimleri Özeti",
+  description: "01 Haziran 2026 Pazartesi KAP Bildirimleri Özeti",
 };
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
@@ -25,57 +25,64 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
 
 const kapHaberleri = [
   {
-    baslik: "MHR GYO (MHRGY)",
+    baslik: "ASELSAN (ASELS)",
     metin:
-      "Şirket, iç kaynaklardan bedelsiz sermaye artırımı kararı aldı. Mevcut sermayenin 1,24 milyar TL’den 3 milyar TL’ye çıkarılması planlanıyor.",
+      "ASELSAN ile Savunma Sanayii Başkanlığı arasında Kamu Güvenliği Haberleşme ile Uydu ve Uzay Sistemleri tedarikine yönelik toplam 845 milyon dolar tutarında sözleşme imzalandı. Teslimatların 2026 yılından itibaren başlaması bekleniyor. Günün en güçlü pozitif haberlerinden biri olarak öne çıktı. Tutarın yüksek olması, savunma sanayii tarafında sipariş görünürlüğünü destekliyor.",
   },
   {
-    baslik: "Borsa İstanbul / VBTS Tedbirleri",
+    baslik: "Borusan Birleşik Boru (BRSAN)",
     metin:
-      "GESAN, HRKET ve ICBCT payları için Volatilite Bazlı Tedbir Sistemi kapsamında işlem tedbiri uygulanacağı duyuruldu.",
+      "Borusan Birleşik Boru’nun ABD’deki bağlı ortaklığı Borusan Berg Pipe, yaklaşık 742 milyon dolar tutarında yeni satış siparişi aldı. Teslimatların büyük kısmının 2027 yılında, kalan kısmının ise 2028 yılının ilk çeyreğinde yapılması bekleniyor. Çok büyük ölçekli ve orta vadeli gelir katkısı yaratabilecek pozitif bir haber olarak değerlendirilebilir.",
   },
   {
-    baslik: "GESAN",
+    baslik: "Sabancı Holding (SAHOL)",
     metin:
-      "GESAN payında işlem sırasında pay bazında devre kesici uygulaması devreye girdi.",
+      "Sabancı Holding’in ABD’deki Lucky 7 ve Pepper Güneş Enerjisi Projeleri için 382 milyon dolar proje finansmanı ve 151 milyon dolar özsermaye yatırımı sözleşmeleri imzalandı. Projelerin toplam kurulu gücü 286 MW olarak açıklandı. Devreye alma hedefi 2027 yılının üçüncü çeyreği. Haber, enerji yatırımları tarafında orta ve uzun vadeli büyüme hikayesini destekliyor.",
   },
   {
-    baslik: "ALCTL",
+    baslik: "YEO Teknoloji (YEOTK)",
     metin:
-      "Şirket, 2025 faaliyet yılına ilişkin olağan genel kurul gündemi ve kâr payı dağıtım bildirimini açıkladı.",
+      "YEO Teknoloji’nin yüzde 51 oranında sahip olduğu DEFIC Globe Enerji, Romanya’da güneş enerjisi santrali ve enerji depolama sistemi içeren şirketlerin satışı için 20,52 milyon euro tutarında bağlayıcı niyet mektubu imzaladı. Haber, YEOTK için yurt dışı enerji ve depolama iş kolunu destekleyen pozitif bir gelişme olarak öne çıkıyor.",
   },
   {
-    baslik: "SMARTİKS (SMART)",
+    baslik: "Doğan Holding / Karel Elektronik (DOHOL / KAREL)",
     metin:
-      "Şirket tarafından özel durum açıklaması yapıldı. Bildirimin genel özel durum açıklaması niteliğinde olduğu görüldü.",
+      "Doğan Holding’in bağlı ortaklığı Öncü GSYO, Karel Elektronik’in toplam 2,25 milyar TL satış tutarlı tahsisli sermaye artırımına 1,438 milyar TL katılım kararı aldı. Satış tutarına ulaşılamazsa kalan kısmı alma yönünde ilave taahhüt verilmeyeceği açıklandı. DOHOL açısından Karel yatırımına ciddi kaynak aktarımı anlamına gelirken, KAREL tarafında sermaye yapısını güçlendirme etkisi bulunuyor. Mevcut ortaklar açısından tahsisli sermaye artırımı sulandırma etkisi nedeniyle dikkatle izlenmeli.",
   },
   {
-    baslik: "FLAP Kongre (FLAP)",
-    metin: "Şirket, “pay devri” konulu özel durum açıklaması yaptı.",
-  },
-  {
-    baslik: "AHES GYO (AHSGY)",
+    baslik: "İmaş Makina (IMASM)",
     metin:
-      "2025 yılı kâr payı dağıtımına ilişkin yönetim kurulu önerisinde düzeltme yapıldı. GYO statüsü nedeniyle stopaj oranının sıfır olduğu belirtildi.",
+      "İmaş Makina, sermayesini 925 milyon TL’den 1,988 milyar TL’ye çıkarmaya yönelik yüzde 115 bedelli sermaye artırımı için SPK’ya başvurdu. Bedelli sermaye artırımı şirket için fon girişi yaratabilir. Ancak mevcut ortaklar açısından nakit katılım ihtiyacı ve sulandırma etkisi doğurabileceği için piyasada ilk tepki her zaman pozitif olmayabilir.",
   },
   {
-    baslik: "KARSAN (KARSN)",
+    baslik: "Boğaziçi Beton (BOBET)",
     metin:
-      "İsveç/Göteborg’da hizmet veren otonom araçla ilgili basında çıkan haberlere ilişkin açıklama yapıldı.",
+      "Boğaziçi Beton, 01.06.2026 tarihinde 18,80 TL fiyattan 163.720 adet pay geri aldı. Şirketin sahip olduğu BOBET payları 9.195.701 adede, geri alınan payların sermayeye oranı ise yaklaşık yüzde 2,42’ye ulaştı. Geri alım programının devam etmesi, hisse fiyatı üzerinde destekleyici algılanabilir.",
   },
   {
-    baslik: "REEDER (REEDR)",
+    baslik: "Ahlatcı Doğal Gaz (AHGAZ)",
     metin:
-      "Kurumsal Yönetim Bilgi Formu güncellendi. Bildirim daha çok idari/kurumsal güncelleme niteliğinde.",
+      "Ahlatcı Doğal Gaz, 1 Haziran’da ortalama 32,78 TL fiyattan 320.000 adet pay geri aldı. Toplam sahip olunan pay sayısı 69,76 milyon adede ulaştı. Düzenli geri alım devam ediyor. Bu durum fiyatı destekleyici algı yaratabilir ancak tek başına operasyonel büyüme haberi değildir.",
   },
   {
-    baslik: "BOR Şeker (BORSK)",
+    baslik: "Tera Yatırım Teknoloji Holding (TEHOL)",
     metin:
-      "Şirket, nakit kâr payı ve pay biçiminde kâr payı dağıtılmamasını teklif etti. VUK kayıtlarında dönem kârı görünmesine rağmen SPK/TFRS tarafında zarar bulunduğu belirtildi.",
+      "Tera Portföy Yönetimi’nin yönettiği beş fon, Tera Yatırım Teknoloji Holding’de 70,81 milyon TL nominal pay alımı yaptı. Fonların şirketteki toplam payı yüzde 13,50’den yüzde 17,05’e yükseldi. Kurumsal fon ilgisinin artması nedeniyle pozitif algılanabilecek bir gelişme olarak izlenebilir.",
   },
   {
-    baslik: "Klimasan (KLMSN)",
-    metin: "Şirket tarafından özel durum açıklaması yapıldı.",
+    baslik: "CVK Maden (CVKMD)",
+    metin:
+      "CVK Maden’in bağlı ortaklığı Aldridge Mineral Madencilik, Yenipazar Polimetalik Maden İşletmesi Projesi kapsamında 1,2 milyon dolar + KDV tutarında detay mühendislik ve tasarım hizmet sözleşmesi imzaladı. Haber doğrudan büyük ciro etkisinden çok, projenin yatırım aşamalarında ilerlediğini göstermesi açısından önemli.",
+  },
+  {
+    baslik: "Pasifik Eurasia Lojistik (PASEU)",
+    metin:
+      "Pasifik Eurasia Lojistik’te Genel Müdürlük görevinden ayrılan Ayhan Akay’ın yerine Emre Sarıcan atandı. Bildirim operasyonel veya finansal rakam içermiyor. Yönetim değişikliği olduğu için izlenmeli ancak tek başına güçlü fiyatlayıcı haber niteliği taşımıyor.",
+  },
+  {
+    baslik: "Türk İlaç ve Serum Sanayi (TRILC)",
+    metin:
+      "Türk İlaç ve Serum Sanayi’nde Yönetim Kurulu üyesi İsmet Gergerli’nin istifası kabul edildi, yerine Nehir Alıcı atandı. Bildirim daha çok rutin kurumsal yönetim niteliğinde. Operasyonel büyüklük veya finansal etki içermediği için sınırlı önem taşıyor.",
   },
 ];
 
@@ -103,7 +110,7 @@ export default function Haber980Page() {
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
               src="/haber980.png"
-              alt="26 Mayıs 2026 Salı KAP Bildirimleri Özeti"
+              alt="01 Haziran 2026 Pazartesi KAP Bildirimleri Özeti"
               fill
               unoptimized
               className="object-contain"
@@ -112,16 +119,15 @@ export default function Haber980Page() {
 
           <div className="p-5 md:p-8">
             <h1 className="text-2xl font-bold leading-tight text-zinc-900 md:text-4xl">
-              26 Mayıs 2026 Salı KAP Bildirimleri Özeti
+              01 Haziran 2026 Pazartesi KAP Bildirimleri Özeti
             </h1>
 
             <div className="mt-6 space-y-6 text-base leading-8 text-zinc-700 md:text-lg">
               <p>
-                Borsa İstanbul’da 26 Mayıs 2026 Salı günü yarım gün işlem
-                gerçekleşti. Gün içinde KAP’a düşen başlıca bildirimlerde
-                bedelsiz sermaye artırımı, VBTS tedbirleri, genel kurul
-                kararları, kâr payı açıklamaları ve özel durum bildirimleri öne
-                çıktı.
+                Borsa İstanbul’da 01 Haziran 2026 Pazartesi günü KAP’a düşen
+                öne çıkan bildirimlerde büyük ölçekli sözleşmeler, yurt dışı
+                siparişler, enerji yatırımları, sermaye artırımı kararları ve
+                pay geri alım işlemleri dikkat çekti.
               </p>
 
               <div className="space-y-5">
@@ -136,6 +142,13 @@ export default function Haber980Page() {
                     <p className="mt-2 text-zinc-700">{haber.metin}</p>
                   </section>
                 ))}
+              </div>
+
+              <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm font-medium leading-7 text-emerald-900 md:text-base">
+                Günün en güçlü haberleri arasında ASELSAN’ın 845 milyon
+                dolarlık sözleşmesi, BRSAN’ın 742 milyon dolarlık ABD siparişi,
+                SAHOL’ün ABD enerji projeleri için sağladığı finansman ve
+                YEOTK’nın Romanya enerji/depolama anlaşması öne çıktı.
               </div>
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">
