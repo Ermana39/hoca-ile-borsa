@@ -79,7 +79,7 @@ export default function Formasyon1Page() {
           <section className="pt-6">
             <div className="rounded-2xl bg-zinc-50 p-4 md:p-6">
               <p className="whitespace-pre-line text-base leading-8 text-zinc-700 md:text-lg">
-                {`#PNSUT
+                {`
 
 HUNER grafiğinde teknik açıdan düşen genişleyen takoz formasyonu dikkat çekiyor.
 
