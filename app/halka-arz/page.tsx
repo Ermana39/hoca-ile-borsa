@@ -8,7 +8,6 @@ import path from "path";
 import Image from "next/image";
 import Link from "next/link";
 import * as XLSX from "xlsx";
-import { execFileSync } from "child_process";
 
 type ExcelSatiri = {
   kurum: string;
@@ -37,8 +36,6 @@ const excelDosyaYolu = path.join(
   "data",
   "ekdemir-araci-kurum.xlsx"
 );
-
-const excelGitYolu = "app/halka-arz/data/ekdemir-araci-kurum.xlsx";
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
@@ -142,18 +139,7 @@ function excelOku() {
 
 function guncellemeTarihiAl() {
   try {
-    const gitTarihi = execFileSync(
-      "git",
-      ["log", "-1", "--format=%cI", "--", excelGitYolu],
-      {
-        cwd: process.cwd(),
-        encoding: "utf8",
-        stdio: ["ignore", "pipe", "ignore"],
-      }
-    ).trim();
-
-    if (!gitTarihi) return "-";
-
+    const stat = fs.statSync(excelDosyaYolu);
     return new Intl.DateTimeFormat("tr-TR", {
       timeZone: "Europe/Istanbul",
       day: "2-digit",
@@ -161,7 +147,7 @@ function guncellemeTarihiAl() {
       year: "numeric",
       hour: "2-digit",
       minute: "2-digit",
-    }).format(new Date(gitTarihi));
+    }).format(stat.mtime);
   } catch {
     return "-";
   }
