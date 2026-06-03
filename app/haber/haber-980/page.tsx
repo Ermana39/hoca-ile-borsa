@@ -94,7 +94,7 @@ export default function Haber981Page() {
         <article className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
-              src="/haber981.png"
+              src="/haber980.png"
               alt="02 Haziran 2026 Salı KAP Bildirimleri Özeti"
               fill
               unoptimized
