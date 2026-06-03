@@ -5,6 +5,9 @@ export const metadata = {
   alternates: { canonical: "https://www.hocaileborsa.com/halka-arz" },
 };
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 import fs from "fs";
 import path from "path";
 import Image from "next/image";
@@ -88,7 +91,7 @@ function formatYuzde(deger: number) {
   }).format(deger);
 }
 
-function tarihFormatla(tarih: Date) {
+function guncellemeTarihiAl() {
   return new Intl.DateTimeFormat("tr-TR", {
     timeZone: "Europe/Istanbul",
     day: "2-digit",
@@ -96,7 +99,7 @@ function tarihFormatla(tarih: Date) {
     year: "numeric",
     hour: "2-digit",
     minute: "2-digit",
-  }).format(tarih);
+  }).format(new Date());
 }
 
 function bosSatir(): ListeSatiri {
@@ -122,11 +125,7 @@ function besSatiraTamamla(liste: ListeSatiri[]) {
 function excelOku() {
   try {
     const buffer = fs.readFileSync(excelDosyaYolu);
-    const workbook = XLSX.read(buffer, {
-      type: "buffer",
-      cellDates: true,
-    });
-
+    const workbook = XLSX.read(buffer, { type: "buffer" });
     const sheetName = workbook.SheetNames[0];
     const ws = workbook.Sheets[sheetName];
 
@@ -151,31 +150,6 @@ function excelOku() {
       .filter((item) => item.kurum);
   } catch {
     return [] as ExcelSatiri[];
-  }
-}
-
-function guncellemeTarihiAl() {
-  try {
-    const buffer = fs.readFileSync(excelDosyaYolu);
-    const workbook = XLSX.read(buffer, {
-      type: "buffer",
-      cellDates: true,
-    });
-
-    const modifiedDate = workbook.Props?.ModifiedDate;
-    const createdDate = workbook.Props?.CreatedDate;
-
-    if (modifiedDate instanceof Date && !Number.isNaN(modifiedDate.getTime())) {
-      return tarihFormatla(modifiedDate);
-    }
-
-    if (createdDate instanceof Date && !Number.isNaN(createdDate.getTime())) {
-      return tarihFormatla(createdDate);
-    }
-
-    return "-";
-  } catch {
-    return "-";
   }
 }
 
