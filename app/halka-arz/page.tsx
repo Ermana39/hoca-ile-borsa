@@ -88,6 +88,17 @@ function formatYuzde(deger: number) {
   }).format(deger);
 }
 
+function tarihFormatla(tarih: Date) {
+  return new Intl.DateTimeFormat("tr-TR", {
+    timeZone: "Europe/Istanbul",
+    day: "2-digit",
+    month: "2-digit",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+  }).format(tarih);
+}
+
 function bosSatir(): ListeSatiri {
   return {
     kurum: "",
@@ -111,7 +122,11 @@ function besSatiraTamamla(liste: ListeSatiri[]) {
 function excelOku() {
   try {
     const buffer = fs.readFileSync(excelDosyaYolu);
-    const workbook = XLSX.read(buffer, { type: "buffer" });
+    const workbook = XLSX.read(buffer, {
+      type: "buffer",
+      cellDates: true,
+    });
+
     const sheetName = workbook.SheetNames[0];
     const ws = workbook.Sheets[sheetName];
 
@@ -141,17 +156,24 @@ function excelOku() {
 
 function guncellemeTarihiAl() {
   try {
-    const dosyaBilgisi = fs.statSync(excelDosyaYolu);
-    const tarih = dosyaBilgisi.mtime;
+    const buffer = fs.readFileSync(excelDosyaYolu);
+    const workbook = XLSX.read(buffer, {
+      type: "buffer",
+      cellDates: true,
+    });
 
-    return new Intl.DateTimeFormat("tr-TR", {
-      timeZone: "Europe/Istanbul",
-      day: "2-digit",
-      month: "2-digit",
-      year: "numeric",
-      hour: "2-digit",
-      minute: "2-digit",
-    }).format(tarih);
+    const modifiedDate = workbook.Props?.ModifiedDate;
+    const createdDate = workbook.Props?.CreatedDate;
+
+    if (modifiedDate instanceof Date && !Number.isNaN(modifiedDate.getTime())) {
+      return tarihFormatla(modifiedDate);
+    }
+
+    if (createdDate instanceof Date && !Number.isNaN(createdDate.getTime())) {
+      return tarihFormatla(createdDate);
+    }
+
+    return "-";
   } catch {
     return "-";
   }
