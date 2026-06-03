@@ -5,9 +5,6 @@ export const metadata = {
   alternates: { canonical: "https://www.hocaileborsa.com/halka-arz" },
 };
 
-export const dynamic = "force-dynamic";
-export const revalidate = 0;
-
 import fs from "fs";
 import path from "path";
 import Image from "next/image";
@@ -89,17 +86,6 @@ function formatYuzde(deger: number) {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   }).format(deger);
-}
-
-function guncellemeTarihiAl() {
-  return new Intl.DateTimeFormat("tr-TR", {
-    timeZone: "Europe/Istanbul",
-    day: "2-digit",
-    month: "2-digit",
-    year: "numeric",
-    hour: "2-digit",
-    minute: "2-digit",
-  }).format(new Date());
 }
 
 function bosSatir(): ListeSatiri {
@@ -303,7 +289,6 @@ export default function HalkaArzPage() {
   const alicilar = aliciListesi(veri);
   const saticilar = saticiListesi(veri);
   const hacimciler = hacimListesi(veri);
-  const guncellemeTarihi = guncellemeTarihiAl();
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -398,10 +383,6 @@ export default function HalkaArzPage() {
               <h2 className="text-2xl font-bold text-zinc-900 md:text-3xl">
                 EKDMR Güncel Veriler
               </h2>
-
-              <div className="mt-2 text-sm font-medium text-zinc-500">
-                Güncelleme: {guncellemeTarihi}
-              </div>
             </div>
 
             <div className="grid grid-cols-1 gap-4 xl:grid-cols-[minmax(0,1.02fr)_minmax(0,1.18fr)]">
