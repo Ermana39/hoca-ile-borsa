@@ -1,14 +1,15 @@
 export const metadata = {
   title: "Halka Arz | Hoca İle Borsa",
-  description: "Güncel halka arz verileri, kazanç hesaplama, talep hesaplama ve izahname bilgileri.",
+  description:
+    "Güncel halka arz verileri, kazanç hesaplama, talep hesaplama ve izahname bilgileri.",
   alternates: { canonical: "https://www.hocaileborsa.com/halka-arz" },
 };
+
 import fs from "fs";
 import path from "path";
 import Image from "next/image";
 import Link from "next/link";
 import * as XLSX from "xlsx";
-import { execFileSync } from "child_process";
 
 type ExcelSatiri = {
   kurum: string;
@@ -37,8 +38,6 @@ const excelDosyaYolu = path.join(
   "data",
   "ekdemir-araci-kurum.xlsx"
 );
-
-const excelGitYolu = "app/halka-arz/data/ekdemir-araci-kurum.xlsx";
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =
@@ -142,17 +141,8 @@ function excelOku() {
 
 function guncellemeTarihiAl() {
   try {
-    const gitTarihi = execFileSync(
-      "git",
-      ["log", "-1", "--format=%cI", "--", excelGitYolu],
-      {
-        cwd: process.cwd(),
-        encoding: "utf8",
-        stdio: ["ignore", "pipe", "ignore"],
-      }
-    ).trim();
-
-    if (!gitTarihi) return "-";
+    const dosyaBilgisi = fs.statSync(excelDosyaYolu);
+    const tarih = dosyaBilgisi.mtime;
 
     return new Intl.DateTimeFormat("tr-TR", {
       timeZone: "Europe/Istanbul",
@@ -161,7 +151,7 @@ function guncellemeTarihiAl() {
       year: "numeric",
       hour: "2-digit",
       minute: "2-digit",
-    }).format(new Date(gitTarihi));
+    }).format(tarih);
   } catch {
     return "-";
   }
@@ -332,9 +322,7 @@ export default function HalkaArzPage() {
           </Link>
         </div>
 
-        <h1 className="mb-6 text-3xl font-bold text-zinc-900">
-          Halka Arz
-        </h1>
+        <h1 className="mb-6 text-3xl font-bold text-zinc-900">Halka Arz</h1>
 
         <div className="mb-8 grid grid-cols-1 gap-3 md:grid-cols-2">
           <Link
