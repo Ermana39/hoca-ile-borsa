@@ -50,7 +50,7 @@ export default function formasyon2() {
         <article className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
           <header>
             <h1 className="text-2xl font-bold leading-tight text-zinc-900 md:text-4xl">
-              UAGR İkili Dip Formasyonu 
+              QUAGR İkili Dip Formasyonu 
             </h1>
 
             <p className="mt-3 text-sm leading-7 text-zinc-600 md:text-base">
