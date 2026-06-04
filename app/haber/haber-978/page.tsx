@@ -155,4 +155,4 @@ export default function Haber978Page() {
       </div>
     </main>
   );
-}s
+}
