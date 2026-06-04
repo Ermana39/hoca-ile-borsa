@@ -7,6 +7,13 @@ export type NewsItem = {
 };
 
 export const newsItems: NewsItem[] = [
+    {
+    id: 978,
+    title: "02 Haziran 2026 Salı KAP Bildirimleri Özeti",
+    href: "/haber/haber-978",
+    image: "/haber978.png",
+    alt: "Haber 978 görseli",
+  },
   {
     id: 979,
     title: "TÜRK-İŞ Açlık ve yoksulluk sınırı' araştırması yayınlandı",
@@ -14,13 +21,7 @@ export const newsItems: NewsItem[] = [
     image: "/haber979.png",
     alt: "Haber 979 görseli",
   },
-   {
-    id: 980,
-    title: "02 Haziran 2026 Salı KAP Bildirimleri Özeti",
-    href: "/haber/haber-980",
-    image: "/haber980.png",
-    alt: "Haber 980 görseli",
-  },
+ 
   {
     id: 981,
     title: "Borsada açığa satış yasağı 12 Haziran'a uzatıldı",
