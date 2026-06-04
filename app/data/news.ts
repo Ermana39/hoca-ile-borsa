@@ -9,7 +9,7 @@ export type NewsItem = {
 export const newsItems: NewsItem[] = [
     {
     id: 978,
-    title: "02 Haziran 2026 Salı KAP Bildirimleri Özeti",
+    title: "03 Haziran 2026 Salı KAP Bildirimleri Özeti",
     href: "/haber/haber-978",
     image: "/haber978.png",
     alt: "Haber 978 görseli",
