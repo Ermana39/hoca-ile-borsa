@@ -388,7 +388,7 @@ export default function HalkaArzPage() {
             <div className="grid grid-cols-1 gap-4 xl:grid-cols-[minmax(0,1.02fr)_minmax(0,1.18fr)]">
               <div className="flex items-center justify-center overflow-hidden rounded-2xl border border-zinc-200 bg-white p-3 md:p-5">
                 <Image
-                  src="/ekdemir.jpg"
+                  src="/ekdmr.jpg"
                   alt="EKDMR halka arz görseli"
                   width={900}
                   height={1200}
