@@ -63,10 +63,9 @@ function FaizKutusu({
       href={href}
       prefetch={false}
       aria-label={title}
-      className="group flex min-h-[320px] flex-col rounded-2xl bg-white transition hover:bg-zinc-50"
+      className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)]"
     >
-      <div className="p-2 pb-1 md:p-3 md:pb-1">
-        <div className="relative overflow-hidden rounded-2xl bg-zinc-50">
+      <div className="relative overflow-hidden bg-slate-100">
           <div className="relative aspect-[16/10] w-full">
             <img
               src={image}
@@ -75,15 +74,17 @@ function FaizKutusu({
             />
           </div>
         </div>
-      </div>
-
-      <div className="flex flex-1 flex-col items-center justify-start px-3 pb-3 pt-0 text-center md:px-4 md:pb-3">
-        <h2 className="text-xl font-semibold text-zinc-900 md:text-2xl">
+      <div className="flex flex-1 flex-col p-4 md:p-5">
+        <h2 className="text-base font-bold text-slate-900 md:text-lg">
           {title}
         </h2>
-        <p className="mt-3 text-sm leading-6 text-zinc-600 md:text-base">
+        <p className="mt-3 text-sm leading-6 text-slate-500 md:text-sm">
           {description}
         </p>
+        <div className="mt-auto pt-3 flex items-center gap-1 text-xs font-semibold text-blue-600 transition duration-300 group-hover:gap-2">
+          <span>İncele</span>
+          <span>→</span>
+        </div>
       </div>
     </Link>
   );
@@ -91,24 +92,20 @@ function FaizKutusu({
 
 export default function MevduatKrediFaizleriPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-[#f8fafc]">
       <div className="mx-auto max-w-7xl px-4 py-6 md:px-6">
-        <section className="mb-6 flex flex-wrap gap-3">
-          <Link
-            href="/"
-            prefetch={false}
-            className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
-          >
-            Ana Sayfa
-          </Link>
-        </section>
+        <nav className="mb-5 flex items-center gap-2 text-sm text-slate-500" aria-label="Breadcrumb">
+          <Link href="/" prefetch={false} className="hover:text-blue-600 transition">Ana Sayfa</Link>
+          <span className="text-slate-300">/</span>
+          <span className="text-slate-700 font-medium">Faiz Oranları</span>
+        </nav>
 
         <section className="mb-6">
-          <h1 className="text-2xl font-bold text-zinc-900 md:text-4xl">
+          <h1 className="text-2xl font-bold text-slate-900 md:text-4xl">
             Mevduat ve Kredi Faiz Oranları
           </h1>
 
-          <p className="mt-3 max-w-4xl text-sm leading-7 text-zinc-600 md:text-base">
+          <p className="mt-3 max-w-4xl text-sm leading-7 text-slate-500 md:text-sm">
             Mevduat faizi oranları, tüketici kredisi faiz oranları, konut kredisi
             oranları ve taşıt kredisi oranları gibi güncel finansman başlıklarına
             bu sayfa üzerinden toplu şekilde ulaşabilirsiniz.
@@ -128,7 +125,7 @@ export default function MevduatKrediFaizleriPage() {
             Güncel Mevduat ve Kredi Faiz Oranları Hakkında
           </h2>
 
-          <div className="space-y-4 text-sm leading-7 text-zinc-700 md:text-base">
+          <div className="space-y-4 text-sm leading-7 text-slate-600 md:text-base">
             <p>
               Mevduat ve kredi faiz oranları, bireysel yatırım ve finansman
               kararlarında en çok takip edilen ekonomik göstergeler arasında yer

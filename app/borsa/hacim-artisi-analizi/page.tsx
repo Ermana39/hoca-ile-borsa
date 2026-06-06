@@ -42,10 +42,9 @@ function HacimKutusu({
   return (
     <Link
       href={href}
-      className="group flex min-h-[320px] flex-col rounded-2xl bg-white transition hover:bg-zinc-50"
+      className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)]"
     >
-      <div className="p-2 pb-1 md:p-3 md:pb-1">
-        <div className="relative overflow-hidden rounded-2xl bg-zinc-50">
+      <div className="relative overflow-hidden bg-slate-100">
           <div className="relative aspect-[16/10] w-full">
             <Image
               src={image}
@@ -55,10 +54,8 @@ function HacimKutusu({
             />
           </div>
         </div>
-      </div>
-
-      <div className="flex flex-1 flex-col items-center justify-start px-3 pb-3 pt-0 text-center md:px-4 md:pb-3">
-        <h2 className="text-xl font-semibold leading-tight text-zinc-900 md:text-2xl">
+      <div className="flex flex-1 flex-col p-4 md:p-5">
+        <h2 className="text-xl font-semibold leading-tight text-slate-900 md:text-xl">
           {title}
         </h2>
       </div>
@@ -68,7 +65,7 @@ function HacimKutusu({
 
 export default function HacimArtisiAnaliziPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-[#f8fafc]">
       <div className="mx-auto max-w-7xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link
@@ -87,10 +84,10 @@ export default function HacimArtisiAnaliziPage() {
         </section>
 
         <section className="mb-6">
-          <h1 className="text-2xl font-bold text-zinc-900 md:text-4xl">
+          <h1 className="text-2xl font-bold text-slate-900 md:text-4xl">
             Hacim Artışı Analizi
           </h1>
-          <p className="mt-3 max-w-4xl text-sm leading-7 text-zinc-600 md:text-base">
+          <p className="mt-3 max-w-4xl text-sm leading-7 text-slate-500 md:text-sm">
             Hacim artışı analizlerini aşağıdaki kutulardan inceleyebilirsiniz.
           </p>
         </section>
@@ -109,7 +106,7 @@ export default function HacimArtisiAnaliziPage() {
               Hacim Artışı Analizi Hakkında
             </h2>
 
-            <div className="space-y-4 text-sm leading-7 text-zinc-700 md:text-base">
+            <div className="space-y-4 text-sm leading-7 text-slate-600 md:text-base">
               <p>
                 Hacim artışı analizi sayfası, Borsa İstanbul’da işlem hacminde dikkat
                 çeken değişimler yaşayan hisseleri takip etmek isteyen yatırımcılar

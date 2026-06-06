@@ -90,10 +90,9 @@ function FonKutusu({
       href={href}
       prefetch={false}
       aria-label={title}
-      className="group flex min-h-[320px] flex-col rounded-2xl bg-white transition hover:bg-zinc-50"
+      className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)]"
     >
-      <div className="p-2 pb-1 md:p-3 md:pb-1">
-        <div className="relative overflow-hidden rounded-2xl bg-zinc-50">
+      <div className="relative overflow-hidden bg-slate-100">
           <div className="relative aspect-[16/10] w-full">
             <img
               src={image}
@@ -102,18 +101,16 @@ function FonKutusu({
             />
           </div>
         </div>
-      </div>
-
-      <div className="flex flex-1 flex-col items-center justify-start px-3 pb-3 pt-0 text-center md:px-4 md:pb-3">
+      <div className="flex flex-1 flex-col p-4 md:p-5">
         <h2 className={`font-semibold text-zinc-900 ${titleClassName}`}>
           {title}
         </h2>
 
-        <p className="mt-3 text-sm leading-6 text-zinc-600 md:text-base">
+        <p className="mt-3 text-sm leading-6 text-slate-500 md:text-sm">
           {desc}
         </p>
 
-        <p className="mt-3 text-sm leading-6 text-zinc-600 md:text-base">
+        <p className="mt-3 text-sm leading-6 text-slate-500 md:text-sm">
           {seoDescription}
         </p>
       </div>
@@ -123,24 +120,20 @@ function FonKutusu({
 
 export default function FonlarPage() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-[#f8fafc]">
       <div className="mx-auto max-w-7xl px-4 py-6 md:px-6">
-        <section className="mb-6 flex flex-wrap gap-3">
-          <Link
-            href="/"
-            prefetch={false}
-            className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
-          >
-            Ana Sayfa
-          </Link>
-        </section>
+        <nav className="mb-5 flex items-center gap-2 text-sm text-slate-500" aria-label="Breadcrumb">
+          <Link href="/" prefetch={false} className="hover:text-blue-600 transition">Ana Sayfa</Link>
+          <span className="text-slate-300">/</span>
+          <span className="text-slate-700 font-medium">Fonlar</span>
+        </nav>
 
         <section className="mb-6">
-          <h1 className="text-2xl font-bold text-zinc-900 md:text-4xl">
+          <h1 className="text-2xl font-bold text-slate-900 md:text-4xl">
             Fonlar
           </h1>
 
-          <p className="mt-3 max-w-4xl text-sm leading-7 text-zinc-600 md:text-base">
+          <p className="mt-3 max-w-4xl text-sm leading-7 text-slate-500 md:text-sm">
             Yatırım fonları ile ilgili haftalık tercihler, fon getiri analizi,
             fon tarihsel verileri ve fonlara dair içeriklere bu sayfa üzerinden
             toplu şekilde ulaşabilirsiniz. Farklı fon başlıklarını tek sayfada
@@ -163,7 +156,7 @@ export default function FonlarPage() {
               YouTube Videoları
             </h2>
 
-            <p className="mt-2 text-sm text-zinc-600 md:text-base">
+            <p className="mt-2 text-sm text-slate-500 md:text-sm">
               Fonlarla ilgili hazırladığım videolara buradan ulaşabilirsiniz.
             </p>
           </div>
@@ -175,7 +168,7 @@ export default function FonlarPage() {
                 href={video.href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex overflow-hidden rounded-2xl bg-white transition hover:bg-zinc-50"
+                className="group flex overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-[0_6px_24px_rgba(15,23,42,0.10)]"
                 aria-label={video.title}
               >
                 <div className="w-full">
@@ -207,7 +200,7 @@ export default function FonlarPage() {
             Fonlar sayfasında neler bulunur?
           </h2>
 
-          <div className="space-y-4 text-sm leading-7 text-zinc-700 md:text-base">
+          <div className="space-y-4 text-sm leading-7 text-slate-600 md:text-base">
             <p>
               Hoca İle Borsa Fonlar sayfasında yatırım fonları, emeklilik
               fonları, para piyasası fonları, hisse senedi fonları, borçlanma

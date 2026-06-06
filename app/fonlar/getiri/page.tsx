@@ -38,10 +38,9 @@ function FonTipiKutusu({
       href={href}
       prefetch={false}
       aria-label={title}
-      className="group flex min-h-[320px] flex-col rounded-2xl bg-white transition hover:bg-zinc-50"
+      className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)]"
     >
-      <div className="p-2 pb-1 md:p-3 md:pb-1">
-        <div className="relative overflow-hidden rounded-2xl bg-zinc-50">
+      <div className="relative overflow-hidden bg-slate-100">
           <div className="relative aspect-[16/10] w-full">
             <Image
               src={image}
@@ -51,10 +50,8 @@ function FonTipiKutusu({
             />
           </div>
         </div>
-      </div>
-
-      <div className="flex flex-1 flex-col items-center justify-start px-3 pb-3 pt-0 text-center md:px-4 md:pb-3">
-        <h2 className="text-xl font-semibold leading-tight text-zinc-900 md:text-2xl">
+      <div className="flex flex-1 flex-col p-4 md:p-5">
+        <h2 className="text-xl font-semibold leading-tight text-slate-900 md:text-xl">
           {title}
         </h2>
       </div>
