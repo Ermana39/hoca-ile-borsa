@@ -105,24 +105,14 @@ const jsonLd = {
 
 export default function Haber950Page() {
   return (
-    <main className="min-h-screen bg-slate-50 px-4 py-6 md:px-6">
+    <main className="min-h-screen bg-[#f8fafc] px-4 py-6 md:px-6">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="mx-auto max-w-4xl">
-        <div className="mb-6 flex flex-wrap gap-3">
-          <Link
-            href="/"
-            className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-sm font-medium text-slate-600 shadow-sm transition hover:border-slate-300 hover:bg-slate-50"
-          >
-            Ana Sayfa
-          </Link>
-
-          <Link
-            href="/"
-            className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-sm font-medium text-slate-600 shadow-sm transition hover:border-slate-300 hover:bg-slate-50"
-          >
-            Geri
-          </Link>
-        </div>
+        <nav className="mb-5 flex items-center gap-2 text-sm text-slate-500" aria-label="Breadcrumb">
+          <Link href="/" className="hover:text-blue-600 transition">Ana Sayfa</Link>
+          <span className="text-slate-300">/</span>
+          <span className="text-slate-700 font-medium">Haberler</span>
+        </nav>
 
         <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_16px_rgba(15,23,42,0.07)]">
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
@@ -131,24 +121,25 @@ export default function Haber950Page() {
               alt="05 Haziran 2026 Cuma KAP Bildirimleri Özeti"
               fill
               unoptimized
-              className="object-contain"
+              className="object-cover"
             />
           </div>
 
-          <div className="p-5 md:p-8">
-            <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl">
+          <div className="p-6 md:p-10">
+            <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
               05 Haziran 2026 Cuma KAP Bildirimleri Özeti
             </h1>
 
-            <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-zinc-500">
-              <time dateTime="2026-06-05" className="flex items-center gap-1 font-medium">
-                📅 5 Haziran 2026
-              </time>
-              <span>·</span>
-              <span>Hoca İle Borsa</span>
+            <div className="mb-4 flex flex-wrap items-center gap-3">
+              <span className="inline-flex items-center rounded-md bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700 ring-1 ring-inset ring-blue-600/20">
+                Finans
+              </span>
+              <time dateTime="2026-06-05" className="text-sm text-slate-500">5 Haziran 2026</time>
+              <span className="text-slate-300">·</span>
+              <span className="text-sm text-slate-500">Hoca İle Borsa</span>
             </div>
 
-            <div className="mt-6 space-y-6 text-base leading-8 text-zinc-700 md:text-lg">
+            <div className="mt-6 space-y-6 text-base leading-8 text-slate-700 md:text-lg">
               <p>
                 Borsa İstanbul’da 05 Haziran 2026 Cuma günü KAP’a düşen öne
                 çıkan bildirimlerde ihracat haberleri, yurt dışı gayrimenkul

@@ -275,9 +275,14 @@ export default function HalkaArzPage() {
   const hacimciler = hacimListesi(veri);
 
   return (
-    <main className="min-h-screen bg-white px-4 py-6 md:px-6">
+    <main className="min-h-screen bg-[#f8fafc] px-4 py-6 md:px-6">
       <div className="mx-auto max-w-7xl">
-        <div className="mb-6 flex flex-wrap gap-3">
+        <nav className="mb-5 flex items-center gap-2 text-sm text-slate-500" aria-label="Breadcrumb">
+          <Link href="/" prefetch={false} className="hover:text-blue-600 transition">Ana Sayfa</Link>
+          <span className="text-slate-300">/</span>
+          <span className="text-slate-700 font-medium">Halka Arz</span>
+        </nav>
+        <div className="mb-6 hidden flex-wrap gap-3">
           <Link
             href="/"
             prefetch={false}

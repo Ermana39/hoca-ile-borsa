@@ -8,7 +8,7 @@ body {
 }
 
 html {
-  background: #f1f5f9;
+  background: #f8fafc;
 }
 
 body {
@@ -18,10 +18,7 @@ body {
   font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background:
-    radial-gradient(ellipse at 0% 0%, rgba(30, 64, 175, 0.07) 0%, transparent 50%),
-    radial-gradient(ellipse at 100% 0%, rgba(2, 132, 199, 0.06) 0%, transparent 50%),
-    linear-gradient(180deg, #f0f6ff 0%, #f8fafc 40%, #ffffff 80%, #f8fafc 100%);
+  background: #f8fafc;
 }
 
 .site-background {
@@ -42,7 +39,6 @@ footer.bg-slate-950 {
 
 a {
   text-decoration: none;
-  color: inherit;
 }
 
 * {

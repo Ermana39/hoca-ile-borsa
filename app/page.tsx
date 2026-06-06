@@ -186,28 +186,30 @@ function KategoriKutusu({
     <Link
       href={href}
       prefetch={false}
-      className="group flex min-h-[210px] flex-col overflow-hidden rounded-2xl border border-slate-200/80 bg-white shadow-[0_2px_12px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_8px_30px_rgba(15,23,42,0.12)] xl:min-h-[225px]"
+      className="group relative flex h-[180px] overflow-hidden rounded-2xl shadow-[0_4px_20px_rgba(15,23,42,0.15)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(15,23,42,0.25)] xl:h-[200px]"
       aria-label={title}
     >
-      <div className="relative flex-1 overflow-hidden bg-slate-50">
-        <div className="relative aspect-[16/10] w-full">
-          <Image
-            src={image}
-            alt={alt}
-            fill
-            unoptimized
-            className="object-cover transition duration-500 group-hover:scale-[1.04]"
-          />
-        </div>
-      </div>
+      {/* Arka plan görseli */}
+      <Image
+        src={image}
+        alt={alt}
+        fill
+        unoptimized
+        className="object-cover transition duration-500 group-hover:scale-[1.06]"
+      />
 
-      <div className="flex items-center justify-between border-t border-slate-100 bg-white px-4 py-3">
-        <h2 className="text-sm font-bold tracking-tight text-slate-800 md:text-base">
+      {/* Gradient overlay — alta doğru koyulaşıyor */}
+      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/40 to-slate-800/10 transition duration-300 group-hover:from-slate-950/95" />
+
+      {/* İçerik */}
+      <div className="relative flex h-full w-full flex-col justify-end p-4">
+        <h2 className="text-base font-bold leading-tight tracking-tight text-white drop-shadow-md md:text-lg">
           {title}
         </h2>
-        <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-blue-600 text-xs font-bold text-white transition duration-300 group-hover:bg-blue-700">
-          →
-        </span>
+        <div className="mt-2 flex items-center gap-1.5 text-xs font-semibold text-blue-300 transition duration-300 group-hover:gap-2.5 group-hover:text-blue-200">
+          <span>İncele</span>
+          <span>→</span>
+        </div>
       </div>
     </Link>
   );
@@ -683,7 +685,7 @@ export default function HomePage() {
   return (
     <main className="min-h-screen">
       <div className="mx-auto max-w-7xl">
-        <section className="px-4 pt-4 md:px-6 md:pt-6">
+        <section className="px-4 pt-5 md:px-6 md:pt-6">
           <div className="overflow-hidden rounded-2xl">
             <img
               src="/banner.png"
