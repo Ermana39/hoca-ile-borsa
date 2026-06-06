@@ -4,6 +4,7 @@ export type NewsItem = {
   href: string;
   image: string;
   alt: string;
+  publishedAt: string;
 };
 
 export const newsItems: NewsItem[] = [
@@ -13,6 +14,7 @@ export const newsItems: NewsItem[] = [
     href: "/haber/05-haziran-2026-cuma-kap-bildirimleri-ozeti",
     image: "/haber950.png",
     alt: "05 Haziran 2026 KAP Bildirimleri Özeti",
+    publishedAt: "2026-06-05",
   },
   {
     id: 975,
@@ -20,6 +22,7 @@ export const newsItems: NewsItem[] = [
     href: "/haber/turkiye-sigortanin-prim-uretimi-79-2-milyar-tlye-yukseldi",
     image: "/haber975.png",
     alt: "Türkiye Sigorta Prim Üretimi 79,2 Milyar TL",
+    publishedAt: "2026-06-05",
   },
   {
     id: 976,
@@ -27,6 +30,7 @@ export const newsItems: NewsItem[] = [
     href: "/haber/thynin-air-europa-yatirim-surecinde-yeni-gelisme",
     image: "/haber976.webp",
     alt: "THY Air Europa Yatırım Süreci",
+    publishedAt: "2026-06-05",
   },
   {
     id: 977,
@@ -34,6 +38,7 @@ export const newsItems: NewsItem[] = [
     href: "/haber/aselsandan-845-milyon-dolarlik-yeni-sozlesme",
     image: "/haber977.webp",
     alt: "ASELSAN 845 Milyon Dolarlık Sözleşme",
+    publishedAt: "2026-06-05",
   },
   {
     id: 978,
@@ -41,6 +46,7 @@ export const newsItems: NewsItem[] = [
     href: "/haber/kontrolmatikin-iki-tahvilinde-kupon-odemesi-gerceklesmedi",
     image: "/haber978.webp",
     alt: "Kontrolmatik Kupon Ödemesi Gerçekleşmedi",
+    publishedAt: "2026-06-05",
   },
   {
     id: 979,
@@ -48,5 +54,6 @@ export const newsItems: NewsItem[] = [
     href: "/haber/turk-is-mayis-2026-aclik-ve-yoksulluk-siniri-arastirmasi",
     image: "/haber979.png",
     alt: "TÜRK-İŞ Açlık ve Yoksulluk Sınırı Mayıs 2026",
+    publishedAt: "2026-06-05",
   },
 ];

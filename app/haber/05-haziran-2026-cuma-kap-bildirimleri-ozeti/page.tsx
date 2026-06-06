@@ -3,8 +3,11 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "06 Haziran 2026 Cuma KAP Bildirimleri Özeti",
-  description: "06 Haziran 2026 Cuma KAP Bildirimleri Özeti",
+  title: "05 Haziran 2026 Cuma KAP Bildirimleri Özeti",
+  description: "05 Haziran 2026 Cuma günü KAP'a düşen öne çıkan bildirimlerin özeti: ihracat haberleri, gayrimenkul yatırımları, sigorta prim üretimleri, temettü kararları ve sermaye artırımları.",
+  alternates: {
+    canonical: "https://www.hocaileborsa.com/haber/05-haziran-2026-cuma-kap-bildirimleri-ozeti",
+  },
 };
 
 const kapHaberleri = [
@@ -80,9 +83,30 @@ const kapHaberleri = [
   },
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "05 Haziran 2026 Cuma KAP Bildirimleri Özeti",
+  description:
+    "05 Haziran 2026 Cuma günü KAP'a düşen öne çıkan bildirimlerin özeti: ihracat haberleri, gayrimenkul yatırımları, sigorta prim üretimleri, temettü kararları ve sermaye artırımları.",
+  datePublished: "2026-06-05T09:00:00+03:00",
+  dateModified: "2026-06-05T09:00:00+03:00",
+  url: "https://www.hocaileborsa.com/haber/05-haziran-2026-cuma-kap-bildirimleri-ozeti",
+  author: { "@type": "Organization", name: "Hoca İle Borsa", url: "https://www.hocaileborsa.com" },
+  publisher: {
+    "@type": "Organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: { "@type": "ImageObject", url: "https://www.hocaileborsa.com/icon-512.png" },
+  },
+  image: "https://www.hocaileborsa.com/haber950.png",
+  inLanguage: "tr",
+};
+
 export default function Haber950Page() {
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="mx-auto max-w-4xl">
         <div className="mb-6 flex flex-wrap gap-3">
           <Link
@@ -115,6 +139,14 @@ export default function Haber950Page() {
             <h1 className="text-2xl font-bold leading-tight text-zinc-900 md:text-4xl">
               05 Haziran 2026 Cuma KAP Bildirimleri Özeti
             </h1>
+
+            <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-zinc-500">
+              <time dateTime="2026-06-05" className="flex items-center gap-1 font-medium">
+                📅 5 Haziran 2026
+              </time>
+              <span>·</span>
+              <span>Hoca İle Borsa</span>
+            </div>
 
             <div className="mt-6 space-y-6 text-base leading-8 text-zinc-700 md:text-lg">
               <p>

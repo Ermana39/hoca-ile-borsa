@@ -30,9 +30,21 @@ export default async function HalkaArzDetayPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
+  const title = slugToTitle(slug);
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: "https://www.hocaileborsa.com" },
+      { "@type": "ListItem", position: 2, name: "Halka Arz", item: "https://www.hocaileborsa.com/halka-arz" },
+      { "@type": "ListItem", position: 3, name: title, item: `https://www.hocaileborsa.com/halka-arz/${slug}` },
+    ],
+  };
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="mx-auto max-w-5xl">
         <Link
           href="/"

@@ -5,7 +5,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Türkiye Sigorta’nın Prim Üretimi 79,2 Milyar TL’ye Yükseldi",
   description:
-    "Türkiye Sigorta’nın yılın ilk beş ayına ilişkin prim üretimi 79,2 milyar TL seviyesine yükseldi.",
+    "Türkiye Sigorta’nın yılın ilk beş ayına ilişkin prim üretimi 79,2 milyar TL seviyesine yükseldi. Şirketin sigortacılık faaliyetlerinde güçlü üretim temposu devam ediyor.",
+  alternates: {
+    canonical: "https://www.hocaileborsa.com/haber/turkiye-sigortanin-prim-uretimi-79-2-milyar-tlye-yukseldi",
+  },
 };
 
 const haberDetaylari = [
@@ -36,9 +39,30 @@ const haberDetaylari = [
   },
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "Türkiye Sigorta'nın Prim Üretimi 79,2 Milyar TL'ye Yükseldi",
+  description:
+    "Türkiye Sigorta'nın yılın ilk beş ayına ilişkin prim üretimi 79,2 milyar TL seviyesine yükseldi.",
+  datePublished: "2026-06-05T09:00:00+03:00",
+  dateModified: "2026-06-05T09:00:00+03:00",
+  url: "https://www.hocaileborsa.com/haber/turkiye-sigortanin-prim-uretimi-79-2-milyar-tlye-yukseldi",
+  author: { "@type": "Organization", name: "Hoca İle Borsa", url: "https://www.hocaileborsa.com" },
+  publisher: {
+    "@type": "Organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: { "@type": "ImageObject", url: "https://www.hocaileborsa.com/icon-512.png" },
+  },
+  image: "https://www.hocaileborsa.com/haber975.png",
+  inLanguage: "tr",
+};
+
 export default function Haber975Page() {
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="mx-auto max-w-4xl">
         <div className="mb-6 flex flex-wrap gap-3">
           <Link
@@ -71,6 +95,14 @@ export default function Haber975Page() {
             <h1 className="text-2xl font-bold leading-tight text-zinc-900 md:text-4xl">
               Türkiye Sigorta’nın Prim Üretimi 79,2 Milyar TL’ye Yükseldi
             </h1>
+
+            <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-zinc-500">
+              <time dateTime="2026-06-05" className="flex items-center gap-1 font-medium">
+                📅 5 Haziran 2026
+              </time>
+              <span>·</span>
+              <span>Hoca İle Borsa</span>
+            </div>
 
             <div className="mt-6 space-y-6 text-base leading-8 text-zinc-700 md:text-lg">
               <p>

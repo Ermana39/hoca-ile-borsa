@@ -21,6 +21,17 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "buyuk" }) {
   );
 }
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  itemListElement: [
+    { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: "https://www.hocaileborsa.com" },
+    { "@type": "ListItem", position: 2, name: "Halka Arz", item: "https://www.hocaileborsa.com/halka-arz" },
+    { "@type": "ListItem", position: 3, name: "Taslak İzahnameler", item: "https://www.hocaileborsa.com/halka-arz/taslak-izahnameler" },
+    { "@type": "ListItem", position: 4, name: "Türkiye Emlak Katılım Bankası A.Ş.", item: "https://www.hocaileborsa.com/halka-arz/taslak-izahnameler/turkiye" },
+  ],
+};
+
 export default function TurkiyeEmlakKatilimBankasiASPage() {
   const summaryItems = [
     { label: "Halka Arz Tarihi", value: "Hazırlanıyor" },
@@ -91,6 +102,7 @@ export default function TurkiyeEmlakKatilimBankasiASPage() {
 
   return (
     <main className="min-h-screen bg-slate-50 text-slate-900">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <div className="mb-6 flex flex-wrap gap-3">
           <Link

@@ -5,7 +5,10 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "ASELSAN’dan 845 Milyon Dolarlık Yeni Sözleşme",
   description:
-    "ASELSAN ile Savunma Sanayii Başkanlığı arasında toplam 845 milyon dolar tutarında yeni sözleşmeler imzalandı.",
+    "ASELSAN ile Savunma Sanayii Başkanlığı arasında toplam 845 milyon dolar tutarında yeni sözleşmeler imzalandı. Şirketin savunma sanayii projeleri kapsamındaki sözleşme büyüklüğü artıyor.",
+  alternates: {
+    canonical: "https://www.hocaileborsa.com/haber/aselsandan-845-milyon-dolarlik-yeni-sozlesme",
+  },
 };
 
 const haberDetaylari = [
@@ -36,9 +39,30 @@ const haberDetaylari = [
   },
 ];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "ASELSAN'dan 845 Milyon Dolarlık Yeni Sözleşme",
+  description:
+    "ASELSAN ile Savunma Sanayii Başkanlığı arasında toplam 845 milyon dolar tutarında yeni sözleşmeler imzalandı.",
+  datePublished: "2026-06-05T09:00:00+03:00",
+  dateModified: "2026-06-05T09:00:00+03:00",
+  url: "https://www.hocaileborsa.com/haber/aselsandan-845-milyon-dolarlik-yeni-sozlesme",
+  author: { "@type": "Organization", name: "Hoca İle Borsa", url: "https://www.hocaileborsa.com" },
+  publisher: {
+    "@type": "Organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: { "@type": "ImageObject", url: "https://www.hocaileborsa.com/icon-512.png" },
+  },
+  image: "https://www.hocaileborsa.com/haber977.webp",
+  inLanguage: "tr",
+};
+
 export default function Haber977Page() {
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="mx-auto max-w-4xl">
         <div className="mb-6 flex flex-wrap gap-3">
           <Link
@@ -71,6 +95,14 @@ export default function Haber977Page() {
             <h1 className="text-2xl font-bold leading-tight text-zinc-900 md:text-4xl">
               ASELSAN’dan 845 Milyon Dolarlık Yeni Sözleşme
             </h1>
+
+            <div className="mt-3 flex flex-wrap items-center gap-3 text-sm text-zinc-500">
+              <time dateTime="2026-06-05" className="flex items-center gap-1 font-medium">
+                📅 5 Haziran 2026
+              </time>
+              <span>·</span>
+              <span>Hoca İle Borsa</span>
+            </div>
 
             <div className="mt-6 space-y-6 text-base leading-8 text-zinc-700 md:text-lg">
               <p>

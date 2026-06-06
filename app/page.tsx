@@ -17,6 +17,7 @@ type NewsItem = {
   href: string;
   image?: string;
   alt?: string;
+  publishedAt?: string;
 };
 
 type GuncellemeItem = {
@@ -262,6 +263,7 @@ function normalizeNewsItems(data: unknown): NewsItem[] {
               ? `/haber${id}.png`
               : "/placeholder.png",
         alt: item.alt || item.title || "",
+        publishedAt: item.publishedAt || "",
       };
     })
     .filter(
@@ -478,6 +480,18 @@ function HaberSatiri({ item }: { item: NewsItem }) {
             <span className="inline-flex rounded-full bg-zinc-100 px-3 py-1 text-[11px] font-semibold text-zinc-600 transition group-hover:bg-white">
               Hoca İle Borsa
             </span>
+            {item.publishedAt && (
+              <time
+                dateTime={item.publishedAt}
+                className="inline-flex rounded-full bg-blue-50 px-3 py-1 text-[11px] font-semibold text-blue-700"
+              >
+                {new Date(item.publishedAt).toLocaleDateString("tr-TR", {
+                  day: "numeric",
+                  month: "long",
+                  year: "numeric",
+                })}
+              </time>
+            )}
           </div>
 
           <h2 className="line-clamp-2 text-base font-bold leading-6 text-zinc-900 transition group-hover:text-blue-700 md:text-lg md:leading-7">
