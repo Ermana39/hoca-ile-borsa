@@ -3,9 +3,9 @@ import Link from "next/link";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Kontrolmatik’in İki Tahvilinde Kupon Ödemesi Gerçekleşmedi",
+  title: "ASELSAN’dan 845 Milyon Dolarlık Yeni Sözleşme",
   description:
-    "Kontrolmatik tarafından ihraç edilen iki özel sektör borçlanma aracına ilişkin 5 Haziran 2026 tarihli kupon ödemeleri gerçekleştirilemedi.",
+    "ASELSAN ile Savunma Sanayii Başkanlığı arasında toplam 845 milyon dolar tutarında yeni sözleşmeler imzalandı.",
 };
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
@@ -26,33 +26,33 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
 
 const haberDetaylari = [
   {
-    baslik: "Kupon Ödemesi Yatırımcılara Ulaştırılamadı",
+    baslik: "845 Milyon Dolarlık Sözleşme İmzalandı",
     metin:
-      "Merkezi Kayıt Kuruluşu tarafından Kamuoyu Aydınlatma Platformu’nda yapılan açıklamada, Kontrolmatik Teknoloji Enerji ve Mühendislik A.Ş. tarafından ihraç edilen iki özel sektör borçlanma aracına ilişkin 05 Haziran 2026 tarihli kupon ödemelerinin gerçekleştirilemediği bildirildi.",
+      "ASELSAN, Cumhurbaşkanlığı Savunma Sanayii Başkanlığı ile toplam 845 milyon ABD doları tutarında yeni sözleşmeler imzaladığını açıkladı. Söz konusu anlaşmalar, şirketin savunma sanayii alanındaki güçlü sipariş portföyünü destekleyen önemli gelişmeler arasında yer aldı.",
   },
   {
-    baslik: "İlgili ISIN Kodları Açıklandı",
+    baslik: "Haberleşme, Uydu ve Uzay Sistemleri Öne Çıktı",
     metin:
-      "Açıklamada, TRFKNTR92611 ve TRSKNTR32719 ISIN kodlu borçlanma araçlarının kupon ödeme işlemlerinin, ihraççı kuruluşun gerekli ödeme tutarını aktarmaması nedeniyle MKK aracılığıyla tamamlanamadığı belirtildi.",
+      "Şirket tarafından yapılan açıklamaya göre sözleşmeler, kamu güvenliği haberleşme sistemleri ile uydu ve uzay sistemlerinin tedarikine yönelik projeleri kapsıyor. Bu alanlar, ASELSAN’ın yüksek teknoloji odaklı faaliyetleri içerisinde stratejik öneme sahip başlıklar arasında bulunuyor.",
   },
   {
-    baslik: "Borsa İstanbul’dan Gözaltı Pazarı Kararı",
+    baslik: "Teslimatlar 2026 Yılından İtibaren Başlayacak",
     metin:
-      "Gelişmenin ardından Borsa İstanbul da ilgili borçlanma araçları hakkında karar aldı. Borsa İstanbul tarafından KAP’a yapılan açıklamada, ödemesi gerçekleştirilemeyen söz konusu borçlanma araçlarının Borçlanma Araçları Piyasası Gözaltı Pazarı’na alınmasına karar verildiği duyuruldu.",
+      "Açıklamada, imzalanan sözleşmeler kapsamında teslimatların 2026 yılından itibaren gerçekleştirileceği belirtildi. Bu durum, sözleşmelerin şirketin ilerleyen dönem gelirlerine ve iş hacmine katkı sağlayabilecek nitelikte olduğunu gösteriyor.",
   },
   {
-    baslik: "İşlem Sırası 8 Haziran’da Kapatılacak",
+    baslik: "Savunma Sanayii Tarafında Güçlü İş Akışı",
     metin:
-      "Borsa İstanbul açıklamasına göre, ilgili borçlanma araçlarının işlem sırası 8 Haziran 2026 tarihinde kapatılacak. Söz konusu borçlanma araçlarının 9 Haziran 2026 tarihinde geçerli piyasa kuralları çerçevesinde yeniden işleme açılması planlanıyor.",
+      "ASELSAN’ın Savunma Sanayii Başkanlığı ile imzaladığı yeni sözleşmeler, savunma elektroniği, haberleşme teknolojileri, uydu sistemleri ve uzay alanındaki faaliyetlerinin desteklenmesi açısından dikkat çekti.",
   },
   {
-    baslik: "Yatırımcılar Açısından Önemli Gelişme",
+    baslik: "Yatırımcıların Takip Ettiği Önemli Başlık",
     metin:
-      "Kupon ödemesinin gerçekleştirilememesi, Kontrolmatik’in borçlanma araçlarını elinde bulunduran yatırımcılar açısından yakından takip edilmesi gereken önemli bir ödeme aksaklığı olarak öne çıktı.",
+      "845 milyon dolarlık sözleşme büyüklüğü, Borsa İstanbul’da işlem gören ASELSAN payları açısından yatırımcıların yakından takip ettiği önemli şirket haberlerinden biri oldu. Bu tür büyük ölçekli sözleşmeler, şirketin uzun vadeli iş görünümü açısından önem taşıyor.",
   },
 ];
 
-export default function Haber978Page() {
+export default function Haber977Page() {
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-4xl">
@@ -75,8 +75,8 @@ export default function Haber978Page() {
         <article className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
-              src="/haber978.webp"
-              alt="Kontrolmatik’in İki Tahvilinde Kupon Ödemesi Gerçekleşmedi"
+              src="/haber977.webp"
+              alt="ASELSAN’dan 845 Milyon Dolarlık Yeni Sözleşme"
               fill
               unoptimized
               className="object-contain"
@@ -85,23 +85,22 @@ export default function Haber978Page() {
 
           <div className="p-5 md:p-8">
             <h1 className="text-2xl font-bold leading-tight text-zinc-900 md:text-4xl">
-              Kontrolmatik’in İki Tahvilinde Kupon Ödemesi Gerçekleşmedi
+              ASELSAN’dan 845 Milyon Dolarlık Yeni Sözleşme
             </h1>
 
             <div className="mt-6 space-y-6 text-base leading-8 text-zinc-700 md:text-lg">
               <p>
-                Merkezi Kayıt Kuruluşu, Kontrolmatik Teknoloji Enerji ve
-                Mühendislik A.Ş. tarafından ihraç edilen iki özel sektör
-                borçlanma aracına ilişkin 5 Haziran 2026 tarihli kupon
-                ödemelerinin gerçekleştirilemediğini açıkladı.
+                ASELSAN, Cumhurbaşkanlığı Savunma Sanayii Başkanlığı ile toplam
+                845 milyon ABD doları tutarında yeni sözleşmeler imzaladığını
+                duyurdu.
               </p>
 
               <p>
-                KAP’ta yer alan açıklamaya göre, söz konusu ödeme işlemleri
-                ihraççı şirket tarafından gerekli tutarın aktarılmaması
-                nedeniyle yatırımcılara ulaştırılamadı. Gelişmenin ardından
-                Borsa İstanbul, ilgili borçlanma araçlarının Borçlanma Araçları
-                Piyasası Gözaltı Pazarı’na alınmasına karar verdi.
+                Kamuyu Aydınlatma Platformu’nda yer alan açıklamaya göre,
+                sözleşmeler kamu güvenliği haberleşme sistemleri ile uydu ve
+                uzay sistemlerinin tedarikine yönelik projeleri kapsıyor.
+                Teslimatların ise 2026 yılından itibaren gerçekleştirilmesi
+                planlanıyor.
               </p>
 
               <div className="space-y-5">
@@ -119,10 +118,9 @@ export default function Haber978Page() {
               </div>
 
               <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm font-medium leading-7 text-emerald-900 md:text-base">
-                Kontrolmatik tarafından ihraç edilen TRFKNTR92611 ve
-                TRSKNTR32719 ISIN kodlu özel sektör borçlanma araçlarında 05
-                Haziran 2026 tarihli kupon ödemelerinin yapılamaması, şirketin
-                borçlanma araçları tarafında dikkat çeken önemli bir gelişme
+                ASELSAN’ın 845 milyon dolarlık yeni sözleşme açıklaması,
+                şirketin savunma, haberleşme, uydu ve uzay teknolojileri
+                tarafındaki iş hacmini destekleyen önemli gelişmelerden biri
                 olarak öne çıktı.
               </div>
 

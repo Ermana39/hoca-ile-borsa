@@ -7,11 +7,39 @@ export type NewsItem = {
 };
 
 export const newsItems: NewsItem[] = [
+  {
+    id: 950,
+    title: "05 Haziran 2026 Perşembe KAP Bildirimleri Özeti",
+    href: "/haber/haber-950",
+    image: "/haber950.png",
+    alt: "Haber 950 görseli",
+  },
+  {
+    id: 975,
+    title: "Türkiye Sigorta’nın Prim Üretimi 79,2 Milyar TL’ye Yükseldi",
+    href: "/haber/haber-975",
+    image: "/haber975.png",
+    alt: "Haber 975 görseli",
+  },
+  {
+    id: 976,
+    title: "THY’nin Air Europa Yatırım Sürecinde 2026 Vurgusu",
+    href: "/haber/haber-976",
+    image: "/haber976.webp",
+    alt: "Haber 976 görseli",
+  },
+  {
+    id: 977,
+    title: "ASELSAN’dan 845 Milyon Dolarlık Sözleşme Açıklaması",
+    href: "/haber/haber-977",
+    image: "/haber977.webp",
+    alt: "Haber 977 görseli",
+  },
     {
     id: 978,
-    title: "04 Haziran 2026 Perşembe KAP Bildirimleri Özeti",
+    title: "Kontrolmatik’in İki Tahvilinde Kupon Ödemesi Gerçekleşmedi",
     href: "/haber/haber-978",
-    image: "/haber978.png",
+    image: "/haber978.webp",
     alt: "Haber 978 görseli",
   },
   {
