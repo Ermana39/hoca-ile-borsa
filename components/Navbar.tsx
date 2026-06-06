@@ -22,12 +22,9 @@ export default function Navbar() {
         <Link
           href="/"
           prefetch={false}
-          className="flex items-center gap-2.5 py-3.5 font-bold text-white"
+          className="flex items-center py-3.5 font-bold text-white"
           aria-label="Hoca İle Borsa - Ana Sayfa"
         >
-          <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-sm font-black text-white">
-            
-          </span>
           <span className="text-base font-bold tracking-tight text-blue-400">
             Hoca İle Borsa
           </span>
