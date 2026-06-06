@@ -37,37 +37,6 @@ export default function AefesGrafikAnaliz() {
           min-height: 100vh;
         }
 
-        /* HEADER */
-        .aefes-header {
-          position: sticky; top: 0; z-index: 100;
-          background: rgba(8,12,16,.92);
-          backdrop-filter: blur(14px);
-          border-bottom: 1px solid var(--border);
-          display: flex; align-items: center; justify-content: space-between;
-          padding: 0 2rem; height: 60px;
-        }
-        .aefes-logo {
-          font-family: 'Bebas Neue', sans-serif;
-          font-size: 1.5rem; letter-spacing: .12em; color: var(--accent);
-        }
-        .aefes-logo span {
-          color: var(--text-dim); font-size: .85rem;
-          font-family: 'DM Sans', sans-serif;
-          letter-spacing: .04em; margin-left: .6rem; vertical-align: middle;
-        }
-        .aefes-header-right { display: flex; align-items: center; gap: 1.4rem; }
-        .aefes-live-dot {
-          width: 8px; height: 8px; border-radius: 50%;
-          background: var(--accent); box-shadow: 0 0 8px var(--accent);
-          animation: aefes-pulse 2s infinite;
-        }
-        @keyframes aefes-pulse {
-          0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.4)}
-        }
-        .aefes-date-badge {
-          font-family: 'JetBrains Mono', monospace;
-          font-size: .75rem; color: var(--text-dim); letter-spacing: .06em;
-        }
 
         /* HERO */
         .aefes-hero {
@@ -99,40 +68,10 @@ export default function AefesGrafikAnaliz() {
         .aefes-price-currency {
           font-size: .55em; color: var(--text-dim); vertical-align: super;
         }
-        .aefes-price-change {
-          display: inline-flex; align-items: center; gap: .4rem; margin-top: .4rem;
-          background: rgba(255,61,85,.12); border: 1px solid rgba(255,61,85,.3);
-          border-radius: 4px; padding: .2rem .6rem;
-          font-family: 'JetBrains Mono', monospace; font-size: .8rem; color: var(--red);
-        }
 
         /* MAIN */
         .aefes-main { max-width: 1280px; margin: 0 auto; padding: 2.5rem 2rem 4rem; }
 
-        /* STAT CARDS */
-        .aefes-stat-grid {
-          display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-          gap: 1px; background: var(--border);
-          border: 1px solid var(--border); border-radius: 10px;
-          overflow: hidden; margin-bottom: 2.5rem;
-        }
-        .aefes-stat-card {
-          background: var(--bg2); padding: 1.2rem 1.4rem;
-          display: flex; flex-direction: column; gap: .3rem; transition: background .2s;
-        }
-        .aefes-stat-card:hover { background: var(--bg3); }
-        .aefes-stat-label {
-          font-size: .68rem; text-transform: uppercase; letter-spacing: .12em;
-          color: var(--text-dim); font-family: 'JetBrains Mono', monospace;
-        }
-        .aefes-stat-value {
-          font-family: 'JetBrains Mono', monospace;
-          font-size: 1.35rem; color: var(--text-bright); font-weight: 600;
-        }
-        .aefes-stat-value.green { color: var(--green); }
-        .aefes-stat-value.red   { color: var(--red); }
-        .aefes-stat-value.gold  { color: var(--gold); }
-        .aefes-stat-sub { font-size: .72rem; color: var(--text-dim); }
 
         /* SECTION TITLE */
         .aefes-section-title {
@@ -357,7 +296,6 @@ export default function AefesGrafikAnaliz() {
         }
         @media(max-width:768px) { .aefes-two-col { grid-template-columns: 1fr; } }
         @media(max-width:600px) {
-          .aefes-header { padding: 0 1rem; }
           .aefes-hero   { padding: 2rem 1rem 1.5rem; }
           .aefes-main   { padding: 1.5rem 1rem 3rem; }
           .aefes-footer { padding: 1.2rem 1rem; }
@@ -368,14 +306,6 @@ export default function AefesGrafikAnaliz() {
 
       <div className="aefes-wrap">
 
-        {/* HEADER */}
-        <header className="aefes-header">
-          <div className="aefes-logo">HOCA İLE<span>BORSA</span></div>
-          <div className="aefes-header-right">
-            <div className="aefes-live-dot" />
-            <div className="aefes-date-badge">05.06.2026 — BIST</div>
-          </div>
-        </header>
 
         {/* HERO */}
         <section className="aefes-hero">
@@ -383,7 +313,7 @@ export default function AefesGrafikAnaliz() {
             <div className="aefes-hero-label">Teknik Analiz Raporu</div>
             <h1 className="aefes-hero-title">ANADOLU<br /><em>EFES</em></h1>
             <p className="aefes-hero-sub">
-             &nbsp;·&nbsp; 05 Haziran 2026
+              BIST: AEFES &nbsp;·&nbsp; Günlük Periyot &nbsp;·&nbsp; Çoklu Hareketli Ortalama + Bollinger Bantları &nbsp;·&nbsp; 05 Haziran 2026
             </p>
           </div>
           <div className="aefes-price-block">
