@@ -6,6 +6,14 @@ export const metadata = {
 import Link from "next/link";
 
 const haberler = [
+  {
+    title: "Geri alım yapan şirketler dikkat çekti",
+    href: "/borsa/dikkat-cekenler/dikkat-cekenler-1",
+  },
+  {
+    title: "Temettü kararları yatırımcıların radarında",
+    href: "/borsa/dikkat-cekenler/dikkat-cekenler-2",
+  },
    {
     title: "Ak Portföy Yeni Teknolojiler Yabancı Hisse Senedi Fonu Son 1 Haftada %9,90 Artış Gösterdi",
     href: "/borsa/dikkat-cekenler/dikkat-cekenler-1",
