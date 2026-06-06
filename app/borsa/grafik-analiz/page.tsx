@@ -8,7 +8,7 @@ import Link from "next/link";
 
 const analizler = [
   { baslik: "AEFES Grafik Analiz", href: "/borsa/grafik-analiz/aefes" },
- 
+ { baslik: "AKSEN Grafik Analiz", href: "/borsa/grafik-analiz/aksen" },
 ];
 
 // Alfabetik sırala
