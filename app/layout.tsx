@@ -1,8 +1,15 @@
 export const revalidate = 86400;
 import type { Metadata } from "next";
+import { Inter } from "next/font/google";
 import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import SayfaGuncellemeBilgisi from "@/components/SayfaGuncellemeBilgisi";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.hocaileborsa.com"),
@@ -75,7 +82,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr">
+    <html lang="tr" className={inter.variable}>
       <head>
         <script
           async

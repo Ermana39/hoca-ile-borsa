@@ -61,26 +61,26 @@ const jsonLd = {
 
 export default function Haber978Page() {
   return (
-    <main className="min-h-screen bg-white px-4 py-6 md:px-6">
+    <main className="min-h-screen bg-slate-50 px-4 py-6 md:px-6">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="mx-auto max-w-4xl">
         <div className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
-            className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
+            className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-sm font-medium text-slate-600 shadow-sm transition hover:border-slate-300 hover:bg-slate-50"
           >
             Ana Sayfa
           </Link>
 
           <Link
             href="/"
-            className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
+            className="inline-flex items-center gap-1.5 rounded-lg border border-slate-200 bg-white px-3 py-1.5 text-sm font-medium text-slate-600 shadow-sm transition hover:border-slate-300 hover:bg-slate-50"
           >
             Geri
           </Link>
         </div>
 
-        <article className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
+        <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_16px_rgba(15,23,42,0.07)]">
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
               src="/haber978.webp"
@@ -92,7 +92,7 @@ export default function Haber978Page() {
           </div>
 
           <div className="p-5 md:p-8">
-            <h1 className="text-2xl font-bold leading-tight text-zinc-900 md:text-4xl">
+            <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl">
               Kontrolmatik’in İki Tahvilinde Kupon Ödemesi Gerçekleşmedi
             </h1>
 
@@ -124,12 +124,12 @@ export default function Haber978Page() {
                 {haberDetaylari.map((haber) => (
                   <section
                     key={haber.baslik}
-                    className="rounded-xl border border-zinc-200 bg-zinc-50 p-4"
+                    className="rounded-xl border border-slate-200 bg-slate-50 p-4"
                   >
-                    <h2 className="text-lg font-bold text-zinc-900">
+                    <h2 className="text-base font-semibold text-slate-800">
                       {haber.baslik}
                     </h2>
-                    <p className="mt-2 text-zinc-700">{haber.metin}</p>
+                    <p className="mt-1.5 text-sm text-slate-600 leading-relaxed">{haber.metin}</p>
                   </section>
                 ))}
               </div>
