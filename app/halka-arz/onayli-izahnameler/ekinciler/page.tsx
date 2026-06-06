@@ -9,19 +9,6 @@ export const metadata: Metadata = {
     "Ekinciler Demir ve Çelik Sanayi A.Ş. EKDMR onaylı izahname bilgileri, talep toplama tarihleri, halka arz fiyatı, lot dağılımı, finansal görünüm, çarpan analizi ve tahmini lot tablosu.",
 };
 
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "buyuk" }) {
-  const alanClass =
-    variant === "buyuk"
-      ? "min-h-[220px] sm:min-h-[260px] lg:min-h-[320px]"
-      : "min-h-[110px] sm:min-h-[120px] lg:min-h-[140px]";
-
-  return (
-    <section aria-label="Reklam alanı" className={`w-full ${alanClass}`}>
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
-
 function Section({
   title,
   children,
@@ -243,10 +230,6 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
             çarpan analizi ve tahmini lot tablosu aşağıda sade ve kolay anlaşılır şekilde
             yer almaktadır.
           </p>
-        </section>
-
-        <section className="mb-8">
-          <ReklamAlani />
         </section>
 
         <div className="space-y-8">
@@ -505,14 +488,6 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
               </div>
             </div>
           </Section>
-
-          <section>
-            <ReklamAlani />
-          </section>
-
-          <section className="mt-8">
-            <ReklamAlani variant="buyuk" />
-          </section>
 
           <Section title="Ekinciler Demir ve Çelik Halka Arz Bilgileri">
             <p className="text-sm leading-7 text-slate-600">

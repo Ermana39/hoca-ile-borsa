@@ -3,6 +3,7 @@ export const metadata = {
   description: "Borsa, halka arz, teknik analiz ve finans başlıklarında hazırlanan eğitim videoları.",
   alternates: { canonical: "https://www.hocaileborsa.com/borsa/egitim-videolari" },
 };
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -34,22 +35,6 @@ type ResolvedVideo = {
   title: string;
   thumbnail: string;
 };
-
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
-  const alanClass =
-    variant === "icerik"
-      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
-
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
-    >
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
 
 function ViopEgitimBanner() {
   return (
@@ -141,10 +126,6 @@ export default async function EgitimVideolariPage() {
           Borsa eğitim videolarına aşağıdaki kartlardan ulaşabilirsiniz.
         </p>
 
-        <section className="mb-8">
-          <ReklamAlani variant="yatay" />
-        </section>
-
         <section className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
           {videos.map((video) => (
             <a
@@ -177,10 +158,6 @@ export default async function EgitimVideolariPage() {
         </section>
 
         <ViopEgitimBanner />
-
-        <section className="mt-8">
-          <ReklamAlani variant="icerik" />
-        </section>
 
         <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">

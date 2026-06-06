@@ -9,22 +9,6 @@ function parseNumber(value: string) {
   return Number.isFinite(number) ? number : 0;
 }
 
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
-  const alanClass =
-    variant === "icerik"
-      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
-
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
-    >
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
-
 export default function TalepHesaplaPage() {
   const [toplamLot, setToplamLot] = useState("");
   const [bireyselYuzde, setBireyselYuzde] = useState("");
@@ -66,10 +50,6 @@ export default function TalepHesaplaPage() {
             Geri
           </Link>
         </div>
-
-        <section className="mb-6">
-          <ReklamAlani variant="yatay" />
-        </section>
 
         <h1 className="mb-3 text-3xl font-bold text-zinc-900">
           Halka Arz Talep Hesaplama
@@ -144,10 +124,6 @@ export default function TalepHesaplaPage() {
             </div>
           </div>
         </div>
-
-        <section className="mt-8">
-          <ReklamAlani variant="icerik" />
-        </section>
 
         <section className="mt-8 rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
           <h2 className="mb-3 text-xl font-bold text-zinc-900">

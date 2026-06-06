@@ -430,22 +430,6 @@ const pivotVerileri: PivotRow[] = [
   },
 ];
 
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
-  const alanClass =
-    variant === "icerik"
-      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
-
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
-    >
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
-
 function formatNumber(value: number) {
   const hasDecimal = !Number.isInteger(value);
 
@@ -486,10 +470,6 @@ export default function PivotAnaliziPage() {
         <p className="mb-2 max-w-3xl text-base text-zinc-600">
           Pivot, destek ve direnç seviyelerine göre hazırlanan görünüm tablosu.
         </p>
-
-        <section className="mb-8">
-          <ReklamAlani variant="yatay" />
-        </section>
 
         <section className="mb-8 overflow-hidden rounded-2xl border border-sky-200 bg-sky-50 shadow-sm">
           <div className="overflow-x-auto">
@@ -646,10 +626,6 @@ export default function PivotAnaliziPage() {
               </tbody>
             </table>
           </div>
-        </section>
-
-        <section className="mt-8">
-          <ReklamAlani variant="icerik" />
         </section>
 
         <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">

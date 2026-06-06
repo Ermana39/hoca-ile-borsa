@@ -8,22 +8,6 @@ export const metadata: Metadata = {
     "Türkiye Sigorta’nın yılın ilk beş ayına ilişkin prim üretimi 79,2 milyar TL seviyesine yükseldi.",
 };
 
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
-  const alanClass =
-    variant === "icerik"
-      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
-
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
-    >
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
-
 const haberDetaylari = [
   {
     baslik: "Prim Üretimi 79,2 Milyar TL Seviyesine Çıktı",
@@ -131,10 +115,6 @@ export default function Haber975Page() {
             </div>
           </div>
         </article>
-
-        <section className="mt-8">
-          <ReklamAlani variant="icerik" />
-        </section>
       </div>
     </main>
   );

@@ -3,6 +3,7 @@ export const metadata = {
   description: "Eylül ayında temettü veren BIST şirketleri, ödeme tarihleri ve temettü miktarları.",
   alternates: { canonical: "https://www.hocaileborsa.com/temettu/eylul-ayi-temettu-takvimi" },
 };
+
 import Link from "next/link";
 
 const eylulTemettuleri = [
@@ -21,22 +22,6 @@ const eylulTemettuleri = [
   { sembol: "BULGS", tarih: "15 Eylül 2026", verim: "% 0,23", brut: "₺0,09", net: "₺0,0933", toplam: "₺24.999.978", oran: "%2" },
   { sembol: "LIDER", tarih: "8 Eylül 2026", verim: "% 0,03", brut: "₺0,04", net: "₺0,0303", toplam: "₺29.411.745", oran: "%2" },
 ];
-
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
-  const alanClass =
-    variant === "icerik"
-      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
-
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
-    >
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
 
 export default function EylulAyiTemettuTakvimiPage() {
   return (
@@ -57,10 +42,6 @@ export default function EylulAyiTemettuTakvimiPage() {
             Geri
           </Link>
         </div>
-
-        <section className="mb-8">
-          <ReklamAlani variant="yatay" />
-        </section>
 
         <h1 className="mb-6 text-3xl font-bold text-zinc-900">
           Eylül Ayı Temettü Takvimi
@@ -97,10 +78,6 @@ export default function EylulAyiTemettuTakvimiPage() {
             </tbody>
           </table>
         </div>
-
-        <section className="mt-8">
-          <ReklamAlani variant="icerik" />
-        </section>
 
         <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">

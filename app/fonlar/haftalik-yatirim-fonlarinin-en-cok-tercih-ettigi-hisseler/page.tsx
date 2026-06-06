@@ -15,22 +15,6 @@ export const revalidate = 3600;
 
 type JsonRow = Record<string, string | number | null>;
 
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
-  const alanClass =
-    variant === "icerik"
-      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
-
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
-    >
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
-
 function temizMetin(deger: unknown) {
   if (deger === null || deger === undefined) return "";
   return String(deger).trim();
@@ -97,10 +81,6 @@ export default function HaftalikYatirimFonlarininEnCokTercihEttigiHisselerPage()
         <p className="mb-6 text-sm text-zinc-600">
           Veriler düzenli olarak güncellenen fon hareketleri tablosundan alınır.
         </p>
-
-        <section className="mb-8">
-          <ReklamAlani variant="yatay" />
-        </section>
 
         <FonTercihTableClient rows={fonVerileri} />
 

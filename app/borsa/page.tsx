@@ -3,6 +3,7 @@ export const metadata = {
   description: "BIST hisse analizleri, teknik analiz, gösterge taramaları, pivot analizi ve günlük borsa verileri.",
   alternates: { canonical: "https://www.hocaileborsa.com/borsa" },
 };
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -113,22 +114,6 @@ const analizKutulari = [
   },
 ];
 
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
-  const alanClass =
-    variant === "icerik"
-      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
-
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
-    >
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
-
 function AnalizKutusu({
   title,
   href,
@@ -202,20 +187,12 @@ export default function BorsaPage() {
           </p>
         </section>
 
-        <section className="pt-6">
-          <ReklamAlani variant="yatay" />
-        </section>
-
         <section className="py-6">
           <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4">
             {analizKutulari.map((item) => (
               <AnalizKutusu key={item.href} {...item} />
             ))}
           </div>
-        </section>
-
-        <section className="pb-6">
-          <ReklamAlani variant="icerik" />
         </section>
 
         <section className="rounded-2xl bg-white p-5 md:p-7">

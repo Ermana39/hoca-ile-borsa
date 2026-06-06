@@ -23,22 +23,6 @@ function formatPercent(value: number) {
   });
 }
 
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
-  const alanClass =
-    variant === "icerik"
-      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
-
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
-    >
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
-
 export default function TemettuVerimiHesaplamaPage() {
   const [hisseFiyati, setHisseFiyati] = useState("");
   const [lotBasiBrutTemettu, setLotBasiBrutTemettu] = useState("");
@@ -173,10 +157,6 @@ export default function TemettuVerimiHesaplamaPage() {
             Geri
           </Link>
         </div>
-
-        <section className="mb-6">
-          <ReklamAlani variant="yatay" />
-        </section>
 
         <h1 className="mb-6 text-3xl font-bold text-zinc-900">
           Temettü Verimi Hesaplama
@@ -322,10 +302,6 @@ export default function TemettuVerimiHesaplamaPage() {
             </div>
           </>
         )}
-
-        <section className="mt-8">
-          <ReklamAlani variant="icerik" />
-        </section>
       </div>
     </main>
   );

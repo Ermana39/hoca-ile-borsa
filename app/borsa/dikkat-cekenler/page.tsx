@@ -3,6 +3,7 @@ export const metadata = {
   description: "Gün içinde öne çıkan hisseler, dikkat çeken fiyat hareketleri ve yatırımcı ilgisinin arttığı alanlar.",
   alternates: { canonical: "https://www.hocaileborsa.com/borsa/dikkat-cekenler" },
 };
+
 import Link from "next/link";
 
 const haberler = [
@@ -14,28 +15,11 @@ const haberler = [
     title: "Temettü kararları yatırımcıların radarında",
     href: "/borsa/dikkat-cekenler/dikkat-cekenler-2",
   },
-    {
+  {
     title: "Stopaj Sonrası Gerçek Getiri: Fonlar BIST 100’ün Gerisinde mi Kaldı?",
     href: "/borsa/dikkat-cekenler/dikkat-cekenler-4",
   },
- 
 ];
-
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
-  const alanClass =
-    variant === "icerik"
-      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
-
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
-    >
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
 
 export default function DikkatCekenlerPage() {
   return (
@@ -67,10 +51,6 @@ export default function DikkatCekenlerPage() {
             piyasa hareketlerini ve yatırımcıların takip ettiği önemli
             başlıkları bu sayfadan inceleyebilirsiniz.
           </p>
-        </section>
-
-        <section className="mb-6">
-          <ReklamAlani variant="yatay" />
         </section>
 
         <section className="space-y-4">
@@ -106,10 +86,6 @@ export default function DikkatCekenlerPage() {
               </div>
             </Link>
           ))}
-        </section>
-
-        <section className="mt-8">
-          <ReklamAlani variant="icerik" />
         </section>
 
         <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">

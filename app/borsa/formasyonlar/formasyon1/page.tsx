@@ -11,22 +11,6 @@ export const metadata: Metadata = {
   },
 };
 
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
-  const alanClass =
-    variant === "icerik"
-      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
-
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
-    >
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
-
 export default function formasyon2() {
   return (
     <main className="min-h-screen bg-white">
@@ -50,18 +34,13 @@ export default function formasyon2() {
         <article className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
           <header>
             <h1 className="text-2xl font-bold leading-tight text-zinc-900 md:text-4xl">
-              QUAGR İkili Dip Formasyonu 
+              QUAGR İkili Dip Formasyonu
             </h1>
 
             <p className="mt-3 text-sm leading-7 text-zinc-600 md:text-base">
               QUAGR günlük grafikte ikili dip formasyonu dikkat çekiyor.
             </p>
-            
           </header>
-
-          <section className="pt-6">
-            <ReklamAlani variant="yatay" />
-          </section>
 
           <section className="pt-6">
             <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50">
@@ -95,10 +74,6 @@ Fiyatın dip bölgesinden aldığı tepkiyle birlikte teknik görünümde toparl
 Burada yer alan bilgi, yorum ve teknik değerlendirmeler genel niteliktedir. Yatırım danışmanlığı kapsamında değildir.`}
               </p>
             </div>
-          </section>
-
-          <section className="pt-8">
-            <ReklamAlani variant="icerik" />
           </section>
         </article>
       </div>

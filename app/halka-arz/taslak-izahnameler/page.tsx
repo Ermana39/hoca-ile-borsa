@@ -374,19 +374,6 @@ Tezkim Tarımsal Kimya San. ve Tic. A.Ş.
 
 Kaymet Metal İmalat San. ve Tic. A.Ş.`;
 
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
-  const alanClass =
-    variant === "icerik"
-      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
-
-  return (
-    <section aria-label="Reklam alanı" className={`w-full ${alanClass}`}>
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
-
 function temizSirketAdi(deger: string) {
   return deger.replace(/^\([^)]+\)\s*/g, "").trim();
 }
@@ -486,9 +473,6 @@ export default function TaslakIzahnamelerPage() {
     );
   }, [arama, taslakIzahnameler]);
 
-  const firstSplitIndex = 24;
-  const secondSplitIndex = 48;
-
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-5xl">
@@ -507,10 +491,6 @@ export default function TaslakIzahnamelerPage() {
             Geri
           </Link>
         </div>
-
-        <section className="mb-6">
-          <ReklamAlani variant="yatay" />
-        </section>
 
         <h1 className="mb-6 text-3xl font-bold text-zinc-900">
           Taslak İzahnameler
@@ -543,9 +523,6 @@ export default function TaslakIzahnamelerPage() {
                 >
                   {item.label}
                 </Link>
-
-                {index === firstSplitIndex && <ReklamAlani variant="yatay" />}
-                {index === secondSplitIndex && <ReklamAlani variant="yatay" />}
               </div>
             ))
           ) : (

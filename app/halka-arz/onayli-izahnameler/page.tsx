@@ -1,28 +1,12 @@
 import Link from "next/link";
 
 const onayliIzahnameler = [
-
-   {
+  {
     kod: "EKNDC",
     sirket: "Ekinciler Demir ve Çelik Sanayi A.Ş.",
     href: "/halka-arz/onayli-izahnameler/ekinciler",
   },
-
- 
 ];
-
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
-  const alanClass =
-    variant === "icerik"
-      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
-
-  return (
-    <section aria-label="Reklam alanı" className={`w-full ${alanClass}`}>
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
 
 export default function OnayliIzahnamelerPage() {
   return (
@@ -44,10 +28,6 @@ export default function OnayliIzahnamelerPage() {
           </Link>
         </div>
 
-        <section className="mb-6">
-          <ReklamAlani variant="yatay" />
-        </section>
-
         <h1 className="mb-6 text-3xl font-bold text-zinc-900">
           Onaylı İzahnameler
         </h1>
@@ -68,10 +48,6 @@ export default function OnayliIzahnamelerPage() {
             </Link>
           ))}
         </div>
-
-        <section className="mt-8">
-          <ReklamAlani variant="icerik" />
-        </section>
       </div>
     </main>
   );

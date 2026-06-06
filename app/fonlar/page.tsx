@@ -3,23 +3,8 @@ export const metadata = {
   description: "Yatırım fonları getiri analizi, tarihsel veriler ve haftalık fon tercihlerini tek sayfada takip edin.",
   alternates: { canonical: "https://www.hocaileborsa.com/fonlar" },
 };
+
 import Link from "next/link";
-
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
-  const alanClass =
-    variant === "icerik"
-      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
-
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
-    >
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
 
 const fonKutulari = [
   {
@@ -164,20 +149,12 @@ export default function FonlarPage() {
           </p>
         </section>
 
-        <section className="pt-6">
-          <ReklamAlani variant="yatay" />
-        </section>
-
         <section className="py-6">
           <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
             {fonKutulari.map((item) => (
               <FonKutusu key={item.href} {...item} />
             ))}
           </div>
-        </section>
-
-        <section className="pt-6">
-          <ReklamAlani variant="icerik" />
         </section>
 
         <section className="mt-10">

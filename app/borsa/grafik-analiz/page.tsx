@@ -3,31 +3,15 @@ export const metadata = {
   description: "Hisselere ait güncel grafik yorumları, destek-direnç bölgeleri ve kısa teknik değerlendirmeler.",
   alternates: { canonical: "https://www.hocaileborsa.com/borsa/grafik-analiz" },
 };
+
 import Link from "next/link";
 
 const analizler = [
-   {
+  {
     baslik: "TCELL Grafik Analiz",
     href: "/borsa/grafik-analiz/tcell",
   },
-  
 ];
-
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
-  const alanClass =
-    variant === "icerik"
-      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
-
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
-    >
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
 
 export default function GrafikAnalizPage() {
   return (
@@ -59,10 +43,6 @@ export default function GrafikAnalizPage() {
             görünüm değerlendirmelerini ve destek direnç bölgelerini bu sayfadan
             takip edebilirsiniz.
           </p>
-        </section>
-
-        <section className="mb-6">
-          <ReklamAlani variant="yatay" />
         </section>
 
         <section className="space-y-4">
@@ -98,10 +78,6 @@ export default function GrafikAnalizPage() {
               </div>
             </Link>
           ))}
-        </section>
-
-        <section className="mt-8">
-          <ReklamAlani variant="icerik" />
         </section>
 
         <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">

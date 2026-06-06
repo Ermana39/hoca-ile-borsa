@@ -24,19 +24,6 @@ const egitimIcerikleri = [
   },
 ];
 
-function ReklamAlani({ buyuk = false }: { buyuk?: boolean }) {
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className={buyuk ? "min-h-[260px] w-full" : "min-h-[120px] w-full"}
-    >
-      <div
-        className={buyuk ? "min-h-[260px] w-full" : "min-h-[120px] w-full"}
-      />
-    </section>
-  );
-}
-
 export default function TemettuEgitimiPage() {
   return (
     <main className="min-h-screen px-4 py-6 md:px-6">
@@ -71,10 +58,6 @@ export default function TemettuEgitimiPage() {
           </p>
         </section>
 
-        <section className="mb-8">
-          <ReklamAlani />
-        </section>
-
         <div className="space-y-3">
           {egitimIcerikleri.map((item) => (
             <Link
@@ -87,10 +70,6 @@ export default function TemettuEgitimiPage() {
           ))}
         </div>
 
-        <section className="mt-8">
-          <ReklamAlani buyuk />
-        </section>
-
         <section className="mt-8 rounded-2xl bg-zinc-50 p-6">
           <h2 className="mb-3 text-xl font-bold text-zinc-900">
             Temettü Eğitimi Hakkında
@@ -99,7 +78,7 @@ export default function TemettuEgitimiPage() {
             Bu temettü eğitimi bölümü, borsada temettü mantığını öğrenmek isteyen
             yatırımcılar için hazırlanmıştır. Sayfada yer alan başlıklar; temettü
             kavramının temelini, ödeme sürecini, verim hesaplamasını ve fiyat
-            üzerindeki etkilerini daha bilinçli yorumlayabilmeniz için
+            üzerindeki etkilerini daha bilinçli yorumlayebilmeniz için
             düzenlenmiştir. Temettü hisseleriyle ilgilenen yatırımcılar için
             temel bilgiler bu eğitim sayfasında toplu ve erişilebilir şekilde
             sunulmaktadır.

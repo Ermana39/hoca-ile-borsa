@@ -3,12 +3,12 @@ export const metadata = {
   description: "Şirketlerin finansal oranlarını inceleyerek değerleme, kârlılık ve borçluluk açısından karşılaştırın.",
   alternates: { canonical: "https://www.hocaileborsa.com/borsa/oran-analizi" },
 };
+
 import Link from "next/link";
 import oranAnaliziJson from "./data/oran-analizi.json";
 import OranAnaliziTableClient from "./_components/OranAnaliziTableClient";
 
 export const dynamic = "force-static";
-
 
 type RowData = Record<string, string | number | null>;
 
@@ -19,22 +19,6 @@ type OranAnaliziData = {
 };
 
 const oranAnaliziData = oranAnaliziJson as OranAnaliziData;
-
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
-  const alanClass =
-    variant === "icerik"
-      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
-
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
-    >
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
 
 function parseNumeric(value: string | number | null) {
   if (value === null) return null;
@@ -114,20 +98,10 @@ export default function OranAnaliziPage() {
             toplu şekilde inceleyebilir ve farklı şirketleri daha hızlı
             karşılaştırabilirsiniz. Ekranı sağa kaydırarak diğer sütunları inceleyebilirsiniz.
           </p>
-
-         
-        </section>
-
-        <section className="pt-6">
-          <ReklamAlani variant="yatay" />
         </section>
 
         <section className="py-6">
           <OranAnaliziTableClient columns={columns} rows={rows} />
-        </section>
-
-        <section className="pt-6">
-          <ReklamAlani variant="icerik" />
         </section>
 
         <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">

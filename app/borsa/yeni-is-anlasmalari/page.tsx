@@ -3,10 +3,10 @@ export const metadata = {
   description: "Şirketlerin açıkladığı yeni iş ilişkileri ve sözleşmelerin hisseler üzerindeki etkisini takip edin.",
   alternates: { canonical: "https://www.hocaileborsa.com/borsa/yeni-is-anlasmalari" },
 };
+
 import Link from "next/link";
 import Script from "next/script";
 import yeniIsData from "./data/yeni-is-anlasmalari.json";
-
 
 export const revalidate = 3600;
 
@@ -21,22 +21,6 @@ type YeniIsSatiri = {
 };
 
 type JsonRow = Record<string, string | number | null>;
-
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
-  const alanClass =
-    variant === "icerik"
-      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
-
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
-    >
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
 
 function normalizeText(metin: string) {
   return metin
@@ -255,12 +239,7 @@ export default function YeniIsAnlasmalariPage() {
         </p>
 
         <div className="mb-8 text-sm font-semibold text-zinc-700">
-         
         </div>
-
-        <section className="mb-8">
-          <ReklamAlani variant="yatay" />
-        </section>
 
         <section className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
           <div className="rounded-xl border border-zinc-200 bg-white">

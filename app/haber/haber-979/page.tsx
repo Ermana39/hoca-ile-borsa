@@ -7,22 +7,6 @@ export const metadata: Metadata = {
   description: "TÜRK-İŞ Mayıs 2026 açlık ve yoksulluk sınırı araştırması sonuçları",
 };
 
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
-  const alanClass =
-    variant === "icerik"
-      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
-
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
-    >
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
-
 const gostergeVerileri = [
   {
     baslik: "Açlık Sınırı",
@@ -217,10 +201,6 @@ export default function Haber979Page() {
             </div>
           </div>
         </article>
-
-        <section className="mt-8">
-          <ReklamAlani variant="icerik" />
-        </section>
       </div>
     </main>
   );

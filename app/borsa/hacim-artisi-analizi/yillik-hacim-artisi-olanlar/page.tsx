@@ -53,22 +53,6 @@ const veriler = [
   { sembol: "GARFA", islemHacmi: "106,546,079", ortHacim: "38,460,279", artis: "177.03" },
 ];
 
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
-  const alanClass =
-    variant === "icerik"
-      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
-
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
-    >
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
-
 export default function YillikHacimArtisiPage() {
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -87,10 +71,6 @@ export default function YillikHacimArtisiPage() {
             Geri
           </Link>
         </div>
-
-        <section className="mb-8">
-          <ReklamAlani variant="yatay" />
-        </section>
 
         <h1 className="mb-6 text-3xl font-bold text-zinc-900">
           Yıllık Hacim Artışı Olanlar
@@ -131,10 +111,6 @@ export default function YillikHacimArtisiPage() {
             </tbody>
           </table>
         </div>
-
-        <section className="mt-8">
-          <ReklamAlani variant="icerik" />
-        </section>
 
         <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">

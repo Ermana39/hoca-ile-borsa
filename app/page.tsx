@@ -170,22 +170,6 @@ const sayfaBasliklari: Record<string, string> = {
   "/reklam": "Reklam",
 };
 
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
-  const alanClass =
-    variant === "icerik"
-      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
-
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
-    >
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
-
 function KategoriKutusu({
   title,
   href,
@@ -722,9 +706,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="px-4 pt-6 md:px-6">
-          <ReklamAlani variant="yatay" />
-        </section>
 
         <section className="px-4 py-6 md:px-6">
           <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-5">
@@ -767,10 +748,6 @@ export default function HomePage() {
               </div>
             )}
           </div>
-        </section>
-
-        <section className="px-4 pb-6 md:px-6">
-          <ReklamAlani variant="icerik" />
         </section>
 
         <SonGuncellemelerBar items={guncellemeler} />

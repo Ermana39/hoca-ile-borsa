@@ -1,22 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
 
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
-  const alanClass =
-    variant === "icerik"
-      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
-
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
-    >
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
-
 const fonTipleri = [
   {
     title: "Menkul Kıymet Yatırım Fonları",
@@ -108,20 +92,12 @@ export default function FonTarihselVerilerLandingPage() {
           </p>
         </section>
 
-        <section className="pt-6">
-          <ReklamAlani variant="yatay" />
-        </section>
-
         <section className="py-6">
           <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
             {fonTipleri.map((item) => (
               <FonTipiKutusu key={item.href} {...item} />
             ))}
           </div>
-        </section>
-
-        <section className="pt-6">
-          <ReklamAlani variant="icerik" />
         </section>
 
         <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">

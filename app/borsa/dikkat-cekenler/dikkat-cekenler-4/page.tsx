@@ -11,22 +11,6 @@ export const metadata: Metadata = {
   },
 };
 
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
-  const alanClass =
-    variant === "icerik"
-      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
-
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
-    >
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
-
 export default function Haber1Page() {
   return (
     <main className="min-h-screen bg-white">
@@ -72,10 +56,6 @@ export default function Haber1Page() {
           </section>
 
           <section className="pt-6">
-            <ReklamAlani variant="yatay" />
-          </section>
-
-          <section className="pt-6">
             <div className="rounded-2xl bg-zinc-50 p-4 md:p-6">
               <p className="whitespace-pre-line text-base leading-8 text-zinc-700 md:text-lg">
 {``}
@@ -90,10 +70,6 @@ export default function Haber1Page() {
             >
               Fonlar Sayfasına Git
             </Link>
-          </section>
-
-          <section className="pt-8">
-            <ReklamAlani variant="icerik" />
           </section>
         </article>
       </div>

@@ -3,9 +3,9 @@ export const metadata = {
   description: "İşlem hacmindeki artışı izleyerek piyasada ilginin yoğunlaştığı hisseleri fark edin.",
   alternates: { canonical: "https://www.hocaileborsa.com/borsa/hacim-artisi-analizi" },
 };
+
 import Image from "next/image";
 import Link from "next/link";
-
 
 const hacimKutulari = [
   {
@@ -27,22 +27,6 @@ const hacimKutulari = [
     alt: "Haftalık Hacim Artışı Olanlar görseli",
   },
 ];
-
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
-  const alanClass =
-    variant === "icerik"
-      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
-
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
-    >
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
 
 function HacimKutusu({
   title,
@@ -109,10 +93,6 @@ export default function HacimArtisiAnaliziPage() {
           <p className="mt-3 max-w-4xl text-sm leading-7 text-zinc-600 md:text-base">
             Hacim artışı analizlerini aşağıdaki kutulardan inceleyebilirsiniz.
           </p>
-                 </section>
-
-        <section className="pt-6">
-          <ReklamAlani variant="yatay" />
         </section>
 
         <section className="py-6">
@@ -121,10 +101,6 @@ export default function HacimArtisiAnaliziPage() {
               <HacimKutusu key={item.href} {...item} />
             ))}
           </div>
-        </section>
-
-        <section className="pt-6">
-          <ReklamAlani variant="icerik" />
         </section>
 
         <section className="pt-6">

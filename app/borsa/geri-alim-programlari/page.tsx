@@ -3,10 +3,10 @@ export const metadata = {
   description: "Şirketlerin pay geri alım programlarını ve piyasaya olası etkilerini düzenli şekilde izleyin.",
   alternates: { canonical: "https://www.hocaileborsa.com/borsa/geri-alim-programlari" },
 };
+
 import Link from "next/link";
 import Script from "next/script";
 import geriAlimData from "./data/geri-alim.json";
-
 
 export const revalidate = 3600;
 
@@ -25,22 +25,6 @@ type GeriAlimSatiri = {
 };
 
 type JsonRow = Record<string, string | number | null>;
-
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
-  const alanClass =
-    variant === "icerik"
-      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
-
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
-    >
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
 
 function normalizeText(metin: string) {
   return metin
@@ -327,12 +311,7 @@ export default function GeriAlimProgramlariPage() {
         </p>
 
         <div className="mb-8 text-sm font-semibold text-zinc-700">
-         
         </div>
-
-        <section className="mb-8">
-          <ReklamAlani variant="yatay" />
-        </section>
 
         <section className="rounded-2xl border border-zinc-200 bg-white">
           <div className="sticky top-0 z-30 rounded-t-2xl border-b border-zinc-200 bg-white">
@@ -434,10 +413,6 @@ export default function GeriAlimProgramlariPage() {
               </table>
             </div>
           </div>
-        </section>
-
-        <section className="mt-8">
-          <ReklamAlani variant="icerik" />
         </section>
 
         <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">

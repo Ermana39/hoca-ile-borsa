@@ -3,10 +3,9 @@ export const metadata = {
   description: "RSI, trend ve teknik filtrelere göre hazırlanmış hisse taramaları ile belirli kriterleri karşılayan hisseleri görün.",
   alternates: { canonical: "https://www.hocaileborsa.com/borsa/gosterge-taramalari" },
 };
+
 import Image from "next/image";
 import Link from "next/link";
-
-
 
 const taramalar = [
   {
@@ -51,37 +50,21 @@ const taramalar = [
     image: "/macd-sat.png",
     alt: "MACD sat verenler görseli",
   },
-   {
+  {
     title: "Güçlü Trend ve Momentum Taraması",
     description: "Hareketli ortalama dizilimi, StochRSI ve MACD göstergelerine göre güçlü yükseliş trendi ve pozitif momentum gösteren hisseler",
-  href: "/borsa/gosterge-taramalari/guclu-trend-momentum",
-  image: "/Guclu-trend-ve-momentum-taramasi.png",
-  alt: "Güçlü trend ve momentum taraması görseli",
+    href: "/borsa/gosterge-taramalari/guclu-trend-momentum",
+    image: "/Guclu-trend-ve-momentum-taramasi.png",
+    alt: "Güçlü trend ve momentum taraması görseli",
   },
   {
     title: "Yükseliş Trendi + Hacim Artışı",
     description: "Hareketli ortalama dizilimi, son 3 günlük hacim ortalaması son 21 günlük hacim ortalamasının üzerinde olan hisseler",
-  href: "/borsa/gosterge-taramalari/yukselis-hacim",
-  image: "/yükselis-hacim-tarama.png",
-  alt: " Yükseliş Trendi + Hacim Artışı taraması görseli",
+    href: "/borsa/gosterge-taramalari/yukselis-hacim",
+    image: "/yükselis-hacim-tarama.png",
+    alt: " Yükseliş Trendi + Hacim Artışı taraması görseli",
   },
 ];
-
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
-  const alanClass =
-    variant === "icerik"
-      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
-
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
-    >
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
 
 function TaramaKutusu({
   title,
@@ -154,12 +137,6 @@ export default function GostergeTaramalariPage() {
           <p className="mt-3 max-w-4xl text-sm leading-7 text-zinc-600 md:text-base">
             Gösterge taramalarını aşağıdaki kutulardan inceleyebilirsiniz.
           </p>
-
-        
-        </section>
-
-        <section className="pt-6">
-          <ReklamAlani variant="yatay" />
         </section>
 
         <section className="py-6">
@@ -168,10 +145,6 @@ export default function GostergeTaramalariPage() {
               <TaramaKutusu key={item.href} {...item} />
             ))}
           </div>
-        </section>
-
-        <section className="pt-6">
-          <ReklamAlani variant="icerik" />
         </section>
 
         <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
