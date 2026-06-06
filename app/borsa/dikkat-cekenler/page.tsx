@@ -14,11 +14,7 @@ const haberler = [
     title: "Temettü kararları yatırımcıların radarında",
     href: "/borsa/dikkat-cekenler/dikkat-cekenler-2",
   },
-   {
-    title: "Ak Portföy Yeni Teknolojiler Yabancı Hisse Senedi Fonu Son 1 Haftada %9,90 Artış Gösterdi",
-    href: "/borsa/dikkat-cekenler/dikkat-cekenler-1",
-  },
-   {
+    {
     title: "Stopaj Sonrası Gerçek Getiri: Fonlar BIST 100’ün Gerisinde mi Kaldı?",
     href: "/borsa/dikkat-cekenler/dikkat-cekenler-4",
   },

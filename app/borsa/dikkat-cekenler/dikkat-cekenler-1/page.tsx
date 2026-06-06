@@ -113,17 +113,10 @@ export default function Haber4Page() {
 
               <div className="mt-4 flex flex-wrap gap-3">
                 <Link
-                  href="/borsa/geri-alim"
+                  href="/borsa/geri-alim-programlari"
                   className="inline-flex rounded-xl bg-blue-600 px-5 py-3 text-sm font-semibold text-white hover:bg-blue-700"
                 >
                   Tüm geri alımları incele
-                </Link>
-
-                <Link
-                  href="/borsa/dikkat-cekenler"
-                  className="inline-flex rounded-xl border border-blue-200 bg-white px-5 py-3 text-sm font-semibold text-blue-700 hover:bg-blue-100"
-                >
-                  Dikkat çekenler sayfasına dön
                 </Link>
               </div>
             </div>
