@@ -1,4 +1,27 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const veri = yorumlar[slug];
+  if (veri) {
+    return {
+      title: `${veri.kod} Grafik Analiz`,
+      description: `${veri.kod} hisse senedi grafik analizi: ${veri.yorum.slice(0, 140)}`,
+      alternates: {
+        canonical: `https://www.hocaileborsa.com/borsa/grafik-analiz/${slug}`,
+      },
+    };
+  }
+  return {
+    title: "Grafik Analiz",
+    description: "Hisse senedi grafik analizi.",
+  };
+}
 
 const yorumlar: Record<string, { kod: string; yorum: string }> = {
   thyao: {

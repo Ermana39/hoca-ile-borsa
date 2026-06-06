@@ -47,6 +47,48 @@ const stableImageCacheFiles = [
   "/tasit-kredisi-oranlari.png",
 ];
 
+const securityHeaders = [
+  { key: "X-Content-Type-Options", value: "nosniff" },
+  { key: "X-Frame-Options", value: "SAMEORIGIN" },
+  { key: "X-XSS-Protection", value: "1; mode=block" },
+  { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+  {
+    key: "Permissions-Policy",
+    value: "camera=(), microphone=(), geolocation=()",
+  },
+  {
+    key: "Strict-Transport-Security",
+    value: "max-age=63072000; includeSubDomains; preload",
+  },
+];
+
+const haberRedirects = [
+  {
+    source: "/haber/haber-950",
+    destination: "/haber/05-haziran-2026-cuma-kap-bildirimleri-ozeti",
+  },
+  {
+    source: "/haber/haber-975",
+    destination: "/haber/turkiye-sigortanin-prim-uretimi-79-2-milyar-tlye-yukseldi",
+  },
+  {
+    source: "/haber/haber-976",
+    destination: "/haber/thynin-air-europa-yatirim-surecinde-yeni-gelisme",
+  },
+  {
+    source: "/haber/haber-977",
+    destination: "/haber/aselsandan-845-milyon-dolarlik-yeni-sozlesme",
+  },
+  {
+    source: "/haber/haber-978",
+    destination: "/haber/kontrolmatikin-iki-tahvilinde-kupon-odemesi-gerceklesmedi",
+  },
+  {
+    source: "/haber/haber-979",
+    destination: "/haber/turk-is-mayis-2026-aclik-ve-yoksulluk-siniri-arastirmasi",
+  },
+];
+
 const nextConfig = {
   outputFileTracingIncludes: {
     "/mevduat-kredi-faizleri/mevduat-faizi-oranlari": [
@@ -54,8 +96,16 @@ const nextConfig = {
     ],
   },
 
+  async redirects() {
+    return haberRedirects.map((r) => ({
+      source: r.source,
+      destination: r.destination,
+      permanent: true,
+    }));
+  },
+
   async headers() {
-    return stableImageCacheFiles.map((source) => ({
+    const imageHeaders = stableImageCacheFiles.map((source) => ({
       source,
       headers: [
         {
@@ -64,6 +114,15 @@ const nextConfig = {
         },
       ],
     }));
+
+    const globalSecurityHeaders = [
+      {
+        source: "/(.*)",
+        headers: securityHeaders,
+      },
+    ];
+
+    return [...imageHeaders, ...globalSecurityHeaders];
   },
 };
 

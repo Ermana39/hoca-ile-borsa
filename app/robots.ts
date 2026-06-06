@@ -12,6 +12,7 @@ export default function robots(): MetadataRoute.Robots {
           "/api/",
           "/kontrol-paneli-4827",
           "/kontrol-paneli-4827/",
+          "/yonetim/",
           "/giris",
           "/uye",
           "/profil",

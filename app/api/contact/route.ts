@@ -19,6 +19,15 @@ function getClientIp(request: NextRequest) {
   return "unknown";
 }
 
+function escapeHtml(value: string) {
+  return value
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
 function mailHtml({
   name,
   email,
@@ -32,15 +41,19 @@ function mailHtml({
   message: string;
   ip: string;
 }) {
-  const safeMessage = message.replace(/\n/g, "<br />");
+  const safeName = escapeHtml(name);
+  const safeEmail = escapeHtml(email);
+  const safeSubject = escapeHtml(subject);
+  const safeIp = escapeHtml(ip);
+  const safeMessage = escapeHtml(message).replace(/\n/g, "<br />");
 
   return `
     <div style="font-family: Arial, sans-serif; color: #111; line-height: 1.6;">
       <h2 style="margin-bottom: 16px;">Yeni İletişim Formu Mesajı</h2>
-      <p><strong>Ad Soyad:</strong> ${name}</p>
-      <p><strong>E-posta:</strong> ${email}</p>
-      <p><strong>Konu:</strong> ${subject}</p>
-      <p><strong>IP:</strong> ${ip}</p>
+      <p><strong>Ad Soyad:</strong> ${safeName}</p>
+      <p><strong>E-posta:</strong> ${safeEmail}</p>
+      <p><strong>Konu:</strong> ${safeSubject}</p>
+      <p><strong>IP:</strong> ${safeIp}</p>
       <div style="margin-top: 20px; padding: 16px; border: 1px solid #ddd; border-radius: 12px; background: #fafafa;">
         ${safeMessage}
       </div>

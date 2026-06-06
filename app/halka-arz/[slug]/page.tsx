@@ -1,5 +1,28 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+function slugToTitle(slug: string) {
+  return slug
+    .replace(/-/g, " ")
+    .replace(/\b\w/g, (c) => c.toLocaleUpperCase("tr"));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const title = slugToTitle(slug);
+  return {
+    title: `${title} - Halka Arz Detayı`,
+    description: `${title} halka arz detayları, grafikler ve analiz bilgileri.`,
+    alternates: {
+      canonical: `https://www.hocaileborsa.com/halka-arz/${slug}`,
+    },
+  };
+}
 
 export default async function HalkaArzDetayPage({
   params,
@@ -21,7 +44,7 @@ export default async function HalkaArzDetayPage({
         <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
           <Image
             src={`/${slug}.png`}
-            alt={slug}
+            alt={`${slugToTitle(slug)} - Halka Arz Görseli`}
             width={1200}
             height={1600}
             className="h-auto w-full rounded-xl"

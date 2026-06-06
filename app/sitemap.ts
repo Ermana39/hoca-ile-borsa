@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { newsItems } from "@/app/data/news";
 
 const siteUrl = "https://www.hocaileborsa.com";
 
@@ -498,7 +499,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const taslakSirketRoutes = getTaslakSirketUrlleri();
 
-  const tumUrller = Array.from(new Set([...staticRoutes, ...taslakSirketRoutes]));
+  const haberRoutes = newsItems.map((item) => item.href);
+
+  const tumUrller = Array.from(new Set([...staticRoutes, ...taslakSirketRoutes, ...haberRoutes]));
 
   return tumUrller.map((route) => {
     if (route === "/") return createEntry(route, 1, "daily");
@@ -514,6 +517,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     if (route.startsWith("/halka-arz/taslak-izahnameler/")) {
       return createEntry(route, 0.8, "weekly");
+    }
+
+    if (route.startsWith("/haber/")) {
+      return createEntry(route, 0.9, "monthly");
     }
 
     return createEntry(route, 0.85, "weekly");
