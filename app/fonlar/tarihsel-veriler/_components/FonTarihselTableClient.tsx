@@ -101,7 +101,12 @@ export default function FonTarihselTableClient({
   const [sortIndex, setSortIndex] = useState<number | null>(null);
   const [dir, setDir] = useState<SortDir>("asc");
 
-  const tableScrollRef = useRef<HTMLDivElement | null>(null);
+  // Tek scroll container — hem yatay hem dikey bu div'de olur.
+  // thead içindeki th'ler sticky olduğunda, overflow-x + overflow-y
+  // aynı element'te birleşirse sticky çalışır.
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
+
+  // Alt sabit scrollbar için
   const fixedScrollRef = useRef<HTMLDivElement | null>(null);
   const fixedInnerRef = useRef<HTMLDivElement | null>(null);
   const tableRef = useRef<HTMLTableElement | null>(null);
@@ -115,38 +120,38 @@ export default function FonTarihselTableClient({
   }, [rows, sortIndex, dir]);
 
   useEffect(() => {
-    const tableScroll = tableScrollRef.current;
+    const scrollContainer = scrollContainerRef.current;
     const fixedScroll = fixedScrollRef.current;
     const fixedInner = fixedInnerRef.current;
     const table = tableRef.current;
 
-    if (!tableScroll || !fixedScroll || !fixedInner || !table) return;
+    if (!scrollContainer || !fixedScroll || !fixedInner || !table) return;
 
     let syncingTable = false;
     let syncingFixed = false;
 
     const syncWidths = () => {
       fixedInner.style.width = `${table.scrollWidth}px`;
-      fixedScroll.scrollLeft = tableScroll.scrollLeft;
+      fixedScroll.scrollLeft = scrollContainer.scrollLeft;
     };
 
     const onTableScroll = () => {
       if (syncingFixed) return;
       syncingTable = true;
-      fixedScroll.scrollLeft = tableScroll.scrollLeft;
+      fixedScroll.scrollLeft = scrollContainer.scrollLeft;
       syncingTable = false;
     };
 
     const onFixedScroll = () => {
       if (syncingTable) return;
       syncingFixed = true;
-      tableScroll.scrollLeft = fixedScroll.scrollLeft;
+      scrollContainer.scrollLeft = fixedScroll.scrollLeft;
       syncingFixed = false;
     };
 
     syncWidths();
 
-    tableScroll.addEventListener("scroll", onTableScroll, { passive: true });
+    scrollContainer.addEventListener("scroll", onTableScroll, { passive: true });
     fixedScroll.addEventListener("scroll", onFixedScroll, { passive: true });
     window.addEventListener("resize", syncWidths);
 
@@ -158,7 +163,7 @@ export default function FonTarihselTableClient({
     }
 
     return () => {
-      tableScroll.removeEventListener("scroll", onTableScroll);
+      scrollContainer.removeEventListener("scroll", onTableScroll);
       fixedScroll.removeEventListener("scroll", onFixedScroll);
       window.removeEventListener("resize", syncWidths);
       resizeObserver?.disconnect();
@@ -180,21 +185,36 @@ export default function FonTarihselTableClient({
   return (
     <>
       <section className="rounded-2xl border border-zinc-200 bg-white">
+        {/*
+          ÖNEMLİ: sticky thead'in çalışması için overflow-x VE overflow-y
+          aynı container'da olmalı. Ayrıca bu container'a sabit bir
+          max-height verilmeli ki dikey scroll oluşsun ve thead sticky kalsın.
+
+          "overflow-x-auto" + "overflow-y-auto" + "max-h-[...vh]"
+          → thead th'leri "sticky top-0" ile bu container'ın tepesinde kalır.
+
+          Eğer sayfanın kendisi scroll ediyorsa ve tablo tam sayfa yüksekliğini
+          kaplıyorsa max-h değerini ihtiyacınıza göre ayarlayın.
+        */}
         <div
-          ref={tableScrollRef}
-          className="overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
+          ref={scrollContainerRef}
+          className="overflow-x-auto overflow-y-auto max-h-[calc(100vh-12rem)] [scrollbar-width:thin]"
         >
           <table
             ref={tableRef}
             className="w-full border-collapse text-sm"
             style={{ minWidth: `${tableMinWidth}px` }}
           >
-            <thead className="sticky top-0 z-30 bg-zinc-100 text-zinc-800 shadow-sm">
+            <thead className="z-30 bg-zinc-100 text-zinc-800 shadow-sm">
               <tr>
                 {headers.map((header, index) => (
                   <th
                     key={`${header}-${index}`}
-                    className="border-b border-zinc-200 bg-zinc-100 px-4 py-4 text-left font-semibold whitespace-nowrap"
+                    /*
+                      sticky top-0 burada çalışır çünkü scroll eden parent
+                      scrollContainerRef'tir — overflow:visible değil.
+                    */
+                    className="sticky top-0 z-30 border-b border-zinc-200 bg-zinc-100 px-4 py-4 text-left font-semibold whitespace-nowrap"
                   >
                     <button
                       type="button"
@@ -248,6 +268,7 @@ export default function FonTarihselTableClient({
         </div>
       </section>
 
+      {/* Alt sabit yatay scrollbar */}
       <div className="fixed bottom-0 left-0 right-0 z-50 border-t border-zinc-200 bg-white/95 px-4 py-2 shadow-[0_-6px_20px_rgba(0,0,0,0.08)] backdrop-blur">
         <div className="mx-auto max-w-7xl">
           <div
