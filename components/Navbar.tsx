@@ -28,9 +28,8 @@ export default function Navbar() {
           <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-sm font-black text-white">
             H
           </span>
-          <span className="text-base font-bold tracking-tight">
-            Hoca İle{" "}
-            <span className="text-blue-400">Borsa</span>
+          <span className="text-base font-bold tracking-tight text-blue-400">
+            Hoca İle Borsa
           </span>
         </Link>
 

@@ -383,37 +383,16 @@ export default function AefesGrafikAnaliz() {
             <div className="aefes-hero-label">Teknik Analiz Raporu</div>
             <h1 className="aefes-hero-title">ANADOLU<br /><em>EFES</em></h1>
             <p className="aefes-hero-sub">
-              BIST: AEFES &nbsp;·&nbsp; Günlük Periyot &nbsp;·&nbsp; Çoklu Hareketli Ortalama + Bollinger Bantları &nbsp;·&nbsp; 05 Haziran 2026
+             &nbsp;·&nbsp; 05 Haziran 2026
             </p>
           </div>
           <div className="aefes-price-block">
             <div className="aefes-price-main"><span className="aefes-price-currency">₺</span>20.36</div>
-            <div className="aefes-price-change">▼ −0.30 &nbsp;/&nbsp; −1.4%</div>
           </div>
         </section>
 
         {/* MAIN */}
         <main className="aefes-main">
-
-          {/* STAT CARDS */}
-          <div className="aefes-stat-grid">
-            {[
-              { label: "Açılış",   value: "20.50", cls: "",      sub: "TL" },
-              { label: "Yüksek",   value: "20.60", cls: "green", sub: "Günlük zirve" },
-              { label: "Düşük",    value: "19.82", cls: "red",   sub: "Günlük dip" },
-              { label: "Kapanış",  value: "20.36", cls: "",      sub: "Son fiyat" },
-              { label: "Ağ. Ort.", value: "20.16", cls: "gold",  sub: "VWAP benzeri" },
-              { label: "Değişim",  value: "−1.4%", cls: "red",   sub: "−0.30 TL" },
-              { label: "Hacim",    value: "29.6M", cls: "",      sub: "Adet" },
-              { label: "RSI (14)", value: "57.41", cls: "gold",  sub: "Nötr bölge" },
-            ].map((s) => (
-              <div className="aefes-stat-card" key={s.label}>
-                <div className="aefes-stat-label">{s.label}</div>
-                <div className={`aefes-stat-value ${s.cls}`}>{s.value}</div>
-                <div className="aefes-stat-sub">{s.sub}</div>
-              </div>
-            ))}
-          </div>
 
           {/* CHART */}
           <div className="aefes-section-title"><span className="aefes-section-num">01</span> Grafik</div>
