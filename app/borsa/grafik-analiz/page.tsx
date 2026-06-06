@@ -9,6 +9,15 @@ import Link from "next/link";
 const analizler = [
   { baslik: "AEFES Grafik Analiz", href: "/borsa/grafik-analiz/aefes" },
  { baslik: "AKSEN Grafik Analiz", href: "/borsa/grafik-analiz/aksen" },
+  { baslik: "AKBNK Grafik Analiz", href: "/borsa/grafik-analiz/akbnk" },
+{ baslik: "ALARK Grafik Analiz", href: "/borsa/grafik-analiz/alark" },
+{ baslik: "ARCLK Grafik Analiz", href: "/borsa/grafik-analiz/arclk" },
+{ baslik: "ASTOR Grafik Analiz", href: "/borsa/grafik-analiz/astor" },
+{ baslik: "ASELS Grafik Analiz", href: "/borsa/grafik-analiz/asels" },
+{ baslik: "BIMAS Grafik Analiz", href: "/borsa/grafik-analiz/bimas" },
+{ baslik: "BRSAN Grafik Analiz", href: "/borsa/grafik-analiz/brsan" },
+{ baslik: "CIMSA Grafik Analiz", href: "/borsa/grafik-analiz/cimsa" },
+{ baslik: "DOAS Grafik Analiz", href: "/borsa/grafik-analiz/doas" },
 ];
 
 // Alfabetik sırala

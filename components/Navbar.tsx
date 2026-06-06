@@ -26,7 +26,7 @@ export default function Navbar() {
           aria-label="Hoca İle Borsa - Ana Sayfa"
         >
           <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-600 text-sm font-black text-white">
-            H
+            
           </span>
           <span className="text-base font-bold tracking-tight text-blue-400">
             Hoca İle Borsa

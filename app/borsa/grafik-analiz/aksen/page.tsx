@@ -4,7 +4,7 @@ export default function AksenGrafikAnaliz() {
   return (
     <>
       <Head>
-        <title>AKSEN Teknik Analiz — 05.06.2026 | Hoca İle Borsa</title>
+        <title>AKSEN Teknik Analiz — 06.06.2026 | Hoca İle Borsa</title>
         <meta name="description" content="Aksa Enerji (AKSEN) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic indikatörleri ve hareketli ortalamalar ile detaylı değerlendirme." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.hocaileborsa.com/borsa/grafik-analiz/aksen" />
@@ -314,7 +314,7 @@ export default function AksenGrafikAnaliz() {
             <div className="aefes-hero-label">Teknik Analiz Raporu</div>
             <h1 className="aefes-hero-title">AKSA<br /><em>ENERJİ</em></h1>
             <p className="aefes-hero-sub">
- BIST: AKSEN &nbsp;·&nbsp; Günlük Periyot &nbsp;·&nbsp; Çoklu Hareketli Ortalama + Bollinger Bantları &nbsp;·&nbsp; 05 Haziran 2026
+  &nbsp;·&nbsp; 06 Haziran 2026
             </p>
           </div>
           <div className="aefes-price-block">
@@ -338,7 +338,7 @@ export default function AksenGrafikAnaliz() {
             </div>
             <div className="aefes-chart-img-wrap">
               <img
-                src="/aksen-analiz.jpg"
+                src="/aksen-analiz.webp"
                 alt="AKSEN Teknik Analiz Grafiği — Bollinger Bantları, Hareketli Ortalamalar, Stochastic, MACD, RSI — 05.06.2026"
                 loading="lazy"
               />
@@ -538,7 +538,7 @@ export default function AksenGrafikAnaliz() {
               <div className="aefes-footer-brand">HOCA İLE BORSA</div>
               <div className="aefes-footer-meta">
                 AKSEN Teknik Analiz Raporu<br />
-                Hazırlanma: 05.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
+                Hazırlanma: 06.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
               </div>
             </div>
             <div className="aefes-footer-legal">

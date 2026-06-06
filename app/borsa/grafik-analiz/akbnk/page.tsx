@@ -1,13 +1,13 @@
 import Head from "next/head";
 
-export default function AefesGrafikAnaliz() {
+export default function AkbnkGrafikAnaliz() {
   return (
     <>
       <Head>
-        <title>AEFES Teknik Analiz — 05.06.2026 | Hoca İle Borsa</title>
-        <meta name="description" content="Anadolu Efes (AEFES) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic indikatörleri ile detaylı değerlendirme." />
+        <title>AKBNK Teknik Analiz — 06.06.2026 | Hoca İle Borsa</title>
+        <meta name="description" content="Akbank (AKBNK) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic indikatörleri ve hareketli ortalamalar ile detaylı değerlendirme." />
         <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.hocaileborsa.com/borsa/grafik-analiz/aefes" />
+        <link rel="canonical" href="https://www.hocaileborsa.com/borsa/grafik-analiz/akbnk" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
         <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
@@ -188,6 +188,7 @@ export default function AefesGrafikAnaliz() {
         .aefes-ma-table tr:last-child td { border-bottom: none; }
         .aefes-ma-table tr:hover td { background: rgba(255,255,255,.02); }
         .aefes-above { color: var(--green); }
+        .aefes-below { color: var(--red); }
 
         /* BOLLINGER */
         .aefes-bol-card {
@@ -207,7 +208,7 @@ export default function AefesGrafikAnaliz() {
         .aefes-bol-marker {
           position: absolute; left: 0; right: 0; height: 2px;
           background: var(--accent); box-shadow: 0 0 6px var(--accent);
-          top: calc(100% * (21.13 - 20.36) / (21.13 - 18.71));
+          top: calc(100% * (77.68 - 64.50) / (77.68 - 60.20));
         }
         .aefes-bol-labels {
           font-family: 'JetBrains Mono', monospace; font-size: .7rem;
@@ -311,13 +312,13 @@ export default function AefesGrafikAnaliz() {
         <section className="aefes-hero">
           <div>
             <div className="aefes-hero-label">Teknik Analiz Raporu</div>
-            <h1 className="aefes-hero-title">ANADOLU<br /><em>EFES</em></h1>
+            <h1 className="aefes-hero-title">AKBANK<br /><em>AKBNK</em></h1>
             <p className="aefes-hero-sub">
  &nbsp;·&nbsp; 05 Haziran 2026
             </p>
           </div>
           <div className="aefes-price-block">
-            <div className="aefes-price-main"><span className="aefes-price-currency">₺</span>20.36</div>
+            <div className="aefes-price-main"><span className="aefes-price-currency">₺</span>64.50</div>
           </div>
         </section>
 
@@ -328,7 +329,7 @@ export default function AefesGrafikAnaliz() {
           <div className="aefes-section-title"><span className="aefes-section-num">01</span> Grafik</div>
           <div className="aefes-chart-wrap">
             <div className="aefes-chart-header">
-              <span className="aefes-chart-title-text">AEFES — Günlük Mum Grafiği</span>
+              <span className="aefes-chart-title-text">AKBNK — Günlük Mum Grafiği</span>
               <div className="aefes-pills">
                 {["MAV 5/13/21", "MAV 55/89", "MAV 144/233", "Bollinger (20,2)", "Stoch · MACD · RSI"].map((p, i) => (
                   <span key={i} className={`aefes-pill ${["green","yellow","red","purple","blue"][i]}`}>{p}</span>
@@ -337,8 +338,8 @@ export default function AefesGrafikAnaliz() {
             </div>
             <div className="aefes-chart-img-wrap">
               <img
-                src="/aefes-analiz.webp"
-                alt="AEFES Teknik Analiz Grafiği — Bollinger Bantları, Hareketli Ortalamalar, Stochastic, MACD, RSI — 05.06.2026"
+                src="/akbnk-analiz.webp"
+                alt="AKBNK Teknik Analiz Grafiği — Bollinger Bantları, Hareketli Ortalamalar, Stochastic, MACD, RSI — 05.06.2026"
                 loading="lazy"
               />
               <div className="aefes-chart-watermark">HOCA İLE BORSA</div>
@@ -357,17 +358,17 @@ export default function AefesGrafikAnaliz() {
                 <div className="aefes-bol-marker" />
               </div>
               <div className="aefes-bol-labels">
-                <span>BOL U: 21.13</span>
-                <span style={{ color: "var(--gold)" }}>BOL M: 19.92</span>
-                <span>BOL D: 18.71</span>
+                <span>BOL U: 77.68</span>
+                <span style={{ color: "var(--gold)" }}>BOL M: 68.94</span>
+                <span>BOL D: 60.20</span>
               </div>
             </div>
             {[
-              { name: "Üst Band (BOL U)",  val: "21.13 TL", sig: "Direnç",        cls: "neutral" },
-              { name: "Orta Band / MAV 20", val: "19.92 TL", sig: "Destek",        cls: "buy" },
-              { name: "Alt Band (BOL D)",  val: "18.71 TL", sig: "Güçlü Destek",  cls: "buy" },
-              { name: "Bant Genişliği",    val: "2.42 TL",  sig: "Orta Volatilite", cls: "neutral" },
-              { name: "Fiyatın Konumu",    val: "20.36 TL", sig: "Orta-Üst Bant",  cls: "buy" },
+              { name: "Üst Band (BOL U)",  val: "77.68 TL", sig: "Güçlü Direnç",   cls: "neutral" },
+              { name: "Orta Band / MAV 20", val: "68.94 TL", sig: "Ana Direnç",     cls: "sell" },
+              { name: "Alt Band (BOL D)",  val: "60.20 TL", sig: "Güçlü Destek",   cls: "buy" },
+              { name: "Bant Genişliği",    val: "17.48 TL", sig: "Yüksek Volatilite", cls: "neutral" },
+              { name: "Fiyatın Konumu",    val: "64.50 TL", sig: "Alt Banda Yakın", cls: "sell" },
             ].map((r, i) => (
               <div className="aefes-ind-row" key={i} style={i === 4 ? { borderBottom: "none" } : {}}>
                 <span className="aefes-ind-name">{r.name}</span>
@@ -376,7 +377,7 @@ export default function AefesGrafikAnaliz() {
               </div>
             ))}
             <p style={{ marginTop: "1rem", fontSize: ".85rem", color: "var(--text)", lineHeight: 1.7 }}>
-              Fiyat, orta band (19.92) ile üst band (21.13) arasında konumlanmış durumda. Bu pozisyon <strong style={{ color: "var(--accent)" }}>boğa bölgesi</strong> olarak değerlendirilir. Üst banda yaklaşımda satış baskısı ve kâr realizasyonu beklenebilir.
+              Fiyat, Bollinger orta bandı olan 68.94 TL seviyesinin altında ve alt banda daha yakın bölgede konumlanıyor. Bu yapı <strong style={{ color: "var(--red)" }}>kısa vadeli zayıflığın sürdüğünü</strong> gösterir. 68.94 TL üzerine dönüş gelmeden tepki hareketleri sınırlı kalabilir; aşağıda 60.20 TL Bollinger alt bandı ana destek olarak izlenir.
             </p>
           </div>
 
@@ -391,14 +392,14 @@ export default function AefesGrafikAnaliz() {
                 <h3>Stochastic (14,14,3,3)</h3>
               </div>
               <div className="aefes-analysis-card-body">
-                <div className="aefes-ind-row"><span className="aefes-ind-name">StocK</span><span className="aefes-ind-val">62.75</span><span className="aefes-ind-signal buy">AL</span></div>
-                <div className="aefes-ind-row"><span className="aefes-ind-name">StocD</span><span className="aefes-ind-val">55.52</span><span className="aefes-ind-signal buy">AL</span></div>
-                <div className="aefes-ind-row" style={{ borderBottom: "none" }}><span className="aefes-ind-name">Konum</span><span className="aefes-ind-val">Nötr-Yüksek</span><span className="aefes-ind-signal neutral">İzle</span></div>
+                <div className="aefes-ind-row"><span className="aefes-ind-name">StocK</span><span className="aefes-ind-val">71.01</span><span className="aefes-ind-signal buy">TEPKİ</span></div>
+                <div className="aefes-ind-row"><span className="aefes-ind-name">StocD</span><span className="aefes-ind-val">62.66</span><span className="aefes-ind-signal buy">YUKARI</span></div>
+                <div className="aefes-ind-row" style={{ borderBottom: "none" }}><span className="aefes-ind-name">Konum</span><span className="aefes-ind-val">Nötr-Yüksek</span><span className="aefes-ind-signal neutral">Teyit Bekler</span></div>
                 <div>
-                  <div className="aefes-progress-label"><span>Aşırı Satım (0)</span><span>62.75</span><span>Aşırı Alım (100)</span></div>
-                  <div className="aefes-progress-bar"><div className="aefes-progress-fill" style={{ width: "62.75%", background: "linear-gradient(90deg,var(--green),var(--warn))" }} /></div>
+                  <div className="aefes-progress-label"><span>Aşırı Satım (0)</span><span>71.01</span><span>Aşırı Alım (100)</span></div>
+                  <div className="aefes-progress-bar"><div className="aefes-progress-fill" style={{ width: "71.01%", background: "linear-gradient(90deg,var(--green),var(--warn))" }} /></div>
                 </div>
-                <p style={{ fontSize: ".8rem", color: "var(--text-dim)" }}>K çizgisi D&apos;nin üzerinde — alış sinyali aktif. Henüz aşırı alım bölgesine ulaşılmadı.</p>
+                <p style={{ fontSize: ".8rem", color: "var(--text-dim)" }}>K çizgisi D&apos;nin üzerinde; kısa vadeli tepki isteği var. Ancak fiyat ana ortalamaların altında kaldığı için bu sinyal tek başına güçlü alım teyidi sayılmaz.</p>
               </div>
             </div>
 
@@ -409,10 +410,10 @@ export default function AefesGrafikAnaliz() {
                 <h3>MACD (26,12) / Trigger (9)</h3>
               </div>
               <div className="aefes-analysis-card-body">
-                <div className="aefes-ind-row"><span className="aefes-ind-name">MACD</span><span className="aefes-ind-val">0.3297</span><span className="aefes-ind-signal buy">POZİTİF</span></div>
-                <div className="aefes-ind-row"><span className="aefes-ind-name">Trigger</span><span className="aefes-ind-val">0.3076</span><span className="aefes-ind-signal buy">AL</span></div>
-                <div className="aefes-ind-row" style={{ borderBottom: "none" }}><span className="aefes-ind-name">Histogram</span><span className="aefes-ind-val">+0.0221</span><span className="aefes-ind-signal neutral">Zayıf</span></div>
-                <p style={{ fontSize: ".8rem", color: "var(--text-dim)" }}>MACD sinyal çizgisinin üzerinde — pozitif momentum devam ediyor. Histogram değeri zayıf; ivme güçlenene kadar dikkatli olunmalı.</p>
+                <div className="aefes-ind-row"><span className="aefes-ind-name">MACD</span><span className="aefes-ind-val">-2.6009</span><span className="aefes-ind-signal sell">NEGATİF</span></div>
+                <div className="aefes-ind-row"><span className="aefes-ind-name">Trigger</span><span className="aefes-ind-val">-2.4017</span><span className="aefes-ind-signal sell">SAT</span></div>
+                <div className="aefes-ind-row" style={{ borderBottom: "none" }}><span className="aefes-ind-name">Momentum</span><span className="aefes-ind-val">Zayıf</span><span className="aefes-ind-signal sell">Baskı</span></div>
+                <p style={{ fontSize: ".8rem", color: "var(--text-dim)" }}>MACD negatif bölgede ve trigger altında. Bu yapı satış baskısının sürdüğünü gösterir. Toparlanmanın güçlenmesi için MACD&apos;nin trigger üzerine geçmesi gerekir.</p>
               </div>
             </div>
 
@@ -423,13 +424,13 @@ export default function AefesGrafikAnaliz() {
                 <h3>RSI (14)</h3>
               </div>
               <div className="aefes-analysis-card-body">
-                <div className="aefes-ind-row"><span className="aefes-ind-name">RSI Değeri</span><span className="aefes-ind-val">57.41</span><span className="aefes-ind-signal neutral">NÖTR</span></div>
-                <div className="aefes-ind-row" style={{ borderBottom: "none" }}><span className="aefes-ind-name">Bölge</span><span className="aefes-ind-val">Nötr-Yüksek</span><span className="aefes-ind-signal buy">Alan Var</span></div>
+                <div className="aefes-ind-row"><span className="aefes-ind-name">RSI Değeri</span><span className="aefes-ind-val">39.49</span><span className="aefes-ind-signal sell">ZAYIF</span></div>
+                <div className="aefes-ind-row" style={{ borderBottom: "none" }}><span className="aefes-ind-name">Bölge</span><span className="aefes-ind-val">Zayıf-Nötr</span><span className="aefes-ind-signal neutral">İzle</span></div>
                 <div>
-                  <div className="aefes-progress-label"><span>30 (A.Satım)</span><span>57.41</span><span>70 (A.Alım)</span></div>
-                  <div className="aefes-progress-bar"><div className="aefes-progress-fill" style={{ width: "57.41%", background: "linear-gradient(90deg,var(--green),var(--accent))" }} /></div>
+                  <div className="aefes-progress-label"><span>30 (A.Satım)</span><span>39.49</span><span>70 (A.Alım)</span></div>
+                  <div className="aefes-progress-bar"><div className="aefes-progress-fill" style={{ width: "39.49%", background: "linear-gradient(90deg,var(--red),var(--warn))" }} /></div>
                 </div>
-                <p style={{ fontSize: ".8rem", color: "var(--text-dim)" }}>60–65 üstü geçiş momentum güçlenmesinin göstergesi olacaktır. Aşırı alım riski şu an düşük.</p>
+                <p style={{ fontSize: ".8rem", color: "var(--text-dim)" }}>RSI 40 seviyesine yakın ve 50 altında. Bu durum zayıf momentumun sürdüğünü gösterir. 50 üzeri dönüş toparlanma açısından ilk olumlu sinyal olur.</p>
               </div>
             </div>
 
@@ -443,8 +444,16 @@ export default function AefesGrafikAnaliz() {
                 <table className="aefes-ma-table">
                   <thead><tr><th>Periyot</th><th>Değer</th><th>Durum</th></tr></thead>
                   <tbody>
-                    {[["MAV 5","20.18"],["MAV 13","19.90"],["MAV 21","19.71"],["MAV 55","19.06"],["MAV 89","18.58"],["MAV 144","18.00"],["MAV 233","17.51"]].map(([p,v]) => (
-                      <tr key={p}><td>{p}</td><td>{v}</td><td className="aefes-above">Fiyat Üstünde ▲</td></tr>
+                    {[
+                      ["MAV 5","65.35","Fiyat Altında ▼","aefes-below"],
+                      ["MAV 13","66.79","Fiyat Altında ▼","aefes-below"],
+                      ["MAV 21","68.39","Fiyat Altında ▼","aefes-below"],
+                      ["MAV 55","71.61","Fiyat Altında ▼","aefes-below"],
+                      ["MAV 89","72.10","Fiyat Altında ▼","aefes-below"],
+                      ["MAV 144","71.07","Fiyat Altında ▼","aefes-below"],
+                      ["MAV 233","68.57","Fiyat Altında ▼","aefes-below"],
+                    ].map(([p,v,durum,cls]) => (
+                      <tr key={p}><td>{p}</td><td>{v}</td><td className={cls}>{durum}</td></tr>
                     ))}
                   </tbody>
                 </table>
@@ -457,12 +466,12 @@ export default function AefesGrafikAnaliz() {
           <div className="aefes-section-title"><span className="aefes-section-num">04</span> Destek &amp; Direnç Seviyeleri</div>
           <div className="aefes-sr-grid">
             {[
-              { type: "res", label: "Güçlü Direnç", price: "22.00–22.50", desc: "Kasım 2025 zirve bölgesi / Çift tepe riski" },
-              { type: "res", label: "Ara Direnç",    price: "21.00–21.50", desc: "Bollinger üst band + psikolojik seviye" },
-              { type: "sup", label: "Anlık Destek",  price: "20.00 TL",   desc: "Psikolojik destek + BOL Orta Band yakını" },
-              { type: "sup", label: "Güçlü Destek",  price: "18.50–19.00",desc: "MAV 55/89 bölgesi + BOL Alt Band" },
-              { type: "sup", label: "Ana Destek",    price: "17.00–17.50",desc: "MAV 144/233 — uzun vadeli ana destek" },
-              { type: "sup", label: "Tarihsel Dip",  price: "13.64 TL",   desc: "Temmuz 2025 — grafik tabanı" },
+              { type: "res", label: "İlk Direnç",     price: "65.35 TL",   desc: "MAV 5 — kısa vadeli ilk toparlanma eşiği" },
+              { type: "res", label: "Ara Direnç",     price: "66.79–68.39",desc: "MAV 13 / MAV 21 bölgesi" },
+              { type: "res", label: "Ana Direnç",     price: "68.94 TL",   desc: "Bollinger orta bandı — görünümü rahatlatacak seviye" },
+              { type: "res", label: "Güçlü Direnç",   price: "71.00–72.10",desc: "MAV 55 / MAV 89 / MAV 144 bölgesi" },
+              { type: "sup", label: "Anlık Destek",   price: "64.40–64.50",desc: "Günlük dip ve kapanış bölgesi" },
+              { type: "sup", label: "Güçlü Destek",   price: "60.20 TL",   desc: "Bollinger alt bandı" },
             ].map((s) => (
               <div className="aefes-sr-cell" key={s.label}>
                 <div className={`aefes-sr-type ${s.type}`}>{s.label}</div>
@@ -475,11 +484,11 @@ export default function AefesGrafikAnaliz() {
           {/* NARRATIVE */}
           <div className="aefes-section-title"><span className="aefes-section-num">05</span> Genel Değerlendirme</div>
           <div className="aefes-narrative">
-            <h3>Kısa Vadeli Görünüm: Nötr-Pozitif</h3>
-            <p>AEFES, Şubat 2026 diplerinden (~17 TL) bu yana güçlü bir toparlanma sergileyerek <strong>tüm hareketli ortalamaların üzerine</strong> çıkmayı başardı. Güncel kapanış olan <strong>20.36 TL</strong>, kısa vadeli (MAV 5/13/21) ve orta vadeli (MAV 55/89) ortalamaların tamamının üzerinde konumlanmaktadır.</p>
-            <p>Bollinger Bantları açısından fiyat, <strong>orta band (19.92) ile üst band (21.13) arasında</strong> bulunuyor. Bu konum boğa bölgesi olarak değerlendirilir ve kısa vadeli yükseliş eğilimini destekler. Üst banda yaklaşıldıkça satış baskısı artabilir.</p>
-            <p>Stochastic (62.75/55.52) ve RSI (57.41) değerleri nötr-yüksek bölgede olup <em>aşırı alım uyarısı vermemekte</em>; bu durum hissenin ek yükseliş için alan barındırdığına işaret etmektedir. MACD pozitif olmakla birlikte histogramın zayıf seyretmesi, <em>momentumun güçlenmesi gerektiğini</em> gösteriyor.</p>
-            <p>En kritik risk faktörü <strong>Kasım 2024 ve Kasım 2025</strong> zirvelerinin oluşturduğu olası çift tepe formasyonudur. 22–22.50 TL bölgesinin kırılamaması durumunda orta vadeli baskı yeniden gündeme gelebilir.</p>
+            <h3>Kısa Vadeli Görünüm: Negatif</h3>
+            <p>AKBNK, 75 TL üzerindeki bölgeden gelen satış baskısıyla geri çekilerek güncel kapanışını <strong>64.50 TL</strong> seviyesinde gerçekleştirdi. Fiyat, MAV 5/13/21 başta olmak üzere orta ve uzun vadeli hareketli ortalamaların da altında konumlanıyor.</p>
+            <p>Bollinger Bantları açısından fiyat, <strong>orta band olan 68.94 TL’nin altında</strong> ve alt banda daha yakın bölgede bulunuyor. Bu görünüm kısa vadeli zayıflığın sürdüğünü gösterir. 68.94 TL üzerine dönüş gelmeden tepki hareketleri sınırlı kalabilir.</p>
+            <p>Stochastic (71.01/62.66) tarafında kısa vadeli tepki isteği görülse de, <em>RSI’ın 39.49 ile zayıf bölgede kalması</em> ve MACD’nin negatif seyrini koruması teknik görünümü baskılıyor.</p>
+            <p>Kritik eşik <strong>64.40–64.50 TL</strong> destek bölgesidir. Bu alan üzerinde tutunma korunursa tepki denemesi gelebilir; altında kapanışlarda <strong>60.20 TL Bollinger alt bandı</strong> takip edilir.</p>
           </div>
 
           {/* SCENARIOS */}
@@ -488,21 +497,21 @@ export default function AefesGrafikAnaliz() {
             <div className="aefes-scenario-card bull">
               <div className="aefes-scenario-head">🟢 Boğa Senaryosu</div>
               <ul>
-                <li>21.13 TL (BOL Üst Band) üstünde güçlü kapanış</li>
-                <li>21.50 TL direncinin hacimle kırılması</li>
-                <li>MACD histogramının pozitif ivme kazanması</li>
-                <li>RSI 65 üstüne taşınması</li>
-                <li>Hedef: 22.00–22.50 TL bölgesi</li>
+                <li>65.35 TL MAV 5 üzerine dönüş</li>
+                <li>66.79–68.39 TL ortalama bölgesinin aşılması</li>
+                <li>68.94 TL Bollinger orta bandı üzerinde kapanış</li>
+                <li>RSI’ın 50 seviyesi üzerine çıkması</li>
+                <li>Hedef: 71.00–72.10 TL direnç bölgesi</li>
               </ul>
             </div>
             <div className="aefes-scenario-card bear">
               <div className="aefes-scenario-head">🔴 Ayı Senaryosu</div>
               <ul>
-                <li>20.00 TL psikolojik desteğinin kırılması</li>
-                <li>BOL Orta Band (19.92) altında kapanış</li>
-                <li>Stochastic&apos;te oluşabilecek ölüm kesişimi</li>
-                <li>Hacim artışıyla 19.00 TL altına gerileme</li>
-                <li>Hedef: 18.50–19.00 TL destek testi</li>
+                <li>64.40 TL günlük dip bölgesi altında kapanış</li>
+                <li>MACD’nin negatif bölgede kalmaya devam etmesi</li>
+                <li>RSI’ın 40 altında zayıf seyrini sürdürmesi</li>
+                <li>Tepki yükselişlerinin 68.94 TL altında kalması</li>
+                <li>Hedef: 60.20 TL Bollinger alt bandı</li>
               </ul>
             </div>
           </div>
@@ -526,8 +535,8 @@ export default function AefesGrafikAnaliz() {
             <div className="aefes-footer-inner">
               <div className="aefes-footer-brand">HOCA İLE BORSA</div>
               <div className="aefes-footer-meta">
-                AEFES Teknik Analiz Raporu<br />
-                Hazırlanma: 05.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
+                AKBNK Teknik Analiz Raporu<br />
+                Hazırlanma: 06.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
               </div>
             </div>
             <div className="aefes-footer-legal">
