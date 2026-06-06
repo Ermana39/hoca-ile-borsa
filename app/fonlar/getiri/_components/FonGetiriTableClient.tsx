@@ -177,7 +177,7 @@ export default function FonGetiriTableClient({ rows }: { rows: FonRow[] }) {
 
   return (
     <>
-      <section className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
+      <section className="rounded-2xl border border-zinc-200 bg-white">
         <div
           ref={tableScrollRef}
           className="overflow-x-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
@@ -186,7 +186,7 @@ export default function FonGetiriTableClient({ rows }: { rows: FonRow[] }) {
             ref={tableRef}
             className="w-full min-w-[1460px] border-collapse text-sm"
           >
-            <thead className="bg-zinc-100 text-zinc-800">
+            <thead className="sticky top-0 z-30 bg-zinc-100 text-zinc-800 shadow-sm">
               <tr>
                 {columns.map((column) => (
                   <th

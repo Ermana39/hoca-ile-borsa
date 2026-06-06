@@ -151,6 +151,7 @@ export default function FonTarihselTableClient({
     window.addEventListener("resize", syncWidths);
 
     let resizeObserver: ResizeObserver | null = null;
+
     if (typeof ResizeObserver !== "undefined") {
       resizeObserver = new ResizeObserver(syncWidths);
       resizeObserver.observe(table);
@@ -178,7 +179,7 @@ export default function FonTarihselTableClient({
 
   return (
     <>
-      <section className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
+      <section className="rounded-2xl border border-zinc-200 bg-white">
         <div
           ref={tableScrollRef}
           className="overflow-x-auto [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
@@ -188,12 +189,12 @@ export default function FonTarihselTableClient({
             className="w-full border-collapse text-sm"
             style={{ minWidth: `${tableMinWidth}px` }}
           >
-            <thead className="bg-zinc-100 text-zinc-800">
+            <thead className="sticky top-0 z-30 bg-zinc-100 text-zinc-800 shadow-sm">
               <tr>
                 {headers.map((header, index) => (
                   <th
                     key={`${header}-${index}`}
-                    className="sticky top-0 z-20 border-b border-zinc-200 bg-zinc-100 px-4 py-4 text-left font-semibold whitespace-nowrap"
+                    className="border-b border-zinc-200 bg-zinc-100 px-4 py-4 text-left font-semibold whitespace-nowrap"
                   >
                     <button
                       type="button"

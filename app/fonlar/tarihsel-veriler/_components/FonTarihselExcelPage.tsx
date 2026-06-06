@@ -27,22 +27,6 @@ type Props = {
   searchParams: SearchParams;
 };
 
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
-  const alanClass =
-    variant === "icerik"
-      ? "min-h-[220px] sm:min-h-[250px] lg:min-h-[280px]"
-      : "min-h-[100px] sm:min-h-[110px] lg:min-h-[120px]";
-
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className={`w-full overflow-hidden rounded-2xl ${alanClass}`}
-    >
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
-
 function normalizeText(value: unknown) {
   return String(value ?? "").replace(/\s+/g, " ").trim();
 }
@@ -222,7 +206,7 @@ export default async function FonTarihselExcelPage({
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
-      <div className="mx-auto max-w-7xl pb-24">
+      <div className="mx-auto max-w-7xl">
         <div className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
@@ -247,10 +231,6 @@ export default async function FonTarihselExcelPage({
         <p className="mb-6 text-sm text-zinc-500">
           Son güncelleme: {guncellemeTarihi}
         </p>
-
-        <section className="mb-6">
-          <ReklamAlani variant="yatay" />
-        </section>
 
         <section className="mb-6 rounded-2xl border border-zinc-200 bg-white p-4">
           <form action={pageBasePath} method="get">
