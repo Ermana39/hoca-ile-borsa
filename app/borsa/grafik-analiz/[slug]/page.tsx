@@ -84,38 +84,12 @@ function AefesPage() {
           font-family:'DM Sans',sans-serif; font-size:15px;
           line-height:1.65; min-height:100vh;
         }
-        .aefes-header {
-          position:sticky; top:0; z-index:100;
-          background:rgba(8,12,16,.92); backdrop-filter:blur(14px);
-          border-bottom:1px solid var(--border);
-          display:flex; align-items:center; justify-content:space-between;
-          padding:0 2rem; height:60px;
-        }
-        .aefes-logo { font-family:'Bebas Neue',sans-serif; font-size:1.5rem; letter-spacing:.12em; color:var(--accent); }
-        .aefes-logo span { color:var(--text-dim); font-size:.85rem; font-family:'DM Sans',sans-serif; letter-spacing:.04em; margin-left:.6rem; vertical-align:middle; }
-        .aefes-header-right { display:flex; align-items:center; gap:1.4rem; }
-        .aefes-live-dot { width:8px; height:8px; border-radius:50%; background:var(--accent); box-shadow:0 0 8px var(--accent); animation:aefes-pulse 2s infinite; }
-        @keyframes aefes-pulse { 0%,100%{opacity:1;transform:scale(1)} 50%{opacity:.5;transform:scale(1.4)} }
-        .aefes-date-badge { font-family:'JetBrains Mono',monospace; font-size:.75rem; color:var(--text-dim); letter-spacing:.06em; }
-        .aefes-hero { padding:3.5rem 2rem 2rem; max-width:1280px; margin:0 auto; display:grid; grid-template-columns:1fr auto; gap:2rem; align-items:end; border-bottom:1px solid var(--border); }
+
+        .aefes-hero { padding:3.5rem 2rem 2rem; max-width:1280px; margin:0 auto; border-bottom:1px solid var(--border); }
         .aefes-hero-label { font-family:'JetBrains Mono',monospace; font-size:.7rem; letter-spacing:.18em; text-transform:uppercase; color:var(--accent); margin-bottom:.6rem; }
         .aefes-hero-title { font-family:'Bebas Neue',sans-serif; font-size:clamp(3rem,7vw,5.5rem); line-height:.95; color:var(--text-bright); letter-spacing:.04em; }
         .aefes-hero-title em { color:var(--accent); font-style:normal; }
         .aefes-hero-sub { margin-top:.9rem; color:var(--text-dim); font-size:.88rem; font-weight:300; max-width:520px; }
-        .aefes-price-block { text-align:right; }
-        .aefes-price-main { font-family:'Bebas Neue',sans-serif; font-size:clamp(2.4rem,5vw,4rem); color:var(--text-bright); letter-spacing:.04em; line-height:1; }
-        .aefes-price-currency { font-size:.55em; color:var(--text-dim); vertical-align:super; }
-        .aefes-price-change { display:inline-flex; align-items:center; gap:.4rem; margin-top:.4rem; background:rgba(255,61,85,.12); border:1px solid rgba(255,61,85,.3); border-radius:4px; padding:.2rem .6rem; font-family:'JetBrains Mono',monospace; font-size:.8rem; color:var(--red); }
-        .aefes-main { max-width:1280px; margin:0 auto; padding:2.5rem 2rem 4rem; }
-        .aefes-stat-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:1px; background:var(--border); border:1px solid var(--border); border-radius:10px; overflow:hidden; margin-bottom:2.5rem; }
-        .aefes-stat-card { background:var(--bg2); padding:1.2rem 1.4rem; display:flex; flex-direction:column; gap:.3rem; transition:background .2s; }
-        .aefes-stat-card:hover { background:var(--bg3); }
-        .aefes-stat-label { font-size:.68rem; text-transform:uppercase; letter-spacing:.12em; color:var(--text-dim); font-family:'JetBrains Mono',monospace; }
-        .aefes-stat-value { font-family:'JetBrains Mono',monospace; font-size:1.35rem; color:var(--text-bright); font-weight:600; }
-        .aefes-stat-value.green { color:var(--green); }
-        .aefes-stat-value.red   { color:var(--red); }
-        .aefes-stat-value.gold  { color:var(--gold); }
-        .aefes-stat-sub { font-size:.72rem; color:var(--text-dim); }
         .aefes-section-title { font-family:'Bebas Neue',sans-serif; font-size:1.6rem; letter-spacing:.08em; color:var(--text-bright); margin-bottom:1.2rem; display:flex; align-items:center; gap:.8rem; }
         .aefes-section-title::after { content:''; flex:1; height:1px; background:linear-gradient(90deg,var(--border),transparent); }
         .aefes-section-num { font-size:.75rem; color:var(--accent); font-family:'JetBrains Mono',monospace; background:rgba(0,229,160,.07); border:1px solid rgba(0,229,160,.2); padding:.1rem .5rem; border-radius:3px; }
@@ -205,9 +179,7 @@ function AefesPage() {
         .aefes-footer-brand { font-family:'Bebas Neue',sans-serif; font-size:1.1rem; letter-spacing:.1em; color:var(--accent); }
         .aefes-footer-meta { font-family:'JetBrains Mono',monospace; font-size:.68rem; color:var(--text-dim); text-align:right; }
         .aefes-footer-legal { margin-top:1rem; font-size:.72rem; color:var(--text-dim); line-height:1.6; border-top:1px solid var(--border); padding-top:1rem; }
-        @media(max-width:900px){ .aefes-hero{grid-template-columns:1fr} .aefes-price-block{text-align:left} }
-        @media(max-width:768px){ .aefes-two-col{grid-template-columns:1fr} }
-        @media(max-width:600px){ .aefes-header{padding:0 1rem} .aefes-hero{padding:2rem 1rem 1.5rem} .aefes-main{padding:1.5rem 1rem 3rem} .aefes-footer{padding:1.2rem 1rem} .aefes-scenario-grid{grid-template-columns:1fr} .aefes-sr-grid{grid-template-columns:1fr} }
+        @media(max-width:600px){ .aefes-hero{padding:2rem 1rem 1.5rem} .aefes-main{padding:1.5rem 1rem 3rem} .aefes-footer{padding:1.2rem 1rem} .aefes-scenario-grid{grid-template-columns:1fr} .aefes-sr-grid{grid-template-columns:1fr} }
       `}</style>
 
       <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -215,14 +187,6 @@ function AefesPage() {
       <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
 
       <div className="aefes-wrap">
-        {/* HEADER */}
-        <header className="aefes-header">
-          <div className="aefes-logo">HOCA İLE<span>BORSA</span></div>
-          <div className="aefes-header-right">
-            <div className="aefes-live-dot" />
-            <div className="aefes-date-badge">05.06.2026 — BIST</div>
-          </div>
-        </header>
 
         {/* HERO */}
         <section className="aefes-hero">
@@ -230,36 +194,12 @@ function AefesPage() {
             <div className="aefes-hero-label">Teknik Analiz Raporu</div>
             <h1 className="aefes-hero-title">ANADOLU<br /><em>EFES</em></h1>
             <p className="aefes-hero-sub">
-              BIST: AEFES &nbsp;·&nbsp; Günlük Periyot &nbsp;·&nbsp; Bollinger Bantları + Çoklu MA &nbsp;·&nbsp; 05 Haziran 2026
+              BIST: AEFES &nbsp;·&nbsp; Günlük Periyot &nbsp;·&nbsp; Bollinger Bantları + Çoklu MA
             </p>
-          </div>
-          <div className="aefes-price-block">
-            <div className="aefes-price-main"><span className="aefes-price-currency">₺</span>20.36</div>
-            <div className="aefes-price-change">▼ −0.30 &nbsp;/&nbsp; −1.4%</div>
           </div>
         </section>
 
         <main className="aefes-main">
-
-          {/* STAT CARDS */}
-          <div className="aefes-stat-grid">
-            {([
-              ["Açılış","20.50","","TL"],
-              ["Yüksek","20.60","green","Günlük zirve"],
-              ["Düşük","19.82","red","Günlük dip"],
-              ["Kapanış","20.36","","Son fiyat"],
-              ["Ağ. Ort.","20.16","gold","VWAP benzeri"],
-              ["Değişim","−1.4%","red","−0.30 TL"],
-              ["Hacim","29.6M","","Adet"],
-              ["RSI (14)","57.41","gold","Nötr bölge"],
-            ] as [string,string,string,string][]).map(([label,value,cls,sub]) => (
-              <div className="aefes-stat-card" key={label}>
-                <div className="aefes-stat-label">{label}</div>
-                <div className={`aefes-stat-value ${cls}`}>{value}</div>
-                <div className="aefes-stat-sub">{sub}</div>
-              </div>
-            ))}
-          </div>
 
           {/* CHART */}
           <div className="aefes-section-title"><span className="aefes-section-num">01</span> Grafik</div>
