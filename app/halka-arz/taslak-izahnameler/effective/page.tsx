@@ -100,23 +100,15 @@ export default function EffectiveInvestYatirimHoldingASPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-slate-50 text-slate-900">
+    <main className="min-h-screen bg-[#f8fafc] text-slate-900">
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        <div className="mb-6 flex flex-wrap gap-3">
-          <Link
-            href="/"
-            className="inline-flex items-center rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 transition hover:bg-zinc-100"
-          >
-            Ana Sayfa
-          </Link>
-
-          <Link
-            href="/halka-arz/taslak-izahnameler"
-            className="inline-flex items-center rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 transition hover:bg-zinc-100"
-          >
-            Geri
-          </Link>
-        </div>
+        <nav className="mb-6 flex items-center gap-2 text-sm text-slate-500" aria-label="Breadcrumb">
+          <Link href="/" className="hover:text-blue-600 transition">Ana Sayfa</Link>
+          <span className="text-slate-300">/</span>
+          <Link href="/halka-arz" className="hover:text-blue-600 transition">Halka Arz</Link>
+          <span className="text-slate-300">/</span>
+          <Link href="/halka-arz/taslak-izahnameler" className="hover:text-blue-600 transition">Taslak İzahnameler</Link>
+        </nav>
 
         <section className="mb-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
           <div className="border-b border-slate-200 bg-gradient-to-r from-indigo-600 to-blue-600 px-6 py-7 text-white">
@@ -161,9 +153,7 @@ export default function EffectiveInvestYatirimHoldingASPage() {
           </div>
         </section>
 
-        <section className="mb-8">
-          <ReklamAlani />
-        </section>
+        
 
         <section className="mb-8">
           <div className="mb-4 flex items-center justify-between">
@@ -406,9 +396,7 @@ export default function EffectiveInvestYatirimHoldingASPage() {
           </aside>
         </section>
 
-        <section className="mt-8">
-          <ReklamAlani variant="buyuk" />
-        </section>
+        
 
         <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <h2 className="mb-3 text-lg font-bold text-slate-900">
