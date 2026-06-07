@@ -28,7 +28,7 @@ const analizler = [
 { baslik: "GUBRF Grafik Analiz", href: "/borsa/grafik-analiz/gubrf" },
 { baslik: "HALKB Grafik Analiz", href: "/borsa/grafik-analiz/halkb" },
 { baslik: "HEKTS Grafik Analiz", href: "/borsa/grafik-analiz/hekts" },
-{ baslik: "ISCTR Grafik Analiz", href: "/borsa/grafik-analiz/ısctr" },
+{ baslik: "ISCTR Grafik Analiz", href: "/borsa/grafik-analiz/isctr" },
 { baslik: "KRDMD Grafik Analiz", href: "/borsa/grafik-analiz/krdmd" },
 { baslik: "KONTR Grafik Analiz", href: "/borsa/grafik-analiz/kontr" },
 { baslik: "KCHOL Grafik Analiz", href: "/borsa/grafik-analiz/kchol" },
@@ -43,6 +43,18 @@ const analizler = [
 { baslik: "SOKM Grafik Analiz", href: "/borsa/grafik-analiz/sokm" },
 { baslik: "TAVHL Grafik Analiz", href: "/borsa/grafik-analiz/tavhl" },
 { baslik: "TCELL Grafik Analiz", href: "/borsa/grafik-analiz/tcell" },
+{ baslik: "THYAO Grafik Analiz", href: "/borsa/grafik-analiz/thyao" },
+{ baslik: "TKFEN Grafik Analiz", href: "/borsa/grafik-analiz/tkfen" },
+{ baslik: "TOASO Grafik Analiz", href: "/borsa/grafik-analiz/toaso" },
+{ baslik: "TSKB Grafik Analiz", href: "/borsa/grafik-analiz/tskb" },
+{ baslik: "TUPRS Grafik Analiz", href: "/borsa/grafik-analiz/tuprs" },
+{ baslik: "TRMET Grafik Analiz", href: "/borsa/grafik-analiz/trmet" },
+{ baslik: "TRALT Grafik Analiz", href: "/borsa/grafik-analiz/tralt" },
+{ baslik: "TTKOM Grafik Analiz", href: "/borsa/grafik-analiz/ttkom" },
+{ baslik: "ULKER Grafik Analiz", href: "/borsa/grafik-analiz/ulker" },
+{ baslik: "VAKBN Grafik Analiz", href: "/borsa/grafik-analiz/vakbn" },
+{ baslik: "VESTL Grafik Analiz", href: "/borsa/grafik-analiz/vestl" },
+{ baslik: "YKBNK Grafik Analiz", href: "/borsa/grafik-analiz/ykbnk" },
 ];
 
 // Alfabetik sırala
