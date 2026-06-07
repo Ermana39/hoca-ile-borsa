@@ -4,7 +4,7 @@ export default function DoholGrafikAnaliz() {
   return (
     <>
       <Head>
-        <title>DOHOL Teknik Analiz — 05.06.2026 | Hoca İle Borsa</title>
+        <title>DOHOL Teknik Analiz — 07.06.2026 | Hoca İle Borsa</title>
         <meta
           name="description"
           content="Doğan Holding (DOHOL) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic indikatörleri ve hareketli ortalamalar ile detaylı değerlendirme."
@@ -535,7 +535,7 @@ export default function DoholGrafikAnaliz() {
               <div className="dohol-footer-brand">HOCA İLE BORSA</div>
               <div className="dohol-footer-meta">
                 DOHOL Teknik Analiz Raporu<br />
-                Hazırlanma: 05.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
+                Hazırlanma: 07.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
               </div>
             </div>
             <div className="dohol-footer-legal">

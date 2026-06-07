@@ -4,7 +4,7 @@ export default function EnkaiGrafikAnaliz() {
   return (
     <>
       <Head>
-        <title>ENKAI Teknik Analiz — 05.06.2026 | Hoca İle Borsa</title>
+        <title>ENKAI Teknik Analiz — 07.06.2026 | Hoca İle Borsa</title>
         <meta name="description" content="Enka İnşaat (ENKAI) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic indikatörleri ile detaylı değerlendirme." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.hocaileborsa.com/borsa/grafik-analiz/enkai" />
@@ -492,7 +492,7 @@ export default function EnkaiGrafikAnaliz() {
               <div className="enkai-footer-brand">HOCA İLE BORSA</div>
               <div className="enkai-footer-meta">
                 ENKAI Teknik Analiz Raporu<br />
-                Hazırlanma: 05.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
+                Hazırlanma: 07.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
               </div>
             </div>
             <div className="enkai-footer-legal">

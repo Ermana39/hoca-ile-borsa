@@ -4,7 +4,7 @@ export default function EkgyoGrafikAnaliz() {
   return (
     <>
       <Head>
-        <title>EKGYO Teknik Analiz — 05.06.2026 | Hoca İle Borsa</title>
+        <title>EKGYO Teknik Analiz — 07.06.2026 | Hoca İle Borsa</title>
         <meta name="description" content="Emlak Konut GYO (EKGYO) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic indikatörleri ile detaylı değerlendirme." />
         <meta name="robots" content="index, follow" />
         <link rel="canonical" href="https://www.hocaileborsa.com/borsa/grafik-analiz/ekgyo" />
@@ -527,7 +527,7 @@ export default function EkgyoGrafikAnaliz() {
               <div className="ekgyo-footer-brand">HOCA İLE BORSA</div>
               <div className="ekgyo-footer-meta">
                 EKGYO Teknik Analiz Raporu<br />
-                Hazırlanma: 05.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
+                Hazırlanma: 07.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
               </div>
             </div>
             <div className="ekgyo-footer-legal">
