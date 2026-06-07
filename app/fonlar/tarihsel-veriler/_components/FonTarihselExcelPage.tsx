@@ -1,5 +1,6 @@
 import fs from "fs/promises";
 import path from "path";
+import { unstable_cache } from "next/cache";
 import Link from "next/link";
 import FonTarihselTableClient from "./FonTarihselTableClient";
 
@@ -106,7 +107,8 @@ function isDateHeader(header: string) {
   return normalizeKey(header).includes("tarih");
 }
 
-async function getJsonData(excelRelativePath: string) {
+const getJsonData = unstable_cache(
+  async (excelRelativePath: string) => {
   const jsonRelativePath = excelRelativePath.replace(/\.xlsx$/i, ".json");
   const filePath = path.join(process.cwd(), jsonRelativePath);
 
@@ -178,7 +180,10 @@ async function getJsonData(excelRelativePath: string) {
     rows,
     guncellemeTarihi,
   };
-}
+  },
+  ["fon-tarihsel-json-data"],
+  { revalidate: 3600 }
+);
 
 export default async function FonTarihselExcelPage({
   title,

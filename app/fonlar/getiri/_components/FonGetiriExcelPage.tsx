@@ -1,5 +1,6 @@
 import fs from "fs/promises";
 import path from "path";
+import { unstable_cache } from "next/cache";
 import Link from "next/link";
 import FonGetiriTableClient, { type FonRow } from "./FonGetiriTableClient";
 
@@ -72,10 +73,11 @@ function getValue(row: JsonRow, column: string, fallbackIndex: number) {
   return values[fallbackIndex] ?? null;
 }
 
-async function getJsonData(excelRelativePath: string): Promise<{
-  rows: FonRow[];
-  guncellemeTarihi: string;
-}> {
+const getJsonData = unstable_cache(
+  async (excelRelativePath: string): Promise<{
+    rows: FonRow[];
+    guncellemeTarihi: string;
+  }> => {
   const jsonRelativePath = excelRelativePath.replace(/\.xlsx$/i, ".json");
   const filePath = path.join(process.cwd(), jsonRelativePath);
 
@@ -150,7 +152,10 @@ async function getJsonData(excelRelativePath: string): Promise<{
     rows: parsedRows,
     guncellemeTarihi,
   };
-}
+  },
+  ["fon-getiri-json-data"],
+  { revalidate: 3600 }
+);
 
 export default async function FonGetiriExcelPage({
   title,
