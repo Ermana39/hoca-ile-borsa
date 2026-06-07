@@ -38,7 +38,6 @@ type PageUpdatesData = {
   pages?: PageUpdateItem[];
 };
 
-const ANA_SAYFA_HABER_LIMIT = 6;
 const SON_GUNCELLEME_LIMIT = 12;
 const SON_GUNCELLEME_HARIC_ROUTES = new Set(["/viop-egitim"]);
 
@@ -273,7 +272,7 @@ function normalizeNewsItems(data: unknown): NewsItem[] {
       (item: NewsItem) =>
         item.id > 0 && item.title.trim() !== "" && item.href.trim() !== ""
     )
-    .sort((a: NewsItem, b: NewsItem) => a.id - b.id);
+    .sort((a: NewsItem, b: NewsItem) => b.id - a.id);
 }
 
 function normalizePath(route: string) {
@@ -676,10 +675,7 @@ function FooterLinkColumn({
 }
 
 export default function HomePage() {
-  const newsItems = normalizeNewsItems(tumHaberler).slice(
-    0,
-    ANA_SAYFA_HABER_LIMIT
-  );
+  const newsItems = normalizeNewsItems(tumHaberler);
   const guncellemeler = getSonGuncellemeler();
 
   return (
