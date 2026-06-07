@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { MevduatHesaplayici } from "@/components/faiz-hesaplayicilar";
-import faizData from "../data/hoca-ile-borsa-faiz-takip-sablonu-guncel.json";
+import { getFaizData } from "@/lib/faiz-data";
 
 export const metadata = {
   title: "Mevduat Faizi Oranları | Hoca İle Borsa",
@@ -146,8 +146,8 @@ function findHeaderRow(rows: unknown[][]) {
   });
 }
 
-function getMevduatSheetRows() {
-  const data = faizData as FaizJsonData;
+async function getMevduatSheetRows() {
+  const data = await getFaizData();
   const sheets = data.sheets || {};
 
   const sheetName =
@@ -158,9 +158,9 @@ function getMevduatSheetRows() {
   return sheetName && sheets[sheetName]?.rawRows ? sheets[sheetName].rawRows! : [];
 }
 
-function getMevduatVerileri() {
+async function getMevduatVerileri() {
   try {
-    const rawRows = getMevduatSheetRows();
+    const rawRows = await getMevduatSheetRows();
 
     const headerRowIndex = findHeaderRow(rawRows);
     if (headerRowIndex === -1) {
@@ -433,8 +433,8 @@ function MevduatGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
   );
 }
 
-export default function MevduatFaiziOranlariPage() {
-  const { bankaListesi, grafikVerisi, hata } = getMevduatVerileri();
+export default async function MevduatFaiziOranlariPage() {
+  const { bankaListesi, grafikVerisi, hata } = await getMevduatVerileri();
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">

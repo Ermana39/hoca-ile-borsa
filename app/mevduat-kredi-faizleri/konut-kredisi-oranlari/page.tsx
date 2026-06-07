@@ -1,6 +1,6 @@
 import Link from "next/link";
 import * as FaizAraclari from "@/components/faiz-hesaplayicilar";
-import faizData from "../data/hoca-ile-borsa-faiz-takip-sablonu-guncel.json";
+import { getFaizData } from "@/lib/faiz-data";
 
 export const metadata = {
   title: "Konut Kredisi Oranları | Hoca İle Borsa",
@@ -146,8 +146,8 @@ function findHeaderRow(rows: unknown[][]) {
   });
 }
 
-function getKonutSheetRows() {
-  const data = faizData as FaizJsonData;
+async function getKonutSheetRows() {
+  const data = await getFaizData();
   const sheets = data.sheets || {};
 
   const sheetName =
@@ -158,9 +158,9 @@ function getKonutSheetRows() {
   return sheetName && sheets[sheetName]?.rawRows ? sheets[sheetName].rawRows! : [];
 }
 
-function getKonutVerileri() {
+async function getKonutVerileri() {
   try {
-    const rawRows = getKonutSheetRows();
+    const rawRows = await getKonutSheetRows();
 
     const headerRowIndex = findHeaderRow(rawRows);
     if (headerRowIndex === -1) {
@@ -460,8 +460,8 @@ function HesaplayiciAlani() {
   return <Comp />;
 }
 
-export default function KonutKredisiOranlariPage() {
-  const { bankaListesi, grafikVerisi, hata } = getKonutVerileri();
+export default async function KonutKredisiOranlariPage() {
+  const { bankaListesi, grafikVerisi, hata } = await getKonutVerileri();
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
