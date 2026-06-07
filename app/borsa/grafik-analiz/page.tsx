@@ -18,6 +18,9 @@ const analizler = [
 { baslik: "BRSAN Grafik Analiz", href: "/borsa/grafik-analiz/brsan" },
 { baslik: "CIMSA Grafik Analiz", href: "/borsa/grafik-analiz/cimsa" },
 { baslik: "DOAS Grafik Analiz", href: "/borsa/grafik-analiz/doas" },
+{ baslik: "DOHOL Grafik Analiz", href: "/borsa/grafik-analiz/dohol" },
+{ baslik: "EKGYO Grafik Analiz", href: "/borsa/grafik-analiz/ekgyo" },
+{ baslik: "ENKAI Grafik Analiz", href: "/borsa/grafik-analiz/enkai" },
 ];
 
 // Alfabetik sırala
