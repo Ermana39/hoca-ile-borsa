@@ -1,6 +1,7 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 
 export const metadata: Metadata = {
   title: "Kontrolmatik’in İki Tahvilinde Kupon Ödemesi Gerçekleşmedi",
@@ -132,6 +133,9 @@ export default function Haber978Page() {
                 borçlanma araçları tarafında dikkat çeken önemli bir gelişme
                 olarak öne çıktı.
               </div>
+              <HaberIlgiliBolumler slug="kontrolmatikin-iki-tahvilinde-kupon-odemesi-gerceklesmedi" baslik="Kontrolmatik’in İki Tahvilinde Kupon Ödemesi Gerçekleşmedi" />
+
+
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">
                 ⚠️ Bu haber bilgilendirme amaçlıdır, yatırım tavsiyesi

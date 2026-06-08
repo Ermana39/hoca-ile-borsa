@@ -1,10 +1,11 @@
-export const metadata = {
+﻿export const metadata = {
   title: "Haziran Ayı Temettü Takvimi | Hoca İle Borsa",
   description: "Haziran ayında temettü veren BIST şirketleri, ödeme tarihleri ve temettü miktarları.",
   alternates: { canonical: "https://www.hocaileborsa.com/temettu/haziran-ayi-temettu-takvimi" },
 };
 
 import Link from "next/link";
+import { IlgiliBolumler } from "@/components/IlgiliBolumler";
 
 const haziranTemettuleri = [
   { sembol: "ZRGYO", tarih: "30 Haziran 2026", verim: "% 0,57", brut: "₺0,09", net: "₺0,0929", toplam: "₺436.271.510", oran: "%6" },
@@ -68,6 +69,14 @@ export default function HaziranAyiTemettuTakvimiPage() {
           Haziran Ayı Temettü Takvimi
         </h1>
 
+        <section className="mb-6 rounded-2xl border border-emerald-200 bg-emerald-50 p-4 text-sm text-emerald-900 md:text-base">
+          <div className="mb-2 font-semibold">Portföyünüzdeki hisseler için temettü gelirinizi hesaplamak ister misiniz?</div>
+          <div className="flex flex-wrap gap-2">
+            <Link href="/temettu/temettu-hesaplama-araci" prefetch={false} className="inline-flex items-center gap-1 rounded-full border border-emerald-300 bg-white px-3 py-1.5 text-xs font-semibold text-emerald-800 transition hover:bg-emerald-100 md:text-sm">Temettü Hesaplama Aracı <span aria-hidden>→</span></Link>
+            <Link href="/temettu/temettu-verimi-hesaplama" prefetch={false} className="inline-flex items-center gap-1 rounded-full border border-emerald-300 bg-white px-3 py-1.5 text-xs font-semibold text-emerald-800 transition hover:bg-emerald-100 md:text-sm">Temettü Verimi Hesaplama <span aria-hidden>→</span></Link>
+          </div>
+        </section>
+
         <div className="overflow-x-auto rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
           <table className="min-w-full overflow-hidden rounded-xl border border-zinc-200 bg-white text-sm">
             <thead className="bg-green-100 text-zinc-700">
@@ -99,6 +108,16 @@ export default function HaziranAyiTemettuTakvimiPage() {
             </tbody>
           </table>
         </div>
+
+        <IlgiliBolumler
+          baslik="İlgili Araçlar"
+          linkler={[
+            { label: "Temettü Hesaplama Aracı", href: "/temettu/temettu-hesaplama-araci", description: "Lot ve brüt temettüye göre net temettü tutarınızı hesaplayın." },
+            { label: "Temettü Verimi Hesaplama", href: "/temettu/temettu-verimi-hesaplama", description: "Hisse fiyatına göre temettü verim oranınızı bulun." },
+            { label: "Tüm Hesaplayıcılar", href: "/hesaplayici", description: "Borsa, mevduat, kredi ve daha fazlası için hesaplama araçları." },
+          ]}
+          className="mt-10"
+        />
 
         <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">

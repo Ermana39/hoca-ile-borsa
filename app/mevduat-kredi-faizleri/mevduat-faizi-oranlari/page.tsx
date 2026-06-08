@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { MevduatHesaplayici, ReelGetiriHesaplayici } from "@/components/faiz-hesaplayicilar";
+import { HesaplaCTA, TabloUstBilgi } from "@/components/IlgiliBolumler";
 import { getFaizData } from "@/lib/faiz-data";
 
 export const metadata = {
@@ -472,6 +473,10 @@ export default async function MevduatFaiziOranlariPage() {
           </section>
         ) : null}
 
+        <TabloUstBilgi>
+          Oranları karşılaştırdıktan sonra aşağıdaki hesaplayıcıyla tahmini maliyetinizi hesaplayabilirsiniz.
+        </TabloUstBilgi>
+
         <section className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[320px] text-sm md:text-base">
@@ -515,11 +520,18 @@ export default async function MevduatFaiziOranlariPage() {
           </div>
         </section>
 
+        <HesaplaCTA
+          href="#hesaplayici"
+          label="Bu oranlarla hesaplama yap"
+          ikinciLabel="Diğer hesaplayıcılar için → Tüm Hesaplayıcılar"
+          ikinciHref="/hesaplayici"
+        />
+
         <section className="mt-8">
           <MevduatGrafik data={grafikVerisi} />
         </section>
 
-        <section className="mt-8">
+        <section id="hesaplayici" className="mt-8 scroll-mt-24">
           <MevduatHesaplayici />
         </section>
 

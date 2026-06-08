@@ -1,6 +1,7 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 
 export const metadata: Metadata = {
   title: "Türk Bankacılığında Tarihi Dönüşüm: 3 Katılım Bankası Birleşiyor, Emlak Katılım Borsaya Geliyor",
@@ -133,6 +134,9 @@ export default function Haber981Page() {
                 Türkiye’nin katılım bankacılığı alanındaki en büyük yapısal
                 dönüşümlerden biri olarak öne çıkıyor.
               </div>
+              <HaberIlgiliBolumler slug="turk-bankaciliginda-tarihi-donusum-3-katilim-bankasi-birlesiyor-emlak-katilim-borsaya-geliyor" baslik="Türk Bankacılığında Tarihi Dönüşüm: 3 Katılım Bankası Birleşiyor, Emlak Katılım Borsaya Geliyor" />
+
+
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">
                 ⚠️ Bu haber bilgilendirme amaçlıdır, yatırım tavsiyesi

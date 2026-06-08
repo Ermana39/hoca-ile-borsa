@@ -1,6 +1,7 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 
 export const metadata: Metadata = {
   title: "05 Haziran 2026 Cuma KAP Bildirimleri Özeti",
@@ -172,6 +173,9 @@ export default function Haber950Page() {
                 haberleri ile KONTR borçlanma araçlarının Gözaltı Pazarı süreci
                 öne çıktı.
               </div>
+              <HaberIlgiliBolumler slug="05-haziran-2026-cuma-kap-bildirimleri-ozeti" baslik="05 Haziran 2026 Cuma KAP Bildirimleri Özeti" />
+
+
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">
                 ⚠️ Bu özet bilgilendirme amaçlıdır, yatırım tavsiyesi değildir.

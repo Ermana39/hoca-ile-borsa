@@ -733,6 +733,47 @@ export default function HomePage() {
         <SonGuncellemelerBar items={guncellemeler} />
 
         <section className="px-4 pb-6 md:px-6">
+          <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_12px_rgba(15,23,42,0.06)]">
+            <div className="flex items-center justify-between border-b border-slate-100 px-5 py-4 md:px-6">
+              <div className="flex items-center gap-3">
+                <div className="h-5 w-1 rounded-full bg-blue-600" />
+                <h2 className="text-base font-bold tracking-tight text-slate-900 md:text-lg">
+                  Sık Kullanılan Araçlar
+                </h2>
+              </div>
+              <Link
+                href="/hesaplayici"
+                prefetch={false}
+                className="text-xs font-semibold text-blue-600 hover:text-blue-800 md:text-sm"
+              >
+                Tüm Araçlar →
+              </Link>
+            </div>
+            <div className="grid grid-cols-2 gap-3 p-4 md:grid-cols-4 md:p-5">
+              {[
+                { label: "Mevduat Faizi Hesapla", href: "/mevduat-kredi-faizleri/mevduat-faizi-oranlari" },
+                { label: "Temettü Hesaplama", href: "/temettu/temettu-hesaplama-araci" },
+                { label: "Hisse Kâr / Zarar", href: "/borsa/kar-zarar-hesaplama" },
+                { label: "Kira Artış Hesapla", href: "/hesaplayici/kira-artis" },
+              ].map((t) => (
+                <Link
+                  key={t.href}
+                  href={t.href}
+                  prefetch={false}
+                  className="group flex flex-col rounded-xl border border-slate-200 bg-slate-50 p-3 transition hover:-translate-y-0.5 hover:border-blue-200 hover:bg-white hover:shadow-sm md:p-4"
+                >
+                  <div className="text-xs font-bold text-slate-900 md:text-sm">{t.label}</div>
+                  <div className="mt-2 flex items-center gap-1 text-[11px] font-semibold text-blue-600 transition group-hover:gap-2 md:text-xs">
+                    <span>Hesapla</span>
+                    <span aria-hidden>→</span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="px-4 pb-6 md:px-6">
           <div className="rounded-2xl border border-zinc-200 bg-white p-5 md:p-7">
             <h2 className="mb-4 text-xl font-bold text-zinc-900 md:text-2xl">
               Hoca İle Borsa Hakkında
@@ -796,7 +837,7 @@ export default function HomePage() {
 
       <footer className="mt-8 bg-slate-950 text-slate-200">
         <div className="mx-auto max-w-7xl px-4 py-12 md:px-6">
-          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2 xl:grid-cols-5">
             <div>
               <h3 className="mb-4 text-xl font-semibold leading-snug text-white">
                 Hoca İle Borsa – Borsa, Halka Arz ve Finans İçerikleri
@@ -834,6 +875,18 @@ export default function HomePage() {
                 { label: "Temettü", href: "/temettu" },
                 { label: "Borsa Analiz", href: "/borsa" },
                 { label: "Faiz Oranları", href: "/mevduat-kredi-faizleri" },
+              ]}
+            />
+
+            <FooterLinkColumn
+              title="Hesaplayıcılar"
+              links={[
+                { label: "Tüm Hesaplayıcılar", href: "/hesaplayici" },
+                { label: "Mevduat Faizi Hesapla", href: "/mevduat-kredi-faizleri/mevduat-faizi-oranlari" },
+                { label: "Konut Kredisi Hesapla", href: "/mevduat-kredi-faizleri/konut-kredisi-oranlari" },
+                { label: "Temettü Hesaplama", href: "/temettu/temettu-hesaplama-araci" },
+                { label: "Hisse Kâr / Zarar", href: "/borsa/kar-zarar-hesaplama" },
+                { label: "Kira Artış Hesapla", href: "/hesaplayici/kira-artis" },
               ]}
             />
 

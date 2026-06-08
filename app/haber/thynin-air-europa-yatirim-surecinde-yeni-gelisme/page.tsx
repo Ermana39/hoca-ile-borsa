@@ -1,6 +1,7 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 
 export const metadata: Metadata = {
   title: "THY’nin Air Europa Yatırım Sürecinde Yeni Gelişme",
@@ -131,6 +132,9 @@ export default function Haber976Page() {
                 önemli aşamalardan biri olarak öne çıktı. Sürecin 2026 yılı
                 içinde sonuçlanması bekleniyor.
               </div>
+              <HaberIlgiliBolumler slug="thynin-air-europa-yatirim-surecinde-yeni-gelisme" baslik="THY’nin Air Europa Yatırım Sürecinde Yeni Gelişme" />
+
+
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">
                 ⚠️ Bu haber bilgilendirme amaçlıdır, yatırım tavsiyesi

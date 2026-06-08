@@ -1,6 +1,7 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 
 export const metadata: Metadata = {
   title: "11 Haziran’da Kritik Karar: Merkez Bankası Faizi Ne Yapacak?",
@@ -137,6 +138,9 @@ export default function Haber980Page() {
                 yatırımcılarının özellikle bankacılık sektörü hisselerindeki
                 tepkiyi yakından takip etmesi bekleniyor.
               </div>
+              <HaberIlgiliBolumler slug="11-haziranda-kritik-karar-merkez-bankasi-faizi-ne-yapacak" baslik="11 Haziran’da Kritik Karar: Merkez Bankası Faizi Ne Yapacak?" />
+
+
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">
                 ⚠️ Bu haber bilgilendirme amaçlıdır, yatırım tavsiyesi

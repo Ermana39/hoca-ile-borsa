@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { IlgiliBolumler } from "@/components/IlgiliBolumler";
 
 const egitimIcerikleri = [
   { title: "Temettü nedir", href: "/temettu/temettu-egitimi/temettu-nedir" },
@@ -69,6 +70,16 @@ export default function TemettuEgitimiPage() {
             </Link>
           ))}
         </div>
+
+        <IlgiliBolumler
+          baslik="Öğrendiklerinizi Hemen Uygulayın"
+          girisMetni="Eğitim içeriklerini okuduktan sonra aşağıdaki hesaplama araçlarıyla portföyünüzü değerlendirebilirsiniz."
+          linkler={[
+            { label: "Temettü Hesaplama Aracı", href: "/temettu/temettu-hesaplama-araci", description: "Lot ve brüt temettüye göre net temettü tutarınızı hesaplayın." },
+            { label: "Temettü Verimi Hesaplama", href: "/temettu/temettu-verimi-hesaplama", description: "Hisse fiyatı ve temettüye göre verim oranınızı bulun." },
+          ]}
+          className="mt-8"
+        />
 
         <section className="mt-8 rounded-2xl bg-zinc-50 p-6">
           <h2 className="mb-3 text-xl font-bold text-zinc-900">

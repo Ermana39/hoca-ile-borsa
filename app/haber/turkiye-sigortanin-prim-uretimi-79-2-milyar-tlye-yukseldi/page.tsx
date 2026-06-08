@@ -1,6 +1,7 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 
 export const metadata: Metadata = {
   title: "Türkiye Sigorta’nın Prim Üretimi 79,2 Milyar TL’ye Yükseldi",
@@ -132,6 +133,9 @@ export default function Haber975Page() {
                 yükselmesi, şirketin faaliyet hacmi ve operasyonel büyüme
                 görünümü açısından öne çıkan önemli gelişmelerden biri oldu.
               </div>
+              <HaberIlgiliBolumler slug="turkiye-sigortanin-prim-uretimi-79-2-milyar-tlye-yukseldi" baslik="Türkiye Sigorta’nın Prim Üretimi 79,2 Milyar TL’ye Yükseldi" />
+
+
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">
                 ⚠️ Bu haber bilgilendirme amaçlıdır, yatırım tavsiyesi

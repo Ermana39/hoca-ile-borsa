@@ -1,6 +1,7 @@
 import Link from "next/link";
 import * as FaizAraclari from "@/components/faiz-hesaplayicilar";
 import { getFaizData } from "@/lib/faiz-data";
+import { HesaplaCTA, TabloUstBilgi } from "@/components/IlgiliBolumler";
 
 export const metadata = {
   title: "Konut Kredisi Oranları | Hoca İle Borsa",
@@ -499,6 +500,10 @@ export default async function KonutKredisiOranlariPage() {
           </section>
         ) : null}
 
+        <TabloUstBilgi>
+          Oranları karşılaştırdıktan sonra aşağıdaki hesaplayıcıyla tahmini maliyetinizi hesaplayabilirsiniz.
+        </TabloUstBilgi>
+
         <section className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
           <div className="overflow-x-auto">
             <table className="w-full min-w-[320px] text-sm md:text-base">
@@ -546,7 +551,9 @@ export default async function KonutKredisiOranlariPage() {
           <KonutGrafik data={grafikVerisi} />
         </section>
 
-        <section className="mt-8">
+        <HesaplaCTA href="#hesaplayici" label="Bu oranlarla hesaplama yap" />
+
+        <section id="hesaplayici" className="mt-8 scroll-mt-24">
           <HesaplayiciAlani />
         </section>
 

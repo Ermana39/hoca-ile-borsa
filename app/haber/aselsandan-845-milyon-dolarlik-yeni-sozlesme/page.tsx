@@ -1,6 +1,7 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 
 export const metadata: Metadata = {
   title: "ASELSAN’dan 845 Milyon Dolarlık Yeni Sözleşme",
@@ -130,6 +131,9 @@ export default function Haber977Page() {
                 tarafındaki iş hacmini destekleyen önemli gelişmelerden biri
                 olarak öne çıktı.
               </div>
+              <HaberIlgiliBolumler slug="aselsandan-845-milyon-dolarlik-yeni-sozlesme" baslik="ASELSAN’dan 845 Milyon Dolarlık Yeni Sözleşme" />
+
+
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">
                 ⚠️ Bu haber bilgilendirme amaçlıdır, yatırım tavsiyesi
