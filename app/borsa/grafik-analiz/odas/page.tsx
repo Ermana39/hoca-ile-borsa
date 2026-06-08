@@ -461,7 +461,7 @@ export default function OdasGrafikAnaliz() {
             <p>ODAS, son kapanışını <strong>7.21 TL</strong> seviyesinde yaparak kısa ve orta vadeli hareketli ortalamaların önemli bölümünün altında kalmıştır. Fiyatın MAV 5, MAV 13, MAV 21 ve MAV 55 altında kalması kısa vadeli teknik görünümde zayıflamaya işaret ediyor.</p>
             <p>Bollinger Bantları açısından fiyat, <strong>7.51 TL orta bandının altında</strong> işlem görüyor. Bu seviye aşılmadıkça yukarı yönlü tepki hareketleri sınırlı kalabilir.</p>
             <p>Stochastic tarafında kısa vadeli tepki isteği görülse de <em>MACD negatif bölgede</em> ve RSI 50 altında kaldığı için momentum henüz güçlü değildir. Bu nedenle 7.28–7.51 TL bandının geri alınması teknik görünüm açısından önemlidir.</p>
-            <p>188.60 TL altı kapanışlarda satış baskısı yeniden artabilir. Bu durumda <strong>6.14–6.75 TL</strong> destek bölgesi takip edilmelidir.</p>
+            <p>7.10 TL altı kapanışlarda satış baskısı yeniden artabilir. Bu durumda <strong>6.14–6.75 TL</strong> destek bölgesi takip edilmelidir.</p>
           </div>
 
           <div className="odas-section-title"><span className="odas-section-num">06</span> Senaryo Analizi</div>
@@ -479,7 +479,7 @@ export default function OdasGrafikAnaliz() {
             <div className="odas-scenario-card bear">
               <div className="odas-scenario-head">🔴 Ayı Senaryosu</div>
               <ul>
-                <li>188.60 TL günlük dip altında kapanış</li>
+                <li>7.10 TL günlük dip altında kapanış</li>
                 <li>RSI’ın 45 altına sarkması</li>
                 <li>MACD’nin negatif bölgede kalmaya devam etmesi</li>
                 <li>6.75 TL Bollinger alt bandına geri çekilme</li>

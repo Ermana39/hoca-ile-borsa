@@ -472,13 +472,13 @@ export default function CcolaGrafikAnaliz() {
                 <li>80.29 TL MAV 13 seviyesinin geri alınması</li>
                 <li>86.62 TL tepe bölgesine yönelim</li>
                 <li>MACD’nin trigger üzerine geçmesi</li>
-                <li>Hedef: 200.00–86.62 TL direnç bölgesi</li>
+                <li>Hedef: 82.19–86.62 TL direnç bölgesi</li>
               </ul>
             </div>
             <div className="ccola-scenario-card bear">
               <div className="ccola-scenario-head">🔴 Ayı Senaryosu</div>
               <ul>
-                <li>188.60 TL günlük dip altında kapanış</li>
+                <li>77.90 TL günlük dip altında kapanış</li>
                 <li>RSI’ın 45 altına sarkması</li>
                 <li>MACD’nin negatif bölgede kalmaya devam etmesi</li>
                 <li>73.59 TL MAV 89 desteğine geri çekilme</li>

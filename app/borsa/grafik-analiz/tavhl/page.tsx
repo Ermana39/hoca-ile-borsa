@@ -461,7 +461,7 @@ export default function TavhlGrafikAnaliz() {
             <p>TAVHL, son kapanışını <strong>257.50 TL</strong> seviyesinde yaparak kısa ve orta vadeli hareketli ortalamaların önemli bölümünün altında kalmıştır. Fiyatın MAV 5, MAV 13, MAV 21 ve MAV 55 altında kalması kısa vadeli teknik görünümde zayıflamaya işaret ediyor.</p>
             <p>Bollinger Bantları açısından fiyat, <strong>265.28 TL orta bandının altında</strong> işlem görüyor. Bu seviye aşılmadıkça yukarı yönlü tepki hareketleri sınırlı kalabilir.</p>
             <p>Stochastic tarafında kısa vadeli tepki isteği görülse de <em>MACD negatif bölgede</em> ve RSI 50 altında kaldığı için momentum henüz güçlü değildir. Bu nedenle 260.11–265.28 TL bandının geri alınması teknik görünüm açısından önemlidir.</p>
-            <p>188.60 TL altı kapanışlarda satış baskısı yeniden artabilir. Bu durumda <strong>283.97–240.51 TL</strong> destek bölgesi takip edilmelidir.</p>
+            <p>257.50 TL altı kapanışlarda satış baskısı yeniden artabilir. Bu durumda <strong>283.97–240.51 TL</strong> destek bölgesi takip edilmelidir.</p>
           </div>
 
           <div className="tavhl-section-title"><span className="tavhl-section-num">06</span> Senaryo Analizi</div>
@@ -479,7 +479,7 @@ export default function TavhlGrafikAnaliz() {
             <div className="tavhl-scenario-card bear">
               <div className="tavhl-scenario-head">🔴 Ayı Senaryosu</div>
               <ul>
-                <li>188.60 TL günlük dip altında kapanış</li>
+                <li>257.50 TL günlük dip altında kapanış</li>
                 <li>RSI’ın 40 altına sarkması</li>
                 <li>MACD’nin negatif bölgede kalmaya devam etmesi</li>
                 <li>250.00 TL psikolojik desteğine geri çekilme</li>

@@ -472,13 +472,13 @@ export default function AnsgrGrafikAnaliz() {
                 <li>28.32 TL MAV 13 seviyesinin geri alınması</li>
                 <li>31.98 TL tepe bölgesine yönelim</li>
                 <li>MACD’nin trigger üzerine geçmesi</li>
-                <li>Hedef: 200.00–31.98 TL direnç bölgesi</li>
+                <li>Hedef: 28.07–31.98 TL direnç bölgesi</li>
               </ul>
             </div>
             <div className="ansgr-scenario-card bear">
               <div className="ansgr-scenario-head">🔴 Ayı Senaryosu</div>
               <ul>
-                <li>188.60 TL günlük dip altında kapanış</li>
+                <li>27.00 TL günlük dip altında kapanış</li>
                 <li>RSI’ın 40 altına sarkması</li>
                 <li>MACD’nin negatif bölgede kalmaya devam etmesi</li>
                 <li>27.00 TL MAV 89 desteğine geri çekilme</li>

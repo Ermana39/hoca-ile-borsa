@@ -461,7 +461,7 @@ export default function PetkmGrafikAnaliz() {
             <p>PETKM, son kapanışını <strong>20.84 TL</strong> seviyesinde yaparak kısa ve orta vadeli hareketli ortalamaların önemli bölümünün altında kalmıştır. Fiyatın MAV 5, MAV 13, MAV 21 ve MAV 55 altında kalması kısa vadeli teknik görünümde zayıflamaya işaret ediyor.</p>
             <p>Bollinger Bantları açısından fiyat, <strong>24.00 TL orta bandının altında</strong> işlem görüyor. Bu seviye aşılmadıkça yukarı yönlü tepki hareketleri sınırlı kalabilir.</p>
             <p>Stochastic tarafında kısa vadeli tepki isteği görülse de <em>MACD negatif bölgede</em> ve RSI 50 altında kaldığı için momentum henüz güçlü değildir. Bu nedenle 21.85–24.00 TL bandının geri alınması teknik görünüm açısından önemlidir.</p>
-            <p>188.60 TL altı kapanışlarda satış baskısı yeniden artabilir. Bu durumda <strong>19.61–20.46 TL</strong> destek bölgesi takip edilmelidir.</p>
+            <p>20.46 TL altı kapanışlarda satış baskısı yeniden artabilir. Bu durumda <strong>19.61–20.46 TL</strong> destek bölgesi takip edilmelidir.</p>
           </div>
 
           <div className="petkm-section-title"><span className="petkm-section-num">06</span> Senaryo Analizi</div>
@@ -479,7 +479,7 @@ export default function PetkmGrafikAnaliz() {
             <div className="petkm-scenario-card bear">
               <div className="petkm-scenario-head">🔴 Ayı Senaryosu</div>
               <ul>
-                <li>188.60 TL günlük dip altında kapanış</li>
+                <li>20.46 TL günlük dip altında kapanış</li>
                 <li>RSI’ın 40 altında kalması</li>
                 <li>MACD’nin negatif bölgede kalmaya devam etmesi</li>
                 <li>20.36 TL MAV 144 desteğine geri çekilme</li>

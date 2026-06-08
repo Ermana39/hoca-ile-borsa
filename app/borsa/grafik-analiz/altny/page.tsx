@@ -472,13 +472,13 @@ export default function AltnyGrafikAnaliz() {
                 <li>16.87 TL MAV 13 seviyesinin geri alınması</li>
                 <li>19.09 TL tepe bölgesine yönelim</li>
                 <li>MACD’nin trigger üzerine geçmesi</li>
-                <li>Hedef: 200.00–19.09 TL direnç bölgesi</li>
+                <li>Hedef: 17.35–19.09 TL direnç bölgesi</li>
               </ul>
             </div>
             <div className="altny-scenario-card bear">
               <div className="altny-scenario-head">🔴 Ayı Senaryosu</div>
               <ul>
-                <li>188.60 TL günlük dip altında kapanış</li>
+                <li>16.36 TL günlük dip altında kapanış</li>
                 <li>RSI’ın 40 altına sarkması</li>
                 <li>MACD’nin negatif bölgede kalmaya devam etmesi</li>
                 <li>16.33 TL MAV 89 desteğine geri çekilme</li>

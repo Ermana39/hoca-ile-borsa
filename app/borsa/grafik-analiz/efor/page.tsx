@@ -472,13 +472,13 @@ export default function EforGrafikAnaliz() {
                 <li>11.66 TL MAV 13 seviyesinin geri alınması</li>
                 <li>13.61 TL tepe bölgesine yönelim</li>
                 <li>MACD’nin trigger üzerine geçmesi</li>
-                <li>Hedef: 200.00–13.61 TL direnç bölgesi</li>
+                <li>Hedef: 14.22–16.74 TL direnç bölgesi</li>
               </ul>
             </div>
             <div className="efor-scenario-card bear">
               <div className="efor-scenario-head">🔴 Ayı Senaryosu</div>
               <ul>
-                <li>188.60 TL günlük dip altında kapanış</li>
+                <li>12.49 TL günlük dip altında kapanış</li>
                 <li>RSI’ın 45 altına sarkması</li>
                 <li>MACD’nin negatif bölgede kalmaya devam etmesi</li>
                 <li>14.22 TL MAV 89 desteğine geri çekilme</li>

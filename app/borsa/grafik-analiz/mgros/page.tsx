@@ -461,7 +461,7 @@ export default function MgrosGrafikAnaliz() {
             <p>MGROS, son kapanışını <strong>662.00 TL</strong> seviyesinde yaparak kısa ve orta vadeli hareketli ortalamaların önemli bölümünün altında kalmıştır. Fiyatın MAV 5, MAV 13, MAV 21 ve MAV 55 altında kalması kısa vadeli teknik görünümde zayıflamaya işaret ediyor.</p>
             <p>Bollinger Bantları açısından fiyat, <strong>675.63 TL orta bandının altında</strong> işlem görüyor. Bu seviye aşılmadıkça yukarı yönlü tepki hareketleri sınırlı kalabilir.</p>
             <p>Stochastic tarafında kısa vadeli tepki isteği görülse de <em>MACD negatif bölgede</em> ve RSI 50 altında kaldığı için momentum henüz güçlü değildir. Bu nedenle 665.74–675.63 TL bandının geri alınması teknik görünüm açısından önemlidir.</p>
-            <p>188.60 TL altı kapanışlarda satış baskısı yeniden artabilir. Bu durumda <strong>575.36–640.86 TL</strong> destek bölgesi takip edilmelidir.</p>
+            <p>656.00 TL altı kapanışlarda satış baskısı yeniden artabilir. Bu durumda <strong>575.36–640.86 TL</strong> destek bölgesi takip edilmelidir.</p>
           </div>
 
           <div className="mgros-section-title"><span className="mgros-section-num">06</span> Senaryo Analizi</div>
@@ -473,7 +473,7 @@ export default function MgrosGrafikAnaliz() {
                 <li>669.10 TL MAV 13 seviyesinin geri alınması</li>
                 <li>675.63 TL Bollinger orta bandı üzerinde kalıcılık</li>
                 <li>MACD’nin trigger üzerine geçmesi</li>
-                <li>Hedef: 200.00–710.41 TL direnç bölgesi</li>
+                <li>Hedef: 666.69–710.41 TL direnç bölgesi</li>
               </ul>
             </div>
             <div className="mgros-scenario-card bear">

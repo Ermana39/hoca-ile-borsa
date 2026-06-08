@@ -472,13 +472,13 @@ export default function EcilcGrafikAnaliz() {
                 <li>86.16 TL MAV 13 seviyesinin geri alınması</li>
                 <li>91.23 TL tepe bölgesine yönelim</li>
                 <li>MACD’nin trigger üzerine geçmesi</li>
-                <li>Hedef: 200.00–91.23 TL direnç bölgesi</li>
+                <li>Hedef: 86.05–94.39 TL direnç bölgesi</li>
               </ul>
             </div>
             <div className="ecilc-scenario-card bear">
               <div className="ecilc-scenario-head">🔴 Ayı Senaryosu</div>
               <ul>
-                <li>188.60 TL günlük dip altında kapanış</li>
+                <li>82.50 TL günlük dip altında kapanış</li>
                 <li>RSI’ın 45 altına sarkması</li>
                 <li>MACD’nin negatif bölgede kalmaya devam etmesi</li>
                 <li>94.39 TL MAV 89 desteğine geri çekilme</li>

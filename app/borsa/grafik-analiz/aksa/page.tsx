@@ -472,13 +472,13 @@ export default function AksaGrafikAnaliz() {
                 <li>10.75 TL MAV 13 seviyesinin geri alınması</li>
                 <li>12.00 TL tepe bölgesine yönelim</li>
                 <li>MACD’nin trigger üzerine geçmesi</li>
-                <li>Hedef: 200.00–12.00 TL direnç bölgesi</li>
+                <li>Hedef: 12.00–12.00 TL direnç bölgesi</li>
               </ul>
             </div>
             <div className="aksa-scenario-card bear">
               <div className="aksa-scenario-head">🔴 Ayı Senaryosu</div>
               <ul>
-                <li>188.60 TL günlük dip altında kapanış</li>
+                <li>10.82 TL günlük dip altında kapanış</li>
                 <li>RSI’ın 50 altına sarkması</li>
                 <li>MACD’nin negatif bölgede kalmaya devam etmesi</li>
                 <li>10.44 TL MAV 89 desteğine geri çekilme</li>

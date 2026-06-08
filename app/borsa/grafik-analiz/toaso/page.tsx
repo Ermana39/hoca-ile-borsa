@@ -461,7 +461,7 @@ export default function ToasoGrafikAnaliz() {
             <p>TOASO, son kapanışını <strong>294.00 TL</strong> seviyesinde yaparak kısa ve orta vadeli hareketli ortalamaların önemli bölümünün altında kalmıştır. Fiyatın MAV 5, MAV 13, MAV 21 ve MAV 55 altında kalması kısa vadeli teknik görünümde zayıflamaya işaret ediyor.</p>
             <p>Bollinger Bantları açısından fiyat, <strong>302.41 TL orta bandının altında</strong> işlem görüyor. Bu seviye aşılmadıkça yukarı yönlü tepki hareketleri sınırlı kalabilir.</p>
             <p>Stochastic tarafında kısa vadeli tepki isteği görülse de <em>MACD negatif bölgede</em> ve RSI 50 altında kaldığı için momentum henüz güçlü değildir. Bu nedenle 296.97–302.41 TL bandının geri alınması teknik görünüm açısından önemlidir.</p>
-            <p>188.60 TL altı kapanışlarda satış baskısı yeniden artabilir. Bu durumda <strong>258.53–282.13 TL</strong> destek bölgesi takip edilmelidir.</p>
+            <p>291.25 TL altı kapanışlarda satış baskısı yeniden artabilir. Bu durumda <strong>258.53–282.13 TL</strong> destek bölgesi takip edilmelidir.</p>
           </div>
 
           <div className="toaso-section-title"><span className="toaso-section-num">06</span> Senaryo Analizi</div>
@@ -479,7 +479,7 @@ export default function ToasoGrafikAnaliz() {
             <div className="toaso-scenario-card bear">
               <div className="toaso-scenario-head">🔴 Ayı Senaryosu</div>
               <ul>
-                <li>188.60 TL günlük dip altında kapanış</li>
+                <li>291.25 TL günlük dip altında kapanış</li>
                 <li>RSI’ın 45 altına sarkması</li>
                 <li>MACD’nin negatif bölgede kalmaya devam etmesi</li>
                 <li>285.99 TL MAV 89 desteğine geri çekilme</li>

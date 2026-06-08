@@ -473,7 +473,7 @@ export default function KcholGrafikAnaliz() {
                 <li>192.66 TL MAV 13 seviyesinin geri alınması</li>
                 <li>197.67 TL Bollinger orta bandı üzerinde kalıcılık</li>
                 <li>MACD’nin trigger üzerine geçmesi</li>
-                <li>Hedef: 200.00–216.09 TL direnç bölgesi</li>
+                <li>Hedef: 194.94–216.09 TL direnç bölgesi</li>
               </ul>
             </div>
             <div className="kchol-scenario-card bear">

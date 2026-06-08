@@ -461,7 +461,7 @@ export default function TtkomGrafikAnaliz() {
             <p>TTKOM, son kapanışını <strong>62.30 TL</strong> seviyesinde yaparak kısa ve orta vadeli hareketli ortalamaların önemli bölümünün altında kalmıştır. Fiyatın MAV 5, MAV 13, MAV 21 ve MAV 55 altında kalması kısa vadeli teknik görünümde zayıflamaya işaret ediyor.</p>
             <p>Bollinger Bantları açısından fiyat, <strong>62.97 TL orta bandının altında</strong> işlem görüyor. Bu seviye aşılmadıkça yukarı yönlü tepki hareketleri sınırlı kalabilir.</p>
             <p>Stochastic tarafında kısa vadeli tepki isteği görülse de <em>MACD negatif bölgede</em> ve RSI 50 altında kaldığı için momentum henüz güçlü değildir. Bu nedenle 62.48–62.97 TL bandının geri alınması teknik görünüm açısından önemlidir.</p>
-            <p>188.60 TL altı kapanışlarda satış baskısı yeniden artabilir. Bu durumda <strong>59.01–58.18 TL</strong> destek bölgesi takip edilmelidir.</p>
+            <p>61.90 TL altı kapanışlarda satış baskısı yeniden artabilir. Bu durumda <strong>59.01–58.18 TL</strong> destek bölgesi takip edilmelidir.</p>
           </div>
 
           <div className="ttkom-section-title"><span className="ttkom-section-num">06</span> Senaryo Analizi</div>
@@ -479,7 +479,7 @@ export default function TtkomGrafikAnaliz() {
             <div className="ttkom-scenario-card bear">
               <div className="ttkom-scenario-head">🔴 Ayı Senaryosu</div>
               <ul>
-                <li>188.60 TL günlük dip altında kapanış</li>
+                <li>61.90 TL günlük dip altında kapanış</li>
                 <li>RSI’ın 45 altına sarkması</li>
                 <li>MACD’nin negatif bölgede kalmaya devam etmesi</li>
                 <li>60.98 TL MAV 144 desteğine geri çekilme</li>
