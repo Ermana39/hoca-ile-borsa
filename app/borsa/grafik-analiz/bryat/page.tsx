@@ -482,7 +482,7 @@ export default function BryatGrafikAnaliz() {
                 <li>RSI’ın 45 altına sarkması</li>
                 <li>MACD’nin negatif bölgede kalmaya devam etmesi</li>
                 <li>2076.54 TL MAV 89 desteğine geri çekilme</li>
-                <li>Hedef: 2076.54–2075.23 TL destek bölgesi</li>
+                <li>Hedef: 1900–1853 TL destek bölgesi</li>
               </ul>
             </div>
           </div>

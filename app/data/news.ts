@@ -64,12 +64,5 @@ export const newsItems: NewsItem[] = [
     alt: "Kontrolmatik Kupon Ödemesi Gerçekleşmedi",
     publishedAt: "2026-06-05",
   },
-  {
-    id: 979,
-    title: "TÜRK-İŞ Mayıs 2026 Açlık ve Yoksulluk Sınırı Araştırması",
-    href: "/haber/turk-is-mayis-2026-aclik-ve-yoksulluk-siniri-arastirmasi",
-    image: "/haber979.png",
-    alt: "TÜRK-İŞ Açlık ve Yoksulluk Sınırı Mayıs 2026",
-    publishedAt: "2026-06-05",
-  },
+  
 ];

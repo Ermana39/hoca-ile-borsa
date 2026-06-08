@@ -482,7 +482,7 @@ export default function GlrmkGrafikAnaliz() {
                 <li>RSI’ın 45 altına sarkması</li>
                 <li>MACD’nin negatif bölgede kalmaya devam etmesi</li>
                 <li>186.15 TL MAV 89 desteğine geri çekilme</li>
-                <li>Hedef: 186.15–182.81 TL destek bölgesi</li>
+                <li>Hedef: 176.69–159.34 TL destek bölgesi</li>
               </ul>
             </div>
           </div>

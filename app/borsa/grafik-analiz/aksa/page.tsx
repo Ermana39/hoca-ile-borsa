@@ -472,7 +472,7 @@ export default function AksaGrafikAnaliz() {
                 <li>10.75 TL MAV 13 seviyesinin geri alınması</li>
                 <li>12.00 TL tepe bölgesine yönelim</li>
                 <li>MACD’nin trigger üzerine geçmesi</li>
-                <li>Hedef: 12.00–12.00 TL direnç bölgesi</li>
+                <li>Hedef: 11.50–12.00 TL direnç bölgesi</li>
               </ul>
             </div>
             <div className="aksa-scenario-card bear">

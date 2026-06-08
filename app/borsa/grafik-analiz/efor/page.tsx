@@ -482,7 +482,7 @@ export default function EforGrafikAnaliz() {
                 <li>RSI’ın 45 altına sarkması</li>
                 <li>MACD’nin negatif bölgede kalmaya devam etmesi</li>
                 <li>14.22 TL MAV 89 desteğine geri çekilme</li>
-                <li>Hedef: 14.22–16.02 TL destek bölgesi</li>
+                <li>Hedef: 11.96–10.30 TL destek bölgesi</li>
               </ul>
             </div>
           </div>

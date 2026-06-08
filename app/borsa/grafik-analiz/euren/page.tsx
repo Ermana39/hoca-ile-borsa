@@ -482,7 +482,7 @@ export default function EurenGrafikAnaliz() {
                 <li>RSI’ın 45 altına sarkması</li>
                 <li>MACD’nin negatif bölgede kalmaya devam etmesi</li>
                 <li>5.25 TL MAV 89 desteğine geri çekilme</li>
-                <li>Hedef: 5.25–5.53 TL destek bölgesi</li>
+                <li>Hedef: 4.59–4.38 TL destek bölgesi</li>
               </ul>
             </div>
           </div>

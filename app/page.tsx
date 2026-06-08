@@ -272,7 +272,16 @@ function normalizeNewsItems(data: unknown): NewsItem[] {
       (item: NewsItem) =>
         item.id > 0 && item.title.trim() !== "" && item.href.trim() !== ""
     )
-    .sort((a: NewsItem, b: NewsItem) => b.id - a.id);
+    .sort((a: NewsItem, b: NewsItem) => {
+      const aTime = new Date(a.publishedAt || "").getTime();
+      const bTime = new Date(b.publishedAt || "").getTime();
+      const aValid = !Number.isNaN(aTime);
+      const bValid = !Number.isNaN(bTime);
+      if (aValid && bValid && bTime !== aTime) return bTime - aTime;
+      if (aValid && !bValid) return -1;
+      if (!aValid && bValid) return 1;
+      return b.id - a.id;
+    });
 }
 
 function normalizePath(route: string) {

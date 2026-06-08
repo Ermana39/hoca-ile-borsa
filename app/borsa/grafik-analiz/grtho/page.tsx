@@ -482,7 +482,7 @@ export default function GrthoGrafikAnaliz() {
                 <li>RSI’ın 45 altına sarkması</li>
                 <li>MACD’nin negatif bölgede kalmaya devam etmesi</li>
                 <li>248.17 TL MAV 89 desteğine geri çekilme</li>
-                <li>Hedef: 248.17–267.93 TL destek bölgesi</li>
+                <li>Hedef: 202.30–190.41 TL destek bölgesi</li>
               </ul>
             </div>
           </div>

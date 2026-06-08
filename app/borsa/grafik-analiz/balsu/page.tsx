@@ -482,7 +482,7 @@ export default function BalsuGrafikAnaliz() {
                 <li>RSI’ın 45 altına sarkması</li>
                 <li>MACD’nin negatif bölgede kalmaya devam etmesi</li>
                 <li>15.11 TL MAV 89 desteğine geri çekilme</li>
-                <li>Hedef: 15.11–15.97 TL destek bölgesi</li>
+                <li>Hedef: 13.90–13.06 TL destek bölgesi</li>
               </ul>
             </div>
           </div>

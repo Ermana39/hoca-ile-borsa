@@ -482,7 +482,7 @@ export default function EcilcGrafikAnaliz() {
                 <li>RSI’ın 45 altına sarkması</li>
                 <li>MACD’nin negatif bölgede kalmaya devam etmesi</li>
                 <li>94.39 TL MAV 89 desteğine geri çekilme</li>
-                <li>Hedef: 94.39–92.52 TL destek bölgesi</li>
+                <li>Hedef: 79.57–75.00 TL destek bölgesi</li>
               </ul>
             </div>
           </div>

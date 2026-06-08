@@ -482,7 +482,7 @@ export default function GenilGrafikAnaliz() {
                 <li>RSI’ın 45 altına sarkması</li>
                 <li>MACD’nin negatif bölgede kalmaya devam etmesi</li>
                 <li>9.49 TL MAV 89 desteğine geri çekilme</li>
-                <li>Hedef: 9.49–9.82 TL destek bölgesi</li>
+                <li>Hedef: 8.00–7.13 TL destek bölgesi</li>
               </ul>
             </div>
           </div>

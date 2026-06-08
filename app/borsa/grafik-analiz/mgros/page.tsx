@@ -443,7 +443,7 @@ export default function MgrosGrafikAnaliz() {
               { type: "res", label: "İlk Direnç", price: "665.74–669.10", desc: "MAV 5 ve MAV 13 bölgesi" },
               { type: "res", label: "Kritik Direnç", price: "666.69–675.63", desc: "MAV 21/55 ve Bollinger orta bandı" },
               { type: "res", label: "Güçlü Direnç", price: "710.41 TL", desc: "Bollinger üst bandı" },
-              { type: "sup", label: "Anlık Destek", price: "188.60–662.00", desc: "Günlük dip ve kapanış bölgesi" },
+              { type: "sup", label: "Anlık Destek", price: "656.00–662.00", desc: "Günlük dip ve kapanış bölgesi" },
               { type: "sup", label: "Ana Destek", price: "575.36–640.86", desc: "MAV 233 ve Bollinger alt bandı" },
               { type: "sup", label: "Derin Destek", price: "575.36–605.44", desc: "Grafikte önceki tepki alanı" },
             ].map((s) => (

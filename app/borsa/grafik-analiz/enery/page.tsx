@@ -482,7 +482,7 @@ export default function EneryGrafikAnaliz() {
                 <li>RSI’ın 45 altına sarkması</li>
                 <li>MACD’nin negatif bölgede kalmaya devam etmesi</li>
                 <li>9.05 TL MAV 89 desteğine geri çekilme</li>
-                <li>Hedef: 9.05–9.04 TL destek bölgesi</li>
+                <li>Hedef: 8.63–8.42 TL destek bölgesi</li>
               </ul>
             </div>
           </div>

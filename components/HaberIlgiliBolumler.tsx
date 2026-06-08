@@ -126,6 +126,21 @@ const ANAHTAR_MAP: { keywords: string[]; links: IlgiliLink[] }[] = [
       { label: "Ortalama Maliyet Hesapla", href: "/borsa/ortalama-maliyet" },
     ],
   },
+  {
+    keywords: ["vbts", "tedbir", "açığa satış", "kredili işlem", "volatilite"],
+    links: [
+      { label: "Borsa Analiz", href: "/borsa" },
+      { label: "Dikkat Çekenler", href: "/borsa/dikkat-cekenler" },
+    ],
+  },
+  {
+    keywords: ["bilanço", "bilanco", "çeyrek", "favök", "net satış", "gelir tablosu", "finansal sonuç"],
+    links: [
+      { label: "Kâr/Zarar Hesaplama", href: "/borsa/kar-zarar-hesaplama" },
+      { label: "Borsa Analiz", href: "/borsa" },
+      { label: "Tüm Hesaplayıcılar", href: "/hesaplayici" },
+    ],
+  },
 ];
 
 const VARSAYILAN: IlgiliLink[] = [
