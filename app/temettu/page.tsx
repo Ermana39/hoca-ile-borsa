@@ -155,6 +155,15 @@ export default function TemettuPage() {
           </div>
         </section>
 
+        <section className="rounded-2xl border border-blue-100 bg-blue-50 p-5">
+          <p className="mb-2 text-sm font-semibold text-zinc-900 md:text-base">Güncel temettü ve sermaye kararlarını takip edin:</p>
+          <div className="flex flex-wrap gap-2">
+            <Link href="/borsa/dikkat-cekenler/bist-temettu-kararlari" prefetch={false} className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-700 hover:bg-blue-50 md:text-sm">10 Şirketten Temettü Kararı <span aria-hidden>→</span></Link>
+            <Link href="/borsa/dikkat-cekenler/derhl-bedelsiz-sermaye-artirimi" prefetch={false} className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-700 hover:bg-blue-50 md:text-sm">DERHL Bedelsiz Sermaye Artırımı <span aria-hidden>→</span></Link>
+            <Link href="/borsa/dikkat-cekenler" prefetch={false} className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-700 hover:bg-blue-50 md:text-sm">Tüm Dikkat Çekenler <span aria-hidden>→</span></Link>
+          </div>
+        </section>
+
         <section className="rounded-2xl bg-white p-5 md:p-7">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">
             Temettü sayfasında neler bulunur?

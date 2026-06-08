@@ -175,6 +175,16 @@ export default function Haber950Page() {
               </div>
               <HaberIlgiliBolumler slug="05-haziran-2026-cuma-kap-bildirimleri-ozeti" baslik="05 Haziran 2026 Cuma KAP Bildirimleri Özeti" />
 
+              <div className="rounded-xl border border-blue-100 bg-blue-50 p-4">
+                <p className="mb-2 text-sm font-semibold text-zinc-900">Bu haberde geçen şirketlerin detaylı analizleri:</p>
+                <div className="flex flex-wrap gap-2">
+                  <Link href="/borsa/dikkat-cekenler/akhan-gana-makarna-ihracati" prefetch={false} className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-700 hover:bg-blue-50">AKHAN Gana İhracatı <span aria-hidden>→</span></Link>
+                  <Link href="/borsa/dikkat-cekenler/cwene-abd-lisans-anlasmasi" prefetch={false} className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-700 hover:bg-blue-50">CWENE ABD Lisans <span aria-hidden>→</span></Link>
+                  <Link href="/borsa/dikkat-cekenler/ebebk-satis-adedi-artisi" prefetch={false} className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-700 hover:bg-blue-50">EBEBK Satış Artışı <span aria-hidden>→</span></Link>
+                  <Link href="/borsa/dikkat-cekenler" prefetch={false} className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-700 hover:bg-blue-50">Tüm Dikkat Çekenler <span aria-hidden>→</span></Link>
+                </div>
+              </div>
+
 
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">

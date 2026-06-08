@@ -135,6 +135,13 @@ export default function Haber975Page() {
               </div>
               <HaberIlgiliBolumler slug="turkiye-sigortanin-prim-uretimi-79-2-milyar-tlye-yukseldi" baslik="Türkiye Sigorta’nın Prim Üretimi 79,2 Milyar TL’ye Yükseldi" />
 
+              <div className="rounded-xl border border-blue-100 bg-blue-50 p-4">
+                <p className="mb-2 text-sm font-semibold text-zinc-900">Sigorta sektöründe dikkat çeken diğer gelişmeler:</p>
+                <Link href="/borsa/dikkat-cekenler/sigorta-prim-uretimi-artisi-agesa-ansgr" prefetch={false} className="inline-flex items-center gap-1 text-sm font-semibold text-blue-700 hover:underline">
+                  AGESA ve ANSGR Prim Üretimi Artışı <span aria-hidden>→</span>
+                </Link>
+              </div>
+
 
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">

@@ -90,6 +90,42 @@ const ANAHTAR_MAP: { keywords: string[]; links: IlgiliLink[] }[] = [
       { label: "Yatırım Geliri Vergi Hesapla", href: "/hesaplayici/gelir-vergisi" },
     ],
   },
+  {
+    keywords: ["sigorta", "prim", "hasar", "poliçe"],
+    links: [
+      { label: "Borsa Analiz", href: "/borsa" },
+      { label: "Kâr/Zarar Hesaplama", href: "/borsa/kar-zarar-hesaplama" },
+      { label: "Tüm Hesaplayıcılar", href: "/hesaplayici" },
+    ],
+  },
+  {
+    keywords: ["ihracat", "ithalat", "gana", "afrika"],
+    links: [
+      { label: "Döviz Bazlı Getiri", href: "/hesaplayici/doviz-getiri" },
+      { label: "Kâr/Zarar Hesaplama", href: "/borsa/kar-zarar-hesaplama" },
+    ],
+  },
+  {
+    keywords: ["enerji", "güneş", "solar", "lisans", "rüzgar"],
+    links: [
+      { label: "Borsa Analiz", href: "/borsa" },
+      { label: "Kâr/Zarar Hesaplama", href: "/borsa/kar-zarar-hesaplama" },
+    ],
+  },
+  {
+    keywords: ["perakende", "mağaza", "e-ticaret", "satış adedi"],
+    links: [
+      { label: "Kâr/Zarar Hesaplama", href: "/borsa/kar-zarar-hesaplama" },
+      { label: "Tüm Hesaplayıcılar", href: "/hesaplayici" },
+    ],
+  },
+  {
+    keywords: ["geri alım", "geri alim", "pay geri"],
+    links: [
+      { label: "Geri Alım Programları", href: "/borsa/geri-alim-programlari" },
+      { label: "Ortalama Maliyet Hesapla", href: "/borsa/ortalama-maliyet" },
+    ],
+  },
 ];
 
 const VARSAYILAN: IlgiliLink[] = [
