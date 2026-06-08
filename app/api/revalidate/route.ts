@@ -8,6 +8,6 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ message: "Yetkisiz" }, { status: 401 });
   }
 
-  revalidatePath("/", "layout");
+  revalidatePath("/", "page");
   return NextResponse.json({ revalidated: true });
 }
