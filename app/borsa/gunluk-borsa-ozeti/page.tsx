@@ -346,7 +346,7 @@ export default function GunlukBorsaOzetiPage() {
   const pozitif = bistVeri.degisimYuzde >= 0;
 
   return (
-    <main className="min-h-screen bg-white px-4 py-6 md:px-6">
+    <main className="min-h-screen bg-white px-4 pb-6 pt-0 md:px-6">
       <div className="mx-auto max-w-7xl">
         <div className="mb-6 flex gap-3">
           <Link
@@ -367,10 +367,6 @@ export default function GunlukBorsaOzetiPage() {
         <h1 className="mb-6 text-3xl font-bold text-zinc-900">
           Günlük Borsa Özeti
         </h1>
-
-        <section className="mb-8">
-          <ReklamAlani variant="yatay" />
-        </section>
 
         <div className="mb-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
           <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
@@ -533,11 +529,7 @@ export default function GunlukBorsaOzetiPage() {
           </div>
         </div>
 
-        <section className="mt-12 mb-8">
-          <ReklamAlani variant="buyuk" />
-        </section>
-
-        <section className="rounded-2xl border border-zinc-200 bg-white p-6">
+        <section className="mt-6 rounded-2xl border border-zinc-200 bg-white p-6">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">
             Günlük Borsa Özeti Hakkında
           </h2>
