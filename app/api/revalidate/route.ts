@@ -9,6 +9,6 @@ export async function POST(request: NextRequest) {
   }
 
   revalidatePath("/", "layout");
-  revalidateTag("haberler");
+  revalidateTag("haberler", "max");
   return NextResponse.json({ revalidated: true });
 }
