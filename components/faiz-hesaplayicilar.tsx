@@ -243,3 +243,104 @@ export function KrediHesaplayici({
     </section>
   );
 }
+
+function yuzdeFormatla(deger: number) {
+  return new Intl.NumberFormat("tr-TR", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(deger);
+}
+
+export function ReelGetiriHesaplayici() {
+  const [nominalOran, setNominalOran] = useState(45);
+  const [enflasyonOrani, setEnflasyonOrani] = useState(35);
+  const [gun, setGun] = useState(32);
+
+  const sonuc = useMemo(() => {
+    const donemNominal = (nominalOran / 100) * (gun / 365);
+    const donemEnflasyon = (enflasyonOrani / 100) * (gun / 365);
+    const reelOranDonemlik =
+      (1 + donemNominal) / (1 + donemEnflasyon) - 1;
+    const reelOranYillik =
+      (1 + nominalOran / 100) / (1 + enflasyonOrani / 100) - 1;
+
+    return {
+      reelOranDonemlik: reelOranDonemlik * 100,
+      reelOranYillik: reelOranYillik * 100,
+    };
+  }, [nominalOran, enflasyonOrani, gun]);
+
+  return (
+    <section className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
+      <div className="mb-5">
+        <h2 className="text-2xl font-bold text-zinc-900">
+          Enflasyona Karşı Reel Getiri Hesaplayıcı
+        </h2>
+        <p className="mt-2 text-sm text-zinc-600">
+          Nominal faiz oranınızı yıllık enflasyon oranına göre Fisher formülü ile
+          karşılaştırarak reel getirinizi hesaplayın.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+        <label className="block">
+          <span className="mb-2 block text-sm font-semibold text-zinc-700">
+            Nominal Faiz Oranı (%)
+          </span>
+          <input
+            type="number"
+            step="0.01"
+            value={nominalOran}
+            onChange={(e) => setNominalOran(Number(e.target.value) || 0)}
+            className="w-full rounded-xl border border-zinc-300 px-4 py-3 text-zinc-900 outline-none focus:border-zinc-500"
+          />
+        </label>
+
+        <label className="block">
+          <span className="mb-2 block text-sm font-semibold text-zinc-700">
+            Yıllık Enflasyon Oranı (%)
+          </span>
+          <input
+            type="number"
+            step="0.01"
+            value={enflasyonOrani}
+            onChange={(e) => setEnflasyonOrani(Number(e.target.value) || 0)}
+            className="w-full rounded-xl border border-zinc-300 px-4 py-3 text-zinc-900 outline-none focus:border-zinc-500"
+          />
+        </label>
+
+        <label className="block">
+          <span className="mb-2 block text-sm font-semibold text-zinc-700">
+            Vade (Gün)
+          </span>
+          <input
+            type="number"
+            value={gun}
+            onChange={(e) => setGun(Number(e.target.value) || 0)}
+            className="w-full rounded-xl border border-zinc-300 px-4 py-3 text-zinc-900 outline-none focus:border-zinc-500"
+          />
+        </label>
+      </div>
+
+      <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+        <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
+          <div className="text-sm text-zinc-500">Vade Süresince Reel Getiri</div>
+          <div className="mt-2 text-2xl font-bold text-zinc-900">
+            %{yuzdeFormatla(sonuc.reelOranDonemlik)}
+          </div>
+        </div>
+
+        <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
+          <div className="text-sm text-zinc-500">Yıllık Reel Getiri Oranı</div>
+          <div className="mt-2 text-2xl font-bold text-zinc-900">
+            %{yuzdeFormatla(sonuc.reelOranYillik)}
+          </div>
+        </div>
+      </div>
+
+      <div className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-4 text-sm text-zinc-600">
+        <div>Bu hesaplama tahmini amaçlıdır. Bu araç yatırım tavsiyesi değildir.</div>
+      </div>
+    </section>
+  );
+}

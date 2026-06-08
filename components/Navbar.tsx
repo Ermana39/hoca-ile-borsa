@@ -10,6 +10,7 @@ const navLinks = [
   { label: "Temettü", href: "/temettu" },
   { label: "Fonlar", href: "/fonlar" },
   { label: "Faiz Oranları", href: "/mevduat-kredi-faizleri" },
+  { label: "Hesaplayıcılar", href: "/hesaplayici" },
   { label: "Haberler", href: "/#haberler" },
 ];
 

@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MevduatHesaplayici } from "@/components/faiz-hesaplayicilar";
+import { MevduatHesaplayici, ReelGetiriHesaplayici } from "@/components/faiz-hesaplayicilar";
 import { getFaizData } from "@/lib/faiz-data";
 
 export const metadata = {
@@ -521,6 +521,10 @@ export default async function MevduatFaiziOranlariPage() {
 
         <section className="mt-8">
           <MevduatHesaplayici />
+        </section>
+
+        <section className="mt-8">
+          <ReelGetiriHesaplayici />
         </section>
 
         <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">

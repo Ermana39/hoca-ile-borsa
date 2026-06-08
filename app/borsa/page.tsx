@@ -114,6 +114,27 @@ const analizKutulari = [
   },
 ];
 
+const hesaplayiciKutulari = [
+  {
+    title: "Kâr / Zarar Hesaplama",
+    href: "/borsa/kar-zarar-hesaplama",
+    description:
+      "Alış-satış fiyatı, lot adedi, komisyon ve stopaj oranlarına göre brüt/net kâr-zarar ve getiri oranınızı hesaplayın.",
+  },
+  {
+    title: "Ortalama Maliyet Hesaplama",
+    href: "/borsa/ortalama-maliyet",
+    description:
+      "Farklı fiyatlardan yaptığınız alımları ekleyerek toplam lot, toplam maliyet ve ağırlıklı ortalama maliyetinizi bulun.",
+  },
+  {
+    title: "Sermaye Artırımı Hesaplama",
+    href: "/borsa/sermaye-artirimi",
+    description:
+      "Bedelli ve bedelsiz sermaye artırımı sonrası kullanım hakkınızı, yeni lot adedinizi ve yeni ortalama maliyetinizi hesaplayın.",
+  },
+];
+
 function AnalizKutusu({
   title,
   href,
@@ -187,6 +208,34 @@ export default function BorsaPage() {
           <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4">
             {analizKutulari.map((item) => (
               <AnalizKutusu key={item.href} {...item} />
+            ))}
+          </div>
+        </section>
+
+        <section className="mb-10">
+          <h2 className="mb-4 text-xl font-bold text-slate-900 md:text-2xl">
+            Borsa Hesaplayıcıları
+          </h2>
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-3">
+            {hesaplayiciKutulari.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                prefetch={false}
+                aria-label={item.title}
+                className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)] md:p-5"
+              >
+                <h3 className="text-base font-bold text-slate-900 md:text-lg">
+                  {item.title}
+                </h3>
+                <p className="mt-2 text-sm leading-6 text-slate-500">
+                  {item.description}
+                </p>
+                <div className="mt-auto pt-3 flex items-center gap-1 text-xs font-semibold text-blue-600 transition duration-300 group-hover:gap-2">
+                  <span>Hesapla</span>
+                  <span>→</span>
+                </div>
+              </Link>
             ))}
           </div>
         </section>
