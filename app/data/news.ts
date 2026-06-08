@@ -9,6 +9,14 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 983,
+    title: "DSTKF, EMPAE ve ZERGY Paylarına VBTS Tedbiri Geldi",
+    href: "/haber/dstkf-empae-zergy-vbts-tedbiri",
+    image: "/tedbirli-hisseler-yatay.png",
+    alt: "DSTKF, EMPAE ve ZERGY Paylarına VBTS Tedbiri",
+    publishedAt: "2026-06-08",
+  },
+  {
     id: 981,
     title: "Türk Bankacılığında Tarihi Dönüşüm: 3 Katılım Bankası Birleşiyor, Emlak Katılım Borsaya Geliyor",
     href: "/haber/turk-bankaciliginda-tarihi-donusum-3-katilim-bankasi-birlesiyor-emlak-katilim-borsaya-geliyor",

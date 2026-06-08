@@ -11,12 +11,6 @@ import Link from "next/link";
 
 const haberler = [
   {
-    title: "DSTKF, EMPAE ve ZERGY Paylarına VBTS Tedbiri Geldi",
-    href: "/borsa/dikkat-cekenler/dstkf-empae-zergy-vbts-tedbiri",
-    tarih: "08.06.2026",
-    etiket: "Tedbir",
-  },
-  {
     title: "Empa Elektronik İlk Çeyrekte Güçlü Büyüme Kaydetti",
     href: "/borsa/dikkat-cekenler/empa-elektronik-ilk-ceyrek-buyume",
     tarih: "08.06.2026",
@@ -80,7 +74,6 @@ const ETIKET_RENK: Record<string, string> = {
   Perakende: "text-rose-700",
   Temettü: "text-emerald-700",
   "Geri Alım": "text-blue-700",
-  Tedbir: "text-red-700",
   Bilanço: "text-indigo-700",
 };
 
