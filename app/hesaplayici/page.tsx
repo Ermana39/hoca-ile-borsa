@@ -1,33 +1,83 @@
 export const metadata = {
-  title: "Hesaplayıcılar | Hoca İle Borsa",
+  title: "Hesaplayıcılar",
   description:
-    "Mevduat, kredi, temettü, borsa kâr/zarar, ortalama maliyet, sermaye artırımı, altın ve döviz getirisi gibi tüm finansal hesaplayıcılara tek sayfadan ulaşın.",
+    "Mevduat, kredi, borsa, temettü, gayrimenkul, emeklilik, vergi, döviz ve altın için tüm finansal hesaplayıcılara tek sayfadan ulaşın.",
   alternates: { canonical: "https://www.hocaileborsa.com/hesaplayici" },
 };
 
 import Link from "next/link";
 
-const hesaplayiciGruplari = [
+type Kutu = { title: string; href: string; description: string };
+type Grup = { baslik: string; kutular: Kutu[] };
+
+const gruplar: Grup[] = [
   {
-    baslik: "Borsa",
+    baslik: "Birikim & Faiz",
     kutular: [
       {
-        title: "Kâr / Zarar Hesaplama",
+        title: "Mevduat Faizi Hesaplayıcı",
+        href: "/mevduat-kredi-faizleri/mevduat-faizi-oranlari",
+        description: "Ana para, faiz oranı, vade ve stopaja göre mevduat getirinizi hesaplayın.",
+      },
+      {
+        title: "Bileşik Faiz / Birikim Simülatörü",
+        href: "/hesaplayici/bilesik-faiz",
+        description: "Düzenli aylık katkıyla bileşik faiz altında birikiminizin yıl bazında gelişimini görün.",
+      },
+      {
+        title: "Enflasyon / Satın Alma Gücü",
+        href: "/hesaplayici/enflasyon",
+        description: "Bir TL tutarın enflasyon karşısında satın alma gücünü ve değer kaybını hesaplayın.",
+      },
+    ],
+  },
+  {
+    baslik: "Kredi",
+    kutular: [
+      {
+        title: "Konut Kredisi Hesaplayıcı",
+        href: "/mevduat-kredi-faizleri/konut-kredisi-oranlari",
+        description: "Konut kredisi taksit ve toplam ödeme tutarınızı hesaplayın.",
+      },
+      {
+        title: "Tüketici Kredisi Hesaplayıcı",
+        href: "/mevduat-kredi-faizleri/tuketici-faizi-oranlari",
+        description: "Tüketici kredisi taksit ve geri ödeme tutarınızı hesaplayın.",
+      },
+      {
+        title: "Taşıt Kredisi Hesaplayıcı",
+        href: "/mevduat-kredi-faizleri/tasit-kredisi-oranlari",
+        description: "Taşıt kredisi taksit ve geri ödeme tutarınızı hesaplayın.",
+      },
+    ],
+  },
+  {
+    baslik: "Borsa & Yatırım",
+    kutular: [
+      {
+        title: "Hisse Kâr / Zarar Hesaplama",
         href: "/borsa/kar-zarar-hesaplama",
-        description:
-          "Alış-satış fiyatı, lot adedi, komisyon ve stopaj oranlarına göre brüt/net kâr-zarar ve getiri oranınızı hesaplayın.",
+        description: "Alış-satış fiyatına, komisyon ve stopaja göre net kâr/zarar ve getiri oranınızı bulun.",
       },
       {
         title: "Ortalama Maliyet Hesaplama",
         href: "/borsa/ortalama-maliyet",
-        description:
-          "Farklı fiyatlardan yaptığınız alımları ekleyerek toplam lot, toplam maliyet ve ağırlıklı ortalama maliyetinizi bulun.",
+        description: "Birden çok alımdan ağırlıklı ortalama hisse maliyetinizi hesaplayın.",
       },
       {
         title: "Sermaye Artırımı Hesaplama",
         href: "/borsa/sermaye-artirimi",
-        description:
-          "Bedelli ve bedelsiz sermaye artırımı sonrası kullanım hakkınızı, yeni lot adedinizi ve yeni ortalama maliyetinizi hesaplayın.",
+        description: "Bedelli ve bedelsiz sermaye artırımı sonrası lot ve maliyetinizi hesaplayın.",
+      },
+      {
+        title: "Eurobond Getiri Hesaplayıcı",
+        href: "/hesaplayici/eurobond",
+        description: "Eurobondun kupon getirisini, YTM ve TL karşılığı kazancını hesaplayın.",
+      },
+      {
+        title: "Tahvil / Bono Getiri Hesaplayıcı",
+        href: "/hesaplayici/tahvil",
+        description: "Tahvil kupon geliri, basit getiri ve vadeye kadar getiriyi (YTM) hesaplayın.",
       },
     ],
   },
@@ -37,69 +87,63 @@ const hesaplayiciGruplari = [
       {
         title: "Temettü Hesaplama Aracı",
         href: "/temettu/temettu-hesaplama-araci",
-        description:
-          "Lot adedi ve lot başına brüt temettüye göre toplam brüt/net temettü tutarınızı hesaplayın.",
+        description: "Lot ve lot başına temettüye göre brüt/net temettü tutarını hesaplayın.",
       },
       {
         title: "Temettü Verimi Hesaplama",
         href: "/temettu/temettu-verimi-hesaplama",
-        description:
-          "Hisse fiyatı ve temettü tutarına göre temettü verim oranınızı hesaplayın.",
+        description: "Hisse fiyatı ve temettüye göre temettü verim oranınızı bulun.",
       },
     ],
   },
   {
-    baslik: "Mevduat & Kredi",
+    baslik: "Gayrimenkul",
     kutular: [
       {
-        title: "Mevduat Faizi Hesaplayıcı",
-        href: "/mevduat-kredi-faizleri/mevduat-faizi-oranlari",
-        description:
-          "Ana para, faiz oranı, vade ve stopaja göre mevduat getirinizi hesaplayın.",
-      },
-      {
-        title: "Enflasyona Karşı Reel Getiri Hesaplayıcı",
-        href: "/mevduat-kredi-faizleri/mevduat-faizi-oranlari",
-        description:
-          "Nominal faiz oranınızı enflasyona göre Fisher formülü ile karşılaştırarak reel getirinizi hesaplayın.",
-      },
-      {
-        title: "Konut Kredisi Hesaplayıcı",
-        href: "/mevduat-kredi-faizleri/konut-kredisi-oranlari",
-        description: "Kredi tutarı, faiz oranı ve vadeye göre taksit ve toplam ödeme tutarınızı hesaplayın.",
-      },
-      {
-        title: "Tüketici Kredisi Hesaplayıcı",
-        href: "/mevduat-kredi-faizleri/tuketici-faizi-oranlari",
-        description: "Tüketici kredisi taksit ve toplam geri ödeme tutarınızı hesaplayın.",
-      },
-      {
-        title: "Taşıt Kredisi Hesaplayıcı",
-        href: "/mevduat-kredi-faizleri/tasit-kredisi-oranlari",
-        description: "Taşıt kredisi taksit ve toplam geri ödeme tutarınızı hesaplayın.",
+        title: "Kira Artış Hesaplayıcı (TÜFE)",
+        href: "/hesaplayici/kira-artis",
+        description: "TÜFE 12 aylık ortalama tavanına veya özel orana göre yeni kira bedelinizi hesaplayın.",
       },
     ],
   },
   {
-    baslik: "Diğer",
+    baslik: "Emeklilik & Vergi",
+    kutular: [
+      {
+        title: "BES Birikim Hesaplayıcı",
+        href: "/hesaplayici/bes",
+        description: "Aylık katkı ve devlet katkısıyla emeklilikteki birikiminizi grafik üzerinde görün.",
+      },
+      {
+        title: "Yatırım Geliri Vergi Hesaplayıcı",
+        href: "/hesaplayici/gelir-vergisi",
+        description: "Faiz, temettü ve menkul kıymet gelirinizin stopaj ve net tutarını hesaplayın.",
+      },
+      {
+        title: "Kıdem Tazminatı Hesaplayıcı",
+        href: "/hesaplayici/kidem-tazminati",
+        description: "Brüt maaş ve çalışma sürenize göre kıdem tazminatınızı tavan dahilinde hesaplayın.",
+      },
+    ],
+  },
+  {
+    baslik: "Döviz & Altın",
     kutular: [
       {
         title: "Altın Hesaplama Aracı",
         href: "/hesaplayici/altin",
-        description:
-          "Gram altın fiyatına göre gram, çeyrek, yarım veya tam altının toplam değerini ve spread farkını hesaplayın.",
+        description: "Gram, çeyrek, yarım veya tam altın için toplam değer ve spread hesaplaması.",
       },
       {
-        title: "Döviz Getirisi Hesaplama",
+        title: "Döviz Bazlı Getiri Hesaplama",
         href: "/hesaplayici/doviz-getiri",
-        description:
-          "TL tutarınızın döviz kuru değişimine göre getirisini ve enflasyona göre reel karşılaştırmasını hesaplayın.",
+        description: "Başlangıç-bitiş kuruna göre TL bazında getirinizi ve enflasyon karşılaştırmasını yapın.",
       },
     ],
   },
 ];
 
-export default function HesaplayiciPage() {
+export default function HesaplayiciHubPage() {
   return (
     <main className="min-h-screen bg-[#f8fafc]">
       <div className="mx-auto max-w-7xl px-4 py-6 md:px-6">
@@ -110,36 +154,28 @@ export default function HesaplayiciPage() {
         </nav>
 
         <section className="mb-6">
-          <h1 className="text-2xl font-bold text-slate-900 md:text-4xl">
-            Hesaplayıcılar
-          </h1>
+          <h1 className="text-2xl font-bold text-slate-900 md:text-4xl">Hesaplayıcılar</h1>
           <p className="mt-3 max-w-4xl text-sm leading-7 text-slate-500 md:text-base">
-            Borsa, temettü, mevduat, kredi, altın ve döviz ile ilgili tüm
-            hesaplama araçlarına bu sayfa üzerinden ulaşabilirsiniz. Tüm
-            hesaplamalar tarayıcınızda, sunucuya istek gönderilmeden yapılır.
+            Borsa, mevduat, kredi, temettü, gayrimenkul, emeklilik, vergi, döviz ve altın için hazırlanmış tüm hesaplama
+            araçlarına bu sayfa üzerinden ulaşabilirsiniz. Tüm hesaplamalar tarayıcınızda yapılır, sunucuya veri
+            gönderilmez.
           </p>
         </section>
 
-        {hesaplayiciGruplari.map((grup) => (
+        {gruplar.map((grup) => (
           <section key={grup.baslik} className="mb-10">
-            <h2 className="mb-4 text-xl font-bold text-slate-900 md:text-2xl">
-              {grup.baslik}
-            </h2>
+            <h2 className="mb-4 text-xl font-bold text-slate-900 md:text-2xl">{grup.baslik}</h2>
             <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
               {grup.kutular.map((item) => (
                 <Link
-                  key={item.title}
+                  key={item.href + item.title}
                   href={item.href}
                   prefetch={false}
                   aria-label={item.title}
                   className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)] md:p-5"
                 >
-                  <h3 className="text-base font-bold text-slate-900 md:text-lg">
-                    {item.title}
-                  </h3>
-                  <p className="mt-2 text-sm leading-6 text-slate-500">
-                    {item.description}
-                  </p>
+                  <h3 className="text-base font-bold text-slate-900 md:text-lg">{item.title}</h3>
+                  <p className="mt-2 text-sm leading-6 text-slate-500">{item.description}</p>
                   <div className="mt-auto pt-3 flex items-center gap-1 text-xs font-semibold text-blue-600 transition duration-300 group-hover:gap-2">
                     <span>Hesapla</span>
                     <span>→</span>
@@ -151,19 +187,14 @@ export default function HesaplayiciPage() {
         ))}
 
         <section className="rounded-2xl bg-white p-5 md:p-7">
-          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
-            Hesaplayıcılar hakkında
-          </h2>
+          <h2 className="mb-4 text-2xl font-bold text-zinc-900">Hesaplayıcılar hakkında</h2>
           <div className="space-y-4 text-sm leading-7 text-zinc-700 md:text-base">
             <p>
-              Bu sayfada borsa yatırımcıları ve tasarruf sahipleri için
-              hazırlanmış kâr/zarar, ortalama maliyet, sermaye artırımı,
-              temettü, mevduat, kredi, altın ve döviz getirisi hesaplama
-              araçlarını bir arada bulabilirsiniz.
+              Bu sayfada borsa yatırımcıları, tasarruf sahipleri ve çalışanlar için hazırlanmış kâr/zarar, ortalama
+              maliyet, temettü, mevduat, kredi, kira, BES, vergi, kıdem tazminatı, altın ve döviz getirisi gibi araçları
+              bir arada bulabilirsiniz.
             </p>
-            <p className="text-zinc-500">
-              Bu araçlar yatırım tavsiyesi değildir.
-            </p>
+            <p className="text-zinc-500">Bu araçlar yatırım tavsiyesi değildir.</p>
           </div>
         </section>
       </div>
