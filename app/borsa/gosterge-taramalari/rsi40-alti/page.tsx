@@ -1,10 +1,10 @@
 import Link from "next/link";
-import rsi30AltiData from "../data/rsi30-alti.json";
+import rs40AltiData from "../data/rsi40-alti.json";
 
 export const metadata = {
-  title: "RSI 30 Altı Hisseler | Hoca İle Borsa",
+  title: "RSI 40 Altı Hisseler | Hoca İle Borsa",
   description:
-    "RSI değeri 30 seviyesinin altında olan Borsa İstanbul hisselerini inceleyin.",
+    "RSI değeri 40 seviyesinin altında olan Borsa İstanbul hisselerini inceleyin.",
 };
 
 export const revalidate = 86400;
@@ -29,13 +29,13 @@ function normalizeText(metin: string) {
 }
 
 function hisseleriOku() {
-  const rows = (rsi30AltiData.rows || []) as JsonRow[];
+  const rows = (rsi40AltiData.rows || []) as JsonRow[];
 
   if (!rows.length) return [];
 
   const columns =
-    Array.isArray(rsi30AltiData.columns) && rsi30AltiData.columns.length > 0
-      ? rsi30AltiData.columns
+    Array.isArray(rsi40AltiData.columns) && rsi40AltiData.columns.length > 0
+      ? rsi40AltiData.columns
       : Object.keys(rows[0] || {});
 
   const sembolKolonu =
@@ -47,7 +47,7 @@ function hisseleriOku() {
     .filter((item) => item && normalizeText(item) !== "sembol");
 }
 
-export default function Rsi30AltiPage() {
+export default function Rsi40AltiPage() {
   const hisseler = hisseleriOku();
 
   return (
@@ -72,11 +72,11 @@ export default function Rsi30AltiPage() {
         </div>
 
         <h1 className="mb-2 text-3xl font-bold text-zinc-900">
-          RSI 30 Altı Hisseler
+          RSI 40 Altı Hisseler
         </h1>
 
         <p className="mb-3 max-w-3xl text-base text-zinc-600">
-          RSI değeri 30 seviyesinin altında olan hisseler
+          RSI değeri 40 seviyesinin altında olan hisseler
         </p>
 
         <div className="mb-8 text-sm font-semibold text-zinc-700 md:text-base">

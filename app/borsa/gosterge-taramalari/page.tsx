@@ -23,11 +23,11 @@ const taramalar = [
     alt: "Düşüş trendinde olan hisseler görseli",
   },
   {
-    title: "RSI 30 Altı",
-    description: "RSI değeri 30 seviyesinin altında olan hisseler",
-    href: "/borsa/gosterge-taramalari/rsi30-alti",
-    image: "/rsi30-tarama.png",
-    alt: "RSI 30 altı hisseler görseli",
+    title: "RSI 40 Altı",
+    description: "RSI değeri 40 seviyesinin altında olan hisseler",
+    href: "/borsa/gosterge-taramalari/rsi40-alti",
+    image: "/rsi40-tarama.png",
+    alt: "RSI 40 altı hisseler görseli",
   },
   {
     title: "RSI 70 Üstü",
