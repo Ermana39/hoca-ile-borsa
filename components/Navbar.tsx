@@ -31,13 +31,13 @@ export default function Navbar() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="Ana navigasyon">
+        <nav className="hidden items-center gap-1.5 lg:flex" aria-label="Ana navigasyon">
           {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               prefetch={false}
-              className="rounded-md px-3 py-2 text-sm font-semibold text-slate-100 transition duration-150 hover:bg-slate-700 hover:text-white"
+              className="rounded-lg border border-slate-600/60 bg-gradient-to-b from-slate-700 to-slate-800 px-4 py-2 text-sm font-semibold text-slate-100 shadow-[0_2px_6px_rgba(0,0,0,0.4),inset_0_1px_0_rgba(255,255,255,0.08)] transition-all duration-150 hover:border-blue-500/70 hover:from-blue-600 hover:to-blue-700 hover:text-white hover:shadow-[0_2px_12px_rgba(59,130,246,0.35),inset_0_1px_0_rgba(255,255,255,0.12)] active:scale-95 active:shadow-none"
             >
               {link.label}
             </Link>

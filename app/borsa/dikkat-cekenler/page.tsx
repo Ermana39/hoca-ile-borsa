@@ -10,6 +10,12 @@ export const metadata = {
 import Link from "next/link";
 
 const haberler = [
+  {
+    title: "ASTOR'dan ABD Pazarında Yeni Hamle: 71,9 Milyon Dolarlık Anlaşma",
+    href: "/borsa/dikkat-cekenler/astor-abd-719-milyon-dolar-anlasma",
+    tarih: "09.06.2026",
+    etiket: "Enerji",
+  },
 
   {
     title: "Sigorta Şirketlerinde Prim Üretimi Artışı – AGESA ve ANSGR",
