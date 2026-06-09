@@ -1,5 +1,5 @@
 import Link from "next/link";
-import rs40AltiData from "../data/rsi40-alti.json";
+import rsi40AltiData from "../data/rsi40-alti.json";
 
 export const metadata = {
   title: "RSI 40 Altı Hisseler | Hoca İle Borsa",
