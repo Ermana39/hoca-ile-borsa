@@ -76,8 +76,9 @@ export async function POST(request: NextRequest) {
       revalidatePath(p);
       revalidated.push(p);
     }
-    revalidateTag("fon-getiri-json-data");
-    revalidateTag("fon-tarihsel-json-data");
+    revalidateTag("fon-getiri-json-data", "max");
+    revalidateTag("fon-tarihsel-json-data", "max");
+
   }
 
   if (scope === "faiz" || scope === "all") {
@@ -85,11 +86,11 @@ export async function POST(request: NextRequest) {
       revalidatePath(p);
       revalidated.push(p);
     }
-    revalidateTag("faiz-takip-json-data");
+    revalidateTag("faiz-takip-json-data", "max");
   }
 
   if (scope === "haberler" || scope === "all") {
-    revalidateTag("haberler");
+    revalidateTag("haberler", "max");
     revalidatePath("/");
     revalidated.push("/");
   }
