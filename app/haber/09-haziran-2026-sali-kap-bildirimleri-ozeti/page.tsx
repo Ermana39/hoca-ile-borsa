@@ -160,17 +160,6 @@ export default function HaberKapOzetiPage() {
               </div>
               <HaberIlgiliBolumler slug="09-haziran-2026-sali-kap-bildirimleri-ozeti" baslik="09 Haziran 2026 Salı KAP Bildirimleri Özeti" />
 
-              <div className="rounded-xl border border-blue-100 bg-blue-50 p-4">
-                <p className="mb-2 text-sm font-semibold text-zinc-900">Bu haberde geçen şirketlerin detaylı analizleri:</p>
-                <div className="flex flex-wrap gap-2">
-                  <Link href="/borsa/dikkat-cekenler/gesan-bosna-hersek-ihalesi" prefetch={false} className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-700 hover:bg-blue-50">GESAN Bosna Hersek İhalesi <span aria-hidden>→</span></Link>
-                  <Link href="/borsa/dikkat-cekenler/forte-milsoft-havelsan-sozlesmesi" prefetch={false} className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-700 hover:bg-blue-50">FORTE Milsoft Sözleşmesi <span aria-hidden>→</span></Link>
-                  <Link href="/borsa/dikkat-cekenler/aksen-depolamali-res-projesi" prefetch={false} className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-700 hover:bg-blue-50">AKSEN Depolamalı RES <span aria-hidden>→</span></Link>
-                  <Link href="/borsa/dikkat-cekenler/kzbgy-marmaris-dava-sureci" prefetch={false} className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-700 hover:bg-blue-50">KZBGY Dava Süreci <span aria-hidden>→</span></Link>
-                  <Link href="/borsa/dikkat-cekenler" prefetch={false} className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-700 hover:bg-blue-50">Tüm Dikkat Çekenler <span aria-hidden>→</span></Link>
-                </div>
-              </div>
-
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">
                 ⚠️ Bu özet bilgilendirme amaçlıdır, yatırım tavsiyesi değildir.
               </div>
