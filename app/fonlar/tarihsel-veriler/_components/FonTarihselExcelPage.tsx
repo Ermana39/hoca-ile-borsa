@@ -182,7 +182,7 @@ const getJsonData = unstable_cache(
   };
   },
   ["fon-tarihsel-json-data"],
-  { revalidate: 3600 }
+  { revalidate: 86400 }
 );
 
 export default async function FonTarihselExcelPage({

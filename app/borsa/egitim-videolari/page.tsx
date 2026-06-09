@@ -73,7 +73,7 @@ async function getVideoMeta(video: VideoItem): Promise<ResolvedVideo> {
     )}&format=json`;
 
     const response = await fetch(oembedUrl, {
-      next: { revalidate: 3600 },
+      next: { revalidate: 86400 },
     });
 
     if (!response.ok) {

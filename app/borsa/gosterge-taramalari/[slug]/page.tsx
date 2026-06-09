@@ -3,7 +3,7 @@ import path from "path";
 import Link from "next/link";
 import * as XLSX from "xlsx";
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {
   const alanClass =

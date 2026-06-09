@@ -8,7 +8,7 @@ import Link from "next/link";
 import Script from "next/script";
 import geriAlimData from "./data/geri-alim.json";
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 type GeriAlimSatiri = {
   sembol: string;

@@ -9,7 +9,7 @@ import type { ReactNode } from "react";
 import { newsItems as tumHaberler } from "@/app/data/news";
 import pageUpdates from "@/lib/page-updates.generated.json";
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 type NewsItem = {
   id: number;

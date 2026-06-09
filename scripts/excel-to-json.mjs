@@ -120,7 +120,39 @@ async function main() {
   }
 }
 
-main().catch((error) => {
-  console.error("Excel JSON dönüşüm hatası:", error);
-  process.exit(1);
-});
+async function triggerRevalidate(scope = "all") {
+  const secret = process.env.REVALIDATE_SECRET;
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
+
+  if (!secret) {
+    console.log("REVALIDATE_SECRET tanımlı değil, ISR tetiklemesi atlandı.");
+    return;
+  }
+
+  try {
+    const res = await fetch(`${baseUrl}/api/revalidate`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        "x-secret": secret,
+      },
+      body: JSON.stringify({ scope }),
+    });
+
+    if (res.ok) {
+      const data = await res.json();
+      console.log(`ISR tetiklendi (scope: ${data.scope}), ${data.paths?.length ?? 0} sayfa yenilendi.`);
+    } else {
+      console.warn(`ISR tetiklemesi başarısız: ${res.status}`);
+    }
+  } catch (err) {
+    console.warn("ISR tetiklemesi sırasında hata:", err.message);
+  }
+}
+
+main()
+  .then(() => triggerRevalidate("all"))
+  .catch((error) => {
+    console.error("Excel JSON dönüşüm hatası:", error);
+    process.exit(1);
+  });

@@ -154,7 +154,7 @@ const getJsonData = unstable_cache(
   };
   },
   ["fon-getiri-json-data"],
-  { revalidate: 3600 }
+  { revalidate: 86400 }
 );
 
 export default async function FonGetiriExcelPage({

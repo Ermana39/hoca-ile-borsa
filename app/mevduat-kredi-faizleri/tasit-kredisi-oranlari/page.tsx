@@ -9,7 +9,7 @@ export const metadata = {
     "Güncel taşıt kredisi faiz oranlarını, banka karşılaştırmalarını ve günlük ortalama faiz grafiğini inceleyin.",
 };
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 type BankaSatiri = {
   banka: string;

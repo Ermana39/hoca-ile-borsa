@@ -31,5 +31,5 @@ export const getFaizData = unstable_cache(
     return JSON.parse(file) as FaizJsonData;
   },
   ["faiz-takip-json-data"],
-  { revalidate: 3600 }
+  { revalidate: 86400 }
 );

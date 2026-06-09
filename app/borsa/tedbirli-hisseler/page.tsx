@@ -8,7 +8,7 @@ export const metadata = {
     "Borsa İstanbul’da tedbir uygulanan hisseleri, başlangıç ve bitiş tarihlerini, brüt takas ve işlem kısıtlarını takip edin.",
 };
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 type TedbirRow = {
   sembol: string;

@@ -10,7 +10,7 @@ import DipZirveTableClient, {
   type DipZirveSatiri,
 } from "./_components/DipZirveTableClient";
 
-export const revalidate = 3600;
+export const revalidate = 86400;
 
 type JsonRow = Record<string, string | number | null>;
 
