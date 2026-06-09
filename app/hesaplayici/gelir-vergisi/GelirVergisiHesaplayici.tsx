@@ -142,6 +142,32 @@ export default function GelirVergisiHesaplayici() {
             </div>
           </>
         )}
+
+        <section className="mt-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Yatırım Geliri Vergi Hesaplaması Nasıl Yapılır?</h2>
+          <p className="mb-3 text-sm leading-7 text-zinc-600">
+            Türkiye&apos;de bireysel yatırımcılar; mevduat faizi, temettü ve menkul kıymet gelirlerinden
+            stopaj adı verilen tevkifat yükümlülüğüne tabidir. Bu araç, farklı yatırım türleri için
+            stopaj oranlarını ve net ele geçen tutarı hesaplar.
+          </p>
+          <p className="text-sm leading-7 text-zinc-600">
+            Stopaj oranları gelir türüne göre değişmektedir: mevduat faizinde vadeye göre %5–15,
+            temettü gelirinde %15, hisse senedi kazancında ise genel olarak sıfırdır.
+          </p>
+        </section>
+        <section className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Sık Sorulan Sorular</h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="mb-1 text-sm font-bold text-zinc-800">Temettü vergisi ne kadardır?</h3>
+              <p className="text-sm leading-6 text-zinc-600">Bireysel yatırımcılar için temettü stopaj oranı %15&apos;tir. Bu oran brüt temettü üzerinden doğrudan kesilir.</p>
+            </div>
+            <div>
+              <h3 className="mb-1 text-sm font-bold text-zinc-800">Mevduat faizi vergisi ne kadardır?</h3>
+              <p className="text-sm leading-6 text-zinc-600">TL mevduat faizinde vadeye göre %5–15 arasında değişen stopaj uygulanmaktadır. Yabancı para mevduatında ise genel oran %18&apos;dir.</p>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );

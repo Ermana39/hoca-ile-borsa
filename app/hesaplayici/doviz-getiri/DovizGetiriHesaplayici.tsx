@@ -208,6 +208,32 @@ export default function DovizGetiriHesaplayici() {
             </div>
           </>
         )}
+
+        <section className="mt-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Döviz Bazlı Getiri Nasıl Hesaplanır?</h2>
+          <p className="mb-3 text-sm leading-7 text-zinc-600">
+            Döviz bazlı getiri hesaplaması; yatırım başlangıcı ve bitişindeki döviz kurlarını kullanarak
+            TL yatırımınızın dolar veya euro bazında gerçek değer değişimini gösterir. Yüksek enflasyon
+            ortamında reel getiriyi değerlendirmek için kritik bir araçtır.
+          </p>
+          <p className="text-sm leading-7 text-zinc-600">
+            Örneğin bir yatırım %100 TL kazanç sağlasa da döviz aynı dönemde %120 değerlenmişse
+            dolar bazında zarar oluşmuş demektir. Bu araç bu tür karşılaştırmaları kolayca yapmanıza olanak tanır.
+          </p>
+        </section>
+        <section className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Sık Sorulan Sorular</h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="mb-1 text-sm font-bold text-zinc-800">Dolar bazlı getiri neden önemlidir?</h3>
+              <p className="text-sm leading-6 text-zinc-600">TL değer kaybettiği dönemlerde nominal TL kazancı yanıltıcı olabilir. Dolar bazlı getiri, yatırımın uluslararası satın alma gücüne göre gerçek performansını gösterir.</p>
+            </div>
+            <div>
+              <h3 className="mb-1 text-sm font-bold text-zinc-800">Reel getiri ile döviz bazlı getiri aynı şey midir?</h3>
+              <p className="text-sm leading-6 text-zinc-600">Hayır. Reel getiri enflasyona karşı kazancı, döviz bazlı getiri ise kur değişimine karşı kazancı ölçer. İkisi birbirini tamamlayan farklı göstergelerdir.</p>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );

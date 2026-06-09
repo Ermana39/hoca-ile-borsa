@@ -101,6 +101,29 @@ export default function Rsi70UstuPage() {
             </div>
           )}
         </section>
+
+        <div className="mt-10 rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50 to-indigo-50 p-6 md:p-8">
+          <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
+            <div>
+              <h2 className="mb-1 text-xl font-bold text-zinc-900">
+                Grafik Analizlerine Göz At
+              </h2>
+              <p className="max-w-xl text-sm text-zinc-600">
+                Hisselerin destek-direnç bölgelerini, trend yapısını ve teknik görünümünü grafik bazlı analizlerle inceleyin.
+              </p>
+            </div>
+            <Link
+              href="/borsa/grafik-analiz"
+              prefetch={false}
+              className="inline-flex shrink-0 items-center gap-2 rounded-xl bg-blue-600 px-6 py-3 text-sm font-semibold text-white shadow-md transition hover:bg-blue-700 active:scale-95"
+            >
+              Grafik Analizleri İncele
+              <svg className="h-4 w-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7" />
+              </svg>
+            </Link>
+          </div>
+        </div>
       </div>
     </main>
   );

@@ -164,6 +164,33 @@ export default function TahvilHesaplayici() {
             </div>
           </>
         )}
+
+        <section className="mt-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Tahvil Getiri Hesaplaması Nasıl Yapılır?</h2>
+          <p className="mb-3 text-sm leading-7 text-zinc-600">
+            Tahvil hesaplama aracı; nominal değer, kupon oranı, vade süresi ve alış fiyatı bilgileri
+            girilerek yıllık kupon geliri, basit getiri ve vadeye kadar getiri (YTM) hesaplamak için
+            kullanılır. Devlet iç borçlanma senetleri ve özel sektör tahvilleri için kullanılabilir.
+          </p>
+          <p className="text-sm leading-7 text-zinc-600">
+            Devlet İç Borçlanma Senetleri (DİBS) Hazine tarafından ihraç edilir ve sabit veya değişken
+            faizli olabilir. TL cinsinden tahvil faizleri stopaja tabi iken eurobond faiz gelirleri
+            stopajdan muaftır.
+          </p>
+        </section>
+        <section className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Sık Sorulan Sorular</h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="mb-1 text-sm font-bold text-zinc-800">Tahvil ile bono arasındaki fark nedir?</h3>
+              <p className="text-sm leading-6 text-zinc-600">Vadesi 1 yıldan kısa olan devlet borçlanma araçlarına bono, 1 yıldan uzun olanlara tahvil denir. Her ikisi de sabit getirili menkul kıymet grubundadır.</p>
+            </div>
+            <div>
+              <h3 className="mb-1 text-sm font-bold text-zinc-800">Tahvil faizi vergiye tabi midir?</h3>
+              <p className="text-sm leading-6 text-zinc-600">TL cinsinden devlet tahvili faiz gelirinde %10 stopaj uygulanır. Eurobond faiz geliri ise stopajdan muaftır.</p>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );

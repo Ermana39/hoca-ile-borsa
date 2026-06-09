@@ -231,6 +231,32 @@ export default function SermayeArtirimiHesaplayici() {
             </div>
           </>
         )}
+
+        <section className="mt-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Sermaye Artırımı Hesaplaması Nasıl Yapılır?</h2>
+          <p className="mb-3 text-sm leading-7 text-zinc-600">
+            Sermaye artırımı hesaplama aracı; mevcut lot adedi, bedelsiz ve bedelli oran bilgilerini
+            kullanarak yeni hisse adedini, bedelli kullanım hakkı maliyetini ve yeni ortalama maliyeti
+            hesaplar. Hem bedelli hem bedelsiz, hem de karma sermaye artırımları için kullanılabilir.
+          </p>
+          <p className="text-sm leading-7 text-zinc-600">
+            Bedelsiz sermaye artırımı iç kaynaklardan gerçekleştirilir ve yatırımcıdan ek ödeme talep
+            edilmez. Bedelli artırımda ise yatırımcı belirlenen fiyat üzerinden yeni hisse almaya davet edilir.
+          </p>
+        </section>
+        <section className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Sık Sorulan Sorular</h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="mb-1 text-sm font-bold text-zinc-800">Bedelsiz sermaye artırımı nedir?</h3>
+              <p className="text-sm leading-6 text-zinc-600">Şirketin yedek akçe veya dağıtılmamış kârını sermayeye aktararak bedava hisse dağıtmasıdır. Yatırımcı ek ödeme yapmaz.</p>
+            </div>
+            <div>
+              <h3 className="mb-1 text-sm font-bold text-zinc-800">Sermaye artırımı hisse fiyatını etkiler mi?</h3>
+              <p className="text-sm leading-6 text-zinc-600">Evet. Bedelsiz artırımda hisse sayısı artarken toplam piyasa değeri değişmez; bu nedenle fiyat teorik olarak oranında düşer.</p>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );

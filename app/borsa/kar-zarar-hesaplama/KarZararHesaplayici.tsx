@@ -229,6 +229,32 @@ export default function KarZararHesaplayici() {
             </div>
           </>
         )}
+
+        <section className="mt-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Hisse Kâr/Zarar Hesaplaması Nasıl Yapılır?</h2>
+          <p className="mb-3 text-sm leading-7 text-zinc-600">
+            Hisse senedi kâr-zarar hesaplama aracı; alış fiyatı, satış fiyatı, lot adedi, komisyon
+            ve stopaj oranları girilerek brüt ve net kâr-zarar tutarını ve getiri yüzdesini hesaplar.
+            BIST&apos;te işlem yapan bireysel yatırımcılar için tasarlanmıştır.
+          </p>
+          <p className="text-sm leading-7 text-zinc-600">
+            Türkiye&apos;de bireysel yatırımcılar için hisse senedi alım-satım kazancı stopajdan muaftır.
+            Komisyon oranları aracı kurumlara göre değişmektedir.
+          </p>
+        </section>
+        <section className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Sık Sorulan Sorular</h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="mb-1 text-sm font-bold text-zinc-800">BIST işlemlerinde komisyon oranı nedir?</h3>
+              <p className="text-sm leading-6 text-zinc-600">Komisyon oranları aracı kurumlara göre değişmekle birlikte genellikle alış ve satış işlemlerinin her biri için %0,01 ile %0,1 arasında değişir.</p>
+            </div>
+            <div>
+              <h3 className="mb-1 text-sm font-bold text-zinc-800">Hisse senedi kazancından stopaj kesilir mi?</h3>
+              <p className="text-sm leading-6 text-zinc-600">Bireysel yatırımcılar için BIST&apos;te işlem gören hisse senetlerinden elde edilen alım-satım kazancı stopajdan muaftır. Temettü gelirleri ise %15 stopaja tabidir.</p>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );

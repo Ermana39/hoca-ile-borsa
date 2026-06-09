@@ -190,6 +190,32 @@ export default function OrtalamaMaliyetHesaplayici() {
             </div>
           </>
         )}
+
+        <section className="mt-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Ortalama Maliyet Hesaplaması Nasıl Yapılır?</h2>
+          <p className="mb-3 text-sm leading-7 text-zinc-600">
+            Ortalama maliyet hesaplama aracı, farklı fiyat seviyelerinden yapılan birden fazla alım
+            için ağırlıklı ortalama maliyeti hesaplar. Düşüşlerde alım yaparak ortalama düşürme veya
+            yükselişlerde ekleyerek piramitleme stratejilerinde kullanışlıdır.
+          </p>
+          <p className="text-sm leading-7 text-zinc-600">
+            Ağırlıklı ortalama maliyet; her alımın toplam tutarının toplam lot sayısına bölünmesiyle
+            bulunur. Bu değer, hissenin hangi fiyatın üzerinde kâra geçeceğini gösterir.
+          </p>
+        </section>
+        <section className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Sık Sorulan Sorular</h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="mb-1 text-sm font-bold text-zinc-800">Ortalama maliyet düşürme nedir?</h3>
+              <p className="text-sm leading-6 text-zinc-600">Daha önce yüksek fiyattan aldığınız bir hisseyi düşüş sonrası daha düşük fiyattan tekrar alarak ortalama alış maliyetinizi aşağı çekme stratejisidir.</p>
+            </div>
+            <div>
+              <h3 className="mb-1 text-sm font-bold text-zinc-800">Kaç farklı alım için hesaplama yapılabilir?</h3>
+              <p className="text-sm leading-6 text-zinc-600">İstediğiniz kadar farklı fiyat-lot çifti girerek toplam ortalama maliyetinizi hesaplayabilirsiniz.</p>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );

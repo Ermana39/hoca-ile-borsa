@@ -166,6 +166,32 @@ export default function EurobondHesaplayici() {
             </div>
           </>
         )}
+
+        <section className="mt-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Eurobond Getiri Hesaplaması Nasıl Yapılır?</h2>
+          <p className="mb-3 text-sm leading-7 text-zinc-600">
+            Eurobond hesaplaması; alış fiyatı, kupon oranı, vade ve USD/TL kuru girilerek yıllık
+            kupon geliri, vadeye kadar getiri (YTM) ve TL karşılığı toplam kazancı hesaplar.
+            Türkiye eurobondları genellikle USD veya EUR cinsinden ihraç edilmektedir.
+          </p>
+          <p className="text-sm leading-7 text-zinc-600">
+            Eurobond faiz geliri Türkiye&apos;de stopajdan muaftır. Ancak satış kazancı yıllık gelir
+            vergisi beyannamesinde beyan edilmesi gereken bir unsurdur.
+          </p>
+        </section>
+        <section className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Sık Sorulan Sorular</h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="mb-1 text-sm font-bold text-zinc-800">Eurobond nedir?</h3>
+              <p className="text-sm leading-6 text-zinc-600">Devletler veya şirketler tarafından yabancı para biriminde (genellikle USD veya EUR) ihraç edilen uzun vadeli borçlanma araçlarıdır.</p>
+            </div>
+            <div>
+              <h3 className="mb-1 text-sm font-bold text-zinc-800">YTM (Vadeye Kadar Getiri) nedir?</h3>
+              <p className="text-sm leading-6 text-zinc-600">Tahvili bugünkü fiyattan alıp vadeye kadar tutmanız durumunda elde edeceğiniz yıllık bileşik getiridir.</p>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );

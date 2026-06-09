@@ -131,6 +131,32 @@ export default function KidemTazminatiHesaplayici() {
             </div>
           </>
         )}
+
+        <section className="mt-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Kıdem Tazminatı Nasıl Hesaplanır?</h2>
+          <p className="mb-3 text-sm leading-7 text-zinc-600">
+            Kıdem tazminatı, bir işyerinde en az 1 yıl çalışan ve belirli koşullarla işten ayrılan
+            çalışanlara ödenen bir haktır. Her tam çalışma yılı için 30 günlük brüt maaş tutarında
+            kıdem tazminatı ödenir; hesaplanan tutar yasal tavanı aşamaz.
+          </p>
+          <p className="text-sm leading-7 text-zinc-600">
+            Kıdem tazminatı tavanı her yıl güncellenmektedir. Hesaplama sonucuna damga vergisi
+            düşüm tutarı da ayrıca gösterilir.
+          </p>
+        </section>
+        <section className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Sık Sorulan Sorular</h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="mb-1 text-sm font-bold text-zinc-800">Kıdem tazminatına hak kazanmanın koşulları nelerdir?</h3>
+              <p className="text-sm leading-6 text-zinc-600">En az 1 yıl çalışmış olmak ve haksız fesih, emeklilik, askerlik veya evlilik nedeniyle ayrılmak gibi koşullarda kıdem tazminatına hak kazanılır.</p>
+            </div>
+            <div>
+              <h3 className="mb-1 text-sm font-bold text-zinc-800">Kıdem tazminatı tavanı nedir?</h3>
+              <p className="text-sm leading-6 text-zinc-600">Her yıl güncellenen yasal bir üst sınırdır. Hesaplanan aylık esas bu tavanı aşamaz; aşması durumunda tavan tutarı esas alınır.</p>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );

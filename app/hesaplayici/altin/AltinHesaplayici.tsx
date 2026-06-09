@@ -204,6 +204,33 @@ export default function AltinHesaplayici() {
             </div>
           </>
         )}
+
+        <section className="mt-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Altın Hesaplama Nasıl Yapılır?</h2>
+          <p className="mb-3 text-sm leading-7 text-zinc-600">
+            Altın hesaplama aracımızla gram, çeyrek, yarım veya tam altının güncel gram fiyatına
+            göre toplam TL değerini hesaplayabilirsiniz. Çeyrek altın 1,75 gram, yarım altın 3,5 gram,
+            tam altın ise yaklaşık 7 gram olarak kabul edilir.
+          </p>
+          <p className="text-sm leading-7 text-zinc-600">
+            Hesaplamada kullanılan alış-satış spread&apos;i kuyumcu veya banka gibi alım-satım yapılan
+            platforma göre değişebilir. Gram altın fiyatı anlık olarak BIST Kıymetli Madenler ve
+            uluslararası piyasalardaki ons fiyatına göre güncellenir.
+          </p>
+        </section>
+        <section className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Sık Sorulan Sorular</h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="mb-1 text-sm font-bold text-zinc-800">Çeyrek altın kaç gramdır?</h3>
+              <p className="text-sm leading-6 text-zinc-600">Çeyrek altın 1,75 gram, yarım altın 3,5 gram, tam altın ise yaklaşık 7 gramdır.</p>
+            </div>
+            <div>
+              <h3 className="mb-1 text-sm font-bold text-zinc-800">Gram altın fiyatı neye göre değişir?</h3>
+              <p className="text-sm leading-6 text-zinc-600">Gram altın fiyatı uluslararası ons fiyatı ve USD/TL kurunun çarpımından elde edilir. Dolayısıyla hem altın hem de döviz piyasasındaki hareketler fiyatı doğrudan etkiler.</p>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );

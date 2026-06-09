@@ -144,6 +144,32 @@ export default function KiraArtisHesaplayici() {
             </div>
           </>
         )}
+
+        <section className="mt-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Kira Artışı Nasıl Hesaplanır?</h2>
+          <p className="mb-3 text-sm leading-7 text-zinc-600">
+            Türkiye&apos;de konut kira artışları TÜFE&apos;nin 12 aylık ortalamasıyla sınırlandırılmıştır.
+            Kiracı ve ev sahibi bu oranın altında anlaşabilir, ancak üzerinde bir artış yapılamaz.
+            Bu araç mevcut kira bedelinizi ve güncel TÜFE tavan oranını girerek yeni kira bedelinizi hesaplar.
+          </p>
+          <p className="text-sm leading-7 text-zinc-600">
+            TÜFE 12 aylık ortalama oranı her ay TÜİK tarafından güncellenmektedir. Araçtaki varsayılan
+            değer en güncel yasal tavan oranı olarak yüklenmektedir.
+          </p>
+        </section>
+        <section className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Sık Sorulan Sorular</h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="mb-1 text-sm font-bold text-zinc-800">Kira artış sınırı ne zaman değişiyor?</h3>
+              <p className="text-sm leading-6 text-zinc-600">TÜFE 12 aylık ortalama oranı her ay güncellenir. Kira sözleşmesi yenileme tarihindeki geçerli TÜFE oranı yasal tavan olarak uygulanır.</p>
+            </div>
+            <div>
+              <h3 className="mb-1 text-sm font-bold text-zinc-800">Ev sahibi yasal tavanın üzerinde zam yapabilir mi?</h3>
+              <p className="text-sm leading-6 text-zinc-600">Hayır. Yasal düzenleme gereği kira artışı TÜFE 12 aylık ortalamasını geçemez. Bu sınırı aşan zamlar geçersiz kabul edilmektedir.</p>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );

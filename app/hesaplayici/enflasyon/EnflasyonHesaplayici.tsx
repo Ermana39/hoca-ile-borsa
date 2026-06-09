@@ -131,6 +131,32 @@ export default function EnflasyonHesaplayici() {
             </div>
           </>
         )}
+
+        <section className="mt-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Enflasyon Hesaplaması Nasıl Yapılır?</h2>
+          <p className="mb-3 text-sm leading-7 text-zinc-600">
+            Enflasyon hesaplaması, belirli bir tutarın yıllar içinde satın alma gücünün nasıl
+            değiştiğini gösterir. TÜFE (Tüketici Fiyat Endeksi) verileri kullanılarak geçmiş bir
+            tarihte sahip olunan TL değerinin bugünkü karşılığı hesaplanır.
+          </p>
+          <p className="text-sm leading-7 text-zinc-600">
+            Türkiye&apos;de enflasyon oranları TÜİK tarafından aylık olarak açıklanmaktadır. Yüksek
+            enflasyon dönemlerinde nakdin değeri hızla erimekte, reel getiri negatife dönebilmektedir.
+          </p>
+        </section>
+        <section className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Sık Sorulan Sorular</h2>
+          <div className="space-y-4">
+            <div>
+              <h3 className="mb-1 text-sm font-bold text-zinc-800">Reel getiri nedir?</h3>
+              <p className="text-sm leading-6 text-zinc-600">Reel getiri, nominal getiriden enflasyonun çıkarılmasıyla bulunur. Yatırımın gerçekte satın alma gücü kazandırıp kazandırmadığını gösterir.</p>
+            </div>
+            <div>
+              <h3 className="mb-1 text-sm font-bold text-zinc-800">TÜFE ile ÜFE arasındaki fark nedir?</h3>
+              <p className="text-sm leading-6 text-zinc-600">TÜFE tüketicilerin ödediği fiyatları, ÜFE üretim aşamasındaki fiyatları ölçer. Enflasyon hesaplamalarında genellikle TÜFE esas alınır.</p>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );
