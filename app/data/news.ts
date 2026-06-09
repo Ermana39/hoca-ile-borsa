@@ -8,7 +8,7 @@ export type NewsItem = {
 };
 
 export const newsItems: NewsItem[] = [
-  {
+    {
     id: 981,
     title: "Türk Bankacılığında Tarihi Dönüşüm: 3 Katılım Bankası Birleşiyor, Emlak Katılım Borsaya Geliyor",
     href: "/haber/turk-bankaciliginda-tarihi-donusum-3-katilim-bankasi-birlesiyor-emlak-katilim-borsaya-geliyor",
@@ -26,11 +26,11 @@ export const newsItems: NewsItem[] = [
   },
   {
     id: 950,
-    title: "08 Haziran 2026 Pazartesi KAP Bildirimleri Özeti",
-    href: "/haber/08-haziran-2026-pazartesi-kap-bildirimleri-ozeti",
+    title: "09 Haziran 2026 Salı KAP Bildirimleri Özeti",
+    href: "/haber/09-haziran-2026-sali-kap-bildirimleri-ozeti",
     image: "/kap-ozeti.webp",
-    alt: "08 Haziran 2026 KAP Bildirimleri Özeti",
-    publishedAt: "2026-06-08",
+    alt: "09 Haziran 2026 KAP Bildirimleri Özeti",
+    publishedAt: "2026-06-09",
   },
   {
     id: 975,
