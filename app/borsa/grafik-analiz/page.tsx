@@ -79,6 +79,15 @@ const analizler = [
 { baslik: "GLRMK Grafik Analiz", href: "/borsa/grafik-analiz/glrmk" },
 { baslik: "GRSEL Grafik Analiz", href: "/borsa/grafik-analiz/grsel" },
 { baslik: "GRTHO Grafik Analiz", href: "/borsa/grafik-analiz/grtho" },
+{ baslik: "GSRAY Grafik Analiz", href: "/borsa/grafik-analiz/gsray" },
+{ baslik: "ISMEN Grafik Analiz", href: "/borsa/grafik-analiz/ismen" },
+{ baslik: "IZENR Grafik Analiz", href: "/borsa/grafik-analiz/izenr" },
+{ baslik: "KLRHO Grafik Analiz", href: "/borsa/grafik-analiz/klrho" },
+{ baslik: "KTLEV Grafik Analiz", href: "/borsa/grafik-analiz/ktlev" },
+{ baslik: "KUYAS Grafik Analiz", href: "/borsa/grafik-analiz/kuyas" },
+{ baslik: "MAGEN Grafik Analiz", href: "/borsa/grafik-analiz/magen" },
+{ baslik: "MAVI Grafik Analiz", href: "/borsa/grafik-analiz/mavi" },
+
 ];
 
 // Alfabetik sırala
