@@ -8,11 +8,22 @@ export type NewsItem = {
 };
 
 export const newsItems: NewsItem[] = [
-    {
+  {
+    id: 982,
+    title:
+      "ABD Enflasyonu Sonrası Piyasalarda Temkinli Fiyatlama: Borsalar ve Altında Son Durum",
+    href: "/haber/abd-enflasyonu-sonrasi-borsalar-altin-fiyatlamasi",
+    image: "/abd-enflasyon-altin-borsa.webp",
+    alt: "ABD enflasyonu sonrası borsalar ve altın fiyatlaması",
+    publishedAt: "2026-06-10",
+  },
+  {
     id: 981,
-    title: "Türk Bankacılığında Tarihi Dönüşüm: 3 Katılım Bankası Birleşiyor, Emlak Katılım Borsaya Geliyor",
+    title:
+      "Türk Bankacılığında Tarihi Dönüşüm: 3 Katılım Bankası Birleşiyor, Emlak Katılım Borsaya Geliyor",
     href: "/haber/turk-bankaciliginda-tarihi-donusum-3-katilim-bankasi-birlesiyor-emlak-katilim-borsaya-geliyor",
-    image: "/turk-bankaciliginda-tarihi-donusum-3-katilim-bankasi-birlesiyor-emlak-katilim-borsaya-geliyor.webp",
+    image:
+      "/turk-bankaciliginda-tarihi-donusum-3-katilim-bankasi-birlesiyor-emlak-katilim-borsaya-geliyor.webp",
     alt: "3 Katılım Bankası Birleşiyor, Emlak Katılım Halka Arz",
     publishedAt: "2026-06-07",
   },
@@ -26,11 +37,11 @@ export const newsItems: NewsItem[] = [
   },
   {
     id: 950,
-    title: "09 Haziran 2026 Salı KAP Bildirimleri Özeti",
-    href: "/haber/09-haziran-2026-sali-kap-bildirimleri-ozeti",
+    title: "10 Haziran 2026 Çarşamba KAP Bildirimleri Özeti",
+    href: "/haber/10-haziran-2026-carsamba-kap-bildirimleri-ozeti",
     image: "/kap-ozeti.webp",
-    alt: "09 Haziran 2026 KAP Bildirimleri Özeti",
-    publishedAt: "2026-06-09",
+    alt: "10 Haziran 2026 KAP Bildirimleri Özeti",
+    publishedAt: "2026-06-10",
   },
   {
     id: 975,
@@ -64,5 +75,4 @@ export const newsItems: NewsItem[] = [
     alt: "Kontrolmatik Kupon Ödemesi Gerçekleşmedi",
     publishedAt: "2026-06-05",
   },
-  
 ];
