@@ -2,6 +2,11 @@ import Link from "next/link";
 
 const onayliIzahnameler = [
   {
+    kod: "BETA",
+    sirket: "Beta Enerji ve Teknoloji A.Ş.",
+    href: "/halka-arz/onayli-izahnameler/beta",
+  },
+  {
     kod: "EKNDC",
     sirket: "Ekinciler Demir ve Çelik Sanayi A.Ş.",
     href: "/halka-arz/onayli-izahnameler/ekinciler",
