@@ -28,7 +28,7 @@ const jsonLd = {
     { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: "https://www.hocaileborsa.com" },
     { "@type": "ListItem", position: 2, name: "Halka Arz", item: "https://www.hocaileborsa.com/halka-arz" },
     { "@type": "ListItem", position: 3, name: "Taslak İzahnameler", item: "https://www.hocaileborsa.com/halka-arz/taslak-izahnameler" },
-    { "@type": "ListItem", position: 4, name: "Türkiye Emlak Katılım Bankası A.Ş.", item: "https://www.hocaileborsa.com/halka-arz/taslak-izahnameler/turkiye" },
+    { "@type": "ListItem", position: 4, name: "Türkiye Emlak Katılım Bankası A.Ş.", item: "https://www.hocaileborsa.com/halka-arz/taslak-izahnameler/turkiye-emlak-katilim-bankasi" },
   ],
 };
 

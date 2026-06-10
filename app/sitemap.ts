@@ -404,15 +404,15 @@ function slugify(text: string) {
 
 function getSirketKlasorAdi(label: string) {
   const ozelKlasorler: Record<string, string> = {
-    "Başakkent Girişim Sermayesi Yatırım Ortaklığı A.Ş.": "basakkentgsyo",
+    "Çitlekçi Mağazacılık Gıda A.Ş.": "cilekci",
+    "Kapeks Kimya Sanayi A.Ş.": "kepeks",
   };
 
   if (ozelKlasorler[label]) {
     return ozelKlasorler[label];
   }
 
-  const ilkKelime = label.trim().split(/\s+/)[0] || "";
-  return slugify(ilkKelime);
+  return slugify(label).replace(/-as$/, "");
 }
 
 function getTaslakSirketUrlleri() {

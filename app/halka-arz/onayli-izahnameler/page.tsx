@@ -4,12 +4,12 @@ const onayliIzahnameler = [
   {
     kod: "BETA",
     sirket: "Beta Enerji ve Teknoloji A.Ş.",
-    href: "/halka-arz/onayli-izahnameler/beta",
+    href: "/halka-arz/onayli-izahnameler/beta-enerji-teknoloji-betaa",
   },
   {
     kod: "EKNDC",
     sirket: "Ekinciler Demir ve Çelik Sanayi A.Ş.",
-    href: "/halka-arz/onayli-izahnameler/ekinciler",
+    href: "/halka-arz/onayli-izahnameler/ekinciler-demir-celik-ekdmr",
   },
 ];
 
