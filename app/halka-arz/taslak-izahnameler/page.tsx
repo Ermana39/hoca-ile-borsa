@@ -4,6 +4,26 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 
 const taslakMetin = `
+Reçber Kablo A.Ş.
+
+Parteks Kağıt Endüstrisi A.Ş.
+
+Samet Kalıp ve Madeni Eşya San. ve Tic. A.Ş.
+
+Peak Pv Solar Teknolojileri A.Ş.
+
+Cms Jant ve Makina Sanayii A.Ş.
+
+Volta Motor San. ve Tic. A.Ş.
+
+Ankara Anonim Türk Sigorta Şirketi
+
+Multikan Sağlık Ürünleri San. ve Dış Tic. A.Ş.
+
+Alnus Yatırım Menkul Değerler A.Ş.
+
+Elestaş Elektrik Üretim A.Ş.
+
 Asos Proses Makina San. ve Tic. A.Ş.
 
 Termopet Akaryakıt Nakliyat ve Tic. A.Ş.
