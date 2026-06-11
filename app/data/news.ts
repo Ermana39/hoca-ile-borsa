@@ -9,6 +9,14 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 983,
+    title: "TCMB Politika Faizini Yüzde 37’de Sabit Tuttu",
+    href: "/haber/tcmb-politika-faizini-yuzde-37de-sabit-tuttu-11-haziran-2026",
+    image: "/tcmb-faiz-karari.webp",
+    alt: "TCMB politika faizini yüzde 37 seviyesinde sabit tuttu",
+    publishedAt: "2026-06-11",
+  },
+  {
     id: 982,
     title:
       "ABD Enflasyonu Sonrası Piyasalarda Temkinli Fiyatlama: Borsalar ve Altında Son Durum",
