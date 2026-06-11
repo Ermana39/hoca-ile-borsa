@@ -36,14 +36,6 @@ export const newsItems: NewsItem[] = [
     publishedAt: "2026-06-07",
   },
   {
-    id: 980,
-    title: "11 Haziran’da Kritik Karar: Merkez Bankası Faizi Ne Yapacak?",
-    href: "/haber/11-haziranda-kritik-karar-merkez-bankasi-faizi-ne-yapacak",
-    image: "/11-haziranda-kritik-karar-merkez-bankasi-faizi-ne-yapacak.webp",
-    alt: "11 Haziran Merkez Bankası Faiz Kararı",
-    publishedAt: "2026-06-07",
-  },
-  {
     id: 950,
     title: "11 Haziran 2026 Perşembe KAP Bildirimleri Özeti",
     href: "/haber/11-haziran-2026-persembe-kap-bildirimleri-ozeti",
