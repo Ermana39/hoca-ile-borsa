@@ -1,5 +1,40 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+
+
+export const metadata: Metadata = {
+  title: "11 Haziran 2026 Günlük Borsa Özeti | Hoca ile Borsa",
+  description:
+    "11 Haziran 2026 BIST 100 kapanışı, en çok yükselen ve düşen hisseler, para girişi-çıkışı, en hacimli hisseler, ekonomik takvim ve kurum dağılımı.",
+  alternates: {
+    canonical:
+      "https://www.hocaileborsa.com/borsa/gunluk-borsa-ozeti/11-haziran-2026",
+  },
+  openGraph: {
+    title: "11 Haziran 2026 Günlük Borsa Özeti",
+    description:
+      "BIST 100 kapanışı, günlük piyasa özeti, en çok yükselenler, düşenler, para girişi-çıkışı ve kurum dağılımı.",
+    url: "https://www.hocaileborsa.com/borsa/gunluk-borsa-ozeti/11-haziran-2026",
+    siteName: "Hoca ile Borsa",
+    type: "article",
+    images: [
+      {
+        url: "https://www.hocaileborsa.com/gunluk-ozet.webp",
+        width: 1200,
+        height: 675,
+        alt: "11 Haziran 2026 Günlük Borsa Özeti",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "11 Haziran 2026 Günlük Borsa Özeti",
+    description:
+      "BIST 100 kapanışı, en çok yükselen ve düşen hisseler, para girişi-çıkışı ve kurum dağılımı.",
+    images: ["https://www.hocaileborsa.com/gunluk-ozet.webp"],
+  },
+};
 
 const bistVeri = {
   tarih: "11.06.2026",
@@ -388,7 +423,7 @@ export default function GunlukBorsaOzetiPage() {
         </div>
 
         <h1 className="mb-6 text-3xl font-bold text-zinc-900">
-          Günlük Borsa Özeti
+          11 Haziran 2026 Günlük Borsa Özeti
         </h1>
 
         <div className="mb-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
@@ -396,7 +431,7 @@ export default function GunlukBorsaOzetiPage() {
             <div className="relative aspect-[16/9] w-full">
               <Image
                 src="/gunluk-ozet.webp"
-                alt="Günlük özet görseli"
+                alt="11 Haziran 2026 günlük borsa özeti görseli"
                 fill
                 className="object-contain"
                 priority
@@ -554,16 +589,16 @@ export default function GunlukBorsaOzetiPage() {
 
         <section className="mt-6 rounded-2xl border border-zinc-200 bg-white p-6">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">
-            Günlük Borsa Özeti Hakkında
+            11 Haziran 2026 Günlük Borsa Özeti Hakkında
           </h2>
 
           <p className="mb-4 leading-7 text-zinc-700">
-            Günlük borsa özeti sayfası, Borsa İstanbul piyasalarında yaşanan
-            güncel gelişmeleri tek ekranda takip etmek isteyen yatırımcılar için
-            hazırlanmıştır. Bu sayfada BIST 100 endeksi kapanış verileri, günlük
-            değişim oranları, en çok yükselen hisseler, en çok düşen hisseler,
-            para girişi ve para çıkışı yaşanan hisseler gibi önemli piyasa
-            verilerine hızlı şekilde ulaşabilirsiniz.
+            11 Haziran 2026 günlük borsa özeti sayfası, Borsa İstanbul
+            piyasalarında yaşanan güncel gelişmeleri tek ekranda takip etmek
+            isteyen yatırımcılar için hazırlanmıştır. Bu sayfada BIST 100
+            endeksi kapanış verileri, günlük değişim oranları, en çok yükselen
+            hisseler, en çok düşen hisseler, para girişi ve para çıkışı yaşanan
+            hisseler gibi önemli piyasa verilerine hızlı şekilde ulaşabilirsiniz.
           </p>
 
           <p className="mb-4 leading-7 text-zinc-700">

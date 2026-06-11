@@ -10,7 +10,7 @@ import Link from "next/link";
 const analizKutulari = [
   {
     title: "Günlük Borsa Özeti",
-    href: "/borsa/gunluk-borsa-ozeti",
+    href: "/borsa/gunluk-borsa-ozeti/11-haziran-2026",
     image: "/gunluk-borsa-ozeti-yatay.png",
     alt: "Günlük Borsa Özeti görseli",
     description:
