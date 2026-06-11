@@ -1,7 +1,7 @@
 export const metadata = {
   title: "Halka Arz | Hoca İle Borsa",
   description:
-    "Güncel halka arz verileri, kazanç hesaplama, talep hesaplama ve izahname bilgileri.",
+    "Güncel halka arz verileri, kazanç hesaplama, talep hesaplama, izahname bilgileri ve halka arz tavan serisi takibi.",
   alternates: { canonical: "https://www.hocaileborsa.com/halka-arz" },
 };
 
@@ -312,7 +312,7 @@ export default function HalkaArzPage() {
           </Link>
         </div>
 
-        <section className="grid grid-cols-1 gap-4 md:grid-cols-2">
+        <section className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
           <Link
             href="/halka-arz/onayli-izahnameler"
             prefetch={false}
@@ -357,6 +357,31 @@ export default function HalkaArzPage() {
             <div className="flex flex-1 items-center justify-center px-2 pb-2 text-center">
               <h2 className="text-2xl font-semibold leading-tight text-zinc-900 md:text-3xl">
                 Taslak İzahnameler
+              </h2>
+            </div>
+          </Link>
+
+          <Link
+            href="/halka-arz/tavan-serisi"
+            prefetch={false}
+            aria-label="Halka Arz Tavan Serisi"
+            className="group flex min-h-[240px] flex-col rounded-2xl border border-zinc-200 bg-zinc-50 p-3 transition hover:bg-zinc-100"
+          >
+            <div className="relative mb-4 flex aspect-[16/10] items-center justify-center overflow-hidden rounded-2xl bg-emerald-50">
+              <div className="px-5 text-center">
+                <div className="text-5xl font-black text-emerald-600">TAVAN</div>
+                <div className="mt-3 text-lg font-bold text-zinc-900">
+                  Halka Arz Takibi
+                </div>
+                <div className="mt-2 text-sm font-semibold text-zinc-600">
+                  Tavan sayısı, getiri ve son durum
+                </div>
+              </div>
+            </div>
+
+            <div className="flex flex-1 items-center justify-center px-2 pb-2 text-center">
+              <h2 className="text-2xl font-semibold leading-tight text-zinc-900 md:text-3xl">
+                Halka Arz Tavan Serisi
               </h2>
             </div>
           </Link>
@@ -444,6 +469,10 @@ export default function HalkaArzPage() {
               <li className="flex items-start gap-2">
                 <span className="mt-1 text-blue-500">•</span>
                 <span><strong>Kazanç Hesaplama:</strong> Beklenen halka arz primini ve lot başına tahmini kazancınızı kazanç hesaplama aracıyla öğrenin.</span>
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="mt-1 text-blue-500">•</span>
+                <span><strong>Tavan Serisi Takibi:</strong> İşlem görmeye başlayan halka arzlarda tavan sayısı, güncel getiri ve son durumu takip edin.</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1 text-blue-500">•</span>

@@ -11,6 +11,12 @@ import Link from "next/link";
 
 const haberler = [
   {
+    title: "11 Haziran 2026 En Çok Para Girişi ve Çıkışı Olan Hisseler",
+    href: "/borsa/dikkat-cekenler/11-haziran-2026-en-cok-para-girisi-cikisi-olan-hisseler",
+    tarih: "11.06.2026",
+    etiket: "Para Akışı",
+  },
+  {
     title: "ASTOR'dan ABD Pazarında Yeni Hamle: 71,9 Milyon Dolarlık Anlaşma",
     href: "/borsa/dikkat-cekenler/astor-abd-719-milyon-dolar-anlasma",
     tarih: "09.06.2026",
@@ -76,6 +82,7 @@ const ETIKET_RENK: Record<string, string> = {
   Temettü: "text-emerald-700",
   "Geri Alım": "text-blue-700",
   Bilanço: "text-indigo-700",
+  "Para Akışı": "text-emerald-700",
 };
 
 export default function DikkatCekenlerPage() {
