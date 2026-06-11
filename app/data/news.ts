@@ -45,11 +45,11 @@ export const newsItems: NewsItem[] = [
   },
   {
     id: 950,
-    title: "10 Haziran 2026 Çarşamba KAP Bildirimleri Özeti",
-    href: "/haber/10-haziran-2026-carsamba-kap-bildirimleri-ozeti",
+    title: "11 Haziran 2026 Perşembe KAP Bildirimleri Özeti",
+    href: "/haber/11-haziran-2026-persembe-kap-bildirimleri-ozeti",
     image: "/kap-ozeti.webp",
-    alt: "10 Haziran 2026 KAP Bildirimleri Özeti",
-    publishedAt: "2026-06-10",
+    alt: "11 Haziran 2026 KAP Bildirimleri Özeti",
+    publishedAt: "2026-06-11",
   },
   {
     id: 975,
