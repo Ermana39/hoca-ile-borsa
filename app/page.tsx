@@ -903,6 +903,7 @@ export default function HomePage() {
               title="Kurumsal"
               links={[
                 { label: "Hakkımızda", href: "/hakkimizda" },
+                { label: "Yazarımız - Erman Hoca", href: "/yazar/erman-hoca" },
                 { label: "Gizlilik Politikası", href: "/gizlilik-politikasi" },
                 { label: "Çerez Politikası", href: "/cerez-politikasi" },
                 { label: "Kullanım Şartları", href: "/kullanim-sartlari" },

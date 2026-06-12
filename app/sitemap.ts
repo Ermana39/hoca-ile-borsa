@@ -494,6 +494,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/mevduat-kredi-faizleri/tuketici-faizi-oranlari",
     "/mevduat-kredi-faizleri/konut-kredisi-oranlari",
     "/mevduat-kredi-faizleri/tasit-kredisi-oranlari",
+
+    "/yazar/erman-hoca",
   ];
 
   const taslakSirketRoutes = getTaslakSirketUrlleri();

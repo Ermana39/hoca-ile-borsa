@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
+import AuthorBox from "@/components/AuthorBox";
 
 export const metadata: Metadata = {
   title: "DERHL'den Yüzde 401 Oranında Bedelsiz Sermaye Artırımı Kararı",
@@ -36,7 +37,7 @@ export default function DerhlBedelsizPage() {
             <h1 className="text-2xl font-bold leading-tight text-zinc-900 md:text-4xl">
               DERHL'den Yüzde 401 Oranında Bedelsiz Sermaye Artırımı Kararı
             </h1>
-            <p className="mt-2 text-sm text-zinc-500">08.06.2026</p>
+            <p className="mt-2 text-sm text-zinc-500">08.06.2026 · <Link href="/yazar/erman-hoca" className="font-semibold text-slate-600 hover:text-blue-600">Erman Hoca</Link></p>
           </header>
 
           <div className="mt-5 space-y-4 text-base leading-8 text-zinc-700 md:text-lg">
@@ -83,6 +84,8 @@ export default function DerhlBedelsizPage() {
           <p className="mt-6 text-sm text-zinc-400">
             08.06.2026 – Bu paylaşım yatırım tavsiyesi değildir.
           </p>
+          <AuthorBox />
+
         </article>
 
         <div className="mt-8">

@@ -2,6 +2,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
+import AuthorBox from "@/components/AuthorBox";
 
 export const metadata: Metadata = {
   title: "Türk Bankacılığında Tarihi Dönüşüm: 3 Katılım Bankası Birleşiyor, Emlak Katılım Borsaya Geliyor",
@@ -52,6 +53,7 @@ const jsonLd = {
   author: { "@type": "Organization", name: "Hoca İle Borsa", url: "https://www.hocaileborsa.com" },
   publisher: {
     "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
     name: "Hoca İle Borsa",
     url: "https://www.hocaileborsa.com",
     logo: { "@type": "ImageObject", url: "https://www.hocaileborsa.com/icon-512.png" },
@@ -91,7 +93,9 @@ export default function Haber981Page() {
                 7 Haziran 2026
               </time>
               <span className="text-slate-300">·</span>
-              <span className="text-sm text-slate-500">Hoca İle Borsa</span>
+              <Link href="/yazar/erman-hoca" className="text-sm font-semibold text-slate-500 hover:text-blue-600">
+                Erman Hoca
+              </Link>
             </div>
 
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
@@ -144,6 +148,8 @@ export default function Haber981Page() {
               </div>
             </div>
           </div>
+          <AuthorBox />
+
         </article>
       </div>
     </main>

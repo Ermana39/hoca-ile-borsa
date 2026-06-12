@@ -2,6 +2,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
+import AuthorBox from "@/components/AuthorBox";
 
 export const metadata: Metadata = {
   title: "Beta Enerji Halka Arzında Talep Toplama Tarihleri Açıklandı",
@@ -65,13 +66,10 @@ const jsonLd = {
   datePublished: "2026-06-12T10:00:00+03:00",
   dateModified: "2026-06-12T10:00:00+03:00",
   url: "https://www.hocaileborsa.com/haber/beta-enerji-halka-arz-talep-toplama-tarihleri-aciklandi",
-  author: {
-    "@type": "Organization",
-    name: "Hoca İle Borsa",
-    url: "https://www.hocaileborsa.com",
-  },
+  author: { "@type": "Person", "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person", name: "Erman Hoca", url: "https://www.hocaileborsa.com/yazar/erman-hoca" },
   publisher: {
     "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
     name: "Hoca İle Borsa",
     url: "https://www.hocaileborsa.com",
     logo: {
@@ -129,7 +127,9 @@ export default function HaberBetaEnerjiHalkaArzPage() {
                 12 Haziran 2026
               </time>
               <span className="text-slate-300">·</span>
-              <span className="text-sm text-slate-500">Hoca İle Borsa</span>
+              <Link href="/yazar/erman-hoca" className="text-sm font-semibold text-slate-500 hover:text-blue-600">
+                Erman Hoca
+              </Link>
             </div>
 
             <div className="mt-6 space-y-6 text-base leading-8 text-slate-700 md:text-lg">
@@ -288,6 +288,8 @@ export default function HaberBetaEnerjiHalkaArzPage() {
               </div>
             </div>
           </div>
+          <AuthorBox />
+
         </article>
       </div>
     </main>

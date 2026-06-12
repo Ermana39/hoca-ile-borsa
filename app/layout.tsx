@@ -76,6 +76,25 @@ export const metadata: Metadata = {
   },
 };
 
+const organizationJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "@id": "https://www.hocaileborsa.com/#organization",
+  name: "Hoca İle Borsa",
+  url: "https://www.hocaileborsa.com",
+  logo: "https://www.hocaileborsa.com/icon-512.png",
+  sameAs: [
+    "https://x.com/HocaileBorsa",
+    "https://www.instagram.com/hocaileborsa/",
+    "https://t.me/halkaarz_0",
+  ],
+  contactPoint: {
+    "@type": "ContactPoint",
+    email: "destekhocaileborsa@gmail.com",
+    contactType: "customer support",
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -89,6 +108,10 @@ export default function RootLayout({
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9613627671991162"
           crossOrigin="anonymous"
         ></script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
       </head>
 
       <body className="site-background">
