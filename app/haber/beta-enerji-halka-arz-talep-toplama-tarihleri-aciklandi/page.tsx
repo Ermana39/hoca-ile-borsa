@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
+import HaberNavigasyon from "@/components/HaberNavigasyon";
 
 export const metadata: Metadata = {
   title: "Beta Enerji Halka Arzında Talep Toplama Tarihleri Açıklandı",
@@ -288,6 +289,8 @@ export default function HaberBetaEnerjiHalkaArzPage() {
               </div>
             </div>
           </div>
+          <HaberNavigasyon href="/haber/beta-enerji-halka-arz-talep-toplama-tarihleri-aciklandi" />
+
           <AuthorBox />
 
         </article>

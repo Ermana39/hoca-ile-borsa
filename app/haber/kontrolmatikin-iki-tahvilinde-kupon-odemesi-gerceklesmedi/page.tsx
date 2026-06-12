@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
+import HaberNavigasyon from "@/components/HaberNavigasyon";
 
 export const metadata: Metadata = {
   title: "Kontrolmatik’in İki Tahvilinde Kupon Ödemesi Gerçekleşmedi",
@@ -147,6 +148,8 @@ export default function Haber978Page() {
               </div>
             </div>
           </div>
+          <HaberNavigasyon href="/haber/kontrolmatikin-iki-tahvilinde-kupon-odemesi-gerceklesmedi" />
+
           <AuthorBox />
 
         </article>

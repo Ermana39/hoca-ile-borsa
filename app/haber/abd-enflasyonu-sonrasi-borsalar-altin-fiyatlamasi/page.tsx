@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
+import HaberNavigasyon from "@/components/HaberNavigasyon";
 
 export const metadata: Metadata = {
   title:
@@ -191,6 +192,8 @@ export default function HaberAbdEnflasyonBorsaAltinPage() {
               </div>
             </div>
           </div>
+          <HaberNavigasyon href="/haber/abd-enflasyonu-sonrasi-borsalar-altin-fiyatlamasi" />
+
           <AuthorBox />
 
         </article>

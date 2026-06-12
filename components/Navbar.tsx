@@ -11,7 +11,7 @@ const navLinks = [
   { label: "Fonlar", href: "/fonlar" },
   { label: "Faiz Oranları", href: "/mevduat-kredi-faizleri" },
   { label: "Hesaplayıcılar", href: "/hesaplayici" },
-  { label: "Haberler", href: "/#haberler" },
+  { label: "Haberler", href: "/haberler" },
 ];
 
 export default function Navbar() {

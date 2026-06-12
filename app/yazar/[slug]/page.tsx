@@ -64,8 +64,16 @@ export default async function YazarPage({
         "Yatırım Fonları",
         "KAP Bildirimleri",
         "Mevduat ve Kredi Faizleri",
+        "Teknik Analiz",
+        "Temel Analiz",
       ],
-      sameAs: [yazar.sosyal.x, yazar.sosyal.instagram, yazar.sosyal.telegram],
+      sameAs: [
+        yazar.sosyal.x,
+        yazar.sosyal.instagram,
+        yazar.sosyal.telegram,
+        yazar.sosyal.youtube,
+        yazar.sosyal.youtubeGlobal,
+      ],
       worksFor: {
         "@type": "Organization",
         "@id": `${siteUrl}/#organization`,
@@ -144,6 +152,22 @@ export default async function YazarPage({
                 className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm font-semibold text-slate-700 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
               >
                 Telegram
+              </a>
+              <a
+                href={yazar.sosyal.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm font-semibold text-slate-700 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
+              >
+                YouTube (Yurt İçi Piyasalar)
+              </a>
+              <a
+                href={yazar.sosyal.youtubeGlobal}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm font-semibold text-slate-700 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
+              >
+                YouTube (Yurt Dışı Piyasalar)
               </a>
               <a
                 href={`mailto:${yazar.email}`}

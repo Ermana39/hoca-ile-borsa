@@ -614,15 +614,39 @@ export default function BetaEnerjiVeTeknolojiASPage() {
             </p>
           </div>
 
-          <div className="p-4 sm:p-6">
-            <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-slate-100">
-              <iframe
-                src="https://www.youtube.com/embed/K6Vq35RbTyg"
-                title="Beta Enerji Halka Arz Video İncelemesi"
-                className="absolute inset-0 h-full w-full"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowFullScreen
-              />
+          <div className="grid gap-4 p-4 sm:p-6 lg:grid-cols-2">
+            <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+              <div className="relative aspect-video w-full overflow-hidden bg-slate-100">
+                <iframe
+                  src="https://www.youtube.com/embed/K6Vq35RbTyg"
+                  title="Beta Enerji Halka Arz Video İncelemesi"
+                  className="absolute inset-0 h-full w-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-sm font-bold text-slate-900">
+                  Beta Enerji Halka Arz Video İncelemesi
+                </h3>
+              </div>
+            </div>
+
+            <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+              <div className="relative aspect-video w-full overflow-hidden bg-slate-100">
+                <iframe
+                  src="https://www.youtube.com/embed/VxuGhlPj_6Y"
+                  title="Beta Enerji Halka Arz Değerlendirme Videosu"
+                  className="absolute inset-0 h-full w-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-sm font-bold text-slate-900">
+                  Beta Enerji Halka Arz Değerlendirme Videosu
+                </h3>
+              </div>
             </div>
           </div>
         </section>
