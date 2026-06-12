@@ -9,6 +9,14 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 984,
+    title: "Beta Enerji Halka Arzında Talep Toplama Tarihleri Açıklandı",
+    href: "/haber/beta-enerji-halka-arz-talep-toplama-tarihleri-aciklandi",
+    image: "/beta-enerji-halka-arz.webp",
+    alt: "Beta Enerji halka arz talep toplama tarihleri açıklandı",
+    publishedAt: "2026-06-12",
+  },
+  {
     id: 983,
     title: "TCMB Politika Faizini Yüzde 37’de Sabit Tuttu",
     href: "/haber/tcmb-politika-faizini-yuzde-37de-sabit-tuttu-11-haziran-2026",
