@@ -69,14 +69,14 @@ export default function BetaEnerjiVeTeknolojiASPage() {
       notlar: ["3.001 lot ve üstü", "120.040 TL ve üstü", "T1 ve T2 bakiye kullanılamaz"],
     },
     {
-      grup: "Yurt İçi Kurumsal Yatırımcı",
+      grup: "Beta Grup Çalışanları",
       oran: "%1",
       lot: "607.500 Lot",
       dagitim: "Kurumsal Tahsisat",
       notlar: [],
     },
     {
-      grup: "Yurt Dışı Kurumsal Yatırımcı",
+      grup: "Yurt İçi Kurumsal Yatırımcı",
       oran: "%39",
       lot: "23.692.500 Lot",
       dagitim: "Kurumsal Tahsisat",
