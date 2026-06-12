@@ -1,18 +1,20 @@
-﻿import Head from "next/head";
-import Link from "next/link";
+﻿import Link from "next/link";
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "ARCLK Teknik Analiz — 06.06.2026",
+  description:
+    "Arçelik (ARCLK) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic indikatörleri ile detaylı değerlendirme.",
+  alternates: {
+    canonical: "https://www.hocaileborsa.com/borsa/grafik-analiz/arclk",
+  },
+};
 
 export default function ArclkGrafikAnaliz() {
   return (
     <>
-      <Head>
-        <title>ARCLK Teknik Analiz — 06.06.2026 | Hoca İle Borsa</title>
-        <meta name="description" content="Arçelik (ARCLK) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic indikatörleri ile detaylı değerlendirme." />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.hocaileborsa.com/borsa/grafik-analiz/arclk" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-      </Head>
+
 
       <style>{`
         .aefes-wrap *, .aefes-wrap *::before, .aefes-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }

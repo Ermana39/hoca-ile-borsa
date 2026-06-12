@@ -445,7 +445,6 @@ function createEntry(
 ): MetadataRoute.Sitemap[number] {
   return {
     url: `${siteUrl}${url}`,
-    lastModified: new Date(),
     changeFrequency,
     priority,
   };

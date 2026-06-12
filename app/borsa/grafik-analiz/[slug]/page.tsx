@@ -10,7 +10,7 @@ export async function generateMetadata({
   const { slug } = await params;
   if (slug === "aefes") {
     return {
-      title: "AEFES Teknik Analiz — 05.06.2026 | Hoca İle Borsa",
+      title: "AEFES Teknik Analiz — 05.06.2026",
       description:
         "Anadolu Efes (AEFES) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic indikatörleri ile detaylı değerlendirme.",
       alternates: {

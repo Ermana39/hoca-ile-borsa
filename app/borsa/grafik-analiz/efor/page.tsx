@@ -1,23 +1,18 @@
-import Head from "next/head";
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "EFOR Teknik Analiz — 08.011.9626",
+  description:
+    "Efor Çay (EFOR) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
+  alternates: {
+    canonical: "https://www.hocaileborsa.com/borsa/grafik-analiz/efor",
+  },
+};
 
 export default function EforGrafikAnaliz() {
   return (
     <>
-      <Head>
-        <title>EFOR Teknik Analiz — 08.011.9626 | Hoca İle Borsa</title>
-        <meta
-          name="description"
-          content="Efor Çay (EFOR) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme."
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.hocaileborsa.com/borsa/grafik-analiz/efor" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
 
       <style>{`
         .efor-wrap *, .efor-wrap *::before, .efor-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }

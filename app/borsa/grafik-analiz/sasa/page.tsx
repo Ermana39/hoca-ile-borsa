@@ -1,24 +1,20 @@
-﻿import Head from "next/head";
 import Link from "next/link";
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "SASA Teknik Analiz — 07.06.2026",
+  description:
+    "Sasa Polyester (SASA) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
+  alternates: {
+    canonical: "https://www.hocaileborsa.com/borsa/grafik-analiz/sasa",
+  },
+};
 
 export default function SasaGrafikAnaliz() {
   return (
     <>
-      <Head>
-        <title>SASA Teknik Analiz — 07.06.2026 | Hoca İle Borsa</title>
-        <meta
-          name="description"
-          content="Sasa Polyester (SASA) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme."
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.hocaileborsa.com/borsa/grafik-analiz/sasa" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
+
 
       <style>{`
         .sasa-wrap *, .sasa-wrap *::before, .sasa-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }

@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Grafik Analiz | Hoca İle Borsa",
+  title: "Grafik Analiz",
   description: "Hisselere ait güncel grafik yorumları, destek-direnç bölgeleri ve kısa teknik değerlendirmeler.",
   alternates: { canonical: "https://www.hocaileborsa.com/borsa/grafik-analiz" },
 };

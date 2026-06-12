@@ -1,24 +1,20 @@
-﻿import Head from "next/head";
 import Link from "next/link";
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "PGSUS Teknik Analiz — 07.06.2026",
+  description:
+    "Pegasus Hava Yolları (PGSUS) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
+  alternates: {
+    canonical: "https://www.hocaileborsa.com/borsa/grafik-analiz/pgsus",
+  },
+};
 
 export default function PgsusGrafikAnaliz() {
   return (
     <>
-      <Head>
-        <title>PGSUS Teknik Analiz — 07.06.2026 | Hoca İle Borsa</title>
-        <meta
-          name="description"
-          content="Pegasus Hava Yolları (PGSUS) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme."
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.hocaileborsa.com/borsa/grafik-analiz/pgsus" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
+
 
       <style>{`
         .pgsus-wrap *, .pgsus-wrap *::before, .pgsus-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }

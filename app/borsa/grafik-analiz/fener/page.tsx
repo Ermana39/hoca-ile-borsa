@@ -1,23 +1,19 @@
-import Head from "next/head";
+
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "FENER Teknik Analiz — 08.03.8926",
+  description:
+    "Fenerbahçe Futbol (FENER) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
+  alternates: {
+    canonical: "https://www.hocaileborsa.com/borsa/grafik-analiz/fener",
+  },
+};
 
 export default function FenerGrafikAnaliz() {
   return (
     <>
-      <Head>
-        <title>FENER Teknik Analiz — 08.03.8926 | Hoca İle Borsa</title>
-        <meta
-          name="description"
-          content="Fenerbahçe Futbol (FENER) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme."
-        />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://www.hocaileborsa.com/borsa/grafik-analiz/fener" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=JetBrains+Mono:wght@400;600&display=swap"
-          rel="stylesheet"
-        />
-      </Head>
+
 
       <style>{`
         .fener-wrap *, .fener-wrap *::bfenere, .fener-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
