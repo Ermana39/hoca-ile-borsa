@@ -1,243 +1,224 @@
-import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
+import type { Metadata } from "next";
+import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 
 export const metadata: Metadata = {
   title:
     "SPK’dan Türkiye Sigorta ve Goodyear İçin Bedelsiz Sermaye Artırımı Onayı",
   description:
     "SPK, Türkiye Sigorta ve Goodyear Lastikleri Türk AŞ’nin bedelsiz sermaye artırımı kapsamındaki pay ihraçlarını onayladı. TURSG ve GOODY sermaye artırımı detayları.",
-  keywords: [
-    "Türkiye Sigorta bedelsiz sermaye artırımı",
-    "TURSG bedelsiz",
-    "Goodyear bedelsiz sermaye artırımı",
-    "GOODY bedelsiz",
-    "SPK sermaye artırımı onayı",
-    "12 Haziran 2026 borsa haberleri",
-  ],
   alternates: {
     canonical:
-      "https://www.hocaileborsa.com/haberler/turkiye-sigorta-goodyear-bedelsiz-sermaye-artirimi",
-  },
-  openGraph: {
-    title:
-      "SPK’dan Türkiye Sigorta ve Goodyear İçin Bedelsiz Sermaye Artırımı Onayı",
-    description:
-      "SPK 2026/36 bülteninde Türkiye Sigorta ve Goodyear Lastikleri Türk AŞ’nin bedelsiz sermaye artırımı kapsamındaki pay ihraçlarına onay verildi.",
-    url: "https://www.hocaileborsa.com/haberler/turkiye-sigorta-goodyear-bedelsiz-sermaye-artirimi",
-    siteName: "Hoca ile Borsa",
-    locale: "tr_TR",
-    type: "article",
+      "https://www.hocaileborsa.com/haber/turkiye-sigorta-goodyear-bedelsiz-sermaye-artirimi",
   },
 };
 
-export default function HaberPage() {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "NewsArticle",
-    headline:
-      "SPK’dan Türkiye Sigorta ve Goodyear İçin Bedelsiz Sermaye Artırımı Onayı",
-    description:
-      "SPK, Türkiye Sigorta AŞ ve Goodyear Lastikleri Türk AŞ’nin bedelsiz sermaye artırımı kapsamındaki pay ihraçlarını onayladı.",
-    datePublished: "2026-06-12T09:00:00+03:00",
-    dateModified: "2026-06-12T09:00:00+03:00",
-    author: {
-      "@type": "Organization",
-      name: "Hoca ile Borsa",
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Hoca ile Borsa",
-    },
-    mainEntityOfPage:
-      "https://www.hocaileborsa.com/haberler/turkiye-sigorta-goodyear-bedelsiz-sermaye-artirimi",
-  };
+const sermayeArtirimlari = [
+  {
+    baslik: "Türkiye Sigorta’nın Sermayesi 20 Milyar TL’ye Çıkacak",
+    metin:
+      "SPK bülteninde yer alan bilgilere göre Türkiye Sigorta AŞ’nin mevcut 10 milyar TL olan sermayesinin 20 milyar TL’ye çıkarılması onaylandı. Şirketin 10 milyar TL tutarındaki bedelsiz sermaye artırımı kâr payından karşılanacak.",
+  },
+  {
+    baslik: "Goodyear’da Sermaye 1,52 Milyar TL’ye Yükseltilecek",
+    metin:
+      "Goodyear Lastikleri Türk AŞ tarafında ise mevcut 270 milyon TL sermayenin 1 milyar 520 milyon TL’ye çıkarılması planlanıyor. Şirketin 1 milyar 250 milyon TL tutarındaki bedelsiz sermaye artırımı iç kaynaklardan karşılanacak.",
+  },
+  {
+    baslik: "Bedelsiz Sermaye Artırımı Ne Anlama Geliyor?",
+    metin:
+      "Bedelsiz sermaye artırımı, şirketin iç kaynaklarını ya da kâr payını sermayeye eklemesiyle gerçekleşir. Bu işlem sonucunda yatırımcının lot sayısı artar ancak hisse fiyatı teorik olarak bölünme oranına göre düzeltilir.",
+  },
+  {
+    baslik: "TURSG ve GOODY Hisselerinde Haber Akışı Takip Edilecek",
+    metin:
+      "SPK onayının ardından yatırımcıların odağında hak kullanım tarihleri, düzeltilmiş fiyatlar ve şirketlerden gelecek ek açıklamalar olacak. Bu süreçte kısa vadeli fiyatlamalarda haber etkisi görülebilir.",
+  },
+  {
+    baslik: "Yatırımcılar Nelere Dikkat Etmeli?",
+    metin:
+      "Bedelsiz sermaye artırımı tek başına şirket değerinin arttığı anlamına gelmez. Bu nedenle yatırımcıların şirketlerin bilanço yapısını, kârlılığını, büyüme performansını ve genel piyasa koşullarını birlikte değerlendirmesi önemlidir.",
+  },
+];
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline:
+    "SPK’dan Türkiye Sigorta ve Goodyear İçin Bedelsiz Sermaye Artırımı Onayı",
+  description:
+    "SPK, Türkiye Sigorta AŞ ve Goodyear Lastikleri Türk AŞ’nin bedelsiz sermaye artırımı kapsamındaki pay ihraçlarını onayladı.",
+  datePublished: "2026-06-12T09:00:00+03:00",
+  dateModified: "2026-06-12T09:00:00+03:00",
+  url: "https://www.hocaileborsa.com/haber/turkiye-sigorta-goodyear-bedelsiz-sermaye-artirimi",
+  author: {
+    "@type": "Organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image:
+    "https://www.hocaileborsa.com/turkiye-sigorta-goodyear-bedelsiz-sermaye-artirimi.webp",
+  inLanguage: "tr",
+};
+
+export default function TurkiyeSigortaGoodyearBedelsizPage() {
   return (
-    <main className="min-h-screen bg-slate-950 text-slate-100">
+    <main className="min-h-screen bg-[#f8fafc] px-4 py-6 md:px-6">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      <section className="mx-auto w-full max-w-5xl px-4 py-6 sm:px-6 lg:px-8">
-        <div className="mb-5">
-          <Link
-            href="/"
-            className="inline-flex rounded-full border border-slate-700 px-4 py-2 text-sm font-semibold text-slate-300 transition hover:border-emerald-400 hover:text-emerald-300"
-          >
+      <div className="mx-auto max-w-4xl">
+        <nav
+          className="mb-5 flex items-center gap-2 text-sm text-slate-500"
+          aria-label="Breadcrumb"
+        >
+          <Link href="/" className="transition hover:text-blue-600">
             Ana Sayfa
           </Link>
-        </div>
+          <span className="text-slate-300">/</span>
+          <span className="font-medium text-slate-700">Haberler</span>
+        </nav>
 
-        <article className="overflow-hidden rounded-3xl border border-slate-800 bg-slate-900 shadow-2xl">
-          <div className="border-b border-slate-800 bg-gradient-to-br from-emerald-500/15 via-slate-900 to-slate-950 px-5 py-8 sm:px-8">
-            <div className="mb-4 flex flex-wrap gap-2">
-              <span className="rounded-full bg-emerald-500 px-3 py-1 text-xs font-bold text-slate-950">
-                SPK BÜLTENİ
-              </span>
-              <span className="rounded-full border border-slate-700 px-3 py-1 text-xs font-semibold text-slate-300">
-                12 Haziran 2026
-              </span>
-              <span className="rounded-full border border-slate-700 px-3 py-1 text-xs font-semibold text-slate-300">
-                TURSG / GOODY
-              </span>
-            </div>
+        <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_16px_rgba(15,23,42,0.07)]">
+          <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
+            <Image
+              src="/turkiye-sigorta-goodyear-bedelsiz-sermaye-artirimi.webp"
+              alt="Türkiye Sigorta ve Goodyear bedelsiz sermaye artırımı onayı"
+              fill
+              unoptimized
+              className="object-cover"
+            />
+          </div>
 
-            <h1 className="max-w-4xl text-3xl font-black leading-tight tracking-tight text-white sm:text-4xl">
+          <div className="p-6 md:p-10">
+            <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
               SPK’dan Türkiye Sigorta ve Goodyear İçin Bedelsiz Sermaye Artırımı
               Onayı
             </h1>
 
-            <p className="mt-5 max-w-3xl text-base leading-7 text-slate-300 sm:text-lg">
-              Sermaye Piyasası Kurulu’nun 2026/36 sayılı bülteninde, Türkiye
-              Sigorta AŞ ve Goodyear Lastikleri Türk AŞ’nin bedelsiz sermaye
-              artırımı kapsamındaki pay ihraçlarına onay verildi.
-            </p>
-          </div>
-
-          <div className="grid gap-5 px-5 py-6 sm:px-8 lg:grid-cols-2">
-            <div className="rounded-2xl border border-emerald-500/30 bg-emerald-500/10 p-5">
-              <p className="text-sm font-bold uppercase tracking-wide text-emerald-300">
-                Türkiye Sigorta AŞ
-              </p>
-              <h2 className="mt-2 text-2xl font-black text-white">TURSG</h2>
-              <div className="mt-4 space-y-3 text-sm text-slate-300">
-                <p>
-                  <strong className="text-white">Mevcut sermaye:</strong>{" "}
-                  10.000.000.000 TL
-                </p>
-                <p>
-                  <strong className="text-white">Yeni sermaye:</strong>{" "}
-                  20.000.000.000 TL
-                </p>
-                <p>
-                  <strong className="text-white">Bedelsiz artırım:</strong>{" "}
-                  10.000.000.000 TL
-                </p>
-                <p>
-                  <strong className="text-white">Kaynak:</strong> Kâr payından
-                </p>
-              </div>
+            <div className="mb-4 mt-4 flex flex-wrap items-center gap-3">
+              <span className="inline-flex items-center rounded-md bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700 ring-1 ring-inset ring-blue-600/20">
+                SPK Bülteni
+              </span>
+              <time dateTime="2026-06-12" className="text-sm text-slate-500">
+                12 Haziran 2026
+              </time>
+              <span className="text-slate-300">·</span>
+              <span className="text-sm text-slate-500">Hoca İle Borsa</span>
             </div>
 
-            <div className="rounded-2xl border border-cyan-500/30 bg-cyan-500/10 p-5">
-              <p className="text-sm font-bold uppercase tracking-wide text-cyan-300">
-                Goodyear Lastikleri Türk AŞ
-              </p>
-              <h2 className="mt-2 text-2xl font-black text-white">GOODY</h2>
-              <div className="mt-4 space-y-3 text-sm text-slate-300">
-                <p>
-                  <strong className="text-white">Mevcut sermaye:</strong>{" "}
-                  270.000.000 TL
-                </p>
-                <p>
-                  <strong className="text-white">Yeni sermaye:</strong>{" "}
-                  1.520.000.000 TL
-                </p>
-                <p>
-                  <strong className="text-white">Bedelsiz artırım:</strong>{" "}
-                  1.250.000.000 TL
-                </p>
-                <p>
-                  <strong className="text-white">Kaynak:</strong> İç kaynaklar
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="px-5 pb-8 sm:px-8">
-            <div className="prose prose-invert max-w-none prose-p:leading-8 prose-headings:text-white prose-strong:text-white">
-              <h2>SPK’dan iki şirkete bedelsiz sermaye artırımı onayı</h2>
-
+            <div className="mt-6 space-y-6 text-base leading-8 text-slate-700 md:text-lg">
               <p>
-                Sermaye Piyasası Kurulu, 10 Haziran 2026 tarihli 2026/36 sayılı
-                bülteninde halka açık ortaklıkların pay ihraçlarına ilişkin yeni
-                kararları yayımladı. Bültende Türkiye Sigorta AŞ ve Goodyear
-                Lastikleri Türk AŞ için bedelsiz sermaye artırımı kapsamındaki
-                pay ihraçları yer aldı.
+                Sermaye Piyasası Kurulu’nun 2026/36 sayılı bülteninde, Türkiye
+                Sigorta AŞ ve Goodyear Lastikleri Türk AŞ’nin bedelsiz sermaye
+                artırımı kapsamındaki pay ihraçlarına onay verildi. Karar,
+                özellikle TURSG ve GOODY hisselerini takip eden yatırımcıların
+                gündeminde öne çıktı.
               </p>
 
               <p>
-                Türkiye Sigorta tarafında mevcut sermayenin 10 milyar TL’den 20
-                milyar TL’ye çıkarılması öngörülüyor. SPK bülteninde yer alan
-                tabloya göre 10 milyar TL’lik bedelsiz sermaye artırımı kâr
-                payından karşılanacak.
+                SPK bültenine göre Türkiye Sigorta’nın sermayesi 10 milyar
+                TL’den 20 milyar TL’ye çıkarılacak. Goodyear Lastikleri Türk
+                AŞ’nin sermayesi ise 270 milyon TL’den 1 milyar 520 milyon TL’ye
+                yükseltilecek.
               </p>
 
-              <p>
-                Goodyear Lastikleri Türk AŞ tarafında ise mevcut 270 milyon TL
-                sermayenin 1 milyar 520 milyon TL’ye çıkarılması planlanıyor.
-                Şirketin bedelsiz sermaye artırımı tutarı 1 milyar 250 milyon TL
-                olarak açıklandı. Bu artırımın iç kaynaklardan karşılanacağı
-                belirtildi.
-              </p>
+              <div className="grid gap-4 md:grid-cols-2">
+                <div className="rounded-xl border border-blue-200 bg-blue-50 p-4">
+                  <h2 className="text-base font-semibold text-blue-900">
+                    Türkiye Sigorta AŞ
+                  </h2>
+                  <div className="mt-3 space-y-2 text-sm leading-6 text-blue-900">
+                    <p>
+                      <strong>Mevcut sermaye:</strong> 10.000.000.000 TL
+                    </p>
+                    <p>
+                      <strong>Yeni sermaye:</strong> 20.000.000.000 TL
+                    </p>
+                    <p>
+                      <strong>Artırım tutarı:</strong> 10.000.000.000 TL
+                    </p>
+                    <p>
+                      <strong>Kaynak:</strong> Kâr payından
+                    </p>
+                  </div>
+                </div>
 
-              <h2>Bedelsiz sermaye artırımı yatırımcı için ne ifade eder?</h2>
-
-              <p>
-                Bedelsiz sermaye artırımı, şirketin iç kaynaklarını veya kâr
-                payını sermayeye eklemesiyle gerçekleşir. Bu işlem sonucunda
-                yatırımcının sahip olduğu lot sayısı artar; ancak teorik olarak
-                şirketin toplam piyasa değeri aynı kaldığı için hisse fiyatı
-                bölünme etkisiyle yeniden ayarlanır.
-              </p>
-
-              <p>
-                Bu nedenle bedelsiz sermaye artırımı tek başına şirket değerinin
-                arttığı anlamına gelmez. Yatırımcı açısından asıl takip edilmesi
-                gereken nokta, şirketin finansal yapısı, kârlılığı, büyüme
-                performansı ve sermaye artırımının bilanço üzerindeki etkisidir.
-              </p>
-
-              <h2>TURSG ve GOODY hisselerinde takip edilecek başlıklar</h2>
-
-              <p>
-                SPK onayının ardından piyasada Türkiye Sigorta ve Goodyear
-                hisselerine yönelik haber akışı yakından takip edilecek. Bedelsiz
-                sermaye artırımı sürecinde hak kullanım tarihi, düzeltilmiş fiyat
-                ve lot değişimi gibi detaylar yatırımcıların gündeminde olacak.
-              </p>
-
-              <p>
-                Özellikle kısa vadeli fiyatlamalarda haber etkisi görülebilir.
-                Ancak yatırımcıların yalnızca bedelsiz sermaye artırımı haberine
-                göre işlem yapmak yerine şirketlerin temel verilerini, teknik
-                görünümünü ve genel piyasa koşullarını birlikte değerlendirmesi
-                önem taşır.
-              </p>
-
-              <div className="mt-8 rounded-2xl border border-slate-700 bg-slate-950 p-5">
-                <h3 className="mt-0 text-lg font-black text-white">
-                  Kısa Özet
-                </h3>
-                <ul className="mb-0 space-y-2 text-slate-300">
-                  <li>
-                    SPK, Türkiye Sigorta ve Goodyear için bedelsiz sermaye
-                    artırımı kapsamındaki pay ihraçlarını onayladı.
-                  </li>
-                  <li>
-                    Türkiye Sigorta’nın sermayesi 10 milyar TL’den 20 milyar
-                    TL’ye çıkarılacak.
-                  </li>
-                  <li>
-                    Goodyear’ın sermayesi 270 milyon TL’den 1,52 milyar TL’ye
-                    yükseltilecek.
-                  </li>
-                  <li>
-                    TURSG tarafındaki artırım kâr payından, GOODY tarafındaki
-                    artırım ise iç kaynaklardan karşılanacak.
-                  </li>
-                </ul>
+                <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4">
+                  <h2 className="text-base font-semibold text-emerald-900">
+                    Goodyear Lastikleri Türk AŞ
+                  </h2>
+                  <div className="mt-3 space-y-2 text-sm leading-6 text-emerald-900">
+                    <p>
+                      <strong>Mevcut sermaye:</strong> 270.000.000 TL
+                    </p>
+                    <p>
+                      <strong>Yeni sermaye:</strong> 1.520.000.000 TL
+                    </p>
+                    <p>
+                      <strong>Artırım tutarı:</strong> 1.250.000.000 TL
+                    </p>
+                    <p>
+                      <strong>Kaynak:</strong> İç kaynaklar
+                    </p>
+                  </div>
+                </div>
               </div>
 
-              <p className="text-sm text-slate-400">
-                Bu içerik yatırım tavsiyesi değildir. Haber, SPK bülteninde yer
-                alan resmi bilgiler esas alınarak hazırlanmıştır.
-              </p>
+              <div className="space-y-5">
+                {sermayeArtirimlari.map((haber) => (
+                  <section
+                    key={haber.baslik}
+                    className="rounded-xl border border-slate-200 bg-slate-50 p-4"
+                  >
+                    <h2 className="text-base font-semibold text-slate-800">
+                      {haber.baslik}
+                    </h2>
+                    <p className="mt-1.5 text-sm leading-relaxed text-slate-600">
+                      {haber.metin}
+                    </p>
+                  </section>
+                ))}
+              </div>
+
+              <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm font-medium leading-7 text-emerald-900 md:text-base">
+                Kısa vadede TURSG ve GOODY hisselerinde bedelsiz sermaye
+                artırımı haberinin fiyatlamaya etkisi takip edilecek. Ancak
+                yatırımcılar için asıl önemli nokta, şirketlerin temel finansal
+                görünümü ve genel piyasa koşulları olacak.
+              </div>
+
+              <div className="rounded-xl border border-blue-200 bg-blue-50 p-4 text-sm font-medium leading-7 text-blue-900 md:text-base">
+                Bedelsiz sermaye artırımı sonrasında yatırımcıların lot sayısı
+                artarken, hisse fiyatı teorik olarak bölünme oranına göre
+                düzeltilir. Bu nedenle toplam yatırım değeri işlem anında tek
+                başına artmış sayılmaz.
+              </div>
+
+              <HaberIlgiliBolumler
+                slug="turkiye-sigorta-goodyear-bedelsiz-sermaye-artirimi"
+                baslik="Türkiye Sigorta ve Goodyear Bedelsiz Sermaye Artırımı"
+              />
+
+              <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">
+                ⚠️ Bu haber bilgilendirme amaçlıdır, yatırım tavsiyesi değildir.
+              </div>
             </div>
           </div>
         </article>
-      </section>
+      </div>
     </main>
   );
 }
