@@ -2,20 +2,19 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
-
 export const metadata: Metadata = {
-  title: "11 Haziran 2026 Günlük Borsa Özeti | Hoca ile Borsa",
+  title: "12 Haziran 2026 Günlük Borsa Özeti | Hoca ile Borsa",
   description:
-    "11 Haziran 2026 BIST 100 kapanışı, en çok yükselen ve düşen hisseler, para girişi-çıkışı, en hacimli hisseler, ekonomik takvim ve kurum dağılımı.",
+    "12 Haziran 2026 BIST 100 kapanışı, en çok yükselen ve düşen hisseler, para girişi-çıkışı, en hacimli hisseler, ekonomik takvim ve kurum dağılımı.",
   alternates: {
     canonical:
-      "https://www.hocaileborsa.com/borsa/gunluk-borsa-ozeti/11-haziran-2026",
+      "https://www.hocaileborsa.com/borsa/gunluk-borsa-ozeti/12-haziran-2026",
   },
   openGraph: {
-    title: "11 Haziran 2026 Günlük Borsa Özeti",
+    title: "12 Haziran 2026 Günlük Borsa Özeti",
     description:
       "BIST 100 kapanışı, günlük piyasa özeti, en çok yükselenler, düşenler, para girişi-çıkışı ve kurum dağılımı.",
-    url: "https://www.hocaileborsa.com/borsa/gunluk-borsa-ozeti/11-haziran-2026",
+    url: "https://www.hocaileborsa.com/borsa/gunluk-borsa-ozeti/12-haziran-2026",
     siteName: "Hoca ile Borsa",
     type: "article",
     images: [
@@ -23,13 +22,13 @@ export const metadata: Metadata = {
         url: "https://www.hocaileborsa.com/gunluk-ozet.webp",
         width: 1200,
         height: 675,
-        alt: "11 Haziran 2026 Günlük Borsa Özeti",
+        alt: "12 Haziran 2026 Günlük Borsa Özeti",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "11 Haziran 2026 Günlük Borsa Özeti",
+    title: "12 Haziran 2026 Günlük Borsa Özeti",
     description:
       "BIST 100 kapanışı, en çok yükselen ve düşen hisseler, para girişi-çıkışı ve kurum dağılımı.",
     images: ["https://www.hocaileborsa.com/gunluk-ozet.webp"],
@@ -37,109 +36,93 @@ export const metadata: Metadata = {
 };
 
 const bistVeri = {
-  tarih: "11.06.2026",
-  kapanis: "13743.50",
-  degisimYuzde: -0.01,
-  toplamHacim: "275.670.513.721",
+  tarih: "12.06.2026",
+  kapanis: "13938.48",
+  degisimYuzde: 1.42,
+  toplamHacim: "329.167.897.412",
 };
 
 const tumYukselenler = [
-  { kod: "INFO", fark: "+10,00%" },
-  { kod: "FZLGY", fark: "+10,00%" },
-  { kod: "GSDHO", fark: "+10,00%" },
-  { kod: "ESCOM", fark: "+10,00%" },
-  { kod: "TERA", fark: "+10,00%" },
-  { kod: "BESTE", fark: "+9,99%" },
-  { kod: "HPSOLF2", fark: "+9,97%" },
-  { kod: "EDATA", fark: "+9,97%" },
-  { kod: "GENKM", fark: "+9,94%" },
+  { kod: "ARMGD", fark: "+10,00%" },
+  { kod: "SANFM", fark: "+10,00%" },
+  { kod: "ENERY", fark: "+10,00%" },
+  { kod: "CEMAS", fark: "+10,00%" },
+  { kod: "SMRVA", fark: "+9,99%" },
+  { kod: "PKART", fark: "+9,99%" },
+  { kod: "PRZMA", fark: "+9,99%" },
+  { kod: "GZNMI", fark: "+9,98%" },
 ];
 
 const tumDusenler = [
-  { kod: "IHLASR", fark: "-15,38%" },
-  { kod: "ISKPL", fark: "-10,00%" },
-  { kod: "RALYH", fark: "-10,00%" },
   { kod: "RUBNS", fark: "-10,00%" },
-  { kod: "NETCD", fark: "-10,00%" },
-  { kod: "HTPSBF2", fark: "-10,00%" },
-  { kod: "MAGEN", fark: "-9,97%" },
-  { kod: "EMPAE", fark: "-9,97%" },
-  { kod: "ALGYO", fark: "-9,91%" },
+  { kod: "ASTOR", fark: "-10,00%" },
+  { kod: "ENDAE", fark: "-9,98%" },
+  { kod: "EMPAE", fark: "-9,95%" },
+  { kod: "ISKPL", fark: "-9,91%" },
+  { kod: "OSTIM", fark: "-8,94%" },
+  { kod: "ALGYO", fark: "-8,29%" },
+  { kod: "GSDDE", fark: "-8,26%" },
 ];
 
 const tumHacimliler = [
-  { kod: "SASA", hacim: "17.240.437.673" },
-  { kod: "ASTOR", hacim: "14.963.284.306" },
-  { kod: "THYAO", hacim: "10.029.234.245" },
-  { kod: "ASELS", hacim: "9.483.810.925" },
-  { kod: "AKBNK", hacim: "9.093.307.140" },
-  { kod: "ISCTR", hacim: "6.875.152.694" },
-  { kod: "YKBNK", hacim: "6.004.122.242" },
-  { kod: "EUPWR", hacim: "5.751.814.545" },
-  { kod: "HEKTS", hacim: "4.630.275.993" },
+  { kod: "THYAO", hacim: "26.865.029.766" },
+  { kod: "AKBNK", hacim: "17.627.062.937" },
+  { kod: "ASTOR", hacim: "11.513.621.972" },
+  { kod: "ISCTR", hacim: "10.973.056.961" },
+  { kod: "ASELS", hacim: "9.920.927.219" },
+  { kod: "YKBNK", hacim: "9.795.601.090" },
+  { kod: "GARAN", hacim: "8.384.800.328" },
+  { kod: "TERA", hacim: "8.039.643.505" },
 ];
 
 const tumParaGirisi = [
-  { kod: "SASA", tutar: "+278.576.331" },
-  { kod: "TERA", tutar: "+153.928.575" },
-  { kod: "TCELL", tutar: "+121.604.673" },
-  { kod: "GARAN", tutar: "+73.428.218" },
-  { kod: "ASTOR", tutar: "+67.057.295" },
-  { kod: "EREGL", tutar: "+63.148.067" },
-  { kod: "TEHOL", tutar: "+53.128.066" },
-  { kod: "KRDMD", tutar: "+46.688.819" },
+  { kod: "TERA", tutar: "+572.039.622" },
+  { kod: "AKBNK", tutar: "+482.624.958" },
+  { kod: "YKBNK", tutar: "+325.448.338" },
+  { kod: "THYAO", tutar: "+316.713.195" },
+  { kod: "TTKOM", tutar: "+164.782.855" },
+  { kod: "GARAN", tutar: "+156.376.383" },
+  { kod: "SAHOL", tutar: "+125.709.359" },
+  { kod: "EREGL", tutar: "+109.113.900" },
 ];
 
 const tumParaCikisi = [
-  { kod: "BIMAS", tutar: "-103.195.774" },
-  { kod: "NETCD", tutar: "-84.337.147" },
-  { kod: "THYAO", tutar: "-79.655.663" },
-  { kod: "RALYH", tutar: "-52.334.398" },
-  { kod: "DAPGM", tutar: "-51.347.985" },
-  { kod: "ULKER", tutar: "-48.478.859" },
-  { kod: "ISCTR", tutar: "-36.159.730" },
-  { kod: "HALKB", tutar: "-33.633.776" },
+  { kod: "ASTOR", tutar: "-371.201.615" },
+  { kod: "BIMAS", tutar: "-103.247.544" },
+  { kod: "PETKM", tutar: "-72.472.087" },
+  { kod: "DOFRB", tutar: "-40.210.903" },
+  { kod: "ULKER", tutar: "-40.197.652" },
+  { kod: "MAGEN", tutar: "-37.751.208" },
+  { kod: "TUPRS", tutar: "-30.974.359" },
+  { kod: "EUPWR", tutar: "-30.781.800" },
+  { kod: "HALKB", tutar: "-28.224.969" },
 ];
 
 const enCokAlisYapanKurumlar = [
-  { kurum: "TERA", hacim: "2.561.701.205", oran: "%43,32" },
-  { kurum: "A1 CAPITAL", hacim: "594.134.473", oran: "%10,05" },
-  { kurum: "PUSULA YAT.", hacim: "583.089.609", oran: "%9,86" },
-  { kurum: "OYAK", hacim: "294.181.274", oran: "%4,98" },
-  { kurum: "NEO MENKUL", hacim: "283.505.524", oran: "%4,83" },
+  { kurum: "YAPI KREDI", hacim: "3.547.145.667", oran: "%23,05" },
+  { kurum: "BANK OF AMERICA", hacim: "3.195.454.442", oran: "%20,77" },
+  { kurum: "AK", hacim: "2.591.269.316", oran: "%16,84" },
+  { kurum: "TERA", hacim: "2.488.472.289", oran: "%16,17" },
+  { kurum: "PUSULA YAT.", hacim: "1.582.057.509", oran: "%10,28" },
 ];
 
 const enCokSatisYapanKurumlar = [
-  { kurum: "INFO", hacim: "-1.006.575.135", oran: "%17,02" },
-  { kurum: "QNB YATIRIM", hacim: "-517.373.437", oran: "%8,75" },
-  { kurum: "YATIRIM FINANSMAN", hacim: "-449.499.861", oran: "%7,60" },
-  { kurum: "IS", hacim: "-435.657.023", oran: "%7,37" },
-  { kurum: "TACIRLER", hacim: "-398.579.601", oran: "%6,74" },
+  { kurum: "IS", hacim: "-1.693.880.209", oran: "%11,01" },
+  { kurum: "INFO", hacim: "-1.529.846.499", oran: "%9,94" },
+  { kurum: "DESTEK", hacim: "-1.344.794.268", oran: "%8,74" },
+  { kurum: "HALK", hacim: "-1.159.070.959", oran: "%7,53" },
+  { kurum: "TEB", hacim: "-1.158.065.996", oran: "%7,53" },
 ];
 
 const enCokHacimYapanKurumlar = [
-  { kurum: "YAPI KREDI", hacim: "77.466.018.095", oran: "%14,05" },
-  { kurum: "BANK OF AMERICA", hacim: "66.830.420.031", oran: "%12,12" },
-  { kurum: "IS", hacim: "55.678.319.260", oran: "%10,10" },
-  { kurum: "AK", hacim: "47.415.597.415", oran: "%8,60" },
-  { kurum: "DENIZ", hacim: "24.707.367.185", oran: "%4,48" },
+  { kurum: "YAPI KREDI", hacim: "94.400.779.568", oran: "%14,34" },
+  { kurum: "BANK OF AMERICA", hacim: "83.797.699.045", oran: "%12,73" },
+  { kurum: "IS", hacim: "67.548.511.585", oran: "%10,26" },
+  { kurum: "AK", hacim: "54.591.799.545", oran: "%8,29" },
+  { kurum: "TACIRLER", hacim: "26.963.721.815", oran: "%4,10" },
 ];
 
 const ekonomikTakvimVerileri = [
-  {
-    tarih: "11.06.2026",
-    kayitlar: [
-      {
-        saat: "14:00",
-        ulke: "TR",
-        gosterge: "TCMB Faiz Kararı",
-        onem: "kirmizi" as const,
-        aciklanan: "37.00%",
-        beklenti: "37,00%",
-        onceki: "37,00%",
-      },
-    ],
-  },
   {
     tarih: "12.06.2026",
     kayitlar: [
@@ -148,7 +131,7 @@ const ekonomikTakvimVerileri = [
         ulke: "TR",
         gosterge: "İhracat Birim Değer Endeksi (yıllık %)",
         onem: "turuncu-gri" as const,
-        aciklanan: "-",
+        aciklanan: "13.7%",
         beklenti: "-",
         onceki: "12.3%",
       },
@@ -157,7 +140,7 @@ const ekonomikTakvimVerileri = [
         ulke: "TR",
         gosterge: "İthalat Birim Değer Endeksi (yıllık %)",
         onem: "turuncu-gri" as const,
-        aciklanan: "-",
+        aciklanan: "11.3%",
         beklenti: "-",
         onceki: "6.3%",
       },
@@ -166,7 +149,7 @@ const ekonomikTakvimVerileri = [
         ulke: "TR",
         gosterge: "İhracat Miktar Endeksi (yıllık %)",
         onem: "turuncu-gri" as const,
-        aciklanan: "-",
+        aciklanan: "7.6%",
         beklenti: "-",
         onceki: "-16.7%",
       },
@@ -175,7 +158,7 @@ const ekonomikTakvimVerileri = [
         ulke: "TR",
         gosterge: "İthalat Miktar Endeksi (yıllık %)",
         onem: "turuncu-gri" as const,
-        aciklanan: "-",
+        aciklanan: "-7.3%",
         beklenti: "-",
         onceki: "1.8%",
       },
@@ -184,9 +167,59 @@ const ekonomikTakvimVerileri = [
         ulke: "TR",
         gosterge: "Cari İşlemler Dengesi (Milyon USD)",
         onem: "kirmizi" as const,
-        aciklanan: "-",
+        aciklanan: "-5.695",
         beklenti: "-5.630",
         onceki: "-9.672",
+      },
+    ],
+  },
+  {
+    tarih: "15.06.2026",
+    kayitlar: [
+      {
+        saat: "10:00",
+        ulke: "TR",
+        gosterge: "TE Arındırılmış Sanayi Üretimi (yıllık değişim)",
+        onem: "kirmizi" as const,
+        aciklanan: "-",
+        beklenti: "-",
+        onceki: "-1.1%",
+      },
+      {
+        saat: "11:00",
+        ulke: "TR",
+        gosterge: "Merkezi Yönetim Bütçe Giderleri (aylık, mln tl)",
+        onem: "kirmizi" as const,
+        aciklanan: "-",
+        beklenti: "-",
+        onceki: "1.524.891",
+      },
+      {
+        saat: "11:00",
+        ulke: "TR",
+        gosterge: "Merkezi Yönetim Bütçe Gelirleri (aylık, mln tl)",
+        onem: "kirmizi" as const,
+        aciklanan: "-",
+        beklenti: "-",
+        onceki: "1.186.164",
+      },
+      {
+        saat: "11:00",
+        ulke: "TR",
+        gosterge: "Merkezi Yönetim Bütçe Dengesi (aylık, mln tl)",
+        onem: "kirmizi" as const,
+        aciklanan: "-",
+        beklenti: "-",
+        onceki: "-338.727",
+      },
+      {
+        saat: "11:00",
+        ulke: "TR",
+        gosterge: "Merkezi Yönetim Bütçe Faiz Dışı Dengesi (aylık, milyon TL)",
+        onem: "kirmizi" as const,
+        aciklanan: "-",
+        beklenti: "-",
+        onceki: "-81.095",
       },
     ],
   },
@@ -423,7 +456,7 @@ export default function GunlukBorsaOzetiPage() {
         </div>
 
         <h1 className="mb-6 text-3xl font-bold text-zinc-900">
-          11 Haziran 2026 Günlük Borsa Özeti
+          12 Haziran 2026 Günlük Borsa Özeti
         </h1>
 
         <div className="mb-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
@@ -431,7 +464,7 @@ export default function GunlukBorsaOzetiPage() {
             <div className="relative aspect-[16/9] w-full">
               <Image
                 src="/gunluk-ozet.webp"
-                alt="11 Haziran 2026 günlük borsa özeti görseli"
+                alt="12 Haziran 2026 günlük borsa özeti görseli"
                 fill
                 className="object-contain"
                 priority
@@ -589,11 +622,11 @@ export default function GunlukBorsaOzetiPage() {
 
         <section className="mt-6 rounded-2xl border border-zinc-200 bg-white p-6">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">
-            11 Haziran 2026 Günlük Borsa Özeti Hakkında
+            12 Haziran 2026 Günlük Borsa Özeti Hakkında
           </h2>
 
           <p className="mb-4 leading-7 text-zinc-700">
-            11 Haziran 2026 günlük borsa özeti sayfası, Borsa İstanbul
+            12 Haziran 2026 günlük borsa özeti sayfası, Borsa İstanbul
             piyasalarında yaşanan güncel gelişmeleri tek ekranda takip etmek
             isteyen yatırımcılar için hazırlanmıştır. Bu sayfada BIST 100
             endeksi kapanış verileri, günlük değişim oranları, en çok yükselen
