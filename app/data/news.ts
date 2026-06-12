@@ -9,6 +9,14 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 985,
+    title: "SPK’dan Türkiye Sigorta ve Goodyear İçin Bedelsiz Sermaye Artırımı Onayı",
+    href: "/haber/turkiye-sigorta-goodyear-bedelsiz-sermaye-artirimi",
+    image: "/turkiye-sigorta-goodyear-bedelsiz-sermaye-artirimi.webp",
+    alt: "Türkiye Sigorta ve Goodyear bedelsiz sermaye artırımı onayı",
+    publishedAt: "2026-06-12",
+  },
+  {
     id: 984,
     title: "Beta Enerji Halka Arzında Talep Toplama Tarihleri Açıklandı",
     href: "/haber/beta-enerji-halka-arz-talep-toplama-tarihleri-aciklandi",
