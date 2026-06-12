@@ -4,6 +4,9 @@ export const metadata = {
   title: "Emeklilik Fonları Getiri Analizi | Hoca İle Borsa",
   description:
     "Emeklilik fonlarını TEFAS getiri verilerine göre sıralayın ve karşılaştırın.",
+  alternates: {
+    canonical: "https://www.hocaileborsa.com/fonlar/getiri/emeklilik-fonlari-getiri",
+  },
 };
 
 export default function Page({

@@ -1,5 +1,14 @@
 import FonGetiriExcelPage from "../_components/FonGetiriExcelPage";
 
+export const metadata = {
+  title: "Menkul Kıymet Yatırım Fonları Getiri Analizi | Hoca İle Borsa",
+  description:
+    "Menkul kıymet yatırım fonlarının getiri verilerini dönemsel olarak inceleyin.",
+  alternates: {
+    canonical: "https://www.hocaileborsa.com/fonlar/getiri/menkul-kiymet-yatirim-fonlari",
+  },
+};
+
 type Props = {
   searchParams: Promise<{
     q?: string;

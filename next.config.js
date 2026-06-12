@@ -97,11 +97,38 @@ const nextConfig = {
   },
 
   async redirects() {
-    return haberRedirects.map((r) => ({
-      source: r.source,
-      destination: r.destination,
-      permanent: true,
-    }));
+    return [
+      ...haberRedirects.map((r) => ({
+        source: r.source,
+        destination: r.destination,
+        permanent: true,
+      })),
+      // Eski numaralı haber URL şemaları (örn. /haber/haber-994,
+      // /haberler/haber-1) için özel bir eşleşme bulunamazsa haber
+      // listesine yönlendir. Yukarıdaki özel haberRedirects öncelikli olur.
+      {
+        source: "/haber/haber-:id",
+        destination: "/haberler",
+        permanent: true,
+      },
+      {
+        source: "/haberler/haber-:id",
+        destination: "/haberler",
+        permanent: true,
+      },
+      // Artık var olmayan fon getiri kategorileri ana getiri sayfasına
+      // yönlendirilir.
+      {
+        source: "/fonlar/getiri/girisim-sermayesi-yatirim-fonlari-getiri",
+        destination: "/fonlar/getiri",
+        permanent: true,
+      },
+      {
+        source: "/fonlar/getiri/gayrimenkul-yatirim-fonlari-getiri",
+        destination: "/fonlar/getiri",
+        permanent: true,
+      },
+    ];
   },
 
   async headers() {
