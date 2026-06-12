@@ -11,9 +11,9 @@ import Link from "next/link";
 
 const haberler = [
   {
-    title: "11 Haziran 2026 En Çok Para Girişi ve Çıkışı Olan Hisseler",
+    title: "12 Haziran 2026 En Çok Para Girişi ve Çıkışı Olan Hisseler",
     href: "/borsa/dikkat-cekenler/11-haziran-2026-en-cok-para-girisi-cikisi-olan-hisseler",
-    tarih: "11.06.2026",
+    tarih: "12.06.2026",
     etiket: "Para Akışı",
   },
   {

@@ -42,10 +42,10 @@ export default function BetaEnerjiVeTeknolojiASPage() {
   ];
 
   const sermayeBilgileri = [
-    { label: "Mevcut Sermaye", value: "350.000.000 TL" },
-    { label: "Yeni Sermaye", value: "405.000.000 TL" },
-    { label: "Sermaye Artırımı", value: "55.000.000 TL" },
-    { label: "Mevcut Pay Satışı", value: "5.750.000 TL nominal" },
+    { label: "Mevcut Sermaye", value: "350.000.000 Lot" },
+    { label: "Yeni Sermaye", value: "405.000.000 Lot" },
+    { label: "Sermaye Artırımı", value: "55.000.000 Lot" },
+    { label: "Mevcut Pay Satışı", value: "5.750.000 Lot nominal" },
   ];
 
   const fonKullanim = [
