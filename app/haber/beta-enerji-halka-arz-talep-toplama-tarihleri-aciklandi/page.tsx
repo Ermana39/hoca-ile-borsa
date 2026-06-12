@@ -4,13 +4,12 @@ import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 
 export const metadata: Metadata = {
-  title:
-    "Beta Enerji Halka Arzında Talep Toplama Tarihleri Belli Oldu",
+  title: "Beta Enerji Halka Arzında Talep Toplama Tarihleri Açıklandı",
   description:
-    "Beta Enerji halka arzında talep toplama 17-18-19 Haziran 2026 tarihlerinde yapılacak. Pay başına fiyat 40 TL olarak belirlenirken, halka arz büyüklüğünün yaklaşık 2,4 milyar TL olması hedefleniyor.",
+    "Beta Enerji halka arzında talep toplama 17-18-19 Haziran 2026 tarihlerinde yapılacak. Pay başına fiyat 40 TL olarak belirlenirken halka arz büyüklüğünün yaklaşık 2,4 milyar TL olması hedefleniyor.",
   alternates: {
     canonical:
-      "https://www.hocaileborsa.com/haber/beta-enerji-halka-arz-talep-toplama-tarihleri",
+      "https://www.hocaileborsa.com/haber/beta-enerji-halka-arz-talep-toplama-tarihleri-aciklandi",
   },
 };
 
@@ -60,13 +59,12 @@ const betaEnerjiBasliklari = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  headline:
-    "Beta Enerji Halka Arzında Talep Toplama Tarihleri Belli Oldu",
+  headline: "Beta Enerji Halka Arzında Talep Toplama Tarihleri Açıklandı",
   description:
     "Beta Enerji halka arzında talep toplama 17-18-19 Haziran 2026 tarihlerinde yapılacak. Pay başına fiyat 40 TL olarak belirlenirken halka arz büyüklüğünün yaklaşık 2,4 milyar TL olması hedefleniyor.",
   datePublished: "2026-06-12T10:00:00+03:00",
   dateModified: "2026-06-12T10:00:00+03:00",
-  url: "https://www.hocaileborsa.com/haber/beta-enerji-halka-arz-talep-toplama-tarihleri",
+  url: "https://www.hocaileborsa.com/haber/beta-enerji-halka-arz-talep-toplama-tarihleri-aciklandi",
   author: {
     "@type": "Organization",
     name: "Hoca İle Borsa",
@@ -106,22 +104,24 @@ export default function HaberBetaEnerjiHalkaArzPage() {
         </nav>
 
         <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_16px_rgba(15,23,42,0.07)]">
-          <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
+          <div className="w-full overflow-hidden bg-white">
             <Image
               src="/beta-enerji-halka-arz.webp"
-              alt="Beta Enerji halka arz talep toplama tarihleri"
-              fill
+              alt="Beta Enerji halka arz talep toplama tarihleri açıklandı"
+              width={1200}
+              height={900}
               unoptimized
-              className="object-cover"
+              priority
+              className="h-auto w-full object-contain"
             />
           </div>
 
           <div className="p-6 md:p-10">
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
-              Beta Enerji Halka Arzında Talep Toplama Tarihleri Belli Oldu
+              Beta Enerji Halka Arzında Talep Toplama Tarihleri Açıklandı
             </h1>
 
-            <div className="mb-4 flex flex-wrap items-center gap-3">
+            <div className="mb-4 mt-3 flex flex-wrap items-center gap-3">
               <span className="inline-flex items-center rounded-md bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700 ring-1 ring-inset ring-blue-600/20">
                 Halka Arz
               </span>
@@ -135,9 +135,9 @@ export default function HaberBetaEnerjiHalkaArzPage() {
             <div className="mt-6 space-y-6 text-base leading-8 text-slate-700 md:text-lg">
               <p>
                 Türkiye’nin önde gelen transformatör üreticilerinden Beta Enerji,
-                halka arz sürecinde yatırımcılarla buluşmaya hazırlanıyor.
-                Şirket payları için talep toplama işlemleri 17-18-19 Haziran
-                2026 tarihlerinde yapılacak.
+                halka arz sürecinde yatırımcılarla buluşmaya hazırlanıyor. Şirket
+                payları için talep toplama işlemleri 17-18-19 Haziran 2026
+                tarihlerinde yapılacak.
               </p>
 
               <p>
@@ -279,8 +279,8 @@ export default function HaberBetaEnerjiHalkaArzPage() {
               </div>
 
               <HaberIlgiliBolumler
-                slug="beta-enerji-halka-arz-talep-toplama-tarihleri"
-                baslik="Beta Enerji Halka Arzında Talep Toplama Tarihleri Belli Oldu"
+                slug="beta-enerji-halka-arz-talep-toplama-tarihleri-aciklandi"
+                baslik="Beta Enerji Halka Arzında Talep Toplama Tarihleri Açıklandı"
               />
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">

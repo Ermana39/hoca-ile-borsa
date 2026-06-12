@@ -479,6 +479,29 @@ export default function BetaEnerjiVeTeknolojiASPage() {
           </aside>
         </section>
 
+        <section className="mt-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+          <div className="border-b border-slate-200 bg-slate-50 px-6 py-4">
+            <h2 className="text-lg font-bold text-slate-900">
+              Beta Enerji Halka Arz Video İncelemesi
+            </h2>
+            <p className="mt-1 text-sm text-slate-600">
+              Halka arz detaylarını video anlatımıyla izlemek için aşağıdaki içerikten yararlanabilirsiniz.
+            </p>
+          </div>
+
+          <div className="p-4 sm:p-6">
+            <div className="relative aspect-video w-full overflow-hidden rounded-2xl bg-slate-100">
+              <iframe
+                src="https://www.youtube.com/embed/K6Vq35RbTyg"
+                title="Beta Enerji Halka Arz Video İncelemesi"
+                className="absolute inset-0 h-full w-full"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+              />
+            </div>
+          </div>
+        </section>
+
         <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <h2 className="mb-3 text-lg font-bold text-slate-900">
             Beta Enerji ve Teknoloji A.Ş. Halka Arz Değerlendirmesi
