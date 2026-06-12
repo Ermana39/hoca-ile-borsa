@@ -37,6 +37,16 @@ const fonKutulari = [
     seoDescription:
       "Fonların geçmiş dönem verilerini inceleyerek tarihsel performans, fiyat hareketi ve dönemsel değişimleri daha detaylı takip edebilirsiniz.",
   },
+  {
+    title: "Fon Kapanış Etki Analizi",
+    desc: "TLY, PHE ve PBR fonlarının portföyündeki hisselerin kapanış marjına göre ertesi gün fiyatına etkisini inceleyin.",
+    href: "/fonlar/etki-analizi",
+    image: "/fonlar-getiri.png",
+    alt: "Fon kapanış etki analizi görseli",
+    titleClassName: "text-[19px] md:text-[21px]",
+    seoDescription:
+      "Fon portföyündeki hisselerin günlük kapanış marjlarını kullanarak fonun ertesi gün fiyatına olan tahmini etkisini hesaplı bir tablo üzerinden görüntüleyin.",
+  },
 ];
 
 const videoKartlari = [
