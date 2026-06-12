@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import HaberKart from "@/components/HaberKart";
-import { getAllNews } from "@/lib/haberler";
+import { getAllNews, type NewsItem } from "@/lib/haberler";
 
 export const revalidate = 86400;
 
@@ -14,8 +14,22 @@ export const metadata: Metadata = {
   },
 };
 
+const betaEnerjiHaber: NewsItem = {
+  id: 986,
+  href: "/haber/beta-enerji-halka-arzi-kac-lot-verir",
+  title: "Beta Enerji Halka Arzı Kaç Lot Verir? Kişi Başı Kaç Lot Düşer?",
+  alt: "Beta Enerji halka arzı kaç lot verir, kişi başı kaç lot düşer?",
+  image: "/beta-enerji-halka-arz-kac-lot-verir.webp",
+  publishedAt: "2026-06-12",
+};
+
 export default function HaberlerPage() {
-  const haberler = getAllNews();
+  const haberler: NewsItem[] = [
+    betaEnerjiHaber,
+    ...getAllNews().filter(
+      (item) => item.href !== "/haber/beta-enerji-halka-arzi-kac-lot-verir"
+    ),
+  ];
 
   return (
     <main className="min-h-screen bg-[#f8fafc] px-4 py-6 md:px-6">

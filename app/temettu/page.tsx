@@ -4,55 +4,50 @@ export const metadata = {
   alternates: { canonical: "https://www.hocaileborsa.com/temettu" },
 };
 
-import Image from "next/image";
 import Link from "next/link";
+import { IconTile } from "@/components/icons/IconTile";
+import type { CategoryIconName } from "@/components/icons/CategoryIcon";
 
 const temettuKutulari = [
   {
     title: "Temettü Eğitimi",
     href: "/temettu/temettu-egitimi",
-    image: "/temettu-egitimi-yatay.png",
-    alt: "Temettü Eğitimi görseli",
+    icon: "temettu-egitimi" as CategoryIconName,
     description:
       "Temettü nedir, nasıl işler, hak kullanım tarihi ve ödeme tarihi gibi temel konuları daha anlaşılır şekilde öğrenebilirsiniz.",
   },
   {
     title: "Haziran Ayı Temettü Verenler",
     href: "/temettu/haziran-ayi-temettu-takvimi",
-    image: "/haziran-ayi-temettu-verenler-yatay.png",
-    alt: "Haziran Ayı Temettü Verenler görseli",
+    icon: "temettu-takvim" as CategoryIconName,
     description:
       "Haziran ayı temettü takviminde yer alan şirketleri inceleyerek hangi hisselerin ödeme yapacağını görebilirsiniz.",
   },
   {
     title: "Temmuz Ayı Temettü Verenler",
     href: "/temettu/temmuz-ayi-temettu-takvimi",
-    image: "/temmuz-ayi-temettu-verenler-yatay.png",
-    alt: "Temmuz Ayı Temettü Verenler görseli",
+    icon: "temettu-takvim" as CategoryIconName,
     description:
       "Temmuz ayında temettü veren şirketleri görüntüleyerek yaz dönemindeki temettü fırsatlarını takip edebilirsiniz.",
   },
   {
     title: "Ağustos Ayı Temettü Verenler",
     href: "/temettu/agustos-ayi-temettu-takvimi",
-    image: "/agustos-ayi-temettu-verenler-yatay.png",
-    alt: "Ağustos Ayı Temettü Verenler görseli",
+    icon: "temettu-takvim" as CategoryIconName,
     description:
       "Ağustos ayında temettü ödemesi açıklayan şirketleri tek sayfada görerek temettü takibini kolaylaştırabilirsiniz.",
   },
   {
     title: "Eylül Ayı Temettü Verenler",
     href: "/temettu/eylul-ayi-temettu-takvimi",
-    image: "/eylül-ayi-temettü.png",
-    alt: "Eylül Ayı Temettü Verenler görseli",
+    icon: "temettu-takvim" as CategoryIconName,
     description:
       "Eylül ayında temettü veren şirketleri toplu şekilde inceleyerek temettü takvimini daha kolay takip edebilirsiniz.",
   },
   {
     title: "Ekim Ayı Temettü Verenler",
     href: "/temettu/ekim-ayi-temettu-takvimi",
-    image: "/ekim-ayi-temettü.png",
-    alt: "Ekim Ayı Temettü Verenler görseli",
+    icon: "temettu-takvim" as CategoryIconName,
     description:
       "Mayıs ayında temettü ödemesi yapan şirketleri liste halinde görerek dönemsel temettü planlamasını takip edebilirsiniz.",
   },
@@ -61,14 +56,12 @@ const temettuKutulari = [
 function TemettuKutusu({
   title,
   href,
-  image,
-  alt,
+  icon,
   description,
 }: {
   title: string;
   href: string;
-  image: string;
-  alt: string;
+  icon: CategoryIconName;
   description: string;
 }) {
   return (
@@ -76,29 +69,21 @@ function TemettuKutusu({
       href={href}
       prefetch={false}
       aria-label={title}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)]"
+      className="group flex flex-1 flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)]"
     >
-      <div className="relative overflow-hidden bg-slate-100">
-          <div className="relative aspect-[16/10] w-full">
-            <Image
-              src={image}
-              alt={alt}
-              fill
-              className="object-cover transition duration-300 group-hover:scale-[1.03]"
-            />
-          </div>
-        </div>
-      <div className="flex flex-1 flex-col p-4 md:p-5">
+      <div className="mb-4 flex items-center gap-3">
+        <IconTile
+          name={icon}
+          className="h-12 w-12 shrink-0 transition duration-300 group-hover:bg-blue-100"
+        />
         <h2 className="text-base font-bold text-slate-900 md:text-lg">
           {title}
         </h2>
-        <p className="mt-3 text-sm leading-6 text-slate-500 md:text-sm">
-          {description}
-        </p>
-        <div className="mt-auto pt-3 flex items-center gap-1 text-xs font-semibold text-blue-600 transition duration-300 group-hover:gap-2">
-          <span>İncele</span>
-          <span>→</span>
-        </div>
+      </div>
+      <p className="text-sm leading-6 text-slate-500">{description}</p>
+      <div className="mt-auto flex items-center gap-1 pt-4 text-xs font-semibold text-blue-600 transition duration-300 group-hover:gap-2">
+        <span>İncele</span>
+        <span>→</span>
       </div>
     </Link>
   );

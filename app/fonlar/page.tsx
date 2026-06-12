@@ -5,14 +5,15 @@ export const metadata = {
 };
 
 import Link from "next/link";
+import { IconTile } from "@/components/icons/IconTile";
+import type { CategoryIconName } from "@/components/icons/CategoryIcon";
 
 const fonKutulari = [
   {
     title: "Haftalık Yatırım Fonlarının En Çok Tercih Ettiği Hisseler",
     desc: "Yatırım fonlarının haftalık bazda en çok tercih ettiği hisseleri inceleyin.",
     href: "/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler",
-    image: "/fonlar-haftalik-tercih.png",
-    alt: "Haftalık yatırım fonlarının en çok tercih ettiği hisseler görseli",
+    icon: "fon-haftalik-tercih" as CategoryIconName,
     titleClassName: "text-[19px] md:text-[21px]",
     seoDescription:
       "Yatırım fonlarının haftalık bazda en çok yöneldiği hisseleri tek ekranda görerek fon tercihlerini daha yakından takip etmenizi sağlar.",
@@ -21,8 +22,7 @@ const fonKutulari = [
     title: "Fon Getiri Analizi",
     desc: "Fon tiplerine göre ayrılmış getiri ekranlarına ulaşın.",
     href: "/fonlar/getiri",
-    image: "/fonlar-getiri.png",
-    alt: "Fon getiri analizi görseli",
+    icon: "fon-getiri" as CategoryIconName,
     titleClassName: "text-[22px] md:text-[24px]",
     seoDescription:
       "Fon türlerine göre ayrılmış getiri ekranları sayesinde yatırım fonlarının performansını daha düzenli ve karşılaştırmalı şekilde inceleyebilirsiniz.",
@@ -31,8 +31,7 @@ const fonKutulari = [
     title: "Fon Tarihsel Veriler",
     desc: "Fon tiplerine göre ayrılmış tarihsel veri ekranlarına ulaşın.",
     href: "/fonlar/tarihsel-veriler",
-    image: "/fonlar-tarihsel-veriler.png",
-    alt: "Fon tarihsel veriler görseli",
+    icon: "fon-tarihsel" as CategoryIconName,
     titleClassName: "text-[22px] md:text-[24px]",
     seoDescription:
       "Fonların geçmiş dönem verilerini inceleyerek tarihsel performans, fiyat hareketi ve dönemsel değişimleri daha detaylı takip edebilirsiniz.",
@@ -41,8 +40,7 @@ const fonKutulari = [
     title: "Fon Kapanış Etki Analizi",
     desc: "TLY, PHE ve PBR fonlarının portföyündeki hisselerin kapanış marjına göre ertesi gün fiyatına etkisini inceleyin.",
     href: "/fonlar/etki-analizi",
-    image: "/fonlar-getiri.png",
-    alt: "Fon kapanış etki analizi görseli",
+    icon: "fon-etki-analizi" as CategoryIconName,
     titleClassName: "text-[19px] md:text-[21px]",
     seoDescription:
       "Fon portföyündeki hisselerin günlük kapanış marjlarını kullanarak fonun ertesi gün fiyatına olan tahmini etkisini hesaplı bir tablo üzerinden görüntüleyin.",
@@ -81,16 +79,14 @@ const videoKartlari = [
 function FonKutusu({
   title,
   href,
-  image,
-  alt,
+  icon,
   desc,
   seoDescription,
   titleClassName,
 }: {
   title: string;
   href: string;
-  image: string;
-  alt: string;
+  icon: CategoryIconName;
   desc: string;
   seoDescription: string;
   titleClassName: string;
@@ -100,30 +96,25 @@ function FonKutusu({
       href={href}
       prefetch={false}
       aria-label={title}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)]"
+      className="group flex flex-1 flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)]"
     >
-      <div className="relative overflow-hidden bg-slate-100">
-          <div className="relative aspect-[16/10] w-full">
-            <img
-              src={image}
-              alt={alt}
-              className="block h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"
-            />
-          </div>
-        </div>
-      <div className="flex flex-1 flex-col p-4 md:p-5">
+      <div className="mb-4 flex items-center gap-3">
+        <IconTile
+          name={icon}
+          className="h-14 w-14 shrink-0 transition duration-300 group-hover:bg-blue-100"
+        />
         <h2 className={`font-semibold text-zinc-900 ${titleClassName}`}>
           {title}
         </h2>
-
-        <p className="mt-3 text-sm leading-6 text-slate-500 md:text-sm">
-          {desc}
-        </p>
-
-        <p className="mt-3 text-sm leading-6 text-slate-500 md:text-sm">
-          {seoDescription}
-        </p>
       </div>
+
+      <p className="text-sm leading-6 text-slate-500 md:text-sm">
+        {desc}
+      </p>
+
+      <p className="mt-3 text-sm leading-6 text-slate-500 md:text-sm">
+        {seoDescription}
+      </p>
     </Link>
   );
 }

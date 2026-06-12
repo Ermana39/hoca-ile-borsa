@@ -18,10 +18,10 @@ export const newsItems: NewsItem[] = [
   },
   {
     id: 984,
-    title: "Beta Enerji Halka Arzında Talep Toplama Tarihleri Açıklandı",
-    href: "/haber/beta-enerji-halka-arz-talep-toplama-tarihleri-aciklandi",
-    image: "/beta-enerji-halka-arz.webp",
-    alt: "Beta Enerji halka arz talep toplama tarihleri açıklandı",
+    title: "Beta Enerji Halka Arzı Kaç Lot Verir? Kişi Başı Kaç Lot Düşer?",
+    href: "/haber/beta-enerji-halka-arzi-kac-lot-verir",
+    image: "/beta-enerji-halka-arz-kac-lot-verir.webp",
+    alt: "Beta Enerji halka arzı kaç lot verir kişi başı kaç lot düşer",
     publishedAt: "2026-06-12",
   },
   {

@@ -1,5 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import { IconTile } from "@/components/icons/IconTile";
+import type { CategoryIconName } from "@/components/icons/CategoryIcon";
 
 export const metadata: Metadata = {
   title: "Mevduat ve Kredi Faiz Oranları | Hoca İle Borsa",
@@ -14,32 +16,28 @@ const faizKutulari = [
   {
     title: "Mevduat Faizi Oranları",
     href: "/mevduat-kredi-faizleri/mevduat-faizi-oranlari",
-    image: "/mevduat-faizi-oranlari.png",
-    alt: "Mevduat faizi oranları görseli",
+    icon: "mevduat-faizi" as CategoryIconName,
     description:
       "Bankaların güncel mevduat faizi oranlarını karşılaştırarak vadeli mevduat tarafında öne çıkan seçenekleri inceleyebilirsiniz.",
   },
   {
     title: "Tüketici Faizi Oranları",
     href: "/mevduat-kredi-faizleri/tuketici-faizi-oranlari",
-    image: "/tuketici-faizi-oranlari.png",
-    alt: "Tüketici faizi oranları görseli",
+    icon: "tuketici-faizi" as CategoryIconName,
     description:
       "Tüketici kredisi faiz oranlarını karşılaştırarak ihtiyaç kredisi tarafındaki güncel maliyetleri daha kolay takip edebilirsiniz.",
   },
   {
     title: "Konut Kredisi Oranları",
     href: "/mevduat-kredi-faizleri/konut-kredisi-oranlari",
-    image: "/konut-kredisi-oranlari.png",
-    alt: "Konut kredisi oranları görseli",
+    icon: "konut-kredisi" as CategoryIconName,
     description:
       "Konut kredisi faiz oranlarını inceleyerek bankalar arasındaki farkları ve güncel konut finansmanı maliyetlerini görebilirsiniz.",
   },
   {
     title: "Taşıt Kredisi Oranları",
     href: "/mevduat-kredi-faizleri/tasit-kredisi-oranlari",
-    image: "/tasit-kredisi-oranlari.png",
-    alt: "Taşıt kredisi oranları görseli",
+    icon: "tasit-kredisi" as CategoryIconName,
     description:
       "Taşıt kredisi oranlarını takip ederek araç finansmanı için sunulan güncel kredi maliyetlerini karşılaştırabilirsiniz.",
   },
@@ -48,14 +46,12 @@ const faizKutulari = [
 function FaizKutusu({
   title,
   href,
-  image,
-  alt,
+  icon,
   description,
 }: {
   title: string;
   href: string;
-  image: string;
-  alt: string;
+  icon: CategoryIconName;
   description: string;
 }) {
   return (
@@ -63,28 +59,21 @@ function FaizKutusu({
       href={href}
       prefetch={false}
       aria-label={title}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)]"
+      className="group flex flex-1 flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)]"
     >
-      <div className="relative overflow-hidden bg-slate-100">
-          <div className="relative aspect-[16/10] w-full">
-            <img
-              src={image}
-              alt={alt}
-              className="block h-full w-full object-cover transition duration-300 group-hover:scale-[1.03]"
-            />
-          </div>
-        </div>
-      <div className="flex flex-1 flex-col p-4 md:p-5">
+      <div className="mb-4 flex items-center gap-3">
+        <IconTile
+          name={icon}
+          className="h-12 w-12 shrink-0 transition duration-300 group-hover:bg-blue-100"
+        />
         <h2 className="text-base font-bold text-slate-900 md:text-lg">
           {title}
         </h2>
-        <p className="mt-3 text-sm leading-6 text-slate-500 md:text-sm">
-          {description}
-        </p>
-        <div className="mt-auto pt-3 flex items-center gap-1 text-xs font-semibold text-blue-600 transition duration-300 group-hover:gap-2">
-          <span>İncele</span>
-          <span>→</span>
-        </div>
+      </div>
+      <p className="text-sm leading-6 text-slate-500">{description}</p>
+      <div className="mt-auto flex items-center gap-1 pt-4 text-xs font-semibold text-blue-600 transition duration-300 group-hover:gap-2">
+        <span>İncele</span>
+        <span>→</span>
       </div>
     </Link>
   );

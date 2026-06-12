@@ -1,60 +1,48 @@
-import Image from "next/image";
 import Link from "next/link";
+import { IconTile } from "@/components/icons/IconTile";
+import type { CategoryIconName } from "@/components/icons/CategoryIcon";
 
 const fonTipleri = [
   {
     title: "Menkul Kıymet Yatırım Fonları",
     href: "/fonlar/getiri/menkul-kiymet-yatirim-fonlari",
-    image: "/menkul-kiymet-yatirim-fonlari-yatay.png",
-    alt: "Menkul Kıymet Yatırım Fonları görseli",
+    icon: "menkul-kiymet-fonlari" as CategoryIconName,
   },
   {
     title: "Emeklilik Fonları",
     href: "/fonlar/getiri/emeklilik-fonlari-getiri",
-    image: "/emeklilik-fonlari-yatay.png",
-    alt: "Emeklilik Fonları görseli",
+    icon: "emeklilik-fonlari" as CategoryIconName,
   },
   {
     title: "Borsa Yatırım Fonları",
     href: "/fonlar/getiri/borsa-yatirim-fonlari-getiri",
-    image: "/borsa-yatirim-fonlari-yatay.png",
-    alt: "Borsa Yatırım Fonları görseli",
+    icon: "borsa-yatirim-fonlari" as CategoryIconName,
   },
 ];
 
 function FonTipiKutusu({
   title,
   href,
-  image,
-  alt,
+  icon,
 }: {
   title: string;
   href: string;
-  image: string;
-  alt: string;
+  icon: CategoryIconName;
 }) {
   return (
     <Link
       href={href}
       prefetch={false}
       aria-label={title}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)]"
+      className="group flex items-center gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)]"
     >
-      <div className="relative overflow-hidden bg-slate-100">
-          <div className="relative aspect-[16/10] w-full">
-            <Image
-              src={image}
-              alt={alt}
-              fill
-              className="object-cover transition duration-300 group-hover:scale-[1.03]"
-            />
-          </div>
-        </div>
-      <div className="flex flex-1 flex-col p-4 md:p-5">
-        <h2 className="text-xl font-semibold leading-tight text-slate-900 md:text-xl">
-          {title}
-        </h2>
-      </div>
+      <IconTile
+        name={icon}
+        className="h-16 w-16 shrink-0 transition duration-300 group-hover:bg-blue-100"
+      />
+      <h2 className="text-xl font-semibold leading-tight text-slate-900 md:text-xl">
+        {title}
+      </h2>
     </Link>
   );
 }

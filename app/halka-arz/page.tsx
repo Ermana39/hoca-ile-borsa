@@ -10,6 +10,7 @@ import path from "path";
 import Image from "next/image";
 import Link from "next/link";
 import * as XLSX from "xlsx";
+import { IconTile } from "@/components/icons/IconTile";
 
 type ExcelSatiri = {
   kurum: string;
@@ -319,15 +320,11 @@ export default function HalkaArzPage() {
             aria-label="Onaylı İzahnameler"
             className="group flex min-h-[240px] flex-col rounded-2xl border border-zinc-200 bg-zinc-50 p-3 transition hover:bg-zinc-100"
           >
-            <div className="relative mb-4 overflow-hidden rounded-2xl bg-white">
-              <div className="relative aspect-[16/10] w-full">
-                <Image
-                  src="/onayli-izahnameler.png"
-                  alt="Onaylı izahnameler görseli"
-                  fill
-                  className="object-cover transition duration-300 group-hover:scale-[1.03]"
-                />
-              </div>
+            <div className="relative mb-4 flex aspect-[16/10] items-center justify-center overflow-hidden rounded-2xl bg-white">
+              <IconTile
+                name="onayli-izahnameler"
+                className="h-28 w-28 transition duration-300 group-hover:bg-blue-100"
+              />
             </div>
 
             <div className="flex flex-1 items-center justify-center px-2 pb-2 text-center">
@@ -343,15 +340,11 @@ export default function HalkaArzPage() {
             aria-label="Taslak İzahnameler"
             className="group flex min-h-[240px] flex-col rounded-2xl border border-zinc-200 bg-zinc-50 p-3 transition hover:bg-zinc-100"
           >
-            <div className="relative mb-4 overflow-hidden rounded-2xl bg-white">
-              <div className="relative aspect-[16/10] w-full">
-                <Image
-                  src="/taslak-izahnameler.png"
-                  alt="Taslak izahnameler görseli"
-                  fill
-                  className="object-cover transition duration-300 group-hover:scale-[1.03]"
-                />
-              </div>
+            <div className="relative mb-4 flex aspect-[16/10] items-center justify-center overflow-hidden rounded-2xl bg-white">
+              <IconTile
+                name="taslak-izahnameler"
+                className="h-28 w-28 transition duration-300 group-hover:bg-blue-100"
+              />
             </div>
 
             <div className="flex flex-1 items-center justify-center px-2 pb-2 text-center">

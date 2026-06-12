@@ -8,6 +8,8 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import { newsItems as tumHaberler } from "@/app/data/news";
 import pageUpdates from "@/lib/page-updates.generated.json";
+import { IconTile } from "@/components/icons/IconTile";
+import type { CategoryIconName } from "@/components/icons/CategoryIcon";
 import HaberKart from "@/components/HaberKart";
 import { normalizeNewsItems, ANA_SAYFA_HABER_LIMIT } from "@/lib/haberler";
 
@@ -38,32 +40,27 @@ const kategoriKutulari = [
   {
     title: "Borsa Analiz",
     href: "/borsa",
-    alt: "Borsa analiz sayfası görseli",
-    image: "/kategori-borsa-analiz.png",
+    icon: "borsa-analiz" as CategoryIconName,
   },
   {
     title: "Halka Arz",
     href: "/halka-arz",
-    alt: "Halka arz sayfası görseli",
-    image: "/kategori-halka-arz.png",
+    icon: "halka-arz" as CategoryIconName,
   },
   {
     title: "Fonlar",
     href: "/fonlar",
-    alt: "Fonlar sayfası görseli",
-    image: "/kategori-fonlar.png",
+    icon: "fonlar" as CategoryIconName,
   },
   {
     title: "Temettü",
     href: "/temettu",
-    alt: "Temettü sayfası görseli",
-    image: "/kategori-temettu.png",
+    icon: "temettu" as CategoryIconName,
   },
   {
     title: "Faiz Oranları",
     href: "/mevduat-kredi-faizleri",
-    alt: "Faiz oranları sayfası görseli",
-    image: "/Mevduat-kredi-faiz.png?v=2",
+    icon: "faiz-oranlari" as CategoryIconName,
   },
 ];
 
@@ -166,39 +163,29 @@ const sayfaBasliklari: Record<string, string> = {
 function KategoriKutusu({
   title,
   href,
-  alt,
-  image,
+  icon,
 }: {
   title: string;
   href: string;
-  alt: string;
-  image: string;
+  icon: CategoryIconName;
 }) {
   return (
     <Link
       href={href}
       prefetch={false}
-      className="group relative flex h-[180px] overflow-hidden rounded-2xl shadow-[0_4px_20px_rgba(15,23,42,0.15)] transition duration-300 hover:-translate-y-1 hover:shadow-[0_12px_40px_rgba(15,23,42,0.25)] xl:h-[200px]"
+      className="group flex h-[180px] flex-col items-center justify-center gap-3 rounded-2xl border border-slate-200 bg-white shadow-[0_4px_20px_rgba(15,23,42,0.06)] transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_12px_40px_rgba(15,23,42,0.12)] xl:h-[200px]"
       aria-label={title}
     >
-      {/* Arka plan görseli */}
-      <Image
-        src={image}
-        alt={alt}
-        fill
-        unoptimized
-        className="object-cover transition duration-500 group-hover:scale-[1.06]"
+      <IconTile
+        name={icon}
+        className="h-16 w-16 transition duration-300 group-hover:bg-blue-100 md:h-20 md:w-20"
       />
 
-      {/* Gradient overlay — alta doğru koyulaşıyor */}
-      <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-900/40 to-slate-800/10 transition duration-300 group-hover:from-slate-950/95" />
-
-      {/* İçerik */}
-      <div className="relative flex h-full w-full flex-col justify-end p-4">
-        <h2 className="text-base font-bold leading-tight tracking-tight text-white drop-shadow-md md:text-lg">
+      <div className="flex flex-col items-center">
+        <h2 className="text-base font-bold leading-tight tracking-tight text-slate-900 md:text-lg">
           {title}
         </h2>
-        <div className="mt-2 flex items-center gap-1.5 text-xs font-semibold text-blue-300 transition duration-300 group-hover:gap-2.5 group-hover:text-blue-200">
+        <div className="mt-1 flex items-center gap-1.5 text-xs font-semibold text-blue-600 transition duration-300 group-hover:gap-2.5">
           <span>İncele</span>
           <span>→</span>
         </div>

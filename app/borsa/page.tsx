@@ -4,111 +4,99 @@ export const metadata = {
   alternates: { canonical: "https://www.hocaileborsa.com/borsa" },
 };
 
-import Image from "next/image";
 import Link from "next/link";
+import { IconTile } from "@/components/icons/IconTile";
+import type { CategoryIconName } from "@/components/icons/CategoryIcon";
 
 const analizKutulari = [
   {
     title: "Günlük Borsa Özeti",
     href: "/borsa/gunluk-borsa-ozeti-12-haziran-2026",
-    image: "/gunluk-borsa-ozeti-yatay.png",
-    alt: "Günlük Borsa Özeti görseli",
+    icon: "gunluk-borsa-ozeti" as CategoryIconName,
     description:
       "BIST 100 kapanışı, para girişi, para çıkışı, yükselenler, düşenler ve günün öne çıkan verileri tek sayfada.",
   },
   {
     title: "Dikkat Çekenler",
     href: "/borsa/dikkat-cekenler",
-    image: "/dikkat-cekenler-yatay.png",
-    alt: "Dikkat Çekenler görseli",
+    icon: "dikkat-cekenler" as CategoryIconName,
     description:
       "Gün içinde öne çıkan hisseler, dikkat çeken fiyat hareketleri ve yatırımcı ilgisinin arttığı alanlar.",
   },
   {
     title: "Dip Zirve Analizi",
     href: "/borsa/dip-zirve-analizi",
-    image: "/dip-zirve-analizi-yatay.png",
-    alt: "Dip Zirve Analizi görseli",
+    icon: "dip-zirve-analizi" as CategoryIconName,
     description:
       "Hisselerin dip ve zirve bölgelerine uzaklığını takip ederek teknik görünümü daha hızlı yorumlamanıza yardımcı olur.",
   },
   {
     title: "Eğitim Videoları",
     href: "/borsa/egitim-videolari",
-    image: "/egitim-videolari-yatay.png",
-    alt: "Eğitim Videoları görseli",
+    icon: "egitim-videolari" as CategoryIconName,
     description:
       "Borsa, halka arz, teknik analiz ve finans başlıklarında hazırlanan eğitim içeriklerine ulaşabilirsiniz.",
   },
   {
     title: "Formasyonlar",
     href: "/borsa/formasyonlar",
-    image: "/formasyonlar-yatay.png",
-    alt: "Formasyonlar görseli",
+    icon: "formasyonlar" as CategoryIconName,
     description:
       "Grafik formasyonlarına göre öne çıkan hisseleri liste halinde inceleyerek teknik görünümü takip edebilirsiniz.",
   },
   {
     title: "Geri Alım Programları",
     href: "/borsa/geri-alim-programlari",
-    image: "/geri-alim-programlari-yatay.png",
-    alt: "Geri Alım Programları görseli",
+    icon: "geri-alim-programlari" as CategoryIconName,
     description:
       "Şirketlerin pay geri alım programlarını ve piyasaya olası etkilerini düzenli şekilde izleyebilirsiniz.",
   },
   {
     title: "Gösterge Taramaları",
     href: "/borsa/gosterge-taramalari",
-    image: "/gosterge-taramalari-yatay.png",
-    alt: "Gösterge Taramaları görseli",
+    icon: "gosterge-taramalari" as CategoryIconName,
     description:
       "RSI, trend ve teknik filtrelere göre hazırlanmış hisse taramaları ile belirli kriterleri karşılayan hisseleri görün.",
   },
   {
     title: "Grafik Analiz",
     href: "/borsa/grafik-analiz",
-    image: "/grafik-analiz-yatay.png",
-    alt: "Grafik Analiz görseli",
+    icon: "grafik-analiz" as CategoryIconName,
     description:
       "Hisselere ait güncel grafik yorumları, destek-direnç bölgeleri ve kısa teknik değerlendirmeleri takip edin.",
   },
   {
     title: "Hacim Artışı Analizi",
     href: "/borsa/hacim-artisi-analizi",
-    image: "/hacim-artisi-analizi-yatay.png",
-    alt: "Hacim Artışı Analizi görseli",
+    icon: "hacim-artisi-analizi" as CategoryIconName,
     description:
       "İşlem hacmindeki artışı izleyerek piyasada ilginin yoğunlaştığı hisseleri daha kolay fark edebilirsiniz.",
   },
   {
     title: "Yeni İş Anlaşmaları",
     href: "/borsa/yeni-is-anlasmalari",
-    image: "/yeni-is-anlasmalari-yatay.png",
-    alt: "Yeni İş Anlaşmaları görseli",
+    icon: "yeni-is-anlasmalari" as CategoryIconName,
     description:
       "Şirketlerin açıkladığı yeni iş ilişkileri ve sözleşmelerin hisseler üzerindeki etkisini takip etmeye yardımcı olur.",
   },
   {
     title: "Pivot Analizi",
     href: "/borsa/pivot-analizi",
-    image: "/pivot-analizi-yatay.png",
-    alt: "Pivot Analizi görseli",
+    icon: "pivot-analizi" as CategoryIconName,
     description:
       "Pivot, destek ve direnç seviyelerine göre hisselerin teknik görünümünü tablo halinde inceleyebilirsiniz.",
   },
   {
     title: "Oran Analizi",
     href: "/borsa/oran-analizi",
-    image: "/oran-analizi.png",
-    alt: "Oran Analizi görseli",
+    icon: "oran-analizi" as CategoryIconName,
     description:
       "Şirketlerin finansal oranlarını inceleyerek değerleme, kârlılık, borçluluk ve verimlilik açısından karşılaştırma yapabilirsiniz.",
   },
   {
     title: "Tedbirli Hisseler",
     href: "/borsa/tedbirli-hisseler",
-    image: "/tedbirli-hisseler-yatay.png",
-    alt: "Tedbirli Hisseler görseli",
+    icon: "tedbirli-hisseler" as CategoryIconName,
     description:
       "Tedbir kapsamındaki hisseleri takip ederek işlem öncesi daha dikkatli ve kontrollü karar verebilirsiniz.",
   },
@@ -138,14 +126,12 @@ const hesaplayiciKutulari = [
 function AnalizKutusu({
   title,
   href,
-  image,
-  alt,
+  icon,
   description,
 }: {
   title: string;
   href: string;
-  image: string;
-  alt: string;
+  icon: CategoryIconName;
   description: string;
 }) {
   return (
@@ -153,28 +139,23 @@ function AnalizKutusu({
       href={href}
       prefetch={false}
       aria-label={title}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)]"
+      className="group flex flex-1 flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)]"
     >
-      <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100">
-        <Image
-          src={image}
-          alt={alt}
-          fill
-          className="object-cover transition duration-500 group-hover:scale-[1.04]"
+      <div className="mb-4 flex items-center gap-3">
+        <IconTile
+          name={icon}
+          className="h-12 w-12 shrink-0 transition duration-300 group-hover:bg-blue-100"
         />
-      </div>
-
-      <div className="flex flex-1 flex-col p-4 md:p-5">
         <h2 className="text-base font-bold text-slate-900 md:text-lg">
           {title}
         </h2>
-        <p className="mt-2 text-sm leading-6 text-slate-500">
-          {description}
-        </p>
-        <div className="mt-auto pt-3 flex items-center gap-1 text-xs font-semibold text-blue-600 transition duration-300 group-hover:gap-2">
-          <span>İncele</span>
-          <span>→</span>
-        </div>
+      </div>
+
+      <p className="text-sm leading-6 text-slate-500">{description}</p>
+
+      <div className="mt-auto flex items-center gap-1 pt-4 text-xs font-semibold text-blue-600 transition duration-300 group-hover:gap-2">
+        <span>İncele</span>
+        <span>→</span>
       </div>
     </Link>
   );
