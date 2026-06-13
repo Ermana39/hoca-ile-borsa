@@ -54,7 +54,12 @@ export default async function YazarPage({
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
-    dateCreated: "2026-06-12",
+    "@id": `${siteUrl}/yazar/${yazar.slug}#profilepage`,
+    url: `${siteUrl}/yazar/${yazar.slug}`,
+    name: `${yazar.isim} | Yazar Profili`,
+    description: yazar.bioKisa,
+    dateCreated: "2026-06-12T00:00:00+03:00",
+    dateModified: "2026-06-13T00:00:00+03:00",
     mainEntity: {
       "@type": "Person",
       "@id": `${siteUrl}/yazar/${yazar.slug}#person`,
@@ -80,7 +85,7 @@ export default async function YazarPage({
         yazar.sosyal.telegram,
         yazar.sosyal.youtube,
         yazar.sosyal.youtubeGlobal,
-      ],
+      ].filter(Boolean),
       worksFor: {
         "@type": "Organization",
         "@id": `${siteUrl}/#organization`,
