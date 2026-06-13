@@ -5,24 +5,11 @@
 };
 
 import Link from "next/link";
+import { getTemettulerByAy } from "@/lib/temettuler";
+import HisseLink from "@/components/HisseLink";
 import { IlgiliBolumler } from "@/components/IlgiliBolumler";
 
-const eylulTemettuleri = [
-  { sembol: "SUMAS", tarih: "30 Eylül 2026", verim: "% 0,59", brut: "₺2,17", net: "₺1,8436", toplam: "₺13.499.999", oran: "%90" },
-  { sembol: "KIMMR", tarih: "30 Eylül 2026", verim: "% 1,22", brut: "₺0,21", net: "₺0,1771", toplam: "₺49.999.992", oran: "%8" },
-  { sembol: "DESA", tarih: "30 Eylül 2026", verim: "% 0,67", brut: "₺0,08", net: "₺0,0714", toplam: "₺41.176.464", oran: "%7" },
-  { sembol: "TUPRS", tarih: "30 Eylül 2026", verim: "% 2,86", brut: "₺6,75", net: "₺5,7349", toplam: "₺13.001.761.617", oran: "%42" },
-  { sembol: "LKMNH", tarih: "28 Eylül 2026", verim: "% 1,39", brut: "₺0,23", net: "₺0,1968", toplam: "₺49.999.982", oran: "%34" },
-  { sembol: "MOPAS", tarih: "25 Eylül 2026", verim: "% 0,69", brut: "₺0,27", net: "₺0,2335", toplam: "₺74.999.989", oran: "%40" },
-  { sembol: "GIPTA", tarih: "22 Eylül 2026", verim: "% 0,01", brut: "₺0,01", net: "₺0,0066", toplam: "₺1.024.993", oran: "%0" },
-  { sembol: "TAVHL", tarih: "22 Eylül 2026", verim: "% 0,72", brut: "₺1,80", net: "₺1,5342", toplam: "₺655.718.977", oran: "%23" },
-  { sembol: "MACKO", tarih: "22 Eylül 2026", verim: "% 4,05", brut: "₺1,80", net: "₺1,5300", toplam: "₺180.000.000", oran: "%58" },
-  { sembol: "PETUN", tarih: "21 Eylül 2026", verim: "% 1,85", brut: "₺0,25", net: "₺0,2083", toplam: "₺74.319.525", oran: "%43" },
-  { sembol: "BIGCH", tarih: "18 Eylül 2026", verim: "% 1,57", brut: "₺0,10", net: "₺0,0850", toplam: "₺53.500.000", oran: "%2397" },
-  { sembol: "BIMAS", tarih: "16 Eylül 2026", verim: "% 0,67", brut: "₺2,50", net: "₺2,1250", toplam: "₺3.000.000.000", oran: "%16" },
-  { sembol: "BULGS", tarih: "15 Eylül 2026", verim: "% 0,23", brut: "₺0,09", net: "₺0,0933", toplam: "₺24.999.978", oran: "%2" },
-  { sembol: "LIDER", tarih: "8 Eylül 2026", verim: "% 0,03", brut: "₺0,04", net: "₺0,0303", toplam: "₺29.411.745", oran: "%2" },
-];
+const eylulTemettuleri = getTemettulerByAy(2026, 9);
 
 export default function EylulAyiTemettuTakvimiPage() {
   return (
@@ -75,7 +62,7 @@ export default function EylulAyiTemettuTakvimiPage() {
                   key={`${item.sembol}-${item.tarih}`}
                   className={`border-t border-zinc-100 ${index % 2 === 1 ? "bg-sky-50" : "bg-white"}`}
                 >
-                  <td className="px-4 py-3 font-semibold text-zinc-900">{item.sembol}</td>
+                  <td className="px-4 py-3 font-semibold text-zinc-900"><HisseLink sembol={item.sembol} /></td>
                   <td className="px-4 py-3 text-zinc-700">{item.tarih}</td>
                   <td className="px-4 py-3 text-right text-zinc-700">{item.verim}</td>
                   <td className="px-4 py-3 text-right font-semibold text-zinc-900">{item.brut}</td>

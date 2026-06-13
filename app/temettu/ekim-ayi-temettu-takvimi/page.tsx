@@ -5,16 +5,11 @@
 };
 
 import Link from "next/link";
+import { getTemettulerByAy } from "@/lib/temettuler";
+import HisseLink from "@/components/HisseLink";
 import { IlgiliBolumler } from "@/components/IlgiliBolumler";
 
-const ekimTemettuleri = [
-  { sembol: "DESA", tarih: "30 Ekim 2026", verim: "% 0,77", brut: "₺0,10", net: "₺0,0816", toplam: "₺47.058.816", oran: "%8" },
-  { sembol: "SRVGY", tarih: "26 Ekim 2026", verim: "% 2,55", brut: "₺0,08", net: "₺0,0769", toplam: "₺249.999.750", oran: "%6" },
-  { sembol: "OSMEN", tarih: "26 Ekim 2026", verim: "% 0,66", brut: "₺0,05", net: "₺0,0424", toplam: "₺19.999.992", oran: "%12" },
-  { sembol: "BASCM", tarih: "21 Ekim 2026", verim: "% 7,31", brut: "₺1,06", net: "₺0,9015", toplam: "₺699.999.960", oran: "%198" },
-  { sembol: "EBEBK", tarih: "15 Ekim 2026", verim: "% 0,77", brut: "₺0,63", net: "₺0,5313", toplam: "₺100.000.000", oran: "%100" },
-  { sembol: "AEFES", tarih: "5 Ekim 2026", verim: "% 0,88", brut: "₺0,17", net: "₺0,1443", toplam: "₺1.005.098.684", oran: "%6" },
-];
+const ekimTemettuleri = getTemettulerByAy(2026, 10);
 
 export default function EkimAyiTemettuTakvimiPage() {
   return (
@@ -67,7 +62,7 @@ export default function EkimAyiTemettuTakvimiPage() {
                   key={`${item.sembol}-${item.tarih}`}
                   className={`border-t border-zinc-100 ${index % 2 === 1 ? "bg-sky-50" : "bg-white"}`}
                 >
-                  <td className="px-4 py-3 font-semibold text-zinc-900">{item.sembol}</td>
+                  <td className="px-4 py-3 font-semibold text-zinc-900"><HisseLink sembol={item.sembol} /></td>
                   <td className="px-4 py-3 text-zinc-700">{item.tarih}</td>
                   <td className="px-4 py-3 text-right text-zinc-700">{item.verim}</td>
                   <td className="px-4 py-3 text-right font-semibold text-zinc-900">{item.brut}</td>

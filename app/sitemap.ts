@@ -6,6 +6,7 @@ import {
   getAllNews,
 } from "@/lib/haberler";
 import { HABER_KATEGORILERI } from "@/lib/haber-kategorileri";
+import { getSitemapHisseSembolleri } from "@/lib/hisseler";
 
 const siteUrl = "https://www.hocaileborsa.com";
 
@@ -503,7 +504,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     "/yazar/erman-hoca",
     "/haberler",
+    "/hisseler",
   ];
+
+  // Hisse künye sayfaları (data/hisseler/*.json'dan otomatik)
+  const hisseRoutes = getSitemapHisseSembolleri().map(
+    (sembol) => `/hisse/${sembol.toLowerCase()}`
+  );
 
   const taslakSirketRoutes = getTaslakSirketUrlleri();
 
@@ -531,6 +538,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const tumUrller = Array.from(
     new Set([
       ...staticRoutes,
+      ...hisseRoutes,
       ...taslakSirketRoutes,
       ...haberRoutes,
       ...arsivSayfaRoutes,
@@ -551,6 +559,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
 
     if (route.startsWith("/halka-arz/taslak-izahnameler/")) {
+      return createEntry(route, 0.8, "weekly");
+    }
+
+    if (route === "/hisseler") {
+      return createEntry(route, 0.9, "daily");
+    }
+
+    if (route.startsWith("/hisse/")) {
       return createEntry(route, 0.8, "weekly");
     }
 

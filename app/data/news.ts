@@ -8,6 +8,11 @@ export type NewsItem = {
   alt: string;
   publishedAt: string;
   category: HaberKategori;
+  // Opsiyonel: Bu haber bir veya birden çok hisseyle ilgiliyse kodlarını yaz.
+  // Örn: ilgiliHisseler: ["ASELS", "THYAO"]
+  // Etiketlenen her hissenin /hisse/<kod> sayfasında "Önemli KAP Gelişmeleri"
+  // bölümünde bu haber otomatik görünür.
+  ilgiliHisseler?: string[];
 };
 
 export const newsItems: NewsItem[] = [
@@ -20,6 +25,7 @@ export const newsItems: NewsItem[] = [
   alt: "Beta Enerji halka arz yüksek başvuru dağıtım oranı",
   publishedAt: "2026-06-13",
   category: "halka-arz",
+  ilgiliHisseler: ["BETAE"],
 },
   {
     id: 988,
@@ -47,6 +53,7 @@ export const newsItems: NewsItem[] = [
     alt: "12 Haziran 2026 KAP Bildirimleri Özeti",
     publishedAt: "2026-06-12",
     category: "kap-bildirimleri",
+    ilgiliHisseler: ["BALSU", "DSTKF", "GARAN", "GESAN", "GLYHO", "HALKB", "ISCTR", "PGSUS", "VBTYZ"],
   },
   {
     id: 985,
@@ -57,6 +64,7 @@ export const newsItems: NewsItem[] = [
     alt: "Türkiye Sigorta ve Goodyear bedelsiz sermaye artırımı onayı",
     publishedAt: "2026-06-12",
     category: "sermaye-artirimi",
+    ilgiliHisseler: ["TURSG", "GOODY"],
   },
   {
     id: 984,
@@ -66,6 +74,7 @@ export const newsItems: NewsItem[] = [
     alt: "Beta Enerji halka arzı kaç lot verir kişi başı kaç lot düşer",
     publishedAt: "2026-06-12",
     category: "halka-arz",
+    ilgiliHisseler: ["BETAE"],
   },
   {
     id: 983,
@@ -105,6 +114,7 @@ export const newsItems: NewsItem[] = [
     alt: "11 Haziran 2026 KAP Bildirimleri Özeti",
     publishedAt: "2026-06-11",
     category: "kap-bildirimleri",
+    ilgiliHisseler: ["ALFAS", "BRISA", "GOODY", "HRKET", "RUBNS", "THYAO", "YKBNK", "ZOREN"],
   },
   {
     id: 975,
@@ -114,6 +124,7 @@ export const newsItems: NewsItem[] = [
     alt: "Türkiye Sigorta Prim Üretimi 79,2 Milyar TL",
     publishedAt: "2026-06-05",
     category: "sirket-haberleri",
+    ilgiliHisseler: ["TURSG"],
   },
   {
     id: 976,
@@ -123,6 +134,7 @@ export const newsItems: NewsItem[] = [
     alt: "THY Air Europa Yatırım Süreci",
     publishedAt: "2026-06-05",
     category: "sirket-haberleri",
+    ilgiliHisseler: ["THYAO"],
   },
   {
     id: 977,
@@ -132,6 +144,7 @@ export const newsItems: NewsItem[] = [
     alt: "ASELSAN 845 Milyon Dolarlık Sözleşme",
     publishedAt: "2026-06-05",
     category: "sirket-haberleri",
+    ilgiliHisseler: ["ASELS"],
   },
   {
     id: 978,
@@ -141,5 +154,6 @@ export const newsItems: NewsItem[] = [
     alt: "Kontrolmatik Kupon Ödemesi Gerçekleşmedi",
     publishedAt: "2026-06-05",
     category: "sirket-haberleri",
+    ilgiliHisseler: ["KONTR"],
   },
 ];

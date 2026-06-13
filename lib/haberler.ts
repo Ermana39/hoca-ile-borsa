@@ -104,6 +104,11 @@ export function getIlgiliHaberler(
     .slice(0, limit);
 }
 
+// Bir haberin etiketli ilgili hisse kodlarını href üzerinden bulur.
+export function getHaberIlgiliHisseler(href: string): string[] {
+  return tumHaberler.find((item) => item.href === href)?.ilgiliHisseler ?? [];
+}
+
 // Bir haberin kategorisini href üzerinden bulur.
 export function getHaberKategorisi(href: string): HaberKategori | undefined {
   return getAllNews().find((item) => item.href === href)?.category;

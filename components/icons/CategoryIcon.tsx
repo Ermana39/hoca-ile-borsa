@@ -1,6 +1,7 @@
 export type CategoryIconName =
   // Ana sayfa kategorileri
   | "borsa-analiz"
+  | "hisseler"
   | "halka-arz"
   | "fonlar"
   | "temettu"
@@ -105,6 +106,32 @@ const icons: Record<CategoryIconName, React.ReactNode> = {
         strokeLinecap="round"
         fill="none"
       />
+    </>
+  ),
+  hisseler: (
+    <>
+      {/* Şirket binası / künye */}
+      <path d="M8 41V13l13-6 13 6v28H8z" fill={NAVY} />
+      <path d="M21 7v34h13V13L21 7z" fill={BLUE} />
+      <rect x="12" y="16" width="4" height="4" rx="0.8" fill={BLUE_PALE} />
+      <rect x="18" y="16" width="4" height="4" rx="0.8" fill={BLUE_SOFT} />
+      <rect x="24" y="16" width="4" height="4" rx="0.8" fill={LIGHT} />
+      <rect x="12" y="23" width="4" height="4" rx="0.8" fill={BLUE_SOFT} />
+      <rect x="18" y="23" width="4" height="4" rx="0.8" fill={BLUE_PALE} />
+      <rect x="24" y="23" width="4" height="4" rx="0.8" fill={LIGHT} />
+      <rect x="17" y="32" width="8" height="9" rx="1" fill={AMBER} />
+      {/* Yükseliş rozeti */}
+      <circle cx="36" cy="33" r="8" fill={LIGHT} />
+      <circle cx="36" cy="33" r="8" fill={GREEN} opacity="0.15" />
+      <path
+        d="M32 35.5l2.5-3 2 2 3.5-4.5"
+        stroke={GREEN}
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
+      <path d="M37 29.5h3v3" stroke={GREEN} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
     </>
   ),
   "halka-arz": (

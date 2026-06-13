@@ -43,6 +43,11 @@ const kategoriKutulari = [
     icon: "borsa-analiz" as CategoryIconName,
   },
   {
+    title: "Hisseler",
+    href: "/hisseler",
+    icon: "hisseler" as CategoryIconName,
+  },
+  {
     title: "Halka Arz",
     href: "/halka-arz",
     icon: "halka-arz" as CategoryIconName,
@@ -575,7 +580,7 @@ export default function HomePage() {
 
 
         <section className="px-4 py-6 md:px-6">
-          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-5">
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-6">
             {kategoriKutulari.map((item) => (
               <KategoriKutusu key={item.href} {...item} />
             ))}

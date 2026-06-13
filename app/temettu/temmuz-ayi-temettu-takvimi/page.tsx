@@ -5,28 +5,11 @@
 };
 
 import Link from "next/link";
+import { getTemettulerByAy } from "@/lib/temettuler";
+import HisseLink from "@/components/HisseLink";
 import { IlgiliBolumler } from "@/components/IlgiliBolumler";
 
-const temmuzTemettuleri = [
-  { sembol: "MOPAS", tarih: "31 Temmuz 2026", verim: "% 0,69", brut: "₺0,27", net: "₺0,2335", toplam: "₺74.999.989", oran: "%40" },
-  { sembol: "OSMEN", tarih: "29 Temmuz 2026", verim: "% 0,66", brut: "₺0,05", net: "₺0,0424", toplam: "₺19.999.992", oran: "%12" },
-  { sembol: "MERCN", tarih: "28 Temmuz 2026", verim: "% 0,98", brut: "₺0,21", net: "₺0,1786", toplam: "₺39.999.981", oran: "%29" },
-  { sembol: "GRTHO", tarih: "22 Temmuz 2026", verim: "% 0,22", brut: "₺0,45", net: "₺0,3817", toplam: "₺56.133.900", oran: "%4" },
-  { sembol: "KTLEV", tarih: "21 Temmuz 2026", verim: "% 0,08", brut: "₺0,10", net: "₺0,0821", toplam: "₺199.999.881", oran: "%2" },
-  { sembol: "TAVHL", tarih: "21 Temmuz 2026", verim: "% 0,72", brut: "₺1,80", net: "₺1,5342", toplam: "₺655.718.977", oran: "%23" },
-  { sembol: "BASGZ", tarih: "20 Temmuz 2026", verim: "% 4,13", brut: "₺2,00", net: "₺1,7000", toplam: "₺1.400.000.000", oran: "%41" },
-  { sembol: "GOLTS", tarih: "17 Temmuz 2026", verim: "% 1,21", brut: "₺4,17", net: "₺3,5417", toplam: "₺74.999.998", oran: "%20" },
-  { sembol: "EGPRO", tarih: "16 Temmuz 2026", verim: "% 1,59", brut: "₺0,64", net: "₺0,5459", toplam: "₺349.999.981", oran: "%33" },
-  { sembol: "GIPTA", tarih: "14 Temmuz 2026", verim: "% 0,01", brut: "₺0,01", net: "₺0,0066", toplam: "₺1.024.993", oran: "%0" },
-  { sembol: "GENKM", tarih: "14 Temmuz 2026", verim: "% 1,47", brut: "₺0,21", net: "₺0,1745", toplam: "₺124.999.990", oran: "%50" },
-  { sembol: "PNLSN", tarih: "8 Temmuz 2026", verim: "% 1,45", brut: "₺0,69", net: "₺0,5848", toplam: "₺51.596.257", oran: "%20" },
-  { sembol: "LIDER", tarih: "8 Temmuz 2026", verim: "% 0,03", brut: "₺0,04", net: "₺0,0303", toplam: "₺29.411.745", oran: "%2" },
-  { sembol: "MEYSU", tarih: "7 Temmuz 2026", verim: "% 0,28", brut: "₺0,05", net: "₺0,0425", toplam: "₺43.500.000", oran: "%9" },
-  { sembol: "OZSUB", tarih: "6 Temmuz 2026", verim: "% 2,14", brut: "₺0,62", net: "₺0,5242", toplam: "₺73.999.992", oran: "%25" },
-  { sembol: "LILAK", tarih: "6 Temmuz 2026", verim: "% 4,39", brut: "₺1,53", net: "₺1,2966", toplam: "₺900.025.000", oran: "%53" },
-  { sembol: "DOFER", tarih: "2 Temmuz 2026", verim: "% 0,53", brut: "₺0,19", net: "₺0,0807", toplam: "₺10.588.235", oran: "%69" },
-  { sembol: "KCAER", tarih: "1 Temmuz 2026", verim: "% 1,30", brut: "₺0,17", net: "₺0,1443", toplam: "₺324.999.821", oran: "%69" },
-];
+const temmuzTemettuleri = getTemettulerByAy(2026, 7);
 
 export default function TemmuzAyiTemettuTakvimiPage() {
   return (
@@ -79,7 +62,7 @@ export default function TemmuzAyiTemettuTakvimiPage() {
                   key={`${item.sembol}-${item.tarih}`}
                   className={`border-t border-zinc-100 ${index % 2 === 1 ? "bg-sky-50" : "bg-white"}`}
                 >
-                  <td className="px-4 py-3 font-semibold text-zinc-900">{item.sembol}</td>
+                  <td className="px-4 py-3 font-semibold text-zinc-900"><HisseLink sembol={item.sembol} /></td>
                   <td className="px-4 py-3 text-zinc-700">{item.tarih}</td>
                   <td className="px-4 py-3 text-right text-zinc-700">{item.verim}</td>
                   <td className="px-4 py-3 text-right font-semibold text-zinc-900">{item.brut}</td>

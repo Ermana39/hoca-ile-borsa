@@ -54,6 +54,12 @@ const nextConfig = {
     "/mevduat-kredi-faizleri/mevduat-faizi-oranlari": [
       "./data/**/*.xlsx",
     ],
+    "/hisse/[sembol]": [
+      "./data/hisseler/**/*.json",
+    ],
+    "/hisseler": [
+      "./data/hisseler/**/*.json",
+    ],
   },
 
   async redirects() {
