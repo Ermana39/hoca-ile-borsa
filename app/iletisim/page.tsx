@@ -78,12 +78,12 @@ export default function IletisimPage() {
                 <p>
                   <strong>Telegram:</strong>{" "}
                   <a
-                    href="https://t.me/borsa_halkaarz_endeks"
+                    href="https://t.me/halkaarz_0"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="font-medium text-blue-600 underline underline-offset-4 hover:text-blue-700"
                   >
-                    https://t.me/borsa_halkaarz_endeks
+                    https://t.me/halkaarz_0
                   </a>
                 </p>
               </div>

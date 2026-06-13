@@ -14,6 +14,14 @@ export const metadata: Metadata = {
     canonical:
       "https://www.hocaileborsa.com/haber/beta-enerji-halka-arzi-kac-lot-verir",
   },
+  openGraph: {
+    type: "article",
+    images: [{ url: "https://www.hocaileborsa.com/beta-enerji-halka-arz-kac-lot-verir.webp" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["https://www.hocaileborsa.com/beta-enerji-halka-arz-kac-lot-verir.webp"],
+  },
 };
 
 const lotDagilimSenaryolari = [

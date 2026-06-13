@@ -15,6 +15,14 @@ export const metadata: Metadata = {
     canonical:
       "https://www.hocaileborsa.com/haber/turkiye-sigorta-goodyear-bedelsiz-sermaye-artirimi",
   },
+  openGraph: {
+    type: "article",
+    images: [{ url: "https://www.hocaileborsa.com/turkiye-sigorta-goodyear-bedelsiz-sermaye-artirimi.webp" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["https://www.hocaileborsa.com/turkiye-sigorta-goodyear-bedelsiz-sermaye-artirimi.webp"],
+  },
 };
 
 const sermayeArtirimlari = [

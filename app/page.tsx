@@ -756,7 +756,7 @@ export default function HomePage() {
                   <InstagramIcon />
                 </SosyalIkon>
                 <SosyalIkon
-                  href="https://t.me/borsa_halkaarz_endeks"
+                  href="https://t.me/halkaarz_0"
                   label="Telegram"
                 >
                   <TelegramIcon />

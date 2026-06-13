@@ -14,6 +14,14 @@ export const metadata: Metadata = {
     canonical:
       "https://www.hocaileborsa.com/haber/tcmb-politika-faizini-yuzde-37de-sabit-tuttu-11-haziran-2026",
   },
+  openGraph: {
+    type: "article",
+    images: [{ url: "https://www.hocaileborsa.com/tcmb-faiz-karari.webp" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["https://www.hocaileborsa.com/tcmb-faiz-karari.webp"],
+  },
 };
 
 const kararDetaylari = [
@@ -58,7 +66,7 @@ const jsonLd = {
   datePublished: "2026-06-11T14:05:00+03:00",
   dateModified: "2026-06-11T14:05:00+03:00",
   url: "https://www.hocaileborsa.com/haber/tcmb-politika-faizini-yuzde-37de-sabit-tuttu-11-haziran-2026",
-  author: { "@type": "Organization", name: "Hoca İle Borsa", url: "https://www.hocaileborsa.com" },
+  author: { "@type": "Person", "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person", name: "Erman Hoca", url: "https://www.hocaileborsa.com/yazar/erman-hoca" },
   publisher: {
     "@type": "Organization",
     "@id": "https://www.hocaileborsa.com/#organization",

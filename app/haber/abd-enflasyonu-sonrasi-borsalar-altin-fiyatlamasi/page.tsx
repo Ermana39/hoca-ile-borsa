@@ -15,6 +15,14 @@ export const metadata: Metadata = {
     canonical:
       "https://www.hocaileborsa.com/haber/abd-enflasyonu-sonrasi-borsalar-altin-fiyatlamasi",
   },
+  openGraph: {
+    type: "article",
+    images: [{ url: "https://www.hocaileborsa.com/abd-enflasyon-altin-borsa.webp" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["https://www.hocaileborsa.com/abd-enflasyon-altin-borsa.webp"],
+  },
 };
 
 const piyasaBasliklari = [

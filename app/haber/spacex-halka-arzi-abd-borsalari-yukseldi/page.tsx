@@ -15,6 +15,14 @@ export const metadata: Metadata = {
     canonical:
       "https://www.hocaileborsa.com/haber/spacex-halka-arzi-abd-borsalari-yukseldi",
   },
+  openGraph: {
+    type: "article",
+    images: [{ url: "https://www.hocaileborsa.com/gunluk-abd-borsalari-ozeti.webp" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["https://www.hocaileborsa.com/gunluk-abd-borsalari-ozeti.webp"],
+  },
 };
 
 const piyasaBasliklari = [

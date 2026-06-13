@@ -12,6 +12,15 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 988,
+    title: "Borsa Haftayı Yükselişle Kapattı, Altın Geriledi",
+    href: "/haber/borsa-yukseldi-altin-dustu-haftalik-piyasa-ozeti",
+    image: "/borsa-yukseldi-altin-dustu-haftalik-piyasa-ozeti.webp",
+    alt: "Borsa yükseldi altın düştü haftalık piyasa özeti",
+    publishedAt: "2026-06-13",
+    category: "piyasa-gundemi",
+  },
+  {
     id: 986,
     title: "SpaceX Halka Arzı Sonrası ABD Borsaları Yükseldi",
     href: "/haber/spacex-halka-arzi-abd-borsalari-yukseldi",

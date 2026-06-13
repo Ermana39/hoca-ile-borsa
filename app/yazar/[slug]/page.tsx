@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getYazar, yazarlar } from "@/app/data/yazarlar";
 import { newsItems } from "@/app/data/news";
+import SosyalIkonGrup from "@/components/SosyalIkonGrup";
 
 const siteUrl = "https://www.hocaileborsa.com";
 
@@ -31,6 +32,12 @@ export async function generateMetadata({
       title: `${yazar.isim} | Hoca İle Borsa`,
       description: yazar.bioKisa,
       images: [{ url: `${siteUrl}${yazar.avatar}` }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${yazar.isim} | Hoca İle Borsa`,
+      description: yazar.bioKisa,
+      images: [`${siteUrl}${yazar.avatar}`],
     },
   };
 }
@@ -128,54 +135,11 @@ export default async function YazarPage({
               </div>
             </div>
 
-            <div className="mt-6 flex flex-wrap items-center gap-3">
-              <a
-                href={yazar.sosyal.x}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm font-semibold text-slate-700 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
-              >
-                X (Twitter)
-              </a>
-              <a
-                href={yazar.sosyal.instagram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm font-semibold text-slate-700 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
-              >
-                Instagram
-              </a>
-              <a
-                href={yazar.sosyal.telegram}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm font-semibold text-slate-700 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
-              >
-                Telegram
-              </a>
-              <a
-                href={yazar.sosyal.youtube}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm font-semibold text-slate-700 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
-              >
-                YouTube (Yurt İçi Piyasalar)
-              </a>
-              <a
-                href={yazar.sosyal.youtubeGlobal}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm font-semibold text-slate-700 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
-              >
-                YouTube (Yurt Dışı Piyasalar)
-              </a>
-              <a
-                href={`mailto:${yazar.email}`}
-                className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-1.5 text-sm font-semibold text-slate-700 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
-              >
-                {yazar.email}
-              </a>
-            </div>
+            <SosyalIkonGrup
+              sosyal={yazar.sosyal}
+              email={yazar.email}
+              className="mt-6"
+            />
 
             <div className="mt-6 space-y-4 text-base leading-8 text-slate-700 md:text-lg">
               {yazar.bioUzun.map((paragraf, i) => (

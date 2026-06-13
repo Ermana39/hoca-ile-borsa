@@ -13,6 +13,14 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://www.hocaileborsa.com/haber/aselsandan-845-milyon-dolarlik-yeni-sozlesme",
   },
+  openGraph: {
+    type: "article",
+    images: [{ url: "https://www.hocaileborsa.com/haber977.webp" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["https://www.hocaileborsa.com/haber977.webp"],
+  },
 };
 
 const haberDetaylari = [
@@ -52,7 +60,7 @@ const jsonLd = {
   datePublished: "2026-06-05T09:00:00+03:00",
   dateModified: "2026-06-05T09:00:00+03:00",
   url: "https://www.hocaileborsa.com/haber/aselsandan-845-milyon-dolarlik-yeni-sozlesme",
-  author: { "@type": "Organization", name: "Hoca İle Borsa", url: "https://www.hocaileborsa.com" },
+  author: { "@type": "Person", "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person", name: "Erman Hoca", url: "https://www.hocaileborsa.com/yazar/erman-hoca" },
   publisher: {
     "@type": "Organization",
     "@id": "https://www.hocaileborsa.com/#organization",

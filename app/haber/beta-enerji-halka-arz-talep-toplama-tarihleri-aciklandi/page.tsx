@@ -14,6 +14,14 @@ export const metadata: Metadata = {
     canonical:
       "https://www.hocaileborsa.com/haber/beta-enerji-halka-arz-talep-toplama-tarihleri-aciklandi",
   },
+  openGraph: {
+    type: "article",
+    images: [{ url: "https://www.hocaileborsa.com/beta-enerji-halka-arz.webp" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["https://www.hocaileborsa.com/beta-enerji-halka-arz.webp"],
+  },
 };
 
 const betaEnerjiBasliklari = [
