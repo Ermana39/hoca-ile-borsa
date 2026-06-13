@@ -12,6 +12,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+  id: 989,
+  title:
+    "Beta Enerji Halka Arzında Yüksek Başvuruya Ne Kadar Dağıtım Yapabilir?",
+  href: "/haber/beta-enerji-yuksek-basvuru-dagitim",
+  image: "/beta-enerji-yuksek-basvuru-dagitim.webp",
+  alt: "Beta Enerji halka arz yüksek başvuru dağıtım oranı",
+  publishedAt: "2026-06-13",
+  category: "halka-arz",
+},
+  {
     id: 988,
     title: "Borsa Haftayı Yükselişle Kapattı, Altın Geriledi",
     href: "/haber/borsa-yukseldi-altin-dustu-haftalik-piyasa-ozeti",
@@ -40,7 +50,8 @@ export const newsItems: NewsItem[] = [
   },
   {
     id: 985,
-    title: "SPK’dan Türkiye Sigorta ve Goodyear İçin Bedelsiz Sermaye Artırımı Onayı",
+    title:
+      "SPK’dan Türkiye Sigorta ve Goodyear İçin Bedelsiz Sermaye Artırımı Onayı",
     href: "/haber/turkiye-sigorta-goodyear-bedelsiz-sermaye-artirimi",
     image: "/turkiye-sigorta-goodyear-bedelsiz-sermaye-artirimi.webp",
     alt: "Türkiye Sigorta ve Goodyear bedelsiz sermaye artırımı onayı",
