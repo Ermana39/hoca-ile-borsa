@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
 import HaberNavigasyon from "@/components/HaberNavigasyon";
+import HaberAltBilgi from "@/components/HaberAltBilgi";
 
 export const metadata: Metadata = {
   title: "THY’nin Air Europa Yatırım Sürecinde Yeni Gelişme",
@@ -147,6 +148,8 @@ export default function Haber976Page() {
               </div>
             </div>
           </div>
+          <HaberAltBilgi href="/haber/thynin-air-europa-yatirim-surecinde-yeni-gelisme" />
+
           <HaberNavigasyon href="/haber/thynin-air-europa-yatirim-surecinde-yeni-gelisme" />
 
           <AuthorBox />

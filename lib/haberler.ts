@@ -1,4 +1,9 @@
 import { newsItems as tumHaberler } from "@/app/data/news";
+import {
+  HABER_SAYFA_BOYUTU,
+  isHaberKategori,
+  type HaberKategori,
+} from "@/lib/haber-kategorileri";
 
 export type NewsItem = {
   id: number;
@@ -7,6 +12,7 @@ export type NewsItem = {
   image?: string;
   alt?: string;
   publishedAt?: string;
+  category?: HaberKategori;
 };
 
 function getIdFromHref(href: string) {
@@ -37,6 +43,10 @@ export function normalizeNewsItems(data: unknown): NewsItem[] {
               : "/placeholder.png",
         alt: item.alt || item.title || "",
         publishedAt: item.publishedAt || "",
+        category:
+          item.category && isHaberKategori(item.category)
+            ? item.category
+            : undefined,
       };
     })
     .filter(
@@ -60,3 +70,41 @@ export function getAllNews(): NewsItem[] {
 }
 
 export const ANA_SAYFA_HABER_LIMIT = 12;
+
+// --- Kategori & sayfalama yardımcıları ---
+
+export function getNewsByCategory(kategori: HaberKategori): NewsItem[] {
+  return getAllNews().filter((item) => item.category === kategori);
+}
+
+export function getToplamSayfa(toplamHaber: number): number {
+  return Math.max(1, Math.ceil(toplamHaber / HABER_SAYFA_BOYUTU));
+}
+
+// 1 tabanlı sayfa numarasına göre ilgili haber dilimini döndürür.
+export function getSayfaHaberleri(
+  haberler: NewsItem[],
+  sayfa: number
+): NewsItem[] {
+  const guvenliSayfa = Math.max(1, Math.floor(sayfa));
+  const baslangic = (guvenliSayfa - 1) * HABER_SAYFA_BOYUTU;
+  return haberler.slice(baslangic, baslangic + HABER_SAYFA_BOYUTU);
+}
+
+// Aynı kategoriden, mevcut haberi hariç tutan en güncel ilgili haberler.
+export function getIlgiliHaberler(
+  href: string,
+  limit = 6
+): NewsItem[] {
+  const mevcut = getAllNews().find((item) => item.href === href);
+  if (!mevcut?.category) return [];
+
+  return getAllNews()
+    .filter((item) => item.category === mevcut.category && item.href !== href)
+    .slice(0, limit);
+}
+
+// Bir haberin kategorisini href üzerinden bulur.
+export function getHaberKategorisi(href: string): HaberKategori | undefined {
+  return getAllNews().find((item) => item.href === href)?.category;
+}

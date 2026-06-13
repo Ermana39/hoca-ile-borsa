@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
 import HaberNavigasyon from "@/components/HaberNavigasyon";
+import HaberAltBilgi from "@/components/HaberAltBilgi";
 
 export const metadata: Metadata = {
   title: "ASELSAN’dan 845 Milyon Dolarlık Yeni Sözleşme",
@@ -146,6 +147,8 @@ export default function Haber977Page() {
               </div>
             </div>
           </div>
+          <HaberAltBilgi href="/haber/aselsandan-845-milyon-dolarlik-yeni-sozlesme" />
+
           <HaberNavigasyon href="/haber/aselsandan-845-milyon-dolarlik-yeni-sozlesme" />
 
           <AuthorBox />

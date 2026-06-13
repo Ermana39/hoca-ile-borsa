@@ -22,6 +22,15 @@ export type CategoryIconName =
   // Halka Arz
   | "onayli-izahnameler"
   | "taslak-izahnameler"
+  | "tavan-serisi"
+  // Gösterge Taramaları
+  | "trend-yukselis"
+  | "trend-dusus"
+  | "rsi-dusuk"
+  | "rsi-yuksek"
+  | "macd-al"
+  | "macd-sat"
+  | "guclu-trend"
   // Temettü
   | "temettu-egitimi"
   | "temettu-takvim"
@@ -390,6 +399,111 @@ const icons: Record<CategoryIconName, React.ReactNode> = {
         fill="none"
       />
       <circle cx="24.5" cy="24" r="2.6" fill={AMBER} />
+    </>
+  ),
+  "tavan-serisi": (
+    <>
+      <rect x="5" y="6" width="38" height="36" rx="5" fill={NAVY} />
+      <path d="M9 13h30" stroke={GREEN} strokeWidth="2.4" strokeLinecap="round" strokeDasharray="4 4" />
+      <rect x="11" y="29" width="6" height="9" rx="1.4" fill={BLUE_SOFT} />
+      <rect x="21" y="22" width="6" height="16" rx="1.4" fill={BLUE_MID} />
+      <rect x="31" y="13" width="6" height="25" rx="1.4" fill={GREEN} />
+      <path d="M31 13l3-4 3 4h-6z" fill={GREEN} />
+    </>
+  ),
+  "trend-yukselis": (
+    <>
+      <rect x="5" y="6" width="38" height="36" rx="5" fill={NAVY} />
+      <path
+        d="M9 32l8-8 6 5 12-15"
+        stroke={GREEN}
+        strokeWidth="2.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
+      <path d="M27 14h8v8" stroke={GREEN} strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+    </>
+  ),
+  "trend-dusus": (
+    <>
+      <rect x="5" y="6" width="38" height="36" rx="5" fill={NAVY} />
+      <path
+        d="M9 16l8 8 6-5 12 15"
+        stroke={RED}
+        strokeWidth="2.6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        fill="none"
+      />
+      <path d="M27 34h8v-8" stroke={RED} strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+    </>
+  ),
+  "rsi-dusuk": (
+    <>
+      <rect x="5" y="6" width="38" height="36" rx="5" fill={NAVY} />
+      <path d="M9 14h30M9 24h30M9 34h30" stroke={BLUE_PALE} strokeWidth="1.6" strokeLinecap="round" opacity="0.4" />
+      <path
+        d="M9 18c4 0 5 14 9 14s5-22 9-22 5 16 9 16 5-6 8-6"
+        stroke={GREEN}
+        strokeWidth="2.4"
+        strokeLinecap="round"
+        fill="none"
+      />
+      <circle cx="18" cy="32" r="3" fill={GREEN} />
+      <circle cx="18" cy="32" r="1.3" fill={LIGHT} />
+    </>
+  ),
+  "rsi-yuksek": (
+    <>
+      <rect x="5" y="6" width="38" height="36" rx="5" fill={NAVY} />
+      <path d="M9 14h30M9 24h30M9 34h30" stroke={BLUE_PALE} strokeWidth="1.6" strokeLinecap="round" opacity="0.4" />
+      <path
+        d="M9 28c4 0 5-14 9-14s5 22 9 22 5-16 9-16 5 6 8 6"
+        stroke={RED}
+        strokeWidth="2.4"
+        strokeLinecap="round"
+        fill="none"
+      />
+      <circle cx="27" cy="16" r="3" fill={RED} />
+      <circle cx="27" cy="16" r="1.3" fill={LIGHT} />
+    </>
+  ),
+  "macd-al": (
+    <>
+      <rect x="5" y="6" width="38" height="36" rx="5" fill={NAVY} />
+      <rect x="9" y="26" width="4" height="8" rx="1" fill={BLUE_SOFT} />
+      <rect x="15" y="22" width="4" height="12" rx="1" fill={BLUE_SOFT} />
+      <rect x="21" y="17" width="4" height="17" rx="1" fill={GREEN} />
+      <rect x="27" y="12" width="4" height="22" rx="1" fill={GREEN} />
+      <rect x="33" y="9" width="4" height="25" rx="1" fill={GREEN} />
+      <path d="M9 28l10-11 8-3 8-4" stroke={AMBER} strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+    </>
+  ),
+  "macd-sat": (
+    <>
+      <rect x="5" y="6" width="38" height="36" rx="5" fill={NAVY} />
+      <rect x="9" y="9" width="4" height="25" rx="1" fill={RED} />
+      <rect x="15" y="12" width="4" height="22" rx="1" fill={RED} />
+      <rect x="21" y="17" width="4" height="17" rx="1" fill={RED} />
+      <rect x="27" y="22" width="4" height="12" rx="1" fill={BLUE_SOFT} />
+      <rect x="33" y="26" width="4" height="8" rx="1" fill={BLUE_SOFT} />
+      <path d="M9 12l10 11 8 3 8 4" stroke={AMBER} strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+    </>
+  ),
+  "guclu-trend": (
+    <>
+      <rect x="5" y="6" width="38" height="36" rx="5" fill={NAVY} />
+      <path
+        d="M9 34c5-1 7-7 11-11s7-3 9-7 5-5 10-5"
+        stroke={GREEN}
+        strokeWidth="2.6"
+        strokeLinecap="round"
+        fill="none"
+      />
+      <path d="M31 11h8v8" stroke={GREEN} strokeWidth="2.6" strokeLinecap="round" strokeLinejoin="round" fill="none" />
+      <circle cx="20" cy="23" r="2.6" fill={AMBER} />
+      <circle cx="29" cy="16" r="2.6" fill={AMBER} />
     </>
   ),
   "oran-analizi": (

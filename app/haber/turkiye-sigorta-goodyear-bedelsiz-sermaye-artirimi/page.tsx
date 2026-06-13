@@ -1,9 +1,10 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
 import HaberNavigasyon from "@/components/HaberNavigasyon";
+import HaberAltBilgi from "@/components/HaberAltBilgi";
 
 export const metadata: Metadata = {
   title:
@@ -218,6 +219,8 @@ export default function TurkiyeSigortaGoodyearBedelsizPage() {
               </div>
             </div>
           </div>
+          <HaberAltBilgi href="/haber/turkiye-sigorta-goodyear-bedelsiz-sermaye-artirimi" />
+
           <HaberNavigasyon href="/haber/turkiye-sigorta-goodyear-bedelsiz-sermaye-artirimi" />
 
           <AuthorBox />

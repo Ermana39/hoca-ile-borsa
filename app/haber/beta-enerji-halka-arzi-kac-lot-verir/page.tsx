@@ -1,9 +1,10 @@
-import Image from "next/image";
+﻿import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
 import HaberNavigasyon from "@/components/HaberNavigasyon";
+import HaberAltBilgi from "@/components/HaberAltBilgi";
 
 export const metadata: Metadata = {
   title: "Beta Enerji Halka Arzı Kaç Lot Verir? Kişi Başı Kaç Lot Düşer?",
@@ -356,6 +357,8 @@ export default function BetaEnerjiHalkaArzKacLotVerirPage() {
               </div>
             </div>
           </div>
+
+          <HaberAltBilgi href="/haber/beta-enerji-halka-arzi-kac-lot-verir" />
 
           <HaberNavigasyon href="/haber/beta-enerji-halka-arzi-kac-lot-verir" />
 

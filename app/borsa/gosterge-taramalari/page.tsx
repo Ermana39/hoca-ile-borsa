@@ -4,65 +4,58 @@ export const metadata = {
   alternates: { canonical: "https://www.hocaileborsa.com/borsa/gosterge-taramalari" },
 };
 
-import Image from "next/image";
 import Link from "next/link";
+import { IconTile } from "@/components/icons/IconTile";
+import type { CategoryIconName } from "@/components/icons/CategoryIcon";
 
 const taramalar = [
   {
     title: "Yükseliş trendinde olan hisseler",
     description: "5, 13, 21, 55, 89, 144, 233 hareketli ortalama üzerinde olanlar",
     href: "/borsa/gosterge-taramalari/yukselis-trendinde-olanlar",
-    image: "/yukselis-trendinde-olanlar-yatay.png",
-    alt: "Yükseliş trendinde olan hisseler görseli",
+    icon: "trend-yukselis" as CategoryIconName,
   },
   {
     title: "Düşüş trendinde olan hisseler",
     description: "5, 13, 21, 55, 89, 144, 233 hareketli ortalama altında olanlar",
     href: "/borsa/gosterge-taramalari/dusus-trendinde-olanlar",
-    image: "/dusus-trendinde-olanlar-yatay.png",
-    alt: "Düşüş trendinde olan hisseler görseli",
+    icon: "trend-dusus" as CategoryIconName,
   },
   {
     title: "RSI 40 Altı",
     description: "RSI değeri 40 seviyesinin altında olan hisseler",
     href: "/borsa/gosterge-taramalari/rsi40-alti",
-    image: "/rsi40-tarama.png",
-    alt: "RSI 40 altı hisseler görseli",
+    icon: "rsi-dusuk" as CategoryIconName,
   },
   {
     title: "RSI 70 Üstü",
     description: "RSI değeri 70 seviyesinin üzerinde olan hisseler",
     href: "/borsa/gosterge-taramalari/rsi70-ustu",
-    image: "/rsi70-tarama.png",
-    alt: "RSI 70 üstü hisseler görseli",
+    icon: "rsi-yuksek" as CategoryIconName,
   },
   {
     title: "MACD Al verenler",
     description: "MACD göstergesine göre al sinyali üreten hisseler",
     href: "/borsa/gosterge-taramalari/macd-al",
-    image: "/macd-al.png",
-    alt: "MACD al verenler görseli",
+    icon: "macd-al" as CategoryIconName,
   },
   {
     title: "MACD Sat verenler",
     description: "MACD göstergesine göre sat sinyali üreten hisseler",
     href: "/borsa/gosterge-taramalari/macd-sat",
-    image: "/macd-sat.png",
-    alt: "MACD sat verenler görseli",
+    icon: "macd-sat" as CategoryIconName,
   },
   {
     title: "Güçlü Trend ve Momentum Taraması",
     description: "Hareketli ortalama dizilimi, StochRSI ve MACD göstergelerine göre güçlü yükseliş trendi ve pozitif momentum gösteren hisseler",
     href: "/borsa/gosterge-taramalari/guclu-trend-momentum",
-    image: "/Guclu-trend-ve-momentum-taramasi.png",
-    alt: "Güçlü trend ve momentum taraması görseli",
+    icon: "guclu-trend" as CategoryIconName,
   },
   {
     title: "Yükseliş Trendi + Hacim Artışı",
     description: "Hareketli ortalama dizilimi, son 3 günlük hacim ortalaması son 21 günlük hacim ortalamasının üzerinde olan hisseler",
     href: "/borsa/gosterge-taramalari/yukselis-hacim",
-    image: "/yükselis-hacim-tarama.png",
-    alt: " Yükseliş Trendi + Hacim Artışı taraması görseli",
+    icon: "hacim-artisi-analizi" as CategoryIconName,
   },
 ];
 
@@ -70,41 +63,33 @@ function TaramaKutusu({
   title,
   description,
   href,
-  image,
-  alt,
+  icon,
 }: {
   title: string;
   description: string;
   href: string;
-  image: string;
-  alt: string;
+  icon: CategoryIconName;
 }) {
   return (
     <Link
       href={href}
-      className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)]"
+      className="group flex flex-1 flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)]"
     >
-      <div className="relative overflow-hidden bg-slate-100">
-          <div className="relative aspect-[16/10] w-full">
-            <Image
-              src={image}
-              alt={alt}
-              fill
-              className="object-cover transition duration-300 group-hover:scale-[1.03]"
-            />
-          </div>
-        </div>
-      <div className="flex flex-1 flex-col p-4 md:p-5">
+      <div className="mb-4 flex items-center gap-3">
+        <IconTile
+          name={icon}
+          className="h-12 w-12 shrink-0 transition duration-300 group-hover:bg-blue-100"
+        />
         <h2 className="text-xl font-semibold leading-tight text-slate-900 md:text-xl">
           {title}
         </h2>
-        <p className="mt-3 text-sm leading-6 text-slate-500 md:text-sm">
-          {description}
-        </p>
-        <div className="mt-auto pt-3 flex items-center gap-1 text-xs font-semibold text-blue-600 transition duration-300 group-hover:gap-2">
-          <span>İncele</span>
-          <span>→</span>
-        </div>
+      </div>
+      <p className="text-sm leading-6 text-slate-500 md:text-sm">
+        {description}
+      </p>
+      <div className="mt-auto pt-3 flex items-center gap-1 text-xs font-semibold text-blue-600 transition duration-300 group-hover:gap-2">
+        <span>İncele</span>
+        <span>→</span>
       </div>
     </Link>
   );
@@ -141,7 +126,7 @@ export default function GostergeTaramalariPage() {
         </section>
 
         <section className="py-6">
-          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4">
+          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
             {taramalar.map((item) => (
               <TaramaKutusu key={item.href} {...item} />
             ))}

@@ -360,16 +360,11 @@ export default function HalkaArzPage() {
             aria-label="Halka Arz Tavan Serisi"
             className="group flex min-h-[240px] flex-col rounded-2xl border border-zinc-200 bg-zinc-50 p-3 transition hover:bg-zinc-100"
           >
-            <div className="relative mb-4 flex aspect-[16/10] items-center justify-center overflow-hidden rounded-2xl bg-emerald-50">
-              <div className="px-5 text-center">
-                <div className="text-5xl font-black text-emerald-600">TAVAN</div>
-                <div className="mt-3 text-lg font-bold text-zinc-900">
-                  Halka Arz Takibi
-                </div>
-                <div className="mt-2 text-sm font-semibold text-zinc-600">
-                  Tavan sayısı, getiri ve son durum
-                </div>
-              </div>
+            <div className="relative mb-4 flex aspect-[16/10] items-center justify-center overflow-hidden rounded-2xl bg-white">
+              <IconTile
+                name="tavan-serisi"
+                className="h-28 w-28 transition duration-300 group-hover:bg-blue-100"
+              />
             </div>
 
             <div className="flex flex-1 items-center justify-center px-2 pb-2 text-center">

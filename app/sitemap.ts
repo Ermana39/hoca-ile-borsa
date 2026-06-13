@@ -1,5 +1,11 @@
 import type { MetadataRoute } from "next";
 import { newsItems } from "@/app/data/news";
+import {
+  getNewsByCategory,
+  getToplamSayfa,
+  getAllNews,
+} from "@/lib/haberler";
+import { HABER_KATEGORILERI } from "@/lib/haber-kategorileri";
 
 const siteUrl = "https://www.hocaileborsa.com";
 
@@ -503,7 +509,34 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const haberRoutes = newsItems.map((item) => item.href);
 
-  const tumUrller = Array.from(new Set([...staticRoutes, ...taslakSirketRoutes, ...haberRoutes]));
+  // Haber arşivi sayfalama route'ları: /haberler/sayfa/2 ... N
+  const arsivSayfaRoutes: string[] = [];
+  const toplamArsivSayfa = getToplamSayfa(getAllNews().length);
+  for (let n = 2; n <= toplamArsivSayfa; n++) {
+    arsivSayfaRoutes.push(`/haberler/sayfa/${n}`);
+  }
+
+  // Kategori arşiv sayfaları + kategori sayfalama route'ları
+  const kategoriRoutes: string[] = [];
+  for (const kategori of HABER_KATEGORILERI) {
+    kategoriRoutes.push(`/haberler/kategori/${kategori.slug}`);
+    const toplamKategoriSayfa = getToplamSayfa(
+      getNewsByCategory(kategori.slug).length
+    );
+    for (let n = 2; n <= toplamKategoriSayfa; n++) {
+      kategoriRoutes.push(`/haberler/kategori/${kategori.slug}/sayfa/${n}`);
+    }
+  }
+
+  const tumUrller = Array.from(
+    new Set([
+      ...staticRoutes,
+      ...taslakSirketRoutes,
+      ...haberRoutes,
+      ...arsivSayfaRoutes,
+      ...kategoriRoutes,
+    ])
+  );
 
   return tumUrller.map((route) => {
     if (route === "/") return createEntry(route, 1, "daily");
@@ -519,6 +552,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     if (route.startsWith("/halka-arz/taslak-izahnameler/")) {
       return createEntry(route, 0.8, "weekly");
+    }
+
+    if (route === "/haberler") {
+      return createEntry(route, 0.9, "daily");
+    }
+
+    if (route.startsWith("/haberler/kategori/")) {
+      return createEntry(route, 0.75, "daily");
+    }
+
+    if (route.startsWith("/haberler/sayfa/")) {
+      return createEntry(route, 0.6, "daily");
     }
 
     if (route.startsWith("/haber/")) {
