@@ -1,8 +1,10 @@
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
+import HisseProfili from "@/components/HisseProfili";
 
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "EUREN Teknik Analiz — 08.04.8026",
+  title: "EUREN Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "Europen Endüstri (EUREN) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -13,6 +15,8 @@ export const metadata: Metadata = {
 export default function EurenGrafikAnaliz() {
   return (
     <>
+
+      <GrafikAnalizJsonLd kod="euren" tarih="8026-04-08" />
 
       <style>{`
         .euren-wrap *, .euren-wrap *::beurene, .euren-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -482,6 +486,9 @@ export default function EurenGrafikAnaliz() {
             </div>
           </div>
 
+          {/* ŞİRKET PROFİLİ & TEMEL GÖRÜNÜM */}
+          <HisseProfili kod="euren" />
+
           <div className="euren-disclaimer">
             <div className="euren-disclaimer-head">
               <div className="euren-disclaimer-icon">⚠</div>
@@ -492,21 +499,6 @@ export default function EurenGrafikAnaliz() {
             <p>Teknik analizde kullanılan indikatör değerleri ve grafik yorumları öznel değerlendirmelerdir; kesin doğruluk garantisi verilmez. Piyasa koşulları hızla değişebilir.</p>
           </div>
         </main>
-
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="euren-footer">
-            <div className="euren-footer-inner">
-              <div className="euren-footer-brand">HOCA İLE BORSA</div>
-              <div className="euren-footer-meta">
-                EUREN Teknik Analiz Raporu<br />
-                Hazırlanma: 08.04.8026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="euren-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );

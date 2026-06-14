@@ -1,11 +1,13 @@
 ﻿import Link from "next/link";
 
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
+
 import HisseProfili from "@/components/HisseProfili";
 
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ISCTR Teknik Analiz — 07.06.2026",
+  title: "ISCTR Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "Türkiye İş Bankası C (ISCTR) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -17,6 +19,8 @@ export default function IsctrGrafikAnaliz() {
   return (
     <>
 
+
+      <GrafikAnalizJsonLd kod="isctr" tarih="2026-06-07" />
 
       <style>{`
         .isctr-wrap *, .isctr-wrap *::before, .isctr-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -509,21 +513,6 @@ export default function IsctrGrafikAnaliz() {
             <p>Teknik analizde kullanılan indikatör değerleri ve grafik yorumları öznel değerlendirmelerdir; kesin doğruluk garantisi verilmez. Piyasa koşulları hızla değişebilir.</p>
           </div>
         </main>
-
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="isctr-footer">
-            <div className="isctr-footer-inner">
-              <div className="isctr-footer-brand">HOCA İLE BORSA</div>
-              <div className="isctr-footer-meta">
-                ISCTR Teknik Analiz Raporu<br />
-                Hazırlanma: 07.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="isctr-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );

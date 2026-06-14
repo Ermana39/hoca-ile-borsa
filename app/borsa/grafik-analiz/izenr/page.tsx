@@ -1,9 +1,13 @@
 import Link from "next/link";
 
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
+
+import HisseProfili from "@/components/HisseProfili";
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "İZENR Teknik Analiz — 10.06.2026",
+  title: "İZENR Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "İzmir Enerjisi (İZENR) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -15,6 +19,8 @@ export default function IzenrGrafikAnaliz() {
   return (
     <>
 
+
+      <GrafikAnalizJsonLd kod="izenr" tarih="2026-06-10" />
 
       <style>{`
         .izenr-wrap *, .izenr-wrap *::before, .izenr-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -350,6 +356,9 @@ export default function IzenrGrafikAnaliz() {
           </div>
 
           {/* DISCLAIMER */}
+          {/* ŞİRKET PROFİLİ & TEMEL GÖRÜNÜM */}
+          <HisseProfili kod="izenr" />
+
           <div className="izenr-disclaimer">
             <div className="izenr-disclaimer-head">
               <div className="izenr-disclaimer-icon">⚠</div>
@@ -361,21 +370,6 @@ export default function IzenrGrafikAnaliz() {
           </div>
 
         </main>
-
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="izenr-footer">
-            <div className="izenr-footer-inner">
-              <div className="izenr-footer-brand">HOCA İLE BORSA</div>
-              <div className="izenr-footer-meta">
-                İZENR Teknik Analiz Raporu<br />
-                Hazırlanma: 10.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="izenr-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
 
       </div>
     </>

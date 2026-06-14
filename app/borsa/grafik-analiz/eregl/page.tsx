@@ -1,11 +1,13 @@
 ﻿import Link from "next/link";
 
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
+
 import HisseProfili from "@/components/HisseProfili";
 
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "EREGL Teknik Analiz — 06.06.2026",
+  title: "EREGL Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "Ereğli Demir Çelik (EREGL) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic indikatörleri ile detaylı değerlendirme.",
   alternates: {
@@ -17,6 +19,8 @@ export default function EreglGrafikAnaliz() {
   return (
     <>
 
+
+      <GrafikAnalizJsonLd kod="eregl" tarih="2026-06-06" />
 
       <style>{`
         .eregl-wrap *, .eregl-wrap *::before, .eregl-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -509,21 +513,6 @@ export default function EreglGrafikAnaliz() {
             <p>Teknik analizde kullanılan indikatör değerleri ve grafik yorumları öznel değerlendirmelerdir; kesin doğruluk garantisi verilmez. Piyasa koşulları hızla değişebilir.</p>
           </div>
         </main>
-
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="eregl-footer">
-            <div className="eregl-footer-inner">
-              <div className="eregl-footer-brand">HOCA İLE BORSA</div>
-              <div className="eregl-footer-meta">
-                EREGL Teknik Analiz Raporu<br />
-                Hazırlanma: 06.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="eregl-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );

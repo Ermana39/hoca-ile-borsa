@@ -1,9 +1,13 @@
 import Link from "next/link";
 
+import HisseProfili from "@/components/HisseProfili";
+
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "TRMET Teknik Analiz — 05.06.2026",
+  title: "TRMET Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "Trakya Metal (TRMET) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -15,6 +19,8 @@ export default function TrmetGrafikAnaliz() {
   return (
     <>
 
+
+      <GrafikAnalizJsonLd kod="trmet" tarih="2026-06-05" />
 
       <style>{`
         .trmet-wrap *, .trmet-wrap *::before, .trmet-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -494,6 +500,9 @@ export default function TrmetGrafikAnaliz() {
           </div>
 
 
+          {/* ŞİRKET PROFİLİ & TEMEL GÖRÜNÜM */}
+          <HisseProfili kod="trmet" />
+
           <div className="trmet-disclaimer">
             <div className="trmet-disclaimer-head">
               <div className="trmet-disclaimer-icon">⚠</div>
@@ -504,21 +513,6 @@ export default function TrmetGrafikAnaliz() {
             <p>Teknik analizde kullanılan indikatör değerleri ve grafik yorumları öznel değerlendirmelerdir; kesin doğruluk garantisi verilmez. Piyasa koşulları hızla değişebilir.</p>
           </div>
         </main>
-
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="trmet-footer">
-            <div className="trmet-footer-inner">
-              <div className="trmet-footer-brand">HOCA İLE BORSA</div>
-              <div className="trmet-footer-meta">
-                TRMET Teknik Analiz Raporu<br />
-                Hazırlanma: 05.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="trmet-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );

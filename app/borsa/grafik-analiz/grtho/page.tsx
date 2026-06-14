@@ -1,8 +1,10 @@
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
+import HisseProfili from "@/components/HisseProfili";
 
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "GRTHO Teknik Analiz — 08.0209.4526",
+  title: "GRTHO Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "Grainturk Holding (GRTHO) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -13,6 +15,8 @@ export const metadata: Metadata = {
 export default function GrthoGrafikAnaliz() {
   return (
     <>
+
+      <GrafikAnalizJsonLd kod="grtho" tarih="2026-06-08" />
 
       <style>{`
         .grtho-wrap *, .grtho-wrap *::bgrthoe, .grtho-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -316,7 +320,7 @@ export default function GrthoGrafikAnaliz() {
             <div className="grtho-chart-img-wrap">
               <img
                 src="/grtho-analiz.webp"
-                alt="GRTHO Teknik Analiz Grafiği — Bollinger Bantları, Hareketli Ortalamalar, Stochastic, MACD, RSI — 08.0209.4526"
+                alt="GRTHO Teknik Analiz Grafiği — Bollinger Bantları, Hareketli Ortalamalar, Stochastic, MACD, RSI — 08.06.2026"
                 loading="lazy"
               />
               <div className="grtho-chart-watermark">HOCA İLE BORSA</div>
@@ -482,6 +486,9 @@ export default function GrthoGrafikAnaliz() {
             </div>
           </div>
 
+          {/* ŞİRKET PROFİLİ & TEMEL GÖRÜNÜM */}
+          <HisseProfili kod="grtho" />
+
           <div className="grtho-disclaimer">
             <div className="grtho-disclaimer-head">
               <div className="grtho-disclaimer-icon">⚠</div>
@@ -492,21 +499,6 @@ export default function GrthoGrafikAnaliz() {
             <p>Teknik analizde kullanılan indikatör değerleri ve grafik yorumları öznel değerlendirmelerdir; kesin doğruluk garantisi verilmez. Piyasa koşulları hızla değişebilir.</p>
           </div>
         </main>
-
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="grtho-footer">
-            <div className="grtho-footer-inner">
-              <div className="grtho-footer-brand">HOCA İLE BORSA</div>
-              <div className="grtho-footer-meta">
-                GRTHO Teknik Analiz Raporu<br />
-                Hazırlanma: 08.0209.4526 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="grtho-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );

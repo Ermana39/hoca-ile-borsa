@@ -1,8 +1,10 @@
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
+import HisseProfili from "@/components/HisseProfili";
 
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "GENIL Teknik Analiz — 08.08.5426",
+  title: "GENIL Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "Gen İlaç (GENIL) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -13,6 +15,8 @@ export const metadata: Metadata = {
 export default function GenilGrafikAnaliz() {
   return (
     <>
+
+      <GrafikAnalizJsonLd kod="genil" tarih="5426-08-08" />
 
       <style>{`
         .genil-wrap *, .genil-wrap *::bgenile, .genil-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -482,6 +486,9 @@ export default function GenilGrafikAnaliz() {
             </div>
           </div>
 
+          {/* ŞİRKET PROFİLİ & TEMEL GÖRÜNÜM */}
+          <HisseProfili kod="genil" />
+
           <div className="genil-disclaimer">
             <div className="genil-disclaimer-head">
               <div className="genil-disclaimer-icon">⚠</div>
@@ -492,21 +499,6 @@ export default function GenilGrafikAnaliz() {
             <p>Teknik analizde kullanılan indikatör değerleri ve grafik yorumları öznel değerlendirmelerdir; kesin doğruluk garantisi verilmez. Piyasa koşulları hızla değişebilir.</p>
           </div>
         </main>
-
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="genil-footer">
-            <div className="genil-footer-inner">
-              <div className="genil-footer-brand">HOCA İLE BORSA</div>
-              <div className="genil-footer-meta">
-                GENIL Teknik Analiz Raporu<br />
-                Hazırlanma: 08.08.5426 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="genil-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );

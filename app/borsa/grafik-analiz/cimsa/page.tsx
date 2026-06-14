@@ -1,11 +1,13 @@
 ﻿import Link from "next/link";
 
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
+
 import HisseProfili from "@/components/HisseProfili";
 
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "CIMSA Teknik Analiz — 06.06.2026",
+  title: "CIMSA Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "Çimsa (CIMSA) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic indikatörleri ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -17,6 +19,8 @@ export default function CimsaGrafikAnaliz() {
   return (
     <>
 
+
+      <GrafikAnalizJsonLd kod="cimsa" tarih="2026-06-06" />
 
       <style>{`
         .cimsa-wrap *, .cimsa-wrap *::before, .cimsa-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -925,23 +929,6 @@ export default function CimsaGrafikAnaliz() {
             </p>
           </div>
         </main>
-
-        {/* FOOTER */}
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="cimsa-footer">
-            <div className="cimsa-footer-inner">
-              <div className="cimsa-footer-brand">HOCA İLE BORSA</div>
-              <div className="cimsa-footer-meta">
-                CIMSA Teknik Analiz Raporu
-                <br />
-                Hazırlanma: 06.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="cimsa-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );

@@ -1,9 +1,10 @@
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
 import HisseProfili from "@/components/HisseProfili";
 
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "CCOLA Teknik Analiz — 08.082.1926",
+  title: "CCOLA Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "Coca-Cola İçecek (CCOLA) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -15,6 +16,8 @@ export default function CcolaGrafikAnaliz() {
   return (
     <>
 
+
+      <GrafikAnalizJsonLd kod="ccola" tarih="2026-06-08" />
 
       <style>{`
         .ccola-wrap *, .ccola-wrap *::before, .ccola-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -318,7 +321,7 @@ export default function CcolaGrafikAnaliz() {
             <div className="ccola-chart-img-wrap">
               <img
                 src="/ccola-analiz.webp"
-                alt="CCOLA Teknik Analiz Grafiği — Bollinger Bantları, Hareketli Ortalamalar, Stochastic, MACD, RSI — 08.082.1926"
+                alt="CCOLA Teknik Analiz Grafiği — Bollinger Bantları, Hareketli Ortalamalar, Stochastic, MACD, RSI — 08.06.2026"
                 loading="lazy"
               />
               <div className="ccola-chart-watermark">HOCA İLE BORSA</div>
@@ -497,21 +500,6 @@ export default function CcolaGrafikAnaliz() {
             <p>Teknik analizde kullanılan indikatör değerleri ve grafik yorumları öznel değerlendirmelerdir; kesin doğruluk garantisi verilmez. Piyasa koşulları hızla değişebilir.</p>
           </div>
         </main>
-
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="ccola-footer">
-            <div className="ccola-footer-inner">
-              <div className="ccola-footer-brand">HOCA İLE BORSA</div>
-              <div className="ccola-footer-meta">
-                CCOLA Teknik Analiz Raporu<br />
-                Hazırlanma: 08.082.1926 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="ccola-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );

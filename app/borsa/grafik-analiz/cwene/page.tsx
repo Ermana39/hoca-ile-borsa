@@ -1,9 +1,10 @@
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
 import HisseProfili from "@/components/HisseProfili";
 
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "CWENE Teknik Analiz — 08.038.8226",
+  title: "CWENE Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "CW Enerji (CWENE) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -15,6 +16,8 @@ export default function CweneGrafikAnaliz() {
   return (
     <>
 
+
+      <GrafikAnalizJsonLd kod="cwene" tarih="2026-06-08" />
 
       <style>{`
         .cwene-wrap *, .cwene-wrap *::before, .cwene-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -318,7 +321,7 @@ export default function CweneGrafikAnaliz() {
             <div className="cwene-chart-img-wrap">
               <img
                 src="/cwene-analiz.webp"
-                alt="CWENE Teknik Analiz Grafiği — Bollinger Bantları, Hareketli Ortalamalar, Stochastic, MACD, RSI — 08.038.8226"
+                alt="CWENE Teknik Analiz Grafiği — Bollinger Bantları, Hareketli Ortalamalar, Stochastic, MACD, RSI — 08.06.2026"
                 loading="lazy"
               />
               <div className="cwene-chart-watermark">HOCA İLE BORSA</div>
@@ -497,21 +500,6 @@ export default function CweneGrafikAnaliz() {
             <p>Teknik analizde kullanılan indikatör değerleri ve grafik yorumları öznel değerlendirmelerdir; kesin doğruluk garantisi verilmez. Piyasa koşulları hızla değişebilir.</p>
           </div>
         </main>
-
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="cwene-footer">
-            <div className="cwene-footer-inner">
-              <div className="cwene-footer-brand">HOCA İLE BORSA</div>
-              <div className="cwene-footer-meta">
-                CWENE Teknik Analiz Raporu<br />
-                Hazırlanma: 08.038.8226 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="cwene-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );

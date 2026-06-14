@@ -1,11 +1,13 @@
 import Link from "next/link";
 
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
+
 import HisseProfili from "@/components/HisseProfili";
 
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "TUPRS Teknik Analiz — 05.06.2026",
+  title: "TUPRS Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "Tüpraş (TUPRS) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -17,6 +19,8 @@ export default function TuprsGrafikAnaliz() {
   return (
     <>
 
+
+      <GrafikAnalizJsonLd kod="tuprs" tarih="2026-06-05" />
 
       <style>{`
         .tuprs-wrap *, .tuprs-wrap *::before, .tuprs-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -509,21 +513,6 @@ export default function TuprsGrafikAnaliz() {
             <p>Teknik analizde kullanılan indikatör değerleri ve grafik yorumları öznel değerlendirmelerdir; kesin doğruluk garantisi verilmez. Piyasa koşulları hızla değişebilir.</p>
           </div>
         </main>
-
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="tuprs-footer">
-            <div className="tuprs-footer-inner">
-              <div className="tuprs-footer-brand">HOCA İLE BORSA</div>
-              <div className="tuprs-footer-meta">
-                TUPRS Teknik Analiz Raporu<br />
-                Hazırlanma: 05.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="tuprs-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );

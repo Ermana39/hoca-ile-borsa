@@ -1,8 +1,10 @@
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
+import HisseProfili from "@/components/HisseProfili";
 
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "GESAN Teknik Analiz — 08.079.3226",
+  title: "GESAN Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "Girişim Elektrik (GESAN) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -14,6 +16,8 @@ export default function GesanGrafikAnaliz() {
   return (
     <>
 
+
+      <GrafikAnalizJsonLd kod="gesan" tarih="2026-06-08" />
 
       <style>{`
         .gesan-wrap *, .gesan-wrap *::bgesane, .gesan-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -317,7 +321,7 @@ export default function GesanGrafikAnaliz() {
             <div className="gesan-chart-img-wrap">
               <img
                 src="/gesan-analiz.webp"
-                alt="GESAN Teknik Analiz Grafiği — Bollinger Bantları, Hareketli Ortalamalar, Stochastic, MACD, RSI — 08.079.3226"
+                alt="GESAN Teknik Analiz Grafiği — Bollinger Bantları, Hareketli Ortalamalar, Stochastic, MACD, RSI — 08.06.2026"
                 loading="lazy"
               />
               <div className="gesan-chart-watermark">HOCA İLE BORSA</div>
@@ -483,6 +487,9 @@ export default function GesanGrafikAnaliz() {
             </div>
           </div>
 
+          {/* ŞİRKET PROFİLİ & TEMEL GÖRÜNÜM */}
+          <HisseProfili kod="gesan" />
+
           <div className="gesan-disclaimer">
             <div className="gesan-disclaimer-head">
               <div className="gesan-disclaimer-icon">⚠</div>
@@ -493,21 +500,6 @@ export default function GesanGrafikAnaliz() {
             <p>Teknik analizde kullanılan indikatör değerleri ve grafik yorumları öznel değerlendirmelerdir; kesin doğruluk garantisi verilmez. Piyasa koşulları hızla değişebilir.</p>
           </div>
         </main>
-
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="gesan-footer">
-            <div className="gesan-footer-inner">
-              <div className="gesan-footer-brand">HOCA İLE BORSA</div>
-              <div className="gesan-footer-meta">
-                GESAN Teknik Analiz Raporu<br />
-                Hazırlanma: 08.079.3226 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="gesan-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );

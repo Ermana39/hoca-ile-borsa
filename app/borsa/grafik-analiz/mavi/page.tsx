@@ -1,9 +1,13 @@
 import Link from "next/link";
 
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
+
+import HisseProfili from "@/components/HisseProfili";
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "MAVİ Teknik Analiz — 10.06.2026",
+  title: "MAVİ Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "Mavi Giyim (MAVİ) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -15,6 +19,8 @@ export default function MaviGrafikAnaliz() {
   return (
     <>
 
+
+      <GrafikAnalizJsonLd kod="mavi" tarih="2026-06-10" />
 
       <style>{`
         .mavi-wrap *, .mavi-wrap *::before, .mavi-wrap *::after { box-sizing:border-box; margin:0; padding:0; }
@@ -349,6 +355,9 @@ export default function MaviGrafikAnaliz() {
           </div>
 
           {/* DISCLAIMER */}
+          {/* ŞİRKET PROFİLİ & TEMEL GÖRÜNÜM */}
+          <HisseProfili kod="mavi" />
+
           <div className="mavi-disclaimer">
             <div className="mavi-disclaimer-head">
               <div className="mavi-disclaimer-icon">⚠</div>
@@ -360,21 +369,6 @@ export default function MaviGrafikAnaliz() {
           </div>
 
         </main>
-
-        <footer style={{ background:"var(--bg)", borderTop:"1px solid var(--border)" }}>
-          <div className="mavi-footer">
-            <div className="mavi-footer-inner">
-              <div className="mavi-footer-brand">HOCA İLE BORSA</div>
-              <div className="mavi-footer-meta">
-                MAVİ Teknik Analiz Raporu<br />
-                Hazırlanma: 10.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="mavi-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
 
       </div>
     </>

@@ -1,9 +1,13 @@
 import Link from "next/link";
 
+import HisseProfili from "@/components/HisseProfili";
+
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "TKFEN Teknik Analiz — 07.06.2026",
+  title: "TKFEN Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "Tekfen Holding (TKFEN) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -15,6 +19,8 @@ export default function TkfenGrafikAnaliz() {
   return (
     <>
 
+
+      <GrafikAnalizJsonLd kod="tkfen" tarih="2026-06-07" />
 
       <style>{`
         .tkfen-wrap *, .tkfen-wrap *::before, .tkfen-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -494,6 +500,9 @@ export default function TkfenGrafikAnaliz() {
           </div>
 
 
+          {/* ŞİRKET PROFİLİ & TEMEL GÖRÜNÜM */}
+          <HisseProfili kod="tkfen" />
+
           <div className="tkfen-disclaimer">
             <div className="tkfen-disclaimer-head">
               <div className="tkfen-disclaimer-icon">⚠</div>
@@ -504,21 +513,6 @@ export default function TkfenGrafikAnaliz() {
             <p>Teknik analizde kullanılan indikatör değerleri ve grafik yorumları öznel değerlendirmelerdir; kesin doğruluk garantisi verilmez. Piyasa koşulları hızla değişebilir.</p>
           </div>
         </main>
-
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="tkfen-footer">
-            <div className="tkfen-footer-inner">
-              <div className="tkfen-footer-brand">HOCA İLE BORSA</div>
-              <div className="tkfen-footer-meta">
-                TKFEN Teknik Analiz Raporu<br />
-                Hazırlanma: 07.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="tkfen-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );

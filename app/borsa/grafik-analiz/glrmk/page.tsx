@@ -1,8 +1,10 @@
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
+import HisseProfili from "@/components/HisseProfili";
 
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "GLRMK Teknik Analiz — 08.0177.5126",
+  title: "GLRMK Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "Gülermak (GLRMK) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -13,6 +15,8 @@ export const metadata: Metadata = {
 export default function GlrmkGrafikAnaliz() {
   return (
     <>
+
+      <GrafikAnalizJsonLd kod="glrmk" tarih="2026-06-08" />
 
       <style>{`
         .glrmk-wrap *, .glrmk-wrap *::bglrmke, .glrmk-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -316,7 +320,7 @@ export default function GlrmkGrafikAnaliz() {
             <div className="glrmk-chart-img-wrap">
               <img
                 src="/glrmk-analiz.webp"
-                alt="GLRMK Teknik Analiz Grafiği — Bollinger Bantları, Hareketli Ortalamalar, Stochastic, MACD, RSI — 08.0177.5126"
+                alt="GLRMK Teknik Analiz Grafiği — Bollinger Bantları, Hareketli Ortalamalar, Stochastic, MACD, RSI — 08.06.2026"
                 loading="lazy"
               />
               <div className="glrmk-chart-watermark">HOCA İLE BORSA</div>
@@ -482,6 +486,9 @@ export default function GlrmkGrafikAnaliz() {
             </div>
           </div>
 
+          {/* ŞİRKET PROFİLİ & TEMEL GÖRÜNÜM */}
+          <HisseProfili kod="glrmk" />
+
           <div className="glrmk-disclaimer">
             <div className="glrmk-disclaimer-head">
               <div className="glrmk-disclaimer-icon">⚠</div>
@@ -492,21 +499,6 @@ export default function GlrmkGrafikAnaliz() {
             <p>Teknik analizde kullanılan indikatör değerleri ve grafik yorumları öznel değerlendirmelerdir; kesin doğruluk garantisi verilmez. Piyasa koşulları hızla değişebilir.</p>
           </div>
         </main>
-
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="glrmk-footer">
-            <div className="glrmk-footer-inner">
-              <div className="glrmk-footer-brand">HOCA İLE BORSA</div>
-              <div className="glrmk-footer-meta">
-                GLRMK Teknik Analiz Raporu<br />
-                Hazırlanma: 08.0177.5126 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="glrmk-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );

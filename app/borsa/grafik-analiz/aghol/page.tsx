@@ -1,9 +1,10 @@
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
 import HisseProfili from "@/components/HisseProfili";
 
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "AGHOL Teknik Analiz — 08.06.2026",
+  title: "AGHOL Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "Anadolu Grubu Holding (AGHOL) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -15,6 +16,8 @@ export default function AgholGrafikAnaliz() {
   return (
     <>
 
+
+      <GrafikAnalizJsonLd kod="aghol" tarih="2026-06-08" />
 
       <style>{`
         .aghol-wrap *, .aghol-wrap *::before, .aghol-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -497,21 +500,6 @@ export default function AgholGrafikAnaliz() {
             <p>Teknik analizde kullanılan indikatör değerleri ve grafik yorumları öznel değerlendirmelerdir; kesin doğruluk garantisi verilmez. Piyasa koşulları hızla değişebilir.</p>
           </div>
         </main>
-
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="aghol-footer">
-            <div className="aghol-footer-inner">
-              <div className="aghol-footer-brand">HOCA İLE BORSA</div>
-              <div className="aghol-footer-meta">
-                AGHOL Teknik Analiz Raporu<br />
-                Hazırlanma: 08.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="aghol-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );

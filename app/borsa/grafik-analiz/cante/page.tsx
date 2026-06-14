@@ -1,9 +1,10 @@
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
 import HisseProfili from "@/components/HisseProfili";
 
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "CANTE Teknik Analiz — 08.01.6326",
+  title: "CANTE Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "Çan2 Termik (CANTE) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -14,6 +15,8 @@ export const metadata: Metadata = {
 export default function CanteGrafikAnaliz() {
   return (
     <>
+
+      <GrafikAnalizJsonLd kod="cante" tarih="6326-01-08" />
 
       <style>{`
         .cante-wrap *, .cante-wrap *::before, .cante-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -496,21 +499,6 @@ export default function CanteGrafikAnaliz() {
             <p>Teknik analizde kullanılan indikatör değerleri ve grafik yorumları öznel değerlendirmelerdir; kesin doğruluk garantisi verilmez. Piyasa koşulları hızla değişebilir.</p>
           </div>
         </main>
-
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="cante-footer">
-            <div className="cante-footer-inner">
-              <div className="cante-footer-brand">HOCA İLE BORSA</div>
-              <div className="cante-footer-meta">
-                CANTE Teknik Analiz Raporu<br />
-                Hazırlanma: 08.01.6326 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="cante-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );

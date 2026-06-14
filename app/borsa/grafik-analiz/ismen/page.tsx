@@ -1,9 +1,13 @@
 import Link from "next/link";
 
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
+
+import HisseProfili from "@/components/HisseProfili";
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "ISMEN Teknik Analiz — 10.06.2026",
+  title: "ISMEN Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "İş Yatırım Menkul Değerler (ISMEN) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -15,6 +19,8 @@ export default function IsmenGrafikAnaliz() {
   return (
     <>
 
+
+      <GrafikAnalizJsonLd kod="ismen" tarih="2026-06-10" />
 
       <style>{`
         .ismen-wrap *, .ismen-wrap *::before, .ismen-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -442,6 +448,9 @@ export default function IsmenGrafikAnaliz() {
           </div>
 
           {/* DISCLAIMER */}
+          {/* ŞİRKET PROFİLİ & TEMEL GÖRÜNÜM */}
+          <HisseProfili kod="ismen" />
+
           <div className="ismen-disclaimer">
             <div className="ismen-disclaimer-head">
               <div className="ismen-disclaimer-icon">⚠</div>
@@ -453,21 +462,6 @@ export default function IsmenGrafikAnaliz() {
           </div>
 
         </main>
-
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="ismen-footer">
-            <div className="ismen-footer-inner">
-              <div className="ismen-footer-brand">HOCA İLE BORSA</div>
-              <div className="ismen-footer-meta">
-                ISMEN Teknik Analiz Raporu<br />
-                Hazırlanma: 10.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="ismen-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
 
       </div>
     </>

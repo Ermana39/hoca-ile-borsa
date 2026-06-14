@@ -1,11 +1,13 @@
 ﻿import Link from "next/link";
 
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
+
 import type { Metadata } from "next";
 
 import HisseProfili from "@/components/HisseProfili";
 
 export const metadata: Metadata = {
-  title: "AKBNK Teknik Analiz — 06.06.2026",
+  title: "AKBNK Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "Akbank (AKBNK) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic indikatörleri ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -17,6 +19,8 @@ export default function AkbnkGrafikAnaliz() {
   return (
     <>
 
+
+      <GrafikAnalizJsonLd kod="akbnk" tarih="2026-06-06" />
 
       <style>{`
         .aefes-wrap *, .aefes-wrap *::before, .aefes-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -547,22 +551,6 @@ export default function AkbnkGrafikAnaliz() {
           </div>
 
         </main>
-
-        {/* FOOTER */}
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="aefes-footer">
-            <div className="aefes-footer-inner">
-              <div className="aefes-footer-brand">HOCA İLE BORSA</div>
-              <div className="aefes-footer-meta">
-                AKBNK Teknik Analiz Raporu<br />
-                Hazırlanma: 06.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="aefes-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
 
       </div>
     </>

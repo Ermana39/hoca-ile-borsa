@@ -1,8 +1,10 @@
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
+import HisseProfili from "@/components/HisseProfili";
 
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "EFOR Teknik Analiz — 08.011.9626",
+  title: "EFOR Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "Efor Çay (EFOR) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -13,6 +15,8 @@ export const metadata: Metadata = {
 export default function EforGrafikAnaliz() {
   return (
     <>
+
+      <GrafikAnalizJsonLd kod="efor" tarih="2026-06-08" />
 
       <style>{`
         .efor-wrap *, .efor-wrap *::before, .efor-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -316,7 +320,7 @@ export default function EforGrafikAnaliz() {
             <div className="efor-chart-img-wrap">
               <img
                 src="/efor-analiz.webp"
-                alt="EFOR Teknik Analiz Grafiği — Bollinger Bantları, Hareketli Ortalamalar, Stochastic, MACD, RSI — 08.011.9626"
+                alt="EFOR Teknik Analiz Grafiği — Bollinger Bantları, Hareketli Ortalamalar, Stochastic, MACD, RSI — 08.06.2026"
                 loading="lazy"
               />
               <div className="efor-chart-watermark">HOCA İLE BORSA</div>
@@ -482,6 +486,9 @@ export default function EforGrafikAnaliz() {
             </div>
           </div>
 
+          {/* ŞİRKET PROFİLİ & TEMEL GÖRÜNÜM */}
+          <HisseProfili kod="efor" />
+
           <div className="efor-disclaimer">
             <div className="efor-disclaimer-head">
               <div className="efor-disclaimer-icon">⚠</div>
@@ -492,21 +499,6 @@ export default function EforGrafikAnaliz() {
             <p>Teknik analizde kullanılan indikatör değerleri ve grafik yorumları öznel değerlendirmelerdir; kesin doğruluk garantisi verilmez. Piyasa koşulları hızla değişebilir.</p>
           </div>
         </main>
-
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="efor-footer">
-            <div className="efor-footer-inner">
-              <div className="efor-footer-brand">HOCA İLE BORSA</div>
-              <div className="efor-footer-meta">
-                EFOR Teknik Analiz Raporu<br />
-                Hazırlanma: 08.011.9626 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="efor-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );

@@ -1,8 +1,10 @@
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
+import HisseProfili from "@/components/HisseProfili";
 
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "GRSEL Teknik Analiz — 08.0313.3126",
+  title: "GRSEL Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "Gür-Sel Turizm (GRSEL) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -13,6 +15,8 @@ export const metadata: Metadata = {
 export default function GrselGrafikAnaliz() {
   return (
     <>
+
+      <GrafikAnalizJsonLd kod="grsel" tarih="2026-06-08" />
 
       <style>{`
         .grsel-wrap *, .grsel-wrap *::bgrsele, .grsel-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -316,7 +320,7 @@ export default function GrselGrafikAnaliz() {
             <div className="grsel-chart-img-wrap">
               <img
                 src="/grsel-analiz.webp"
-                alt="GRSEL Teknik Analiz Grafiği — Bollinger Bantları, Hareketli Ortalamalar, Stochastic, MACD, RSI — 08.0313.3126"
+                alt="GRSEL Teknik Analiz Grafiği — Bollinger Bantları, Hareketli Ortalamalar, Stochastic, MACD, RSI — 08.06.2026"
                 loading="lazy"
               />
               <div className="grsel-chart-watermark">HOCA İLE BORSA</div>
@@ -482,6 +486,9 @@ export default function GrselGrafikAnaliz() {
             </div>
           </div>
 
+          {/* ŞİRKET PROFİLİ & TEMEL GÖRÜNÜM */}
+          <HisseProfili kod="grsel" />
+
           <div className="grsel-disclaimer">
             <div className="grsel-disclaimer-head">
               <div className="grsel-disclaimer-icon">⚠</div>
@@ -492,21 +499,6 @@ export default function GrselGrafikAnaliz() {
             <p>Teknik analizde kullanılan indikatör değerleri ve grafik yorumları öznel değerlendirmelerdir; kesin doğruluk garantisi verilmez. Piyasa koşulları hızla değişebilir.</p>
           </div>
         </main>
-
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="grsel-footer">
-            <div className="grsel-footer-inner">
-              <div className="grsel-footer-brand">HOCA İLE BORSA</div>
-              <div className="grsel-footer-meta">
-                GRSEL Teknik Analiz Raporu<br />
-                Hazırlanma: 08.0313.3126 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="grsel-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );

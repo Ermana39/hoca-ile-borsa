@@ -1,9 +1,13 @@
 import Link from "next/link";
 
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
+
+import HisseProfili from "@/components/HisseProfili";
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "KUYAS Teknik Analiz — 10.06.2026",
+  title: "KUYAS Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "Kuyas Holding (KUYAS) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -15,6 +19,8 @@ export default function KuyasGrafikAnaliz() {
   return (
     <>
 
+
+      <GrafikAnalizJsonLd kod="kuyas" tarih="2026-06-10" />
 
       <style>{`
         .kuyas-wrap *, .kuyas-wrap *::before, .kuyas-wrap *::after { box-sizing:border-box; margin:0; padding:0; }
@@ -349,6 +355,9 @@ export default function KuyasGrafikAnaliz() {
           </div>
 
           {/* DISCLAIMER */}
+          {/* ŞİRKET PROFİLİ & TEMEL GÖRÜNÜM */}
+          <HisseProfili kod="kuyas" />
+
           <div className="kuyas-disclaimer">
             <div className="kuyas-disclaimer-head">
               <div className="kuyas-disclaimer-icon">⚠</div>
@@ -360,21 +369,6 @@ export default function KuyasGrafikAnaliz() {
           </div>
 
         </main>
-
-        <footer style={{ background:"var(--bg)", borderTop:"1px solid var(--border)" }}>
-          <div className="kuyas-footer">
-            <div className="kuyas-footer-inner">
-              <div className="kuyas-footer-brand">HOCA İLE BORSA</div>
-              <div className="kuyas-footer-meta">
-                KUYAS Teknik Analiz Raporu<br />
-                Hazırlanma: 10.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="kuyas-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
 
       </div>
     </>

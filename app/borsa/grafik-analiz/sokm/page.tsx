@@ -1,9 +1,13 @@
 import Link from "next/link";
 
+import HisseProfili from "@/components/HisseProfili";
+
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "SOKM Teknik Analiz — 07.06.2026",
+  title: "SOKM Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "Şok Marketler (SOKM) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -15,6 +19,8 @@ export default function SokmGrafikAnaliz() {
   return (
     <>
 
+
+      <GrafikAnalizJsonLd kod="sokm" tarih="2026-06-07" />
 
       <style>{`
         .sokm-wrap *, .sokm-wrap *::before, .sokm-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -494,6 +500,9 @@ export default function SokmGrafikAnaliz() {
           </div>
 
 
+          {/* ŞİRKET PROFİLİ & TEMEL GÖRÜNÜM */}
+          <HisseProfili kod="sokm" />
+
           <div className="sokm-disclaimer">
             <div className="sokm-disclaimer-head">
               <div className="sokm-disclaimer-icon">⚠</div>
@@ -504,21 +513,6 @@ export default function SokmGrafikAnaliz() {
             <p>Teknik analizde kullanılan indikatör değerleri ve grafik yorumları öznel değerlendirmelerdir; kesin doğruluk garantisi verilmez. Piyasa koşulları hızla değişebilir.</p>
           </div>
         </main>
-
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="sokm-footer">
-            <div className="sokm-footer-inner">
-              <div className="sokm-footer-brand">HOCA İLE BORSA</div>
-              <div className="sokm-footer-meta">
-                SOKM Teknik Analiz Raporu<br />
-                Hazırlanma: 07.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="sokm-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );

@@ -1,9 +1,13 @@
 ﻿import Link from "next/link";
 
+import HisseProfili from "@/components/HisseProfili";
+
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "KRDMD Teknik Analiz — 07.06.2026",
+  title: "KRDMD Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "Kardemir D (KRDMD) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -15,6 +19,8 @@ export default function KrdmdGrafikAnaliz() {
   return (
     <>
 
+
+      <GrafikAnalizJsonLd kod="krdmd" tarih="2026-06-07" />
 
       <style>{`
         .krdmd-wrap *, .krdmd-wrap *::before, .krdmd-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -494,6 +500,9 @@ export default function KrdmdGrafikAnaliz() {
           </div>
 
 
+          {/* ŞİRKET PROFİLİ & TEMEL GÖRÜNÜM */}
+          <HisseProfili kod="krdmd" />
+
           <div className="krdmd-disclaimer">
             <div className="krdmd-disclaimer-head">
               <div className="krdmd-disclaimer-icon">⚠</div>
@@ -504,21 +513,6 @@ export default function KrdmdGrafikAnaliz() {
             <p>Teknik analizde kullanılan indikatör değerleri ve grafik yorumları öznel değerlendirmelerdir; kesin doğruluk garantisi verilmez. Piyasa koşulları hızla değişebilir.</p>
           </div>
         </main>
-
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="krdmd-footer">
-            <div className="krdmd-footer-inner">
-              <div className="krdmd-footer-brand">HOCA İLE BORSA</div>
-              <div className="krdmd-footer-meta">
-                KRDMD Teknik Analiz Raporu<br />
-                Hazırlanma: 07.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="krdmd-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );

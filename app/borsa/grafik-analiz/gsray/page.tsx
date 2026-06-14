@@ -1,9 +1,13 @@
 import Link from "next/link";
 
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
+
+import HisseProfili from "@/components/HisseProfili";
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "GSRAY Teknik Analiz — 10.06.2026",
+  title: "GSRAY Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "Galatasaray Sportif A.Ş. (GSRAY) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -15,6 +19,8 @@ export default function GsrayGrafikAnaliz() {
   return (
     <>
 
+
+      <GrafikAnalizJsonLd kod="gsray" tarih="2026-06-10" />
 
       <style>{`
         .gsray-wrap *, .gsray-wrap *::before, .gsray-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -487,6 +493,9 @@ export default function GsrayGrafikAnaliz() {
           </div>
 
           {/* DISCLAIMER */}
+          {/* ŞİRKET PROFİLİ & TEMEL GÖRÜNÜM */}
+          <HisseProfili kod="gsray" />
+
           <div className="gsray-disclaimer">
             <div className="gsray-disclaimer-head">
               <div className="gsray-disclaimer-icon">⚠</div>
@@ -498,21 +507,6 @@ export default function GsrayGrafikAnaliz() {
           </div>
 
         </main>
-
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="gsray-footer">
-            <div className="gsray-footer-inner">
-              <div className="gsray-footer-brand">HOCA İLE BORSA</div>
-              <div className="gsray-footer-meta">
-                GSRAY Teknik Analiz Raporu<br />
-                Hazırlanma: 10.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="gsray-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
 
       </div>
     </>

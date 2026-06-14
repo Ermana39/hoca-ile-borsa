@@ -1,9 +1,13 @@
 import Link from "next/link";
 
+import HisseProfili from "@/components/HisseProfili";
+
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "OYAKC Teknik Analiz — 07.06.2026",
+  title: "OYAKC Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "Oyak Çimento (OYAKC) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -15,6 +19,8 @@ export default function OyakcGrafikAnaliz() {
   return (
     <>
 
+
+      <GrafikAnalizJsonLd kod="oyakc" tarih="2026-06-07" />
 
       <style>{`
         .oyakc-wrap *, .oyakc-wrap *::before, .oyakc-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -494,6 +500,9 @@ export default function OyakcGrafikAnaliz() {
           </div>
 
 
+          {/* ŞİRKET PROFİLİ & TEMEL GÖRÜNÜM */}
+          <HisseProfili kod="oyakc" />
+
           <div className="oyakc-disclaimer">
             <div className="oyakc-disclaimer-head">
               <div className="oyakc-disclaimer-icon">⚠</div>
@@ -504,21 +513,6 @@ export default function OyakcGrafikAnaliz() {
             <p>Teknik analizde kullanılan indikatör değerleri ve grafik yorumları öznel değerlendirmelerdir; kesin doğruluk garantisi verilmez. Piyasa koşulları hızla değişebilir.</p>
           </div>
         </main>
-
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="oyakc-footer">
-            <div className="oyakc-footer-inner">
-              <div className="oyakc-footer-brand">HOCA İLE BORSA</div>
-              <div className="oyakc-footer-meta">
-                OYAKC Teknik Analiz Raporu<br />
-                Hazırlanma: 07.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="oyakc-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );

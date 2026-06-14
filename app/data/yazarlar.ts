@@ -35,7 +35,7 @@ export const yazarlar: Yazar[] = [
     bioKisa:
       "2002'den bu yana Borsa İstanbul'u takip eden, 2022'den beri sosyal medyada finans içerikleri üreten Hoca İle Borsa kurucusu. Halka arz, temettü ve KAP bildirimleri alanlarında yazmaktadır.",
     deneyimOzeti:
-      "2002'den beri Borsa İstanbul takipçisi · 2022'den beri finans içerik üreticisi · Halka arz, temettü ve KAP odaklı",
+      "2002'den beri Borsa İstanbul takipçisi · 2022'den beri finans içerik üreticisi · Halka arz, Teknik Analiz ve Temel Analiz odaklı",
     guncellemeTarihi: "2026-06-13T00:00:00+03:00",
     bioUzun: [
       "Erman Hoca, 2002 yılından bu yana Borsa İstanbul'u ve Türkiye finans piyasalarını aktif olarak takip eden bağımsız bir piyasa takipçisi ve içerik üreticisidir. Yirmi yılı aşkın süredir hisse senetleri, halka arzlar, temettü politikaları, yatırım fonları ve faiz piyasalarını yakından izlemektedir.",

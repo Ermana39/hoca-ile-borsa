@@ -1,9 +1,13 @@
 import Link from "next/link";
 
+import HisseProfili from "@/components/HisseProfili";
+
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
+
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "TSKB Teknik Analiz — 07.06.2026",
+  title: "TSKB Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "Türkiye Sınai Kalkınma Bankası (TSKB) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
@@ -15,6 +19,8 @@ export default function TskbGrafikAnaliz() {
   return (
     <>
 
+
+      <GrafikAnalizJsonLd kod="tskb" tarih="2026-06-07" />
 
       <style>{`
         .tskb-wrap *, .tskb-wrap *::before, .tskb-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -494,6 +500,9 @@ export default function TskbGrafikAnaliz() {
           </div>
 
 
+          {/* ŞİRKET PROFİLİ & TEMEL GÖRÜNÜM */}
+          <HisseProfili kod="tskb" />
+
           <div className="tskb-disclaimer">
             <div className="tskb-disclaimer-head">
               <div className="tskb-disclaimer-icon">⚠</div>
@@ -504,21 +513,6 @@ export default function TskbGrafikAnaliz() {
             <p>Teknik analizde kullanılan indikatör değerleri ve grafik yorumları öznel değerlendirmelerdir; kesin doğruluk garantisi verilmez. Piyasa koşulları hızla değişebilir.</p>
           </div>
         </main>
-
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="tskb-footer">
-            <div className="tskb-footer-inner">
-              <div className="tskb-footer-brand">HOCA İLE BORSA</div>
-              <div className="tskb-footer-meta">
-                TSKB Teknik Analiz Raporu<br />
-                Hazırlanma: 07.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="tskb-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );

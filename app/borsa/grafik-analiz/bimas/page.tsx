@@ -1,11 +1,13 @@
 ﻿import Link from "next/link";
 
+import GrafikAnalizJsonLd from "@/components/GrafikAnalizJsonLd";
+
 import HisseProfili from "@/components/HisseProfili";
 
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "BIMAS Teknik Analiz — 06.06.2026",
+  title: "BIMAS Teknik Analiz, Grafik ve Hisse Yorumu",
   description:
     "BİM Birleşik Mağazalar (BIMAS) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic indikatörleri ile detaylı değerlendirme.",
   alternates: {
@@ -17,6 +19,8 @@ export default function BimasGrafikAnaliz() {
   return (
     <>
 
+
+      <GrafikAnalizJsonLd kod="bimas" tarih="2026-06-06" />
 
       <style>{`
         .bimas-wrap *, .bimas-wrap *::before, .bimas-wrap *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -540,22 +544,6 @@ export default function BimasGrafikAnaliz() {
             <p>Teknik analizde kullanılan indikatör değerleri ve grafik yorumları öznel değerlendirmelerdir; kesin doğruluk garantisi verilmez. Piyasa koşulları hızla değişebilir.</p>
           </div>
         </main>
-
-        {/* FOOTER */}
-        <footer style={{ background: "var(--bg)", borderTop: "1px solid var(--border)" }}>
-          <div className="bimas-footer">
-            <div className="bimas-footer-inner">
-              <div className="bimas-footer-brand">HOCA İLE BORSA</div>
-              <div className="bimas-footer-meta">
-                BIMAS Teknik Analiz Raporu<br />
-                Hazırlanma: 06.06.2026 &nbsp;·&nbsp; Veri: BIST / IQ Platform
-              </div>
-            </div>
-            <div className="bimas-footer-legal">
-              Bu web sitesinde sunulan içerikler yalnızca genel bilgilendirme amacına yöneliktir ve hiçbir şekilde yatırım tavsiyesi, portföy yönetimi önerisi veya finansal hizmet olarak değerlendirilemez. Yayınlanan analizler SPK tarafından lisanslanmış yatırım danışmanlığı hizmeti kapsamında değildir. Tüm hakları saklıdır © 2026 Hoca ile Borsa.
-            </div>
-          </div>
-        </footer>
       </div>
     </>
   );
