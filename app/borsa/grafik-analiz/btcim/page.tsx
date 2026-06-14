@@ -1,3 +1,4 @@
+import HisseProfili from "@/components/HisseProfili";
 
 import type { Metadata } from "next";
 
@@ -482,6 +483,9 @@ export default function BtcimGrafikAnaliz() {
               </ul>
             </div>
           </div>
+
+          {/* ŞİRKET PROFİLİ & TEMEL GÖRÜNÜM */}
+          <HisseProfili kod="btcim" />
 
           <div className="btcim-disclaimer">
             <div className="btcim-disclaimer-head">

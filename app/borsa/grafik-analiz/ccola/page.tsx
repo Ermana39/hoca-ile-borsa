@@ -1,3 +1,4 @@
+import HisseProfili from "@/components/HisseProfili";
 
 import type { Metadata } from "next";
 
@@ -482,6 +483,9 @@ export default function CcolaGrafikAnaliz() {
               </ul>
             </div>
           </div>
+
+          {/* ŞİRKET PROFİLİ & TEMEL GÖRÜNÜM */}
+          <HisseProfili kod="ccola" />
 
           <div className="ccola-disclaimer">
             <div className="ccola-disclaimer-head">

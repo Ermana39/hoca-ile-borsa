@@ -73,6 +73,11 @@ function tumHisseleriYukle(): Record<string, Hisse> {
       const tamYol = path.join(HISSELER_DIZINI, dosya);
       const icerik = fs.readFileSync(tamYol, "utf-8");
       const veri = JSON.parse(icerik) as Hisse;
+      // Geçerli JSON olsa bile zorunlu alanları (kod, sirketAdi) eksik olan
+      // kayıtları atla; aksi halde liste/sitemap üretimi h.kod.toUpperCase()
+      // gibi yerlerde patlar ve tüm build'i düşürür.
+      if (!veri || typeof veri.kod !== "string" || !veri.kod.trim()) continue;
+      if (typeof veri.sirketAdi !== "string" || !veri.sirketAdi.trim()) continue;
       // Anahtar: dosya adı (uzantısız), küçük harf. Örn. "asels.json" -> "asels"
       const anahtar = dosya.replace(/\.json$/i, "").toLowerCase();
       kayitlar[anahtar] = veri;

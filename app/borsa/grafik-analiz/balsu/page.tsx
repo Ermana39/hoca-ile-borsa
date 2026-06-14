@@ -1,3 +1,4 @@
+import HisseProfili from "@/components/HisseProfili";
 
 import type { Metadata } from "next";
 
@@ -481,6 +482,9 @@ export default function BalsuGrafikAnaliz() {
               </ul>
             </div>
           </div>
+
+          {/* ŞİRKET PROFİLİ & TEMEL GÖRÜNÜM */}
+          <HisseProfili kod="balsu" />
 
           <div className="balsu-disclaimer">
             <div className="balsu-disclaimer-head">
