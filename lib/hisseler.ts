@@ -9,7 +9,15 @@ export type Istirak = { ad: string; oran: number; sermaye?: string };
 export type KurumsalBilgiler = {
   merkez?: string;
   web?: string;
+  eposta?: string;
+  telefon?: string;
+  fax?: string;
+  sirketSuresi?: string;
   odenmisSermaye?: string;
+  bagimsizDenetimKurulusu?: string;
+  faaliyetAlani?: string;
+  sektorler?: string[];
+  islemGorduguPazar?: string[];
   yonetimKurulu?: string[];
 };
 
