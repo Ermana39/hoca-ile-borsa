@@ -1,4 +1,5 @@
 export const metadata = {
+  robots: { index: false, follow: true },
   title: "Dip Zirve Analizi | Hoca İle Borsa",
   description: "Hisselerin dip ve zirve bölgelerine uzaklığını takip ederek teknik görünümü daha hızlı yorumlayın.",
   alternates: { canonical: "https://www.hocaileborsa.com/borsa/dip-zirve-analizi" },

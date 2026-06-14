@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+export const metadata = { robots: { index: false, follow: true } };
+
 const veriler = [
   { sembol: "AVHOL", islemHacmi: "585,788,332", ortHacim: "115,256,738", artis: "408.23" },
   { sembol: "GENKM", islemHacmi: "2,318,464,108", ortHacim: "507,425,406", artis: "356.91" },

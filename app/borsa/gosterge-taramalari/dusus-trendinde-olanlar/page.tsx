@@ -2,6 +2,7 @@ import Link from "next/link";
 import dususTrendiData from "../data/düsüs-trendi.json";
 
 export const metadata = {
+  robots: { index: false, follow: true },
   title: "Düşüş Trendinde Olan Hisseler | Hoca İle Borsa",
   description:
     "5, 13, 21, 55, 89, 144 ve 233 hareketli ortalama altında olan hisseleri inceleyin.",

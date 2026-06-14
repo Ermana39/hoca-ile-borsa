@@ -2,6 +2,7 @@ import Link from "next/link";
 import rsi40AltiData from "../data/rsi40-alti.json";
 
 export const metadata = {
+  robots: { index: false, follow: true },
   title: "RSI 40 Altı Hisseler | Hoca İle Borsa",
   description:
     "RSI değeri 40 seviyesinin altında olan Borsa İstanbul hisselerini inceleyin.",

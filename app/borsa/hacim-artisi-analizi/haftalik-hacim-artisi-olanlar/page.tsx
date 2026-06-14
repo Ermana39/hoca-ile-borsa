@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+export const metadata = { robots: { index: false, follow: true } };
+
 const veriler = [
   { sembol: "ULUFA", islemHacmi: "188,047,875", ortHacim: "64,523,098", artis: "191.44" },
   { sembol: "GSDHO", islemHacmi: "725,132,705", ortHacim: "248,866,860", artis: "191.37" },

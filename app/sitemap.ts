@@ -463,7 +463,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/borsa",
     "/borsa/gunluk-borsa-ozeti",
     "/borsa/dikkat-cekenler",
-    "/borsa/dip-zirve-analizi",
     "/borsa/egitim-videolari",
     "/borsa/formasyonlar",
     "/borsa/geri-alim-programlari",

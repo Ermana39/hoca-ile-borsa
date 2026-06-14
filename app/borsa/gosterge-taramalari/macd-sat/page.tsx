@@ -2,6 +2,7 @@ import Link from "next/link";
 import macdSatData from "../data/macd-sat.json";
 
 export const metadata = {
+  robots: { index: false, follow: true },
   title: "MACD Sat Veren Hisseler | Hoca İle Borsa",
   description:
     "MACD göstergesine göre sat sinyali üreten Borsa İstanbul hisselerini inceleyin. MACD sıfır değerinin altında ortalamanın aşağıya doğru kesişimi",

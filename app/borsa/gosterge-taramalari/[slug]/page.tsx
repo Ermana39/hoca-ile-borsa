@@ -3,6 +3,8 @@ import path from "path";
 import Link from "next/link";
 import * as XLSX from "xlsx";
 
+export const metadata = { robots: { index: false, follow: true } };
+
 export const revalidate = 86400;
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "icerik" }) {

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getYazar, yazarlar } from "@/app/data/yazarlar";
+import { getYazar, yazarlar, varsayilanYazar } from "@/app/data/yazarlar";
 import { newsItems } from "@/app/data/news";
 import SosyalIkonGrup from "@/components/SosyalIkonGrup";
 
@@ -51,6 +51,58 @@ export default async function YazarPage({
   const yazar = getYazar(slug);
   if (!yazar) notFound();
 
+  const dateModified = yazar.guncellemeTarihi ?? "2026-06-13T00:00:00+03:00";
+
+  const person = {
+    "@type": "Person",
+    "@id": `${siteUrl}/yazar/${yazar.slug}#person`,
+    name: yazar.isim,
+    url: `${siteUrl}/yazar/${yazar.slug}`,
+    image: `${siteUrl}${yazar.avatar}`,
+    jobTitle: yazar.unvan,
+    description: yazar.bioKisa,
+    knowsLanguage: "tr",
+    hasOccupation: {
+      "@type": "Occupation",
+      name: yazar.unvan,
+    },
+    knowsAbout: [
+      "Borsa İstanbul",
+      "Halka Arz",
+      "Temettü",
+      "Yatırım Fonları",
+      "KAP Bildirimleri",
+      "Mevduat ve Kredi Faizleri",
+      "Teknik Analiz",
+      "Temel Analiz",
+    ],
+    // alumniOf / hasCredential yalnızca veride GERÇEK bilgi varsa eklenir.
+    ...(yazar.egitim
+      ? { alumniOf: { "@type": "EducationalOrganization", name: yazar.egitim } }
+      : {}),
+    ...(yazar.sertifika
+      ? {
+          hasCredential: {
+            "@type": "EducationalOccupationalCredential",
+            name: yazar.sertifika,
+          },
+        }
+      : {}),
+    sameAs: [
+      yazar.sosyal.x,
+      yazar.sosyal.instagram,
+      yazar.sosyal.telegram,
+      yazar.sosyal.youtube,
+      yazar.sosyal.youtubeGlobal,
+    ].filter(Boolean),
+    worksFor: {
+      "@type": "Organization",
+      "@id": `${siteUrl}/#organization`,
+      name: "Hoca İle Borsa",
+      url: siteUrl,
+    },
+  };
+
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "ProfilePage",
@@ -59,45 +111,22 @@ export default async function YazarPage({
     name: `${yazar.isim} | Yazar Profili`,
     description: yazar.bioKisa,
     dateCreated: "2026-06-12T00:00:00+03:00",
-    dateModified: "2026-06-13T00:00:00+03:00",
-    mainEntity: {
-      "@type": "Person",
-      "@id": `${siteUrl}/yazar/${yazar.slug}#person`,
-      name: yazar.isim,
-      url: `${siteUrl}/yazar/${yazar.slug}`,
-      image: `${siteUrl}${yazar.avatar}`,
-      jobTitle: yazar.unvan,
-      description:
-        "2002'den bu yana Borsa İstanbul'u takip eden, halka arz, temettü ve finans piyasaları üzerine içerik üreten yazar.",
-      knowsAbout: [
-        "Borsa İstanbul",
-        "Halka Arz",
-        "Temettü",
-        "Yatırım Fonları",
-        "KAP Bildirimleri",
-        "Mevduat ve Kredi Faizleri",
-        "Teknik Analiz",
-        "Temel Analiz",
-      ],
-      sameAs: [
-        yazar.sosyal.x,
-        yazar.sosyal.instagram,
-        yazar.sosyal.telegram,
-        yazar.sosyal.youtube,
-        yazar.sosyal.youtubeGlobal,
-      ].filter(Boolean),
-      worksFor: {
-        "@type": "Organization",
-        "@id": `${siteUrl}/#organization`,
-        name: "Hoca İle Borsa",
-        url: siteUrl,
-      },
-    },
+    dateModified,
+    mainEntity: person,
   };
 
+  // "Son Yazılar" yalnızca bu yazara ait haberlerden oluşur. yazarSlug
+  // belirtilmemiş haberler varsayilanYazar'a atfedilir.
   const sonYazilar = [...newsItems]
+    .filter((item) => (item.yazarSlug ?? varsayilanYazar) === yazar.slug)
     .sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1))
     .slice(0, 12);
+
+  const guncellemeMetni = new Date(dateModified).toLocaleDateString("tr-TR", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
 
   return (
     <main className="min-h-screen bg-[#f8fafc] px-4 py-6 md:px-6">
@@ -137,6 +166,12 @@ export default async function YazarPage({
                 <p className="mt-1 text-sm font-semibold text-blue-700 md:text-base">
                   {yazar.unvan}
                 </p>
+                {yazar.deneyimOzeti && (
+                  <p className="mt-2 inline-flex items-center gap-1.5 rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-xs font-medium text-blue-800 md:text-sm">
+                    <span aria-hidden="true">📈</span>
+                    {yazar.deneyimOzeti}
+                  </p>
+                )}
               </div>
             </div>
 
@@ -174,9 +209,15 @@ export default async function YazarPage({
               yatırım danışmanlığı kapsamında değildir ve kişiye özel
               alım-satım önerisi niteliği taşımaz.
             </div>
+
+            <p className="mt-4 text-xs text-slate-400">
+              Son güncelleme:{" "}
+              <time dateTime={dateModified}>{guncellemeMetni}</time>
+            </p>
           </div>
         </article>
 
+        {sonYazilar.length > 0 && (
         <section className="mt-8 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_12px_rgba(15,23,42,0.06)]">
           <div className="flex items-center justify-between border-b border-slate-100 px-5 py-4 md:px-6">
             <div className="flex items-center gap-3">
@@ -217,6 +258,7 @@ export default async function YazarPage({
             ))}
           </div>
         </section>
+        )}
       </div>
     </main>
   );

@@ -8,6 +8,10 @@ export type NewsItem = {
   alt: string;
   publishedAt: string;
   category: HaberKategori;
+  // Haberi yazan yazarın slug'ı (app/data/yazarlar.ts). Belirtilmezse
+  // varsayilanYazar'a atfedilir; yazar profilindeki "Son Yazılar" listesi
+  // bu alana göre filtrelenir.
+  yazarSlug?: string;
   // Opsiyonel: Bu haber bir veya birden çok hisseyle ilgiliyse kodlarını yaz.
   // Örn: ilgiliHisseler: ["ASELS", "THYAO"]
   // Etiketlenen her hissenin /hisse/<kod> sayfasında "Önemli KAP Gelişmeleri"

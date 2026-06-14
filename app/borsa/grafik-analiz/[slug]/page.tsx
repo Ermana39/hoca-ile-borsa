@@ -8,6 +8,9 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
+  // Bu dinamik route yalnızca statik analiz sayfası OLMAYAN hisseler için kısa
+  // yorum sayfaları üretir; içerik ince olduğundan tümü noindex işaretlenir.
+  const robots = { index: false, follow: true } as const;
   if (slug === "aefes") {
     return {
       title: "AEFES Teknik Analiz — 05.06.2026",
@@ -16,6 +19,7 @@ export async function generateMetadata({
       alternates: {
         canonical: "https://www.hocaileborsa.com/borsa/grafik-analiz/aefes",
       },
+      robots,
     };
   }
   const veri = yorumlar[slug];
@@ -26,9 +30,10 @@ export async function generateMetadata({
       alternates: {
         canonical: `https://www.hocaileborsa.com/borsa/grafik-analiz/${slug}`,
       },
+      robots,
     };
   }
-  return { title: "Grafik Analiz", description: "Hisse senedi grafik analizi." };
+  return { title: "Grafik Analiz", description: "Hisse senedi grafik analizi.", robots };
 }
 
 /* ─── DİĞER HİSSELER VERİSİ ─── */
