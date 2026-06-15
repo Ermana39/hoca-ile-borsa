@@ -7,6 +7,7 @@ import {
 } from "@/lib/haberler";
 import { HABER_KATEGORILERI } from "@/lib/haber-kategorileri";
 import { getSitemapHisseSembolleri } from "@/lib/hisseler";
+import { getTumGunlukOzetSluglari } from "@/lib/gunluk-ozet";
 
 const siteUrl = "https://www.hocaileborsa.com";
 
@@ -461,7 +462,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticRoutes = [
     "/",
     "/borsa",
-    "/borsa/gunluk-borsa-ozeti",
     "/borsa/dikkat-cekenler",
     "/borsa/egitim-videolari",
     "/borsa/formasyonlar",
@@ -515,6 +515,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const haberRoutes = newsItems.map((item) => item.href);
 
+  // Günlük borsa özetlerinin kalıcı tarihli URL'leri (data/gunluk-ozet/*.json).
+  const gunlukOzetRoutes = getTumGunlukOzetSluglari().map(
+    (slug) => `/borsa/gunluk-borsa-ozeti/${slug}`
+  );
+
   // Haber arşivi sayfalama route'ları: /haberler/sayfa/2 ... N
   const arsivSayfaRoutes: string[] = [];
   const toplamArsivSayfa = getToplamSayfa(getAllNews().length);
@@ -540,6 +545,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       ...hisseRoutes,
       ...taslakSirketRoutes,
       ...haberRoutes,
+      ...gunlukOzetRoutes,
       ...arsivSayfaRoutes,
       ...kategoriRoutes,
     ])
@@ -583,6 +589,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
     if (route.startsWith("/haber/")) {
       return createEntry(route, 0.9, "monthly");
+    }
+
+    if (route.startsWith("/borsa/gunluk-borsa-ozeti/")) {
+      return createEntry(route, 0.7, "monthly");
     }
 
     return createEntry(route, 0.85, "weekly");

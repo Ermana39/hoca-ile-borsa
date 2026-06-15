@@ -1,10 +1,19 @@
+Dosya yolu:
+
+```txt
+data/hisseler/cvkmd.json
+```
+
+İçine bunu koy:
+
+```json
 {
   "kod": "CVKMD",
   "sirketAdi": "CVK Maden İşletmeleri Sanayi ve Ticaret A.Ş.",
   "hakkinda": [
-    "CVK Maden İşletmeleri Sanayi ve Ticaret A.Ş. (CVKMD), 2006 yılında kurulmuş olup madencilik ve metal cevheri madenciliği alanında faaliyet gösteren Türkiye merkezli bir şirkettir.",
-    "Şirketin faaliyetleri; maden, cevher ve kömür sahalarının aranması, incelenmesi, işletilmesi, kiralanması ve bu alanlara ilişkin ruhsat ile imtiyaz süreçlerini kapsamaktadır.",
-    "Borsa İstanbul'da CVKMD koduyla işlem gören şirket, madencilik ve taş ocakçılığı sektörü altında yer almaktadır."
+    "CVK Maden İşletmeleri Sanayi ve Ticaret A.Ş. (CVKMD), 2006 yılında kurulmuş olup metal cevheri madenciliği alanında faaliyet gösteren Türkiye merkezli bir madencilik şirketidir.",
+    "Şirket; maden, cevher ve kömür sahalarının aranması, incelenmesi, işletilmesi, kiralanması ve ruhsat süreçlerinin yürütülmesi alanlarında faaliyet göstermektedir.",
+    "CVK Maden, sahip olduğu iştirakler ve ruhsat portföyüyle madencilik değer zincirinde arama, geliştirme, işletme ve üretim potansiyeli taşıyan sahalara odaklanmaktadır."
   ],
   "ortaklikYapisi": {
     "ortaklar": [
@@ -73,7 +82,7 @@
       "BIST YILDIZ",
       "BIST 100 AĞIRLIK SIN. 10",
       "BIST 100 AĞIRLIK SIN. 25",
-      "BIST KATILIM TUM",
+      "BIST KATILIM TÜM",
       "BIST KATILIM 100",
       "BIST KATILIM 50",
       "BIST KATILIM 30",
@@ -83,13 +92,89 @@
     "katilimEndeksiUygun": true,
     "halkaArzTarihi": ""
   },
-  "dovizPozisyonu": {
-    "tarih": "31.03.2026",
-    "varliklar": "972.330.476",
-    "yukumlulukler": "11.806.394.896",
-    "net": "-10.834.064.420"
-  },
   "temettuSermayeGecmisi": [],
+  "ozgunAnaliz": {
+    "isModeli": "CVKMD'nin iş modeli, fabrika üretiminden çok maden sahalarının ekonomik değere dönüştürülmesi üzerine kuruludur. Ruhsat portföyü, arama çalışmaları, cevher kalitesi, rezerv potansiyeli, üretime geçiş hızı ve metal fiyatları şirketin ana değer belirleyicileridir. Bu nedenle CVK Maden'de klasik sanayi şirketi mantığıyla yalnızca satışlara bakmak yeterli değildir; saha bazlı gelişmeler, yatırım ihtiyacı ve maden projelerinin olgunlaşma süreci birlikte okunmalıdır.",
+    "gelirKaynaklari": [
+      "Metal cevheri madenciliği faaliyetlerinden elde edilen gelirler",
+      "Maden sahalarının işletilmesi ve üretime hazırlanması",
+      "Ruhsat, imtiyaz ve saha geliştirme süreçlerinden doğan ticari değer",
+      "Hayri Öğelman Madencilik A.Ş. üzerinden yürütülen madencilik faaliyetleri",
+      "Orta Truva Madencilik San. Tic. A.Ş. ile genişleyen saha ve ruhsat portföyü",
+      "Virtus Mining Ltd. iştirakiyle yurt dışı veya farklı ölçekli madencilik yatırımı potansiyeli"
+    ],
+    "gucluYanlar": [
+      "Metal cevheri madenciliği gibi stratejik ve emtia fiyatlarına duyarlı bir alanda faaliyet göstermesi",
+      "Hayri Öğelman Madencilik ve Orta Truva Madencilik gibi yüksek paylı iştiraklerle portföyünü büyütmesi",
+      "BIST Madencilik, BIST 100, BIST Katılım 30 ve BIST 500 endekslerinde yer alması",
+      "Katılım endeksine uygun olarak işaretlenmiş olması",
+      "Kurucu ortak ağırlığının yüksek olması nedeniyle stratejik karar merkezinin net görünmesi",
+      "Maden sahası ve ruhsat temelli büyüme hikayesi taşıması"
+    ],
+    "riskler": [
+      "Maden projelerinde arama, rezerv doğrulama ve üretime geçiş süreçleri uzun sürebilir",
+      "Cevher tenörü, üretim maliyeti ve saha verimliliği beklenen getiriyi doğrudan etkiler",
+      "Metal fiyatlarındaki düşüş projelerin ekonomik fizibilitesini zayıflatabilir",
+      "Cari oranın düşük görünmesi kısa vadeli likidite tarafında dikkat gerektirir",
+      "Madencilikte çevre izinleri, ruhsat süreçleri ve regülasyonlar operasyon takvimini değiştirebilir",
+      "2026-03 döneminde net satış ve net kâr değişimindeki zayıflama, büyüme hikayesinin finansallara dönüşme hızının izlenmesini gerektirir"
+    ],
+    "sektorelKonum": "CVK Maden, BIST'te madencilik temasıyla öne çıkan şirketlerden biridir; ancak iş modeli altın üreticilerinden veya kömür ağırlıklı şirketlerden farklı okunmalıdır. Şirketin değeri, hangi metalin üretildiğinden çok sahaların ekonomik potansiyeli, ruhsatların niteliği ve projelerin üretim aşamasına ilerleme hızıyla şekillenir. Bu nedenle CVKMD için haber akışı ve saha gelişmeleri finansal tablolar kadar önem taşıyabilir.",
+    "ortaklikYorumu": "Hüseyin Çevik'in yüzde 70 payla belirgin ana ortak konumunda olması, CVKMD'de kontrolün dağınık değil net bir merkezde toplandığını gösterir. Madencilik gibi uzun vadeli yatırım ve ruhsat süreçleri gerektiren bir sektörde bu yapı hızlı karar alma avantajı sağlayabilir. Buna karşılık halka açık payın yüzde 30 ile sınırlı kalması, hissede dönemsel fiyat oynaklığını artırabilecek bir unsur olarak izlenmelidir.",
+    "temettuYorumu": "CVKMD için mevcut veri setinde temettü veya sermaye hareketi geçmişi bulunmuyor. Madencilik şirketlerinde erken büyüme ve saha geliştirme dönemlerinde nakit genellikle temettü yerine arama, tesis, ruhsat, üretim hazırlığı ve işletme sermayesi için kullanılabilir. Bu nedenle CVKMD'de temettü beklentisinden önce projelerin nakit üretir hale gelip gelmediği izlenmelidir.",
+    "yatirimciNotu": "CVKMD tarafında 2026-03 verilerinde PD/Net Satış oranının yüksek, cari oranın düşük ve net satış değişiminin negatif olması dikkat çekiyor. Bu tablo şirketin fiyatlamasında mevcut satışlardan çok maden portföyü ve gelecek üretim beklentilerinin etkili olduğunu düşündürür. Yatırımcı açısından kritik başlıklar; saha haberleri, rezerv-potansiyel açıklamaları, üretim takvimi, nakit ihtiyacı ve net kârın sürdürülebilirliğidir."
+  },
+  "seoSorular": [
+    {
+      "soru": "CVKMD hangi alanda faaliyet gösteriyor?",
+      "cevap": "CVK Maden; metal cevheri madenciliği, maden sahalarının aranması, incelenmesi, işletilmesi, kiralanması ve ruhsat süreçleri alanında faaliyet göstermektedir."
+    },
+    {
+      "soru": "CVK Maden'in değerini belirleyen ana unsur nedir?",
+      "cevap": "Şirketin değerinde maden sahalarının potansiyeli, ruhsat portföyü, cevher kalitesi, üretime geçiş takvimi ve metal fiyatları öne çıkar."
+    },
+    {
+      "soru": "CVKMD'nin iştirakleri hangileri?",
+      "cevap": "Hayri Öğelman Madencilik A.Ş., Orta Truva Madencilik San. Tic. A.Ş. ve Virtus Mining Ltd. şirketin iştirakleri arasında yer almaktadır."
+    },
+    {
+      "soru": "CVKMD katılım endeksine uygun mu?",
+      "cevap": "Evet. Mevcut künye bilgisinde CVKMD katılım endeksi uygunluğu true olarak yer almaktadır."
+    },
+    {
+      "soru": "Madencilik şirketlerinde neden ruhsat ve rezerv bilgileri önemlidir?",
+      "cevap": "Çünkü maden şirketlerinde gelecekteki üretim ve nakit akışı, sahip olunan sahaların ekonomik potansiyeline ve üretime alınabilirliğine bağlıdır."
+    },
+    {
+      "soru": "2026-03 temel oranlarında CVKMD için ne dikkat çekiyor?",
+      "cevap": "PD/Net Satış oranının yüksek, cari oranın düşük ve net satış değişiminin negatif olması, şirketin mevcut finansallar kadar gelecek maden projeleri üzerinden fiyatlandığını gösterir."
+    },
+    {
+      "soru": "CVKMD hangi endekslerde yer alıyor?",
+      "cevap": "CVKMD; BIST 100, BIST Madencilik, BIST Sınai, BIST Katılım 100, BIST Katılım 50, BIST Katılım 30 ve BIST 500 endekslerinde yer almaktadır."
+    }
+  ],
+  "benzerSirketler": [
+    {
+      "kod": "KOZAL",
+      "ad": "Koza Altın İşletmeleri A.Ş.",
+      "aciklama": "Madencilik ve metal emtia teması nedeniyle CVKMD ile aynı ana sektörel başlıkta izlenebilir."
+    },
+    {
+      "kod": "KOZAA",
+      "ad": "Koza Anadolu Metal Madencilik İşletmeleri A.Ş.",
+      "aciklama": "Metal madenciliği ve maden varlığı temasıyla CVKMD için karşılaştırma yapılabilecek şirketlerden biridir."
+    },
+    {
+      "kod": "PRKME",
+      "ad": "Park Elektrik Üretim Madencilik Sanayi ve Ticaret A.Ş.",
+      "aciklama": "Madencilik ve emtia bazlı faaliyet yapısıyla CVKMD'nin sektör dinamiklerine yakın şekilde izlenebilir."
+    }
+  ],
+  "seo": {
+    "title": "CVKMD Hisse Bilgileri: CVK Maden Ortaklık Yapısı, Maden Ruhsatları ve Şirket Profili",
+    "description": "CVKMD hisse koduyla işlem gören CVK Maden İşletmeleri hakkında ortaklık yapısı, metal cevheri madenciliği faaliyetleri, iştirakleri, BIST endeksleri ve temel oranlar."
+  },
   "yasalUyari": "Bu sayfadaki bilgiler genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir. Fiyat/işlem verisi içermez.",
   "temelOranlar": {
     "donem": "2026-03",
@@ -106,3 +191,4 @@
     }
   }
 }
+```

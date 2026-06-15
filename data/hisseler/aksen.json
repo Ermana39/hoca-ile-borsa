@@ -1,12 +1,3 @@
-Dosya yolu:
-
-```txt
-data/hisseler/aksen.json
-```
-
-İçine bunu koy:
-
-```json
 {
   "kod": "AKSEN",
   "sirketAdi": "Aksa Enerji Üretim A.Ş.",
@@ -324,6 +315,20 @@ data/hisseler/aksen.json
     "title": "AKSEN Hisse Bilgileri: Aksa Enerji Ortaklık Yapısı, Yurt Dışı Santralleri ve Şirket Profili",
     "description": "AKSEN hisse koduyla işlem gören Aksa Enerji Üretim A.Ş. hakkında ortaklık yapısı, elektrik üretimi, yurt dışı enerji yatırımları, iştirakleri, endeks bilgileri ve şirket profili."
   },
-  "yasalUyari": "Bu sayfadaki bilgiler genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir. Fiyat ve işlem verileri içermez."
+  "yasalUyari": "Bu sayfadaki bilgiler genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir. Fiyat ve işlem verileri içermez.",
+  "temelOranlar": {
+    "donem": "2026-03",
+    "guncellemeTarihi": "2026-06-15",
+    "sirket": {
+      "fk": 24.11,
+      "pddd": 1.53,
+      "peg": 2.94,
+      "roe": 0.04,
+      "netMarj": 0.06,
+      "pdNetSatis": 2.46,
+      "cariOran": 0.63,
+      "netKarDegisim": 8.21,
+      "netSatisDegisim": -21.02
+    }
+  }
 }
-```

@@ -10,7 +10,11 @@ import pageUpdates from "@/lib/page-updates.generated.json";
 import { IconTile } from "@/components/icons/IconTile";
 import type { CategoryIconName } from "@/components/icons/CategoryIcon";
 import HaberKart from "@/components/HaberKart";
-import { normalizeNewsItems, ANA_SAYFA_HABER_LIMIT } from "@/lib/haberler";
+import {
+  normalizeNewsItems,
+  getAllNews,
+  ANA_SAYFA_HABER_LIMIT,
+} from "@/lib/haberler";
 
 export const revalidate = 86400;
 
@@ -444,7 +448,8 @@ function SonGuncellemelerBar({ items }: { items: GuncellemeItem[] }) {
 }
 
 export default function HomePage() {
-  const newsItems = normalizeNewsItems(tumHaberler);
+  // Elle girilen haberler + günlük borsa özetleri (otomatik), tarihe göre sıralı.
+  const newsItems = getAllNews();
   const gosterilenHaberler = newsItems.slice(0, ANA_SAYFA_HABER_LIMIT);
   const guncellemeler = getSonGuncellemeler();
 

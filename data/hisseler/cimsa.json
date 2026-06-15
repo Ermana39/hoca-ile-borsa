@@ -1,3 +1,12 @@
+Dosya yolu:
+
+```txt
+data/hisseler/cimsa.json
+```
+
+İçine bunu koy:
+
+```json
 {
   "kod": "CIMSA",
   "sirketAdi": "Çimsa Çimento Sanayi ve Ticaret A.Ş.",
@@ -97,13 +106,6 @@
     "katilimEndeksiUygun": true,
     "halkaArzTarihi": ""
   },
-  "dovizPozisyonu": {
-    "tarih": "31.03.2026",
-    "varliklar": "2.990.311.000",
-    "yukumlulukler": "12.143.462.000",
-    "enstrumanlarNetPozisyonu": "9.323.778.000",
-    "net": "170.627.000"
-  },
   "temettuSermayeGecmisi": [
     {
       "yil": "29 Eyl 2023",
@@ -172,6 +174,89 @@
       "aciklama": "Hisse senedi bölünmesi"
     }
   ],
+  "ozgunAnaliz": {
+    "isModeli": "CIMSA, sıradan bir gri çimento üreticisinden çok daha geniş bir ürün karmasına sahip. Klinker ve hazır beton tarafı iç pazar döngüsüne bağlı çalışırken, beyaz çimento ve kalsiyum alüminat çimentosu gibi daha özel ürünler şirketi global pazarda farklılaştırır. Bu yapı sayesinde Çimsa'nın performansı yalnızca Türkiye'deki inşaat faaliyetleriyle değil, ihracat fiyatları, ürün karması, enerji maliyeti ve özel çimento talebiyle birlikte değerlendirilmelidir.",
+    "gelirKaynaklari": [
+      "Gri çimento ve klinker üretimi ile satış gelirleri",
+      "Beyaz çimento ihracatı ve özel çimento ürünleri",
+      "Kalsiyum alüminat çimentosu satışları",
+      "Hazır beton faaliyetlerinden elde edilen gelirler",
+      "Afyon Çimento iştiraki üzerinden taş-toprak sanayiindeki ek kapasite katkısı",
+      "Çimsa Building Solutions B.V. ile yurt dışı yapı malzemeleri operasyonları",
+      "Çimsa Cement Free-Zone Ltd. üzerinden ihracat ve serbest bölge bağlantılı faaliyetler"
+    ],
+    "gucluYanlar": [
+      "Sabancı Holding'in ana ortaklığıyla güçlü kurumsal yapı içinde yer alması",
+      "Beyaz çimento ve özel çimento ürünleriyle klasik çimento üreticilerinden ayrışması",
+      "60'tan fazla ülkeye ihracat yapabilen global satış ağına sahip olması",
+      "Afyon Çimento iştirakiyle üretim ve bölgesel kapasite çeşitliliği sağlaması",
+      "BIST 50, BIST 100, BIST Taş Toprak, BIST Temettü 25 ve BIST 500 endekslerinde bulunması",
+      "Katılım endekslerinde yer alması sayesinde farklı yatırımcı grupları tarafından izlenebilmesi"
+    ],
+    "riskler": [
+      "Enerji, yakıt ve elektrik maliyetleri çimento üretiminde marjları doğrudan etkiler",
+      "Beyaz çimento ve özel ürün ihracatında küresel talep yavaşlarsa fiyatlama gücü zayıflayabilir",
+      "Cari oranın 1'in altında olması kısa vadeli likidite tarafında dikkat gerektirir",
+      "İç pazarda konut ve altyapı yatırımlarındaki zayıflama gri çimento ve hazır beton satışlarını sınırlayabilir",
+      "Karbon emisyonu ve çevresel regülasyonlar sektörde uzun vadeli yatırım ihtiyacını artırabilir",
+      "Yurt dışı faaliyetlerde kur, lojistik ve ülke bazlı talep koşulları dönemsel dalgalanma yaratabilir"
+    ],
+    "sektorelKonum": "Çimsa'nın sektördeki yeri, sadece tonaj üzerinden okunmamalı. Şirketin beyaz çimento ve kalsiyum alüminat çimentosu gibi niş ürünlerdeki varlığı, onu birçok yerel çimento şirketinden farklılaştırır. Akçansa daha çok büyük ölçekli çimento ve hazır beton dengesiyle, Batıçim ve Batısöke ise bölgesel üretim dinamikleriyle izlenirken; CIMSA tarafında ihracat, özel ürün karması ve Sabancı Holding bağlantısı daha baskın başlıklardır.",
+    "ortaklikYorumu": "Sabancı Holding'in kontrol gücü, Çimsa'nın stratejik kararlarında grup disiplininin belirleyici olduğunu gösterir. Akçansa'nın ortaklıkta yer alması ise çimento sektöründeki Sabancı ekosistemini daha görünür hale getirir. Halka açık payın anlamlı düzeyde olması, şirketi hem kurumsal grup kontrolü hem de borsa likiditesi açısından dengeli bir yapıya taşır.",
+    "temettuYorumu": "CIMSA'nın geçmişinde 1990'dan 2023'e uzanan çok sayıda bölünme bulunuyor; 2023'teki 7:1 bölünme son dönemin en dikkat çekici sermaye hareketi. Temettü açısından asıl belirleyici konu, şirketin özel ürünlerden sağladığı marjı enerji maliyetlerine karşı koruyup koruyamadığıdır. İhracat kârlılığı güçlü kaldığında nakit üretimi desteklenebilir; ancak kapasite, çevre ve yurt dışı büyüme yatırımları nakdin kullanım önceliğini değiştirebilir.",
+    "yatirimciNotu": "Çimsa için net satış büyümesi yatay görünse bile tabloyu sadece ciro üzerinden okumamak gerekir. 2026-03 döneminde F/K 12,81, PD/DD 1,36, net marj 0,06 ve ROE 0,07 seviyesinde yer alıyor. Burada kritik olan; özel çimento ürünlerinin marj katkısı, ihracat hacmi, enerji maliyetleri, Afyon Çimento etkisi ve cari oran tarafındaki sınırlı görünümün birlikte izlenmesidir."
+  },
+  "seoSorular": [
+    {
+      "soru": "Çimsa'yı diğer çimento şirketlerinden ayıran ana fark nedir?",
+      "cevap": "Çimsa yalnızca gri çimento üretimiyle değil, beyaz çimento ve kalsiyum alüminat çimentosu gibi özel ürünlerle de öne çıkar. Bu ürün karması şirketi ihracat ve katma değerli üretim tarafında farklılaştırır."
+    },
+    {
+      "soru": "CIMSA'nın Sabancı Holding ile bağlantısı nedir?",
+      "cevap": "Hacı Ömer Sabancı Holding A.Ş. şirketin ana ortağıdır. Bu yapı Çimsa'nın Sabancı Grubu çimento ve yapı malzemeleri stratejisi içinde konumlandığını gösterir."
+    },
+    {
+      "soru": "CIMSA katılım endeksine uygun mu?",
+      "cevap": "Evet. Mevcut künye bilgisinde CIMSA katılım endeksi uygunluğu true olarak yer almaktadır."
+    },
+    {
+      "soru": "Beyaz çimento CIMSA için neden önemli?",
+      "cevap": "Beyaz çimento, klasik gri çimentoya göre daha özel kullanım alanlarına sahip olduğu için şirketin ürün çeşitliliğini ve ihracat potansiyelini güçlendiren önemli bir başlıktır."
+    },
+    {
+      "soru": "Çimsa'nın iştirakleri arasında hangi şirketler var?",
+      "cevap": "Afyon Çimento, Çimsa Building Solutions B.V., Çimsa Cement Free-Zone Ltd. ve Çimsa Mersin şirketin iştirakleri arasında yer almaktadır."
+    },
+    {
+      "soru": "2026-03 döneminde CIMSA için hangi oranlar dikkat çekiyor?",
+      "cevap": "F/K 12,81, PD/DD 1,36 ve net marj 0,06 seviyesinde yer alırken cari oranın 0,96 olması kısa vadeli bilanço tarafının ayrıca izlenmesi gerektiğini gösterir."
+    },
+    {
+      "soru": "CIMSA hangi şirketlerle aynı sektör döngüsünde izlenebilir?",
+      "cevap": "CIMSA; AKCNS, BTCIM, BSOKE ve AFYON gibi çimento ve taş-toprak sanayi şirketleriyle aynı ana sektör döngüsünde takip edilebilir."
+    }
+  ],
+  "benzerSirketler": [
+    {
+      "kod": "AKCNS",
+      "ad": "Akçansa Çimento Sanayi ve Ticaret A.Ş.",
+      "aciklama": "Sabancı ekosistemi içindeki konumu ve çimento-hazır beton faaliyetleriyle CIMSA için en yakın karşılaştırma şirketlerinden biridir."
+    },
+    {
+      "kod": "AFYON",
+      "ad": "Afyon Çimento Sanayi T.A.Ş.",
+      "aciklama": "CIMSA'nın yüzde 51 oranında iştirak ettiği şirket olması nedeniyle grup içi çimento kapasitesi açısından doğrudan bağlantılıdır."
+    },
+    {
+      "kod": "BTCIM",
+      "ad": "Batıçim Batı Anadolu Çimento Sanayii A.Ş.",
+      "aciklama": "Çimento, klinker, hazır beton ve taş-toprak sanayi dinamikleri açısından CIMSA ile aynı sektör koşullarından etkilenir."
+    }
+  ],
+  "seo": {
+    "title": "CIMSA Hisse Bilgileri: Çimsa Ortaklık Yapısı, Beyaz Çimento ve Şirket Profili",
+    "description": "CIMSA hisse koduyla işlem gören Çimsa Çimento Sanayi ve Ticaret A.Ş. hakkında ortaklık yapısı, beyaz çimento, kalsiyum alüminat çimentosu, iştirakleri, endeks bilgileri ve temel oranlar."
+  },
   "yasalUyari": "Bu sayfadaki bilgiler genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir. Fiyat/işlem verisi içermez.",
   "temelOranlar": {
     "donem": "2026-03",
@@ -189,3 +274,4 @@
     }
   }
 }
+```

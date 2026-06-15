@@ -1,4 +1,5 @@
 import { newsItems as tumHaberler } from "@/app/data/news";
+import { getGunlukOzetHaberKayitlari } from "@/lib/gunluk-ozet";
 import {
   HABER_SAYFA_BOYUTU,
   isHaberKategori,
@@ -66,7 +67,10 @@ export function normalizeNewsItems(data: unknown): NewsItem[] {
 }
 
 export function getAllNews(): NewsItem[] {
-  return normalizeNewsItems(tumHaberler);
+  // Elle girilen haberler + günlük borsa özetleri (otomatik). Böylece her yeni
+  // günlük özet, ayrıca bir şey yapmadan haber akışına ve /haberler arşivine
+  // tarihe göre doğru sırada düşer. normalizeNewsItems hepsini birlikte sıralar.
+  return normalizeNewsItems([...tumHaberler, ...getGunlukOzetHaberKayitlari()]);
 }
 
 export const ANA_SAYFA_HABER_LIMIT = 12;

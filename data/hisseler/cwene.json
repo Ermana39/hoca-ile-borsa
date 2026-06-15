@@ -1,3 +1,12 @@
+Dosya yolu:
+
+```txt
+data/hisseler/cwene.json
+```
+
+İçine bunu koy:
+
+```json
 {
   "kod": "CWENE",
   "sirketAdi": "CW Enerji Mühendislik Ticaret ve Sanayi A.Ş.",
@@ -140,12 +149,6 @@
     "katilimEndeksiUygun": true,
     "halkaArzTarihi": ""
   },
-  "dovizPozisyonu": {
-    "tarih": "31.03.2026",
-    "varliklar": "8.320.516.439",
-    "yukumlulukler": "14.478.186.668",
-    "net": "-6.157.670.229"
-  },
   "temettuSermayeGecmisi": [
     {
       "yil": "06 Kas 2025",
@@ -160,6 +163,95 @@
       "aciklama": "Hisse senedi bölünmesi"
     }
   ],
+  "ozgunAnaliz": {
+    "isModeli": "CWENE, güneş paneli satışı yapan tek boyutlu bir şirketten ziyade güneş enerjisi değer zincirinin farklı noktalarına yayılmaya çalışan bir yapıdadır. Panel üretimi, hücre üretimi, mühendislik, anahtar teslim GES kurulumu, bakım hizmetleri, enerji üretimi, batarya depolama ve araç şarj istasyonları aynı çatı altında toplanmaktadır. Bu nedenle şirketin performansını değerlendirirken panel satış hacmi kadar proje teslimatları, hücre üretimi, stok maliyeti, tahsilat yapısı ve yeni enerji teknolojilerine yapılan yatırımlar da dikkate alınmalıdır.",
+    "gelirKaynaklari": [
+      "Fotovoltaik güneş paneli üretimi ve satışları",
+      "Güneş paneli hücresi üretimi ve bağlı tedarik faaliyetleri",
+      "Anahtar teslim güneş enerjisi santrali kurulum projeleri",
+      "GES tasarım, mühendislik, bakım ve teknik servis hizmetleri",
+      "Güneş enerjisi ekipmanları tedariki ve satış kanalları",
+      "CW Storage Enerji A.Ş. üzerinden batarya ve enerji depolama alanı",
+      "Elektrikli araç şarj istasyonları ve enerji üretimi bağlantılı yeni faaliyetler"
+    ],
+    "gucluYanlar": [
+      "Güneş paneli üretimiyle yenilenebilir enerji dönüşümünün merkezinde yer alması",
+      "CW Solar Cell Enerji A.Ş. ile hücre üretimi tarafına dikey entegrasyon hedefi taşıması",
+      "Panel üretimi, EPC proje kurulumu, bakım, depolama ve şarj istasyonu alanlarını aynı ekosistemde toplaması",
+      "BIST 100, BIST Elektrik, BIST Katılım 30 ve BIST 500 endekslerinde bulunması",
+      "Katılım endekslerine uygun olarak işaretlenmesi",
+      "2026-03 döneminde net kâr ve net satış değişiminde pozitif görünüm sunması",
+      "Antalya merkezli üretim yapısıyla Türkiye güneş enerjisi pazarında bilinir bir marka konumuna gelmesi"
+    ],
+    "riskler": [
+      "Güneş paneli sektöründe küresel arz fazlası fiyatları ve marjları baskılayabilir",
+      "Çin merkezli düşük maliyetli panel üreticileri rekabeti artırabilir",
+      "Hücre, cam, alüminyum çerçeve, inverter ve diğer ekipman maliyetleri kârlılığı etkileyebilir",
+      "GES projelerinde teslimat, tahsilat ve müşteri finansmanı gecikmeleri dönemsel dalgalanma yaratabilir",
+      "Batarya depolama ve araç şarjı gibi yeni alanlar yüksek yatırım ihtiyacı ve teknoloji riski taşır",
+      "Teşvik, lisanssız üretim düzenlemeleri ve enerji mevzuatındaki değişiklikler talep üzerinde belirleyici olabilir",
+      "Yüksek büyüme dönemlerinde stok ve işletme sermayesi ihtiyacı nakit akışını zorlayabilir"
+    ],
+    "sektorelKonum": "CW Enerji, yenilenebilir enerji tarafında yalnızca elektrik üreten şirketlerden ayrılır; ana gücü ekipman üretimi ve proje kurulum kabiliyetinden gelir. ALFAS ile panel üretimi tarafında, EUPWR ve GESAN ile enerji ekipmanları ve proje bağlantısında, KONTR ile enerji teknolojileri ve depolama temalarında karşılaştırılabilir. Şirketin farklılaştığı nokta, güneş paneli üretimini depolama ve şarj istasyonu gibi yeni başlıklarla genişletmeye çalışmasıdır.",
+    "ortaklikYorumu": "Tarzan Tarık Sarvan'ın ortaklıkta ana belirleyici konumda olması, şirketin kurucu girişimci etkisini koruduğunu gösterir. Buna karşılık Bulls Portföy ve Deniz Portföy fonlarının anlamlı paylarla tabloda yer alması, CWENE'nin yalnızca kurucu ortak kontrolünde izlenen bir şirket olmadığını; kurumsal yatırımcı ilgisinin de ortaklık yapısına yansıdığını gösteriyor. Bu dağılım büyüme hikayesiyle sermaye piyasası ilgisini aynı tabloda birleştiriyor.",
+    "temettuYorumu": "CWENE'de sermaye hareketleri oldukça yeni; 2024 ve 2025 yıllarındaki bölünmeler büyüme dönemindeki piyasa geçmişine işaret ediyor. Güneş paneli, hücre üretimi, batarya depolama ve şarj altyapısı gibi alanlar yüksek yatırım gerektirdiği için şirketin nakit kullanımında temettüden çok kapasite, teknoloji ve işletme sermayesi öncelikli olabilir. Kârlılık güçlense bile büyüme yatırımlarının hızı dağıtım kararlarında belirleyici olacaktır.",
+    "yatirimciNotu": "CWENE tarafında 2026-03 verileri satış ve net kâr büyümesini destekliyor; ancak bu hissede en kritik nokta büyümenin kalitesi. F/K 13,91, PD/DD 2,42, net marj 0,17 ve ROE 0,18 görünümü olumlu okunabilir; fakat panel fiyatları, stok maliyeti, proje tahsilatları, hücre üretimi yatırımı ve global rekabet bu görünümün sürdürülebilirliğini belirleyecek ana başlıklardır."
+  },
+  "seoSorular": [
+    {
+      "soru": "CW Enerji sadece güneş paneli mi üretiyor?",
+      "cevap": "Hayır. Panel üretiminin yanında güneş paneli hücresi, anahtar teslim GES kurulumu, mühendislik, bakım hizmetleri, enerji üretimi, batarya depolama ve araç şarj istasyonu alanlarında da faaliyet göstermektedir."
+    },
+    {
+      "soru": "CW Solar Cell Enerji neden önemli?",
+      "cevap": "CW Solar Cell Enerji, şirketin güneş paneli değer zincirinde hücre üretimi tarafına yaklaşmasını sağlar. Bu alan, panel üretiminde dikey entegrasyon ve maliyet kontrolü açısından önemlidir."
+    },
+    {
+      "soru": "CWENE'nin ortaklık yapısında hangi detay dikkat çekiyor?",
+      "cevap": "Kurucu ortak Tarzan Tarık Sarvan'ın yüksek payı şirket üzerinde girişimci kontrolünü gösterirken, Bulls Portföy ve Deniz Portföy fonlarının varlığı kurumsal yatırımcı ilgisini öne çıkarır."
+    },
+    {
+      "soru": "Güneş paneli üreticilerinde en büyük risk nedir?",
+      "cevap": "Küresel panel fiyatları, Çin kaynaklı rekabet, hammadde maliyetleri, stok yönetimi ve proje tahsilat süreleri güneş paneli üreticileri için en kritik riskler arasındadır."
+    },
+    {
+      "soru": "CWENE katılım endekslerinde bulunuyor mu?",
+      "cevap": "Evet. CWENE; BIST Katılım Tüm, BIST Katılım 100, BIST Katılım 50 ve BIST Katılım 30 endekslerinde yer almaktadır."
+    },
+    {
+      "soru": "2026-03 temel oranları CWENE için ne gösteriyor?",
+      "cevap": "Net satış değişimi ve net kâr değişimi pozitif görünürken net marj ve ROE tarafı şirketin kârlılık üretebildiğini gösteriyor. Buna rağmen panel fiyatları ve işletme sermayesi ihtiyacı ayrıca takip edilmelidir."
+    },
+    {
+      "soru": "CWENE hangi şirketlerle karşılaştırılabilir?",
+      "cevap": "CWENE; güneş paneli üretimi tarafında ALFAS, enerji ekipmanları ve GES projeleri tarafında EUPWR, enerji teknolojileri ve depolama teması açısından KONTR ile karşılaştırılabilir."
+    },
+    {
+      "soru": "CW Storage Enerji hangi alana işaret ediyor?",
+      "cevap": "CW Storage Enerji, batarya ve enerji depolama alanına işaret eder. Güneş enerjisinde depolama sistemleri, üretimin sürekliliği ve şebeke dengesi açısından giderek daha önemli hale gelmektedir."
+    }
+  ],
+  "benzerSirketler": [
+    {
+      "kod": "ALFAS",
+      "ad": "Alfa Solar Enerji Sanayi ve Ticaret A.Ş.",
+      "aciklama": "Güneş paneli üretimi tarafında CWENE ile en yakın faaliyet alanına sahip BIST şirketlerinden biridir."
+    },
+    {
+      "kod": "EUPWR",
+      "ad": "Europower Enerji ve Otomasyon Teknolojileri Sanayi Ticaret A.Ş.",
+      "aciklama": "Enerji ekipmanları, elektrik altyapısı ve GES bağlantılı projelerle CWENE'nin enerji dönüşümü temasına yakın durur."
+    },
+    {
+      "kod": "KONTR",
+      "ad": "Kontrolmatik Teknoloji Enerji ve Mühendislik A.Ş.",
+      "aciklama": "Enerji teknolojileri, depolama ve mühendislik çözümleri nedeniyle CWENE'nin batarya ve yeni enerji yatırımlarıyla karşılaştırılabilir."
+    }
+  ],
+  "seo": {
+    "title": "CWENE Hisse Bilgileri: CW Enerji Ortaklık Yapısı, Güneş Paneli Üretimi ve Şirket Profili",
+    "description": "CWENE hisse kodlu CW Enerji hakkında ortaklık yapısı, güneş paneli ve hücre üretimi, GES kurulumu, batarya depolama, araç şarj istasyonları, endeks bilgileri ve temel oranlar."
+  },
   "yasalUyari": "Bu sayfadaki bilgiler genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir. Fiyat/işlem verisi içermez.",
   "temelOranlar": {
     "donem": "2026-03",
@@ -177,3 +269,4 @@
     }
   }
 }
+```

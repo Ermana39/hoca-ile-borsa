@@ -8,7 +8,6 @@ import {
   oranYorumlariUret,
   donemEtiketi,
   ceyrekEtiketi,
-  guncellemeTarihiEtiketi,
   type TemelOranlar,
   type OranYorumSatiri,
 } from "@/lib/oranYorumla";
@@ -230,10 +229,7 @@ function TemelOranlarBolumu({
 
   const donemAd = donemEtiketi(temelOranlar.donem);
   const ceyrekAd = ceyrekEtiketi(temelOranlar.donem);
-  const guncelAd = guncellemeTarihiEtiketi(temelOranlar.guncellemeTarihi);
-  const hesaplamaMetni = guncelAd
-    ? `Oranlar ${ceyrekAd} finansal verilerine ve ${guncelAd} kapanış fiyatlarına göre hesaplanmıştır.`
-    : `Oranlar ${ceyrekAd} finansal verilerine göre hesaplanmıştır.`;
+  const hesaplamaMetni = `Oranlar ${ceyrekAd} finansal verilerine ve bir önceki gün kapanış fiyatlarına göre hesaplanmıştır.`;
 
   return (
     <section className="mt-8">
@@ -241,10 +237,6 @@ function TemelOranlarBolumu({
 
       <div className="mb-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-medium text-slate-500">
         <span>{hesaplamaMetni}</span>
-        <span>
-          Her oran kendi başına değerlendirilir; sektör veya başka şirketle kıyas
-          yapılmaz.
-        </span>
       </div>
 
       <div className="space-y-3">

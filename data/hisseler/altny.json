@@ -1,12 +1,3 @@
-Dosya yolu:
-
-```txt
-data/hisseler/altny.json
-```
-
-İçine bunu koy:
-
-```json
 {
   "kod": "ALTNY",
   "sirketAdi": "Altınay Savunma Teknolojileri A.Ş.",
@@ -181,6 +172,20 @@ data/hisseler/altny.json
     "title": "ALTNY Hisse Bilgileri: Altınay Savunma Ortaklık Yapısı, Faaliyet Alanı ve Şirket Profili",
     "description": "ALTNY hisse koduyla işlem gören Altınay Savunma Teknolojileri A.Ş. hakkında ortaklık yapısı, savunma ve havacılık faaliyetleri, iştirakleri, endeks bilgileri, sermaye geçmişi ve şirket profili."
   },
-  "yasalUyari": "Bu sayfadaki bilgiler genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir. Fiyat/işlem verisi içermez."
+  "yasalUyari": "Bu sayfadaki bilgiler genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir. Fiyat/işlem verisi içermez.",
+  "temelOranlar": {
+    "donem": "2026-03",
+    "guncellemeTarihi": "2026-06-15",
+    "sirket": {
+      "fk": 365.61,
+      "pddd": 3.18,
+      "peg": -2.2,
+      "roe": -0.04,
+      "netMarj": -0.1,
+      "pdNetSatis": 7.16,
+      "cariOran": 1.24,
+      "netKarDegisim": -166.2,
+      "netSatisDegisim": -33.04
+    }
+  }
 }
-```

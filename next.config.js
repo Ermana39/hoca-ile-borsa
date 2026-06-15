@@ -60,10 +60,28 @@ const nextConfig = {
     "/hisseler": [
       "./data/hisseler/**/*.json",
     ],
+    // Günlük borsa özetleri haber akışına da katıldığından, getAllNews kullanan
+    // tüm route'lar bu JSON'lara ihtiyaç duyar.
+    "/": ["./data/gunluk-ozet/**/*.json"],
+    "/borsa/gunluk-borsa-ozeti": ["./data/gunluk-ozet/**/*.json"],
+    "/borsa/gunluk-borsa-ozeti/[tarih]": ["./data/gunluk-ozet/**/*.json"],
+    "/haberler": ["./data/gunluk-ozet/**/*.json"],
+    "/haberler/sayfa/[sayfa]": ["./data/gunluk-ozet/**/*.json"],
+    "/haberler/kategori/[kategori]": ["./data/gunluk-ozet/**/*.json"],
+    "/haberler/kategori/[kategori]/sayfa/[sayfa]": [
+      "./data/gunluk-ozet/**/*.json",
+    ],
+    "/sitemap.xml": ["./data/gunluk-ozet/**/*.json"],
   },
 
   async redirects() {
     return [
+      // Eski düz (tire'li) günlük özet URL'i → yeni kalıcı slug URL'i.
+      {
+        source: "/borsa/gunluk-borsa-ozeti-12-haziran-2026",
+        destination: "/borsa/gunluk-borsa-ozeti/12-haziran-2026",
+        permanent: true,
+      },
       ...haberRedirects.map((r) => ({
         source: r.source,
         destination: r.destination,

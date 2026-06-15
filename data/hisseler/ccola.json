@@ -1,10 +1,19 @@
+Dosya yolu:
+
+```txt
+data/hisseler/ccola.json
+```
+
+İçine bunu koy:
+
+```json
 {
   "kod": "CCOLA",
   "sirketAdi": "Coca-Cola İçecek Anonim Şirketi",
   "hakkinda": [
-    "Coca-Cola İçecek A.Ş. (CCOLA), 1990 yılında kurulmuş olup gazlı ve gazsız içeceklerin üretimi, satışı ve dağıtımı alanında faaliyet göstermektedir.",
-    "Şirket; Coca-Cola markalı ürünler başta olmak üzere meyve suyu, su, soda, enerji içeceği, çay, kahve ve benzeri içecek kategorilerinde geniş bir ürün portföyüne sahiptir.",
-    "Borsa İstanbul'da CCOLA koduyla işlem gören şirket, imalat sektörü altında gıda, içecek ve tütün grubunda yer almaktadır."
+    "Coca-Cola İçecek A.Ş. (CCOLA), gazlı ve gazsız içeceklerin üretimi, satışı ve dağıtımı alanında faaliyet gösteren Türkiye merkezli büyük ölçekli bir içecek şirketidir.",
+    "Şirket; Coca-Cola markalı ürünlerin yanı sıra meyve suyu, su, soda, enerji içeceği, çay, kahve ve benzeri kategorilerde geniş ürün portföyüne sahiptir.",
+    "Türkiye dışında Orta Asya, Pakistan, Irak, Ürdün, Bangladeş ve farklı pazarlardaki bağlı ortaklıklarıyla bölgesel içecek üreticisi kimliği taşımaktadır."
   ],
   "ortaklikYapisi": {
     "ortaklar": [
@@ -176,13 +185,6 @@
     "katilimEndeksiUygun": false,
     "halkaArzTarihi": ""
   },
-  "dovizPozisyonu": {
-    "tarih": "31.03.2026",
-    "varliklar": "4.896.421.000",
-    "yukumlulukler": "42.055.780.000",
-    "enstrumanlarNetPozisyonu": "25.877.223.000",
-    "net": "-11.282.136.000"
-  },
   "temettuSermayeGecmisi": [
     {
       "yil": "13 Ağu 2024",
@@ -191,6 +193,89 @@
       "aciklama": "Hisse senedi bölünmesi"
     }
   ],
+  "ozgunAnaliz": {
+    "isModeli": "CCOLA, Coca-Cola markalı ürünleri yalnızca Türkiye'de şişeleyen bir şirket değildir; geniş coğrafyaya yayılmış üretim, dağıtım ve satış ağıyla bölgesel içecek platformu gibi çalışır. Şirketin modeli; marka gücü, dağıtım erişimi, tüketim alışkanlıkları, ambalaj maliyetleri ve ülke bazlı operasyonların birlikte yönetilmesine dayanır. Bu yüzden Coca-Cola İçecek değerlendirilirken sadece Türkiye satışları değil, Pakistan, Kazakistan, Irak, Ürdün, Bangladeş, Azerbaycan ve Orta Asya operasyonlarının katkısı da ayrı ayrı önem taşır.",
+    "gelirKaynaklari": [
+      "Gazlı içecek üretimi, satışı ve dağıtımı",
+      "Su, soda, meyve suyu, enerji içeceği, çay ve kahve kategorileri",
+      "Türkiye iç pazarındaki Coca-Cola ürün portföyü satışları",
+      "Pakistan, Kazakistan, Azerbaycan, Kırgızistan, Tacikistan ve Özbekistan operasyonları",
+      "Irak, Ürdün, Bangladeş ve diğer yurt dışı bağlı ortaklıkların satış gelirleri",
+      "Coca-Cola Satış ve Dağıtım A.Ş. üzerinden yürütülen dağıtım faaliyetleri",
+      "Anadolu Etap Penkon bağlantısıyla meyve ve içecek hammaddesi tarafındaki tamamlayıcı yapı"
+    ],
+    "gucluYanlar": [
+      "Coca-Cola markasının güçlü küresel bilinirliğinden yararlanması",
+      "Anadolu Efes ve The Coca-Cola Export Corporation ortaklığıyla iki güçlü stratejik yapıyı aynı ortaklık tablosunda bulundurması",
+      "Türkiye dışında çok sayıda ülkede üretim ve satış ağına sahip olması",
+      "Gazlı içecekle sınırlı kalmayıp su, meyve suyu, enerji içeceği, çay ve kahve gibi farklı kategorilerde faaliyet göstermesi",
+      "BIST 50, BIST 100, BIST Gıda İçecek, BIST Temettü 25 ve BIST 500 endekslerinde yer alması",
+      "2026-03 verilerinde net kâr değişiminin ve özkaynak kârlılığının güçlü görünmesi"
+    ],
+    "riskler": [
+      "Şeker, konsantre, ambalaj, alüminyum, PET ve lojistik maliyetleri marjları etkileyebilir",
+      "Faaliyet gösterilen ülkelerde kur, enflasyon, siyasi risk ve regülasyon değişiklikleri sonuçlarda dalgalanma yaratabilir",
+      "Tüketici tercihlerinin düşük şekerli veya sağlıklı içeceklere kayması ürün karmasını değiştirebilir",
+      "Yüksek dağıtım ağı soğutucu, araç, depo ve bayi yönetimi tarafında sürekli yatırım ihtiyacı doğurur",
+      "Farklı ülkelerdeki satın alma ve büyüme hamlemleri entegrasyon riski taşıyabilir",
+      "Katılım endeksi uygunluğu bulunmadığı için bazı yatırımcı gruplarının ilgisi sınırlı kalabilir"
+    ],
+    "sektorelKonum": "Coca-Cola İçecek, BIST'te gıda-içecek grubunda yer alsa da klasik paketli gıda şirketlerinden farklı bir ölçeğe sahiptir. Ülker gibi ürün markası güçlü şirketlerden ayrıldığı nokta, satışın büyük kısmını geniş şişeleme ve dağıtım ağı üzerinden yönetmesidir. Anadolu Efes bağlantısı, şirketi grup içi içecek ekosisteminin önemli parçası haline getirirken Coca-Cola ortaklığı uluslararası marka avantajını güçlendirir.",
+    "ortaklikYorumu": "CCOLA'da ortaklık yapısı tek taraflı bir kontrol hikayesi sunmaz; Anadolu Efes ana ekseni oluştururken The Coca-Cola Export Corporation stratejik ortak olarak şirketin marka, lisans ve global sistem bağlantısını güçlendirir. Efes Pazarlama payı da Anadolu Grubu bağlantısını destekler. Bu yapı, şirketin hem yerel grup tecrübesi hem de küresel Coca-Cola sistemiyle hareket ettiğini gösterir.",
+    "temettuYorumu": "CCOLA sermaye geçmişinde 2024 yılındaki 11:1 bölünme öne çıkıyor. Temettü tarafında şirketin gücü; operasyonel nakit üretimi, yurt dışı iştiraklerden gelen katkı, borçluluk, yatırım harcamaları ve dağıtım ağına yapılacak yatırımlarla şekillenir. İçecek sektöründe marka gücü kâr üretimini desteklese de büyüyen coğrafi yapı zaman zaman nakdin yeni pazar yatırımlarına yönelmesine neden olabilir.",
+    "yatirimciNotu": "CCOLA'da yatırımcı açısından en kritik ayrım, satış büyümesinin hangi ülkeden ve hangi ürün grubundan geldiğidir. 2026-03 döneminde F/K 12,12, PD/DD 2,77 ve ROE 0,25 seviyesinde görünürken net kâr değişiminin güçlü olması dikkat çekiyor. Ancak bu performansın sürdürülebilirliği için hacim büyümesi, fiyatlama gücü, kur etkisi, ambalaj maliyetleri ve yurt dışı operasyonların marj katkısı birlikte izlenmeli."
+  },
+  "seoSorular": [
+    {
+      "soru": "Coca-Cola İçecek hangi ülkelerde faaliyet gösteriyor?",
+      "cevap": "Şirket Türkiye'nin yanında Pakistan, Kazakistan, Azerbaycan, Kırgızistan, Tacikistan, Özbekistan, Irak, Ürdün, Bangladeş ve farklı pazarlardaki bağlı ortaklıklarıyla geniş bir coğrafyada faaliyet göstermektedir."
+    },
+    {
+      "soru": "CCOLA'nın gelirleri sadece gazlı içeceklerden mi oluşur?",
+      "cevap": "Hayır. Gazlı içecekler ana kategori olsa da şirket su, soda, meyve suyu, enerji içeceği, çay, kahve ve benzeri içecek gruplarında da üretim, satış ve dağıtım yapmaktadır."
+    },
+    {
+      "soru": "CCOLA ortaklık yapısında Coca-Cola'nın rolü nedir?",
+      "cevap": "The Coca-Cola Export Corporation şirkette stratejik ortak olarak yer alır. Bu yapı CCOLA'nın küresel Coca-Cola sistemiyle bağlantısını güçlendirirken Anadolu Efes ortaklığı yerel ve bölgesel operasyon tecrübesi sağlar."
+    },
+    {
+      "soru": "CCOLA için ambalaj maliyetleri neden önemli?",
+      "cevap": "PET, alüminyum, cam, kapak, etiket ve lojistik giderleri içecek sektöründe doğrudan maliyet kalemidir. Bu maliyetlerdeki artış fiyatlama gücüyle dengelenemezse marjlar baskılanabilir."
+    },
+    {
+      "soru": "CCOLA hangi BIST endekslerinde yer alıyor?",
+      "cevap": "CCOLA; BIST 100, BIST 50, BIST Gıda İçecek, BIST Sınai, BIST Temettü, BIST Temettü 25, BIST Sürdürülebilirlik, BIST Yıldız ve BIST 500 endekslerinde bulunmaktadır."
+    },
+    {
+      "soru": "2026-03 temel oranlarında CCOLA için ne öne çıkıyor?",
+      "cevap": "Net kâr değişiminin güçlü, ROE'nin pozitif ve net marjın çift haneli seviyeye yakın olması şirketin dönemsel kârlılık performansını destekleyen başlıklar olarak izlenebilir."
+    },
+    {
+      "soru": "CCOLA katılım endeksine uygun mu?",
+      "cevap": "Mevcut künye bilgisinde CCOLA için katılım endeksi uygunluğu false olarak yer almaktadır."
+    }
+  ],
+  "benzerSirketler": [
+    {
+      "kod": "AEFES",
+      "ad": "Anadolu Efes Biracılık ve Malt Sanayii A.Ş.",
+      "aciklama": "CCOLA'nın ana ortaklık yapısında yer alması ve içecek ekosistemindeki güçlü konumu nedeniyle doğrudan izlenmesi gereken şirkettir."
+    },
+    {
+      "kod": "ULKER",
+      "ad": "Ülker Bisküvi Sanayi A.Ş.",
+      "aciklama": "Gıda ve hızlı tüketim ürünleri tarafındaki marka gücüyle CCOLA'nın tüketici ürünü dinamikleriyle karşılaştırılabilir."
+    },
+    {
+      "kod": "PINSU",
+      "ad": "Pınar Su ve İçecek Sanayi ve Ticaret A.Ş.",
+      "aciklama": "İçecek sektöründe faaliyet göstermesi nedeniyle CCOLA'nın su ve içecek kategorileriyle aynı ana tüketim alanında izlenebilir."
+    }
+  ],
+  "seo": {
+    "title": "CCOLA Hisse Bilgileri: Coca-Cola İçecek Ortaklık Yapısı, Yurt Dışı Operasyonları ve Şirket Profili",
+    "description": "CCOLA hisse koduyla işlem gören Coca-Cola İçecek A.Ş. hakkında ortaklık yapısı, içecek üretimi, yurt dışı iştirakleri, BIST endeksleri, temel oranlar ve şirket profili."
+  },
   "yasalUyari": "Bu sayfadaki bilgiler genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir. Fiyat/işlem verisi içermez.",
   "temelOranlar": {
     "donem": "2026-03",
@@ -208,3 +293,4 @@
     }
   }
 }
+```
