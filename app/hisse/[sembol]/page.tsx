@@ -4,6 +4,14 @@ import { notFound } from "next/navigation";
 import { getHisse, getTumHisseSembolleri, grafikAnalizVarMi } from "@/lib/hisseler";
 import { getTemettulerBySembol } from "@/lib/temettuler";
 import { getKapBySembol } from "@/lib/kap";
+import {
+  oranYorumlariUret,
+  donemEtiketi,
+  ceyrekEtiketi,
+  guncellemeTarihiEtiketi,
+  type TemelOranlar,
+  type OranYorumSatiri,
+} from "@/lib/oranYorumla";
 
 const siteUrl = "https://www.hocaileborsa.com";
 
@@ -35,6 +43,7 @@ type EkHisseAlanlari = {
   ozgunAnaliz?: OzgunAnaliz;
   seoSorular?: SeoSoru[];
   benzerSirketler?: BenzerSirket[];
+  temelOranlar?: TemelOranlar;
   seo?: {
     title?: string;
     description?: string;
@@ -170,6 +179,114 @@ function oranFormatla(oran: number): string {
   });
 }
 
+// Oran yorum satırı durumuna göre rozet metni + renk. Seviye rozetleri (düşük/
+// orta/yüksek) nötr renktedir; "iyi/kötü" çağrışımı yapmaz, yalnızca oranın
+// kendi seviyesini betimler.
+const ORAN_ROZET: Record<
+  OranYorumSatiri["durum"],
+  { etiket: string; sinif: string }
+> = {
+  dusuk: {
+    etiket: "Düşük seviye",
+    sinif: "bg-slate-100 text-slate-600 ring-slate-400/20",
+  },
+  orta: {
+    etiket: "Orta seviye",
+    sinif: "bg-slate-100 text-slate-600 ring-slate-400/20",
+  },
+  yuksek: {
+    etiket: "Yüksek seviye",
+    sinif: "bg-slate-100 text-slate-600 ring-slate-400/20",
+  },
+  negatif: {
+    etiket: "Negatif değer",
+    sinif: "bg-amber-50 text-amber-700 ring-amber-600/20",
+  },
+  uc: {
+    etiket: "Uç değer",
+    sinif: "bg-amber-50 text-amber-700 ring-amber-600/20",
+  },
+  "buyume-pozitif": {
+    etiket: "Dönemsel artış",
+    sinif: "bg-emerald-50 text-emerald-700 ring-emerald-600/20",
+  },
+  "buyume-negatif": {
+    etiket: "Dönemsel azalış",
+    sinif: "bg-rose-50 text-rose-700 ring-rose-600/20",
+  },
+};
+
+function TemelOranlarBolumu({
+  kod,
+  temelOranlar,
+}: {
+  kod: string;
+  temelOranlar?: TemelOranlar;
+}) {
+  if (!temelOranlar) return null;
+
+  const satirlar = oranYorumlariUret(kod, temelOranlar);
+  if (satirlar.length === 0) return null;
+
+  const donemAd = donemEtiketi(temelOranlar.donem);
+  const ceyrekAd = ceyrekEtiketi(temelOranlar.donem);
+  const guncelAd = guncellemeTarihiEtiketi(temelOranlar.guncellemeTarihi);
+  const hesaplamaMetni = guncelAd
+    ? `Oranlar ${ceyrekAd} finansal verilerine ve ${guncelAd} kapanış fiyatlarına göre hesaplanmıştır.`
+    : `Oranlar ${ceyrekAd} finansal verilerine göre hesaplanmıştır.`;
+
+  return (
+    <section className="mt-8">
+      <SectionBaslik>Temel Oranlar ve Yorumları</SectionBaslik>
+
+      <div className="mb-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-medium text-slate-500">
+        <span>{hesaplamaMetni}</span>
+        <span>
+          Her oran kendi başına değerlendirilir; sektör veya başka şirketle kıyas
+          yapılmaz.
+        </span>
+      </div>
+
+      <div className="space-y-3">
+        {satirlar.map((satir) => {
+          const rozet = ORAN_ROZET[satir.durum];
+          return (
+            <div
+              key={satir.key}
+              className="rounded-xl border border-slate-200 bg-white p-4"
+            >
+              <div className="mb-2 flex flex-wrap items-center justify-between gap-2">
+                <h3 className="text-sm font-bold text-slate-900">{satir.label}</h3>
+                <span
+                  className={`inline-flex items-center rounded-md px-2 py-0.5 text-xs font-semibold ring-1 ring-inset ${rozet.sinif}`}
+                >
+                  {rozet.etiket}
+                </span>
+              </div>
+
+              <div className="mb-2 flex flex-wrap gap-2 text-xs">
+                <span className="inline-flex items-center gap-1 rounded-md bg-slate-50 px-2 py-1 font-medium text-slate-700 ring-1 ring-inset ring-slate-200">
+                  <span className="text-slate-500">Değer:</span>
+                  <strong className="text-slate-900">{satir.sirketStr}</strong>
+                </span>
+              </div>
+
+              <p className="text-sm leading-7 text-slate-700">{satir.yorum}</p>
+            </div>
+          );
+        })}
+      </div>
+
+      <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-7 text-amber-900">
+        ⚠️ Buradaki oranlar <strong>{donemAd}</strong> dönemine ait
+        geçmiş/dönemsel finansal verilere dayanır, anlık fiyatı yansıtmaz.
+        Yorumlar genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir ve tek
+        başına karar dayanağı olamaz.
+      </div>
+    </section>
+  );
+}
+
 export default async function HisseKunyePage({
   params,
 }: {
@@ -190,6 +307,7 @@ export default async function HisseKunyePage({
   } = hisse;
 
   const ozgunAnaliz = detayliHisse.ozgunAnaliz;
+  const temelOranlar = detayliHisse.temelOranlar;
   const seoSorular = (detayliHisse.seoSorular || []).filter(
     (item) => doluMetin(item.soru) && doluMetin(item.cevap)
   );
@@ -570,6 +688,8 @@ export default async function HisseKunyePage({
               </section>
             )}
 
+            <TemelOranlarBolumu kod={hisse.kod} temelOranlar={temelOranlar} />
+
             <section className="mt-8">
               <SectionBaslik>Temettü Geçmişi</SectionBaslik>
               {temettuKayitlari.length > 0 ? (
@@ -786,7 +906,12 @@ export default async function HisseKunyePage({
 
             {hisse.yasalUyari && (
               <div className="mt-8 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">
-                ⚠️ {hisse.yasalUyari}
+                ⚠️ {temelOranlar
+                  ? hisse.yasalUyari.replace(
+                      /Fiyat\/işlem verisi içermez\.?/i,
+                      "Anlık fiyat/işlem verisi sunmaz; sayfadaki oranlar dönemsel finansal tablolara dayanır (F/K ve PD/DD gibi oranlar dolaylı olarak fiyat içerir)."
+                    )
+                  : hisse.yasalUyari}
               </div>
             )}
           </div>

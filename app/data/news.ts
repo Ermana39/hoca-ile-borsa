@@ -21,16 +21,26 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
-  id: 989,
-  title:
-    "Beta Enerji Halka Arzında Yüksek Başvuruya Ne Kadar Dağıtım Yapabilir?",
-  href: "/haber/beta-enerji-yuksek-basvuru-dagitim",
-  image: "/beta-enerji-yuksek-basvuru-dagitim.webp",
-  alt: "Beta Enerji halka arz yüksek başvuru dağıtım oranı",
-  publishedAt: "2026-06-13",
-  category: "halka-arz",
-  ilgiliHisseler: ["BETAE"],
-},
+    id: 990,
+    title: "DERHL’de Bedelsiz Sermaye Artırımı ve SPK’dan Suç Duyurusu Kararı",
+    href: "/haber/derhl-bedelsiz-sermaye-artirimi-spk-suc-duyurusu",
+    image: "/derhl-bedelsiz-sermaye-artirimi-spk-suc-duyurusu.webp",
+    alt: "DERHL bedelsiz sermaye artırımı ve SPK suç duyurusu kararı",
+    publishedAt: "2026-06-15",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["DERHL"],
+  },
+  {
+    id: 989,
+    title:
+      "Beta Enerji Halka Arzında Yüksek Başvuruya Ne Kadar Dağıtım Yapabilir?",
+    href: "/haber/beta-enerji-yuksek-basvuru-dagitim",
+    image: "/beta-enerji-yuksek-basvuru-dagitim.webp",
+    alt: "Beta Enerji halka arz yüksek başvuru dağıtım oranı",
+    publishedAt: "2026-06-13",
+    category: "halka-arz",
+    ilgiliHisseler: ["BETAE"],
+  },
   {
     id: 988,
     title: "Borsa Haftayı Yükselişle Kapattı, Altın Geriledi",

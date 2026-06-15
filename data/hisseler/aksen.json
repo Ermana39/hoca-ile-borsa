@@ -1,11 +1,20 @@
+Dosya yolu:
+
+```txt
+data/hisseler/aksen.json
+```
+
+İçine bunu koy:
+
+```json
 {
   "kod": "AKSEN",
   "sirketAdi": "Aksa Enerji Üretim A.Ş.",
-
   "hakkinda": [
-    "Aksa Enerji Üretim A.Ş. (AKSEN), Kazancı Holding bünyesinde faaliyet gösteren global bir elektrik enerjisi üreticisidir. Şirket; kömür, doğal gaz, rüzgar ve güneş gibi farklı enerji kaynaklarıyla 3.000 MW'ın üzerinde kurulu güce sahiptir. Türkiye'nin yanı sıra Kazakistan, Özbekistan, Gana, Madagaskar ve Kongo Cumhuriyeti gibi ülkelerde elektrik üretimi ve satışı yapan Aksa Enerji, yurt dışı operasyonlarıyla gelirlerinin önemli bölümünü uluslararası pazarlardan elde etmektedir."
+    "Aksa Enerji Üretim A.Ş. (AKSEN), Kazancı Holding bünyesinde faaliyet gösteren, Türkiye merkezli ancak operasyonel olarak birçok ülkeye yayılmış bir elektrik enerjisi üreticisidir.",
+    "Şirket; doğal gaz, kömür, rüzgar, güneş ve farklı enerji kaynaklarına dayalı santral yatırımlarıyla elektrik üretimi ve satışı yapmaktadır.",
+    "Türkiye'nin yanı sıra Kazakistan, Özbekistan, Gana, Madagaskar, Kongo Cumhuriyeti ve farklı pazarlardaki operasyonlarıyla Aksa Enerji, gelir yapısında uluslararası faaliyetlerin öne çıktığı enerji şirketlerinden biridir."
   ],
-
   "ortaklikYapisi": {
     "ortaklar": [
       {
@@ -14,16 +23,15 @@
       },
       {
         "ad": "Hisse Geri Alım",
-        "oran": 0.10
+        "oran": 0.1
       },
       {
         "ad": "Diğer",
         "oran": 19.77
       }
     ],
-    "not": ""
+    "not": "Ortaklık yapısı verileri şirket künyesindeki oran bilgilerine göre hazırlanmıştır."
   },
-
   "istirakler": [
     {
       "ad": "Aksa Kazakhstan Investment BV",
@@ -118,15 +126,15 @@
       "oran": 99.99
     },
     {
-      "ad": "Zümrüt GES Enerji Mühendislik Müşavirlik AŞ",
+      "ad": "Zümrüt GES Enerji Mühendislik Müşavirlik A.Ş.",
       "oran": 100
     },
     {
-      "ad": "Real Biyogaz Elektrik Üretim AŞ",
+      "ad": "Real Biyogaz Elektrik Üretim A.Ş.",
       "oran": 100
     },
     {
-      "ad": "Ankatech Enerji Mühendislik Müşavirlik AŞ",
+      "ad": "Ankatech Enerji Mühendislik Müşavirlik A.Ş.",
       "oran": 100
     },
     {
@@ -174,61 +182,54 @@
       "oran": 100
     }
   ],
-
   "kurumsalBilgiler": {
     "merkez": "Rüzgarlıbahçe Mahallesi, Özalp Çıkmazı No:10, Kavacık, Beykoz / İstanbul",
-    "telefon": "+90 216 681 00 00",
-    "fax": "+90 216 681 57 99",
     "eposta": "info@aksaenerji.com.tr",
     "web": "https://www.aksaenerji.com.tr",
+    "telefon": "+90 216 681 00 00",
+    "fax": "+90 216 681 57 99",
     "sirketSuresi": "Süresiz",
-    "bagimsizDenetim": "DRT Bağımsız Denetim ve Serbest Muhasebeci Mali Müşavirlik A.Ş.",
+    "bagimsizDenetimKurulusu": "DRT Bağımsız Denetim ve Serbest Muhasebeci Mali Müşavirlik A.Ş.",
     "odenmisSermaye": "1.226.338.176 TL",
-
+    "faaliyetAlani": "Elektrik enerjisi üretimi, yurt içi ve yurt dışı enerji yatırımları, elektrik satışı ve enerji santrali işletmeciliği",
+    "sektorler": [
+      "ELEKTRİK GAZ VE SU",
+      "ELEKTRİK GAZ VE BUHAR"
+    ],
+    "islemGorduguPazar": [
+      "YILDIZ PAZAR"
+    ],
     "yonetimKurulu": [
-      "Şaban Cemil Kazancı",
-      "Ahmet Serdar Nişli",
-      "Naci Ağbal",
-      "Tülay Kazancı",
-      "Ömer Muzaffer Baktır",
-      "Korhan Baykal",
-      "Halit Haydar Yıldız",
-      "İlkay Demirdağ",
-      "Özlem Seçil Baykara Şendağ"
+      "ŞABAN CEMİL KAZANCI",
+      "AHMET SERDAR NİŞLİ",
+      "NACİ AĞBAL",
+      "TÜLAY KAZANCI",
+      "ÖMER MUZAFFER BAKTIR",
+      "KORHAN BAYKAL",
+      "HALİT HAYDAR YILDIZ",
+      "İLKAY DEMİRDAĞ",
+      "ÖZLEM SEÇİL BAYKARA ŞENDAĞ"
     ]
   },
-
   "borsaBilgileri": {
     "bistKodu": "AKSEN",
-
     "endeksler": [
       "BIST 100",
       "BIST 100-30",
-      "BIST Kurumsal Yönetim",
-      "BIST Tüm",
-      "BIST Hizmetler",
-      "BIST Elektrik",
-      "BIST İstanbul",
-      "BIST Sürdürülebilirlik",
-      "BIST Yıldız",
-      "BIST 100 Ağırlık Sın. 10",
-      "BIST 100 Ağırlık Sın. 25",
+      "BIST KURUMSAL YÖNETİM",
+      "BIST TÜM",
+      "BIST HİZMETLER",
+      "BIST ELEKTRİK",
+      "BIST İSTANBUL",
+      "BIST SÜRDÜRÜLEBİLİRLİK",
+      "BIST YILDIZ",
+      "BIST 100 AĞIRLIK SIN. 10",
+      "BIST 100 AĞIRLIK SIN. 25",
       "BIST 500"
     ],
-
-    "sektorler": [
-      "Elektrik Gaz ve Su",
-      "Elektrik Gaz ve Buhar"
-    ],
-
-    "islemGorduguPazar": [
-      "Yıldız Pazar"
-    ],
-
     "katilimEndeksiUygun": false,
     "halkaArzTarihi": ""
   },
-
   "temettuSermayeGecmisi": [
     {
       "yil": "07 Eki 2021",
@@ -237,6 +238,92 @@
       "aciklama": "Hisse senedi bölünmesi"
     }
   ],
-
+  "ozgunAnaliz": {
+    "isModeli": "AKSEN'i sıradan bir yerli elektrik üreticisi gibi okumak yanıltıcı olur. Şirketin ayırt edici tarafı, Türkiye dışındaki santral yatırımlarıyla farklı ülkelerde elektrik üretip satmasıdır. Aksa Enerji, kurulu gücünü yalnızca tek bir kaynak ya da tek bir ülkeye dayandırmaz; doğal gaz, kömür, yenilenebilir kaynaklar ve uluslararası enerji anlaşmaları üzerinden gelir yaratır. Bu yapı, şirketi hem elektrik fiyatlarına hem de faaliyet gösterdiği ülkelerdeki sözleşme, ödeme ve kur risklerine duyarlı hale getirir.",
+    "gelirKaynaklari": [
+      "Yurt içi elektrik üretim ve satış gelirleri",
+      "Yurt dışı santral yatırımlarından elde edilen elektrik satış gelirleri",
+      "Doğal gaz ve kömür bazlı üretim santrallerinin faaliyet katkısı",
+      "Gana, Madagaskar, Kazakistan, Özbekistan ve diğer ülkelerdeki enerji operasyonları",
+      "Yenilenebilir enerji ve güneş projeleriyle bağlantılı üretim gelirleri",
+      "Uzun vadeli enerji satış anlaşmaları ve kapasite bazlı gelir yapıları"
+    ],
+    "gucluYanlar": [
+      "Türkiye dışında birçok ülkede faaliyet gösteren global enerji üreticisi olması",
+      "Kazancı Holding'in yüzde 80,13 payla güçlü ana ortak konumunda bulunması",
+      "Farklı coğrafyalarda kurulu santral portföyü sayesinde tek ülke riskinin kısmen dağılması",
+      "BIST 100, BIST Kurumsal Yönetim, BIST Sürdürülebilirlik ve BIST 500 endekslerinde yer alması",
+      "Enerji santrali kurulumu ve işletmesinde uzun operasyonel deneyime sahip olması",
+      "Gelişmekte olan ülkelerdeki enerji arz ihtiyacından faydalanabilecek iş modeline sahip olması"
+    ],
+    "riskler": [
+      "Yurt dışı operasyonlarda ülke riski, ödeme riski ve politik risk yakından takip edilmelidir",
+      "Doğal gaz ve yakıt maliyetlerindeki artış üretim marjlarını etkileyebilir",
+      "Faaliyet gösterilen ülkelerdeki kur hareketleri ve para transferi koşulları finansal sonuçlarda oynaklık yaratabilir",
+      "Enerji satış anlaşmalarının yenilenme koşulları gelir görünümünü değiştirebilir",
+      "Santral bakım duruşları, kapasite kullanımı ve teknik arızalar üretim performansını düşürebilir",
+      "Yüksek yatırım ihtiyacı finansman maliyetlerini ve borçluluk seviyesini önemli hale getirir"
+    ],
+    "sektorelKonum": "Aksa Enerji, Borsa İstanbul'daki enerji şirketleri arasında uluslararası operasyon ağıyla ayrışır. Bazı enerji şirketleri daha çok Türkiye içindeki üretim, dağıtım veya perakende faaliyetleriyle izlenirken, AKSEN tarafında Afrika ve Orta Asya başta olmak üzere farklı pazarlardaki elektrik üretim anlaşmaları öne çıkar. Bu nedenle şirket, klasik yerli elektrik fiyatı döngüsünden ziyade global IPP yani bağımsız elektrik üreticisi mantığıyla değerlendirilmelidir.",
+    "ortaklikYorumu": "AKSEN ortaklık yapısında Kazancı Holding'in yüzde 80,13 paya sahip olması, şirket üzerinde oldukça güçlü bir ana ortak kontrolü bulunduğunu gösterir. Halka açık ve diğer ortaklara kalan yüzde 19,77 pay, dolaşım oranının bazı büyük BIST şirketlerine göre daha sınırlı olduğunu ortaya koyar. Yüzde 0,10 seviyesindeki hisse geri alım payı ise şirketin kendi paylarına yönelik sınırlı bir pozisyon taşıdığını gösteren ek bir detaydır.",
+    "temettuYorumu": "AKSEN'in mevcut sermaye geçmişinde 7 Ekim 2021 tarihli 2:1 oranında hisse senedi bölünmesi öne çıkmaktadır. Enerji üretim şirketlerinde temettü potansiyeli, santrallerden yaratılan nakit akışı, borç ödeme takvimi, yeni yatırım ihtiyacı, uzun vadeli elektrik satış sözleşmeleri ve kur etkisiyle birlikte değerlendirilmelidir. AKSEN özelinde yurt dışı operasyonlardan gelen nakdin sürdürülebilirliği temettü değerlendirmesinde ayrıca önem taşır.",
+    "yatirimciNotu": "AKSEN takip edilirken sadece Türkiye elektrik fiyatlarına bakmak yeterli değildir. Şirketin Gana, Madagaskar, Kazakistan, Özbekistan ve diğer ülkelerdeki santral performansı, bu ülkelerdeki ödeme düzeni, sözleşme yapısı, kur hareketleri ve finansman maliyetleri de izlenmelidir. Aksa Enerji'nin uluslararası büyüme hikayesi güçlü bir potansiyel sunabilir; ancak bu potansiyel, klasik yerli enerji şirketlerine göre daha fazla ülke ve sözleşme riski içerir."
+  },
+  "seoSorular": [
+    {
+      "soru": "AKSEN ne iş yapar?",
+      "cevap": "AKSEN koduyla işlem gören Aksa Enerji, Türkiye ve yurt dışında elektrik üretimi ve satışı yapan bir enerji şirketidir. Şirket doğal gaz, kömür, rüzgar, güneş ve farklı kaynaklara dayalı santral yatırımlarıyla faaliyet göstermektedir."
+    },
+    {
+      "soru": "Aksa Enerji hangi ülkelerde faaliyet gösteriyor?",
+      "cevap": "Aksa Enerji Türkiye dışında Kazakistan, Özbekistan, Gana, Madagaskar, Kongo Cumhuriyeti ve farklı ülkelerde elektrik üretimi ve enerji yatırımlarıyla faaliyet göstermektedir."
+    },
+    {
+      "soru": "AKSEN ortaklık yapısı nasıldır?",
+      "cevap": "AKSEN ortaklık yapısında Kazancı Holding A.Ş. yüzde 80,13 payla ana ortak konumundadır. Diğer ortakların payı yüzde 19,77, hisse geri alım payı ise yüzde 0,10 seviyesindedir."
+    },
+    {
+      "soru": "AKSEN hangi sektörde yer alıyor?",
+      "cevap": "AKSEN, elektrik gaz ve su sektörü altında elektrik gaz ve buhar grubunda yer almaktadır."
+    },
+    {
+      "soru": "AKSEN hangi pazarda işlem görüyor?",
+      "cevap": "AKSEN, Borsa İstanbul'da Yıldız Pazar'da işlem görmektedir."
+    },
+    {
+      "soru": "AKSEN katılım endeksine uygun mu?",
+      "cevap": "Mevcut künye bilgilerine göre AKSEN katılım endeksi uygunluğu için uygun olarak işaretlenmemiştir."
+    },
+    {
+      "soru": "AKSEN için en önemli riskler nelerdir?",
+      "cevap": "AKSEN için ülke riski, yakıt maliyetleri, elektrik satış anlaşmaları, kur hareketleri, ödeme riski, finansman giderleri ve santral kapasite kullanımı yakından takip edilmelidir."
+    },
+    {
+      "soru": "Aksa Enerji'yi diğer enerji şirketlerinden ayıran nokta nedir?",
+      "cevap": "Aksa Enerji'yi birçok yerli enerji şirketinden ayıran nokta, gelir yapısında yurt dışı enerji santrallerinin ve uluslararası elektrik satış anlaşmalarının önemli yer tutmasıdır."
+    }
+  ],
+  "benzerSirketler": [
+    {
+      "kod": "ZOREN",
+      "ad": "Zorlu Enerji Elektrik Üretim A.Ş.",
+      "aciklama": "Enerji üretimi ve uluslararası enerji yatırımlarıyla AKSEN ile aynı sektörde izlenebilecek şirketlerden biridir."
+    },
+    {
+      "kod": "AKENR",
+      "ad": "Akenerji Elektrik Üretim A.Ş.",
+      "aciklama": "Elektrik üretimi ve toptan enerji ticareti faaliyetleriyle AKSEN'e benzer piyasa dinamiklerinden etkilenir."
+    },
+    {
+      "kod": "ODAS",
+      "ad": "Odaş Elektrik Üretim Sanayi Ticaret A.Ş.",
+      "aciklama": "Elektrik üretimi ve enerji yatırımları tarafında faaliyet gösteren, enerji piyasası koşulları açısından karşılaştırılabilecek şirketlerdendir."
+    }
+  ],
+  "seo": {
+    "title": "AKSEN Hisse Bilgileri: Aksa Enerji Ortaklık Yapısı, Yurt Dışı Santralleri ve Şirket Profili",
+    "description": "AKSEN hisse koduyla işlem gören Aksa Enerji Üretim A.Ş. hakkında ortaklık yapısı, elektrik üretimi, yurt dışı enerji yatırımları, iştirakleri, endeks bilgileri ve şirket profili."
+  },
   "yasalUyari": "Bu sayfadaki bilgiler genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir. Fiyat ve işlem verileri içermez."
 }
+```
