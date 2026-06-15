@@ -9,8 +9,48 @@ const siteUrl = "https://www.hocaileborsa.com";
 
 export const dynamicParams = true;
 
+type OzgunAnaliz = {
+  isModeli?: string;
+  gelirKaynaklari?: string[];
+  gucluYanlar?: string[];
+  riskler?: string[];
+  sektorelKonum?: string;
+  ortaklikYorumu?: string;
+  temettuYorumu?: string;
+  yatirimciNotu?: string;
+};
+
+type SeoSoru = {
+  soru?: string;
+  cevap?: string;
+};
+
+type BenzerSirket = {
+  kod?: string;
+  ad?: string;
+  aciklama?: string;
+};
+
+type EkHisseAlanlari = {
+  ozgunAnaliz?: OzgunAnaliz;
+  seoSorular?: SeoSoru[];
+  benzerSirketler?: BenzerSirket[];
+  seo?: {
+    title?: string;
+    description?: string;
+  };
+};
+
 export function generateStaticParams() {
   return getTumHisseSembolleri().map((sembol) => ({ sembol }));
+}
+
+function doluMetin(value?: string | null): value is string {
+  return typeof value === "string" && value.trim().length > 0;
+}
+
+function doluListe<T>(value?: T[] | null): value is T[] {
+  return Array.isArray(value) && value.length > 0;
 }
 
 export async function generateMetadata({
@@ -22,8 +62,16 @@ export async function generateMetadata({
   const hisse = getHisse(sembol);
   if (!hisse) return {};
 
-  const baslik = `${hisse.kod} - ${hisse.sirketAdi} Hisse Künyesi, İştirakler ve Ortaklık Yapısı | Hoca İle Borsa`;
-  const aciklama = `${hisse.kod} şirket künyesi, faaliyet alanları, iştirakleri, ortaklık yapısı, temettü geçmişi ve borsa bilgileri. Hoca İle Borsa'da.`;
+  const detayliHisse = hisse as typeof hisse & EkHisseAlanlari;
+
+  const baslik =
+    detayliHisse.seo?.title ||
+    `${hisse.kod} Hisse Bilgileri: ${hisse.sirketAdi} Ortaklık Yapısı, Faaliyet Alanı ve Şirket Profili`;
+
+  const aciklama =
+    detayliHisse.seo?.description ||
+    `${hisse.kod} hisse koduyla işlem gören ${hisse.sirketAdi} hakkında ortaklık yapısı, faaliyet alanı, iştirakleri, endeks bilgileri, sermaye geçmişi ve şirket profili.`;
+
   const url = `${siteUrl}/hisse/${hisse.kod.toLowerCase()}`;
 
   return {
@@ -57,6 +105,64 @@ function SectionBaslik({ children }: { children: React.ReactNode }) {
   );
 }
 
+function AltBaslik({ children }: { children: React.ReactNode }) {
+  return <h3 className="mb-2 text-sm font-bold text-slate-800">{children}</h3>;
+}
+
+function MetinKarti({
+  baslik,
+  metin,
+}: {
+  baslik: string;
+  metin?: string;
+}) {
+  if (!doluMetin(metin)) return null;
+
+  return (
+    <section className="mt-8">
+      <SectionBaslik>{baslik}</SectionBaslik>
+      <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-7 text-slate-700 md:text-base md:leading-8">
+        {metin}
+      </div>
+    </section>
+  );
+}
+
+function MaddeListesi({
+  baslik,
+  maddeler,
+  ton = "blue",
+}: {
+  baslik: string;
+  maddeler?: string[];
+  ton?: "blue" | "green" | "amber" | "red";
+}) {
+  if (!doluListe(maddeler)) return null;
+
+  const renkler = {
+    blue: "border-blue-100 bg-blue-50 text-blue-800",
+    green: "border-emerald-100 bg-emerald-50 text-emerald-800",
+    amber: "border-amber-100 bg-amber-50 text-amber-800",
+    red: "border-rose-100 bg-rose-50 text-rose-800",
+  };
+
+  return (
+    <div className="rounded-xl border border-slate-200 bg-white p-4">
+      <AltBaslik>{baslik}</AltBaslik>
+      <ul className="space-y-2">
+        {maddeler.map((madde, i) => (
+          <li
+            key={`${baslik}-${i}`}
+            className={`rounded-lg border px-3 py-2 text-sm font-medium leading-6 ${renkler[ton]}`}
+          >
+            {madde}
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
+}
+
 function oranFormatla(oran: number): string {
   return oran.toLocaleString("tr-TR", {
     minimumFractionDigits: 2,
@@ -73,6 +179,8 @@ export default async function HisseKunyePage({
   const hisse = getHisse(sembol);
   if (!hisse) notFound();
 
+  const detayliHisse = hisse as typeof hisse & EkHisseAlanlari;
+
   const {
     ortaklikYapisi,
     istirakler = [],
@@ -80,6 +188,14 @@ export default async function HisseKunyePage({
     borsaBilgileri,
     temettuSermayeGecmisi,
   } = hisse;
+
+  const ozgunAnaliz = detayliHisse.ozgunAnaliz;
+  const seoSorular = (detayliHisse.seoSorular || []).filter(
+    (item) => doluMetin(item.soru) && doluMetin(item.cevap)
+  );
+  const benzerSirketler = (detayliHisse.benzerSirketler || []).filter(
+    (item) => doluMetin(item.kod) || doluMetin(item.ad)
+  );
 
   const sirketKisaAd = hisse.sirketAdi.split(" ").slice(0, 1).join(" ");
   const url = `${siteUrl}/hisse/${hisse.kod.toLowerCase()}`;
@@ -115,20 +231,37 @@ export default async function HisseKunyePage({
     }));
   }
 
+  const graphItems: Record<string, unknown>[] = [
+    corporation,
+    {
+      "@type": "WebPage",
+      "@id": `${url}#webpage`,
+      url,
+      name: `${hisse.kod} - ${sirketKisaAd} Hisse Künyesi`,
+      about: { "@id": `${url}#corporation` },
+      isPartOf: { "@id": `${siteUrl}/#organization` },
+      inLanguage: "tr",
+    },
+  ];
+
+  if (seoSorular.length > 0) {
+    graphItems.push({
+      "@type": "FAQPage",
+      "@id": `${url}#faq`,
+      mainEntity: seoSorular.map((item) => ({
+        "@type": "Question",
+        name: item.soru,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.cevap,
+        },
+      })),
+    });
+  }
+
   const jsonLd = {
     "@context": "https://schema.org",
-    "@graph": [
-      corporation,
-      {
-        "@type": "WebPage",
-        "@id": `${url}#webpage`,
-        url,
-        name: `${hisse.kod} - ${sirketKisaAd} Hisse Künyesi`,
-        about: { "@id": `${url}#corporation` },
-        isPartOf: { "@id": `${siteUrl}/#organization` },
-        inLanguage: "tr",
-      },
-    ],
+    "@graph": graphItems,
   };
 
   return (
@@ -181,6 +314,41 @@ export default async function HisseKunyePage({
               </section>
             )}
 
+            <MetinKarti
+              baslik="Şirket Ne İş Yapar?"
+              metin={ozgunAnaliz?.isModeli}
+            />
+
+            {(doluListe(ozgunAnaliz?.gelirKaynaklari) ||
+              doluListe(ozgunAnaliz?.gucluYanlar) ||
+              doluListe(ozgunAnaliz?.riskler)) && (
+              <section className="mt-8">
+                <SectionBaslik>Şirketin Gelir Yapısı, Güçlü Yanları ve Riskleri</SectionBaslik>
+                <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+                  <MaddeListesi
+                    baslik="Gelir Kaynakları"
+                    maddeler={ozgunAnaliz?.gelirKaynaklari}
+                    ton="blue"
+                  />
+                  <MaddeListesi
+                    baslik="Güçlü Yanlar"
+                    maddeler={ozgunAnaliz?.gucluYanlar}
+                    ton="green"
+                  />
+                  <MaddeListesi
+                    baslik="Riskler"
+                    maddeler={ozgunAnaliz?.riskler}
+                    ton="red"
+                  />
+                </div>
+              </section>
+            )}
+
+            <MetinKarti
+              baslik="Sektördeki Yeri"
+              metin={ozgunAnaliz?.sektorelKonum}
+            />
+
             {ortaklikYapisi.ortaklar.length > 0 && (
               <section className="mt-8">
                 <SectionBaslik>Ortaklık Yapısı</SectionBaslik>
@@ -209,6 +377,13 @@ export default async function HisseKunyePage({
                   <p className="mt-4 text-sm leading-7 text-slate-500">
                     {ortaklikYapisi.not}
                   </p>
+                )}
+
+                {doluMetin(ozgunAnaliz?.ortaklikYorumu) && (
+                  <div className="mt-4 rounded-xl border border-blue-100 bg-blue-50 p-4 text-sm leading-7 text-blue-900 md:text-base md:leading-8">
+                    <strong>Ortaklık yapısı yorumu: </strong>
+                    {ozgunAnaliz.ortaklikYorumu}
+                  </div>
                 )}
               </section>
             )}
@@ -386,6 +561,15 @@ export default async function HisseKunyePage({
               </dl>
             </section>
 
+            {doluMetin(ozgunAnaliz?.yatirimciNotu) && (
+              <section className="mt-8">
+                <SectionBaslik>Yatırımcı Notu</SectionBaslik>
+                <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base md:leading-8">
+                  {ozgunAnaliz.yatirimciNotu}
+                </div>
+              </section>
+            )}
+
             <section className="mt-8">
               <SectionBaslik>Temettü Geçmişi</SectionBaslik>
               {temettuKayitlari.length > 0 ? (
@@ -476,6 +660,13 @@ export default async function HisseKunyePage({
                   </div>
                 </div>
               )}
+
+              {doluMetin(ozgunAnaliz?.temettuYorumu) && (
+                <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-7 text-slate-700 md:text-base md:leading-8">
+                  <strong>Temettü / sermaye geçmişi yorumu: </strong>
+                  {ozgunAnaliz.temettuYorumu}
+                </div>
+              )}
             </section>
 
             <section className="mt-8">
@@ -527,6 +718,59 @@ export default async function HisseKunyePage({
                 </div>
               )}
             </section>
+
+            {seoSorular.length > 0 && (
+              <section className="mt-8">
+                <SectionBaslik>Sık Sorulan Sorular</SectionBaslik>
+                <div className="space-y-3">
+                  {seoSorular.map((item, i) => (
+                    <div
+                      key={`${item.soru}-${i}`}
+                      className="rounded-xl border border-slate-200 bg-slate-50 p-4"
+                    >
+                      <h3 className="text-sm font-bold text-slate-900 md:text-base">
+                        {item.soru}
+                      </h3>
+                      <p className="mt-2 text-sm leading-7 text-slate-700">
+                        {item.cevap}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {benzerSirketler.length > 0 && (
+              <section className="mt-8">
+                <SectionBaslik>Benzer Şirketler</SectionBaslik>
+                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
+                  {benzerSirketler.map((item, i) => (
+                    <div
+                      key={`${item.kod || item.ad}-${i}`}
+                      className="rounded-xl border border-slate-200 bg-white p-4"
+                    >
+                      <div className="flex items-center gap-2">
+                        {item.kod && (
+                          <span className="rounded-md bg-blue-50 px-2 py-1 text-xs font-bold text-blue-700 ring-1 ring-inset ring-blue-600/20">
+                            {item.kod}
+                          </span>
+                        )}
+                        {item.ad && (
+                          <h3 className="text-sm font-bold text-slate-900">
+                            {item.ad}
+                          </h3>
+                        )}
+                      </div>
+                      {item.aciklama && (
+                        <p className="mt-2 text-sm leading-6 text-slate-600">
+                          {item.aciklama}
+                        </p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
 
             {grafikAnalizVar && (
               <Link
