@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import AuthorBox from "@/components/AuthorBox";
 import {
   getGunlukOzetBySlug,
   getTumGunlukOzetSluglari,
@@ -273,7 +274,12 @@ function GunlukOzetIcerik({ ozet }: { ozet: GunlukOzet }) {
     datePublished: ozet.isoTarih,
     dateModified: ozet.isoTarih,
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
-    author: { "@type": "Organization", name: "Hoca ile Borsa" },
+    author: {
+      "@type": "Person",
+      "@id": `${SITE}/yazar/erman-hoca#person`,
+      name: "Erman Hoca",
+      url: `${SITE}/yazar/erman-hoca`,
+    },
     publisher: {
       "@type": "Organization",
       name: "Hoca ile Borsa",
@@ -507,6 +513,52 @@ function GunlukOzetIcerik({ ozet }: { ozet: GunlukOzet }) {
             edebilirsiniz.
           </p>
         </section>
+
+        <section className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-6">
+          <h2 className="text-2xl font-bold text-zinc-900">
+            Diğer Borsa Analizleri
+          </h2>
+          <p className="mt-2 leading-7 text-zinc-600">
+            Günlük piyasa görünümünü teknik analiz araçlarıyla birlikte
+            değerlendirin.
+          </p>
+
+          <div className="mt-5 grid gap-4 md:grid-cols-2">
+            <Link
+              href="/borsa/gosterge-taramalari"
+              className="group rounded-xl border border-zinc-200 bg-white p-5 transition hover:border-blue-300 hover:shadow-sm"
+            >
+              <h3 className="text-lg font-bold text-zinc-900 group-hover:text-blue-700">
+                Gösterge Taramaları
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-zinc-600">
+                Teknik göstergelere göre öne çıkan BIST hisselerini inceleyin.
+              </p>
+              <span className="mt-4 inline-flex text-sm font-semibold text-blue-600">
+                Taramalara git <span aria-hidden="true">→</span>
+              </span>
+            </Link>
+
+            <Link
+              href="/borsa/pivot-analizi"
+              className="group rounded-xl border border-zinc-200 bg-white p-5 transition hover:border-blue-300 hover:shadow-sm"
+            >
+              <h3 className="text-lg font-bold text-zinc-900 group-hover:text-blue-700">
+                Pivot Analizi
+              </h3>
+              <p className="mt-2 text-sm leading-6 text-zinc-600">
+                Hisselerin pivot, destek ve direnç seviyelerini görüntüleyin.
+              </p>
+              <span className="mt-4 inline-flex text-sm font-semibold text-blue-600">
+                Analize git <span aria-hidden="true">→</span>
+              </span>
+            </Link>
+          </div>
+        </section>
+
+        <div className="mt-6">
+          <AuthorBox />
+        </div>
       </div>
     </main>
   );
