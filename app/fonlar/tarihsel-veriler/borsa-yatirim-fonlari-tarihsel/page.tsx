@@ -3,6 +3,10 @@ import FonTarihselExcelPage from "../_components/FonTarihselExcelPage";
 export const metadata = {
   title: "Borsa Yatırım Fonları Tarihsel Veriler | Hoca İle Borsa",
   description: "Borsa yatırım fonlarının tarihsel verilerini inceleyin.",
+  alternates: {
+    canonical:
+      "https://www.hocaileborsa.com/fonlar/tarihsel-veriler/borsa-yatirim-fonlari-tarihsel",
+  },
 };
 
 export default function Page({

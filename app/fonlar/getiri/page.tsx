@@ -1,6 +1,16 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { IconTile } from "@/components/icons/IconTile";
 import type { CategoryIconName } from "@/components/icons/CategoryIcon";
+
+export const metadata: Metadata = {
+  title: "Yatırım Fonu Getirileri",
+  description:
+    "Menkul kıymet, emeklilik ve borsa yatırım fonlarının getiri tablolarını inceleyin.",
+  alternates: {
+    canonical: "https://www.hocaileborsa.com/fonlar/getiri",
+  },
+};
 
 const fonTipleri = [
   {

@@ -1,6 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
+  alternates: {
+    canonical: "https://www.hocaileborsa.com/gizlilik-politikasi",
+  },
   robots: {
     index: true,
     follow: true,

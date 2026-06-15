@@ -6,6 +6,10 @@ export const metadata: Metadata = {
     "Beta Enerji ve Teknoloji A.Ş. Halka Arz Detayları 2026 | Onaylı İzahname Bilgileri",
   description:
     "Beta Enerji ve Teknoloji A.Ş. onaylı izahname halka arz detayları, talep toplama tarihleri, halka arz fiyatı, pay miktarı, dağıtım yöntemi, tahsisat grupları, katılım endeksi uygunluğu, fon kullanım alanları ve finansal veriler.",
+  alternates: {
+    canonical:
+      "https://www.hocaileborsa.com/halka-arz/onayli-izahnameler/beta-enerji-teknoloji-betae",
+  },
 };
 
 function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "buyuk" }) {

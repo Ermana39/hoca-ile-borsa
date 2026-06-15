@@ -9,6 +9,10 @@ export const metadata = {
     "Haftalık Yatırım Fonlarının En Çok Tercih Ettiği Hisseler | Hoca İle Borsa",
   description:
     "Yatırım fonlarının haftalık olarak en çok tercih ettiği Borsa İstanbul hisselerini inceleyin.",
+  alternates: {
+    canonical:
+      "https://www.hocaileborsa.com/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler",
+  },
 };
 
 export const revalidate = 86400;

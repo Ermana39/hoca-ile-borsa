@@ -3,6 +3,10 @@ import FonTarihselExcelPage from "../_components/FonTarihselExcelPage";
 export const metadata = {
   title: "Emeklilik Fonları Tarihsel Veriler | Hoca İle Borsa",
   description: "Emeklilik fonlarının tarihsel verilerini inceleyin.",
+  alternates: {
+    canonical:
+      "https://www.hocaileborsa.com/fonlar/tarihsel-veriler/emeklilik-fonlari-tarihsel",
+  },
 };
 
 export default function Page({

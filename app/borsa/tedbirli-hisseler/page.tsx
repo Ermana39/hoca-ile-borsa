@@ -6,6 +6,9 @@ export const metadata = {
   title: "Tedbirli Hisseler | Hoca İle Borsa",
   description:
     "Borsa İstanbul’da tedbir uygulanan hisseleri, başlangıç ve bitiş tarihlerini, brüt takas ve işlem kısıtlarını takip edin.",
+  alternates: {
+    canonical: "https://www.hocaileborsa.com/borsa/tedbirli-hisseler",
+  },
 };
 
 export const revalidate = 86400;

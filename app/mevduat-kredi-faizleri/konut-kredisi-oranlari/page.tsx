@@ -7,6 +7,10 @@ export const metadata = {
   title: "Konut Kredisi Oranları | Hoca İle Borsa",
   description:
     "Güncel konut kredisi faiz oranlarını, banka karşılaştırmalarını ve günlük ortalama faiz grafiğini inceleyin.",
+  alternates: {
+    canonical:
+      "https://www.hocaileborsa.com/mevduat-kredi-faizleri/konut-kredisi-oranlari",
+  },
 };
 
 export const revalidate = 86400;

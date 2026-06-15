@@ -1,8 +1,16 @@
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import { isValidAdminToken } from "@/lib/page-stats";
+
+export const metadata: Metadata = {
+  robots: {
+    index: false,
+    follow: false,
+  },
+};
 
 type ContactMessage = {
   name: string;

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description:
     "QUAGR günlük grafik teknik değerlendirmesi, destek ve direnç seviyeleri.",
   alternates: {
-    canonical: "/borsa/formasyonlar/formasyon3",
+    canonical: "/borsa/formasyonlar/formasyon1",
   },
 };
 

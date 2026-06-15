@@ -5,6 +5,7 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import AdSenseScript from "@/components/adsense-script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -69,9 +70,6 @@ export const metadata: Metadata = {
       "Türkiye borsası, halka arz haberleri, temettü takvimi, yatırım fonları ve mevduat faiz oranlarını takip edin.",
     images: ["/banner.png"],
   },
-  alternates: {
-    canonical: "https://www.hocaileborsa.com",
-  },
   other: {
     "google-adsense-account": "ca-pub-9613627671991162",
   },
@@ -107,11 +105,6 @@ export default function RootLayout({
     <html lang="tr" className={inter.variable}>
       <head>
         <script
-          async
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9613627671991162"
-          crossOrigin="anonymous"
-        ></script>
-        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
@@ -121,6 +114,7 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
+        <AdSenseScript />
         <Analytics />
       </body>
     </html>

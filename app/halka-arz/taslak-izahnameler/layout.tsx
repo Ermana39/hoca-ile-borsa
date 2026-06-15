@@ -1,4 +1,12 @@
+import type { Metadata } from "next";
 import type { ReactNode } from "react";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical:
+      "https://www.hocaileborsa.com/halka-arz/taslak-izahnameler",
+  },
+};
 
 const breadcrumbJsonLd = {
   "@context": "https://schema.org",

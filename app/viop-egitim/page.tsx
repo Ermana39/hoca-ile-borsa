@@ -5,6 +5,9 @@ export const metadata = {
   title: "VİOP Eğitim Serisi | Hoca İle Borsa",
   description:
     "VİOP’u sıfırdan öğrenmek isteyenler için yaşayan eğitim serisi. 12 bölümlük temel eğitim ve zaman içinde eklenecek örnek işlem analizleri.",
+  alternates: {
+    canonical: "https://www.hocaileborsa.com/viop-egitim",
+  },
 };
 
 const egitimKonulari = [

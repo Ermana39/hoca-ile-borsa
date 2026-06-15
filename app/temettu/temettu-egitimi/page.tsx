@@ -1,5 +1,15 @@
 import Link from "next/link";
+import type { Metadata } from "next";
 import { IlgiliBolumler } from "@/components/IlgiliBolumler";
+
+export const metadata: Metadata = {
+  title: "Temettü Eğitimi",
+  description:
+    "Temettü kavramlarını, ödeme süreçlerini ve temettü verimi hesaplamasını adım adım öğrenin.",
+  alternates: {
+    canonical: "https://www.hocaileborsa.com/temettu/temettu-egitimi",
+  },
+};
 
 const egitimIcerikleri = [
   { title: "Temettü nedir", href: "/temettu/temettu-egitimi/temettu-nedir" },

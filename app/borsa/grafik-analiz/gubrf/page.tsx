@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   description:
     "Gübre Fabrikaları (QUBRF) hissesi günlük teknik analiz raporu. Bollinger Bantları, MACD, RSI, Stochastic ve hareketli ortalamalar ile detaylı değerlendirme.",
   alternates: {
-    canonical: "https://www.hocaileborsa.com/borsa/grafik-analiz/qubrf",
+    canonical: "https://www.hocaileborsa.com/borsa/grafik-analiz/gubrf",
   },
 };
 

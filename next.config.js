@@ -133,7 +133,19 @@ const nextConfig = {
       },
     ];
 
-    return [...imageHeaders, ...globalSecurityHeaders];
+    const noindexHeaders = [
+      {
+        source: "/halka-arz/taslak-izahnameler/:slug",
+        headers: [
+          {
+            key: "X-Robots-Tag",
+            value: "noindex, follow",
+          },
+        ],
+      },
+    ];
+
+    return [...imageHeaders, ...globalSecurityHeaders, ...noindexHeaders];
   },
 };
 

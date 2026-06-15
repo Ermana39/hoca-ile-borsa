@@ -133,12 +133,19 @@ export async function generateMetadata({
     return {
       title: "Temettü Eğitimi | İçerik Bulunamadı",
       description: "Temettü eğitimi içeriği bulunamadı.",
+      robots: {
+        index: false,
+        follow: false,
+      },
     };
   }
 
   return {
     title: icerik.seoTitle,
     description: icerik.seoDescription,
+    alternates: {
+      canonical: `https://www.hocaileborsa.com/temettu/temettu-egitimi/${slug}`,
+    },
   };
 }
 

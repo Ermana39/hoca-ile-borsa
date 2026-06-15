@@ -4,6 +4,10 @@ export const metadata = {
   title: "Menkul Kıymet Yatırım Fonları Tarihsel Veriler | Hoca İle Borsa",
   description:
     "Menkul kıymet yatırım fonlarının tarihsel verilerini inceleyin.",
+  alternates: {
+    canonical:
+      "https://www.hocaileborsa.com/fonlar/tarihsel-veriler/menkul-kiymet-yatirim-fonlari",
+  },
 };
 
 export default function Page({

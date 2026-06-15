@@ -7,6 +7,10 @@ export const metadata = {
   title: "Mevduat Faizi Oranları | Hoca İle Borsa",
   description:
     "Güncel mevduat faizi oranlarını, banka karşılaştırmalarını ve günlük ortalama faiz grafiğini inceleyin.",
+  alternates: {
+    canonical:
+      "https://www.hocaileborsa.com/mevduat-kredi-faizleri/mevduat-faizi-oranlari",
+  },
 };
 
 export const revalidate = 86400;

@@ -7,6 +7,10 @@ export const metadata = {
   title: "Tüketici Faizi Oranları | Hoca İle Borsa",
   description:
     "Güncel tüketici kredisi faiz oranlarını, banka karşılaştırmalarını ve günlük ortalama faiz grafiğini inceleyin.",
+  alternates: {
+    canonical:
+      "https://www.hocaileborsa.com/mevduat-kredi-faizleri/tuketici-faizi-oranlari",
+  },
 };
 
 export const revalidate = 86400;

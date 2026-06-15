@@ -7,6 +7,10 @@ export const metadata: Metadata = {
     "Ekinciler Demir ve Çelik Sanayi A.Ş. Halka Arz Detayları 2026 | EKDMR Onaylı İzahname",
   description:
     "Ekinciler Demir ve Çelik Sanayi A.Ş. EKDMR onaylı izahname bilgileri, talep toplama tarihleri, halka arz fiyatı, lot dağılımı, finansal görünüm, çarpan analizi ve tahmini lot tablosu.",
+  alternates: {
+    canonical:
+      "https://www.hocaileborsa.com/halka-arz/onayli-izahnameler/ekinciler-demir-celik-ekdmr",
+  },
 };
 
 function Section({

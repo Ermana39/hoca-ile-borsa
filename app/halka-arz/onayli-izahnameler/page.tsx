@@ -1,4 +1,15 @@
 import Link from "next/link";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Onaylı İzahnameler",
+  description:
+    "SPK tarafından onaylanan halka arz izahnamelerini ve şirket detaylarını inceleyin.",
+  alternates: {
+    canonical:
+      "https://www.hocaileborsa.com/halka-arz/onayli-izahnameler",
+  },
+};
 
 const onayliIzahnameler = [
   {
