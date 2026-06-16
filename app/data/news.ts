@@ -23,9 +23,9 @@ export const newsItems: NewsItem[] = [
   {
     id: 991,
     title: "15 Haziran 2026 Pazartesi KAP Bildirimleri Özeti",
-    href: "/haber/15-haziran-2026-pazartesi-kap-bildirimleri-ozeti",
+    href: "/haber/15-haziran-2026-onemli-kap-haberleri",
     image: "/kap-ozeti-discover.webp",
-    alt: "15 Haziran 2026 KAP Bildirimleri Özeti",
+    alt: "15 Haziran 2026 Önemli KAP Haberleri",
     publishedAt: "2026-06-15",
     category: "kap-bildirimleri",
     ilgiliHisseler: ["ASELS", "CVKMD", "GRTHO", "DSTKF", "ASTOR", "LOGO", "ANELE", "ALARK", "BETAE"],
