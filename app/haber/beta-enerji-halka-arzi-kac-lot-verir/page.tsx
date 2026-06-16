@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
@@ -16,11 +16,11 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "article",
-    images: [{ url: "https://www.hocaileborsa.com/beta-enerji-halka-arz-kac-lot-verir.webp" }],
+    images: [{ url: "https://www.hocaileborsa.com/beta-enerji-halka-arz-kac-lot-verir-discover.webp" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://www.hocaileborsa.com/beta-enerji-halka-arz-kac-lot-verir.webp"],
+    images: ["https://www.hocaileborsa.com/beta-enerji-halka-arz-kac-lot-verir-discover.webp"],
   },
 };
 
@@ -118,7 +118,7 @@ const jsonLd = {
     },
   },
   image:
-    "https://www.hocaileborsa.com/beta-enerji-halka-arz-kac-lot-verir.webp",
+    "https://www.hocaileborsa.com/beta-enerji-halka-arz-kac-lot-verir-discover.webp",
   inLanguage: "tr",
 };
 
@@ -145,7 +145,7 @@ export default function BetaEnerjiHalkaArzKacLotVerirPage() {
         <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_16px_rgba(15,23,42,0.07)]">
           <div className="w-full overflow-hidden bg-white">
             <Image
-              src="/beta-enerji-halka-arz-kac-lot-verir.webp"
+              src="/beta-enerji-halka-arz-kac-lot-verir-discover.webp"
               alt="Beta Enerji halka arzı kaç lot verir kişi başı kaç lot düşer"
               width={1200}
               height={900}

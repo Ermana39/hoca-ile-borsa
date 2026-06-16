@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
@@ -16,11 +16,11 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "article",
-    images: [{ url: "https://www.hocaileborsa.com/beta-enerji-halka-arz.webp" }],
+    images: [{ url: "https://www.hocaileborsa.com/beta-enerji-halka-arz-discover.webp" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://www.hocaileborsa.com/beta-enerji-halka-arz.webp"],
+    images: ["https://www.hocaileborsa.com/beta-enerji-halka-arz-discover.webp"],
   },
 };
 
@@ -87,7 +87,7 @@ const jsonLd = {
       url: "https://www.hocaileborsa.com/icon-512.png",
     },
   },
-  image: "https://www.hocaileborsa.com/beta-enerji-halka-arz.webp",
+  image: "https://www.hocaileborsa.com/beta-enerji-halka-arz-discover.webp",
   inLanguage: "tr",
 };
 
@@ -114,7 +114,7 @@ export default function HaberBetaEnerjiHalkaArzPage() {
         <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_16px_rgba(15,23,42,0.07)]">
           <div className="w-full overflow-hidden bg-white">
             <Image
-              src="/beta-enerji-halka-arz.webp"
+              src="/beta-enerji-halka-arz-discover.webp"
               alt="Beta Enerji halka arz talep toplama tarihleri açıklandı"
               width={1200}
               height={900}

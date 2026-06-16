@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
@@ -17,11 +17,11 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "article",
-    images: [{ url: "https://www.hocaileborsa.com/gunluk-abd-borsalari-ozeti.webp" }],
+    images: [{ url: "https://www.hocaileborsa.com/gunluk-abd-borsalari-ozeti-discover.webp" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://www.hocaileborsa.com/gunluk-abd-borsalari-ozeti.webp"],
+    images: ["https://www.hocaileborsa.com/gunluk-abd-borsalari-ozeti-discover.webp"],
   },
 };
 
@@ -94,7 +94,7 @@ const jsonLd = {
       url: "https://www.hocaileborsa.com/icon-512.png",
     },
   },
-  image: "https://www.hocaileborsa.com/gunluk-abd-borsalari-ozeti.webp",
+  image: "https://www.hocaileborsa.com/gunluk-abd-borsalari-ozeti-discover.webp",
   inLanguage: "tr",
 };
 
@@ -121,7 +121,7 @@ export default function HaberSpacexHalkaArziAbdBorsalariPage() {
         <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_16px_rgba(15,23,42,0.07)]">
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-950">
             <Image
-              src="/gunluk-abd-borsalari-ozeti.webp"
+              src="/gunluk-abd-borsalari-ozeti-discover.webp"
               alt="Günlük ABD borsaları özeti"
               fill
               unoptimized

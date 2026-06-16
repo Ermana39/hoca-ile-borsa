@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
@@ -17,11 +17,11 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "article",
-    images: [{ url: "https://www.hocaileborsa.com/borsa-yukseldi-altin-dustu-haftalik-piyasa-ozeti.webp" }],
+    images: [{ url: "https://www.hocaileborsa.com/borsa-yukseldi-altin-dustu-haftalik-piyasa-ozeti-discover.webp" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://www.hocaileborsa.com/borsa-yukseldi-altin-dustu-haftalik-piyasa-ozeti.webp"],
+    images: ["https://www.hocaileborsa.com/borsa-yukseldi-altin-dustu-haftalik-piyasa-ozeti-discover.webp"],
   },
 };
 
@@ -181,7 +181,7 @@ const jsonLd = {
     },
   },
   image:
-    "https://www.hocaileborsa.com/borsa-yukseldi-altin-dustu-haftalik-piyasa-ozeti.webp",
+    "https://www.hocaileborsa.com/borsa-yukseldi-altin-dustu-haftalik-piyasa-ozeti-discover.webp",
   inLanguage: "tr",
 };
 
@@ -208,7 +208,7 @@ export default function BorsaYukseldiAltinDustuHaftalikPiyasaOzetiPage() {
         <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_16px_rgba(15,23,42,0.07)]">
           <div className="w-full overflow-hidden bg-white">
             <Image
-              src="/borsa-yukseldi-altin-dustu-haftalik-piyasa-ozeti.webp"
+              src="/borsa-yukseldi-altin-dustu-haftalik-piyasa-ozeti-discover.webp"
               alt="Borsa yükseldi altın düştü haftalık piyasa özeti"
               width={1200}
               height={900}

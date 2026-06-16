@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { HesaplayiciRehberi } from "@/components/HesaplayiciRehberi";
 
 function parseNumber(value: string) {
   const normalized = value.replace(/\./g, "").replace(",", ".");
@@ -192,6 +193,7 @@ export default function EurobondHesaplayici() {
             </div>
           </div>
         </section>
+        <HesaplayiciRehberi slug="eurobond" />
       </div>
     </main>
   );

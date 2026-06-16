@@ -35,7 +35,7 @@ export async function generateMetadata({
   const aciklama =
     ozet.seoAciklama ||
     `${ozet.baslik}: BIST 100 kapanışı, en çok yükselen ve düşen hisseler, para girişi-çıkışı, en hacimli hisseler, ekonomik takvim ve kurum dağılımı.`;
-  const gorsel = `${SITE}${ozet.gorsel || "/gunluk-ozet.webp"}`;
+  const gorsel = `${SITE}${ozet.gorsel || "/gunluk-ozet-discover.webp"}`;
 
   return {
     title: baslik,
@@ -263,7 +263,7 @@ export default async function GunlukBorsaOzetiPage({
 function GunlukOzetIcerik({ ozet }: { ozet: GunlukOzet }) {
   const pozitif = ozet.bist.degisimYuzde >= 0;
   const url = `${SITE}/borsa/gunluk-borsa-ozeti/${ozet.slug}`;
-  const gorsel = `${SITE}${ozet.gorsel || "/gunluk-ozet.webp"}`;
+  const gorsel = `${SITE}${ozet.gorsel || "/gunluk-ozet-discover.webp"}`;
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -317,7 +317,7 @@ function GunlukOzetIcerik({ ozet }: { ozet: GunlukOzet }) {
           <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
             <div className="relative aspect-[16/9] w-full">
               <Image
-                src={ozet.gorsel || "/gunluk-ozet.webp"}
+                src={ozet.gorsel || "/gunluk-ozet-discover.webp"}
                 alt={`${ozet.baslik} görseli`}
                 fill
                 className="object-contain"

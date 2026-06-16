@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { HesaplayiciRehberi } from "@/components/HesaplayiciRehberi";
 
 const VARSAYILAN_TAVAN = 48000;
 const DAMGA_VERGISI_ORANI = 0.00759;
@@ -157,6 +158,7 @@ export default function KidemTazminatiHesaplayici() {
             </div>
           </div>
         </section>
+        <HesaplayiciRehberi slug="kidem-tazminati" />
       </div>
     </main>
   );

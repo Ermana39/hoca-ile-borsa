@@ -53,7 +53,7 @@ export type GunlukOzet = {
   baslik: string; // "12 Haziran 2026 Günlük Borsa Özeti"
   seoBaslik?: string;
   seoAciklama?: string;
-  gorsel?: string; // "/gunluk-ozet.webp"
+  gorsel?: string; // "/gunluk-ozet-discover.webp"
   bist: {
     kapanis: string;
     degisimYuzde: number;
@@ -148,7 +148,7 @@ export function getGunlukOzetHaberKayitlari(): GunlukOzetHaberKaydi[] {
     id: Number(o.isoTarih.replace(/-/g, "")) || 0,
     title: o.baslik,
     href: `/borsa/gunluk-borsa-ozeti/${o.slug}`,
-    image: o.gorsel || "/gunluk-ozet.webp",
+    image: o.gorsel || "/gunluk-ozet-discover.webp",
     alt: o.baslik,
     publishedAt: o.isoTarih,
     category: "piyasa-gundemi",

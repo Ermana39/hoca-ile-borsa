@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { newsItems } from "@/app/data/news";
+import pageUpdates from "@/lib/page-updates.generated.json";
 import {
   getNewsByCategory,
   getToplamSayfa,
@@ -7,90 +8,126 @@ import {
 } from "@/lib/haberler";
 import { HABER_KATEGORILERI } from "@/lib/haber-kategorileri";
 import { getSitemapHisseSembolleri } from "@/lib/hisseler";
-import { getTumGunlukOzetSluglari } from "@/lib/gunluk-ozet";
+import { getTumGunlukOzetler } from "@/lib/gunluk-ozet";
 
 const siteUrl = "https://www.hocaileborsa.com";
 
+type PageUpdate = {
+  route: string;
+  updatedAt: string;
+};
+
+const updateMap = new Map(
+  (pageUpdates.pages as PageUpdate[]).map((page) => [
+    page.route,
+    page.updatedAt,
+  ])
+);
+
+const excludedRoutePatterns = [
+  /\[/,
+  /^\/halka-arz\/taslak-izahnameler\/.+/,
+  /^\/yonetim(?:\/|$)/,
+  /^\/kontrol-paneli-4827(?:\/|$)/,
+  /^\/(?:giris|uye|profil|mesajlar|istatistik|guvenlik-kayitlari)(?:\/|$)/,
+];
+
+function isIndexableRoute(route: string) {
+  return !excludedRoutePatterns.some((pattern) => pattern.test(route));
+}
+
+function getLastModified(route: string, fallbackRoute = "/") {
+  return (
+    updateMap.get(route) ??
+    updateMap.get(fallbackRoute) ??
+    pageUpdates.generatedAt
+  );
+}
+
+function getRouteSettings(route: string): {
+  priority: number;
+  changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"];
+} {
+  if (route === "/") {
+    return { priority: 1, changeFrequency: "daily" };
+  }
+
+  if (
+    route === "/borsa" ||
+    route === "/halka-arz" ||
+    route === "/temettu" ||
+    route === "/fonlar" ||
+    route === "/mevduat-kredi-faizleri"
+  ) {
+    return { priority: 0.95, changeFrequency: "daily" };
+  }
+
+  if (route === "/hisseler" || route === "/haberler") {
+    return { priority: 0.9, changeFrequency: "daily" };
+  }
+
+  if (route.startsWith("/haber/")) {
+    return { priority: 0.9, changeFrequency: "monthly" };
+  }
+
+  if (route.startsWith("/hisse/")) {
+    return { priority: 0.8, changeFrequency: "weekly" };
+  }
+
+  if (route.startsWith("/haberler/kategori/")) {
+    return { priority: 0.75, changeFrequency: "daily" };
+  }
+
+  if (route.startsWith("/haberler/sayfa/")) {
+    return { priority: 0.6, changeFrequency: "daily" };
+  }
+
+  if (route.startsWith("/borsa/gunluk-borsa-ozeti/")) {
+    return { priority: 0.7, changeFrequency: "monthly" };
+  }
+
+  return { priority: 0.85, changeFrequency: "weekly" };
+}
+
 function createEntry(
-  url: string,
-  priority: number,
-  changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"] = "weekly"
+  route: string,
+  lastModified = getLastModified(route)
 ): MetadataRoute.Sitemap[number] {
+  const settings = getRouteSettings(route);
+
   return {
-    url: `${siteUrl}${url}`,
-    changeFrequency,
-    priority,
+    url: `${siteUrl}${route === "/" ? "" : route}`,
+    lastModified,
+    changeFrequency: settings.changeFrequency,
+    priority: settings.priority,
   };
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = [
-    "/",
-    "/borsa",
-    "/borsa/dikkat-cekenler",
-    "/borsa/egitim-videolari",
-    "/borsa/formasyonlar",
-    "/borsa/geri-alim-programlari",
-    "/borsa/gosterge-taramalari",
-    "/borsa/grafik-analiz",
-    "/borsa/hacim-artisi-analizi",
-    "/borsa/yeni-is-anlasmalari",
-    "/borsa/pivot-analizi",
-    "/borsa/oran-analizi",
-    "/borsa/tedbirli-hisseler",
+  // Statik App Router sayfaları build öncesinde üretilen güncelleme
+  // kayıtlarından otomatik alınır. Dinamik route şablonları ve noindex
+  // sayfalar sitemap'e eklenmez.
+  const staticRoutes = (pageUpdates.pages as PageUpdate[])
+    .map((page) => page.route)
+    .filter(isIndexableRoute);
 
-    "/halka-arz",
-    "/halka-arz/kazanc-hesapla",
-    "/halka-arz/talep-hesapla",
-    "/halka-arz/onayli-izahnameler",
-    "/halka-arz/taslak-izahnameler",
-
-    "/temettu",
-    "/temettu/temettu-egitimi",
-    "/temettu/nisan-ayi-temettu-takvimi",
-    "/temettu/mayis-ayi-temettu-takvimi",
-    "/temettu/haziran-ayi-temettu-takvimi",
-    "/temettu/temmuz-ayi-temettu-takvimi",
-    "/temettu/agustos-ayi-temettu-takvimi",
-    "/temettu/temettu-hesaplama-araci",
-    "/temettu/temettu-verimi-hesaplama",
-
-    "/fonlar",
-    "/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler",
-    "/fonlar/getiri",
-    "/fonlar/tarihsel-veriler",
-
-    "/mevduat-kredi-faizleri",
-    "/mevduat-kredi-faizleri/mevduat-faizi-oranlari",
-    "/mevduat-kredi-faizleri/tuketici-faizi-oranlari",
-    "/mevduat-kredi-faizleri/konut-kredisi-oranlari",
-    "/mevduat-kredi-faizleri/tasit-kredisi-oranlari",
-
-    "/yazar/erman-hoca",
-    "/haberler",
-    "/hisseler",
-  ];
-
-  // Hisse kunye sayfalari (data/hisseler/*.json'dan otomatik)
   const hisseRoutes = getSitemapHisseSembolleri().map(
     (sembol) => `/hisse/${sembol.toLowerCase()}`
   );
 
   const haberRoutes = newsItems.map((item) => item.href);
 
-  // Gunluk borsa ozetlerinin kalici tarihli URL'leri (data/gunluk-ozet/*.json).
-  const gunlukOzetRoutes = getTumGunlukOzetSluglari().map(
-    (slug) => `/borsa/gunluk-borsa-ozeti/${slug}`
-  );
+  const gunlukOzetEntries = getTumGunlukOzetler().map((ozet) => ({
+    route: `/borsa/gunluk-borsa-ozeti/${ozet.slug}`,
+    lastModified: ozet.isoTarih,
+  }));
 
-  // Haber arsivi sayfalama route'lari: /haberler/sayfa/2 ... N
   const arsivSayfaRoutes: string[] = [];
   const toplamArsivSayfa = getToplamSayfa(getAllNews().length);
   for (let n = 2; n <= toplamArsivSayfa; n++) {
     arsivSayfaRoutes.push(`/haberler/sayfa/${n}`);
   }
 
-  // Kategori arsiv sayfalari + kategori sayfalama route'lari
   const kategoriRoutes: string[] = [];
   for (const kategori of HABER_KATEGORILERI) {
     kategoriRoutes.push(`/haberler/kategori/${kategori.slug}`);
@@ -102,57 +139,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
-  const tumUrller = Array.from(
-    new Set([
-      ...staticRoutes,
-      ...hisseRoutes,
-      ...haberRoutes,
-      ...gunlukOzetRoutes,
-      ...arsivSayfaRoutes,
-      ...kategoriRoutes,
-    ])
-  );
+  const routeEntries = new Map<string, string | undefined>();
 
-  return tumUrller.map((route) => {
-    if (route === "/") return createEntry(route, 1, "daily");
-    if (
-      route === "/borsa" ||
-      route === "/halka-arz" ||
-      route === "/temettu" ||
-      route === "/fonlar" ||
-      route === "/mevduat-kredi-faizleri"
-    ) {
-      return createEntry(route, 0.95, "daily");
+  for (const route of [
+    ...staticRoutes,
+    ...hisseRoutes,
+    ...haberRoutes,
+    ...arsivSayfaRoutes,
+    ...kategoriRoutes,
+  ]) {
+    if (isIndexableRoute(route)) {
+      routeEntries.set(route, getLastModified(route));
     }
+  }
 
-    if (route === "/hisseler") {
-      return createEntry(route, 0.9, "daily");
-    }
+  for (const entry of gunlukOzetEntries) {
+    routeEntries.set(entry.route, entry.lastModified);
+  }
 
-    if (route.startsWith("/hisse/")) {
-      return createEntry(route, 0.8, "weekly");
-    }
-
-    if (route === "/haberler") {
-      return createEntry(route, 0.9, "daily");
-    }
-
-    if (route.startsWith("/haberler/kategori/")) {
-      return createEntry(route, 0.75, "daily");
-    }
-
-    if (route.startsWith("/haberler/sayfa/")) {
-      return createEntry(route, 0.6, "daily");
-    }
-
-    if (route.startsWith("/haber/")) {
-      return createEntry(route, 0.9, "monthly");
-    }
-
-    if (route.startsWith("/borsa/gunluk-borsa-ozeti/")) {
-      return createEntry(route, 0.7, "monthly");
-    }
-
-    return createEntry(route, 0.85, "weekly");
-  });
+  return Array.from(routeEntries.entries())
+    .sort(([routeA], [routeB]) => routeA.localeCompare(routeB, "tr"))
+    .map(([route, lastModified]) => createEntry(route, lastModified));
 }

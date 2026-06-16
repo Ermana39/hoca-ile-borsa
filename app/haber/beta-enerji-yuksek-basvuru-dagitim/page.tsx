@@ -24,14 +24,14 @@ export const metadata: Metadata = {
     url: "https://www.hocaileborsa.com/haber/beta-enerji-yuksek-basvuru-dagitim",
     images: [
       {
-        url: "https://www.hocaileborsa.com/beta-enerji-yuksek-basvuru-dagitim.webp",
+        url: "https://www.hocaileborsa.com/beta-enerji-yuksek-basvuru-dagitim-discover.webp",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     images: [
-      "https://www.hocaileborsa.com/beta-enerji-yuksek-basvuru-dagitim.webp",
+      "https://www.hocaileborsa.com/beta-enerji-yuksek-basvuru-dagitim-discover.webp",
     ],
   },
 };
@@ -162,7 +162,7 @@ const jsonLd = {
     },
   },
   image:
-    "https://www.hocaileborsa.com/beta-enerji-yuksek-basvuru-dagitim.webp",
+    "https://www.hocaileborsa.com/beta-enerji-yuksek-basvuru-dagitim-discover.webp",
   inLanguage: "tr",
 };
 
@@ -208,7 +208,7 @@ export default function BetaEnerjiYuksekBasvuruDagitimPage() {
         <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_16px_rgba(15,23,42,0.07)]">
           <div className="w-full overflow-hidden bg-zinc-100">
             <Image
-              src="/beta-enerji-yuksek-basvuru-dagitim.webp"
+              src="/beta-enerji-yuksek-basvuru-dagitim-discover.webp"
               alt="Beta Enerji halka arz yüksek başvuru dağıtım oranı"
               width={1200}
               height={1200}

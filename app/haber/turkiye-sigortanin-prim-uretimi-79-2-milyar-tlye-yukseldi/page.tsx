@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
@@ -15,11 +15,11 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "article",
-    images: [{ url: "https://www.hocaileborsa.com/haber975.png" }],
+    images: [{ url: "https://www.hocaileborsa.com/haber975-discover.webp" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://www.hocaileborsa.com/haber975.png"],
+    images: ["https://www.hocaileborsa.com/haber975-discover.webp"],
   },
 };
 
@@ -68,7 +68,7 @@ const jsonLd = {
     url: "https://www.hocaileborsa.com",
     logo: { "@type": "ImageObject", url: "https://www.hocaileborsa.com/icon-512.png" },
   },
-  image: "https://www.hocaileborsa.com/haber975.png",
+  image: "https://www.hocaileborsa.com/haber975-discover.webp",
   inLanguage: "tr",
 };
 
@@ -86,7 +86,7 @@ export default function Haber975Page() {
         <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-100">
             <Image
-              src="/haber975.webp"
+              src="/haber975-discover.webp"
               alt="Türkiye Sigorta’nın Prim Üretimi 79,2 Milyar TL’ye Yükseldi"
               fill
               unoptimized

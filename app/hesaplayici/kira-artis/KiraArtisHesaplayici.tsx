@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { HesaplayiciRehberi } from "@/components/HesaplayiciRehberi";
 
 const VARSAYILAN_TUFE = 32.24;
 
@@ -170,6 +171,7 @@ export default function KiraArtisHesaplayici() {
             </div>
           </div>
         </section>
+        <HesaplayiciRehberi slug="kira-artis" />
       </div>
     </main>
   );

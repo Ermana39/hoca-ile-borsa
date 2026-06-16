@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { HesaplayiciRehberi } from "@/components/HesaplayiciRehberi";
 
 function parseNumber(value: string) {
   const normalized = value.replace(/\./g, "").replace(",", ".");
@@ -191,6 +192,7 @@ export default function TahvilHesaplayici() {
             </div>
           </div>
         </section>
+        <HesaplayiciRehberi slug="tahvil" />
       </div>
     </main>
   );

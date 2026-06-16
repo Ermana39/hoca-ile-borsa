@@ -466,6 +466,15 @@ export default function HomePage() {
           </div>
         </section>
 
+        <header className="px-4 pb-1 pt-6 text-center md:px-6 md:pt-8">
+          <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
+            Borsa, Halka Arz, Temettü, Fonlar ve Finans Analizleri
+          </h1>
+          <p className="mx-auto mt-3 max-w-3xl text-sm leading-7 text-slate-600 md:text-base">
+            Piyasaları, güncel finans haberlerini ve yatırım araçlarını tek
+            ekrandan takip edin.
+          </p>
+        </header>
 
         <section className="px-4 py-6 md:px-6">
           <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-6">

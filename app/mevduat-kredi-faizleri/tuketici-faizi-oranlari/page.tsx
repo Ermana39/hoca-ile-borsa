@@ -2,6 +2,7 @@ import Link from "next/link";
 import * as FaizAraclari from "@/components/faiz-hesaplayicilar";
 import { getFaizData } from "@/lib/faiz-data";
 import { HesaplaCTA, TabloUstBilgi } from "@/components/IlgiliBolumler";
+import { HesaplayiciRehberi } from "@/components/HesaplayiciRehberi";
 
 export const metadata = {
   title: "Tüketici Faizi Oranları | Hoca İle Borsa",
@@ -561,6 +562,8 @@ export default async function TuketiciFaiziOranlariPage() {
         <section id="hesaplayici" className="mt-8 scroll-mt-24">
           <HesaplayiciAlani />
         </section>
+
+        <HesaplayiciRehberi slug="tuketici-kredisi" />
 
         <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">

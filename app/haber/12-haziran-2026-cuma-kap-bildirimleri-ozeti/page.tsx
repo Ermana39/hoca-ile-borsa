@@ -1,4 +1,4 @@
-﻿import Image from "next/image";
+import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
@@ -16,11 +16,11 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "article",
-    images: [{ url: "https://www.hocaileborsa.com/kap-ozeti.webp" }],
+    images: [{ url: "https://www.hocaileborsa.com/kap-ozeti-discover.webp" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://www.hocaileborsa.com/kap-ozeti.webp"],
+    images: ["https://www.hocaileborsa.com/kap-ozeti-discover.webp"],
   },
 };
 
@@ -99,7 +99,7 @@ const jsonLd = {
     url: "https://www.hocaileborsa.com",
     logo: { "@type": "ImageObject", url: "https://www.hocaileborsa.com/icon-512.png" },
   },
-  image: "https://www.hocaileborsa.com/kap-ozeti.webp",
+  image: "https://www.hocaileborsa.com/kap-ozeti-discover.webp",
   inLanguage: "tr",
 };
 
@@ -117,7 +117,7 @@ export default function HaberKapOzetiPage() {
         <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_16px_rgba(15,23,42,0.07)]">
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
-              src="/kap-ozeti.webp"
+              src="/kap-ozeti-discover.webp"
               alt="12 Haziran 2026 Cuma KAP Bildirimleri Özeti"
               fill
               unoptimized

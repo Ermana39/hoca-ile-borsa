@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import { HesaplayiciRehberi } from "@/components/HesaplayiciRehberi";
 
 function parseNumber(value: string) {
   const normalized = value.replace(/\./g, "").replace(",", ".");
@@ -255,6 +256,7 @@ export default function KarZararHesaplayici() {
             </div>
           </div>
         </section>
+        <HesaplayiciRehberi slug="kar-zarar" />
       </div>
     </main>
   );

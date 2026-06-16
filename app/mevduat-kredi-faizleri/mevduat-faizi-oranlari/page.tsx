@@ -2,6 +2,7 @@ import Link from "next/link";
 import { MevduatHesaplayici, ReelGetiriHesaplayici } from "@/components/faiz-hesaplayicilar";
 import { HesaplaCTA, TabloUstBilgi } from "@/components/IlgiliBolumler";
 import { getFaizData } from "@/lib/faiz-data";
+import { HesaplayiciRehberi } from "@/components/HesaplayiciRehberi";
 
 export const metadata = {
   title: "Mevduat Faizi Oranları | Hoca İle Borsa",
@@ -542,6 +543,8 @@ export default async function MevduatFaiziOranlariPage() {
         <section className="mt-8">
           <ReelGetiriHesaplayici />
         </section>
+
+        <HesaplayiciRehberi slug="mevduat" />
 
         <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">
