@@ -11,19 +11,19 @@ export const metadata = {
 };
 
 const rows: FonEtkiRow[] = [
-  { sembol: "DSTKF", fonOrani: 17.71, kapanisMarji: 7.56, etki: 1.3389 },
-  { sembol: "OZATD", fonOrani: 17.16, kapanisMarji: 8.43, etki: 1.4466 },
-  { sembol: "TERA", fonOrani: 11.5, kapanisMarji: -9.98, etki: -1.1474 },
-  { sembol: "PEKGY", fonOrani: 9.89, kapanisMarji: 0.31, etki: 0.0309 },
-  { sembol: "TRHOL", fonOrani: 6.59, kapanisMarji: 3.61, etki: 0.2379 },
-  { sembol: "TEHOL", fonOrani: 5.5, kapanisMarji: 1.85, etki: 0.1018 },
-  { sembol: "ANELE", fonOrani: 2.15, kapanisMarji: 3.67, etki: 0.0789 },
-  { sembol: "ALKLC", fonOrani: 0.66, kapanisMarji: -1.36, etki: -0.0090 },
-  { sembol: "SVGYO", fonOrani: 0.55, kapanisMarji: 1.45, etki: 0.0080 },
-  { sembol: "TMPOL", fonOrani: 0.33, kapanisMarji: 7.51, etki: 0.0248 },
-  { sembol: "HEDEF", fonOrani: 0.28, kapanisMarji: 1.30, etki: 0.0036 },
-  { sembol: "CWENE", fonOrani: 0.03, kapanisMarji: 9.01, etki: 0.0027 },
-  { sembol: "EUPWR", fonOrani: 0.03, kapanisMarji: 4.99, etki: 0.0015 },
+  { sembol: "DSTKF", fonOrani: 17.71, kapanisMarji: 0.00, etki: 0.0000 },
+  { sembol: "OZATD", fonOrani: 17.16, kapanisMarji: 8.57, etki: 1.4706 },
+  { sembol: "TERA", fonOrani: 11.5, kapanisMarji: -9.96, etki: -1.1454 },
+  { sembol: "PEKGY", fonOrani: 9.89, kapanisMarji: 3.50, etki: 0.3462 },
+  { sembol: "TRHOL", fonOrani: 6.59, kapanisMarji: -2.69, etki: -0.1773 },
+  { sembol: "TEHOL", fonOrani: 5.5, kapanisMarji: 0.12, etki: 0.0066 },
+  { sembol: "ANELE", fonOrani: 2.15, kapanisMarji: 0.00, etki: 0.0000 },
+  { sembol: "ALKLC", fonOrani: 0.66, kapanisMarji: 0.22, etki: 0.0015 },
+  { sembol: "SVGYO", fonOrani: 0.55, kapanisMarji: -1.43, etki: -0.0079 },
+  { sembol: "TMPOL", fonOrani: 0.33, kapanisMarji: -4.09, etki: -0.0135 },
+  { sembol: "HEDEF", fonOrani: 0.28, kapanisMarji: 3.00, etki: 0.0084 },
+  { sembol: "CWENE", fonOrani: 0.03, kapanisMarji: 1.22, etki: 0.0004 },
+  { sembol: "EUPWR", fonOrani: 0.03, kapanisMarji: -2.70, etki: -0.0008 },
 ];
 
 export default function TlyEtkiAnaliziPage() {
@@ -57,7 +57,7 @@ export default function TlyEtkiAnaliziPage() {
           ilan edilecek fiyatına olan tahmini katkısı hesaplanmıştır.
         </p>
 
-        <FonEtkiTable rows={rows} toplamFonOrani={72.38} toplamEtki={2.12} />
+        <FonEtkiTable rows={rows} toplamFonOrani={72.38} toplamEtki={0.49} />
 
         <section className="mt-10 space-y-5 rounded-2xl border border-slate-200 bg-white p-5 md:p-7">
           <h2 className="text-xl font-bold text-zinc-900 md:text-2xl">
