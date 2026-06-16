@@ -27,7 +27,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "buyuk" }) {
 
 export default function BetaEnerjiVeTeknolojiASPage() {
   const summaryItems = [
-    { label: "Talep Toplama Tarihi", value: "17-18-19 Haziran 2026" },
+    { label: "Talep Toplama Tarihi", value: "18-19 Haziran 2026" },
     { label: "Saat", value: "09.00 - 17.00" },
     { label: "Halka Arz Fiyatı", value: "40,00 TL" },
     { label: "İskonto Oranı", value: "%20,45" },
@@ -234,8 +234,8 @@ export default function BetaEnerjiVeTeknolojiASPage() {
   const oneCikanlar = [
     {
       title: "Talep Toplama",
-      value: "17-19 Haziran",
-      desc: "Beta Enerji ve Teknoloji A.Ş. halka arzında talep toplama 17, 18 ve 19 Haziran tarihlerinde yapılacak.",
+      value: "18-19 Haziran",
+      desc: "Beta Enerji ve Teknoloji A.Ş. halka arzında talep toplama 18 ve 19 Haziran tarihlerinde yapılacak.",
     },
     {
       title: "Katılım Endeksi",
@@ -296,7 +296,7 @@ export default function BetaEnerjiVeTeknolojiASPage() {
               <div className="grid grid-cols-2 gap-3 md:min-w-[300px]">
                 <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
                   <div className="text-xs text-blue-100">Talep Toplama</div>
-                  <div className="mt-1 text-lg font-bold">17-18-19 Haziran</div>
+                  <div className="mt-1 text-lg font-bold">18-19 Haziran</div>
                 </div>
                 <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
                   <div className="text-xs text-blue-100">Fiyat</div>
@@ -387,6 +387,50 @@ export default function BetaEnerjiVeTeknolojiASPage() {
           </div>
         </section>
 
+        <section className="mb-8 rounded-3xl border border-blue-200 bg-white p-6 shadow-sm">
+          <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <h2 className="text-xl font-bold text-slate-900">
+              Kuruluştan Yapılan Açıklama
+            </h2>
+            <span className="w-fit rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
+              Basın Açıklaması Özeti
+            </span>
+          </div>
+
+          <div className="grid gap-4 lg:grid-cols-3">
+            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+              <div className="text-sm font-bold text-slate-900">
+                Revize Talep Toplama Takvimi
+              </div>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                Kuruluştan yapılan açıklamaya göre Beta Enerji payları, 40,00 TL sabit fiyatla 18-19 Haziran 2026 Perşembe ve Cuma günleri talep toplayacak.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+              <div className="text-sm font-bold text-slate-900">
+                Arz Yapısı ve Taahhütler
+              </div>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                Toplam 60.750.000 adet payın 55.000.000 adedi sermaye artırımı, 5.750.000 adedi ortak satışı şeklinde sunulacak. Halka açıklık oranının yüzde 15 olması beklenirken, şirket Katılım Endeksi kriterlerine uygun olduğunu ve dağıtılabilir net dönem kârının asgari yüzde 30'unu nakit temettü olarak dağıtmayı taahhüt ettiğini açıkladı.
+              </p>
+            </div>
+
+            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+              <div className="text-sm font-bold text-slate-900">
+                Büyüme ve Yatırım Vizyonu
+              </div>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                Şirket, halka arz gelirini büyüme yatırımlarının finansmanı ve işletme sermayesinin güçlendirilmesinde kullanmayı planlıyor. Açıklamada yeni Beta Enerji ve Teknoloji Kampüsü, ihracat ağının genişletilmesi, Ar-Ge çalışmaları, dijitalleşme ve sürdürülebilir üretim hedefleri öne çıkarıldı.
+              </p>
+            </div>
+          </div>
+
+          <p className="mt-5 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-7 text-amber-950">
+            Açıklamada ayrıca yeni kampüs yatırımının kapasite artışı, akıllı şebekelere yönelik ürün geliştirme, 80'den fazla ülkeye ihracat deneyimi ve 2030 vizyonu kapsamında karbon emisyonunu azaltma hedefleriyle birlikte değerlendirildiği belirtildi.
+          </p>
+        </section>
+
         <section className="grid gap-8 xl:grid-cols-3">
           <div className="space-y-8 xl:col-span-2">
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
@@ -432,10 +476,10 @@ export default function BetaEnerjiVeTeknolojiASPage() {
                     Talep Toplama Tarihleri
                   </div>
                   <p className="mt-2 text-lg font-bold text-emerald-950">
-                    17-18-19 Haziran 2026
+                    18-19 Haziran 2026
                   </p>
                   <p className="mt-1 text-sm text-emerald-900">
-                    Çarşamba - Perşembe - Cuma
+                    Perşembe - Cuma
                   </p>
                 </div>
 
@@ -673,7 +717,7 @@ export default function BetaEnerjiVeTeknolojiASPage() {
               </h2>
               <p className="text-sm leading-7 text-slate-600">
                 Beta Enerji ve Teknoloji A.Ş. halka arzında talep toplama
-                17-18-19 Haziran 2026 tarihlerinde yapılacak. Halka arz fiyatı
+                18-19 Haziran 2026 Perşembe ve Cuma günleri yapılacak. Halka arz fiyatı
                 40,00 TL, toplam halka arz payı 60.750.000 lot ve tahmini halka
                 arz büyüklüğü 2,43 milyar TL seviyesindedir. Halka açıklık
                 oranının yüzde 15 olması sınırlı arz etkisini gündeme
@@ -781,8 +825,7 @@ export default function BetaEnerjiVeTeknolojiASPage() {
                     Satmama Taahhüdü
                   </div>
                   <p className="mt-2 text-sm text-indigo-900">
-                    1 yıl sermaye artırımı ve halka arz fiyatı altında pay
-                    satışı yapılmayacağı taahhüt edilmiştir.
+                    Hâkim ortaklar tarafından 1 yıl boyunca pay satışı yapılmayacağı; şirket tarafından da dolaşımdaki pay miktarını artıracak karar alınmayacağı taahhüt edilmiştir.
                   </p>
                 </div>
 
@@ -823,6 +866,49 @@ export default function BetaEnerjiVeTeknolojiASPage() {
           </aside>
         </section>
 
+
+        <section className="mt-8 rounded-3xl border border-blue-200 bg-white p-6 shadow-sm">
+          <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <h2 className="text-lg font-bold text-slate-900">
+              Şirket Basın Açıklaması Özeti
+            </h2>
+            <span className="w-fit rounded-full bg-blue-50 px-3 py-1 text-xs font-semibold text-blue-700">
+              Kuruluştan Yapılan Açıklama
+            </span>
+          </div>
+
+          <div className="space-y-4 text-sm leading-7 text-slate-600">
+            <p>
+              Kuruluştan yapılan açıklamaya göre Beta Enerji ve Teknoloji A.Ş. payları,
+              Türkiye Sınai Kalkınma Bankası ve Ziraat Yatırım liderliğinde, Yatırım
+              Finansman Menkul Değerler eş liderliğinde toplam 41 aracı kuruluştan
+              oluşan konsorsiyum aracılığıyla 40,00 TL sabit fiyatla 18-19 Haziran
+              2026 Perşembe ve Cuma günleri talep toplayacak.
+            </p>
+            <p>
+              Açıklamada halka arz büyüklüğünün yaklaşık 2,4 milyar TL olarak
+              hedeflendiği, 55.000.000 adet payın sermaye artırımı, 5.750.000 adet
+              payın ise ortak satışı yoluyla halka arza konu edileceği belirtildi.
+              Halka arz sonrasında şirketin halka açıklık oranının yüzde 15 olması
+              öngörülüyor.
+            </p>
+            <p>
+              Şirket, halka arzdan elde edilecek kaynağın büyüme yatırımlarının
+              finansmanında ve işletme sermayesinin güçlendirilmesinde kullanılacağını
+              ifade etti. Açıklamada ayrıca Katılım Endeksi uygunluğu, asgari yüzde 30
+              nakit temettü taahhüdü, 1 yıl pay satmama taahhüdü ve dolaşımdaki pay
+              miktarını artıracak sermaye artırımı kararı alınmayacağı bilgileri öne çıktı.
+            </p>
+            <p>
+              Beta Enerji tarafı, yeni Beta Enerji ve Teknoloji Kampüsü ile üretim
+              kapasitesinin artırılmasını, ihracat yapılan ülke sayısının genişletilmesini,
+              Ar-Ge, dijitalleşme, akıllı şebeke çözümleri ve sürdürülebilir üretim
+              hedeflerinin güçlendirilmesini halka arz sonrası dönemin önemli başlıkları
+              arasında gösterdi.
+            </p>
+          </div>
+        </section>
+
         <section className="mt-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
           <div className="border-b border-slate-200 bg-slate-50 px-6 py-4">
             <h2 className="text-lg font-bold text-slate-900">
@@ -834,7 +920,7 @@ export default function BetaEnerjiVeTeknolojiASPage() {
             </p>
           </div>
 
-          <div className="grid gap-4 p-4 sm:p-6 lg:grid-cols-2">
+          <div className="grid gap-4 p-4 sm:p-6 lg:grid-cols-3">
             <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
               <div className="relative aspect-video w-full overflow-hidden bg-slate-100">
                 <iframe
@@ -868,6 +954,23 @@ export default function BetaEnerjiVeTeknolojiASPage() {
                 </h3>
               </div>
             </div>
+
+            <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+              <div className="relative aspect-video w-full overflow-hidden bg-slate-100">
+                <iframe
+                  src="https://www.youtube.com/embed/XLEIRL7nim8"
+                  title="Beta Enerji Halka Arz Güncel Değerlendirme Videosu"
+                  className="absolute inset-0 h-full w-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-sm font-bold text-slate-900">
+                  Beta Enerji Halka Arz Güncel Değerlendirme Videosu
+                </h3>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -883,10 +986,13 @@ export default function BetaEnerjiVeTeknolojiASPage() {
             katılım endeksi uygunluğu, sermaye artırımı, ortak satışı, tahmini
             halka arz büyüklüğü, fon kullanım alanları, 2024-2025-2026 ilk
             çeyrek finansal verileri, konsorsiyum bilgileri ve taahhüt detayları
-            bir arada sunulmuştur. Onaylı izahname ile gelen bilgilere göre
-            talep toplama 17-18-19 Haziran 2026 tarihlerinde yapılacaktır.
-            Sayfadaki yorum bölümleri; halka arz yapısı, fon kullanım planı ve
-            finansal görünümün yatırımcı açısından nasıl okunabileceğine dair
+            bir arada sunulmuştur. Revize edilen takvime göre talep toplama
+            18-19 Haziran 2026 Perşembe ve Cuma günleri yapılacaktır.
+            Sayfada ayrıca kuruluştan yapılan açıklamanın özeti, halka arzdan
+            elde edilecek kaynağın kullanım planı, yeni kampüs yatırımı, ihracat,
+            Ar-Ge, dijitalleşme ve sürdürülebilirlik hedefleriyle birlikte
+            aktarılmıştır. Yorum bölümleri; halka arz yapısı, fon kullanım planı
+            ve finansal görünümün yatırımcı açısından nasıl okunabileceğine dair
             genel değerlendirme amacı taşır.
           </p>
         </section>
