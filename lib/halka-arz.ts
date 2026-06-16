@@ -57,6 +57,21 @@ export type OneCikan = {
   desc: string;
 };
 
+// Tahsisat satırı; ya hazır metin ("Yurt İçi Bireysel: %70") ya da yapılandırılmış
+// bir kayıt olabilir. İkisi de desteklenir.
+export type TahsisatGirdi =
+  | string
+  | { grup: string; oran?: string; lot?: string };
+
+export function tahsisatMetni(t: TahsisatGirdi): string {
+  if (typeof t === "string") return t;
+  if (t && typeof t === "object") {
+    const detay = [t.oran, t.lot].filter(Boolean).join(" · ");
+    return detay ? `${t.grup}: ${detay}` : t.grup;
+  }
+  return String(t);
+}
+
 export type TaahhutOzeti = {
   fiyatIstikrari?: string;
   satmamaTaahhudu?: string;
@@ -85,7 +100,7 @@ export type HalkaArzVeri = {
 
   oneCikanlar: OneCikan[];
 
-  tahsisat: string[];
+  tahsisat: TahsisatGirdi[];
   // Tahsisat altında gösterilen sabit notlar (örn. "Bireysele Eşit Dağıtım.").
   tahsisatNotlari?: string[];
 
@@ -113,7 +128,8 @@ const BEKLEYEN_KALIPLAR = [
   "tamamlanacaktır",
 ];
 
-export function bekleyenDeger(value?: string): boolean {
+export function bekleyenDeger(value?: unknown): boolean {
+  if (typeof value !== "string") return value == null;
   if (!value) return true;
   const v = value.trim().toLocaleLowerCase("tr");
   if (v === "" || v === "-") return true;

@@ -5,6 +5,7 @@ import {
   bekleyenDeger,
   halkaArzGetir,
   statikSlugVar,
+  tahsisatMetni,
   tasinmamisSluglar,
   type HalkaArzVeri,
 } from "@/lib/halka-arz";
@@ -69,9 +70,9 @@ export default async function HalkaArzDinamikPage({
   const gorunenSummary = tumOzet.filter((i) => !bekleyenDeger(i.value));
   const summaryGizliVar = gorunenSummary.length !== tumOzet.length;
 
-  const gorunenTahsisat = veri.tahsisat.filter(
-    (t) => !bekleyenDeger(t.split(":")[1] ?? t)
-  );
+  const gorunenTahsisat = veri.tahsisat
+    .map(tahsisatMetni)
+    .filter((t) => !bekleyenDeger(t));
 
   const donemler =
     veri.finansalDonemler && veri.finansalDonemler.length > 0
