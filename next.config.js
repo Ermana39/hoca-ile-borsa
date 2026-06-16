@@ -60,6 +60,10 @@ const nextConfig = {
     "/hisseler": [
       "./data/hisseler/**/*.json",
     ],
+    // Dinamik halka arz şablonu JSON verilerini okur.
+    "/halka-arz/taslak-izahnameler/[slug]": [
+      "./data/halka-arz/**/*.json",
+    ],
     // Günlük borsa özetleri haber akışına da katıldığından, getAllNews kullanan
     // tüm route'lar bu JSON'lara ihtiyaç duyar.
     "/": ["./data/gunluk-ozet/**/*.json"],
