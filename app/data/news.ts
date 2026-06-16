@@ -21,6 +21,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 992,
+    title: "16 Haziran 2026 Önemli KAP Haberleri",
+    href: "/haber/16-haziran-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "16 Haziran 2026 Önemli KAP Haberleri",
+    publishedAt: "2026-06-16",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["ASELS", "KONTR", "ALARK", "ISGSY", "TRILC", "MARBL"],
+  },
+  {
     id: 991,
     title: "15 Haziran 2026 Pazartesi KAP Bildirimleri Özeti",
     href: "/haber/15-haziran-2026-onemli-kap-haberleri",
