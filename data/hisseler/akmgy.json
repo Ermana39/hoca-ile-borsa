@@ -1,47 +1,33 @@
+```json
 {
   "kod": "AKMGY",
   "sirketAdi": "Akmerkez Gayrimenkul Yatırım Ortaklığı A.Ş.",
   "hakkinda": [
-    "Akmerkez Gayrimenkul Yatırım Ortaklığı A.Ş. (AKMGY), 8 Aralık 1989 tarihinde kurulmuş bir gayrimenkul yatırım ortaklığıdır.",
-    "Şirketin ana faaliyet alanı, İstanbul Etiler'de yer alan Akmerkez kompleksinin yönetimi ve gayrimenkul portföyüne yönelik yatırım faaliyetleridir.",
-    "Borsa İstanbul'da AKMGY koduyla işlem gören şirket, gayrimenkul yatırım ortaklıkları sektöründe yer almaktadır."
+    "Akmerkez Gayrimenkul Yatırım Ortaklığı A.Ş., İstanbul Etiler'de yer alan Akmerkez karma kullanım kompleksinin gayrimenkul yatırım ortaklığı yapısı altında yönetilmesi, işletilmesi ve bu varlıktan gelir elde edilmesi amacıyla faaliyet gösteren bir şirkettir.",
+    "Şirketin ana faaliyet alanı; alışveriş merkezi, ofis ve rezidans fonksiyonlarını bir arada barındıran Akmerkez kompleksinden kira, işletme ve gayrimenkul yatırım ortaklığı faaliyetleri kapsamında gelir yaratmaya dayanır.",
+    "Akmerkez GYO, 8 Aralık 1989 tarihinde kurulmuş olup Borsa İstanbul'da AKMGY koduyla işlem görmektedir. Şirket, gayrimenkul yatırım ortaklığı statüsü nedeniyle portföy yönetimi, kira gelirleri, varlık değeri ve gayrimenkul piyasası dinamikleriyle birlikte değerlendirilir."
   ],
   "ortaklikYapisi": {
     "ortaklar": [
-      {
-        "ad": "Klepiere",
-        "oran": 44.85
-      },
-      {
-        "ad": "Diğer",
-        "oran": 26.15
-      },
-      {
-        "ad": "Akkök Holding A.Ş.",
-        "oran": 11.73
-      },
-      {
-        "ad": "Tekfen Holding A.Ş.",
-        "oran": 10.47
-      },
-      {
-        "ad": "Davit Braunştayn",
-        "oran": 6.8
-      }
+      { "ad": "KLEPIERRE", "oran": 44.85 },
+      { "ad": "DİĞER", "oran": 26.15 },
+      { "ad": "AKKÖK HOLDİNG A.Ş.", "oran": 11.73 },
+      { "ad": "TEKFEN HOLDİNG A.Ş.", "oran": 10.47 },
+      { "ad": "DAVİT BRAUNŞTAYN", "oran": 6.8 }
     ],
     "not": "Ortaklık yapısı verileri şirket künyesindeki oran bilgilerine göre hazırlanmıştır."
   },
   "istirakler": [],
   "kurumsalBilgiler": {
-    "merkez": "Kültür Mahallesi Nisbetiye Caddesi Akmerkez No:56/1 Beşiktaş / İstanbul",
+    "merkez": "Kültür Mah. Nisbetiye Cad. Akmerkez No: 56/1 Beşiktaş/İstanbul",
     "eposta": "gyo@akmerkez.com.tr",
-    "web": "http://www.akmgyo.com",
+    "web": "http://www.akmgyo.com/",
     "telefon": "0 212 282 01 70",
     "fax": "0 212 282 01 15",
     "sirketSuresi": "Süresiz",
     "bagimsizDenetimKurulusu": "PwC Bağımsız Denetim ve Serbest Muhasebeci Mali Müşavirlik A.Ş.",
     "odenmisSermaye": "37.264.000 TL",
-    "faaliyetAlani": "Gayrimenkul yatırım ortaklığı faaliyetleri, gayrimenkul portföy yönetimi ve Akmerkez kompleksinin işletilmesi",
+    "faaliyetAlani": "Sermaye Piyasası Kurulu'nun gayrimenkul yatırım ortaklıklarına ilişkin düzenlemelerine uygun olarak gayrimenkullere, gayrimenkule dayalı sermaye piyasası araçlarına, gayrimenkul projelerine ve gayrimenkule dayalı haklara yatırım yapmak.",
     "sektorler": [
       "MALİ KURULUŞLAR",
       "GAYRİMENKUL YATIRIM ORTAKLIKLARI"
@@ -54,9 +40,9 @@
       "TANER YALÇIN",
       "ALİZE DİNÇKÖK",
       "İHSAN GÖKŞİN DURUSOY",
-      "DAVİT BRAUNSTAYN",
+      "DAVİT BRAUNŞTAYN",
       "CYRILLE FRANCOIS PAUL DESLANDES",
-      "NAHİT AKARKARAŞU",
+      "NAHİT AKARKARASU",
       "ÖZGE BULUT MARAŞLI",
       "ÖMER EGESEL",
       "METİN BONFİL",
@@ -66,11 +52,15 @@
   "borsaBilgileri": {
     "bistKodu": "AKMGY",
     "endeksler": [
-      "BIST TEMETTÜ",
-      "BIST KURUMSAL YÖNETİM",
-      "BIST TÜM",
       "BIST TÜM-100",
-      "BIST GAYRİMENKUL Y.O."
+      "BIST KURUMSAL YÖNETİM",
+      "BIST GAYRİMENKUL YAT. ORT.",
+      "BIST TEMETTÜ 10 YIL",
+      "BIST MALİ",
+      "BIST TÜM",
+      "BIST TEMETTÜ",
+      "BIST TEMETTÜ 5 YIL",
+      "BIST ANA"
     ],
     "katilimEndeksiUygun": false,
     "halkaArzTarihi": ""
@@ -90,103 +80,105 @@
     }
   ],
   "ozgunAnaliz": {
-    "isModeli": "AKMGY'yi değerlendirirken şirketi geniş arazi portföyüne sahip klasik bir GYO gibi değil, değerinin büyük kısmı Akmerkez kompleksi etrafında şekillenen daha odaklı bir gayrimenkul yatırım ortaklığı olarak okumak gerekir. Şirketin gelir ve değer yapısı; AVM, ofis ve ticari alanların kira performansı, doluluk oranı, lokasyon gücü ve portföy değerlemeleri üzerinden oluşur. Bu nedenle AKMGY analizinde en kritik nokta, Etiler gibi yüksek gelir grubuna hitap eden merkezi bir lokasyonun uzun vadeli kira üretme kapasitesidir.",
+    "isModeli": "Akmerkez GYO'nun iş modeli, tek ve güçlü bir gayrimenkul varlığının kira, işletme ve değer artışı potansiyeli üzerinden gelir üretmesine dayanır. Şirketin odağında alışveriş merkezi, ofis ve rezidans fonksiyonlarını bir araya getiren karma kullanım konsepti bulunur. Bu nedenle AKMGY değerlendirilirken yalnızca klasik kira geliri değil; lokasyon kalitesi, ziyaretçi trafiği, kiracı karması, ticari gayrimenkul talebi ve gayrimenkul değerleme dinamikleri birlikte izlenmelidir.",
     "gelirKaynaklari": [
-      "Akmerkez kompleksi içindeki ticari alanlardan elde edilen kira gelirleri",
-      "AVM, ofis ve bağlı ticari alan kullanım gelirleri",
-      "Gayrimenkul portföy değer artışları",
-      "Kiracı karması ve doluluk oranına bağlı düzenli gelir akışı",
-      "Gayrimenkul yatırım ortaklığı faaliyetlerinden doğan portföy yönetimi gelirleri"
+      "Alışveriş merkezi kira gelirleri",
+      "Ofis alanlarından elde edilen gelirler",
+      "Rezidans ve karma kullanım alanlarına bağlı gayrimenkul gelirleri",
+      "Gayrimenkul portföyünün işletilmesinden doğan gelirler",
+      "Portföy varlıklarının değer yönetimine bağlı gelir potansiyeli"
     ],
     "gucluYanlar": [
-      "İstanbul Etiler gibi yüksek değerli bir bölgede ana varlığa sahip olması",
-      "Akmerkez markasının uzun yıllardır bilinen prestijli bir ticari kompleks olması",
-      "Kira geliri odaklı daha sade ve izlenebilir bir iş modeline sahip olması",
-      "BIST Temettü ve BIST Kurumsal Yönetim endekslerinde yer alması",
-      "Ortaklık yapısında uluslararası gayrimenkul tecrübesi bulunan Klepiere'nin yüksek paya sahip olması"
+      "İstanbul'un güçlü ticari bölgelerinden birinde konumlanan bilinirliği yüksek bir gayrimenkul varlığına sahip olması",
+      "Alışveriş merkezi, ofis ve rezidans kullanımlarını aynı yapı içinde birleştiren karma kullanım modeli",
+      "Kira gelirine dayalı, anlaşılması kolay ve varlık odaklı iş modeli",
+      "Klepierre, Akkök Holding ve Tekfen Holding gibi kurumsal ortakların ortaklık yapısında yer alması",
+      "Gayrimenkul yatırım ortaklığı statüsü sayesinde portföy ve faaliyet yapısının düzenleyici çerçeve içinde izlenebilmesi",
+      "BIST Kurumsal Yönetim ve temettü endekslerinde yer alması"
     ],
     "riskler": [
-      "Portföyün büyük ölçüde Akmerkez kompleksine bağlı olması varlık yoğunlaşması riski yaratır",
-      "AVM ziyaretçi trafiğinde düşüş kira performansını ve kiracı talebini etkileyebilir",
-      "Perakende sektöründeki yavaşlama mağaza doluluk oranı üzerinde baskı oluşturabilir",
-      "Gayrimenkul değerleme değişimleri dönemsel finansal sonuçlarda oynaklık yaratabilir",
-      "Faiz oranlarının yüksek seyretmesi GYO hisseleri ve ticari gayrimenkul değerlemeleri üzerinde baskı oluşturabilir",
-      "Tek lokasyon ağırlıklı yapı, coğrafi çeşitliliği sınırlı hale getirir"
+      "Ticari gayrimenkul piyasasında talep koşullarının zayıflaması kira gelirleri üzerinde baskı oluşturabilir",
+      "Perakende sektöründeki dönüşüm, alışveriş merkezi ziyaretçi trafiğini ve kiracı performansını etkileyebilir",
+      "Şirketin gelir yapısının ana gayrimenkul varlığına yoğunlaşması portföy çeşitliliğini sınırlayabilir",
+      "Kiracı karması, doluluk seviyesi ve kira sözleşmelerinin yenilenme koşulları faaliyet performansı açısından kritik önemdedir",
+      "Gayrimenkul değerlemelerinde oluşabilecek dalgalanmalar özkaynak ve piyasa algısı üzerinde etkili olabilir",
+      "Bakım, yenileme ve modernizasyon ihtiyaçları nakit akışı üzerinde dönemsel baskı yaratabilir"
     ],
-    "sektorelKonum": "Akmerkez GYO, Borsa İstanbul'daki gayrimenkul yatırım ortaklıkları arasında büyük ölçekli konut geliştiricilerinden farklı bir yerde durur. EKGYO veya KLGYO gibi proje çeşitliliği yüksek şirketler daha çok yeni proje ve satış performansıyla izlenirken, AKMGY tarafında ana gösterge kira gelirinin sürekliliği ve mevcut gayrimenkulün değeridir. Bu nedenle AKMGY, portföy büyütme hikayesinden çok varlık kalitesi ve lokasyon gücüyle öne çıkan bir GYO olarak değerlendirilmelidir.",
-    "ortaklikYorumu": "AKMGY ortaklık yapısında Klepiere'nin yüzde 44,85 payla en büyük ortak konumunda bulunması, şirketin uluslararası gayrimenkul yatırımcısı perspektifine yakın bir yapıda olduğunu gösterir. Akkök Holding ve Tekfen Holding'in payları, yerli kurumsal ortaklık tarafını güçlendirirken, Davit Braunştayn'ın yüzde 6,8 payı da kurucu ortak yapısının izlerini taşır. Diğer ortakların yüzde 26,15 seviyesindeki payı, borsadaki dolaşımın sınırlı ama izlenebilir düzeyde olduğunu gösterir.",
-    "temettuYorumu": "AKMGY'nin sermaye geçmişinde 2011 ve 2016 yıllarında gerçekleşen hisse senedi bölünmeleri bulunuyor. GYO şirketlerinde temettü potansiyeli çoğu zaman kira gelirlerinin düzenliliği, portföy değer artışı, bakım ve yenileme harcamaları ile nakit dağıtım politikasına bağlıdır. AKMGY özelinde temettü değerlendirmesi yapılırken Akmerkez'in doluluk oranı, kira tahsilatı ve ticari alanların verimliliği özellikle izlenmelidir.",
-    "yatirimciNotu": "AKMGY hissesi takip edilirken en önemli başlıklar portföy yoğunlaşması, Akmerkez'in ziyaretçi trafiği, kira sözleşmelerinin yapısı, doluluk oranı, gayrimenkul değerleme raporları ve temettü ödeme kabiliyetidir. Şirketin sade yapısı analiz kolaylığı sağlar; ancak aynı zamanda ana varlığa yüksek bağımlılık nedeniyle yatırımcıların Akmerkez özelindeki gelişmeleri yakından takip etmesi gerekir."
+    "sektorelKonum": "Akmerkez GYO, Borsa İstanbul'daki gayrimenkul yatırım ortaklıkları içinde tekil ve marka değeri yüksek bir ticari gayrimenkul varlığına odaklanan yapısıyla ayrışır. Şirket, geniş ölçekli konut geliştirme veya yaygın portföy büyümesi yerine, merkezi konumlu bir karma kullanım kompleksinin işletilmesi ve değerinin korunması üzerinden değerlendirilir. Bu özellik, AKMGY'yi kira geliri, lokasyon kalitesi ve varlık değeri odaklı analiz edilen bir GYO haline getirir.",
+    "ortaklikYorumu": "AKMGY ortaklık yapısında uluslararası gayrimenkul tecrübesine sahip Klepierre ile Türkiye'nin köklü gruplarından Akkök Holding ve Tekfen Holding'in yer alması dikkat çeker. Bu yapı, şirketin kurumsal ortak profili açısından güçlü bir zemine sahip olduğunu gösterirken, halka açık payın varlığı yatırımcı tabanı açısından işlem alanı sağlar.",
+    "temettuYorumu": "Akmerkez GYO'nun temettü yaklaşımı değerlendirilirken kira gelirlerinin sürekliliği, nakit akışı, gayrimenkul bakım ve yenileme ihtiyaçları, portföy değerleme etkileri ve yönetim kurulunun kâr dağıtım politikası birlikte dikkate alınmalıdır. GYO yapısında temettü potansiyeli yalnızca muhasebe kârına değil, faaliyetlerden yaratılan nakdin kalitesine de bağlıdır.",
+    "yatirimciNotu": "AKMGY yatırımcısı için temel takip başlıkları; Akmerkez kompleksinin doluluk durumu, kiracı karması, kira sözleşmelerinin yapısı, ziyaretçi trafiği, ticari gayrimenkul piyasasındaki eğilimler, portföy değerleme raporları ve nakit akışının sürdürülebilirliğidir. Tek bir güçlü varlığa odaklanan yapı avantaj sağlayabildiği gibi, portföy çeşitliliği açısından dikkatli analiz gerektirir."
   },
   "seoSorular": [
     {
       "soru": "AKMGY ne iş yapar?",
-      "cevap": "AKMGY koduyla işlem gören Akmerkez Gayrimenkul Yatırım Ortaklığı, İstanbul Etiler'deki Akmerkez kompleksi başta olmak üzere gayrimenkul portföyü yönetimi ve kira geliri odaklı GYO faaliyetleri yürütmektedir."
+      "cevap": "AKMGY, Akmerkez Gayrimenkul Yatırım Ortaklığı A.Ş.'nin Borsa İstanbul kodudur. Şirket, İstanbul Etiler'de yer alan Akmerkez karma kullanım kompleksinin gayrimenkul yatırım ortaklığı yapısı içinde işletilmesi ve bu varlıktan gelir elde edilmesi üzerine faaliyet gösterir."
     },
     {
-      "soru": "Akmerkez GYO'nun ana varlığı nedir?",
-      "cevap": "Akmerkez GYO'nun ana varlığı İstanbul Etiler'de yer alan Akmerkez kompleksidir. Şirketin iş modeli büyük ölçüde bu varlığın kira, doluluk ve değerleme performansına bağlıdır."
+      "soru": "Akmerkez GYO gelirini nasıl elde eder?",
+      "cevap": "Şirketin gelir modeli ağırlıklı olarak alışveriş merkezi, ofis ve rezidans fonksiyonlarını barındıran Akmerkez kompleksinden sağlanan kira ve işletme gelirlerine dayanır."
     },
     {
-      "soru": "AKMGY ortaklık yapısında kimler var?",
-      "cevap": "AKMGY ortaklık yapısında Klepiere yüzde 44,85, Akkök Holding yüzde 11,73, Tekfen Holding yüzde 10,47, Davit Braunştayn yüzde 6,8 ve diğer ortaklar yüzde 26,15 paya sahiptir."
+      "soru": "AKMGY hangi sektörde yer alır?",
+      "cevap": "AKMGY, Borsa İstanbul'da mali kuruluşlar ana grubu altında gayrimenkul yatırım ortaklıkları sektöründe yer alır."
     },
     {
-      "soru": "AKMGY hangi sektörde faaliyet gösteriyor?",
-      "cevap": "AKMGY, mali kuruluşlar ana sektörü altında gayrimenkul yatırım ortaklıkları grubunda faaliyet göstermektedir."
+      "soru": "Akmerkez projesi AKMGY için neden önemlidir?",
+      "cevap": "Akmerkez kompleksi şirketin ana faaliyet varlığı olduğu için kira geliri, marka değeri, lokasyon avantajı ve gayrimenkul değerleme süreci açısından AKMGY analizinin merkezinde yer alır."
     },
     {
-      "soru": "AKMGY hangi pazarda işlem görüyor?",
-      "cevap": "AKMGY, Borsa İstanbul'da Ana Pazar'da işlem görmektedir."
+      "soru": "AKMGY'nin ortaklık yapısında kimler var?",
+      "cevap": "AKMGY ortaklık yapısında Klepierre, Akkök Holding A.Ş., Tekfen Holding A.Ş., Davit Braunştayn ve diğer ortaklar yer almaktadır."
     },
     {
-      "soru": "AKMGY katılım endeksine uygun mu?",
-      "cevap": "Mevcut künye bilgilerine göre AKMGY katılım endeksi uygunluğu için uygun olarak işaretlenmemiştir."
+      "soru": "AKMGY yatırımcısı hangi başlıkları takip etmeli?",
+      "cevap": "AKMGY yatırımcısı doluluk oranı, kiracı karması, kira sözleşmeleri, ticari gayrimenkul talebi, perakende sektöründeki eğilimler, portföy değerlemeleri ve nakit akışı gibi başlıkları birlikte takip etmelidir."
     },
     {
-      "soru": "AKMGY için en önemli risk nedir?",
-      "cevap": "AKMGY için en önemli risklerden biri portföyün büyük ölçüde Akmerkez kompleksine bağlı olmasıdır. Bu nedenle AVM trafiği, kiracı doluluğu ve ticari gayrimenkul değerlemeleri yakından izlenmelidir."
+      "soru": "AKMGY'nin GYO statüsü ne anlama gelir?",
+      "cevap": "GYO statüsü, şirketin gayrimenkul portföyü ve gayrimenkule dayalı yatırımlar üzerinden faaliyet göstermesini, Sermaye Piyasası Kurulu düzenlemelerine tabi olmasını ve yatırımcılar açısından portföy odaklı izlenmesini ifade eder."
     },
     {
-      "soru": "Akmerkez GYO temettü açısından nasıl değerlendirilir?",
-      "cevap": "Akmerkez GYO için temettü potansiyeli kira gelirlerinin düzenliliği, doluluk oranı, portföy değerlemeleri, bakım harcamaları ve şirketin nakit dağıtım politikasına bağlıdır."
+      "soru": "AKMGY hangi şirketlerle karşılaştırılabilir?",
+      "cevap": "AKMGY; gayrimenkul yatırım ortaklığı yapısı, ticari gayrimenkul portföyü ve kira geliri odaklı iş modeli nedeniyle ISGYO, TRGYO ve ALGYO gibi şirketlerle farklı açılardan karşılaştırılabilir."
     }
   ],
   "benzerSirketler": [
     {
       "kod": "ISGYO",
       "ad": "İş Gayrimenkul Yatırım Ortaklığı A.Ş.",
-      "aciklama": "Ofis, ticari alan ve karma gayrimenkul portföyüyle AKMGY ile aynı GYO segmentinde izlenebilecek şirketlerden biridir."
+      "aciklama": "Ofis, ticari alan ve karma gayrimenkul portföyü nedeniyle AKMGY ile kira geliri ve portföy yönetimi açısından karşılaştırılabilir."
     },
     {
-      "kod": "KLGYO",
-      "ad": "Kiler Gayrimenkul Yatırım Ortaklığı A.Ş.",
-      "aciklama": "Gayrimenkul geliştirme ve portföy yönetimi tarafında faaliyet gösteren, GYO sektörü içinde karşılaştırma yapılabilecek şirketlerdendir."
+      "kod": "TRGYO",
+      "ad": "Torunlar Gayrimenkul Yatırım Ortaklığı A.Ş.",
+      "aciklama": "Alışveriş merkezi, ofis ve karma kullanım projeleriyle ticari gayrimenkul tarafında AKMGY ile benzer analiz başlıklarına sahiptir."
     },
     {
-      "kod": "DGGYO",
-      "ad": "Doğuş Gayrimenkul Yatırım Ortaklığı A.Ş.",
-      "aciklama": "Ticari gayrimenkul portföyü ve kira geliri odaklı yapısıyla AKMGY'ye benzer şekilde varlık kalitesi üzerinden takip edilir."
+      "kod": "ALGYO",
+      "ad": "Alarko Gayrimenkul Yatırım Ortaklığı A.Ş.",
+      "aciklama": "Gayrimenkul portföyü, kira geliri ve varlık değeri odaklı yapısı nedeniyle AKMGY ile aynı GYO evreninde izlenebilir."
     }
   ],
   "seo": {
-    "title": "AKMGY Hisse Bilgileri: Akmerkez GYO Ortaklık Yapısı, Portföyü ve Şirket Profili",
-    "description": "AKMGY hisse koduyla işlem gören Akmerkez Gayrimenkul Yatırım Ortaklığı A.Ş. hakkında ortaklık yapısı, Akmerkez portföyü, faaliyet alanı, endeks bilgileri ve şirket profili."
+    "title": "AKMGY Hisse Bilgileri: Akmerkez GYO Ortaklık Yapısı, Gayrimenkul Portföyü ve Temel Oranlar",
+    "description": "AKMGY hisse kodlu Akmerkez Gayrimenkul Yatırım Ortaklığı A.Ş. hakkında ortaklık yapısı, Akmerkez kompleksi, GYO faaliyetleri, kira gelirleri, BIST endeksleri, temettü-sermaye geçmişi ve temel oranlar."
   },
-  "yasalUyari": "Bu sayfadaki bilgiler genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir. Fiyat/işlem verisi içermez.",
+  "yasalUyari": "Bu sayfadaki bilgiler genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir. Anlık fiyat/işlem verisi sunmaz; oranlar dönemsel finansal tablolara ve ilgili kapanış verilerine dayanır.",
   "temelOranlar": {
-    "donem": "2026-03",
-    "guncellemeTarihi": "2026-06-15",
+    "donem": "",
+    "guncellemeTarihi": "",
     "sirket": {
-      "fk": 13.94,
-      "pddd": 0.91,
-      "peg": -0.22,
-      "roe": 0.01,
-      "netMarj": 0.08,
-      "pdNetSatis": 7.95,
-      "cariOran": 4.36,
-      "netKarDegisim": -62.75,
-      "netSatisDegisim": 6.56
+      "fk": 0,
+      "pddd": 0,
+      "peg": 0,
+      "roe": 0,
+      "netMarj": 0,
+      "pdNetSatis": 0,
+      "cariOran": 0,
+      "netKarDegisim": 0,
+      "netSatisDegisim": 0
     }
   }
 }
+```
