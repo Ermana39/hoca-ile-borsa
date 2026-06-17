@@ -21,6 +21,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 994,
+    title: "Beta Enerji Halka Arzında Talep Toplama Tarihleri Ertelendi",
+    href: "/haber/beta-enerji-halka-arz-talep-toplama-tarihleri-ertelendi",
+    image: "/beta-erteleme.webp",
+    alt: "Beta Enerji halka arz talep toplama tarihleri ertelendi",
+    publishedAt: "2026-06-17",
+    category: "halka-arz",
+    ilgiliHisseler: ["BETAE"],
+  },
+  {
     id: 993,
     title: "ABD Mahkemesi Halkbank Davasını Düşürdü: 9 Yıllık Süreç Sona Erdi",
     href: "/haber/halkbank_abd_davasi",
