@@ -349,13 +349,7 @@ export default function BetaEnerjiHalkaArzKacLotVerirPage() {
                 gruplarında faaliyet gösteriyor.
               </p>
 
-              <div className="rounded-xl border border-blue-200 bg-blue-50 p-4 text-sm font-medium leading-7 text-blue-900 md:text-base">
-                Google aramalarında öne çıkabilecek ana sorgular: Beta Enerji
-                halka arzı kaç lot verir, Beta Enerji kaç lot düşer, Beta Enerji
-                kişi başı kaç lot, Beta Enerji halka arz kaç TL tutar.
-              </div>
-
-              <HaberIlgiliBolumler
+                            <HaberIlgiliBolumler
                 slug="beta-enerji-halka-arzi-kac-lot-verir"
                 baslik="Beta Enerji Halka Arzı Kaç Lot Verir? Kişi Başı Kaç Lot Düşer?"
               />

@@ -21,6 +21,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 993,
+    title: "ABD Mahkemesi Halkbank Davasını Düşürdü: 9 Yıllık Süreç Sona Erdi",
+    href: "/haber/halkbank_abd_davasi",
+    image: "/halkbank-abd-davasi-dustu-discover.webp",
+    alt: "ABD Mahkemesi Halkbank davasını düşürdü",
+    publishedAt: "2026-06-17",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["HALKB"],
+  },
+  {
     id: 992,
     title: "16 Haziran 2026 Önemli KAP Haberleri",
     href: "/haber/16-haziran-2026-onemli-kap-haberleri",
