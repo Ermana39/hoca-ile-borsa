@@ -11,7 +11,7 @@ import type { CategoryIconName } from "@/components/icons/CategoryIcon";
 const analizKutulari = [
   {
     title: "Günlük Borsa Özeti",
-    href: "/borsa/gunluk-borsa-ozeti-12-haziran-2026",
+    href: "/borsa/gunluk-borsa-ozeti",
     icon: "gunluk-borsa-ozeti" as CategoryIconName,
     description:
       "BIST 100 kapanışı, para girişi, para çıkışı, yükselenler, düşenler ve günün öne çıkan verileri tek sayfada.",
