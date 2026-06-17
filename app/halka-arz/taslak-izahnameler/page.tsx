@@ -200,6 +200,8 @@ Sector Tarım Kimya Gıda Pazarlama San. ve Tic. A.Ş.
 
 Doğa Sigorta A.Ş.
 
+Fiba Faktoring A.Ş.
+
 Akademi Çevre Entegre Atık Yönetimi Endüstri A.Ş.
 
 Konelsis Enerji Elektronik Kontrol Sistemleri A.Ş.
@@ -427,8 +429,8 @@ function slugify(text: string) {
 
 function getSirketKlasorAdi(label: string) {
   const ozelKlasorler: Record<string, string> = {
-    "Çitlekçi Mağazacılık Gıda A.Ş.": "cilekci",
-    "Kapeks Kimya Sanayi A.Ş.": "kepeks",
+    "Çitlekçi Mağazacılık Gıda A.Ş.": "citlekci-magazacilik",
+    "Kapeks Kimya Sanayi A.Ş.": "kapeks-kimya",
   };
 
   if (ozelKlasorler[label]) {

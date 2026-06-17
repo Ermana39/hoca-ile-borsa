@@ -123,11 +123,31 @@ const nextConfig = {
     "/haberler/kategori/[kategori]/sayfa/[sayfa]": [
       "./data/gunluk-ozet/**/*.json",
     ],
-    "/sitemap.xml": ["./data/gunluk-ozet/**/*.json"],
+    "/sitemap.xml": [
+      "./data/gunluk-ozet/**/*.json",
+      "./data/halka-arz/**/*.json",
+    ],
   },
 
   async redirects() {
     return [
+      // Halka arz slug'ları daha açıklayıcı/SEO-dostu adlara taşındı; eski
+      // kısa URL'ler yeni slug'lara kalıcı olarak yönlendirilir.
+      {
+        source: "/halka-arz/taslak-izahnameler/kepeks",
+        destination: "/halka-arz/taslak-izahnameler/kapeks-kimya",
+        permanent: true,
+      },
+      {
+        source: "/halka-arz/taslak-izahnameler/cilekci",
+        destination: "/halka-arz/taslak-izahnameler/citlekci-magazacilik",
+        permanent: true,
+      },
+      {
+        source: "/halka-arz/taslak-izahnameler/fiba",
+        destination: "/halka-arz/taslak-izahnameler/fiba-faktoring",
+        permanent: true,
+      },
       // Eski düz (tire'li) günlük özet URL'i → yeni kalıcı slug URL'i.
       {
         source: "/borsa/gunluk-borsa-ozeti-12-haziran-2026",
@@ -185,19 +205,7 @@ const nextConfig = {
       },
     ];
 
-    const noindexHeaders = [
-      {
-        source: "/halka-arz/taslak-izahnameler/:slug",
-        headers: [
-          {
-            key: "X-Robots-Tag",
-            value: "noindex, follow",
-          },
-        ],
-      },
-    ];
-
-    return [...imageHeaders, ...globalSecurityHeaders, ...noindexHeaders];
+    return [...imageHeaders, ...globalSecurityHeaders];
   },
 };
 

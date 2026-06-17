@@ -9,6 +9,7 @@ import {
 import { HABER_KATEGORILERI } from "@/lib/haber-kategorileri";
 import { getSitemapHisseSembolleri } from "@/lib/hisseler";
 import { getTumGunlukOzetler } from "@/lib/gunluk-ozet";
+import { tumJsonSluglar } from "@/lib/halka-arz";
 
 const siteUrl = "https://www.hocaileborsa.com";
 
@@ -26,7 +27,6 @@ const updateMap = new Map(
 
 const excludedRoutePatterns = [
   /\[/,
-  /^\/halka-arz\/taslak-izahnameler\/.+/,
   /^\/yonetim(?:\/|$)/,
   /^\/kontrol-paneli-4827(?:\/|$)/,
   /^\/(?:giris|uye|profil|mesajlar|istatistik|guvenlik-kayitlari)(?:\/|$)/,
@@ -117,6 +117,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const haberRoutes = newsItems.map((item) => item.href);
 
+  // JSON'a taşınmış halka arz detay sayfaları (dinamik [slug] şablonuyla
+  // servis edilir; pageUpdates'te yer almadıkları için burada eklenir).
+  const halkaArzRoutes = tumJsonSluglar().map(
+    (slug) => `/halka-arz/taslak-izahnameler/${slug}`
+  );
+
   const gunlukOzetEntries = getTumGunlukOzetler().map((ozet) => ({
     route: `/borsa/gunluk-borsa-ozeti/${ozet.slug}`,
     lastModified: ozet.isoTarih,
@@ -145,6 +151,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticRoutes,
     ...hisseRoutes,
     ...haberRoutes,
+    ...halkaArzRoutes,
     ...arsivSayfaRoutes,
     ...kategoriRoutes,
   ]) {
