@@ -34,7 +34,8 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const rateLimit = getLoginRateLimitStatus(ip);
+    // IP başına günlük en fazla 10 hatalı deneme; sonra 5 dk kilit.
+    const rateLimit = getLoginRateLimitStatus(ip, 10);
 
     if (!rateLimit.allowed) {
       addSecurityLog("admin_login_rate_limit", ip, "Çok fazla deneme");

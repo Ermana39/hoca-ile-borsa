@@ -30,3 +30,13 @@ pnpm-debug.log*
 # system
 .DS_Store
 Thumbs.db
+
+# runtime data (IP / kişisel veri içerir — repoya girmemeli)
+/data/contact-messages.json
+/data/failed-logins.json
+/data/security-log.json
+/data/page-stats.json
+/data/page-stats-history.json
+/data/page-clicks.json
+/data/api-requests.json
+/data/admin-stats.json
