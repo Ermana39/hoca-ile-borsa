@@ -64,13 +64,22 @@ export async function POST(request: NextRequest) {
       );
     }
 
+    const token = makeAdminToken();
+    if (!token) {
+      addSecurityLog("admin_login_misconfig", ip, "Oturum gizli anahtarı eksik");
+      return NextResponse.json(
+        { ok: false, message: "Sunucu yapılandırması eksik." },
+        { status: 500 }
+      );
+    }
+
     clearLoginAttempts(ip);
     addSecurityLog("admin_login_success", ip, "Başarılı giriş");
 
     const response = NextResponse.json({ ok: true });
     const isProduction = process.env.NODE_ENV === "production";
 
-    response.cookies.set("hib_admin_token", makeAdminToken(), {
+    response.cookies.set("hib_admin_token", token, {
       httpOnly: true,
       sameSite: "strict",
       secure: isProduction,

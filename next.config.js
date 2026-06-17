@@ -7,10 +7,57 @@ const stableImageCacheFiles = [
   "/Guclu-trend-ve-momentum-taramasi.png",
 ];
 
+// İçerik Güvenliği Politikası (CSP).
+// Site Google AdSense, Vercel Analytics ve Next.js'in satır içi (inline)
+// bootstrap script'lerini kullanır. Bu ekosistemleri kırmadan; reklamları
+// etkilemeyen yönleri (clickjacking, obje gömme, base-uri, form hedefi)
+// sıkılaştıran pragmatik bir politika uygulanır.
+const adsenseScript = [
+  "https://pagead2.googlesyndication.com",
+  "https://*.googlesyndication.com",
+  "https://*.googleadservices.com",
+  "https://*.google.com",
+  "https://*.adtrafficquality.google",
+];
+
+const adsenseFrame = [
+  "https://googleads.g.doubleclick.net",
+  "https://*.googlesyndication.com",
+  "https://*.doubleclick.net",
+  "https://*.google.com",
+  "https://*.adtrafficquality.google",
+];
+
+const vercelAnalytics = [
+  "https://va.vercel-scripts.com",
+  "https://*.vercel-insights.com",
+];
+
+const contentSecurityPolicy = [
+  "default-src 'self'",
+  // Next.js hydration ve AdSense satır içi/eval gerektirir.
+  `script-src 'self' 'unsafe-inline' 'unsafe-eval' ${adsenseScript.join(" ")} ${vercelAnalytics.join(" ")}`,
+  // Tailwind/Next satır içi stil enjekte eder.
+  "style-src 'self' 'unsafe-inline'",
+  // Reklam görselleri çok sayıda alan adından gelir.
+  "img-src 'self' data: blob: https:",
+  "font-src 'self' data:",
+  `connect-src 'self' ${adsenseScript.join(" ")} ${adsenseFrame.join(" ")} ${vercelAnalytics.join(" ")}`,
+  `frame-src 'self' ${adsenseFrame.join(" ")}`,
+  // Aşağıdakiler reklamları etkilemez, saldırı yüzeyini daraltır.
+  "object-src 'none'",
+  "base-uri 'self'",
+  "form-action 'self'",
+  "frame-ancestors 'self'",
+  "upgrade-insecure-requests",
+].join("; ");
+
 const securityHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
   { key: "X-Frame-Options", value: "SAMEORIGIN" },
-  { key: "X-XSS-Protection", value: "1; mode=block" },
+  // Modern tarayıcılarda devre dışı; CSP'ye güveniyoruz (eski filtre
+  // güvenlik açıklarına yol açabildiği için "0" önerilir).
+  { key: "X-XSS-Protection", value: "0" },
   { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
   {
     key: "Permissions-Policy",
@@ -20,6 +67,7 @@ const securityHeaders = [
     key: "Strict-Transport-Security",
     value: "max-age=63072000; includeSubDomains; preload",
   },
+  { key: "Content-Security-Policy", value: contentSecurityPolicy },
 ];
 
 const haberRedirects = [

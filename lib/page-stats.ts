@@ -477,27 +477,65 @@ export function clearLoginAttempts(key: string) {
   }
 }
 
-export function makeAdminToken() {
-  const secret =
-    process.env.ADMIN_TOKEN_SECRET ||
-    process.env.ADMIN_TOKEN ||
-    process.env.NEXT_PUBLIC_ADMIN_TOKEN ||
-    "hoca-ile-borsa-admin";
+// Admin oturum token'ı, sunucu tarafındaki gizli anahtarla HMAC-SHA256
+// kullanılarak imzalanır. Token "<timestamp>.<imza>" biçimindedir; imza
+// yalnızca gizli anahtarı bilen sunucu tarafından üretilebilir/doğrulanabilir.
+// Gizli anahtar ASLA istemciye gönderilmez (NEXT_PUBLIC_* kullanılmaz).
+const ADMIN_TOKEN_MAX_AGE_MS = 1000 * 60 * 30; // 30 dakika (cookie maxAge ile uyumlu)
 
-  const payload = `${secret}:${Date.now()}:${Math.random()}`;
-  return crypto.createHash("sha256").update(payload).digest("hex");
+function getAdminTokenSecret() {
+  return (
+    process.env.STATS_ADMIN_SECRET ||
+    process.env.ADMIN_TOKEN_SECRET ||
+    ""
+  );
+}
+
+function signAdminPayload(payload: string, secret: string) {
+  return crypto.createHmac("sha256", secret).update(payload).digest("hex");
+}
+
+export function makeAdminToken() {
+  const secret = getAdminTokenSecret();
+  if (!secret) {
+    // Gizli anahtar yoksa geçerli bir token üretme (fail-closed).
+    return "";
+  }
+
+  const issuedAt = String(Date.now());
+  const signature = signAdminPayload(issuedAt, secret);
+  return `${issuedAt}.${signature}`;
 }
 
 export function isValidAdminToken(token?: string | null) {
-  const expected =
-    process.env.ADMIN_TOKEN ||
-    process.env.NEXT_PUBLIC_ADMIN_TOKEN ||
-    "";
+  const secret = getAdminTokenSecret();
+  if (!secret || !token) return false;
 
-  if (!expected) return false;
-  if (!token) return false;
+  const dotIndex = token.indexOf(".");
+  if (dotIndex <= 0) return false;
 
-  return token === expected;
+  const issuedAt = token.slice(0, dotIndex);
+  const signature = token.slice(dotIndex + 1);
+
+  const issuedAtMs = Number(issuedAt);
+  if (!Number.isFinite(issuedAtMs)) return false;
+
+  // Süresi dolmuş token'ları reddet.
+  if (Date.now() - issuedAtMs > ADMIN_TOKEN_MAX_AGE_MS) return false;
+
+  const expected = signAdminPayload(issuedAt, secret);
+
+  // Uzunluklar farklıysa timingSafeEqual hata fırlatır; önce kontrol et.
+  if (signature.length !== expected.length) return false;
+
+  try {
+    return crypto.timingSafeEqual(
+      Buffer.from(signature, "hex"),
+      Buffer.from(expected, "hex")
+    );
+  } catch {
+    return false;
+  }
 }
 
 export function getViews(page: string) {

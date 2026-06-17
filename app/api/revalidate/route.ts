@@ -1,5 +1,14 @@
+import crypto from "crypto";
 import { revalidatePath, revalidateTag } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
+
+// Gizli anahtarları zamanlama saldırılarına karşı sabit sürede karşılaştırır.
+function safeEqual(a: string, b: string) {
+  const bufA = Buffer.from(a);
+  const bufB = Buffer.from(b);
+  if (bufA.length !== bufB.length) return false;
+  return crypto.timingSafeEqual(bufA, bufB);
+}
 
 // Belirli bir veri kategorisini veya tüm siteyi yeniden oluşturur.
 // Kullanım: POST /api/revalidate
@@ -48,9 +57,10 @@ const FAIZ_PATHS = [
 ];
 
 export async function POST(request: NextRequest) {
-  const secret = request.headers.get("x-secret");
+  const secret = request.headers.get("x-secret") || "";
+  const expected = process.env.REVALIDATE_SECRET || "";
 
-  if (secret !== process.env.REVALIDATE_SECRET) {
+  if (!expected || !safeEqual(secret, expected)) {
     return NextResponse.json({ message: "Yetkisiz" }, { status: 401 });
   }
 
