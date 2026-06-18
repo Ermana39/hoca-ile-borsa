@@ -17,8 +17,8 @@ const halkaArzVerileri = [
     katilimciSayisi: "796,542",
     dagitimSekli: "BİREYSEL %40",
     arzFiyati: "45.00",
-    guncelFiyat: "59.05",
-    marj: "31%",
+    guncelFiyat: "60.55",
+    marj: "35%",
     konsorsiyum: "A1 CAPITAL",
   },
   {
@@ -27,7 +27,7 @@ const halkaArzVerileri = [
     katilimciSayisi: "917,413",
     dagitimSekli: "BİREYSELE %63",
     arzFiyati: "21.10",
-    guncelFiyat: "17.07",
+    guncelFiyat: "17.13",
     marj: "-19%",
     konsorsiyum: "VAKIF-INFO",
   },
@@ -37,7 +37,7 @@ const halkaArzVerileri = [
     katilimciSayisi: "965,336",
     dagitimSekli: "BİREYSEL %48",
     arzFiyati: "80.00",
-    guncelFiyat: "177.00",
+    guncelFiyat: "177.20",
     marj: "121%",
     konsorsiyum: "TERA",
   },
@@ -47,8 +47,8 @@ const halkaArzVerileri = [
     katilimciSayisi: "890,173",
     dagitimSekli: "BİREYSELE %40",
     arzFiyati: "12.05",
-    guncelFiyat: "17.05",
-    marj: "41%",
+    guncelFiyat: "17.19",
+    marj: "43%",
     konsorsiyum: "TERA",
   },
   {
@@ -57,8 +57,8 @@ const halkaArzVerileri = [
     katilimciSayisi: "805,312",
     dagitimSekli: "TAMAMEN EŞİT",
     arzFiyati: "11.00",
-    guncelFiyat: "21.34",
-    marj: "94%",
+    guncelFiyat: "19.21",
+    marj: "75%",
     konsorsiyum: "DENİZ",
   },
   {
@@ -77,8 +77,8 @@ const halkaArzVerileri = [
     katilimciSayisi: "1,134,537",
     dagitimSekli: "BİREYSELE %60",
     arzFiyati: "22.00",
-    guncelFiyat: "112.60",
-    marj: "412%",
+    guncelFiyat: "117.80",
+    marj: "435%",
     konsorsiyum: "HALK",
   },
   {
@@ -87,8 +87,8 @@ const halkaArzVerileri = [
     katilimciSayisi: "627,142",
     dagitimSekli: "BİREYSEL %40",
     arzFiyati: "11.20",
-    guncelFiyat: "16.65",
-    marj: "49%",
+    guncelFiyat: "16.83",
+    marj: "50%",
     konsorsiyum: "TERA",
   },
   {
@@ -97,8 +97,8 @@ const halkaArzVerileri = [
     katilimciSayisi: "796,578",
     dagitimSekli: "TAMAMEN EŞİT",
     arzFiyati: "14.70",
-    guncelFiyat: "38.90",
-    marj: "165%",
+    guncelFiyat: "37.76",
+    marj: "157%",
     konsorsiyum: "GLOBAL",
   },
   {
@@ -107,8 +107,8 @@ const halkaArzVerileri = [
     katilimciSayisi: "959,375",
     dagitimSekli: "BİREYSELE %60",
     arzFiyati: "21.50",
-    guncelFiyat: "33.66",
-    marj: "57%",
+    guncelFiyat: "33.44",
+    marj: "56%",
     konsorsiyum: "HALK",
   },
   {
@@ -117,8 +117,8 @@ const halkaArzVerileri = [
     katilimciSayisi: "994,998",
     dagitimSekli: "BİREYSEL %60",
     arzFiyati: "46.00",
-    guncelFiyat: "158.40",
-    marj: "244%",
+    guncelFiyat: "163.50",
+    marj: "255%",
     konsorsiyum: "INFO",
   },
   {
@@ -127,8 +127,8 @@ const halkaArzVerileri = [
     katilimciSayisi: "796,720",
     dagitimSekli: "BİREYSELE %70",
     arzFiyati: "18.00",
-    guncelFiyat: "35.40",
-    marj: "97%",
+    guncelFiyat: "35.28",
+    marj: "96%",
     konsorsiyum: "KUVEYT TÜRK",
   },
   {
@@ -137,8 +137,8 @@ const halkaArzVerileri = [
     katilimciSayisi: "431,380",
     dagitimSekli: "BİREYSEL %50",
     arzFiyati: "9.77",
-    guncelFiyat: "39.50",
-    marj: "304%",
+    guncelFiyat: "39.84",
+    marj: "308%",
     konsorsiyum: "VAKIF",
   },
   {
@@ -147,8 +147,8 @@ const halkaArzVerileri = [
     katilimciSayisi: "688,564",
     dagitimSekli: "BİREYSEL %65",
     arzFiyati: "30.24",
-    guncelFiyat: "42.28",
-    marj: "40%",
+    guncelFiyat: "40.98",
+    marj: "36%",
     konsorsiyum: "İNTEGRAL-ZİRAAT",
   },
   {
@@ -157,8 +157,8 @@ const halkaArzVerileri = [
     katilimciSayisi: "648,003",
     dagitimSekli: "BİREYSEL %45",
     arzFiyati: "7.50",
-    guncelFiyat: "15.39",
-    marj: "105%",
+    guncelFiyat: "15.46",
+    marj: "106%",
     konsorsiyum: "ALNUS",
   },
   {
@@ -167,19 +167,15 @@ const halkaArzVerileri = [
     katilimciSayisi: "508,401",
     dagitimSekli: "BİREYSEL %50",
     arzFiyati: "19.50",
-    guncelFiyat: "28.30",
-    marj: "45%",
+    guncelFiyat: "28.64",
+    marj: "47%",
     konsorsiyum: "A1 CAPITAL-BULLS",
   },
 ];
 
 function marjRengi(marj: string) {
   const sayi = Number(
-    marj
-      .replace("%", "")
-      .replace("+", "")
-      .replace(",", ".")
-      .trim()
+    marj.replace("%", "").replace("+", "").replace(",", ".").trim()
   );
 
   return sayi < 0 ? "bg-red-500" : "bg-green-500";
