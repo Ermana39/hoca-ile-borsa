@@ -2,7 +2,6 @@ import Link from "next/link";
 import rsi70UstuData from "../data/rsi70-ustu.json";
 
 export const metadata = {
-  robots: { index: false, follow: true },
   title: "RSI 70 Üstü Hisseler | Hoca İle Borsa",
   description:
     "RSI değeri 70 seviyesinin üzerinde olan Borsa İstanbul hisselerini inceleyin.",

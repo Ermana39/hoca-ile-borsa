@@ -2,7 +2,6 @@ import Link from "next/link";
 import gucluTrendMomentumData from "../data/guclu-trend-momentum.json";
 
 export const metadata = {
-  robots: { index: false, follow: true },
   title: "Güçlü Trend ve Momentum Taraması | Hoca İle Borsa",
   description:
     "Hareketli ortalama dizilimi, StochRSI ve MACD göstergelerine göre güçlü yükseliş trendi ve pozitif momentum gösteren Borsa İstanbul hisselerini inceleyin.",

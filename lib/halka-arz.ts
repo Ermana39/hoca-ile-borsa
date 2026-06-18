@@ -177,7 +177,12 @@ export function halkaArzGetir(slug: string): HalkaArzVeri | null {
   const tamYol = path.join(HALKA_ARZ_DIZINI, `${slug}.json`);
   try {
     const icerik = fs.readFileSync(tamYol, "utf-8");
-    return JSON.parse(icerik) as HalkaArzVeri;
+    const veri = JSON.parse(icerik) as HalkaArzVeri;
+    // Geçerli JSON olsa bile beklenen şemaya (özellikle zorunlu `ozet` objesi)
+    // uymayan kayıtları geçersiz say; aksi halde ozetSatirlari gibi yerlerde
+    // undefined erişimi tüm build'i düşürür. (Eksik/eski şemalı dosyalar atlanır.)
+    if (!veri || typeof veri !== "object" || !veri.ozet) return null;
+    return veri;
   } catch {
     return null;
   }

@@ -1,14 +1,8 @@
 import fs from "fs";
 import path from "path";
 import Link from "next/link";
+import type { Metadata } from "next";
 import * as XLSX from "xlsx";
-
-export const metadata = {
-  title: "Gösterge Taramaları | Borsa Teknik Analiz Tarama Sonuçları",
-  description:
-    "MACD al-sat sinyalleri, hareketli ortalama trend taramaları ve teknik gösterge sonuçlarıyla Borsa İstanbul hisselerini filtreleyin.",
-  robots: { index: true, follow: true },
-};
 
 export const revalidate = false;
 
@@ -134,6 +128,58 @@ const seoIcerikleri: Record<
   },
 };
 
+const taramaMetadatalari: Record<
+  string,
+  { title: string; description: string }
+> = {
+  "macd-al": {
+    title: "MACD Al Veren Hisseler | Hoca İle Borsa",
+    description:
+      "MACD göstergesine göre al sinyali üreten Borsa İstanbul hisselerini ve taramanın nasıl yorumlanabileceğini inceleyin.",
+  },
+  "macd-sat": {
+    title: "MACD Sat Veren Hisseler | Hoca İle Borsa",
+    description:
+      "MACD göstergesine göre sat sinyali üreten Borsa İstanbul hisselerini ve tarama sonuçlarının nasıl kullanılabileceğini inceleyin.",
+  },
+  "yukselis-trendinde-olanlar": {
+    title: "Yükseliş Trendinde Olan Hisseler | Hoca İle Borsa",
+    description:
+      "Hareketli ortalamaların üzerinde işlem gören yükseliş trendindeki Borsa İstanbul hisselerini ve tarama mantığını inceleyin.",
+  },
+  "dusus-trendinde-olanlar": {
+    title: "Düşüş Trendinde Olan Hisseler | Hoca İle Borsa",
+    description:
+      "Hareketli ortalamaların altında işlem gören düşüş trendindeki Borsa İstanbul hisselerini ve dikkat edilmesi gerekenleri inceleyin.",
+  },
+};
+
+type PageProps = {
+  params: Promise<{ slug: string }>;
+};
+
+export async function generateMetadata({
+  params,
+}: PageProps): Promise<Metadata> {
+  const { slug } = await params;
+  const metadata = taramaMetadatalari[slug];
+
+  if (!metadata) {
+    return {
+      title: "Gösterge Taraması Bulunamadı | Hoca İle Borsa",
+      robots: { index: false, follow: true },
+    };
+  }
+
+  return {
+    ...metadata,
+    robots: { index: true, follow: true },
+    alternates: {
+      canonical: `https://www.hocaileborsa.com/borsa/gosterge-taramalari/${slug}`,
+    },
+  };
+}
+
 type ExcelRow = Record<string, string | number | null | undefined>;
 
 function getExcelData(fileName: string) {
@@ -180,9 +226,15 @@ function TaramaSeoAciklama({ slug }: { slug: string }) {
   if (!seo) return null;
 
   return (
-    <section className="mt-12 space-y-8">
+    <section className="mt-12 space-y-8" aria-labelledby="tarama-seo-baslik">
       <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-6 md:p-8">
-        <h2 className="mb-4 text-xl font-bold text-zinc-900 md:text-2xl">
+        <p className="mb-2 text-sm font-semibold uppercase tracking-wide text-blue-600">
+          Taramanın ne olduğu
+        </p>
+        <h2
+          id="tarama-seo-baslik"
+          className="mb-4 text-xl font-bold text-zinc-900 md:text-2xl"
+        >
           {seo.baslik}
         </h2>
         <p className="text-zinc-700 leading-relaxed">{seo.giris}</p>
@@ -190,7 +242,7 @@ function TaramaSeoAciklama({ slug }: { slug: string }) {
 
       <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-6 md:p-8">
         <h2 className="mb-4 text-xl font-bold text-zinc-900 md:text-2xl">
-          Bu Tarama Nasıl Oluşturulur?
+          Bu Taramanın Nasıl Oluşturulduğu
         </h2>
         <ul className="space-y-3 text-zinc-700">
           {seo.nasilOlusturulur.map((madde) => (
@@ -204,7 +256,7 @@ function TaramaSeoAciklama({ slug }: { slug: string }) {
 
       <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-6 md:p-8">
         <h2 className="mb-4 text-xl font-bold text-zinc-900 md:text-2xl">
-          Tarama Sonuçları Nasıl Kullanılabilir?
+          Tarama Sonuçlarının Nasıl Kullanılabileceği
         </h2>
         <ul className="space-y-3 text-zinc-700">
           {seo.nasilKullanilir.map((madde) => (
@@ -228,6 +280,17 @@ function TaramaSeoAciklama({ slug }: { slug: string }) {
             </li>
           ))}
         </ul>
+      </div>
+
+      <div className="rounded-2xl border border-red-200 bg-red-50 p-6 md:p-8">
+        <h2 className="mb-4 text-xl font-bold text-red-950 md:text-2xl">
+          Yatırım Tavsiyesi Değildir
+        </h2>
+        <p className="leading-relaxed text-red-950">
+          Bu sayfadaki tarama sonuçları ve açıklamalar yalnızca bilgilendirme
+          amacıyla hazırlanmıştır. Buradaki veriler herhangi bir hisse için al,
+          sat veya tut tavsiyesi olarak değerlendirilmemelidir.
+        </p>
       </div>
     </section>
   );
@@ -346,9 +409,7 @@ function TaramaExcelTablosu({
 
 export default async function GostergeTaramaDetayPage({
   params,
-}: {
-  params: Promise<{ slug: string }>;
-}) {
+}: PageProps) {
   const { slug } = await params;
 
   if (slug === "macd-al") {

@@ -4,7 +4,7 @@ import Link from "next/link";
 export const metadata: Metadata = {
   title: "2026 Halka Arz Tavan Serisi Takibi | Hoca İle Borsa",
   description:
-    "2026 yılında halka arz olan şirketlerin işlem tarihi, katılımcı sayısı, dağıtım şekli, arz fiyatı, güncel fiyatı, marjı ve konsorsiyum bilgileri.",
+    "2026 yılında halka arz olan şirketlerin işlem tarihi, katılımcı sayısı, dağıtım şekli, arz fiyatı, gün sonu kapanış fiyatı, marjı ve konsorsiyum bilgileri.",
   alternates: {
     canonical: "https://www.hocaileborsa.com/halka-arz/tavan-serisi",
   },
@@ -214,9 +214,15 @@ export default function HalkaArzTavanSerisiPage() {
           </h1>
           <p className="mt-3 max-w-4xl text-sm leading-7 text-slate-600">
             2026 yılında halka arz olan şirketlerin işlem tarihi, katılımcı sayısı,
-            dağıtım şekli, arz fiyatı, güncel fiyatı, halka arzdan bugüne marjı ve
+            dağıtım şekli, arz fiyatı, gün sonu kapanış fiyatı, halka arzdan bugüne marjı ve
             konsorsiyum bilgileri aşağıdaki tabloda yer almaktadır.
           </p>
+
+          <div className="mt-5 rounded-2xl border border-blue-200 bg-blue-50 p-4 text-sm font-medium leading-7 text-blue-900">
+            Bu sayfadaki kapanış fiyatları ve marj oranları gün içerisinde anlık olarak
+            güncellenmez. Veriler, Borsa İstanbul seans kapanışı sonrasında gün sonu
+            kapanış rakamlarına göre güncellenmektedir.
+          </div>
         </section>
 
         <section className="rounded-3xl border border-slate-200 bg-white p-3 shadow-sm md:p-5">
@@ -227,6 +233,11 @@ export default function HalkaArzTavanSerisiPage() {
             <div className="rounded-full bg-emerald-50 px-4 py-2 text-sm font-bold text-emerald-700">
               2026 Yılı Halka Arzları
             </div>
+          </div>
+
+          <div className="mb-4 rounded-2xl border border-sky-200 bg-sky-50 px-4 py-3 text-xs font-semibold leading-6 text-sky-900 md:text-sm">
+            Tablodaki “Güncel Fiyat” alanı, gün içi anlık fiyatı değil; gün sonunda
+            güncellenen kapanış fiyatını ifade eder.
           </div>
 
           <div className="overflow-x-auto rounded-2xl border border-slate-300">
@@ -249,7 +260,7 @@ export default function HalkaArzTavanSerisiPage() {
                     ARZ FİYATI
                   </th>
                   <th className="border border-slate-800 bg-yellow-300 px-2 py-3 text-red-700">
-                    GÜNCEL FİYAT
+                    GÜN SONU KAPANIŞ FİYATI
                   </th>
                   <th className="border border-slate-800 bg-yellow-300 px-2 py-3 text-red-700">
                     MARJ
@@ -298,8 +309,9 @@ export default function HalkaArzTavanSerisiPage() {
           </div>
 
           <p className="mt-4 text-xs leading-6 text-slate-500">
-            Güncel fiyat ve marj bilgileri dönemsel olarak değişebilir. Bu tablo bilgilendirme
-            amaçlıdır, yatırım tavsiyesi değildir.
+            Gün sonu kapanış fiyatı ve marj bilgileri piyasa hareketlerine göre değişebilir.
+            Bu tablo gün içinde anlık veri sunmaz; kapanış rakamları gün sonunda güncellenir.
+            Bu tablo bilgilendirme amaçlıdır, yatırım tavsiyesi değildir.
           </p>
         </section>
 
@@ -312,8 +324,8 @@ export default function HalkaArzTavanSerisiPage() {
               Halka arz tavan serisi, yeni işlem görmeye başlayan hisselerin borsadaki
               ilk günlerinden itibaren üst fiyat limitine yakın hareket etmesiyle oluşan
               yükseliş sürecini ifade eder. Bu tablo, 2026 yılında halka arz olan
-              şirketlerin arz fiyatına göre güncel performansını tek ekranda takip etmek
-              için hazırlanmıştır.
+              şirketlerin arz fiyatına göre gün sonu kapanış performansını tek ekranda
+              takip etmek için hazırlanmıştır.
             </p>
           </div>
 
@@ -322,7 +334,7 @@ export default function HalkaArzTavanSerisiPage() {
               Marj Nasıl Hesaplanır?
             </h2>
             <p className="text-sm leading-7 text-slate-600">
-              Marj oranı, hissenin güncel fiyatı ile halka arz fiyatı arasındaki yaklaşık
+              Marj oranı, hissenin gün sonu kapanış fiyatı ile halka arz fiyatı arasındaki yaklaşık
               değişimi gösterir. Pozitif marj, hissenin halka arz fiyatının üzerinde
               olduğunu; negatif marj ise halka arz fiyatının altında işlem gördüğünü
               gösterir. Tabloda pozitif değerler yeşil, negatif değerler kırmızı renkle
@@ -349,8 +361,10 @@ export default function HalkaArzTavanSerisiPage() {
             Önemli Uyarı
           </h2>
           <p className="text-sm leading-7 text-amber-900">
-            Güncel fiyatlar ve marj oranları piyasa hareketlerine göre değişebilir. Bu
-            sayfada yer alan bilgiler yatırım tavsiyesi değildir. Halka arz hisselerinde
+            Gün sonu kapanış fiyatları ve marj oranları piyasa hareketlerine göre
+            değişebilir. Bu sayfada yer alan kapanış rakamları gün içinde anlık olarak
+            güncellenmez; seans kapanışı sonrasında gün sonu verilerine göre güncellenir.
+            Bu sayfada yer alan bilgiler yatırım tavsiyesi değildir. Halka arz hisselerinde
             işlem yapmadan önce şirketin izahnamesi, finansal görünümü, işlem hacmi ve
             genel piyasa koşulları ayrıca değerlendirilmelidir.
           </p>

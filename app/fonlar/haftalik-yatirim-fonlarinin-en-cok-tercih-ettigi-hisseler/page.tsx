@@ -6,9 +6,9 @@ import FonTercihTableClient, {
 
 export const metadata = {
   title:
-    "Haftalık Yatırım Fonlarının En Çok Tercih Ettiği Hisseler | Hoca İle Borsa",
+    "Haftalık Yatırım Fonlarının En Çok Tercih Ettiği Hisseler | Fon Takas Verileri",
   description:
-    "Yatırım fonlarının haftalık olarak en çok tercih ettiği Borsa İstanbul hisselerini inceleyin.",
+    "Yatırım fonlarının ve emeklilik fonlarının haftalık bazda en çok tercih ettiği Borsa İstanbul hisselerini, fon takas değişimlerini ve kurumsal para hareketlerini inceleyin.",
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler",
@@ -78,49 +78,219 @@ export default function HaftalikYatirimFonlarininEnCokTercihEttigiHisselerPage()
           </Link>
         </div>
 
-        <h1 className="mb-2 text-3xl font-bold text-zinc-900">
-          Haftalık Yatırım Fonlarının En Çok Tercih Ettiği Hisseler
-        </h1>
+        <section className="mb-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-6 md:p-8">
+          <h1 className="mb-3 text-3xl font-bold text-zinc-900">
+            Haftalık Yatırım Fonlarının En Çok Tercih Ettiği Hisseler
+          </h1>
 
-        <p className="mb-6 text-sm text-zinc-600">
-          Veriler düzenli olarak güncellenen fon hareketleri tablosundan alınır.
-        </p>
+          <p className="max-w-5xl text-sm leading-7 text-zinc-700 md:text-base">
+            Bu sayfada yatırım fonlarının ve emeklilik fonlarının haftalık bazda
+            Borsa İstanbul hisselerinde oluşturduğu takas değişimleri yer alır.
+            Fonların hangi hisselerde ağırlığını artırdığı, hangi hisselerde
+            kurumsal talebin güçlendiği ve toplam fon takasındaki değişimin nasıl
+            şekillendiği tablo üzerinden takip edilebilir.
+          </p>
+
+          <div className="mt-5 rounded-xl border border-blue-200 bg-blue-50 p-4 text-sm font-medium leading-7 text-blue-900">
+            Tablodaki veriler fon hareketlerini yorumlamak için hazırlanmıştır.
+            Fonların bir hissede ağırlık artırması tek başına alım sinyali
+            değildir; fiyat, bilanço, sektör beklentisi, haber akışı ve genel
+            piyasa koşullarıyla birlikte değerlendirilmelidir.
+          </div>
+        </section>
 
         <FonTercihTableClient rows={fonVerileri} />
 
-        <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
-          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
-            Haftalık Yatırım Fonlarının En Çok Tercih Ettiği Hisseler Hakkında
-          </h2>
+        <section className="mt-12 space-y-8">
+          <div className="rounded-2xl border border-zinc-200 bg-white p-6 md:p-8">
+            <h2 className="mb-4 text-2xl font-bold text-zinc-900">
+              Haftalık Yatırım Fonlarının En Çok Tercih Ettiği Hisseler
+              Hakkında
+            </h2>
 
-          <p className="mb-4 leading-7 text-zinc-700">
-            Haftalık yatırım fonlarının en çok tercih ettiği hisseler tablosu,
-            yatırım fonlarının son haftada yoğun şekilde yöneldiği hisse
-            senetlerini gösterir. Bu veriler, profesyonel fon yöneticilerinin
-            hangi şirket hisselerine ilgi gösterdiğini takip etmek isteyen
-            yatırımcılar için önemli bir referans niteliğindedir.
-          </p>
+            <p className="mb-4 leading-7 text-zinc-700">
+              Haftalık yatırım fonlarının en çok tercih ettiği hisseler tablosu,
+              fonların belirli bir dönem içinde hangi hisse senetlerinde
+              ağırlığını artırdığını veya azalttığını görmek için hazırlanır.
+              Bu veri, piyasadaki kurumsal yatırımcı davranışını anlamak
+              isteyen yatırımcılar açısından önemli bir takip aracıdır.
+            </p>
 
-          <p className="mb-4 leading-7 text-zinc-700">
-            Yatırım fonlarının en çok aldığı hisseler, piyasadaki kurumsal para
-            akışını analiz etmek açısından büyük önem taşır. Fonların tercih ettiği
-            hisseler genellikle güçlü bilanço beklentisi, sektör potansiyeli veya
-            büyüme fırsatları nedeniyle öne çıkabilir. Bu nedenle haftalık fon
-            hareketleri yatırım stratejileri oluştururken yakından takip edilir.
-          </p>
+            <p className="mb-4 leading-7 text-zinc-700">
+              Yatırım fonları ve emeklilik fonları, portföylerini belirli
+              stratejiler, risk yönetimi kriterleri, sektör beklentileri ve
+              şirket bazlı analizler doğrultusunda yönetir. Bu nedenle fonların
+              bir hisseye yönelmesi, o hissede kurumsal ilginin arttığını
+              gösterebilir. Ancak bu hareketin nedeni her zaman kısa vadeli fiyat
+              beklentisi olmayabilir; fonlar bazen uzun vadeli pozisyonlanma,
+              endeks ağırlığı, temettü beklentisi veya portföy dengelemesi
+              amacıyla da hisse alabilir.
+            </p>
 
-          <p className="mb-4 leading-7 text-zinc-700">
-            Sayfada yer alan değişim oranları, toplam takas tutarları ve emeklilik
-            fonu ile yatırım fonu dağılımları sayesinde detaylı analiz yapabilir,
-            hangi hisselerde kurumsal talebin arttığını görebilirsiniz. Bu veriler,
-            hisse karşılaştırması ve piyasa eğilimi takibi için faydalıdır.
-          </p>
+            <p className="leading-7 text-zinc-700">
+              Bu sayfada yer alan fon takas verileri, yatırımcıya yalnızca
+              “hangi hisseler alındı?” sorusunun cevabını vermez. Aynı zamanda
+              fonların hangi hisselerde toplam portföy ağırlığını artırdığı,
+              hangi hisselerde önceki döneme göre daha güçlü pozisyon aldığı ve
+              emeklilik fonları ile yatırım fonları arasındaki dağılımın nasıl
+              değiştiği konusunda da fikir verir.
+            </p>
+          </div>
 
-          <p className="leading-7 text-zinc-700">
-            Güncel fon hareketleri, yatırım fonlarının tercih ettiği hisseler,
-            haftalık kurumsal para girişleri ve hisse bazlı detaylı analizler için
-            bu sayfayı düzenli olarak takip edebilirsiniz.
-          </p>
+          <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-6 md:p-8">
+            <h2 className="mb-4 text-xl font-bold text-zinc-900 md:text-2xl">
+              Bu Tablo Nasıl Okunmalı?
+            </h2>
+
+            <div className="grid gap-4 md:grid-cols-2">
+              <div className="rounded-xl border border-green-200 bg-green-50 p-4">
+                <h3 className="mb-2 font-semibold text-green-900">
+                  Değişim Verisi
+                </h3>
+                <p className="text-sm leading-6 text-zinc-700">
+                  Değişim alanı, fonların ilgili hissedeki pozisyonunun önceki
+                  döneme göre nasıl hareket ettiğini gösterir. Pozitif değişim,
+                  fon ilgisinin arttığına; negatif değişim ise ağırlığın
+                  azaldığına işaret edebilir.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-blue-200 bg-blue-50 p-4">
+                <h3 className="mb-2 font-semibold text-blue-900">
+                  Toplam Takas Tutarı
+                </h3>
+                <p className="text-sm leading-6 text-zinc-700">
+                  Toplam takas tutarı, fonların ilgili hissede taşıdığı yaklaşık
+                  pozisyon büyüklüğünü gösterir. Yüksek tutarlar, hissenin fon
+                  portföylerinde daha fazla yer tuttuğunu gösterebilir.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-purple-200 bg-purple-50 p-4">
+                <h3 className="mb-2 font-semibold text-purple-900">
+                  Emeklilik Fonları
+                </h3>
+                <p className="text-sm leading-6 text-zinc-700">
+                  Emeklilik fonları genellikle daha uzun vadeli ve dengeli
+                  portföy yapısıyla hareket eder. Bu fonların belirli hisselerde
+                  ağırlık artırması, uzun vadeli kurumsal ilgi açısından ayrıca
+                  takip edilebilir.
+                </p>
+              </div>
+
+              <div className="rounded-xl border border-amber-200 bg-amber-50 p-4">
+                <h3 className="mb-2 font-semibold text-amber-900">
+                  Yatırım Fonları
+                </h3>
+                <p className="text-sm leading-6 text-zinc-700">
+                  Yatırım fonları farklı stratejilerle yönetilebilir. Hisse
+                  senedi yoğun fonlar, değişken fonlar veya karma fonlar piyasa
+                  koşullarına göre daha aktif pozisyon değişimi yapabilir.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="rounded-2xl border border-zinc-200 bg-white p-6 md:p-8">
+            <h2 className="mb-4 text-xl font-bold text-zinc-900 md:text-2xl">
+              Fonların Tercih Ettiği Hisseler Neden Önemli?
+            </h2>
+
+            <p className="mb-4 leading-7 text-zinc-700">
+              Fon hareketleri, piyasadaki kurumsal para akışını takip etmek için
+              kullanılan önemli göstergelerden biridir. Bir hissede fon
+              pozisyonlarının artması, o hissede profesyonel yatırımcıların
+              ilgisinin yükseldiğini gösterebilir. Özellikle aynı hissede hem
+              yatırım fonu hem de emeklilik fonu tarafında artış görülmesi,
+              kurumsal talebin daha geniş tabana yayıldığı şeklinde
+              yorumlanabilir.
+            </p>
+
+            <p className="mb-4 leading-7 text-zinc-700">
+              Buna rağmen fon alımı her zaman hissenin kısa vadede yükseleceği
+              anlamına gelmez. Fonlar bazen hisseyi uzun vadeli portföy
+              stratejisi için alır, bazen endeks değişimleri nedeniyle pozisyon
+              artırır, bazen de fiyat geri çekilmelerini fırsat olarak
+              değerlendirebilir. Bu yüzden fon verileri mutlaka teknik analiz,
+              temel analiz ve piyasa koşullarıyla birlikte okunmalıdır.
+            </p>
+
+            <p className="leading-7 text-zinc-700">
+              Haftalık fon tercihleri özellikle orta ve uzun vadeli yatırımcılar
+              için faydalı olabilir. Çünkü fonların düzenli olarak aynı
+              hisselerde pozisyon artırması, şirketin kurumsal yatırımcılar
+              tarafından yakından takip edildiğini gösterebilir. Ancak bu veri,
+              tek başına yatırım kararı için yeterli değildir.
+            </p>
+          </div>
+
+          <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-6 md:p-8">
+            <h2 className="mb-4 text-xl font-bold text-zinc-900 md:text-2xl">
+              Bu Sayfa Nasıl Kullanılabilir?
+            </h2>
+
+            <ul className="space-y-3 text-zinc-700">
+              <li className="flex items-start gap-2 leading-relaxed">
+                <span className="mt-1 text-blue-500">•</span>
+                <span>
+                  Fonların haftalık bazda hangi hisselerde ağırlık artırdığını
+                  görmek için kullanılabilir.
+                </span>
+              </li>
+              <li className="flex items-start gap-2 leading-relaxed">
+                <span className="mt-1 text-blue-500">•</span>
+                <span>
+                  Emeklilik fonları ile yatırım fonlarının aynı hissedeki
+                  davranışı karşılaştırılabilir.
+                </span>
+              </li>
+              <li className="flex items-start gap-2 leading-relaxed">
+                <span className="mt-1 text-blue-500">•</span>
+                <span>
+                  Fon takas tutarı artan hisseler teknik ve temel analiz için
+                  ayrı bir takip listesine alınabilir.
+                </span>
+              </li>
+              <li className="flex items-start gap-2 leading-relaxed">
+                <span className="mt-1 text-blue-500">•</span>
+                <span>
+                  Aynı hissede birkaç hafta üst üste fon ilgisi artıyorsa,
+                  kurumsal talebin devam edip etmediği izlenebilir.
+                </span>
+              </li>
+              <li className="flex items-start gap-2 leading-relaxed">
+                <span className="mt-1 text-blue-500">•</span>
+                <span>
+                  Fon çıkışı görülen hisselerde satış baskısının fiyat davranışı
+                  üzerindeki etkisi ayrıca incelenebilir.
+                </span>
+              </li>
+            </ul>
+          </div>
+
+          <div className="rounded-2xl border border-amber-200 bg-amber-50 p-6 md:p-8">
+            <h2 className="mb-4 text-xl font-bold text-amber-950 md:text-2xl">
+              Dikkat Edilmesi Gerekenler
+            </h2>
+
+            <p className="mb-4 leading-7 text-amber-950">
+              Fon verileri yatırımcılar için değerli bir takip aracı olsa da,
+              tek başına alım veya satım kararı için yeterli değildir. Bir
+              hissenin fonlar tarafından tercih edilmesi olumlu bir sinyal
+              olabilir; ancak fiyatın zaten yükselmiş olması, değerleme
+              çarpanlarının pahalılaşması veya bilanço beklentilerinin değişmesi
+              gibi unsurlar ayrıca dikkate alınmalıdır.
+            </p>
+
+            <p className="leading-7 text-amber-950">
+              Bu sayfada yer alan fon tercihleri, takas değişimleri ve kurumsal
+              para hareketleri bilgilendirme amacıyla sunulmaktadır. Buradaki
+              veriler yatırım tavsiyesi değildir. Yatırım kararı vermeden önce
+              şirketin finansal tabloları, sektör görünümü, teknik seviyesi,
+              haber akışı ve kişisel risk profiliniz birlikte
+              değerlendirilmelidir.
+            </p>
+          </div>
         </section>
       </div>
     </main>

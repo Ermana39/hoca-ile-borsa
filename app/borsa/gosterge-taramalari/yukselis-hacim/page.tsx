@@ -2,7 +2,6 @@ import Link from "next/link";
 import yukselisHacimData from "../data/yukselis-hacim.json";
 
 export const metadata = {
-  robots: { index: false, follow: true },
   title: "Yükseliş Trendi + Hacim Artışı | Hoca İle Borsa",
   description:
     "Yükseliş Trendi + Hacim Artışına göre al sinyali üreten Borsa İstanbul hisselerini inceleyin. Fiyat 233,144,89,55,21,13 ve 5 üstsel MOV hareketli ortalaması üzeri, hacim son 3 günlük ortalaması son 21 günlük ortalamasının üzerinde",
