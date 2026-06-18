@@ -21,6 +21,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 997,
+    title: "18 Haziran 2026 Önemli KAP Haberleri",
+    href: "/haber/18-haziran-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "18 Haziran 2026 Önemli KAP Haberleri",
+    publishedAt: "2026-06-18",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["GESAN", "EUPWR", "SAHOL", "AKCNS", "GOODY", "HLGYO", "KTLEV", "ARZUM", "HALKB", "MIATK", "LINK", "TUCLK", "CCOLA"],
+  },
+  {
     id: 996,
     title: "Beta Enerji Halka Arzında Yeni Talep Toplama Tarihleri Belli Oldu",
     href: "/haber/beta-enerji-halka-arz-yeni-talep-toplama-tarihleri-belli-oldu",
