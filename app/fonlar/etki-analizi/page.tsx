@@ -1,9 +1,9 @@
 import Link from "next/link";
 
 export const metadata = {
-  title: "Fon Kapanış Etki Analizi | Hoca İle Borsa",
+  title: "Fon Etki Analizi ve Fon Fiyat Tahmini | Hoca İle Borsa",
   description:
-    "Yatırım fonlarının portföyündeki hisselerin günlük kapanış marjlarına göre fonun ertesi gün fiyatına olan tahmini etkisini gösteren hesaplama sayfaları.",
+    "TLY, PHE, PBR ve DFI fonlarının portföy hisseleri, kapanış marjları ve ertesi gün açıklanacak TEFAS fon fiyatına tahmini etkilerini takip edin.",
   alternates: {
     canonical: "https://www.hocaileborsa.com/fonlar/etki-analizi",
   },
@@ -14,16 +14,37 @@ const fonlar = [
     kod: "TLY",
     ad: "Tera Portföy Birinci Serbest Fonu",
     href: "/fonlar/etki-analizi/tly",
+    bg: "bg-blue-600",
+    ring: "ring-blue-200",
+    accent: "text-blue-700",
+    accentBg: "group-hover:bg-blue-50",
   },
   {
     kod: "PHE",
     ad: "Pusula Portföy Hisse Senedi Fonu (Hisse Senedi Yoğun Fon)",
     href: "/fonlar/etki-analizi/phe",
+    bg: "bg-emerald-600",
+    ring: "ring-emerald-200",
+    accent: "text-emerald-700",
+    accentBg: "group-hover:bg-emerald-50",
   },
   {
     kod: "PBR",
     ad: "Pusula Portföy Birinci Değişken Fon",
     href: "/fonlar/etki-analizi/pbr",
+    bg: "bg-orange-500",
+    ring: "ring-orange-200",
+    accent: "text-orange-700",
+    accentBg: "group-hover:bg-orange-50",
+  },
+  {
+    kod: "DFI",
+    ad: "Atlas Portföy Serbest Fon",
+    href: "/fonlar/etki-analizi/dfi",
+    bg: "bg-violet-600",
+    ring: "ring-violet-200",
+    accent: "text-violet-700",
+    accentBg: "group-hover:bg-violet-50",
   },
 ];
 
@@ -44,35 +65,43 @@ export default function FonEtkiAnaliziPage() {
         </nav>
 
         <h1 className="mb-2 text-2xl font-bold text-slate-900 md:text-3xl">
-          Fon Kapanış Etki Analizi
+          Fon Etki Analizi ve Fon Fiyat Tahmini
         </h1>
 
         <p className="mb-6 max-w-3xl text-base leading-7 text-slate-600">
           Yatırım fonlarının portföyünde yer alan hisselerin gün içindeki
-          kapanış marjları, fonun açıklanacak ertesi gün fiyatına doğrudan
-          yansır. Bu sayfada, takip edilen fonların son portföy dağılımı ile
-          günlük hisse kapanış marjları birleştirilerek fonun ertesi gün
-          fiyatına olan tahmini etkisi hesaplanmaktadır. Aşağıdaki fonlardan
-          birini seçerek detaylı etki tablosunu ve hesaplama mantığının
-          açıklamasını görüntüleyebilirsiniz.
+          kapanış marjları, fonun açıklanacak ertesi gün fiyatı için önemli bir
+          ön gösterge sunar. Bu sayfada TLY, PHE, PBR ve DFI fonlarının son
+          portföy dağılımı ile günlük hisse kapanış marjları birleştirilerek
+          TEFAS fon fiyatına tahmini etki hesaplanmaktadır. Aşağıdaki fonlardan
+          birini seçerek detaylı etki tablosunu, en çok etki eden hisseleri ve
+          hesaplama mantığını görüntüleyebilirsiniz.
         </p>
 
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
           {fonlar.map((fon) => (
             <Link
               key={fon.href}
               href={fon.href}
               prefetch={false}
-              className="group flex flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)]"
+              className={`group flex flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)] ring-2 ring-transparent hover:${fon.ring}`}
             >
-              <span className="text-xl font-bold text-zinc-900 group-hover:text-blue-700">
+              <div className={`mb-3 flex h-12 w-12 items-center justify-center rounded-xl ${fon.bg} shadow-sm`}>
+                <span className="text-base font-bold tracking-tight text-white">
+                  {fon.kod}
+                </span>
+              </div>
+              <span className={`text-lg font-bold text-zinc-900 group-hover:${fon.accent}`}>
                 {fon.kod}
               </span>
-              <span className="mt-2 text-sm leading-6 text-slate-500">
+              <span className="mt-1 text-sm leading-6 text-slate-500">
                 {fon.ad}
               </span>
-              <span className="mt-4 inline-flex items-center text-sm font-semibold text-blue-600">
-                Etki Analizini Gör →
+              <span className={`mt-4 inline-flex items-center gap-1 rounded-lg px-3 py-1.5 text-xs font-semibold ${fon.accent} ${fon.accentBg} transition`}>
+                Fiyat tahminini gör
+                <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="M5 12h14M12 5l7 7-7 7" />
+                </svg>
               </span>
             </Link>
           ))}
@@ -94,18 +123,19 @@ export default function FonEtkiAnaliziPage() {
           </p>
 
           <p className="text-sm leading-7 text-slate-600 md:text-base">
-            Bu yöntem, özellikle hisse senedi yoğun serbest fonlar ve hisse
-            senedi fonları için TEFAS&apos;ta gün sonunda ilan edilecek fon
-            fiyatını önceden tahmin etmek isteyen yatırımcılar için pratik
-            bir gösterge sunar. Tablo üzerinde her hissenin fon oranı, kapanış
-            marjı ve etkisi ayrı ayrı görüntülenir, böylece hangi hissenin
-            fonu ne kadar yukarı veya aşağı çektiği kolayca anlaşılır.
+            Bu yöntem, özellikle hisse senedi yoğun serbest fonlar, değişken
+            fonlar ve hisse ağırlığı yüksek serbest fonlar için TEFAS&apos;ta
+            gün sonunda ilan edilecek fon fiyatını önceden tahmin etmek isteyen
+            yatırımcılar için pratik bir gösterge sunar. Tablo üzerinde her
+            hissenin fon oranı, kapanış marjı ve etkisi ayrı ayrı görüntülenir,
+            böylece hangi hissenin fonu ne kadar yukarı veya aşağı çektiği
+            kolayca anlaşılır.
           </p>
 
           <p className="text-sm leading-7 text-slate-600 md:text-base">
-            TLY, PHE ve PBR fonları için güncellenen etki tablolarına yukarıdaki
-            kartlardan ulaşabilir, hangi hisselerin fon performansına en çok
-            katkı sağladığını veya zarar verdiğini görebilirsiniz.
+            TLY, PHE, PBR ve DFI fonları için güncellenen etki tablolarına
+            yukarıdaki kartlardan ulaşabilir, hangi hisselerin fon performansına
+            en çok katkı sağladığını veya zarar verdiğini görebilirsiniz.
           </p>
         </section>
       </div>

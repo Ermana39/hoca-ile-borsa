@@ -74,6 +74,10 @@ function getRouteSettings(route: string): {
     return { priority: 0.8, changeFrequency: "weekly" };
   }
 
+  if (route.startsWith("/fonlar/etki-analizi")) {
+    return { priority: 0.9, changeFrequency: "daily" };
+  }
+
   if (route.startsWith("/haberler/kategori/")) {
     return { priority: 0.75, changeFrequency: "daily" };
   }

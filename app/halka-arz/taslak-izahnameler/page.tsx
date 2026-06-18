@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { getTaslakIzahnameListesi } from "@/lib/halka-arz";
 import TaslakIzahnamelerClient from "./TaslakIzahnamelerClient";
 
 export const metadata: Metadata = {
@@ -12,5 +13,5 @@ export const metadata: Metadata = {
 };
 
 export default function TaslakIzahnamelerPage() {
-  return <TaslakIzahnamelerClient />;
+  return <TaslakIzahnamelerClient izahnameler={getTaslakIzahnameListesi()} />;
 }

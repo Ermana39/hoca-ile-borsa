@@ -1,119 +1,69 @@
-import Link from "next/link";
-import FonEtkiTable, { type FonEtkiRow } from "../_components/FonEtkiTable";
+import type { Metadata } from "next";
+import FonEtkiSeoPage from "../_components/FonEtkiSeoPage";
+import type { FonEtkiRow } from "../_components/FonEtkiTable";
 
-export const metadata = {
-  title: "PBR Fonu Kapanış Etki Analizi | Hoca İle Borsa",
+export const metadata: Metadata = {
+  title: "PHE Fonu Etki Analizi: Yarınki Fon Fiyatı Tahmini",
   description:
-    "PBR (Pusula Portföy Birinci Değişken Fon) portföyündeki hisselerin güncel kapanış marjlarına göre fonun ertesi gün fiyatına etkisini gösteren güncel hesaplama tablosu.",
+    "PHE fonu kapanış etki analizi, portföy hisselerinin günlük marjlarına göre ertesi gün açıklanacak TEFAS fon fiyatına tahmini etkiyi gösterir.",
   alternates: {
-    canonical: "https://www.hocaileborsa.com/fonlar/etki-analizi/pbr",
+    canonical: "https://www.hocaileborsa.com/fonlar/etki-analizi/phe",
+  },
+  openGraph: {
+    title: "PHE Fonu Etki Analizi: Yarınki Fon Fiyatı Tahmini",
+    description:
+      "PHE fonunun portföy hisseleri, kapanış marjları ve ertesi gün fon fiyatına tahmini etkisi.",
+    url: "https://www.hocaileborsa.com/fonlar/etki-analizi/phe",
+    type: "article",
   },
 };
 
 const rows: FonEtkiRow[] = [
-  { sembol: "GUNDG", fonOrani: 12.4, kapanisMarji: 5.511811024, etki: 0.683464567 },
-  { sembol: "KTLEV", fonOrani: 10.68, kapanisMarji: 5.420000076, etki: 0.578856008 },
-  { sembol: "ODINE", fonOrani: 10.28, kapanisMarji: 4.789999962, etki: 0.492411996 },
-  { sembol: "HEDEF", fonOrani: 6.97, kapanisMarji: 3.329999924, etki: 0.232100995 },
-  { sembol: "PASEU", fonOrani: 4.95, kapanisMarji: 1.669999957, etki: 0.082664998 },
-  { sembol: "TATEN", fonOrani: 4.23, kapanisMarji: -2.039999962, etki: -0.086291998 },
-  { sembol: "AKBNK", fonOrani: 3.62, kapanisMarji: 1.167315175, etki: 0.042256809 },
-  { sembol: "YKBNK", fonOrani: 3.25, kapanisMarji: 0.987654321, etki: 0.032098765 },
-  { sembol: "THYAO", fonOrani: 2.93, kapanisMarji: -1.45482389, etki: -0.04262634 },
-  { sembol: "TRALT", fonOrani: 2.19, kapanisMarji: -0.5, etki: -0.01095 },
-  { sembol: "DSTKF", fonOrani: 1.93, kapanisMarji: 2.135231317, etki: 0.041209964 },
-  { sembol: "AKSEN", fonOrani: 1.46, kapanisMarji: -1.529999971, etki: -0.022338 },
-  { sembol: "TCELL", fonOrani: 1.24, kapanisMarji: -2.690972222, etki: -0.033368056 },
-  { sembol: "DAPGM", fonOrani: 1.2, kapanisMarji: 0.469999999, etki: 0.00564 },
-  { sembol: "SKBNK", fonOrani: 1.12, kapanisMarji: -0.343642612, etki: -0.003848797 },
-  { sembol: "MGROS", fonOrani: 0.87, kapanisMarji: -2.505368647, etki: -0.021796707 },
-  { sembol: "TERA", fonOrani: 0.74, kapanisMarji: -8.390000343, etki: -0.062086003 },
-  { sembol: "MPARK", fonOrani: 0.67, kapanisMarji: -0.810000002, etki: -0.005427 },
-  { sembol: "ISCTR", fonOrani: 0.61, kapanisMarji: -0.466355763, etki: -0.00284477 },
-  { sembol: "PGSUS", fonOrani: 0.56, kapanisMarji: -2.170000076, etki: -0.012152 },
-  { sembol: "DCTTR", fonOrani: 0.54, kapanisMarji: -2.897350993, etki: -0.015645695 },
-  { sembol: "BRSAN", fonOrani: 0.51, kapanisMarji: -0.727566694, etki: -0.00371059 },
-  { sembol: "IZFAS", fonOrani: 0.49, kapanisMarji: 0.720000029, etki: 0.003528 },
-  { sembol: "PEKGY", fonOrani: 0.48, kapanisMarji: -0.529999971, etki: -0.002544 },
-  { sembol: "ANSGR", fonOrani: 0.31, kapanisMarji: -0.707213579, etki: -0.002192362 },
+  { sembol: "GUNDG", fonOrani: 11.02, kapanisMarji: -1.49, etki: -0.164198001 },
+  { sembol: "KTLEV", fonOrani: 9.52, kapanisMarji: 5.03, etki: 0.47885602 },
+  { sembol: "ODINE", fonOrani: 8.16, kapanisMarji: -8.06, etki: -0.657696034 },
+  { sembol: "PASEU", fonOrani: 6.93, kapanisMarji: 1.81, etki: 0.125432996 },
+  { sembol: "HEDEF", fonOrani: 4.04, kapanisMarji: 2.42, etki: 0.097768003 },
+  { sembol: "THYAO", fonOrani: 3.88, kapanisMarji: 2.1, etki: 0.081479996 },
+  { sembol: "TATEN", fonOrani: 3.37, kapanisMarji: 1.39, etki: 0.046843 },
+  { sembol: "TRALT", fonOrani: 2.93, kapanisMarji: 8.23, etki: 0.241138987 },
+  { sembol: "AKBNK", fonOrani: 2.82, kapanisMarji: 3.97, etki: 0.111954001 },
+  { sembol: "DSTKF", fonOrani: 2.75, kapanisMarji: 7.06, etki: 0.194033101 },
+  { sembol: "YKBNK", fonOrani: 2.65, kapanisMarji: 4.4, etki: 0.116600003 },
+  { sembol: "TCELL", fonOrani: 2.62, kapanisMarji: 3.48, etki: 0.091176 },
+  { sembol: "MGROS", fonOrani: 2.22, kapanisMarji: 2.5, etki: 0.0555 },
+  { sembol: "SAHOL", fonOrani: 2.09, kapanisMarji: 2.71, etki: 0.056639001 },
+  { sembol: "KCHOL", fonOrani: 1.88, kapanisMarji: 2.04, etki: 0.038351999 },
+  { sembol: "ISCTR", fonOrani: 1.61, kapanisMarji: 3.55, etki: 0.057154999 },
+  { sembol: "ALKLC", fonOrani: 1.15, kapanisMarji: -0.81, etki: -0.009315 },
+  { sembol: "BIMAS", fonOrani: 1.14, kapanisMarji: 2.42, etki: 0.027588001 },
+  { sembol: "DAPGM", fonOrani: 1.01, kapanisMarji: -0.09, etki: -0.000909 },
+  { sembol: "TTKOM", fonOrani: 0.79, kapanisMarji: 2.48, etki: 0.019592 },
+  { sembol: "TERA", fonOrani: 0.76, kapanisMarji: 0.8, etki: 0.00608 },
+  { sembol: "GARAN", fonOrani: 0.74, kapanisMarji: 2.13, etki: 0.015762001 },
+  { sembol: "ENKAI", fonOrani: 0.52, kapanisMarji: 1.78, etki: 0.009256 },
+  { sembol: "PEKGY", fonOrani: 0.39, kapanisMarji: -0.6, etki: -0.00234 },
+  { sembol: "AKSEN", fonOrani: 0.37, kapanisMarji: 8.57, etki: 0.031708999 },
+  { sembol: "ALVES", fonOrani: 0.33, kapanisMarji: 0.74, etki: 0.002442 },
+  { sembol: "PGSUS", fonOrani: 0.31, kapanisMarji: 2.61, etki: 0.008094444 },
+  { sembol: "IZFAS", fonOrani: 0.26, kapanisMarji: 1.12, etki: 0.002902711 },
+  { sembol: "GUBRF", fonOrani: 0.23, kapanisMarji: 1.88, etki: 0.004324 },
+  { sembol: "TRHOL", fonOrani: 0.2, kapanisMarji: -2.18, etki: -0.00436 },
+  { sembol: "TEHOL", fonOrani: 0.04, kapanisMarji: 5.5, etki: 0.0022 },
+  { sembol: "TOASO", fonOrani: 0.02, kapanisMarji: 0.84, etki: 0.000168 },
 ];
 
-export default function PbrEtkiAnaliziPage() {
+export default function PheEtkiAnaliziPage() {
   return (
-    <main className="min-h-screen bg-[#f8fafc] px-4 py-6 md:px-6">
-      <div className="mx-auto max-w-4xl">
-        <nav className="mb-5 flex items-center gap-2 text-sm text-slate-500" aria-label="Breadcrumb">
-          <Link href="/" prefetch={false} className="transition hover:text-blue-600">
-            Ana Sayfa
-          </Link>
-          <span className="text-slate-300">/</span>
-          <Link href="/fonlar" prefetch={false} className="transition hover:text-blue-600">
-            Fonlar
-          </Link>
-          <span className="text-slate-300">/</span>
-          <Link href="/fonlar/etki-analizi" prefetch={false} className="transition hover:text-blue-600">
-            Fon Kapanış Etki Analizi
-          </Link>
-          <span className="text-slate-300">/</span>
-          <span className="font-medium text-slate-700">PBR</span>
-        </nav>
-
-        <h1 className="mb-2 text-2xl font-bold text-slate-900 md:text-3xl">
-          PBR Fonu Kapanış Etki Analizi
-        </h1>
-
-        <p className="mb-6 max-w-3xl text-base leading-7 text-slate-600">
-          PBR (Pusula Portföy Birinci Değişken Fon) portföyünde yer alan hisselerin son açıklanan fon
-          dağılımındaki ağırlıkları ile bu hisselerin günlük kapanış marjları
-          kullanılarak, fonun ertesi gün ilan edilecek fiyatına olan tahmini
-          katkısı hesaplanmıştır.
-        </p>
-
-        <FonEtkiTable rows={rows} toplamFonOrani={74.23} toplamEtki={1.87} />
-
-        <section className="mt-10 space-y-5 rounded-2xl border border-slate-200 bg-white p-5 md:p-7">
-          <h2 className="text-xl font-bold text-zinc-900 md:text-2xl">
-            PBR Fon Etki Analizi Nasıl Hesaplanır?
-          </h2>
-
-          <p className="text-sm leading-7 text-slate-600 md:text-base">
-            PBR (Pusula Portföy Birinci Değişken Fon) fonunun günlük fiyat değişimini önceden tahmin edebilmek için,
-            fonun portföyünde bulunan her hissenin fon içindeki ağırlığı ile
-            o hissenin gün içindeki kapanış marjı (kapanış fiyatının önceki
-            kapanışa göre yüzdesel değişimi) çarpılır. Her hisse için elde
-            edilen bu &quot;etki&quot; değerleri toplanarak fonun birim pay
-            değerindeki tahmini yüzdesel değişim bulunur.
-          </p>
-
-          <p className="text-sm leading-7 text-slate-600 md:text-base">
-            <strong>Fon Oranı</strong> sütunu, ilgili hissenin PBR portföyü
-            içindeki yüzdesel ağırlığını gösterir. <strong>Kapanış Marjı</strong>{" "}
-            sütunu, hissenin o günkü kapanış fiyatının önceki güne göre yüzde
-            değişimini ifade eder. <strong>Etki</strong> sütunu ise bu iki
-            değerin çarpımıyla elde edilen, hissenin fonun toplam getirisine
-            yaptığı katkıyı gösterir. Tablonun en altındaki toplam etki değeri,
-            tüm hisselerin birleşik etkisinin PBR fonunun ertesi gün fiyatına
-            yansıması beklenen tahmini yüzdesel değişimi temsil eder.
-          </p>
-
-          <p className="text-sm leading-7 text-slate-600 md:text-base">
-            Bu hesaplama, PBR (Pusula Portföy Birinci Değişken Fon) yatırımcıları için fonun açıklanacak günlük
-            birim pay değerine yönelik bir ön gösterge niteliği taşır. Fon
-            fiyatları TEFAS tarafından gün sonunda ilan edildiğinden, burada
-            paylaşılan etki tablosu yatırımcıların portföydeki hisse
-            hareketlerini takip ederek fon performansı hakkında erken bir fikir
-            edinmesine yardımcı olur.
-          </p>
-
-          <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">
-            ⚠️ Bu sayfadaki hesaplamalar bilgilendirme amaçlıdır, yatırım
-            tavsiyesi değildir. Fonun gerçek günlük getirisi; nakit, vadeli
-            işlem pozisyonları, gider kesintileri ve portföydeki güncel
-            ağırlık değişiklikleri nedeniyle bu tahminden farklı
-            gerçekleşebilir.
-          </div>
-        </section>
-      </div>
-    </main>
+    <FonEtkiSeoPage
+      kod="PHE"
+      fonAdi="Pusula Portföy Hisse Senedi Fonu"
+      fonTuru="Pusula Portföy Hisse Senedi Fonu"
+      slug="phe"
+      rows={rows}
+      toplamFonOrani={90.75}
+      toplamEtki={1.08}
+      sonGuncelleme="18 Haziran 2026"
+    />
   );
 }

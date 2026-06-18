@@ -38,7 +38,7 @@ const fonKutulari = [
   },
   {
     title: "Fon Kapanış Etki Analizi",
-    desc: "TLY, PHE ve PBR fonlarının portföyündeki hisselerin kapanış marjına göre ertesi gün fiyatına etkisini inceleyin.",
+    desc: "TLY, PHE, PBR ve DFI fonlarının portföyündeki hisselerin kapanış marjına göre ertesi gün fiyatına etkisini inceleyin.",
     href: "/fonlar/etki-analizi",
     icon: "fon-etki-analizi" as CategoryIconName,
     titleClassName: "text-[19px] md:text-[21px]",

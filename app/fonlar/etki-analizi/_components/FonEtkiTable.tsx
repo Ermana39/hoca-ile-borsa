@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export type FonEtkiRow = {
   sembol: string;
   fonOrani: number;
@@ -45,7 +47,13 @@ export default function FonEtkiTable({
               className={index % 2 === 0 ? "bg-white" : "bg-sky-50"}
             >
               <td className="border-t border-zinc-100 px-4 py-3 font-bold text-zinc-900">
-                {row.sembol}
+                <Link
+                  href={`/hisse/${row.sembol.toLowerCase()}`}
+                  prefetch={false}
+                  className="transition hover:text-blue-700"
+                >
+                  {row.sembol}
+                </Link>
               </td>
               <td className="border-t border-zinc-100 px-4 py-3 text-right text-zinc-700">
                 {fmt(row.fonOrani)}

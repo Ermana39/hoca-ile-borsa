@@ -187,3 +187,20 @@ export function halkaArzGetir(slug: string): HalkaArzVeri | null {
     return null;
   }
 }
+
+export type TaslakListeOgesi = { klasor: string; label: string };
+
+// Taslak izahnameler liste/arama sayfası için TEK KAYNAK: data/halka-arz/*.json.
+// Yalnızca detay sayfası gerçekten render olan (geçerli + `ozet` içeren) kayıtlar
+// listelenir; bozuk/eksik-şemalı dosyalar otomatik dışarıda kalır. Böylece JSON
+// eklemek tek başına yeterlidir; ayrı bir metin listesi tutmaya gerek yoktur.
+export function getTaslakIzahnameListesi(): TaslakListeOgesi[] {
+  return tumJsonSluglar()
+    .map((slug) => {
+      const veri = halkaArzGetir(slug);
+      if (!veri) return null;
+      return { klasor: slug, label: veri.sirketAdi || slug };
+    })
+    .filter((x): x is TaslakListeOgesi => x !== null)
+    .sort((a, b) => a.label.localeCompare(b.label, "tr"));
+}
