@@ -8,7 +8,7 @@ export const metadata = {
     "Hareketli ortalama dizilimi, StochRSI ve MACD göstergelerine göre güçlü yükseliş trendi ve pozitif momentum gösteren Borsa İstanbul hisselerini inceleyin.",
 };
 
-export const revalidate = 86400;
+export const revalidate = false;
 
 type JsonRow = Record<string, string | number | null>;
 

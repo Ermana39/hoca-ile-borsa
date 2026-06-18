@@ -7,7 +7,7 @@ import {
   getKategori,
 } from "@/lib/haber-kategorileri";
 
-export const revalidate = 86400;
+export const revalidate = false;
 export const dynamicParams = true;
 
 const SITE = "https://www.hocaileborsa.com";

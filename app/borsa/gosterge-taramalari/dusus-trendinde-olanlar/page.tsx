@@ -8,7 +8,7 @@ export const metadata = {
     "5, 13, 21, 55, 89, 144 ve 233 hareketli ortalama altında olan hisseleri inceleyin.",
 };
 
-export const revalidate = 86400;
+export const revalidate = false;
 
 type JsonRow = Record<string, string | number | null>;
 

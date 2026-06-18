@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import HaberArsiv from "@/components/HaberArsiv";
 import { getAllNews } from "@/lib/haberler";
 
-export const revalidate = 86400;
+export const revalidate = false;
 
 export const metadata: Metadata = {
   title: "Haberler",

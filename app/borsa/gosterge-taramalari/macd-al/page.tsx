@@ -8,7 +8,7 @@ export const metadata = {
     "MACD göstergesine göre al sinyali üreten Borsa İstanbul hisselerini inceleyin. MACD sıfır değerinin üzerinde ortalamanın yukarıya doğru kesişimi",
 };
 
-export const revalidate = 86400;
+export const revalidate = false;
 
 type JsonRow = Record<string, string | number | null>;
 

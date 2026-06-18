@@ -5,7 +5,7 @@ const publicationName = "Hoca İle Borsa";
 const publicationLanguage = "tr";
 const newsWindowDays = 2;
 
-export const revalidate = 3600;
+export const revalidate = false;
 
 function escapeXml(value: string) {
   return value

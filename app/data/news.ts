@@ -21,6 +21,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 996,
+    title: "Beta Enerji Halka Arzında Yeni Talep Toplama Tarihleri Belli Oldu",
+    href: "/haber/beta-enerji-halka-arz-yeni-talep-toplama-tarihleri-belli-oldu",
+    image: "/beta-yeni-tarih.webp",
+    alt: "Beta Enerji halka arz yeni talep toplama tarihleri belli oldu",
+    publishedAt: "2026-06-18",
+    category: "halka-arz",
+    ilgiliHisseler: ["BETAE"],
+  },
+  {
     id: 995,
     title: "17 Haziran 2026 Önemli KAP Haberleri",
     href: "/haber/17-haziran-2026-onemli-kap-haberleri",

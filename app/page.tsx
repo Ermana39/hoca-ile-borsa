@@ -16,7 +16,7 @@ import {
   ANA_SAYFA_HABER_LIMIT,
 } from "@/lib/haberler";
 
-export const revalidate = 86400;
+export const revalidate = false;
 
 type GuncellemeItem = {
   title: string;

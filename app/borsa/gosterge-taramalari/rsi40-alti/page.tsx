@@ -8,7 +8,7 @@ export const metadata = {
     "RSI değeri 40 seviyesinin altında olan Borsa İstanbul hisselerini inceleyin.",
 };
 
-export const revalidate = 86400;
+export const revalidate = false;
 
 type JsonRow = Record<string, string | number | null>;
 

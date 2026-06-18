@@ -5,7 +5,7 @@ import * as XLSX from "xlsx";
 
 export const metadata = { robots: { index: false, follow: true } };
 
-export const revalidate = 86400;
+export const revalidate = false;
 
 const taramaDetaylari: Record<
   string,

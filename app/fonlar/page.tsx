@@ -1,6 +1,6 @@
 export const metadata = {
   title: "Yatırım Fonları | Hoca İle Borsa",
-  description: "Yatırım fonları getiri analizi, tarihsel veriler ve haftalık fon tercihlerini tek sayfada takip edin.",
+  description: "Yatırım fonları, fon türleri, risk seviyeleri, TEFAS verileri, getiri analizi, tarihsel veriler ve haftalık fon tercihlerini tek sayfada takip edin.",
   alternates: { canonical: "https://www.hocaileborsa.com/fonlar" },
 };
 
@@ -196,36 +196,152 @@ export default function FonlarPage() {
           </div>
         </section>
 
-        <section className="mt-12 rounded-2xl bg-white p-5 md:p-7">
+        <section className="mt-12 rounded-2xl border border-slate-200 bg-white p-5 md:p-7">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">
-            Fonlar sayfasında neler bulunur?
+            Fonlar Sayfasında Neler Bulunur?
           </h2>
 
           <div className="space-y-4 text-sm leading-7 text-slate-600 md:text-base">
             <p>
-              Hoca İle Borsa Fonlar sayfasında yatırım fonları, emeklilik
-              fonları, para piyasası fonları, hisse senedi fonları, borçlanma
-              araçları fonları ve farklı fon türlerine ait güncel içerikler bir
-              arada sunulur.
+              Hoca İle Borsa Fonlar sayfası, yatırım fonlarını tek başlık altında
+              takip etmek isteyen kullanıcılar için hazırlanmıştır. Bu bölümde
+              fonların haftalık tercihleri, getiri analizleri, tarihsel verileri,
+              kapanış etki hesaplamaları ve fonlara dair video içerikleri bir
+              arada sunulur. Amaç yalnızca fon isimlerini listelemek değil,
+              yatırımcının fon türlerini, risk seviyelerini ve fon seçiminde
+              dikkat edilmesi gereken temel noktaları daha anlaşılır şekilde
+              değerlendirmesine yardımcı olmaktır.
             </p>
 
             <p>
-              Fon yatırımına ilgi duyan kullanıcılar bu sayfa üzerinden fon
-              kategorilerini daha kolay inceleyebilir, fon getirilerini
-              karşılaştırabilir, risk ve dağılım yapıları hakkında genel bilgi
-              edinebilir ve kendi yatırım tercihlerine uygun fon seçeneklerini
-              daha pratik şekilde değerlendirebilir.
+              Yatırım fonları; farklı yatırım araçlarını tek bir portföy içinde
+              toplayan, profesyonel portföy yöneticileri tarafından yönetilen
+              kolektif yatırım ürünleridir. Bir fonun içinde hisse senedi,
+              devlet tahvili, özel sektör borçlanma aracı, ters repo, mevduat,
+              kıymetli maden, yabancı varlık veya farklı finansal araçlar yer
+              alabilir. Bu nedenle her fon aynı risk seviyesine sahip değildir.
+              Fon seçerken sadece geçmiş getiriye bakmak yeterli olmaz; fonun
+              türü, yatırım stratejisi, portföy dağılımı, yönetim ücreti,
+              risk değeri ve yatırımcının vade beklentisi birlikte
+              değerlendirilmelidir.
+            </p>
+
+            <h3 className="pt-3 text-xl font-bold text-zinc-900">
+              Fon Türleri ve Risk Seviyeleri
+            </h3>
+
+            <p>
+              Fon türleri, yatırımcının üstlendiği riskin ve beklediği getirinin
+              anlaşılması açısından önemlidir. Para piyasası fonları genellikle
+              kısa vadeli, düşük riskli ve likiditesi yüksek araçlara yatırım
+              yapar. Bu fonlar, nakdini kısa süreli değerlendirmek isteyen
+              yatırımcılar tarafından tercih edilebilir. Getiri potansiyeli
+              hisse senedi fonlarına göre daha sınırlı olabilir; ancak fiyat
+              dalgalanması da genellikle daha düşüktür.
             </p>
 
             <p>
-              Fon piyasasını takip eden kullanıcılar için hazırlanan bu bölüm,
-              farklı fon başlıklarına tek sayfadan ulaşmayı kolaylaştırır ve
-              güncel fon içeriklerini daha düzenli şekilde inceleme imkânı sunar.
+              Hisse senedi fonları ise portföyünün önemli bir bölümünü Borsa
+              İstanbul’da veya yurt dışı piyasalarda işlem gören paylara
+              yönlendiren fonlardır. Bu fonlarda getiri potansiyeli daha yüksek
+              olabilir; ancak piyasa hareketlerine bağlı olarak değer kaybı
+              riski de artar. Hisse senedi fonu seçerken fonun hangi sektörlere,
+              hangi şirketlere ve hangi yatırım temasına ağırlık verdiği
+              incelenmelidir. Sadece kısa vadeli performans değil, fonun uzun
+              vadeli stratejisi ve düşüş dönemlerindeki dayanıklılığı da
+              önemlidir.
             </p>
 
-            <p className="text-zinc-500">
-              Bu sayfada yer alan içerikler genel bilgilendirme amacı taşır ve
-              yatırım danışmanlığı kapsamında değildir.
+            <p>
+              Borçlanma araçları fonları; devlet tahvili, hazine bonosu ve özel
+              sektör borçlanma araçları gibi sabit getirili enstrümanlara
+              yatırım yapar. Bu fonlar faiz oranlarındaki değişimlerden
+              etkilenebilir. Faizlerin yükseldiği dönemlerde tahvil fiyatları
+              baskılanabilirken, faizlerin gerilediği dönemlerde bu fonlarda
+              olumlu performans görülebilir. Bu nedenle borçlanma araçları
+              fonlarında vade yapısı, portföy kalitesi ve faiz hassasiyeti
+              dikkate alınmalıdır.
+            </p>
+
+            <p>
+              Serbest fonlar, daha esnek yatırım stratejileri uygulayabilen ve
+              genellikle nitelikli yatırımcılara sunulan fonlardır. Bu fonlar
+              kaldıraç, türev ürünler, yoğunlaşmış portföy veya farklı piyasa
+              stratejileri kullanabilir. Serbest fonlarda getiri potansiyeli
+              yüksek olabilir; ancak risk yapısı standart fonlara göre daha
+              karmaşık olabilir. Bu nedenle serbest fonlar incelenirken fonun
+              izahnamesi, stratejisi, geçmiş dalgalanması ve yatırımcı profiline
+              uygunluğu dikkatle değerlendirilmelidir.
+            </p>
+
+            <h3 className="pt-3 text-xl font-bold text-zinc-900">
+              TEFAS Verileri Neden Önemlidir?
+            </h3>
+
+            <p>
+              TEFAS, yatırım fonlarının karşılaştırılabilmesi açısından önemli
+              bir veri kaynağıdır. Fon fiyatı, günlük getiri, dönemsel getiri,
+              portföy dağılımı, fon büyüklüğü, yatırımcı sayısı ve risk değeri
+              gibi bilgiler yatırımcıya fonu daha şeffaf şekilde inceleme imkânı
+              verir. Bir fonun yalnızca son gün getirisine bakmak yanıltıcı
+              olabilir. Haftalık, aylık, üç aylık, altı aylık ve yıllık
+              performans birlikte değerlendirildiğinde fonun piyasa koşullarına
+              nasıl tepki verdiği daha net görülebilir.
+            </p>
+
+            <p>
+              Fon seçerken TEFAS verileri üzerinden benzer kategorideki fonları
+              karşılaştırmak daha sağlıklı olur. Örneğin bir para piyasası fonu
+              ile hisse senedi fonunu aynı getiri beklentisiyle değerlendirmek
+              doğru değildir. Aynı şekilde serbest fonların risk ve strateji
+              yapısı klasik fonlardan farklı olabilir. Bu nedenle karşılaştırma
+              yapılırken fonların aynı kategori içinde incelenmesi gerekir.
+              Fonun geçmiş performansı gelecek getirisini garanti etmez; ancak
+              fon yönetiminin farklı piyasa koşullarında nasıl sonuç ürettiğini
+              görmek açısından fikir verebilir.
+            </p>
+
+            <h3 className="pt-3 text-xl font-bold text-zinc-900">
+              Fon Seçerken Dikkat Edilecek Noktalar
+            </h3>
+
+            <p>
+              Fon seçiminde ilk adım yatırımcının kendi risk profilini
+              belirlemesidir. Kısa vadede nakit ihtiyacı olan bir yatırımcı ile
+              uzun vadeli büyüme hedefleyen bir yatırımcının aynı fonu tercih
+              etmesi doğru olmayabilir. Risk seviyesi düşük ürünler daha sakin
+              bir getiri yapısı sunarken, yüksek riskli fonlarda kısa vadeli
+              dalgalanmalar daha belirgin olabilir. Bu nedenle yatırım süresi,
+              beklenen getiri, risk toleransı ve portföy çeşitlendirmesi birlikte
+              düşünülmelidir.
+            </p>
+
+            <p>
+              Yönetim ücreti, fon büyüklüğü, yatırımcı sayısı, portföy
+              yoğunlaşması, likidite durumu ve fonun yatırım stratejisi de
+              önemli başlıklardır. Çok kısa sürede yüksek getiri sağlamış bir
+              fon, her zaman en uygun fon anlamına gelmez. Bazen yüksek getiri
+              yüksek risk alınarak elde edilmiş olabilir. Bu yüzden fonun sadece
+              kazandırdığı döneme değil, dalgalı piyasalarda nasıl hareket
+              ettiğine de bakılmalıdır.
+            </p>
+
+            <p>
+              Bu sayfada yer alan fon içerikleri, yatırım fonlarını daha düzenli
+              takip etmeye yardımcı olmak amacıyla hazırlanır. Fon getiri
+              ekranları, tarihsel veriler, haftalık fon tercihleri ve kapanış
+              etki analizleri yatırımcıya ek bakış açısı sunabilir. Ancak burada
+              yer alan hiçbir içerik kişisel yatırım danışmanlığı kapsamında
+              değildir. Yatırım kararı vermeden önce fon izahnamesi, TEFAS
+              verileri, risk bildirimi ve kendi finansal durumunuz mutlaka
+              dikkate alınmalıdır.
+            </p>
+
+            <p className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+              Bu sayfada yer alan bilgiler genel bilgilendirme amacı taşır.
+              Fonların geçmiş getirileri gelecekte aynı performansın
+              gerçekleşeceği anlamına gelmez. Yatırım kararları kişisel risk
+              profiline, vade beklentisine ve finansal duruma göre verilmelidir.
             </p>
           </div>
         </section>

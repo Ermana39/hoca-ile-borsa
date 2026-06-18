@@ -3,7 +3,7 @@ import { notFound, redirect } from "next/navigation";
 import HaberArsiv from "@/components/HaberArsiv";
 import { getAllNews, getToplamSayfa } from "@/lib/haberler";
 
-export const revalidate = 86400;
+export const revalidate = false;
 export const dynamicParams = true;
 
 const SITE = "https://www.hocaileborsa.com";

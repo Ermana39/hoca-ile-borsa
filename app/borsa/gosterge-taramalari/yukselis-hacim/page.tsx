@@ -8,7 +8,7 @@ export const metadata = {
     "Yükseliş Trendi + Hacim Artışına göre al sinyali üreten Borsa İstanbul hisselerini inceleyin. Fiyat 233,144,89,55,21,13 ve 5 üstsel MOV hareketli ortalaması üzeri, hacim son 3 günlük ortalaması son 21 günlük ortalamasının üzerinde",
 };
 
-export const revalidate = 86400;
+export const revalidate = false;
 
 type JsonRow = Record<string, string | number | null>;
 

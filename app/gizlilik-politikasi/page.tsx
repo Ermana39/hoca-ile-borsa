@@ -79,31 +79,13 @@ export default function GizlilikPolitikasiPage() {
           </p>
 
           <h2 className="text-xl font-semibold text-zinc-900">
-            6. Google AdSense, reklamlar ve çerezler
+            6. Google AdSense reklamları
           </h2>
           <p>
             hocaileborsa.com üzerinde Google AdSense reklamları yayınlanabilir.
-            Google dahil olmak üzere üçüncü taraf reklam sağlayıcıları,
-            kullanıcıların bu siteye veya internetteki diğer sitelere yaptığı
-            önceki ziyaretlere dayanarak reklam göstermek için çerezler
-            kullanabilir.
-          </p>
-          <p>
-            Google’ın reklam çerezleri kullanması, Google ve iş ortaklarının
-            kullanıcılara bu siteyi ve/veya internetteki diğer siteleri
-            ziyaretlerine göre reklam sunmasına yardımcı olabilir.
-          </p>
-          <p>
-            Kullanıcılar, Google reklam ayarları üzerinden kişiselleştirilmiş
-            reklamları devre dışı bırakabilir. Ayrıca kullanıcılar tarayıcı
-            ayarları üzerinden çerezleri silebilir, engelleyebilir veya çerez
-            kullanımına ilişkin tercihlerini değiştirebilir.
-          </p>
-          <p>
-            Üçüncü taraf reklam sağlayıcıları veya reklam ağları da bu sitede
-            reklam sunarken çerez, web işaretçisi veya benzeri teknolojiler
-            kullanabilir. Bu sağlayıcıların topladığı veriler, ilgili üçüncü
-            tarafların kendi gizlilik politikalarına tabidir.
+            Google, reklamların gösterilmesi, reklam performansının ölçülmesi ve
+            reklam deneyiminin iyileştirilmesi amacıyla çerezler ve benzeri
+            teknolojiler kullanabilir.
           </p>
 
           <h2 className="text-xl font-semibold text-zinc-900">7. Çerez kullanımı</h2>
@@ -118,14 +100,48 @@ export default function GizlilikPolitikasiPage() {
             reklamların çalışma şeklini etkileyebilir.
           </p>
 
-          <h2 className="text-xl font-semibold text-zinc-900">8. Haklarınız</h2>
+          <h2 className="text-xl font-semibold text-zinc-900">
+            8. Üçüncü taraf reklam sağlayıcıları
+          </h2>
+          <p>
+            Google dahil olmak üzere üçüncü taraf reklam sağlayıcıları ve reklam
+            ağları, kullanıcıların bu siteye veya internetteki diğer sitelere
+            yaptığı önceki ziyaretlere dayanarak reklam göstermek için çerez,
+            web işaretçisi veya benzeri teknolojiler kullanabilir.
+          </p>
+          <p>
+            Bu sağlayıcıların topladığı veriler, ilgili üçüncü tarafların kendi
+            gizlilik politikalarına tabidir.
+          </p>
+
+          <h2 className="text-xl font-semibold text-zinc-900">
+            9. Kişiselleştirilmiş reklamlar
+          </h2>
+          <p>
+            Google’ın reklam çerezleri kullanması, Google ve iş ortaklarının
+            kullanıcılara bu siteyi ve/veya internetteki diğer siteleri
+            ziyaretlerine göre kişiselleştirilmiş reklam sunmasına yardımcı
+            olabilir.
+          </p>
+
+          <h2 className="text-xl font-semibold text-zinc-900">
+            10. Reklam tercihlerini yönetme
+          </h2>
+          <p>
+            Kullanıcılar, Google reklam ayarları üzerinden kişiselleştirilmiş
+            reklamları devre dışı bırakabilir. Ayrıca kullanıcılar tarayıcı
+            ayarları üzerinden çerezleri silebilir, engelleyebilir veya çerez
+            kullanımına ilişkin tercihlerini değiştirebilir.
+          </p>
+
+          <h2 className="text-xl font-semibold text-zinc-900">11. Haklarınız</h2>
           <p>
             KVKK kapsamındaki başvuru haklarınız doğrultusunda; verinizin işlenip
             işlenmediğini öğrenme, düzeltme, silme, aktarıldığı kişileri öğrenme
             ve itiraz etme haklarınızı kullanabilirsiniz.
           </p>
 
-          <h2 className="text-xl font-semibold text-zinc-900">9. Finansal içerik uyarısı</h2>
+          <h2 className="text-xl font-semibold text-zinc-900">12. Finansal içerik uyarısı</h2>
           <p>
             Bu site üzerinde yer alan finansal içerikler, haberler, analizler,
             tablolar ve hesaplama araçları bilgilendirme amacıyla hazırlanır.
@@ -133,7 +149,7 @@ export default function GizlilikPolitikasiPage() {
             değerlendirilmemelidir.
           </p>
 
-          <h2 className="text-xl font-semibold text-zinc-900">10. Başvuru</h2>
+          <h2 className="text-xl font-semibold text-zinc-900">13. Başvuru</h2>
           <p>
             Gizlilik, çerezler ve kişisel veri talepleriniz için
             destekhocaileborsa@gmail.com adresine e-posta gönderebilirsiniz.
