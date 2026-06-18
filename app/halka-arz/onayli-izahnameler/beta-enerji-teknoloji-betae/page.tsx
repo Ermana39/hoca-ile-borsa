@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   title:
     "Beta Enerji ve Teknoloji A.Ş. Halka Arz Detayları 2026 | Güncel Talep Toplama Tarihleri",
   description:
-    "Beta Enerji ve Teknoloji A.Ş. halka arzında yeni talep toplama tarihleri belli oldu. BETAE halka arzı 23-25 Haziran 2026 tarihlerinde 40,00 TL sabit fiyatla talep toplayacak.",
+    "Beta Enerji ve Teknoloji A.Ş. halka arzında yeni talep toplama tarihleri belli oldu. BETAE halka arzı 23-24-25 Haziran 2026 tarihlerinde 40,00 TL sabit fiyatla talep toplayacak.",
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/halka-arz/onayli-izahnameler/beta-enerji-teknoloji-betae",
@@ -27,7 +27,7 @@ function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "buyuk" }) {
 
 export default function BetaEnerjiVeTeknolojiASPage() {
   const summaryItems = [
-    { label: "Talep Toplama Tarihi", value: "23-25 Haziran 2026" },
+    { label: "Talep Toplama Tarihi", value: "23-24-25 Haziran 2026" },
     { label: "Saat", value: "09.00 - 17.00" },
     { label: "Halka Arz Fiyatı", value: "40,00 TL" },
     { label: "İskonto Oranı", value: "%20,45" },
@@ -234,8 +234,8 @@ export default function BetaEnerjiVeTeknolojiASPage() {
   const oneCikanlar = [
     {
       title: "Talep Toplama",
-      value: "23-25 Haziran",
-      desc: "Beta Enerji ve Teknoloji A.Ş. halka arzında güncel talep toplama tarihleri 23-25 Haziran 2026 olarak açıklandı.",
+      value: "23-24-25 Haziran",
+      desc: "Beta Enerji ve Teknoloji A.Ş. halka arzında güncel talep toplama tarihleri 23-24-25 Haziran 2026 olarak açıklandı.",
     },
     {
       title: "Katılım Endeksi",
@@ -296,7 +296,7 @@ export default function BetaEnerjiVeTeknolojiASPage() {
               <div className="grid grid-cols-2 gap-3 md:min-w-[300px]">
                 <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
                   <div className="text-xs text-blue-100">Talep Toplama</div>
-                  <div className="mt-1 text-lg font-bold">23-25 Haziran</div>
+                  <div className="mt-1 text-lg font-bold">23-24-25 Haziran</div>
                 </div>
                 <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
                   <div className="text-xs text-blue-100">Fiyat</div>
@@ -421,7 +421,7 @@ export default function BetaEnerjiVeTeknolojiASPage() {
               </div>
               <p className="mt-2 text-sm leading-6 text-slate-600">
                 Daha önce ertelenen Beta Enerji halka arzında yeni talep toplama
-                tarihleri 23-25 Haziran 2026 olarak açıklandı. Halka arz 3 iş
+                tarihleri 23-24-25 Haziran 2026 olarak açıklandı. Halka arz 3 iş
                 günü sürecek.
               </p>
             </div>
@@ -507,7 +507,7 @@ export default function BetaEnerjiVeTeknolojiASPage() {
                     Talep Toplama Tarihleri
                   </div>
                   <p className="mt-2 text-lg font-bold text-emerald-950">
-                    23-25 Haziran 2026
+                    23-24-25 Haziran 2026
                   </p>
                   <p className="mt-1 text-sm text-emerald-900">
                     Salı - Çarşamba - Perşembe
@@ -748,7 +748,7 @@ export default function BetaEnerjiVeTeknolojiASPage() {
               </h2>
               <p className="text-sm leading-7 text-slate-600">
                 Beta Enerji ve Teknoloji A.Ş. halka arzında güncel talep
-                toplama tarihleri 23-25 Haziran 2026 olarak açıklandı. Halka arz
+                toplama tarihleri 23-24-25 Haziran 2026 olarak açıklandı. Halka arz
                 fiyatı 40,00 TL, toplam halka arz payı 60.750.000 lot ve tahmini
                 halka arz büyüklüğü 2,43 milyar TL seviyesindedir. Halka açıklık
                 oranının yüzde 15 olması sınırlı arz etkisini gündeme

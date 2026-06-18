@@ -109,10 +109,8 @@ export default function HalkaArzPage() {
           </Link>
         </section>
 
-
         {/* SEO Açıklama Bölümü */}
         <section className="mt-12 space-y-8">
-
           {/* Halka Arz Nedir */}
           <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-6 md:p-8">
             <h2 className="mb-4 text-xl font-bold text-zinc-900 md:text-2xl">
@@ -148,41 +146,7 @@ export default function HalkaArzPage() {
                 <span className="mt-1 text-blue-500">•</span>
                 <span><strong>Tavan Serisi Takibi:</strong> İşlem görmeye başlayan halka arzlarda tavan sayısı, güncel getiri ve son durumu takip edin.</span>
               </li>
-              <li className="flex items-start gap-2">
-                <span className="mt-1 text-blue-500">•</span>
-                <span><strong>Kurum Verilerini Takip Edin:</strong> Aracı kurum alım-satım verilerini analiz ederek piyasa eğilimini değerlendirin.</span>
-              </li>
             </ul>
-          </div>
-
-          {/* Aracı Kurum Verileri */}
-          <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-6 md:p-8">
-            <h2 className="mb-4 text-xl font-bold text-zinc-900 md:text-2xl">
-              Aracı Kurum Verileri Ne Anlama Gelir?
-            </h2>
-            <p className="mb-4 text-zinc-700 leading-relaxed">
-              Halka arz sonrasında aracı kurumların alım-satım verileri, hissenin piyasadaki arz-talep dengesi hakkında önemli ipuçları verir. Bu veriler Borsa İstanbul&apos;un açıkladığı resmi işlem raporlarından derlenmektedir.
-            </p>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-              <div className="rounded-xl border border-green-200 bg-green-50 p-4">
-                <h3 className="mb-2 font-semibold text-green-800">En Çok Alıcı Kurumlar</h3>
-                <p className="text-sm text-zinc-700">
-                  Net alım yapan kurumlar, hisseye olan kurumsal talebi gösterir. Güçlü kurumsal alım, hisse için olumlu bir sinyal olarak değerlendirilebilir.
-                </p>
-              </div>
-              <div className="rounded-xl border border-red-200 bg-red-50 p-4">
-                <h3 className="mb-2 font-semibold text-red-800">En Çok Satıcı Kurumlar</h3>
-                <p className="text-sm text-zinc-700">
-                  Net satış yapan kurumlar, piyasaya arz baskısının nereden geldiğini ortaya koyar. Yoğun kurumsal satış, kısa vadeli fiyat baskısına işaret edebilir.
-                </p>
-              </div>
-              <div className="rounded-xl border border-blue-200 bg-blue-50 p-4">
-                <h3 className="mb-2 font-semibold text-blue-800">En Çok İşlem Yapan Kurumlar</h3>
-                <p className="text-sm text-zinc-700">
-                  Toplam işlem hacmine göre sıralanan kurumlar, hissede en aktif olan aracı kurumları gösterir. Yüksek hacimli kurumların pozisyon yönü önem taşır.
-                </p>
-              </div>
-            </div>
           </div>
 
           {/* Sık Sorulan Sorular */}
@@ -225,7 +189,6 @@ export default function HalkaArzPage() {
               </div>
             </div>
           </div>
-
         </section>
       </div>
     </main>
