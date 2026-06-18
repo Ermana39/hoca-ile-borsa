@@ -19,12 +19,12 @@ export const metadata: Metadata = {
 };
 
 const rows: FonEtkiRow[] = [
-  { sembol: "DSTKF", fonOrani: 16.41, kapanisMarji: 7.06, etki: 1.1585 },
+  { sembol: "DSTKF", fonOrani: 16.41, kapanisMarji: 7.06, etki: 1.1578 },
   { sembol: "OZATD", fonOrani: 15.9, kapanisMarji: -10.0, etki: -1.59 },
-  { sembol: "TERA", fonOrani: 10.65, kapanisMarji: 0.8, etki: 0.0852 },
-  { sembol: "PEKGY", fonOrani: 9.16, kapanisMarji: -0.6, etki: -0.055 },
-  { sembol: "TRHOL", fonOrani: 6.11, kapanisMarji: -2.18, etki: -0.1332 },
-  { sembol: "TEHOL", fonOrani: 5.1, kapanisMarji: 5.5, etki: 0.2805 },
+  { sembol: "TERA", fonOrani: 10.65, kapanisMarji: 0.8, etki: 0.0857 },
+  { sembol: "PEKGY", fonOrani: 9.16, kapanisMarji: -0.6, etki: -0.0554 },
+  { sembol: "TRHOL", fonOrani: 6.11, kapanisMarji: -2.18, etki: -0.1331 },
+  { sembol: "TEHOL", fonOrani: 5.1, kapanisMarji: 5.5, etki: 0.2803 },
   { sembol: "ANELE", fonOrani: 1.99, kapanisMarji: 1.67, etki: 0.0332 },
   { sembol: "ALKLC", fonOrani: 0.61, kapanisMarji: -0.81, etki: -0.0049 },
   { sembol: "SVGYO", fonOrani: 0.51, kapanisMarji: 0.0, etki: 0.0 },
