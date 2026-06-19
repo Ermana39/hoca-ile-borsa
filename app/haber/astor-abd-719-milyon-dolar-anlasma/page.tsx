@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "ASTOR, Amerika'da yerleşik bir şirket ile 71,9 milyon ABD doları tutarında yeni bir anlaşma imzaladı. ABD pazarına yönelik büyüme adımı detayları.",
   alternates: {
     canonical:
-      "https://www.hocaileborsa.com/borsa/dikkat-cekenler/astor-abd-719-milyon-dolar-anlasma",
+      "https://www.hocaileborsa.com/haber/astor-abd-719-milyon-dolar-anlasma",
   },
 };
 
@@ -25,10 +25,10 @@ export default function AstorAbdAnlasmaPage() {
             Ana Sayfa
           </Link>
           <Link
-            href="/borsa/dikkat-cekenler"
+            href="/haberler"
             className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
-            Geri
+            Tüm Haberler
           </Link>
         </section>
 

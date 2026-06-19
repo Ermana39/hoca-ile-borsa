@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "DERHL yönetim kurulu yüksek oranlı bedelsiz sermaye artırımı kararı aldı. Bedelsiz oranı ve yatırımcı için dikkat edilmesi gerekenler.",
   alternates: {
     canonical:
-      "https://www.hocaileborsa.com/borsa/dikkat-cekenler/derhl-bedelsiz-sermaye-artirimi",
+      "https://www.hocaileborsa.com/haber/derhl-bedelsiz-sermaye-artirimi",
   },
 };
 
@@ -25,10 +25,10 @@ export default function DerhlBedelsizPage() {
             Ana Sayfa
           </Link>
           <Link
-            href="/borsa/dikkat-cekenler"
+            href="/haberler"
             className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
-            Geri
+            Tüm Haberler
           </Link>
         </section>
 

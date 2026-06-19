@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "AKHAN, Gana'ya 34.320 ABD Doları tutarında makarna ihracatı gerçekleştirdi. Afrika pazarına yönelik yeni satış adımı detayları.",
   alternates: {
     canonical:
-      "https://www.hocaileborsa.com/borsa/dikkat-cekenler/akhan-gana-makarna-ihracati",
+      "https://www.hocaileborsa.com/haber/akhan-gana-makarna-ihracati",
   },
 };
 
@@ -25,10 +25,10 @@ export default function AkhanGanaIhracatiPage() {
             Ana Sayfa
           </Link>
           <Link
-            href="/borsa/dikkat-cekenler"
+            href="/haberler"
             className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
-            Geri
+            Tüm Haberler
           </Link>
         </section>
 

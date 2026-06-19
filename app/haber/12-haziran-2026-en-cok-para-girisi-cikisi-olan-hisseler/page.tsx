@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     "12 Haziran 2026 tarihinde Borsa İstanbul’da en çok para girişi ve para çıkışı olan hisseler, fiyat değişimleri ve günlük para akışı tablosu.",
   alternates: {
     canonical:
-      "https://www.hocaileborsa.com/borsa/dikkat-cekenler/12-haziran-2026-en-cok-para-girisi-cikisi-olan-hisseler",
+      "https://www.hocaileborsa.com/haber/12-haziran-2026-en-cok-para-girisi-cikisi-olan-hisseler",
   },
 };
 
@@ -129,11 +129,11 @@ export default function EnCokParaGirisiCikisiPage() {
           </Link>
           <span className="text-slate-300">/</span>
           <Link
-            href="/borsa/dikkat-cekenler"
+            href="/haberler"
             prefetch={false}
             className="transition hover:text-blue-600"
           >
-            Dikkat Çekenler
+            Haberler
           </Link>
           <span className="text-slate-300">/</span>
           <span className="font-medium text-slate-700">12 Haziran 2026 Para Girişi Çıkışı</span>

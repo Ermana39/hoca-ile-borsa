@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Borsa İstanbul'da işlem gören 10 şirket temettü kararlarını açıkladı. OZSUB, BASGZ ve FORTE nakit temettü planlarıyla öne çıktı.",
   alternates: {
     canonical:
-      "https://www.hocaileborsa.com/borsa/dikkat-cekenler/bist-temettu-kararlari",
+      "https://www.hocaileborsa.com/haber/bist-temettu-kararlari",
   },
 };
 
@@ -25,10 +25,10 @@ export default function BistTemettuKararlariPage() {
             Ana Sayfa
           </Link>
           <Link
-            href="/borsa/dikkat-cekenler"
+            href="/haberler"
             className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
-            Geri
+            Tüm Haberler
           </Link>
         </section>
 

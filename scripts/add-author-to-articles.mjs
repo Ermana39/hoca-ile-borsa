@@ -65,27 +65,3 @@ for (const f of haberDirs) {
     console.log("haber updated:", f);
   }
 }
-
-// --- dikkat-cekenler pages (only the ones with the standard article template) ---
-const dcDirs = readdirSync("app/borsa/dikkat-cekenler", { withFileTypes: true })
-  .filter((d) => d.isDirectory())
-  .map((d) => `app/borsa/dikkat-cekenler/${d.name}/page.tsx`);
-
-const dateLineRe = /(<p className="mt-2 text-sm text-zinc-500">)(\d{2})\.(\d{2})\.(\d{4})(<\/p>)/;
-
-for (const f of dcDirs) {
-  let src = readFileSync(f, "utf-8");
-  const m = src.match(dateLineRe);
-  if (!m || !src.includes("</article>") || !src.includes("HaberIlgiliBolumler")) continue;
-
-  const [, openTag, dd, mm, yyyy] = m;
-  src = src.replace(
-    dateLineRe,
-    `${openTag}${dd}.${mm}.${yyyy} · <Link href="/yazar/erman-hoca" className="font-semibold text-slate-600 hover:text-blue-600">Erman Hoca</Link></p>`
-  );
-
-  src = ensureImport(src);
-  src = insertAuthorBox(src);
-  writeFileSync(f, src);
-  console.log("dikkat-cekenler updated:", f);
-}

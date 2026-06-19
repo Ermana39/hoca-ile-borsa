@@ -81,11 +81,6 @@ const sayfaBasliklari: Record<string, string> = {
   "/mevduat-kredi-faizleri": "Mevduat ve Kredi Faizleri",
   "/faiz-oranlari": "Faiz Oranları",
 
-  "/borsa/dikkat-cekenler": "Dikkat Çekenler",
-  "/borsa/dikkat-cekenler/haber-1": "BIST100 Haftalık Sentiment Analizi",
-  "/borsa/dikkat-cekenler/haber-2": "Banka Hisselerinde Önemli Direnç Noktası",
-  "/borsa/dikkat-cekenler/haber-3": "BIST100 Negatif Uyumsuzluk",
-  "/borsa/dikkat-cekenler/haber-4": "Stopaj Sonrası Gerçek Getiri Analizi",
   "/borsa/dip-zirve-analizi": "Dip Zirve Analizi",
   "/borsa/egitim-videolari": "Eğitim Videoları",
   "/borsa/formasyonlar": "Formasyonlar",
@@ -275,10 +270,6 @@ function getGuncellemeAnaRoute(route: string) {
   const temizRoute = normalizePath(route);
 
   const anaRouteEslesmeleri: { prefix: string; target: string }[] = [
-    {
-      prefix: "/borsa/dikkat-cekenler/",
-      target: "/borsa/dikkat-cekenler",
-    },
     {
       prefix: "/borsa/formasyonlar/",
       target: "/borsa/formasyonlar",

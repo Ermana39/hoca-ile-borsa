@@ -11,11 +11,6 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
     updatedAt: ",30.04.2026 18:30",
   },
   {
-    title: "Dikkat Çekenler",
-    href: "/borsa/dikkat-cekenler",
-    updatedAt: "29.04.2026 22:26",
-  },
-  {
     title: "Dip Zirve Analizi",
     href: "/borsa/dip-zirve-analizi",
     updatedAt: "30.04.2026 18:30",

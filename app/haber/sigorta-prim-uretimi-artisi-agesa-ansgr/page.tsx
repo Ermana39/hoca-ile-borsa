@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "AGESA ve Anadolu Sigorta'nın 2026 yılı ilk 5 aylık prim üretimi verileri açıklandı. Sigorta sektöründe büyüme ivmesi devam ediyor.",
   alternates: {
     canonical:
-      "https://www.hocaileborsa.com/borsa/dikkat-cekenler/sigorta-prim-uretimi-artisi-agesa-ansgr",
+      "https://www.hocaileborsa.com/haber/sigorta-prim-uretimi-artisi-agesa-ansgr",
   },
 };
 
@@ -25,10 +25,10 @@ export default function SigortaPrimUretimiPage() {
             Ana Sayfa
           </Link>
           <Link
-            href="/borsa/dikkat-cekenler"
+            href="/haberler"
             className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
-            Geri
+            Tüm Haberler
           </Link>
         </section>
 

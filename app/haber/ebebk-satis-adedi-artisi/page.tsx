@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "EBEBK Mayıs 2026'da satış adedini yüzde 27 artırdı. Yılın ilk 5 ayında toplam satış 50 milyon adedi aştı.",
   alternates: {
     canonical:
-      "https://www.hocaileborsa.com/borsa/dikkat-cekenler/ebebk-satis-adedi-artisi",
+      "https://www.hocaileborsa.com/haber/ebebk-satis-adedi-artisi",
   },
 };
 
@@ -25,10 +25,10 @@ export default function EbebkSatisArtisiPage() {
             Ana Sayfa
           </Link>
           <Link
-            href="/borsa/dikkat-cekenler"
+            href="/haberler"
             className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
-            Geri
+            Tüm Haberler
           </Link>
         </section>
 

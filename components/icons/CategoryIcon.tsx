@@ -8,7 +8,6 @@ export type CategoryIconName =
   | "faiz-oranlari"
   // Borsa Analiz alt kategorileri
   | "gunluk-borsa-ozeti"
-  | "dikkat-cekenler"
   | "dip-zirve-analizi"
   | "egitim-videolari"
   | "formasyonlar"
@@ -233,21 +232,6 @@ const icons: Record<CategoryIconName, React.ReactNode> = {
         fill="none"
       />
       <circle cx="36" cy="25" r="2.4" fill={AMBER} />
-    </>
-  ),
-  "dikkat-cekenler": (
-    <>
-      <path
-        d="M24 4l5 10.2 11.2 1.6-8.1 7.9 1.9 11.2L24 29.6l-10 5.3 1.9-11.2-8.1-7.9L19 14.2 24 4z"
-        fill={AMBER}
-      />
-      <path
-        d="M24 4l5 10.2 11.2 1.6-8.1 7.9 1.9 11.2L24 29.6V4z"
-        fill={AMBER_DEEP}
-      />
-      <circle cx="9" cy="40" r="2.2" fill={BLUE_MID} />
-      <circle cx="40" cy="39" r="2.8" fill={BLUE} />
-      <circle cx="42" cy="8" r="2" fill={BLUE_SOFT} />
     </>
   ),
   "dip-zirve-analizi": (

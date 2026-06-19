@@ -143,9 +143,9 @@ export default function TemettuPage() {
         <section className="rounded-2xl border border-blue-100 bg-blue-50 p-5">
           <p className="mb-2 text-sm font-semibold text-zinc-900 md:text-base">Güncel temettü ve sermaye kararlarını takip edin:</p>
           <div className="flex flex-wrap gap-2">
-            <Link href="/borsa/dikkat-cekenler/bist-temettu-kararlari" prefetch={false} className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-700 hover:bg-blue-50 md:text-sm">10 Şirketten Temettü Kararı <span aria-hidden>→</span></Link>
-            <Link href="/borsa/dikkat-cekenler/derhl-bedelsiz-sermaye-artirimi" prefetch={false} className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-700 hover:bg-blue-50 md:text-sm">DERHL Bedelsiz Sermaye Artırımı <span aria-hidden>→</span></Link>
-            <Link href="/borsa/dikkat-cekenler" prefetch={false} className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-700 hover:bg-blue-50 md:text-sm">Tüm Dikkat Çekenler <span aria-hidden>→</span></Link>
+            <Link href="/haber/bist-temettu-kararlari" prefetch={false} className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-700 hover:bg-blue-50 md:text-sm">10 Şirketten Temettü Kararı <span aria-hidden>→</span></Link>
+            <Link href="/haber/derhl-bedelsiz-sermaye-artirimi" prefetch={false} className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-700 hover:bg-blue-50 md:text-sm">DERHL Bedelsiz Sermaye Artırımı <span aria-hidden>→</span></Link>
+            <Link href="/haberler" prefetch={false} className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-white px-3 py-1.5 text-xs font-semibold text-blue-700 hover:bg-blue-50 md:text-sm">Tüm Haberler <span aria-hidden>→</span></Link>
           </div>
         </section>
 

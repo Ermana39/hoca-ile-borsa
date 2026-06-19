@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "5 Haziran 2026 tarihinde Borsa İstanbul'da NTHOL, ENERY, AHGAZ ve GLYHO pay geri alımı gerçekleştiren şirketler arasında yer aldı.",
   alternates: {
     canonical:
-      "https://www.hocaileborsa.com/borsa/dikkat-cekenler/bist-pay-geri-alim-islemleri",
+      "https://www.hocaileborsa.com/haber/bist-pay-geri-alim-islemleri",
   },
 };
 
@@ -25,10 +25,10 @@ export default function BistPayGeriAlimPage() {
             Ana Sayfa
           </Link>
           <Link
-            href="/borsa/dikkat-cekenler"
+            href="/haberler"
             className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
-            Geri
+            Tüm Haberler
           </Link>
         </section>
 

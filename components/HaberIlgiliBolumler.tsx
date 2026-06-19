@@ -130,7 +130,7 @@ const ANAHTAR_MAP: { keywords: string[]; links: IlgiliLink[] }[] = [
     keywords: ["vbts", "tedbir", "açığa satış", "kredili işlem", "volatilite"],
     links: [
       { label: "Borsa Analiz", href: "/borsa" },
-      { label: "Dikkat Çekenler", href: "/borsa/dikkat-cekenler" },
+      { label: "Tedbirli Hisseler", href: "/borsa/tedbirli-hisseler" },
     ],
   },
   {

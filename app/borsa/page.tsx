@@ -17,13 +17,6 @@ const analizKutulari = [
       "BIST 100 kapanışı, para girişi, para çıkışı, yükselenler, düşenler ve günün öne çıkan verileri tek sayfada.",
   },
   {
-    title: "Dikkat Çekenler",
-    href: "/borsa/dikkat-cekenler",
-    icon: "dikkat-cekenler" as CategoryIconName,
-    description:
-      "Gün içinde öne çıkan hisseler, dikkat çeken fiyat hareketleri ve yatırımcı ilgisinin arttığı alanlar.",
-  },
-  {
     title: "Dip Zirve Analizi",
     href: "/borsa/dip-zirve-analizi",
     icon: "dip-zirve-analizi" as CategoryIconName,

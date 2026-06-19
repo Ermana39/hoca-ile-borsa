@@ -9,7 +9,7 @@ export const metadata: Metadata = {
     "Altınay Savunma Teknolojileri kayıtlı sermaye tavanını 1 milyar TL'den 5 milyar TL'ye çıkardı. Geçerlilik tarihi 31 Aralık 2030.",
   alternates: {
     canonical:
-      "https://www.hocaileborsa.com/borsa/dikkat-cekenler/altny-kayitli-sermaye-tavani-artisi",
+      "https://www.hocaileborsa.com/haber/altny-kayitli-sermaye-tavani-artisi",
   },
 };
 
@@ -25,10 +25,10 @@ export default function AltnySermayeTavaniPage() {
             Ana Sayfa
           </Link>
           <Link
-            href="/borsa/dikkat-cekenler"
+            href="/haberler"
             className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
-            Geri
+            Tüm Haberler
           </Link>
         </section>
 
