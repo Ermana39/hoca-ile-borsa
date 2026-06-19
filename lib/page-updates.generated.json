@@ -1,11 +1,11 @@
 {
   "version": 10,
-  "generatedAt": "2026-06-19T14:20:26.206Z",
+  "generatedAt": "2026-06-19T15:52:19.590Z",
   "pages": [
     {
       "route": "/",
-      "updatedAt": "2026-06-19T16:04:03+03:00",
-      "signature": "1d8fe276073e87d5814f5a23d19c40f398666b1d26dcb4db1dee754794f0dc2e",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "d1874f16ad2df867f32c32c8fb7e5572661a2aa89c942d30574f56212f298a2d",
       "file": "app/page.tsx",
       "trackedFiles": [
         "app/page.tsx",
@@ -28,8 +28,8 @@
     },
     {
       "route": "/borsa/dip-zirve-analizi",
-      "updatedAt": "2026-06-18T19:30:39+03:00",
-      "signature": "58883ec2a683920d108d6fa00b27a89de379d7d45f720eff4ee1137c83e73bf1",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "78d78fa4523dd032f0e0d40cd454b6952582e1cf5cf1d1a0d2eef702c243c2c7",
       "file": "app/borsa/dip-zirve-analizi/page.tsx",
       "trackedFiles": [
         "app/borsa/dip-zirve-analizi/page.tsx",
@@ -85,8 +85,8 @@
     },
     {
       "route": "/borsa/geri-alim-programlari",
-      "updatedAt": "2026-06-18T19:30:39+03:00",
-      "signature": "9f5ee0db15451c9e888b873eb8589716b38c9fdf64cf6a90d4816b97ffcbd378",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "67319fd3599e415b47e005a324e741dd3cd13c8ee881fc981fceb8bfd900de88",
       "file": "app/borsa/geri-alim-programlari/page.tsx",
       "trackedFiles": [
         "app/borsa/geri-alim-programlari/page.tsx",
@@ -95,8 +95,8 @@
     },
     {
       "route": "/borsa/gosterge-taramalari",
-      "updatedAt": "2026-06-18T19:30:39+03:00",
-      "signature": "b308c95478d655141bcce25746441550c7adc7ff92c1482bcef3dadfcb6b3499",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "e90d8f6fb2a6e1ad8755b2f3612aa4cdc5813b16e40ffae6516a92d8bb18cacf",
       "file": "app/borsa/gosterge-taramalari/page.tsx",
       "trackedFiles": [
         "app/borsa/gosterge-taramalari/page.tsx",
@@ -111,91 +111,94 @@
       ]
     },
     {
-      "route": "/borsa/gosterge-taramalari/[slug]",
-      "updatedAt": "2026-06-18T13:05:51+03:00",
-      "signature": "9d54892017ea9ad34c9af0d3f9d23916177c41180654ec2d194c30e2e04f4190",
-      "file": "app/borsa/gosterge-taramalari/[slug]/page.tsx",
-      "trackedFiles": [
-        "app/borsa/gosterge-taramalari/[slug]/page.tsx"
-      ]
-    },
-    {
       "route": "/borsa/gosterge-taramalari/dusus-trendinde-olanlar",
-      "updatedAt": "2026-06-18T19:30:39+03:00",
-      "signature": "aeafa814175c80274bbb579e134208058e2d0424a945d45eaa7842d71a82f940",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "b572632761c6652967ee0f4b68574baf71854b26f53904ab246b0e6567c1d34e",
       "file": "app/borsa/gosterge-taramalari/dusus-trendinde-olanlar/page.tsx",
       "trackedFiles": [
         "app/borsa/gosterge-taramalari/dusus-trendinde-olanlar/page.tsx",
+        "lib/gosterge-taramalari.ts",
+        "lib/gosterge-tarama-seo.ts",
         "app/borsa/gosterge-taramalari/data/düsüs-trendi.xlsx"
       ]
     },
     {
       "route": "/borsa/gosterge-taramalari/guclu-trend-momentum",
-      "updatedAt": "2026-06-18T19:30:39+03:00",
-      "signature": "e3b71b4ad7e82a977747a7e670a6aee7bd99970f071d4b51ec6332d91a5c53ec",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "8477bc9d77a8a500c86f9c0958cbad1640d09f8a04c6b4e4ef7957a2cb8aa435",
       "file": "app/borsa/gosterge-taramalari/guclu-trend-momentum/page.tsx",
       "trackedFiles": [
         "app/borsa/gosterge-taramalari/guclu-trend-momentum/page.tsx",
+        "lib/gosterge-taramalari.ts",
         "app/borsa/gosterge-taramalari/data/guclu-trend-momentum.xlsx"
       ]
     },
     {
       "route": "/borsa/gosterge-taramalari/macd-al",
-      "updatedAt": "2026-06-18T19:30:39+03:00",
-      "signature": "97ae8424a87e85c84e73b47f82e5c471291ef2d71890372fc6bd4a03735305c5",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "57cf8d218052f628c9b5207fe1a0cf07b212336414f0468ec82f541f203d9a84",
       "file": "app/borsa/gosterge-taramalari/macd-al/page.tsx",
       "trackedFiles": [
         "app/borsa/gosterge-taramalari/macd-al/page.tsx",
+        "lib/gosterge-taramalari.ts",
+        "lib/gosterge-tarama-seo.ts",
         "app/borsa/gosterge-taramalari/data/macd-al.xlsx"
       ]
     },
     {
       "route": "/borsa/gosterge-taramalari/macd-sat",
-      "updatedAt": "2026-06-18T19:30:39+03:00",
-      "signature": "e5eeb3ec23b9f580b32717451c27786507016d9dd4ac259d9f926fde47a8a29f",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "0ff202bfcc3fb7264dacad8ccad8cbde7b8cd16db1c88c9d211e076aae374e2e",
       "file": "app/borsa/gosterge-taramalari/macd-sat/page.tsx",
       "trackedFiles": [
         "app/borsa/gosterge-taramalari/macd-sat/page.tsx",
+        "lib/gosterge-taramalari.ts",
+        "lib/gosterge-tarama-seo.ts",
         "app/borsa/gosterge-taramalari/data/macd-sat.xlsx"
       ]
     },
     {
       "route": "/borsa/gosterge-taramalari/rsi40-alti",
-      "updatedAt": "2026-06-18T19:30:39+03:00",
-      "signature": "ed20d1455c90cc0ac1b99efef3dc5b8d0cf13c9f34bdd5d62b9eae71fcd6297f",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "5a9f628bda8de778ca4c75c1a65ac402601b288c73f6f809cbb9fc1cd9cbf399",
       "file": "app/borsa/gosterge-taramalari/rsi40-alti/page.tsx",
       "trackedFiles": [
         "app/borsa/gosterge-taramalari/rsi40-alti/page.tsx",
+        "lib/gosterge-taramalari.ts",
         "app/borsa/gosterge-taramalari/data/rsi40-alti.xlsx"
       ]
     },
     {
       "route": "/borsa/gosterge-taramalari/rsi70-ustu",
-      "updatedAt": "2026-06-18T19:30:39+03:00",
-      "signature": "0521be7d3446a506e73c20531fb25f0d623f67c1ed84a2c1d34b934902bb9791",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "ff57b009c26f7b57125612d0d26515428545f7bd83f76f7e9e317c39f25ec563",
       "file": "app/borsa/gosterge-taramalari/rsi70-ustu/page.tsx",
       "trackedFiles": [
         "app/borsa/gosterge-taramalari/rsi70-ustu/page.tsx",
+        "lib/gosterge-taramalari.ts",
         "app/borsa/gosterge-taramalari/data/rsi70-ustu.xlsx"
       ]
     },
     {
       "route": "/borsa/gosterge-taramalari/yukselis-hacim",
-      "updatedAt": "2026-06-18T19:30:39+03:00",
-      "signature": "c8d5c496c6097666eaaa62422a30744ae9f07bcc8fb464f85f9143146986b840",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "7181498bc265a2b26d48b0072fd886a9d00c2b41e8cf6313977889677aab5c01",
       "file": "app/borsa/gosterge-taramalari/yukselis-hacim/page.tsx",
       "trackedFiles": [
         "app/borsa/gosterge-taramalari/yukselis-hacim/page.tsx",
+        "lib/gosterge-taramalari.ts",
         "app/borsa/gosterge-taramalari/data/yükselis-hacim.xlsx"
       ]
     },
     {
       "route": "/borsa/gosterge-taramalari/yukselis-trendinde-olanlar",
-      "updatedAt": "2026-06-18T19:30:39+03:00",
-      "signature": "ccbaa0c196987d764b9bf664ca12ee6d64c57876ca42f9f5b85ea1700938ac64",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "19b1db96c0ea8ce5f9b086d53ee0f493875ee9def25e8983146f22b454be2060",
       "file": "app/borsa/gosterge-taramalari/yukselis-trendinde-olanlar/page.tsx",
       "trackedFiles": [
         "app/borsa/gosterge-taramalari/yukselis-trendinde-olanlar/page.tsx",
+        "lib/gosterge-taramalari.ts",
+        "lib/gosterge-tarama-seo.ts",
         "app/borsa/gosterge-taramalari/data/Yükselis-trendi.xlsx"
       ]
     },
@@ -1004,8 +1007,8 @@
     },
     {
       "route": "/borsa/oran-analizi",
-      "updatedAt": "2026-06-18T19:30:39+03:00",
-      "signature": "26f9326b3a8b9d971067cac540539d3fbcd5f554e38de5e125bf6ec07a191eb0",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "3163be876dd4aa4dc5d4285419e6b426b53ef8e1e7a3e77d6aa475d3a5feca0d",
       "file": "app/borsa/oran-analizi/page.tsx",
       "trackedFiles": [
         "app/borsa/oran-analizi/page.tsx",
@@ -1023,8 +1026,8 @@
     },
     {
       "route": "/borsa/pivot-analizi",
-      "updatedAt": "2026-06-18T19:30:39+03:00",
-      "signature": "7c3b1e481bf4e8ad1ecccf86b1170c62c83b7991d28334bb9984a1565e0f476c",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "23f96dfb89480260da558019ffadfb976e398bfd485f81f76aeb1809df96b057",
       "file": "app/borsa/pivot-analizi/page.tsx",
       "trackedFiles": [
         "app/borsa/pivot-analizi/page.tsx"
@@ -1041,8 +1044,8 @@
     },
     {
       "route": "/borsa/tedbirli-hisseler",
-      "updatedAt": "2026-06-18T19:30:39+03:00",
-      "signature": "a4db86f1ac395c9bea209b06cf9ae1f639d236f996fe17484df6ff1428de6dcd",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "49b56ab0023d490b6d1e2b56d2f78a4505667f190172b1bae4d0961be61ffb18",
       "file": "app/borsa/tedbirli-hisseler/page.tsx",
       "trackedFiles": [
         "app/borsa/tedbirli-hisseler/page.tsx",
@@ -1051,8 +1054,8 @@
     },
     {
       "route": "/borsa/yeni-is-anlasmalari",
-      "updatedAt": "2026-06-18T19:30:39+03:00",
-      "signature": "fce775faa35b6404695c2e6b636aa124bd753a6988b3edbeda6b141246843761",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "276fb2f056d5b569ed742b7efa54d6628dde789ae54030a65d92a7f5ec805d67",
       "file": "app/borsa/yeni-is-anlasmalari/page.tsx",
       "trackedFiles": [
         "app/borsa/yeni-is-anlasmalari/page.tsx",
@@ -1088,8 +1091,8 @@
     },
     {
       "route": "/fonlar/etki-analizi/dfi",
-      "updatedAt": "2026-06-18T20:10:46+03:00",
-      "signature": "971bb664f25d4820caa6607678452d2a5762ab711db1a0455c884a939c9799f5",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "849773df04917c6489bc4f12b62e0f939168b298b25256c311091206b8b61872",
       "file": "app/fonlar/etki-analizi/dfi/page.tsx",
       "trackedFiles": [
         "app/fonlar/etki-analizi/dfi/page.tsx"
@@ -1097,8 +1100,8 @@
     },
     {
       "route": "/fonlar/etki-analizi/pbr",
-      "updatedAt": "2026-06-18T20:10:46+03:00",
-      "signature": "711263b862cacc5d6a1d0f5d8d64ac54353759374ec66709f0dc1bc7ce6342f1",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "e5f7e2863c9299f0f03554e4a4783e20e778aebe4da25820e71f7b90b5f2dbcf",
       "file": "app/fonlar/etki-analizi/pbr/page.tsx",
       "trackedFiles": [
         "app/fonlar/etki-analizi/pbr/page.tsx"
@@ -1106,8 +1109,8 @@
     },
     {
       "route": "/fonlar/etki-analizi/phe",
-      "updatedAt": "2026-06-18T20:10:46+03:00",
-      "signature": "a8af6f67e46ac5cc6752c655bde2e68fec8414b69c4ca55c2a68a3bb85be431d",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "91b76ebe04af32246f1ca1b64f25e742449cf8d5e2d328e6ecde1868a07d2928",
       "file": "app/fonlar/etki-analizi/phe/page.tsx",
       "trackedFiles": [
         "app/fonlar/etki-analizi/phe/page.tsx"
@@ -1115,8 +1118,8 @@
     },
     {
       "route": "/fonlar/etki-analizi/tly",
-      "updatedAt": "2026-06-18T20:10:46+03:00",
-      "signature": "87a8ca4274d02e58d1ce18bd79ddd30e0db726c2f279de4b1955354745d3ffe4",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "b8e30c95109ead391e992eecddcfa3e11c3695ba7594dc4b057de558473d38ff",
       "file": "app/fonlar/etki-analizi/tly/page.tsx",
       "trackedFiles": [
         "app/fonlar/etki-analizi/tly/page.tsx"
@@ -1163,8 +1166,8 @@
     },
     {
       "route": "/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler",
-      "updatedAt": "2026-06-18T19:30:39+03:00",
-      "signature": "4c0e3712769fda23acb9834220355306e5d02ad6ff8e8c51f032ef82faaee90b",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "b4dea48c87b137e2bae2eb4d780106af723a6492d44aa828622662f1073abbbc",
       "file": "app/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler/page.tsx",
       "trackedFiles": [
         "app/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler/page.tsx",
@@ -1463,6 +1466,15 @@
       ]
     },
     {
+      "route": "/haber/kordsa-kocaeli-iki-tasinmaz-satisi-800-milyon-tl",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "c1efc2a9f21e098d1dafdabbd47123f97c34c4b1bed915cf3999049b6334cbe6",
+      "file": "app/haber/kordsa-kocaeli-iki-tasinmaz-satisi-800-milyon-tl/page.tsx",
+      "trackedFiles": [
+        "app/haber/kordsa-kocaeli-iki-tasinmaz-satisi-800-milyon-tl/page.tsx"
+      ]
+    },
+    {
       "route": "/haber/midas-odeme-sistemleri-isine-giriyor",
       "updatedAt": "2026-06-19T16:04:03+03:00",
       "signature": "1e4e4fda64f1b9a4fedc7db0063a412ac8896d6c382d40f9558a6086d436063e",
@@ -1682,8 +1694,8 @@
     },
     {
       "route": "/halka-arz/tavan-serisi",
-      "updatedAt": "2026-06-18T22:32:36+03:00",
-      "signature": "12038d698d32d4c96a817be9a580b027e0c62be3bf6ef78b0e8c6ed02ef3649d",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "8ec0c2332dcd1e4fd3f76b132f26052d64ecea8966b90ce182d215c82d90e505",
       "file": "app/halka-arz/tavan-serisi/page.tsx",
       "trackedFiles": [
         "app/halka-arz/tavan-serisi/page.tsx"
@@ -1887,7 +1899,7 @@
     },
     {
       "route": "/rehberler",
-      "updatedAt": "2026-06-19T14:19:17.341Z",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
       "signature": "9026362d958175f2996c1e3f8809d9051b6832176a6e3aea54a833bf593acada",
       "file": "app/rehberler/page.tsx",
       "trackedFiles": [
@@ -1897,8 +1909,8 @@
     },
     {
       "route": "/rehberler/bilanco-nasil-okunur",
-      "updatedAt": "2026-06-19T14:20:12.075Z",
-      "signature": "2bcea44598d420568177308aff0f9f2f2c89b9b7006525143055c580eea69ced",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "da778fd18bca0ab968cdf0710e24b96211eee057fb4d3ff6dff8ae1d260122d2",
       "file": "app/rehberler/bilanco-nasil-okunur/page.tsx",
       "trackedFiles": [
         "app/rehberler/bilanco-nasil-okunur/page.tsx"
@@ -1906,8 +1918,8 @@
     },
     {
       "route": "/rehberler/brut-takas-nedir",
-      "updatedAt": "2026-06-19T14:20:12.076Z",
-      "signature": "f4d1e0741f160326e024fb7d2c66c4c129eddb1917cebf126500a44b4e7ecc6b",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "590f59ebc862d7c85257210431a5be491909bcafce0388c13b14477dd6c6c344",
       "file": "app/rehberler/brut-takas-nedir/page.tsx",
       "trackedFiles": [
         "app/rehberler/brut-takas-nedir/page.tsx"
@@ -1915,8 +1927,8 @@
     },
     {
       "route": "/rehberler/devre-kesici-nedir",
-      "updatedAt": "2026-06-19T14:20:12.078Z",
-      "signature": "ca7d372ecca7a5157b180edad564af1629993e91549b359310f534c0ce92dd0c",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "12d3a3f73d2fe740bdbce18c99f3128830b7d8443d4012ecf389a2db028ef820",
       "file": "app/rehberler/devre-kesici-nedir/page.tsx",
       "trackedFiles": [
         "app/rehberler/devre-kesici-nedir/page.tsx"
@@ -1924,8 +1936,8 @@
     },
     {
       "route": "/rehberler/fk-pddd-fdfavok-nedir",
-      "updatedAt": "2026-06-19T14:20:12.080Z",
-      "signature": "f7c1ae851c4697787e41351760fa87a1cb30f2323316ff8c3b203c03c4da598c",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "7d918ec89a58fbbf0f3501a6baafc2382be34433f2703c2a9120abcb48c3ae75",
       "file": "app/rehberler/fk-pddd-fdfavok-nedir/page.tsx",
       "trackedFiles": [
         "app/rehberler/fk-pddd-fdfavok-nedir/page.tsx"
@@ -1933,8 +1945,8 @@
     },
     {
       "route": "/rehberler/halka-arz-nedir",
-      "updatedAt": "2026-06-19T14:20:12.081Z",
-      "signature": "b82d4fd9447b5c06d279fbc880f254268b45374a7d38a156cc81b99685f94efc",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "60a713ed1a28481ee3704bc2fcd2a6522605d73cd07f2b06819d61927f155154",
       "file": "app/rehberler/halka-arz-nedir/page.tsx",
       "trackedFiles": [
         "app/rehberler/halka-arz-nedir/page.tsx"
@@ -1942,8 +1954,8 @@
     },
     {
       "route": "/rehberler/kap-aciklamalari-nasil-okunur",
-      "updatedAt": "2026-06-19T14:20:12.083Z",
-      "signature": "63fe40da87ddbb06731e57915524f497077fb55f8088bedd470db422528e2352",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "b890c9db733a18f9fff63864b9f8614cb3746a63ee446f6dced8bc8de5b9f503",
       "file": "app/rehberler/kap-aciklamalari-nasil-okunur/page.tsx",
       "trackedFiles": [
         "app/rehberler/kap-aciklamalari-nasil-okunur/page.tsx"
@@ -1951,8 +1963,8 @@
     },
     {
       "route": "/rehberler/katilim-endeksi",
-      "updatedAt": "2026-06-19T14:20:12.084Z",
-      "signature": "c050e026f3a45cfdde275af9790d7965b4e9bd340284e891aad643a00901af98",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "d8bf22a7e8ce4fd9f7b5f07472549a322306ea063817d364eca03a430e58ced6",
       "file": "app/rehberler/katilim-endeksi/page.tsx",
       "trackedFiles": [
         "app/rehberler/katilim-endeksi/page.tsx"
@@ -1960,8 +1972,8 @@
     },
     {
       "route": "/rehberler/pay-geri-alim-programi-nedir",
-      "updatedAt": "2026-06-19T14:20:12.085Z",
-      "signature": "406e1af2f61c9b11f5f4a66c07639abc2b2c7201699b7921f918b8a3196b036e",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "340d7a2acbf3161961a9b5ae314929a5254bf482ba1936f4e16c5b558ebacae0",
       "file": "app/rehberler/pay-geri-alim-programi-nedir/page.tsx",
       "trackedFiles": [
         "app/rehberler/pay-geri-alim-programi-nedir/page.tsx"
@@ -1969,8 +1981,8 @@
     },
     {
       "route": "/rehberler/ruchan-hakki-nedir",
-      "updatedAt": "2026-06-19T14:20:12.086Z",
-      "signature": "7aef628fd9ad796c3a6ab8809f6124d9c7f8df69e90d92d28ed41246e5817622",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "827aeb59e2d6ba95823e5c3b98df25594a5e3c811ece707bf722465c32a35419",
       "file": "app/rehberler/ruchan-hakki-nedir/page.tsx",
       "trackedFiles": [
         "app/rehberler/ruchan-hakki-nedir/page.tsx"
@@ -1978,8 +1990,8 @@
     },
     {
       "route": "/rehberler/sermaye-artirimlari",
-      "updatedAt": "2026-06-19T14:20:12.087Z",
-      "signature": "d5b70ec1c31c5a51f8c21d811bd6f08ff944eda22dff2c9efbb1dd28c20359d1",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "8ea165f8e13b084e49ede216118080e0bd370b61c2aa8f9ef433b4fbcc307952",
       "file": "app/rehberler/sermaye-artirimlari/page.tsx",
       "trackedFiles": [
         "app/rehberler/sermaye-artirimlari/page.tsx"
@@ -2109,8 +2121,8 @@
     },
     {
       "route": "/yazar/[slug]",
-      "updatedAt": "2026-06-19T16:04:03+03:00",
-      "signature": "2f172f247bafc11c60d05a0d955638d5b8065e4340b95a47e855b1da06422832",
+      "updatedAt": "2026-06-19T18:50:39+03:00",
+      "signature": "cd12398ddb6a0f24efe9bcc07ac37623b028261714a44ebe53ad583524cb31eb",
       "file": "app/yazar/[slug]/page.tsx",
       "trackedFiles": [
         "app/yazar/[slug]/page.tsx",

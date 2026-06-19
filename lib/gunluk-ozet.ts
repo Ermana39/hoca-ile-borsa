@@ -10,7 +10,7 @@
 //  içindeki getAllNews bunları NewsItem'a çevirip ekler), böylece ana sayfa ve
 //  /haberler arşivinde de görünürler. Ayrı bir arşiv sayfası YOKTUR.
 //
-//  Dosya adı "_" ile başlayanlar (şablon vb.) ve ISO desenine uymayanlar atlanır.
+//  Dosya adı "_" ile başlayanlar (şablon vb.) ve tarih desenine uymayanlar atlanır.
 // ============================================================================
 
 import fs from "node:fs";
@@ -73,7 +73,7 @@ export type GunlukOzet = {
   yorum?: string[];
 };
 
-const ISO_DESEN = /^\d{4}-\d{2}-\d{2}\.json$/i;
+const TARIHLI_JSON_DESEN = /^\d{4}[-.]\d{2}[-.]\d{2}\.json$/i;
 
 // Tüm günlük özetleri oku, en YENİ tarih en üstte olacak şekilde sırala.
 function tumOzetleriYukle(): GunlukOzet[] {
@@ -87,9 +87,10 @@ function tumOzetleriYukle(): GunlukOzet[] {
   const ozetler: GunlukOzet[] = [];
 
   for (const dosya of dosyalar) {
-    // "_" ile başlayanlar (şablon) ve ISO desenine uymayanlar atlanır.
+    // "_" ile başlayanlar (şablon) ve tarih desenine uymayanlar atlanır.
+    // Hem 2026-06-19.json hem de 2026.06.19.json dosya adı kabul edilir.
     if (dosya.startsWith("_")) continue;
-    if (!ISO_DESEN.test(dosya)) continue;
+    if (!TARIHLI_JSON_DESEN.test(dosya)) continue;
 
     try {
       const tamYol = path.join(OZET_DIZINI, dosya);
