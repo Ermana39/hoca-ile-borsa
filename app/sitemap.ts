@@ -10,6 +10,7 @@ import { HABER_KATEGORILERI } from "@/lib/haber-kategorileri";
 import { getSitemapHisseSembolleri } from "@/lib/hisseler";
 import { getTumGunlukOzetler } from "@/lib/gunluk-ozet";
 import { tumJsonSluglar } from "@/lib/halka-arz";
+import { rehberler } from "@/lib/rehberler";
 
 const siteUrl = "https://www.hocaileborsa.com";
 
@@ -153,7 +154,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   for (const route of [
     "/rehberler",
-    "/rehberler/katilim-endeksi",
+    ...rehberler.map((rehber) => rehber.href),
     ...staticRoutes,
     ...hisseRoutes,
     ...haberRoutes,

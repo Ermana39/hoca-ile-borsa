@@ -1,21 +1,12 @@
 import Link from "next/link";
+import { rehberler } from "@/lib/rehberler";
 
 export const metadata = {
   title: "Rehberler | Hoca İle Borsa",
   description:
-    "Borsa, halka arz, katılım endeksi, temettü ve finans kavramları hakkında kalıcı rehber içerikleri.",
+    "Borsa, halka arz, katılım endeksi, sermaye artırımları, temettü ve finans kavramları hakkında kalıcı rehber içerikleri.",
   alternates: { canonical: "https://www.hocaileborsa.com/rehberler" },
 };
-
-const rehberler = [
-  {
-    title:
-      "Katılım Endeksi Nedir? Katılım Endeksi Hisseleri Nasıl Belirlenir?",
-    href: "/rehberler/katilim-endeksi",
-    description:
-      "Katılım endeksinin ne olduğu, hangi kriterlere göre oluştuğu ve yatırımcıların bu listeyi nasıl okuyabileceği hakkında rehber.",
-  },
-];
 
 export default function RehberlerPage() {
   return (

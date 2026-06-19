@@ -1,4 +1,5 @@
 import Link from "next/link";
+import RehberAltBolumler from "@/components/RehberAltBolumler";
 import type { Metadata } from "next";
 
 const siteUrl = "https://www.hocaileborsa.com";
@@ -177,9 +178,10 @@ export default function KatilimEndeksiPage() {
     description,
     mainEntityOfPage: `${siteUrl}/rehberler/katilim-endeksi`,
     author: {
-      "@type": "Organization",
-      name: "Hoca İle Borsa",
-      url: siteUrl,
+      "@type": "Person",
+      "@id": `${siteUrl}/yazar/erman-hoca#person`,
+      name: "Erman Hoca",
+      url: `${siteUrl}/yazar/erman-hoca`,
     },
     publisher: {
       "@type": "Organization",
@@ -539,6 +541,8 @@ export default function KatilimEndeksiPage() {
                 Yatırım kararları, kişisel risk-getiri tercihleri ve güncel
                 veriler dikkate alınarak verilmelidir.
               </section>
+
+              <RehberAltBolumler currentHref="/rehberler/katilim-endeksi" />
             </div>
           </div>
 

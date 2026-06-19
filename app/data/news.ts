@@ -21,6 +21,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1000,
+    title: "Kordsa Kocaeli’deki İki Taşınmazını 800 Milyon TL’ye Sattı",
+    href: "/haber/kordsa-kocaeli-iki-tasinmaz-satisi-800-milyon-tl",
+    image: "/kordsa-tasinmaz-satisi-800-milyon-tl.webp",
+    alt: "Kordsa Kocaeli İzmit iki taşınmaz satışı 800 milyon TL",
+    publishedAt: "2026-06-19",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["KORDS"],
+  },
+  {
     id: 999,
     title: "Midas Ödeme Sistemleri Alanına Giriyor: Dijital Cüzdan ve Ön Ödemeli Kart Hamlesi",
     href: "/haber/midas-odeme-sistemleri-isine-giriyor",
