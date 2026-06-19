@@ -154,6 +154,19 @@ const nextConfig = {
         destination: "/borsa/gunluk-borsa-ozeti/12-haziran-2026",
         permanent: true,
       },
+      // "Dikkat Çekenler" bölümü kaldırıldı; alt makaleler slug'ları korunarak
+      // /haber arşivine taşındı. Eski URL'ler yeni haber adreslerine, liste
+      // sayfası da haber arşivine kalıcı olarak yönlendirilir.
+      {
+        source: "/borsa/dikkat-cekenler/:slug",
+        destination: "/haber/:slug",
+        permanent: true,
+      },
+      {
+        source: "/borsa/dikkat-cekenler",
+        destination: "/haberler",
+        permanent: true,
+      },
       ...haberRedirects.map((r) => ({
         source: r.source,
         destination: r.destination,

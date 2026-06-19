@@ -21,6 +21,15 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 999,
+    title: "Midas Ödeme Sistemleri Alanına Giriyor: Dijital Cüzdan ve Ön Ödemeli Kart Hamlesi",
+    href: "/haber/midas-odeme-sistemleri-isine-giriyor",
+    image: "/midas-odeme-sistemleri.webp",
+    alt: "Midas ödeme sistemleri dijital cüzdan ve ön ödemeli kart hazırlığı",
+    publishedAt: "2026-06-19",
+    category: "piyasa-gundemi",
+  },
+  {
     id: 972,
     title: "12 Haziran 2026 En Çok Para Girişi ve Çıkışı Olan Hisseler",
     href: "/haber/12-haziran-2026-en-cok-para-girisi-cikisi-olan-hisseler",

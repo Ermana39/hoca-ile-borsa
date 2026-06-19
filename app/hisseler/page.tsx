@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import HisseListesi from "@/components/HisseListesi";
 import { getTumHisseler } from "@/lib/hisseler";
+import { getHisseLogo } from "@/lib/hisse-logolar";
 
 export const revalidate = false;
 
@@ -30,7 +31,10 @@ export const metadata: Metadata = {
 };
 
 export default function HisselerPage() {
-  const hisseler = getTumHisseler();
+  const hisseler = getTumHisseler().map((h) => ({
+    ...h,
+    logo: getHisseLogo(h.kod),
+  }));
 
   return (
     <main className="min-h-screen bg-[#f8fafc] px-4 py-6 md:px-6">

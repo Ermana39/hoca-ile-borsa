@@ -156,6 +156,7 @@ export default function Footer() {
               { label: "Temettü", href: "/temettu" },
               { label: "Borsa Analiz", href: "/borsa" },
               { label: "Faiz Oranları", href: "/mevduat-kredi-faizleri" },
+              { label: "Rehberler", href: "/rehberler" },
             ]}
           />
 

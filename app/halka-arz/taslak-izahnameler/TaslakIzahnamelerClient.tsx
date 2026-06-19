@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useMemo, useState } from "react";
+import SirketLogo from "@/components/SirketLogo";
 
 
 
@@ -28,7 +29,7 @@ function aramaIcinTemizle(text: string) {
 }
 
 
-type TaslakOgesi = { klasor: string; label: string };
+type TaslakOgesi = { klasor: string; label: string; logo?: string };
 
 export default function TaslakIzahnamelerClient({
   izahnameler,
@@ -94,9 +95,10 @@ export default function TaslakIzahnamelerClient({
               <div key={`${item.klasor}-${index}`} className="space-y-3">
                 <Link
                   href={`/halka-arz/taslak-izahnameler/${item.klasor}`}
-                  className="block rounded-xl border border-red-200 bg-red-50 px-4 py-4 text-base font-medium text-zinc-900 transition hover:bg-red-100"
+                  className="flex items-center gap-4 rounded-xl border border-red-200 bg-red-50 px-4 py-4 text-base font-medium text-zinc-900 transition hover:bg-red-100"
                 >
-                  {item.label}
+                  <SirketLogo logo={item.logo} ad={item.label} />
+                  <span>{item.label}</span>
                 </Link>
               </div>
             ))

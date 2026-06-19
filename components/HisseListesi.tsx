@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useMemo, useState } from "react";
 
-type HisseOzet = { kod: string; sirketAdi: string };
+type HisseOzet = { kod: string; sirketAdi: string; logo?: string };
 
 export default function HisseListesi({ hisseler }: { hisseler: HisseOzet[] }) {
   const [arama, setArama] = useState("");
@@ -40,9 +40,22 @@ export default function HisseListesi({ hisseler }: { hisseler: HisseOzet[] }) {
               prefetch={false}
               className="group flex items-center gap-3 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm transition duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)]"
             >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-50 to-blue-100/60 text-xs font-black tracking-tight text-blue-700 ring-1 ring-inset ring-blue-200/60">
-                {h.kod.slice(0, 5)}
-              </div>
+              {h.logo ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={h.logo}
+                  alt={`${h.kod} logo`}
+                  width={48}
+                  height={48}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-12 w-12 shrink-0 rounded-xl bg-white object-contain p-1.5 ring-1 ring-inset ring-slate-200"
+                />
+              ) : (
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-blue-50 to-blue-100/60 text-xs font-black tracking-tight text-blue-700 ring-1 ring-inset ring-blue-200/60">
+                  {h.kod.slice(0, 5)}
+                </div>
+              )}
               <div className="min-w-0">
                 <div className="text-sm font-bold text-slate-900">{h.kod}</div>
                 <div className="line-clamp-1 text-xs text-slate-500">

@@ -152,6 +152,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routeEntries = new Map<string, string | undefined>();
 
   for (const route of [
+    "/rehberler",
+    "/rehberler/katilim-endeksi",
     ...staticRoutes,
     ...hisseRoutes,
     ...haberRoutes,

@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { getTaslakIzahnameListesi } from "@/lib/halka-arz";
+import { getIzahnameLogo } from "@/lib/izahname-logolar";
 import TaslakIzahnamelerClient from "./TaslakIzahnamelerClient";
 
 export const metadata: Metadata = {
@@ -13,5 +14,9 @@ export const metadata: Metadata = {
 };
 
 export default function TaslakIzahnamelerPage() {
-  return <TaslakIzahnamelerClient izahnameler={getTaslakIzahnameListesi()} />;
+  const izahnameler = getTaslakIzahnameListesi().map((item) => ({
+    ...item,
+    logo: getIzahnameLogo(item.klasor),
+  }));
+  return <TaslakIzahnamelerClient izahnameler={izahnameler} />;
 }

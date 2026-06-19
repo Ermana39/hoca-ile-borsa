@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getHisse, getTumHisseSembolleri, grafikAnalizVarMi } from "@/lib/hisseler";
+import { getHisseLogo } from "@/lib/hisse-logolar";
 import { getTemettulerBySembol } from "@/lib/temettuler";
 import { getKapBySembol } from "@/lib/kap";
 import {
@@ -307,6 +308,7 @@ export default async function HisseKunyePage({
     (item) => doluMetin(item.kod) || doluMetin(item.ad)
   );
 
+  const logo = getHisseLogo(hisse.kod);
   const sirketKisaAd = hisse.sirketAdi.split(" ").slice(0, 1).join(" ");
   const url = `${siteUrl}/hisse/${hisse.kod.toLowerCase()}`;
   const grafikAnalizVar = grafikAnalizVarMi(hisse.kod);
@@ -398,6 +400,16 @@ export default async function HisseKunyePage({
         <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_16px_rgba(15,23,42,0.07)]">
           <div className="p-6 md:p-10">
             <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+              {logo && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={logo}
+                  alt={`${hisse.kod} logo`}
+                  width={56}
+                  height={56}
+                  className="h-14 w-14 shrink-0 rounded-xl bg-white object-contain p-2 ring-1 ring-inset ring-slate-200"
+                />
+              )}
               <div>
                 <div className="flex flex-wrap items-center gap-2">
                   <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl">
@@ -901,9 +913,11 @@ export default async function HisseKunyePage({
                 ⚠️ {temelOranlar
                   ? hisse.yasalUyari.replace(
                       /Fiyat\/işlem verisi içermez\.?/i,
-                      "Anlık fiyat/işlem verisi sunmaz; sayfadaki oranlar dönemsel finansal tablolara dayanır (F/K ve PD/DD gibi oranlar dolaylı olarak fiyat içerir)."
+                      "Anlık fiyat/işlem verisi sunmaz; sayfadaki oranlar dönemsel finansal tablolara dayanır."
                     )
-                  : hisse.yasalUyari}
+                  : hisse.yasalUyari}{" "}
+                Bilgilerin doğruluğu taahhüt edilmez; bu bilgilerden doğabilecek
+                sonuçlardan sorumluluk kabul edilmez.
               </div>
             )}
           </div>

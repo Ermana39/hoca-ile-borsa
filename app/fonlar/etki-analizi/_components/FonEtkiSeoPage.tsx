@@ -40,6 +40,32 @@ function jsonLdScript(data: unknown) {
   return JSON.stringify(data).replace(/</g, "\\u003c");
 }
 
+const TR_AYLAR: Record<string, string> = {
+  ocak: "01",
+  şubat: "02",
+  mart: "03",
+  nisan: "04",
+  mayıs: "05",
+  haziran: "06",
+  temmuz: "07",
+  ağustos: "08",
+  eylül: "09",
+  ekim: "10",
+  kasım: "11",
+  aralık: "12",
+};
+
+// "18 Haziran 2026" -> "2026-06-18" (ISO 8601). Schema.org tarih alanları ISO
+// 8601 bekler; çözümlenemeyen girdi aynen döndürülür.
+function toIsoDate(tarih: string): string {
+  const parts = tarih.trim().split(/\s+/);
+  if (parts.length !== 3) return tarih;
+  const [gun, ay, yil] = parts;
+  const ayNo = TR_AYLAR[ay.toLocaleLowerCase("tr")];
+  if (!ayNo || !/^\d{4}$/.test(yil)) return tarih;
+  return `${yil}-${ayNo}-${gun.padStart(2, "0")}`;
+}
+
 function buildJsonLd({
   kod,
   fonAdi,
@@ -90,7 +116,8 @@ function buildJsonLd({
         description: `${fonAdi} portföyündeki hisselerin günlük kapanış marjlarına göre fonun ertesi gün açıklanacak fiyatına tahmini etkisi.`,
         url: pageUrl,
         inLanguage: "tr-TR",
-        dateModified: sonGuncelleme,
+        dateModified: toIsoDate(sonGuncelleme),
+        license: `${siteUrl}/kullanim-sartlari`,
         creator: {
           "@id": `${siteUrl}/#organization`,
         },

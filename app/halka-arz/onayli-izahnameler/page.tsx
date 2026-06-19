@@ -1,5 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
+import SirketLogo from "@/components/SirketLogo";
+import { getIzahnameLogo } from "@/lib/izahname-logolar";
 
 export const metadata: Metadata = {
   title: "Onaylı İzahnameler | Halka Arz SPK Onay Süreci ve Şirket Detayları",
@@ -59,20 +61,24 @@ export default function OnayliIzahnamelerPage() {
         </section>
 
         <div className="space-y-3">
-          {onayliIzahnameler.map((item) => (
-            <Link
-              key={`${item.kod}-${item.sirket}`}
-              href={item.href}
-              className="flex items-center gap-4 rounded-xl border border-green-200 bg-green-50 px-4 py-4 transition hover:bg-green-100"
-            >
-              <div className="w-24 shrink-0 text-base font-bold text-zinc-900">
-                {item.kod}
-              </div>
-              <div className="text-base font-medium text-zinc-900">
-                {item.sirket}
-              </div>
-            </Link>
-          ))}
+          {onayliIzahnameler.map((item) => {
+            const slug = item.href.split("/").filter(Boolean).pop() || "";
+            return (
+              <Link
+                key={`${item.kod}-${item.sirket}`}
+                href={item.href}
+                className="flex items-center gap-4 rounded-xl border border-green-200 bg-green-50 px-4 py-4 transition hover:bg-green-100"
+              >
+                <SirketLogo logo={getIzahnameLogo(slug)} ad={item.sirket} />
+                <div className="w-20 shrink-0 text-base font-bold text-zinc-900">
+                  {item.kod}
+                </div>
+                <div className="text-base font-medium text-zinc-900">
+                  {item.sirket}
+                </div>
+              </Link>
+            );
+          })}
         </div>
 
         <section className="mt-10 space-y-8">
