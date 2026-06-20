@@ -73,7 +73,7 @@ const securityHeaders = [
 const haberRedirects = [
   {
     source: "/haber/haber-950",
-    destination: "/haber/05-haziran-2026-cuma-kap-bildirimleri-ozeti",
+    destination: "/haberler",
   },
   {
     source: "/haber/haber-975",
@@ -93,7 +93,7 @@ const haberRedirects = [
   },
   {
     source: "/haber/haber-979",
-    destination: "/haber/turk-is-mayis-2026-aclik-ve-yoksulluk-siniri-arastirmasi",
+    destination: "/haberler",
   },
 ];
 

@@ -227,9 +227,9 @@ export default function HaberHalkbankAbdDavasiPage() {
               </div>
             </div>
           </div>
-          <HaberAltBilgi href="/haber/abd-mahkemesi-halkbank-davasini-dusurdu" />
+          <HaberAltBilgi href="/haber/halkbank_abd_davasi" />
 
-          <HaberNavigasyon href="/haber/abd-mahkemesi-halkbank-davasini-dusurdu" />
+          <HaberNavigasyon href="/haber/halkbank_abd_davasi" />
 
           <AuthorBox />
         </article>

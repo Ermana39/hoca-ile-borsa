@@ -180,9 +180,9 @@ export default function HaberKapOzetiPage() {
               </div>
             </div>
           </div>
-          <HaberAltBilgi href="/haber/15-haziran-2026-pazartesi-kap-bildirimleri-ozeti" />
+          <HaberAltBilgi href="/haber/15-haziran-2026-onemli-kap-haberleri" />
 
-          <HaberNavigasyon href="/haber/15-haziran-2026-pazartesi-kap-bildirimleri-ozeti" />
+          <HaberNavigasyon href="/haber/15-haziran-2026-onemli-kap-haberleri" />
 
           <AuthorBox />
 

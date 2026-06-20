@@ -198,7 +198,7 @@ export default function BetaEnerjiYuksekBasvuruDagitimPage() {
             Ana Sayfa
           </Link>
           <span className="text-slate-300">/</span>
-          <Link href="/haber" className="transition hover:text-blue-600">
+          <Link href="/haberler" className="transition hover:text-blue-600">
             Haberler
           </Link>
           <span className="text-slate-300">/</span>

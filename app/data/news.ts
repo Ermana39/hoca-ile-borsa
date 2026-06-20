@@ -21,6 +21,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1001,
+    title: "19 Haziran 2026 Önemli KAP Haberleri",
+    href: "/haber/19-haziran-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "19 Haziran 2026 Önemli KAP Haberleri",
+    publishedAt: "2026-06-19",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["BOBET", "MANAS", "TOASO", "ANELE", "KORDS", "ARCLK", "GOKNR", "GOODY", "HLGYO", "KTLEV", "ARZUM", "MIATK", "EUPWR", "TUCLK", "HALKB", "CCOLA", "BRSAN", "ALARK"],
+  },
+  {
     id: 1000,
     title: "Kordsa Kocaeli’deki İki Taşınmazını 800 Milyon TL’ye Sattı",
     href: "/haber/kordsa-kocaeli-iki-tasinmaz-satisi-800-milyon-tl",

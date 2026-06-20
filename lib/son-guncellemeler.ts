@@ -92,7 +92,7 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
   },
   {
     title: "Temettü Takvimi",
-    href: "/temettü",
+    href: "/temettu",
     updatedAt: "29.04.2026 19:05",
   },
   {
