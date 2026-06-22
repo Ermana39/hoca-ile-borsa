@@ -38,13 +38,7 @@ const BORSA_PATHS = [
 const FON_PATHS = [
   "/fonlar",
   "/fonlar/getiri",
-  "/fonlar/getiri/borsa-yatirim-fonlari-getiri",
-  "/fonlar/getiri/emeklilik-fonlari-getiri",
-  "/fonlar/getiri/menkul-kiymet-yatirim-fonlari",
   "/fonlar/tarihsel-veriler",
-  "/fonlar/tarihsel-veriler/borsa-yatirim-fonlari-tarihsel",
-  "/fonlar/tarihsel-veriler/emeklilik-fonlari-tarihsel",
-  "/fonlar/tarihsel-veriler/menkul-kiymet-yatirim-fonlari",
   "/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler",
 ];
 

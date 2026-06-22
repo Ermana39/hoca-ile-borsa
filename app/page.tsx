@@ -116,21 +116,9 @@ const sayfaBasliklari: Record<string, string> = {
   "/borsa/yeni-is-anlasmalari": "Yeni İş Anlaşmaları",
 
   "/fonlar/getiri": "Fon Getiri Analizi",
-  "/fonlar/getiri/borsa-yatirim-fonlari-getiri":
-    "Borsa Yatırım Fonları Getiri Analizi",
-  "/fonlar/getiri/emeklilik-fonlari-getiri":
-    "Emeklilik Fonları Getiri Analizi",
-  "/fonlar/getiri/menkul-kiymet-yatirim-fonlari":
-    "Menkul Kıymet Yatırım Fonları Getiri Analizi",
   "/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler":
     "Fonların En Çok Tercih Ettiği Hisseler",
   "/fonlar/tarihsel-veriler": "Fon Tarihsel Veriler",
-  "/fonlar/tarihsel-veriler/borsa-yatirim-fonlari-tarihsel":
-    "Borsa Yatırım Fonları Tarihsel Veriler",
-  "/fonlar/tarihsel-veriler/emeklilik-fonlari-tarihsel":
-    "Emeklilik Fonları Tarihsel Veriler",
-  "/fonlar/tarihsel-veriler/menkul-kiymet-yatirim-fonlari":
-    "Menkul Kıymet Yatırım Fonları Tarihsel Veriler",
 
   "/halka-arz/kazanc-hesapla": "Halka Arz Kazanç Hesaplama",
   "/halka-arz/onayli-izahnameler": "Onaylı İzahnameler",
