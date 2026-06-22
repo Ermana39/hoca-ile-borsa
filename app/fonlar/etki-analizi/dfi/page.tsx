@@ -19,12 +19,12 @@ export const metadata: Metadata = {
 };
 
 const rows: FonEtkiRow[] = [
-  { sembol: "IEYHO", fonOrani: 53.41, kapanisMarji: 0.847457627, etki: 0.452627119 },
-  { sembol: "ISKPL", fonOrani: 11.26, kapanisMarji: -5.5, etki: -0.6193 },
-  { sembol: "LIDER", fonOrani: 0.54, kapanisMarji: -4.291224687, etki: -0.023172613 },
-  { sembol: "ECILC", fonOrani: 0.19, kapanisMarji: -1.199760048, etki: -0.002279544 },
-  { sembol: "TURSG", fonOrani: 0.03, kapanisMarji: -1.676829268, etki: -0.000503049 },
-  { sembol: "ABG", fonOrani: 26.53, kapanisMarji: 0.84, etki: 0.222852 },
+  { sembol: "IEYHO", fonOrani: 53.41, kapanisMarji: 3.743315508, etki: 1.999304813 },
+  { sembol: "ISKPL", fonOrani: 11.26, kapanisMarji: 9.93999958, etki: 1.119243953 },
+  { sembol: "LIDER", fonOrani: 0.54, kapanisMarji: -3.576826196, etki: -0.019314861 },
+  { sembol: "ECILC", fonOrani: 0.19, kapanisMarji: 3.400121433, etki: 0.006460231 },
+  { sembol: "TURSG", fonOrani: 0.03, kapanisMarji: 0.15503876, etki: 0.0000465116 },
+  { sembol: "ABG", fonOrani: 26.53, kapanisMarji: 0.54, etki: 0.143262 },
 ];
 
 export default function DfiEtkiAnaliziPage() {
@@ -36,8 +36,8 @@ export default function DfiEtkiAnaliziPage() {
       slug="dfi"
       rows={rows}
       toplamFonOrani={91.96}
-      toplamEtki={0.03}
-      sonGuncelleme="19 Haziran 2026"
+      toplamEtki={3.25}
+      sonGuncelleme="22 Haziran 2026"
     />
   );
 }

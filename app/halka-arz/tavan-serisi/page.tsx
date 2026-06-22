@@ -17,7 +17,7 @@ const halkaArzVerileri = [
     katilimciSayisi: "796,542",
     dagitimSekli: "BİREYSEL %40",
     arzFiyati: "45.00",
-    guncelFiyat: "58.95",
+    guncelFiyat: "59.00",
     marj: "31%",
     konsorsiyum: "A1 CAPITAL",
   },
@@ -27,7 +27,7 @@ const halkaArzVerileri = [
     katilimciSayisi: "917,413",
     dagitimSekli: "BİREYSELE %63",
     arzFiyati: "21.10",
-    guncelFiyat: "16.95",
+    guncelFiyat: "16.90",
     marj: "-20%",
     konsorsiyum: "VAKIF-INFO",
   },
@@ -37,8 +37,8 @@ const halkaArzVerileri = [
     katilimciSayisi: "965,336",
     dagitimSekli: "BİREYSEL %48",
     arzFiyati: "80.00",
-    guncelFiyat: "177.40",
-    marj: "122%",
+    guncelFiyat: "181.90",
+    marj: "127%",
     konsorsiyum: "TERA",
   },
   {
@@ -47,8 +47,8 @@ const halkaArzVerileri = [
     katilimciSayisi: "890,173",
     dagitimSekli: "BİREYSELE %40",
     arzFiyati: "12.05",
-    guncelFiyat: "16.67",
-    marj: "38%",
+    guncelFiyat: "16.80",
+    marj: "39%",
     konsorsiyum: "TERA",
   },
   {
@@ -57,8 +57,8 @@ const halkaArzVerileri = [
     katilimciSayisi: "805,312",
     dagitimSekli: "TAMAMEN EŞİT",
     arzFiyati: "11.00",
-    guncelFiyat: "17.29",
-    marj: "57%",
+    guncelFiyat: "15.78",
+    marj: "43%",
     konsorsiyum: "DENİZ",
   },
   {
@@ -67,8 +67,8 @@ const halkaArzVerileri = [
     katilimciSayisi: "701,429",
     dagitimSekli: "BİREYSEL %40",
     arzFiyati: "3.64",
-    guncelFiyat: "22.20",
-    marj: "510%",
+    guncelFiyat: "21.26",
+    marj: "484%",
     konsorsiyum: "TERA",
   },
   {
@@ -77,8 +77,8 @@ const halkaArzVerileri = [
     katilimciSayisi: "1,134,537",
     dagitimSekli: "BİREYSELE %60",
     arzFiyati: "22.00",
-    guncelFiyat: "106.10",
-    marj: "382%",
+    guncelFiyat: "95.50",
+    marj: "334%",
     konsorsiyum: "HALK",
   },
   {
@@ -87,8 +87,8 @@ const halkaArzVerileri = [
     katilimciSayisi: "627,142",
     dagitimSekli: "BİREYSEL %40",
     arzFiyati: "11.20",
-    guncelFiyat: "16.81",
-    marj: "50%",
+    guncelFiyat: "17.18",
+    marj: "53%",
     konsorsiyum: "TERA",
   },
   {
@@ -97,8 +97,8 @@ const halkaArzVerileri = [
     katilimciSayisi: "796,578",
     dagitimSekli: "TAMAMEN EŞİT",
     arzFiyati: "14.70",
-    guncelFiyat: "39.72",
-    marj: "170%",
+    guncelFiyat: "37.80",
+    marj: "157%",
     konsorsiyum: "GLOBAL",
   },
   {
@@ -107,7 +107,7 @@ const halkaArzVerileri = [
     katilimciSayisi: "959,375",
     dagitimSekli: "BİREYSELE %60",
     arzFiyati: "21.50",
-    guncelFiyat: "33.12",
+    guncelFiyat: "33.10",
     marj: "54%",
     konsorsiyum: "HALK",
   },
@@ -117,8 +117,8 @@ const halkaArzVerileri = [
     katilimciSayisi: "994,998",
     dagitimSekli: "BİREYSEL %60",
     arzFiyati: "46.00",
-    guncelFiyat: "160.50",
-    marj: "249%",
+    guncelFiyat: "163.20",
+    marj: "255%",
     konsorsiyum: "INFO",
   },
   {
@@ -127,8 +127,8 @@ const halkaArzVerileri = [
     katilimciSayisi: "796,720",
     dagitimSekli: "BİREYSELE %70",
     arzFiyati: "18.00",
-    guncelFiyat: "35.66",
-    marj: "98%",
+    guncelFiyat: "36.12",
+    marj: "101%",
     konsorsiyum: "KUVEYT TÜRK",
   },
   {
@@ -137,8 +137,8 @@ const halkaArzVerileri = [
     katilimciSayisi: "431,380",
     dagitimSekli: "BİREYSEL %50",
     arzFiyati: "9.77",
-    guncelFiyat: "39.00",
-    marj: "299%",
+    guncelFiyat: "41.08",
+    marj: "320%",
     konsorsiyum: "VAKIF",
   },
   {
@@ -147,8 +147,8 @@ const halkaArzVerileri = [
     katilimciSayisi: "688,564",
     dagitimSekli: "BİREYSEL %65",
     arzFiyati: "30.24",
-    guncelFiyat: "41.94",
-    marj: "39%",
+    guncelFiyat: "40.94",
+    marj: "35%",
     konsorsiyum: "İNTEGRAL-ZİRAAT",
   },
   {
@@ -157,8 +157,8 @@ const halkaArzVerileri = [
     katilimciSayisi: "648,003",
     dagitimSekli: "BİREYSEL %45",
     arzFiyati: "7.50",
-    guncelFiyat: "14.72",
-    marj: "96%",
+    guncelFiyat: "15.05",
+    marj: "101%",
     konsorsiyum: "ALNUS",
   },
   {
@@ -167,8 +167,8 @@ const halkaArzVerileri = [
     katilimciSayisi: "508,401",
     dagitimSekli: "BİREYSEL %50",
     arzFiyati: "19.50",
-    guncelFiyat: "28.32",
-    marj: "45%",
+    guncelFiyat: "29.38",
+    marj: "51%",
     konsorsiyum: "A1 CAPITAL-BULLS",
   },
 ];
@@ -308,61 +308,6 @@ export default function HalkaArzTavanSerisiPage() {
             Gün sonu kapanış fiyatı ve marj bilgileri piyasa hareketlerine göre değişebilir.
             Bu tablo gün içinde anlık veri sunmaz; kapanış rakamları gün sonunda güncellenir.
             Bu tablo bilgilendirme amaçlıdır, yatırım tavsiyesi değildir.
-          </p>
-        </section>
-
-        <section className="mt-8 grid gap-4 lg:grid-cols-3">
-          <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-            <h2 className="mb-3 text-xl font-bold text-slate-900">
-              Halka Arz Tavan Serisi Nedir?
-            </h2>
-            <p className="text-sm leading-7 text-slate-600">
-              Halka arz tavan serisi, yeni işlem görmeye başlayan hisselerin borsadaki
-              ilk günlerinden itibaren üst fiyat limitine yakın hareket etmesiyle oluşan
-              yükseliş sürecini ifade eder. Bu tablo, 2026 yılında halka arz olan
-              şirketlerin arz fiyatına göre gün sonu kapanış performansını tek ekranda
-              takip etmek için hazırlanmıştır.
-            </p>
-          </div>
-
-          <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-            <h2 className="mb-3 text-xl font-bold text-slate-900">
-              Marj Nasıl Hesaplanır?
-            </h2>
-            <p className="text-sm leading-7 text-slate-600">
-              Marj oranı, hissenin gün sonu kapanış fiyatı ile halka arz fiyatı arasındaki yaklaşık
-              değişimi gösterir. Pozitif marj, hissenin halka arz fiyatının üzerinde
-              olduğunu; negatif marj ise halka arz fiyatının altında işlem gördüğünü
-              gösterir. Tabloda pozitif değerler yeşil, negatif değerler kırmızı renkle
-              gösterilmiştir.
-            </p>
-          </div>
-
-          <div className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-            <h2 className="mb-3 text-xl font-bold text-slate-900">
-              Tablo Nasıl Yorumlanmalı?
-            </h2>
-            <p className="text-sm leading-7 text-slate-600">
-              Yüksek marj her zaman yeni alım için uygun seviye anlamına gelmez. Halka arz
-              sonrası fiyat hareketleri; piyasa koşulları, şirket beklentisi, işlem hacmi,
-              yatırımcı ilgisi ve satış baskısına göre değişebilir. Bu nedenle tablo,
-              karar vermek için tek başına değil, genel piyasa analiziyle birlikte
-              değerlendirilmelidir.
-            </p>
-          </div>
-        </section>
-
-        <section className="mt-6 rounded-3xl border border-amber-200 bg-amber-50 p-6 shadow-sm">
-          <h2 className="mb-3 text-xl font-bold text-amber-950">
-            Önemli Uyarı
-          </h2>
-          <p className="text-sm leading-7 text-amber-900">
-            Gün sonu kapanış fiyatları ve marj oranları piyasa hareketlerine göre
-            değişebilir. Bu sayfada yer alan kapanış rakamları gün içinde anlık olarak
-            güncellenmez; seans kapanışı sonrasında gün sonu verilerine göre güncellenir.
-            Bu sayfada yer alan bilgiler yatırım tavsiyesi değildir. Halka arz hisselerinde
-            işlem yapmadan önce şirketin izahnamesi, finansal görünümü, işlem hacmi ve
-            genel piyasa koşulları ayrıca değerlendirilmelidir.
           </p>
         </section>
       </div>

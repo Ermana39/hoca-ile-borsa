@@ -21,6 +21,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1002,
+    title: "KTLEV ve SVGYO İçin Temettü Günü: Hak Kullanım Tarihi 23 Haziran",
+    href: "/haber/ktlev-svgyo-23-haziran-2026-temettu-gundemi",
+    image: "/ktlev-svgyo-23-haziran-2026-temettu-gundemi.webp",
+    alt: "KTLEV ve SVGYO 23 Haziran 2026 temettü gündemi",
+    publishedAt: "2026-06-22",
+    category: "temettu",
+    ilgiliHisseler: ["KTLEV", "SVGYO"],
+  },
+  {
     id: 1001,
     title: "19 Haziran 2026 Önemli KAP Haberleri",
     href: "/haber/19-haziran-2026-onemli-kap-haberleri",
