@@ -21,6 +21,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1010,
+    title: "Brisa İzmit Fabrikasında Üretime Geçici Ara Verecek",
+    href: "/haber/brisa-izmit-fabrikasi-planli-bakim-durusu",
+    image: "/brisa-izmit-fabrikasi-planli-bakim-durusu.webp",
+    alt: "Brisa İzmit fabrikası planlı bakım duruşu",
+    publishedAt: "2026-06-23",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["BRISA"],
+  },
+  {
     id: 1009,
     title: "23 Haziran 2026 Önemli KAP Haberleri",
     href: "/haber/23-haziran-2026-onemli-kap-haberleri",
