@@ -52,13 +52,6 @@ const analizKutulari = [
       "RSI, trend ve teknik filtrelere göre hazırlanmış hisse taramaları ile belirli kriterleri karşılayan hisseleri görün.",
   },
   {
-    title: "Grafik Analiz",
-    href: "/borsa/grafik-analiz",
-    icon: "grafik-analiz" as CategoryIconName,
-    description:
-      "Hisselere ait güncel grafik yorumları, destek-direnç bölgeleri ve kısa teknik değerlendirmeleri takip edin.",
-  },
-  {
     title: "Hacim Artışı Analizi",
     href: "/borsa/hacim-artisi-analizi",
     icon: "hacim-artisi-analizi" as CategoryIconName,
@@ -171,7 +164,7 @@ export default function BorsaPage() {
 
           <p className="mt-3 max-w-4xl text-sm leading-7 text-slate-500 md:text-base">
             Borsa analiz içeriklerine bu sayfa üzerinden toplu şekilde
-            ulaşabilirsiniz. Günlük borsa özeti, grafik analiz, gösterge
+            ulaşabilirsiniz. Günlük borsa özeti, gösterge
             taramaları, pivot analizi, dip zirve analizi, hacim artışı analizi,
             geri alım programları ve diğer teknik başlıklar burada bir araya
             getirilmiştir.

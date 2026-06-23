@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     "mevduat faizi",
     "BIST",
     "hisse senedi",
-    "grafik analiz",
     "taslak izahname",
   ],
   authors: [{ name: "Hoca İle Borsa" }],

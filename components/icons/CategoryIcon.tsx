@@ -13,7 +13,6 @@ export type CategoryIconName =
   | "formasyonlar"
   | "geri-alim-programlari"
   | "gosterge-taramalari"
-  | "grafik-analiz"
   | "hacim-artisi-analizi"
   | "yeni-is-anlasmalari"
   | "pivot-analizi"
@@ -332,25 +331,6 @@ const icons: Record<CategoryIconName, React.ReactNode> = {
         strokeLinejoin="round"
         fill="none"
       />
-    </>
-  ),
-  "grafik-analiz": (
-    <>
-      <rect x="5" y="6" width="38" height="34" rx="5" fill={NAVY} />
-      <rect x="11" y="22" width="5" height="11" rx="1.4" fill={GREEN} />
-      <rect x="12.8" y="19" width="1.4" height="17" rx="0.7" fill={GREEN} />
-      <rect x="21.5" y="16" width="5" height="10" rx="1.4" fill={RED} />
-      <rect x="23.3" y="13" width="1.4" height="16" rx="0.7" fill={RED} />
-      <rect x="32" y="18" width="5" height="13" rx="1.4" fill={GREEN} />
-      <rect x="33.8" y="14.5" width="1.4" height="20" rx="0.7" fill={GREEN} />
-      <path
-        d="M9 35c6-3 10-11 15.5-11S32 27 39 17"
-        stroke={AMBER}
-        strokeWidth="2.2"
-        strokeLinecap="round"
-        fill="none"
-      />
-      <path d="M35.5 16l4-1 .5 4" stroke={AMBER} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" fill="none" />
     </>
   ),
   "hacim-artisi-analizi": (

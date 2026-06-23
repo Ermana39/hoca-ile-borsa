@@ -100,8 +100,6 @@ const sayfaBasliklari: Record<string, string> = {
   "/borsa/gosterge-taramalari/rsi70-ustu": "RSI 70 Üstü Hisseler",
   "/borsa/gosterge-taramalari/yukselis-trendinde-olanlar":
     "Yükseliş Trendinde Olan Hisseler",
-  "/borsa/grafik-analiz": "Grafik Analiz",
-  "/borsa/grafik-analiz/aefes": "AEFES Grafik Analiz",
   "/borsa/gunluk-borsa-ozeti": "Günlük Borsa Özeti",
   "/borsa/hacim-artisi-analizi": "Hacim Artışı Analizi",
   "/borsa/hacim-artisi-analizi/aylik-hacim-artisi-olanlar":
@@ -265,10 +263,6 @@ function getGuncellemeAnaRoute(route: string) {
     {
       prefix: "/borsa/gosterge-taramalari/",
       target: "/borsa/gosterge-taramalari",
-    },
-    {
-      prefix: "/borsa/grafik-analiz/",
-      target: "/borsa/grafik-analiz",
     },
     {
       prefix: "/borsa/hacim-artisi-analizi/",

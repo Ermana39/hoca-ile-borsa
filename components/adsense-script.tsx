@@ -17,13 +17,6 @@ const adFreePages = new Set([
   "/borsa/hacim-artisi-analizi/aylik-hacim-artisi-olanlar",
   "/borsa/hacim-artisi-analizi/haftalik-hacim-artisi-olanlar",
   "/borsa/hacim-artisi-analizi/yillik-hacim-artisi-olanlar",
-  "/borsa/grafik-analiz/aefes",
-  "/borsa/grafik-analiz/tcell",
-  "/borsa/grafik-analiz/thyao",
-  "/borsa/grafik-analiz/asels",
-  "/borsa/grafik-analiz/eregl",
-  "/borsa/grafik-analiz/tuprs",
-  "/borsa/grafik-analiz/bimas",
 ]);
 
 function shouldShowAds(pathname: string) {

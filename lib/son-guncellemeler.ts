@@ -36,11 +36,6 @@ export const sonGuncellemeler: SonGuncellemeItem[] = [
     updatedAt: "30.04.2026 18:30",
   },
   {
-    title: "Grafik Analiz",
-    href: "/borsa/grafik-analiz",
-    updatedAt: "16.04.2026 21:38",
-  },
-  {
     title: "Hacim Artışı Analizi",
     href: "/borsa/hacim-artisi-analizi",
     updatedAt: "24.04.2026 19:33",

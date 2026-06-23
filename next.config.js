@@ -33,6 +33,13 @@ const vercelAnalytics = [
   "https://*.vercel-insights.com",
 ];
 
+// Onaylı izahname sayfalarındaki YouTube video gömülerinin (iframe) CSP
+// tarafından engellenmemesi için izin verilen çerçeve kaynakları.
+const youtubeFrame = [
+  "https://www.youtube.com",
+  "https://www.youtube-nocookie.com",
+];
+
 const contentSecurityPolicy = [
   "default-src 'self'",
   // Next.js hydration ve AdSense satır içi/eval gerektirir.
@@ -43,7 +50,7 @@ const contentSecurityPolicy = [
   "img-src 'self' data: blob: https:",
   "font-src 'self' data:",
   `connect-src 'self' ${adsenseScript.join(" ")} ${adsenseFrame.join(" ")} ${vercelAnalytics.join(" ")}`,
-  `frame-src 'self' ${adsenseFrame.join(" ")}`,
+  `frame-src 'self' ${adsenseFrame.join(" ")} ${youtubeFrame.join(" ")}`,
   // Aşağıdakiler reklamları etkilemez, saldırı yüzeyini daraltır.
   "object-src 'none'",
   "base-uri 'self'",
@@ -165,6 +172,19 @@ const nextConfig = {
       {
         source: "/borsa/dikkat-cekenler",
         destination: "/haberler",
+        permanent: true,
+      },
+      // "Grafik Analiz" bölümü tamamen kaldırıldı. Hisse bazlı eski analiz
+      // sayfaları ilgili hisse künyesine, liste sayfası da borsa ana sayfasına
+      // kalıcı olarak yönlendirilir.
+      {
+        source: "/borsa/grafik-analiz/:slug",
+        destination: "/hisse/:slug",
+        permanent: true,
+      },
+      {
+        source: "/borsa/grafik-analiz",
+        destination: "/borsa",
         permanent: true,
       },
       ...haberRedirects.map((r) => ({

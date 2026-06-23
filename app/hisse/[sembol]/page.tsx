@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getHisse, getTumHisseSembolleri, grafikAnalizVarMi } from "@/lib/hisseler";
+import { getHisse, getTumHisseSembolleri } from "@/lib/hisseler";
 import { getHisseLogo } from "@/lib/hisse-logolar";
 import { getTemettulerBySembol } from "@/lib/temettuler";
 import { getKapBySembol } from "@/lib/kap";
@@ -311,7 +311,6 @@ export default async function HisseKunyePage({
   const logo = getHisseLogo(hisse.kod);
   const sirketKisaAd = hisse.sirketAdi.split(" ").slice(0, 1).join(" ");
   const url = `${siteUrl}/hisse/${hisse.kod.toLowerCase()}`;
-  const grafikAnalizVar = grafikAnalizVarMi(hisse.kod);
 
   const temettuKayitlari = getTemettulerBySembol(hisse.kod);
   const kapKayitlari = getKapBySembol(hisse.kod);
@@ -894,18 +893,6 @@ export default async function HisseKunyePage({
                   ))}
                 </div>
               </section>
-            )}
-
-            {grafikAnalizVar && (
-              <Link
-                href={`/borsa/grafik-analiz/${hisse.kod.toLowerCase()}`}
-                prefetch={false}
-                className="mt-8 flex items-center justify-center gap-2 rounded-lg bg-blue-600 px-4 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-blue-700 md:text-base"
-              >
-                <span aria-hidden="true">📊</span>
-                <span>{hisse.kod} Teknik &amp; Grafik Analizi</span>
-                <span aria-hidden="true">→</span>
-              </Link>
             )}
 
             {hisse.yasalUyari && (

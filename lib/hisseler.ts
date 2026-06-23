@@ -114,51 +114,6 @@ export function getTumHisseSembolleri(): string[] {
   return Object.keys(hisseler);
 }
 
-// ============================================================================
-//  GRAFİK ANALİZ SAYFALARI
-// ----------------------------------------------------------------------------
-//  app/borsa/grafik-analiz/<kod>/ klasörü olan hisseler "statik grafik analiz
-//  sayfası" sayılır. Künye sayfası (/hisse/<kod>) bu sembollere otomatik link
-//  verir. Dinamik [slug] route'u (ince yorum sayfaları) ve _ ile başlayan
-//  yardımcı klasörler hariç tutulur — onlara link verilmez.
-// ============================================================================
-
-const GRAFIK_ANALIZ_DIZINI = path.join(
-  process.cwd(),
-  "app",
-  "borsa",
-  "grafik-analiz"
-);
-
-function grafikAnalizSembolleriYukle(): Set<string> {
-  const set = new Set<string>();
-
-  let girisler: fs.Dirent[] = [];
-  try {
-    girisler = fs.readdirSync(GRAFIK_ANALIZ_DIZINI, { withFileTypes: true });
-  } catch {
-    return set;
-  }
-
-  for (const giris of girisler) {
-    if (!giris.isDirectory()) continue;
-    const ad = giris.name;
-    // [slug] dinamik route, _components gibi yardımcılar ve gizli klasörler hariç.
-    if (ad.startsWith("[") || ad.startsWith("_") || ad.startsWith(".")) continue;
-    set.add(ad.toLowerCase());
-  }
-
-  return set;
-}
-
-const grafikAnalizSembolleri: Set<string> = grafikAnalizSembolleriYukle();
-
-// O sembol için statik grafik analiz sayfası var mı? (künye → analiz linki için)
-export function grafikAnalizVarMi(sembol: string): boolean {
-  if (!sembol) return false;
-  return grafikAnalizSembolleri.has(sembol.toLowerCase());
-}
-
 // Sitemap için: JSON şablonu + elle tam sayfa hisselerinin tümü.
 export function getSitemapHisseSembolleri(): string[] {
   return Array.from(

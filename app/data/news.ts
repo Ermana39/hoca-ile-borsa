@@ -54,7 +54,7 @@ export const newsItems: NewsItem[] = [
     id: 1004,
     title: "BMSTL’de %100 Bedelsiz Sermaye Artırımı İçin SPK Onayı",
     href: "/haber/bmstl-100-bedelsiz-sermaye-artirimi-spk-onayi",
-    image: "/kap-ozeti-discover.webp",
+    image: "/bmstl-100-bedelsiz-sermaye-artirimi-spk-onayi.webp",
     alt: "BMSTL’de %100 Bedelsiz Sermaye Artırımı İçin SPK Onayı",
     publishedAt: "2026-06-22",
     category: "sermaye-artirimi",
