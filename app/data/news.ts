@@ -21,6 +21,18 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1008,
+    title:
+      "Beta Enerji Halka Arzı Başladı: Talep Toplama Tarihleri ve Olası Lot Dağılımı",
+    href: "/haber/beta-enerji-halka-arzi-basladi-talep-toplama-ve-lot-dagilimi",
+    image:
+      "/beta-enerji-halka-arzi-basladi-talep-toplama-ve-lot-dagilimi.webp",
+    alt: "Beta Enerji halka arzı başladı talep toplama ve olası lot dağılımı",
+    publishedAt: "2026-06-23",
+    category: "halka-arz",
+    ilgiliHisseler: ["BETAE"],
+  },
+  {
     id: 1007,
     title: "Turkcell CDB Kredi Paketinde Faiz Oranını Revize Etti",
     href: "/haber/turkcell-cdb-kredi-paketi-faiz-orani-revize-edildi",
