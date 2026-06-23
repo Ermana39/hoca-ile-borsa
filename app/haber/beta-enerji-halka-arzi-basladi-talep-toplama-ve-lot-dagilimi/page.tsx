@@ -186,13 +186,15 @@ export default function BetaEnerjiHalkaArziBasladiPage() {
         </nav>
 
         <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_16px_rgba(15,23,42,0.07)]">
-          <div className="relative aspect-square w-full overflow-hidden bg-zinc-100 md:aspect-[16/9]">
+          <div className="w-full overflow-hidden bg-white">
             <Image
               src="/beta-enerji-halka-arzi-basladi-talep-toplama-ve-lot-dagilimi.webp"
               alt="Beta Enerji halka arzı başladı talep toplama ve olası lot dağılımı"
-              fill
+              width={1254}
+              height={1254}
               unoptimized
-              className="object-cover"
+              priority
+              className="h-auto w-full object-contain"
             />
           </div>
 

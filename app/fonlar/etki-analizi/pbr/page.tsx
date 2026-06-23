@@ -19,33 +19,33 @@ export const metadata: Metadata = {
 };
 
 const rows: FonEtkiRow[] = [
-  { sembol: "GUNDG", fonOrani: 9.54, kapanisMarji: -2.029999971, etki: -0.193661997 },
-  { sembol: "KTLEV", fonOrani: 8.22, kapanisMarji: 1.440000057, etki: 0.118368005 },
-  { sembol: "ODINE", fonOrani: 7.91, kapanisMarji: 2.289999962, etki: 0.181138997 },
-  { sembol: "HEDEF", fonOrani: 5.36, kapanisMarji: 0.150000006, etki: 0.00804 },
-  { sembol: "PASEU", fonOrani: 3.81, kapanisMarji: 3.799999952, etki: 0.144779998 },
-  { sembol: "TATEN", fonOrani: 3.25, kapanisMarji: 4.659999847, etki: 0.151449995 },
-  { sembol: "AKBNK", fonOrani: 2.78, kapanisMarji: 0.183262065, etki: 0.005094685 },
-  { sembol: "YKBNK", fonOrani: 2.5, kapanisMarji: 1.060396496, etki: 0.026509912 },
-  { sembol: "THYAO", fonOrani: 2.25, kapanisMarji: -0.612088753, etki: -0.013771997 },
-  { sembol: "TRALT", fonOrani: 1.68, kapanisMarji: 0.292682927, etki: 0.004917073 },
-  { sembol: "DSTKF", fonOrani: 1.48, kapanisMarji: 3.130000114, etki: 0.046324002 },
-  { sembol: "AKSEN", fonOrani: 1.12, kapanisMarji: -0.804597701, etki: -0.009011494 },
-  { sembol: "TCELL", fonOrani: 0.95, kapanisMarji: -0.176366843, etki: -0.001675485 },
-  { sembol: "DAPGM", fonOrani: 0.92, kapanisMarji: -2.410000086, etki: -0.022172001 },
-  { sembol: "SKBNK", fonOrani: 0.86, kapanisMarji: 3.397435897, etki: 0.029217949 },
-  { sembol: "MGROS", fonOrani: 0.67, kapanisMarji: -0.363901019, etki: -0.002438137 },
-  { sembol: "TERA", fonOrani: 0.57, kapanisMarji: -3.470000029, etki: -0.019779 },
-  { sembol: "MPARK", fonOrani: 0.52, kapanisMarji: -0.5, etki: -0.0026 },
-  { sembol: "ISCTR", fonOrani: 0.47, kapanisMarji: 0.390625, etki: 0.001835938 },
-  { sembol: "PGSUS", fonOrani: 0.43, kapanisMarji: -0.653238977, etki: -0.002808928 },
-  { sembol: "DCTTR", fonOrani: 0.42, kapanisMarji: 3.869999886, etki: 0.016254 },
-  { sembol: "BRSAN", fonOrani: 0.39, kapanisMarji: 0.575657895, etki: 0.002245066 },
-  { sembol: "IZFAS", fonOrani: 0.38, kapanisMarji: 0.157728707, etki: 0.000599369 },
-  { sembol: "PEKGY", fonOrani: 0.37, kapanisMarji: 0.370000005, etki: 0.001369 },
-  { sembol: "ANSGR", fonOrani: 0.24, kapanisMarji: -1.823092505, etki: -0.004375422 },
-  { sembol: "PHE", fonOrani: 10.36, kapanisMarji: 0.77, etki: 0.079772 },
-  { sembol: "PKZ", fonOrani: 9.81, kapanisMarji: -2.89, etki: -0.283509 },
+  { sembol: "GUNDG", fonOrani: 9.54, kapanisMarji: 1.304681504, etki: 0.124466616 },
+  { sembol: "KTLEV", fonOrani: 8.22, kapanisMarji: -0.817438692, etki: -0.06719346 },
+  { sembol: "ODINE", fonOrani: 7.91, kapanisMarji: 3.305785124, etki: 0.261487603 },
+  { sembol: "HEDEF", fonOrani: 5.36, kapanisMarji: 3.225806452, etki: 0.172903226 },
+  { sembol: "PASEU", fonOrani: 3.81, kapanisMarji: 2.43902439, etki: 0.092926829 },
+  { sembol: "TATEN", fonOrani: 3.25, kapanisMarji: -0.539447067, etki: -0.01753203 },
+  { sembol: "AKBNK", fonOrani: 2.78, kapanisMarji: -1.829268293, etki: -0.050853659 },
+  { sembol: "YKBNK", fonOrani: 2.5, kapanisMarji: -2.189781022, etki: -0.054744526 },
+  { sembol: "THYAO", fonOrani: 2.25, kapanisMarji: 0.076982294, etki: 0.001732102 },
+  { sembol: "TRALT", fonOrani: 1.68, kapanisMarji: -3.112840467, etki: -0.05229572 },
+  { sembol: "DSTKF", fonOrani: 1.48, kapanisMarji: 0.757575758, etki: 0.011212121 },
+  { sembol: "AKSEN", fonOrani: 1.12, kapanisMarji: -3.534183082, etki: -0.039582851 },
+  { sembol: "TCELL", fonOrani: 0.95, kapanisMarji: -1.943462898, etki: -0.018462898 },
+  { sembol: "DAPGM", fonOrani: 0.92, kapanisMarji: -5.123339658, etki: -0.047134725 },
+  { sembol: "SKBNK", fonOrani: 0.86, kapanisMarji: 2.107873528, etki: 0.018127712 },
+  { sembol: "MGROS", fonOrani: 0.67, kapanisMarji: 1.753104456, etki: 0.0117458 },
+  { sembol: "TERA", fonOrani: 0.57, kapanisMarji: 0.377833753, etki: 0.002153652 },
+  { sembol: "MPARK", fonOrani: 0.52, kapanisMarji: -1.327433628, etki: -0.006902655 },
+  { sembol: "ISCTR", fonOrani: 0.47, kapanisMarji: -1.556420233, etki: -0.007315175 },
+  { sembol: "PGSUS", fonOrani: 0.43, kapanisMarji: -2.410958904, etki: -0.010367123 },
+  { sembol: "DCTTR", fonOrani: 0.42, kapanisMarji: 0.579470199, etki: 0.002433775 },
+  { sembol: "BRSAN", fonOrani: 0.39, kapanisMarji: -3.924775143, etki: -0.015306623 },
+  { sembol: "IZFAS", fonOrani: 0.38, kapanisMarji: 0.078740157, etki: 0.000299213 },
+  { sembol: "PEKGY", fonOrani: 0.37, kapanisMarji: 0.365230095, etki: 0.001351351 },
+  { sembol: "ANSGR", fonOrani: 0.24, kapanisMarji: -1.306740028, etki: -0.003136176 },
+  { sembol: "PHE", fonOrani: 10.36, kapanisMarji: 0.19, etki: 0.019684 },
+  { sembol: "PKZ", fonOrani: 9.81, kapanisMarji: 1.44, etki: 0.141264 },
 ];
 
 export default function PbrEtkiAnaliziPage() {
@@ -57,8 +57,8 @@ export default function PbrEtkiAnaliziPage() {
       slug="pbr"
       rows={rows}
       toplamFonOrani={77.26}
-      toplamEtki={0.26}
-      sonGuncelleme="22 Haziran 2026"
+      toplamEtki={0.47}
+      sonGuncelleme="23 Haziran 2026"
     />
   );
 }
