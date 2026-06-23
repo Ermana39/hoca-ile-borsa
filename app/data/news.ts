@@ -21,6 +21,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1009,
+    title: "23 Haziran 2026 Önemli KAP Haberleri",
+    href: "/haber/23-haziran-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "23 Haziran 2026 Önemli KAP Haberleri",
+    publishedAt: "2026-06-23",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["SASA", "SEKUR", "MACKO", "AHGAZ", "ENERY", "DAPGM", "KTLEV", "SVGYO", "PEKGY", "GRNYO", "OSTIM", "VSNMD", "BIGCH", "TCELL", "KRVGD", "MRGYO", "OZYSR", "TURSG", "ULKER", "EKGYO", "DITAS", "AKBNK", "CWENE", "DNYVA", "KRDMA", "KRDMB", "KRDMD", "BLUME", "GESAN", "EUPWR", "ARCLK", "RUBNS", "HEKTS", "MARBL", "GOKNR", "HATSN", "BRISA"],
+  },
+  {
     id: 1008,
     title:
       "Beta Enerji Halka Arzı Başladı: Talep Toplama Tarihleri ve Olası Lot Dağılımı",
