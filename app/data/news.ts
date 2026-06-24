@@ -21,6 +21,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1018,
+    title: "24 Haziran 2026 Önemli KAP Haberleri",
+    href: "/haber/24-haziran-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "24 Haziran 2026 Önemli KAP Haberleri",
+    publishedAt: "2026-06-24",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["IHLAS", "GRNYO", "KMPUR", "PRDGS", "RTALB", "TRCAS", "INDES", "ARDYZ", "AHSGY", "ARASE", "CEMTS", "EKGYO", "MHRGY", "OSTIM", "OZKGY", "VKGYO", "ODINE", "DNZEN", "ARSAN", "ALVES", "BMSTL", "KLNMA", "DENVA", "IHLAS", "POLTK", "CEOEM", "HRKET", "VRGYO", "SRVGY", "ZRGYO", "DNFIN", "DAPGM", "BRKVY"],
+  },
+  {
     id: 1017,
     title: "HRKET’ten %1300 Bedelsiz Sermaye Artırımı Başvurusu",
     href: "/haber/hrket-1300-bedelsiz-sermaye-artirimi-basvurusu",
