@@ -22,6 +22,15 @@ export type NewsItem = {
 export const newsItems: NewsItem[] = [
   
   {
+    id: 1020,
+    title: "SPK’dan 5 Yeni Halka Arz Onayı Geldi",
+    href: "/haber/spk-5-yeni-halka-arz-onayi-verdi",
+    image: "/spk-5-yeni-halka-arz-onayi.webp",
+    alt: "SPK 5 yeni halka arz onayı",
+    publishedAt: "2026-06-24",
+    category: "halka-arz",
+  },
+  {
     id: 1019,
     title: "TRHOL, Tera Yatırım Paylarının Devralınması İçin Sözleşme İmzaladı",
     href: "/haber/trhol-tera-yatirim-pay-devri-sozlesmesi",

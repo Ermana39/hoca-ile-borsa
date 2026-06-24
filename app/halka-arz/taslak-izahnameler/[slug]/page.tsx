@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import ContinueReading from "@/components/ContinueReading";
 import {
   bekleyenDeger,
@@ -25,6 +25,17 @@ export async function generateMetadata({
   const { slug } = await params;
   const veri = halkaArzGetir(slug);
   if (!veri) return {};
+  if (veri.seo?.contentStatus === "onayli") {
+    return {
+      title: veri.baslikMeta.title,
+      description: veri.baslikMeta.description,
+      alternates: {
+        canonical:
+          veri.seo.canonical ||
+          `https://www.hocaileborsa.com/halka-arz/onayli-izahnameler/${slug}`,
+      },
+    };
+  }
   return {
     title: veri.baslikMeta.title,
     description: veri.baslikMeta.description,
@@ -65,6 +76,9 @@ export default async function HalkaArzDinamikPage({
 
   const veri = halkaArzGetir(slug);
   if (!veri) notFound();
+  if (veri.seo?.contentStatus === "onayli") {
+    permanentRedirect(`/halka-arz/onayli-izahnameler/${slug}`);
+  }
 
   const tumOzet = ozetSatirlari(veri);
   const gorunenSummary = tumOzet.filter((i) => !bekleyenDeger(i.value));

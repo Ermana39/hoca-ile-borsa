@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import SirketLogo from "@/components/SirketLogo";
+import { getOnayliIzahnameListesi } from "@/lib/halka-arz";
 import { getIzahnameLogo } from "@/lib/izahname-logolar";
 
 export const metadata: Metadata = {
@@ -13,7 +14,7 @@ export const metadata: Metadata = {
   },
 };
 
-const onayliIzahnameler = [
+const statikOnayliIzahnameler = [
   {
     kod: "BETA",
     sirket: "Beta Enerji ve Teknoloji A.Ş.",
@@ -27,6 +28,16 @@ const onayliIzahnameler = [
 ];
 
 export default function OnayliIzahnamelerPage() {
+  const dinamikOnayliIzahnameler = getOnayliIzahnameListesi().map((item) => ({
+    kod: item.kod || "Onaylı",
+    sirket: item.label,
+    href: `/halka-arz/onayli-izahnameler/${item.klasor}`,
+  }));
+  const onayliIzahnameler = [
+    ...statikOnayliIzahnameler,
+    ...dinamikOnayliIzahnameler,
+  ];
+
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <div className="mx-auto max-w-5xl">

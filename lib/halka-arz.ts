@@ -81,6 +81,16 @@ export type TaahhutOzeti = {
 export type HalkaArzVeri = {
   slug: string;
   sirketAdi: string;
+  bistKodu?: string;
+  seo?: {
+    canonical?: string;
+    robots?: {
+      index?: boolean;
+      follow?: boolean;
+    };
+    sitemap?: boolean;
+    contentStatus?: "taslak" | "onayli" | string;
+  };
   baslikMeta: { title: string; description: string };
 
   ozet: HalkaArzOzet;
@@ -169,7 +179,11 @@ export function statikSlugVar(slug: string): boolean {
  * .tsx'i bulunmayan (yani taşınması tamamlanmış) slug'lar.
  */
 export function tasinmamisSluglar(): string[] {
-  return tumJsonSluglar().filter((slug) => !statikSlugVar(slug));
+  return tumJsonSluglar().filter((slug) => {
+    if (statikSlugVar(slug)) return false;
+    const veri = halkaArzGetir(slug);
+    return veri?.seo?.contentStatus !== "onayli";
+  });
 }
 
 /** Tek bir halka arz JSON'unu okur. Yoksa null döner. */
@@ -189,6 +203,11 @@ export function halkaArzGetir(slug: string): HalkaArzVeri | null {
 }
 
 export type TaslakListeOgesi = { klasor: string; label: string };
+export type OnayliListeOgesi = {
+  klasor: string;
+  label: string;
+  kod?: string;
+};
 
 // Taslak izahnameler liste/arama sayfası için TEK KAYNAK: data/halka-arz/*.json.
 // Yalnızca detay sayfası gerçekten render olan (geçerli + `ozet` içeren) kayıtlar
@@ -199,8 +218,25 @@ export function getTaslakIzahnameListesi(): TaslakListeOgesi[] {
     .map((slug) => {
       const veri = halkaArzGetir(slug);
       if (!veri) return null;
+      if (veri.seo?.contentStatus === "onayli") return null;
       return { klasor: slug, label: veri.sirketAdi || slug };
     })
     .filter((x): x is TaslakListeOgesi => x !== null)
+    .sort((a, b) => a.label.localeCompare(b.label, "tr"));
+}
+
+export function getOnayliIzahnameListesi(): OnayliListeOgesi[] {
+  return tumJsonSluglar()
+    .map((slug) => {
+      const veri = halkaArzGetir(slug);
+      if (!veri || veri.seo?.contentStatus !== "onayli") return null;
+      const oge: OnayliListeOgesi = {
+        klasor: slug,
+        label: veri.sirketAdi || slug,
+      };
+      if (veri.bistKodu) oge.kod = veri.bistKodu;
+      return oge;
+    })
+    .filter((x): x is OnayliListeOgesi => x !== null)
     .sort((a, b) => a.label.localeCompare(b.label, "tr"));
 }
