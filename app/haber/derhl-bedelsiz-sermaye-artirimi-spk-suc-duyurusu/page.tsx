@@ -3,8 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
-import HaberAltBilgi from "@/components/HaberAltBilgi";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
   title: "DERHL’de Bedelsiz Sermaye Artırımı ve SPK’dan Suç Duyurusu Kararı",
@@ -177,9 +176,7 @@ export default function DerhlBedelsizSpkSucDuyurusuPage() {
             </div>
           </div>
 
-          <HaberAltBilgi href="/haber/derhl-bedelsiz-sermaye-artirimi-spk-suc-duyurusu" />
-
-          <HaberNavigasyon href="/haber/derhl-bedelsiz-sermaye-artirimi-spk-suc-duyurusu" />
+          <HaberAltKisim href="/haber/derhl-bedelsiz-sermaye-artirimi-spk-suc-duyurusu" />
 
           <AuthorBox />
         </article>

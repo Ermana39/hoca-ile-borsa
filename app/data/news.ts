@@ -21,6 +21,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1015,
+    title: "ALVES Polatlı OSB’de Yeni Üretim Tesisi İçin Hafriyata Başladı",
+    href: "/haber/alves-polatli-osb-yeni-uretim-tesisi-hafriyat-basladi",
+    image: "/alves-polatli-osb-yeni-uretim-tesisi-hafriyat-basladi.webp",
+    alt: "ALVES Polatlı OSB yeni üretim tesisi hafriyat çalışmaları",
+    publishedAt: "2026-06-24",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["ALVES"],
+  },
+  {
     id: 1014,
     title: "MSCI’den Türkiye Uyarısı: Şeffaflık ve Bilgi Akışı İzlenecek",
     href: "/haber/msci-turkiye-uyarisi-seffaflik-bilgi-akisi",

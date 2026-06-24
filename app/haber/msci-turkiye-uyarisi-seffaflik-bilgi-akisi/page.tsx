@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
   title: "MSCI’den Türkiye Uyarısı: Şeffaflık ve Bilgi Akışı İzlenecek",
@@ -188,10 +188,7 @@ export default function MsciTurkiyeUyarisiPage() {
             baslik="MSCI Türkiye Uyarısı Şeffaflık Bilgi Akışı"
           />
         </div>
-        <HaberNavigasyon
-          href="/haber/msci-turkiye-uyarisi-seffaflik-bilgi-akisi"
-          className="mt-8"
-        />
+        <HaberAltKisim href="/haber/msci-turkiye-uyarisi-seffaflik-bilgi-akisi" />
       </div>
     </main>
   );

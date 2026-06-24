@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
+import HaberAltKisim from "@/components/HaberAltKisim";
 import AuthorBox from "@/components/AuthorBox";
 
 export const metadata: Metadata = {
@@ -95,7 +95,7 @@ export default function DerhlBedelsizPage() {
             baslik="DERHL Bedelsiz Sermaye Artırımı"
           />
         </div>
-        <HaberNavigasyon href="/haber/derhl-bedelsiz-sermaye-artirimi" className="mt-8" />
+        <HaberAltKisim href="/haber/derhl-bedelsiz-sermaye-artirimi" />
       </div>
     </main>
   );

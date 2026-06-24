@@ -3,8 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
-import HaberAltBilgi from "@/components/HaberAltBilgi";
+import HaberAltKisim from "@/components/HaberAltKisim";
 import KapCardLinks from "@/components/KapCardLinks";
 
 export const metadata: Metadata = {
@@ -181,9 +180,7 @@ export default function HaberKapOzetiPage() {
               </div>
             </div>
           </div>
-          <HaberAltBilgi href="/haber/11-haziran-2026-persembe-kap-bildirimleri-ozeti" />
-
-          <HaberNavigasyon href="/haber/11-haziran-2026-persembe-kap-bildirimleri-ozeti" />
+          <HaberAltKisim href="/haber/11-haziran-2026-persembe-kap-bildirimleri-ozeti" />
 
           <AuthorBox />
 

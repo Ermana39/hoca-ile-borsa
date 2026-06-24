@@ -3,8 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
-import HaberAltBilgi from "@/components/HaberAltBilgi";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
   title:
@@ -365,9 +364,7 @@ export default function BetaEnerjiHalkaArziBasladiPage() {
             </div>
           </div>
 
-          <HaberAltBilgi href="/haber/beta-enerji-halka-arzi-basladi-talep-toplama-ve-lot-dagilimi" />
-
-          <HaberNavigasyon href="/haber/beta-enerji-halka-arzi-basladi-talep-toplama-ve-lot-dagilimi" />
+          <HaberAltKisim href="/haber/beta-enerji-halka-arzi-basladi-talep-toplama-ve-lot-dagilimi" />
 
           <AuthorBox />
         </article>

@@ -3,8 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
-import HaberAltBilgi from "@/components/HaberAltBilgi";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
   title: "Odine, Super Micro Computer ile İş Ortaklığı Anlaşması İmzaladı",
@@ -204,9 +203,7 @@ export default function HaberKapOzetiPage() {
               </div>
             </div>
           </div>
-          <HaberAltBilgi href="/haber/odine-super-micro-computer-is-ortakligi" />
-
-          <HaberNavigasyon href="/haber/odine-super-micro-computer-is-ortakligi" />
+          <HaberAltKisim href="/haber/odine-super-micro-computer-is-ortakligi" />
 
           <AuthorBox />
         </article>

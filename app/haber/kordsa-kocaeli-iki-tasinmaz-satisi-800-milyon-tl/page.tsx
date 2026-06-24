@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
   title: "Kordsa Kocaeli’deki İki Taşınmazını 800 Milyon TL’ye Sattı",
@@ -176,7 +176,7 @@ export default function KordsaTasinmazSatisiPage() {
             baslik="Kordsa Kocaeli Taşınmaz Satışı KORDS"
           />
         </div>
-        <HaberNavigasyon href="/haber/kordsa-kocaeli-iki-tasinmaz-satisi-800-milyon-tl" className="mt-8" />
+        <HaberAltKisim href="/haber/kordsa-kocaeli-iki-tasinmaz-satisi-800-milyon-tl" />
       </div>
     </main>
   );

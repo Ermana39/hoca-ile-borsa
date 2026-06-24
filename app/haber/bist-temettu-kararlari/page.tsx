@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
+import HaberAltKisim from "@/components/HaberAltKisim";
 import AuthorBox from "@/components/AuthorBox";
 
 export const metadata: Metadata = {
@@ -127,7 +127,7 @@ export default function BistTemettuKararlariPage() {
             baslik="Temettü Kararı Kâr Payı"
           />
         </div>
-        <HaberNavigasyon href="/haber/bist-temettu-kararlari" className="mt-8" />
+        <HaberAltKisim href="/haber/bist-temettu-kararlari" />
       </div>
     </main>
   );

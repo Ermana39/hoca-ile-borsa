@@ -3,8 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
-import HaberAltBilgi from "@/components/HaberAltBilgi";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
   title: "Türkiye Sigorta’nın Prim Üretimi 79,2 Milyar TL’ye Yükseldi",
@@ -156,9 +155,7 @@ export default function Haber975Page() {
               </div>
             </div>
           </div>
-          <HaberAltBilgi href="/haber/turkiye-sigortanin-prim-uretimi-79-2-milyar-tlye-yukseldi" />
-
-          <HaberNavigasyon href="/haber/turkiye-sigortanin-prim-uretimi-79-2-milyar-tlye-yukseldi" />
+          <HaberAltKisim href="/haber/turkiye-sigortanin-prim-uretimi-79-2-milyar-tlye-yukseldi" />
 
           <AuthorBox />
 

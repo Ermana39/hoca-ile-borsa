@@ -3,8 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
-import HaberAltBilgi from "@/components/HaberAltBilgi";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 const kapKaynakLink =
   "https://www.kap.org.tr/tr/bildirim-sorgu-sonuc?member=8acae2c4794d364a017af66863e41bae";
@@ -230,9 +229,7 @@ export default function HaberEuropowerAbdTransformatorPage() {
             </div>
           </div>
 
-          <HaberAltBilgi href="/haber/europower-abd-transformator-siparisi-19-haziran-2026" />
-
-          <HaberNavigasyon href="/haber/europower-abd-transformator-siparisi-19-haziran-2026" />
+          <HaberAltKisim href="/haber/europower-abd-transformator-siparisi-19-haziran-2026" />
 
           <AuthorBox />
         </article>

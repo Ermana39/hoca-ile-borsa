@@ -3,7 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
   title: "Aksa Enerji’nin Manisa Depolamalı RES Projesine EPDK Onayı",
@@ -181,10 +181,7 @@ export default function AksenManisaDepolamaliResPage() {
             baslik="Aksa Enerji Manisa Depolamalı RES Lisans Onayı AKSEN"
           />
         </div>
-        <HaberNavigasyon
-          href="/haber/aksen-manisa-depolamali-res-epdk-lisans-onayi"
-          className="mt-8"
-        />
+        <HaberAltKisim href="/haber/aksen-manisa-depolamali-res-epdk-lisans-onayi" />
       </div>
     </main>
   );

@@ -3,8 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
-import HaberAltBilgi from "@/components/HaberAltBilgi";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 const kapLink = "https://www.kap.org.tr/tr/Bildirim/1619472";
 
@@ -148,9 +147,7 @@ export default function OrgeBedelsizSermayeArtirimiPage() {
               </div>
             </div>
           </div>
-          <HaberAltBilgi href="/haber/orge-400-bedelsiz-sermaye-artirimi-basvurusu" />
-
-          <HaberNavigasyon href="/haber/orge-400-bedelsiz-sermaye-artirimi-basvurusu" />
+          <HaberAltKisim href="/haber/orge-400-bedelsiz-sermaye-artirimi-basvurusu" />
 
           <AuthorBox />
         </article>

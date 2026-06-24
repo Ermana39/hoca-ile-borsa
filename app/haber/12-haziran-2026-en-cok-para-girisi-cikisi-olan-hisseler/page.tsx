@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
   title: "12 Haziran 2026 En Çok Para Girişi ve Çıkışı Olan Hisseler | Hoca İle Borsa",
@@ -205,7 +205,7 @@ export default function EnCokParaGirisiCikisiPage() {
             koşulları ayrıca değerlendirilmelidir.
           </p>
         </section>
-        <HaberNavigasyon href="/haber/12-haziran-2026-en-cok-para-girisi-cikisi-olan-hisseler" className="mt-8" />
+        <HaberAltKisim href="/haber/12-haziran-2026-en-cok-para-girisi-cikisi-olan-hisseler" />
       </div>
     </main>
   );

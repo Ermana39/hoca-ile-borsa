@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
+import HaberAltKisim from "@/components/HaberAltKisim";
 import AuthorBox from "@/components/AuthorBox";
 
 export const metadata: Metadata = {
@@ -105,7 +105,7 @@ export default function SigortaPrimUretimiPage() {
             baslik="Sigorta Şirketlerinde Prim Üretimi Artışı"
           />
         </div>
-        <HaberNavigasyon href="/haber/sigorta-prim-uretimi-artisi-agesa-ansgr" className="mt-8" />
+        <HaberAltKisim href="/haber/sigorta-prim-uretimi-artisi-agesa-ansgr" />
       </div>
     </main>
   );

@@ -3,8 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
-import HaberAltBilgi from "@/components/HaberAltBilgi";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
   title:
@@ -217,9 +216,7 @@ export default function HaberMidasOdemeSistemleriPage() {
             </div>
           </div>
 
-          <HaberAltBilgi href="/haber/midas-odeme-sistemleri-isine-giriyor" />
-
-          <HaberNavigasyon href="/haber/midas-odeme-sistemleri-isine-giriyor" />
+          <HaberAltKisim href="/haber/midas-odeme-sistemleri-isine-giriyor" />
 
           <AuthorBox />
         </article>

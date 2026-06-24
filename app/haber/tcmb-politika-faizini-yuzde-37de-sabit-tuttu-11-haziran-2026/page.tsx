@@ -3,8 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
-import HaberAltBilgi from "@/components/HaberAltBilgi";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
   title: "TCMB Politika Faizini Yüzde 37’de Sabit Tuttu",
@@ -171,9 +170,7 @@ export default function TcmbFaizKarariPage() {
               </div>
             </div>
           </div>
-          <HaberAltBilgi href="/haber/tcmb-politika-faizini-yuzde-37de-sabit-tuttu-11-haziran-2026" />
-
-          <HaberNavigasyon href="/haber/tcmb-politika-faizini-yuzde-37de-sabit-tuttu-11-haziran-2026" />
+          <HaberAltKisim href="/haber/tcmb-politika-faizini-yuzde-37de-sabit-tuttu-11-haziran-2026" />
 
           <AuthorBox />
 

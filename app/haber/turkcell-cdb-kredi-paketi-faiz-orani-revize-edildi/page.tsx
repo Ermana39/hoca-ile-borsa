@@ -3,8 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
-import HaberAltBilgi from "@/components/HaberAltBilgi";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
   title: "Turkcell CDB Kredi Paketinde Faiz Oranını Revize Etti",
@@ -169,9 +168,7 @@ export default function TurkcellKrediRevizyonuPage() {
               </div>
             </div>
           </div>
-          <HaberAltBilgi href="/haber/turkcell-cdb-kredi-paketi-faiz-orani-revize-edildi" />
-
-          <HaberNavigasyon href="/haber/turkcell-cdb-kredi-paketi-faiz-orani-revize-edildi" />
+          <HaberAltKisim href="/haber/turkcell-cdb-kredi-paketi-faiz-orani-revize-edildi" />
 
           <AuthorBox />
         </article>

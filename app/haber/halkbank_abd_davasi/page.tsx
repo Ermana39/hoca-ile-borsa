@@ -3,8 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
-import HaberAltBilgi from "@/components/HaberAltBilgi";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
   title: "ABD Mahkemesi Halkbank Davasını Düşürdü: 9 Yıllık Süreç Sona Erdi",
@@ -216,9 +215,7 @@ export default function HaberHalkbankAbdDavasiPage() {
               </div>
             </div>
           </div>
-          <HaberAltBilgi href="/haber/halkbank_abd_davasi" />
-
-          <HaberNavigasyon href="/haber/halkbank_abd_davasi" />
+          <HaberAltKisim href="/haber/halkbank_abd_davasi" />
 
           <AuthorBox />
         </article>

@@ -3,8 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
-import HaberAltBilgi from "@/components/HaberAltBilgi";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
   title: "Turcas'a Shell & Turcas'tan 8 Milyon Dolar İmtiyazlı Temettü",
@@ -186,9 +185,7 @@ export default function HaberKapOzetiPage() {
               </div>
             </div>
           </div>
-          <HaberAltBilgi href="/haber/trcas-shell-turcas-8-milyon-dolar-imtiyazli-temettu" />
-
-          <HaberNavigasyon href="/haber/trcas-shell-turcas-8-milyon-dolar-imtiyazli-temettu" />
+          <HaberAltKisim href="/haber/trcas-shell-turcas-8-milyon-dolar-imtiyazli-temettu" />
 
           <AuthorBox />
         </article>

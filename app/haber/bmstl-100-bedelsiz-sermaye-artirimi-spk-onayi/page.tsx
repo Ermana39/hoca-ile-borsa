@@ -3,8 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
-import HaberAltBilgi from "@/components/HaberAltBilgi";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
   title: "BMSTL’de %100 Bedelsiz Sermaye Artırımı İçin SPK Onayı",
@@ -199,9 +198,7 @@ export default function HaberPage() {
               </div>
             </div>
           </div>
-          <HaberAltBilgi href="/haber/bmstl-100-bedelsiz-sermaye-artirimi-spk-onayi" />
-
-          <HaberNavigasyon href="/haber/bmstl-100-bedelsiz-sermaye-artirimi-spk-onayi" />
+          <HaberAltKisim href="/haber/bmstl-100-bedelsiz-sermaye-artirimi-spk-onayi" />
 
           <AuthorBox />
         </article>

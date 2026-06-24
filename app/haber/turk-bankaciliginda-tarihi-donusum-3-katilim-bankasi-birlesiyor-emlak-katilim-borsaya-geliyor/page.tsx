@@ -3,8 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
-import HaberAltBilgi from "@/components/HaberAltBilgi";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
   title: "Türk Bankacılığında Tarihi Dönüşüm: 3 Katılım Bankası Birleşiyor, Emlak Katılım Borsaya Geliyor",
@@ -152,9 +151,7 @@ export default function Haber981Page() {
               </div>
             </div>
           </div>
-          <HaberAltBilgi href="/haber/turk-bankaciliginda-tarihi-donusum-3-katilim-bankasi-birlesiyor-emlak-katilim-borsaya-geliyor" />
-
-          <HaberNavigasyon href="/haber/turk-bankaciliginda-tarihi-donusum-3-katilim-bankasi-birlesiyor-emlak-katilim-borsaya-geliyor" />
+          <HaberAltKisim href="/haber/turk-bankaciliginda-tarihi-donusum-3-katilim-bankasi-birlesiyor-emlak-katilim-borsaya-geliyor" />
 
           <AuthorBox />
 
