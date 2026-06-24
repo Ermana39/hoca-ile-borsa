@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "https://www.hocaileborsa.com/images/haber/spk-5-yeni-halka-arz-onayi.webp",
+        url: "https://www.hocaileborsa.com/spk-5-yeni-halka-arz-onayi.webp",
         width: 1200,
         height: 675,
         alt: "SPK 5 yeni halka arz onayı",
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     description:
       "SPK, Orzaks İlaç, Ekim Turizm, Soho Giyim, İsvea Seramik ve Golda Gıda halka arzlarına onay verdi.",
     images: [
-      "https://www.hocaileborsa.com/images/haber/spk-5-yeni-halka-arz-onayi.webp",
+      "https://www.hocaileborsa.com/spk-5-yeni-halka-arz-onayi.webp",
     ],
   },
 };
@@ -45,7 +45,7 @@ const halkaArzlar = [
     yeniSermaye: "338.500.000 TL",
     bedelli: "31.500.000 TL",
     mevcutPaySatisi: "21.000.000 TL",
-    link: "/halka-arz/onayli-izahnameler/orzaks-ilac-ve-kimya-sanayi-ticaret-as",
+    link: "/halka-arz/onayli-izahnameler/orzaks-ilac-ve-kimya-san-tic",
   },
   {
     sirket: "Ekim Turizm Ticaret ve Sanayi AŞ",
@@ -54,7 +54,7 @@ const halkaArzlar = [
     yeniSermaye: "832.000.000 TL",
     bedelli: "132.000.000 TL",
     mevcutPaySatisi: "30.000.000 TL",
-    link: "/halka-arz/onayli-izahnameler/ekim-turizm-ticaret-ve-sanayi-as",
+    link: "/halka-arz/onayli-izahnameler/ekim-turizm-tic-ve-san",
   },
   {
     sirket: "Soho Giyim ve Enerji AŞ",
@@ -63,7 +63,7 @@ const halkaArzlar = [
     yeniSermaye: "306.760.337,13 TL",
     bedelli: "100.000.000 TL",
     mevcutPaySatisi: "-",
-    link: "/halka-arz/onayli-izahnameler/soho-giyim-ve-enerji-as",
+    link: "/halka-arz/onayli-izahnameler/soho-giyim-ve-enerji",
   },
   {
     sirket: "İsvea Seramik ve Banyo Ürünleri Sanayi AŞ",
@@ -72,7 +72,7 @@ const halkaArzlar = [
     yeniSermaye: "280.000.000 TL",
     bedelli: "60.000.000 TL",
     mevcutPaySatisi: "7.000.000 TL",
-    link: "/halka-arz/onayli-izahnameler/isvea-seramik-ve-banyo-urunleri-sanayi-as",
+    link: "/halka-arz/onayli-izahnameler/isvea-seramik-ve-banyo-urunleri-sanayi",
   },
   {
     sirket: "Golda Gıda Sanayi ve Ticaret AŞ",
@@ -81,7 +81,7 @@ const halkaArzlar = [
     yeniSermaye: "250.000.000 TL",
     bedelli: "50.000.000 TL",
     mevcutPaySatisi: "37.499.998 TL",
-    link: "/halka-arz/onayli-izahnameler/golda-gida-sanayi-ve-ticaret-as",
+    link: "/halka-arz/onayli-izahnameler/golda-gida-san-ve-tic",
   },
 ];
 
@@ -125,7 +125,7 @@ export default function Page() {
 
         <div className="mb-8 overflow-hidden rounded-2xl bg-white shadow-sm ring-1 ring-slate-200">
           <Image
-            src="/images/haber/spk-5-yeni-halka-arz-onayi.webp"
+            src="/spk-5-yeni-halka-arz-onayi.webp"
             alt="SPK 5 yeni halka arz onayı"
             width={1200}
             height={675}
@@ -245,7 +245,7 @@ export default function Page() {
                 satışı yer alıyor.
               </p>
               <Link
-                href="/halka-arz/onayli-izahnameler/orzaks-ilac-ve-kimya-sanayi-ticaret-as"
+                href="/halka-arz/onayli-izahnameler/orzaks-ilac-ve-kimya-san-tic"
                 className="mt-2 inline-block font-semibold text-blue-600 hover:text-blue-800"
               >
                 Orzaks İlaç halka arz detayları
@@ -263,7 +263,7 @@ export default function Page() {
                 satışı planlanıyor.
               </p>
               <Link
-                href="/halka-arz/onayli-izahnameler/ekim-turizm-ticaret-ve-sanayi-as"
+                href="/halka-arz/onayli-izahnameler/ekim-turizm-tic-ve-san"
                 className="mt-2 inline-block font-semibold text-blue-600 hover:text-blue-800"
               >
                 Ekim Turizm halka arz detayları
@@ -280,7 +280,7 @@ export default function Page() {
                 306,76 milyon TL seviyesine çıkarılması planlanıyor.
               </p>
               <Link
-                href="/halka-arz/onayli-izahnameler/soho-giyim-ve-enerji-as"
+                href="/halka-arz/onayli-izahnameler/soho-giyim-ve-enerji"
                 className="mt-2 inline-block font-semibold text-blue-600 hover:text-blue-800"
               >
                 Soho Giyim halka arz detayları
@@ -298,7 +298,7 @@ export default function Page() {
                 pay satışı bulunuyor.
               </p>
               <Link
-                href="/halka-arz/onayli-izahnameler/isvea-seramik-ve-banyo-urunleri-sanayi-as"
+                href="/halka-arz/onayli-izahnameler/isvea-seramik-ve-banyo-urunleri-sanayi"
                 className="mt-2 inline-block font-semibold text-blue-600 hover:text-blue-800"
               >
                 İsvea Seramik halka arz detayları
@@ -316,7 +316,7 @@ export default function Page() {
                 planlanıyor.
               </p>
               <Link
-                href="/halka-arz/onayli-izahnameler/golda-gida-sanayi-ve-ticaret-as"
+                href="/halka-arz/onayli-izahnameler/golda-gida-san-ve-tic"
                 className="mt-2 inline-block font-semibold text-blue-600 hover:text-blue-800"
               >
                 Golda Gıda halka arz detayları
