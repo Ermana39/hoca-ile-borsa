@@ -175,9 +175,9 @@ export default function HaberPage() {
                   href="https://www.kap.org.tr/tr/Bildirim/1620148"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-semibold text-blue-700 hover:text-blue-800"
+                  className="font-medium text-slate-500 underline underline-offset-2 transition hover:text-slate-700"
                 >
-                  KAP bildirimini aç
+                  Orijinal KAP bildirimi
                 </a>
               </div>
 

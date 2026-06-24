@@ -11,30 +11,17 @@ function hisseKoduBul(baslik: string) {
 export default function KapCardLinks({ baslik }: { baslik: string }) {
   const kod = hisseKoduBul(baslik);
 
+  // İlgili hisse yoksa hiç gösterme (boş çerçeve bırakma).
+  if (!kod) return null;
+
   return (
     <div className="mt-3 flex flex-wrap gap-2 border-t border-slate-200 pt-3 text-xs font-semibold">
-      {kod && (
-        <Link
-          href={`/hisse/${kod.toLowerCase()}`}
-          prefetch={false}
-          className="rounded-full border border-blue-200 bg-white px-2.5 py-1 text-blue-700 transition hover:bg-blue-50"
-        >
-          {kod} ilgili hisse sayfası
-        </Link>
-      )}
       <Link
-        href="/haberler/kategori/kap-bildirimleri"
+        href={`/hisse/${kod.toLowerCase()}`}
         prefetch={false}
-        className="rounded-full border border-slate-200 bg-white px-2.5 py-1 text-slate-700 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
+        className="rounded-full border border-blue-200 bg-white px-2.5 py-1 text-blue-700 transition hover:bg-blue-50"
       >
-        Benzer KAP haberleri
-      </Link>
-      <Link
-        href="/haber/23-haziran-2026-onemli-kap-haberleri"
-        prefetch={false}
-        className="rounded-full border border-slate-200 bg-white px-2.5 py-1 text-slate-700 transition hover:border-blue-200 hover:bg-blue-50 hover:text-blue-700"
-      >
-        Günün diğer önemli KAP haberleri
+        {kod} ilgili hisse sayfası
       </Link>
     </div>
   );

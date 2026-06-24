@@ -143,10 +143,10 @@ export default function TurkcellKrediRevizyonuPage() {
                     <a
                       href={haber.kapLink}
                       target="_blank"
-                      rel="noopener noreferrer"
-                      className="mt-3 inline-flex text-sm font-semibold text-blue-600 hover:text-blue-700"
+                      rel="noopener noreferrer nofollow"
+                      className="mt-3 inline-flex text-sm font-medium text-slate-500 underline underline-offset-2 transition hover:text-slate-700"
                     >
-                      KAP bildirimini aç
+                      Orijinal KAP bildirimi
                     </a>
                   </section>
                 ))}

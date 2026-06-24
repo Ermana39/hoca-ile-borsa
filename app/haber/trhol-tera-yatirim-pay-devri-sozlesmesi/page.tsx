@@ -6,61 +6,55 @@ import AuthorBox from "@/components/AuthorBox";
 import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
-  title: "HRKET’ten %1300 Bedelsiz Sermaye Artırımı Başvurusu",
+  title: "TRHOL, Tera Yatırım Paylarının Devri İçin Sözleşme İmzaladı",
   description:
-    "Hareket Proje Taşımacılığı ve Yük Mühendisliği A.Ş. (HRKET), sermayesini 115,2 milyon TL’den 1,61 milyar TL’ye çıkarmak için %1300 oranında bedelsiz sermaye artırımı başvurusu yaptı.",
+    "Tera Finansal Yatırımlar Holding A.Ş. (TRHOL), Tera Yatırım Menkul Değerler A.Ş. sermayesinin %6,3'ünü temsil eden B grubu payların devralınmasına ilişkin sözleşme imzalandığını ve pay devrinin önemli bölümünün tamamlandığını açıkladı.",
   alternates: {
     canonical:
-      "https://www.hocaileborsa.com/haber/hrket-1300-bedelsiz-sermaye-artirimi-basvurusu",
+      "https://www.hocaileborsa.com/haber/trhol-tera-yatirim-pay-devri-sozlesmesi",
   },
   openGraph: {
     type: "article",
-    images: [
-      {
-        url: "https://www.hocaileborsa.com/hrket-1300-bedelsiz-sermaye-artirimi-basvurusu.webp",
-      },
-    ],
+    images: [{ url: "https://www.hocaileborsa.com/trhol-tera-yatirim-pay-devri-sozlesmesi.webp" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: [
-      "https://www.hocaileborsa.com/hrket-1300-bedelsiz-sermaye-artirimi-basvurusu.webp",
-    ],
+    images: ["https://www.hocaileborsa.com/trhol-tera-yatirim-pay-devri-sozlesmesi.webp"],
   },
 };
 
 const haberDetaylari = [
   {
-    baslik: "HRKET’ten yüksek oranlı bedelsiz sermaye artırımı başvurusu",
+    baslik: "Tera Yatırım payları için sözleşme imzalandı",
     metin:
-      "Hareket Proje Taşımacılığı ve Yük Mühendisliği A.Ş. (HRKET), bedelsiz sermaye artırımı sürecine ilişkin SPK başvurusunu KAP üzerinden duyurdu. Şirket, 115.200.000 TL olan mevcut çıkarılmış sermayesini 1.497.600.000 TL artırarak 1.612.800.000 TL’ye yükseltmek için başvuruda bulundu. Toplam bedelsiz pay alma oranı %1300 olarak açıklandı.",
+      "Tera Finansal Yatırımlar Holding A.Ş. (TRHOL), Tera Yatırım Menkul Değerler A.Ş. paylarının devralınmasına ilişkin yönetim kurulu kararını ve pay devri sürecini KAP üzerinden duyurdu. Açıklamada, Tera Yatırım sermayesinin %6,3'ünü temsil eden B grubu payların devralınması için sözleşme görüşmelerine başlanmasına, sözleşme imzalanmasına ve payların devralınmasına karar verildiği belirtildi.",
   },
   {
-    baslik: "Artırım özkaynak kalemlerinden karşılanacak",
+    baslik: "Pay devrinin önemli bölümü tamamlandı",
     metin:
-      "KAP açıklamasına göre sermaye artırımında özsermaye enflasyon düzeltme farkları ve emisyon primi kullanılacak. İç kaynaklardan karşılanacak 1.497.600.000 TL’lik artırım, şirkete doğrudan nakit girişi sağlamayacak. Bu işlem, mevcut özkaynak kalemlerinin sermayeye eklenmesi yoluyla gerçekleşecek bir bedelsiz sermaye artırımı niteliği taşıyor.",
+      "Şirket açıklamasına göre, Gül Ayşe Çolak'tan satın alınması planlanan 53.405.999,465 TL nominal değerli B grubu paya ilişkin sözleşme aynı gün akdedildi. Bildirimde, 52.405.999,465 adet B grubu payın devrinin tamamlandığı ifade edildi. Bu gelişme, TRHOL'ün Tera Yatırım üzerindeki pay sahipliği yapısını ve grup içi finansal konumunu ilgilendiren önemli bir adım olarak öne çıkıyor.",
   },
   {
-    baslik: "Kayıtlı sermaye tavanı bir defaya mahsus aşılacak",
+    baslik: "Yatırımcı açısından neden önemli?",
     metin:
-      "Şirketin kayıtlı sermaye tavanı 480.000.000 TL seviyesinde bulunuyor. Açıklamada, Sermaye Piyasası Kurulu’nun ilgili tebliği kapsamında kayıtlı sermaye tavanının bir defaya mahsus aşılması suretiyle çıkarılmış sermayenin 1.612.800.000 TL’ye yükseltilmesi için SPK’ya başvuru yapıldığı belirtildi. Bu nedenle süreçte SPK onayı ve esas sözleşme tadili yakından takip edilecek.",
+      "Aracı kurum ve finansal yatırım şirketleri tarafındaki pay devirleri, grup yapısı, kontrol ilişkileri ve finansal iştiraklerin konsolidasyon etkisi açısından yatırımcılar tarafından yakından takip edilir. TRHOL açısından bu işlem, Tera Yatırım'daki pay sahipliği pozisyonunu güçlendiren ve şirketin finansal iştirak yapısını doğrudan ilgilendiren bir gelişme niteliği taşıyor.",
   },
   {
-    baslik: "Yatırımcı açısından ne anlama geliyor?",
+    baslik: "TERA hissesi de ilgili şirket olarak yer aldı",
     metin:
-      "Bedelsiz sermaye artırımları şirketin toplam piyasa değerini tek başına artırmaz; pay adedi artarken hisse fiyatı teorik olarak bölünme oranına göre düzeltilir. Ancak %1300 gibi yüksek oranlı bedelsiz başvuruları, piyasada yatırımcı ilgisini artırabilen önemli haber akışları arasında yer alır. HRKET özelinde bundan sonraki ana gündem SPK onayı, hak kullanım tarihi ve yeni payların yatırımcı hesaplarına geçiş süreci olacak.",
+      "KAP bildiriminde ilgili şirketler bölümünde TERA da yer aldı. Bu nedenle haber yalnızca TRHOL açısından değil, Tera Yatırım Menkul Değerler A.Ş. payları ve Tera grubu şirketleri açısından da yatırımcıların takip edeceği başlıklar arasında değerlendirilebilir.",
   },
 ];
 
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  headline: "HRKET’ten %1300 Bedelsiz Sermaye Artırımı Başvurusu",
+  headline: "TRHOL, Tera Yatırım Paylarının Devri İçin Sözleşme İmzaladı",
   description:
-    "Hareket Proje Taşımacılığı ve Yük Mühendisliği A.Ş. (HRKET), sermayesini 115,2 milyon TL’den 1,61 milyar TL’ye çıkarmak için %1300 oranında bedelsiz sermaye artırımı başvurusu yaptı.",
-  datePublished: "2026-06-24T16:01:00+03:00",
-  dateModified: "2026-06-24T16:15:00+03:00",
-  url: "https://www.hocaileborsa.com/haber/hrket-1300-bedelsiz-sermaye-artirimi-basvurusu",
+    "Tera Finansal Yatırımlar Holding A.Ş. (TRHOL), Tera Yatırım Menkul Değerler A.Ş. sermayesinin %6,3'ünü temsil eden B grubu payların devralınmasına ilişkin sözleşme imzalandığını ve pay devrinin önemli bölümünün tamamlandığını açıkladı.",
+  datePublished: "2026-06-24T18:46:36+03:00",
+  dateModified: "2026-06-24T19:10:00+03:00",
+  url: "https://www.hocaileborsa.com/haber/trhol-tera-yatirim-pay-devri-sozlesmesi",
   author: {
     "@type": "Person",
     "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
@@ -77,7 +71,7 @@ const jsonLd = {
       url: "https://www.hocaileborsa.com/icon-512.png",
     },
   },
-  image: "https://www.hocaileborsa.com/hrket-1300-bedelsiz-sermaye-artirimi-basvurusu.webp",
+  image: "https://www.hocaileborsa.com/trhol-tera-yatirim-pay-devri-sozlesmesi.webp",
   inLanguage: "tr",
 };
 
@@ -92,8 +86,8 @@ export default function HaberPage() {
         <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_16px_rgba(15,23,42,0.07)]">
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
-              src="/hrket-1300-bedelsiz-sermaye-artirimi-basvurusu.webp"
-              alt="HRKET’ten %1300 Bedelsiz Sermaye Artırımı Başvurusu"
+              src="/trhol-tera-yatirim-pay-devri-sozlesmesi.webp"
+              alt="TRHOL, Tera Yatırım Paylarının Devri İçin Sözleşme İmzaladı"
               fill
               unoptimized
               className="object-cover"
@@ -102,12 +96,12 @@ export default function HaberPage() {
 
           <div className="p-6 md:p-10">
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
-              HRKET’ten %1300 Bedelsiz Sermaye Artırımı Başvurusu
+              TRHOL, Tera Yatırım Paylarının Devri İçin Sözleşme İmzaladı
             </h1>
 
             <div className="mb-4 flex flex-wrap items-center gap-3">
               <span className="inline-flex items-center rounded-md bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700 ring-1 ring-inset ring-blue-600/20">
-                Sermaye Artırımı
+                Şirket Haberleri
               </span>
               <time dateTime="2026-06-24" className="text-sm text-slate-500">
                 24 Haziran 2026
@@ -123,37 +117,38 @@ export default function HaberPage() {
 
             <div className="mt-6 space-y-6 text-base leading-8 text-slate-700 md:text-lg">
               <p>
-                Hareket Proje Taşımacılığı ve Yük Mühendisliği A.Ş. (HRKET),
-                %1300 oranındaki bedelsiz sermaye artırımı için Sermaye Piyasası
-                Kurulu’na başvuru yaptığını açıkladı. Şirketin mevcut 115,2
-                milyon TL olan çıkarılmış sermayesinin, iç kaynaklardan
-                karşılanmak üzere 1,61 milyar TL’ye çıkarılması planlanıyor.
+                Tera Finansal Yatırımlar Holding A.Ş. (TRHOL), Tera Yatırım
+                Menkul Değerler A.Ş. paylarının devralınmasına ilişkin önemli
+                bir açıklama yaptı. Şirket, Tera Yatırım sermayesinin %6,3'ünü
+                temsil eden B grubu payların devralınmasına yönelik sözleşmenin
+                imzalandığını ve pay devrinin önemli bölümünün tamamlandığını
+                duyurdu.
               </p>
 
               <div className="grid gap-3 rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-7 text-slate-700 md:grid-cols-2 md:text-base">
                 <div>
                   <span className="font-semibold text-slate-900">
-                    Mevcut Sermaye:
+                    Şirket:
                   </span>{" "}
-                  115.200.000 TL
+                  TRHOL
                 </div>
                 <div>
                   <span className="font-semibold text-slate-900">
-                    Ulaşılacak Sermaye:
+                    İlgili Şirket:
                   </span>{" "}
-                  1.612.800.000 TL
+                  TERA
                 </div>
                 <div>
                   <span className="font-semibold text-slate-900">
-                    Bedelsiz Oranı:
+                    Pay Oranı:
                   </span>{" "}
-                  %1300
+                  %6,3
                 </div>
                 <div>
                   <span className="font-semibold text-slate-900">
-                    SPK Başvuru Tarihi:
+                    İşlem Türü:
                   </span>{" "}
-                  24.06.2026
+                  Pay devri sözleşmesi
                 </div>
               </div>
 
@@ -174,29 +169,30 @@ export default function HaberPage() {
               </div>
 
               <div className="rounded-xl border border-blue-200 bg-blue-50 p-4 text-sm font-medium leading-7 text-blue-900 md:text-base">
-                Kaynak: HRKET tarafından 24 Haziran 2026 tarihinde KAP’a yapılan
-                sermaye artırımı bildirimi.
+                Kaynak: TRHOL tarafından 24 Haziran 2026 tarihinde KAP'a yapılan
+                özel durum açıklaması.
                 <br />
                 <a
-                  href="https://www.kap.org.tr/tr/Bildirim/1620241"
+                  href="https://www.kap.org.tr/tr/Bildirim/1620392"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-medium text-slate-500 underline underline-offset-2 transition hover:text-slate-700"
+                  className="font-semibold text-blue-700 hover:text-blue-800"
                 >
-                  Orijinal KAP bildirimi
+                  KAP bildirimini aç
                 </a>
               </div>
 
               <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm font-medium leading-7 text-emerald-900 md:text-base">
-                HRKET haberinde ana başlık, şirketin çok yüksek oranlı bedelsiz
-                sermaye artırımı için SPK başvurusu yapmış olmasıdır. Sürecin
-                tamamlanması için SPK onayı, hak kullanım tarihi ve sonraki resmi
-                duyurular ayrıca izlenmelidir.
+                Hoca ile Borsa yorumu: TRHOL haberinde ana başlık, Tera Yatırım
+                paylarının devralınmasıyla grup içi finansal iştirak yapısında
+                güçlenme ihtimalidir. İşlem, doğrudan günlük operasyonel ciro
+                etkisinden çok ortaklık yapısı ve finansal pozisyon açısından
+                takip edilmelidir.
               </div>
 
               <HaberIlgiliBolumler
-                slug="hrket-1300-bedelsiz-sermaye-artirimi-basvurusu"
-                baslik="HRKET’ten %1300 Bedelsiz Sermaye Artırımı Başvurusu"
+                slug="trhol-tera-yatirim-pay-devri-sozlesmesi"
+                baslik="TRHOL, Tera Yatırım Paylarının Devri İçin Sözleşme İmzaladı"
               />
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">
@@ -204,7 +200,7 @@ export default function HaberPage() {
               </div>
             </div>
           </div>
-          <HaberAltKisim href="/haber/hrket-1300-bedelsiz-sermaye-artirimi-basvurusu" />
+          <HaberAltKisim href="/haber/trhol-tera-yatirim-pay-devri-sozlesmesi" />
 
           <AuthorBox />
         </article>

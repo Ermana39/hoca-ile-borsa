@@ -21,6 +21,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1019,
+    title: "TRHOL, Tera Yatırım Paylarının Devralınması İçin Sözleşme İmzaladı",
+    href: "/haber/trhol-tera-yatirim-pay-devri-sozlesmesi",
+    image: "/trhol-tera-yatirim-pay-devri-sozlesmesi.webp",
+    alt: "TRHOL Tera Yatırım pay devri sözleşmesi",
+    publishedAt: "2026-06-24",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["TRHOL", "TERA"],
+  },
+  {
     id: 1018,
     title: "24 Haziran 2026 Önemli KAP Haberleri",
     href: "/haber/24-haziran-2026-onemli-kap-haberleri",
