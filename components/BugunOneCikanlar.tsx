@@ -104,15 +104,15 @@ export default function BugunOneCikanlar() {
                 className="group flex overflow-hidden rounded-xl border border-slate-200 bg-white shadow-[0_1px_6px_rgba(15,23,42,0.05)] transition duration-300 hover:-translate-y-0.5 hover:border-slate-300 hover:shadow-[0_6px_24px_rgba(15,23,42,0.10)] focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               >
                 {kart.gorsel && (
-                  <div className="relative w-24 shrink-0 overflow-hidden bg-slate-100 sm:w-28">
+                  <div className="relative aspect-[16/9] w-24 shrink-0 self-center overflow-hidden bg-slate-100 sm:w-28">
                     <img
                       src={kart.gorsel}
                       alt={kart.alt || kart.baslik}
                       loading="lazy"
                       decoding="async"
                       fetchPriority="low"
-                      width={120}
-                      height={120}
+                      width={160}
+                      height={90}
                       className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
                     />
                   </div>

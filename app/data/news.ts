@@ -21,6 +21,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1013,
+    title: "Aksa Enerji’den Manisa’da Depolamalı RES Hamlesi",
+    href: "/haber/aksen-manisa-depolamali-res-epdk-lisans-onayi",
+    image: "/aksen-manisa-depolamali-res-epdk-lisans-onayi.webp",
+    alt: "Aksa Enerji Manisa depolamalı RES EPDK lisans onayı",
+    publishedAt: "2026-06-24",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["AKSEN"],
+  },
+  {
     id: 1012,
     title: "Odine, Super Micro Computer ile Türkiye Odaklı İş Ortaklığı İmzaladı",
     href: "/haber/odine-super-micro-computer-is-ortakligi",
