@@ -11,7 +11,6 @@ import { IconTile } from "@/components/icons/IconTile";
 import type { CategoryIconName } from "@/components/icons/CategoryIcon";
 import HaberKart from "@/components/HaberKart";
 import PopulerAramalar from "@/components/PopulerAramalar";
-import BugunOneCikanlar from "@/components/BugunOneCikanlar";
 import {
   normalizeNewsItems,
   getAllNews,
@@ -458,8 +457,6 @@ export default function HomePage() {
             ))}
           </div>
         </section>
-
-        <BugunOneCikanlar />
 
         <ViopEgitimBanner />
 

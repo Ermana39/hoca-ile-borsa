@@ -67,6 +67,7 @@ export default function BugunOneCikanlar() {
     ["halka-arz", "Güncel Halka Arz"],
     ["temettu", "Temettü Gündemi"],
     ["sermaye-artirimi", "Bedelsiz / Sermaye Artırımı"],
+    ["sirket-haberleri", "Şirket Haberleri"],
   ];
 
   for (const [kategori, etiket] of kategoriEtiketleri) {

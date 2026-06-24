@@ -21,6 +21,15 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1014,
+    title: "MSCI’den Türkiye Uyarısı: Şeffaflık ve Bilgi Akışı İzlenecek",
+    href: "/haber/msci-turkiye-uyarisi-seffaflik-bilgi-akisi",
+    image: "/msci-turkiye-uyarisi-seffaflik-bilgi-akisi.webp",
+    alt: "MSCI Türkiye piyasası şeffaflık ve bilgi akışı uyarısı",
+    publishedAt: "2026-06-24",
+    category: "piyasa-gundemi",
+  },
+  {
     id: 1013,
     title: "Aksa Enerji’den Manisa’da Depolamalı RES Hamlesi",
     href: "/haber/aksen-manisa-depolamali-res-epdk-lisans-onayi",
