@@ -20,16 +20,7 @@ export type NewsItem = {
 };
 
 export const newsItems: NewsItem[] = [
-  {
-    id: 1020,
-    title: "ADA’dan 100 Milyon Dolarlık Tier 1 Sukuk İhracı",
-    href: "/haber/ada-tier-1-sukuk-ihraci-100-milyon-dolar",
-    image: "/ada-tier-1-sukuk-ihraci-100-milyon-dolar.webp",
-    alt: "ADA 100 milyon dolar Tier 1 sukuk ihracı",
-    publishedAt: "2026-06-24",
-    category: "sirket-haberleri",
-    ilgiliHisseler: ["ADA"],
-  },
+  
   {
     id: 1019,
     title: "TRHOL, Tera Yatırım Paylarının Devralınması İçin Sözleşme İmzaladı",
