@@ -21,6 +21,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1016,
+    title: "KLNMA’dan JBIC ile 350 Milyon Dolarlık Kredi Anlaşması",
+    href: "/haber/klnma-jbic-350-milyon-dolar-kredi-anlasmasi",
+    image: "/klnma-jbic-350-milyon-dolar-kredi-anlasmasi.webp",
+    alt: "KLNMA JBIC 350 milyon dolar kredi anlaşması",
+    publishedAt: "2026-06-24",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["KLNMA"],
+  },
+  {
     id: 1015,
     title: "ALVES Polatlı OSB’de Yeni Üretim Tesisi İçin Hafriyata Başladı",
     href: "/haber/alves-polatli-osb-yeni-uretim-tesisi-hafriyat-basladi",
