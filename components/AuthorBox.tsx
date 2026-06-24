@@ -22,6 +22,8 @@ export default function AuthorBox({
           alt={yazar.isim}
           width={56}
           height={56}
+          loading="lazy"
+          decoding="async"
           className="h-14 w-14 rounded-full border border-slate-200 bg-white object-cover"
         />
       </Link>

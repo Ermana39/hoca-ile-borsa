@@ -190,20 +190,6 @@ export default function BetaEnerjiYuksekBasvuruDagitimPage() {
       />
 
       <div className="mx-auto max-w-4xl">
-        <nav
-          className="mb-5 flex items-center gap-2 text-sm text-slate-500"
-          aria-label="Breadcrumb"
-        >
-          <Link href="/" className="transition hover:text-blue-600">
-            Ana Sayfa
-          </Link>
-          <span className="text-slate-300">/</span>
-          <Link href="/haberler" className="transition hover:text-blue-600">
-            Haberler
-          </Link>
-          <span className="text-slate-300">/</span>
-          <span className="font-medium text-slate-700">Halka Arz</span>
-        </nav>
 
         <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_16px_rgba(15,23,42,0.07)]">
           <div className="w-full overflow-hidden bg-zinc-100">
@@ -510,6 +496,10 @@ export default function BetaEnerjiYuksekBasvuruDagitimPage() {
                     <img
                       src={youtubeVideo.thumbnail}
                       alt="Beta Enerji halka arz yüksek başvuru video kapak görseli"
+                      width={480}
+                      height={360}
+                      loading="lazy"
+                      decoding="async"
                       className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
                     />
                     <div className="absolute inset-0 bg-black/25 transition group-hover:bg-black/10" />

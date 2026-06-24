@@ -21,6 +21,26 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1012,
+    title: "Odine, Super Micro Computer ile Türkiye Odaklı İş Ortaklığı İmzaladı",
+    href: "/haber/odine-super-micro-computer-is-ortakligi",
+    image: "/odine-super-micro-computer-is-ortakligi.webp",
+    alt: "Odine Super Micro Computer iş ortaklığı",
+    publishedAt: "2026-06-24",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["ODINE"],
+  },
+  {
+    id: 1011,
+    title: "TRCAS, Shell & Turcas Petrol’den 8 Milyon Dolar İmtiyazlı Temettü Alacak",
+    href: "/haber/trcas-shell-turcas-8-milyon-dolar-imtiyazli-temettu",
+    image: "/trcas-shell-turcas-8-milyon-dolar-imtiyazli-temettu.webp",
+    alt: "TRCAS Shell Turcas 8 milyon dolar imtiyazlı temettü",
+    publishedAt: "2026-06-24",
+    category: "temettu",
+    ilgiliHisseler: ["TRCAS"],
+  },
+  {
     id: 1010,
     title: "Brisa İzmit Fabrikasında Üretime Geçici Ara Verecek",
     href: "/haber/brisa-izmit-fabrikasi-planli-bakim-durusu",

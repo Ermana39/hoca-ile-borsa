@@ -3,6 +3,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
+import HaberNavigasyon from "@/components/HaberNavigasyon";
 
 export const metadata: Metadata = {
   title: "KTLEV ve SVGYO İçin Temettü Günü: Hak Kullanım Tarihi 23 Haziran",
@@ -244,6 +245,7 @@ export default function TemettuGundemiKtlevSvgyoPage() {
             baslik="KTLEV SVGYO Temettü 23 Haziran 2026"
           />
         </div>
+        <HaberNavigasyon href="/haber/ktlev-svgyo-23-haziran-2026-temettu-gundemi" className="mt-8" />
       </div>
     </main>
   );

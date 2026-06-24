@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
+import HaberNavigasyon from "@/components/HaberNavigasyon";
 import AuthorBox from "@/components/AuthorBox";
 
 export const metadata: Metadata = {
@@ -95,6 +96,7 @@ export default function AltnySermayeTavaniPage() {
             baslik="ALTNY Sermaye Artırımı Bedelli Bedelsiz"
           />
         </div>
+        <HaberNavigasyon href="/haber/altny-kayitli-sermaye-tavani-artisi" className="mt-8" />
       </div>
     </main>
   );

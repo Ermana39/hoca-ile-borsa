@@ -102,6 +102,8 @@ export default function HakkimizdaPage() {
                 alt={yazar.isim}
                 width={80}
                 height={80}
+                loading="lazy"
+                decoding="async"
                 className="h-20 w-20 rounded-full border border-zinc-200 bg-zinc-100 object-cover"
               />
               <div>

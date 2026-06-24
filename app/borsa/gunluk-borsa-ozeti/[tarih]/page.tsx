@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import AuthorBox from "@/components/AuthorBox";
+import ContinueReading from "@/components/ContinueReading";
 import {
   getGunlukOzetBySlug,
   getTumGunlukOzetSluglari,
@@ -555,6 +556,43 @@ function GunlukOzetIcerik({ ozet }: { ozet: GunlukOzet }) {
             </Link>
           </div>
         </section>
+
+        <ContinueReading
+          title="Günlük özetten sonra okumaya devam edin"
+          className="mt-6"
+          items={[
+            {
+              title: "Bugünün önemli KAP haberleri",
+              href: "/haber/23-haziran-2026-onemli-kap-haberleri",
+              description: "Gün içinde şirketlerden gelen öne çıkan KAP bildirimleri.",
+              type: "KAP",
+            },
+            {
+              title: "En çok yükselen hisseler",
+              href: "/borsa/gosterge-taramalari/yukselis-trendinde-olanlar",
+              description: "Yükseliş trendinde öne çıkan BIST hisselerini inceleyin.",
+              type: "Piyasa",
+            },
+            {
+              title: "En çok düşen hisseler",
+              href: "/borsa/gosterge-taramalari/dusus-trendinde-olanlar",
+              description: "Düşüş trendindeki hisseleri teknik görünümle takip edin.",
+              type: "Piyasa",
+            },
+            {
+              title: "Para girişi olan hisseler",
+              href: "/haber/12-haziran-2026-en-cok-para-girisi-cikisi-olan-hisseler",
+              description: "Net para girişi ve çıkışıyla dikkat çeken hisseler.",
+              type: "Para akışı",
+            },
+            {
+              title: "Halka arz gündemi",
+              href: "/halka-arz",
+              description: "Güncel halka arz takvimi, izahnameler ve hesaplama araçları.",
+              type: "Halka arz",
+            },
+          ]}
+        />
 
         <div className="mt-6">
           <AuthorBox />

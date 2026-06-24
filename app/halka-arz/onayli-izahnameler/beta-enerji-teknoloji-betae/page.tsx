@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import HalkaArzSSS from "@/components/HalkaArzSSS";
 
 export const metadata: Metadata = {
   title:
@@ -231,6 +231,39 @@ export default function BetaEnerjiVeTeknolojiASPage() {
     "Yapı Kredi",
   ];
 
+  const sssSorulari = [
+    {
+      soru: "Beta Enerji halka arzı kaç lot verir?",
+      cevap:
+        "Yurt içi bireysel yatırımcılara bireysele eşit dağıtım uygulanacağı için kesin lot sayısı, talep toplama kapandığında başvuran yatırımcı sayısına göre belli olacaktır. Bireysele ayrılan tahsisat 30.375.000 lottur (toplam payın %50'si). Kesin dağıtım sonuçları açıklandığında bu alan güncellenecektir.",
+    },
+    {
+      soru: "Beta Enerji halka arzı katılım endeksine uygun mu?",
+      cevap:
+        "Evet. Güncel halka arz bilgilerine göre BETAE payları BIST Katılım Endeksi kriterlerine uygundur.",
+    },
+    {
+      soru: "Beta Enerji halka arzı hangi bankalarda / aracı kurumlarda var?",
+      cevap:
+        "Konsorsiyum liderleri Türkiye Sınai Kalkınma Bankası, Ziraat Yatırım ve Yatırım Finansman'dır. Ayrıca Garanti, Yapı Kredi, İş Yatırım, QNB, TEB, Halk, Vakıf, Ak Yatırım, Deniz, ING ve Burgan dahil 40'ı aşkın aracı kurum konsorsiyum üyesi olarak talep toplamaktadır.",
+    },
+    {
+      soru: "Beta Enerji halka arzı ne zaman işlem görecek?",
+      cevap:
+        "Talep toplama 23-24-25 Haziran 2026 tarihlerinde yapılacaktır. Borsada işlem görmeye başlama tarihi, dağıtım ve takas işlemleri tamamlandıktan sonra Borsa İstanbul tarafından açıklanacak; kesin tarih belli olduğunda bu alan güncellenecektir.",
+    },
+    {
+      soru: "Beta Enerji halka arz fonu nerede kullanılacak?",
+      cevap:
+        "Halka arz gelirinin %45'i büyüme yatırımlarının finansmanında, %55'i ise işletme sermayesi ihtiyacının karşılanmasında kullanılacaktır.",
+    },
+    {
+      soru: "Beta Enerji halka arzı eşit dağıtım mı, oransal dağıtım mı?",
+      cevap:
+        "İkisi birlikte uygulanır: Yurt içi bireysel yatırımcı grubunda (3.000 lot ve altı) bireysele eşit dağıtım, yüksek başvurulu yatırımcı grubunda (3.001 lot ve üstü) oransal dağıtım yapılacaktır.",
+    },
+  ];
+
   const oneCikanlar = [
     {
       title: "Talep Toplama",
@@ -257,26 +290,6 @@ export default function BetaEnerjiVeTeknolojiASPage() {
   return (
     <main className="min-h-screen bg-[#f8fafc] text-slate-900">
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        <nav
-          className="mb-6 flex items-center gap-2 text-sm text-slate-500"
-          aria-label="Breadcrumb"
-        >
-          <Link href="/" className="transition hover:text-blue-600">
-            Ana Sayfa
-          </Link>
-          <span className="text-slate-300">/</span>
-          <Link href="/halka-arz" className="transition hover:text-blue-600">
-            Halka Arz
-          </Link>
-          <span className="text-slate-300">/</span>
-          <Link
-            href="/halka-arz/onayli-izahnameler"
-            className="transition hover:text-blue-600"
-          >
-            Onaylı İzahnameler
-          </Link>
-        </nav>
-
         <section className="mb-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
           <div className="border-b border-slate-200 bg-gradient-to-r from-indigo-600 to-blue-600 px-6 py-7 text-white">
             <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
@@ -1032,6 +1045,8 @@ export default function BetaEnerjiVeTeknolojiASPage() {
             amacı taşır.
           </p>
         </section>
+
+        <HalkaArzSSS className="mt-8" items={sssSorulari} />
       </div>
     </main>
   );

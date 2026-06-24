@@ -177,6 +177,10 @@ export default function FonlarPage() {
                     <img
                       src={video.image}
                       alt={video.alt}
+                      width={480}
+                      height={360}
+                      loading="lazy"
+                      decoding="async"
                       className="block aspect-video w-full object-cover transition duration-300 group-hover:scale-[1.02]"
                     />
                   </div>

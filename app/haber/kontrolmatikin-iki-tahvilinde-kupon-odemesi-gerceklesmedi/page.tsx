@@ -77,12 +77,6 @@ export default function Haber978Page() {
     <main className="min-h-screen bg-[#f8fafc] px-4 py-6 md:px-6">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="mx-auto max-w-4xl">
-        <nav className="mb-5 flex items-center gap-2 text-sm text-slate-500" aria-label="Breadcrumb">
-          <Link href="/" className="hover:text-blue-600 transition">Ana Sayfa</Link>
-          <span className="text-slate-300">/</span>
-          <span className="text-slate-700 font-medium">Haberler</span>
-        </nav>
-
         <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_16px_rgba(15,23,42,0.07)]">
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image

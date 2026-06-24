@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
+import HaberNavigasyon from "@/components/HaberNavigasyon";
 import AuthorBox from "@/components/AuthorBox";
 
 export const metadata: Metadata = {
@@ -95,6 +96,7 @@ export default function EbebkSatisArtisiPage() {
             baslik="EBEBK Satış Perakende Temettü"
           />
         </div>
+        <HaberNavigasyon href="/haber/ebebk-satis-adedi-artisi" className="mt-8" />
       </div>
     </main>
   );

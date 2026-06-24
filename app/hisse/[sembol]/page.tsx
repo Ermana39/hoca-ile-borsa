@@ -753,8 +753,8 @@ export default async function HisseKunyePage({
                   <h3 className="mb-2 text-sm font-bold text-slate-700">
                     Sermaye Artırımı ve Diğer Geçmiş
                   </h3>
-                  <div className="overflow-hidden rounded-xl border border-slate-200">
-                    <table className="w-full text-left text-sm">
+                  <div className="overflow-x-auto rounded-xl border border-slate-200">
+                    <table className="w-full min-w-[480px] text-left text-sm">
                       <thead className="bg-slate-50 text-xs uppercase tracking-wider text-slate-500">
                         <tr>
                           <th className="px-4 py-3 font-semibold">Yıl</th>

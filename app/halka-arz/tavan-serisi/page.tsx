@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "2026 Halka Arz Tavan Serisi Takibi | Hoca İle Borsa",
@@ -185,25 +184,6 @@ export default function HalkaArzTavanSerisiPage() {
   return (
     <main className="min-h-screen bg-[#f8fafc] px-4 py-6 md:px-6">
       <div className="mx-auto max-w-7xl">
-        <nav
-          className="mb-5 flex items-center gap-2 text-sm text-slate-500"
-          aria-label="Breadcrumb"
-        >
-          <Link href="/" prefetch={false} className="transition hover:text-blue-600">
-            Ana Sayfa
-          </Link>
-          <span className="text-slate-300">/</span>
-          <Link
-            href="/halka-arz"
-            prefetch={false}
-            className="transition hover:text-blue-600"
-          >
-            Halka Arz
-          </Link>
-          <span className="text-slate-300">/</span>
-          <span className="font-medium text-slate-700">Tavan Serisi</span>
-        </nav>
-
         <section className="mb-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <h1 className="text-2xl font-bold text-slate-950 md:text-3xl">
             2026 Halka Arz Tavan Serisi Takibi

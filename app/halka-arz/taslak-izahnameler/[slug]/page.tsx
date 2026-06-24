@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { notFound } from "next/navigation";
+import ContinueReading from "@/components/ContinueReading";
 import {
   bekleyenDeger,
   halkaArzGetir,
@@ -84,14 +84,6 @@ export default async function HalkaArzDinamikPage({
   return (
     <main className="min-h-screen bg-[#f8fafc] text-slate-900">
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
-        <nav className="mb-6 flex items-center gap-2 text-sm text-slate-500" aria-label="Breadcrumb">
-          <Link href="/" className="hover:text-blue-600 transition">Ana Sayfa</Link>
-          <span className="text-slate-300">/</span>
-          <Link href="/halka-arz" className="hover:text-blue-600 transition">Halka Arz</Link>
-          <span className="text-slate-300">/</span>
-          <Link href="/halka-arz/taslak-izahnameler" className="hover:text-blue-600 transition">Taslak İzahnameler</Link>
-        </nav>
-
         <section className="mb-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
           <div className="border-b border-slate-200 bg-gradient-to-r from-indigo-600 to-blue-600 px-6 py-7 text-white">
             <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
@@ -381,6 +373,31 @@ export default async function HalkaArzDinamikPage({
               "Bu sayfadaki bilgiler taslak izahname/halka arz sürecine dair genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir. Kesin bilgiler onaylı izahname ile açıklanır."}
           </p>
         </section>
+
+        <ContinueReading
+          title="Halka arz gündeminde devam edin"
+          className="mt-6"
+          items={[
+            {
+              title: "Güncel halka arz takvimi",
+              href: "/halka-arz",
+              description: "Talep toplama tarihleri, halka arz araçları ve güncel gündem.",
+              type: "Halka arz",
+            },
+            {
+              title: "Onaylı izahnameler",
+              href: "/halka-arz/onayli-izahnameler",
+              description: "SPK onayından geçen halka arz şirketlerini inceleyin.",
+              type: "İzahname",
+            },
+            {
+              title: "Halka arz kaç lot verir?",
+              href: "/halka-arz/talep-hesapla",
+              description: "Dağıtım varsayımlarına göre olası lot hesabı yapın.",
+              type: "Lot hesabı",
+            },
+          ]}
+        />
       </div>
     </main>
   );

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import HalkaArzSSS from "@/components/HalkaArzSSS";
 
 export const metadata: Metadata = {
   title:
@@ -196,6 +197,39 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
     { katilimci: "800.000", lot: "26 Lot", tutar: "1.170 TL" },
     { katilimci: "900.000", lot: "23 Lot", tutar: "1.035 TL" },
     { katilimci: "1.000.000", lot: "21 Lot", tutar: "945 TL" },
+  ];
+
+  const sssSorulari = [
+    {
+      soru: "Ekinciler Demir Çelik (EKDMR) halka arzı kaç lot verir?",
+      cevap:
+        "Yurt içi bireysel yatırımcılarda (10.000 lot ve altı başvurular) bireysele eşit dağıtım uygulanacağından kesin lot, başvuran yatırımcı sayısına göre belli olacaktır. Bireysele ayrılan tahsisat 20.800.000 lottur (toplam payın %40'ı). Kesin dağıtım sonuçları açıklandığında bu alan güncellenecektir.",
+    },
+    {
+      soru: "EKDMR halka arzı katılım endeksine uygun mu?",
+      cevap:
+        "Hayır. Onaylı izahnameye göre Ekinciler Demir ve Çelik (EKDMR) payları BIST Katılım Endeksi'ne uygun değildir.",
+    },
+    {
+      soru: "Ekinciler halka arzı hangi bankalarda / aracı kurumlarda var?",
+      cevap:
+        "Halka arza aracılık eden kurum A1 Capital Yatırım Menkul Değerler A.Ş.'dir. A1 Capital liderliğindeki konsorsiyumda Garanti, Yapı Kredi, İş Yatırım, QNB, TEB, Halk, Vakıf, Ak Yatırım, Deniz, ING, Kuveyt ve Ziraat Yatırım dahil çok sayıda aracı kurum yer almaktadır.",
+    },
+    {
+      soru: "Ekinciler halka arzı ne zaman işlem görecek?",
+      cevap:
+        "Talep toplama 13-14-15 Mayıs 2026 tarihlerinde yapılacaktır. Borsada işlem görmeye başlama tarihi, dağıtım ve takas işlemleri tamamlandıktan sonra Borsa İstanbul tarafından açıklanacak; kesin tarih belli olduğunda bu alan güncellenecektir.",
+    },
+    {
+      soru: "Ekinciler halka arz fonu nerede kullanılacak?",
+      cevap:
+        "Halka arz gelirinin %40'ı hammadde tedariki ve işletme sermayesinde, %25'i yenilenebilir enerji yatırımlarında, %25'i Yeşil Çelik Haddehane modernizasyonu ve kapasite artışında, %10'u ise kütük kaynatma sistemi yatırımında kullanılacaktır.",
+    },
+    {
+      soru: "Ekinciler halka arzı eşit dağıtım mı, oransal dağıtım mı?",
+      cevap:
+        "İkisi birlikte uygulanır: Yurt içi bireysel yatırımcı grubunda (10.000 lot ve altı) bireysele eşit dağıtım, yüksek başvurulu yatırımcı grubunda (10.001 lot ve üzeri) oransal dağıtım yapılacaktır.",
+    },
   ];
 
   const konsorsiyum =
@@ -501,6 +535,8 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
               özetlenmiştir. Bu bilgiler yatırım tavsiyesi değildir.
             </p>
           </Section>
+
+          <HalkaArzSSS items={sssSorulari} />
         </div>
       </div>
     </main>

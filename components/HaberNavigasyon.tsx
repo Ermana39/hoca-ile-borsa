@@ -1,44 +1,54 @@
 import Link from "next/link";
 import { getAllNews } from "@/lib/haberler";
 
-export default function HaberNavigasyon({ href }: { href: string }) {
+export default function HaberNavigasyon({
+  href,
+  className = "",
+}: {
+  href: string;
+  className?: string;
+}) {
   const haberler = getAllNews();
   const index = haberler.findIndex((item) => item.href === href);
   if (index === -1) return null;
 
-  // Liste en yeniden en eskiye sıralı: bir sonraki haber = listede bir sonraki (daha eski) öğe.
-  const sonraki = haberler[index + 1];
+  // Liste en yeniden en eskiye sıralı: önceki (listede bir önceki) = daha yeni haber,
+  // sonraki (listede bir sonraki) = daha eski haber.
   const onceki = haberler[index - 1];
+  const sonraki = haberler[index + 1];
 
-  if (!sonraki && !onceki) return null;
+  // İki taraf da yoksa hiç gösterme (boş alan bırakma).
+  if (!onceki && !sonraki) return null;
+
+  const tekTaraf = !onceki || !sonraki;
 
   return (
     <nav
-      className="grid grid-cols-1 gap-3 sm:grid-cols-2"
+      className={`grid grid-cols-1 gap-3 ${tekTaraf ? "" : "sm:grid-cols-2"} ${className}`}
       aria-label="Haberler arası gezinme"
     >
-      {onceki ? (
+      {onceki && (
         <Link
           href={onceki.href}
           prefetch={false}
+          title={`Önceki haber: ${onceki.title}`}
           className="group flex flex-col rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-200 hover:bg-blue-50"
         >
           <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">
-            ← Yeni Haber
+            ← Önceki Haber
           </span>
           <span className="mt-1 line-clamp-2 text-sm font-semibold text-slate-800 group-hover:text-blue-700">
             {onceki.title}
           </span>
         </Link>
-      ) : (
-        <div />
       )}
 
-      {sonraki ? (
+      {sonraki && (
         <Link
           href={sonraki.href}
           prefetch={false}
-          className="group flex flex-col rounded-xl border border-slate-200 bg-slate-50 p-4 text-right transition hover:border-blue-200 hover:bg-blue-50 sm:items-end"
+          title={`Sonraki haber: ${sonraki.title}`}
+          className="group flex flex-col rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-200 hover:bg-blue-50 sm:items-end sm:text-right"
         >
           <span className="text-xs font-semibold uppercase tracking-wider text-slate-400">
             Sonraki Haber →
@@ -47,8 +57,6 @@ export default function HaberNavigasyon({ href }: { href: string }) {
             {sonraki.title}
           </span>
         </Link>
-      ) : (
-        <div />
       )}
     </nav>
   );

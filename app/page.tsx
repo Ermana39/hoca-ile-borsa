@@ -10,6 +10,8 @@ import pageUpdates from "@/lib/page-updates.generated.json";
 import { IconTile } from "@/components/icons/IconTile";
 import type { CategoryIconName } from "@/components/icons/CategoryIcon";
 import HaberKart from "@/components/HaberKart";
+import PopulerAramalar from "@/components/PopulerAramalar";
+import BugunOneCikanlar from "@/components/BugunOneCikanlar";
 import {
   normalizeNewsItems,
   getAllNews,
@@ -431,9 +433,13 @@ export default function HomePage() {
       <div className="mx-auto max-w-7xl">
         <section className="px-4 pt-5 md:px-6 md:pt-6">
           <div className="overflow-hidden rounded-2xl">
-            <img
+            <Image
               src="/banner.png"
               alt="Hoca İle Borsa banner görseli"
+              width={1228}
+              height={414}
+              priority
+              unoptimized
               className="block h-auto w-full rounded-2xl"
             />
           </div>
@@ -456,6 +462,8 @@ export default function HomePage() {
             ))}
           </div>
         </section>
+
+        <BugunOneCikanlar />
 
         <ViopEgitimBanner />
 
@@ -605,6 +613,10 @@ export default function HomePage() {
               </p>
             </div>
           </div>
+        </section>
+
+        <section className="px-4 pb-6 md:px-6">
+          <PopulerAramalar />
         </section>
       </div>
 

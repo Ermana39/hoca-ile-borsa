@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
+import HaberNavigasyon from "@/components/HaberNavigasyon";
 import AuthorBox from "@/components/AuthorBox";
 
 export const metadata: Metadata = {
@@ -114,6 +115,7 @@ export default function BistPayGeriAlimPage() {
             baslik="Pay Geri Alım Borsa"
           />
         </div>
+        <HaberNavigasyon href="/haber/bist-pay-geri-alim-islemleri" className="mt-8" />
       </div>
     </main>
   );

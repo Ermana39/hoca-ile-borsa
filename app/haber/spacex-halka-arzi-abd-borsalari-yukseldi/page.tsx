@@ -107,17 +107,6 @@ export default function HaberSpacexHalkaArziAbdBorsalariPage() {
       />
 
       <div className="mx-auto max-w-4xl">
-        <nav
-          className="mb-5 flex items-center gap-2 text-sm text-slate-500"
-          aria-label="Breadcrumb"
-        >
-          <Link href="/" className="transition hover:text-blue-600">
-            Ana Sayfa
-          </Link>
-          <span className="text-slate-300">/</span>
-          <span className="font-medium text-slate-700">Haberler</span>
-        </nav>
-
         <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_16px_rgba(15,23,42,0.07)]">
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-950">
             <Image

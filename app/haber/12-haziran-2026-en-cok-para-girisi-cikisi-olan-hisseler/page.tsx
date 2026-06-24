@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import HaberNavigasyon from "@/components/HaberNavigasyon";
 
 export const metadata: Metadata = {
   title: "12 Haziran 2026 En Çok Para Girişi ve Çıkışı Olan Hisseler | Hoca İle Borsa",
@@ -63,13 +63,13 @@ function Tablo({
   tip: "giris" | "cikis";
 }) {
   return (
-    <section className="mx-auto w-full max-w-[560px] rounded-3xl border border-slate-200 bg-white p-3 shadow-sm">
+    <section className="mx-auto w-full min-w-0 max-w-[560px] rounded-3xl border border-slate-200 bg-white p-3 shadow-sm">
       <h2 className="mb-4 text-xl font-bold text-slate-900 md:text-2xl">
         {baslik}
       </h2>
 
-      <div className="rounded-2xl border border-slate-200">
-        <table className="w-full border-collapse text-[11px] sm:text-xs md:text-sm">
+      <div className="overflow-x-auto rounded-2xl border border-slate-200">
+        <table className="w-full min-w-[360px] border-collapse text-[11px] sm:text-xs md:text-sm">
           <thead>
             <tr className="bg-slate-100 text-slate-700">
               <th className="w-8 border-b border-slate-200 px-1.5 py-2.5 text-left">#</th>
@@ -123,22 +123,6 @@ export default function EnCokParaGirisiCikisiPage() {
   return (
     <main className="min-h-screen bg-[#f8fafc] px-4 py-6 md:px-6">
       <div className="mx-auto max-w-7xl">
-        <nav className="mb-5 flex items-center gap-2 text-sm text-slate-500">
-          <Link href="/" prefetch={false} className="transition hover:text-blue-600">
-            Ana Sayfa
-          </Link>
-          <span className="text-slate-300">/</span>
-          <Link
-            href="/haberler"
-            prefetch={false}
-            className="transition hover:text-blue-600"
-          >
-            Haberler
-          </Link>
-          <span className="text-slate-300">/</span>
-          <span className="font-medium text-slate-700">12 Haziran 2026 Para Girişi Çıkışı</span>
-        </nav>
-
         <section className="mb-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <h1 className="text-2xl font-bold text-slate-950 md:text-3xl">
             12 Haziran 2026 En Çok Para Girişi ve Para Çıkışı Olan Hisseler
@@ -221,6 +205,7 @@ export default function EnCokParaGirisiCikisiPage() {
             koşulları ayrıca değerlendirilmelidir.
           </p>
         </section>
+        <HaberNavigasyon href="/haber/12-haziran-2026-en-cok-para-girisi-cikisi-olan-hisseler" className="mt-8" />
       </div>
     </main>
   );

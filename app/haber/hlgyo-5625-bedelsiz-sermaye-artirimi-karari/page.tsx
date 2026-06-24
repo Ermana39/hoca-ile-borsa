@@ -5,6 +5,7 @@ import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
 import HaberNavigasyon from "@/components/HaberNavigasyon";
 import HaberAltBilgi from "@/components/HaberAltBilgi";
+import KapCardLinks from "@/components/KapCardLinks";
 
 export const metadata: Metadata = {
   title: "HLGYO'dan %56,25 Bedelsiz Sermaye Artırımı Kararı",
@@ -88,17 +89,6 @@ export default function HaberKapOzetiPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <div className="mx-auto max-w-4xl">
-        <nav
-          className="mb-5 flex items-center gap-2 text-sm text-slate-500"
-          aria-label="Breadcrumb"
-        >
-          <Link href="/" className="hover:text-blue-600 transition">
-            Ana Sayfa
-          </Link>
-          <span className="text-slate-300">/</span>
-          <span className="text-slate-700 font-medium">Haberler</span>
-        </nav>
-
         <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_16px_rgba(15,23,42,0.07)]">
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
@@ -160,6 +150,7 @@ export default function HaberKapOzetiPage() {
                     >
                       KAP bildirimini aç
                     </a>
+                    <KapCardLinks baslik={haber.baslik} />
                   </section>
                 ))}
               </div>

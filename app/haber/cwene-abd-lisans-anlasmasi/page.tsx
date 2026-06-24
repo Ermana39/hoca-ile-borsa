@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
+import HaberNavigasyon from "@/components/HaberNavigasyon";
 import AuthorBox from "@/components/AuthorBox";
 
 export const metadata: Metadata = {
@@ -94,6 +95,7 @@ export default function CweneAbdLisansPage() {
             baslik="CW Enerji ABD Döviz İhracat"
           />
         </div>
+        <HaberNavigasyon href="/haber/cwene-abd-lisans-anlasmasi" className="mt-8" />
       </div>
     </main>
   );

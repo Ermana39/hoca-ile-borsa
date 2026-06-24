@@ -131,17 +131,6 @@ export default function BetaEnerjiHalkaArzKacLotVerirPage() {
       />
 
       <div className="mx-auto max-w-4xl">
-        <nav
-          className="mb-5 flex items-center gap-2 text-sm text-slate-500"
-          aria-label="Breadcrumb"
-        >
-          <Link href="/" className="transition hover:text-blue-600">
-            Ana Sayfa
-          </Link>
-          <span className="text-slate-300">/</span>
-          <span className="font-medium text-slate-700">Haberler</span>
-        </nav>
-
         <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_16px_rgba(15,23,42,0.07)]">
           <div className="w-full overflow-hidden bg-white">
             <Image
@@ -198,8 +187,8 @@ export default function BetaEnerjiHalkaArzKacLotVerirPage() {
                   Beta Enerji Halka Arzı Kaç Lot Düşer?
                 </h2>
 
-                <div className="overflow-hidden rounded-xl border border-slate-200 bg-white">
-                  <table className="w-full text-left text-sm">
+                <div className="overflow-x-auto rounded-xl border border-slate-200 bg-white">
+                  <table className="w-full min-w-[360px] text-left text-sm">
                     <thead className="bg-slate-100 text-slate-700">
                       <tr>
                         <th className="px-4 py-3 font-semibold">

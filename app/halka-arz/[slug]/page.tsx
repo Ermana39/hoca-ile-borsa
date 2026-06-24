@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import ContinueReading from "@/components/ContinueReading";
 
 function slugToTitle(slug: string) {
   return slug
@@ -30,21 +31,9 @@ export default async function HalkaArzDetayPage({
   params: Promise<{ slug: string }>;
 }) {
   const { slug } = await params;
-  const title = slugToTitle(slug);
-
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: "https://www.hocaileborsa.com" },
-      { "@type": "ListItem", position: 2, name: "Halka Arz", item: "https://www.hocaileborsa.com/halka-arz" },
-      { "@type": "ListItem", position: 3, name: title, item: `https://www.hocaileborsa.com/halka-arz/${slug}` },
-    ],
-  };
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
       <div className="mx-auto max-w-5xl">
         <Link
           href="/"
@@ -62,6 +51,31 @@ export default async function HalkaArzDetayPage({
             className="h-auto w-full rounded-xl"
           />
         </div>
+
+        <ContinueReading
+          title="Halka arz gündeminde devam edin"
+          className="mt-6"
+          items={[
+            {
+              title: "Güncel halka arz takvimi",
+              href: "/halka-arz",
+              description: "Talep toplama tarihleri, izahnameler ve halka arz araçları.",
+              type: "Halka arz",
+            },
+            {
+              title: "Onaylı izahnameler",
+              href: "/halka-arz/onayli-izahnameler",
+              description: "SPK onayından geçen halka arzların özet bilgileri.",
+              type: "İzahname",
+            },
+            {
+              title: "Halka arz kaç lot verir?",
+              href: "/halka-arz/talep-hesapla",
+              description: "Talep ve dağıtım varsayımlarıyla olası lot hesabı yapın.",
+              type: "Hesaplama",
+            },
+          ]}
+        />
       </div>
     </main>
   );
