@@ -21,6 +21,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1017,
+    title: "HRKET’ten %1300 Bedelsiz Sermaye Artırımı Başvurusu",
+    href: "/haber/hrket-1300-bedelsiz-sermaye-artirimi-basvurusu",
+    image: "/hrket-1300-bedelsiz-sermaye-artirimi-basvurusu.webp",
+    alt: "HRKET yüzde 1300 bedelsiz sermaye artırımı başvurusu",
+    publishedAt: "2026-06-24",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["HRKET"],
+  },
+  {
     id: 1016,
     title: "KLNMA’dan JBIC ile 350 Milyon Dolarlık Kredi Anlaşması",
     href: "/haber/klnma-jbic-350-milyon-dolar-kredi-anlasmasi",
