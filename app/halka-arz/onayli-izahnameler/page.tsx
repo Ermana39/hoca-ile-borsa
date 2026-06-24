@@ -27,16 +27,49 @@ const statikOnayliIzahnameler = [
   },
 ];
 
+const yeniOnayliIzahnameler = [
+  {
+    kod: "-",
+    sirket: "Orzaks İlaç ve Kimya San. Tic. A.Ş.",
+    href: "/halka-arz/onayli-izahnameler/orzaks-ilac-ve-kimya-san-tic",
+  },
+  {
+    kod: "EKIM",
+    sirket: "Ekim Turizm Ticaret ve Sanayi A.Ş.",
+    href: "/halka-arz/onayli-izahnameler/ekim-turizm-tic-ve-san",
+  },
+  {
+    kod: "-",
+    sirket: "Soho Giyim ve Enerji A.Ş.",
+    href: "/halka-arz/onayli-izahnameler/soho-giyim-ve-enerji",
+  },
+  {
+    kod: "-",
+    sirket: "İsvea Seramik ve Banyo Ürünleri Sanayi A.Ş.",
+    href: "/halka-arz/onayli-izahnameler/isvea-seramik-ve-banyo-urunleri-sanayi",
+  },
+  {
+    kod: "-",
+    sirket: "Golda Gıda San. ve Tic. A.Ş.",
+    href: "/halka-arz/onayli-izahnameler/golda-gida-san-ve-tic",
+  },
+];
+
 export default function OnayliIzahnamelerPage() {
   const dinamikOnayliIzahnameler = getOnayliIzahnameListesi().map((item) => ({
-    kod: item.kod || "Onaylı",
+    kod: item.kod || "-",
     sirket: item.label,
     href: `/halka-arz/onayli-izahnameler/${item.klasor}`,
   }));
-  const onayliIzahnameler = [
-    ...statikOnayliIzahnameler,
-    ...dinamikOnayliIzahnameler,
-  ];
+  const onayliIzahnameler = Array.from(
+    new Map(
+      [
+        ...statikOnayliIzahnameler,
+        ...yeniOnayliIzahnameler,
+        ...dinamikOnayliIzahnameler,
+      ].map((item) => [item.href, item])
+    ).values()
+  );
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">

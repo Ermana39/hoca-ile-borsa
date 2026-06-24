@@ -95,7 +95,7 @@ export default function Page() {
               Ana Sayfa
             </Link>
             <span>/</span>
-            <Link href="/haber" className="hover:text-blue-600">
+            <Link href="/haberler" className="hover:text-blue-600">
               Haberler
             </Link>
             <span>/</span>
