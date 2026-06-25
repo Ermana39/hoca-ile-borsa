@@ -21,6 +21,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1030,
+    title: "ALARK Alcen Genel Kurul Tesciliyle Enerji Yapısını Güncelledi",
+    href: "/haber/alark-alcen-genel-kurul-tescili",
+    image: "/alark-alcen-genel-kurul-tescili.webp",
+    alt: "ALARK Alcen Enerji genel kurul kararı tescili",
+    publishedAt: "2026-06-25",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["ALARK"],
+  },
+  {
     id: 1029,
     title: "YİGİT Akü Kapasite Artışı İçin ÇED Olumlu Kararı Aldı",
     href: "/haber/yigit-aku-ced-olumlu-karari-kapasite-artisi",
