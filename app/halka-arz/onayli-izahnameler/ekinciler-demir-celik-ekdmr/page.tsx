@@ -527,15 +527,6 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
             </div>
           </Section>
 
-          <Section title="Ekinciler Demir ve Çelik Halka Arz Bilgileri">
-            <p className="text-sm leading-7 text-slate-600">
-              Bu sayfada EKDMR halka arzına ait onaylı izahname bilgileri sade ve kolay
-              anlaşılır şekilde bir araya getirilmiştir. Halka arz tarihi, fiyat, lot
-              dağılımı, finansal görünüm, çarpan analizi ve tahmini lot tablosu tek sayfada
-              özetlenmiştir. Bu bilgiler yatırım tavsiyesi değildir.
-            </p>
-          </Section>
-
           <HalkaArzSSS items={sssSorulari} />
         </div>
       </div>

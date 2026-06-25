@@ -181,26 +181,8 @@ function ozetSatirlari(veri: HalkaArzVeri): BilgiKarti[] {
   return [
     { label: "İşlem Kodu", value: veri.bistKodu || o.bistKodu || "" },
     { label: "Talep Toplama Tarihi", value: o.halkaArzTarihi || "" },
-    { label: "Halka Arz Fiyatı", value: o.fiyatAralik || "" },
-    { label: "Toplam Halka Arz Payı", value: o.pay || veri.toplamPay || "" },
     { label: "Dağıtım Yöntemi", value: o.dagitimYontemi || "" },
-    { label: "Halka Açıklık Oranı", value: veri.halkaAciklikOrani || "" },
     { label: "Katılım Endeksi", value: o.katilimEndeksi || "" },
-    { label: "Pazar", value: o.pazar || "" },
-    { label: "Aracı Kurum", value: o.araciKurum || "" },
-  ].filter(gorunur);
-}
-
-function temelBilgiler(veri: HalkaArzVeri): BilgiKarti[] {
-  const o = veri.ozet;
-  return [
-    { label: "Şirket", value: veri.sirketAdi },
-    { label: "İşlem Kodu", value: veri.bistKodu || o.bistKodu || "" },
-    { label: "Halka Arz Fiyatı", value: o.fiyatAralik || "" },
-    { label: "Toplam Lot", value: o.pay || veri.toplamPay || "" },
-    { label: "Halka Açıklık", value: veri.halkaAciklikOrani || "" },
-    { label: "Katılım Endeksi", value: o.katilimEndeksi || "" },
-    { label: "Dağıtım Yöntemi", value: o.dagitimYontemi || "" },
     { label: "Pazar", value: o.pazar || "" },
     { label: "Aracı Kurum", value: o.araciKurum || "" },
   ].filter(gorunur);
@@ -237,8 +219,12 @@ function sssSorulari(veri: HalkaArzVeri) {
 
 export default function GoldaGidaPage() {
   const summaryItems = ozetSatirlari(veri);
-  const temel = temelBilgiler(veri);
-  const sermayeBilgileri = veri.sermayeBilgileri || [];
+  const sermayeBilgileri = (veri.sermayeBilgileri || []).filter(
+    (item) =>
+      !["Satış Fiyatı", "Talep Toplama Tarihi", "Katılım Endeksi"].includes(
+        item.label
+      )
+  );
   const tahsisat = tahsisatSatirlari(veri);
   const donemler =
     veri.finansalDonemler && veri.finansalDonemler.length > 0
@@ -294,35 +280,6 @@ export default function GoldaGidaPage() {
 
           <div className="grid gap-4 p-6 sm:grid-cols-2 xl:grid-cols-4">
             {summaryItems.map((item) => (
-              <InfoCard key={item.label} {...item} />
-            ))}
-          </div>
-        </section>
-
-        {veri.oneCikanlar.length > 0 && (
-          <section className="mb-8">
-            <div className="mb-4 flex items-center justify-between">
-              <h2 className="text-xl font-bold text-slate-900">Öne Çıkan Noktalar</h2>
-            </div>
-            <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-              {veri.oneCikanlar.map((item) => (
-                <div
-                  key={item.title}
-                  className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm"
-                >
-                  <div className="text-sm font-medium text-slate-500">{item.title}</div>
-                  <div className="mt-2 text-2xl font-bold text-blue-700">{item.value}</div>
-                  <p className="mt-3 text-sm leading-6 text-slate-600">{item.desc}</p>
-                </div>
-              ))}
-            </div>
-          </section>
-        )}
-
-        <section className="mb-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="mb-5 text-xl font-bold text-slate-900">Temel Bilgiler</h2>
-          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-            {temel.map((item) => (
               <InfoCard key={item.label} {...item} />
             ))}
           </div>
@@ -436,12 +393,6 @@ export default function GoldaGidaPage() {
               </Section>
             )}
 
-            <Section title={`${veri.sirketAdi} Halka Arz Yorumu`}>
-              <p className="text-sm leading-7 text-slate-600">
-                {veri.fonKullanimYorumu ||
-                  `${veri.sirketAdi} halka arzı değerlendirilirken satış fiyatı, halka arz büyüklüğü, sermaye artırımı ve ortak satışı dengesi, fon kullanım planı, şirketin faaliyet alanı ve finansal görünümü birlikte ele alınmalıdır.`}
-              </p>
-            </Section>
           </div>
 
           <aside className="space-y-8">
@@ -469,22 +420,6 @@ export default function GoldaGidaPage() {
                     {item}
                   </div>
                 ))}
-              </div>
-            </Section>
-
-            <Section title="Diğer Bilgiler">
-              <div className="space-y-4">
-                {[
-                  { label: "İşlem Kodu", value: kod || "" },
-                  { label: "Pazar", value: veri.ozet.pazar || "" },
-                  { label: "Aracı Kurum", value: veri.ozet.araciKurum || "" },
-                  { label: "Katılım Endeksi", value: veri.ozet.katilimEndeksi || "" },
-                  { label: "Dağıtım", value: veri.ozet.dagitimYontemi || "" },
-                ]
-                  .filter(gorunur)
-                  .map((item) => (
-                    <InfoCard key={item.label} {...item} />
-                  ))}
               </div>
             </Section>
 
@@ -535,20 +470,6 @@ export default function GoldaGidaPage() {
             <p className="text-sm leading-7 text-slate-600">{veri.sirketHakkinda}</p>
           </section>
         )}
-
-        <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="mb-3 text-lg font-bold text-slate-900">
-            {veri.sirketAdi} Halka Arz Bilgileri
-          </h2>
-          <p className="text-sm leading-7 text-slate-600">
-            Bu sayfada {kod ? `${kod} ` : ""}
-            halka arzına ait onaylı izahname bilgileri sade ve kolay incelenebilir
-            şekilde özetlenmiştir. Halka arz fiyatı, toplam pay, sermaye artırımı,
-            mevcut pay satışı, fon kullanım planı, taahhütler ve finansal görünüm
-            başlıkları yatırım kararı yerine geçmez; resmi izahname, satış duyurusu
-            ve KAP açıklamalarıyla birlikte değerlendirilmelidir.
-          </p>
-        </section>
 
         <section className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-5">
           <p className="text-xs leading-6 text-slate-500">

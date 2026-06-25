@@ -336,50 +336,6 @@ export default function BetaEnerjiVeTeknolojiASPage() {
           </div>
         </section>
 
-        <section className="mb-8 rounded-3xl border border-emerald-200 bg-emerald-50 p-6 shadow-sm">
-          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-            <h2 className="text-xl font-bold text-emerald-950">
-              Güncel Talep Toplama Takvimi
-            </h2>
-            <span className="w-fit rounded-full bg-white px-3 py-1 text-xs font-semibold text-emerald-700">
-              Yeni Tarihler Açıklandı
-            </span>
-          </div>
-          <p className="mt-3 text-sm leading-7 text-emerald-900">
-            Beta Enerji ve Teknoloji A.Ş. halka arzında daha önce ertelenen
-            talep toplama süreci için yeni tarihler belli oldu. Güncel takvime
-            göre BETAE halka arzı 23-24-25 Haziran 2026 tarihlerinde, 3 iş günü
-            boyunca 40,00 TL sabit fiyatla talep toplayacak.
-          </p>
-        </section>
-
-        <section className="mb-8">
-          <div className="mb-4 flex items-center justify-between">
-            <h2 className="text-xl font-bold text-slate-900">
-              Öne Çıkan Noktalar
-            </h2>
-          </div>
-
-          <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-            {oneCikanlar.map((item) => (
-              <div
-                key={item.title}
-                className="rounded-3xl border border-slate-200 bg-white p-5 shadow-sm"
-              >
-                <div className="text-sm font-medium text-slate-500">
-                  {item.title}
-                </div>
-                <div className="mt-2 text-2xl font-bold text-blue-700">
-                  {item.value}
-                </div>
-                <p className="mt-3 text-sm leading-6 text-slate-600">
-                  {item.desc}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
-
         <section className="mb-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <div className="mb-5 flex items-center justify-between gap-3">
             <h2 className="text-xl font-bold text-slate-900">
@@ -815,41 +771,6 @@ export default function BetaEnerjiVeTeknolojiASPage() {
 
             <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
               <h2 className="mb-5 text-xl font-bold text-slate-900">
-                Diğer Bilgiler
-              </h2>
-
-              <div className="space-y-4">
-                <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-4">
-                  <div className="text-sm font-semibold text-emerald-800">
-                    Katılım Endeksi
-                  </div>
-                  <p className="mt-2 text-sm font-bold text-emerald-950">
-                    Uygun
-                  </p>
-                </div>
-
-                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                  <div className="text-sm font-semibold text-slate-800">
-                    Tahmini Halka Arz Büyüklüğü
-                  </div>
-                  <p className="mt-2 text-sm font-bold text-slate-900">
-                    2.430.000.000 TL
-                  </p>
-                </div>
-
-                <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
-                  <div className="text-sm font-semibold text-slate-800">
-                    Satış Fiyatı
-                  </div>
-                  <p className="mt-2 text-sm font-bold text-slate-900">
-                    40,00 TL
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-              <h2 className="mb-5 text-xl font-bold text-slate-900">
                 Taahhüt Özeti
               </h2>
 
@@ -1021,29 +942,6 @@ export default function BetaEnerjiVeTeknolojiASPage() {
               </div>
             </div>
           </div>
-        </section>
-
-        <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
-          <h2 className="mb-3 text-lg font-bold text-slate-900">
-            Beta Enerji ve Teknoloji A.Ş. Halka Arz Değerlendirmesi
-          </h2>
-          <p className="text-sm leading-7 text-slate-600">
-            Beta Enerji ve Teknoloji A.Ş. halka arz sayfasında yatırımcıların
-            hızlı analiz yapabilmesi için şirket profili, faaliyet alanları,
-            tesis ve iletişim bilgileri, güncel talep toplama tarihleri, halka
-            arz fiyatı, toplam pay miktarı, tahsisat oranları, dağıtım yöntemi,
-            katılım endeksi uygunluğu, sermaye artırımı, ortak satışı, tahmini
-            halka arz büyüklüğü, fon kullanım alanları, 2024-2025-2026 ilk
-            çeyrek finansal verileri, konsorsiyum bilgileri ve taahhüt detayları
-            bir arada sunulmuştur. Güncel takvime göre talep toplama 23-24-25
-            Haziran 2026 tarihlerinde yapılacaktır. Sayfada ayrıca kuruluştan
-            yapılan açıklamanın özeti, halka arzdan elde edilecek kaynağın
-            kullanım planı, yeni kampüs yatırımı, ihracat, Ar-Ge, dijitalleşme ve
-            sürdürülebilirlik hedefleriyle birlikte aktarılmıştır. Yorum
-            bölümleri; halka arz yapısı, fon kullanım planı ve finansal görünümün
-            yatırımcı açısından nasıl okunabileceğine dair genel değerlendirme
-            amacı taşır.
-          </p>
         </section>
 
         <HalkaArzSSS className="mt-8" items={sssSorulari} />
