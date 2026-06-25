@@ -95,6 +95,23 @@ const gruplar: Grup[] = [
     ],
   },
   {
+    baslik: "Halka Arz",
+    kutular: [
+      {
+        title: "Halka Arz Kazanç Hesaplama",
+        href: "/halka-arz/kazanc-hesapla",
+        description: "Halka arz fiyatı, lot ve beklenen tavan serisine göre tahmini kazancınızı hesaplayın.",
+        icon: "halka-arz",
+      },
+      {
+        title: "Halka Arz Talep (Lot) Hesaplama",
+        href: "/halka-arz/talep-hesapla",
+        description: "Başvuru tutarı ve dağıtım varsayımına göre size düşebilecek tahmini lot ve maliyeti hesaplayın.",
+        icon: "halka-arz",
+      },
+    ],
+  },
+  {
     baslik: "Temettü",
     kutular: [
       {

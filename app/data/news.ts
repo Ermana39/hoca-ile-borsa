@@ -20,9 +20,47 @@ export type NewsItem = {
 };
 
 export const newsItems: NewsItem[] = [
-  
-  
   {
+    id: 1029,
+    title: "YİGİT Akü Kapasite Artışı İçin ÇED Olumlu Kararı Aldı",
+    href: "/haber/yigit-aku-ced-olumlu-karari-kapasite-artisi",
+    image: "/yigit-aku-ced-olumlu-karari-kapasite-artisi.webp",
+    alt: "YİGİT Akü kapasite artışı için ÇED olumlu kararı",
+    publishedAt: "2026-06-25",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["YIGIT"],
+  },
+  {
+    id: 1028,
+    title: "ISGSY Portföy Şirketi Enlila’dan Crescenta Biosciences Yatırımı",
+    href: "/haber/isgsy-enlila-crescenta-biosciences-yatirimi",
+    image: "/isgsy-enlila-crescenta-biosciences-yatirimi.webp",
+    alt: "ISGSY Enlila Crescenta Biosciences yatırımı",
+    publishedAt: "2026-06-25",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["ISGSY"],
+  },
+  {
+    id: 1027,
+    title: "TRALT, Zenit Madencilik Ruhsat ve Tesisleri İçin Mutabakat Zaptı İmzaladı",
+    href: "/haber/tralt-zenit-madencilik-ruhsat-tesis-mutabakat-zapti",
+    image: "/tralt-zenit-madencilik-ruhsat-tesis-mutabakat-zapti.webp",
+    alt: "TRALT Zenit Madencilik ruhsat ve tesis mutabakat zaptı",
+    publishedAt: "2026-06-25",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["TRALT"],
+  },
+  {
+    id: 1026,
+    title: "DERHL Bağlı Ortaklığı Soho Giyim İçin Halka Arz Onayı Aldı",
+    href: "/haber/derhl-soho-giyim-halka-arz-onayi",
+    image: "/derhl-soho-giyim-halka-arz-onayi.webp",
+    alt: "DERHL bağlı ortaklığı Soho Giyim halka arz onayı",
+    publishedAt: "2026-06-25",
+    category: "halka-arz",
+    ilgiliHisseler: ["DERHL"],
+  },
+{
     id: 1025,
     title: "Soho Giyim Halka Arzına SPK Onayı Geldi",
     href: "/haber/soho-giyim-halka-arzina-spk-onayi-geldi",

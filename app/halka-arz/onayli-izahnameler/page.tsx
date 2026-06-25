@@ -29,7 +29,7 @@ const statikOnayliIzahnameler = [
 
 const yeniOnayliIzahnameler = [
   {
-    kod: "-",
+    kod: "ORZAX",
     sirket: "Orzaks İlaç ve Kimya San. Tic. A.Ş.",
     href: "/halka-arz/onayli-izahnameler/orzaks-ilac-ve-kimya-san-tic",
   },
@@ -39,17 +39,17 @@ const yeniOnayliIzahnameler = [
     href: "/halka-arz/onayli-izahnameler/ekim-turizm-tic-ve-san",
   },
   {
-    kod: "-",
+    kod: "SOHOE",
     sirket: "Soho Giyim ve Enerji A.Ş.",
     href: "/halka-arz/onayli-izahnameler/soho-giyim-ve-enerji",
   },
   {
-    kod: "-",
+    kod: "ISVEA",
     sirket: "İsvea Seramik ve Banyo Ürünleri Sanayi A.Ş.",
     href: "/halka-arz/onayli-izahnameler/isvea-seramik-ve-banyo-urunleri-sanayi",
   },
   {
-    kod: "-",
+    kod: "GOLDA",
     sirket: "Golda Gıda San. ve Tic. A.Ş.",
     href: "/halka-arz/onayli-izahnameler/golda-gida-san-ve-tic",
   },
