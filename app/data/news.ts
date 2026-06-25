@@ -21,6 +21,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1031,
+    title: "25 Haziran 2026 Perşembe Önemli KAP Haberleri",
+    href: "/haber/25-haziran-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "25 Haziran 2026 Perşembe Önemli KAP Haberleri",
+    publishedAt: "2026-06-25",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["DERHL", "TRALT", "ISGSY", "YIGIT", "DENVA", "SMRTG", "BERA", "KONKA", "FORTE", "MEGMT", "DURKN", "IHLAS", "QNBFK", "DITAS", "BIOEN", "TRMEN", "ALTNY", "GARFL", "BIGEN", "BMSTL", "TABGD", "YBTAS", "EGEGY", "HLGYO", "ISKPL", "PSGYO", "VAKBN", "YONGA", "AVGYO", "METRO", "DAPGM", "BALSU", "ZERGY", "AHGAZ", "A1CAP", "PRDGS", "RTALB", "ALARK", "LIDER", "BULGS"],
+  },
+  {
     id: 1030,
     title: "ALARK Alcen Genel Kurul Tesciliyle Enerji Yapısını Güncelledi",
     href: "/haber/alark-alcen-genel-kurul-tescili",
