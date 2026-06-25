@@ -42,6 +42,8 @@ export type HalkaArzOzet = {
   dagitimYontemi?: string;
   pay?: string;
   araciKurum?: string;
+  bistKodu?: string;
+  katilimEndeksi?: string;
   pazar?: string;
 };
 
@@ -55,6 +57,11 @@ export type OneCikan = {
   title: string;
   value: string;
   desc: string;
+};
+
+export type BilgiKarti = {
+  label: string;
+  value: string;
 };
 
 // Tahsisat satırı; ya hazır metin ("Yurt İçi Bireysel: %70") ya da yapılandırılmış
@@ -96,8 +103,10 @@ export type HalkaArzVeri = {
   ozet: HalkaArzOzet;
   toplamPay?: string;
   halkaAciklikOrani?: string;
+  sermayeBilgileri?: BilgiKarti[];
 
   halkaArzSekli: string[];
+  satisYontemi?: string[];
 
   fonKullanim: string[];
   fonKullanimYorumu?: string;
