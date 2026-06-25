@@ -68,7 +68,7 @@ export type BilgiKarti = {
 // bir kayıt olabilir. İkisi de desteklenir.
 export type TahsisatGirdi =
   | string
-  | { grup: string; oran?: string; lot?: string };
+  | { grup: string; oran?: string; lot?: string; dagitim?: string };
 
 export function tahsisatMetni(t: TahsisatGirdi): string {
   if (typeof t === "string") return t;
@@ -88,6 +88,7 @@ export type TaahhutOzeti = {
 export type HalkaArzVeri = {
   slug: string;
   sirketAdi: string;
+  markaAdi?: string;
   bistKodu?: string;
   seo?: {
     canonical?: string;
@@ -127,6 +128,7 @@ export type HalkaArzVeri = {
 
   // Şirketin GERÇEK faaliyet alanı. Boşsa "Şirket Hakkında" bölümü gizlenir.
   sirketHakkinda?: string;
+  eksikBilgiNotu?: string;
 
   yasalUyari?: string;
 };

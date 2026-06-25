@@ -21,6 +21,33 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1034,
+    title: "Soho Giyim Halka Arz İzahnamesi Yayınlandı",
+    href: "/haber/soho-giyim-halka-arz-izahnamesi-yayinlandi",
+    image: "/soho-giyim-halka-arz-izahnamesi-yayinlandi.webp",
+    alt: "Soho Giyim halka arz izahnamesi yayınlandı",
+    publishedAt: "2026-06-25",
+    category: "halka-arz",
+  },
+  {
+    id: 1033,
+    title: "İsvea Seramik Halka Arz İzahnamesi Yayınlandı",
+    href: "/haber/isvea-seramik-halka-arz-izahnamesi-yayinlandi",
+    image: "/isvea-seramik-halka-arz-izahnamesi-yayinlandi.webp",
+    alt: "İsvea Seramik halka arz izahnamesi yayınlandı",
+    publishedAt: "2026-06-25",
+    category: "halka-arz",
+  },
+  {
+    id: 1032,
+    title: "Orzaks İlaç Halka Arz İzahnamesi Yayınlandı",
+    href: "/haber/orzaks-ilac-halka-arz-izahnamesi-yayinlandi",
+    image: "/orzaks-ilac-halka-arz-izahnamesi-yayinlandi.webp",
+    alt: "Orzaks İlaç halka arz izahnamesi yayınlandı",
+    publishedAt: "2026-06-25",
+    category: "halka-arz",
+  },
+  {
     id: 1031,
     title: "25 Haziran 2026 Perşembe Önemli KAP Haberleri",
     href: "/haber/25-haziran-2026-onemli-kap-haberleri",
