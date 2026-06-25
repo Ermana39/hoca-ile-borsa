@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getHisse, getTumHisseSembolleri } from "@/lib/hisseler";
+import { getTemelOranlar } from "@/lib/temel-oranlar";
 import { getHisseLogo } from "@/lib/hisse-logolar";
 import { getTemettulerBySembol } from "@/lib/temettuler";
 import { getKapBySembol } from "@/lib/kap";
@@ -300,7 +301,9 @@ export default async function HisseKunyePage({
   } = hisse;
 
   const ozgunAnaliz = detayliHisse.ozgunAnaliz;
-  const temelOranlar = detayliHisse.temelOranlar;
+  // Temel oranlar merkezi Excel kaynağından (oran-analizi.json) gelir; Excel'de
+  // bulunmayan kod için hissenin kendi JSON'undaki değere geri düşülür.
+  const temelOranlar = getTemelOranlar(hisse.kod) ?? detayliHisse.temelOranlar;
   const seoSorular = (detayliHisse.seoSorular || []).filter(
     (item) => doluMetin(item.soru) && doluMetin(item.cevap)
   );

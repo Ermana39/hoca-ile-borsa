@@ -3,15 +3,10 @@ import { notFound } from "next/navigation";
 import ContinueReading from "@/components/ContinueReading";
 import {
   bekleyenDeger,
-  getOnayliIzahnameListesi,
   halkaArzGetir,
   tahsisatMetni,
   type HalkaArzVeri,
 } from "@/lib/halka-arz";
-
-export function generateStaticParams() {
-  return getOnayliIzahnameListesi().map((item) => ({ slug: item.klasor }));
-}
 
 export async function generateMetadata({
   params,

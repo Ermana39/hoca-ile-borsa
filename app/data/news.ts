@@ -21,6 +21,52 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   
+  
+  {
+    id: 1025,
+    title: "Soho Giyim Halka Arzına SPK Onayı Geldi",
+    href: "/haber/soho-giyim-halka-arzina-spk-onayi-geldi",
+    image: "/soho-giyim-halka-arzina-spk-onayi-geldi.webp",
+    alt: "Soho Giyim halka arzına SPK onayı geldi",
+    publishedAt: "2026-06-25",
+    category: "halka-arz",
+  },
+  {
+    id: 1024,
+    title: "Orzaks İlaç Halka Arzına SPK Onayı Geldi",
+    href: "/haber/orzaks-ilac-halka-arzina-spk-onayi-geldi",
+    image: "/orzaks-ilac-halka-arzina-spk-onayi-geldi.webp",
+    alt: "Orzaks İlaç halka arzına SPK onayı geldi",
+    publishedAt: "2026-06-25",
+    category: "halka-arz",
+  },
+  {
+    id: 1023,
+    title: "İsvea Seramik Halka Arzına SPK Onayı Geldi",
+    href: "/haber/isvea-seramik-halka-arzina-spk-onayi-geldi",
+    image: "/isvea-seramik-halka-arzina-spk-onayi-geldi.webp",
+    alt: "İsvea Seramik halka arzına SPK onayı geldi",
+    publishedAt: "2026-06-25",
+    category: "halka-arz",
+  },
+  {
+    id: 1022,
+    title: "Ekim Turizm Halka Arzına SPK Onayı Geldi",
+    href: "/haber/ekim-turizm-halka-arzina-spk-onayi-geldi",
+    image: "/ekim-turizm-halka-arzina-spk-onayi-geldi.webp",
+    alt: "Ekim Turizm halka arzına SPK onayı geldi",
+    publishedAt: "2026-06-25",
+    category: "halka-arz",
+  },
+  {
+    id: 1021,
+    title: "Golda Gıda Halka Arzına SPK Onayı Geldi",
+    href: "/haber/golda-gida-halka-arzina-spk-onayi-geldi",
+    image: "/golda-gida-halka-arzina-spk-onayi-geldi.webp",
+    alt: "Golda Gıda halka arzına SPK onayı geldi",
+    publishedAt: "2026-06-25",
+    category: "halka-arz",
+  },
   {
     id: 1020,
     title: "SPK’dan 5 Yeni Halka Arz Onayı Geldi",
