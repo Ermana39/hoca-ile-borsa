@@ -21,6 +21,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1041,
+    title: "TRALT Çanakkale Karapınar Projesinde Yürütmeyi Durdurma Kararı",
+    href: "/haber/tralt-canakkale-karapinar-ced-yurutmeyi-durdurma",
+    image: "/tralt-canakkale-karapinar-ced-yurutmeyi-durdurma.webp",
+    alt: "TRALT Çanakkale Karapınar Projesinde yürütmeyi durdurma kararı",
+    publishedAt: "2026-06-26",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["TRALT"],
+  },
+  {
     id: 1040,
     title: "IHLAS Kazarman HES Projesinde Temel Atma Töreni Gerçekleştirildi",
     href: "/haber/ihlas-kazarman-hes-projesinde-temel-atildi",
