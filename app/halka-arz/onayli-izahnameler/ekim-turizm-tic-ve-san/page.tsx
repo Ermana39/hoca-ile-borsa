@@ -480,6 +480,24 @@ export default function EkimTurizmPage() {
           </p>
         </section>
 
+        <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h2 className="mb-5 text-xl font-bold text-slate-900">YouTube Videoları</h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+              <div className="relative w-full overflow-hidden pt-[56.25%]">
+                <iframe
+                  className="absolute left-0 top-0 h-full w-full"
+                  src="https://www.youtube.com/embed/uIECMK5tajA"
+                  title="Ekim Turizm Ticaret ve Sanayi A.Ş. Intercity YouTube Videosu"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
         <HalkaArzSSS className="mt-8" items={sssSorulari(veri)} />
 
         <ContinueReading

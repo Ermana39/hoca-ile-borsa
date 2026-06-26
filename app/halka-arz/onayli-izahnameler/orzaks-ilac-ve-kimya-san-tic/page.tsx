@@ -566,6 +566,55 @@ export default function OrzaksIlacVeKimyaPage() {
           </p>
         </section>
 
+
+        <section className="mt-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
+          <div className="border-b border-slate-200 bg-slate-50 px-6 py-4">
+            <h2 className="text-lg font-bold text-slate-900">
+              Orzaks İlaç Halka Arz Video İncelemesi
+            </h2>
+            <p className="mt-1 text-sm text-slate-600">
+              Halka arz detaylarını video anlatımıyla izlemek için aşağıdaki
+              içeriklerden yararlanabilirsiniz.
+            </p>
+          </div>
+
+          <div className="grid gap-4 p-4 sm:p-6 lg:grid-cols-2">
+            <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+              <div className="relative aspect-video w-full overflow-hidden bg-slate-100">
+                <iframe
+                  src="https://www.youtube.com/embed/ZY7ciEW8EMM"
+                  title="Orzaks İlaç Halka Arz Video İncelemesi"
+                  className="absolute inset-0 h-full w-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-sm font-bold text-slate-900">
+                  Orzaks İlaç Halka Arz Video İncelemesi
+                </h3>
+              </div>
+            </div>
+
+            <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+              <div className="relative aspect-video w-full overflow-hidden bg-slate-100">
+                <iframe
+                  src="https://www.youtube.com/embed/0fC9_h3VfrE"
+                  title="Orzaks İlaç Halka Arz Değerlendirme Videosu"
+                  className="absolute inset-0 h-full w-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-sm font-bold text-slate-900">
+                  Orzaks İlaç Halka Arz Değerlendirme Videosu
+                </h3>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <HalkaArzSSS className="mt-8" items={sssSorulari(veri)} />
 
         <ContinueReading

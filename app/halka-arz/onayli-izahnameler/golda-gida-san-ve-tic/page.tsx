@@ -246,6 +246,64 @@ function Section({
   );
 }
 
+
+
+function YouTubeVideoCards() {
+  const videolar = [
+    {
+      title: "Golda Gıda halka arz videosu",
+      description: "Golda Gıda halka arz detaylarını video anlatımıyla izleyin.",
+      videoId: "Ttr_7BX0jhE",
+      href: "https://youtu.be/Ttr_7BX0jhE",
+    },
+  ];
+
+  return (
+    <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+      <div className="mb-5 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+        <h2 className="text-xl font-bold text-slate-900">Video İçerikler</h2>
+        <span className="w-fit rounded-full bg-red-50 px-3 py-1 text-xs font-semibold text-red-700">
+          YouTube
+        </span>
+      </div>
+
+      <div className="grid gap-4 md:grid-cols-2">
+        {videolar.map((video) => (
+          <a
+            key={video.videoId}
+            href={video.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="group overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 transition hover:border-red-300 hover:bg-white hover:shadow-md"
+          >
+            <div className="relative aspect-video overflow-hidden bg-slate-200">
+              <img
+                src={`https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg`}
+                alt={video.title}
+                className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+              />
+              <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-red-600 text-white shadow-lg transition group-hover:scale-110">
+                  <span className="ml-1 text-xl">▶</span>
+                </div>
+              </div>
+            </div>
+            <div className="p-4">
+              <div className="text-sm font-bold text-slate-900">{video.title}</div>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                {video.description}
+              </p>
+              <div className="mt-3 text-sm font-semibold text-red-600">
+                Videoyu İzle →
+              </div>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
+  );
+}
+
 function ozetSatirlari(veri: HalkaArzVeri): BilgiKarti[] {
   const o = veri.ozet;
   return [
@@ -540,6 +598,8 @@ export default function GoldaGidaPage() {
             <p className="text-sm leading-7 text-slate-600">{veri.sirketHakkinda}</p>
           </section>
         )}
+
+        <YouTubeVideoCards />
 
         <section className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-5">
           <p className="text-xs leading-6 text-slate-500">

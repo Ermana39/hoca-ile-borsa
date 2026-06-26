@@ -27,6 +27,7 @@ const videoLinks: VideoItem[] = [
   { id: "3g2jU1eqBAU", url: "https://youtu.be/3g2jU1eqBAU" },
   { id: "ASucJsTjdeE", url: "https://youtu.be/ASucJsTjdeE" },
   { id: "P3GKe2f_MU0", url: "https://youtu.be/P3GKe2f_MU0" },
+  { id: "nUYfei9ISK4", url: "https://youtu.be/nUYfei9ISK4" },
 ];
 
 type ResolvedVideo = {
