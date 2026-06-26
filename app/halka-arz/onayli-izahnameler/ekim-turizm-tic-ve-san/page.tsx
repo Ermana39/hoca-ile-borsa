@@ -26,12 +26,13 @@ const veri: HalkaArzVeri = {
     "description": "Intercity markasıyla bilinen Ekim Turizm Ticaret ve Sanayi A.Ş. onaylı izahname bilgileri, 30,26 TL halka arz fiyatı, 162.000.000 lot toplam halka arz payı, sermaye artırımı, ortak satışı, fon kullanım planı ve finansal görünüm."
   },
   "ozet": {
-    "halkaArzTarihi": "",
+    "halkaArzTarihi": "1-2-3 Temmuz 2026 (Çarşamba-Perşembe-Cuma)",
     "fiyatAralik": "30,26 TL",
-    "dagitimYontemi": "Eşit Dağıtım",
+    "dagitimYontemi": "Bireysele Eşit Dağıtım",
     "pay": "162.000.000 Lot",
     "araciKurum": "Ak Yatırım Menkul Değerler A.Ş. / Vakıf Yatırım Menkul Değerler A.Ş.",
     "bistKodu": "EKIM",
+    "katilimEndeksi": "Katılım Endeksine Uygun Değil",
     "pazar": "Yıldız Pazar"
   },
   "toplamPay": "162.000.000",
@@ -73,31 +74,54 @@ const veri: HalkaArzVeri = {
   "finansalYorum": "Finansal görünümde 2022 yılında hasılat ve brüt kârın 2021’e göre güçlü arttığı, 2023/9 döneminde ise dokuz aylık verilerle yüksek seviyelerin korunduğu görülüyor. Ancak 2023/9 verileri dokuz aylık dönemi kapsadığı için 2022 tam yıl verileriyle doğrudan karşılaştırılmamalıdır. Filo kiralama sektöründe finansal sonuçlar; araç alım maliyetleri, kredi faizleri, ikinci el araç fiyatları, bakım ve sigorta giderleri, kurumsal müşteri sözleşmeleri, filo doluluk oranı ve borçluluk yapısıyla yakından ilişkilidir. Bu nedenle Ekim Turizm değerlendirilirken yalnızca hasılat ve brüt kâr rakamlarına bakmak yeterli olmaz; net kâr, faaliyet kârı, nakit akışı, finansal borçluluk, araç filosunun büyüklüğü, ikinci el satış kârları, kredi maliyetleri ve filo yenileme ihtiyacı birlikte incelenmelidir.",
   "oneCikanlar": [
     {
+      "title": "Talep Tarihi",
+      "value": "1-2-3 Temmuz",
+      "desc": "Talep toplama çarşamba, perşembe ve cuma günleri yapılacaktır."
+    },
+    {
       "title": "Halka Arz Fiyatı",
       "value": "30,26 TL",
       "desc": "1 TL nominal değerli paylar 30,26 TL sabit fiyatla satışa sunulacaktır."
     },
     {
-      "title": "Toplam Pay",
-      "value": "162.000.000 Lot",
-      "desc": "132.000.000 lot sermaye artırımı ve 30.000.000 lot ortak satışı."
+      "title": "Bireysel Tahsisat",
+      "value": "%70",
+      "desc": "Yurt içi bireysel yatırımcıya 113.400.000 lot ayrılmıştır."
     },
     {
-      "title": "Halka Açıklık",
-      "value": "%19,47",
-      "desc": "Yeni sermaye üzerinden yaklaşık halka açıklık oranı."
-    },
-    {
-      "title": "BIST Kodu",
-      "value": "EKIM",
-      "desc": "İzahname verisinde yer alan işlem kodu bilgisi."
+      "title": "Katılım Endeksi",
+      "value": "Uygun Değil",
+      "desc": "Ekim Turizm halka arzı katılım endeksine uygun değildir."
     }
   ],
-  "tahsisat": [],
+  "tahsisat": [
+    {
+      "grup": "Yurt İçi Bireysel",
+      "oran": "%70",
+      "lot": "113.400.000 Lot",
+      "dagitim": "Eşit Dağıtım",
+      "detay": "25.000 lot ve altı başvurular / 756.500 TL ve altı"
+    },
+    {
+      "grup": "Yüksek Başvurulu",
+      "oran": "%10",
+      "lot": "16.200.000 Lot",
+      "dagitim": "Oransal Dağıtım",
+      "detay": "25.001 lot ve üstü başvurular / 756.530 TL ve üstü"
+    },
+    {
+      "grup": "Yurt İçi Kurumsal",
+      "oran": "%20",
+      "lot": "32.400.000 Lot"
+    }
+  ],
   "tahsisatNotlari": [
-    "Tahsisat oranları netleştiğinde sayfaya kısa bilgi notu olarak eklenmelidir.",
-    "Yurt içi bireysel yatırımcı ve grup çalışanları için eşit dağıtım bilgisi yer almaktadır.",
-    "Ek satış için herhangi bir sınırlama olmadığı bilgisi kaynak dosyada yer almaktadır.",
+    "Talep toplama tarihleri 1-2-3 Temmuz 2026 olarak açıklanmıştır.",
+    "Talep toplama çarşamba, perşembe ve cuma günleri yapılacaktır.",
+    "Ekim Turizm halka arzı katılım endeksine uygun değildir.",
+    "Dağıtım şekli bireysele eşit dağıtım olarak açıklanmıştır.",
+    "Yurt içi bireysel yatırımcı grubunda 25.000 lot ve altı başvurular için eşit dağıtım uygulanacaktır.",
+    "Yüksek başvurulu yatırımcı grubunda 25.001 lot ve üzeri başvurular için oransal dağıtım uygulanacaktır.",
     "T1-T2 bakiye kullanımına uygun değildir."
   ],
   "taahhutOzeti": {
@@ -106,7 +130,7 @@ const veri: HalkaArzVeri = {
     "halkaAciklik": "%19,47."
   },
   "sirketHakkinda": "Ekim Turizm Ticaret ve Sanayi A.Ş., Intercity markasıyla araç kiralama sektöründe faaliyet gösteren, operasyonel filo kiralama ve kurumsal ulaşım hizmetleri sunan bir şirkettir. Şirketin tescilli markası Intercity’dir. Ana faaliyet alanı operasyonel filo kiralamadır. Merkez adresi Cevizli Mahallesi, Tugay Yolu Caddesi, No:69A İç Kapı No:171-174, Maltepe / İstanbul’dur. Büyük Mükellefler Vergi Dairesi’ne bağlı vergi numarası 3280341070, MERSİS numarası 0328034107000019 ve İstanbul Ticaret Sicil numarası 283629 olarak paylaşılmıştır. Kullanıcı tarafından paylaşılan ortaklık yapısında Rafan Holding’in %35,58, Ali Vural Ak’ın %35,12 ve Intercity Yatırım Holding’in %29,30 paya sahip olduğu belirtilmiştir. Filo kiralama sektöründe şirket performansı; araç filosunun büyüklüğü, araç alım maliyetleri, ikinci el satış değerleri, finansman maliyetleri, kurumsal müşteri portföyü, bakım giderleri ve sözleşme vadeleriyle yakından ilişkilidir. Bu nedenle Ekim Turizm halka arzı değerlendirilirken finansal verilerin yanında araç filosu, kredi borçları, yeni araç alım planı, ikinci el araç piyasası, operasyonel kiralama talebi ve fiyat istikrarı yapısı birlikte ele alınmalıdır.",
-  "eksikBilgiNotu": "Talep toplama tarihi ve tahsisat oranları gibi henüz kesinleşmeyen alanlar resmi duyurular geldikçe güncellenmelidir.",
+  "eksikBilgiNotu": "Borsada işlem görmeye başlama tarihi ve kesin dağıtım sonuçları resmi açıklamalar geldikçe güncellenmelidir.",
   "yasalUyari": "Bu sayfadaki bilgiler SPK onayı sonrası açıklanan ilk onaylı izahname verilerine göre genel bilgilendirme amacıyla hazırlanmıştır, yatırım tavsiyesi değildir.",
   "sermayeBilgileri": [
     {
@@ -132,6 +156,14 @@ const veri: HalkaArzVeri = {
     {
       "label": "Satış Fiyatı",
       "value": "30,26 TL"
+    },
+    {
+      "label": "Talep Toplama Tarihi",
+      "value": "1-2-3 Temmuz 2026"
+    },
+    {
+      "label": "Katılım Endeksi",
+      "value": "Uygun Değil"
     }
   ],
   "satisYontemi": [
