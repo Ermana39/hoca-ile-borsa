@@ -21,6 +21,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1042,
+    title: "26 Haziran 2026 Cuma Önemli KAP Haberleri",
+    href: "/haber/26-haziran-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "26 Haziran 2026 Cuma Önemli KAP Haberleri",
+    publishedAt: "2026-06-26",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["MEDTR", "AKSGY", "AVGYO", "ARDYZ", "EGEGY", "HLGYO", "ISKPL", "PSGYO", "MEYSU", "CEMAS", "OSMEN", "ATA", "ATAYM", "AKBNK", "DNYVA", "DENVA", "EMIRV", "ISTVY", "ORTVA", "DURKN", "NUHCM", "MARKA", "BALSU", "ENTRA", "IHLAS", "KNTFA", "TKFEN", "GEREL", "INFO", "LIDER", "ISFIN", "GEDIK", "MSYBN", "INVEO", "MAGEN", "TRALT", "BSRFK", "KOCMT", "DZGYO", "KRDMA", "KRDMB", "KRDMD", "SEKUR", "AKCNS"],
+  },
+  {
     id: 1041,
     title: "TRALT Çanakkale Karapınar Projesinde Yürütmeyi Durdurma Kararı",
     href: "/haber/tralt-canakkale-karapinar-ced-yurutmeyi-durdurma",
