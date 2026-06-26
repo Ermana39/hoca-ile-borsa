@@ -550,6 +550,37 @@ export default function SohoGiyimVeEnerjiPage() {
           </p>
         </section>
 
+
+        <Section title="YouTube Videoları">
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+              <div className="relative w-full overflow-hidden pt-[56.25%]">
+                <iframe
+                  className="absolute left-0 top-0 h-full w-full"
+                  src="https://www.youtube.com/embed/rV_y7k2MbGs"
+                  title="Soho Giyim ve Enerji A.Ş. YouTube Videosu"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+
+            <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+              <div className="relative w-full overflow-hidden pt-[56.25%]">
+                <iframe
+                  className="absolute left-0 top-0 h-full w-full"
+                  src="https://www.youtube.com/embed/utn6_DiKDVw"
+                  title="Soho Giyim ve Enerji A.Ş. Halka Arz YouTube Videosu"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+            </div>
+          </div>
+        </Section>
+
         <HalkaArzSSS className="mt-8" items={sssSorulari(veri)} />
 
         <ContinueReading
