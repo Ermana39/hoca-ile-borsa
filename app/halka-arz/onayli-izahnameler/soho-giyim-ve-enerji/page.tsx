@@ -22,64 +22,120 @@ const veri: HalkaArzVeri = {
   },
   "baslikMeta": {
     "title": "Soho Giyim ve Enerji A.Ş. Halka Arz Detayları 2026 | Onaylı İzahname",
-    "description": "Soho Giyim ve Enerji A.Ş. onaylı izahname bilgileri, 15,00 TL halka arz fiyatı, 100.000.000 lot sermaye artırımı, Ana Pazar bilgisi, fon kullanım alanları ve finansal görünüm."
+    "description": "Soho Giyim ve Enerji A.Ş. onaylı izahname bilgileri, 15,00 TL halka arz fiyatı, 100.000.000 lot sermaye artırımı, %32,6 halka açıklık, 1,5 milyar TL arz büyüklüğü, fon kullanım alanları ve finansal görünüm."
   },
   "ozet": {
-    "halkaArzTarihi": "30 Haziran / 1 Temmuz 2026",
-    "fiyatAralik": "15,00 TL",
+    "halkaArzTarihi": "30 Haziran / 1 Temmuz 2026 (10.30-13.00)",
+    "fiyatAralik": "15,00 TL - %37 iskonto",
     "dagitimYontemi": "Tamamı Eşit Dağıtım",
     "pay": "100.000.000 Lot",
     "araciKurum": "İntegral Yatırım Menkul Değerler A.Ş.",
     "pazar": "Ana Pazar",
     "bistKodu": "SOHOE",
-    "katilimEndeksi": "Katılım Endeksine Uygun"
+    "katilimEndeksi": "BIST Katılım Endeksine Uygun"
   },
   "toplamPay": "100.000.000",
-  "halkaAciklikOrani": "%32,60",
+  "halkaAciklikOrani": "%32,6",
   "halkaArzSekli": [
-    "Sermaye Artırımı: 100.000.000 Lot"
+    "Sermaye Artırımı: 100.000.000 Lot",
+    "Ortak Satışı: Yok"
   ],
   "fonKullanim": [
+    "%60 Kreasyon yatırımları",
     "%30 Mağazalaşma yatırımları",
-    "%10 Markalaşma yatırımları",
-    "%40 Kreasyon yatırımları",
-    "%20 Finansal borçların ödenmesi"
+    "%10 Markalaşma yatırımları"
   ],
-  "fonKullanimYorumu": "Soho Giyim ve Enerji halka arzı tamamen sermaye artırımı şeklinde planlandığı için halka arzdan sağlanacak kaynağın şirket bünyesine girmesi beklenir. Fon kullanımında en büyük pay kreasyon yatırımlarına ayrılmıştır. Bu başlık, lüks erkek giyim tarafında koleksiyon geliştirme, tasarım, ürün çeşitliliği ve marka konumlandırması açısından önemlidir. Mağazalaşma ve markalaşma yatırımları, şirketin doğrudan satış kanallarını ve marka bilinirliğini güçlendirme hedefi açısından takip edilmelidir. Finansal borçların ödenmesine ayrılan pay ise finansman giderlerini azaltma ve bilanço esnekliğini artırma potansiyeli taşıyabilir.",
+  "fonKullanimYorumu": "Soho Giyim ve Enerji halka arzı tamamen sermaye artırımı şeklinde planlandığı için halka arzdan sağlanacak kaynağın şirket bünyesine girmesi beklenir. Fon kullanım planında en büyük pay kreasyon yatırımlarına ayrılmıştır. Bu başlık, koleksiyon geliştirme, ürün çeşitliliği, tasarım süreçleri ve sezonluk ürün planlaması açısından önem taşır. Mağazalaşma yatırımları, şirketin satış ağı ve müşteriyle doğrudan temas noktalarını genişletme hedefiyle ilişkilidir. Markalaşma yatırımları ise marka bilinirliği, pazarlama gücü ve ürünlerin daha geniş kitlelere ulaştırılması açısından takip edilmelidir.",
   "finansalDonemler": [
-    "2024/6",
-    "2023",
-    "2022"
+    "2024",
+    "2025",
+    "2026/1Ç"
   ],
   "finansalVeriler": [
     {
-      "kalem": "Hasılat",
+      "kalem": "Dönen Varlıklar",
       "donemler": {
-        "2022": "1,1 Milyar TL",
-        "2023": "1,2 Milyar TL",
-        "2024/6": "712,2 Milyon TL"
+        "2024": "2,2 Milyar TL",
+        "2025": "2,6 Milyar TL",
+        "2026/1Ç": "2,7 Milyar TL"
       }
     },
     {
-      "kalem": "Brüt Kâr",
+      "kalem": "Duran Varlıklar",
       "donemler": {
-        "2022": "167,0 Milyon TL",
-        "2023": "246,1 Milyon TL",
-        "2024/6": "129,3 Milyon TL"
+        "2024": "1,8 Milyar TL",
+        "2025": "2,4 Milyar TL",
+        "2026/1Ç": "2,4 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Toplam Varlıklar",
+      "donemler": {
+        "2024": "4,1 Milyar TL",
+        "2025": "5,0 Milyar TL",
+        "2026/1Ç": "5,2 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Kısa Vadeli Yükümlülükler",
+      "donemler": {
+        "2024": "1,2 Milyar TL",
+        "2025": "1,8 Milyar TL",
+        "2026/1Ç": "1,9 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Uzun Vadeli Yükümlülükler",
+      "donemler": {
+        "2024": "565 Milyon TL",
+        "2025": "759 Milyon TL",
+        "2026/1Ç": "847 Milyon TL"
+      }
+    },
+    {
+      "kalem": "Özkaynaklar",
+      "donemler": {
+        "2024": "2,3 Milyar TL",
+        "2025": "2,4 Milyar TL",
+        "2026/1Ç": "2,4 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Hasılat",
+      "donemler": {
+        "2024": "2,6 Milyar TL",
+        "2025": "3,0 Milyar TL",
+        "2026/1Ç": "0,7 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Esas Faaliyet Kârı",
+      "donemler": {
+        "2024": "488 Milyon TL",
+        "2025": "904 Milyon TL",
+        "2026/1Ç": "211 Milyon TL"
+      }
+    },
+    {
+      "kalem": "Dönem Kârı",
+      "donemler": {
+        "2024": "84 Milyon TL",
+        "2025": "49 Milyon TL",
+        "2026/1Ç": "4 Milyon TL"
       }
     }
   ],
-  "finansalYorum": "Finansal görünümde 2023 yılında hasılatın 2022’ye göre arttığı, brüt kârda ise daha güçlü bir yükseliş yaşandığı görülüyor. Bu tablo, ürün karması, fiyatlama, marka konumlandırması veya maliyet yönetimi tarafında iyileşme olabileceğine işaret edebilir. 2024/6 verileri altı aylık dönemi kapsadığı için 2023 tam yıl verileriyle doğrudan karşılaştırılmamalıdır. Giyim ve enerji faaliyetlerinin birlikte yer aldığı bu yapıda finansal analiz yapılırken iki farklı sektör dinamiği dikkate alınmalıdır. Giyim tarafında mağazalaşma, marka yatırımları, stok yönetimi, sezonluk talep, döviz kuru ve üretim maliyetleri; enerji tarafında ise elektrik üretim gelirleri, yatırım maliyetleri, regülasyon ve finansman giderleri önemlidir. Bu nedenle Soho Giyim ve Enerji değerlendirilirken yalnızca hasılat ve brüt kâr rakamlarına bakmak yeterli olmaz; net kâr, faaliyet kârı, FAVÖK, nakit akışı, borçluluk, stok devir hızı ve enerji yatırımlarının katkısı birlikte incelenmelidir.",
+  "finansalYorum": "Finansal görünümde 2025 yılında hasılatın 2024'e göre arttığı, esas faaliyet kârında ise daha belirgin bir yükseliş yaşandığı görülüyor. Buna karşılık dönem kârının 2025 yılında 2024'e göre gerilemesi, finansman giderleri, vergi etkisi, kur farkı, tek seferlik kalemler veya operasyon dışı giderler açısından ayrıca incelenmelidir. 2026/1Ç verileri üç aylık dönemi kapsadığı için tam yıl verileriyle doğrudan karşılaştırılmamalıdır. Şirket değerlendirilirken hasılat, esas faaliyet kârı ve dönem kârı birlikte ele alınmalı; mağazalaşma, kreasyon ve markalaşma yatırımlarının büyüme üzerindeki etkisi sonraki dönemlerde izlenmelidir.",
   "oneCikanlar": [
     {
       "title": "Talep Tarihi",
       "value": "30 Haziran / 1 Temmuz",
-      "desc": "Talep toplama salı ve çarşamba günleri yapılacaktır."
+      "desc": "Talep toplama salı ve çarşamba günleri 10.30-13.00 saatleri arasında yapılacaktır."
     },
     {
       "title": "Halka Arz Fiyatı",
       "value": "15,00 TL",
-      "desc": "1 TL nominal değerli paylar 15,00 TL sabit fiyatla satışa sunulacaktır."
+      "desc": "Halka arz fiyatı 15,00 TL, iskonto oranı %37 olarak açıklanmıştır."
     },
     {
       "title": "Dağıtım Şekli",
@@ -89,26 +145,25 @@ const veri: HalkaArzVeri = {
     {
       "title": "Katılım Endeksi",
       "value": "Uygun",
-      "desc": "Katılım endeksine uygundur."
+      "desc": "BIST Katılım Endeksine uygundur."
     }
   ],
   "tahsisat": [],
   "tahsisatNotlari": [
-    "Kaynak dosyada tahsisat grubu bulunmadığı belirtilmiştir.",
-    "Talep toplama 30 Haziran / 1 Temmuz 2026 tarihlerinde, salı-çarşamba günleri yapılacaktır.",
     "Dağıtım şekli tamamı eşit dağıtım olarak açıklanmıştır.",
-    "Katılım endeksine uygundur.",
-    "T1-T2 bakiye kullanımına uygundur.",
-    "Dağıtılacak pay miktarının ilerleyen aşamalarda tamamlanacağı belirtilmiştir."
+    "Talep toplama 30 Haziran / 1 Temmuz 2026 tarihlerinde, salı-çarşamba günleri 10.30-13.00 saatleri arasında yapılacaktır.",
+    "BIST Katılım Endeksine uygundur.",
+    "Toplam dağıtılacak pay 100.000.000 lot olarak açıklanmıştır.",
+    "Konsorsiyum bilgisi tüm banka ve aracı kurumlar olarak belirtilmiştir."
   ],
   "taahhutOzeti": {
-    "fiyatIstikrari": "30 gün. Brüt halka arz gelirinin %20'si.",
-    "satmamaTaahhudu": "1 yıl ihraççı, 1 yıl ortaklar.",
-    "halkaAciklik": "%32,60."
+    "fiyatIstikrari": "Brüt halka arz gelirinin %10'u ile 30 gün boyunca fiyat istikrarı sağlayıcı işlemler planlanmaktadır.",
+    "satmamaTaahhudu": "1 yıl bedelli/bedelsiz sermaye artırımı yapılmayacağı, dolaşımdaki payların artmasına sebep olacak şekilde satışa ve halka arza konu edilmeyeceği, şirket ortaklarının 1 yıl boyunca halka arz fiyatının altında satış yapmayacağı taahhüt edilmiştir.",
+    "halkaAciklik": "%32,6."
   },
-  "sirketHakkinda": "Soho Giyim ve Enerji A.Ş., erkek lüks giyim üretimi ve yenilenebilir enerji alanlarında faaliyet gösteren, Derlüks Yatırım Holding A.Ş. bağlı ortaklığı bir anonim şirkettir. Ticari unvanı Soho Giyim ve Enerji Anonim Şirketi olarak paylaşılmıştır. Genel merkez adresi Kazlıçeşme Mahallesi, Demirhane Caddesi, Hacı Reşit Bey Sokak No:11, Zeytinburnu / İstanbul’dur. Şirketin özel şirket ve bağlı ortaklık yapısında faaliyet gösterdiği, çalışan sayısının yaklaşık 11 ile 50 kişi aralığında olduğu belirtilmiştir. Faaliyet alanları lüks erkek giyim ve yenilenebilir enerji olarak iki ana başlıkta toplanmaktadır. Erkek lüks hazır giyim tarafında özgün koleksiyonlar geliştirdiği ve tekstil üretimi yaptığı paylaşılmıştır. Şirketin 2021 yılından itibaren faaliyet alanını genişleterek temiz enerji yatırımları ve elektrik üretimi alanına adım attığı belirtilmiştir. Soho Giyim ve Enerji’nin performansı; marka konumlandırması, mağazalaşma, kreasyon yatırımları, sezonluk talep, stok yönetimi, finansman giderleri ve yenilenebilir enerji yatırımlarının gelir katkısıyla yakından ilişkilidir.",
-  "eksikBilgiNotu": "Talep toplama tarihi ve tahsisat oranları gibi henüz kesinleşmeyen alanlar resmi duyurular geldikçe güncellenmelidir.",
-  "yasalUyari": "Bu sayfadaki bilgiler SPK onayı sonrası açıklanan ilk onaylı izahname verilerine göre genel bilgilendirme amacıyla hazırlanmıştır, yatırım tavsiyesi değildir.",
+  "sirketHakkinda": "Soho Giyim ve Enerji A.Ş., giyim ve enerji alanlarında faaliyet gösteren bir şirkettir. Halka arz verilerine göre şirketin fon kullanım planı kreasyon, mağazalaşma ve markalaşma yatırımları üzerine yoğunlaşmaktadır. Bu yapı, şirketin büyüme stratejisinde ürün geliştirme, satış ağı ve marka bilinirliği başlıklarının öne çıktığını göstermektedir. Şirketin finansal performansı değerlendirilirken hasılat, esas faaliyet kârı, dönem kârı, özkaynak yapısı, kısa vadeli yükümlülükler ve halka arz sonrası yatırımların katkısı birlikte izlenmelidir.",
+  "eksikBilgiNotu": "Bu sayfadaki bilgiler paylaşılan halka arz bilgi tablosundaki veriler esas alınarak güncellenmiştir.",
+  "yasalUyari": "Bu sayfadaki bilgiler SPK onayı sonrası açıklanan onaylı izahname/halka arz bilgi tablosu verilerine göre genel bilgilendirme amacıyla hazırlanmıştır, yatırım tavsiyesi değildir.",
   "bistKodu": "SOHOE",
   "sermayeBilgileri": [
     {
@@ -125,7 +180,7 @@ const veri: HalkaArzVeri = {
     },
     {
       "label": "Mevcut Pay Satışı",
-      "value": "-"
+      "value": "Yok"
     },
     {
       "label": "Ek Pay Satışı",
@@ -133,19 +188,24 @@ const veri: HalkaArzVeri = {
     },
     {
       "label": "Satış Fiyatı",
-      "value": "15,00 TL"
+      "value": "15,00 TL - %37 iskonto"
     },
     {
       "label": "Talep Toplama Tarihi",
-      "value": "30 Haziran / 1 Temmuz 2026"
+      "value": "30 Haziran / 1 Temmuz 2026 (10.30-13.00)"
     },
     {
       "label": "Katılım Endeksi",
       "value": "Uygun"
+    },
+    {
+      "label": "Halka Arz Büyüklüğü",
+      "value": "1.500.000.000 TL"
     }
   ],
   "satisYontemi": [
-    "Sabit fiyatla talep toplama"
+    "Sabit fiyatla talep toplama",
+    "Tamamı eşit dağıtım"
   ]
 };
 
