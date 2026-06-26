@@ -22,12 +22,12 @@ const veri: HalkaArzVeri = {
   },
   "baslikMeta": {
     "title": "Orzaks İlaç ve Kimya San. Tic. A.Ş. Halka Arz Detayları 2026 | Onaylı İzahname",
-    "description": "Orzaks İlaç ve Kimya San. Tic. A.Ş. onaylı izahname bilgileri, 69,00 TL halka arz fiyatı, 52.500.000 lot toplam halka arz payı, sermaye artırımı, ortak satışı, fon kullanım planı ve finansal görünüm."
+    "description": "Orzaks İlaç ve Kimya San. Tic. A.Ş. onaylı izahname bilgileri, 69,00 TL halka arz fiyatı, %20 iskonto oranı, 52.500.000 lot toplam pay, tahsisat, fon kullanımı ve finansal görünüm."
   },
   "ozet": {
-    "halkaArzTarihi": "29-30 Haziran / 1 Temmuz 2026",
-    "fiyatAralik": "69,00 TL",
-    "dagitimYontemi": "Bireysele Eşit Dağıtım",
+    "halkaArzTarihi": "29-30 Haziran / 1 Temmuz 2026 (09.00-17.00)",
+    "fiyatAralik": "69,00 TL - %20 İskonto",
+    "dagitimYontemi": "Bireysele Eşit (T1 ve T2 bakiye kullanılamaz)",
     "pay": "52.500.000 Lot",
     "araciKurum": "İnfo Yatırım Menkul Değerler A.Ş.",
     "pazar": "Yıldız Pazar",
@@ -41,45 +41,101 @@ const veri: HalkaArzVeri = {
     "Ortak Satışı: 21.000.000 Lot (Yunus Emre Alimoğlu)"
   ],
   "fonKullanim": [
-    "%40 Devam eden ve yeni yatırımların finansmanında",
+    "%50 Devam eden ve yeni yatırımların finansmanında",
     "%30 Finansal borç anapara ve faiz ödemelerinde",
-    "%30 İşletme sermayesi"
+    "%20 İşletme sermayesi"
   ],
-  "fonKullanimYorumu": "Orzaks İlaç ve Kimya halka arzında fon kullanım planı devam eden ve yeni yatırımların finansmanı, finansal borç anapara/faiz ödemeleri ve işletme sermayesi başlıklarına ayrılmıştır. Takviye edici gıda, vitamin, mineral, omega 3, probiyotik ve benzeri ürünlerde yatırım finansmanı; üretim kapasitesi, ürün geliştirme, kalite standartları, ambalajlama, laboratuvar süreçleri ve yeni ürün gruplarının pazara sunulması açısından önemlidir. Finansal borçların kapatılmasına ayrılan bölüm, finansman giderlerinin azaltılması ve bilanço yapısının güçlendirilmesi açısından takip edilmelidir. İşletme sermayesi ise hammadde tedariki, stok yönetimi, eczane kanalı, dağıtım ağı, ihracat, pazarlama faaliyetleri ve tahsilat döngüsü için kritik rol oynar. Halka arzda sermaye artırımıyla birlikte Yunus Emre Alimoğlu’na ait ortak satışı da bulunduğu için, şirket kasasına girecek kaynak ile ortak satışından doğacak tutar ayrı değerlendirilmelidir.",
+  "fonKullanimYorumu": "Orzaks İlaç ve Kimya halka arzında halka arz gelirinin %50’lik bölümü devam eden ve yeni yatırımların finansmanına, %30’luk bölümü finansal borç anapara ve faiz ödemelerine, %20’lik bölümü ise işletme sermayesinin güçlendirilmesine ayrılmıştır. Yatırım finansmanı; üretim kapasitesi, ürün geliştirme, kalite standartları, ambalajlama, laboratuvar süreçleri ve yeni ürün gruplarının pazara sunulması açısından önemlidir. Finansal borçlara ayrılan pay, finansman giderlerinin yönetilmesi ve bilanço yapısının desteklenmesi bakımından takip edilmelidir. İşletme sermayesi tarafı ise hammadde tedariki, stok yönetimi, eczane kanalı, dağıtım ağı, ihracat, pazarlama faaliyetleri ve tahsilat döngüsü için kritik rol oynar. Halka arzda 31.500.000 lot sermaye artırımı ve 21.000.000 lot ortak satışı bulunduğu için, şirket kasasına girecek kaynak ile ortak satışından doğacak tutar ayrı değerlendirilmelidir.",
   "finansalDonemler": [
-    "2024/3",
-    "2023",
-    "2022"
+    "2024",
+    "2025",
+    "2026/1Ç"
   ],
   "finansalVeriler": [
     {
-      "kalem": "Hasılat",
+      "kalem": "Dönen Varlıklar",
       "donemler": {
-        "2022": "3,1 Milyar TL",
-        "2023": "4,3 Milyar TL",
-        "2024/3": "774,4 Milyon TL"
+        "2024": "4,5 Milyar TL",
+        "2025": "7,6 Milyar TL",
+        "2026/1Ç": "6,5 Milyar TL"
       }
     },
     {
-      "kalem": "Brüt Kâr",
+      "kalem": "Duran Varlıklar",
       "donemler": {
-        "2022": "1,5 Milyar TL",
-        "2023": "2,0 Milyar TL",
-        "2024/3": "534,1 Milyon TL"
+        "2024": "923 Milyon TL",
+        "2025": "1,1 Milyar TL",
+        "2026/1Ç": "1,3 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Toplam Varlıklar",
+      "donemler": {
+        "2024": "5,5 Milyar TL",
+        "2025": "8,8 Milyar TL",
+        "2026/1Ç": "9,8 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Kısa Vadeli Yükümlülükler",
+      "donemler": {
+        "2024": "2,4 Milyar TL",
+        "2025": "4,2 Milyar TL",
+        "2026/1Ç": "5,2 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Uzun Vadeli Yükümlülükler",
+      "donemler": {
+        "2024": "217 Milyon TL",
+        "2025": "693 Milyon TL",
+        "2026/1Ç": "1,2 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Özkaynaklar",
+      "donemler": {
+        "2024": "2,8 Milyar TL",
+        "2025": "3,3 Milyar TL",
+        "2026/1Ç": "3,3 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Hasılat",
+      "donemler": {
+        "2024": "5,7 Milyar TL",
+        "2025": "7,3 Milyar TL",
+        "2026/1Ç": "2,6 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Esas Faaliyet Kârı",
+      "donemler": {
+        "2024": "2,0 Milyar TL",
+        "2025": "2,4 Milyar TL",
+        "2026/1Ç": "0,8 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Net Dönem Kârı",
+      "donemler": {
+        "2024": "725 Milyon TL",
+        "2025": "1,0 Milyar TL",
+        "2026/1Ç": "348 Milyon TL"
       }
     }
   ],
-  "finansalYorum": "Finansal görünümde 2023 yılında hasılat ve brüt kârın 2022’ye göre belirgin şekilde arttığı görülüyor. Bu tablo, ürün talebi, marka gücü, eczane kanalı yaygınlığı, ürün karması ve fiyatlama tarafında güçlü bir büyümeye işaret edebilir. 2024/3 verileri ise üç aylık dönemi kapsadığı için 2023 tam yıl verileriyle doğrudan karşılaştırılmamalıdır. Takviye edici gıda ve ilaç kimya sektöründe finansal sonuçlar; hammadde maliyetleri, kur hareketleri, ruhsatlandırma ve regülasyon süreçleri, eczane dağıtım kanalı, marka bilinirliği, ürün çeşitliliği, ihracat ve pazarlama giderleriyle yakından ilişkilidir. Bu nedenle Orzaks değerlendirilirken yalnızca hasılat ve brüt kâr rakamlarına bakmak yeterli olmaz; net kâr, faaliyet kârı, FAVÖK, nakit akışı, borçluluk, stok yönetimi, Ar-Ge gücü ve marka portföyü birlikte incelenmelidir.",
+  "finansalYorum": "Finansal görünümde 2024, 2025 ve 2026 birinci çeyrek verileri birlikte değerlendirildiğinde Orzaks İlaç ve Kimya’nın varlık büyüklüğünde artış eğilimi öne çıkmaktadır. Toplam varlıklar 2024 yılında 5,5 milyar TL iken 2025 yılında 8,8 milyar TL’ye, 2026 birinci çeyreğinde ise 9,8 milyar TL’ye ulaşmıştır. Aynı dönemde kısa ve uzun vadeli yükümlülüklerdeki artış, şirketin borçluluk ve finansman yapısının yakından izlenmesi gerektiğini gösterir. Gelir tablosu tarafında hasılat 2024’te 5,7 milyar TL, 2025’te 7,3 milyar TL, 2026 birinci çeyreğinde 2,6 milyar TL olarak açıklanmıştır. Esas faaliyet kârı ve net dönem kârı pozitif seyrini korurken, 2026 birinci çeyrek verilerinin yalnızca ara dönemi kapsadığı unutulmamalıdır. Bu nedenle değerlendirme yapılırken büyüme, kârlılık, borçluluk, özkaynak yapısı, nakit akışı ve sektör dinamikleri birlikte takip edilmelidir.",
   "oneCikanlar": [
     {
       "title": "Talep Tarihi",
       "value": "29-30 Haziran / 1 Temmuz",
-      "desc": "Talep toplama pazartesi, salı ve çarşamba günleri yapılacaktır."
+      "desc": "Talep toplama pazartesi, salı ve çarşamba günleri 09.00-17.00 saatleri arasında yapılacaktır."
     },
     {
       "title": "Halka Arz Fiyatı",
-      "value": "69,00 TL",
-      "desc": "1 TL nominal değerli paylar 69,00 TL sabit fiyatla satışa sunulacaktır."
+      "value": "69,00 TL - %20 İskonto",
+      "desc": "1 TL nominal değerli paylar 69,00 TL fiyat ve %20 iskonto oranıyla satışa sunulacaktır."
     },
     {
       "title": "Bireysel Tahsisat",
@@ -115,14 +171,14 @@ const veri: HalkaArzVeri = {
     }
   ],
   "tahsisatNotlari": [
-    "Talep toplama tarihleri 29-30 Haziran ve 1 Temmuz 2026 olarak açıklanmıştır.",
+    "Talep toplama tarihleri 29-30 Haziran ve 1 Temmuz 2026 olarak açıklanmıştır. Talep toplama saatleri 09.00-17.00 aralığıdır.",
     "Yurt içi bireysel yatırımcı ve grup çalışanları için eşit dağıtım uygulanacaktır.",
     "ORZAX halka arzı katılım endeksine uygun değildir.",
     "T1-T2 bakiye kullanımına uygun değildir."
   ],
   "taahhutOzeti": {
-    "fiyatIstikrari": "Planlanmamaktadır.",
-    "satmamaTaahhudu": "1 yıl ihraççı, 1 yıl ortaklar.",
+    "fiyatIstikrari": "İşlem görmeye başladığı gün dahil olmak üzere 5 işlem günü süreyle günlük 2.625.000 lot paydan toplam 13.125.000 lot pay için alım emri taahhüdü bulunmaktadır.",
+    "satmamaTaahhudu": "1 yıl boyunca bedelli ve bedelsiz sermaye artırımı yapılmayacağı, dolaşımdaki payların artmasına sebep olacak satış veya halka arz yapılmayacağı, şirket ortakları tarafından 1 yıl boyunca halka arz fiyatının altında satış yapılmayacağı ve pay satılmayacağı taahhüt edilmiştir.",
     "halkaAciklik": "%15,51."
   },
   "sirketHakkinda": "Orzaks İlaç ve Kimya San. Tic. A.Ş., 2004 yılında eczacı, hekim ve yatırımcıların ortaklığıyla kurulmuş, Türkiye’de takviye edici gıda ve ilaç alanında faaliyet gösteren yerli firmalardan biridir. Şirketin özellikle eczanelerde yaygın olarak satılan Ocean markalı balık yağları, vitaminler ve mineraller ile tanındığı paylaşılmıştır. Kurucular arasında Selman Alimoğlu ve Yunus Emre Alimoğlu’nun yer aldığı belirtilmiştir. Mersis numarası 0648-0595-4660-0014 olarak paylaşılmıştır. Ürün grupları arasında omega 3 balık yağları, vitaminler, mineraller, kolajen, probiyotikler ve çocuklara özel takviyeler yer almaktadır. Genel müdürlük adresi Esentepe Mahallesi, Büyükdere Caddesi No:171, Metrocity İş Merkezi A Blok Kat:1, Şişli / İstanbul’dur. Üretim tesisi adresi Akçaburgaz Mahallesi 153. Sokak No:27A, Esenyurt / İstanbul olarak belirtilmiştir. Telefon numarası 0212 447 47 37’dir. Takviye edici gıda ve ilaç kimya sektöründe şirket performansı; ürün portföyü, marka bilinirliği, eczane kanalı, kalite standartları, Ar-Ge, regülasyonlara uyum, hammadde maliyetleri ve ihracat potansiyeliyle yakından ilişkilidir.",
@@ -152,11 +208,11 @@ const veri: HalkaArzVeri = {
     },
     {
       "label": "Satış Fiyatı",
-      "value": "69,00 TL"
+      "value": "69,00 TL - %20 İskonto"
     },
     {
       "label": "Talep Toplama Tarihi",
-      "value": "29-30 Haziran / 1 Temmuz 2026"
+      "value": "29-30 Haziran / 1 Temmuz 2026 (09.00-17.00)"
     },
     {
       "label": "Katılım Endeksi",
@@ -164,7 +220,8 @@ const veri: HalkaArzVeri = {
     }
   ],
   "satisYontemi": [
-    "Sabit fiyatla talep toplama"
+    "Sabit fiyatla talep toplama",
+    "Bireysel yatırımcılar için T1 ve T2 bakiye kullanılamaz"
   ]
 };
 

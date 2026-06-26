@@ -22,14 +22,14 @@ const veri: HalkaArzVeri = {
   },
   "baslikMeta": {
     "title": "İsvea Seramik ve Banyo Ürünleri Sanayi A.Ş. Halka Arz Detayları 2026 | Onaylı İzahname",
-    "description": "İsvea Seramik ve Banyo Ürünleri Sanayi A.Ş. onaylı izahname bilgileri, 20,90 TL halka arz fiyatı, 67.000.000 lot toplam halka arz payı, sermaye artırımı, ortak satışı, fon kullanım planı ve finansal görünüm."
+    "description": "İsvea Seramik ve Banyo Ürünleri Sanayi A.Ş. onaylı izahname bilgileri, 20,90 TL halka arz fiyatı, %27,03 iskonto oranı, 67.000.000 lot toplam pay, 1.400.300.000 TL arz büyüklüğü ve finansal görünüm."
   },
   "ozet": {
     "halkaArzTarihi": "1-2-3 Temmuz 2026",
-    "fiyatAralik": "20,90 TL",
+    "fiyatAralik": "20,90 TL - %27,03 İskonto",
     "dagitimYontemi": "Bireysele Eşit Dağıtım",
     "pay": "67.000.000 Lot",
-    "araciKurum": "Halk Yatırım Menkul Değerler A.Ş. / Ahlatcı Yatırım Menkul Değerler A.Ş.",
+    "araciKurum": "Halk Yatırım & Ahlatcı Yatırım",
     "pazar": "Yıldız Pazar",
     "bistKodu": "ISVEA",
     "katilimEndeksi": "Katılım Endeksine Uygun Değil"
@@ -41,37 +41,93 @@ const veri: HalkaArzVeri = {
     "Ortak Satışı: 7.000.000 Lot"
   ],
   "fonKullanim": [
-    "%10-15 Öztüketime yönelik yenilenebilir enerji yatırımları",
-    "%20-30 Makine ve ekipman yatırımları",
-    "%10-15 Kiralama yoluyla elde edilen makine ve teçhizatların satın alma yatırımları",
+    "%20-30 Sürdürülebilirlik ilkeleri çerçevesinde makine ve ekipman yatırımları",
     "%15-25 Finansal borçluluğun azaltılması",
-    "%15-25 İşletme sermayesi"
+    "%15-25 Büyümenin finansmanı / işletme sermayesi",
+    "%10-15 Kiralama yoluyla elde edilen makine ve teçhizatların satın alma yatırımları",
+    "%10-15 Öztüketime yönelik yenilenebilir enerji yatırımları"
   ],
-  "fonKullanimYorumu": "İsvea Seramik halka arzında arzın tamamı sermaye artırımı yoluyla planlandığı için halka arzdan elde edilecek kaynak doğrudan şirket kasasına girecektir. Fon kullanımında üretim altyapısını güçlendirmeye yönelik makine-ekipman yatırımları, kiralama yoluyla kullanılan makine ve teçhizatların satın alınması, yenilenebilir enerji yatırımları, finansal borçluluğun azaltılması ve işletme sermayesi başlıkları öne çıkmaktadır. Vitrifiye seramik ve banyo ürünleri üretiminde makine parkı, enerji maliyetleri, kapasite kullanımı ve üretim verimliliği kârlılık üzerinde belirleyici olabilir. Finansal borçların azaltılması bilanço üzerindeki faiz yükünü hafifletebilirken, işletme sermayesi hammadde, stok, ihracat, üretim sürekliliği ve tahsilat döngüsünün finansmanı açısından önemlidir.",
+  "fonKullanimYorumu": "İsvea Seramik halka arzında kaynak kullanım planı üretim altyapısını güçlendirme, borçluluğu azaltma ve büyümeyi finanse etme başlıklarında toplanmaktadır. Fonun en büyük bölümü sürdürülebilirlik ilkeleri çerçevesinde makine ve ekipman yatırımlarına ayrılırken, finansal borçların azaltılması bilanço üzerindeki faiz yükünü hafifletebilir. İşletme sermayesi şirketin hammadde, stok, üretim sürekliliği, ihracat ve tahsilat döngüsü için önem taşır. Kiralama yoluyla kullanılan makine ve teçhizatların satın alınması ile öztüketime yönelik yenilenebilir enerji yatırımları ise üretim maliyetleri ve verimlilik tarafında takip edilmesi gereken başlıklardır. Halka arzda 60.000.000 lot sermaye artırımı ve 7.000.000 lot ortak satışı bulunduğu için şirket kasasına girecek kaynak ile ortak satışından doğacak tutar ayrı değerlendirilmelidir.",
   "finansalDonemler": [
-    "2024/6",
-    "2023",
-    "2022"
+    "2024",
+    "2025",
+    "2026/1Ç"
   ],
   "finansalVeriler": [
     {
-      "kalem": "Hasılat",
+      "kalem": "Dönen Varlıklar",
       "donemler": {
-        "2022": "1,6 Milyar TL",
-        "2023": "2,0 Milyar TL",
-        "2024/6": "869,7 Milyon TL"
+        "2024": "4,3 Milyar TL",
+        "2025": "3,3 Milyar TL",
+        "2026/1Ç": "3,2 Milyar TL"
       }
     },
     {
-      "kalem": "Brüt Kâr",
+      "kalem": "Duran Varlıklar",
       "donemler": {
-        "2022": "(-)20,6 Milyon TL",
-        "2023": "446,5 Milyon TL",
-        "2024/6": "252,4 Milyon TL"
+        "2024": "1,1 Milyar TL",
+        "2025": "1,2 Milyar TL",
+        "2026/1Ç": "1,2 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Toplam Varlıklar",
+      "donemler": {
+        "2024": "4,1 Milyar TL",
+        "2025": "4,5 Milyar TL",
+        "2026/1Ç": "4,4 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Kısa Vadeli Yükümlülükler",
+      "donemler": {
+        "2024": "1,9 Milyar TL",
+        "2025": "2,4 Milyar TL",
+        "2026/1Ç": "2,3 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Uzun Vadeli Yükümlülükler",
+      "donemler": {
+        "2024": "897 Milyon TL",
+        "2025": "669 Milyon TL",
+        "2026/1Ç": "603 Milyon TL"
+      }
+    },
+    {
+      "kalem": "Özkaynaklar",
+      "donemler": {
+        "2024": "1,3 Milyar TL",
+        "2025": "1,4 Milyar TL",
+        "2026/1Ç": "1,4 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Hasılat",
+      "donemler": {
+        "2024": "2,7 Milyar TL",
+        "2025": "2,3 Milyar TL",
+        "2026/1Ç": "584 Milyon TL"
+      }
+    },
+    {
+      "kalem": "Esas Faaliyet Kârı",
+      "donemler": {
+        "2024": "642 Milyon TL",
+        "2025": "676 Milyon TL",
+        "2026/1Ç": "140 Milyon TL"
+      }
+    },
+    {
+      "kalem": "Net Dönem Kârı",
+      "donemler": {
+        "2024": "93 Milyon TL",
+        "2025": "79 Milyon TL",
+        "2026/1Ç": "32 Milyon TL"
       }
     }
   ],
-  "finansalYorum": "Finansal görünümde 2023 yılında hasılatın 2022’ye göre arttığı ve brüt kâr tarafında belirgin toparlanma yaşandığı görülüyor. 2022 yılında brüt kârın negatif olması, o dönem maliyet baskısı, üretim verimliliği veya fiyatlama tarafında dikkatle incelenmesi gereken bir tabloya işaret ediyor. 2024/6 verileri altı aylık dönemi kapsadığı için 2023 tam yıl verileriyle doğrudan karşılaştırılmamalıdır. Seramik ve banyo ürünleri sektöründe finansal sonuçlar; enerji maliyetleri, doğal gaz/elektrik giderleri, hammadde fiyatları, kapasite kullanımı, ihracat pazarları, kur hareketleri, üretim fireleri ve finansman giderleriyle yakından ilişkilidir. Bu nedenle İsvea Seramik değerlendirilirken yalnızca hasılat ve brüt kâr rakamlarına bakmak yeterli olmaz; net kâr, faaliyet kârı, FAVÖK, nakit akışı, borçluluk, ihracat performansı, enerji yatırımlarının maliyet etkisi ve makine-ekipman yatırımlarının verimliliğe katkısı birlikte incelenmelidir.",
+  "finansalYorum": "Finansal görünümde 2024, 2025 ve 2026 birinci çeyrek verileri birlikte incelendiğinde şirketin varlık yapısı, borçluluk seviyesi ve kârlılık eğilimi ayrı ayrı takip edilmelidir. Hasılat 2025 yılında 2024’e göre gerilerken, esas faaliyet kârının artması operasyonel verimlilik ve maliyet yönetimi açısından dikkat çekmektedir. Net dönem kârı ise 2024’te 93 milyon TL, 2025’te 79 milyon TL ve 2026 birinci çeyrekte 32 milyon TL olarak açıklanmıştır. Seramik ve banyo ürünleri sektöründe enerji maliyetleri, hammadde fiyatları, kapasite kullanımı, ihracat pazarları, finansman giderleri ve kur hareketleri sonuçlar üzerinde belirleyici olabilir. Bu nedenle İsvea Seramik değerlendirilirken yalnızca halka arz büyüklüğü veya hasılat değil; özkaynak yapısı, kısa ve uzun vadeli yükümlülükler, faaliyet kârı, net kâr ve planlanan yatırımlar birlikte okunmalıdır.",
   "oneCikanlar": [
     {
       "title": "Talep Tarihi",
@@ -81,7 +137,7 @@ const veri: HalkaArzVeri = {
     {
       "title": "Halka Arz Fiyatı",
       "value": "20,90 TL",
-      "desc": "1 TL nominal değerli paylar 20,90 TL sabit fiyatla satışa sunulacaktır."
+      "desc": "1 TL nominal değerli paylar 20,90 TL sabit fiyatla, %27,03 iskonto oranıyla satışa sunulacaktır."
     },
     {
       "title": "Bireysel Tahsisat",
@@ -114,8 +170,8 @@ const veri: HalkaArzVeri = {
     "T1-T2 bakiye kullanımına uygun değildir."
   ],
   "taahhutOzeti": {
-    "fiyatIstikrari": "30 gün. Halk Yatırım Menkul Değerler A.Ş. bilgisi yer almaktadır.",
-    "satmamaTaahhudu": "1 yıl ihraççı, 1 yıl ortaklar.",
+    "fiyatIstikrari": "Brüt halka arz gelirinin %20’si ile 30 gün boyunca fiyat istikrarı sağlayıcı işlemler planlanmaktadır.",
+    "satmamaTaahhudu": "1 yıl boyunca bedelli ve bedelsiz sermaye artırımı yapılmayacağı, dolaşımdaki payların artmasına sebep olacak şekilde satışa ve halka arza konu edilmeyeceği; şirket ortakları tarafından 1 yıl boyunca halka arz fiyatının altında satış yapılmayacağı ve pay satılmayacağı taahhüt edilmiştir.",
     "halkaAciklik": "%23,93."
   },
   "sirketHakkinda": "İsvea Seramik ve Banyo Ürünleri Sanayi A.Ş., 1962 yılında İtalya’da Angelucci ailesi tarafından kurulan ve 2013 yılında Ece Holding bünyesine katılan, banyo ve vitrifiye seramik ürünleri alanında faaliyet gösteren bir üreticidir. Şirket; tasarım odaklı İtalyan banyo kültürü anlayışını Türkiye’deki üretim gücüyle birleştirerek küresel ölçekte hizmet vermektedir. Ana merkez ve fabrika lokasyonu Çorum Organize Sanayi Bölgesi olarak belirtilmiştir. Şirketin vitrifiye seramik banyo gereçleri ve banyo mobilyaları sektöründe faaliyet gösterdiği, dünyanın büyük vitrifiye üreticilerinden biri konumunda olduğu ve 63 ülkeye ihracat yaptığı paylaşılmıştır. Ürün grupları arasında klozetler, rezervuarlar, lavabolar, pisuvarlar, bide grupları, gömme rezervuarlar, akrilik duş tekneleri, eviyeler, klozet kapakları ve banyo dolapları yer almaktadır. Fabrika adresi Pınarçayosb Mevkii, Organize Sanayi 6. Cadde No:1-7/2 Kat:2 Merkez / Çorum’dur. Çağrı merkezi 444 9 323, e-posta adresi info@isveabagno.it olarak belirtilmiştir. Seramik sektöründe şirket performansı; ihracat pazarı çeşitliliği, enerji maliyetleri, üretim kapasitesi, marka değeri, tasarım gücü, hammadde maliyetleri ve finansal borçlulukla yakından ilişkilidir.",
@@ -145,7 +201,11 @@ const veri: HalkaArzVeri = {
     },
     {
       "label": "Satış Fiyatı",
-      "value": "20,90 TL"
+      "value": "20,90 TL - %27,03 İskonto"
+    },
+    {
+      "label": "Arz Büyüklüğü",
+      "value": "1.400.300.000 TL"
     },
     {
       "label": "Talep Toplama Tarihi",
@@ -157,7 +217,9 @@ const veri: HalkaArzVeri = {
     }
   ],
   "satisYontemi": [
-    "Sabit fiyatla talep toplama"
+    "Sabit fiyatla talep toplama",
+    "Bireysele eşit dağıtım",
+    "T1 ve T2 bakiye kullanılamaz"
   ]
 };
 
