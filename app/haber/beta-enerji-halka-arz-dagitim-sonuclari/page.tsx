@@ -11,15 +11,15 @@ export const metadata: Metadata = {
     "Beta Enerji halka arzında dağıtım sonuçları açıklandı. BETAE halka arzına 1.124.953 yatırımcı katıldı, en fazla 28 lot dağıtım gerçekleşti.",
   alternates: {
     canonical:
-      "https://www.hocaileborsa.com/haber/beta-enerji-halka-arz-dagitim-sonuclari-aciklandi",
+      "https://www.hocaileborsa.com/haber/beta-enerji-halka-arz-dagitim-sonuclari",
   },
   openGraph: {
     type: "article",
-    images: [{ url: "https://www.hocaileborsa.com/beta-enerji-halka-arz-dagitim-sonuclari-aciklandi.webp" }],
+    images: [{ url: "https://www.hocaileborsa.com/beta-enerji-halka-arz-dagitim-sonuclari.webp" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://www.hocaileborsa.com/beta-enerji-halka-arz-dagitim-sonuclari-aciklandi.webp"],
+    images: ["https://www.hocaileborsa.com/beta-enerji-halka-arz-dagitim-sonuclari.webp"],
   },
 };
 
@@ -144,7 +144,7 @@ const jsonLd = {
     "Beta Enerji halka arzında dağıtım sonuçları açıklandı. BETAE halka arzına 1.124.953 yatırımcı katıldı, en fazla 28 lot dağıtım gerçekleşti.",
   datePublished: "2026-06-26T13:30:00+03:00",
   dateModified: "2026-06-26T13:30:00+03:00",
-  url: "https://www.hocaileborsa.com/haber/beta-enerji-halka-arz-dagitim-sonuclari-aciklandi",
+  url: "https://www.hocaileborsa.com/haber/beta-enerji-halka-arz-dagitim-sonuclari",
   author: {
     "@type": "Person",
     "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
@@ -161,7 +161,7 @@ const jsonLd = {
       url: "https://www.hocaileborsa.com/icon-512.png",
     },
   },
-  image: "https://www.hocaileborsa.com/beta-enerji-halka-arz-dagitim-sonuclari-aciklandi.webp",
+  image: "https://www.hocaileborsa.com/beta-enerji-halka-arz-dagitim-sonuclari.webp",
   inLanguage: "tr",
 };
 
@@ -176,7 +176,7 @@ export default function HaberPage() {
         <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_16px_rgba(15,23,42,0.07)]">
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
-              src="/beta-enerji-halka-arz-dagitim-sonuclari-aciklandi.webp"
+              src="/beta-enerji-halka-arz-dagitim-sonuclari.webp"
               alt="Beta Enerji Halka Arz Dağıtım Sonuçları Açıklandı"
               fill
               unoptimized
@@ -349,7 +349,7 @@ export default function HaberPage() {
               </div>
 
               <HaberIlgiliBolumler
-                slug="beta-enerji-halka-arz-dagitim-sonuclari-aciklandi"
+                slug="beta-enerji-halka-arz-dagitim-sonuclari"
                 baslik="Beta Enerji Halka Arz Dağıtım Sonuçları Açıklandı"
               />
 
@@ -358,7 +358,7 @@ export default function HaberPage() {
               </div>
             </div>
           </div>
-          <HaberAltKisim href="/haber/beta-enerji-halka-arz-dagitim-sonuclari-aciklandi" />
+          <HaberAltKisim href="/haber/beta-enerji-halka-arz-dagitim-sonuclari" />
 
           <AuthorBox />
         </article>
