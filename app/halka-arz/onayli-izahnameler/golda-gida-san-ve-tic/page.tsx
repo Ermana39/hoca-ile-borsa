@@ -10,7 +10,7 @@ import {
 
 const veri: HalkaArzVeri = {
   "slug": "golda-gida-san-ve-tic",
-  "sirketAdi": "Golda Gıda San. ve Tic. A.Ş.",
+  "sirketAdi": "Golda Gıda Sanayi ve Ticaret A.Ş.",
   "seo": {
     "canonical": "https://www.hocaileborsa.com/halka-arz/onayli-izahnameler/golda-gida-san-ve-tic",
     "robots": {
@@ -21,93 +21,151 @@ const veri: HalkaArzVeri = {
     "contentStatus": "onayli"
   },
   "baslikMeta": {
-    "title": "Golda Gıda San. ve Tic. A.Ş. Halka Arz Detayları 2026 | Onaylı İzahname",
-    "description": "Golda Gıda San. ve Tic. A.Ş. onaylı izahname bilgileri, 9,20 TL halka arz fiyatı, 87.499.998 lot toplam halka arz payı, sermaye artırımı, ortak satışı, fon kullanım planı ve finansal görünüm."
+    "title": "Golda Gıda Sanayi ve Ticaret A.Ş. Halka Arz Detayları 2026 | Onaylı İzahname",
+    "description": "Golda Gıda Sanayi ve Ticaret A.Ş. onaylı izahname bilgileri, 9,20 TL halka arz fiyatı, 87.499.998 lot toplam halka arz payı, %35 halka açıklık, fon kullanım planı ve finansal görünüm."
   },
   "ozet": {
-    "halkaArzTarihi": "",
+    "halkaArzTarihi": "1-2 Temmuz 2026 (Çarşamba-Perşembe / 10.30-13.00)",
     "fiyatAralik": "9,20 TL",
-    "dagitimYontemi": "Eşit Dağıtım",
+    "dagitimYontemi": "Tamamı Eşit Dağıtım",
     "pay": "87.499.998 Lot",
-    "araciKurum": "Gedik Yatırım Menkul Değerler A.Ş. / Misyon Yatırım Bankası A.Ş.",
+    "araciKurum": "Gedik Yatırım Menkul Değerler A.Ş.",
     "pazar": "Yıldız Pazar",
-    "bistKodu": "GOLDA"
+    "bistKodu": "GOLDA",
+    "katilimEndeksi": "Katılım Endeksine Uygun"
   },
   "toplamPay": "87.499.998",
   "halkaAciklikOrani": "%35",
   "halkaArzSekli": [
     "Sermaye Artırımı: 50.000.000 Lot",
-    "Ortak Satışı: 37.499.998 Lot (Bera Holding A.Ş.)"
+    "Ortak Satışı: 37.499.998 Lot"
   ],
   "fonKullanim": [
     "%50-60 Kapasite artışı, modernizasyon",
-    "%40-50 İşletme sermayesi"
+    "%40-50 İşletme sermayesinin güçlendirilmesi"
   ],
   "satisYontemi": [
-    "Borsa'da satış",
-    "Sabit fiyatla talep toplama"
+    "Sabit fiyatla talep toplama",
+    "Tamamı eşit dağıtım"
   ],
-  "fonKullanimYorumu": "Golda Gıda halka arzında fon kullanım planının önemli bölümü kapasite artışı ve modernizasyon yatırımlarına ayrılmıştır. Un, irmik, makarna ve bakliyat üretimi yapan entegre gıda şirketlerinde kapasite, üretim verimliliği, enerji tüketimi, paketleme hattı, depolama gücü ve ihracat kabiliyeti doğrudan kârlılığı etkileyebilir. Modernizasyon yatırımları; üretim kalitesi, ürün çeşitliliği, maliyet kontrolü ve ölçek ekonomisi açısından takip edilmelidir. İşletme sermayesine ayrılan kaynak ise hammadde alımı, stok yönetimi, ihracat-tahsilat döngüsü, ambalaj maliyetleri ve dönemsel nakit ihtiyacı için önemlidir. Halka arzda sermaye artırımıyla birlikte Bera Holding A.Ş.’ye ait ortak satışı da bulunduğu için, şirket kasasına girecek kaynak ile ortak satışından doğacak tutar ayrı değerlendirilmelidir.",
+  "fonKullanimYorumu": "Golda Gıda halka arzında fon kullanım planı iki ana başlıkta toplanmaktadır. Kaynağın %50-60 aralığındaki bölümü kapasite artışı ve modernizasyon yatırımlarında değerlendirilecektir. Bu başlık; üretim hatlarının yenilenmesi, verimlilik artışı, kapasite kullanımı, ürün kalitesi, depolama ve paketleme süreçleri açısından önem taşır. Kaynağın %40-50 aralığındaki bölümü ise işletme sermayesinin güçlendirilmesine ayrılmıştır. Gıda üretiminde hammadde alımı, stok yönetimi, ambalaj giderleri, ihracat-tahsilat döngüsü ve dönemsel nakit ihtiyacı işletme sermayesi tarafını kritik hale getirir. Halka arzda sermaye artırımıyla birlikte ortak satışı da bulunduğu için, şirket kasasına girecek kaynak ile ortak satışından doğacak tutar ayrı değerlendirilmelidir.",
   "finansalDonemler": [
-    "2023",
-    "2022",
-    "2021"
+    "2024",
+    "2025",
+    "2026/3"
   ],
   "finansalVeriler": [
     {
-      "kalem": "Hasılat",
+      "kalem": "Dönen Varlıklar",
       "donemler": {
-        "2021": "1,5 Milyar TL",
-        "2022": "1,9 Milyar TL",
-        "2023": "1,6 Milyar TL"
+        "2024": "1,2 Milyar TL",
+        "2025": "1,3 Milyar TL",
+        "2026/3": "1,2 Milyar TL"
       }
     },
     {
-      "kalem": "Brüt Kâr",
+      "kalem": "Duran Varlıklar",
       "donemler": {
-        "2021": "173,5 Milyon TL",
-        "2022": "211,5 Milyon TL",
-        "2023": "235,5 Milyon TL"
+        "2024": "3,3 Milyar TL",
+        "2025": "3,8 Milyar TL",
+        "2026/3": "3,7 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Toplam Varlıklar",
+      "donemler": {
+        "2024": "4,6 Milyar TL",
+        "2025": "5,1 Milyar TL",
+        "2026/3": "4,9 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Kısa Vadeli Yükümlülükler",
+      "donemler": {
+        "2024": "458 Milyon TL",
+        "2025": "297 Milyon TL",
+        "2026/3": "239 Milyon TL"
+      }
+    },
+    {
+      "kalem": "Uzun Vadeli Yükümlülükler",
+      "donemler": {
+        "2024": "569 Milyon TL",
+        "2025": "743 Milyon TL",
+        "2026/3": "751 Milyon TL"
+      }
+    },
+    {
+      "kalem": "Özkaynaklar",
+      "donemler": {
+        "2024": "3,6 Milyar TL",
+        "2025": "4,0 Milyar TL",
+        "2026/3": "3,9 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Hasılat",
+      "donemler": {
+        "2024": "2,9 Milyar TL",
+        "2025": "2,5 Milyar TL",
+        "2026/3": "680 Milyon TL"
+      }
+    },
+    {
+      "kalem": "Esas Faaliyet Kârı",
+      "donemler": {
+        "2024": "120 Milyon TL",
+        "2025": "76 Milyon TL",
+        "2026/3": "33 Milyon TL"
+      }
+    },
+    {
+      "kalem": "Dönem Kârı / Zararı",
+      "donemler": {
+        "2024": "7 Milyon TL Kâr",
+        "2025": "19 Milyon TL Kâr",
+        "2026/3": "82 Milyon TL Zarar"
       }
     }
   ],
-  "finansalYorum": "Finansal görünümde 2023 yılında hasılatın 2022’ye göre gerilediği, buna karşılık brüt kârın artış eğilimini koruduğu görülüyor. Bu yapı, ürün karması, satış fiyatları, hammadde maliyetleri ve operasyonel verimlilik tarafında ayrıca incelenmesi gereken bir görünüm oluşturuyor. Gıda üretimi tarafında finansal sonuçlar; buğday ve bakliyat fiyatları, enerji maliyetleri, ambalaj giderleri, ihracat talebi, kur hareketleri, kapasite kullanımı ve stok yönetimiyle yakından ilişkilidir. Bu nedenle Golda Gıda değerlendirilirken yalnızca hasılat ve brüt kâr rakamlarına bakmak yeterli olmaz; net kâr, faaliyet kârı, FAVÖK, nakit akışı, borçluluk, kapasite kullanımı, ihracat payı ve modernizasyon yatırımlarının kârlılığa katkısı birlikte incelenmelidir.",
+  "finansalYorum": "Golda Gıda'nın finansal görünümünde 2025 yılında hasılatın 2024'e göre gerilediği, buna karşılık dönem kârının düşük bazdan artış gösterdiği görülüyor. Esas faaliyet kârının 120 milyon TL'den 76 milyon TL'ye düşmesi, operasyonel kârlılık tarafında baskı olduğuna işaret eder. 2026/3 döneminde ise şirketin 82 milyon TL zarar açıklaması dikkat çekicidir; bu veri üç aylık dönemi kapsadığı için yıllık sonuçlarla bire bir karşılaştırılmamalı, ancak kârlılığın sürdürülebilirliği açısından yakından izlenmelidir. Bilanço tarafında 2025'te özkaynakların 4,0 milyar TL seviyesinde olması olumlu görünürken, kısa vadeli yükümlülüklerin dönen varlıklara göre düşük kalması likidite tarafını desteklemektedir. Gıda üretimi tarafında şirket performansı; hammadde maliyetleri, enerji giderleri, kapasite kullanımı, stok yönetimi, ihracat pazarı, kur hareketleri ve modernizasyon yatırımlarının verimliliğe katkısıyla birlikte değerlendirilmelidir.",
   "oneCikanlar": [
+    {
+      "title": "Talep Tarihi",
+      "value": "1-2 Temmuz",
+      "desc": "Talep toplama çarşamba ve perşembe günleri 10.30-13.00 saatleri arasında yapılacaktır."
+    },
     {
       "title": "Halka Arz Fiyatı",
       "value": "9,20 TL",
-      "desc": "1 TL nominal değerli paylar 9,20 TL sabit fiyatla satışa sunulacaktır."
+      "desc": "1 TL nominal değerli paylar 9,20 TL sabit fiyatla satışa sunulacaktır. Halka arz iskontosu %37 olarak paylaşılmıştır."
     },
     {
       "title": "Toplam Pay",
       "value": "87.499.998 Lot",
-      "desc": "50.000.000 lot sermaye artırımı ve 37.499.998 lot ortak satışı."
+      "desc": "50.000.000 lot sermaye artırımı ve 37.499.998 lot ortak satışı bulunmaktadır."
     },
     {
-      "title": "Halka Açıklık",
-      "value": "%35",
-      "desc": "Yeni sermaye üzerinden halka açıklık oranı."
-    },
-    {
-      "title": "Satış Yöntemi",
-      "value": "Borsa'da Satış",
-      "desc": "Sabit fiyatla Borsa'da satış yöntemi uygulanacaktır."
+      "title": "Katılım Endeksi",
+      "value": "Uygun",
+      "desc": "Golda Gıda halka arzı katılım endeksine uygundur."
     }
   ],
   "tahsisat": [],
   "tahsisatNotlari": [
-    "Taslak yapıda tahsisat grubu bulunmadığı bilgisi yer almaktadır.",
-    "Tamamen eşit dağıtım bilgisi bulunmaktadır.",
-    "T1-T2 bakiye kullanımına uygundur."
+    "Talep toplama 1-2 Temmuz 2026 tarihlerinde, çarşamba-perşembe günleri yapılacaktır.",
+    "Dağıtım şekli tamamen eşit dağıtım olarak açıklanmıştır.",
+    "Katılım endeksine uygundur.",
+    "Halka arz büyüklüğü 804.999.982 TL olarak paylaşılmıştır."
   ],
   "taahhutOzeti": {
-    "fiyatIstikrari": "30 gün. Brüt halka arz gelirinin %20'si. Gedik Yatırım Menkul Değerler A.Ş. tarafından yürütülmesi planlanmaktadır.",
+    "fiyatIstikrari": "30 gün. Brüt halka arz gelirinin %20'si ile fiyat istikrarı sağlayıcı işlemler planlanmaktadır.",
     "satmamaTaahhudu": "1 yıl ihraççı, 1 yıl ortaklar.",
     "halkaAciklik": "%35."
   },
-  "sirketHakkinda": "Golda Gıda San. ve Tic. A.Ş., Bera Holding A.Ş. bünyesinde faaliyet gösteren, un, irmik, makarna ve bakliyat üretimi üzerine uzmanlaşmış büyük ölçekli bir gıda şirketidir. Şirketin resmi unvanı Golda Gıda Sanayi ve Ticaret Anonim Şirketi olarak paylaşılmıştır. Bera Holding’in şirkette %66 paya sahip olduğu belirtilmektedir. MERSİS numarası 0576 0072 2790’dır. Şirketin genel merkezi ve entegre üretim tesisleri Karaman’ın Kazımkarabekir ilçesinde yer almaktadır. Merkez fabrika adresi Eminettin Mahallesi, Sanayi Bölgesi Küme Evler No:1, Kazımkarabekir / Karaman’dır. Ana üretim alanları un, irmik, makarna ve bakliyat çeşitleridir. Bunun yanında bisküvi, gofret, hayvancılık ve çeşitli tarımsal gıda ürünlerinin imalatı ve pazarlaması gibi faaliyet alanları da paylaşılmıştır. Golda Gıda’nın entegre tesislerinde üretilen ürünlerin hem iç piyasaya sunulduğu hem de farklı ülkelere ihraç edildiği belirtilmektedir. Gıda üretimi sektöründe şirket performansı; hammadde fiyatları, kapasite kullanımı, ihracat pazarı, enerji maliyetleri, ürün karması, marka gücü, stok yönetimi ve işletme sermayesi ihtiyacıyla yakından ilişkilidir.",
-  "eksikBilgiNotu": "Talep toplama tarihi ve tahsisat oranları gibi henüz kesinleşmeyen alanlar resmi duyurular geldikçe güncellenmelidir.",
-  "yasalUyari": "Bu sayfadaki bilgiler SPK onayı sonrası açıklanan ilk onaylı izahname verilerine göre genel bilgilendirme amacıyla hazırlanmıştır, yatırım tavsiyesi değildir.",
+  "sirketHakkinda": "Golda Gıda Sanayi ve Ticaret A.Ş., Bera Holding A.Ş. bünyesinde faaliyet gösteren, un, irmik, makarna ve bakliyat üretimi üzerine uzmanlaşmış büyük ölçekli bir gıda şirketidir. Şirketin resmi unvanı Golda Gıda Sanayi ve Ticaret Anonim Şirketi olarak paylaşılmıştır. Bera Holding’in şirkette pay sahibi olduğu belirtilmektedir. Şirketin genel merkezi ve entegre üretim tesisleri Karaman’ın Kazımkarabekir ilçesinde yer almaktadır. Ana üretim alanları un, irmik, makarna ve bakliyat çeşitleridir. Bunun yanında farklı gıda ürünlerinin üretimi, pazarlaması ve ihracatı da şirketin faaliyet alanları içinde değerlendirilmektedir. Gıda üretimi sektöründe şirket performansı; hammadde fiyatları, kapasite kullanımı, ihracat pazarı, enerji maliyetleri, ürün karması, marka gücü, stok yönetimi ve işletme sermayesi ihtiyacıyla yakından ilişkilidir.",
+  "eksikBilgiNotu": "Sayfadaki veriler paylaşılan halka arz tablosundaki bilgilere göre güncellenmiştir. Resmi izahname/satış duyurusu verileriyle uyumsuzluk görülürse ilgili alanlar yeniden kontrol edilmelidir.",
+  "yasalUyari": "Bu sayfadaki bilgiler SPK onayı sonrası açıklanan onaylı izahname/satış duyurusu ve paylaşılan halka arz tablo verilerine göre genel bilgilendirme amacıyla hazırlanmıştır, yatırım tavsiyesi değildir.",
   "bistKodu": "GOLDA",
   "sermayeBilgileri": [
     {
@@ -133,9 +191,21 @@ const veri: HalkaArzVeri = {
     {
       "label": "Satış Fiyatı",
       "value": "9,20 TL"
+    },
+    {
+      "label": "Talep Toplama Tarihi",
+      "value": "1-2 Temmuz 2026"
+    },
+    {
+      "label": "Katılım Endeksi",
+      "value": "Uygun"
+    },
+    {
+      "label": "Halka Arz Büyüklüğü",
+      "value": "804.999.982 TL"
     }
   ]
-};
+}
 
 export const metadata: Metadata = {
   title: veri.baslikMeta.title,

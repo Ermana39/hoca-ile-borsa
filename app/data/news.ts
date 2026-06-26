@@ -21,6 +21,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1035,
+    title: "Beta Enerji Halka Arz Dağıtım Sonuçları Açıklandı",
+    href: "/haber/beta-enerji-halka-arz-dagitim-sonuclari",
+    image: "/beta-enerji-halka-arz-dagitim-sonuclari.webp",
+    alt: "Beta Enerji halka arz dağıtım sonuçları açıklandı",
+    publishedAt: "2026-06-26",
+    category: "halka-arz",
+    ilgiliHisseler: ["BETAE"],
+  },
+  {
     id: 1034,
     title: "Soho Giyim Halka Arz İzahnamesi Yayınlandı",
     href: "/haber/soho-giyim-halka-arz-izahnamesi-yayinlandi",
