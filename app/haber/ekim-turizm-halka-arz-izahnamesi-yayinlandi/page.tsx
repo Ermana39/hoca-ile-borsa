@@ -304,16 +304,7 @@ export default function HaberPage() {
           </div>
         </article>
 
-        <HaberAltKisim
-          oncekiYazi={{
-            href: "/haber/soho-giyim-halka-arz-izahnamesi-yayinlandi",
-            baslik: "Soho Giyim Halka Arz İzahnamesi Yayınlandı",
-          }}
-          sonrakiYazi={{
-            href: "/haber/beta-enerji-halka-arz-dagitim-sonuclari",
-            baslik: "Beta Enerji Halka Arz Dağıtım Sonuçları Açıklandı",
-          }}
-        />
+        <HaberAltKisim href="/haber/ekim-turizm-halka-arz-izahnamesi-yayinlandi" />
       </div>
     </main>
   );

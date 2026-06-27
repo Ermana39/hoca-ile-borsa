@@ -154,14 +154,12 @@ const veri: HalkaArzVeri = {
       "oran": "%70",
       "lot": "113.400.000 Lot",
       "dagitim": "Eşit Dağıtım",
-      "detay": "25.000 lot ve altı başvurular / 756.500 TL ve altı"
     },
     {
       "grup": "Yüksek Başvurulu",
       "oran": "%10",
       "lot": "16.200.000 Lot",
       "dagitim": "Oransal Dağıtım",
-      "detay": "25.001 lot ve üstü başvurular / 756.530 TL ve üstü"
     },
     {
       "grup": "Yurt İçi Kurumsal",
