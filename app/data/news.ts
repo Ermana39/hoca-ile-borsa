@@ -21,6 +21,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1045,
+    title: "Halka Arzlarda Katılım Endeksi: Hangi Şirketler Uygun?",
+    href: "/haber/halka-arzlarda-katilim-endeksi-uygun-olanlar",
+    image: "/halka-arz-katilim-endeksi-tablosu.webp",
+    alt: "Halka arzlarda katılım endeksine uygun olanlar ve olmayanlar",
+    publishedAt: "2026-06-27",
+    category: "halka-arz",
+    ilgiliHisseler: ["SOHOE", "GOLDA", "ISVEA", "ORZAX", "EKIM"],
+  },
+  {
     id: 1044,
     title: "5 Halka Arzın Talep Toplama Tarihleri Belli Oldu",
     href: "/haber/5-halka-arz-talep-toplama-tarihleri",
