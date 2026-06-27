@@ -21,6 +21,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1044,
+    title: "5 Halka Arzın Talep Toplama Tarihleri Belli Oldu",
+    href: "/haber/5-halka-arz-talep-toplama-tarihleri",
+    image: "/5-halka-arz-talep-toplama-takvimi.webp",
+    alt: "5 halka arz talep toplama takvimi",
+    publishedAt: "2026-06-27",
+    category: "halka-arz",
+    ilgiliHisseler: ["ORZAX", "SOHOE", "EKIM", "ISVEA", "GOLDA"],
+  },
+  {
     id: 1043,
     title: "Ekim Turizm Halka Arz İzahnamesi Yayınlandı",
     href: "/haber/ekim-turizm-halka-arz-izahnamesi-yayinlandi",
