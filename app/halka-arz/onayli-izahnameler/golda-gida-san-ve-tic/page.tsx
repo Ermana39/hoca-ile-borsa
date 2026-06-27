@@ -256,6 +256,12 @@ function YouTubeVideoCards() {
       videoId: "Ttr_7BX0jhE",
       href: "https://youtu.be/Ttr_7BX0jhE",
     },
+    {
+      title: "Golda Gıda halka arz short videosu",
+      description: "Golda Gıda halka arzının öne çıkan detaylarını kısa video ile izleyin.",
+      videoId: "QuAQ9TiblW4",
+      href: "https://youtu.be/QuAQ9TiblW4",
+    },
   ];
 
   return (

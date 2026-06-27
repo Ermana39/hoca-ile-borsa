@@ -578,6 +578,19 @@ export default function EkimTurizmPage() {
                 />
               </div>
             </div>
+
+            <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+              <div className="relative w-full overflow-hidden pt-[56.25%]">
+                <iframe
+                  className="absolute left-0 top-0 h-full w-full"
+                  src="https://www.youtube.com/embed/eSLZDBkZ5tQ"
+                  title="Ekim Turizm halka arz short videosu"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                />
+              </div>
+            </div>
           </div>
         </section>
 
