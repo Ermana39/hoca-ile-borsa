@@ -21,6 +21,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1043,
+    title: "Ekim Turizm Halka Arz İzahnamesi Yayınlandı",
+    href: "/haber/ekim-turizm-halka-arz-izahnamesi-yayinlandi",
+    image: "/ekim-turizm-halka-arz-izahnamesi-yayinlandi.webp",
+    alt: "Ekim Turizm halka arz izahnamesi yayınlandı",
+    publishedAt: "2026-06-27",
+    category: "halka-arz",
+    ilgiliHisseler: ["EKIM"],
+  },
+  {
     id: 1042,
     title: "26 Haziran 2026 Cuma Önemli KAP Haberleri",
     href: "/haber/26-haziran-2026-onemli-kap-haberleri",

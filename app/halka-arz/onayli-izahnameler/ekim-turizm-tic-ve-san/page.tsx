@@ -23,12 +23,12 @@ const veri: HalkaArzVeri = {
   },
   "baslikMeta": {
     "title": "(Intercity) Ekim Turizm Ticaret ve Sanayi A.Ş. Halka Arz Detayları 2026 | Onaylı İzahname",
-    "description": "Intercity markasıyla bilinen Ekim Turizm Ticaret ve Sanayi A.Ş. onaylı izahname bilgileri, 30,26 TL halka arz fiyatı, 162.000.000 lot toplam halka arz payı, sermaye artırımı, ortak satışı, fon kullanım planı ve finansal görünüm."
+    "description": "Intercity markasıyla bilinen Ekim Turizm Ticaret ve Sanayi A.Ş. onaylı izahname bilgileri, 30,26 TL halka arz fiyatı, 162.000.000 lot toplam halka arz payı, tahsisat grupları, fon kullanım planı ve finansal görünüm."
   },
   "ozet": {
-    "halkaArzTarihi": "1-2-3 Temmuz 2026 (Çarşamba-Perşembe-Cuma)",
-    "fiyatAralik": "30,26 TL",
-    "dagitimYontemi": "Bireysele Eşit Dağıtım",
+    "halkaArzTarihi": "1-2-3 Temmuz 2026 (Çarşamba-Perşembe-Cuma) / 09.00-17.00",
+    "fiyatAralik": "30,26 TL (%20 iskonto)",
+    "dagitimYontemi": "Bireysele Eşit - Yüksek Başvurulu Yatırımcıya Oransal",
     "pay": "162.000.000 Lot",
     "araciKurum": "Ak Yatırım Menkul Değerler A.Ş. / Vakıf Yatırım Menkul Değerler A.Ş.",
     "bistKodu": "EKIM",
@@ -40,48 +40,102 @@ const veri: HalkaArzVeri = {
   "halkaAciklikOrani": "%19,47",
   "halkaArzSekli": [
     "Sermaye Artırımı: 132.000.000 Lot",
-    "Ortak Satışı: 30.000.000 Lot (Ali Vural Ak)"
+    "Ortak Satışı: 30.000.000 Lot"
   ],
   "fonKullanim": [
-    "%65 Kiralamada kullanılacak kara araçlarının satın alınması",
-    "%10 İşletme sermayesi",
-    "%25 Kredi borçlarının ödenmesi"
+    "%100 Operasyonel kiralamada kullanılacak kara araçlarının satın alınması"
   ],
-  "fonKullanimYorumu": "Ekim Turizm halka arzında fon kullanım planının en büyük bölümü, Intercity markası altında kiralamada kullanılacak kara araçlarının satın alınmasına ayrılmıştır. Operasyonel filo kiralama sektöründe araç parkının yaşı, araç tedarik maliyeti, ikinci el değerleri, bakım giderleri ve finansman koşulları şirketin kârlılığı üzerinde doğrudan etkilidir. Araç alımlarına ayrılan kaynak, filonun büyütülmesi ve kurumsal müşterilere sunulan kiralama kapasitesinin artırılması açısından önemli görülebilir. Kredi borçlarının ödenmesine ayrılan pay, finansman giderlerinin azaltılması ve bilanço yapısının güçlenmesi açısından takip edilmelidir. İşletme sermayesi ise sigorta, bakım, vergi, operasyonel giderler ve müşteri tahsilat süreçlerinin finansmanı için önem taşır. Halka arzda sermaye artırımıyla birlikte Ali Vural Ak’a ait ortak satışı ve ek ortak satışı da bulunduğu için, şirket kasasına girecek kaynak ile ortak satışından doğacak tutar ayrı değerlendirilmelidir.",
+  "fonKullanimYorumu": "Ekim Turizm halka arzında fon kullanım planının tamamı operasyonel kiralamada kullanılacak kara araçlarının satın alınmasına ayrılmıştır. Bu yapı, Intercity markasının ana faaliyet alanı olan filo kiralama iş modelini doğrudan büyütmeye odaklanmaktadır. Araç alımı; filo yaşı, kiralanabilir araç adedi, müşteri sözleşmeleri ve operasyonel kapasite açısından şirketin gelir üretme gücünü etkileyebilir. Ancak bu modelde araç finansmanı, ikinci el araç fiyatları, bakım ve sigorta giderleri, faiz oranları ve filo yenileme ihtiyacı da yakından izlenmelidir. Halka arzda sermaye artırımıyla birlikte ortak satışı da bulunduğu için şirket kasasına girecek kaynak ile ortak satışından doğan tutar ayrı değerlendirilmelidir.",
   "finansalDonemler": [
-    "2023/9",
-    "2022",
-    "2021"
+    "2024",
+    "2025",
+    "2026/1Ç"
   ],
   "finansalVeriler": [
     {
-      "kalem": "Hasılat",
+      "kalem": "Dönen Varlıklar",
       "donemler": {
-        "2021": "1,8 Milyar TL",
-        "2022": "3,1 Milyar TL",
-        "2023/9": "4,2 Milyar TL"
+        "2024": "3,2 Milyar TL",
+        "2025": "5,3 Milyar TL",
+        "2026/1Ç": "4,4 Milyar TL"
       }
     },
     {
-      "kalem": "Brüt Kâr",
+      "kalem": "Duran Varlıklar",
       "donemler": {
-        "2021": "932,9 Milyon TL",
-        "2022": "2,1 Milyar TL",
-        "2023/9": "3,0 Milyar TL"
+        "2024": "39 Milyar TL",
+        "2025": "34 Milyar TL",
+        "2026/1Ç": "33 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Toplam Varlıklar",
+      "donemler": {
+        "2024": "42 Milyar TL",
+        "2025": "40 Milyar TL",
+        "2026/1Ç": "37 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Kısa Vadeli Yükümlülükler",
+      "donemler": {
+        "2024": "9 Milyar TL",
+        "2025": "8 Milyar TL",
+        "2026/1Ç": "7 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Uzun Vadeli Yükümlülükler",
+      "donemler": {
+        "2024": "11 Milyar TL",
+        "2025": "11 Milyar TL",
+        "2026/1Ç": "10 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Özkaynaklar",
+      "donemler": {
+        "2024": "21 Milyar TL",
+        "2025": "20 Milyar TL",
+        "2026/1Ç": "19 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Hasılat",
+      "donemler": {
+        "2024": "15 Milyar TL",
+        "2025": "15 Milyar TL",
+        "2026/1Ç": "2,8 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Esas Faaliyet Kârı",
+      "donemler": {
+        "2024": "641 Milyon TL",
+        "2025": "111 Milyon TL",
+        "2026/1Ç": "603 Milyon TL"
+      }
+    },
+    {
+      "kalem": "Dönem Kârı / Zararı",
+      "donemler": {
+        "2024": "2,3 Milyar TL Kâr",
+        "2025": "2,1 Milyar TL Zarar",
+        "2026/1Ç": "81 Milyon TL Kâr"
       }
     }
   ],
-  "finansalYorum": "Finansal görünümde 2022 yılında hasılat ve brüt kârın 2021’e göre güçlü arttığı, 2023/9 döneminde ise dokuz aylık verilerle yüksek seviyelerin korunduğu görülüyor. Ancak 2023/9 verileri dokuz aylık dönemi kapsadığı için 2022 tam yıl verileriyle doğrudan karşılaştırılmamalıdır. Filo kiralama sektöründe finansal sonuçlar; araç alım maliyetleri, kredi faizleri, ikinci el araç fiyatları, bakım ve sigorta giderleri, kurumsal müşteri sözleşmeleri, filo doluluk oranı ve borçluluk yapısıyla yakından ilişkilidir. Bu nedenle Ekim Turizm değerlendirilirken yalnızca hasılat ve brüt kâr rakamlarına bakmak yeterli olmaz; net kâr, faaliyet kârı, nakit akışı, finansal borçluluk, araç filosunun büyüklüğü, ikinci el satış kârları, kredi maliyetleri ve filo yenileme ihtiyacı birlikte incelenmelidir.",
+  "finansalYorum": "Finansal görünümde Ekim Turizm’in varlık büyüklüğünün yüksek olduğu, buna karşılık borçluluk ve dönem kârı/zararı tarafında dikkatli incelenmesi gereken bir tablo bulunduğu görülüyor. 2025 yılında hasılat 15 milyar TL seviyesinde korunurken şirketin dönem zararı yazması, faaliyet dışı giderler, finansman giderleri, amortisman, araç değerlemeleri veya sektör dinamikleri açısından ayrıca analiz edilmelidir. 2026/1Ç döneminde 81 milyon TL dönem kârı görülmesi olumlu bir sinyal olsa da bu veri yalnızca üç aylık dönemi kapsar. Filo kiralama iş modelinde araç parkının finansmanı, ikinci el araç değerleri, kredi maliyetleri, bakım-sigorta giderleri ve kurumsal sözleşmeler şirket performansını doğrudan etkiler.",
   "oneCikanlar": [
     {
       "title": "Talep Tarihi",
       "value": "1-2-3 Temmuz",
-      "desc": "Talep toplama çarşamba, perşembe ve cuma günleri yapılacaktır."
+      "desc": "Talep toplama çarşamba, perşembe ve cuma günleri 09.00-17.00 saatleri arasında yapılacaktır."
     },
     {
       "title": "Halka Arz Fiyatı",
       "value": "30,26 TL",
-      "desc": "1 TL nominal değerli paylar 30,26 TL sabit fiyatla satışa sunulacaktır."
+      "desc": "Halka arz fiyatında %20 iskonto bilgisi yer almaktadır."
     },
     {
       "title": "Bireysel Tahsisat",
@@ -117,19 +171,18 @@ const veri: HalkaArzVeri = {
   ],
   "tahsisatNotlari": [
     "Talep toplama tarihleri 1-2-3 Temmuz 2026 olarak açıklanmıştır.",
-    "Talep toplama çarşamba, perşembe ve cuma günleri yapılacaktır.",
+    "Talep toplama çarşamba, perşembe ve cuma günleri 09.00-17.00 saatleri arasında yapılacaktır.",
     "Ekim Turizm halka arzı katılım endeksine uygun değildir.",
-    "Dağıtım şekli bireysele eşit dağıtım olarak açıklanmıştır.",
     "Yurt içi bireysel yatırımcı grubunda 25.000 lot ve altı başvurular için eşit dağıtım uygulanacaktır.",
     "Yüksek başvurulu yatırımcı grubunda 25.001 lot ve üzeri başvurular için oransal dağıtım uygulanacaktır.",
     "T1-T2 bakiye kullanımına uygun değildir."
   ],
   "taahhutOzeti": {
-    "fiyatIstikrari": "30 gün. Ek satıştan elde edilen gelir kullanılacaktır.",
+    "fiyatIstikrari": "Ortak satışının %85'i ile 15 gün boyunca fiyat istikrarı sağlayıcı işlemler planlanmaktadır.",
     "satmamaTaahhudu": "1 yıl ihraççı, 1 yıl ortaklar.",
     "halkaAciklik": "%19,47."
   },
-  "sirketHakkinda": "Ekim Turizm Ticaret ve Sanayi A.Ş., Intercity markasıyla araç kiralama sektöründe faaliyet gösteren, operasyonel filo kiralama ve kurumsal ulaşım hizmetleri sunan bir şirkettir. Şirketin tescilli markası Intercity’dir. Ana faaliyet alanı operasyonel filo kiralamadır. Merkez adresi Cevizli Mahallesi, Tugay Yolu Caddesi, No:69A İç Kapı No:171-174, Maltepe / İstanbul’dur. Büyük Mükellefler Vergi Dairesi’ne bağlı vergi numarası 3280341070, MERSİS numarası 0328034107000019 ve İstanbul Ticaret Sicil numarası 283629 olarak paylaşılmıştır. Kullanıcı tarafından paylaşılan ortaklık yapısında Rafan Holding’in %35,58, Ali Vural Ak’ın %35,12 ve Intercity Yatırım Holding’in %29,30 paya sahip olduğu belirtilmiştir. Filo kiralama sektöründe şirket performansı; araç filosunun büyüklüğü, araç alım maliyetleri, ikinci el satış değerleri, finansman maliyetleri, kurumsal müşteri portföyü, bakım giderleri ve sözleşme vadeleriyle yakından ilişkilidir. Bu nedenle Ekim Turizm halka arzı değerlendirilirken finansal verilerin yanında araç filosu, kredi borçları, yeni araç alım planı, ikinci el araç piyasası, operasyonel kiralama talebi ve fiyat istikrarı yapısı birlikte ele alınmalıdır.",
+  "sirketHakkinda": "Ekim Turizm Ticaret ve Sanayi A.Ş., Intercity markasıyla araç kiralama sektöründe faaliyet gösteren, operasyonel filo kiralama ve kurumsal ulaşım hizmetleri sunan bir şirkettir. Şirketin tescilli markası Intercity’dir. Ana faaliyet alanı operasyonel filo kiralamadır. Merkez adresi Cevizli Mahallesi, Tugay Yolu Caddesi, No:69A İç Kapı No:171-174, Maltepe / İstanbul’dur. Büyük Mükellefler Vergi Dairesi’ne bağlı vergi numarası 3280341070, MERSİS numarası 0328034107000019 ve İstanbul Ticaret Sicil numarası 283629 olarak paylaşılmıştır. Filo kiralama sektöründe şirket performansı; araç filosunun büyüklüğü, araç alım maliyetleri, ikinci el satış değerleri, finansman maliyetleri, kurumsal müşteri portföyü, bakım giderleri ve sözleşme vadeleriyle yakından ilişkilidir. Bu nedenle Ekim Turizm halka arzı değerlendirilirken finansal verilerin yanında araç filosu, kredi borçları, yeni araç alım planı, ikinci el araç piyasası, operasyonel kiralama talebi ve fiyat istikrarı yapısı birlikte ele alınmalıdır.",
   "eksikBilgiNotu": "Borsada işlem görmeye başlama tarihi ve kesin dağıtım sonuçları resmi açıklamalar geldikçe güncellenmelidir.",
   "yasalUyari": "Bu sayfadaki bilgiler SPK onayı sonrası açıklanan ilk onaylı izahname verilerine göre genel bilgilendirme amacıyla hazırlanmıştır, yatırım tavsiyesi değildir.",
   "sermayeBilgileri": [
@@ -150,8 +203,8 @@ const veri: HalkaArzVeri = {
       "value": "30.000.000 Lot"
     },
     {
-      "label": "Ek Pay Satışı",
-      "value": "-"
+      "label": "Arz Büyüklüğü",
+      "value": "4.902.120.000 TL"
     },
     {
       "label": "Satış Fiyatı",
