@@ -6,7 +6,8 @@
     "dev": "next dev",
     "excel-to-json": "node scripts/excel-to-json.mjs",
     "page-updates": "node scripts/generate-page-updates.mjs",
-    "build": "node scripts/excel-to-json.mjs && node scripts/generate-page-updates.mjs && next build",
+    "news-dates": "node scripts/generate-news-dates.mjs",
+    "build": "node scripts/excel-to-json.mjs && node scripts/generate-news-dates.mjs && node scripts/generate-page-updates.mjs && next build",
     "start": "next start",
     "lint": "eslint"
   },

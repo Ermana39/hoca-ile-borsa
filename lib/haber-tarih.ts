@@ -3,9 +3,11 @@ import "server-only";
 import { statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import haberTarihleri from "@/app/data/haber-tarihleri.generated.json";
 
 const SITE_TIME_ZONE = "Europe/Istanbul";
 const TURKIYE_OFFSET = "+03:00";
+const kaliciHaberTarihleri = haberTarihleri as Record<string, string>;
 
 function getParts(date: Date) {
   const parts = new Intl.DateTimeFormat("tr-TR", {
@@ -34,7 +36,10 @@ function getDosyaZamani(filePath: string) {
 }
 
 export function getHaberDosyaTarihi(importMetaUrl: string) {
-  return getDosyaZamani(fileURLToPath(importMetaUrl));
+  const filePath = fileURLToPath(importMetaUrl);
+  const href = getHrefFromFilePath(filePath);
+  const kaliciTarih = href ? kaliciHaberTarihleri[href] : undefined;
+  return kaliciTarih ?? getDosyaZamani(filePath);
 }
 
 export function getHaberDosyaTarihiFromHref(href: string) {
@@ -50,10 +55,28 @@ export function getHaberDosyaTarihiFromHref(href: string) {
   }
 
   try {
+    const kaliciTarih = kaliciHaberTarihleri[href];
+    if (kaliciTarih) return kaliciTarih;
+
     return getDosyaZamani(path.join(process.cwd(), "app", "haber", ...segments, "page.tsx"));
   } catch {
     return undefined;
   }
+}
+
+function getHrefFromFilePath(filePath: string) {
+  const relativePath = path.relative(path.join(process.cwd(), "app", "haber"), filePath);
+  const normalized = relativePath.split(path.sep);
+
+  if (
+    relativePath.startsWith("..") ||
+    normalized.length < 2 ||
+    normalized.at(-1) !== "page.tsx"
+  ) {
+    return undefined;
+  }
+
+  return `/haber/${normalized.slice(0, -1).join("/")}`;
 }
 
 export function getHaberGunIso(iso: string) {
