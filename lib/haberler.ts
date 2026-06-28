@@ -1,5 +1,6 @@
 import { newsItems as tumHaberler } from "@/app/data/news";
 import { getGunlukOzetHaberKayitlari } from "@/lib/gunluk-ozet";
+import { getHaberDosyaTarihiFromHref, getHaberGunIso } from "@/lib/haber-tarih";
 import {
   HABER_SAYFA_BOYUTU,
   isHaberKategori,
@@ -12,8 +13,10 @@ export type NewsItem = {
   href: string;
   image?: string;
   alt?: string;
-  publishedAt?: string;
+  publishedAt: string;
   category?: HaberKategori;
+  yazarSlug?: string;
+  ilgiliHisseler?: string[];
 };
 
 function getIdFromHref(href: string) {
@@ -32,6 +35,11 @@ export function normalizeNewsItems(data: unknown): NewsItem[] {
           ? item.id
           : getIdFromHref(href);
 
+      const publishedAt =
+        item.publishedAt === "auto"
+          ? getHaberDosyaTarihiFromHref(href)
+          : item.publishedAt;
+
       return {
         id,
         title: item.title || "",
@@ -43,11 +51,15 @@ export function normalizeNewsItems(data: unknown): NewsItem[] {
               ? `/haber${id}.png`
               : "/placeholder.png",
         alt: item.alt || item.title || "",
-        publishedAt: item.publishedAt || "",
+        publishedAt: publishedAt ? getHaberGunIso(publishedAt) : "",
         category:
           item.category && isHaberKategori(item.category)
             ? item.category
             : undefined,
+        yazarSlug: typeof item.yazarSlug === "string" ? item.yazarSlug : undefined,
+        ilgiliHisseler: Array.isArray(item.ilgiliHisseler)
+          ? item.ilgiliHisseler.filter((kod): kod is string => typeof kod === "string")
+          : undefined,
       };
     })
     .filter(

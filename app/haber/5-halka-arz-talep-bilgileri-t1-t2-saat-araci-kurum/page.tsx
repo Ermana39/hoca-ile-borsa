@@ -4,8 +4,10 @@ import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
 import HaberAltKisim from "@/components/HaberAltKisim";
+import { formatHaberTarihi, getHaberDosyaTarihi } from "@/lib/haber-tarih";
 
-const haberSaati = "2026-06-27T17:40:00+03:00";
+const haberSaati = getHaberDosyaTarihi(import.meta.url);
+const haberTarihi = formatHaberTarihi(haberSaati);
 
 const haberSlug = "5-halka-arz-talep-bilgileri-t1-t2-saat-araci-kurum";
 const haberBaslik =
@@ -358,7 +360,7 @@ export default function HaberPage() {
                 Talep Bilgileri
               </span>
               <time dateTime={haberSaati} className="text-sm text-slate-500">
-                27 Haziran 2026 · 17:40
+                {haberTarihi}
               </time>
               <span className="text-slate-300">·</span>
               <Link

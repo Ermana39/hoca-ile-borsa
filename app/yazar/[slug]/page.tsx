@@ -2,7 +2,7 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getYazar, yazarlar, varsayilanYazar } from "@/app/data/yazarlar";
-import { newsItems } from "@/app/data/news";
+import { getAllNews } from "@/lib/haberler";
 import SosyalIkonGrup from "@/components/SosyalIkonGrup";
 
 const siteUrl = "https://www.hocaileborsa.com";
@@ -117,7 +117,7 @@ export default async function YazarPage({
 
   // "Son Yazılar" yalnızca bu yazara ait haberlerden oluşur. yazarSlug
   // belirtilmemiş haberler varsayilanYazar'a atfedilir.
-  const sonYazilar = [...newsItems]
+  const sonYazilar = getAllNews()
     .filter((item) => (item.yazarSlug ?? varsayilanYazar) === yazar.slug)
     .sort((a, b) => (a.publishedAt < b.publishedAt ? 1 : -1))
     .slice(0, 12);

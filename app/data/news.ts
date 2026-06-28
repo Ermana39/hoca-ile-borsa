@@ -6,7 +6,9 @@ export type NewsItem = {
   href: string;
   image: string;
   alt: string;
-  publishedAt: string;
+  // "auto" kullanılırsa tarih, ilgili app/haber/<slug>/page.tsx dosyasının
+  // oluşturulma zamanından alınır. Eski haberlerde sabit ISO tarih korunabilir.
+  publishedAt: string | "auto";
   category: HaberKategori;
   // Haberi yazan yazarın slug'ı (app/data/yazarlar.ts). Belirtilmezse
   // varsayilanYazar'a atfedilir; yazar profilindeki "Son Yazılar" listesi
@@ -21,12 +23,22 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1047,
+    title: "Beta Enerji Halka Arzında Talep Oranı Açıklandı",
+    href: "/haber/beta-enerji-halka-arz-talep-orani-dagitim-sonuclari",
+    image: "/beta-enerji-halka-arz-talep-oranlari.webp",
+    alt: "Beta Enerji halka arz talep oranları ve dağıtım sonuçları",
+    publishedAt: "auto",
+    category: "halka-arz",
+    ilgiliHisseler: ["BETAE"],
+  },
+  {
     id: 1046,
     title: "5 Halka Arzda Talep Bilgileri: T1/T2, Saat ve Aracı Kurumlar",
     href: "/haber/5-halka-arz-talep-bilgileri-t1-t2-saat-araci-kurum",
     image: "/5-halka-arz-talep-bilgileri.webp",
     alt: "5 halka arz talep bilgileri T1 T2 bakiye saat ve aracı kurum tablosu",
-    publishedAt: "2026-06-27",
+    publishedAt: "auto",
     category: "halka-arz",
     ilgiliHisseler: ["SOHOE", "GOLDA", "ISVEA", "ORZAX", "EKIM"],
   },

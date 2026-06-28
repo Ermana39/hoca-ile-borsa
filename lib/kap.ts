@@ -1,5 +1,5 @@
 import { kapGelismeleri } from "@/data/kap-gelismeleri";
-import { newsItems } from "@/app/data/news";
+import { getAllNews } from "@/lib/haberler";
 
 // Hisse sayfasında "Önemli KAP Gelişmeleri" bölümünün tek tip kaydı.
 // İki kaynaktan beslenir: merkezi KAP dosyası + etiketli haberler.
@@ -43,7 +43,7 @@ export function getKapBySembol(sembol: string): HisseKapKaydi[] {
       kaynakTuru: "kap" as const,
     }));
 
-  const haberKayitlari: HisseKapKaydi[] = newsItems
+  const haberKayitlari: HisseKapKaydi[] = getAllNews()
     .filter((h) => eslesir(h.ilgiliHisseler, sembol))
     .map((h) => ({
       isoTarih: h.publishedAt,
