@@ -21,6 +21,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1046,
+    title: "5 Halka Arzda Talep Bilgileri: T1/T2, Saat ve Aracı Kurumlar",
+    href: "/haber/5-halka-arz-talep-bilgileri-t1-t2-saat-araci-kurum",
+    image: "/5-halka-arz-talep-bilgileri.webp",
+    alt: "5 halka arz talep bilgileri T1 T2 bakiye saat ve aracı kurum tablosu",
+    publishedAt: "2026-06-27",
+    category: "halka-arz",
+    ilgiliHisseler: ["SOHOE", "GOLDA", "ISVEA", "ORZAX", "EKIM"],
+  },
+  {
     id: 1045,
     title: "Halka Arzlarda Katılım Endeksi: Hangi Şirketler Uygun?",
     href: "/haber/halka-arzlarda-katilim-endeksi-uygun-olanlar",

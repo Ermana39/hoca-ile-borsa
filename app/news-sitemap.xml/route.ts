@@ -5,7 +5,11 @@ const publicationName = "Hoca İle Borsa";
 const publicationLanguage = "tr";
 const newsWindowDays = 2;
 
-export const revalidate = false;
+// Bu sitemap'in içeriği "son 2 günün haberleri" penceresine bağlı ve bu pencere
+// bugünün tarihine göre hesaplanır. Bu yüzden -diğer sayfaların aksine- veri
+// değişmese bile periyodik yenilenmesi gerekir; aksi halde pencere donar.
+// 6 saatte bir yenileme, Google News tazeliği ile yazma maliyeti arasında denge.
+export const revalidate = 21600;
 
 function escapeXml(value: string) {
   return value

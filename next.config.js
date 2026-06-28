@@ -221,6 +221,22 @@ const nextConfig = {
   },
 
   async headers() {
+    // Tüm görsellere 30 günlük tarayıcı+CDN cache. "immutable" değil; çünkü bir
+    // görseli aynı adla değiştirebilirsin — bu durumda en geç 30 günde tazelenir.
+    // Bu kural ÖNCE; aşağıdaki özel liste SONRA geldiği için (son kural kazanır)
+    // stableImageCacheFiles dosyaları 1 yıllık ayarını korur.
+    const generalImageHeaders = [
+      {
+        source: "/(.*)\\.(png|jpg|jpeg|gif|webp|avif|svg|ico)",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=2592000",
+          },
+        ],
+      },
+    ];
+
     const imageHeaders = stableImageCacheFiles.map((source) => ({
       source,
       headers: [
@@ -238,7 +254,7 @@ const nextConfig = {
       },
     ];
 
-    return [...imageHeaders, ...globalSecurityHeaders];
+    return [...generalImageHeaders, ...imageHeaders, ...globalSecurityHeaders];
   },
 };
 

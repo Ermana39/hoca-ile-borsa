@@ -161,18 +161,24 @@ const SABLONLAR: Record<OranKey, SablonSeti> = {
       "Şirket düşük bir F/K seviyesinden işlem görüyor; bunun arkasında tek seferlik kâr kalemleri de olabilir, kalıcı bir kârlılık da. Bu nedenle oran tek başına bir karar dayanağı oluşturmaz.",
       "Kazanca kıyasla görece düşük bir fiyatlama söz konusu; bu seviyenin sürdürülebilir mi yoksa dönemsel mi olduğu ancak diğer mali verilerle birlikte anlaşılabilir.",
       "Düşük bir F/K değeri göze çarpıyor; bu, kârın dönemsel olarak yüksek olmasıyla da ilgili olabilir, bu yüzden başka oranlarla desteklenmeden tek başına yorumlanmamalıdır.",
+      "F/K'nın görece düşük kalması kazancın o dönemde güçlü gelmesinden de piyasanın temkinli beklentisinden de doğabilir; hangisinin geçerli olduğu kâr eğilimiyle birlikte değerlendirilmelidir.",
+      "Şirketin kazancına oranla fiyatı zayıf bir çarpan veriyor; bu seviyenin kalıcı mı dönemsel mi olduğu nakit akışı ve büyüme görünümü olmadan tek başına okunamaz.",
     ],
     orta: [
       "F/K çarpanı orta bir bantta yer alıyor; bu seviye genellikle ne belirgin bir iskontoya ne de yüksek bir beklentiye işaret eder. Yine de büyüme ve kâr istikrarıyla birlikte okunması gerekir.",
       "Fiyat/kazanç oranı dengeli sayılabilecek bir aralıkta; tek başına ayırt edici bir sinyal vermez, şirketin büyüme görünümüyle birlikte anlam kazanır.",
       "Şirketin F/K seviyesi orta düzeyde görünüyor; bu, kazanç ile fiyat arasında aşırı bir sapma olmadığını düşündürür, ancak kesin bir hüküm için yeterli değildir.",
       "Kazanca göre fiyatlama makul bir aralıkta seyrediyor; bu gözlem nötr bir tablo sunar ve kâr eğilimiyle desteklenmelidir.",
+      "F/K orta kuşakta; kazanç ile fiyat arasında belirgin bir kopukluk düşündürmez, ancak bu denge ancak kârın istikrarıyla birlikte anlam taşır.",
+      "Fiyat/kazanç seviyesi ne ucuz ne pahalı çağrışımı yapan bir bantta; tek başına yön vermez, büyüme ve marj verileriyle birlikte okunmalıdır.",
     ],
     yuksek: [
       "F/K çarpanı yüksek bir seviyede; bu çoğu zaman güçlü büyüme beklentisi ya da dönemsel olarak düşük kâr ile açıklanabilir. Beklentinin gerçekleşip gerçekleşmeyeceği ayrıca izlenmelidir.",
       "Fiyat/kazanç oranı yukarı tarafta; piyasanın bu şirkete dönük beklentileri yüksek olabilir, ancak bunun kârlılıkla desteklenip desteklenmediği tek başına bu orandan anlaşılamaz.",
       "Şirket yüksek bir F/K seviyesinden işlem görüyor; bu durum büyüme hızı ve kâr kalitesiyle birlikte değerlendirilmeden tek başına yorumlanmamalıdır.",
       "Kazanca kıyasla yüklü bir fiyatlama göze çarpıyor; primin sürdürülebilir bir kârlılığa mı yoksa dönemsel bir etkiye mi dayandığı incelenmelidir.",
+      "F/K yukarı bantta seyrediyor; bu bazen güçlü büyüme öngörüsünü bazen de dönemsel olarak baskılanmış kârı yansıtır, ayrımı için kâr kalitesi izlenmelidir.",
+      "Yüksek F/K, piyasanın şirkete dönük beklentisinin yüklü olabileceğini düşündürür; ancak bu beklentinin karşılığının olup olmadığı tek bir orandan teyit edilemez.",
     ],
   },
   pddd: {
@@ -181,18 +187,24 @@ const SABLONLAR: Record<OranKey, SablonSeti> = {
       "Piyasa değeri defter değerinin altında kalıyor; bu tablo bazen temkinli beklentilere bazen de dönemsel etkilere bağlıdır ve özsermaye kârlılığıyla birlikte okunmalıdır.",
       "Defter değerine kıyasla 1'in altında bir çarpan söz konusu; bunun kalıcı mı yoksa geçici mi olduğu kârlılık görünümüyle birlikte değerlendirilmelidir.",
       "Şirket defter değerinin altında fiyatlanıyor; bu gözlem tek başına anlam taşımaz, varlık yapısı ve kârlılıkla birlikte ele alınmalıdır.",
+      "Piyasa, özsermayeye kıyasla 1'in altında bir çarpan biçiyor; bu kimi zaman varlık ağırlıklı bir bilançoyu kimi zaman zayıf getiri beklentisini yansıtır ve tek başına sonuç vermez.",
+      "Defter değerinin gerisinde bir fiyatlama söz konusu; bunun bir iskonto mu yoksa düşük kârlılığın yansıması mı olduğu ROE ile birlikte değerlendirilmelidir.",
     ],
     orta: [
       "PD/DD oranı 1 ile 3 arasında; bu, piyasanın defter değerine ölçülü bir prim biçtiğini düşündüren dengeli bir aralıktır. Yine de kârlılıkla birlikte okunması gerekir.",
       "Piyasa değeri/defter değeri makul bir bantta; bu seviye tek başına ayırt edici bir sinyal vermez, özsermaye getirisiyle birlikte anlam kazanır.",
       "Şirketin PD/DD seviyesi orta düzeyde; defter değeri ile piyasa değeri arasında aşırı bir açılma görünmüyor, ancak bu tek başına bir hüküm değildir.",
       "Defter değerine göre fiyatlama dengeli sayılabilecek bir aralıkta; nötr bir tablo sunar ve kârlılık verileriyle desteklenmelidir.",
+      "PD/DD ölçülü bir prim bandında; özsermaye ile piyasa değeri arasında aşırı bir açılma görünmez, fakat bu denge ancak getiri oranlarıyla birlikte yorumlanabilir.",
+      "Piyasa defter değerine sınırlı bir prim biçmiş görünüyor; tek başına bir hüküm taşımaz, kârlılığın bu primi karşılayıp karşılamadığı ayrıca izlenmelidir.",
     ],
     yuksek: [
       "PD/DD oranı yüksek bir seviyede; piyasa, defter değerine kıyasla şirkete belirgin bir prim biçiyor olabilir. Bu çoğu zaman yüksek kârlılık beklentisiyle ilişkilidir, ancak tek başına yeterli değildir.",
       "Piyasa değeri defter değerinin epeyce üzerinde; bu primin sürdürülebilir bir özsermaye kârlılığıyla desteklenip desteklenmediği ayrıca incelenmelidir.",
       "Şirket defter değerine göre yüksek bir çarpanla fiyatlanıyor; bu, güçlü beklentilere işaret edebilir, fakat beklentinin gerçekleşmesi diğer verilerle izlenmelidir.",
       "Defter değerine kıyasla yüklü bir fiyatlama göze çarpıyor; bu gözlem kârlılık ve büyüme görünümüyle birlikte okunmadan tek başına yorumlanmamalıdır.",
+      "Yüksek PD/DD, piyasanın özsermayeye güçlü bir prim verdiğini düşündürür; bu primin getiri oranlarıyla desteklenip desteklenmediği ayrıca incelenmelidir.",
+      "Şirket defter değerinin belirgin üzerinde fiyatlanıyor; bu çoğu zaman yüksek kârlılık beklentisini yansıtır, ancak beklentinin gerçekleşmesi başka verilerle izlenmelidir.",
     ],
   },
   peg: {
@@ -201,18 +213,24 @@ const SABLONLAR: Record<OranKey, SablonSeti> = {
       "Büyümeye göre düzeltilmiş çarpan düşük tarafta; bu tablo büyüme beklentisinin güçlü olmasıyla ilgili olabilir, fakat tahminlerin oynaklığıyla birlikte değerlendirilmelidir.",
       "PEG seviyesi 1 eşiğinin altında görünüyor; bunun anlamı büyük ölçüde büyüme öngörüsünün güvenilirliğine bağlıdır, bu yüzden tek başına bir sonuç vermez.",
       "Kazanç büyümesine kıyasla fiyatlama görece düşük; bu gözlem ancak büyümenin sürdürülebilirliğiyle birlikte anlam kazanır.",
+      "PEG 1'in altında kalıyor; bu fiyatın beklenen büyümeye göre ölçülü olabileceğini düşündürse de büyüme tahmininin gerçekçiliği teyit edilmeden sonuç çıkarılamaz.",
+      "Büyümeye oranla çarpan zayıf görünüyor; bunun anlamı tahmin edilen büyümenin tutması hâlinde ortaya çıkar, bu yüzden tek başına bir dayanak değildir.",
     ],
     orta: [
       "PEG oranı 1 ile 2 arasında; bu, fiyatlama ile büyüme beklentisinin görece dengeli olduğunu düşündürür. Tek başına ayırt edici bir sinyal değildir.",
       "Büyüme ayarlı çarpan orta bir bantta; bu seviye nötr bir tablo sunar ve büyümenin kalitesiyle birlikte okunmalıdır.",
       "Şirketin PEG değeri makul bir aralıkta görünüyor; büyüme ile fiyat arasında belirgin bir sapma olmadığını düşündürür, ancak kesin hüküm için yeterli değildir.",
       "Büyümeye göre fiyatlama dengeli sayılabilecek bir seviyede; farkı belirleyecek olan büyüme öngörüsünün isabetidir.",
+      "PEG orta bandında; fiyat ile büyüme beklentisi arasında belirgin bir sapma görünmez, fakat bu denge büyümenin kalitesiyle birlikte okunmalıdır.",
+      "Büyüme ayarlı çarpan ne ucuz ne pahalı çağrışımı yapıyor; tek başına yön vermez, büyümenin sürdürülebilirliğiyle değerlendirilmelidir.",
     ],
     yuksek: [
       "PEG oranı 2'nin üzerinde; bu, fiyatlamanın beklenen büyümeye kıyasla yüklü olabileceğine işaret eder. Beklenen büyümenin gerçekleşip gerçekleşmeyeceği ayrıca izlenmelidir.",
       "Büyümeye göre düzeltilmiş çarpan yüksek tarafta; primin arkasındaki büyüme varsayımının ne kadar gerçekçi olduğu incelenmeden tek başına yorumlanmamalıdır.",
       "PEG seviyesi yüksek görünüyor; bu, piyasanın güçlü bir büyüme beklediğine işaret edebilir, fakat bu beklenti tek başına bu orandan teyit edilemez.",
       "Kazanç büyümesine kıyasla fiyatlama yüklü; bu gözlem büyüme tahminlerinin oynaklığıyla birlikte değerlendirilmelidir.",
+      "Yüksek PEG, piyasanın güçlü bir büyümeyi şimdiden fiyatlamış olabileceğini düşündürür; bu varsayımın gerçekçiliği tek bir orandan teyit edilemez.",
+      "Büyümeye göre düzeltilmiş çarpan yukarı tarafta; primin dayandığı büyüme beklentisi tutmazsa oran yanıltıcı olabilir, bu yüzden tek başına okunmamalıdır.",
     ],
   },
   roe: {
@@ -221,18 +239,24 @@ const SABLONLAR: Record<OranKey, SablonSeti> = {
       "ROE düşük tarafta kalıyor; bu, yatırım dönemi, yüksek özkaynak tabanı ya da dönemsel kâr baskısı gibi farklı nedenlerle oluşabilir ve tek başına yorumlanmamalıdır.",
       "Özsermaye getirisi düşük düzeyde görünüyor; nedeninin operasyonel kârlılık mı yoksa geçici etkiler mi olduğu diğer verilerle değerlendirilmelidir.",
       "Şirket bu dönem özkaynağına kıyasla sınırlı bir kâr üretmiş; bu gözlem marj ve büyüme eğilimiyle birlikte okunmadan bir sonuç vermez.",
+      "ROE zayıf tarafta; bunun bir yatırım/genişleme döneminden mi yoksa kâr baskısından mı kaynaklandığı ancak birkaç dönemin eğilimiyle anlaşılabilir.",
+      "Özkaynağa kıyasla getiri bu dönem düşük görünüyor; tek başına kalıcı bir zayıflık anlamına gelmez, marj ve hasılat eğilimiyle birlikte değerlendirilmelidir.",
     ],
     orta: [
       "Özsermaye kârlılığı orta bir bantta; şirket özkaynağını makul bir verimle kâra çeviriyor görünüyor, ancak bu seviyenin sürekliliği ayrıca izlenmelidir.",
       "ROE dengeli sayılabilecek bir aralıkta; tek başına ayırt edici bir sinyal vermez, marj ve büyüme verileriyle birlikte anlam kazanır.",
       "Özsermaye getirisi orta düzeyde görünüyor; bu, kârlılık tarafında aşırı bir sapma olmadığını düşündürür, fakat kesin bir hüküm için yeterli değildir.",
       "Şirketin özkaynak kârlılığı makul bir seviyede; nötr bir tablo sunar ve kâr istikrarıyla desteklenmelidir.",
+      "ROE orta kuşakta; özkaynağın kâra dönüşümünde aşırı bir sapma görünmez, fakat bu seviyenin sürekliliği ayrı bir takip başlığıdır.",
+      "Özsermaye getirisi dengeli bir aralıkta; tek başına ayırt edici değildir, kaldıraç ve marj yapısıyla birlikte anlam kazanır.",
     ],
     yuksek: [
       "Özsermaye kârlılığı yüksek bir seviyede; şirket koyduğu özkaynağı bu dönem verimli kullanmış olabilir. Yine de bunun kalıcı operasyonel performanstan mı yoksa tek seferlik kalemlerden mi geldiği izlenmelidir.",
       "ROE yukarı tarafta; bu kârlılık açısından olumlu bir gözlem olsa da kaldıraç ve dönemsel etkilerle birlikte okunmalıdır.",
       "Özsermaye getirisi yüksek görünüyor; bu seviyenin sürdürülebilir olup olmadığı marj ve büyüme görünümüyle birlikte değerlendirilmelidir.",
       "Şirket bu dönem özkaynağına kıyasla güçlü bir kâr üretmiş; bu tek başına bir sonuç değildir, eğilimin devamı ayrıca takip edilmelidir.",
+      "Yüksek ROE, özkaynağın bu dönem verimli kullanıldığını düşündürür; ancak yüksek kaldıraç da bu oranı şişirebileceğinden borç yapısıyla birlikte okunmalıdır.",
+      "Özsermaye getirisi güçlü görünüyor; bunun kalıcı operasyonel performanstan mı yoksa tek seferlik kalemlerden mi geldiği ayrıca incelenmelidir.",
     ],
   },
   netMarj: {
@@ -241,18 +265,24 @@ const SABLONLAR: Record<OranKey, SablonSeti> = {
       "Net marj düşük tarafta kalıyor; bu, sektörün doğası gereği düşük marjlı çalışmasından da dönemsel kalemlerden de kaynaklanabilir, kesin bir hüküm vermez.",
       "Şirket bu dönem satışlarından sınırlı bir net marj elde etmiş; nedeninin girdi maliyetleri mi yoksa geçici etkiler mi olduğu birlikte değerlendirilmelidir.",
       "Net kârlılık marjı dar görünüyor; bu gözlem gelir büyümesi ve maliyet yapısıyla birlikte okunmadan tek başına anlam taşımaz.",
+      "Marj ince tarafta; bu kimi sektörlerde iş modelinin doğası gereği olağandır, bu yüzden sektör bağlamı olmadan tek başına bir zayıflık sayılamaz.",
+      "Satışların net kâra dönüşen kısmı sınırlı görünüyor; nedeninin girdi maliyeti, finansman gideri mi yoksa dönemsel kalemler mi olduğu birlikte değerlendirilmelidir.",
     ],
     orta: [
       "Net kâr marjı orta bir bantta; şirket satışlarının makul bir kısmını net kâra çeviriyor görünüyor, ancak marjın istikrarı ayrıca izlenmelidir.",
       "Net marj dengeli sayılabilecek bir aralıkta; tek başına ayırt edici bir sinyal vermez, gelir ve maliyet eğilimiyle birlikte anlam kazanır.",
       "Şirketin net kârlılık marjı orta düzeyde görünüyor; kârlılık tarafında aşırı bir sapma olmadığını düşündürür, fakat kesin bir hüküm için yeterli değildir.",
       "Satışlardan elde edilen net marj makul bir seviyede; nötr bir tablo sunar ve marj istikrarıyla desteklenmelidir.",
+      "Net marj orta kuşakta; kârlılık tarafında belirgin bir sapma görünmez, fakat bu seviyenin korunup korunmadığı gelir ve maliyet eğilimiyle izlenmelidir.",
+      "Satışların net kâra dönüşümü dengeli bir aralıkta; tek başına ayırt edici değildir, marj istikrarıyla birlikte anlam kazanır.",
     ],
     yuksek: [
       "Net kâr marjı yüksek bir seviyede; şirket satışlarının görece büyük bir kısmını net kâra çevirebiliyor olabilir. Yine de marjın sürdürülebilirliği ayrıca izlenmelidir.",
       "Net marj yukarı tarafta; bu olumlu bir gözlem olsa da tek seferlik gelir/gider kalemlerinden etkilenip etkilenmediği incelenmelidir.",
       "Şirketin net kârlılık marjı güçlü görünüyor; bunun fiyatlama gücü mü yoksa dönemsel etkiler mi olduğu maliyet yapısıyla birlikte değerlendirilmelidir.",
       "Satışlara kıyasla yüksek bir net marj göze çarpıyor; bu tek başına bir sonuç değildir, marj istikrarı ve büyüme ile birlikte okunmalıdır.",
+      "Yüksek net marj fiyatlama gücüne işaret edebilir; ancak tek seferlik gelir kalemlerinin katkısı olup olmadığı maliyet yapısıyla birlikte incelenmelidir.",
+      "Satışların görece büyük kısmı net kâra dönüşmüş görünüyor; bu olumlu bir gözlem olsa da marjın kalıcılığı ayrıca takip edilmelidir.",
     ],
   },
   pdNetSatis: {
@@ -261,18 +291,24 @@ const SABLONLAR: Record<OranKey, SablonSeti> = {
       "Satışlara kıyasla düşük bir çarpan söz konusu; bu tablo bazen ince marjlı iş modellerinde bazen de temkinli beklentilerde görülür ve kârlılıkla birlikte okunmalıdır.",
       "Piyasa değeri/net satış oranı 1'in altında; bunun kalıcı mı dönemsel mi olduğu marjlar ve büyüme görünümüyle değerlendirilmelidir.",
       "Şirket satış büyüklüğüne göre görece düşük bir çarpanla fiyatlanıyor; bu gözlem tek başına anlam taşımaz, marj yapısıyla birlikte ele alınmalıdır.",
+      "Hasılata kıyasla çarpan zayıf görünüyor; bu kimi zaman ince marjlı iş modelinin kimi zaman temkinli beklentinin yansımasıdır ve kârlılıkla birlikte okunmalıdır.",
+      "Satış büyüklüğüne göre fiyatlama ölçülü; bunun kalıcı mı dönemsel mi olduğu marjlar ve büyüme görünümü olmadan tek başına anlaşılamaz.",
     ],
     orta: [
       "PD/Net Satış çarpanı 1 ile 3 arasında; bu, satış bazlı değerlemede dengeli sayılabilecek bir aralıktır. Yine de marj ve büyümeyle birlikte okunmalıdır.",
       "Satışlara göre fiyatlama makul bir bantta; bu seviye tek başına ayırt edici bir sinyal vermez, kârlılıkla birlikte anlam kazanır.",
       "Şirketin PD/Net Satış seviyesi orta düzeyde görünüyor; satış ile piyasa değeri arasında aşırı bir açılma görünmüyor, ancak bu tek başına bir hüküm değildir.",
       "Satış büyüklüğüne kıyasla fiyatlama dengeli bir aralıkta; nötr bir tablo sunar ve marjlarla desteklenmelidir.",
+      "PD/Net Satış orta bantta; hasılat ile piyasa değeri arasında aşırı bir açılma görünmez, fakat bu denge marj yapısıyla birlikte anlam taşır.",
+      "Satışlara göre değerleme makul bir aralıkta; tek başına ayırt edici değildir, kârlılık ve büyüme verileriyle desteklenmelidir.",
     ],
     yuksek: [
       "PD/Net Satış çarpanı yüksek bir seviyede; piyasa, satışlara kıyasla şirkete belirgin bir değer biçiyor olabilir. Bu çoğu zaman yüksek marj ya da büyüme beklentisiyle ilişkilidir, tek başına yeterli değildir.",
       "Satışlara göre yüklü bir fiyatlama söz konusu; primin sürdürülebilir kârlılıkla desteklenip desteklenmediği ayrıca incelenmelidir.",
       "Şirket satış büyüklüğüne göre yüksek bir çarpanla fiyatlanıyor; bu, güçlü beklentilere işaret edebilir, fakat beklentinin gerçekleşmesi diğer verilerle izlenmelidir.",
       "Satışlara kıyasla yüksek bir değerleme göze çarpıyor; bu gözlem marjlar ve büyüme görünümüyle birlikte okunmadan tek başına yorumlanmamalıdır.",
+      "Yüksek PD/Net Satış, piyasanın satışların ardındaki marjı ya da büyümeyi yüklü fiyatladığını düşündürür; bu beklentinin karşılığı ayrıca izlenmelidir.",
+      "Hasılat büyüklüğüne göre değerleme yukarı tarafta; primin sürdürülebilir kârlılıkla desteklenip desteklenmediği tek bir orandan anlaşılamaz.",
     ],
   },
   cariOran: {
@@ -281,18 +317,24 @@ const SABLONLAR: Record<OranKey, SablonSeti> = {
       "Kısa vadeli ödeme gücü göstergesi 1'in altında kalıyor; bunun işletme sermayesi yapısından mı yoksa dönemsel etkilerden mi kaynaklandığı borç vadesiyle birlikte değerlendirilmelidir.",
       "Dönen varlıklar kısa vadeli yükümlülüklerin gerisinde görünüyor; bu durum bazı iş modellerinde olağan olabilir, bu yüzden nakit akışı ve borç yapısıyla birlikte okunmalıdır.",
       "Cari oran 1 eşiğinin altında; bu gözlem tek başına bir sonuç vermez, nakit döngüsü ve finansman yapısıyla birlikte ele alınmalıdır.",
+      "Kısa vadeli yükümlülükler dönen varlıkların önüne geçmiş görünüyor; bu bazı iş modellerinde hızlı nakit döngüsüyle olağan olabilir, bu yüzden borç vadesiyle birlikte okunmalıdır.",
+      "Likidite göstergesi 1'in altında; bunun yapısal bir sıkışma mı yoksa dönemsel işletme sermayesi hareketi mi olduğu nakit akışıyla birlikte değerlendirilmelidir.",
     ],
     orta: [
       "Cari oran 1 ile 2 arasında; bu, dönen varlıkların kısa vadeli yükümlülükleri karşılayabilecek seviyede olduğunu gösterir. Yine de işletme sermayesi yapısıyla birlikte değerlendirilmelidir.",
       "Kısa vadeli likidite göstergesi dengeli bir bantta; bu seviye tek başına ayırt edici bir sinyal vermez, nakit döngüsüyle birlikte anlam kazanır.",
       "Şirketin cari oranı makul bir aralıkta görünüyor; kısa vadeli ödeme gücü açısından belirgin bir sıkışma görünmüyor, ancak bu tek başına bir hüküm değildir.",
       "Dönen varlıklar ile kısa vadeli yükümlülükler arasındaki denge makul seviyede; nötr bir tablo sunar ve borç yapısıyla desteklenmelidir.",
+      "Cari oran dengeli bir bantta; kısa vadeli ödeme gücünde belirgin bir sıkışma görünmez, fakat bu seviye nakit döngüsüyle birlikte yorumlanmalıdır.",
+      "Kısa vadeli likidite göstergesi orta kuşakta; tek başına ayırt edici değildir, işletme sermayesi ve borç yapısıyla birlikte anlam kazanır.",
     ],
     yuksek: [
       "Cari oran 2'nin üzerinde; bu, kısa vadeli yükümlülükleri karşılama kapasitesinin görece rahat olabileceğine işaret eder. Yine de bunun atıl varlıktan mı yoksa güçlü işletme sermayesinden mi kaynaklandığı birlikte okunmalıdır.",
       "Kısa vadeli likidite tamponu geniş görünüyor; bu rahat bir tablo olsa da yüksek cari oran bazen verimsiz kullanılan varlıklara da işaret edebilir, nakit döngüsüyle değerlendirilmelidir.",
       "Şirketin kısa vadeli ödeme gücü göstergesi yüksek seviyede; bu tek başına bir sonuç değildir, borçluluk ve nakit akışıyla birlikte ele alınmalıdır.",
       "Dönen varlıklar kısa vadeli yükümlülüklerin belirgin biçimde üzerinde; bu gözlem likidite açısından rahatlık düşündürse de tek başına yeterli değildir.",
+      "Yüksek cari oran kısa vadeli ödeme gücü açısından rahat bir tablo sunar; ancak fazla yüksek seviyeler atıl tutulan varlıklara da işaret edebileceğinden nakit döngüsüyle okunmalıdır.",
+      "Kısa vadeli likidite tamponu geniş görünüyor; bunun güçlü işletme sermayesinden mi yoksa verimsiz kullanılan varlıklardan mı geldiği borçluluk yapısıyla birlikte değerlendirilmelidir.",
     ],
   },
 };
@@ -305,6 +347,8 @@ const NEGATIF_SABLONLAR: string[] = [
   "Oran negatif olduğundan seviye bazlı bir yorum yapılmadı; bu genelde dönemsel zarar veya tek seferlik giderlerle ilişkili olabilir ve sonraki dönemlerin eğilimiyle birlikte okunmalıdır.",
   "Negatif değer, bu dönem için zarar ya da tek seferlik bir etki ihtimaline işaret eder; bu tek başına kalıcı bir sonuç değildir, ilerleyen dönemlerle birlikte değerlendirilmelidir.",
   "Bu oran eksi bölgede; kâr tarafında dönemsel bir baskı veya olağandışı kalem söz konusu olabilir. Negatif bir oran tek başına anlam taşımadığından diğer mali verilerle birlikte ele alınmalıdır.",
+  "Oranın negatif çıkması, payda ya da paydaki kalemin bu dönem eksiye dönmesinden kaynaklanıyor olabilir; böyle durumlarda seviye yorumu anlamını yitirir ve nedeni ayrıca araştırılmalıdır.",
+  "Değer eksi bölgede; bu çoğu zaman dönemsel zarar veya olağandışı bir gider kalemiyle ilişkilidir ve kalıcı bir durum olup olmadığı sonraki dönem verileriyle birlikte okunmalıdır.",
 ];
 
 // Aşırı uç (çok yüksek) değer — dönemsel/tek seferlik etki içerebileceği için
@@ -314,6 +358,8 @@ const UC_SABLONLAR: string[] = [
   "Değer aşırı uç bir seviyeye ulaşmış; bu genellikle bölen kalemin (kâr, defter değeri vb.) dönemsel olarak küçülmesinden kaynaklanır ve oranı yanıltıcı hale getirebilir, bu nedenle tek başına anlamlı değildir.",
   "Bu dönem oran çok yüksek bir değer gösteriyor; tek seferlik etkiler ve dönemsel kalemler bu seviyeyi şişirmiş olabilir, sağlıklı bir okuma için sonraki dönem verileri beklenmelidir.",
   "Oran, anlamlı bir yorum üretmeyecek kadar uç bir seviyede; bu tür değerler dönemsel dalgalanmaları yansıtabildiğinden tek başına bir karar dayanağı oluşturmaz.",
+  "Değer alışılmadık ölçüde yüksek; çoğu zaman paydadaki kalemin (kâr, defter değeri vb.) geçici olarak küçülmesi oranı yukarı çeker, bu yüzden seviye yorumu yerine dikkat notu uygundur.",
+  "Bu seviye uç bir aralıkta; dönemsel ya da tek seferlik etkiler oranı şişirmiş olabileceğinden sağlıklı bir okuma için izleyen dönem verileri beklenmelidir.",
 ];
 
 // Büyüme/değişim oranları — pozitif/negatif çerçeve (nötr dil, kesin hüküm yok).
@@ -322,6 +368,8 @@ const BUYUME_POZITIF_SABLONLAR: string[] = [
   "Bu kalemde dönemsel bir yükseliş var; eğilimin sürüp sürmediği birkaç dönem üst üste izlenerek değerlendirilmelidir.",
   "Bir önceki döneme kıyasla pozitif bir değişim söz konusu; baz etkisi ve tek seferlik kalemler de göz önünde bulundurularak okunmalıdır.",
   "Değişim pozitif yönde; bu gözlem tek başına bir hüküm değil, gelir ve kâr eğilimiyle birlikte değerlendirilmesi gereken bir veridir.",
+  "İlgili kalemde yıllık bazda bir iyileşme görülüyor; bunun kalıcı bir eğilim mi yoksa düşük bir baz döneminin etkisi mi olduğu birkaç dönem üst üste izlenmelidir.",
+  "Bir önceki döneme göre artış var; tek seferlik kalemlerin ve baz etkisinin katkısı ayrıştırılmadan bu yükseliş tek başına yorumlanmamalıdır.",
 ];
 
 const BUYUME_NEGATIF_SABLONLAR: string[] = [
@@ -329,6 +377,8 @@ const BUYUME_NEGATIF_SABLONLAR: string[] = [
   "Bu kalemde dönemsel bir düşüş var; baz etkisi, sektörel koşullar ve tek seferlik kalemler birlikte değerlendirilmeden tek başına yorumlanmamalıdır.",
   "Bir önceki döneme kıyasla negatif bir değişim söz konusu; daralmanın kaynağı gelir tarafı mı maliyet tarafı mı, ayrıca incelenmelidir.",
   "Değişim negatif yönde; bu tek başına bir sonuç değildir, sonraki dönemlerin eğilimiyle birlikte okunması gereken bir gözlemdir.",
+  "İlgili kalemde yıllık bazda bir zayıflama görülüyor; bunun yüksek bir baz döneminden mi yoksa kalıcı bir daralmadan mı kaynaklandığı birkaç dönem boyunca izlenmelidir.",
+  "Bir önceki döneme göre gerileme var; daralmanın gelir tarafından mı yoksa maliyet baskısından mı geldiği ayrıştırılmadan tek başına sonuç çıkarılmamalıdır.",
 ];
 
 // ---- Çıktı tipi ------------------------------------------------------------

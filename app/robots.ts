@@ -27,6 +27,36 @@ export default function robots(): MetadataRoute.Robots {
           "/*dir=",
         ],
       },
+      // Yapay zeka eğitim/tarama botları ile agresif scraper'lar siteyi tümüyle
+      // tarayıp ciddi istek + ISR okuma maliyeti üretiyor; ziyaretçi veya reklam
+      // getirisi yok. Tamamen engelleniyorlar. DİKKAT: Googlebot, Bingbot,
+      // Applebot (arama), AdsBot-Google ve Mediapartners-Google (AdSense)
+      // burada YOK — yani arama sıralaması ve reklamlar etkilenmez.
+      {
+        userAgent: [
+          "GPTBot",
+          "ChatGPT-User",
+          "OAI-SearchBot",
+          "CCBot",
+          "ClaudeBot",
+          "Claude-Web",
+          "anthropic-ai",
+          "PerplexityBot",
+          "Google-Extended",
+          "Applebot-Extended",
+          "Bytespider",
+          "Amazonbot",
+          "meta-externalagent",
+          "FacebookBot",
+          "cohere-ai",
+          "Diffbot",
+          "ImagesiftBot",
+          "Omgilibot",
+          "YouBot",
+          "DataForSeoBot",
+        ],
+        disallow: "/",
+      },
     ],
     sitemap: [
       `${siteUrl}/sitemap.xml`,

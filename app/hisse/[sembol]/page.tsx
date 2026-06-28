@@ -63,6 +63,51 @@ function doluListe<T>(value?: T[] | null): value is T[] {
   return Array.isArray(value) && value.length > 0;
 }
 
+// temettuSermayeGecmisi iki farklı şemayla gelebiliyor:
+//   kanonik    : { yil, tur, tutarOran, aciklama }
+//   alternatif : { tarih, islem, oran }   (eski içe aktarımlardan kalan)
+// Şema uyuşmazlığı yüzünden alternatif şemalı satırlar tüm hücreleri BOŞ olarak
+// render ediliyordu (düşük-değer sinyali). Aşağıdaki normalize, iki şemayı tek
+// görünüme indirger ve tüm alanları boş olan satırları eler; böylece gerçek veri
+// görünür, boş "hayalet" satır hiç çıkmaz.
+type HamSermayeKaydi = Partial<{
+  yil: string;
+  tur: string;
+  tutarOran: string;
+  aciklama: string;
+  tarih: string;
+  islem: string;
+  oran: string;
+}>;
+
+type SermayeGecmisiSatiri = {
+  yil: string;
+  tur: string;
+  tutarOran: string;
+  aciklama: string;
+};
+
+function ilkDoluMetin(...adaylar: (string | undefined)[]): string {
+  for (const aday of adaylar) {
+    if (typeof aday === "string" && aday.trim().length > 0) return aday.trim();
+  }
+  return "";
+}
+
+function sermayeGecmisiNormalize(
+  kayitlar?: HamSermayeKaydi[] | null
+): SermayeGecmisiSatiri[] {
+  if (!Array.isArray(kayitlar)) return [];
+  return kayitlar
+    .map((k) => ({
+      yil: ilkDoluMetin(k.yil, k.tarih),
+      tur: ilkDoluMetin(k.tur, k.islem),
+      tutarOran: ilkDoluMetin(k.tutarOran, k.oran),
+      aciklama: ilkDoluMetin(k.aciklama),
+    }))
+    .filter((k) => k.yil || k.tur || k.tutarOran || k.aciklama);
+}
+
 export async function generateMetadata({
   params,
 }: {
@@ -317,6 +362,18 @@ export default async function HisseKunyePage({
 
   const temettuKayitlari = getTemettulerBySembol(hisse.kod);
   const kapKayitlari = getKapBySembol(hisse.kod);
+
+  // Boş hücreli satırlar elendikten sonra kalan gerçek sermaye/temettü geçmişi.
+  const sermayeGecmisi = sermayeGecmisiNormalize(
+    temettuSermayeGecmisi as HamSermayeKaydi[] | undefined
+  );
+  const temettuYorumVar = doluMetin(ozgunAnaliz?.temettuYorumu);
+  // "Temettü Geçmişi" bölümü yalnızca gösterilecek gerçek içerik varsa render
+  // edilir; veri yoksa başlık + "bulunmuyor" kutusu hiç çıkmaz.
+  const temettuBolumuVar =
+    temettuKayitlari.length > 0 ||
+    sermayeGecmisi.length > 0 ||
+    temettuYorumVar;
 
   const istiraklerdeSermayeVar = (istirakler ?? []).some((i) => i.sermaye);
 
@@ -696,9 +753,10 @@ export default async function HisseKunyePage({
 
             <TemelOranlarBolumu kod={hisse.kod} temelOranlar={temelOranlar} />
 
+            {temettuBolumuVar && (
             <section className="mt-8">
               <SectionBaslik>Temettü Geçmişi</SectionBaslik>
-              {temettuKayitlari.length > 0 ? (
+              {temettuKayitlari.length > 0 && (
                 <div className="overflow-x-auto rounded-xl border border-slate-200">
                   <table className="w-full min-w-[560px] text-left text-sm">
                     <thead className="bg-slate-50 text-xs uppercase tracking-wider text-slate-500">
@@ -744,14 +802,9 @@ export default async function HisseKunyePage({
                     </tbody>
                   </table>
                 </div>
-              ) : (
-                <div className="rounded-xl border border-dashed border-slate-300 bg-slate-50 px-4 py-6 text-center text-sm text-slate-500">
-                  Bu hisse için temettü kaydı bulunmuyor. Temettü takvimine
-                  eklendiğinde burada otomatik görünecektir.
-                </div>
               )}
 
-              {temettuSermayeGecmisi.length > 0 && (
+              {sermayeGecmisi.length > 0 && (
                 <div className="mt-5">
                   <h3 className="mb-2 text-sm font-bold text-slate-700">
                     Sermaye Artırımı ve Diğer Geçmiş
@@ -769,15 +822,15 @@ export default async function HisseKunyePage({
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-slate-100">
-                        {temettuSermayeGecmisi.map((kayit, i) => (
+                        {sermayeGecmisi.map((kayit, i) => (
                           <tr key={i} className="text-slate-700">
                             <td className="px-4 py-3 font-semibold text-slate-900">
-                              {kayit.yil}
+                              {kayit.yil || "—"}
                             </td>
-                            <td className="px-4 py-3">{kayit.tur}</td>
-                            <td className="px-4 py-3">{kayit.tutarOran}</td>
+                            <td className="px-4 py-3">{kayit.tur || "—"}</td>
+                            <td className="px-4 py-3">{kayit.tutarOran || "—"}</td>
                             <td className="px-4 py-3 text-slate-500">
-                              {kayit.aciklama}
+                              {kayit.aciklama || "—"}
                             </td>
                           </tr>
                         ))}
@@ -794,11 +847,12 @@ export default async function HisseKunyePage({
                 </div>
               )}
             </section>
+            )}
 
+            {kapKayitlari.length > 0 && (
             <section className="mt-8">
               <SectionBaslik>Önemli KAP Gelişmeleri</SectionBaslik>
-              {kapKayitlari.length > 0 ? (
-                <ul className="space-y-3">
+              <ul className="space-y-3">
                   {kapKayitlari.map((kayit, i) => (
                     <li
                       key={`${kayit.isoTarih}-${i}`}
@@ -838,12 +892,8 @@ export default async function HisseKunyePage({
                     </li>
                   ))}
                 </ul>
-              ) : (
-                <div className="rounded-xl border border-dashed border-slate-300 bg-slate-50 px-4 py-6 text-center text-sm text-slate-500">
-                  Bu hisse için etiketlenmiş KAP gelişmesi bulunmuyor.
-                </div>
-              )}
             </section>
+            )}
 
             {seoSorular.length > 0 && (
               <section className="mt-8">

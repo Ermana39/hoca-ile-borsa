@@ -25,10 +25,19 @@ export async function generateMetadata({
   const { slug } = await params;
   const veri = halkaArzGetir(slug);
   if (!veri) return {};
+  // Indeksleme ayarı JSON'daki seo.robots'tan okunur; alan yoksa varsayılan
+  // index,follow (kök layout ile aynı). Böylece taslak sayfalar da aramada
+  // görünür ve davranış tek kaynaktan (JSON) yönetilir.
+  const robotsSeo = veri.seo?.robots;
+  const robots = {
+    index: robotsSeo?.index ?? true,
+    follow: robotsSeo?.follow ?? true,
+  };
   if (veri.seo?.contentStatus === "onayli") {
     return {
       title: veri.baslikMeta.title,
       description: veri.baslikMeta.description,
+      robots,
       alternates: {
         canonical:
           veri.seo.canonical ||
@@ -39,6 +48,7 @@ export async function generateMetadata({
   return {
     title: veri.baslikMeta.title,
     description: veri.baslikMeta.description,
+    robots,
   };
 }
 
