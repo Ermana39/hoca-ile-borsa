@@ -1,6 +1,8 @@
 import crypto from "crypto";
 import { revalidatePath, revalidateTag } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
+import { newsItems } from "@/app/data/news";
+import { HABER_KATEGORILERI } from "@/lib/haber-kategorileri";
 
 // Gizli anahtarları zamanlama saldırılarına karşı sabit sürede karşılaştırır.
 function safeEqual(a: string, b: string) {
@@ -95,8 +97,20 @@ export async function POST(request: NextRequest) {
 
   if (scope === "haberler" || scope === "all") {
     revalidateTag("haberler", "max");
-    revalidatePath("/");
-    revalidated.push("/");
+    const haberPaths = [
+      "/",
+      "/haberler",
+      "/news-sitemap.xml",
+      ...newsItems.map((item) => item.href),
+      ...HABER_KATEGORILERI.map(
+        (kategori) => `/haberler/kategori/${kategori.slug}`
+      ),
+    ];
+
+    for (const p of haberPaths) {
+      revalidatePath(p);
+      revalidated.push(p);
+    }
   }
 
   return NextResponse.json({ revalidated: true, scope, paths: revalidated });

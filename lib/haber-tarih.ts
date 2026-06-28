@@ -1,6 +1,5 @@
 import "server-only";
 
-import { execFileSync } from "node:child_process";
 import { statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
@@ -29,38 +28,9 @@ function toSiteIso(date: Date) {
 }
 
 function getDosyaZamani(filePath: string) {
-  const gitTarihi = getGitEklenmeTarihi(filePath);
-  if (gitTarihi) return gitTarihi;
-
   const stat = statSync(filePath);
   const created = stat.birthtimeMs > 0 ? stat.birthtime : undefined;
   return toSiteIso(created ?? stat.mtime);
-}
-
-function getGitEklenmeTarihi(filePath: string) {
-  const cwd = process.cwd();
-  const relativePath = path.relative(cwd, filePath);
-
-  if (relativePath.startsWith("..")) return undefined;
-
-  try {
-    const output = execFileSync(
-      "git",
-      ["log", "--diff-filter=A", "--follow", "--format=%aI", "--", relativePath],
-      {
-        cwd,
-        encoding: "utf8",
-        stdio: ["ignore", "pipe", "ignore"],
-      }
-    )
-      .trim()
-      .split(/\r?\n/)
-      .find(Boolean);
-
-    return output ? toSiteIso(new Date(output)) : undefined;
-  } catch {
-    return undefined;
-  }
 }
 
 export function getHaberDosyaTarihi(importMetaUrl: string) {
