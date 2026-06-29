@@ -23,12 +23,22 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1050,
+    title: "GRTHO’dan %950 Bedelsiz Sermaye Artırımı İçin SPK Başvurusu",
+    href: "/haber/grtho-950-bedelsiz-sermaye-artirimi-spk-basvurusu",
+    image: "/grtho-950-bedelsiz-sermaye-artirimi-spk-basvurusu.webp",
+    alt: "GRTHO yüzde 950 bedelsiz sermaye artırımı için SPK başvurusu",
+    publishedAt: "2026-06-29",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["GRTHO"],
+  },
+  {
     id: 1049,
     title: "GOODY Bedelsiz Pay Alma Hakkı 2 Temmuz’da Başlıyor",
     href: "/haber/goody-bedelsiz-pay-alma-hakki-2-temmuzda-basliyor",
     image: "/goody-bedelsiz-pay-alma-hakki-2-temmuzda-basliyor.webp",
     alt: "GOODY bedelsiz pay alma hakkı 2 Temmuz 2026 tarihinde başlıyor",
-    publishedAt: "auto",
+    publishedAt: "2026-06-29",
     category: "sermaye-artirimi",
     ilgiliHisseler: ["GOODY"],
   },
@@ -38,7 +48,7 @@ export const newsItems: NewsItem[] = [
     href: "/haber/yeotk-zambiya-ikinci-faz-ges-yatirimi",
     image: "/yeotk-zambiya-ikinci-faz-ges-yatirimi.webp",
     alt: "YEOTK Zambiya ikinci faz güneş enerjisi yatırımı",
-    publishedAt: "auto",
+    publishedAt: "2026-06-29",
     category: "sirket-haberleri",
     ilgiliHisseler: ["YEOTK"],
   },
