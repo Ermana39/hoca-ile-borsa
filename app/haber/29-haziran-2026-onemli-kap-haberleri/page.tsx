@@ -18,6 +18,7 @@ export const metadata: Metadata = {
     canonical:
       "https://www.hocaileborsa.com/haber/29-haziran-2026-onemli-kap-haberleri",
   },
+  openGraph: {
     type: "article",
     images: [
       {
