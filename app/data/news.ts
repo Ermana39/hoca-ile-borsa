@@ -23,6 +23,26 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1049,
+    title: "GOODY Bedelsiz Pay Alma Hakkı 2 Temmuz’da Başlıyor",
+    href: "/haber/goody-bedelsiz-pay-alma-hakki-2-temmuzda-basliyor",
+    image: "/goody-bedelsiz-pay-alma-hakki-2-temmuzda-basliyor.webp",
+    alt: "GOODY bedelsiz pay alma hakkı 2 Temmuz 2026 tarihinde başlıyor",
+    publishedAt: "2026-06-29",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["GOODY"],
+  },
+  {
+    id: 1048,
+    title: "YEOTK Zambiya’da İkinci Faz GES Yatırımı İçin Ön Anlaşma İmzaladı",
+    href: "/haber/yeotk-zambiya-ikinci-faz-ges-yatirimi",
+    image: "/yeotk-zambiya-ikinci-faz-ges-yatirimi.webp",
+    alt: "YEOTK Zambiya ikinci faz güneş enerjisi yatırımı",
+    publishedAt: "2026-06-29",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["YEOTK"],
+  },
+  {
     id: 1047,
     title: "Beta Enerji Halka Arzında Talep Oranı Açıklandı",
     href: "/haber/beta-enerji-halka-arz-talep-orani-dagitim-sonuclari",
