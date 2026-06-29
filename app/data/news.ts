@@ -23,6 +23,26 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1052,
+    title: "29 Haziran 2026 Pazartesi Önemli KAP Haberleri",
+    href: "/haber/29-haziran-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "29 Haziran 2026 Pazartesi Önemli KAP Haberleri",
+    publishedAt: "2026-06-29",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["KRVGD", "YEOTK", "IHLGM", "OYAYO", "GRNYO", "DOFER", "GOODY", "GRTHO", "OFSYM", "TARFN", "PRKME", "TRALT", "TRMET", "TRENJ", "OZRDN", "BRKO", "TSPOR", "EKGYO", "ALCTL"],
+  },
+  {
+    id: 1051,
+    title: "EKGYO Halkalı Batı 1. Etap İhalesinde En Yüksek Teklif Açıklandı",
+    href: "/haber/ekgyo-halkali-bati-1-etap-ihalesi-2-oturum-sonucu",
+    image: "/ekgyo-halkali-bati-1-etap-ihalesi-2-oturum-sonucu.webp",
+    alt: "EKGYO Halkalı Batı 1. Etap ihalesi 2. oturum sonucu",
+    publishedAt: "2026-06-29",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["EKGYO"],
+  },
+  {
     id: 1050,
     title: "GRTHO’dan %950 Bedelsiz Sermaye Artırımı İçin SPK Başvurusu",
     href: "/haber/grtho-950-bedelsiz-sermaye-artirimi-spk-basvurusu",
