@@ -43,35 +43,53 @@ function readDates() {
 }
 
 const source = readFileSync(newsFile, "utf8");
-const matches = source.matchAll(
-  /href:\s*"(?<href>\/haber\/[^"]+)"[\s\S]*?publishedAt:\s*"auto"/g
-);
+function getNewsBlocks(value) {
+  const blocks = [];
+  const lines = value.slice(value.indexOf("export const newsItems")).split(/\r?\n/);
+  let current = [];
+
+  for (const line of lines) {
+    if (/^\s{2}\{\s*$/.test(line)) {
+      current = [line];
+      continue;
+    }
+
+    if (current.length === 0) continue;
+
+    current.push(line);
+
+    if (/^\s{2}\},\s*$/.test(line)) {
+      blocks.push(current.join("\n"));
+      current = [];
+    }
+  }
+
+  return blocks;
+}
+
+const blocks = getNewsBlocks(source);
 
 const dates = readDates();
 let changed = false;
-const missing = [];
+const autoHrefs = new Set();
 
-for (const match of matches) {
-  const href = match.groups?.href;
-  if (!href || dates[href]) continue;
+for (const block of blocks) {
+  if (!/publishedAt:\s*"auto"/.test(block)) continue;
 
-  if (process.env.CI || process.env.VERCEL) {
-    missing.push(href);
-    continue;
-  }
+  const href = block.match(/href:\s*"(?<href>\/haber\/[^"]+)"/)?.groups?.href;
+  if (!href) continue;
+
+  autoHrefs.add(href);
+  if (dates[href]) continue;
 
   dates[href] = getFileTime(href);
   changed = true;
 }
 
-if (missing.length > 0) {
-  throw new Error(
-    [
-      "Eksik otomatik haber tarihi var.",
-      "Deploy'dan once yerelde `npm run news-dates` calistirip app/data/haber-tarihleri.generated.json dosyasini commit edin.",
-      ...missing.map((href) => `- ${href}`),
-    ].join("\n")
-  );
+for (const href of Object.keys(dates)) {
+  if (autoHrefs.has(href)) continue;
+  delete dates[href];
+  changed = true;
 }
 
 if (changed) {

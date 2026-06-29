@@ -4,6 +4,16 @@ import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
 import HaberNavigasyon from "@/components/HaberNavigasyon";
+import { formatHaberTarihi, getHaberDosyaTarihi } from "@/lib/haber-tarih";
+
+const haberSaati = getHaberDosyaTarihi(import.meta.url);
+const haberTarihi = formatHaberTarihi(haberSaati);
+const haberKisaTarihi = new Intl.DateTimeFormat("tr-TR", {
+  timeZone: "Europe/Istanbul",
+  day: "2-digit",
+  month: "2-digit",
+  year: "numeric",
+}).format(new Date(haberSaati));
 
 export const metadata: Metadata = {
   title: "YEOTK Zambiya’da İkinci Faz GES Yatırımı İçin Ön Anlaşma İmzaladı",
@@ -65,7 +75,7 @@ export default function YeotkZambiyaIkinciFazGesYatirimiPage() {
                 YEOTK Zambiya’da İkinci Faz GES Yatırımı İçin Ön Anlaşma İmzaladı
               </h1>
               <p className="mt-2 text-sm text-zinc-500">
-                29.06.2026 ·{" "}
+                <time dateTime={haberSaati}>{haberTarihi}</time> ·{" "}
                 <Link
                   href="/yazar/erman-hoca"
                   className="font-semibold text-slate-600 hover:text-blue-600"
@@ -274,7 +284,7 @@ export default function YeotkZambiyaIkinciFazGesYatirimiPage() {
             </div>
 
             <p className="mt-6 text-sm text-zinc-400">
-              29.06.2026 – Bu içerik bilgilendirme amaçlıdır, yatırım tavsiyesi
+              {haberKisaTarihi} – Bu içerik bilgilendirme amaçlıdır, yatırım tavsiyesi
               değildir.
             </p>
 

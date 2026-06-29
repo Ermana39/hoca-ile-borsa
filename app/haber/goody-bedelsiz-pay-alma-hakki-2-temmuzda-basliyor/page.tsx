@@ -4,6 +4,10 @@ import type { Metadata } from "next";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
 import HaberNavigasyon from "@/components/HaberNavigasyon";
+import { formatHaberTarihi, getHaberDosyaTarihi } from "@/lib/haber-tarih";
+
+const haberSaati = getHaberDosyaTarihi(import.meta.url);
+const haberTarihi = formatHaberTarihi(haberSaati);
 
 export const metadata: Metadata = {
   title: "GOODY Bedelsiz Pay Alma Hakkı 2 Temmuz’da Başlıyor",
@@ -65,7 +69,7 @@ export default function GoodyBedelsizPayAlmaHakkiPage() {
                 GOODY Bedelsiz Pay Alma Hakkı 2 Temmuz’da Başlıyor
               </h1>
               <p className="mt-2 text-sm text-zinc-500">
-                29.06.2026 ·{" "}
+                <time dateTime={haberSaati}>{haberTarihi}</time> ·{" "}
                 <Link
                   href="/yazar/erman-hoca"
                   className="font-semibold text-slate-600 hover:text-blue-600"
