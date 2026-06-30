@@ -23,6 +23,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1057,
+    title: "30 Haziran 2026 Salı Önemli KAP Haberleri",
+    href: "/haber/30-haziran-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "30 Haziran 2026 Salı Önemli KAP Haberleri",
+    publishedAt: "2026-06-30",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["KAREL", "KMPUR", "ALTNY", "ASELS", "FONET", "OZYSR", "ALCTL", "BMSTL"],
+  },
+  {
     id: 1056,
     title: "FONET Aydın İl Sağlık Müdürlüğü SBYS İhalesinde En Uygun Teklifi Verdi",
     href: "/haber/fonet-aydin-il-saglik-mudurlugu-sbys-ihalesi",
