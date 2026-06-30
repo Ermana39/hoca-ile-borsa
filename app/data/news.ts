@@ -23,6 +23,36 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1055,
+    title: "ASELSAN 40 Milyon Dolarlık Yeni Üretim ve Test Merkezlerini Devreye Aldı",
+    href: "/haber/asels-akilli-muhimmat-sualti-sistemleri-yeni-tesis",
+    image: "/asels-akilli-muhimmat-sualti-sistemleri-yeni-tesis.webp",
+    alt: "ASELSAN akıllı mühimmat ve sualtı sistemleri üretim test merkezleri",
+    publishedAt: "2026-06-30",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["ASELS"],
+  },
+  {
+    id: 1054,
+    title: "ALTNY Bağlı Ortaklığı TAAC Havacılık’tan 13,2 Milyon Dolarlık Sözleşme",
+    href: "/haber/altny-taac-havacilik-13-2-milyon-dolar-sozlesme",
+    image: "/altny-taac-havacilik-13-2-milyon-dolar-sozlesme.webp",
+    alt: "ALTNY TAAC Havacılık 13,2 milyon dolarlık sözleşme",
+    publishedAt: "2026-06-30",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["ALTNY"],
+  },
+  {
+    id: 1053,
+    title: "KAREL Bağlı Ortaklığı Daiichi’den 100 Milyon Dolarlık Proje Nominasyonu",
+    href: "/haber/karel-daiichi-100-milyon-dolar-oem-proje-nominasyonu",
+    image: "/karel-daiichi-100-milyon-dolar-oem-proje-nominasyonu.webp",
+    alt: "KAREL Daiichi 100 milyon dolarlık OEM proje nominasyonu",
+    publishedAt: "2026-06-30",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["KAREL"],
+  },
+  {
     id: 1052,
     title: "29 Haziran 2026 Pazartesi Önemli KAP Haberleri",
     href: "/haber/29-haziran-2026-onemli-kap-haberleri",
