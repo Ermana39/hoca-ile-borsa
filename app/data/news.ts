@@ -23,6 +23,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1056,
+    title: "FONET Aydın İl Sağlık Müdürlüğü SBYS İhalesinde En Uygun Teklifi Verdi",
+    href: "/haber/fonet-aydin-il-saglik-mudurlugu-sbys-ihalesi",
+    image: "/fonet-aydin-il-saglik-mudurlugu-sbys-ihalesi.webp",
+    alt: "FONET Aydın İl Sağlık Müdürlüğü SBYS ihalesinde en uygun teklif",
+    publishedAt: "2026-06-30",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["FONET"],
+  },
+  {
     id: 1055,
     title: "ASELSAN 40 Milyon Dolarlık Yeni Üretim ve Test Merkezlerini Devreye Aldı",
     href: "/haber/asels-akilli-muhimmat-sualti-sistemleri-yeni-tesis",
