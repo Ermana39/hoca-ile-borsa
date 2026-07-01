@@ -19,20 +19,20 @@ export const metadata: Metadata = {
 };
 
 const rows: FonEtkiRow[] = [
-  { sembol: "DSTKF", fonOrani: 16.41, kapanisMarji: 2.04, etki: 0.3351 },
-  { sembol: "OZATD", fonOrani: 15.9, kapanisMarji: -2.49, etki: -0.3963 },
-  { sembol: "TERA", fonOrani: 10.65, kapanisMarji: 7.60, etki: 0.8093 },
-  { sembol: "PEKGY", fonOrani: 9.16, kapanisMarji: -0.14, etki: -0.0131 },
-  { sembol: "TRHOL", fonOrani: 6.11, kapanisMarji: 4.30, etki: 0.2628 },
-  { sembol: "TEHOL", fonOrani: 5.1, kapanisMarji: 0.81, etki: 0.0411 },
-  { sembol: "ANELE", fonOrani: 1.99, kapanisMarji: 3.14, etki: 0.0625 },
-  { sembol: "ALKLC", fonOrani: 0.61, kapanisMarji: -1.60, etki: -0.0098 },
-  { sembol: "SVGYO", fonOrani: 0.51, kapanisMarji: 1.94, etki: 0.0099 },
-  { sembol: "TMPOL", fonOrani: 0.31, kapanisMarji: -2.86, etki: -0.0089 },
-  { sembol: "HEDEF", fonOrani: 0.26, kapanisMarji: 0.46, etki: 0.0012 },
-  { sembol: "CWENE", fonOrani: 0.03, kapanisMarji: 4.17, etki: 0.0013 },
-  { sembol: "EUPWR", fonOrani: 0.03, kapanisMarji: 3.52, etki: 0.0011 },
-  { sembol: "TPKGY", fonOrani: 11.3, kapanisMarji: -4.00, etki: -0.4520 },
+  { sembol: "DSTKF", fonOrani: 16.41, kapanisMarji: 3.52, etki: 0.5776 },
+  { sembol: "OZATD", fonOrani: 15.9, kapanisMarji: 3.49, etki: 0.5551 },
+  { sembol: "TERA", fonOrani: 10.65, kapanisMarji: 1.30, etki: 0.1384 },
+  { sembol: "PEKGY", fonOrani: 9.16, kapanisMarji: 1.07, etki: 0.0984 },
+  { sembol: "TRHOL", fonOrani: 6.11, kapanisMarji: -1.92, etki: -0.1171 },
+  { sembol: "TEHOL", fonOrani: 5.1, kapanisMarji: 1.87, etki: 0.0952 },
+  { sembol: "ANELE", fonOrani: 1.99, kapanisMarji: -0.96, etki: -0.0190 },
+  { sembol: "ALKLC", fonOrani: 0.61, kapanisMarji: 1.04, etki: 0.0063 },
+  { sembol: "SVGYO", fonOrani: 0.51, kapanisMarji: 2.18, etki: 0.0111 },
+  { sembol: "TMPOL", fonOrani: 0.31, kapanisMarji: 5.94, etki: 0.0184 },
+  { sembol: "HEDEF", fonOrani: 0.26, kapanisMarji: 0.52, etki: 0.0013 },
+  { sembol: "CWENE", fonOrani: 0.03, kapanisMarji: 2.37, etki: 0.0007 },
+  { sembol: "EUPWR", fonOrani: 0.03, kapanisMarji: 1.49, etki: 0.0004 },
+  { sembol: "TPKGY", fonOrani: 11.3, kapanisMarji: 0.33, etki: 0.0373 },
 ];
 
 export default function TlyEtkiAnaliziPage() {
@@ -44,8 +44,8 @@ export default function TlyEtkiAnaliziPage() {
       slug="tly"
       rows={rows}
       toplamFonOrani={78.37}
-      toplamEtki={0.64}
-      sonGuncelleme="30 Haziran 2026"
+      toplamEtki={1.40}
+      sonGuncelleme="1 Temmuz 2026"
     />
   );
 }

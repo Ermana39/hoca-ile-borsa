@@ -1,7 +1,7 @@
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getHisse, getTumHisseSembolleri } from "@/lib/hisseler";
+import { getHisse, getTumHisseSembolleri, hisseVarMi } from "@/lib/hisseler";
 import { getTemelOranlar } from "@/lib/temel-oranlar";
 import { getHisseLogo } from "@/lib/hisse-logolar";
 import { getTemettulerBySembol } from "@/lib/temettuler";
@@ -920,30 +920,48 @@ export default async function HisseKunyePage({
               <section className="mt-8">
                 <SectionBaslik>Benzer Şirketler</SectionBaslik>
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  {benzerSirketler.map((item, i) => (
-                    <div
-                      key={`${item.kod || item.ad}-${i}`}
-                      className="rounded-xl border border-slate-200 bg-white p-4"
-                    >
-                      <div className="flex items-center gap-2">
-                        {item.kod && (
-                          <span className="rounded-md bg-blue-50 px-2 py-1 text-xs font-bold text-blue-700 ring-1 ring-inset ring-blue-600/20">
-                            {item.kod}
-                          </span>
+                  {benzerSirketler.map((item, i) => {
+                    const tiklanabilir = doluMetin(item.kod) && hisseVarMi(item.kod);
+                    const icerik = (
+                      <>
+                        <div className="flex items-center gap-2">
+                          {item.kod && (
+                            <span className="rounded-md bg-blue-50 px-2 py-1 text-xs font-bold text-blue-700 ring-1 ring-inset ring-blue-600/20">
+                              {item.kod}
+                            </span>
+                          )}
+                          {item.ad && (
+                            <h3 className="text-sm font-bold text-slate-900">
+                              {item.ad}
+                            </h3>
+                          )}
+                        </div>
+                        {item.aciklama && (
+                          <p className="mt-2 text-sm leading-6 text-slate-600">
+                            {item.aciklama}
+                          </p>
                         )}
-                        {item.ad && (
-                          <h3 className="text-sm font-bold text-slate-900">
-                            {item.ad}
-                          </h3>
-                        )}
+                      </>
+                    );
+
+                    return tiklanabilir ? (
+                      <Link
+                        key={`${item.kod || item.ad}-${i}`}
+                        href={`/hisse/${item.kod!.toLowerCase()}`}
+                        prefetch={false}
+                        className="group rounded-xl border border-slate-200 bg-white p-4 transition hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-sm"
+                      >
+                        {icerik}
+                      </Link>
+                    ) : (
+                      <div
+                        key={`${item.kod || item.ad}-${i}`}
+                        className="rounded-xl border border-slate-200 bg-white p-4"
+                      >
+                        {icerik}
                       </div>
-                      {item.aciklama && (
-                        <p className="mt-2 text-sm leading-6 text-slate-600">
-                          {item.aciklama}
-                        </p>
-                      )}
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </section>
             )}

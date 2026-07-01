@@ -4,6 +4,7 @@ import {
   getIlgiliHaberler,
   getHaberIlgiliHisseler,
 } from "@/lib/haberler";
+import { getEnGuncelGunlukOzet } from "@/lib/gunluk-ozet";
 import HaberKategoriEtiketi from "@/components/HaberKategoriEtiketi";
 import HaberIlgiliHaberler from "@/components/HaberIlgiliHaberler";
 import HisseLink from "@/components/HisseLink";
@@ -59,6 +60,31 @@ function haberBasligi(href: string) {
   return getAllNews().find((item) => item.href === href)?.title || "";
 }
 
+// getAllNews() en yeniden en eskiye sıralı döner; ilk eşleşme en güncel olanıdır.
+function enGuncelKapHaberi(haricHref?: string): RelatedContentItem | null {
+  const item = getAllNews().find(
+    (n) => n.category === "kap-bildirimleri" && n.href !== haricHref
+  );
+  if (!item) return null;
+  return {
+    title: item.title,
+    href: item.href,
+    description: "Borsa İstanbul'da öne çıkan güncel şirket bildirimleri.",
+    type: "KAP",
+  };
+}
+
+function enGuncelGunlukOzetLinki(): RelatedContentItem | null {
+  const ozet = getEnGuncelGunlukOzet();
+  if (!ozet) return null;
+  return {
+    title: `${ozet.tarihGosterim} borsa gündemi ve günlük piyasa özeti`,
+    href: `/borsa/gunluk-borsa-ozeti/${ozet.slug}`,
+    description: "Endeks, yükselenler, düşenler ve para girişi olan hisseler.",
+    type: "Günlük özet",
+  };
+}
+
 function halkaArzOzelLinkleri(href: string, title: string) {
   const metin = `${href} ${title}`.toLocaleLowerCase("tr");
   return HALKA_ARZ_LINKLERI.find((grup) =>
@@ -105,18 +131,12 @@ function relatedItems(href: string, kategori?: string): RelatedContentItem[] {
     });
   }
 
-  items.set("/haber/23-haziran-2026-onemli-kap-haberleri", {
-    title: "Günün önemli KAP haberleri",
-    href: "/haber/23-haziran-2026-onemli-kap-haberleri",
-    description: "Borsa İstanbul'da öne çıkan güncel şirket bildirimleri.",
-    type: "KAP",
-  });
-  items.set("/borsa/gunluk-borsa-ozeti/23-haziran-2026", {
-    title: "Borsa gündemi ve günlük piyasa özeti",
-    href: "/borsa/gunluk-borsa-ozeti/23-haziran-2026",
-    description: "Endeks, yükselenler, düşenler ve para girişi olan hisseler.",
-    type: "Günlük özet",
-  });
+  const kapItem = enGuncelKapHaberi(href);
+  if (kapItem) items.set(kapItem.href, kapItem);
+
+  const ozetItem = enGuncelGunlukOzetLinki();
+  if (ozetItem) items.set(ozetItem.href, ozetItem);
+
   items.set("/haberler", {
     title: "Güncel borsa haberleri",
     href: "/haberler",
@@ -131,7 +151,7 @@ function ctaMetni(kategori?: string, href?: string) {
   if (kategori === "kap-bildirimleri" || href?.includes("kap")) {
     return {
       text: "Günün öne çıkan diğer KAP bildirimleri için önemli KAP haberleri sayfasını inceleyebilirsiniz.",
-      href: "/haber/23-haziran-2026-onemli-kap-haberleri",
+      href: enGuncelKapHaberi(href)?.href ?? "/haberler/kategori/kap-bildirimleri",
       label: "Önemli KAP haberlerine git",
     };
   }
