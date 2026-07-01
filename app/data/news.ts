@@ -23,6 +23,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1069,
+    title: "SPK 2 Yeni Halka Arz Onayı Verdi",
+    href: "/haber/spk-2-yeni-halka-arz-onayi",
+    image: "/spk-2-yeni-halka-arz-onayi.webp",
+    alt: "SPK 2 yeni halka arz onayı Şa-Ra Enerji ve Saat ve Saat",
+    publishedAt: "2026-07-01",
+    category: "halka-arz",
+    ilgiliHisseler: ["SARAE", "SAAT"],
+  },
+  {
     id: 1068,
     title: "1 Temmuz 2026 Çarşamba Önemli KAP Haberleri",
     href: "/haber/1-temmuz-2026-onemli-kap-haberleri",
