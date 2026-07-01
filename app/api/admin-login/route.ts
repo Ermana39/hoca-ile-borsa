@@ -1,3 +1,4 @@
+import crypto from "node:crypto";
 import { NextRequest, NextResponse } from "next/server";
 import {
   clearLoginAttempts,
@@ -7,6 +8,15 @@ import {
 } from "@/lib/page-stats";
 import { isSameOriginRequest } from "@/lib/request-security";
 import { addSecurityLog } from "@/lib/security-log";
+
+// Şifreleri sabit uzunluklu hash'e indirgeyip timingSafeEqual ile karşılaştırır;
+// düz "!==" karşılaştırması, doğru karakter sayısını byte-byte zamanlama
+// farkıyla sızdırabilir (timing attack).
+function sifreEslesiyorMu(girilen: string, gercek: string) {
+  const a = crypto.createHash("sha256").update(girilen).digest();
+  const b = crypto.createHash("sha256").update(gercek).digest();
+  return crypto.timingSafeEqual(a, b);
+}
 
 function getClientIp(request: NextRequest) {
   const forwardedFor = request.headers.get("x-forwarded-for");
@@ -52,7 +62,7 @@ export async function POST(request: NextRequest) {
     const password = String(body?.password || "");
     const realPassword = process.env.STATS_ADMIN_PASSWORD || "";
 
-    if (!realPassword || password !== realPassword) {
+    if (!realPassword || !sifreEslesiyorMu(password, realPassword)) {
       registerFailedLogin(ip);
       addSecurityLog("admin_login_failed", ip, "Hatalı şifre");
 
