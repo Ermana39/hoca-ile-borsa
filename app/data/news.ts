@@ -23,6 +23,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1058,
+    title: "TABGD’de ELQ Investors’tan Hızlandırılmış Talep Toplama Süreci",
+    href: "/haber/tabgd-elq-investors-hizlandirilmis-talep-toplama",
+    image: "/tabgd-elq-investors-hizlandirilmis-talep-toplama.webp",
+    alt: "TABGD ELQ Investors hızlandırılmış talep toplama süreci",
+    publishedAt: "2026-07-01",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["TABGD"],
+  },
+  {
     id: 1057,
     title: "30 Haziran 2026 Salı Önemli KAP Haberleri",
     href: "/haber/30-haziran-2026-onemli-kap-haberleri",
