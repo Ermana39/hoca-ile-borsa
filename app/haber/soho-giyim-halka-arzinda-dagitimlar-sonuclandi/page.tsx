@@ -12,7 +12,7 @@ const haberTarihi = formatHaberTarihi(haberSaati);
 export const metadata: Metadata = {
   title: "SOHO Giyim Halka Arzında Dağıtımlar Sonuçlandı",
   description:
-    "SOHO Giyim halka arzında dağıtımlar tamamlandı. En yüksek 90.000 lot alan yatırımcı bulunurken, gözler Golda Gıda halka arzındaki talep sayılarına çevrildi.",
+    "SOHO Giyim halka arzında dağıtımlar tamamlandı. En yüksek 390.085 lot alan yatırımcı bulunurken, gözler Golda Gıda halka arzındaki talep sayılarına çevrildi.",
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/soho-giyim-halka-arzinda-dagitimlar-sonuclandi",
@@ -82,7 +82,7 @@ export default function SohoGiyimHalkaArzindaDagitimlarSonuclandiPage() {
             <div className="mt-5 space-y-5 text-base leading-8 text-zinc-700 md:text-lg">
               <p>
                 SOHO Giyim halka arzında dağıtım sonuçları netleşti. Tamamen eşit
-                dağıtım yöntemiyle gerçekleşen halka arzda en yüksek 90.000 adet
+                dağıtım yöntemiyle gerçekleşen halka arzda en yüksek 390.085 adet
                 lot alan yatırımcı bulunması, dağıtım dinamiği açısından dikkat
                 çekti.
               </p>
@@ -101,7 +101,7 @@ export default function SohoGiyimHalkaArzindaDagitimlarSonuclandiPage() {
                 </h2>
                 <p>
                   SOHO Giyim halka arzında dağıtımlar sonuçlandı. Halka arzda en
-                  yüksek 90.000 adet lot alan yatırımcı olduğu görüldü.
+                  yüksek 390.085 adet lot alan yatırımcı olduğu görüldü.
                 </p>
                 <p>
                   Bu veri, özellikle yüksek tutarlı başvuru yapan yatırımcıların
@@ -132,10 +132,10 @@ export default function SohoGiyimHalkaArzindaDagitimlarSonuclandiPage() {
 
               <section className="space-y-3">
                 <h2 className="text-xl font-bold text-zinc-900 md:text-2xl">
-                  90.000 lot detayı neden önemli?
+                  390.085 lot detayı neden önemli?
                 </h2>
                 <p>
-                  SOHO Giyim halka arzında en yüksek 90.000 lot alan yatırımcı
+                  SOHO Giyim halka arzında en yüksek 390.085 lot alan yatırımcı
                   bulunması, dağıtımın üst sınır tarafında nasıl şekillendiğini
                   göstermesi açısından önemli. Bu rakam, özellikle yüksek lot
                   başvurusu yapan yatırımcıların halka arz sonucunda ne kadar pay
@@ -195,7 +195,7 @@ export default function SohoGiyimHalkaArzindaDagitimlarSonuclandiPage() {
                 <p>
                   SOHO Giyim halka arzında dağıtımların tamamlanması, sadece bu
                   halka arz için değil, aynı yöntemle yapılacak diğer halka arzlar
-                  için de önemli bir gösterge oluşturdu. En yüksek 90.000 lot
+                  için de önemli bir gösterge oluşturdu. En yüksek 390.085 lot
                   dağıtımı, yüksek başvuru yapan yatırımcıların alabileceği pay
                   miktarı açısından dikkat çeken bir veri olarak öne çıktı.
                 </p>
@@ -238,7 +238,7 @@ export default function SohoGiyimHalkaArzindaDagitimlarSonuclandiPage() {
                 Haber özeti:
               </p>
               <p className="mt-2 text-sm leading-7 text-blue-800 md:text-base">
-                SOHO Giyim halka arzında dağıtımlar sonuçlandı. En yüksek 90.000
+                SOHO Giyim halka arzında dağıtımlar sonuçlandı. En yüksek 390.085
                 lot alan yatırımcı bulunurken, tamamen eşit dağıtım yöntemi nedeniyle
                 gözler Golda Gıda halka arzındaki güncel talep sayılarına çevrildi.
               </p>
