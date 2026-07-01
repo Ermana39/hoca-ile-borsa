@@ -23,6 +23,26 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1063,
+    title: "SOHO Giyim Halka Arzında Dağıtımlar Sonuçlandı",
+    href: "/haber/soho-giyim-halka-arzinda-dagitimlar-sonuclandi",
+    image: "/soho-giyim-halka-arzinda-dagitimlar-sonuclandi.webp",
+    alt: "SOHO Giyim halka arzında dağıtımlar sonuçlandı",
+    publishedAt: "2026-07-01",
+    category: "halka-arz",
+    ilgiliHisseler: ["SOHOE"],
+  },
+  {
+    id: 1062,
+    title: "BETAE İlk İşlem Gününü Tavan Fiyatla Kapattı",
+    href: "/haber/beta-enerji-ve-teknoloji-ilk-islem-gununu-tavan-fiyatla-kapatti",
+    image: "/beta-enerji-ve-teknoloji-ilk-islem-gununu-tavan-fiyatla-kapatti.webp",
+    alt: "Beta Enerji ve Teknoloji ilk işlem gününü tavan fiyatla kapattı",
+    publishedAt: "2026-07-01",
+    category: "halka-arz",
+    ilgiliHisseler: ["BETAE"],
+  },
+  {
     id: 1061,
     title: "ISGSY’de %487,89748 Bedelsiz Sermaye Artırımı Hak Kullanım Tarihi Açıklandı",
     href: "/haber/isgsy-487-bedelsiz-sermaye-artirimi-hak-kullanim",

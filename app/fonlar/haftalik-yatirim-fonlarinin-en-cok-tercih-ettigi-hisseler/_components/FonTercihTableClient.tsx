@@ -1,9 +1,11 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 export type FonSatiri = {
   sembol: string | null;
+  sayfasiVarMi?: boolean;
   degisim: string | number | null;
   sonToplamYuzde: string | number | null;
   ilkToplamYuzde: string | number | null;
@@ -254,7 +256,17 @@ export default function FonTercihTableClient({ rows }: { rows: FonSatiri[] }) {
                             : ""
                         }`}
                       >
-                        {hucreDegeri(row, column.key)}
+                        {column.key === "sembol" && row.sayfasiVarMi && row.sembol ? (
+                          <Link
+                            href={`/hisse/${row.sembol.toLowerCase()}`}
+                            prefetch={false}
+                            className="hover:text-blue-700 hover:underline"
+                          >
+                            {hucreDegeri(row, column.key)}
+                          </Link>
+                        ) : (
+                          hucreDegeri(row, column.key)
+                        )}
                       </td>
                     ))}
                   </tr>
