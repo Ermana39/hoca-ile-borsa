@@ -23,6 +23,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1068,
+    title: "1 Temmuz 2026 Çarşamba Önemli KAP Haberleri",
+    href: "/haber/1-temmuz-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "1 Temmuz 2026 Çarşamba Önemli KAP Haberleri",
+    publishedAt: "2026-07-01",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["TABGD", "ARCLK", "KCHOL", "FROTO", "ENJSA", "ZERGY", "DCTTR", "EKGYO", "DAPGM", "TMSN", "HUBVC", "BYDNR", "AVPGY", "EBEBK", "EKDMR", "SASA", "ALTNY", "MERKO", "LUKSK", "TARKM", "EGGUB"],
+  },
+  {
     id: 1067,
     title: "EKDMR Orta Amerika’dan 4,97 Milyon Dolarlık İnşaat Çeliği Siparişi Aldı",
     href: "/haber/ekdmr-orta-amerika-insaat-celigi-siparisi",
