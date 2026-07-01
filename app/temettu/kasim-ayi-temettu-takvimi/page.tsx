@@ -5,11 +5,83 @@ export const metadata = {
 };
 
 import Link from "next/link";
-import { getTemettulerByAy } from "@/lib/temettuler";
 import HisseLink from "@/components/HisseLink";
 import { IlgiliBolumler } from "@/components/IlgiliBolumler";
 
-const kasimTemettuleri = getTemettulerByAy(2026, 11);
+const kasimTemettuleri = [
+  {
+    sembol: "DESA",
+    tarih: "30 Kasım 2026",
+    verim: "% 0,88",
+    brut: "₺0,10",
+    net: "₺0,0816",
+    toplam: "₺47.058.816",
+    oran: "%8",
+  },
+  {
+    sembol: "OFSYM",
+    tarih: "25 Kasım 2026",
+    verim: "% 0,75",
+    brut: "₺0,42",
+    net: "₺0,3577",
+    toplam: "₺61.542.848",
+    oran: "%14",
+  },
+  {
+    sembol: "ASELS",
+    tarih: "24 Kasım 2026",
+    verim: "% 0,12",
+    brut: "₺0,43",
+    net: "₺0,3635",
+    toplam: "₺1.949.999.640",
+    oran: "%7",
+  },
+  {
+    sembol: "DURKN",
+    tarih: "18 Kasım 2026",
+    verim: "% 0,45",
+    brut: "₺0,09",
+    net: "₺0,0792",
+    toplam: "₺12.342.958",
+    oran: "%10",
+  },
+  {
+    sembol: "GIPTA",
+    tarih: "11 Kasım 2026",
+    verim: "% 0,01",
+    brut: "₺0,01",
+    net: "₺0,0066",
+    toplam: "₺1.024.993",
+    oran: "%0",
+  },
+  {
+    sembol: "KBORU",
+    tarih: "10 Kasım 2026",
+    verim: "% 0,08",
+    brut: "₺0,02",
+    net: "₺0,0177",
+    toplam: "₺12.490.800",
+    oran: "%2",
+  },
+  {
+    sembol: "GOKNR",
+    tarih: "9 Kasım 2026",
+    verim: "% 1,29",
+    brut: "₺0,31",
+    net: "₺0,2603",
+    toplam: "₺107.202.480",
+    oran: "%24",
+  },
+  {
+    sembol: "LIDER",
+    tarih: "6 Kasım 2026",
+    verim: "% 0,04",
+    brut: "₺0,04",
+    net: "₺0,0303",
+    toplam: "₺29.411.745",
+    oran: "%2",
+  },
+];
 
 export default function KasimAyiTemettuTakvimiPage() {
   return (
@@ -74,7 +146,9 @@ export default function KasimAyiTemettuTakvimiPage() {
               {kasimTemettuleri.map((item, index) => (
                 <tr
                   key={`${item.sembol}-${item.tarih}`}
-                  className={`border-t border-zinc-100 ${index % 2 === 1 ? "bg-sky-50" : "bg-white"}`}
+                  className={`border-t border-zinc-100 ${
+                    index % 2 === 1 ? "bg-sky-50" : "bg-white"
+                  }`}
                 >
                   <td className="px-4 py-3 font-semibold text-zinc-900">
                     <HisseLink sembol={item.sembol} />
@@ -122,44 +196,27 @@ export default function KasimAyiTemettuTakvimiPage() {
             Kasım ayı temettü takvimi sayfası, Borsa İstanbul’da işlem gören şirketlerin
             Kasım 2026 dönemindeki temettü ödeme tarihlerini, hisse başına brüt ve net
             temettü tutarlarını, temettü verimlerini ve toplam dağıtım büyüklüklerini takip
-            etmek isteyen yatırımcılar için hazırlanmıştır. Bu sayfa üzerinden Kasım ayında
-            temettü dağıtması beklenen şirketleri tek tabloda inceleyebilirsiniz.
+            etmek isteyen yatırımcılar için hazırlanmıştır.
           </p>
 
           <p className="mb-4 leading-7 text-zinc-700">
-            Temettü takibi yapan yatırımcılar için ödeme tarihi, hisse başına net temettü,
-            brüt temettü, temettü verimi ve şirketin dağıtma oranı önemli göstergeler arasında
-            yer alır. Özellikle düzenli kâr payı ödeyen şirketler uzun vadeli yatırımcıların
-            radarında olurken, dönemsel olarak yüksek temettü verimi sunan hisseler de temettü
-            odaklı portföylerde ayrıca değerlendirilir.
+            Kasım 2026 temettü takviminde DESA, OFSYM, ASELS, DURKN, GIPTA, KBORU,
+            GOKNR ve LIDER hisseleri yer almaktadır. Tabloda her şirket için ödeme tarihi,
+            temettü verimi, hisse başına brüt ödeme, hisse başına net ödeme, toplam temettü
+            tutarı ve dağıtma oranı ayrı ayrı gösterilir.
           </p>
 
           <p className="mb-4 leading-7 text-zinc-700">
-            Kasım 2026 temettü takviminde yer alan şirketler arasında DESA, OFSYM, ASELS,
-            DURKN, GIPTA, KBORU, GOKNR ve LIDER gibi BIST şirketleri bulunmaktadır. Tabloda
-            her şirket için ödeme tarihi, temettü verimi, hisse başına brüt ödeme, hisse
-            başına net ödeme, toplam temettü tutarı ve dağıtma oranı ayrı ayrı gösterilir.
-          </p>
-
-          <p className="mb-4 leading-7 text-zinc-700">
-            Hisse başına brüt temettü, şirketin ortaklarına açıkladığı vergi öncesi kâr payı
-            tutarını ifade eder. Hisse başına net temettü ise stopaj kesintisi sonrasında
-            yatırımcının hesabına geçmesi beklenen tutarı gösterir. Bu nedenle temettü geliri
-            hesaplanırken yalnızca brüt tutara değil, net ödeme miktarına da dikkat edilmelidir.
-          </p>
-
-          <p className="mb-4 leading-7 text-zinc-700">
-            Temettü verimi, hisse başına brüt temettünün hisse fiyatına oranlanmasıyla takip
-            edilen önemli bir göstergedir. Bu oran yatırımcıya, mevcut fiyat seviyesine göre
-            şirketin ne ölçüde temettü getirisi sunduğunu gösterir. Ancak temettü verimi tek
-            başına yatırım kararı için yeterli değildir; şirketin kârlılığı, nakit akışı,
-            geçmiş temettü politikası ve sürdürülebilir dağıtım yapısı birlikte değerlendirilmelidir.
+            Temettü yatırımı yapan kullanıcılar için dağıtım tarihi, hisse başına net ödeme,
+            brüt temettü, temettü verimi ve şirketlerin dağıtma oranı önemli göstergeler
+            arasında yer alır. Bu veriler yatırımcıların dönemsel temettü planlaması yapmasına
+            yardımcı olur.
           </p>
 
           <p className="leading-7 text-zinc-700">
-            Güncel Kasım ayı temettü takvimi, BIST temettü veren hisseler, hisse başı net ve
-            brüt temettü ödemeleri, toplam dağıtım tutarları ve şirket bazlı kâr payı
-            oranlarını takip etmek için bu sayfayı düzenli olarak inceleyebilirsiniz.
+            Bu sayfada yer alan bilgiler genel bilgilendirme amacı taşır. Temettü verimi ve
+            dağıtım oranı tek başına yatırım kararı için yeterli değildir; şirketlerin finansal
+            durumu, nakit akışı ve temettü politikası ayrıca değerlendirilmelidir.
           </p>
         </section>
       </div>

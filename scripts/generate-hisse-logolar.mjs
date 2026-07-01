@@ -16,13 +16,22 @@ const SAMPLE = process.argv.includes("--sample-out");
 
 function domainFromWeb(web) {
   if (!web || typeof web !== "string") return null;
-  let s = web.trim();
-  if (!/^https?:\/\//i.test(s)) s = "https://" + s;
-  try {
-    return new URL(s).hostname.replace(/^www\./i, "");
-  } catch {
-    return null;
+  const parts = web
+    .split(/\s+-\s+|,|;/)
+    .map((part) => part.trim())
+    .filter(Boolean);
+
+  for (let s of parts) {
+    if (s.includes(" / ")) s = s.split(" / ")[0].trim();
+    if (!/^https?:\/\//i.test(s)) s = "https://" + s;
+    try {
+      return new URL(s).hostname.replace(/^www\./i, "");
+    } catch {
+      // Birden fazla web adresi olan kayıtlarda sıradaki adayı dene.
+    }
   }
+
+  return null;
 }
 
 const files = readdirSync(DIR)
@@ -49,7 +58,7 @@ for (const f of files) {
     console.log(`SKIP ${kod}: domain yok`);
     continue;
   }
-  const url = `https://www.google.com/s2/favicons?sz=64&domain=${domain}`;
+  const url = `https://www.google.com/s2/favicons?sz=128&domain=${domain}`;
   try {
     const res = await fetch(url);
     if (!res.ok) {

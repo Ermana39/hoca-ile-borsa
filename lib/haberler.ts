@@ -85,7 +85,7 @@ export function getAllNews(): NewsItem[] {
   return normalizeNewsItems([...tumHaberler, ...getGunlukOzetHaberKayitlari()]);
 }
 
-export const ANA_SAYFA_HABER_LIMIT = 12;
+export const ANA_SAYFA_HABER_LIMIT = 14;
 
 // --- Kategori & sayfalama yardımcıları ---
 
