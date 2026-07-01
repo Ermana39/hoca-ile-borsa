@@ -21,14 +21,14 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "https://www.hocaileborsa.com/bydnr-615-bedelsiz-sermaye-artirimi.webp",
+        url: "https://www.hocaileborsa.com/bydnr-615-bedelsiz-sermaye-artirimi-karari.webp",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
     images: [
-      "https://www.hocaileborsa.com/bydnr-615-bedelsiz-sermaye-artirimi.webp",
+      "https://www.hocaileborsa.com/bydnr-615-bedelsiz-sermaye-artirimi-karari.webp",
     ],
   },
 };
@@ -55,7 +55,7 @@ export default function BydnrBedelsizSermayeArtirimiPage() {
         <article className="overflow-hidden rounded-2xl border border-zinc-200 bg-white">
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
-              src="/bydnr-615-bedelsiz-sermaye-artirimi.webp"
+              src="/bydnr-615-bedelsiz-sermaye-artirimi-karari.webp"
               alt="BYDNR yüzde 615 bedelsiz sermaye artırımı kararı"
               fill
               unoptimized

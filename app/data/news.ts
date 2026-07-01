@@ -36,7 +36,7 @@ export const newsItems: NewsItem[] = [
     id: 1066,
     title: "BYDNR’den %615 Bedelsiz Sermaye Artırımı Kararı",
     href: "/haber/bydnr-615-bedelsiz-sermaye-artirimi",
-    image: "/bydnr-615-bedelsiz-sermaye-artirimi.webp",
+    image: "/bydnr-615-bedelsiz-sermaye-artirimi-karari.webp",
     alt: "BYDNR yüzde 615 bedelsiz sermaye artırımı kararı",
     publishedAt: "2026-07-01",
     category: "sermaye-artirimi",
