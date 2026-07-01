@@ -50,7 +50,13 @@ function rehberHaberleri(currentHref: string) {
     ];
   }
 
-  if (currentHref.includes("halka-arz-nedir")) {
+  if (
+    currentHref.includes("halka-arz") ||
+    currentHref.includes("esit-dagitim") ||
+    currentHref.includes("oransal-dagitim") ||
+    currentHref.includes("t1-t2-bakiye") ||
+    currentHref.includes("izahname")
+  ) {
     return [
       {
         title: "Beta Enerji halka arzı başladı",

@@ -23,6 +23,36 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1061,
+    title: "ISGSY’de %487,89748 Bedelsiz Sermaye Artırımı Hak Kullanım Tarihi Açıklandı",
+    href: "/haber/isgsy-487-bedelsiz-sermaye-artirimi-hak-kullanim",
+    image: "/isgsy-487-bedelsiz-sermaye-artirimi-hak-kullanim.webp",
+    alt: "ISGSY bedelsiz sermaye artırımı hak kullanım tarihi",
+    publishedAt: "2026-07-01",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["ISGSY"],
+  },
+  {
+    id: 1060,
+    title: "BALSU’dan BG Holding’e 4,64 Milyar TL’lik Tahsisli Sermaye Artırımı Kararı",
+    href: "/haber/balsu-bg-holding-tahsisli-sermaye-artirimi",
+    image: "/balsu-bg-holding-tahsisli-sermaye-artirimi.webp",
+    alt: "BALSU BG Holding tahsisli sermaye artırımı haberi",
+    publishedAt: "2026-07-01",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["BALSU"],
+  },
+  {
+    id: 1059,
+    title: "RYSAS Çağlayan HES Enerji Üretim A.Ş.’nin Tamamını Satın Aldı",
+    href: "/haber/rysas-caglayan-hes-enerji-uretimi-satin-alma",
+    image: "/rysas-caglayan-hes-enerji-uretimi-satin-alma.webp",
+    alt: "RYSAS Çağlayan HES Enerji Üretim satın alma haberi",
+    publishedAt: "2026-07-01",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["RYSAS"],
+  },
+  {
     id: 1058,
     title: "TABGD’de ELQ Investors’tan Hızlandırılmış Talep Toplama Süreci",
     href: "/haber/tabgd-elq-investors-hizlandirilmis-talep-toplama",

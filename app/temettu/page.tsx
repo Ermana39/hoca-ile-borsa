@@ -17,13 +17,6 @@ const temettuKutulari = [
       "Temettü nedir, nasıl işler, hak kullanım tarihi ve ödeme tarihi gibi temel konuları daha anlaşılır şekilde öğrenebilirsiniz.",
   },
   {
-    title: "Haziran Ayı Temettü Verenler",
-    href: "/temettu/haziran-ayi-temettu-takvimi",
-    icon: "temettu-takvim" as CategoryIconName,
-    description:
-      "Haziran ayı temettü takviminde yer alan şirketleri inceleyerek hangi hisselerin ödeme yapacağını görebilirsiniz.",
-  },
-  {
     title: "Temmuz Ayı Temettü Verenler",
     href: "/temettu/temmuz-ayi-temettu-takvimi",
     icon: "temettu-takvim" as CategoryIconName,
@@ -49,7 +42,14 @@ const temettuKutulari = [
     href: "/temettu/ekim-ayi-temettu-takvimi",
     icon: "temettu-takvim" as CategoryIconName,
     description:
-      "Mayıs ayında temettü ödemesi yapan şirketleri liste halinde görerek dönemsel temettü planlamasını takip edebilirsiniz.",
+      "Ekim ayında temettü ödemesi yapan şirketleri liste halinde görerek dönemsel temettü planlamasını takip edebilirsiniz.",
+  },
+  {
+    title: "Kasım Ayı Temettü Verenler",
+    href: "/temettu/kasim-ayi-temettu-takvimi",
+    icon: "temettu-takvim" as CategoryIconName,
+    description:
+      "Kasım ayında temettü veren şirketleri tek sayfada inceleyerek ödeme tarihlerini ve temettü tutarlarını takip edebilirsiniz.",
   },
 ];
 
