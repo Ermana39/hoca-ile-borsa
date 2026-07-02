@@ -23,6 +23,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1074,
+    title: "2 Temmuz 2026 Perşembe Önemli KAP Haberleri",
+    href: "/haber/2-temmuz-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "2 Temmuz 2026 Perşembe Önemli KAP Haberleri",
+    publishedAt: "2026-07-02",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["AKSEN", "SASA", "ERCB", "TLMAN", "KONKA", "BERA", "KAREL", "SOHOE", "TARKM", "KOTON", "MARKA"],
+  },
+  {
     id: 1073,
     title: "KAREL’den 5,86 Milyon Dolarlık Askeri Elektronik Teçhizat Sözleşmesi",
     href: "/haber/karel-586-milyon-dolar-askeri-elektronik-sozlesmesi",
