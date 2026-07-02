@@ -30,9 +30,11 @@ const veri: HalkaArzVeri = {
     "dagitimYontemi": "Eşit Dağıtım",
     "pay": "66.944.955 Lot (+13.388.991 Lot ek satış)",
     "araciKurum": "Garanti Yatırım Menkul Kıymetler A.Ş.\nHalk Yatırım Menkul Değerler A.Ş.",
-    "pazar": "Yıldız Pazar"
+    "pazar": "Yıldız Pazar",
+    "bistKodu": "SAAT"
   },
   "toplamPay": "66.944.955",
+  "bistKodu": "SAAT",
   "halkaAciklikOrani": "%10,14 (ek satışla %12,16)",
   "halkaArzSekli": [
     "Sermaye Artırımı (Bedelli): 40.166.973 Lot",

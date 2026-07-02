@@ -23,6 +23,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1070,
+    title: "ORZAX İlaç Halka Arzında Dağıtımlar Sonuçlandı",
+    href: "/haber/orzax-ilac-halka-arz-dagitim-sonuclari",
+    image: "/orzax-ilac-halka-arz-dagitim-sonuclari.webp",
+    alt: "ORZAX İlaç halka arzında dağıtımlar sonuçlandı",
+    publishedAt: "2026-07-01",
+    category: "halka-arz",
+    ilgiliHisseler: ["ORZAX"],
+  },
+  {
     id: 1069,
     title: "SPK 2 Yeni Halka Arz Onayı Verdi",
     href: "/haber/spk-2-yeni-halka-arz-onayi",
