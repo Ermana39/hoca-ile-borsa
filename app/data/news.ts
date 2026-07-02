@@ -23,6 +23,26 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1072,
+    title: "SASA Şarta Bağlı Sermaye Artırımında SPK Onayı Aldı",
+    href: "/haber/sasa-sartli-sermaye-artirimi-spk-onayi",
+    image: "/sasa-sartli-sermaye-artirimi-spk-onayi.webp",
+    alt: "SASA şarta bağlı sermaye artırımı SPK onayı",
+    publishedAt: "2026-07-02",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["SASA"],
+  },
+  {
+    id: 1071,
+    title: "AKSEN BBVA ile 124 Milyon Dolarlık Kredi Anlaşması İmzaladı",
+    href: "/haber/aksen-bbva-124-milyon-dolar-kredi-anlasmasi",
+    image: "/aksen-bbva-124-milyon-dolar-kredi-anlasmasi.webp",
+    alt: "AKSEN BBVA 124 milyon dolar kredi anlaşması",
+    publishedAt: "2026-07-02",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["AKSEN"],
+  },
+  {
     id: 1070,
     title: "ORZAX İlaç Halka Arzında Dağıtımlar Sonuçlandı",
     href: "/haber/orzax-ilac-halka-arz-dagitim-sonuclari",
