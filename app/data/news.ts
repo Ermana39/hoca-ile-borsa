@@ -23,6 +23,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1073,
+    title: "KAREL’den 5,86 Milyon Dolarlık Askeri Elektronik Teçhizat Sözleşmesi",
+    href: "/haber/karel-586-milyon-dolar-askeri-elektronik-sozlesmesi",
+    image: "/karel-586-milyon-dolar-askeri-elektronik-sozlesmesi.webp",
+    alt: "KAREL 5,86 milyon dolarlık askeri elektronik teçhizat sözleşmesi",
+    publishedAt: "2026-07-02",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["KAREL"],
+  },
+  {
     id: 1072,
     title: "SASA Şarta Bağlı Sermaye Artırımında SPK Onayı Aldı",
     href: "/haber/sasa-sartli-sermaye-artirimi-spk-onayi",
