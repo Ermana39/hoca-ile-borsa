@@ -110,7 +110,7 @@ export default function SaatVeSaatTalepToplamaPage() {
                   lota ulaşabilecek.
                 </p>
                 <p>
-                  Şirket paylarının Borsa İstanbul’da SAAT koduyla işlem görmesi
+                  Şirket paylarının Borsa İstanbul’da SSAAT koduyla işlem görmesi
                   bekleniyor. Halka arzda bireysel yatırımcılar için eşit dağıtım
                   yöntemi uygulanacak.
                 </p>

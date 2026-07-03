@@ -23,6 +23,35 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1078,
+    title: "ASTOR TEİAŞ ile 816,2 Milyon TL’lik Mobil Trafo Sözleşmesi İmzaladı",
+    href: "/haber/astor-teias-816-milyon-tl-mobil-trafo-sozlesmesi",
+    image: "/astor-teias-816-milyon-tl-mobil-trafo-sozlesmesi.webp",
+    alt: "ASTOR TEİAŞ 816,2 milyon TL mobil trafo sözleşmesi",
+    publishedAt: "2026-07-03",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["ASTOR"],
+  },
+  {
+    id: 1077,
+    title: "INFO %100 Bedelsiz Sermaye Artırımı İçin SPK’ya Başvurdu",
+    href: "/haber/info-100-bedelsiz-sermaye-artirimi-spk-basvurusu",
+    image: "/info-100-bedelsiz-sermaye-artirimi-spk-basvurusu.webp",
+    alt: "INFO yüzde 100 bedelsiz sermaye artırımı SPK başvurusu",
+    publishedAt: "2026-07-03",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["INFO"],
+  },
+  {
+    id: 1076,
+    title: "Haziran 2026 Enflasyonu Açıklandı: Maaş, Kira ve Bedelli Askerlik Etkisi",
+    href: "/haber/haziran-2026-enflasyon-rakamlari-maas-kira-bedelli-askerlik",
+    image: "/haziran-2026-enflasyon-maas-kira-bedelli-askerlik.webp",
+    alt: "Haziran 2026 enflasyon rakamları maaş kira ve bedelli askerlik etkisi",
+    publishedAt: "2026-07-03",
+    category: "piyasa-gundemi",
+  },
+  {
     id: 1075,
     title: "Saat ve Saat Halka Arzında Talep Toplama Tarihleri Açıklandı",
     href: "/haber/saat-ve-saat-talep-toplama-tarihleri-onayli-izahname",
@@ -30,7 +59,7 @@ export const newsItems: NewsItem[] = [
     alt: "Saat ve Saat halka arz talep toplama tarihleri ve onaylı izahname",
     publishedAt: "2026-07-03",
     category: "halka-arz",
-    ilgiliHisseler: ["SAAT"],
+    ilgiliHisseler: ["SSAAT"],
   },
   {
     id: 1074,
@@ -90,7 +119,7 @@ export const newsItems: NewsItem[] = [
     alt: "SPK 2 yeni halka arz onayı Şa-Ra Enerji ve Saat ve Saat",
     publishedAt: "2026-07-01",
     category: "halka-arz",
-    ilgiliHisseler: ["SARAE", "SAAT"],
+    ilgiliHisseler: ["SARAE", "SSAAT"],
   },
   {
     id: 1068,
