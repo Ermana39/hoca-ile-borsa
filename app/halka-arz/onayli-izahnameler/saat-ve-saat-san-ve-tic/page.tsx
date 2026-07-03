@@ -22,13 +22,13 @@ const veri: HalkaArzVeri = {
   },
   "baslikMeta": {
     "title": "Saat ve Saat San. ve Tic. A.Ş. Halka Arz Detayları 2026 | Onaylı İzahname",
-    "description": "Saat ve Saat San. ve Tic. A.Ş. onaylı izahname bilgileri, 56,00 TL sabit halka arz fiyatı, 66.944.955 lot halka arz payı (ek satışla 80.333.946 lot), %10,14 halka açıklık, sermaye artırımı ve ortak satışı kırılımı, fon kullanım planı ve finansal görünüm."
+    "description": "Saat ve Saat San. ve Tic. A.Ş. halka arzında talep toplama tarihleri 6-7-8 Temmuz 2026 olarak açıklandı. 56,00 TL fiyat, bireysele eşit dağıtım, %60 bireysel tahsisat ve ek satış detayları."
   },
   "ozet": {
-    "halkaArzTarihi": "",
+    "halkaArzTarihi": "6-7-8 Temmuz 2026\nPazartesi-Salı-Çarşamba",
     "fiyatAralik": "56,00 TL",
-    "dagitimYontemi": "Eşit Dağıtım",
-    "pay": "66.944.955 Lot (+13.388.991 Lot ek satış)",
+    "dagitimYontemi": "Bireysele Eşit Dağıtım",
+    "pay": "66.944.955 Lot (+13.388.991 Lot planlanan ek satış)",
     "araciKurum": "Garanti Yatırım Menkul Kıymetler A.Ş.\nHalk Yatırım Menkul Değerler A.Ş.",
     "pazar": "Yıldız Pazar",
     "bistKodu": "SAAT"
@@ -41,7 +41,7 @@ const veri: HalkaArzVeri = {
     "Ortak Satışı: 11.506.638 Lot (Ramazan Kaya)",
     "Ortak Satışı: 11.506.638 Lot (Hamza Kaya)",
     "Ortak Satışı: 3.764.706 Lot (Nurullah Dönmez)",
-    "Ek Pay Satışı: 13.388.991 Lot (fazla talep halinde)"
+    "Planlanan Ek Pay Satışı: 13.388.991 Lot"
   ],
   "fonKullanim": [
     "%40-50 Finansal borçların ödenmesi",
@@ -82,7 +82,7 @@ const veri: HalkaArzVeri = {
     {
       "title": "Toplam Pay",
       "value": "66.944.955 Lot",
-      "desc": "40.166.973 lot bedelli sermaye artırımı ve 26.777.982 lot ortak satışından oluşur; fazla talep halinde 13.388.991 lot ek satış yapılabilir."
+      "desc": "40.166.973 lot bedelli sermaye artırımı ve 26.777.982 lot ortak satışından oluşur; planlanan ek satış 13.388.991 lot olarak açıklanmıştır."
     },
     {
       "title": "Halka Açıklık",
@@ -97,29 +97,33 @@ const veri: HalkaArzVeri = {
   ],
   "tahsisat": [
     {
-      "grup": "Yurt İçi Bireysel Yatırımcı"
+      "grup": "Yurt İçi Bireysel Yatırımcı",
+      "oran": "%60",
+      "lot": "40.166.973 Lot"
     },
     {
-      "grup": "Yurt İçi Kurumsal Yatırımcı"
-    },
-    {
-      "grup": "Yurt Dışı Kurumsal Yatırımcı"
+      "grup": "Yurt İçi Kurumsal Yatırımcı",
+      "oran": "%40",
+      "lot": "26.777.982 Lot"
     }
   ],
   "tahsisatNotlari": [
+    "Talep toplama tarihleri 6-7-8 Temmuz 2026 Pazartesi-Salı-Çarşamba olarak açıklanmıştır.",
     "Halka arz fiyatı 56,00 TL sabit fiyat olarak açıklanmıştır.",
-    "Bireysel yatırımcı tarafında eşit dağıtım bilgisi yer almaktadır.",
-    "Fazla talep gelmesi halinde 13.388.991 lot ek satış yapılabilecektir.",
-    "Tahsisat oran ve lot kırılımı ile talep toplama tarihleri kesinleştiğinde bu alan güncellenecektir.",
+    "Bireysel yatırımcı tarafında bireysele eşit dağıtım yöntemi uygulanacaktır.",
+    "Yurt içi bireysel yatırımcılara %60 oranla 40.166.973 lot tahsis edilmiştir.",
+    "Yurt içi kurumsal yatırımcılara %40 oranla 26.777.982 lot tahsis edilmiştir.",
+    "Planlanan ek satış tutarı 13.388.991 lot olarak açıklanmıştır.",
+    "Katılım endeksine uygun olduğu açıklanmıştır.",
     "T1-T2 bakiye kullanımına uygun değildir."
   ],
   "taahhutOzeti": {
-    "fiyatIstikrari": "Süre bilgisi netleşmemiştir. Halk Yatırım Menkul Değerler A.Ş. bilgisi yer almaktadır.",
+    "fiyatIstikrari": "Halk Yatırım Menkul Değerler A.Ş. bilgisi yer almaktadır. Süre ve uygulama detayları tasarruf sahiplerine satış duyurusu üzerinden ayrıca kontrol edilmelidir.",
     "satmamaTaahhudu": "1 yıl ihraççı, 1 yıl ortaklar.",
     "halkaAciklik": "%10,14 (ek satışla %12,16)."
   },
   "sirketHakkinda": "Saat ve Saat San. ve Tic. A.Ş., 1994 yılında kurulan ve Türkiye’de saat ile aksesuar perakendeciliği, distribütörlüğü ve toptan satışı alanında faaliyet gösteren bir şirkettir. Şirketin sektördeki kökenlerinin 1971 yılına dayandığı paylaşılmıştır. Resmi unvanı Saat ve Saat Sanayi ve Ticaret A.Ş. olarak belirtilmiştir. CEO / yönetim tarafında Ramazan Kaya ismi öne çıkmaktadır. Şirketin merkez adresi Büyükdere Caddesi, Noramin İş Merkezi No:237/D Kat:B2, Maslak, Sarıyer / İstanbul’dur. İletişim numarası +90 212 232 72 28 olarak paylaşılmıştır. Türkiye genelinde 170’ten fazla mağaza, 600’ün üzerinde bayi ve zincir mağaza satış noktası bulunduğu; Türkiye dahil 45 ülkeyi kapsayan geniş bir dağıtım ağına sahip olduğu belirtilmiştir. Şirket kendi e-ticaret platformunun yanı sıra popüler pazar yerlerinde de aktif satış yapmaktadır. Saat ve Saat’in bağlı olduğu HRK Holding’in, Aydınlı Hazır Giyim Grubu’nu satın alarak U.S. Polo Assn., Pierre Cardin ve Cacharel gibi markaları bünyesine kattığı bilgisi paylaşılmıştır. Saat, aksesuar, distribütörlük ve perakende sektöründe şirket performansı; marka portföyü, mağaza ağı, e-ticaret kanalları, tüketici talebi, stok yönetimi, döviz kuru, ithalat maliyetleri ve yeni grup yatırımlarının entegrasyonuyla yakından ilişkilidir.",
-  "eksikBilgiNotu": "Halka arz fiyatı (56,00 TL sabit fiyat), sermaye artırımı, ortak satışı ve ek pay satışı kırılımı SPK onayı sonrası paylaşılan halka arz tablosuna göre güncellenmiştir. Talep toplama tarihleri, tahsisat oranları, tahsisat lotları ve fiyat istikrarı süresi henüz netleşmediği için bu alanlar ana içerikte öne çıkarılmamıştır. 2024/3 finansal verileri üç aylık dönemi kapsadığı için tam yıl verileriyle doğrudan kıyaslanmamalıdır. Halka arzda sermaye artırımı ve ortak satışları birlikte bulunduğu için şirket kasasına yalnızca sermaye artırımı kaynaklı bölümün gireceği unutulmamalıdır.",
+  "eksikBilgiNotu": "Halka arz fiyatı (56,00 TL sabit fiyat), talep toplama tarihleri, bireysele eşit dağıtım yöntemi, tahsisat oranları, tahsisat lotları, sermaye artırımı, ortak satışı ve planlanan ek pay satışı kırılımı açıklanan onaylı izahname/satış duyurusu verilerine göre güncellenmiştir. 2024/3 finansal verileri üç aylık dönemi kapsadığı için tam yıl verileriyle doğrudan kıyaslanmamalıdır. Halka arzda sermaye artırımı ve ortak satışları birlikte bulunduğu için şirket kasasına yalnızca sermaye artırımı kaynaklı bölümün gireceği unutulmamalıdır.",
   "yasalUyari": "Bu sayfadaki bilgiler SPK onayı sonrası açıklanan onaylı izahname/halka arz tablo verilerine göre genel bilgilendirme amacıyla hazırlanmıştır, yatırım tavsiyesi değildir. Kesinleşmemiş alanlar için güncel izahname ve tasarruf sahiplerine satış duyurusu kontrol edilmelidir.",
   "sermayeBilgileri": [
     {
@@ -149,6 +153,10 @@ const veri: HalkaArzVeri = {
     {
       "label": "Satış Fiyatı",
       "value": "56,00 TL"
+    },
+    {
+      "label": "Katılım Endeksi",
+      "value": "Uygun"
     },
     {
       "label": "Halka Arz Büyüklüğü",

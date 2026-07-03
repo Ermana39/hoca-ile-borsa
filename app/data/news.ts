@@ -23,6 +23,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1075,
+    title: "Saat ve Saat Halka Arzında Talep Toplama Tarihleri Açıklandı",
+    href: "/haber/saat-ve-saat-talep-toplama-tarihleri-onayli-izahname",
+    image: "/saat-ve-saat-talep-toplama-tarihleri-onayli-izahname.webp",
+    alt: "Saat ve Saat halka arz talep toplama tarihleri ve onaylı izahname",
+    publishedAt: "2026-07-03",
+    category: "halka-arz",
+    ilgiliHisseler: ["SAAT"],
+  },
+  {
     id: 1074,
     title: "2 Temmuz 2026 Perşembe Önemli KAP Haberleri",
     href: "/haber/2-temmuz-2026-onemli-kap-haberleri",
