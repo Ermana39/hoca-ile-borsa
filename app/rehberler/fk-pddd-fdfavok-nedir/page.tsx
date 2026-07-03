@@ -106,6 +106,44 @@ const kullanimAdimlari = [
   "Tek seferlik gelir veya giderlerin oranları bozup bozmadığını kontrol edin.",
 ];
 
+const sektorOranHaritasi = [
+  {
+    title: "Bankalar",
+    text: "Bankalarda PD/DD ve özkaynak karlılığı daha sık birlikte okunur. F/K kullanılabilir; ancak net faiz marjı, takipteki krediler, sermaye yeterliliği ve aktif kalitesi dikkate alınmadan yorum eksik kalır.",
+  },
+  {
+    title: "Sanayi Şirketleri",
+    text: "F/K ve FD/FAVÖK birlikte daha anlamlıdır. Net borç, kapasite kullanımı, ihracat oranı, enerji maliyeti ve FAVÖK marjı değerleme çarpanının neden düşük veya yüksek olduğunu açıklayabilir.",
+  },
+  {
+    title: "Perakende Şirketleri",
+    text: "FD/FAVÖK, mağaza büyümesi, stok devir hızı ve operasyonel nakit akışıyla birlikte okunmalıdır. Yüksek ciro büyümesi, düşük marj veya yüksek kira gideri nedeniyle değer yaratmayabilir.",
+  },
+  {
+    title: "GYO ve Holdingler",
+    text: "PD/DD ve net aktif değer yaklaşımı öne çıkar. Portföy değerleri, iştirak iskontosu, kira gelirleri, değerleme kazançları ve borç yapısı ayrıca incelenmelidir.",
+  },
+];
+
+const ornekSenaryolar = [
+  {
+    title: "Düşük F/K Ama Yüksek Borç",
+    text: "Şirket net kara göre ucuz görünebilir; fakat net borcu çok yüksekse firma değeri artar ve FD/FAVÖK oranı aynı ucuzluğu göstermeyebilir. Bu senaryoda düşük F/K tek başına yeterli değildir.",
+  },
+  {
+    title: "Yüksek PD/DD Ama Güçlü Özkaynak Karlılığı",
+    text: "Bazı şirketler defter değerinin üzerinde fiyatlanır çünkü özkaynaklarını yüksek verimle kara dönüştürür. Bu durumda yüksek PD/DD, güçlü ve sürdürülebilir özkaynak karlılığıyla destekleniyorsa daha anlamlı hale gelir.",
+  },
+  {
+    title: "Düşük FD/FAVÖK Ama Zayıf Nakit Akışı",
+    text: "FAVÖK güçlü görünürken işletme sermayesi ihtiyacı yüksek olabilir. Alacaklar ve stoklar nakdi tüketiyorsa düşük FD/FAVÖK oranı tek başına ucuzluk sinyali vermeyebilir.",
+  },
+  {
+    title: "Yüksek F/K Ama Hızlı Büyüme",
+    text: "Hızlı büyüyen şirketler piyasada yüksek F/K ile fiyatlanabilir. Burada kritik konu, büyümenin kar marjı ve nakit akışıyla desteklenip desteklenmediğidir.",
+  },
+];
+
 const faq = [
   {
     question: "F/K oranı nedir?",
@@ -157,6 +195,8 @@ const tableOfContents = [
   { href: "#fdfavok-orani", label: "FD/FAVÖK Oranı" },
   { href: "#karsilastirma", label: "Oranlar Nasıl Karşılaştırılır?" },
   { href: "#yatirimci-icin", label: "Yatırımcı İçin Anlamı" },
+  { href: "#sektor-haritasi", label: "Sektörlere Göre Oranlar" },
+  { href: "#ornek-senaryolar", label: "Örnek Senaryolar" },
   { href: "#sik-yapilan-hatalar", label: "Sık Yapılan Hatalar" },
   { href: "#sss", label: "Sık Sorulan Sorular" },
 ];
@@ -185,21 +225,59 @@ function Section({
 export default function DegerlemeOranlariPage() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: title,
-    description,
-    mainEntityOfPage: `${siteUrl}/rehberler/fk-pddd-fdfavok-nedir`,
-    author: {
-      "@type": "Person",
-      "@id": `${siteUrl}/yazar/erman-hoca#person`,
-      name: "Erman Hoca",
-      url: `${siteUrl}/yazar/erman-hoca`,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Hoca İle Borsa",
-      url: siteUrl,
-    },
+    "@graph": [
+      {
+        "@type": "Article",
+        headline: title,
+        description,
+        mainEntityOfPage: `${siteUrl}/rehberler/fk-pddd-fdfavok-nedir`,
+        author: {
+          "@type": "Person",
+          "@id": `${siteUrl}/yazar/erman-hoca#person`,
+          name: "Erman Hoca",
+          url: `${siteUrl}/yazar/erman-hoca`,
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Hoca İle Borsa",
+          url: siteUrl,
+        },
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: faq.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer,
+          },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Ana Sayfa",
+            item: siteUrl,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Rehberler",
+            item: `${siteUrl}/rehberler`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Değerleme Oranları",
+            item: `${siteUrl}/rehberler/fk-pddd-fdfavok-nedir`,
+          },
+        ],
+      },
+    ],
   };
 
   return (
@@ -477,6 +555,49 @@ export default function DegerlemeOranlariPage() {
                       <li key={item}>{item}</li>
                     ))}
                   </ul>
+                </div>
+              </Section>
+
+              <Section id="sektor-haritasi" title="Sektörlere Göre Hangi Oran Daha Anlamlıdır?">
+                <p>
+                  Aynı çarpan her sektörde aynı anlama gelmez. Bir banka için
+                  düşük PD/DD önemli olabilirken, hızlı büyüyen bir teknoloji
+                  şirketinde F/K veya FD/FAVÖK daha farklı yorumlanabilir.
+                  Sağlıklı analiz için oran önce sektörün iş modeliyle eşleştirilmelidir.
+                </p>
+                <div className="grid gap-3">
+                  {sektorOranHaritasi.map((item) => (
+                    <div
+                      key={item.title}
+                      className="rounded-xl border border-slate-200 bg-slate-50 p-4"
+                    >
+                      <h3 className="font-bold text-slate-900">{item.title}</h3>
+                      <p className="mt-2 text-sm leading-7 text-slate-600">
+                        {item.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </Section>
+
+              <Section id="ornek-senaryolar" title="Örnek Değerleme Senaryoları">
+                <p>
+                  Değerleme oranlarının faydası, tek bir rakam vermekten çok
+                  yatırımcıya doğru soruları sordurmasıdır. Aşağıdaki örnekler,
+                  çarpanları mekanik değil analitik okumaya yardımcı olur.
+                </p>
+                <div className="grid gap-3">
+                  {ornekSenaryolar.map((item) => (
+                    <div
+                      key={item.title}
+                      className="rounded-xl border border-slate-200 p-4"
+                    >
+                      <h3 className="font-bold text-slate-900">{item.title}</h3>
+                      <p className="mt-2 text-sm leading-7 text-slate-600">
+                        {item.text}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </Section>
 

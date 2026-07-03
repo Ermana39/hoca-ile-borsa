@@ -20,6 +20,131 @@ function formatMoney(value: number) {
   });
 }
 
+const kidemAdimlari = [
+  {
+    baslik: "Brüt aylık ücret yazılır",
+    aciklama:
+      "Kıdem tazminatı net maaş üzerinden değil brüt ücret üzerinden hesaplanır. Düzenli ve süreklilik taşıyan bazı yan ödemeler varsa bordroda ayrıca değerlendirilmelidir.",
+  },
+  {
+    baslik: "Çalışma süresi yıl ve ay olarak girilir",
+    aciklama:
+      "Her tam yıl için 30 günlük brüt ücret esas alınır. Tam yıl dışındaki aylar oransal olarak hesaba katılır; ancak hak kazanma için genel koşul en az bir yıllık çalışmadır.",
+  },
+  {
+    baslik: "Kıdem tazminatı tavanı kontrol edilir",
+    aciklama:
+      "Brüt ücret tavanın üzerindeyse hesaplama gerçek brüt maaş yerine tavan tutarı üzerinden yapılır. Bu nedenle güncel tavan alanı hesaplamada kritik öneme sahiptir.",
+  },
+  {
+    baslik: "Brüt kıdem tazminatı bulunur",
+    aciklama:
+      "Aylık esas tutar çalışma süresiyle çarpılır. Sonuç, damga vergisi düşülmeden önceki brüt kıdem tazminatı tutarıdır.",
+  },
+  {
+    baslik: "Damga vergisi düşülerek net tutar hesaplanır",
+    aciklama:
+      "Hesaplanan brüt kıdem tazminatından damga vergisi kesintisi düşülür ve çalışana ödenecek yaklaşık net kıdem tazminatı gösterilir.",
+  },
+];
+
+const kidemKavramlari = [
+  {
+    baslik: "Brüt ücret",
+    aciklama:
+      "Çalışanın vergi ve kesintilerden önceki ücretidir. Kıdem tazminatı hesabında net maaş değil brüt ücret dikkate alınır.",
+  },
+  {
+    baslik: "Giydirilmiş ücret",
+    aciklama:
+      "Süreklilik taşıyan yemek, yol, prim veya benzeri menfaatler bazı durumlarda hesaba dahil edilebilir. Bu kalemler iş sözleşmesi ve bordro kayıtlarına göre ayrıca incelenmelidir.",
+  },
+  {
+    baslik: "Kıdem tazminatı tavanı",
+    aciklama:
+      "Hesaplamaya alınabilecek en yüksek aylık brüt tutardır. Maaşınız tavanı aşarsa araç tavan tutarını esas alarak brüt kıdemi hesaplar.",
+  },
+  {
+    baslik: "Damga vergisi",
+    aciklama:
+      "Kıdem tazminatı ödemesinden kesilen vergidir. Araçta kullanılan oran, net tutarın yaklaşık hesaplanması için brüt tazminata uygulanır.",
+  },
+  {
+    baslik: "Hak kazanma şartı",
+    aciklama:
+      "Genel olarak aynı işverene bağlı en az bir yıl çalışma ve kanunda sayılan uygun ayrılış nedenlerinden biri gerekir. Uyuşmazlıklarda profesyonel destek alınmalıdır.",
+  },
+  {
+    baslik: "Net kıdem tazminatı",
+    aciklama:
+      "Tavan uygulanmış brüt kıdem tazminatından damga vergisi çıkarıldıktan sonra ortaya çıkan yaklaşık ödenecek tutardır.",
+  },
+];
+
+const kidemSenaryolari = [
+  {
+    baslik: "Maaş tavanın altında",
+    aciklama:
+      "Brüt maaş kıdem tazminatı tavanının altındaysa hesaplama brüt maaş üzerinden yapılır. Örneğin 35.000 TL brüt ücret için aylık esas 35.000 TL olur.",
+  },
+  {
+    baslik: "Maaş tavanın üzerinde",
+    aciklama:
+      "Brüt maaş tavanın üzerindeyse hesaplamada tavan dikkate alınır. Bu nedenle yüksek brüt maaş alan çalışanlarda tavan uygulanmadan görünen tutar ile ödenecek tutar farklılaşır.",
+  },
+  {
+    baslik: "Tam yıl ve ek aylar",
+    aciklama:
+      "5 yıl 6 ay çalışan bir kişi için süre 5,5 yıl olarak hesaplanır. Araç, yıl ve ay bilgisini birlikte okuyarak oransal hesap yapar.",
+  },
+  {
+    baslik: "Bir yıldan kısa çalışma",
+    aciklama:
+      "Kıdem tazminatı için genel hak kazanma koşulu en az bir yıllık çalışmadır. Bu nedenle bir yıldan kısa süreler için hesap sonucu tek başına hak doğduğu anlamına gelmez.",
+  },
+];
+
+const hakKazanmaNotlari = [
+  "İşverenin haklı neden dışında iş sözleşmesini sona erdirmesi kıdem tazminatı gündeme getirebilir.",
+  "Emeklilik, yaş dışındaki emeklilik koşulları, askerlik veya kanunda belirtilen evlilik nedeniyle ayrılış gibi durumlarda kıdem hakkı doğabilir.",
+  "Çalışanın kendi isteğiyle ayrıldığı her durumda kıdem tazminatı alınmaz; ayrılış nedeni ve belge düzeni önemlidir.",
+  "Aynı işverene bağlı çalışma süresi, işyeri devri veya grup şirketi geçişleri gibi durumlarda ayrıca değerlendirilmelidir.",
+  "Kullanılmamış yıllık izin, ihbar tazminatı ve ücret alacağı kıdem tazminatından farklı kalemlerdir.",
+];
+
+const kidemFaq = [
+  {
+    soru: "Kıdem tazminatı net maaşa göre mi hesaplanır?",
+    cevap:
+      "Hayır. Kıdem tazminatı hesabında net maaş değil brüt ücret esas alınır. Brüt ücret tavanı aşıyorsa hesaplama tavan tutarı üzerinden yapılır.",
+  },
+  {
+    soru: "Kıdem tazminatı tavanı ne işe yarar?",
+    cevap:
+      "Tavan, her çalışma yılı için hesaba alınabilecek en yüksek brüt tutarı sınırlar. Brüt maaşınız tavanın üzerindeyse aracın hesapladığı brüt kıdem tazminatı tavan üzerinden oluşur.",
+  },
+  {
+    soru: "Kıdem tazminatından gelir vergisi kesilir mi?",
+    cevap:
+      "Kıdem tazminatı için genel uygulamada gelir vergisi yerine damga vergisi kesintisi dikkate alınır. Yine de ödeme türü, ek kalemler ve istisnai durumlar için bordro veya hukuk kontrolü yapılmalıdır.",
+  },
+  {
+    soru: "Kıdem tazminatı almak için kaç yıl çalışmak gerekir?",
+    cevap:
+      "Genel koşul aynı işverene bağlı en az bir yıl çalışmış olmaktır. Bir yıl tamamlanmadan kıdem tazminatı hakkı normal şartlarda doğmaz.",
+  },
+  {
+    soru: "İstifa eden çalışan kıdem tazminatı alabilir mi?",
+    cevap:
+      "Her istifa kıdem hakkı doğurmaz. Emeklilik, askerlik, belirli evlilik hali veya kanunda tanınan özel nedenler gibi durumlarda sonuç farklı olabilir.",
+  },
+  {
+    soru: "Kıdem tazminatı ile ihbar tazminatı aynı mı?",
+    cevap:
+      "Hayır. Kıdem tazminatı çalışma süresine ve ayrılış nedenine bağlıdır. İhbar tazminatı ise bildirim süresine uyulmaması halinde gündeme gelen ayrı bir alacak kalemidir.",
+  },
+];
+
 export default function KidemTazminatiHesaplayici() {
   const [brutMaas, setBrutMaas] = useState("");
   const [yil, setYil] = useState("");
@@ -94,7 +219,7 @@ export default function KidemTazminatiHesaplayici() {
           <div>
             <label className="mb-2 block text-sm font-semibold text-zinc-700">Kıdem Tazminatı Tavanı (TL / Aylık)</label>
             <input type="text" inputMode="decimal" value={tavan} onChange={(e) => setTavan(e.target.value)} className="w-full rounded-xl border border-zinc-300 px-4 py-3 outline-none" placeholder="Örn: 48.000" />
-            <p className="mt-1 text-xs text-zinc-500">Varsayılan: 2026 yılı için ~48.000 TL. Güncel tavan oranını değiştirebilirsiniz.</p>
+            <p className="mt-1 text-xs text-zinc-500">Varsayılan değer örnek amaçlıdır. Güncel kıdem tazminatı tavanını resmi duyuruya göre değiştirebilirsiniz.</p>
           </div>
         </div>
 
@@ -128,34 +253,110 @@ export default function KidemTazminatiHesaplayici() {
 
             <div className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-4 text-sm text-zinc-600 space-y-2">
               <div>Her çalışma yılı için 30 günlük brüt maaş esas alınır. Hesaplanan aylık esas, kıdem tazminatı tavanını aşamaz.</div>
-              <div>Bu araç yatırım tavsiyesi değildir. Bilgilendirme amaçlıdır.</div>
+              <div>Bu araç hukuki danışmanlık yerine geçmez. Bilgilendirme ve yaklaşık hesaplama amaçlıdır.</div>
             </div>
           </>
         )}
 
         <section className="mt-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
           <h2 className="mb-4 text-xl font-bold text-zinc-900">Kıdem Tazminatı Nasıl Hesaplanır?</h2>
-          <p className="mb-3 text-sm leading-7 text-zinc-600">
-            Kıdem tazminatı, bir işyerinde en az 1 yıl çalışan ve belirli koşullarla işten ayrılan
-            çalışanlara ödenen bir haktır. Her tam çalışma yılı için 30 günlük brüt maaş tutarında
-            kıdem tazminatı ödenir; hesaplanan tutar yasal tavanı aşamaz.
-          </p>
-          <p className="text-sm leading-7 text-zinc-600">
-            Kıdem tazminatı tavanı her yıl güncellenmektedir. Hesaplama sonucuna damga vergisi
-            düşüm tutarı da ayrıca gösterilir.
+          <div className="space-y-3 text-sm leading-7 text-zinc-600">
+            <p>
+              Kıdem tazminatı, belirli koşullarla işten ayrılan çalışanın hizmet süresine bağlı olarak
+              hesaplanan bir işçilik alacağıdır. Temel mantık, her tam çalışma yılı için 30 günlük brüt
+              ücret esas alınmasıdır. Çalışma süresi tam yılın yanında ay içeriyorsa bu süre oransal olarak
+              hesaba katılır.
+            </p>
+            <p>
+              Hesaplamada en kritik noktalardan biri kıdem tazminatı tavanıdır. Brüt maaşınız tavanın
+              altındaysa brüt ücretiniz esas alınır; tavanın üzerindeyse hesaplama tavan tutarı üzerinden
+              yapılır. Bu sayede yüksek brüt ücretlerde görünen teorik tutar ile ödenebilecek tutar arasındaki
+              fark açıkça anlaşılır.
+            </p>
+            <p>
+              Araç, brüt maaş ve çalışma süresini kullanarak önce tavan uygulanmamış tutarı, ardından tavan
+              uygulanmış brüt kıdem tazminatını, damga vergisini ve yaklaşık net ödenecek tutarı gösterir.
+              Sonuçlar bilgi amaçlıdır; resmi bordro hesabı için güncel tavan, ödeme tarihi ve işten ayrılış
+              nedeni birlikte kontrol edilmelidir.
+            </p>
+          </div>
+        </section>
+
+        <section className="mt-6 rounded-2xl border border-zinc-200 bg-white p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Hesaplama Adımları</h2>
+          <ol className="space-y-3">
+            {kidemAdimlari.map((adim, index) => (
+              <li key={adim.baslik} className="rounded-xl border border-zinc-200 bg-zinc-50 p-4">
+                <div className="mb-1 text-xs font-bold uppercase tracking-wide text-blue-700">{index + 1}. adım</div>
+                <h3 className="mb-1 text-sm font-bold text-zinc-900">{adim.baslik}</h3>
+                <p className="text-sm leading-6 text-zinc-600">{adim.aciklama}</p>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <section className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Kıdem Tazminatı Hesabında Önemli Kavramlar</h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            {kidemKavramlari.map((kavram) => (
+              <div key={kavram.baslik} className="rounded-xl border border-zinc-200 bg-white p-4">
+                <h3 className="mb-2 text-sm font-bold text-zinc-900">{kavram.baslik}</h3>
+                <p className="text-sm leading-6 text-zinc-600">{kavram.aciklama}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-6 rounded-2xl border border-zinc-200 bg-white p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Kıdem Tazminatı Formülü</h2>
+          <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-4">
+            <p className="text-sm leading-7 text-zinc-600">
+              <strong className="text-zinc-900">Aylık esas tutar</strong> = Brüt maaş ile kıdem tazminatı tavanından düşük olan tutar.
+              <br />
+              <strong className="text-zinc-900">Brüt kıdem tazminatı</strong> = Aylık esas tutar x çalışma yılı.
+              <br />
+              <strong className="text-zinc-900">Net kıdem tazminatı</strong> = Brüt kıdem tazminatı - damga vergisi.
+            </p>
+          </div>
+          <p className="mt-3 text-sm leading-7 text-zinc-600">
+            Örneğin brüt ücretiniz tavanın altındaysa çalıştığınız her yıl için yaklaşık bir aylık brüt ücret
+            üzerinden hesaplama yapılır. Brüt ücret tavanın üzerindeyse her yıl için bir aylık gerçek brüt
+            ücret değil, tavan tutarı esas alınır.
           </p>
         </section>
+
+        <section className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Örnek Kıdem Tazminatı Senaryoları</h2>
+          <div className="space-y-3">
+            {kidemSenaryolari.map((senaryo) => (
+              <div key={senaryo.baslik} className="rounded-xl border border-zinc-200 bg-white p-4">
+                <h3 className="mb-1 text-sm font-bold text-zinc-900">{senaryo.baslik}</h3>
+                <p className="text-sm leading-6 text-zinc-600">{senaryo.aciklama}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-6 rounded-2xl border border-zinc-200 bg-white p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Kıdem Tazminatı Hakkında Dikkat Edilecekler</h2>
+          <ul className="space-y-3">
+            {hakKazanmaNotlari.map((madde) => (
+              <li key={madde} className="rounded-xl border border-zinc-200 bg-zinc-50 p-4 text-sm leading-6 text-zinc-600">
+                {madde}
+              </li>
+            ))}
+          </ul>
+        </section>
+
         <section className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
           <h2 className="mb-4 text-xl font-bold text-zinc-900">Sık Sorulan Sorular</h2>
           <div className="space-y-4">
-            <div>
-              <h3 className="mb-1 text-sm font-bold text-zinc-800">Kıdem tazminatına hak kazanmanın koşulları nelerdir?</h3>
-              <p className="text-sm leading-6 text-zinc-600">En az 1 yıl çalışmış olmak ve haksız fesih, emeklilik, askerlik veya evlilik nedeniyle ayrılmak gibi koşullarda kıdem tazminatına hak kazanılır.</p>
-            </div>
-            <div>
-              <h3 className="mb-1 text-sm font-bold text-zinc-800">Kıdem tazminatı tavanı nedir?</h3>
-              <p className="text-sm leading-6 text-zinc-600">Her yıl güncellenen yasal bir üst sınırdır. Hesaplanan aylık esas bu tavanı aşamaz; aşması durumunda tavan tutarı esas alınır.</p>
-            </div>
+            {kidemFaq.map((item) => (
+              <div key={item.soru}>
+                <h3 className="mb-1 text-sm font-bold text-zinc-800">{item.soru}</h3>
+                <p className="text-sm leading-6 text-zinc-600">{item.cevap}</p>
+              </div>
+            ))}
           </div>
         </section>
         <HesaplayiciRehberi slug="kidem-tazminati" />

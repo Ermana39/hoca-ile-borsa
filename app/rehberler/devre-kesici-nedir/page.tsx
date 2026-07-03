@@ -130,6 +130,25 @@ const yanilgilar = [
   "Devre kesici her zaman kötü haber nedeniyle çalışmaz; çok sert yükselişlerde de devreye girebilir.",
 ];
 
+const ornekSenaryolar = [
+  {
+    title: "Sert Düşüşte Devre Kesici",
+    text: "Önce yeni bir KAP açıklaması, bilanço, dava, tedbir veya piyasa geneli satış olup olmadığı kontrol edilmelidir. Eğer haber şirket özelindeyse finansal etkisi; piyasa geneli ise endeks ve sektör davranışı birlikte izlenmelidir.",
+  },
+  {
+    title: "Sert Yükselişte Devre Kesici",
+    text: "Yükseliş devre kesicisi her zaman olumlu haber anlamına gelmez. Düşük likidite, spekülatif emir akışı veya söylenti fiyatı hızlı hareket ettirmiş olabilir. Hacim ve haber doğrulaması yapılmadan işlem kararı verilmemelidir.",
+  },
+  {
+    title: "Tek Fiyat Sonrası Yeniden Tavan",
+    text: "Tek fiyat sonrası hisse yeniden güçlü alıcı bulabilir. Buna rağmen yatırımcı, alış tarafındaki emirlerin kalıcı olup olmadığını, işlem hacmini ve haberin gerçek şirket değerine etkisini kontrol etmelidir.",
+  },
+  {
+    title: "Tek Fiyat Sonrası Satış Baskısı",
+    text: "Eşleştirme sonrası satış baskısı artarsa piyasa, haberi olumsuz fiyatlıyor olabilir. Bu durumda acele piyasa emri yerine likidite, fiyat kademeleri ve pozisyon büyüklüğü dikkatle yönetilmelidir.",
+  },
+];
+
 const kaynaklar = [
   {
     title: "Borsa İstanbul Devre Kesici Açıklaması",
@@ -198,6 +217,7 @@ const tableOfContents = [
   { href: "#sistem-nasil-isler", label: "Sistem Nasıl İşler?" },
   { href: "#hisseyi-nasil-etkiler", label: "Hisseyi Nasıl Etkiler?" },
   { href: "#yatirimci-ne-yapmali", label: "Yatırımcı Ne Yapmalı?" },
+  { href: "#ornek-senaryolar", label: "Örnek Senaryolar" },
   { href: "#yanilgilar", label: "Sık Yapılan Yanılgılar" },
   { href: "#sss", label: "Sık Sorulan Sorular" },
 ];
@@ -226,21 +246,59 @@ function Section({
 export default function DevreKesiciNedirPage() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: title,
-    description,
-    mainEntityOfPage: `${siteUrl}/rehberler/devre-kesici-nedir`,
-    author: {
-      "@type": "Person",
-      "@id": `${siteUrl}/yazar/erman-hoca#person`,
-      name: "Erman Hoca",
-      url: `${siteUrl}/yazar/erman-hoca`,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Hoca İle Borsa",
-      url: siteUrl,
-    },
+    "@graph": [
+      {
+        "@type": "Article",
+        headline: title,
+        description,
+        mainEntityOfPage: `${siteUrl}/rehberler/devre-kesici-nedir`,
+        author: {
+          "@type": "Person",
+          "@id": `${siteUrl}/yazar/erman-hoca#person`,
+          name: "Erman Hoca",
+          url: `${siteUrl}/yazar/erman-hoca`,
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Hoca İle Borsa",
+          url: siteUrl,
+        },
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: faq.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer,
+          },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Ana Sayfa",
+            item: siteUrl,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Rehberler",
+            item: `${siteUrl}/rehberler`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Devre Kesici",
+            item: `${siteUrl}/rehberler/devre-kesici-nedir`,
+          },
+        ],
+      },
+    ],
   };
 
   return (
@@ -492,6 +550,28 @@ export default function DevreKesiciNedirPage() {
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
+              </Section>
+
+              <Section id="ornek-senaryolar" title="Devre Kesici Sonrası Örnek Senaryolar">
+                <p>
+                  Devre kesici haberini değerli kılan şey, yalnızca “işlem
+                  durdu” bilgisini görmek değil, hareketin arkasındaki nedeni
+                  ayırabilmektir. Aşağıdaki senaryolar yatırımcının devre kesici
+                  sonrası hangi sorulara bakması gerektiğini özetler.
+                </p>
+                <div className="grid gap-3">
+                  {ornekSenaryolar.map((item) => (
+                    <div
+                      key={item.title}
+                      className="rounded-xl border border-slate-200 bg-slate-50 p-4"
+                    >
+                      <h3 className="font-bold text-slate-900">{item.title}</h3>
+                      <p className="mt-2 text-sm leading-7 text-slate-600">
+                        {item.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </Section>
 
               <Section id="yanilgilar" title="Devre Kesici Hakkında Sık Yapılan Yanılgılar">

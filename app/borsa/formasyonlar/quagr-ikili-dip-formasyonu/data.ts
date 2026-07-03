@@ -1,4 +1,4 @@
 export const formasyonData = {
   kod: "QUAGR",
-  tur: "AKGRT İkili Dip Formasyonu",
+  tur: "İkili Dip Formasyonu",
 };

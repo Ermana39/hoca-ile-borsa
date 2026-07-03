@@ -154,6 +154,36 @@ const ornekSenaryolar = [
   },
 ];
 
+const kararAgaci = [
+  {
+    title: "Şirkete Uzun Vadeli Güveniyorsanız",
+    text: "Rüçhan hakkını kullanmak ortaklık oranını korumaya yardımcı olabilir. Yine de şirketin fon kullanım planı, bedelli gerekçesi ve bilanço riski kontrol edilmelidir.",
+  },
+  {
+    title: "Ek Nakit Ayırmak İstemiyorsanız",
+    text: "Rüçhan kuponu işlem görüyorsa satmak değerlendirilebilir. Böylece bedelliye katılmadan hakkın piyasa değerinden yararlanılır; ancak yeni pay alınmadığı için ortaklık oranı azalabilir.",
+  },
+  {
+    title: "Kararsızsanız",
+    text: "Hiçbir işlem yapmadan beklemek en riskli seçenektir. Kullanım süresi bitmeden aracı kurum ekranındaki kupon miktarı, son işlem tarihi ve kullanım bedeli kontrol edilmelidir.",
+  },
+  {
+    title: "Hisse Fiyatı Kullanım Fiyatına Yakınsa",
+    text: "Rüçhan hakkının ekonomik değeri azalabilir. Bu durumda kupon fiyatı, teorik fiyat ve piyasa fiyatı birlikte değerlendirilmeden karar verilmemelidir.",
+  },
+];
+
+const takipTakvimi = [
+  "Yönetim kurulu karar tarihi ve açıklanan bedelli oranı",
+  "SPK başvuru tarihi ve başvurunun kapsamı",
+  "SPK onay tarihi ve izahname/ihraç belgesi",
+  "Rüçhan hakkı kullanım başlangıç tarihi",
+  "Rüçhan kupon pazarında son işlem tarihi",
+  "Rüçhan hakkı kullanım bitiş tarihi",
+  "Kullanılmayan payların satış tarihleri",
+  "Yeni payların hesaba geçiş ve işlem görme bilgisi",
+];
+
 const faq = [
   {
     question: "Rüçhan hakkı nedir?",
@@ -204,6 +234,7 @@ const tableOfContents = [
   { href: "#yatirimci-secenekleri", label: "Yatırımcı Ne Yapabilir?" },
   { href: "#surec", label: "Süreç Nasıl İşler?" },
   { href: "#hesaplama", label: "Hesaplama Mantığı" },
+  { href: "#karar-agaci", label: "Karar Ağacı" },
   { href: "#dikkat", label: "Nelere Dikkat Edilmeli?" },
   { href: "#yanlislar", label: "Yanlış Bilinenler" },
   { href: "#sss", label: "Sık Sorulan Sorular" },
@@ -233,21 +264,59 @@ function Section({
 export default function RuchanHakkiNedirPage() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: title,
-    description,
-    mainEntityOfPage: `${siteUrl}/rehberler/ruchan-hakki-nedir`,
-    author: {
-      "@type": "Person",
-      "@id": `${siteUrl}/yazar/erman-hoca#person`,
-      name: "Erman Hoca",
-      url: `${siteUrl}/yazar/erman-hoca`,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Hoca İle Borsa",
-      url: siteUrl,
-    },
+    "@graph": [
+      {
+        "@type": "Article",
+        headline: title,
+        description,
+        mainEntityOfPage: `${siteUrl}/rehberler/ruchan-hakki-nedir`,
+        author: {
+          "@type": "Person",
+          "@id": `${siteUrl}/yazar/erman-hoca#person`,
+          name: "Erman Hoca",
+          url: `${siteUrl}/yazar/erman-hoca`,
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Hoca İle Borsa",
+          url: siteUrl,
+        },
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: faq.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer,
+          },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Ana Sayfa",
+            item: siteUrl,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Rehberler",
+            item: `${siteUrl}/rehberler`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Rüçhan Hakkı",
+            item: `${siteUrl}/rehberler/ruchan-hakki-nedir`,
+          },
+        ],
+      },
+    ],
   };
 
   return (
@@ -508,6 +577,37 @@ export default function RuchanHakkiNedirPage() {
                       </p>
                     </div>
                   ))}
+                </div>
+              </Section>
+
+              <Section id="karar-agaci" title="Rüçhan Hakkı İçin Pratik Karar Ağacı">
+                <p>
+                  Rüçhan hakkında güçlü karar vermek için “kullanayım mı,
+                  satayım mı, bekleyeyim mi?” sorusunu nakit durumu, şirket
+                  beklentisi ve kullanım takvimiyle birlikte düşünmek gerekir.
+                </p>
+                <div className="grid gap-3">
+                  {kararAgaci.map((item) => (
+                    <div
+                      key={item.title}
+                      className="rounded-xl border border-slate-200 bg-slate-50 p-4"
+                    >
+                      <h3 className="font-bold text-slate-900">{item.title}</h3>
+                      <p className="mt-2 text-sm leading-7 text-slate-600">
+                        {item.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                <div className="rounded-xl border border-blue-100 bg-blue-50 p-4">
+                  <h3 className="font-bold text-blue-950">
+                    Kaçırılmaması Gereken Takvim
+                  </h3>
+                  <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-blue-900">
+                    {takipTakvimi.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
                 </div>
               </Section>
 

@@ -210,6 +210,25 @@ const riskSinyalleri = [
   "Özkaynakların zayıflaması veya geçmiş yıl zararlarının büyümesi.",
 ];
 
+const ornekSenaryolar = [
+  {
+    title: "Satışlar Artıyor Ama Nakit Akışı Bozuluyor",
+    text: "Bu durumda şirket kağıt üzerinde büyüyor gibi görünür; fakat satışların tahsilata dönüp dönmediği sorgulanmalıdır. Ticari alacaklar satışlardan daha hızlı artıyorsa şirket müşterilerine uzun vade tanıyor, tahsilat riski alıyor veya büyümeyi işletme sermayesiyle finanse ediyor olabilir.",
+  },
+  {
+    title: "Net Kar Güçlü Ama Faaliyet Karı Zayıf",
+    text: "Net karın yatırım geliri, kur farkı, ertelenmiş vergi veya tek seferlik varlık satışından gelmesi mümkündür. Bu senaryoda yatırımcı, şirketin ana işinden düzenli kar üretip üretmediğini anlamak için brüt kar, esas faaliyet karı ve nakit akışına dönmelidir.",
+  },
+  {
+    title: "Borç Artıyor Ama Kapasite de Artıyor",
+    text: "Borç artışı her zaman olumsuz değildir. Şirket yeni tesis, makine veya kapasite yatırımı için borçlanıyorsa bu borç gelecekte satış ve karlılık yaratabilir. Fakat yatırımın ne zaman devreye gireceği ve finansman giderinin karı ne kadar baskılayacağı izlenmelidir.",
+  },
+  {
+    title: "Stoklar Hızlı Artıyor",
+    text: "Stok artışı büyüme hazırlığı, hammadde güvenliği veya sezon etkisi nedeniyle oluşabilir. Ancak satışlar aynı hızda artmıyorsa talep zayıflığı, stok değer düşüklüğü veya nakde dönüşemeyen işletme sermayesi riski ortaya çıkabilir.",
+  },
+];
+
 const faq = [
   {
     question: "Bilanço nedir?",
@@ -263,6 +282,7 @@ const tableOfContents = [
   { href: "#finansal-oranlar", label: "Finansal Oranlar" },
   { href: "#sektor-farklari", label: "Sektör Farkları" },
   { href: "#risk-sinyalleri", label: "Risk Sinyalleri" },
+  { href: "#ornek-senaryolar", label: "Örnek Senaryolar" },
   { href: "#sss", label: "Sık Sorulan Sorular" },
 ];
 
@@ -290,21 +310,59 @@ function Section({
 export default function BilancoNasilOkunurPage() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: title,
-    description,
-    mainEntityOfPage: `${siteUrl}/rehberler/bilanco-nasil-okunur`,
-    author: {
-      "@type": "Person",
-      "@id": `${siteUrl}/yazar/erman-hoca#person`,
-      name: "Erman Hoca",
-      url: `${siteUrl}/yazar/erman-hoca`,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Hoca İle Borsa",
-      url: siteUrl,
-    },
+    "@graph": [
+      {
+        "@type": "Article",
+        headline: title,
+        description,
+        mainEntityOfPage: `${siteUrl}/rehberler/bilanco-nasil-okunur`,
+        author: {
+          "@type": "Person",
+          "@id": `${siteUrl}/yazar/erman-hoca#person`,
+          name: "Erman Hoca",
+          url: `${siteUrl}/yazar/erman-hoca`,
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Hoca İle Borsa",
+          url: siteUrl,
+        },
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: faq.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer,
+          },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Ana Sayfa",
+            item: siteUrl,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Rehberler",
+            item: `${siteUrl}/rehberler`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Bilanço Nasıl Okunur?",
+            item: `${siteUrl}/rehberler/bilanco-nasil-okunur`,
+          },
+        ],
+      },
+    ],
   };
 
   return (
@@ -604,6 +662,34 @@ export default function BilancoNasilOkunurPage() {
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
+              </Section>
+
+              <Section id="ornek-senaryolar" title="Örnek Bilanço Okuma Senaryoları">
+                <p>
+                  Bilanço analizi aynı rakamı her şirkette aynı şekilde yorumlamak
+                  değildir. Aşağıdaki senaryolar, yatırımcının finansal tabloda
+                  gördüğü veriyi şirketin iş modeliyle birlikte nasıl okuması
+                  gerektiğini gösterir.
+                </p>
+                <div className="grid gap-3">
+                  {ornekSenaryolar.map((item) => (
+                    <div
+                      key={item.title}
+                      className="rounded-xl border border-slate-200 bg-slate-50 p-4"
+                    >
+                      <h3 className="font-bold text-slate-900">{item.title}</h3>
+                      <p className="mt-2 text-sm leading-7 text-slate-600">
+                        {item.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                <div className="rounded-xl border border-blue-100 bg-blue-50 p-4 text-sm leading-7 text-blue-900">
+                  <strong>Pratik kontrol:</strong> Bir bilanço iyi göründüğünde
+                  önce “Bu performans ana faaliyetten mi geliyor, nakde dönüyor
+                  mu, borçla mı finanse ediliyor ve gelecek çeyrekte tekrar
+                  edilebilir mi?” sorularını sorun.
+                </div>
               </Section>
 
               <Section id="hatalar" title="Bilanço Okurken En Sık Yapılan Hatalar">

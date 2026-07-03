@@ -19,13 +19,12 @@ async function getFormasyonlar(): Promise<FormasyonItem[]> {
 
   const entries = await fs.readdir(basePath, { withFileTypes: true });
 
+  // data.ts + page.tsx içeren her klasör bir formasyon analizidir;
+  // [slug] gibi dinamik route klasörleri filtrelenir, data.ts erişim
+  // kontrolü aşağıdaki döngüde zaten yapılır.
   const klasorler = entries
-    .filter((entry) => entry.isDirectory() && /^formasyon\d+$/i.test(entry.name))
-    .sort((a, b) => {
-      const aNo = Number(a.name.replace("formasyon", ""));
-      const bNo = Number(b.name.replace("formasyon", ""));
-      return aNo - bNo;
-    });
+    .filter((entry) => entry.isDirectory() && !entry.name.startsWith("["))
+    .sort((a, b) => a.name.localeCompare(b.name, "tr"));
 
   const sonuc: FormasyonItem[] = [];
 

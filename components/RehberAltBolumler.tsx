@@ -88,12 +88,6 @@ function rehberHaberleri(currentHref: string) {
         type: "Temettü",
       },
       {
-        title: "Borsa İstanbul'da 10 şirketten temettü kararı",
-        href: "/haber/bist-temettu-kararlari",
-        description: "Temettü kararlarının yatırımcı açısından takip edilmesi.",
-        type: "Temettü",
-      },
-      {
         title: "Temettü takvimi",
         href: "/temettu",
         description: "Yaklaşan temettü tarihleri ve ilgili hesaplama araçları.",

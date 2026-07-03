@@ -135,6 +135,29 @@ export default function RehberMakale({
           },
         })),
       },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Ana Sayfa",
+            item: siteUrl,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Rehberler",
+            item: `${siteUrl}/rehberler`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: guide.breadcrumb,
+            item: `${siteUrl}${guide.href}`,
+          },
+        ],
+      },
     ],
   };
 

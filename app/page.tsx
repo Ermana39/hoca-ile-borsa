@@ -85,10 +85,9 @@ const sayfaBasliklari: Record<string, string> = {
   "/borsa/dip-zirve-analizi": "Dip Zirve Analizi",
   "/borsa/egitim-videolari": "Eğitim Videoları",
   "/borsa/formasyonlar": "Formasyonlar",
-  "/borsa/formasyonlar/formasyon1": "Formasyon Analizi",
-  "/borsa/formasyonlar/formasyon2": "Formasyon Analizi",
-  "/borsa/formasyonlar/formasyon3": "Formasyon Analizi",
-  "/borsa/formasyonlar/formasyon4": "Formasyon Analizi",
+  "/borsa/formasyonlar/quagr-ikili-dip-formasyonu": "QUAGR İkili Dip Formasyonu",
+  "/borsa/formasyonlar/huner-dusen-genisleyen-takoz-formasyonu":
+    "HUNER Düşen Genişleyen Takoz Formasyonu",
   "/borsa/geri-alim-programlari": "Geri Alım Programları",
   "/borsa/gosterge-taramalari": "Gösterge Taramaları",
   "/borsa/gosterge-taramalari/dusus-trendinde-olanlar":

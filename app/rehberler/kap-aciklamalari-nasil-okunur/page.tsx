@@ -137,6 +137,34 @@ const sikHatalar = [
   "Ek dosyaları ve dipnotları okumamak.",
 ];
 
+const ornekKapSenaryolari = [
+  {
+    title: "Yeni Sözleşme Haberi",
+    text: "Önce sözleşme tutarını şirketin son yıllık hasılatıyla karşılaştırın. Ardından teslim süresine, para birimine, kar marjına ve tahsilat riskine bakın. Büyük görünen bir sözleşme düşük marjlıysa hisse değerine etkisi sınırlı olabilir.",
+  },
+  {
+    title: "Bedelli Sermaye Artırımı Kararı",
+    text: "Sadece bedelli oranını değil, fon kullanım raporunu okuyun. Kaynak borç kapama için mi, büyüme yatırımı için mi, işletme sermayesi için mi kullanılacak? Hakim ortakların katılım niyeti de önemlidir.",
+  },
+  {
+    title: "Yatırım Teşvik veya Kapasite Artışı",
+    text: "Yatırım haberi hemen kar anlamına gelmez. Devreye alma tarihi, toplam yatırım tutarı, finansman kaynağı ve beklenen üretim kapasitesi birlikte incelenmelidir.",
+  },
+  {
+    title: "Dava veya Ceza Açıklaması",
+    text: "Tutarın şirket özkaynaklarına ve yıllık karına oranını kontrol edin. Karşılık ayrılıp ayrılmadığı ve sürecin hangi aşamada olduğu, haberin gerçek riskini anlamak için belirleyicidir.",
+  },
+];
+
+const kapDegerlemeSorulari = [
+  "Bu açıklama şirketin satışını, karını veya nakit akışını ölçülebilir şekilde etkiliyor mu?",
+  "Etkisi tek seferlik mi, yoksa gelecek dönemlere yayılacak mı?",
+  "Açıklamadaki tutar şirketin ölçeğine göre anlamlı mı?",
+  "Haber daha önce duyurulmuş bir sürecin devamı mı, yoksa yeni bilgi mi?",
+  "Ek dosyalarda başlıktan daha önemli bir detay var mı?",
+  "Piyasa bu bilgiyi önceden bekliyor muydu, yoksa sürpriz mi?",
+];
+
 const faq = [
   {
     question: "KAP nedir?",
@@ -183,6 +211,7 @@ const tableOfContents = [
   { href: "#yatirimci-acisindan", label: "Yatırımcı Açısından" },
   { href: "#kritik-konular", label: "Kritik Konular" },
   { href: "#finansal-rapor", label: "Finansal Rapor" },
+  { href: "#ornek-kap-okumalari", label: "Örnek KAP Okumaları" },
   { href: "#sik-hatalar", label: "Sık Hatalar" },
   { href: "#sss", label: "Sık Sorulan Sorular" },
 ];
@@ -211,21 +240,59 @@ function Section({
 export default function KapAciklamalariNasilOkunurPage() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: title,
-    description,
-    mainEntityOfPage: canonical,
-    author: {
-      "@type": "Person",
-      "@id": `${siteUrl}/yazar/erman-hoca#person`,
-      name: "Erman Hoca",
-      url: `${siteUrl}/yazar/erman-hoca`,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Hoca İle Borsa",
-      url: siteUrl,
-    },
+    "@graph": [
+      {
+        "@type": "Article",
+        headline: title,
+        description,
+        mainEntityOfPage: canonical,
+        author: {
+          "@type": "Person",
+          "@id": `${siteUrl}/yazar/erman-hoca#person`,
+          name: "Erman Hoca",
+          url: `${siteUrl}/yazar/erman-hoca`,
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Hoca İle Borsa",
+          url: siteUrl,
+        },
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: faq.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer,
+          },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Ana Sayfa",
+            item: siteUrl,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Rehberler",
+            item: `${siteUrl}/rehberler`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "KAP Açıklamaları",
+            item: canonical,
+          },
+        ],
+      },
+    ],
   };
 
   return (
@@ -461,6 +528,38 @@ export default function KapAciklamalariNasilOkunurPage() {
                   ve bitiş tarihini, kapsamını ve hangi işlemleri sınırladığını
                   kontrol etmelidir.
                 </p>
+              </Section>
+
+              <Section id="ornek-kap-okumalari" title="Örnek KAP Okuma Senaryoları">
+                <p>
+                  KAP açıklamalarını güçlü içerik haline getiren şey yalnızca
+                  tanım bilmek değil, açıklamanın şirkete olası etkisini
+                  ölçebilmektir. Aşağıdaki örnekler, yatırımcının farklı KAP
+                  türlerini hangi sorularla okuması gerektiğini gösterir.
+                </p>
+                <div className="grid gap-3">
+                  {ornekKapSenaryolari.map((item) => (
+                    <div
+                      key={item.title}
+                      className="rounded-xl border border-slate-200 bg-slate-50 p-4"
+                    >
+                      <h3 className="font-bold text-slate-900">{item.title}</h3>
+                      <p className="mt-2 text-sm leading-7 text-slate-600">
+                        {item.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                <div className="rounded-xl border border-blue-100 bg-blue-50 p-4">
+                  <h3 className="font-bold text-blue-950">
+                    KAP Açıklamasını Değerlerken Sorulacak Sorular
+                  </h3>
+                  <ul className="mt-3 list-disc space-y-2 pl-5 text-sm leading-7 text-blue-900">
+                    {kapDegerlemeSorulari.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
               </Section>
 
               <Section id="sik-hatalar" title="KAP Açıklamalarında Sık Yapılan Hatalar">

@@ -82,26 +82,89 @@ const haberRedirects = [
     source: "/haber/haber-950",
     destination: "/haberler",
   },
+  // haber-975..978'in işaret ettiği haberler arşivden kaldırıldığı için
+  // artık doğrudan haber listesine yönlendirilir.
   {
     source: "/haber/haber-975",
-    destination: "/haber/turkiye-sigortanin-prim-uretimi-79-2-milyar-tlye-yukseldi",
+    destination: "/haberler",
   },
   {
     source: "/haber/haber-976",
-    destination: "/haber/thynin-air-europa-yatirim-surecinde-yeni-gelisme",
+    destination: "/haberler",
   },
   {
     source: "/haber/haber-977",
-    destination: "/haber/aselsandan-845-milyon-dolarlik-yeni-sozlesme",
+    destination: "/haberler",
   },
   {
     source: "/haber/haber-978",
-    destination: "/haber/kontrolmatikin-iki-tahvilinde-kupon-odemesi-gerceklesmedi",
+    destination: "/haberler",
   },
   {
     source: "/haber/haber-979",
     destination: "/haberler",
   },
+];
+
+// 5-11 Haziran 2026 haftasının haberleri arşivden kaldırıldı; eski URL'ler
+// haber listesine kalıcı olarak yönlendirilir.
+const silinenHaberSluglari = [
+  "bist-pay-geri-alim-islemleri",
+  "turkiye-sigortanin-prim-uretimi-79-2-milyar-tlye-yukseldi",
+  "thynin-air-europa-yatirim-surecinde-yeni-gelisme",
+  "aselsandan-845-milyon-dolarlik-yeni-sozlesme",
+  "kontrolmatikin-iki-tahvilinde-kupon-odemesi-gerceklesmedi",
+  "bist-temettu-kararlari",
+  "turk-bankaciliginda-tarihi-donusum-3-katilim-bankasi-birlesiyor-emlak-katilim-borsaya-geliyor",
+  "sigorta-prim-uretimi-artisi-agesa-ansgr",
+  "cwene-abd-lisans-anlasmasi",
+  "derhl-bedelsiz-sermaye-artirimi",
+  "altny-kayitli-sermaye-tavani-artisi",
+  "ebebk-satis-adedi-artisi",
+  "akhan-gana-makarna-ihracati",
+  "astor-abd-719-milyon-dolar-anlasma",
+  "abd-enflasyonu-sonrasi-borsalar-altin-fiyatlamasi",
+  "tcmb-politika-faizini-yuzde-37de-sabit-tuttu-11-haziran-2026",
+  "11-haziran-2026-persembe-kap-bildirimleri-ozeti",
+];
+
+// Search Console'da 404 veren eski/yayından kalkmış haber URL'leri.
+const eskiHaberRedirects = [
+  // Eski günlük KAP özeti URL şeması; 15 Haziran için güncel sayfa mevcut.
+  {
+    source: "/haber/15-haziran-2026-kap-bildirimleri-ozeti",
+    destination: "/haber/15-haziran-2026-onemli-kap-haberleri",
+  },
+  {
+    source: "/haber/15-haziran-2026-pazartesi-kap-bildirimleri-ozeti",
+    destination: "/haber/15-haziran-2026-onemli-kap-haberleri",
+  },
+  {
+    source: "/haber/08-haziran-2026-pazartesi-kap-bildirimleri-ozeti",
+    destination: "/haberler",
+  },
+  {
+    source: "/haber/11-haziranda-kritik-karar-merkez-bankasi-faizi-ne-yapacak",
+    destination: "/haberler",
+  },
+  {
+    source: "/haber/dstkf-empae-zergy-vbts-tedbiri",
+    destination: "/haberler",
+  },
+];
+
+// Eski kısa izahname slug'ları → güncel açıklayıcı slug'lar (GSC 404 örnekleri).
+const izahnameSlugRedirects = [
+  ["/halka-arz/taslak-izahnameler/quick", "/halka-arz/taslak-izahnameler/quick-sigorta"],
+  ["/halka-arz/taslak-izahnameler/biosys", "/halka-arz/taslak-izahnameler/biosys-biyomedikal-muhendislik-san-ve-tic"],
+  ["/halka-arz/taslak-izahnameler/uslu", "/halka-arz/taslak-izahnameler/uslu-csm-demir-celik"],
+  ["/halka-arz/taslak-izahnameler/vaden", "/halka-arz/taslak-izahnameler/vaden-otomotiv-san-ve-tic"],
+  ["/halka-arz/taslak-izahnameler/cimstone", "/halka-arz/taslak-izahnameler/cimstone-insaat-malzemeleri-san-ve-tic"],
+  ["/halka-arz/taslak-izahnameler/turkervangolu", "/halka-arz/taslak-izahnameler/turker-vangolu-enerji-yatirim"],
+  ["/halka-arz/taslak-izahnameler/mikro", "/halka-arz/taslak-izahnameler/anadolu-mikronize-kimya-san-ve-tic"],
+  ["/halka-arz/taslak-izahnameler/multinet", "/halka-arz/taslak-izahnameler/multinet-kurumsal-hizmetler"],
+  ["/halka-arz/onayli-izahnameler/ekinciler", "/halka-arz/onayli-izahnameler/ekinciler-demir-celik-ekdmr"],
+  ["/halka-arz/onayli-izahnameler/beta", "/halka-arz/onayli-izahnameler/beta-enerji-teknoloji-betae"],
 ];
 
 const nextConfig = {
@@ -155,6 +218,17 @@ const nextConfig = {
         destination: "/halka-arz/taslak-izahnameler/fiba-faktoring",
         permanent: true,
       },
+      // Formasyon sayfaları yer tutucu slug'lardan açıklayıcı slug'lara taşındı.
+      {
+        source: "/borsa/formasyonlar/formasyon1",
+        destination: "/borsa/formasyonlar/quagr-ikili-dip-formasyonu",
+        permanent: true,
+      },
+      {
+        source: "/borsa/formasyonlar/formasyon3",
+        destination: "/borsa/formasyonlar/huner-dusen-genisleyen-takoz-formasyonu",
+        permanent: true,
+      },
       // Eski düz (tire'li) günlük özet URL'i → yeni kalıcı slug URL'i.
       {
         source: "/borsa/gunluk-borsa-ozeti-12-haziran-2026",
@@ -164,6 +238,13 @@ const nextConfig = {
       // "Dikkat Çekenler" bölümü kaldırıldı; alt makaleler slug'ları korunarak
       // /haber arşivine taşındı. Eski URL'ler yeni haber adreslerine, liste
       // sayfası da haber arşivine kalıcı olarak yönlendirilir.
+      // Arşivden tamamen silinen haberlerin dikkat-cekenler URL'leri, zincirleme
+      // yönlendirme oluşmaması için genel kuraldan ÖNCE tek adımda /haberler'e gider.
+      ...silinenHaberSluglari.map((slug) => ({
+        source: `/borsa/dikkat-cekenler/${slug}`,
+        destination: "/haberler",
+        permanent: true,
+      })),
       {
         source: "/borsa/dikkat-cekenler/:slug",
         destination: "/haber/:slug",
@@ -190,6 +271,21 @@ const nextConfig = {
       ...haberRedirects.map((r) => ({
         source: r.source,
         destination: r.destination,
+        permanent: true,
+      })),
+      ...silinenHaberSluglari.map((slug) => ({
+        source: `/haber/${slug}`,
+        destination: "/haberler",
+        permanent: true,
+      })),
+      ...eskiHaberRedirects.map((r) => ({
+        source: r.source,
+        destination: r.destination,
+        permanent: true,
+      })),
+      ...izahnameSlugRedirects.map(([source, destination]) => ({
+        source,
+        destination,
         permanent: true,
       })),
       // Eski numaralı haber URL şemaları (örn. /haber/haber-994,

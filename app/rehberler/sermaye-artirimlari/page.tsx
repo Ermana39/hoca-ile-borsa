@@ -137,6 +137,44 @@ const sikYapilanHatalar = [
   "Tahsisli sermaye artırımında payların kime, hangi fiyatla ve hangi gerekçeyle verildiğine bakmamak.",
 ];
 
+const ornekHesaplamalar = [
+  {
+    title: "%100 Bedelsiz Örneği",
+    text: "Yatırımcının 100 lot hissesi varsa %100 bedelsiz sonrası lot sayısı 200'e çıkar. Hisse fiyatı teorik olarak yarıya düşer. Toplam portföy değeri işlem anında teorik olarak değişmez; piyasa fiyatı sonrasında arz-talebe göre oluşur.",
+  },
+  {
+    title: "%100 Bedelli ve 1 TL Kullanım Fiyatı",
+    text: "Hisse fiyatı 20 TL iken %100 bedelli ve 1 TL kullanım fiyatı varsa teorik fiyat yaklaşık 10,50 TL olur. Yatırımcı yeni pay almak için ödeme yapar; toplam maliyet eski paylar ve yeni yatırılan tutarla birlikte hesaplanır.",
+  },
+  {
+    title: "Bedelliye Katılmama Durumu",
+    text: "Yatırımcı rüçhan hakkını kullanmaz ve satmazsa ortaklık oranı azalabilir. Rüçhan kuponu işlem görüyorsa satmak, hakkın tamamen boşa gitmesini önleyebilir.",
+  },
+  {
+    title: "Tahsisli Artırım Senaryosu",
+    text: "Yeni paylar belirli yatırımcıya satılıyorsa satış fiyatı, alıcının kim olduğu ve rüçhan hakkının neden kısıtlandığı incelenmelidir. Mevcut ortakların pay oranı bu işlemden etkilenebilir.",
+  },
+];
+
+const kararMatrisi = [
+  {
+    title: "Bedelli Daha Olumlu Okunabilir",
+    text: "Fon yeni yatırım, kapasite artışı, verimli büyüme veya yüksek maliyetli borçların azaltılması için kullanılacaksa ve hakim ortaklar artırıma katılıyorsa daha destekleyici yorumlanabilir.",
+  },
+  {
+    title: "Bedelli Daha Riskli Okunabilir",
+    text: "Şirket sürekli zarar ediyor, faaliyet nakit akışı zayıf, borç baskısı yüksek ve kaynak sadece günü kurtarmak için isteniyorsa yatırımcı daha temkinli olmalıdır.",
+  },
+  {
+    title: "Bedelsiz Daha Anlamlı Okunabilir",
+    text: "Şirket güçlü özkaynak, düzenli karlılık ve büyüme hikayesiyle bedelsiz yapıyorsa piyasa ilgisi artabilir. Yine de bedelsiz tek başına şirket değerini artırmaz.",
+  },
+  {
+    title: "Bedelsiz Yanlış Yorumlanabilir",
+    text: "Yatırımcı yalnızca lot sayısı artıyor diye kazanç oluştuğunu sanmamalıdır. Fiyat teorik olarak düzeltilir ve toplam değer piyasa koşullarına bağlıdır.",
+  },
+];
+
 const faq = [
   {
     question: "Sermaye artırımı nedir?",
@@ -195,6 +233,7 @@ const tableOfContents = [
   { href: "#tahsisli", label: "Tahsisli Sermaye Artırımı" },
   { href: "#surec", label: "Süreç Nasıl İlerler?" },
   { href: "#yatirimci", label: "Yatırımcı Açısından Anlamı" },
+  { href: "#ornek-hesaplamalar", label: "Örnek Hesaplamalar" },
   { href: "#sss", label: "Sık Sorulan Sorular" },
 ];
 
@@ -222,21 +261,59 @@ function Section({
 export default function SermayeArtirimlariPage() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: title,
-    description,
-    mainEntityOfPage: `${siteUrl}/rehberler/sermaye-artirimlari`,
-    author: {
-      "@type": "Person",
-      "@id": `${siteUrl}/yazar/erman-hoca#person`,
-      name: "Erman Hoca",
-      url: `${siteUrl}/yazar/erman-hoca`,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Hoca İle Borsa",
-      url: siteUrl,
-    },
+    "@graph": [
+      {
+        "@type": "Article",
+        headline: title,
+        description,
+        mainEntityOfPage: `${siteUrl}/rehberler/sermaye-artirimlari`,
+        author: {
+          "@type": "Person",
+          "@id": `${siteUrl}/yazar/erman-hoca#person`,
+          name: "Erman Hoca",
+          url: `${siteUrl}/yazar/erman-hoca`,
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Hoca İle Borsa",
+          url: siteUrl,
+        },
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: faq.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer,
+          },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Ana Sayfa",
+            item: siteUrl,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Rehberler",
+            item: `${siteUrl}/rehberler`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Sermaye Artırımları",
+            item: `${siteUrl}/rehberler/sermaye-artirimlari`,
+          },
+        ],
+      },
+    ],
   };
 
   return (
@@ -662,6 +739,46 @@ export default function SermayeArtirimlariPage() {
                   performansı zayıf şirketlerde yalnızca bedelsiz beklentisiyle
                   hareket etmek riskli olabilir.
                 </p>
+              </Section>
+
+              <Section id="ornek-hesaplamalar" title="Örnek Sermaye Artırımı Senaryoları">
+                <p>
+                  Sermaye artırımlarında en büyük kafa karışıklığı, lot sayısı
+                  ve fiyat değişiminin toplam portföy değerine etkisidir.
+                  Aşağıdaki örnekler, bedelli ve bedelsiz işlemlerin yatırımcı
+                  hesabında nasıl okunabileceğini gösterir.
+                </p>
+                <div className="grid gap-3">
+                  {ornekHesaplamalar.map((item) => (
+                    <div
+                      key={item.title}
+                      className="rounded-xl border border-slate-200 bg-slate-50 p-4"
+                    >
+                      <h3 className="font-bold text-slate-900">{item.title}</h3>
+                      <p className="mt-2 text-sm leading-7 text-slate-600">
+                        {item.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                <div className="rounded-xl border border-blue-100 bg-blue-50 p-4">
+                  <h3 className="font-bold text-blue-950">
+                    Olumlu mu, Olumsuz mu? Karar Matrisi
+                  </h3>
+                  <div className="mt-3 grid gap-3 md:grid-cols-2">
+                    {kararMatrisi.map((item) => (
+                      <div
+                        key={item.title}
+                        className="rounded-lg border border-blue-100 bg-white/70 p-3"
+                      >
+                        <h4 className="font-bold text-blue-950">{item.title}</h4>
+                        <p className="mt-2 text-sm leading-7 text-blue-900">
+                          {item.text}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </Section>
 
               <Section id="hatalar" title="Sermaye Artırımında En Sık Yapılan Hatalar">

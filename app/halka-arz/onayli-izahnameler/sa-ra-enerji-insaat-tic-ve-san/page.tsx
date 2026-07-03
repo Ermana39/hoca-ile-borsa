@@ -22,14 +22,14 @@ const veri: HalkaArzVeri = {
   },
   "baslikMeta": {
     "title": "Şa-Ra Enerji İnşaat Tic. ve San. A.Ş. Halka Arz Detayları 2026 | Onaylı İzahname",
-    "description": "Şa-Ra Enerji İnşaat Tic. ve San. A.Ş. onaylı izahname bilgileri, 70,00 TL sabit halka arz fiyatı, 89.000.000 lot toplam halka arz payı, %20,02 halka açıklık, sermaye artırımı ve ortak satışı kırılımı, fon kullanım planı ve finansal görünüm."
+    "description": "Şa-Ra Enerji İnşaat Tic. ve San. A.Ş. onaylı izahname bilgileri, 8-9-10 Temmuz talep toplama tarihleri, 70,00 TL halka arz fiyatı, %20 iskonto, 89.000.000 lot toplam halka arz payı, %20,02 halka açıklık, tahsisat kırılımı, fon kullanım planı ve finansal görünüm."
   },
   "ozet": {
-    "halkaArzTarihi": "",
-    "fiyatAralik": "70,00 TL",
-    "dagitimYontemi": "Eşit Dağıtım",
+    "halkaArzTarihi": "8-9-10 Temmuz 2026 (Çarşamba-Perşembe-Cuma, 09.00-17.00)",
+    "fiyatAralik": "70,00 TL - %20 İskonto",
+    "dagitimYontemi": "Bireysele eşit, yüksek başvurulu yatırımcıya oransal",
     "pay": "89.000.000 Lot",
-    "araciKurum": "Tera Yatırım Menkul Değerler A.Ş.",
+    "araciKurum": "Tera Yatırım Menkul Değerler A.Ş. (Konsorsiyum Lideri)",
     "pazar": "Yıldız Pazar",
     "bistKodu": "SARAE"
   },
@@ -42,40 +42,96 @@ const veri: HalkaArzVeri = {
     "Ortak Satışı: 8.900.000 Lot (Hilkat Mor - C Grubu)"
   ],
   "fonKullanim": [
-    "%15 Yatırım harcamaları",
-    "%55 İşletme sermayesi",
-    "%30 Finansal borç ödemesi"
+    "%55 İşletme sermayesi finansmanı",
+    "%30 Finansal borç ödemesi",
+    "%15 Yatırım harcamaları"
   ],
   "fonKullanimYorumu": "Şa-Ra Enerji halka arzında fon kullanım planında en büyük pay işletme sermayesine ayrılmıştır. Enerji iletim ve dağıtım altyapısı, trafo merkezi, enerji nakil hattı ve sanayi üretimi gibi alanlarda işletme sermayesi; proje finansmanı, hammadde tedariki, sipariş ön finansmanı, müşteri vadeleri ve saha operasyonlarının sürekliliği açısından önemlidir. Finansal borç ödemesine ayrılan kaynak, faiz giderleri ve bilanço esnekliği üzerinde destekleyici olabilir. Yatırım harcamaları ise üretim kapasitesi, hat donanımları, izolatör üretimi, makine parkı ve mühendislik altyapısı açısından takip edilmelidir. Halka arzda sermaye artırımıyla birlikte Şadi Türk ve Hilkat Mor’a ait ortak satışları da bulunduğu için, şirket kasasına girecek kaynak ile ortak satışından doğacak tutar ayrı değerlendirilmelidir.",
   "finansalDonemler": [
-    "2024/6",
-    "2023",
-    "2022"
+    "2024",
+    "2025",
+    "2026/1Ç"
   ],
   "finansalVeriler": [
     {
-      "kalem": "Hasılat",
+      "kalem": "Dönen Varlıklar",
       "donemler": {
-        "2024/6": "4,2 Milyar TL",
-        "2023": "7,7 Milyar TL",
-        "2022": "6,6 Milyar TL"
+        "2024": "8,5 Milyar TL",
+        "2025": "10,3 Milyar TL",
+        "2026/1Ç": "12,3 Milyar TL"
       }
     },
     {
-      "kalem": "Brüt Kâr",
+      "kalem": "Duran Varlıklar",
       "donemler": {
-        "2024/6": "965,4 Milyon TL",
-        "2023": "1,8 Milyar TL",
-        "2022": "1,6 Milyar TL"
+        "2024": "3,2 Milyar TL",
+        "2025": "7,4 Milyar TL",
+        "2026/1Ç": "6,3 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Toplam Varlıklar",
+      "donemler": {
+        "2024": "16 Milyar TL",
+        "2025": "17 Milyar TL",
+        "2026/1Ç": "18 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Kısa Vadeli Yükümlülükler",
+      "donemler": {
+        "2024": "6,2 Milyar TL",
+        "2025": "7,6 Milyar TL",
+        "2026/1Ç": "9,4 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Uzun Vadeli Yükümlülükler",
+      "donemler": {
+        "2024": "4,2 Milyar TL",
+        "2025": "3,5 Milyar TL",
+        "2026/1Ç": "2,2 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Özkaynaklar",
+      "donemler": {
+        "2024": "6,2 Milyar TL",
+        "2025": "6,6 Milyar TL",
+        "2026/1Ç": "7 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Hasılat",
+      "donemler": {
+        "2024": "14 Milyar TL",
+        "2025": "7 Milyar TL",
+        "2026/1Ç": "3,3 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Esas Faaliyet Kârı",
+      "donemler": {
+        "2024": "2,8 Milyar TL",
+        "2025": "2 Milyar TL",
+        "2026/1Ç": "0,9 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Dönem Kârı",
+      "donemler": {
+        "2024": "1,8 Milyar TL",
+        "2025": "363 Milyon TL",
+        "2026/1Ç": "370 Milyon TL"
       }
     }
   ],
-  "finansalYorum": "Finansal görünümde 2023 yılında hasılat ve brüt kârın 2022’ye göre arttığı görülüyor. Bu tablo; enerji iletim-dağıtım projeleri, sanayi üretimi, proje teslimleri ve kamu/özel sektör altyapı yatırımları açısından destekleyici bir büyümeye işaret edebilir. 2024/6 verileri altı aylık dönemi kapsadığı için 2023 tam yıl verileriyle doğrudan karşılaştırılmamalıdır. Enerji altyapısı ve sanayi üretimi alanında faaliyet gösteren şirketlerde finansal sonuçlar; proje teslim takvimi, çelik ve metal hammadde fiyatları, döviz kuru, enerji yatırımları, kamu ihaleleri, ihracat potansiyeli, finansman giderleri ve işletme sermayesi ihtiyacıyla yakından ilişkilidir. Bu nedenle Şa-Ra Enerji değerlendirilirken yalnızca hasılat ve brüt kâr rakamlarına bakmak yeterli olmaz; net kâr, faaliyet kârı, FAVÖK, nakit akışı, borçluluk, proje stokları, tahsilat vadeleri ve yatırım harcamalarının geri dönüşü birlikte incelenmelidir.",
+  "finansalYorum": "2024, 2025 ve 2026 ilk çeyrek verileri birlikte değerlendirildiğinde şirketin varlık büyüklüğünde artış eğilimi öne çıkarken, kısa vadeli yükümlülüklerdeki yükseliş işletme sermayesi ihtiyacının dikkatle izlenmesi gerektiğini gösteriyor. Uzun vadeli yükümlülüklerin gerilemesi ve özkaynakların artması bilanço tarafında olumlu bir unsur olarak değerlendirilebilir. Gelir tablosunda 2025 hasılatı 2024’e göre düşerken şirket kârlılığını sürdürmüştür. 2026 ilk çeyrekte açıklanan 3,3 milyar TL hasılat ve 370 milyon TL dönem kârı, yılın devamındaki proje teslimleri, tahsilat performansı, finansman giderleri ve yatırım harcamalarıyla birlikte takip edilmelidir.",
   "oneCikanlar": [
     {
       "title": "Halka Arz Fiyatı",
       "value": "70,00 TL",
-      "desc": "1 TL nominal değerli paylar 70,00 TL sabit fiyat üzerinden satışa sunulacaktır."
+      "desc": "1 TL nominal değerli paylar 70,00 TL fiyat ve %20 iskonto ile satışa sunulacaktır."
     },
     {
       "title": "Toplam Pay",
@@ -88,40 +144,45 @@ const veri: HalkaArzVeri = {
       "desc": "Yeni sermayeye göre planlanan halka açıklık oranı %20,02 seviyesindedir."
     },
     {
-      "title": "Pazar",
-      "value": "Yıldız Pazar",
-      "desc": "Payların Yıldız Pazar'da işlem görmesi planlanmaktadır."
+      "title": "Katılım Endeksi",
+      "value": "Uygun değil",
+      "desc": "Paylar BIST Katılım Endeksi kriterlerine uygun değildir."
     }
   ],
   "tahsisat": [
     {
-      "grup": "Yurt İçi Bireysel Yatırımcı"
+      "grup": "Yurt İçi Bireysel Yatırımcı (%38) - 115.000 lot ve altı başvurular: 33.820.000 lot"
     },
     {
-      "grup": "Yüksek Başvurulu Yatırımcı"
+      "grup": "Yüksek Başvurulu Yatırımcı (%10) - 115.001 lot ve üstü başvurular: 8.900.000 lot"
     },
     {
-      "grup": "Yurt İçi Kurumsal Yatırımcı"
+      "grup": "Grup Çalışanları (%2) - 1.780.000 lot"
     },
     {
-      "grup": "Yurt Dışı Kurumsal Yatırımcı"
+      "grup": "Yurt İçi Kurumsal Yatırımcı (%25) - 22.250.000 lot"
+    },
+    {
+      "grup": "Yurt Dışı Kurumsal Yatırımcı (%25) - 22.250.000 lot"
     }
   ],
   "tahsisatNotlari": [
     "Halka arz fiyatı 70,00 TL sabit fiyat olarak açıklanmıştır.",
     "Bireysel yatırımcı tarafında eşit dağıtım bilgisi yer almaktadır.",
     "Yüksek başvurulu yatırımcı için oransal dağıtım bilgisi yer almaktadır.",
-    "Tahsisat oran ve lot kırılımı ile talep toplama tarihleri kesinleştiğinde bu alan güncellenecektir.",
-    "T1-T2 bakiye kullanımına uygun değildir."
+    "Talep toplama 8-9-10 Temmuz 2026 tarihlerinde 09.00-17.00 saatleri arasında yapılacaktır.",
+    "BIST Katılım Endeksi’ne uygun değildir.",
+    "T1 ve T2 bakiye kullanılamaz.",
+    "Fiyat istikrarı sağlayıcı işlemler planlanmamaktadır."
   ],
   "taahhutOzeti": {
-    "fiyatIstikrari": "",
-    "satmamaTaahhudu": "1 yıl ihraççı, 1 yıl ortaklar.",
+    "fiyatIstikrari": "Fiyat istikrarı sağlayıcı işlemler planlanmamaktadır.",
+    "satmamaTaahhudu": "Şirket 1 yıl boyunca bedelli ve bedelsiz sermaye artırımı yapmayacağını; ortaklar ise halka arzdan sonra dolaşımdaki pay miktarını artıracak şekilde satış yapmayacağını, halka arz fiyatının altında satış yapmayacağını ve pay satmayacağını taahhüt etmiştir.",
     "halkaAciklik": "%20,02."
   },
   "sirketHakkinda": "Şa-Ra Enerji İnşaat Ticaret ve Sanayi A.Ş., 1985 yılında Ankara’da kurulan, enerji iletimi ve dağıtımı sektöründe uzmanlaşmış köklü bir sanayi ve mühendislik şirketidir. Ticari unvanı Şa-Ra Enerji İnşaat Ticaret ve Sanayi Anonim Şirketi olarak paylaşılmıştır. Şirketin yönetim/temsil tarafında Şadi Türk ismi yer almaktadır. MERSİS numarası 0788005159200016 olarak belirtilmiştir. Ana faaliyet alanı enerji nakil hatları, trafo merkezleri, enerji iletimi ve dağıtımıdır. Adana yerleşkesinde bulunan hırdavat fabrikasında 800 kV’a kadar izolatör ve hat donanımları üretildiği, dövme, dökme ve talaşlı imalat atölyeleriyle yıllık 12.000 ton üretim kapasitesine sahip olduğu paylaşılmıştır. Şirket ayrıca güneş, rüzgar ve hidroelektrik santrali projeleri geliştirme alanlarında da faaliyet göstermektedir. Genel merkez adresi Ümit Mahallesi, 2479. Cadde No:2/18, Çankaya / Ankara’dır. Telefon numarası +90 312 285 24 24 olarak belirtilmiştir. Enerji altyapısı ve mühendislik sektöründe şirket performansı; enerji iletim-dağıtım yatırımları, proje portföyü, kamu ve özel sektör siparişleri, metal hammadde maliyetleri, finansman giderleri, işletme sermayesi ve yenilenebilir enerji projeleriyle yakından ilişkilidir.",
-  "eksikBilgiNotu": "Halka arz fiyatı (70,00 TL sabit fiyat), sermaye artırımı ve ortak satışı kırılımı SPK onayı sonrası paylaşılan halka arz tablosuna göre güncellenmiştir. Talep toplama tarihleri, tahsisat oranları, tahsisat lotları ve fiyat istikrarı süresi henüz netleşmediği için bu alanlar ana içerikte öne çıkarılmamıştır. 2024/6 finansal verileri altı aylık dönemi kapsadığı için tam yıl verileriyle doğrudan kıyaslanmamalıdır. Halka arzda sermaye artırımı ve ortak satışları birlikte bulunduğu için şirket kasasına yalnızca sermaye artırımı kaynaklı bölümün gireceği unutulmamalıdır.",
-  "yasalUyari": "Bu sayfadaki bilgiler SPK onayı sonrası açıklanan onaylı izahname/halka arz tablo verilerine göre genel bilgilendirme amacıyla hazırlanmıştır, yatırım tavsiyesi değildir. Kesinleşmemiş alanlar için güncel izahname ve tasarruf sahiplerine satış duyurusu kontrol edilmelidir.",
+  "eksikBilgiNotu": "Halka arz fiyatı, talep toplama tarihleri, tahsisat oranları, tahsisat lotları, BIST Katılım Endeksi uygunluğu, fiyat istikrarı bilgisi, taahhütler ve 2024-2025-2026 ilk çeyrek finansal verileri halka arz tablosundaki bilgilerle güncellenmiştir. Halka arzda sermaye artırımı ve ortak satışları birlikte bulunduğu için şirket kasasına yalnızca sermaye artırımı kaynaklı bölümün gireceği unutulmamalıdır.",
+  "yasalUyari": "Bu sayfadaki bilgiler SPK onayı sonrası açıklanan onaylı izahname/halka arz tablo verilerine göre genel bilgilendirme amacıyla hazırlanmıştır, yatırım tavsiyesi değildir. Halka arz sürecinde güncel izahname, tasarruf sahiplerine satış duyurusu ve KAP açıklamaları kontrol edilmelidir.",
   "sermayeBilgileri": [
     {
       "label": "Mevcut Sermaye",
@@ -205,6 +266,7 @@ function ozetSatirlari(veri: HalkaArzVeri): BilgiKarti[] {
     { label: "Halka Arz Fiyatı", value: o.fiyatAralik || "" },
     { label: "Dağıtım Yöntemi", value: o.dagitimYontemi || "" },
     { label: "Pazar", value: o.pazar || "" },
+    { label: "Katılım Endeksi", value: "BIST Katılım Endeksi’ne uygun değil" },
     { label: "Aracı Kurum", value: o.araciKurum || "" },
   ].filter(gorunur);
 }
@@ -226,7 +288,7 @@ function sssSorulari(veri: HalkaArzVeri) {
     },
     {
       soru: `${veri.sirketAdi} halka arzı hangi pazarda işlem görecek?`,
-      cevap: `Payların ${veri.ozet.pazar || "Borsa İstanbul tarafından açıklanacak pazarda"} işlem görmesi beklenmektedir.`,
+      cevap: `Payların ${veri.ozet.pazar || "Borsa İstanbul tarafından açıklanacak pazarda"} işlem görmesi beklenmektedir. Halka arz tablosuna göre BIST Katılım Endeksi’ne uygun değildir.`,
     },
     {
       soru: `${veri.sirketAdi} halka arz fonu nerede kullanılacak?`,

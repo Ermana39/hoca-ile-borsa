@@ -45,6 +45,132 @@ function hesaplaYTM(alis: number, nominal: number, yillikKupon: number, yilSayis
   return r * 100;
 }
 
+const tahvilAdimlari = [
+  {
+    baslik: "Nominal değer belirlenir",
+    aciklama:
+      "Nominal değer, tahvilin vade sonunda geri ödemesi beklenen anapara tutarıdır. Hesaplamanın ana omurgası bu tutardır.",
+  },
+  {
+    baslik: "Yıllık kupon geliri hesaplanır",
+    aciklama:
+      "Nominal değer yıllık kupon oranıyla çarpılır. Örneğin 100.000 TL nominal değer ve yüzde 40 kupon oranı yıllık 40.000 TL brüt kupon geliri anlamına gelir.",
+  },
+  {
+    baslik: "Stopaj düşülür",
+    aciklama:
+      "Kupon gelirinden girilen stopaj oranı kadar vergi kesintisi ayrılır. Böylece yatırımcının net kupon geliri daha gerçekçi şekilde görülür.",
+  },
+  {
+    baslik: "Alış fiyatı ile nominal değer karşılaştırılır",
+    aciklama:
+      "Tahvil nominal değerin altında alındıysa vade sonunda ek ana para kazancı oluşabilir. Nominal değerin üzerinde alındıysa bu fark toplam getiriyi aşağı çeker.",
+  },
+  {
+    baslik: "Basit getiri ve YTM ayrı ayrı okunur",
+    aciklama:
+      "Basit getiri toplam kazancı alış fiyatına böler. Vadeye kadar getiri ise nakit akışlarının zamanını da hesaba katarak yıllıklaştırılmış bir oran üretir.",
+  },
+];
+
+const tahvilKavramlari = [
+  {
+    baslik: "Kupon oranı",
+    aciklama:
+      "Tahvilin nominal değeri üzerinden hesaplanan yıllık faiz oranıdır. Sabit kuponlu tahvilde oran vade boyunca değişmez; değişken kuponlu tahvilde dönemsel olarak güncellenebilir.",
+  },
+  {
+    baslik: "Alış fiyatı",
+    aciklama:
+      "Tahvili piyasadan hangi tutara aldığınızı gösterir. Aynı kupon oranına sahip iki tahvilde alış fiyatı farklıysa yatırımcının gerçek getirisi de farklı olur.",
+  },
+  {
+    baslik: "Vade",
+    aciklama:
+      "Tahvilin anapara ödemesinin yapılacağı süredir. Vade uzadıkça faiz oranı değişimlerinin tahvil fiyatı üzerindeki etkisi genellikle daha görünür hale gelir.",
+  },
+  {
+    baslik: "Stopaj",
+    aciklama:
+      "Faiz gelirinden yapılan vergi kesintisidir. Araca kendi durumunuza uygun stopaj oranı girerek brüt ve net kupon farkını görebilirsiniz.",
+  },
+  {
+    baslik: "Vadeye kadar getiri",
+    aciklama:
+      "Tahvil vade sonuna kadar elde tutulursa, kupon ödemeleri ve vade sonu anapara ödemesi dikkate alınarak hesaplanan yıllık bileşik getiri yaklaşımıdır.",
+  },
+  {
+    baslik: "Piyasa fiyatı",
+    aciklama:
+      "Tahvil vade sonuna kadar beklenmeden satılırsa oluşabilecek alım satım fiyatıdır. Faizler, likidite ve ihraççı riski fiyatı değiştirebilir.",
+  },
+];
+
+const tahvilSenaryolari = [
+  {
+    baslik: "Nominalin altında alış",
+    aciklama:
+      "Tahvili 100.000 TL nominal değer yerine 95.000 TL'den alan yatırımcı, kupon gelirine ek olarak vade sonunda 5.000 TL ana para farkı elde edebilir.",
+  },
+  {
+    baslik: "Nominalin üzerinde alış",
+    aciklama:
+      "Tahvil 100.000 TL nominal değere karşılık 105.000 TL'den alınırsa kupon geliri yüksek görünse bile vade sonunda ana para tarafında 5.000 TL fiyat farkı geri verilir.",
+  },
+  {
+    baslik: "Uzun vadeli tahvil",
+    aciklama:
+      "Kalan vade uzadıkça kupon akışı daha uzun sürer; fakat piyasa faizlerindeki değişim fiyat üzerinde daha sert dalgalanma yaratabilir.",
+  },
+  {
+    baslik: "Vade sonuna kadar elde tutma",
+    aciklama:
+      "Hesaplayıcının en anlaşılır sonucu, tahvilin vade sonuna kadar taşındığı varsayımında okunur. Ara satış yapılırsa gerçek getiri satış fiyatına göre değişir.",
+  },
+];
+
+const tahvilDikkat = [
+  "Bu araç kupon ödemelerini yıllık varsayımla sadeleştirir; gerçek ihraçlarda ödeme sıklığı ve birikmiş faiz ayrıntıları farklı olabilir.",
+  "Tahvil fiyatı piyasa faizleriyle ters yönde hareket edebilir. Faizler yükselirse mevcut tahvilin piyasa fiyatı düşebilir.",
+  "Özel sektör tahvillerinde ihraççı riski devlet tahviline göre daha belirgin olabilir; sadece kupon oranına bakmak yeterli değildir.",
+  "Net getiri hesabında stopaj, komisyon, saklama ücreti ve alım satım masrafları sonucu etkileyebilir.",
+  "Enflasyon yüksekse nominal getiri pozitif olsa bile reel getiri daha düşük kalabilir.",
+  "Likiditesi zayıf tahvillerde vade öncesi satışta istenen fiyattan işlem yapmak zorlaşabilir.",
+];
+
+const tahvilFaq = [
+  {
+    soru: "Tahvil faizi nasıl hesaplanır?",
+    cevap:
+      "Tahvil faizi nominal değer ile yıllık kupon oranının çarpılmasıyla bulunur. Net kupon geliri için bu brüt faizden stopaj düşülür. Toplam getiri hesabında ise kupon gelirine ek olarak alış fiyatı ile vade sonunda alınacak nominal değer arasındaki fark da dikkate alınır.",
+  },
+  {
+    soru: "Basit getiri ile vadeye kadar getiri aynı şey mi?",
+    cevap:
+      "Hayır. Basit getiri, toplam kazancı alış fiyatına oranlar ve hızlı bir bakış sağlar. Vadeye kadar getiri (YTM), kuponların hangi yıllarda alınacağını ve vade sonunda anaparanın geri dönüşünü de hesaba kattığı için daha ayrıntılı bir ölçüdür.",
+  },
+  {
+    soru: "Tahvil getirisi neden kupon oranından farklı çıkar?",
+    cevap:
+      "Çünkü yatırımcının gerçek getirisi sadece kupon oranına bağlı değildir. Tahvili kaç TL'den aldığı, vade süresi, stopaj, nominal değer ve vade sonunda oluşacak fiyat farkı nihai oranı değiştirir.",
+  },
+  {
+    soru: "Tahvil nominal değerin altında alınırsa avantajlı mı?",
+    cevap:
+      "Nominalin altında alış, vade sonunda ana para farkı kazancı yaratabileceği için getiriyi artırabilir. Ancak bu tek başına yeterli değildir; kalan vade, ihraççı riski, likidite ve piyasa faizleri birlikte değerlendirilmelidir.",
+  },
+  {
+    soru: "Tahvili vade sonundan önce satarsam hesap değişir mi?",
+    cevap:
+      "Evet. Bu hesaplayıcı vade sonuna kadar elde tutma varsayımıyla anlamlıdır. Vade öncesi satışta gerçek kazanç, o gün oluşan piyasa fiyatına ve satış masraflarına göre yeniden hesaplanmalıdır.",
+  },
+  {
+    soru: "Devlet tahvili ile özel sektör tahvili aynı riskte midir?",
+    cevap:
+      "Aynı riskte kabul edilmez. Devlet tahvili kamu borçlanma aracı iken özel sektör tahvilinde şirketin ödeme gücü, borçluluğu, nakit akışı ve kredi riski ayrıca incelenmelidir.",
+  },
+];
+
 export default function TahvilHesaplayici() {
   const [nominal, setNominal] = useState("100.000");
   const [kupon, setKupon] = useState("40");
@@ -167,29 +293,102 @@ export default function TahvilHesaplayici() {
         )}
 
         <section className="mt-10 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
-          <h2 className="mb-4 text-xl font-bold text-zinc-900">Tahvil Getiri Hesaplaması Nasıl Yapılır?</h2>
-          <p className="mb-3 text-sm leading-7 text-zinc-600">
-            Tahvil hesaplama aracı; nominal değer, kupon oranı, vade süresi ve alış fiyatı bilgileri
-            girilerek yıllık kupon geliri, basit getiri ve vadeye kadar getiri (YTM) hesaplamak için
-            kullanılır. Devlet iç borçlanma senetleri ve özel sektör tahvilleri için kullanılabilir.
-          </p>
-          <p className="text-sm leading-7 text-zinc-600">
-            Devlet İç Borçlanma Senetleri (DİBS) Hazine tarafından ihraç edilir ve sabit veya değişken
-            faizli olabilir. TL cinsinden tahvil faizleri stopaja tabi iken eurobond faiz gelirleri
-            stopajdan muaftır.
-          </p>
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Tahvil Faizi Hesaplama Nasıl Yapılır?</h2>
+          <div className="space-y-3 text-sm leading-7 text-zinc-600">
+            <p>
+              Tahvil faizi hesaplama, yalnızca kupon oranına bakılarak yapılmaz. Tahvilin nominal değeri,
+              hangi fiyattan alındığı, kalan vadesi, kupon oranı, stopaj oranı ve vade sonunda geri alınacak
+              anapara birlikte değerlendirilir. Bu nedenle aynı kupon oranına sahip iki tahvil, farklı alış
+              fiyatlarından alındığında yatırımcıya farklı getiri sunabilir.
+            </p>
+            <p>
+              Bu hesaplayıcı, tahvili vade sonuna kadar taşıma varsayımıyla brüt kuponu, stopaj tutarını,
+              net kupon gelirini, ana para farkını, basit getiri oranını ve vadeye kadar getiri oranını
+              birlikte gösterir. Böylece yalnızca "yıllık faiz kaç" sorusuna değil, "bu tahvili bu fiyattan
+              alırsam toplamda ne kadar kazanırım" sorusuna da cevap verir.
+            </p>
+          </div>
         </section>
+
+        <section className="mt-6 rounded-2xl border border-zinc-200 bg-white p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Hesaplama Adımları</h2>
+          <ol className="space-y-3">
+            {tahvilAdimlari.map((adim, index) => (
+              <li key={adim.baslik} className="rounded-xl border border-zinc-200 bg-zinc-50 p-4">
+                <div className="mb-1 text-xs font-bold uppercase tracking-wide text-blue-700">{index + 1}. adım</div>
+                <h3 className="mb-1 text-sm font-bold text-zinc-900">{adim.baslik}</h3>
+                <p className="text-sm leading-6 text-zinc-600">{adim.aciklama}</p>
+              </li>
+            ))}
+          </ol>
+        </section>
+
+        <section className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Tahvil Getirisinde Bilinmesi Gereken Kavramlar</h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            {tahvilKavramlari.map((kavram) => (
+              <div key={kavram.baslik} className="rounded-xl border border-zinc-200 bg-white p-4">
+                <h3 className="mb-2 text-sm font-bold text-zinc-900">{kavram.baslik}</h3>
+                <p className="text-sm leading-6 text-zinc-600">{kavram.aciklama}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-6 rounded-2xl border border-zinc-200 bg-white p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Basit Getiri ve Vadeye Kadar Getiri Farkı</h2>
+          <div className="grid gap-4 md:grid-cols-2">
+            <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-4">
+              <h3 className="mb-2 text-sm font-bold text-zinc-900">Basit getiri</h3>
+              <p className="text-sm leading-6 text-zinc-600">
+                Basit getiri, tahvilin vade boyunca sağlayacağı net kupon geliri ve ana para farkını alış
+                fiyatına böler. Pratik bir karşılaştırma sağlar; ancak kuponların hangi tarihlerde alınacağını
+                ayrıntılı biçimde hesaba katmaz.
+              </p>
+            </div>
+            <div className="rounded-xl border border-zinc-200 bg-zinc-50 p-4">
+              <h3 className="mb-2 text-sm font-bold text-zinc-900">Vadeye kadar getiri</h3>
+              <p className="text-sm leading-6 text-zinc-600">
+                Vadeye kadar getiri, kupon ödemelerinin zaman değerini ve vade sonunda nominal değerin geri
+                dönüşünü birlikte ele alır. Tahvilin piyasa fiyatıyla uyumlu yıllık getiri oranını anlamak
+                isteyen yatırımcılar için daha kapsamlı bir göstergedir.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Örnek Tahvil Getiri Senaryoları</h2>
+          <div className="space-y-3">
+            {tahvilSenaryolari.map((senaryo) => (
+              <div key={senaryo.baslik} className="rounded-xl border border-zinc-200 bg-white p-4">
+                <h3 className="mb-1 text-sm font-bold text-zinc-900">{senaryo.baslik}</h3>
+                <p className="text-sm leading-6 text-zinc-600">{senaryo.aciklama}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section className="mt-6 rounded-2xl border border-zinc-200 bg-white p-5 md:p-6">
+          <h2 className="mb-4 text-xl font-bold text-zinc-900">Tahvil Alırken Nelere Dikkat Edilmeli?</h2>
+          <ul className="space-y-3">
+            {tahvilDikkat.map((madde) => (
+              <li key={madde} className="rounded-xl border border-zinc-200 bg-zinc-50 p-4 text-sm leading-6 text-zinc-600">
+                {madde}
+              </li>
+            ))}
+          </ul>
+        </section>
+
         <section className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-5 md:p-6">
           <h2 className="mb-4 text-xl font-bold text-zinc-900">Sık Sorulan Sorular</h2>
           <div className="space-y-4">
-            <div>
-              <h3 className="mb-1 text-sm font-bold text-zinc-800">Tahvil ile bono arasındaki fark nedir?</h3>
-              <p className="text-sm leading-6 text-zinc-600">Vadesi 1 yıldan kısa olan devlet borçlanma araçlarına bono, 1 yıldan uzun olanlara tahvil denir. Her ikisi de sabit getirili menkul kıymet grubundadır.</p>
-            </div>
-            <div>
-              <h3 className="mb-1 text-sm font-bold text-zinc-800">Tahvil faizi vergiye tabi midir?</h3>
-              <p className="text-sm leading-6 text-zinc-600">TL cinsinden devlet tahvili faiz gelirinde %10 stopaj uygulanır. Eurobond faiz geliri ise stopajdan muaftır.</p>
-            </div>
+            {tahvilFaq.map((item) => (
+              <div key={item.soru}>
+                <h3 className="mb-1 text-sm font-bold text-zinc-800">{item.soru}</h3>
+                <p className="text-sm leading-6 text-zinc-600">{item.cevap}</p>
+              </div>
+            ))}
           </div>
         </section>
         <HesaplayiciRehberi slug="tahvil" />

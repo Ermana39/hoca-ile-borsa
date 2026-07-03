@@ -125,6 +125,25 @@ const yanilgilar = [
   "Brüt takas, yatırımcıyı tüm risklerden koruyan bir güvence değildir.",
 ];
 
+const ornekSenaryolar = [
+  {
+    title: "Hisse Sattım, Aynı Gün Brüt Takastaki Hisseyi Alabilir miyim?",
+    text: "Normal takasta satıştan gelen alacak bazı işlemlerde kullanılabilir görünebilir. Brüt takasta ise alım için nakit yükümlülüğü daha sıkı takip edilir. Bu yüzden toplam bakiye yerine aracı kurum ekranındaki gerçek kullanılabilir nakit kontrol edilmelidir.",
+  },
+  {
+    title: "Brüt Takastaki Hissede Gün İçi Al-Sat Yapılır mı?",
+    text: "Teorik olarak emir girilebilir; ancak netleştirme kaldırıldığı için aynı gün işlem çevirmek normal takasa göre zordur. Yatırımcı alım için nakdi, satış için payı ayrı ayrı karşılayabilmelidir.",
+  },
+  {
+    title: "Tedbir Bitince Hisse Otomatik Yükselir mi?",
+    text: "Hayır. Tedbirin bitmesi sadece işlem koşullarının normalleşmesi anlamına gelebilir. Fiyatı şirket haberleri, bilanço, likidite, piyasa algısı ve arz-talep dengesi belirlemeye devam eder.",
+  },
+  {
+    title: "Likidite Azalırsa Ne Olur?",
+    text: "Alış ve satış kademeleri arasındaki fark açılabilir. Bu durumda yatırımcı istediği fiyattan işlem yapmakta zorlanabilir ve büyük emirler fiyatı daha sert hareket ettirebilir.",
+  },
+];
+
 const kaynaklar = [
   {
     title: "Borsa İstanbul Pay Piyasası İşleyişi",
@@ -184,6 +203,7 @@ const tableOfContents = [
   { href: "#sistem-nasil-isler", label: "Sistem Nasıl İşler?" },
   { href: "#hisseyi-nasil-etkiler", label: "Hisseyi Nasıl Etkiler?" },
   { href: "#dikkat-edilecekler", label: "Dikkat Edilecekler" },
+  { href: "#ornek-senaryolar", label: "Örnek Senaryolar" },
   { href: "#sss", label: "Sık Sorulan Sorular" },
 ];
 
@@ -211,21 +231,59 @@ function Section({
 export default function BrutTakasNedirPage() {
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: title,
-    description,
-    mainEntityOfPage: `${siteUrl}/rehberler/brut-takas-nedir`,
-    author: {
-      "@type": "Person",
-      "@id": `${siteUrl}/yazar/erman-hoca#person`,
-      name: "Erman Hoca",
-      url: `${siteUrl}/yazar/erman-hoca`,
-    },
-    publisher: {
-      "@type": "Organization",
-      name: "Hoca İle Borsa",
-      url: siteUrl,
-    },
+    "@graph": [
+      {
+        "@type": "Article",
+        headline: title,
+        description,
+        mainEntityOfPage: `${siteUrl}/rehberler/brut-takas-nedir`,
+        author: {
+          "@type": "Person",
+          "@id": `${siteUrl}/yazar/erman-hoca#person`,
+          name: "Erman Hoca",
+          url: `${siteUrl}/yazar/erman-hoca`,
+        },
+        publisher: {
+          "@type": "Organization",
+          name: "Hoca İle Borsa",
+          url: siteUrl,
+        },
+      },
+      {
+        "@type": "FAQPage",
+        mainEntity: faq.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer,
+          },
+        })),
+      },
+      {
+        "@type": "BreadcrumbList",
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "Ana Sayfa",
+            item: siteUrl,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: "Rehberler",
+            item: `${siteUrl}/rehberler`,
+          },
+          {
+            "@type": "ListItem",
+            position: 3,
+            name: "Brüt Takas",
+            item: `${siteUrl}/rehberler/brut-takas-nedir`,
+          },
+        ],
+      },
+    ],
   };
 
   return (
@@ -467,6 +525,27 @@ export default function BrutTakasNedirPage() {
                     <li key={item}>{item}</li>
                   ))}
                 </ul>
+              </Section>
+
+              <Section id="ornek-senaryolar" title="Brüt Takas İçin Örnek Yatırımcı Senaryoları">
+                <p>
+                  Brüt takasın yatırımcı açısından gerçek etkisi çoğu zaman
+                  işlem ekranında ortaya çıkar. Aşağıdaki örnekler, nakit,
+                  pay ve takas yükümlülüğünü daha somut okumaya yardımcı olur.
+                </p>
+                <div className="grid gap-3">
+                  {ornekSenaryolar.map((item) => (
+                    <div
+                      key={item.title}
+                      className="rounded-xl border border-slate-200 bg-slate-50 p-4"
+                    >
+                      <h3 className="font-bold text-slate-900">{item.title}</h3>
+                      <p className="mt-2 text-sm leading-7 text-slate-600">
+                        {item.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
               </Section>
 
               <Section id="yanilgilar" title="Brüt Takas Hakkında Yanlış Bilinenler">
