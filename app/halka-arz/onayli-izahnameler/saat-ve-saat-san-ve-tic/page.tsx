@@ -22,72 +22,126 @@ const veri: HalkaArzVeri = {
   },
   "baslikMeta": {
     "title": "Saat ve Saat San. ve Tic. A.Ş. Halka Arz Detayları 2026 | Onaylı İzahname",
-    "description": "Saat ve Saat San. ve Tic. A.Ş. halka arzında talep toplama tarihleri 6-7-8 Temmuz 2026 olarak açıklandı. 56,00 TL fiyat, bireysele eşit dağıtım, %60 bireysel tahsisat ve ek satış detayları."
+    "description": "Saat ve Saat San. ve Tic. A.Ş. halka arzında talep toplama tarihleri 6-7-8 Temmuz 2026 olarak açıklandı. 56,00 TL fiyat, bireysele eşit dağıtım, %60 bireysel tahsisat, %12,16 halka açıklık ve 4,49 milyar TL arz büyüklüğü detayları."
   },
   "ozet": {
-    "halkaArzTarihi": "6-7-8 Temmuz 2026\nPazartesi-Salı-Çarşamba",
-    "fiyatAralik": "56,00 TL",
-    "dagitimYontemi": "Bireysele Eşit Dağıtım",
-    "pay": "66.944.955 Lot (+13.388.991 Lot planlanan ek satış)",
-    "araciKurum": "Garanti Yatırım Menkul Kıymetler A.Ş.\nHalk Yatırım Menkul Değerler A.Ş.",
+    "halkaArzTarihi": "6-7-8 Temmuz 2026\nPazartesi-Salı-Çarşamba\n09.00-17.00",
+    "fiyatAralik": "56,00 TL (%37,01 iskonto)",
+    "dagitimYontemi": "Bireysele Eşit Dağıtım\nT1-T2 bakiye kullanılamaz",
+    "pay": "80.333.946 Lot (ek satış dahil)",
+    "araciKurum": "Halk Yatırım Menkul Değerler A.Ş.\nGaranti Yatırım Menkul Kıymetler A.Ş.",
     "pazar": "Yıldız Pazar",
     "bistKodu": "SSAAT"
   },
-  "toplamPay": "66.944.955",
+  "toplamPay": "80.333.946 Lot",
   "bistKodu": "SSAAT",
-  "halkaAciklikOrani": "%10,14 (ek satışla %12,16)",
+  "halkaAciklikOrani": "%12,16",
   "halkaArzSekli": [
-    "Sermaye Artırımı (Bedelli): 40.166.973 Lot",
-    "Ortak Satışı: 11.506.638 Lot (Ramazan Kaya)",
-    "Ortak Satışı: 11.506.638 Lot (Hamza Kaya)",
-    "Ortak Satışı: 3.764.706 Lot (Nurullah Dönmez)",
-    "Planlanan Ek Pay Satışı: 13.388.991 Lot"
+    "Sermaye Artırımı: 40.166.973 Lot",
+    "Ortak Satışı: 26.777.982 Lot",
+    "Ek Satış: 13.388.991 Lot",
+    "Toplam Dağıtılacak Pay: 80.333.946 Lot"
   ],
   "fonKullanim": [
-    "%40-50 Finansal borçların ödenmesi",
-    "%30-40 İşletme sermayesi",
-    "%10-30 Yurt içi ve yurt dışı mağaza açılışları ve yenilemeleri"
+    "%80 İşletme sermayesi",
+    "%20 Finansal borçların ödenmesi"
   ],
-  "fonKullanimYorumu": "Saat ve Saat halka arzında fon kullanım planı finansal borçların ödenmesi, işletme sermayesi ve yurt içi/yurt dışı mağaza açılışları ile yenilemeleri başlıklarına ayrılmıştır. Perakende ve distribütörlük faaliyetlerinde finansal borçların azaltılması, faiz giderleri ve nakit akışı üzerinde destekleyici etki yaratabilir. İşletme sermayesine ayrılan kaynak; stok finansmanı, ithalat süreçleri, mağaza operasyonları, e-ticaret satışları, bayi ve pazar yeri kanallarındaki ürün sürekliliği açısından önemlidir. Mağaza açılışları ve yenilemeleri ise şirketin fiziksel perakende ağını güçlendirme, marka görünürlüğünü artırma ve satış metrekare verimliliğini yükseltme potansiyeli taşıyabilir. Halka arzda sermaye artırımıyla birlikte Ramazan Kaya, Hamza Kaya ve Nurullah Dönmez’e ait ortak satışları da bulunduğu için, şirket kasasına girecek kaynak ile ortak satışından doğacak tutar ayrı değerlendirilmelidir.",
+  "fonKullanimYorumu": "Saat ve Saat halka arzında şirket kasasına girecek kaynak ağırlıklı olarak işletme sermayesi ihtiyacı için planlanmıştır. Bu kalem; stok yönetimi, ithalat süreçleri, mağaza operasyonları, bayi kanalı, e-ticaret ve pazar yeri satışlarında ürün sürekliliği açısından önem taşır. Fonun kalan kısmının finansal borçların ödenmesine ayrılması ise borçluluk ve finansman giderleri üzerinde destekleyici etki yaratabilir. Halka arzda sermaye artırımı ile birlikte ortak satışı ve ek satış da bulunduğu için, şirket kasasına girecek tutar ile ortak satışından kaynaklanan tutar ayrı değerlendirilmelidir.",
   "finansalDonemler": [
-    "2024/3",
-    "2023",
-    "2022"
+    "2024",
+    "2025",
+    "2026/1Ç"
   ],
   "finansalVeriler": [
     {
-      "kalem": "Hasılat",
+      "kalem": "Dönen Varlıklar",
       "donemler": {
-        "2024/3": "1,5 Milyar TL",
-        "2023": "5,8 Milyar TL",
-        "2022": "3,9 Milyar TL"
+        "2024": "7,3 Milyar TL",
+        "2025": "7,9 Milyar TL",
+        "2026/1Ç": "8,0 Milyar TL"
       }
     },
     {
-      "kalem": "Brüt Kâr",
+      "kalem": "Duran Varlıklar",
       "donemler": {
-        "2024/3": "804,4 Milyon TL",
-        "2023": "3,6 Milyar TL",
-        "2022": "2,4 Milyar TL"
+        "2024": "1,5 Milyar TL",
+        "2025": "1,4 Milyar TL",
+        "2026/1Ç": "1,4 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Toplam Varlıklar",
+      "donemler": {
+        "2024": "8,8 Milyar TL",
+        "2025": "9,4 Milyar TL",
+        "2026/1Ç": "9,4 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Kısa Vadeli Yükümlülükler",
+      "donemler": {
+        "2024": "4,8 Milyar TL",
+        "2025": "5,1 Milyar TL",
+        "2026/1Ç": "5,3 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Uzun Vadeli Yükümlülükler",
+      "donemler": {
+        "2024": "578 Milyon TL",
+        "2025": "532 Milyon TL",
+        "2026/1Ç": "549 Milyon TL"
+      }
+    },
+    {
+      "kalem": "Özkaynaklar",
+      "donemler": {
+        "2024": "3,3 Milyar TL",
+        "2025": "3,7 Milyar TL",
+        "2026/1Ç": "3,5 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Hasılat",
+      "donemler": {
+        "2024": "11,5 Milyar TL",
+        "2025": "13,0 Milyar TL",
+        "2026/1Ç": "3,3 Milyar TL"
+      }
+    },
+    {
+      "kalem": "Esas Faaliyet Kârı",
+      "donemler": {
+        "2024": "3,5 Milyar TL",
+        "2025": "3,5 Milyar TL",
+        "2026/1Ç": "763 Milyon TL"
+      }
+    },
+    {
+      "kalem": "Net Dönem Kârı",
+      "donemler": {
+        "2024": "1,2 Milyar TL",
+        "2025": "1,5 Milyar TL",
+        "2026/1Ç": "254 Milyon TL"
       }
     }
   ],
-  "finansalYorum": "Finansal görünümde 2023 yılında hem hasılat hem de brüt kârın 2022’ye göre belirgin arttığı görülüyor. Bu tablo; mağaza ağı, distribütörlük faaliyetleri, e-ticaret kanalları, fiyatlama gücü ve marka portföyü açısından güçlü bir büyümeye işaret edebilir. 2024/3 verileri üç aylık dönemi kapsadığı için 2023 tam yıl verileriyle doğrudan karşılaştırılmamalıdır. Saat, aksesuar ve perakende sektöründe finansal sonuçlar; stok yönetimi, döviz kuru, ithalat maliyetleri, mağaza kira giderleri, bayi ağı, e-ticaret satışları, tüketici talebi ve marka karmasıyla yakından ilişkilidir. Bu nedenle Saat ve Saat değerlendirilirken yalnızca hasılat ve brüt kâr rakamlarına bakmak yeterli olmaz; net kâr, faaliyet kârı, FAVÖK, nakit akışı, finansal borçluluk, stok devir hızı, mağaza başına satış performansı ve yeni sektör yatırımlarının etkisi birlikte incelenmelidir.",
+  "finansalYorum": "Finansal görünümde 2024-2025 döneminde hasılatın 11,5 milyar TL’den 13,0 milyar TL’ye yükseldiği, net dönem kârının ise 1,2 milyar TL’den 1,5 milyar TL’ye çıktığı görülüyor. 2026 ilk çeyrekte 3,3 milyar TL hasılat ve 254 milyon TL net dönem kârı açıklanmıştır. Varlık tarafında toplam varlıkların 2025 ve 2026 ilk çeyrekte 9,4 milyar TL seviyesinde kaldığı, kısa vadeli yükümlülüklerin ise 5,3 milyar TL’ye yükseldiği izlenmektedir. Bu nedenle şirketin büyüme performansı değerlendirilirken hasılat ve kârlılıkla birlikte kısa vadeli yükümlülükler, stok finansmanı, işletme sermayesi ihtiyacı, nakit akışı ve finansal borçların seyri birlikte takip edilmelidir.",
   "oneCikanlar": [
     {
       "title": "Halka Arz Fiyatı",
       "value": "56,00 TL",
-      "desc": "1 TL nominal değerli paylar 56,00 TL sabit fiyat üzerinden satışa sunulacaktır."
+      "desc": "1 TL nominal değerli paylar 56,00 TL sabit fiyat ve %37,01 iskonto oranı ile satışa sunulacaktır."
     },
     {
       "title": "Toplam Pay",
-      "value": "66.944.955 Lot",
-      "desc": "40.166.973 lot bedelli sermaye artırımı ve 26.777.982 lot ortak satışından oluşur; planlanan ek satış 13.388.991 lot olarak açıklanmıştır."
+      "value": "80.333.946 Lot",
+      "desc": "40.166.973 lot sermaye artırımı, 26.777.982 lot ortak satışı ve 13.388.991 lot ek satıştan oluşur."
     },
     {
       "title": "Halka Açıklık",
-      "value": "%10,14",
-      "desc": "Ek satış gerçekleşirse halka açıklık oranı %12,16 seviyesine çıkabilir."
+      "value": "%12,16",
+      "desc": "Ek satış dahil halka açıklık oranı %12,16 olarak açıklanmıştır."
     },
     {
       "title": "T1-T2 Kullanımı",
@@ -108,22 +162,23 @@ const veri: HalkaArzVeri = {
     }
   ],
   "tahsisatNotlari": [
-    "Talep toplama tarihleri 6-7-8 Temmuz 2026 Pazartesi-Salı-Çarşamba olarak açıklanmıştır.",
-    "Halka arz fiyatı 56,00 TL sabit fiyat olarak açıklanmıştır.",
+    "Talep toplama tarihleri 6-7-8 Temmuz 2026 Pazartesi-Salı-Çarşamba, 09.00-17.00 saatleri arasında açıklanmıştır.",
+    "Halka arz fiyatı 56,00 TL ve iskonto oranı %37,01 olarak açıklanmıştır.",
     "Bireysel yatırımcı tarafında bireysele eşit dağıtım yöntemi uygulanacaktır.",
+    "T1-T2 bakiye kullanımına uygun değildir.",
     "Yurt içi bireysel yatırımcılara %60 oranla 40.166.973 lot tahsis edilmiştir.",
     "Yurt içi kurumsal yatırımcılara %40 oranla 26.777.982 lot tahsis edilmiştir.",
-    "Planlanan ek satış tutarı 13.388.991 lot olarak açıklanmıştır.",
-    "Katılım endeksine uygun olduğu açıklanmıştır.",
-    "T1-T2 bakiye kullanımına uygun değildir."
+    "Ek satış tutarı 13.388.991 lot olarak açıklanmıştır.",
+    "Ek satış dahil toplam dağıtılacak pay 80.333.946 lot olarak belirtilmiştir.",
+    "Katılım endeksine uygun olduğu açıklanmıştır."
   ],
   "taahhutOzeti": {
-    "fiyatIstikrari": "Halk Yatırım Menkul Değerler A.Ş. bilgisi yer almaktadır. Süre ve uygulama detayları tasarruf sahiplerine satış duyurusu üzerinden ayrıca kontrol edilmelidir.",
-    "satmamaTaahhudu": "1 yıl ihraççı, 1 yıl ortaklar.",
-    "halkaAciklik": "%10,14 (ek satışla %12,16)."
+    "fiyatIstikrari": "Brüt halka arz gelirinin %20’si ile 30 gün boyunca fiyat istikrarı sağlayıcı işlemler planlanmaktadır.",
+    "satmamaTaahhudu": "1 yıl boyunca bedelli ve bedelsiz sermaye artırımı yapılmayacağı, dolaşımdaki payların artmasına sebep olacak şekilde satışa veya halka arza konu edilmeyeceği; pay sahibi ortakların da 1 yıl boyunca halka arz fiyatının altında pay satışı yapmayacağı ve pay satmayacağı taahhüt edilmiştir.",
+    "halkaAciklik": "%12,16."
   },
   "sirketHakkinda": "Saat ve Saat San. ve Tic. A.Ş., 1994 yılında kurulan ve Türkiye’de saat ile aksesuar perakendeciliği, distribütörlüğü ve toptan satışı alanında faaliyet gösteren bir şirkettir. Şirketin sektördeki kökenlerinin 1971 yılına dayandığı paylaşılmıştır. Resmi unvanı Saat ve Saat Sanayi ve Ticaret A.Ş. olarak belirtilmiştir. CEO / yönetim tarafında Ramazan Kaya ismi öne çıkmaktadır. Şirketin merkez adresi Büyükdere Caddesi, Noramin İş Merkezi No:237/D Kat:B2, Maslak, Sarıyer / İstanbul’dur. İletişim numarası +90 212 232 72 28 olarak paylaşılmıştır. Türkiye genelinde 170’ten fazla mağaza, 600’ün üzerinde bayi ve zincir mağaza satış noktası bulunduğu; Türkiye dahil 45 ülkeyi kapsayan geniş bir dağıtım ağına sahip olduğu belirtilmiştir. Şirket kendi e-ticaret platformunun yanı sıra popüler pazar yerlerinde de aktif satış yapmaktadır. Saat ve Saat’in bağlı olduğu HRK Holding’in, Aydınlı Hazır Giyim Grubu’nu satın alarak U.S. Polo Assn., Pierre Cardin ve Cacharel gibi markaları bünyesine kattığı bilgisi paylaşılmıştır. Saat, aksesuar, distribütörlük ve perakende sektöründe şirket performansı; marka portföyü, mağaza ağı, e-ticaret kanalları, tüketici talebi, stok yönetimi, döviz kuru, ithalat maliyetleri ve yeni grup yatırımlarının entegrasyonuyla yakından ilişkilidir.",
-  "eksikBilgiNotu": "Halka arz fiyatı (56,00 TL sabit fiyat), talep toplama tarihleri, bireysele eşit dağıtım yöntemi, tahsisat oranları, tahsisat lotları, sermaye artırımı, ortak satışı ve planlanan ek pay satışı kırılımı açıklanan onaylı izahname/satış duyurusu verilerine göre güncellenmiştir. 2024/3 finansal verileri üç aylık dönemi kapsadığı için tam yıl verileriyle doğrudan kıyaslanmamalıdır. Halka arzda sermaye artırımı ve ortak satışları birlikte bulunduğu için şirket kasasına yalnızca sermaye artırımı kaynaklı bölümün gireceği unutulmamalıdır.",
+  "eksikBilgiNotu": "Halka arz fiyatı (56,00 TL), %37,01 iskonto oranı, talep toplama saatleri, bireysele eşit dağıtım yöntemi, T1-T2 kullanılamaması, tahsisat oranları, tahsisat lotları, sermaye artırımı, ortak satışı, ek satış, fon kullanım oranları, finansal veriler ve taahhüt bilgileri görseldeki onaylı halka arz tablo verilerine göre güncellenmiştir. 2026/1Ç finansal verileri üç aylık dönemi kapsadığı için tam yıl verileriyle doğrudan kıyaslanmamalıdır. Halka arzda sermaye artırımı ve ortak satışları birlikte bulunduğu için şirket kasasına yalnızca sermaye artırımı kaynaklı bölümün gireceği unutulmamalıdır.",
   "yasalUyari": "Bu sayfadaki bilgiler SPK onayı sonrası açıklanan onaylı izahname/halka arz tablo verilerine göre genel bilgilendirme amacıyla hazırlanmıştır, yatırım tavsiyesi değildir. Kesinleşmemiş alanlar için güncel izahname ve tasarruf sahiplerine satış duyurusu kontrol edilmelidir.",
   "sermayeBilgileri": [
     {
@@ -160,7 +215,11 @@ const veri: HalkaArzVeri = {
     },
     {
       "label": "Halka Arz Büyüklüğü",
-      "value": "3.748.917.480 TL (ek satışla 4.498.700.976 TL)"
+      "value": "4.498.700.976 TL"
+    },
+    {
+      "label": "Konsorsiyum Üyeleri",
+      "value": "A1 Capital, Acar, Ahlatcı, Ak Yatırım, Alnus, Alternatif, Anadolu, Ata, Bizim, Bulls, Burgan, BTC Türk, Colendi, Deniz, Destek, Dinamik, Fiba, Gedik, Global, ICBC, ING, Investaz, İntegral, İnfo, İş Yatırım, Kuveyt Türk, Marbaş, Meksa, Osmanlı, Oyak, PhillipCapital, Pusula, Piramit, QNB, Şeker, Tacirler, TEB, Tera, Turkish, Ünlü, Vakıf, Yapı Kredi, Yatırım Finansman, Ziraat Yatırım"
     }
   ]
 };
@@ -211,6 +270,7 @@ function ozetSatirlari(veri: HalkaArzVeri): BilgiKarti[] {
     { label: "Talep Toplama Tarihi", value: o.halkaArzTarihi || "" },
     { label: "Halka Arz Fiyatı", value: o.fiyatAralik || "" },
     { label: "Dağıtım Yöntemi", value: o.dagitimYontemi || "" },
+    { label: "Katılım Endeksi", value: "Uygun" },
     { label: "Pazar", value: o.pazar || "" },
     { label: "Aracı Kurum", value: o.araciKurum || "" },
   ].filter(gorunur);

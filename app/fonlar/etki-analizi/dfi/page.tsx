@@ -19,12 +19,12 @@ export const metadata: Metadata = {
 };
 
 const rows: FonEtkiRow[] = [
-  { sembol: "IEYHO", fonOrani: 53.41, kapanisMarji: 3.355704698, etki: 1.792281879 },
-  { sembol: "ISKPL", fonOrani: 11.26, kapanisMarji: -4.866562009, etki: -0.547974882 },
-  { sembol: "LIDER", fonOrani: 0.54, kapanisMarji: 6.689342404, etki: 0.036122449 },
-  { sembol: "ECILC", fonOrani: 0.19, kapanisMarji: 2.937249666, etki: 0.005580774 },
-  { sembol: "TURSG", fonOrani: 0.03, kapanisMarji: 0.826446281, etki: 0.000247934 },
-  { sembol: "ABG", fonOrani: 26.53, kapanisMarji: -2.49, etki: -0.660597 },
+  { sembol: "IEYHO", fonOrani: 52.75, kapanisMarji: -1.298701299, etki: -0.685064935 },
+  { sembol: "ISKPL", fonOrani: 11.12, kapanisMarji: 0.99009901, etki: 0.11009901 },
+  { sembol: "LIDER", fonOrani: 0.53, kapanisMarji: -0.637619554, etki: -0.003379384 },
+  { sembol: "ECILC", fonOrani: 0.19, kapanisMarji: -0.194552529, etki: -0.00036965 },
+  { sembol: "TURSG", fonOrani: 0.03, kapanisMarji: -0.983606557, etki: -0.000295082 },
+  { sembol: "ABG", fonOrani: 30.15, kapanisMarji: 3.46, etki: 1.04319 },
 ];
 
 export default function DfiEtkiAnaliziPage() {
@@ -35,9 +35,9 @@ export default function DfiEtkiAnaliziPage() {
       fonTuru="Atlas Portföy Serbest Fon"
       slug="dfi"
       rows={rows}
-      toplamFonOrani={91.96}
-      toplamEtki={0.63}
-      sonGuncelleme="2 Temmuz 2026"
+      toplamFonOrani={94.77}
+      toplamEtki={0.46}
+      sonGuncelleme="3 Temmuz 2026"
     />
   );
 }

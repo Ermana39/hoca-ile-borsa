@@ -19,20 +19,21 @@ export const metadata: Metadata = {
 };
 
 const rows: FonEtkiRow[] = [
-  { sembol: "DSTKF", fonOrani: 16.41, kapanisMarji: 1.60, etki: 0.2626 },
-  { sembol: "OZATD", fonOrani: 15.9, kapanisMarji: 5.96, etki: 0.9483 },
-  { sembol: "TERA", fonOrani: 10.65, kapanisMarji: -9.98, etki: -1.0632 },
-  { sembol: "PEKGY", fonOrani: 9.16, kapanisMarji: 1.27, etki: 0.1168 },
-  { sembol: "TRHOL", fonOrani: 6.11, kapanisMarji: -4.26, etki: -0.2605 },
-  { sembol: "TEHOL", fonOrani: 5.1, kapanisMarji: 1.05, etki: 0.0534 },
-  { sembol: "ANELE", fonOrani: 1.99, kapanisMarji: -5.18, etki: -0.1031 },
-  { sembol: "ALKLC", fonOrani: 0.61, kapanisMarji: -0.51, etki: -0.0031 },
-  { sembol: "SVGYO", fonOrani: 0.51, kapanisMarji: 2.22, etki: 0.0113 },
-  { sembol: "TMPOL", fonOrani: 0.31, kapanisMarji: -2.57, etki: -0.0080 },
-  { sembol: "HEDEF", fonOrani: 0.26, kapanisMarji: 1.61, etki: 0.0042 },
-  { sembol: "CWENE", fonOrani: 0.03, kapanisMarji: 2.78, etki: 0.0008 },
-  { sembol: "EUPWR", fonOrani: 0.03, kapanisMarji: -2.64, etki: -0.0008 },
-  { sembol: "TPKGY", fonOrani: 11.3, kapanisMarji: 1.61, etki: 0.1819 },
+  { sembol: "DSTKF", fonOrani: 22.85, kapanisMarji: -1.57, etki: -0.3598 },
+  { sembol: "OZATD", fonOrani: 14.3, kapanisMarji: 6.31, etki: 0.9024 },
+  { sembol: "PEKGY", fonOrani: 7.73, kapanisMarji: -0.07, etki: -0.0054 },
+  { sembol: "TEHOL", fonOrani: 7.14, kapanisMarji: 1.09, etki: 0.0777 },
+  { sembol: "TERA", fonOrani: 6.63, kapanisMarji: -7.87, etki: -0.5217 },
+  { sembol: "TRHOL", fonOrani: 5.61, kapanisMarji: -4.33, etki: -0.2429 },
+  { sembol: "ANELE", fonOrani: 1.99, kapanisMarji: -4.26, etki: -0.0848 },
+  { sembol: "SELEC", fonOrani: 1.04, kapanisMarji: 6.80, etki: 0.0707 },
+  { sembol: "ALKLC", fonOrani: 0.54, kapanisMarji: 2.95, etki: 0.0159 },
+  { sembol: "SVGYO", fonOrani: 0.52, kapanisMarji: 1.91, etki: 0.0099 },
+  { sembol: "HEDEF", fonOrani: 0.27, kapanisMarji: -0.95, etki: -0.0026 },
+  { sembol: "MANAS", fonOrani: 0.14, kapanisMarji: -0.72, etki: -0.0010 },
+  { sembol: "DAPGM", fonOrani: 0.07, kapanisMarji: 1.38, etki: 0.0010 },
+  { sembol: "TPKGY", fonOrani: 11.91, kapanisMarji: 0.00, etki: 0.0000 },
+  { sembol: "HMV", fonOrani: 1.27, kapanisMarji: 0.81, etki: 0.0103 },
 ];
 
 export default function TlyEtkiAnaliziPage() {
@@ -43,9 +44,9 @@ export default function TlyEtkiAnaliziPage() {
       fonTuru="Tera Portföy Birinci Serbest Fonu"
       slug="tly"
       rows={rows}
-      toplamFonOrani={78.37}
-      toplamEtki={0.14}
-      sonGuncelleme="2 Temmuz 2026"
+      toplamFonOrani={80.74}
+      toplamEtki={-0.14}
+      sonGuncelleme="3 Temmuz 2026"
     />
   );
 }

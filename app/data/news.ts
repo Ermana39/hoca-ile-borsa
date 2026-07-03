@@ -23,6 +23,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1079,
+    title: "Saat ve Saat Halka Arz İzahnamesi Yayınlandı: Talep Tarihi, Fiyat ve Lot Detayları",
+    href: "/haber/saat-ve-saat-halka-arz-izahnamesi-yayinlandi",
+    image: "/saat-ve-saat-halka-arz-izahnamesi-yayinlandi.webp",
+    alt: "Saat ve Saat halka arz izahnamesi yayınlandı talep tarihi fiyat ve lot detayları",
+    publishedAt: "2026-07-03",
+    category: "halka-arz",
+    ilgiliHisseler: ["SSAAT"],
+  },
+  {
     id: 1078,
     title: "ASTOR TEİAŞ ile 816,2 Milyon TL’lik Mobil Trafo Sözleşmesi İmzaladı",
     href: "/haber/astor-teias-816-milyon-tl-mobil-trafo-sozlesmesi",
