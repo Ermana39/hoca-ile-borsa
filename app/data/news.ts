@@ -1,417 +1,1014 @@
-import Image from "next/image";
-import Link from "next/link";
-import type { Metadata } from "next";
-import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
-import AuthorBox from "@/components/AuthorBox";
-import HaberAltKisim from "@/components/HaberAltKisim";
-import { formatHaberTarihi, getHaberDosyaTarihi } from "@/lib/haber-tarih";
+import type { HaberKategori } from "@/lib/haber-kategorileri";
 
-const haberSaati = getHaberDosyaTarihi(import.meta.url);
-const haberTarihi = formatHaberTarihi(haberSaati);
-
-const slug = "3-temmuz-2026-onemli-kap-haberleri";
-const haberUrl = `https://www.hocaileborsa.com/haber/${slug}`;
-const haberGorsel = "https://www.hocaileborsa.com/kap-ozeti-discover.webp";
-
-export const metadata: Metadata = {
-  title: "3 Temmuz 2026 Cuma Önemli KAP Haberleri | INFO, ASTOR, HEKTS, SASA",
-  description:
-    "3 Temmuz 2026 Cuma günü Borsa İstanbul’da öne çıkan KAP haberleri: INFO bedelsiz başvurusu, ASTOR TEİAŞ sözleşmesi, HEKTS tahsisli sermaye artırımı, SASA ihraç belgesi ve diğer önemli bildirimler.",
-  alternates: {
-    canonical: haberUrl,
-  },
-  openGraph: {
-    type: "article",
-    title: "3 Temmuz 2026 Cuma Önemli KAP Haberleri",
-    description:
-      "INFO, ASTOR, HEKTS, SASA, MERKO, AKCNS, AKSEN, SAYAS, PNLSN, EBEBK, ALKLC ve MEYSU için günün öne çıkan KAP gelişmeleri.",
-    url: haberUrl,
-    images: [
-      {
-        url: haberGorsel,
-        width: 1200,
-        height: 675,
-        alt: "3 Temmuz 2026 Cuma önemli KAP haberleri",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "3 Temmuz 2026 Cuma Önemli KAP Haberleri",
-    description:
-      "Borsa İstanbul’da günün öne çıkan KAP bildirimleri ve olası etkileri.",
-    images: [haberGorsel],
-  },
+export type NewsItem = {
+  id: number;
+  title: string;
+  href: string;
+  image: string;
+  alt: string;
+  // "auto" kullanılırsa tarih, ilgili app/haber/<slug>/page.tsx dosyasının
+  // oluşturulma zamanından alınır. Eski haberlerde sabit ISO tarih korunabilir.
+  publishedAt: string | "auto";
+  category: HaberKategori;
+  // Haberi yazan yazarın slug'ı (app/data/yazarlar.ts). Belirtilmezse
+  // varsayilanYazar'a atfedilir; yazar profilindeki "Son Yazılar" listesi
+  // bu alana göre filtrelenir.
+  yazarSlug?: string;
+  // Opsiyonel: Bu haber bir veya birden çok hisseyle ilgiliyse kodlarını yaz.
+  // Örn: ilgiliHisseler: ["ASELS", "THYAO"]
+  // Etiketlenen her hissenin /hisse/<kod> sayfasında "Önemli KAP Gelişmeleri"
+  // bölümünde bu haber otomatik görünür.
+  ilgiliHisseler?: string[];
 };
 
-const kapHaberleri = [
+export const newsItems: NewsItem[] = [
   {
-    kod: "INFO",
-    baslik: "%100 bedelsiz sermaye artırımı için SPK başvurusu",
-    etki: "Pozitif-Takip",
-    kategori: "Sermaye Artırımı",
-    link: "https://www.kap.org.tr/Bildirim/1623493",
-    ozet:
-      "İnfo Yatırım, mevcut 960.336.000 TL sermayesini iç kaynaklardan karşılanmak üzere 1.920.672.000 TL’ye çıkarmak için SPK’ya başvurdu. Süreç henüz onay değil, başvuru aşamasında.",
-    yorum:
-      "Bedelsiz sermaye artırımı haberleri kısa vadede yatırımcı ilgisini artırabilir. Ancak nihai takvim ve hak kullanım süreci SPK onayı sonrası netleşeceği için süreç tamamlanmış gibi değerlendirilmemelidir.",
+    id: 1082,
+    title: "3 Temmuz 2026 Cuma Önemli KAP Haberleri",
+    href: "/haber/3-temmuz-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "3 Temmuz 2026 Cuma önemli KAP haberleri",
+    publishedAt: "2026-07-03",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["INFO", "ASTOR", "HEKTS", "MERKO", "AKCNS", "AKSEN", "SAYAS", "SASA", "PNLSN", "EBEBK", "ALKLC", "MEYSU"],
   },
   {
-    kod: "ASTOR",
-    baslik: "TEİAŞ ile 816,2 milyon TL’lik sözleşme imzalandı",
-    etki: "Pozitif",
-    kategori: "İhale / Sözleşme",
-    link: "https://www.kap.org.tr/Bildirim/1623500",
-    ozet:
-      "ASTOR, TEİAŞ ihalesi kapsamında 4 adet Mobil Trafo Merkezi, 4 adet OG Ünitesi ve yedek malzeme temini için sözleşme imzalandığını açıkladı. İhale bedeli 816.200.000 TL olarak duyuruldu.",
-    yorum:
-      "Sözleşme şirketin sipariş portföyü ve gelir görünümü açısından destekleyici. KAP’ta ihale bedelinin son açıklanan brüt satış hasılatına oranı %2,31 olarak yer aldı.",
+    id: 1081,
+    title: "HEKTS 2,38 Milyar TL Tahsisli Sermaye Artırımı İçin SPK’ya Başvurdu",
+    href: "/haber/hekts-238-milyar-tl-tahsisli-sermaye-artirimi-spk-basvurusu",
+    image: "/hekts-238-milyar-tl-tahsisli-sermaye-artirimi-spk-basvurusu.webp",
+    alt: "HEKTS 2,38 milyar TL tahsisli sermaye artırımı SPK başvurusu",
+    publishedAt: "2026-07-03",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["HEKTS"],
   },
   {
-    kod: "HEKTS",
-    baslik: "2,38 milyar TL tahsisli sermaye artırımı için SPK başvurusu",
-    etki: "Nötr-Takip",
-    kategori: "Sermaye Artırımı",
-    link: "https://www.kap.org.tr/Bildirim/1624193",
-    ozet:
-      "HEKTS, OYAK Genel Müdürlüğü’ne tahsisli sermaye artırımı için SPK’ya başvurdu. Planlanan toplam satış hasılatı 2.380.000.000 TL olarak açıklandı.",
-    yorum:
-      "Tahsisli artırım şirket finansmanı açısından önemli olabilir. Buna karşın işlem rüçhan hakkı kullandırılmadan yapılacağı için nihai satış fiyatı, pay adedi ve olası sulanma etkisi yakından izlenmeli.",
+    id: 1080,
+    title: "Şa-Ra Enerji Halka Arz İzahnamesi Yayınlandı: Talep Tarihi, Fiyat ve Lot Detayları",
+    href: "/haber/sa-ra-enerji-halka-arz-izahnamesi-yayinlandi",
+    image: "/sa-ra-enerji-halka-arz-izahnamesi-yayinlandi.webp",
+    alt: "Şa-Ra Enerji halka arz izahnamesi yayınlandı talep tarihi fiyat ve lot detayları",
+    publishedAt: "2026-07-03",
+    category: "halka-arz",
+    ilgiliHisseler: ["SARAE"],
   },
   {
-    kod: "MERKO",
-    baslik: "%100 bedelli sermaye artırımı başvuru süreci",
-    etki: "Nötr-Takip",
-    kategori: "Sermaye Artırımı",
-    link: "https://www.kap.org.tr/Bildirim/1623470",
-    ozet:
-      "MERKO, 850.000.000 TL olan çıkarılmış sermayesinin 1.700.000.000 TL’ye yükseltilmesine yönelik bedelli sermaye artırımı sürecine ilişkin başvuru bilgisini paylaştı.",
-    yorum:
-      "Bedelli sermaye artırımı şirket kasasına kaynak sağlayabilir; ancak mevcut yatırımcı açısından sermaye artışı, rüçhan kullanımı ve olası pay sulanması yönüyle dikkatli takip edilmelidir.",
+    id: 1079,
+    title: "Saat ve Saat Halka Arz İzahnamesi Yayınlandı: Talep Tarihi, Fiyat ve Lot Detayları",
+    href: "/haber/saat-ve-saat-halka-arz-izahnamesi-yayinlandi",
+    image: "/saat-ve-saat-halka-arz-izahnamesi-yayinlandi.webp",
+    alt: "Saat ve Saat halka arz izahnamesi yayınlandı talep tarihi fiyat ve lot detayları",
+    publishedAt: "2026-07-03",
+    category: "halka-arz",
+    ilgiliHisseler: ["SSAAT"],
   },
   {
-    kod: "AKCNS",
-    baslik: "Heidelberg Materials pay devri ve pay alım teklifi süreci",
-    etki: "Nötr-Takip",
-    kategori: "Pay Devri / Pay Alım Teklifi",
-    link: "https://www.kap.org.tr/Bildirim/1623497",
-    ozet:
-      "AKCNS’te Sabancı Holding’in %39,72 oranındaki paylarının Heidelberg Materials AG’ye devri sonrası zorunlu pay alım teklifi sürecine ilişkin SPK görüş başvurusu sonuçlandı. Zorunlu pay alım teklifi başvuru süreci ise devam ediyor.",
-    yorum:
-      "Bu bildirimde pay alım teklifi fiyatı ve takvim henüz açıklanmadı. Bu nedenle haber, nihai fiyat ve uygulama takvimi gelene kadar takip başlığı olarak değerlendirilmeli.",
+    id: 1078,
+    title: "ASTOR TEİAŞ ile 816,2 Milyon TL’lik Mobil Trafo Sözleşmesi İmzaladı",
+    href: "/haber/astor-teias-816-milyon-tl-mobil-trafo-sozlesmesi",
+    image: "/astor-teias-816-milyon-tl-mobil-trafo-sozlesmesi.webp",
+    alt: "ASTOR TEİAŞ 816,2 milyon TL mobil trafo sözleşmesi",
+    publishedAt: "2026-07-03",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["ASTOR"],
   },
   {
-    kod: "AKSEN",
-    baslik: "Kurumsal yönetim derecelendirme notu yükseldi",
-    etki: "Sınırlı Pozitif",
-    kategori: "Kurumsal Yönetim",
-    link: "https://www.kap.org.tr/Bildirim/1623506",
-    ozet:
-      "AKSEN’in kurumsal yönetim uyum derecelendirme notu 10 üzerinden 9,43’ten 9,54’e yükseldi. Pay sahipleri, kamuyu aydınlatma, menfaat sahipleri ve yönetim kurulu başlıkları ayrıca açıklandı.",
-    yorum:
-      "Not artışı doğrudan finansal sonuç yaratmasa da kurumsal yönetim algısı ve şeffaflık açısından destekleyici bir gelişme olarak öne çıkıyor.",
+    id: 1077,
+    title: "INFO %100 Bedelsiz Sermaye Artırımı İçin SPK’ya Başvurdu",
+    href: "/haber/info-100-bedelsiz-sermaye-artirimi-spk-basvurusu",
+    image: "/info-100-bedelsiz-sermaye-artirimi-spk-basvurusu.webp",
+    alt: "INFO yüzde 100 bedelsiz sermaye artırımı SPK başvurusu",
+    publishedAt: "2026-07-03",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["INFO"],
   },
   {
-    kod: "SAYAS",
-    baslik: "Ateş Wind Power’dan 3,1 milyon euro hasılat beklentisi",
-    etki: "Sınırlı Pozitif",
-    kategori: "Hasılat Beklentisi",
-    link: "https://www.kap.org.tr/Bildirim/1623522",
-    ozet:
-      "SAYAS, 2026 üçüncü çeyrekte ilişkili tarafı Ateş Wind Power’a rüzgar türbini ve türbin kulesi aksamları ile ticari mal satışlarından yaklaşık 3.100.000 euro hasılat beklediğini açıkladı.",
-    yorum:
-      "Düzenli çeyreklik hasılat beklentisi şirketin sipariş ve üretim görünümü açısından izlenebilir. Açıklama beklenti niteliğinde olduğu için gerçekleşme finansal tablolarla teyit edilecek.",
+    id: 1076,
+    title: "Haziran 2026 Enflasyonu Açıklandı: Maaş, Kira ve Bedelli Askerlik Etkisi",
+    href: "/haber/haziran-2026-enflasyon-rakamlari-maas-kira-bedelli-askerlik",
+    image: "/haziran-2026-enflasyon-maas-kira-bedelli-askerlik.webp",
+    alt: "Haziran 2026 enflasyon rakamları maaş kira ve bedelli askerlik etkisi",
+    publishedAt: "2026-07-03",
+    category: "piyasa-gundemi",
   },
   {
-    kod: "SASA",
-    baslik: "Şarta bağlı sermaye artırımı için onaylı ihraç belgesi",
-    etki: "Pozitif-Takip",
-    kategori: "Sermaye Artırımı",
-    link: "https://www.kap.org.tr/Bildirim/1623633",
-    ozet:
-      "SASA, çıkarılmış sermayesinin şarta bağlı sermaye artırımı yoluyla 47.040.878.514,69 TL’den 52.501.931.146,27 TL’ye yükseltilmesi kapsamında ihraç edilecek 5.461.052.631,58 TL nominal değerli paylara ilişkin SPK onaylı ihraç belgesini paylaştı.",
-    yorum:
-      "Süreç daha önce ayrı haber yapılan sermaye artırımı başlığının devamı niteliğinde. Yatırımcıların ihraç kapsamı, pay adedi ve sonraki adımları takip etmesi önemli.",
+    id: 1075,
+    title: "Saat ve Saat Halka Arzında Talep Toplama Tarihleri Açıklandı",
+    href: "/haber/saat-ve-saat-talep-toplama-tarihleri-onayli-izahname",
+    image: "/saat-ve-saat-talep-toplama-tarihleri-onayli-izahname.webp",
+    alt: "Saat ve Saat halka arz talep toplama tarihleri ve onaylı izahname",
+    publishedAt: "2026-07-03",
+    category: "halka-arz",
+    ilgiliHisseler: ["SSAAT"],
   },
   {
-    kod: "PNLSN",
-    baslik: "Elazığ GES yatırımı için bağlantı hat kabul başvurusu",
-    etki: "Sınırlı Pozitif",
-    kategori: "Yatırım",
-    link: "https://www.kap.org.tr/Bildirim/1623894",
-    ozet:
-      "PNLSN, Elazığ Merkez Zerteriç Köyü’nde planlanan toplam 2.015 kW lisanssız elektrik üretimi amaçlı GES yatırımı kapsamında bağlantı hat kabulü için ilgili dağıtım şirketine başvuru yapıldığını açıkladı.",
-    yorum:
-      "GES yatırımı enerji maliyetleri ve sürdürülebilirlik açısından destekleyici olabilir. Ancak açıklama başvuru aşamasında olduğu için kabul sonucu ve devreye alma süreci ayrıca takip edilmeli.",
+    id: 1074,
+    title: "2 Temmuz 2026 Perşembe Önemli KAP Haberleri",
+    href: "/haber/2-temmuz-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "2 Temmuz 2026 Perşembe Önemli KAP Haberleri",
+    publishedAt: "2026-07-02",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["AKSEN", "SASA", "ERCB", "TLMAN", "KONKA", "BERA", "KAREL", "SOHOE", "TARKM", "KOTON", "MARKA"],
   },
   {
-    kod: "EBEBK",
-    baslik: "Haziran ziyaretçi sayısı ve 6 aylık trafik verileri açıklandı",
-    etki: "Sınırlı Pozitif",
-    kategori: "Operasyonel Veri",
-    link: "https://www.kap.org.tr/Bildirim/1624227",
-    ozet:
-      "EBEBK, Haziran 2026’da Türkiye mağazalarında 4.762.968 ziyaretçi, yılın ilk 6 ayında 29.169.781 ziyaretçi açıkladı. ebebek.com ziyaret sayısı Haziran’da 10.633.631, 6 aylık dönemde 74.133.825 oldu.",
-    yorum:
-      "Hem mağaza hem online kanal ziyaretçi sayısındaki artış operasyonel talep açısından olumlu sinyal veriyor. Bunun finansal sonuçlara etkisi satış, sepet büyüklüğü ve marjlarla birlikte değerlendirilmeli.",
+    id: 1073,
+    title: "KAREL’den 5,86 Milyon Dolarlık Askeri Elektronik Teçhizat Sözleşmesi",
+    href: "/haber/karel-586-milyon-dolar-askeri-elektronik-sozlesmesi",
+    image: "/karel-586-milyon-dolar-askeri-elektronik-sozlesmesi.webp",
+    alt: "KAREL 5,86 milyon dolarlık askeri elektronik teçhizat sözleşmesi",
+    publishedAt: "2026-07-02",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["KAREL"],
   },
   {
-    kod: "ALKLC",
-    baslik: "Burhaniye’de üretim ve lojistik amaçlı taşınmaz alım kararı",
-    etki: "Sınırlı Pozitif",
-    kategori: "Yatırım / Taşınmaz",
-    link: "https://www.kap.org.tr/Bildirim/1624262",
-    ozet:
-      "ALKLC, Balıkesir Burhaniye’de fabrika sahasına yakın konumda bulunan 3.540 m² yüzölçümüne sahip tarla vasfındaki taşınmazın satın alınmasına karar verdi.",
-    yorum:
-      "Karar, üretim faaliyetlerinin geliştirilmesi ve lojistik-operasyonel süreçlerin desteklenmesi amacı taşıyor. Bedel ve ödeme koşulları ayrıca netleşeceği için finansal etki şimdilik sınırlı okunmalı.",
+    id: 1072,
+    title: "SASA Şarta Bağlı Sermaye Artırımında SPK Onayı Aldı",
+    href: "/haber/sasa-sartli-sermaye-artirimi-spk-onayi",
+    image: "/sasa-sartli-sermaye-artirimi-spk-onayi.webp",
+    alt: "SASA şarta bağlı sermaye artırımı SPK onayı",
+    publishedAt: "2026-07-02",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["SASA"],
   },
   {
-    kod: "MEYSU",
-    baslik: "SPK’ya başvuru yapıldı",
-    etki: "Nötr-Takip",
-    kategori: "Hukuki / İdari Başvuru",
-    link: "https://www.kap.org.tr/Bildirim/1624265",
-    ozet:
-      "MEYSU, daha önce kamuya açıklanan ihtarnameye ilişkin olarak yatırımcı haklarının korunması, sermaye piyasasının güven ve istikrar içinde işlemesi gerekçesiyle SPK’ya başvuruda bulunduğunu açıkladı.",
-    yorum:
-      "Başvuru hukuki ve idari süreç niteliğinde. Şirket, önemli gelişme olması halinde kamuoyunu ayrıca bilgilendireceğini belirttiği için sonuç alınmadan kesin etki yorumu yapılmamalı.",
+    id: 1071,
+    title: "AKSEN BBVA ile 124 Milyon Dolarlık Kredi Anlaşması İmzaladı",
+    href: "/haber/aksen-bbva-124-milyon-dolar-kredi-anlasmasi",
+    image: "/aksen-bbva-124-milyon-dolar-kredi-anlasmasi.webp",
+    alt: "AKSEN BBVA 124 milyon dolar kredi anlaşması",
+    publishedAt: "2026-07-02",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["AKSEN"],
+  },
+  {
+    id: 1070,
+    title: "ORZAX İlaç Halka Arzında Dağıtımlar Sonuçlandı",
+    href: "/haber/orzax-ilac-halka-arz-dagitim-sonuclari",
+    image: "/orzax-ilac-halka-arz-dagitim-sonuclari.webp",
+    alt: "ORZAX İlaç halka arzında dağıtımlar sonuçlandı",
+    publishedAt: "2026-07-01",
+    category: "halka-arz",
+    ilgiliHisseler: ["ORZAX"],
+  },
+  {
+    id: 1069,
+    title: "SPK 2 Yeni Halka Arz Onayı Verdi",
+    href: "/haber/spk-2-yeni-halka-arz-onayi",
+    image: "/spk-2-yeni-halka-arz-onayi.webp",
+    alt: "SPK 2 yeni halka arz onayı Şa-Ra Enerji ve Saat ve Saat",
+    publishedAt: "2026-07-01",
+    category: "halka-arz",
+    ilgiliHisseler: ["SARAE", "SSAAT"],
+  },
+  {
+    id: 1068,
+    title: "1 Temmuz 2026 Çarşamba Önemli KAP Haberleri",
+    href: "/haber/1-temmuz-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "1 Temmuz 2026 Çarşamba Önemli KAP Haberleri",
+    publishedAt: "2026-07-01",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["TABGD", "ARCLK", "KCHOL", "FROTO", "ENJSA", "ZERGY", "DCTTR", "EKGYO", "DAPGM", "TMSN", "HUBVC", "BYDNR", "AVPGY", "EBEBK", "EKDMR", "SASA", "ALTNY", "MERKO", "LUKSK", "TARKM", "EGGUB"],
+  },
+  {
+    id: 1067,
+    title: "EKDMR Orta Amerika’dan 4,97 Milyon Dolarlık İnşaat Çeliği Siparişi Aldı",
+    href: "/haber/ekdmr-orta-amerika-insaat-celigi-siparisi",
+    image: "/ekdmr-orta-amerika-insaat-celigi-siparisi.webp",
+    alt: "EKDMR Orta Amerika inşaat çeliği siparişi",
+    publishedAt: "2026-07-01",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["EKDMR"],
+  },
+  {
+    id: 1066,
+    title: "BYDNR’den %615 Bedelsiz Sermaye Artırımı Kararı",
+    href: "/haber/bydnr-615-bedelsiz-sermaye-artirimi",
+    image: "/bydnr-615-bedelsiz-sermaye-artirimi-karari.webp",
+    alt: "BYDNR yüzde 615 bedelsiz sermaye artırımı kararı",
+    publishedAt: "2026-07-01",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["BYDNR"],
+  },
+  {
+    id: 1065,
+    title: "SASA Haziran 2026 Satış Performansını Açıkladı",
+    href: "/haber/sasa-haziran-2026-satis-performansi",
+    image: "/sasa-haziran-2026-satis-performansi.webp",
+    alt: "SASA Haziran 2026 satış performansı",
+    publishedAt: "2026-07-01",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["SASA"],
+  },
+  {
+    id: 1064,
+    title: "EKGYO Eyüpsultan Kemerburgaz 3. Etap İhalesinde En Yüksek Teklif Açıklandı",
+    href: "/haber/ekgyo-eyupsultan-kemerburgaz-3-etap-ihale-sonucu",
+    image: "/ekgyo-eyupsultan-kemerburgaz-3-etap-ihale-sonucu.webp",
+    alt: "EKGYO Eyüpsultan Kemerburgaz 3. Etap ihale sonucu",
+    publishedAt: "2026-07-01",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["EKGYO"],
+  },
+  {
+    id: 1063,
+    title: "SOHO Giyim Halka Arzında Dağıtımlar Sonuçlandı",
+    href: "/haber/soho-giyim-halka-arzinda-dagitimlar-sonuclandi",
+    image: "/soho-giyim-halka-arzinda-dagitimlar-sonuclandi.webp",
+    alt: "SOHO Giyim halka arzında dağıtımlar sonuçlandı",
+    publishedAt: "2026-07-01",
+    category: "halka-arz",
+    ilgiliHisseler: ["SOHOE"],
+  },
+  {
+    id: 1062,
+    title: "BETAE İlk İşlem Gününü Tavan Fiyatla Kapattı",
+    href: "/haber/beta-enerji-ve-teknoloji-ilk-islem-gununu-tavan-fiyatla-kapatti",
+    image: "/beta-enerji-ve-teknoloji-ilk-islem-gununu-tavan-fiyatla-kapatti.webp",
+    alt: "Beta Enerji ve Teknoloji ilk işlem gününü tavan fiyatla kapattı",
+    publishedAt: "2026-07-01",
+    category: "halka-arz",
+    ilgiliHisseler: ["BETAE"],
+  },
+  {
+    id: 1061,
+    title: "ISGSY’de %487,89748 Bedelsiz Sermaye Artırımı Hak Kullanım Tarihi Açıklandı",
+    href: "/haber/isgsy-487-bedelsiz-sermaye-artirimi-hak-kullanim",
+    image: "/isgsy-487-bedelsiz-sermaye-artirimi-hak-kullanim.webp",
+    alt: "ISGSY bedelsiz sermaye artırımı hak kullanım tarihi",
+    publishedAt: "2026-07-01",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["ISGSY"],
+  },
+  {
+    id: 1060,
+    title: "BALSU’dan BG Holding’e 4,64 Milyar TL’lik Tahsisli Sermaye Artırımı Kararı",
+    href: "/haber/balsu-bg-holding-tahsisli-sermaye-artirimi",
+    image: "/balsu-bg-holding-tahsisli-sermaye-artirimi.webp",
+    alt: "BALSU BG Holding tahsisli sermaye artırımı haberi",
+    publishedAt: "2026-07-01",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["BALSU"],
+  },
+  {
+    id: 1059,
+    title: "RYSAS Çağlayan HES Enerji Üretim A.Ş.’nin Tamamını Satın Aldı",
+    href: "/haber/rysas-caglayan-hes-enerji-uretimi-satin-alma",
+    image: "/rysas-caglayan-hes-enerji-uretimi-satin-alma.webp",
+    alt: "RYSAS Çağlayan HES Enerji Üretim satın alma haberi",
+    publishedAt: "2026-07-01",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["RYSAS"],
+  },
+  {
+    id: 1058,
+    title: "TABGD’de ELQ Investors’tan Hızlandırılmış Talep Toplama Süreci",
+    href: "/haber/tabgd-elq-investors-hizlandirilmis-talep-toplama",
+    image: "/tabgd-elq-investors-hizlandirilmis-talep-toplama.webp",
+    alt: "TABGD ELQ Investors hızlandırılmış talep toplama süreci",
+    publishedAt: "2026-07-01",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["TABGD"],
+  },
+  {
+    id: 1057,
+    title: "30 Haziran 2026 Salı Önemli KAP Haberleri",
+    href: "/haber/30-haziran-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "30 Haziran 2026 Salı Önemli KAP Haberleri",
+    publishedAt: "2026-06-30",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["KAREL", "KMPUR", "ALTNY", "ASELS", "FONET", "OZYSR", "ALCTL", "BMSTL"],
+  },
+  {
+    id: 1056,
+    title: "FONET Aydın İl Sağlık Müdürlüğü SBYS İhalesinde En Uygun Teklifi Verdi",
+    href: "/haber/fonet-aydin-il-saglik-mudurlugu-sbys-ihalesi",
+    image: "/fonet-aydin-il-saglik-mudurlugu-sbys-ihalesi.webp",
+    alt: "FONET Aydın İl Sağlık Müdürlüğü SBYS ihalesinde en uygun teklif",
+    publishedAt: "2026-06-30",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["FONET"],
+  },
+  {
+    id: 1055,
+    title: "ASELSAN 40 Milyon Dolarlık Yeni Üretim ve Test Merkezlerini Devreye Aldı",
+    href: "/haber/asels-akilli-muhimmat-sualti-sistemleri-yeni-tesis",
+    image: "/asels-akilli-muhimmat-sualti-sistemleri-yeni-tesis.webp",
+    alt: "ASELSAN akıllı mühimmat ve sualtı sistemleri üretim test merkezleri",
+    publishedAt: "2026-06-30",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["ASELS"],
+  },
+  {
+    id: 1054,
+    title: "ALTNY Bağlı Ortaklığı TAAC Havacılık’tan 13,2 Milyon Dolarlık Sözleşme",
+    href: "/haber/altny-taac-havacilik-13-2-milyon-dolar-sozlesme",
+    image: "/altny-taac-havacilik-13-2-milyon-dolar-sozlesme.webp",
+    alt: "ALTNY TAAC Havacılık 13,2 milyon dolarlık sözleşme",
+    publishedAt: "2026-06-30",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["ALTNY"],
+  },
+  {
+    id: 1053,
+    title: "KAREL Bağlı Ortaklığı Daiichi’den 100 Milyon Dolarlık Proje Nominasyonu",
+    href: "/haber/karel-daiichi-100-milyon-dolar-oem-proje-nominasyonu",
+    image: "/karel-daiichi-100-milyon-dolar-oem-proje-nominasyonu.webp",
+    alt: "KAREL Daiichi 100 milyon dolarlık OEM proje nominasyonu",
+    publishedAt: "2026-06-30",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["KAREL"],
+  },
+  {
+    id: 1052,
+    title: "29 Haziran 2026 Pazartesi Önemli KAP Haberleri",
+    href: "/haber/29-haziran-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "29 Haziran 2026 Pazartesi Önemli KAP Haberleri",
+    publishedAt: "2026-06-29",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["KRVGD", "YEOTK", "IHLGM", "OYAYO", "GRNYO", "DOFER", "GOODY", "GRTHO", "OFSYM", "TARFN", "PRKME", "TRALT", "TRMET", "TRENJ", "OZRDN", "BRKO", "TSPOR", "EKGYO", "ALCTL"],
+  },
+  {
+    id: 1051,
+    title: "EKGYO Halkalı Batı 1. Etap İhalesinde En Yüksek Teklif Açıklandı",
+    href: "/haber/ekgyo-halkali-bati-1-etap-ihalesi-2-oturum-sonucu",
+    image: "/ekgyo-halkali-bati-1-etap-ihalesi-2-oturum-sonucu.webp",
+    alt: "EKGYO Halkalı Batı 1. Etap ihalesi 2. oturum sonucu",
+    publishedAt: "2026-06-29",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["EKGYO"],
+  },
+  {
+    id: 1050,
+    title: "GRTHO’dan %950 Bedelsiz Sermaye Artırımı İçin SPK Başvurusu",
+    href: "/haber/grtho-950-bedelsiz-sermaye-artirimi-spk-basvurusu",
+    image: "/grtho-950-bedelsiz-sermaye-artirimi-spk-basvurusu.webp",
+    alt: "GRTHO yüzde 950 bedelsiz sermaye artırımı için SPK başvurusu",
+    publishedAt: "2026-06-29",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["GRTHO"],
+  },
+  {
+    id: 1049,
+    title: "GOODY Bedelsiz Pay Alma Hakkı 2 Temmuz’da Başlıyor",
+    href: "/haber/goody-bedelsiz-pay-alma-hakki-2-temmuzda-basliyor",
+    image: "/goody-bedelsiz-pay-alma-hakki-2-temmuzda-basliyor.webp",
+    alt: "GOODY bedelsiz pay alma hakkı 2 Temmuz 2026 tarihinde başlıyor",
+    publishedAt: "2026-06-29",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["GOODY"],
+  },
+  {
+    id: 1048,
+    title: "YEOTK Zambiya’da İkinci Faz GES Yatırımı İçin Ön Anlaşma İmzaladı",
+    href: "/haber/yeotk-zambiya-ikinci-faz-ges-yatirimi",
+    image: "/yeotk-zambiya-ikinci-faz-ges-yatirimi.webp",
+    alt: "YEOTK Zambiya ikinci faz güneş enerjisi yatırımı",
+    publishedAt: "2026-06-29",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["YEOTK"],
+  },
+  {
+    id: 1047,
+    title: "Beta Enerji Halka Arzında Talep Oranı Açıklandı",
+    href: "/haber/beta-enerji-halka-arz-talep-orani-dagitim-sonuclari",
+    image: "/beta-enerji-halka-arz-talep-oranlari.webp",
+    alt: "Beta Enerji halka arz talep oranları ve dağıtım sonuçları",
+    publishedAt: "2026-06-29",
+    category: "halka-arz",
+    ilgiliHisseler: ["BETAE"],
+  },
+  {
+    id: 1046,
+    title: "5 Halka Arzda Talep Bilgileri: T1/T2, Saat ve Aracı Kurumlar",
+    href: "/haber/5-halka-arz-talep-bilgileri-t1-t2-saat-araci-kurum",
+    image: "/5-halka-arz-talep-bilgileri.webp",
+    alt: "5 halka arz talep bilgileri T1 T2 bakiye saat ve aracı kurum tablosu",
+    publishedAt: "2026-06-29",
+    category: "halka-arz",
+    ilgiliHisseler: ["SOHOE", "GOLDA", "ISVEA", "ORZAX", "EKIM"],
+  },
+  {
+    id: 1045,
+    title: "Halka Arzlarda Katılım Endeksi: Hangi Şirketler Uygun?",
+    href: "/haber/halka-arzlarda-katilim-endeksi-uygun-olanlar",
+    image: "/halka-arz-katilim-endeksi-tablosu.webp",
+    alt: "Halka arzlarda katılım endeksine uygun olanlar ve olmayanlar",
+    publishedAt: "2026-06-27",
+    category: "halka-arz",
+    ilgiliHisseler: ["SOHOE", "GOLDA", "ISVEA", "ORZAX", "EKIM"],
+  },
+  {
+    id: 1044,
+    title: "5 Halka Arzın Talep Toplama Tarihleri Belli Oldu",
+    href: "/haber/5-halka-arz-talep-toplama-tarihleri",
+    image: "/5-halka-arz-talep-toplama-takvimi.webp",
+    alt: "5 halka arz talep toplama takvimi",
+    publishedAt: "2026-06-27",
+    category: "halka-arz",
+    ilgiliHisseler: ["ORZAX", "SOHOE", "EKIM", "ISVEA", "GOLDA"],
+  },
+  {
+    id: 1043,
+    title: "Ekim Turizm Halka Arz İzahnamesi Yayınlandı",
+    href: "/haber/ekim-turizm-halka-arz-izahnamesi-yayinlandi",
+    image: "/ekim-turizm-halka-arz-izahnamesi-yayinlandi.webp",
+    alt: "Ekim Turizm halka arz izahnamesi yayınlandı",
+    publishedAt: "2026-06-27",
+    category: "halka-arz",
+    ilgiliHisseler: ["EKIM"],
+  },
+  {
+    id: 1042,
+    title: "26 Haziran 2026 Cuma Önemli KAP Haberleri",
+    href: "/haber/26-haziran-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "26 Haziran 2026 Cuma Önemli KAP Haberleri",
+    publishedAt: "2026-06-26",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["MEDTR", "AKSGY", "AVGYO", "ARDYZ", "EGEGY", "HLGYO", "ISKPL", "PSGYO", "MEYSU", "CEMAS", "OSMEN", "ATA", "ATAYM", "AKBNK", "DNYVA", "DENVA", "EMIRV", "ISTVY", "ORTVA", "DURKN", "NUHCM", "MARKA", "BALSU", "ENTRA", "IHLAS", "KNTFA", "TKFEN", "GEREL", "INFO", "LIDER", "ISFIN", "GEDIK", "MSYBN", "INVEO", "MAGEN", "TRALT", "BSRFK", "KOCMT", "DZGYO", "KRDMA", "KRDMB", "KRDMD", "SEKUR", "AKCNS"],
+  },
+  {
+    id: 1041,
+    title: "TRALT Çanakkale Karapınar Projesinde Yürütmeyi Durdurma Kararı",
+    href: "/haber/tralt-canakkale-karapinar-ced-yurutmeyi-durdurma",
+    image: "/tralt-canakkale-karapinar-ced-yurutmeyi-durdurma.webp",
+    alt: "TRALT Çanakkale Karapınar Projesinde yürütmeyi durdurma kararı",
+    publishedAt: "2026-06-26",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["TRALT"],
+  },
+  {
+    id: 1040,
+    title: "IHLAS Kazarman HES Projesinde Temel Atma Töreni Gerçekleştirildi",
+    href: "/haber/ihlas-kazarman-hes-projesinde-temel-atildi",
+    image: "/ihlas-kazarman-hes-projesinde-temel-atildi.webp",
+    alt: "IHLAS Kazarman HES projesinde temel atma töreni",
+    publishedAt: "2026-06-26",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["IHLAS"],
+  },
+  {
+    id: 1039,
+    title: "BALSU’da BG Holding Pay Satışı ve 4,64 Milyar TL Sermaye Avansı",
+    href: "/haber/balsu-bg-holding-pay-satisi-sermaye-avansi",
+    image: "/balsu-bg-holding-pay-satisi-sermaye-avansi.webp",
+    alt: "BALSU BG Holding pay satışı ve sermaye avansı",
+    publishedAt: "2026-06-26",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["BALSU"],
+  },
+  {
+    id: 1038,
+    title: "MARKA Bağlı Ortaklığı Westplast’ın %55’i İçin Sözleşme İmzaladı",
+    href: "/haber/marka-momentum-westplast-pay-devri",
+    image: "/marka-momentum-westplast-pay-devri.webp",
+    alt: "MARKA Momentum Girişim Westplast pay devri",
+    publishedAt: "2026-06-26",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["MARKA"],
+  },
+  {
+    id: 1037,
+    title: "MARMR’den Polisan Kansai Boya Payları İçin 93 Milyon Dolarlık Ön Mutabakat",
+    href: "/haber/marmr-polisan-kansai-boya-pay-satis-on-mutabakati",
+    image: "/marmr-polisan-kansai-boya-pay-satis-on-mutabakati.webp",
+    alt: "MARMR Polisan Kansai Boya pay satışı ön mutabakatı",
+    publishedAt: "2026-06-26",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["MARMR"],
+  },
+  {
+    id: 1036,
+    title: "ARDYZ’den HAVELSAN’a 706.800 Dolarlık Yapay Zekâ Siparişi",
+    href: "/haber/ardyz-havelsan-yapay-zeka-altyapi-siparisi",
+    image: "/ardyz-havelsan-yapay-zeka-altyapi-siparisi.webp",
+    alt: "ARDYZ HAVELSAN yapay zekâ altyapı siparişi",
+    publishedAt: "2026-06-26",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["ARDYZ"],
+  },
+  {
+    id: 1035,
+    title: "Beta Enerji Halka Arz Dağıtım Sonuçları Açıklandı",
+    href: "/haber/beta-enerji-halka-arz-dagitim-sonuclari",
+    image: "/beta-enerji-halka-arz-dagitim-sonuclari.webp",
+    alt: "Beta Enerji halka arz dağıtım sonuçları açıklandı",
+    publishedAt: "2026-06-26",
+    category: "halka-arz",
+    ilgiliHisseler: ["BETAE"],
+  },
+  {
+    id: 1034,
+    title: "Soho Giyim Halka Arz İzahnamesi Yayınlandı",
+    href: "/haber/soho-giyim-halka-arz-izahnamesi-yayinlandi",
+    image: "/soho-giyim-halka-arz-izahnamesi-yayinlandi.webp",
+    alt: "Soho Giyim halka arz izahnamesi yayınlandı",
+    publishedAt: "2026-06-25",
+    category: "halka-arz",
+  },
+  {
+    id: 1033,
+    title: "İsvea Seramik Halka Arz İzahnamesi Yayınlandı",
+    href: "/haber/isvea-seramik-halka-arz-izahnamesi-yayinlandi",
+    image: "/isvea-seramik-halka-arz-izahnamesi-yayinlandi.webp",
+    alt: "İsvea Seramik halka arz izahnamesi yayınlandı",
+    publishedAt: "2026-06-25",
+    category: "halka-arz",
+  },
+  {
+    id: 1032,
+    title: "Orzaks İlaç Halka Arz İzahnamesi Yayınlandı",
+    href: "/haber/orzaks-ilac-halka-arz-izahnamesi-yayinlandi",
+    image: "/orzaks-ilac-halka-arz-izahnamesi-yayinlandi.webp",
+    alt: "Orzaks İlaç halka arz izahnamesi yayınlandı",
+    publishedAt: "2026-06-25",
+    category: "halka-arz",
+  },
+  {
+    id: 1031,
+    title: "25 Haziran 2026 Perşembe Önemli KAP Haberleri",
+    href: "/haber/25-haziran-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "25 Haziran 2026 Perşembe Önemli KAP Haberleri",
+    publishedAt: "2026-06-25",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["DERHL", "TRALT", "ISGSY", "YIGIT", "DENVA", "SMRTG", "BERA", "KONKA", "FORTE", "MEGMT", "DURKN", "IHLAS", "QNBFK", "DITAS", "BIOEN", "TRMEN", "ALTNY", "GARFL", "BIGEN", "BMSTL", "TABGD", "YBTAS", "EGEGY", "HLGYO", "ISKPL", "PSGYO", "VAKBN", "YONGA", "AVGYO", "METRO", "DAPGM", "BALSU", "ZERGY", "AHGAZ", "A1CAP", "PRDGS", "RTALB", "ALARK", "LIDER", "BULGS"],
+  },
+  {
+    id: 1030,
+    title: "ALARK Alcen Genel Kurul Tesciliyle Enerji Yapısını Güncelledi",
+    href: "/haber/alark-alcen-genel-kurul-tescili",
+    image: "/alark-alcen-genel-kurul-tescili.webp",
+    alt: "ALARK Alcen Enerji genel kurul kararı tescili",
+    publishedAt: "2026-06-25",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["ALARK"],
+  },
+  {
+    id: 1029,
+    title: "YİGİT Akü Kapasite Artışı İçin ÇED Olumlu Kararı Aldı",
+    href: "/haber/yigit-aku-ced-olumlu-karari-kapasite-artisi",
+    image: "/yigit-aku-ced-olumlu-karari-kapasite-artisi.webp",
+    alt: "YİGİT Akü kapasite artışı için ÇED olumlu kararı",
+    publishedAt: "2026-06-25",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["YIGIT"],
+  },
+  {
+    id: 1028,
+    title: "ISGSY Portföy Şirketi Enlila’dan Crescenta Biosciences Yatırımı",
+    href: "/haber/isgsy-enlila-crescenta-biosciences-yatirimi",
+    image: "/isgsy-enlila-crescenta-biosciences-yatirimi.webp",
+    alt: "ISGSY Enlila Crescenta Biosciences yatırımı",
+    publishedAt: "2026-06-25",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["ISGSY"],
+  },
+  {
+    id: 1027,
+    title: "TRALT, Zenit Madencilik Ruhsat ve Tesisleri İçin Mutabakat Zaptı İmzaladı",
+    href: "/haber/tralt-zenit-madencilik-ruhsat-tesis-mutabakat-zapti",
+    image: "/tralt-zenit-madencilik-ruhsat-tesis-mutabakat-zapti.webp",
+    alt: "TRALT Zenit Madencilik ruhsat ve tesis mutabakat zaptı",
+    publishedAt: "2026-06-25",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["TRALT"],
+  },
+  {
+    id: 1026,
+    title: "DERHL Bağlı Ortaklığı Soho Giyim İçin Halka Arz Onayı Aldı",
+    href: "/haber/derhl-soho-giyim-halka-arz-onayi",
+    image: "/derhl-soho-giyim-halka-arz-onayi.webp",
+    alt: "DERHL bağlı ortaklığı Soho Giyim halka arz onayı",
+    publishedAt: "2026-06-25",
+    category: "halka-arz",
+    ilgiliHisseler: ["DERHL"],
+  },
+{
+    id: 1025,
+    title: "Soho Giyim Halka Arzına SPK Onayı Geldi",
+    href: "/haber/soho-giyim-halka-arzina-spk-onayi-geldi",
+    image: "/soho-giyim-halka-arzina-spk-onayi-geldi.webp",
+    alt: "Soho Giyim halka arzına SPK onayı geldi",
+    publishedAt: "2026-06-25",
+    category: "halka-arz",
+  },
+  {
+    id: 1024,
+    title: "Orzaks İlaç Halka Arzına SPK Onayı Geldi",
+    href: "/haber/orzaks-ilac-halka-arzina-spk-onayi-geldi",
+    image: "/orzaks-ilac-halka-arzina-spk-onayi-geldi.webp",
+    alt: "Orzaks İlaç halka arzına SPK onayı geldi",
+    publishedAt: "2026-06-25",
+    category: "halka-arz",
+  },
+  {
+    id: 1023,
+    title: "İsvea Seramik Halka Arzına SPK Onayı Geldi",
+    href: "/haber/isvea-seramik-halka-arzina-spk-onayi-geldi",
+    image: "/isvea-seramik-halka-arzina-spk-onayi-geldi.webp",
+    alt: "İsvea Seramik halka arzına SPK onayı geldi",
+    publishedAt: "2026-06-25",
+    category: "halka-arz",
+  },
+  {
+    id: 1022,
+    title: "Ekim Turizm Halka Arzına SPK Onayı Geldi",
+    href: "/haber/ekim-turizm-halka-arzina-spk-onayi-geldi",
+    image: "/ekim-turizm-halka-arzina-spk-onayi-geldi.webp",
+    alt: "Ekim Turizm halka arzına SPK onayı geldi",
+    publishedAt: "2026-06-25",
+    category: "halka-arz",
+  },
+  {
+    id: 1021,
+    title: "Golda Gıda Halka Arzına SPK Onayı Geldi",
+    href: "/haber/golda-gida-halka-arzina-spk-onayi-geldi",
+    image: "/golda-gida-halka-arzina-spk-onayi-geldi.webp",
+    alt: "Golda Gıda halka arzına SPK onayı geldi",
+    publishedAt: "2026-06-25",
+    category: "halka-arz",
+  },
+  {
+    id: 1020,
+    title: "SPK’dan 5 Yeni Halka Arz Onayı Geldi",
+    href: "/haber/spk-5-yeni-halka-arz-onayi-verdi",
+    image: "/spk-5-yeni-halka-arz-onayi.webp",
+    alt: "SPK 5 yeni halka arz onayı",
+    publishedAt: "2026-06-24",
+    category: "halka-arz",
+  },
+  {
+    id: 1019,
+    title: "TRHOL, Tera Yatırım Paylarının Devralınması İçin Sözleşme İmzaladı",
+    href: "/haber/trhol-tera-yatirim-pay-devri-sozlesmesi",
+    image: "/trhol-tera-yatirim-pay-devri-sozlesmesi.webp",
+    alt: "TRHOL Tera Yatırım pay devri sözleşmesi",
+    publishedAt: "2026-06-24",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["TRHOL", "TERA"],
+  },
+  {
+    id: 1018,
+    title: "24 Haziran 2026 Önemli KAP Haberleri",
+    href: "/haber/24-haziran-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "24 Haziran 2026 Önemli KAP Haberleri",
+    publishedAt: "2026-06-24",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["IHLAS", "GRNYO", "KMPUR", "PRDGS", "RTALB", "TRCAS", "INDES", "ARDYZ", "AHSGY", "ARASE", "CEMTS", "EKGYO", "MHRGY", "OSTIM", "OZKGY", "VKGYO", "ODINE", "DNZEN", "ARSAN", "ALVES", "BMSTL", "KLNMA", "DENVA", "IHLAS", "POLTK", "CEOEM", "HRKET", "VRGYO", "SRVGY", "ZRGYO", "DNFIN", "DAPGM", "BRKVY"],
+  },
+  {
+    id: 1017,
+    title: "HRKET’ten %1300 Bedelsiz Sermaye Artırımı Başvurusu",
+    href: "/haber/hrket-1300-bedelsiz-sermaye-artirimi-basvurusu",
+    image: "/hrket-1300-bedelsiz-sermaye-artirimi-basvurusu.webp",
+    alt: "HRKET yüzde 1300 bedelsiz sermaye artırımı başvurusu",
+    publishedAt: "2026-06-24",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["HRKET"],
+  },
+  {
+    id: 1016,
+    title: "KLNMA’dan JBIC ile 350 Milyon Dolarlık Kredi Anlaşması",
+    href: "/haber/klnma-jbic-350-milyon-dolar-kredi-anlasmasi",
+    image: "/klnma-jbic-350-milyon-dolar-kredi-anlasmasi.webp",
+    alt: "KLNMA JBIC 350 milyon dolar kredi anlaşması",
+    publishedAt: "2026-06-24",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["KLNMA"],
+  },
+  {
+    id: 1015,
+    title: "ALVES Polatlı OSB’de Yeni Üretim Tesisi İçin Hafriyata Başladı",
+    href: "/haber/alves-polatli-osb-yeni-uretim-tesisi-hafriyat-basladi",
+    image: "/alves-polatli-osb-yeni-uretim-tesisi-hafriyat-basladi.webp",
+    alt: "ALVES Polatlı OSB yeni üretim tesisi hafriyat çalışmaları",
+    publishedAt: "2026-06-24",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["ALVES"],
+  },
+  {
+    id: 1014,
+    title: "MSCI’den Türkiye Uyarısı: Şeffaflık ve Bilgi Akışı İzlenecek",
+    href: "/haber/msci-turkiye-uyarisi-seffaflik-bilgi-akisi",
+    image: "/msci-turkiye-uyarisi-seffaflik-bilgi-akisi.webp",
+    alt: "MSCI Türkiye piyasası şeffaflık ve bilgi akışı uyarısı",
+    publishedAt: "2026-06-24",
+    category: "piyasa-gundemi",
+  },
+  {
+    id: 1013,
+    title: "Aksa Enerji’den Manisa’da Depolamalı RES Hamlesi",
+    href: "/haber/aksen-manisa-depolamali-res-epdk-lisans-onayi",
+    image: "/aksen-manisa-depolamali-res-epdk-lisans-onayi.webp",
+    alt: "Aksa Enerji Manisa depolamalı RES EPDK lisans onayı",
+    publishedAt: "2026-06-24",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["AKSEN"],
+  },
+  {
+    id: 1012,
+    title: "Odine, Super Micro Computer ile Türkiye Odaklı İş Ortaklığı İmzaladı",
+    href: "/haber/odine-super-micro-computer-is-ortakligi",
+    image: "/odine-super-micro-computer-is-ortakligi.webp",
+    alt: "Odine Super Micro Computer iş ortaklığı",
+    publishedAt: "2026-06-24",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["ODINE"],
+  },
+  {
+    id: 1011,
+    title: "TRCAS, Shell & Turcas Petrol’den 8 Milyon Dolar İmtiyazlı Temettü Alacak",
+    href: "/haber/trcas-shell-turcas-8-milyon-dolar-imtiyazli-temettu",
+    image: "/trcas-shell-turcas-8-milyon-dolar-imtiyazli-temettu.webp",
+    alt: "TRCAS Shell Turcas 8 milyon dolar imtiyazlı temettü",
+    publishedAt: "2026-06-24",
+    category: "temettu",
+    ilgiliHisseler: ["TRCAS"],
+  },
+  {
+    id: 1010,
+    title: "Brisa İzmit Fabrikasında Üretime Geçici Ara Verecek",
+    href: "/haber/brisa-izmit-fabrikasi-planli-bakim-durusu",
+    image: "/brisa-izmit-fabrikasi-planli-bakim-durusu.webp",
+    alt: "Brisa İzmit fabrikası planlı bakım duruşu",
+    publishedAt: "2026-06-23",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["BRISA"],
+  },
+  {
+    id: 1009,
+    title: "23 Haziran 2026 Önemli KAP Haberleri",
+    href: "/haber/23-haziran-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "23 Haziran 2026 Önemli KAP Haberleri",
+    publishedAt: "2026-06-23",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["SASA", "SEKUR", "MACKO", "AHGAZ", "ENERY", "DAPGM", "KTLEV", "SVGYO", "PEKGY", "GRNYO", "OSTIM", "VSNMD", "BIGCH", "TCELL", "KRVGD", "MRGYO", "OZYSR", "TURSG", "ULKER", "EKGYO", "DITAS", "AKBNK", "CWENE", "DNYVA", "KRDMA", "KRDMB", "KRDMD", "BLUME", "GESAN", "EUPWR", "ARCLK", "RUBNS", "HEKTS", "MARBL", "GOKNR", "HATSN", "BRISA"],
+  },
+  {
+    id: 1008,
+    title:
+      "Beta Enerji Halka Arzı Başladı: Talep Toplama Tarihleri ve Olası Lot Dağılımı",
+    href: "/haber/beta-enerji-halka-arzi-basladi-talep-toplama-ve-lot-dagilimi",
+    image:
+      "/beta-enerji-halka-arzi-basladi-talep-toplama-ve-lot-dagilimi.webp",
+    alt: "Beta Enerji halka arzı başladı talep toplama ve olası lot dağılımı",
+    publishedAt: "2026-06-23",
+    category: "halka-arz",
+    ilgiliHisseler: ["BETAE"],
+  },
+  {
+    id: 1007,
+    title: "Turkcell CDB Kredi Paketinde Faiz Oranını Revize Etti",
+    href: "/haber/turkcell-cdb-kredi-paketi-faiz-orani-revize-edildi",
+    image: "/turkcell-cdb-kredi-paketi-faiz-orani-revize-edildi.webp",
+    alt: "Turkcell CDB kredi paketi faiz oranı revizyonu",
+    publishedAt: "2026-06-22",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["TCELL"],
+  },
+  {
+    id: 1006,
+    title: "ORGE’den Yüzde 400 Bedelsiz Sermaye Artırımı Başvurusu",
+    href: "/haber/orge-400-bedelsiz-sermaye-artirimi-basvurusu",
+    image: "/orge-400-bedelsiz-sermaye-artirimi-basvurusu.webp",
+    alt: "ORGE yüzde 400 bedelsiz sermaye artırımı başvurusu",
+    publishedAt: "2026-06-22",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["ORGE"],
+  },
+  {
+    id: 1005,
+    title: "HLGYO'dan %56,25 Bedelsiz Sermaye Artırımı Kararı",
+    href: "/haber/hlgyo-5625-bedelsiz-sermaye-artirimi-karari",
+    image: "/hlgyo-5625-bedelsiz-sermaye-artirimi-karari.webp",
+    alt: "HLGYO'dan %56,25 Bedelsiz Sermaye Artırımı Kararı",
+    publishedAt: "2026-06-22",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["HLGYO"],
+  },
+  {
+    id: 1004,
+    title: "BMSTL’de %100 Bedelsiz Sermaye Artırımı İçin SPK Onayı",
+    href: "/haber/bmstl-100-bedelsiz-sermaye-artirimi-spk-onayi",
+    image: "/bmstl-100-bedelsiz-sermaye-artirimi-spk-onayi.webp",
+    alt: "BMSTL’de %100 Bedelsiz Sermaye Artırımı İçin SPK Onayı",
+    publishedAt: "2026-06-22",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["BMSTL"],
+  },
+  {
+    id: 1003,
+    title: "22 Haziran 2026 Önemli KAP Haberleri",
+    href: "/haber/22-haziran-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "22 Haziran 2026 Önemli KAP Haberleri",
+    publishedAt: "2026-06-22",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["TCELL", "ORGE", "HLGYO", "BMSTL", "ZOREN", "CWENE", "TCKRC", "SDTTR", "KRGYO", "HKTM", "ECILC", "KLSYN", "SEKUR", "MNDRS", "QNBFK", "MAGEN", "BERA"],
+  },
+  {
+    id: 1002,
+    title: "KTLEV ve SVGYO İçin Temettü Günü: Hak Kullanım Tarihi 23 Haziran",
+    href: "/haber/ktlev-svgyo-23-haziran-2026-temettu-gundemi",
+    image: "/ktlev-svgyo-23-haziran-2026-temettu-gundemi.webp",
+    alt: "KTLEV ve SVGYO 23 Haziran 2026 temettü gündemi",
+    publishedAt: "2026-06-22",
+    category: "temettu",
+    ilgiliHisseler: ["KTLEV", "SVGYO"],
+  },
+  {
+    id: 1001,
+    title: "19 Haziran 2026 Önemli KAP Haberleri",
+    href: "/haber/19-haziran-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "19 Haziran 2026 Önemli KAP Haberleri",
+    publishedAt: "2026-06-19",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["BOBET", "MANAS", "TOASO", "ANELE", "KORDS", "ARCLK", "GOKNR", "GOODY", "HLGYO", "KTLEV", "ARZUM", "MIATK", "EUPWR", "TUCLK", "HALKB", "CCOLA", "BRSAN", "ALARK"],
+  },
+  {
+    id: 1000,
+    title: "Kordsa Kocaeli’deki İki Taşınmazını 800 Milyon TL’ye Sattı",
+    href: "/haber/kordsa-kocaeli-iki-tasinmaz-satisi-800-milyon-tl",
+    image: "/kordsa-tasinmaz-satisi-800-milyon-tl.webp",
+    alt: "Kordsa Kocaeli İzmit iki taşınmaz satışı 800 milyon TL",
+    publishedAt: "2026-06-19",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["KORDS"],
+  },
+  {
+    id: 999,
+    title: "Midas Ödeme Sistemleri Alanına Giriyor: Dijital Cüzdan ve Ön Ödemeli Kart Hamlesi",
+    href: "/haber/midas-odeme-sistemleri-isine-giriyor",
+    image: "/midas-odeme-sistemleri.webp",
+    alt: "Midas ödeme sistemleri dijital cüzdan ve ön ödemeli kart hazırlığı",
+    publishedAt: "2026-06-19",
+    category: "piyasa-gundemi",
+  },
+  {
+    id: 972,
+    title: "12 Haziran 2026 En Çok Para Girişi ve Çıkışı Olan Hisseler",
+    href: "/haber/12-haziran-2026-en-cok-para-girisi-cikisi-olan-hisseler",
+    image: "/kap-ozeti-discover.webp",
+    alt: "12 Haziran 2026 en çok para girişi ve çıkışı olan hisseler",
+    publishedAt: "2026-06-12",
+    category: "piyasa-gundemi",
+  },
+  {
+    id: 998,
+    title: "Europower World Enerji’ye ABD’den 10,8 Milyon Dolarlık Güç Transformatörü Siparişi",
+    href: "/haber/europower-abd-transformator-siparisi-19-haziran-2026",
+    image: "/europower-abd-transformator-siparisi-19-06-2026.webp",
+    alt: "Europower World Enerji ABD güç transformatörü siparişi",
+    publishedAt: "2026-06-19",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["EUPWR", "GESAN"],
+  },
+  {
+    id: 997,
+    title: "18 Haziran 2026 Önemli KAP Haberleri",
+    href: "/haber/18-haziran-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "18 Haziran 2026 Önemli KAP Haberleri",
+    publishedAt: "2026-06-18",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["GESAN", "EUPWR", "SAHOL", "AKCNS", "GOODY", "HLGYO", "KTLEV", "ARZUM", "HALKB", "MIATK", "LINK", "TUCLK", "CCOLA"],
+  },
+  {
+    id: 996,
+    title: "Beta Enerji Halka Arzında Yeni Talep Toplama Tarihleri Belli Oldu",
+    href: "/haber/beta-enerji-halka-arz-yeni-talep-toplama-tarihleri-belli-oldu",
+    image: "/beta-yeni-tarih.webp",
+    alt: "Beta Enerji halka arz yeni talep toplama tarihleri belli oldu",
+    publishedAt: "2026-06-18",
+    category: "halka-arz",
+    ilgiliHisseler: ["BETAE"],
+  },
+  {
+    id: 995,
+    title: "17 Haziran 2026 Önemli KAP Haberleri",
+    href: "/haber/17-haziran-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "17 Haziran 2026 Önemli KAP Haberleri",
+    publishedAt: "2026-06-17",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["DURDO", "SMRTG", "SISE", "BIMAS", "GESAN", "EUPWR", "BANVT", "PGSUS", "ISCTR", "MIATK", "DCTTR", "NETAS", "GEREL", "MRGYO", "MARBL", "MARKA", "ENTRA"],
+  },
+  {
+    id: 994,
+    title: "Beta Enerji Halka Arzında Talep Toplama Tarihleri Ertelendi",
+    href: "/haber/beta-enerji-halka-arz-talep-toplama-tarihleri-ertelendi",
+    image: "/beta-erteleme.webp",
+    alt: "Beta Enerji halka arz talep toplama tarihleri ertelendi",
+    publishedAt: "2026-06-17",
+    category: "halka-arz",
+    ilgiliHisseler: ["BETAE"],
+  },
+  {
+    id: 993,
+    title: "ABD Mahkemesi Halkbank Davasını Düşürdü: 9 Yıllık Süreç Sona Erdi",
+    href: "/haber/halkbank_abd_davasi",
+    image: "/halkbank-abd-davasi-dustu-discover.webp",
+    alt: "ABD Mahkemesi Halkbank davasını düşürdü",
+    publishedAt: "2026-06-17",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["HALKB"],
+  },
+  {
+    id: 992,
+    title: "16 Haziran 2026 Önemli KAP Haberleri",
+    href: "/haber/16-haziran-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "16 Haziran 2026 Önemli KAP Haberleri",
+    publishedAt: "2026-06-16",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["ASELS", "KONTR", "ALARK", "ISGSY", "TRILC", "MARBL"],
+  },
+  {
+    id: 991,
+    title: "15 Haziran 2026 Pazartesi KAP Bildirimleri Özeti",
+    href: "/haber/15-haziran-2026-onemli-kap-haberleri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "15 Haziran 2026 Önemli KAP Haberleri",
+    publishedAt: "2026-06-15",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["ASELS", "CVKMD", "GRTHO", "DSTKF", "ASTOR", "LOGO", "ANELE", "ALARK", "BETAE"],
+  },
+  {
+    id: 990,
+    title: "DERHL’de Bedelsiz Sermaye Artırımı ve SPK’dan Suç Duyurusu Kararı",
+    href: "/haber/derhl-bedelsiz-sermaye-artirimi-spk-suc-duyurusu",
+    image: "/derhl-bedelsiz-sermaye-artirimi-spk-suc-duyurusu.webp",
+    alt: "DERHL bedelsiz sermaye artırımı ve SPK suç duyurusu kararı",
+    publishedAt: "2026-06-15",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["DERHL"],
+  },
+  {
+    id: 989,
+    title:
+      "Beta Enerji Halka Arzında Yüksek Başvuruya Ne Kadar Dağıtım Yapabilir?",
+    href: "/haber/beta-enerji-yuksek-basvuru-dagitim",
+    image: "/beta-enerji-yuksek-basvuru-dagitim-discover.webp",
+    alt: "Beta Enerji halka arz yüksek başvuru dağıtım oranı",
+    publishedAt: "2026-06-13",
+    category: "halka-arz",
+    ilgiliHisseler: ["BETAE"],
+  },
+  {
+    id: 988,
+    title: "Borsa Haftayı Yükselişle Kapattı, Altın Geriledi",
+    href: "/haber/borsa-yukseldi-altin-dustu-haftalik-piyasa-ozeti",
+    image: "/borsa-yukseldi-altin-dustu-haftalik-piyasa-ozeti-discover.webp",
+    alt: "Borsa yükseldi altın düştü haftalık piyasa özeti",
+    publishedAt: "2026-06-13",
+    category: "piyasa-gundemi",
+  },
+  {
+    id: 986,
+    title: "SpaceX Halka Arzı Sonrası ABD Borsaları Yükseldi",
+    href: "/haber/spacex-halka-arzi-abd-borsalari-yukseldi",
+    image: "/gunluk-abd-borsalari-ozeti-discover.webp",
+    alt: "SpaceX halka arzı sonrası ABD borsaları yükseldi",
+    publishedAt: "2026-06-13",
+    category: "piyasa-gundemi",
+  },
+  {
+    id: 987,
+    title: "12 Haziran 2026 Cuma KAP Bildirimleri Özeti",
+    href: "/haber/12-haziran-2026-cuma-kap-bildirimleri-ozeti",
+    image: "/kap-ozeti-discover.webp",
+    alt: "12 Haziran 2026 KAP Bildirimleri Özeti",
+    publishedAt: "2026-06-12",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["BALSU", "DSTKF", "GARAN", "GESAN", "GLYHO", "HALKB", "ISCTR", "PGSUS", "VBTYZ"],
+  },
+  {
+    id: 985,
+    title:
+      "SPK’dan Türkiye Sigorta ve Goodyear İçin Bedelsiz Sermaye Artırımı Onayı",
+    href: "/haber/turkiye-sigorta-goodyear-bedelsiz-sermaye-artirimi",
+    image: "/turkiye-sigorta-goodyear-bedelsiz-sermaye-artirimi-discover.webp",
+    alt: "Türkiye Sigorta ve Goodyear bedelsiz sermaye artırımı onayı",
+    publishedAt: "2026-06-12",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["TURSG", "GOODY"],
+  },
+  {
+    id: 984,
+    title: "Beta Enerji Halka Arzı Kaç Lot Verir? Kişi Başı Kaç Lot Düşer?",
+    href: "/haber/beta-enerji-halka-arzi-kac-lot-verir",
+    image: "/beta-enerji-halka-arz-kac-lot-verir-discover.webp",
+    alt: "Beta Enerji halka arzı kaç lot verir kişi başı kaç lot düşer",
+    publishedAt: "2026-06-12",
+    category: "halka-arz",
+    ilgiliHisseler: ["BETAE"],
   },
 ];
-
-const oneCikanlar = [
-  { baslik: "Ayrı haber yapılanlar", deger: "INFO, ASTOR, HEKTS" },
-  { baslik: "Sermaye artırımı", deger: "INFO, HEKTS, MERKO, SASA" },
-  { baslik: "Sözleşme / yatırım", deger: "ASTOR, PNLSN, ALKLC" },
-  { baslik: "Operasyonel veri", deger: "EBEBK, SAYAS" },
-];
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@type": "NewsArticle",
-  headline: "3 Temmuz 2026 Cuma Önemli KAP Haberleri",
-  description:
-    "3 Temmuz 2026 Cuma günü Borsa İstanbul şirketlerinden gelen önemli KAP bildirimleri ve olası etkileri.",
-  image: haberGorsel,
-  datePublished: "2026-07-03T23:30:00+03:00",
-  dateModified: "2026-07-03T23:30:00+03:00",
-  url: haberUrl,
-  inLanguage: "tr",
-  author: {
-    "@type": "Person",
-    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
-    name: "Erman Hoca",
-    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
-  },
-  publisher: {
-    "@type": "Organization",
-    "@id": "https://www.hocaileborsa.com/#organization",
-    name: "Hoca İle Borsa",
-    url: "https://www.hocaileborsa.com",
-    logo: {
-      "@type": "ImageObject",
-      url: "https://www.hocaileborsa.com/icon-512.png",
-    },
-  },
-};
-
-function etkiRengi(etki: string) {
-  if (etki.includes("Pozitif")) return "border-emerald-200 bg-emerald-50 text-emerald-800";
-  if (etki.includes("Negatif")) return "border-rose-200 bg-rose-50 text-rose-800";
-  return "border-slate-200 bg-slate-50 text-slate-700";
-}
-
-export default function UcTemmuzKapHaberleriPage() {
-  return (
-    <main className="min-h-screen bg-[#f8fafc] px-4 py-6 md:px-6">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-
-      <div className="mx-auto max-w-5xl">
-        <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_16px_rgba(15,23,42,0.07)]">
-          <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-100">
-            <Image
-              src="/kap-ozeti-discover.webp"
-              alt="3 Temmuz 2026 Cuma önemli KAP haberleri"
-              fill
-              unoptimized
-              className="object-cover"
-              priority
-            />
-          </div>
-
-          <div className="p-6 md:p-10">
-            <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
-              3 Temmuz 2026 Cuma Önemli KAP Haberleri
-            </h1>
-
-            <div className="mb-5 mt-3 flex flex-wrap items-center gap-3">
-              <span className="inline-flex items-center rounded-md bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700 ring-1 ring-inset ring-blue-600/20">
-                KAP Bildirimleri
-              </span>
-              <time dateTime={haberSaati} className="text-sm text-slate-500">
-                {haberTarihi}
-              </time>
-              <span className="text-slate-300">·</span>
-              <Link
-                href="/yazar/erman-hoca"
-                className="text-sm font-semibold text-slate-500 hover:text-blue-600"
-              >
-                Erman Hoca
-              </Link>
-            </div>
-
-            <div className="space-y-6 text-base leading-8 text-slate-700 md:text-lg">
-              <p>
-                3 Temmuz 2026 Cuma günü Kamuyu Aydınlatma Platformu’nda öne çıkan
-                bildirimlerde sermaye artırımı başvuruları, ihale ve sözleşme
-                gelişmeleri, operasyonel veriler ve yatırım süreçleri dikkat çekti.
-                Günün ayrı haber yapılan başlıkları olan <strong>INFO</strong>,
-                <strong> ASTOR</strong> ve <strong>HEKTS</strong> gelişmeleri de bu
-                gün sonu KAP özetine dahil edildi.
-              </p>
-
-              <p>
-                Günün genelinde sermaye artırımı tarafında INFO, HEKTS, MERKO ve
-                SASA öne çıkarken; ASTOR’un TEİAŞ sözleşmesi, EBEBK’nin ziyaretçi
-                verileri, SAYAS’ın hasılat beklentisi ve PNLSN’nin GES yatırımı
-                takip edilen diğer başlıklar oldu.
-              </p>
-
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                {oneCikanlar.map((item) => (
-                  <div
-                    key={item.baslik}
-                    className="rounded-2xl border border-blue-200 bg-blue-50 p-4"
-                  >
-                    <div className="text-sm font-semibold text-blue-800">
-                      {item.baslik}
-                    </div>
-                    <div className="mt-1 text-base font-bold text-blue-950">
-                      {item.deger}
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm md:p-6">
-                <h2 className="mb-4 text-xl font-bold tracking-tight text-slate-900">
-                  Günün öne çıkan KAP bildirimleri
-                </h2>
-
-                <div className="space-y-4">
-                  {kapHaberleri.map((haber) => (
-                    <div
-                      key={haber.kod}
-                      className="rounded-2xl border border-slate-200 bg-slate-50 p-4 md:p-5"
-                    >
-                      <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
-                        <div>
-                          <div className="flex flex-wrap items-center gap-2">
-                            <span className="rounded-lg bg-slate-900 px-2.5 py-1 text-sm font-bold text-white">
-                              {haber.kod}
-                            </span>
-                            <span className={`rounded-lg border px-2.5 py-1 text-xs font-semibold ${etkiRengi(haber.etki)}`}>
-                              {haber.etki}
-                            </span>
-                            <span className="rounded-lg border border-slate-200 bg-white px-2.5 py-1 text-xs font-semibold text-slate-600">
-                              {haber.kategori}
-                            </span>
-                          </div>
-
-                          <h3 className="mt-3 text-lg font-bold text-slate-900">
-                            {haber.baslik}
-                          </h3>
-                        </div>
-
-                        <a
-                          href={haber.link}
-                          target="_blank"
-                          rel="noopener noreferrer nofollow"
-                          className="shrink-0 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm font-semibold text-slate-700 hover:border-blue-300 hover:text-blue-700"
-                        >
-                          Orjinal Kap içeriği
-                        </a>
-                      </div>
-
-                      <p className="mt-4 text-sm leading-7 text-slate-700 md:text-base">
-                        {haber.ozet}
-                      </p>
-
-                      <div className="mt-4 rounded-xl border border-white bg-white p-4 text-sm leading-7 text-slate-600">
-                        <span className="font-semibold text-slate-900">
-                          Değerlendirme:{" "}
-                        </span>
-                        {haber.yorum}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </section>
-
-              <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm md:p-6">
-                <h2 className="mb-4 text-xl font-bold tracking-tight text-slate-900">
-                  Genel değerlendirme
-                </h2>
-
-                <p className="text-sm leading-7 text-slate-600 md:text-base">
-                  Günün KAP akışında sermaye artırımı başlıkları ağırlıklıydı.
-                  INFO tarafında %100 bedelsiz sermaye artırımı başvurusu yatırımcı
-                  ilgisi açısından öne çıkarken, HEKTS’te tahsisli artırımın OYAK’a
-                  yapılacak olması finansman ve ortaklık yapısı açısından takip
-                  edilmesi gereken bir başlık oluşturdu. MERKO ve SASA bildirimleri
-                  de sermaye tarafındaki yoğun gündemi destekledi.
-                </p>
-
-                <p className="mt-4 text-sm leading-7 text-slate-600 md:text-base">
-                  Şirket operasyonları tarafında ASTOR’un TEİAŞ sözleşmesi somut
-                  gelir etkisi bakımından günün en dikkat çekici gelişmelerinden
-                  biri olurken, EBEBK ve SAYAS tarafında açıklanan operasyonel
-                  veriler şirketlerin faaliyet performansı açısından izlenebilir
-                  sinyaller verdi. PNLSN ve ALKLC bildirimleri ise yatırım ve
-                  kapasite/operasyon destekleyici adımlar olarak not edildi.
-                </p>
-              </section>
-
-              <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-7 text-slate-600">
-                <div className="font-semibold text-slate-800">Kaynaklar</div>
-                <div className="mt-2 grid gap-2 sm:grid-cols-2">
-                  {kapHaberleri.map((haber) => (
-                    <a
-                      key={haber.link}
-                      href={haber.link}
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                      className="font-medium text-slate-700 underline underline-offset-2"
-                    >
-                      {haber.kod} — Orjinal Kap içeriği
-                    </a>
-                  ))}
-                </div>
-              </div>
-
-              <HaberIlgiliBolumler
-                slug={slug}
-                baslik="3 Temmuz 2026 Cuma Önemli KAP Haberleri"
-              />
-
-              <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">
-                ⚠️ Bu haber bilgilendirme amacıyla hazırlanmıştır, yatırım tavsiyesi
-                değildir. KAP bildirimlerindeki süreçler; SPK onayı, ihale sonucu,
-                başvuru sonucu veya hak kullanım takvimi gibi ek açıklamalarla
-                değişebilir. Kesin işlem kararları için şirketlerin sonraki KAP
-                duyuruları takip edilmelidir.
-              </div>
-            </div>
-          </div>
-
-          <HaberAltKisim href={`/haber/${slug}`} />
-
-          <AuthorBox />
-        </article>
-      </div>
-    </main>
-  );
-}
