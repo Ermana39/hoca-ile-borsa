@@ -29,9 +29,43 @@ export const metadata: Metadata = {
   },
 };
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "IHLAS Kazarman HES Projesinde Temel Atıldı",
+  description:
+    "IHLAS iştiraki Orta Asya Investment Holding'in Kırgızistan'da geliştirdiği 912 MW Kazarman HES projesinde temel atma töreni yapıldı.",
+  datePublished: "2026-06-26T09:00:00+03:00",
+  dateModified: "2026-06-26T09:00:00+03:00",
+  url: "https://www.hocaileborsa.com/haber/ihlas-kazarman-hes-projesinde-temel-atildi",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/ihlas-kazarman-hes-projesinde-temel-atildi.webp",
+};
+
 export default function IhlasKazarmanHesTemelAtmaPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link

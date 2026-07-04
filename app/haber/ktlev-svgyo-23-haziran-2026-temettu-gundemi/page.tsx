@@ -29,9 +29,43 @@ export const metadata: Metadata = {
   },
 };
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "KTLEV ve SVGYO İçin Temettü Günü: Hak Kullanım Tarihi 23 Haziran",
+  description:
+    "23 Haziran 2026 Salı günü KTLEV ve SVGYO payları için temettü hak kullanım tarihi olacak. KTLEV net 0,0821255 TL, SVGYO net 0,0077 TL temettü ödeyecek.",
+  datePublished: "2026-06-22T09:00:00+03:00",
+  dateModified: "2026-06-22T09:00:00+03:00",
+  url: "https://www.hocaileborsa.com/haber/ktlev-svgyo-23-haziran-2026-temettu-gundemi",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/ktlev-svgyo-23-haziran-2026-temettu-gundemi.webp",
+};
+
 export default function TemettuGundemiKtlevSvgyoPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link

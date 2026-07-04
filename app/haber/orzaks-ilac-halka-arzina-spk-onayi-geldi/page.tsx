@@ -40,9 +40,43 @@ export const metadata: Metadata = {
 const izahnameLink =
   "/halka-arz/onayli-izahnameler/orzaks-ilac-ve-kimya-san-tic";
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "Orzaks İlaç Halka Arzına SPK Onayı Geldi",
+  description:
+    "SPK, Orzaks İlaç ve Kimya Sanayi Ticaret AŞ halka arzına onay verdi. Halka arz fiyatı 69,00 TL olurken toplam 52,5 milyon lot satışa sunulacak.",
+  datePublished: "2026-06-25T09:00:00+03:00",
+  dateModified: "2026-06-25T09:00:00+03:00",
+  url: "https://www.hocaileborsa.com/haber/orzaks-ilac-halka-arzina-spk-onayi-geldi",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/orzaks-ilac-halka-arzina-spk-onayi-geldi.webp",
+};
+
 export default function Page() {
   return (
     <main className="min-h-screen bg-slate-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <article className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
         <div className="mb-6 rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
           <div className="mb-4 flex flex-wrap items-center gap-2 text-sm text-slate-500">

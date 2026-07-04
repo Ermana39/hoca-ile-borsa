@@ -41,9 +41,30 @@ export default function HalkaArzPage() {
           >
             Talep Hesapla
           </Link>
+
         </div>
 
         <section className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+          <Link
+            href="/halka-arz/takvim"
+            prefetch={false}
+            aria-label="Halka Arz Takvimi"
+            className="group flex min-h-[240px] flex-col rounded-2xl border border-zinc-200 bg-zinc-50 p-3 transition hover:bg-zinc-100"
+          >
+            <div className="relative mb-4 flex aspect-[16/10] items-center justify-center overflow-hidden rounded-2xl bg-white">
+              <IconTile
+                name="temettu-takvim"
+                className="h-28 w-28 transition duration-300 group-hover:bg-blue-100"
+              />
+            </div>
+
+            <div className="flex flex-1 items-center justify-center px-2 pb-2 text-center">
+              <h2 className="text-2xl font-semibold leading-tight text-zinc-900 md:text-3xl">
+                Halka Arz Takvimi
+              </h2>
+            </div>
+          </Link>
+
           <Link
             href="/halka-arz/onayli-izahnameler"
             prefetch={false}

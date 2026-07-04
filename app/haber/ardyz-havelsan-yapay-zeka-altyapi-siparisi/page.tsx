@@ -29,9 +29,43 @@ export const metadata: Metadata = {
   },
 };
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "ARDYZ’den HAVELSAN’a 706.800 Dolarlık Sipariş",
+  description:
+    "ARD Grup Bilişim, HAVELSAN’dan NVIDIA yapay zekâ hızlandırıcı teknolojileri ve DELL kurumsal çözümleriyle kurulacak altyapı sistemleri için 706.800 dolarlık sipariş aldığını açıkladı.",
+  datePublished: "2026-06-26T09:00:00+03:00",
+  dateModified: "2026-06-26T09:00:00+03:00",
+  url: "https://www.hocaileborsa.com/haber/ardyz-havelsan-yapay-zeka-altyapi-siparisi",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/ardyz-havelsan-yapay-zeka-altyapi-siparisi.webp",
+};
+
 export default function ArdyzHavelsanYapayZekaSiparisiPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link

@@ -33,9 +33,43 @@ export const metadata: Metadata = {
   },
 };
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "KAREL Bağlı Ortaklığı Daiichi’den 100 Milyon Dolarlık Proje Nominasyonu",
+  description:
+    "Karel Elektronik, yüzde 54 oranında pay sahibi olduğu bağlı ortaklığı Daiichi Elektronik’in lider bir OEM otomotiv şirketiyle araç bileşenlerinin geliştirilmesi, validasyonu ve seri üretimi için yaklaşık 5 yıl süreli 100 milyon dolarlık proje nominasyonu aldığını açıkladı.",
+  datePublished: haberSaati,
+  dateModified: haberSaati,
+  url: "https://www.hocaileborsa.com/haber/karel-daiichi-100-milyon-dolar-oem-proje-nominasyonu",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/karel-daiichi-100-milyon-dolar-oem-proje-nominasyonu.webp",
+};
+
 export default function KarelDaiichiProjeNominasyonuPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link

@@ -33,9 +33,43 @@ export const metadata: Metadata = {
   },
 };
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "TABGD’de ELQ Investors’tan Hızlandırılmış Talep Toplama Süreci",
+  description:
+    "TAB Gıda payları için ELQ Investors VIII Ltd tarafından nitelikli kurumsal alıcılara yönelik hızlandırılmış talep toplama süreci başlatıldı. Satışa konu payların azami oranı %5,63 olarak açıklandı.",
+  datePublished: haberSaati,
+  dateModified: haberSaati,
+  url: "https://www.hocaileborsa.com/haber/tabgd-elq-investors-hizlandirilmis-talep-toplama",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/tabgd-elq-investors-hizlandirilmis-talep-toplama.webp",
+};
+
 export default function TabgdElqInvestorsHizlandirilmisTalepToplamaPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link

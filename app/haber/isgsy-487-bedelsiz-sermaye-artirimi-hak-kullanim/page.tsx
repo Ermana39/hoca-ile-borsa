@@ -33,9 +33,43 @@ export const metadata: Metadata = {
   },
 };
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "ISGSY’de %487,89748 Bedelsiz Sermaye Artırımı Hak Kullanım Tarihi Açıklandı",
+  description:
+    "İş Girişim Sermayesi, çıkarılmış sermayesinin 85,05 milyon TL’den 500 milyon TL’ye yükseltilmesine ilişkin bedelsiz sermaye artırımı hak kullanım başlangıç tarihinin 3 Temmuz 2026 olarak belirlendiğini açıkladı.",
+  datePublished: haberSaati,
+  dateModified: haberSaati,
+  url: "https://www.hocaileborsa.com/haber/isgsy-487-bedelsiz-sermaye-artirimi-hak-kullanim",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/isgsy-487-bedelsiz-sermaye-artirimi-hak-kullanim.webp",
+};
+
 export default function IsgsyBedelsizSermayeArtirimiHakKullanimPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link

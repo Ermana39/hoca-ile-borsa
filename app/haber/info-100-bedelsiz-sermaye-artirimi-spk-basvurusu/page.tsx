@@ -33,9 +33,43 @@ export const metadata: Metadata = {
   },
 };
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "INFO %100 Bedelsiz Sermaye Artırımı İçin SPK'ya Başvurdu",
+  description:
+    "İnfo Yatırım, çıkarılmış sermayesini 960,34 milyon TL'den 1,92 milyar TL'ye yükseltmek için %100 bedelsiz sermaye artırımı kapsamında SPK'ya başvurdu.",
+  datePublished: haberSaati,
+  dateModified: haberSaati,
+  url: "https://www.hocaileborsa.com/haber/info-100-bedelsiz-sermaye-artirimi-spk-basvurusu",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/info-100-bedelsiz-sermaye-artirimi-spk-basvurusu.webp",
+};
+
 export default function InfoBedelsizSermayeArtirimiSpkBasvurusuPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link

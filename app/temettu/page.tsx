@@ -89,9 +89,32 @@ function TemettuKutusu({
   );
 }
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: "Temettü Takvimi ve Temettü Araçları",
+  description:
+    "Temettü takvimi, aylara göre temettü veren şirketler, temettü hesaplama aracı ve temettü verimi hesaplama.",
+  url: "https://www.hocaileborsa.com/temettu",
+  mainEntity: {
+    "@type": "ItemList",
+    itemListElement: temettuKutulari.map((kutu, i) => ({
+      "@type": "ListItem",
+      position: i + 1,
+      name: kutu.title,
+      description: kutu.description,
+      url: `https://www.hocaileborsa.com${kutu.href}`,
+    })),
+  },
+};
+
 export default function TemettuPage() {
   return (
     <main className="min-h-screen bg-[#f8fafc]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="mx-auto max-w-7xl px-4 py-6 md:px-6">
         <nav className="mb-5 flex items-center gap-2 text-sm text-slate-500" aria-label="Breadcrumb">
           <Link href="/" prefetch={false} className="hover:text-blue-600 transition">Ana Sayfa</Link>

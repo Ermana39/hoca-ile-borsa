@@ -119,9 +119,43 @@ function Tablo({
   );
 }
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "12 Haziran 2026 En Çok Para Girişi ve Çıkışı Olan Hisseler",
+  description:
+    "12 Haziran 2026 tarihinde Borsa İstanbul’da en çok para girişi ve para çıkışı olan hisseler, fiyat değişimleri ve günlük para akışı tablosu.",
+  datePublished: "2026-06-12T09:00:00+03:00",
+  dateModified: "2026-06-12T09:00:00+03:00",
+  url: "https://www.hocaileborsa.com/haber/12-haziran-2026-en-cok-para-girisi-cikisi-olan-hisseler",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/kap-ozeti-discover.webp",
+};
+
 export default function EnCokParaGirisiCikisiPage() {
   return (
     <main className="min-h-screen bg-[#f8fafc] px-4 py-6 md:px-6">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="mx-auto max-w-7xl">
         <section className="mb-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <h1 className="text-2xl font-bold text-slate-950 md:text-3xl">

@@ -29,9 +29,43 @@ export const metadata: Metadata = {
   },
 };
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "BALSU’da BG Holding Pay Satışı ve 4,64 Milyar TL Sermaye Avansı",
+  description:
+    "Balsu Gıda, hakim ortağı BG Holding’in 358 milyon TL nominal payı nitelikli yatırımcılara satmak için Borsa İstanbul’a başvurduğunu ve satıştan 4,64 milyar TL’nin sermaye avansı olarak şirkete aktarılmasının planlandığını açıkladı.",
+  datePublished: "2026-06-26T09:00:00+03:00",
+  dateModified: "2026-06-26T09:00:00+03:00",
+  url: "https://www.hocaileborsa.com/haber/balsu-bg-holding-pay-satisi-sermaye-avansi",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/balsu-bg-holding-pay-satisi-sermaye-avansi.webp",
+};
+
 export default function BalsuBgHoldingPaySatisiSermayeAvansiPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link

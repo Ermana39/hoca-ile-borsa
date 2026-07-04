@@ -33,9 +33,43 @@ export const metadata: Metadata = {
   },
 };
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "GOODY Bedelsiz Pay Alma Hakkı 2 Temmuz’da Başlıyor",
+  description:
+    "Goodyear Lastikleri, 270 milyon TL olan çıkarılmış sermayesini tamamı iç kaynaklardan karşılanmak üzere 1,52 milyar TL’ye çıkaracak bedelsiz sermaye artırımı için bedelsiz pay alma hakkı kullanım başlangıç tarihini 2 Temmuz 2026 olarak açıkladı.",
+  datePublished: haberSaati,
+  dateModified: haberSaati,
+  url: "https://www.hocaileborsa.com/haber/goody-bedelsiz-pay-alma-hakki-2-temmuzda-basliyor",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/goody-bedelsiz-pay-alma-hakki-2-temmuzda-basliyor.webp",
+};
+
 export default function GoodyBedelsizPayAlmaHakkiPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link

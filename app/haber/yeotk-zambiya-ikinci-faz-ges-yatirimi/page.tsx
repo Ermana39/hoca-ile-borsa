@@ -39,9 +39,43 @@ export const metadata: Metadata = {
   },
 };
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "YEOTK Zambiya’da İkinci Faz GES Yatırımı İçin Ön Anlaşma İmzaladı",
+  description:
+    "YEO Teknoloji bağlı ortaklığı CALL Energy, Zambiya’da 60 MWdc kapasiteli ikinci faz güneş enerjisi yatırımı için bağlayıcı ön anlaşmalar imzaladı. Proje tamamlandığında CALL Energy’nin Zambiya’daki güneş enerjisi portföyünün 120 MWdc seviyesine ulaşması hedefleniyor.",
+  datePublished: haberSaati,
+  dateModified: haberSaati,
+  url: "https://www.hocaileborsa.com/haber/yeotk-zambiya-ikinci-faz-ges-yatirimi",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/yeotk-zambiya-ikinci-faz-ges-yatirimi.webp",
+};
+
 export default function YeotkZambiyaIkinciFazGesYatirimiPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link

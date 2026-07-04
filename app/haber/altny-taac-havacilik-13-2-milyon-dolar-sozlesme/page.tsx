@@ -33,9 +33,43 @@ export const metadata: Metadata = {
   },
 };
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "ALTNY Bağlı Ortaklığı TAAC Havacılık’tan 13,2 Milyon Dolarlık Sözleşme",
+  description:
+    "Altınay Savunma bağlı ortaklığı TAAC Havacılık, yurt dışında yerleşik bir müşteriyle kritik havacılık ekipmanlarının geliştirilmesi ve tedarikine yönelik 13,2 milyon dolar tutarında sözleşme imzaladı.",
+  datePublished: haberSaati,
+  dateModified: haberSaati,
+  url: "https://www.hocaileborsa.com/haber/altny-taac-havacilik-13-2-milyon-dolar-sozlesme",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/altny-taac-havacilik-13-2-milyon-dolar-sozlesme.webp",
+};
+
 export default function AltnyTaacHavacilikSozlesmePage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link

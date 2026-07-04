@@ -49,7 +49,109 @@ export async function generateMetadata({
     title: veri.baslikMeta.title,
     description: veri.baslikMeta.description,
     robots,
+    alternates: {
+      canonical:
+        veri.seo?.canonical ||
+        `https://www.hocaileborsa.com/halka-arz/taslak-izahnameler/${slug}`,
+    },
   };
+}
+
+// Sayfadaki özet verilerden Article + FAQPage yapılandırılmış verisi üretir.
+// Yalnızca sayfada görünen, kesinleşmiş (bekleyen olmayan) değerler kullanılır.
+function jsonLdUret(veri: HalkaArzVeri, slug: string) {
+  const url =
+    veri.seo?.canonical ||
+    `https://www.hocaileborsa.com/halka-arz/taslak-izahnameler/${slug}`;
+
+  const article = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: veri.baslikMeta.title,
+    description: veri.baslikMeta.description,
+    url,
+    mainEntityOfPage: url,
+    author: {
+      "@type": "Person",
+      "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+      name: "Erman Hoca",
+      url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": "https://www.hocaileborsa.com/#organization",
+      name: "Hoca İle Borsa",
+      url: "https://www.hocaileborsa.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.hocaileborsa.com/icon-512.png",
+      },
+    },
+    about: {
+      "@type": "Organization",
+      name: veri.sirketAdi,
+    },
+  };
+
+  const o = veri.ozet;
+  const adaylar: { soru: string; cevap: string }[] = [
+    {
+      soru: `${veri.sirketAdi} halka arzı ne zaman?`,
+      cevap: bekleyenDeger(o.halkaArzTarihi)
+        ? ""
+        : `${veri.sirketAdi} halka arz (talep toplama) tarihi: ${o.halkaArzTarihi}.`,
+    },
+    {
+      soru: `${veri.sirketAdi} halka arz fiyatı ne kadar?`,
+      cevap: bekleyenDeger(o.fiyatAralik)
+        ? ""
+        : `${veri.sirketAdi} halka arz fiyatı/aralığı: ${o.fiyatAralik}.`,
+    },
+    {
+      soru: `${veri.sirketAdi} halka arzında dağıtım yöntemi nedir?`,
+      cevap: bekleyenDeger(o.dagitimYontemi)
+        ? ""
+        : `Taslak izahnameye göre dağıtım yöntemi: ${o.dagitimYontemi}.`,
+    },
+    {
+      soru: `${veri.sirketAdi} halka arzında kaç lot satışa sunulacak?`,
+      cevap: bekleyenDeger(o.pay)
+        ? ""
+        : `Halka arzda satışa sunulması planlanan pay miktarı: ${o.pay}.`,
+    },
+    {
+      soru: `${veri.sirketAdi} halka arzının aracı kurumu hangisi?`,
+      cevap: bekleyenDeger(o.araciKurum) ? "" : `Aracı kurum: ${o.araciKurum}.`,
+    },
+    {
+      soru: `${veri.sirketAdi} payları hangi pazarda işlem görecek?`,
+      cevap: bekleyenDeger(o.pazar)
+        ? ""
+        : `Payların ${o.pazar}'da işlem görmesi planlanmaktadır.`,
+    },
+    {
+      soru: `${veri.sirketAdi} halka açıklık oranı nedir?`,
+      cevap:
+        !veri.halkaAciklikOrani || bekleyenDeger(veri.halkaAciklikOrani)
+          ? ""
+          : `Planlanan halka açıklık oranı: ${veri.halkaAciklikOrani}.`,
+    },
+  ];
+  const sorular = adaylar.filter((a) => a.cevap);
+
+  const semalar: object[] = [article];
+  if (sorular.length >= 2) {
+    semalar.push({
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: sorular.map((a) => ({
+        "@type": "Question",
+        name: a.soru,
+        acceptedAnswer: { "@type": "Answer", text: a.cevap },
+      })),
+    });
+  }
+  return semalar;
 }
 
 function BilgiNotu() {
@@ -105,8 +207,14 @@ export default async function HalkaArzDinamikPage({
           new Set(veri.finansalVeriler.flatMap((r) => Object.keys(r.donemler)))
         );
 
+  const jsonLd = jsonLdUret(veri, slug);
+
   return (
     <main className="min-h-screen bg-[#f8fafc] text-slate-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <section className="mb-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
           <div className="border-b border-slate-200 bg-gradient-to-r from-indigo-600 to-blue-600 px-6 py-7 text-white">

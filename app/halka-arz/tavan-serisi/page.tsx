@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { halkaArzSonuclari as halkaArzVerileri } from "@/data/halka-arz-sonuclari";
 
 const canonical = "https://www.hocaileborsa.com/halka-arz/tavan-serisi";
 const title = "2026 Halka Arz Tavan Serisi Takibi | Güncel Halka Arz Performansları";
@@ -26,178 +27,6 @@ export const metadata: Metadata = {
   },
 };
 
-const halkaArzVerileri = [
-  {
-    hisse: "BETAE",
-    islemTarihi: "01.07.2026",
-    katilimciSayisi: "1,124,953",
-    dagitimSekli: "BİREYSELE %50",
-    arzFiyati: "40.00",
-    guncelFiyat: "53.20",
-    marj: "33%",
-    konsorsiyum: "TSKB & Ziraat Yatırım & Yatırım Finansman",
-  },
-  {
-    hisse: "EKDMR",
-    islemTarihi: "22.05.2026",
-    katilimciSayisi: "796,542",
-    dagitimSekli: "BİREYSEL %40",
-    arzFiyati: "45.00",
-    guncelFiyat: "61.00",
-    marj: "36%",
-    konsorsiyum: "A1 CAPITAL",
-  },
-  {
-    hisse: "AAGYO",
-    islemTarihi: "09.04.2026",
-    katilimciSayisi: "917,413",
-    dagitimSekli: "BİREYSELE %63",
-    arzFiyati: "21.10",
-    guncelFiyat: "15.68",
-    marj: "-26%",
-    konsorsiyum: "VAKIF-INFO",
-  },
-  {
-    hisse: "MCARD",
-    islemTarihi: "11.03.2026",
-    katilimciSayisi: "965,336",
-    dagitimSekli: "BİREYSEL %48",
-    arzFiyati: "80.00",
-    guncelFiyat: "159.60",
-    marj: "100%",
-    konsorsiyum: "TERA",
-  },
-  {
-    hisse: "LXGYO",
-    islemTarihi: "10.03.2026",
-    katilimciSayisi: "890,173",
-    dagitimSekli: "BİREYSELE %40",
-    arzFiyati: "12.05",
-    guncelFiyat: "15.21",
-    marj: "26%",
-    konsorsiyum: "TERA",
-  },
-  {
-    hisse: "GENKM",
-    islemTarihi: "06.03.2026",
-    katilimciSayisi: "805,312",
-    dagitimSekli: "TAMAMEN EŞİT",
-    arzFiyati: "11.00",
-    guncelFiyat: "13.89",
-    marj: "26%",
-    konsorsiyum: "DENİZ",
-  },
-  {
-    hisse: "SVGYO",
-    islemTarihi: "06.03.2026",
-    katilimciSayisi: "701,429",
-    dagitimSekli: "BİREYSEL %40",
-    arzFiyati: "3.64",
-    guncelFiyat: "23.44",
-    marj: "544%",
-    konsorsiyum: "TERA",
-  },
-  {
-    hisse: "EMPAE",
-    islemTarihi: "26.02.2026",
-    katilimciSayisi: "1,134,537",
-    dagitimSekli: "BİREYSELE %60",
-    arzFiyati: "22.00",
-    guncelFiyat: "85.55",
-    marj: "289%",
-    konsorsiyum: "HALK",
-  },
-  {
-    hisse: "ATATR",
-    islemTarihi: "19.02.2026",
-    katilimciSayisi: "627,142",
-    dagitimSekli: "BİREYSEL %40",
-    arzFiyati: "11.20",
-    guncelFiyat: "15.91",
-    marj: "42%",
-    konsorsiyum: "TERA",
-  },
-  {
-    hisse: "BESTE",
-    islemTarihi: "11.02.2026",
-    katilimciSayisi: "796,578",
-    dagitimSekli: "TAMAMEN EŞİT",
-    arzFiyati: "14.70",
-    guncelFiyat: "34.56",
-    marj: "135%",
-    konsorsiyum: "GLOBAL",
-  },
-  {
-    hisse: "AKHAN",
-    islemTarihi: "06.02.2026",
-    katilimciSayisi: "959,375",
-    dagitimSekli: "BİREYSELE %60",
-    arzFiyati: "21.50",
-    guncelFiyat: "34.56",
-    marj: "61%",
-    konsorsiyum: "HALK",
-  },
-  {
-    hisse: "NETCD",
-    islemTarihi: "05.02.2026",
-    katilimciSayisi: "994,998",
-    dagitimSekli: "BİREYSEL %60",
-    arzFiyati: "46.00",
-    guncelFiyat: "156.40",
-    marj: "240%",
-    konsorsiyum: "INFO",
-  },
-  {
-    hisse: "UCAYM",
-    islemTarihi: "22.01.2026",
-    katilimciSayisi: "796,720",
-    dagitimSekli: "BİREYSELE %70",
-    arzFiyati: "18.00",
-    guncelFiyat: "33.64",
-    marj: "87%",
-    konsorsiyum: "KUVEYT TÜRK",
-  },
-  {
-    hisse: "ZGYO",
-    islemTarihi: "16.01.2026",
-    katilimciSayisi: "431,380",
-    dagitimSekli: "BİREYSEL %50",
-    arzFiyati: "9.77",
-    guncelFiyat: "37.54",
-    marj: "284%",
-    konsorsiyum: "VAKIF",
-  },
-  {
-    hisse: "FRMPL",
-    islemTarihi: "15.01.2026",
-    katilimciSayisi: "688,564",
-    dagitimSekli: "BİREYSEL %65",
-    arzFiyati: "30.24",
-    guncelFiyat: "36.38",
-    marj: "20%",
-    konsorsiyum: "İNTEGRAL-ZİRAAT",
-  },
-  {
-    hisse: "MEYSU",
-    islemTarihi: "13.01.2026",
-    katilimciSayisi: "648,003",
-    dagitimSekli: "BİREYSEL %45",
-    arzFiyati: "7.50",
-    guncelFiyat: "13.78",
-    marj: "84%",
-    konsorsiyum: "ALNUS",
-  },
-  {
-    hisse: "ARFYE",
-    islemTarihi: "05.01.2026",
-    katilimciSayisi: "508,401",
-    dagitimSekli: "BİREYSEL %50",
-    arzFiyati: "19.50",
-    guncelFiyat: "31.36",
-    marj: "61%",
-    konsorsiyum: "A1 CAPITAL-BULLS",
-  },
-];
 
 function marjRengi(marj: string) {
   const sayi = marjDegeri(marj);
@@ -216,6 +45,23 @@ const enYuksekMarjliHalkaArz = halkaArzVerileri.reduce((onceki, simdiki) =>
 );
 const enDusukMarjliHalkaArz = halkaArzVerileri.reduce((onceki, simdiki) =>
   marjDegeri(simdiki.marj) < marjDegeri(onceki.marj) ? simdiki : onceki
+);
+
+function katilimciDegeri(katilimci: string) {
+  const sayi = parseInt(katilimci.replace(/[.,\s]/g, ""), 10);
+  return Number.isNaN(sayi) ? 0 : sayi;
+}
+
+const ortalamaGetiri = Math.round(
+  halkaArzVerileri.reduce((toplam, item) => toplam + marjDegeri(item.marj), 0) /
+    (halkaArzVerileri.length || 1)
+);
+
+const ortalamaKatilimci = Math.round(
+  halkaArzVerileri.reduce(
+    (toplam, item) => toplam + katilimciDegeri(item.katilimciSayisi),
+    0
+  ) / (halkaArzVerileri.length || 1)
 );
 
 const tabloOkumaNotlari = [
@@ -274,6 +120,14 @@ const faqItems = [
     question: "Halka arz tavan serisi nedir?",
     answer:
       "Halka arz edilen bir hissenin borsada işlem görmeye başladıktan sonra üst fiyat limitinden kapanış yaptığı ardışık günler tavan serisi olarak adlandırılır. Bu seri, güçlü talep dönemini gösterebilir ancak kalıcı yükseliş garantisi değildir.",
+  },
+  {
+    question: "2026 halka arzları ortalama ne kadar kazandırdı?",
+    answer: `Bu sayfada listelenen ${halkaArzVerileri.length} halka arzın arz fiyatına göre ortalama getirisi yaklaşık %${ortalamaGetiri} seviyesindedir; ${pozitifHalkaArzlar.length} arz pozitif, ${negatifHalkaArzlar.length} arz negatif marja sahiptir. En yüksek getiri ${enYuksekMarjliHalkaArz.hisse} (${enYuksekMarjliHalkaArz.marj}), en düşük getiri ${enDusukMarjliHalkaArz.hisse} (${enDusukMarjliHalkaArz.marj}) hissesindedir. Geçmiş performans gelecek için garanti oluşturmaz.`,
+  },
+  {
+    question: "Halka arzlara ortalama kaç kişi katılıyor?",
+    answer: `2026 halka arzlarında katılım arza göre değişmekle birlikte, bu sayfada listelenen arzların ortalama katılımcı sayısı yaklaşık ${ortalamaKatilimci.toLocaleString("tr-TR")} kişidir.`,
   },
   {
     question: "Halka arz tavan serisi kaç gün sürer?",
@@ -392,7 +246,7 @@ export default function HalkaArzTavanSerisiPage() {
           </div>
         </section>
 
-        <section className="mb-6 grid gap-4 md:grid-cols-4">
+        <section className="mb-4 grid gap-4 md:grid-cols-4">
           <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
             <div className="text-xs font-bold uppercase tracking-wide text-slate-500">
               Listelenen Halka Arz
@@ -401,29 +255,70 @@ export default function HalkaArzTavanSerisiPage() {
               {halkaArzVerileri.length}
             </div>
           </div>
+          <div className="rounded-2xl border border-blue-200 bg-blue-50 p-5 shadow-sm">
+            <div className="text-xs font-bold uppercase tracking-wide text-blue-700">
+              Ortalama Getiri
+            </div>
+            <div className="mt-2 text-3xl font-bold text-blue-900">
+              %{ortalamaGetiri}
+            </div>
+          </div>
+          <div className="rounded-2xl border border-indigo-200 bg-indigo-50 p-5 shadow-sm">
+            <div className="text-xs font-bold uppercase tracking-wide text-indigo-700">
+              Ortalama Katılımcı
+            </div>
+            <div className="mt-2 text-3xl font-bold text-indigo-900">
+              {ortalamaKatilimci.toLocaleString("tr-TR")}
+            </div>
+          </div>
+          <div className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
+            <div className="text-xs font-bold uppercase tracking-wide text-slate-500">
+              Pozitif / Negatif Marj
+            </div>
+            <div className="mt-2 text-3xl font-bold">
+              <span className="text-emerald-700">{pozitifHalkaArzlar.length}</span>
+              <span className="text-slate-400"> / </span>
+              <span className="text-red-700">{negatifHalkaArzlar.length}</span>
+            </div>
+          </div>
+        </section>
+
+        <section className="mb-6 grid gap-4 md:grid-cols-2">
           <div className="rounded-2xl border border-emerald-200 bg-emerald-50 p-5 shadow-sm">
             <div className="text-xs font-bold uppercase tracking-wide text-emerald-700">
-              Pozitif Marj
+              En Yüksek Performans
             </div>
-            <div className="mt-2 text-3xl font-bold text-emerald-800">
-              {pozitifHalkaArzlar.length}
+            <div className="mt-2 flex flex-wrap items-baseline gap-2">
+              <span className="text-2xl font-bold text-emerald-900 md:text-3xl">
+                {enYuksekMarjliHalkaArz.hisse}
+              </span>
+              <span className="text-xl font-bold text-emerald-700 md:text-2xl">
+                {enYuksekMarjliHalkaArz.marj}
+              </span>
             </div>
+            <p className="mt-1 text-xs text-emerald-800 md:text-sm">
+              Arz fiyatı {enYuksekMarjliHalkaArz.arzFiyati} TL · Güncel{" "}
+              {enYuksekMarjliHalkaArz.guncelFiyat} TL ·{" "}
+              {enYuksekMarjliHalkaArz.islemTarihi} tarihinde işleme başladı
+            </p>
           </div>
           <div className="rounded-2xl border border-red-200 bg-red-50 p-5 shadow-sm">
             <div className="text-xs font-bold uppercase tracking-wide text-red-700">
-              Negatif Marj
+              En Düşük Performans
             </div>
-            <div className="mt-2 text-3xl font-bold text-red-800">
-              {negatifHalkaArzlar.length}
+            <div className="mt-2 flex flex-wrap items-baseline gap-2">
+              <span className="text-2xl font-bold text-red-900 md:text-3xl">
+                {enDusukMarjliHalkaArz.hisse}
+              </span>
+              <span className="text-xl font-bold text-red-700 md:text-2xl">
+                {enDusukMarjliHalkaArz.marj}
+              </span>
             </div>
-          </div>
-          <div className="rounded-2xl border border-blue-200 bg-blue-50 p-5 shadow-sm">
-            <div className="text-xs font-bold uppercase tracking-wide text-blue-700">
-              En Yüksek Marj
-            </div>
-            <div className="mt-2 text-2xl font-bold text-blue-900">
-              {enYuksekMarjliHalkaArz.hisse} {enYuksekMarjliHalkaArz.marj}
-            </div>
+            <p className="mt-1 text-xs text-red-800 md:text-sm">
+              Arz fiyatı {enDusukMarjliHalkaArz.arzFiyati} TL · Güncel{" "}
+              {enDusukMarjliHalkaArz.guncelFiyat} TL ·{" "}
+              {enDusukMarjliHalkaArz.islemTarihi} tarihinde işleme başladı
+            </p>
           </div>
         </section>
 

@@ -33,9 +33,43 @@ export const metadata: Metadata = {
   },
 };
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "EKGYO Eyüpsultan Kemerburgaz 3. Etap İhalesinde En Yüksek Teklif Açıklandı",
+  description:
+    "Emlak Konut GYO, İstanbul Eyüpsultan Kemerburgaz 3. Etap arsa satışı karşılığı gelir paylaşımı işi ihalesinin 2. oturumunda en yüksek teklifin 36,66 milyar TL satış toplam geliri ve 15,40 milyar TL şirket payı toplam geliri olduğunu açıkladı.",
+  datePublished: haberSaati,
+  dateModified: haberSaati,
+  url: "https://www.hocaileborsa.com/haber/ekgyo-eyupsultan-kemerburgaz-3-etap-ihale-sonucu",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/ekgyo-eyupsultan-kemerburgaz-3-etap-ihale-sonucu.webp",
+};
+
 export default function EkgyoEyupsultanKemerburgazUcEtapIhaleSonucuPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link

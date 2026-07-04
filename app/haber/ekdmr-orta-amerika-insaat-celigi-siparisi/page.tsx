@@ -33,9 +33,43 @@ export const metadata: Metadata = {
   },
 };
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "EKDMR Orta Amerika’dan 4,97 Milyon Dolarlık İnşaat Çeliği Siparişi Aldı",
+  description:
+    "Ekinciler Demir ve Çelik, Orta Amerika Bölgesi’ne sevk edilmek üzere 4,97 milyon dolar tutarında inşaat çeliği siparişi aldığını açıkladı. Bölgeden yıl içinde alınan sipariş toplamı 26,08 milyon dolara ulaştı.",
+  datePublished: haberSaati,
+  dateModified: haberSaati,
+  url: "https://www.hocaileborsa.com/haber/ekdmr-orta-amerika-insaat-celigi-siparisi",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/ekdmr-orta-amerika-insaat-celigi-siparisi.webp",
+};
+
 export default function EkdmrOrtaAmerikaInsaatCeligiSiparisiPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link

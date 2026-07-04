@@ -29,9 +29,43 @@ export const metadata: Metadata = {
   },
 };
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "TRALT Çanakkale Karapınar Projesinde Yürütmeyi Durdurma Kararı",
+  description:
+    "Türk Altın İşletmeleri, Çanakkale Karapınar Altın-Gümüş Madeni Açık Ocak İşletmesi Projesi için verilen ÇED olumlu kararına karşı açılan davada yürütmeyi durdurma isteminin kesin olarak kabul edildiğini açıkladı.",
+  datePublished: "2026-06-26T09:00:00+03:00",
+  dateModified: "2026-06-26T09:00:00+03:00",
+  url: "https://www.hocaileborsa.com/haber/tralt-canakkale-karapinar-ced-yurutmeyi-durdurma",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/tralt-canakkale-karapinar-ced-yurutmeyi-durdurma.webp",
+};
+
 export default function TraltCanakkaleKarapinarCedYurutmeyiDurdurmaPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link

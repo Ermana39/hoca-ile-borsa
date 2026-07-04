@@ -33,9 +33,43 @@ export const metadata: Metadata = {
   },
 };
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "BALSU’dan BG Holding’e 4,64 Milyar TL’lik Tahsisli Sermaye Artırımı Kararı",
+  description:
+    "Balsu Gıda, özkaynak yapısını güçlendirmek amacıyla BG Holding A.Ş.’ye tahsisli sermaye artırımı yapılması için yönetim kurulu kararı aldığını açıkladı. Planlanan toplam satış hasılatı 4,64 milyar TL olarak duyuruldu.",
+  datePublished: haberSaati,
+  dateModified: haberSaati,
+  url: "https://www.hocaileborsa.com/haber/balsu-bg-holding-tahsisli-sermaye-artirimi",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/balsu-bg-holding-tahsisli-sermaye-artirimi.webp",
+};
+
 export default function BalsuBgHoldingTahsisliSermayeArtirimiPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link

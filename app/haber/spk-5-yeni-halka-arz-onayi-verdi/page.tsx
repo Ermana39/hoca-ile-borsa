@@ -85,9 +85,43 @@ const halkaArzlar = [
   },
 ];
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "SPK’dan 5 Yeni Halka Arz Onayı Geldi",
+  description:
+    "SPK, Orzaks İlaç, Ekim Turizm, Soho Giyim, İsvea Seramik ve Golda Gıda halka arzlarına onay verdi. Halka arz fiyatları ve detaylar haberimizde.",
+  datePublished: "2026-06-24T09:00:00+03:00",
+  dateModified: "2026-06-24T09:00:00+03:00",
+  url: "https://www.hocaileborsa.com/haber/spk-5-yeni-halka-arz-onayi-verdi",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/spk-5-yeni-halka-arz-onayi.webp",
+};
+
 export default function Page() {
   return (
     <main className="min-h-screen bg-slate-50">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <article className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">
         <div className="mb-6 rounded-2xl bg-white p-5 shadow-sm ring-1 ring-slate-200">
           <div className="mb-4 flex flex-wrap items-center gap-2 text-sm text-slate-500">

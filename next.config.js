@@ -175,11 +175,18 @@ const nextConfig = {
     "/hisse/[sembol]": [
       "./data/hisseler/**/*.json",
     ],
+    "/hisse/[sembol]/temettu": [
+      "./data/hisseler/**/*.json",
+    ],
     "/hisseler": [
       "./data/hisseler/**/*.json",
     ],
     // Dinamik halka arz şablonu JSON verilerini okur.
     "/halka-arz/taslak-izahnameler/[slug]": [
+      "./data/halka-arz/**/*.json",
+    ],
+    // Takvim sayfası tüm halka arz JSON'larını tarar.
+    "/halka-arz/takvim": [
       "./data/halka-arz/**/*.json",
     ],
     // Günlük borsa özetleri haber akışına da katıldığından, getAllNews kullanan
@@ -196,6 +203,8 @@ const nextConfig = {
     "/sitemap.xml": [
       "./data/gunluk-ozet/**/*.json",
       "./data/halka-arz/**/*.json",
+      // Temettü alt sayfası rotaları hisse JSON'larından türetilir.
+      "./data/hisseler/**/*.json",
     ],
   },
 

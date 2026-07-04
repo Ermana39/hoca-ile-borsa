@@ -1,10 +1,13 @@
 import Link from "next/link";
 import ContactForm from "@/components/contact-form";
+
+const siteUrl = "https://www.hocaileborsa.com";
+
 export const metadata = {
-  robots: {
-    index: false,
-    follow: true,
-  },
+  title: "İletişim",
+  description:
+    "Hoca İle Borsa iletişim kanalları, içerik düzeltme talepleri, veri güncelleme bildirimleri ve iş birliği başvuruları.",
+  alternates: { canonical: `${siteUrl}/iletisim` },
 };
 
 export default function IletisimPage() {

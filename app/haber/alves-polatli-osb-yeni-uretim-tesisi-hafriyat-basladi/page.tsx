@@ -29,9 +29,43 @@ export const metadata: Metadata = {
   },
 };
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "ALVES Polatlı OSB Yeni Üretim Tesisi İçin Saha Hazırlıklarına Başladı",
+  description:
+    "Alves Kablo, Ankara Polatlı OSB’de yapılacak yeni üretim tesisi yatırımı kapsamında yaklaşık 1 milyon metreküplük hafriyat alımı için iş makinelerinin çalışmaya başladığını açıkladı.",
+  datePublished: "2026-06-24T09:00:00+03:00",
+  dateModified: "2026-06-24T09:00:00+03:00",
+  url: "https://www.hocaileborsa.com/haber/alves-polatli-osb-yeni-uretim-tesisi-hafriyat-basladi",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/alves-polatli-osb-yeni-uretim-tesisi-hafriyat-basladi.webp",
+};
+
 export default function AlvesPolatliOsbYatirimPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link

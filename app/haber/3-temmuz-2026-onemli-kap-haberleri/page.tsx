@@ -43,25 +43,6 @@ const etkiStilleri: Record<string, string> = {
   "Nötr / Takip Edilmeli": "border-slate-200 bg-white text-slate-700",
 };
 
-const ozetKutulari = [
-  {
-    baslik: "Ayrı haber yapılanlar",
-    deger: "INFO, ASTOR, HEKTS",
-  },
-  {
-    baslik: "Sermaye artırımı",
-    deger: "INFO, HEKTS, MERKO, SASA",
-  },
-  {
-    baslik: "Sözleşme / yatırım",
-    deger: "ASTOR, PNLSN, ALKLC",
-  },
-  {
-    baslik: "Operasyonel veri",
-    deger: "EBEBK, SAYAS",
-  },
-];
-
 const kapHaberleri = [
   {
     "baslik": "İnfo Yatırım (INFO)",
@@ -228,20 +209,12 @@ export default function UcTemmuzKapHaberleriPage() {
                 öne çıktı.
               </p>
 
-              <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-                {ozetKutulari.map((item) => (
-                  <div
-                    key={item.baslik}
-                    className="rounded-xl border border-blue-200 bg-blue-50 p-4 text-sm leading-6 text-blue-950"
-                  >
-                    <div className="font-semibold text-blue-700">
-                      {item.baslik}
-                    </div>
-                    <div className="mt-2 font-bold text-slate-950">
-                      {item.deger}
-                    </div>
-                  </div>
-                ))}
+              <div className="rounded-xl border border-blue-200 bg-blue-50 p-4 text-sm font-medium leading-7 text-blue-900 md:text-base">
+                Günün dikkat çeken başlıklarında INFO’nun %100 bedelsiz sermaye
+                artırımı başvurusu, ASTOR’un 816,2 milyon TL’lik TEİAŞ sözleşmesi,
+                HEKTS’in 2,38 milyar TL tahsisli sermaye artırımı başvurusu,
+                SASA’nın şarta bağlı sermaye artırımı süreci, EBEBK’nin ziyaretçi
+                verileri ve SAYAS’ın 3,1 milyon euro hasılat beklentisi öne çıktı.
               </div>
 
               <div className="space-y-5">

@@ -8,6 +8,7 @@ import {
 } from "@/lib/haberler";
 import { HABER_KATEGORILERI } from "@/lib/haber-kategorileri";
 import { getSitemapHisseSembolleri } from "@/lib/hisseler";
+import { getTemettuGecmisiOlanSembolleri } from "@/lib/hisse-temettu";
 import { getTumGunlukOzetler } from "@/lib/gunluk-ozet";
 import { tumJsonSluglar } from "@/lib/halka-arz";
 import { rehberler } from "@/lib/rehberler";
@@ -120,6 +121,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     (sembol) => `/hisse/${sembol.toLowerCase()}`
   );
 
+  // Temettü/sermaye geçmişi verisi olan hisselerin temettü alt sayfaları.
+  const hisseTemettuRoutes = getTemettuGecmisiOlanSembolleri().map(
+    (sembol) => `/hisse/${sembol.toLowerCase()}/temettu`
+  );
+
   const haberRoutes = newsItems.map((item) => item.href);
 
   // JSON'a taşınmış halka arz detay sayfaları (dinamik [slug] şablonuyla
@@ -157,6 +163,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...rehberler.map((rehber) => rehber.href),
     ...staticRoutes,
     ...hisseRoutes,
+    ...hisseTemettuRoutes,
     ...haberRoutes,
     ...halkaArzRoutes,
     ...arsivSayfaRoutes,

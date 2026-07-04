@@ -33,9 +33,43 @@ export const metadata: Metadata = {
   },
 };
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "BETAE İlk İşlem Gününü Tavan Fiyatla Kapattı",
+  description:
+    "Beta Enerji ve Teknoloji (BETAE), ilk işlem gününü 44,00 TL tavan fiyattan kapattı. Gün içi el değiştiren lot oranı %0,12 seviyesinde gerçekleşti.",
+  datePublished: haberSaati,
+  dateModified: haberSaati,
+  url: "https://www.hocaileborsa.com/haber/beta-enerji-ve-teknoloji-ilk-islem-gununu-tavan-fiyatla-kapatti",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/beta-enerji-ve-teknoloji-ilk-islem-gununu-tavan-fiyatla-kapatti.webp",
+};
+
 export default function BetaEnerjiVeTeknolojiIlkIslemGununuTavanFiyatlaKapattiPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link

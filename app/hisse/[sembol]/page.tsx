@@ -18,6 +18,10 @@ import {
   type TemelOranlar,
   type OranYorumSatiri,
 } from "@/lib/oranYorumla";
+import {
+  sermayeGecmisiNormalize,
+  type HamSermayeKaydi,
+} from "@/lib/hisse-temettu";
 
 const siteUrl = "https://www.hocaileborsa.com";
 
@@ -68,50 +72,8 @@ function doluListe<T>(value?: T[] | null): value is T[] {
   return Array.isArray(value) && value.length > 0;
 }
 
-// temettuSermayeGecmisi iki farklı şemayla gelebiliyor:
-//   kanonik    : { yil, tur, tutarOran, aciklama }
-//   alternatif : { tarih, islem, oran }   (eski içe aktarımlardan kalan)
-// Şema uyuşmazlığı yüzünden alternatif şemalı satırlar tüm hücreleri BOŞ olarak
-// render ediliyordu (düşük-değer sinyali). Aşağıdaki normalize, iki şemayı tek
-// görünüme indirger ve tüm alanları boş olan satırları eler; böylece gerçek veri
-// görünür, boş "hayalet" satır hiç çıkmaz.
-type HamSermayeKaydi = Partial<{
-  yil: string;
-  tur: string;
-  tutarOran: string;
-  aciklama: string;
-  tarih: string;
-  islem: string;
-  oran: string;
-}>;
-
-type SermayeGecmisiSatiri = {
-  yil: string;
-  tur: string;
-  tutarOran: string;
-  aciklama: string;
-};
-
-function ilkDoluMetin(...adaylar: (string | undefined)[]): string {
-  for (const aday of adaylar) {
-    if (typeof aday === "string" && aday.trim().length > 0) return aday.trim();
-  }
-  return "";
-}
-
-function sermayeGecmisiNormalize(
-  kayitlar?: HamSermayeKaydi[] | null
-): SermayeGecmisiSatiri[] {
-  if (!Array.isArray(kayitlar)) return [];
-  return kayitlar
-    .map((k) => ({
-      yil: ilkDoluMetin(k.yil, k.tarih),
-      tur: ilkDoluMetin(k.tur, k.islem),
-      tutarOran: ilkDoluMetin(k.tutarOran, k.oran),
-      aciklama: ilkDoluMetin(k.aciklama),
-    }))
-    .filter((k) => k.yil || k.tur || k.tutarOran || k.aciklama);
-}
+// temettuSermayeGecmisi normalize yardımcıları lib/hisse-temettu'da;
+// temettü alt sayfası (app/hisse/[sembol]/temettu) ile ortak kullanılır.
 
 function enBuyukOrtakAdi(hisse: Hisse): string {
   const ortaklar = hisse.ortaklikYapisi?.ortaklar ?? [];
@@ -1176,6 +1138,19 @@ export default async function HisseKunyePage({
                 <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-7 text-slate-700 md:text-base md:leading-8">
                   <strong>Temettü / sermaye geçmişi yorumu: </strong>
                   {ozgunAnaliz.temettuYorumu}
+                </div>
+              )}
+
+              {sermayeGecmisi.length > 0 && (
+                <div className="mt-4">
+                  <Link
+                    href={`/hisse/${hisse.kod.toLowerCase()}/temettu`}
+                    prefetch={false}
+                    className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700 transition hover:bg-blue-100"
+                  >
+                    {hisse.kod} temettü geçmişinin tamamı ve istatistikleri{" "}
+                    <span aria-hidden>→</span>
+                  </Link>
                 </div>
               )}
             </section>

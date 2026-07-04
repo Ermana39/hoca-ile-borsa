@@ -33,9 +33,43 @@ export const metadata: Metadata = {
   },
 };
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "ASELSAN 40 Milyon Dolarlık Yeni Üretim ve Test Merkezlerini Devreye Aldı",
+  description:
+    "ASELSAN, artan sipariş hacmini karşılamak ve üretim altyapısını güçlendirmek amacıyla 40 milyon dolar yatırımla tamamlanan Akıllı Mühimmat ve Sualtı Sistemleri İlave Üretim ve Test Merkezlerini devreye aldı.",
+  datePublished: haberSaati,
+  dateModified: haberSaati,
+  url: "https://www.hocaileborsa.com/haber/asels-akilli-muhimmat-sualti-sistemleri-yeni-tesis",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/asels-akilli-muhimmat-sualti-sistemleri-yeni-tesis.webp",
+};
+
 export default function AselsAkilliMuhimmatSualtiSistemleriPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link

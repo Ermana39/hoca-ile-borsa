@@ -29,9 +29,43 @@ export const metadata: Metadata = {
   },
 };
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "MARMR'den Polisan Kansai Boya Payları İçin 93 Milyon Dolarlık Ön Mutabakat",
+  description:
+    "Marmara Holding, %50 iştirak ettiği Polisan Kansai Boya'daki paylarının tamamını Kansai Paint'e 93 milyon dolar bedel üzerinden satmak için bağlayıcı olmayan ön mutabakat imzaladı.",
+  datePublished: "2026-06-26T09:00:00+03:00",
+  dateModified: "2026-06-26T09:00:00+03:00",
+  url: "https://www.hocaileborsa.com/haber/marmr-polisan-kansai-boya-pay-satis-on-mutabakati",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/marmr-polisan-kansai-boya-pay-satis-on-mutabakati.webp",
+};
+
 export default function MarmrPolisanKansaiBoyaPaySatisPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link

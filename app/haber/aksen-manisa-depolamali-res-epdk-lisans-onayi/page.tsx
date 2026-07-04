@@ -29,9 +29,43 @@ export const metadata: Metadata = {
   },
 };
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "Aksa Enerji’nin Manisa Depolamalı RES Projesine EPDK Onayı",
+  description:
+    "Aksa Enerji, Manisa’da 82,16 MWe kurulu güce ve 95 MWh depolama kapasitesine sahip Manisa Depolamalı RES Projesi için elektrik üretim lisansı başvurusunun EPDK tarafından onaylandığını açıkladı.",
+  datePublished: "2026-06-24T09:00:00+03:00",
+  dateModified: "2026-06-24T09:00:00+03:00",
+  url: "https://www.hocaileborsa.com/haber/aksen-manisa-depolamali-res-epdk-lisans-onayi",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/aksen-manisa-depolamali-res-epdk-lisans-onayi.webp",
+};
+
 export default function AksenManisaDepolamaliResPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link

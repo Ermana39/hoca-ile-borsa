@@ -29,9 +29,43 @@ export const metadata: Metadata = {
   },
 };
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "Kordsa Kocaeli’deki İki Taşınmazını 800 Milyon TL’ye Sattı",
+  description:
+    "Kordsa, Kocaeli İzmit’te bulunan ve operasyonlarda kullanılmayan iki taşınmazın toplam 800 milyon TL bedelle satışını tamamladığını açıkladı.",
+  datePublished: "2026-06-19T09:00:00+03:00",
+  dateModified: "2026-06-19T09:00:00+03:00",
+  url: "https://www.hocaileborsa.com/haber/kordsa-kocaeli-iki-tasinmaz-satisi-800-milyon-tl",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/kordsa-tasinmaz-satisi-800-milyon-tl.webp",
+};
+
 export default function KordsaTasinmazSatisiPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link

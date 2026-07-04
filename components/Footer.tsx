@@ -185,6 +185,7 @@ export default function Footer() {
             title="Kurumsal"
             links={[
               { label: "Hakkımızda", href: "/hakkimizda" },
+              { label: "Künye", href: "/kunye" },
               { label: "Yazarımız - Erman Hoca", href: "/yazar/erman-hoca" },
               { label: "Gizlilik Politikası", href: "/gizlilik-politikasi" },
               { label: "Çerez Politikası", href: "/cerez-politikasi" },

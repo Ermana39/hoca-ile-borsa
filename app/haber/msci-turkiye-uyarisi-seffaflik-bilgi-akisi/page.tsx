@@ -29,9 +29,43 @@ export const metadata: Metadata = {
   },
 };
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "MSCI’den Türkiye Uyarısı: Şeffaflık ve Bilgi Akışı İzlenecek",
+  description:
+    "MSCI, Türkiye piyasasında hissedarlık şeffaflığı, bilgi akışı ve olası koordineli işlem davranışlarına ilişkin gelişmeleri Kasım 2026 MSCI Endeks Gözden Geçirmesi’ne kadar izlemeye devam edeceğini açıkladı.",
+  datePublished: "2026-06-24T09:00:00+03:00",
+  dateModified: "2026-06-24T09:00:00+03:00",
+  url: "https://www.hocaileborsa.com/haber/msci-turkiye-uyarisi-seffaflik-bilgi-akisi",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/msci-turkiye-uyarisi-seffaflik-bilgi-akisi.webp",
+};
+
 export default function MsciTurkiyeUyarisiPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link

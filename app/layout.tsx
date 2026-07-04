@@ -91,7 +91,10 @@ const organizationJsonLd = {
   contactPoint: {
     "@type": "ContactPoint",
     email: "destekhocaileborsa@gmail.com",
+    url: "https://www.hocaileborsa.com/iletisim",
     contactType: "customer support",
+    areaServed: "TR",
+    availableLanguage: "tr",
   },
 };
 
@@ -106,6 +109,12 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <link
+          rel="alternate"
+          type="application/rss+xml"
+          title="Hoca İle Borsa Haberleri"
+          href="https://www.hocaileborsa.com/rss.xml"
         />
       </head>
 

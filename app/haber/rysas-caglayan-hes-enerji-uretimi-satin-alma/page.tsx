@@ -33,9 +33,43 @@ export const metadata: Metadata = {
   },
 };
 
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  headline: "RYSAS Çağlayan HES Enerji Üretim A.Ş.’nin Tamamını Satın Aldı",
+  description:
+    "Reysaş Taşımacılık ve Lojistik, Çağlayan HES Enerji Üretim A.Ş.’nin %100 hissesini 6,93 milyon dolar bedelle satın aldığını açıkladı. Şirket, enerji maliyetlerini azaltmayı ve karbon ayak izini düşürmeyi hedefliyor.",
+  datePublished: haberSaati,
+  dateModified: haberSaati,
+  url: "https://www.hocaileborsa.com/haber/rysas-caglayan-hes-enerji-uretimi-satin-alma",
+  author: {
+    "@type": "Person",
+    "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+    name: "Erman Hoca",
+    url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+  },
+  publisher: {
+    "@type": "Organization",
+    "@id": "https://www.hocaileborsa.com/#organization",
+    name: "Hoca İle Borsa",
+    url: "https://www.hocaileborsa.com",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.hocaileborsa.com/icon-512.png",
+    },
+  },
+  image: "https://www.hocaileborsa.com/rysas-caglayan-hes-enerji-uretimi-satin-alma.webp",
+};
+
 export default function RysasCaglayanHesEnerjiUretimiSatinAlmaPage() {
   return (
     <main className="min-h-screen bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <div className="mx-auto max-w-4xl px-4 py-6 md:px-6">
         <section className="mb-6 flex flex-wrap gap-3">
           <Link
