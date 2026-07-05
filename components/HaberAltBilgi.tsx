@@ -16,6 +16,23 @@ const HALKA_ARZ_LINKLERI: {
   items: RelatedContentItem[];
 }[] = [
   {
+    keywords: ["soho-giyim", "sohoe"],
+    items: [
+      {
+        title: "SOHOE onaylı izahname ve halka arz detayları",
+        href: "/halka-arz/onayli-izahnameler/soho-giyim-ve-enerji",
+        description: "SOHOE fiyat, lot, fon kullanımı, katılım endeksi ve finansal görünüm.",
+        type: "Onaylı izahname",
+      },
+      {
+        title: "SOHOE halka arz dağıtım sonuçları",
+        href: "/haber/soho-giyim-halka-arzinda-dagitimlar-sonuclandi",
+        description: "SOHOE dağıtım sonucu, eşit dağıtım yapısı ve lot bilgileri.",
+        type: "Dağıtım sonucu",
+      },
+    ],
+  },
+  {
     keywords: ["beta-enerji", "betae"],
     items: [
       {
