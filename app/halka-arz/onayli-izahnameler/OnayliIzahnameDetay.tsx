@@ -9,6 +9,7 @@ import {
   type BilgiKarti,
   type HalkaArzVeri,
 } from "@/lib/halka-arz";
+import { riskMaddeleri } from "@/lib/halka-arz-risk";
 
 export async function generateMetadata({
   params,
@@ -363,6 +364,39 @@ export default async function OnayliIzahnameDetayPage({
             <p className="text-sm leading-7 text-slate-600">{veri.sirketHakkinda}</p>
           </section>
         )}
+
+        {(() => {
+          const riskler = riskMaddeleri(veri);
+          return riskler.length > 0 ? (
+            <section className="mt-8 rounded-3xl border border-amber-200 bg-amber-50/60 p-6 shadow-sm">
+              <h2 className="text-xl font-bold text-slate-900">
+                {veri.sirketAdi} Halka Arzında Değerlendirilmesi Gereken Riskler
+              </h2>
+              <p className="mt-2 text-sm leading-7 text-slate-600">
+                Aşağıdaki başlıklar, halka arzın kamuya açık yapısından (arz
+                şekli, halka açıklık oranı, taahhütler, finansal görünüm ve
+                faaliyet sektörü) türetilen genel risk değerlendirmeleridir.
+                Bağlayıcı ve tam risk faktörleri şirketin resmî izahnamesinde
+                yer alır.
+              </p>
+              <div className="mt-5 space-y-3">
+                {riskler.map((risk, i) => (
+                  <div
+                    key={i}
+                    className="rounded-2xl border border-amber-200 bg-white p-4"
+                  >
+                    <div className="text-sm font-bold text-amber-800">
+                      {risk.baslik}
+                    </div>
+                    <p className="mt-1 text-sm leading-7 text-slate-700">
+                      {risk.metin}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          ) : null;
+        })()}
 
         <section className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-5">
           <p className="text-xs leading-6 text-slate-500">

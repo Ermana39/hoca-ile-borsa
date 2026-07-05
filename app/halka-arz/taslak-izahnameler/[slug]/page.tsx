@@ -9,6 +9,7 @@ import {
   tasinmamisSluglar,
   type HalkaArzVeri,
 } from "@/lib/halka-arz";
+import { riskMaddeleri, riskOzetCumlesi } from "@/lib/halka-arz-risk";
 
 // Build aşamasında SADECE taşınması tamamlanmış (JSON'u olan ve artık eski
 // statik .tsx'i bulunmayan) slug'lar üretilir. Eski .tsx hâlâ duran slug'lar
@@ -57,42 +58,9 @@ export async function generateMetadata({
   };
 }
 
-// Sayfadaki özet verilerden Article + FAQPage yapılandırılmış verisi üretir.
-// Yalnızca sayfada görünen, kesinleşmiş (bekleyen olmayan) değerler kullanılır.
-function jsonLdUret(veri: HalkaArzVeri, slug: string) {
-  const url =
-    veri.seo?.canonical ||
-    `https://www.hocaileborsa.com/halka-arz/taslak-izahnameler/${slug}`;
-
-  const article = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    headline: veri.baslikMeta.title,
-    description: veri.baslikMeta.description,
-    url,
-    mainEntityOfPage: url,
-    author: {
-      "@type": "Person",
-      "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
-      name: "Erman Hoca",
-      url: "https://www.hocaileborsa.com/yazar/erman-hoca",
-    },
-    publisher: {
-      "@type": "Organization",
-      "@id": "https://www.hocaileborsa.com/#organization",
-      name: "Hoca İle Borsa",
-      url: "https://www.hocaileborsa.com",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://www.hocaileborsa.com/icon-512.png",
-      },
-    },
-    about: {
-      "@type": "Organization",
-      name: veri.sirketAdi,
-    },
-  };
-
+// Sayfada görünür SSS ile şema arasında tek kaynak. Yalnızca kesinleşmiş
+// (bekleyen olmayan) değerlerden üretilir; boş cevaplar elenir.
+function sssUret(veri: HalkaArzVeri): { soru: string; cevap: string }[] {
   const o = veri.ozet;
   const adaylar: { soru: string; cevap: string }[] = [
     {
@@ -136,8 +104,51 @@ function jsonLdUret(veri: HalkaArzVeri, slug: string) {
           ? ""
           : `Planlanan halka açıklık oranı: ${veri.halkaAciklikOrani}.`,
     },
+    {
+      soru: `${veri.sirketAdi} halka arzında dikkat edilmesi gereken riskler neler?`,
+      cevap: riskOzetCumlesi(veri),
+    },
   ];
-  const sorular = adaylar.filter((a) => a.cevap);
+  return adaylar.filter((a) => a.cevap);
+}
+
+// Sayfadaki özet verilerden Article + FAQPage yapılandırılmış verisi üretir.
+// Yalnızca sayfada görünen, kesinleşmiş (bekleyen olmayan) değerler kullanılır.
+function jsonLdUret(veri: HalkaArzVeri, slug: string) {
+  const url =
+    veri.seo?.canonical ||
+    `https://www.hocaileborsa.com/halka-arz/taslak-izahnameler/${slug}`;
+
+  const article = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: veri.baslikMeta.title,
+    description: veri.baslikMeta.description,
+    url,
+    mainEntityOfPage: url,
+    author: {
+      "@type": "Person",
+      "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
+      name: "Erman Hoca",
+      url: "https://www.hocaileborsa.com/yazar/erman-hoca",
+    },
+    publisher: {
+      "@type": "Organization",
+      "@id": "https://www.hocaileborsa.com/#organization",
+      name: "Hoca İle Borsa",
+      url: "https://www.hocaileborsa.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://www.hocaileborsa.com/icon-512.png",
+      },
+    },
+    about: {
+      "@type": "Organization",
+      name: veri.sirketAdi,
+    },
+  };
+
+  const sorular = sssUret(veri);
 
   const semalar: object[] = [article];
   if (sorular.length >= 2) {
@@ -208,6 +219,8 @@ export default async function HalkaArzDinamikPage({
         );
 
   const jsonLd = jsonLdUret(veri, slug);
+  const riskler = riskMaddeleri(veri);
+  const sorular = sssUret(veri);
 
   return (
     <main className="min-h-screen bg-[#f8fafc] text-slate-900">
@@ -498,6 +511,55 @@ export default async function HalkaArzDinamikPage({
               )}
           </aside>
         </section>
+
+        {riskler.length > 0 && (
+          <section className="mt-8 rounded-3xl border border-amber-200 bg-amber-50/60 p-6 shadow-sm">
+            <h2 className="text-xl font-bold text-slate-900">
+              {veri.sirketAdi} Halka Arzında Değerlendirilmesi Gereken Riskler
+            </h2>
+            <p className="mt-2 text-sm leading-7 text-slate-600">
+              Aşağıdaki başlıklar, halka arzın kamuya açık yapısından (arz şekli,
+              halka açıklık oranı, taahhütler, finansal görünüm ve faaliyet
+              sektörü) türetilen genel risk değerlendirmeleridir. Bağlayıcı ve
+              tam risk faktörleri şirketin resmî izahnamesinde yer alır.
+            </p>
+            <div className="mt-5 space-y-3">
+              {riskler.map((risk, i) => (
+                <div
+                  key={i}
+                  className="rounded-2xl border border-amber-200 bg-white p-4"
+                >
+                  <div className="text-sm font-bold text-amber-800">
+                    {risk.baslik}
+                  </div>
+                  <p className="mt-1 text-sm leading-7 text-slate-700">
+                    {risk.metin}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {sorular.length >= 2 && (
+          <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h2 className="text-xl font-bold text-slate-900">
+              Sıkça Sorulan Sorular
+            </h2>
+            <div className="mt-4 space-y-4">
+              {sorular.map((s) => (
+                <div key={s.soru}>
+                  <h3 className="text-sm font-semibold text-slate-900 md:text-base">
+                    {s.soru}
+                  </h3>
+                  <p className="mt-1 text-sm leading-7 text-slate-600 md:text-base">
+                    {s.cevap}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
 
         <section className="mt-8 rounded-2xl border border-slate-200 bg-slate-50 p-5">
           <p className="text-xs leading-6 text-slate-500">
