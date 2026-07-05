@@ -269,7 +269,7 @@ export default function HalkaArzTakvimiHaberPage() {
                 <div className="mt-4 rounded-xl border border-blue-200 bg-blue-50 p-4 text-sm leading-7 text-blue-900 md:text-base">
                   Güncel halka arz takvimine ve tarih değişikliklerine{" "}
                   <Link
-                    href="/halka-arz/takvimi"
+                    href="/halka-arz/takvim"
                     className="font-bold underline underline-offset-4"
                   >
                     Halka Arz Takvimi
@@ -472,7 +472,7 @@ export default function HalkaArzTakvimiHaberPage() {
                   İlgili Sayfa
                 </div>
                 <Link
-                  href="/halka-arz/takvimi"
+                  href="/halka-arz/takvim"
                   className="mt-2 inline-block font-medium text-slate-700 underline underline-offset-2"
                 >
                   Güncel Halka Arz Takvimi

@@ -11,15 +11,18 @@ const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
 
 export const metadata: Metadata = {
-  title: "1 Temmuz 2026 Çarşamba Önemli KAP Haberleri",
+  title: "1 Temmuz KAP: BYDNR Bedelsiz, SASA Ciro, EKGYO İhale",
   description:
-    "1 Temmuz 2026 Çarşamba günü KAP'a düşen önemli şirket haberleri: TABGD, EKGYO, BYDNR, EKDMR, SASA, RYSAS, BALSU, ISGSY ve diğer önemli bildirimler.",
+    "BYDNR %615 bedelsiz, SASA satış verileri, EKGYO ihalesi, EKDMR siparişi ve TABGD pay satışı dahil 1 Temmuz 2026 KAP özetleri.",
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/1-temmuz-2026-onemli-kap-haberleri",
   },
   openGraph: {
     type: "article",
+    title: "1 Temmuz KAP: BYDNR Bedelsiz, SASA Ciro, EKGYO İhale",
+    description:
+      "BYDNR %615 bedelsiz, SASA satış verileri, EKGYO ihalesi, EKDMR siparişi ve TABGD pay satışı dahil 1 Temmuz 2026 KAP özetleri.",
     images: [
       {
         url: "https://www.hocaileborsa.com/kap-ozeti-discover.webp",
@@ -28,6 +31,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    title: "1 Temmuz KAP: BYDNR Bedelsiz, SASA Ciro, EKGYO İhale",
+    description:
+      "BYDNR %615 bedelsiz, SASA satış verileri, EKGYO ihalesi, EKDMR siparişi ve TABGD pay satışı dahil 1 Temmuz 2026 KAP özetleri.",
     images: [
       "https://www.hocaileborsa.com/kap-ozeti-discover.webp",
     ],
@@ -196,9 +202,9 @@ const kapHaberleri = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  headline: "1 Temmuz 2026 Çarşamba Önemli KAP Haberleri",
+  headline: "1 Temmuz KAP: BYDNR Bedelsiz, SASA Ciro, EKGYO İhale",
   description:
-    "1 Temmuz 2026 Çarşamba günü KAP'a düşen önemli şirket haberleri ve olası etkileri.",
+    "BYDNR %615 bedelsiz, SASA satış verileri, EKGYO ihalesi, EKDMR siparişi ve TABGD pay satışı dahil 1 Temmuz 2026 KAP özetleri.",
   datePublished: "2026-07-01T09:00:00+03:00",
   dateModified: "2026-07-01T23:30:00+03:00",
   url: "https://www.hocaileborsa.com/haber/1-temmuz-2026-onemli-kap-haberleri",
@@ -235,7 +241,7 @@ export default function BirTemmuzKapHaberleriPage() {
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
               src="/kap-ozeti-discover.webp"
-              alt="1 Temmuz 2026 Çarşamba Önemli KAP Haberleri"
+              alt="1 Temmuz 2026 KAP: BYDNR bedelsiz, SASA ciro ve EKGYO ihale"
               fill
               unoptimized
               className="object-cover"
@@ -244,7 +250,7 @@ export default function BirTemmuzKapHaberleriPage() {
 
           <div className="p-6 md:p-10">
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
-              1 Temmuz 2026 Çarşamba Önemli KAP Haberleri
+              1 Temmuz 2026 KAP: BYDNR Bedelsiz, SASA Ciro, EKGYO İhale
             </h1>
 
             <div className="mb-4 mt-3 flex flex-wrap items-center gap-3">
@@ -330,7 +336,7 @@ export default function BirTemmuzKapHaberleriPage() {
 
               <HaberIlgiliBolumler
                 slug="1-temmuz-2026-onemli-kap-haberleri"
-                baslik="1 Temmuz 2026 Çarşamba Önemli KAP Haberleri"
+                baslik="1 Temmuz 2026 KAP: BYDNR Bedelsiz, SASA Ciro, EKGYO İhale"
               />
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">

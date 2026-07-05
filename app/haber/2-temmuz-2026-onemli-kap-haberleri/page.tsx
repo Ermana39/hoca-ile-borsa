@@ -11,15 +11,18 @@ const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
 
 export const metadata: Metadata = {
-  title: "2 Temmuz 2026 Perşembe Önemli KAP Haberleri",
+  title: "2 Temmuz KAP: AKSEN Kredi, KAREL Sözleşme, ERCB Sipariş",
   description:
-    "2 Temmuz 2026 Perşembe günü KAP'a düşen önemli şirket haberleri: AKSEN, SASA, KAREL, ERCB, KONKA, BERA, TARKM, KOTON, MARKA ve diğer önemli bildirimler.",
+    "AKSEN 124 milyon dolar kredi, KAREL savunma sözleşmesi, ERCB 15 milyon dolar sipariş, SASA sermaye artırımı ve diğer KAP etkileri.",
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/2-temmuz-2026-onemli-kap-haberleri",
   },
   openGraph: {
     type: "article",
+    title: "2 Temmuz KAP: AKSEN Kredi, KAREL Sözleşme, ERCB Sipariş",
+    description:
+      "AKSEN 124 milyon dolar kredi, KAREL savunma sözleşmesi, ERCB 15 milyon dolar sipariş, SASA sermaye artırımı ve diğer KAP etkileri.",
     images: [
       {
         url: "https://www.hocaileborsa.com/kap-ozeti-discover.webp",
@@ -28,6 +31,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    title: "2 Temmuz KAP: AKSEN Kredi, KAREL Sözleşme, ERCB Sipariş",
+    description:
+      "AKSEN 124 milyon dolar kredi, KAREL savunma sözleşmesi, ERCB 15 milyon dolar sipariş, SASA sermaye artırımı ve diğer KAP etkileri.",
     images: [
       "https://www.hocaileborsa.com/kap-ozeti-discover.webp",
     ],
@@ -126,9 +132,9 @@ const kapHaberleri = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  headline: "2 Temmuz 2026 Perşembe Önemli KAP Haberleri",
+  headline: "2 Temmuz KAP: AKSEN Kredi, KAREL Sözleşme, ERCB Sipariş",
   description:
-    "2 Temmuz 2026 Perşembe günü KAP'a düşen önemli şirket haberleri ve olası etkileri.",
+    "AKSEN 124 milyon dolar kredi, KAREL savunma sözleşmesi, ERCB 15 milyon dolar sipariş, SASA sermaye artırımı ve diğer KAP etkileri.",
   datePublished: "2026-07-02T09:00:00+03:00",
   dateModified: "2026-07-02T23:30:00+03:00",
   url: "https://www.hocaileborsa.com/haber/2-temmuz-2026-onemli-kap-haberleri",
@@ -165,7 +171,7 @@ export default function IkiTemmuzKapHaberleriPage() {
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
               src="/kap-ozeti-discover.webp"
-              alt="2 Temmuz 2026 Perşembe Önemli KAP Haberleri"
+              alt="2 Temmuz 2026 KAP: AKSEN kredi, KAREL sözleşme ve ERCB sipariş"
               fill
               unoptimized
               className="object-cover"
@@ -174,7 +180,7 @@ export default function IkiTemmuzKapHaberleriPage() {
 
           <div className="p-6 md:p-10">
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
-              2 Temmuz 2026 Perşembe Önemli KAP Haberleri
+              2 Temmuz 2026 KAP: AKSEN Kredi, KAREL Sözleşme, ERCB Sipariş
             </h1>
 
             <div className="mb-4 mt-3 flex flex-wrap items-center gap-3">
@@ -261,7 +267,7 @@ export default function IkiTemmuzKapHaberleriPage() {
 
               <HaberIlgiliBolumler
                 slug="2-temmuz-2026-onemli-kap-haberleri"
-                baslik="2 Temmuz 2026 Perşembe Önemli KAP Haberleri"
+                baslik="2 Temmuz 2026 KAP: AKSEN Kredi, KAREL Sözleşme, ERCB Sipariş"
               />
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">

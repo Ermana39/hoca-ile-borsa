@@ -6,15 +6,18 @@ import AuthorBox from "@/components/AuthorBox";
 import HaberNavigasyon from "@/components/HaberNavigasyon";
 
 export const metadata: Metadata = {
-  title: "BALSU’da BG Holding Pay Satışı ve 4,64 Milyar TL Sermaye Avansı",
+  title: "BALSU Pay Satışı: 4,64 Milyar TL Sermaye Avansı Ne Demek?",
   description:
-    "Balsu Gıda, hakim ortağı BG Holding’in 358 milyon TL nominal payı nitelikli yatırımcılara satmak için Borsa İstanbul’a başvurduğunu ve satıştan 4,64 milyar TL’nin sermaye avansı olarak şirkete aktarılmasının planlandığını açıkladı.",
+    "BALSU'da BG Holding pay satışı, 358 milyon TL nominal pay başvurusu ve 4,64 milyar TL sermaye avansı planı yatırımcı açısından ne ifade ediyor?",
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/balsu-bg-holding-pay-satisi-sermaye-avansi",
   },
   openGraph: {
     type: "article",
+    title: "BALSU Pay Satışı: 4,64 Milyar TL Sermaye Avansı Ne Demek?",
+    description:
+      "BALSU'da BG Holding pay satışı, 358 milyon TL nominal pay başvurusu ve 4,64 milyar TL sermaye avansı planı yatırımcı açısından ne ifade ediyor?",
     images: [
       {
         url: "https://www.hocaileborsa.com/balsu-bg-holding-pay-satisi-sermaye-avansi.webp",
@@ -23,6 +26,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    title: "BALSU Pay Satışı: 4,64 Milyar TL Sermaye Avansı Ne Demek?",
+    description:
+      "BALSU'da BG Holding pay satışı, 358 milyon TL nominal pay başvurusu ve 4,64 milyar TL sermaye avansı planı yatırımcı açısından ne ifade ediyor?",
     images: [
       "https://www.hocaileborsa.com/balsu-bg-holding-pay-satisi-sermaye-avansi.webp",
     ],
@@ -33,9 +39,9 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  headline: "BALSU’da BG Holding Pay Satışı ve 4,64 Milyar TL Sermaye Avansı",
+  headline: "BALSU Pay Satışı: 4,64 Milyar TL Sermaye Avansı Ne Demek?",
   description:
-    "Balsu Gıda, hakim ortağı BG Holding’in 358 milyon TL nominal payı nitelikli yatırımcılara satmak için Borsa İstanbul’a başvurduğunu ve satıştan 4,64 milyar TL’nin sermaye avansı olarak şirkete aktarılmasının planlandığını açıkladı.",
+    "BALSU'da BG Holding pay satışı, 358 milyon TL nominal pay başvurusu ve 4,64 milyar TL sermaye avansı planı yatırımcı açısından ne ifade ediyor?",
   datePublished: "2026-06-26T09:00:00+03:00",
   dateModified: "2026-06-26T09:00:00+03:00",
   url: "https://www.hocaileborsa.com/haber/balsu-bg-holding-pay-satisi-sermaye-avansi",
@@ -96,7 +102,7 @@ export default function BalsuBgHoldingPaySatisiSermayeAvansiPage() {
           <div className="p-5 md:p-8">
             <header>
               <h1 className="text-2xl font-bold leading-tight text-zinc-900 md:text-4xl">
-                BALSU’da BG Holding Pay Satışı ve 4,64 Milyar TL Sermaye Avansı
+                BALSU Pay Satışı: 4,64 Milyar TL Sermaye Avansı Ne Demek?
               </h1>
               <p className="mt-2 text-sm text-zinc-500">
                 26.06.2026 · 

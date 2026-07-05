@@ -23,9 +23,9 @@ const veri: HalkaArzVeri = {
   },
   baslikMeta: {
     title:
-      "Saat ve Saat San. ve Tic. A.Ş. Halka Arz Detayları 2026 | Onaylı İzahname",
+      "SSAAT Halka Arzı 2026: Fiyat, Lot, Tarih ve İzahname",
     description:
-      "Saat ve Saat San. ve Tic. A.Ş. halka arzında talep toplama tarihleri 6-7-8 Temmuz 2026 olarak açıklandı. 56,00 TL fiyat, bireysele eşit dağıtım, %60 bireysel tahsisat, %12,16 halka açıklık ve 4,49 milyar TL arz büyüklüğü detayları.",
+      "Saat ve Saat halka arzında SSAAT kodu, 6-7-8 Temmuz talep tarihi, 56 TL fiyat, 80,3 milyon lot, eşit dağıtım, T1-T2 ve katılım endeksi bilgileri.",
   },
   ozet: {
     halkaArzTarihi: "6-7-8 Temmuz 2026\nPazartesi-Salı-Çarşamba\n09.00-17.00",

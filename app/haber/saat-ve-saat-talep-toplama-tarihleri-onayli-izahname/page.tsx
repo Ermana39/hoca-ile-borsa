@@ -10,15 +10,18 @@ const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
 
 export const metadata: Metadata = {
-  title: "Saat ve Saat Halka Arzında Talep Toplama Tarihleri Açıklandı",
+  title: "Saat ve Saat Halka Arzı: SSAAT Talep Tarihi, Fiyat ve Lot",
   description:
-    "Saat ve Saat halka arzında talep toplama tarihleri 6-7-8 Temmuz 2026 olarak açıklandı. Halka arzda bireysele eşit dağıtım ve katılım endeksine uygunluk bilgisi yer aldı.",
+    "SSAAT halka arzında 6-7-8 Temmuz talep tarihi, 56 TL fiyat, eşit dağıtım, T1-T2 durumu, katılım endeksi ve onaylı izahname bilgileri.",
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/saat-ve-saat-talep-toplama-tarihleri-onayli-izahname",
   },
   openGraph: {
     type: "article",
+    title: "Saat ve Saat Halka Arzı: SSAAT Talep Tarihi, Fiyat ve Lot",
+    description:
+      "SSAAT halka arzında 6-7-8 Temmuz talep tarihi, 56 TL fiyat, eşit dağıtım, T1-T2 durumu, katılım endeksi ve onaylı izahname bilgileri.",
     images: [
       {
         url: "https://www.hocaileborsa.com/saat-ve-saat-talep-toplama-tarihleri-onayli-izahname.webp",
@@ -27,6 +30,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    title: "Saat ve Saat Halka Arzı: SSAAT Talep Tarihi, Fiyat ve Lot",
+    description:
+      "SSAAT halka arzında 6-7-8 Temmuz talep tarihi, 56 TL fiyat, eşit dağıtım, T1-T2 durumu, katılım endeksi ve onaylı izahname bilgileri.",
     images: [
       "https://www.hocaileborsa.com/saat-ve-saat-talep-toplama-tarihleri-onayli-izahname.webp",
     ],
@@ -37,9 +43,9 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  headline: "Saat ve Saat Halka Arzında Talep Toplama Tarihleri Açıklandı",
+  headline: "Saat ve Saat Halka Arzı: SSAAT Talep Tarihi, Fiyat ve Lot",
   description:
-    "Saat ve Saat halka arzında talep toplama tarihleri 6-7-8 Temmuz 2026 olarak açıklandı. Halka arzda bireysele eşit dağıtım ve katılım endeksine uygunluk bilgisi yer aldı.",
+    "SSAAT halka arzında 6-7-8 Temmuz talep tarihi, 56 TL fiyat, eşit dağıtım, T1-T2 durumu, katılım endeksi ve onaylı izahname bilgileri.",
   datePublished: haberSaati,
   dateModified: haberSaati,
   url: "https://www.hocaileborsa.com/haber/saat-ve-saat-talep-toplama-tarihleri-onayli-izahname",
@@ -100,7 +106,7 @@ export default function SaatVeSaatTalepToplamaPage() {
           <div className="p-5 md:p-8">
             <header>
               <h1 className="text-2xl font-bold leading-tight text-zinc-900 md:text-4xl">
-                Saat ve Saat Halka Arzında Talep Toplama Tarihleri Açıklandı
+                Saat ve Saat Halka Arzı: SSAAT Talep Tarihi, Fiyat ve Lot
               </h1>
               <p className="mt-2 text-sm text-zinc-500">
                 <time dateTime={haberSaati}>{haberTarihi}</time> ·{" "}

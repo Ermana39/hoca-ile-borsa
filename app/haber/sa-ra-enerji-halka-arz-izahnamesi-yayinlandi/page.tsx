@@ -15,18 +15,18 @@ const haberGorsel = "https://www.hocaileborsa.com/sa-ra-enerji-halka-arz-izahnam
 
 export const metadata: Metadata = {
   title:
-    "Şa-Ra Enerji Halka Arz İzahnamesi Yayınlandı: Talep Tarihi, Fiyat ve Lot Detayları",
+    "Şa-Ra Enerji Halka Arzı: SARAE Fiyat, Tarih ve Lot",
   description:
-    "Şa-Ra Enerji halka arz izahnamesi yayınlandı. SARAE halka arz talep toplama tarihleri 8-9-10 Temmuz 2026, fiyat 70,00 TL, toplam pay 89.000.000 lot, halka arz büyüklüğü 6,23 milyar TL oldu.",
+    "SARAE halka arzında 8-9-10 Temmuz talep tarihi, 70 TL fiyat, 89 milyon lot, tahsisat grupları, T1-T2 durumu ve katılım endeksi bilgileri.",
   alternates: {
     canonical: haberUrl,
   },
   openGraph: {
     type: "article",
     title:
-      "Şa-Ra Enerji Halka Arz İzahnamesi Yayınlandı: 70 TL Fiyat, 89 Milyon Lot",
+      "Şa-Ra Enerji Halka Arzı: SARAE Fiyat, Tarih ve Lot",
     description:
-      "Şa-Ra Enerji halka arzında talep toplama 8-9-10 Temmuz 2026 tarihlerinde yapılacak. Bireysele eşit, yüksek başvurulu yatırımcıya oransal dağıtım uygulanacak.",
+      "SARAE halka arzında 8-9-10 Temmuz talep tarihi, 70 TL fiyat, 89 milyon lot, tahsisat grupları, T1-T2 durumu ve katılım endeksi bilgileri.",
     url: haberUrl,
     images: [
       {
@@ -40,9 +40,9 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title:
-      "Şa-Ra Enerji Halka Arz İzahnamesi Yayınlandı: Talep Tarihi, Fiyat ve Lot Detayları",
+      "Şa-Ra Enerji Halka Arzı: SARAE Fiyat, Tarih ve Lot",
     description:
-      "SARAE halka arzında fiyat 70,00 TL, talep tarihleri 8-9-10 Temmuz 2026, toplam pay 89.000.000 lot.",
+      "SARAE halka arzında 8-9-10 Temmuz talep tarihi, 70 TL fiyat, 89 milyon lot, tahsisat grupları, T1-T2 durumu ve katılım endeksi bilgileri.",
     images: [haberGorsel],
   },
 };
@@ -168,9 +168,9 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
   headline:
-    "Şa-Ra Enerji Halka Arz İzahnamesi Yayınlandı: Talep Tarihi, Fiyat ve Lot Detayları",
+    "Şa-Ra Enerji Halka Arzı: SARAE Fiyat, Tarih ve Lot",
   description:
-    "Şa-Ra Enerji halka arz izahnamesi yayınlandı. SARAE halka arz fiyatı, talep toplama tarihleri, lot sayısı, halka arz büyüklüğü, fon kullanımı ve finansal görünüm.",
+    "SARAE halka arzında 8-9-10 Temmuz talep tarihi, 70 TL fiyat, 89 milyon lot, tahsisat grupları, T1-T2 durumu ve katılım endeksi bilgileri.",
   image: haberGorsel,
   datePublished: "2026-07-03T14:30:00+03:00",
   dateModified: "2026-07-03T14:30:00+03:00",
@@ -260,8 +260,7 @@ export default function SaRaEnerjiHalkaArzHaberPage() {
 
           <div className="p-6 md:p-10">
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
-              Şa-Ra Enerji Halka Arz İzahnamesi Yayınlandı: Talep Tarihi,
-              Fiyat, Lot ve Tüm Detaylar
+              Şa-Ra Enerji Halka Arzı: SARAE Fiyat, Tarih ve Lot
             </h1>
 
             <div className="mb-5 mt-3 flex flex-wrap items-center gap-3">
@@ -633,7 +632,7 @@ export default function SaRaEnerjiHalkaArzHaberPage() {
 
               <HaberIlgiliBolumler
                 slug={slug}
-                baslik="Şa-Ra Enerji Halka Arz İzahnamesi Yayınlandı"
+                baslik="Şa-Ra Enerji Halka Arzı: SARAE Fiyat, Tarih ve Lot"
               />
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">

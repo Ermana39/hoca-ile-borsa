@@ -11,15 +11,18 @@ const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
 
 export const metadata: Metadata = {
-  title: "3 Temmuz 2026 Cuma Önemli KAP Haberleri",
+  title: "3 Temmuz KAP: INFO Bedelsiz, ASTOR Sözleşme, HEKTS Artırım",
   description:
-    "3 Temmuz 2026 Cuma günü KAP'a düşen önemli şirket haberleri: INFO, ASTOR, HEKTS, MERKO, AKCNS, AKSEN, SAYAS, SASA, PNLSN, EBEBK, ALKLC ve MEYSU bildirimleri.",
+    "INFO %100 bedelsiz başvurusu, ASTOR 816 milyon TL sözleşme, HEKTS tahsisli artırım, EBEBK ziyaretçi verisi ve günün KAP etkileri.",
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/3-temmuz-2026-onemli-kap-haberleri",
   },
   openGraph: {
     type: "article",
+    title: "3 Temmuz KAP: INFO Bedelsiz, ASTOR Sözleşme, HEKTS Artırım",
+    description:
+      "INFO %100 bedelsiz başvurusu, ASTOR 816 milyon TL sözleşme, HEKTS tahsisli artırım, EBEBK ziyaretçi verisi ve günün KAP etkileri.",
     images: [
       {
         url: "https://www.hocaileborsa.com/kap-ozeti-discover.webp",
@@ -28,6 +31,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    title: "3 Temmuz KAP: INFO Bedelsiz, ASTOR Sözleşme, HEKTS Artırım",
+    description:
+      "INFO %100 bedelsiz başvurusu, ASTOR 816 milyon TL sözleşme, HEKTS tahsisli artırım, EBEBK ziyaretçi verisi ve günün KAP etkileri.",
     images: [
       "https://www.hocaileborsa.com/kap-ozeti-discover.webp",
     ],
@@ -133,9 +139,9 @@ const kapHaberleri = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  headline: "3 Temmuz 2026 Cuma Önemli KAP Haberleri",
+  headline: "3 Temmuz KAP: INFO Bedelsiz, ASTOR Sözleşme, HEKTS Artırım",
   description:
-    "3 Temmuz 2026 Cuma günü KAP'a düşen önemli şirket haberleri ve olası etkileri.",
+    "INFO %100 bedelsiz başvurusu, ASTOR 816 milyon TL sözleşme, HEKTS tahsisli artırım, EBEBK ziyaretçi verisi ve günün KAP etkileri.",
   datePublished: "2026-07-03T09:00:00+03:00",
   dateModified: "2026-07-03T23:30:00+03:00",
   url: "https://www.hocaileborsa.com/haber/3-temmuz-2026-onemli-kap-haberleri",
@@ -172,7 +178,7 @@ export default function UcTemmuzKapHaberleriPage() {
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
               src="/kap-ozeti-discover.webp"
-              alt="3 Temmuz 2026 Cuma Önemli KAP Haberleri"
+              alt="3 Temmuz 2026 KAP: INFO bedelsiz, ASTOR sözleşme ve HEKTS artırım"
               fill
               unoptimized
               className="object-cover"
@@ -181,7 +187,7 @@ export default function UcTemmuzKapHaberleriPage() {
 
           <div className="p-6 md:p-10">
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
-              3 Temmuz 2026 Cuma Önemli KAP Haberleri
+              3 Temmuz 2026 KAP: INFO Bedelsiz, ASTOR Sözleşme, HEKTS Artırım
             </h1>
 
             <div className="mb-4 mt-3 flex flex-wrap items-center gap-3">
@@ -268,7 +274,7 @@ export default function UcTemmuzKapHaberleriPage() {
 
               <HaberIlgiliBolumler
                 slug="3-temmuz-2026-onemli-kap-haberleri"
-                baslik="3 Temmuz 2026 Cuma Önemli KAP Haberleri"
+                baslik="3 Temmuz 2026 KAP: INFO Bedelsiz, ASTOR Sözleşme, HEKTS Artırım"
               />
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">
