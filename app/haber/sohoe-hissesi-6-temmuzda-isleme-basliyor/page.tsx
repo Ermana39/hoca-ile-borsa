@@ -9,7 +9,7 @@ import { formatHaberTarihi, getHaberDosyaTarihi } from "@/lib/haber-tarih";
 const slug = "sohoe-hissesi-6-temmuzda-isleme-basliyor";
 const haberUrl = `https://www.hocaileborsa.com/haber/${slug}`;
 const haberGorsel =
-  "https://www.hocaileborsa.com/soho-giyim-halka-arzinda-dagitimlar-sonuclandi.webp";
+  "https://www.hocaileborsa.com/sohoe-hissesi-6-temmuzda-isleme-basliyor.webp";
 const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
 
@@ -172,7 +172,7 @@ export default function SohoeIslemeBasliyorPage() {
         <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_16px_rgba(15,23,42,0.07)]">
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-slate-100">
             <Image
-              src="/soho-giyim-halka-arzinda-dagitimlar-sonuclandi.webp"
+              src="/sohoe-hissesi-6-temmuzda-isleme-basliyor.webp"
               alt="SOHOE hissesi 6 Temmuz 2026 Pazartesi işleme başlıyor"
               fill
               unoptimized

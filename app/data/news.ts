@@ -26,7 +26,7 @@ export const newsItems: NewsItem[] = [
     id: 1084,
     title: "SOHOE Hissesi 6 Temmuz'da İşleme Başlıyor: Fiyat, Lot ve Pazar",
     href: "/haber/sohoe-hissesi-6-temmuzda-isleme-basliyor",
-    image: "/soho-giyim-halka-arzinda-dagitimlar-sonuclandi.webp",
+    image: "/sohoe-hissesi-6-temmuzda-isleme-basliyor.webp",
     alt: "SOHOE hissesi 6 Temmuz 2026 Pazartesi işleme başlıyor",
     publishedAt: "2026-07-05",
     category: "halka-arz",
