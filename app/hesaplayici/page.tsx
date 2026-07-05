@@ -126,6 +126,12 @@ const gruplar: Grup[] = [
         description: "Hisse fiyatı ve temettüye göre temettü verim oranınızı bulun.",
         icon: "oran-analizi",
       },
+      {
+        title: "Temettü Emekliliği Hesaplayıcı",
+        href: "/temettu/temettu-emekliligi-hesaplama",
+        description: "Hedef aylık temettü geliri için gereken portföyü ve hedefe ulaşma sürenizi hesaplayın.",
+        icon: "emeklilik-fonlari",
+      },
     ],
   },
   {

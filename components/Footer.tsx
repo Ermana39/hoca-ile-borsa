@@ -187,6 +187,7 @@ export default function Footer() {
               { label: "Hakkımızda", href: "/hakkimizda" },
               { label: "Künye", href: "/kunye" },
               { label: "Yazarımız - Erman Hoca", href: "/yazar/erman-hoca" },
+              { label: "Editoryal İlkeler", href: "/editoryal-ilkeler" },
               { label: "Gizlilik Politikası", href: "/gizlilik-politikasi" },
               { label: "Çerez Politikası", href: "/cerez-politikasi" },
               { label: "Kullanım Şartları", href: "/kullanim-sartlari" },

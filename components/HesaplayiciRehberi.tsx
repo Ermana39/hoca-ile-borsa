@@ -14,6 +14,7 @@ type RehberSlug =
   | "sermaye-artirimi"
   | "temettu"
   | "temettu-verimi"
+  | "temettu-emekliligi"
   | "mevduat"
   | "konut-kredisi"
   | "tuketici-kredisi"
@@ -220,6 +221,35 @@ const rehberler: Record<RehberSlug, Rehber> = {
       girdi: "1.000 lot, lot başına 2 TL brüt temettü ve %15 stopaj",
       sonuc: "Brüt temettü 2.000 TL, stopaj 300 TL ve net ödeme 1.700 TL olur.",
     },
+  },
+  "temettu-emekliligi": {
+    adimlar: [
+      "Hedef aylık temettü gelirinizi ve ortalama net temettü verimini girin.",
+      "Mevcut portföyünüzü, aylık düzenli yatırımınızı ve beklenen yıllık getiriyi ekleyin.",
+      "Gerekli portföy büyüklüğünü, bugünkü aylık temettünüzü ve hedefe ulaşma sürenizi inceleyin.",
+    ],
+    ornek: {
+      girdi: "Aylık 50.000 TL hedef, %5 net verim, 250.000 TL portföy ve aylık 15.000 TL yatırım",
+      sonuc: "Gerekli portföy 12 milyon TL olur; hedefe ulaşma süresi getiri varsayımına göre hesaplanır.",
+    },
+    sss: [
+      {
+        soru: "Temettü emekliliği nedir?",
+        cevap: "Temettü emekliliği, düzenli temettü ödeyen şirketlerden oluşan bir portföyün yıllık temettü gelirinin yaşam giderlerini karşılayacak seviyeye ulaşması ve böylece maaş gelirine bağımlı kalmadan yaşayabilme hedefidir.",
+      },
+      {
+        soru: "Aylık 50.000 TL temettü için ne kadar portföy gerekir?",
+        cevap: "Gerekli portföy, yıllık hedef gelirin ortalama temettü verimine bölünmesiyle bulunur. Örneğin %5 net verimle aylık 50.000 TL (yıllık 600.000 TL) için yaklaşık 12 milyon TL portföy gerekir. Hesaplayıcıyla kendi verim varsayımınıza göre sonucu görebilirsiniz.",
+      },
+      {
+        soru: "Temettü verimi olarak hangi oranı girmeliyim?",
+        cevap: "Portföyünüzdeki hisselerin ağırlıklı ortalama net (stopaj sonrası) temettü verimini kullanmak en gerçekçi sonucu verir. BIST genelinde bu oran şirketten şirkete büyük farklılık gösterir.",
+      },
+      {
+        soru: "Beklenen yıllık getiri neyi ifade ediyor?",
+        cevap: "Fiyat artışı ve yeniden yatırılan temettüler dahil toplam portföy getirisini ifade eder. Geçmiş getiriler gelecek için garanti oluşturmaz; farklı senaryoları deneyerek aralık görmek daha sağlıklıdır.",
+      },
+    ],
   },
   "temettu-verimi": {
     adimlar: [

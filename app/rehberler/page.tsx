@@ -29,6 +29,25 @@ export default function RehberlerPage() {
           </h1>
         </section>
 
+        <Link
+          href="/sozluk"
+          prefetch={false}
+          className="mb-6 flex items-center justify-between gap-3 rounded-2xl border border-blue-200 bg-blue-50 p-5 transition hover:bg-blue-100"
+        >
+          <div>
+            <p className="text-base font-bold text-blue-900 md:text-lg">
+              Borsa Terimleri Sözlüğü
+            </p>
+            <p className="mt-1 text-sm leading-6 text-blue-800">
+              VBTS, tavan serisi, lot, fiyat istikrarı ve daha fazlası — sık
+              geçen terimlerin sade tanımları.
+            </p>
+          </div>
+          <span aria-hidden className="text-xl text-blue-700">
+            →
+          </span>
+        </Link>
+
         <section className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
           {rehberler.map((item) => (
             <Link

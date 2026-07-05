@@ -9,6 +9,7 @@ import {
 import { HABER_KATEGORILERI } from "@/lib/haber-kategorileri";
 import { getSitemapHisseSembolleri } from "@/lib/hisseler";
 import { getTemettuGecmisiOlanSembolleri } from "@/lib/hisse-temettu";
+import { ozgunTerimler } from "@/data/sozluk";
 import { getTumGunlukOzetler } from "@/lib/gunluk-ozet";
 import { tumJsonSluglar } from "@/lib/halka-arz";
 import { rehberler } from "@/lib/rehberler";
@@ -126,6 +127,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     (sembol) => `/hisse/${sembol.toLowerCase()}/temettu`
   );
 
+  // Sözlükte kendi sayfası olan terimler (işaretçi kayıtlar hariç).
+  const sozlukRoutes = ozgunTerimler().map((t) => `/sozluk/${t.slug}`);
+
   const haberRoutes = newsItems.map((item) => item.href);
 
   // JSON'a taşınmış halka arz detay sayfaları (dinamik [slug] şablonuyla
@@ -164,6 +168,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticRoutes,
     ...hisseRoutes,
     ...hisseTemettuRoutes,
+    ...sozlukRoutes,
     ...haberRoutes,
     ...halkaArzRoutes,
     ...arsivSayfaRoutes,

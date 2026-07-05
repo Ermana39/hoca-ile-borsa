@@ -23,6 +23,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1083,
+    title: "Önümüzdeki Haftanın Halka Arz Takvimi: 6-12 Temmuz 2026",
+    href: "/haber/onumuzdeki-hafta-halka-arz-takvimi-6-12-temmuz-2026",
+    image: "/onumuzdeki-hafta-halka-arz-takvimi-6-12-temmuz-2026.webp",
+    alt: "6-12 Temmuz 2026 haftası halka arz takvimi",
+    publishedAt: "2026-07-05",
+    category: "halka-arz",
+    ilgiliHisseler: ["SOHOE", "ORZAX", "EKIM", "GOLDA", "ISVEA", "SSAAT", "SARAE", "BETAE"],
+  },
+  {
     id: 1082,
     title: "3 Temmuz 2026 Cuma Önemli KAP Haberleri",
     href: "/haber/3-temmuz-2026-onemli-kap-haberleri",

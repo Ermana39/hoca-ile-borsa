@@ -17,6 +17,13 @@ const temettuKutulari = [
       "Temettü nedir, nasıl işler, hak kullanım tarihi ve ödeme tarihi gibi temel konuları daha anlaşılır şekilde öğrenebilirsiniz.",
   },
   {
+    title: "Temettü Emekliliği Hesaplayıcı",
+    href: "/temettu/temettu-emekliligi-hesaplama",
+    icon: "emeklilik-fonlari" as CategoryIconName,
+    description:
+      "Hedef aylık temettü geliriniz için gereken portföy büyüklüğünü ve hedefe kaç yılda ulaşacağınızı hesaplayabilirsiniz.",
+  },
+  {
     title: "Temmuz Ayı Temettü Verenler",
     href: "/temettu/temmuz-ayi-temettu-takvimi",
     icon: "temettu-takvim" as CategoryIconName,
