@@ -12,6 +12,19 @@ export type FonEtkiSeoPageProps = {
   toplamFonOrani: number;
   toplamEtki: number;
   sonGuncelleme: string;
+  degisimVerisi: FonDegisimVerisi;
+};
+
+export type DegisimSatiri = {
+  dun: number;
+  bugun: number;
+  degisim: number;
+};
+
+export type FonDegisimVerisi = {
+  yatirimciSayisi: DegisimSatiri;
+  fonToplamDeger: DegisimSatiri;
+  yorum: string;
 };
 
 function fmt(value: number, digits = 2) {
@@ -21,11 +34,43 @@ function fmt(value: number, digits = 2) {
   }).format(value);
 }
 
+function fmtInteger(value: number) {
+  return new Intl.NumberFormat("tr-TR", {
+    maximumFractionDigits: 0,
+  }).format(value);
+}
+
+function fmtCurrency(value: number) {
+  return new Intl.NumberFormat("tr-TR", {
+    style: "currency",
+    currency: "TRY",
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 2,
+  }).format(value);
+}
+
 function signedPercent(value: number, digits = 2) {
   const formatted = fmt(Math.abs(value), digits);
   if (value > 0) return `+%${formatted}`;
   if (value < 0) return `-%${formatted}`;
   return `%${formatted}`;
+}
+
+function signedNumber(value: number) {
+  if (value > 0) return `+${fmtInteger(value)}`;
+  if (value < 0) return `-${fmtInteger(Math.abs(value))}`;
+  return fmtInteger(value);
+}
+
+function signedCurrency(value: number) {
+  if (value > 0) return `+${fmtCurrency(value)}`;
+  if (value < 0) return `-${fmtCurrency(Math.abs(value))}`;
+  return fmtCurrency(value);
+}
+
+function changeRate({ dun, degisim }: DegisimSatiri) {
+  if (dun === 0) return 0;
+  return (degisim / dun) * 100;
 }
 
 function getMostPositive(rows: FonEtkiRow[]) {
@@ -126,6 +171,8 @@ function buildJsonLd({
           "Kapanış marjı",
           "Hisse bazlı etki",
           "Toplam tahmini fon etkisi",
+          "Yatırımcı sayısı değişimi",
+          "Fon toplam değer değişimi",
         ],
         measurementTechnique: "Fon oranı ile günlük kapanış marjının çarpılması",
       },
@@ -203,10 +250,13 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
     toplamFonOrani,
     toplamEtki,
     sonGuncelleme,
+    degisimVerisi,
   } = props;
   const mostPositive = getMostPositive(rows);
   const mostNegative = getMostNegative(rows);
   const pageUrl = `/fonlar/etki-analizi/${slug}`;
+  const yatirimciDegisimOrani = changeRate(degisimVerisi.yatirimciSayisi);
+  const fonDegerDegisimOrani = changeRate(degisimVerisi.fonToplamDeger);
 
   return (
     <main className="min-h-screen bg-[#f8fafc] px-4 py-6 md:px-6">
@@ -293,6 +343,97 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
         </section>
 
         <FonEtkiTable rows={rows} toplamFonOrani={toplamFonOrani} toplamEtki={toplamEtki} />
+
+        <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-5 md:p-7">
+          <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p className="text-sm font-medium text-slate-500">
+                Fon büyüklüğü ve yatırımcı ilgisi
+              </p>
+              <h2 className="mt-1 text-xl font-bold text-zinc-900 md:text-2xl">
+                {kod} Yatırımcı Sayısı ve Fon Toplam Değer Değişimi
+              </h2>
+            </div>
+            <p className="text-sm text-slate-500">Dün / Bugün karşılaştırması</p>
+          </div>
+
+          <dl className="mt-5 grid grid-cols-1 gap-3 md:grid-cols-2">
+            <div className="rounded-xl bg-slate-50 p-4">
+              <dt className="text-xs font-semibold uppercase text-slate-500">
+                Yatırımcı sayısı değişimi
+              </dt>
+              <dd className="mt-2 text-2xl font-bold text-emerald-700">
+                {signedNumber(degisimVerisi.yatirimciSayisi.degisim)}
+              </dd>
+              <dd className="mt-1 text-sm text-slate-600">
+                {fmtInteger(degisimVerisi.yatirimciSayisi.dun)} kişiden{" "}
+                {fmtInteger(degisimVerisi.yatirimciSayisi.bugun)} kişiye,{" "}
+                {signedPercent(yatirimciDegisimOrani)} değişim.
+              </dd>
+            </div>
+            <div className="rounded-xl bg-slate-50 p-4">
+              <dt className="text-xs font-semibold uppercase text-slate-500">
+                Fon toplam değer değişimi
+              </dt>
+              <dd className="mt-2 text-2xl font-bold text-emerald-700">
+                {signedCurrency(degisimVerisi.fonToplamDeger.degisim)}
+              </dd>
+              <dd className="mt-1 text-sm text-slate-600">
+                {fmtCurrency(degisimVerisi.fonToplamDeger.dun)} seviyesinden{" "}
+                {fmtCurrency(degisimVerisi.fonToplamDeger.bugun)} seviyesine,{" "}
+                {signedPercent(fonDegerDegisimOrani)} değişim.
+              </dd>
+            </div>
+          </dl>
+
+          <div className="mt-5 overflow-x-auto rounded-xl border border-slate-200">
+            <table className="min-w-[720px] w-full border-collapse text-left text-sm">
+              <thead className="bg-slate-50 text-xs uppercase text-slate-500">
+                <tr>
+                  <th className="px-4 py-3 font-semibold">Gösterge</th>
+                  <th className="px-4 py-3 font-semibold">Dün</th>
+                  <th className="px-4 py-3 font-semibold">Bugün</th>
+                  <th className="px-4 py-3 font-semibold">Değişim</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100 text-slate-700">
+                <tr>
+                  <th className="px-4 py-3 font-semibold text-slate-900">
+                    Yatırımcı sayısı
+                  </th>
+                  <td className="px-4 py-3">
+                    {fmtInteger(degisimVerisi.yatirimciSayisi.dun)}
+                  </td>
+                  <td className="px-4 py-3">
+                    {fmtInteger(degisimVerisi.yatirimciSayisi.bugun)}
+                  </td>
+                  <td className="px-4 py-3 font-semibold text-emerald-700">
+                    {signedNumber(degisimVerisi.yatirimciSayisi.degisim)}
+                  </td>
+                </tr>
+                <tr>
+                  <th className="px-4 py-3 font-semibold text-slate-900">
+                    Fon toplam değer
+                  </th>
+                  <td className="px-4 py-3">
+                    {fmtCurrency(degisimVerisi.fonToplamDeger.dun)}
+                  </td>
+                  <td className="px-4 py-3">
+                    {fmtCurrency(degisimVerisi.fonToplamDeger.bugun)}
+                  </td>
+                  <td className="px-4 py-3 font-semibold text-emerald-700">
+                    {signedCurrency(degisimVerisi.fonToplamDeger.degisim)}
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <div className="mt-5 rounded-xl border border-blue-100 bg-blue-50 p-4 text-sm leading-7 text-blue-950 md:text-base">
+            <h3 className="font-bold text-blue-950">{kod} değişim yorumu</h3>
+            <p className="mt-2">{degisimVerisi.yorum}</p>
+          </div>
+        </section>
 
         <section className="mt-10 space-y-5 rounded-2xl border border-slate-200 bg-white p-5 md:p-7">
           <h2 className="text-xl font-bold text-zinc-900 md:text-2xl">

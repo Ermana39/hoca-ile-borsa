@@ -38,6 +38,20 @@ export default function DfiEtkiAnaliziPage() {
       toplamFonOrani={94.77}
       toplamEtki={0.46}
       sonGuncelleme="3 Temmuz 2026"
+      degisimVerisi={{
+        yatirimciSayisi: {
+          dun: 39659,
+          bugun: 40368,
+          degisim: 709,
+        },
+        fonToplamDeger: {
+          dun: 20873537570,
+          bugun: 21341081989,
+          degisim: 467544419,
+        },
+        yorum:
+          "DFI fonunda 709 kişilik yatırımcı artışı, daha sınırlı yatırımcı tabanına göre dikkat çekici bir büyümeye karşılık geliyor. Fon toplam değerinin 467,54 milyon TL yükselmesi, pozitif kapanış etkisiyle birlikte fon büyüklüğünün de aynı yönde güçlendiğini gösteriyor. Bu birleşim DFI için hem performans beklentisi hem de yatırımcı ilgisi tarafında destekleyici bir görünüm oluşturuyor.",
+      }}
     />
   );
 }

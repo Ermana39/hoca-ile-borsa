@@ -59,6 +59,20 @@ export default function PbrEtkiAnaliziPage() {
       toplamFonOrani={83.15}
       toplamEtki={-0.38}
       sonGuncelleme="3 Temmuz 2026"
+      degisimVerisi={{
+        yatirimciSayisi: {
+          dun: 64593,
+          bugun: 65484,
+          degisim: 891,
+        },
+        fonToplamDeger: {
+          dun: 33353265367,
+          bugun: 34182017363,
+          degisim: 828751996,
+        },
+        yorum:
+          "PBR fonunda yatırımcı sayısının 891 kişi yükselmesi, değişken fon yapısına olan ilginin günlük dalgalanmaya rağmen arttığını gösteriyor. Fon toplam değerindeki 828,75 milyon TL'lik artış, portföy etkisi negatif hesaplanan bir günde fonun büyüklük tarafında destek bulduğunu düşündürür. PBR için bu veri, fon fiyat tahmininin yanında para girişi ve yatırımcı davranışının birlikte izlenmesi gerektiğini öne çıkarıyor.",
+      }}
     />
   );
 }
