@@ -101,11 +101,13 @@ function takvimSatiri(item: TakvimSirketi | TalepToplamaArzi): TakvimSatiri | nu
     sirketAdi: veri.sirketAdi,
     bistKodu: veri.bistKodu || veri.ozet.bistKodu || "—",
     tarih: item.tarih,
-    fiyat: bekleyenDeger(veri.ozet.fiyatAralik) ? "—" : veri.ozet.fiyatAralik,
+    fiyat: bekleyenDeger(veri.ozet.fiyatAralik)
+      ? "—"
+      : veri.ozet.fiyatAralik ?? "—",
     dagitim: bekleyenDeger(veri.ozet.dagitimYontemi)
       ? "—"
-      : veri.ozet.dagitimYontemi,
-    pazar: bekleyenDeger(veri.ozet.pazar) ? "—" : veri.ozet.pazar,
+      : veri.ozet.dagitimYontemi ?? "—",
+    pazar: bekleyenDeger(veri.ozet.pazar) ? "—" : veri.ozet.pazar ?? "—",
     durum: item.durum,
     talepSaatleri: "talepSaatleri" in item ? item.talepSaatleri : undefined,
   };
