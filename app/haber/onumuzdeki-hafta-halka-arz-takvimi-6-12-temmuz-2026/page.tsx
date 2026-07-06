@@ -17,7 +17,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "Önümüzdeki Haftanın Halka Arz Takvimi: 6-12 Temmuz 2026",
   description:
-    "6-12 Temmuz 2026 haftasında halka arz gündemi yoğun geçecek. SOHOE ve ORZAX işlem görmeye başlayacak, SSAAT ve SARAE talep toplayacak. EKIM, GOLDA ve ISVEA için işlem başlama tarihi bekleniyor.",
+    "6-12 Temmuz 2026 haftasında halka arz gündemi yoğun geçecek. SOHOE, ORZAX, GOLDA, EKIM ve ISVEA işlem görmeye başlayacak; SSAAT ve SARAE talep toplayacak.",
   alternates: {
     canonical: haberUrl,
   },
@@ -48,8 +48,8 @@ export const metadata: Metadata = {
 const ozetKartlari = [
   {
     baslik: "İşleme Başlayacak",
-    deger: "2 Halka Arz",
-    aciklama: "SOHOE ve ORZAX için ilk işlem tarihleri belli oldu",
+    deger: "5 Halka Arz",
+    aciklama: "SOHOE, ORZAX, GOLDA, EKIM ve ISVEA için ilk işlem tarihleri belli oldu",
   },
   {
     baslik: "Talep Toplayacak",
@@ -57,9 +57,9 @@ const ozetKartlari = [
     aciklama: "SSAAT ve SARAE bu hafta talep toplama sürecinde olacak",
   },
   {
-    baslik: "Tarih Bekleniyor",
+    baslik: "Yeni İşlem Tarihleri",
     deger: "3 Şirket",
-    aciklama: "EKIM, GOLDA ve ISVEA için işlem başlama tarihi takip edilecek",
+    aciklama: "GOLDA 8 Temmuz, EKIM 9 Temmuz, ISVEA 10 Temmuz günü işleme başlayacak",
   },
   {
     baslik: "Gündemdeki Seri",
@@ -79,20 +79,20 @@ const islemeBaslayacaklar = [
     tarih: "7 Temmuz Salı",
     durum: "Borsada işlem görmeye başlayacak",
   },
-];
-
-const tarihBekleyenler = [
-  {
-    kod: "EKIM",
-    durum: "İşleme başlama tarihi bekleniyor",
-  },
   {
     kod: "GOLDA",
-    durum: "İşleme başlama tarihi bekleniyor",
+    tarih: "8 Temmuz Çarşamba",
+    durum: "Borsada işlem görmeye başlayacak",
+  },
+  {
+    kod: "EKIM",
+    tarih: "9 Temmuz Perşembe",
+    durum: "Borsada işlem görmeye başlayacak",
   },
   {
     kod: "ISVEA",
-    durum: "İşleme başlama tarihi bekleniyor",
+    tarih: "10 Temmuz Cuma",
+    durum: "Borsada işlem görmeye başlayacak",
   },
 ];
 
@@ -120,15 +120,15 @@ const haftaAkisi = [
   },
   {
     gun: "8 Temmuz Çarşamba",
-    baslik: "SSAAT talep toplama sürecini tamamlayacak, SARAE talep toplamaya başlayacak",
+    baslik: "GOLDA işlem görmeye başlayacak; SSAAT talep toplamayı tamamlayacak, SARAE talep toplamaya başlayacak",
   },
   {
     gun: "9 Temmuz Perşembe",
-    baslik: "SARAE talep toplama süreci devam edecek",
+    baslik: "EKIM işlem görmeye başlayacak, SARAE talep toplama süreci devam edecek",
   },
   {
     gun: "10 Temmuz Cuma",
-    baslik: "SARAE talep toplama sürecini tamamlayacak",
+    baslik: "ISVEA işlem görmeye başlayacak, SARAE talep toplama sürecini tamamlayacak",
   },
 ];
 
@@ -137,10 +137,10 @@ const jsonLd = {
   "@type": "NewsArticle",
   headline: "Önümüzdeki Haftanın Halka Arz Takvimi: 6-12 Temmuz 2026",
   description:
-    "6-12 Temmuz 2026 haftasında SOHOE ve ORZAX işlem görmeye başlayacak, SSAAT ve SARAE talep toplayacak. EKIM, GOLDA ve ISVEA için işlem başlama tarihi bekleniyor.",
+    "6-12 Temmuz 2026 haftasında SOHOE, ORZAX, GOLDA, EKIM ve ISVEA işlem görmeye başlayacak; SSAAT ve SARAE talep toplayacak.",
   image: haberGorsel,
   datePublished: "2026-07-05T11:00:00+03:00",
-  dateModified: "2026-07-05T11:00:00+03:00",
+  dateModified: "2026-07-06T12:00:00+03:00",
   url: haberUrl,
   inLanguage: "tr",
   author: {
@@ -224,16 +224,17 @@ export default function HalkaArzTakvimiHaberPage() {
               <p>
                 6-12 Temmuz 2026 haftasında halka arz gündemi oldukça yoğun
                 olacak. Haftanın takviminde hem borsada işlem görmeye başlayacak
-                şirketler hem talep toplama sürecine girecek yeni halka arzlar hem
-                de işlem başlama tarihi beklenen şirketler öne çıkıyor.
+                şirketler hem de talep toplama sürecine girecek yeni halka arzlar
+                öne çıkıyor.
               </p>
 
               <p>
-                Haftanın ilk işlem gününden itibaren <strong>SOHOE</strong> ve{" "}
-                <strong>ORZAX</strong> tarafında borsada işlem başlangıcı takip
-                edilecek. Aynı hafta içinde <strong>SSAAT</strong> ve{" "}
-                <strong>SARAE</strong> için talep toplama süreçleri yatırımcıların
-                gündeminde olacak.
+                Haftanın ilk işlem gününden itibaren <strong>SOHOE</strong>,{" "}
+                <strong>ORZAX</strong>, <strong>GOLDA</strong>,{" "}
+                <strong>EKIM</strong> ve <strong>ISVEA</strong> tarafında borsada
+                işlem başlangıcı takip edilecek. Aynı hafta içinde{" "}
+                <strong>SSAAT</strong> ve <strong>SARAE</strong> için talep
+                toplama süreçleri yatırımcıların gündeminde olacak.
               </p>
 
               <div className="grid gap-4 sm:grid-cols-2">
@@ -261,9 +262,8 @@ export default function HalkaArzTakvimiHaberPage() {
                   çıkıyor. İlk olarak daha önce talep toplama sürecini tamamlayan
                   bazı şirketlerin Borsa İstanbul’da işlem görmeye başlaması
                   bekleniyor. İkinci olarak yeni halka arzlarda talep toplama
-                  süreçleri başlayacak. Üçüncü başlıkta ise halka arzı tamamlanan
-                  ancak işlem başlama tarihi henüz açıklanmayan şirketler takip
-                  edilecek.
+                  süreçleri başlayacak. Üçüncü başlıkta ise hafta içine yayılan
+                  yeni işlem başlangıç tarihleri takip edilecek.
                 </p>
 
                 <div className="mt-4 rounded-xl border border-blue-200 bg-blue-50 p-4 text-sm leading-7 text-blue-900 md:text-base">
@@ -316,22 +316,26 @@ export default function HalkaArzTakvimiHaberPage() {
                 </div>
 
                 <p className="mt-4 text-sm leading-7 text-slate-600 md:text-base">
-                  SOHOE’nin 6 Temmuz Pazartesi, ORZAX’ın ise 7 Temmuz Salı günü
-                  işlem görmeye başlaması bekleniyor. Yeni işlem başlangıçları,
-                  halka arz sonrası ilk fiyatlamaların oluşması açısından
-                  yatırımcıların yakından izlediği başlıklar arasında yer alıyor.
+                  SOHOE 6 Temmuz Pazartesi, ORZAX 7 Temmuz Salı, GOLDA 8 Temmuz
+                  Çarşamba, EKIM 9 Temmuz Perşembe ve ISVEA 10 Temmuz Cuma günü
+                  işlem görmeye başlayacak. Yeni işlem başlangıçları, halka arz
+                  sonrası ilk fiyatlamaların oluşması açısından yatırımcıların
+                  yakından izlediği başlıklar arasında yer alıyor.
                 </p>
               </Section>
 
-              <Section title="İşleme başlama tarihi beklenen halka arzlar">
+              <Section title="Yeni açıklanan işlem başlangıçları">
                 <div className="grid gap-3 sm:grid-cols-3">
-                  {tarihBekleyenler.map((item) => (
+                  {islemeBaslayacaklar.slice(2).map((item) => (
                     <div
                       key={item.kod}
                       className="rounded-xl border border-slate-200 bg-slate-50 p-4"
                     >
                       <div className="text-2xl font-bold text-slate-900">
                         {item.kod}
+                      </div>
+                      <div className="mt-2 text-sm font-semibold text-cyan-700">
+                        {item.tarih}
                       </div>
                       <div className="mt-2 text-sm leading-6 text-slate-600">
                         {item.durum}
@@ -341,10 +345,10 @@ export default function HalkaArzTakvimiHaberPage() {
                 </div>
 
                 <p className="mt-4 text-sm leading-7 text-slate-600 md:text-base">
-                  EKIM, GOLDA ve ISVEA tarafında ise yatırımcıların odağı işlem
-                  başlama tarihi açıklamalarında olacak. Bu şirketlerde borsada
-                  işlem başlangıç tarihinin netleşmesiyle birlikte haftalık halka
-                  arz gündeminin daha da hareketlenmesi beklenebilir.
+                  GOLDA, EKIM ve ISVEA tarafında işlem başlangıç tarihleri
+                  netleşti. Bu şirketlerde borsada ilk fiyatlamaların hafta
+                  içinde sırasıyla 8, 9 ve 10 Temmuz 2026 tarihlerinde oluşması
+                  bekleniyor.
                 </p>
               </Section>
 
@@ -441,10 +445,9 @@ export default function HalkaArzTakvimiHaberPage() {
                 </p>
 
                 <p className="mt-3 text-sm leading-7 text-slate-600 md:text-base">
-                  SOHOE ve ORZAX için ilk işlem günleri, SSAAT ve SARAE için
-                  talep toplama takvimi, EKIM, GOLDA ve ISVEA için ise işlem
-                  başlama tarihi açıklamaları haftanın öne çıkan başlıkları
-                  olacak.
+                  SOHOE, ORZAX, GOLDA, EKIM ve ISVEA için ilk işlem günleri;
+                  SSAAT ve SARAE için ise talep toplama takvimi haftanın öne
+                  çıkan başlıkları olacak.
                 </p>
               </Section>
 
@@ -452,9 +455,9 @@ export default function HalkaArzTakvimiHaberPage() {
                 <p className="text-sm leading-7 text-slate-600 md:text-base">
                   6-12 Temmuz haftası, halka arz piyasası açısından son dönemin
                   en hareketli haftalarından biri olabilir. Bir tarafta yeni
-                  işlem başlangıçları, diğer tarafta yeni talep toplama süreçleri
-                  ve tarih bekleyen halka arzlar nedeniyle piyasanın odağı halka
-                  arz takviminde kalacak.
+                  işlem başlangıçları ve diğer tarafta yeni talep toplama
+                  süreçleri nedeniyle piyasanın odağı halka arz takviminde
+                  kalacak.
                 </p>
 
                 <p className="mt-3 text-sm leading-7 text-slate-600 md:text-base">

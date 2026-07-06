@@ -23,6 +23,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1089,
+    title: "GOLDA, EKIM ve ISVEA İşleme Başlama Tarihleri Belli Oldu",
+    href: "/haber/golda-ekim-isvea-isleme-baslama-tarihleri",
+    image: "/golda-ekim-isvea-isleme-baslama-tarihleri.webp",
+    alt: "GOLDA EKIM ISVEA işlem başlama tarihleri",
+    publishedAt: "2026-07-06",
+    category: "halka-arz",
+    ilgiliHisseler: ["GOLDA", "EKIM", "ISVEA"],
+  },
+  {
     id: 1088,
     title: "İsvea Seramik Halka Arzında Dağıtım Sonuçları Açıklandı",
     href: "/haber/isvea-halka-arzinda-dagitim-sonuclari-aciklandi",

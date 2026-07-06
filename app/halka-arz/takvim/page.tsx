@@ -12,7 +12,7 @@ import { halkaArzSonuclari } from "@/data/halka-arz-sonuclari";
 const canonical = "https://www.hocaileborsa.com/halka-arz/takvim";
 const title = "Halka Arz Takvimi 2026 | Yaklaşan, Onaylı ve Beklenen Halka Arzlar";
 const description =
-  "Güncel halka arz takvimi: talep toplama tarihi açıklanan halka arzlar, SPK onaylı izahnameler, taslak aşamasındaki şirketler ve 2026'da işlem görmeye başlayan arzlar tek sayfada.";
+  "Güncel halka arz takvimi: talep toplama tarihi açıklanan halka arzlar, işlem başlangıç tarihleri, SPK onaylı izahnameler, taslak aşamasındaki şirketler ve 2026'da işlem görmeye başlayan arzlar tek sayfada.";
 
 export const metadata: Metadata = {
   title,
@@ -38,6 +38,31 @@ type TarihliArz = {
   pazar: string;
 };
 
+type IslemBaslangici = {
+  slug: string;
+  href: string;
+  sirketAdi: string;
+  bistKodu: string;
+  tarih: string;
+  fiyat: string;
+  pazar: string;
+};
+
+const islemBaslangiciTakvimi = [
+  {
+    slug: "golda-gida-san-ve-tic",
+    tarih: "08 Temmuz 2026 Çarşamba",
+  },
+  {
+    slug: "ekim-turizm-tic-ve-san",
+    tarih: "09 Temmuz 2026 Perşembe",
+  },
+  {
+    slug: "isvea-seramik-ve-banyo-urunleri-sanayi",
+    tarih: "10 Temmuz 2026 Cuma",
+  },
+];
+
 // Tarihi (talep toplama) açıklanmış tüm arzları taslak+onaylı JSON'lardan toplar.
 function tarihliArzlar(): TarihliArz[] {
   return tumJsonSluglar()
@@ -62,8 +87,28 @@ function tarihliArzlar(): TarihliArz[] {
     .filter((x): x is TarihliArz => x !== null);
 }
 
+function islemeBaslayacakArzlar(): IslemBaslangici[] {
+  return islemBaslangiciTakvimi
+    .map((item) => {
+      const veri = halkaArzGetir(item.slug);
+      if (!veri) return null;
+
+      return {
+        slug: item.slug,
+        href: `/halka-arz/onayli-izahnameler/${item.slug}`,
+        sirketAdi: veri.sirketAdi,
+        bistKodu: veri.bistKodu || veri.ozet.bistKodu || "—",
+        tarih: item.tarih,
+        fiyat: bekleyenDeger(veri.ozet.fiyatAralik) ? "—" : veri.ozet.fiyatAralik,
+        pazar: bekleyenDeger(veri.ozet.pazar) ? "—" : veri.ozet.pazar,
+      };
+    })
+    .filter((x): x is IslemBaslangici => x !== null);
+}
+
 export default function HalkaArzTakvimPage() {
   const tarihliler = tarihliArzlar();
+  const islemeBaslayacaklar = islemeBaslayacakArzlar();
   const onaylilar = getOnayliIzahnameListesi();
   const taslaklar = getTaslakIzahnameListesi();
   const tamamlananlar = halkaArzSonuclari;
@@ -77,6 +122,13 @@ export default function HalkaArzTakvimPage() {
               .map((t) => t.sirketAdi)
               .join(", ")}. Detaylar için takvimdeki ilgili şirket sayfasını inceleyebilirsiniz.`
           : "Şu anda talep toplama tarihi kesinleşmiş bir halka arz bulunmuyor. SPK onayı alan şirketlerin tarihleri netleştikçe bu sayfada yayınlanır.",
+    },
+    {
+      soru: "Yakında hangi halka arzlar işleme başlayacak?",
+      cevap:
+        islemeBaslayacaklar.length > 0
+          ? `GOLDA 08 Temmuz 2026 Çarşamba, EKIM 09 Temmuz 2026 Perşembe ve ISVEA 10 Temmuz 2026 Cuma günü Borsa İstanbul'da işleme başlayacak.`
+          : "Yakında işleme başlayacağı açıklanan halka arz bulunmuyor. Yeni işlem başlangıç tarihleri netleştikçe bu takvime eklenir.",
     },
     {
       soru: "SPK onayı bekleyen kaç şirket var?",
@@ -142,15 +194,20 @@ export default function HalkaArzTakvimPage() {
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 md:text-base">
             Talep toplama tarihi açıklanan halka arzlar, SPK onaylı
-            izahnameler, taslak aşamasında onay bekleyen şirketler ve 2026&apos;da
-            işlem görmeye başlayan arzlar bu sayfada bir arada. Takvim, KAP ve
-            SPK duyuruları doğrultusunda güncellenir.
+            izahnameler, işlem başlangıç tarihleri, taslak aşamasında onay
+            bekleyen şirketler ve 2026&apos;da işlem görmeye başlayan arzlar bu
+            sayfada bir arada. Takvim, KAP ve SPK duyuruları doğrultusunda
+            güncellenir.
           </p>
         </header>
 
-        <section className="mb-8 grid grid-cols-2 gap-3 md:grid-cols-4">
+        <section className="mb-8 grid grid-cols-2 gap-3 md:grid-cols-5">
           {[
             { etiket: "Tarihi Açıklanan", deger: String(tarihliler.length) },
+            {
+              etiket: "İşleme Başlayacak",
+              deger: String(islemeBaslayacaklar.length),
+            },
             { etiket: "SPK Onaylı İzahname", deger: String(onaylilar.length) },
             { etiket: "Taslak / Onay Bekleyen", deger: String(taslaklar.length) },
             {
@@ -215,6 +272,59 @@ export default function HalkaArzTakvimPage() {
             <p className="px-5 py-6 text-sm text-slate-600">
               Şu anda talep toplama tarihi kesinleşmiş bir halka arz
               bulunmuyor. Tarihler netleştikçe bu tabloya eklenir.
+            </p>
+          )}
+        </section>
+
+        <section className="mb-8 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+          <div className="border-b border-slate-200 bg-cyan-50 px-5 py-4">
+            <h2 className="text-lg font-bold text-cyan-900 md:text-xl">
+              İşleme Başlayacak Halka Arzlar
+            </h2>
+          </div>
+          {islemeBaslayacaklar.length > 0 ? (
+            <div className="overflow-x-auto">
+              <table className="min-w-[760px] w-full border-collapse text-left text-xs md:text-sm">
+                <thead>
+                  <tr className="bg-slate-100 text-slate-600">
+                    <th className="px-4 py-3 font-semibold">Hisse</th>
+                    <th className="px-4 py-3 font-semibold">Şirket</th>
+                    <th className="px-4 py-3 font-semibold">İşlem Tarihi</th>
+                    <th className="px-4 py-3 font-semibold">Arz Fiyatı</th>
+                    <th className="px-4 py-3 font-semibold">Pazar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {islemeBaslayacaklar.map((item, i) => (
+                    <tr
+                      key={item.slug}
+                      className={i % 2 ? "bg-slate-50" : "bg-white"}
+                    >
+                      <td className="px-4 py-3 font-bold text-slate-900">
+                        {item.bistKodu}
+                      </td>
+                      <td className="px-4 py-3 font-semibold text-slate-900">
+                        <Link
+                          href={item.href}
+                          prefetch={false}
+                          className="hover:text-blue-600"
+                        >
+                          {item.sirketAdi}
+                        </Link>
+                      </td>
+                      <td className="px-4 py-3 font-semibold text-cyan-800">
+                        {item.tarih}
+                      </td>
+                      <td className="px-4 py-3 text-slate-700">{item.fiyat}</td>
+                      <td className="px-4 py-3 text-slate-700">{item.pazar}</td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          ) : (
+            <p className="px-5 py-6 text-sm text-slate-600">
+              Yakında işleme başlayacağı açıklanan halka arz bulunmuyor.
             </p>
           )}
         </section>
