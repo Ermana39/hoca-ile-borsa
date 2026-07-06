@@ -23,6 +23,26 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1091,
+    title: "6 Temmuz 2026 Önemli KAP: DURKN, YEOTK, TCKRC Etkileri",
+    href: "/haber/6-temmuz-2026-onemli-kap-durkn-yeotk-tckrc-etkileri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "6 Temmuz 2026 önemli KAP haberleri DURKN YEOTK TCKRC etkileri",
+    publishedAt: "2026-07-06",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["DURKN", "YEOTK", "TCKRC", "ARDYZ", "AHGAZ", "ENERY", "CIMSA", "AGESA", "IHLAS", "DCTTR", "FRIGO", "KORTS", "GUNDG", "UNLUS", "VAKFN", "TRMET"],
+  },
+  {
+    id: 1090,
+    title: "DURKN %666 Bedelsiz Sermaye Artırımı İçin SPK’ya Başvurdu",
+    href: "/haber/durkn-666-bedelsiz-sermaye-artirimi-spk-basvurusu",
+    image: "/durkn-666-bedelsiz-sermaye-artirimi-spk-basvurusu.webp",
+    alt: "DURKN yüzde 666 bedelsiz sermaye artırımı SPK başvurusu",
+    publishedAt: "2026-07-06",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["DURKN"],
+  },
+  {
     id: 1089,
     title: "GOLDA, EKIM ve ISVEA İşleme Başlama Tarihleri Belli Oldu",
     href: "/haber/golda-ekim-isvea-isleme-baslama-tarihleri",
