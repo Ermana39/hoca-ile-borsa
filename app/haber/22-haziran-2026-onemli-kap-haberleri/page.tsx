@@ -7,19 +7,25 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 import KapCardLinks from "@/components/KapCardLinks";
 
 export const metadata: Metadata = {
-  title: "22 Haziran 2026 Pazartesi Önemli KAP Haberleri",
+  title: "22 Haziran KAP: TCELL Finansman, ORGE Bedelsiz, HLGYO Artırım",
   description:
-    "22 Haziran 2026 Pazartesi günü KAP'a düşen önemli bildirimlerin özeti: TCELL kredi revizyonu ve borçlanma aracı onayı, ORGE ve HLGYO bedelsiz sermaye artırımı, BMSTL SPK onayı, ZOREN Kızıldere GES kabulü, CWENE güneş hücresi yatırımı, TCKRC ihale sözleşmesi, SDTTR yeni sipariş, KRGYO arsa alımı ve KLSYN tahkim süreci.",
+    "TCELL finansman gelişmesi, ORGE bedelsiz başvurusu, HLGYO sermaye artırımı kararı ve 22 Haziran KAP etkileri.",
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/22-haziran-2026-onemli-kap-haberleri",
   },
   openGraph: {
     type: "article",
+    title: "22 Haziran KAP: TCELL Finansman, ORGE Bedelsiz, HLGYO Artırım",
+    description:
+      "TCELL finansman gelişmesi, ORGE bedelsiz başvurusu, HLGYO sermaye artırımı kararı ve 22 Haziran KAP etkileri.",
     images: [{ url: "https://www.hocaileborsa.com/kap-ozeti-discover.webp" }],
   },
   twitter: {
     card: "summary_large_image",
+    title: "22 Haziran KAP: TCELL Finansman, ORGE Bedelsiz, HLGYO Artırım",
+    description:
+      "TCELL finansman gelişmesi, ORGE bedelsiz başvurusu, HLGYO sermaye artırımı kararı ve 22 Haziran KAP etkileri.",
     images: ["https://www.hocaileborsa.com/kap-ozeti-discover.webp"],
   },
 };
@@ -150,9 +156,9 @@ const kapHaberleri = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  headline: "22 Haziran 2026 Pazartesi Önemli KAP Haberleri",
+  headline: "22 Haziran KAP: TCELL Finansman, ORGE Bedelsiz, HLGYO Artırım",
   description:
-    "22 Haziran 2026 Pazartesi günü KAP'a düşen önemli bildirimlerin özeti: TCELL kredi revizyonu ve borçlanma aracı onayı, ORGE ve HLGYO bedelsiz sermaye artırımı, BMSTL SPK onayı, ZOREN Kızıldere GES kabulü, CWENE güneş hücresi yatırımı, TCKRC ihale sözleşmesi, SDTTR yeni sipariş, KRGYO arsa alımı ve KLSYN tahkim süreci.",
+    "TCELL finansman gelişmesi, ORGE bedelsiz başvurusu, HLGYO sermaye artırımı kararı ve 22 Haziran KAP etkileri.",
   datePublished: "2026-06-22T09:00:00+03:00",
   dateModified: "2026-06-22T22:00:00+03:00",
   url: "https://www.hocaileborsa.com/haber/22-haziran-2026-onemli-kap-haberleri",
@@ -188,7 +194,7 @@ export default function HaberKapOzetiPage() {
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
               src="/kap-ozeti-discover.webp"
-              alt="22 Haziran 2026 Pazartesi Önemli KAP Haberleri"
+              alt="22 Haziran KAP: TCELL Finansman, ORGE Bedelsiz, HLGYO Artırım"
               fill
               unoptimized
               className="object-cover"
@@ -197,7 +203,7 @@ export default function HaberKapOzetiPage() {
 
           <div className="p-6 md:p-10">
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
-              22 Haziran 2026 Pazartesi Önemli KAP Haberleri
+              22 Haziran KAP: TCELL Finansman, ORGE Bedelsiz, HLGYO Artırım
             </h1>
 
             <div className="mb-4 flex flex-wrap items-center gap-3">
@@ -260,7 +266,7 @@ export default function HaberKapOzetiPage() {
               </div>
               <HaberIlgiliBolumler
                 slug="22-haziran-2026-onemli-kap-haberleri"
-                baslik="22 Haziran 2026 Pazartesi Önemli KAP Haberleri"
+                baslik="22 Haziran KAP: TCELL Finansman, ORGE Bedelsiz, HLGYO Artırım"
               />
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">

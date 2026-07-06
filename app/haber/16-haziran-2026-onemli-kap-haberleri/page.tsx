@@ -7,19 +7,25 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 import KapCardLinks from "@/components/KapCardLinks";
 
 export const metadata: Metadata = {
-  title: "16 Haziran 2026 Salı Önemli KAP Haberleri",
+  title: "16 Haziran KAP: ASELS, KONTR, ALARK ve ISGSY Öne Çıktı",
   description:
-    "16 Haziran 2026 Salı günü KAP'a düşen önemli bildirimlerin özeti: ASELSAN 780 milyon Euro sözleşme, Kontrolmatik finansal durum açıklaması, Alarko enerji iştirak yapısı, İş Girişim bağlı ortaklık sermaye artırımı, Türk İlaç münhasırlık anlaşması ve MARBL yeni iş ilişkisi.",
+    "ASELS, KONTR, ALARK, ISGSY ve diğer şirketlerin 16 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.",
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/16-haziran-2026-onemli-kap-haberleri",
   },
   openGraph: {
     type: "article",
+    title: "16 Haziran KAP: ASELS, KONTR, ALARK ve ISGSY Öne Çıktı",
+    description:
+      "ASELS, KONTR, ALARK, ISGSY ve diğer şirketlerin 16 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.",
     images: [{ url: "https://www.hocaileborsa.com/kap-ozeti-discover.webp" }],
   },
   twitter: {
     card: "summary_large_image",
+    title: "16 Haziran KAP: ASELS, KONTR, ALARK ve ISGSY Öne Çıktı",
+    description:
+      "ASELS, KONTR, ALARK, ISGSY ve diğer şirketlerin 16 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.",
     images: ["https://www.hocaileborsa.com/kap-ozeti-discover.webp"],
   },
 };
@@ -78,9 +84,9 @@ const kapHaberleri = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  headline: "16 Haziran 2026 Salı Önemli KAP Haberleri",
+  headline: "16 Haziran KAP: ASELS, KONTR, ALARK ve ISGSY Öne Çıktı",
   description:
-    "16 Haziran 2026 Salı günü KAP'a düşen önemli bildirimlerin özeti: ASELSAN 780 milyon Euro sözleşme, Kontrolmatik finansal durum açıklaması, Alarko enerji iştirak yapısı, İş Girişim bağlı ortaklık sermaye artırımı, Türk İlaç münhasırlık anlaşması ve MARBL yeni iş ilişkisi.",
+    "ASELS, KONTR, ALARK, ISGSY ve diğer şirketlerin 16 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.",
   datePublished: "2026-06-16T09:00:00+03:00",
   dateModified: "2026-06-16T21:00:00+03:00",
   url: "https://www.hocaileborsa.com/haber/16-haziran-2026-onemli-kap-haberleri",
@@ -116,7 +122,7 @@ export default function HaberKapOzetiPage() {
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
               src="/kap-ozeti-discover.webp"
-              alt="16 Haziran 2026 Salı Önemli KAP Haberleri"
+              alt="16 Haziran KAP: ASELS, KONTR, ALARK ve ISGSY Öne Çıktı"
               fill
               unoptimized
               className="object-cover"
@@ -125,7 +131,7 @@ export default function HaberKapOzetiPage() {
 
           <div className="p-6 md:p-10">
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
-              16 Haziran 2026 Salı Önemli KAP Haberleri
+              16 Haziran KAP: ASELS, KONTR, ALARK ve ISGSY Öne Çıktı
             </h1>
 
             <div className="mb-4 flex flex-wrap items-center gap-3">
@@ -189,7 +195,7 @@ export default function HaberKapOzetiPage() {
               </div>
               <HaberIlgiliBolumler
                 slug="16-haziran-2026-onemli-kap-haberleri"
-                baslik="16 Haziran 2026 Salı Önemli KAP Haberleri"
+                baslik="16 Haziran KAP: ASELS, KONTR, ALARK ve ISGSY Öne Çıktı"
               />
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">

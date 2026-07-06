@@ -7,19 +7,25 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 import KapCardLinks from "@/components/KapCardLinks";
 
 export const metadata: Metadata = {
-  title: "26 Haziran 2026 Cuma Önemli KAP Haberleri",
+  title: "26 Haziran KAP: ARDYZ Sipariş, MARKA Görüşme, TRALT Karar",
   description:
-    "26 Haziran 2026 Cuma günü KAP'a düşen önemli bildirimlerin özeti: ARDYZ, MARMR, MARKA, BALSU, IHLAS, TRALT, DZGYO, TKFEN, MEDTR, AKSGY, GEREL, INFO, LIDER, ISFIN, MAGEN, KOCMT ve diğer öne çıkan şirket haberleri.",
+    "ARDYZ yapay zeka altyapı siparişi, MARKA yatırım görüşmesi, TRALT proje kararı ve 26 Haziran KAP bildirimleri.",
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/26-haziran-2026-onemli-kap-haberleri",
   },
   openGraph: {
     type: "article",
+    title: "26 Haziran KAP: ARDYZ Sipariş, MARKA Görüşme, TRALT Karar",
+    description:
+      "ARDYZ yapay zeka altyapı siparişi, MARKA yatırım görüşmesi, TRALT proje kararı ve 26 Haziran KAP bildirimleri.",
     images: [{ url: "https://www.hocaileborsa.com/kap-ozeti-discover.webp" }],
   },
   twitter: {
     card: "summary_large_image",
+    title: "26 Haziran KAP: ARDYZ Sipariş, MARKA Görüşme, TRALT Karar",
+    description:
+      "ARDYZ yapay zeka altyapı siparişi, MARKA yatırım görüşmesi, TRALT proje kararı ve 26 Haziran KAP bildirimleri.",
     images: ["https://www.hocaileborsa.com/kap-ozeti-discover.webp"],
   },
 };
@@ -269,9 +275,9 @@ const kapHaberleri = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  headline: "26 Haziran 2026 Cuma Önemli KAP Haberleri",
+  headline: "26 Haziran KAP: ARDYZ Sipariş, MARKA Görüşme, TRALT Karar",
   description:
-    "26 Haziran 2026 Cuma günü KAP'a düşen önemli bildirimlerin özeti: ARDYZ, MARMR, MARKA, BALSU, IHLAS, TRALT, DZGYO, TKFEN, MEDTR, AKSGY, GEREL, INFO, LIDER, ISFIN, MAGEN, KOCMT ve diğer öne çıkan şirket haberleri.",
+    "ARDYZ yapay zeka altyapı siparişi, MARKA yatırım görüşmesi, TRALT proje kararı ve 26 Haziran KAP bildirimleri.",
   datePublished: "2026-06-26T09:00:00+03:00",
   dateModified: "2026-06-26T23:30:00+03:00",
   url: "https://www.hocaileborsa.com/haber/26-haziran-2026-onemli-kap-haberleri",
@@ -307,7 +313,7 @@ export default function HaberKapOzetiPage() {
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
               src="/kap-ozeti-discover.webp"
-              alt="26 Haziran 2026 Cuma Önemli KAP Haberleri"
+              alt="26 Haziran KAP: ARDYZ Sipariş, MARKA Görüşme, TRALT Karar"
               fill
               unoptimized
               className="object-cover"
@@ -316,7 +322,7 @@ export default function HaberKapOzetiPage() {
 
           <div className="p-6 md:p-10">
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
-              26 Haziran 2026 Cuma Önemli KAP Haberleri
+              26 Haziran KAP: ARDYZ Sipariş, MARKA Görüşme, TRALT Karar
             </h1>
 
             <div className="mb-4 flex flex-wrap items-center gap-3">
@@ -392,7 +398,7 @@ export default function HaberKapOzetiPage() {
 
               <HaberIlgiliBolumler
                 slug="26-haziran-2026-onemli-kap-haberleri"
-                baslik="26 Haziran 2026 Cuma Önemli KAP Haberleri"
+                baslik="26 Haziran KAP: ARDYZ Sipariş, MARKA Görüşme, TRALT Karar"
               />
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">

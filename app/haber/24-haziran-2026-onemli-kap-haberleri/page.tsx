@@ -7,19 +7,25 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 import KapCardLinks from "@/components/KapCardLinks";
 
 export const metadata: Metadata = {
-  title: "24 Haziran 2026 Çarşamba Önemli KAP Haberleri",
+  title: "24 Haziran KAP: HRKET Bedelsiz, KLNMA Kredi, ALVES Yatırım",
   description:
-    "24 Haziran 2026 Çarşamba günü KAP'a düşen önemli bildirimlerin özeti: IHLAS bedelli sermaye artırımı süreci, TRCAS imtiyazlı temettü, ODINE iş ortaklığı, ALVES yeni üretim tesisi, KLNMA JBIC kredi anlaşması, HRKET bedelsiz başvurusu, DNFIN sermaye artışı, DAPGM sermaye avansı, BRKVY portföy alımı ve diğer öne çıkan şirket haberleri.",
+    "HRKET bedelsiz başvurusu, KLNMA 350 milyon dolar kredi anlaşması, ALVES yatırım süreci ve 24 Haziran KAP özetleri.",
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/24-haziran-2026-onemli-kap-haberleri",
   },
   openGraph: {
     type: "article",
+    title: "24 Haziran KAP: HRKET Bedelsiz, KLNMA Kredi, ALVES Yatırım",
+    description:
+      "HRKET bedelsiz başvurusu, KLNMA 350 milyon dolar kredi anlaşması, ALVES yatırım süreci ve 24 Haziran KAP özetleri.",
     images: [{ url: "https://www.hocaileborsa.com/kap-ozeti-discover.webp" }],
   },
   twitter: {
     card: "summary_large_image",
+    title: "24 Haziran KAP: HRKET Bedelsiz, KLNMA Kredi, ALVES Yatırım",
+    description:
+      "HRKET bedelsiz başvurusu, KLNMA 350 milyon dolar kredi anlaşması, ALVES yatırım süreci ve 24 Haziran KAP özetleri.",
     images: ["https://www.hocaileborsa.com/kap-ozeti-discover.webp"],
   },
 };
@@ -248,9 +254,9 @@ const kapHaberleri = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  headline: "24 Haziran 2026 Çarşamba Önemli KAP Haberleri",
+  headline: "24 Haziran KAP: HRKET Bedelsiz, KLNMA Kredi, ALVES Yatırım",
   description:
-    "24 Haziran 2026 Çarşamba günü KAP'a düşen önemli bildirimlerin özeti: IHLAS bedelli sermaye artırımı süreci, TRCAS imtiyazlı temettü, ODINE iş ortaklığı, ALVES yeni üretim tesisi, KLNMA JBIC kredi anlaşması, HRKET bedelsiz başvurusu, DNFIN sermaye artışı, DAPGM sermaye avansı, BRKVY portföy alımı ve diğer öne çıkan şirket haberleri.",
+    "HRKET bedelsiz başvurusu, KLNMA 350 milyon dolar kredi anlaşması, ALVES yatırım süreci ve 24 Haziran KAP özetleri.",
   datePublished: "2026-06-24T09:00:00+03:00",
   dateModified: "2026-06-24T22:30:00+03:00",
   url: "https://www.hocaileborsa.com/haber/24-haziran-2026-onemli-kap-haberleri",
@@ -286,7 +292,7 @@ export default function HaberKapOzetiPage() {
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
               src="/kap-ozeti-discover.webp"
-              alt="24 Haziran 2026 Çarşamba Önemli KAP Haberleri"
+              alt="24 Haziran KAP: HRKET Bedelsiz, KLNMA Kredi, ALVES Yatırım"
               fill
               unoptimized
               className="object-cover"
@@ -295,7 +301,7 @@ export default function HaberKapOzetiPage() {
 
           <div className="p-6 md:p-10">
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
-              24 Haziran 2026 Çarşamba Önemli KAP Haberleri
+              24 Haziran KAP: HRKET Bedelsiz, KLNMA Kredi, ALVES Yatırım
             </h1>
 
             <div className="mb-4 flex flex-wrap items-center gap-3">
@@ -371,7 +377,7 @@ export default function HaberKapOzetiPage() {
 
               <HaberIlgiliBolumler
                 slug="24-haziran-2026-onemli-kap-haberleri"
-                baslik="24 Haziran 2026 Çarşamba Önemli KAP Haberleri"
+                baslik="24 Haziran KAP: HRKET Bedelsiz, KLNMA Kredi, ALVES Yatırım"
               />
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">

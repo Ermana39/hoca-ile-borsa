@@ -7,19 +7,25 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 import KapCardLinks from "@/components/KapCardLinks";
 
 export const metadata: Metadata = {
-  title: "19 Haziran 2026 Cuma Önemli KAP Haberleri",
+  title: "19 Haziran KAP: BOBET, MANAS, TOASO ve ANELE Öne Çıktı",
   description:
-    "19 Haziran 2026 Cuma günü KAP'a düşen önemli bildirimlerin özeti: BOBET yeni iş ilişkisi, MANAS ihale sonucu, TOASO kapasite artışı, ANELE varlık satışı, KORDS taşınmaz satışı, ARCLK satın alma yükümlülüğü, GOKNR yatırım açılışı, EUPWR sözleşme daveti ve TUCLK sermaye artırımı.",
+    "BOBET, MANAS, TOASO, ANELE ve diğer şirketlerin 19 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.",
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/19-haziran-2026-onemli-kap-haberleri",
   },
   openGraph: {
     type: "article",
+    title: "19 Haziran KAP: BOBET, MANAS, TOASO ve ANELE Öne Çıktı",
+    description:
+      "BOBET, MANAS, TOASO, ANELE ve diğer şirketlerin 19 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.",
     images: [{ url: "https://www.hocaileborsa.com/kap-ozeti-discover.webp" }],
   },
   twitter: {
     card: "summary_large_image",
+    title: "19 Haziran KAP: BOBET, MANAS, TOASO ve ANELE Öne Çıktı",
+    description:
+      "BOBET, MANAS, TOASO, ANELE ve diğer şirketlerin 19 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.",
     images: ["https://www.hocaileborsa.com/kap-ozeti-discover.webp"],
   },
 };
@@ -114,9 +120,9 @@ const kapHaberleri = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  headline: "19 Haziran 2026 Cuma Önemli KAP Haberleri",
+  headline: "19 Haziran KAP: BOBET, MANAS, TOASO ve ANELE Öne Çıktı",
   description:
-    "19 Haziran 2026 Cuma günü KAP'a düşen önemli bildirimlerin özeti: BOBET yeni iş ilişkisi, MANAS ihale sonucu, TOASO kapasite artışı, ANELE varlık satışı, KORDS taşınmaz satışı, ARCLK satın alma yükümlülüğü, GOKNR yatırım açılışı, EUPWR sözleşme daveti ve TUCLK sermaye artırımı.",
+    "BOBET, MANAS, TOASO, ANELE ve diğer şirketlerin 19 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.",
   datePublished: "2026-06-19T09:00:00+03:00",
   dateModified: "2026-06-19T22:30:00+03:00",
   url: "https://www.hocaileborsa.com/haber/19-haziran-2026-onemli-kap-haberleri",
@@ -152,7 +158,7 @@ export default function HaberKapOzetiPage() {
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
               src="/kap-ozeti-discover.webp"
-              alt="19 Haziran 2026 Cuma Önemli KAP Haberleri"
+              alt="19 Haziran KAP: BOBET, MANAS, TOASO ve ANELE Öne Çıktı"
               fill
               unoptimized
               className="object-cover"
@@ -161,7 +167,7 @@ export default function HaberKapOzetiPage() {
 
           <div className="p-6 md:p-10">
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
-              19 Haziran 2026 Cuma Önemli KAP Haberleri
+              19 Haziran KAP: BOBET, MANAS, TOASO ve ANELE Öne Çıktı
             </h1>
 
             <div className="mb-4 flex flex-wrap items-center gap-3">
@@ -227,7 +233,7 @@ export default function HaberKapOzetiPage() {
               </div>
               <HaberIlgiliBolumler
                 slug="19-haziran-2026-onemli-kap-haberleri"
-                baslik="19 Haziran 2026 Cuma Önemli KAP Haberleri"
+                baslik="19 Haziran KAP: BOBET, MANAS, TOASO ve ANELE Öne Çıktı"
               />
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">

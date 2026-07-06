@@ -7,19 +7,25 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 import KapCardLinks from "@/components/KapCardLinks";
 
 export const metadata: Metadata = {
-  title: "25 Haziran 2026 Perşembe Önemli KAP Haberleri",
+  title: "25 Haziran KAP: DERHL Onay, TRALT Mutabakat, ISGSY Bedelsiz",
   description:
-    "25 Haziran 2026 Perşembe günü KAP'a düşen önemli bildirimlerin özeti: DERHL, TRALT, ISGSY, YIGIT, DENVA, SMRTG, FORTE, MEGMT, VAKBN, ALARK ve diğer öne çıkan şirket haberleri.",
+    "DERHL halka arz onayı, TRALT mutabakat zaptı, ISGSY bedelsiz sermaye artırımı ve 25 Haziran KAP etkileri.",
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/25-haziran-2026-onemli-kap-haberleri",
   },
   openGraph: {
     type: "article",
+    title: "25 Haziran KAP: DERHL Onay, TRALT Mutabakat, ISGSY Bedelsiz",
+    description:
+      "DERHL halka arz onayı, TRALT mutabakat zaptı, ISGSY bedelsiz sermaye artırımı ve 25 Haziran KAP etkileri.",
     images: [{ url: "https://www.hocaileborsa.com/kap-ozeti-discover.webp" }],
   },
   twitter: {
     card: "summary_large_image",
+    title: "25 Haziran KAP: DERHL Onay, TRALT Mutabakat, ISGSY Bedelsiz",
+    description:
+      "DERHL halka arz onayı, TRALT mutabakat zaptı, ISGSY bedelsiz sermaye artırımı ve 25 Haziran KAP etkileri.",
     images: ["https://www.hocaileborsa.com/kap-ozeti-discover.webp"],
   },
 };
@@ -269,9 +275,9 @@ const kapHaberleri = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  headline: "25 Haziran 2026 Perşembe Önemli KAP Haberleri",
+  headline: "25 Haziran KAP: DERHL Onay, TRALT Mutabakat, ISGSY Bedelsiz",
   description:
-    "25 Haziran 2026 Perşembe günü KAP'a düşen önemli bildirimlerin özeti: DERHL, TRALT, ISGSY, YIGIT, DENVA, SMRTG, FORTE, MEGMT, VAKBN, ALARK ve diğer öne çıkan şirket haberleri.",
+    "DERHL halka arz onayı, TRALT mutabakat zaptı, ISGSY bedelsiz sermaye artırımı ve 25 Haziran KAP etkileri.",
   datePublished: "2026-06-25T09:00:00+03:00",
   dateModified: "2026-06-25T22:30:00+03:00",
   url: "https://www.hocaileborsa.com/haber/25-haziran-2026-onemli-kap-haberleri",
@@ -307,7 +313,7 @@ export default function HaberKapOzetiPage() {
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
               src="/kap-ozeti-discover.webp"
-              alt="25 Haziran 2026 Perşembe Önemli KAP Haberleri"
+              alt="25 Haziran KAP: DERHL Onay, TRALT Mutabakat, ISGSY Bedelsiz"
               fill
               unoptimized
               className="object-cover"
@@ -316,7 +322,7 @@ export default function HaberKapOzetiPage() {
 
           <div className="p-6 md:p-10">
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
-              25 Haziran 2026 Perşembe Önemli KAP Haberleri
+              25 Haziran KAP: DERHL Onay, TRALT Mutabakat, ISGSY Bedelsiz
             </h1>
 
             <div className="mb-4 flex flex-wrap items-center gap-3">
@@ -391,7 +397,7 @@ export default function HaberKapOzetiPage() {
 
               <HaberIlgiliBolumler
                 slug="25-haziran-2026-onemli-kap-haberleri"
-                baslik="25 Haziran 2026 Perşembe Önemli KAP Haberleri"
+                baslik="25 Haziran KAP: DERHL Onay, TRALT Mutabakat, ISGSY Bedelsiz"
               />
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">

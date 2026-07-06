@@ -7,19 +7,25 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 import KapCardLinks from "@/components/KapCardLinks";
 
 export const metadata: Metadata = {
-  title: "23 Haziran 2026 Salı Önemli KAP Haberleri",
+  title: "23 Haziran KAP: BRISA Duruş, TCELL Kredi, KTLEV Temettü",
   description:
-    "23 Haziran 2026 Salı günü KAP'a düşen önemli bildirimlerin özeti: SASA sermaye süreci, OSTIM bedelsiz sermaye artırımı, BIGCH kayıtlı sermaye tavanı, TCELL borçlanma aracı onayı, KRVGD tesis yangını, GESAN ve EUPWR enerji gündemi, EKGYO, ULKER, KRDMD, MARBL, GOKNR, HATSN ve BRISA açıklamaları.",
+    "BRISA üretim duruşu, TCELL kredi paketi, KTLEV ve SVGYO temettü gündemi ile 23 Haziran KAP bildirimleri.",
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/23-haziran-2026-onemli-kap-haberleri",
   },
   openGraph: {
     type: "article",
+    title: "23 Haziran KAP: BRISA Duruş, TCELL Kredi, KTLEV Temettü",
+    description:
+      "BRISA üretim duruşu, TCELL kredi paketi, KTLEV ve SVGYO temettü gündemi ile 23 Haziran KAP bildirimleri.",
     images: [{ url: "https://www.hocaileborsa.com/kap-ozeti-discover.webp" }],
   },
   twitter: {
     card: "summary_large_image",
+    title: "23 Haziran KAP: BRISA Duruş, TCELL Kredi, KTLEV Temettü",
+    description:
+      "BRISA üretim duruşu, TCELL kredi paketi, KTLEV ve SVGYO temettü gündemi ile 23 Haziran KAP bildirimleri.",
     images: ["https://www.hocaileborsa.com/kap-ozeti-discover.webp"],
   },
 };
@@ -311,9 +317,9 @@ const kapHaberleri = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  headline: "23 Haziran 2026 Salı Önemli KAP Haberleri",
+  headline: "23 Haziran KAP: BRISA Duruş, TCELL Kredi, KTLEV Temettü",
   description:
-    "23 Haziran 2026 Salı günü KAP'a düşen önemli bildirimlerin özeti: SASA sermaye süreci, OSTIM bedelsiz sermaye artırımı, BIGCH kayıtlı sermaye tavanı, TCELL borçlanma aracı onayı, KRVGD tesis yangını, GESAN ve EUPWR enerji gündemi, EKGYO, ULKER, KRDMD, MARBL, GOKNR, HATSN ve BRISA açıklamaları.",
+    "BRISA üretim duruşu, TCELL kredi paketi, KTLEV ve SVGYO temettü gündemi ile 23 Haziran KAP bildirimleri.",
   datePublished: "2026-06-23T09:00:00+03:00",
   dateModified: "2026-06-23T22:30:00+03:00",
   url: "https://www.hocaileborsa.com/haber/23-haziran-2026-onemli-kap-haberleri",
@@ -349,7 +355,7 @@ export default function HaberKapOzetiPage() {
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
               src="/kap-ozeti-discover.webp"
-              alt="23 Haziran 2026 Salı Önemli KAP Haberleri"
+              alt="23 Haziran KAP: BRISA Duruş, TCELL Kredi, KTLEV Temettü"
               fill
               unoptimized
               className="object-cover"
@@ -358,7 +364,7 @@ export default function HaberKapOzetiPage() {
 
           <div className="p-6 md:p-10">
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
-              23 Haziran 2026 Salı Önemli KAP Haberleri
+              23 Haziran KAP: BRISA Duruş, TCELL Kredi, KTLEV Temettü
             </h1>
 
             <div className="mb-4 flex flex-wrap items-center gap-3">
@@ -437,7 +443,7 @@ export default function HaberKapOzetiPage() {
 
               <HaberIlgiliBolumler
                 slug="23-haziran-2026-onemli-kap-haberleri"
-                baslik="23 Haziran 2026 Salı Önemli KAP Haberleri"
+                baslik="23 Haziran KAP: BRISA Duruş, TCELL Kredi, KTLEV Temettü"
               />
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">

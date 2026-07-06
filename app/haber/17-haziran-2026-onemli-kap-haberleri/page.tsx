@@ -7,19 +7,25 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 import KapCardLinks from "@/components/KapCardLinks";
 
 export const metadata: Metadata = {
-  title: "17 Haziran 2026 Çarşamba Önemli KAP Haberleri",
+  title: "17 Haziran KAP: MIATK, DCTTR, BIMAS ve GRNYO Öne Çıktı",
   description:
-    "17 Haziran 2026 Çarşamba günü KAP'a düşen önemli bildirimlerin özeti: MIATK stratejik iş birliği, BIMAS Dost Katılım Bankası izni, NETAS sipariş, SMRTG yeni iş ilişkisi, SISE yatırım tamamlanması, GESAN ve EUPWR pay satışı, BANVT kayyımlık tedbiri, ISCTR sermaye yeterliliği etkisi, PGSUS kredi notu ve DURDO yatırım kararı.",
+    "MIATK, DCTTR, BIMAS, GRNYO ve diğer şirketlerin 17 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.",
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/17-haziran-2026-onemli-kap-haberleri",
   },
   openGraph: {
     type: "article",
+    title: "17 Haziran KAP: MIATK, DCTTR, BIMAS ve GRNYO Öne Çıktı",
+    description:
+      "MIATK, DCTTR, BIMAS, GRNYO ve diğer şirketlerin 17 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.",
     images: [{ url: "https://www.hocaileborsa.com/kap-ozeti-discover.webp" }],
   },
   twitter: {
     card: "summary_large_image",
+    title: "17 Haziran KAP: MIATK, DCTTR, BIMAS ve GRNYO Öne Çıktı",
+    description:
+      "MIATK, DCTTR, BIMAS, GRNYO ve diğer şirketlerin 17 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.",
     images: ["https://www.hocaileborsa.com/kap-ozeti-discover.webp"],
   },
 };
@@ -150,9 +156,9 @@ const kapHaberleri = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  headline: "17 Haziran 2026 Çarşamba Önemli KAP Haberleri",
+  headline: "17 Haziran KAP: MIATK, DCTTR, BIMAS ve GRNYO Öne Çıktı",
   description:
-    "17 Haziran 2026 Çarşamba günü KAP'a düşen önemli bildirimlerin özeti: MIATK stratejik iş birliği, BIMAS Dost Katılım Bankası izni, NETAS sipariş, SMRTG yeni iş ilişkisi, SISE yatırım tamamlanması, GESAN ve EUPWR pay satışı, BANVT kayyımlık tedbiri, ISCTR sermaye yeterliliği etkisi, PGSUS kredi notu ve DURDO yatırım kararı.",
+    "MIATK, DCTTR, BIMAS, GRNYO ve diğer şirketlerin 17 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.",
   datePublished: "2026-06-17T09:00:00+03:00",
   dateModified: "2026-06-17T21:00:00+03:00",
   url: "https://www.hocaileborsa.com/haber/17-haziran-2026-onemli-kap-haberleri",
@@ -188,7 +194,7 @@ export default function HaberKapOzetiPage() {
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
               src="/kap-ozeti-discover.webp"
-              alt="17 Haziran 2026 Çarşamba Önemli KAP Haberleri"
+              alt="17 Haziran KAP: MIATK, DCTTR, BIMAS ve GRNYO Öne Çıktı"
               fill
               unoptimized
               className="object-cover"
@@ -197,7 +203,7 @@ export default function HaberKapOzetiPage() {
 
           <div className="p-6 md:p-10">
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
-              17 Haziran 2026 Çarşamba Önemli KAP Haberleri
+              17 Haziran KAP: MIATK, DCTTR, BIMAS ve GRNYO Öne Çıktı
             </h1>
 
             <div className="mb-4 flex flex-wrap items-center gap-3">
@@ -264,7 +270,7 @@ export default function HaberKapOzetiPage() {
               </div>
               <HaberIlgiliBolumler
                 slug="17-haziran-2026-onemli-kap-haberleri"
-                baslik="17 Haziran 2026 Çarşamba Önemli KAP Haberleri"
+                baslik="17 Haziran KAP: MIATK, DCTTR, BIMAS ve GRNYO Öne Çıktı"
               />
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">

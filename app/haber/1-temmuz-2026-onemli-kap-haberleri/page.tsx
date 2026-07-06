@@ -11,18 +11,18 @@ const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
 
 export const metadata: Metadata = {
-  title: "1 Temmuz KAP: BYDNR Bedelsiz, SASA Ciro, EKGYO İhale",
+  title: "1 Temmuz 2026 Önemli KAP: BYDNR, SASA, EKGYO Etkileri",
   description:
-    "BYDNR %615 bedelsiz, SASA satış verileri, EKGYO ihalesi, EKDMR siparişi ve TABGD pay satışı dahil 1 Temmuz 2026 KAP özetleri.",
+    "BYDNR %615 bedelsiz sermaye artırımı, SASA satış performansı, EKGYO ihale sonucu ve 1 Temmuz KAP haberlerinde olası etkiler.",
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/1-temmuz-2026-onemli-kap-haberleri",
   },
   openGraph: {
     type: "article",
-    title: "1 Temmuz KAP: BYDNR Bedelsiz, SASA Ciro, EKGYO İhale",
+    title: "1 Temmuz 2026 Önemli KAP: BYDNR, SASA, EKGYO Etkileri",
     description:
-      "BYDNR %615 bedelsiz, SASA satış verileri, EKGYO ihalesi, EKDMR siparişi ve TABGD pay satışı dahil 1 Temmuz 2026 KAP özetleri.",
+      "BYDNR %615 bedelsiz sermaye artırımı, SASA satış performansı, EKGYO ihale sonucu ve 1 Temmuz KAP haberlerinde olası etkiler.",
     images: [
       {
         url: "https://www.hocaileborsa.com/kap-ozeti-discover.webp",
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "1 Temmuz KAP: BYDNR Bedelsiz, SASA Ciro, EKGYO İhale",
+    title: "1 Temmuz 2026 Önemli KAP: BYDNR, SASA, EKGYO Etkileri",
     description:
-      "BYDNR %615 bedelsiz, SASA satış verileri, EKGYO ihalesi, EKDMR siparişi ve TABGD pay satışı dahil 1 Temmuz 2026 KAP özetleri.",
+      "BYDNR %615 bedelsiz sermaye artırımı, SASA satış performansı, EKGYO ihale sonucu ve 1 Temmuz KAP haberlerinde olası etkiler.",
     images: [
       "https://www.hocaileborsa.com/kap-ozeti-discover.webp",
     ],
@@ -202,11 +202,11 @@ const kapHaberleri = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  headline: "1 Temmuz KAP: BYDNR Bedelsiz, SASA Ciro, EKGYO İhale",
+  headline: "1 Temmuz 2026 Önemli KAP: BYDNR, SASA, EKGYO Etkileri",
   description:
-    "BYDNR %615 bedelsiz, SASA satış verileri, EKGYO ihalesi, EKDMR siparişi ve TABGD pay satışı dahil 1 Temmuz 2026 KAP özetleri.",
+    "BYDNR %615 bedelsiz sermaye artırımı, SASA satış performansı, EKGYO ihale sonucu ve 1 Temmuz KAP haberlerinde olası etkiler.",
   datePublished: "2026-07-01T09:00:00+03:00",
-  dateModified: "2026-07-01T23:30:00+03:00",
+  dateModified: "2026-07-06T12:00:00+03:00",
   url: "https://www.hocaileborsa.com/haber/1-temmuz-2026-onemli-kap-haberleri",
   author: {
     "@type": "Person",
@@ -241,7 +241,7 @@ export default function BirTemmuzKapHaberleriPage() {
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
               src="/kap-ozeti-discover.webp"
-              alt="1 Temmuz 2026 KAP: BYDNR bedelsiz, SASA ciro ve EKGYO ihale"
+              alt="1 Temmuz 2026 önemli KAP haberleri: BYDNR, SASA ve EKGYO etkileri"
               fill
               unoptimized
               className="object-cover"
@@ -250,7 +250,7 @@ export default function BirTemmuzKapHaberleriPage() {
 
           <div className="p-6 md:p-10">
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
-              1 Temmuz 2026 KAP: BYDNR Bedelsiz, SASA Ciro, EKGYO İhale
+              1 Temmuz 2026 Önemli KAP: BYDNR, SASA, EKGYO Etkileri
             </h1>
 
             <div className="mb-4 mt-3 flex flex-wrap items-center gap-3">
@@ -271,11 +271,10 @@ export default function BirTemmuzKapHaberleriPage() {
 
             <div className="mt-6 space-y-6 text-base leading-8 text-slate-700 md:text-lg">
               <p>
-                Borsa İstanbul’da 1 Temmuz 2026 Çarşamba günü KAP’a düşen önemli
-                bildirimlerde pay satış süreçleri, büyük ölçekli gayrimenkul
-                ihaleleri, bedelsiz sermaye artırımı kararları, ihracat siparişleri,
-                satış performansı verileri ve şirket bazlı kurumsal açıklamalar
-                öne çıktı.
+                1 Temmuz 2026 gün sonu KAP özetinde BYDNR’nin %615 bedelsiz
+                sermaye artırımı kararı, SASA’nın 200 milyon dolarlık Haziran
+                satış performansı ve EKGYO’nun 36,66 milyar TL’lik ihale geliri
+                teklifi öne çıktı.
               </p>
 
               <div className="rounded-xl border border-blue-200 bg-blue-50 p-4 text-sm font-medium leading-7 text-blue-900 md:text-base">
@@ -336,7 +335,7 @@ export default function BirTemmuzKapHaberleriPage() {
 
               <HaberIlgiliBolumler
                 slug="1-temmuz-2026-onemli-kap-haberleri"
-                baslik="1 Temmuz 2026 KAP: BYDNR Bedelsiz, SASA Ciro, EKGYO İhale"
+                baslik="1 Temmuz 2026 Önemli KAP: BYDNR, SASA, EKGYO Etkileri"
               />
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">

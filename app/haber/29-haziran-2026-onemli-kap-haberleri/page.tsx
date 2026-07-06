@@ -11,15 +11,18 @@ const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
 
 export const metadata: Metadata = {
-  title: "29 Haziran 2026 Pazartesi Önemli KAP Haberleri",
+  title: "29 Haziran KAP: YEOTK GES, GOODY Bedelsiz, GRTHO Başvuru",
   description:
-    "29 Haziran 2026 Pazartesi günü KAP'a düşen önemli şirket haberleri: KRVGD, YEOTK, IHLGM, DOFER, GOODY, GRTHO, OFSYM, TARFN, PRKME, TRALT, EKGYO, ALCTL ve diğer öne çıkan bildirimler.",
+    "YEOTK GES ön anlaşması, GOODY bedelsiz hak kullanımı, GRTHO sermaye artırımı başvurusu ve günün KAP özetleri.",
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/29-haziran-2026-onemli-kap-haberleri",
   },
   openGraph: {
     type: "article",
+    title: "29 Haziran KAP: YEOTK GES, GOODY Bedelsiz, GRTHO Başvuru",
+    description:
+      "YEOTK GES ön anlaşması, GOODY bedelsiz hak kullanımı, GRTHO sermaye artırımı başvurusu ve günün KAP özetleri.",
     images: [
       {
         url: "https://www.hocaileborsa.com/kap-ozeti-discover.webp",
@@ -28,6 +31,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    title: "29 Haziran KAP: YEOTK GES, GOODY Bedelsiz, GRTHO Başvuru",
+    description:
+      "YEOTK GES ön anlaşması, GOODY bedelsiz hak kullanımı, GRTHO sermaye artırımı başvurusu ve günün KAP özetleri.",
     images: [
       "https://www.hocaileborsa.com/kap-ozeti-discover.webp",
     ],
@@ -174,9 +180,9 @@ const kapHaberleri = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  headline: "29 Haziran 2026 Pazartesi Önemli KAP Haberleri",
+  headline: "29 Haziran KAP: YEOTK GES, GOODY Bedelsiz, GRTHO Başvuru",
   description:
-    "29 Haziran 2026 Pazartesi günü KAP'a düşen önemli şirket haberleri ve olası etkileri.",
+    "YEOTK GES ön anlaşması, GOODY bedelsiz hak kullanımı, GRTHO sermaye artırımı başvurusu ve günün KAP özetleri.",
   datePublished: "2026-06-29T09:00:00+03:00",
   dateModified: "2026-06-29T23:30:00+03:00",
   url: "https://www.hocaileborsa.com/haber/29-haziran-2026-onemli-kap-haberleri",
@@ -213,7 +219,7 @@ export default function YirmiDokuzHaziranKapHaberleriPage() {
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
               src="/kap-ozeti-discover.webp"
-              alt="29 Haziran 2026 Pazartesi Önemli KAP Haberleri"
+              alt="29 Haziran KAP: YEOTK GES, GOODY Bedelsiz, GRTHO Başvuru"
               fill
               unoptimized
               className="object-cover"
@@ -222,7 +228,7 @@ export default function YirmiDokuzHaziranKapHaberleriPage() {
 
           <div className="p-6 md:p-10">
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
-              29 Haziran 2026 Pazartesi Önemli KAP Haberleri
+              29 Haziran KAP: YEOTK GES, GOODY Bedelsiz, GRTHO Başvuru
             </h1>
 
             <div className="mb-4 mt-3 flex flex-wrap items-center gap-3">
@@ -309,7 +315,7 @@ export default function YirmiDokuzHaziranKapHaberleriPage() {
 
               <HaberIlgiliBolumler
                 slug="29-haziran-2026-onemli-kap-haberleri"
-                baslik="29 Haziran 2026 Pazartesi Önemli KAP Haberleri"
+                baslik="29 Haziran KAP: YEOTK GES, GOODY Bedelsiz, GRTHO Başvuru"
               />
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">

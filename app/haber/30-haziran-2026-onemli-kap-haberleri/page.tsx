@@ -11,15 +11,18 @@ const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
 
 export const metadata: Metadata = {
-  title: "30 Haziran 2026 Salı Önemli KAP Haberleri",
+  title: "30 Haziran KAP: KAREL Proje, ALTNY Sözleşme, ASELS Tesis",
   description:
-    "30 Haziran 2026 Salı günü KAP'a düşen önemli şirket haberleri: KAREL, KMPUR, ALTNY, ASELS, FONET, OZYSR, ALCTL ve BMSTL bildirimleri.",
+    "KAREL 100 milyon dolarlık proje nominasyonu, ALTNY sözleşmeleri, ASELS yeni tesisleri ve 30 Haziran KAP etkileri.",
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/30-haziran-2026-onemli-kap-haberleri",
   },
   openGraph: {
     type: "article",
+    title: "30 Haziran KAP: KAREL Proje, ALTNY Sözleşme, ASELS Tesis",
+    description:
+      "KAREL 100 milyon dolarlık proje nominasyonu, ALTNY sözleşmeleri, ASELS yeni tesisleri ve 30 Haziran KAP etkileri.",
     images: [
       {
         url: "https://www.hocaileborsa.com/kap-ozeti-discover.webp",
@@ -28,6 +31,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    title: "30 Haziran KAP: KAREL Proje, ALTNY Sözleşme, ASELS Tesis",
+    description:
+      "KAREL 100 milyon dolarlık proje nominasyonu, ALTNY sözleşmeleri, ASELS yeni tesisleri ve 30 Haziran KAP etkileri.",
     images: [
       "https://www.hocaileborsa.com/kap-ozeti-discover.webp",
     ],
@@ -111,9 +117,9 @@ const kapHaberleri = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  headline: "30 Haziran 2026 Salı Önemli KAP Haberleri",
+  headline: "30 Haziran KAP: KAREL Proje, ALTNY Sözleşme, ASELS Tesis",
   description:
-    "30 Haziran 2026 Salı günü KAP'a düşen önemli şirket haberleri ve olası etkileri.",
+    "KAREL 100 milyon dolarlık proje nominasyonu, ALTNY sözleşmeleri, ASELS yeni tesisleri ve 30 Haziran KAP etkileri.",
   datePublished: "2026-06-30T09:00:00+03:00",
   dateModified: "2026-06-30T23:30:00+03:00",
   url: "https://www.hocaileborsa.com/haber/30-haziran-2026-onemli-kap-haberleri",
@@ -150,7 +156,7 @@ export default function OtuzHaziranKapHaberleriPage() {
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
               src="/kap-ozeti-discover.webp"
-              alt="30 Haziran 2026 Salı Önemli KAP Haberleri"
+              alt="30 Haziran KAP: KAREL Proje, ALTNY Sözleşme, ASELS Tesis"
               fill
               unoptimized
               className="object-cover"
@@ -159,7 +165,7 @@ export default function OtuzHaziranKapHaberleriPage() {
 
           <div className="p-6 md:p-10">
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
-              30 Haziran 2026 Salı Önemli KAP Haberleri
+              30 Haziran KAP: KAREL Proje, ALTNY Sözleşme, ASELS Tesis
             </h1>
 
             <div className="mb-4 mt-3 flex flex-wrap items-center gap-3">
@@ -245,7 +251,7 @@ export default function OtuzHaziranKapHaberleriPage() {
 
               <HaberIlgiliBolumler
                 slug="30-haziran-2026-onemli-kap-haberleri"
-                baslik="30 Haziran 2026 Salı Önemli KAP Haberleri"
+                baslik="30 Haziran KAP: KAREL Proje, ALTNY Sözleşme, ASELS Tesis"
               />
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">

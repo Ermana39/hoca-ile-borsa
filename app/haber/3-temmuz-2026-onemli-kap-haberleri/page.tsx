@@ -11,18 +11,18 @@ const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
 
 export const metadata: Metadata = {
-  title: "3 Temmuz KAP: INFO Bedelsiz, ASTOR Sözleşme, HEKTS Artırım",
+  title: "3 Temmuz 2026 Önemli KAP: INFO, ASTOR, HEKTS Etkileri",
   description:
-    "INFO %100 bedelsiz başvurusu, ASTOR 816 milyon TL sözleşme, HEKTS tahsisli artırım, EBEBK ziyaretçi verisi ve günün KAP etkileri.",
+    "INFO %100 bedelsiz başvurusu, ASTOR 816 milyon TL TEİAŞ sözleşmesi, HEKTS tahsisli artırım ve 3 Temmuz KAP haberlerinde olası etkiler.",
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/3-temmuz-2026-onemli-kap-haberleri",
   },
   openGraph: {
     type: "article",
-    title: "3 Temmuz KAP: INFO Bedelsiz, ASTOR Sözleşme, HEKTS Artırım",
+    title: "3 Temmuz 2026 Önemli KAP: INFO, ASTOR, HEKTS Etkileri",
     description:
-      "INFO %100 bedelsiz başvurusu, ASTOR 816 milyon TL sözleşme, HEKTS tahsisli artırım, EBEBK ziyaretçi verisi ve günün KAP etkileri.",
+      "INFO %100 bedelsiz başvurusu, ASTOR 816 milyon TL TEİAŞ sözleşmesi, HEKTS tahsisli artırım ve 3 Temmuz KAP haberlerinde olası etkiler.",
     images: [
       {
         url: "https://www.hocaileborsa.com/kap-ozeti-discover.webp",
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "3 Temmuz KAP: INFO Bedelsiz, ASTOR Sözleşme, HEKTS Artırım",
+    title: "3 Temmuz 2026 Önemli KAP: INFO, ASTOR, HEKTS Etkileri",
     description:
-      "INFO %100 bedelsiz başvurusu, ASTOR 816 milyon TL sözleşme, HEKTS tahsisli artırım, EBEBK ziyaretçi verisi ve günün KAP etkileri.",
+      "INFO %100 bedelsiz başvurusu, ASTOR 816 milyon TL TEİAŞ sözleşmesi, HEKTS tahsisli artırım ve 3 Temmuz KAP haberlerinde olası etkiler.",
     images: [
       "https://www.hocaileborsa.com/kap-ozeti-discover.webp",
     ],
@@ -139,11 +139,11 @@ const kapHaberleri = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  headline: "3 Temmuz KAP: INFO Bedelsiz, ASTOR Sözleşme, HEKTS Artırım",
+  headline: "3 Temmuz 2026 Önemli KAP: INFO, ASTOR, HEKTS Etkileri",
   description:
-    "INFO %100 bedelsiz başvurusu, ASTOR 816 milyon TL sözleşme, HEKTS tahsisli artırım, EBEBK ziyaretçi verisi ve günün KAP etkileri.",
+    "INFO %100 bedelsiz başvurusu, ASTOR 816 milyon TL TEİAŞ sözleşmesi, HEKTS tahsisli artırım ve 3 Temmuz KAP haberlerinde olası etkiler.",
   datePublished: "2026-07-03T09:00:00+03:00",
-  dateModified: "2026-07-03T23:30:00+03:00",
+  dateModified: "2026-07-06T12:00:00+03:00",
   url: "https://www.hocaileborsa.com/haber/3-temmuz-2026-onemli-kap-haberleri",
   author: {
     "@type": "Person",
@@ -178,7 +178,7 @@ export default function UcTemmuzKapHaberleriPage() {
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
               src="/kap-ozeti-discover.webp"
-              alt="3 Temmuz 2026 KAP: INFO bedelsiz, ASTOR sözleşme ve HEKTS artırım"
+              alt="3 Temmuz 2026 önemli KAP haberleri: INFO, ASTOR ve HEKTS etkileri"
               fill
               unoptimized
               className="object-cover"
@@ -187,7 +187,7 @@ export default function UcTemmuzKapHaberleriPage() {
 
           <div className="p-6 md:p-10">
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
-              3 Temmuz 2026 KAP: INFO Bedelsiz, ASTOR Sözleşme, HEKTS Artırım
+              3 Temmuz 2026 Önemli KAP: INFO, ASTOR, HEKTS Etkileri
             </h1>
 
             <div className="mb-4 mt-3 flex flex-wrap items-center gap-3">
@@ -208,11 +208,10 @@ export default function UcTemmuzKapHaberleriPage() {
 
             <div className="mt-6 space-y-6 text-base leading-8 text-slate-700 md:text-lg">
               <p>
-                Borsa İstanbul’da 3 Temmuz 2026 Cuma günü KAP’a düşen önemli
-                bildirimlerde bedelsiz ve tahsisli sermaye artırımı başvuruları,
-                TEİAŞ sözleşmesi, pay alım teklifi süreci, kurumsal yönetim notu,
-                GES yatırımı, ziyaretçi verileri ve şirket bazlı yatırım kararları
-                öne çıktı.
+                3 Temmuz 2026 gün sonu KAP özetinde INFO’nun %100 bedelsiz
+                sermaye artırımı başvurusu, ASTOR’un 816,2 milyon TL’lik TEİAŞ
+                sözleşmesi ve HEKTS’in 2,38 milyar TL tahsisli sermaye artırımı
+                başvurusu öne çıktı.
               </p>
 
               <div className="rounded-xl border border-blue-200 bg-blue-50 p-4 text-sm font-medium leading-7 text-blue-900 md:text-base">
@@ -274,7 +273,7 @@ export default function UcTemmuzKapHaberleriPage() {
 
               <HaberIlgiliBolumler
                 slug="3-temmuz-2026-onemli-kap-haberleri"
-                baslik="3 Temmuz 2026 KAP: INFO Bedelsiz, ASTOR Sözleşme, HEKTS Artırım"
+                baslik="3 Temmuz 2026 Önemli KAP: INFO, ASTOR, HEKTS Etkileri"
               />
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">

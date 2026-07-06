@@ -7,19 +7,25 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 import KapCardLinks from "@/components/KapCardLinks";
 
 export const metadata: Metadata = {
-  title: "12 Haziran 2026 Cuma KAP Bildirimleri Özeti",
+  title: "12 Haziran KAP: GESAN, VBTYZ, HALKB ve ISCTR Özeti",
   description:
-    "12 Haziran 2026 Cuma günü KAP'a düşen öne çıkan bildirimlerin özeti: GESAN yeni iş anlaşmaları, VBTYZ SGK sözleşmesi, HALKB dava ve not gelişmesi, banka sendikasyon kredileri, BALSU yatırımı, PGSUS yolcu verileri ve geri alımlar.",
+    "GESAN, VBTYZ, HALKB, ISCTR ve diğer şirketlerin 12 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.",
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/12-haziran-2026-cuma-kap-bildirimleri-ozeti",
   },
   openGraph: {
     type: "article",
+    title: "12 Haziran KAP: GESAN, VBTYZ, HALKB ve ISCTR Özeti",
+    description:
+      "GESAN, VBTYZ, HALKB, ISCTR ve diğer şirketlerin 12 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.",
     images: [{ url: "https://www.hocaileborsa.com/kap-ozeti-discover.webp" }],
   },
   twitter: {
     card: "summary_large_image",
+    title: "12 Haziran KAP: GESAN, VBTYZ, HALKB ve ISCTR Özeti",
+    description:
+      "GESAN, VBTYZ, HALKB, ISCTR ve diğer şirketlerin 12 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.",
     images: ["https://www.hocaileborsa.com/kap-ozeti-discover.webp"],
   },
 };
@@ -85,9 +91,9 @@ const kapHaberleri = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  headline: "12 Haziran 2026 Cuma KAP Bildirimleri Özeti",
+  headline: "12 Haziran KAP: GESAN, VBTYZ, HALKB ve ISCTR Özeti",
   description:
-    "12 Haziran 2026 Cuma günü KAP'a düşen öne çıkan bildirimlerin özeti: GESAN yeni iş anlaşmaları, VBTYZ SGK sözleşmesi, HALKB dava ve not gelişmesi, banka sendikasyon kredileri, BALSU yatırımı, PGSUS yolcu verileri ve geri alımlar.",
+    "GESAN, VBTYZ, HALKB, ISCTR ve diğer şirketlerin 12 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.",
   datePublished: "2026-06-12T09:00:00+03:00",
   dateModified: "2026-06-12T09:00:00+03:00",
   url: "https://www.hocaileborsa.com/haber/12-haziran-2026-cuma-kap-bildirimleri-ozeti",
@@ -112,7 +118,7 @@ export default function HaberKapOzetiPage() {
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
               src="/kap-ozeti-discover.webp"
-              alt="12 Haziran 2026 Cuma KAP Bildirimleri Özeti"
+              alt="12 Haziran KAP: GESAN, VBTYZ, HALKB ve ISCTR Özeti"
               fill
               unoptimized
               className="object-cover"
@@ -121,7 +127,7 @@ export default function HaberKapOzetiPage() {
 
           <div className="p-6 md:p-10">
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
-              12 Haziran 2026 Cuma KAP Bildirimleri Özeti
+              12 Haziran KAP: GESAN, VBTYZ, HALKB ve ISCTR Özeti
             </h1>
 
             <div className="mb-4 flex flex-wrap items-center gap-3">
@@ -167,7 +173,7 @@ export default function HaberKapOzetiPage() {
                 ile GARAN tarafındaki sendikasyon kredileri, BALSU’nun Şili
                 üretim yatırımı ve PGSUS yolcu verileri öne çıktı.
               </div>
-              <HaberIlgiliBolumler slug="12-haziran-2026-cuma-kap-bildirimleri-ozeti" baslik="12 Haziran 2026 Cuma KAP Bildirimleri Özeti" />
+              <HaberIlgiliBolumler slug="12-haziran-2026-cuma-kap-bildirimleri-ozeti" baslik="12 Haziran KAP: GESAN, VBTYZ, HALKB ve ISCTR Özeti" />
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">
                 ⚠️ Bu özet bilgilendirme amaçlıdır, yatırım tavsiyesi değildir.

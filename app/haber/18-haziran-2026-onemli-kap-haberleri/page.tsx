@@ -7,19 +7,25 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 import KapCardLinks from "@/components/KapCardLinks";
 
 export const metadata: Metadata = {
-  title: "18 Haziran 2026 Perşembe Önemli KAP Haberleri",
+  title: "18 Haziran KAP: GESAN, EUPWR, LINK ve GOODY Öne Çıktı",
   description:
-    "18 Haziran 2026 Perşembe günü KAP'a düşen önemli bildirimlerin özeti: GESAN ve EUPWR hızlandırılmış talep toplama fiyatlaması, SAHOL Akçansa pay satışı, GOODY üretim duruşu, HLGYO varlık satışı, KTLEV bedelsiz sermaye artırımı, ARZUM sermaye artırımı başvurusu, HALKB borçlanma aracı ihracı, MIATK dava süreci ve CCOLA kredi derecelendirmesi.",
+    "GESAN, EUPWR, LINK, GOODY ve diğer şirketlerin 18 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.",
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/18-haziran-2026-onemli-kap-haberleri",
   },
   openGraph: {
     type: "article",
+    title: "18 Haziran KAP: GESAN, EUPWR, LINK ve GOODY Öne Çıktı",
+    description:
+      "GESAN, EUPWR, LINK, GOODY ve diğer şirketlerin 18 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.",
     images: [{ url: "https://www.hocaileborsa.com/kap-ozeti-discover.webp" }],
   },
   twitter: {
     card: "summary_large_image",
+    title: "18 Haziran KAP: GESAN, EUPWR, LINK ve GOODY Öne Çıktı",
+    description:
+      "GESAN, EUPWR, LINK, GOODY ve diğer şirketlerin 18 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.",
     images: ["https://www.hocaileborsa.com/kap-ozeti-discover.webp"],
   },
 };
@@ -114,9 +120,9 @@ const kapHaberleri = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  headline: "18 Haziran 2026 Perşembe Önemli KAP Haberleri",
+  headline: "18 Haziran KAP: GESAN, EUPWR, LINK ve GOODY Öne Çıktı",
   description:
-    "18 Haziran 2026 Perşembe günü KAP'a düşen önemli bildirimlerin özeti: GESAN ve EUPWR hızlandırılmış talep toplama fiyatlaması, SAHOL Akçansa pay satışı, GOODY üretim duruşu, HLGYO varlık satışı, KTLEV bedelsiz sermaye artırımı, ARZUM sermaye artırımı başvurusu, HALKB borçlanma aracı ihracı, MIATK dava süreci ve CCOLA kredi derecelendirmesi.",
+    "GESAN, EUPWR, LINK, GOODY ve diğer şirketlerin 18 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.",
   datePublished: "2026-06-18T09:00:00+03:00",
   dateModified: "2026-06-18T21:00:00+03:00",
   url: "https://www.hocaileborsa.com/haber/18-haziran-2026-onemli-kap-haberleri",
@@ -152,7 +158,7 @@ export default function HaberKapOzetiPage() {
           <div className="relative aspect-[16/9] w-full overflow-hidden bg-zinc-100">
             <Image
               src="/kap-ozeti-discover.webp"
-              alt="18 Haziran 2026 Perşembe Önemli KAP Haberleri"
+              alt="18 Haziran KAP: GESAN, EUPWR, LINK ve GOODY Öne Çıktı"
               fill
               unoptimized
               className="object-cover"
@@ -161,7 +167,7 @@ export default function HaberKapOzetiPage() {
 
           <div className="p-6 md:p-10">
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
-              18 Haziran 2026 Perşembe Önemli KAP Haberleri
+              18 Haziran KAP: GESAN, EUPWR, LINK ve GOODY Öne Çıktı
             </h1>
 
             <div className="mb-4 flex flex-wrap items-center gap-3">
@@ -229,7 +235,7 @@ export default function HaberKapOzetiPage() {
               </div>
               <HaberIlgiliBolumler
                 slug="18-haziran-2026-onemli-kap-haberleri"
-                baslik="18 Haziran 2026 Perşembe Önemli KAP Haberleri"
+                baslik="18 Haziran KAP: GESAN, EUPWR, LINK ve GOODY Öne Çıktı"
               />
 
               <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">

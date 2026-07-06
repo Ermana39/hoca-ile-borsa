@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { halkaArzSonuclari as halkaArzVerileri } from "@/data/halka-arz-sonuclari";
+import { halkaArzSonuclari as baseHalkaArzVerileri } from "@/data/halka-arz-sonuclari";
 
 const canonical = "https://www.hocaileborsa.com/halka-arz/tavan-serisi";
 const title = "2026 Halka Arz Tavan Serisi Takibi | Güncel Halka Arz Performansları";
@@ -26,6 +26,55 @@ export const metadata: Metadata = {
     type: "website",
   },
 };
+
+
+const sohoeHalkaArz = {
+  hisse: "SOHOE",
+  islemTarihi: "06 Tem 2026",
+  katilimciSayisi: "660.121",
+  dagitimSekli: "TAMAMEN EŞİT",
+  arzFiyati: "15.00",
+  guncelFiyat: "16.50",
+  marj: "10%",
+  konsorsiyum: "İntegral Yatırım",
+};
+
+const guncelHalkaArzVerileri: Record<
+  string,
+  {
+    guncelFiyat: string;
+    marj: string;
+  }
+> = {
+  BETAE: { guncelFiyat: "58.50", marj: "46%" },
+  EKDMR: { guncelFiyat: "57.85", marj: "29%" },
+  AAGYO: { guncelFiyat: "15.51", marj: "-27%" },
+  MCARD: { guncelFiyat: "155.90", marj: "95%" },
+  LXGYO: { guncelFiyat: "14.74", marj: "22%" },
+  GENKM: { guncelFiyat: "13.53", marj: "23%" },
+  SVGYO: { guncelFiyat: "21.10", marj: "480%" },
+  EMPAE: { guncelFiyat: "82.15", marj: "273%" },
+  ATATR: { guncelFiyat: "16.20", marj: "45%" },
+  BESTE: { guncelFiyat: "33.18", marj: "126%" },
+  AKHAN: { guncelFiyat: "34.04", marj: "58%" },
+  NETCD: { guncelFiyat: "156.50", marj: "240%" },
+  UCAYM: { guncelFiyat: "33.22", marj: "85%" },
+  ZGYO: { guncelFiyat: "37.80", marj: "286%" },
+  FRMPL: { guncelFiyat: "35.28", marj: "18%" },
+  MEYSU: { guncelFiyat: "13.26", marj: "77%" },
+  ARFYE: { guncelFiyat: "31.12", marj: "60%" },
+};
+
+const halkaArzVerileri = [
+  sohoeHalkaArz,
+  ...baseHalkaArzVerileri
+    .filter((item) => item.hisse !== "SOHOE")
+    .map((item) =>
+      guncelHalkaArzVerileri[item.hisse]
+        ? { ...item, ...guncelHalkaArzVerileri[item.hisse] }
+        : item
+    ),
+];
 
 
 function marjRengi(marj: string) {
