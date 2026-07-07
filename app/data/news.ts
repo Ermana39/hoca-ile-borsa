@@ -23,6 +23,26 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1096,
+    title: "BETA, SOHO ve ORZAX Gün Sonu: İki Tavan, Bir Taban Kapanış",
+    href: "/haber/beta-soho-orzax-halka-arz-gun-sonu-kapanis-yorumlari",
+    image: "/beta-soho-orzax-halka-arz-gun-sonu-kapanis-yorumlari.webp",
+    alt: "Beta Soho Orzax halka arz gün sonu kapanış yorumları",
+    publishedAt: "2026-07-07",
+    category: "halka-arz",
+    ilgiliHisseler: ["BETAE", "SOHOE", "ORZAX"],
+  },
+  {
+    id: 1095,
+    title: "7 Temmuz 2026 Önemli KAP: KARTN, OZYSR, ZOREN Etkileri",
+    href: "/haber/7-temmuz-2026-onemli-kap-kartn-ozysr-zoren-etkileri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "7 Temmuz 2026 önemli KAP haberleri KARTN OZYSR ZOREN etkileri",
+    publishedAt: "2026-07-07",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["KARTN", "OZYSR", "ZOREN", "QNBFK", "BALSU", "ISGSY", "HUZFA", "ANHYT", "ANSGR", "EBEBK", "SMRVA", "AKSGY", "ORZAX", "MOBTL", "TRMET"],
+  },
+  {
     id: 1094,
     title: "OZYSR Alüminyum Kaynak Teli Üretimine Başladı",
     href: "/haber/ozysr-aluminyum-kaynak-teli-uretimine-basladi",
