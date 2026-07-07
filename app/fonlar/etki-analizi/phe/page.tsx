@@ -19,6 +19,17 @@ export const metadata: Metadata = {
 };
 
 const rows: FonEtkiRow[] = [
+  { sembol: "GUNDG", fonOrani: 11.87, kapanisMarji: 4.520, etki: 0.536524 },
+  { sembol: "KTLEV", fonOrani: 10.26, kapanisMarji: -2.439, etki: -0.250243902 },
+  { sembol: "ODINE", fonOrani: 8.8, kapanisMarji: 4.111, etki: 0.361777778 },
+  { sembol: "PASEU", fonOrani: 7.47, kapanisMarji: -8.092, etki: -0.604465534 },
+  { sembol: "HEDEF", fonOrani: 4.35, kapanisMarji: 7.712, etki: 0.335482826 },
+  { sembol: "THYAO", fonOrani: 4.18, kapanisMarji: 0.360, etki: 0.015057637 },
+  { sembol: "TATEN", fonOrani: 3.64, kapanisMarji: -3.280, etki: -0.119392 },
+  { sembol: "TRALT", fonOrani: 3.15, kapanisMarji: 1.953, etki: 0.061523438 },
+  { sembol: "AKBNK", fonOrani: 3.04, kapanisMarji: 0.136, etki: 0.004136054 },
+  { sembol: "DSTKF", fonOrani: 2.96, kapanisMarji: 9.344, etki: 0.276596932 },
+  { sembol: "YKBNK", fonOrani: 2.86, kapanisMarji: 0.374, etki: 0.010688735 },
   { sembol: "TCELL", fonOrani: 2.82, kapanisMarji: -0.368, etki: -0.01038674 },
   { sembol: "MGROS", fonOrani: 2.39, kapanisMarji: 1.487, etki: 0.035532081 },
   { sembol: "SAHOL", fonOrani: 2.25, kapanisMarji: -0.855, etki: -0.019230769 },
