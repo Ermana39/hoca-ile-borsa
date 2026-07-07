@@ -23,6 +23,26 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1094,
+    title: "OZYSR Alüminyum Kaynak Teli Üretimine Başladı",
+    href: "/haber/ozysr-aluminyum-kaynak-teli-uretimine-basladi",
+    image: "/ozysr-aluminyum-kaynak-teli-uretimine-basladi.webp",
+    alt: "OZYSR alüminyum kaynak teli üretimine başladı",
+    publishedAt: "2026-07-07",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["OZYSR"],
+  },
+  {
+    id: 1093,
+    title: "GOLDA Gıda 8 Temmuz'da İşleme Başlıyor: Fiyat, Lot ve Pazar",
+    href: "/haber/golda-gida-8-temmuzda-isleme-basliyor",
+    image: "/golda-gida-8-temmuzda-isleme-basliyor.webp",
+    alt: "Golda Gıda 8 Temmuz 2026 Çarşamba işleme başlıyor",
+    publishedAt: "2026-07-07",
+    category: "halka-arz",
+    ilgiliHisseler: ["GOLDA"],
+  },
+  {
     id: 1092,
     title: "KARTN Çoğunluk Payları 72 Milyon Dolara Satılıyor",
     href: "/haber/kartn-cogunluk-paylari-72-milyon-dolara-satiliyor",
