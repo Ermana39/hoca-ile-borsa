@@ -23,6 +23,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1092,
+    title: "KARTN Çoğunluk Payları 72 Milyon Dolara Satılıyor",
+    href: "/haber/kartn-cogunluk-paylari-72-milyon-dolara-satiliyor",
+    image: "/kartn-cogunluk-paylari-72-milyon-dolara-satiliyor.webp",
+    alt: "KARTN çoğunluk payları 72 milyon dolara satılıyor",
+    publishedAt: "2026-07-07",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["KARTN"],
+  },
+  {
     id: 1091,
     title: "6 Temmuz 2026 Önemli KAP: DURKN, YEOTK, TCKRC Etkileri",
     href: "/haber/6-temmuz-2026-onemli-kap-durkn-yeotk-tckrc-etkileri",

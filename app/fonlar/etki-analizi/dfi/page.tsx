@@ -40,17 +40,17 @@ export default function DfiEtkiAnaliziPage() {
       sonGuncelleme="6 Temmuz 2026"
       degisimVerisi={{
         yatirimciSayisi: {
-          dun: 39659,
-          bugun: 40368,
-          degisim: 709,
+          dun: 40368,
+          bugun: 41056,
+          degisim: 688,
         },
         fonToplamDeger: {
-          dun: 20873537570,
-          bugun: 21341081989,
-          degisim: 467544419,
+          dun: 21341081989,
+          bugun: 21786227314,
+          degisim: 445145325,
         },
         yorum:
-          "DFI fonunda 709 kişilik yatırımcı artışı, daha sınırlı yatırımcı tabanına göre dikkat çekici bir büyümeye karşılık geliyor. Fon toplam değerinin 467,54 milyon TL yükselmesi, pozitif kapanış etkisiyle birlikte fon büyüklüğünün de aynı yönde güçlendiğini gösteriyor. Bu birleşim DFI için hem performans beklentisi hem de yatırımcı ilgisi tarafında destekleyici bir görünüm oluşturuyor.",
+          "DFI fonunda yatırımcı sayısının 688 kişi artması, fonun daha sınırlı yatırımcı tabanı içinde istikrarlı ilginin sürdüğünü gösteriyor. Fon toplam değerindeki 445,15 milyon TL'lik yükseliş, büyüklük tarafında da pozitif eğilimin korunduğunu anlatıyor. DFI için bu veri, yatırımcı sayısı ve fon değeri birlikte değerlendirildiğinde kontrollü ama destekleyici bir büyüme görünümü oluşturuyor.",
       }}
     />
   );
