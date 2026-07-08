@@ -35,7 +35,7 @@ const orzaxHalkaArz = {
   dagitimSekli: "BİREYSELE %57",
   arzFiyati: "69.00",
   guncelFiyat: "75.90",
-  marj: "406%",
+  marj: "10%",
   konsorsiyum: "İNFO",
 };
 
@@ -57,7 +57,7 @@ const guncelHalkaArzVerileri: Record<
     marj: string;
   }
 > = {
-  ORZAX: { guncelFiyat: "75.90", marj: "406%" },
+  ORZAX: { guncelFiyat: "75.90", marj: "10%" },
   SOHOE: { guncelFiyat: "14.85", marj: "-1%" },
   BETAE: { guncelFiyat: "64.35", marj: "61%" },
   EKDMR: { guncelFiyat: "55.70", marj: "24%" },

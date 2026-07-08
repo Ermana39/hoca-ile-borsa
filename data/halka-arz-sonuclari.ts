@@ -23,7 +23,7 @@ export const halkaArzSonuclari: HalkaArzSonucu[] = [
     arzFiyati: "40.00",
     guncelFiyat: "53.20",
     marj: "33%",
-    konsorsiyum: "TSKB & Ziraat Yatırım & Yatırım Finansman",
+    konsorsiyum: "TSKB & ZİRAAT & YATIRIM FİNANSMAN",
   },
   {
     hisse: "EKDMR",
@@ -33,7 +33,7 @@ export const halkaArzSonuclari: HalkaArzSonucu[] = [
     arzFiyati: "45.00",
     guncelFiyat: "61.00",
     marj: "36%",
-    konsorsiyum: "TSKB & ZİRAAT & YATIRIM FİNANSMAN",
+    konsorsiyum: "A1 Capital",
   },
   {
     hisse: "AAGYO",
