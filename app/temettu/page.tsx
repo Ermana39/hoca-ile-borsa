@@ -58,6 +58,13 @@ const temettuKutulari = [
     description:
       "Kasım ayında temettü veren şirketleri tek sayfada inceleyerek ödeme tarihlerini ve temettü tutarlarını takip edebilirsiniz.",
   },
+  {
+    title: "Aralık Ayı Temettü Verenler",
+    href: "/temettu/aralik-ayi-temettu-takvimi",
+    icon: "temettu-takvim" as CategoryIconName,
+    description:
+      "Aralık ayında temettü veren şirketleri liste halinde görerek yıl sonu temettü takibini kolaylaştırabilirsiniz.",
+  },
 ];
 
 function TemettuKutusu({

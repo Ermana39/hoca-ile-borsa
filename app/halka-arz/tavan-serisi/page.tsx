@@ -28,14 +28,25 @@ export const metadata: Metadata = {
 };
 
 
+const goldaHalkaArz = {
+  hisse: "GOLDA",
+  islemTarihi: "08 Tem 2026",
+  katilimciSayisi: "749.674",
+  dagitimSekli: "TAMAMEN EŞİT",
+  arzFiyati: "9.20",
+  guncelFiyat: "10.12",
+  marj: "10%",
+  konsorsiyum: "GEDİK",
+};
+
 const orzaxHalkaArz = {
   hisse: "ORZAX",
   islemTarihi: "07 Tem 2026",
   katilimciSayisi: "974.597",
   dagitimSekli: "BİREYSELE %57",
   arzFiyati: "69.00",
-  guncelFiyat: "75.90",
-  marj: "10%",
+  guncelFiyat: "80.00",
+  marj: "16%",
   konsorsiyum: "İNFO",
 };
 
@@ -45,8 +56,8 @@ const sohoeHalkaArz = {
   katilimciSayisi: "660.121",
   dagitimSekli: "TAMAMEN EŞİT",
   arzFiyati: "15.00",
-  guncelFiyat: "14.85",
-  marj: "-1%",
+  guncelFiyat: "13.37",
+  marj: "-11%",
   konsorsiyum: "İNTEGRAL",
 };
 
@@ -57,32 +68,34 @@ const guncelHalkaArzVerileri: Record<
     marj: string;
   }
 > = {
-  ORZAX: { guncelFiyat: "75.90", marj: "10%" },
-  SOHOE: { guncelFiyat: "14.85", marj: "-1%" },
-  BETAE: { guncelFiyat: "64.35", marj: "61%" },
-  EKDMR: { guncelFiyat: "55.70", marj: "24%" },
-  AAGYO: { guncelFiyat: "15.45", marj: "-27%" },
-  MCARD: { guncelFiyat: "151.70", marj: "90%" },
-  LXGYO: { guncelFiyat: "14.72", marj: "22%" },
-  GENKM: { guncelFiyat: "13.28", marj: "21%" },
-  SVGYO: { guncelFiyat: "18.99", marj: "422%" },
-  EMPAE: { guncelFiyat: "90.35", marj: "311%" },
-  ATATR: { guncelFiyat: "16.20", marj: "45%" },
-  BESTE: { guncelFiyat: "33.80", marj: "130%" },
-  AKHAN: { guncelFiyat: "33.90", marj: "57%" },
-  NETCD: { guncelFiyat: "152.70", marj: "232%" },
-  UCAYM: { guncelFiyat: "32.50", marj: "81%" },
-  ZGYO: { guncelFiyat: "37.80", marj: "286%" },
-  FRMPL: { guncelFiyat: "34.62", marj: "16%" },
-  MEYSU: { guncelFiyat: "13.19", marj: "76%" },
-  ARFYE: { guncelFiyat: "31.50", marj: "62%" },
+  GOLDA: { guncelFiyat: "10.12", marj: "10%" },
+  ORZAX: { guncelFiyat: "80.00", marj: "16%" },
+  SOHOE: { guncelFiyat: "13.37", marj: "-11%" },
+  BETAE: { guncelFiyat: "70.75", marj: "77%" },
+  EKDMR: { guncelFiyat: "55.55", marj: "24%" },
+  AAGYO: { guncelFiyat: "14.78", marj: "-30%" },
+  MCARD: { guncelFiyat: "146.00", marj: "83%" },
+  LXGYO: { guncelFiyat: "13.51", marj: "12%" },
+  GENKM: { guncelFiyat: "12.98", marj: "18%" },
+  SVGYO: { guncelFiyat: "17.10", marj: "370%" },
+  EMPAE: { guncelFiyat: "81.65", marj: "271%" },
+  ATATR: { guncelFiyat: "15.00", marj: "34%" },
+  BESTE: { guncelFiyat: "31.20", marj: "112%" },
+  AKHAN: { guncelFiyat: "35.60", marj: "65%" },
+  NETCD: { guncelFiyat: "150.00", marj: "226%" },
+  UCAYM: { guncelFiyat: "30.02", marj: "67%" },
+  ZGYO: { guncelFiyat: "37.36", marj: "282%" },
+  FRMPL: { guncelFiyat: "33.04", marj: "11%" },
+  MEYSU: { guncelFiyat: "12.84", marj: "71%" },
+  ARFYE: { guncelFiyat: "30.04", marj: "54%" },
 };
 
 const halkaArzVerileri = [
+  goldaHalkaArz,
   orzaxHalkaArz,
   sohoeHalkaArz,
   ...baseHalkaArzVerileri
-    .filter((item) => item.hisse !== "ORZAX" && item.hisse !== "SOHOE")
+    .filter((item) => item.hisse !== "GOLDA" && item.hisse !== "ORZAX" && item.hisse !== "SOHOE")
     .map((item) =>
       guncelHalkaArzVerileri[item.hisse]
         ? { ...item, ...guncelHalkaArzVerileri[item.hisse] }
