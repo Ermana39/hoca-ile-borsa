@@ -46,20 +46,20 @@ export default function TlyEtkiAnaliziPage() {
       rows={rows}
       toplamFonOrani={80.74}
       toplamEtki={1.73}
-      sonGuncelleme="7 Temmuz 2026"
+      sonGuncelleme="8 Temmuz 2026"
       degisimVerisi={{
         yatirimciSayisi: {
-          dun: 93910,
-          bugun: 94058,
-          degisim: 148,
+          dun: 94058,
+          bugun: 95542,
+          degisim: 1484,
         },
         fonToplamDeger: {
-          dun: 214080225558,
-          bugun: 215940595825,
-          degisim: 1860370267,
+          dun: 215940595825,
+          bugun: 220221351609,
+          degisim: 4280755784,
         },
         yorum:
-          "TLY fonunda yatırımcı sayısının 148 kişi artması, fonun yatırımcı ilgisini koruduğunu gösteriyor. Fon toplam değerindeki 1,86 milyar TL'lik yükseliş, yatırımcı sayısındaki sınırlı artışa ek olarak fon büyüklüğünün de güçlü kaldığını anlatıyor. TLY için bu veri, hem katılımcı tabanında istikrar hem de fon toplam değerinde pozitif genişleme olduğunu öne çıkarıyor.",
+          "TLY fonunda yatırımcı sayısının 1.484 kişi artması, fonun yatırımcı ilgisinde önceki güne göre daha belirgin bir ivme yakaladığını gösteriyor. Fon toplam değerindeki 4,28 milyar TL'lik yükseliş, hem giriş ilgisinin hem de fon büyüklüğünün güçlü kaldığını anlatıyor. TLY için bu tablo, katılımcı tabanındaki artış ile fon toplam değerindeki büyümenin aynı yönde ilerlediği pozitif bir güncel görünüm sunuyor.",
       }}
     />
   );

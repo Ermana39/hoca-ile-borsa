@@ -65,20 +65,20 @@ export default function PheEtkiAnaliziPage() {
       rows={rows}
       toplamFonOrani={96.69}
       toplamEtki={0.82}
-      sonGuncelleme="7 Temmuz 2026"
+      sonGuncelleme="8 Temmuz 2026"
       degisimVerisi={{
         yatirimciSayisi: {
-          dun: 139846,
-          bugun: 141398,
-          degisim: 1552,
+          dun: 141398,
+          bugun: 144628,
+          degisim: 3230,
         },
         fonToplamDeger: {
-          dun: 69711168921,
-          bugun: 70637539401,
-          degisim: 926370480,
+          dun: 70637539401,
+          bugun: 71287371676,
+          degisim: 649832275,
         },
         yorum:
-          "PHE fonunda yatırımcı sayısının 1.552 kişi artması, geniş yatırımcı tabanına rağmen talebin devam ettiğini gösteriyor. Fon toplam değerindeki 926,37 milyon TL'lik yükseliş, katılımcı artışıyla birlikte fon büyüklüğünün de desteklendiğini anlatıyor. PHE için bu tablo, hem yatırımcı ilgisi hem de fon ölçeği açısından dengeli ve pozitif bir genişleme sinyali veriyor.",
+          "PHE fonunda yatırımcı sayısının 3.230 kişi artması, geniş yatırımcı tabanında talebin hızlandığını gösteriyor. Fon toplam değerindeki 649,83 milyon TL'lik yükseliş, yatırımcı ilgisine eşlik eden pozitif bir büyüklük artışı olduğunu anlatıyor. PHE için bu veri, katılımcı sayısındaki güçlü genişlemenin fon ölçeğine de destek verdiği dengeli bir görünüm sunuyor.",
       }}
     />
   );

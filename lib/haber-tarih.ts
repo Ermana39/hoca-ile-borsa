@@ -3,11 +3,18 @@ import "server-only";
 import { statSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import { newsItems } from "@/app/data/news";
 import haberTarihleri from "@/app/data/haber-tarihleri.generated.json";
 
 const SITE_TIME_ZONE = "Europe/Istanbul";
 const TURKIYE_OFFSET = "+03:00";
+const VARSAYILAN_HABER_SAATI = "12:00:00";
 const kaliciHaberTarihleri = haberTarihleri as Record<string, string>;
+const haberListesiTarihleri = Object.fromEntries(
+  newsItems
+    .map((item) => [item.href, normalizePublishedAt(item.publishedAt)] as const)
+    .filter((item): item is readonly [string, string] => Boolean(item[1]))
+);
 
 function getParts(date: Date) {
   const parts = new Intl.DateTimeFormat("tr-TR", {
@@ -35,10 +42,20 @@ function getDosyaZamani(filePath: string) {
   return toSiteIso(created ?? stat.mtime);
 }
 
+function normalizePublishedAt(value: string) {
+  if (value === "auto") return undefined;
+  if (/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+    return `${value}T${VARSAYILAN_HABER_SAATI}${TURKIYE_OFFSET}`;
+  }
+  return value;
+}
+
 export function getHaberDosyaTarihi(importMetaUrl: string) {
   const filePath = fileURLToPath(importMetaUrl);
   const href = getHrefFromFilePath(filePath);
-  const kaliciTarih = href ? kaliciHaberTarihleri[href] : undefined;
+  const kaliciTarih = href
+    ? kaliciHaberTarihleri[href] ?? haberListesiTarihleri[href]
+    : undefined;
   return kaliciTarih ?? getDosyaZamani(filePath);
 }
 
@@ -55,7 +72,7 @@ export function getHaberDosyaTarihiFromHref(href: string) {
   }
 
   try {
-    const kaliciTarih = kaliciHaberTarihleri[href];
+    const kaliciTarih = kaliciHaberTarihleri[href] ?? haberListesiTarihleri[href];
     if (kaliciTarih) return kaliciTarih;
 
     return getDosyaZamani(path.join(process.cwd(), "app", "haber", ...segments, "page.tsx"));

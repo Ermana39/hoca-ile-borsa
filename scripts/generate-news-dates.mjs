@@ -6,6 +6,7 @@ const newsFile = path.join(root, "app", "data", "news.ts");
 const datesFile = path.join(root, "app", "data", "haber-tarihleri.generated.json");
 const timeZone = "Europe/Istanbul";
 const offset = "+03:00";
+const defaultNewsTime = "12:00:00";
 
 function getParts(date) {
   const parts = new Intl.DateTimeFormat("tr-TR", {
@@ -32,6 +33,14 @@ function getFileTime(href) {
   const filePath = path.join(root, "app", "haber", ...segments, "page.tsx");
   const stat = statSync(filePath);
   return toSiteIso(stat.birthtimeMs > 0 ? stat.birthtime : stat.mtime);
+}
+
+function normalizePublishedAt(value, href) {
+  if (value === "auto") return getFileTime(href);
+  if (/^\d{4}-\d{2}-\d{2}$/.test(value)) {
+    return `${value}T${defaultNewsTime}${offset}`;
+  }
+  return value;
 }
 
 function readDates() {
@@ -71,23 +80,25 @@ const blocks = getNewsBlocks(source);
 
 const dates = readDates();
 let changed = false;
-const autoHrefs = new Set();
+const currentHrefs = new Set();
 
 for (const block of blocks) {
-  if (!/publishedAt:\s*"auto"/.test(block)) continue;
-
   const href = block.match(/href:\s*"(?<href>\/haber\/[^"]+)"/)?.groups?.href;
+  const publishedAt = block.match(/publishedAt:\s*"(?<publishedAt>[^"]+)"/)?.groups
+    ?.publishedAt;
   if (!href) continue;
+  if (!publishedAt) continue;
 
-  autoHrefs.add(href);
-  if (dates[href]) continue;
+  currentHrefs.add(href);
+  const nextDate = normalizePublishedAt(publishedAt, href);
+  if (dates[href] === nextDate) continue;
 
-  dates[href] = getFileTime(href);
+  dates[href] = nextDate;
   changed = true;
 }
 
 for (const href of Object.keys(dates)) {
-  if (autoHrefs.has(href)) continue;
+  if (currentHrefs.has(href)) continue;
   delete dates[href];
   changed = true;
 }

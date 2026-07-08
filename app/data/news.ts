@@ -23,6 +23,36 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1099,
+    title: "ASTOR ABD’de 42,5 Milyon Dolarlık Güç Transformatörü Sözleşmesi İmzaladı",
+    href: "/haber/astor-abd-42-5-milyon-dolar-guc-transformatoru-sozlesmesi",
+    image: "/astor-abd-42-5-milyon-dolar-guc-transformatoru-sozlesmesi.webp",
+    alt: "ASTOR ABD 42,5 milyon dolar güç transformatörü sözleşmesi",
+    publishedAt: "2026-07-08",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["ASTOR"],
+  },
+  {
+    id: 1098,
+    title: "ARDYZ 3,45 Milyon Euroluk Yapay Zekâ Destekli Sistem Siparişi Aldı",
+    href: "/haber/ardyz-yapay-zeka-destekli-guvenlik-cihazlari-siparisi",
+    image: "/ardyz-yapay-zeka-destekli-guvenlik-cihazlari-siparisi.webp",
+    alt: "ARDYZ yapay zekâ destekli güvenlik cihazları siparişi",
+    publishedAt: "2026-07-08",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["ARDYZ"],
+  },
+  {
+    id: 1097,
+    title: "TRALT Çanakkale Karapınar Projesinde Yürütmeyi Durdurma Kararı",
+    href: "/haber/tralt-canakkale-karapinar-projesinde-yurutmeyi-durdurma-karari",
+    image: "/tralt-canakkale-karapinar-projesinde-yurutmeyi-durdurma-karari.webp",
+    alt: "TRALT Çanakkale Karapınar Projesi yürütmeyi durdurma kararı",
+    publishedAt: "2026-07-08",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["TRALT"],
+  },
+  {
     id: 1096,
     title: "BETA, SOHO ve ORZAX Gün Sonu: İki Tavan, Bir Taban Kapanış",
     href: "/haber/beta-soho-orzax-halka-arz-gun-sonu-kapanis-yorumlari",
