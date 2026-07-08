@@ -33,7 +33,7 @@ export const halkaArzSonuclari: HalkaArzSonucu[] = [
     arzFiyati: "45.00",
     guncelFiyat: "61.00",
     marj: "36%",
-    konsorsiyum: "A1 CAPITAL",
+    konsorsiyum: "TSKB & ZİRAAT & YATIRIM FİNANSMAN",
   },
   {
     hisse: "AAGYO",

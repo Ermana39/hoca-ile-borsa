@@ -33,10 +33,10 @@ const orzaxHalkaArz = {
   islemTarihi: "07 Tem 2026",
   katilimciSayisi: "974.597",
   dagitimSekli: "BİREYSELE %57",
-  arzFiyati: "15.00",
+  arzFiyati: "69.00",
   guncelFiyat: "75.90",
   marj: "406%",
-  konsorsiyum: "İnfo Yatırım",
+  konsorsiyum: "İNFO",
 };
 
 const sohoeHalkaArz = {
@@ -47,7 +47,7 @@ const sohoeHalkaArz = {
   arzFiyati: "15.00",
   guncelFiyat: "14.85",
   marj: "-1%",
-  konsorsiyum: "İntegral Yatırım",
+  konsorsiyum: "İNTEGRAL",
 };
 
 const guncelHalkaArzVerileri: Record<
