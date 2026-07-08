@@ -23,6 +23,36 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1102,
+    title: "8 Temmuz 2026 Önemli KAP: ESCAR, ASTOR, ARZUM Etkileri",
+    href: "/haber/8-temmuz-2026-onemli-kap-escar-astor-arzum-etkileri",
+    image: "/kap-ozeti-discover.webp",
+    alt: "8 Temmuz 2026 önemli KAP haberleri ESCAR ASTOR ARZUM etkileri",
+    publishedAt: "2026-07-08",
+    category: "kap-bildirimleri",
+    ilgiliHisseler: ["ESCAR", "ASTOR", "ARZUM", "ARDYZ", "TRALT", "KLYPV", "ENDAE", "DENIZ", "KORTS", "ISCTR", "TKNSA", "ENPRA"],
+  },
+  {
+    id: 1101,
+    title: "ARZUM 240 Milyon TL Tahsisli Sermaye Artırımı İçin SPK’ya Başvuruyor",
+    href: "/haber/arzum-240-milyon-tl-tahsisli-sermaye-artirimi-spk-basvurusu",
+    image: "/arzum-240-milyon-tl-tahsisli-sermaye-artirimi-spk-basvurusu.webp",
+    alt: "ARZUM 240 milyon TL tahsisli sermaye artırımı SPK başvurusu",
+    publishedAt: "2026-07-08",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["ARZUM"],
+  },
+  {
+    id: 1100,
+    title: "ESCAR’da Pay Devri Tamamlandı: Bulls Yatırım Yeni Ana Ortak Oldu",
+    href: "/haber/escar-pay-devri-tamamlandi-bulls-yatirim-yeni-ana-ortak-oldu",
+    image: "/escar-pay-devri-tamamlandi-bulls-yatirim-yeni-ana-ortak-oldu.webp",
+    alt: "ESCAR pay devri tamamlandı Bulls Yatırım yeni ana ortak oldu",
+    publishedAt: "2026-07-08",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["ESCAR"],
+  },
+  {
     id: 1099,
     title: "ASTOR ABD’de 42,5 Milyon Dolarlık Güç Transformatörü Sözleşmesi İmzaladı",
     href: "/haber/astor-abd-42-5-milyon-dolar-guc-transformatoru-sozlesmesi",
