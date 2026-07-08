@@ -23,6 +23,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1103,
+    title: "Halka Arzlarda Gün Kapanışı: GOLDA Tavan, SOHOE Taban, ORZAX ve BETAE Yorumu",
+    href: "/haber/halka-arzlarda-gun-kapanisi-golda-soho-orzax-beta",
+    image: "/halka-arzlarda-gun-kapanisi-golda-soho-orzax-beta.webp",
+    alt: "GOLDA SOHOE ORZAX BETAE halka arz gün kapanışı yorumları",
+    publishedAt: "2026-07-08T20:25:00+03:00",
+    category: "halka-arz",
+    ilgiliHisseler: ["GOLDA", "SOHOE", "ORZAX", "BETAE"],
+  },
+  {
     id: 1102,
     title: "8 Temmuz 2026 Önemli KAP: ESCAR, ASTOR, ARZUM Etkileri",
     href: "/haber/8-temmuz-2026-onemli-kap-escar-astor-arzum-etkileri",
