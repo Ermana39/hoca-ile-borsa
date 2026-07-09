@@ -23,6 +23,15 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1109,
+    title: "TLY, PHE, PBR, DFI Fon Etki Analizi: Yarın Hangi Fon Öne Çıkıyor?",
+    href: "/haber/9-temmuz-2026-fon-etki-analizi-tly-phe-pbr-dfi",
+    image: "/2026-fon-etki-analizi-tly-phe-pbr-dfi.webp",
+    alt: "TLY PHE PBR DFI fon etki analizi ve yarınki fon fiyatı tahmini",
+    publishedAt: "2026-07-09T20:45:00+03:00",
+    category: "piyasa-gundemi",
+  },
+  {
     id: 1108,
     title: "09.07.2026 Son Halka Arzlarda Gün Sonu: EKIM Taban, GOLDA ve BETAE Tavan",
     href: "/haber/9-temmuz-2026-son-halka-arzlar-gun-sonu-kapanisi",
