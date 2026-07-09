@@ -19,12 +19,10 @@ export const metadata: Metadata = {
 };
 
 const rows: FonEtkiRow[] = [
-  { sembol: "IEYHO", fonOrani: 52.75, kapanisMarji: 0.841423948, etki: 0.443851133 },
-  { sembol: "ISKPL", fonOrani: 11.12, kapanisMarji: -3.088235294, etki: -0.343411765 },
-  { sembol: "LIDER", fonOrani: 0.53, kapanisMarji: -9.99034749, etki: -0.052948842 },
-  { sembol: "ECILC", fonOrani: 0.19, kapanisMarji: -4.396325459, etki: -0.008353018 },
-  { sembol: "TURSG", fonOrani: 0.03, kapanisMarji: 1.328903654, etki: 0.000398671 },
-  { sembol: "ABG", fonOrani: 30.15, kapanisMarji: 0.8, etki: 0.2412 },
+  { sembol: "IEYHO", fonOrani: 52.75, kapanisMarji: 1.476, etki: 0.778722721 },
+  { sembol: "ISKPL", fonOrani: 11.12, kapanisMarji: -1.669, etki: -0.185614568 },
+  { sembol: "LIDER", fonOrani: 0.53, kapanisMarji: 0.858, etki: 0.004546917 },
+  { sembol: "ABG", fonOrani: 29.82, kapanisMarji: 0.15, etki: 0.04473 },
 ];
 
 export default function DfiEtkiAnaliziPage() {
@@ -35,8 +33,8 @@ export default function DfiEtkiAnaliziPage() {
       fonTuru="Atlas Portföy Serbest Fon"
       slug="dfi"
       rows={rows}
-      toplamFonOrani={94.77}
-      toplamEtki={0.28}
+      toplamFonOrani={94.22}
+      toplamEtki={0.64}
       sonGuncelleme="9 Temmuz 2026"
       degisimVerisi={{
         yatirimciSayisi: {

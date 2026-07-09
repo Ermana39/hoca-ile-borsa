@@ -23,6 +23,26 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1108,
+    title: "09.07.2026 Son Halka Arzlarda Gün Sonu: EKIM Taban, GOLDA ve BETAE Tavan",
+    href: "/haber/9-temmuz-2026-son-halka-arzlar-gun-sonu-kapanisi",
+    image: "/9-temmuz-2026-son-halka-arzlar-gun-sonu-kapanisi.webp",
+    alt: "9 Temmuz 2026 son halka arzlar gün sonu kapanışı",
+    publishedAt: "2026-07-09T18:32:05+03:00",
+    category: "halka-arz",
+    ilgiliHisseler: ["EKIM", "GOLDA", "ORZAX", "SOHOE", "BETAE"],
+  },
+  {
+    id: 1107,
+    title: "SDTTR Bağlı Ortaklığı 1,27 Milyon Dolarlık Sipariş Aldı",
+    href: "/haber/sdttr-bkm-bursa-kalip-1-27-milyon-dolar-siparis-aldi",
+    image: "/sdttr-bkm-bursa-kalip-1-27-milyon-dolar-siparis-aldi.webp",
+    alt: "SDTTR BKM Bursa Kalıp 1,27 milyon dolar sipariş aldı",
+    publishedAt: "2026-07-09",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["SDTTR"],
+  },
+  {
     id: 1106,
     title: "DCTTR, U2 AI Studio’da %4 Pay Edinme Kararı Aldı",
     href: "/haber/dcttr-u2-ai-studio-yuzde-4-pay-edinimi",
