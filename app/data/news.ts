@@ -23,6 +23,26 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1106,
+    title: "DCTTR, U2 AI Studio’da %4 Pay Edinme Kararı Aldı",
+    href: "/haber/dcttr-u2-ai-studio-yuzde-4-pay-edinimi",
+    image: "/dcttr-u2-ai-studio-yuzde-4-pay-edinimi.webp",
+    alt: "DCTTR U2 AI Studio yüzde 4 pay edinimi",
+    publishedAt: "2026-07-09",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["DCTTR"],
+  },
+  {
+    id: 1105,
+    title: "VESTL Eurobondlar İçin Finansal Danışman Atadı",
+    href: "/haber/vestl-eurobondlar-icin-finansal-danisman-atadi",
+    image: "/vestl-eurobondlar-icin-finansal-danisman-atadi.webp",
+    alt: "VESTL Eurobondlar için finansal danışman atadı",
+    publishedAt: "2026-07-09",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["VESTL"],
+  },
+  {
     id: 1104,
     title: "PETKM Master Plan’da FEED Aşamasına Geçiş Hazırlıklarına Başladı",
     href: "/haber/petkm-master-plan-feed-asamasina-gecis-hazirliklari",

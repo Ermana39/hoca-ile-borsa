@@ -24,6 +24,7 @@ export type DegisimSatiri = {
 export type FonDegisimVerisi = {
   yatirimciSayisi: DegisimSatiri;
   fonToplamDeger: DegisimSatiri;
+  paraGirisiCikisi: number;
   yorum: string;
 };
 
@@ -173,6 +174,7 @@ function buildJsonLd({
           "Toplam tahmini fon etkisi",
           "Yatırımcı sayısı değişimi",
           "Fon toplam değer değişimi",
+          "Fon para girişi çıkışı",
         ],
         measurementTechnique: "Fon oranı ile günlük kapanış marjının çarpılması",
       },
@@ -257,6 +259,7 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
   const pageUrl = `/fonlar/etki-analizi/${slug}`;
   const yatirimciDegisimOrani = changeRate(degisimVerisi.yatirimciSayisi);
   const fonDegerDegisimOrani = changeRate(degisimVerisi.fonToplamDeger);
+  const paraAkisiPozitif = degisimVerisi.paraGirisiCikisi >= 0;
 
   return (
     <main className="min-h-screen bg-[#f8fafc] px-4 py-6 md:px-6">
@@ -348,16 +351,16 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
           <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
             <div>
               <p className="text-sm font-medium text-slate-500">
-                Fon büyüklüğü ve yatırımcı ilgisi
+                Fon büyüklüğü, para akışı ve yatırımcı ilgisi
               </p>
               <h2 className="mt-1 text-xl font-bold text-zinc-900 md:text-2xl">
-                {kod} Yatırımcı Sayısı ve Fon Toplam Değer Değişimi
+                {kod} Yatırımcı, Fon Toplam Değer ve Para Girişi/Çıkışı
               </h2>
             </div>
             <p className="text-sm text-slate-500">Dün / Bugün karşılaştırması</p>
           </div>
 
-          <dl className="mt-5 grid grid-cols-1 gap-3 md:grid-cols-2">
+          <dl className="mt-5 grid grid-cols-1 gap-3 md:grid-cols-3">
             <div className="rounded-xl bg-slate-50 p-4">
               <dt className="text-xs font-semibold uppercase text-slate-500">
                 Yatırımcı sayısı değişimi
@@ -382,6 +385,21 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
                 {fmtCurrency(degisimVerisi.fonToplamDeger.dun)} seviyesinden{" "}
                 {fmtCurrency(degisimVerisi.fonToplamDeger.bugun)} seviyesine,{" "}
                 {signedPercent(fonDegerDegisimOrani)} değişim.
+              </dd>
+            </div>
+            <div className="rounded-xl bg-slate-50 p-4">
+              <dt className="text-xs font-semibold uppercase text-slate-500">
+                Para girişi/çıkışı
+              </dt>
+              <dd
+                className={`mt-2 text-2xl font-bold ${
+                  paraAkisiPozitif ? "text-emerald-700" : "text-red-700"
+                }`}
+              >
+                {signedCurrency(degisimVerisi.paraGirisiCikisi)}
+              </dd>
+              <dd className="mt-1 text-sm text-slate-600">
+                {paraAkisiPozitif ? "Fona net para girişi" : "Fondan net para çıkışı"}.
               </dd>
             </div>
           </dl>
@@ -423,6 +441,21 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
                   </td>
                   <td className="px-4 py-3 font-semibold text-emerald-700">
                     {signedCurrency(degisimVerisi.fonToplamDeger.degisim)}
+                  </td>
+                </tr>
+                <tr>
+                  <th className="px-4 py-3 font-semibold text-slate-900">
+                    Para girişi/çıkışı
+                  </th>
+                  <td className="px-4 py-3 text-slate-500" colSpan={2}>
+                    Net günlük hareket
+                  </td>
+                  <td
+                    className={`px-4 py-3 font-semibold ${
+                      paraAkisiPozitif ? "text-emerald-700" : "text-red-700"
+                    }`}
+                  >
+                    {signedCurrency(degisimVerisi.paraGirisiCikisi)}
                   </td>
                 </tr>
               </tbody>
