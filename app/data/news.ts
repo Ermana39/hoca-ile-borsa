@@ -23,6 +23,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1104,
+    title: "PETKM Master Plan’da FEED Aşamasına Geçiş Hazırlıklarına Başladı",
+    href: "/haber/petkm-master-plan-feed-asamasina-gecis-hazirliklari",
+    image: "/petkm-master-plan-feed-asamasina-gecis-hazirliklari.webp",
+    alt: "PETKM Master Plan FEED aşamasına geçiş hazırlıkları",
+    publishedAt: "2026-07-09",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["PETKM"],
+  },
+  {
     id: 1103,
     title: "Halka Arzlarda Gün Kapanışı: GOLDA Tavan, SOHOE Taban, ORZAX ve BETAE Yorumu",
     href: "/haber/halka-arzlarda-gun-kapanisi-golda-soho-orzax-beta",
