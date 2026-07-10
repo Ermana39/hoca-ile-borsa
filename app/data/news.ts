@@ -23,6 +23,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1111,
+    title: "YEOTK Türk Ytong ile 8,44 Milyon Dolarlık GES Sözleşmesi İmzaladı",
+    href: "/haber/yeotk-turk-ytong-mardin-ges-sozlesmesi",
+    image: "/yeotk-turk-ytong-mardin-ges-sozlesmesi.webp",
+    alt: "YEOTK Türk Ytong Mardin GES sözleşmesi",
+    publishedAt: "2026-07-10T09:00:51+03:00",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["YEOTK"],
+  },
+  {
     id: 1110,
     title: "9 Temmuz 2026 Önemli KAP: VESTL, PETKM, SDTTR Etkileri",
     href: "/haber/9-temmuz-2026-onemli-kap-vestl-petkm-sdttr-etkileri",
