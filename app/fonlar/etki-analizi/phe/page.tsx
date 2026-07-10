@@ -73,21 +73,21 @@ export default function PheEtkiAnaliziPage() {
       rows={rows}
       toplamFonOrani={98.45}
       toplamEtki={0.96}
-      sonGuncelleme="9 Temmuz 2026"
+      sonGuncelleme="10 Temmuz 2026"
       degisimVerisi={{
         yatirimciSayisi: {
-          dun: 144628,
-          bugun: 145604,
-          degisim: 976,
+          dun: 145604,
+          bugun: 146098,
+          degisim: 494,
         },
         fonToplamDeger: {
-          dun: 71287371676,
-          bugun: 70538990913,
-          degisim: -748380763,
+          dun: 70538990913,
+          bugun: 70169952270,
+          degisim: -369038643,
         },
-        paraGirisiCikisi: -926912649,
+        paraGirisiCikisi: -1132408162,
         yorum:
-          "PHE fonunda yatırımcı sayısının 976 kişi artmasına rağmen fon toplam değerinde 748,38 milyon TL düşüş ve 926,91 milyon TL net para çıkışı görülüyor. Bu ayrışma, yatırımcı adedindeki artışın fon büyüklüğünü desteklemek için yeterli olmadığını ve tutar bazında çıkış baskısının öne çıktığını gösteriyor. PHE için bu veri, kişi sayısı artarken para akışının negatif tarafta izlenmesi gerektiğini anlatıyor.",
+          "PHE fonunda yatırımcı sayısı 494 kişi artarken fon toplam değerinde 369,04 milyon TL düşüş ve 1,13 milyar TL net para çıkışı görülüyor. Bu tablo, kişi sayısındaki artışa rağmen tutar bazında çıkış baskısının güçlü kaldığını gösteriyor. PHE için yatırımcı adedi pozitif görünse de para akışı ve fon büyüklüğü tarafındaki negatif eğilim yakından izlenmeli.",
       }}
     />
   );
