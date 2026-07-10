@@ -23,6 +23,15 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1116,
+    title: "10.07.2026 Fonların Günlük Kapanış Değerlendirmesi: TLY, PHE, PBR, DFI",
+    href: "/haber/10-temmuz-2026-fonlar-gunluk-kapanis-degerlendirmesi",
+    image: "/2026-fon-etki-analizi-tly-phe-pbr-dfi.webp",
+    alt: "10 Temmuz 2026 TLY PHE PBR DFI fon günlük kapanış değerlendirmesi",
+    publishedAt: "2026-07-10T22:05:00+03:00",
+    category: "piyasa-gundemi",
+  },
+  {
     id: 1115,
     title: "10 Temmuz 2026 Önemli KAP: YEOTK, MIATK, SMRVA Etkileri",
     href: "/haber/10-temmuz-2026-onemli-kap-yeotk-miatk-smrva-etkileri",
