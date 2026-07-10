@@ -28,14 +28,25 @@ export const metadata: Metadata = {
 };
 
 
+const isveaHalkaArz = {
+  hisse: "ISVEA",
+  islemTarihi: "10 Tem 2026",
+  katilimciSayisi: "901.609",
+  dagitimSekli: "BİREYSELE %60",
+  arzFiyati: "20.90",
+  guncelFiyat: "22.98",
+  marj: "10%",
+  konsorsiyum: "AHLATÇI-HALK",
+};
+
 const ekimHalkaArz = {
   hisse: "EKIM",
   islemTarihi: "09 Tem 2026",
   katilimciSayisi: "707.851",
   dagitimSekli: "BİREYSELE %70",
   arzFiyati: "30.26",
-  guncelFiyat: "27.24",
-  marj: "-10%",
+  guncelFiyat: "25.72",
+  marj: "-15%",
   konsorsiyum: "AK-VAKIF",
 };
 
@@ -45,8 +56,8 @@ const goldaHalkaArz = {
   katilimciSayisi: "749.674",
   dagitimSekli: "TAMAMEN EŞİT",
   arzFiyati: "9.20",
-  guncelFiyat: "11.13",
-  marj: "21%",
+  guncelFiyat: "12.24",
+  marj: "33%",
   konsorsiyum: "GEDİK",
 };
 
@@ -56,8 +67,8 @@ const orzaxHalkaArz = {
   katilimciSayisi: "974.597",
   dagitimSekli: "BİREYSELE %57",
   arzFiyati: "69.00",
-  guncelFiyat: "81.05",
-  marj: "17%",
+  guncelFiyat: "89.15",
+  marj: "29%",
   konsorsiyum: "İNFO",
 };
 
@@ -67,8 +78,8 @@ const sohoeHalkaArz = {
   katilimciSayisi: "660.121",
   dagitimSekli: "TAMAMEN EŞİT",
   arzFiyati: "15.00",
-  guncelFiyat: "12.85",
-  marj: "-14%",
+  guncelFiyat: "13.36",
+  marj: "-11%",
   konsorsiyum: "İNTEGRAL",
 };
 
@@ -79,36 +90,38 @@ const guncelHalkaArzVerileri: Record<
     marj: string;
   }
 > = {
-  EKIM: { guncelFiyat: "27.24", marj: "-10%" },
-  GOLDA: { guncelFiyat: "11.13", marj: "21%" },
-  ORZAX: { guncelFiyat: "81.05", marj: "17%" },
-  SOHOE: { guncelFiyat: "12.85", marj: "-14%" },
-  BETAE: { guncelFiyat: "77.80", marj: "94%" },
-  EKDMR: { guncelFiyat: "55.55", marj: "24%" },
-  AAGYO: { guncelFiyat: "14.88", marj: "-30%" },
-  MCARD: { guncelFiyat: "143.00", marj: "79%" },
-  LXGYO: { guncelFiyat: "13.31", marj: "10%" },
-  GENKM: { guncelFiyat: "12.84", marj: "17%" },
-  SVGYO: { guncelFiyat: "15.39", marj: "323%" },
-  EMPAE: { guncelFiyat: "73.50", marj: "234%" },
-  ATATR: { guncelFiyat: "15.04", marj: "35%" },
-  BESTE: { guncelFiyat: "30.50", marj: "108%" },
-  AKHAN: { guncelFiyat: "35.50", marj: "64%" },
-  NETCD: { guncelFiyat: "140.90", marj: "206%" },
-  UCAYM: { guncelFiyat: "28.22", marj: "57%" },
-  ZGYO: { guncelFiyat: "37.28", marj: "281%" },
-  FRMPL: { guncelFiyat: "33.00", marj: "11%" },
-  MEYSU: { guncelFiyat: "12.60", marj: "68%" },
-  ARFYE: { guncelFiyat: "30.02", marj: "54%" },
+  ISVEA: { guncelFiyat: "22.98", marj: "10%" },
+  EKIM: { guncelFiyat: "25.72", marj: "-15%" },
+  GOLDA: { guncelFiyat: "12.24", marj: "33%" },
+  ORZAX: { guncelFiyat: "89.15", marj: "29%" },
+  SOHOE: { guncelFiyat: "13.36", marj: "-11%" },
+  BETAE: { guncelFiyat: "85.55", marj: "114%" },
+  EKDMR: { guncelFiyat: "55.05", marj: "23%" },
+  AAGYO: { guncelFiyat: "14.95", marj: "-29%" },
+  MCARD: { guncelFiyat: "147.00", marj: "84%" },
+  LXGYO: { guncelFiyat: "13.36", marj: "11%" },
+  GENKM: { guncelFiyat: "12.91", marj: "18%" },
+  SVGYO: { guncelFiyat: "13.86", marj: "281%" },
+  EMPAE: { guncelFiyat: "71.50", marj: "225%" },
+  ATATR: { guncelFiyat: "15.10", marj: "35%" },
+  BESTE: { guncelFiyat: "30.72", marj: "109%" },
+  AKHAN: { guncelFiyat: "36.54", marj: "69%" },
+  NETCD: { guncelFiyat: "146.90", marj: "219%" },
+  UCAYM: { guncelFiyat: "28.76", marj: "60%" },
+  ZGYO: { guncelFiyat: "37.32", marj: "281%" },
+  FRMPL: { guncelFiyat: "33.48", marj: "12%" },
+  MEYSU: { guncelFiyat: "12.65", marj: "69%" },
+  ARFYE: { guncelFiyat: "30.20", marj: "55%" },
 };
 
 const halkaArzVerileri = [
+  isveaHalkaArz,
   ekimHalkaArz,
   goldaHalkaArz,
   orzaxHalkaArz,
   sohoeHalkaArz,
   ...baseHalkaArzVerileri
-    .filter((item) => item.hisse !== "EKIM" && item.hisse !== "GOLDA" && item.hisse !== "ORZAX" && item.hisse !== "SOHOE")
+    .filter((item) => item.hisse !== "ISVEA" && item.hisse !== "EKIM" && item.hisse !== "GOLDA" && item.hisse !== "ORZAX" && item.hisse !== "SOHOE")
     .map((item) =>
       guncelHalkaArzVerileri[item.hisse]
         ? { ...item, ...guncelHalkaArzVerileri[item.hisse] }

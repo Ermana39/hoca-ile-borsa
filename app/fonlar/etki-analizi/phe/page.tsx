@@ -42,25 +42,25 @@ const rows: FonEtkiRow[] = [
   { sembol: "PGSUS", fonOrani: 0.34, kapanisMarji: -0.400, etki: -0.001361556 },
   { sembol: "TEHOL", fonOrani: 0.04, kapanisMarji: 1.230, etki: 0.000492055 },
   { sembol: "TOASO", fonOrani: 0.02, kapanisMarji: -0.829, etki: -0.000165837 },
-    { sembol: "ALKLC", fonOrani: 0.59, kapanisMarji: 0.331, etki: 0.001951058 },
-    { sembol: "DAPGM", fonOrani: 0.56, kapanisMarji: 0.443, etki: 0.00248337 },
-    { sembol: "BRSAN", fonOrani: 0.4, kapanisMarji: -0.755, etki: -0.003021719 },
-    { sembol: "AKSEN", fonOrani: 0.39, kapanisMarji: 0.506, etki: 0.00197191 },
-    { sembol: "ENKAI", fonOrani: 0.36, kapanisMarji: -1.228, etki: -0.004419643 },
-    { sembol: "IZFAS", fonOrani: 0.34, kapanisMarji: 1.325, etki: 0.004503311 },
-    { sembol: "IZENR", fonOrani: 0.34, kapanisMarji: 1.111, etki: 0.003777778 },
-    { sembol: "TAVHL", fonOrani: 0.33, kapanisMarji: -0.19, etki: -0.000625592 },
-    { sembol: "TERA", fonOrani: 0.26, kapanisMarji: -2.561, etki: -0.006658131 },
-    { sembol: "ALVES", fonOrani: 0.18, kapanisMarji: 0.408, etki: 0.000734694 },
-    { sembol: "TRHOL", fonOrani: 0.12, kapanisMarji: 2.18, etki: 0.002615804 },
-    { sembol: "MOPAS", fonOrani: 0.07, kapanisMarji: -0.575, etki: -0.000402556 },
-    { sembol: "EREGL", fonOrani: 0.05, kapanisMarji: 0.3, etki: 0.000150225 },
-    { sembol: "BETAE", fonOrani: 0.04, kapanisMarji: 9.965, etki: 0.003985866 },
-    { sembol: "TRMET", fonOrani: 0.04, kapanisMarji: 2.652, etki: 0.001060736 },
-    { sembol: "GUBRF", fonOrani: 0.3, kapanisMarji: 0.749, etki: 0.002247839 },
-    { sembol: "PKZ", fonOrani: 8.33, kapanisMarji: 5.12, etki: 0.426496 },
-    { sembol: "PCS", fonOrani: 8.27, kapanisMarji: 6.07, etki: 0.501989 },
-    { sembol: "PRY", fonOrani: 2.56, kapanisMarji: 0.12, etki: 0.003072 },
+      { sembol: "ALKLC", fonOrani: 0.59, kapanisMarji: -0.33, etki: -0.001944628 },
+      { sembol: "DAPGM", fonOrani: 0.56, kapanisMarji: -0.883, etki: -0.004944812 },
+      { sembol: "BRSAN", fonOrani: 0.4, kapanisMarji: 1.998, etki: 0.007992388 },
+      { sembol: "AKSEN", fonOrani: 0.39, kapanisMarji: 2.963, etki: 0.011553941 },
+      { sembol: "ENKAI", fonOrani: 0.36, kapanisMarji: 2.034, etki: 0.007322034 },
+      { sembol: "IZFAS", fonOrani: 0.34, kapanisMarji: 1.307, etki: 0.004444444 },
+      { sembol: "IZENR", fonOrani: 0.34, kapanisMarji: -3.226, etki: -0.010967742 },
+      { sembol: "TAVHL", fonOrani: 0.33, kapanisMarji: 2.279, etki: 0.007521368 },
+      { sembol: "TERA", fonOrani: 0.26, kapanisMarji: 3.548, etki: 0.009224704 },
+      { sembol: "ALVES", fonOrani: 0.18, kapanisMarji: 0.407, etki: 0.000731707 },
+      { sembol: "TRHOL", fonOrani: 0.12, kapanisMarji: -1.0, etki: -0.0012 },
+      { sembol: "MOPAS", fonOrani: 0.07, kapanisMarji: 2.635, etki: 0.001844473 },
+      { sembol: "EREGL", fonOrani: 0.05, kapanisMarji: 0.849, etki: 0.000424363 },
+      { sembol: "BETAE", fonOrani: 0.04, kapanisMarji: 9.961, etki: 0.003984576 },
+      { sembol: "TRMET", fonOrani: 0.04, kapanisMarji: 4.833, etki: 0.001933333 },
+      { sembol: "GUBRF", fonOrani: 0.3, kapanisMarji: 0.114, etki: 0.000343249 },
+      { sembol: "PKZ", fonOrani: 8.33, kapanisMarji: 3.26, etki: 0.271558 },
+      { sembol: "PCS", fonOrani: 8.27, kapanisMarji: 3.14, etki: 0.259678 },
+      { sembol: "PRY", fonOrani: 2.56, kapanisMarji: 0.13, etki: 0.003328 },
 ];
 
 export default function PheEtkiAnaliziPage() {
@@ -72,7 +72,7 @@ export default function PheEtkiAnaliziPage() {
       slug="phe"
       rows={rows}
       toplamFonOrani={98.45}
-      toplamEtki={0.96}
+      toplamEtki={1.16}
       sonGuncelleme="10 Temmuz 2026"
       degisimVerisi={{
         yatirimciSayisi: {
