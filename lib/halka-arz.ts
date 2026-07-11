@@ -197,6 +197,18 @@ export function tasinmamisSluglar(): string[] {
   });
 }
 
+export function getSitemapTaslakIzahnameSluglari(): string[] {
+  return tumJsonSluglar().filter((slug) => {
+    if (statikSlugVar(slug)) return false;
+    const veri = halkaArzGetir(slug);
+    if (!veri) return false;
+    if (veri.seo?.contentStatus === "onayli") return false;
+    if (veri.seo?.robots?.index === false) return false;
+    if (veri.seo?.sitemap === false) return false;
+    return true;
+  });
+}
+
 /** Tek bir halka arz JSON'unu okur. Yoksa null döner. */
 export function halkaArzGetir(slug: string): HalkaArzVeri | null {
   const tamYol = path.join(HALKA_ARZ_DIZINI, `${slug}.json`);

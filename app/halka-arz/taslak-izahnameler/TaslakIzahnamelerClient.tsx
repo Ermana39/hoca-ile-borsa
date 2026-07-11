@@ -95,6 +95,7 @@ export default function TaslakIzahnamelerClient({
               <div key={`${item.klasor}-${index}`} className="space-y-3">
                 <Link
                   href={`/halka-arz/taslak-izahnameler/${item.klasor}`}
+                  prefetch={false}
                   className="flex items-center gap-4 rounded-xl border border-red-200 bg-red-50 px-4 py-4 text-base font-medium text-zinc-900 transition hover:bg-red-100"
                 >
                   <SirketLogo logo={item.logo} ad={item.label} />

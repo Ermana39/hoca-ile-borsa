@@ -11,7 +11,7 @@ import { getSitemapHisseSembolleri } from "@/lib/hisseler";
 import { getTemettuGecmisiOlanSembolleri } from "@/lib/hisse-temettu";
 import { ozgunTerimler } from "@/data/sozluk";
 import { getTumGunlukOzetler } from "@/lib/gunluk-ozet";
-import { tumJsonSluglar } from "@/lib/halka-arz";
+import { getSitemapTaslakIzahnameSluglari } from "@/lib/halka-arz";
 import { rehberler } from "@/lib/rehberler";
 
 const siteUrl = "https://www.hocaileborsa.com";
@@ -134,7 +134,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // JSON'a taşınmış halka arz detay sayfaları (dinamik [slug] şablonuyla
   // servis edilir; pageUpdates'te yer almadıkları için burada eklenir).
-  const halkaArzRoutes = tumJsonSluglar().map(
+  const halkaArzRoutes = getSitemapTaslakIzahnameSluglari().map(
     (slug) => `/halka-arz/taslak-izahnameler/${slug}`
   );
 

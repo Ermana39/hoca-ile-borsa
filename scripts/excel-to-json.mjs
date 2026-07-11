@@ -120,7 +120,7 @@ async function main() {
   }
 }
 
-async function triggerRevalidate(scope = "all") {
+async function triggerRevalidate(scope = "data") {
   const secret = process.env.REVALIDATE_SECRET;
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "http://localhost:3000";
 
@@ -151,7 +151,7 @@ async function triggerRevalidate(scope = "all") {
 }
 
 main()
-  .then(() => triggerRevalidate("all"))
+  .then(() => triggerRevalidate("data"))
   .catch((error) => {
     console.error("Excel JSON dönüşüm hatası:", error);
     process.exit(1);

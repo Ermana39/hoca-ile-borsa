@@ -73,6 +73,7 @@ function TaramaKutusu({
   return (
     <Link
       href={href}
+      prefetch={false}
       className="group flex flex-1 flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)]"
     >
       <div className="mb-4 flex items-center gap-3">
@@ -102,6 +103,7 @@ export default function GostergeTaramalariPage() {
         <section className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
+            prefetch={false}
             className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Ana Sayfa
@@ -109,6 +111,7 @@ export default function GostergeTaramalariPage() {
 
           <Link
             href="/borsa"
+            prefetch={false}
             className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Geri

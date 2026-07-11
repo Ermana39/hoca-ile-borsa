@@ -563,16 +563,16 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
             İlgili Fon Sayfaları
           </h2>
           <div className="mt-4 flex flex-wrap gap-3 text-sm font-semibold">
-            <Link href="/fonlar/getiri" className="rounded-xl bg-slate-100 px-4 py-2 text-slate-700 hover:bg-blue-50 hover:text-blue-700">
+            <Link href="/fonlar/getiri" prefetch={false} className="rounded-xl bg-slate-100 px-4 py-2 text-slate-700 hover:bg-blue-50 hover:text-blue-700">
               Fon getiri analizi
             </Link>
-            <Link href="/fonlar/tarihsel-veriler" className="rounded-xl bg-slate-100 px-4 py-2 text-slate-700 hover:bg-blue-50 hover:text-blue-700">
+            <Link href="/fonlar/tarihsel-veriler" prefetch={false} className="rounded-xl bg-slate-100 px-4 py-2 text-slate-700 hover:bg-blue-50 hover:text-blue-700">
               Fon tarihsel veriler
             </Link>
-            <Link href="/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler" className="rounded-xl bg-slate-100 px-4 py-2 text-slate-700 hover:bg-blue-50 hover:text-blue-700">
+            <Link href="/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler" prefetch={false} className="rounded-xl bg-slate-100 px-4 py-2 text-slate-700 hover:bg-blue-50 hover:text-blue-700">
               Fonların tercih ettiği hisseler
             </Link>
-            <Link href={pageUrl} className="rounded-xl bg-blue-50 px-4 py-2 text-blue-700">
+            <Link href={pageUrl} prefetch={false} className="rounded-xl bg-blue-50 px-4 py-2 text-blue-700">
               {kod} fon fiyat tahmini
             </Link>
           </div>

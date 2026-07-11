@@ -51,9 +51,7 @@ export async function generateMetadata({
     description: veri.baslikMeta.description,
     robots,
     alternates: {
-      canonical:
-        veri.seo?.canonical ||
-        `https://www.hocaileborsa.com/halka-arz/taslak-izahnameler/${slug}`,
+      canonical: `https://www.hocaileborsa.com/halka-arz/taslak-izahnameler/${slug}`,
     },
   };
 }
@@ -115,9 +113,7 @@ function sssUret(veri: HalkaArzVeri): { soru: string; cevap: string }[] {
 // Sayfadaki özet verilerden Article + FAQPage yapılandırılmış verisi üretir.
 // Yalnızca sayfada görünen, kesinleşmiş (bekleyen olmayan) değerler kullanılır.
 function jsonLdUret(veri: HalkaArzVeri, slug: string) {
-  const url =
-    veri.seo?.canonical ||
-    `https://www.hocaileborsa.com/halka-arz/taslak-izahnameler/${slug}`;
+  const url = `https://www.hocaileborsa.com/halka-arz/taslak-izahnameler/${slug}`;
 
   const article = {
     "@context": "https://schema.org",

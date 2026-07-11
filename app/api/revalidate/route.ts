@@ -15,8 +15,10 @@ function safeEqual(a: string, b: string) {
 // Belirli bir veri kategorisini veya tüm siteyi yeniden oluşturur.
 // Kullanım: POST /api/revalidate
 //   Header: x-secret: <REVALIDATE_SECRET>
-//   Body (isteğe bağlı): { "scope": "borsa" | "fonlar" | "faiz" | "haberler" | "all" }
-//   Scope belirtilmezse "all" varsayılır.
+//   Body (isteğe bağlı): { "scope": "borsa" | "fonlar" | "faiz" | "haberler" | "data" | "all" }
+//   Scope belirtilmezse Excel kaynaklı piyasa verileri için "data" varsayılır.
+
+const VALID_SCOPES = new Set(["borsa", "fonlar", "faiz", "haberler", "data", "all"]);
 
 const BORSA_PATHS = [
   "/borsa",
@@ -60,24 +62,28 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ message: "Yetkisiz" }, { status: 401 });
   }
 
-  let scope = "all";
+  let scope = "data";
   try {
     const body = await request.json() as { scope?: string };
     if (body?.scope) scope = body.scope;
   } catch {
-    // body yoksa veya JSON değilse "all" kullan
+    // body yoksa veya JSON değilse "data" kullan
+  }
+
+  if (!VALID_SCOPES.has(scope)) {
+    return NextResponse.json({ message: "Geçersiz scope", scope }, { status: 400 });
   }
 
   const revalidated: string[] = [];
 
-  if (scope === "borsa" || scope === "all") {
+  if (scope === "borsa" || scope === "data" || scope === "all") {
     for (const p of BORSA_PATHS) {
       revalidatePath(p);
       revalidated.push(p);
     }
   }
 
-  if (scope === "fonlar" || scope === "all") {
+  if (scope === "fonlar" || scope === "data" || scope === "all") {
     for (const p of FON_PATHS) {
       revalidatePath(p);
       revalidated.push(p);
@@ -87,7 +93,7 @@ export async function POST(request: NextRequest) {
 
   }
 
-  if (scope === "faiz" || scope === "all") {
+  if (scope === "faiz" || scope === "data" || scope === "all") {
     for (const p of FAIZ_PATHS) {
       revalidatePath(p);
       revalidated.push(p);

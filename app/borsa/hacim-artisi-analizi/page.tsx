@@ -42,6 +42,7 @@ function HacimKutusu({
   return (
     <Link
       href={href}
+      prefetch={false}
       className="group flex flex-col overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)]"
     >
       <div className="relative overflow-hidden bg-slate-100">
@@ -70,6 +71,7 @@ export default function HacimArtisiAnaliziPage() {
         <section className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
+            prefetch={false}
             className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Ana Sayfa
@@ -77,6 +79,7 @@ export default function HacimArtisiAnaliziPage() {
 
           <Link
             href="/borsa"
+            prefetch={false}
             className="rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Geri
