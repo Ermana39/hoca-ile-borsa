@@ -131,7 +131,7 @@ export default function HaberKapOzetiPage() {
                 Brisa, İzmit fabrikasında planlı bakım çalışmaları nedeniyle
                 lastik üretimine geçici süreyle ara verileceğini açıkladı. KAP
                 bildirimine göre duruş 28 Haziran 2026 Pazar günü başlayacak ve
-                7 Temmuz 2026 Salı günü saat 23:59'a kadar devam edecek.
+                7 Temmuz 2026 Salı günü saat 23:59&apos;a kadar devam edecek.
               </p>
 
               <div className="space-y-5">

@@ -151,7 +151,7 @@ export default function EkgyoHalkaliBatiIhalesiPage() {
                   Rakamlar neden önemli?
                 </h2>
                 <p>
-                  Arsa satışı karşılığı gelir paylaşımı modeli, EKGYO'nun proje
+                  Arsa satışı karşılığı gelir paylaşımı modeli, EKGYO&apos;nun proje
                   geliştirme stratejisinde önemli bir yer tutuyor. Bu modelde
                   toplam satış geliri, şirket payı oranı ve şirket payı toplam
                   geliri yatırımcıların yakından takip ettiği ana göstergeler
@@ -188,7 +188,7 @@ export default function EkgyoHalkaliBatiIhalesiPage() {
                   Şirket hakkında
                 </h2>
                 <p>
-                  Emlak Konut GYO, Türkiye'nin en büyük gayrimenkul yatırım
+                  Emlak Konut GYO, Türkiye&apos;nin en büyük gayrimenkul yatırım
                   ortaklıklarından biridir. Şirket, konut ve karma kullanım
                   projelerinde arsa geliştirme, gelir paylaşımı ve proje yönetimi
                   modeliyle faaliyet göstermektedir. Gayrimenkul sektöründeki
@@ -202,7 +202,7 @@ export default function EkgyoHalkaliBatiIhalesiPage() {
                   Değerlendirme
                 </h2>
                 <p>
-                  EKGYO'nun Halkalı Batı 1. Etap ihalesinde yüksek teklif
+                  EKGYO&apos;nun Halkalı Batı 1. Etap ihalesinde yüksek teklif
                   açıklaması, proje büyüklüğü ve şirket payı toplam geliri
                   nedeniyle pozitif tarafta okunabilecek bir gelişme. 2,726
                   milyar TL seviyesindeki şirket payı toplam geliri, portföyün
@@ -223,7 +223,7 @@ export default function EkgyoHalkaliBatiIhalesiPage() {
                 <p>
                   Bundan sonraki süreçte ihalenin kesinleşmesi, sözleşme
                   aşaması, proje takvimi ve satış sürecine ilişkin gelişmeler
-                  takip edilecek. EKGYO'nun yeni KAP bildirimleri, ihale
+                  takip edilecek. EKGYO&apos;nun yeni KAP bildirimleri, ihale
                   sonucunun finansal görünüm üzerindeki etkisini daha net hale
                   getirebilir.
                 </p>
@@ -247,7 +247,7 @@ export default function EkgyoHalkaliBatiIhalesiPage() {
               </p>
               <p className="mt-2 text-sm leading-7 text-emerald-800 md:text-base">
                 Pozitif — İhale büyüklüğü ve 2,726 milyar TL şirket payı toplam
-                geliri, EKGYO'nun gelir görünürlüğü açısından olumlu
+                geliri, EKGYO&apos;nun gelir görünürlüğü açısından olumlu
                 değerlendirilebilir.
               </p>
             </div>

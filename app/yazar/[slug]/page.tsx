@@ -152,6 +152,7 @@ export default async function YazarPage({
         <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_16px_rgba(15,23,42,0.07)]">
           <div className="p-6 md:p-10">
             <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={yazar.avatar}
                 alt={yazar.isim}

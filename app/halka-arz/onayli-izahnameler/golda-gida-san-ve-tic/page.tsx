@@ -283,6 +283,7 @@ function YouTubeVideoCards() {
             className="group overflow-hidden rounded-2xl border border-slate-200 bg-slate-50 transition hover:border-red-300 hover:bg-white hover:shadow-md"
           >
             <div className="relative aspect-video overflow-hidden bg-slate-200">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={`https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg`}
                 alt={video.title}

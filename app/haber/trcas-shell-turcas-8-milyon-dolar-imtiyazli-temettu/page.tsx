@@ -118,7 +118,7 @@ export default function HaberKapOzetiPage() {
 
           <div className="p-6 md:p-10">
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
-              Turcas'a Shell & Turcas'tan 8 Milyon Dolar İmtiyazlı Temettü
+              Turcas&apos;a Shell & Turcas&apos;tan 8 Milyon Dolar İmtiyazlı Temettü
             </h1>
 
             <div className="mb-4 flex flex-wrap items-center gap-3">
@@ -141,7 +141,7 @@ export default function HaberKapOzetiPage() {
               <p>
                 Turcas Holding, %30 oranındaki iştiraki Shell & Turcas Petrol
                 A.Ş. üzerinden 8 milyon ABD doları tutarında imtiyazlı temettü
-                ödemesi alacağını KAP'a bildirdi. Şirket açıklamasında ödemenin
+                ödemesi alacağını KAP&apos;a bildirdi. Şirket açıklamasında ödemenin
                 29 Haziran 2026 tarihinde yapılmasına karar verildiği belirtildi.
               </p>
 
@@ -170,7 +170,7 @@ export default function HaberKapOzetiPage() {
               </div>
 
               <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm font-medium leading-7 text-emerald-900 md:text-base">
-                Turcas Holding'in Shell & Turcas Petrol A.Ş.'den alacağı 8
+                Turcas Holding&apos;in Shell & Turcas Petrol A.Ş.&apos;den alacağı 8
                 milyon ABD doları tutarındaki imtiyazlı temettü, döviz bazlı
                 nakit girişi sağlaması nedeniyle şirket açısından pozitif
                 okunabilecek bir gelişme olarak öne çıkıyor.

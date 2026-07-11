@@ -124,8 +124,8 @@ export default function TurkcellKrediRevizyonuPage() {
                 Turkcell, China Development Bank ile imzalanan kredi paketinin
                 ikinci diliminde tutar ve faiz oranı revizyonuna gidildiğini
                 duyurdu. Şirketin KAP açıklamasına göre, ikinci dilim 1,23
-                milyar RMB'den 700 milyon RMB'ye düşürülürken, masraflar dahil
-                yıllık sabit faiz oranı yüzde 4,98'den yüzde 4,30'a indirildi.
+                milyar RMB&apos;den 700 milyon RMB&apos;ye düşürülürken, masraflar dahil
+                yıllık sabit faiz oranı yüzde 4,98&apos;den yüzde 4,30&apos;a indirildi.
               </p>
 
               <div className="space-y-5">

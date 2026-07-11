@@ -12,19 +12,6 @@ export const metadata: Metadata = {
   },
 };
 
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "buyuk" }) {
-  const alanClass =
-    variant === "buyuk"
-      ? "min-h-[220px] sm:min-h-[260px] lg:min-h-[320px]"
-      : "min-h-[110px] sm:min-h-[120px] lg:min-h-[140px]";
-
-  return (
-    <section aria-label="Reklam alanı" className={`w-full ${alanClass}`}>
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
-
 export default function BetaEnerjiVeTeknolojiASPage() {
   const summaryItems = [
     { label: "Talep Toplama Tarihi", value: "23-24-25 Haziran 2026" },
@@ -264,29 +251,6 @@ export default function BetaEnerjiVeTeknolojiASPage() {
     },
   ];
 
-  const oneCikanlar = [
-    {
-      title: "Talep Toplama",
-      value: "23-24-25 Haziran",
-      desc: "Beta Enerji ve Teknoloji A.Ş. halka arzında güncel talep toplama tarihleri 23-24-25 Haziran 2026 olarak açıklandı.",
-    },
-    {
-      title: "Katılım Endeksi",
-      value: "Uygun",
-      desc: "Güncel halka arz bilgilerine göre BETAE payları BIST Katılım Endeksi kriterlerine uygun olarak yer alıyor.",
-    },
-    {
-      title: "Dağıtım Şekli",
-      value: "Bireysele Eşit",
-      desc: "Yurt içi bireyselde bireysele eşit, yüksek başvurulu yatırımcı grubunda oransal dağıtım uygulanacak.",
-    },
-    {
-      title: "Halka Arz Büyüklüğü",
-      value: "2,43 Milyar TL",
-      desc: "60.750.000 lot ve 40,00 TL halka arz fiyatı üzerinden hesaplanan tahmini büyüklük.",
-    },
-  ];
-
   return (
     <main className="min-h-screen bg-[#f8fafc] text-slate-900">
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
@@ -348,7 +312,7 @@ export default function BetaEnerjiVeTeknolojiASPage() {
 
           <p className="mb-5 text-sm leading-7 text-slate-600">
             Beta Enerji ve Teknoloji A.Ş., Adana Hacı Sabancı Organize Sanayi
-            Bölgesi'nde yer alan 178.835 m²'lik tesisinde faaliyet gösteren;
+            Bölgesi&apos;nde yer alan 178.835 m²&apos;lik tesisinde faaliyet gösteren;
             elektrifikasyon, transformatör üretimi ve enerji altyapı ekipmanları
             alanında çalışan sanayi şirketlerinden biridir. Şirketin üretim
             odağında güç transformatörleri, yağlı ve kuru tip dağıtım
@@ -404,7 +368,7 @@ export default function BetaEnerjiVeTeknolojiASPage() {
                 5.750.000 adedi ortak satışı şeklinde sunulacak. Halka açıklık
                 oranının yüzde 15 olması beklenirken, şirket Katılım Endeksi
                 kriterlerine uygun olduğunu ve dağıtılabilir net dönem kârının
-                asgari yüzde 30'unu nakit temettü olarak dağıtmayı taahhüt
+                asgari yüzde 30&apos;unu nakit temettü olarak dağıtmayı taahhüt
                 ettiğini açıkladı.
               </p>
             </div>
@@ -425,7 +389,7 @@ export default function BetaEnerjiVeTeknolojiASPage() {
 
           <p className="mt-5 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-7 text-amber-950">
             Açıklamada ayrıca yeni kampüs yatırımının kapasite artışı, akıllı
-            şebekelere yönelik ürün geliştirme, 80'den fazla ülkeye ihracat
+            şebekelere yönelik ürün geliştirme, 80&apos;den fazla ülkeye ihracat
             deneyimi ve 2030 vizyonu kapsamında karbon emisyonunu azaltma
             hedefleriyle birlikte değerlendirildiği belirtildi.
           </p>
@@ -599,8 +563,8 @@ export default function BetaEnerjiVeTeknolojiASPage() {
               <div className="mt-4 rounded-2xl border border-blue-200 bg-blue-50 p-4 text-sm leading-6 text-blue-900">
                 SPK bültenindeki bilgiye göre 1 TL nominal değerli payların
                 satış fiyatı 40,00 TL olarak yer aldı. Mevcut ortaklardan Sabit
-                Dağsuyu'na ait 1.955.000 TL, Yusuf Cenç Dağsuyu'na ait
-                1.897.500 TL ve Hakkı Mert Dağsuyu'na ait 1.897.500 TL nominal
+                Dağsuyu&apos;na ait 1.955.000 TL, Yusuf Cenç Dağsuyu&apos;na ait
+                1.897.500 TL ve Hakkı Mert Dağsuyu&apos;na ait 1.897.500 TL nominal
                 değerli B grubu paylar halka arza konu edilecek.
               </div>
             </section>
@@ -698,7 +662,7 @@ export default function BetaEnerjiVeTeknolojiASPage() {
                 </table>
               </div>
               <div className="mt-5 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-7 text-amber-950">
-                Finansal tabloda toplam varlıkların 2024'ten 2026 ilk çeyreğine
+                Finansal tabloda toplam varlıkların 2024&apos;ten 2026 ilk çeyreğine
                 kadar belirgin şekilde büyüdüğü görülüyor. Duran varlıklardaki
                 artış şirketin yatırım ve kapasite tarafındaki genişlemesini
                 desteklerken, yükümlülüklerdeki yükseliş borçluluk tarafının da
@@ -721,14 +685,14 @@ export default function BetaEnerjiVeTeknolojiASPage() {
                 fiyatı 40,00 TL, toplam halka arz payı 60.750.000 lot ve tahmini
                 halka arz büyüklüğü 2,43 milyar TL seviyesindedir. Halka açıklık
                 oranının yüzde 15 olması sınırlı arz etkisini gündeme
-                getirirken, yurt içi bireysel yatırımcıya ayrılan yüzde 50'lik
+                getirirken, yurt içi bireysel yatırımcıya ayrılan yüzde 50&apos;lik
                 tahsisat ve bireysele eşit dağıtım yapısı küçük yatırımcı
                 açısından takip edilecek ana başlıklardan biridir. Halka arzın
                 büyük kısmının sermaye artırımı yoluyla yapılması şirket
                 kasasına kaynak girişi sağlayacak; ortak satışının daha sınırlı
                 kalması ise arz yapısının değerlendirilmesinde ayrıca not
-                edilmelidir. Fonun yüzde 45'inin büyüme yatırımlarına, yüzde
-                55'inin işletme sermayesine ayrılması; şirketin hem kapasite ve
+                edilmelidir. Fonun yüzde 45&apos;inin büyüme yatırımlarına, yüzde
+                55&apos;inin işletme sermayesine ayrılması; şirketin hem kapasite ve
                 yatırım planlarını hem de günlük operasyonel finansman ihtiyacını
                 desteklemeyi hedeflediğini gösteriyor. Finansal tarafta varlık
                 büyümesi güçlü görünse de yükümlülüklerdeki artış, esas faaliyet

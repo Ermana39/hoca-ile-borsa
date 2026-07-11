@@ -23,6 +23,29 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1117,
+    title: "Bu Hafta Fonların En Çok Aldığı Hisseler Hangileri Oldu?",
+    href: "/haber/haftalik-fonlarin-en-cok-aldigi-hisseler",
+    image: "/haftalik-fonlarin-en-cok-aldigi-hisseler.webp",
+    alt: "Bu hafta fonların en çok aldığı hisseler HEDEF OZATD EREGL KTLEV ODINE TEHOL ALKLC TUPRS GUNDG PEKGY EUPWR ASTOR",
+    publishedAt: "auto",
+    category: "piyasa-gundemi",
+    ilgiliHisseler: [
+      "HEDEF",
+      "OZATD",
+      "EREGL",
+      "KTLEV",
+      "ODINE",
+      "TEHOL",
+      "ALKLC",
+      "TUPRS",
+      "GUNDG",
+      "PEKGY",
+      "EUPWR",
+      "ASTOR",
+    ],
+  },
+  {
     id: 1116,
     title: "10.07.2026 Fonların Günlük Kapanış Değerlendirmesi: TLY, PHE, PBR, DFI",
     href: "/haber/10-temmuz-2026-fonlar-gunluk-kapanis-degerlendirmesi",

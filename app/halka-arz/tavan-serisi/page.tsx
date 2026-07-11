@@ -584,7 +584,7 @@ export default function HalkaArzTavanSerisiPage() {
           <p className="mt-3 text-sm leading-7 text-slate-600">
             Halka arz sonrası tavan serisi, yatırımcının ilgisini gösteren güçlü bir sinyal olabilir.
             Ancak çok hızlı primlenen hisselerde değerleme riski de artar. Bu yüzden tavan serisine
-            yalnızca "kaç gün tavan yaptı" diye bakmak yerine, fiyatın halka arz değerlemesinden ne
+            yalnızca &quot;kaç gün tavan yaptı&quot; diye bakmak yerine, fiyatın halka arz değerlemesinden ne
             kadar uzaklaştığını ve talebin hangi hacimle sürdüğünü izlemek gerekir.
           </p>
           <div className="mt-4 grid gap-3 md:grid-cols-2">

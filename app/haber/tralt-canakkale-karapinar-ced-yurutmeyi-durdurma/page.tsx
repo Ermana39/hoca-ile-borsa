@@ -126,7 +126,7 @@ export default function TraltCanakkaleKarapinarCedYurutmeyiDurdurmaPage() {
                 <p>
                   Şirket daha önce 30 Ekim 2025 tarihli KAP açıklamasında,
                   Çanakkale Belediye Başkanlığı tarafından Çanakkale 1. İdare
-                  Mahkemesi'nin 2025/1054 esas sayılı dosyası üzerinden dava
+                  Mahkemesi&apos;nin 2025/1054 esas sayılı dosyası üzerinden dava
                   açıldığını kamuoyuna duyurmuştu. Bu dava, Çanakkale Karapınar
                   Projesi için verilen ÇED olumlu kararının iptali talebine
                   dayanıyordu.
@@ -242,7 +242,7 @@ export default function TraltCanakkaleKarapinarCedYurutmeyiDurdurmaPage() {
                 <p>
                   Şirketin açıklamasına göre dosyada henüz nihai karar verilmiş
                   değil. Bundan sonraki süreçte yatırımcıların takip etmesi gereken
-                  başlık, Çanakkale 1. İdare Mahkemesi'nde yürüyen davanın esasına
+                  başlık, Çanakkale 1. İdare Mahkemesi&apos;nde yürüyen davanın esasına
                   ilişkin karar olacak. Şirketin bu sürece ilişkin yeni KAP
                   açıklamaları, olası itiraz veya yargı süreci gelişmeleri ve
                   projenin takvimine etkileri de ayrıca izlenecek.

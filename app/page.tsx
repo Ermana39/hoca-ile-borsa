@@ -358,15 +358,6 @@ function getSonGuncellemeler(): GuncellemeItem[] {
     }));
 }
 
-function getGuncellemeRenkleri() {
-  return {
-    card: "border-emerald-100 bg-gradient-to-br from-emerald-50 via-white to-teal-50 hover:border-emerald-300 hover:bg-emerald-50",
-    accent: "bg-emerald-600",
-    date: "bg-emerald-100 text-emerald-700 ring-emerald-200",
-    arrow: "bg-emerald-600 text-white",
-  };
-}
-
 function SonGuncellemelerBar({ items }: { items: GuncellemeItem[] }) {
   if (items.length === 0) {
     return (

@@ -247,6 +247,7 @@ export default function TedbirliHisselerPage() {
         </p>
 
         <div className="mb-8 text-sm font-semibold text-zinc-700">
+          Son güncelleme: {guncellemeTarihi}
         </div>
 
         <div className="rounded-2xl border border-zinc-200 bg-white">

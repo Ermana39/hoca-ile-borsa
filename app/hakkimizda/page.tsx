@@ -97,6 +97,7 @@ export default function HakkimizdaPage() {
               Kurucu &amp; Editör
             </h2>
             <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
                 src={yazar.avatar}
                 alt={yazar.isim}

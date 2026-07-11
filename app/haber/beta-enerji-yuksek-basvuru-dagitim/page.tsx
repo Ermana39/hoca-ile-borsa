@@ -492,6 +492,7 @@ export default function BetaEnerjiYuksekBasvuruDagitimPage() {
                     className="group relative block aspect-video overflow-hidden bg-black"
                     aria-label="Beta Enerji halka arz video değerlendirmesini YouTube'da izle"
                   >
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={youtubeVideo.thumbnail}
                       alt="Beta Enerji halka arz yüksek başvuru video kapak görseli"

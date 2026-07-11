@@ -17,6 +17,7 @@ export default function AuthorBox({
         className="shrink-0"
         aria-label={yazar.isim}
       >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src={yazar.avatar}
           alt={yazar.isim}

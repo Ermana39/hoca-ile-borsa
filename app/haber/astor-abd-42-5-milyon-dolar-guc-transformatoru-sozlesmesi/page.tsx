@@ -197,7 +197,7 @@ export default function AstorAbdGucTransformatoruPage() {
 
             <div className="space-y-6 text-base leading-8 text-slate-700 md:text-lg">
               <p>
-                Astor Enerji A.Ş. (<strong>ASTOR</strong>), Amerika'da yerleşik
+                Astor Enerji A.Ş. (<strong>ASTOR</strong>), Amerika&apos;da yerleşik
                 bir firma ile güç transformatörü tedarikine yönelik yeni sözleşme
                 imzaladığını açıkladı. Sözleşmenin toplam bedeli{" "}
                 <strong>42.510.595 ABD doları</strong> oldu.
@@ -231,7 +231,7 @@ export default function AstorAbdGucTransformatoruPage() {
 
               <Section title="Ne oldu?">
                 <p className="text-sm leading-7 text-slate-600 md:text-base">
-                  ASTOR, ABD'de yerleşik bir müşteriyle 100 MVA ile 350 MVA
+                  ASTOR, ABD&apos;de yerleşik bir müşteriyle 100 MVA ile 350 MVA
                   arasında değişen güç transformatörlerinin tedariki için
                   42,51 milyon dolarlık sözleşme imzaladı. Sözleşme 8 Temmuz
                   2026 tarihinde KAP üzerinden açıklandı.
@@ -278,7 +278,7 @@ export default function AstorAbdGucTransformatoruPage() {
                   gösteriyor.
                 </p>
                 <p className="mt-3 text-sm leading-7 text-slate-600 md:text-base">
-                  Müşterinin ABD'de yerleşik olması, şirketin uluslararası
+                  Müşterinin ABD&apos;de yerleşik olması, şirketin uluslararası
                   pazarlardaki iş akışı açısından da önemli. Sonraki süreçte
                   teslimatların planlanan takvimde gerçekleşmesi ve benzer ihracat
                   sözleşmelerinin devamı öne çıkacak.

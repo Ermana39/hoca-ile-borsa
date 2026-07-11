@@ -151,7 +151,7 @@ export default function HaberKapOzetiPage() {
             <div className="mt-6 space-y-6 text-base leading-8 text-slate-700 md:text-lg">
               <p>
                 Odine Solutions, Super Micro Computer, Inc. ile iş ortaklığı
-                anlaşması imzaladığını KAP'a bildirdi. Anlaşma; yapay zekâ,
+                anlaşması imzaladığını KAP&apos;a bildirdi. Anlaşma; yapay zekâ,
                 bulut, depolama ve 5G/Edge BT altyapıları alanlarında Türkiye
                 pazarına odaklanan ortak iş geliştirme faaliyetlerini kapsıyor.
               </p>
@@ -186,7 +186,7 @@ export default function HaberKapOzetiPage() {
               </div>
 
               <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm font-medium leading-7 text-emerald-900 md:text-base">
-                ODINE'nin Super Micro Computer ile yaptığı iş ortaklığı,
+                ODINE&apos;nin Super Micro Computer ile yaptığı iş ortaklığı,
                 şirketin ileri teknoloji çözümleri ve Türkiye pazarındaki
                 büyüme hedefleri açısından pozitif okunabilecek stratejik bir
                 gelişme olarak öne çıkıyor. Ancak finansal katkının netleşmesi

@@ -124,6 +124,7 @@ export default function DipZirveAnaliziPage() {
         </p>
 
         <div className="mb-8 text-sm font-semibold text-zinc-700">
+          Son güncelleme: {guncellemeTarihi}
         </div>
 
         <DipZirveTableClient rows={dipZirveVerileri} />

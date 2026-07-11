@@ -304,8 +304,8 @@ export default function TahvilHesaplayici() {
             <p>
               Bu hesaplayıcı, tahvili vade sonuna kadar taşıma varsayımıyla brüt kuponu, stopaj tutarını,
               net kupon gelirini, ana para farkını, basit getiri oranını ve vadeye kadar getiri oranını
-              birlikte gösterir. Böylece yalnızca "yıllık faiz kaç" sorusuna değil, "bu tahvili bu fiyattan
-              alırsam toplamda ne kadar kazanırım" sorusuna da cevap verir.
+              birlikte gösterir. Böylece yalnızca &quot;yıllık faiz kaç&quot; sorusuna değil, &quot;bu tahvili bu fiyattan
+              alırsam toplamda ne kadar kazanırım&quot; sorusuna da cevap verir.
             </p>
           </div>
         </section>

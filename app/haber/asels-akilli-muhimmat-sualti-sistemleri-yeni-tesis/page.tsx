@@ -130,8 +130,8 @@ export default function AselsAkilliMuhimmatSualtiSistemleriPage() {
                 <p>
                   ASELSAN, toplam 17.360 metrekare kapalı alana sahip yeni üretim
                   ve test merkezlerini devreye aldı. Açıklamada tesislerin
-                  "Akıllı Mühimmat ve Sualtı Sistemleri İlave Üretim ve Test
-                  Merkezleri" olarak adlandırıldığı belirtildi.
+                  &quot;Akıllı Mühimmat ve Sualtı Sistemleri İlave Üretim ve Test
+                  Merkezleri&quot; olarak adlandırıldığı belirtildi.
                 </p>
                 <p>
                   Şirket, yatırımın 40 milyon ABD Doları büyüklüğünde olduğunu

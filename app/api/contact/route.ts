@@ -89,7 +89,6 @@ export async function POST(request: NextRequest) {
     const body = await request.json();
 
     const website = String(body?.website || "").trim();
-    const startedAt = Number(body?.startedAt || 0);
 
     if (website) {
       addSecurityLog("contact_honeypot", ip, "Bot alanı dolu");

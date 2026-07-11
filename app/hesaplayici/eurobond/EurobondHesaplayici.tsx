@@ -125,7 +125,7 @@ export default function EurobondHesaplayici() {
               <input type="text" inputMode="decimal" value={vadeYil} onChange={(e) => setVadeYil(e.target.value)} className="w-full rounded-xl border border-zinc-300 px-4 py-3 outline-none" placeholder="Örn: 5" />
             </div>
             <div>
-              <label className="mb-2 block text-sm font-semibold text-zinc-700">Alış Fiyatı (Nominalin %'si)</label>
+              <label className="mb-2 block text-sm font-semibold text-zinc-700">Alış Fiyatı (Nominalin %&apos;si)</label>
               <input type="text" inputMode="decimal" value={alisFiyati} onChange={(e) => setAlisFiyati(e.target.value)} className="w-full rounded-xl border border-zinc-300 px-4 py-3 outline-none" placeholder="Örn: 98,50" />
             </div>
           </div>
@@ -162,7 +162,7 @@ export default function EurobondHesaplayici() {
             </div>
 
             <div className="mt-6 rounded-2xl border border-zinc-200 bg-zinc-50 p-4 text-sm text-zinc-600 space-y-2">
-              <div>Türkiye'de eurobond faiz geliri stopajdan muaftır. Satış kazancı gelir vergisine tabidir.</div>
+              <div>Türkiye&apos;de eurobond faiz geliri stopajdan muaftır. Satış kazancı gelir vergisine tabidir.</div>
               <div>Bu araç yatırım tavsiyesi değildir. Bilgilendirme amaçlıdır.</div>
             </div>
           </>

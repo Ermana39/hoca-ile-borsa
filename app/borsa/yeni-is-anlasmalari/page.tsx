@@ -239,6 +239,7 @@ export default function YeniIsAnlasmalariPage() {
         </p>
 
         <div className="mb-8 text-sm font-semibold text-zinc-700">
+          Son güncelleme: {guncellemeTarihi}
         </div>
 
         <section className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4">

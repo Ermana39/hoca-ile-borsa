@@ -1,5 +1,5 @@
 import Link from "next/link";
-import * as FaizAraclari from "@/components/faiz-hesaplayicilar";
+import { KrediHesaplayici } from "@/components/faiz-hesaplayicilar";
 import { getFaizData } from "@/lib/faiz-data";
 import { HesaplaCTA, TabloUstBilgi } from "@/components/IlgiliBolumler";
 import { HesaplayiciRehberi } from "@/components/HesaplayiciRehberi";
@@ -24,15 +24,6 @@ type BankaSatiri = {
 type GunlukOrtalamaSatiri = {
   tarih: string;
   ortalama: number;
-};
-
-type SheetData = {
-  rawRows?: (string | number | null)[][];
-};
-
-type FaizJsonData = {
-  guncellemeTarihi?: string;
-  sheets?: Record<string, SheetData>;
 };
 
 function cleanText(value: unknown) {
@@ -446,25 +437,15 @@ function TuketiciGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
 }
 
 function HesaplayiciAlani() {
-  const Comp =
-    (FaizAraclari as any).IhtiyacKredisiHesaplayici ??
-    (FaizAraclari as any).KrediHesaplayici ??
-    null;
-
-  if (!Comp) {
-    return (
-      <section className="rounded-2xl border border-zinc-200 bg-white p-6">
-        <h2 className="text-2xl font-bold text-zinc-900">
-          Tüketici Faizi Hesaplayıcı
-        </h2>
-        <p className="mt-3 text-sm text-zinc-600">
-          Hesaplayıcı bileşeni şu anda bulunamadı.
-        </p>
-      </section>
-    );
-  }
-
-  return <Comp />;
+  return (
+    <KrediHesaplayici
+      baslik="Tüketici Faizi Hesaplayıcı"
+      aciklama="İhtiyaç kredisi tutarı, aylık faiz oranı ve vade bilgisine göre tahmini taksit ve toplam ödeme hesaplanır."
+      varsayilanTutar={100_000}
+      varsayilanOran={4}
+      varsayilanVade={36}
+    />
+  );
 }
 
 export default async function TuketiciFaiziOranlariPage() {

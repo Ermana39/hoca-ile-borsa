@@ -119,7 +119,7 @@ export default function HaberPage() {
               <p>
                 Tera Finansal Yatırımlar Holding A.Ş. (TRHOL), Tera Yatırım
                 Menkul Değerler A.Ş. paylarının devralınmasına ilişkin önemli
-                bir açıklama yaptı. Şirket, Tera Yatırım sermayesinin %6,3'ünü
+                bir açıklama yaptı. Şirket, Tera Yatırım sermayesinin %6,3&apos;ünü
                 temsil eden B grubu payların devralınmasına yönelik sözleşmenin
                 imzalandığını ve pay devrinin önemli bölümünün tamamlandığını
                 duyurdu.
@@ -169,7 +169,7 @@ export default function HaberPage() {
               </div>
 
               <div className="rounded-xl border border-blue-200 bg-blue-50 p-4 text-sm font-medium leading-7 text-blue-900 md:text-base">
-                Kaynak: TRHOL tarafından 24 Haziran 2026 tarihinde KAP'a yapılan
+                Kaynak: TRHOL tarafından 24 Haziran 2026 tarihinde KAP&apos;a yapılan
                 özel durum açıklaması.
                 <br />
                 <a

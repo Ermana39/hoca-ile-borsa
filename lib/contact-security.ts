@@ -86,5 +86,5 @@ export function saveContactMessage(_data: {
   message: string;
   ip: string;
 }) {
-  return;
+  void _data;
 }

@@ -100,7 +100,7 @@ export default function InfoBedelsizSermayeArtirimiSpkBasvurusuPage() {
           <div className="p-5 md:p-8">
             <header>
               <h1 className="text-2xl font-bold leading-tight text-zinc-900 md:text-4xl">
-                INFO %100 Bedelsiz Sermaye Artırımı İçin SPK'ya Başvurdu
+                INFO %100 Bedelsiz Sermaye Artırımı İçin SPK&apos;ya Başvurdu
               </h1>
               <p className="mt-2 text-sm text-zinc-500">
                 <time dateTime={haberSaati}>{haberTarihi}</time> ·{" "}
@@ -116,9 +116,9 @@ export default function InfoBedelsizSermayeArtirimiSpkBasvurusuPage() {
             <div className="mt-5 space-y-5 text-base leading-8 text-zinc-700 md:text-lg">
               <p>
                 İnfo Yatırım Menkul Değerler A.Ş. (INFO), %100 oranındaki bedelsiz
-                sermaye artırımı için Sermaye Piyasası Kurulu'na başvuru yaptığını
+                sermaye artırımı için Sermaye Piyasası Kurulu&apos;na başvuru yaptığını
                 KAP üzerinden duyurdu. Şirket, çıkarılmış sermayesini 960.336.000
-                TL'den 1.920.672.000 TL'ye yükseltmeyi planlıyor.
+                TL&apos;den 1.920.672.000 TL&apos;ye yükseltmeyi planlıyor.
               </p>
 
               <section className="space-y-3">
@@ -129,17 +129,17 @@ export default function InfoBedelsizSermayeArtirimiSpkBasvurusuPage() {
                   INFO, 26 Haziran 2026 tarihli yönetim kurulu kararının ardından,
                   bedelsiz sermaye artırımı kapsamında ihraç belgesinin onaylanması
                   ve esas sözleşmenin sermaye maddesinin tadil edilmesi amacıyla
-                  SPK'ya başvurdu.
+                  SPK&apos;ya başvurdu.
                 </p>
                 <p>
                   Başvuruya göre şirketin mevcut sermayesi 960.336.000 TL seviyesinde
                   bulunuyor. Planlanan artırım tutarı yine 960.336.000 TL olacak ve
                   sermaye artırımının tamamlanması halinde çıkarılmış sermaye
-                  1.920.672.000 TL'ye ulaşacak.
+                  1.920.672.000 TL&apos;ye ulaşacak.
                 </p>
                 <p>
-                  Bedelsiz sermaye artırımı kapsamında artırımın 642.435.188 TL'lik
-                  kısmı özsermaye enflasyon düzeltme farklarından, 317.900.812 TL'lik
+                  Bedelsiz sermaye artırımı kapsamında artırımın 642.435.188 TL&apos;lik
+                  kısmı özsermaye enflasyon düzeltme farklarından, 317.900.812 TL&apos;lik
                   kısmı ise geçmiş yıl kârlarından karşılanacak.
                 </p>
               </section>
@@ -187,7 +187,7 @@ export default function InfoBedelsizSermayeArtirimiSpkBasvurusuPage() {
                   Değerlendirme
                 </h2>
                 <p>
-                  INFO'nun %100 bedelsiz sermaye artırımı başvurusu, yatırımcı algısı
+                  INFO&apos;nun %100 bedelsiz sermaye artırımı başvurusu, yatırımcı algısı
                   açısından pozitif izlenebilecek bir gelişme olarak değerlendirilebilir.
                   Sermayenin iki katına çıkarılması, şirketin özkaynak kalemlerini
                   sermaye yapısına yansıtması bakımından önem taşıyor.
@@ -211,7 +211,7 @@ export default function InfoBedelsizSermayeArtirimiSpkBasvurusuPage() {
                   Sırada ne var?
                 </h2>
                 <p>
-                  Bundan sonraki süreçte SPK'nın başvuruya ilişkin kararı, ihraç
+                  Bundan sonraki süreçte SPK&apos;nın başvuruya ilişkin kararı, ihraç
                   belgesinin onaylanıp onaylanmayacağı ve bedelsiz pay alma hakkı
                   kullanım tarihleri takip edilecek. Onay gelmeden hak kullanım
                   tarihinin kesinleştiği yönünde yorum yapılmamalıdır.
@@ -224,8 +224,8 @@ export default function InfoBedelsizSermayeArtirimiSpkBasvurusuPage() {
                 Haber özeti:
               </p>
               <p className="mt-2 text-sm leading-7 text-blue-800 md:text-base">
-                INFO, %100 bedelsiz sermaye artırımı için SPK'ya başvurdu. Şirket,
-                960.336.000 TL olan çıkarılmış sermayesini 1.920.672.000 TL'ye
+                INFO, %100 bedelsiz sermaye artırımı için SPK&apos;ya başvurdu. Şirket,
+                960.336.000 TL olan çıkarılmış sermayesini 1.920.672.000 TL&apos;ye
                 yükseltmeyi planlıyor.
               </p>
             </div>

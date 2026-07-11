@@ -106,6 +106,7 @@ export default function BugunOneCikanlar() {
               >
                 {kart.gorsel && (
                   <div className="relative aspect-[16/9] w-24 shrink-0 self-center overflow-hidden bg-slate-100 sm:w-28">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={kart.gorsel}
                       alt={kart.alt || kart.baslik}

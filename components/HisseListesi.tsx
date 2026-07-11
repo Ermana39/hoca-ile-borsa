@@ -1,19 +1,18 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useMemo, useState } from "react";
 
 type HisseOzet = { kod: string; sirketAdi: string; logo?: string };
 
-export default function HisseListesi({ hisseler }: { hisseler: HisseOzet[] }) {
-  const [arama, setArama] = useState("");
-
-  // 404 sayfası gibi yerlerden gelen ?q= araması varsa başlangıç değeri olarak al.
-  // window kullanıldığı için useSearchParams'a (Suspense gereksinimi) gerek kalmaz.
-  useEffect(() => {
-    const q = new URLSearchParams(window.location.search).get("q");
-    if (q) setArama(q);
-  }, []);
+export default function HisseListesi({
+  hisseler,
+  initialArama = "",
+}: {
+  hisseler: HisseOzet[];
+  initialArama?: string;
+}) {
+  const [arama, setArama] = useState(initialArama);
 
   const filtreli = useMemo(() => {
     const q = arama.trim().toLocaleLowerCase("tr");

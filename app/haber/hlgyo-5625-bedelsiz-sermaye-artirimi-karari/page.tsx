@@ -101,7 +101,7 @@ export default function HaberKapOzetiPage() {
 
           <div className="p-6 md:p-10">
             <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl lg:text-4xl">
-              HLGYO'dan %56,25 Bedelsiz Sermaye Artırımı Kararı
+              HLGYO&apos;dan %56,25 Bedelsiz Sermaye Artırımı Kararı
             </h1>
 
             <div className="mb-4 flex flex-wrap items-center gap-3">
@@ -123,8 +123,8 @@ export default function HaberKapOzetiPage() {
             <div className="mt-6 space-y-6 text-base leading-8 text-slate-700 md:text-lg">
               <p>
                 Halk GYO, 2025 yılı dönem kârından karşılanmak üzere bedelsiz
-                sermaye artırımı kararı aldığını KAP'a bildirdi. Şirketin
-                mevcut sermayesinin 3,84 milyar TL'den 6 milyar TL'ye
+                sermaye artırımı kararı aldığını KAP&apos;a bildirdi. Şirketin
+                mevcut sermayesinin 3,84 milyar TL&apos;den 6 milyar TL&apos;ye
                 yükseltilmesi ve toplam bedelsiz pay alma oranının %56,25 olması
                 planlanıyor.
               </p>
@@ -155,7 +155,7 @@ export default function HaberKapOzetiPage() {
               </div>
 
               <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm font-medium leading-7 text-emerald-900 md:text-base">
-                HLGYO'nun %56,25 oranındaki bedelsiz sermaye artırımı kararı,
+                HLGYO&apos;nun %56,25 oranındaki bedelsiz sermaye artırımı kararı,
                 hisse sayısında artış ve fiyatın teknik olarak bölünmesi
                 açısından yatırımcıların takip etmesi gereken önemli bir sermaye
                 işlemi olarak öne çıkıyor.

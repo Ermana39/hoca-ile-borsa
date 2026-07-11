@@ -8,19 +8,6 @@ export const metadata: Metadata = {
     "Ekol Girişim Sermayesi Yatırım Ortaklığı A.Ş. halka arz detayları, taslak izahname özeti, halka arz tarihi, fiyat aralığı, lot miktarı, dağıtım yöntemi, fon kullanım alanları ve finansal veriler.",
 };
 
-function ReklamAlani({ variant = "yatay" }: { variant?: "yatay" | "buyuk" }) {
-  const alanClass =
-    variant === "buyuk"
-      ? "min-h-[220px] sm:min-h-[260px] lg:min-h-[320px]"
-      : "min-h-[110px] sm:min-h-[120px] lg:min-h-[140px]";
-
-  return (
-    <section aria-label="Reklam alanı" className={`w-full ${alanClass}`}>
-      <div className={`w-full ${alanClass}`} />
-    </section>
-  );
-}
-
 export default function EkolGirisimSermayesiYatirimOrtakligiASPage() {
   const summaryItems = [
     { label: "Halka Arz Tarihi", value: "Hazırlanıyor" },
@@ -328,7 +315,7 @@ export default function EkolGirisimSermayesiYatirimOrtakligiASPage() {
                 <div className="rounded-2xl border border-blue-200 bg-blue-50 p-4">
                   <div className="text-sm font-semibold text-blue-800">Fiyat İstikrarı</div>
                   <p className="mt-2 text-sm text-blue-900">
-                    30 gün, brüt halka arz gelirinin %20'si.
+                    30 gün, brüt halka arz gelirinin %20&apos;si.
                   </p>
                 </div>
 

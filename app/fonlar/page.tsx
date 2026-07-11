@@ -174,6 +174,7 @@ export default function FonlarPage() {
               >
                 <div className="w-full">
                   <div className="overflow-hidden rounded-t-2xl bg-zinc-100">
+                    {/* eslint-disable-next-line @next/next/no-img-element */}
                     <img
                       src={video.image}
                       alt={video.alt}

@@ -132,7 +132,7 @@ export default function BesHesaplayici() {
 
           <label className="flex cursor-pointer items-center gap-3 rounded-xl border border-zinc-300 bg-white px-4 py-3 text-sm">
             <input type="checkbox" checked={devletKatkisi} onChange={(e) => setDevletKatkisi(e.target.checked)} />
-            Devlet katkısını dahil et (katkı payının %25'i)
+            Devlet katkısını dahil et (katkı payının %25&apos;i)
           </label>
         </div>
 

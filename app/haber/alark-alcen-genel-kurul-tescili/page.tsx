@@ -173,7 +173,7 @@ export default function HaberPage() {
               </div>
 
               <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm font-medium leading-7 text-slate-700 md:text-base">
-                Kaynak: ALARK tarafından 25 Haziran 2026 tarihinde KAP'a yapılan
+                Kaynak: ALARK tarafından 25 Haziran 2026 tarihinde KAP&apos;a yapılan
                 özel durum açıklaması.
                 <br />
                 <a

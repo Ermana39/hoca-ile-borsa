@@ -1,5 +1,5 @@
 import Link from "next/link";
-import * as FaizAraclari from "@/components/faiz-hesaplayicilar";
+import { KrediHesaplayici } from "@/components/faiz-hesaplayicilar";
 import { getFaizData } from "@/lib/faiz-data";
 import { HesaplaCTA, TabloUstBilgi } from "@/components/IlgiliBolumler";
 import { HesaplayiciRehberi } from "@/components/HesaplayiciRehberi";
@@ -24,15 +24,6 @@ type BankaSatiri = {
 type GunlukOrtalamaSatiri = {
   tarih: string;
   ortalama: number;
-};
-
-type SheetData = {
-  rawRows?: (string | number | null)[][];
-};
-
-type FaizJsonData = {
-  guncellemeTarihi?: string;
-  sheets?: Record<string, SheetData>;
 };
 
 function cleanText(value: unknown) {
@@ -446,26 +437,15 @@ function TasitGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
 }
 
 function HesaplayiciAlani() {
-  const Comp =
-    (FaizAraclari as any).TasitKredisiHesaplamaAraci ??
-    (FaizAraclari as any).TasitKredisiHesaplayici ??
-    (FaizAraclari as any).KrediHesaplayici ??
-    null;
-
-  if (!Comp) {
-    return (
-      <section className="rounded-2xl border border-zinc-200 bg-white p-6">
-        <h2 className="text-2xl font-bold text-zinc-900">
-          Taşıt Kredisi Hesaplayıcı
-        </h2>
-        <p className="mt-3 text-sm text-zinc-600">
-          Hesaplayıcı bileşeni şu anda bulunamadı.
-        </p>
-      </section>
-    );
-  }
-
-  return <Comp />;
+  return (
+    <KrediHesaplayici
+      baslik="Taşıt Kredisi Hesaplayıcı"
+      aciklama="Taşıt kredisi tutarı, aylık faiz oranı ve vade bilgisine göre tahmini taksit ve toplam ödeme hesaplanır."
+      varsayilanTutar={1_000_000}
+      varsayilanOran={3.5}
+      varsayilanVade={48}
+    />
+  );
 }
 
 export default async function TasitKredisiOranlariPage() {

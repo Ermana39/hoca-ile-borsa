@@ -26,15 +26,6 @@ type GunlukOrtalamaSatiri = {
   ortalama: number;
 };
 
-type SheetData = {
-  rawRows?: (string | number | null)[][];
-};
-
-type FaizJsonData = {
-  guncellemeTarihi?: string;
-  sheets?: Record<string, SheetData>;
-};
-
 function cleanText(value: unknown) {
   return String(value ?? "").trim();
 }

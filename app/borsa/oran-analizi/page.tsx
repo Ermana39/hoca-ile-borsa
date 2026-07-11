@@ -98,6 +98,10 @@ export default function OranAnaliziPage() {
             toplu şekilde inceleyebilir ve farklı şirketleri daha hızlı
             karşılaştırabilirsiniz. Ekranı sağa kaydırarak diğer sütunları inceleyebilirsiniz.
           </p>
+
+          <div className="mt-4 text-sm font-semibold text-zinc-700">
+            Son güncelleme: {guncellemeTarihi}
+          </div>
         </section>
 
         <section className="py-6">
