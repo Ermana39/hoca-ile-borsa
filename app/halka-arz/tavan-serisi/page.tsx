@@ -34,8 +34,8 @@ const isveaHalkaArz = {
   katilimciSayisi: "901.609",
   dagitimSekli: "BİREYSELE %60",
   arzFiyati: "20.90",
-  guncelFiyat: "22.98",
-  marj: "10%",
+  guncelFiyat: "25.26",
+  marj: "21%",
   konsorsiyum: "AHLATÇI-HALK",
 };
 
@@ -45,8 +45,8 @@ const ekimHalkaArz = {
   katilimciSayisi: "707.851",
   dagitimSekli: "BİREYSELE %70",
   arzFiyati: "30.26",
-  guncelFiyat: "25.72",
-  marj: "-15%",
+  guncelFiyat: "23.16",
+  marj: "-23%",
   konsorsiyum: "AK-VAKIF",
 };
 
@@ -56,8 +56,8 @@ const goldaHalkaArz = {
   katilimciSayisi: "749.674",
   dagitimSekli: "TAMAMEN EŞİT",
   arzFiyati: "9.20",
-  guncelFiyat: "12.24",
-  marj: "33%",
+  guncelFiyat: "13.46",
+  marj: "46%",
   konsorsiyum: "GEDİK",
 };
 
@@ -67,8 +67,8 @@ const orzaxHalkaArz = {
   katilimciSayisi: "974.597",
   dagitimSekli: "BİREYSELE %57",
   arzFiyati: "69.00",
-  guncelFiyat: "89.15",
-  marj: "29%",
+  guncelFiyat: "98.05",
+  marj: "42%",
   konsorsiyum: "İNFO",
 };
 
@@ -78,8 +78,8 @@ const sohoeHalkaArz = {
   katilimciSayisi: "660.121",
   dagitimSekli: "TAMAMEN EŞİT",
   arzFiyati: "15.00",
-  guncelFiyat: "13.36",
-  marj: "-11%",
+  guncelFiyat: "13.85",
+  marj: "-8%",
   konsorsiyum: "İNTEGRAL",
 };
 
@@ -90,28 +90,28 @@ const guncelHalkaArzVerileri: Record<
     marj: string;
   }
 > = {
-  ISVEA: { guncelFiyat: "22.98", marj: "10%" },
-  EKIM: { guncelFiyat: "25.72", marj: "-15%" },
-  GOLDA: { guncelFiyat: "12.24", marj: "33%" },
-  ORZAX: { guncelFiyat: "89.15", marj: "29%" },
-  SOHOE: { guncelFiyat: "13.36", marj: "-11%" },
-  BETAE: { guncelFiyat: "85.55", marj: "114%" },
-  EKDMR: { guncelFiyat: "55.05", marj: "23%" },
-  AAGYO: { guncelFiyat: "14.95", marj: "-29%" },
-  MCARD: { guncelFiyat: "147.00", marj: "84%" },
-  LXGYO: { guncelFiyat: "13.36", marj: "11%" },
-  GENKM: { guncelFiyat: "12.91", marj: "18%" },
-  SVGYO: { guncelFiyat: "13.86", marj: "281%" },
-  EMPAE: { guncelFiyat: "71.50", marj: "225%" },
-  ATATR: { guncelFiyat: "15.10", marj: "35%" },
-  BESTE: { guncelFiyat: "30.72", marj: "109%" },
-  AKHAN: { guncelFiyat: "36.54", marj: "69%" },
-  NETCD: { guncelFiyat: "146.90", marj: "219%" },
-  UCAYM: { guncelFiyat: "28.76", marj: "60%" },
-  ZGYO: { guncelFiyat: "37.32", marj: "281%" },
-  FRMPL: { guncelFiyat: "33.48", marj: "12%" },
-  MEYSU: { guncelFiyat: "12.65", marj: "69%" },
-  ARFYE: { guncelFiyat: "30.20", marj: "55%" },
+  ISVEA: { guncelFiyat: "25.26", marj: "21%" },
+  EKIM: { guncelFiyat: "23.16", marj: "-23%" },
+  GOLDA: { guncelFiyat: "13.46", marj: "46%" },
+  ORZAX: { guncelFiyat: "98.05", marj: "42%" },
+  SOHOE: { guncelFiyat: "13.85", marj: "-8%" },
+  BETAE: { guncelFiyat: "94.10", marj: "135%" },
+  EKDMR: { guncelFiyat: "55.50", marj: "24%" },
+  AAGYO: { guncelFiyat: "14.82", marj: "-30%" },
+  MCARD: { guncelFiyat: "144.50", marj: "81%" },
+  LXGYO: { guncelFiyat: "13.20", marj: "9%" },
+  GENKM: { guncelFiyat: "12.73", marj: "16%" },
+  SVGYO: { guncelFiyat: "12.48", marj: "243%" },
+  EMPAE: { guncelFiyat: "73.10", marj: "233%" },
+  ATATR: { guncelFiyat: "14.55", marj: "30%" },
+  BESTE: { guncelFiyat: "30.26", marj: "106%" },
+  AKHAN: { guncelFiyat: "35.98", marj: "67%" },
+  NETCD: { guncelFiyat: "149.50", marj: "225%" },
+  UCAYM: { guncelFiyat: "29.38", marj: "64%" },
+  ZGYO: { guncelFiyat: "38.64", marj: "295%" },
+  FRMPL: { guncelFiyat: "33.18", marj: "11%" },
+  MEYSU: { guncelFiyat: "12.50", marj: "67%" },
+  ARFYE: { guncelFiyat: "30.32", marj: "56%" },
 };
 
 const halkaArzVerileri = [

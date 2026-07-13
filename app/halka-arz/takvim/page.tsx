@@ -5,7 +5,7 @@ import { bekleyenDeger, halkaArzGetir } from "@/lib/halka-arz";
 const canonical = "https://www.hocaileborsa.com/halka-arz/takvim";
 const title = "Halka Arz Takvimi 2026 | Güncel Talep ve İşlem Tarihleri";
 const description =
-  "Güncel halka arz takvimi: Bu hafta talep toplayan Saat ve Saat (SSAAT), Şa-Ra Enerji (SARAE) ile işleme başlayacak ORZAX, GOLDA, EKIM ve ISVEA tarihleri.";
+  "Güncel halka arz takvimi: 16 Temmuz 2026 tarihinde işleme başlayacak Saat ve Saat (SSAAT) ile işlem tarihi açıklanması beklenen Şa-Ra İnşaat (SARAE) halka arzı.";
 
 export const metadata: Metadata = {
   title,
@@ -17,10 +17,10 @@ export const metadata: Metadata = {
     "bu hafta halka arz",
     "SSAAT halka arz",
     "SARAE halka arz",
-    "ORZAX işlem tarihi",
-    "GOLDA işlem tarihi",
-    "EKIM işlem tarihi",
-    "ISVEA işlem tarihi",
+    "SSAAT işlem tarihi",
+    "SARAE işlem tarihi",
+    "Saat ve Saat halka arz",
+    "Şa-Ra İnşaat halka arz",
   ],
   openGraph: { title, description, url: canonical, type: "website" },
 };
@@ -48,41 +48,18 @@ type TakvimSatiri = {
   talepSaatleri?: string;
 };
 
-const talepToplamaTakvimi: TalepToplamaArzi[] = [
-  {
-    slug: "saat-ve-saat-san-ve-tic",
-    tarih: "06-07-08 Temmuz 2026",
-    durum: "Talep topluyor",
-    talepSaatleri: "09:00 - 17:00",
-  },
-  {
-    slug: "sa-ra-enerji-insaat-tic-ve-san",
-    tarih: "08-09-10 Temmuz 2026",
-    durum: "Talep toplayacak",
-    talepSaatleri: "09:00 - 17:00",
-  },
-];
+const talepToplamaTakvimi: TalepToplamaArzi[] = [];
 
 const islemBaslangiciTakvimi: TakvimSirketi[] = [
   {
-    slug: "orzaks-ilac-ve-kimya-san-tic",
-    tarih: "07 Temmuz 2026 Salı",
+    slug: "saat-ve-saat-san-ve-tic",
+    tarih: "16 Temmuz 2026 Perşembe",
     durum: "İşleme başlayacak",
   },
   {
-    slug: "golda-gida-san-ve-tic",
-    tarih: "08 Temmuz 2026 Çarşamba",
-    durum: "İşleme başlayacak",
-  },
-  {
-    slug: "ekim-turizm-tic-ve-san",
-    tarih: "09 Temmuz 2026 Perşembe",
-    durum: "İşleme başlayacak",
-  },
-  {
-    slug: "isvea-seramik-ve-banyo-urunleri-sanayi",
-    tarih: "10 Temmuz 2026 Cuma",
-    durum: "İşleme başlayacak",
+    slug: "sa-ra-enerji-insaat-tic-ve-san",
+    tarih: "İşlem tarihi açıklanması bekleniyor",
+    durum: "İşlem tarihi bekleniyor",
   },
 ];
 
@@ -141,12 +118,12 @@ export default function HalkaArzTakvimPage() {
     {
       soru: "Bu hafta hangi halka arzlar talep topluyor?",
       cevap:
-        "Saat ve Saat (SSAAT) halka arzı 06-07-08 Temmuz 2026 tarihlerinde, Şa-Ra Enerji (SARAE) halka arzı ise 08-09-10 Temmuz 2026 tarihlerinde talep topluyor.",
+        "Bu hafta yeni talep toplama süreci bulunmuyor. Takvimde 16 Temmuz 2026 tarihinde işleme başlayacak Saat ve Saat (SSAAT) ile işlem tarihi açıklanması beklenen Şa-Ra İnşaat (SARAE) öne çıkıyor.",
     },
     {
       soru: "Bu hafta hangi halka arzlar işleme başlayacak?",
       cevap:
-        "ORZAX 07 Temmuz 2026 Salı, GOLDA 08 Temmuz 2026 Çarşamba, EKIM 09 Temmuz 2026 Perşembe ve ISVEA 10 Temmuz 2026 Cuma günü Borsa İstanbul'da işleme başlayacak.",
+        "Saat ve Saat (SSAAT) halka arzının 16 Temmuz 2026 Perşembe günü Borsa İstanbul’da işleme başlaması bekleniyor. Şa-Ra İnşaat (SARAE) halka arzında ise işlem başlangıç tarihinin açıklanması bekleniyor.",
     },
     {
       soru: "SPK onaylı izahname bölümünde neden az şirket var?",
@@ -208,9 +185,9 @@ export default function HalkaArzTakvimPage() {
             Halka Arz Takvimi 2026
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 md:text-base">
-            Bu sayfa yalnızca güncel halka arz akışını gösterir: bu hafta talep
-            toplayan şirketler, önümüzdeki işlem başlangıçları ve bu hisselere
-            ait onaylı izahname bağlantıları. Eski halka arzlar ana takvimden
+            Bu sayfa yalnızca güncel halka arz akışını gösterir: bu hafta işleme
+            başlayacak şirketler, işlem tarihi açıklanması beklenen halka arzlar
+            ve bu hisselere ait onaylı izahname bağlantıları. Eski halka arzlar ana takvimden
             çıkarılmıştır.
           </p>
         </header>

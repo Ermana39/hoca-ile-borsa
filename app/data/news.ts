@@ -23,6 +23,36 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1127,
+    title: "Şa-Ra Enerji Halka Arz Sonuçları Açıklandı: 729.560 Yatırımcıya Dağıtım",
+    href: "/haber/sarae-halka-arz-sonuclari-aciklandi",
+    image: "/sarae-halka-arz-sonuclari-aciklandi.webp",
+    alt: "Şa-Ra Enerji SARAE halka arz sonuçları",
+    publishedAt: "2026-07-13T17:30:59+03:00",
+    category: "halka-arz",
+    ilgiliHisseler: ["SARAE"],
+  },
+  {
+    id: 1126,
+    title: "AKSEN Ghana Kumasi Santrali 179 MW Kurulu Güce Ulaştı",
+    href: "/haber/aksen-ghana-kumasi-santrali-179-mw-kurulu-guce-ulasti",
+    image: "/aksen-ghana-kumasi-santrali-179-mw-kurulu-guce-ulasti.webp",
+    alt: "AKSEN Ghana Kumasi santrali 179 MW kurulu güce ulaştı",
+    publishedAt: "2026-07-13T16:26:46+03:00",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["AKSEN"],
+  },
+  {
+    id: 1125,
+    title: "SDTTR 5,35 Milyon Dolarlık Savunma Sistemleri Sözleşmesi İmzaladı",
+    href: "/haber/sdttr-5-35-milyon-dolar-savunma-sistemleri-sozlesmesi",
+    image: "/sdttr-5-35-milyon-dolar-savunma-sistemleri-sozlesmesi.webp",
+    alt: "SDTTR 5,35 milyon dolarlık savunma sistemleri sözleşmesi",
+    publishedAt: "2026-07-13T15:37:50+03:00",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["SDTTR"],
+  },
+  {
     id: 1124,
     title: "MIATK Bağlı Ortaklığı Tripy, CalmCar ile Robotaxi İş Birliği İmzaladı",
     href: "/haber/miatk-tripy-calmcar-robotaxi-is-birligi",
