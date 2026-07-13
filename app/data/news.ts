@@ -23,6 +23,26 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1119,
+    title: "ARDYZ Hatay EDS Projesini Devreye Aldı",
+    href: "/haber/ardyz-hatay-eds-projesi-devreye-alindi",
+    image: "/ardyz-hatay-eds-projesi-devreye-alindi.webp",
+    alt: "ARDYZ Hatay EDS projesi devreye alındı",
+    publishedAt: "2026-07-13T09:15:09+03:00",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["ARDYZ"],
+  },
+  {
+    id: 1118,
+    title: "GLCVY Denizbank’ın 1,24 Milyar TL’lik Alacak Portföyü İhalesini Kazandı",
+    href: "/haber/glcvy-denizbank-1-24-milyar-tl-alacak-portfoyu-ihalesi",
+    image: "/glcvy-denizbank-1-24-milyar-tl-alacak-portfoyu-ihalesi.webp",
+    alt: "GLCVY Denizbank 1,24 milyar TL alacak portföyü ihalesi",
+    publishedAt: "2026-07-13T08:56:48+03:00",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["GLCVY"],
+  },
+  {
     id: 1117,
     title: "Bu Hafta Fonların En Çok Aldığı Hisseler Hangileri Oldu?",
     href: "/haber/haftalik-fonlarin-en-cok-aldigi-hisseler",
