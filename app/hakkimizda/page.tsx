@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: "Hakkımızda | Hoca İle Borsa",
     description:
       "Hoca İle Borsa; borsa, halka arz, temettü ve finans içerikleri üreten bağımsız bir platform. Kurucu, yayın ilkeleri ve veri kaynakları.",
-    images: [{ url: `${siteUrl}/banner.png` }],
+    images: [{ url: `${siteUrl}/banner.webp` }],
   },
 };
 

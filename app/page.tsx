@@ -194,7 +194,7 @@ function ViopEgitimBanner() {
         className="group block overflow-hidden rounded-2xl shadow-[0_10px_35px_rgba(15,23,42,0.12)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_45px_rgba(15,23,42,0.18)] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
       >
         <Image
-          src="/viop-egitim-banner.webp"
+          src="/viop-egitim-banner.png"
           alt="Yaşayan VİOP eğitim seti lansman bannerı"
           width={2112}
           height={512}
@@ -423,7 +423,7 @@ export default function HomePage() {
         <section className="px-4 pt-5 md:px-6 md:pt-6">
           <div className="overflow-hidden rounded-2xl">
             <Image
-              src="/banner.wep"
+              src="/banner.webp"
               alt="Hoca İle Borsa banner görseli"
               width={1228}
               height={414}

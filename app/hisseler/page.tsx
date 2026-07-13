@@ -19,14 +19,14 @@ export const metadata: Metadata = {
     title: "Hisse Künyeleri — BIST Şirketleri | Hoca İle Borsa",
     description:
       "Borsa İstanbul şirketleri için şirket profili, ortaklık yapısı, iştirakler, temettü geçmişi ve önemli KAP gelişmeleri.",
-    images: [{ url: `${siteUrl}/banner.png` }],
+    images: [{ url: `${siteUrl}/banner.webp` }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Hisse Künyeleri — BIST Şirketleri | Hoca İle Borsa",
     description:
       "Borsa İstanbul şirketleri için şirket profili, ortaklık yapısı, iştirakler, temettü geçmişi ve önemli KAP gelişmeleri.",
-    images: [`${siteUrl}/banner.png`],
+    images: [`${siteUrl}/banner.webp`],
   },
 };
 

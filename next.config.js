@@ -2,7 +2,7 @@ const ONE_YEAR_CACHE = "public, max-age=31536000, immutable";
 
 const stableImageCacheFiles = [
   "/favicon.ico",
-  "/banner.png",
+  "/banner.webp",
 
   "/Guclu-trend-ve-momentum-taramasi.png",
 ];

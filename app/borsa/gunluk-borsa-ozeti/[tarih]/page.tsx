@@ -284,7 +284,7 @@ function GunlukOzetIcerik({ ozet }: { ozet: GunlukOzet }) {
     publisher: {
       "@type": "Organization",
       name: "Hoca ile Borsa",
-      logo: { "@type": "ImageObject", url: `${SITE}/banner.png` },
+      logo: { "@type": "ImageObject", url: `${SITE}/banner.webp` },
     },
   };
 

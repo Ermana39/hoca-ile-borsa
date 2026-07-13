@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     title: "Künye | Hoca İle Borsa",
     description:
       "Hoca İle Borsa yayın bilgileri, editör bilgisi, iletişim kanalları ve veri kaynakları.",
-    images: [{ url: `${siteUrl}/banner.png` }],
+    images: [{ url: `${siteUrl}/banner.webp` }],
   },
 };
 

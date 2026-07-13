@@ -55,7 +55,7 @@ export const metadata: Metadata = {
       "Türkiye borsası, halka arz haberleri, temettü takvimi, yatırım fonları ve mevduat faiz oranlarını takip edebileceğiniz kapsamlı finans platformu.",
     images: [
       {
-        url: "/banner.png",
+        url: "/banner.webp",
         width: 1200,
         height: 630,
         alt: "Hoca İle Borsa - Finans Platformu",
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     title: "Hoca İle Borsa - Borsa, Halka Arz ve Finans Analizi",
     description:
       "Türkiye borsası, halka arz haberleri, temettü takvimi, yatırım fonları ve mevduat faiz oranlarını takip edin.",
-    images: ["/banner.png"],
+    images: ["/banner.webp"],
   },
   other: {
     "google-adsense-account": "ca-pub-9613627671991162",

@@ -561,13 +561,13 @@ export async function generateMetadata({
       url,
       title: baslik,
       description: aciklama,
-      images: [{ url: `${siteUrl}/banner.png` }],
+      images: [{ url: `${siteUrl}/banner.webp` }],
     },
     twitter: {
       card: "summary_large_image",
       title: baslik,
       description: aciklama,
-      images: [`${siteUrl}/banner.png`],
+      images: [`${siteUrl}/banner.webp`],
     },
   };
 }
