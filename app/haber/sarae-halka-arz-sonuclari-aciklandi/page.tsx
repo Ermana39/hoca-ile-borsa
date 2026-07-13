@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   title:
     "Şa-Ra Enerji Halka Arz Sonuçları Açıklandı: 729.560 Yatırımcıya Dağıtım",
   description:
-    "Şa-Ra Enerji halka arzında 89 milyon lot dağıtıldı. Toplam 729.560 yatırımcıya dağıtım yapılırken bireysel yatırımcı başına en fazla 180 lot verildi.",
+    "Şa-Ra Enerji halka arzında 89 milyon lot dağıtıldı. Toplam 729.560 yatırımcıya dağıtım yapılırken bireysel yatırımcı başına en fazla 156 lot verildi.",
   alternates: {
     canonical: haberUrl,
   },
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     title:
       "Şa-Ra Enerji Halka Arz Sonuçları Açıklandı: 729.560 Yatırımcıya Dağıtım",
     description:
-      "SARAE halka arzında 89 milyon lot dağıtıldı. Bireysel yatırımcı tarafında en fazla 180 lot dağıtımı gerçekleşti.",
+      "SARAE halka arzında 89 milyon lot dağıtıldı. Bireysel yatırımcı tarafında en fazla 156 lot dağıtımı gerçekleşti.",
     url: haberUrl,
     images: [
       {
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
     title:
       "Şa-Ra Enerji Halka Arz Sonuçları Açıklandı: 729.560 Yatırımcıya Dağıtım",
     description:
-      "SARAE halka arzında toplam 729.560 yatırımcıya dağıtım yapıldı, bireyselde azami dağıtım 180 lot oldu.",
+      "SARAE halka arzında toplam 729.560 yatırımcıya dağıtım yapıldı, bireyselde azami dağıtım 156 lot oldu.",
     images: [haberGorsel],
   },
 };
@@ -62,7 +62,7 @@ const ozetKartlari = [
   },
   {
     baslik: "Bireysel Azami Lot",
-    deger: "180 Lot",
+    deger: "156 Lot",
     aciklama: "Yurt içi bireyselde en yüksek dağıtım",
   },
   {
@@ -119,7 +119,7 @@ const genelDetaylar = [
   },
   {
     etiket: "Bireysel Azami Dağıtım",
-    deger: "180 lot",
+    deger: "156 lot",
   },
 ];
 
@@ -188,9 +188,9 @@ const yatirimciDagilimi = [
       "Yurt içi bireysel tarafta 745.413 başvuru alınırken 728.823 yatırımcıya dağıtım yapıldı. Bu tablo, halka arzın çok geniş bir yatırımcı kitlesine yayıldığını gösteriyor.",
   },
   {
-    baslik: "Azami bireysel dağıtım 180 lot oldu",
+    baslik: "Azami bireysel dağıtım 156 lot oldu",
     aciklama:
-      "Bireysel yatırımcı başına en fazla 180 lot dağıtımı gerçekleşti. Halka arz fiyatı 70 TL olduğundan 180 lotluk dağıtımın başlangıç maliyeti yaklaşık 12.600 TL seviyesinde oluştu.",
+      "Bireysel yatırımcı başına en fazla 156 lot dağıtımı gerçekleşti. Halka arz fiyatı 70 TL olduğundan 156 lotluk dağıtımın başlangıç maliyeti yaklaşık 10.920 TL seviyesinde oluştu.",
   },
   {
     baslik: "En yüksek talep çarpanı yüksek talep grubunda",
@@ -209,25 +209,25 @@ const halkaArzOkumasi = [
   "Toplam talep 335,3 milyon lot seviyesinde gerçekleşti ve halka arz büyüklüğünün yaklaşık 3,77 katına ulaştı.",
   "Yurt içi bireysel tarafta talep çarpanı 1,37 kat seviyesinde kaldı.",
   "Yüksek talep grubunda 12,90 kat talep oluştu.",
-  "Bireysel yatırımcı başına azami 180 lot dağıtım yapıldı.",
+  "Bireysel yatırımcı başına azami 156 lot dağıtım yapıldı.",
   "Kurumsal yatırımcıların toplam tahsisattaki payı %50 oldu.",
 ];
 
 const muhtemelTavanSerisi = [
-  { gun: "1. gün", fiyat: "77,0", kazanc: "1.260", para: "13.860", toplam: "1.260" },
-  { gun: "2. gün", fiyat: "84,7", kazanc: "1.386", para: "15.246", toplam: "2.646" },
-  { gun: "3. gün", fiyat: "93,2", kazanc: "1.525", para: "16.771", toplam: "4.171" },
-  { gun: "4. gün", fiyat: "102,5", kazanc: "1.677", para: "18.448", toplam: "5.848" },
-  { gun: "5. gün", fiyat: "112,7", kazanc: "1.845", para: "20.292", toplam: "7.692" },
-  { gun: "6. gün", fiyat: "124,0", kazanc: "2.029", para: "22.322", toplam: "9.722" },
-  { gun: "7. gün", fiyat: "136,4", kazanc: "2.232", para: "24.554", toplam: "11.954" },
-  { gun: "8. gün", fiyat: "150,1", kazanc: "2.455", para: "27.009", toplam: "14.409" },
-  { gun: "9. gün", fiyat: "165,1", kazanc: "2.701", para: "29.710", toplam: "17.110" },
-  { gun: "10. gün", fiyat: "181,6", kazanc: "2.971", para: "32.680", toplam: "20.081" },
-  { gun: "11. gün", fiyat: "199,7", kazanc: "3.268", para: "35.949", toplam: "23.349" },
-  { gun: "12. gün", fiyat: "219,7", kazanc: "3.595", para: "39.544", toplam: "26.944" },
-  { gun: "13. gün", fiyat: "241,7", kazanc: "3.954", para: "43.499", toplam: "30.899" },
-  { gun: "14. gün", fiyat: "265,8", kazanc: "4.350", para: "47.848", toplam: "35.248" },
+  { gun: "1. gün", fiyat: "77,0", kazanc: "1.092", para: "12.012", toplam: "1.092" },
+  { gun: "2. gün", fiyat: "84,7", kazanc: "1.201", para: "13.213", toplam: "2.293" },
+  { gun: "3. gün", fiyat: "93,2", kazanc: "1.321", para: "14.535", toplam: "3.615" },
+  { gun: "4. gün", fiyat: "102,5", kazanc: "1.453", para: "15.988", toplam: "5.068" },
+  { gun: "5. gün", fiyat: "112,7", kazanc: "1.599", para: "17.587", toplam: "6.667" },
+  { gun: "6. gün", fiyat: "124,0", kazanc: "1.759", para: "19.345", toplam: "8.425" },
+  { gun: "7. gün", fiyat: "136,4", kazanc: "1.935", para: "21.280", toplam: "10.360" },
+  { gun: "8. gün", fiyat: "150,1", kazanc: "2.128", para: "23.408", toplam: "12.488" },
+  { gun: "9. gün", fiyat: "165,1", kazanc: "2.341", para: "25.749", toplam: "14.829" },
+  { gun: "10. gün", fiyat: "181,6", kazanc: "2.575", para: "28.324", toplam: "17.404" },
+  { gun: "11. gün", fiyat: "199,7", kazanc: "2.832", para: "31.156", toplam: "20.236" },
+  { gun: "12. gün", fiyat: "219,7", kazanc: "3.116", para: "34.272", toplam: "23.352" },
+  { gun: "13. gün", fiyat: "241,7", kazanc: "3.427", para: "37.699", toplam: "26.779" },
+  { gun: "14. gün", fiyat: "265,8", kazanc: "3.770", para: "41.469", toplam: "30.549" },
 ];
 
 const icSelBilgiPaylari = [
@@ -271,7 +271,7 @@ const icSelBilgiPaylari = [
 const takipBasliklari = [
   "SARAE işlem başlama tarihi",
   "İlk işlem günündeki emir ve fiyat dengesi",
-  "180 lot alan bireysel yatırımcının satış davranışı",
+  "156 lot alan bireysel yatırımcının satış davranışı",
   "Kurumsal yatırımcı payının ilk gün fiyatlamasına etkisi",
   "Halka arz fiyatına göre açılış marjı ve ilk gün lot akışı",
   "İçsel bilgiye ulaşabilecek konumdaki kişilere dağıtılan payların sınırlı kalması",
@@ -286,7 +286,7 @@ const seoSorular = [
   {
     soru: "SARAE halka arzında bireysel yatırımcıya en fazla kaç lot düştü?",
     cevap:
-      "Yurt içi bireysel yatırımcı başına en fazla 180 lot dağıtımı gerçekleşti. Halka arz fiyatı 70 TL olduğundan bu dağıtımın maliyeti yaklaşık 12.600 TL oldu.",
+      "Yurt içi bireysel yatırımcı başına en fazla 156 lot dağıtımı gerçekleşti. Halka arz fiyatı 70 TL olduğundan bu dağıtımın maliyeti yaklaşık 10.920 TL oldu.",
   },
   {
     soru: "SARAE halka arz büyüklüğü kaç TL oldu?",
@@ -301,7 +301,7 @@ const seoSorular = [
   {
     soru: "SARAE muhtemel tavan serisi tablosu neyi gösteriyor?",
     cevap:
-      "Muhtemel tavan serisi tablosu, 180 lot dağıtım alan bir yatırımcının teorik olarak tavan fiyat serisi oluşması halinde günlük fiyat, toplam portföy değeri ve kümülatif kazanç görünümünü yaklaşık olarak gösteriyor.",
+      "Muhtemel tavan serisi tablosu, 156 lot dağıtım alan bir yatırımcının teorik olarak tavan fiyat serisi oluşması halinde günlük fiyat, toplam portföy değeri ve kümülatif kazanç görünümünü yaklaşık olarak gösteriyor.",
   },
 ];
 
@@ -311,10 +311,10 @@ const jsonLd = {
   headline:
     "Şa-Ra Enerji Halka Arz Sonuçları Açıklandı: 729.560 Yatırımcıya Dağıtım",
   description:
-    "Şa-Ra Enerji halka arzında 89 milyon lot dağıtıldı. Toplam 729.560 yatırımcıya dağıtım yapılırken bireysel yatırımcı başına en fazla 180 lot verildi.",
+    "Şa-Ra Enerji halka arzında 89 milyon lot dağıtıldı. Toplam 729.560 yatırımcıya dağıtım yapılırken bireysel yatırımcı başına en fazla 156 lot verildi.",
   image: haberGorsel,
   datePublished: "2026-07-13T17:30:59+03:00",
-  dateModified: "2026-07-13T18:04:15+03:00",
+  dateModified: "2026-07-13T18:20:00+03:00",
   url: haberUrl,
   inLanguage: "tr",
   author: {
@@ -405,9 +405,9 @@ export default function SaraeHalkaArzSonuclariPage() {
               <p>
                 Bireysel yatırımcı tarafında en çok dikkat çeken veri ise azami
                 dağıtım oldu. Yurt içi bireysel yatırımcı başına en fazla{" "}
-                <strong>180 lot</strong> verildi. Halka arz fiyatı{" "}
+                <strong>156 lot</strong> verildi. Halka arz fiyatı{" "}
                 <strong>70,00 TL</strong> olduğundan, bu dağıtımın teorik maliyeti{" "}
-                <strong>12.600 TL</strong> seviyesinde oluştu.
+                <strong>10.920 TL</strong> seviyesinde oluştu.
               </p>
 
               <div className="grid gap-4 sm:grid-cols-2">
@@ -440,7 +440,7 @@ export default function SaraeHalkaArzSonuclariPage() {
                   Bu görünüm halka arza yaklaşık 3,77 kat talep geldiğini
                   gösteriyor. Yurt içi bireysel tarafta 745.413 başvuru alınırken
                   728.823 yatırımcıya dağıtım yapıldı ve yatırımcı başına en fazla
-                  180 lot düştü.
+                  156 lot düştü.
                 </p>
               </Section>
 
@@ -564,10 +564,10 @@ export default function SaraeHalkaArzSonuclariPage() {
                 </div>
               </Section>
 
-              <Section title="180 lot için muhtemel tavan serisi tablosu">
+              <Section title="156 lot için muhtemel tavan serisi tablosu">
                 <p className="text-sm leading-7 text-slate-600 md:text-base">
                   Aşağıdaki tablo, bireysel yatırımcıya dağıtılan azami{" "}
-                  <strong>180 lot</strong> üzerinden, halka arz fiyatı olan{" "}
+                  <strong>156 lot</strong> üzerinden, halka arz fiyatı olan{" "}
                   <strong>70,00 TL</strong> baz alınarak hazırlanmış teorik bir
                   tavan serisi senaryosunu gösteriyor. Hesaplama, günlük tavan
                   fiyat artışları üzerinden yaklaşık olarak yapılmıştır.
@@ -665,7 +665,7 @@ export default function SaraeHalkaArzSonuclariPage() {
                   işlem gününde hisseyi yakından takip edeceğine işaret ediyor.
                 </p>
                 <p className="mt-3 text-sm leading-7 text-slate-600 md:text-base">
-                  Bireyselde azami 180 lot dağıtımı olması, lot bazında çok yüksek
+                  Bireyselde azami 156 lot dağıtımı olması, lot bazında çok yüksek
                   bir yığılma olmadığını gösterse de yatırımcı sayısının genişliği
                   nedeniyle ilk gün emir tarafındaki denge kritik olacak.
                   Kurumsal tahsisatın %50 olması ise ilk gün fiyatlamasında ayrı
