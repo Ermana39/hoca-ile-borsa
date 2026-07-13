@@ -23,6 +23,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1120,
+    title: "YEOTK 120 MWh Bataryalı Enerji Depolama Projesi İçin Sözleşme İmzaladı",
+    href: "/haber/yeotk-120-mwh-bataryali-enerji-depolama-projesi",
+    image: "/yeotk-120-mwh-bataryali-enerji-depolama-projesi.webp",
+    alt: "YEOTK 120 MWh bataryalı enerji depolama projesi",
+    publishedAt: "2026-07-13T09:00:38+03:00",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["YEOTK"],
+  },
+  {
     id: 1119,
     title: "ARDYZ Hatay EDS Projesini Devreye Aldı",
     href: "/haber/ardyz-hatay-eds-projesi-devreye-alindi",

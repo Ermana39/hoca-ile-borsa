@@ -66,21 +66,21 @@ export default function PbrEtkiAnaliziPage() {
       rows={rows}
       toplamFonOrani={84.42}
       toplamEtki={0.94}
-      sonGuncelleme="10 Temmuz 2026"
+      sonGuncelleme="13 Temmuz 2026"
       degisimVerisi={{
         yatirimciSayisi: {
-          dun: 68915,
-          bugun: 69193,
-          degisim: 278,
+          dun: 69193,
+          bugun: 69329,
+          degisim: 136,
         },
         fonToplamDeger: {
-          dun: 34915656984,
-          bugun: 34785135175,
-          degisim: -130341809,
+          dun: 34785135175,
+          bugun: 35407684377,
+          degisim: 622369202,
         },
-        paraGirisiCikisi: 467053749,
+        paraGirisiCikisi: 237122414,
         yorum:
-          "PBR fonunda yatırımcı sayısının 278 kişi artması ve 467,05 milyon TL net para girişi, fon tarafında talebin sürdüğünü gösteriyor. Buna rağmen fon toplam değerinin 130,34 milyon TL azalması, piyasa veya portföy değerleme etkisinin para girişine rağmen fon büyüklüğünü aşağı çektiğini düşündürür. PBR için para akışı pozitif, fon değer değişimi ise temkinli okunması gereken bir görünüm veriyor.",
+          "PBR fonunda yatırımcı sayısı 136 kişi artarken fon toplam değeri 622,37 milyon TL büyüdü. 237,12 milyon TL net para girişi, fon tarafındaki ilginin daha ölçülü ama pozitif kaldığını gösteriyor. PBR için önceki negatif fon değer değişiminin ardından gelen bu yükseliş, haftaya daha dengeli bir kapanış resmi bırakıyor.",
       }}
     />
   );
