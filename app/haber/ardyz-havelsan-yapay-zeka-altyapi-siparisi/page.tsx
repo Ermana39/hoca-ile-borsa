@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
   title: "ARDYZ’den HAVELSAN’a 706.800 Dolarlık Sipariş",
@@ -88,8 +87,9 @@ export default function ArdyzHavelsanYapayZekaSiparisiPage() {
               src="/ardyz-havelsan-yapay-zeka-altyapi-siparisi.webp"
               alt="ARDYZ'nin HAVELSAN'dan aldığı yapay zekâ altyapı siparişi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 
@@ -258,20 +258,9 @@ export default function ArdyzHavelsanYapayZekaSiparisiPage() {
               <AuthorBox />
             </div>
           </div>
-        </article>
-
-        <div className="mt-8">
-          <HaberIlgiliBolumler
-            slug="ardyz-havelsan-yapay-zeka-altyapi-siparisi"
-            baslik="ARDYZ HAVELSAN yapay zekâ altyapı siparişi"
-          />
-        </div>
-
-        <HaberNavigasyon
-          href="/haber/ardyz-havelsan-yapay-zeka-altyapi-siparisi"
-          className="mt-8"
-        />
-      </div>
+                  <HaberAltKisim href="/haber/ardyz-havelsan-yapay-zeka-altyapi-siparisi" />
+</article>
+</div>
     </main>
   );
 }

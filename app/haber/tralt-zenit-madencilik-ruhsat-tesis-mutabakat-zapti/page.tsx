@@ -94,8 +94,9 @@ export default function HaberPage() {
               src="/tralt-zenit-madencilik-ruhsat-tesis-mutabakat-zapti.webp"
               alt="TRALT’ten 69,9 Milyon Dolarlık Maden Ruhsatı Hamlesi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

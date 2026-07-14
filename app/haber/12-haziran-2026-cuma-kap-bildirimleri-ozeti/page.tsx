@@ -120,8 +120,9 @@ export default function HaberKapOzetiPage() {
               src="/kap-ozeti-discover.webp"
               alt="12 Haziran KAP: GESAN, VBTYZ, HALKB ve ISCTR Özeti"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

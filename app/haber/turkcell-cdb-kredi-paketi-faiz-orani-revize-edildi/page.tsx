@@ -93,8 +93,9 @@ export default function TurkcellKrediRevizyonuPage() {
               src="/turkcell-cdb-kredi-paketi-faiz-orani-revize-edildi.webp"
               alt="Turkcell CDB kredi paketi faiz oranı revizyonu"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

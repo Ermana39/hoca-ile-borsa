@@ -173,8 +173,9 @@ export default function VestlEurobondFinansalDanismanPage() {
               src="/vestl-eurobondlar-icin-finansal-danisman-atadi.webp"
               alt="VESTL Eurobondlar için finansal danışman atadı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

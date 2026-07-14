@@ -129,8 +129,9 @@ export default function YeotkKosovaGesEpcSozlesmesiPage() {
               src="/yeotk-kosova-130-mwp-ges-epc-sozlesmesi.webp"
               alt="YEOTK Kosova 130 MWp GES EPC sözleşmesi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

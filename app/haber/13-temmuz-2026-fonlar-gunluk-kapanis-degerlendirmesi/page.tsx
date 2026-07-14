@@ -146,8 +146,9 @@ export default function FonlarGunlukKapanisPage() {
               src={haberGorseli}
               alt="13 Temmuz 2026 TLY PHE PBR DFI fon kapanış değerlendirmesi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

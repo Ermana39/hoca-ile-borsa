@@ -198,8 +198,7 @@ export default function BetaEnerjiYuksekBasvuruDagitimPage() {
               width={1200}
               height={1200}
               priority
-              unoptimized
-              className="h-auto w-full object-contain"
+className="h-auto w-full object-contain"
             />
           </div>
 

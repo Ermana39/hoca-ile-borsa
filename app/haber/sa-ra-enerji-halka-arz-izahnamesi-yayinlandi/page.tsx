@@ -252,8 +252,9 @@ export default function SaRaEnerjiHalkaArzHaberPage() {
               src="/sa-ra-enerji-halka-arz-izahnamesi-yayinlandi.webp"
               alt="Şa-Ra Enerji halka arz izahnamesi yayınlandı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

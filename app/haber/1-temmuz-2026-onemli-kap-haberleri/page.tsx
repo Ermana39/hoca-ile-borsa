@@ -243,8 +243,9 @@ export default function BirTemmuzKapHaberleriPage() {
               src="/kap-ozeti-discover.webp"
               alt="1 Temmuz 2026 önemli KAP haberleri: BYDNR, SASA ve EKGYO etkileri"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

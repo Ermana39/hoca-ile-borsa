@@ -88,8 +88,9 @@ export default function AksenManisaDepolamaliResPage() {
               src="/aksen-manisa-depolamali-res-epdk-lisans-onayi.webp"
               alt="Aksa Enerji Manisa depolamalı RES projesine EPDK lisans onayı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

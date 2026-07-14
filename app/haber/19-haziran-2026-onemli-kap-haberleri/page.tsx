@@ -160,8 +160,9 @@ export default function HaberKapOzetiPage() {
               src="/kap-ozeti-discover.webp"
               alt="19 Haziran KAP: BOBET, MANAS, TOASO ve ANELE Öne Çıktı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

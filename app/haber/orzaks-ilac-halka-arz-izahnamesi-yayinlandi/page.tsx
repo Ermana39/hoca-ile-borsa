@@ -136,8 +136,9 @@ export default function HaberPage() {
               src="/orzaks-ilac-halka-arz-izahnamesi-yayinlandi.webp"
               alt="Orzaks İlaç Halka Arz İzahnamesi Yayınlandı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

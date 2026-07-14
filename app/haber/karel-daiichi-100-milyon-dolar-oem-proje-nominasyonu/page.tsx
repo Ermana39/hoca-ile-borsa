@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
 import { formatHaberTarihi, getHaberDosyaTarihi } from "@/lib/haber-tarih";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
@@ -92,8 +91,9 @@ export default function KarelDaiichiProjeNominasyonuPage() {
               src="/karel-daiichi-100-milyon-dolar-oem-proje-nominasyonu.webp"
               alt="KAREL bağlı ortaklığı Daiichi 100 milyon dolarlık OEM proje nominasyonu"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 
@@ -320,20 +320,9 @@ export default function KarelDaiichiProjeNominasyonuPage() {
               <AuthorBox />
             </div>
           </div>
-        </article>
-
-        <div className="mt-8">
-          <HaberIlgiliBolumler
-            slug="karel-daiichi-100-milyon-dolar-oem-proje-nominasyonu"
-            baslik="KAREL Daiichi 100 milyon dolarlık proje nominasyonu"
-          />
-        </div>
-
-        <HaberNavigasyon
-          href="/haber/karel-daiichi-100-milyon-dolar-oem-proje-nominasyonu"
-          className="mt-8"
-        />
-      </div>
+                  <HaberAltKisim href="/haber/karel-daiichi-100-milyon-dolar-oem-proje-nominasyonu" />
+</article>
+</div>
     </main>
   );
 }

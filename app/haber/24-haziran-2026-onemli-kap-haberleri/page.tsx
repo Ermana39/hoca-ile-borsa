@@ -294,8 +294,9 @@ export default function HaberKapOzetiPage() {
               src="/kap-ozeti-discover.webp"
               alt="24 Haziran KAP: HRKET Bedelsiz, KLNMA Kredi, ALVES Yatırım"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

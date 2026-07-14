@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
   title: "SPK’dan 5 Yeni Halka Arz Onayı Geldi",
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
     type: "article",
     images: [
       {
-        url: "https://www.hocaileborsa.com/spk-5-yeni-halka-arz-onayi.webp",
+        url: "https://www.hocaileborsa.com/spk-5-yeni-halka-arz-onayi-discover.webp",
         width: 1200,
         height: 675,
         alt: "SPK 5 yeni halka arz onayı",
@@ -32,7 +33,7 @@ export const metadata: Metadata = {
     description:
       "SPK, Orzaks İlaç, Ekim Turizm, Soho Giyim, İsvea Seramik ve Golda Gıda halka arzlarına onay verdi.",
     images: [
-      "https://www.hocaileborsa.com/spk-5-yeni-halka-arz-onayi.webp",
+      "https://www.hocaileborsa.com/spk-5-yeni-halka-arz-onayi-discover.webp",
     ],
   },
 };
@@ -111,7 +112,7 @@ const jsonLd = {
       url: "https://www.hocaileborsa.com/icon-512.png",
     },
   },
-  image: "https://www.hocaileborsa.com/spk-5-yeni-halka-arz-onayi.webp",
+  image: "https://www.hocaileborsa.com/spk-5-yeni-halka-arz-onayi-discover.webp",
 };
 
 export default function Page() {
@@ -420,7 +421,8 @@ export default function Page() {
             ))}
           </div>
         </section>
-      </article>
+                <HaberAltKisim href="/haber/spk-5-yeni-halka-arz-onayi-verdi" />
+</article>
     </main>
   );
 }

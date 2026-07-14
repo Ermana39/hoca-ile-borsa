@@ -1,6 +1,6 @@
 import { newsItems as tumHaberler } from "@/app/data/news";
 import { getGunlukOzetHaberKayitlari } from "@/lib/gunluk-ozet";
-import { getHaberDosyaTarihiFromHref, getHaberGunIso } from "@/lib/haber-tarih";
+import { getHaberDosyaTarihiFromHref } from "@/lib/haber-tarih";
 import {
   HABER_SAYFA_BOYUTU,
   isHaberKategori,
@@ -51,7 +51,7 @@ export function normalizeNewsItems(data: unknown): NewsItem[] {
               ? `/haber${id}.png`
               : "/placeholder.png",
         alt: item.alt || item.title || "",
-        publishedAt: publishedAt ? getHaberGunIso(publishedAt) : "",
+        publishedAt: publishedAt ?? "",
         category:
           item.category && isHaberKategori(item.category)
             ? item.category

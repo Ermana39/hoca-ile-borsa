@@ -152,8 +152,9 @@ export default function HektsTahsisliSermayeArtirimiPage() {
               src="/hekts-238-milyar-tl-tahsisli-sermaye-artirimi-spk-basvurusu.webp"
               alt="HEKTS 2,38 milyar TL tahsisli sermaye artırımı SPK başvurusu"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

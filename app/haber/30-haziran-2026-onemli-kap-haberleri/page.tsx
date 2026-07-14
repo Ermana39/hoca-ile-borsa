@@ -158,8 +158,9 @@ export default function OtuzHaziranKapHaberleriPage() {
               src="/kap-ozeti-discover.webp"
               alt="30 Haziran KAP: KAREL Proje, ALTNY Sözleşme, ASELS Tesis"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

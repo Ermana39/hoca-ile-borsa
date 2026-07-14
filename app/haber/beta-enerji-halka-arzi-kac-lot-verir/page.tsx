@@ -137,8 +137,7 @@ export default function BetaEnerjiHalkaArzKacLotVerirPage() {
               alt="Beta Enerji halka arzı kaç lot verir kişi başı kaç lot düşer"
               width={1200}
               height={900}
-              unoptimized
-              priority
+priority
               className="h-auto w-full object-contain"
             />
           </div>

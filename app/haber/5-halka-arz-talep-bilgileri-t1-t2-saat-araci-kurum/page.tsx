@@ -341,8 +341,9 @@ export default function HaberPage() {
               src={haberGorsel}
               alt="5 halka arz talep bilgileri T1 T2 bakiye saat ve aracı kurum tablosu"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

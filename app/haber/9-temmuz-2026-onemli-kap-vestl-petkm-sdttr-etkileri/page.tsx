@@ -277,8 +277,9 @@ export default function DokuzTemmuzKapPage() {
               src="/kap-ozeti-discover.webp"
               alt="9 Temmuz 2026 önemli KAP haberleri VESTL PETKM SDTTR etkileri"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

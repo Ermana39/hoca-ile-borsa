@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
 import { formatHaberTarihi, getHaberDosyaTarihi } from "@/lib/haber-tarih";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
@@ -92,8 +91,9 @@ export default function GrthoBedelsizSermayeArtirimiSpkBasvurusuPage() {
               src="/grtho-950-bedelsiz-sermaye-artirimi-spk-basvurusu.webp"
               alt="GRTHO yüzde 950 bedelsiz sermaye artırımı için SPK başvurusu"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 
@@ -310,20 +310,9 @@ export default function GrthoBedelsizSermayeArtirimiSpkBasvurusuPage() {
               <AuthorBox />
             </div>
           </div>
-        </article>
-
-        <div className="mt-8">
-          <HaberIlgiliBolumler
-            slug="grtho-950-bedelsiz-sermaye-artirimi-spk-basvurusu"
-            baslik="GRTHO yüzde 950 bedelsiz sermaye artırımı SPK başvurusu"
-          />
-        </div>
-
-        <HaberNavigasyon
-          href="/haber/grtho-950-bedelsiz-sermaye-artirimi-spk-basvurusu"
-          className="mt-8"
-        />
-      </div>
+                  <HaberAltKisim href="/haber/grtho-950-bedelsiz-sermaye-artirimi-spk-basvurusu" />
+</article>
+</div>
     </main>
   );
 }

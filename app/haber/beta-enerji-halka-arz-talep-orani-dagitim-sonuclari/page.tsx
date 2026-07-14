@@ -162,8 +162,9 @@ export default function HaberPage() {
               src={haberGorsel}
               alt="Beta Enerji halka arz talep oranları ve dağıtım sonuçları"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

@@ -88,8 +88,9 @@ export default function MsciTurkiyeUyarisiPage() {
               src="/msci-turkiye-uyarisi-seffaflik-bilgi-akisi.webp"
               alt="MSCI’den Türkiye piyasası için şeffaflık ve bilgi akışı uyarısı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

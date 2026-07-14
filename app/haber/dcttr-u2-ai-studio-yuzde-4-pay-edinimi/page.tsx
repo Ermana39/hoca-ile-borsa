@@ -209,8 +209,9 @@ export default function DcttrU2AiStudioPayEdinimiPage() {
               src="/dcttr-u2-ai-studio-yuzde-4-pay-edinimi.webp"
               alt="DCTTR U2 AI Studio yüzde 4 pay edinimi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

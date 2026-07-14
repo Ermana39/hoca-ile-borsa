@@ -200,8 +200,7 @@ export default function BorsaYukseldiAltinDustuHaftalikPiyasaOzetiPage() {
               alt="Borsa yükseldi altın düştü haftalık piyasa özeti"
               width={1200}
               height={900}
-              unoptimized
-              priority
+priority
               className="h-auto w-full object-contain"
             />
           </div>

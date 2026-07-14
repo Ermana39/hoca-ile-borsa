@@ -287,8 +287,9 @@ export default function AkfyeBedelsizSermayeArtirimiPage() {
               src="/akfye-500-bedelsiz-sermaye-artirimi-karari.webp"
               alt="AKFYE yüzde 500 bedelsiz sermaye artırımı kararı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

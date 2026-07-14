@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
 import { formatHaberTarihi, getHaberDosyaTarihi } from "@/lib/haber-tarih";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
@@ -92,8 +91,9 @@ export default function EkgyoHalkaliBatiIhalesiPage() {
               src="/ekgyo-halkali-bati-1-etap-ihalesi-2-oturum-sonucu.webp"
               alt="EKGYO Halkalı Batı 1. Etap ihalesi 2. oturum sonucu"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 
@@ -286,20 +286,9 @@ export default function EkgyoHalkaliBatiIhalesiPage() {
               <AuthorBox />
             </div>
           </div>
-        </article>
-
-        <div className="mt-8">
-          <HaberIlgiliBolumler
-            slug="ekgyo-halkali-bati-1-etap-ihalesi-2-oturum-sonucu"
-            baslik="EKGYO Halkalı Batı 1. Etap ihalesi 2. oturum sonucu"
-          />
-        </div>
-
-        <HaberNavigasyon
-          href="/haber/ekgyo-halkali-bati-1-etap-ihalesi-2-oturum-sonucu"
-          className="mt-8"
-        />
-      </div>
+                  <HaberAltKisim href="/haber/ekgyo-halkali-bati-1-etap-ihalesi-2-oturum-sonucu" />
+</article>
+</div>
     </main>
   );
 }

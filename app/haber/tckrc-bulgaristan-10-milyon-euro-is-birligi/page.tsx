@@ -129,8 +129,9 @@ export default function TckrcBulgaristanIsBirligiPage() {
               src="/tckrc-bulgaristan-10-milyon-euro-is-birligi.webp"
               alt="TCKRC Bulgaristan 10 milyon euro iş birliği"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

@@ -89,8 +89,9 @@ export default function HaberPage() {
               src="/klnma-jbic-350-milyon-dolar-kredi-anlasmasi.webp"
               alt="KLNMA, JBIC ile 350 milyon dolarlık kredi anlaşması imzaladı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

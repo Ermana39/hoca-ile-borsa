@@ -156,8 +156,9 @@ export default function YeotkTurkYtongMardinGesPage() {
               src="/yeotk-turk-ytong-mardin-ges-sozlesmesi.webp"
               alt="YEOTK Türk Ytong Mardin GES sözleşmesi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

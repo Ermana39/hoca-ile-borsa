@@ -180,8 +180,7 @@ export default function BetaEnerjiHalkaArziBasladiPage() {
               alt="Beta Enerji halka arzı başladı talep toplama ve olası lot dağılımı"
               width={1254}
               height={1254}
-              unoptimized
-              priority
+priority
               className="h-auto w-full object-contain"
             />
           </div>

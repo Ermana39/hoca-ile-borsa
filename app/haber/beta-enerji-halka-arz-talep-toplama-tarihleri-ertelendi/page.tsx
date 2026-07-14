@@ -101,8 +101,7 @@ export default function HaberBetaEnerjiHalkaArzErtelendiPage() {
               alt="Beta Enerji halka arz talep toplama tarihleri ertelendi"
               width={1200}
               height={900}
-              unoptimized
-              priority
+priority
               className="h-auto w-full object-contain"
             />
           </div>

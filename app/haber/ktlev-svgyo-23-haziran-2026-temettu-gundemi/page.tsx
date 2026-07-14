@@ -88,8 +88,9 @@ export default function TemettuGundemiKtlevSvgyoPage() {
               src="/ktlev-svgyo-23-haziran-2026-temettu-gundemi.webp"
               alt="KTLEV ve SVGYO için 23 Haziran 2026 temettü gündemi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

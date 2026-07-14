@@ -94,8 +94,9 @@ export default function HaberPage() {
               src="/yigit-aku-ced-olumlu-karari-kapasite-artisi.webp"
               alt="YIGIT Akü İçin ÇED Olumlu Kararı Açıklandı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

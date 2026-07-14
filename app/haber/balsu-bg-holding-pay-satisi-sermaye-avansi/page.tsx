@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
   title: "BALSU Pay Satışı: 4,64 Milyar TL Sermaye Avansı Ne Demek?",
@@ -94,8 +93,9 @@ export default function BalsuBgHoldingPaySatisiSermayeAvansiPage() {
               src="/balsu-bg-holding-pay-satisi-sermaye-avansi.webp"
               alt="BALSU BG Holding pay satışı ve sermaye avansı haberi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 
@@ -321,20 +321,9 @@ export default function BalsuBgHoldingPaySatisiSermayeAvansiPage() {
               <AuthorBox />
             </div>
           </div>
-        </article>
-
-        <div className="mt-8">
-          <HaberIlgiliBolumler
-            slug="balsu-bg-holding-pay-satisi-sermaye-avansi"
-            baslik="BALSU BG Holding pay satışı ve sermaye avansı"
-          />
-        </div>
-
-        <HaberNavigasyon
-          href="/haber/balsu-bg-holding-pay-satisi-sermaye-avansi"
-          className="mt-8"
-        />
-      </div>
+                  <HaberAltKisim href="/haber/balsu-bg-holding-pay-satisi-sermaye-avansi" />
+</article>
+</div>
     </main>
   );
 }

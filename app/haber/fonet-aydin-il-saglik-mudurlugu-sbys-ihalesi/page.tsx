@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
 import { formatHaberTarihi, getHaberDosyaTarihi } from "@/lib/haber-tarih";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
@@ -92,8 +91,9 @@ export default function FonetAydinIlSaglikMudurluguSbysIhalesiPage() {
               src="/fonet-aydin-il-saglik-mudurlugu-sbys-ihalesi.webp"
               alt="FONET Aydın İl Sağlık Müdürlüğü SBYS ihalesinde en uygun teklif"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 
@@ -307,20 +307,9 @@ export default function FonetAydinIlSaglikMudurluguSbysIhalesiPage() {
               <AuthorBox />
             </div>
           </div>
-        </article>
-
-        <div className="mt-8">
-          <HaberIlgiliBolumler
-            slug="fonet-aydin-il-saglik-mudurlugu-sbys-ihalesi"
-            baslik="FONET Aydın İl Sağlık Müdürlüğü SBYS ihalesi"
-          />
-        </div>
-
-        <HaberNavigasyon
-          href="/haber/fonet-aydin-il-saglik-mudurlugu-sbys-ihalesi"
-          className="mt-8"
-        />
-      </div>
+                  <HaberAltKisim href="/haber/fonet-aydin-il-saglik-mudurlugu-sbys-ihalesi" />
+</article>
+</div>
     </main>
   );
 }

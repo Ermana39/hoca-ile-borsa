@@ -173,8 +173,9 @@ export default function IkiTemmuzKapHaberleriPage() {
               src="/kap-ozeti-discover.webp"
               alt="2 Temmuz 2026 KAP: AKSEN kredi, KAREL sözleşme ve ERCB sipariş"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

@@ -129,8 +129,9 @@ export default function KartnCogunlukPaySatisiPage() {
               src="/kartn-cogunluk-paylari-72-milyon-dolara-satiliyor.webp"
               alt="KARTN çoğunluk payları 72 milyon dolara satılıyor"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

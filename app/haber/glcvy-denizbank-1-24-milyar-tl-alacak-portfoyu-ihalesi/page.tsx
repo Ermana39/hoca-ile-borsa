@@ -132,8 +132,9 @@ export default function GlcvyDenizbankAlacakPortfoyuPage() {
               src="/glcvy-denizbank-1-24-milyar-tl-alacak-portfoyu-ihalesi.webp"
               alt="GLCVY Denizbank 1,24 milyar TL alacak portföyü ihalesi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
 import { formatHaberTarihi, getHaberDosyaTarihi } from "@/lib/haber-tarih";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
@@ -92,8 +91,9 @@ export default function BetaEnerjiVeTeknolojiIlkIslemGununuTavanFiyatlaKapattiPa
               src="/beta-enerji-ve-teknoloji-ilk-islem-gununu-tavan-fiyatla-kapatti.webp"
               alt="Beta Enerji ve Teknoloji ilk işlem gününü tavan fiyatla kapattı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 
@@ -343,20 +343,9 @@ export default function BetaEnerjiVeTeknolojiIlkIslemGununuTavanFiyatlaKapattiPa
               <AuthorBox />
             </div>
           </div>
-        </article>
-
-        <div className="mt-8">
-          <HaberIlgiliBolumler
-            slug="beta-enerji-ve-teknoloji-ilk-islem-gununu-tavan-fiyatla-kapatti"
-            baslik="BETAE ilk işlem gününü tavan fiyatla kapattı"
-          />
-        </div>
-
-        <HaberNavigasyon
-          href="/haber/beta-enerji-ve-teknoloji-ilk-islem-gununu-tavan-fiyatla-kapatti"
-          className="mt-8"
-        />
-      </div>
+                  <HaberAltKisim href="/haber/beta-enerji-ve-teknoloji-ilk-islem-gununu-tavan-fiyatla-kapatti" />
+</article>
+</div>
     </main>
   );
 }

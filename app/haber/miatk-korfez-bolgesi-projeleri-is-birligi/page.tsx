@@ -199,8 +199,9 @@ export default function MiatkKorfezIsBirligiPage() {
               src="/miatk-korfez-bolgesi-projeleri-is-birligi.webp"
               alt="MIATK Körfez Bölgesi projeleri iş birliği sözleşmesi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

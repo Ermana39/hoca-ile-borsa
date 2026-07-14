@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
 import { formatHaberTarihi, getHaberDosyaTarihi } from "@/lib/haber-tarih";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
@@ -92,8 +91,9 @@ export default function KarelAskeriElektronikSozlesmesiPage() {
               src="/karel-586-milyon-dolar-askeri-elektronik-sozlesmesi.webp"
               alt="KAREL 5,86 milyon dolarlık askeri elektronik sözleşmesi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 
@@ -267,20 +267,9 @@ export default function KarelAskeriElektronikSozlesmesiPage() {
               <AuthorBox />
             </div>
           </div>
-        </article>
-
-        <div className="mt-8">
-          <HaberIlgiliBolumler
-            slug="karel-586-milyon-dolar-askeri-elektronik-sozlesmesi"
-            baslik="KAREL askeri elektronik sözleşmesi"
-          />
-        </div>
-
-        <HaberNavigasyon
-          href="/haber/karel-586-milyon-dolar-askeri-elektronik-sozlesmesi"
-          className="mt-8"
-        />
-      </div>
+                  <HaberAltKisim href="/haber/karel-586-milyon-dolar-askeri-elektronik-sozlesmesi" />
+</article>
+</div>
     </main>
   );
 }

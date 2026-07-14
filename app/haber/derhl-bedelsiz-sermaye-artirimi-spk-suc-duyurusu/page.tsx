@@ -103,8 +103,9 @@ export default function DerhlBedelsizSpkSucDuyurusuPage() {
               src="/derhl-bedelsiz-sermaye-artirimi-spk-suc-duyurusu.webp"
               alt="DERHL’de bedelsiz sermaye artırımı ve SPK suç duyurusu kararı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

@@ -94,8 +94,9 @@ export default function HaberPage() {
               src="/derhl-soho-giyim-halka-arz-onayi.webp"
               alt="DERHL Bağlı Ortaklığı Soho Giyim’e Halka Arz Onayı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

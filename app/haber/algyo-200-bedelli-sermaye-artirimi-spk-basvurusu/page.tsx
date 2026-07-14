@@ -182,8 +182,9 @@ export default function AlgyoBedelliSermayeArtirimiPage() {
               src="/algyo-200-bedelli-sermaye-artirimi-spk-basvurusu.webp"
               alt="ALGYO yüzde 200 bedelli sermaye artırımı SPK başvurusu"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

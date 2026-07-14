@@ -168,8 +168,9 @@ export default function AstorAbdGucTransformatoruPage() {
               src="/astor-abd-42-5-milyon-dolar-guc-transformatoru-sozlesmesi.webp"
               alt="ASTOR ABD 42,5 milyon dolar güç transformatörü sözleşmesi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

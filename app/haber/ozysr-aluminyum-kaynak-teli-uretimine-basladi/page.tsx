@@ -129,8 +129,9 @@ export default function OzysrAluminyumKaynakTeliPage() {
               src="/ozysr-aluminyum-kaynak-teli-uretimine-basladi.webp"
               alt="OZYSR alüminyum kaynak teli üretimine başladı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

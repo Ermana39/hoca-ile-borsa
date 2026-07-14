@@ -326,8 +326,9 @@ export default function HalkaArzGunKapanisiPage() {
               src={`/${gorselDosya}`}
               alt="GOLDA SOHOE ORZAX BETAE halka arz gün kapanışı yorumları"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

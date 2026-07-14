@@ -93,8 +93,9 @@ export default function TurkiyeSigortaGoodyearBedelsizPage() {
               src="/turkiye-sigorta-goodyear-bedelsiz-sermaye-artirimi-discover.webp"
               alt="Türkiye Sigorta ve Goodyear bedelsiz sermaye artırımı onayı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

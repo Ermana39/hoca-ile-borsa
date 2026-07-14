@@ -172,8 +172,9 @@ export default function MiatkTripyCalmcarRobotaxiPage() {
               src="/miatk-tripy-calmcar-robotaxi-is-birligi.webp"
               alt="MIATK Tripy CalmCar Robotaxi iş birliği"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

@@ -147,8 +147,9 @@ export default function HaberPage() {
               src="/ekim-turizm-halka-arz-izahnamesi-yayinlandi.webp"
               alt="Ekim Turizm Halka Arz İzahnamesi Yayınlandı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

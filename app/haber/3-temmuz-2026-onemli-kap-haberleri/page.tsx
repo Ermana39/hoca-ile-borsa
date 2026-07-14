@@ -180,8 +180,9 @@ export default function UcTemmuzKapHaberleriPage() {
               src="/kap-ozeti-discover.webp"
               alt="3 Temmuz 2026 önemli KAP haberleri: INFO, ASTOR ve HEKTS etkileri"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

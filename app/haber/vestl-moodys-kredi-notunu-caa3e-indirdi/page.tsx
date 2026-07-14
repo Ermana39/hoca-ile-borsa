@@ -237,8 +237,9 @@ export default function VestlMoodysNotHaberiPage() {
               src="/vestl-moodys-kredi-notunu-caa3e-indirdi.webp"
               alt="VESTL Moody’s kredi notu indirimi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

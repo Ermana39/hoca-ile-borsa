@@ -342,8 +342,9 @@ export default function PgsusHaziranTrafikVerileriPage() {
               src="/pgsus-haziran-2026-trafik-verileri.webp"
               alt="PGSUS Haziran 2026 trafik verileri"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

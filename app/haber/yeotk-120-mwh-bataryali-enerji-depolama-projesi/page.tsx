@@ -137,8 +137,9 @@ export default function YeotkBataryaliEnerjiDepolamaPage() {
               src="/yeotk-120-mwh-bataryali-enerji-depolama-projesi.webp"
               alt="YEOTK 120 MWh bataryalı enerji depolama projesi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

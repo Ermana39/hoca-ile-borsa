@@ -175,8 +175,9 @@ export default function SohoeIslemeBasliyorPage() {
               src="/sohoe-hissesi-6-temmuzda-isleme-basliyor.webp"
               alt="SOHOE hissesi 6 Temmuz 2026 Pazartesi işleme başlıyor"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

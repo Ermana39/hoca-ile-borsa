@@ -367,8 +367,9 @@ export default function SaraeHalkaArzSonuclariPage() {
               src="/sarae-halka-arz-sonuclari-aciklandi.webp"
               alt="Şa-Ra Enerji SARAE halka arz sonuçları"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

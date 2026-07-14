@@ -112,8 +112,9 @@ export default function HaberSpacexHalkaArziAbdBorsalariPage() {
               src="/gunluk-abd-borsalari-ozeti-discover.webp"
               alt="Günlük ABD borsaları özeti"
               fill
-              unoptimized
-              priority
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+priority
               className="object-contain"
             />
           </div>

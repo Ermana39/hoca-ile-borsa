@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
 import { formatHaberTarihi, getHaberDosyaTarihi } from "@/lib/haber-tarih";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
@@ -92,8 +91,9 @@ export default function BalsuBgHoldingTahsisliSermayeArtirimiPage() {
               src="/balsu-bg-holding-tahsisli-sermaye-artirimi.webp"
               alt="BALSU BG Holding tahsisli sermaye artırımı haberi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 
@@ -306,20 +306,9 @@ export default function BalsuBgHoldingTahsisliSermayeArtirimiPage() {
               <AuthorBox />
             </div>
           </div>
-        </article>
-
-        <div className="mt-8">
-          <HaberIlgiliBolumler
-            slug="balsu-bg-holding-tahsisli-sermaye-artirimi"
-            baslik="BALSU BG Holding tahsisli sermaye artırımı haberi"
-          />
-        </div>
-
-        <HaberNavigasyon
-          href="/haber/balsu-bg-holding-tahsisli-sermaye-artirimi"
-          className="mt-8"
-        />
-      </div>
+                  <HaberAltKisim href="/haber/balsu-bg-holding-tahsisli-sermaye-artirimi" />
+</article>
+</div>
     </main>
   );
 }

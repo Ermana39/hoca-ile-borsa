@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
 import { formatHaberTarihi, getHaberDosyaTarihi } from "@/lib/haber-tarih";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
@@ -92,8 +91,9 @@ export default function AksenBbvaKrediAnlasmasiPage() {
               src="/aksen-bbva-124-milyon-dolar-kredi-anlasmasi.webp"
               alt="AKSEN BBVA 124 milyon dolar kredi anlaşması"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 
@@ -289,20 +289,9 @@ export default function AksenBbvaKrediAnlasmasiPage() {
               <AuthorBox />
             </div>
           </div>
-        </article>
-
-        <div className="mt-8">
-          <HaberIlgiliBolumler
-            slug="aksen-bbva-124-milyon-dolar-kredi-anlasmasi"
-            baslik="AKSEN BBVA 124 milyon dolar kredi anlaşması"
-          />
-        </div>
-
-        <HaberNavigasyon
-          href="/haber/aksen-bbva-124-milyon-dolar-kredi-anlasmasi"
-          className="mt-8"
-        />
-      </div>
+                  <HaberAltKisim href="/haber/aksen-bbva-124-milyon-dolar-kredi-anlasmasi" />
+</article>
+</div>
     </main>
   );
 }

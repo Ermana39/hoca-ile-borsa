@@ -15,11 +15,11 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "article",
-    images: [{ url: "https://www.hocaileborsa.com/beta-yeni-tarih.webp" }],
+    images: [{ url: "https://www.hocaileborsa.com/beta-yeni-tarih-discover.webp" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://www.hocaileborsa.com/beta-yeni-tarih.webp"],
+    images: ["https://www.hocaileborsa.com/beta-yeni-tarih-discover.webp"],
   },
 };
 
@@ -81,7 +81,7 @@ const jsonLd = {
       url: "https://www.hocaileborsa.com/icon-512.png",
     },
   },
-  image: "https://www.hocaileborsa.com/beta-yeni-tarih.webp",
+  image: "https://www.hocaileborsa.com/beta-yeni-tarih-discover.webp",
   inLanguage: "tr",
 };
 
@@ -101,8 +101,7 @@ export default function HaberBetaEnerjiHalkaArzYeniTarihPage() {
               alt="Beta Enerji halka arz yeni talep toplama tarihleri belli oldu"
               width={1200}
               height={900}
-              unoptimized
-              priority
+priority
               className="h-auto w-full object-contain"
             />
           </div>

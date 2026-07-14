@@ -281,8 +281,9 @@ export default function SekizTemmuzOnemliKapPage() {
               src="/kap-ozeti-discover.webp"
               alt="8 Temmuz 2026 önemli KAP haberleri ESCAR ASTOR ARZUM etkileri"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

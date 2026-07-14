@@ -88,8 +88,9 @@ export default function KordsaTasinmazSatisiPage() {
               src="/kordsa-tasinmaz-satisi-800-milyon-tl.webp"
               alt="Kordsa Kocaeli’deki iki taşınmazını 800 milyon TL’ye sattı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

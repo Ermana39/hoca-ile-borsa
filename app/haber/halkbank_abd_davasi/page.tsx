@@ -116,8 +116,9 @@ export default function HaberHalkbankAbdDavasiPage() {
               src="/halkbank-abd-davasi-dustu-discover.webp"
               alt="ABD mahkemesi Halkbank davasını düşürdü"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

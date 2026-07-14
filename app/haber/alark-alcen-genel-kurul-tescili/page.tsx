@@ -94,8 +94,9 @@ export default function HaberPage() {
               src="/alark-alcen-genel-kurul-tescili.webp"
               alt="ALARK Alcen Genel Kurul Tesciliyle Enerji Yapısını Güncelledi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

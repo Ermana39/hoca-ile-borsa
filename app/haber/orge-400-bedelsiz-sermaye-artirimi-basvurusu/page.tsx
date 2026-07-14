@@ -68,8 +68,9 @@ export default function OrgeBedelsizSermayeArtirimiPage() {
               src="/orge-400-bedelsiz-sermaye-artirimi-basvurusu.webp"
               alt="ORGE yüzde 400 bedelsiz sermaye artırımı başvurusu"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

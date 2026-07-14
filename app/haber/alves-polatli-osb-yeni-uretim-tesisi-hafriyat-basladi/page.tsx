@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
   title: "ALVES Polatlı OSB Yeni Üretim Tesisi İçin Saha Hazırlıklarına Başladı",
@@ -88,8 +87,9 @@ export default function AlvesPolatliOsbYatirimPage() {
               src="/alves-polatli-osb-yeni-uretim-tesisi-hafriyat-basladi.webp"
               alt="ALVES Polatlı OSB yeni üretim tesisi saha hazırlıkları"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 
@@ -188,19 +188,9 @@ export default function AlvesPolatliOsbYatirimPage() {
               <AuthorBox />
             </div>
           </div>
-        </article>
-
-        <div className="mt-8">
-          <HaberIlgiliBolumler
-            slug="alves-polatli-osb-yeni-uretim-tesisi-hafriyat-basladi"
-            baslik="ALVES Polatlı OSB Yeni Üretim Tesisi Yatırımı"
-          />
-        </div>
-        <HaberNavigasyon
-          href="/haber/alves-polatli-osb-yeni-uretim-tesisi-hafriyat-basladi"
-          className="mt-8"
-        />
-      </div>
+                  <HaberAltKisim href="/haber/alves-polatli-osb-yeni-uretim-tesisi-hafriyat-basladi" />
+</article>
+</div>
     </main>
   );
 }

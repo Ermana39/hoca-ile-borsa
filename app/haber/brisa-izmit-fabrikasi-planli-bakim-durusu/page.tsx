@@ -100,8 +100,9 @@ export default function HaberKapOzetiPage() {
               src="/brisa-izmit-fabrikasi-planli-bakim-durusu.webp"
               alt="Brisa İzmit Fabrikasında Üretime Geçici Ara Verecek"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

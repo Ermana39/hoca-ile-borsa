@@ -15,11 +15,11 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "article",
-    images: [{ url: "https://www.hocaileborsa.com/beta-enerji-halka-arz-dagitim-sonuclari.webp" }],
+    images: [{ url: "https://www.hocaileborsa.com/beta-enerji-halka-arz-dagitim-sonuclari-discover.webp" }],
   },
   twitter: {
     card: "summary_large_image",
-    images: ["https://www.hocaileborsa.com/beta-enerji-halka-arz-dagitim-sonuclari.webp"],
+    images: ["https://www.hocaileborsa.com/beta-enerji-halka-arz-dagitim-sonuclari-discover.webp"],
   },
 };
 
@@ -161,7 +161,7 @@ const jsonLd = {
       url: "https://www.hocaileborsa.com/icon-512.png",
     },
   },
-  image: "https://www.hocaileborsa.com/beta-enerji-halka-arz-dagitim-sonuclari.webp",
+  image: "https://www.hocaileborsa.com/beta-enerji-halka-arz-dagitim-sonuclari-discover.webp",
   inLanguage: "tr",
 };
 
@@ -179,8 +179,9 @@ export default function HaberPage() {
               src="/beta-enerji-halka-arz-dagitim-sonuclari.webp"
               alt="Beta Enerji Halka Arz Dağıtım Sonuçları Açıklandı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

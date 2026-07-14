@@ -315,8 +315,9 @@ export default function HaberKapOzetiPage() {
               src="/kap-ozeti-discover.webp"
               alt="26 Haziran KAP: ARDYZ Sipariş, MARKA Görüşme, TRALT Karar"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

@@ -199,8 +199,9 @@ export default function ArzumTahsisliSermayeArtirimiPage() {
               src="/arzum-240-milyon-tl-tahsisli-sermaye-artirimi-spk-basvurusu.webp"
               alt="ARZUM 240 milyon TL tahsisli sermaye artırımı SPK başvurusu"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

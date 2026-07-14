@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
 import { formatHaberTarihi, getHaberDosyaTarihi } from "@/lib/haber-tarih";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
@@ -92,8 +91,9 @@ export default function AselsAkilliMuhimmatSualtiSistemleriPage() {
               src="/asels-akilli-muhimmat-sualti-sistemleri-yeni-tesis.webp"
               alt="ASELSAN akıllı mühimmat ve sualtı sistemleri üretim test merkezleri"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 
@@ -317,20 +317,9 @@ export default function AselsAkilliMuhimmatSualtiSistemleriPage() {
               <AuthorBox />
             </div>
           </div>
-        </article>
-
-        <div className="mt-8">
-          <HaberIlgiliBolumler
-            slug="asels-akilli-muhimmat-sualti-sistemleri-yeni-tesis"
-            baslik="ASELSAN akıllı mühimmat ve sualtı sistemleri yeni tesis yatırımı"
-          />
-        </div>
-
-        <HaberNavigasyon
-          href="/haber/asels-akilli-muhimmat-sualti-sistemleri-yeni-tesis"
-          className="mt-8"
-        />
-      </div>
+                  <HaberAltKisim href="/haber/asels-akilli-muhimmat-sualti-sistemleri-yeni-tesis" />
+</article>
+</div>
     </main>
   );
 }

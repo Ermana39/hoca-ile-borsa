@@ -213,8 +213,9 @@ export default function EscarPayDevriTamamlandiPage() {
               src="/escar-pay-devri-tamamlandi-bulls-yatirim-yeni-ana-ortak-oldu.webp"
               alt="ESCAR pay devri tamamlandı Bulls Yatırım yeni ana ortak oldu"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

@@ -212,8 +212,9 @@ export default function GoldaGidaIslemeBasliyorPage() {
               src={`/${gorselDosya}`}
               alt="Golda Gıda 8 Temmuz 2026 Çarşamba işleme başlıyor"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

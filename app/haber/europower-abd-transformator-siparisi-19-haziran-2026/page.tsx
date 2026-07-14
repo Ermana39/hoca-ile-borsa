@@ -114,8 +114,9 @@ export default function HaberEuropowerAbdTransformatorPage() {
               src="/europower-abd-transformator-siparisi-19-06-2026.webp"
               alt="Europower World Enerji ABD güç transformatörü siparişi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
   title: "Golda Gıda Halka Arzına SPK Onayı Geldi",
@@ -335,7 +336,8 @@ export default function Page() {
             </span>
           </Link>
         </section>
-      </article>
+                <HaberAltKisim href="/haber/golda-gida-halka-arzina-spk-onayi-geldi" />
+</article>
     </main>
   );
 }

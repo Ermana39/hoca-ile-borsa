@@ -197,8 +197,9 @@ export default function ArdyzHatayEdsProjesiPage() {
               src="/ardyz-hatay-eds-projesi-devreye-alindi.webp"
               alt="ARDYZ Hatay EDS projesi devreye alındı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

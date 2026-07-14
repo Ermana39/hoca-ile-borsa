@@ -193,8 +193,9 @@ export default function HalkaArzTakvimiHaberPage() {
               src="/onumuzdeki-hafta-halka-arz-takvimi-6-12-temmuz-2026.webp"
               alt="6-12 Temmuz 2026 haftası halka arz takvimi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

@@ -138,8 +138,9 @@ export default function TraltCanakkaleKarapinarPage() {
               src="/tralt-canakkale-karapinar-projesinde-yurutmeyi-durdurma-karari.webp"
               alt="TRALT Çanakkale Karapınar Projesi yürütmeyi durdurma kararı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

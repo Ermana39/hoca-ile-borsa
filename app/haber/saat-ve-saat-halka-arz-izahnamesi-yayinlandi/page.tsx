@@ -184,8 +184,9 @@ export default function SaatVeSaatHalkaArzHaberPage() {
               src="/saat-ve-saat-halka-arz-izahnamesi-yayinlandi.webp"
               alt="Saat ve Saat halka arz izahnamesi yayınlandı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

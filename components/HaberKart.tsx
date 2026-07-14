@@ -1,7 +1,9 @@
 import Link from "next/link";
 import type { NewsItem } from "@/lib/haberler";
+import { getKategori } from "@/lib/haber-kategorileri";
 
 export default function HaberKart({ item }: { item: NewsItem }) {
+  const kategori = item.category ? getKategori(item.category) : undefined;
   const haberGorseli =
     item.image && item.image.trim() !== ""
       ? item.image
@@ -34,7 +36,7 @@ export default function HaberKart({ item }: { item: NewsItem }) {
         <div>
           <div className="mb-2 flex flex-wrap items-center gap-2">
             <span className="inline-flex items-center rounded bg-blue-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-widest text-white">
-              Haber
+              {kategori?.kisaBaslik ?? "Haber"}
             </span>
             {item.publishedAt && (
               <time

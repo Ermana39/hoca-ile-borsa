@@ -234,8 +234,9 @@ export default function AksenGhanaKumasiSantraliPage() {
               src="/aksen-ghana-kumasi-santrali-179-mw-kurulu-guce-ulasti.webp"
               alt="AKSEN Ghana Kumasi santrali 179 MW kurulu güce ulaştı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

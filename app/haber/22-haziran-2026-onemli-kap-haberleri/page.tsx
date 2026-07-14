@@ -196,8 +196,9 @@ export default function HaberKapOzetiPage() {
               src="/kap-ozeti-discover.webp"
               alt="22 Haziran KAP: TCELL Finansman, ORGE Bedelsiz, HLGYO Artırım"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

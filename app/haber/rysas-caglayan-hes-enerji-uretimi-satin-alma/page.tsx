@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
 import { formatHaberTarihi, getHaberDosyaTarihi } from "@/lib/haber-tarih";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
@@ -92,8 +91,9 @@ export default function RysasCaglayanHesEnerjiUretimiSatinAlmaPage() {
               src="/rysas-caglayan-hes-enerji-uretimi-satin-alma.webp"
               alt="RYSAS Çağlayan HES Enerji Üretim satın alma haberi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 
@@ -309,20 +309,9 @@ export default function RysasCaglayanHesEnerjiUretimiSatinAlmaPage() {
               <AuthorBox />
             </div>
           </div>
-        </article>
-
-        <div className="mt-8">
-          <HaberIlgiliBolumler
-            slug="rysas-caglayan-hes-enerji-uretimi-satin-alma"
-            baslik="RYSAS Çağlayan HES Enerji Üretim satın alma haberi"
-          />
-        </div>
-
-        <HaberNavigasyon
-          href="/haber/rysas-caglayan-hes-enerji-uretimi-satin-alma"
-          className="mt-8"
-        />
-      </div>
+                  <HaberAltKisim href="/haber/rysas-caglayan-hes-enerji-uretimi-satin-alma" />
+</article>
+</div>
     </main>
   );
 }

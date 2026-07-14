@@ -89,8 +89,9 @@ export default function HaberPage() {
               src="/bmstl-100-bedelsiz-sermaye-artirimi-spk-onayi.webp"
               alt="BMSTL’de %100 Bedelsiz Sermaye Artırımı İçin SPK Onayı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

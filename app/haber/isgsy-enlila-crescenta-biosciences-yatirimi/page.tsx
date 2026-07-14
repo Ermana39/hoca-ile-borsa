@@ -94,8 +94,9 @@ export default function HaberPage() {
               src="/isgsy-enlila-crescenta-biosciences-yatirimi.webp"
               alt="ISGSY Enlila üzerinden ABD merkezli Crescenta Biosciences yatırımı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

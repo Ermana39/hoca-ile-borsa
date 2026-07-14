@@ -192,8 +192,9 @@ export default function CemasBedelsizSermayeArtirimiPage() {
               src="/cemas-100-bedelsiz-sermaye-artirimi-karari.webp"
               alt="CEMAS yüzde 100 bedelsiz sermaye artırımı kararı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

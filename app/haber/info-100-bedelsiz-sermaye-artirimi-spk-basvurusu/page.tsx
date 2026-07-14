@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
 import { formatHaberTarihi, getHaberDosyaTarihi } from "@/lib/haber-tarih";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
@@ -92,8 +91,9 @@ export default function InfoBedelsizSermayeArtirimiSpkBasvurusuPage() {
               src="/info-100-bedelsiz-sermaye-artirimi-spk-basvurusu.webp"
               alt="INFO yüzde 100 bedelsiz sermaye artırımı SPK başvurusu"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 
@@ -275,20 +275,9 @@ export default function InfoBedelsizSermayeArtirimiSpkBasvurusuPage() {
               <AuthorBox />
             </div>
           </div>
-        </article>
-
-        <div className="mt-8">
-          <HaberIlgiliBolumler
-            slug="info-100-bedelsiz-sermaye-artirimi-spk-basvurusu"
-            baslik="INFO yüzde 100 bedelsiz sermaye artırımı SPK başvurusu"
-          />
-        </div>
-
-        <HaberNavigasyon
-          href="/haber/info-100-bedelsiz-sermaye-artirimi-spk-basvurusu"
-          className="mt-8"
-        />
-      </div>
+                  <HaberAltKisim href="/haber/info-100-bedelsiz-sermaye-artirimi-spk-basvurusu" />
+</article>
+</div>
     </main>
   );
 }

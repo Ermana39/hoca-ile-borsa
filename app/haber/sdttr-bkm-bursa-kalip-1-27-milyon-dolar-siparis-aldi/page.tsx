@@ -177,8 +177,9 @@ export default function SdttrBkmBursaKalipSiparisPage() {
               src="/sdttr-bkm-bursa-kalip-1-27-milyon-dolar-siparis-aldi.webp"
               alt="SDTTR BKM Bursa Kalıp 1,27 milyon dolar sipariş aldı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

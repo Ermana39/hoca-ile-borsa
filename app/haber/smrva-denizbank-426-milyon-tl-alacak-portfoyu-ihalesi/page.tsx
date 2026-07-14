@@ -188,8 +188,9 @@ export default function SmrvaDenizbankAlacakPortfoyuPage() {
               src="/smrva-denizbank-426-milyon-tl-alacak-portfoyu-ihalesi.webp"
               alt="SMRVA Denizbank 426 milyon TL alacak portföyü ihalesi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

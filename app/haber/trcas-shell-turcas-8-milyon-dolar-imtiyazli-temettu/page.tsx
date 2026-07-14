@@ -111,8 +111,9 @@ export default function HaberKapOzetiPage() {
               src="/trcas-shell-turcas-8-milyon-dolar-imtiyazli-temettu.webp"
               alt="Turcas'a Shell & Turcas'tan 8 Milyon Dolar İmtiyazlı Temettü"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

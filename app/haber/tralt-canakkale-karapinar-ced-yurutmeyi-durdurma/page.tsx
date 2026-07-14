@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
   title: "TRALT Çanakkale Karapınar Projesinde Yürütmeyi Durdurma Kararı",
@@ -88,8 +87,9 @@ export default function TraltCanakkaleKarapinarCedYurutmeyiDurdurmaPage() {
               src="/tralt-canakkale-karapinar-ced-yurutmeyi-durdurma.webp"
               alt="TRALT Çanakkale Karapınar Projesi için yürütmeyi durdurma kararı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 
@@ -306,20 +306,9 @@ export default function TraltCanakkaleKarapinarCedYurutmeyiDurdurmaPage() {
               <AuthorBox />
             </div>
           </div>
-        </article>
-
-        <div className="mt-8">
-          <HaberIlgiliBolumler
-            slug="tralt-canakkale-karapinar-ced-yurutmeyi-durdurma"
-            baslik="TRALT Çanakkale Karapınar Projesi yürütmeyi durdurma kararı"
-          />
-        </div>
-
-        <HaberNavigasyon
-          href="/haber/tralt-canakkale-karapinar-ced-yurutmeyi-durdurma"
-          className="mt-8"
-        />
-      </div>
+                  <HaberAltKisim href="/haber/tralt-canakkale-karapinar-ced-yurutmeyi-durdurma" />
+</article>
+</div>
     </main>
   );
 }

@@ -298,8 +298,9 @@ export default function UcaymSancaktepeSehirHastanesiPage() {
               src="/ucaym-sancaktepe-sehir-hastanesi-1-35-milyar-tl-sozlesme.webp"
               alt="UCAYM Sancaktepe Şehir Hastanesi 1,35 milyar TL sözleşme"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

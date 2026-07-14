@@ -182,8 +182,9 @@ export default function PetkmMasterPlanFeedPage() {
               src="/petkm-master-plan-feed-asamasina-gecis-hazirliklari.webp"
               alt="PETKM Master Plan FEED aşamasına geçiş hazırlıkları"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

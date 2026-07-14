@@ -116,8 +116,9 @@ export default function HaberMidasOdemeSistemleriPage() {
               src="/midas-odeme-sistemleri.webp"
               alt="Midas ödeme sistemleri dijital cüzdan ve ön ödemeli kart hazırlığı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

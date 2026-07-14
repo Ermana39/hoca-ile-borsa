@@ -237,8 +237,9 @@ export default function YediTemmuzKapHaberleriPage() {
               src="/kap-ozeti-discover.webp"
               alt={title}
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

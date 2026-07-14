@@ -26,10 +26,14 @@ function kategoriBaslik(slug?: string) {
   return k ? k.kisaBaslik : slug;
 }
 
-// publishedAt (YYYY-MM-DD) -> RFC 822 pubDate. Saat bilgisi tutulmadığı için
-// gün başlangıcı olarak İstanbul 09:00 kabul edilir.
+// publishedAt saat içeriyorsa orijinal yayın saatini korur. Eski tarih-only
+// kayıtlar için İstanbul 09:00 güvenli varsayılan olarak kullanılır.
 function toPubDate(publishedAt: string) {
-  return new Date(`${publishedAt}T09:00:00+03:00`).toUTCString();
+  const iso = /^\d{4}-\d{2}-\d{2}$/.test(publishedAt)
+    ? `${publishedAt}T09:00:00+03:00`
+    : publishedAt;
+
+  return new Date(iso).toUTCString();
 }
 
 export async function GET() {

@@ -180,8 +180,9 @@ export default function HalkaArzGunSonuKapanisPage() {
               src="/beta-soho-orzax-halka-arz-gun-sonu-kapanis-yorumlari.webp"
               alt="Beta Soho Orzax halka arz gün sonu kapanış yorumları"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

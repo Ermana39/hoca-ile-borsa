@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
   title: "MARMR'den Polisan Kansai Boya Payları İçin 93 Milyon Dolarlık Ön Mutabakat",
@@ -88,8 +87,9 @@ export default function MarmrPolisanKansaiBoyaPaySatisPage() {
               src="/marmr-polisan-kansai-boya-pay-satis-on-mutabakati.webp"
               alt="MARMR Polisan Kansai Boya pay satışı ön mutabakat haberi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 
@@ -311,20 +311,9 @@ export default function MarmrPolisanKansaiBoyaPaySatisPage() {
               <AuthorBox />
             </div>
           </div>
-        </article>
-
-        <div className="mt-8">
-          <HaberIlgiliBolumler
-            slug="marmr-polisan-kansai-boya-pay-satis-on-mutabakati"
-            baslik="MARMR Polisan Kansai Boya pay satışı ön mutabakatı"
-          />
-        </div>
-
-        <HaberNavigasyon
-          href="/haber/marmr-polisan-kansai-boya-pay-satis-on-mutabakati"
-          className="mt-8"
-        />
-      </div>
+                  <HaberAltKisim href="/haber/marmr-polisan-kansai-boya-pay-satis-on-mutabakati" />
+</article>
+</div>
     </main>
   );
 }

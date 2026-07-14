@@ -154,8 +154,9 @@ export default function HaberPage() {
               src="/5-halka-arz-talep-toplama-takvimi.webp"
               alt="5 halka arz talep toplama takvimi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

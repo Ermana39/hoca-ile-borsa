@@ -368,8 +368,9 @@ export default function HaftalikFonlarinEnCokAldigiHisselerPage() {
               src="/haftalik-fonlarin-en-cok-aldigi-hisseler.webp"
               alt="Bu hafta fonların en çok aldığı hisseler"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

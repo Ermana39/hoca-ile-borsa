@@ -307,8 +307,9 @@ export default function OnTemmuzHalkaArzGunSonuPage() {
               src={`/${gorselDosya}`}
               alt="10 Temmuz 2026 halka arzlar gün sonu kapanış değerlendirmesi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

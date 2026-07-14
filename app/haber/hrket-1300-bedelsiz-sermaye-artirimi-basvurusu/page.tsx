@@ -95,8 +95,9 @@ export default function HaberPage() {
               src="/hrket-1300-bedelsiz-sermaye-artirimi-basvurusu.webp"
               alt="HRKET’ten %1300 Bedelsiz Sermaye Artırımı Başvurusu"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

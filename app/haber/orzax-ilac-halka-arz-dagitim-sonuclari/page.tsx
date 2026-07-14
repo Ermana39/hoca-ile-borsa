@@ -109,8 +109,9 @@ export default function OrzaxIlacHalkaArzDagitimSonuclariPage() {
               src="/orzax-ilac-halka-arz-dagitim-sonuclari.webp"
               alt="ORZAX İlaç halka arzında dağıtımlar sonuçlandı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

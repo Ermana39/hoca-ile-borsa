@@ -174,8 +174,9 @@ export default function FonlarGunlukKapanisPage() {
               src={haberGorseli}
               alt="10 Temmuz 2026 TLY PHE PBR DFI fon kapanış değerlendirmesi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 
@@ -228,8 +229,7 @@ export default function FonlarGunlukKapanisPage() {
                     alt="TLY PHE PBR DFI haftalık getiri BIST 100 ve altın karşılaştırması"
                     width={1440}
                     height={471}
-                    unoptimized
-                    className="h-auto w-full"
+className="h-auto w-full"
                   />
                   <figcaption className="border-t border-slate-100 px-4 py-3 text-sm text-slate-500">
                     Haftalık getiri sıralaması: DFI +%2,94, PBR +%2,14, PHE

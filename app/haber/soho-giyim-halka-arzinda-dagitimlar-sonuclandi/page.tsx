@@ -1,10 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
 import { formatHaberTarihi, getHaberDosyaTarihi } from "@/lib/haber-tarih";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
@@ -92,8 +91,9 @@ export default function SohoGiyimHalkaArzindaDagitimlarSonuclandiPage() {
               src="/soho-giyim-halka-arzinda-dagitimlar-sonuclandi.webp"
               alt="SOHO Giyim halka arzında dağıtımlar sonuçlandı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 
@@ -319,20 +319,9 @@ export default function SohoGiyimHalkaArzindaDagitimlarSonuclandiPage() {
               <AuthorBox />
             </div>
           </div>
-        </article>
-
-        <div className="mt-8">
-          <HaberIlgiliBolumler
-            slug="soho-giyim-halka-arzinda-dagitimlar-sonuclandi"
-            baslik="SOHO Giyim halka arzında dağıtımlar sonuçlandı"
-          />
-        </div>
-
-        <HaberNavigasyon
-          href="/haber/soho-giyim-halka-arzinda-dagitimlar-sonuclandi"
-          className="mt-8"
-        />
-      </div>
+                  <HaberAltKisim href="/haber/soho-giyim-halka-arzinda-dagitimlar-sonuclandi" />
+</article>
+</div>
     </main>
   );
 }

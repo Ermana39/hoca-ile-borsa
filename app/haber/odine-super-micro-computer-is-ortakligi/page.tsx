@@ -122,8 +122,9 @@ export default function HaberKapOzetiPage() {
               src="/odine-super-micro-computer-is-ortakligi.webp"
               alt="Odine, Super Micro Computer ile İş Ortaklığı Anlaşması İmzaladı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

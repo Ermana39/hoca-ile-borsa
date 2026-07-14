@@ -89,8 +89,9 @@ export default function HaberPage() {
               src="/trhol-tera-yatirim-pay-devri-sozlesmesi.webp"
               alt="TRHOL, Tera Yatırım Paylarının Devri İçin Sözleşme İmzaladı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

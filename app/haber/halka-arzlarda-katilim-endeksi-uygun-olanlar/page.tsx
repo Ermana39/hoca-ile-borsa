@@ -160,8 +160,9 @@ export default function HaberPage() {
               src={haberGorsel}
               alt="Halka arzlarda katılım endeksine uygun olanlar ve olmayanlar"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

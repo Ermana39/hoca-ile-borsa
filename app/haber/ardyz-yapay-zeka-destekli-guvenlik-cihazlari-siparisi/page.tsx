@@ -169,8 +169,9 @@ export default function ArdyzYapayZekaDestekliSiparisPage() {
               src="/ardyz-yapay-zeka-destekli-guvenlik-cihazlari-siparisi.webp"
               alt="ARDYZ yapay zekâ destekli güvenlik cihazları siparişi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

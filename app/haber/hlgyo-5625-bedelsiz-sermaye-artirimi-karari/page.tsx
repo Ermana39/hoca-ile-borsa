@@ -94,8 +94,9 @@ export default function HaberKapOzetiPage() {
               src="/hlgyo-5625-bedelsiz-sermaye-artirimi-karari.webp"
               alt="HLGYO'dan %56,25 Bedelsiz Sermaye Artırımı Kararı"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

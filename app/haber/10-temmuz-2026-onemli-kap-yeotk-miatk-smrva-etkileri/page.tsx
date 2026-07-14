@@ -234,8 +234,9 @@ export default function OnTemmuzKapPage() {
               src="/kap-ozeti-discover.webp"
               alt="10 Temmuz 2026 önemli KAP haberleri YEOTK MIATK SMRVA etkileri"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

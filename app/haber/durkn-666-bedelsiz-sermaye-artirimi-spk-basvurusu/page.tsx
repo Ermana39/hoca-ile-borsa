@@ -140,8 +140,9 @@ export default function DurknBedelsizSermayeArtirimiPage() {
               src="/durkn-666-bedelsiz-sermaye-artirimi-spk-basvurusu.webp"
               alt="DURKN yüzde 666 bedelsiz sermaye artırımı SPK başvurusu"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>

@@ -214,8 +214,9 @@ export default function AltiTemmuzKapHaberleriPage() {
               src="/kap-ozeti-discover.webp"
               alt="6 Temmuz 2026 Önemli KAP: DURKN, YEOTK, TCKRC Etkileri"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

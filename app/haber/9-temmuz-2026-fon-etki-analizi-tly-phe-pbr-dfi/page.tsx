@@ -146,8 +146,9 @@ export default function FonEtkiHaberiPage() {
               src={haberGorseli}
               alt="TLY PHE PBR DFI fon etki analizi ve yarınki fon fiyatı tahmini"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 

@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
   title: "IHLAS Kazarman HES Projesinde Temel Atıldı",
@@ -88,8 +87,9 @@ export default function IhlasKazarmanHesTemelAtmaPage() {
               src="/ihlas-kazarman-hes-projesinde-temel-atildi.webp"
               alt="IHLAS Kazarman Hidroelektrik Santralleri Projesi temel atma töreni"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 
@@ -290,20 +290,9 @@ export default function IhlasKazarmanHesTemelAtmaPage() {
               <AuthorBox />
             </div>
           </div>
-        </article>
-
-        <div className="mt-8">
-          <HaberIlgiliBolumler
-            slug="ihlas-kazarman-hes-projesinde-temel-atildi"
-            baslik="IHLAS Kazarman HES temel atma töreni"
-          />
-        </div>
-
-        <HaberNavigasyon
-          href="/haber/ihlas-kazarman-hes-projesinde-temel-atildi"
-          className="mt-8"
-        />
-      </div>
+                  <HaberAltKisim href="/haber/ihlas-kazarman-hes-projesinde-temel-atildi" />
+</article>
+</div>
     </main>
   );
 }

@@ -1,9 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Metadata } from "next";
-import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
-import HaberNavigasyon from "@/components/HaberNavigasyon";
+import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
   title: "MARKA Bağlı Ortaklığı Westplast’ın %55’i İçin Sözleşme İmzaladı",
@@ -88,8 +87,9 @@ export default function MarkaMomentumWestplastPayDevriPage() {
               src="/marka-momentum-westplast-pay-devri.webp"
               alt="MARKA Momentum Girişim Holding Westplast pay devir sözleşmesi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
             />
           </div>
 
@@ -298,20 +298,9 @@ export default function MarkaMomentumWestplastPayDevriPage() {
               <AuthorBox />
             </div>
           </div>
-        </article>
-
-        <div className="mt-8">
-          <HaberIlgiliBolumler
-            slug="marka-momentum-westplast-pay-devri"
-            baslik="MARKA Momentum Girişim Westplast pay devri"
-          />
-        </div>
-
-        <HaberNavigasyon
-          href="/haber/marka-momentum-westplast-pay-devri"
-          className="mt-8"
-        />
-      </div>
+                  <HaberAltKisim href="/haber/marka-momentum-westplast-pay-devri" />
+</article>
+</div>
     </main>
   );
 }

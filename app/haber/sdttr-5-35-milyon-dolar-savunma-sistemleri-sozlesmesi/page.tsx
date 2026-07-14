@@ -210,8 +210,9 @@ export default function SdttrSavunmaSistemleriSozlesmesiPage() {
               src="/sdttr-5-35-milyon-dolar-savunma-sistemleri-sozlesmesi.webp"
               alt="SDTTR 5,35 milyon dolarlık savunma sistemleri sözleşmesi"
               fill
-              unoptimized
-              className="object-cover"
+
+              sizes="(min-width: 1024px) 896px, 100vw"
+className="object-cover"
               priority
             />
           </div>
