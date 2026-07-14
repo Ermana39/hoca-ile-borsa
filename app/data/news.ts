@@ -23,6 +23,25 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1137,
+    title: "14.07.2026 Fonların Günlük Kapanış Değerlendirmesi: TLY, PHE, PBR, DFI",
+    href: "/haber/14-temmuz-2026-fonlar-gunluk-kapanis-degerlendirmesi",
+    image: "/2026-fon-etki-analizi-tly-phe-pbr-dfi.webp",
+    alt: "14 Temmuz 2026 TLY PHE PBR DFI fon günlük kapanış değerlendirmesi",
+    publishedAt: "2026-07-14T22:05:00+03:00",
+    category: "piyasa-gundemi",
+  },
+  {
+    id: 1136,
+    title: "ULUUN Rüzgar Enerjisi Projesinde TEDAŞ Kabul Sürecini Başlattı",
+    href: "/haber/uluun-ruzgar-enerjisi-projesinde-tedas-kabul-sureci",
+    image: "/uluun-ruzgar-enerjisi-projesinde-tedas-kabul-sureci.webp",
+    alt: "ULUUN rüzgar enerjisi projesinde TEDAŞ kabul süreci",
+    publishedAt: "2026-07-14T13:45:10+03:00",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["ULUUN"],
+  },
+  {
     id: 1135,
     title: "FORMT Proline Sandalye’nin %52 Payı İçin 330 Milyon TL’lik Alım Anlaşması Yaptı",
     href: "/haber/formt-proline-sandalye-yuzde-52-satin-alma",
@@ -228,7 +247,7 @@ export const newsItems: NewsItem[] = [
     href: "/haber/haftalik-fonlarin-en-cok-aldigi-hisseler",
     image: "/haftalik-fonlarin-en-cok-aldigi-hisseler.webp",
     alt: "Bu hafta fonların en çok aldığı hisseler HEDEF OZATD EREGL KTLEV ODINE TEHOL ALKLC TUPRS GUNDG PEKGY EUPWR ASTOR",
-    publishedAt: "auto",
+    publishedAt: "2026-07-11T12:00:00+03:00",
     category: "piyasa-gundemi",
     ilgiliHisseler: [
       "HEDEF",

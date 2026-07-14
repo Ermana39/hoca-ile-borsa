@@ -54,7 +54,7 @@ export function getHaberDosyaTarihi(importMetaUrl: string) {
   const filePath = fileURLToPath(importMetaUrl);
   const href = getHrefFromFilePath(filePath);
   const kaliciTarih = href
-    ? kaliciHaberTarihleri[href] ?? haberListesiTarihleri[href]
+    ? haberListesiTarihleri[href] ?? kaliciHaberTarihleri[href]
     : undefined;
   return kaliciTarih ?? getDosyaZamani(filePath);
 }
@@ -72,7 +72,7 @@ export function getHaberDosyaTarihiFromHref(href: string) {
   }
 
   try {
-    const kaliciTarih = kaliciHaberTarihleri[href] ?? haberListesiTarihleri[href];
+    const kaliciTarih = haberListesiTarihleri[href] ?? kaliciHaberTarihleri[href];
     if (kaliciTarih) return kaliciTarih;
 
     return getDosyaZamani(path.join(process.cwd(), "app", "haber", ...segments, "page.tsx"));
