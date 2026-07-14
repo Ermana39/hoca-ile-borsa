@@ -418,7 +418,7 @@ export default function UluunRuzgarEnerjisiHaberiPage() {
               <Section title="Finansal etki nasıl okunmalı?">
                 <p className="text-sm leading-7 text-slate-600 md:text-base">
                   Bu açıklama yeni bir satış sözleşmesi veya doğrudan ciro
-                  yaratan bir sipariş haberi değil. Haber, ULUUN'un üretim
+                  yaratan bir sipariş haberi değil. Haber, ULUUN&apos;un üretim
                   tesislerinde kullanılan elektriğin bir bölümünü yenilenebilir
                   enerji kaynaklarıyla karşılama hedefinde ilerleme sağlandığını
                   gösteriyor.
