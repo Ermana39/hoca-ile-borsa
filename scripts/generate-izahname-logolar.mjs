@@ -1,5 +1,5 @@
-// İzahname (halka arz) logolarını üretir. Logolar base64 data URI olarak
-// data/izahname-logolar.generated.json'a yazılır; çalışma anında dış istek YOK.
+// İzahname (halka arz) logolarını üretir. Küçültülen logolar statik webp
+// dosyaları olarak public/logolar/izahname altına, URL haritası da JSON'a yazılır.
 //
 // KAYNAK ÖNCELİĞİ (her şirket için):
 //   1) halkarz.com — şirket adına göre eşleşen gerçek logo (sharp ile 96px webp'e
@@ -8,13 +8,20 @@
 // Eşleşme/logo bulunamayan şirket SirketLogo'da baş-harf avatar'ına düşer.
 //
 // Çalıştır:  node scripts/generate-izahname-logolar.mjs
-import { readdirSync, readFileSync, writeFileSync, existsSync } from "fs";
+import {
+  existsSync,
+  mkdirSync,
+  readdirSync,
+  readFileSync,
+  writeFileSync,
+} from "fs";
 import path from "path";
 import sharp from "sharp";
 
 const HALKA_ARZ_DIR = path.join(process.cwd(), "data", "halka-arz");
 const SEED = path.join(process.cwd(), "data", "izahname-logo-domainleri.json");
 const OUT = path.join(process.cwd(), "data", "izahname-logolar.generated.json");
+const LOGO_DIR = path.join(process.cwd(), "public", "logolar", "izahname");
 
 // Onaylı izahnameler JSON değil, sayfada elle tutuluyor; logo eşleşmesi için burada.
 const ONAYLI = [
@@ -64,17 +71,19 @@ function halkarzLogoUrl(idx, ad) {
   return idx.exact.get(norm(ad)) || idx.byKey.get(keyOf(ad)) || null;
 }
 
-// 96px webp'e küçült, base64 data URI döndür
-async function kucultBase64(buf) {
+// 96px webp'e küçült, statik dosyaya yaz ve herkese açık URL'yi döndür.
+async function logoYaz(slug, buf) {
   const out = await sharp(buf)
     .resize(96, 96, { fit: "inside", withoutEnlargement: true })
     .webp({ quality: 82 })
     .toBuffer();
-  return `data:image/webp;base64,${out.toString("base64")}`;
+  const fileName = `${slug}.webp`;
+  writeFileSync(path.join(LOGO_DIR, fileName), out);
+  return `/logolar/izahname/${fileName}`;
 }
 
 // favicon yedeği (yalnızca halkarz eşleşmesi yoksa)
-async function faviconBase64(domain) {
+async function faviconBuffer(domain) {
   for (const url of [
     `https://www.google.com/s2/favicons?sz=64&domain=${domain}`,
     `https://${domain}/favicon.ico`,
@@ -86,7 +95,7 @@ async function faviconBase64(domain) {
       const buf = Buffer.from(await res.arrayBuffer());
       if (buf.length < 100) continue;
       if (url.endsWith("/favicon.ico") && !ct.includes("image")) continue;
-      return `data:${ct.includes("image") ? ct : "image/png"};base64,${buf.toString("base64")}`;
+      return buf;
     } catch { /* dene sıradakini */ }
   }
   return null;
@@ -106,6 +115,7 @@ sirketler.push(...ONAYLI);
 
 const seed = existsSync(SEED) ? JSON.parse(readFileSync(SEED, "utf-8")) : {};
 const idx = await halkarzIndex();
+mkdirSync(LOGO_DIR, { recursive: true });
 
 const map = {};
 let halk = 0, fav = 0, yok = 0;
@@ -119,7 +129,7 @@ for (const s of sirketler) {
       if (ir.ok) {
         const buf = Buffer.from(await ir.arrayBuffer());
         if (buf.length >= 100) {
-          map[s.slug] = await kucultBase64(buf);
+          map[s.slug] = await logoYaz(s.slug, buf);
           halk++;
           continue;
         }
@@ -129,8 +139,8 @@ for (const s of sirketler) {
   // yedek: seed domaini ya da JSON web
   const domain = domainNormalize(seed[s.slug]) || domainNormalize(s.web);
   if (domain) {
-    const fb = await faviconBase64(domain);
-    if (fb) { map[s.slug] = fb; fav++; continue; }
+    const fb = await faviconBuffer(domain);
+    if (fb) { map[s.slug] = await logoYaz(s.slug, fb); fav++; continue; }
   }
   yok++;
   if (eslesmeyen.length < 30) eslesmeyen.push(s.ad);

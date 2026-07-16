@@ -57,6 +57,12 @@ export type Hisse = {
 
 const HISSELER_DIZINI = path.join(process.cwd(), "data", "hisseler");
 
+const HISSE_KODU_DESENI = /^[a-z0-9]{2,6}$/i;
+
+export function isGecerliHisseKodu(kod: string): boolean {
+  return HISSE_KODU_DESENI.test(kod.trim());
+}
+
 function tumHisseleriYukle(): Record<string, Hisse> {
   const kayitlar: Record<string, Hisse> = {};
 
@@ -78,8 +84,10 @@ function tumHisseleriYukle(): Record<string, Hisse> {
       // gibi yerlerde patlar ve tüm build'i düşürür.
       if (!veri || typeof veri.kod !== "string" || !veri.kod.trim()) continue;
       if (typeof veri.sirketAdi !== "string" || !veri.sirketAdi.trim()) continue;
+      if (!isGecerliHisseKodu(veri.kod)) continue;
       // Anahtar: dosya adı (uzantısız), küçük harf. Örn. "asels.json" -> "asels"
       const anahtar = dosya.replace(/\.json$/i, "").toLowerCase();
+      if (!isGecerliHisseKodu(anahtar)) continue;
       kayitlar[anahtar] = veri;
     } catch {
       // Bozuk/eksik bir JSON tüm siteyi düşürmesin; o dosyayı atla.
@@ -93,17 +101,23 @@ function tumHisseleriYukle(): Record<string, Hisse> {
 const hisseler: Record<string, Hisse> = tumHisseleriYukle();
 
 export function getHisse(sembol: string): Hisse | undefined {
+  if (!isGecerliHisseKodu(sembol)) return undefined;
   return hisseler[sembol.toLowerCase()];
 }
 
 // Elle tam sayfa olarak hazırlanan hisse kodları (küçük harf kümesi).
-const ozelKodlar = new Set(ozelHisseler.map((o) => o.kod.toLowerCase()));
+const ozelKodlar = new Set(
+  ozelHisseler
+    .map((o) => o.kod.toLowerCase())
+    .filter((kod) => isGecerliHisseKodu(kod))
+);
 
 // O sembol için künye sayfası var mı? (iç linkleme için)
 // Hem JSON şablonu hem elle tam sayfa hisseleri kapsar.
 export function hisseVarMi(sembol: string): boolean {
   if (!sembol) return false;
   const k = sembol.toLowerCase();
+  if (!isGecerliHisseKodu(k)) return false;
   return k in hisseler || ozelKodlar.has(k);
 }
 

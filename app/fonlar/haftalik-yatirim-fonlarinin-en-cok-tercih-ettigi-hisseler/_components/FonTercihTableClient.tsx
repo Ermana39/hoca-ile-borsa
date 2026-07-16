@@ -21,29 +21,51 @@ export type FonSatiri = {
   yuzdeIlkYatirimFon: string | number | null;
 };
 
+type CellValue = string | number | null;
+
+export type FonTableRow = [
+  string | null,
+  boolean,
+  CellValue,
+  CellValue,
+  CellValue,
+  CellValue,
+  CellValue,
+  CellValue,
+  CellValue,
+  CellValue,
+  CellValue,
+  CellValue,
+  CellValue,
+  CellValue,
+  CellValue,
+];
+
 type ColumnKey = keyof FonSatiri;
 type SortDir = "asc" | "desc";
+const PAGE_SIZE = 50;
 
 const columns: {
   key: ColumnKey;
+  dataIndex: number;
   label: string;
   align?: "left" | "right";
   width: string;
 }[] = [
-  { key: "sembol", label: "Sembol", align: "left", width: "min-w-[120px]" },
-  { key: "degisim", label: "Değişim", align: "right", width: "min-w-[130px]" },
-  { key: "sonToplamYuzde", label: "Son Toplam %", align: "right", width: "min-w-[150px]" },
-  { key: "ilkToplamYuzde", label: "İlk Toplam %", align: "right", width: "min-w-[150px]" },
-  { key: "sonToplamTakasTl", label: "Son Toplam Takas TL", align: "right", width: "min-w-[190px]" },
-  { key: "ilkToplamTakasTl", label: "İlk Toplam Takas TL", align: "right", width: "min-w-[190px]" },
-  { key: "takasTlSonEmeklilikFon", label: "Son Emeklilik Fon Takas TL", align: "right", width: "min-w-[230px]" },
-  { key: "yuzdeSonEmeklilikFon", label: "Son Emeklilik Fon %", align: "right", width: "min-w-[190px]" },
-  { key: "takasTlIlkEmeklilikFon", label: "İlk Emeklilik Fon Takas TL", align: "right", width: "min-w-[230px]" },
-  { key: "yuzdeIlkEmeklilikFon", label: "İlk Emeklilik Fon %", align: "right", width: "min-w-[190px]" },
-  { key: "takasTlSonYatirimFon", label: "Son Yatırım Fon Takas TL", align: "right", width: "min-w-[220px]" },
-  { key: "yuzdeSonYatirimFon", label: "Son Yatırım Fon %", align: "right", width: "min-w-[180px]" },
-  { key: "takasTlIlkYatirimFon", label: "İlk Yatırım Fon Takas TL", align: "right", width: "min-w-[220px]" },
-  { key: "yuzdeIlkYatirimFon", label: "İlk Yatırım Fon %", align: "right", width: "min-w-[180px]" },
+  { key: "sembol", dataIndex: 0, label: "Sembol", align: "left", width: "min-w-[120px]" },
+  { key: "degisim", dataIndex: 2, label: "Değişim", align: "right", width: "min-w-[130px]" },
+  { key: "sonToplamYuzde", dataIndex: 3, label: "Son Toplam %", align: "right", width: "min-w-[150px]" },
+  { key: "ilkToplamYuzde", dataIndex: 4, label: "İlk Toplam %", align: "right", width: "min-w-[150px]" },
+  { key: "sonToplamTakasTl", dataIndex: 5, label: "Son Toplam Takas TL", align: "right", width: "min-w-[190px]" },
+  { key: "ilkToplamTakasTl", dataIndex: 6, label: "İlk Toplam Takas TL", align: "right", width: "min-w-[190px]" },
+  { key: "takasTlSonEmeklilikFon", dataIndex: 7, label: "Son Emeklilik Fon Takas TL", align: "right", width: "min-w-[230px]" },
+  { key: "yuzdeSonEmeklilikFon", dataIndex: 8, label: "Son Emeklilik Fon %", align: "right", width: "min-w-[190px]" },
+  { key: "takasTlIlkEmeklilikFon", dataIndex: 9, label: "İlk Emeklilik Fon Takas TL", align: "right", width: "min-w-[230px]" },
+  { key: "yuzdeIlkEmeklilikFon", dataIndex: 10, label: "İlk Emeklilik Fon %", align: "right", width: "min-w-[190px]" },
+  { key: "takasTlSonYatirimFon", dataIndex: 11, label: "Son Yatırım Fon Takas TL", align: "right", width: "min-w-[220px]" },
+  { key: "yuzdeSonYatirimFon", dataIndex: 12, label: "Son Yatırım Fon %", align: "right", width: "min-w-[180px]" },
+  { key: "takasTlIlkYatirimFon", dataIndex: 13, label: "İlk Yatırım Fon Takas TL", align: "right", width: "min-w-[220px]" },
+  { key: "yuzdeIlkYatirimFon", dataIndex: 14, label: "İlk Yatırım Fon %", align: "right", width: "min-w-[180px]" },
 ];
 
 function temizMetin(deger: unknown) {
@@ -93,8 +115,8 @@ function formatTl(deger: unknown) {
   }).format(sayi);
 }
 
-function hucreDegeri(row: FonSatiri, key: ColumnKey) {
-  const value = row[key];
+function hucreDegeri(row: FonTableRow, key: ColumnKey, dataIndex: number) {
+  const value = row[dataIndex];
 
   if (key === "sembol") return temizMetin(value) || "-";
 
@@ -118,9 +140,10 @@ function sortArrow(active: boolean, direction: SortDir) {
   return direction === "asc" ? "↑" : "↓";
 }
 
-export default function FonTercihTableClient({ rows }: { rows: FonSatiri[] }) {
+export default function FonTercihTableClient({ rows }: { rows: FonTableRow[] }) {
   const [sort, setSort] = useState<ColumnKey>("sembol");
   const [dir, setDir] = useState<SortDir>("asc");
+  const [page, setPage] = useState(1);
 
   const tableScrollRef = useRef<HTMLDivElement | null>(null);
   const fixedScrollRef = useRef<HTMLDivElement | null>(null);
@@ -179,9 +202,12 @@ export default function FonTercihTableClient({ rows }: { rows: FonSatiri[] }) {
   }, [rows]);
 
   const sortedRows = useMemo(() => {
+    const sortColumn = columns.find((column) => column.key === sort);
+    if (!sortColumn) return rows;
+
     return [...rows].sort((a, b) => {
-      const aValue = a[sort];
-      const bValue = b[sort];
+      const aValue = a[sortColumn.dataIndex];
+      const bValue = b[sortColumn.dataIndex];
 
       if (sort === "sembol") {
         return dir === "asc"
@@ -196,7 +222,15 @@ export default function FonTercihTableClient({ rows }: { rows: FonSatiri[] }) {
     });
   }, [rows, sort, dir]);
 
+  const totalPages = Math.max(1, Math.ceil(sortedRows.length / PAGE_SIZE));
+  const activePage = Math.min(page, totalPages);
+  const visibleRows = useMemo(() => {
+    const start = (activePage - 1) * PAGE_SIZE;
+    return sortedRows.slice(start, start + PAGE_SIZE);
+  }, [activePage, sortedRows]);
+
   const handleSort = (column: ColumnKey) => {
+    setPage(1);
     if (sort === column) {
       setDir((prev) => (prev === "asc" ? "desc" : "asc"));
       return;
@@ -239,15 +273,19 @@ export default function FonTercihTableClient({ rows }: { rows: FonSatiri[] }) {
             </thead>
 
             <tbody>
-              {sortedRows.length > 0 ? (
-                sortedRows.map((row, index) => (
+              {visibleRows.length > 0 ? (
+                visibleRows.map((row, index) => {
+                  const absoluteIndex = (activePage - 1) * PAGE_SIZE + index;
+                  const sembol = typeof row[0] === "string" ? row[0] : null;
+
+                  return (
                   <tr
-                    key={`${row.sembol}-${index}`}
-                    className={index % 2 === 0 ? "bg-white" : "bg-sky-50/60"}
+                    key={`${sembol}-${absoluteIndex}`}
+                    className={absoluteIndex % 2 === 0 ? "bg-white" : "bg-sky-50/60"}
                   >
                     {columns.map((column) => (
                       <td
-                        key={`${row.sembol}-${column.key}-${index}`}
+                        key={`${sembol}-${column.key}-${absoluteIndex}`}
                         className={`${column.width} border-b border-zinc-100 px-4 py-3 text-zinc-700 ${
                           column.align === "right" ? "text-right" : "text-left"
                         } ${
@@ -256,21 +294,22 @@ export default function FonTercihTableClient({ rows }: { rows: FonSatiri[] }) {
                             : ""
                         }`}
                       >
-                        {column.key === "sembol" && row.sayfasiVarMi && row.sembol ? (
+                        {column.key === "sembol" && row[1] && sembol ? (
                           <Link
-                            href={`/hisse/${row.sembol.toLowerCase()}`}
+                            href={`/hisse/${sembol.toLowerCase()}`}
                             prefetch={false}
                             className="hover:text-blue-700 hover:underline"
                           >
-                            {hucreDegeri(row, column.key)}
+                            {hucreDegeri(row, column.key, column.dataIndex)}
                           </Link>
                         ) : (
-                          hucreDegeri(row, column.key)
+                          hucreDegeri(row, column.key, column.dataIndex)
                         )}
                       </td>
                     ))}
                   </tr>
-                ))
+                  );
+                })
               ) : (
                 <tr>
                   <td
@@ -285,6 +324,38 @@ export default function FonTercihTableClient({ rows }: { rows: FonSatiri[] }) {
           </table>
         </div>
       </div>
+
+      {totalPages > 1 && (
+        <div className="mt-4 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm">
+          <span className="font-medium text-zinc-600">
+            {Math.min((activePage - 1) * PAGE_SIZE + 1, sortedRows.length)}-
+            {Math.min(activePage * PAGE_SIZE, sortedRows.length)} / {sortedRows.length} hisse
+          </span>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              disabled={activePage === 1}
+              onClick={() => setPage((current) => Math.max(1, current - 1))}
+              className="rounded-lg border border-zinc-300 bg-white px-3 py-2 font-semibold text-zinc-700 disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              Önceki
+            </button>
+            <span className="min-w-20 text-center font-semibold text-zinc-700">
+              {activePage} / {totalPages}
+            </span>
+            <button
+              type="button"
+              disabled={activePage === totalPages}
+              onClick={() =>
+                setPage((current) => Math.min(totalPages, current + 1))
+              }
+              className="rounded-lg border border-zinc-300 bg-white px-3 py-2 font-semibold text-zinc-700 disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              Sonraki
+            </button>
+          </div>
+        </div>
+      )}
 
       <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-zinc-200 bg-white/95 px-4 py-2 backdrop-blur">
         <div className="mx-auto max-w-[1600px]">

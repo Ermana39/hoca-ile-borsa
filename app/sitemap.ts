@@ -10,7 +10,10 @@ import { HABER_KATEGORILERI } from "@/lib/haber-kategorileri";
 import { getSitemapHisseSembolleri } from "@/lib/hisseler";
 import { ozgunTerimler, terimGuncellemeTarihi } from "@/data/sozluk";
 import { getTumGunlukOzetler } from "@/lib/gunluk-ozet";
-import { getSitemapTaslakIzahnameSluglari } from "@/lib/halka-arz";
+import {
+  getSitemapOnayliIzahnameSluglari,
+  getSitemapTaslakIzahnameSluglari,
+} from "@/lib/halka-arz";
 import { rehberler } from "@/lib/rehberler";
 import {
   fonEtkiOzetleri,
@@ -146,6 +149,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const halkaArzRoutes = getSitemapTaslakIzahnameSluglari().map(
     (slug) => `/halka-arz/taslak-izahnameler/${slug}`
   );
+  const onayliHalkaArzRoutes = getSitemapOnayliIzahnameSluglari().map(
+    (slug) => `/halka-arz/onayli-izahnameler/${slug}`
+  );
 
   const gunlukOzetEntries = getTumGunlukOzetler().map((ozet) => ({
     route: `/borsa/gunluk-borsa-ozeti/${ozet.slug}`,
@@ -179,6 +185,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...sozlukEntries.map((entry) => entry.route),
     ...haberRoutes,
     ...halkaArzRoutes,
+    ...onayliHalkaArzRoutes,
     ...arsivSayfaRoutes,
     ...kategoriRoutes,
   ]) {

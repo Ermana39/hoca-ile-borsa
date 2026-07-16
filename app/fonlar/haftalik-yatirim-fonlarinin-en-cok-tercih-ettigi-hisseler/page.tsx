@@ -2,6 +2,7 @@ import Link from "next/link";
 import fonTercihData from "./data/tercih-edilen-hisseler.json";
 import FonTercihTableClient, {
   type FonSatiri,
+  type FonTableRow,
 } from "./_components/FonTercihTableClient";
 import { hisseVarMi } from "@/lib/hisseler";
 
@@ -102,6 +103,26 @@ function fonVerileriniOku(): FonSatiri[] {
       };
     })
     .filter((item) => item.sembol);
+}
+
+function tabloSatirinaDonustur(row: FonSatiri): FonTableRow {
+  return [
+    row.sembol,
+    Boolean(row.sayfasiVarMi),
+    row.degisim,
+    row.sonToplamYuzde,
+    row.ilkToplamYuzde,
+    row.sonToplamTakasTl,
+    row.ilkToplamTakasTl,
+    row.takasTlSonEmeklilikFon,
+    row.yuzdeSonEmeklilikFon,
+    row.takasTlIlkEmeklilikFon,
+    row.yuzdeIlkEmeklilikFon,
+    row.takasTlSonYatirimFon,
+    row.yuzdeSonYatirimFon,
+    row.takasTlIlkYatirimFon,
+    row.yuzdeIlkYatirimFon,
+  ];
 }
 
 export default function HaftalikYatirimFonlarininEnCokTercihEttigiHisselerPage() {
@@ -268,7 +289,7 @@ export default function HaftalikYatirimFonlarininEnCokTercihEttigiHisselerPage()
           </section>
         )}
 
-        <FonTercihTableClient rows={fonVerileri} />
+        <FonTercihTableClient rows={fonVerileri.map(tabloSatirinaDonustur)} />
 
         <section className="mt-12 space-y-8">
           <div className="rounded-2xl border border-zinc-200 bg-white p-6 md:p-8">

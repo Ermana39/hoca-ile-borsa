@@ -4,11 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 import SirketLogo from "@/components/SirketLogo";
 
-
-
-
-
-
+const ILK_GOSTERIM_ADEDI = 30;
 function aramaIcinTemizle(text: string) {
   return text
     .toLocaleLowerCase("tr")
@@ -29,7 +25,7 @@ function aramaIcinTemizle(text: string) {
 }
 
 
-type TaslakOgesi = { klasor: string; label: string; logo?: string };
+export type TaslakOgesi = [klasor: string, label: string, logo?: string];
 
 export default function TaslakIzahnamelerClient({
   izahnameler,
@@ -37,6 +33,7 @@ export default function TaslakIzahnamelerClient({
   izahnameler: TaslakOgesi[];
 }) {
   const [arama, setArama] = useState("");
+  const [gorunenAdet, setGorunenAdet] = useState(ILK_GOSTERIM_ADEDI);
   const taslakIzahnameler = izahnameler;
 
   const filtrelenmisIzahnameler = useMemo(() => {
@@ -44,10 +41,17 @@ export default function TaslakIzahnamelerClient({
 
     if (!temizArama) return taslakIzahnameler;
 
-    return taslakIzahnameler.filter((item) =>
-      aramaIcinTemizle(item.label).includes(temizArama)
+    return taslakIzahnameler.filter(([, label]) =>
+      aramaIcinTemizle(label).includes(temizArama)
     );
   }, [arama, taslakIzahnameler]);
+
+  const gorunenIzahnameler = filtrelenmisIzahnameler.slice(0, gorunenAdet);
+
+  const aramayiGuncelle = (value: string) => {
+    setArama(value);
+    setGorunenAdet(ILK_GOSTERIM_ADEDI);
+  };
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -55,6 +59,7 @@ export default function TaslakIzahnamelerClient({
         <div className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Ana Sayfa
@@ -62,6 +67,7 @@ export default function TaslakIzahnamelerClient({
 
           <Link
             href="/halka-arz"
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Geri
@@ -83,7 +89,7 @@ export default function TaslakIzahnamelerClient({
           <input
             type="text"
             value={arama}
-            onChange={(e) => setArama(e.target.value)}
+            onChange={(e) => aramayiGuncelle(e.target.value)}
             placeholder="Şirket adı yazın..."
             className="w-full rounded-xl border border-zinc-300 bg-white px-4 py-3 text-sm text-zinc-900 outline-none transition placeholder:text-zinc-400 focus:border-zinc-400"
           />
@@ -91,15 +97,15 @@ export default function TaslakIzahnamelerClient({
 
         <div className="space-y-3">
           {filtrelenmisIzahnameler.length > 0 ? (
-            filtrelenmisIzahnameler.map((item, index) => (
-              <div key={`${item.klasor}-${index}`} className="space-y-3">
+            gorunenIzahnameler.map(([klasor, label, logo]) => (
+              <div key={klasor} className="space-y-3">
                 <Link
-                  href={`/halka-arz/taslak-izahnameler/${item.klasor}`}
+                  href={`/halka-arz/taslak-izahnameler/${klasor}`}
                   prefetch={false}
                   className="flex items-center gap-4 rounded-xl border border-red-200 bg-red-50 px-4 py-4 text-base font-medium text-zinc-900 transition hover:bg-red-100"
                 >
-                  <SirketLogo logo={item.logo} ad={item.label} />
-                  <span>{item.label}</span>
+                  <SirketLogo logo={logo} ad={label} />
+                  <span>{label}</span>
                 </Link>
               </div>
             ))
@@ -109,6 +115,16 @@ export default function TaslakIzahnamelerClient({
             </div>
           )}
         </div>
+
+        {gorunenAdet < filtrelenmisIzahnameler.length && (
+          <button
+            type="button"
+            onClick={() => setGorunenAdet((adet) => adet + ILK_GOSTERIM_ADEDI)}
+            className="mt-5 w-full rounded-xl border border-zinc-300 bg-white px-4 py-3 text-sm font-semibold text-zinc-700 transition hover:bg-zinc-50"
+          >
+            Daha fazla şirket göster
+          </button>
+        )}
 
         <section className="mt-12 space-y-8">
           <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-6 md:p-8">

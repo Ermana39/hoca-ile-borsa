@@ -23,6 +23,16 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1159,
+    title:
+      "SPK’dan 4 Yeni Halka Arz Onayı: Albayrak, Masfen, Metgün ve Kardemir Çelik",
+    href: "/haber/spk-4-yeni-halka-arz-onayi-albayrak-masfen-metgun-kardemir",
+    image: "/spk-4-yeni-halka-arz-onayi-albayrak-masfen-metgun-kardemir.webp",
+    alt: "SPK 4 yeni halka arz onayı Albayrak Masfen Metgün Kardemir Çelik",
+    publishedAt: "auto",
+    category: "halka-arz",
+  },
+  {
     id: 1158,
     title: "16 Temmuz 2026 Önemli KAP: TRALT, TTKOM, ENTRA Etkileri",
     href: "/haber/16-temmuz-2026-onemli-kap-tralt-ttkom-entra-etkileri",

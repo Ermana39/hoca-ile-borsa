@@ -167,6 +167,17 @@ const izahnameSlugRedirects = [
   ["/halka-arz/onayli-izahnameler/beta", "/halka-arz/onayli-izahnameler/beta-enerji-teknoloji-betae"],
 ];
 
+const hataliHisseRedirects = [
+  {
+    source: "/hisse/:slug(.*\\..*)",
+    destination: "/hisseler",
+  },
+  {
+    source: "/hisse/:slug(.*%20.*)",
+    destination: "/hisseler",
+  },
+];
+
 const nextConfig = {
   outputFileTracingIncludes: {
     "/mevduat-kredi-faizleri/mevduat-faizi-oranlari": [
@@ -210,6 +221,17 @@ const nextConfig = {
 
   async redirects() {
     return [
+      {
+        source: "/:path*",
+        has: [
+          {
+            type: "host",
+            value: "hocaileborsa.com",
+          },
+        ],
+        destination: "https://www.hocaileborsa.com/:path*",
+        permanent: true,
+      },
       // Halka arz slug'ları daha açıklayıcı/SEO-dostu adlara taşındı; eski
       // kısa URL'ler yeni slug'lara kalıcı olarak yönlendirilir.
       {
@@ -236,6 +258,11 @@ const nextConfig = {
       {
         source: "/borsa/formasyonlar/formasyon3",
         destination: "/borsa/formasyonlar/huner-dusen-genisleyen-takoz-formasyonu",
+        permanent: true,
+      },
+      {
+        source: "/formasyonlar/:slug",
+        destination: "/borsa/formasyonlar/:slug",
         permanent: true,
       },
       // Eski düz (tire'li) günlük özet URL'i → yeni kalıcı slug URL'i.
@@ -295,6 +322,11 @@ const nextConfig = {
       ...izahnameSlugRedirects.map(([source, destination]) => ({
         source,
         destination,
+        permanent: true,
+      })),
+      ...hataliHisseRedirects.map((r) => ({
+        source: r.source,
+        destination: r.destination,
         permanent: true,
       })),
       // Eski numaralı haber URL şemaları (örn. /haber/haber-994,

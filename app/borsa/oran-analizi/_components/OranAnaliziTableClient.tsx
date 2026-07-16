@@ -2,8 +2,11 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 
-type RowData = Record<string, string | number | null>;
+type CellValue = string | number | null;
+type RowData = CellValue[];
 type SortDir = "asc" | "desc";
+
+const PAGE_SIZE = 50;
 
 function parseNumeric(value: string | number | null) {
   if (value === null) return null;
@@ -32,10 +35,10 @@ function formatValue(value: string | number | null) {
   return value;
 }
 
-function getRowType(row: RowData, columns: string[]) {
-  const doluHucreler = columns
-    .map((column) => row[column])
-    .filter((value) => value !== null && value !== "");
+function getRowType(row: RowData) {
+  const doluHucreler = row.filter(
+    (value) => value !== null && value !== ""
+  );
 
   if (doluHucreler.length !== 1) return "normal";
 
@@ -74,22 +77,21 @@ function compareValues(
     : bText.localeCompare(aText, "tr");
 }
 
-function getDefaultDir(rows: RowData[], column: string, columns: string[]) {
+function getDefaultDir(rows: RowData[], columnIndex: number) {
   const sample = rows.find((row) => {
-    if (getRowType(row, columns) !== "normal") return false;
-    const value = row[column];
+    if (getRowType(row) !== "normal") return false;
+    const value = row[columnIndex];
     return value !== null && value !== "";
   });
 
   if (!sample) return "asc";
 
-  return parseNumeric(sample[column]) !== null ? "desc" : "asc";
+  return parseNumeric(sample[columnIndex]) !== null ? "desc" : "asc";
 }
 
 function sortRowsWithSectors(
   rows: RowData[],
-  columns: string[],
-  sortColumn: string,
+  sortColumnIndex: number,
   dir: SortDir
 ) {
   const result: RowData[] = [];
@@ -100,7 +102,11 @@ function sortRowsWithSectors(
 
     result.push(
       ...[...group].sort((a, b) =>
-        compareValues(a[sortColumn] ?? null, b[sortColumn] ?? null, dir)
+        compareValues(
+          a[sortColumnIndex] ?? null,
+          b[sortColumnIndex] ?? null,
+          dir
+        )
       )
     );
 
@@ -108,7 +114,7 @@ function sortRowsWithSectors(
   };
 
   rows.forEach((row) => {
-    const rowType = getRowType(row, columns);
+    const rowType = getRowType(row);
 
     if (rowType === "sector_header") {
       flushGroup();
@@ -133,6 +139,7 @@ export default function OranAnaliziTableClient({
 }) {
   const [sortColumn, setSortColumn] = useState<string>("");
   const [dir, setDir] = useState<SortDir>("asc");
+  const [page, setPage] = useState(1);
 
   const tableScrollRef = useRef<HTMLDivElement | null>(null);
   const fixedScrollRef = useRef<HTMLDivElement | null>(null);
@@ -141,8 +148,17 @@ export default function OranAnaliziTableClient({
 
   const sortedRows = useMemo(() => {
     if (!sortColumn) return rows;
-    return sortRowsWithSectors(rows, columns, sortColumn, dir);
+    const columnIndex = columns.indexOf(sortColumn);
+    if (columnIndex < 0) return rows;
+    return sortRowsWithSectors(rows, columnIndex, dir);
   }, [rows, columns, sortColumn, dir]);
+
+  const totalPages = Math.max(1, Math.ceil(sortedRows.length / PAGE_SIZE));
+  const activePage = Math.min(page, totalPages);
+  const visibleRows = useMemo(() => {
+    const start = (activePage - 1) * PAGE_SIZE;
+    return sortedRows.slice(start, start + PAGE_SIZE);
+  }, [activePage, sortedRows]);
 
   useEffect(() => {
     const tableScroll = tableScrollRef.current;
@@ -193,16 +209,20 @@ export default function OranAnaliziTableClient({
       window.removeEventListener("resize", syncWidths);
       resizeObserver?.disconnect();
     };
-  }, [columns, rows]);
+  }, [columns, visibleRows]);
 
   const handleSort = (column: string) => {
+    const columnIndex = columns.indexOf(column);
+    if (columnIndex < 0) return;
+
+    setPage(1);
     if (sortColumn === column) {
       setDir((prev) => (prev === "asc" ? "desc" : "asc"));
       return;
     }
 
     setSortColumn(column);
-    setDir(getDefaultDir(rows, column, columns));
+    setDir(getDefaultDir(rows, columnIndex));
   };
 
   const tableMinWidth = Math.max(columns.length * 145, 1200);
@@ -243,18 +263,17 @@ export default function OranAnaliziTableClient({
             </thead>
 
             <tbody>
-              {sortedRows.map((row, index) => {
-                const rowType = getRowType(row, columns);
+              {visibleRows.map((row, index) => {
+                const rowType = getRowType(row);
+                const absoluteIndex = (activePage - 1) * PAGE_SIZE + index;
 
                 if (rowType === "sector_header") {
                   const sektorAdi = String(
-                    columns
-                      .map((column) => row[column])
-                      .find((value) => value !== null && value !== "") ?? ""
+                    row.find((value) => value !== null && value !== "") ?? ""
                   );
 
                   return (
-                    <tr key={`row-${index}`} className="bg-red-50">
+                    <tr key={`row-${absoluteIndex}`} className="bg-red-50">
                       <td
                         colSpan={columns.length}
                         className="border-b border-red-100 px-4 py-3 font-semibold text-red-700 whitespace-nowrap"
@@ -265,21 +284,23 @@ export default function OranAnaliziTableClient({
                   );
                 }
 
-                const satirArkaPlan = index % 2 === 1 ? "bg-sky-50" : "bg-white";
-                const stickyArkaPlan = index % 2 === 1 ? "bg-sky-50" : "bg-white";
+                const satirArkaPlan =
+                  absoluteIndex % 2 === 1 ? "bg-sky-50" : "bg-white";
+                const stickyArkaPlan =
+                  absoluteIndex % 2 === 1 ? "bg-sky-50" : "bg-white";
 
                 return (
-                  <tr key={`row-${index}`} className={satirArkaPlan}>
+                  <tr key={`row-${absoluteIndex}`} className={satirArkaPlan}>
                     {columns.map((column, columnIndex) => (
                       <td
-                        key={`${index}-${column}`}
+                        key={`${absoluteIndex}-${column}`}
                         className={`border-b border-zinc-100 px-4 py-3 whitespace-nowrap text-zinc-700 ${
                           columnIndex === 0
                             ? `sticky left-0 z-10 ${stickyArkaPlan} font-semibold text-zinc-900 shadow-[8px_0_12px_-12px_rgba(0,0,0,0.25)]`
                             : ""
                         }`}
                       >
-                        {formatValue(row[column] ?? null)}
+                        {formatValue(row[columnIndex] ?? null)}
                       </td>
                     ))}
                   </tr>
@@ -289,6 +310,38 @@ export default function OranAnaliziTableClient({
           </table>
         </div>
       </div>
+
+      {totalPages > 1 && (
+        <div className="mt-4 flex flex-wrap items-center justify-between gap-3 rounded-xl border border-zinc-200 bg-zinc-50 px-4 py-3 text-sm">
+          <span className="font-medium text-zinc-600">
+            {Math.min((activePage - 1) * PAGE_SIZE + 1, sortedRows.length)}-
+            {Math.min(activePage * PAGE_SIZE, sortedRows.length)} / {sortedRows.length} satır
+          </span>
+          <div className="flex items-center gap-2">
+            <button
+              type="button"
+              disabled={activePage === 1}
+              onClick={() => setPage((current) => Math.max(1, current - 1))}
+              className="rounded-lg border border-zinc-300 bg-white px-3 py-2 font-semibold text-zinc-700 disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              Önceki
+            </button>
+            <span className="min-w-20 text-center font-semibold text-zinc-700">
+              {activePage} / {totalPages}
+            </span>
+            <button
+              type="button"
+              disabled={activePage === totalPages}
+              onClick={() =>
+                setPage((current) => Math.min(totalPages, current + 1))
+              }
+              className="rounded-lg border border-zinc-300 bg-white px-3 py-2 font-semibold text-zinc-700 disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              Sonraki
+            </button>
+          </div>
+        </div>
+      )}
 
       <div className="fixed bottom-0 left-0 right-0 z-40 border-t border-zinc-200 bg-white/95 backdrop-blur">
         <div className="mx-auto max-w-7xl px-4 md:px-6">

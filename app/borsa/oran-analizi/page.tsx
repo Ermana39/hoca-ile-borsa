@@ -11,6 +11,7 @@ import OranAnaliziTableClient from "./_components/OranAnaliziTableClient";
 export const dynamic = "force-static";
 
 type RowData = Record<string, string | number | null>;
+type CompactRow = Array<string | number | null>;
 
 type OranAnaliziData = {
   columns: string[];
@@ -53,9 +54,9 @@ function getRowType(row: RowData, columns: string[]) {
 
 function getOranAnaliziData() {
   const columns = oranAnaliziData.columns;
-  const rows = oranAnaliziData.rows.filter(
-    (row) => getRowType(row, columns) !== "remove"
-  );
+  const rows: CompactRow[] = oranAnaliziData.rows
+    .filter((row) => getRowType(row, columns) !== "remove")
+    .map((row) => columns.map((column) => row[column] ?? null));
 
   return {
     columns,

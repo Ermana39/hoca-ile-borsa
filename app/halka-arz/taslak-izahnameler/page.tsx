@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
 import { getTaslakIzahnameListesi } from "@/lib/halka-arz";
 import { getIzahnameLogo } from "@/lib/izahname-logolar";
-import TaslakIzahnamelerClient from "./TaslakIzahnamelerClient";
+import TaslakIzahnamelerClient, {
+  type TaslakOgesi,
+} from "./TaslakIzahnamelerClient";
 
 export const metadata: Metadata = {
   title: "Taslak İzahnameler | Halka Arz Başvuru Sürecindeki Şirketler",
@@ -14,9 +16,8 @@ export const metadata: Metadata = {
 };
 
 export default function TaslakIzahnamelerPage() {
-  const izahnameler = getTaslakIzahnameListesi().map((item) => ({
-    ...item,
-    logo: getIzahnameLogo(item.klasor),
-  }));
+  const izahnameler: TaslakOgesi[] = getTaslakIzahnameListesi().map(
+    (item) => [item.klasor, item.label, getIzahnameLogo(item.klasor)]
+  );
   return <TaslakIzahnamelerClient izahnameler={izahnameler} />;
 }

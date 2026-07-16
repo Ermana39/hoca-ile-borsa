@@ -2,8 +2,8 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import { formasyonData } from "./data";
 
-const siteUrl = "https://hocaileborsa.com";
-const sayfaUrl = `${siteUrl}/formasyonlar/${formasyonData.slug}`;
+const siteUrl = "https://www.hocaileborsa.com";
+const sayfaUrl = `${siteUrl}/borsa/formasyonlar/${formasyonData.slug}`;
 
 export const metadata: Metadata = {
   title: `${formasyonData.kod} ${formasyonData.tur} | Günlük Grafik Teknik Analizi`,
