@@ -23,6 +23,35 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1149,
+    title: "16 Temmuz Son Halka Arzlarda Gün Sonu: GOLDA Tavan, ISVEA ve BETAE Taban",
+    href: "/haber/16-temmuz-2026-son-halka-arzlar-gun-sonu-degerlendirmesi",
+    image: "/16-temmuz-2026-son-halka-arzlar-gun-sonu-degerlendirmesi.webp",
+    alt: "16 Temmuz 2026 son halka arzlar gün sonu kapanış değerlendirmesi",
+    publishedAt: "2026-07-16T18:45:00+03:00",
+    category: "halka-arz",
+    ilgiliHisseler: ["BETAE", "SOHOE", "ORZAX", "EKIM", "GOLDA", "ISVEA", "SSAAT"],
+  },
+  {
+    id: 1148,
+    title: "16.07.2026 Fonların Günlük Kapanış Değerlendirmesi: TLY, PHE, PBR, DFI",
+    href: "/haber/16-temmuz-2026-fonlar-gunluk-kapanis-degerlendirmesi",
+    image: "/2026-fon-etki-analizi-tly-phe-pbr-dfi.webp",
+    alt: "16 Temmuz 2026 TLY PHE PBR DFI fon günlük kapanış değerlendirmesi",
+    publishedAt: "2026-07-16T22:05:00+03:00",
+    category: "piyasa-gundemi",
+  },
+  {
+    id: 1147,
+    title: "TURGG Kartal Arazisinde Ağır Metal Tespiti Açıklandı",
+    href: "/haber/turgg-kartal-arazisinde-agir-metal-tespiti-aciklandi",
+    image: "/turgg-kartal-arazisinde-agir-metal-tespiti-aciklandi.webp",
+    alt: "TURGG Kartal arazisinde ağır metal tespiti KAP haberi",
+    publishedAt: "2026-07-16T17:39:17+03:00",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["TURGG"],
+  },
+  {
     id: 1146,
     title: "FONET Aydın İl Sağlık Müdürlüğü 198,5 Milyon TL’lik SBYS İhalesini Kazandı",
     href: "/haber/fonet-aydin-il-saglik-mudurlugu-198-milyon-tl-sbys-ihalesi",

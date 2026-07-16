@@ -19,10 +19,10 @@ export const metadata: Metadata = {
 };
 
 const rows: FonEtkiRow[] = [
-  { sembol: "IEYHO", fonOrani: 52.75, kapanisMarji: 0.0, etki: 0 },
-  { sembol: "ISKPL", fonOrani: 11.12, kapanisMarji: 4.585, etki: 0.509799427 },
-  { sembol: "LIDER", fonOrani: 0.53, kapanisMarji: 9.938, etki: 0.052670807 },
-  { sembol: "ABG", fonOrani: 29.82, kapanisMarji: 0.55, etki: 0.16401 },
+  { sembol: "IEYHO", fonOrani: 52.75, kapanisMarji: 0.313, etki: 0.16536052 },
+  { sembol: "ISKPL", fonOrani: 11.12, kapanisMarji: 10.0, etki: 1.112 },
+  { sembol: "LIDER", fonOrani: 0.53, kapanisMarji: 2.637, etki: 0.013973635 },
+  { sembol: "ABG", fonOrani: 29.82, kapanisMarji: 0.11, etki: 0.032802 },
 ];
 
 export default function DfiEtkiAnaliziPage() {
@@ -34,22 +34,22 @@ export default function DfiEtkiAnaliziPage() {
       slug="dfi"
       rows={rows}
       toplamFonOrani={94.22}
-      toplamEtki={0.73}
-      sonGuncelleme="14 Temmuz 2026"
+      toplamEtki={1.32}
+      sonGuncelleme="16 Temmuz 2026"
       degisimVerisi={{
         yatirimciSayisi: {
-          dun: 42977,
-          bugun: 43470,
-          degisim: 493,
+          dun: 44008,
+          bugun: 44934,
+          degisim: 926,
         },
         fonToplamDeger: {
-          dun: 23530660123,
-          bugun: 24233166182,
-          degisim: 702506059,
+          dun: 24922250362,
+          bugun: 26133507267,
+          degisim: 1211256905,
         },
-        paraGirisiCikisi: 504315959,
+        paraGirisiCikisi: 1118423134,
         yorum:
-          "DFI fonunda yatırımcı sayısı 493 kişi artarken fon toplam değeri 702,51 milyon TL yükseldi. 504,32 milyon TL net para girişi, fon büyüklüğündeki artışın önemli bölümünün yeni para ile desteklendiğini gösteriyor. DFI için kapanış verisi, yatırımcı tabanı ve nakit akışı tarafında güçlü seyrin sürdüğünü anlatıyor.",
+          "DFI fonunda yatırımcı sayısı 926 kişi artarken fon toplam değeri 1,21 milyar TL yükseldi. 1,12 milyar TL net para girişi, fon büyüklüğündeki artışın büyük ölçüde taze girişle beslendiğini gösteriyor. Portföy etkisinin +%1,32 seviyesine çıkması ise DFI için hem para akışı hem fiyat etkisi tarafında güçlü bir kapanış resmi oluşturuyor.",
       }}
     />
   );
