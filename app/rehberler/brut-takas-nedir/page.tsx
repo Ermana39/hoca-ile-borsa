@@ -8,7 +8,7 @@ const description =
   "Brüt takas nedir, normal takastan farkı nedir, brüt takas uygulamasında hisse alım satımı nasıl yapılır ve yatırımcı açısından ne anlama gelir?";
 
 export const metadata: Metadata = {
-  title: `${title} | Hoca İle Borsa`,
+  title,
   description,
   alternates: {
     canonical: `${siteUrl}/rehberler/brut-takas-nedir`,

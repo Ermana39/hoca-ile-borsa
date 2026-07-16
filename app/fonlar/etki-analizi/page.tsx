@@ -1,143 +1,526 @@
+import type { Metadata } from "next";
 import Link from "next/link";
+import { newsItems } from "@/app/data/news";
+import {
+  fonEtkiOzetleri,
+  fonEtkiSonGuncelleme,
+} from "./_data/fonEtkiOzetleri";
 
-export const metadata = {
-  title: "Fon Etki Analizi ve Fon Fiyat Tahmini | Hoca İle Borsa",
-  description:
-    "TLY, PHE, PBR ve DFI fonlarının portföy hisseleri, kapanış marjları ve ertesi gün açıklanacak TEFAS fon fiyatına tahmini etkilerini takip edin.",
-  alternates: {
-    canonical: "https://www.hocaileborsa.com/fonlar/etki-analizi",
+const siteUrl = "https://www.hocaileborsa.com";
+const canonical = `${siteUrl}/fonlar/etki-analizi`;
+const title = "Fon Etki Analizi: TLY, PHE, PBR ve DFI Fiyat Tahmini";
+const description =
+  "TLY, PHE, PBR ve DFI fonlarının güncel portföy etkisini karşılaştırın. Fon ağırlıkları ve BIST kapanışlarıyla hesaplanan tahmini fiyat değişimini, veri kapsamını ve hesaplama yöntemini inceleyin.";
+const image = `${siteUrl}/2026-fon-etki-analizi-tly-phe-pbr-dfi.webp`;
+
+export const metadata: Metadata = {
+  title,
+  description,
+  authors: [{ name: "Erman Hoca", url: `${siteUrl}/yazar/erman-hoca` }],
+  alternates: { canonical },
+  keywords: [
+    "fon etki analizi",
+    "fon fiyat tahmini",
+    "yarınki fon fiyatı",
+    "TLY fonu",
+    "PHE fonu",
+    "PBR fonu",
+    "DFI fonu",
+    "TEFAS fon fiyatı",
+  ],
+  openGraph: {
+    type: "website",
+    url: canonical,
+    title,
+    description,
+    images: [{ url: image, width: 1200, height: 630, alt: title }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
+    images: [image],
   },
 };
 
-const fonlar = [
+const faq = [
   {
-    kod: "TLY",
-    ad: "Tera Portföy Birinci Serbest Fonu",
-    href: "/fonlar/etki-analizi/tly",
-    bg: "bg-blue-600",
-    ring: "ring-blue-200",
-    accent: "text-blue-700",
-    accentBg: "group-hover:bg-blue-50",
+    question: "Fon etki analizi nedir?",
+    answer:
+      "Fon etki analizi, portföydeki varlıkların ağırlıkları ile günlük fiyat değişimlerini birleştirerek fonun açıklanacak birim pay fiyatına olası katkıyı tahmin eden hesaplamadır.",
   },
   {
-    kod: "PHE",
-    ad: "Pusula Portföy Hisse Senedi Fonu (Hisse Senedi Yoğun Fon)",
-    href: "/fonlar/etki-analizi/phe",
-    bg: "bg-emerald-600",
-    ring: "ring-emerald-200",
-    accent: "text-emerald-700",
-    accentBg: "group-hover:bg-emerald-50",
+    question: "Fon fiyat tahmini nasıl hesaplanır?",
+    answer:
+      "Her pay için fon ağırlığı yüzde olarak günlük kapanış değişimiyle çarpılır ve 100'e bölünür. Hisse bazlı etkilerin toplamı, kapsanan portföy için tahmini yüzdesel fon etkisini verir.",
   },
   {
-    kod: "PBR",
-    ad: "Pusula Portföy Birinci Değişken Fon",
-    href: "/fonlar/etki-analizi/pbr",
-    bg: "bg-orange-500",
-    ring: "ring-orange-200",
-    accent: "text-orange-700",
-    accentBg: "group-hover:bg-orange-50",
+    question: "Tahmini etki ile TEFAS'ta açıklanan getiri neden farklı olabilir?",
+    answer:
+      "Nakit, borçlanma araçları, vadeli işlemler, yabancı varlıklar, fon giderleri, vergi etkileri ve gün içindeki portföy değişiklikleri hesaplamaya tam yansımayabilir. Bu nedenle sonuç kesin getiri değil, izleme göstergesidir.",
   },
   {
-    kod: "DFI",
-    ad: "Atlas Portföy Serbest Fon",
-    href: "/fonlar/etki-analizi/dfi",
-    bg: "bg-violet-600",
-    ring: "ring-violet-200",
-    accent: "text-violet-700",
-    accentBg: "group-hover:bg-violet-50",
+    question: "Veri kapsamı neyi gösterir?",
+    answer:
+      "Veri kapsamı, hesaplamaya dahil edilen varlıkların fon içindeki toplam ağırlığını gösterir. Kapsam yüzde 100'ün altındaysa kalan bölümün etkisi tahmine dahil değildir.",
   },
 ];
+
+const sonDegerlendirmeler = newsItems
+  .filter(
+    (item) =>
+      item.href.includes("fonlar-gunluk-kapanis-degerlendirmesi") ||
+      item.href.includes("fon-etki-analizi-tly-phe-pbr-dfi")
+  )
+  .slice(0, 4);
+
+function fmt(value: number, digits = 2) {
+  return new Intl.NumberFormat("tr-TR", {
+    minimumFractionDigits: digits,
+    maximumFractionDigits: digits,
+  }).format(value);
+}
+
+function signedPercent(value: number) {
+  if (value > 0) return `+%${fmt(value)}`;
+  if (value < 0) return `-%${fmt(Math.abs(value))}`;
+  return `%${fmt(value)}`;
+}
+
+function effectClass(value: number) {
+  if (value > 0) return "text-emerald-700";
+  if (value < 0) return "text-red-700";
+  return "text-slate-700";
+}
+
+function formatNewsDate(value: string | "auto") {
+  if (value === "auto") return "Güncel değerlendirme";
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return "Güncel değerlendirme";
+  return date.toLocaleDateString("tr-TR", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+}
+
+const enYuksekEtki = fonEtkiOzetleri.reduce((best, fon) =>
+  fon.toplamEtki > best.toplamEtki ? fon : best
+);
+const ortalamaKapsam =
+  fonEtkiOzetleri.reduce((sum, fon) => sum + fon.toplamFonOrani, 0) /
+  fonEtkiOzetleri.length;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "@id": `${canonical}#webpage`,
+      url: canonical,
+      name: title,
+      description,
+      inLanguage: "tr-TR",
+      image,
+      datePublished: "2026-07-12",
+      dateModified: fonEtkiSonGuncelleme.iso,
+      author: {
+        "@type": "Person",
+        "@id": `${siteUrl}/yazar/erman-hoca#person`,
+        name: "Erman Hoca",
+        url: `${siteUrl}/yazar/erman-hoca`,
+      },
+      publisher: { "@id": `${siteUrl}/#organization` },
+      mainEntity: { "@id": `${canonical}#fon-listesi` },
+    },
+    {
+      "@type": "Dataset",
+      "@id": `${canonical}#dataset`,
+      name: "TLY, PHE, PBR ve DFI fon kapanış etki karşılaştırması",
+      description,
+      url: canonical,
+      inLanguage: "tr-TR",
+      dateModified: fonEtkiSonGuncelleme.iso,
+      creator: { "@id": `${siteUrl}/#organization` },
+      license: `${siteUrl}/kullanim-sartlari`,
+      variableMeasured: [
+        "Tahmini toplam fon etkisi",
+        "Hesaplamaya dahil edilen portföy oranı",
+        "Fon kodu",
+        "Fon türü",
+      ],
+      measurementTechnique:
+        "Portföy ağırlığı ile günlük kapanış değişiminin çarpılarak hisse bazlı etkilerin toplanması",
+    },
+    {
+      "@type": "ItemList",
+      "@id": `${canonical}#fon-listesi`,
+      name: "Güncel fon etki analizleri",
+      numberOfItems: fonEtkiOzetleri.length,
+      itemListElement: fonEtkiOzetleri.map((fon, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: `${fon.kod} ${fon.fonAdi}`,
+        url: `${canonical}/${fon.slug}`,
+      })),
+    },
+    {
+      "@type": "FAQPage",
+      "@id": `${canonical}#sss`,
+      mainEntity: faq.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: { "@type": "Answer", text: item.answer },
+      })),
+    },
+    {
+      "@type": "BreadcrumbList",
+      "@id": `${canonical}#breadcrumb`,
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Ana Sayfa", item: siteUrl },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Fonlar",
+          item: `${siteUrl}/fonlar`,
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Fon Etki Analizi",
+          item: canonical,
+        },
+      ],
+    },
+  ],
+};
 
 export default function FonEtkiAnaliziPage() {
   return (
     <main className="min-h-screen bg-[#f8fafc] px-4 py-6 md:px-6">
-      <div className="mx-auto max-w-4xl">
-        <nav className="mb-5 flex items-center gap-2 text-sm text-slate-500" aria-label="Breadcrumb">
-          <Link href="/" prefetch={false} className="transition hover:text-blue-600">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
+
+      <div className="mx-auto max-w-6xl">
+        <nav
+          className="mb-5 flex flex-wrap items-center gap-2 text-sm text-slate-500"
+          aria-label="Breadcrumb"
+        >
+          <Link href="/" prefetch={false} className="transition hover:text-blue-700">
             Ana Sayfa
           </Link>
           <span className="text-slate-300">/</span>
-          <Link href="/fonlar" prefetch={false} className="transition hover:text-blue-600">
+          <Link
+            href="/fonlar"
+            prefetch={false}
+            className="transition hover:text-blue-700"
+          >
             Fonlar
           </Link>
           <span className="text-slate-300">/</span>
-          <span className="font-medium text-slate-700">Fon Kapanış Etki Analizi</span>
+          <span className="font-medium text-slate-700">Fon Etki Analizi</span>
         </nav>
 
-        <h1 className="mb-2 text-2xl font-bold text-slate-900 md:text-3xl">
-          Fon Etki Analizi ve Fon Fiyat Tahmini
-        </h1>
-
-        <p className="mb-6 max-w-3xl text-base leading-7 text-slate-600">
-          Yatırım fonlarının portföyünde yer alan hisselerin gün içindeki
-          kapanış marjları, fonun açıklanacak ertesi gün fiyatı için önemli bir
-          ön gösterge sunar. Bu sayfada TLY, PHE, PBR ve DFI fonlarının son
-          portföy dağılımı ile günlük hisse kapanış marjları birleştirilerek
-          TEFAS fon fiyatına tahmini etki hesaplanmaktadır. Aşağıdaki fonlardan
-          birini seçerek detaylı etki tablosunu, en çok etki eden hisseleri ve
-          hesaplama mantığını görüntüleyebilirsiniz.
-        </p>
-
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-4">
-          {fonlar.map((fon) => (
-            <Link
-              key={fon.href}
-              href={fon.href}
-              prefetch={false}
-              className={`group flex flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition hover:-translate-y-1 hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)] ring-2 ring-transparent hover:${fon.ring}`}
-            >
-              <div className={`mb-3 flex h-12 w-12 items-center justify-center rounded-xl ${fon.bg} shadow-sm`}>
-                <span className="text-base font-bold tracking-tight text-white">
-                  {fon.kod}
-                </span>
-              </div>
-              <span className={`text-lg font-bold text-zinc-900 group-hover:${fon.accent}`}>
-                {fon.kod}
-              </span>
-              <span className="mt-1 text-sm leading-6 text-slate-500">
-                {fon.ad}
-              </span>
-              <span className={`mt-4 inline-flex items-center gap-1 rounded-lg px-3 py-1.5 text-xs font-semibold ${fon.accent} ${fon.accentBg} transition`}>
-                Fiyat tahminini gör
-                <svg className="h-3.5 w-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg>
-              </span>
-            </Link>
-          ))}
-        </div>
-
-        <section className="mt-10 space-y-5 rounded-2xl border border-slate-200 bg-white p-5 md:p-7">
-          <h2 className="text-xl font-bold text-zinc-900 md:text-2xl">
-            Fon Etki Analizi Nedir, Nasıl Hesaplanır?
-          </h2>
-
-          <p className="text-sm leading-7 text-slate-600 md:text-base">
-            Fon etki analizi, bir yatırım fonunun portföyünde bulunan
-            hisselerin fon içindeki ağırlıkları (fon oranı) ile bu
-            hisselerin gün içindeki kapanış marjlarının (önceki kapanışa
-            göre yüzdesel değişim) çarpılarak elde edilen değerlerin toplanması
-            ile hesaplanır. Sonuç olarak ortaya çıkan toplam etki değeri,
-            fonun ertesi gün açıklanacak birim pay fiyatındaki tahmini
-            yüzdesel değişimi gösterir.
+        <header className="max-w-4xl">
+          <p className="text-sm font-semibold text-blue-700">Günlük karşılaştırma</p>
+          <h1 className="mt-2 text-2xl font-bold leading-tight text-slate-950 md:text-4xl">
+            Fon Etki Analizi: TLY, PHE, PBR ve DFI Fiyat Tahmini
+          </h1>
+          <p className="mt-4 text-base leading-8 text-slate-600">
+            Fonların son açıklanan portföy dağılımları ile Borsa İstanbul günlük
+            kapanış değişimleri birleştirilerek, açıklanacak fon fiyatına tahmini
+            etki hesaplanır. Bu merkez sayfa dört fonun güncel görünümünü aynı
+            yöntemle karşılaştırır; ayrıntılı sayfalarda hisse bazlı katkılar,
+            yatırımcı değişimi ve para akışı yer alır.
           </p>
+          <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm text-slate-500">
+            <p>
+              Hazırlayan:{" "}
+              <Link
+                href="/yazar/erman-hoca"
+                className="font-semibold text-slate-700 hover:text-blue-700 hover:underline"
+              >
+                Erman Hoca
+              </Link>
+            </p>
+            <p>
+              Son güncelleme:{" "}
+              <time dateTime={fonEtkiSonGuncelleme.iso} className="font-semibold text-slate-700">
+                {fonEtkiSonGuncelleme.label}
+              </time>
+            </p>
+          </div>
+        </header>
 
-          <p className="text-sm leading-7 text-slate-600 md:text-base">
-            Bu yöntem, özellikle hisse senedi yoğun serbest fonlar, değişken
-            fonlar ve hisse ağırlığı yüksek serbest fonlar için TEFAS&apos;ta
-            gün sonunda ilan edilecek fon fiyatını önceden tahmin etmek isteyen
-            yatırımcılar için pratik bir gösterge sunar. Tablo üzerinde her
-            hissenin fon oranı, kapanış marjı ve etkisi ayrı ayrı görüntülenir,
-            böylece hangi hissenin fonu ne kadar yukarı veya aşağı çektiği
-            kolayca anlaşılır.
-          </p>
+        <dl className="mt-8 grid border-y border-slate-200 bg-white sm:grid-cols-3">
+          <div className="p-5 sm:border-r sm:border-slate-200">
+            <dt className="text-xs font-semibold uppercase text-slate-500">İzlenen fon</dt>
+            <dd className="mt-2 text-2xl font-bold text-slate-950">
+              {fonEtkiOzetleri.length}
+            </dd>
+          </div>
+          <div className="border-t border-slate-200 p-5 sm:border-r sm:border-t-0">
+            <dt className="text-xs font-semibold uppercase text-slate-500">
+              En yüksek tahmini etki
+            </dt>
+            <dd className="mt-2 text-2xl font-bold text-emerald-700">
+              {enYuksekEtki.kod} {signedPercent(enYuksekEtki.toplamEtki)}
+            </dd>
+          </div>
+          <div className="border-t border-slate-200 p-5 sm:border-t-0">
+            <dt className="text-xs font-semibold uppercase text-slate-500">
+              Ortalama veri kapsamı
+            </dt>
+            <dd className="mt-2 text-2xl font-bold text-slate-950">
+              %{fmt(ortalamaKapsam)}
+            </dd>
+          </div>
+        </dl>
 
-          <p className="text-sm leading-7 text-slate-600 md:text-base">
-            TLY, PHE, PBR ve DFI fonları için güncellenen etki tablolarına
-            yukarıdaki kartlardan ulaşabilir, hangi hisselerin fon performansına
-            en çok katkı sağladığını veya zarar verdiğini görebilirsiniz.
+        <section className="mt-10" aria-labelledby="guncel-karsilastirma">
+          <div className="max-w-3xl">
+            <h2 id="guncel-karsilastirma" className="text-xl font-bold text-slate-950 md:text-2xl">
+              Güncel Fon Etki Karşılaştırması
+            </h2>
+            <p className="mt-2 text-sm leading-7 text-slate-600 md:text-base">
+              Pozitif değer, kapsanan portföyün fon fiyatını yukarı; negatif değer
+              aşağı çekebileceğini gösterir. Kapsam oranı yükseldikçe hesaplamaya
+              dahil edilen portföy bölümü genişler.
+            </p>
+          </div>
+
+          <div className="mt-5 overflow-x-auto border border-slate-200 bg-white">
+            <table className="w-full min-w-[760px] border-collapse text-sm">
+              <thead className="bg-slate-100 text-slate-700">
+                <tr>
+                  <th className="px-4 py-3 text-left font-semibold">Fon</th>
+                  <th className="px-4 py-3 text-left font-semibold">Fon türü</th>
+                  <th className="px-4 py-3 text-right font-semibold">Tahmini etki</th>
+                  <th className="px-4 py-3 text-right font-semibold">Veri kapsamı</th>
+                  <th className="px-4 py-3 text-right font-semibold">Detay</th>
+                </tr>
+              </thead>
+              <tbody>
+                {fonEtkiOzetleri.map((fon, index) => (
+                  <tr key={fon.slug} className={index % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                    <td className="border-t border-slate-200 px-4 py-4">
+                      <p className="font-bold text-slate-950">{fon.kod}</p>
+                      <p className="mt-1 max-w-sm text-xs leading-5 text-slate-500">
+                        {fon.fonAdi}
+                      </p>
+                    </td>
+                    <td className="border-t border-slate-200 px-4 py-4 text-slate-600">
+                      {fon.fonTuru}
+                    </td>
+                    <td
+                      className={`border-t border-slate-200 px-4 py-4 text-right text-base font-bold ${effectClass(
+                        fon.toplamEtki
+                      )}`}
+                    >
+                      {signedPercent(fon.toplamEtki)}
+                    </td>
+                    <td className="border-t border-slate-200 px-4 py-4 text-right font-semibold text-slate-700">
+                      %{fmt(fon.toplamFonOrani)}
+                    </td>
+                    <td className="border-t border-slate-200 px-4 py-4 text-right">
+                      <Link
+                        href={`/fonlar/etki-analizi/${fon.slug}`}
+                        prefetch={false}
+                        className="font-semibold text-blue-700 hover:underline"
+                      >
+                        İncele →
+                      </Link>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+          <p className="mt-3 text-xs leading-6 text-slate-500 md:text-sm">
+            Karşılaştırma {fonEtkiSonGuncelleme.label} kapanış verilerini temel alır.
+            Sonuçlar kesin fon getirisi değildir.
           </p>
         </section>
+
+        <section className="mt-12 grid gap-8 border-t border-slate-200 pt-10 lg:grid-cols-2">
+          <div>
+            <h2 className="text-xl font-bold text-slate-950 md:text-2xl">
+              Fon Fiyat Tahmini Nasıl Hesaplanır?
+            </h2>
+            <p className="mt-4 text-sm leading-7 text-slate-600 md:text-base">
+              Önce her varlığın son açıklanan portföy ağırlığı belirlenir. Bu
+              ağırlık, aynı varlığın önceki kapanışa göre günlük yüzdesel
+              değişimiyle çarpılır. Bütün varlıkların katkıları toplandığında
+              kapsanan portföy için tahmini fon etkisi elde edilir.
+            </p>
+            <div className="mt-5 border-l-4 border-blue-600 bg-blue-50 px-5 py-4 text-sm leading-7 text-blue-950">
+              <p className="font-bold">Hisse etkisi = Fon ağırlığı × Günlük değişim / 100</p>
+              <p className="mt-1">
+                Örnek: Portföyde %10 ağırlığı olan bir hisse günü %3 yükselişle
+                kapatırsa tahmini katkısı +%0,30 olur.
+              </p>
+            </div>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-bold text-slate-950 md:text-2xl">
+              Sonuç Nasıl Okunmalı?
+            </h2>
+            <ul className="mt-4 space-y-3 text-sm leading-7 text-slate-600 md:text-base">
+              <li>
+                <strong className="text-slate-900">Tahmini etki:</strong> Hesaba
+                katılan varlıkların fon fiyatına toplam olası katkısıdır.
+              </li>
+              <li>
+                <strong className="text-slate-900">Veri kapsamı:</strong> Sonucun
+                fon portföyünün ne kadarını temsil ettiğini gösterir.
+              </li>
+              <li>
+                <strong className="text-slate-900">Hisse bazlı etki:</strong> Fonun
+                hangi varlıktan ne kadar destek veya baskı aldığını açıklar.
+              </li>
+              <li>
+                <strong className="text-slate-900">Para akışı:</strong> Fiyat
+                hareketinden ayrı olarak yatırımcı giriş ve çıkışını yorumlamaya
+                yardımcı olur.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section className="mt-12 border-y border-amber-200 bg-amber-50 px-5 py-7 md:px-7">
+          <h2 className="text-lg font-bold text-amber-950 md:text-xl">
+            Tahminin Sınırları
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-amber-950 md:text-base">
+            Nakit pozisyon, repo ve borçlanma araçları, vadeli işlem sözleşmeleri,
+            yabancı varlıkların kapanış saatleri, fon giderleri, vergi etkileri ve
+            gün içinde değişen portföy ağırlıkları gerçek fon fiyatında farklılık
+            oluşturabilir. Bu nedenle etki analizi yatırım kararı veya getiri
+            garantisi değil, açıklanacak fiyat öncesinde kullanılan tahmini bir
+            takip göstergesidir.
+          </p>
+        </section>
+
+        {sonDegerlendirmeler.length > 0 ? (
+          <section className="mt-12" aria-labelledby="son-degerlendirmeler">
+            <h2 id="son-degerlendirmeler" className="text-xl font-bold text-slate-950 md:text-2xl">
+              Son Fon Kapanış Değerlendirmeleri
+            </h2>
+            <div className="mt-4 divide-y divide-slate-200 border-y border-slate-200">
+              {sonDegerlendirmeler.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  prefetch={false}
+                  className="group flex flex-col gap-1 py-4 sm:flex-row sm:items-center sm:justify-between"
+                >
+                  <span className="font-semibold text-slate-900 transition group-hover:text-blue-700">
+                    {item.title}
+                  </span>
+                  <span className="shrink-0 text-xs text-slate-500">
+                    {formatNewsDate(item.publishedAt)} →
+                  </span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        ) : null}
+
+        <section className="mt-12 grid gap-8 border-t border-slate-200 pt-10 lg:grid-cols-2">
+          <div>
+            <h2 className="text-xl font-bold text-slate-950 md:text-2xl">Veri Kaynakları</h2>
+            <p className="mt-3 text-sm leading-7 text-slate-600 md:text-base">
+              Hesaplamada kamuya açıklanan fon bilgileri, portföy dağılımları ve
+              piyasa kapanış verileri esas alınır. Kesin ve bağlayıcı değer için
+              fonun resmî fiyat açıklaması kontrol edilmelidir.
+            </p>
+            <div className="mt-4 flex flex-wrap gap-3">
+              <a
+                href="https://www.tefas.gov.tr/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-blue-700 hover:underline"
+              >
+                TEFAS →
+              </a>
+              <a
+                href="https://www.kap.org.tr/tr/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-blue-700 hover:underline"
+              >
+                KAP →
+              </a>
+              <a
+                href="https://www.borsaistanbul.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-semibold text-blue-700 hover:underline"
+              >
+                Borsa İstanbul →
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h2 className="text-xl font-bold text-slate-950 md:text-2xl">İlgili Fon Sayfaları</h2>
+            <ul className="mt-4 space-y-3 text-sm md:text-base">
+              <li>
+                <Link href="/fonlar/getiri" className="font-semibold text-blue-700 hover:underline">
+                  Fon Getiri Analizi →
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/fonlar/tarihsel-veriler"
+                  className="font-semibold text-blue-700 hover:underline"
+                >
+                  Fon Tarihsel Verileri →
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler"
+                  className="font-semibold text-blue-700 hover:underline"
+                >
+                  Fonların En Çok Tercih Ettiği Hisseler →
+                </Link>
+              </li>
+              <li>
+                <Link href="/fonlar" className="font-semibold text-blue-700 hover:underline">
+                  Tüm Fon Araçları →
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="sss" className="mt-12 border-t border-slate-200 pt-10">
+          <h2 className="text-xl font-bold text-slate-950 md:text-2xl">Sık Sorulan Sorular</h2>
+          <div className="mt-5 divide-y divide-slate-200 border-y border-slate-200">
+            {faq.map((item) => (
+              <details key={item.question} className="group py-4">
+                <summary className="cursor-pointer list-none font-semibold text-slate-900">
+                  {item.question}
+                </summary>
+                <p className="mt-3 max-w-4xl text-sm leading-7 text-slate-600 md:text-base">
+                  {item.answer}
+                </p>
+              </details>
+            ))}
+          </div>
+        </section>
+
+        <p className="mt-10 border-t border-slate-200 pt-5 text-xs leading-6 text-slate-500 md:text-sm">
+          Bu içerik genel bilgilendirme amacı taşır ve yatırım danışmanlığı
+          kapsamında değildir. Fon fiyatları ve portföy dağılımları için resmî
+          kaynaklardaki güncel verileri esas alınız.
+        </p>
       </div>
     </main>
   );

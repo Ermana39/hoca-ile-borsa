@@ -8,7 +8,7 @@ const description =
   "Pay geri alım programı nedir, şirketler neden kendi paylarını geri alır, yatırımcı açısından ne anlama gelir? KAP bildirimi, geri alım fiyatı, azami fon ve riskler.";
 
 export const metadata: Metadata = {
-  title: `${title} | Hoca İle Borsa`,
+  title,
   description,
   alternates: {
     canonical: `${siteUrl}/rehberler/pay-geri-alim-programi-nedir`,

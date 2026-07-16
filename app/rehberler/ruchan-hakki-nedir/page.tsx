@@ -10,7 +10,7 @@ const description =
   "Rüçhan hakkı nedir, bedelli sermaye artırımında nasıl kullanılır, rüçhan kuponu nasıl satılır, kullanılmazsa ne olur ve yatırımcı açısından ne anlama gelir?";
 
 export const metadata: Metadata = {
-  title: `${title} | Hoca İle Borsa`,
+  title,
   description,
   alternates: {
     canonical: `${siteUrl}/rehberler/ruchan-hakki-nedir`,

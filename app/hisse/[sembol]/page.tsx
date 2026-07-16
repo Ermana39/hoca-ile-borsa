@@ -81,8 +81,7 @@ function doluListe<T>(value?: T[] | null): value is T[] {
   return Array.isArray(value) && value.length > 0;
 }
 
-// temettuSermayeGecmisi normalize yardımcıları lib/hisse-temettu'da;
-// temettü alt sayfası (app/hisse/[sembol]/temettu) ile ortak kullanılır.
+// temettuSermayeGecmisi normalize yardımcıları lib/hisse-temettu'da tutulur.
 
 function enBuyukOrtakAdi(hisse: Hisse): string {
   const ortaklar = hisse.ortaklikYapisi?.ortaklar ?? [];
@@ -1387,7 +1386,7 @@ export default async function HisseKunyePage({
             <TemelOranlarBolumu kod={hisse.kod} temelOranlar={temelOranlar} />
 
             {temettuBolumuVar && (
-            <section className="mt-8">
+            <section id="temettu-gecmisi" className="mt-8">
               <SectionBaslik>Temettü Geçmişi</SectionBaslik>
               {temettuKayitlari.length > 0 && (
                 <div className="overflow-x-auto rounded-xl border border-slate-200">
@@ -1480,18 +1479,6 @@ export default async function HisseKunyePage({
                 </div>
               )}
 
-              {sermayeGecmisi.length > 0 && (
-                <div className="mt-4">
-                  <Link
-                    href={`/hisse/${hisse.kod.toLowerCase()}/temettu`}
-                    prefetch={false}
-                    className="inline-flex items-center gap-1 rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-sm font-semibold text-blue-700 transition hover:bg-blue-100"
-                  >
-                    {hisse.kod} temettü geçmişinin tamamı ve istatistikleri{" "}
-                    <span aria-hidden>→</span>
-                  </Link>
-                </div>
-              )}
             </section>
             )}
 

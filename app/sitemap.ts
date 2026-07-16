@@ -8,11 +8,14 @@ import {
 } from "@/lib/haberler";
 import { HABER_KATEGORILERI } from "@/lib/haber-kategorileri";
 import { getSitemapHisseSembolleri } from "@/lib/hisseler";
-import { getTemettuGecmisiOlanSembolleri } from "@/lib/hisse-temettu";
-import { ozgunTerimler } from "@/data/sozluk";
+import { ozgunTerimler, terimGuncellemeTarihi } from "@/data/sozluk";
 import { getTumGunlukOzetler } from "@/lib/gunluk-ozet";
 import { getSitemapTaslakIzahnameSluglari } from "@/lib/halka-arz";
 import { rehberler } from "@/lib/rehberler";
+import {
+  fonEtkiOzetleri,
+  fonEtkiSonGuncelleme,
+} from "@/app/fonlar/etki-analizi/_data/fonEtkiOzetleri";
 
 const siteUrl = "https://www.hocaileborsa.com";
 
@@ -122,15 +125,21 @@ export default function sitemap(): MetadataRoute.Sitemap {
     (sembol) => `/hisse/${sembol.toLowerCase()}`
   );
 
-  // Temettü/sermaye geçmişi verisi olan hisselerin temettü alt sayfaları.
-  const hisseTemettuRoutes = getTemettuGecmisiOlanSembolleri().map(
-    (sembol) => `/hisse/${sembol.toLowerCase()}/temettu`
-  );
-
   // Sözlükte kendi sayfası olan terimler (işaretçi kayıtlar hariç).
-  const sozlukRoutes = ozgunTerimler().map((t) => `/sozluk/${t.slug}`);
+  const sozlukEntries = ozgunTerimler().map((terim) => ({
+    route: `/sozluk/${terim.slug}`,
+    lastModified: terimGuncellemeTarihi(terim),
+  }));
 
   const haberRoutes = newsItems.map((item) => item.href);
+
+  const fonEtkiEntries = [
+    { route: "/fonlar/etki-analizi", lastModified: fonEtkiSonGuncelleme.iso },
+    ...fonEtkiOzetleri.map((fon) => ({
+      route: `/fonlar/etki-analizi/${fon.slug}`,
+      lastModified: fonEtkiSonGuncelleme.iso,
+    })),
+  ];
 
   // JSON'a taşınmış halka arz detay sayfaları (dinamik [slug] şablonuyla
   // servis edilir; pageUpdates'te yer almadıkları için burada eklenir).
@@ -167,8 +176,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...rehberler.map((rehber) => rehber.href),
     ...staticRoutes,
     ...hisseRoutes,
-    ...hisseTemettuRoutes,
-    ...sozlukRoutes,
+    ...sozlukEntries.map((entry) => entry.route),
     ...haberRoutes,
     ...halkaArzRoutes,
     ...arsivSayfaRoutes,
@@ -180,6 +188,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   for (const entry of gunlukOzetEntries) {
+    routeEntries.set(entry.route, entry.lastModified);
+  }
+
+  // Dinamik sözlük route'ları pageUpdates içinde yer almaz. Ana sayfanın
+  // güncelleme tarihini miras almaları, her deploy'da yanlış tazelik sinyali
+  // üretirdi; içerik tarihlerini açıkça kullan.
+  for (const entry of sozlukEntries) {
+    routeEntries.set(entry.route, entry.lastModified);
+  }
+
+  // Fon etki sayfalarının içerik tarihi günlük analiz verisinden gelir.
+  // Statik route kayıtlarındaki eski dosya tarihi güncelliği gölgelememeli.
+  for (const entry of fonEtkiEntries) {
     routeEntries.set(entry.route, entry.lastModified);
   }
 

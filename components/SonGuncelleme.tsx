@@ -1,6 +1,7 @@
 "use client";
 
 import { usePathname } from "next/navigation";
+import Link from "next/link";
 
 /**
  * Bulunulan route için görünür "Son güncelleme" damgası.
@@ -10,8 +11,10 @@ import { usePathname } from "next/navigation";
  */
 export default function SonGuncelleme({
   tarihler,
+  yazar,
 }: {
   tarihler: Record<string, string>;
+  yazar?: { isim: string; href: string };
 }) {
   const pathname = usePathname() || "/";
   const iso = tarihler[pathname];
@@ -28,12 +31,25 @@ export default function SonGuncelleme({
 
   return (
     <div className="mx-auto w-full max-w-4xl px-4 md:px-6">
-      <p className="pt-4 text-right text-xs text-slate-400">
-        Son güncelleme:{" "}
-        <time dateTime={iso} className="font-medium text-slate-500">
-          {metin}
-        </time>
-      </p>
+      <div className="flex flex-wrap items-center justify-end gap-x-3 gap-y-1 pt-4 text-xs text-slate-400">
+        {yazar ? (
+          <p>
+            Hazırlayan:{" "}
+            <Link
+              href={yazar.href}
+              className="font-medium text-slate-600 hover:text-blue-700 hover:underline"
+            >
+              {yazar.isim}
+            </Link>
+          </p>
+        ) : null}
+        <p>
+          Son güncelleme:{" "}
+          <time dateTime={iso} className="font-medium text-slate-500">
+            {metin}
+          </time>
+        </p>
+      </div>
     </div>
   );
 }

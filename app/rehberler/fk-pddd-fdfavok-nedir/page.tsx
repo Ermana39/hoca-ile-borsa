@@ -9,7 +9,7 @@ const description =
   "F/K, PD/DD ve FD/FAVÖK oranı nedir, nasıl hesaplanır ve yatırımcı açısından ne anlama gelir? Hisse değerleme oranlarını doğru yorumlama rehberi.";
 
 export const metadata: Metadata = {
-  title: `${title} | Hoca İle Borsa`,
+  title,
   description,
   alternates: {
     canonical: `${siteUrl}/rehberler/fk-pddd-fdfavok-nedir`,

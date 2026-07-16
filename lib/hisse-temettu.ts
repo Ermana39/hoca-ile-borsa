@@ -1,8 +1,5 @@
 // Hisse temettü/sermaye geçmişi için ortak yardımcılar.
-// app/hisse/[sembol]/page.tsx ve app/hisse/[sembol]/temettu/page.tsx
-// aynı normalize ve istatistik mantığını buradan kullanır.
-
-import { getHisse, getTumHisseSembolleri } from "@/lib/hisseler";
+// app/hisse/[sembol]/page.tsx aynı normalize ve istatistik mantığını buradan kullanır.
 
 // temettuSermayeGecmisi iki farklı şemayla gelebiliyor:
 //   kanonik    : { yil, tur, tutarOran, aciklama }
@@ -73,19 +70,6 @@ export function temettuIstatistikleri(
     sonIslem: satirlar[0],
     sonTemettu: temettuler[0],
   };
-}
-
-// Temettü geçmişi olan semboller: alt sayfa yalnızca bunlar için üretilir.
-export function getTemettuGecmisiOlanSembolleri(): string[] {
-  return getTumHisseSembolleri().filter((sembol) => {
-    const hisse = getHisse(sembol);
-    if (!hisse) return false;
-    return (
-      sermayeGecmisiNormalize(
-        hisse.temettuSermayeGecmisi as HamSermayeKaydi[] | undefined
-      ).length > 0
-    );
-  });
 }
 
 // oranYorumla.ts ile aynı mantık: sembole göre deterministik varyant seçimi.

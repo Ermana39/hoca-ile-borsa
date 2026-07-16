@@ -19,7 +19,10 @@ export default function RehberlerLayout({ children }: { children: ReactNode }) {
   return (
     <>
       <Breadcrumb schemaOnly />
-      <SonGuncelleme tarihler={rehberTarihleri} />
+      <SonGuncelleme
+        tarihler={rehberTarihleri}
+        yazar={{ isim: "Erman Hoca", href: "/yazar/erman-hoca" }}
+      />
       {children}
     </>
   );

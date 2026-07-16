@@ -157,6 +157,7 @@ export default function Footer() {
               { label: "Borsa Analiz", href: "/borsa" },
               { label: "Faiz Oranları", href: "/mevduat-kredi-faizleri" },
               { label: "Rehberler", href: "/rehberler" },
+              { label: "Borsa Sözlüğü", href: "/sozluk" },
             ]}
           />
 

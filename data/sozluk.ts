@@ -23,7 +23,17 @@ export type SozlukTerimi = {
   // Terimle ilişkili hesaplayıcı; IlgiliTerimler haber çiplerinde ayrıca
   // "araç" çipi olarak gösterilir (haberden hesaplayıcıya iç bağlantı).
   arac?: { title: string; href: string };
+  publishedAt?: string;
+  updatedAt?: string;
 };
+
+// Sözlükteki özgün maddeler ilk kez bu tarihte yayımlandı. Bir madde daha
+// sonra esaslı biçimde güncellenirse kendi `updatedAt` alanı bu tarihi ezer.
+export const sozlukYayinTarihi = "2026-07-05";
+
+export function terimGuncellemeTarihi(terim: SozlukTerimi): string {
+  return terim.updatedAt ?? terim.publishedAt ?? sozlukYayinTarihi;
+}
 
 export const sozlukTerimleri: SozlukTerimi[] = [
   // ---------------------------------------------------------------- ÖZGÜN ---

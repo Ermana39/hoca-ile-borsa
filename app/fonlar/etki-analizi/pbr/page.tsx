@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import FonEtkiSeoPage from "../_components/FonEtkiSeoPage";
 import type { FonEtkiRow } from "../_components/FonEtkiTable";
+import {
+  fonEtkiOzetiGetir,
+  fonEtkiSonGuncelleme,
+} from "../_data/fonEtkiOzetleri";
 
 export const metadata: Metadata = {
   title: "PBR Fonu Etki Analizi: Yarınki Fon Fiyatı Tahmini",
@@ -56,17 +60,19 @@ const rows: FonEtkiRow[] = [
   { sembol: "PA2", fonOrani: 0.06, kapanisMarji: -0.43, etki: -0.000258 },
 ];
 
+const ozet = fonEtkiOzetiGetir("pbr");
+
 export default function PbrEtkiAnaliziPage() {
   return (
     <FonEtkiSeoPage
-      kod="PBR"
-      fonAdi="Pusula Portföy Birinci Değişken Fon"
-      fonTuru="Pusula Portföy Birinci Değişken Fon"
-      slug="pbr"
+      kod={ozet.kod}
+      fonAdi={ozet.fonAdi}
+      fonTuru={ozet.fonTuru}
+      slug={ozet.slug}
       rows={rows}
-      toplamFonOrani={84.42}
-      toplamEtki={0.41}
-      sonGuncelleme="16 Temmuz 2026"
+      toplamFonOrani={ozet.toplamFonOrani}
+      toplamEtki={ozet.toplamEtki}
+      sonGuncelleme={fonEtkiSonGuncelleme.label}
       degisimVerisi={{
         yatirimciSayisi: {
           dun: 69933,

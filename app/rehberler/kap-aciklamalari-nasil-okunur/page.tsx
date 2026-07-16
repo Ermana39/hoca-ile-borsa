@@ -10,7 +10,7 @@ const description =
 const canonical = `${siteUrl}/rehberler/kap-aciklamalari-nasil-okunur`;
 
 export const metadata: Metadata = {
-  title: `${title} | Hoca İle Borsa`,
+  title,
   description,
   alternates: {
     canonical,

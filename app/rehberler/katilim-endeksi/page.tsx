@@ -9,7 +9,7 @@ const description =
   "Katılım Endeksi nedir, BIST Katılım 30, 50, 100 ve Katılım Tüm hisseleri hangi kriterlere göre belirlenir? KAFİF Formu, faizli borç ve faizli varlık oranları.";
 
 export const metadata: Metadata = {
-  title: `${title} | Hoca İle Borsa`,
+  title,
   description,
   alternates: {
     canonical: `${siteUrl}/rehberler/katilim-endeksi`,

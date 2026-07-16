@@ -3,8 +3,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
   ozgunTerimler,
+  sozlukYayinTarihi,
   sozlukTerimleri,
   terimGetir,
+  terimGuncellemeTarihi,
   terimHref,
 } from "@/data/sozluk";
 
@@ -30,6 +32,7 @@ export async function generateMetadata({
   return {
     title,
     description: terim.kisaTanim,
+    authors: [{ name: "Erman Hoca", url: `${siteUrl}/yazar/erman-hoca` }],
     alternates: { canonical: `${siteUrl}/sozluk/${slug}` },
     openGraph: {
       title,
@@ -50,6 +53,7 @@ export default async function SozlukTerimPage({
   if (!terim) notFound();
 
   const url = `${siteUrl}/sozluk/${slug}`;
+  const dateModified = terimGuncellemeTarihi(terim);
   const iliskiler = (terim.iliskiliTerimler ?? [])
     .map((s) => sozlukTerimleri.find((t) => t.slug === s))
     .filter((t): t is NonNullable<typeof t> => Boolean(t));
@@ -60,11 +64,34 @@ export default async function SozlukTerimPage({
       "@type": "DefinedTerm",
       name: terim.terim,
       description: terim.kisaTanim,
+      image: `${siteUrl}/banner.webp`,
       url,
       inDefinedTermSet: {
         "@type": "DefinedTermSet",
         name: "Borsa Terimleri Sözlüğü",
         url: `${siteUrl}/sozluk`,
+      },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      headline: `${terim.terim} Nedir?`,
+      description: terim.kisaTanim,
+      url,
+      mainEntityOfPage: url,
+      datePublished: terim.publishedAt ?? sozlukYayinTarihi,
+      dateModified,
+      author: {
+        "@type": "Person",
+        "@id": `${siteUrl}/yazar/erman-hoca#person`,
+        name: "Erman Hoca",
+        url: `${siteUrl}/yazar/erman-hoca`,
+      },
+      publisher: {
+        "@type": "Organization",
+        "@id": `${siteUrl}/#organization`,
+        name: "Hoca İle Borsa",
+        url: siteUrl,
       },
     },
   ];
@@ -215,6 +242,41 @@ export default async function SozlukTerimPage({
             düzenlemeleriyle değişebilir; güncel ve bağlayıcı bilgi için resmî
             kaynaklara başvurunuz.
           </p>
+
+          <section className="mt-5 border-t border-slate-100 pt-4">
+            <h2 className="text-sm font-semibold text-slate-800 md:text-base">
+              Kaynak ve editoryal kontrol
+            </h2>
+            <p className="mt-2 text-xs leading-6 text-slate-500 md:text-sm">
+              Tanımlar, resmî piyasa terminolojisi ve güncel düzenlemeler esas
+              alınarak hazırlanır. Ayrıntılı doğrulama için{" "}
+              <a
+                href="https://www.borsaistanbul.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-blue-700 hover:underline"
+              >
+                Borsa İstanbul
+              </a>
+              ,{" "}
+              <a
+                href="https://www.kap.org.tr/tr/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="font-medium text-blue-700 hover:underline"
+              >
+                KAP
+              </a>{" "}
+              ve{" "}
+              <Link
+                href="/editoryal-ilkeler"
+                className="font-medium text-blue-700 hover:underline"
+              >
+                editoryal ilkelerimizi
+              </Link>{" "}
+              inceleyebilirsiniz.
+            </p>
+          </section>
         </article>
 
         <div className="mt-6">

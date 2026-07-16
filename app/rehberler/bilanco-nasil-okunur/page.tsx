@@ -10,7 +10,7 @@ const description =
   "Bilanço nasıl okunur, gelir tablosu ve nakit akışı nasıl yorumlanır? Borçluluk, karlılık, özkaynak, FAVÖK, net borç ve finansal oranlar hakkında kapsamlı rehber.";
 
 export const metadata: Metadata = {
-  title: `${title} | Hoca İle Borsa`,
+  title,
   description,
   alternates: {
     canonical: `${siteUrl}/rehberler/bilanco-nasil-okunur`,

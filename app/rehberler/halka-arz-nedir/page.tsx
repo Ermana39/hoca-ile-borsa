@@ -9,7 +9,7 @@ const description =
   "Halka arz nedir, halka arz süreci nasıl işler, izahname, fiyat tespit raporu, fon kullanımı, eşit dağıtım ve oransal dağıtım yatırımcı için ne anlama gelir?";
 
 export const metadata: Metadata = {
-  title: `${title} | Hoca İle Borsa`,
+  title,
   description,
   alternates: {
     canonical: `${siteUrl}/rehberler/halka-arz-nedir`,

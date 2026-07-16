@@ -2,7 +2,7 @@ import Link from "next/link";
 import { rehberler } from "@/lib/rehberler";
 
 export const metadata = {
-  title: "Rehberler | Hoca İle Borsa",
+  title: "Rehberler",
   description:
     "Borsa, halka arz, katılım endeksi, sermaye artırımları, temettü ve finans kavramları hakkında kalıcı rehber içerikleri.",
   alternates: { canonical: "https://www.hocaileborsa.com/rehberler" },

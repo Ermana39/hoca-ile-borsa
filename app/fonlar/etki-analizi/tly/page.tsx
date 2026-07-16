@@ -1,6 +1,10 @@
 import type { Metadata } from "next";
 import FonEtkiSeoPage from "../_components/FonEtkiSeoPage";
 import type { FonEtkiRow } from "../_components/FonEtkiTable";
+import {
+  fonEtkiOzetiGetir,
+  fonEtkiSonGuncelleme,
+} from "../_data/fonEtkiOzetleri";
 
 export const metadata: Metadata = {
   title: "TLY Fonu Etki Analizi: Yarınki Fon Fiyatı Tahmini",
@@ -36,17 +40,19 @@ const rows: FonEtkiRow[] = [
   { sembol: "HMV", fonOrani: 1.27, kapanisMarji: -7.3, etki: -0.0927 },
 ];
 
+const ozet = fonEtkiOzetiGetir("tly");
+
 export default function TlyEtkiAnaliziPage() {
   return (
     <FonEtkiSeoPage
-      kod="TLY"
-      fonAdi="Tera Portföy Birinci Serbest Fonu"
-      fonTuru="Tera Portföy Birinci Serbest Fonu"
-      slug="tly"
+      kod={ozet.kod}
+      fonAdi={ozet.fonAdi}
+      fonTuru={ozet.fonTuru}
+      slug={ozet.slug}
       rows={rows}
-      toplamFonOrani={82.01}
-      toplamEtki={-0.39}
-      sonGuncelleme="16 Temmuz 2026"
+      toplamFonOrani={ozet.toplamFonOrani}
+      toplamEtki={ozet.toplamEtki}
+      sonGuncelleme={fonEtkiSonGuncelleme.label}
       degisimVerisi={{
         yatirimciSayisi: {
           dun: 96686,

@@ -8,7 +8,7 @@ const description =
   "Devre kesici nedir, Borsa İstanbul'da pay bazında devre kesici nasıl çalışır, tek fiyat emir toplama süreci ne anlama gelir ve yatırımcı nelere dikkat etmelidir?";
 
 export const metadata: Metadata = {
-  title: `${title} | Hoca İle Borsa`,
+  title,
   description,
   alternates: {
     canonical: `${siteUrl}/rehberler/devre-kesici-nedir`,

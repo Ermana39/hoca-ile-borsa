@@ -5,7 +5,7 @@ import type { Metadata } from "next";
 const siteUrl = "https://www.hocaileborsa.com";
 
 export const metadata: Metadata = {
-  title: `${guide.title} | Hoca İle Borsa`,
+  title: guide.title,
   description: guide.description,
   alternates: {
     canonical: `${siteUrl}${guide.href}`,

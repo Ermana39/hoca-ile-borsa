@@ -9,7 +9,7 @@ const description =
   "Sermaye artırımı nedir, bedelli ve bedelsiz sermaye artırımı yatırımcı için ne anlama gelir? Rüçhan hakkı, tahsisli sermaye artırımı, teorik fiyat ve süreçler.";
 
 export const metadata: Metadata = {
-  title: `${title} | Hoca İle Borsa`,
+  title,
   description,
   alternates: {
     canonical: `${siteUrl}/rehberler/sermaye-artirimlari`,
