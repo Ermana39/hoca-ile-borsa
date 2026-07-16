@@ -5,6 +5,7 @@ import {
   bekleyenDeger,
   halkaArzGetir,
   statikSlugVar,
+  taslakCanonicalYolu,
   tahsisatMetni,
   tasinmamisSluglar,
   type HalkaArzVeri,
@@ -51,7 +52,7 @@ export async function generateMetadata({
     description: veri.baslikMeta.description,
     robots,
     alternates: {
-      canonical: `https://www.hocaileborsa.com/halka-arz/taslak-izahnameler/${slug}`,
+      canonical: `https://www.hocaileborsa.com${taslakCanonicalYolu(veri, slug)}`,
     },
   };
 }
@@ -198,6 +199,10 @@ export default async function HalkaArzDinamikPage({
   if (veri.seo?.contentStatus === "onayli") {
     permanentRedirect(`/halka-arz/onayli-izahnameler/${slug}`);
   }
+
+  const mevcutYol = `/halka-arz/taslak-izahnameler/${slug}`;
+  const canonicalYol = taslakCanonicalYolu(veri, slug);
+  if (canonicalYol !== mevcutYol) permanentRedirect(canonicalYol);
 
   const tumOzet = ozetSatirlari(veri);
   const gorunenSummary = tumOzet.filter((i) => !bekleyenDeger(i.value));

@@ -133,6 +133,36 @@ export type HalkaArzVeri = {
   yasalUyari?: string;
 };
 
+const SITE_URL = "https://www.hocaileborsa.com";
+
+export function taslakCanonicalYolu(
+  veri: HalkaArzVeri,
+  slug: string
+): string {
+  const varsayilanYol = `/halka-arz/taslak-izahnameler/${slug}`;
+  if (!veri.seo?.canonical) return varsayilanYol;
+
+  try {
+    const canonical = new URL(veri.seo.canonical, SITE_URL);
+    if (canonical.origin !== SITE_URL) return varsayilanYol;
+    if (!canonical.pathname.startsWith("/halka-arz/taslak-izahnameler/")) {
+      return varsayilanYol;
+    }
+
+    const hedefSlug = path.posix.basename(canonical.pathname);
+    if (hedefSlug === slug) return canonical.pathname;
+
+    const hedefJsonVar = fs.existsSync(
+      path.join(HALKA_ARZ_DIZINI, `${hedefSlug}.json`)
+    );
+    return hedefJsonVar || statikSlugVar(hedefSlug)
+      ? canonical.pathname
+      : varsayilanYol;
+  } catch {
+    return varsayilanYol;
+  }
+}
+
 // ---------------------------------------------------------------------------
 //  Bekleyen (kesinleşmemiş) değer tespiti — Adra sayfasındaki mantığın aynısı.
 //  Değeri "Hazırlanıyor / Açıklanmadı / boş" olan alanlar gizlenir; gerçek
@@ -203,6 +233,12 @@ export function getSitemapTaslakIzahnameSluglari(): string[] {
     const veri = halkaArzGetir(slug);
     if (!veri) return false;
     if (veri.seo?.contentStatus === "onayli") return false;
+    if (
+      taslakCanonicalYolu(veri, slug) !==
+      `/halka-arz/taslak-izahnameler/${slug}`
+    ) {
+      return false;
+    }
     if (veri.seo?.robots?.index === false) return false;
     if (veri.seo?.sitemap === false) return false;
     return true;
@@ -242,6 +278,12 @@ export function getTaslakIzahnameListesi(): TaslakListeOgesi[] {
       const veri = halkaArzGetir(slug);
       if (!veri) return null;
       if (veri.seo?.contentStatus === "onayli") return null;
+      if (
+        taslakCanonicalYolu(veri, slug) !==
+        `/halka-arz/taslak-izahnameler/${slug}`
+      ) {
+        return null;
+      }
       return { klasor: slug, label: veri.sirketAdi || slug };
     })
     .filter((x): x is TaslakListeOgesi => x !== null)
