@@ -23,6 +23,45 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1163,
+    title:
+      "Albayrak Hazır Beton Halka Arzına SPK Onayı: Fiyat, Lot ve Tüm Detaylar",
+    href: "/haber/albayrak-hazir-beton-halka-arzina-spk-onayi-geldi",
+    image: "/albayrak-hazir-beton-halka-arzina-spk-onayi-geldi.webp",
+    alt: "Albayrak Hazır Beton halka arzına SPK onayı fiyat lot ve tüm detaylar",
+    publishedAt: "2026-07-17T09:15:00+03:00",
+    category: "halka-arz",
+  },
+  {
+    id: 1162,
+    title:
+      "Kardemir Çelik Sanayi Halka Arzına SPK Onayı: Fiyat, Lot ve Tüm Detaylar",
+    href: "/haber/kardemir-celik-sanayi-halka-arzina-spk-onayi-geldi",
+    image: "/kardemir-celik-sanayi-halka-arzina-spk-onayi-geldi.webp",
+    alt: "Kardemir Çelik Sanayi halka arzına SPK onayı fiyat lot ve tüm detaylar",
+    publishedAt: "2026-07-17T09:10:00+03:00",
+    category: "halka-arz",
+  },
+  {
+    id: 1161,
+    title: "Masfen Enerji Halka Arzına SPK Onayı: Fiyat, Lot ve Tüm Detaylar",
+    href: "/haber/masfen-enerji-halka-arzina-spk-onayi-geldi",
+    image: "/masfen-enerji-halka-arzina-spk-onayi-geldi.webp",
+    alt: "Masfen Enerji halka arzına SPK onayı fiyat lot ve tüm detaylar",
+    publishedAt: "2026-07-17T09:05:00+03:00",
+    category: "halka-arz",
+  },
+  {
+    id: 1160,
+    title:
+      "Metgün Enerji Yatırımları Halka Arzına SPK Onayı: Fiyat, Lot ve Tüm Detaylar",
+    href: "/haber/metgun-enerji-yatirimlari-halka-arzina-spk-onayi-geldi",
+    image: "/metgun-enerji-yatirimlari-halka-arzina-spk-onayi-geldi.webp",
+    alt: "Metgün Enerji Yatırımları halka arzına SPK onayı fiyat lot ve tüm detaylar",
+    publishedAt: "2026-07-17T09:00:00+03:00",
+    category: "halka-arz",
+  },
+  {
     id: 1159,
     title:
       "SPK’dan 4 Yeni Halka Arz Onayı: Albayrak, Masfen, Metgün ve Kardemir Çelik",

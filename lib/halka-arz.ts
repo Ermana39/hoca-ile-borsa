@@ -83,6 +83,7 @@ export type TaahhutOzeti = {
   fiyatIstikrari?: string;
   satmamaTaahhudu?: string;
   halkaAciklik?: string;
+  gunlukAlimEmri?: string;
 };
 
 export type HalkaArzVeri = {
