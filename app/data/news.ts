@@ -23,6 +23,36 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1146,
+    title: "FONET Aydın İl Sağlık Müdürlüğü 198,5 Milyon TL’lik SBYS İhalesini Kazandı",
+    href: "/haber/fonet-aydin-il-saglik-mudurlugu-198-milyon-tl-sbys-ihalesi",
+    image: "/fonet-aydin-il-saglik-mudurlugu-198-milyon-tl-sbys-ihalesi.webp",
+    alt: "FONET Aydın İl Sağlık Müdürlüğü 198,5 milyon TL SBYS ihalesi",
+    publishedAt: "2026-07-16T10:22:48+03:00",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["FONET"],
+  },
+  {
+    id: 1145,
+    title: "ONCSM %1200 Bedelsiz Sermaye Artırımı Kararı Aldı",
+    href: "/haber/oncsm-1200-bedelsiz-sermaye-artirimi-karari",
+    image: "/oncsm-1200-bedelsiz-sermaye-artirimi-karari.webp",
+    alt: "ONCSM yüzde 1200 bedelsiz sermaye artırımı kararı",
+    publishedAt: "2026-07-16T09:30:10+03:00",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["ONCSM"],
+  },
+  {
+    id: 1144,
+    title: "CWENE Güneş Hücresinde %25,11 Verimlilik Doğrulandı",
+    href: "/haber/cwene-gunes-hucresi-verimliligi-2511-dogrulandi",
+    image: "/cwene-gunes-hucresi-verimliligi-2511-dogrulandi.webp",
+    alt: "CWENE güneş hücresi verimliliği yüzde 25,11 doğrulandı",
+    publishedAt: "2026-07-16T09:21:18+03:00",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["CWENE"],
+  },
+  {
     id: 1143,
     title: "14 Temmuz 2026 Önemli KAP: CIMSA, KLYPV, GLYHO, KOCMT Etkileri",
     href: "/haber/14-temmuz-2026-onemli-kap-cimsa-klypv-glyho-kocmt-etkileri",

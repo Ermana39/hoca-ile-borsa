@@ -264,7 +264,8 @@ export default function UluunRuzgarEnerjisiHaberiPage() {
               fill
               sizes="(min-width: 1024px) 896px, 100vw"
               className="object-cover"
-              priority
+              preload
+              unoptimized
             />
           </div>
 
