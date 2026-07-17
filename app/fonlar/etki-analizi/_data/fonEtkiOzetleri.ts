@@ -8,8 +8,8 @@ export type FonEtkiOzeti = {
 };
 
 export const fonEtkiSonGuncelleme = {
-  label: "16 Temmuz 2026",
-  iso: "2026-07-16",
+  label: "17 Temmuz 2026",
+  iso: "2026-07-17",
 };
 
 export const fonEtkiOzetleri: FonEtkiOzeti[] = [
@@ -19,7 +19,7 @@ export const fonEtkiOzetleri: FonEtkiOzeti[] = [
     fonTuru: "Serbest fon",
     slug: "tly",
     toplamFonOrani: 82.01,
-    toplamEtki: -0.39,
+    toplamEtki: -1.4,
   },
   {
     kod: "PHE",
@@ -27,7 +27,7 @@ export const fonEtkiOzetleri: FonEtkiOzeti[] = [
     fonTuru: "Hisse senedi yoğun fon",
     slug: "phe",
     toplamFonOrani: 98.45,
-    toplamEtki: 0.38,
+    toplamEtki: -0.85,
   },
   {
     kod: "PBR",
@@ -35,7 +35,7 @@ export const fonEtkiOzetleri: FonEtkiOzeti[] = [
     fonTuru: "Değişken fon",
     slug: "pbr",
     toplamFonOrani: 84.42,
-    toplamEtki: 0.41,
+    toplamEtki: -0.34,
   },
   {
     kod: "DFI",
@@ -43,7 +43,7 @@ export const fonEtkiOzetleri: FonEtkiOzeti[] = [
     fonTuru: "Serbest fon",
     slug: "dfi",
     toplamFonOrani: 94.22,
-    toplamEtki: 1.32,
+    toplamEtki: 0.85,
   },
 ];
 

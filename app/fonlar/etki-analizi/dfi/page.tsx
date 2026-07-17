@@ -23,10 +23,10 @@ export const metadata: Metadata = {
 };
 
 const rows: FonEtkiRow[] = [
-  { sembol: "IEYHO", fonOrani: 52.75, kapanisMarji: 0.313, etki: 0.16536052 },
-  { sembol: "ISKPL", fonOrani: 11.12, kapanisMarji: 10.0, etki: 1.112 },
-  { sembol: "LIDER", fonOrani: 0.53, kapanisMarji: 2.637, etki: 0.013973635 },
-  { sembol: "ABG", fonOrani: 29.82, kapanisMarji: 0.11, etki: 0.032802 },
+  { sembol: "IEYHO", fonOrani: 52.75, kapanisMarji: -1.5, etki: -0.79125 },
+  { sembol: "ISKPL", fonOrani: 11.12, kapanisMarji: 9.963, etki: 1.107845579 },
+  { sembol: "LIDER", fonOrani: 0.53, kapanisMarji: 2.477, etki: 0.01312844 },
+  { sembol: "ABG", fonOrani: 29.82, kapanisMarji: 1.75, etki: 0.52185 },
 ];
 
 const ozet = fonEtkiOzetiGetir("dfi");
@@ -44,18 +44,18 @@ export default function DfiEtkiAnaliziPage() {
       sonGuncelleme={fonEtkiSonGuncelleme.label}
       degisimVerisi={{
         yatirimciSayisi: {
-          dun: 44008,
-          bugun: 44934,
-          degisim: 926,
+          dun: 44934,
+          bugun: 45593,
+          degisim: 659,
         },
         fonToplamDeger: {
-          dun: 24922250362,
-          bugun: 26133507267,
-          degisim: 1211256905,
+          dun: 26133507267,
+          bugun: 26728833258,
+          degisim: 595325991,
         },
-        paraGirisiCikisi: 1118423134,
+        paraGirisiCikisi: 443483111,
         yorum:
-          "DFI fonunda yatırımcı sayısı 926 kişi artarken fon toplam değeri 1,21 milyar TL yükseldi. 1,12 milyar TL net para girişi, fon büyüklüğündeki artışın büyük ölçüde taze girişle beslendiğini gösteriyor. Portföy etkisinin +%1,32 seviyesine çıkması ise DFI için hem para akışı hem fiyat etkisi tarafında güçlü bir kapanış resmi oluşturuyor.",
+          "DFI fonunda yatırımcı sayısı 659 kişi artarken fon toplam değeri 595,33 milyon TL yükseldi. 443,48 milyon TL net para girişi pozitif tarafta kalırken portföy etkisi +%0,85 seviyesinde hesaplandı. ISKPL ve ABG katkısı güçlü kalmasına rağmen IEYHO tarafındaki negatif etki toplam getiriyi önceki kapanışa göre sınırlıyor.",
       }}
     />
   );

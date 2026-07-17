@@ -23,6 +23,55 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1167,
+    title:
+      "Son Halka Arzların Gün Sonu Kapanış Değerlendirmesi (17 Temmuz 2026)",
+    href: "/haber/17-temmuz-2026-son-halka-arzlar-gun-sonu-kapanis-degerlendirmesi",
+    image: "/17-temmuz-2026-8-halka-arz-gun-sonu-degerlendirmesi.webp",
+    alt: "8 halka arz 17 Temmuz 2026 gün sonu kapanış değerlendirmesi",
+    publishedAt: "2026-07-17T18:46:43+03:00",
+    category: "halka-arz",
+    ilgiliHisseler: [
+      "SARAE",
+      "GOLDA",
+      "ISVEA",
+      "SSAAT",
+      "BETAE",
+      "SOHOE",
+      "ORZAX",
+      "EKIM",
+    ],
+  },
+  {
+    id: 1166,
+    title: "17.07.2026 Fonların Günlük Kapanış Değerlendirmesi: TLY, PHE, PBR, DFI",
+    href: "/haber/17-temmuz-2026-fonlar-gunluk-kapanis-degerlendirmesi",
+    image: "/2026-fon-etki-analizi-tly-phe-pbr-dfi.webp",
+    alt: "17 Temmuz 2026 TLY PHE PBR DFI fon günlük kapanış değerlendirmesi",
+    publishedAt: "2026-07-17T22:05:00+03:00",
+    category: "piyasa-gundemi",
+  },
+  {
+    id: 1165,
+    title: "ARMGD %1.510 Bedelsiz Sermaye Artırımı Kararı Aldı",
+    href: "/haber/armgd-1510-bedelsiz-sermaye-artirimi-karari",
+    image: "/armgd-1510-bedelsiz-sermaye-artirimi-karari.webp",
+    alt: "ARMGD yüzde 1510 bedelsiz sermaye artırımı kararı",
+    publishedAt: "2026-07-17T15:24:18+03:00",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["ARMGD"],
+  },
+  {
+    id: 1164,
+    title: "YEOTK İngiltere’de 196 MWp GES Sözleşmesi İmzaladı",
+    href: "/haber/yeotk-ingilterede-196-mwp-gunes-enerjisi-santrali-sozlesmesi",
+    image: "/yeotk-ingilterede-196-mwp-gunes-enerjisi-santrali-sozlesmesi.webp",
+    alt: "YEOTK İngiltere 196 MWp güneş enerjisi santrali sözleşmesi",
+    publishedAt: "2026-07-17T09:00:46+03:00",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["YEOTK"],
+  },
+  {
     id: 1163,
     title:
       "Albayrak Hazır Beton Halka Arzına SPK Onayı: Fiyat, Lot ve Tüm Detaylar",
