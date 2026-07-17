@@ -36,7 +36,7 @@ const saraeHalkaArz = {
   arzFiyati: "70.00",
   guncelFiyat: "77.00",
   marj: "10%",
-  konsorsiyum: "-",
+  konsorsiyum: "TERA",
 };
 
 const ssaatHalkaArz = {
