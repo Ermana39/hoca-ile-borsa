@@ -73,7 +73,7 @@ export type TahsisatGirdi =
 export function tahsisatMetni(t: TahsisatGirdi): string {
   if (typeof t === "string") return t;
   if (t && typeof t === "object") {
-    const detay = [t.oran, t.lot].filter(Boolean).join(" · ");
+    const detay = [t.oran, t.lot, t.dagitim].filter(Boolean).join(" · ");
     return detay ? `${t.grup}: ${detay}` : t.grup;
   }
   return String(t);
@@ -311,7 +311,8 @@ export function getOnayliIzahnameListesi(): OnayliListeOgesi[] {
         klasor: slug,
         label: veri.sirketAdi || slug,
       };
-      if (veri.bistKodu) oge.kod = veri.bistKodu;
+      const kod = veri.bistKodu || veri.ozet.bistKodu;
+      if (kod) oge.kod = kod;
       return oge;
     })
     .filter((x): x is OnayliListeOgesi => x !== null)

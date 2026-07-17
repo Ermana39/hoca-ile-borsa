@@ -23,6 +23,39 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1170,
+    title:
+      "Masfen Enerji Halka Arz İzahnamesi Yayınlandı: MASFN Fiyat, Lot ve Tarih",
+    href: "/haber/masfen-enerji-halka-arz-izahnamesi-yayinlandi",
+    image: "/masfen-enerji-halka-arzina-spk-onayi-geldi.webp",
+    alt: "Masfen Enerji halka arz izahnamesi yayınlandı",
+    publishedAt: "2026-07-17T23:55:00+03:00",
+    category: "halka-arz",
+    ilgiliHisseler: ["MASFN"],
+  },
+  {
+    id: 1169,
+    title:
+      "Metgün Enerji Halka Arz İzahnamesi Yayınlandı: METEN Fiyat, Lot ve Tarih",
+    href: "/haber/metgun-enerji-yatirimlari-halka-arz-izahnamesi-yayinlandi",
+    image: "/metgun-enerji-yatirimlari-halka-arzina-spk-onayi-geldi.webp",
+    alt: "Metgün Enerji halka arz izahnamesi yayınlandı",
+    publishedAt: "2026-07-17T23:45:00+03:00",
+    category: "halka-arz",
+    ilgiliHisseler: ["METEN"],
+  },
+  {
+    id: 1168,
+    title:
+      "Kardemir Çelik Halka Arz İzahnamesi Yayınlandı: KARCL Fiyat, Lot ve Tarih",
+    href: "/haber/kardemir-celik-sanayi-halka-arz-izahnamesi-yayinlandi",
+    image: "/kardemir-celik-sanayi-halka-arzina-spk-onayi-geldi.webp",
+    alt: "Kardemir Çelik Sanayi halka arz izahnamesi yayınlandı",
+    publishedAt: "2026-07-17T23:30:00+03:00",
+    category: "halka-arz",
+    ilgiliHisseler: ["KARCL"],
+  },
+  {
     id: 1167,
     title:
       "Son Halka Arzların Gün Sonu Kapanış Değerlendirmesi (17 Temmuz 2026)",
