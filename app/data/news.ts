@@ -23,6 +23,17 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1171,
+    title:
+      "Albayrak Hazır Beton Halka Arz İzahnamesi Yayınlandı: ALBTN Fiyat, Lot ve Tarih",
+    href: "/haber/albayrak-hazir-beton-halka-arz-izahnamesi-yayinlandi",
+    image: "/albayrak-hazir-beton-halka-arzina-spk-onayi-geldi.webp",
+    alt: "Albayrak Hazır Beton halka arz izahnamesi yayınlandı",
+    publishedAt: "2026-07-18T00:15:00+03:00",
+    category: "halka-arz",
+    ilgiliHisseler: ["ALBTN"],
+  },
+  {
     id: 1170,
     title:
       "Masfen Enerji Halka Arz İzahnamesi Yayınlandı: MASFN Fiyat, Lot ve Tarih",

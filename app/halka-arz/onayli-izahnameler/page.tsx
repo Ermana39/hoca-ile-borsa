@@ -29,6 +29,11 @@ const statikOnayliIzahnameler = [
 
 const yeniOnayliIzahnameler = [
   {
+    kod: "ALBTN",
+    sirket: "Albayrak Hazır Beton San. ve Tic. A.Ş.",
+    href: "/halka-arz/onayli-izahnameler/albayrak-hazir-beton-san-ve-tic",
+  },
+  {
     kod: "ORZAX",
     sirket: "Orzaks İlaç ve Kimya San. Tic. A.Ş.",
     href: "/halka-arz/onayli-izahnameler/orzaks-ilac-ve-kimya-san-tic",
