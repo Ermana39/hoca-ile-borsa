@@ -31,8 +31,8 @@ export const metadata: Metadata = {
 const saraeHalkaArz = {
   hisse: "SARAE",
   islemTarihi: "17 Tem 2026",
-  katilimciSayisi: "-",
-  dagitimSekli: "TAMAMEN EŞİT",
+  katilimciSayisi: "729.560",
+  dagitimSekli: "BİREYSELE %38",
   arzFiyati: "70.00",
   guncelFiyat: "77.00",
   marj: "10%",
