@@ -5,7 +5,7 @@ import { bekleyenDeger, halkaArzGetir } from "@/lib/halka-arz";
 const canonical = "https://www.hocaileborsa.com/halka-arz/takvim";
 const title = "Halka Arz Takvimi 2026 | Güncel Talep ve İşlem Tarihleri";
 const description =
-  "Güncel halka arz takvimi: 16 Temmuz 2026 tarihinde işleme başlayacak Saat ve Saat (SSAAT) ile işlem tarihi açıklanması beklenen Şa-Ra İnşaat (SARAE) halka arzı.";
+  "Güncel halka arz takvimi: 20-26 Temmuz 2026 haftasında Metgün Enerji (METEN), Kardemir Çelik (KARCL), Masfen Enerji (MASFN) ve Albayrak Hazır Beton (ALBTN) talep topluyor.";
 
 export const metadata: Metadata = {
   title,
@@ -15,12 +15,14 @@ export const metadata: Metadata = {
     "halka arz takvimi",
     "halka arz takvimi 2026",
     "bu hafta halka arz",
-    "SSAAT halka arz",
-    "SARAE halka arz",
-    "SSAAT işlem tarihi",
-    "SARAE işlem tarihi",
-    "Saat ve Saat halka arz",
-    "Şa-Ra İnşaat halka arz",
+    "METEN halka arz",
+    "KARCL halka arz",
+    "MASFN halka arz",
+    "ALBTN halka arz",
+    "Metgün Enerji halka arz",
+    "Kardemir Çelik halka arz",
+    "Masfen Enerji halka arz",
+    "Albayrak Hazır Beton halka arz",
   ],
   openGraph: { title, description, url: canonical, type: "website" },
 };
@@ -48,20 +50,34 @@ type TakvimSatiri = {
   talepSaatleri?: string;
 };
 
-const talepToplamaTakvimi: TalepToplamaArzi[] = [];
-
-const islemBaslangiciTakvimi: TakvimSirketi[] = [
+const talepToplamaTakvimi: TalepToplamaArzi[] = [
   {
-    slug: "saat-ve-saat-san-ve-tic",
-    tarih: "16 Temmuz 2026 Perşembe",
-    durum: "İşleme başlayacak",
+    slug: "metgun-enerji-yatirimlari",
+    tarih: "20-21-22 Temmuz 2026",
+    talepSaatleri: "09.00-17.00",
+    durum: "Talep topluyor",
   },
   {
-    slug: "sa-ra-enerji-insaat-tic-ve-san",
-    tarih: "İşlem tarihi açıklanması bekleniyor",
-    durum: "İşlem tarihi bekleniyor",
+    slug: "kardemir-celik-sanayi",
+    tarih: "22-23-24 Temmuz 2026",
+    talepSaatleri: "09.00-17.00",
+    durum: "Talep toplayacak",
+  },
+  {
+    slug: "masfen-enerji",
+    tarih: "22-23-24 Temmuz 2026",
+    talepSaatleri: "09.00-17.00",
+    durum: "Talep toplayacak",
+  },
+  {
+    slug: "albayrak-hazir-beton-san-ve-tic",
+    tarih: "22-23 Temmuz 2026",
+    talepSaatleri: "10.30-13.00",
+    durum: "Talep toplayacak",
   },
 ];
+
+const islemBaslangiciTakvimi: TakvimSirketi[] = [];
 
 const aktifIzahnameSluglari = [
   ...talepToplamaTakvimi.map((item) => item.slug),
@@ -118,12 +134,12 @@ export default function HalkaArzTakvimPage() {
     {
       soru: "Bu hafta hangi halka arzlar talep topluyor?",
       cevap:
-        "Bu hafta yeni talep toplama süreci bulunmuyor. Takvimde 16 Temmuz 2026 tarihinde işleme başlayacak Saat ve Saat (SSAAT) ile işlem tarihi açıklanması beklenen Şa-Ra İnşaat (SARAE) öne çıkıyor.",
+        "20-26 Temmuz 2026 haftasında Metgün Enerji (METEN), Kardemir Çelik (KARCL), Masfen Enerji (MASFN) ve Albayrak Hazır Beton (ALBTN) halka arzları talep toplama takviminde yer alıyor.",
     },
     {
       soru: "Bu hafta hangi halka arzlar işleme başlayacak?",
       cevap:
-        "Saat ve Saat (SSAAT) halka arzının 16 Temmuz 2026 Perşembe günü Borsa İstanbul’da işleme başlaması bekleniyor. Şa-Ra İnşaat (SARAE) halka arzında ise işlem başlangıç tarihinin açıklanması bekleniyor.",
+        "Bu sayfada 20-26 Temmuz 2026 haftası için öne çıkan güncel başlık talep toplama süreçleridir. İşlem başlangıç tarihleri Borsa İstanbul duyurularıyla netleştikçe takvime eklenecektir.",
     },
     {
       soru: "SPK onaylı izahname bölümünde neden az şirket var?",
@@ -187,8 +203,9 @@ export default function HalkaArzTakvimPage() {
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 md:text-base">
             Bu sayfa yalnızca güncel halka arz akışını gösterir: bu hafta işleme
             başlayacak şirketler, işlem tarihi açıklanması beklenen halka arzlar
-            ve bu hisselere ait onaylı izahname bağlantıları. Eski halka arzlar ana takvimden
-            çıkarılmıştır.
+            ve bu hisselere ait onaylı izahname bağlantıları. 20-26 Temmuz 2026
+            haftasında odak Metgün Enerji, Kardemir Çelik, Masfen Enerji ve
+            Albayrak Hazır Beton talep toplama süreçleridir.
           </p>
         </header>
 
@@ -290,30 +307,42 @@ export default function HalkaArzTakvimPage() {
                 </tr>
               </thead>
               <tbody>
-                {islemeBaslayacaklar.map((item, i) => (
-                  <tr
-                    key={item.slug}
-                    className={i % 2 ? "bg-slate-50" : "bg-white"}
-                  >
-                    <td className="px-4 py-3 font-bold text-slate-900">
-                      {item.bistKodu}
+                {islemeBaslayacaklar.length > 0 ? (
+                  islemeBaslayacaklar.map((item, i) => (
+                    <tr
+                      key={item.slug}
+                      className={i % 2 ? "bg-slate-50" : "bg-white"}
+                    >
+                      <td className="px-4 py-3 font-bold text-slate-900">
+                        {item.bistKodu}
+                      </td>
+                      <td className="px-4 py-3 font-semibold text-slate-900">
+                        <Link
+                          href={item.href}
+                          prefetch={false}
+                          className="hover:text-blue-600"
+                        >
+                          {item.sirketAdi}
+                        </Link>
+                      </td>
+                      <td className="px-4 py-3 font-semibold text-cyan-800">
+                        {item.tarih}
+                      </td>
+                      <td className="px-4 py-3 text-slate-700">{item.fiyat}</td>
+                      <td className="px-4 py-3 text-slate-700">{item.pazar}</td>
+                    </tr>
+                  ))
+                ) : (
+                  <tr>
+                    <td
+                      colSpan={5}
+                      className="bg-white px-4 py-5 text-sm font-medium text-slate-600"
+                    >
+                      Bu hafta için işlem başlangıcı tarihi açıklanan yeni halka
+                      arz bulunmuyor.
                     </td>
-                    <td className="px-4 py-3 font-semibold text-slate-900">
-                      <Link
-                        href={item.href}
-                        prefetch={false}
-                        className="hover:text-blue-600"
-                      >
-                        {item.sirketAdi}
-                      </Link>
-                    </td>
-                    <td className="px-4 py-3 font-semibold text-cyan-800">
-                      {item.tarih}
-                    </td>
-                    <td className="px-4 py-3 text-slate-700">{item.fiyat}</td>
-                    <td className="px-4 py-3 text-slate-700">{item.pazar}</td>
                   </tr>
-                ))}
+                )}
               </tbody>
             </table>
           </div>
