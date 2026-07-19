@@ -23,6 +23,17 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1172,
+    title:
+      "20-26 Temmuz 2026 Haftalık Halka Arz Takvimi: METEN, KARCL, MASFN, ALBTN",
+    href: "/haber/20-26-temmuz-2026-haftalik-halka-arz-takvimi",
+    image: "/spk-4-yeni-halka-arz-onayi-albayrak-masfen-metgun-kardemir.webp",
+    alt: "20-26 Temmuz 2026 haftalık halka arz takvimi",
+    publishedAt: "2026-07-20T09:00:00+03:00",
+    category: "halka-arz",
+    ilgiliHisseler: ["METEN", "KARCL", "MASFN", "ALBTN"],
+  },
+  {
     id: 1171,
     title:
       "Albayrak Hazır Beton Halka Arz İzahnamesi Yayınlandı: ALBTN Fiyat, Lot ve Tarih",
