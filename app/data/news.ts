@@ -23,6 +23,35 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1182,
+    title: "Son Halka Arzların Gün Sonu Kapanış Değerlendirmesi (20 Temmuz 2026)",
+    href: "/haber/20-temmuz-2026-son-halka-arzlar-gun-sonu-kapanis-degerlendirmesi",
+    image: "/20-temmuz-2026-son-halka-arzlar-gun-sonu-kapanis-degerlendirmesi.png",
+    alt: "20 Temmuz 2026 son halka arzlar gün sonu kapanış değerlendirmesi",
+    publishedAt: "2026-07-20T18:55:00+03:00",
+    category: "halka-arz",
+    ilgiliHisseler: ["SARAE", "ISVEA", "GOLDA", "SSAAT"],
+  },
+  {
+    id: 1181,
+    title: "20.07.2026 Fonların Günlük Kapanış Değerlendirmesi: TLY, PHE, PBR, DFI",
+    href: "/haber/20-temmuz-2026-fonlar-gunluk-kapanis-degerlendirmesi",
+    image: "/2026-fon-etki-analizi-tly-phe-pbr-dfi.webp",
+    alt: "20 Temmuz 2026 TLY PHE PBR DFI fon günlük kapanış değerlendirmesi",
+    publishedAt: "2026-07-20T18:40:00+03:00",
+    category: "piyasa-gundemi",
+  },
+  {
+    id: 1180,
+    title: "AKFYE %500 Bedelsiz Sermaye Artırımı İçin SPK’ya Başvurdu",
+    href: "/haber/akfye-500-bedelsiz-sermaye-artirimi-spk-basvurusu",
+    image: "/akfye-500-bedelsiz-sermaye-artirimi-spk-basvurusu.webp",
+    alt: "AKFYE yüzde 500 bedelsiz sermaye artırımı SPK başvurusu",
+    publishedAt: "2026-07-20T16:52:35+03:00",
+    category: "sermaye-artirimi",
+    ilgiliHisseler: ["AKFYE"],
+  },
+  {
     id: 1179,
     title: "FORTE MilSOFT 1,175 Milyon Dolarlık Savunma Sanayi Sözleşmesi İmzaladı",
     href: "/haber/forte-milsoft-1175-milyon-dolarlik-savunma-sanayi-sozlesmesi",

@@ -23,10 +23,10 @@ export const metadata: Metadata = {
 };
 
 const rows: FonEtkiRow[] = [
-  { sembol: "IEYHO", fonOrani: 52.75, kapanisMarji: -1.5, etki: -0.79125 },
-  { sembol: "ISKPL", fonOrani: 11.12, kapanisMarji: 9.963, etki: 1.107845579 },
-  { sembol: "LIDER", fonOrani: 0.53, kapanisMarji: 2.477, etki: 0.01312844 },
-  { sembol: "ABG", fonOrani: 29.82, kapanisMarji: 1.75, etki: 0.52185 },
+  { sembol: "IEYHO", fonOrani: 52.75, kapanisMarji: 2.475, etki: 1.305361675 },
+  { sembol: "ISKPL", fonOrani: 11.12, kapanisMarji: -4.643, etki: -0.516330691 },
+  { sembol: "LIDER", fonOrani: 0.53, kapanisMarji: 2.954, etki: 0.015658013 },
+  { sembol: "ABG", fonOrani: 29.82, kapanisMarji: -1.62, etki: -0.483084 },
 ];
 
 const ozet = fonEtkiOzetiGetir("dfi");
@@ -44,18 +44,18 @@ export default function DfiEtkiAnaliziPage() {
       sonGuncelleme={fonEtkiSonGuncelleme.label}
       degisimVerisi={{
         yatirimciSayisi: {
-          dun: 44934,
-          bugun: 45593,
-          degisim: 659,
+          dun: 45593,
+          bugun: 46585,
+          degisim: 992,
         },
         fonToplamDeger: {
-          dun: 26133507267,
-          bugun: 26728833258,
-          degisim: 595325991,
+          dun: 26728833258,
+          bugun: 27166382196,
+          degisim: 437548938,
         },
-        paraGirisiCikisi: 443483111,
+        paraGirisiCikisi: 387256983,
         yorum:
-          "DFI fonunda yatırımcı sayısı 659 kişi artarken fon toplam değeri 595,33 milyon TL yükseldi. 443,48 milyon TL net para girişi pozitif tarafta kalırken portföy etkisi +%0,85 seviyesinde hesaplandı. ISKPL ve ABG katkısı güçlü kalmasına rağmen IEYHO tarafındaki negatif etki toplam getiriyi önceki kapanışa göre sınırlıyor.",
+          "DFI fonunda yatırımcı sayısı 992 kişi artarken fon toplam değeri 437,55 milyon TL yükseldi. 387,26 milyon TL net para girişi pozitif görünümü destekliyor. Portföy etkisinin +%0,32 seviyesinde kalması, IEYHO kaynaklı güçlü katkının ISKPL ve ABG tarafındaki negatif etkiyle kısmen dengelendiğini gösteriyor.",
       }}
     />
   );

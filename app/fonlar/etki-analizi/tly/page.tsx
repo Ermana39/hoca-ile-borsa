@@ -23,21 +23,21 @@ export const metadata: Metadata = {
 };
 
 const rows: FonEtkiRow[] = [
-  { sembol: "DSTKF", fonOrani: 22.85, kapanisMarji: -9.99, etki: -2.283 },
-  { sembol: "OZATD", fonOrani: 14.3, kapanisMarji: 4.66, etki: 0.6664 },
-  { sembol: "PEKGY", fonOrani: 7.73, kapanisMarji: 0.0, etki: 0 },
-  { sembol: "TEHOL", fonOrani: 7.14, kapanisMarji: 0.0, etki: 0 },
-  { sembol: "TERA", fonOrani: 6.63, kapanisMarji: -4.94, etki: -0.3276 },
-  { sembol: "TRHOL", fonOrani: 5.61, kapanisMarji: 2.41, etki: 0.1353 },
-  { sembol: "ANELE", fonOrani: 1.99, kapanisMarji: -5.48, etki: -0.109 },
-  { sembol: "SELEC", fonOrani: 1.04, kapanisMarji: 8.34, etki: 0.0868 },
-  { sembol: "ALKLC", fonOrani: 0.54, kapanisMarji: -1.32, etki: -0.0071 },
-  { sembol: "SVGYO", fonOrani: 0.52, kapanisMarji: -2.15, etki: -0.0112 },
-  { sembol: "HEDEF", fonOrani: 0.27, kapanisMarji: 0.1, etki: 0.0003 },
-  { sembol: "MANAS", fonOrani: 0.14, kapanisMarji: 5.55, etki: 0.0078 },
-  { sembol: "DAPGM", fonOrani: 0.07, kapanisMarji: -0.11, etki: -0.0001 },
-  { sembol: "TPKGY", fonOrani: 11.91, kapanisMarji: 4.47, etki: 0.5324 },
-  { sembol: "HMV", fonOrani: 1.27, kapanisMarji: -7.03, etki: -0.0893 },
+  { sembol: "DSTKF", fonOrani: 22.85, kapanisMarji: -9.97, etki: -2.2782 },
+  { sembol: "OZATD", fonOrani: 14.3, kapanisMarji: 2.97, etki: 0.4245 },
+  { sembol: "PEKGY", fonOrani: 7.73, kapanisMarji: 1.35, etki: 0.1045 },
+  { sembol: "TEHOL", fonOrani: 7.14, kapanisMarji: 0.24, etki: 0.0174 },
+  { sembol: "TERA", fonOrani: 6.63, kapanisMarji: 2.57, etki: 0.1702 },
+  { sembol: "TRHOL", fonOrani: 5.61, kapanisMarji: 4.59, etki: 0.2577 },
+  { sembol: "ANELE", fonOrani: 1.99, kapanisMarji: 0.1, etki: 0.002 },
+  { sembol: "SELEC", fonOrani: 1.04, kapanisMarji: -2.3, etki: -0.0239 },
+  { sembol: "ALKLC", fonOrani: 0.54, kapanisMarji: 1.97, etki: 0.0106 },
+  { sembol: "SVGYO", fonOrani: 0.52, kapanisMarji: -0.16, etki: -0.0008 },
+  { sembol: "HEDEF", fonOrani: 0.27, kapanisMarji: 10.0, etki: 0.027 },
+  { sembol: "MANAS", fonOrani: 0.14, kapanisMarji: -2.39, etki: -0.0034 },
+  { sembol: "DAPGM", fonOrani: 0.07, kapanisMarji: 3.71, etki: 0.0026 },
+  { sembol: "TPKGY", fonOrani: 11.91, kapanisMarji: 4.23, etki: 0.5038 },
+  { sembol: "HMV", fonOrani: 1.27, kapanisMarji: -7.07, etki: -0.0898 },
 ];
 
 const ozet = fonEtkiOzetiGetir("tly");
@@ -55,18 +55,18 @@ export default function TlyEtkiAnaliziPage() {
       sonGuncelleme={fonEtkiSonGuncelleme.label}
       degisimVerisi={{
         yatirimciSayisi: {
-          dun: 97340,
-          bugun: 97684,
-          degisim: 344,
+          dun: 97684,
+          bugun: 98350,
+          degisim: 666,
         },
         fonToplamDeger: {
-          dun: 228648770236,
-          bugun: 231305786578,
-          degisim: 2657016342,
+          dun: 231305786578,
+          bugun: 231068572126,
+          degisim: -237214452,
         },
-        paraGirisiCikisi: 441987578,
+        paraGirisiCikisi: -347973858,
         yorum:
-          "TLY fonunda yatırımcı sayısı 344 kişi artarken fon toplam değeri 2,66 milyar TL yükseldi. 441,99 milyon TL net para girişi pozitif olsa da portföy etkisinin -%1,40 seviyesine gerilemesi, DSTKF ve TERA kaynaklı baskının fiyat tarafında ağır bastığını gösteriyor. TLY için fon büyüklüğü artarken yarınki fiyat etkisi negatif tarafta kalıyor.",
+          "TLY fonunda yatırımcı sayısı 666 kişi artmasına rağmen fon toplam değeri 237,21 milyon TL geriledi ve 347,97 milyon TL net para çıkışı oluştu. Portföy etkisinin -%0,88 seviyesinde kalması, DSTKF tarafındaki sert negatif katkının OZATD, TPKGY ve TRHOL desteğini bastırdığını gösteriyor. TLY için yatırımcı adedi artarken para akışı ve fiyat etkisi zayıf kaldı.",
       }}
     />
   );
