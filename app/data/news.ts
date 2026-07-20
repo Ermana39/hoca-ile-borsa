@@ -23,6 +23,36 @@ export type NewsItem = {
 
 export const newsItems: NewsItem[] = [
   {
+    id: 1175,
+    title: "TRILC Tetadif Aşısının Ruhsatı Yeniden Aktif Hale Getirildi",
+    href: "/haber/trilc-tetadif-asisinin-ruhsati-yeniden-aktif-hale-getirildi",
+    image: "/trilc-tetadif-asisinin-ruhsati-yeniden-aktif-hale-getirildi.webp",
+    alt: "TRILC Tetadif aşısı ruhsatı yeniden aktif hale getirildi",
+    publishedAt: "2026-07-20T09:52:22+03:00",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["TRILC"],
+  },
+  {
+    id: 1174,
+    title: "YEOTK Rixos ile 12,3 MWh Enerji Depolama Sözleşmesi İmzaladı",
+    href: "/haber/yeotk-rixos-the-land-of-legends-123-mwh-enerji-depolama-sozlesmesi",
+    image: "/yeotk-rixos-the-land-of-legends-123-mwh-enerji-depolama-sozlesmesi.webp",
+    alt: "YEOTK Rixos The Land of Legends 12,3 MWh enerji depolama sözleşmesi",
+    publishedAt: "2026-07-20T09:28:42+03:00",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["YEOTK"],
+  },
+  {
+    id: 1173,
+    title: "ALTNY TAAC ile 134,1 Milyon Dolarlık Havacılık Ekipmanı Sözleşmesi İmzaladı",
+    href: "/haber/altny-taac-134-milyon-dolarlik-havacilik-ekipmani-sozlesmesi",
+    image: "/altny-taac-134-milyon-dolarlik-havacilik-ekipmani-sozlesmesi.webp",
+    alt: "ALTNY TAAC 134,1 milyon dolarlık havacılık ekipmanı sözleşmesi",
+    publishedAt: "2026-07-20T08:41:20+03:00",
+    category: "sirket-haberleri",
+    ilgiliHisseler: ["ALTNY"],
+  },
+  {
     id: 1172,
     title:
       "20-26 Temmuz 2026 Haftalık Halka Arz Takvimi: METEN, KARCL, MASFN, ALBTN",
@@ -2016,4 +2046,3 @@ export const newsItems: NewsItem[] = [
     category: "halka-arz",
     ilgiliHisseler: ["BETAE"],
   },
-];
