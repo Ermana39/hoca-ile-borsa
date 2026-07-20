@@ -71,7 +71,7 @@ const halkaArzlar = [
     t1t2Uygun: true,
     araciKurumOzeti: "Tüm banka ve aracı kurumlar",
     araciKurumlar: ["Tüm banka ve aracı kurumlar"],
-    izahnameHref: "/halka-arz/onayli-izahnameler/golda-gida-sanayi-ve-ticaret",
+    izahnameHref: "/halka-arz/onayli-izahnameler/golda-gida-san-ve-tic",
     yorum:
       "GOLDA halka arzı da tamamen eşit dağıtım kapsamında yer alıyor. Bu nedenle yatırımcılar halka arza tüm banka ve aracı kurumlar üzerinden katılabilir. T1/T2 bakiye kullanılabilir ve talep saatleri 10:30 - 13:00 olarak takip edilir.",
   },
@@ -133,7 +133,7 @@ const halkaArzlar = [
       "Ziraat Yatırım",
     ],
     izahnameHref:
-      "/halka-arz/onayli-izahnameler/isvea-seramik-ve-banyo-urunleri",
+      "/halka-arz/onayli-izahnameler/isvea-seramik-ve-banyo-urunleri-sanayi",
     yorum:
       "ISVEA halka arzı bireysele eşit dağıtım tarafında yer aldığı için T1/T2 bakiye kullanımı bulunmuyor. Başvurular konsorsiyum üyeleri üzerinden 09:00 - 17:00 saatleri arasında yapılabilecek.",
   },
@@ -200,7 +200,7 @@ const halkaArzlar = [
       "Ziraat Yatırım",
     ],
     izahnameHref:
-      "/halka-arz/onayli-izahnameler/orzaks-ilac-ve-kimya-sanayi-ticaret",
+      "/halka-arz/onayli-izahnameler/orzaks-ilac-ve-kimya-san-tic",
     yorum:
       "ORZAX halka arzı bireysel, kurumsal, yurt dışı kurumsal ve grup çalışanları tahsisatlarından oluşan karma yapıda talep toplayacak. Bu nedenle T1/T2 bakiye kullanılamaz. Talep işlemleri 09:00 - 17:00 saatleri arasında konsorsiyum üyeleri üzerinden yapılabilecek.",
   },

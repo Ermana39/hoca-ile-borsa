@@ -5,6 +5,7 @@ import {
   getHaberIlgiliHisseler,
 } from "@/lib/haberler";
 import { getEnGuncelGunlukOzet } from "@/lib/gunluk-ozet";
+import { hisseVarMi } from "@/lib/hisseler";
 import HaberKategoriEtiketi from "@/components/HaberKategoriEtiketi";
 import HaberIlgiliHaberler from "@/components/HaberIlgiliHaberler";
 import HisseLink from "@/components/HisseLink";
@@ -115,6 +116,7 @@ function relatedItems(href: string, kategori?: string): RelatedContentItem[] {
   const items = new Map<string, RelatedContentItem>();
 
   for (const kod of hisseler.slice(0, 3)) {
+    if (!hisseVarMi(kod)) continue;
     items.set(`/hisse/${kod.toLowerCase()}`, {
       title: `${kod} hisse detay sayfası`,
       href: `/hisse/${kod.toLowerCase()}`,

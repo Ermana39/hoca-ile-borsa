@@ -66,7 +66,7 @@ const halkaArzlar = [
     uygun: true,
     yorum:
       "GOLDA halka arzı da katılım endeksine uygun olan halka arzlar arasında bulunuyor. Gıda sektöründe faaliyet gösteren şirket için yatırımcıların yine fiyat, finansal yapı, fon kullanım alanları ve izahname detaylarını birlikte incelemesi gerekiyor.",
-    izahnameHref: "/halka-arz/onayli-izahnameler/golda-gida-sanayi-ve-ticaret",
+    izahnameHref: "/halka-arz/onayli-izahnameler/golda-gida-san-ve-tic",
   },
   {
     sirket: "İsvea Seramik ve Banyo Ürünleri Sanayi A.Ş.",
@@ -81,7 +81,7 @@ const halkaArzlar = [
     yorum:
       "ISVEA halka arzı, paylaşılan halka arz bilgilerinde katılım endeksine uygun değil olarak yer alıyor. Katılım hassasiyetiyle hareket eden yatırımcılar için bu bilgi özellikle talep kararı öncesinde dikkate alınması gereken başlıklardan biridir.",
     izahnameHref:
-      "/halka-arz/onayli-izahnameler/isvea-seramik-ve-banyo-urunleri",
+      "/halka-arz/onayli-izahnameler/isvea-seramik-ve-banyo-urunleri-sanayi",
   },
   {
     sirket: "Orzaks İlaç ve Kimya Sanayi Ticaret A.Ş.",
@@ -96,7 +96,7 @@ const halkaArzlar = [
     yorum:
       "ORZAX halka arzı da katılım endeksine uygun değil olarak belirtiliyor. Şirketin halka arz fiyatı, finansal verileri ve fon kullanım planı yatırımcı açısından ayrıca incelenmeli; ancak katılım endeksi tarafında uygunluk bulunmadığı görülüyor.",
     izahnameHref:
-      "/halka-arz/onayli-izahnameler/orzaks-ilac-ve-kimya-sanayi-ticaret",
+      "/halka-arz/onayli-izahnameler/orzaks-ilac-ve-kimya-san-tic",
   },
   {
     sirket: "Ekim Turizm Ticaret ve Sanayi A.Ş.",

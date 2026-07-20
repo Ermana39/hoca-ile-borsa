@@ -156,6 +156,8 @@ const eskiHaberRedirects = [
 // Eski kısa izahname slug'ları → güncel açıklayıcı slug'lar (GSC 404 örnekleri).
 const izahnameSlugRedirects = [
   ["/halka-arz/taslak-izahnameler/quick", "/halka-arz/taslak-izahnameler/quick-sigorta"],
+  ["/halka-arz/taslak-izahnameler/yes", "/halka-arz/taslak-izahnameler/yes-oto-kiralama-ve-turizm-yatirimlari"],
+  ["/halka-arz/taslak-izahnameler/metgun", "/halka-arz/onayli-izahnameler/metgun-enerji-yatirimlari"],
   ["/halka-arz/taslak-izahnameler/biosys", "/halka-arz/taslak-izahnameler/biosys-biyomedikal-muhendislik-san-ve-tic"],
   ["/halka-arz/taslak-izahnameler/uslu", "/halka-arz/taslak-izahnameler/uslu-csm-demir-celik"],
   ["/halka-arz/taslak-izahnameler/vaden", "/halka-arz/taslak-izahnameler/vaden-otomotiv-san-ve-tic"],
@@ -165,6 +167,18 @@ const izahnameSlugRedirects = [
   ["/halka-arz/taslak-izahnameler/multinet", "/halka-arz/taslak-izahnameler/multinet-kurumsal-hizmetler"],
   ["/halka-arz/onayli-izahnameler/ekinciler", "/halka-arz/onayli-izahnameler/ekinciler-demir-celik-ekdmr"],
   ["/halka-arz/onayli-izahnameler/beta", "/halka-arz/onayli-izahnameler/beta-enerji-teknoloji-betae"],
+  ["/halka-arz/onayli-izahnameler/golda-gida-sanayi-ve-ticaret", "/halka-arz/onayli-izahnameler/golda-gida-san-ve-tic"],
+  ["/halka-arz/onayli-izahnameler/isvea-seramik-ve-banyo-urunleri", "/halka-arz/onayli-izahnameler/isvea-seramik-ve-banyo-urunleri-sanayi"],
+  ["/halka-arz/onayli-izahnameler/orzaks-ilac-ve-kimya-sanayi-ticaret", "/halka-arz/onayli-izahnameler/orzaks-ilac-ve-kimya-san-tic"],
+];
+
+const halkaArzHisseRedirects = [
+  ["/hisse/golda", "/halka-arz/onayli-izahnameler/golda-gida-san-ve-tic"],
+  ["/hisse/ekim", "/halka-arz/onayli-izahnameler/ekim-turizm-tic-ve-san"],
+  ["/hisse/isvea", "/halka-arz/onayli-izahnameler/isvea-seramik-ve-banyo-urunleri-sanayi"],
+  ["/hisse/orzax", "/halka-arz/onayli-izahnameler/orzaks-ilac-ve-kimya-san-tic"],
+  ["/hisse/meten", "/halka-arz/onayli-izahnameler/metgun-enerji-yatirimlari"],
+  ["/hisse/yesot", "/halka-arz/taslak-izahnameler/yes-oto-kiralama-ve-turizm-yatirimlari"],
 ];
 
 const hataliHisseRedirects = [
@@ -320,6 +334,11 @@ const nextConfig = {
         permanent: true,
       })),
       ...izahnameSlugRedirects.map(([source, destination]) => ({
+        source,
+        destination,
+        permanent: true,
+      })),
+      ...halkaArzHisseRedirects.map(([source, destination]) => ({
         source,
         destination,
         permanent: true,

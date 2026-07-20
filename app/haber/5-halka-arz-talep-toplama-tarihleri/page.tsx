@@ -41,7 +41,7 @@ const halkaArzTakvimi = [
     dagitim: "Bireysele eşit dağıtım",
     katilim: "Katılım endeksine uygun değil",
     izahnameHref:
-      "/halka-arz/onayli-izahnameler/orzaks-ilac-ve-kimya-sanayi-ticaret",
+      "/halka-arz/onayli-izahnameler/orzaks-ilac-ve-kimya-san-tic",
   },
   {
     sirket: "Soho Giyim ve Enerji A.Ş.",
@@ -72,7 +72,7 @@ const halkaArzTakvimi = [
     dagitim: "Bireysele eşit dağıtım",
     katilim: "Katılım endeksine uygun değil",
     izahnameHref:
-      "/halka-arz/onayli-izahnameler/isvea-seramik-ve-banyo-urunleri",
+      "/halka-arz/onayli-izahnameler/isvea-seramik-ve-banyo-urunleri-sanayi",
   },
   {
     sirket: "Golda Gıda Sanayi ve Ticaret A.Ş.",
@@ -82,7 +82,7 @@ const halkaArzTakvimi = [
     fiyat: "9,20 TL",
     dagitim: "Tamamen eşit dağıtım",
     katilim: "Katılım endeksine uygun",
-    izahnameHref: "/halka-arz/onayli-izahnameler/golda-gida-sanayi-ve-ticaret",
+    izahnameHref: "/halka-arz/onayli-izahnameler/golda-gida-san-ve-tic",
   },
 ];
 
