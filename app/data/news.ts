@@ -2046,3 +2046,4 @@ export const newsItems: NewsItem[] = [
     category: "halka-arz",
     ilgiliHisseler: ["BETAE"],
   },
+];
