@@ -7,6 +7,7 @@ import {
 } from "@/lib/haberler";
 import { HABER_KATEGORILERI } from "@/lib/haber-kategorileri";
 import { getSitemapHisseSembolleri } from "@/lib/hisseler";
+import { getHisseProfilMetadata } from "@/lib/hisse-kunye-kaynaklari";
 import { ozgunTerimler, terimGuncellemeTarihi } from "@/data/sozluk";
 import { getTumGunlukOzetler } from "@/lib/gunluk-ozet";
 import {
@@ -123,9 +124,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     .map((page) => page.route)
     .filter(isIndexableRoute);
 
-  const hisseRoutes = getSitemapHisseSembolleri().map(
-    (sembol) => `/hisse/${sembol.toLowerCase()}`
-  );
+  const hisseEntries = getSitemapHisseSembolleri().map((sembol) => ({
+    route: `/hisse/${sembol.toLowerCase()}`,
+    lastModified: getHisseProfilMetadata(sembol)?.verifiedAt,
+  }));
 
   // Sözlükte kendi sayfası olan terimler (işaretçi kayıtlar hariç).
   const sozlukEntries = ozgunTerimler().map((terim) => ({
@@ -184,7 +186,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/rehberler",
     ...rehberler.map((rehber) => rehber.href),
     ...staticRoutes,
-    ...hisseRoutes,
+    ...hisseEntries.map((entry) => entry.route),
     ...sozlukEntries.map((entry) => entry.route),
     ...haberEntries.map((entry) => entry.route),
     ...halkaArzRoutes,
@@ -213,6 +215,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // üretirdi; içerik tarihlerini açıkça kullan.
   for (const entry of sozlukEntries) {
     routeEntries.set(entry.route, entry.lastModified);
+  }
+
+  // Her şirket künyesi kendi veri dosyasının gerçek sürüm tarihini kullanır.
+  // Böylece ilgisiz bir deploy tüm hisse sayfalarını yapay biçimde yenilemez.
+  for (const entry of hisseEntries) {
+    routeEntries.set(
+      entry.route,
+      entry.lastModified ?? getLastModified(entry.route)
+    );
   }
 
   // Fon etki sayfalarının içerik tarihi günlük analiz verisinden gelir.

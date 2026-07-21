@@ -278,6 +278,10 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
           halkaArzFiyati="45,00 TL"
           dagitimYontemi="Bireysele eşit / yüksek başvuruluya oransal"
           toplamPay="52.000.000 Lot"
+          araciKurum="A1 Capital Yatırım Menkul Değerler A.Ş."
+          tahsisat={tahsisat}
+          katilimNotu={konsorsiyum}
+          bireyselTahsisatLotu={20_800_000}
         />
 
         <div className="space-y-8">

@@ -1,7 +1,8 @@
 import { kapGelismeleri } from "@/data/kap-gelismeleri";
+import { getKategori } from "@/lib/haber-kategorileri";
 import { getAllNews } from "@/lib/haberler";
 
-// Hisse sayfasında "Önemli KAP Gelişmeleri" bölümünün tek tip kaydı.
+// Hisse sayfasında "Şirket Haberleri ve KAP Gelişmeleri" bölümünün tek tip kaydı.
 // İki kaynaktan beslenir: merkezi KAP dosyası + etiketli haberler.
 export type HisseKapKaydi = {
   isoTarih: string;
@@ -48,9 +49,9 @@ export function getKapBySembol(sembol: string): HisseKapKaydi[] {
     .map((h) => ({
       isoTarih: h.publishedAt,
       tarih: isoyuTarihYap(h.publishedAt),
-      tur: "Haber",
+      tur: h.category ? getKategori(h.category)?.kisaBaslik ?? "Haber" : "Haber",
       baslik: h.title,
-      aciklama: undefined,
+      aciklama: h.description,
       link: h.href,
       kaynakTuru: "haber" as const,
     }));

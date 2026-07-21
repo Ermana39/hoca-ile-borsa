@@ -10,8 +10,7 @@ import {
   puanMetni,
   yuzdeMetni,
 } from "@/lib/halka-arz-performans";
-import { getOnayliIzahnameListesi } from "@/lib/halka-arz";
-import { hisseVarMi } from "@/lib/hisseler";
+import { getHisseIcerikHedefi } from "@/lib/hisse-icerik-hedefi";
 
 const canonical = "https://www.hocaileborsa.com/halka-arz/tavan-serisi";
 const title = "2026 Halka Arz Tavan Serisi Takibi | Güncel Halka Arz Performansları";
@@ -40,62 +39,51 @@ export const metadata: Metadata = {
   },
 };
 
-const onayliIzahnameYollari = new Map(
-  getOnayliIzahnameListesi().flatMap((item) =>
-    item.kod
-      ? [
-          [
-            item.kod.toLocaleUpperCase("tr-TR"),
-            `/halka-arz/onayli-izahnameler/${item.klasor}`,
-          ] as const,
-        ]
-      : []
-  )
-);
-
-function hisseDetayHedefi(hisse: string) {
-  const kod = hisse.toLocaleUpperCase("tr-TR");
-  const onayliIzahnameYolu = onayliIzahnameYollari.get(kod);
-
-  if (onayliIzahnameYolu) {
-    return {
-      href: onayliIzahnameYolu,
-      etiket: `${kod} onaylı izahname sayfasını aç`,
-      baslik: "Onaylı izahnameyi aç",
-    };
-  }
-
-  if (hisseVarMi(kod)) {
-    return {
-      href: `/hisse/${kod.toLocaleLowerCase("tr-TR")}`,
-      etiket: `${kod} hisse künye sayfasını aç`,
-      baslik: "Hisse künye sayfasını aç",
-    };
-  }
-
-  return undefined;
-}
+const guncelHalkaArzKapanislari: Record<string, string> = {
+  SARAE: "93.15",
+  SSAAT: "41.94",
+  ISVEA: "33.28",
+  EKIM: "22.52",
+  GOLDA: "17.73",
+  ORZAX: "99.95",
+  SOHOE: "12.25",
+  BETAE: "85.10",
+  EKDMR: "52.25",
+  AAGYO: "14.49",
+  MCARD: "140.30",
+  LXGYO: "13.19",
+  GENKM: "12.21",
+  SVGYO: "12.80",
+  EMPAE: "56.90",
+  ATATR: "15.30",
+  BESTE: "33.00",
+  AKHAN: "45.42",
+  NETCD: "142.00",
+  UCAYM: "28.60",
+  ZGYO: "39.06",
+  FRMPL: "31.28",
+};
 
 const halkaArzVerileri = baseHalkaArzVerileri.map((item) => {
-  const hisseGetirisi = getHalkaArzGetirisi(item) ?? 0;
-  return {
+  const guncelItem = {
     ...item,
+    guncelFiyat: guncelHalkaArzKapanislari[item.hisse] ?? item.guncelFiyat,
+  };
+  const hisseGetirisi = getHalkaArzGetirisi(guncelItem) ?? 0;
+  return {
+    ...guncelItem,
     hisseGetirisi,
     marj: yuzdeMetni(hisseGetirisi, 0),
-    bistKarsilastirmasi: getHalkaArzBistKarsilastirmasi(item),
-    detayHedefi: hisseDetayHedefi(item.hisse),
+    bistKarsilastirmasi: getHalkaArzBistKarsilastirmasi(guncelItem),
+    detayHedefi: getHisseIcerikHedefi(guncelItem.hisse),
   };
 });
 
-function marjRengi(marj: number) {
-  return marj < 0 ? "bg-red-500" : "bg-green-500";
-}
-
-function farkRengi(fark?: number) {
-  if (fark === undefined) return "bg-slate-100 text-slate-500";
-  return fark < 0
-    ? "bg-rose-100 text-rose-800"
-    : "bg-emerald-100 text-emerald-800";
+function performansRengi(deger?: number) {
+  if (deger === undefined) return "bg-slate-100 text-slate-500";
+  if (deger < 0) return "bg-rose-100 text-rose-800";
+  if (deger > 0) return "bg-emerald-100 text-emerald-800";
+  return "bg-slate-100 text-slate-700";
 }
 
 function isoTarihMetni(value: string) {
@@ -441,8 +429,8 @@ export default function HalkaArzTavanSerisiPage() {
             günlük özet arşivinden veya kayıtlı tarihsel kapanıştan alınır.
           </div>
 
-          <div className="overflow-x-auto rounded-2xl border border-slate-300">
-            <table className="min-w-[1080px] w-full table-fixed border-collapse text-center text-xs font-bold">
+          <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white">
+            <table className="min-w-[1080px] w-full table-fixed border-collapse text-center text-xs font-bold text-slate-700">
               <colgroup>
                 <col className="w-[8%]" />
                 <col className="w-[9%]" />
@@ -457,36 +445,36 @@ export default function HalkaArzTavanSerisiPage() {
               </colgroup>
               <thead>
                 <tr>
-                  <th className="border border-slate-800 bg-yellow-300 px-2 py-3 text-red-700">
+                  <th className="border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     HİSSE
                   </th>
-                  <th className="border border-slate-800 bg-yellow-300 px-2 py-3 text-red-700">
+                  <th className="border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     İŞLEM TARİHİ
                   </th>
-                  <th className="border border-slate-800 bg-yellow-300 px-2 py-3 text-red-700">
+                  <th className="border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     KATILIMCI SAYISI
                   </th>
-                  <th className="border border-slate-800 bg-yellow-300 px-2 py-3 text-red-700">
+                  <th className="border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     DAĞITIM ŞEKLİ
                   </th>
-                  <th className="border border-slate-800 bg-yellow-300 px-2 py-3 text-red-700">
+                  <th className="border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     ARZ FİYATI
                   </th>
-                  <th className="border border-slate-800 bg-yellow-300 px-1 py-2.5 leading-tight text-red-700">
+                  <th className="border border-slate-700 bg-slate-900 px-1 py-2.5 leading-tight text-white">
                     <span className="block">GÜN SONU</span>
                     <span className="block">KAPANIŞ</span>
                     <span className="block">FİYATI</span>
                   </th>
-                  <th className="border border-slate-800 bg-yellow-300 px-2 py-3 text-red-700">
+                  <th className="border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     MARJ
                   </th>
-                  <th className="border border-slate-800 bg-sky-700 px-2 py-3 text-white">
+                  <th className="border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     BIST 100 GETİRİSİ
                   </th>
-                  <th className="border border-slate-800 bg-blue-800 px-2 py-3 text-white">
+                  <th className="border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     BIST 100&apos;E GÖRE FARK
                   </th>
-                  <th className="border border-slate-800 bg-slate-700 px-2 py-3 text-white">
+                  <th className="border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     KONSORSİYUM
                   </th>
                 </tr>
@@ -494,8 +482,11 @@ export default function HalkaArzTavanSerisiPage() {
 
               <tbody>
                 {halkaArzVerileri.map((item) => (
-                  <tr key={item.hisse}>
-                    <td className="border border-slate-800 bg-yellow-300 px-2 py-2 text-slate-950">
+                  <tr
+                    key={item.hisse}
+                    className="odd:bg-white even:bg-slate-50/80 hover:bg-blue-50/70"
+                  >
+                    <td className="border border-slate-200 px-2 py-2">
                       {item.detayHedefi ? (
                         <Link
                           href={item.detayHedefi.href}
@@ -523,35 +514,39 @@ export default function HalkaArzTavanSerisiPage() {
                         item.hisse
                       )}
                     </td>
-                    <td className="border border-slate-800 bg-yellow-100 px-2 py-2 text-slate-950">
+                    <td className="border border-slate-200 px-2 py-2">
                       {item.islemTarihi}
                     </td>
-                    <td className="border border-slate-800 bg-lime-100 px-2 py-2 text-slate-950">
+                    <td className="border border-slate-200 px-2 py-2">
                       {item.katilimciSayisi}
                     </td>
-                    <td className="border border-slate-800 bg-red-300 px-2 py-2 text-slate-950">
+                    <td className="border border-slate-200 px-2 py-2">
                       {item.dagitimSekli}
                     </td>
-                    <td className="border border-slate-800 bg-blue-100 px-2 py-2 text-slate-950">
+                    <td className="border border-slate-200 bg-blue-50/70 px-2 py-2 text-blue-950">
                       {item.arzFiyati}
                     </td>
-                    <td className="border border-slate-800 bg-blue-100 px-1 py-2 text-slate-950">
+                    <td className="border border-slate-200 bg-blue-50/70 px-1 py-2 text-blue-950">
                       {item.guncelFiyat}
                     </td>
                     <td
-                      className={`border border-slate-800 px-2 py-2 text-slate-950 ${marjRengi(
+                      className={`border border-slate-200 px-2 py-2 ${performansRengi(
                         item.hisseGetirisi
                       )}`}
                     >
                       {item.marj}
                     </td>
-                    <td className="border border-slate-800 bg-sky-100 px-2 py-2 text-sky-950">
+                    <td
+                      className={`border border-slate-200 px-2 py-2 ${performansRengi(
+                        item.bistKarsilastirmasi?.bist100Getirisi
+                      )}`}
+                    >
                       {item.bistKarsilastirmasi
                         ? yuzdeMetni(item.bistKarsilastirmasi.bist100Getirisi)
                         : "Başlangıç verisi yok"}
                     </td>
                     <td
-                      className={`border border-slate-800 px-2 py-2 ${farkRengi(
+                      className={`border border-slate-200 px-2 py-2 ${performansRengi(
                         item.bistKarsilastirmasi?.getiriFarkiPuan
                       )}`}
                     >
@@ -559,7 +554,7 @@ export default function HalkaArzTavanSerisiPage() {
                         ? puanMetni(item.bistKarsilastirmasi.getiriFarkiPuan)
                         : "Hesaplanamadı"}
                     </td>
-                    <td className="border border-slate-800 bg-emerald-100 px-2 py-2 text-slate-950">
+                    <td className="border border-slate-200 px-2 py-2 text-slate-700">
                       {item.konsorsiyum}
                     </td>
                   </tr>

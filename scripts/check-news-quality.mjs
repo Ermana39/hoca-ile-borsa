@@ -19,11 +19,35 @@ const HISSE_ZORUNLU_KATEGORILER = new Set([
   "sermaye-artirimi",
   "sirket-haberleri",
 ]);
+const KAP_ETKI_OLAY_TURLERI = new Set([
+  "sozlesme",
+  "ihale",
+  "yatirim",
+  "kapasite",
+  "bedelsiz",
+  "donemsel-satis",
+  "diger",
+]);
+const KAP_ETKI_METRIK_TURLERI = new Set([
+  "tutar-orani",
+  "kapasite-artisi",
+  "bedelsiz",
+  "hesaplanamadi",
+]);
+const KAP_PARA_BIRIMLERI = new Set(["TRY", "USD", "EUR", "GBP"]);
 
 const slugArgIndex = process.argv.findIndex((arg) => arg === "--slug");
 const hedefSlug =
   process.argv.find((arg) => arg.startsWith("--slug="))?.slice(7) ||
   (slugArgIndex >= 0 ? process.argv[slugArgIndex + 1] : undefined);
+const yayinaAl = process.argv.includes("--publish");
+
+if (yayinaAl && !hedefSlug) {
+  console.error(
+    "Yayınlanacak haber belirtilmeli: npm run news:publish -- --slug=<haber-slug>"
+  );
+  process.exit(1);
+}
 
 const hatalar = [];
 const uyarilar = [];
@@ -34,6 +58,13 @@ function hata(dosya, mesaj) {
 
 function uyari(dosya, mesaj) {
   uyarilar.push(`${dosya}: ${mesaj}`);
+}
+
+function yayindaSayiliyorMu(veri) {
+  return (
+    veri?.durum === "yayinda" ||
+    (yayinaAl && veri?.slug === hedefSlug)
+  );
 }
 
 function bosOlmayanMetin(deger) {
@@ -79,6 +110,201 @@ function bolumIcerigiVar(bolum) {
         (kart) => bosOlmayanMetin(kart?.baslik) && bosOlmayanMetin(kart?.aciklama)
       ))
   );
+}
+
+function pozitifSayi(deger) {
+  return typeof deger === "number" && Number.isFinite(deger) && deger > 0;
+}
+
+function gecerliGun(deger) {
+  return (
+    typeof deger === "string" &&
+    /^\d{4}-\d{2}-\d{2}$/.test(deger) &&
+    !Number.isNaN(new Date(`${deger}T00:00:00Z`).getTime())
+  );
+}
+
+function doluMetinDizisi(deger, enAz) {
+  return (
+    Array.isArray(deger) &&
+    deger.length >= enAz &&
+    deger.every((item) => bosOlmayanMetin(item))
+  );
+}
+
+function kapEtkiAnaliziKontrolEt(dosya, analiz) {
+  if (!analiz || typeof analiz !== "object" || Array.isArray(analiz)) {
+    hata(dosya, "KAP kaynaklı şirket haberinde kapEtkiAnalizi nesnesi zorunludur.");
+    return;
+  }
+
+  if (!KAP_ETKI_OLAY_TURLERI.has(analiz.olayTuru)) {
+    hata(dosya, `Geçersiz KAP olay türü: ${analiz.olayTuru ?? "boş"}`);
+  }
+  if (!bosOlmayanMetin(analiz.ozet) || analiz.ozet.trim().length < 80) {
+    hata(dosya, "KAP etki analizi özeti en az 80 karakter ve açıklayıcı olmalı.");
+  }
+  if (!Array.isArray(analiz.metrikler) || analiz.metrikler.length === 0) {
+    hata(dosya, "KAP etki analizinde en az bir hesap veya hesaplanamama gerekçesi bulunmalı.");
+  } else {
+    let hesaplananMetrikSayisi = 0;
+
+    for (const [index, metrik] of analiz.metrikler.entries()) {
+      const alan = `kapEtkiAnalizi.metrikler[${index}]`;
+      if (!metrik || typeof metrik !== "object" || Array.isArray(metrik)) {
+        hata(dosya, `${alan} bir nesne olmalı.`);
+        continue;
+      }
+      if (!KAP_ETKI_METRIK_TURLERI.has(metrik.tur)) {
+        hata(dosya, `${alan} için geçersiz metrik türü: ${metrik.tur ?? "boş"}`);
+        continue;
+      }
+      if (!bosOlmayanMetin(metrik.baslik)) {
+        hata(dosya, `${alan}.baslik boş bırakılamaz.`);
+      }
+
+      if (metrik.tur === "hesaplanamadi") {
+        if (!bosOlmayanMetin(metrik.neden) || metrik.neden.trim().length < 40) {
+          hata(dosya, `${alan}.neden en az 40 karakterle açıklanmalı.`);
+        }
+        if (!doluMetinDizisi(metrik.gerekliVeriler, 1)) {
+          hata(dosya, `${alan}.gerekliVeriler en az bir dolu madde içermeli.`);
+        }
+        continue;
+      }
+
+      hesaplananMetrikSayisi += 1;
+
+      if (!bosOlmayanMetin(metrik.aciklama) || metrik.aciklama.trim().length < 50) {
+        hata(dosya, `${alan}.aciklama en az 50 karakterle yorumlanmalı.`);
+      }
+
+      if (metrik.tur === "kapasite-artisi") {
+        if (!pozitifSayi(metrik.mevcutKapasite)) {
+          hata(dosya, `${alan}.mevcutKapasite pozitif sayı olmalı.`);
+        }
+        if (!pozitifSayi(metrik.ekKapasite)) {
+          hata(dosya, `${alan}.ekKapasite pozitif sayı olmalı.`);
+        }
+        if (!bosOlmayanMetin(metrik.birim)) {
+          hata(dosya, `${alan}.birim boş bırakılamaz.`);
+        }
+        continue;
+      }
+
+      if (metrik.tur === "bedelsiz") {
+        if (!pozitifSayi(metrik.eskiSermaye)) {
+          hata(dosya, `${alan}.eskiSermaye pozitif sayı olmalı.`);
+        }
+        if (!pozitifSayi(metrik.yeniSermaye)) {
+          hata(dosya, `${alan}.yeniSermaye pozitif sayı olmalı.`);
+        }
+        if (
+          pozitifSayi(metrik.eskiSermaye) &&
+          pozitifSayi(metrik.yeniSermaye) &&
+          metrik.yeniSermaye <= metrik.eskiSermaye
+        ) {
+          hata(dosya, `${alan}.yeniSermaye eski sermayeden büyük olmalı.`);
+        }
+        if (!KAP_PARA_BIRIMLERI.has(metrik.paraBirimi)) {
+          hata(dosya, `${alan}.paraBirimi TRY, USD, EUR veya GBP olmalı.`);
+        }
+        if (metrik.referansFiyat !== undefined && !pozitifSayi(metrik.referansFiyat)) {
+          hata(dosya, `${alan}.referansFiyat verildiyse pozitif sayı olmalı.`);
+        }
+        continue;
+      }
+
+      if (!bosOlmayanMetin(metrik.olayEtiketi)) {
+        hata(dosya, `${alan}.olayEtiketi boş bırakılamaz.`);
+      }
+      if (!pozitifSayi(metrik.olayTutari)) {
+        hata(dosya, `${alan}.olayTutari pozitif sayı olmalı.`);
+      }
+      if (!KAP_PARA_BIRIMLERI.has(metrik.olayParaBirimi)) {
+        hata(dosya, `${alan}.olayParaBirimi geçerli değil.`);
+      }
+      if (!bosOlmayanMetin(metrik.referansEtiketi)) {
+        hata(dosya, `${alan}.referansEtiketi boş bırakılamaz.`);
+      }
+      if (!pozitifSayi(metrik.referansTutari)) {
+        hata(dosya, `${alan}.referansTutari pozitif sayı olmalı.`);
+      }
+      if (!KAP_PARA_BIRIMLERI.has(metrik.referansParaBirimi)) {
+        hata(dosya, `${alan}.referansParaBirimi geçerli değil.`);
+      }
+      if (!bosOlmayanMetin(metrik.referansDonemi)) {
+        hata(dosya, `${alan}.referansDonemi boş bırakılamaz.`);
+      }
+
+      const farkliParaBirimi =
+        metrik.olayParaBirimi !== metrik.referansParaBirimi;
+      let kur = 1;
+      if (farkliParaBirimi) {
+        if (!metrik.kurDonusumu || typeof metrik.kurDonusumu !== "object") {
+          hata(dosya, `${alan} farklı para birimleri için kurDonusumu içermeli.`);
+          kur = Number.NaN;
+        } else {
+          if (!pozitifSayi(metrik.kurDonusumu.birimBasina)) {
+            hata(dosya, `${alan}.kurDonusumu.birimBasina pozitif sayı olmalı.`);
+          } else {
+            kur = metrik.kurDonusumu.birimBasina;
+          }
+          if (!gecerliGun(metrik.kurDonusumu.tarih)) {
+            hata(dosya, `${alan}.kurDonusumu.tarih YYYY-AA-GG biçiminde olmalı.`);
+          }
+          if (!bosOlmayanMetin(metrik.kurDonusumu.tur)) {
+            hata(dosya, `${alan}.kurDonusumu.tur kullanılan kuru açıklamalı.`);
+          }
+        }
+      } else if (metrik.kurDonusumu) {
+        uyari(dosya, `${alan} aynı para biriminde olduğu için kurDonusumu gereksiz.`);
+      }
+
+      if (
+        pozitifSayi(metrik.olayTutari) &&
+        pozitifSayi(metrik.referansTutari) &&
+        Number.isFinite(kur)
+      ) {
+        const hesaplananOran =
+          ((metrik.olayTutari * kur) / metrik.referansTutari) * 100;
+        if (metrik.kaynakOran !== undefined) {
+          if (!pozitifSayi(metrik.kaynakOran)) {
+            hata(dosya, `${alan}.kaynakOran verildiyse pozitif sayı olmalı.`);
+          } else {
+            const tolerans = Math.max(0.05, metrik.kaynakOran * 0.02);
+            if (Math.abs(hesaplananOran - metrik.kaynakOran) > tolerans) {
+              hata(
+                dosya,
+                `${alan} hesaplanan oranı (%${hesaplananOran.toFixed(2)}) kaynak oranıyla (%${metrik.kaynakOran}) uyuşmuyor.`
+              );
+            }
+          }
+        }
+      }
+    }
+
+    if (hesaplananMetrikSayisi === 0) {
+      uyari(
+        dosya,
+        "KAP etki analizindeki tüm metrikler hesaplanamamış; gerekli veriler geldiğinde kayıt güncellenmeli."
+      );
+    }
+  }
+
+  if (!doluMetinDizisi(analiz.riskler, 2)) {
+    hata(dosya, "KAP etki analizinde en az iki somut risk bulunmalı.");
+  }
+  if (!doluMetinDizisi(analiz.takipEdilecekler, 2)) {
+    hata(dosya, "KAP etki analizinde en az iki takip maddesi bulunmalı.");
+  }
+  if (
+    analiz.metodolojiNotu !== undefined &&
+    (!bosOlmayanMetin(analiz.metodolojiNotu) ||
+      analiz.metodolojiNotu.trim().length < 40)
+  ) {
+    hata(dosya, "kapEtkiAnalizi.metodolojiNotu verildiyse en az 40 karakter olmalı.");
+  }
 }
 
 function yazarSluglari() {
@@ -150,7 +376,9 @@ for (const { dosya, goreliDosya, veri } of kayitlar) {
   }
 
   const dosyaSlug = dosya.replace(/\.json$/, "");
-  const katiKontrol = veri.durum === "yayinda" || veri.slug === hedefSlug;
+  const hedefKayit = veri.slug === hedefSlug;
+  const yayinAdayi = yayinaAl && hedefKayit;
+  const katiKontrol = veri.durum === "yayinda" || hedefKayit;
 
   if (veri.surum !== 1) hata(goreliDosya, "surum alanı 1 olmalı.");
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(veri.slug || "")) {
@@ -161,6 +389,12 @@ for (const { dosya, goreliDosya, veri } of kayitlar) {
   }
   if (veri.durum !== "taslak" && veri.durum !== "yayinda") {
     hata(goreliDosya, "durum yalnızca taslak veya yayinda olabilir.");
+  }
+  if (hedefKayit && veri.durum === "taslak" && !yayinaAl) {
+    hata(
+      goreliDosya,
+      `Haber hâlâ taslak. Yayınlamak için: npm run news:publish -- --slug=${veri.slug}`
+    );
   }
 
   const href = `/haber/${veri.slug}`;
@@ -198,7 +432,7 @@ for (const { dosya, goreliDosya, veri } of kayitlar) {
     if (new Date(veri.guncellemeTarihi) < new Date(veri.yayinTarihi)) {
       hata(goreliDosya, "guncellemeTarihi, yayinTarihi değerinden önce olamaz.");
     }
-    if (veri.durum === "yayinda" && new Date(veri.yayinTarihi).getTime() > Date.now() + 15 * 60 * 1000) {
+    if ((veri.durum === "yayinda" || yayinAdayi) && new Date(veri.yayinTarihi).getTime() > Date.now() + 15 * 60 * 1000) {
       hata(goreliDosya, "Yayındaki haberin tarihi gelecekte olamaz.");
     }
   }
@@ -331,20 +565,40 @@ for (const { dosya, goreliDosya, veri } of kayitlar) {
         continue;
       }
       if (kaynak.tur === "KAP") {
-        if (!url.hostname.endsWith("kap.org.tr") || !/\/Bildirim\/\d+/i.test(url.pathname)) {
-          hata(goreliDosya, "KAP kaynağı doğrudan /Bildirim/<numara> bağlantısı olmalı.");
+        const kapHostu =
+          url.hostname === "kap.org.tr" ||
+          url.hostname.endsWith(".kap.org.tr");
+        const kapBildirimi = /\/Bildirim\/\d+/i.test(url.pathname);
+        const kapFinansalBilgisi = /\/sirket-finansal-bilgileri\//i.test(
+          url.pathname
+        );
+        if (!kapHostu || (!kapBildirimi && !kapFinansalBilgisi)) {
+          hata(
+            goreliDosya,
+            "KAP kaynağı doğrudan bildirim veya şirket finansal bilgileri bağlantısı olmalı."
+          );
         }
       }
       if (kaynak.yayinTarihi && !gecerliIso(kaynak.yayinTarihi)) {
         hata(goreliDosya, "Kaynak tarihi saat dilimi içeren tam ISO tarih olmalı.");
       }
-      const onceki = kaynakUrlSahibi.get(kaynak.url);
-      if (onceki && onceki !== goreliDosya) {
-        hata(goreliDosya, `Kaynak URL'si başka haberde kullanılmış: ${onceki}`);
-      } else {
-        kaynakUrlSahibi.set(kaynak.url, goreliDosya);
+      if (kaynak.tur === "KAP" && /\/Bildirim\/\d+/i.test(url.pathname)) {
+        const onceki = kaynakUrlSahibi.get(kaynak.url);
+        if (onceki && onceki !== goreliDosya) {
+          hata(goreliDosya, `KAP bildirimi başka haberde kullanılmış: ${onceki}`);
+        } else {
+          kaynakUrlSahibi.set(kaynak.url, goreliDosya);
+        }
       }
     }
+  }
+
+  const kapKaynakliSirketHaberi =
+    HISSE_ZORUNLU_KATEGORILER.has(veri.kategori) &&
+    Array.isArray(veri.kaynaklar) &&
+    veri.kaynaklar.some((kaynak) => kaynak?.tur === "KAP");
+  if (kapKaynakliSirketHaberi || veri.kapEtkiAnalizi !== undefined) {
+    kapEtkiAnaliziKontrolEt(goreliDosya, veri.kapEtkiAnalizi);
   }
 
   const tumMetin = metinleriTopla(veri).join(" ");
@@ -361,6 +615,7 @@ for (const { dosya, goreliDosya, veri } of kayitlar) {
   const icerikKarakteri = metinleriTopla({
     kaynakOzeti: veri.kaynakOzeti,
     editorDegerlendirmesi: veri.editorDegerlendirmesi,
+    kapEtkiAnalizi: veri.kapEtkiAnalizi,
     sorular: veri.sorular,
   }).join(" ").length;
   if (icerikKarakteri < 1200) {
@@ -403,10 +658,12 @@ for (const haber of eskiHaberler) {
   const slug = haber.href.startsWith("/haber/") ? haber.href.slice(7) : "";
   const statikSayfa = slug && fs.existsSync(path.join(HABER_SAYFA_DIZINI, slug, "page.tsx"));
   const yeniSayfa = kayitlar.some(
-    ({ veri }) => veri?.durum === "yayinda" && `/haber/${veri.slug}` === haber.href
+    ({ veri }) =>
+      yayindaSayiliyorMu(veri) &&
+      `/haber/${veri.slug}` === haber.href
   );
   if (slug && !statikSayfa && !yeniSayfa) {
-    uyari("app/data/news.ts", `Listede var ancak sayfası bulunamadı: ${haber.href}`);
+    hata("app/data/news.ts", `Listede var ancak sayfası bulunamadı: ${haber.href}`);
   }
 }
 
@@ -428,15 +685,21 @@ if (fs.existsSync(HABER_SAYFA_DIZINI)) {
     const page = path.join(HABER_SAYFA_DIZINI, klasor.name, "page.tsx");
     if (!fs.existsSync(page)) continue;
     const href = `/haber/${klasor.name}`;
-    const yeniKayitVar = kayitlar.some(({ veri }) => veri?.durum === "yayinda" && veri.slug === klasor.name);
+    const yeniKayitVar = kayitlar.some(
+      ({ veri }) =>
+        yayindaSayiliyorMu(veri) &&
+        veri.slug === klasor.name
+    );
     if (!eskiHrefler.has(href) && !yeniKayitVar) {
-      uyari("app/haber", `Sayfası var ancak haber listesinde kayıtlı değil: ${href}`);
+      hata("app/haber", `Sayfası var ancak haber listesinde kayıtlı değil: ${href}`);
     }
   }
 }
 
 console.log("\nHaber yayın öncesi kalite kontrolü");
-console.log(`Yeni sistem: ${kayitlar.filter(({ veri }) => veri?.durum === "yayinda").length} yayında, ${kayitlar.filter(({ veri }) => veri?.durum === "taslak").length} taslak`);
+console.log(
+  `Yeni sistem: ${kayitlar.filter(({ veri }) => yayindaSayiliyorMu(veri)).length} yayında, ${kayitlar.filter(({ veri }) => veri?.durum === "taslak" && !yayindaSayiliyorMu(veri)).length} taslak`
+);
 console.log(`Eski sistem denetimi: ${eskiHaberler.length} kayıt`);
 
 for (const mesaj of uyarilar) console.warn(`UYARI  ${mesaj}`);
@@ -445,6 +708,21 @@ for (const mesaj of hatalar) console.error(`HATA   ${mesaj}`);
 if (hatalar.length > 0) {
   console.error(`\nKontrol başarısız: ${hatalar.length} hata, ${uyarilar.length} uyarı.`);
   process.exit(1);
+}
+
+if (yayinaAl) {
+  const hedefKayit = kayitlar.find(({ veri }) => veri?.slug === hedefSlug);
+  if (hedefKayit.veri.durum === "yayinda") {
+    console.log(`\nHaber zaten yayında: /haber/${hedefSlug}`);
+  } else {
+    hedefKayit.veri.durum = "yayinda";
+    fs.writeFileSync(
+      path.join(HABER_DIZINI, hedefKayit.dosya),
+      `${JSON.stringify(hedefKayit.veri, null, 2)}\n`,
+      "utf8"
+    );
+    console.log(`\nHaber yayına alındı: /haber/${hedefSlug}`);
+  }
 }
 
 console.log(`\nKontrol başarılı: hata yok, ${uyarilar.length} uyarı.`);

@@ -280,6 +280,11 @@ export type OnayliListeOgesi = {
   kod?: string;
 };
 
+export type OnayliHalkaArzKaydi = {
+  slug: string;
+  veri: HalkaArzVeri;
+};
+
 // JSON sistemine taşınmadan önce elle hazırlanan onaylı izahname sayfaları.
 // Kodla hedef sayfa eşleştiren tüm bölümler bu listeyi de otomatik kapsar.
 const statikOnayliIzahnameler: OnayliListeOgesi[] = [
@@ -341,4 +346,24 @@ export function getOnayliIzahnameListesi(): OnayliListeOgesi[] {
     ).values()
   )
     .sort((a, b) => a.label.localeCompare(b.label, "tr"));
+}
+
+/** JSON sistemindeki onaylı izahnameyi BIST koduyla bulur. */
+export function getOnayliHalkaArzKaydiByKod(
+  kod?: string | null
+): OnayliHalkaArzKaydi | null {
+  if (!kod) return null;
+  const arananKod = kod.trim().toLocaleUpperCase("tr-TR");
+
+  for (const slug of tumJsonSluglar()) {
+    const veri = halkaArzGetir(slug);
+    if (!veri || veri.seo?.contentStatus !== "onayli") continue;
+
+    const veriKodu = (veri.bistKodu || veri.ozet.bistKodu || "")
+      .trim()
+      .toLocaleUpperCase("tr-TR");
+    if (veriKodu === arananKod) return { slug, veri };
+  }
+
+  return null;
 }

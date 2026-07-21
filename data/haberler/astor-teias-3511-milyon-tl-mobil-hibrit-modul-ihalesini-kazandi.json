@@ -7,7 +7,7 @@
   "kategori": "sirket-haberleri",
   "etiket": "İhale Sonucu",
   "yayinTarihi": "2026-07-20T18:15:13+03:00",
-  "guncellemeTarihi": "2026-07-20T18:15:13+03:00",
+  "guncellemeTarihi": "2026-07-21T14:42:11+03:00",
   "yazarSlug": "erman-hoca",
   "gorsel": {
     "src": "/astor-teias-3511-milyon-tl-mobil-hibrit-modul-ihalesini-kazandi.webp",
@@ -172,6 +172,48 @@
       }
     ]
   },
+  "kapEtkiAnalizi": {
+    "olayTuru": "ihale",
+    "ozet": "İhale bedeli hem KAP formundaki 2026/03 brüt satış hasılatıyla hem de 2025 tam yıl hasılatıyla karşılaştırıldı. Oranlar işin şirket ölçeğindeki büyüklüğünü gösterir; gelir ve kâr katkısını göstermez.",
+    "metrikler": [
+      {
+        "tur": "tutar-orani",
+        "baslik": "İhale bedeli / 2026 ilk çeyrek hasılatı",
+        "olayEtiketi": "İhale bedeli",
+        "olayTutari": 351100000,
+        "olayParaBirimi": "TRY",
+        "referansEtiketi": "Brüt satış hasılatı",
+        "referansTutari": 9286457701,
+        "referansParaBirimi": "TRY",
+        "referansDonemi": "2026/03",
+        "kaynakOran": 3.78,
+        "aciklama": "Hesap, KAP ihale formunda şirket tarafından açıklanan %3,78 oranıyla uyumludur. 2026/03 tutarı üç aylık kümülatif hasılattır; yıllık ciro değildir."
+      },
+      {
+        "tur": "tutar-orani",
+        "baslik": "İhale bedeli / 2025 yıllık hasılatı",
+        "olayEtiketi": "İhale bedeli",
+        "olayTutari": 351100000,
+        "olayParaBirimi": "TRY",
+        "referansEtiketi": "Yıllık hasılat",
+        "referansTutari": 35290767390,
+        "referansParaBirimi": "TRY",
+        "referansDonemi": "2025/12",
+        "aciklama": "Tam yıl hasılatıyla yapılan bu ikinci hesap, ihale büyüklüğünü yıllık faaliyet ölçeğinde okumaya yardımcı olur. İhale bedeli doğrudan gelir veya kâr değildir."
+      }
+    ],
+    "riskler": [
+      "İhale şirket uhdesinde kalmış olsa da sözleşme henüz imzalanmadığı için nihai şartlar değişebilir.",
+      "Teslimat takvimi, ödeme planı, üretim maliyeti ve beklenen kâr marjı açıklanmadı.",
+      "Hammadde ve üretim maliyetlerindeki değişim, işin gerçekleşecek kârlılığını sınırlayabilir."
+    ],
+    "takipEdilecekler": [
+      "Nihai sözleşmenin imzalanması, bedeli ve teslimat takvimi.",
+      "İşin sipariş bakiyesine, hasılata ve brüt kâr marjına yansıyacağı dönemler.",
+      "Ödeme ve tahsilat koşullarına ilişkin sonraki KAP açıklamaları."
+    ],
+    "metodolojiNotu": "İhale tutarı KAP'taki 2026/03 ve 2025/12 hasılat verilerine bölünmüştür. Hesap yalnızca ölçek karşılaştırmasıdır; sözleşmenin gelir veya net kâr katkısı tahmini değildir."
+  },
   "sorular": [
     {
       "soru": "ASTOR hangi ihaleyi kazandı?",
@@ -192,6 +234,11 @@
       "url": "https://www.kap.org.tr/Bildirim/1635127",
       "tur": "KAP",
       "yayinTarihi": "2026-07-20T18:15:13+03:00"
+    },
+    {
+      "ad": "ASTOR KAP özet finansal bilgileri",
+      "url": "https://www.kap.org.tr/tr/sirket-finansal-bilgileri/8acae2c562329bd10164405fe6c17996",
+      "tur": "KAP"
     }
   ],
   "yasalUyari": "Bu haber ve editoryal değerlendirme bilgilendirme amacıyla hazırlanmıştır; yatırım tavsiyesi değildir. Yatırım kararları yalnızca tek bir haber veya değerlendirmeye dayandırılmamalıdır."

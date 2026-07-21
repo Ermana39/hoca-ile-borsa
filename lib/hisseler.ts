@@ -9,6 +9,8 @@ export type Istirak = { ad: string; oran: number; sermaye?: string };
 export type KurumsalBilgiler = {
   merkez?: string;
   web?: string;
+  yatirimciIliskileri?: string;
+  kapSirketProfili?: string;
   eposta?: string;
   telefon?: string;
   fax?: string;
@@ -45,6 +47,14 @@ export type Hisse = {
     halkaArzTarihi?: string;
   };
   temettuSermayeGecmisi: TemettuSermayeKaydi[];
+  veriDogrulama?: {
+    sonDogrulamaTarihi?: string;
+  };
+  degisiklikGecmisi?: {
+    tarih: string;
+    baslik: string;
+    aciklama?: string;
+  }[];
   yasalUyari: string;
 };
 

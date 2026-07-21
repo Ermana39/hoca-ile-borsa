@@ -4,6 +4,7 @@ import { getYazar, varsayilanYazar } from "@/app/data/yazarlar";
 import AuthorBox from "@/components/AuthorBox";
 import HaberAltKisim from "@/components/HaberAltKisim";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
+import KapEtkiAnalizi from "@/components/KapEtkiAnalizi";
 import { formatHaberTarihi } from "@/lib/haber-tarih";
 import { getKategori } from "@/lib/haber-kategorileri";
 import {
@@ -306,6 +307,10 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
               {kayit.kaynakOzeti.bolumler.map((bolum, index) => (
                 <HaberIcerikBolumu key={`kaynak-${index}-${bolum.baslik}`} bolum={bolum} />
               ))}
+
+              {kayit.kapEtkiAnalizi && (
+                <KapEtkiAnalizi analiz={kayit.kapEtkiAnalizi} />
+              )}
 
               <section className="rounded-2xl border border-blue-300 bg-blue-50 p-5 md:p-6">
                 <p className="text-xs font-bold uppercase tracking-wider text-blue-700">

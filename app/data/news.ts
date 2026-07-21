@@ -3,6 +3,7 @@ import type { HaberKategori } from "@/lib/haber-kategorileri";
 export type NewsItem = {
   id: number;
   title: string;
+  description?: string;
   href: string;
   image: string;
   alt: string;
@@ -16,8 +17,8 @@ export type NewsItem = {
   yazarSlug?: string;
   // Opsiyonel: Bu haber bir veya birden çok hisseyle ilgiliyse kodlarını yaz.
   // Örn: ilgiliHisseler: ["ASELS", "THYAO"]
-  // Etiketlenen her hissenin /hisse/<kod> sayfasında "Önemli KAP Gelişmeleri"
-  // bölümünde bu haber otomatik görünür.
+  // Etiketlenen her hissenin /hisse/<kod> sayfasında "Şirket Haberleri ve KAP
+  // Gelişmeleri" bölümünde bu haber otomatik görünür.
   ilgiliHisseler?: string[];
 };
 
@@ -66,16 +67,6 @@ export const newsItems: NewsItem[] = [
     ilgiliHisseler: ["VBTYZ"],
   },
   {
-    id: 1184,
-    title: "DAPGM 2026 İkinci Dönemde 948,1 Milyon TL Satış Açıkladı",
-    href: "/haber/dapgm-2026-ikinci-donem-satis-rakamlari-948-milyon-tl",
-    image: "/dapgm-2026-ikinci-donem-satis-rakamlari-948-milyon-tl.webp",
-    alt: "DAPGM 2026 ikinci dönem 948,1 milyon TL satış rakamları",
-    publishedAt: "2026-07-20T18:13:30+03:00",
-    category: "sirket-haberleri",
-    ilgiliHisseler: ["DAPGM"],
-  },
-  {
     id: 1183,
     title: "LXGYO Zeytinburnu’nda 3,9 Milyar TL Değerli Proje İçin Sözleşme İmzaladı",
     href: "/haber/lxgyo-zeytinburnu-39-milyar-tl-degerli-proje-icin-hasilat-paylasimi-sozlesmesi",
@@ -113,16 +104,6 @@ export const newsItems: NewsItem[] = [
     publishedAt: "2026-07-20T16:52:35+03:00",
     category: "sermaye-artirimi",
     ilgiliHisseler: ["AKFYE"],
-  },
-  {
-    id: 1179,
-    title: "FORTE MilSOFT 1,175 Milyon Dolarlık Savunma Sanayi Sözleşmesi İmzaladı",
-    href: "/haber/forte-milsoft-1175-milyon-dolarlik-savunma-sanayi-sozlesmesi",
-    image: "/forte-milsoft-1175-milyon-dolarlik-savunma-sanayi-sozlesmesi.webp",
-    alt: "FORTE MilSOFT 1,175 milyon dolarlık savunma sanayi sözleşmesi",
-    publishedAt: "2026-07-20T15:57:31+03:00",
-    category: "sirket-haberleri",
-    ilgiliHisseler: ["FORTE"],
   },
   {
     id: 1178,

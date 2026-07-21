@@ -56,6 +56,75 @@ export type HaberKaynagi = {
   yayinTarihi?: string;
 };
 
+export type KapParaBirimi = "TRY" | "USD" | "EUR" | "GBP";
+
+export type KapTutarOraniMetrigi = {
+  tur: "tutar-orani";
+  baslik: string;
+  olayEtiketi: string;
+  olayTutari: number;
+  olayParaBirimi: KapParaBirimi;
+  referansEtiketi: string;
+  referansTutari: number;
+  referansParaBirimi: KapParaBirimi;
+  referansDonemi: string;
+  kaynakOran?: number;
+  kurDonusumu?: {
+    birimBasina: number;
+    tarih: string;
+    tur: string;
+  };
+  aciklama: string;
+};
+
+export type KapKapasiteArtisiMetrigi = {
+  tur: "kapasite-artisi";
+  baslik: string;
+  mevcutKapasite: number;
+  ekKapasite: number;
+  birim: string;
+  aciklama: string;
+};
+
+export type KapBedelsizMetrigi = {
+  tur: "bedelsiz";
+  baslik: string;
+  eskiSermaye: number;
+  yeniSermaye: number;
+  referansFiyat?: number;
+  paraBirimi: KapParaBirimi;
+  aciklama: string;
+};
+
+export type KapHesaplanamadiMetrigi = {
+  tur: "hesaplanamadi";
+  baslik: string;
+  neden: string;
+  gerekliVeriler: string[];
+};
+
+export type KapEtkiMetrigi =
+  | KapTutarOraniMetrigi
+  | KapKapasiteArtisiMetrigi
+  | KapBedelsizMetrigi
+  | KapHesaplanamadiMetrigi;
+
+export type KapEtkiAnalizi = {
+  olayTuru:
+    | "sozlesme"
+    | "ihale"
+    | "yatirim"
+    | "kapasite"
+    | "bedelsiz"
+    | "donemsel-satis"
+    | "diger";
+  ozet: string;
+  metrikler: KapEtkiMetrigi[];
+  riskler: string[];
+  takipEdilecekler: string[];
+  metodolojiNotu?: string;
+};
+
 export type HaberKaydi = {
   surum: 1;
   durum: HaberDurumu;
@@ -84,6 +153,7 @@ export type HaberKaydi = {
     giris: string;
     bolumler: HaberBolumu[];
   };
+  kapEtkiAnalizi?: KapEtkiAnalizi;
   sorular?: Array<{
     soru: string;
     cevap: string;
@@ -175,6 +245,7 @@ export function haberKaydiniListeOgesine(kayit: HaberKaydi) {
   return {
     id: haberKaydiId(kayit.slug),
     title: kayit.baslik,
+    description: kayit.aciklama,
     href: `/haber/${kayit.slug}`,
     image: kayit.gorsel.src,
     alt: kayit.gorsel.alt,

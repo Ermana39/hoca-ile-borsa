@@ -80,6 +80,13 @@ const analizKutulari = [
       "Şirketlerin finansal oranlarını inceleyerek değerleme, kârlılık, borçluluk ve verimlilik açısından karşılaştırma yapabilirsiniz.",
   },
   {
+    title: "Hisse Karşılaştırma",
+    href: "/borsa/hisse-karsilastirma",
+    icon: "oran-analizi" as CategoryIconName,
+    description:
+      "İki veya üç BIST şirketini değerleme, kârlılık, borçluluk, büyüme ve temettü verileriyle yan yana karşılaştırın.",
+  },
+  {
     title: "Tedbirli Hisseler",
     href: "/borsa/tedbirli-hisseler",
     icon: "tedbirli-hisseler" as CategoryIconName,

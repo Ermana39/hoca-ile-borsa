@@ -5,10 +5,10 @@ import {
   getHaberIlgiliHisseler,
 } from "@/lib/haberler";
 import { getEnGuncelGunlukOzet } from "@/lib/gunluk-ozet";
-import { hisseVarMi } from "@/lib/hisseler";
+import { getHisseIcerikHedefi } from "@/lib/hisse-icerik-hedefi";
+import Link from "next/link";
 import HaberKategoriEtiketi from "@/components/HaberKategoriEtiketi";
 import HaberIlgiliHaberler from "@/components/HaberIlgiliHaberler";
-import HisseLink from "@/components/HisseLink";
 import ContinueReading from "@/components/ContinueReading";
 import RelatedContent, { type RelatedContentItem } from "@/components/RelatedContent";
 
@@ -20,12 +20,6 @@ const HALKA_ARZ_LINKLERI: {
     keywords: ["soho-giyim", "sohoe"],
     items: [
       {
-        title: "SOHOE onaylı izahname ve halka arz detayları",
-        href: "/halka-arz/onayli-izahnameler/soho-giyim-ve-enerji",
-        description: "SOHOE fiyat, lot, fon kullanımı, katılım endeksi ve finansal görünüm.",
-        type: "Onaylı izahname",
-      },
-      {
         title: "SOHOE halka arz dağıtım sonuçları",
         href: "/haber/soho-giyim-halka-arzinda-dagitimlar-sonuclandi",
         description: "SOHOE dağıtım sonucu, eşit dağıtım yapısı ve lot bilgileri.",
@@ -36,12 +30,6 @@ const HALKA_ARZ_LINKLERI: {
   {
     keywords: ["beta-enerji", "betae"],
     items: [
-      {
-        title: "Beta Enerji onaylı izahname ve halka arz detayları",
-        href: "/halka-arz/onayli-izahnameler/beta-enerji-teknoloji-betae",
-        description: "BETAE halka arz fiyatı, tahsisat, fon kullanımı ve güncel tarihler.",
-        type: "Onaylı izahname",
-      },
       {
         title: "Beta Enerji halka arzı kaç lot verir?",
         href: "/haber/beta-enerji-halka-arzi-kac-lot-verir",
@@ -116,12 +104,19 @@ function relatedItems(href: string, kategori?: string): RelatedContentItem[] {
   const items = new Map<string, RelatedContentItem>();
 
   for (const kod of hisseler.slice(0, 3)) {
-    if (!hisseVarMi(kod)) continue;
-    items.set(`/hisse/${kod.toLowerCase()}`, {
-      title: `${kod} hisse detay sayfası`,
-      href: `/hisse/${kod.toLowerCase()}`,
-      description: `${kod} şirket sayfası, temel bilgiler ve ilgili gelişmeler.`,
-      type: "İlgili hisse",
+    const hedef = getHisseIcerikHedefi(kod);
+    if (!hedef) continue;
+
+    const onayliIzahname = hedef.tur === "onayli-izahname";
+    items.set(hedef.href, {
+      title: onayliIzahname
+        ? `${kod} onaylı izahname ve halka arz detayları`
+        : `${kod} hisse künye sayfası`,
+      href: hedef.href,
+      description: onayliIzahname
+        ? `${kod} halka arz fiyatı, pay yapısı, fon kullanımı ve finansal görünüm.`
+        : `${kod} şirket bilgileri, faaliyet alanı ve ilgili gelişmeler.`,
+      type: onayliIzahname ? "Onaylı izahname" : "İlgili hisse",
     });
   }
 
@@ -209,14 +204,34 @@ export default function HaberAltBilgi({ href }: { href: string }) {
       {ilgiliHisseler.length > 0 && (
         <div className="flex flex-wrap items-center gap-2 text-sm text-slate-500">
           <span className="font-medium">İlgili Hisseler:</span>
-          {ilgiliHisseler.map((kod) => (
-            <span
-              key={kod}
-              className="inline-flex items-center rounded-md bg-slate-100 px-2 py-0.5 text-xs font-semibold ring-1 ring-inset ring-slate-200"
-            >
-              <HisseLink sembol={kod} />
-            </span>
-          ))}
+          {ilgiliHisseler.map((kod) => {
+            const hedef = getHisseIcerikHedefi(kod);
+
+            if (!hedef) {
+              return (
+                <span
+                  key={kod}
+                  className="inline-flex items-center rounded-md bg-slate-100 px-2.5 py-1 text-xs font-semibold text-slate-600 ring-1 ring-inset ring-slate-200"
+                >
+                  {kod}
+                </span>
+              );
+            }
+
+            return (
+              <Link
+                key={kod}
+                href={hedef.href}
+                prefetch={false}
+                aria-label={hedef.etiket}
+                title={hedef.baslik}
+                className="inline-flex items-center gap-1.5 rounded-md border border-blue-200 bg-blue-50 px-2.5 py-1 text-xs font-bold text-blue-700 shadow-sm transition hover:border-blue-300 hover:bg-blue-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
+              >
+                <span>{kod}</span>
+                <span aria-hidden="true">→</span>
+              </Link>
+            );
+          })}
         </div>
       )}
 

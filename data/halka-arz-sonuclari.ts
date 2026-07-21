@@ -3,6 +3,24 @@
 // /halka-arz/tavan-serisi bu tek kaynaktan beslenir.
 // Yeni halka arz sonuçlandığında kaydı listenin BAŞINA ekleyin.
 
+export type HalkaArzDagitimSonucu = {
+  toplamDagitilanLot?: string;
+  bireyselDagitilanLot?: string;
+  bireyselYatirimciSayisi?: string;
+  kisiBasiLot?: string;
+  kisiBasiTutar?: string;
+  aciklama?: string;
+  kaynakHref?: string;
+};
+
+export type HalkaArzTavanSerisi = {
+  gunSayisi: number;
+  durum: "devam-ediyor" | "tamamlandi" | "olusmadi";
+  veriTarihi: string; // YYYY-AA-GG
+  aciklama?: string;
+  kaynakHref?: string;
+};
+
 export type HalkaArzSonucu = {
   hisse: string;
   islemTarihi: string; // GG.AA.YYYY
@@ -11,9 +29,8 @@ export type HalkaArzSonucu = {
   arzFiyati: string;
   guncelFiyat: string;
   konsorsiyum: string;
-  performans30Gun?: string;
-  performans90Gun?: string;
-  performans180Gun?: string;
+  dagitimSonucu?: HalkaArzDagitimSonucu;
+  tavanSerisi?: HalkaArzTavanSerisi;
 };
 
 // Tüm guncelFiyat değerlerinin ait olduğu ortak seans tarihi. Günlük kapanış
@@ -30,6 +47,20 @@ export const halkaArzSonuclari: HalkaArzSonucu[] = [
     arzFiyati: "70.00",
     guncelFiyat: "84.70",
     konsorsiyum: "TERA",
+    dagitimSonucu: {
+      toplamDagitilanLot: "89.000.000 Lot",
+      kisiBasiLot: "Azami 156 Lot",
+      kisiBasiTutar: "10.920 TL",
+      kaynakHref: "/haber/sarae-halka-arz-sonuclari-aciklandi",
+    },
+    tavanSerisi: {
+      gunSayisi: 2,
+      durum: "devam-ediyor",
+      veriTarihi: "2026-07-20",
+      aciklama: "İlk iki işlem günü tavan kapanışla tamamlandı.",
+      kaynakHref:
+        "/haber/20-temmuz-2026-son-halka-arzlar-gun-sonu-kapanis-degerlendirmesi",
+    },
   },
   {
     hisse: "SSAAT",
@@ -39,6 +70,14 @@ export const halkaArzSonuclari: HalkaArzSonucu[] = [
     arzFiyati: "56.00",
     guncelFiyat: "44.00",
     konsorsiyum: "GARANTİ-HALK",
+    tavanSerisi: {
+      gunSayisi: 0,
+      durum: "olusmadi",
+      veriTarihi: "2026-07-20",
+      aciklama: "İlk işlem günü taban kapanış nedeniyle başlangıç tavan serisi oluşmadı.",
+      kaynakHref:
+        "/haber/16-temmuz-2026-son-halka-arzlar-gun-sonu-degerlendirmesi",
+    },
   },
   {
     hisse: "ISVEA",
@@ -48,6 +87,21 @@ export const halkaArzSonuclari: HalkaArzSonucu[] = [
     arzFiyati: "20.90",
     guncelFiyat: "30.26",
     konsorsiyum: "AHLATÇI-HALK",
+    dagitimSonucu: {
+      toplamDagitilanLot: "67.000.000 Lot",
+      bireyselDagitilanLot: "40.200.000 Lot",
+      kisiBasiLot: "Azami 48 Lot",
+      kisiBasiTutar: "1.003,20 TL",
+      kaynakHref: "/haber/isvea-halka-arzinda-dagitim-sonuclari-aciklandi",
+    },
+    tavanSerisi: {
+      gunSayisi: 3,
+      durum: "tamamlandi",
+      veriTarihi: "2026-07-16",
+      aciklama: "İlk üç işlem günündeki tavan serisi dördüncü seansta sona erdi.",
+      kaynakHref:
+        "/haber/16-temmuz-2026-son-halka-arzlar-gun-sonu-degerlendirmesi",
+    },
   },
   {
     hisse: "EKIM",
@@ -57,6 +111,23 @@ export const halkaArzSonuclari: HalkaArzSonucu[] = [
     arzFiyati: "30.26",
     guncelFiyat: "22.70",
     konsorsiyum: "AK-VAKIF",
+    dagitimSonucu: {
+      toplamDagitilanLot: "162.000.000 Lot",
+      bireyselDagitilanLot: "85.677.956 Lot",
+      bireyselYatirimciSayisi: "706.837",
+      aciklama:
+        "Bireysel talep planlanan tahsisatın altında kaldığı için talepler büyük ölçüde karşılandı.",
+      kaynakHref:
+        "/haber/ekim-turizm-halka-arzinda-dagitim-sonuclari-aciklandi",
+    },
+    tavanSerisi: {
+      gunSayisi: 0,
+      durum: "olusmadi",
+      veriTarihi: "2026-07-09",
+      aciklama: "İlk işlem günü taban kapanış nedeniyle başlangıç tavan serisi oluşmadı.",
+      kaynakHref:
+        "/haber/9-temmuz-2026-son-halka-arzlar-gun-sonu-kapanisi",
+    },
   },
   {
     hisse: "GOLDA",
@@ -66,6 +137,14 @@ export const halkaArzSonuclari: HalkaArzSonucu[] = [
     arzFiyati: "9.20",
     guncelFiyat: "19.69",
     konsorsiyum: "GEDİK",
+    tavanSerisi: {
+      gunSayisi: 8,
+      durum: "devam-ediyor",
+      veriTarihi: "2026-07-20",
+      aciklama: "İlk sekiz işlem günü tavan kapanışla tamamlandı.",
+      kaynakHref:
+        "/haber/20-temmuz-2026-son-halka-arzlar-gun-sonu-kapanis-degerlendirmesi",
+    },
   },
   {
     hisse: "ORZAX",
@@ -75,6 +154,14 @@ export const halkaArzSonuclari: HalkaArzSonucu[] = [
     arzFiyati: "69.00",
     guncelFiyat: "101.00",
     konsorsiyum: "İNFO",
+    tavanSerisi: {
+      gunSayisi: 1,
+      durum: "tamamlandi",
+      veriTarihi: "2026-07-08",
+      aciklama: "İlk gün tavan kapanışın ardından ikinci seansta seri sona erdi.",
+      kaynakHref:
+        "/haber/halka-arzlarda-gun-kapanisi-golda-soho-orzax-beta",
+    },
   },
   {
     hisse: "SOHOE",
@@ -84,6 +171,14 @@ export const halkaArzSonuclari: HalkaArzSonucu[] = [
     arzFiyati: "15.00",
     guncelFiyat: "12.45",
     konsorsiyum: "İNTEGRAL",
+    tavanSerisi: {
+      gunSayisi: 0,
+      durum: "olusmadi",
+      veriTarihi: "2026-07-08",
+      aciklama: "İlk işlem döneminde ardışık tavan kapanış serisi oluşmadı.",
+      kaynakHref:
+        "/haber/halka-arzlarda-gun-kapanisi-golda-soho-orzax-beta",
+    },
   },
   {
     hisse: "BETAE",
@@ -93,6 +188,22 @@ export const halkaArzSonuclari: HalkaArzSonucu[] = [
     arzFiyati: "40.00",
     guncelFiyat: "89.00",
     konsorsiyum: "TSKB & ZİRAAT & YATIRIM FİNANSMAN",
+    dagitimSonucu: {
+      toplamDagitilanLot: "60.750.000 Lot",
+      bireyselDagitilanLot: "30.375.000 Lot",
+      bireyselYatirimciSayisi: "1.103.933",
+      kisiBasiLot: "Azami 28 Lot",
+      kisiBasiTutar: "1.120 TL",
+      kaynakHref: "/haber/beta-enerji-halka-arz-dagitim-sonuclari",
+    },
+    tavanSerisi: {
+      gunSayisi: 10,
+      durum: "tamamlandi",
+      veriTarihi: "2026-07-16",
+      aciklama: "İlk 10 işlem günündeki tavan serisi sonraki seansta sona erdi.",
+      kaynakHref:
+        "/haber/16-temmuz-2026-son-halka-arzlar-gun-sonu-degerlendirmesi",
+    },
   },
   {
     hisse: "EKDMR",
@@ -102,6 +213,10 @@ export const halkaArzSonuclari: HalkaArzSonucu[] = [
     arzFiyati: "45.00",
     guncelFiyat: "54.00",
     konsorsiyum: "A1 Capital",
+    dagitimSonucu: {
+      toplamDagitilanLot: "52.000.000 Lot",
+      bireyselDagitilanLot: "20.800.000 Lot",
+    },
   },
   {
     hisse: "AAGYO",
@@ -242,6 +357,6 @@ export const halkaArzSonuclari: HalkaArzSonucu[] = [
 
 export function getHalkaArzSonucu(hisse?: string | null) {
   if (!hisse) return undefined;
-  const kod = hisse.trim().toLocaleUpperCase("tr-TR");
+  const kod = hisse.trim().toUpperCase();
   return halkaArzSonuclari.find((item) => item.hisse === kod);
 }

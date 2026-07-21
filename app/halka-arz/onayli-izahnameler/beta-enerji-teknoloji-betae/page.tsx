@@ -308,6 +308,13 @@ export default function BetaEnerjiVeTeknolojiASPage() {
           halkaArzFiyati="40,00 TL"
           dagitimYontemi="Bireysele eşit / yüksek başvuruluya oransal"
           toplamPay="60.750.000 Lot"
+          araciKurum={konsorsiyumLiderleri.join(", ")}
+          tahsisat={tahsisat}
+          katilimKurumlari={[
+            ...konsorsiyumLiderleri,
+            ...konsorsiyumUyeleri,
+          ]}
+          bireyselTahsisatLotu={30_375_000}
         />
 
         <section className="mb-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">

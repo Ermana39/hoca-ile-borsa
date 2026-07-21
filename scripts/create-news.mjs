@@ -68,6 +68,20 @@ const kayit = {
       "Bu bölüm, resmî kaynaktaki bilgilerden hareketle hazırlanmış editoryal değerlendirmedir.",
     bolumler: [],
   },
+  kapEtkiAnalizi: {
+    olayTuru: "diger",
+    ozet: "",
+    metrikler: [
+      {
+        tur: "hesaplanamadi",
+        baslik: "Hesaplanacak etki metriği",
+        neden: "",
+        gerekliVeriler: [],
+      },
+    ],
+    riskler: [],
+    takipEdilecekler: [],
+  },
   sorular: [],
   kaynaklar: [],
   yasalUyari:
@@ -79,4 +93,4 @@ fs.writeFileSync(dosya, `${JSON.stringify(kayit, null, 2)}\n`, "utf8");
 
 console.log(`Taslak oluşturuldu: data/haberler/${slug}.json`);
 console.log(`Eklenecek görsel: public/${slug}.webp`);
-console.log(`Kontrol: npm run news:check -- --slug=${slug}`);
+console.log(`Kontrol ederek yayınla: npm run news:publish -- --slug=${slug}`);

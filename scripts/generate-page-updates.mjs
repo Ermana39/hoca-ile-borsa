@@ -32,7 +32,10 @@ const takipEdilecekVeriUzantilari = new Set([
 
 const excelUzantilari = new Set([".xlsx", ".xls", ".xlsm"]);
 
-const yokSayilacakDosyalar = new Set(["page-updates.generated.json"]);
+const yokSayilacakDosyalar = new Set([
+  "page-updates.generated.json",
+  "hisse-profile-metadata.generated.json",
+]);
 
 function toPosixPath(value) {
   if (typeof value !== "string") return "";

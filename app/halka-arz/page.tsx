@@ -39,7 +39,7 @@ export default function HalkaArzPage() {
             prefetch={false}
             className="rounded-xl border border-purple-200 bg-purple-100 px-4 py-4 text-center text-base font-semibold text-zinc-900 transition hover:bg-purple-200"
           >
-            Talep Hesapla
+            Lot Senaryosu Hesapla
           </Link>
 
         </div>
@@ -153,7 +153,7 @@ export default function HalkaArzPage() {
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1 text-blue-500">•</span>
-                <span><strong>Talep Hesaplama:</strong> Talep hesaplama aracımızla kaç lot talep edeceğinizi ve tahmini maliyet tutarınızı önceden hesaplayın.</span>
+                <span><strong>Lot Senaryosu:</strong> Geçmiş katılım verilerine göre düşük, normal ve yüksek senaryolarda tahmini lotu ve gerekli parayı hesaplayın.</span>
               </li>
               <li className="flex items-start gap-2">
                 <span className="mt-1 text-blue-500">•</span>

@@ -371,6 +371,8 @@ export default function SaRaEnerjiPage() {
           halkaArzFiyati={veri.ozet.fiyatAralik}
           dagitimYontemi={veri.ozet.dagitimYontemi}
           toplamPay={veri.ozet.pay || veri.toplamPay}
+          araciKurum={veri.ozet.araciKurum}
+          tahsisat={veri.tahsisat}
         />
 
         <section className="grid gap-8 xl:grid-cols-3">

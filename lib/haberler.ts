@@ -14,6 +14,7 @@ import {
 export type NewsItem = {
   id: number;
   title: string;
+  description?: string;
   href: string;
   image?: string;
   alt?: string;
@@ -48,6 +49,10 @@ export function normalizeNewsItems(data: unknown): NewsItem[] {
       return {
         id,
         title: item.title || "",
+        description:
+          typeof item.description === "string" && item.description.trim() !== ""
+            ? item.description
+            : undefined,
         href,
         image:
           item.image && item.image.trim() !== ""

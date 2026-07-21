@@ -103,6 +103,15 @@ export default function OranAnaliziPage() {
           <div className="mt-4 text-sm font-semibold text-zinc-700">
             Son güncelleme: {guncellemeTarihi}
           </div>
+
+          <Link
+            href="/borsa/hisse-karsilastirma"
+            prefetch={false}
+            className="mt-5 inline-flex items-center gap-2 rounded-xl bg-blue-600 px-4 py-2.5 text-sm font-bold text-white transition hover:bg-blue-700"
+          >
+            2-3 hisseyi yan yana karşılaştır
+            <span aria-hidden="true">→</span>
+          </Link>
         </section>
 
         <section className="py-6">
