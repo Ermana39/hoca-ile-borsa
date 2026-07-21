@@ -13,10 +13,34 @@ const profilePathsPath = path.join(
   "data",
   "kap-profil-yollari.generated.json"
 );
+const webSupplementPath = path.join(
+  rootDir,
+  "data",
+  "kap-kunye-web.generated.json"
+);
+const boardSupplementPath = path.join(
+  rootDir,
+  "data",
+  "kap-kunye-board.generated.json"
+);
+const KAP_PROFILE_BASE =
+  "https://www.kap.org.tr/tr/sirket-bilgileri/genel";
 const verifiedAt = new Date().toISOString().slice(0, 10);
+
+const DATA_NOTES = {
+  address:
+    "Merkez adresi son KAP doğrulamasında yayımlanmış bir değer olarak okunamadı.",
+  web: "İnternet adresi son KAP doğrulamasında yayımlanmış bir değer olarak okunamadı.",
+  board:
+    "Yönetim kurulu tablosu son KAP doğrulamasında okunamadı; güncel liste KAP profilinden kontrol edilmelidir.",
+};
 
 function readJson(filePath) {
   return JSON.parse(fs.readFileSync(filePath, "utf8"));
+}
+
+function readOptionalJson(filePath, fallback) {
+  return fs.existsSync(filePath) ? readJson(filePath) : fallback;
 }
 
 function hasText(value) {
@@ -75,6 +99,56 @@ function ensureBistTum(indices) {
   return result;
 }
 
+function sanitizeProductionFacilities(values) {
+  const invalidLabels = new Set([
+    "ELEKTRONIK POSTA ADRESI",
+    "INTERNET ADRESI",
+    "YATIRIMCI ILISKILERI BOLUMU VEYA BAGLANTI KURULACAK SIRKET YETKILILERI",
+    "BILGI MEVCUT DEGIL",
+  ]);
+
+  return (Array.isArray(values) ? values : [])
+    .filter(hasText)
+    .filter((value) => !invalidLabels.has(normalize(value)))
+    .filter((value) => !/^[*._–—-]+$/.test(value.trim()));
+}
+
+function sanitizeFax(value) {
+  if (!hasText(value)) return undefined;
+  const trimmed = value.trim();
+  return /^(?:\+|0)|[()\s.-]/.test(trimmed) ? trimmed : undefined;
+}
+
+function normalizeOfficialWeb(value) {
+  if (!hasText(value)) return undefined;
+
+  const matches = value.match(
+    /(?:https?:\/\/|www\.)[^\s,;&]+|(?:[a-z0-9-]+\.)+[a-z]{2,}(?:\/[^\s,;&]*)?/gi
+  );
+
+  for (const match of matches ?? []) {
+    const cleaned = match.replace(/[\])},.;]+$/g, "");
+    const candidate = /^https?:\/\//i.test(cleaned)
+      ? cleaned
+      : `https://${cleaned}`;
+
+    try {
+      const url = new URL(candidate);
+      if (
+        ["http:", "https:"].includes(url.protocol) &&
+        url.hostname.includes(".") &&
+        /^[a-z0-9.-]+$/i.test(url.hostname)
+      ) {
+        return url.toString();
+      }
+    } catch {
+      // KAP alanında açıklama metniyle karışan parçaları atla.
+    }
+  }
+
+  return undefined;
+}
+
 function writeJsonIfChanged(filePath, value) {
   const next = `${JSON.stringify(value, null, 2)}\n`;
   const current = fs.readFileSync(filePath, "utf8");
@@ -87,6 +161,13 @@ const snapshot = readJson(snapshotPath);
 const profilePathDocument = readJson(profilePathsPath);
 const profilePaths =
   profilePathDocument.profiles ?? profilePathDocument.sirketler ?? {};
+const webSupplement = readOptionalJson(webSupplementPath, {});
+const boardSupplement = readOptionalJson(boardSupplementPath, {});
+const officialMissingWeb = new Set(webSupplement.officialMissing?.web ?? []);
+const officialMissingAddress = new Set(
+  webSupplement.officialMissing?.address ?? []
+);
+const officialMissingBoard = new Set(boardSupplement.officialMissing ?? []);
 const filesByCode = new Map(
   fs
     .readdirSync(profilesDir)
@@ -135,9 +216,11 @@ for (const company of snapshot.companies ?? []) {
       ? market.islemGorduguPazar
       : ["Borsa İstanbul Pay Piyasası"];
   const kapSummaryUrl = profilePaths[code];
-  const kapProfileUrl = kapSummaryUrl
-    ? kapSummaryUrl.replace("/ozet/", "/genel/")
-    : company.kapSirketProfili;
+  const kapProfileUrl = company.mkkMemberOid
+    ? `${KAP_PROFILE_BASE}/${company.mkkMemberOid}`
+    : kapSummaryUrl
+      ? kapSummaryUrl.replace("/ozet/", "/genel/")
+      : company.kapSirketProfili;
 
   while (about.length < 2) {
     about.push(
@@ -157,6 +240,32 @@ for (const company of snapshot.companies ?? []) {
   const shareholders = Array.isArray(profile.ortaklikYapisi?.ortaklar)
     ? profile.ortaklikYapisi.ortaklar
     : [];
+  const productionFacilities = sanitizeProductionFacilities(
+    corporate.uretimTesisleri
+  );
+  const officialWeb =
+    normalizeOfficialWeb(corporate.web) ||
+    normalizeOfficialWeb(webSupplement.websites?.[code]);
+  const officialAddress =
+    corporate.merkez || webSupplement.addresses?.[code];
+  const board = hasList(corporate.yonetimKurulu)
+    ? corporate.yonetimKurulu
+    : boardSupplement.boards?.[code];
+  const dataNotes = Array.isArray(corporate.veriNotlari)
+    ? corporate.veriNotlari
+        .filter(hasText)
+        .filter((note) => !Object.values(DATA_NOTES).includes(note))
+    : [];
+
+  if (!officialAddress && officialMissingAddress.has(code)) {
+    dataNotes.push(DATA_NOTES.address);
+  }
+  if (!officialWeb && officialMissingWeb.has(code)) {
+    dataNotes.push(DATA_NOTES.web);
+  }
+  if (!hasList(board) && officialMissingBoard.has(code)) {
+    dataNotes.push(DATA_NOTES.board);
+  }
 
   const normalized = {
     ...profile,
@@ -174,11 +283,18 @@ for (const company of snapshot.companies ?? []) {
     },
     kurumsalBilgiler: cleanObject({
       ...corporate,
+      merkez: officialAddress,
+      uretimTesisleri:
+        productionFacilities.length > 0 ? productionFacilities : undefined,
+      web: officialWeb,
+      fax: sanitizeFax(corporate.fax),
       bagimsizDenetimKurulusu:
         corporate.bagimsizDenetimKurulusu ?? corporate.bagimsizDenetim,
       faaliyetAlani: activity,
       sektorler: sectors,
       islemGorduguPazar: markets,
+      yonetimKurulu: hasList(board) ? board : undefined,
+      veriNotlari: hasList(dataNotes) ? [...new Set(dataNotes)] : undefined,
       kapSirketProfili: kapProfileUrl,
     }),
     borsaBilgileri: cleanObject({
@@ -212,7 +328,7 @@ for (const company of snapshot.companies ?? []) {
         tarih: verifiedAt,
         baslik: "BIST TÜM künye standardı doğrulandı",
         aciklama:
-          "Hisse kodu, KAP bağlantısı, faaliyet, sektör, pazar ve endeks alanları BIST TÜM listesiyle eşleştirildi.",
+          "Hisse kodu, KAP bağlantısı, kurumsal bilgiler, faaliyet, sektör, pazar ve endeks alanları BIST TÜM listesiyle eşleştirildi.",
       },
       ...history,
     ].slice(0, 6),

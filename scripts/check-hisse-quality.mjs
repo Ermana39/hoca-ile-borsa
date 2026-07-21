@@ -68,6 +68,11 @@ for (const company of companies) {
   const corporate = profile.kurumsalBilgiler ?? {};
   const market = profile.borsaBilgileri ?? {};
   const shareholders = profile.ortaklikYapisi?.ortaklar;
+  const dataNotes = normalize(
+    Array.isArray(corporate.veriNotlari)
+      ? corporate.veriNotlari.join(" ")
+      : ""
+  );
 
   if (String(profile.kod ?? "").toUpperCase() !== code) {
     errors.push(`${code}: JSON içindeki hisse kodu dosya adıyla eşleşmiyor.`);
@@ -78,13 +83,36 @@ for (const company of companies) {
   }
   if (!hasText(corporate.faaliyetAlani)) errors.push(`${code}: faaliyet alanı eksik.`);
   if (!hasList(corporate.sektorler)) errors.push(`${code}: sektör bilgisi eksik.`);
+  if (
+    (corporate.sektorler ?? []).some((item) =>
+      [
+        "BORSA ISTANBUL SIRKETLERI",
+        "SERMAYE PIYASASI ARACININ ISLEM GORDUGU PAZAR",
+      ].includes(normalize(item))
+    )
+  ) {
+    errors.push(`${code}: sektör alanında yer tutucu değer kullanılmış.`);
+  }
   if (!hasList(corporate.islemGorduguPazar)) errors.push(`${code}: pazar bilgisi eksik.`);
+  if (
+    (corporate.islemGorduguPazar ?? []).some(
+      (item) => normalize(item) === "BORSA ISTANBUL PAY PIYASASI"
+    )
+  ) {
+    errors.push(`${code}: pazar alanında yer tutucu değer kullanılmış.`);
+  }
   if (!hasList(market.endeksler)) {
     errors.push(`${code}: endeks bilgisi eksik.`);
   } else if (!market.endeksler.some((item) => normalize(item) === "BIST TUM")) {
     errors.push(`${code}: resmi BIST TÜM üyeliği künye verisinde bulunmuyor.`);
   }
   if (!hasText(corporate.kapSirketProfili)) errors.push(`${code}: KAP profil bağlantısı eksik.`);
+  if (
+    hasText(company.mkkMemberOid) &&
+    !String(corporate.kapSirketProfili ?? "").includes(company.mkkMemberOid)
+  ) {
+    errors.push(`${code}: KAP profil bağlantısı yanlış şirket kimliğine gidiyor.`);
+  }
   if (!hasText(profile.veriDogrulama?.sonDogrulamaTarihi)) {
     errors.push(`${code}: son doğrulama tarihi eksik.`);
   }
@@ -96,9 +124,15 @@ for (const company of companies) {
     errors.push(`${code}: ortaklık verisi veya resmi kaynak açıklaması eksik.`);
   }
 
-  if (!hasText(corporate.merkez)) warnings.push(`${code}: merkez adresi KAP'ta bulunamadı.`);
-  if (!hasText(corporate.web)) warnings.push(`${code}: resmi internet adresi KAP'ta bulunamadı.`);
-  if (!hasList(corporate.yonetimKurulu)) warnings.push(`${code}: yönetim kurulu KAP'ta bulunamadı.`);
+  if (!hasText(corporate.merkez) && !dataNotes.includes("MERKEZ ADRESI")) {
+    warnings.push(`${code}: merkez adresi KAP'ta bulunamadı.`);
+  }
+  if (!hasText(corporate.web) && !dataNotes.includes("INTERNET ADRESI")) {
+    warnings.push(`${code}: resmi internet adresi KAP'ta bulunamadı.`);
+  }
+  if (!hasList(corporate.yonetimKurulu) && !dataNotes.includes("YONETIM KURULU")) {
+    warnings.push(`${code}: yönetim kurulu KAP'ta bulunamadı.`);
+  }
 
   const canonicalCode = String(company.anaHisseKodu ?? code).toUpperCase();
   if (canonicalCode !== code && market.anaHisseKodu !== canonicalCode) {

@@ -7,14 +7,50 @@
     "PAMEL payları ANA PAZAR kapsamında işlem görür. Şirket bilgileri 2026-07-21 tarihinde resmi KAP genel profili üzerinden doğrulanmıştır."
   ],
   "ortaklikYapisi": {
-    "ortaklar": [],
-    "not": "KAP profilinde sayısal doğrudan ortaklık oranı bulunmadığı için tahmini oran gösterilmemiştir."
+    "ortaklar": [
+      {
+        "ad": "Pamukova Elektrik Üretim Anonim Şirketi",
+        "oran": 76.07,
+        "sermaye": "23.652.981"
+      },
+      {
+        "ad": "Diğer",
+        "oran": 23.93,
+        "sermaye": "7.442.350"
+      }
+    ],
+    "not": "KAP'ta açıklanan doğrudan ortaklık oranları 2026-07-21 tarihinde kontrol edilmiştir."
   },
-  "istirakler": [],
+  "istirakler": [
+    {
+      "ad": "Sun Yenilenebilir Enerji Üretim A.Ş.",
+      "oran": 100,
+      "sermaye": "80000000,00",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Yenilenebilir Enerji Tesisi İnşa Etmek ve İşletmek",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Şişli Enerji A.Ş.",
+      "oran": 100,
+      "sermaye": "44100000,00",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Elektrik Enerjisi Üretimi (GES)",
+      "iliski": "Dolaylı Bağlı Ortaklık"
+    },
+    {
+      "ad": "Ortaköy Enerji A.Ş.",
+      "oran": 100,
+      "sermaye": "43400000,00",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Elektrik Enerjisi Üretimi (GES)",
+      "iliski": "Dolaylı Bağlı Ortaklık"
+    }
+  ],
   "kurumsalBilgiler": {
     "merkez": "Maslak Mah. Saat Sk. Spine Tower Sitesi No:5/93 Sarıyer / İstanbul",
-    "web": "https://www.pamel.com.tr",
-    "kapSirketProfili": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/2262-pamel-yenilenebilir-elektrik-uretim-a-s",
+    "web": "https://www.pamel.com.tr/",
+    "kapSirketProfili": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/4028e4a246b4c5a90147f8ed32b0722f",
     "eposta": "info@pamel.com.tr",
     "telefon": "0212 290 74 70",
     "fax": "0212 290 74 71",
@@ -24,7 +60,8 @@
     "bagimsizDenetimKurulusu": "PwC BAĞIMSIZ DENETİM VE SERBEST MUHASEBECİ MALİ MÜŞAVİRLİK A.Ş",
     "faaliyetAlani": "Elektrik enerjisi üretim tesisi kurulması, işletmeye alınması, kiralanması, elektrik enerjisi üretimi,üretilen elektrik enerjisinin ve/veya kapasitenin müşterilere satışı ile iştigal eder.",
     "sektorler": [
-      "Sermaye Piyasası Aracının İşlem Gördüğü Pazar"
+      "ELEKTRİK GAZ VE SU",
+      "ELEKTRİK GAZ VE BUHAR"
     ],
     "islemGorduguPazar": [
       "ANA PAZAR"
@@ -35,6 +72,21 @@
       "SERDAR KARAKUŞ",
       "DİLEK BÜYÜK",
       "AYŞEGÜL AYDOĞAN URUŞ"
+    ],
+    "uretimTesisleri": [
+      "Şifrin HES, Adıyaman İli Askerhan Köyü No:52, Çelikhan, Adıyaman Şubesi Havva HES, Erzurum İli Derekapı Mahallesi Santral Sokak No:1, Erzurum Şubesi"
+    ],
+    "ticaretSicilMemurlugu": "İSTANBUL",
+    "tescilTarihi": "2007-09-24",
+    "ticaretSicilNumarasi": "639184",
+    "vergiDairesi": "İSTANBUL - Maslak Vergi Dairesi Müdürlüğü",
+    "yatirimciIliskileriYetkilileri": [
+      {
+        "ad": "Haluk Önürme",
+        "gorev": "Yatırımcı İlişkileri Bölüm Yöneticisi",
+        "telefon": "0212 290 74 78",
+        "eposta": "haluk.onurme@pamel.com.tr"
+      }
     ]
   },
   "borsaBilgileri": {
@@ -47,7 +99,8 @@
       "BIST ANA"
     ],
     "katilimEndeksiUygun": false,
-    "fiiliDolasimOrani": 23.86
+    "fiiliDolasimOrani": 23.87,
+    "halkaArzTarihi": "2014-06-13"
   },
   "temettuSermayeGecmisi": [],
   "ozgunAnaliz": {
@@ -63,13 +116,18 @@
   "veriDogrulama": {
     "sonDogrulamaTarihi": "2026-07-21",
     "kaynak": "KAP",
-    "kaynakUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/2262-pamel-yenilenebilir-elektrik-uretim-a-s"
+    "kaynakUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/4028e4a246b4c5a90147f8ed32b0722f"
   },
   "degisiklikGecmisi": [
     {
       "tarih": "2026-07-21",
+      "baslik": "BIST TÜM künye standardı doğrulandı",
+      "aciklama": "Hisse kodu, KAP bağlantısı, kurumsal bilgiler, faaliyet, sektör, pazar ve endeks alanları BIST TÜM listesiyle eşleştirildi."
+    },
+    {
+      "tarih": "2026-07-21",
       "baslik": "KAP şirket bilgileri doğrulandı",
-      "aciklama": "Kurumsal, sektör, pazar ve endeks alanları resmi KAP genel profiliyle eşleştirildi."
+      "aciklama": "Kurumsal bilgiler, ortaklık yapısı ve borsa bilgileri resmi KAP profiliyle karşılaştırıldı."
     }
   ],
   "yasalUyari": "Bu sayfadaki bilgiler genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir. Fiyat/işlem verisi içermez."

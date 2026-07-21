@@ -655,6 +655,9 @@ function readJson(filePath, fallback) {
 }
 
 function getProfileUrl(company, profilePaths, section = "genel") {
+  if (company.mkkMemberOid) {
+    return `${KAP_PROFILE_BASE.replace(/\/genel$/, `/${section}`)}/${company.mkkMemberOid}`;
+  }
   const summaryUrl = profilePaths[company.stockCode];
   if (summaryUrl) return summaryUrl.replace("/ozet/", `/${section}/`);
   return `${KAP_PROFILE_BASE}/${company.mkkMemberOid}`;

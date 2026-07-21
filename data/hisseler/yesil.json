@@ -7,14 +7,33 @@
     "YESIL payları ANA PAZAR kapsamında işlem görür. Şirketin kurumsal, ortaklık ve borsa bilgileri 2026-07-21 tarihinde resmi KAP profili üzerinden doğrulanmıştır."
   ],
   "ortaklikYapisi": {
-    "ortaklar": [],
-    "not": "KAP profilinde sayısal doğrudan ortaklık oranı bulunmadığı için tahmini oran gösterilmemiştir."
+    "ortaklar": [
+      {
+        "ad": "Kamil Engin Yeşil",
+        "oran": 8.05,
+        "sermaye": "51.951.860,59"
+      },
+      {
+        "ad": "Diğer",
+        "oran": 91.95,
+        "sermaye": "593.048.139,41"
+      }
+    ],
+    "not": "KAP'ta açıklanan doğrudan ortaklık oranları 2026-07-21 tarihinde kontrol edilmiştir."
   },
   "istirakler": [
     {
+      "ad": "Yeşil Dönüşüm İnşaat A.Ş.",
+      "oran": 78.52,
+      "sermaye": "87643236",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "İnşaat",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
       "ad": "Yeşil Global Enerji A.Ş.",
       "oran": 2.38,
-      "sermaye": "154.750.000",
+      "sermaye": "154750000",
       "paraBirimi": "TRY",
       "faaliyetKonusu": "Enerji",
       "iliski": "İştirak"
@@ -22,20 +41,17 @@
   ],
   "kurumsalBilgiler": {
     "merkez": "Yılanlı Ayazma Yolu No: 15/12 Yeşilplaza-Topkapı/İSTANBUL",
-    "uretimTesisleri": [
-      "Elektronik Posta Adresi"
-    ],
-    "kapSirketProfili": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/1386-yesil-yatirim-holding-a-s",
+    "kapSirketProfili": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/4028e4a2416e696c01416edc458b30f0",
     "eposta": "info@yesilholding.com",
     "telefon": "0212 483 01 07",
-    "fax": "4780379553",
     "sirketSuresi": "Süresiz",
     "odenmisSermaye": "645.000.000 TL",
     "kayitliSermayeTavani": "2.250.000.000 TL",
     "bagimsizDenetimKurulusu": "PKF ADAY BAĞIMSIZ DENETİM A.Ş.",
     "faaliyetAlani": "ANA SÖZLEŞMEDE YAZILAN İŞLER",
     "sektorler": [
-      "Sermaye Piyasası Aracının İşlem Gördüğü Pazar"
+      "MALİ KURULUŞLAR",
+      "HOLDİNGLER VE YATIRIM ŞİRKETLERİ"
     ],
     "islemGorduguPazar": [
       "ANA PAZAR"
@@ -50,7 +66,16 @@
     "ticaretSicilMemurlugu": "İSTANBUL",
     "tescilTarihi": "2003-09-22",
     "ticaretSicilNumarasi": "505868",
-    "vergiDairesi": "İSTANBUL - Davutpaşa Vergi Dairesi Müdürlüğü"
+    "vergiDairesi": "İSTANBUL - Davutpaşa Vergi Dairesi Müdürlüğü",
+    "web": "https://www.yesilyatirimholding.com/",
+    "fax": "0212-482 27 30",
+    "yatirimciIliskileriYetkilileri": [
+      {
+        "ad": "MUHSİN DANIŞMAN",
+        "gorev": "Yatırımcı İlişkileri Yöneticisi",
+        "telefon": "0532 492 34 06"
+      }
+    ]
   },
   "borsaBilgileri": {
     "bistKodu": "YESIL",
@@ -80,13 +105,13 @@
   "veriDogrulama": {
     "sonDogrulamaTarihi": "2026-07-21",
     "kaynak": "KAP",
-    "kaynakUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/1386-yesil-yatirim-holding-a-s"
+    "kaynakUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/4028e4a2416e696c01416edc458b30f0"
   },
   "degisiklikGecmisi": [
     {
       "tarih": "2026-07-21",
       "baslik": "BIST TÜM künye standardı doğrulandı",
-      "aciklama": "Hisse kodu, KAP bağlantısı, faaliyet, sektör, pazar ve endeks alanları BIST TÜM listesiyle eşleştirildi."
+      "aciklama": "Hisse kodu, KAP bağlantısı, kurumsal bilgiler, faaliyet, sektör, pazar ve endeks alanları BIST TÜM listesiyle eşleştirildi."
     },
     {
       "tarih": "2026-07-21",

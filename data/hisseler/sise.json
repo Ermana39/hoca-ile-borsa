@@ -10,41 +10,586 @@
     "ortaklar": [
       {
         "ad": "Türkiye İş Bankası A.Ş.",
-        "oran": 50.93
+        "oran": 52.58,
+        "sermaye": "1.610.730.913,89"
+      },
+      {
+        "ad": "Efes Holding A.Ş.",
+        "oran": 7.02,
+        "sermaye": "215.151.082,32"
       },
       {
         "ad": "Diğer",
-        "oran": 49.07
+        "oran": 40.4,
+        "sermaye": "1.237.332.059,96"
       }
     ],
-    "not": "Ortaklık yapısı verileri şirket künyesindeki oran bilgilerine göre hazırlanmıştır."
+    "not": "KAP'ta açıklanan doğrudan ortaklık oranları 2026-07-21 tarihinde kontrol edilmiştir."
   },
-  "istirakler": [],
+  "istirakler": [
+    {
+      "ad": "Sisecam Bulgaria Eood",
+      "oran": 100,
+      "sermaye": "2556",
+      "paraBirimi": "EUR",
+      "faaliyetKonusu": "Soda ürünleri ticareti",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Sisecam Automotive Bulgaria Ead",
+      "oran": 100,
+      "sermaye": "15339000",
+      "paraBirimi": "EUR",
+      "faaliyetKonusu": "Oto cam ve beyaz eşya camları üretimi ve satışı",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Pasabahce Bulgaria Ead",
+      "oran": 100,
+      "sermaye": "23008134",
+      "paraBirimi": "EUR",
+      "faaliyetKonusu": "Cam ev eşyası otomatik üretimi ve satışı",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Sisecam Investment B.v.",
+      "oran": 100,
+      "sermaye": "430000000",
+      "paraBirimi": "EUR",
+      "faaliyetKonusu": "İthalat, satış, finansman ve yatırım şirketi",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Camiş Ambalaj Sanayii A.Ş.",
+      "oran": 100,
+      "sermaye": "9000000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Kağıt-karton ambalaj üretimi ve satışı",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Cromital S.p.a",
+      "oran": 100,
+      "sermaye": "1120000",
+      "paraBirimi": "EUR",
+      "faaliyetKonusu": "Krom türevleri üretimi ve ticareti",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Şişecam Çevre Sistemleri A.Ş.",
+      "oran": 100,
+      "sermaye": "58000000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Ambalaj atıklarının toplanması, ayrılması, işlenmesi, geri dönüşümü ve kazanımı",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Şişecam Dış Ticaret A.Ş.",
+      "oran": 100,
+      "sermaye": "5000000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Topluluk ürünlerinin ihracatı",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Pasabahce Egypt Glass Manufacturing S.a.e.",
+      "oran": 100,
+      "sermaye": "611452733",
+      "paraBirimi": "EGP",
+      "faaliyetKonusu": "Cam ev eşyası otomatik üretimi ve satışı",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Şişecam Elyaf Sanayii A.Ş.",
+      "oran": 99.99,
+      "sermaye": "969167400",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Cam elyafı üretimi ve satışı",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Camiş Elektrik Üretim A.Ş.",
+      "oran": 100,
+      "sermaye": "25000000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Elektrik üretimi ve satışı",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Sisecam Flat Glass South Italy S.r.l",
+      "oran": 100,
+      "sermaye": "28611575",
+      "paraBirimi": "EUR",
+      "faaliyetKonusu": "Düzcam, kaplamalı ve lamine cam üretimi ve satışı",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Sisecam Automotive Germany Gmbh",
+      "oran": 100,
+      "sermaye": "70000000",
+      "paraBirimi": "EUR",
+      "faaliyetKonusu": "Ticari faaliyet",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Sisecam Automotive Romania Sa",
+      "oran": 100,
+      "sermaye": "759303038",
+      "paraBirimi": "RON",
+      "faaliyetKonusu": "Otomotiv camı üretimi ve satışı",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Sisecam Flat Glass India Private Limited",
+      "oran": 100,
+      "sermaye": "3079160000",
+      "paraBirimi": "INR",
+      "faaliyetKonusu": "Düzcam ve ayna üretimi ve satışı",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Sc Glass Trading B.v.",
+      "oran": 100,
+      "sermaye": "750000",
+      "paraBirimi": "EUR",
+      "faaliyetKonusu": "İthalat ve satış hizmetleri",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Trakya Investment B.v.",
+      "oran": 100,
+      "sermaye": "341567400",
+      "paraBirimi": "EUR",
+      "faaliyetKonusu": "Finansman ve yatırım şirketi",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Camiş Madencilik A.Ş.",
+      "oran": 100,
+      "sermaye": "20193207",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Cam hammaddeleri üretimi ve satışı",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Camis Egypt Mining Ltd. Co.",
+      "oran": 99.94,
+      "sermaye": "13335500",
+      "paraBirimi": "EGP",
+      "faaliyetKonusu": "Kum işleme ve satış",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Jsc Mina",
+      "oran": 100,
+      "sermaye": "17101887",
+      "paraBirimi": "GEL",
+      "faaliyetKonusu": "Cam ambalaj üretimi ve satışı",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Oxyvit Kimya Sanayii ve Tic. A.Ş.",
+      "oran": 100,
+      "sermaye": "335210",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Vitamin K-3 ve türevleri üreticisi",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Pasabahçe Usa Inc.",
+      "oran": 100,
+      "sermaye": "100",
+      "paraBirimi": "USD",
+      "faaliyetKonusu": "Satış ve pazarlama hizmetleri",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Pasabahce Glass Gmbh",
+      "oran": 100,
+      "sermaye": "25000",
+      "paraBirimi": "EUR",
+      "faaliyetKonusu": "Satış ve pazarlama hizmetleri",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Pasabahce Srl",
+      "oran": 100,
+      "sermaye": "1500000",
+      "paraBirimi": "EUR",
+      "faaliyetKonusu": "Satış ve pazarlama hizmetleri",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Ooo Posuda",
+      "oran": 100,
+      "sermaye": "4525471997",
+      "paraBirimi": "RUB",
+      "faaliyetKonusu": "Cam ev eşyası otomatik üretimi ve satışı",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Paşabahçe Mağazaları A.Ş.",
+      "oran": 100,
+      "sermaye": "65700000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Cam ev eşyası perakende satışı",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Pasabahce (Shangai) Trading Co. Ltd.",
+      "oran": 100,
+      "sermaye": "12937875",
+      "paraBirimi": "CNY",
+      "faaliyetKonusu": "Satış ve pazarlama hizmetleri",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Sisecam Automotive Rus Trading Llc",
+      "oran": 100,
+      "sermaye": "34569150",
+      "paraBirimi": "RUB",
+      "faaliyetKonusu": "İthalat ve satış hizmetleri",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Trakya Glass Rus Ao",
+      "oran": 70,
+      "sermaye": "7387500100",
+      "paraBirimi": "RUB",
+      "faaliyetKonusu": "Düzcam ve ayna üretimi ve satışı",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Ooo Ruscam Glass Packaging Holding",
+      "oran": 100,
+      "sermaye": "14697671770",
+      "paraBirimi": "RUB",
+      "faaliyetKonusu": "Cam ambalaj üretimi ve satışı",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Ooo Ruscam Management Company",
+      "oran": 100,
+      "sermaye": "21594217",
+      "paraBirimi": "RUB",
+      "faaliyetKonusu": "Finansman ve yatırım şirketi",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Sisecam Automotive Rus Jsc",
+      "oran": 100,
+      "sermaye": "5270581000",
+      "paraBirimi": "RUB",
+      "faaliyetKonusu": "Otomotiv camları üretimi ve satışı",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Trakya Glass Rus Trading Ooo",
+      "oran": 70,
+      "sermaye": "20000000",
+      "paraBirimi": "RUB",
+      "faaliyetKonusu": "İthalat ve satış hizmetleri",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Şişecam Enerji A.Ş.",
+      "oran": 100,
+      "sermaye": "100000000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Doğalgaz depolama ve satışı ile elektrik ticareti",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Şişecam Sigorta Aracılık Hizmetleri A.Ş.",
+      "oran": 100,
+      "sermaye": "2000000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Sigorta acenteliği",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Sisecam Flat Glass Italy S.r.l",
+      "oran": 100,
+      "sermaye": "18010000",
+      "paraBirimi": "EUR",
+      "faaliyetKonusu": "Düzcam ve lamine cam üretimi ve satışı",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Sisecam Soda Lukavac D.o.o.",
+      "oran": 100,
+      "sermaye": "121971070",
+      "paraBirimi": "BAM",
+      "faaliyetKonusu": "Soda üretimi ve satışı",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Şişecam Otomotiv A.Ş.",
+      "oran": 100,
+      "sermaye": "2491085163",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Otomotiv camları üretimi ve satışı",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Pasabahce Spain Sl",
+      "oran": 100,
+      "sermaye": "20000",
+      "paraBirimi": "EUR",
+      "faaliyetKonusu": "Satış ve pazarlama hizmetleri",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Sisecam Trading Co.",
+      "oran": 100,
+      "sermaye": "3536250",
+      "paraBirimi": "CNY",
+      "faaliyetKonusu": "Ticari faaliyet",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Trakya Glass Bulgaria Ead",
+      "oran": 100,
+      "sermaye": "38347500",
+      "paraBirimi": "EUR",
+      "faaliyetKonusu": "Düzcam, ayna, lamine, kaplamalı camlar üret. ve satışı",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Trsg Glass Holding B.v.",
+      "oran": 70,
+      "sermaye": "159000000",
+      "paraBirimi": "EUR",
+      "faaliyetKonusu": "Finansman ve yatırım şirketi",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Sisecam Usa Inc.",
+      "oran": 100,
+      "sermaye": "554225000",
+      "paraBirimi": "USD",
+      "faaliyetKonusu": "Finansman, yatırım ve satış şirketi",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Merefa Glass Company Llc",
+      "oran": 100,
+      "sermaye": "1720098630",
+      "paraBirimi": "UAH",
+      "faaliyetKonusu": "Cam ambalaj üretimi ve satışı",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Sisecam Glasspackaging Hungary Kft.",
+      "oran": 100,
+      "sermaye": "39489972000",
+      "paraBirimi": "HUF",
+      "faaliyetKonusu": "cam ve cam ürünleri üretimi, işlemesi ve şekillendirmesi",
+      "iliski": "Bağlı ortaklık"
+    },
+    {
+      "ad": "Bosen Enerji Elektrik Üret. Oto Pro.grb A.Ş.",
+      "oran": 0.0012,
+      "sermaye": "161500000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Elektrik Üretimi",
+      "iliski": "Finansal Yatırım"
+    },
+    {
+      "ad": "Saint Gobain Glass Egypt S.a.e.",
+      "oran": 30,
+      "sermaye": "1127000000",
+      "paraBirimi": "EGP",
+      "faaliyetKonusu": "Düzcam üretimi ve satışı",
+      "iliski": "İştirak"
+    },
+    {
+      "ad": "Solvay Sisecam Holding Ag",
+      "oran": 25,
+      "sermaye": "75920",
+      "paraBirimi": "EUR",
+      "faaliyetKonusu": "Finansman ve Yatırım şirketi",
+      "iliski": "İştirak"
+    },
+    {
+      "ad": "Pacific Soda Llc",
+      "oran": 100,
+      "sermaye": "380192000",
+      "paraBirimi": "USD",
+      "faaliyetKonusu": "Soda Ürünleri ticareti",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Rudnik Krecnjaka Vijenac D.o.o.",
+      "oran": 50,
+      "sermaye": "16720649",
+      "paraBirimi": "BAM",
+      "faaliyetKonusu": "Kireç taşı üretimi ve satışı",
+      "iliski": "İş Ortaklığı"
+    },
+    {
+      "ad": "Richard Fritz Prototype + Spare Parts Gmbh",
+      "oran": 100,
+      "sermaye": "25000",
+      "paraBirimi": "EUR",
+      "faaliyetKonusu": "Cam enkapsülasyonu üretimi ve satışı",
+      "iliski": "Bağlı ortaklık"
+    },
+    {
+      "ad": "Sisecam Automotive Slovakia S.r.o.",
+      "oran": 100,
+      "sermaye": "4174634",
+      "paraBirimi": "EUR",
+      "faaliyetKonusu": "Cam enkapsülasyonu üretimi, satışı ve plastik işlemesi",
+      "iliski": "Bağlı ortaklık"
+    },
+    {
+      "ad": "Sisecam Automotive Hungary Kft",
+      "oran": 100,
+      "sermaye": "416540000",
+      "paraBirimi": "HUF",
+      "faaliyetKonusu": "Cam enkapsülasyonu üretimi ve satışı",
+      "iliski": "Bağlı ortaklık"
+    },
+    {
+      "ad": "Sisecam Chemicals Resources Llc",
+      "oran": 100,
+      "sermaye": "500000000",
+      "paraBirimi": "USD",
+      "faaliyetKonusu": "Doğal Soda Üretimi ve Satışı",
+      "iliski": "Bağlı ortaklık"
+    },
+    {
+      "ad": "Refel S.p.a",
+      "oran": 100,
+      "sermaye": "5200000",
+      "paraBirimi": "EUR",
+      "faaliyetKonusu": "Cam üretimine yönelik döküm AZS refrakter bloğu üretimi ve satışı",
+      "iliski": "Bağlı ortaklık"
+    },
+    {
+      "ad": "7cbasalia Global Ag",
+      "oran": 10,
+      "sermaye": "1050000",
+      "paraBirimi": "CHF",
+      "faaliyetKonusu": "Biyoteknoloji",
+      "iliski": "Finansal Yatırım"
+    },
+    {
+      "ad": "Sısecam Uk Plc",
+      "oran": 100,
+      "sermaye": "350000",
+      "paraBirimi": "EUR",
+      "faaliyetKonusu": "Dış Ticaret Operasyonları",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Icron Teknoloji Bilişim Anonim Şirketi",
+      "oran": 31.78,
+      "sermaye": "1420212",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Bilgisayar programlama faaliyetleri",
+      "iliski": "İştirak"
+    },
+    {
+      "ad": "Saint-Gobain Egypt For Glass Industries S.a.e",
+      "oran": 30,
+      "sermaye": "7766354000",
+      "paraBirimi": "EGP",
+      "faaliyetKonusu": "Cam Üretim",
+      "iliski": "İştirak"
+    }
+  ],
   "kurumsalBilgiler": {
-    "web": "https://www.sisecam.com.tr",
-    "faaliyetAlani": "Cam, düzcam, cam ev eşyası, cam ambalaj ve kimyasallar üretimi",
+    "web": "https://www.sisecam.com.tr/",
+    "faaliyetAlani": "$2f",
     "sektorler": [
-      "Borsa İstanbul şirketleri"
+      "MALİ KURULUŞLAR",
+      "HOLDİNGLER VE YATIRIM ŞİRKETLERİ"
     ],
     "islemGorduguPazar": [
-      "Borsa İstanbul Pay Piyasası"
+      "YILDIZ PAZAR"
     ],
-    "kapSirketProfili": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/1087-turkiye-sise-ve-cam-fabrikalari-a-s"
+    "kapSirketProfili": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/4028e4a140f2ed710140f385d5690102",
+    "merkez": "İçmeler Mahallesi, D-100 Karayolu Caddesi, No: 44A 34947 Tuzla/İSTANBUL",
+    "yonetimKurulu": [
+      "ADNAN BALİ",
+      "HASAN CAHİT ÇINAR",
+      "CAN YÜCEL",
+      "MURAT DOĞAN",
+      "KENAN AYVACI",
+      "EBRU ÖZŞUCA",
+      "SAİME GONCA ARTUNKAL",
+      "ANLAM SITKI ALTAY",
+      "LALE DEVELİOĞLU"
+    ],
+    "uretimTesisleri": [
+      "http:",
+      "www.sisecam.com.tr",
+      "tr",
+      "hakkimizda",
+      "dunyada-sisecam"
+    ],
+    "eposta": "infosisecam@sisecam.com",
+    "telefon": "0850 206 5050",
+    "sirketSuresi": "Süresiz",
+    "odenmisSermaye": "3.063.214.056,17 TL",
+    "kayitliSermayeTavani": "20.000.000.000 TL",
+    "bagimsizDenetimKurulusu": "PwC BAĞIMSIZ DENETİM VE SERBEST MUHASEBECİ MALİ MÜŞAVİRLİK A.Ş",
+    "ticaretSicilMemurlugu": "İSTANBUL",
+    "tescilTarihi": "1936-01-23",
+    "ticaretSicilNumarasi": "21599-0",
+    "vergiDairesi": "İSTANBUL - Büyük Mükellefler Vergi Dairesi Müdürlüğü",
+    "yatirimciIliskileriYetkilileri": [
+      {
+        "ad": "Ferizan Kızıl",
+        "gorev": "Yatırımcı İlişkileri Müdürü",
+        "telefon": "0850 206 34 34",
+        "eposta": "yatirimci@sisecam.com"
+      },
+      {
+        "ad": "Hande Özbörçek",
+        "gorev": "Yatırımcı İlişkileri Direktörü",
+        "telefon": "0850 206 34 34",
+        "eposta": "yatirimci@sisecam.com"
+      },
+      {
+        "ad": "Sibel Koç Karacaoğlu",
+        "gorev": "Mali Kontrol Direktörü",
+        "telefon": "0850 206 34 34",
+        "eposta": "yatirimci@sisecam.com"
+      }
+    ]
   },
   "borsaBilgileri": {
     "bistKodu": "SISE",
     "endeksler": [
+      "BIST SÜRDÜRÜLEBİLİRLİK 25",
+      "BIST İSTANBUL",
       "BIST 30",
+      "BIST TEMETTÜ",
       "BIST 50",
-      "BIST 100",
-      "BIST SINAİ",
-      "BIST TÜM"
+      "BIST TEMETTU 5 YIL",
+      "BIST SÜRDÜRÜLEBİLİRLİK",
+      "BIST KURUMSAL YÖNETİM",
+      "BIST HOLDİNG VE YATIRIM",
+      "BIST YILDIZ",
+      "BIST TÜM",
+      "BIST 500",
+      "BIST MALİ",
+      "BIST TEMETTU 10 YIL",
+      "BIST 100"
     ],
-    "katilimEndeksiUygun": true
+    "katilimEndeksiUygun": false,
+    "halkaArzTarihi": "1986-01-03",
+    "fiiliDolasimOrani": 47.35
   },
   "temettuSermayeGecmisi": [],
   "ozgunAnaliz": {
     "isModeli": "Şişecam, düzcam, cam ambalaj, cam ev eşyası, cam elyafı ve kimyasallar gibi birbirini tamamlayan iş kollarında üretim yapan küresel ölçekli bir sanayi grubudur. Şirketin iş modeli, yüksek üretim kapasitesi, farklı coğrafyalara yayılan tesis ağı ve cam-kimya değer zincirindeki entegre yapısı üzerine kuruludur.",
+    "sektorelKonum": "SISE, Türkiye'nin en önemli sanayi ve ihracat şirketlerinden biri olarak cam değer zincirinin farklı halkalarında faaliyet gösterir. Şirketi analiz ederken yalnızca tek bir ürün grubuna değil düzcam, cam ambalaj, cam ev eşyası ve kimyasallar segmentlerinin birlikte yarattığı kârlılık ve nakit akışı etkisine bakmak gerekir.",
+    "ortaklikYorumu": "Şişecam ortaklık yapısında Türkiye İş Bankası A.Ş. ana ortak olarak öne çıkar. Diğer payların yüksekliği ise geniş halka açık yatırımcı tabanı ve BIST içindeki likidite açısından dikkat çeker.",
+    "yatirimciNotu": "SISE değerlendirilirken küresel sanayi döngüsü, enerji maliyetleri, ihracat pazarları ve şirketin çok segmentli yapısı birlikte izlenmelidir.",
     "gelirKaynaklari": [
       "Düzcam ve mimari cam ürünleri",
       "Cam ambalaj ve cam ev eşyası satışları",
@@ -63,11 +608,30 @@
       "Kur, navlun ve hammadde maliyeti değişimleri",
       "Cam sektöründe kapasite, rekabet ve fiyatlama baskısı"
     ],
-    "sektorelKonum": "SISE, Türkiye'nin en önemli sanayi ve ihracat şirketlerinden biri olarak cam değer zincirinin farklı halkalarında faaliyet gösterir. Şirketi analiz ederken yalnızca tek bir ürün grubuna değil düzcam, cam ambalaj, cam ev eşyası ve kimyasallar segmentlerinin birlikte yarattığı kârlılık ve nakit akışı etkisine bakmak gerekir.",
-    "ortaklikYorumu": "Şişecam ortaklık yapısında Türkiye İş Bankası A.Ş. ana ortak olarak öne çıkar. Diğer payların yüksekliği ise geniş halka açık yatırımcı tabanı ve BIST içindeki likidite açısından dikkat çeker.",
-    "temettuYorumu": "SISE gibi büyük sanayi şirketlerinde temettü kapasitesi; kârlılık, yatırım harcamaları, borçluluk, döviz pozisyonu ve nakit akışıyla birlikte değerlendirilmelidir. Geçmiş temettü davranışı gelecek dönem dağıtım kararını garanti etmez.",
-    "yatirimciNotu": "SISE değerlendirilirken küresel sanayi döngüsü, enerji maliyetleri, ihracat pazarları ve şirketin çok segmentli yapısı birlikte izlenmelidir."
+    "temettuYorumu": "SISE gibi büyük sanayi şirketlerinde temettü kapasitesi; kârlılık, yatırım harcamaları, borçluluk, döviz pozisyonu ve nakit akışıyla birlikte değerlendirilmelidir. Geçmiş temettü davranışı gelecek dönem dağıtım kararını garanti etmez."
   },
+  "seo": {
+    "title": "SISE Hisse Bilgileri: Şişecam Ortaklık Yapısı ve Faaliyet Alanları",
+    "description": "SISE hisse kodlu Türkiye Şişe ve Cam Fabrikaları A.Ş. hakkında ortaklık yapısı, cam üretimi, faaliyet alanları, BIST endeksleri ve şirket profili."
+  },
+  "veriDogrulama": {
+    "sonDogrulamaTarihi": "2026-07-21",
+    "kaynak": "KAP",
+    "kaynakUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/4028e4a140f2ed710140f385d5690102"
+  },
+  "degisiklikGecmisi": [
+    {
+      "tarih": "2026-07-21",
+      "baslik": "BIST TÜM künye standardı doğrulandı",
+      "aciklama": "Hisse kodu, KAP bağlantısı, kurumsal bilgiler, faaliyet, sektör, pazar ve endeks alanları BIST TÜM listesiyle eşleştirildi."
+    },
+    {
+      "tarih": "2026-07-21",
+      "baslik": "KAP şirket bilgileri doğrulandı",
+      "aciklama": "Kurumsal bilgiler, ortaklık yapısı ve borsa bilgileri resmi KAP profiliyle karşılaştırıldı."
+    }
+  ],
+  "yasalUyari": "Bu sayfadaki bilgiler genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir. Anlık fiyat/işlem verisi sunmaz; oranlar dönemsel finansal tablolara ve ilgili kapanış verilerine dayanır.",
   "seoSorular": [
     {
       "soru": "SISE ne iş yapar?",
@@ -105,23 +669,6 @@
       "kod": "CIMSA",
       "ad": "Çimsa",
       "aciklama": "Enerji yoğun sanayi üretimi ve ihracat pazarı etkileri açısından SISE ile aynı makro hassasiyetlerde takip edilebilir."
-    }
-  ],
-  "yasalUyari": "Bu sayfadaki bilgiler genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir. Anlık fiyat/işlem verisi sunmaz; oranlar dönemsel finansal tablolara ve ilgili kapanış verilerine dayanır.",
-  "seo": {
-    "title": "SISE Hisse Bilgileri: Şişecam Ortaklık Yapısı ve Faaliyet Alanları",
-    "description": "SISE hisse kodlu Türkiye Şişe ve Cam Fabrikaları A.Ş. hakkında ortaklık yapısı, cam üretimi, faaliyet alanları, BIST endeksleri ve şirket profili."
-  },
-  "veriDogrulama": {
-    "sonDogrulamaTarihi": "2026-07-21",
-    "kaynak": "KAP",
-    "kaynakUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/1087-turkiye-sise-ve-cam-fabrikalari-a-s"
-  },
-  "degisiklikGecmisi": [
-    {
-      "tarih": "2026-07-21",
-      "baslik": "BIST TÜM künye standardı doğrulandı",
-      "aciklama": "Hisse kodu, KAP bağlantısı, faaliyet, sektör, pazar ve endeks alanları BIST TÜM listesiyle eşleştirildi."
     }
   ]
 }

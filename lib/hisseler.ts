@@ -37,6 +37,7 @@ export type KurumsalBilgiler = {
   sektorler?: string[];
   islemGorduguPazar?: string[];
   yonetimKurulu?: string[];
+  veriNotlari?: string[];
   ticaretSicilMemurlugu?: string;
   tescilTarihi?: string;
   ticaretSicilNumarasi?: string;

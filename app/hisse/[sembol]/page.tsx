@@ -1354,7 +1354,8 @@ export default async function HisseKunyePage({
               kurumsalBilgiler?.bagimsizDenetimKurulusu ||
               kurumsalBilgiler?.ticaretSicilNumarasi ||
               (kurumsalBilgiler?.yatirimciIliskileriYetkilileri?.length ?? 0) > 0 ||
-              (kurumsalBilgiler?.yonetimKurulu?.length ?? 0) > 0) && (
+              (kurumsalBilgiler?.yonetimKurulu?.length ?? 0) > 0 ||
+              (kurumsalBilgiler?.veriNotlari?.length ?? 0) > 0) && (
                 <section className="mt-8">
                   <SectionBaslik>Kurumsal Bilgiler</SectionBaslik>
                   <dl className="grid grid-cols-1 gap-3 sm:grid-cols-2">
@@ -1591,6 +1592,21 @@ export default async function HisseKunyePage({
                               {uye}
                             </span>
                           ))}
+                        </dd>
+                      </div>
+                    )}
+
+                    {(kurumsalBilgiler?.veriNotlari?.length ?? 0) > 0 && (
+                      <div className="rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 sm:col-span-2">
+                        <dt className="text-xs font-semibold uppercase tracking-wider text-amber-800">
+                          Resmi Kaynak Notu
+                        </dt>
+                        <dd className="mt-2">
+                          <ul className="space-y-1 text-sm leading-6 text-amber-950">
+                            {kurumsalBilgiler?.veriNotlari?.map((not) => (
+                              <li key={not}>{not}</li>
+                            ))}
+                          </ul>
                         </dd>
                       </div>
                     )}

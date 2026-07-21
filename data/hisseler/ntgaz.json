@@ -7,14 +7,50 @@
     "NTGAZ payları YILDIZ PAZAR kapsamında işlem görür. Şirket bilgileri 2026-07-21 tarihinde resmi KAP genel profili üzerinden doğrulanmıştır."
   ],
   "ortaklikYapisi": {
-    "ortaklar": [],
-    "not": "KAP profilinde sayısal doğrudan ortaklık oranı bulunmadığı için tahmini oran gösterilmemiştir."
+    "ortaklar": [
+      {
+        "ad": "Global Yatırım Holding Anonim Şirketi",
+        "oran": 60,
+        "sermaye": "414.000.000"
+      },
+      {
+        "ad": "Diğer",
+        "oran": 40,
+        "sermaye": "276.000.000"
+      }
+    ],
+    "not": "KAP'ta açıklanan doğrudan ortaklık oranları 2026-07-21 tarihinde kontrol edilmiştir."
   },
-  "istirakler": [],
+  "istirakler": [
+    {
+      "ad": "Afrojoule Energy Holdings Proprietary Limited",
+      "oran": 60,
+      "sermaye": "100",
+      "paraBirimi": "ZAR",
+      "faaliyetKonusu": "Doğalgaz Dağıtım, Tedarik ve Enerji Yatırımları",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Lng Hub Proprietary Limited",
+      "oran": 18.3,
+      "sermaye": "10000",
+      "paraBirimi": "ZAR",
+      "faaliyetKonusu": "LNG Dağıtım ve Tedarik",
+      "iliski": "Özkaynak Yöntemiyle Değerlenen Yatırımlar"
+    },
+    {
+      "ad": "Enerji Piyasaları İşletme Anonim Şirketi",
+      "oran": 0.67,
+      "sermaye": "270000000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Enerji Piyasası İşletim",
+      "iliski": "Finansal Yatırım"
+    }
+  ],
   "kurumsalBilgiler": {
     "merkez": "Esentepe Mah. Ali Kaya Sok. Polat Plaza B Blok No:1/1 İç Kapı No:86 Şişli/İstanbul",
-    "web": "https://www.naturelgaz.com",
-    "kapSirketProfili": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/5303-naturelgaz-sanayi-ve-ticaret-a-s",
+    "web": "https://www.naturelgaz.com/",
+    "kapSirketProfili": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/8acae2c4782a4d580178492e12820f4f",
     "eposta": "investor@naturelgaz.com",
     "telefon": "0212 613 70 80",
     "fax": "0212 567 32 33",
@@ -24,7 +60,8 @@
     "bagimsizDenetimKurulusu": "PKF ADAY BAĞIMSIZ DENETİM A.Ş.",
     "faaliyetAlani": "Naturelgaz Sanayi ve Ticaret A.Ş. ('Şirket' veya 'Naturelgaz') taşımalı doğal gaz sektöründe (CNG: Sıkıştırılmış Doğal Gaz / LNG: Sıvılaştırılmış Doğal Gaz) faaliyet göstermektedir.",
     "sektorler": [
-      "Sermaye Piyasası Aracının İşlem Gördüğü Pazar"
+      "ELEKTRİK GAZ VE SU",
+      "ELEKTRİK GAZ VE BUHAR"
     ],
     "islemGorduguPazar": [
       "YILDIZ PAZAR"
@@ -36,6 +73,27 @@
       "MEHMET ALİ DENİZ",
       "MUSTAFA KARAHAN",
       "FARUK BOSTANCI"
+    ],
+    "uretimTesisleri": [
+      "$4c"
+    ],
+    "ticaretSicilMemurlugu": "İSTANBUL",
+    "tescilTarihi": "2004-05-28",
+    "ticaretSicilNumarasi": "524523",
+    "vergiDairesi": "İSTANBUL - Yenikapı Vergi Dairesi Müdürlüğü",
+    "yatirimciIliskileriYetkilileri": [
+      {
+        "ad": "İbrahim Emre Ordukaya",
+        "gorev": "Yatırımcı İlişkileri Yöneticisi",
+        "telefon": "+90 212 613 70 80",
+        "eposta": "investor@naturelgaz.com"
+      },
+      {
+        "ad": "Harun Arslan",
+        "gorev": "Muhasebe Müdürü",
+        "telefon": "+90 212 613 70 80",
+        "eposta": "investor@naturelgaz.com"
+      }
     ]
   },
   "borsaBilgileri": {
@@ -56,7 +114,8 @@
       "BIST TÜM"
     ],
     "katilimEndeksiUygun": true,
-    "fiiliDolasimOrani": 38.39
+    "fiiliDolasimOrani": 38.39,
+    "halkaArzTarihi": "2021-04-01"
   },
   "temettuSermayeGecmisi": [],
   "ozgunAnaliz": {
@@ -72,13 +131,18 @@
   "veriDogrulama": {
     "sonDogrulamaTarihi": "2026-07-21",
     "kaynak": "KAP",
-    "kaynakUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/5303-naturelgaz-sanayi-ve-ticaret-a-s"
+    "kaynakUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/8acae2c4782a4d580178492e12820f4f"
   },
   "degisiklikGecmisi": [
     {
       "tarih": "2026-07-21",
+      "baslik": "BIST TÜM künye standardı doğrulandı",
+      "aciklama": "Hisse kodu, KAP bağlantısı, kurumsal bilgiler, faaliyet, sektör, pazar ve endeks alanları BIST TÜM listesiyle eşleştirildi."
+    },
+    {
+      "tarih": "2026-07-21",
       "baslik": "KAP şirket bilgileri doğrulandı",
-      "aciklama": "Kurumsal, sektör, pazar ve endeks alanları resmi KAP genel profiliyle eşleştirildi."
+      "aciklama": "Kurumsal bilgiler, ortaklık yapısı ve borsa bilgileri resmi KAP profiliyle karşılaştırıldı."
     }
   ],
   "yasalUyari": "Bu sayfadaki bilgiler genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir. Fiyat/işlem verisi içermez."

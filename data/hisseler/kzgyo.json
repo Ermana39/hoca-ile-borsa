@@ -7,18 +7,38 @@
     "KZGYO payları ANA PAZAR kapsamında işlem görür. Şirketin kurumsal, ortaklık ve borsa bilgileri 2026-07-21 tarihinde resmi KAP profili üzerinden doğrulanmıştır."
   ],
   "ortaklikYapisi": {
-    "ortaklar": [],
-    "not": "KAP profilinde sayısal doğrudan ortaklık oranı bulunmadığı için tahmini oran gösterilmemiştir."
+    "ortaklar": [
+      {
+        "ad": "Kuzu Toplu Konut İnşaat Anonim Şirketi.",
+        "oran": 75,
+        "sermaye": "150.000.000"
+      },
+      {
+        "ad": "Diğer",
+        "oran": 25,
+        "sermaye": "50.000.000"
+      }
+    ],
+    "not": "KAP'ta açıklanan doğrudan ortaklık oranları 2026-07-21 tarihinde kontrol edilmiştir."
   },
-  "istirakler": [],
+  "istirakler": [
+    {
+      "ad": "Kuzu Otel İşletmeciliği ve Gayrimenkul Yatırımları A.ş",
+      "oran": 100,
+      "sermaye": "50000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Otel İşletmeciliği Faaliyetleri",
+      "iliski": "Bağlı Ortaklık"
+    }
+  ],
   "kurumsalBilgiler": {
     "merkez": "Yenibosna Merkez Mah. Zübeyde Hanım Cad. F Sitesi Kuzu 34 Plaza No: 3 İç Kapı No: 1 34197 Bahçelievler / İstanbul",
     "uretimTesisleri": [
       "Yoktur."
     ],
-    "kapSirketProfili": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/5857-kuzugrup-gayrimenkul-yatirim-ortakligi-a-s",
+    "kapSirketProfili": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/8acae2c586d22c53018a02754e924a33",
     "eposta": "info@kzgyo.com",
-    "telefon": "6020988696",
+    "telefon": "02126632666",
     "fax": "02126632666",
     "sirketSuresi": "Süresiz",
     "odenmisSermaye": "200.000.000 TL",
@@ -26,7 +46,8 @@
     "bagimsizDenetimKurulusu": "VİZYON GRUP BAĞIMSIZ DENETİM.A.Ş.",
     "faaliyetAlani": "Sermaye Piyasası Kurulu'nun Gayrimenkul Yatırım Ortaklıklarına ilişkin düzenlemelerinde yazılı amaç ve konularla iştigal etmek ve esas olarak gayrimenkullere, gayrimenkullere dayalı sermaye piyasası araçlarına, gayrimenkul projelerine ve gayrimenkullere dayalı haklara yatırım yapmak üzere kurulmuş kayıtlı sermayeli halka açık anonim ortaklıktır.",
     "sektorler": [
-      "Sermaye Piyasası Aracının İşlem Gördüğü Pazar"
+      "MALİ KURULUŞLAR",
+      "GAYRİMENKUL YATIRIM ORTAKLIKLARI"
     ],
     "islemGorduguPazar": [
       "ANA PAZAR"
@@ -41,7 +62,22 @@
     "ticaretSicilMemurlugu": "İSTANBUL",
     "tescilTarihi": "2023-05-08",
     "ticaretSicilNumarasi": "363871-5",
-    "vergiDairesi": "İSTANBUL - Zincirlikuyu Vergi Dairesi Müdürlüğü"
+    "vergiDairesi": "İSTANBUL - Zincirlikuyu Vergi Dairesi Müdürlüğü",
+    "web": "https://www.kzgyo.com/",
+    "yatirimciIliskileriYetkilileri": [
+      {
+        "ad": "Alp Güres",
+        "gorev": "Genel Müdür",
+        "telefon": "02126632666",
+        "eposta": "yatirimciiliskileri@kuzugyo.com"
+      },
+      {
+        "ad": "Birol Yıldırım",
+        "gorev": "Yatırımcı İlişkileri Bölümü Yöneticisi ve Kurumsal Yönetim Komitesi Üyesi",
+        "telefon": "02126632666",
+        "eposta": "yatirimciiliskileri@kuzugyo.com"
+      }
+    ]
   },
   "borsaBilgileri": {
     "bistKodu": "KZGYO",
@@ -70,13 +106,13 @@
   "veriDogrulama": {
     "sonDogrulamaTarihi": "2026-07-21",
     "kaynak": "KAP",
-    "kaynakUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/5857-kuzugrup-gayrimenkul-yatirim-ortakligi-a-s"
+    "kaynakUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/8acae2c586d22c53018a02754e924a33"
   },
   "degisiklikGecmisi": [
     {
       "tarih": "2026-07-21",
       "baslik": "BIST TÜM künye standardı doğrulandı",
-      "aciklama": "Hisse kodu, KAP bağlantısı, faaliyet, sektör, pazar ve endeks alanları BIST TÜM listesiyle eşleştirildi."
+      "aciklama": "Hisse kodu, KAP bağlantısı, kurumsal bilgiler, faaliyet, sektör, pazar ve endeks alanları BIST TÜM listesiyle eşleştirildi."
     },
     {
       "tarih": "2026-07-21",

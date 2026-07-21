@@ -9,46 +9,511 @@
   "ortaklikYapisi": {
     "ortaklar": [
       {
+        "ad": "Can Kültür Sanat Eğitim Kurumları İşletmeciliği Anonim Şirketi",
+        "oran": 42.8,
+        "sermaye": "158.345.113,24"
+      },
+      {
+        "ad": "Ary Holding Anonim Şirketi",
+        "oran": 23.4,
+        "sermaye": "86.570.449,9"
+      },
+      {
+        "ad": "Vera Ticari Danışmanlık Anonim Şirketi",
+        "oran": 8.68,
+        "sermaye": "32.113.879,45"
+      },
+      {
         "ad": "Diğer",
-        "oran": 66.61
-      },
-      {
-        "ad": "Berker Ailesi",
-        "oran": 17.56
-      },
-      {
-        "ad": "Tekfen Holding A.Ş.",
-        "oran": 15.83
+        "oran": 25.12,
+        "sermaye": "92.970.557,41"
       }
     ],
-    "not": "Ortaklık yapısı verileri şirket künyesindeki oran bilgilerine göre hazırlanmıştır."
+    "not": "KAP'ta açıklanan doğrudan ortaklık oranları 2026-07-21 tarihinde kontrol edilmiştir."
   },
-  "istirakler": [],
+  "istirakler": [
+    {
+      "ad": "Tekfen İnşaat ve Tesisat A.Ş.",
+      "oran": 99.99,
+      "sermaye": "4425200000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "İnşaat",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Tekfen İmalat ve Mühendislik A.Ş.",
+      "oran": 100,
+      "sermaye": "113903999",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Üretim",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Tekfen Mühendislik A.Ş.",
+      "oran": 100,
+      "sermaye": "20000000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Mühendislik",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Toros Tarım Sanayi ve Ticaret A.Ş.",
+      "oran": 99.98,
+      "sermaye": "1198866380,46",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Gübre - Terminal İşletmeciliği",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Toros Terminal Servisleri ve Denizcilik A.Ş.",
+      "oran": 100,
+      "sermaye": "50000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Hizmet",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Toros Adana Yumurtalık Serbest Bölgesi Kurucu ve İşl. A.Ş.",
+      "oran": 100,
+      "sermaye": "2700000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Hizmet",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Toros Gemi Acenteliği ve Ticaret A.Ş.",
+      "oran": 100,
+      "sermaye": "650000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Gemi Acenteliği",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Tekfen Turizm ve İşletmecilik A.Ş.",
+      "oran": 100,
+      "sermaye": "2000000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Hizmet",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Tekfen Sigorta Aracılık Hizmetleri A.Ş.",
+      "oran": 100,
+      "sermaye": "1610000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Aracılık Hizmetleri",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Azfen Mmc",
+      "oran": 40,
+      "sermaye": "276885",
+      "paraBirimi": "AZN",
+      "faaliyetKonusu": "İnşaat",
+      "iliski": "İş Ortaklığı"
+    },
+    {
+      "ad": "Tekfen International Finance And Inv. Sa",
+      "oran": 100,
+      "sermaye": "271300000",
+      "paraBirimi": "USD",
+      "faaliyetKonusu": "Yatırım",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Hmb Hallesche Mitteldeutsche Bau Ag",
+      "oran": 100,
+      "sermaye": "50000000",
+      "paraBirimi": "EUR",
+      "faaliyetKonusu": "Ticaret",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Cenub Tikinti Servis Asc",
+      "oran": 51,
+      "sermaye": "1323694",
+      "paraBirimi": "AZN",
+      "faaliyetKonusu": "İnşaat",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Tekfen Tubin Özdemir Jv",
+      "oran": 70.65,
+      "sermaye": "0",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "İnşaat",
+      "iliski": "Müşterek Faaliyet"
+    },
+    {
+      "ad": "Tekfen Tml Jv",
+      "oran": 66.66,
+      "sermaye": "0",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "İnşaat",
+      "iliski": "Müşterek Faaliyet"
+    },
+    {
+      "ad": "Gama Tekfen Tokar Jv",
+      "oran": 35,
+      "sermaye": "0",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "İnşaat",
+      "iliski": "Müşterek Faaliyet"
+    },
+    {
+      "ad": "Tekfen Teknoloji Yatırım ve Ticaret A.Ş.",
+      "oran": 100,
+      "sermaye": "300000000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Yatırım",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Tekfen Ventures Lp",
+      "oran": 100,
+      "sermaye": "50000000",
+      "paraBirimi": "USD",
+      "faaliyetKonusu": "Yatırım",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Tekfen Venture Management Llc",
+      "oran": 100,
+      "sermaye": "0",
+      "paraBirimi": "USD",
+      "faaliyetKonusu": "Yönetim Hizmeti",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Doğuş - Tekfen Adi Ortaklığı",
+      "oran": 50,
+      "sermaye": "0",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "İnşaat",
+      "iliski": "Müşterek Faaliyet"
+    },
+    {
+      "ad": "Tekfen-Al Jaber Engineering",
+      "oran": 50,
+      "sermaye": "0",
+      "paraBirimi": "QAR",
+      "faaliyetKonusu": "İnşaat",
+      "iliski": "Müşterek Faaliyet"
+    },
+    {
+      "ad": "Alanar Meyve ve Gıda Üretim Pazarlama Sanayi ve Ticaret A.Ş.",
+      "oran": 100,
+      "sermaye": "305000000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Meyve Üretimi",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Mersin Serbest Bölge Kurucu ve İşleticisi A.Ş.",
+      "oran": 9.56,
+      "sermaye": "259303680",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Hizmet",
+      "iliski": "Finansal Yatırım"
+    },
+    {
+      "ad": "Antalya Serbest Bölge Kurucu ve İşleticisi A.Ş.",
+      "oran": 10,
+      "sermaye": "26730000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Hizmet",
+      "iliski": "Finansal Yatırım"
+    },
+    {
+      "ad": "Akmerkez Gayrimenkul Yatırım Ortaklığı A.Ş.",
+      "oran": 10.47,
+      "sermaye": "37264000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Gayrimenkul Yatırım Ortaklığı",
+      "iliski": "Finansal Yatırım"
+    },
+    {
+      "ad": "Üçgen Bakım ve Yönetim Hizmetleri A.Ş.",
+      "oran": 27.45,
+      "sermaye": "50000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Hizmet",
+      "iliski": "Finansal Yatırım"
+    },
+    {
+      "ad": "Türkiye Sınai Kalkınma Bankası A.Ş.",
+      "oran": 0.047,
+      "sermaye": "2800000000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Banka Faaliyetleri",
+      "iliski": "Finansal Yatırım"
+    },
+    {
+      "ad": "Akçansa Çimento Sanayi ve Ticaret A.Ş.",
+      "oran": 0.003,
+      "sermaye": "191447068,25",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Çimento İmalatı",
+      "iliski": "Finansal Yatırım"
+    },
+    {
+      "ad": "Turcas Petrol A.Ş.",
+      "oran": 0.002,
+      "sermaye": "255600000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Yakıt Ticareti",
+      "iliski": "Finansal Yatırım"
+    },
+    {
+      "ad": "Toren Doğalgaz Depolama ve Madencilik A.Ş.",
+      "oran": 2.5,
+      "sermaye": "22000000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "",
+      "iliski": "Finansal Yatırım"
+    },
+    {
+      "ad": "Gaz Depo ve Madencilik A.Ş.",
+      "oran": 2.5,
+      "sermaye": "21650000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "",
+      "iliski": "Finansal Yatırım"
+    },
+    {
+      "ad": "Akmerkez Lokantacılık Gıda San. ve Tic. A.Ş.",
+      "oran": 30.5,
+      "sermaye": "100000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Lokanta İşletmeciliği",
+      "iliski": "Finansal Yatırım"
+    },
+    {
+      "ad": "Denkmal İn Dahlem Otto-Hahn-Platz Gmbh",
+      "oran": 88.88,
+      "sermaye": "25000",
+      "paraBirimi": "EUR",
+      "faaliyetKonusu": "İnşaat",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Ooo Rusfen",
+      "oran": 100,
+      "sermaye": "5324374532",
+      "paraBirimi": "RUB",
+      "faaliyetKonusu": "İnşaat",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Toros Agroport Romania S.a",
+      "oran": 100,
+      "sermaye": "54000000",
+      "paraBirimi": "RON",
+      "faaliyetKonusu": "Gübre Ticareti",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Cfs Petrokimya Sanayi A.Ş.",
+      "oran": 100,
+      "sermaye": "15000000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Yatırım",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Techinvestments Mmc",
+      "oran": 100,
+      "sermaye": "170300000",
+      "paraBirimi": "AZN",
+      "faaliyetKonusu": "Yatırım",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Istek Construction",
+      "oran": 50,
+      "sermaye": "110000",
+      "paraBirimi": "KZT",
+      "faaliyetKonusu": "İnşaat",
+      "iliski": "Müşterek Faaliyet"
+    },
+    {
+      "ad": "Tekfen - T Engineering Ortak Girişimi",
+      "oran": 85,
+      "sermaye": "0",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "İnşaat",
+      "iliski": "Müşterek Faaliyet"
+    },
+    {
+      "ad": "Cording Dortmund Hiltropwall Scsp",
+      "oran": 12.58,
+      "sermaye": "0",
+      "paraBirimi": "EUR",
+      "faaliyetKonusu": "İnşaat",
+      "iliski": "Finansal Yatırım"
+    },
+    {
+      "ad": "Berlin Light Jv S.a.r.l",
+      "oran": 9.6,
+      "sermaye": "27196561",
+      "paraBirimi": "EUR",
+      "faaliyetKonusu": "İnşaat",
+      "iliski": "Finansal Yatırım"
+    },
+    {
+      "ad": "Gate Construction",
+      "oran": 100,
+      "sermaye": "100000",
+      "paraBirimi": "KZT",
+      "faaliyetKonusu": "İnşaat",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Socar Polymer Investments Llc",
+      "oran": 10,
+      "sermaye": "101000000",
+      "paraBirimi": "USD",
+      "faaliyetKonusu": "Petrokimya ürünleri üretimi",
+      "iliski": "Finansal Yatırım"
+    },
+    {
+      "ad": "Eurl Tekfen Algerie",
+      "oran": 100,
+      "sermaye": "20000000",
+      "paraBirimi": "DZD",
+      "faaliyetKonusu": "İnşaat",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Tekfen Contruction And Installation W.l.l",
+      "oran": 49,
+      "sermaye": "1000000",
+      "paraBirimi": "QAR",
+      "faaliyetKonusu": "İnşaat",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Tekfen Engineering Usa Inc.",
+      "oran": 100,
+      "sermaye": "1000",
+      "paraBirimi": "USD",
+      "faaliyetKonusu": "Mühendislik",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Tekfen Engineering Uk Ltd",
+      "oran": 100,
+      "sermaye": "1",
+      "paraBirimi": "GBP",
+      "faaliyetKonusu": "Mühendislik",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Tekfen Derince Gayrimenkul A.Ş.",
+      "oran": 100,
+      "sermaye": "38000000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Yatırım",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Tekfen Taşınmaz Yatırım ve Yönetim A.Ş.",
+      "oran": 100,
+      "sermaye": "128500000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Yatırım",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Tekfen Yenilenebilir Enerji Çözümleri A.ş",
+      "oran": 100,
+      "sermaye": "10000000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Enerji",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Babadağ Elektrik Üretim Sanayi A.Ş.",
+      "oran": 100,
+      "sermaye": "151000000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Enerji",
+      "iliski": "Bağlı Ortaklık"
+    }
+  ],
   "kurumsalBilgiler": {
-    "web": "https://www.tekfen.com.tr",
-    "faaliyetAlani": "Holding faaliyetleri, mühendislik ve taahhüt, tarım sanayisi, terminalcilik, yatırım ve gayrimenkul",
+    "web": "https://www.tekfen.com.tr/",
+    "faaliyetAlani": "Tekfen Holding A.Ş., mühendislik ve taahhüt, tarımsal sanayi ile yatırım sektörlerinde üretim, imalat, sanayi ve ticaret alanlarında faaliyet gösteren bağlı ortaklıkları ve iştirakleri vasıtasıyla konsolide bazda yatırım faaliyetleri göstermektedir.",
     "sektorler": [
-      "Borsa İstanbul şirketleri"
+      "MALİ KURULUŞLAR",
+      "HOLDİNGLER VE YATIRIM ŞİRKETLERİ"
     ],
     "islemGorduguPazar": [
-      "Borsa İstanbul Pay Piyasası"
+      "YILDIZ PAZAR"
     ],
-    "kapSirketProfili": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/1470-tekfen-holding-a-s"
+    "kapSirketProfili": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/4028e4a140f2ed720140f31367840112",
+    "merkez": "Kültür Mahallesi, Tekfen Sitesi Budak Sokak, A Blok, No:7 Ulus - Beşiktaş 34340 İstanbul",
+    "yonetimKurulu": [
+      "NEVZAT AVUNÇ",
+      "TANER YALÇIN",
+      "ERDEM ŞAİR",
+      "ÖMER ŞANLI",
+      "MAHMUT ÇELİK",
+      "İSMAİL COŞKUN",
+      "BİRCAN ÜNLÜ",
+      "SİBEL KOÇ",
+      "ESRA ÖZKAN"
+    ],
+    "uretimTesisleri": [
+      "$46"
+    ],
+    "eposta": "tekfen@tekfen.com.tr",
+    "telefon": "(212) 359 33 00",
+    "fax": "(212) 359 33 05",
+    "sirketSuresi": "Süresiz",
+    "odenmisSermaye": "370.000.000 TL",
+    "bagimsizDenetimKurulusu": "GÜNEY BAĞIMSIZ DENETİM VE SERBEST MUHASEBECİ MALİ MÜŞAVİRLİK A.Ş.",
+    "ticaretSicilMemurlugu": "İSTANBUL",
+    "tescilTarihi": "1971-06-11",
+    "ticaretSicilNumarasi": "111233",
+    "vergiDairesi": "İSTANBUL - Büyük Mükellefler Vergi Dairesi Müdürlüğü",
+    "yatirimciIliskileriYetkilileri": [
+      {
+        "ad": "Selma Çubuklu",
+        "gorev": "Yatırımcı İlişkileri Bölümü Müdür Yardımcısı",
+        "telefon": "(212)359 33 33",
+        "eposta": "investor@tekfen.com.tr"
+      }
+    ]
   },
   "borsaBilgileri": {
     "bistKodu": "TKFEN",
     "endeksler": [
+      "BIST KATILIM TUM",
+      "BIST MALİ",
       "BIST 100",
-      "BIST HOLDING VE YATIRIM",
-      "BIST SÜRDÜRÜLEBİLİRLİK",
-      "BIST KATILIM",
-      "BIST TÜM"
+      "BIST SÜRDÜRÜLEBİLİRLİK KATILIM",
+      "BIST KATILIM 30",
+      "BIST HOLDİNG VE YATIRIM",
+      "BIST KATILIM 50",
+      "BIST 500",
+      "BIST KATILIM 100",
+      "BIST İSTANBUL",
+      "BIST TÜM",
+      "BIST 100-30",
+      "BIST YILDIZ",
+      "BIST SÜRDÜRÜLEBİLİRLİK"
     ],
-    "katilimEndeksiUygun": true
+    "katilimEndeksiUygun": true,
+    "halkaArzTarihi": "2007-11-23",
+    "fiiliDolasimOrani": 21.41
   },
   "temettuSermayeGecmisi": [],
   "ozgunAnaliz": {
     "isModeli": "Tekfen Holding; mühendislik ve taahhüt, tarım sanayisi, gübre, terminalcilik, yatırım ve gayrimenkul gibi farklı iş kollarını bir arada yöneten çok sektörlü bir holding yapısına sahiptir. Şirketin performansı, taahhüt projelerinin kârlılığı ile tarım ve gübre tarafındaki piyasa koşullarının birlikte etkisiyle şekillenir.",
+    "sektorelKonum": "TKFEN, klasik tek sektör şirketlerinden farklı olarak taahhüt, tarım ve holding yatırımlarını aynı çatı altında taşır. Bu nedenle şirketi değerlendirirken proje portföyü, iş hacmi, gübre tarafındaki marjlar, nakit pozisyonu ve iştirak katkıları ayrı ayrı incelenmelidir.",
+    "ortaklikYorumu": "Tekfen Holding ortaklık yapısında halka açık payların ve aile ortaklarının birlikte bulunduğu bir yapı görülür. Şirketin kendi payı niteliğindeki kalemler de sermaye piyasası yönetimi açısından takip edilebilir.",
+    "yatirimciNotu": "TKFEN analizinde tek bir faaliyet koluna odaklanmak yanıltıcı olabilir. Holding yapısı nedeniyle taahhüt, tarım, gübre ve yatırım portföyü birlikte okunmalıdır.",
     "gelirKaynaklari": [
       "Mühendislik ve taahhüt projeleri",
       "Tarım sanayisi ve gübre faaliyetleri",
@@ -67,11 +532,30 @@
       "Yurt dışı projelerde kur, ülke ve tahsilat riski",
       "Çok sektörlü yapının dönemsel kârlılık dalgalanması yaratması"
     ],
-    "sektorelKonum": "TKFEN, klasik tek sektör şirketlerinden farklı olarak taahhüt, tarım ve holding yatırımlarını aynı çatı altında taşır. Bu nedenle şirketi değerlendirirken proje portföyü, iş hacmi, gübre tarafındaki marjlar, nakit pozisyonu ve iştirak katkıları ayrı ayrı incelenmelidir.",
-    "ortaklikYorumu": "Tekfen Holding ortaklık yapısında halka açık payların ve aile ortaklarının birlikte bulunduğu bir yapı görülür. Şirketin kendi payı niteliğindeki kalemler de sermaye piyasası yönetimi açısından takip edilebilir.",
-    "temettuYorumu": "TKFEN'in temettü potansiyeli dönemsel kâr, proje nakit akışları, yatırım ihtiyacı ve holding seviyesindeki finansal esneklikle ilişkilidir. Taahhüt tarafındaki büyük projeler ve tarım segmenti sonuçları temettü kapasitesini etkileyebilir.",
-    "yatirimciNotu": "TKFEN analizinde tek bir faaliyet koluna odaklanmak yanıltıcı olabilir. Holding yapısı nedeniyle taahhüt, tarım, gübre ve yatırım portföyü birlikte okunmalıdır."
+    "temettuYorumu": "TKFEN'in temettü potansiyeli dönemsel kâr, proje nakit akışları, yatırım ihtiyacı ve holding seviyesindeki finansal esneklikle ilişkilidir. Taahhüt tarafındaki büyük projeler ve tarım segmenti sonuçları temettü kapasitesini etkileyebilir."
   },
+  "seo": {
+    "title": "TKFEN Hisse Bilgileri: Tekfen Holding Ortaklık Yapısı ve Faaliyet Alanları",
+    "description": "TKFEN hisse kodlu Tekfen Holding hakkında ortaklık yapısı, mühendislik ve taahhüt, tarım sanayisi, terminalcilik, BIST endeksleri ve şirket profili."
+  },
+  "veriDogrulama": {
+    "sonDogrulamaTarihi": "2026-07-21",
+    "kaynak": "KAP",
+    "kaynakUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/4028e4a140f2ed720140f31367840112"
+  },
+  "degisiklikGecmisi": [
+    {
+      "tarih": "2026-07-21",
+      "baslik": "BIST TÜM künye standardı doğrulandı",
+      "aciklama": "Hisse kodu, KAP bağlantısı, kurumsal bilgiler, faaliyet, sektör, pazar ve endeks alanları BIST TÜM listesiyle eşleştirildi."
+    },
+    {
+      "tarih": "2026-07-21",
+      "baslik": "KAP şirket bilgileri doğrulandı",
+      "aciklama": "Kurumsal bilgiler, ortaklık yapısı ve borsa bilgileri resmi KAP profiliyle karşılaştırıldı."
+    }
+  ],
+  "yasalUyari": "Bu sayfadaki bilgiler genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir. Anlık fiyat/işlem verisi sunmaz; oranlar dönemsel finansal tablolara ve ilgili kapanış verilerine dayanır.",
   "seoSorular": [
     {
       "soru": "TKFEN ne iş yapar?",
@@ -109,23 +593,6 @@
       "kod": "GUBRF",
       "ad": "Gübre Fabrikaları",
       "aciklama": "Gübre ve tarım girdileri tarafındaki piyasa koşullarını karşılaştırmak için izlenebilecek şirketlerden biridir."
-    }
-  ],
-  "yasalUyari": "Bu sayfadaki bilgiler genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir. Anlık fiyat/işlem verisi sunmaz; oranlar dönemsel finansal tablolara ve ilgili kapanış verilerine dayanır.",
-  "seo": {
-    "title": "TKFEN Hisse Bilgileri: Tekfen Holding Ortaklık Yapısı ve Faaliyet Alanları",
-    "description": "TKFEN hisse kodlu Tekfen Holding hakkında ortaklık yapısı, mühendislik ve taahhüt, tarım sanayisi, terminalcilik, BIST endeksleri ve şirket profili."
-  },
-  "veriDogrulama": {
-    "sonDogrulamaTarihi": "2026-07-21",
-    "kaynak": "KAP",
-    "kaynakUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/1470-tekfen-holding-a-s"
-  },
-  "degisiklikGecmisi": [
-    {
-      "tarih": "2026-07-21",
-      "baslik": "BIST TÜM künye standardı doğrulandı",
-      "aciklama": "Hisse kodu, KAP bağlantısı, faaliyet, sektör, pazar ve endeks alanları BIST TÜM listesiyle eşleştirildi."
     }
   ]
 }
