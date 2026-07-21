@@ -5,14 +5,12 @@ export const metadata = {
 };
 import Image from "next/image";
 import Link from "next/link";
-import { newsItems as tumHaberler } from "@/app/data/news";
 import pageUpdates from "@/lib/page-updates.generated.json";
 import { IconTile } from "@/components/icons/IconTile";
 import type { CategoryIconName } from "@/components/icons/CategoryIcon";
 import HaberKart from "@/components/HaberKart";
 import PopulerAramalar from "@/components/PopulerAramalar";
 import {
-  normalizeNewsItems,
   getAllNews,
   ANA_SAYFA_HABER_LIMIT,
 } from "@/lib/haberler";
@@ -219,7 +217,7 @@ function slugBaslikYap(slug: string) {
 }
 
 function haberBasligiBul(route: string) {
-  const haber = normalizeNewsItems(tumHaberler).find(
+  const haber = getAllNews().find(
     (item) => normalizePath(item.href) === route
   );
 

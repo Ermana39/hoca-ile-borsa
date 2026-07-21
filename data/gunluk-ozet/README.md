@@ -25,6 +25,9 @@ kaybolmaz, her gün kendi kalıcı sayfasında durur.
 
 3. **Verileri güncelle** (sayıları o günün değerleriyle değiştir):
    - `bist`: endeks kapanışı, günlük yüzde değişim, toplam hacim.
+     Buradaki BIST 100 kapanışı, halka arz performans sayfalarındaki aynı dönem
+     endeks karşılaştırmasında da otomatik kullanılır; halka arz verisine ayrıca
+     BIST 100 değeri girilmez.
    - `yukselenler`, `dusenler`, `hacimliler`, `paraGirisi`, `paraCikisi`:
      her biri **5 satır**, `{ "kod": "THYAO", "deger": "..." }` biçiminde.
    - `kurumAlis`, `kurumSatis`, `kurumHacim`: her biri 5 satır,
@@ -50,6 +53,19 @@ kaybolmaz, her gün kendi kalıcı sayfasında durur.
    - Ana sayfadaki haber akışında ve `/haberler` arşivinde otomatik en üstte
      görünür (en yeni tarih en üstte).
    - `/borsa/gunluk-borsa-ozeti` (çıplak adres) her zaman en güncel güne gider.
+
+## Halka arz karşılaştırmasına etkisi
+
+Halka arz performans sistemi BIST 100 değerlerini bu arşivden tarih üzerinden
+okur. Başlangıç için hissenin ilk işlem gününden önceki son günlük özet
+kapanışı, bitiş için halka arz kapanış fiyatlarıyla aynı tarihli özet kullanılır.
+Günlük özet arşivinden eski halka arzların başlangıç kapanışları
+`data/halka-arz-bist-baslangiclari.ts` dosyasında bir kez saklanır; bitiş değeri
+yine günlük özetten otomatik alınır.
+
+Halka arz kapanışları güncellendiğinde `data/halka-arz-sonuclari.ts` içindeki
+`halkaArzKapanisTarihi` alanını bir kez güncellemek yeterlidir. Marj ve BIST 100
+karşılaştırması otomatik hesaplanır.
 
 ---
 

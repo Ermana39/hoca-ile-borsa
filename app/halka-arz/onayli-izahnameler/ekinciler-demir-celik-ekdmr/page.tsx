@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import type { ReactNode } from "react";
+import HalkaArzKarnesi from "@/components/HalkaArzKarnesi";
 import HalkaArzSSS from "@/components/HalkaArzSSS";
 
 export const metadata: Metadata = {
@@ -269,6 +270,15 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
             yer almaktadır.
           </p>
         </section>
+
+        <HalkaArzKarnesi
+          sirketAdi="Ekinciler Demir ve Çelik Sanayi A.Ş."
+          kod="EKDMR"
+          talepTarihi="13-14-15 Mayıs 2026"
+          halkaArzFiyati="45,00 TL"
+          dagitimYontemi="Bireysele eşit / yüksek başvuruluya oransal"
+          toplamPay="52.000.000 Lot"
+        />
 
         <div className="space-y-8">
           <Section title="Temel Bilgiler">

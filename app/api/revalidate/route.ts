@@ -1,8 +1,8 @@
 import crypto from "crypto";
 import { revalidatePath, revalidateTag } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
-import { newsItems } from "@/app/data/news";
 import { HABER_KATEGORILERI } from "@/lib/haber-kategorileri";
+import { getAllNews } from "@/lib/haberler";
 
 // Gizli anahtarları zamanlama saldırılarına karşı sabit sürede karşılaştırır.
 function safeEqual(a: string, b: string) {
@@ -107,7 +107,7 @@ export async function POST(request: NextRequest) {
       "/",
       "/haberler",
       "/news-sitemap.xml",
-      ...newsItems.map((item) => item.href),
+      ...getAllNews().map((item) => item.href),
       ...HABER_KATEGORILERI.map(
         (kategori) => `/haberler/kategori/${kategori.slug}`
       ),

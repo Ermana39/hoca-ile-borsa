@@ -199,6 +199,7 @@ const nextConfig = {
     ],
     "/hisse/[sembol]": [
       "./data/hisseler/**/*.json",
+      "./data/haberler/**/*.json",
     ],
     "/hisse/[sembol]/temettu": [
       "./data/hisseler/**/*.json",
@@ -216,18 +217,42 @@ const nextConfig = {
     ],
     // Günlük borsa özetleri haber akışına da katıldığından, getAllNews kullanan
     // tüm route'lar bu JSON'lara ihtiyaç duyar.
-    "/": ["./data/gunluk-ozet/**/*.json"],
+    "/": [
+      "./data/gunluk-ozet/**/*.json",
+      "./data/haberler/**/*.json",
+    ],
+    "/haber/**": ["./data/haberler/**/*.json"],
     "/borsa/gunluk-borsa-ozeti": ["./data/gunluk-ozet/**/*.json"],
     "/borsa/gunluk-borsa-ozeti/[tarih]": ["./data/gunluk-ozet/**/*.json"],
-    "/haberler": ["./data/gunluk-ozet/**/*.json"],
-    "/haberler/sayfa/[sayfa]": ["./data/gunluk-ozet/**/*.json"],
-    "/haberler/kategori/[kategori]": ["./data/gunluk-ozet/**/*.json"],
+    "/haberler": [
+      "./data/gunluk-ozet/**/*.json",
+      "./data/haberler/**/*.json",
+    ],
+    "/haberler/sayfa/[sayfa]": [
+      "./data/gunluk-ozet/**/*.json",
+      "./data/haberler/**/*.json",
+    ],
+    "/haberler/kategori/[kategori]": [
+      "./data/gunluk-ozet/**/*.json",
+      "./data/haberler/**/*.json",
+    ],
     "/haberler/kategori/[kategori]/sayfa/[sayfa]": [
       "./data/gunluk-ozet/**/*.json",
+      "./data/haberler/**/*.json",
     ],
+    "/halka-arz/onayli-izahnameler/**": [
+      "./data/haberler/**/*.json",
+      "./data/gunluk-ozet/**/*.json",
+    ],
+    "/halka-arz/tavan-serisi": ["./data/gunluk-ozet/**/*.json"],
+    "/yazar/[slug]": ["./data/haberler/**/*.json"],
+    "/news-sitemap.xml": ["./data/haberler/**/*.json"],
+    "/rss.xml": ["./data/haberler/**/*.json"],
+    "/api/revalidate": ["./data/haberler/**/*.json"],
     "/sitemap.xml": [
       "./data/gunluk-ozet/**/*.json",
       "./data/halka-arz/**/*.json",
+      "./data/haberler/**/*.json",
       // Temettü alt sayfası rotaları hisse JSON'larından türetilir.
       "./data/hisseler/**/*.json",
     ],

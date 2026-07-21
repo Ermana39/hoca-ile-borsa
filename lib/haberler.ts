@@ -2,6 +2,10 @@ import { newsItems as tumHaberler } from "@/app/data/news";
 import { getGunlukOzetHaberKayitlari } from "@/lib/gunluk-ozet";
 import { getHaberDosyaTarihiFromHref } from "@/lib/haber-tarih";
 import {
+  getYayinlanmisHaberKayitlari,
+  haberKaydiniListeOgesine,
+} from "@/lib/haber-kayitlari";
+import {
   HABER_SAYFA_BOYUTU,
   isHaberKategori,
   type HaberKategori,
@@ -14,6 +18,7 @@ export type NewsItem = {
   image?: string;
   alt?: string;
   publishedAt: string;
+  updatedAt?: string;
   category?: HaberKategori;
   yazarSlug?: string;
   ilgiliHisseler?: string[];
@@ -52,6 +57,8 @@ export function normalizeNewsItems(data: unknown): NewsItem[] {
               : "/placeholder.png",
         alt: item.alt || item.title || "",
         publishedAt: publishedAt ?? "",
+        updatedAt:
+          typeof item.updatedAt === "string" ? item.updatedAt : undefined,
         category:
           item.category && isHaberKategori(item.category)
             ? item.category
@@ -79,10 +86,23 @@ export function normalizeNewsItems(data: unknown): NewsItem[] {
 }
 
 export function getAllNews(): NewsItem[] {
-  // Elle girilen haberler + günlük borsa özetleri (otomatik). Böylece her yeni
-  // günlük özet, ayrıca bir şey yapmadan haber akışına ve /haberler arşivine
-  // tarihe göre doğru sırada düşer. normalizeNewsItems hepsini birlikte sıralar.
-  return normalizeNewsItems([...tumHaberler, ...getGunlukOzetHaberKayitlari()]);
+  const ortakSistemHaberleri = getYayinlanmisHaberKayitlari().map(
+    haberKaydiniListeOgesine
+  );
+
+  // Yeni JSON sistemi ilk sırada tutulur. Bir eski haber ortak sisteme
+  // taşınırken aynı URL geçici olarak iki kaynakta yer alsa bile kullanıcıya ve
+  // sitemap'e yalnızca ortak sistemdeki kayıt yansır.
+  const benzersiz = new Map<string, Partial<NewsItem>>();
+  for (const item of [
+    ...ortakSistemHaberleri,
+    ...tumHaberler,
+    ...getGunlukOzetHaberKayitlari(),
+  ]) {
+    if (!benzersiz.has(item.href)) benzersiz.set(item.href, item);
+  }
+
+  return normalizeNewsItems(Array.from(benzersiz.values()));
 }
 
 export const ANA_SAYFA_HABER_LIMIT = 14;
@@ -122,7 +142,7 @@ export function getIlgiliHaberler(
 
 // Bir haberin etiketli ilgili hisse kodlarını href üzerinden bulur.
 export function getHaberIlgiliHisseler(href: string): string[] {
-  return tumHaberler.find((item) => item.href === href)?.ilgiliHisseler ?? [];
+  return getAllNews().find((item) => item.href === href)?.ilgiliHisseler ?? [];
 }
 
 // Bir haberin kategorisini href üzerinden bulur.

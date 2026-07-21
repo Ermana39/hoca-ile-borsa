@@ -16,12 +16,12 @@ export const metadata: Metadata = {
 
 const statikOnayliIzahnameler = [
   {
-    kod: "BETA",
+    kod: "BETAE",
     sirket: "Beta Enerji ve Teknoloji A.Ş.",
     href: "/halka-arz/onayli-izahnameler/beta-enerji-teknoloji-betae",
   },
   {
-    kod: "EKNDC",
+    kod: "EKDMR",
     sirket: "Ekinciler Demir ve Çelik Sanayi A.Ş.",
     href: "/halka-arz/onayli-izahnameler/ekinciler-demir-celik-ekdmr",
   },

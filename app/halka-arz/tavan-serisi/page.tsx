@@ -1,10 +1,22 @@
 import type { Metadata } from "next";
-import { halkaArzSonuclari as baseHalkaArzVerileri } from "@/data/halka-arz-sonuclari";
+import Link from "next/link";
+import {
+  halkaArzKapanisTarihi,
+  halkaArzSonuclari as baseHalkaArzVerileri,
+} from "@/data/halka-arz-sonuclari";
+import {
+  getHalkaArzBistKarsilastirmasi,
+  getHalkaArzGetirisi,
+  puanMetni,
+  yuzdeMetni,
+} from "@/lib/halka-arz-performans";
+import { getOnayliIzahnameListesi } from "@/lib/halka-arz";
+import { hisseVarMi } from "@/lib/hisseler";
 
 const canonical = "https://www.hocaileborsa.com/halka-arz/tavan-serisi";
 const title = "2026 Halka Arz Tavan Serisi Takibi | Güncel Halka Arz Performansları";
 const description =
-  "2026 halka arz tavan serisi takibi: işlem tarihi, katılımcı sayısı, dağıtım şekli, arz fiyatı, gün sonu kapanış fiyatı, marj hesabı ve tavan serisi yorumlama rehberi.";
+  "2026 halka arz tavan serisi takibi: arz fiyatı, gün sonu kapanışı, otomatik marj hesabı ve aynı dönemdeki BIST 100 performans karşılaştırması.";
 
 export const metadata: Metadata = {
   title,
@@ -18,6 +30,7 @@ export const metadata: Metadata = {
     "2026 halka arz performansı",
     "halka arz marj hesaplama",
     "halka arz gün sonu fiyatı",
+    "halka arz BIST 100 karşılaştırması",
   ],
   openGraph: {
     title,
@@ -27,152 +40,82 @@ export const metadata: Metadata = {
   },
 };
 
+const onayliIzahnameYollari = new Map(
+  getOnayliIzahnameListesi().flatMap((item) =>
+    item.kod
+      ? [
+          [
+            item.kod.toLocaleUpperCase("tr-TR"),
+            `/halka-arz/onayli-izahnameler/${item.klasor}`,
+          ] as const,
+        ]
+      : []
+  )
+);
 
-const saraeHalkaArz = {
-  hisse: "SARAE",
-  islemTarihi: "17 Tem 2026",
-  katilimciSayisi: "729.560",
-  dagitimSekli: "BİREYSELE %38",
-  arzFiyati: "70.00",
-  guncelFiyat: "84.70",
-  marj: "21%",
-  konsorsiyum: "TERA",
-};
+function hisseDetayHedefi(hisse: string) {
+  const kod = hisse.toLocaleUpperCase("tr-TR");
+  const onayliIzahnameYolu = onayliIzahnameYollari.get(kod);
 
-const ssaatHalkaArz = {
-  hisse: "SSAAT",
-  islemTarihi: "16 Tem 2026",
-  katilimciSayisi: "693.138",
-  dagitimSekli: "BİREYSELE %60",
-  arzFiyati: "56.00",
-  guncelFiyat: "44.00",
-  marj: "-21%",
-  konsorsiyum: "GARANTİ-HALK",
-};
-
-const isveaHalkaArz = {
-  hisse: "ISVEA",
-  islemTarihi: "10 Tem 2026",
-  katilimciSayisi: "901.609",
-  dagitimSekli: "BİREYSELE %60",
-  arzFiyati: "20.90",
-  guncelFiyat: "30.26",
-  marj: "45%",
-  konsorsiyum: "AHLATÇI-HALK",
-};
-
-const ekimHalkaArz = {
-  hisse: "EKIM",
-  islemTarihi: "09 Tem 2026",
-  katilimciSayisi: "707.851",
-  dagitimSekli: "BİREYSELE %70",
-  arzFiyati: "30.26",
-  guncelFiyat: "22.70",
-  marj: "-25%",
-  konsorsiyum: "AK-VAKIF",
-};
-
-const goldaHalkaArz = {
-  hisse: "GOLDA",
-  islemTarihi: "08 Tem 2026",
-  katilimciSayisi: "749.674",
-  dagitimSekli: "TAMAMEN EŞİT",
-  arzFiyati: "9.20",
-  guncelFiyat: "19.69",
-  marj: "114%",
-  konsorsiyum: "GEDİK",
-};
-
-const orzaxHalkaArz = {
-  hisse: "ORZAX",
-  islemTarihi: "07 Tem 2026",
-  katilimciSayisi: "974.597",
-  dagitimSekli: "BİREYSELE %57",
-  arzFiyati: "69.00",
-  guncelFiyat: "101.00",
-  marj: "46%",
-  konsorsiyum: "İNFO",
-};
-
-const sohoeHalkaArz = {
-  hisse: "SOHOE",
-  islemTarihi: "06 Tem 2026",
-  katilimciSayisi: "660.121",
-  dagitimSekli: "TAMAMEN EŞİT",
-  arzFiyati: "15.00",
-  guncelFiyat: "12.45",
-  marj: "-17%",
-  konsorsiyum: "İNTEGRAL",
-};
-
-const guncelHalkaArzVerileri: Record<
-  string,
-  {
-    guncelFiyat: string;
-    marj: string;
+  if (onayliIzahnameYolu) {
+    return {
+      href: onayliIzahnameYolu,
+      etiket: `${kod} onaylı izahname sayfasını aç`,
+      baslik: "Onaylı izahnameyi aç",
+    };
   }
-> = {
-  SARAE: { guncelFiyat: "84.70", marj: "21%" },
-  SSAAT: { guncelFiyat: "44.00", marj: "-21%" },
-  ISVEA: { guncelFiyat: "30.26", marj: "45%" },
-  EKIM: { guncelFiyat: "22.70", marj: "-25%" },
-  GOLDA: { guncelFiyat: "19.69", marj: "114%" },
-  ORZAX: { guncelFiyat: "101.00", marj: "46%" },
-  SOHOE: { guncelFiyat: "12.45", marj: "-17%" },
-  BETAE: { guncelFiyat: "89.00", marj: "123%" },
-  EKDMR: { guncelFiyat: "54.00", marj: "20%" },
-  AAGYO: { guncelFiyat: "14.74", marj: "-30%" },
-  MCARD: { guncelFiyat: "145.80", marj: "83%" },
-  LXGYO: { guncelFiyat: "12.80", marj: "6%" },
-  GENKM: { guncelFiyat: "12.34", marj: "12%" },
-  SVGYO: { guncelFiyat: "12.70", marj: "249%" },
-  EMPAE: { guncelFiyat: "58.80", marj: "167%" },
-  ATATR: { guncelFiyat: "15.97", marj: "43%" },
-  BESTE: { guncelFiyat: "34.60", marj: "135%" },
-  AKHAN: { guncelFiyat: "41.30", marj: "91%" },
-  NETCD: { guncelFiyat: "144.80", marj: "215%" },
-  UCAYM: { guncelFiyat: "29.00", marj: "62%" },
-  ZGYO: { guncelFiyat: "38.72", marj: "295%" },
-  FRMPL: { guncelFiyat: "32.24", marj: "8%" },
-  MEYSU: { guncelFiyat: "12.70", marj: "69%" },
-  ARFYE: { guncelFiyat: "31.30", marj: "61%" },
-};
 
-const halkaArzVerileri = [
-  saraeHalkaArz,
-  ssaatHalkaArz,
-  isveaHalkaArz,
-  ekimHalkaArz,
-  goldaHalkaArz,
-  orzaxHalkaArz,
-  sohoeHalkaArz,
-  ...baseHalkaArzVerileri
-    .filter((item) => item.hisse !== "SARAE" && item.hisse !== "SSAAT" && item.hisse !== "ISVEA" && item.hisse !== "EKIM" && item.hisse !== "GOLDA" && item.hisse !== "ORZAX" && item.hisse !== "SOHOE")
-    .map((item) =>
-      guncelHalkaArzVerileri[item.hisse]
-        ? { ...item, ...guncelHalkaArzVerileri[item.hisse] }
-        : item
-    ),
-];
+  if (hisseVarMi(kod)) {
+    return {
+      href: `/hisse/${kod.toLocaleLowerCase("tr-TR")}`,
+      etiket: `${kod} hisse künye sayfasını aç`,
+      baslik: "Hisse künye sayfasını aç",
+    };
+  }
 
-
-function marjRengi(marj: string) {
-  const sayi = marjDegeri(marj);
-
-  return sayi < 0 ? "bg-red-500" : "bg-green-500";
+  return undefined;
 }
 
-function marjDegeri(marj: string) {
-  return Number(marj.replace("%", "").replace("+", "").replace(",", ".").trim());
+const halkaArzVerileri = baseHalkaArzVerileri.map((item) => {
+  const hisseGetirisi = getHalkaArzGetirisi(item) ?? 0;
+  return {
+    ...item,
+    hisseGetirisi,
+    marj: yuzdeMetni(hisseGetirisi, 0),
+    bistKarsilastirmasi: getHalkaArzBistKarsilastirmasi(item),
+    detayHedefi: hisseDetayHedefi(item.hisse),
+  };
+});
+
+function marjRengi(marj: number) {
+  return marj < 0 ? "bg-red-500" : "bg-green-500";
 }
 
-const pozitifHalkaArzlar = halkaArzVerileri.filter((item) => marjDegeri(item.marj) >= 0);
-const negatifHalkaArzlar = halkaArzVerileri.filter((item) => marjDegeri(item.marj) < 0);
+function farkRengi(fark?: number) {
+  if (fark === undefined) return "bg-slate-100 text-slate-500";
+  return fark < 0
+    ? "bg-rose-100 text-rose-800"
+    : "bg-emerald-100 text-emerald-800";
+}
+
+function isoTarihMetni(value: string) {
+  return new Date(`${value}T12:00:00+03:00`).toLocaleDateString("tr-TR", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+  });
+}
+
+const bistKaynak = halkaArzVerileri.find(
+  (item) => item.bistKarsilastirmasi
+)?.bistKarsilastirmasi;
+const pozitifHalkaArzlar = halkaArzVerileri.filter((item) => item.hisseGetirisi >= 0);
+const negatifHalkaArzlar = halkaArzVerileri.filter((item) => item.hisseGetirisi < 0);
 const enYuksekMarjliHalkaArz = halkaArzVerileri.reduce((onceki, simdiki) =>
-  marjDegeri(simdiki.marj) > marjDegeri(onceki.marj) ? simdiki : onceki
+  simdiki.hisseGetirisi > onceki.hisseGetirisi ? simdiki : onceki
 );
 const enDusukMarjliHalkaArz = halkaArzVerileri.reduce((onceki, simdiki) =>
-  marjDegeri(simdiki.marj) < marjDegeri(onceki.marj) ? simdiki : onceki
+  simdiki.hisseGetirisi < onceki.hisseGetirisi ? simdiki : onceki
 );
 
 function katilimciDegeri(katilimci: string) {
@@ -181,7 +124,7 @@ function katilimciDegeri(katilimci: string) {
 }
 
 const ortalamaGetiri = Math.round(
-  halkaArzVerileri.reduce((toplam, item) => toplam + marjDegeri(item.marj), 0) /
+  halkaArzVerileri.reduce((toplam, item) => toplam + item.hisseGetirisi, 0) /
     (halkaArzVerileri.length || 1)
 );
 
@@ -222,6 +165,16 @@ const tabloOkumaNotlari = [
     baslik: "Marj",
     aciklama:
       "Halka arz fiyatına göre fiyatın yüzde kaç primli veya iskontolu olduğunu gösterir. Pozitif marj kâr bölgesini, negatif marj halka arz fiyatının altını ifade eder.",
+  },
+  {
+    baslik: "BIST 100 getirisi",
+    aciklama:
+      "Hissenin ilk işlem gününden önceki son BIST 100 kapanışı ile güncel veri tarihindeki endeks kapanışı arasındaki değişimi gösterir.",
+  },
+  {
+    baslik: "BIST 100'e göre fark",
+    aciklama:
+      "Halka arz getirisinden aynı dönemdeki BIST 100 getirisi çıkarılır. Pozitif değer hissenin endeksten daha iyi performans gösterdiğini ifade eder.",
   },
 ];
 
@@ -273,6 +226,11 @@ const faqItems = [
       "Marj, gün sonu kapanış fiyatı ile halka arz fiyatı arasındaki farkın halka arz fiyatına bölünmesiyle hesaplanır. Sonuç yüzde olarak gösterilir.",
   },
   {
+    question: "Halka arz getirisi BIST 100 ile nasıl karşılaştırılır?",
+    answer:
+      "BIST 100 için başlangıç değeri olarak hissenin ilk işlem gününden önceki son seans kapanışı, bitiş değeri olarak halka arz fiyatlarıyla aynı tarihli günlük özet kapanışı kullanılır. Halka arz getirisinden BIST 100 getirisi çıkarılarak getiri farkı yüzde puan cinsinden hesaplanır.",
+  },
+  {
     question: "Tavan serisi bitince hisse mutlaka düşer mi?",
     answer:
       "Hayır. Tavan serisinin bitmesi oynaklığın arttığını gösterebilir; hisse yeniden toparlanabilir, yataya dönebilir veya satış baskısıyla düşebilir. Karar verirken hacim, değerleme ve piyasa koşulları birlikte değerlendirilmelidir.",
@@ -298,7 +256,7 @@ export default function HalkaArzTavanSerisiPage() {
         "@type": "Dataset",
         name: "2026 Halka Arz Tavan Serisi Takip Tablosu",
         description:
-          "2026 yılında işlem görmeye başlayan halka arzların arz fiyatı, kapanış fiyatı, marjı, katılımcı sayısı ve konsorsiyum bilgileri.",
+          "2026 yılında işlem görmeye başlayan halka arzların arz fiyatı, kapanış fiyatı, otomatik hesaplanan marjı ve aynı dönemdeki BIST 100 karşılaştırması.",
         url: canonical,
         variableMeasured: [
           "Hisse",
@@ -308,6 +266,8 @@ export default function HalkaArzTavanSerisiPage() {
           "Arz fiyatı",
           "Gün sonu kapanış fiyatı",
           "Marj",
+          "Aynı dönem BIST 100 getirisi",
+          "BIST 100'e göre getiri farkı",
           "Konsorsiyum",
         ],
       },
@@ -363,14 +323,29 @@ export default function HalkaArzTavanSerisiPage() {
           </h1>
           <p className="mt-3 max-w-4xl text-sm leading-7 text-slate-600">
             2026 yılında halka arz olan şirketlerin işlem tarihi, katılımcı sayısı,
-            dağıtım şekli, arz fiyatı, gün sonu kapanış fiyatı, halka arzdan bugüne marjı ve
-            konsorsiyum bilgileri aşağıdaki tabloda yer almaktadır.
+            dağıtım şekli, arz fiyatı, gün sonu kapanış fiyatı, otomatik hesaplanan
+            marjı ve aynı dönemdeki BIST 100 karşılaştırması aşağıdaki tabloda yer
+            almaktadır.
           </p>
 
           <div className="mt-5 rounded-2xl border border-blue-200 bg-blue-50 p-4 text-sm font-medium leading-7 text-blue-900">
-            Bu sayfadaki kapanış fiyatları ve marj oranları gün içerisinde anlık olarak
-            güncellenmez. Veriler, Borsa İstanbul seans kapanışı sonrasında gün sonu
-            kapanış rakamlarına göre güncellenmektedir.
+            Halka arz kapanış fiyatları {isoTarihMetni(halkaArzKapanisTarihi)}
+            {" "}seansına aittir. Marj otomatik hesaplanır. BIST 100 bitiş seviyesi
+            günlük borsa özetinden; arşiv öncesi başlangıç seviyeleri kayıtlı tarihsel
+            kapanışlardan alınır.
+            {bistKaynak && (
+              <>
+                {" "}
+                <Link
+                  href={`/borsa/gunluk-borsa-ozeti/${bistKaynak.bitisSlug}`}
+                  prefetch={false}
+                  className="font-bold underline underline-offset-2"
+                >
+                  Kullanılan güncel BIST 100 özetini aç
+                </Link>
+                .
+              </>
+            )}
           </div>
         </section>
 
@@ -462,11 +437,24 @@ export default function HalkaArzTavanSerisiPage() {
 
           <div className="mb-4 rounded-2xl border border-sky-200 bg-sky-50 px-4 py-3 text-xs font-semibold leading-6 text-sky-900 md:text-sm">
             Tablodaki “Güncel Fiyat” alanı, gün içi anlık fiyatı değil; gün sonunda
-            güncellenen kapanış fiyatını ifade eder.
+            güncellenen kapanış fiyatını ifade eder. BIST karşılaştırmasının başlangıcı
+            günlük özet arşivinden veya kayıtlı tarihsel kapanıştan alınır.
           </div>
 
           <div className="overflow-x-auto rounded-2xl border border-slate-300">
-            <table className="min-w-[980px] w-full border-collapse text-center text-xs font-bold md:text-sm">
+            <table className="min-w-[1080px] w-full table-fixed border-collapse text-center text-xs font-bold">
+              <colgroup>
+                <col className="w-[8%]" />
+                <col className="w-[9%]" />
+                <col className="w-[9%]" />
+                <col className="w-[11%]" />
+                <col className="w-[7%]" />
+                <col className="w-[7%]" />
+                <col className="w-[6%]" />
+                <col className="w-[10%]" />
+                <col className="w-[11%]" />
+                <col className="w-[22%]" />
+              </colgroup>
               <thead>
                 <tr>
                   <th className="border border-slate-800 bg-yellow-300 px-2 py-3 text-red-700">
@@ -484,11 +472,19 @@ export default function HalkaArzTavanSerisiPage() {
                   <th className="border border-slate-800 bg-yellow-300 px-2 py-3 text-red-700">
                     ARZ FİYATI
                   </th>
-                  <th className="border border-slate-800 bg-yellow-300 px-2 py-3 text-red-700">
-                    GÜN SONU KAPANIŞ FİYATI
+                  <th className="border border-slate-800 bg-yellow-300 px-1 py-2.5 leading-tight text-red-700">
+                    <span className="block">GÜN SONU</span>
+                    <span className="block">KAPANIŞ</span>
+                    <span className="block">FİYATI</span>
                   </th>
                   <th className="border border-slate-800 bg-yellow-300 px-2 py-3 text-red-700">
                     MARJ
+                  </th>
+                  <th className="border border-slate-800 bg-sky-700 px-2 py-3 text-white">
+                    BIST 100 GETİRİSİ
+                  </th>
+                  <th className="border border-slate-800 bg-blue-800 px-2 py-3 text-white">
+                    BIST 100&apos;E GÖRE FARK
                   </th>
                   <th className="border border-slate-800 bg-slate-700 px-2 py-3 text-white">
                     KONSORSİYUM
@@ -500,7 +496,32 @@ export default function HalkaArzTavanSerisiPage() {
                 {halkaArzVerileri.map((item) => (
                   <tr key={item.hisse}>
                     <td className="border border-slate-800 bg-yellow-300 px-2 py-2 text-slate-950">
-                      {item.hisse}
+                      {item.detayHedefi ? (
+                        <Link
+                          href={item.detayHedefi.href}
+                          aria-label={item.detayHedefi.etiket}
+                          title={item.detayHedefi.baslik}
+                          className="group inline-flex w-full max-w-[5.5rem] items-center justify-center gap-1 rounded-lg border border-blue-900 bg-blue-700 px-1.5 py-1.5 font-extrabold text-white shadow-sm ring-1 ring-white/30 transition hover:-translate-y-0.5 hover:bg-blue-800 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-700 focus-visible:ring-offset-2"
+                        >
+                          {item.hisse}
+                          <svg
+                            aria-hidden="true"
+                            viewBox="0 0 20 20"
+                            fill="none"
+                            className="h-3.5 w-3.5 shrink-0 transition-transform group-hover:translate-x-0.5"
+                          >
+                            <path
+                              d="M4 10h11m-4-4 4 4-4 4"
+                              stroke="currentColor"
+                              strokeWidth="2"
+                              strokeLinecap="round"
+                              strokeLinejoin="round"
+                            />
+                          </svg>
+                        </Link>
+                      ) : (
+                        item.hisse
+                      )}
                     </td>
                     <td className="border border-slate-800 bg-yellow-100 px-2 py-2 text-slate-950">
                       {item.islemTarihi}
@@ -514,15 +535,29 @@ export default function HalkaArzTavanSerisiPage() {
                     <td className="border border-slate-800 bg-blue-100 px-2 py-2 text-slate-950">
                       {item.arzFiyati}
                     </td>
-                    <td className="border border-slate-800 bg-blue-100 px-2 py-2 text-slate-950">
+                    <td className="border border-slate-800 bg-blue-100 px-1 py-2 text-slate-950">
                       {item.guncelFiyat}
                     </td>
                     <td
                       className={`border border-slate-800 px-2 py-2 text-slate-950 ${marjRengi(
-                        item.marj
+                        item.hisseGetirisi
                       )}`}
                     >
                       {item.marj}
+                    </td>
+                    <td className="border border-slate-800 bg-sky-100 px-2 py-2 text-sky-950">
+                      {item.bistKarsilastirmasi
+                        ? yuzdeMetni(item.bistKarsilastirmasi.bist100Getirisi)
+                        : "Başlangıç verisi yok"}
+                    </td>
+                    <td
+                      className={`border border-slate-800 px-2 py-2 ${farkRengi(
+                        item.bistKarsilastirmasi?.getiriFarkiPuan
+                      )}`}
+                    >
+                      {item.bistKarsilastirmasi
+                        ? puanMetni(item.bistKarsilastirmasi.getiriFarkiPuan)
+                        : "Hesaplanamadı"}
                     </td>
                     <td className="border border-slate-800 bg-emerald-100 px-2 py-2 text-slate-950">
                       {item.konsorsiyum}
@@ -534,9 +569,9 @@ export default function HalkaArzTavanSerisiPage() {
           </div>
 
           <p className="mt-4 text-xs leading-6 text-slate-500">
-            Gün sonu kapanış fiyatı ve marj bilgileri piyasa hareketlerine göre değişebilir.
-            Bu tablo gün içinde anlık veri sunmaz; kapanış rakamları gün sonunda güncellenir.
-            Bu tablo bilgilendirme amaçlıdır, yatırım tavsiyesi değildir.
+            Gün sonu kapanış fiyatları piyasa hareketlerine göre değişebilir. Marj,
+            BIST 100 getirisi ve getiri farkı sayfa oluşturulurken otomatik hesaplanır.
+            Tablo gün içinde anlık veri sunmaz ve yatırım tavsiyesi değildir.
           </p>
         </section>
 
@@ -603,6 +638,32 @@ export default function HalkaArzTavanSerisiPage() {
               ))}
             </ul>
           </div>
+        </section>
+
+        <section className="mt-6 rounded-3xl border border-blue-200 bg-blue-50/50 p-6 shadow-sm">
+          <h2 className="text-xl font-bold text-slate-950">
+            BIST 100 Karşılaştırması Nasıl Hesaplanır?
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-600">
+            Halka arz getirisi arz fiyatından güncel kapanışa kadar olan dönemi
+            kapsadığı için BIST 100 başlangıcı olarak hissenin ilk işlem gününden
+            önceki son seans kapanışı kullanılır. Bitiş seviyesi, halka arz kapanış
+            fiyatlarıyla aynı tarihli günlük borsa özetinden alınır. Günlük özet
+            arşivinden eski başlangıçlar kayıtlı tarihsel kapanışlarla tamamlanır.
+          </p>
+          <div className="mt-4 grid gap-4 md:grid-cols-2">
+            <div className="rounded-2xl border border-blue-200 bg-white p-4 text-sm leading-7 text-blue-950">
+              BIST 100 getirisi = ((Bitiş endeks değeri / Başlangıç endeks değeri) - 1) x 100
+            </div>
+            <div className="rounded-2xl border border-blue-200 bg-white p-4 text-sm leading-7 text-blue-950">
+              Getiri farkı = Halka arz getirisi - Aynı dönem BIST 100 getirisi
+            </div>
+          </div>
+          <p className="mt-4 text-xs leading-6 text-slate-500">
+            Bu yöntem fiyat performansını genel piyasa hareketinden ayırmayı
+            kolaylaştırır. Başlangıç seviyesi bulunmayan bir halka arzda karşılaştırma
+            gösterilmez; tahmini veri üretilmez.
+          </p>
         </section>
 
         <section className="mt-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">

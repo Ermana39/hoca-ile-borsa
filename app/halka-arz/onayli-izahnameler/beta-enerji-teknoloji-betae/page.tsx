@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import HalkaArzKarnesi from "@/components/HalkaArzKarnesi";
 import HalkaArzSSS from "@/components/HalkaArzSSS";
 
 export const metadata: Metadata = {
@@ -299,6 +300,15 @@ export default function BetaEnerjiVeTeknolojiASPage() {
             ))}
           </div>
         </section>
+
+        <HalkaArzKarnesi
+          sirketAdi="Beta Enerji ve Teknoloji A.Ş."
+          kod="BETAE"
+          talepTarihi="23-24-25 Haziran 2026"
+          halkaArzFiyati="40,00 TL"
+          dagitimYontemi="Bireysele eşit / yüksek başvuruluya oransal"
+          toplamPay="60.750.000 Lot"
+        />
 
         <section className="mb-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <div className="mb-5 flex items-center justify-between gap-3">

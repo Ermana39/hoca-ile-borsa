@@ -66,16 +66,6 @@ export const newsItems: NewsItem[] = [
     ilgiliHisseler: ["VBTYZ"],
   },
   {
-    id: 1185,
-    title: "ASTOR TEİAŞ’ın 351,1 Milyon TL’lik İhalesini Kazandı",
-    href: "/haber/astor-teias-3511-milyon-tl-mobil-hibrit-modul-ihalesini-kazandi",
-    image: "/astor-teias-3511-milyon-tl-mobil-hibrit-modul-ihalesini-kazandi.webp",
-    alt: "ASTOR TEİAŞ 351,1 milyon TL Mobil Hibrit Modül ihalesi",
-    publishedAt: "2026-07-20T18:15:13+03:00",
-    category: "sirket-haberleri",
-    ilgiliHisseler: ["ASTOR"],
-  },
-  {
     id: 1184,
     title: "DAPGM 2026 İkinci Dönemde 948,1 Milyon TL Satış Açıkladı",
     href: "/haber/dapgm-2026-ikinci-donem-satis-rakamlari-948-milyon-tl",

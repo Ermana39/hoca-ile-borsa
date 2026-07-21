@@ -1,5 +1,4 @@
 import type { MetadataRoute } from "next";
-import { newsItems } from "@/app/data/news";
 import pageUpdates from "@/lib/page-updates.generated.json";
 import {
   getNewsByCategory,
@@ -134,7 +133,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: terimGuncellemeTarihi(terim),
   }));
 
-  const haberRoutes = newsItems.map((item) => item.href);
+  const haberEntries = getAllNews().map((item) => ({
+    route: item.href,
+    lastModified:
+      item.updatedAt ?? updateMap.get(item.href) ?? item.publishedAt,
+  }));
 
   const fonEtkiEntries = [
     { route: "/fonlar/etki-analizi", lastModified: fonEtkiSonGuncelleme.iso },
@@ -183,7 +186,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...staticRoutes,
     ...hisseRoutes,
     ...sozlukEntries.map((entry) => entry.route),
-    ...haberRoutes,
+    ...haberEntries.map((entry) => entry.route),
     ...halkaArzRoutes,
     ...onayliHalkaArzRoutes,
     ...arsivSayfaRoutes,
@@ -195,6 +198,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }
 
   for (const entry of gunlukOzetEntries) {
+    routeEntries.set(entry.route, entry.lastModified);
+  }
+
+  // JSON haber sayfaları pageUpdates listesinde yer almaz. Yayın/güncelleme
+  // tarihini doğrudan içerikten kullanmak her deploy'da sahte tazelik sinyali
+  // oluşmasını önler.
+  for (const entry of haberEntries) {
     routeEntries.set(entry.route, entry.lastModified);
   }
 

@@ -280,6 +280,21 @@ export type OnayliListeOgesi = {
   kod?: string;
 };
 
+// JSON sistemine taşınmadan önce elle hazırlanan onaylı izahname sayfaları.
+// Kodla hedef sayfa eşleştiren tüm bölümler bu listeyi de otomatik kapsar.
+const statikOnayliIzahnameler: OnayliListeOgesi[] = [
+  {
+    klasor: "beta-enerji-teknoloji-betae",
+    label: "Beta Enerji ve Teknoloji A.Ş.",
+    kod: "BETAE",
+  },
+  {
+    klasor: "ekinciler-demir-celik-ekdmr",
+    label: "Ekinciler Demir ve Çelik Sanayi A.Ş.",
+    kod: "EKDMR",
+  },
+];
+
 // Taslak izahnameler liste/arama sayfası için TEK KAYNAK: data/halka-arz/*.json.
 // Yalnızca detay sayfası gerçekten render olan (geçerli + `ozet` içeren) kayıtlar
 // listelenir; bozuk/eksik-şemalı dosyalar otomatik dışarıda kalır. Böylece JSON
@@ -303,7 +318,7 @@ export function getTaslakIzahnameListesi(): TaslakListeOgesi[] {
 }
 
 export function getOnayliIzahnameListesi(): OnayliListeOgesi[] {
-  return tumJsonSluglar()
+  const jsonOnayliIzahnameler = tumJsonSluglar()
     .map((slug) => {
       const veri = halkaArzGetir(slug);
       if (!veri || veri.seo?.contentStatus !== "onayli") return null;
@@ -315,6 +330,15 @@ export function getOnayliIzahnameListesi(): OnayliListeOgesi[] {
       if (kod) oge.kod = kod;
       return oge;
     })
-    .filter((x): x is OnayliListeOgesi => x !== null)
+    .filter((x): x is OnayliListeOgesi => x !== null);
+
+  return Array.from(
+    new Map(
+      [...statikOnayliIzahnameler, ...jsonOnayliIzahnameler].map((item) => [
+        item.klasor,
+        item,
+      ])
+    ).values()
+  )
     .sort((a, b) => a.label.localeCompare(b.label, "tr"));
 }

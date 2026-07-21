@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ContinueReading from "@/components/ContinueReading";
+import HalkaArzKarnesi from "@/components/HalkaArzKarnesi";
 import HalkaArzSSS from "@/components/HalkaArzSSS";
 import {
   bekleyenDeger,
@@ -356,6 +357,15 @@ export default function SohoGiyimVeEnerjiPage() {
             ))}
           </div>
         </section>
+
+        <HalkaArzKarnesi
+          sirketAdi={veri.sirketAdi}
+          kod={kod || veri.sirketAdi}
+          talepTarihi={veri.ozet.halkaArzTarihi}
+          halkaArzFiyati={veri.ozet.fiyatAralik}
+          dagitimYontemi={veri.ozet.dagitimYontemi}
+          toplamPay={veri.ozet.pay || veri.toplamPay}
+        />
 
         <section className="grid gap-8 xl:grid-cols-3">
           <div className="space-y-8 xl:col-span-2">
