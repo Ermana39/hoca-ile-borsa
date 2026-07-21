@@ -9,52 +9,75 @@
   "ortaklikYapisi": {
     "ortaklar": [
       {
-        "ad": "MESUT ALTAN",
-        "oran": 39.99
+        "ad": "İdris Çakır",
+        "oran": 39.99,
+        "sermaye": "230.750.000"
       },
       {
-        "ad": "İDRİS ÇAKIR",
-        "oran": 39.99
+        "ad": "Mesut Altan",
+        "oran": 39.99,
+        "sermaye": "230.750.000"
       },
       {
-        "ad": "DİĞER",
-        "oran": 20.02
+        "ad": "Diğer",
+        "oran": 20.02,
+        "sermaye": "115.500.000"
       }
     ],
-    "not": "Ortaklık yapısı verileri şirket künyesindeki oran bilgilerine göre hazırlanmıştır."
+    "not": "KAP'ta açıklanan doğrudan ortaklık oranları 2026-07-21 tarihinde kontrol edilmiştir."
   },
   "istirakler": [
     {
       "ad": "Edikli Ges Enerji A.Ş.",
-      "oran": 100
-    },
-    {
-      "ad": "Gülbahar Elektrik Üretim A.Ş.",
-      "oran": 100
-    },
-    {
-      "ad": "Menekşe Yenilenebilir Enerji ve Elektrik Üretim A.Ş.",
-      "oran": 100
+      "oran": 100,
+      "sermaye": "10000000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Elektrik Enerjisi Üretimi ve Satışı",
+      "iliski": "Bağlı Ortaklık"
     },
     {
       "ad": "Uluder Elektrik Üretim A.Ş.",
-      "oran": 100
+      "oran": 100,
+      "sermaye": "25000000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Elektrik Enerjisi Üretimi ve Satışı",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Gülbahar Elektrik Üretim A.Ş.",
+      "oran": 100,
+      "sermaye": "15000000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Elektrik Enerjisi Üretimi ve Satışı",
+      "iliski": "Bağlı Ortaklık"
     },
     {
       "ad": "Zen Enerji A.Ş.",
-      "oran": 100
+      "oran": 100,
+      "sermaye": "460500000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Elektrik Enerjisi Üretimi ve Satışı",
+      "iliski": "Bağlı Ortaklık"
+    },
+    {
+      "ad": "Menekşe Yenilenebilir Enerji ve Elektrik Üretim A.Ş.",
+      "oran": 100,
+      "sermaye": "45000000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Elektrik Enerjisi Üretimi ve Satışı",
+      "iliski": "Bağlı Ortaklık"
     }
   ],
   "kurumsalBilgiler": {
     "merkez": "Dudullu OSB Mahallesi 1 Cad. Birleşim Grup No:3, İç Kapı No:1 Ümraniye/İstanbul",
     "eposta": "info@birlesimgrupenerji.com",
-    "web": "www.birlesimgrupenerji.com",
-    "telefon": "0 216 499 49 59",
-    "fax": "0 216 499 49 60",
+    "web": "https://www.birlesimgrupenerji.com/",
+    "telefon": "0216 499 49 59",
+    "fax": "0216 499 49 60",
     "sirketSuresi": "Süresiz",
     "bagimsizDenetimKurulusu": "YEDİTEPE BAĞIMSIZ DENETİM VE YEMİNLİ MALİ MÜŞAVİRLİK A.Ş.",
     "odenmisSermaye": "577.000.000 TL",
-    "faaliyetAlani": "Yenilenebilir enerji kaynaklarından elektrik üretimi, güneş, rüzgâr, hidroelektrik, hidrojen, biyokütle ve jeotermal gibi enerji kaynaklarına dayalı tesis yatırımları, enerji üretim şirketlerine iştirak edilmesi ve bu şirketlere yönetim, teknik, mali, idari ve danışmanlık hizmetleri sağlanması",
+    "faaliyetAlani": "$2f",
     "sektorler": [
       "ELEKTRİK GAZ VE SU",
       "ELEKTRİK GAZ VE BUHAR"
@@ -68,6 +91,23 @@
       "LEVENT GÜLBAHAR",
       "RAHİME ALEV DUMANLI",
       "ŞENER OKTİK"
+    ],
+    "uretimTesisleri": [
+      "Güneş Enerjisi Elektrik Santralleri: Niğde, Kahramanmaraş, Bitlis, Kırıkkale, Isparta, Burdur, Eskişehir, Kütahya, Uşak Rüzgar Enerjisi Santrali: Yozgat"
+    ],
+    "kapSirketProfili": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/6059-birlesim-grup-enerji-yatirimlari-a-s",
+    "kayitliSermayeTavani": "700.000.000 TL",
+    "ticaretSicilMemurlugu": "İSTANBUL",
+    "tescilTarihi": "1978-09-13",
+    "ticaretSicilNumarasi": "157538-0",
+    "vergiDairesi": "İSTANBUL - Sarıgazi Vergi Dairesi Müdürlüğü",
+    "yatirimciIliskileriYetkilileri": [
+      {
+        "ad": "Mert ASLAN",
+        "gorev": "Yatırımcı İlişkileri Yöneticisi",
+        "telefon": "+90 216 499 49 59",
+        "eposta": "info@birlesimgrupenerji.com"
+      }
     ]
   },
   "borsaBilgileri": {
@@ -83,11 +123,15 @@
       "BIST YILDIZ"
     ],
     "katilimEndeksiUygun": false,
-    "halkaArzTarihi": ""
+    "halkaArzTarihi": "2025-02-05",
+    "fiiliDolasimOrani": 20.01
   },
   "temettuSermayeGecmisi": [],
   "ozgunAnaliz": {
     "isModeli": "Birleşim Grup Enerji'nin iş modeli, yenilenebilir enerji kaynaklarına dayalı elektrik üretim tesisleri geliştirmek, bağlı ortaklıklar üzerinden bu tesisleri işletmek ve enerji portföyünden sürdürülebilir gelir elde etmek üzerine kuruludur. Şirketin performansı üretim varlıklarının verimliliği, kaynak çeşitliliği, elektrik piyasası koşulları, iştiraklerin operasyonel katkısı ve yeni yatırım kabiliyetiyle birlikte değerlendirilmelidir.",
+    "sektorelKonum": "BIGEN, Borsa İstanbul'da yenilenebilir enerji ve elektrik üretimi temasıyla izlenen şirketler arasında iştirakleri üzerinden enerji portföyü yöneten bir yapı olarak konumlanır. Şirketin değerlendirilmesinde yalnızca tekil üretim kapasitesi değil; kaynak çeşitliliği, portföy şirketlerinin katkısı, enerji piyasası koşulları ve yeni yatırım planları birlikte ele alınmalıdır.",
+    "ortaklikYorumu": "Şirketin ortaklık yapısında Mesut Altan ve İdris Çakır ana pay sahipleri olarak öne çıkmaktadır. Kurucu ortak ağırlıklı yapı stratejik karar süreçlerinde süreklilik sağlayabilecek bir unsurken, halka açık pay yatırımcı tabanı ve piyasa işlem alanı açısından takip edilmelidir.",
+    "yatirimciNotu": "BIGEN yatırımcısı; elektrik üretim performansını, yenilenebilir kaynak verimliliğini, iştiraklerin faaliyet durumunu, enerji piyasası düzenlemelerini, yeni santral yatırımlarını, bakım süreçlerini, finansman ihtiyacını ve nakit akışını birlikte takip etmelidir.",
     "gelirKaynaklari": [
       "Güneş enerjisi santrallerinden elektrik üretimi",
       "Rüzgâr enerjisi projeleri",
@@ -115,11 +159,30 @@
       "Yeni tesis yatırımlarında bağlantı, izin, finansman ve teknik uygulama riskleri oluşabilir",
       "Katılım endeksinde yer almaması bazı yatırımcı grupları açısından sınırlayıcı olabilir"
     ],
-    "sektorelKonum": "BIGEN, Borsa İstanbul'da yenilenebilir enerji ve elektrik üretimi temasıyla izlenen şirketler arasında iştirakleri üzerinden enerji portföyü yöneten bir yapı olarak konumlanır. Şirketin değerlendirilmesinde yalnızca tekil üretim kapasitesi değil; kaynak çeşitliliği, portföy şirketlerinin katkısı, enerji piyasası koşulları ve yeni yatırım planları birlikte ele alınmalıdır.",
-    "ortaklikYorumu": "Şirketin ortaklık yapısında Mesut Altan ve İdris Çakır ana pay sahipleri olarak öne çıkmaktadır. Kurucu ortak ağırlıklı yapı stratejik karar süreçlerinde süreklilik sağlayabilecek bir unsurken, halka açık pay yatırımcı tabanı ve piyasa işlem alanı açısından takip edilmelidir.",
-    "temettuYorumu": "BIGEN için temettü değerlendirmesi yapılırken elektrik üretiminden yaratılan nakit akışı, bağlı ortaklıkların dağıtılabilir kâr katkısı, yeni yatırım ihtiyacı, tesis bakım giderleri, finansman yapısı ve yönetimin kâr dağıtım yaklaşımı birlikte ele alınmalıdır.",
-    "yatirimciNotu": "BIGEN yatırımcısı; elektrik üretim performansını, yenilenebilir kaynak verimliliğini, iştiraklerin faaliyet durumunu, enerji piyasası düzenlemelerini, yeni santral yatırımlarını, bakım süreçlerini, finansman ihtiyacını ve nakit akışını birlikte takip etmelidir."
+    "temettuYorumu": "BIGEN için temettü değerlendirmesi yapılırken elektrik üretiminden yaratılan nakit akışı, bağlı ortaklıkların dağıtılabilir kâr katkısı, yeni yatırım ihtiyacı, tesis bakım giderleri, finansman yapısı ve yönetimin kâr dağıtım yaklaşımı birlikte ele alınmalıdır."
   },
+  "seo": {
+    "title": "BIGEN Hisse Bilgileri: Birleşim Grup Enerji Ortaklık Yapısı, İştirakleri ve Yenilenebilir Enerji Faaliyetleri",
+    "description": "BIGEN hisse kodlu Birleşim Grup Enerji Yatırımları A.Ş. hakkında ortaklık yapısı, yenilenebilir enerji faaliyetleri, iştirakler, BIST endeksleri ve temel oranlar."
+  },
+  "veriDogrulama": {
+    "sonDogrulamaTarihi": "2026-07-21",
+    "kaynak": "KAP",
+    "kaynakUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/6059-birlesim-grup-enerji-yatirimlari-a-s"
+  },
+  "degisiklikGecmisi": [
+    {
+      "tarih": "2026-07-21",
+      "baslik": "BIST TÜM künye standardı doğrulandı",
+      "aciklama": "Hisse kodu, KAP bağlantısı, faaliyet, sektör, pazar ve endeks alanları BIST TÜM listesiyle eşleştirildi."
+    },
+    {
+      "tarih": "2026-07-21",
+      "baslik": "KAP şirket bilgileri doğrulandı",
+      "aciklama": "Kurumsal bilgiler, ortaklık yapısı ve borsa bilgileri resmi KAP profiliyle karşılaştırıldı."
+    }
+  ],
+  "yasalUyari": "Bu sayfadaki bilgiler genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir. Anlık fiyat/işlem verisi sunmaz; oranlar dönemsel finansal tablolara ve ilgili kapanış verilerine dayanır.",
   "seoSorular": [
     {
       "soru": "BIGEN ne iş yapar?",
@@ -171,11 +234,6 @@
       "aciklama": "Yenilenebilir enerji ve elektrik üretimi odağı nedeniyle BIGEN ile benzer sektör dinamiklerine sahiptir."
     }
   ],
-  "seo": {
-    "title": "BIGEN Hisse Bilgileri: Birleşim Grup Enerji Ortaklık Yapısı, İştirakleri ve Yenilenebilir Enerji Faaliyetleri",
-    "description": "BIGEN hisse kodlu Birleşim Grup Enerji Yatırımları A.Ş. hakkında ortaklık yapısı, yenilenebilir enerji faaliyetleri, iştirakler, BIST endeksleri ve temel oranlar."
-  },
-  "yasalUyari": "Bu sayfadaki bilgiler genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir. Anlık fiyat/işlem verisi sunmaz; oranlar dönemsel finansal tablolara ve ilgili kapanış verilerine dayanır.",
   "temelOranlar": {
     "donem": "",
     "guncellemeTarihi": "",

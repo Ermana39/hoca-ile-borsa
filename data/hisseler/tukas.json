@@ -17,7 +17,7 @@
         "oran": 60
       }
     ],
-    "not": ""
+    "not": "Ortaklık oranları resmi şirket verileri üzerinden kontrol edilmelidir."
   },
   "istirakler": [],
   "kurumsalBilgiler": {
@@ -30,7 +30,15 @@
       "Serdar Muharrem Bayraktutan",
       "Mehmet Okullu",
       "Semih Özgören"
-    ]
+    ],
+    "faaliyetAlani": "TUKAS'ın iş modeli; salça, domates ürünleri, konserve, turşu, reçel ve sos gibi işlenmiş gıda ürünlerinin üretimi ve satışına dayanır. Şirket, tarımsal hammaddeleri işleyerek raf ömrü uzun gıda ürünlerine dönüştüren bir üretim yapısına sahiptir. Tukaş değerlendirilirken domates ve tarımsal hammadde tedariki, sezonluk üretim yapısı, stok yönetimi, ambalaj maliyetleri, gıda enflasyonu, ihracat kanalları, kapasite kullanımı ve marka dağıtım ağı birlikte izlenmelidir.",
+    "sektorler": [
+      "Borsa İstanbul şirketleri"
+    ],
+    "islemGorduguPazar": [
+      "Borsa İstanbul Pay Piyasası"
+    ],
+    "kapSirketProfili": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/1101-tukas-gida-sanayi-ve-ticaret-a-s"
   },
   "borsaBilgileri": {
     "bistKodu": "TUKAS",
@@ -50,8 +58,7 @@
       "BIST Katılım 30",
       "BIST 500"
     ],
-    "katilimEndeksiUygun": true,
-    "halkaArzTarihi": ""
+    "katilimEndeksiUygun": true
   },
   "temettuSermayeGecmisi": [
     {
@@ -252,5 +259,17 @@
       "netKarDegisim": -79.19,
       "netSatisDegisim": -2.39
     }
-  }
+  },
+  "veriDogrulama": {
+    "sonDogrulamaTarihi": "2026-07-21",
+    "kaynak": "KAP",
+    "kaynakUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/1101-tukas-gida-sanayi-ve-ticaret-a-s"
+  },
+  "degisiklikGecmisi": [
+    {
+      "tarih": "2026-07-21",
+      "baslik": "BIST TÜM künye standardı doğrulandı",
+      "aciklama": "Hisse kodu, KAP bağlantısı, faaliyet, sektör, pazar ve endeks alanları BIST TÜM listesiyle eşleştirildi."
+    }
+  ]
 }

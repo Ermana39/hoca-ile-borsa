@@ -10,41 +10,50 @@
     "ortaklar": [
       {
         "ad": "Feridun Geçgel",
-        "oran": 37.25
+        "oran": 37.25,
+        "sermaye": "371.750.000"
       },
       {
         "ad": "Enver Geçgel",
-        "oran": 20
+        "oran": 20,
+        "sermaye": "199.600.000"
       },
       {
         "ad": "Diğer",
-        "oran": 42.75
+        "oran": 42.75,
+        "sermaye": "426.650.000"
       }
     ],
-    "not": "Ortaklık yapısı verileri şirket künyesindeki oran bilgilerine göre hazırlanmıştır."
+    "not": "KAP'ta açıklanan doğrudan ortaklık oranları 2026-07-21 tarihinde kontrol edilmiştir."
   },
   "istirakler": [
     {
-      "ad": "Astor RO Energy S.R.L.",
+      "ad": "Astor Ro Energy S.r.l.",
+      "oran": 100,
       "sermaye": "200",
-      "oran": 100
+      "paraBirimi": "RON",
+      "faaliyetKonusu": "GÜNEŞ ENERJİSİ ÜRETİMİ",
+      "iliski": "Bağlı ortaklık"
     },
     {
       "ad": "Astor Şarj A.Ş.",
-      "sermaye": "400.000.000",
-      "oran": 100
+      "oran": 100,
+      "sermaye": "400000000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "ŞARJ AĞI İŞLETMECİLİĞİ",
+      "iliski": "Bağlı ortaklık"
     }
   ],
   "kurumsalBilgiler": {
-    "merkez": "Alcı OSB Mahallesi 2001 Cadde A Blok No:5/A Sincan/Ankara",
+    "merkez": "ALCI OSB MAHALLESİ 2001 CADDE A BLOK NO:5/A SİNCAN / ANKARA",
     "eposta": "info@astoras.com.tr",
-    "web": "https://www.astoras.com.tr",
-    "telefon": "0 312 267 01 56",
-    "fax": "0 312 267 00 34",
+    "web": "https://www.astoras.com.tr/",
+    "telefon": "03122670156",
+    "fax": "03122670034",
     "sirketSuresi": "SÜRESİZ",
-    "bagimsizDenetimKurulusu": "Eren Bağımsız Denetim A.Ş.",
+    "bagimsizDenetimKurulusu": "EREN BAĞIMSIZ DENETİM A.Ş.",
     "odenmisSermaye": "998.000.000 TL",
-    "faaliyetAlani": "Şirket; endüstri tesislerinin ve elektrik üretimi, iletimi ve dağıtımı enerji sektörlerinin ihtiyacı olan transformatörler ile orta ve yüksek gerilim anahtarlama ürünleri üretimi gerçekleştirmektedir.",
+    "faaliyetAlani": "Şirket, endüstri tesislerinin ve elektrik üretim, iletim ve dağıtım enerji ve sektörlerinin ihtiyacı olan transformatörler ile orta ve yüksek gerilim anahtarlama ürünleri üretimi gerçekleştirmektedir. Bu üretimleri gerçekleştirmek için gerekli makine, teçhizat, hammadde, mamul ve yarı mamullerin ithalatı, ihracatı, alımı ve satımı faaliyetlerini de yerine getirmektedir. Ayrıca, Şirket ürettiği ürünlerin satış sonrası hizmetler kapsamında saha kurulumlarının yapılması, devreye alınması, saha test hizmetlerini vermektedir.",
     "sektorler": [
       "İMALAT",
       "METAL EŞYA MAKİNE ELEKTRİKLİ CİHAZLAR VE ULAŞIM ARAÇLARI"
@@ -59,11 +68,44 @@
       "HAKAN ÜNSAL",
       "İSMAİL ŞAHİNER",
       "SALİH TUNCER MUTLUCAN"
+    ],
+    "uretimTesisleri": [
+      "ALCI OSB MAHALLESİ 2001 CADDE A BLOK NO:5",
+      "A SİNCAN",
+      "ANKARA ALCI OSB MAHALLESİ 2001 CADDE NO:3 SİNCAN",
+      "ANKARA"
+    ],
+    "kapSirketProfili": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/4680-astor-enerji-a-s",
+    "kayitliSermayeTavani": "4.250.000.000 TL",
+    "ticaretSicilMemurlugu": "ANKARA",
+    "tescilTarihi": "1983-07-29",
+    "ticaretSicilNumarasi": "371935",
+    "vergiDairesi": "ANKARA - Kurumlar Vergi Dairesi Müdürlüğü",
+    "yatirimciIliskileriYetkilileri": [
+      {
+        "ad": "OLCAY DOĞAN",
+        "gorev": "GENEL MÜDÜR YARDIMCISI FİNANS - MALİ İŞLER VE YATIRIMCI İLİŞKİLERİ",
+        "telefon": "03122670156",
+        "eposta": "yatirimci.iliskileri@astoras.com.tr"
+      },
+      {
+        "ad": "BANU ÇAMLITEPE",
+        "gorev": "YATIRIMCI İLİŞKİLERİ MÜDÜRÜ",
+        "telefon": "03122670156",
+        "eposta": "yatirimci.iliskileri@astoras.com.tr"
+      },
+      {
+        "ad": "EDA DİRİCAN",
+        "gorev": "KIDEMLİ YATIRIMCI İLİŞKİLERİ UZMANI",
+        "telefon": "03122670156",
+        "eposta": "yatirimci.iliskileri@astoras.com.tr"
+      }
     ]
   },
   "borsaBilgileri": {
     "bistKodu": "ASTOR",
     "endeksler": [
+      "BIST BANKA DIŞI LİKİT 10",
       "BIST 30",
       "BIST TEMETTÜ",
       "BIST 50",
@@ -77,11 +119,15 @@
       "BIST ANKARA"
     ],
     "katilimEndeksiUygun": false,
-    "halkaArzTarihi": ""
+    "halkaArzTarihi": "2023-01-17",
+    "fiiliDolasimOrani": 42.73
   },
   "temettuSermayeGecmisi": [],
   "ozgunAnaliz": {
     "isModeli": "ASTOR'un iş modeli, elektrik altyapısının temel ekipmanlarından olan transformatör ve orta-yüksek gerilim anahtarlama ürünlerinin üretimine dayanır. Şirket; enerji üretim tesisleri, sanayi kuruluşları, dağıtım şirketleri ve altyapı projeleri için kritik elektrik ekipmanları sağlar. Bu nedenle ASTOR'u değerlendirirken yalnızca fabrika kapasitesine değil, enerji yatırımlarındaki canlılığa, ihracat siparişlerine, hammadde maliyetlerine ve elektrik şebekesi modernizasyonu ihtiyacına birlikte bakmak gerekir.",
+    "sektorelKonum": "Astor Enerji, Borsa İstanbul'da enerji ekipmanları ve elektromekanik sanayi tarafında öne çıkan şirketlerden biridir. Şirket, doğrudan elektrik üreticisi değil; üretimden dağıtıma kadar enerji altyapısının çalışmasını sağlayan kritik ekipmanları üreten bir sanayi şirketidir. Bu yönüyle ASTOR, enerji yatırımlarından dolaylı ama güçlü şekilde beslenen, sanayi ve enerji temalarının kesişiminde duran bir hisse olarak izlenir.",
+    "ortaklikYorumu": "ASTOR ortaklık yapısında Feridun Geçgel yüzde 37,25, Enver Geçgel yüzde 20 payla güçlü kurucu ortak pozisyonundadır. Diğer ortakların yüzde 42,75 seviyesindeki payı ise borsadaki dolaşım ve yatırımcı ilgisi açısından geniş bir alan oluşturur. Kurucu ortak ağırlığının devam etmesi, şirketin stratejik kararlarında aile ortaklığı etkisinin sürdüğünü gösterir.",
+    "yatirimciNotu": "ASTOR hissesi takip edilirken sipariş açıklamaları, ihracat performansı, brüt kâr marjı, hammadde maliyetleri, kapasite kullanım oranı ve Astor Şarj tarafındaki gelişmeler öne çıkar. Şirketin ana hikayesi enerji altyapı yatırımlarıyla güçlü biçimde bağlantılıdır; ancak yüksek beklenti dönemlerinde kârlılık, teslimat takvimi ve sipariş sürekliliği özellikle dikkatle izlenmelidir.",
     "gelirKaynaklari": [
       "Güç transformatörü üretimi ve satış gelirleri",
       "Orta ve yüksek gerilim anahtarlama ekipmanları satışları",
@@ -106,11 +152,30 @@
       "Kur hareketleri hem ihracat gelirlerini hem de ithal girdi maliyetlerini etkileyebilir",
       "Elektrikli araç şarj altyapısı gibi yeni alanlarda büyüme beklentilerinin gerçekleşmesi zaman alabilir"
     ],
-    "sektorelKonum": "Astor Enerji, Borsa İstanbul'da enerji ekipmanları ve elektromekanik sanayi tarafında öne çıkan şirketlerden biridir. Şirket, doğrudan elektrik üreticisi değil; üretimden dağıtıma kadar enerji altyapısının çalışmasını sağlayan kritik ekipmanları üreten bir sanayi şirketidir. Bu yönüyle ASTOR, enerji yatırımlarından dolaylı ama güçlü şekilde beslenen, sanayi ve enerji temalarının kesişiminde duran bir hisse olarak izlenir.",
-    "ortaklikYorumu": "ASTOR ortaklık yapısında Feridun Geçgel yüzde 37,25, Enver Geçgel yüzde 20 payla güçlü kurucu ortak pozisyonundadır. Diğer ortakların yüzde 42,75 seviyesindeki payı ise borsadaki dolaşım ve yatırımcı ilgisi açısından geniş bir alan oluşturur. Kurucu ortak ağırlığının devam etmesi, şirketin stratejik kararlarında aile ortaklığı etkisinin sürdüğünü gösterir.",
-    "temettuYorumu": "ASTOR için mevcut veri setinde temettü veya sermaye hareketi bilgisi bulunmuyor. Şirketin temettü potansiyeli değerlendirilirken üretim kapasitesi, sipariş büyüklüğü, ihracat kârlılığı, işletme sermayesi ihtiyacı ve yeni yatırım harcamaları birlikte izlenmelidir. Büyüme dönemindeki sanayi şirketlerinde nakit akışının önemli kısmı kapasite artışı ve yeni alanlara yatırım için kullanılabilir.",
-    "yatirimciNotu": "ASTOR hissesi takip edilirken sipariş açıklamaları, ihracat performansı, brüt kâr marjı, hammadde maliyetleri, kapasite kullanım oranı ve Astor Şarj tarafındaki gelişmeler öne çıkar. Şirketin ana hikayesi enerji altyapı yatırımlarıyla güçlü biçimde bağlantılıdır; ancak yüksek beklenti dönemlerinde kârlılık, teslimat takvimi ve sipariş sürekliliği özellikle dikkatle izlenmelidir."
+    "temettuYorumu": "ASTOR için mevcut veri setinde temettü veya sermaye hareketi bilgisi bulunmuyor. Şirketin temettü potansiyeli değerlendirilirken üretim kapasitesi, sipariş büyüklüğü, ihracat kârlılığı, işletme sermayesi ihtiyacı ve yeni yatırım harcamaları birlikte izlenmelidir. Büyüme dönemindeki sanayi şirketlerinde nakit akışının önemli kısmı kapasite artışı ve yeni alanlara yatırım için kullanılabilir."
   },
+  "seo": {
+    "title": "ASTOR Hisse Bilgileri: Astor Enerji Ortaklık Yapısı, Faaliyet Alanı ve Şirket Profili",
+    "description": "ASTOR hisse koduyla işlem gören Astor Enerji A.Ş. hakkında ortaklık yapısı, transformatör ve şalt ekipmanı üretimi, iştirakleri, endeks bilgileri ve şirket profili."
+  },
+  "veriDogrulama": {
+    "sonDogrulamaTarihi": "2026-07-21",
+    "kaynak": "KAP",
+    "kaynakUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/4680-astor-enerji-a-s"
+  },
+  "degisiklikGecmisi": [
+    {
+      "tarih": "2026-07-21",
+      "baslik": "BIST TÜM künye standardı doğrulandı",
+      "aciklama": "Hisse kodu, KAP bağlantısı, faaliyet, sektör, pazar ve endeks alanları BIST TÜM listesiyle eşleştirildi."
+    },
+    {
+      "tarih": "2026-07-21",
+      "baslik": "KAP şirket bilgileri doğrulandı",
+      "aciklama": "Kurumsal bilgiler, ortaklık yapısı ve borsa bilgileri resmi KAP profiliyle karşılaştırıldı."
+    }
+  ],
+  "yasalUyari": "Bu sayfadaki bilgiler genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir. Fiyat/işlem verisi içermez.",
   "seoSorular": [
     {
       "soru": "ASTOR ne iş yapar?",
@@ -162,11 +227,6 @@
       "aciklama": "Enerji teknolojileri, otomasyon ve elektrik altyapısı projeleriyle ASTOR'a benzer yatırım temalarında takip edilebilecek şirketlerden biridir."
     }
   ],
-  "seo": {
-    "title": "ASTOR Hisse Bilgileri: Astor Enerji Ortaklık Yapısı, Faaliyet Alanı ve Şirket Profili",
-    "description": "ASTOR hisse koduyla işlem gören Astor Enerji A.Ş. hakkında ortaklık yapısı, transformatör ve şalt ekipmanı üretimi, iştirakleri, endeks bilgileri ve şirket profili."
-  },
-  "yasalUyari": "Bu sayfadaki bilgiler genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir. Fiyat/işlem verisi içermez.",
   "temelOranlar": {
     "donem": "2026-03",
     "guncellemeTarihi": "2026-06-15",

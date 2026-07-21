@@ -25,7 +25,7 @@
         "oran": 20
       }
     ],
-    "not": ""
+    "not": "Ortaklık oranları resmi şirket verileri üzerinden kontrol edilmelidir."
   },
   "istirakler": [
     {
@@ -67,7 +67,15 @@
       "Ercan Demirci",
       "Atakan Yılmaz",
       "İrfan Güvendi"
-    ]
+    ],
+    "faaliyetAlani": "PAHOL'un iş modeli, farklı sektörlerde faaliyet gösteren iştiraklerden oluşan bir yatırım ve holding yapısına dayanır. Şirket; gayrimenkul, lojistik, teknoloji, enerji ve madencilik alanlarındaki bağlı ve iştirak şirketleri üzerinden portföy çeşitliliği oluşturur. Pasifik Holding değerlendirilirken iştiraklerin faaliyet performansı, portföy değerleri, halka açık bağlı şirketlerdeki piyasa görünümü, yeni yatırım planları, nakit akışı ve holding yapısına bağlı finansal hareketler birlikte izlenmelidir.",
+    "sektorler": [
+      "Borsa İstanbul şirketleri"
+    ],
+    "islemGorduguPazar": [
+      "Borsa İstanbul Pay Piyasası"
+    ],
+    "kapSirketProfili": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/6161-pasifik-holding-a-s"
   },
   "borsaBilgileri": {
     "bistKodu": "PAHOL",
@@ -83,8 +91,7 @@
       "BIST 100 Ağırlık Sın. 25",
       "BIST 500"
     ],
-    "katilimEndeksiUygun": false,
-    "halkaArzTarihi": ""
+    "katilimEndeksiUygun": false
   },
   "temettuSermayeGecmisi": [],
   "ozgunAnaliz": {
@@ -190,5 +197,17 @@
       "netKarDegisim": -138.78,
       "netSatisDegisim": -96.06
     }
-  }
+  },
+  "veriDogrulama": {
+    "sonDogrulamaTarihi": "2026-07-21",
+    "kaynak": "KAP",
+    "kaynakUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/6161-pasifik-holding-a-s"
+  },
+  "degisiklikGecmisi": [
+    {
+      "tarih": "2026-07-21",
+      "baslik": "BIST TÜM künye standardı doğrulandı",
+      "aciklama": "Hisse kodu, KAP bağlantısı, faaliyet, sektör, pazar ve endeks alanları BIST TÜM listesiyle eşleştirildi."
+    }
+  ]
 }

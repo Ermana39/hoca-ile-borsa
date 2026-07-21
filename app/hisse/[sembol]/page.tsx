@@ -579,12 +579,19 @@ export async function generateMetadata({
     detayliHisse.seo?.description ||
     `${hisse.kod} hisse koduyla işlem gören ${hisse.sirketAdi} hakkında ortaklık yapısı, faaliyet alanı, iştirakleri, endeks bilgileri, sermaye geçmişi ve şirket profili.`;
 
-  const url = `${siteUrl}/hisse/${hisse.kod.toLowerCase()}`;
+  const canonicalCode =
+    hisse.borsaBilgileri.anaHisseKodu?.toLowerCase() ||
+    hisse.kod.toLowerCase();
+  const isSecondaryShareClass = canonicalCode !== hisse.kod.toLowerCase();
+  const url = `${siteUrl}/hisse/${canonicalCode}`;
 
   return {
     title: baslik,
     description: aciklama,
     alternates: { canonical: url },
+    robots: isSecondaryShareClass
+      ? { index: false, follow: true }
+      : { index: true, follow: true },
     openGraph: {
       type: "website",
       url,
@@ -815,7 +822,10 @@ export default async function HisseKunyePage({
 
   const logo = getHisseLogo(hisse.kod);
   const sirketKisaAd = hisse.sirketAdi.split(" ").slice(0, 1).join(" ");
-  const url = `${siteUrl}/hisse/${hisse.kod.toLowerCase()}`;
+  const canonicalCode =
+    hisse.borsaBilgileri.anaHisseKodu?.toLowerCase() ||
+    hisse.kod.toLowerCase();
+  const url = `${siteUrl}/hisse/${canonicalCode}`;
 
   const temettuKayitlari = getTemettulerBySembol(hisse.kod);
   const kapKayitlari = getKapBySembol(hisse.kod);
@@ -834,6 +844,9 @@ export default async function HisseKunyePage({
     temettuYorumVar;
 
   const istiraklerdeSermayeVar = (istirakler ?? []).some((i) => i.sermaye);
+  const istiraklerdeDetayVar = (istirakler ?? []).some(
+    (i) => i.faaliyetKonusu || i.iliski
+  );
   const ilgiliHisseler = ilgiliHisselerUret(hisse, benzerSirketler);
   const analizOzeti = analizOzetiUret({
     hisse,
@@ -1229,29 +1242,36 @@ export default async function HisseKunyePage({
               metin={ozgunAnaliz?.sektorelKonum}
             />
 
-            {ortaklikYapisi.ortaklar.length > 0 && (
+            {(ortaklikYapisi.ortaklar.length > 0 || ortaklikYapisi.not) && (
               <section className="mt-8">
                 <SectionBaslik>Ortaklık Yapısı</SectionBaslik>
-                <div className="space-y-4">
-                  {ortaklikYapisi.ortaklar.map((ortak) => (
-                    <div key={ortak.ad}>
-                      <div className="mb-1.5 flex items-center justify-between gap-3">
-                        <span className="text-sm font-medium text-slate-700">
-                          {ortak.ad}
-                        </span>
-                        <span className="shrink-0 text-sm font-bold text-slate-900">
-                          %{oranFormatla(ortak.oran)}
-                        </span>
+                {ortaklikYapisi.ortaklar.length > 0 ? (
+                  <div className="space-y-4">
+                    {ortaklikYapisi.ortaklar.map((ortak) => (
+                      <div key={ortak.ad}>
+                        <div className="mb-1.5 flex items-center justify-between gap-3">
+                          <span className="text-sm font-medium text-slate-700">
+                            {ortak.ad}
+                          </span>
+                          <span className="shrink-0 text-sm font-bold text-slate-900">
+                            %{oranFormatla(ortak.oran)}
+                          </span>
+                        </div>
+                        <div className="h-2.5 overflow-hidden rounded-full bg-slate-100 ring-1 ring-inset ring-slate-200">
+                          <div
+                            className="h-full rounded-full bg-gradient-to-r from-blue-500 to-blue-600"
+                            style={{ width: `${Math.min(ortak.oran, 100)}%` }}
+                          />
+                        </div>
                       </div>
-                      <div className="h-2.5 overflow-hidden rounded-full bg-slate-100 ring-1 ring-inset ring-slate-200">
-                        <div
-                          className="h-full rounded-full bg-gradient-to-r from-blue-500 to-blue-600"
-                          style={{ width: `${Math.min(ortak.oran, 100)}%` }}
-                        />
-                      </div>
-                    </div>
-                  ))}
-                </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-7 text-slate-700">
+                    Resmi KAP profilinde oran tablosu yayımlanmadığı için bu
+                    bölümde tahmini ortaklık verisi gösterilmez.
+                  </div>
+                )}
 
                 {ortaklikYapisi.not && (
                   <p className="mt-4 text-sm leading-7 text-slate-500">
@@ -1280,7 +1300,7 @@ export default async function HisseKunyePage({
                         </th>
                         {istiraklerdeSermayeVar && (
                           <th className="px-4 py-3 text-right font-semibold">
-                            Sermaye (TL)
+                            Sermaye
                           </th>
                         )}
                         <th className="px-4 py-3 text-right font-semibold">
@@ -1292,11 +1312,25 @@ export default async function HisseKunyePage({
                       {istirakler.map((istirak) => (
                         <tr key={istirak.ad} className="text-slate-700">
                           <td className="px-4 py-2.5 font-medium text-slate-800">
-                            {istirak.ad}
+                            <span>{istirak.ad}</span>
+                            {istiraklerdeDetayVar &&
+                              (istirak.faaliyetKonusu || istirak.iliski) && (
+                                <span className="mt-1 block text-xs font-normal leading-5 text-slate-500">
+                                  {[istirak.faaliyetKonusu, istirak.iliski]
+                                    .filter(Boolean)
+                                    .join(" · ")}
+                                </span>
+                              )}
                           </td>
                           {istiraklerdeSermayeVar && (
                             <td className="px-4 py-2.5 text-right text-slate-700">
-                              {istirak.sermaye || "—"}
+                              {istirak.sermaye
+                                ? `${istirak.sermaye}${
+                                    istirak.paraBirimi
+                                      ? ` ${istirak.paraBirimi}`
+                                      : ""
+                                  }`
+                                : "—"}
                             </td>
                           )}
                           <td className="px-4 py-2.5 text-right font-bold text-slate-900">
@@ -1311,10 +1345,15 @@ export default async function HisseKunyePage({
             )}
 
             {(kurumsalBilgiler?.merkez ||
+              kurumsalBilgiler?.faaliyetAlani ||
               resmiKaynaklar.resmiWeb ||
               resmiKaynaklar.yatirimciIliskileri ||
               resmiKaynaklar.kapSirketProfili ||
               kurumsalBilgiler?.odenmisSermaye ||
+              kurumsalBilgiler?.kayitliSermayeTavani ||
+              kurumsalBilgiler?.bagimsizDenetimKurulusu ||
+              kurumsalBilgiler?.ticaretSicilNumarasi ||
+              (kurumsalBilgiler?.yatirimciIliskileriYetkilileri?.length ?? 0) > 0 ||
               (kurumsalBilgiler?.yonetimKurulu?.length ?? 0) > 0) && (
                 <section className="mt-8">
                   <SectionBaslik>Kurumsal Bilgiler</SectionBaslik>
@@ -1326,6 +1365,48 @@ export default async function HisseKunyePage({
                         </dt>
                         <dd className="mt-1 text-sm font-medium text-slate-800">
                           {kurumsalBilgiler.merkez}
+                        </dd>
+                      </div>
+                    )}
+
+                    {kurumsalBilgiler?.faaliyetAlani && (
+                      <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 sm:col-span-2">
+                        <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                          Faaliyet Alanı
+                        </dt>
+                        <dd className="mt-1 text-sm leading-7 text-slate-800">
+                          {kurumsalBilgiler.faaliyetAlani}
+                        </dd>
+                      </div>
+                    )}
+
+                    {(kurumsalBilgiler?.sektorler?.length ?? 0) > 0 && (
+                      <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 sm:col-span-2">
+                        <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                          KAP Sektör Sınıflaması
+                        </dt>
+                        <dd className="mt-2 flex flex-wrap gap-2">
+                          {kurumsalBilgiler?.sektorler?.map((sektor) => (
+                            <span
+                              key={sektor}
+                              className="inline-flex items-center rounded-md bg-white px-2.5 py-1 text-xs font-semibold text-slate-700 ring-1 ring-inset ring-slate-200"
+                            >
+                              {sektor}
+                            </span>
+                          ))}
+                        </dd>
+                      </div>
+                    )}
+
+                    {(kurumsalBilgiler?.uretimTesisleri?.length ?? 0) > 0 && (
+                      <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 sm:col-span-2">
+                        <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                          Üretim Tesisleri
+                        </dt>
+                        <dd className="mt-2 space-y-1 text-sm leading-6 text-slate-800">
+                          {kurumsalBilgiler?.uretimTesisleri?.map((adres) => (
+                            <p key={adres}>{adres}</p>
+                          ))}
                         </dd>
                       </div>
                     )}
@@ -1384,6 +1465,57 @@ export default async function HisseKunyePage({
                       </div>
                     )}
 
+                    {kurumsalBilgiler?.eposta && (
+                      <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
+                        <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                          E-posta
+                        </dt>
+                        <dd className="mt-1 break-words text-sm font-bold">
+                          <a
+                            href={`mailto:${kurumsalBilgiler.eposta}`}
+                            className="text-blue-700 hover:underline"
+                          >
+                            {kurumsalBilgiler.eposta}
+                          </a>
+                        </dd>
+                      </div>
+                    )}
+
+                    {(kurumsalBilgiler?.telefon || kurumsalBilgiler?.fax) && (
+                      <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
+                        <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                          Telefon / Faks
+                        </dt>
+                        <dd className="mt-1 text-sm font-bold text-slate-900">
+                          {[kurumsalBilgiler.telefon, kurumsalBilgiler.fax]
+                            .filter(Boolean)
+                            .join(" / ")}
+                        </dd>
+                      </div>
+                    )}
+
+                    {kurumsalBilgiler?.sirketSuresi && (
+                      <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
+                        <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                          Şirketin Süresi
+                        </dt>
+                        <dd className="mt-1 text-sm font-bold text-slate-900">
+                          {kurumsalBilgiler.sirketSuresi}
+                        </dd>
+                      </div>
+                    )}
+
+                    {kurumsalBilgiler?.bagimsizDenetimKurulusu && (
+                      <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
+                        <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                          Bağımsız Denetim Kuruluşu
+                        </dt>
+                        <dd className="mt-1 text-sm font-bold text-slate-900">
+                          {kurumsalBilgiler.bagimsizDenetimKurulusu}
+                        </dd>
+                      </div>
+                    )}
+
                     {kurumsalBilgiler?.odenmisSermaye && (
                       <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
                         <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">
@@ -1391,6 +1523,56 @@ export default async function HisseKunyePage({
                         </dt>
                         <dd className="mt-1 text-sm font-bold text-slate-900">
                           {kurumsalBilgiler.odenmisSermaye}
+                        </dd>
+                      </div>
+                    )}
+
+                    {kurumsalBilgiler?.kayitliSermayeTavani && (
+                      <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
+                        <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                          Kayıtlı Sermaye Tavanı
+                        </dt>
+                        <dd className="mt-1 text-sm font-bold text-slate-900">
+                          {kurumsalBilgiler.kayitliSermayeTavani}
+                        </dd>
+                      </div>
+                    )}
+
+                    {(kurumsalBilgiler?.ticaretSicilMemurlugu ||
+                      kurumsalBilgiler?.ticaretSicilNumarasi) && (
+                      <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
+                        <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                          Ticaret Sicili
+                        </dt>
+                        <dd className="mt-1 text-sm font-bold text-slate-900">
+                          {[
+                            kurumsalBilgiler.ticaretSicilMemurlugu,
+                            kurumsalBilgiler.ticaretSicilNumarasi,
+                          ]
+                            .filter(Boolean)
+                            .join(" / ")}
+                        </dd>
+                      </div>
+                    )}
+
+                    {kurumsalBilgiler?.tescilTarihi && (
+                      <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
+                        <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                          Tescil Tarihi
+                        </dt>
+                        <dd className="mt-1 text-sm font-bold text-slate-900">
+                          {tarihEtiketi(kurumsalBilgiler.tescilTarihi)}
+                        </dd>
+                      </div>
+                    )}
+
+                    {kurumsalBilgiler?.vergiDairesi && (
+                      <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
+                        <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                          Vergi Dairesi
+                        </dt>
+                        <dd className="mt-1 text-sm font-bold text-slate-900">
+                          {kurumsalBilgiler.vergiDairesi}
                         </dd>
                       </div>
                     )}
@@ -1412,6 +1594,49 @@ export default async function HisseKunyePage({
                         </dd>
                       </div>
                     )}
+
+                    {(kurumsalBilgiler?.yatirimciIliskileriYetkilileri?.length ??
+                      0) > 0 && (
+                      <div className="rounded-xl border border-blue-100 bg-blue-50 px-4 py-3 sm:col-span-2">
+                        <dt className="text-xs font-semibold uppercase tracking-wider text-blue-700">
+                          Yatırımcı İlişkileri Yetkilileri
+                        </dt>
+                        <dd className="mt-3 grid gap-2 sm:grid-cols-2">
+                          {kurumsalBilgiler?.yatirimciIliskileriYetkilileri?.map(
+                            (yetkili) => (
+                              <div
+                                key={`${yetkili.ad}-${yetkili.eposta}`}
+                                className="rounded-lg bg-white p-3 ring-1 ring-inset ring-blue-100"
+                              >
+                                {yetkili.ad && (
+                                  <p className="text-sm font-bold text-slate-900">
+                                    {yetkili.ad}
+                                  </p>
+                                )}
+                                {yetkili.gorev && (
+                                  <p className="mt-1 text-xs leading-5 text-slate-600">
+                                    {yetkili.gorev}
+                                  </p>
+                                )}
+                                {yetkili.eposta && (
+                                  <a
+                                    href={`mailto:${yetkili.eposta}`}
+                                    className="mt-1 block break-words text-xs font-semibold text-blue-700 hover:underline"
+                                  >
+                                    {yetkili.eposta}
+                                  </a>
+                                )}
+                                {yetkili.telefon && (
+                                  <p className="mt-1 text-xs text-slate-600">
+                                    {yetkili.telefon}
+                                  </p>
+                                )}
+                              </div>
+                            )
+                          )}
+                        </dd>
+                      </div>
+                    )}
                   </dl>
                 </section>
               )}
@@ -1427,6 +1652,17 @@ export default async function HisseKunyePage({
                     {borsaBilgileri.bistKodu}
                   </dd>
                 </div>
+
+                {(kurumsalBilgiler?.islemGorduguPazar?.length ?? 0) > 0 && (
+                  <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
+                    <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                      İşlem Gördüğü Pazar
+                    </dt>
+                    <dd className="mt-1 text-sm font-bold text-slate-900">
+                      {kurumsalBilgiler?.islemGorduguPazar?.join(", ")}
+                    </dd>
+                  </div>
+                )}
 
                 <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
                   <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">
@@ -1471,10 +1707,37 @@ export default async function HisseKunyePage({
                       Halka Arz Tarihi
                     </dt>
                     <dd className="mt-1 text-sm font-bold text-slate-900">
-                      {borsaBilgileri.halkaArzTarihi}
+                      {tarihEtiketi(borsaBilgileri.halkaArzTarihi)}
                     </dd>
                   </div>
                 ) : null}
+
+                {borsaBilgileri.fiiliDolasimOrani !== undefined && (
+                  <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
+                    <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">
+                      Fiili Dolaşım Oranı
+                    </dt>
+                    <dd className="mt-1 text-sm font-bold text-slate-900">
+                      %{oranFormatla(borsaBilgileri.fiiliDolasimOrani)}
+                    </dd>
+                  </div>
+                )}
+
+                {borsaBilgileri.anaHisseKodu && (
+                  <div className="rounded-xl border border-blue-100 bg-blue-50 px-4 py-3 sm:col-span-2">
+                    <dt className="text-xs font-semibold uppercase tracking-wider text-blue-700">
+                      Ana Şirket Künyesi
+                    </dt>
+                    <dd className="mt-1 text-sm font-bold">
+                      <Link
+                        href={`/hisse/${borsaBilgileri.anaHisseKodu.toLowerCase()}`}
+                        className="text-blue-700 hover:underline"
+                      >
+                        {borsaBilgileri.anaHisseKodu} künye sayfasını aç
+                      </Link>
+                    </dd>
+                  </div>
+                )}
               </dl>
             </section>
 

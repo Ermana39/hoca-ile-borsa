@@ -21,7 +21,7 @@
         "oran": 43.94
       }
     ],
-    "not": ""
+    "not": "Ortaklık oranları resmi şirket verileri üzerinden kontrol edilmelidir."
   },
   "istirakler": [
     {
@@ -77,7 +77,15 @@
       "Murat Bilgiç",
       "Osman Arslan",
       "Özge Seval Dedeoğlu"
-    ]
+    ],
+    "faaliyetAlani": "TSKB'nin iş modeli, klasik mevduat bankacılığından farklı olarak yatırım ve kalkınma bankacılığı odağına dayanır. Banka; sanayi, altyapı, enerji, sürdürülebilirlik, iklim finansmanı ve uzun vadeli proje finansmanı alanlarında kaynak sağlar. TSKB değerlendirilirken kredi portföyü kalitesi, uzun vadeli fonlama yapısı, kalkınma finansmanı kaynakları, proje finansmanı hacmi, sürdürülebilirlik temalı krediler, sermaye yeterliliği, aktif kalitesi ve iştirak katkıları birlikte izlenmelidir.",
+    "sektorler": [
+      "Borsa İstanbul şirketleri"
+    ],
+    "islemGorduguPazar": [
+      "Borsa İstanbul Pay Piyasası"
+    ],
+    "kapSirketProfili": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/2427-turkiye-sinai-kalkinma-bankasi-a-s"
   },
   "borsaBilgileri": {
     "bistKodu": "TSKB",
@@ -95,8 +103,7 @@
       "BIST Sürdürülebilirlik 25",
       "BIST 500"
     ],
-    "katilimEndeksiUygun": false,
-    "halkaArzTarihi": ""
+    "katilimEndeksiUygun": false
   },
   "temettuSermayeGecmisi": [
     {
@@ -371,5 +378,17 @@
       "roe": 0.25,
       "netKarDegisim": -7.58
     }
-  }
+  },
+  "veriDogrulama": {
+    "sonDogrulamaTarihi": "2026-07-21",
+    "kaynak": "KAP",
+    "kaynakUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/2427-turkiye-sinai-kalkinma-bankasi-a-s"
+  },
+  "degisiklikGecmisi": [
+    {
+      "tarih": "2026-07-21",
+      "baslik": "BIST TÜM künye standardı doğrulandı",
+      "aciklama": "Hisse kodu, KAP bağlantısı, faaliyet, sektör, pazar ve endeks alanları BIST TÜM listesiyle eşleştirildi."
+    }
+  ]
 }

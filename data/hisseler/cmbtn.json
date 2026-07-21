@@ -55,7 +55,8 @@
       "SEYDA ZEYNEP AKDURAK",
       "MEHMET GÜREL KAPANİ",
       "BURCU BEKEMLER KUTLUKAYA"
-    ]
+    ],
+    "kapSirketProfili": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/906-cimbeton-hazirbeton-ve-prefabrik-yapi-elemanlari-sanayi-ve-ticaret-a-s"
   },
   "borsaBilgileri": {
     "bistKodu": "CMBTN",
@@ -69,11 +70,10 @@
       "BIST İZMİR",
       "BIST 500"
     ],
-    "katilimEndeksiUygun": true,
-    "halkaArzTarihi": ""
+    "katilimEndeksiUygun": true
   },
   "piyasaVerileri": {
-    "fk": 0.0,
+    "fk": 0,
     "pddd": 11.79,
     "netKar12Ay": -393167,
     "piyasaDegeriTl": 2814300000,
@@ -187,7 +187,7 @@
     "donem": "",
     "guncellemeTarihi": "",
     "sirket": {
-      "fk": 0.0,
+      "fk": 0,
       "pddd": 11.79,
       "peg": 0,
       "roe": 0,
@@ -197,5 +197,17 @@
       "netKarDegisim": 0,
       "netSatisDegisim": 0
     }
-  }
+  },
+  "veriDogrulama": {
+    "sonDogrulamaTarihi": "2026-07-21",
+    "kaynak": "KAP",
+    "kaynakUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/906-cimbeton-hazirbeton-ve-prefabrik-yapi-elemanlari-sanayi-ve-ticaret-a-s"
+  },
+  "degisiklikGecmisi": [
+    {
+      "tarih": "2026-07-21",
+      "baslik": "BIST TÜM künye standardı doğrulandı",
+      "aciklama": "Hisse kodu, KAP bağlantısı, faaliyet, sektör, pazar ve endeks alanları BIST TÜM listesiyle eşleştirildi."
+    }
+  ]
 }

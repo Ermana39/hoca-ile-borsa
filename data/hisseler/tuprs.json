@@ -17,7 +17,7 @@
         "oran": 53.6
       }
     ],
-    "not": ""
+    "not": "Ortaklık oranları resmi şirket verileri üzerinden kontrol edilmelidir."
   },
   "istirakler": [
     {
@@ -66,7 +66,18 @@
       "Şadan Kaptanoğlu Dikici",
       "Mine Yıldız Günay",
       "Mehmet Cem Kozlu"
-    ]
+    ],
+    "bagimsizDenetimKurulusu": "Güney Bağımsız Denetim ve Serbest Muhasebeci Mali Müşavirlik A.Ş.",
+    "faaliyetAlani": "TUPRS'ın iş modeli, ham petrolün rafinerilerde işlenerek akaryakıt, jet yakıtı, LPG, asfalt ve petrokimya hammaddelerine dönüştürülmesine dayanır. Şirket; İzmit, İzmir, Kırıkkale ve Batman rafinerileriyle rafinaj faaliyetlerini yürütürken, OPET, Ditaş Deniz İşletmeciliği, Entek Elektrik, Körfez Ulaştırma, Tüpraş Trading ve Tüpraş Enerji Girişimleri üzerinden dağıtım, lojistik, deniz taşımacılığı, elektrik üretimi, ticaret ve enerji dönüşümü alanlarına da temas etmektedir. Bu nedenle Tüpraş değerlendirilirken rafineri marjları, ham petrol fiyatları, ürün spreadleri, kapasite kullanımı, stok etkisi, döviz kuru, enerji dönüşümü yatırımları ve iştirak katkıları birlikte izlenmelidir.",
+    "sektorler": [
+      "İmalat",
+      "Kimya İlaç Petrol Lastik ve Plastik Ürünler"
+    ],
+    "islemGorduguPazar": [
+      "Kesin Alım Satım Pazarı - Nitelikli Yatırımcılar Arasında",
+      "Yıldız Pazar"
+    ],
+    "kapSirketProfili": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/1105-tupras-turkiye-petrol-rafinerileri-a-s"
   },
   "borsaBilgileri": {
     "bistKodu": "TUPRS",
@@ -99,8 +110,7 @@
       "Kesin Alım Satım Pazarı - Nitelikli Yatırımcılar Arasında",
       "Yıldız Pazar"
     ],
-    "katilimEndeksiUygun": true,
-    "halkaArzTarihi": ""
+    "katilimEndeksiUygun": true
   },
   "temettuSermayeGecmisi": [
     {
@@ -260,5 +270,17 @@
       "netKarDegisim": 2820.15,
       "netSatisDegisim": 24.41
     }
-  }
+  },
+  "veriDogrulama": {
+    "sonDogrulamaTarihi": "2026-07-21",
+    "kaynak": "KAP",
+    "kaynakUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/1105-tupras-turkiye-petrol-rafinerileri-a-s"
+  },
+  "degisiklikGecmisi": [
+    {
+      "tarih": "2026-07-21",
+      "baslik": "BIST TÜM künye standardı doğrulandı",
+      "aciklama": "Hisse kodu, KAP bağlantısı, faaliyet, sektör, pazar ve endeks alanları BIST TÜM listesiyle eşleştirildi."
+    }
+  ]
 }

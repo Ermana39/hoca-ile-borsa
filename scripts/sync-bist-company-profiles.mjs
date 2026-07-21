@@ -15,9 +15,15 @@ const OFFICIAL_SOURCES_FILE = path.join(
   "data",
   "hisse-resmi-kaynaklar.json"
 );
+const PROFILE_PATHS_FILE = path.join(
+  process.cwd(),
+  "data",
+  "kap-profil-yollari.generated.json"
+);
 const VERIFIED_AT = new Date().toISOString().slice(0, 10);
 const writeChanges = process.argv.includes("--write");
 const missingOnly = process.argv.includes("--missing-only");
+const fromSnapshot = process.argv.includes("--from-snapshot");
 const requestedCodes = new Set(
   process.argv
     .find((argument) => argument.startsWith("--codes="))
@@ -34,14 +40,23 @@ const limit = Number(
 const concurrency = Math.max(
   1,
   Math.min(
-    8,
+    5,
     Number(
       process.argv
         .find((argument) => argument.startsWith("--concurrency="))
-        ?.slice("--concurrency=".length) ?? 5
-    ) || 5
+        ?.slice("--concurrency=".length) ?? 3
+    ) || 3
   )
 );
+const MIN_REQUEST_INTERVAL_MS = Math.max(
+  400,
+  Number(
+    process.argv
+      .find((argument) => argument.startsWith("--request-interval="))
+      ?.slice("--request-interval=".length) ?? 1_000
+  ) || 1_000
+);
+let nextRequestAt = 0;
 
 const PRIMARY_SHARE_CODES = new Map([
   ["ISATR|ISBTR|ISCTR", "ISCTR"],
@@ -185,9 +200,14 @@ function cleanText(value) {
     .trim();
 }
 
+function meaningfulText(value) {
+  const cleaned = cleanText(value);
+  return cleaned && !/^[*._–—-]+$/.test(cleaned) ? cleaned : "";
+}
+
 function cleanTextList(value) {
   if (Array.isArray(value)) {
-    return value.map(cleanText).filter(Boolean);
+    return value.map(meaningfulText).filter(Boolean);
   }
 
   const cleaned = cleanText(value);
@@ -195,7 +215,7 @@ function cleanTextList(value) {
     ? cleaned
         .split(/\s*\/\s*/)
         .map((item) => item.trim())
-        .filter(Boolean)
+        .filter((item) => meaningfulText(item))
     : [];
 }
 
@@ -302,12 +322,11 @@ function uniqueBy(items, keySelector) {
   });
 }
 
-function buildProfile(company, items, canonicalCode) {
+function buildProfile(company, items, canonicalCode, profileUrl) {
   const code = company.stockCode;
   const companyName = titleCaseCompany(company.title);
-  const profileUrl = `${KAP_PROFILE_BASE}/${company.mkkMemberOid}`;
 
-  const address = cleanText(
+  const address = meaningfulText(
     itemValue(items, "kpy41_acc1_merkez_adresi", "merkez adresi")
   );
   const contactRows = itemValue(
@@ -327,7 +346,7 @@ function buildProfile(company, items, canonicalCode) {
   const website = normalizeUrl(
     itemValue(items, "kpy41_acc1_int_addres", "internet adresi")
   );
-  const activity = cleanText(
+  const activity = meaningfulText(
     itemValue(items, "kpy41_acc2_faaliyet_konu", "faaliyet konusu")
   );
   const sectors = cleanTextList(
@@ -418,7 +437,12 @@ function buildProfile(company, items, canonicalCode) {
     ? marketInstrumentRows
     : []
   )
-    .filter((row) => /pay|hisse/i.test(cleanText(row?.typeOfTheListedOrTradingCapitalMarketInstrument)))
+    .filter((row) => {
+      const instrumentType = normalizeText(
+        row?.typeOfTheListedOrTradingCapitalMarketInstrument
+      );
+      return instrumentType.includes("pay") || instrumentType.includes("hisse");
+    })
     .map((row) => formatKapDate(row?.initialDateOfListingOrTrading))
     .filter(Boolean)
     .sort()[0];
@@ -630,6 +654,12 @@ function readJson(filePath, fallback) {
   }
 }
 
+function getProfileUrl(company, profilePaths, section = "genel") {
+  const summaryUrl = profilePaths[company.stockCode];
+  if (summaryUrl) return summaryUrl.replace("/ozet/", `/${section}/`);
+  return `${KAP_PROFILE_BASE}/${company.mkkMemberOid}`;
+}
+
 function writeJsonIfChanged(filePath, value) {
   const next = `${JSON.stringify(value, null, 2)}\n`;
   const current = fs.existsSync(filePath)
@@ -660,10 +690,20 @@ async function mapLimit(items, limitValue, mapper) {
   return results;
 }
 
-async function fetchText(url, attempts = 3) {
+async function waitForRequestSlot() {
+  const now = Date.now();
+  const wait = Math.max(0, nextRequestAt - now);
+  nextRequestAt = Math.max(now, nextRequestAt) + MIN_REQUEST_INTERVAL_MS;
+  if (wait > 0) {
+    await new Promise((resolve) => setTimeout(resolve, wait));
+  }
+}
+
+async function fetchText(url, attempts = 5) {
   let lastError;
 
   for (let attempt = 1; attempt <= attempts; attempt += 1) {
+    await waitForRequestSlot();
     const controller = new AbortController();
     const timeout = setTimeout(() => controller.abort(), 45_000);
 
@@ -673,17 +713,24 @@ async function fetchText(url, attempts = 3) {
         signal: controller.signal,
         headers: {
           accept: "text/html,application/xhtml+xml",
+          "accept-language": "tr-TR,tr;q=0.9,en;q=0.8",
           "user-agent":
-            "Mozilla/5.0 (compatible; HocaIleBorsaProfileSync/1.0; +https://www.hocaileborsa.com)",
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/134.0.0.0 Safari/537.36",
         },
       });
 
-      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      if (!response.ok) {
+        const error = new Error(`HTTP ${response.status}`);
+        error.status = response.status;
+        throw error;
+      }
       return await response.text();
     } catch (error) {
       lastError = error;
       if (attempt < attempts) {
-        await new Promise((resolve) => setTimeout(resolve, attempt * 750));
+        const rateLimited = error?.status === 429 || error?.status === 666;
+        const delay = rateLimited ? attempt * 10_000 : attempt * 1_500;
+        await new Promise((resolve) => setTimeout(resolve, delay));
       }
     } finally {
       clearTimeout(timeout);
@@ -694,17 +741,46 @@ async function fetchText(url, attempts = 3) {
 }
 
 async function getBistTumCompanies() {
-  const html = await fetchText(KAP_INDEX_URL);
-  const flightText = decodeFlightText(html);
-  const index = findObjectByMarker(
-    flightText,
-    '"code":"XUTUM"',
-    (value) => value?.code === "XUTUM" && Array.isArray(value.content)
-  );
+  for (let attempt = 1; attempt <= 3; attempt += 1) {
+    const html = await fetchText(KAP_INDEX_URL);
+    const flightText = decodeFlightText(html);
+    const index = findObjectByMarker(
+      flightText,
+      '"code":"XUTUM"',
+      (value) => value?.code === "XUTUM" && Array.isArray(value.content)
+    );
 
-  if (!index) throw new Error("KAP BIST TÜM listesi ayrıştırılamadı.");
+    if (index) {
+      return index.content
+        .filter(
+          (company) =>
+            /^[A-Z0-9]{2,6}$/.test(company.stockCode ?? "") &&
+            company.title &&
+            company.mkkMemberOid
+        )
+        .sort((a, b) => a.stockCode.localeCompare(b.stockCode, "tr"));
+    }
 
-  return index.content
+    if (attempt < 3) {
+      await new Promise((resolve) => setTimeout(resolve, attempt * 1_000));
+    }
+  }
+
+  throw new Error("KAP BIST TÜM listesi ayrıştırılamadı.");
+}
+
+function getBistTumCompaniesFromSnapshot() {
+  const snapshot = readJson(SNAPSHOT_FILE, null);
+  if (!Array.isArray(snapshot?.companies) || snapshot.companies.length === 0) {
+    throw new Error("Yerel BIST TÜM anlık görüntüsü bulunamadı.");
+  }
+
+  return snapshot.companies
+    .map((company) => ({
+      stockCode: company.kod,
+      title: company.sirketAdi,
+      mkkMemberOid: company.mkkMemberOid,
+    }))
     .filter(
       (company) =>
         /^[A-Z0-9]{2,6}$/.test(company.stockCode ?? "") &&
@@ -715,7 +791,9 @@ async function getBistTumCompanies() {
 }
 
 async function main() {
-  const companies = await getBistTumCompanies();
+  const companies = fromSnapshot
+    ? getBistTumCompaniesFromSnapshot()
+    : await getBistTumCompanies();
   const existingCodes = new Set(
     fs
       .readdirSync(PROFILES_DIR)
@@ -734,6 +812,17 @@ async function main() {
   const multipleShareClasses = [...companiesByMember.values()].filter(
     (codes) => codes.length > 1
   );
+  const canonicalByMember = new Map();
+  const profilePathDocument = readJson(PROFILE_PATHS_FILE, { profiles: {} });
+  const profilePaths =
+    profilePathDocument.profiles ?? profilePathDocument.sirketler ?? {};
+  for (const [memberOid, codes] of companiesByMember) {
+    const sortedCodes = [...codes].sort((a, b) => a.localeCompare(b, "tr"));
+    canonicalByMember.set(
+      memberOid,
+      PRIMARY_SHARE_CODES.get(sortedCodes.join("|")) ?? sortedCodes[0]
+    );
+  }
 
   console.log(`BIST TÜM: ${companies.length}`);
   console.log(`BIST TÜM şirketi: ${companiesByMember.size}`);
@@ -747,21 +836,139 @@ async function main() {
     );
   }
 
-  if (!inspectCode) return;
+  if (inspectCode) {
+    const company = companies.find((item) => item.stockCode === inspectCode);
+    if (!company) {
+      throw new Error(`${inspectCode} BIST TÜM listesinde bulunamadı.`);
+    }
 
-  const company = companies.find((item) => item.stockCode === inspectCode);
-  if (!company) throw new Error(`${inspectCode} BIST TÜM listesinde bulunamadı.`);
+    const profileUrl = getProfileUrl(company, profilePaths);
+    const profileHtml = await fetchText(profileUrl);
+    const items = extractItemObjects(decodeFlightText(profileHtml));
 
-  const profileUrl = `${KAP_PROFILE_BASE}/${company.mkkMemberOid}`;
-  const profileHtml = await fetchText(profileUrl);
-  const items = extractItemObjects(decodeFlightText(profileHtml));
-
-  console.log(`\n${company.stockCode} | ${company.title}`);
-  console.log(profileUrl);
-  for (const item of items) {
-    console.log(`\n[${item.itemKey}] ${item.itemName}`);
-    console.log(JSON.stringify(item.value, null, 2));
+    console.log(`\n${company.stockCode} | ${company.title}`);
+    console.log(profileUrl);
+    for (const item of items) {
+      console.log(`\n[${item.itemKey}] ${item.itemName}`);
+      console.log(JSON.stringify(item.value, null, 2));
+    }
+    return;
   }
+
+  if (!writeChanges) {
+    console.log("Değişiklik yapılmadı. Kaydetmek için --write kullanın.");
+    return;
+  }
+
+  const snapshot = {
+    version: 1,
+    generatedAt: VERIFIED_AT,
+    source: KAP_INDEX_URL,
+    indexCode: "XUTUM",
+    companies: companies.map((company) => ({
+      kod: company.stockCode,
+      sirketAdi: titleCaseCompany(company.title),
+      mkkMemberOid: company.mkkMemberOid,
+      anaHisseKodu: canonicalByMember.get(company.mkkMemberOid),
+      kapSirketProfili: getProfileUrl(company, profilePaths),
+    })),
+  };
+  writeJsonIfChanged(SNAPSHOT_FILE, snapshot);
+
+  let targets = companies.filter((company) => {
+    if (requestedCodes.size > 0 && !requestedCodes.has(company.stockCode)) {
+      return false;
+    }
+    return !missingOnly || !existingCodes.has(company.stockCode);
+  });
+  if (limit > 0) targets = targets.slice(0, limit);
+
+  const sourceDocument = readJson(OFFICIAL_SOURCES_FILE, {
+    version: 1,
+    generatedAt: VERIFIED_AT,
+    profiles: {},
+  });
+  const officialSources = { ...(sourceDocument.profiles ?? {}) };
+  const profileItemsCache = new Map();
+
+  function getProfileItems(company) {
+    if (!profileItemsCache.has(company.mkkMemberOid)) {
+      const profileUrl = getProfileUrl(company, profilePaths);
+      profileItemsCache.set(
+        company.mkkMemberOid,
+        fetchText(profileUrl).then((html) =>
+          extractItemObjects(decodeFlightText(html))
+        )
+      );
+    }
+    return profileItemsCache.get(company.mkkMemberOid);
+  }
+
+  let changedProfiles = 0;
+  const results = await mapLimit(targets, concurrency, async (company, index) => {
+    try {
+      const items = await getProfileItems(company);
+      if (items.length === 0) throw new Error("KAP profil alanları okunamadı");
+
+      const generated = buildProfile(
+        company,
+        items,
+        canonicalByMember.get(company.mkkMemberOid) ?? company.stockCode,
+        getProfileUrl(company, profilePaths)
+      );
+      const filePath = path.join(
+        PROFILES_DIR,
+        `${company.stockCode.toLowerCase()}.json`
+      );
+      const existing = readJson(filePath, null);
+      const profile = mergeProfile(
+        existing,
+        generated.profile,
+        generated.sourceCoverage
+      );
+      const changed = writeJsonIfChanged(filePath, profile);
+      if (changed) changedProfiles += 1;
+
+      const sourceKey = company.stockCode.toLowerCase();
+      officialSources[sourceKey] = compactObject({
+        ...(officialSources[sourceKey] ?? {}),
+        ...generated.source,
+        yatirimciIliskileri:
+          officialSources[sourceKey]?.yatirimciIliskileri ||
+          existing?.kurumsalBilgiler?.yatirimciIliskileri,
+      });
+
+      console.log(
+        `[${index + 1}/${targets.length}] ${company.stockCode}: ${
+          changed ? "güncellendi" : "değişmedi"
+        }`
+      );
+      return { company, ok: true };
+    } catch (error) {
+      console.error(
+        `[${index + 1}/${targets.length}] ${company.stockCode}: ${error.message}`
+      );
+      return { company, ok: false, error };
+    }
+  });
+
+  const sortedSources = Object.fromEntries(
+    Object.entries(officialSources).sort(([a], [b]) =>
+      a.localeCompare(b, "tr")
+    )
+  );
+  writeJsonIfChanged(OFFICIAL_SOURCES_FILE, {
+    ...sourceDocument,
+    version: 1,
+    generatedAt: VERIFIED_AT,
+    profiles: sortedSources,
+  });
+
+  const failures = results.filter((result) => !result.ok);
+  console.log(`\nİşlenen: ${results.length}`);
+  console.log(`Değişen/yeni künye: ${changedProfiles}`);
+  console.log(`Başarısız: ${failures.length}`);
+  if (failures.length > 0) process.exitCode = 1;
 }
 
 main().catch((error) => {

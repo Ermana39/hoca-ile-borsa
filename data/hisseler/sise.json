@@ -22,7 +22,14 @@
   "istirakler": [],
   "kurumsalBilgiler": {
     "web": "https://www.sisecam.com.tr",
-    "faaliyetAlani": "Cam, düzcam, cam ev eşyası, cam ambalaj ve kimyasallar üretimi"
+    "faaliyetAlani": "Cam, düzcam, cam ev eşyası, cam ambalaj ve kimyasallar üretimi",
+    "sektorler": [
+      "Borsa İstanbul şirketleri"
+    ],
+    "islemGorduguPazar": [
+      "Borsa İstanbul Pay Piyasası"
+    ],
+    "kapSirketProfili": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/1087-turkiye-sise-ve-cam-fabrikalari-a-s"
   },
   "borsaBilgileri": {
     "bistKodu": "SISE",
@@ -30,7 +37,8 @@
       "BIST 30",
       "BIST 50",
       "BIST 100",
-      "BIST SINAİ"
+      "BIST SINAİ",
+      "BIST TÜM"
     ],
     "katilimEndeksiUygun": true
   },
@@ -103,5 +111,17 @@
   "seo": {
     "title": "SISE Hisse Bilgileri: Şişecam Ortaklık Yapısı ve Faaliyet Alanları",
     "description": "SISE hisse kodlu Türkiye Şişe ve Cam Fabrikaları A.Ş. hakkında ortaklık yapısı, cam üretimi, faaliyet alanları, BIST endeksleri ve şirket profili."
-  }
+  },
+  "veriDogrulama": {
+    "sonDogrulamaTarihi": "2026-07-21",
+    "kaynak": "KAP",
+    "kaynakUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/1087-turkiye-sise-ve-cam-fabrikalari-a-s"
+  },
+  "degisiklikGecmisi": [
+    {
+      "tarih": "2026-07-21",
+      "baslik": "BIST TÜM künye standardı doğrulandı",
+      "aciklama": "Hisse kodu, KAP bağlantısı, faaliyet, sektör, pazar ve endeks alanları BIST TÜM listesiyle eşleştirildi."
+    }
+  ]
 }

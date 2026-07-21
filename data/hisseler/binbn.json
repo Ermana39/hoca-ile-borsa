@@ -9,60 +9,93 @@
   "ortaklikYapisi": {
     "ortaklar": [
       {
-        "ad": "1000 YATIRIMLAR HOLDİNG ANONİM ŞİRKETİ",
-        "oran": 75.02
+        "ad": "1000 Yatırımlar Holding Anonim Şirketi",
+        "oran": 75.02,
+        "sermaye": "84.020.704"
       },
       {
-        "ad": "DİĞER",
-        "oran": 24.98
+        "ad": "Diğer",
+        "oran": 24.98,
+        "sermaye": "27.979.296"
       }
     ],
-    "not": "Ortaklık yapısı verileri şirket künyesindeki oran bilgilerine göre hazırlanmıştır."
+    "not": "KAP'ta açıklanan doğrudan ortaklık oranları 2026-07-21 tarihinde kontrol edilmiştir."
   },
   "istirakler": [
     {
-      "ad": "BinBin Bulgaria EOOD",
-      "oran": 100
+      "ad": "Binbin Bulgaria Eood",
+      "oran": 100,
+      "sermaye": "1000",
+      "paraBirimi": "BGN",
+      "faaliyetKonusu": "Mikromobilite",
+      "iliski": "Bağlı Ortaklıklar"
     },
     {
-      "ad": "BinBin BH d.o.o.",
-      "oran": 100
+      "ad": "Binbin Bh D.o.o.",
+      "oran": 100,
+      "sermaye": "1000",
+      "paraBirimi": "BAM",
+      "faaliyetKonusu": "Mikromobilite",
+      "iliski": "Bağlı Ortaklıklar"
     },
     {
-      "ad": "Çamlıca Emlak İnşaat ve Gayrimenkul Danışmanlığı San. ve Tic. A.Ş.",
-      "oran": 25.03
-    },
-    {
-      "ad": "Cyprus BinBin Micromobility Limited",
-      "oran": 95
+      "ad": "Cyprus Binbin Micromobility Limited",
+      "oran": 95,
+      "sermaye": "1000000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Mikromobilite",
+      "iliski": "Bağlı Ortaklıklar"
     },
     {
       "ad": "Bin Bin Skuter Dooel Skopje",
-      "oran": 100
+      "oran": 100,
+      "sermaye": "5000",
+      "paraBirimi": "EUR",
+      "faaliyetKonusu": "Mikromobilite",
+      "iliski": "Bağlı Ortaklıklar"
     },
     {
-      "ad": "BinBin Azerbaijan Mahdud Masuliyyatli Cəmiyyəti",
-      "oran": 99
+      "ad": "Binbin Azerbaijan Mahdud Masuliyyatli Camiyyati",
+      "oran": 99,
+      "sermaye": "300",
+      "paraBirimi": "AZN",
+      "faaliyetKonusu": "Mikromobilite",
+      "iliski": "Bağlı Ortaklıklar"
     },
     {
-      "ad": "BinBin Albania Mobility SHPK",
-      "oran": 100
+      "ad": "Binbin Albania Mobility Shpk",
+      "oran": 100,
+      "sermaye": "100000",
+      "paraBirimi": "ALL",
+      "faaliyetKonusu": "Mikromobilite",
+      "iliski": "Bağlı Ortaklıklar"
     },
     {
       "ad": "Ekolog Bilgi ve Kartlı Sistem Hizmetleri ve Ticaret Anonim Şirketi",
-      "oran": 50
+      "oran": 50,
+      "sermaye": "25000000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "Psikoteknik ve buna ilişkin özel eğitim ve yazılım hizmetleri",
+      "iliski": "Bağlı Ortaklıklar"
+    },
+    {
+      "ad": "Çamlıca Emlak İnşaat ve Gayrimenkul Danışmanlığı San. ve Tic. A.Ş.",
+      "oran": 25.03,
+      "sermaye": "2125000",
+      "paraBirimi": "TRY",
+      "faaliyetKonusu": "İnşaat ve emlak yönetimi",
+      "iliski": ""
     }
   ],
   "kurumsalBilgiler": {
-    "merkez": "Saray Mah. Sanayi Cad. B Blok No:54 İç Kapı No:2 Ümraniye/İstanbul",
+    "merkez": "Saray Mah. Sanayi Cad. B Blok No:54 İç Kapı No:2 Ümraniye / İstanbul",
     "eposta": "yatirimciiliskileri@binbin.tech",
-    "web": "www.binbin.tech",
+    "web": "https://www.binbin.tech/",
     "telefon": "0 850 223 34 43",
-    "fax": "",
     "sirketSuresi": "Süresiz",
     "bagimsizDenetimKurulusu": "DENEYİM BAĞIMSIZ DENETİM VE DANIŞMANLIK A.Ş.",
     "odenmisSermaye": "112.000.000 TL",
-    "faaliyetAlani": "Bilişim teknolojileri, mobil iletişim, bilgi işlem, yazılım, programlama ile mikromobilite, mobilite çözümleri, mikromobilite ve mobilite çözümlerinin edinilmesi, kiralanması, satılması, işletilmesi ve akıllı şehir teknolojilerine ilişkin faaliyetlerde bulunmak.",
+    "faaliyetAlani": "Şirket bilişim teknolojileri, mobil iletişim, bilgi işlem, yazılım, programlama ile birlikte mikromobilite, mobilite çözümleri, mikrobolite ve mobilite çözümlerinin edinilmesi, kiralanması, satılması, her türlü işletilmesi ve akıllı şehir teknolojilerine ilişkin faaliyetlerinde bulunmak amacıyla faaliyet göstermektedir.",
     "sektorler": [
       "TEKNOLOJİ",
       "BİLİŞİM"
@@ -74,34 +107,63 @@
       "ÜSAME ERDOĞAN",
       "HÜSEYİN ARDAN KÜÇÜK",
       "HARİS POJATA",
-      "MUSTAFA SAİM BİRPNAR",
+      "MUSTAFA SAİM BİRPINAR",
       "KADİR CAN ABDİK",
       "FARUK YASİN TURİNAY",
       "ALİ SAİT GÜLLÜ",
-      "BİROL YALÇIN"
+      "BİROL YALÇİN"
+    ],
+    "kapSirketProfili": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/6026-bin-ulasim-ve-akilli-sehir-teknolojileri-a-s",
+    "kayitliSermayeTavani": "1.000.000.000 TL",
+    "ticaretSicilMemurlugu": "İSTANBUL",
+    "tescilTarihi": "2016-11-17",
+    "ticaretSicilNumarasi": "205981-5",
+    "vergiDairesi": "İSTANBUL - Alemdağ Vergi Dairesi",
+    "yatirimciIliskileriYetkilileri": [
+      {
+        "ad": "Ömer Faruk Tufan",
+        "gorev": "Yatırımcı İlişkileri Müdürü",
+        "telefon": "02166061177",
+        "eposta": "yatirimciiliskileri@binbin.tech"
+      },
+      {
+        "ad": "Emrullah Aydın",
+        "gorev": "Avukat",
+        "telefon": "02166061177",
+        "eposta": "yatirimciiliskileri@binbin.tech"
+      },
+      {
+        "ad": "M. Serdar Savaş",
+        "gorev": "Hukuk Müşaviri",
+        "telefon": "02166061177",
+        "eposta": "yatirimciiliskileri@binbin.tech"
+      }
     ]
   },
   "borsaBilgileri": {
     "bistKodu": "BINBN",
     "endeksler": [
-      "BIST TÜM",
-      "BIST TÜM-100",
-      "BIST TEKNOLOJİ",
-      "BIST BİLİŞİM",
-      "BIST İSTANBUL",
-      "BIST TEKNOLOJİ AĞIRLIK SIN.ALI",
       "BIST HALKA ARZ",
+      "BIST TÜM",
+      "BIST KATILIM TUM",
       "BIST YILDIZ",
-      "BIST KATILIM TÜM",
+      "BIST TÜM-100",
+      "BIST 500",
+      "BIST TEKNOLOJİ",
       "BIST KATILIM 100",
-      "BIST 500"
+      "BIST BİLİŞİM",
+      "BIST İSTANBUL"
     ],
     "katilimEndeksiUygun": true,
-    "halkaArzTarihi": ""
+    "halkaArzTarihi": "2024-10-09",
+    "fiiliDolasimOrani": 15.12
   },
   "temettuSermayeGecmisi": [],
   "ozgunAnaliz": {
     "isModeli": "BinBin'in iş modeli, mikromobilite araçlarının kullanıcıya sunulması, mobil uygulama altyapısı, yazılım geliştirme, araç kiralama/işletme süreçleri ve akıllı şehir teknolojileri üzerinden gelir yaratmaya dayanır. Şirketin performansı kullanıcı sayısı, şehir bazlı operasyon verimliliği, araç kullanım sıklığı, bakım maliyetleri, regülasyonlar ve yurt dışı iştiraklerin katkısıyla birlikte değerlendirilmelidir.",
+    "sektorelKonum": "BINBN, Borsa İstanbul'da mikromobilite, akıllı şehir teknolojileri ve bilişim temasıyla izlenen şirketlerden biridir. Şirketin sektörel konumu; şehir içi ulaşım alışkanlıkları, dijital uygulama kullanımı, regülasyon ortamı, filo verimliliği ve yurt dışı büyüme stratejisiyle birlikte değerlendirilmelidir.",
+    "ortaklikYorumu": "Şirketin ortaklık yapısında 1000 Yatırımlar Holding A.Ş. ana pay sahibi olarak öne çıkmaktadır. Bu yapı, grup stratejisi, sermaye desteği ve büyüme planları açısından yatırımcıların takip edebileceği önemli bir başlıktır.",
+    "yatirimciNotu": "BINBN yatırımcısı; kullanıcı sayısı, araç kullanım oranı, şehir bazlı operasyon kârlılığı, bakım giderleri, regülasyon gelişmeleri, yurt dışı iştirak performansı, nakit akışı ve teknoloji yatırımlarının geri dönüşünü birlikte takip etmelidir.",
     "gelirKaynaklari": [
       "Elektrikli scooter ve mikromobilite kiralama gelirleri",
       "Mobil uygulama üzerinden sağlanan kullanım gelirleri",
@@ -126,11 +188,30 @@
       "Yurt dışı iştiraklerde kur, operasyon ve mevzuat riskleri oluşabilir",
       "Teknoloji yatırımlarının geri dönüş süresi beklenenden uzun olabilir"
     ],
-    "sektorelKonum": "BINBN, Borsa İstanbul'da mikromobilite, akıllı şehir teknolojileri ve bilişim temasıyla izlenen şirketlerden biridir. Şirketin sektörel konumu; şehir içi ulaşım alışkanlıkları, dijital uygulama kullanımı, regülasyon ortamı, filo verimliliği ve yurt dışı büyüme stratejisiyle birlikte değerlendirilmelidir.",
-    "ortaklikYorumu": "Şirketin ortaklık yapısında 1000 Yatırımlar Holding A.Ş. ana pay sahibi olarak öne çıkmaktadır. Bu yapı, grup stratejisi, sermaye desteği ve büyüme planları açısından yatırımcıların takip edebileceği önemli bir başlıktır.",
-    "temettuYorumu": "BINBN için temettü değerlendirmesi yapılırken büyüme yatırımları, filo yenileme ihtiyacı, yazılım ve teknoloji harcamaları, işletme sermayesi gereksinimi, nakit akışı ve kâr dağıtım politikası birlikte dikkate alınmalıdır.",
-    "yatirimciNotu": "BINBN yatırımcısı; kullanıcı sayısı, araç kullanım oranı, şehir bazlı operasyon kârlılığı, bakım giderleri, regülasyon gelişmeleri, yurt dışı iştirak performansı, nakit akışı ve teknoloji yatırımlarının geri dönüşünü birlikte takip etmelidir."
+    "temettuYorumu": "BINBN için temettü değerlendirmesi yapılırken büyüme yatırımları, filo yenileme ihtiyacı, yazılım ve teknoloji harcamaları, işletme sermayesi gereksinimi, nakit akışı ve kâr dağıtım politikası birlikte dikkate alınmalıdır."
   },
+  "seo": {
+    "title": "BINBN Hisse Bilgileri: BinBin Ortaklık Yapısı ve Şirket Künyesi",
+    "description": "BINBN hisse kodlu Bin Ulaşım ve Akıllı Şehir Teknolojileri A.Ş. hakkında ortaklık yapısı, iştirak bilgileri, faaliyet alanı, endeksler, pazar bilgisi ve temel oranlar."
+  },
+  "veriDogrulama": {
+    "sonDogrulamaTarihi": "2026-07-21",
+    "kaynak": "KAP",
+    "kaynakUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/6026-bin-ulasim-ve-akilli-sehir-teknolojileri-a-s"
+  },
+  "degisiklikGecmisi": [
+    {
+      "tarih": "2026-07-21",
+      "baslik": "BIST TÜM künye standardı doğrulandı",
+      "aciklama": "Hisse kodu, KAP bağlantısı, faaliyet, sektör, pazar ve endeks alanları BIST TÜM listesiyle eşleştirildi."
+    },
+    {
+      "tarih": "2026-07-21",
+      "baslik": "KAP şirket bilgileri doğrulandı",
+      "aciklama": "Kurumsal bilgiler, ortaklık yapısı ve borsa bilgileri resmi KAP profiliyle karşılaştırıldı."
+    }
+  ],
+  "yasalUyari": "Bu sayfadaki bilgiler genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir. Anlık fiyat/işlem verisi sunmaz; oranlar dönemsel finansal tablolara ve ilgili kapanış verilerine dayanır.",
   "seoSorular": [
     {
       "soru": "BINBN ne iş yapar?",
@@ -182,11 +263,6 @@
       "aciklama": "Bilişim ve teknoloji teması nedeniyle BINBN ile aynı geniş sektör başlığı altında değerlendirilebilir."
     }
   ],
-  "seo": {
-    "title": "BINBN Hisse Bilgileri: BinBin Ortaklık Yapısı ve Şirket Künyesi",
-    "description": "BINBN hisse kodlu Bin Ulaşım ve Akıllı Şehir Teknolojileri A.Ş. hakkında ortaklık yapısı, iştirak bilgileri, faaliyet alanı, endeksler, pazar bilgisi ve temel oranlar."
-  },
-  "yasalUyari": "Bu sayfadaki bilgiler genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir. Anlık fiyat/işlem verisi sunmaz; oranlar dönemsel finansal tablolara ve ilgili kapanış verilerine dayanır.",
   "temelOranlar": {
     "donem": "",
     "guncellemeTarihi": "",

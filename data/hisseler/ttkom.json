@@ -25,7 +25,7 @@
         "oran": 0.01
       }
     ],
-    "not": ""
+    "not": "Ortaklık oranları resmi şirket verileri üzerinden kontrol edilmelidir."
   },
   "istirakler": [
     {
@@ -141,7 +141,15 @@
       "Mehmet Reşat Bahçeveli",
       "İskender Pala",
       "Betül Altınsoy"
-    ]
+    ],
+    "faaliyetAlani": "TTKOM'un iş modeli, sabit telefon, genişbant internet, mobil iletişim, veri merkezi, dijital servisler, televizyon, ödeme sistemleri, finansman, enerji tedariki ve kurumsal teknoloji hizmetlerinden oluşan entegre telekom yapısına dayanır. Türk Telekom, TT Mobil, TTNET, TT Ödeme, TT Ventures, Argela, Sebit ve Türk Telekom International iştirakleriyle hem bireysel hem de kurumsal müşterilere iletişim, internet, teknoloji, dijital servis ve altyapı hizmetleri sunmaktadır. Bu nedenle TTKOM değerlendirilirken sabit genişbant abone eğilimi, mobil rekabet, fiber yatırımları, ARPU, altyapı harcamaları, regülasyon, lisans maliyetleri, dijital servisler, kurumsal müşteri kazanımı ve nakit akışı birlikte izlenmelidir.",
+    "sektorler": [
+      "Borsa İstanbul şirketleri"
+    ],
+    "islemGorduguPazar": [
+      "Borsa İstanbul Pay Piyasası"
+    ],
+    "kapSirketProfili": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/1473-turk-telekomunikasyon-a-s"
   },
   "borsaBilgileri": {
     "bistKodu": "TTKOM",
@@ -155,10 +163,10 @@
       "BIST Yıldız",
       "BIST 500",
       "BIST Kurumsal Yönetim",
-      "BIST Sürdürülebilirlik"
+      "BIST Sürdürülebilirlik",
+      "BIST TÜM"
     ],
-    "katilimEndeksiUygun": false,
-    "halkaArzTarihi": ""
+    "katilimEndeksiUygun": false
   },
   "temettuSermayeGecmisi": [],
   "ozgunAnaliz": {
@@ -271,5 +279,17 @@
       "netKarDegisim": 55.63,
       "netSatisDegisim": 8.69
     }
-  }
+  },
+  "veriDogrulama": {
+    "sonDogrulamaTarihi": "2026-07-21",
+    "kaynak": "KAP",
+    "kaynakUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/1473-turk-telekomunikasyon-a-s"
+  },
+  "degisiklikGecmisi": [
+    {
+      "tarih": "2026-07-21",
+      "baslik": "BIST TÜM künye standardı doğrulandı",
+      "aciklama": "Hisse kodu, KAP bağlantısı, faaliyet, sektör, pazar ve endeks alanları BIST TÜM listesiyle eşleştirildi."
+    }
+  ]
 }

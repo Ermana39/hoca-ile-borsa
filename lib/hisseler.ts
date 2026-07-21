@@ -4,10 +4,25 @@ import { ozelHisseler } from "@/data/hisseler-ozel";
 
 export type Ortak = { ad: string; oran: number; sermaye?: string };
 
-export type Istirak = { ad: string; oran: number; sermaye?: string };
+export type Istirak = {
+  ad: string;
+  oran: number;
+  sermaye?: string;
+  paraBirimi?: string;
+  faaliyetKonusu?: string;
+  iliski?: string;
+};
+
+export type YatirimciIliskileriYetkilisi = {
+  ad?: string;
+  gorev?: string;
+  telefon?: string;
+  eposta?: string;
+};
 
 export type KurumsalBilgiler = {
   merkez?: string;
+  uretimTesisleri?: string[];
   web?: string;
   yatirimciIliskileri?: string;
   kapSirketProfili?: string;
@@ -16,11 +31,17 @@ export type KurumsalBilgiler = {
   fax?: string;
   sirketSuresi?: string;
   odenmisSermaye?: string;
+  kayitliSermayeTavani?: string;
   bagimsizDenetimKurulusu?: string;
   faaliyetAlani?: string;
   sektorler?: string[];
   islemGorduguPazar?: string[];
   yonetimKurulu?: string[];
+  ticaretSicilMemurlugu?: string;
+  tescilTarihi?: string;
+  ticaretSicilNumarasi?: string;
+  vergiDairesi?: string;
+  yatirimciIliskileriYetkilileri?: YatirimciIliskileriYetkilisi[];
 };
 
 export type TemettuSermayeKaydi = {
@@ -45,10 +66,14 @@ export type Hisse = {
     endeksler: string[];
     katilimEndeksiUygun: boolean;
     halkaArzTarihi?: string;
+    fiiliDolasimOrani?: number;
+    anaHisseKodu?: string;
   };
   temettuSermayeGecmisi: TemettuSermayeKaydi[];
   veriDogrulama?: {
     sonDogrulamaTarihi?: string;
+    kaynak?: string;
+    kaynakUrl?: string;
   };
   degisiklikGecmisi?: {
     tarih: string;
@@ -140,8 +165,15 @@ export function getTumHisseSembolleri(): string[] {
 
 // Sitemap için: JSON şablonu + elle tam sayfa hisselerinin tümü.
 export function getSitemapHisseSembolleri(): string[] {
+  const canonicalJsonCodes = Object.entries(hisseler)
+    .filter(([, hisse]) => {
+      const canonical = hisse.borsaBilgileri?.anaHisseKodu;
+      return !canonical || canonical.toUpperCase() === hisse.kod.toUpperCase();
+    })
+    .map(([kod]) => kod);
+
   return Array.from(
-    new Set([...Object.keys(hisseler), ...ozelKodlar])
+    new Set([...canonicalJsonCodes, ...ozelKodlar])
   );
 }
 

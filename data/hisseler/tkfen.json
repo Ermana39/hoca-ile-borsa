@@ -26,7 +26,14 @@
   "istirakler": [],
   "kurumsalBilgiler": {
     "web": "https://www.tekfen.com.tr",
-    "faaliyetAlani": "Holding faaliyetleri, mühendislik ve taahhüt, tarım sanayisi, terminalcilik, yatırım ve gayrimenkul"
+    "faaliyetAlani": "Holding faaliyetleri, mühendislik ve taahhüt, tarım sanayisi, terminalcilik, yatırım ve gayrimenkul",
+    "sektorler": [
+      "Borsa İstanbul şirketleri"
+    ],
+    "islemGorduguPazar": [
+      "Borsa İstanbul Pay Piyasası"
+    ],
+    "kapSirketProfili": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/1470-tekfen-holding-a-s"
   },
   "borsaBilgileri": {
     "bistKodu": "TKFEN",
@@ -34,7 +41,8 @@
       "BIST 100",
       "BIST HOLDING VE YATIRIM",
       "BIST SÜRDÜRÜLEBİLİRLİK",
-      "BIST KATILIM"
+      "BIST KATILIM",
+      "BIST TÜM"
     ],
     "katilimEndeksiUygun": true
   },
@@ -107,5 +115,17 @@
   "seo": {
     "title": "TKFEN Hisse Bilgileri: Tekfen Holding Ortaklık Yapısı ve Faaliyet Alanları",
     "description": "TKFEN hisse kodlu Tekfen Holding hakkında ortaklık yapısı, mühendislik ve taahhüt, tarım sanayisi, terminalcilik, BIST endeksleri ve şirket profili."
-  }
+  },
+  "veriDogrulama": {
+    "sonDogrulamaTarihi": "2026-07-21",
+    "kaynak": "KAP",
+    "kaynakUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/1470-tekfen-holding-a-s"
+  },
+  "degisiklikGecmisi": [
+    {
+      "tarih": "2026-07-21",
+      "baslik": "BIST TÜM künye standardı doğrulandı",
+      "aciklama": "Hisse kodu, KAP bağlantısı, faaliyet, sektör, pazar ve endeks alanları BIST TÜM listesiyle eşleştirildi."
+    }
+  ]
 }

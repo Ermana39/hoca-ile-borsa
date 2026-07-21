@@ -25,7 +25,7 @@
         "oran": 1.66
       }
     ],
-    "not": ""
+    "not": "Ortaklık oranları resmi şirket verileri üzerinden kontrol edilmelidir."
   },
   "istirakler": [
     {
@@ -149,7 +149,19 @@
       "Adnan Ertem",
       "Sadık Yakut"
     ],
-    "faaliyetAlanlari": "Bankacılık Kanunu ve ilgili diğer mevzuatta belirtilen yükümlülüklerin yerine getirilmesi kaydıyla, mevduat bankalarının yapabilecekleri her türlü bankacılık faaliyetinin yürütülmesidir."
+    "faaliyetAlanlari": "Bankacılık Kanunu ve ilgili diğer mevzuatta belirtilen yükümlülüklerin yerine getirilmesi kaydıyla, mevduat bankalarının yapabilecekleri her türlü bankacılık faaliyetinin yürütülmesidir.",
+    "bagimsizDenetimKurulusu": "Güney Bağımsız Denetim ve Serbest Muhasebeci Mali Müşavirlik A.Ş.",
+    "faaliyetAlani": "Bankacılık Kanunu ve ilgili diğer mevzuatta belirtilen yükümlülüklerin yerine getirilmesi kaydıyla, mevduat bankalarının yapabilecekleri her türlü bankacılık faaliyetinin yürütülmesidir.",
+    "sektorler": [
+      "Mali Kuruluşlar",
+      "Bankalar"
+    ],
+    "islemGorduguPazar": [
+      "Yıldız Pazar",
+      "Kesin Alım Satım Pazarı",
+      "Kesin Alım Satım Pazarı - Nitelikli Yatırımcılar Arasında"
+    ],
+    "kapSirketProfili": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/2428-turkiye-vakiflar-bankasi-t-a-o"
   },
   "borsaBilgileri": {
     "bistKodu": "VAKBN",
@@ -176,8 +188,7 @@
       "Kesin Alım Satım Pazarı",
       "Kesin Alım Satım Pazarı - Nitelikli Yatırımcılar Arasında"
     ],
-    "katilimEndeksiUygun": false,
-    "halkaArzTarihi": ""
+    "katilimEndeksiUygun": false
   },
   "temettuSermayeGecmisi": [
     {
@@ -291,5 +302,17 @@
       "roe": 0.18,
       "netKarDegisim": -24.97
     }
-  }
+  },
+  "veriDogrulama": {
+    "sonDogrulamaTarihi": "2026-07-21",
+    "kaynak": "KAP",
+    "kaynakUrl": "https://www.kap.org.tr/tr/sirket-bilgileri/genel/2428-turkiye-vakiflar-bankasi-t-a-o"
+  },
+  "degisiklikGecmisi": [
+    {
+      "tarih": "2026-07-21",
+      "baslik": "BIST TÜM künye standardı doğrulandı",
+      "aciklama": "Hisse kodu, KAP bağlantısı, faaliyet, sektör, pazar ve endeks alanları BIST TÜM listesiyle eşleştirildi."
+    }
+  ]
 }
