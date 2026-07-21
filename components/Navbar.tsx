@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import SiteSearch from "@/components/SiteSearch";
 
 const navLinks = [
   { label: "Ana Sayfa", href: "/" },
@@ -33,7 +34,7 @@ export default function Navbar() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1.5 lg:flex" aria-label="Ana navigasyon">
+        <nav className="hidden items-center gap-1.5 xl:flex" aria-label="Ana navigasyon">
           {navLinks.map((link) => (
             <Link
               key={link.href}
@@ -46,26 +47,29 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <button
-          className="flex h-9 w-9 items-center justify-center rounded-md border border-slate-700 bg-slate-800 text-slate-300 transition hover:bg-slate-700 lg:hidden"
-          onClick={() => setOpen((v) => !v)}
-          aria-label="Menüyü aç/kapat"
-          aria-expanded={open}
-        >
-          {open ? (
-            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-              <path d="M18 6 6 18M6 6l12 12" />
-            </svg>
-          ) : (
-            <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
-              <path d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-          )}
-        </button>
+        <div className="flex items-center gap-2">
+          <SiteSearch onOpen={() => setOpen(false)} />
+          <button
+            className="flex h-9 w-9 items-center justify-center rounded-md border border-slate-700 bg-slate-800 text-slate-300 transition hover:bg-slate-700 xl:hidden"
+            onClick={() => setOpen((v) => !v)}
+            aria-label="Menüyü aç/kapat"
+            aria-expanded={open}
+          >
+            {open ? (
+              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                <path d="M18 6 6 18M6 6l12 12" />
+              </svg>
+            ) : (
+              <svg className="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              </svg>
+            )}
+          </button>
+        </div>
       </div>
 
       {open && (
-        <nav className="border-t border-slate-800 bg-slate-900 px-4 pb-4 pt-2 lg:hidden" aria-label="Mobil navigasyon">
+        <nav className="border-t border-slate-800 bg-slate-900 px-4 pb-4 pt-2 xl:hidden" aria-label="Mobil navigasyon">
           {navLinks.map((link) => (
             <Link
               key={link.href}

@@ -7,8 +7,9 @@ export type NewsItem = {
   href: string;
   image: string;
   alt: string;
-  // "auto" kullanılırsa tarih, ilgili app/haber/<slug>/page.tsx dosyasının
-  // oluşturulma zamanından alınır. Eski haberlerde sabit ISO tarih korunabilir.
+  // "auto" sadece yeni haberin ilk tarihini oluşturmak için kullanılmalı.
+  // Eski haberlerde dosya değişikliklerinin liste sırasını etkilememesi için
+  // sabit ISO tarih korunur.
   publishedAt: string | "auto";
   category: HaberKategori;
   // Haberi yazan yazarın slug'ı (app/data/yazarlar.ts). Belirtilmezse
@@ -29,7 +30,7 @@ export const newsItems: NewsItem[] = [
     href: "/haber/tursg-2026-6-bilanco-net-kar-1345-milyar-tl",
     image: "/tursg-2026-6-bilanco-net-kar-1345-milyar-tl.webp",
     alt: "TURSG Türkiye Sigorta 2026 ikinci çeyrek bilanço analizi",
-    publishedAt: "auto",
+    publishedAt: "2026-07-20T19:43:41+03:00",
     category: "sirket-haberleri",
     ilgiliHisseler: ["TURSG"],
   },
@@ -315,7 +316,7 @@ export const newsItems: NewsItem[] = [
     href: "/haber/spk-4-yeni-halka-arz-onayi-albayrak-masfen-metgun-kardemir",
     image: "/spk-4-yeni-halka-arz-onayi-albayrak-masfen-metgun-kardemir.webp",
     alt: "SPK 4 yeni halka arz onayı Albayrak Masfen Metgün Kardemir Çelik",
-    publishedAt: "auto",
+    publishedAt: "2026-07-17T00:15:02+03:00",
     category: "halka-arz",
   },
   {

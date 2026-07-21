@@ -500,12 +500,29 @@ const merged = { ...existing };
 for (const [code, sources] of discovered) {
   const previousInvestorUrl = merged[code]?.yatirimciIliskileri;
   const previousManuallyVerified = merged[code]?.manuelDogrulandi === true;
+  const previousOfficialUrl = merged[code]?.resmiWeb;
+  const previousOfficialManuallyVerified =
+    merged[code]?.resmiWebManuelDogrulandi === true;
   const previousKapProfile = merged[code]?.kapSirketProfili;
   const previousKapManuallyVerified =
     merged[code]?.kapProfiliManuelDogrulandi === true;
   const nextSources = { ...merged[code] };
 
   for (const [key, value] of Object.entries(sources)) {
+    if (
+      key === "yatirimciIliskileri" &&
+      previousManuallyVerified &&
+      previousInvestorUrl
+    ) {
+      continue;
+    }
+    if (
+      key === "resmiWeb" &&
+      previousOfficialManuallyVerified &&
+      previousOfficialUrl
+    ) {
+      continue;
+    }
     if (
       key === "kapSirketProfili" &&
       previousKapManuallyVerified &&
@@ -519,7 +536,7 @@ for (const [code, sources] of discovered) {
   }
 
   if (!sources.yatirimciIliskileri) {
-    const officialUrl = sources.resmiWeb || merged[code]?.resmiWeb;
+    const officialUrl = nextSources.resmiWeb || sources.resmiWeb;
     const previousStillValid =
       previousInvestorUrl &&
       !looksLikeErrorUrl(previousInvestorUrl) &&

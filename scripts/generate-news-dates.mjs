@@ -35,8 +35,10 @@ function getFileTime(href) {
   return toSiteIso(stat.birthtimeMs > 0 ? stat.birthtime : stat.mtime);
 }
 
-function normalizePublishedAt(value, href) {
-  if (value === "auto") return getFileTime(href);
+function normalizePublishedAt(value, href, currentDate) {
+  // "auto" sadece ilk üretimde dosya zamanını kullanır; sonraki build'lerde
+  // kalıcı tarih korunur ki düzenlenen eski haberler yeniden öne çıkmasın.
+  if (value === "auto") return currentDate || getFileTime(href);
   if (/^\d{4}-\d{2}-\d{2}$/.test(value)) {
     return `${value}T${defaultNewsTime}${offset}`;
   }
@@ -90,7 +92,7 @@ for (const block of blocks) {
   if (!publishedAt) continue;
 
   currentHrefs.add(href);
-  const nextDate = normalizePublishedAt(publishedAt, href);
+  const nextDate = normalizePublishedAt(publishedAt, href, dates[href]);
   if (dates[href] === nextDate) continue;
 
   dates[href] = nextDate;
