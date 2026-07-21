@@ -137,8 +137,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   const haberEntries = getAllNews().map((item) => ({
     route: item.href,
-    lastModified:
-      item.updatedAt ?? updateMap.get(item.href) ?? item.publishedAt,
+    lastModified: item.updatedAt ?? item.publishedAt,
   }));
 
   const fonEtkiEntries = [

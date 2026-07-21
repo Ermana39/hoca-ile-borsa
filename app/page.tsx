@@ -322,6 +322,10 @@ function getSonGuncellemeler(): GuncellemeItem[] {
       return;
     }
 
+    if (route.startsWith("/haber/")) {
+      return;
+    }
+
     const anaRoute = getGuncellemeAnaRoute(route);
 
     if (SON_GUNCELLEME_HARIC_ROUTES.has(anaRoute)) {
