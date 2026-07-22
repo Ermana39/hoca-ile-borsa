@@ -34,6 +34,23 @@ function jsonLdGuvenli(veri: unknown) {
 
 function HaberIcerikBolumu({ bolum }: { bolum: HaberBolumu }) {
   const vurgu = bolum.vurgu ?? "normal";
+  const kapBaglantilari = [
+    bolum.kapLink
+      ? {
+          href: bolum.kapLink,
+          label: bolum.kapLinkMetni ?? "Kaynak KAP bildirimi",
+        }
+      : null,
+    ...(bolum.ekKapLinkler ?? []).map((href, index) => ({
+      href,
+      label:
+        index === 0
+          ? "Ek KAP bildirimi"
+          : `Ek KAP bildirimi ${index + 1}`,
+    })),
+  ].filter((baglanti): baglanti is { href: string; label: string } =>
+    Boolean(baglanti)
+  );
 
   return (
     <section
@@ -70,6 +87,22 @@ function HaberIcerikBolumu({ bolum }: { bolum: HaberBolumu }) {
         >
           {bolum.haberLinkMetni ?? "Haberin detaylarını oku"}
         </Link>
+      )}
+
+      {kapBaglantilari.length > 0 && (
+        <div className="mt-4 flex flex-wrap gap-2">
+          {kapBaglantilari.map((baglanti) => (
+            <a
+              key={baglanti.href}
+              href={baglanti.href}
+              target="_blank"
+              rel="noopener noreferrer nofollow"
+              className="inline-flex rounded-md border border-blue-200 bg-blue-50 px-3 py-2 text-sm font-bold text-blue-700 transition hover:border-blue-300 hover:bg-blue-100 hover:text-blue-900"
+            >
+              {baglanti.label}
+            </a>
+          ))}
+        </div>
       )}
 
       {bolum.kartlar && bolum.kartlar.length > 0 && (

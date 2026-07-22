@@ -46,6 +46,9 @@ export type HaberBolumu = {
   paragraflar?: string[];
   kartlar?: HaberMetinKarti[];
   maddeler?: string[];
+  kapLink?: string;
+  kapLinkMetni?: string;
+  ekKapLinkler?: string[];
   haberLink?: string;
   haberLinkMetni?: string;
   vurgu?: HaberVurgu;
