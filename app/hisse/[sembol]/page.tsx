@@ -13,16 +13,19 @@ import { getHisseLogo } from "@/lib/hisse-logolar";
 import { getTemettulerBySembol } from "@/lib/temettuler";
 import { getKapBySembol } from "@/lib/kap";
 import {
+  getHisseHakKullanimlari,
+  hakKullanimlariGuncellemeTarihi,
+  hakKullanimlariKaynakAdi,
+  type GecmisTemettuKaydi,
+} from "@/lib/hisse-hak-kullanimlari";
+import {
   oranYorumlariUret,
-  donemEtiketi,
   ceyrekEtiketi,
   type TemelOranlar,
   type OranYorumSatiri,
 } from "@/lib/oranYorumla";
 import {
   sermayeGecmisiNormalize,
-  temettuIstatistikleri,
-  varyantSec,
   type HamSermayeKaydi,
 } from "@/lib/hisse-temettu";
 import {
@@ -62,6 +65,13 @@ type IlgiliHisse = {
   neden: string;
 };
 
+type KarsilastirmaHissesi = {
+  kod?: string;
+  sirketAdi: string;
+  neden?: string;
+  tiklanabilir: boolean;
+};
+
 type EkHisseAlanlari = {
   ozgunAnaliz?: OzgunAnaliz;
   seoSorular?: SeoSoru[];
@@ -78,7 +88,11 @@ export function generateStaticParams() {
 }
 
 function doluMetin(value?: string | null): value is string {
-  return typeof value === "string" && value.trim().length > 0;
+  return (
+    typeof value === "string" &&
+    value.trim().length > 0 &&
+    !/^\$[0-9a-z]+$/i.test(value.trim())
+  );
 }
 
 function doluListe<T>(value?: T[] | null): value is T[] {
@@ -98,22 +112,22 @@ function tarihEtiketi(value?: string): string {
   });
 }
 
-function baglantiAdresi(value: string): string {
-  try {
-    const url = new URL(value);
-    return `${url.hostname.replace(/^www\./, "")}${
-      url.pathname === "/" ? "" : url.pathname.replace(/\/$/, "")
-    }`;
-  } catch {
-    return value.replace(/^https?:\/\//, "");
-  }
+function temettuTutarEtiketi(kayit: GecmisTemettuKaydi): string {
+  const tutar = new Intl.NumberFormat("tr-TR", {
+    minimumFractionDigits: 2,
+    maximumFractionDigits: 6,
+  }).format(kayit.brut);
+  return kayit.paraBirimi === "TRY" ? `₺${tutar}` : `${tutar} ${kayit.paraBirimi}`;
 }
 
 // temettuSermayeGecmisi normalize yardımcıları lib/hisse-temettu'da tutulur.
 
 function enBuyukOrtakAdi(hisse: Hisse): string {
   const ortaklar = hisse.ortaklikYapisi?.ortaklar ?? [];
-  const sirali = [...ortaklar].sort((a, b) => b.oran - a.oran);
+  const adlandirilmisOrtaklar = ortaklar.filter(
+    (ortak) => !/halka|diğer|diger/i.test(ortak.ad)
+  );
+  const sirali = [...adlandirilmisOrtaklar].sort((a, b) => b.oran - a.oran);
   return sirali[0]?.ad || "Açıklanan ortaklık yapısı";
 }
 
@@ -148,173 +162,87 @@ function benzersizSorular(sorular: SeoSoru[]): SeoSoru[] {
   });
 }
 
-function genelSeoSorularUret({
-  hisse,
-  ozgunAnaliz,
-  temelOranlar,
-  temettuKayitSayisi,
-  kapKayitSayisi,
-}: {
-  hisse: Hisse;
-  ozgunAnaliz?: OzgunAnaliz;
-  temelOranlar?: TemelOranlar;
-  temettuKayitSayisi: number;
-  kapKayitSayisi: number;
-}): SeoSoru[] {
-  const sirket = hisse.sirketAdi;
-  const kod = hisse.kod;
-  const sektor = sektorEtiketi(hisse);
-  const endeksler = oneCikanEndeksler(hisse);
-
-  return [
-    {
-      soru: `${kod} ne iş yapar?`,
-      cevap:
-        ozgunAnaliz?.isModeli ||
-        `${sirket}, ${sektor} alanında faaliyet gösteren ve Borsa İstanbul'da ${kod} koduyla işlem gören bir şirkettir. Sayfada şirketin faaliyet alanı, ortaklık yapısı, iştirakleri, borsa bilgileri ve varsa temel oranları birlikte incelenebilir.`,
-    },
-    {
-      soru: `${kod} hangi pazarda ve endekslerde işlem görüyor?`,
-      cevap: `${kod}, ${pazarEtiketi(hisse)} kapsamında takip edilir. Sayfada yer alan endeks bilgileri ${
-        endeksler.length > 0
-          ? `${endeksler.join(", ")} gibi öne çıkan endeksleri`
-          : "Borsa İstanbul endekslerini"
-      } gösterir; endeks dahil edilme durumu zaman içinde değişebilir.`,
-    },
-    {
-      soru: `${kod} ortaklık yapısında kim öne çıkıyor?`,
-      cevap: `${kod} ortaklık yapısında ${enBuyukOrtakAdi(
-        hisse
-      )} öne çıkan pay sahibi olarak görünür. Ortaklık oranları, halka açıklık yapısı ve hakim ortak profili hisseyi değerlendirirken tek başına değil şirketin finansalları ve sektör koşullarıyla birlikte okunmalıdır.`,
-    },
-    {
-      soru: `${kod} katılım endeksine uygun mu?`,
-      cevap: `${kod} için katılım endeksi uygunluğu sayfadaki Borsa Bilgileri bölümünde ${
-        hisse.borsaBilgileri.katilimEndeksiUygun ? "uygun" : "uygun değil"
-      } olarak gösterilir. Katılım endeksi listeleri dönemsel olarak güncellenebildiği için güncel karar öncesinde son liste kontrol edilmelidir.`,
-    },
-    {
-      soru: `${kod} temel oranları nasıl okunmalı?`,
-      cevap: temelOranlar
-        ? `${kod} temel oranları, ${donemEtiketi(
-            temelOranlar.donem
-          )} dönemine ait finansal veriler üzerinden yorumlanır. F/K, PD/DD, FD/FAVÖK ve büyüme oranları tek başına al-sat sinyali değildir; sektör ortalamaları, kârlılık kalitesi ve borçlulukla birlikte değerlendirilmelidir.`
-        : `${kod} için temel oran bulunmuyorsa yatırımcı şirketin faaliyet raporları, KAP bildirimleri, bilanço verileri ve sektör karşılaştırmalarını ayrıca incelemelidir.`,
-    },
-    {
-      soru: `${kod} temettü ve şirket gelişmeleri nereden izlenir?`,
-      cevap: `${kod} için sayfada ${
-        temettuKayitSayisi > 0 ? "temettü geçmişi" : "temettü/sermaye geçmişi alanı"
-      } ve ${
-        kapKayitSayisi > 0
-          ? "şirket haberleri ve KAP gelişmeleri"
-          : "şirket gelişmeleri"
-      } bölümleri yer alır. Bu bilgiler yatırım kararında yardımcı olabilir; ancak güncel ve resmi duyurular için KAP ve şirket yatırımcı ilişkileri kaynakları kontrol edilmelidir.`,
-    },
-  ];
+function metinAnahtari(value: string): string {
+  return value
+    .toLocaleLowerCase("tr-TR")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/ı/g, "i")
+    .replace(/[^a-z0-9]+/g, " ")
+    .trim();
 }
 
-function okumaRehberiUret({
-  hisse,
-  ozgunAnaliz,
-  temelOranlar,
-  temettuKayitSayisi,
-  kapKayitSayisi,
-}: {
-  hisse: Hisse;
-  ozgunAnaliz?: OzgunAnaliz;
-  temelOranlar?: TemelOranlar;
-  temettuKayitSayisi: number;
-  kapKayitSayisi: number;
-}): string[] {
-  const maddeler = [
-    `${hisse.kod} sayfasını okurken önce şirketin faaliyet alanını ve gelir modelini inceleyin; fiyat hareketinden önce şirketin ne iş yaptığını anlamak gerekir.`,
-    `Ortaklık yapısında ${enBuyukOrtakAdi(
-      hisse
-    )} gibi öne çıkan pay sahipleri, yönetim etkisi ve halka açıklık açısından ayrıca değerlendirilmelidir.`,
-    hisse.borsaBilgileri.katilimEndeksiUygun
-      ? `${hisse.kod} katılım endeksi uygunluğu nedeniyle katılım hassasiyeti olan yatırımcıların takip listesine girebilir; yine de dönemsel liste değişimleri kontrol edilmelidir.`
-      : `${hisse.kod} katılım endeksi uygunluğu bulunmadığı için katılım hassasiyeti olan yatırımcılar güncel endeks listelerini ve şirket faaliyetlerini ayrıca kontrol etmelidir.`,
-    temelOranlar
-      ? `${hisse.kod} temel oranları ${ceyrekEtiketi(
-          temelOranlar.donem
-        )} finansallarına göre yorumlanır; oranları aynı sektördeki şirketlerle karşılaştırmak daha sağlıklı sonuç verir.`
-      : `${hisse.kod} için temel oran verisi yoksa bilanço, gelir tablosu, nakit akışı ve faaliyet raporu birlikte incelenmelidir.`,
-    temettuKayitSayisi > 0
-      ? `${hisse.kod} temettü geçmişi düzenli nakit dağıtımı açısından fikir verir; ancak geçmiş temettü gelecekte de aynı politikanın süreceğini garanti etmez.`
-      : `${hisse.kod} için temettü verisi sınırlıysa sermaye artırımı geçmişi, kârlılık ve nakit akışı temettü potansiyeli açısından daha dikkatli okunmalıdır.`,
-    kapKayitSayisi > 0
-      ? `${hisse.kod} şirket haberleri ve KAP gelişmeleri bölümündeki içerikler güncel akışı izlemek için kullanılabilir; önemli kararlar resmi bildirimlerle teyit edilmelidir.`
-      : `${hisse.kod} için yeni şirket haberleri veya KAP gelişmeleri geldiğinde yatırım, finansman, sermaye artırımı ve yönetim kararları ayrıca takip edilmelidir.`,
+function sayfadaYanitiBulunanSoru(item: SeoSoru): boolean {
+  if (!doluMetin(item.soru)) return true;
+  const soru = metinAnahtari(item.soru);
+  const tekrarEdenBasliklar = [
+    "ne is yapar",
+    "faaliyet alani",
+    "hangi alanda faaliyet",
+    "hangi sektorde",
+    "sektorde yer",
+    "sektordeki yeri",
+    "is modeli",
+    "gelir kaynak",
+    "guclu yan",
+    "riskler",
+    "ortaklik yapisi",
+    "ortaklari kim",
+    "halka aciklik",
+    "hangi pazarda",
+    "hangi endeks",
+    "katilim endeks",
+    "bagli ortaklik",
+    "istirak",
+    "temettu gecmisi",
+    "sermaye gecmisi",
+    "bist kodu",
+    "yatirimci iliskileri",
+    "hangi sirketlerle karsilastirilabilir",
+    "yatirimcisi hangi basliklari takip etmeli",
   ];
 
-  if (doluListe(ozgunAnaliz?.gelirKaynaklari)) {
-    maddeler.push(
-      `${hisse.kod} gelir yapısında ${ozgunAnaliz.gelirKaynaklari
-        .slice(0, 3)
-        .join(", ")} başlıkları öne çıkar; bu kalemlerin dönemsel kârlılığa etkisi finansal tablolarla birlikte izlenmelidir.`
-    );
-  }
-
-  if (doluListe(ozgunAnaliz?.gucluYanlar)) {
-    maddeler.push(
-      `${hisse.kod} için güçlü yanlar arasında ${ozgunAnaliz.gucluYanlar
-        .slice(0, 2)
-        .join(" ve ")} dikkat çeker; bu avantajların sürdürülebilir olup olmadığı şirket haberleriyle takip edilmelidir.`
-    );
-  }
-
-  if (doluListe(ozgunAnaliz?.riskler)) {
-    maddeler.push(
-      `${hisse.kod} için öne çıkan risk başlıkları arasında ${ozgunAnaliz.riskler
-        .slice(0, 2)
-        .join(" ve ")} yer alır; bu başlıklar şirketin dönemsel performansıyla birlikte izlenmelidir.`
-    );
-  }
-
-  return maddeler;
+  return tekrarEdenBasliklar.some((baslik) => soru.includes(baslik));
 }
 
-function veriKaynakNotlariUret({
-  hisse,
-  temelOranlar,
-  temettuKayitSayisi,
-  kapKayitSayisi,
-  sermayeKayitSayisi,
-}: {
-  hisse: Hisse;
-  temelOranlar?: TemelOranlar;
-  temettuKayitSayisi: number;
-  kapKayitSayisi: number;
-  sermayeKayitSayisi: number;
-}): string[] {
-  const sirketWeb = hisse.kurumsalBilgiler?.web;
-  const endeksler = oneCikanEndeksler(hisse);
+function ozgunProfilParagrafi(value: string): boolean {
+  if (!doluMetin(value)) return false;
+  return !(
+    /Borsa İstanbul'da\s+\S+\s+koduyla işlem gören ve KAP sektör sınıflamasında/i.test(
+      value
+    ) ||
+    /payları .+ kapsamında işlem görür\..+KAP profili üzerinden doğrulanmıştır/i.test(
+      value
+    )
+  );
+}
 
-  return [
-    `${hisse.kod} hisse künyesi; ${sektorEtiketi(
-      hisse
-    )} faaliyet alanı, ${pazarEtiketi(
-      hisse
-    )} pazar bilgisi, ortaklık yapısı ve varsa iştirak verileri birlikte okunacak şekilde hazırlanmıştır.`,
-    `${hisse.kod} için sayfada ${hisse.ortaklikYapisi.ortaklar.length} ortaklık kaydı, ${hisse.istirakler?.length ?? 0} iştirak/bağlı ortaklık kaydı, ${temettuKayitSayisi} temettü kaydı, ${sermayeKayitSayisi} sermaye geçmişi kaydı ve ${kapKayitSayisi} haber/KAP kaydı görüntülenir.`,
-    temelOranlar
-      ? `${hisse.kod} temel oranları ${donemEtiketi(
-          temelOranlar.donem
-        )} dönemine göre yorumlanır; bu oranlar anlık fiyat ekranı değil dönemsel finansal analiz desteği sağlar.`
-      : `${hisse.kod} için merkezi temel oran verisi bulunmadığında sayfa, şirket künyesi ve açıklanan kurumsal bilgiler üzerinden okunmalıdır.`,
-    endeksler.length > 0
-      ? `${hisse.kod} Borsa İstanbul tarafında ${endeksler.join(
-          ", "
-        )} gibi öne çıkan endekslerle takip edilir; endeks üyelikleri dönemsel olarak değişebilir.`
-      : `${hisse.kod} için endeks bilgisi sınırlıysa Borsa İstanbul ve şirket duyurularındaki güncel sınıflamalar ayrıca kontrol edilmelidir.`,
-    sirketWeb
-      ? `${hisse.kod} için resmi şirket bilgileri ve yatırımcı ilişkileri duyuruları ayrıca ${sirketWeb.replace(
-          /^https?:\/\//,
-          ""
-        )} adresinden kontrol edilmelidir.`
-      : `${hisse.kod} için güncel yatırımcı ilişkileri bilgileri, KAP bildirimleri ve Borsa İstanbul duyuruları üzerinden ayrıca kontrol edilmelidir.`,
-  ];
+function ozgunSektorelKonum(value?: string): value is string {
+  return (
+    doluMetin(value) &&
+    !(
+      /KAP sınıflamasında.+kapsamında yer almaktadır/i.test(value) &&
+      /aynı sektördeki şirketlerle karşılaştır/i.test(value)
+    )
+  );
+}
+
+function ozgunOrtaklikYorumu(value?: string): value is string {
+  return (
+    doluMetin(value) &&
+    !/en büyük doğrudan ortak olarak görünmektedir|doğrudan ortaklık oranı tablosu yayımlanmadığından/i.test(
+      value
+    )
+  );
+}
+
+function ozgunYatirimciNotu(value?: string): value is string {
+  return (
+    doluMetin(value) &&
+    !/takip edilirken şirketin faaliyet alanındaki gelişmeler.+KAP bildirimleri.+koşulları birlikte izlenmelidir/i.test(
+      value
+    )
+  );
 }
 
 function normalizeEslesme(value: string): string {
@@ -393,171 +321,48 @@ function ilgiliHisselerUret(
     .map(({ kod, sirketAdi, neden }) => ({ kod, sirketAdi, neden }));
 }
 
-function temelOranKisaOzet(temelOranlar?: TemelOranlar): string | null {
-  if (!temelOranlar) return null;
+function karsilastirmaHisseleriUret(
+  benzerSirketler: BenzerSirket[],
+  ilgiliHisseler: IlgiliHisse[]
+): KarsilastirmaHissesi[] {
+  const gorulen = new Set<string>();
+  const sonuc: KarsilastirmaHissesi[] = [];
 
-  const oranlar = [
-    ["F/K", temelOranlar.sirket.fk],
-    ["PD/DD", temelOranlar.sirket.pddd],
-    ["PEG", temelOranlar.sirket.peg],
-    ["ROE", temelOranlar.sirket.roe],
-    ["Net marj", temelOranlar.sirket.netMarj],
-  ]
-    .filter(
-      ([, deger]) =>
-        typeof deger === "number" && Number.isFinite(deger) && deger !== 0
-    )
-    .slice(0, 4)
-    .map(([etiket, deger]) => `${etiket}: ${oranFormatla(deger as number)}`);
+  const ekle = (item: KarsilastirmaHissesi) => {
+    const anahtar = item.kod
+      ? `kod:${item.kod.toLocaleUpperCase("tr-TR")}`
+      : `ad:${normalizeEslesme(item.sirketAdi)}`;
+    if (gorulen.has(anahtar)) return;
+    gorulen.add(anahtar);
+    sonuc.push(item);
+  };
 
-  if (oranlar.length === 0) return null;
+  benzerSirketler.forEach((item) => {
+    const kod = doluMetin(item.kod)
+      ? item.kod.toLocaleUpperCase("tr-TR")
+      : undefined;
+    const kayitliHisse = kod ? getHisse(kod) : undefined;
+    const sirketAdi =
+      (doluMetin(item.ad) ? item.ad : undefined) || kayitliHisse?.sirketAdi || kod;
+    if (!sirketAdi) return;
 
-  return `${ceyrekEtiketi(
-    temelOranlar.donem
-  )} verilerinde öne çıkan oranlar ${oranlar.join(
-    ", "
-  )} şeklindedir. Bu değerler tek başına karar üretmez; aynı sektör şirketleri, kârlılık kalitesi ve borçlulukla birlikte okunmalıdır.`;
-}
+    ekle({
+      kod,
+      sirketAdi,
+      neden: doluMetin(item.aciklama) ? item.aciklama : undefined,
+      tiklanabilir: Boolean(kod && hisseVarMi(kod)),
+    });
+  });
 
-function halkaAciklikMetni(hisse: Hisse): string {
-  const halkaAcik = hisse.ortaklikYapisi.ortaklar.find((ortak) =>
-    /halka|diğer|diger/i.test(ortak.ad)
-  );
+  ilgiliHisseler.forEach((item) => {
+    ekle({
+      kod: item.kod,
+      sirketAdi: item.sirketAdi,
+      tiklanabilir: true,
+    });
+  });
 
-  return halkaAcik
-    ? `Halka açık/diğer ortak payı yaklaşık %${oranFormatla(
-        halkaAcik.oran
-      )} seviyesindedir.`
-    : "Halka açıklık bilgisi ortaklık tablosundaki pay dağılımıyla birlikte okunmalıdır.";
-}
-
-function analizOzetiUret({
-  hisse,
-  ozgunAnaliz,
-  temelOranlar,
-  temettuKayitSayisi,
-  sermayeKayitSayisi,
-  kapKayitSayisi,
-  ilgiliHisseler,
-}: {
-  hisse: Hisse;
-  ozgunAnaliz?: OzgunAnaliz;
-  temelOranlar?: TemelOranlar;
-  temettuKayitSayisi: number;
-  sermayeKayitSayisi: number;
-  kapKayitSayisi: number;
-  ilgiliHisseler: IlgiliHisse[];
-}): string[] {
-  const sektor = sektorEtiketi(hisse);
-  const pazar = pazarEtiketi(hisse);
-  const endeksler = oneCikanEndeksler(hisse);
-  const faaliyet = hisse.kurumsalBilgiler?.faaliyetAlani;
-  const anaOrtak = enBuyukOrtakAdi(hisse);
-  const oranOzeti = temelOranKisaOzet(temelOranlar);
-  const ilgiliKodlar = ilgiliHisseler.slice(0, 3).map((item) => item.kod);
-
-  const giris = varyantSec(hisse.kod, "hisse-analiz-giris", [
-    `${hisse.sirketAdi} (${hisse.kod}) için bu künye sayfası yalnızca şirket adını değil; faaliyet alanı, ortaklık yapısı, iştirakler, pazar bilgisi, endeksler, sermaye geçmişi ve varsa temel oran yorumlarını birlikte gösterir.`,
-    `${hisse.kod} hissesini incelerken ilk bakılması gereken başlıklar şirketin ne iş yaptığı, hangi pazarda işlem gördüğü, ortaklık yapısında kimin öne çıktığı ve finansal oranların hangi döneme ait olduğudur. Bu sayfa bu başlıkları tek ekranda toplar.`,
-    `${hisse.sirketAdi} hakkında arama yapan yatırımcılar için sayfa; şirket profili, BIST işlem bilgileri, ortaklık dağılımı, iştirakler, temettü/sermaye geçmişi ve şirket haberleri/KAP akışını aynı künye içinde okumaya yarar.`,
-  ]);
-
-  const faaliyetMetni = faaliyet
-    ? `${hisse.kod} faaliyet tarafında ${faaliyet} alanında konumlanır. Şirket ${pazar} kapsamında işlem görür${
-        endeksler.length > 0 ? ` ve ${endeksler.join(", ")} gibi endekslerde izlenir` : ""
-      }.`
-    : `${hisse.kod}, ${sektor} başlığı altında değerlendirilen bir Borsa İstanbul şirketidir. Faaliyet alanı, pazar bilgisi ve endeks üyelikleri aynı sektördeki hisselerle karşılaştırma yaparken başlangıç noktasıdır.`;
-
-  const ortaklikMetni = `${hisse.kod} ortaklık yapısında ${anaOrtak} öne çıkar. ${halkaAciklikMetni(
-    hisse
-  )} Bu yapı; hakim ortak etkisi, halka açıklık ve kurumsal kararların okunması açısından fiyat verisinden bağımsız biçimde takip edilmelidir.`;
-
-  const veriMetni = `Sayfada ${hisse.ortaklikYapisi.ortaklar.length} ortaklık kaydı, ${
-    hisse.istirakler?.length ?? 0
-  } iştirak/bağlı ortaklık kaydı, ${temettuKayitSayisi} temettü kaydı, ${sermayeKayitSayisi} sermaye geçmişi kaydı ve ${kapKayitSayisi} haber/KAP kaydı birlikte sunulur. Bu sayısal kapsam, ${hisse.kod} sayfasını yalnızca kısa bir tanım değil, düzenli kontrol edilebilir bir şirket profili haline getirir.`;
-
-  const karsilastirmaMetni =
-    ilgiliKodlar.length > 0
-      ? `${hisse.kod} değerlendirilirken ${ilgiliKodlar.join(
-          ", "
-        )} gibi aynı sektör, pazar veya endeks kesişimi bulunan hisselerle karşılaştırmalı okuma yapılabilir. Bu karşılaştırma özellikle oranların ve operasyonel risklerin tek başına yorumlanmasını önler.`
-      : null;
-
-  return [
-    giris,
-    ozgunAnaliz?.isModeli ? null : faaliyetMetni,
-    ortaklikMetni,
-    oranOzeti,
-    veriMetni,
-    karsilastirmaMetni,
-  ].filter((item): item is string => doluMetin(item));
-}
-
-function kontrolListesiUret({
-  hisse,
-  temelOranlar,
-  temettuKayitSayisi,
-  sermayeKayitSayisi,
-  kapKayitSayisi,
-  ilgiliHisseler,
-}: {
-  hisse: Hisse;
-  temelOranlar?: TemelOranlar;
-  temettuKayitSayisi: number;
-  sermayeKayitSayisi: number;
-  kapKayitSayisi: number;
-  ilgiliHisseler: IlgiliHisse[];
-}) {
-  return [
-    {
-      baslik: "Faaliyet ve sektör",
-      aciklama: `${hisse.kod} için faaliyet alanı ${sektorEtiketi(
-        hisse
-      )} başlığıyla okunmalı; gelir modeli sektör döngüsüyle birlikte değerlendirilmelidir.`,
-    },
-    {
-      baslik: "Ortaklık yapısı",
-      aciklama: `${enBuyukOrtakAdi(
-        hisse
-      )} ve diğer pay sahipleri, yönetim etkisi ve halka açıklık açısından ayrıca izlenmelidir.`,
-    },
-    {
-      baslik: "Finansal oranlar",
-      aciklama: temelOranlar
-        ? `${hisse.kod} oranları ${ceyrekEtiketi(
-            temelOranlar.donem
-          )} dönemine aittir; güncel fiyat yerine dönemsel finansal analiz desteği sağlar.`
-        : `${hisse.kod} için temel oran verisi sınırlıysa finansal tablolar ve faaliyet raporu ayrıca kontrol edilmelidir.`,
-    },
-    {
-      baslik: "Temettü ve sermaye hareketleri",
-      aciklama:
-        temettuKayitSayisi + sermayeKayitSayisi > 0
-          ? `Sayfada ${temettuKayitSayisi} temettü ve ${sermayeKayitSayisi} sermaye geçmişi kaydı yer alır; geçmiş dağıtımlar gelecek dönem için garanti sayılmamalıdır.`
-          : "Geçmiş temettü/sermaye hareketi sınırlıysa şirketin nakit akışı ve genel kurul kararları daha dikkatli takip edilmelidir.",
-    },
-    {
-      baslik: "Haber akışı ve karşılaştırma",
-      aciklama:
-        kapKayitSayisi > 0
-          ? `${kapKayitSayisi} şirket haberi/KAP kaydı, şirket haber akışının son durumunu okumaya yardımcı olur. ${
-              ilgiliHisseler.length > 0
-                ? `Benzer hisselerle karşılaştırma için ${ilgiliHisseler
-                    .slice(0, 3)
-                    .map((item) => item.kod)
-                    .join(", ")} de izlenebilir.`
-                : "Aynı sektör şirketleriyle karşılaştırma ayrıca yapılmalıdır."
-            }`
-          : `${
-              ilgiliHisseler.length > 0
-                ? `${ilgiliHisseler
-                    .slice(0, 3)
-                    .map((item) => item.kod)
-                    .join(", ")} gibi yakın hisselerle karşılaştırma yapılabilir.`
-                : "Şirket haberleri, KAP akışı ve aynı sektör karşılaştırmaları ayrıca kontrol edilmelidir."
-            }`,
-    },
-  ];
+  return sonuc.slice(0, 6);
 }
 
 export async function generateMetadata({
@@ -621,25 +426,6 @@ function SectionBaslik({ children }: { children: React.ReactNode }) {
 
 function AltBaslik({ children }: { children: React.ReactNode }) {
   return <h3 className="mb-2 text-sm font-bold text-slate-800">{children}</h3>;
-}
-
-function MetinKarti({
-  baslik,
-  metin,
-}: {
-  baslik: string;
-  metin?: string;
-}) {
-  if (!doluMetin(metin)) return null;
-
-  return (
-    <section className="mt-8">
-      <SectionBaslik>{baslik}</SectionBaslik>
-      <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-7 text-slate-700 md:text-base md:leading-8">
-        {metin}
-      </div>
-    </section>
-  );
 }
 
 function MaddeListesi({
@@ -733,7 +519,6 @@ function TemelOranlarBolumu({
   const satirlar = oranYorumlariUret(kod, temelOranlar);
   if (satirlar.length === 0) return null;
 
-  const donemAd = donemEtiketi(temelOranlar.donem);
   const ceyrekAd = ceyrekEtiketi(temelOranlar.donem);
   const hesaplamaMetni = `Oranlar ${ceyrekAd} finansal verilerine ve bir önceki gün kapanış fiyatlarına göre hesaplanmıştır.`;
 
@@ -773,13 +558,6 @@ function TemelOranlarBolumu({
             </div>
           );
         })}
-      </div>
-
-      <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-7 text-amber-900">
-        ⚠️ Buradaki oranlar <strong>{donemAd}</strong> dönemine ait
-        geçmiş/dönemsel finansal verilere dayanır, anlık fiyatı yansıtmaz.
-        Yorumlar genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir ve tek
-        başına karar dayanağı olamaz.
       </div>
     </section>
   );
@@ -828,103 +606,100 @@ export default async function HisseKunyePage({
   const url = `${siteUrl}/hisse/${canonicalCode}`;
 
   const temettuKayitlari = getTemettulerBySembol(hisse.kod);
+  const hakKullanimlari = getHisseHakKullanimlari(hisse.kod);
   const kapKayitlari = getKapBySembol(hisse.kod);
 
-  // Boş hücreli satırlar elendikten sonra kalan gerçek sermaye/temettü geçmişi.
-  const sermayeGecmisi = sermayeGecmisiNormalize(
+  const mevcutSermayeGecmisi = sermayeGecmisiNormalize(
     temettuSermayeGecmisi as HamSermayeKaydi[] | undefined
   );
-  const sermayeIstatistikleri = temettuIstatistikleri(sermayeGecmisi);
+  const takvimTarihleri = new Set(
+    temettuKayitlari.map((kayit) => kayit.isoTarih)
+  );
+  const gecmisTemettuler = hakKullanimlari.temettuler.filter(
+    (kayit) => !takvimTarihleri.has(kayit.isoTarih)
+  );
+  const mevcutDigerSermayeKayitlari = mevcutSermayeGecmisi.filter(
+    (kayit) =>
+      hakKullanimlari.durum !== "ok" ||
+      !/bölünme/i.test(`${kayit.tur} ${kayit.aciklama}`)
+  );
+  const temettuKayitSayisi = temettuKayitlari.length + gecmisTemettuler.length;
+  const sermayeKayitSayisi =
+    hakKullanimlari.bolunmeler.length + mevcutDigerSermayeKayitlari.length;
   const temettuYorumVar = doluMetin(ozgunAnaliz?.temettuYorumu);
-  // "Temettü Geçmişi" bölümü yalnızca gösterilecek gerçek içerik varsa render
-  // edilir; veri yoksa başlık + "bulunmuyor" kutusu hiç çıkmaz.
   const temettuBolumuVar =
-    temettuKayitlari.length > 0 ||
-    sermayeGecmisi.length > 0 ||
+    hakKullanimlari.durum !== "missing" ||
+    temettuKayitSayisi > 0 ||
+    sermayeKayitSayisi > 0 ||
     temettuYorumVar;
 
   const istiraklerdeSermayeVar = (istirakler ?? []).some((i) => i.sermaye);
   const istiraklerdeDetayVar = (istirakler ?? []).some(
     (i) => i.faaliyetKonusu || i.iliski
   );
+  const profilParagraflari = hisse.hakkinda.filter(ozgunProfilParagrafi);
+  const isModeli =
+    doluMetin(ozgunAnaliz?.isModeli) &&
+    !profilParagraflari.some(
+      (paragraf) => metinAnahtari(paragraf) === metinAnahtari(ozgunAnaliz.isModeli!)
+    )
+      ? ozgunAnaliz.isModeli
+      : undefined;
+  const sektorelKonum = ozgunSektorelKonum(ozgunAnaliz?.sektorelKonum)
+    ? ozgunAnaliz.sektorelKonum
+    : undefined;
+  const ortaklikYorumu = ozgunOrtaklikYorumu(ozgunAnaliz?.ortaklikYorumu)
+    ? ozgunAnaliz.ortaklikYorumu
+    : undefined;
+  const yatirimciNotu = ozgunYatirimciNotu(ozgunAnaliz?.yatirimciNotu)
+    ? ozgunAnaliz.yatirimciNotu
+    : undefined;
   const ilgiliHisseler = ilgiliHisselerUret(hisse, benzerSirketler);
-  const analizOzeti = analizOzetiUret({
-    hisse,
-    ozgunAnaliz,
-    temelOranlar,
-    temettuKayitSayisi: temettuKayitlari.length + sermayeIstatistikleri.temettuSayisi,
-    sermayeKayitSayisi: sermayeIstatistikleri.sermayeIslemiSayisi,
-    kapKayitSayisi: kapKayitlari.length,
-    ilgiliHisseler,
-  });
-  const kontrolListesi = kontrolListesiUret({
-    hisse,
-    temelOranlar,
-    temettuKayitSayisi: temettuKayitlari.length + sermayeIstatistikleri.temettuSayisi,
-    sermayeKayitSayisi: sermayeIstatistikleri.sermayeIslemiSayisi,
-    kapKayitSayisi: kapKayitlari.length,
-    ilgiliHisseler,
-  });
-  const seoSorular = benzersizSorular([
-    ...veriSeoSorular,
-    ...genelSeoSorularUret({
-      hisse,
-      ozgunAnaliz,
-      temelOranlar,
-      temettuKayitSayisi: temettuKayitlari.length + sermayeGecmisi.length,
-      kapKayitSayisi: kapKayitlari.length,
-    }),
-  ]).slice(0, 10);
-
-  const okumaRehberi = okumaRehberiUret({
-    hisse,
-    ozgunAnaliz,
-    temelOranlar,
-    temettuKayitSayisi: temettuKayitlari.length + sermayeGecmisi.length,
-    kapKayitSayisi: kapKayitlari.length,
-  });
-  const veriKaynakNotlari = veriKaynakNotlariUret({
-    hisse,
-    temelOranlar,
-    temettuKayitSayisi: temettuKayitlari.length,
-    sermayeKayitSayisi: sermayeGecmisi.length,
-    kapKayitSayisi: kapKayitlari.length,
-  });
+  const karsilastirmaHisseleri = karsilastirmaHisseleriUret(
+    benzerSirketler,
+    ilgiliHisseler
+  );
+  const seoSorular = benzersizSorular(veriSeoSorular)
+    .filter((item) => !sayfadaYanitiBulunanSoru(item))
+    .slice(0, 4);
 
   const hizliBakisKartlari = [
     {
-      etiket: "BIST Kodu",
-      deger: borsaBilgileri.bistKodu,
-      aciklama: `${hisse.sirketAdi} Borsa İstanbul'da ${borsaBilgileri.bistKodu} koduyla takip edilir.`,
-    },
-    {
       etiket: "Sektör",
       deger: sektorEtiketi(hisse),
-      aciklama: "Şirketin faaliyet alanı ve sektör sınıflaması finansal karşılaştırma için ilk referanstır.",
     },
     {
       etiket: "Öne Çıkan Ortak",
       deger: enBuyukOrtakAdi(hisse),
-      aciklama: "Ortaklık yapısı, hakim ortak etkisi ve halka açıklık yorumunda dikkate alınır.",
     },
     {
       etiket: "İşlem Gördüğü Pazar",
       deger: pazarEtiketi(hisse),
-      aciklama: "Pazar bilgisi likidite, kurumsallık ve yatırımcı ilgisi açısından izlenir.",
     },
     {
       etiket: "Katılım Endeksi",
       deger: borsaBilgileri.katilimEndeksiUygun ? "Uygun" : "Uygun Değil",
-      aciklama: "Katılım uygunluğu dönemsel listelerle değişebileceği için güncel kontrol gerekir.",
-    },
-    {
-      etiket: "Veri Kapsamı",
-      deger: temelOranlar ? ceyrekEtiketi(temelOranlar.donem) : "Künye verisi",
-      aciklama: temelOranlar
-        ? "Temel oran yorumları dönemsel finansal verilere göre üretilir."
-        : "Sayfa şirket künyesi, ortaklık, iştirak ve borsa bilgileriyle hazırlanır.",
     },
   ];
+  const kurumsalBilgiVar = Boolean(
+    kurumsalBilgiler?.merkez ||
+      kurumsalBilgiler?.eposta ||
+      kurumsalBilgiler?.telefon ||
+      kurumsalBilgiler?.fax ||
+      kurumsalBilgiler?.sirketSuresi ||
+      kurumsalBilgiler?.bagimsizDenetimKurulusu ||
+      kurumsalBilgiler?.odenmisSermaye ||
+      kurumsalBilgiler?.kayitliSermayeTavani ||
+      kurumsalBilgiler?.ticaretSicilMemurlugu ||
+      kurumsalBilgiler?.ticaretSicilNumarasi ||
+      kurumsalBilgiler?.tescilTarihi ||
+      kurumsalBilgiler?.vergiDairesi ||
+      (kurumsalBilgiler?.sektorler?.length ?? 0) > 0 ||
+      (kurumsalBilgiler?.uretimTesisleri?.length ?? 0) > 0 ||
+      (kurumsalBilgiler?.yatirimciIliskileriYetkilileri?.length ?? 0) > 0 ||
+      (kurumsalBilgiler?.yonetimKurulu?.length ?? 0) > 0 ||
+      (kurumsalBilgiler?.veriNotlari?.length ?? 0) > 0
+  );
 
   const corporation: Record<string, unknown> = {
     "@type": "Corporation",
@@ -966,51 +741,11 @@ export default async function HisseKunyePage({
       "@id": `${url}#webpage`,
       url,
       name: `${hisse.kod} - ${sirketKisaAd} Hisse Künyesi`,
-      description: `${hisse.kod} hisse koduyla işlem gören ${hisse.sirketAdi} için şirket profili, faaliyet alanı, ortaklık yapısı, borsa bilgileri, temel oranlar ve SSS.`,
+      description: `${hisse.kod} hisse koduyla işlem gören ${hisse.sirketAdi} için şirket profili, faaliyet alanı, ortaklık yapısı, borsa bilgileri, temel oranlar, temettü ve bölünme geçmişi.`,
       about: { "@id": `${url}#corporation` },
       isPartOf: { "@id": `${siteUrl}/#organization` },
       datePublished: profilMetadata?.publishedAt,
       dateModified: sonDogrulamaTarihi,
-      inLanguage: "tr",
-    },
-    {
-      "@type": "Article",
-      "@id": `${url}#article`,
-      headline: `${hisse.kod} Hisse Bilgileri ve Şirket Profili`,
-      description: `${hisse.sirketAdi} (${hisse.kod}) için faaliyet alanı, ortaklık yapısı, borsa bilgileri, temel oranlar, temettü geçmişi ve sık sorulan sorular.`,
-      url,
-      mainEntityOfPage: { "@id": `${url}#webpage` },
-      author: {
-        "@type": "Organization",
-        "@id": `${siteUrl}/#organization`,
-        name: "Hoca İle Borsa",
-      },
-      publisher: {
-        "@type": "Organization",
-        "@id": `${siteUrl}/#organization`,
-        name: "Hoca İle Borsa",
-        logo: {
-          "@type": "ImageObject",
-          url: `${siteUrl}/icon-512.png`,
-        },
-      },
-      about: { "@id": `${url}#corporation` },
-      articleSection: "Hisse Künyeleri",
-      datePublished: profilMetadata?.publishedAt,
-      dateModified: sonDogrulamaTarihi,
-      keywords: [
-        hisse.kod,
-        hisse.sirketAdi,
-        `${hisse.kod} hisse`,
-        `${hisse.kod} ortaklık yapısı`,
-        `${hisse.kod} ne iş yapar`,
-      ],
-      mentions: ilgiliHisseler.slice(0, 5).map((item) => ({
-        "@type": "Corporation",
-        name: item.sirketAdi,
-        tickerSymbol: item.kod,
-        url: `${siteUrl}/hisse/${item.kod.toLowerCase()}`,
-      })),
       inLanguage: "tr",
     },
     {
@@ -1038,21 +773,6 @@ export default async function HisseKunyePage({
       ],
     },
   ];
-
-  if (seoSorular.length > 0) {
-    graphItems.push({
-      "@type": "FAQPage",
-      "@id": `${url}#faq`,
-      mainEntity: seoSorular.map((item) => ({
-        "@type": "Question",
-        name: item.soru,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: item.cevap,
-        },
-      })),
-    });
-  }
 
   const jsonLd = {
     "@context": "https://schema.org",
@@ -1098,11 +818,8 @@ export default async function HisseKunyePage({
               <div>
                 <div className="flex flex-wrap items-center gap-2">
                   <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl">
-                    {hisse.kod}
+                    {hisse.kod} Hisse Künyesi
                   </h1>
-                  <span className="rounded-md bg-blue-50 px-2.5 py-1 text-xs font-semibold text-blue-700 ring-1 ring-inset ring-blue-600/20">
-                    Hisse Künyesi
-                  </span>
                 </div>
                 <p className="mt-1 text-sm font-semibold text-slate-600 md:text-base">
                   {hisse.sirketAdi}
@@ -1177,40 +894,33 @@ export default async function HisseKunyePage({
                     <div className="mt-1 text-sm font-bold text-slate-900">
                       {kart.deger}
                     </div>
-                    <p className="mt-2 text-xs leading-5 text-slate-500">
-                      {kart.aciklama}
-                    </p>
                   </div>
                 ))}
               </div>
             </section>
 
-            {analizOzeti.length > 0 && (
+            {(profilParagraflari.length > 0 || isModeli || sektorelKonum) && (
               <section className="mt-8">
-                <SectionBaslik>{hisse.kod} Hisse Analiz Özeti</SectionBaslik>
-                <div className="space-y-4 rounded-xl border border-slate-200 bg-white p-4 text-sm leading-7 text-slate-700 md:text-base md:leading-8">
-                  {analizOzeti.map((paragraf, i) => (
-                    <p key={`${hisse.kod}-analiz-ozeti-${i}`}>{paragraf}</p>
+                <SectionBaslik>Şirket Profili ve İş Modeli</SectionBaslik>
+                <div className="space-y-5 text-base leading-8 text-slate-700">
+                  {profilParagraflari.map((paragraf, i) => (
+                    <p key={`${hisse.kod}-profil-${i}`}>{paragraf}</p>
                   ))}
+                  {isModeli && (
+                    <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                      <AltBaslik>İş Modeli</AltBaslik>
+                      <p>{isModeli}</p>
+                    </div>
+                  )}
+                  {sektorelKonum && (
+                    <div className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+                      <AltBaslik>Sektörel Konum</AltBaslik>
+                      <p>{sektorelKonum}</p>
+                    </div>
+                  )}
                 </div>
               </section>
             )}
-
-            {hisse.hakkinda.length > 0 && (
-              <section className="mt-8">
-                <SectionBaslik>Şirket Hakkında</SectionBaslik>
-                <div className="space-y-4 text-base leading-8 text-slate-700">
-                  {hisse.hakkinda.map((paragraf, i) => (
-                    <p key={i}>{paragraf}</p>
-                  ))}
-                </div>
-              </section>
-            )}
-
-            <MetinKarti
-              baslik="Şirket Ne İş Yapar?"
-              metin={ozgunAnaliz?.isModeli}
-            />
 
             {(doluListe(ozgunAnaliz?.gelirKaynaklari) ||
               doluListe(ozgunAnaliz?.gucluYanlar) ||
@@ -1236,11 +946,6 @@ export default async function HisseKunyePage({
                 </div>
               </section>
             )}
-
-            <MetinKarti
-              baslik="Sektördeki Yeri"
-              metin={ozgunAnaliz?.sektorelKonum}
-            />
 
             {(ortaklikYapisi.ortaklar.length > 0 || ortaklikYapisi.not) && (
               <section className="mt-8">
@@ -1279,10 +984,10 @@ export default async function HisseKunyePage({
                   </p>
                 )}
 
-                {doluMetin(ozgunAnaliz?.ortaklikYorumu) && (
+                {ortaklikYorumu && (
                   <div className="mt-4 rounded-xl border border-blue-100 bg-blue-50 p-4 text-sm leading-7 text-blue-900 md:text-base md:leading-8">
                     <strong>Ortaklık yapısı yorumu: </strong>
-                    {ozgunAnaliz.ortaklikYorumu}
+                    {ortaklikYorumu}
                   </div>
                 )}
               </section>
@@ -1344,18 +1049,7 @@ export default async function HisseKunyePage({
               </section>
             )}
 
-            {(kurumsalBilgiler?.merkez ||
-              kurumsalBilgiler?.faaliyetAlani ||
-              resmiKaynaklar.resmiWeb ||
-              resmiKaynaklar.yatirimciIliskileri ||
-              resmiKaynaklar.kapSirketProfili ||
-              kurumsalBilgiler?.odenmisSermaye ||
-              kurumsalBilgiler?.kayitliSermayeTavani ||
-              kurumsalBilgiler?.bagimsizDenetimKurulusu ||
-              kurumsalBilgiler?.ticaretSicilNumarasi ||
-              (kurumsalBilgiler?.yatirimciIliskileriYetkilileri?.length ?? 0) > 0 ||
-              (kurumsalBilgiler?.yonetimKurulu?.length ?? 0) > 0 ||
-              (kurumsalBilgiler?.veriNotlari?.length ?? 0) > 0) && (
+            {kurumsalBilgiVar && (
                 <section className="mt-8">
                   <SectionBaslik>Kurumsal Bilgiler</SectionBaslik>
                   <dl className="grid grid-cols-1 gap-3 sm:grid-cols-2">
@@ -1366,17 +1060,6 @@ export default async function HisseKunyePage({
                         </dt>
                         <dd className="mt-1 text-sm font-medium text-slate-800">
                           {kurumsalBilgiler.merkez}
-                        </dd>
-                      </div>
-                    )}
-
-                    {kurumsalBilgiler?.faaliyetAlani && (
-                      <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 sm:col-span-2">
-                        <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">
-                          Faaliyet Alanı
-                        </dt>
-                        <dd className="mt-1 text-sm leading-7 text-slate-800">
-                          {kurumsalBilgiler.faaliyetAlani}
                         </dd>
                       </div>
                     )}
@@ -1408,60 +1091,6 @@ export default async function HisseKunyePage({
                           {kurumsalBilgiler?.uretimTesisleri?.map((adres) => (
                             <p key={adres}>{adres}</p>
                           ))}
-                        </dd>
-                      </div>
-                    )}
-
-                    {resmiKaynaklar.resmiWeb && (
-                      <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
-                        <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">
-                          Web Sitesi
-                        </dt>
-                        <dd className="mt-1 text-sm font-bold">
-                          <a
-                            href={resmiKaynaklar.resmiWeb}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-700 transition hover:text-blue-800 hover:underline"
-                          >
-                            {baglantiAdresi(resmiKaynaklar.resmiWeb)}
-                          </a>
-                        </dd>
-                      </div>
-                    )}
-
-                    {resmiKaynaklar.yatirimciIliskileri && (
-                      <div className="rounded-xl border border-blue-100 bg-blue-50 px-4 py-3">
-                        <dt className="text-xs font-semibold uppercase tracking-wider text-blue-700">
-                          Yatırımcı İlişkileri
-                        </dt>
-                        <dd className="mt-1 text-sm font-bold">
-                          <a
-                            href={resmiKaynaklar.yatirimciIliskileri}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="break-words text-blue-700 transition hover:text-blue-800 hover:underline"
-                          >
-                            {baglantiAdresi(resmiKaynaklar.yatirimciIliskileri)}
-                          </a>
-                        </dd>
-                      </div>
-                    )}
-
-                    {resmiKaynaklar.kapSirketProfili && (
-                      <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
-                        <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">
-                          KAP Şirket Profili
-                        </dt>
-                        <dd className="mt-1 text-sm font-bold">
-                          <a
-                            href={resmiKaynaklar.kapSirketProfili}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="text-blue-700 transition hover:text-blue-800 hover:underline"
-                          >
-                            Güncel resmi şirket bilgilerini aç
-                          </a>
                         </dd>
                       </div>
                     )}
@@ -1757,44 +1386,11 @@ export default async function HisseKunyePage({
               </dl>
             </section>
 
-            <section className="mt-8">
-              <SectionBaslik>{hisse.kod} İçin Kontrol Listesi</SectionBaslik>
-              <div className="grid grid-cols-1 gap-3 md:grid-cols-2">
-                {kontrolListesi.map((item) => (
-                  <div
-                    key={item.baslik}
-                    className="rounded-xl border border-slate-200 bg-white p-4"
-                  >
-                    <h3 className="text-sm font-bold text-slate-900">
-                      {item.baslik}
-                    </h3>
-                    <p className="mt-2 text-sm leading-7 text-slate-600">
-                      {item.aciklama}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            <section className="mt-8">
-              <SectionBaslik>{hisse.kod} Hisse Sayfası Nasıl Okunmalı?</SectionBaslik>
-              <div className="space-y-3">
-                {okumaRehberi.map((madde, i) => (
-                  <div
-                    key={`${hisse.kod}-okuma-${i}`}
-                    className="rounded-xl border border-slate-200 bg-white p-4 text-sm leading-7 text-slate-700"
-                  >
-                    {madde}
-                  </div>
-                ))}
-              </div>
-            </section>
-
-            {doluMetin(ozgunAnaliz?.yatirimciNotu) && (
+            {yatirimciNotu && (
               <section className="mt-8">
                 <SectionBaslik>Yatırımcı Notu</SectionBaslik>
                 <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base md:leading-8">
-                  {ozgunAnaliz.yatirimciNotu}
+                  {yatirimciNotu}
                 </div>
               </section>
             )}
@@ -1803,9 +1399,20 @@ export default async function HisseKunyePage({
 
             {temettuBolumuVar && (
             <section id="temettu-gecmisi" className="mt-8">
-              <SectionBaslik>Temettü Geçmişi</SectionBaslik>
+              <SectionBaslik>Temettü ve Bölünme Geçmişi</SectionBaslik>
+              <p className="mb-5 text-sm leading-7 text-slate-600">
+                {hisse.kod} için açıklanmış temettü takvimi ile geçmiş nakit
+                temettü ve hisse bölünmesi kayıtları birlikte gösterilir. Geçmiş
+                veri seti son olarak {tarihEtiketi(hakKullanimlariGuncellemeTarihi)}
+                {" "}tarihinde güncellenmiştir.
+              </p>
+
               {temettuKayitlari.length > 0 && (
-                <div className="overflow-x-auto rounded-xl border border-slate-200">
+                <div>
+                  <h3 className="mb-2 text-sm font-bold text-slate-700">
+                    Açıklanmış Temettü Takvimi
+                  </h3>
+                  <div className="overflow-x-auto rounded-xl border border-slate-200">
                   <table className="w-full min-w-[560px] text-left text-sm">
                     <thead className="bg-slate-50 text-xs uppercase tracking-wider text-slate-500">
                       <tr>
@@ -1849,13 +1456,160 @@ export default async function HisseKunyePage({
                       ))}
                     </tbody>
                   </table>
+                  </div>
                 </div>
               )}
 
-              {sermayeGecmisi.length > 0 && (
+              <div className="mt-5">
+                <h3 className="mb-2 text-sm font-bold text-slate-700">
+                  Geçmiş Nakit Temettüler
+                </h3>
+                {gecmisTemettuler.length > 0 ? (
+                  <div className="overflow-hidden rounded-xl border border-slate-200">
+                    <table className="w-full table-fixed text-left text-sm sm:table-auto">
+                      <thead className="bg-slate-50 text-xs uppercase tracking-wider text-slate-500">
+                        <tr>
+                          <th className="px-3 py-3 font-semibold sm:px-4">Tarih</th>
+                          <th className="px-3 py-3 text-right font-semibold sm:px-4">
+                            Hisse Başı Brüt
+                          </th>
+                          <th className="hidden px-4 py-3 text-right font-semibold sm:table-cell">
+                            Kaynak
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-slate-100">
+                        {gecmisTemettuler.map((kayit) => (
+                          <tr
+                            key={`${kayit.isoTarih}-${kayit.brut}`}
+                            className="text-slate-700"
+                          >
+                            <td className="px-3 py-3 font-semibold text-slate-900 sm:px-4">
+                              <time dateTime={kayit.isoTarih}>
+                                {tarihEtiketi(kayit.isoTarih)}
+                              </time>
+                            </td>
+                            <td className="px-3 py-3 text-right font-semibold text-slate-900 sm:px-4">
+                              <span className="block">{temettuTutarEtiketi(kayit)}</span>
+                              <a
+                                href={hakKullanimlari.kaynakUrl}
+                                target="_blank"
+                                rel="noopener noreferrer nofollow"
+                                className="mt-1 block text-[11px] font-medium text-blue-700 sm:hidden"
+                              >
+                                Yahoo
+                              </a>
+                            </td>
+                            <td className="hidden px-4 py-3 text-right sm:table-cell">
+                              <a
+                                href={hakKullanimlari.kaynakUrl}
+                                target="_blank"
+                                rel="noopener noreferrer nofollow"
+                                className="font-semibold text-blue-700 hover:underline"
+                              >
+                                {hakKullanimlariKaynakAdi}
+                              </a>
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                ) : hakKullanimlari.durum === "ok" ? (
+                  <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-7 text-slate-600">
+                    Veri kaynağında {hisse.kod} için geçmiş nakit temettü kaydı
+                    bulunmuyor.
+                  </div>
+                ) : (
+                  <div className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm leading-7 text-amber-900">
+                    {hisse.kod} geçmiş temettü verisi piyasa veri sağlayıcısında
+                    doğrulanamadı. Kesin bilgi için şirketin KAP bildirimleri
+                    kontrol edilmelidir.
+                  </div>
+                )}
+              </div>
+
+              <div className="mt-5">
+                <h3 className="mb-2 text-sm font-bold text-slate-700">
+                  Geçmiş Hisse Bölünmeleri
+                </h3>
+                {hakKullanimlari.bolunmeler.length > 0 ? (
+                  <div className="overflow-hidden rounded-xl border border-slate-200">
+                    <table className="w-full table-fixed text-left text-sm sm:table-auto">
+                      <thead className="bg-slate-50 text-xs uppercase tracking-wider text-slate-500">
+                        <tr>
+                          <th className="px-3 py-3 font-semibold sm:px-4">Tarih</th>
+                          <th className="px-3 py-3 text-right font-semibold sm:px-4">
+                            Bölünme Oranı
+                          </th>
+                          <th className="hidden px-4 py-3 text-right font-semibold sm:table-cell">
+                            Kaynak
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody className="divide-y divide-slate-100">
+                        {hakKullanimlari.bolunmeler.map((kayit) => (
+                          <tr
+                            key={`${kayit.isoTarih}-${kayit.oran}`}
+                            className="text-slate-700"
+                          >
+                            <td className="px-3 py-3 font-semibold text-slate-900 sm:px-4">
+                              <time dateTime={kayit.isoTarih}>
+                                {tarihEtiketi(kayit.isoTarih)}
+                              </time>
+                            </td>
+                            <td className="px-3 py-3 text-right font-semibold text-slate-900 sm:px-4">
+                              <span className="block">{kayit.oran}</span>
+                              {kayit.kaynak === "piyasa-verisi" ? (
+                                <a
+                                  href={hakKullanimlari.kaynakUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer nofollow"
+                                  className="mt-1 block text-[11px] font-medium text-blue-700 sm:hidden"
+                                >
+                                  Yahoo
+                                </a>
+                              ) : (
+                                <span className="mt-1 block text-[11px] font-medium text-slate-500 sm:hidden">
+                                  Künye arşivi
+                                </span>
+                              )}
+                            </td>
+                            <td className="hidden px-4 py-3 text-right sm:table-cell">
+                              {kayit.kaynak === "piyasa-verisi" ? (
+                                <a
+                                  href={hakKullanimlari.kaynakUrl}
+                                  target="_blank"
+                                  rel="noopener noreferrer nofollow"
+                                  className="font-semibold text-blue-700 hover:underline"
+                                >
+                                  {hakKullanimlariKaynakAdi}
+                                </a>
+                              ) : (
+                                <span className="font-medium text-slate-500">
+                                  Künye arşivi
+                                </span>
+                              )}
+                            </td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                ) : hakKullanimlari.durum === "ok" ? (
+                  <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-7 text-slate-600">
+                    Veri kaynağında {hisse.kod} için geçmiş hisse bölünmesi kaydı
+                    bulunmuyor.
+                  </div>
+                ) : null}
+              </div>
+
+              {mevcutDigerSermayeKayitlari.length > 0 && (
                 <div className="mt-5">
                   <h3 className="mb-2 text-sm font-bold text-slate-700">
-                    Sermaye Artırımı ve Diğer Geçmiş
+                    {hakKullanimlari.durum === "ok"
+                      ? "Diğer Sermaye Hareketleri"
+                      : "Künye Arşivindeki Sermaye Hareketleri"}
                   </h3>
                   <div className="overflow-x-auto rounded-xl border border-slate-200">
                     <table className="w-full min-w-[480px] text-left text-sm">
@@ -1870,7 +1624,7 @@ export default async function HisseKunyePage({
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-slate-100">
-                        {sermayeGecmisi.map((kayit, i) => (
+                        {mevcutDigerSermayeKayitlari.map((kayit, i) => (
                           <tr key={i} className="text-slate-700">
                             <td className="px-4 py-3 font-semibold text-slate-900">
                               {kayit.yil || "—"}
@@ -1887,6 +1641,13 @@ export default async function HisseKunyePage({
                   </div>
                 </div>
               )}
+
+              <p className="mt-4 text-xs leading-6 text-slate-500">
+                Geçmiş temettüler ve güncel bölünme olayları piyasa veri
+                sağlayıcısından alınır; daha eski bölünmelerde mevcut künye arşivi
+                de korunur. Bedelli, bedelsiz, sermaye azaltımı ve ödeme ayrıntıları
+                için şirketin resmi KAP bildirimleri esas alınmalıdır.
+              </p>
 
               {doluMetin(ozgunAnaliz?.temettuYorumu) && (
                 <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-7 text-slate-700 md:text-base md:leading-8">
@@ -1983,38 +1744,35 @@ export default async function HisseKunyePage({
               </section>
             )}
 
-            {benzerSirketler.length > 0 && (
+            {karsilastirmaHisseleri.length > 0 && (
               <section className="mt-8">
-                <SectionBaslik>Benzer Şirketler</SectionBaslik>
+                <SectionBaslik>Benzer ve Karşılaştırılabilir Hisseler</SectionBaslik>
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  {benzerSirketler.map((item, i) => {
-                    const tiklanabilir = doluMetin(item.kod) && hisseVarMi(item.kod);
+                  {karsilastirmaHisseleri.map((item, i) => {
                     const icerik = (
                       <>
-                        <div className="flex items-center gap-2">
-                          {item.kod && (
-                            <span className="rounded-md bg-blue-50 px-2 py-1 text-xs font-bold text-blue-700 ring-1 ring-inset ring-blue-600/20">
-                              {item.kod}
-                            </span>
-                          )}
-                          {item.ad && (
-                            <h3 className="text-sm font-bold text-slate-900">
-                              {item.ad}
-                            </h3>
-                          )}
-                        </div>
-                        {item.aciklama && (
-                          <p className="mt-2 text-sm leading-6 text-slate-600">
-                            {item.aciklama}
-                          </p>
+                      <div className="flex items-center gap-2">
+                        {item.kod && (
+                          <span className="rounded-md bg-blue-50 px-2 py-1 text-xs font-bold text-blue-700 ring-1 ring-inset ring-blue-600/20">
+                            {item.kod}
+                          </span>
                         )}
+                        <h3 className="text-sm font-bold text-slate-900 group-hover:text-blue-700">
+                          {item.sirketAdi}
+                        </h3>
+                      </div>
+                      {item.neden && (
+                        <p className="mt-2 text-sm leading-6 text-slate-600">
+                          {item.neden}
+                        </p>
+                      )}
                       </>
                     );
 
-                    return tiklanabilir ? (
+                    return item.tiklanabilir && item.kod ? (
                       <Link
-                        key={`${item.kod || item.ad}-${i}`}
-                        href={`/hisse/${item.kod!.toLowerCase()}`}
+                        key={`${item.kod}-${i}`}
+                        href={`/hisse/${item.kod.toLowerCase()}`}
                         prefetch={false}
                         className="group rounded-xl border border-slate-200 bg-white p-4 transition hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-sm"
                       >
@@ -2022,43 +1780,13 @@ export default async function HisseKunyePage({
                       </Link>
                     ) : (
                       <div
-                        key={`${item.kod || item.ad}-${i}`}
+                        key={`${item.kod || item.sirketAdi}-${i}`}
                         className="rounded-xl border border-slate-200 bg-white p-4"
                       >
                         {icerik}
                       </div>
                     );
                   })}
-                </div>
-              </section>
-            )}
-
-            {ilgiliHisseler.length > 0 && (
-              <section className="mt-8">
-                <SectionBaslik>
-                  Aynı Sektör ve Pazarda İzlenebilecek Hisseler
-                </SectionBaslik>
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  {ilgiliHisseler.map((item) => (
-                    <Link
-                      key={item.kod}
-                      href={`/hisse/${item.kod.toLowerCase()}`}
-                      prefetch={false}
-                      className="group rounded-xl border border-slate-200 bg-white p-4 transition hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-sm"
-                    >
-                      <div className="flex items-center gap-2">
-                        <span className="rounded-md bg-blue-50 px-2 py-1 text-xs font-bold text-blue-700 ring-1 ring-inset ring-blue-600/20">
-                          {item.kod}
-                        </span>
-                        <h3 className="text-sm font-bold text-slate-900 group-hover:text-blue-700">
-                          {item.sirketAdi}
-                        </h3>
-                      </div>
-                      <p className="mt-2 text-sm leading-6 text-slate-600">
-                        {item.neden}
-                      </p>
-                    </Link>
-                  ))}
                 </div>
               </section>
             )}
@@ -2095,57 +1823,6 @@ export default async function HisseKunyePage({
                 </p>
               </section>
             )}
-
-            <section className="mt-8">
-              <SectionBaslik>{hisse.kod} Veri Kaynakları ve Güncelleme Notu</SectionBaslik>
-              <div className="space-y-3 rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-7 text-slate-700 md:text-base md:leading-8">
-                <div className="grid grid-cols-1 gap-3 sm:grid-cols-2">
-                  <div className="rounded-lg bg-white px-3 py-2 ring-1 ring-inset ring-slate-200">
-                    <div className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-                      Son Künye Doğrulaması
-                    </div>
-                    <time
-                      dateTime={sonDogrulamaTarihi}
-                      className="mt-0.5 block font-bold text-slate-900"
-                    >
-                      {tarihEtiketi(sonDogrulamaTarihi)}
-                    </time>
-                  </div>
-                  {resmiKaynaklar.kaynakDogrulamaTarihi && (
-                    <div className="rounded-lg bg-white px-3 py-2 ring-1 ring-inset ring-slate-200">
-                      <div className="text-xs font-semibold uppercase tracking-wide text-slate-500">
-                        Resmi Bağlantı Kontrolü
-                      </div>
-                      <time
-                        dateTime={resmiKaynaklar.kaynakDogrulamaTarihi}
-                        className="mt-0.5 block font-bold text-slate-900"
-                      >
-                        {tarihEtiketi(resmiKaynaklar.kaynakDogrulamaTarihi)}
-                      </time>
-                    </div>
-                  )}
-                </div>
-                {veriKaynakNotlari.map((not, i) => (
-                  <p key={`${hisse.kod}-veri-kaynak-${i}`}>{not}</p>
-                ))}
-                {!resmiKaynaklar.yatirimciIliskileri &&
-                  resmiKaynaklar.kapSirketProfili && (
-                    <p className="rounded-lg border border-blue-100 bg-blue-50 px-3 py-2 text-blue-900">
-                      Bu şirket için doğrudan yatırımcı ilişkileri açılış sayfası
-                      doğrulanamadı. Güncel resmi bilgiler için KAP şirket profili
-                      {resmiKaynaklar.resmiWeb
-                        ? " ve resmi şirket sitesi bağlantıları sunulmaktadır."
-                        : " bağlantısı sunulmaktadır."}
-                    </p>
-                  )}
-                <p>
-                  Güncel yatırım kararı öncesinde KAP bildirimleri, şirket yatırımcı ilişkileri
-                  sayfası, finansal tablolar, faaliyet raporları ve Borsa İstanbul duyuruları
-                  ayrıca kontrol edilmelidir. Sayfadaki oranlar ve yorumlar bilgilendirme
-                  amaçlıdır; anlık fiyat verisi veya kişiye özel yatırım tavsiyesi değildir.
-                </p>
-              </div>
-            </section>
 
             {hisse.yasalUyari && (
               <div className="mt-8 rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm font-medium leading-7 text-amber-900 md:text-base">

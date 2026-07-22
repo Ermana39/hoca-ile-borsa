@@ -202,7 +202,11 @@ function cleanText(value) {
 
 function meaningfulText(value) {
   const cleaned = cleanText(value);
-  return cleaned && !/^[*._–—-]+$/.test(cleaned) ? cleaned : "";
+  return cleaned &&
+    !/^[*._–—-]+$/.test(cleaned) &&
+    !/^\$[0-9a-z]+$/i.test(cleaned)
+    ? cleaned
+    : "";
 }
 
 function cleanTextList(value) {
@@ -217,6 +221,58 @@ function cleanTextList(value) {
         .map((item) => item.trim())
         .filter((item) => meaningfulText(item))
     : [];
+}
+
+function isGeneratedAboutParagraph(value) {
+  return (
+    /Borsa İstanbul'da\s+\S+\s+koduyla işlem gören ve KAP sektör sınıflamasında/i.test(
+      value
+    ) ||
+    /payları .+ kapsamında işlem görür\..+KAP profili üzerinden doğrulanmıştır/i.test(
+      value
+    )
+  );
+}
+
+function sanitizeAnalysisContent(value) {
+  const result = {};
+  for (const [key, item] of Object.entries(value ?? {})) {
+    if (typeof item === "string") {
+      const cleaned = meaningfulText(item);
+      if (!cleaned) continue;
+      if (
+        key === "sektorelKonum" &&
+        /KAP sınıflamasında.+kapsamında yer almaktadır/i.test(cleaned) &&
+        /aynı sektördeki şirketlerle karşılaştır/i.test(cleaned)
+      ) {
+        continue;
+      }
+      if (
+        key === "ortaklikYorumu" &&
+        /en büyük doğrudan ortak olarak görünmektedir|doğrudan ortaklık oranı tablosu yayımlanmadığından/i.test(
+          cleaned
+        )
+      ) {
+        continue;
+      }
+      if (
+        key === "yatirimciNotu" &&
+        /takip edilirken şirketin faaliyet alanındaki gelişmeler.+KAP bildirimleri.+koşulları birlikte izlenmelidir/i.test(
+          cleaned
+        )
+      ) {
+        continue;
+      }
+      result[key] = cleaned;
+      continue;
+    }
+
+    if (Array.isArray(item)) {
+      const cleaned = item.map(meaningfulText).filter(Boolean);
+      if (cleaned.length > 0) result[key] = cleaned;
+    }
+  }
+  return result;
 }
 
 function normalizeUrl(value) {
@@ -458,20 +514,14 @@ function buildProfile(company, items, canonicalCode, profileUrl) {
   const freeFloatRatio = parseRatio(freeFloatRow?.actualOutstandingSharesRatio);
 
   const sectorLabel = sectors.join(" / ") || "Borsa İstanbul şirketleri";
-  const marketLabel = markets.join(", ") || "Borsa İstanbul Pay Piyasası";
   const activityText =
     activity ||
     `${companyName}, KAP'ta ${sectorLabel} altında sınıflandırılan bir şirkettir.`;
-  const leadingShareholder = [...shareholders].sort((a, b) => b.oran - a.oran)[0];
 
   const profile = {
     kod: code,
     sirketAdi: companyName,
-    hakkinda: [
-      `${companyName}, Borsa İstanbul'da ${code} koduyla işlem gören ve KAP sektör sınıflamasında ${sectorLabel} içinde yer alan bir şirkettir.`,
-      activityText,
-      `${code} payları ${marketLabel} kapsamında işlem görür. Şirketin kurumsal, ortaklık ve borsa bilgileri ${VERIFIED_AT} tarihinde KAP profili üzerinden doğrulanmıştır.`,
-    ],
+    hakkinda: [activityText],
     ortaklikYapisi: {
       ortaklar: shareholders,
       not:
@@ -545,11 +595,6 @@ function buildProfile(company, items, canonicalCode, profileUrl) {
     temettuSermayeGecmisi: [],
     ozgunAnaliz: compactObject({
       isModeli: activityText,
-      sektorelKonum: `${companyName}, KAP sınıflamasında ${sectorLabel} içinde ve ${marketLabel} kapsamında yer almaktadır. Şirketin sektörel konumu değerlendirilirken faaliyet alanı, finansal tabloları ve aynı sektördeki şirketlerle karşılaştırması birlikte ele alınmalıdır.`,
-      ortaklikYorumu: leadingShareholder
-        ? `${code} ortaklık yapısında ${leadingShareholder.ad} yüzde ${leadingShareholder.oran.toLocaleString("tr-TR")} payla açıklanan en büyük doğrudan ortak olarak görünmektedir. Ortaklık oranları zaman içinde değişebileceği için güncel KAP profili kontrol edilmelidir.`
-        : `${code} için KAP profilinde doğrudan ortaklık oranı tablosu yayımlanmadığından ortaklık değerlendirmesi güncel şirket bildirimleri üzerinden yapılmalıdır.`,
-      yatirimciNotu: `${code} takip edilirken şirketin faaliyet alanındaki gelişmeler, dönemsel finansal sonuçlar, KAP bildirimleri, ortaklık yapısı ve ${marketLabel} koşulları birlikte izlenmelidir.`,
     }),
     seo: {
       title: `${code} Hisse Bilgileri: ${companyName} Şirket Profili ve Ortaklık Yapısı`,
@@ -589,6 +634,14 @@ function buildProfile(company, items, canonicalCode, profileUrl) {
 function mergeProfile(existing, generated, sourceCoverage) {
   if (!existing) return generated;
 
+  const existingAbout = cleanTextList(existing.hakkinda).filter(
+    (item) => !isGeneratedAboutParagraph(item)
+  );
+  const generatedAbout = cleanTextList(generated.hakkinda);
+  const mergedAnalysis = sanitizeAnalysisContent({
+    ...generated.ozgunAnaliz,
+    ...(existing.ozgunAnaliz ?? {}),
+  });
   const history = Array.isArray(existing.degisiklikGecmisi)
     ? existing.degisiklikGecmisi.filter(
         (entry) => entry?.tarih !== VERIFIED_AT || entry?.baslik !== generated.degisiklikGecmisi[0].baslik
@@ -600,10 +653,7 @@ function mergeProfile(existing, generated, sourceCoverage) {
     ...existing,
     kod: generated.kod,
     sirketAdi: existing.sirketAdi || generated.sirketAdi,
-    hakkinda:
-      Array.isArray(existing.hakkinda) && existing.hakkinda.length >= 2
-        ? existing.hakkinda
-        : generated.hakkinda,
+    hakkinda: existingAbout.length > 0 ? existingAbout : generatedAbout,
     ortaklikYapisi:
       sourceCoverage.shareholderTable &&
       generated.ortaklikYapisi.ortaklar.length > 0
@@ -630,10 +680,7 @@ function mergeProfile(existing, generated, sourceCoverage) {
     temettuSermayeGecmisi: Array.isArray(existing.temettuSermayeGecmisi)
       ? existing.temettuSermayeGecmisi
       : [],
-    ozgunAnaliz: {
-      ...generated.ozgunAnaliz,
-      ...(existing.ozgunAnaliz ?? {}),
-    },
+    ozgunAnaliz: mergedAnalysis,
     seoSorular: existing.seoSorular,
     benzerSirketler: existing.benzerSirketler,
     seo: {

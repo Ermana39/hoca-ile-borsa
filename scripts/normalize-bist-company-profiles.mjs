@@ -44,7 +44,22 @@ function readOptionalJson(filePath, fallback) {
 }
 
 function hasText(value) {
-  return typeof value === "string" && value.trim().length > 0;
+  return (
+    typeof value === "string" &&
+    value.trim().length > 0 &&
+    !/^\$[0-9a-z]+$/i.test(value.trim())
+  );
+}
+
+function isGeneratedAboutParagraph(value) {
+  return (
+    /Borsa İstanbul'da\s+\S+\s+koduyla işlem gören ve KAP sektör sınıflamasında/i.test(
+      value
+    ) ||
+    /payları .+ kapsamında işlem görür\..+KAP profili üzerinden doğrulanmıştır/i.test(
+      value
+    )
+  );
 }
 
 function hasList(value) {
@@ -194,17 +209,12 @@ for (const company of snapshot.companies ?? []) {
 
   const corporate = profile.kurumsalBilgiler ?? {};
   const market = profile.borsaBilgileri ?? {};
-  const about = Array.isArray(profile.hakkinda)
+  const about = (Array.isArray(profile.hakkinda)
     ? profile.hakkinda.filter(hasText)
     : hasText(profile.hakkinda)
       ? [profile.hakkinda]
-      : [];
-  const activity =
-    corporate.faaliyetAlani ||
-    corporate.faaliyetAlanlari ||
-    profile.ozgunAnaliz?.isModeli ||
-    about[1] ||
-    `${company.sirketAdi}, Borsa İstanbul'da ${code} koduyla işlem gören bir şirkettir.`;
+      : []
+  ).filter((item) => !isGeneratedAboutParagraph(item));
   const sectors = hasList(corporate.sektorler)
     ? corporate.sektorler
     : hasList(market.sektorler)
@@ -215,6 +225,13 @@ for (const company of snapshot.companies ?? []) {
     : hasList(market.islemGorduguPazar)
       ? market.islemGorduguPazar
       : ["Borsa İstanbul Pay Piyasası"];
+  const activity = [
+    corporate.faaliyetAlani,
+    corporate.faaliyetAlanlari,
+    profile.ozgunAnaliz?.isModeli,
+    ...about,
+  ].find(hasText) ||
+    `${company.sirketAdi}, KAP'ta ${sectors.join(" / ")} altında sınıflandırılan bir şirkettir.`;
   const kapSummaryUrl = profilePaths[code];
   const kapProfileUrl = company.mkkMemberOid
     ? `${KAP_PROFILE_BASE}/${company.mkkMemberOid}`
@@ -222,13 +239,7 @@ for (const company of snapshot.companies ?? []) {
       ? kapSummaryUrl.replace("/ozet/", "/genel/")
       : company.kapSirketProfili;
 
-  while (about.length < 2) {
-    about.push(
-      about.length === 0
-        ? `${company.sirketAdi}, Borsa İstanbul'da ${code} koduyla işlem görür.`
-        : activity
-    );
-  }
+  if (about.length === 0) about.push(activity);
 
   const history = Array.isArray(profile.degisiklikGecmisi)
     ? profile.degisiklikGecmisi.filter(
@@ -308,7 +319,9 @@ for (const company of snapshot.companies ?? []) {
     }),
     ozgunAnaliz: {
       ...(profile.ozgunAnaliz ?? {}),
-      isModeli: profile.ozgunAnaliz?.isModeli || activity,
+      isModeli: hasText(profile.ozgunAnaliz?.isModeli)
+        ? profile.ozgunAnaliz.isModeli
+        : activity,
     },
     seo: {
       title:
