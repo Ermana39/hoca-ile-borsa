@@ -1,14 +1,17 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-const DEFAULT_BLOCKED_COUNTRIES = ["CN", "HK", "MO"];
+const DEFAULT_BLOCKED_COUNTRIES = ["CN", "HK", "MO", "SG"];
 const SEARCH_BOT_ALLOWLIST =
   /googlebot|bingbot|slurp|duckduckbot|yandexbot|applebot|adsbot-google|mediapartners-google/i;
 
 function blockedCountries() {
   const raw = process.env.BLOCKED_COUNTRY_CODES;
   const values = raw
-    ? raw.split(",").map((item) => item.trim().toUpperCase())
+    ? [
+        ...DEFAULT_BLOCKED_COUNTRIES,
+        ...raw.split(",").map((item) => item.trim().toUpperCase()),
+      ]
     : DEFAULT_BLOCKED_COUNTRIES;
 
   return new Set(values.filter((item) => /^[A-Z]{2}$/.test(item)));
