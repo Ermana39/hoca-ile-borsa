@@ -7,5 +7,6 @@ This version has breaking changes — APIs, conventions, and file structure may 
 ## News publishing workflow
 
 - New JSON news records may start with `durum: "taslak"` while their content and image are incomplete.
-- A news task is not complete until `npm run news:publish -- --slug=<slug>` succeeds.
-- Do not report a news item as published while it remains `taslak`, and do not bypass the publication quality checks.
+- News JSON files are often prepared in a separate chat that cannot access the project folders.
+- Do not rely on the news quality script as a deployment gate. It is optional manual guidance only.
+- Before reporting a news item as published, make sure the JSON file is in `data/haberler`, has `durum: "yayinda"`, and the site build succeeds.

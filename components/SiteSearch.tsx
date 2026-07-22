@@ -337,10 +337,7 @@ export default function SiteSearch({ onOpen }: { onOpen?: () => void }) {
           <circle cx="11" cy="11" r="7" />
           <path d="m20 20-3.5-3.5" strokeLinecap="round" />
         </svg>
-        <span className="hidden sm:inline xl:hidden 2xl:inline">Ara</span>
-        <kbd className="hidden rounded border border-slate-500/80 bg-slate-900/70 px-1.5 py-0.5 font-sans text-[10px] font-medium text-slate-300 2xl:inline-flex">
-          Ctrl K
-        </kbd>
+        <span>Ara</span>
       </button>
 
       {open && (

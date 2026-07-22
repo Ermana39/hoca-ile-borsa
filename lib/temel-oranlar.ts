@@ -11,9 +11,9 @@
 //      → app/borsa/oran-analizi/data/oran-analizi.json
 //
 //  Böylece Excel güncellenip yeniden deploy edildiğinde TÜM hisse sayfalarının
-//  oranları tek kaynaktan otomatik güncellenir; per-hisse JSON'ları elle düzenlemek
-//  gerekmez. (Excel'de bulunmayan bir kod için sayfa, hissenin kendi JSON'undaki
-//  temelOranlar alanına geri düşer — bkz. hisse/[sembol]/page.tsx.)
+//  oranları tek kaynaktan otomatik güncellenir; per-hisse JSON'ları kullanılmaz.
+//  Excel'de bulunmayan bir kod için eski/sabit oran göstermek yerine oran bölümü
+//  gösterilmez.
 //
 //  Birim notu: Excel sütunları ile temelOranlar alanları AYNI birimdedir, dönüşüm
 //  gerekmez (roe/netMarj ondalık oran; netKarDegisim/netSatisDegisim yüzde sayısı).
@@ -37,6 +37,11 @@ const SUTUN_ESLEME: Record<keyof SirketOranlari, string> = {
 
 type HamSatir = Record<string, unknown>;
 
+type OranAnaliziDosyasi = {
+  rows?: HamSatir[];
+  guncellemeTarihi?: unknown;
+};
+
 function sayiVeyaNull(v: unknown): number | null {
   return typeof v === "number" && Number.isFinite(v) ? v : null;
 }
@@ -48,9 +53,18 @@ function donemNormalize(v: unknown): string {
   return m ? `20${m[1]}-${m[2]}` : s;
 }
 
+// Excel dönüştürücüsünün "20.07.2026" değerini ortak ISO biçimine çevirir.
+function guncellemeTarihiNormalize(v: unknown): string | undefined {
+  const s = (v ?? "").toString().trim();
+  const tr = /^(\d{2})\.(\d{2})\.(\d{4})$/.exec(s);
+  if (tr) return `${tr[3]}-${tr[2]}-${tr[1]}`;
+  return /^\d{4}-\d{2}-\d{2}$/.test(s) ? s : undefined;
+}
+
 function haritaKur(): Map<string, TemelOranlar> {
-  const veri = oranAnaliziVeri as unknown as { rows?: HamSatir[] };
+  const veri = oranAnaliziVeri as unknown as OranAnaliziDosyasi;
   const satirlar = Array.isArray(veri.rows) ? veri.rows : [];
+  const guncellemeTarihi = guncellemeTarihiNormalize(veri.guncellemeTarihi);
   const harita = new Map<string, TemelOranlar>();
 
   for (const satir of satirlar) {
@@ -71,6 +85,7 @@ function haritaKur(): Map<string, TemelOranlar> {
 
     harita.set(senet, {
       donem: donemNormalize(satir["Dönem"]),
+      guncellemeTarihi,
       sirket,
     });
   }
@@ -83,7 +98,7 @@ const ORAN_HARITASI = haritaKur();
 
 /**
  * Verilen hisse kodu için merkezi Excel kaynağından temel oranları döndürür.
- * Kod merkezi kaynakta yoksa undefined döner (çağıran taraf per-hisse JSON'a düşer).
+ * Kod merkezi kaynakta yoksa undefined döner; eski şirket JSON'una geri düşülmez.
  */
 export function getTemelOranlar(kod: string): TemelOranlar | undefined {
   return ORAN_HARITASI.get((kod ?? "").trim().toUpperCase());

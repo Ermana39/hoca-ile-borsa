@@ -7,12 +7,12 @@
     "note": "Temettu ve guncel bolunme olaylari piyasa veri saglayicisindan alinir; eski kunye bolunme arsivi korunur. Kesin hak kullanimi bilgisi KAP bildirimleriyle kontrol edilmelidir."
   },
   "summary": {
-    "shareCodes": 574,
-    "available": 574,
+    "shareCodes": 619,
+    "available": 619,
     "unavailable": 0,
     "errors": 0,
-    "dividendRecords": 2995,
-    "splitRecords": 1762
+    "dividendRecords": 3225,
+    "splitRecords": 1868
   },
   "profiles": {
     "A1CAP": {
@@ -4837,6 +4837,210 @@
       "temettuler": [],
       "bolunmeler": []
     },
+    "ATEKS": {
+      "durum": "ok",
+      "kaynakSembol": "ATEKS.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/ATEKS.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2019-08-23",
+          "brut": 0.175,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2019-06-26",
+          "brut": 0.35,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2019-06-14",
+          "brut": 0.35,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2005-04-11",
+          "brut": 0.15,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2004-03-25",
+          "brut": 200000,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": [
+        {
+          "isoTarih": "2005-04-11",
+          "oran": "1.0566:1",
+          "katsayi": 1.0566,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "2005-01-01",
+          "oran": "0.001:1",
+          "katsayi": 0.001,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "2002-05-31",
+          "oran": "1.13:1",
+          "katsayi": 1.13,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "2000-08-03",
+          "oran": "4:1",
+          "katsayi": 4,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "1998-06-08",
+          "oran": "3:1",
+          "katsayi": 3,
+          "kaynak": "kunye-arsivi"
+        }
+      ]
+    },
+    "ATLAS": {
+      "durum": "ok",
+      "kaynakSembol": "ATLAS.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/ATLAS.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2025-12-08",
+          "brut": 0.028774,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2023-12-05",
+          "brut": 0.346101,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2022-12-07",
+          "brut": 0.0393,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2021-12-06",
+          "brut": 0.021388,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2020-12-07",
+          "brut": 0.034347,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2018-12-31",
+          "brut": 0.032349,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2008-05-30",
+          "brut": 0.033158,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2006-07-07",
+          "brut": 0.143072,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": [
+        {
+          "isoTarih": "2020-08-06",
+          "oran": "1.4898:1",
+          "katsayi": 1.4898,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "2017-09-28",
+          "oran": "1.0223:1",
+          "katsayi": 1.0223,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "2006-06-30",
+          "oran": "3:1",
+          "katsayi": 3,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "2005-01-01",
+          "oran": "0.001:1",
+          "katsayi": 0.001,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "1998-08-14",
+          "oran": "4.4:1",
+          "katsayi": 4.4,
+          "kaynak": "kunye-arsivi"
+        }
+      ]
+    },
+    "ATSYH": {
+      "durum": "ok",
+      "kaynakSembol": "ATSYH.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/ATSYH.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2008-03-17",
+          "brut": 0.1,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2004-02-19",
+          "brut": 169828.06,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": [
+        {
+          "isoTarih": "2008-03-03",
+          "oran": "1.09998:1",
+          "katsayi": 1.09998,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "2006-05-23",
+          "oran": "1.25:1",
+          "katsayi": 1.25,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "2005-01-01",
+          "oran": "0.001:1",
+          "katsayi": 0.001,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "2004-11-17",
+          "oran": "1.54128:1",
+          "katsayi": 1.54128,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "2001-04-02",
+          "oran": "1.78:1",
+          "katsayi": 1.78,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "2000-06-06",
+          "oran": "1.25:1",
+          "katsayi": 1.25,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "1998-05-22",
+          "oran": "1.55664:1",
+          "katsayi": 1.55664,
+          "kaynak": "kunye-arsivi"
+        }
+      ]
+    },
     "AVGYO": {
       "durum": "ok",
       "kaynakSembol": "AVGYO.IS",
@@ -5189,6 +5393,97 @@
           "oran": "0.001:1",
           "katsayi": 0.001,
           "kaynak": "piyasa-verisi"
+        }
+      ]
+    },
+    "AYES": {
+      "durum": "ok",
+      "kaynakSembol": "AYES.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/AYES.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2026-06-01",
+          "brut": 0.352941,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2025-07-07",
+          "brut": 0.088235,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2024-09-02",
+          "brut": 0.060113,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2023-06-01",
+          "brut": 0.048981,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2022-06-01",
+          "brut": 0.02004,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2021-05-11",
+          "brut": 0.015028,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2021-01-04",
+          "brut": 0.005009,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2019-05-28",
+          "brut": 0.005009,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2018-06-05",
+          "brut": 0.007013,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2017-06-05",
+          "brut": 0.005009,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2016-06-06",
+          "brut": 0.005009,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2015-06-01",
+          "brut": 0.005009,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2014-06-02",
+          "brut": 0.005009,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2013-07-15",
+          "brut": 0.005009,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": [
+        {
+          "isoTarih": "2024-09-24",
+          "oran": "4.9906178:1",
+          "katsayi": 4.9906178,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "2023-01-10",
+          "oran": "2:1",
+          "katsayi": 2,
+          "kaynak": "kunye-arsivi"
         }
       ]
     },
@@ -5645,6 +5940,13 @@
         }
       ]
     },
+    "BALAT": {
+      "durum": "ok",
+      "kaynakSembol": "BALAT.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/BALAT.IS/history/",
+      "temettuler": [],
+      "bolunmeler": []
+    },
     "BALSU": {
       "durum": "ok",
       "kaynakSembol": "BALSU.IS",
@@ -5767,6 +6069,44 @@
           "kaynak": "kunye-arsivi"
         }
       ]
+    },
+    "BASCM": {
+      "durum": "ok",
+      "kaynakSembol": "BASCM.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/BASCM.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2018-05-22",
+          "brut": 0.025919,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2017-05-22",
+          "brut": 0.06739,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2016-05-24",
+          "brut": 0.046655,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2015-05-26",
+          "brut": 0.01296,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2014-05-28",
+          "brut": 0.022939,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2013-05-30",
+          "brut": 0.020735,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": []
     },
     "BASGZ": {
       "durum": "ok",
@@ -7173,6 +7513,13 @@
         }
       ]
     },
+    "BRKO": {
+      "durum": "ok",
+      "kaynakSembol": "BRKO.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/BRKO.IS/history/",
+      "temettuler": [],
+      "bolunmeler": []
+    },
     "BRKSN": {
       "durum": "ok",
       "kaynakSembol": "BRKSN.IS",
@@ -7286,6 +7633,74 @@
           "oran": "2.1960783:1",
           "katsayi": 2.1960783,
           "kaynak": "piyasa-verisi"
+        }
+      ]
+    },
+    "BRMEN": {
+      "durum": "ok",
+      "kaynakSembol": "BRMEN.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/BRMEN.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2005-05-24",
+          "brut": 0.044201,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": [
+        {
+          "isoTarih": "2013-01-30",
+          "oran": "0.41735:1",
+          "katsayi": 0.41735,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "2005-05-24",
+          "oran": "1.0215:1",
+          "katsayi": 1.0215,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "2005-01-01",
+          "oran": "0.001:1",
+          "katsayi": 0.001,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "2004-03-25",
+          "oran": "2:1",
+          "katsayi": 2,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "2001-08-10",
+          "oran": "1.59596:1",
+          "katsayi": 1.59596,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "2000-07-24",
+          "oran": "1.36957:1",
+          "katsayi": 1.36957,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "2000-01-27",
+          "oran": "1.23152:1",
+          "katsayi": 1.23152,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "1999-10-04",
+          "oran": "1.5:1",
+          "katsayi": 1.5,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "1997-12-29",
+          "oran": "1.7:1",
+          "katsayi": 1.7,
+          "kaynak": "kunye-arsivi"
         }
       ]
     },
@@ -8213,6 +8628,26 @@
         }
       ]
     },
+    "CASA": {
+      "durum": "ok",
+      "kaynakSembol": "CASA.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/CASA.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2021-12-31",
+          "brut": 0.292261,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": [
+        {
+          "isoTarih": "2012-12-27",
+          "oran": "9.6078:1",
+          "katsayi": 9.6078,
+          "kaynak": "kunye-arsivi"
+        }
+      ]
+    },
     "CATES": {
       "durum": "ok",
       "kaynakSembol": "CATES.IS",
@@ -9062,6 +9497,90 @@
         }
       ]
     },
+    "CMENT": {
+      "durum": "ok",
+      "kaynakSembol": "CMENT.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/CMENT.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2024-12-26",
+          "brut": 8.179082,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2005-05-30",
+          "brut": 0.086782,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2004-06-29",
+          "brut": 189869.75,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": [
+        {
+          "isoTarih": "2008-06-27",
+          "oran": "2.073:1",
+          "katsayi": 2.073,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "2006-06-15",
+          "oran": "1.14258:1",
+          "katsayi": 1.14258,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "2005-05-30",
+          "oran": "1.02625:1",
+          "katsayi": 1.02625,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "2005-01-01",
+          "oran": "0.001:1",
+          "katsayi": 0.001,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "2003-02-24",
+          "oran": "3:1",
+          "katsayi": 3,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "2000-09-25",
+          "oran": "3:1",
+          "katsayi": 3,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "1999-04-19",
+          "oran": "2:1",
+          "katsayi": 2,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "1998-01-19",
+          "oran": "2.5:1",
+          "katsayi": 2.5,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "1996-04-24",
+          "oran": "2.82083:1",
+          "katsayi": 2.82083,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "1994-10-24",
+          "oran": "3.00003:1",
+          "katsayi": 3.00003,
+          "kaynak": "kunye-arsivi"
+        }
+      ]
+    },
     "CONSE": {
       "durum": "ok",
       "kaynakSembol": "CONSE.IS",
@@ -9779,6 +10298,13 @@
           "kaynak": "piyasa-verisi"
         }
       ]
+    },
+    "DIRIT": {
+      "durum": "ok",
+      "kaynakSembol": "DIRIT.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/DIRIT.IS/history/",
+      "temettuler": [],
+      "bolunmeler": []
     },
     "DITAS": {
       "durum": "ok",
@@ -11597,6 +12123,13 @@
       "temettuler": [],
       "bolunmeler": []
     },
+    "EKIZ": {
+      "durum": "ok",
+      "kaynakSembol": "EKIZ.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/EKIZ.IS/history/",
+      "temettuler": [],
+      "bolunmeler": []
+    },
     "EKOS": {
       "durum": "ok",
       "kaynakSembol": "EKOS.IS",
@@ -11724,6 +12257,32 @@
           "isoTarih": "2003-03-13",
           "oran": "1.5:1",
           "katsayi": 1.5,
+          "kaynak": "piyasa-verisi"
+        }
+      ]
+    },
+    "EMNIS": {
+      "durum": "ok",
+      "kaynakSembol": "EMNIS.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/EMNIS.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2004-06-30",
+          "brut": 41844.15,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": [
+        {
+          "isoTarih": "2005-01-03",
+          "oran": "0.001:1",
+          "katsayi": 0.001,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2002-05-27",
+          "oran": "3:1",
+          "katsayi": 3,
           "kaynak": "piyasa-verisi"
         }
       ]
@@ -12139,6 +12698,13 @@
           "kaynak": "kunye-arsivi"
         }
       ]
+    },
+    "ENPRA": {
+      "durum": "ok",
+      "kaynakSembol": "ENPRA.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/ENPRA.IS/history/",
+      "temettuler": [],
+      "bolunmeler": []
     },
     "ENSRI": {
       "durum": "ok",
@@ -12727,6 +13293,164 @@
         }
       ]
     },
+    "ETYAT": {
+      "durum": "ok",
+      "kaynakSembol": "ETYAT.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/ETYAT.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2023-08-08",
+          "brut": 0.018333,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2022-08-09",
+          "brut": 0.010167,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2021-07-06",
+          "brut": 0.02,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2020-06-16",
+          "brut": 0.026667,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2019-07-29",
+          "brut": 0.002,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2018-08-15",
+          "brut": 0.006667,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2017-07-25",
+          "brut": 0.002833,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2016-06-15",
+          "brut": 0.000667,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2015-05-27",
+          "brut": 0.0045,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2014-06-25",
+          "brut": 0.003005,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2013-05-31",
+          "brut": 0.002075,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": [
+        {
+          "isoTarih": "2026-04-21",
+          "oran": "3:1",
+          "katsayi": 3,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2015-01-12",
+          "oran": "1.431452:1",
+          "katsayi": 1.431452,
+          "kaynak": "piyasa-verisi"
+        }
+      ]
+    },
+    "EUHOL": {
+      "durum": "ok",
+      "kaynakSembol": "EUHOL.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/EUHOL.IS/history/",
+      "temettuler": [],
+      "bolunmeler": []
+    },
+    "EUKYO": {
+      "durum": "ok",
+      "kaynakSembol": "EUKYO.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/EUKYO.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2023-08-08",
+          "brut": 0.02,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2022-08-09",
+          "brut": 0.011667,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2021-07-06",
+          "brut": 0.019167,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2020-06-16",
+          "brut": 0.0275,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2019-07-29",
+          "brut": 0.003333,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2018-08-15",
+          "brut": 0.0075,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2017-07-25",
+          "brut": 0.00425,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2016-06-15",
+          "brut": 0.000667,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2015-05-27",
+          "brut": 0.005833,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2014-05-30",
+          "brut": 0.000332,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2013-05-31",
+          "brut": 0.005163,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2012-05-31",
+          "brut": 0.001574,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": [
+        {
+          "isoTarih": "2026-04-21",
+          "oran": "3:1",
+          "katsayi": 3,
+          "kaynak": "piyasa-verisi"
+        }
+      ]
+    },
     "EUPWR": {
       "durum": "ok",
       "kaynakSembol": "EUPWR.IS",
@@ -12758,6 +13482,82 @@
           "oran": "4.502903:1",
           "katsayi": 4.502903,
           "kaynak": "kunye-arsivi"
+        }
+      ]
+    },
+    "EUYO": {
+      "durum": "ok",
+      "kaynakSembol": "EUYO.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/EUYO.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2023-08-08",
+          "brut": 0.021667,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2022-08-09",
+          "brut": 0.011667,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2021-07-06",
+          "brut": 0.020833,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2020-06-16",
+          "brut": 0.026667,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2019-07-29",
+          "brut": 0.001367,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2018-08-15",
+          "brut": 0.006667,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2017-07-25",
+          "brut": 0.002583,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2016-06-15",
+          "brut": 0.000667,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2015-05-27",
+          "brut": 0.006667,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2014-05-30",
+          "brut": 0.003868,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2013-05-31",
+          "brut": 0.002679,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": [
+        {
+          "isoTarih": "2026-04-21",
+          "oran": "3:1",
+          "katsayi": 3,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2014-12-25",
+          "oran": "1.491424:1",
+          "katsayi": 1.491424,
+          "kaynak": "piyasa-verisi"
         }
       ]
     },
@@ -13719,6 +14519,13 @@
         }
       ]
     },
+    "GATEG": {
+      "durum": "ok",
+      "kaynakSembol": "GATEG.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/GATEG.IS/history/",
+      "temettuler": [],
+      "bolunmeler": []
+    },
     "GEDIK": {
       "durum": "ok",
       "kaynakSembol": "GEDIK.IS",
@@ -14598,6 +15405,118 @@
       "kaynakUrl": "https://finance.yahoo.com/quote/GOZDE.IS/history/",
       "temettuler": [],
       "bolunmeler": []
+    },
+    "GRNYO": {
+      "durum": "ok",
+      "kaynakSembol": "GRNYO.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/GRNYO.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2023-06-08",
+          "brut": 0.056,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2022-06-13",
+          "brut": 0.010667,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2021-08-02",
+          "brut": 0.01,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2020-08-24",
+          "brut": 0.023333,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2018-06-01",
+          "brut": 0.011946,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2017-06-01",
+          "brut": 0.04,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2016-06-08",
+          "brut": 0.032,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2015-05-22",
+          "brut": 0.037333,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2014-05-20",
+          "brut": 0.005333,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2013-05-20",
+          "brut": 0.026666,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2006-05-22",
+          "brut": 0.031,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": [
+        {
+          "isoTarih": "2020-10-02",
+          "oran": "1.071429:1",
+          "katsayi": 1.071429,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2019-06-20",
+          "oran": "1.044776:1",
+          "katsayi": 1.044776,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2019-05-29",
+          "oran": "1.044776:1",
+          "katsayi": 1.044776,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2018-11-06",
+          "oran": "1.046875:1",
+          "katsayi": 1.046875,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2013-07-09",
+          "oran": "1.06667:1",
+          "katsayi": 1.06667,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2010-06-14",
+          "oran": "1.1547:1",
+          "katsayi": 1.1547,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2005-08-26",
+          "oran": "2:1",
+          "katsayi": 2,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2005-01-03",
+          "oran": "0.001:1",
+          "katsayi": 0.001,
+          "kaynak": "piyasa-verisi"
+        }
+      ]
     },
     "GRSEL": {
       "durum": "ok",
@@ -16195,6 +17114,13 @@
         }
       ]
     },
+    "INTEK": {
+      "durum": "ok",
+      "kaynakSembol": "INTEK.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/INTEK.IS/history/",
+      "temettuler": [],
+      "bolunmeler": []
+    },
     "INTEM": {
       "durum": "ok",
       "kaynakSembol": "INTEM.IS",
@@ -16401,6 +17327,86 @@
           "isoTarih": "2005-01-03",
           "oran": "0.001:1",
           "katsayi": 0.001,
+          "kaynak": "piyasa-verisi"
+        }
+      ]
+    },
+    "ISBIR": {
+      "durum": "ok",
+      "kaynakSembol": "ISBIR.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/ISBIR.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2026-07-13",
+          "brut": 1,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2025-08-20",
+          "brut": 1,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2024-07-16",
+          "brut": 1,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2023-05-03",
+          "brut": 0.7,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2022-06-14",
+          "brut": 0.5,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2021-05-03",
+          "brut": 0.117647,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2019-08-20",
+          "brut": 0.029412,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2018-08-15",
+          "brut": 0.029412,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2017-08-15",
+          "brut": 0.019608,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2016-09-01",
+          "brut": 0.019608,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2015-09-30",
+          "brut": 0.019608,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2015-09-01",
+          "brut": 0.019608,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2013-08-26",
+          "brut": 0.023529,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": [
+        {
+          "isoTarih": "2021-09-01",
+          "oran": "51:1",
+          "katsayi": 51,
           "kaynak": "piyasa-verisi"
         }
       ]
@@ -17173,6 +18179,79 @@
         }
       ]
     },
+    "ISKUR": {
+      "durum": "ok",
+      "kaynakSembol": "ISKUR.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/ISKUR.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2026-04-01",
+          "brut": 8.554101,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2025-03-28",
+          "brut": 2.023356,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2024-04-01",
+          "brut": 3.871273,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2023-04-03",
+          "brut": 15.724983,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2022-03-29",
+          "brut": 4.062486,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2021-04-02",
+          "brut": 1.51799,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2018-04-03",
+          "brut": 3.980163,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2017-04-04",
+          "brut": 3.349992,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2016-03-30",
+          "brut": 1.853011,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2015-04-01",
+          "brut": 1.59002,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2012-04-02",
+          "brut": 1.01583,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2011-04-01",
+          "brut": 1.560081,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2006-04-03",
+          "brut": 1.5984,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": []
+    },
     "ISMEN": {
       "durum": "ok",
       "kaynakSembol": "ISMEN.IS",
@@ -17376,6 +18455,106 @@
       "kaynakUrl": "https://finance.yahoo.com/quote/ISVEA.IS/history/",
       "temettuler": [],
       "bolunmeler": []
+    },
+    "ISYAT": {
+      "durum": "ok",
+      "kaynakSembol": "ISYAT.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/ISYAT.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2023-03-27",
+          "brut": 0.35,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2022-03-28",
+          "brut": 0.25,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2021-03-29",
+          "brut": 0.156,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2020-03-23",
+          "brut": 0.343,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2019-03-25",
+          "brut": 0.187,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2018-03-26",
+          "brut": 0.187,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2017-03-24",
+          "brut": 0.125,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2016-03-24",
+          "brut": 0.125,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2015-03-24",
+          "brut": 0.187,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2014-03-28",
+          "brut": 0.187,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2013-03-29",
+          "brut": 0.2,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2012-04-03",
+          "brut": 0.16,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2011-03-31",
+          "brut": 0.16,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2010-03-31",
+          "brut": 0.16,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2008-03-31",
+          "brut": 0.4,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2007-05-28",
+          "brut": 0.05,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2005-04-25",
+          "brut": 0.1,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": [
+        {
+          "isoTarih": "2005-01-03",
+          "oran": "0.001:1",
+          "katsayi": 0.001,
+          "kaynak": "piyasa-verisi"
+        }
+      ]
     },
     "IZENR": {
       "durum": "ok",
@@ -18112,6 +19291,70 @@
         }
       ]
     },
+    "KENT": {
+      "durum": "ok",
+      "kaynakSembol": "KENT.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/KENT.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2016-01-26",
+          "brut": 0.173899,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2009-05-26",
+          "brut": 0.015213,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2008-05-23",
+          "brut": 0.010992,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2007-05-21",
+          "brut": 0.006396,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2006-05-22",
+          "brut": 0.021892,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2005-05-16",
+          "brut": 0.004405,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": []
+    },
+    "KERVN": {
+      "durum": "ok",
+      "kaynakSembol": "KERVN.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/KERVN.IS/history/",
+      "temettuler": [],
+      "bolunmeler": [
+        {
+          "isoTarih": "2005-01-03",
+          "oran": "0.001:1",
+          "katsayi": 0.001,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2004-07-19",
+          "oran": "2.2:1",
+          "katsayi": 2.2,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2002-01-07",
+          "oran": "2.9:1",
+          "katsayi": 2.9,
+          "kaynak": "piyasa-verisi"
+        }
+      ]
+    },
     "KFEIN": {
       "durum": "ok",
       "kaynakSembol": "KFEIN.IS",
@@ -18351,6 +19594,67 @@
         }
       ]
     },
+    "KLNMA": {
+      "durum": "ok",
+      "kaynakSembol": "KLNMA.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/KLNMA.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2018-10-30",
+          "brut": 0.000703,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2014-05-09",
+          "brut": 0.001197,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2013-05-17",
+          "brut": 0.001197,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2011-05-31",
+          "brut": 0.000632,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2010-05-31",
+          "brut": 0.000765,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2009-05-28",
+          "brut": 0.001197,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2008-05-30",
+          "brut": 0.001221,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2007-05-31",
+          "brut": 0.018306,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": [
+        {
+          "isoTarih": "2021-12-13",
+          "oran": "1.1875:1",
+          "katsayi": 1.1875,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2005-01-03",
+          "oran": "0.001:1",
+          "katsayi": 0.001,
+          "kaynak": "piyasa-verisi"
+        }
+      ]
+    },
     "KLRHO": {
       "durum": "ok",
       "kaynakSembol": "KLRHO.IS",
@@ -18513,6 +19817,52 @@
           "oran": "3:1",
           "katsayi": 3,
           "kaynak": "piyasa-verisi"
+        }
+      ]
+    },
+    "KONTR": {
+      "durum": "ok",
+      "kaynakSembol": "KONTR.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/KONTR.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2025-07-08",
+          "brut": 0.015895,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2024-09-05",
+          "brut": 0.023842,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2023-07-12",
+          "brut": 0.023842,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2022-07-05",
+          "brut": 0.009878,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2021-08-27",
+          "brut": 0.005489,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": [
+        {
+          "isoTarih": "2024-07-19",
+          "oran": "2.25:1",
+          "katsayi": 2.25,
+          "kaynak": "kunye-arsivi"
+        },
+        {
+          "isoTarih": "2022-09-01",
+          "oran": "5.2545156:1",
+          "katsayi": 5.2545156,
+          "kaynak": "kunye-arsivi"
         }
       ]
     },
@@ -19152,6 +20502,74 @@
           "kaynak": "piyasa-verisi"
         }
       ]
+    },
+    "KSTUR": {
+      "durum": "ok",
+      "kaynakSembol": "KSTUR.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/KSTUR.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2026-04-20",
+          "brut": 16,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2025-04-21",
+          "brut": 14,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2024-05-08",
+          "brut": 6.435846,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2023-05-16",
+          "brut": 8.708912,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2022-08-24",
+          "brut": 3.65659,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2020-07-10",
+          "brut": 0.551225,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2020-04-15",
+          "brut": 2.546926,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2019-04-17",
+          "brut": 2.92852,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2018-04-17",
+          "brut": 0.5888,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2017-04-21",
+          "brut": 0.548,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2016-04-15",
+          "brut": 0.5659,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2015-04-20",
+          "brut": 0.4299,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": []
     },
     "KTLEV": {
       "durum": "ok",
@@ -20369,6 +21787,26 @@
         }
       ]
     },
+    "MEGAP": {
+      "durum": "ok",
+      "kaynakSembol": "MEGAP.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/MEGAP.IS/history/",
+      "temettuler": [],
+      "bolunmeler": [
+        {
+          "isoTarih": "2022-08-11",
+          "oran": "2.5282549:1",
+          "katsayi": 2.5282549,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2020-12-21",
+          "oran": "1.437059:1",
+          "katsayi": 1.437059,
+          "kaynak": "piyasa-verisi"
+        }
+      ]
+    },
     "MEGMT": {
       "durum": "ok",
       "kaynakSembol": "MEGMT.IS",
@@ -20730,6 +22168,20 @@
         }
       ]
     },
+    "MMCAS": {
+      "durum": "ok",
+      "kaynakSembol": "MMCAS.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/MMCAS.IS/history/",
+      "temettuler": [],
+      "bolunmeler": [
+        {
+          "isoTarih": "2013-02-18",
+          "oran": "1.56904:1",
+          "katsayi": 1.56904,
+          "kaynak": "piyasa-verisi"
+        }
+      ]
+    },
     "MNDRS": {
       "durum": "ok",
       "kaynakSembol": "MNDRS.IS",
@@ -21061,6 +22513,82 @@
           "isoTarih": "2021-10-18",
           "oran": "1.374359:1",
           "katsayi": 1.374359,
+          "kaynak": "piyasa-verisi"
+        }
+      ]
+    },
+    "MTRYO": {
+      "durum": "ok",
+      "kaynakSembol": "MTRYO.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/MTRYO.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2025-12-08",
+          "brut": 0.051754,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2023-12-05",
+          "brut": 0.495025,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2022-12-06",
+          "brut": 0.050492,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2021-12-08",
+          "brut": 0.039356,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2020-12-10",
+          "brut": 0.063618,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2018-10-31",
+          "brut": 0.02625,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2017-05-02",
+          "brut": 0.065625,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2015-04-27",
+          "brut": 0.055781,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2013-04-29",
+          "brut": 0.036094,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2010-05-28",
+          "brut": 0.048125,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2008-04-07",
+          "brut": 0.04375,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": [
+        {
+          "isoTarih": "2011-05-27",
+          "oran": "1.5:1",
+          "katsayi": 1.5,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2005-01-03",
+          "oran": "0.001:1",
+          "katsayi": 0.001,
           "kaynak": "piyasa-verisi"
         }
       ]
@@ -21674,6 +23202,29 @@
         }
       ]
     },
+    "ORMA": {
+      "durum": "ok",
+      "kaynakSembol": "ORMA.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/ORMA.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2015-05-29",
+          "brut": 0.047,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2014-05-30",
+          "brut": 0.047,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2013-05-30",
+          "brut": 0.2466,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": []
+    },
     "ORZAX": {
       "durum": "ok",
       "kaynakSembol": "ORZAX.IS",
@@ -22233,6 +23784,56 @@
           "oran": "1.5502:1",
           "katsayi": 1.5502,
           "kaynak": "kunye-arsivi"
+        }
+      ]
+    },
+    "OYAYO": {
+      "durum": "ok",
+      "kaynakSembol": "OYAYO.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/OYAYO.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2023-05-31",
+          "brut": 0.261397,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2022-05-31",
+          "brut": 0.058654,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2021-05-31",
+          "brut": 0.053045,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2020-05-29",
+          "brut": 0.056896,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2019-05-31",
+          "brut": 0.028066,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2018-05-31",
+          "brut": 0.017498,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2013-05-31",
+          "brut": 0.0108,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": [
+        {
+          "isoTarih": "2011-06-08",
+          "oran": "1.14871:1",
+          "katsayi": 1.14871,
+          "kaynak": "piyasa-verisi"
         }
       ]
     },
@@ -23871,6 +25472,154 @@
           "oran": "3.7383177:1",
           "katsayi": 3.7383177,
           "kaynak": "kunye-arsivi"
+        }
+      ]
+    },
+    "QNBFK": {
+      "durum": "ok",
+      "kaynakSembol": "QNBFK.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/QNBFK.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2005-05-31",
+          "brut": 0.013085,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": [
+        {
+          "isoTarih": "2024-03-07",
+          "oran": "8.695652:1",
+          "katsayi": 8.695652,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2009-07-08",
+          "oran": "1.0952:1",
+          "katsayi": 1.0952,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2006-05-17",
+          "oran": "1.7442:1",
+          "katsayi": 1.7442,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2005-01-03",
+          "oran": "0.001:1",
+          "katsayi": 0.001,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2004-08-05",
+          "oran": "2.4602:1",
+          "katsayi": 2.4602,
+          "kaynak": "piyasa-verisi"
+        }
+      ]
+    },
+    "QNBTR": {
+      "durum": "ok",
+      "kaynakSembol": "QNBTR.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/QNBTR.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2018-06-19",
+          "brut": 0.018181,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": [
+        {
+          "isoTarih": "2026-01-27",
+          "oran": "1.641791:1",
+          "katsayi": 1.641791,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2017-08-28",
+          "oran": "1.063492:1",
+          "katsayi": 1.063492,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2016-12-26",
+          "oran": "1.05:1",
+          "katsayi": 1.05,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2015-10-30",
+          "oran": "1.05821:1",
+          "katsayi": 1.05821,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2014-07-31",
+          "oran": "1.05:1",
+          "katsayi": 1.05,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2013-07-25",
+          "oran": "1.05266:1",
+          "katsayi": 1.05266,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2012-07-11",
+          "oran": "1.0512:1",
+          "katsayi": 1.0512,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2011-10-31",
+          "oran": "1.16:1",
+          "katsayi": 1.16,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2011-07-07",
+          "oran": "1.05:1",
+          "katsayi": 1.05,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2010-10-22",
+          "oran": "1.00248:1",
+          "katsayi": 1.00248,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2010-06-30",
+          "oran": "1.05:1",
+          "katsayi": 1.05,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2009-07-27",
+          "oran": "1.05:1",
+          "katsayi": 1.05,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2005-10-11",
+          "oran": "1.6102:1",
+          "katsayi": 1.6102,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2005-01-03",
+          "oran": "0.001:1",
+          "katsayi": 0.001,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2001-05-31",
+          "oran": "1.615977:1",
+          "katsayi": 1.615977,
+          "kaynak": "piyasa-verisi"
         }
       ]
     },
@@ -25866,6 +27615,150 @@
         }
       ]
     },
+    "SNPAM": {
+      "durum": "ok",
+      "kaynakSembol": "SNPAM.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/SNPAM.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2017-12-27",
+          "brut": 0.007754,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2017-08-14",
+          "brut": 0.007754,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": [
+        {
+          "isoTarih": "2025-07-29",
+          "oran": "2:1",
+          "katsayi": 2,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2021-11-09",
+          "oran": "1.626398:1",
+          "katsayi": 1.626398,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2005-01-03",
+          "oran": "0.001:1",
+          "katsayi": 0.001,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2004-01-27",
+          "oran": "3.5:1",
+          "katsayi": 3.5,
+          "kaynak": "piyasa-verisi"
+        }
+      ]
+    },
+    "SODSN": {
+      "durum": "ok",
+      "kaynakSembol": "SODSN.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/SODSN.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2023-04-12",
+          "brut": 0.115953,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2022-04-11",
+          "brut": 0.136002,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2021-03-29",
+          "brut": 0.063767,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2021-01-06",
+          "brut": 0.053132,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2020-04-20",
+          "brut": 0.017711,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2019-05-31",
+          "brut": 0.047118,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2019-04-16",
+          "brut": 0.047118,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2018-05-31",
+          "brut": 0.023276,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2018-04-04",
+          "brut": 0.023276,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2017-04-03",
+          "brut": 0.0211,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2016-04-15",
+          "brut": 0.012447,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2015-05-29",
+          "brut": 0.003703,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2015-04-08",
+          "brut": 0.005067,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2014-05-30",
+          "brut": 0.008253,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2014-04-08",
+          "brut": 0.008253,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2013-04-15",
+          "brut": 0.005991,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": [
+        {
+          "isoTarih": "2026-01-29",
+          "oran": "8:1",
+          "katsayi": 8,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2020-05-11",
+          "oran": "2.5:1",
+          "katsayi": 2.5,
+          "kaynak": "piyasa-verisi"
+        }
+      ]
+    },
     "SOHOE": {
       "durum": "ok",
       "kaynakSembol": "SOHOE.IS",
@@ -26006,6 +27899,54 @@
       "kaynakSembol": "SSAAT.IS",
       "kaynakUrl": "https://finance.yahoo.com/quote/SSAAT.IS/history/",
       "temettuler": [],
+      "bolunmeler": []
+    },
+    "SUMAS": {
+      "durum": "ok",
+      "kaynakSembol": "SUMAS.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/SUMAS.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2025-05-28",
+          "brut": 2.008226,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2023-05-17",
+          "brut": 2.25,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2022-04-27",
+          "brut": 2,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2021-08-25",
+          "brut": 0.45,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2020-09-23",
+          "brut": 0.35,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2019-09-02",
+          "brut": 0.3,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2019-07-22",
+          "brut": 0.3,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2018-09-03",
+          "brut": 0.25,
+          "paraBirimi": "TRY"
+        }
+      ],
       "bolunmeler": []
     },
     "SUNTK": {
@@ -27570,6 +29511,26 @@
         }
       ]
     },
+    "TRILC": {
+      "durum": "ok",
+      "kaynakSembol": "TRILC.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/TRILC.IS/history/",
+      "temettuler": [],
+      "bolunmeler": [
+        {
+          "isoTarih": "2026-04-27",
+          "oran": "6.408949:1",
+          "katsayi": 6.408949,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2021-08-06",
+          "oran": "2.1:1",
+          "katsayi": 2.1,
+          "kaynak": "piyasa-verisi"
+        }
+      ]
+    },
     "TRMET": {
       "durum": "ok",
       "kaynakSembol": "TRMET.IS",
@@ -28878,6 +30839,19 @@
         }
       ]
     },
+    "UMPAS": {
+      "durum": "ok",
+      "kaynakSembol": "UMPAS.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/UMPAS.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2018-12-26",
+          "brut": 0.047541,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": []
+    },
     "UNLU": {
       "durum": "ok",
       "kaynakSembol": "UNLU.IS",
@@ -29495,6 +31469,59 @@
         }
       ]
     },
+    "VKFYO": {
+      "durum": "ok",
+      "kaynakSembol": "VKFYO.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/VKFYO.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2023-10-25",
+          "brut": 0.036667,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2022-11-28",
+          "brut": 0.0145,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2008-04-17",
+          "brut": 0.042489,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2006-05-31",
+          "brut": 0.040392,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": [
+        {
+          "isoTarih": "2011-12-05",
+          "oran": "2:1",
+          "katsayi": 2,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2006-08-21",
+          "oran": "1.5686:1",
+          "katsayi": 1.5686,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2005-01-03",
+          "oran": "0.001:1",
+          "katsayi": 0.001,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2001-02-06",
+          "oran": "3.4:1",
+          "katsayi": 3.4,
+          "kaynak": "piyasa-verisi"
+        }
+      ]
+    },
     "VKGYO": {
       "durum": "ok",
       "kaynakSembol": "VKGYO.IS",
@@ -29792,6 +31819,51 @@
       "kaynakUrl": "https://finance.yahoo.com/quote/YAYLA.IS/history/",
       "temettuler": [],
       "bolunmeler": []
+    },
+    "YBTAS": {
+      "durum": "ok",
+      "kaynakSembol": "YBTAS.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/YBTAS.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2018-04-26",
+          "brut": 0.007043,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2017-04-24",
+          "brut": 0.017115,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2016-05-25",
+          "brut": 0.015936,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2015-04-24",
+          "brut": 0.015298,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2014-04-18",
+          "brut": 0.0104,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2013-05-31",
+          "brut": 0.011836,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": [
+        {
+          "isoTarih": "2025-09-10",
+          "oran": "3000:1",
+          "katsayi": 3000,
+          "kaynak": "piyasa-verisi"
+        }
+      ]
     },
     "YEOTK": {
       "durum": "ok",
@@ -30119,6 +32191,71 @@
         }
       ]
     },
+    "YONGA": {
+      "durum": "ok",
+      "kaynakSembol": "YONGA.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/YONGA.IS/history/",
+      "temettuler": [
+        {
+          "isoTarih": "2023-08-25",
+          "brut": 0.255555,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2022-04-01",
+          "brut": 0.255555,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2021-04-09",
+          "brut": 0.135294,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2021-02-01",
+          "brut": 0.067853,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2020-07-28",
+          "brut": 0.022617,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2019-08-05",
+          "brut": 0.117647,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2019-03-21",
+          "brut": 0.117647,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2017-04-03",
+          "brut": 0.117645,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2016-03-21",
+          "brut": 0.117648,
+          "paraBirimi": "TRY"
+        },
+        {
+          "isoTarih": "2015-03-20",
+          "brut": 0.058823,
+          "paraBirimi": "TRY"
+        }
+      ],
+      "bolunmeler": [
+        {
+          "isoTarih": "2018-05-22",
+          "oran": "80:1",
+          "katsayi": 80,
+          "kaynak": "piyasa-verisi"
+        }
+      ]
+    },
     "YUNSA": {
       "durum": "ok",
       "kaynakSembol": "YUNSA.IS",
@@ -30228,6 +32365,32 @@
           "isoTarih": "2003-11-03",
           "oran": "1.8:1",
           "katsayi": 1.8,
+          "kaynak": "piyasa-verisi"
+        }
+      ]
+    },
+    "YYAPI": {
+      "durum": "ok",
+      "kaynakSembol": "YYAPI.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/YYAPI.IS/history/",
+      "temettuler": [],
+      "bolunmeler": [
+        {
+          "isoTarih": "2024-12-17",
+          "oran": "2.65:1",
+          "katsayi": 2.65,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2005-01-03",
+          "oran": "0.001:1",
+          "katsayi": 0.001,
+          "kaynak": "piyasa-verisi"
+        },
+        {
+          "isoTarih": "2001-08-29",
+          "oran": "1.5:1",
+          "katsayi": 1.5,
           "kaynak": "piyasa-verisi"
         }
       ]

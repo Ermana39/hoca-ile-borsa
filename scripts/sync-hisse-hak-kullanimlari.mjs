@@ -13,9 +13,19 @@ const outputFile = path.join(
   "hisse-hak-kullanimlari.generated.json"
 );
 const profilesDir = path.join(rootDir, "data", "hisseler");
+const ratioAnalysisFile = path.join(
+  rootDir,
+  "app",
+  "borsa",
+  "oran-analizi",
+  "data",
+  "oran-analizi.json"
+);
 const generatedAt = new Date().toISOString().slice(0, 10);
 const periodEnd = Math.floor(Date.now() / 1_000) + 86_400;
 const writeChanges = process.argv.includes("--write");
+const fromRatioAnalysis = process.argv.includes("--from-ratio-analysis");
+const missingOnly = process.argv.includes("--missing-only");
 const requestedCodes = new Set(
   process.argv
     .find((argument) => argument.startsWith("--codes="))
@@ -377,22 +387,44 @@ async function fetchHistory(code) {
 }
 
 async function main() {
-  const snapshot = readJson(snapshotFile, null);
-  if (!Array.isArray(snapshot?.companies) || snapshot.companies.length === 0) {
-    throw new Error("BIST TUM sirket anlik goruntusu bulunamadi.");
+  const source = fromRatioAnalysis
+    ? readJson(ratioAnalysisFile, null)
+    : readJson(snapshotFile, null);
+  const sourceRows = fromRatioAnalysis ? source?.rows : source?.companies;
+  if (!Array.isArray(sourceRows) || sourceRows.length === 0) {
+    throw new Error(
+      fromRatioAnalysis
+        ? "Oran analizi verisi bulunamadi."
+        : "BIST TUM sirket anlik goruntusu bulunamadi."
+    );
   }
 
   const allCodes = [...new Set(
-    snapshot.companies
-      .map((company) => String(company?.kod ?? "").toUpperCase())
+    sourceRows
+      .filter((item) =>
+        fromRatioAnalysis
+          ? /^\d{2,4}-\d{2}$/.test(String(item?.["Dönem"] ?? "").trim())
+          : true
+      )
+      .map((item) =>
+        String(fromRatioAnalysis ? item?.Senet : item?.kod ?? "")
+          .trim()
+          .toUpperCase()
+      )
       .filter((code) => /^[A-Z0-9]{2,6}$/.test(code))
   )].sort((a, b) => a.localeCompare(b, "tr"));
+  const existing = readJson(outputFile, { profiles: {} });
   let targets = allCodes.filter(
     (code) => requestedCodes.size === 0 || requestedCodes.has(code)
   );
+  if (missingOnly) {
+    targets = targets.filter((code) => !existing?.profiles?.[code]);
+  }
   if (limit > 0) targets = targets.slice(0, limit);
 
-  console.log(`BIST TUM pay kodu: ${allCodes.length}`);
+  console.log(
+    `${fromRatioAnalysis ? "Oran analizi" : "BIST TUM"} pay kodu: ${allCodes.length}`
+  );
   console.log(`Sorgulanacak pay kodu: ${targets.length}`);
   console.log(`Eszamanlilik: ${concurrency}`);
   console.log(`Asgari istek araligi: ${minRequestIntervalMs} ms`);
@@ -408,11 +440,7 @@ async function main() {
     return result;
   });
 
-  const existing = readJson(outputFile, { profiles: {} });
-  const profiles =
-    targets.length === allCodes.length
-      ? {}
-      : { ...(existing?.profiles ?? {}) };
+  const profiles = { ...(existing?.profiles ?? {}) };
   for (const result of results) profiles[result.code] = result.record;
 
   const available = Object.values(profiles).filter(

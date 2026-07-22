@@ -21,6 +21,7 @@ import {
 import {
   oranYorumlariUret,
   ceyrekEtiketi,
+  guncellemeTarihiEtiketi,
   type TemelOranlar,
   type OranYorumSatiri,
 } from "@/lib/oranYorumla";
@@ -76,7 +77,6 @@ type EkHisseAlanlari = {
   ozgunAnaliz?: OzgunAnaliz;
   seoSorular?: SeoSoru[];
   benzerSirketler?: BenzerSirket[];
-  temelOranlar?: TemelOranlar;
   seo?: {
     title?: string;
     description?: string;
@@ -110,6 +110,22 @@ function tarihEtiketi(value?: string): string {
     year: "numeric",
     timeZone: "Europe/Istanbul",
   });
+}
+
+function enYeniTarih(...values: Array<string | undefined>): string | undefined {
+  let enYeni: string | undefined;
+  let enYeniZaman = Number.NEGATIVE_INFINITY;
+
+  for (const value of values) {
+    if (!value) continue;
+    const zaman = Date.parse(value);
+    if (!Number.isNaN(zaman) && zaman > enYeniZaman) {
+      enYeni = value;
+      enYeniZaman = zaman;
+    }
+  }
+
+  return enYeni ?? values.find(Boolean);
 }
 
 function temettuTutarEtiketi(kayit: GecmisTemettuKaydi): string {
@@ -520,15 +536,39 @@ function TemelOranlarBolumu({
   if (satirlar.length === 0) return null;
 
   const ceyrekAd = ceyrekEtiketi(temelOranlar.donem);
+  const guncellemeTarihi = guncellemeTarihiEtiketi(
+    temelOranlar.guncellemeTarihi,
+  );
   const hesaplamaMetni = `Oranlar ${ceyrekAd} finansal verilerine ve bir önceki gün kapanış fiyatlarına göre hesaplanmıştır.`;
 
   return (
     <section className="mt-8">
       <SectionBaslik>Temel Oranlar ve Yorumları</SectionBaslik>
 
-      <div className="mb-4 flex flex-wrap items-center gap-x-4 gap-y-1 text-xs font-medium text-slate-500">
-        <span>{hesaplamaMetni}</span>
+      <div className="mb-3 flex flex-wrap items-center gap-2 text-xs font-semibold">
+        <Link
+          href="/borsa/oran-analizi"
+          className="rounded-md bg-blue-50 px-2 py-1 text-blue-700 ring-1 ring-inset ring-blue-200 transition hover:bg-blue-100"
+        >
+          Kaynak: Oran Analizi
+        </Link>
+        <span className="rounded-md bg-slate-100 px-2 py-1 text-slate-700 ring-1 ring-inset ring-slate-200">
+          Finansal dönem: {ceyrekAd}
+        </span>
+        {guncellemeTarihi && temelOranlar.guncellemeTarihi ? (
+          <time
+            dateTime={temelOranlar.guncellemeTarihi}
+            className="rounded-md bg-slate-100 px-2 py-1 text-slate-700 ring-1 ring-inset ring-slate-200"
+          >
+            Veri güncelleme: {guncellemeTarihi}
+          </time>
+        ) : null}
       </div>
+
+      <p className="mb-4 text-xs font-medium leading-5 text-slate-500">
+        {hesaplamaMetni} Aşağıdaki yorumlar aynı merkezi verilerden otomatik
+        üretilir.
+      </p>
 
       <div className="space-y-3">
         {satirlar.map((satir) => {
@@ -585,11 +625,12 @@ export default async function HisseKunyePage({
   } = hisse;
 
   const ozgunAnaliz = detayliHisse.ozgunAnaliz;
-  // Temel oranlar merkezi Excel kaynağından (oran-analizi.json) gelir; Excel'de
-  // bulunmayan kod için hissenin kendi JSON'undaki değere geri düşülür.
-  const temelOranlar = getTemelOranlar(hisse.kod) ?? detayliHisse.temelOranlar;
-  const sonDogrulamaTarihi =
-    profilMetadata?.verifiedAt || temelOranlar?.guncellemeTarihi;
+  // Excel'de bulunmayan kodlarda eski profil verisini göstermek yerine bölüm gizlenir.
+  const temelOranlar = getTemelOranlar(hisse.kod);
+  const sonDogrulamaTarihi = enYeniTarih(
+    profilMetadata?.verifiedAt,
+    temelOranlar?.guncellemeTarihi,
+  );
   const degisiklikGecmisi = profilMetadata?.history ?? [];
   const veriSeoSorular = (detayliHisse.seoSorular || []).filter(
     (item) => doluMetin(item.soru) && doluMetin(item.cevap)
@@ -827,25 +868,13 @@ export default async function HisseKunyePage({
               </div>
             </div>
 
-            <aside className="mt-6 rounded-xl border border-blue-100 bg-blue-50/70 p-4">
-              <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
-                <div>
-                  <div className="text-xs font-semibold uppercase tracking-wider text-blue-700">
-                    Son Veri Doğrulama
-                  </div>
-                  <time
-                    dateTime={sonDogrulamaTarihi}
-                    className="mt-1 block text-base font-bold text-slate-950"
-                  >
-                    {tarihEtiketi(sonDogrulamaTarihi)}
-                  </time>
-                  <p className="mt-1 text-xs leading-5 text-slate-600">
-                    Künye içeriğinin son kayıt kontrolü. Finansal oranların dönemi ayrıca
-                    ilgili bölümde gösterilir.
-                  </p>
-                </div>
-
-                <div className="flex flex-wrap gap-2" aria-label="Resmi şirket kaynakları">
+            {(resmiKaynaklar.yatirimciIliskileri ||
+              resmiKaynaklar.kapSirketProfili ||
+              resmiKaynaklar.resmiWeb) && (
+              <div
+                className="mt-6 flex flex-wrap gap-2"
+                aria-label="Resmi şirket kaynakları"
+              >
                   {resmiKaynaklar.yatirimciIliskileri && (
                     <a
                       href={resmiKaynaklar.yatirimciIliskileri}
@@ -876,9 +905,8 @@ export default async function HisseKunyePage({
                       Resmi Şirket Sitesi
                     </a>
                   )}
-                </div>
               </div>
-            </aside>
+            )}
 
             <section className="mt-8">
               <SectionBaslik>{hisse.kod} Hisseye Hızlı Bakış</SectionBaslik>

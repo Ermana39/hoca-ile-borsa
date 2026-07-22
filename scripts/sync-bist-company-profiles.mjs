@@ -3,6 +3,7 @@ import path from "node:path";
 
 const KAP_INDEX_URL =
   "https://www.kap.org.tr/tr/Endeksler?indice=BIST%20T%C3%9CM";
+const KAP_COMPANIES_URL = "https://www.kap.org.tr/tr/bist-sirketler";
 const KAP_PROFILE_BASE = "https://www.kap.org.tr/tr/sirket-bilgileri/genel";
 const PROFILES_DIR = path.join(process.cwd(), "data", "hisseler");
 const SNAPSHOT_FILE = path.join(
@@ -20,10 +21,19 @@ const PROFILE_PATHS_FILE = path.join(
   "data",
   "kap-profil-yollari.generated.json"
 );
+const RATIO_ANALYSIS_FILE = path.join(
+  process.cwd(),
+  "app",
+  "borsa",
+  "oran-analizi",
+  "data",
+  "oran-analizi.json"
+);
 const VERIFIED_AT = new Date().toISOString().slice(0, 10);
 const writeChanges = process.argv.includes("--write");
 const missingOnly = process.argv.includes("--missing-only");
 const fromSnapshot = process.argv.includes("--from-snapshot");
+const fromRatioAnalysis = process.argv.includes("--from-ratio-analysis");
 const requestedCodes = new Set(
   process.argv
     .find((argument) => argument.startsWith("--codes="))
@@ -60,6 +70,7 @@ let nextRequestAt = 0;
 
 const PRIMARY_SHARE_CODES = new Map([
   ["ISATR|ISBTR|ISCTR", "ISCTR"],
+  ["ISATR|ISBTR|ISCTR|ISKUR", "ISCTR"],
   ["KRDMA|KRDMB|KRDMD", "KRDMD"],
 ]);
 
@@ -162,6 +173,36 @@ function extractItemObjects(flightText) {
   }
 
   return Array.from(items.values());
+}
+
+function extractCompanyObjects(flightText) {
+  const marker = '"mkkMemberOid":';
+  const companies = new Map();
+  let searchFrom = 0;
+
+  while (searchFrom < flightText.length) {
+    const markerIndex = flightText.indexOf(marker, searchFrom);
+    if (markerIndex === -1) break;
+
+    const objectStart = flightText.lastIndexOf("{", markerIndex);
+    const parsed = objectStart >= 0 ? readJsonValue(flightText, objectStart) : null;
+    const company = parsed?.value;
+
+    if (
+      company?.mkkMemberOid &&
+      company?.kapMemberTitle &&
+      company?.stockCode
+    ) {
+      companies.set(
+        `${company.mkkMemberOid}|${company.stockCode}`,
+        company
+      );
+    }
+
+    searchFrom = parsed?.end ?? markerIndex + marker.length;
+  }
+
+  return Array.from(companies.values());
 }
 
 function normalizeText(value) {
@@ -582,16 +623,18 @@ function buildProfile(company, items, canonicalCode, profileUrl) {
       ),
       yatirimciIliskileriYetkilileri: investorContacts,
     }),
-    borsaBilgileri: compactObject({
-      bistKodu: code,
+    borsaBilgileri: {
+      ...compactObject({
+        bistKodu: code,
+        katilimEndeksiUygun: indices.some((index) =>
+          normalizeText(index).includes("bist katilim")
+        ),
+        halkaArzTarihi: firstTradingDate,
+        fiiliDolasimOrani: freeFloatRatio,
+        anaHisseKodu: canonicalCode !== code ? canonicalCode : undefined,
+      }),
       endeksler: indices,
-      katilimEndeksiUygun: indices.some((index) =>
-        normalizeText(index).includes("bist katilim")
-      ),
-      halkaArzTarihi: firstTradingDate,
-      fiiliDolasimOrani: freeFloatRatio,
-      anaHisseKodu: canonicalCode !== code ? canonicalCode : undefined,
-    }),
+    },
     temettuSermayeGecmisi: [],
     ozgunAnaliz: compactObject({
       isModeli: activityText,
@@ -819,6 +862,49 @@ async function getBistTumCompanies() {
   throw new Error("KAP BIST TÜM listesi ayrıştırılamadı.");
 }
 
+function getRatioAnalysisCodes() {
+  const data = readJson(RATIO_ANALYSIS_FILE, { rows: [] });
+  return new Set(
+    (Array.isArray(data.rows) ? data.rows : [])
+      .filter((row) => /^\d{2,4}-\d{2}$/.test(String(row?.["Dönem"] ?? "").trim()))
+      .map((row) => String(row?.Senet ?? "").trim().toUpperCase())
+      .filter((code) => /^[A-Z0-9]{2,6}$/.test(code))
+  );
+}
+
+async function getKapCompaniesFromRatioAnalysis() {
+  const ratioCodes = getRatioAnalysisCodes();
+  const html = await fetchText(KAP_COMPANIES_URL);
+  const companies = extractCompanyObjects(decodeFlightText(html));
+  const matchedCodes = new Set();
+  const result = [];
+
+  for (const company of companies) {
+    const codes = String(company.stockCode)
+      .split(/[\s,;/]+/)
+      .map((code) => code.trim().toUpperCase())
+      .filter((code) => ratioCodes.has(code));
+
+    for (const stockCode of codes) {
+      matchedCodes.add(stockCode);
+      result.push({
+        stockCode,
+        title: company.kapMemberTitle,
+        mkkMemberOid: company.mkkMemberOid,
+      });
+    }
+  }
+
+  const unresolved = [...ratioCodes].filter((code) => !matchedCodes.has(code));
+  if (unresolved.length > 0) {
+    console.warn(
+      `KAP tam şirket listesinde bulunamayan oran analizi kodları: ${unresolved.join(", ")}`
+    );
+  }
+
+  return result.sort((a, b) => a.stockCode.localeCompare(b.stockCode, "tr"));
+}
+
 function getBistTumCompaniesFromSnapshot() {
   const snapshot = readJson(SNAPSHOT_FILE, null);
   if (!Array.isArray(snapshot?.companies) || snapshot.companies.length === 0) {
@@ -841,9 +927,11 @@ function getBistTumCompaniesFromSnapshot() {
 }
 
 async function main() {
-  const companies = fromSnapshot
-    ? getBistTumCompaniesFromSnapshot()
-    : await getBistTumCompanies();
+  const companies = fromRatioAnalysis
+    ? await getKapCompaniesFromRatioAnalysis()
+    : fromSnapshot
+      ? getBistTumCompaniesFromSnapshot()
+      : await getBistTumCompanies();
   const existingCodes = new Set(
     fs
       .readdirSync(PROFILES_DIR)
@@ -874,8 +962,9 @@ async function main() {
     );
   }
 
-  console.log(`BIST TÜM: ${companies.length}`);
-  console.log(`BIST TÜM şirketi: ${companiesByMember.size}`);
+  const sourceLabel = fromRatioAnalysis ? "Oran analizi kapsamı" : "BIST TÜM";
+  console.log(`${sourceLabel}: ${companies.length}`);
+  console.log(`${sourceLabel} şirketi: ${companiesByMember.size}`);
   console.log(`Mevcut künye: ${existingCodes.size}`);
   console.log(`Eksik künye: ${missing.length}`);
   if (multipleShareClasses.length > 0) {
@@ -910,20 +999,22 @@ async function main() {
     return;
   }
 
-  const snapshot = {
-    version: 1,
-    generatedAt: VERIFIED_AT,
-    source: KAP_INDEX_URL,
-    indexCode: "XUTUM",
-    companies: companies.map((company) => ({
-      kod: company.stockCode,
-      sirketAdi: titleCaseCompany(company.title),
-      mkkMemberOid: company.mkkMemberOid,
-      anaHisseKodu: canonicalByMember.get(company.mkkMemberOid),
-      kapSirketProfili: getProfileUrl(company, profilePaths),
-    })),
-  };
-  writeJsonIfChanged(SNAPSHOT_FILE, snapshot);
+  if (!fromRatioAnalysis) {
+    const snapshot = {
+      version: 1,
+      generatedAt: VERIFIED_AT,
+      source: KAP_INDEX_URL,
+      indexCode: "XUTUM",
+      companies: companies.map((company) => ({
+        kod: company.stockCode,
+        sirketAdi: titleCaseCompany(company.title),
+        mkkMemberOid: company.mkkMemberOid,
+        anaHisseKodu: canonicalByMember.get(company.mkkMemberOid),
+        kapSirketProfili: getProfileUrl(company, profilePaths),
+      })),
+    };
+    writeJsonIfChanged(SNAPSHOT_FILE, snapshot);
+  }
 
   let targets = companies.filter((company) => {
     if (requestedCodes.size > 0 && !requestedCodes.has(company.stockCode)) {
