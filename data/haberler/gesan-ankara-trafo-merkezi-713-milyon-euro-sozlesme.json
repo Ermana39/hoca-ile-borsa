@@ -12,8 +12,8 @@
   "gorsel": {
     "src": "/gesan-ankara-trafo-merkezi-713-milyon-euro-sozlesme.webp",
     "alt": "GESAN Ankara trafo merkezi 7,13 milyon euro sözleşme",
-    "genislik": 1200,
-    "yukseklik": 675
+    "genislik": 1672,
+    "yukseklik": 941
   },
   "ilgiliHisseler": [
     "GESAN"
@@ -168,6 +168,36 @@
         "vurgu": "takip"
       }
     ]
+  },
+  "kapEtkiAnalizi": {
+    "olayTuru": "sozlesme",
+    "ozet": "GESAN'ın Ankara trafo merkezi işi için açıkladığı 7,13 milyon euro tutarlı sözleşme, şirketin enerji altyapısı ve anahtar teslim proje faaliyetleriyle doğrudan bağlantılıdır. Şirketin KAP bildiriminde verdiği yaklaşık 384,3 milyon TL karşılık, işin ölçeğini ödenmiş sermaye ve sipariş portföyü açısından izlemeyi gerekli kılar.",
+    "metrikler": [
+      {
+        "tur": "tutar-orani",
+        "baslik": "Sözleşme tutarı / ödenmiş sermaye",
+        "olayEtiketi": "KAP'ta açıklanan yaklaşık TL sözleşme karşılığı",
+        "olayTutari": 384307000,
+        "olayParaBirimi": "TRY",
+        "referansEtiketi": "GESAN ödenmiş sermaye",
+        "referansTutari": 460000000,
+        "referansParaBirimi": "TRY",
+        "referansDonemi": "2026-07-22 hisse künyesi ve KAP bildirimi",
+        "kaynakOran": 83.54,
+        "aciklama": "KAP bildirimindeki yaklaşık 384,3 milyon TL tutar, GESAN'ın 460 milyon TL ödenmiş sermayesine bölünerek sözleşmenin sermaye büyüklüğüne göre ölçeği hesaplanmıştır; bu hesap kâr tahmini değildir."
+      }
+    ],
+    "riskler": [
+      "Sözleşme tutarı ciroya ve kâra projenin ilerleme takvimine göre yansıyabilir; tamamı tek dönemde gelir yazılmayabilir.",
+      "Proje maliyetleri, ödeme takvimi, müşteri bilgisi ve kâr marjı açıklanmadığı için net kârlılık etkisi kesin hesaplanamaz.",
+      "Euro bazlı sözleşmede kur hareketleri TL karşılığını değiştirebilir; maliyetlerin para birimi açıklanmadığı için net kur etkisi belirsizdir."
+    ],
+    "takipEdilecekler": [
+      "Projenin başlangıç ve tamamlanma takvimi",
+      "Hakediş, avans ve tahsilat koşullarına ilişkin yeni KAP açıklamaları",
+      "Sözleşmenin finansal tablolarda hasılat ve faaliyet kârına yansıması"
+    ],
+    "metodolojiNotu": "Oran hesabında KAP bildiriminde şirketin paylaştığı yaklaşık TL karşılık kullanılmıştır; tutar ödenmiş sermayeyle karşılaştırılmış, yatırım getirisi veya hedef fiyat yorumu yapılmamıştır."
   },
   "sorular": [
     {
