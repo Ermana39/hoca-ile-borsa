@@ -27,8 +27,10 @@ import {
 } from "@/lib/oranYorumla";
 import {
   sermayeGecmisiNormalize,
+  temettuMu,
   type HamSermayeKaydi,
 } from "@/lib/hisse-temettu";
+import { hisseKunyeSeoMetinleri } from "@/lib/hisse-kunye-seo";
 import {
   getHisseProfilMetadata,
   getHisseResmiKaynaklari,
@@ -134,6 +136,24 @@ function temettuTutarEtiketi(kayit: GecmisTemettuKaydi): string {
     maximumFractionDigits: 6,
   }).format(kayit.brut);
   return kayit.paraBirimi === "TRY" ? `₺${tutar}` : `${tutar} ${kayit.paraBirimi}`;
+}
+
+function hisseninTemettuVerisiVar(
+  hisse: Hisse,
+  temettuYorumu?: string
+): boolean {
+  const takvimKayitlari = getTemettulerBySembol(hisse.kod);
+  const hakKullanimlari = getHisseHakKullanimlari(hisse.kod);
+  const profilKayitlari = sermayeGecmisiNormalize(
+    hisse.temettuSermayeGecmisi as HamSermayeKaydi[] | undefined
+  );
+
+  return (
+    takvimKayitlari.length > 0 ||
+    hakKullanimlari.temettuler.length > 0 ||
+    profilKayitlari.some(temettuMu) ||
+    doluMetin(temettuYorumu)
+  );
 }
 
 // temettuSermayeGecmisi normalize yardımcıları lib/hisse-temettu'da tutulur.
@@ -392,13 +412,18 @@ export async function generateMetadata({
 
   const detayliHisse = hisse as typeof hisse & EkHisseAlanlari;
 
-  const baslik =
-    detayliHisse.seo?.title ||
-    `${hisse.kod} Hisse Bilgileri: ${hisse.sirketAdi} Ortaklık Yapısı, Faaliyet Alanı ve Şirket Profili`;
-
-  const aciklama =
-    detayliHisse.seo?.description ||
-    `${hisse.kod} hisse koduyla işlem gören ${hisse.sirketAdi} hakkında ortaklık yapısı, faaliyet alanı, iştirakleri, endeks bilgileri, sermaye geçmişi ve şirket profili.`;
+  const temelOranlar = getTemelOranlar(hisse.kod);
+  const temettuVarMi = hisseninTemettuVerisiVar(
+    hisse,
+    detayliHisse.ozgunAnaliz?.temettuYorumu
+  );
+  const { baslik, aciklama } = hisseKunyeSeoMetinleri({
+    kod: hisse.kod,
+    sirketAdi: hisse.sirketAdi,
+    katilimEndeksiUygun: hisse.borsaBilgileri.katilimEndeksiUygun,
+    temelOranlar,
+    temettuVarMi,
+  });
 
   const canonicalCode =
     hisse.borsaBilgileri.anaHisseKodu?.toLowerCase() ||
@@ -407,7 +432,7 @@ export async function generateMetadata({
   const url = `${siteUrl}/hisse/${canonicalCode}`;
 
   return {
-    title: baslik,
+    title: { absolute: baslik },
     description: aciklama,
     alternates: { canonical: url },
     robots: isSecondaryShareClass
@@ -542,8 +567,10 @@ function TemelOranlarBolumu({
   const hesaplamaMetni = `Oranlar ${ceyrekAd} finansal verilerine ve bir önceki gün kapanış fiyatlarına göre hesaplanmıştır.`;
 
   return (
-    <section className="mt-8">
-      <SectionBaslik>Temel Oranlar ve Yorumları</SectionBaslik>
+    <section id="temel-oranlar" className="mt-8 scroll-mt-24">
+      <SectionBaslik>
+        {kod} Temel Oranlar: F/K, PD/DD ve Finansal Göstergeler
+      </SectionBaslik>
 
       <div className="mb-3 flex flex-wrap items-center gap-2 text-xs font-semibold">
         <Link
@@ -640,7 +667,6 @@ export default async function HisseKunyePage({
   );
 
   const logo = getHisseLogo(hisse.kod);
-  const sirketKisaAd = hisse.sirketAdi.split(" ").slice(0, 1).join(" ");
   const canonicalCode =
     hisse.borsaBilgileri.anaHisseKodu?.toLowerCase() ||
     hisse.kod.toLowerCase();
@@ -668,11 +694,24 @@ export default async function HisseKunyePage({
   const sermayeKayitSayisi =
     hakKullanimlari.bolunmeler.length + mevcutDigerSermayeKayitlari.length;
   const temettuYorumVar = doluMetin(ozgunAnaliz?.temettuYorumu);
+  const temettuVarMi =
+    temettuKayitSayisi > 0 ||
+    mevcutSermayeGecmisi.some(temettuMu) ||
+    temettuYorumVar;
   const temettuBolumuVar =
     hakKullanimlari.durum !== "missing" ||
     temettuKayitSayisi > 0 ||
     sermayeKayitSayisi > 0 ||
     temettuYorumVar;
+  const ortaklikBolumuVar =
+    ortaklikYapisi.ortaklar.length > 0 || Boolean(ortaklikYapisi.not);
+  const kunyeSeo = hisseKunyeSeoMetinleri({
+    kod: hisse.kod,
+    sirketAdi: hisse.sirketAdi,
+    katilimEndeksiUygun: borsaBilgileri.katilimEndeksiUygun,
+    temelOranlar,
+    temettuVarMi,
+  });
 
   const istiraklerdeSermayeVar = (istirakler ?? []).some((i) => i.sermaye);
   const istiraklerdeDetayVar = (istirakler ?? []).some(
@@ -781,8 +820,8 @@ export default async function HisseKunyePage({
       "@type": "WebPage",
       "@id": `${url}#webpage`,
       url,
-      name: `${hisse.kod} - ${sirketKisaAd} Hisse Künyesi`,
-      description: `${hisse.kod} hisse koduyla işlem gören ${hisse.sirketAdi} için şirket profili, faaliyet alanı, ortaklık yapısı, borsa bilgileri, temel oranlar, temettü ve bölünme geçmişi.`,
+      name: kunyeSeo.baslik,
+      description: kunyeSeo.aciklama,
       about: { "@id": `${url}#corporation` },
       isPartOf: { "@id": `${siteUrl}/#organization` },
       datePublished: profilMetadata?.publishedAt,
@@ -859,14 +898,58 @@ export default async function HisseKunyePage({
               <div>
                 <div className="flex flex-wrap items-center gap-2">
                   <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl">
-                    {hisse.kod} Hisse Künyesi
+                    {kunyeSeo.baslik}
                   </h1>
                 </div>
                 <p className="mt-1 text-sm font-semibold text-slate-600 md:text-base">
                   {hisse.sirketAdi}
                 </p>
+                <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-500">
+                  {kunyeSeo.aciklama}
+                </p>
               </div>
             </div>
+
+            <nav
+              className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-4"
+              aria-label={`${hisse.kod} künye bölümleri`}
+            >
+              <div className="text-xs font-bold uppercase tracking-wider text-slate-500">
+                Künye bölümleri
+              </div>
+              <div className="mt-3 flex flex-wrap gap-2">
+                {temelOranlar && (
+                  <a
+                    href="#temel-oranlar"
+                    className="rounded-full bg-white px-3 py-1.5 text-sm font-semibold text-blue-700 ring-1 ring-inset ring-blue-200 transition hover:bg-blue-50"
+                  >
+                    Temel oranlar
+                  </a>
+                )}
+                <a
+                  href="#katilim-endeksi"
+                  className="rounded-full bg-white px-3 py-1.5 text-sm font-semibold text-blue-700 ring-1 ring-inset ring-blue-200 transition hover:bg-blue-50"
+                >
+                  Katılım Endeksi
+                </a>
+                {temettuBolumuVar && (
+                  <a
+                    href="#temettu-gecmisi"
+                    className="rounded-full bg-white px-3 py-1.5 text-sm font-semibold text-blue-700 ring-1 ring-inset ring-blue-200 transition hover:bg-blue-50"
+                  >
+                    Temettü geçmişi
+                  </a>
+                )}
+                {ortaklikBolumuVar && (
+                  <a
+                    href="#ortaklik-yapisi"
+                    className="rounded-full bg-white px-3 py-1.5 text-sm font-semibold text-blue-700 ring-1 ring-inset ring-blue-200 transition hover:bg-blue-50"
+                  >
+                    Ortaklık yapısı
+                  </a>
+                )}
+              </div>
+            </nav>
 
             {(resmiKaynaklar.yatirimciIliskileri ||
               resmiKaynaklar.kapSirketProfili ||
@@ -975,9 +1058,11 @@ export default async function HisseKunyePage({
               </section>
             )}
 
-            {(ortaklikYapisi.ortaklar.length > 0 || ortaklikYapisi.not) && (
-              <section className="mt-8">
-                <SectionBaslik>Ortaklık Yapısı</SectionBaslik>
+            {ortaklikBolumuVar && (
+              <section id="ortaklik-yapisi" className="mt-8 scroll-mt-24">
+                <SectionBaslik>
+                  {hisse.kod} Ortaklık Yapısı ve Ortakları
+                </SectionBaslik>
                 {ortaklikYapisi.ortaklar.length > 0 ? (
                   <div className="space-y-4">
                     {ortaklikYapisi.ortaklar.map((ortak) => (
@@ -1314,8 +1399,19 @@ export default async function HisseKunyePage({
                 </section>
               )}
 
-            <section className="mt-8">
-              <SectionBaslik>Borsa Bilgileri</SectionBaslik>
+            <section id="katilim-endeksi" className="mt-8 scroll-mt-24">
+              <SectionBaslik>
+                {hisse.kod} Katılım Endeksi&apos;ne Uygun mu?
+              </SectionBaslik>
+              <p className="mb-4 rounded-xl border border-blue-100 bg-blue-50 px-4 py-3 text-sm leading-6 text-blue-950">
+                Mevcut künye verisine göre <strong>{hisse.kod}</strong>, Katılım
+                Endeksi&apos;ne <strong>
+                  {borsaBilgileri.katilimEndeksiUygun
+                    ? "uygundur"
+                    : "uygun değildir"}
+                </strong>
+                .
+              </p>
               <dl className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                 <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3">
                   <dt className="text-xs font-semibold uppercase tracking-wider text-slate-500">
@@ -1426,8 +1522,10 @@ export default async function HisseKunyePage({
             <TemelOranlarBolumu kod={hisse.kod} temelOranlar={temelOranlar} />
 
             {temettuBolumuVar && (
-            <section id="temettu-gecmisi" className="mt-8">
-              <SectionBaslik>Temettü ve Bölünme Geçmişi</SectionBaslik>
+            <section id="temettu-gecmisi" className="mt-8 scroll-mt-24">
+              <SectionBaslik>
+                {hisse.kod} Temettü Geçmişi ve Hisse Bölünmeleri
+              </SectionBaslik>
               <p className="mb-5 text-sm leading-7 text-slate-600">
                 {hisse.kod} için açıklanmış temettü takvimi ile geçmiş nakit
                 temettü ve hisse bölünmesi kayıtları birlikte gösterilir. Geçmiş

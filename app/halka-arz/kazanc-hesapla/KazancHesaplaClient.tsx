@@ -78,13 +78,24 @@ export default function KazancHesaplaClient() {
         </div>
 
         <h1 className="mb-3 text-3xl font-bold text-zinc-900">
-          Halka Arz Kazanç Hesaplama
+          Halka Arz Tavan Hesaplama: Lot ve Kazanç
         </h1>
 
-        <p className="mb-6 text-sm leading-7 text-zinc-600">
-          Halka arz kazanç hesaplama aracı, halka arz fiyatı, alınan lot sayısı ve tavan serisi
-          beklentisine göre tahmini kâr, toplam değer ve yüzdelik getiri hesaplamak için
-          hazırlanmıştır.
+        <p className="mb-3 text-sm leading-7 text-zinc-600">
+          Halka arz fiyatını, aldığınız lotu ve tavan sayısını girerek teorik tavan
+          fiyatını, toplam portföy değerini, tahmini kârı ve yüzde getiriyi hesaplayın.
+        </p>
+
+        <p className="mb-6 rounded-xl border border-blue-200 bg-blue-50 px-4 py-3 text-sm leading-6 text-blue-950">
+          Bu araç teorik yüzde 10 tavan senaryosu üretir. Gerçekleşen kapanışları ve
+          halka arz performanslarını görmek için{" "}
+          <Link
+            href="/halka-arz/tavan-serisi"
+            className="font-bold text-blue-800 underline underline-offset-2"
+          >
+            tavan serisi takip tablosunu
+          </Link>{" "}
+          inceleyin.
         </p>
 
         <div className="space-y-4 rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
@@ -174,7 +185,7 @@ export default function KazancHesaplaClient() {
 
         <section className="mt-8 rounded-2xl border border-zinc-200 bg-zinc-50 p-5">
           <h2 className="mb-3 text-xl font-bold text-zinc-900">
-            Halka Arz Kazanç Hesaplama Nasıl Yapılır?
+            Halka Arz Tavan Fiyatı ve Kazancı Nasıl Hesaplanır?
           </h2>
           <p className="text-sm leading-7 text-zinc-600">
             Halka arz kazanç hesaplama işlemi, yatırımcının aldığı lot sayısı ile halka arz

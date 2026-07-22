@@ -62,6 +62,16 @@ function HaberIcerikBolumu({ bolum }: { bolum: HaberBolumu }) {
         </div>
       )}
 
+      {bolum.haberLink && (
+        <Link
+          href={bolum.haberLink}
+          prefetch={false}
+          className="mt-4 inline-flex text-sm font-bold text-blue-700 underline decoration-blue-300 underline-offset-4 transition hover:text-blue-900 hover:decoration-blue-600 md:text-base"
+        >
+          {bolum.haberLinkMetni ?? "Haberin detaylarını oku"}
+        </Link>
+      )}
+
       {bolum.kartlar && bolum.kartlar.length > 0 && (
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           {bolum.kartlar.map((kart, index) => (
@@ -172,6 +182,9 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
   const yayinTarihi = formatHaberTarihi(kayit.yayinTarihi);
   const guncellemeTarihi = formatHaberTarihi(kayit.guncellemeTarihi);
   const guncellendi = kayit.guncellemeTarihi !== kayit.yayinTarihi;
+  const kapanisDegerlendirmesi = kayit.etiket
+    .toLocaleLowerCase("tr-TR")
+    .includes("kapanış değerlendirmesi");
 
   return (
     <main className="min-h-screen bg-[#f8fafc] px-4 py-6 md:px-6">
@@ -271,38 +284,43 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
                 </section>
               )}
 
-              <section className="rounded-2xl border border-emerald-200 bg-emerald-50/50 p-5 shadow-sm md:p-6">
-                <div className="mb-4">
-                  <p className="text-xs font-bold uppercase tracking-wider text-emerald-700">
-                    Doğrulanabilir bilgiler
-                  </p>
-                  <h2 className="mt-1 text-xl font-bold tracking-tight text-slate-900">
-                    Kaynakta açıklanan temel bilgiler
-                  </h2>
-                  <p className="mt-2 text-sm leading-6 text-slate-600">
-                    Bu bölümdeki veriler aşağıda bağlantısı verilen resmî kaynaklardan aktarılmıştır.
-                  </p>
-                </div>
-                <div className="overflow-x-auto rounded-xl border border-emerald-200 bg-white">
-                  <table className="min-w-full text-sm">
-                    <tbody>
-                      {kayit.kaynakOzeti.temelBilgiler.map((satir, index) => (
-                        <tr
-                          key={`${satir.etiket}-${index}`}
-                          className={index % 2 === 0 ? "bg-white" : "bg-emerald-50/40"}
-                        >
-                          <th className="w-2/5 px-4 py-3 text-left font-semibold text-slate-800">
-                            {satir.etiket}
-                          </th>
-                          <td className="px-4 py-3 font-medium text-slate-700">
-                            {satir.deger}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </section>
+              {!kapanisDegerlendirmesi &&
+                kayit.kaynakOzeti.temelBilgiler.length > 0 && (
+                  <section className="rounded-2xl border border-emerald-200 bg-emerald-50/50 p-5 shadow-sm md:p-6">
+                    <div className="mb-4">
+                      <p className="text-xs font-bold uppercase tracking-wider text-emerald-700">
+                        Doğrulanabilir bilgiler
+                      </p>
+                      <h2 className="mt-1 text-xl font-bold tracking-tight text-slate-900">
+                        Kaynakta açıklanan temel bilgiler
+                      </h2>
+                      <p className="mt-2 text-sm leading-6 text-slate-600">
+                        Bu bölümdeki veriler aşağıda bağlantısı verilen resmî kaynaklardan aktarılmıştır.
+                      </p>
+                    </div>
+                    <div className="overflow-x-auto rounded-xl border border-emerald-200 bg-white">
+                      <table className="min-w-full text-sm">
+                        <tbody>
+                          {kayit.kaynakOzeti.temelBilgiler.map((satir, index) => (
+                            <tr
+                              key={`${satir.etiket}-${index}`}
+                              className={
+                                index % 2 === 0 ? "bg-white" : "bg-emerald-50/40"
+                              }
+                            >
+                              <th className="w-2/5 px-4 py-3 text-left font-semibold text-slate-800">
+                                {satir.etiket}
+                              </th>
+                              <td className="px-4 py-3 font-medium text-slate-700">
+                                {satir.deger}
+                              </td>
+                            </tr>
+                          ))}
+                        </tbody>
+                      </table>
+                    </div>
+                  </section>
+                )}
 
               {kayit.kaynakOzeti.bolumler.map((bolum, index) => (
                 <HaberIcerikBolumu key={`kaynak-${index}-${bolum.baslik}`} bolum={bolum} />
@@ -312,17 +330,20 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
                 <KapEtkiAnalizi analiz={kayit.kapEtkiAnalizi} />
               )}
 
-              <section className="rounded-2xl border border-blue-300 bg-blue-50 p-5 md:p-6">
-                <p className="text-xs font-bold uppercase tracking-wider text-blue-700">
-                  Editoryal analiz
-                </p>
-                <h2 className="mt-1 text-xl font-bold text-slate-900">
-                  Hoca ile Borsa değerlendirmesi
-                </h2>
-                <p className="mt-3 text-sm leading-7 text-slate-700 md:text-base">
-                  {kayit.editorDegerlendirmesi.giris}
-                </p>
-              </section>
+              {!kapanisDegerlendirmesi &&
+                kayit.editorDegerlendirmesi.giris.trim() !== "" && (
+                  <section className="rounded-2xl border border-blue-300 bg-blue-50 p-5 md:p-6">
+                    <p className="text-xs font-bold uppercase tracking-wider text-blue-700">
+                      Editoryal analiz
+                    </p>
+                    <h2 className="mt-1 text-xl font-bold text-slate-900">
+                      Hoca ile Borsa değerlendirmesi
+                    </h2>
+                    <p className="mt-3 text-sm leading-7 text-slate-700 md:text-base">
+                      {kayit.editorDegerlendirmesi.giris}
+                    </p>
+                  </section>
+                )}
 
               {kayit.editorDegerlendirmesi.bolumler.map((bolum, index) => (
                 <HaberIcerikBolumu key={`yorum-${index}-${bolum.baslik}`} bolum={bolum} />

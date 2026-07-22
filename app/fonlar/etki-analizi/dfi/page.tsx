@@ -1,26 +1,12 @@
-import type { Metadata } from "next";
 import FonEtkiSeoPage from "../_components/FonEtkiSeoPage";
 import type { FonEtkiRow } from "../_components/FonEtkiTable";
 import {
+  fonEtkiMetadataOlustur,
   fonEtkiOzetiGetir,
   fonEtkiSonGuncelleme,
 } from "../_data/fonEtkiOzetleri";
 
-export const metadata: Metadata = {
-  title: "DFI Fonu Etki Analizi: Yarınki Fon Fiyatı Tahmini",
-  description:
-    "DFI fonu kapanış etki analizi, portföy hisselerinin günlük marjlarına göre ertesi gün açıklanacak TEFAS fon fiyatına tahmini etkiyi gösterir.",
-  alternates: {
-    canonical: "https://www.hocaileborsa.com/fonlar/etki-analizi/dfi",
-  },
-  openGraph: {
-    title: "DFI Fonu Etki Analizi: Yarınki Fon Fiyatı Tahmini",
-    description:
-      "DFI fonunun portföy hisseleri, kapanış marjları ve ertesi gün fon fiyatına tahmini etkisi.",
-    url: "https://www.hocaileborsa.com/fonlar/etki-analizi/dfi",
-    type: "article",
-  },
-};
+export const metadata = fonEtkiMetadataOlustur("dfi");
 
 const rows: FonEtkiRow[] = [
   { sembol: "IEYHO", fonOrani: 52.75, kapanisMarji: 0, etki: 0 },
@@ -37,6 +23,7 @@ export default function DfiEtkiAnaliziPage() {
       kod={ozet.kod}
       fonAdi={ozet.fonAdi}
       fonTuru={ozet.fonTuru}
+      profilOzeti={ozet.profilOzeti}
       slug={ozet.slug}
       rows={rows}
       toplamFonOrani={ozet.toplamFonOrani}

@@ -1,26 +1,12 @@
-import type { Metadata } from "next";
 import FonEtkiSeoPage from "../_components/FonEtkiSeoPage";
 import type { FonEtkiRow } from "../_components/FonEtkiTable";
 import {
+  fonEtkiMetadataOlustur,
   fonEtkiOzetiGetir,
   fonEtkiSonGuncelleme,
 } from "../_data/fonEtkiOzetleri";
 
-export const metadata: Metadata = {
-  title: "PBR Fonu Etki Analizi: Yarınki Fon Fiyatı Tahmini",
-  description:
-    "PBR fonu kapanış etki analizi, portföy hisselerinin günlük marjlarına göre ertesi gün açıklanacak TEFAS fon fiyatına tahmini etkiyi gösterir.",
-  alternates: {
-    canonical: "https://www.hocaileborsa.com/fonlar/etki-analizi/pbr",
-  },
-  openGraph: {
-    title: "PBR Fonu Etki Analizi: Yarınki Fon Fiyatı Tahmini",
-    description:
-      "PBR fonunun portföy hisseleri, kapanış marjları ve ertesi gün fon fiyatına tahmini etkisi.",
-    url: "https://www.hocaileborsa.com/fonlar/etki-analizi/pbr",
-    type: "article",
-  },
-};
+export const metadata = fonEtkiMetadataOlustur("pbr");
 
 const rows: FonEtkiRow[] = [
   { sembol: "ODINE", fonOrani: 9.65, kapanisMarji: 3.653, etki: 0.352511416 },
@@ -68,6 +54,7 @@ export default function PbrEtkiAnaliziPage() {
       kod={ozet.kod}
       fonAdi={ozet.fonAdi}
       fonTuru={ozet.fonTuru}
+      profilOzeti={ozet.profilOzeti}
       slug={ozet.slug}
       rows={rows}
       toplamFonOrani={ozet.toplamFonOrani}

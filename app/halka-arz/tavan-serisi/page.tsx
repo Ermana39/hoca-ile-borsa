@@ -13,12 +13,12 @@ import {
 import { getHisseIcerikHedefi } from "@/lib/hisse-icerik-hedefi";
 
 const canonical = "https://www.hocaileborsa.com/halka-arz/tavan-serisi";
-const title = "2026 Halka Arz Tavan Serisi Takibi | Güncel Halka Arz Performansları";
+const title = "2026 Halka Arz Tavan Serisi: Güncel Performans Takibi";
 const description =
-  "2026 halka arz tavan serisi takibi: arz fiyatı, gün sonu kapanışı, otomatik marj hesabı ve aynı dönemdeki BIST 100 performans karşılaştırması.";
+  "2026 halka arzlarının gerçekleşen tavan serisi ve performans tablosu: arz fiyatı, gün sonu kapanışı, getiri, marj ve BIST 100 karşılaştırması.";
 
 export const metadata: Metadata = {
-  title,
+  title: { absolute: title },
   description,
   alternates: {
     canonical,
@@ -36,6 +36,11 @@ export const metadata: Metadata = {
     description,
     url: canonical,
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
   },
 };
 
@@ -309,13 +314,12 @@ export default function HalkaArzTavanSerisiPage() {
       <div className="mx-auto max-w-7xl">
         <section className="mb-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <h1 className="text-2xl font-bold text-slate-950 md:text-3xl">
-            2026 Halka Arz Tavan Serisi Takibi
+            2026 Halka Arz Tavan Serisi ve Performans Takibi
           </h1>
           <p className="mt-3 max-w-4xl text-sm leading-7 text-slate-600">
-            2026 yılında halka arz olan şirketlerin işlem tarihi, katılımcı sayısı,
-            dağıtım şekli, arz fiyatı, gün sonu kapanış fiyatı, otomatik hesaplanan
-            marjı ve aynı dönemdeki BIST 100 karşılaştırması aşağıdaki tabloda yer
-            almaktadır.
+            2026 yılında halka arz olan şirketlerin gerçekleşen gün sonu kapanışları,
+            arz fiyatına göre getirileri, tavan serisi görünümü ve aynı dönemdeki
+            BIST 100 karşılaştırması aşağıdaki tabloda birlikte izlenebilir.
           </p>
 
           <div className="mt-5 rounded-2xl border border-blue-200 bg-blue-50 p-4 text-sm font-medium leading-7 text-blue-900">
@@ -418,7 +422,7 @@ export default function HalkaArzTavanSerisiPage() {
         <section className="rounded-3xl border border-slate-200 bg-white p-3 shadow-sm md:p-5">
           <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
             <h2 className="text-xl font-bold text-slate-900">
-              Halka Arz Performans Tablosu
+              2026 Halka Arz Tavan Serisi ve Performans Tablosu
             </h2>
             <div className="rounded-full bg-emerald-50 px-4 py-2 text-sm font-bold text-emerald-700">
               2026 Yılı Halka Arzları

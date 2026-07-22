@@ -10,3 +10,5 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - News JSON files are often prepared in a separate chat that cannot access the project folders.
 - Do not rely on the news quality script as a deployment gate. It is optional manual guidance only.
 - Before reporting a news item as published, make sure the JSON file is in `data/haberler`, has `durum: "yayinda"`, and the site build succeeds.
+- Gün sonu kapanış değerlendirmesi haberlerinde "Kaynakta açıklanan temel bilgiler" tablosunu ve "Hoca ile Borsa değerlendirmesi" giriş kutusunu sayfada gösterme.
+- Günlük KAP özetinde, gün içinde ayrı haberi oluşturulan gelişmenin altında ilgili iç haber bağlantısını göster; ayrıntı sayfası bulunmayan gelişmeye bağlantı ekleme.

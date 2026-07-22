@@ -1,4 +1,9 @@
 import Link from "next/link";
+import { getHisseIcerikHedefi } from "@/lib/hisse-icerik-hedefi";
+import {
+  fonEtkiOzetleri,
+  fonEtkiYuzdeMetni,
+} from "../_data/fonEtkiOzetleri";
 import FonEtkiTable, { type FonEtkiRow } from "./FonEtkiTable";
 
 const siteUrl = "https://www.hocaileborsa.com";
@@ -7,6 +12,7 @@ export type FonEtkiSeoPageProps = {
   kod: string;
   fonAdi: string;
   fonTuru: string;
+  profilOzeti: string;
   slug: string;
   rows: FonEtkiRow[];
   toplamFonOrani: number;
@@ -82,6 +88,16 @@ function getMostNegative(rows: FonEtkiRow[]) {
   return rows.reduce((worst, row) => (row.etki < worst.etki ? row : worst), rows[0]);
 }
 
+function yogunlasmaYorumu(ilkUcAgirligi: number): string {
+  if (ilkUcAgirligi >= 70) {
+    return "İlk üç varlığın payı yüksek olduğu için günlük sonuç az sayıdaki pozisyonun hareketine daha duyarlıdır.";
+  }
+  if (ilkUcAgirligi >= 45) {
+    return "İlk üç varlık portföy etkisinde belirgin ağırlığa sahiptir; ana pozisyonların günlük hareketi yakından izlenmelidir.";
+  }
+  return "İlk üç varlığın toplam payı görece dengelidir; günlük etki portföyün daha geniş bölümüne yayılmaktadır.";
+}
+
 function jsonLdScript(data: unknown) {
   return JSON.stringify(data).replace(/</g, "\\u003c");
 }
@@ -115,6 +131,7 @@ function toIsoDate(tarih: string): string {
 function buildJsonLd({
   kod,
   fonAdi,
+  profilOzeti,
   slug,
   rows,
   toplamEtki,
@@ -182,36 +199,47 @@ function buildJsonLd({
         "@type": "ItemList",
         "@id": `${pageUrl}#etki-listesi`,
         name: `${kod} portföy hisse etki listesi`,
-        itemListElement: rows.map((row, index) => ({
-          "@type": "ListItem",
-          position: index + 1,
-          name: row.sembol,
-          url: `${siteUrl}/hisse/${row.sembol.toLowerCase()}`,
-          additionalProperty: [
-            {
-              "@type": "PropertyValue",
-              name: "Fon oranı",
-              value: row.fonOrani,
-              unitText: "%",
-            },
-            {
-              "@type": "PropertyValue",
-              name: "Kapanış marjı",
-              value: row.kapanisMarji,
-              unitText: "%",
-            },
-            {
-              "@type": "PropertyValue",
-              name: "Etki",
-              value: row.etki,
-            },
-          ],
-        })),
+        itemListElement: rows.map((row, index) => {
+          const hedef = getHisseIcerikHedefi(row.sembol);
+          return {
+            "@type": "ListItem",
+            position: index + 1,
+            name: row.sembol,
+            ...(hedef ? { url: `${siteUrl}${hedef.href}` } : {}),
+            additionalProperty: [
+              {
+                "@type": "PropertyValue",
+                name: "Fon oranı",
+                value: row.fonOrani,
+                unitText: "%",
+              },
+              {
+                "@type": "PropertyValue",
+                name: "Kapanış marjı",
+                value: row.kapanisMarji,
+                unitText: "%",
+              },
+              {
+                "@type": "PropertyValue",
+                name: "Etki",
+                value: row.etki,
+              },
+            ],
+          };
+        }),
       },
       {
         "@type": "FAQPage",
         "@id": `${pageUrl}#faq`,
         mainEntity: [
+          {
+            "@type": "Question",
+            name: `${kod} fonu nedir?`,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: profilOzeti,
+            },
+          },
           {
             "@type": "Question",
             name: `${kod} fonu için tahmini kapanış etkisi nedir?`,
@@ -247,6 +275,7 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
     kod,
     fonAdi,
     fonTuru,
+    profilOzeti,
     slug,
     rows,
     toplamFonOrani,
@@ -256,7 +285,15 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
   } = props;
   const mostPositive = getMostPositive(rows);
   const mostNegative = getMostNegative(rows);
-  const pageUrl = `/fonlar/etki-analizi/${slug}`;
+  const agirlikSirali = [...rows].sort((a, b) => b.fonOrani - a.fonOrani);
+  const enYuksekAgirlikli = agirlikSirali[0];
+  const ilkUcAgirligi = agirlikSirali
+    .slice(0, 3)
+    .reduce((toplam, row) => toplam + row.fonOrani, 0);
+  const pozitifVarlikSayisi = rows.filter((row) => row.etki > 0).length;
+  const negatifVarlikSayisi = rows.filter((row) => row.etki < 0).length;
+  const notrVarlikSayisi = rows.length - pozitifVarlikSayisi - negatifVarlikSayisi;
+  const digerFonlar = fonEtkiOzetleri.filter((fon) => fon.slug !== slug);
   const yatirimciDegisimOrani = changeRate(degisimVerisi.yatirimciSayisi);
   const fonDegerDegisimOrani = changeRate(degisimVerisi.fonToplamDeger);
   const fonDegerPozitif = degisimVerisi.fonToplamDeger.degisim >= 0;
@@ -299,6 +336,39 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
           fonun ertesi gün TEFAS&apos;ta ilan edilecek fiyatına olan tahmini
           katkısı hesaplanmıştır.
         </p>
+
+        <section className="mb-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm md:p-6">
+          <h2 className="text-xl font-bold text-slate-900">
+            {kod} Fonu Nedir?
+          </h2>
+          <p className="mt-3 text-sm leading-7 text-slate-600 md:text-base">
+            {profilOzeti}
+          </p>
+          <dl className="mt-5 grid gap-3 md:grid-cols-3">
+            <div className="rounded-xl bg-slate-50 p-4">
+              <dt className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                Fon kodu
+              </dt>
+              <dd className="mt-2 text-lg font-bold text-slate-950">{kod}</dd>
+            </div>
+            <div className="rounded-xl bg-slate-50 p-4 md:col-span-1">
+              <dt className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                Fon türü
+              </dt>
+              <dd className="mt-2 text-sm font-bold leading-6 text-slate-950">
+                {fonTuru}
+              </dd>
+            </div>
+            <div className="rounded-xl bg-slate-50 p-4">
+              <dt className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                Fonun tam adı
+              </dt>
+              <dd className="mt-2 text-sm font-bold leading-6 text-slate-950">
+                {fonAdi}
+              </dd>
+            </div>
+          </dl>
+        </section>
 
         <section className="mb-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <div className="mb-4 flex flex-col gap-1 border-b border-slate-100 pb-4">
@@ -347,6 +417,45 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
         </section>
 
         <FonEtkiTable rows={rows} toplamFonOrani={toplamFonOrani} toplamEtki={toplamEtki} />
+
+        <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-5 md:p-7">
+          <h2 className="text-xl font-bold text-zinc-900 md:text-2xl">
+            {kod} Portföy Dağılımı ve Yoğunlaşma Özeti
+          </h2>
+          <dl className="mt-5 grid gap-3 md:grid-cols-3">
+            <div className="rounded-xl bg-slate-50 p-4">
+              <dt className="text-xs font-semibold uppercase text-slate-500">
+                İzlenen varlık
+              </dt>
+              <dd className="mt-2 text-2xl font-bold text-slate-950">
+                {rows.length}
+              </dd>
+            </div>
+            <div className="rounded-xl bg-slate-50 p-4">
+              <dt className="text-xs font-semibold uppercase text-slate-500">
+                İlk 3 varlığın ağırlığı
+              </dt>
+              <dd className="mt-2 text-2xl font-bold text-slate-950">
+                %{fmt(ilkUcAgirligi)}
+              </dd>
+            </div>
+            <div className="rounded-xl bg-slate-50 p-4">
+              <dt className="text-xs font-semibold uppercase text-slate-500">
+                Etki dağılımı
+              </dt>
+              <dd className="mt-2 text-sm font-bold leading-6 text-slate-950">
+                {pozitifVarlikSayisi} pozitif, {negatifVarlikSayisi} negatif,
+                {" "}{notrVarlikSayisi} nötr
+              </dd>
+            </div>
+          </dl>
+          <p className="mt-5 text-sm leading-7 text-slate-600 md:text-base">
+            Portföyde en yüksek ağırlık %{fmt(enYuksekAgirlikli.fonOrani)} ile{" "}
+            <strong className="text-slate-900">{enYuksekAgirlikli.sembol}</strong>
+            {" "}varlığındadır. İlk üç varlığın toplam ağırlığı %{fmt(ilkUcAgirligi)}
+            seviyesindedir. {yogunlasmaYorumu(ilkUcAgirligi)}
+          </p>
+        </section>
 
         <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-5 md:p-7">
           <div className="flex flex-col gap-2 md:flex-row md:items-end md:justify-between">
@@ -569,9 +678,33 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
 
         <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-5 md:p-7">
           <h2 className="text-xl font-bold text-zinc-900 md:text-2xl">
-            İlgili Fon Sayfaları
+            Diğer Fon Etki Analizleri
           </h2>
-          <div className="mt-4 flex flex-wrap gap-3 text-sm font-semibold">
+          <div className="mt-4 grid gap-3 md:grid-cols-3">
+            {digerFonlar.map((fon) => (
+              <Link
+                key={fon.slug}
+                href={`/fonlar/etki-analizi/${fon.slug}`}
+                prefetch={false}
+                className="rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-200 hover:bg-blue-50"
+              >
+                <span className="block text-base font-bold text-slate-950">
+                  {fon.kod} fon tahmini
+                </span>
+                <span className="mt-1 block text-xs leading-5 text-slate-500">
+                  {fon.fonTuru}
+                </span>
+                <span className="mt-2 block text-sm font-bold text-blue-700">
+                  Güncel etki {fonEtkiYuzdeMetni(fon.toplamEtki)}
+                </span>
+              </Link>
+            ))}
+          </div>
+
+          <h3 className="mt-6 text-sm font-bold uppercase tracking-wide text-slate-500">
+            Fon veri araçları
+          </h3>
+          <div className="mt-3 flex flex-wrap gap-3 text-sm font-semibold">
             <Link href="/fonlar/getiri" prefetch={false} className="rounded-xl bg-slate-100 px-4 py-2 text-slate-700 hover:bg-blue-50 hover:text-blue-700">
               Fon getiri analizi
             </Link>
@@ -580,9 +713,6 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
             </Link>
             <Link href="/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler" prefetch={false} className="rounded-xl bg-slate-100 px-4 py-2 text-slate-700 hover:bg-blue-50 hover:text-blue-700">
               Fonların tercih ettiği hisseler
-            </Link>
-            <Link href={pageUrl} prefetch={false} className="rounded-xl bg-blue-50 px-4 py-2 text-blue-700">
-              {kod} fon fiyat tahmini
             </Link>
           </div>
         </section>

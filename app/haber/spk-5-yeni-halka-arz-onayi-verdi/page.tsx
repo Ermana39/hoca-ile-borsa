@@ -3,18 +3,20 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import HaberAltKisim from "@/components/HaberAltKisim";
 
+const pageTitle = "SPK 24 Haziran Bülteni: 5 Şirkete Halka Arz Onayı";
+const pageDescription =
+  "SPK'nın 24 Haziran 2026 tarihli bülteninde Orzaks İlaç, Ekim Turizm, Soho Giyim, İsvea Seramik ve Golda Gıda için halka arz onayı verildi.";
+
 export const metadata: Metadata = {
-  title: "SPK’dan 5 Yeni Halka Arz Onayı Geldi",
-  description:
-    "SPK, Orzaks İlaç, Ekim Turizm, Soho Giyim, İsvea Seramik ve Golda Gıda halka arzlarına onay verdi. Halka arz fiyatları ve detaylar haberimizde.",
+  title: pageTitle,
+  description: pageDescription,
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/spk-5-yeni-halka-arz-onayi-verdi",
   },
   openGraph: {
-    title: "SPK’dan 5 Yeni Halka Arz Onayı Geldi",
-    description:
-      "SPK, 5 şirketin halka arzına onay verdi. Orzaks İlaç, Ekim Turizm, Soho Giyim, İsvea Seramik ve Golda Gıda halka arz detayları.",
+    title: pageTitle,
+    description: pageDescription,
     url: "https://www.hocaileborsa.com/haber/spk-5-yeni-halka-arz-onayi-verdi",
     siteName: "Hoca ile Borsa",
     type: "article",
@@ -29,9 +31,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SPK’dan 5 Yeni Halka Arz Onayı Geldi",
-    description:
-      "SPK, Orzaks İlaç, Ekim Turizm, Soho Giyim, İsvea Seramik ve Golda Gıda halka arzlarına onay verdi.",
+    title: pageTitle,
+    description: pageDescription,
     images: [
       "https://www.hocaileborsa.com/spk-5-yeni-halka-arz-onayi-discover.webp",
     ],
@@ -90,9 +91,8 @@ const halkaArzlar = [
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  headline: "SPK’dan 5 Yeni Halka Arz Onayı Geldi",
-  description:
-    "SPK, Orzaks İlaç, Ekim Turizm, Soho Giyim, İsvea Seramik ve Golda Gıda halka arzlarına onay verdi. Halka arz fiyatları ve detaylar haberimizde.",
+  headline: pageTitle,
+  description: pageDescription,
   datePublished: "2026-06-24T09:00:00+03:00",
   dateModified: "2026-06-24T09:00:00+03:00",
   url: "https://www.hocaileborsa.com/haber/spk-5-yeni-halka-arz-onayi-verdi",
@@ -142,7 +142,7 @@ export default function Page() {
           </span>
 
           <h1 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
-            SPK’dan 5 Yeni Halka Arz Onayı Geldi
+            {pageTitle}
           </h1>
 
           <p className="mt-4 text-lg leading-8 text-slate-700">
@@ -421,7 +421,10 @@ export default function Page() {
             ))}
           </div>
         </section>
-                <HaberAltKisim href="/haber/spk-5-yeni-halka-arz-onayi-verdi" />
+                <HaberAltKisim
+                  href="/haber/spk-5-yeni-halka-arz-onayi-verdi"
+                  halkaArzMerkeziGoster={false}
+                />
 </article>
     </main>
   );

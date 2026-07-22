@@ -7,16 +7,22 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 
 const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
+const pageTitle = "SPK 1 Temmuz Bülteni: 2 Şirkete Halka Arz Onayı";
+const pageDescription =
+  "SPK'nın 1 Temmuz 2026 tarihli bülteninde Şa-Ra Enerji ile Saat ve Saat için halka arz onayı verildi.";
 
 export const metadata: Metadata = {
-  title: "SPK’dan 2 Yeni Halka Arz Onayı Geldi",
-  description:
-    "SPK, Şa-Ra Enerji ile Saat ve Saat halka arzlarına onay verdi. Şirketlerin halka arz fiyatı, sermaye artırımı ve pay satışı detayları açıklandı.",
+  title: pageTitle,
+  description: pageDescription,
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/spk-2-yeni-halka-arz-onayi",
   },
   openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    url: "https://www.hocaileborsa.com/haber/spk-2-yeni-halka-arz-onayi",
+    siteName: "Hoca ile Borsa",
     type: "article",
     images: [
       {
@@ -26,6 +32,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    title: pageTitle,
+    description: pageDescription,
     images: ["https://www.hocaileborsa.com/spk-2-yeni-halka-arz-onayi.webp"],
   },
 };
@@ -34,9 +42,8 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "NewsArticle",
-  headline: "SPK’dan 2 Yeni Halka Arz Onayı Geldi",
-  description:
-    "SPK, Şa-Ra Enerji ile Saat ve Saat halka arzlarına onay verdi. Şirketlerin halka arz fiyatı, sermaye artırımı ve pay satışı detayları açıklandı.",
+  headline: pageTitle,
+  description: pageDescription,
   datePublished: haberSaati,
   dateModified: haberSaati,
   url: "https://www.hocaileborsa.com/haber/spk-2-yeni-halka-arz-onayi",
@@ -98,7 +105,7 @@ className="object-cover"
           <div className="p-5 md:p-8">
             <header>
               <h1 className="text-2xl font-bold leading-tight text-zinc-900 md:text-4xl">
-                SPK’dan 2 Yeni Halka Arz Onayı Geldi
+                {pageTitle}
               </h1>
               <p className="mt-2 text-sm text-zinc-500">
                 <time dateTime={haberSaati}>{haberTarihi}</time> ·{" "}

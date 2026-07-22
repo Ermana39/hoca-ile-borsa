@@ -1,26 +1,12 @@
-import type { Metadata } from "next";
 import FonEtkiSeoPage from "../_components/FonEtkiSeoPage";
 import type { FonEtkiRow } from "../_components/FonEtkiTable";
 import {
+  fonEtkiMetadataOlustur,
   fonEtkiOzetiGetir,
   fonEtkiSonGuncelleme,
 } from "../_data/fonEtkiOzetleri";
 
-export const metadata: Metadata = {
-  title: "TLY Fonu Etki Analizi: Yarınki Fon Fiyatı Tahmini",
-  description:
-    "TLY fonu kapanış etki analizi, portföy hisselerinin günlük marjlarına göre ertesi gün açıklanacak TEFAS fon fiyatına tahmini etkiyi gösterir.",
-  alternates: {
-    canonical: "https://www.hocaileborsa.com/fonlar/etki-analizi/tly",
-  },
-  openGraph: {
-    title: "TLY Fonu Etki Analizi: Yarınki Fon Fiyatı Tahmini",
-    description:
-      "TLY fonunun portföy hisseleri, kapanış marjları ve ertesi gün fon fiyatına tahmini etkisi.",
-    url: "https://www.hocaileborsa.com/fonlar/etki-analizi/tly",
-    type: "article",
-  },
-};
+export const metadata = fonEtkiMetadataOlustur("tly");
 
 const rows: FonEtkiRow[] = [
   { sembol: "DSTKF", fonOrani: 22.85, kapanisMarji: 2.74, etki: 0.626 },
@@ -48,6 +34,7 @@ export default function TlyEtkiAnaliziPage() {
       kod={ozet.kod}
       fonAdi={ozet.fonAdi}
       fonTuru={ozet.fonTuru}
+      profilOzeti={ozet.profilOzeti}
       slug={ozet.slug}
       rows={rows}
       toplamFonOrani={ozet.toplamFonOrani}

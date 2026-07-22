@@ -11,6 +11,9 @@ const haberTarihi = formatHaberTarihi(haberSaati);
 const slug = "spk-4-yeni-halka-arz-onayi-albayrak-masfen-metgun-kardemir";
 const canonical = `https://www.hocaileborsa.com/haber/${slug}`;
 const imageUrl = `https://www.hocaileborsa.com/${slug}.webp`;
+const pageTitle = "SPK 17 Temmuz Bülteni: 4 Şirkete Halka Arz Onayı";
+const pageDescription =
+  "SPK'nın 17 Temmuz 2026 tarihli bülteninde Albayrak Hazır Beton, Masfen Enerji, Metgün Enerji ve Kardemir Çelik için halka arz onayı verildi.";
 
 const halkaArzlar = [
   {
@@ -83,18 +86,14 @@ const halkaArzlar = [
 ];
 
 export const metadata: Metadata = {
-  title:
-    "SPK’dan 4 Yeni Halka Arz Onayı: Albayrak, Masfen, Metgün ve Kardemir Çelik",
-  description:
-    "SPK 4 yeni halka arz için onay verdi. Albayrak Hazır Beton, Masfen Enerji, Metgün Enerji ve Kardemir Çelik halka arz fiyatı, toplam lot sayısı ve fon kullanım alanları.",
+  title: pageTitle,
+  description: pageDescription,
   alternates: {
     canonical,
   },
   openGraph: {
-    title:
-      "SPK’dan 4 Yeni Halka Arz Onayı: Albayrak, Masfen, Metgün ve Kardemir Çelik",
-    description:
-      "Albayrak Hazır Beton, Masfen Enerji, Metgün Enerji ve Kardemir Çelik halka arz fiyatı, toplam lot sayısı ve fon kullanım detayları.",
+    title: pageTitle,
+    description: pageDescription,
     url: canonical,
     siteName: "Hoca ile Borsa",
     type: "article",
@@ -109,9 +108,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "SPK’dan 4 Yeni Halka Arz Onayı",
-    description:
-      "4 halka arz için fiyat, toplam lot ve fon kullanım alanları tek tabloda.",
+    title: pageTitle,
+    description: pageDescription,
     images: [imageUrl],
   },
 };
@@ -120,10 +118,8 @@ const jsonLd = [
   {
     "@context": "https://schema.org",
     "@type": "NewsArticle",
-    headline:
-      "SPK’dan 4 Yeni Halka Arz Onayı: Albayrak, Masfen, Metgün ve Kardemir Çelik",
-    description:
-      "SPK 4 yeni halka arz için onay verdi. Albayrak Hazır Beton, Masfen Enerji, Metgün Enerji ve Kardemir Çelik halka arz fiyatı, toplam lot sayısı ve fon kullanım alanları.",
+    headline: pageTitle,
+    description: pageDescription,
     datePublished: haberSaati,
     dateModified: haberSaati,
     url: canonical,
@@ -151,14 +147,13 @@ const jsonLd = [
   },
   {
     "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: halkaArzlar.map((item) => ({
-      "@type": "Question",
-      name: `${item.kisaAd} halka arz fiyatı ve toplam lot sayısı nedir?`,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: `${item.kisaAd} halka arz fiyatı ${item.fiyat}; toplam halka arz payı ${item.toplamLot}.`,
-      },
+    "@type": "ItemList",
+    name: "SPK bülteninde halka arz onayı alan şirketler",
+    itemListElement: halkaArzlar.map((item, index) => ({
+      "@type": "ListItem",
+      position: index + 1,
+      name: item.sirket,
+      url: `https://www.hocaileborsa.com${item.href}`,
     })),
   },
 ];
@@ -205,15 +200,14 @@ export default function SpkDortYeniHalkaArzOnayiPage() {
                 Halka Arz
               </p>
               <h1 className="text-2xl font-bold leading-tight text-zinc-900 md:text-4xl">
-                SPK’dan 4 Yeni Halka Arz Onayı: Albayrak, Masfen, Metgün ve
-                Kardemir Çelik
+                {pageTitle}
               </h1>
               <p className="mt-3 text-lg leading-8 text-zinc-700">
                 Sermaye Piyasası Kurulu, Albayrak Hazır Beton, Masfen Enerji,
                 Metgün Enerji Yatırımları ve Kardemir Çelik Sanayi halka arzları
-                için onay verdi. Dört şirketin halka arz fiyatı, toplam lot
-                sayısı, sermaye artırımı, ortak satışı ve fon kullanım
-                alanlarını derledik.
+                için aynı bültende onay verdi. Bu haber dört kararı topluca kayda
+                geçirir; değişebilecek fiyat, tarih, lot ve dağıtım bilgileri
+                şirketlerin onaylı izahname merkezlerinde güncel tutulur.
               </p>
               <p className="mt-3 text-sm text-zinc-500">
                 <time dateTime={haberSaati}>{haberTarihi}</time> ·{" "}
@@ -228,7 +222,7 @@ export default function SpkDortYeniHalkaArzOnayiPage() {
 
             <div className="mt-6 rounded-2xl border border-blue-200 bg-blue-50 p-5">
               <h2 className="text-xl font-bold text-blue-950">
-                SPK onayı alan 4 yeni halka arz
+                SPK kararı: onay alan 4 şirket
               </h2>
               <p className="mt-3 leading-8 text-blue-950">
                 Onaylı izahname tablosuna göre halka arz fiyatları Albayrak
@@ -240,7 +234,7 @@ export default function SpkDortYeniHalkaArzOnayiPage() {
 
             <section className="mt-8">
               <h2 className="text-2xl font-bold text-zinc-900">
-                Halka arz fiyatı ve toplam lot tablosu
+                Onay alan şirketlerin karşılaştırmalı özeti
               </h2>
 
               <div className="mt-5 overflow-x-auto">
@@ -303,7 +297,7 @@ export default function SpkDortYeniHalkaArzOnayiPage() {
                     <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
                       <div>
                         <h3 className="text-xl font-bold text-slate-900">
-                          {item.kisaAd} halka arz bilgileri
+                          {item.kisaAd}: onay sonrası temel bilgiler
                         </h3>
                         <p className="mt-2 text-sm leading-7 text-slate-600">
                           Mevcut sermaye {item.mevcutSermaye}, yeni sermaye{" "}
@@ -424,7 +418,10 @@ export default function SpkDortYeniHalkaArzOnayiPage() {
           </div>
         </article>
 
-        <HaberAltKisim href={`/haber/${slug}`} />
+        <HaberAltKisim
+          href={`/haber/${slug}`}
+          halkaArzMerkeziGoster={false}
+        />
       </div>
     </main>
   );

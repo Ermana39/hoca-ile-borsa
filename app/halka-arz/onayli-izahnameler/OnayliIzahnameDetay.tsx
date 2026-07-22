@@ -20,16 +20,31 @@ export async function generateMetadata({
   const { slug } = await params;
   const veri = halkaArzGetir(slug);
   if (!veri || veri.seo?.contentStatus !== "onayli") return {};
+  const canonical =
+    veri.seo?.canonical ||
+    `https://www.hocaileborsa.com/halka-arz/onayli-izahnameler/${slug}`;
+  const title = veri.baslikMeta.title;
+  const description = veri.baslikMeta.description;
 
   return {
-    title: veri.baslikMeta.title,
-    description: veri.baslikMeta.description,
+    title,
+    description,
     alternates: {
-      canonical:
-        veri.seo?.canonical ||
-        `https://www.hocaileborsa.com/halka-arz/onayli-izahnameler/${slug}`,
+      canonical,
     },
     robots: veri.seo?.robots,
+    openGraph: {
+      title,
+      description,
+      url: canonical,
+      siteName: "Hoca ile Borsa",
+      type: "website",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+    },
   };
 }
 
@@ -140,11 +155,12 @@ export default async function OnayliIzahnameDetayPage({
                   Onaylı İzahname
                 </p>
                 <h1 className="text-2xl font-bold sm:text-3xl">
-                  {veri.sirketAdi} Halka Arz Detayları
+                  {kod ? `${kod} ` : ""}
+                  {veri.sirketAdi} Halka Arzı
                 </h1>
                 <p className="mt-2 text-sm text-blue-100 sm:text-base">
-                  {kod ? `#${kod} ` : ""}
-                  halka arz fiyatı, sermaye ve satış bilgileri, fon kullanımı ve finansal görünüm
+                  Güncel halka arz fiyatı, talep tarihleri, toplam lot, dağıtım,
+                  fon kullanımı ve finansal görünüm
                 </p>
               </div>
 
@@ -171,6 +187,15 @@ export default async function OnayliIzahnameDetayPage({
                 </div>
               )}
             </div>
+          </div>
+
+          <div className="border-b border-blue-100 bg-blue-50 px-6 py-4">
+            <p className="max-w-4xl text-sm leading-6 text-blue-950">
+              Bu sayfa, {veri.sirketAdi} halka arzının onaylı izahname
+              verilerinin güncel merkezidir. Süreç haberlerinden farklı olarak
+              fiyat, tarih, lot, dağıtım ve satış bilgileri burada birlikte ve
+              güncel biçimde tutulur.
+            </p>
           </div>
 
           <div className="grid gap-4 p-6 sm:grid-cols-2 xl:grid-cols-4">

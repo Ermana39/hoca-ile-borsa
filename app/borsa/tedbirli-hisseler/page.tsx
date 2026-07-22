@@ -1,13 +1,36 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import Script from "next/script";
 import tedbirData from "./data/tedbir.json";
 
-export const metadata = {
-  title: "Tedbirli Hisseler | Hoca İle Borsa",
-  description:
-    "Borsa İstanbul’da tedbir uygulanan hisseleri, başlangıç ve bitiş tarihlerini, brüt takas ve işlem kısıtlarını takip edin.",
+const canonical = "https://www.hocaileborsa.com/borsa/tedbirli-hisseler";
+const title = "Tedbirli Hisseler 2026: VBTS, Brüt Takas ve Yasaklar";
+const description =
+  "Güncel tedbirli hisseler listesi: VBTS kapsamındaki brüt takas, açığa satış ve kredili işlem yasaklarını başlangıç ve bitiş tarihleriyle inceleyin.";
+
+export const metadata: Metadata = {
+  title: { absolute: title },
+  description,
   alternates: {
-    canonical: "https://www.hocaileborsa.com/borsa/tedbirli-hisseler",
+    canonical,
+  },
+  keywords: [
+    "tedbirli hisseler",
+    "VBTS",
+    "brüt takas uygulanan hisseler",
+    "açığa satış yasağı olan hisseler",
+    "kredili işlem yasağı",
+  ],
+  openGraph: {
+    title,
+    description,
+    url: canonical,
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title,
+    description,
   },
 };
 
@@ -241,9 +264,13 @@ export default function TedbirliHisselerPage() {
           </Link>
         </div>
 
-        <h1 className="mb-2 text-3xl font-bold text-zinc-900">Tedbirli Hisseler</h1>
-        <p className="mb-6 text-base text-zinc-600">
-          Tedbirli Hisseleri Bu Sayfadan Takip Edebelirsiniz.
+        <h1 className="mb-2 text-3xl font-bold text-zinc-900">
+          Tedbirli Hisseler 2026: Güncel VBTS Listesi
+        </h1>
+        <p className="mb-6 max-w-4xl text-base leading-7 text-zinc-600">
+          Borsa İstanbul&apos;da VBTS kapsamında tedbir uygulanan hisselerin brüt
+          takas, açığa satış, kredili işlem ve emir kısıtlarını başlangıç ve bitiş
+          tarihleriyle inceleyin.
         </p>
 
         <div className="mb-8 text-sm font-semibold text-zinc-700">
@@ -346,7 +373,7 @@ export default function TedbirliHisselerPage() {
 
         <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">
-            Tedbirli Hisseler Hakkında
+            Tedbirli Hisseler, Brüt Takas ve VBTS Nedir?
           </h2>
 
           <p className="mb-4 leading-7 text-zinc-700">

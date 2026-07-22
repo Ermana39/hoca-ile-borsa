@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getHisseIcerikHedefi } from "@/lib/hisse-icerik-hedefi";
 
 export type FonEtkiRow = {
   sembol: string;
@@ -41,39 +42,48 @@ export default function FonEtkiTable({
           </tr>
         </thead>
         <tbody>
-          {rows.map((row, index) => (
-            <tr
-              key={row.sembol}
-              className={index % 2 === 0 ? "bg-white" : "bg-sky-50"}
-            >
-              <td className="border-t border-zinc-100 px-4 py-3 font-bold text-zinc-900">
-                <Link
-                  href={`/hisse/${row.sembol.toLowerCase()}`}
-                  prefetch={false}
-                  className="transition hover:text-blue-700"
+          {rows.map((row, index) => {
+            const hedef = getHisseIcerikHedefi(row.sembol);
+            return (
+              <tr
+                key={row.sembol}
+                className={index % 2 === 0 ? "bg-white" : "bg-sky-50"}
+              >
+                <td className="border-t border-zinc-100 px-4 py-3 font-bold text-zinc-900">
+                  {hedef ? (
+                    <Link
+                      href={hedef.href}
+                      prefetch={false}
+                      aria-label={hedef.etiket}
+                      title={hedef.baslik}
+                      className="transition hover:text-blue-700 hover:underline"
+                    >
+                      {row.sembol}
+                    </Link>
+                  ) : (
+                    row.sembol
+                  )}
+                </td>
+                <td className="border-t border-zinc-100 px-4 py-3 text-right text-zinc-700">
+                  {fmt(row.fonOrani)}
+                </td>
+                <td
+                  className={`border-t border-zinc-100 px-4 py-3 text-right font-semibold ${etkiClass(
+                    row.kapanisMarji
+                  )}`}
                 >
-                  {row.sembol}
-                </Link>
-              </td>
-              <td className="border-t border-zinc-100 px-4 py-3 text-right text-zinc-700">
-                {fmt(row.fonOrani)}
-              </td>
-              <td
-                className={`border-t border-zinc-100 px-4 py-3 text-right font-semibold ${etkiClass(
-                  row.kapanisMarji
-                )}`}
-              >
-                {fmt(row.kapanisMarji)}
-              </td>
-              <td
-                className={`border-t border-zinc-100 px-4 py-3 text-right font-semibold ${etkiClass(
-                  row.etki
-                )}`}
-              >
-                {fmt(row.etki, 4)}
-              </td>
-            </tr>
-          ))}
+                  {fmt(row.kapanisMarji)}
+                </td>
+                <td
+                  className={`border-t border-zinc-100 px-4 py-3 text-right font-semibold ${etkiClass(
+                    row.etki
+                  )}`}
+                >
+                  {fmt(row.etki, 4)}
+                </td>
+              </tr>
+            );
+          })}
         </tbody>
         <tfoot>
           <tr className="bg-zinc-100 font-bold text-zinc-900">
