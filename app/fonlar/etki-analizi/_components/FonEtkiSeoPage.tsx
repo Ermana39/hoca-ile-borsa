@@ -259,6 +259,7 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
   const pageUrl = `/fonlar/etki-analizi/${slug}`;
   const yatirimciDegisimOrani = changeRate(degisimVerisi.yatirimciSayisi);
   const fonDegerDegisimOrani = changeRate(degisimVerisi.fonToplamDeger);
+  const fonDegerPozitif = degisimVerisi.fonToplamDeger.degisim >= 0;
   const paraAkisiPozitif = degisimVerisi.paraGirisiCikisi >= 0;
 
   return (
@@ -378,7 +379,11 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
               <dt className="text-xs font-semibold uppercase text-slate-500">
                 Fon toplam değer değişimi
               </dt>
-              <dd className="mt-2 text-2xl font-bold text-emerald-700">
+              <dd
+                className={`mt-2 text-2xl font-bold ${
+                  fonDegerPozitif ? "text-emerald-700" : "text-red-700"
+                }`}
+              >
                 {signedCurrency(degisimVerisi.fonToplamDeger.degisim)}
               </dd>
               <dd className="mt-1 text-sm text-slate-600">
@@ -439,7 +444,11 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
                   <td className="px-4 py-3">
                     {fmtCurrency(degisimVerisi.fonToplamDeger.bugun)}
                   </td>
-                  <td className="px-4 py-3 font-semibold text-emerald-700">
+                  <td
+                    className={`px-4 py-3 font-semibold ${
+                      fonDegerPozitif ? "text-emerald-700" : "text-red-700"
+                    }`}
+                  >
                     {signedCurrency(degisimVerisi.fonToplamDeger.degisim)}
                   </td>
                 </tr>

@@ -23,10 +23,10 @@ export const metadata: Metadata = {
 };
 
 const rows: FonEtkiRow[] = [
-  { sembol: "IEYHO", fonOrani: 52.75, kapanisMarji: 2.475, etki: 1.305361675 },
-  { sembol: "ISKPL", fonOrani: 11.12, kapanisMarji: -4.643, etki: -0.516330691 },
-  { sembol: "LIDER", fonOrani: 0.53, kapanisMarji: 2.954, etki: 0.015658013 },
-  { sembol: "ABG", fonOrani: 29.82, kapanisMarji: -1.62, etki: -0.483084 },
+  { sembol: "IEYHO", fonOrani: 52.75, kapanisMarji: 0, etki: 0 },
+  { sembol: "ISKPL", fonOrani: 11.12, kapanisMarji: 2.592, etki: 0.288207343 },
+  { sembol: "LIDER", fonOrani: 0.53, kapanisMarji: 0, etki: 0 },
+  { sembol: "ABG", fonOrani: 29.82, kapanisMarji: 0.83, etki: 0.247506 },
 ];
 
 const ozet = fonEtkiOzetiGetir("dfi");
@@ -44,18 +44,18 @@ export default function DfiEtkiAnaliziPage() {
       sonGuncelleme={fonEtkiSonGuncelleme.label}
       degisimVerisi={{
         yatirimciSayisi: {
-          dun: 45593,
-          bugun: 46585,
-          degisim: 992,
+          dun: 47087,
+          bugun: 47746,
+          degisim: 659,
         },
         fonToplamDeger: {
-          dun: 26728833258,
-          bugun: 27166382196,
-          degisim: 437548938,
+          dun: 27564807757,
+          bugun: 27916593150,
+          degisim: 351785393,
         },
-        paraGirisiCikisi: 387256983,
+        paraGirisiCikisi: 134087043,
         yorum:
-          "DFI fonunda yatırımcı sayısı 992 kişi artarken fon toplam değeri 437,55 milyon TL yükseldi. 387,26 milyon TL net para girişi pozitif görünümü destekliyor. Portföy etkisinin +%0,32 seviyesinde kalması, IEYHO kaynaklı güçlü katkının ISKPL ve ABG tarafındaki negatif etkiyle kısmen dengelendiğini gösteriyor.",
+          "DFI günü 659 yeni yatırımcı, 134,09 milyon TL net para girişi ve 351,79 milyon TL fon değeri artışıyla tamamladı. Tahmini portföy etkisi +%0,54 oldu; katkının tamamı ISKPL ve ABG yükselişinden gelirken ağırlığı %52,75 olan IEYHO günü etkisiz kapattı. Az sayıdaki varlığa yoğunlaşan yapı nedeniyle iki hissenin sağladığı bu katkı önemli, ancak aynı yoğunlaşma sonraki seanslarda oynaklığı da artırabilir.",
       }}
     />
   );
