@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   katilimIstatistikleriniHesapla,
   lotSenaryolariniHesapla,
   metindenOndalik,
+  yuksekBasvuruSenaryolariniHesapla,
   type HalkaArzDagitimTuru,
   type HalkaArzKatilimGecmisi,
   type HalkaArzLotSecenegi,
@@ -105,6 +106,12 @@ export default function TalepHesaplaClient({
     ilkSecenek ? fiyatGirdisi(ilkSecenek.halkaArzFiyati) : ""
   );
   const [ozelKatilimci, setOzelKatilimci] = useState("");
+  const [yuksekBasvuruTalepLotu, setYuksekBasvuruTalepLotu] = useState(
+    ilkSecenek?.yuksekBasvuru
+      ? adetGirdisi(ilkSecenek.yuksekBasvuru.altSinirLot)
+      : ""
+  );
+  const [ozelTalepCarpani, setOzelTalepCarpani] = useState("5");
   const [dagitimTuru, setDagitimTuru] = useState<HalkaArzDagitimTuru>(
     ilkSecenek?.dagitimTuru || "bireysel-esit"
   );
@@ -125,6 +132,11 @@ export default function TalepHesaplaClient({
       setBireyselYuzde(oranGirdisi(secenek.bireyselTahsisatOrani));
       setHalkaArzFiyati(fiyatGirdisi(secenek.halkaArzFiyati));
       setDagitimTuru(secenek.dagitimTuru);
+      setYuksekBasvuruTalepLotu(
+        secenek.yuksekBasvuru
+          ? adetGirdisi(secenek.yuksekBasvuru.altSinirLot)
+          : ""
+      );
     };
 
     const zamanlayici = window.setTimeout(hashSeciminiUygula, 0);
@@ -140,6 +152,11 @@ export default function TalepHesaplaClient({
   const bireyselOranSayisi = metindenOndalik(bireyselYuzde) || 0;
   const fiyatSayisi = metindenOndalik(halkaArzFiyati) || 0;
   const ozelKatilimciSayisi = Math.floor(metindenOndalik(ozelKatilimci) || 0);
+  const yuksekBasvuru = secilenHalkaArz?.yuksekBasvuru;
+  const yuksekBasvuruTalepLotSayisi = Math.floor(
+    metindenOndalik(yuksekBasvuruTalepLotu) || 0
+  );
+  const ozelTalepCarpaniSayisi = metindenOndalik(ozelTalepCarpani) || 0;
   const bireyselTahsisatLotu = Math.round(
     toplamLotSayisi * (bireyselOranSayisi / 100)
   );
@@ -149,33 +166,40 @@ export default function TalepHesaplaClient({
     bireyselOranSayisi <= 100 &&
     fiyatSayisi > 0;
 
-  const istatistikler = useMemo(
-    () =>
-      katilimIstatistikleriniHesapla(
-        gecmis,
-        dagitimTuru,
-        secilenHalkaArz?.kod
-      ),
-    [dagitimTuru, gecmis, secilenHalkaArz?.kod]
+  const istatistikler = katilimIstatistikleriniHesapla(
+    gecmis,
+    dagitimTuru,
+    secilenHalkaArz?.kod
   );
-  const senaryolar = useMemo(
-    () =>
-      lotSenaryolariniHesapla(
-        bireyselTahsisatLotu,
+  const senaryolar = lotSenaryolariniHesapla(
+    bireyselTahsisatLotu,
+    fiyatSayisi,
+    istatistikler
+  );
+  const yuksekBasvuruCarpanlari = [2, 5, 10, 20];
+  if (
+    ozelTalepCarpaniSayisi >= 1 &&
+    !yuksekBasvuruCarpanlari.includes(ozelTalepCarpaniSayisi)
+  ) {
+    yuksekBasvuruCarpanlari.push(ozelTalepCarpaniSayisi);
+  }
+  const yuksekBasvuruGecerli = Boolean(
+    yuksekBasvuru &&
+      yuksekBasvuruTalepLotSayisi >= yuksekBasvuru.altSinirLot &&
+      fiyatSayisi > 0
+  );
+  const yuksekBasvuruSenaryolari = yuksekBasvuruGecerli
+    ? yuksekBasvuruSenaryolariniHesapla(
+        yuksekBasvuruTalepLotSayisi,
         fiyatSayisi,
-        istatistikler
-      ),
-    [bireyselTahsisatLotu, fiyatSayisi, istatistikler]
-  );
+        yuksekBasvuruCarpanlari
+      )
+    : [];
   const normalSenaryo = senaryolar.find((item) => item.id === "normal");
-  const referanslar = useMemo(
-    () =>
-      gecmis.filter(
-        (item) =>
-          item.dagitimTuru === dagitimTuru &&
-          item.kod !== secilenHalkaArz?.kod
-      ),
-    [dagitimTuru, gecmis, secilenHalkaArz?.kod]
+  const referanslar = gecmis.filter(
+    (item) =>
+      item.dagitimTuru === dagitimTuru &&
+      item.kod !== secilenHalkaArz?.kod
   );
 
   const ozelSonuc =
@@ -208,6 +232,11 @@ export default function TalepHesaplaClient({
     setBireyselYuzde(oranGirdisi(secenek.bireyselTahsisatOrani));
     setHalkaArzFiyati(fiyatGirdisi(secenek.halkaArzFiyati));
     setDagitimTuru(secenek.dagitimTuru);
+    setYuksekBasvuruTalepLotu(
+      secenek.yuksekBasvuru
+        ? adetGirdisi(secenek.yuksekBasvuru.altSinirLot)
+        : ""
+    );
     adresiGuncelle(secenek.kod);
   }
 
@@ -243,7 +272,8 @@ export default function TalepHesaplaClient({
                 Onaylı bir halka arzı seçin veya kendi değerlerinizi girin. Araç,
                 benzer dağıtım türündeki 2026 halka arzlarından düşük, normal ve
                 yüksek katılım senaryoları üretir; tahmini lotu ve gerekli yaklaşık
-                parayı birlikte gösterir.
+                parayı birlikte gösterir. Yüksek başvurulu yatırımcı grubu bulunan
+                halka arzlarda oransal dağıtım hesabını ayrıca yapar.
               </p>
             </div>
             <div className="flex flex-wrap gap-2 text-xs font-bold">
@@ -276,6 +306,7 @@ export default function TalepHesaplaClient({
                   <option key={item.kod} value={item.kod}>
                     {item.kod} · {item.sirketAdi}
                     {item.gerceklesen ? " · Sonuçlandı" : ""}
+                    {item.yuksekBasvuru ? " · Yüksek başvuru hesabı" : ""}
                   </option>
                 ))}
                 <option value="manuel">Kendi değerlerimi gireceğim</option>
@@ -416,6 +447,186 @@ export default function TalepHesaplaClient({
             </p>
           )}
         </section>
+
+        {yuksekBasvuru && secilenHalkaArz && (
+          <section className="mt-6 rounded-3xl border border-indigo-200 bg-white p-5 shadow-sm md:p-7">
+            <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
+              <div className="max-w-3xl">
+                <p className="text-xs font-bold uppercase tracking-[0.14em] text-indigo-700">
+                  Oransal dağıtım hesabı
+                </p>
+                <h2 className="mt-2 text-xl font-bold text-slate-950 md:text-2xl">
+                  Yüksek Başvurulu Yatırımcıya Kaç Lot Düşer?
+                </h2>
+                <p className="mt-2 text-sm leading-6 text-slate-600">
+                  {secilenHalkaArz.kod} yüksek başvurulu yatırımcı grubunda
+                  talep edeceğiniz lotu girin. Araç, bu gruba gelen toplam talebin
+                  ayrılan havuzun 2, 5, 10 veya 20 katı olması halinde yaklaşık
+                  kaç lot karşılanacağını hesaplar.
+                </p>
+              </div>
+              <span className="w-fit rounded-full bg-indigo-100 px-3 py-2 text-xs font-bold text-indigo-800">
+                {yuksekBasvuru.dagitimYontemi}
+              </span>
+            </div>
+
+            <div className="mt-5 grid gap-3 sm:grid-cols-2 xl:grid-cols-4">
+              <div className="rounded-2xl border border-indigo-100 bg-indigo-50/70 p-4">
+                <p className="text-xs font-bold text-indigo-700">Yüksek Başvuru Havuzu</p>
+                <p className="mt-1 text-xl font-bold text-slate-950">
+                  {adetMetni(yuksekBasvuru.tahsisatLotu)} Lot
+                </p>
+              </div>
+              <div className="rounded-2xl border border-indigo-100 bg-indigo-50/70 p-4">
+                <p className="text-xs font-bold text-indigo-700">Tahsisat Oranı</p>
+                <p className="mt-1 text-xl font-bold text-slate-950">
+                  {oranMetni(yuksekBasvuru.tahsisatOrani)}
+                </p>
+              </div>
+              <div className="rounded-2xl border border-indigo-100 bg-indigo-50/70 p-4">
+                <p className="text-xs font-bold text-indigo-700">En Düşük Başvuru</p>
+                <p className="mt-1 text-xl font-bold text-slate-950">
+                  {adetMetni(yuksekBasvuru.altSinirLot)} Lot
+                </p>
+              </div>
+              <div className="rounded-2xl border border-indigo-100 bg-indigo-50/70 p-4">
+                <p className="text-xs font-bold text-indigo-700">Yaklaşık Alt Sınır</p>
+                <p className="mt-1 text-xl font-bold text-slate-950">
+                  {paraMetni(yuksekBasvuru.altSinirLot * fiyatSayisi)}
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-5 grid gap-4 rounded-2xl border border-slate-200 bg-slate-50 p-4 md:grid-cols-2">
+              <div>
+                <label
+                  htmlFor="yuksek-basvuru-talep-lotu"
+                  className="mb-2 block text-sm font-bold text-slate-800"
+                >
+                  Talep edeceğiniz lot
+                </label>
+                <input
+                  id="yuksek-basvuru-talep-lotu"
+                  type="text"
+                  inputMode="numeric"
+                  value={yuksekBasvuruTalepLotu}
+                  onChange={(event) =>
+                    setYuksekBasvuruTalepLotu(event.target.value)
+                  }
+                  className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
+                  placeholder={adetGirdisi(yuksekBasvuru.altSinirLot)}
+                />
+                <p className="mt-2 text-xs leading-5 text-slate-500">
+                  Girilen talep tutarı:{" "}
+                  <strong className="text-slate-700">
+                    {paraMetni(yuksekBasvuruTalepLotSayisi * fiyatSayisi)}
+                  </strong>
+                </p>
+              </div>
+
+              <div>
+                <label
+                  htmlFor="yuksek-basvuru-carpani"
+                  className="mb-2 block text-sm font-bold text-slate-800"
+                >
+                  Özel talep çarpanı
+                </label>
+                <input
+                  id="yuksek-basvuru-carpani"
+                  type="text"
+                  inputMode="decimal"
+                  value={ozelTalepCarpani}
+                  onChange={(event) => setOzelTalepCarpani(event.target.value)}
+                  className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 text-slate-900 outline-none focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"
+                  placeholder="Örn: 7,5"
+                />
+                <p className="mt-2 text-xs leading-5 text-slate-500">
+                  Örneğin 5 kat talep, toplam yüksek başvuru talebinin bu gruba
+                  ayrılan lot havuzunun 5 katı olmasıdır.
+                </p>
+              </div>
+            </div>
+
+            {yuksekBasvuruTalepLotSayisi < yuksekBasvuru.altSinirLot && (
+              <p className="mt-4 rounded-xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm font-medium leading-6 text-amber-900">
+                Bu halka arzda yüksek başvurulu yatırımcı grubu en az{" "}
+                {adetMetni(yuksekBasvuru.altSinirLot)} lot ile başlıyor. Bu
+                sınırın altında kalan talep, yüksek başvuru hesabına dahil
+                edilemez.
+              </p>
+            )}
+
+            {ozelTalepCarpani.length > 0 && ozelTalepCarpaniSayisi < 1 && (
+              <p className="mt-4 rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm font-medium text-rose-800">
+                Özel talep çarpanı 1 veya daha büyük olmalıdır.
+              </p>
+            )}
+
+            {yuksekBasvuruSenaryolari.length > 0 && (
+              <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-5">
+                {yuksekBasvuruSenaryolari.map((senaryo) => {
+                  const ozelSenaryo = ![2, 5, 10, 20].includes(
+                    senaryo.talepCarpani
+                  );
+                  return (
+                    <article
+                      key={senaryo.talepCarpani}
+                      className={`rounded-2xl border p-4 ${
+                        ozelSenaryo
+                          ? "border-cyan-200 bg-cyan-50/70"
+                          : "border-indigo-200 bg-indigo-50/60"
+                      }`}
+                    >
+                      <div className="flex flex-wrap items-center gap-2">
+                        <p className="text-sm font-bold text-slate-900">
+                          {senaryo.talepCarpani.toLocaleString("tr-TR", {
+                            maximumFractionDigits: 2,
+                          })}{" "}
+                          Kat Talep
+                        </p>
+                        {ozelSenaryo && (
+                          <span className="rounded-full bg-cyan-100 px-2 py-1 text-[10px] font-bold text-cyan-800">
+                            Özel
+                          </span>
+                        )}
+                      </div>
+                      <p className="mt-1 text-xs text-slate-500">
+                        Talebin {oranMetni(senaryo.karsilanmaOrani)} oranı
+                      </p>
+                      <p className="mt-4 text-xs font-bold uppercase tracking-wide text-indigo-700">
+                        Tahmini düşen lot
+                      </p>
+                      <p className="mt-1 text-2xl font-bold text-slate-950">
+                        {adetMetni(senaryo.tahminiLot)} Lot
+                      </p>
+                      <dl className="mt-4 space-y-3 border-t border-indigo-100 pt-3">
+                        <div>
+                          <dt className="text-xs text-slate-500">Karşılanan tutar</dt>
+                          <dd className="mt-0.5 text-sm font-bold text-slate-800">
+                            {paraMetni(senaryo.karsilananTutar)}
+                          </dd>
+                        </div>
+                        <div>
+                          <dt className="text-xs text-slate-500">Yaklaşık iade</dt>
+                          <dd className="mt-0.5 text-sm font-bold text-slate-800">
+                            {paraMetni(senaryo.iadeTutar)}
+                          </dd>
+                        </div>
+                      </dl>
+                    </article>
+                  );
+                })}
+              </div>
+            )}
+
+            <p className="mt-5 rounded-xl border border-indigo-100 bg-indigo-50/50 px-4 py-3 text-sm leading-6 text-slate-600">
+              Hesaplama, yüksek başvurulu gruptaki tüm geçerli taleplerin aynı
+              oranda karşılandığı varsayımına dayanır. Tahsisat aktarımı, talep
+              iptalleri ve dağıtımda uygulanan yuvarlama kuralları sonucu
+              değiştirebilir; kesin lot dağıtım sonuçları açıklandığında belli olur.
+            </p>
+          </section>
+        )}
 
         {istatistikler && (
           <section className="mt-6 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm md:p-7">
@@ -685,7 +896,7 @@ export default function TalepHesaplaClient({
 
         <section className="mt-6 rounded-3xl border border-slate-200 bg-white p-5 shadow-sm md:p-7">
           <h2 className="text-xl font-bold text-slate-950">Model Nasıl Hesaplıyor?</h2>
-          <div className="mt-4 grid gap-4 md:grid-cols-3">
+          <div className="mt-4 grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             <div className="rounded-2xl bg-slate-50 p-4">
               <p className="text-sm font-bold text-slate-900">1. Bireysel Havuz</p>
               <p className="mt-2 text-sm leading-6 text-slate-600">
@@ -702,6 +913,13 @@ export default function TalepHesaplaClient({
               <p className="text-sm font-bold text-slate-900">3. Gerekli Para</p>
               <p className="mt-2 text-sm leading-6 text-slate-600">
                 Tahmini lot, halka arz fiyatıyla çarpılarak yaklaşık talep tutarı bulunur.
+              </p>
+            </div>
+            <div className="rounded-2xl bg-slate-50 p-4">
+              <p className="text-sm font-bold text-slate-900">4. Yüksek Başvuru</p>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                Oransal dağıtımda kullanıcının talebi, yüksek başvuru havuzuna
+                gelen tahmini toplam talep çarpanına bölünür.
               </p>
             </div>
           </div>
@@ -741,6 +959,18 @@ export default function TalepHesaplaClient({
                 <p className="mt-3 text-sm leading-6 text-slate-600">
                   Senaryoda hesaplanan tahmini lot, halka arz fiyatıyla çarpılarak
                   gerekli yaklaşık talep tutarı bulunur.
+                </p>
+              </details>
+              <details className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
+                <summary className="cursor-pointer text-sm font-bold text-slate-900">
+                  Yüksek başvurulu yatırımcıya kaç lot düşer?
+                </summary>
+                <p className="mt-3 text-sm leading-6 text-slate-600">
+                  Yüksek başvurulu yatırımcı grubunda dağıtım oransalsa, düşecek
+                  lot yalnızca yatırımcı sayısıyla bulunamaz. Talep edilen lot,
+                  bu gruba ayrılan havuzun kaç katı toplam talep geldiği
+                  varsayımına bölünür. Örneğin toplam talep havuzun 5 katıysa,
+                  başvurunun yaklaşık %20&apos;si karşılanır.
                 </p>
               </details>
             </div>

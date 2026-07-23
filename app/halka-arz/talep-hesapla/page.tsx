@@ -3,9 +3,9 @@ import { getHalkaArzLotAraciVerisi } from "@/lib/halka-arz-lot-verisi";
 import TalepHesaplaClient from "./TalepHesaplaClient";
 
 export const metadata: Metadata = {
-  title: "Halka Arz Lot Hesaplama | Düşük, Normal ve Yüksek Senaryo",
+  title: "Halka Arz Lot Hesaplama | Yüksek Başvuru Kaç Lot?",
   description:
-    "2026 halka arz sonuçlarına göre düşük, normal ve yüksek katılım senaryolarını; tahmini lotu, gerekli parayı ve gerçekleşen dağıtım karşılaştırmasını hesaplayın.",
+    "Yüksek başvurulu yatırımcıya kaç lot düşer? Talep lotunuza göre 2, 5, 10 ve 20 kat talep senaryolarını, karşılanan tutarı ve iadeyi hesaplayın.",
   alternates: { canonical: "https://www.hocaileborsa.com/halka-arz/talep-hesapla" },
   keywords: [
     "halka arz lot hesaplama",
@@ -13,6 +13,9 @@ export const metadata: Metadata = {
     "halka arz talep hesaplama",
     "düşecek lot hesaplama",
     "halka arz katılımcı sayısı",
+    "yüksek başvurulu yatırımcı kaç lot düşer",
+    "yüksek başvuru kaç lot",
+    "oransal dağıtım lot hesaplama",
   ],
 };
 
@@ -22,10 +25,10 @@ export default function Page() {
     {
       "@context": "https://schema.org",
       "@type": "WebApplication",
-      name: "Halka Arz Lot Senaryo Hesaplayıcı",
+      name: "Halka Arz Lot ve Yüksek Başvuru Hesaplayıcı",
       url: "https://www.hocaileborsa.com/halka-arz/talep-hesapla",
       description:
-        "Geçmiş halka arz katılım verileriyle düşük, normal ve yüksek katılım senaryolarında tahmini lot ve gerekli para hesaplama aracı.",
+        "Geçmiş halka arz katılım verileriyle eşit dağıtım lotunu ve yüksek başvurulu yatırımcı grubunda oransal dağıtım senaryolarını hesaplama aracı.",
       applicationCategory: "FinanceApplication",
       operatingSystem: "Web",
       offers: {
@@ -60,6 +63,14 @@ export default function Page() {
           acceptedAnswer: {
             "@type": "Answer",
             text: "Senaryoda hesaplanan tahmini lot, halka arz fiyatıyla çarpılarak gerekli yaklaşık talep tutarı bulunur.",
+          },
+        },
+        {
+          "@type": "Question",
+          name: "Yüksek başvurulu yatırımcıya kaç lot düşer?",
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: "Oransal dağıtımda talep edilen lot, yüksek başvuru grubuna gelen toplam talebin tahsisat havuzuna oranına bölünür. Toplam talep havuzun 5 katıysa başvurunun yaklaşık yüzde 20'si karşılanır.",
           },
         },
       ],

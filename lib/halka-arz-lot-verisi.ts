@@ -18,7 +18,38 @@ import {
   type HalkaArzKatilimGecmisi,
   type HalkaArzLotGerceklesen,
   type HalkaArzLotSecenegi,
+  type YuksekBasvuruTahsisati,
 } from "@/lib/halka-arz-lot-modeli";
+
+const yuksekBasvuruTahsisatDuzenlemeleri: Record<
+  string,
+  YuksekBasvuruTahsisati
+> = {
+  BETAE: {
+    tahsisatLotu: 6_075_000,
+    tahsisatOrani: 10,
+    altSinirLot: 3_001,
+    dagitimYontemi: "Oransal Dağıtım",
+  },
+  EKDMR: {
+    tahsisatLotu: 5_200_000,
+    tahsisatOrani: 10,
+    altSinirLot: 10_001,
+    dagitimYontemi: "Oransal Dağıtım",
+  },
+  EKIM: {
+    tahsisatLotu: 16_200_000,
+    tahsisatOrani: 10,
+    altSinirLot: 25_001,
+    dagitimYontemi: "Oransal Dağıtım",
+  },
+  SARAE: {
+    tahsisatLotu: 8_900_000,
+    tahsisatOrani: 10,
+    altSinirLot: 115_001,
+    dagitimYontemi: "Oransal Dağıtım",
+  },
+};
 
 function normalizeMetin(value: string) {
   return value
@@ -72,6 +103,62 @@ function tahsisattanBireyselOran(veri?: HalkaArzVeri | null) {
       const oran = metindenYuzde(metin);
       if (oran !== undefined) return oran;
     }
+  }
+
+  return undefined;
+}
+
+function yuksekBasvuruAltSiniri(value: string) {
+  const eslesme = normalizeMetin(value).match(
+    /(\d[\d.\s]*)\s*lot\s*(?:ve\s*)?(?:ustu|uzeri)/
+  );
+  return metindenAdet(eslesme?.[1]);
+}
+
+function yuksekBasvuruTahsisatiBul({
+  veri,
+  hisseKodu,
+  toplamLot,
+}: {
+  veri?: HalkaArzVeri | null;
+  hisseKodu: string;
+  toplamLot: number;
+}): YuksekBasvuruTahsisati | undefined {
+  const duzenleme = yuksekBasvuruTahsisatDuzenlemeleri[hisseKodu];
+  if (duzenleme) return duzenleme;
+  if (!veri) return undefined;
+
+  for (const item of veri.tahsisat) {
+    const metin = tahsisatMetni(item);
+    const normalize = normalizeMetin(metin);
+    if (
+      !normalize.includes("yuksek basvurulu") ||
+      !normalize.includes("oransal")
+    ) {
+      continue;
+    }
+
+    const tahsisatLotu =
+      typeof item === "string" ? undefined : metindenAdet(item.lot);
+    const tahsisatOrani =
+      (typeof item === "string" ? undefined : metindenYuzde(item.oran)) ??
+      (tahsisatLotu ? (tahsisatLotu / toplamLot) * 100 : undefined);
+    const altSinirMetni = [
+      metin,
+      ...(veri.tahsisatNotlari || []).filter((not) =>
+        normalizeMetin(not).includes("yuksek basvurulu")
+      ),
+    ].join(" ");
+    const altSinirLot = yuksekBasvuruAltSiniri(altSinirMetni);
+
+    if (!tahsisatLotu || !tahsisatOrani || !altSinirLot) continue;
+
+    return {
+      tahsisatLotu,
+      tahsisatOrani,
+      altSinirLot,
+      dagitimYontemi: "Oransal Dağıtım",
+    };
   }
 
   return undefined;
@@ -190,6 +277,11 @@ function secenekOlustur({
     toplamLot,
     halkaArzFiyati,
   });
+  const yuksekBasvuru = yuksekBasvuruTahsisatiBul({
+    veri,
+    hisseKodu,
+    toplamLot,
+  });
 
   return {
     kod: hisseKodu,
@@ -202,6 +294,7 @@ function secenekOlustur({
     dagitimTuru,
     dagitimYontemi,
     gerceklesen,
+    yuksekBasvuru,
   };
 }
 
@@ -217,7 +310,13 @@ export function getHalkaArzLotAraciVerisi() {
     .filter((item): item is HalkaArzLotSecenegi => item !== null)
     .sort((a, b) => {
       const sonucSirasi = Number(Boolean(a.gerceklesen)) - Number(Boolean(b.gerceklesen));
-      return sonucSirasi || a.sirketAdi.localeCompare(b.sirketAdi, "tr");
+      const yuksekBasvuruSirasi =
+        Number(Boolean(b.yuksekBasvuru)) - Number(Boolean(a.yuksekBasvuru));
+      return (
+        sonucSirasi ||
+        yuksekBasvuruSirasi ||
+        a.sirketAdi.localeCompare(b.sirketAdi, "tr")
+      );
     });
 
   const gecmis: HalkaArzKatilimGecmisi[] = halkaArzSonuclari.flatMap(

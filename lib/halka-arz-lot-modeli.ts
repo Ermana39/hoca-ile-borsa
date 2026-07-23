@@ -9,6 +9,13 @@ export type HalkaArzLotGerceklesen = {
   kaynakHref?: string;
 };
 
+export type YuksekBasvuruTahsisati = {
+  tahsisatLotu: number;
+  tahsisatOrani: number;
+  altSinirLot: number;
+  dagitimYontemi: "Oransal Dağıtım";
+};
+
 export type HalkaArzLotSecenegi = {
   kod: string;
   sirketAdi: string;
@@ -20,6 +27,7 @@ export type HalkaArzLotSecenegi = {
   dagitimTuru: HalkaArzDagitimTuru;
   dagitimYontemi: string;
   gerceklesen?: HalkaArzLotGerceklesen;
+  yuksekBasvuru?: YuksekBasvuruTahsisati;
 };
 
 export type HalkaArzKatilimGecmisi = {
@@ -41,6 +49,14 @@ export type LotSenaryoSonucu = {
   katilimci: number;
   tahminiLot: number;
   gerekliTutar: number;
+};
+
+export type YuksekBasvuruSenaryoSonucu = {
+  talepCarpani: number;
+  karsilanmaOrani: number;
+  tahminiLot: number;
+  karsilananTutar: number;
+  iadeTutar: number;
 };
 
 function ilkSayi(value?: string | null) {
@@ -182,6 +198,35 @@ export function lotSenaryolariniHesapla(
       ...senaryo,
       tahminiLot,
       gerekliTutar: tahminiLot * halkaArzFiyati,
+    };
+  });
+}
+
+export function yuksekBasvuruSenaryolariniHesapla(
+  talepLotu: number,
+  halkaArzFiyati: number,
+  talepCarpanlari: number[] = [2, 5, 10, 20]
+): YuksekBasvuruSenaryoSonucu[] {
+  if (talepLotu <= 0 || halkaArzFiyati <= 0) return [];
+
+  return Array.from(
+    new Set(
+      talepCarpanlari
+        .filter((carpan) => Number.isFinite(carpan) && carpan >= 1)
+        .sort((a, b) => a - b)
+    )
+  ).map((talepCarpani) => {
+    const tahminiLot = Math.min(
+      talepLotu,
+      Math.floor(talepLotu / talepCarpani)
+    );
+
+    return {
+      talepCarpani,
+      karsilanmaOrani: 100 / talepCarpani,
+      tahminiLot,
+      karsilananTutar: tahminiLot * halkaArzFiyati,
+      iadeTutar: (talepLotu - tahminiLot) * halkaArzFiyati,
     };
   });
 }

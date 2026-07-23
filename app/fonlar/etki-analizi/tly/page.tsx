@@ -9,21 +9,21 @@ import {
 export const metadata = fonEtkiMetadataOlustur("tly");
 
 const rows: FonEtkiRow[] = [
-  { sembol: "DSTKF", fonOrani: 22.85, kapanisMarji: 2.74, etki: 0.626 },
-  { sembol: "OZATD", fonOrani: 14.3, kapanisMarji: 2.6, etki: 0.3718 },
-  { sembol: "PEKGY", fonOrani: 7.73, kapanisMarji: 0.07, etki: 0.0052 },
-  { sembol: "TEHOL", fonOrani: 7.14, kapanisMarji: 3.03, etki: 0.2167 },
-  { sembol: "TERA", fonOrani: 6.63, kapanisMarji: -2.63, etki: -0.1746 },
-  { sembol: "TRHOL", fonOrani: 5.61, kapanisMarji: 5.28, etki: 0.2964 },
-  { sembol: "ANELE", fonOrani: 1.99, kapanisMarji: 9.98, etki: 0.1986 },
-  { sembol: "SELEC", fonOrani: 1.04, kapanisMarji: 3.15, etki: 0.0328 },
-  { sembol: "ALKLC", fonOrani: 0.54, kapanisMarji: 0.31, etki: 0.0017 },
-  { sembol: "SVGYO", fonOrani: 0.52, kapanisMarji: 0, etki: 0 },
-  { sembol: "HEDEF", fonOrani: 0.27, kapanisMarji: 2.84, etki: 0.0077 },
-  { sembol: "MANAS", fonOrani: 0.14, kapanisMarji: -3.47, etki: -0.0049 },
-  { sembol: "DAPGM", fonOrani: 0.07, kapanisMarji: 2.59, etki: 0.0018 },
-  { sembol: "TPKGY", fonOrani: 11.91, kapanisMarji: 3.7, etki: 0.4407 },
-  { sembol: "HMV", fonOrani: 1.27, kapanisMarji: -5.86, etki: -0.0744 },
+  { sembol: "DSTKF", fonOrani: 22.85, kapanisMarji: 0, etki: 0 },
+  { sembol: "OZATD", fonOrani: 14.3, kapanisMarji: 0.34, etki: 0.0483 },
+  { sembol: "PEKGY", fonOrani: 7.73, kapanisMarji: 0, etki: 0 },
+  { sembol: "TEHOL", fonOrani: 7.14, kapanisMarji: 0.56, etki: 0.0401 },
+  { sembol: "TERA", fonOrani: 6.63, kapanisMarji: 1.26, etki: 0.0834 },
+  { sembol: "TRHOL", fonOrani: 5.61, kapanisMarji: -2.64, etki: -0.1483 },
+  { sembol: "ANELE", fonOrani: 1.99, kapanisMarji: 2.72, etki: 0.0542 },
+  { sembol: "SELEC", fonOrani: 1.04, kapanisMarji: -4.1, etki: -0.0427 },
+  { sembol: "ALKLC", fonOrani: 0.54, kapanisMarji: -0.19, etki: -0.001 },
+  { sembol: "SVGYO", fonOrani: 0.52, kapanisMarji: 3.13, etki: 0.0163 },
+  { sembol: "HEDEF", fonOrani: 0.27, kapanisMarji: 1.28, etki: 0.0034 },
+  { sembol: "MANAS", fonOrani: 0.14, kapanisMarji: -6.95, etki: -0.0097 },
+  { sembol: "DAPGM", fonOrani: 0.07, kapanisMarji: -0.2, etki: -0.0001 },
+  { sembol: "TPKGY", fonOrani: 11.91, kapanisMarji: 0, etki: 0 },
+  { sembol: "HMV", fonOrani: 1.27, kapanisMarji: 2.54, etki: 0.0323 },
 ];
 
 const ozet = fonEtkiOzetiGetir("tly");
@@ -42,18 +42,18 @@ export default function TlyEtkiAnaliziPage() {
       sonGuncelleme={fonEtkiSonGuncelleme.label}
       degisimVerisi={{
         yatirimciSayisi: {
-          dun: 98595,
-          bugun: 99099,
-          degisim: 504,
+          dun: 99099,
+          bugun: 98970,
+          degisim: -129,
         },
         fonToplamDeger: {
-          dun: 232632714723,
-          bugun: 226789736588,
-          degisim: -5842978135,
+          dun: 226789736588,
+          bugun: 232874657613,
+          degisim: 6084921025,
         },
-        paraGirisiCikisi: 2086073808,
+        paraGirisiCikisi: 1310146537,
         yorum:
-          "TLY'de yatırımcı sayısı 504 kişi artarken 2,09 milyar TL net para girişi kaydedildi; buna karşılık fon toplam değeri 5,84 milyar TL geriledi. Güncel portföy hesabında ibre +%1,95'e döndü. DSTKF, TPKGY, OZATD ve TRHOL'den gelen güçlü katkı, TERA ve HMV'deki kayıpları fazlasıyla karşıladı. Önceki negatif fiyatlamanın fon değerine yansıdığı bu tabloda yeni günün pozitif hisse etkisi toparlanma ihtimalini belirginleştiriyor.",
+          "TLY'nin fon toplam değeri 6,08 milyar TL büyürken 1,31 milyar TL net para girişi gerçekleşti; yatırımcı sayısı ise 129 kişi azaldı. Buna karşılık güncel portföy etkisi yalnızca +%0,08 düzeyinde. TERA, ANELE ve OZATD'den gelen katkılar TRHOL ile SELEC'teki kayıpları ancak dengeledi; yüksek ağırlıklı DSTKF ve TPKGY'nin etkisiz kalması tahmini hareketi sınırladı. Fon değerindeki güçlü artışın yanında yeni gün için hesaplanan etkinin zayıf kalması, iki verinin aynı dönemi anlatmadığını özellikle görünür kılıyor.",
       }}
     />
   );

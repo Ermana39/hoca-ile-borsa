@@ -17,8 +17,8 @@ const etkiFormatlayici = new Intl.NumberFormat("tr-TR", {
 });
 
 export const fonEtkiSonGuncelleme = {
-  label: "22 Temmuz 2026",
-  iso: "2026-07-22",
+  label: "23 Temmuz 2026",
+  iso: "2026-07-23",
 };
 
 export const fonEtkiOzetleri: FonEtkiOzeti[] = [
@@ -28,7 +28,7 @@ export const fonEtkiOzetleri: FonEtkiOzeti[] = [
     fonTuru: "Serbest fon",
     slug: "tly",
     toplamFonOrani: 82.01,
-    toplamEtki: 1.95,
+    toplamEtki: 0.08,
     profilOzeti:
       "TLY kodlu Tera Portföy Birinci Serbest Fonu, serbest fon türündedir. Bu sayfa, bildirilen portföy ağırlıkları ile varlıkların gün sonu hareketlerini birleştirerek fonun açıklanacak fiyatına yönelik tahmini etkiyi izler.",
   },
@@ -38,7 +38,7 @@ export const fonEtkiOzetleri: FonEtkiOzeti[] = [
     fonTuru: "Hisse senedi yoğun fon",
     slug: "phe",
     toplamFonOrani: 98.45,
-    toplamEtki: 0.83,
+    toplamEtki: 0.38,
     profilOzeti:
       "PHE kodlu Pusula Portföy Hisse Senedi Fonu, hisse senedi yoğun fon türündedir. Bu sayfa, portföydeki payların ağırlıklarını günlük kapanış hareketleriyle eşleştirerek açıklanacak fon fiyatına yönelik tahmini etkiyi izler.",
   },
@@ -48,7 +48,7 @@ export const fonEtkiOzetleri: FonEtkiOzeti[] = [
     fonTuru: "Değişken fon",
     slug: "pbr",
     toplamFonOrani: 84.42,
-    toplamEtki: 0.51,
+    toplamEtki: 0.36,
     profilOzeti:
       "PBR kodlu Pusula Portföy Birinci Değişken Fon, değişken fon türündedir. Bu sayfa, fonun bildirilen varlık dağılımındaki ağırlıkları ve günlük kapanış hareketlerini kullanarak açıklanacak fiyat için tahmini portföy etkisini izler.",
   },
@@ -58,7 +58,7 @@ export const fonEtkiOzetleri: FonEtkiOzeti[] = [
     fonTuru: "Serbest fon",
     slug: "dfi",
     toplamFonOrani: 94.22,
-    toplamEtki: 0.54,
+    toplamEtki: 0.41,
     profilOzeti:
       "DFI kodlu Atlas Portföy Serbest Fon, serbest fon türündedir. Bu sayfa, yoğunlaşmış portföy yapısındaki varlıkların ağırlıkları ile günlük fiyat hareketlerini birleştirerek açıklanacak fon fiyatına yönelik tahmini etkiyi izler.",
   },

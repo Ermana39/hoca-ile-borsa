@@ -9,10 +9,10 @@ import {
 export const metadata = fonEtkiMetadataOlustur("dfi");
 
 const rows: FonEtkiRow[] = [
-  { sembol: "IEYHO", fonOrani: 52.75, kapanisMarji: 0, etki: 0 },
-  { sembol: "ISKPL", fonOrani: 11.12, kapanisMarji: 2.592, etki: 0.288207343 },
-  { sembol: "LIDER", fonOrani: 0.53, kapanisMarji: 0, etki: 0 },
-  { sembol: "ABG", fonOrani: 29.82, kapanisMarji: 0.83, etki: 0.247506 },
+  { sembol: "IEYHO", fonOrani: 52.75, kapanisMarji: -0.311, etki: -0.163819876 },
+  { sembol: "ISKPL", fonOrani: 11.12, kapanisMarji: 5.263, etki: 0.585263158 },
+  { sembol: "LIDER", fonOrani: 0.53, kapanisMarji: -9.579, etki: -0.05076796 },
+  { sembol: "ABG", fonOrani: 29.82, kapanisMarji: 0.12, etki: 0.035784 },
 ];
 
 const ozet = fonEtkiOzetiGetir("dfi");
@@ -31,18 +31,18 @@ export default function DfiEtkiAnaliziPage() {
       sonGuncelleme={fonEtkiSonGuncelleme.label}
       degisimVerisi={{
         yatirimciSayisi: {
-          dun: 47087,
-          bugun: 47746,
-          degisim: 659,
+          dun: 47746,
+          bugun: 48221,
+          degisim: 475,
         },
         fonToplamDeger: {
-          dun: 27564807757,
-          bugun: 27916593150,
-          degisim: 351785393,
+          dun: 27916593150,
+          bugun: 28591506600,
+          degisim: 674613450,
         },
-        paraGirisiCikisi: 134087043,
+        paraGirisiCikisi: 578476685,
         yorum:
-          "DFI günü 659 yeni yatırımcı, 134,09 milyon TL net para girişi ve 351,79 milyon TL fon değeri artışıyla tamamladı. Tahmini portföy etkisi +%0,54 oldu; katkının tamamı ISKPL ve ABG yükselişinden gelirken ağırlığı %52,75 olan IEYHO günü etkisiz kapattı. Az sayıdaki varlığa yoğunlaşan yapı nedeniyle iki hissenin sağladığı bu katkı önemli, ancak aynı yoğunlaşma sonraki seanslarda oynaklığı da artırabilir.",
+          "DFI'ye 578,48 milyon TL net para girişi olurken yatırımcı sayısı 475 kişi, fon toplam değeri 674,61 milyon TL arttı. Tahmini portföy etkisi +%0,41'e ulaştı; ISKPL tek başına yaklaşık +0,59 puan katkı sağlarken IEYHO ve LIDER bu yükselişi sınırladı. Para akışı, yatırımcı ilgisi ve fon büyüklüğünün aynı yönde ilerlemesi günün güçlü tarafı; buna karşılık sonucun büyük ölçüde ISKPL hareketine dayanması yoğunlaşma riskini koruyor.",
       }}
     />
   );
