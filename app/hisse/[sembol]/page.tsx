@@ -1599,9 +1599,6 @@ export default async function HisseKunyePage({
                           <th className="px-3 py-3 text-right font-semibold sm:px-4">
                             Hisse Başı Brüt
                           </th>
-                          <th className="hidden px-4 py-3 text-right font-semibold sm:table-cell">
-                            Kaynak
-                          </th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-slate-100">
@@ -1616,25 +1613,7 @@ export default async function HisseKunyePage({
                               </time>
                             </td>
                             <td className="px-3 py-3 text-right font-semibold text-slate-900 sm:px-4">
-                              <span className="block">{temettuTutarEtiketi(kayit)}</span>
-                              <a
-                                href={hakKullanimlari.kaynakUrl}
-                                target="_blank"
-                                rel="noopener noreferrer nofollow"
-                                className="mt-1 block text-[11px] font-medium text-blue-700 sm:hidden"
-                              >
-                                Yahoo
-                              </a>
-                            </td>
-                            <td className="hidden px-4 py-3 text-right sm:table-cell">
-                              <a
-                                href={hakKullanimlari.kaynakUrl}
-                                target="_blank"
-                                rel="noopener noreferrer nofollow"
-                                className="font-semibold text-blue-700 hover:underline"
-                              >
-                                {hakKullanimlariKaynakAdi}
-                              </a>
+                              {temettuTutarEtiketi(kayit)}
                             </td>
                           </tr>
                         ))}
@@ -1668,9 +1647,6 @@ export default async function HisseKunyePage({
                           <th className="px-3 py-3 text-right font-semibold sm:px-4">
                             Bölünme Oranı
                           </th>
-                          <th className="hidden px-4 py-3 text-right font-semibold sm:table-cell">
-                            Kaynak
-                          </th>
                         </tr>
                       </thead>
                       <tbody className="divide-y divide-slate-100">
@@ -1685,37 +1661,7 @@ export default async function HisseKunyePage({
                               </time>
                             </td>
                             <td className="px-3 py-3 text-right font-semibold text-slate-900 sm:px-4">
-                              <span className="block">{kayit.oran}</span>
-                              {kayit.kaynak === "piyasa-verisi" ? (
-                                <a
-                                  href={hakKullanimlari.kaynakUrl}
-                                  target="_blank"
-                                  rel="noopener noreferrer nofollow"
-                                  className="mt-1 block text-[11px] font-medium text-blue-700 sm:hidden"
-                                >
-                                  Yahoo
-                                </a>
-                              ) : (
-                                <span className="mt-1 block text-[11px] font-medium text-slate-500 sm:hidden">
-                                  Künye arşivi
-                                </span>
-                              )}
-                            </td>
-                            <td className="hidden px-4 py-3 text-right sm:table-cell">
-                              {kayit.kaynak === "piyasa-verisi" ? (
-                                <a
-                                  href={hakKullanimlari.kaynakUrl}
-                                  target="_blank"
-                                  rel="noopener noreferrer nofollow"
-                                  className="font-semibold text-blue-700 hover:underline"
-                                >
-                                  {hakKullanimlariKaynakAdi}
-                                </a>
-                              ) : (
-                                <span className="font-medium text-slate-500">
-                                  Künye arşivi
-                                </span>
-                              )}
+                              {kayit.oran}
                             </td>
                           </tr>
                         ))}
@@ -1768,19 +1714,19 @@ export default async function HisseKunyePage({
                 </div>
               )}
 
-              <p className="mt-4 text-xs leading-6 text-slate-500">
-                Geçmiş temettüler ve güncel bölünme olayları piyasa veri
-                sağlayıcısından alınır; daha eski bölünmelerde mevcut künye arşivi
-                de korunur. Bedelli, bedelsiz, sermaye azaltımı ve ödeme ayrıntıları
-                için şirketin resmi KAP bildirimleri esas alınmalıdır.
-              </p>
-
               {doluMetin(ozgunAnaliz?.temettuYorumu) && (
                 <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 p-4 text-sm leading-7 text-slate-700 md:text-base md:leading-8">
                   <strong>Temettü / sermaye geçmişi yorumu: </strong>
                   {ozgunAnaliz.temettuYorumu}
                 </div>
               )}
+
+              <div className="mt-4 rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs leading-6 text-slate-500">
+                <strong className="text-slate-700">Veri kaynakları:</strong>{" "}
+                {hakKullanimlariKaynakAdi}, şirketlerin KAP bildirimleri ve Hoca
+                İle Borsa künye arşivi. Veriler bilgilendirme amacıyla derlenir;
+                kesin bilgiler için resmi şirket bildirimleri esas alınmalıdır.
+              </div>
 
             </section>
             )}

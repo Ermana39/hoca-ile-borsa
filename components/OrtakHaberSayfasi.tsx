@@ -105,6 +105,44 @@ function HaberIcerikBolumu({ bolum }: { bolum: HaberBolumu }) {
         </div>
       )}
 
+      {bolum.tablo && bolum.tablo.basliklar.length > 0 && (
+        <div className="mt-4 overflow-x-auto rounded-xl border border-slate-200 bg-white">
+          <table className="min-w-full text-sm">
+            <thead className="bg-slate-100 text-slate-700">
+              <tr>
+                {bolum.tablo.basliklar.map((baslik, index) => (
+                  <th
+                    key={`${bolum.baslik}-tablo-baslik-${index}`}
+                    className="px-4 py-3 text-left font-bold"
+                  >
+                    {baslik}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              {bolum.tablo.satirlar.map((satir, satirIndex) => (
+                <tr
+                  key={`${bolum.baslik}-tablo-satir-${satirIndex}`}
+                  className={satirIndex % 2 === 0 ? "bg-white" : "bg-slate-50"}
+                >
+                  {satir.map((hucre, hucreIndex) => (
+                    <td
+                      key={`${bolum.baslik}-tablo-hucre-${satirIndex}-${hucreIndex}`}
+                      className={`border-t border-slate-100 px-4 py-3 text-slate-700 ${
+                        hucreIndex === 0 ? "font-semibold text-slate-900" : ""
+                      }`}
+                    >
+                      {hucre}
+                    </td>
+                  ))}
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      )}
+
       {bolum.kartlar && bolum.kartlar.length > 0 && (
         <div className="mt-4 grid gap-4 sm:grid-cols-2">
           {bolum.kartlar.map((kart, index) => (

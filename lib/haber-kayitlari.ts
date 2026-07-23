@@ -40,10 +40,16 @@ export type HaberMetinKarti = {
   aciklama: string;
 };
 
+export type HaberTablosu = {
+  basliklar: string[];
+  satirlar: string[][];
+};
+
 export type HaberBolumu = {
   baslik: string;
   giris?: string;
   paragraflar?: string[];
+  tablo?: HaberTablosu;
   kartlar?: HaberMetinKarti[];
   maddeler?: string[];
   kapLink?: string;
