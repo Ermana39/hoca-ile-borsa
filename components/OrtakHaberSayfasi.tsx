@@ -83,7 +83,7 @@ function HaberIcerikBolumu({ bolum }: { bolum: HaberBolumu }) {
         <Link
           href={bolum.haberLink}
           prefetch={false}
-          className="mt-4 inline-flex text-sm font-bold text-blue-700 underline decoration-blue-300 underline-offset-4 transition hover:text-blue-900 hover:decoration-blue-600 md:text-base"
+          className="mt-5 inline-flex items-center justify-center rounded-lg border border-blue-700 bg-blue-700 px-4 py-2.5 text-sm font-bold text-white shadow-sm transition hover:border-blue-800 hover:bg-blue-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 md:text-base"
         >
           {bolum.haberLinkMetni ?? "Haberin detaylarını oku"}
         </Link>
