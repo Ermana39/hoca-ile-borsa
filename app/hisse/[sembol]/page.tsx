@@ -5,6 +5,7 @@ import {
   getHisse,
   getTumHisseler,
   getTumHisseSembolleri,
+  hisseKunyeIndexlenebilirMi,
   hisseVarMi,
   type Hisse,
 } from "@/lib/hisseler";
@@ -429,15 +430,15 @@ export async function generateMetadata({
     hisse.borsaBilgileri.anaHisseKodu?.toLowerCase() ||
     hisse.kod.toLowerCase();
   const isSecondaryShareClass = canonicalCode !== hisse.kod.toLowerCase();
+  const indexlenebilir =
+    !isSecondaryShareClass && hisseKunyeIndexlenebilirMi(hisse);
   const url = `${siteUrl}/hisse/${canonicalCode}`;
 
   return {
     title: { absolute: baslik },
     description: aciklama,
     alternates: { canonical: url },
-    robots: isSecondaryShareClass
-      ? { index: false, follow: true }
-      : { index: true, follow: true },
+    robots: { index: indexlenebilir, follow: true },
     openGraph: {
       type: "website",
       url,

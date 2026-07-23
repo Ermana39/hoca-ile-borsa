@@ -1,10 +1,6 @@
 import type { MetadataRoute } from "next";
 import pageUpdates from "@/lib/page-updates.generated.json";
-import {
-  getNewsByCategory,
-  getToplamSayfa,
-  getAllNews,
-} from "@/lib/haberler";
+import { getAllNews } from "@/lib/haberler";
 import { HABER_KATEGORILERI } from "@/lib/haber-kategorileri";
 import { getSitemapHisseSembolleri } from "@/lib/hisseler";
 import { getHisseProfilMetadata } from "@/lib/hisse-kunye-kaynaklari";
@@ -19,6 +15,7 @@ import {
   fonEtkiOzetleri,
   fonEtkiSonGuncelleme,
 } from "@/app/fonlar/etki-analizi/_data/fonEtkiOzetleri";
+import { sitemapteIndexlenebilirStatikYolMu } from "@/lib/indexleme-politikasi";
 
 const siteUrl = "https://www.hocaileborsa.com";
 
@@ -33,17 +30,6 @@ const updateMap = new Map(
     page.updatedAt,
   ])
 );
-
-const excludedRoutePatterns = [
-  /\[/,
-  /^\/yonetim(?:\/|$)/,
-  /^\/kontrol-paneli-4827(?:\/|$)/,
-  /^\/(?:giris|uye|profil|mesajlar|istatistik|guvenlik-kayitlari)(?:\/|$)/,
-];
-
-function isIndexableRoute(route: string) {
-  return !excludedRoutePatterns.some((pattern) => pattern.test(route));
-}
 
 function getLastModified(route: string, fallbackRoute = "/") {
   return (
@@ -122,7 +108,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // sayfalar sitemap'e eklenmez.
   const staticRoutes = (pageUpdates.pages as PageUpdate[])
     .map((page) => page.route)
-    .filter(isIndexableRoute);
+    .filter(sitemapteIndexlenebilirStatikYolMu);
 
   const hisseEntries = getSitemapHisseSembolleri().map((sembol) => ({
     route: `/hisse/${sembol.toLowerCase()}`,
@@ -162,22 +148,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: ozet.isoTarih,
   }));
 
-  const arsivSayfaRoutes: string[] = [];
-  const toplamArsivSayfa = getToplamSayfa(getAllNews().length);
-  for (let n = 2; n <= toplamArsivSayfa; n++) {
-    arsivSayfaRoutes.push(`/haberler/sayfa/${n}`);
-  }
-
-  const kategoriRoutes: string[] = [];
-  for (const kategori of HABER_KATEGORILERI) {
-    kategoriRoutes.push(`/haberler/kategori/${kategori.slug}`);
-    const toplamKategoriSayfa = getToplamSayfa(
-      getNewsByCategory(kategori.slug).length
-    );
-    for (let n = 2; n <= toplamKategoriSayfa; n++) {
-      kategoriRoutes.push(`/haberler/kategori/${kategori.slug}/sayfa/${n}`);
-    }
-  }
+  const kategoriRoutes = HABER_KATEGORILERI.map(
+    (kategori) => `/haberler/kategori/${kategori.slug}`
+  );
 
   const routeEntries = new Map<string, string | undefined>();
 
@@ -190,10 +163,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...haberEntries.map((entry) => entry.route),
     ...halkaArzRoutes,
     ...onayliHalkaArzRoutes,
-    ...arsivSayfaRoutes,
     ...kategoriRoutes,
   ]) {
-    if (isIndexableRoute(route)) {
+    if (sitemapteIndexlenebilirStatikYolMu(route)) {
       routeEntries.set(route, getLastModified(route));
     }
   }
@@ -206,7 +178,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // tarihini doğrudan içerikten kullanmak her deploy'da sahte tazelik sinyali
   // oluşmasını önler.
   for (const entry of haberEntries) {
-    routeEntries.set(entry.route, entry.lastModified);
+    if (sitemapteIndexlenebilirStatikYolMu(entry.route)) {
+      routeEntries.set(entry.route, entry.lastModified);
+    }
   }
 
   // Dinamik sözlük route'ları pageUpdates içinde yer almaz. Ana sayfanın

@@ -34,6 +34,13 @@ const bolumler = [
     ],
   },
   {
+    baslik: "Teknoloji, Otomasyon ve İnsan Kontrolü",
+    icerik: [
+      "Yapay zekâ destekli araçlar; resmî belgelerdeki verileri yapılandırma, ilk taslak oluşturma, karşılaştırma tablosu hazırlama ve dil kontrolü aşamalarında yardımcı olarak kullanılabilir. Yayın kararı, kaynakların karşılaştırılması, hesapların kontrolü ve belirsizliklerin açıkça işaretlenmesi site editörünün sorumluluğundadır.",
+      "Otomatik oluşturulan veri sayfaları, şirkete özgü açıklama ve editoryal değerlendirme eşiğini karşılamadıkça arama dizinine veya reklam envanterine alınmaz. Hesaplama ve karşılaştırmalarda kullanılan yöntem ile veri dönemi ilgili sayfada açıklanır; otomasyon kesin sonuç veya yatırım önerisi üretmek için kullanılmaz.",
+    ],
+  },
+  {
     baslik: "Doğruluk ve Düzeltme Politikamız",
     icerik: [
       "Yayımlanan bir içerikte maddi hata tespit edilirse ya da tarafımıza bildirilirse, hata en kısa sürede düzeltilir. Okuyucularımız hata bildirimlerini iletişim sayfamızdan veya e-posta yoluyla iletebilir; her bildirim incelenir.",
@@ -50,7 +57,7 @@ const bolumler = [
   {
     baslik: "Reklam ve Gelir Şeffaflığı",
     icerik: [
-      "Sitemiz, Google AdSense üzerinden yayınlanan reklamlarla gelir elde eder. Reklamlar otomatik olarak sunulur ve editoryal içeriğimizi hiçbir şekilde etkilemez; hangi şirket hakkında ne yazılacağı reklam ilişkilerinden bağımsızdır.",
+      "Platformun hedeflenen gelir modellerinden biri Google AdSense üzerinden reklam yayınıdır. Onay ve hazırlık dönemlerinde reklam sunumu kapalı tutulabilir. Reklamlar etkinleştirildiğinde yalnızca özgün yayıncı içeriği bulunan uygun sayfalarda gösterilir ve editoryal kararları etkilemez.",
       "Sponsorlu içerik yayımlanması durumunda bu içerik açıkça 'sponsorlu' olarak etiketlenir. Şirketlerden içerik karşılığı ödeme, pay veya başka bir menfaat kabul edilmez.",
     ],
   },

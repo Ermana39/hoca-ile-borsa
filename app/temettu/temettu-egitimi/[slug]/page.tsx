@@ -110,17 +110,6 @@ const icerikler: Record<
   },
 };
 
-function ReklamAlani({ buyuk = false }: { buyuk?: boolean }) {
-  return (
-    <section
-      aria-label="Reklam alanı"
-      className={buyuk ? "min-h-[260px] w-full" : "min-h-[120px] w-full"}
-    >
-      <div className={buyuk ? "min-h-[260px] w-full" : "min-h-[120px] w-full"} />
-    </section>
-  );
-}
-
 export async function generateMetadata({
   params,
 }: {
@@ -209,10 +198,6 @@ export default async function TemettuEgitimDetayPage({
           <p className="text-base leading-7 text-zinc-700">{icerik.description}</p>
         </section>
 
-        <section className="mb-8">
-          <ReklamAlani />
-        </section>
-
         <section className="rounded-2xl border border-zinc-200 bg-zinc-50 p-6">
           <div className="space-y-5">
             {icerik.text.map((paragraph, index) => (
@@ -221,10 +206,6 @@ export default async function TemettuEgitimDetayPage({
               </p>
             ))}
           </div>
-        </section>
-
-        <section className="mt-8">
-          <ReklamAlani buyuk />
         </section>
 
         <section className="mt-8 rounded-2xl bg-zinc-50 p-6">

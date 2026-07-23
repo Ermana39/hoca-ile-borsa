@@ -37,6 +37,7 @@ export async function generateMetadata({
     alternates: {
       canonical: `${SITE}/haberler/sayfa/${n}`,
     },
+    robots: { index: false, follow: true },
   };
 }
 

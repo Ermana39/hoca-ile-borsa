@@ -77,10 +77,12 @@ export function halkaArzSurecHaberMetadata(
     description: metinler.description,
     alternates: { canonical },
     robots: {
-      index: true,
+      // Kısa süreç kaydı erişilebilir kalır; arama sonucu olarak kalıcı
+      // onaylı izahname merkezi kullanılır.
+      index: false,
       follow: true,
       googleBot: {
-        index: true,
+        index: false,
         follow: true,
         "max-image-preview": "large",
         "max-snippet": -1,

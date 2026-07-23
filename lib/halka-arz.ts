@@ -212,6 +212,56 @@ export function bekleyenDeger(value?: unknown): boolean {
   return BEKLEYEN_KALIPLAR.some((k) => v.includes(k));
 }
 
+function yeterliUzunluktaMetin(
+  value: string | undefined,
+  minimum: number
+): boolean {
+  return typeof value === "string" && value.trim().length >= minimum;
+}
+
+export function taslakIzahnameIndexlenebilirMi(
+  veri: HalkaArzVeri
+): boolean {
+  if (veri.seo?.contentStatus === "onayli") return true;
+
+  const eksikBilgiNotuYeterli = yeterliUzunluktaMetin(
+    veri.eksikBilgiNotu,
+    100
+  );
+  const finansalEksiklikAciklanmis =
+    eksikBilgiNotuYeterli &&
+    /finansal|mali tablo|hasılat|kâr/i.test(veri.eksikBilgiNotu ?? "");
+  const halkaArzSekliMetni = (veri.halkaArzSekli ?? []).join(" ");
+  const tamamenOrtakSatisi =
+    /ortak satışı/i.test(halkaArzSekliMetni) &&
+    !/sermaye artırımı/i.test(halkaArzSekliMetni);
+  const fonEksikligiAciklanmis =
+    eksikBilgiNotuYeterli &&
+    (/fon|kaynak kullanım/i.test(veri.eksikBilgiNotu ?? "") ||
+      tamamenOrtakSatisi);
+  const finansalKapsamYeterli =
+    (Array.isArray(veri.finansalVeriler) &&
+      veri.finansalVeriler.length >= 2) ||
+    (yeterliUzunluktaMetin(veri.finansalYorum, 500) &&
+      finansalEksiklikAciklanmis);
+  const fonKullanimKapsamiYeterli =
+    (Array.isArray(veri.fonKullanim) && veri.fonKullanim.length > 0) ||
+    (yeterliUzunluktaMetin(veri.fonKullanimYorumu, 500) &&
+      fonEksikligiAciklanmis);
+
+  return Boolean(
+    yeterliUzunluktaMetin(veri.sirketHakkinda, 250) &&
+      yeterliUzunluktaMetin(veri.fonKullanimYorumu, 250) &&
+      yeterliUzunluktaMetin(veri.finansalYorum, 250) &&
+      finansalKapsamYeterli &&
+      Array.isArray(veri.halkaArzSekli) &&
+      veri.halkaArzSekli.length > 0 &&
+      fonKullanimKapsamiYeterli &&
+      Array.isArray(veri.oneCikanlar) &&
+      veri.oneCikanlar.length >= 3
+  );
+}
+
 // ---------------------------------------------------------------------------
 //  Veri okuma
 // ---------------------------------------------------------------------------
@@ -266,6 +316,7 @@ export function getSitemapTaslakIzahnameSluglari(): string[] {
     }
     if (veri.seo?.robots?.index === false) return false;
     if (veri.seo?.sitemap === false) return false;
+    if (!taslakIzahnameIndexlenebilirMi(veri)) return false;
     return true;
   });
 }

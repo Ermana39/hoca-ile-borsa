@@ -5,6 +5,7 @@ import {
   bekleyenDeger,
   halkaArzGetir,
   statikSlugVar,
+  taslakIzahnameIndexlenebilirMi,
   taslakCanonicalYolu,
   tahsisatMetni,
   tasinmamisSluglar,
@@ -27,12 +28,13 @@ export async function generateMetadata({
   const { slug } = await params;
   const veri = halkaArzGetir(slug);
   if (!veri) return {};
-  // Indeksleme ayarı JSON'daki seo.robots'tan okunur; alan yoksa varsayılan
-  // index,follow (kök layout ile aynı). Böylece taslak sayfalar da aramada
-  // görünür ve davranış tek kaynaktan (JSON) yönetilir.
+  // JSON isteği tek başına yeterli değildir. Eksik finansal veri veya özgün
+  // değerlendirme bulunan taslaklar tamamlanana kadar dizine alınmaz.
   const robotsSeo = veri.seo?.robots;
   const robots = {
-    index: robotsSeo?.index ?? true,
+    index:
+      (robotsSeo?.index ?? true) &&
+      taslakIzahnameIndexlenebilirMi(veri),
     follow: robotsSeo?.follow ?? true,
   };
   if (veri.seo?.contentStatus === "onayli") {
@@ -283,6 +285,17 @@ export default async function HalkaArzDinamikPage({
           )}
         </section>
 
+        {veri.eksikBilgiNotu && (
+          <section className="mb-8 rounded-3xl border border-amber-200 bg-amber-50 p-6 shadow-sm">
+            <h2 className="text-lg font-bold text-amber-950">
+              Taslakta Henüz Açıklanmayan Bilgiler
+            </h2>
+            <p className="mt-3 text-sm leading-7 text-amber-900">
+              {veri.eksikBilgiNotu}
+            </p>
+          </section>
+        )}
+
         {veri.sirketHakkinda && (
           <section className="mb-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
             <h2 className="mb-3 text-xl font-bold text-slate-900">Şirket Hakkında</h2>
@@ -335,20 +348,26 @@ export default async function HalkaArzDinamikPage({
               </section>
             )}
 
-            {veri.fonKullanim.length > 0 && (
+            {(veri.fonKullanim.length > 0 || veri.fonKullanimYorumu) && (
               <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
                 <h2 className="mb-5 text-xl font-bold text-slate-900">Fon Kullanım Yeri</h2>
 
-                <div className="grid gap-4 md:grid-cols-1">
-                  {veri.fonKullanim.map((item, index) => (
-                    <div
-                      key={index}
-                      className="rounded-2xl border border-slate-200 bg-slate-50 p-4"
-                    >
-                      <div className="text-sm text-slate-700">{item}</div>
-                    </div>
-                  ))}
-                </div>
+                {veri.fonKullanim.length > 0 ? (
+                  <div className="grid gap-4 md:grid-cols-1">
+                    {veri.fonKullanim.map((item, index) => (
+                      <div
+                        key={index}
+                        className="rounded-2xl border border-slate-200 bg-slate-50 p-4"
+                      >
+                        <div className="text-sm text-slate-700">{item}</div>
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-900">
+                    Fon kullanım dağılımı taslak kaynakta henüz açıklanmamıştır.
+                  </div>
+                )}
 
                 {veri.fonKullanimYorumu && (
                   <div className="mt-5 rounded-2xl border border-slate-100 bg-white p-4">
@@ -363,7 +382,7 @@ export default async function HalkaArzDinamikPage({
               </section>
             )}
 
-            {veri.finansalVeriler.length > 0 && (
+            {(veri.finansalVeriler.length > 0 || veri.finansalYorum) && (
               <section className="rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
                 <div className="mb-5 flex items-center justify-between">
                   <h2 className="text-xl font-bold text-slate-900">Finansal Görünüm</h2>
@@ -374,42 +393,49 @@ export default async function HalkaArzDinamikPage({
                   )}
                 </div>
 
-                <div className="overflow-x-auto">
-                  <table className="min-w-full overflow-hidden rounded-2xl border border-slate-200">
-                    <thead className="bg-slate-100">
-                      <tr>
-                        <th className="px-4 py-3 text-left text-sm font-bold text-slate-700">
-                          Kalem
-                        </th>
-                        {donemler.map((d) => (
-                          <th
-                            key={d}
-                            className="px-4 py-3 text-left text-sm font-bold text-slate-700"
-                          >
-                            {d}
+                {veri.finansalVeriler.length > 0 ? (
+                  <div className="overflow-x-auto">
+                    <table className="min-w-full overflow-hidden rounded-2xl border border-slate-200">
+                      <thead className="bg-slate-100">
+                        <tr>
+                          <th className="px-4 py-3 text-left text-sm font-bold text-slate-700">
+                            Kalem
                           </th>
-                        ))}
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {veri.finansalVeriler.map((row, index) => (
-                        <tr
-                          key={row.kalem}
-                          className={index % 2 === 0 ? "bg-white" : "bg-slate-50"}
-                        >
-                          <td className="px-4 py-4 text-sm font-semibold text-slate-800">
-                            {row.kalem}
-                          </td>
                           {donemler.map((d) => (
-                            <td key={d} className="px-4 py-4 text-sm text-slate-700">
-                              {row.donemler[d] ?? "-"}
-                            </td>
+                            <th
+                              key={d}
+                              className="px-4 py-3 text-left text-sm font-bold text-slate-700"
+                            >
+                              {d}
+                            </th>
                           ))}
                         </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
+                      </thead>
+                      <tbody>
+                        {veri.finansalVeriler.map((row, index) => (
+                          <tr
+                            key={row.kalem}
+                            className={index % 2 === 0 ? "bg-white" : "bg-slate-50"}
+                          >
+                            <td className="px-4 py-4 text-sm font-semibold text-slate-800">
+                              {row.kalem}
+                            </td>
+                            {donemler.map((d) => (
+                              <td key={d} className="px-4 py-4 text-sm text-slate-700">
+                                {row.donemler[d] ?? "-"}
+                              </td>
+                            ))}
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                ) : (
+                  <div className="rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-6 text-amber-900">
+                    Karşılaştırılabilir finansal tablo verileri taslak kaynakta
+                    henüz açıklanmamıştır.
+                  </div>
+                )}
 
                 {veri.finansalYorum && (
                   <div className="mt-5 rounded-2xl border border-slate-100 bg-white p-4">

@@ -84,6 +84,38 @@ export type Hisse = {
   yasalUyari: string;
 };
 
+type IndexlenebilirOzgunAnaliz = {
+  isModeli?: string;
+  gelirKaynaklari?: string[];
+  gucluYanlar?: string[];
+  riskler?: string[];
+};
+
+function doluAnalizListesi(value?: string[]): boolean {
+  return (
+    Array.isArray(value) &&
+    value.filter((item) => typeof item === "string" && item.trim()).length >= 3
+  );
+}
+
+export function hisseKunyeIndexlenebilirMi(hisse: Hisse): boolean {
+  const analiz = (
+    hisse as Hisse & { ozgunAnaliz?: IndexlenebilirOzgunAnaliz }
+  ).ozgunAnaliz;
+  const profilParagraflari = (hisse.hakkinda ?? []).filter(
+    (item) => typeof item === "string" && item.trim().length >= 80
+  );
+
+  return Boolean(
+    profilParagraflari.length >= 2 &&
+      analiz?.isModeli &&
+      analiz.isModeli.trim().length >= 180 &&
+      doluAnalizListesi(analiz.gelirKaynaklari) &&
+      doluAnalizListesi(analiz.gucluYanlar) &&
+      doluAnalizListesi(analiz.riskler)
+  );
+}
+
 // ============================================================================
 //  Hisse künyeleri data/hisseler/ klasöründen OTOMATİK okunur.
 //  Yeni bir hisse eklemek için: data/hisseler/<kod>.json dosyası oluştur
@@ -169,7 +201,9 @@ export function getSitemapHisseSembolleri(): string[] {
   const canonicalJsonCodes = Object.entries(hisseler)
     .filter(([, hisse]) => {
       const canonical = hisse.borsaBilgileri?.anaHisseKodu;
-      return !canonical || canonical.toUpperCase() === hisse.kod.toUpperCase();
+      const anaPaySinifi =
+        !canonical || canonical.toUpperCase() === hisse.kod.toUpperCase();
+      return anaPaySinifi && hisseKunyeIndexlenebilirMi(hisse);
     })
     .map(([kod]) => kod);
 

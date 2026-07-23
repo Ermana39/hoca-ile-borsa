@@ -2,40 +2,18 @@
 
 import Script from "next/script";
 import { usePathname } from "next/navigation";
+import { reklamGosterilebilirYolMu } from "@/lib/indexleme-politikasi";
 
 const ADSENSE_CLIENT = "ca-pub-9613627671991162";
-
-const adFreePages = new Set([
-  "/hakkimizda",
-  "/iletisim",
-  "/gizlilik-politikasi",
-  "/cerez-politikasi",
-  "/kullanim-sartlari",
-  "/yasal-uyari",
-  "/reklam",
-  "/borsa/dip-zirve-analizi",
-  "/borsa/hacim-artisi-analizi/aylik-hacim-artisi-olanlar",
-  "/borsa/hacim-artisi-analizi/haftalik-hacim-artisi-olanlar",
-  "/borsa/hacim-artisi-analizi/yillik-hacim-artisi-olanlar",
-]);
-
-function shouldShowAds(pathname: string) {
-  if (
-    adFreePages.has(pathname) ||
-    pathname.startsWith("/yonetim") ||
-    pathname.startsWith("/borsa/gosterge-taramalari/")
-  ) {
-    return false;
-  }
-
-  const draftBasePath = "/halka-arz/taslak-izahnameler";
-  return !pathname.startsWith(`${draftBasePath}/`);
-}
+const ADSENSE_SERVING_ENABLED =
+  process.env.NEXT_PUBLIC_ADSENSE_ENABLED === "true";
 
 export default function AdSenseScript() {
   const pathname = usePathname();
 
-  if (!shouldShowAds(pathname)) {
+  // Site sahipliği kök metadata'daki google-adsense-account etiketiyle
+  // doğrulanır. Reklam betiği onay sonrasında ayrıca etkinleştirilir.
+  if (!ADSENSE_SERVING_ENABLED || !reklamGosterilebilirYolMu(pathname)) {
     return null;
   }
 

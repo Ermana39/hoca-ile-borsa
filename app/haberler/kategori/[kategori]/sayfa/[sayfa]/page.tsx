@@ -44,6 +44,7 @@ export async function generateMetadata({
     alternates: {
       canonical: `${SITE}/haberler/kategori/${bilgi.slug}/sayfa/${n}`,
     },
+    robots: { index: false, follow: true },
   };
 }
 
