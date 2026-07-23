@@ -78,6 +78,64 @@ function Section({
   );
 }
 
+function VeriTablosu({
+  tablo,
+}: {
+  tablo: { basliklar: string[]; satirlar: string[][]; aciklama?: string };
+}) {
+  return (
+    <>
+      {tablo.aciklama && (
+        <p className="mb-4 text-sm leading-7 text-slate-600">{tablo.aciklama}</p>
+      )}
+      <div className="overflow-x-auto rounded-2xl border border-slate-200">
+        <table className="min-w-full text-sm">
+          <thead className="bg-slate-100 text-slate-700">
+            <tr>
+              {tablo.basliklar.map((baslik, index) => (
+                <th key={index} className="px-4 py-3 text-left font-bold">
+                  {baslik}
+                </th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {tablo.satirlar.map((satir, satirIndex) => (
+              <tr
+                key={satirIndex}
+                className={satirIndex % 2 === 0 ? "bg-white" : "bg-slate-50"}
+              >
+                {satir.map((hucre, hucreIndex) => (
+                  <td
+                    key={`${satirIndex}-${hucreIndex}`}
+                    className={`border-t border-slate-100 px-4 py-3 text-slate-700 ${
+                      hucreIndex === 0 ? "font-semibold text-slate-900" : ""
+                    }`}
+                  >
+                    {hucre}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </>
+  );
+}
+
+function OzetKartlari({ items }: { items?: BilgiKarti[] }) {
+  if (!items || items.length === 0) return null;
+
+  return (
+    <div className="mb-5 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      {items.map((item) => (
+        <InfoCard key={item.label} {...item} />
+      ))}
+    </div>
+  );
+}
+
 function ozetSatirlari(veri: HalkaArzVeri): BilgiKarti[] {
   const o = veri.ozet;
   return [
@@ -255,6 +313,51 @@ export default async function OnayliIzahnameDetayPage({
                     </div>
                   ))}
                 </div>
+              </Section>
+            )}
+
+            {veri.dagitimSonuclari && (
+              <Section title={veri.dagitimSonuclari.baslik || "Dağıtım Sonuçları"}>
+                {veri.dagitimSonuclari.aciklama && (
+                  <p className="mb-5 text-sm leading-7 text-slate-600">
+                    {veri.dagitimSonuclari.aciklama}
+                  </p>
+                )}
+                <OzetKartlari items={veri.dagitimSonuclari.ozetKartlari} />
+                {veri.dagitimSonuclari.tablo && (
+                  <VeriTablosu tablo={veri.dagitimSonuclari.tablo} />
+                )}
+                {veri.dagitimSonuclari.kaynakHref && (
+                  <a
+                    href={veri.dagitimSonuclari.kaynakHref}
+                    target="_blank"
+                    rel="noopener noreferrer nofollow"
+                    className="mt-4 inline-flex text-sm font-bold text-blue-700 underline decoration-blue-300 underline-offset-4 transition hover:text-blue-900"
+                  >
+                    KAP dağıtım sonuçları bildirimini aç
+                  </a>
+                )}
+              </Section>
+            )}
+
+            {veri.muhtemelTavanSerisi && (
+              <Section
+                title={veri.muhtemelTavanSerisi.baslik || "Olası Tavan Serisi"}
+              >
+                {veri.muhtemelTavanSerisi.aciklama && (
+                  <p className="mb-5 text-sm leading-7 text-slate-600">
+                    {veri.muhtemelTavanSerisi.aciklama}
+                  </p>
+                )}
+                <OzetKartlari items={veri.muhtemelTavanSerisi.ozetKartlari} />
+                {veri.muhtemelTavanSerisi.tablo && (
+                  <VeriTablosu tablo={veri.muhtemelTavanSerisi.tablo} />
+                )}
+                {veri.muhtemelTavanSerisi.not && (
+                  <p className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-xs font-medium leading-6 text-amber-900">
+                    {veri.muhtemelTavanSerisi.not}
+                  </p>
+                )}
               </Section>
             )}
 

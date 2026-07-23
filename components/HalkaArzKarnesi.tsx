@@ -326,6 +326,21 @@ export default function HalkaArzKarnesi({
     ilgiliHaberler,
     sonuc?.tavanSerisi?.kaynakHref
   );
+  const dagitimOzetDegeri = (anahtarlar: string[]) =>
+    veri?.dagitimSonuclari?.ozetKartlari?.find((item) => {
+      const label = normalizeMetin(item.label);
+      return anahtarlar.some((anahtar) => label.includes(anahtar));
+    })?.value;
+  const veriDagitimYatirimci = dagitimOzetDegeri([
+    "dagitim yapilan yatirimci",
+    "yatirimci",
+  ]);
+  const veriKisiBasiLot = dagitimOzetDegeri(["bireysel en fazla", "kisi basi"]);
+  const veriToplamDagitim = dagitimOzetDegeri([
+    "toplam dagitim",
+    "dagitilan pay",
+  ]);
+  const dagitimSonucuTamamlandi = Boolean(sonuc || veri?.dagitimSonuclari);
 
   const hisseGetirisi = sonuc ? getHalkaArzGetirisi(sonuc) : undefined;
   const marj =
@@ -362,6 +377,8 @@ export default function HalkaArzKarnesi({
       : undefined;
   const gerceklesenLotMetni = sonuc?.dagitimSonucu?.kisiBasiLot
     ? sonuc.dagitimSonucu.kisiBasiLot
+    : veriKisiBasiLot
+      ? veriKisiBasiLot
     : gerceklesenOrtalama !== undefined
       ? `Yaklaşık ${lotMetni(gerceklesenOrtalama, 1)} ortalama`
       : sonuc
@@ -408,12 +425,20 @@ export default function HalkaArzKarnesi({
     },
     {
       baslik: "Dağıtım Sonucu",
-      durum: sonuc ? "tamamlandi" : "bekleniyor",
-      deger: sonuc ? `${sonuc.katilimciSayisi} yatırımcı` : "Sonuç bekleniyor",
+      durum: dagitimSonucuTamamlandi ? "tamamlandi" : "bekleniyor",
+      deger: sonuc
+        ? `${sonuc.katilimciSayisi} yatırımcı`
+        : veriDagitimYatirimci
+          ? `${veriDagitimYatirimci} yatırımcı`
+          : "Sonuç bekleniyor",
       aciklama: sonuc
         ? sonuc.dagitimSonucu?.aciklama || sonuc.dagitimSekli
-        : "Katılımcı, dağıtılan lot ve kişi başı sonuç açıklandığında otomatik tamamlanacak.",
-      href: sonuc?.dagitimSonucu?.kaynakHref || dagitimHaberi?.href,
+        : veri?.dagitimSonuclari?.aciklama || veri?.ozet.dagitimYontemi ||
+          "Dağıtım sonucu açıklandığında otomatik tamamlanacak.",
+      href:
+        sonuc?.dagitimSonucu?.kaynakHref ||
+        dagitimHaberi?.href ||
+        veri?.dagitimSonuclari?.kaynakHref,
       linkEtiketi: "Dağıtım kaynağı",
     },
     {
@@ -698,11 +723,12 @@ export default function HalkaArzKarnesi({
               </p>
               <p className="mt-1 font-bold text-slate-900">
                 {sonuc?.dagitimSonucu?.toplamDagitilanLot ||
+                  veriToplamDagitim ||
                   (sonuc ? toplamPayMetni || "Kayıt bekleniyor" : "Sonuç bekleniyor")}
               </p>
-              {sonuc && (
+              {(sonuc || veriDagitimYatirimci) && (
                 <p className="mt-1 text-[11px] font-medium text-slate-500">
-                  {sonuc.katilimciSayisi} yatırımcı
+                  {sonuc?.katilimciSayisi || veriDagitimYatirimci} yatırımcı
                 </p>
               )}
             </div>

@@ -64,6 +64,28 @@ export type BilgiKarti = {
   value: string;
 };
 
+export type HalkaArzTablosu = {
+  basliklar: string[];
+  satirlar: string[][];
+  aciklama?: string;
+};
+
+export type HalkaArzDagitimSonuclari = {
+  baslik?: string;
+  aciklama?: string;
+  ozetKartlari?: BilgiKarti[];
+  tablo?: HalkaArzTablosu;
+  kaynakHref?: string;
+};
+
+export type HalkaArzTavanSenaryosu = {
+  baslik?: string;
+  aciklama?: string;
+  ozetKartlari?: BilgiKarti[];
+  tablo?: HalkaArzTablosu;
+  not?: string;
+};
+
 // Tahsisat satırı; ya hazır metin ("Yurt İçi Bireysel: %70") ya da yapılandırılmış
 // bir kayıt olabilir. İkisi de desteklenir.
 export type TahsisatGirdi =
@@ -124,6 +146,8 @@ export type HalkaArzVeri = {
   tahsisat: TahsisatGirdi[];
   // Tahsisat altında gösterilen sabit notlar (örn. "Bireysele Eşit Dağıtım.").
   tahsisatNotlari?: string[];
+  dagitimSonuclari?: HalkaArzDagitimSonuclari;
+  muhtemelTavanSerisi?: HalkaArzTavanSenaryosu;
 
   taahhutOzeti?: TaahhutOzeti;
 
