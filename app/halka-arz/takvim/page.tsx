@@ -3,9 +3,9 @@ import Link from "next/link";
 import { bekleyenDeger, halkaArzGetir } from "@/lib/halka-arz";
 
 const canonical = "https://www.hocaileborsa.com/halka-arz/takvim";
-const title = "Halka Arz Takvimi 2026 | Güncel Talep ve İşlem Tarihleri";
+const title = "Halka Arz Takvimi 2026 | Güncel Dağıtım ve İşlem Tarihleri";
 const description =
-  "Güncel halka arz takvimi: 20-26 Temmuz 2026 haftasında Metgün Enerji (METEN), Kardemir Çelik (KARCL), Masfen Enerji (MASFN) ve Albayrak Hazır Beton (ALBTN) talep topluyor.";
+  "Güncel halka arz takvimi: Masfen Enerji ve Kardemir Çelik Sanayi dağıtım sonuçları, Metgün Enerji ile Albayrak Hazır Beton işlem başlangıçları ve yeni onaylı izahname beklentileri.";
 
 export const metadata: Metadata = {
   title,
@@ -15,14 +15,16 @@ export const metadata: Metadata = {
     "halka arz takvimi",
     "halka arz takvimi 2026",
     "bu hafta halka arz",
-    "METEN halka arz",
-    "KARCL halka arz",
-    "MASFN halka arz",
-    "ALBTN halka arz",
+    "METEN işlem tarihi",
+    "ALBTN işlem tarihi",
+    "KARCL dağıtım sonuçları",
+    "MASFN dağıtım sonuçları",
+    "Quick Sigorta halka arz",
+    "Bewen Enerji halka arz",
     "Metgün Enerji halka arz",
+    "Albayrak Hazır Beton halka arz",
     "Kardemir Çelik halka arz",
     "Masfen Enerji halka arz",
-    "Albayrak Hazır Beton halka arz",
   ],
   openGraph: { title, description, url: canonical, type: "website" },
 };
@@ -33,13 +35,9 @@ type TakvimSirketi = {
   durum: string;
 };
 
-type TalepToplamaArzi = TakvimSirketi & {
-  talepSaatleri: string;
-};
-
 type TakvimSatiri = {
   slug: string;
-  href: string;
+  izahnameHref: string;
   sirketAdi: string;
   bistKodu: string;
   tarih: string;
@@ -47,50 +45,62 @@ type TakvimSatiri = {
   dagitim: string;
   pazar: string;
   durum: string;
-  talepSaatleri?: string;
 };
 
-const talepToplamaTakvimi: TalepToplamaArzi[] = [
+type IzahnameBekleyenSirket = {
+  sirketAdi: string;
+  durum: string;
+};
+
+const dagitimSonucuBeklenenTakvimi: TakvimSirketi[] = [
   {
-    slug: "metgun-enerji-yatirimlari",
-    tarih: "20-21-22 Temmuz 2026",
-    talepSaatleri: "09.00-17.00",
-    durum: "Talep topluyor",
+    slug: "masfen-enerji",
+    tarih: "",
+    durum: "Dağıtım sonuçları açıklanacak",
   },
   {
     slug: "kardemir-celik-sanayi",
-    tarih: "22-23-24 Temmuz 2026",
-    talepSaatleri: "09.00-17.00",
-    durum: "Talep toplayacak",
+    tarih: "",
+    durum: "Dağıtım sonuçları açıklanacak",
   },
+];
+
+const islemBaslangiciTakvimi: TakvimSirketi[] = [
   {
-    slug: "masfen-enerji",
-    tarih: "22-23-24 Temmuz 2026",
-    talepSaatleri: "09.00-17.00",
-    durum: "Talep toplayacak",
+    slug: "metgun-enerji-yatirimlari",
+    tarih: "28 Temmuz 2026 Salı",
+    durum: "İşleme başlayacak",
   },
   {
     slug: "albayrak-hazir-beton-san-ve-tic",
-    tarih: "22-23 Temmuz 2026",
-    talepSaatleri: "10.30-13.00",
-    durum: "Talep toplayacak",
+    tarih: "29 Temmuz 2026 Çarşamba",
+    durum: "İşleme başlayacak",
   },
 ];
 
-const islemBaslangiciTakvimi: TakvimSirketi[] = [];
+const izahnameYayiniBeklenenler: IzahnameBekleyenSirket[] = [
+  {
+    sirketAdi: "Quick Sigorta A.Ş.",
+    durum: "Onaylı izahnamenin yayımlanması bekleniyor",
+  },
+  {
+    sirketAdi: "Bewen Enerji A.Ş.",
+    durum: "Onaylı izahnamenin yayımlanması bekleniyor",
+  },
+];
 
 const aktifIzahnameSluglari = [
-  ...talepToplamaTakvimi.map((item) => item.slug),
+  ...dagitimSonucuBeklenenTakvimi.map((item) => item.slug),
   ...islemBaslangiciTakvimi.map((item) => item.slug),
 ];
 
-function takvimSatiri(item: TakvimSirketi | TalepToplamaArzi): TakvimSatiri | null {
+function takvimSatiri(item: TakvimSirketi): TakvimSatiri | null {
   const veri = halkaArzGetir(item.slug);
   if (!veri) return null;
 
   return {
     slug: item.slug,
-    href: `/halka-arz/onayli-izahnameler/${item.slug}`,
+    izahnameHref: `/halka-arz/onayli-izahnameler/${item.slug}`,
     sirketAdi: veri.sirketAdi,
     bistKodu: veri.bistKodu || veri.ozet.bistKodu || "—",
     tarih: item.tarih,
@@ -102,12 +112,11 @@ function takvimSatiri(item: TakvimSirketi | TalepToplamaArzi): TakvimSatiri | nu
       : veri.ozet.dagitimYontemi ?? "—",
     pazar: bekleyenDeger(veri.ozet.pazar) ? "—" : veri.ozet.pazar ?? "—",
     durum: item.durum,
-    talepSaatleri: "talepSaatleri" in item ? item.talepSaatleri : undefined,
   };
 }
 
-function talepToplayanArzlar(): TakvimSatiri[] {
-  return talepToplamaTakvimi
+function dagitimSonucuBeklenenArzlar(): TakvimSatiri[] {
+  return dagitimSonucuBeklenenTakvimi
     .map(takvimSatiri)
     .filter((x): x is TakvimSatiri => x !== null);
 }
@@ -125,26 +134,26 @@ function aktifOnayliIzahnameler(): TakvimSatiri[] {
 }
 
 export default function HalkaArzTakvimPage() {
-  const talepToplayanlar = talepToplayanArzlar();
+  const dagitimSonucuBeklenenler = dagitimSonucuBeklenenArzlar();
   const islemeBaslayacaklar = islemeBaslayacakArzlar();
   const aktifIzahnameler = aktifOnayliIzahnameler();
   const aktifHisseSayisi = new Set(aktifIzahnameSluglari).size;
 
   const faqItems = [
     {
-      soru: "Bu hafta hangi halka arzlar talep topluyor?",
+      soru: "Dağıtım sonuçları açıklanacak halka arzlar hangileri?",
       cevap:
-        "20-26 Temmuz 2026 haftasında Metgün Enerji (METEN), Kardemir Çelik (KARCL), Masfen Enerji (MASFN) ve Albayrak Hazır Beton (ALBTN) halka arzları talep toplama takviminde yer alıyor.",
+        "Masfen Enerji ve Kardemir Çelik Sanayi halka arzlarının dağıtım sonuçlarının açıklanması bekleniyor.",
     },
     {
       soru: "Bu hafta hangi halka arzlar işleme başlayacak?",
       cevap:
-        "Bu sayfada 20-26 Temmuz 2026 haftası için öne çıkan güncel başlık talep toplama süreçleridir. İşlem başlangıç tarihleri Borsa İstanbul duyurularıyla netleştikçe takvime eklenecektir.",
+        "Metgün Enerji Yatırımları 28 Temmuz 2026 Salı, Albayrak Hazır Beton ise 29 Temmuz 2026 Çarşamba günü Borsa İstanbul'da işleme başlayacak.",
     },
     {
-      soru: "SPK onaylı izahname bölümünde neden az şirket var?",
+      soru: "Onaylı izahnamesi beklenen halka arzlar hangileri?",
       cevap:
-        "Bu sayfada SPK onaylı izahnameler bölümü yalnızca aktif takvimde yer alan, yani talep toplayan veya işleme başlayacak halka arzlarla sınırlı tutulur.",
+        "Quick Sigorta ve Bewen Enerji halka arzlarına ait onaylı izahnamelerin yayımlanması bekleniyor.",
     },
     {
       soru: "Eski halka arzlar nereden takip edilir?",
@@ -195,30 +204,33 @@ export default function HalkaArzTakvimPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+
       <div className="mx-auto max-w-6xl">
         <header className="mb-6">
           <h1 className="text-2xl font-bold leading-tight text-slate-900 md:text-4xl">
             Halka Arz Takvimi 2026
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 md:text-base">
-            Bu sayfa yalnızca güncel halka arz akışını gösterir: bu hafta işleme
-            başlayacak şirketler, işlem tarihi açıklanması beklenen halka arzlar
-            ve bu hisselere ait onaylı izahname bağlantıları. 20-26 Temmuz 2026
-            haftasında odak Metgün Enerji, Kardemir Çelik, Masfen Enerji ve
-            Albayrak Hazır Beton talep toplama süreçleridir.
+            Güncel halka arz takviminde dağıtım sonuçları açıklanacak şirketler,
+            Borsa İstanbul&apos;da işleme başlayacak halka arzlar ve onaylı
+            izahnamesinin yayımlanması beklenen şirketler tek sayfada takip
+            edilebilir.
           </p>
         </header>
 
         <section className="mb-8 grid grid-cols-2 gap-3 md:grid-cols-4">
           {[
-            { etiket: "Talep Toplayan", deger: String(talepToplayanlar.length) },
+            {
+              etiket: "Dağıtım Sonucu Beklenen",
+              deger: String(dagitimSonucuBeklenenler.length),
+            },
             {
               etiket: "İşleme Başlayacak",
               deger: String(islemeBaslayacaklar.length),
             },
             {
-              etiket: "İlgili Onaylı İzahname",
-              deger: String(aktifIzahnameler.length),
+              etiket: "İzahname Yayını Beklenen",
+              deger: String(izahnameYayiniBeklenenler.length),
             },
             { etiket: "Aktif Hisse", deger: String(aktifHisseSayisi) },
           ].map((k) => (
@@ -237,51 +249,69 @@ export default function HalkaArzTakvimPage() {
         </section>
 
         <section className="mb-8 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-          <div className="border-b border-slate-200 bg-emerald-50 px-5 py-4">
-            <h2 className="text-lg font-bold text-emerald-900 md:text-xl">
-              Bu Hafta Talep Toplayan Halka Arzlar
+          <div className="border-b border-slate-200 bg-amber-50 px-5 py-4">
+            <h2 className="text-lg font-bold text-amber-900 md:text-xl">
+              Dağıtım Sonuçları Açıklanacak Halka Arzlar
             </h2>
           </div>
+
           <div className="overflow-x-auto">
-            <table className="min-w-[860px] w-full border-collapse text-left text-xs md:text-sm">
+            <table className="min-w-[820px] w-full border-collapse text-left text-xs md:text-sm">
               <thead>
                 <tr className="bg-slate-100 text-slate-600">
                   <th className="px-4 py-3 font-semibold">Hisse</th>
                   <th className="px-4 py-3 font-semibold">Şirket</th>
-                  <th className="px-4 py-3 font-semibold">Talep Toplama</th>
-                  <th className="px-4 py-3 font-semibold">Saat</th>
-                  <th className="px-4 py-3 font-semibold">Fiyat</th>
+                  <th className="px-4 py-3 font-semibold">Arz Fiyatı</th>
                   <th className="px-4 py-3 font-semibold">Dağıtım</th>
-                  <th className="px-4 py-3 font-semibold">Pazar</th>
+                  <th className="px-4 py-3 font-semibold">Durum</th>
+                  <th className="px-4 py-3 text-right font-semibold">
+                    İzahname
+                  </th>
                 </tr>
               </thead>
               <tbody>
-                {talepToplayanlar.map((item, i) => (
+                {dagitimSonucuBeklenenler.map((item, i) => (
                   <tr
                     key={item.slug}
                     className={i % 2 ? "bg-slate-50" : "bg-white"}
                   >
-                    <td className="px-4 py-3 font-bold text-slate-900">
-                      {item.bistKodu}
+                    <td className="px-4 py-3">
+                      <Link
+                        href={item.izahnameHref}
+                        prefetch={false}
+                        aria-label={`${item.bistKodu} halka arz detayına git`}
+                        className="inline-flex min-w-20 items-center justify-center gap-1 rounded-md border border-blue-200 bg-blue-50 px-3 py-2 font-bold text-blue-800 transition hover:border-blue-400 hover:bg-blue-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                      >
+                        {item.bistKodu}
+                        <span aria-hidden="true">→</span>
+                      </Link>
                     </td>
                     <td className="px-4 py-3 font-semibold text-slate-900">
                       <Link
-                        href={item.href}
+                        href={item.izahnameHref}
                         prefetch={false}
-                        className="hover:text-blue-600"
+                        className="underline decoration-slate-300 underline-offset-4 transition hover:text-blue-700 hover:decoration-blue-500"
                       >
                         {item.sirketAdi}
                       </Link>
                     </td>
-                    <td className="px-4 py-3 font-semibold text-emerald-800">
-                      {item.tarih}
-                    </td>
-                    <td className="px-4 py-3 text-slate-700">
-                      {item.talepSaatleri}
-                    </td>
                     <td className="px-4 py-3 text-slate-700">{item.fiyat}</td>
-                    <td className="px-4 py-3 text-slate-700">{item.dagitim}</td>
-                    <td className="px-4 py-3 text-slate-700">{item.pazar}</td>
+                    <td className="px-4 py-3 text-slate-700">
+                      {item.dagitim}
+                    </td>
+                    <td className="px-4 py-3 font-semibold text-amber-800">
+                      {item.durum}
+                    </td>
+                    <td className="px-4 py-3 text-right">
+                      <Link
+                        href={item.izahnameHref}
+                        prefetch={false}
+                        className="inline-flex items-center gap-1 whitespace-nowrap rounded-md border border-slate-300 bg-white px-3 py-2 font-semibold text-slate-700 transition hover:border-blue-400 hover:text-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                      >
+                        Onaylı izahname
+                        <span aria-hidden="true">→</span>
+                      </Link>
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -295,8 +325,9 @@ export default function HalkaArzTakvimPage() {
               İşleme Başlayacak Halka Arzlar
             </h2>
           </div>
+
           <div className="overflow-x-auto">
-            <table className="min-w-[760px] w-full border-collapse text-left text-xs md:text-sm">
+            <table className="min-w-[900px] w-full border-collapse text-left text-xs md:text-sm">
               <thead>
                 <tr className="bg-slate-100 text-slate-600">
                   <th className="px-4 py-3 font-semibold">Hisse</th>
@@ -304,45 +335,88 @@ export default function HalkaArzTakvimPage() {
                   <th className="px-4 py-3 font-semibold">İşlem Tarihi</th>
                   <th className="px-4 py-3 font-semibold">Arz Fiyatı</th>
                   <th className="px-4 py-3 font-semibold">Pazar</th>
+                  <th className="px-4 py-3 text-right font-semibold">
+                    İzahname
+                  </th>
                 </tr>
               </thead>
               <tbody>
-                {islemeBaslayacaklar.length > 0 ? (
-                  islemeBaslayacaklar.map((item, i) => (
-                    <tr
-                      key={item.slug}
-                      className={i % 2 ? "bg-slate-50" : "bg-white"}
-                    >
-                      <td className="px-4 py-3 font-bold text-slate-900">
+                {islemeBaslayacaklar.map((item, i) => (
+                  <tr
+                    key={item.slug}
+                    className={i % 2 ? "bg-slate-50" : "bg-white"}
+                  >
+                    <td className="px-4 py-3">
+                      <Link
+                        href={item.izahnameHref}
+                        prefetch={false}
+                        aria-label={`${item.bistKodu} halka arz detayına git`}
+                        className="inline-flex min-w-20 items-center justify-center gap-1 rounded-md border border-blue-200 bg-blue-50 px-3 py-2 font-bold text-blue-800 transition hover:border-blue-400 hover:bg-blue-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                      >
                         {item.bistKodu}
-                      </td>
-                      <td className="px-4 py-3 font-semibold text-slate-900">
-                        <Link
-                          href={item.href}
-                          prefetch={false}
-                          className="hover:text-blue-600"
-                        >
-                          {item.sirketAdi}
-                        </Link>
-                      </td>
-                      <td className="px-4 py-3 font-semibold text-cyan-800">
-                        {item.tarih}
-                      </td>
-                      <td className="px-4 py-3 text-slate-700">{item.fiyat}</td>
-                      <td className="px-4 py-3 text-slate-700">{item.pazar}</td>
-                    </tr>
-                  ))
-                ) : (
-                  <tr>
-                    <td
-                      colSpan={5}
-                      className="bg-white px-4 py-5 text-sm font-medium text-slate-600"
-                    >
-                      Bu hafta için işlem başlangıcı tarihi açıklanan yeni halka
-                      arz bulunmuyor.
+                        <span aria-hidden="true">→</span>
+                      </Link>
+                    </td>
+                    <td className="px-4 py-3 font-semibold text-slate-900">
+                      <Link
+                        href={item.izahnameHref}
+                        prefetch={false}
+                        className="underline decoration-slate-300 underline-offset-4 transition hover:text-blue-700 hover:decoration-blue-500"
+                      >
+                        {item.sirketAdi}
+                      </Link>
+                    </td>
+                    <td className="px-4 py-3 font-semibold text-cyan-800">
+                      {item.tarih}
+                    </td>
+                    <td className="px-4 py-3 text-slate-700">{item.fiyat}</td>
+                    <td className="px-4 py-3 text-slate-700">{item.pazar}</td>
+                    <td className="px-4 py-3 text-right">
+                      <Link
+                        href={item.izahnameHref}
+                        prefetch={false}
+                        className="inline-flex items-center gap-1 whitespace-nowrap rounded-md border border-slate-300 bg-white px-3 py-2 font-semibold text-slate-700 transition hover:border-blue-400 hover:text-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                      >
+                        Onaylı izahname
+                        <span aria-hidden="true">→</span>
+                      </Link>
                     </td>
                   </tr>
-                )}
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section className="mb-8 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+          <div className="border-b border-slate-200 bg-violet-50 px-5 py-4">
+            <h2 className="text-lg font-bold text-violet-900 md:text-xl">
+              Onaylı İzahnamesinin Yayımlanması Beklenen Halka Arzlar
+            </h2>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="min-w-[620px] w-full border-collapse text-left text-xs md:text-sm">
+              <thead>
+                <tr className="bg-slate-100 text-slate-600">
+                  <th className="px-4 py-3 font-semibold">Şirket</th>
+                  <th className="px-4 py-3 font-semibold">Durum</th>
+                </tr>
+              </thead>
+              <tbody>
+                {izahnameYayiniBeklenenler.map((item, i) => (
+                  <tr
+                    key={item.sirketAdi}
+                    className={i % 2 ? "bg-slate-50" : "bg-white"}
+                  >
+                    <td className="px-4 py-3 font-semibold text-slate-900">
+                      {item.sirketAdi}
+                    </td>
+                    <td className="px-4 py-3 font-semibold text-violet-800">
+                      {item.durum}
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
@@ -355,8 +429,8 @@ export default function HalkaArzTakvimPage() {
                 Aktif Takvimdeki SPK Onaylı İzahnameler
               </h2>
               <p className="mt-1 text-sm leading-6 text-blue-900/80">
-                Bu bölüm yalnızca yukarıdaki talep toplama veya işlem başlangıcı
-                tablolarında yer alan şirketleri gösterir.
+                Bu bölüm dağıtım sonucu beklenen veya işleme başlayacak halka
+                arzların onaylı izahname sayfalarını gösterir.
               </p>
             </div>
             <Link
@@ -367,15 +441,20 @@ export default function HalkaArzTakvimPage() {
               Tüm onaylı izahnameler →
             </Link>
           </div>
+
           <div className="grid gap-2 p-5 sm:grid-cols-2 lg:grid-cols-3">
             {aktifIzahnameler.map((item) => (
               <Link
                 key={item.slug}
-                href={item.href}
+                href={item.izahnameHref}
                 prefetch={false}
                 className="rounded-xl border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-800 transition hover:border-blue-300 hover:text-blue-700"
               >
-                {item.bistKodu} · {item.sirketAdi}
+                <span className="block text-blue-700">{item.bistKodu}</span>
+                <span className="mt-1 block">{item.sirketAdi}</span>
+                <span className="mt-2 block text-xs text-slate-500">
+                  Onaylı izahnameyi incele →
+                </span>
               </Link>
             ))}
           </div>
@@ -385,6 +464,7 @@ export default function HalkaArzTakvimPage() {
           <h2 className="mb-4 text-xl font-bold text-slate-900 md:text-2xl">
             Sık Sorulan Sorular
           </h2>
+
           <div className="space-y-5">
             {faqItems.map((item) => (
               <div key={item.soru}>
@@ -401,9 +481,9 @@ export default function HalkaArzTakvimPage() {
 
         <p className="mb-6 rounded-2xl border border-slate-200 bg-slate-50 px-4 py-3 text-xs leading-6 text-slate-500 md:text-sm">
           Bu sayfadaki bilgiler aktif halka arz takvimini pratik şekilde takip
-          etmek için hazırlanmıştır; yatırım tavsiyesi değildir. Tarih, saat ve
-          koşullar şirketlerin KAP, Borsa İstanbul ve izahname duyurularıyla
-          birlikte kontrol edilmelidir.
+          etmek için hazırlanmıştır; yatırım tavsiyesi değildir. Tarih, işlem
+          başlangıcı ve halka arz koşulları şirketlerin KAP, Borsa İstanbul ve
+          izahname duyurularıyla birlikte kontrol edilmelidir.
         </p>
       </div>
     </main>
