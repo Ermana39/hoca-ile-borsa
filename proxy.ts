@@ -1,7 +1,17 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 
-const DEFAULT_BLOCKED_COUNTRIES = ["CN", "HK", "MO", "SG"];
+const DEFAULT_BLOCKED_COUNTRIES = [
+  "CN",
+  "HK",
+  "MO",
+  "SG",
+  "RU",
+  "IN",
+  "PK",
+  "BR",
+  "MX",
+];
 const SEARCH_BOT_ALLOWLIST =
   /googlebot|bingbot|slurp|duckduckbot|yandexbot|applebot|adsbot-google|mediapartners-google/i;
 
