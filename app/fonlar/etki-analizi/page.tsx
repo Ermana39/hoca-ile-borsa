@@ -8,9 +8,10 @@ import {
 
 const siteUrl = "https://www.hocaileborsa.com";
 const canonical = `${siteUrl}/fonlar/etki-analizi`;
-const title = "Fon Etki Analizi: TLY, PHE, PBR ve DFI Fiyat Tahmini";
+const title =
+  "Fonların Günlük Portföy Etkisi: TLY, PHE, PBR, DFI ve BMU";
 const description =
-  "TLY, PHE, PBR ve DFI fonlarının güncel portföy etkisini karşılaştırın. Fon ağırlıkları ve BIST kapanışlarıyla hesaplanan tahmini fiyat değişimini, veri kapsamını ve hesaplama yöntemini inceleyin.";
+  "TLY, PHE, PBR, DFI ve BMU fonlarının güncel portföy etkisini karşılaştırın. Tahmini fiyat değişimini, yatırımcı hareketini, para akışını ve veri kapsamını inceleyin.";
 const image = `${siteUrl}/2026-fon-etki-analizi-tly-phe-pbr-dfi.webp`;
 
 export const metadata: Metadata = {
@@ -26,6 +27,7 @@ export const metadata: Metadata = {
     "PHE fonu",
     "PBR fonu",
     "DFI fonu",
+    "BMU fonu",
     "TEFAS fon fiyatı",
   ],
   openGraph: {
@@ -73,6 +75,8 @@ const sonDegerlendirmeler = newsItems
       item.href.includes("fon-etki-analizi-tly-phe-pbr-dfi")
   )
   .slice(0, 4);
+
+const karsilastirmaFonlari = fonEtkiOzetleri;
 
 function fmt(value: number, digits = 2) {
   return new Intl.NumberFormat("tr-TR", {
@@ -136,7 +140,7 @@ const jsonLd = {
     {
       "@type": "Dataset",
       "@id": `${canonical}#dataset`,
-      name: "TLY, PHE, PBR ve DFI fon kapanış etki karşılaştırması",
+      name: "TLY, PHE, PBR, DFI ve BMU fon kapanış etki karşılaştırması",
       description,
       url: canonical,
       inLanguage: "tr-TR",
@@ -155,9 +159,9 @@ const jsonLd = {
     {
       "@type": "ItemList",
       "@id": `${canonical}#fon-listesi`,
-      name: "Güncel fon etki analizleri",
-      numberOfItems: fonEtkiOzetleri.length,
-      itemListElement: fonEtkiOzetleri.map((fon, index) => ({
+      name: "İzlenen fonların günlük portföy etkileri",
+      numberOfItems: karsilastirmaFonlari.length,
+      itemListElement: karsilastirmaFonlari.map((fon, index) => ({
         "@type": "ListItem",
         position: index + 1,
         name: `${fon.kod} ${fon.fonAdi}`,
@@ -187,7 +191,7 @@ const jsonLd = {
         {
           "@type": "ListItem",
           position: 3,
-          name: "Fon Etki Analizi",
+          name: "Fonların Günlük Portföy Etkisi",
           item: canonical,
         },
       ],
@@ -222,20 +226,23 @@ export default function FonEtkiAnaliziPage() {
             Fonlar
           </Link>
           <span className="text-slate-300">/</span>
-          <span className="font-medium text-slate-700">Fon Etki Analizi</span>
+          <span className="font-medium text-slate-700">
+            Fonların Günlük Portföy Etkisi
+          </span>
         </nav>
 
         <header className="max-w-4xl">
           <p className="text-sm font-semibold text-blue-700">Günlük karşılaştırma</p>
           <h1 className="mt-2 text-2xl font-bold leading-tight text-slate-950 md:text-4xl">
-            Fon Etki Analizi: TLY, PHE, PBR ve DFI Fiyat Tahmini
+            Fonların Günlük Portföy Etkisi
           </h1>
           <p className="mt-4 text-base leading-8 text-slate-600">
             Fonların son açıklanan portföy dağılımları ile Borsa İstanbul günlük
             kapanış değişimleri birleştirilerek, açıklanacak fon fiyatına tahmini
-            etki hesaplanır. Bu merkez sayfa dört fonun güncel görünümünü aynı
-            yöntemle karşılaştırır; ayrıntılı sayfalarda hisse bazlı katkılar,
-            yatırımcı değişimi ve para akışı yer alır.
+            etki hesaplanır. Bu merkez sayfa TLY, PHE, PBR, DFI ve BMU fonlarını
+            aynı yöntemle karşılaştırır. Ayrıntılı sayfalarda hisse bazlı
+            katkılar, tarihsel yatırımcı değişimi, fon büyüklüğü ve para akışı
+            grafikleri yer alır.
           </p>
           <div className="mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm text-slate-500">
             <p>
@@ -260,8 +267,11 @@ export default function FonEtkiAnaliziPage() {
           <div className="p-5 sm:border-r sm:border-slate-200">
             <dt className="text-xs font-semibold uppercase text-slate-500">İzlenen fon</dt>
             <dd className="mt-2 text-2xl font-bold text-slate-950">
-              {fonEtkiOzetleri.length}
+              {karsilastirmaFonlari.length}
             </dd>
+            <p className="mt-1 text-xs text-slate-500">
+              5 güncel analiz
+            </p>
           </div>
           <div className="border-t border-slate-200 p-5 sm:border-r sm:border-t-0">
             <dt className="text-xs font-semibold uppercase text-slate-500">
@@ -284,7 +294,7 @@ export default function FonEtkiAnaliziPage() {
         <section className="mt-10" aria-labelledby="guncel-karsilastirma">
           <div className="max-w-3xl">
             <h2 id="guncel-karsilastirma" className="text-xl font-bold text-slate-950 md:text-2xl">
-              Güncel Fon Etki Karşılaştırması
+              Güncel Portföy Etkisi Karşılaştırması
             </h2>
             <p className="mt-2 text-sm leading-7 text-slate-600 md:text-base">
               Pozitif değer, kapsanan portföyün fon fiyatını yukarı; negatif değer
@@ -305,10 +315,21 @@ export default function FonEtkiAnaliziPage() {
                 </tr>
               </thead>
               <tbody>
-                {fonEtkiOzetleri.map((fon, index) => (
-                  <tr key={fon.slug} className={index % 2 === 0 ? "bg-white" : "bg-slate-50"}>
+                {karsilastirmaFonlari.map((fon, index) => (
+                  <tr
+                    key={fon.slug}
+                    className={`${index % 2 === 0 ? "bg-white" : "bg-slate-50"} transition hover:bg-blue-50/60`}
+                  >
                     <td className="border-t border-slate-200 px-4 py-4">
-                      <p className="font-bold text-slate-950">{fon.kod}</p>
+                      <Link
+                        href={`/fonlar/etki-analizi/${fon.slug}`}
+                        prefetch={false}
+                        aria-label={`${fon.kod} fon sayfasını aç`}
+                        className="inline-flex min-w-16 items-center justify-center gap-1 rounded-md border border-blue-200 bg-blue-50 px-3 py-2 font-extrabold text-blue-800 shadow-sm transition hover:border-blue-600 hover:bg-blue-700 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
+                      >
+                        {fon.kod}
+                        <span aria-hidden="true">→</span>
+                      </Link>
                       <p className="mt-1 max-w-sm text-xs leading-5 text-slate-500">
                         {fon.fonAdi}
                       </p>
@@ -316,23 +337,27 @@ export default function FonEtkiAnaliziPage() {
                     <td className="border-t border-slate-200 px-4 py-4 text-slate-600">
                       {fon.fonTuru}
                     </td>
-                    <td
-                      className={`border-t border-slate-200 px-4 py-4 text-right text-base font-bold ${effectClass(
-                        fon.toplamEtki
-                      )}`}
-                    >
-                      {signedPercent(fon.toplamEtki)}
+                    <td className="border-t border-slate-200 px-4 py-4 text-right text-base font-bold">
+                      <span className={effectClass(fon.toplamEtki)}>
+                        {signedPercent(fon.toplamEtki)}
+                      </span>
                     </td>
                     <td className="border-t border-slate-200 px-4 py-4 text-right font-semibold text-slate-700">
                       %{fmt(fon.toplamFonOrani)}
+                      {fon.kaldiracli ? (
+                        <span className="ml-1 text-xs font-medium text-amber-700">
+                          brüt
+                        </span>
+                      ) : null}
                     </td>
                     <td className="border-t border-slate-200 px-4 py-4 text-right">
                       <Link
                         href={`/fonlar/etki-analizi/${fon.slug}`}
                         prefetch={false}
-                        className="font-semibold text-blue-700 hover:underline"
+                        className="inline-flex items-center justify-center gap-1 rounded-md border border-slate-300 bg-white px-3 py-2 font-semibold text-slate-700 shadow-sm transition hover:border-blue-600 hover:text-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
                       >
-                        İncele →
+                        İncele
+                        <span aria-hidden="true">→</span>
                       </Link>
                     </td>
                   </tr>
@@ -341,8 +366,9 @@ export default function FonEtkiAnaliziPage() {
             </table>
           </div>
           <p className="mt-3 text-xs leading-6 text-slate-500 md:text-sm">
-            Karşılaştırma {fonEtkiSonGuncelleme.label} kapanış verilerini temel alır.
-            Sonuçlar kesin fon getirisi değildir.
+            Karşılaştırma {fonEtkiSonGuncelleme.label}{" "}kapanış verilerini temel alır.
+            BMU&apos;nun %100 üzerindeki oranı kaldıraçlı yapının brüt pozisyon
+            büyüklüğünü gösterir. Sonuçlar kesin fon getirisi değildir.
           </p>
         </section>
 

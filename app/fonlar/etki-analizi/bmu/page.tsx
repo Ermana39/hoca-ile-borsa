@@ -5,11 +5,11 @@ import {
   fonEtkiSonGuncelleme,
 } from "../_data/fonEtkiOzetleri";
 
-export const metadata = fonEtkiMetadataOlustur("phe");
+export const metadata = fonEtkiMetadataOlustur("bmu");
 
-const veri = fonEtkiSayfaVerisiGetir("phe");
+const veri = fonEtkiSayfaVerisiGetir("bmu");
 
-export default function PheEtkiAnaliziPage() {
+export default function BmuEtkiAnaliziPage() {
   return (
     <FonEtkiSeoPage
       {...veri}

@@ -3,8 +3,11 @@ import { getHisseIcerikHedefi } from "@/lib/hisse-icerik-hedefi";
 import {
   fonEtkiOzetleri,
   fonEtkiYuzdeMetni,
+  type FonTarihselVeri,
 } from "../_data/fonEtkiOzetleri";
 import FonEtkiTable, { type FonEtkiRow } from "./FonEtkiTable";
+import FonEtkiKatkiGrafigi from "./FonEtkiKatkiGrafigi";
+import FonTarihselGrafikler from "./FonTarihselGrafikler";
 
 const siteUrl = "https://www.hocaileborsa.com";
 
@@ -17,8 +20,9 @@ export type FonEtkiSeoPageProps = {
   rows: FonEtkiRow[];
   toplamFonOrani: number;
   toplamEtki: number;
+  kaldiracli: boolean;
   sonGuncelleme: string;
-  degisimVerisi: FonDegisimVerisi;
+  tarihselVeriler: FonTarihselVeri[];
 };
 
 export type DegisimSatiri = {
@@ -33,6 +37,68 @@ export type FonDegisimVerisi = {
   paraGirisiCikisi: number;
   yorum: string;
 };
+
+function degisimVerisiOlustur({
+  kod,
+  rows,
+  toplamEtki,
+  tarihselVeriler,
+}: Pick<
+  FonEtkiSeoPageProps,
+  "kod" | "rows" | "toplamEtki" | "tarihselVeriler"
+>): FonDegisimVerisi {
+  const bugun = tarihselVeriler.at(-1);
+  const dun = tarihselVeriler.at(-2);
+
+  if (!bugun || !dun) {
+    throw new Error(`${kod}: değişim hesabı için en az iki tarihsel kayıt gerekli.`);
+  }
+
+  const yatirimciDegisimi = bugun.yatirimciSayisi - dun.yatirimciSayisi;
+  const fonDegerDegisimi = bugun.fonToplamDeger - dun.fonToplamDeger;
+  const enGucluPozitif = rows
+    .filter((row) => row.etki > 0)
+    .sort((a, b) => b.etki - a.etki)[0];
+  const enGucluNegatif = rows
+    .filter((row) => row.etki < 0)
+    .sort((a, b) => a.etki - b.etki)[0];
+  const pozitifVurgu = enGucluPozitif
+    ? `${enGucluPozitif.sembol} katkısı`
+    : "pozitif katkı oluşmaması";
+  const negatifVurgu = enGucluNegatif
+    ? `${enGucluNegatif.sembol} baskısı`
+    : "negatif baskı görülmemesi";
+  const akim = bugun.paraGirisiCikisi >= 0 ? "net para girişi" : "net para çıkışı";
+  const yatirimciYonu =
+    yatirimciDegisimi >= 0 ? "yatırımcı sayısı arttı" : "yatırımcı sayısı azaldı";
+  const fonDegerYonu =
+    fonDegerDegisimi >= 0 ? "fon toplam değeri büyüdü" : "fon toplam değeri geriledi";
+  const etkiYonu =
+    toplamEtki >= 0 ? "yukarı yönlü" : "aşağı yönlü";
+
+  const ozelYorumlar: Record<string, string> = {
+    TLY: `${kod}'de ${akim} görülürken ${yatirimciYonu} ve ${fonDegerYonu}. Portföy hesabının ${etkiYonu} kalmasında ${negatifVurgu} ile ${pozitifVurgu} arasındaki denge belirleyici oldu. Yatırımcı adedi ile fondaki para hareketinin farklı yönlere gidebilmesi, hesap sayısının tek başına fon talebinin büyüklüğünü anlatmadığını gösteriyor.`,
+    PHE: `${kod} tarafında ${akim}, ${yatirimciYonu} ve ${fonDegerYonu}. Tahmini etkinin ${etkiYonu} oluşmasında ${negatifVurgu} öne çıkarken ${pozitifVurgu} karşı tarafta belirleyici oldu. Fon ilgisi ve portföy etkisi aynı gün içinde birlikte zayıfladığında takip edilmesi gereken risk daha görünür hale geliyor.`,
+    PBR: `${kod}'de ${akim} ile birlikte ${yatirimciYonu}; buna karşılık ${fonDegerYonu}. ${negatifVurgu} fon fiyatını aşağı çeken tarafta öne çıkarken ${pozitifVurgu} dengeleyici tarafta belirleyici oldu. Para akışı, yatırımcı adedi ve fon büyüklüğünün aynı yönde hareket etmemesi, günlük değişimin bileşenlerini ayrı ayrı okumayı gerektiriyor.`,
+    DFI: `${kod}'ye ${akim} eşlik ederken ${yatirimciYonu} ve ${fonDegerYonu}. ${pozitifVurgu} yukarı yönlü tarafın, ${negatifVurgu} ise aşağı yönlü tarafın merkezinde yer aldı. Üç ana göstergenin aynı yönde ilerlemesi güçlü bir gün sonu resmi üretse de yoğun portföy yapısı tek hisse hareketlerine duyarlılığı artırıyor.`,
+    BMU: `${kod}'da ${akim} gerçekleşirken ${yatirimciYonu} ve ${fonDegerYonu}. Buna rağmen hisse portföyünden hesaplanan etki ${etkiYonu}; ${negatifVurgu} belirginleşti. Brüt pozisyon oranının yüzde 100'ü aşması kaldıraç etkisini büyüttüğü için olumlu para akışı, ertesi gün fon fiyatındaki hisse etkisini tek başına dengelemek zorunda değildir.`,
+  };
+
+  return {
+    yatirimciSayisi: {
+      dun: dun.yatirimciSayisi,
+      bugun: bugun.yatirimciSayisi,
+      degisim: yatirimciDegisimi,
+    },
+    fonToplamDeger: {
+      dun: dun.fonToplamDeger,
+      bugun: bugun.fonToplamDeger,
+      degisim: fonDegerDegisimi,
+    },
+    paraGirisiCikisi: bugun.paraGirisiCikisi,
+    yorum: ozelYorumlar[kod] ?? `${kod} için güncel fon verileri karşılaştırıldı.`,
+  };
+}
 
 function fmt(value: number, digits = 2) {
   return new Intl.NumberFormat("tr-TR", {
@@ -81,11 +147,15 @@ function changeRate({ dun, degisim }: DegisimSatiri) {
 }
 
 function getMostPositive(rows: FonEtkiRow[]) {
-  return rows.reduce((best, row) => (row.etki > best.etki ? row : best), rows[0]);
+  return rows
+    .filter((row) => row.etki > 0)
+    .sort((a, b) => b.etki - a.etki)[0];
 }
 
 function getMostNegative(rows: FonEtkiRow[]) {
-  return rows.reduce((worst, row) => (row.etki < worst.etki ? row : worst), rows[0]);
+  return rows
+    .filter((row) => row.etki < 0)
+    .sort((a, b) => a.etki - b.etki)[0];
 }
 
 function yogunlasmaYorumu(ilkUcAgirligi: number): string {
@@ -280,9 +350,16 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
     rows,
     toplamFonOrani,
     toplamEtki,
+    kaldiracli,
     sonGuncelleme,
-    degisimVerisi,
+    tarihselVeriler,
   } = props;
+  const degisimVerisi = degisimVerisiOlustur({
+    kod,
+    rows,
+    toplamEtki,
+    tarihselVeriler,
+  });
   const mostPositive = getMostPositive(rows);
   const mostNegative = getMostNegative(rows);
   const agirlikSirali = [...rows].sort((a, b) => b.fonOrani - a.fonOrani);
@@ -296,6 +373,7 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
   const digerFonlar = fonEtkiOzetleri.filter((fon) => fon.slug !== slug);
   const yatirimciDegisimOrani = changeRate(degisimVerisi.yatirimciSayisi);
   const fonDegerDegisimOrani = changeRate(degisimVerisi.fonToplamDeger);
+  const yatirimciPozitif = degisimVerisi.yatirimciSayisi.degisim >= 0;
   const fonDegerPozitif = degisimVerisi.fonToplamDeger.degisim >= 0;
   const paraAkisiPozitif = degisimVerisi.paraGirisiCikisi >= 0;
 
@@ -320,7 +398,7 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
           </Link>
           <span className="text-slate-300">/</span>
           <Link href="/fonlar/etki-analizi" prefetch={false} className="transition hover:text-blue-600">
-            Fon Kapanış Etki Analizi
+            Günlük Portföy Etkisi
           </Link>
           <span className="text-slate-300">/</span>
           <span className="font-medium text-slate-700">{kod}</span>
@@ -388,7 +466,9 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
                 En güçlü pozitif etki
               </dt>
               <dd className="mt-2 text-lg font-bold text-green-700">
-                {mostPositive.sembol} {signedPercent(mostPositive.etki, 4)}
+                {mostPositive
+                  ? `${mostPositive.sembol} ${signedPercent(mostPositive.etki, 4)}`
+                  : "Pozitif katkı yok"}
               </dd>
             </div>
             <div className="rounded-xl bg-slate-50 p-4">
@@ -396,12 +476,14 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
                 En güçlü negatif etki
               </dt>
               <dd className="mt-2 text-lg font-bold text-red-700">
-                {mostNegative.sembol} {signedPercent(mostNegative.etki, 4)}
+                {mostNegative
+                  ? `${mostNegative.sembol} ${signedPercent(mostNegative.etki, 4)}`
+                  : "Negatif katkı yok"}
               </dd>
             </div>
             <div className="rounded-xl bg-slate-50 p-4">
               <dt className="text-xs font-semibold uppercase text-slate-500">
-                Veri kapsamı
+                {kaldiracli ? "Brüt pozisyon oranı" : "Veri kapsamı"}
               </dt>
               <dd className="mt-2 text-lg font-bold text-slate-900">
                 %{fmt(toplamFonOrani)}
@@ -409,12 +491,23 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
             </div>
           </dl>
 
+          {kaldiracli ? (
+            <p className="mt-4 border-l-4 border-amber-500 bg-amber-50 px-4 py-3 text-sm leading-6 text-amber-950">
+              {kod}{" "}fonunda toplam oranın %100&apos;ü aşması kaldıraçlı
+              pozisyonlardan kaynaklanan brüt portföy büyüklüğünü gösterir; veri
+              hatası değildir. Tahmini etki bu brüt pozisyonlar üzerinden
+              hesaplanır.
+            </p>
+          ) : null}
+
           <p className="mt-4 text-sm leading-6 text-slate-500">
             Son güncelleme: {sonGuncelleme}. Veri yorumu; fon portföy ağırlıkları,
             BIST kapanış marjları ve TEFAS&apos;ta açıklanacak fon fiyatı
             ilişkisi dikkate alınarak hazırlanır.
           </p>
         </section>
+
+        <FonEtkiKatkiGrafigi kod={kod} rows={rows} />
 
         <FonEtkiTable rows={rows} toplamFonOrani={toplamFonOrani} toplamEtki={toplamEtki} />
 
@@ -452,8 +545,9 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
           <p className="mt-5 text-sm leading-7 text-slate-600 md:text-base">
             Portföyde en yüksek ağırlık %{fmt(enYuksekAgirlikli.fonOrani)} ile{" "}
             <strong className="text-slate-900">{enYuksekAgirlikli.sembol}</strong>
-            {" "}varlığındadır. İlk üç varlığın toplam ağırlığı %{fmt(ilkUcAgirligi)}
-            seviyesindedir. {yogunlasmaYorumu(ilkUcAgirligi)}
+            {" "}varlığındadır. İlk üç varlığın toplam ağırlığı{" "}
+            <strong className="text-slate-900">%{fmt(ilkUcAgirligi)}</strong>
+            {" "}seviyesindedir. {yogunlasmaYorumu(ilkUcAgirligi)}
           </p>
         </section>
 
@@ -475,7 +569,11 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
               <dt className="text-xs font-semibold uppercase text-slate-500">
                 Yatırımcı sayısı değişimi
               </dt>
-              <dd className="mt-2 text-2xl font-bold text-emerald-700">
+              <dd
+                className={`mt-2 text-2xl font-bold ${
+                  yatirimciPozitif ? "text-emerald-700" : "text-red-700"
+                }`}
+              >
                 {signedNumber(degisimVerisi.yatirimciSayisi.degisim)}
               </dd>
               <dd className="mt-1 text-sm text-slate-600">
@@ -518,6 +616,8 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
             </div>
           </dl>
 
+          <FonTarihselGrafikler kod={kod} veriler={tarihselVeriler} />
+
           <div className="mt-5 overflow-x-auto rounded-xl border border-slate-200">
             <table className="min-w-[720px] w-full border-collapse text-left text-sm">
               <thead className="bg-slate-50 text-xs uppercase text-slate-500">
@@ -539,7 +639,11 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
                   <td className="px-4 py-3">
                     {fmtInteger(degisimVerisi.yatirimciSayisi.bugun)}
                   </td>
-                  <td className="px-4 py-3 font-semibold text-emerald-700">
+                  <td
+                    className={`px-4 py-3 font-semibold ${
+                      yatirimciPozitif ? "text-emerald-700" : "text-red-700"
+                    }`}
+                  >
                     {signedNumber(degisimVerisi.yatirimciSayisi.degisim)}
                   </td>
                 </tr>
@@ -645,10 +749,13 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
                 {kod} fonunu en çok hangi hisse etkiledi?
               </h3>
               <p>
-                Pozitif tarafta {mostPositive.sembol} hissesi {signedPercent(mostPositive.etki, 4)}{" "}
-                etkiyle öne çıkarken, negatif tarafta {mostNegative.sembol} hissesi{" "}
-                {signedPercent(mostNegative.etki, 4)} etkiyle fon performansını
-                aşağı çeken ana kalem olmuştur.
+                {mostPositive && mostNegative
+                  ? `Pozitif tarafta ${mostPositive.sembol} hissesi ${signedPercent(mostPositive.etki, 4)} etkiyle öne çıkarken, negatif tarafta ${mostNegative.sembol} hissesi ${signedPercent(mostNegative.etki, 4)} etkiyle fon performansını aşağı çeken ana kalem olmuştur.`
+                  : mostNegative
+                    ? `Pozitif katkı oluşmazken, ${mostNegative.sembol} hissesi ${signedPercent(mostNegative.etki, 4)} ile aşağı yönlü etkinin ana kalemi olmuştur.`
+                    : mostPositive
+                      ? `Negatif katkı oluşmazken, ${mostPositive.sembol} hissesi ${signedPercent(mostPositive.etki, 4)} ile yukarı yönlü etkinin ana kalemi olmuştur.`
+                      : "İzlenen pozisyonlarda pozitif veya negatif katkı oluşmamıştır."}
               </p>
             </div>
 

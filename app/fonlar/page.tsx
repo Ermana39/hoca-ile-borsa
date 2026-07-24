@@ -37,13 +37,13 @@ const fonKutulari = [
       "Fonların geçmiş dönem verilerini inceleyerek tarihsel performans, fiyat hareketi ve dönemsel değişimleri daha detaylı takip edebilirsiniz.",
   },
   {
-    title: "Fon Kapanış Etki Analizi",
-    desc: "TLY, PHE, PBR ve DFI fonlarının portföyündeki hisselerin kapanış marjına göre ertesi gün fiyatına etkisini inceleyin.",
+    title: "Fonların Günlük Portföy Etkisi",
+    desc: "Takip edilen fonların portföy hisselerinin ertesi gün fiyatına tahmini etkisini karşılaştırın.",
     href: "/fonlar/etki-analizi",
     icon: "fon-etki-analizi" as CategoryIconName,
     titleClassName: "text-[19px] md:text-[21px]",
     seoDescription:
-      "Fon portföyündeki hisselerin günlük kapanış marjlarını kullanarak fonun ertesi gün fiyatına olan tahmini etkisini hesaplı bir tablo üzerinden görüntüleyin.",
+      "TLY, PHE, PBR ve DFI fonlarının günlük portföy etkisini karşılaştırın; takip listesine eklenen BMU fonuna ve ayrıntılı analiz sayfalarına ulaşın.",
   },
 ];
 
