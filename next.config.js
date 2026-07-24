@@ -155,7 +155,9 @@ const eskiHaberRedirects = [
 
 // Eski kısa izahname slug'ları → güncel açıklayıcı slug'lar (GSC 404 örnekleri).
 const izahnameSlugRedirects = [
-  ["/halka-arz/taslak-izahnameler/quick", "/halka-arz/taslak-izahnameler/quick-sigorta"],
+  ["/halka-arz/taslak-izahnameler/quick", "/halka-arz/onayli-izahnameler/quick-sigorta"],
+  ["/halka-arz/taslak-izahnameler/quick-sigorta", "/halka-arz/onayli-izahnameler/quick-sigorta"],
+  ["/halka-arz/taslak-izahnameler/bewen-enerji", "/halka-arz/onayli-izahnameler/bewen-enerji"],
   ["/halka-arz/taslak-izahnameler/yes", "/halka-arz/taslak-izahnameler/yes-oto-kiralama-ve-turizm-yatirimlari"],
   ["/halka-arz/taslak-izahnameler/metgun", "/halka-arz/onayli-izahnameler/metgun-enerji-yatirimlari"],
   ["/halka-arz/taslak-izahnameler/biosys", "/halka-arz/taslak-izahnameler/biosys-biyomedikal-muhendislik-san-ve-tic"],
@@ -241,6 +243,7 @@ const nextConfig = {
       "./data/haberler/**/*.json",
     ],
     "/halka-arz/onayli-izahnameler/**": [
+      "./data/halka-arz/**/*.json",
       "./data/haberler/**/*.json",
       "./data/gunluk-ozet/**/*.json",
     ],

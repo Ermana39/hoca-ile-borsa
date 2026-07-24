@@ -42,10 +42,10 @@ const HALKA_ARZ_LINKLERI: {
     keywords: ["quick-sigorta"],
     items: [
       {
-        title: "Quick Sigorta taslak izahname sayfası",
-        href: "/halka-arz/taslak-izahnameler/quick-sigorta",
-        description: "Quick Sigorta halka arz başvuru sürecindeki temel bilgiler.",
-        type: "Taslak izahname",
+        title: "Quick Sigorta onaylı izahname sayfası",
+        href: "/halka-arz/onayli-izahnameler/quick-sigorta",
+        description: "Quick Sigorta halka arz fiyatı, pay yapısı ve fon kullanım bilgileri.",
+        type: "Onaylı izahname",
       },
     ],
   },
