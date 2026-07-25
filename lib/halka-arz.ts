@@ -86,6 +86,13 @@ export type HalkaArzTavanSenaryosu = {
   not?: string;
 };
 
+export type HalkaArzVideo = {
+  title: string;
+  description?: string;
+  videoId: string;
+  href?: string;
+};
+
 // Tahsisat satırı; ya hazır metin ("Yurt İçi Bireysel: %70") ya da yapılandırılmış
 // bir kayıt olabilir. İkisi de desteklenir.
 export type TahsisatGirdi =
@@ -148,6 +155,7 @@ export type HalkaArzVeri = {
   tahsisatNotlari?: string[];
   dagitimSonuclari?: HalkaArzDagitimSonuclari;
   muhtemelTavanSerisi?: HalkaArzTavanSenaryosu;
+  videolar?: HalkaArzVideo[];
 
   taahhutOzeti?: TaahhutOzeti;
 

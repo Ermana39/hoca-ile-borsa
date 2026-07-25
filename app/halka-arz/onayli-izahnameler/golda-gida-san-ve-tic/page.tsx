@@ -249,6 +249,142 @@ function Section({
 
 
 
+
+type TalepDagitimSatiri = {
+  kategori: string;
+  yatirimciSayisi: string;
+  planlananTahsisat: string;
+  gerceklesenTalep: string;
+  dagitilanPay: string;
+  dagitimOrani: string;
+  talepKati: string;
+};
+
+const talepDagitimSonuclari: TalepDagitimSatiri[] = [
+  {
+    kategori: "Yurt İçi Bireysel Yatırımcılar",
+    yatirimciSayisi: "748.056",
+    planlananTahsisat: "Tamamı eşit dağıtım",
+    gerceklesenTalep: "Toplam talebe dahil",
+    dagitilanPay: "87.313.096 Lot",
+    dagitimOrani: "%99,78",
+    talepKati: "2,20 kat toplam",
+  },
+  {
+    kategori: "Yurt İçi Kurumsal Yatırımcılar",
+    yatirimciSayisi: "25",
+    planlananTahsisat: "Tamamı eşit dağıtım",
+    gerceklesenTalep: "Toplam talebe dahil",
+    dagitilanPay: "2.745 Lot",
+    dagitimOrani: "%0,00",
+    talepKati: "2,20 kat toplam",
+  },
+  {
+    kategori: "Yurt Dışı Bireysel Yatırımcılar",
+    yatirimciSayisi: "1.593",
+    planlananTahsisat: "Tamamı eşit dağıtım",
+    gerceklesenTalep: "Toplam talebe dahil",
+    dagitilanPay: "184.157 Lot",
+    dagitimOrani: "%0,21",
+    talepKati: "2,20 kat toplam",
+  },
+  {
+    kategori: "Toplam",
+    yatirimciSayisi: "749.674",
+    planlananTahsisat: "87.499.998 Lot",
+    gerceklesenTalep: "2,20 kat talep",
+    dagitilanPay: "87.499.998 Lot",
+    dagitimOrani: "%100,00",
+    talepKati: "2,20 kat",
+  },
+];
+
+function TalepDagitimSonuclariTablosu() {
+  return (
+    <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 className="text-xl font-bold text-slate-900">
+        Halka Arz Talep ve Dağıtım Sonuçları
+      </h2>
+      <p className="mt-2 text-sm leading-7 text-slate-600">
+        Golda Gıda halka arzında tamamı eşit dağıtım uygulanmış, halka arza
+        749.674 yatırımcı katılmış ve toplam talep halka arz büyüklüğünün
+        2,20 katına ulaşmıştır.
+      </p>
+
+      <div className="mt-5 overflow-x-auto rounded-2xl border border-slate-200 xl:overflow-x-visible">
+        <table className="w-full min-w-[900px] table-fixed text-xs xl:min-w-0 xl:text-[12px] 2xl:text-sm">
+          <thead className="bg-slate-900 text-white">
+            <tr>
+              <th className="w-[22%] px-2 py-3 text-left font-bold">
+                Yatırımcı Grubu
+              </th>
+              <th className="px-2 py-3 text-right font-bold">
+                Yatırımcı Sayısı
+              </th>
+              <th className="px-2 py-3 text-right font-bold">
+                Planlanan Tahsisat
+              </th>
+              <th className="px-2 py-3 text-right font-bold">
+                Gerçekleşen Talep
+              </th>
+              <th className="px-2 py-3 text-right font-bold">
+                Dağıtılan Pay
+              </th>
+              <th className="px-2 py-3 text-right font-bold">
+                Dağıtım Oranı
+              </th>
+              <th className="px-2 py-3 text-right font-bold">
+                Talep Katı
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {talepDagitimSonuclari.map((satir, index) => {
+              const toplamSatiri = satir.kategori === "Toplam";
+
+              return (
+                <tr
+                  key={satir.kategori}
+                  className={
+                    toplamSatiri
+                      ? "bg-slate-100 font-bold"
+                      : index % 2 === 0
+                        ? "bg-white"
+                        : "bg-slate-50"
+                  }
+                >
+                  <td className="border-t border-slate-200 px-2 py-3 font-semibold leading-5 text-slate-900">
+                    {satir.kategori}
+                  </td>
+                  <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                    {satir.yatirimciSayisi}
+                  </td>
+                  <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                    {satir.planlananTahsisat}
+                  </td>
+                  <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                    {satir.gerceklesenTalep}
+                  </td>
+                  <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                    {satir.dagitilanPay}
+                  </td>
+                  <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                    {satir.dagitimOrani}
+                  </td>
+                  <td className="border-t border-slate-200 px-2 py-3 text-right font-bold leading-5 text-emerald-700">
+                    {satir.talepKati}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  );
+}
+
 function YouTubeVideoCards() {
   const videolar = [
     {
@@ -617,6 +753,8 @@ export default function GoldaGidaPage() {
             <p className="text-sm leading-7 text-slate-600">{veri.sirketHakkinda}</p>
           </section>
         )}
+
+        <TalepDagitimSonuclariTablosu />
 
         <YouTubeVideoCards />
 

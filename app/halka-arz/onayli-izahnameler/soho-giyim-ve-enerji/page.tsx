@@ -563,6 +563,125 @@ export default function SohoGiyimVeEnerjiPage() {
         </section>
 
 
+        <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h2 className="text-xl font-bold text-slate-900">
+            Halka Arz Talep ve Dağıtım Sonuçları
+          </h2>
+          <p className="mt-2 text-sm leading-7 text-slate-600">
+            Soho Giyim halka arzında tamamı eşit dağıtım uygulanmış, halka arza
+            660.121 yatırımcı katılmış ve toplam talep halka arz büyüklüğünün
+            1,23 katına ulaşmıştır.
+          </p>
+
+          <div className="mt-5 overflow-x-auto rounded-2xl border border-slate-200 xl:overflow-x-visible">
+            <table className="w-full min-w-[900px] table-fixed text-xs xl:min-w-0 xl:text-[12px] 2xl:text-sm">
+              <thead className="bg-slate-900 text-white">
+                <tr>
+                  <th className="w-[22%] px-2 py-3 text-left font-bold">
+                    Yatırımcı Grubu
+                  </th>
+                  <th className="px-2 py-3 text-right font-bold">
+                    Yatırımcı Sayısı
+                  </th>
+                  <th className="px-2 py-3 text-right font-bold">
+                    Planlanan Tahsisat
+                  </th>
+                  <th className="px-2 py-3 text-right font-bold">
+                    Gerçekleşen Talep
+                  </th>
+                  <th className="px-2 py-3 text-right font-bold">
+                    Dağıtılan Pay
+                  </th>
+                  <th className="px-2 py-3 text-right font-bold">
+                    Dağıtım Oranı
+                  </th>
+                  <th className="px-2 py-3 text-right font-bold">
+                    Talep Katı
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {[
+                  {
+                    kategori: "Yurt İçi Gerçek Kişi Yatırımcılar",
+                    yatirimciSayisi: "658.589",
+                    planlananTahsisat: "Tamamı eşit dağıtım",
+                    talep: "Toplam talebe dahil",
+                    dagitim: "97.065.314 Lot",
+                    dagitimOrani: "%97,07",
+                    talepKati: "1,23 kat toplam",
+                  },
+                  {
+                    kategori: "Yurt İçi Kurumsal Yatırımcılar",
+                    yatirimciSayisi: "86",
+                    planlananTahsisat: "Tamamı eşit dağıtım",
+                    talep: "Toplam talebe dahil",
+                    dagitim: "2.703.552 Lot",
+                    dagitimOrani: "%2,70",
+                    talepKati: "1,23 kat toplam",
+                  },
+                  {
+                    kategori: "Yurt Dışı Gerçek Kişi Yatırımcılar",
+                    yatirimciSayisi: "1.446",
+                    planlananTahsisat: "Tamamı eşit dağıtım",
+                    talep: "Toplam talebe dahil",
+                    dagitim: "231.134 Lot",
+                    dagitimOrani: "%0,23",
+                    talepKati: "1,23 kat toplam",
+                  },
+                  {
+                    kategori: "Toplam",
+                    yatirimciSayisi: "660.121",
+                    planlananTahsisat: "100.000.000 Lot",
+                    talep: "123.000.000 Lot",
+                    dagitim: "100.000.000 Lot",
+                    dagitimOrani: "%100,00",
+                    talepKati: "1,23 kat",
+                  },
+                ].map((satir, index) => {
+                  const toplamSatiri = satir.kategori === "Toplam";
+
+                  return (
+                    <tr
+                      key={satir.kategori}
+                      className={
+                        toplamSatiri
+                          ? "bg-slate-100 font-bold"
+                          : index % 2 === 0
+                            ? "bg-white"
+                            : "bg-slate-50"
+                      }
+                    >
+                      <td className="border-t border-slate-200 px-2 py-3 font-semibold leading-5 text-slate-900">
+                        {satir.kategori}
+                      </td>
+                      <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                        {satir.yatirimciSayisi}
+                      </td>
+                      <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                        {satir.planlananTahsisat}
+                      </td>
+                      <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                        {satir.talep}
+                      </td>
+                      <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                        {satir.dagitim}
+                      </td>
+                      <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                        {satir.dagitimOrani}
+                      </td>
+                      <td className="border-t border-slate-200 px-2 py-3 text-right font-bold leading-5 text-emerald-700">
+                        {satir.talepKati}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
         <Section title="YouTube Videoları">
           <div className="grid gap-4 md:grid-cols-2">
             <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">

@@ -8,6 +8,7 @@ import {
   halkaArzGetir,
   tahsisatMetni,
   type BilgiKarti,
+  type HalkaArzVideo,
   type HalkaArzVeri,
 } from "@/lib/halka-arz";
 import { riskMaddeleri } from "@/lib/halka-arz-risk";
@@ -134,6 +135,520 @@ function OzetKartlari({ items }: { items?: BilgiKarti[] }) {
       ))}
     </div>
   );
+}
+
+function YouTubeVideoCards({ videolar }: { videolar?: HalkaArzVideo[] }) {
+  if (!videolar || videolar.length === 0) return null;
+
+  return (
+    <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 className="text-xl font-bold text-slate-900">Video İçerikler</h2>
+      <p className="mt-2 text-sm leading-7 text-slate-600">
+        Halka arz detaylarını video anlatımıyla izlemek için ilgili içerikleri
+        aşağıdan açabilirsiniz.
+      </p>
+      <div className="mt-5 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+        {videolar.map((video) => {
+          const href = video.href || `https://youtu.be/${video.videoId}`;
+          return (
+            <a
+              key={video.videoId}
+              href={href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:border-red-300 hover:shadow-md"
+            >
+              <div className="relative aspect-video overflow-hidden bg-slate-200">
+                <img
+                  src={`https://img.youtube.com/vi/${video.videoId}/hqdefault.jpg`}
+                  alt={video.title}
+                  className="h-full w-full object-cover transition duration-300 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <span className="absolute inset-0 grid place-items-center bg-black/15">
+                  <span className="rounded-full bg-red-600 px-4 py-3 text-sm font-bold text-white shadow-lg">
+                    İzle
+                  </span>
+                </span>
+              </div>
+              <div className="p-4">
+                <div className="text-sm font-bold leading-6 text-slate-900">
+                  {video.title}
+                </div>
+                {video.description && (
+                  <p className="mt-2 text-xs leading-5 text-slate-600">
+                    {video.description}
+                  </p>
+                )}
+                <div className="mt-3 text-xs font-bold text-red-600">
+                  YouTube'da aç →
+                </div>
+              </div>
+            </a>
+          );
+        })}
+      </div>
+    </section>
+  );
+}
+
+
+type TalepSonucuSatiri = {
+  kategori: string;
+  yatirimciSayisi: string;
+  planlananTahsisat: string;
+  talep: string;
+  dagitim: string;
+  dagitimOrani: string;
+  talepKati: string;
+};
+
+function TalepSonuclariTablosu({
+  baslik,
+  aciklama,
+  not,
+  satirlar,
+}: {
+  baslik: string;
+  aciklama: string;
+  not?: string;
+  satirlar: TalepSonucuSatiri[];
+}) {
+  return (
+    <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 className="text-xl font-bold text-slate-900">{baslik}</h2>
+      <p className="mt-2 text-sm leading-7 text-slate-600">{aciklama}</p>
+
+      <div className="mt-5 overflow-x-auto rounded-2xl border border-slate-200 xl:overflow-x-visible">
+        <table className="w-full min-w-[900px] table-fixed text-xs xl:min-w-0 xl:text-[12px] 2xl:text-sm">
+          <thead className="bg-slate-900 text-white">
+            <tr>
+              <th className="w-[22%] px-2 py-3 text-left font-bold xl:px-2">
+                Yatırımcı Grubu
+              </th>
+              <th className="px-2 py-3 text-right font-bold xl:px-2">
+                Yatırımcı Sayısı
+              </th>
+              <th className="px-2 py-3 text-right font-bold xl:px-2">
+                Planlanan Tahsisat
+              </th>
+              <th className="px-2 py-3 text-right font-bold xl:px-2">
+                Gerçekleşen Talep
+              </th>
+              <th className="px-2 py-3 text-right font-bold xl:px-2">
+                Dağıtılan Pay
+              </th>
+              <th className="px-2 py-3 text-right font-bold xl:px-2">
+                Dağıtım Oranı
+              </th>
+              <th className="px-2 py-3 text-right font-bold xl:px-2">
+                Talep Katı
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {satirlar.map((satir, index) => {
+              const toplamSatiri = satir.kategori === "Toplam";
+
+              return (
+                <tr
+                  key={`${satir.kategori}-${index}`}
+                  className={
+                    toplamSatiri
+                      ? "bg-slate-100 font-bold"
+                      : index % 2 === 0
+                        ? "bg-white"
+                        : "bg-slate-50"
+                  }
+                >
+                  <td className="border-t border-slate-200 px-2 py-3 font-semibold leading-5 text-slate-900 xl:px-2">
+                    {satir.kategori}
+                  </td>
+                  <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700 xl:px-2">
+                    {satir.yatirimciSayisi}
+                  </td>
+                  <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700 xl:px-2">
+                    {satir.planlananTahsisat}
+                  </td>
+                  <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700 xl:px-2">
+                    {satir.talep}
+                  </td>
+                  <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700 xl:px-2">
+                    {satir.dagitim}
+                  </td>
+                  <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700 xl:px-2">
+                    {satir.dagitimOrani}
+                  </td>
+                  <td
+                    className={`border-t border-slate-200 px-2 py-3 text-right font-bold leading-5 xl:px-2 ${
+                      satir.talepKati === "-"
+                        ? "text-slate-500"
+                        : "text-emerald-700"
+                    }`}
+                  >
+                    {satir.talepKati}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+
+      {not && (
+        <p className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-xs font-medium leading-6 text-amber-900">
+          {not}
+        </p>
+      )}
+    </section>
+  );
+}
+
+function HalkaArzTalepSonuclari({
+  slug,
+  veri,
+}: {
+  slug: string;
+  veri: HalkaArzVeri;
+}) {
+  const kod = (
+    veri.bistKodu ||
+    veri.ozet.bistKodu ||
+    ""
+  ).toLocaleUpperCase("tr-TR");
+  const sirketAdi = veri.sirketAdi.toLocaleLowerCase("tr-TR");
+
+  const kardemirMi =
+    slug === "kardemir-celik-sanayi" ||
+    kod === "KARCL" ||
+    sirketAdi.includes("kardemir çelik");
+
+  if (kardemirMi) {
+    const satirlar: TalepSonucuSatiri[] = [
+      {
+        kategori: "Yurt İçi Bireysel Yatırımcılar",
+        yatirimciSayisi: "813.950",
+        planlananTahsisat: "51.200.000 Lot",
+        talep: "70.702.110 Lot",
+        dagitim: "51.200.000 Lot",
+        dagitimOrani: "%40,00",
+        talepKati: "1,38 kat",
+      },
+      {
+        kategori: "Yüksek Talepte Bulunan Yatırımcılar",
+        yatirimciSayisi: "788",
+        planlananTahsisat: "12.800.000 Lot",
+        talep: "172.090.729 Lot",
+        dagitim: "12.800.000 Lot",
+        dagitimOrani: "%10,00",
+        talepKati: "13,44 kat",
+      },
+      {
+        kategori: "Yurt İçi Kurumsal Yatırımcılar",
+        yatirimciSayisi: "104",
+        planlananTahsisat: "38.400.000 Lot",
+        talep: "242.608.772 Lot",
+        dagitim: "38.400.000 Lot",
+        dagitimOrani: "%30,00",
+        talepKati: "6,32 kat",
+      },
+      {
+        kategori: "Yurt Dışı Kurumsal Yatırımcılar",
+        yatirimciSayisi: "11",
+        planlananTahsisat: "25.600.000 Lot",
+        talep: "62.235.000 Lot",
+        dagitim: "25.600.000 Lot",
+        dagitimOrani: "%20,00",
+        talepKati: "2,43 kat",
+      },
+      {
+        kategori: "Toplam",
+        yatirimciSayisi: "814.853",
+        planlananTahsisat: "128.000.000 Lot",
+        talep: "547.636.611 Lot",
+        dagitim: "128.000.000 Lot",
+        dagitimOrani: "%100,00",
+        talepKati: "4,28 kat",
+      },
+    ];
+
+    return (
+      <TalepSonuclariTablosu
+        baslik="Halka Arz Talep ve Dağıtım Sonuçları"
+        aciklama="Yatırımcı gruplarına göre planlanan tahsisat, gerçekleşen talep, dağıtılan pay ve oluşan talep katları."
+        satirlar={satirlar}
+      />
+    );
+  }
+
+  const albtnMi =
+    slug === "albayrak-hazir-beton" ||
+    kod === "ALBTN" ||
+    sirketAdi.includes("albayrak hazır beton");
+
+  if (albtnMi) {
+    const satirlar: TalepSonucuSatiri[] = [
+      {
+        kategori: "Yurt İçi Bireysel Yatırımcılar",
+        yatirimciSayisi: "547.978",
+        planlananTahsisat: "66.094.850 Lot",
+        talep: "66.094.850 Lot",
+        dagitim: "66.094.850 Lot",
+        dagitimOrani: "%94,42",
+        talepKati: "1,00 kat",
+      },
+      {
+        kategori: "Yurt İçi Kurumsal Yatırımcılar",
+        yatirimciSayisi: "36",
+        planlananTahsisat: "3.790.486 Lot",
+        talep: "3.790.486 Lot",
+        dagitim: "3.790.486 Lot",
+        dagitimOrani: "%5,41",
+        talepKati: "1,00 kat",
+      },
+      {
+        kategori: "Yurt Dışı Bireysel Yatırımcılar",
+        yatirimciSayisi: "1.197",
+        planlananTahsisat: "114.664 Lot",
+        talep: "114.664 Lot",
+        dagitim: "114.664 Lot",
+        dagitimOrani: "%0,16",
+        talepKati: "1,00 kat",
+      },
+      {
+        kategori: "Yurt Dışı Kurumsal Yatırımcılar",
+        yatirimciSayisi: "0",
+        planlananTahsisat: "0 Lot",
+        talep: "0 Lot",
+        dagitim: "0 Lot",
+        dagitimOrani: "%0,00",
+        talepKati: "0,00 kat",
+      },
+      {
+        kategori: "Toplam",
+        yatirimciSayisi: "549.211",
+        planlananTahsisat: "70.000.000 Lot",
+        talep: "70.000.000 Lot",
+        dagitim: "70.000.000 Lot",
+        dagitimOrani: "%100,00",
+        talepKati: "1,00 kat",
+      },
+    ];
+
+    return (
+      <TalepSonuclariTablosu
+        baslik="Halka Arz Talep ve Dağıtım Sonuçları"
+        aciklama="Yatırımcı gruplarına göre planlanan pay, gerçekleşen talep, dağıtılan pay ve talep katları."
+        satirlar={satirlar}
+      />
+    );
+  }
+
+
+  const metenMi =
+    slug === "metgun-enerji-yatirimlari" ||
+    slug === "metgun-enerji" ||
+    kod === "METEN" ||
+    sirketAdi.includes("metgün enerji");
+
+  if (metenMi) {
+    const satirlar: TalepSonucuSatiri[] = [
+      {
+        kategori: "Yurt İçi Bireysel Yatırımcılar",
+        yatirimciSayisi: "960.994",
+        planlananTahsisat: "81.347.400 Lot",
+        talep: "153.794.006 Lot",
+        dagitim: "81.347.400 Lot",
+        dagitimOrani: "%60,00",
+        talepKati: "1,89 kat",
+      },
+      {
+        kategori: "Grup Çalışanları",
+        yatirimciSayisi: "277",
+        planlananTahsisat: "4.067.370 Lot",
+        talep: "4.943.899 Lot",
+        dagitim: "4.067.370 Lot",
+        dagitimOrani: "%3,00",
+        talepKati: "1,22 kat",
+      },
+      {
+        kategori: "Yurt İçi Kurumsal Yatırımcılar",
+        yatirimciSayisi: "108",
+        planlananTahsisat: "40.673.700 Lot",
+        talep: "210.615.775 Lot",
+        dagitim: "40.673.700 Lot",
+        dagitimOrani: "%30,00",
+        talepKati: "5,18 kat",
+      },
+      {
+        kategori: "Yurt Dışı Kurumsal Yatırımcılar",
+        yatirimciSayisi: "8",
+        planlananTahsisat: "9.490.530 Lot",
+        talep: "31.004.632 Lot",
+        dagitim: "9.490.530 Lot",
+        dagitimOrani: "%7,00",
+        talepKati: "3,27 kat",
+      },
+      {
+        kategori: "Toplam",
+        yatirimciSayisi: "961.387",
+        planlananTahsisat: "135.579.000 Lot",
+        talep: "400.358.312 Lot",
+        dagitim: "135.579.000 Lot",
+        dagitimOrani: "%100,00",
+        talepKati: "2,95 kat",
+      },
+    ];
+
+    return (
+      <TalepSonuclariTablosu
+        baslik="Halka Arz Talep ve Dağıtım Sonuçları"
+        aciklama="Yatırımcı gruplarına göre planlanan tahsisat, gerçekleşen talep, dağıtılan pay ve oluşan talep katları."
+        satirlar={satirlar}
+      />
+    );
+  }
+
+
+  const normalizeHalkaArzMetni = (deger: string) =>
+    deger
+      .toLocaleLowerCase("tr-TR")
+      .replace(/ş/g, "s")
+      .replace(/ı/g, "i")
+      .replace(/ğ/g, "g")
+      .replace(/ü/g, "u")
+      .replace(/ö/g, "o")
+      .replace(/ç/g, "c")
+      .replace(/[^a-z0-9]/g, "");
+
+  const normalizeSlug = normalizeHalkaArzMetni(slug);
+  const normalizeKod = normalizeHalkaArzMetni(kod);
+  const normalizeSirketAdi = normalizeHalkaArzMetni(veri.sirketAdi);
+
+  const saraeMi =
+    normalizeKod === "sarae" ||
+    normalizeSlug === "sarae" ||
+    normalizeSlug.includes("saraenerji") ||
+    normalizeSlug.includes("saraenerjiinsaat") ||
+    normalizeSirketAdi.includes("saraenerji") ||
+    normalizeSirketAdi.includes("saraenerjiinsaat");
+
+  if (saraeMi) {
+    const satirlar: TalepSonucuSatiri[] = [
+      {
+        kategori: "Yurt İçi Bireysel Yatırımcılar",
+        yatirimciSayisi: "728.823",
+        planlananTahsisat: "33.820.000 Lot",
+        talep: "46.370.290 Lot",
+        dagitim: "33.820.000 Lot",
+        dagitimOrani: "%38,00",
+        talepKati: "1,37 kat",
+      },
+      {
+        kategori: "Yüksek Talepte Bulunacak Yatırımcı Grubu",
+        yatirimciSayisi: "344",
+        planlananTahsisat: "8.900.000 Lot",
+        talep: "114.848.112 Lot",
+        dagitim: "8.900.000 Lot",
+        dagitimOrani: "%10,00",
+        talepKati: "12,90 kat",
+      },
+      {
+        kategori: "Grup Çalışanları",
+        yatirimciSayisi: "263",
+        planlananTahsisat: "1.780.000 Lot",
+        talep: "1.809.670 Lot",
+        dagitim: "1.780.000 Lot",
+        dagitimOrani: "%2,00",
+        talepKati: "1,02 kat",
+      },
+      {
+        kategori: "Yurt İçi Kurumsal Yatırımcılar",
+        yatirimciSayisi: "115",
+        planlananTahsisat: "22.250.000 Lot",
+        talep: "111.393.521 Lot",
+        dagitim: "22.250.000 Lot",
+        dagitimOrani: "%25,00",
+        talepKati: "5,01 kat",
+      },
+      {
+        kategori: "Yurt Dışı Kurumsal Yatırımcılar",
+        yatirimciSayisi: "15",
+        planlananTahsisat: "22.250.000 Lot",
+        talep: "60.886.242 Lot",
+        dagitim: "22.250.000 Lot",
+        dagitimOrani: "%25,00",
+        talepKati: "2,74 kat",
+      },
+      {
+        kategori: "Toplam",
+        yatirimciSayisi: "729.560",
+        planlananTahsisat: "89.000.000 Lot",
+        talep: "335.307.835 Lot",
+        dagitim: "89.000.000 Lot",
+        dagitimOrani: "%100,00",
+        talepKati: "3,77 kat",
+      },
+    ];
+
+    return (
+      <TalepSonuclariTablosu
+        baslik="Halka Arz Talep ve Dağıtım Sonuçları"
+        aciklama="Yatırımcı gruplarına göre planlanan tahsisat, gerçekleşen talep, dağıtılan pay ve oluşan talep katları."
+        satirlar={satirlar}
+      />
+    );
+  }
+
+
+  const ssaatMi =
+    slug === "saat-ve-saat-san-ve-tic" ||
+    slug === "saat-ve-saat" ||
+    kod === "SSAAT" ||
+    sirketAdi.includes("saat ve saat");
+
+  if (ssaatMi) {
+    const satirlar: TalepSonucuSatiri[] = [
+      {
+        kategori: "Yurt İçi Bireysel Yatırımcılar",
+        yatirimciSayisi: "693.013",
+        planlananTahsisat: "40.166.973 Lot",
+        talep: "71.605.578 Lot",
+        dagitim: "40.166.973 Lot",
+        dagitimOrani: "%60,00",
+        talepKati: "1,78 kat",
+      },
+      {
+        kategori: "Yurt İçi Kurumsal Yatırımcılar",
+        yatirimciSayisi: "125",
+        planlananTahsisat: "26.777.982 Lot",
+        talep: "32.726.990 Lot",
+        dagitim: "26.777.982 Lot",
+        dagitimOrani: "%40,00",
+        talepKati: "1,22 kat",
+      },
+      {
+        kategori: "Toplam",
+        yatirimciSayisi: "693.138",
+        planlananTahsisat: "66.944.955 Lot",
+        talep: "104.332.568 Lot",
+        dagitim: "66.944.955 Lot",
+        dagitimOrani: "%100,00",
+        talepKati: "1,56 kat",
+      },
+    ];
+
+    return (
+      <TalepSonuclariTablosu
+        baslik="Halka Arz Talep ve Dağıtım Sonuçları"
+        aciklama="Yatırımcı gruplarına göre planlanan tahsisat, gerçekleşen talep, dağıtılan pay ve oluşan talep katları."
+        satirlar={satirlar}
+      />
+    );
+  }
+
+  return null;
 }
 
 function ozetSatirlari(veri: HalkaArzVeri): BilgiKarti[] {
@@ -514,6 +1029,10 @@ export default async function OnayliIzahnameDetayPage({
             <p className="text-sm leading-7 text-slate-600">{veri.sirketHakkinda}</p>
           </section>
         )}
+
+        <HalkaArzTalepSonuclari slug={slug} veri={veri} />
+
+        <YouTubeVideoCards videolar={veri.videolar} />
 
         {(() => {
           const riskler = riskMaddeleri(veri);

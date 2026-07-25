@@ -104,20 +104,61 @@ function ayniDegerler(left: string[], right: string[]) {
   return normalizedLeft.every((value, index) => value === normalizedRight[index]);
 }
 
-function durum(taslak: string[], onayli: string[]): KarsilastirmaDurumu {
+function normalizeDagitimYontemi(value: string) {
+  const normalized = normalize(value);
+  const tamamenEsit =
+    normalized.includes("tamamen esit") ||
+    normalized.includes("tamami esit") ||
+    normalized.includes("tum yatirimcilara esit") ||
+    normalized.includes("tum yatirimcilar esit");
+
+  if (tamamenEsit) return normalized;
+
+  if (normalized.includes("bireysele esit")) {
+    return "bireysele esit dagitim";
+  }
+
+  const sadeceEsitDagitim =
+    normalized === "esit dagitim" ||
+    normalized === "esit dagitim yontemi" ||
+    normalized === "esit dagitim uygulanacaktir" ||
+    normalized === "esit dagitim uygulanir";
+
+  if (sadeceEsitDagitim) return "bireysele esit dagitim";
+  return normalized;
+}
+
+function ayniDagitimYontemi(taslak: string[], onayli: string[]) {
+  if (taslak.length !== onayli.length) return false;
+  const normalizedLeft = taslak
+    .map(normalizeDagitimYontemi)
+    .sort((a, b) => a.localeCompare(b, "tr"));
+  const normalizedRight = onayli
+    .map(normalizeDagitimYontemi)
+    .sort((a, b) => a.localeCompare(b, "tr"));
+
+  return normalizedLeft.every((value, index) => value === normalizedRight[index]);
+}
+
+function durum(
+  taslak: string[],
+  onayli: string[],
+  ayniMi: (taslak: string[], onayli: string[]) => boolean = ayniDegerler
+): KarsilastirmaDurumu {
   if (taslak.length === 0 && onayli.length > 0) return "kesinlesti";
   if (taslak.length > 0 && onayli.length === 0) return "kaldirildi";
-  return ayniDegerler(taslak, onayli) ? "ayni" : "degisti";
+  return ayniMi(taslak, onayli) ? "ayni" : "degisti";
 }
 
 function satir(
   id: string,
   etiket: string,
   taslak: string[],
-  onayli: string[]
+  onayli: string[],
+  ayniMi?: (taslak: string[], onayli: string[]) => boolean
 ): KarsilastirmaSatiri | null {
   if (taslak.length === 0 && onayli.length === 0) return null;
-  return { id, etiket, taslak, onayli, durum: durum(taslak, onayli) };
+  return { id, etiket, taslak, onayli, durum: durum(taslak, onayli, ayniMi) };
 }
 
 function finansalSatirlar(veri: HalkaArzVeri) {
@@ -209,7 +250,8 @@ export function taslakOnayKarsilastirmasiOlustur(
           "dagitim-yontemi",
           "Dağıtım yöntemi",
           metinler(taslak.ozet.dagitimYontemi),
-          metinler(onayli.ozet.dagitimYontemi)
+          metinler(onayli.ozet.dagitimYontemi),
+          ayniDagitimYontemi
         ),
         satir(
           "araci-kurum",

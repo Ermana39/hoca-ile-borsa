@@ -511,6 +511,130 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
             <p className="text-sm leading-7 text-slate-600">{konsorsiyum}</p>
           </Section>
 
+          <Section title="Halka Arz Talep ve Dağıtım Sonuçları">
+            <p className="mb-5 text-sm leading-7 text-slate-600">
+              Yatırımcı gruplarına göre planlanan tahsisat, gerçekleşen talep,
+              dağıtılan pay ve oluşan talep katları.
+            </p>
+
+            <div className="overflow-x-auto rounded-2xl border border-slate-200 xl:overflow-x-visible">
+              <table className="w-full min-w-[900px] table-fixed text-xs xl:min-w-0 xl:text-[12px] 2xl:text-sm">
+                <thead className="bg-slate-900 text-white">
+                  <tr>
+                    <th className="w-[22%] px-2 py-3 text-left font-bold">
+                      Yatırımcı Grubu
+                    </th>
+                    <th className="px-2 py-3 text-right font-bold">
+                      Yatırımcı Sayısı
+                    </th>
+                    <th className="px-2 py-3 text-right font-bold">
+                      Planlanan Tahsisat
+                    </th>
+                    <th className="px-2 py-3 text-right font-bold">
+                      Gerçekleşen Talep
+                    </th>
+                    <th className="px-2 py-3 text-right font-bold">
+                      Dağıtılan Pay
+                    </th>
+                    <th className="px-2 py-3 text-right font-bold">
+                      Dağıtım Oranı
+                    </th>
+                    <th className="px-2 py-3 text-right font-bold">
+                      Talep Katı
+                    </th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  {[
+                    {
+                      kategori: "Yurt İçi Bireysel Yatırımcılar",
+                      yatirimciSayisi: "791.713",
+                      planlananTahsisat: "20.800.000 Lot",
+                      talep: "49.115.933 Lot",
+                      dagitim: "20.800.000 Lot",
+                      dagitimOrani: "%40,00",
+                      talepKati: "2,36 kat",
+                    },
+                    {
+                      kategori: "Yüksek Talepte Bulunan Yatırımcılar",
+                      yatirimciSayisi: "4.685",
+                      planlananTahsisat: "5.200.000 Lot",
+                      talep: "239.021.382 Lot",
+                      dagitim: "5.200.000 Lot",
+                      dagitimOrani: "%10,00",
+                      talepKati: "45,97 kat",
+                    },
+                    {
+                      kategori: "Yurt İçi Kurumsal Yatırımcılar",
+                      yatirimciSayisi: "139",
+                      planlananTahsisat: "15.600.000 Lot",
+                      talep: "125.433.807 Lot",
+                      dagitim: "15.600.000 Lot",
+                      dagitimOrani: "%30,00",
+                      talepKati: "8,04 kat",
+                    },
+                    {
+                      kategori: "Yurt Dışı Kurumsal Yatırımcılar",
+                      yatirimciSayisi: "5",
+                      planlananTahsisat: "10.400.000 Lot",
+                      talep: "17.756.000 Lot",
+                      dagitim: "10.400.000 Lot",
+                      dagitimOrani: "%20,00",
+                      talepKati: "1,71 kat",
+                    },
+                    {
+                      kategori: "Toplam",
+                      yatirimciSayisi: "796.542",
+                      planlananTahsisat: "52.000.000 Lot",
+                      talep: "431.327.122 Lot",
+                      dagitim: "52.000.000 Lot",
+                      dagitimOrani: "%100,00",
+                      talepKati: "8,29 kat",
+                    },
+                  ].map((satir, index) => {
+                    const toplamSatiri = satir.kategori === "Toplam";
+
+                    return (
+                      <tr
+                        key={satir.kategori}
+                        className={
+                          toplamSatiri
+                            ? "bg-slate-100 font-bold"
+                            : index % 2 === 0
+                              ? "bg-white"
+                              : "bg-slate-50"
+                        }
+                      >
+                        <td className="border-t border-slate-200 px-2 py-3 font-semibold leading-5 text-slate-900">
+                          {satir.kategori}
+                        </td>
+                        <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                          {satir.yatirimciSayisi}
+                        </td>
+                        <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                          {satir.planlananTahsisat}
+                        </td>
+                        <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                          {satir.talep}
+                        </td>
+                        <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                          {satir.dagitim}
+                        </td>
+                        <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                          {satir.dagitimOrani}
+                        </td>
+                        <td className="border-t border-slate-200 px-2 py-3 text-right font-bold leading-5 text-emerald-700">
+                          {satir.talepKati}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </Section>
+
           <Section title="YouTube Videoları">
             <div className="grid gap-4 md:grid-cols-2">
               <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">

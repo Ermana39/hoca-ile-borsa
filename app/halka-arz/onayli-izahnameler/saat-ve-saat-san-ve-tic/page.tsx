@@ -24,32 +24,35 @@ const veri: HalkaArzVeri = {
   },
   baslikMeta: {
     title:
-      "SSAAT Halka Arzı 2026: Fiyat, Lot, Tarih ve İzahname",
+      "Saat ve Saat San. ve Tic. A.Ş. Halka Arz Detayları 2026 | Onaylı İzahname",
     description:
-      "Saat ve Saat halka arzında SSAAT kodu, 6-7-8 Temmuz talep tarihi, 56 TL fiyat, 80,3 milyon lot, eşit dağıtım, T1-T2 ve katılım endeksi bilgileri.",
+      "Saat ve Saat San. ve Tic. A.Ş. halka arz fiyatı, talep toplama tarihleri, dağıtım sonuçları, talep katları, toplam lot, tahsisat, fon kullanım planı ve finansal görünüm.",
   },
   ozet: {
-    halkaArzTarihi: "6-7-8 Temmuz 2026\nPazartesi-Salı-Çarşamba\n09.00-17.00",
+    halkaArzTarihi:
+      "6-7-8 Temmuz 2026 (Pazartesi-Salı-Çarşamba, 09.00-17.00)",
     fiyatAralik: "56,00 TL (%37,01 iskonto)",
-    dagitimYontemi: "Bireysele Eşit Dağıtım\nT1-T2 bakiye kullanılamaz",
-    pay: "80.333.946 Lot (ek satış dahil)",
+    dagitimYontemi: "Bireysele eşit dağıtım",
+    pay: "66.944.955 Lot",
     araciKurum:
-      "Halk Yatırım Menkul Değerler A.Ş.\nGaranti Yatırım Menkul Kıymetler A.Ş.",
+      "Halk Yatırım Menkul Değerler A.Ş. / Garanti Yatırım Menkul Kıymetler A.Ş.",
     pazar: "Yıldız Pazar",
     bistKodu: "SSAAT",
   },
-  toplamPay: "80.333.946 Lot",
+  toplamPay: "66.944.955 Lot",
   bistKodu: "SSAAT",
-  halkaAciklikOrani: "%12,16",
+  halkaAciklikOrani: "%10,14",
   halkaArzSekli: [
     "Sermaye Artırımı: 40.166.973 Lot",
     "Ortak Satışı: 26.777.982 Lot",
-    "Ek Satış: 13.388.991 Lot",
-    "Toplam Dağıtılacak Pay: 80.333.946 Lot",
+    "Toplam Dağıtılan Pay: 66.944.955 Lot",
   ],
-  fonKullanim: ["%80 İşletme sermayesi", "%20 Finansal borçların ödenmesi"],
+  fonKullanim: [
+    "%80 İşletme sermayesi",
+    "%20 Finansal borçların ödenmesi",
+  ],
   fonKullanimYorumu:
-    "Saat ve Saat halka arzında şirket kasasına girecek kaynak ağırlıklı olarak işletme sermayesi ihtiyacı için planlanmıştır. Bu kalem; stok yönetimi, ithalat süreçleri, mağaza operasyonları, bayi kanalı, e-ticaret ve pazar yeri satışlarında ürün sürekliliği açısından önem taşır. Fonun kalan kısmının finansal borçların ödenmesine ayrılması ise borçluluk ve finansman giderleri üzerinde destekleyici etki yaratabilir. Halka arzda sermaye artırımı ile birlikte ortak satışı ve ek satış da bulunduğu için, şirket kasasına girecek tutar ile ortak satışından kaynaklanan tutar ayrı değerlendirilmelidir.",
+    "Saat ve Saat halka arzında şirket kasasına girecek kaynak ağırlıklı olarak işletme sermayesi ihtiyacı için planlanmıştır. Bu kaynak stok yönetimi, ithalat süreçleri, mağaza operasyonları, bayi kanalı ve e-ticaret faaliyetlerinde kullanılacaktır. Finansal borçların ödenmesine ayrılan bölümün ise borçluluk ve finansman giderleri üzerinde destekleyici etki oluşturması beklenebilir.",
   finansalDonemler: ["2024", "2025", "2026/1Ç"],
   finansalVeriler: [
     {
@@ -126,27 +129,27 @@ const veri: HalkaArzVeri = {
     },
   ],
   finansalYorum:
-    "Finansal görünümde 2024-2025 döneminde hasılatın 11,5 milyar TL’den 13,0 milyar TL’ye yükseldiği, net dönem kârının ise 1,2 milyar TL’den 1,5 milyar TL’ye çıktığı görülüyor. 2026 ilk çeyrekte 3,3 milyar TL hasılat ve 254 milyon TL net dönem kârı açıklanmıştır. Varlık tarafında toplam varlıkların 2025 ve 2026 ilk çeyrekte 9,4 milyar TL seviyesinde kaldığı, kısa vadeli yükümlülüklerin ise 5,3 milyar TL’ye yükseldiği izlenmektedir. Bu nedenle şirketin büyüme performansı değerlendirilirken hasılat ve kârlılıkla birlikte kısa vadeli yükümlülükler, stok finansmanı, işletme sermayesi ihtiyacı, nakit akışı ve finansal borçların seyri birlikte takip edilmelidir.",
+    "Finansal görünümde 2024-2025 döneminde hasılatın 11,5 milyar TL'den 13,0 milyar TL'ye, net dönem kârının ise 1,2 milyar TL'den 1,5 milyar TL'ye yükseldiği görülüyor. 2026 ilk çeyrekte 3,3 milyar TL hasılat ve 254 milyon TL net dönem kârı açıklanmıştır. Kısa vadeli yükümlülüklerin yükselmesi nedeniyle işletme sermayesi, stok finansmanı, nakit akışı ve borçluluk görünümü birlikte takip edilmelidir.",
   oneCikanlar: [
     {
       title: "Halka Arz Fiyatı",
       value: "56,00 TL",
-      desc: "1 TL nominal değerli paylar 56,00 TL sabit fiyat ve %37,01 iskonto oranı ile satışa sunulacaktır.",
+      desc: "Paylar 56,00 TL sabit fiyatla satışa sunulmuştur.",
     },
     {
-      title: "Toplam Pay",
-      value: "80.333.946 Lot",
-      desc: "40.166.973 lot sermaye artırımı, 26.777.982 lot ortak satışı ve 13.388.991 lot ek satıştan oluşur.",
+      title: "Toplam Dağıtım",
+      value: "66.944.955 Lot",
+      desc: "Halka arzda toplam 66.944.955 lot dağıtılmıştır.",
     },
     {
-      title: "Halka Açıklık",
-      value: "%12,16",
-      desc: "Ek satış dahil halka açıklık oranı %12,16 olarak açıklanmıştır.",
+      title: "Toplam Talep",
+      value: "104.332.568 Lot",
+      desc: "Toplam talep halka arz büyüklüğünün 1,56 katına ulaşmıştır.",
     },
     {
-      title: "T1-T2 Kullanımı",
-      value: "Kullanılamaz",
-      desc: "T1-T2 bakiye kullanımına uygun değildir.",
+      title: "Yatırımcı Sayısı",
+      value: "693.138",
+      desc: "Dağıtım yapılan toplam yatırımcı sayısıdır.",
     },
   ],
   tahsisat: [
@@ -162,29 +165,23 @@ const veri: HalkaArzVeri = {
     },
   ],
   tahsisatNotlari: [
-    "Talep toplama tarihleri 6-7-8 Temmuz 2026 Pazartesi-Salı-Çarşamba, 09.00-17.00 saatleri arasında açıklanmıştır.",
-    "Halka arz fiyatı 56,00 TL ve iskonto oranı %37,01 olarak açıklanmıştır.",
-    "Bireysel yatırımcı tarafında bireysele eşit dağıtım yöntemi uygulanacaktır.",
-    "T1-T2 bakiye kullanımına uygun değildir.",
-    "Yurt içi bireysel yatırımcılara %60 oranla 40.166.973 lot tahsis edilmiştir.",
-    "Yurt içi kurumsal yatırımcılara %40 oranla 26.777.982 lot tahsis edilmiştir.",
-    "Ek satış tutarı 13.388.991 lot olarak açıklanmıştır.",
-    "Ek satış dahil toplam dağıtılacak pay 80.333.946 lot olarak belirtilmiştir.",
-    "Katılım endeksine uygun olduğu açıklanmıştır.",
+    "Yurt içi bireysel yatırımcılardan 71.605.578 lot talep gelmiş ve 40.166.973 lot dağıtılmıştır.",
+    "Yurt içi kurumsal yatırımcılardan 32.726.990 lot talep gelmiş ve 26.777.982 lot dağıtılmıştır.",
+    "Toplam 104.332.568 lot talebe karşılık 66.944.955 lot dağıtılmıştır.",
   ],
   taahhutOzeti: {
     fiyatIstikrari:
-      "Brüt halka arz gelirinin %20’si ile 30 gün boyunca fiyat istikrarı sağlayıcı işlemler planlanmaktadır.",
+      "Brüt halka arz gelirinin %20'si ile 30 gün boyunca fiyat istikrarı sağlayıcı işlemler planlanmıştır.",
     satmamaTaahhudu:
-      "1 yıl boyunca bedelli ve bedelsiz sermaye artırımı yapılmayacağı, dolaşımdaki payların artmasına sebep olacak şekilde satışa veya halka arza konu edilmeyeceği; pay sahibi ortakların da 1 yıl boyunca halka arz fiyatının altında pay satışı yapmayacağı ve pay satmayacağı taahhüt edilmiştir.",
-    halkaAciklik: "%12,16.",
+      "Şirket ve ortaklar için izahnamede yer alan satmama taahhütleri geçerlidir.",
+    halkaAciklik: "%10,14.",
   },
   sirketHakkinda:
-    "Saat ve Saat San. ve Tic. A.Ş., 1994 yılında kurulan ve Türkiye’de saat ile aksesuar perakendeciliği, distribütörlüğü ve toptan satışı alanında faaliyet gösteren bir şirkettir. Şirketin sektördeki kökenlerinin 1971 yılına dayandığı paylaşılmıştır. Resmi unvanı Saat ve Saat Sanayi ve Ticaret A.Ş. olarak belirtilmiştir. CEO / yönetim tarafında Ramazan Kaya ismi öne çıkmaktadır. Şirketin merkez adresi Büyükdere Caddesi, Noramin İş Merkezi No:237/D Kat:B2, Maslak, Sarıyer / İstanbul’dur. İletişim numarası +90 212 232 72 28 olarak paylaşılmıştır. Türkiye genelinde 170’ten fazla mağaza, 600’ün üzerinde bayi ve zincir mağaza satış noktası bulunduğu; Türkiye dahil 45 ülkeyi kapsayan geniş bir dağıtım ağına sahip olduğu belirtilmiştir. Şirket kendi e-ticaret platformunun yanı sıra popüler pazar yerlerinde de aktif satış yapmaktadır. Saat ve Saat’in bağlı olduğu HRK Holding’in, Aydınlı Hazır Giyim Grubu’nu satın alarak U.S. Polo Assn., Pierre Cardin ve Cacharel gibi markaları bünyesine kattığı bilgisi paylaşılmıştır. Saat, aksesuar, distribütörlük ve perakende sektöründe şirket performansı; marka portföyü, mağaza ağı, e-ticaret kanalları, tüketici talebi, stok yönetimi, döviz kuru, ithalat maliyetleri ve yeni grup yatırımlarının entegrasyonuyla yakından ilişkilidir.",
+    "Saat ve Saat San. ve Tic. A.Ş., saat ve aksesuar perakendeciliği, distribütörlüğü, toptan satışı ve e-ticaret alanlarında faaliyet göstermektedir. Şirketin performansı marka portföyü, mağaza ve bayi ağı, e-ticaret kanalları, tüketici talebi, stok yönetimi, döviz kuru ve ithalat maliyetleriyle yakından ilişkilidir.",
   eksikBilgiNotu:
-    "Halka arz fiyatı (56,00 TL), %37,01 iskonto oranı, talep toplama saatleri, bireysele eşit dağıtım yöntemi, T1-T2 kullanılamaması, tahsisat oranları, tahsisat lotları, sermaye artırımı, ortak satışı, ek satış, fon kullanım oranları, finansal veriler ve taahhüt bilgileri görseldeki onaylı halka arz tablo verilerine göre güncellenmiştir. 2026/1Ç finansal verileri üç aylık dönemi kapsadığı için tam yıl verileriyle doğrudan kıyaslanmamalıdır. Halka arzda sermaye artırımı ve ortak satışları birlikte bulunduğu için şirket kasasına yalnızca sermaye artırımı kaynaklı bölümün gireceği unutulmamalıdır.",
+    "Dağıtım sonuçları ve talep katları açıklanan sonuç tablosuna göre güncellenmiştir.",
   yasalUyari:
-    "Bu sayfadaki bilgiler SPK onayı sonrası açıklanan onaylı izahname/halka arz tablo verilerine göre genel bilgilendirme amacıyla hazırlanmıştır, yatırım tavsiyesi değildir. Kesinleşmemiş alanlar için güncel izahname ve tasarruf sahiplerine satış duyurusu kontrol edilmelidir.",
+    "Bu sayfadaki bilgiler genel bilgilendirme amacıyla hazırlanmıştır, yatırım tavsiyesi değildir. Güncel KAP açıklamaları ve halka arz belgeleri kontrol edilmelidir.",
   sermayeBilgileri: [
     {
       label: "Mevcut Sermaye",
@@ -195,37 +192,20 @@ const veri: HalkaArzVeri = {
       value: "660.388.991 TL",
     },
     {
-      label: "Sermaye Artırımı (Bedelli)",
+      label: "Sermaye Artırımı",
       value: "40.166.973 Lot",
     },
     {
-      label: "Sermaye Artırımı (Bedelsiz)",
-      value: "-",
-    },
-    {
-      label: "Mevcut Pay Satışı",
+      label: "Ortak Satışı",
       value: "26.777.982 Lot",
     },
     {
-      label: "Ek Pay Satışı",
-      value: "13.388.991 Lot",
-    },
-    {
-      label: "Satış Fiyatı",
+      label: "Halka Arz Fiyatı",
       value: "56,00 TL",
     },
     {
-      label: "Katılım Endeksi",
-      value: "Uygun",
-    },
-    {
       label: "Halka Arz Büyüklüğü",
-      value: "4.498.700.976 TL",
-    },
-    {
-      label: "Konsorsiyum Üyeleri",
-      value:
-        "A1 Capital, Acar, Ahlatcı, Ak Yatırım, Alnus, Alternatif, Anadolu, Ata, Bizim, Bulls, Burgan, BTC Türk, Colendi, Deniz, Destek, Dinamik, Fiba, Gedik, Global, ICBC, ING, Investaz, İntegral, İnfo, İş Yatırım, Kuveyt Türk, Marbaş, Meksa, Osmanlı, Oyak, PhillipCapital, Pusula, Piramit, QNB, Şeker, Tacirler, TEB, Tera, Turkish, Ünlü, Vakıf, Yapı Kredi, Yatırım Finansman, Ziraat Yatırım",
+      value: "3.748.917.480 TL",
     },
   ],
 };
@@ -234,9 +214,7 @@ export const metadata: Metadata = {
   title: veri.baslikMeta.title,
   description: veri.baslikMeta.description,
   alternates: {
-    canonical:
-      veri.seo?.canonical ||
-      "https://www.hocaileborsa.com/halka-arz/onayli-izahnameler/saat-ve-saat-san-ve-tic",
+    canonical: veri.seo?.canonical || "https://www.hocaileborsa.com/halka-arz/onayli-izahnameler/saat-ve-saat-san-ve-tic",
   },
   robots: veri.seo?.robots,
 };
@@ -271,6 +249,132 @@ function Section({
   );
 }
 
+
+type TalepSonucuSatiri = {
+  kategori: string;
+  yatirimciSayisi: string;
+  planlananTahsisat: string;
+  talep: string;
+  dagitim: string;
+  dagitimOrani: string;
+  talepKati: string;
+};
+
+const talepSonuclari: TalepSonucuSatiri[] = [
+  {
+    kategori: "Yurt İçi Bireysel Yatırımcılar",
+    yatirimciSayisi: "693.013",
+    planlananTahsisat: "40.166.973 Lot",
+    talep: "71.605.578 Lot",
+    dagitim: "40.166.973 Lot",
+    dagitimOrani: "%60,00",
+    talepKati: "1,78 kat",
+  },
+  {
+    kategori: "Yurt İçi Kurumsal Yatırımcılar",
+    yatirimciSayisi: "125",
+    planlananTahsisat: "26.777.982 Lot",
+    talep: "32.726.990 Lot",
+    dagitim: "26.777.982 Lot",
+    dagitimOrani: "%40,00",
+    talepKati: "1,22 kat",
+  },
+  {
+    kategori: "Toplam",
+    yatirimciSayisi: "693.138",
+    planlananTahsisat: "66.944.955 Lot",
+    talep: "104.332.568 Lot",
+    dagitim: "66.944.955 Lot",
+    dagitimOrani: "%100,00",
+    talepKati: "1,56 kat",
+  },
+];
+
+function TalepSonuclariTablosu() {
+  return (
+    <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 className="text-xl font-bold text-slate-900">
+        Halka Arz Talep ve Dağıtım Sonuçları
+      </h2>
+      <p className="mt-2 text-sm leading-7 text-slate-600">
+        Yatırımcı gruplarına göre planlanan tahsisat, gerçekleşen talep,
+        dağıtılan pay ve oluşan talep katları.
+      </p>
+
+      <div className="mt-5 overflow-x-auto rounded-2xl border border-slate-200 xl:overflow-x-visible">
+        <table className="w-full min-w-[900px] table-fixed text-xs xl:min-w-0 xl:text-[12px] 2xl:text-sm">
+          <thead className="bg-slate-900 text-white">
+            <tr>
+              <th className="w-[22%] px-2 py-3 text-left font-bold">
+                Yatırımcı Grubu
+              </th>
+              <th className="px-2 py-3 text-right font-bold">
+                Yatırımcı Sayısı
+              </th>
+              <th className="px-2 py-3 text-right font-bold">
+                Planlanan Tahsisat
+              </th>
+              <th className="px-2 py-3 text-right font-bold">
+                Gerçekleşen Talep
+              </th>
+              <th className="px-2 py-3 text-right font-bold">
+                Dağıtılan Pay
+              </th>
+              <th className="px-2 py-3 text-right font-bold">
+                Dağıtım Oranı
+              </th>
+              <th className="px-2 py-3 text-right font-bold">
+                Talep Katı
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {talepSonuclari.map((satir, index) => {
+              const toplamSatiri = satir.kategori === "Toplam";
+
+              return (
+                <tr
+                  key={satir.kategori}
+                  className={
+                    toplamSatiri
+                      ? "bg-slate-100 font-bold"
+                      : index % 2 === 0
+                        ? "bg-white"
+                        : "bg-slate-50"
+                  }
+                >
+                  <td className="border-t border-slate-200 px-2 py-3 font-semibold leading-5 text-slate-900">
+                    {satir.kategori}
+                  </td>
+                  <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                    {satir.yatirimciSayisi}
+                  </td>
+                  <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                    {satir.planlananTahsisat}
+                  </td>
+                  <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                    {satir.talep}
+                  </td>
+                  <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                    {satir.dagitim}
+                  </td>
+                  <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                    {satir.dagitimOrani}
+                  </td>
+                  <td className="border-t border-slate-200 px-2 py-3 text-right font-bold leading-5 text-emerald-700">
+                    {satir.talepKati}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  );
+}
+
 function ozetSatirlari(veri: HalkaArzVeri): BilgiKarti[] {
   const o = veri.ozet;
   return [
@@ -278,16 +382,14 @@ function ozetSatirlari(veri: HalkaArzVeri): BilgiKarti[] {
     { label: "Talep Toplama Tarihi", value: o.halkaArzTarihi || "" },
     { label: "Halka Arz Fiyatı", value: o.fiyatAralik || "" },
     { label: "Dağıtım Yöntemi", value: o.dagitimYontemi || "" },
-    { label: "Katılım Endeksi", value: "Uygun" },
     { label: "Pazar", value: o.pazar || "" },
+    { label: "Katılım Endeksi", value: "Uygun" },
     { label: "Aracı Kurum", value: o.araciKurum || "" },
   ].filter(gorunur);
 }
 
 function tahsisatSatirlari(veri: HalkaArzVeri) {
-  return veri.tahsisat
-    .map(tahsisatMetni)
-    .filter((item) => !bekleyenDeger(item));
+  return veri.tahsisat.map(tahsisatMetni).filter((item) => !bekleyenDeger(item));
 }
 
 function sssSorulari(veri: HalkaArzVeri) {
@@ -303,7 +405,7 @@ function sssSorulari(veri: HalkaArzVeri) {
     },
     {
       soru: `${veri.sirketAdi} halka arzı hangi pazarda işlem görecek?`,
-      cevap: `Payların ${veri.ozet.pazar || "Borsa İstanbul tarafından açıklanacak pazarda"} işlem görmesi beklenmektedir.`,
+      cevap: `Payların ${veri.ozet.pazar || "Borsa İstanbul tarafından açıklanacak pazarda"} işlem görmesi beklenmektedir. Payların katılım endeksine uygun olduğu açıklanmıştır.`,
     },
     {
       soru: `${veri.sirketAdi} halka arz fonu nerede kullanılacak?`,
@@ -323,7 +425,7 @@ export default function SaatVeSaatPage() {
     veri.finansalDonemler && veri.finansalDonemler.length > 0
       ? veri.finansalDonemler
       : Array.from(
-          new Set(veri.finansalVeriler.flatMap((r) => Object.keys(r.donemler))),
+          new Set(veri.finansalVeriler.flatMap((r) => Object.keys(r.donemler)))
         );
   const kod = veri.bistKodu || veri.ozet.bistKodu;
 
@@ -342,39 +444,28 @@ export default function SaatVeSaatPage() {
                 </h1>
                 <p className="mt-2 text-sm text-blue-100 sm:text-base">
                   {kod ? `#${kod} ` : ""}
-                  halka arz fiyatı, sermaye ve satış bilgileri, fon kullanımı ve
-                  finansal görünüm
+                  halka arz fiyatı, sermaye ve satış bilgileri, fon kullanımı ve finansal görünüm
                 </p>
               </div>
 
-              {(veri.ozet.fiyatAralik ||
-                veri.toplamPay ||
-                veri.halkaAciklikOrani) && (
+              {(veri.ozet.fiyatAralik || veri.toplamPay || veri.halkaAciklikOrani) && (
                 <div className="grid grid-cols-2 gap-3 md:min-w-[320px]">
                   {veri.ozet.fiyatAralik && (
                     <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
-                      <div className="text-xs text-blue-100">
-                        Halka Arz Fiyatı
-                      </div>
-                      <div className="mt-1 text-lg font-bold">
-                        {veri.ozet.fiyatAralik}
-                      </div>
+                      <div className="text-xs text-blue-100">Halka Arz Fiyatı</div>
+                      <div className="mt-1 text-lg font-bold">{veri.ozet.fiyatAralik}</div>
                     </div>
                   )}
                   {veri.toplamPay && (
                     <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
                       <div className="text-xs text-blue-100">Toplam Pay</div>
-                      <div className="mt-1 text-lg font-bold">
-                        {veri.toplamPay}
-                      </div>
+                      <div className="mt-1 text-lg font-bold">{veri.toplamPay}</div>
                     </div>
                   )}
                   {veri.halkaAciklikOrani && (
                     <div className="rounded-2xl bg-white/10 p-4 backdrop-blur">
                       <div className="text-xs text-blue-100">Halka Açıklık</div>
-                      <div className="mt-1 text-lg font-bold">
-                        {veri.halkaAciklikOrani}
-                      </div>
+                      <div className="mt-1 text-lg font-bold">{veri.halkaAciklikOrani}</div>
                     </div>
                   )}
                 </div>
@@ -470,18 +561,13 @@ export default function SaatVeSaatPage() {
                       {veri.finansalVeriler.map((row, index) => (
                         <tr
                           key={row.kalem}
-                          className={
-                            index % 2 === 0 ? "bg-white" : "bg-slate-50"
-                          }
+                          className={index % 2 === 0 ? "bg-white" : "bg-slate-50"}
                         >
                           <td className="px-4 py-4 text-sm font-semibold text-slate-800">
                             {row.kalem}
                           </td>
                           {donemler.map((d) => (
-                            <td
-                              key={d}
-                              className="px-4 py-4 text-sm text-slate-700"
-                            >
+                            <td key={d} className="px-4 py-4 text-sm text-slate-700">
                               {row.donemler[d] ?? "-"}
                             </td>
                           ))}
@@ -513,8 +599,7 @@ export default function SaatVeSaatPage() {
                   ))
                 ) : (
                   <div className="rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-900">
-                    Tahsisat oranları ve lot kırılımı kesinleştiğinde bu alan
-                    güncellenecektir.
+                    Tahsisat oranları ve lot kırılımı kesinleştiğinde bu alan güncellenecektir.
                   </div>
                 )}
                 {veri.tahsisatNotlari?.map((item, index) => (
@@ -572,9 +657,7 @@ export default function SaatVeSaatPage() {
             <h2 className="mb-3 text-xl font-bold text-slate-900">
               Şirket Hakkında
             </h2>
-            <p className="text-sm leading-7 text-slate-600">
-              {veri.sirketHakkinda}
-            </p>
+            <p className="text-sm leading-7 text-slate-600">{veri.sirketHakkinda}</p>
           </section>
         )}
 
@@ -584,6 +667,9 @@ export default function SaatVeSaatPage() {
               "Bu sayfadaki bilgiler onaylı izahname/halka arz sürecine dair genel bilgilendirme amaçlıdır, yatırım tavsiyesi değildir."}
           </p>
         </section>
+
+
+        <TalepSonuclariTablosu />
 
         <section className="mt-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
           <div className="border-b border-slate-200 bg-slate-50 px-6 py-4">
@@ -625,22 +711,19 @@ export default function SaatVeSaatPage() {
             {
               title: "Güncel halka arz takvimi",
               href: "/halka-arz",
-              description:
-                "Talep toplama tarihleri, halka arz araçları ve güncel gündem.",
+              description: "Talep toplama tarihleri, halka arz araçları ve güncel gündem.",
               type: "Halka arz",
             },
             {
               title: "Onaylı izahnameler",
               href: "/halka-arz/onayli-izahnameler",
-              description:
-                "SPK onayından geçen halka arz şirketlerini inceleyin.",
+              description: "SPK onayından geçen halka arz şirketlerini inceleyin.",
               type: "İzahname",
             },
             {
               title: "Halka arz kaç lot verir?",
               href: "/halka-arz/talep-hesapla",
-              description:
-                "Dağıtım varsayımlarına göre olası lot hesabı yapın.",
+              description: "Dağıtım varsayımlarına göre olası lot hesabı yapın.",
               type: "Lot hesabı",
             },
           ]}

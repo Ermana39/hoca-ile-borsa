@@ -13,6 +13,8 @@ type VideoItem = {
 };
 
 const videoLinks: VideoItem[] = [
+  { id: "nWLJjZtdB8U", url: "https://youtu.be/nWLJjZtdB8U" },
+  { id: "gZ9jGY99wyg", url: "https://youtu.be/gZ9jGY99wyg" },
   { id: "xllOFuh78Zc", url: "https://youtu.be/xllOFuh78Zc" },
   { id: "NpM3QhBF2xk", url: "https://youtu.be/NpM3QhBF2xk" },
   { id: "_mzojct2biM", url: "https://youtu.be/_mzojct2biM" },

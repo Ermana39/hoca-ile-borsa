@@ -322,10 +322,6 @@ export default function HalkaArzKarnesi({
     (metin) =>
       metin.includes("isleme basliyor") || metin.includes("ilk islem gun")
   );
-  const tavanHaberi = hrefIleHaber(
-    ilgiliHaberler,
-    sonuc?.tavanSerisi?.kaynakHref
-  );
   const dagitimOzetDegeri = (anahtarlar: string[]) =>
     veri?.dagitimSonuclari?.ozetKartlari?.find((item) => {
       const label = normalizeMetin(item.label);
@@ -454,14 +450,16 @@ export default function HalkaArzKarnesi({
     {
       baslik: "Tavan ve Performans",
       durum: sonuc ? "guncel" : "bekleniyor",
-      deger: sonuc ? tavanSerisiMetni(sonuc) : "İşlem sonrası başlayacak",
+      deger: sonuc
+        ? `${tavanSerisiMetni(sonuc)} · Halka arz getirisi ${marj || "hesaplanamadı"}`
+        : "İşlem sonrası başlayacak",
       aciklama: sonuc
-        ? `${marj || "Hesaplanamadı"} halka arz getirisi · son kapanış ${fiyatMetni(
+        ? `Halka arz fiyatı ${fiyatMetni(sonuc.arzFiyati)}, son kayıtlı kapanış ${fiyatMetni(
             sonuc.guncelFiyat
-          )}.`
+          )}. Tavan serisi ve marj verisi performans tablosundan izlenir.`
         : "İlk tavan serisi ve halka arz fiyatına göre getiri işlem başladıktan sonra izlenecek.",
-      href: sonuc?.tavanSerisi?.kaynakHref || tavanHaberi?.href,
-      linkEtiketi: "Performans kaynağı",
+      href: "/halka-arz/tavan-serisi",
+      linkEtiketi: "Tavan serisi tablosunu aç",
     },
   ];
 

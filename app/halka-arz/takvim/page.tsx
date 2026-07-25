@@ -5,7 +5,7 @@ import { bekleyenDeger, halkaArzGetir } from "@/lib/halka-arz";
 const canonical = "https://www.hocaileborsa.com/halka-arz/takvim";
 const title = "Halka Arz Takvimi 2026 | Güncel Dağıtım ve İşlem Tarihleri";
 const description =
-  "Güncel halka arz takvimi: Quick Sigorta ve Bewen Enerji talep toplama tarihleri, Masfen Enerji ve Kardemir Çelik dağıtım sonuçları, Metgün Enerji ile Albayrak Hazır Beton işlem başlangıçları.";
+  "Güncel halka arz takvimi: Quick Sigorta ve Bewen Enerji talep toplama tarihleri, Masfen Enerji dağıtım sonuçları, Kardemir Çelik işlem başlangıcı ve yeni halka arz tarihleri.";
 
 export const metadata: Metadata = {
   title,
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     "bu hafta halka arz",
     "METEN işlem tarihi",
     "ALBTN işlem tarihi",
-    "KARCL dağıtım sonuçları",
+    "KARCL işlem başlangıcı",
     "MASFN dağıtım sonuçları",
     "Quick Sigorta halka arz",
     "Bewen Enerji halka arz",
@@ -58,11 +58,6 @@ const dagitimSonucuBeklenenTakvimi: TakvimSirketi[] = [
     tarih: "",
     durum: "Dağıtım sonuçları açıklanacak",
   },
-  {
-    slug: "kardemir-celik-sanayi",
-    tarih: "",
-    durum: "Dağıtım sonuçları açıklanacak",
-  },
 ];
 
 const talepToplamaTakvimi: TakvimSirketi[] = [
@@ -88,6 +83,11 @@ const islemBaslangiciTakvimi: TakvimSirketi[] = [
     slug: "albayrak-hazir-beton-san-ve-tic",
     tarih: "29 Temmuz 2026 Çarşamba",
     durum: "İşleme başlayacak",
+  },
+  {
+    slug: "kardemir-celik-sanayi",
+    tarih: "İşleme başlama tarihinin açıklanması bekleniyor",
+    durum: "İşleme başlama tarihi bekleniyor",
   },
 ];
 
@@ -161,7 +161,7 @@ export default function HalkaArzTakvimPage() {
     {
       soru: "Dağıtım sonuçları açıklanacak halka arzlar hangileri?",
       cevap:
-        "Masfen Enerji ve Kardemir Çelik Sanayi halka arzlarının dağıtım sonuçlarının açıklanması bekleniyor.",
+        "Masfen Enerji halka arzının dağıtım sonuçlarının açıklanması bekleniyor. Kardemir Çelik tarafında dağıtım sonrası işleme başlama tarihinin açıklanması takip ediliyor.",
     },
     {
       soru: "Bu hafta hangi halka arzlar işleme başlayacak?",
@@ -230,9 +230,9 @@ export default function HalkaArzTakvimPage() {
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 md:text-base">
             Güncel halka arz takviminde dağıtım sonuçları açıklanacak şirketler,
-            Borsa İstanbul&apos;da işleme başlayacak halka arzlar ve onaylı
-            izahnamesinin yayımlanması beklenen şirketler tek sayfada takip
-            edilebilir.
+            Borsa İstanbul&apos;da işleme başlayacak veya işlem başlangıç tarihi
+            beklenen halka arzlar ve onaylı izahnamesinin yayımlanması beklenen
+            şirketler tek sayfada takip edilebilir.
           </p>
         </header>
 

@@ -259,6 +259,159 @@ function Section({
   );
 }
 
+
+type TalepSonucuSatiri = {
+  kategori: string;
+  yatirimciSayisi: string;
+  planlananTahsisat: string;
+  talep: string;
+  dagitim: string;
+  dagitimOrani: string;
+  talepKati: string;
+};
+
+const talepSonuclari: TalepSonucuSatiri[] = [
+  {
+    kategori: "Yurt İçi Bireysel Yatırımcılar",
+    yatirimciSayisi: "728.823",
+    planlananTahsisat: "33.820.000 Lot",
+    talep: "46.370.290 Lot",
+    dagitim: "33.820.000 Lot",
+    dagitimOrani: "%38,00",
+    talepKati: "1,37 kat",
+  },
+  {
+    kategori: "Yüksek Talepte Bulunacak Yatırımcı Grubu",
+    yatirimciSayisi: "344",
+    planlananTahsisat: "8.900.000 Lot",
+    talep: "114.848.112 Lot",
+    dagitim: "8.900.000 Lot",
+    dagitimOrani: "%10,00",
+    talepKati: "12,90 kat",
+  },
+  {
+    kategori: "Grup Çalışanları",
+    yatirimciSayisi: "263",
+    planlananTahsisat: "1.780.000 Lot",
+    talep: "1.809.670 Lot",
+    dagitim: "1.780.000 Lot",
+    dagitimOrani: "%2,00",
+    talepKati: "1,02 kat",
+  },
+  {
+    kategori: "Yurt İçi Kurumsal Yatırımcılar",
+    yatirimciSayisi: "115",
+    planlananTahsisat: "22.250.000 Lot",
+    talep: "111.393.521 Lot",
+    dagitim: "22.250.000 Lot",
+    dagitimOrani: "%25,00",
+    talepKati: "5,01 kat",
+  },
+  {
+    kategori: "Yurt Dışı Kurumsal Yatırımcılar",
+    yatirimciSayisi: "15",
+    planlananTahsisat: "22.250.000 Lot",
+    talep: "60.886.242 Lot",
+    dagitim: "22.250.000 Lot",
+    dagitimOrani: "%25,00",
+    talepKati: "2,74 kat",
+  },
+  {
+    kategori: "Toplam",
+    yatirimciSayisi: "729.560",
+    planlananTahsisat: "89.000.000 Lot",
+    talep: "335.307.835 Lot",
+    dagitim: "89.000.000 Lot",
+    dagitimOrani: "%100,00",
+    talepKati: "3,77 kat",
+  },
+];
+
+function TalepSonuclariTablosu() {
+  return (
+    <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+      <h2 className="text-xl font-bold text-slate-900">
+        Halka Arz Talep ve Dağıtım Sonuçları
+      </h2>
+      <p className="mt-2 text-sm leading-7 text-slate-600">
+        Yatırımcı gruplarına göre planlanan tahsisat, gerçekleşen talep,
+        dağıtılan pay ve oluşan talep katları.
+      </p>
+
+      <div className="mt-5 overflow-x-auto rounded-2xl border border-slate-200 xl:overflow-x-visible">
+        <table className="w-full min-w-[900px] table-fixed text-xs xl:min-w-0 xl:text-[12px] 2xl:text-sm">
+          <thead className="bg-slate-900 text-white">
+            <tr>
+              <th className="w-[22%] px-2 py-3 text-left font-bold">
+                Yatırımcı Grubu
+              </th>
+              <th className="px-2 py-3 text-right font-bold">
+                Yatırımcı Sayısı
+              </th>
+              <th className="px-2 py-3 text-right font-bold">
+                Planlanan Tahsisat
+              </th>
+              <th className="px-2 py-3 text-right font-bold">
+                Gerçekleşen Talep
+              </th>
+              <th className="px-2 py-3 text-right font-bold">
+                Dağıtılan Pay
+              </th>
+              <th className="px-2 py-3 text-right font-bold">
+                Dağıtım Oranı
+              </th>
+              <th className="px-2 py-3 text-right font-bold">
+                Talep Katı
+              </th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {talepSonuclari.map((satir, index) => {
+              const toplamSatiri = satir.kategori === "Toplam";
+
+              return (
+                <tr
+                  key={satir.kategori}
+                  className={
+                    toplamSatiri
+                      ? "bg-slate-100 font-bold"
+                      : index % 2 === 0
+                        ? "bg-white"
+                        : "bg-slate-50"
+                  }
+                >
+                  <td className="border-t border-slate-200 px-2 py-3 font-semibold leading-5 text-slate-900">
+                    {satir.kategori}
+                  </td>
+                  <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                    {satir.yatirimciSayisi}
+                  </td>
+                  <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                    {satir.planlananTahsisat}
+                  </td>
+                  <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                    {satir.talep}
+                  </td>
+                  <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                    {satir.dagitim}
+                  </td>
+                  <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                    {satir.dagitimOrani}
+                  </td>
+                  <td className="border-t border-slate-200 px-2 py-3 text-right font-bold leading-5 text-emerald-700">
+                    {satir.talepKati}
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </section>
+  );
+}
+
 function ozetSatirlari(veri: HalkaArzVeri): BilgiKarti[] {
   const o = veri.ozet;
   return [
@@ -553,6 +706,8 @@ export default function SaRaEnerjiPage() {
         </section>
 
 
+        <TalepSonuclariTablosu />
+
         <section className="mt-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
           <div className="border-b border-slate-200 bg-slate-50 px-6 py-4">
             <h2 className="text-lg font-bold text-slate-900">
@@ -578,6 +733,22 @@ export default function SaRaEnerjiPage() {
               <div className="p-4">
                 <h3 className="text-sm font-bold text-slate-900">
                   Şa-Ra Enerji Halka Arz Video İncelemesi
+                </h3>
+              </div>
+            </div>
+            <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
+              <div className="relative aspect-video w-full overflow-hidden bg-slate-100">
+                <iframe
+                  src="https://www.youtube.com/embed/J0ARMv2NysY"
+                  title="Şa-Ra Enerji vs Saat ve Saat Halka Arz Karşılaştırması"
+                  className="absolute inset-0 h-full w-full"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-sm font-bold text-slate-900">
+                  Şa-Ra Enerji vs Saat ve Saat Halka Arz Karşılaştırması
                 </h3>
               </div>
             </div>

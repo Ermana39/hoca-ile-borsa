@@ -576,6 +576,124 @@ export default function EkimTurizmPage() {
         </section>
 
         <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
+          <h2 className="text-xl font-bold text-slate-900">
+            Halka Arz Talep ve Dağıtım Sonuçları
+          </h2>
+          <p className="mt-2 text-sm leading-7 text-slate-600">
+            Yatırımcı gruplarına göre planlanan tahsisat, gerçekleşen talep,
+            dağıtılan pay ve oluşan talep katları.
+          </p>
+
+          <div className="mt-5 overflow-x-auto rounded-2xl border border-slate-200 xl:overflow-x-visible">
+            <table className="w-full min-w-[900px] table-fixed text-xs xl:min-w-0 xl:text-[12px] 2xl:text-sm">
+              <thead className="bg-slate-900 text-white">
+                <tr>
+                  <th className="w-[22%] px-2 py-3 text-left font-bold">
+                    Yatırımcı Grubu
+                  </th>
+                  <th className="px-2 py-3 text-right font-bold">
+                    Yatırımcı Sayısı
+                  </th>
+                  <th className="px-2 py-3 text-right font-bold">
+                    Planlanan Tahsisat
+                  </th>
+                  <th className="px-2 py-3 text-right font-bold">
+                    Gerçekleşen Talep
+                  </th>
+                  <th className="px-2 py-3 text-right font-bold">
+                    Dağıtılan Pay
+                  </th>
+                  <th className="px-2 py-3 text-right font-bold">
+                    Dağıtım Oranı
+                  </th>
+                  <th className="px-2 py-3 text-right font-bold">
+                    Talep Katı
+                  </th>
+                </tr>
+              </thead>
+
+              <tbody>
+                {[
+                  {
+                    kategori: "Yurt İçi Bireysel Yatırımcılar",
+                    yatirimciSayisi: "706.837",
+                    planlananTahsisat: "113.400.000 Lot",
+                    talep: "85.748.972 Lot",
+                    dagitim: "85.677.956 Lot",
+                    dagitimOrani: "%52,89",
+                    talepKati: "0,76 kat",
+                  },
+                  {
+                    kategori: "Yüksek Talepte Bulunacak Yatırımcılar",
+                    yatirimciSayisi: "923",
+                    planlananTahsisat: "16.200.000 Lot",
+                    talep: "83.505.446 Lot",
+                    dagitim: "43.922.044 Lot",
+                    dagitimOrani: "%27,11",
+                    talepKati: "5,15 kat",
+                  },
+                  {
+                    kategori: "Yurt İçi Kurumsal Yatırımcılar",
+                    yatirimciSayisi: "91",
+                    planlananTahsisat: "32.400.000 Lot",
+                    talep: "88.109.017 Lot",
+                    dagitim: "32.400.000 Lot",
+                    dagitimOrani: "%20,00",
+                    talepKati: "2,72 kat",
+                  },
+                  {
+                    kategori: "Toplam",
+                    yatirimciSayisi: "707.851",
+                    planlananTahsisat: "162.000.000 Lot",
+                    talep: "257.363.435 Lot",
+                    dagitim: "162.000.000 Lot",
+                    dagitimOrani: "%100,00",
+                    talepKati: "1,59 kat",
+                  },
+                ].map((satir, index) => {
+                  const toplamSatiri = satir.kategori === "Toplam";
+
+                  return (
+                    <tr
+                      key={satir.kategori}
+                      className={
+                        toplamSatiri
+                          ? "bg-slate-100 font-bold"
+                          : index % 2 === 0
+                            ? "bg-white"
+                            : "bg-slate-50"
+                      }
+                    >
+                      <td className="border-t border-slate-200 px-2 py-3 font-semibold leading-5 text-slate-900">
+                        {satir.kategori}
+                      </td>
+                      <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                        {satir.yatirimciSayisi}
+                      </td>
+                      <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                        {satir.planlananTahsisat}
+                      </td>
+                      <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                        {satir.talep}
+                      </td>
+                      <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                        {satir.dagitim}
+                      </td>
+                      <td className="border-t border-slate-200 px-2 py-3 text-right leading-5 text-slate-700">
+                        {satir.dagitimOrani}
+                      </td>
+                      <td className="border-t border-slate-200 px-2 py-3 text-right font-bold leading-5 text-emerald-700">
+                        {satir.talepKati}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
+          </div>
+        </section>
+
+        <section className="mt-8 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">
           <h2 className="mb-5 text-xl font-bold text-slate-900">YouTube Videoları</h2>
           <div className="grid gap-4 md:grid-cols-2">
             <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-50">
