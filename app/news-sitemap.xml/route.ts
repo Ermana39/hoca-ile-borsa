@@ -5,11 +5,9 @@ const publicationName = "Hoca İle Borsa";
 const publicationLanguage = "tr";
 const newsWindowDays = 2;
 
-// Bu sitemap'in içeriği "son 2 günün haberleri" penceresine bağlı ve bu pencere
-// bugünün tarihine göre hesaplanır. Bu yüzden -diğer sayfaların aksine- veri
-// değişmese bile periyodik yenilenmesi gerekir; aksi halde pencere donar.
-// 6 saatte bir yenileme, Google News tazeliği ile yazma maliyeti arasında denge.
-export const revalidate = 21600;
+// News sitemap dosya tabanlı haberlerden üretilir ve yeni haberler deploy ile
+// gelir. Zaman bazlı ISR, içerik değişmese bile okuma birimi üretir.
+export const revalidate = false;
 
 function escapeXml(value: string) {
   return value
@@ -81,7 +79,7 @@ ${urls}
     headers: {
       "Content-Type": "application/xml; charset=utf-8",
       "Cache-Control":
-        "public, max-age=0, s-maxage=3600, stale-while-revalidate=300",
+        "public, max-age=300, s-maxage=86400, stale-while-revalidate=604800",
     },
   });
 }

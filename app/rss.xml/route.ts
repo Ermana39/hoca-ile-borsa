@@ -7,9 +7,9 @@ const feedDescription =
   "Borsa İstanbul haberleri, halka arz gelişmeleri, KAP bildirimleri, temettü ve sermaye artırımı haberleri.";
 const maxItems = 50;
 
-// Haber akışı newsItems'a bağlı; yeni haber deploy ile gelir. Yine de
-// günlük özetler tarihe göre akışa katıldığından saatlik yenileme yeterli.
-export const revalidate = 3600;
+// Haber akışı dosya tabanlıdır ve yeni haberler deploy ile gelir. Zaman bazlı
+// ISR, içerik değişmese bile Vercel okuma birimi üretir; deploy çıktısı yeterli.
+export const revalidate = false;
 
 function escapeXml(value: string) {
   return value
@@ -81,7 +81,7 @@ ${itemXml}
     headers: {
       "Content-Type": "application/rss+xml; charset=utf-8",
       "Cache-Control":
-        "public, max-age=0, s-maxage=3600, stale-while-revalidate=300",
+        "public, max-age=300, s-maxage=86400, stale-while-revalidate=604800",
     },
   });
 }

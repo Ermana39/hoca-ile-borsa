@@ -2,7 +2,6 @@ import crypto from "crypto";
 import { revalidatePath, revalidateTag } from "next/cache";
 import { NextRequest, NextResponse } from "next/server";
 import { HABER_KATEGORILERI } from "@/lib/haber-kategorileri";
-import { getAllNews } from "@/lib/haberler";
 
 // Gizli anahtarları zamanlama saldırılarına karşı sabit sürede karşılaştırır.
 function safeEqual(a: string, b: string) {
@@ -103,11 +102,16 @@ export async function POST(request: NextRequest) {
 
   if (scope === "haberler" || scope === "all") {
     revalidateTag("haberler", "max");
+    // Tekil haber sayfaları deploy sırasında statik üretilir. Burada tüm haber
+    // arşivini tek tek yenilemek, içerik akışına katkı sağlamadan ISR okuma
+    // birimini büyütür; yalnızca kullanıcıların gördüğü akış yüzeyleri yenilenir.
     const haberPaths = [
       "/",
       "/haberler",
+      "/haberler/sayfa/2",
+      "/haberler/sayfa/3",
+      "/rss.xml",
       "/news-sitemap.xml",
-      ...getAllNews().map((item) => item.href),
       ...HABER_KATEGORILERI.map(
         (kategori) => `/haberler/kategori/${kategori.slug}`
       ),
