@@ -12,3 +12,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 - Before reporting a news item as published, make sure the JSON file is in `data/haberler`, has `durum: "yayinda"`, and the site build succeeds.
 - Gün sonu kapanış değerlendirmesi haberlerinde "Kaynakta açıklanan temel bilgiler" tablosunu ve "Hoca ile Borsa değerlendirmesi" giriş kutusunu sayfada gösterme.
 - Günlük KAP özetinde, gün içinde ayrı haberi oluşturulan gelişmenin altında ilgili iç haber bağlantısını göster; ayrıntı sayfası bulunmayan gelişmeye bağlantı ekleme.
+
+## Halka arz workflow
+
+- Halka arz şirketi onaylı izahname aşamasına alındığında yalnızca JSON'da `seo.contentStatus: "onayli"` yapmak yeterli değildir. `app/halka-arz/onayli-izahnameler/<slug>/page.tsx` fiziksel sayfa dosyasını da oluştur; kullanıcı bu dosyadan şirket sayfasını düzenleyebilmelidir.

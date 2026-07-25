@@ -5,6 +5,12 @@ import path from "node:path";
 const ROOT = process.cwd();
 const DATA_DIR = path.join(ROOT, "data", "halka-arz");
 const ARCHIVE_DIR = path.join(ROOT, "data", "halka-arz-taslak-arsivi");
+const APPROVED_PAGE_DIR = path.join(
+  ROOT,
+  "app",
+  "halka-arz",
+  "onayli-izahnameler"
+);
 const RECOVER_ALL_FLAG = "--recover-approved";
 const CHECK_ALL_FLAG = "--check-approved";
 
@@ -118,6 +124,16 @@ function checkApprovedDrafts() {
     const current = readJson(path.join(DATA_DIR, file));
     if (current?.seo?.contentStatus !== "onayli") continue;
     approved += 1;
+
+    const approvedPagePath = path.join(APPROVED_PAGE_DIR, slug, "page.tsx");
+    if (!fs.existsSync(approvedPagePath)) {
+      errors.push(
+        `${slug}: onaylı izahname sayfası bulunamadı (${path.relative(
+          ROOT,
+          approvedPagePath
+        )})`
+      );
+    }
 
     const archivePath = path.join(ARCHIVE_DIR, file);
     if (!fs.existsSync(archivePath)) {
