@@ -32,21 +32,59 @@ function jsonLdGuvenli(veri: unknown) {
   return JSON.stringify(veri).replace(/</g, "\\u003c");
 }
 
+function kapKaynakSatiri(paragraf: string) {
+  const match = paragraf.match(
+    /^Kaynak:\s*KAP(?:\s+İçeriği)?\s*[—-]\s*(https?:\/\/\S+)\s*$/i
+  );
+  return match?.[1] ?? null;
+}
+
+function HaberParagrafi({
+  paragraf,
+  id,
+}: {
+  paragraf: string;
+  id: string;
+}) {
+  const kapLink = kapKaynakSatiri(paragraf);
+
+  if (kapLink) {
+    return (
+      <p className="text-sm leading-7 text-slate-700 md:text-base">
+        <a
+          href={kapLink}
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+          className="inline-flex rounded-md border border-blue-200 bg-blue-50 px-3 py-2 text-sm font-bold text-blue-700 transition hover:border-blue-300 hover:bg-blue-100 hover:text-blue-900"
+        >
+          Kaynak KAP
+        </a>
+      </p>
+    );
+  }
+
+  return (
+    <p id={id} className="text-sm leading-7 text-slate-700 md:text-base">
+      {paragraf}
+    </p>
+  );
+}
+
 function HaberIcerikBolumu({ bolum }: { bolum: HaberBolumu }) {
   const vurgu = bolum.vurgu ?? "normal";
   const kapBaglantilari = [
     bolum.kapLink
       ? {
           href: bolum.kapLink,
-          label: bolum.kapLinkMetni ?? "Kaynak KAP bildirimi",
+          label: bolum.kapLinkMetni ?? "Kaynak KAP",
         }
       : null,
     ...(bolum.ekKapLinkler ?? []).map((href, index) => ({
       href,
       label:
         index === 0
-          ? "Ek KAP bildirimi"
-          : `Ek KAP bildirimi ${index + 1}`,
+          ? "Kaynak KAP"
+          : `Kaynak KAP ${index + 1}`,
     })),
   ].filter((baglanti): baglanti is { href: string; label: string } =>
     Boolean(baglanti)
@@ -69,12 +107,11 @@ function HaberIcerikBolumu({ bolum }: { bolum: HaberBolumu }) {
       {bolum.paragraflar && bolum.paragraflar.length > 0 && (
         <div className="mt-4 space-y-4">
           {bolum.paragraflar.map((paragraf, index) => (
-            <p
+            <HaberParagrafi
               key={`${bolum.baslik}-paragraf-${index}`}
-              className="text-sm leading-7 text-slate-700 md:text-base"
-            >
-              {paragraf}
-            </p>
+              id={`${bolum.baslik}-paragraf-${index}`}
+              paragraf={paragraf}
+            />
           ))}
         </div>
       )}
@@ -456,7 +493,7 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
                       className="rounded-xl border border-slate-200 bg-white p-4 transition hover:border-blue-300"
                     >
                       <span className="text-xs font-bold uppercase tracking-wider text-blue-700">
-                        {kaynak.tur}
+                        {kaynak.tur === "KAP" ? "Kaynak KAP" : kaynak.tur}
                       </span>
                       <span className="mt-1 block text-sm font-semibold text-slate-800">
                         {kaynak.ad}
