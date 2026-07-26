@@ -38,46 +38,22 @@
       {
         "baslik": "Açıklanan Bilanço",
         "deger": "12",
-        "aciklama": "26 Temmuz'da derlenen finansal raporlar",
-        "grafik": {
-          "etiket": "Derlenen rapor",
-          "deger": 12,
-          "maksimum": 12,
-          "birim": "adet"
-        }
+        "aciklama": "26 Temmuz'da derlenen finansal raporlar"
       },
       {
         "baslik": "DENIZ Net Kâr",
         "deger": "34,65 Mr TL",
-        "aciklama": "İlk altı ayda yüzde 27,9 artış",
-        "grafik": {
-          "etiket": "Net kâr",
-          "deger": 34.65,
-          "maksimum": 35,
-          "birim": "Mr TL"
-        }
+        "aciklama": "İlk altı ayda yüzde 27,9 artış"
       },
       {
         "baslik": "TEBNK Net Kâr",
         "deger": "10,25 Mr TL",
-        "aciklama": "İlk altı ayda yüzde 56,0 artış",
-        "grafik": {
-          "etiket": "Net kâr",
-          "deger": 10.25,
-          "maksimum": 35,
-          "birim": "Mr TL"
-        }
+        "aciklama": "İlk altı ayda yüzde 56,0 artış"
       },
       {
         "baslik": "DTBMK Net Kâr",
         "deger": "1,45 Mr TL",
-        "aciklama": "İlk altı ayda yüzde 196,9 artış",
-        "grafik": {
-          "etiket": "Net kâr",
-          "deger": 1.45,
-          "maksimum": 35,
-          "birim": "Mr TL"
-        }
+        "aciklama": "İlk altı ayda yüzde 196,9 artış"
       }
     ],
     "temelBilgiler": [
@@ -111,6 +87,16 @@
           "Kısa değerlendirme: Kredi büyümesinin mevduat artışından daha hızlı gerçekleşmesi ve net kârdaki yükseliş öne çıkıyor. Finansal rapordaki sınırlı denetim görüşünün şartlı olduğu da sonuçlarla birlikte dikkate alınmalı.",
           "Kaynak: KAP İçeriği — https://www.kap.org.tr/Bildirim/1636726"
         ],
+        "degisimGrafigi": {
+          "baslik": "DENIZ temel kalemlerde değişim",
+          "veriler": [
+            { "etiket": "Aktifler", "deger": 19.4 },
+            { "etiket": "Krediler", "deger": 22.6 },
+            { "etiket": "Mevduat", "deger": 20.8 },
+            { "etiket": "Özkaynak", "deger": 14.7 },
+            { "etiket": "Net kâr", "deger": 27.9 }
+          ]
+        },
         "vurgu": "olumlu"
       },
       {
@@ -121,6 +107,15 @@
           "Kısa değerlendirme: Özkaynak ve net kâr artışının kredi büyümesinden daha güçlü olması olumlu. Bankanın proje finansmanı ağırlıklı yapısı nedeniyle kredi kalitesi ve uzun vadeli fonlama koşulları izlenmeli.",
           "Kaynak: KAP İçeriği — https://www.kap.org.tr/Bildirim/1636721"
         ],
+        "degisimGrafigi": {
+          "baslik": "KLNMA temel kalemlerde değişim",
+          "veriler": [
+            { "etiket": "Aktifler", "deger": 5.4 },
+            { "etiket": "Krediler", "deger": 2.2 },
+            { "etiket": "Özkaynak", "deger": 15 },
+            { "etiket": "Net kâr", "deger": 31.4 }
+          ]
+        },
         "vurgu": "olumlu"
       },
       {
@@ -131,6 +126,15 @@
           "Kısa değerlendirme: Hasılattaki güçlü artışa rağmen esas faaliyet zararına geçilmesi ve net kârın gerilemesi dikkat çekiyor. Net kârın hangi gelir kalemlerinden oluştuğu dipnotlarla birlikte incelenmeli.",
           "Kaynak: KAP İçeriği — https://www.kap.org.tr/Bildirim/1636698"
         ],
+        "degisimGrafigi": {
+          "baslik": "PSGYO temel kalemlerde değişim",
+          "veriler": [
+            { "etiket": "Varlıklar", "deger": 0.7 },
+            { "etiket": "Özkaynak", "deger": 2.1 },
+            { "etiket": "Hasılat", "deger": 362.9 },
+            { "etiket": "Net kâr", "deger": -30.5 }
+          ]
+        },
         "vurgu": "notr"
       },
       {
@@ -141,6 +145,14 @@
           "Kısa değerlendirme: Satış ve faaliyet kârındaki gerilemeye rağmen net zararın büyük ölçüde daralması bilanço içindeki olumlu ayrışma oldu. Zarardaki iyileşmenin sürdürülebilirliği için finansman ve vergi kalemleri takip edilmeli.",
           "Kaynak: KAP İçeriği — https://www.kap.org.tr/Bildirim/1636660"
         ],
+        "degisimGrafigi": {
+          "baslik": "BIGEN temel kalemlerde değişim",
+          "veriler": [
+            { "etiket": "Varlıklar", "deger": 3.5 },
+            { "etiket": "Özkaynak", "deger": 8.5 },
+            { "etiket": "Hasılat", "deger": -38.7 }
+          ]
+        },
         "vurgu": "notr"
       },
       {
@@ -151,6 +163,17 @@
           "Kısa değerlendirme: Kiralama alacakları ve faaliyet gelirlerindeki büyüme güçlü. Buna rağmen net kârdaki gerileme, faaliyet kârı sonrasındaki gider ve karşılıkların daha ayrıntılı incelenmesini gerektiriyor.",
           "Kaynak: KAP İçeriği — https://www.kap.org.tr/Bildirim/1636623"
         ],
+        "degisimGrafigi": {
+          "baslik": "DNFIN temel kalemlerde değişim",
+          "veriler": [
+            { "etiket": "Varlıklar", "deger": 28 },
+            { "etiket": "Alacaklar", "deger": 32.2 },
+            { "etiket": "Özkaynak", "deger": 17.1 },
+            { "etiket": "Gelirler", "deger": 24.4 },
+            { "etiket": "Brüt kâr", "deger": 46.3 },
+            { "etiket": "Net kâr", "deger": -9.2 }
+          ]
+        },
         "vurgu": "notr"
       },
       {
@@ -161,6 +184,16 @@
           "Kısa değerlendirme: Hasılat ve faaliyet kârındaki artışa karşın net kârın yarıya yakın düşmesi, finansman ve diğer faaliyet dışı kalemlerin net sonuca etkisini öne çıkarıyor.",
           "Kaynak: KAP İçeriği — https://www.kap.org.tr/Bildirim/1636612"
         ],
+        "degisimGrafigi": {
+          "baslik": "DAPGM temel kalemlerde değişim",
+          "veriler": [
+            { "etiket": "Varlıklar", "deger": -1 },
+            { "etiket": "Özkaynak", "deger": 2.3 },
+            { "etiket": "Hasılat", "deger": 7.3 },
+            { "etiket": "Faaliyet kârı", "deger": 13.8 },
+            { "etiket": "Net kâr", "deger": -49.7 }
+          ]
+        },
         "vurgu": "notr"
       },
       {
@@ -171,6 +204,15 @@
           "Kısa değerlendirme: Hasılat ve brüt kârdaki artış olumlu olsa da faaliyet ve net zarar tarafındaki bozulma daha baskın görünüyor. Portföy giderleri ve değerleme etkileri yakından incelenmeli.",
           "Kaynak: KAP İçeriği — https://www.kap.org.tr/Bildirim/1636286"
         ],
+        "degisimGrafigi": {
+          "baslik": "DZGYO temel kalemlerde değişim",
+          "veriler": [
+            { "etiket": "Varlıklar", "deger": 3.6 },
+            { "etiket": "Özkaynak", "deger": -0.5 },
+            { "etiket": "Hasılat", "deger": 55 },
+            { "etiket": "Brüt kâr", "deger": 51.8 }
+          ]
+        },
         "vurgu": "risk"
       },
       {
@@ -181,6 +223,15 @@
           "Kısa değerlendirme: Satışların gerilemesiyle birlikte faaliyet zararına ve net zarara geçilmesi zayıf bir dönem görünümü oluşturdu. Sipariş hacmi, gider kontrolü ve işletme sermayesi ihtiyacı takip edilmeli.",
           "Kaynak: KAP İçeriği — https://www.kap.org.tr/Bildirim/1636226"
         ],
+        "degisimGrafigi": {
+          "baslik": "KLSYN temel kalemlerde değişim",
+          "veriler": [
+            { "etiket": "Varlıklar", "deger": 0.6 },
+            { "etiket": "Özkaynak", "deger": -0.9 },
+            { "etiket": "Hasılat", "deger": -12.5 },
+            { "etiket": "Brüt kâr", "deger": -8.5 }
+          ]
+        },
         "vurgu": "risk"
       },
       {
@@ -191,6 +242,15 @@
           "Kısa değerlendirme: Aktif, özkaynak ve net kârdaki yüksek büyüme güçlü bir ilk yarıya işaret ediyor. Yüksek büyümenin kredi kalitesi ve sermaye yeterliliği üzerindeki etkisi sonraki dönemlerde izlenmeli.",
           "Kaynak: KAP İçeriği — https://www.kap.org.tr/Bildirim/1636223"
         ],
+        "degisimGrafigi": {
+          "baslik": "DTBMK temel kalemlerde değişim",
+          "veriler": [
+            { "etiket": "Aktifler", "deger": 26.5 },
+            { "etiket": "Krediler", "deger": 17.4 },
+            { "etiket": "Özkaynak", "deger": 26.9 },
+            { "etiket": "Net kâr", "deger": 196.9 }
+          ]
+        },
         "vurgu": "olumlu"
       },
       {
@@ -201,6 +261,16 @@
           "Kısa değerlendirme: Kredi ve özkaynak büyümesiyle desteklenen güçlü net kâr artışı öne çıkıyor. Kredi büyümesinin mevduat artışını aşması nedeniyle fonlama dengesi ve aktif kalitesi izlenmeli.",
           "Kaynak: KAP İçeriği — https://www.kap.org.tr/Bildirim/1636214"
         ],
+        "degisimGrafigi": {
+          "baslik": "TEBNK temel kalemlerde değişim",
+          "veriler": [
+            { "etiket": "Aktifler", "deger": 9.8 },
+            { "etiket": "Krediler", "deger": 16.2 },
+            { "etiket": "Mevduat", "deger": 9.8 },
+            { "etiket": "Özkaynak", "deger": 16.7 },
+            { "etiket": "Net kâr", "deger": 56 }
+          ]
+        },
         "vurgu": "olumlu"
       },
       {
@@ -211,6 +281,16 @@
           "Kısa değerlendirme: Varlık ve hasılat artışı yüksek olsa da kârlılık aynı yönde ilerlemedi. Varlık kiralama şirketinin özel amaçlı yapısı nedeniyle toplam varlık ve hasılat tek başına operasyonel performans göstergesi olarak değerlendirilmemeli.",
           "Kaynak: KAP İçeriği — https://www.kap.org.tr/Bildirim/1636206"
         ],
+        "degisimGrafigi": {
+          "baslik": "KLVKS temel kalemlerde değişim",
+          "veriler": [
+            { "etiket": "Varlıklar", "deger": 73.2 },
+            { "etiket": "Özkaynak", "deger": 7.8 },
+            { "etiket": "Hasılat", "deger": 406.3 },
+            { "etiket": "Brüt kâr", "deger": -63 },
+            { "etiket": "Net kâr", "deger": -60.3 }
+          ]
+        },
         "vurgu": "notr"
       },
       {
@@ -221,6 +301,17 @@
           "Kısa değerlendirme: Alacak ve gelir büyümesi güçlü görünürken net kârın yatay kalması, fonlama maliyeti ve karşılık giderlerinin etkisini öne çıkarıyor.",
           "Kaynak: KAP İçeriği — https://www.kap.org.tr/Bildirim/1636205"
         ],
+        "degisimGrafigi": {
+          "baslik": "TEBFA temel kalemlerde değişim",
+          "veriler": [
+            { "etiket": "Varlıklar", "deger": 24 },
+            { "etiket": "Alacaklar", "deger": 23.3 },
+            { "etiket": "Özkaynak", "deger": 15.8 },
+            { "etiket": "Gelirler", "deger": 15.4 },
+            { "etiket": "Brüt kâr", "deger": 27.3 },
+            { "etiket": "Net kâr", "deger": -1.1 }
+          ]
+        },
         "vurgu": "notr"
       },
       {
@@ -268,51 +359,6 @@
         ]
       }
     ]
-  },
-  "kapEtkiAnalizi": {
-    "olayTuru": "finansal-rapor",
-    "ozet": "26 Temmuz 2026'da derlenen 12 altı aylık finansal raporda bankalar güçlü net kâr artışlarıyla öne çıkarken GYO, finansman ve sanayi şirketlerinde sonuçlar şirket bazında ayrıştı.",
-    "metrikler": [
-      {
-        "tur": "finansal-sonuc",
-        "baslik": "En yüksek net kâr",
-        "deger": "DENIZ — 34,65 milyar TL",
-        "aciklama": "DenizBank'ın ilk altı aylık net kârı yıllık bazda yüzde 27,9 arttı."
-      },
-      {
-        "tur": "finansal-sonuc",
-        "baslik": "En yüksek kâr artışı",
-        "deger": "DTBMK — yüzde 196,9",
-        "aciklama": "Destek Yatırım Bankası'nın net kârı 487 milyon TL'den 1,45 milyar TL'ye yükseldi."
-      },
-      {
-        "tur": "finansal-sonuc",
-        "baslik": "Güçlü banka sonucu",
-        "deger": "TEBNK — 10,25 milyar TL",
-        "aciklama": "Türk Ekonomi Bankası'nın ilk yarı net kârı yüzde 56,0 arttı."
-      },
-      {
-        "tur": "finansal-sonuc",
-        "baslik": "Zayıf operasyonel görünüm",
-        "deger": "KLSYN — 46,05 milyon TL zarar",
-        "aciklama": "Şirket geçen yılın aynı dönemindeki net kârdan net zarara geçti."
-      }
-    ],
-    "riskler": [
-      "Net dönem kârı, nakit akışıyla aynı anlama gelmez.",
-      "GYO sonuçlarında değerleme ve diğer faaliyet gelirleri net kârı belirgin biçimde etkileyebilir.",
-      "Bankalarda hızlı kredi büyümesi aktif kalitesi ve sermaye yeterliliğiyle birlikte değerlendirilmelidir.",
-      "Leasing ve faktoring şirketlerinde fonlama maliyeti ve karşılık giderleri kârlılığı baskılayabilir.",
-      "Yüksek yüzdesel değişimler düşük karşılaştırma bazından kaynaklanabilir."
-    ],
-    "takipEdilecekler": [
-      "Bankaların kredi-mevduat dengesi, net faiz marjı ve takipteki kredi göstergeleri.",
-      "GYO şirketlerinin proje teslimleri, nakit akışı ve değerleme gelirlerinin payı.",
-      "DNFIN ve TEBFA'da alacak büyümesinin net kâra dönüşümü.",
-      "BIGEN'in net zarardan kâra geçip geçemeyeceği.",
-      "KLSYN ve DZGYO'da faaliyet zararının sonraki çeyreklerdeki seyri."
-    ],
-    "metodolojiNotu": "Tüm rakamlar yalnızca ilgili KAP finansal tablolarından alınmıştır. Bilanço değişimleri 31 Aralık 2025'e, gelir tablosu değişimleri 2025'in aynı altı aylık dönemine göre hesaplanmıştır."
   },
   "sorular": [
     {

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { Fragment } from "react";
 import { getYazar, varsayilanYazar } from "@/app/data/yazarlar";
 import AuthorBox from "@/components/AuthorBox";
 import HaberAltKisim from "@/components/HaberAltKisim";
@@ -18,7 +19,7 @@ import {
 const bolumStilleri: Record<HaberVurgu, string> = {
   normal: "border-slate-200 bg-white",
   analiz: "border-blue-200 bg-blue-50/40",
-  risk: "border-amber-200 bg-amber-50/50",
+  risk: "border-amber-200 bg-white",
   takip: "border-slate-300 bg-slate-50",
 };
 
@@ -34,10 +35,9 @@ function jsonLdGuvenli(veri: unknown) {
 }
 
 function kapKaynakSatiri(paragraf: string) {
-  const match = paragraf.match(
-    /^Kaynak:\s*KAP(?:\s+İçeriği)?\s*[—-]\s*(https?:\/\/\S+)\s*$/i
-  );
-  return match?.[1] ?? null;
+  const match = paragraf.match(/https?:\/\/(?:www\.)?kap\.org\.tr\/\S+/i);
+  if (!/^Kaynak:/i.test(paragraf) || !match) return null;
+  return match[0];
 }
 
 function HaberParagrafi({
@@ -72,11 +72,6 @@ function HaberParagrafi({
 }
 
 function OzetKarti({ kart }: { kart: HaberOzetKarti }) {
-  const grafikOrani =
-    kart.grafik && kart.grafik.maksimum > 0
-      ? Math.max(0, Math.min(100, (kart.grafik.deger / kart.grafik.maksimum) * 100))
-      : null;
-
   return (
     <div className="rounded-2xl border border-blue-200 bg-blue-50 p-4">
       <div className="text-sm font-semibold text-blue-800">
@@ -85,27 +80,78 @@ function OzetKarti({ kart }: { kart: HaberOzetKarti }) {
       <div className="mt-1 text-2xl font-bold text-blue-950">
         {kart.deger}
       </div>
-      <div className="mt-1 text-sm text-blue-800">
+      <div className="mt-1 text-sm leading-6 text-blue-800">
         {kart.aciklama}
       </div>
-      {kart.grafik && grafikOrani !== null && (
-        <div className="mt-4" aria-label={`${kart.grafik.etiket}: ${kart.deger}`}>
-          <div className="mb-1 flex items-center justify-between gap-3 text-xs font-semibold text-blue-900">
-            <span>{kart.grafik.etiket}</span>
-            <span>
-              {kart.grafik.deger.toLocaleString("tr-TR")}
-              {kart.grafik.birim ? ` ${kart.grafik.birim}` : ""}
-            </span>
-          </div>
-          <div className="h-2 rounded-full bg-white ring-1 ring-inset ring-blue-100">
-            <div
-              className="h-full rounded-full bg-blue-600"
-              style={{ width: `${grafikOrani}%` }}
-            />
-          </div>
-        </div>
-      )}
     </div>
+  );
+}
+
+function DegisimGrafigi({
+  grafik,
+}: {
+  grafik: NonNullable<HaberBolumu["degisimGrafigi"]>;
+}) {
+  const enYuksekDeger = Math.max(
+    ...grafik.veriler.map((veri) => Math.abs(veri.deger)),
+    1
+  );
+
+  return (
+    <figure className="rounded-xl border border-slate-200 bg-slate-50 p-4">
+      <figcaption className="text-sm font-bold text-slate-900">
+        {grafik.baslik}
+      </figcaption>
+      <div className="mt-3 space-y-2.5">
+        {grafik.veriler.map((veri) => {
+          const genislik = Math.max(
+            3,
+            (Math.abs(veri.deger) / enYuksekDeger) * 100
+          );
+          const olumlu = veri.deger >= 0;
+
+          return (
+            <div
+              key={`${grafik.baslik}-${veri.etiket}`}
+              className="grid grid-cols-[88px_minmax(0,1fr)_58px] items-center gap-3"
+            >
+              <span className="truncate text-xs font-semibold text-slate-700">
+                {veri.etiket}
+              </span>
+              <div className="relative h-3 rounded-full bg-slate-200">
+                <span
+                  aria-hidden="true"
+                  className="absolute inset-y-[-2px] left-1/2 z-10 w-px bg-slate-500"
+                />
+                <div
+                  className={`absolute top-0 h-full ${
+                    olumlu ? "bg-emerald-500" : "bg-rose-500"
+                  }`}
+                  style={{
+                    width: `${genislik / 2}%`,
+                    left: olumlu ? "50%" : `${50 - genislik / 2}%`,
+                    borderRadius: olumlu
+                      ? "0 9999px 9999px 0"
+                      : "9999px 0 0 9999px",
+                  }}
+                />
+              </div>
+              <span
+                className={`text-right text-xs font-bold tabular-nums ${
+                  olumlu ? "text-emerald-700" : "text-rose-700"
+                }`}
+              >
+                {olumlu ? "+" : ""}
+                {veri.deger.toLocaleString("tr-TR", {
+                  maximumFractionDigits: 1,
+                })}
+                %
+              </span>
+            </div>
+          );
+        })}
+      </div>
+    </figure>
   );
 }
 
@@ -146,11 +192,15 @@ function HaberIcerikBolumu({ bolum }: { bolum: HaberBolumu }) {
       {bolum.paragraflar && bolum.paragraflar.length > 0 && (
         <div className="mt-4 space-y-4">
           {bolum.paragraflar.map((paragraf, index) => (
-            <HaberParagrafi
-              key={`${bolum.baslik}-paragraf-${index}`}
-              id={`${bolum.baslik}-paragraf-${index}`}
-              paragraf={paragraf}
-            />
+            <Fragment key={`${bolum.baslik}-paragraf-${index}`}>
+              <HaberParagrafi
+                id={`${bolum.baslik}-paragraf-${index}`}
+                paragraf={paragraf}
+              />
+              {index === 1 && bolum.degisimGrafigi && (
+                <DegisimGrafigi grafik={bolum.degisimGrafigi} />
+              )}
+            </Fragment>
           ))}
         </div>
       )}
@@ -506,36 +556,6 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
                   </div>
                 </section>
               )}
-
-              <section className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
-                <h2 className="text-base font-bold text-slate-900">Kaynaklar</h2>
-                <p className="mt-1 text-xs leading-6 text-slate-500">
-                  Haber hazırlanırken kullanılan doğrudan kaynak bağlantıları:
-                </p>
-                <div className="mt-3 grid gap-3">
-                  {kayit.kaynaklar.map((kaynak, index) => (
-                    <a
-                      key={`${kaynak.url}-${index}`}
-                      href={kaynak.url}
-                      target="_blank"
-                      rel="noopener noreferrer nofollow"
-                      className="rounded-xl border border-slate-200 bg-white p-4 transition hover:border-blue-300"
-                    >
-                      <span className="text-xs font-bold uppercase tracking-wider text-blue-700">
-                        {kaynak.tur === "KAP" ? "Kaynak KAP" : kaynak.tur}
-                      </span>
-                      <span className="mt-1 block text-sm font-semibold text-slate-800">
-                        {kaynak.ad}
-                      </span>
-                      {kaynak.yayinTarihi && (
-                        <span className="mt-1 block text-xs text-slate-500">
-                          Kaynak tarihi: {formatHaberTarihi(kaynak.yayinTarihi)}
-                        </span>
-                      )}
-                    </a>
-                  ))}
-                </div>
-              </section>
 
               <HaberIlgiliBolumler slug={kayit.slug} baslik={kayit.baslik} />
 
