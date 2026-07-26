@@ -89,6 +89,24 @@ function getNewsItems(): SiteSearchItem[] {
 }
 
 function getIpoItems(): SiteSearchItem[] {
+  const centerItems: SiteSearchItem[] = [
+    {
+      id: "halka-arz:takvim",
+      type: "halka-arz",
+      title: "Güncel Halka Arz Takvimi 2026",
+      href: "/halka-arz/takvim",
+      eyebrow: "Halka Arz Takvimi",
+      description:
+        "Bu hafta talep toplayacak, dağıtım sonucu beklenen ve Borsa İstanbul'da işleme başlayacak halka arzlar.",
+      keywords: [
+        "halka arz takvimi",
+        "bu haftaki halka arzlar",
+        "yeni halka arzlar",
+        "talep toplama tarihleri",
+        "işlem tarihleri",
+      ],
+    },
+  ];
   const drafts: SiteSearchItem[] = getTaslakIzahnameListesi().map((item) => {
     const data = halkaArzGetir(item.klasor);
     const code = data?.bistKodu || data?.ozet.bistKodu;
@@ -135,7 +153,7 @@ function getIpoItems(): SiteSearchItem[] {
     };
   });
 
-  return [...approved, ...drafts];
+  return [...centerItems, ...approved, ...drafts];
 }
 
 function getGuideItems(): SiteSearchItem[] {

@@ -152,6 +152,7 @@ export default function Footer() {
             links={[
               { label: "Ana Sayfa", href: "/" },
               { label: "Halka Arz", href: "/halka-arz" },
+              { label: "Halka Arz Takvimi", href: "/halka-arz/takvim" },
               { label: "Fonlar", href: "/fonlar" },
               { label: "Temettü", href: "/temettu" },
               { label: "Borsa Analiz", href: "/borsa" },

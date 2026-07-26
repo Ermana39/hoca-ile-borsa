@@ -41,7 +41,11 @@ const TYPE_STYLES: Record<SiteSearchItemType, string> = {
 const QUICK_LINKS = [
   { label: "Şirketler", href: "/hisseler", type: "sirket" as const },
   { label: "Haberler", href: "/haberler", type: "haber" as const },
-  { label: "Halka Arz", href: "/halka-arz", type: "halka-arz" as const },
+  {
+    label: "Halka Arz Takvimi",
+    href: "/halka-arz/takvim",
+    type: "halka-arz" as const,
+  },
   { label: "Rehberler", href: "/rehberler", type: "rehber" as const },
 ];
 

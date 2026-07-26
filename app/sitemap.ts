@@ -50,6 +50,7 @@ function getRouteSettings(route: string): {
   if (
     route === "/borsa" ||
     route === "/halka-arz" ||
+    route === "/halka-arz/takvim" ||
     route === "/temettu" ||
     route === "/fonlar" ||
     route === "/mevduat-kredi-faizleri"

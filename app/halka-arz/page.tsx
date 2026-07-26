@@ -49,8 +49,11 @@ export default function HalkaArzPage() {
             href="/halka-arz/takvim"
             prefetch={false}
             aria-label="Halka Arz Takvimi"
-            className="group flex min-h-[240px] flex-col rounded-2xl border border-zinc-200 bg-zinc-50 p-3 transition hover:bg-zinc-100"
+            className="group relative flex min-h-[240px] flex-col rounded-2xl border border-blue-300 bg-blue-50 p-3 shadow-sm transition hover:border-blue-400 hover:bg-blue-100"
           >
+            <span className="absolute right-5 top-5 z-10 rounded-full bg-blue-700 px-3 py-1 text-xs font-bold text-white">
+              Güncel
+            </span>
             <div className="relative mb-4 flex aspect-[16/10] items-center justify-center overflow-hidden rounded-2xl bg-white">
               <IconTile
                 name="temettu-takvim"
@@ -59,9 +62,14 @@ export default function HalkaArzPage() {
             </div>
 
             <div className="flex flex-1 items-center justify-center px-2 pb-2 text-center">
-              <h2 className="text-2xl font-semibold leading-tight text-zinc-900 md:text-3xl">
-                Halka Arz Takvimi
-              </h2>
+              <div>
+                <h2 className="text-2xl font-semibold leading-tight text-zinc-900 md:text-3xl">
+                  Halka Arz Takvimi
+                </h2>
+                <p className="mt-2 text-sm leading-6 text-slate-600">
+                  Talep, dağıtım ve işlem tarihlerini takip et
+                </p>
+              </div>
             </div>
           </Link>
 

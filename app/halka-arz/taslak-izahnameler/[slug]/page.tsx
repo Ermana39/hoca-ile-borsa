@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { notFound, permanentRedirect } from "next/navigation";
 import ContinueReading from "@/components/ContinueReading";
+import HalkaArzOrtaklikYapisi from "@/components/HalkaArzOrtaklikYapisi";
 import {
   bekleyenDeger,
   halkaArzGetir,
@@ -108,6 +109,13 @@ function sssUret(veri: HalkaArzVeri): { soru: string; cevap: string }[] {
     {
       soru: `${veri.sirketAdi} halka arzında dikkat edilmesi gereken riskler neler?`,
       cevap: riskOzetCumlesi(veri),
+    },
+    {
+      soru: `${veri.sirketAdi} kime ait ve kim tarafından yönetiliyor?`,
+      cevap:
+        veri.ortaklikYapisi?.ozet ||
+        veri.ortaklikYapisi?.aciklamalar?.slice(0, 2).join(" ") ||
+        "",
     },
   ];
   return adaylar.filter((a) => a.cevap);
@@ -302,6 +310,11 @@ export default async function HalkaArzDinamikPage({
             <p className="text-sm leading-7 text-slate-600">{veri.sirketHakkinda}</p>
           </section>
         )}
+
+        <HalkaArzOrtaklikYapisi
+          sirketAdi={veri.sirketAdi}
+          veri={veri.ortaklikYapisi}
+        />
 
         {veri.oneCikanlar.length > 0 && (
           <section className="mb-8">

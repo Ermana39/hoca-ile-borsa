@@ -24,6 +24,7 @@
     "news:publish": "node scripts/check-news-quality.mjs --publish",
     "halka-arz:taslak-arsivle": "node scripts/archive-ipo-draft.mjs",
     "halka-arz:karsilastirma-kontrol": "node scripts/archive-ipo-draft.mjs --check-approved",
+    "halka-arz:ortaklik-yapisi": "node scripts/sync-ipo-ownership-structure.mjs",
     "build": "npm run fon-etki:import && npm run excel-to-json && node scripts/generate-news-dates.mjs && node scripts/generate-hisse-profile-metadata.mjs && node scripts/generate-page-updates.mjs && node scripts/check-hisse-quality.mjs && node scripts/archive-ipo-draft.mjs --check-approved && next build",
     "start": "next start",
     "lint": "eslint"

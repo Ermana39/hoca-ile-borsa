@@ -1,32 +1,43 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { halkaArzSonuclari } from "@/data/halka-arz-sonuclari";
+import { getHisseIcerikHedefi } from "@/lib/hisse-icerik-hedefi";
 import { bekleyenDeger, halkaArzGetir } from "@/lib/halka-arz";
 
 const canonical = "https://www.hocaileborsa.com/halka-arz/takvim";
-const title = "Halka Arz Takvimi 2026 | Güncel Dağıtım ve İşlem Tarihleri";
+const title = "Halka Arz Takvimi 2026 | Bu Haftaki Halka Arzlar";
 const description =
-  "Güncel halka arz takvimi: Quick Sigorta ve Bewen Enerji talep toplama tarihleri, Masfen Enerji dağıtım sonuçları, Kardemir Çelik işlem başlangıcı ve yeni halka arz tarihleri.";
+  "26 Temmuz 2026 güncel halka arz takvimi: Bu hafta talep toplayacak Quick Sigorta ve Bewen Enerji ile dağıtım ve Borsa İstanbul işlem tarihlerini takip edin.";
+const sonGuncellemeIso = "2026-07-26";
+const sonGuncellemeMetni = "26 Temmuz 2026";
 
 export const metadata: Metadata = {
-  title,
+  title: { absolute: `${title} | Hoca İle Borsa` },
   description,
   alternates: { canonical },
   keywords: [
     "halka arz takvimi",
     "halka arz takvimi 2026",
     "bu hafta halka arz",
-    "METEN işlem tarihi",
-    "ALBTN işlem tarihi",
-    "KARCL işlem başlangıcı",
-    "MASFN dağıtım sonuçları",
+    "bu haftaki halka arzlar",
+    "yeni halka arzlar",
+    "halka arz talep toplama tarihleri",
+    "halka arz işlem tarihleri",
     "Quick Sigorta halka arz",
     "Bewen Enerji halka arz",
-    "Metgün Enerji halka arz",
-    "Albayrak Hazır Beton halka arz",
-    "Kardemir Çelik halka arz",
-    "Masfen Enerji halka arz",
   ],
-  openGraph: { title, description, url: canonical, type: "website" },
+  openGraph: {
+    title,
+    description,
+    url: canonical,
+    type: "website",
+    siteName: "Hoca İle Borsa",
+  },
+  twitter: {
+    card: "summary",
+    title,
+    description,
+  },
 };
 
 type TakvimSirketi = {
@@ -151,6 +162,15 @@ export default function HalkaArzTakvimPage() {
   const islemeBaslayacaklar = islemeBaslayacakArzlar();
   const aktifIzahnameler = aktifOnayliIzahnameler();
   const aktifHisseSayisi = new Set(aktifIzahnameSluglari).size;
+  const sonuclananArzlar = halkaArzSonuclari.slice(0, 6).map((item) => ({
+    ...item,
+    hedef: getHisseIcerikHedefi(item.hisse),
+  }));
+  const aktifTakvimOlaylari = [
+    ...talepToplayacaklar,
+    ...dagitimSonucuBeklenenler,
+    ...islemeBaslayacaklar,
+  ];
 
   const faqItems = [
     {
@@ -176,24 +196,19 @@ export default function HalkaArzTakvimPage() {
     {
       soru: "Eski halka arzlar nereden takip edilir?",
       cevap:
-        "Geçmiş halka arz performansları ve işlem sonrası kapanış bilgileri için halka arz tavan serisi takip sayfası kullanılmalıdır.",
+        "Sonuçlanan son halka arzların işlem tarihi, arz fiyatı, dağıtım şekli ve katılımcı sayısı bu sayfada yer alır. Ayrıntılı performans ve kapanış bilgileri halka arz tavan serisi sayfasından takip edilebilir.",
     },
   ];
 
   const jsonLd = [
     {
       "@context": "https://schema.org",
-      "@type": "Article",
-      headline: title,
+      "@type": "CollectionPage",
+      name: title,
       description,
       url: canonical,
       mainEntityOfPage: canonical,
-      author: {
-        "@type": "Person",
-        "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
-        name: "Erman Hoca",
-        url: "https://www.hocaileborsa.com/yazar/erman-hoca",
-      },
+      dateModified: sonGuncellemeIso,
       publisher: {
         "@type": "Organization",
         "@id": "https://www.hocaileborsa.com/#organization",
@@ -204,6 +219,43 @@ export default function HalkaArzTakvimPage() {
           url: "https://www.hocaileborsa.com/icon-512.png",
         },
       },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Ana Sayfa",
+          item: "https://www.hocaileborsa.com",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Halka Arz",
+          item: "https://www.hocaileborsa.com/halka-arz",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: "Halka Arz Takvimi",
+          item: canonical,
+        },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      name: "Aktif halka arz takvimi",
+      numberOfItems: aktifTakvimOlaylari.length,
+      itemListElement: aktifTakvimOlaylari.map((item, index) => ({
+        "@type": "ListItem",
+        position: index + 1,
+        name: `${item.sirketAdi}: ${item.durum}`,
+        url: `${canonical.replace("/takvim", "")}/onayli-izahnameler/${item.slug}`,
+        description: item.tarih || item.durum,
+      })),
     },
     {
       "@context": "https://schema.org",
@@ -225,34 +277,77 @@ export default function HalkaArzTakvimPage() {
 
       <div className="mx-auto max-w-6xl">
         <header className="mb-6">
+          <div className="mb-3 flex flex-wrap items-center gap-2 text-xs font-semibold md:text-sm">
+            <Link
+              href="/halka-arz"
+              prefetch={false}
+              className="text-blue-700 hover:underline"
+            >
+              Halka Arz
+            </Link>
+            <span className="text-slate-300">/</span>
+            <span className="text-slate-600">Takvim</span>
+            <span className="ml-auto rounded-full border border-emerald-200 bg-emerald-50 px-3 py-1 text-emerald-800">
+              Son güncelleme: {sonGuncellemeMetni}
+            </span>
+          </div>
           <h1 className="text-2xl font-bold leading-tight text-slate-900 md:text-4xl">
-            Halka Arz Takvimi 2026
+            Güncel Halka Arz Takvimi 2026: Bu Hafta Hangi Halka Arzlar Var?
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 md:text-base">
-            Güncel halka arz takviminde dağıtım sonuçları açıklanacak şirketler,
-            Borsa İstanbul&apos;da işleme başlayacak veya işlem başlangıç tarihi
-            beklenen halka arzlar ve onaylı izahnamesinin yayımlanması beklenen
-            şirketler tek sayfada takip edilebilir.
+            Bu hafta Quick Sigorta ve Bewen Enerji 29-30-31 Temmuz 2026
+            tarihlerinde talep toplayacak. Metgün Enerji 28 Temmuz, Albayrak
+            Hazır Beton 29 Temmuz günü Borsa İstanbul&apos;da işleme başlayacak.
+            Talep, dağıtım ve işlem tarihleri aynı sayfada güncel tutulur.
           </p>
+
+          <div className="mt-5 rounded-2xl border border-blue-200 bg-blue-50 p-4 md:p-5">
+            <h2 className="text-base font-bold text-blue-950 md:text-lg">
+              Bu haftanın kısa özeti
+            </h2>
+            <p className="mt-2 text-sm leading-7 text-blue-950/80 md:text-base">
+              2 şirket talep toplayacak, 1 halka arzda dağıtım sonucu
+              bekleniyor ve 3 şirket için Borsa İstanbul işlem takvimi takip
+              ediliyor.
+            </p>
+            <nav
+              aria-label="Halka arz takvimi bölüm bağlantıları"
+              className="mt-4 flex flex-wrap gap-2"
+            >
+              {[
+                { label: "Talep tarihleri", href: "#talep-toplama" },
+                { label: "Dağıtım sonuçları", href: "#dagitim-sonuclari" },
+                { label: "İşlem tarihleri", href: "#islem-tarihleri" },
+                {
+                  label: "Sonuçlanan halka arzlar",
+                  href: "#sonuclanan-halka-arzlar",
+                },
+              ].map((item) => (
+                <a
+                  key={item.href}
+                  href={item.href}
+                  className="rounded-lg border border-blue-200 bg-white px-3 py-2 text-xs font-bold text-blue-800 transition hover:border-blue-400 hover:bg-blue-100 md:text-sm"
+                >
+                  {item.label}
+                </a>
+              ))}
+            </nav>
+          </div>
         </header>
 
         <section className="mb-8 grid grid-cols-2 gap-3 md:grid-cols-4">
           {[
             {
-              etiket: "Talep Toplayacak",
+              etiket: "Bu Hafta Talep",
               deger: String(talepToplayacaklar.length),
             },
             {
-              etiket: "Dağıtım Sonucu Beklenen",
+              etiket: "Dağıtım Sonucu",
               deger: String(dagitimSonucuBeklenenler.length),
             },
             {
-              etiket: "İşleme Başlayacak",
+              etiket: "İşlem Takvimi",
               deger: String(islemeBaslayacaklar.length),
-            },
-            {
-              etiket: "İzahname Yayını Beklenen",
-              deger: String(izahnameYayiniBeklenenler.length),
             },
             { etiket: "Aktif Hisse", deger: String(aktifHisseSayisi) },
           ].map((k) => (
@@ -270,7 +365,10 @@ export default function HalkaArzTakvimPage() {
           ))}
         </section>
 
-        <section className="mb-8 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+        <section
+          id="talep-toplama"
+          className="mb-8 scroll-mt-24 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+        >
           <div className="border-b border-slate-200 bg-emerald-50 px-5 py-4">
             <h2 className="text-lg font-bold text-emerald-900 md:text-xl">
               Talep Toplayacak Halka Arzlar
@@ -341,7 +439,10 @@ export default function HalkaArzTakvimPage() {
           </div>
         </section>
 
-        <section className="mb-8 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+        <section
+          id="dagitim-sonuclari"
+          className="mb-8 scroll-mt-24 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+        >
           <div className="border-b border-slate-200 bg-amber-50 px-5 py-4">
             <h2 className="text-lg font-bold text-amber-900 md:text-xl">
               Dağıtım Sonuçları Açıklanacak Halka Arzlar
@@ -412,7 +513,10 @@ export default function HalkaArzTakvimPage() {
           </div>
         </section>
 
-        <section className="mb-8 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+        <section
+          id="islem-tarihleri"
+          className="mb-8 scroll-mt-24 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+        >
           <div className="border-b border-slate-200 bg-cyan-50 px-5 py-4">
             <h2 className="text-lg font-bold text-cyan-900 md:text-xl">
               İşleme Başlayacak Halka Arzlar
@@ -481,15 +585,15 @@ export default function HalkaArzTakvimPage() {
           </div>
         </section>
 
-        <section className="mb-8 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
-          <div className="border-b border-slate-200 bg-violet-50 px-5 py-4">
-            <h2 className="text-lg font-bold text-violet-900 md:text-xl">
-              Onaylı İzahnamesinin Yayımlanması Beklenen Halka Arzlar
-            </h2>
-          </div>
+        {izahnameYayiniBeklenenler.length > 0 && (
+          <section className="mb-8 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+            <div className="border-b border-slate-200 bg-violet-50 px-5 py-4">
+              <h2 className="text-lg font-bold text-violet-900 md:text-xl">
+                Onaylı İzahnamesinin Yayımlanması Beklenen Halka Arzlar
+              </h2>
+            </div>
 
-          <div className="overflow-x-auto">
-            {izahnameYayiniBeklenenler.length > 0 ? (
+            <div className="overflow-x-auto">
               <table className="min-w-[620px] w-full border-collapse text-left text-xs md:text-sm">
                 <thead>
                   <tr className="bg-slate-100 text-slate-600">
@@ -513,13 +617,96 @@ export default function HalkaArzTakvimPage() {
                   ))}
                 </tbody>
               </table>
-            ) : (
-              <p className="px-5 py-5 text-sm leading-6 text-slate-600">
-                Şu anda onaylı izahnamesinin yayımlanması beklenen aktif şirket
-                bulunmuyor. Yeni SPK onayı veya satış duyurusu geldiğinde bu
-                bölüm güncellenecek.
+            </div>
+          </section>
+        )}
+
+        <section
+          id="sonuclanan-halka-arzlar"
+          className="mb-8 scroll-mt-24 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+        >
+          <div className="flex flex-wrap items-start justify-between gap-3 border-b border-slate-200 bg-slate-100 px-5 py-4">
+            <div>
+              <h2 className="text-lg font-bold text-slate-900 md:text-xl">
+                2026&apos;da Sonuçlanan Son Halka Arzlar
+              </h2>
+              <p className="mt-1 text-sm leading-6 text-slate-600">
+                Yakın zamanda işlem görmeye başlayan halka arzların temel
+                sonuçları.
               </p>
-            )}
+            </div>
+            <Link
+              href="/halka-arz/tavan-serisi"
+              prefetch={false}
+              className="rounded-lg border border-slate-300 bg-white px-3 py-2 text-xs font-bold text-blue-700 transition hover:border-blue-300 hover:bg-blue-50 md:text-sm"
+            >
+              Tüm performans tablosu →
+            </Link>
+          </div>
+
+          <div className="overflow-x-auto">
+            <table className="min-w-[820px] w-full border-collapse text-left text-xs md:text-sm">
+              <thead>
+                <tr className="bg-white text-slate-600">
+                  <th className="px-4 py-3 font-semibold">Hisse</th>
+                  <th className="px-4 py-3 font-semibold">İşlem Tarihi</th>
+                  <th className="px-4 py-3 font-semibold">Arz Fiyatı</th>
+                  <th className="px-4 py-3 font-semibold">Dağıtım</th>
+                  <th className="px-4 py-3 font-semibold">Katılımcı</th>
+                  <th className="px-4 py-3 text-right font-semibold">Detay</th>
+                </tr>
+              </thead>
+              <tbody>
+                {sonuclananArzlar.map((item, index) => (
+                  <tr
+                    key={item.hisse}
+                    className={index % 2 ? "bg-slate-50" : "bg-white"}
+                  >
+                    <td className="px-4 py-3">
+                      {item.hedef ? (
+                        <Link
+                          href={item.hedef.href}
+                          prefetch={false}
+                          aria-label={item.hedef.etiket}
+                          className="inline-flex min-w-20 items-center justify-center rounded-md border border-blue-200 bg-blue-50 px-3 py-2 font-bold text-blue-800 transition hover:border-blue-400 hover:bg-blue-100"
+                        >
+                          {item.hisse}
+                        </Link>
+                      ) : (
+                        <span className="font-bold text-slate-800">
+                          {item.hisse}
+                        </span>
+                      )}
+                    </td>
+                    <td className="px-4 py-3 font-semibold text-slate-800">
+                      {item.islemTarihi}
+                    </td>
+                    <td className="px-4 py-3 text-slate-700">
+                      {item.arzFiyati.replace(".", ",")} TL
+                    </td>
+                    <td className="px-4 py-3 text-slate-700">
+                      {item.dagitimSekli}
+                    </td>
+                    <td className="px-4 py-3 text-slate-700">
+                      {item.katilimciSayisi}
+                    </td>
+                    <td className="px-4 py-3 text-right">
+                      {item.hedef ? (
+                        <Link
+                          href={item.hedef.href}
+                          prefetch={false}
+                          className="font-bold text-blue-700 hover:underline"
+                        >
+                          {item.hedef.baslik} →
+                        </Link>
+                      ) : (
+                        <span className="text-slate-400">—</span>
+                      )}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
           </div>
         </section>
 

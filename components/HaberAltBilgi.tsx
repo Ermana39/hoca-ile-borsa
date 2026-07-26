@@ -126,7 +126,7 @@ function relatedItems(href: string, kategori?: string): RelatedContentItem[] {
 
   if (kategori === "halka-arz" || href.includes("halka-arz")) {
     items.set("/halka-arz", {
-      title: "Güncel halka arz takvimi",
+      title: "Halka arz merkezi",
       href: "/halka-arz",
       description: "Talep toplama tarihleri, izahname ve halka arz araçları.",
       type: "Halka arz",
@@ -172,9 +172,9 @@ function ctaMetni(kategori?: string, href?: string) {
 
   if (kategori === "halka-arz" || href?.includes("halka-arz")) {
     return {
-      text: "Güncel halka arz takvimi ve onaylı izahnameler için halka arz sayfasına göz atabilirsiniz.",
-      href: "/halka-arz",
-      label: "Halka arz sayfasını incele",
+      text: "Bu hafta talep toplayacak, dağıtım sonucu beklenen ve işleme başlayacak şirketleri güncel halka arz takviminden takip edebilirsiniz.",
+      href: "/halka-arz/takvim",
+      label: "Güncel halka arz takvimine git",
     };
   }
 

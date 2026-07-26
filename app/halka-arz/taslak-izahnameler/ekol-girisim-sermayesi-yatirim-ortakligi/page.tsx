@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import HalkaArzOrtaklikYapisi from "@/components/HalkaArzOrtaklikYapisi";
+import { halkaArzGetir } from "@/lib/halka-arz";
 
 export const metadata: Metadata = {
   title:
@@ -9,6 +11,10 @@ export const metadata: Metadata = {
 };
 
 export default function EkolGirisimSermayesiYatirimOrtakligiASPage() {
+  const ortaklikYapisi = halkaArzGetir(
+    "ekol-girisim-sermayesi-yatirim-ortakligi"
+  )?.ortaklikYapisi;
+
   const summaryItems = [
     { label: "Halka Arz Tarihi", value: "Hazırlanıyor" },
     { label: "Halka Arz Fiyatı / Aralığı", value: "Hazırlanıyor" },
@@ -130,7 +136,10 @@ export default function EkolGirisimSermayesiYatirimOrtakligiASPage() {
           </div>
         </section>
 
-        
+        <HalkaArzOrtaklikYapisi
+          sirketAdi="Ekol Girişim Sermayesi Yatırım Ortaklığı A.Ş."
+          veri={ortaklikYapisi}
+        />
 
         <section className="mb-8">
           <div className="mb-4 flex items-center justify-between">

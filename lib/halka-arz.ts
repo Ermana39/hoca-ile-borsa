@@ -115,6 +115,40 @@ export type TaahhutOzeti = {
   gunlukAlimEmri?: string;
 };
 
+export type OrtaklikPaySahibi = {
+  ad: string;
+  rol?: string;
+  payOrani?: string;
+  oyOrani?: string;
+  not?: string;
+};
+
+export type OrtaklikYonetici = {
+  ad: string;
+  gorev: string;
+};
+
+export type OrtaklikGrupSirketi = {
+  ad: string;
+  iliski: string;
+  payOrani?: string;
+  faaliyet?: string;
+};
+
+export type OrtaklikYapisi = {
+  ozet?: string;
+  aciklamalar?: string[];
+  anaOrtak?: string;
+  nihaiKontrolSahibi?: string;
+  paySahipleri?: OrtaklikPaySahibi[];
+  yonetim?: OrtaklikYonetici[];
+  grupSirketleri?: OrtaklikGrupSirketi[];
+  halkaArzdaPaySatanOrtaklar?: string[];
+  veriTarihi?: string;
+  kaynakNotu?: string;
+  otomatikDerlendi?: boolean;
+};
+
 export type HalkaArzVeri = {
   slug: string;
   sirketAdi: string;
@@ -161,6 +195,7 @@ export type HalkaArzVeri = {
 
   // Şirketin GERÇEK faaliyet alanı. Boşsa "Şirket Hakkında" bölümü gizlenir.
   sirketHakkinda?: string;
+  ortaklikYapisi?: OrtaklikYapisi;
   eksikBilgiNotu?: string;
 
   yasalUyari?: string;

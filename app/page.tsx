@@ -117,6 +117,7 @@ const sayfaBasliklari: Record<string, string> = {
   "/fonlar/tarihsel-veriler": "Fon Tarihsel Veriler",
 
   "/halka-arz/kazanc-hesapla": "Halka Arz Kazanç Hesaplama",
+  "/halka-arz/takvim": "Güncel Halka Arz Takvimi",
   "/halka-arz/onayli-izahnameler": "Onaylı İzahnameler",
   "/halka-arz/onayli-izahnameler/onayli-1": "Onaylı İzahname Detayı",
   "/halka-arz/talep-hesapla": "Halka Arz Talep Hesaplama",
@@ -517,10 +518,10 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-2 gap-3 p-4 md:grid-cols-4 md:p-5">
               {[
+                { label: "Halka Arz Takvimi", href: "/halka-arz/takvim" },
                 { label: "Mevduat Faizi Hesapla", href: "/mevduat-kredi-faizleri/mevduat-faizi-oranlari" },
                 { label: "Temettü Hesaplama", href: "/temettu/temettu-hesaplama-araci" },
                 { label: "Hisse Kâr / Zarar", href: "/borsa/kar-zarar-hesaplama" },
-                { label: "Kira Artış Hesapla", href: "/hesaplayici/kira-artis" },
               ].map((t) => (
                 <Link
                   key={t.href}
