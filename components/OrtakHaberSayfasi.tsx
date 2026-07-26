@@ -11,6 +11,7 @@ import {
   HABER_SITE_URL,
   type HaberBolumu,
   type HaberKaydi,
+  type HaberOzetKarti,
   type HaberVurgu,
 } from "@/lib/haber-kayitlari";
 
@@ -67,6 +68,44 @@ function HaberParagrafi({
     <p id={id} className="text-sm leading-7 text-slate-700 md:text-base">
       {paragraf}
     </p>
+  );
+}
+
+function OzetKarti({ kart }: { kart: HaberOzetKarti }) {
+  const grafikOrani =
+    kart.grafik && kart.grafik.maksimum > 0
+      ? Math.max(0, Math.min(100, (kart.grafik.deger / kart.grafik.maksimum) * 100))
+      : null;
+
+  return (
+    <div className="rounded-2xl border border-blue-200 bg-blue-50 p-4">
+      <div className="text-sm font-semibold text-blue-800">
+        {kart.baslik}
+      </div>
+      <div className="mt-1 text-2xl font-bold text-blue-950">
+        {kart.deger}
+      </div>
+      <div className="mt-1 text-sm text-blue-800">
+        {kart.aciklama}
+      </div>
+      {kart.grafik && grafikOrani !== null && (
+        <div className="mt-4" aria-label={`${kart.grafik.etiket}: ${kart.deger}`}>
+          <div className="mb-1 flex items-center justify-between gap-3 text-xs font-semibold text-blue-900">
+            <span>{kart.grafik.etiket}</span>
+            <span>
+              {kart.grafik.deger.toLocaleString("tr-TR")}
+              {kart.grafik.birim ? ` ${kart.grafik.birim}` : ""}
+            </span>
+          </div>
+          <div className="h-2 rounded-full bg-white ring-1 ring-inset ring-blue-100">
+            <div
+              className="h-full rounded-full bg-blue-600"
+              style={{ width: `${grafikOrani}%` }}
+            />
+          </div>
+        </div>
+      )}
+    </div>
   );
 }
 
@@ -374,20 +413,10 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
               {kayit.kaynakOzeti.ozetKartlari.length > 0 && (
                 <section aria-label="Haber özeti" className="grid gap-4 sm:grid-cols-2">
                   {kayit.kaynakOzeti.ozetKartlari.map((kart, index) => (
-                    <div
+                    <OzetKarti
                       key={`${kart.baslik}-${index}`}
-                      className="rounded-2xl border border-blue-200 bg-blue-50 p-4"
-                    >
-                      <div className="text-sm font-semibold text-blue-800">
-                        {kart.baslik}
-                      </div>
-                      <div className="mt-1 text-2xl font-bold text-blue-950">
-                        {kart.deger}
-                      </div>
-                      <div className="mt-1 text-sm text-blue-800">
-                        {kart.aciklama}
-                      </div>
-                    </div>
+                      kart={kart}
+                    />
                   ))}
                 </section>
               )}

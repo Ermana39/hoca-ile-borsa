@@ -28,6 +28,12 @@ export type HaberOzetKarti = {
   baslik: string;
   deger: string;
   aciklama: string;
+  grafik?: {
+    etiket: string;
+    deger: number;
+    maksimum: number;
+    birim?: string;
+  };
 };
 
 export type HaberBilgiSatiri = {
