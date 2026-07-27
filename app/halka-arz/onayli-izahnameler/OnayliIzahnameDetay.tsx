@@ -656,6 +656,7 @@ function ozetSatirlari(veri: HalkaArzVeri): BilgiKarti[] {
   return [
     { label: "İşlem Kodu", value: veri.bistKodu || o.bistKodu || "" },
     { label: "Talep Toplama Tarihi", value: o.halkaArzTarihi || "" },
+    { label: "İşlem Başlama Tarihi", value: o.islemBaslangicTarihi || "" },
     { label: "Dağıtım Yöntemi", value: o.dagitimYontemi || "" },
     { label: "Katılım Endeksi", value: o.katilimEndeksi || "" },
     { label: "Pazar", value: o.pazar || "" },

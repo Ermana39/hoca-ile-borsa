@@ -7,9 +7,9 @@ import { bekleyenDeger, halkaArzGetir } from "@/lib/halka-arz";
 const canonical = "https://www.hocaileborsa.com/halka-arz/takvim";
 const title = "Halka Arz Takvimi 2026 | Bu Haftaki Halka Arzlar";
 const description =
-  "26 Temmuz 2026 güncel halka arz takvimi: Bu hafta talep toplayacak Quick Sigorta ve Bewen Enerji ile dağıtım ve Borsa İstanbul işlem tarihlerini takip edin.";
-const sonGuncellemeIso = "2026-07-26";
-const sonGuncellemeMetni = "26 Temmuz 2026";
+  "27 Temmuz 2026 güncel halka arz takvimi: Quick Sigorta ve Bewen Enerji talep tarihleri ile METEN, ALBTN, MASFN ve KARCL işlem başlangıçlarını takip edin.";
+const sonGuncellemeIso = "2026-07-27";
+const sonGuncellemeMetni = "27 Temmuz 2026";
 
 export const metadata: Metadata = {
   title: { absolute: `${title} | Hoca İle Borsa` },
@@ -25,6 +25,8 @@ export const metadata: Metadata = {
     "halka arz işlem tarihleri",
     "Quick Sigorta halka arz",
     "Bewen Enerji halka arz",
+    "Masfen Enerji işlem tarihi",
+    "Kardemir Çelik işlem tarihi",
   ],
   openGraph: {
     title,
@@ -63,13 +65,7 @@ type IzahnameBekleyenSirket = {
   durum: string;
 };
 
-const dagitimSonucuBeklenenTakvimi: TakvimSirketi[] = [
-  {
-    slug: "masfen-enerji",
-    tarih: "",
-    durum: "Dağıtım sonuçları açıklanacak",
-  },
-];
+const dagitimSonucuBeklenenTakvimi: TakvimSirketi[] = [];
 
 const talepToplamaTakvimi: TakvimSirketi[] = [
   {
@@ -96,9 +92,14 @@ const islemBaslangiciTakvimi: TakvimSirketi[] = [
     durum: "İşleme başlayacak",
   },
   {
+    slug: "masfen-enerji",
+    tarih: "30 Temmuz 2026 Perşembe",
+    durum: "İşleme başlayacak",
+  },
+  {
     slug: "kardemir-celik-sanayi",
-    tarih: "İşleme başlama tarihinin açıklanması bekleniyor",
-    durum: "İşleme başlama tarihi bekleniyor",
+    tarih: "31 Temmuz 2026 Cuma",
+    durum: "İşleme başlayacak",
   },
 ];
 
@@ -181,12 +182,12 @@ export default function HalkaArzTakvimPage() {
     {
       soru: "Dağıtım sonuçları açıklanacak halka arzlar hangileri?",
       cevap:
-        "Masfen Enerji halka arzının dağıtım sonuçlarının açıklanması bekleniyor. Kardemir Çelik tarafında dağıtım sonrası işleme başlama tarihinin açıklanması takip ediliyor.",
+        "Aktif takvimde dağıtım sonucu beklenen halka arz bulunmuyor. Yeni dağıtım sonuçları açıklandığında bu bölüm güncellenecek.",
     },
     {
       soru: "Bu hafta hangi halka arzlar işleme başlayacak?",
       cevap:
-        "Metgün Enerji Yatırımları 28 Temmuz 2026 Salı, Albayrak Hazır Beton ise 29 Temmuz 2026 Çarşamba günü Borsa İstanbul'da işleme başlayacak.",
+        "Metgün Enerji Yatırımları 28 Temmuz Salı, Albayrak Hazır Beton 29 Temmuz Çarşamba, Masfen Enerji 30 Temmuz Perşembe ve Kardemir Çelik Sanayi 31 Temmuz 2026 Cuma günü Borsa İstanbul'da işleme başlayacak.",
     },
     {
       soru: "Onaylı izahnamesi beklenen halka arzlar hangileri?",
@@ -297,8 +298,9 @@ export default function HalkaArzTakvimPage() {
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 md:text-base">
             Bu hafta Quick Sigorta ve Bewen Enerji 29-30-31 Temmuz 2026
             tarihlerinde talep toplayacak. Metgün Enerji 28 Temmuz, Albayrak
-            Hazır Beton 29 Temmuz günü Borsa İstanbul&apos;da işleme başlayacak.
-            Talep, dağıtım ve işlem tarihleri aynı sayfada güncel tutulur.
+            Hazır Beton 29 Temmuz, Masfen Enerji 30 Temmuz ve Kardemir Çelik
+            Sanayi 31 Temmuz günü Borsa İstanbul&apos;da işleme başlayacak.
+            Talep ve işlem tarihleri aynı sayfada güncel tutulur.
           </p>
 
           <div className="mt-5 rounded-2xl border border-blue-200 bg-blue-50 p-4 md:p-5">
@@ -306,9 +308,8 @@ export default function HalkaArzTakvimPage() {
               Bu haftanın kısa özeti
             </h2>
             <p className="mt-2 text-sm leading-7 text-blue-950/80 md:text-base">
-              2 şirket talep toplayacak, 1 halka arzda dağıtım sonucu
-              bekleniyor ve 3 şirket için Borsa İstanbul işlem takvimi takip
-              ediliyor.
+              2 şirket talep toplayacak ve 4 şirket Borsa İstanbul&apos;da
+              işleme başlayacak.
             </p>
             <nav
               aria-label="Halka arz takvimi bölüm bağlantıları"
@@ -316,7 +317,14 @@ export default function HalkaArzTakvimPage() {
             >
               {[
                 { label: "Talep tarihleri", href: "#talep-toplama" },
-                { label: "Dağıtım sonuçları", href: "#dagitim-sonuclari" },
+                ...(dagitimSonucuBeklenenler.length > 0
+                  ? [
+                      {
+                        label: "Dağıtım sonuçları",
+                        href: "#dagitim-sonuclari",
+                      },
+                    ]
+                  : []),
                 { label: "İşlem tarihleri", href: "#islem-tarihleri" },
                 {
                   label: "Sonuçlanan halka arzlar",
@@ -439,10 +447,11 @@ export default function HalkaArzTakvimPage() {
           </div>
         </section>
 
-        <section
-          id="dagitim-sonuclari"
-          className="mb-8 scroll-mt-24 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
-        >
+        {dagitimSonucuBeklenenler.length > 0 && (
+          <section
+            id="dagitim-sonuclari"
+            className="mb-8 scroll-mt-24 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+          >
           <div className="border-b border-slate-200 bg-amber-50 px-5 py-4">
             <h2 className="text-lg font-bold text-amber-900 md:text-xl">
               Dağıtım Sonuçları Açıklanacak Halka Arzlar
@@ -511,7 +520,8 @@ export default function HalkaArzTakvimPage() {
               </tbody>
             </table>
           </div>
-        </section>
+          </section>
+        )}
 
         <section
           id="islem-tarihleri"

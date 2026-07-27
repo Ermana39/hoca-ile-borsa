@@ -38,6 +38,7 @@ const STATIK_SAYFA_DIZINI = path.join(
 
 export type HalkaArzOzet = {
   halkaArzTarihi?: string;
+  islemBaslangicTarihi?: string;
   fiyatAralik?: string;
   dagitimYontemi?: string;
   pay?: string;
