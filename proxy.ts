@@ -11,6 +11,9 @@ const DEFAULT_BLOCKED_COUNTRIES = [
   "PK",
   "BR",
   "MX",
+  "US",
+  "GB",
+  "JP",
 ];
 const SEARCH_BOT_ALLOWLIST =
   /googlebot|bingbot|slurp|duckduckbot|yandexbot|applebot|adsbot-google|mediapartners-google/i;
