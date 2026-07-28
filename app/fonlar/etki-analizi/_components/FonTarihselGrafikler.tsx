@@ -106,17 +106,6 @@ function formatValue(type: GrafikTuru, value: number) {
   return para(value);
 }
 
-function signedValue(type: GrafikTuru, value: number) {
-  const prefix = value > 0 ? "+" : value < 0 ? "-" : "";
-  if (type === "marj") {
-    return `${prefix}%${Math.abs(value).toLocaleString("tr-TR", {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    })}`;
-  }
-  return `${prefix}${formatValue(type, value)}`;
-}
-
 function eksenDegeri(type: GrafikTuru, value: number) {
   if (type === "marj") {
     return `${value.toLocaleString("tr-TR", {
@@ -137,8 +126,6 @@ export default function FonTarihselGrafikler({
   const config = grafikler[grafikTuru];
   const values = veriler.map(config.getValue);
   const latest = values.at(-1) ?? 0;
-  const first = values[0] ?? 0;
-  const change = latest - first;
   const includeZero = grafikTuru === "paraAkisi" || grafikTuru === "marj";
   const rawMin = Math.min(...values, ...(includeZero ? [0] : []));
   const rawMax = Math.max(...values, ...(includeZero ? [0] : []));
@@ -195,33 +182,13 @@ export default function FonTarihselGrafikler({
         </div>
       </div>
 
-      <dl className="mt-5 grid border-y border-slate-100 sm:grid-cols-3">
+      <dl className="mt-5 border-y border-slate-100">
         <div className="px-4 py-3 md:px-6">
           <dt className="text-xs font-semibold uppercase text-slate-500">
             Son değer
           </dt>
           <dd className="mt-1 text-lg font-bold text-slate-950">
             {formatValue(grafikTuru, latest)}
-          </dd>
-        </div>
-        <div className="border-t border-slate-100 px-4 py-3 sm:border-l sm:border-t-0 md:px-6">
-          <dt className="text-xs font-semibold uppercase text-slate-500">
-            Dönem değişimi
-          </dt>
-          <dd
-            className={`mt-1 text-lg font-bold ${
-              change >= 0 ? "text-emerald-700" : "text-red-700"
-            }`}
-          >
-            {signedValue(grafikTuru, change)}
-          </dd>
-        </div>
-        <div className="border-t border-slate-100 px-4 py-3 sm:border-l sm:border-t-0 md:px-6">
-          <dt className="text-xs font-semibold uppercase text-slate-500">
-            Kayıt sayısı
-          </dt>
-          <dd className="mt-1 text-lg font-bold text-slate-950">
-            {veriler.length} gün
           </dd>
         </div>
       </dl>
@@ -353,7 +320,6 @@ export default function FonTarihselGrafikler({
 
       <p className="px-4 pt-2 text-xs leading-5 text-slate-500 md:px-6">
         Nokta veya sütunların üzerine gelerek tarih ve değeri görebilirsiniz.
-        Yeni tarih satırları Excel&apos;e eklendikçe grafik otomatik genişler.
       </p>
     </section>
   );
