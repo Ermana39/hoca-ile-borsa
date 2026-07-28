@@ -11,7 +11,6 @@ const DEFAULT_BLOCKED_COUNTRIES = [
   "PK",
   "BR",
   "MX",
-  "US",
   "GB",
   "JP",
 ];
