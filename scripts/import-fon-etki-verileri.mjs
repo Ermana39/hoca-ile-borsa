@@ -149,7 +149,8 @@ function fonSayfasiniDonustur(sheet, kod) {
       cells.includes("tarih") &&
       cells.includes("yatirimci sayisi") &&
       cells.includes("fon toplam deger") &&
-      cells.includes("para girisi/cikisi")
+      cells.includes("para girisi/cikisi") &&
+      cells.includes("marj")
     );
   });
 
@@ -162,6 +163,7 @@ function fonSayfasiniDonustur(sheet, kod) {
   const yatirimciKolonu = basliklar.indexOf("yatirimci sayisi");
   const fonDegerKolonu = basliklar.indexOf("fon toplam deger");
   const paraAkisiKolonu = basliklar.indexOf("para girisi/cikisi");
+  const marjKolonu = basliklar.indexOf("marj");
 
   const tarihsel = rows
     .slice(tarihBasligi + 1)
@@ -187,6 +189,11 @@ function fonSayfasiniDonustur(sheet, kod) {
         "Para girişi/çıkışı",
         `${kod}!${XLSX.utils.encode_col(paraAkisiKolonu)}${satirNo}`
       );
+      const marj = sayi(
+        row[marjKolonu],
+        "Marj",
+        `${kod}!${XLSX.utils.encode_col(marjKolonu)}${satirNo}`
+      );
 
       if (!Number.isInteger(yatirimciSayisi) || yatirimciSayisi < 0) {
         throw new Error(
@@ -202,12 +209,20 @@ function fonSayfasiniDonustur(sheet, kod) {
           )}${satirNo}: fon toplam değeri sıfırdan büyük olmalı.`
         );
       }
+      if (Math.abs(marj) > 1) {
+        throw new Error(
+          `${kod}!${XLSX.utils.encode_col(
+            marjKolonu
+          )}${satirNo}: marj Excel yüzde biçiminde ondalık değer olmalı (örnek: %2,11 için 0,0211).`
+        );
+      }
 
       return {
         tarih,
         yatirimciSayisi,
         fonToplamDeger: yuvarla(fonToplamDeger, 2),
         paraGirisiCikisi: yuvarla(paraGirisiCikisi, 2),
+        marj: yuvarla(marj * 100, 4),
       };
     })
     .sort((a, b) => a.tarih.localeCompare(b.tarih));

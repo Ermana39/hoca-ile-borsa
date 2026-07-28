@@ -3,7 +3,7 @@
 import { useState } from "react";
 import type { FonTarihselVeri } from "../_data/fonEtkiOzetleri";
 
-type GrafikTuru = "yatirimci" | "fonDegeri" | "paraAkisi";
+type GrafikTuru = "yatirimci" | "fonDegeri" | "paraAkisi" | "marj";
 
 const WIDTH = 760;
 const HEIGHT = 292;
@@ -24,6 +24,11 @@ const grafikler = {
     etiket: "Para akışı",
     renk: "#16A34A",
     getValue: (row: FonTarihselVeri) => row.paraGirisiCikisi,
+  },
+  marj: {
+    etiket: "Marj",
+    renk: "#E11D48",
+    getValue: (row: FonTarihselVeri) => row.marj,
   },
 } satisfies Record<
   GrafikTuru,
@@ -90,12 +95,35 @@ function kisaSayi(value: number, paraBirimi = false) {
 }
 
 function formatValue(type: GrafikTuru, value: number) {
-  return type === "yatirimci" ? tamSayi(value) : para(value);
+  if (type === "yatirimci") return tamSayi(value);
+  if (type === "marj") {
+    const prefix = value < 0 ? "-" : "";
+    return `${prefix}%${Math.abs(value).toLocaleString("tr-TR", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    })}`;
+  }
+  return para(value);
 }
 
 function signedValue(type: GrafikTuru, value: number) {
-  const prefix = value > 0 ? "+" : "";
+  const prefix = value > 0 ? "+" : value < 0 ? "-" : "";
+  if (type === "marj") {
+    return `${prefix}%${Math.abs(value).toLocaleString("tr-TR", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    })}`;
+  }
   return `${prefix}${formatValue(type, value)}`;
+}
+
+function eksenDegeri(type: GrafikTuru, value: number) {
+  if (type === "marj") {
+    return `${value.toLocaleString("tr-TR", {
+      maximumFractionDigits: 2,
+    })}%`;
+  }
+  return kisaSayi(value, type !== "yatirimci");
 }
 
 export default function FonTarihselGrafikler({
@@ -111,7 +139,7 @@ export default function FonTarihselGrafikler({
   const latest = values.at(-1) ?? 0;
   const first = values[0] ?? 0;
   const change = latest - first;
-  const includeZero = grafikTuru === "paraAkisi";
+  const includeZero = grafikTuru === "paraAkisi" || grafikTuru === "marj";
   const rawMin = Math.min(...values, ...(includeZero ? [0] : []));
   const rawMax = Math.max(...values, ...(includeZero ? [0] : []));
   const rawRange = rawMax - rawMin;
@@ -146,7 +174,7 @@ export default function FonTarihselGrafikler({
           </h3>
         </div>
         <div
-          className="grid grid-cols-3 rounded-md border border-slate-200 bg-slate-100 p-1"
+          className="grid grid-cols-2 rounded-md border border-slate-200 bg-slate-100 p-1 sm:grid-cols-4"
           aria-label="Grafik türü"
         >
           {(Object.keys(grafikler) as GrafikTuru[]).map((type) => (
@@ -224,7 +252,7 @@ export default function FonTarihselGrafikler({
                 fontSize="11"
                 fill="#64748B"
               >
-                {kisaSayi(tick.value, grafikTuru !== "yatirimci")}
+                {eksenDegeri(grafikTuru, tick.value)}
               </text>
             </g>
           ))}
@@ -262,6 +290,16 @@ export default function FonTarihselGrafikler({
             </>
           ) : (
             <>
+              {grafikTuru === "marj" && (
+                <line
+                  x1={PADDING.left}
+                  x2={WIDTH - PADDING.right}
+                  y1={zeroY}
+                  y2={zeroY}
+                  stroke="#64748B"
+                  strokeWidth="1.5"
+                />
+              )}
               <polyline
                 points={points.join(" ")}
                 fill="none"

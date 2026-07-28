@@ -13,6 +13,7 @@ export type FonTarihselVeri = {
   yatirimciSayisi: number;
   fonToplamDeger: number;
   paraGirisiCikisi: number;
+  marj: number;
 };
 
 export type FonEtkiOzeti = {
