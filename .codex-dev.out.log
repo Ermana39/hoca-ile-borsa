@@ -1,0 +1,109 @@
+
+> hoca-ile-borsa@0.1.0 predev
+> npm run fon-etki:import && npm run excel-to-json
+
+
+> hoca-ile-borsa@0.1.0 fon-etki:import
+> node scripts/import-fon-etki-verileri.mjs
+
+Fon etki verileri hazırlandı: app\fonlar\etki-analizi\_data\fon-etki-verileri.json
+
+> hoca-ile-borsa@0.1.0 excel-to-json
+> node scripts/excel-to-json.mjs && node scripts/check-temel-oranlar.mjs
+
+Excel JSON'a çevrildi: app\borsa\dip-zirve-analizi\data\dip-zirve.json
+Excel JSON'a çevrildi: app\borsa\geri-alim-programlari\data\geri-alim.json
+Excel JSON'a çevrildi: app\borsa\gosterge-taramalari\data\düsüs-trendi.json
+Excel JSON'a çevrildi: app\borsa\gosterge-taramalari\data\guclu-trend-momentum.json
+Excel JSON'a çevrildi: app\borsa\gosterge-taramalari\data\macd-al.json
+Excel JSON'a çevrildi: app\borsa\gosterge-taramalari\data\macd-sat.json
+Excel JSON'a çevrildi: app\borsa\gosterge-taramalari\data\rsi40-alti.json
+Excel JSON'a çevrildi: app\borsa\gosterge-taramalari\data\rsi70-ustu.json
+Excel JSON'a çevrildi: app\borsa\gosterge-taramalari\data\yükselis-hacim.json
+Excel JSON'a çevrildi: app\borsa\gosterge-taramalari\data\Yükselis-trendi.json
+Excel JSON'a çevrildi: app\borsa\oran-analizi\data\oran-analizi.json
+Excel JSON'a çevrildi: app\borsa\tedbirli-hisseler\data\tedbir.json
+Excel JSON'a çevrildi: app\borsa\yeni-is-anlasmalari\data\yeni-is-anlasmalari.json
+Excel JSON'a çevrildi: app\fonlar\getiri\menkul-kiymet-yatirim-fonlari\data\menkul-kiymet-yatirim-fonlari-getiri.json
+Excel JSON'a çevrildi: app\fonlar\haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler\data\tercih-edilen-hisseler.json
+Excel JSON'a çevrildi: app\fonlar\tarihsel-veriler\menkul-kiymet-yatirim-fonlari\data\menkul-kiymet-yatirim-fonlari-tarihsel.json
+Excel JSON'a çevrildi: app\mevduat-kredi-faizleri\data\hoca-ile-borsa-faiz-takip-sablonu-guncel.json
+Oran analizi kaynağı doğrulandı: 622 hisse, 26-03, 25-09, 25-12, 26-06, 23-12 dönemi, güncelleme 31.07.2026. Künye kapsamı 622/622. Temettü/bölünme kapsamı 622/622. Oranı henüz oluşmayan 2 hissede oran bölümü gösterilmeyecek.
+
+> hoca-ile-borsa@0.1.0 dev
+> next dev
+
+▲ Next.js 16.2.9 (Turbopack)
+- Local:         http://localhost:3000
+- Network:       http://192.168.1.186:3000
+- Environments: .env.local
+✓ Ready in 691ms
+
+ GET / 200 in 1597ms (next.js: 105ms, proxy.ts: 143ms, application-code: 1349ms)
+ GET /hisse/albtn 200 in 3.0s (next.js: 2.1s, proxy.ts: 146ms, generate-params: 631ms, application-code: 810ms)
+ GET /hisse/masfn 200 in 3.0s (next.js: 2.7s, proxy.ts: 148ms, generate-params: 1216ms, application-code: 221ms)
+ GET /manifest.webmanifest 200 in 95ms (next.js: 72ms, proxy.ts: 8ms, application-code: 16ms)
+ GET / 200 in 390ms (next.js: 4ms, proxy.ts: 5ms, application-code: 381ms)
+ GET /halka-arz/onayli-izahnameler/metgun-enerji-yatirimlari 200 in 2.2s (next.js: 53ms, proxy.ts: 5ms, application-code: 2.1s)
+ GET /halka-arz 200 in 75ms (next.js: 37ms, proxy.ts: 5ms, application-code: 33ms)
+ GET /manifest.webmanifest 200 in 13ms (next.js: 4ms, proxy.ts: 4ms, application-code: 5ms)
+ GET /halka-arz/tavan-serisi 200 in 107ms (next.js: 27ms, proxy.ts: 3ms, application-code: 78ms)
+ GET /manifest.webmanifest 200 in 10ms (next.js: 3ms, proxy.ts: 3ms, application-code: 5ms)
+✓ Compiled in 137ms
+ GET /halka-arz/tavan-serisi 200 in 387ms (next.js: 40ms, proxy.ts: 43ms, application-code: 304ms)
+ GET /halka-arz/tavan-serisi 200 in 85ms (next.js: 5ms, proxy.ts: 3ms, application-code: 78ms)
+ GET /manifest.webmanifest 200 in 28ms (next.js: 18ms, proxy.ts: 4ms, application-code: 6ms)
+✓ Compiled in 164ms
+ GET /halka-arz/tavan-serisi 200 in 532ms (next.js: 42ms, proxy.ts: 38ms, application-code: 452ms)
+ GET /halka-arz/tavan-serisi 200 in 247ms (next.js: 7ms, proxy.ts: 4ms, application-code: 236ms)
+ GET /halka-arz/tavan-serisi 200 in 114ms (next.js: 6ms, proxy.ts: 4ms, application-code: 105ms)
+ GET /manifest.webmanifest 200 in 29ms (next.js: 19ms, proxy.ts: 4ms, application-code: 6ms)
+ GET /hisse/karcl 200 in 542ms (next.js: 100ms, proxy.ts: 4ms, generate-params: 5ms, application-code: 438ms)
+ GET / 200 in 203ms (next.js: 33ms, proxy.ts: 4ms, application-code: 166ms)
+ GET /manifest.webmanifest 200 in 18ms (next.js: 5ms, proxy.ts: 4ms, application-code: 9ms)
+✓ Compiled in 157ms
+ GET / 200 in 879ms (next.js: 44ms, proxy.ts: 31ms, application-code: 804ms)
+ GET / 200 in 758ms (next.js: 4ms, proxy.ts: 3ms, application-code: 752ms)
+ GET / 200 in 636ms (next.js: 131ms, proxy.ts: 7ms, application-code: 498ms)
+ GET / 200 in 638ms (next.js: 8ms, proxy.ts: 7ms, application-code: 623ms)
+ GET / 200 in 636ms (next.js: 363ms, proxy.ts: 8ms, application-code: 265ms)
+ GET / 200 in 751ms (next.js: 244ms, proxy.ts: 8ms, application-code: 500ms)
+ GET / 200 in 734ms (next.js: 4ms, proxy.ts: 4ms, application-code: 727ms)
+ GET / 200 in 618ms (next.js: 6ms, proxy.ts: 3ms, application-code: 609ms)
+ GET / 200 in 626ms (next.js: 119ms, proxy.ts: 7ms, application-code: 500ms)
+ GET / 200 in 632ms (next.js: 7ms, proxy.ts: 8ms, application-code: 617ms)
+ GET / 200 in 634ms (next.js: 232ms, proxy.ts: 7ms, application-code: 395ms)
+ GET / 200 in 749ms (next.js: 343ms, proxy.ts: 6ms, application-code: 400ms)
+ GET / 200 in 735ms (next.js: 5ms, proxy.ts: 4ms, application-code: 726ms)
+ GET / 200 in 606ms (next.js: 10ms, proxy.ts: 5ms, application-code: 591ms)
+ GET / 200 in 599ms (next.js: 8ms, proxy.ts: 124ms, application-code: 467ms)
+ GET / 200 in 480ms (next.js: 121ms, proxy.ts: 8ms, application-code: 352ms)
+ GET / 200 in 476ms (next.js: 118ms, proxy.ts: 120ms, application-code: 238ms)
+ GET / 200 in 473ms (next.js: 117ms, proxy.ts: 225ms, application-code: 131ms)
+ GET /manifest.webmanifest 200 in 23ms (next.js: 14ms, proxy.ts: 3ms, application-code: 6ms)
+✓ Compiled in 139ms
+ GET / 200 in 964ms (next.js: 52ms, proxy.ts: 41ms, application-code: 871ms)
+ GET / 200 in 838ms (next.js: 4ms, proxy.ts: 2ms, application-code: 832ms)
+ GET / 200 in 696ms (next.js: 152ms, proxy.ts: 11ms, application-code: 533ms)
+ GET / 200 in 693ms (next.js: 273ms, proxy.ts: 10ms, application-code: 411ms)
+ GET / 200 in 859ms (next.js: 391ms, proxy.ts: 9ms, application-code: 458ms)
+ GET / 200 in 866ms (next.js: 8ms, proxy.ts: 12ms, application-code: 846ms)
+ GET / 200 in 807ms (next.js: 5ms, proxy.ts: 3ms, application-code: 799ms)
+ GET / 200 in 809ms (next.js: 8ms, proxy.ts: 5ms, application-code: 796ms)
+ GET / 200 in 638ms (next.js: 8ms, proxy.ts: 7ms, application-code: 623ms)
+ GET / 200 in 640ms (next.js: 121ms, proxy.ts: 8ms, application-code: 511ms)
+ GET / 200 in 640ms (next.js: 237ms, proxy.ts: 6ms, application-code: 396ms)
+ GET / 200 in 775ms (next.js: 344ms, proxy.ts: 6ms, application-code: 424ms)
+ GET / 200 in 542ms (next.js: 5ms, proxy.ts: 3ms, application-code: 533ms)
+ GET / 200 in 408ms (next.js: 10ms, proxy.ts: 4ms, application-code: 394ms)
+ GET / 200 in 401ms (next.js: 7ms, proxy.ts: 145ms, application-code: 249ms)
+ GET / 200 in 265ms (next.js: 120ms, proxy.ts: 11ms, application-code: 134ms)
+ GET /manifest.webmanifest 200 in 24ms (next.js: 15ms, proxy.ts: 4ms, application-code: 6ms)
+ GET /halka-arz/tavan-serisi 200 in 604ms (next.js: 46ms, proxy.ts: 3ms, application-code: 555ms)
+ GET /halka-arz/tavan-serisi 200 in 185ms (next.js: 4ms, proxy.ts: 5ms, application-code: 176ms)
+ GET /halka-arz 200 in 55ms (next.js: 17ms, proxy.ts: 3ms, application-code: 36ms)
+ GET /manifest.webmanifest 200 in 12ms (next.js: 3ms, proxy.ts: 3ms, application-code: 6ms)
+ GET /halka-arz/tavan-serisi 200 in 59ms (next.js: 3ms, proxy.ts: 3ms, application-code: 53ms)
+ GET /manifest.webmanifest 200 in 10ms (next.js: 3ms, proxy.ts: 3ms, application-code: 4ms)
+ GET / 200 in 114ms (next.js: 4ms, proxy.ts: 3ms, application-code: 108ms)
+ GET /manifest.webmanifest 200 in 12ms (next.js: 3ms, proxy.ts: 5ms, application-code: 4ms)
