@@ -63,11 +63,14 @@ function tarihiIsoYap(value) {
   }
 
   if (typeof temiz === "number") {
-    const tarih = XLSX.SSF.parse_date_code(temiz);
+    // Excel seri tarihini UTC tarihe çevirir.
+    // 25569, 1970-01-01 tarihinin Excel seri karşılığıdır.
+    const milisaniye = Math.round((temiz - 25569) * 86400 * 1000);
+    const tarih = new Date(milisaniye);
 
-    if (!tarih) return null;
+    if (Number.isNaN(tarih.getTime())) return null;
 
-    return `${tarih.y}-${ikiHane(tarih.m)}-${ikiHane(tarih.d)}`;
+    return tarih.toISOString().slice(0, 10);
   }
 
   const metin = String(temiz).trim();
