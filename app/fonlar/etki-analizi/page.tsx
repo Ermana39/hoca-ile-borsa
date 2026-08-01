@@ -9,9 +9,9 @@ import {
 const siteUrl = "https://www.hocaileborsa.com";
 const canonical = `${siteUrl}/fonlar/etki-analizi`;
 const title =
-  "Fonların Günlük Portföy Etkisi: TLY, PHE, PBR, DFI ve BMU";
+  "Fonların Günlük Portföy Etkisi: TLY, PHE, PBR, DFI, BMU ve KHA";
 const description =
-  "TLY, PHE, PBR, DFI ve BMU fonlarının güncel portföy etkisini karşılaştırın. Tahmini fiyat değişimini, yatırımcı hareketini, para akışını ve veri kapsamını inceleyin.";
+  "TLY, PHE, PBR, DFI, BMU ve KHA fonlarının güncel portföy etkisini karşılaştırın. Tahmini fiyat değişimini, yatırımcı hareketini, para akışını ve veri kapsamını inceleyin.";
 const image = `${siteUrl}/2026-fon-etki-analizi-tly-phe-pbr-dfi.webp`;
 
 export const metadata: Metadata = {
@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     "PBR fonu",
     "DFI fonu",
     "BMU fonu",
+    "KHA fonu",
     "TEFAS fon fiyatı",
   ],
   openGraph: {
@@ -140,7 +141,7 @@ const jsonLd = {
     {
       "@type": "Dataset",
       "@id": `${canonical}#dataset`,
-      name: "TLY, PHE, PBR, DFI ve BMU fon kapanış etki karşılaştırması",
+      name: "TLY, PHE, PBR, DFI, BMU ve KHA fon kapanış etki karşılaştırması",
       description,
       url: canonical,
       inLanguage: "tr-TR",
@@ -239,7 +240,7 @@ export default function FonEtkiAnaliziPage() {
           <p className="mt-4 text-base leading-8 text-slate-600">
             Fonların son açıklanan portföy dağılımları ile Borsa İstanbul günlük
             kapanış değişimleri birleştirilerek, açıklanacak fon fiyatına tahmini
-            etki hesaplanır. Bu merkez sayfa TLY, PHE, PBR, DFI ve BMU fonlarını
+            etki hesaplanır. Bu merkez sayfa TLY, PHE, PBR, DFI, BMU ve KHA fonlarını
             aynı yöntemle karşılaştırır. Ayrıntılı sayfalarda hisse bazlı
             katkılar, tarihsel yatırımcı değişimi, fon büyüklüğü ve para akışı
             grafikleri yer alır.
@@ -270,7 +271,7 @@ export default function FonEtkiAnaliziPage() {
               {karsilastirmaFonlari.length}
             </dd>
             <p className="mt-1 text-xs text-slate-500">
-              5 güncel analiz
+              {karsilastirmaFonlari.length} güncel analiz
             </p>
           </div>
           <div className="border-t border-slate-200 p-5 sm:border-r sm:border-t-0">

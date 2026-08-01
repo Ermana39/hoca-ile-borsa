@@ -96,6 +96,14 @@ const fonProfilleri = [
     profilOzeti:
       "BMU kodlu Bulls Portföy Mutlak Getiri Hedefli Hisse Senedi Serbest Fon, hisse senedi yoğun serbest fon türündedir. Portföy oranının yüzde 100'ü aşabilmesi kaldıraçlı pozisyonlardan kaynaklanabilir; bu sayfa brüt pozisyon etkisini görünür biçimde izler.",
   },
+  {
+    kod: "KHA",
+    fonAdi: "Pardus Portföy İkinci Hisse Senedi (TL) Fonu",
+    fonTuru: "Hisse senedi yoğun fon",
+    slug: "kha",
+    profilOzeti:
+      "KHA kodlu Pardus Portföy İkinci Hisse Senedi (TL) Fonu, hisse senedi yoğun fon türündedir. Bu sayfa, portföydeki payların ağırlıkları ile günlük kapanış hareketlerini birleştirerek açıklanacak fon fiyatına yönelik tahmini etkiyi; yatırımcı sayısı, fon büyüklüğü ve para akışıyla birlikte izler.",
+  },
 ] as const;
 
 function tarihEtiketi(iso: string) {
