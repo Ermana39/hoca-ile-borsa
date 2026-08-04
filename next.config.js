@@ -172,6 +172,11 @@ const izahnameSlugRedirects = [
   ["/halka-arz/onayli-izahnameler/golda-gida-sanayi-ve-ticaret", "/halka-arz/onayli-izahnameler/golda-gida-san-ve-tic"],
   ["/halka-arz/onayli-izahnameler/isvea-seramik-ve-banyo-urunleri", "/halka-arz/onayli-izahnameler/isvea-seramik-ve-banyo-urunleri-sanayi"],
   ["/halka-arz/onayli-izahnameler/orzaks-ilac-ve-kimya-sanayi-ticaret", "/halka-arz/onayli-izahnameler/orzaks-ilac-ve-kimya-san-tic"],
+  ["/halka-arz/taslak-izahnameler/saytek", "/halka-arz/taslak-izahnameler/saytek-medikal-ve-plastik-san-tic"],
+  ["/halka-arz/taslak-izahnameler/altun", "/halka-arz/taslak-izahnameler/altun-gida"],
+  ["/halka-arz/taslak-izahnameler/ozel", "/halka-arz/taslak-izahnameler/ozel-iskenderun-gelisim-hastanesi-san-ve-tic"],
+  ["/halka-arz/taslak-izahnameler/tv8", "/halka-arz/taslak-izahnameler/tv8-tv-yayincilik"],
+  ["/halka-arz/onayli-izahnameler/quick-sigorta-1", "/halka-arz/onayli-izahnameler/quick-sigorta"],
 ];
 
 const halkaArzHisseRedirects = [
@@ -185,12 +190,51 @@ const halkaArzHisseRedirects = [
 
 const hataliHisseRedirects = [
   {
+    source: "/hisse/yehyo",
+    destination: "/hisse/yeotk",
+  },
+  {
+    source: "/hisse/bnbn",
+    destination: "/hisse/binbn",
+  },
+  {
     source: "/hisse/:slug(.*\\..*)",
     destination: "/hisseler",
   },
   {
     source: "/hisse/:slug(.*%20.*)",
     destination: "/hisseler",
+  },
+];
+
+const eskiUrlRedirects = [
+  {
+    source: "/halka-arz-:id(\\d+)",
+    destination: "/halka-arz",
+  },
+  {
+    source: "/fonlar/etki-analizi/:fon(dfi|pbr|phe|tly|kha)-:id(\\d+)",
+    destination: "/fonlar/etki-analizi/:fon",
+  },
+  {
+    source: "/fonlar/etki-analizi/bmu-:id(\\d+)",
+    destination: "/fonlar/etki-analizi",
+  },
+  {
+    source: "/rehber/katilim-endeksi-nedir",
+    destination: "/rehberler/katilim-endeksi",
+  },
+  {
+    source: "/temettu/mayis-ayi-temettu-takvimi",
+    destination: "/temettu",
+  },
+  {
+    source: "/borsa/gunluk-borsa-ozeti-11-haziran-2026",
+    destination: "/borsa/gunluk-borsa-ozeti",
+  },
+  {
+    source: "/banner.wep",
+    destination: "/banner.webp",
   },
 ];
 
@@ -372,6 +416,11 @@ const nextConfig = {
         permanent: true,
       })),
       ...hataliHisseRedirects.map((r) => ({
+        source: r.source,
+        destination: r.destination,
+        permanent: true,
+      })),
+      ...eskiUrlRedirects.map((r) => ({
         source: r.source,
         destination: r.destination,
         permanent: true,

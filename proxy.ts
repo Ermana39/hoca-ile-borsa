@@ -30,6 +30,22 @@ function blockedCountries() {
 }
 
 export function proxy(request: NextRequest) {
+  let decodedPathname = request.nextUrl.pathname;
+  try {
+    decodedPathname = decodeURIComponent(decodedPathname);
+  } catch {
+    // Geçersiz yüzde kodlamalı istekler normal yönlendirme akışına bırakılır.
+  }
+  if (decodedPathname === "/halka-arz/taslak-izahnameler/özel") {
+    return NextResponse.redirect(
+      new URL(
+        "/halka-arz/taslak-izahnameler/ozel-iskenderun-gelisim-hastanesi-san-ve-tic",
+        request.url
+      ),
+      308
+    );
+  }
+
   const country = request.headers.get("x-vercel-ip-country")?.toUpperCase();
   const userAgent = request.headers.get("user-agent") || "";
 

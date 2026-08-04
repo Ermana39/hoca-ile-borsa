@@ -5,6 +5,7 @@ import type { ReactNode } from "react";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import AuthorBox from "@/components/AuthorBox";
 import HaberAltKisim from "@/components/HaberAltKisim";
+import HisseLink from "@/components/HisseLink";
 import { formatHaberTarihi, getHaberDosyaTarihi } from "@/lib/haber-tarih";
 
 const haberSaati = getHaberDosyaTarihi(import.meta.url);
@@ -369,7 +370,7 @@ export default function OnDortTemmuzOnemliKapPage() {
 
               <p>
                 Günün ana başlıklarında <strong>CIMSA</strong> CAC kapasite
-                artışıyla, <strong>KLYPV</strong> 5,75 milyar TL'lik güneş paneli
+                artışıyla, <strong>KLYPV</strong> 5,75 milyar TL&apos;lik güneş paneli
                 sözleşmesiyle, <strong>GLYHO</strong> Kuşadası ve Lizbon limanlarındaki
                 pay artışlarıyla, <strong>KOCMT</strong> ise Muş GES finansal
                 kiralama sözleşmesiyle öne çıktı. Gün içinde ayrı haber yapılan
@@ -558,13 +559,11 @@ export default function OnDortTemmuzOnemliKapPage() {
               <Section title="İlgili hisseler">
                 <div className="flex flex-wrap gap-2">
                   {ilgiliHisseler.map((kod) => (
-                    <Link
+                    <HisseLink
                       key={kod}
-                      href={`/hisse/${kod.toLowerCase()}`}
+                      sembol={kod}
                       className="rounded-full bg-slate-100 px-3 py-1 text-sm font-bold text-slate-700 ring-1 ring-slate-200 hover:bg-slate-200"
-                    >
-                      {kod}
-                    </Link>
+                    />
                   ))}
                 </div>
               </Section>

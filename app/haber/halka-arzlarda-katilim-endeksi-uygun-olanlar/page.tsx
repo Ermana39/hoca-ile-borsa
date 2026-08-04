@@ -13,7 +13,7 @@ const haberBaslik =
 const haberAciklama =
   "SOHO ve GOLDA katılım endeksine uygun görülürken; ISVEA, ORZAX ve Intercity uygun değil. Halka arzlarda katılım endeksi ne anlama geliyor?";
 const haberGorsel = "/halka-arz-katilim-endeksi-tablosu.webp";
-const katilimEndeksiRehberHref = "/rehber/katilim-endeksi-nedir";
+const katilimEndeksiRehberHref = "/rehberler/katilim-endeksi";
 
 export const metadata: Metadata = {
   title: "Halka Arzlarda Katılım Endeksi Durumu",

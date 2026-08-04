@@ -45,34 +45,34 @@ export const metadata: Metadata = {
 };
 
 const guncelHalkaArzKapanislari: Record<string, string> = {
-  KARCL: "42.34",
-  MASFN: "42.84",
-  ALBTN: "27.36",
-  METEN: "17.65",
-  SARAE: "76.05",
-  SSAAT: "34.78",
-  ISVEA: "52.50",
-  EKIM: "18.70",
-  GOLDA: "14.39",
-  ORZAX: "103.80",
-  SOHOE: "10.39",
-  BETAE: "85.45",
-  EKDMR: "47.96",
-  AAGYO: "12.70",
-  MCARD: "130.80",
-  LXGYO: "10.14",
-  GENKM: "10.26",
-  SVGYO: "13.16",
-  EMPAE: "57.20",
-  ATATR: "13.71",
-  BESTE: "27.38",
-  AKHAN: "43.46",
-  NETCD: "128.50",
-  UCAYM: "26.06",
-  ZGYO: "34.14",
-  FRMPL: "32.44",
-  MEYSU: "10.91",
-  ARFYE: "29.30",
+  KARCL: "46.56",
+  MASFN: "44.24",
+  ALBTN: "27.40",
+  METEN: "18.55",
+  SARAE: "81.75",
+  SSAAT: "37.00",
+  ISVEA: "47.26",
+  EKIM: "18.80",
+  GOLDA: "14.03",
+  ORZAX: "114.10",
+  SOHOE: "10.73",
+  BETAE: "89.80",
+  EKDMR: "47.22",
+  AAGYO: "13.07",
+  MCARD: "136.80",
+  LXGYO: "10.71",
+  GENKM: "10.56",
+  SVGYO: "13.17",
+  EMPAE: "62.90",
+  ATATR: "14.03",
+  BESTE: "27.96",
+  AKHAN: "41.32",
+  NETCD: "132.10",
+  UCAYM: "26.72",
+  ZGYO: "33.80",
+  FRMPL: "32.96",
+  MEYSU: "11.00",
+  ARFYE: "31.14",
 };
 
 const karclHalkaArzVerisi = {
@@ -81,7 +81,7 @@ const karclHalkaArzVerisi = {
   katilimciSayisi: "814.853",
   dagitimSekli: "BİREYSELE %40",
   arzFiyati: "35.00",
-  guncelFiyat: "42.34",
+  guncelFiyat: "46.56",
   konsorsiyum: "A1 CAPİTAL, VAKIF, ZİRAAT",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -91,7 +91,7 @@ const masfnHalkaArzVerisi = {
   katilimciSayisi: "1.093.898",
   dagitimSekli: "BİREYSELE %80",
   arzFiyati: "45.68",
-  guncelFiyat: "42.84",
+  guncelFiyat: "44.24",
   konsorsiyum: "DENİZ",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -101,7 +101,7 @@ const albtnHalkaArzVerisi = {
   katilimciSayisi: "549.211",
   dagitimSekli: "TAMAMEN EŞİT",
   arzFiyati: "38.60",
-  guncelFiyat: "27.36",
+  guncelFiyat: "27.40",
   konsorsiyum: "TACİRLER",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -111,7 +111,7 @@ const metenHalkaArzVerisi = {
   katilimciSayisi: "961.387",
   dagitimSekli: "BİREYSELE %38",
   arzFiyati: "20.00",
-  guncelFiyat: "17.65",
+  guncelFiyat: "18.55",
   konsorsiyum: "İNFO",
 } as (typeof baseHalkaArzVerileri)[number];
 
