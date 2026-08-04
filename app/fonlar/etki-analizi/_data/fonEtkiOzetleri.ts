@@ -88,15 +88,6 @@ const fonProfilleri = [
       "DFI kodlu Atlas Portföy Serbest Fon, serbest fon türündedir. Bu sayfa, yoğunlaşmış portföy yapısındaki varlıkların ağırlıkları ile günlük fiyat hareketlerini birleştirerek açıklanacak fon fiyatına yönelik tahmini etkiyi izler.",
   },
   {
-    kod: "BMU",
-    fonAdi:
-      "Bulls Portföy Mutlak Getiri Hedefli Hisse Senedi Serbest Fon (Hisse Senedi Yoğun Fon)",
-    fonTuru: "Serbest fon",
-    slug: "bmu",
-    profilOzeti:
-      "BMU kodlu Bulls Portföy Mutlak Getiri Hedefli Hisse Senedi Serbest Fon, hisse senedi yoğun serbest fon türündedir. Portföy oranının yüzde 100'ü aşabilmesi kaldıraçlı pozisyonlardan kaynaklanabilir; bu sayfa brüt pozisyon etkisini görünür biçimde izler.",
-  },
-  {
     kod: "KHA",
     fonAdi: "Pardus Portföy İkinci Hisse Senedi (TL) Fonu",
     fonTuru: "Hisse senedi yoğun fon",

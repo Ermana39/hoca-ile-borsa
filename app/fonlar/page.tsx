@@ -43,7 +43,7 @@ const fonKutulari = [
     icon: "fon-etki-analizi" as CategoryIconName,
     titleClassName: "text-[19px] md:text-[21px]",
     seoDescription:
-      "TLY, PHE, PBR ve DFI fonlarının günlük portföy etkisini karşılaştırın; takip listesine eklenen BMU fonuna ve ayrıntılı analiz sayfalarına ulaşın.",
+      "TLY, PHE, PBR, DFI ve KHA fonlarının günlük portföy etkisini karşılaştırın; ayrıntılı analiz sayfalarına ulaşın.",
   },
 ];
 

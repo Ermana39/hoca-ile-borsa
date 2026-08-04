@@ -81,7 +81,6 @@ function degisimVerisiOlustur({
     PHE: `${kod} tarafında ${akim}, ${yatirimciYonu} ve ${fonDegerYonu}. Tahmini etkinin ${etkiYonu} oluşmasında ${negatifVurgu} öne çıkarken ${pozitifVurgu} karşı tarafta belirleyici oldu. Fon ilgisi ve portföy etkisi aynı gün içinde birlikte zayıfladığında takip edilmesi gereken risk daha görünür hale geliyor.`,
     PBR: `${kod}'de ${akim} ile birlikte ${yatirimciYonu}; buna karşılık ${fonDegerYonu}. ${negatifVurgu} fon fiyatını aşağı çeken tarafta öne çıkarken ${pozitifVurgu} dengeleyici tarafta belirleyici oldu. Para akışı, yatırımcı adedi ve fon büyüklüğünün aynı yönde hareket etmemesi, günlük değişimin bileşenlerini ayrı ayrı okumayı gerektiriyor.`,
     DFI: `${kod}'ye ${akim} eşlik ederken ${yatirimciYonu} ve ${fonDegerYonu}. ${pozitifVurgu} yukarı yönlü tarafın, ${negatifVurgu} ise aşağı yönlü tarafın merkezinde yer aldı. Üç ana göstergenin aynı yönde ilerlemesi güçlü bir gün sonu resmi üretse de yoğun portföy yapısı tek hisse hareketlerine duyarlılığı artırıyor.`,
-    BMU: `${kod}'da ${akim} gerçekleşirken ${yatirimciYonu} ve ${fonDegerYonu}. Buna rağmen hisse portföyünden hesaplanan etki ${etkiYonu}; ${negatifVurgu} belirginleşti. Brüt pozisyon oranının yüzde 100'ü aşması kaldıraç etkisini büyüttüğü için olumlu para akışı, ertesi gün fon fiyatındaki hisse etkisini tek başına dengelemek zorunda değildir.`,
   };
 
   return {
