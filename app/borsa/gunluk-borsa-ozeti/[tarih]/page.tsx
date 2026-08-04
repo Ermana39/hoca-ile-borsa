@@ -435,14 +435,14 @@ function GunlukOzetIcerik({ ozet }: { ozet: GunlukOzet }) {
 
         <div className="mb-6 grid gap-4 xl:grid-cols-2">
           <ListeKutusu
-            baslik="İlk 5 Para Girişi"
+            baslik="İlk 10 Para Girişi"
             veriler={ozet.paraGirisi}
             renk="yesil"
             degerBaslik="Tutar"
           />
 
           <ListeKutusu
-            baslik="İlk 5 Para Çıkışı"
+            baslik="İlk 10 Para Çıkışı"
             veriler={ozet.paraCikisi}
             renk="kirmizi"
             degerBaslik="Tutar"
