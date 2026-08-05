@@ -2,6 +2,8 @@ import fs from "node:fs";
 import path from "node:path";
 import { getOnayliIzahnameListesi } from "@/lib/halka-arz";
 
+export const dynamicParams = false;
+
 function statikOnayliSlugVar(slug: string): boolean {
   return fs.existsSync(
     path.join(

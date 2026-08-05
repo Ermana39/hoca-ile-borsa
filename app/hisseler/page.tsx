@@ -2,7 +2,6 @@ import Link from "next/link";
 import type { Metadata } from "next";
 import HisseListesi from "@/components/HisseListesi";
 import { getTumHisseler } from "@/lib/hisseler";
-import { getHisseLogo } from "@/lib/hisse-logolar";
 
 export const revalidate = false;
 
@@ -37,10 +36,7 @@ export default async function HisselerPage({
 }) {
   const params = await searchParams;
   const q = Array.isArray(params?.q) ? params.q[0] : params?.q;
-  const hisseler = getTumHisseler().map((h) => ({
-    ...h,
-    logo: getHisseLogo(h.kod),
-  }));
+  const hisseler = getTumHisseler();
 
   return (
     <main className="min-h-screen bg-[#f8fafc] px-4 py-6 md:px-6">
@@ -49,7 +45,7 @@ export default async function HisselerPage({
           className="mb-5 flex flex-wrap items-center gap-2 text-sm text-slate-500"
           aria-label="Breadcrumb"
         >
-          <Link href="/" className="transition hover:text-blue-600">
+          <Link href="/" prefetch={false} className="transition hover:text-blue-600">
             Ana Sayfa
           </Link>
           <span className="text-slate-300">/</span>

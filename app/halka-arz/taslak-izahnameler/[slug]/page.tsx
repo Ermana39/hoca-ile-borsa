@@ -14,6 +14,8 @@ import {
 } from "@/lib/halka-arz";
 import { riskMaddeleri, riskOzetCumlesi } from "@/lib/halka-arz-risk";
 
+export const dynamicParams = false;
+
 // Build aşamasında SADECE taşınması tamamlanmış (JSON'u olan ve artık eski
 // statik .tsx'i bulunmayan) slug'lar üretilir. Eski .tsx hâlâ duran slug'lar
 // için Next.js zaten statik sayfayı servis eder; burada üretmeyiz.

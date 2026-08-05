@@ -10,7 +10,7 @@ import {
   type Hisse,
 } from "@/lib/hisseler";
 import { getTemelOranlar } from "@/lib/temel-oranlar";
-import { getHisseLogo } from "@/lib/hisse-logolar";
+import HisseAvatar from "@/components/HisseAvatar";
 import { getTemettulerBySembol } from "@/lib/temettuler";
 import { getKapBySembol } from "@/lib/kap";
 import {
@@ -39,7 +39,7 @@ import {
 
 const siteUrl = "https://www.hocaileborsa.com";
 
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 type OzgunAnaliz = {
   isModeli?: string;
@@ -576,6 +576,7 @@ function TemelOranlarBolumu({
       <div className="mb-3 flex flex-wrap items-center gap-2 text-xs font-semibold">
         <Link
           href="/borsa/oran-analizi"
+          prefetch={false}
           className="rounded-md bg-blue-50 px-2 py-1 text-blue-700 ring-1 ring-inset ring-blue-200 transition hover:bg-blue-100"
         >
           Kaynak: Oran Analizi
@@ -667,7 +668,6 @@ export default async function HisseKunyePage({
     (item) => doluMetin(item.kod) || doluMetin(item.ad)
   );
 
-  const logo = getHisseLogo(hisse.kod);
   const canonicalCode =
     hisse.borsaBilgileri.anaHisseKodu?.toLowerCase() ||
     hisse.kod.toLowerCase();
@@ -874,7 +874,7 @@ export default async function HisseKunyePage({
           className="mb-5 flex flex-wrap items-center gap-2 text-sm text-slate-500"
           aria-label="Breadcrumb"
         >
-          <Link href="/" className="transition hover:text-blue-600">
+          <Link href="/" prefetch={false} className="transition hover:text-blue-600">
             Ana Sayfa
           </Link>
           <span className="text-slate-300">/</span>
@@ -886,16 +886,7 @@ export default async function HisseKunyePage({
         <article className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_16px_rgba(15,23,42,0.07)]">
           <div className="p-6 md:p-10">
             <div className="flex flex-col items-start gap-4 sm:flex-row sm:items-center">
-              {logo && (
-                // eslint-disable-next-line @next/next/no-img-element
-                <img
-                  src={logo}
-                  alt={`${hisse.kod} logo`}
-                  width={56}
-                  height={56}
-                  className="h-14 w-14 shrink-0 rounded-xl bg-white object-contain p-2 ring-1 ring-inset ring-slate-200"
-                />
-              )}
+              <HisseAvatar kod={hisse.kod} boyut="lg" />
               <div>
                 <div className="flex flex-wrap items-center gap-2">
                   <h1 className="text-2xl font-bold leading-tight tracking-tight text-slate-900 md:text-3xl">
@@ -1501,6 +1492,7 @@ export default async function HisseKunyePage({
                     <dd className="mt-1 text-sm font-bold">
                       <Link
                         href={`/hisse/${borsaBilgileri.anaHisseKodu.toLowerCase()}`}
+                        prefetch={false}
                         className="text-blue-700 hover:underline"
                       >
                         {borsaBilgileri.anaHisseKodu} künye sayfasını aç

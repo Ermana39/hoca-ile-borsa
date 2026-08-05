@@ -5,6 +5,8 @@ import { getYazar, yazarlar, varsayilanYazar } from "@/app/data/yazarlar";
 import { getAllNews } from "@/lib/haberler";
 import SosyalIkonGrup from "@/components/SosyalIkonGrup";
 
+export const dynamicParams = false;
+
 const siteUrl = "https://www.hocaileborsa.com";
 
 export function generateStaticParams() {

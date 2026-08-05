@@ -247,9 +247,6 @@ const nextConfig = {
       "./data/hisseler/**/*.json",
       "./data/haberler/**/*.json",
     ],
-    "/hisse/[sembol]/temettu": [
-      "./data/hisseler/**/*.json",
-    ],
     "/hisseler": [
       "./data/hisseler/**/*.json",
     ],
@@ -316,6 +313,14 @@ const nextConfig = {
           },
         ],
         destination: "https://www.hocaileborsa.com/:path*",
+        permanent: true,
+      },
+      // Temettü geçmişi artık hisse künyesinde yer alıyor. Bu yönlendirmeyi
+      // Next.js sayfası yerine yönlendirme katmanında çözerek yüzlerce gereksiz
+      // ISR kaydı oluşturulmasını önlüyoruz.
+      {
+        source: "/hisse/:sembol/temettu",
+        destination: "/hisse/:sembol",
         permanent: true,
       },
       // Halka arz slug'ları daha açıklayıcı/SEO-dostu adlara taşındı; eski

@@ -4,7 +4,7 @@ import HaberArsiv from "@/components/HaberArsiv";
 import { getAllNews, getToplamSayfa } from "@/lib/haberler";
 
 export const revalidate = false;
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 const SITE = "https://www.hocaileborsa.com";
 

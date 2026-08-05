@@ -36,13 +36,13 @@ export default function HaberArsiv({
           className="mb-5 flex flex-wrap items-center gap-2 text-sm text-slate-500"
           aria-label="Breadcrumb"
         >
-          <Link href="/" className="transition hover:text-blue-600">
+          <Link href="/" prefetch={false} className="transition hover:text-blue-600">
             Ana Sayfa
           </Link>
           <span className="text-slate-300">/</span>
           {aktifKategori ? (
             <>
-              <Link href="/haberler" className="transition hover:text-blue-600">
+              <Link href="/haberler" prefetch={false} className="transition hover:text-blue-600">
                 Haberler
               </Link>
               <span className="text-slate-300">/</span>

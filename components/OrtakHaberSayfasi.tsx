@@ -395,11 +395,11 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
           className="mb-5 flex flex-wrap items-center gap-2 text-sm text-slate-500"
           aria-label="İçerik yolu"
         >
-          <Link href="/" className="transition hover:text-blue-700">
+          <Link href="/" prefetch={false} className="transition hover:text-blue-700">
             Ana Sayfa
           </Link>
           <span className="text-slate-300">/</span>
-          <Link href="/haberler" className="transition hover:text-blue-700">
+          <Link href="/haberler" prefetch={false} className="transition hover:text-blue-700">
             Haberler
           </Link>
           {kategori && (
@@ -407,6 +407,7 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
               <span className="text-slate-300">/</span>
               <Link
                 href={`/haberler/kategori/${kategori.slug}`}
+                prefetch={false}
                 className="transition hover:text-blue-700"
               >
                 {kategori.kisaBaslik}
@@ -445,6 +446,7 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
                   <span className="text-slate-300">·</span>
                   <Link
                     href={`/yazar/${yazar.slug}`}
+                    prefetch={false}
                     className="text-sm font-semibold text-slate-600 hover:text-blue-700"
                   >
                     {yazar.isim}

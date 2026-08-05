@@ -82,6 +82,7 @@ export default function OnayliIzahnamelerPage() {
         <div className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Ana Sayfa
@@ -89,6 +90,7 @@ export default function OnayliIzahnamelerPage() {
 
           <Link
             href="/halka-arz"
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Geri
@@ -116,6 +118,7 @@ export default function OnayliIzahnamelerPage() {
               <Link
                 key={`${item.kod}-${item.sirket}`}
                 href={item.href}
+                prefetch={false}
                 className="flex items-center gap-4 rounded-xl border border-green-200 bg-green-50 px-4 py-4 transition hover:bg-green-100"
               >
                 <SirketLogo logo={getIzahnameLogo(slug)} ad={item.sirket} />

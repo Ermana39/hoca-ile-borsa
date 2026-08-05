@@ -8,7 +8,7 @@ import {
 } from "@/lib/haber-kategorileri";
 
 export const revalidate = false;
-export const dynamicParams = true;
+export const dynamicParams = false;
 
 const SITE = "https://www.hocaileborsa.com";
 

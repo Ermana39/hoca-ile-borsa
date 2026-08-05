@@ -299,6 +299,7 @@ function GunlukOzetIcerik({ ozet }: { ozet: GunlukOzet }) {
         <div className="mb-6 flex gap-3">
           <Link
             href="/"
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Ana Sayfa
@@ -306,6 +307,7 @@ function GunlukOzetIcerik({ ozet }: { ozet: GunlukOzet }) {
 
           <Link
             href="/borsa"
+            prefetch={false}
             className="inline-block rounded-xl border border-zinc-300 bg-white px-4 py-2 text-sm font-semibold text-zinc-700 hover:bg-zinc-100"
           >
             Geri
@@ -527,6 +529,7 @@ function GunlukOzetIcerik({ ozet }: { ozet: GunlukOzet }) {
           <div className="mt-5 grid gap-4 md:grid-cols-2">
             <Link
               href="/borsa/gosterge-taramalari"
+              prefetch={false}
               className="group rounded-xl border border-zinc-200 bg-white p-5 transition hover:border-blue-300 hover:shadow-sm"
             >
               <h3 className="text-lg font-bold text-zinc-900 group-hover:text-blue-700">
@@ -542,6 +545,7 @@ function GunlukOzetIcerik({ ozet }: { ozet: GunlukOzet }) {
 
             <Link
               href="/borsa/pivot-analizi"
+              prefetch={false}
               className="group rounded-xl border border-zinc-200 bg-white p-5 transition hover:border-blue-300 hover:shadow-sm"
             >
               <h3 className="text-lg font-bold text-zinc-900 group-hover:text-blue-700">
