@@ -164,7 +164,13 @@ const izahnameSlugRedirects = [
   ["/halka-arz/taslak-izahnameler/uslu", "/halka-arz/taslak-izahnameler/uslu-csm-demir-celik"],
   ["/halka-arz/taslak-izahnameler/vaden", "/halka-arz/taslak-izahnameler/vaden-otomotiv-san-ve-tic"],
   ["/halka-arz/taslak-izahnameler/cimstone", "/halka-arz/taslak-izahnameler/cimstone-insaat-malzemeleri-san-ve-tic"],
-  ["/halka-arz/taslak-izahnameler/turkervangolu", "/halka-arz/taslak-izahnameler/turker-vangolu-enerji-yatirim"],
+  ["/halka-arz/taslak-izahnameler/turkervangolu", "/halka-arz/onayli-izahnameler/turker-vangolu-enerji-yatirim"],
+  ["/halka-arz/taslak-izahnameler/turker-vangolu-enerji-yatirim", "/halka-arz/onayli-izahnameler/turker-vangolu-enerji-yatirim"],
+  ["/halka-arz/taslak-izahnameler/citlekci-magazacilik", "/halka-arz/onayli-izahnameler/citlekci-magazacilik"],
+  ["/halka-arz/taslak-izahnameler/citlekci-magazacilik-gida", "/halka-arz/onayli-izahnameler/citlekci-magazacilik"],
+  ["/halka-arz/taslak-izahnameler/teknika-plast-teknik-kalip-plastik-san-ve-tic", "/halka-arz/onayli-izahnameler/teknika-plast-teknik-kalip-plastik-san-ve-tic"],
+  ["/halka-arz/taslak-izahnameler/kapeks-kimya", "/halka-arz/onayli-izahnameler/kapeks-kimya"],
+  ["/halka-arz/taslak-izahnameler/kapeks-kimya-sanayi", "/halka-arz/onayli-izahnameler/kapeks-kimya"],
   ["/halka-arz/taslak-izahnameler/mikro", "/halka-arz/taslak-izahnameler/anadolu-mikronize-kimya-san-ve-tic"],
   ["/halka-arz/taslak-izahnameler/multinet", "/halka-arz/taslak-izahnameler/multinet-kurumsal-hizmetler"],
   ["/halka-arz/onayli-izahnameler/ekinciler", "/halka-arz/onayli-izahnameler/ekinciler-demir-celik-ekdmr"],
@@ -327,12 +333,12 @@ const nextConfig = {
       // kısa URL'ler yeni slug'lara kalıcı olarak yönlendirilir.
       {
         source: "/halka-arz/taslak-izahnameler/kepeks",
-        destination: "/halka-arz/taslak-izahnameler/kapeks-kimya",
+        destination: "/halka-arz/onayli-izahnameler/kapeks-kimya",
         permanent: true,
       },
       {
         source: "/halka-arz/taslak-izahnameler/cilekci",
-        destination: "/halka-arz/taslak-izahnameler/citlekci-magazacilik",
+        destination: "/halka-arz/onayli-izahnameler/citlekci-magazacilik",
         permanent: true,
       },
       {

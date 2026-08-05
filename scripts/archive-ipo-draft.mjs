@@ -12,6 +12,7 @@ const APPROVED_PAGE_DIR = path.join(
   "onayli-izahnameler"
 );
 const RECOVER_ALL_FLAG = "--recover-approved";
+const RECOVER_ONE_FLAG = "--recover";
 const CHECK_ALL_FLAG = "--check-approved";
 
 function readJson(filePath) {
@@ -112,6 +113,30 @@ function recoverApprovedDrafts() {
   console.log(`Tamamlandı: ${recovered} arşiv, ${unavailable} bulunamayan kayıt.`);
 }
 
+function recoverApprovedDraft(slug) {
+  if (!/^[a-z0-9-]+$/.test(slug || "")) {
+    throw new Error("Geçerli bir halka arz slug'ı girilmelidir.");
+  }
+
+  const currentPath = path.join(DATA_DIR, `${slug}.json`);
+  if (!fs.existsSync(currentPath)) {
+    throw new Error(`Onaylı JSON bulunamadı: data/halka-arz/${slug}.json`);
+  }
+
+  const current = readJson(currentPath);
+  if (current?.seo?.contentStatus !== "onayli") {
+    throw new Error(`${slug} henüz onaylı durumda değil.`);
+  }
+
+  const historical = historicalDraft(slug);
+  if (!historical) {
+    throw new Error(`${slug} için Git geçmişinde taslak sürüm bulunamadı.`);
+  }
+
+  const target = writeArchive(slug, historical.data, historical.source);
+  console.log(`Taslak arşivlendi: ${target}`);
+}
+
 function checkApprovedDrafts() {
   const files = fs
     .readdirSync(DATA_DIR)
@@ -198,6 +223,8 @@ const argument = process.argv[2];
 try {
   if (argument === RECOVER_ALL_FLAG) {
     recoverApprovedDrafts();
+  } else if (argument === RECOVER_ONE_FLAG) {
+    recoverApprovedDraft(process.argv[3]);
   } else if (argument === CHECK_ALL_FLAG) {
     checkApprovedDrafts();
   } else if (argument) {
@@ -205,6 +232,7 @@ try {
   } else {
     console.error(
       "Kullanım: npm run halka-arz:taslak-arsivle -- <slug>\n" +
+        "Tek kayıt geçmiş kurtarma: node scripts/archive-ipo-draft.mjs --recover <slug>\n" +
         "Kontrol: node scripts/archive-ipo-draft.mjs --check-approved\n" +
         "Geçmiş kurtarma: node scripts/archive-ipo-draft.mjs --recover-approved"
     );
