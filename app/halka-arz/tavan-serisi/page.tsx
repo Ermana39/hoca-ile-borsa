@@ -45,34 +45,34 @@ export const metadata: Metadata = {
 };
 
 const guncelHalkaArzKapanislari: Record<string, string> = {
-  KARCL: "46.56",
-  MASFN: "44.24",
-  ALBTN: "27.40",
-  METEN: "18.55",
-  SARAE: "81.75",
-  SSAAT: "37.00",
-  ISVEA: "47.26",
-  EKIM: "18.80",
-  GOLDA: "14.03",
-  ORZAX: "114.10",
-  SOHOE: "10.73",
-  BETAE: "89.80",
+  KARCL: "41.92",
+  MASFN: "43.52",
+  ALBTN: "26.02",
+  METEN: "17.79",
+  SARAE: "78.55",
+  SSAAT: "37.06",
+  ISVEA: "51.95",
+  EKIM: "18.37",
+  GOLDA: "13.69",
+  ORZAX: "119.30",
+  SOHOE: "10.83",
+  BETAE: "98.75",
   EKDMR: "47.22",
-  AAGYO: "13.07",
-  MCARD: "136.80",
-  LXGYO: "10.71",
-  GENKM: "10.56",
-  SVGYO: "13.17",
-  EMPAE: "62.90",
-  ATATR: "14.03",
-  BESTE: "27.96",
-  AKHAN: "41.32",
-  NETCD: "132.10",
-  UCAYM: "26.72",
-  ZGYO: "33.80",
-  FRMPL: "32.96",
-  MEYSU: "11.00",
-  ARFYE: "31.14",
+  AAGYO: "13.27",
+  MCARD: "133.90",
+  LXGYO: "10.80",
+  GENKM: "10.45",
+  SVGYO: "14.48",
+  EMPAE: "69.15",
+  ATATR: "13.92",
+  BESTE: "28.38",
+  AKHAN: "40.02",
+  NETCD: "131.70",
+  UCAYM: "26.62",
+  ZGYO: "33.78",
+  FRMPL: "34.74",
+  MEYSU: "10.63",
+  ARFYE: "30.92",
 };
 
 const karclHalkaArzVerisi = {
@@ -81,7 +81,7 @@ const karclHalkaArzVerisi = {
   katilimciSayisi: "814.853",
   dagitimSekli: "BİREYSELE %40",
   arzFiyati: "35.00",
-  guncelFiyat: "46.56",
+  guncelFiyat: "41.92",
   konsorsiyum: "A1 CAPİTAL, VAKIF, ZİRAAT",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -91,7 +91,7 @@ const masfnHalkaArzVerisi = {
   katilimciSayisi: "1.093.898",
   dagitimSekli: "BİREYSELE %80",
   arzFiyati: "45.68",
-  guncelFiyat: "44.24",
+  guncelFiyat: "43.52",
   konsorsiyum: "DENİZ",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -101,7 +101,7 @@ const albtnHalkaArzVerisi = {
   katilimciSayisi: "549.211",
   dagitimSekli: "TAMAMEN EŞİT",
   arzFiyati: "38.60",
-  guncelFiyat: "27.40",
+  guncelFiyat: "26.02",
   konsorsiyum: "TACİRLER",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -111,7 +111,7 @@ const metenHalkaArzVerisi = {
   katilimciSayisi: "961.387",
   dagitimSekli: "BİREYSELE %38",
   arzFiyati: "20.00",
-  guncelFiyat: "18.55",
+  guncelFiyat: "17.79",
   konsorsiyum: "İNFO",
 } as (typeof baseHalkaArzVerileri)[number];
 

@@ -16,6 +16,92 @@ import { riskMaddeleri, riskOzetCumlesi } from "@/lib/halka-arz-risk";
 
 export const dynamicParams = false;
 
+
+function turkceAramaMetni(metin: string) {
+  return metin
+    .toLocaleLowerCase("tr")
+    .replace(/ı/g, "i")
+    .replace(/ğ/g, "g")
+    .replace(/ü/g, "u")
+    .replace(/ş/g, "s")
+    .replace(/ö/g, "o")
+    .replace(/ç/g, "c");
+}
+
+function sinboTaslakVerisiniGuncelle(veri: HalkaArzVeri): HalkaArzVeri {
+  const sinboMu = turkceAramaMetni(veri.sirketAdi).includes("sinbo");
+  if (!sinboMu) return veri;
+
+  const guncelTahsisat = veri.tahsisat.filter((item) => {
+    const metin = turkceAramaMetni(tahsisatMetni(item));
+    return !metin.includes("yurt disi kurumsal");
+  });
+
+  const guncelTahsisatNotlari = (veri.tahsisatNotlari || []).filter((not) => {
+    const metin = turkceAramaMetni(not);
+    return !metin.includes("yurt disi kurumsal");
+  });
+
+  return {
+    ...veri,
+    baslikMeta: {
+      ...veri.baslikMeta,
+      description:
+        "Sinbo Küçük Ev Aletleri halka arz taslağının güncel pay miktarı, ortak satışı, konsorsiyum lideri, fiyat istikrarı ve fon kullanım planı.",
+    },
+    ozet: {
+      ...veri.ozet,
+      pay: "301.435.772 lot",
+      araciKurum: "Kuveyt Türk Yatırım",
+    },
+    toplamPay: "301.435.772 lot",
+    halkaArzSekli: [
+      "Halka arz, sermaye artırımı ve ortak satışı yöntemleriyle gerçekleştirilecektir.",
+      "68.000.000 lot pay ortak satışı yoluyla satışa sunulacaktır.",
+      "Toplam 301.435.772 lot payın halka arz edilmesi planlanmaktadır.",
+    ],
+    oneCikanlar: [
+      {
+        title: "Toplam Halka Arz",
+        value: "301.435.772 lot",
+        desc: "Güncellenen taslak izahnamede belirtilen toplam satış miktarı.",
+      },
+      {
+        title: "Konsorsiyum Lideri",
+        value: "Kuveyt Türk Yatırım",
+        desc: "Önceki taslakta yer alan Tera Yatırım yerine görevlendirildi.",
+      },
+      {
+        title: "Ortak Satışı",
+        value: "68.000.000 lot",
+        desc: "Güncellenen taslak izahnameyle halka arza ortak satışı eklendi.",
+      },
+      {
+        title: "Fiyat İstikrarı",
+        value: "30 gün",
+        desc: "Brüt halka arz gelirinin %10'u ile gerçekleştirilmesi planlanıyor.",
+      },
+    ],
+    tahsisat: guncelTahsisat,
+    tahsisatNotlari: [
+      ...guncelTahsisatNotlari,
+      "Güncellenen taslak izahnamede yurt dışı kurumsal yatırımcılara ayrı tahsisat planlanmamaktadır.",
+    ],
+    fonKullanim: [
+      "%40 - İşletme sermayesi ihtiyacının karşılanması",
+      "%35 - Finansal borçların ödenmesi",
+      "%25 - Yeni yatırımların finansmanı",
+    ],
+    fonKullanimYorumu:
+      "Güncellenen planda halka arz gelirinin en büyük bölümü işletme sermayesine ayrılmıştır. Borç ödemelerinin payı önceki taslağa göre azaltılırken yeni yatırımlar için ayrılan oran artırılmıştır.",
+    taahhutOzeti: {
+      ...veri.taahhutOzeti,
+      fiyatIstikrari:
+        "Brüt halka arz gelirinin %10'u kullanılarak 30 gün süreyle fiyat istikrarı sağlayıcı işlemler yapılması planlanmaktadır.",
+    },
+  };
+}
+
 // Build aşamasında SADECE taşınması tamamlanmış (JSON'u olan ve artık eski
 // statik .tsx'i bulunmayan) slug'lar üretilir. Eski .tsx hâlâ duran slug'lar
 // için Next.js zaten statik sayfayı servis eder; burada üretmeyiz.
@@ -29,8 +115,9 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-  const veri = halkaArzGetir(slug);
-  if (!veri) return {};
+  const hamVeri = halkaArzGetir(slug);
+  if (!hamVeri) return {};
+  const veri = sinboTaslakVerisiniGuncelle(hamVeri);
   // JSON isteği tek başına yeterli değildir. Eksik finansal veri veya özgün
   // değerlendirme bulunan taslaklar tamamlanana kadar dizine alınmaz.
   const robotsSeo = veri.seo?.robots;
@@ -206,8 +293,9 @@ export default async function HalkaArzDinamikPage({
   // amaçlı bu slug'ı dinamik tarafta üretmeyiz.
   if (statikSlugVar(slug)) notFound();
 
-  const veri = halkaArzGetir(slug);
-  if (!veri) notFound();
+  const hamVeri = halkaArzGetir(slug);
+  if (!hamVeri) notFound();
+  const veri = sinboTaslakVerisiniGuncelle(hamVeri);
   if (veri.seo?.contentStatus === "onayli") {
     permanentRedirect(`/halka-arz/onayli-izahnameler/${slug}`);
   }
