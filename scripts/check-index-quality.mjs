@@ -92,25 +92,21 @@ function haberIndexlenebilir(kayit) {
     (toplam, bolum) => toplam + bolumMetinUzunlugu(bolum),
     0
   );
-  const editorGirisi = metinUzunlugu(kayit.editorDegerlendirmesi?.giris);
   const editorKapsami = (kayit.editorDegerlendirmesi?.bolumler ?? []).reduce(
     (toplam, bolum) => toplam + bolumMetinUzunlugu(bolum),
-    editorGirisi
+    metinUzunlugu(kayit.editorDegerlendirmesi?.giris)
   );
-  const disKaynakVar = (kayit.kaynaklar ?? []).some(
-    (kaynak) =>
-      /^https?:\/\//i.test(kaynak.url ?? "") &&
-      !/hocaileborsa\.com/i.test(kaynak.url ?? "")
+  const toplamAnalizKapsami = kaynakGirisi + kaynakBolumleri + editorKapsami;
+  const kaynakVar = (kayit.kaynaklar ?? []).some(
+    (kaynak) => /^https?:\/\//i.test(kaynak.url ?? "")
   );
 
   return Boolean(
-    kaynakGirisi >= 250 &&
-      (kayit.kaynakOzeti?.ozetKartlari ?? []).length >= 2 &&
-      (kayit.kaynakOzeti?.temelBilgiler ?? []).length >= 4 &&
-      kaynakBolumleri >= 300 &&
-      editorGirisi >= 100 &&
-      editorKapsami >= 450 &&
-      disKaynakVar
+    kaynakGirisi >= 220 &&
+      kaynakBolumleri >= 400 &&
+      editorKapsami >= 400 &&
+      toplamAnalizKapsami >= 1600 &&
+      kaynakVar
   );
 }
 

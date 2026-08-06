@@ -19,7 +19,11 @@ const kontroller = [
   },
   {
     yol: "/haber/5-agustos-2026-fonlar-gunluk-kapanis-degerlendirmesi",
-    noindex: true,
+    noindex: false,
+  },
+  {
+    yol: "/haber/6-agustos-2026-fonlar-gunluk-kapanis-degerlendirmesi",
+    noindex: false,
   },
   {
     yol: "/haber/24-temmuz-2026-onemli-kap-haberleri",
