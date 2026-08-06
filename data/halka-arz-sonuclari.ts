@@ -36,7 +36,7 @@ export type HalkaArzSonucu = {
 // Tüm guncelFiyat değerlerinin ait olduğu ortak seans tarihi. Günlük kapanış
 // fiyatları yenilenirken yalnızca bu tarih bir kez değiştirilir. BIST 100
 // kapanışı aynı tarihli günlük özet JSON'undan otomatik okunur.
-export const halkaArzKapanisTarihi = "2026-07-31";
+export const halkaArzKapanisTarihi = "2026-08-06";
 
 export const halkaArzSonuclari: HalkaArzSonucu[] = [
   {

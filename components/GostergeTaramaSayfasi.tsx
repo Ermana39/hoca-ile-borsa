@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import type { SeoIcerik } from "@/lib/gosterge-tarama-seo";
 
 // Tüm gösterge taraması sayfaları için TEK ortak şablon. Her sayfa kendi

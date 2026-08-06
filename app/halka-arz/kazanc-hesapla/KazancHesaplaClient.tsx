@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import { useMemo, useState } from "react";
 
 function parseNumber(value: string) {

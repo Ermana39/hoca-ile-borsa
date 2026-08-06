@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 
 export type PopulerAramaItem = {
   label: string;

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { getYazar, yazarlar, varsayilanYazar } from "@/app/data/yazarlar";

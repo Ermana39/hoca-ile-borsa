@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import AuthorBox from "@/components/AuthorBox";
 import RelatedNews from "@/components/RelatedNews";
 import { rehberler } from "@/lib/rehberler";

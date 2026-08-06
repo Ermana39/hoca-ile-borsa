@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
+import { dizinDisiYolMu } from "@/lib/indexleme-politikasi";
 
 const DEFAULT_BLOCKED_COUNTRIES = [
   "CN",
@@ -15,7 +16,9 @@ const DEFAULT_BLOCKED_COUNTRIES = [
   "JP",
 ];
 const SEARCH_BOT_ALLOWLIST =
-  /googlebot|bingbot|slurp|duckduckbot|yandexbot|applebot|adsbot-google|mediapartners-google/i;
+  /googlebot|bingbot|slurp|duckduckbot|yandexbot|applebot(?!-extended)|adsbot-google|mediapartners-google/i;
+const COSTLY_CRAWLER_DENYLIST =
+  /ahrefsbot|semrushbot|mj12bot|dotbot|bytespider|gptbot|chatgpt-user|oai-searchbot|ccbot|claudebot|claude-web|anthropic-ai|perplexitybot|google-extended|applebot-extended|amazonbot|meta-externalagent|facebookbot|cohere-ai|diffbot|imagesiftbot|omgilibot|youbot|dataforseobot|serpstatbot|barkrowler|seekportbot|megaindex|zoominfobot|turnitinbot/i;
 
 function blockedCountries() {
   const raw = process.env.BLOCKED_COUNTRY_CODES;
@@ -48,11 +51,25 @@ export function proxy(request: NextRequest) {
 
   const country = request.headers.get("x-vercel-ip-country")?.toUpperCase();
   const userAgent = request.headers.get("user-agent") || "";
+  const isAllowedSearchBot = SEARCH_BOT_ALLOWLIST.test(userAgent);
+
+  // robots.txt is only advisory. Enforce the same policy before a crawler can
+  // reach large prerendered pages and consume ISR read units. Search engines
+  // and Google advertising crawlers remain explicitly allowed.
+  if (!isAllowedSearchBot && COSTLY_CRAWLER_DENYLIST.test(userAgent)) {
+    return new NextResponse("Forbidden", {
+      status: 403,
+      headers: {
+        "Cache-Control": "no-store",
+        "X-Robots-Tag": "noindex, nofollow",
+      },
+    });
+  }
 
   if (
     country &&
     blockedCountries().has(country) &&
-    !SEARCH_BOT_ALLOWLIST.test(userAgent)
+    !isAllowedSearchBot
   ) {
     return new NextResponse("Forbidden", {
       status: 403,
@@ -63,7 +80,12 @@ export function proxy(request: NextRequest) {
     });
   }
 
-  return NextResponse.next();
+  const response = NextResponse.next();
+  if (dizinDisiYolMu(decodedPathname)) {
+    response.headers.set("X-Robots-Tag", "noindex, follow");
+  }
+
+  return response;
 }
 
 export const config = {

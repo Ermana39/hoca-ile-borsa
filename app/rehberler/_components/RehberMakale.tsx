@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import RehberAltBolumler from "@/components/RehberAltBolumler";
 
 export type RehberKart = {

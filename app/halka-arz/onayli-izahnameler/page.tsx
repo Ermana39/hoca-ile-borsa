@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
 import SirketLogo from "@/components/SirketLogo";
 import { getOnayliIzahnameListesi } from "@/lib/halka-arz";

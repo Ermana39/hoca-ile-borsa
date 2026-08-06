@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 
 // Sayfa 1 -> basePath, sayfa N -> basePath/sayfa/N
 function sayfaUrl(basePath: string, sayfa: number): string {

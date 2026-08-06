@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import { getYazar, varsayilanYazar } from "@/app/data/yazarlar";
 
 export default function AuthorBox({

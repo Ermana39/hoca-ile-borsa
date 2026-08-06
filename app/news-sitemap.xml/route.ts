@@ -1,4 +1,5 @@
-import { getAllNews } from "@/lib/haberler";
+import { getIndexlenebilirNews } from "@/lib/haberler";
+import { dizinDisiYolMu } from "@/lib/indexleme-politikasi";
 
 const siteUrl = "https://www.hocaileborsa.com";
 const publicationName = "Hoca İle Borsa";
@@ -43,12 +44,13 @@ function getCutoffDate() {
 
 export async function GET() {
   const cutoffDate = getCutoffDate();
-  const recentNews = getAllNews()
+  const recentNews = getIndexlenebilirNews()
     .filter(
       (item) =>
         item.publishedAt &&
         item.publishedAt >= cutoffDate &&
-        item.href.startsWith("/")
+        item.href.startsWith("/") &&
+        !dizinDisiYolMu(item.href)
     )
     .slice(0, 1000);
 

@@ -4,7 +4,7 @@ export const metadata = {
   alternates: { canonical: "https://www.hocaileborsa.com/temettu/kasim-ayi-temettu-takvimi" },
 };
 
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import HisseLink from "@/components/HisseLink";
 import { IlgiliBolumler } from "@/components/IlgiliBolumler";
 

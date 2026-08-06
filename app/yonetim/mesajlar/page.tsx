@@ -1,6 +1,6 @@
 import fs from "fs";
 import path from "path";
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
 import { cookies } from "next/headers";
 import { isValidAdminToken } from "@/lib/page-stats";

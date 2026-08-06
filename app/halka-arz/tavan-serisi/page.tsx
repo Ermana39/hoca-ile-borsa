@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import {
   halkaArzKapanisTarihi,
   halkaArzSonuclari as baseHalkaArzVerileri,
@@ -45,35 +45,46 @@ export const metadata: Metadata = {
 };
 
 const guncelHalkaArzKapanislari: Record<string, string> = {
-  KARCL: "41.92",
-  MASFN: "43.52",
-  ALBTN: "26.02",
-  METEN: "17.79",
-  SARAE: "78.55",
-  SSAAT: "37.06",
-  ISVEA: "51.95",
-  EKIM: "18.37",
-  GOLDA: "13.69",
-  ORZAX: "119.30",
-  SOHOE: "10.83",
-  BETAE: "98.75",
-  EKDMR: "47.22",
-  AAGYO: "13.27",
-  MCARD: "133.90",
-  LXGYO: "10.80",
-  GENKM: "10.45",
-  SVGYO: "14.48",
-  EMPAE: "69.15",
-  ATATR: "13.92",
-  BESTE: "28.38",
-  AKHAN: "40.02",
-  NETCD: "131.70",
-  UCAYM: "26.62",
-  ZGYO: "33.78",
-  FRMPL: "34.74",
-  MEYSU: "10.63",
-  ARFYE: "30.92",
+  QUICK: "80.35",
+  KARCL: "46.10",
+  MASFN: "43.50",
+  ALBTN: "26.22",
+  METEN: "19.56",
+  SARAE: "79.00",
+  SSAAT: "39.00",
+  ISVEA: "46.76",
+  EKIM: "18.05",
+  GOLDA: "12.72",
+  ORZAX: "107.40",
+  SOHOE: "10.69",
+  BETAE: "108.60",
+  EKDMR: "47.42",
+  AAGYO: "12.98",
+  MCARD: "147.20",
+  LXGYO: "11.02",
+  GENKM: "10.40",
+  SVGYO: "14.62",
+  EMPAE: "67.00",
+  ATATR: "13.85",
+  BESTE: "29.10",
+  AKHAN: "41.78",
+  NETCD: "134.60",
+  UCAYM: "26.72",
+  ZGYO: "33.62",
+  FRMPL: "35.24",
+  MEYSU: "10.70",
+  ARFYE: "30.96",
 };
+
+const quickHalkaArzVerisi = {
+  hisse: "QUICK",
+  islemTarihi: "06.08.2026",
+  katilimciSayisi: "961.387",
+  dagitimSekli: "BİREYSELE %60",
+  arzFiyati: "76.60",
+  guncelFiyat: "80.35",
+  konsorsiyum: "GARANTİ",
+} as (typeof baseHalkaArzVerileri)[number];
 
 const karclHalkaArzVerisi = {
   hisse: "KARCL",
@@ -81,7 +92,7 @@ const karclHalkaArzVerisi = {
   katilimciSayisi: "814.853",
   dagitimSekli: "BİREYSELE %40",
   arzFiyati: "35.00",
-  guncelFiyat: "41.92",
+  guncelFiyat: "46.10",
   konsorsiyum: "A1 CAPİTAL, VAKIF, ZİRAAT",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -91,7 +102,7 @@ const masfnHalkaArzVerisi = {
   katilimciSayisi: "1.093.898",
   dagitimSekli: "BİREYSELE %80",
   arzFiyati: "45.68",
-  guncelFiyat: "43.52",
+  guncelFiyat: "43.50",
   konsorsiyum: "DENİZ",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -101,7 +112,7 @@ const albtnHalkaArzVerisi = {
   katilimciSayisi: "549.211",
   dagitimSekli: "TAMAMEN EŞİT",
   arzFiyati: "38.60",
-  guncelFiyat: "26.02",
+  guncelFiyat: "26.22",
   konsorsiyum: "TACİRLER",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -111,11 +122,12 @@ const metenHalkaArzVerisi = {
   katilimciSayisi: "961.387",
   dagitimSekli: "BİREYSELE %38",
   arzFiyati: "20.00",
-  guncelFiyat: "17.79",
+  guncelFiyat: "19.56",
   konsorsiyum: "İNFO",
 } as (typeof baseHalkaArzVerileri)[number];
 
 const halkaArzVerileri = [
+  quickHalkaArzVerisi,
   karclHalkaArzVerisi,
   masfnHalkaArzVerisi,
   albtnHalkaArzVerisi,

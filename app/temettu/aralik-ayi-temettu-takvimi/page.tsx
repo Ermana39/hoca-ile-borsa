@@ -4,7 +4,7 @@ export const metadata = {
   alternates: { canonical: "https://www.hocaileborsa.com/temettu/aralik-ayi-temettu-takvimi" },
 };
 
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import { getTemettulerByAy } from "@/lib/temettuler";
 import HisseLink from "@/components/HisseLink";
 import { IlgiliBolumler } from "@/components/IlgiliBolumler";

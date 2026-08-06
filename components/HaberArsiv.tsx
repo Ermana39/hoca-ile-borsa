@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import HaberKart from "@/components/HaberKart";
 import HaberSayfalama from "@/components/HaberSayfalama";
 import {

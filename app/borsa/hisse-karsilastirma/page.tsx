@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import HisseKarsilastirmaAraci from "@/components/HisseKarsilastirmaAraci";
 import { getHisseKarsilastirmaVeriSeti } from "@/lib/hisse-karsilastirma";
 

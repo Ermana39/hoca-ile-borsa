@@ -4,7 +4,7 @@ export const metadata = {
   alternates: { canonical: "https://www.hocaileborsa.com/borsa/geri-alim-programlari" },
 };
 
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import Script from "next/script";
 import geriAlimData from "./data/geri-alim.json";
 

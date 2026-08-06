@@ -1,6 +1,6 @@
 import type { MetadataRoute } from "next";
 import pageUpdates from "@/lib/page-updates.generated.json";
-import { getAllNews } from "@/lib/haberler";
+import { getIndexlenebilirNews } from "@/lib/haberler";
 import { HABER_KATEGORILERI } from "@/lib/haber-kategorileri";
 import { getSitemapHisseSembolleri } from "@/lib/hisseler";
 import { getHisseProfilMetadata } from "@/lib/hisse-kunye-kaynaklari";
@@ -122,7 +122,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     lastModified: terimGuncellemeTarihi(terim),
   }));
 
-  const haberEntries = getAllNews().map((item) => ({
+  const haberEntries = getIndexlenebilirNews().map((item) => ({
     route: item.href,
     lastModified: item.updatedAt ?? item.publishedAt,
   }));

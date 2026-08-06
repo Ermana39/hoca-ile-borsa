@@ -18,6 +18,9 @@
     "hisse:icerik-onar": "node scripts/repair-hisse-content-quality.mjs --write",
     "hisse:normalize": "node scripts/normalize-bist-company-profiles.mjs",
     "hisse:check": "node scripts/check-hisse-quality.mjs",
+    "index-quality:check": "node scripts/check-index-quality.mjs",
+    "index-runtime:check": "node scripts/check-index-runtime.mjs",
+    "vercel-usage:check": "node scripts/check-vercel-usage-guards.mjs",
     "news-dates": "node scripts/generate-news-dates.mjs",
     "news:new": "node scripts/create-news.mjs",
     "news:check": "node scripts/check-news-quality.mjs",
@@ -25,7 +28,7 @@
     "halka-arz:taslak-arsivle": "node scripts/archive-ipo-draft.mjs",
     "halka-arz:karsilastirma-kontrol": "node scripts/archive-ipo-draft.mjs --check-approved",
     "halka-arz:ortaklik-yapisi": "node scripts/sync-ipo-ownership-structure.mjs",
-    "build": "npm run fon-etki:import && npm run excel-to-json && node scripts/generate-news-dates.mjs && node scripts/generate-hisse-profile-metadata.mjs && node scripts/generate-page-updates.mjs && node scripts/check-hisse-quality.mjs && node scripts/archive-ipo-draft.mjs --check-approved && next build",
+    "build": "npm run vercel-usage:check && npm run index-quality:check && npm run fon-etki:import && npm run excel-to-json && node scripts/generate-news-dates.mjs && node scripts/generate-hisse-profile-metadata.mjs && node scripts/generate-page-updates.mjs && node scripts/check-hisse-quality.mjs && node scripts/archive-ipo-draft.mjs --check-approved && next build",
     "start": "next start",
     "lint": "eslint"
   },

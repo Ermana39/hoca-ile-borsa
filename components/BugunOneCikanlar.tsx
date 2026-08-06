@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import { getNewsByCategory } from "@/lib/haberler";
 import { getEnGuncelGunlukOzet } from "@/lib/gunluk-ozet";
 import type { HaberKategori } from "@/lib/haber-kategorileri";

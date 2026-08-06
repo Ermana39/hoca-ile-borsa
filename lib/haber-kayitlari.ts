@@ -180,6 +180,62 @@ export type HaberKaydi = {
   yasalUyari?: string;
 };
 
+function metinUzunlugu(value?: string): number {
+  return typeof value === "string" ? value.trim().length : 0;
+}
+
+function bolumMetinUzunlugu(bolum: HaberBolumu): number {
+  return (
+    metinUzunlugu(bolum.giris) +
+    (bolum.paragraflar ?? []).reduce(
+      (toplam, metin) => toplam + metinUzunlugu(metin),
+      0
+    ) +
+    (bolum.maddeler ?? []).reduce(
+      (toplam, metin) => toplam + metinUzunlugu(metin),
+      0
+    ) +
+    (bolum.kartlar ?? []).reduce(
+      (toplam, kart) =>
+        toplam + metinUzunlugu(kart.baslik) + metinUzunlugu(kart.aciklama),
+      0
+    )
+  );
+}
+
+export function haberKaydiIndexlenebilirMi(kayit: HaberKaydi): boolean {
+  if (kayit.durum !== "yayinda") return false;
+
+  const kaynakGirisi = (kayit.kaynakOzeti.giris ?? []).reduce(
+    (toplam, metin) => toplam + metinUzunlugu(metin),
+    0
+  );
+  const kaynakBolumleri = (kayit.kaynakOzeti.bolumler ?? []).reduce(
+    (toplam, bolum) => toplam + bolumMetinUzunlugu(bolum),
+    0
+  );
+  const editorGirisi = metinUzunlugu(kayit.editorDegerlendirmesi.giris);
+  const editorKapsami = (kayit.editorDegerlendirmesi.bolumler ?? []).reduce(
+    (toplam, bolum) => toplam + bolumMetinUzunlugu(bolum),
+    editorGirisi
+  );
+  const disKaynakVar = kayit.kaynaklar.some(
+    (kaynak) =>
+      /^https?:\/\//i.test(kaynak.url) &&
+      !/hocaileborsa\.com/i.test(kaynak.url)
+  );
+
+  return Boolean(
+    kaynakGirisi >= 250 &&
+      kayit.kaynakOzeti.ozetKartlari.length >= 2 &&
+      kayit.kaynakOzeti.temelBilgiler.length >= 4 &&
+      kaynakBolumleri >= 300 &&
+      editorGirisi >= 100 &&
+      editorKapsami >= 450 &&
+      disKaynakVar
+  );
+}
+
 function temelKayitGecerli(veri: unknown): veri is HaberKaydi {
   if (!veri || typeof veri !== "object") return false;
   const kayit = veri as Partial<HaberKaydi>;
@@ -236,6 +292,10 @@ export function getYayinlanmisHaberKayitlari(): HaberKaydi[] {
   return getTumHaberKayitlari().filter((kayit) => kayit.durum === "yayinda");
 }
 
+export function getIndexlenebilirHaberKayitlari(): HaberKaydi[] {
+  return getYayinlanmisHaberKayitlari().filter(haberKaydiIndexlenebilirMi);
+}
+
 export function statikHaberSlugVar(slug: string): boolean {
   try {
     return fs.existsSync(path.join(STATIK_HABER_DIZINI, slug, "page.tsx"));
@@ -280,16 +340,17 @@ export function haberMetadata(kayit: HaberKaydi): Metadata {
   const gorsel = `${SITE_URL}${kayit.gorsel.src}`;
   const yazar = getYazar(kayit.yazarSlug) ?? getYazar(varsayilanYazar);
   const kategori = getKategori(kayit.kategori);
+  const indexlenebilir = haberKaydiIndexlenebilirMi(kayit);
 
   return {
     title: kayit.baslik,
     description: kayit.aciklama,
     robots: {
-      index: kayit.durum === "yayinda",
-      follow: kayit.durum === "yayinda",
+      index: indexlenebilir,
+      follow: true,
       googleBot: {
-        index: kayit.durum === "yayinda",
-        follow: kayit.durum === "yayinda",
+        index: indexlenebilir,
+        follow: true,
         "max-image-preview": "large",
         "max-snippet": -1,
       },

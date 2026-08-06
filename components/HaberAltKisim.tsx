@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import HaberAltBilgi from "@/components/HaberAltBilgi";
 import HaberNavigasyon from "@/components/HaberNavigasyon";
 import IlgiliTerimler from "@/components/IlgiliTerimler";

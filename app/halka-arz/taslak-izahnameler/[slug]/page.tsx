@@ -6,7 +6,6 @@ import {
   bekleyenDeger,
   halkaArzGetir,
   statikSlugVar,
-  taslakIzahnameIndexlenebilirMi,
   taslakCanonicalYolu,
   tahsisatMetni,
   tasinmamisSluglar,
@@ -118,13 +117,11 @@ export async function generateMetadata({
   const hamVeri = halkaArzGetir(slug);
   if (!hamVeri) return {};
   const veri = sinboTaslakVerisiniGuncelle(hamVeri);
-  // JSON isteği tek başına yeterli değildir. Eksik finansal veri veya özgün
-  // değerlendirme bulunan taslaklar tamamlanana kadar dizine alınmaz.
   const robotsSeo = veri.seo?.robots;
   const robots = {
-    index:
-      (robotsSeo?.index ?? true) &&
-      taslakIzahnameIndexlenebilirMi(veri),
+    // Taslak belge detayları tamamlanmamış içerik havuzudur. Sayfa erişilebilir
+    // kalır; yalnızca onaylı aşamaya taşındığında dizine açılır.
+    index: false,
     follow: robotsSeo?.follow ?? true,
   };
   if (veri.seo?.contentStatus === "onayli") {

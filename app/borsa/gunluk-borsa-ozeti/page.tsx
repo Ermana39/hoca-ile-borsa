@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
 import { getTumGunlukOzetler } from "@/lib/gunluk-ozet";
 

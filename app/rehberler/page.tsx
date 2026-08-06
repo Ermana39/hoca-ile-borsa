@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import { rehberler } from "@/lib/rehberler";
 
 export const metadata = {

@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import { halkaArzSonuclari } from "@/data/halka-arz-sonuclari";
 import { getHisseIcerikHedefi } from "@/lib/hisse-icerik-hedefi";
 import { bekleyenDeger, halkaArzGetir } from "@/lib/halka-arz";

@@ -347,22 +347,9 @@ export function tasinmamisSluglar(): string[] {
 }
 
 export function getSitemapTaslakIzahnameSluglari(): string[] {
-  return tumJsonSluglar().filter((slug) => {
-    if (statikSlugVar(slug)) return false;
-    const veri = halkaArzGetir(slug);
-    if (!veri) return false;
-    if (veri.seo?.contentStatus === "onayli") return false;
-    if (
-      taslakCanonicalYolu(veri, slug) !==
-      `/halka-arz/taslak-izahnameler/${slug}`
-    ) {
-      return false;
-    }
-    if (veri.seo?.robots?.index === false) return false;
-    if (veri.seo?.sitemap === false) return false;
-    if (!taslakIzahnameIndexlenebilirMi(veri)) return false;
-    return true;
-  });
+  // Taslak izahnameler tamamlanmamış ve birbirine çok benzeyen belge özetleri
+  // olduğu için detay sayfaları kullanıcıya açık kalır, fakat dizine sunulmaz.
+  return [];
 }
 
 export function getSitemapOnayliIzahnameSluglari(): string[] {

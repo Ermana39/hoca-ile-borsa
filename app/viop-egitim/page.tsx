@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import ContactForm from "@/components/contact-form";
 
 export const metadata = {

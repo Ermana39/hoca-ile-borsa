@@ -4,7 +4,7 @@ export const metadata = {
   alternates: { canonical: "https://www.hocaileborsa.com/borsa/yeni-is-anlasmalari" },
 };
 
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import Script from "next/script";
 import yeniIsData from "./data/yeni-is-anlasmalari.json";
 

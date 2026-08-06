@@ -4,7 +4,7 @@ export const metadata = {
   alternates: { canonical: "https://www.hocaileborsa.com/borsa/oran-analizi" },
 };
 
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import oranAnaliziJson from "./data/oran-analizi.json";
 import OranAnaliziTableClient from "./_components/OranAnaliziTableClient";
 

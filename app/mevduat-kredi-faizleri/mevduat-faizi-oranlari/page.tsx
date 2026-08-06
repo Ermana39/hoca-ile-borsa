@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import { MevduatHesaplayici, ReelGetiriHesaplayici } from "@/components/faiz-hesaplayicilar";
 import { HesaplaCTA, TabloUstBilgi } from "@/components/IlgiliBolumler";
 import { getFaizData } from "@/lib/faiz-data";

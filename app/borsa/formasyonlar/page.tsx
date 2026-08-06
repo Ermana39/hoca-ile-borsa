@@ -6,7 +6,7 @@ export const metadata = {
 
 import fs from "fs/promises";
 import path from "path";
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 
 type FormasyonItem = {
   kod: string;

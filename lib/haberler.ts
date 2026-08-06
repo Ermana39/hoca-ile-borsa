@@ -2,6 +2,7 @@ import { newsItems as tumHaberler } from "@/app/data/news";
 import { getGunlukOzetHaberKayitlari } from "@/lib/gunluk-ozet";
 import { getHaberDosyaTarihiFromHref } from "@/lib/haber-tarih";
 import {
+  getIndexlenebilirHaberKayitlari,
   getYayinlanmisHaberKayitlari,
   haberKaydiniListeOgesine,
 } from "@/lib/haber-kayitlari";
@@ -108,6 +109,21 @@ export function getAllNews(): NewsItem[] {
   }
 
   return normalizeNewsItems(Array.from(benzersiz.values()));
+}
+
+export function getIndexlenebilirNews(): NewsItem[] {
+  const yeniSistemYollari = new Set(
+    getYayinlanmisHaberKayitlari().map((kayit) => `/haber/${kayit.slug}`)
+  );
+  const indexlenebilirYeniSistemYollari = new Set(
+    getIndexlenebilirHaberKayitlari().map((kayit) => `/haber/${kayit.slug}`)
+  );
+
+  return getAllNews().filter(
+    (item) =>
+      !yeniSistemYollari.has(item.href) ||
+      indexlenebilirYeniSistemYollari.has(item.href)
+  );
 }
 
 export const ANA_SAYFA_HABER_LIMIT = 14;

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import { hisseVarMi } from "@/lib/hisseler";
 
 const KOD_DESENI = /\b[A-ZÇĞİÖŞÜ]{3,6}\b/g;

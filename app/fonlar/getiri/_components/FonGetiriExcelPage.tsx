@@ -1,7 +1,7 @@
 import fs from "fs/promises";
 import path from "path";
 import { unstable_cache } from "next/cache";
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import FonGetiriTableClient, { type FonRow } from "./FonGetiriTableClient";
 
 type SearchParams = Promise<{

@@ -4,7 +4,7 @@ export const metadata = {
   alternates: { canonical: "https://www.hocaileborsa.com" },
 };
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import pageUpdates from "@/lib/page-updates.generated.json";
 import { IconTile } from "@/components/icons/IconTile";
 import type { CategoryIconName } from "@/components/icons/CategoryIcon";

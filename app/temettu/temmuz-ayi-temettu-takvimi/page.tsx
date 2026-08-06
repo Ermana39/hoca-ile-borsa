@@ -1,10 +1,10 @@
-﻿export const metadata = {
+export const metadata = {
   title: "Temmuz Ayı Temettü Takvimi | Hoca İle Borsa",
   description: "Temmuz ayında temettü veren BIST şirketleri, ödeme tarihleri ve temettü miktarları.",
   alternates: { canonical: "https://www.hocaileborsa.com/temettu/temmuz-ayi-temettu-takvimi" },
 };
 
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import { getTemettulerByAy } from "@/lib/temettuler";
 import HisseLink from "@/components/HisseLink";
 import { IlgiliBolumler } from "@/components/IlgiliBolumler";

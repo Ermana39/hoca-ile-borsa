@@ -5,7 +5,7 @@ export const metadata = {
   alternates: { canonical: "https://www.hocaileborsa.com/borsa/dip-zirve-analizi" },
 };
 
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import dipZirveData from "./data/dip-zirve.json";
 import DipZirveTableClient, {
   type DipZirveSatiri,

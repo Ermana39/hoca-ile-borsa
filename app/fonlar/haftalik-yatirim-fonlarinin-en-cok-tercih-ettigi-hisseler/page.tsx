@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import fonTercihData from "./data/tercih-edilen-hisseler.json";
 import FonTercihTableClient, {
   type FonSatiri,

@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import { getHaberKategorisi } from "@/lib/haberler";
 import { getKategori, type HaberKategori } from "@/lib/haber-kategorileri";
 

@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import { Fragment } from "react";
 import { getYazar, varsayilanYazar } from "@/app/data/yazarlar";
 import AuthorBox from "@/components/AuthorBox";

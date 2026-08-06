@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 
 const canonical = "https://www.hocaileborsa.com/editoryal-ilkeler";
 

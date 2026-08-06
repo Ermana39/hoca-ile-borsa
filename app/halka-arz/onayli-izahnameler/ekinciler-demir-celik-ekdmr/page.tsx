@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import type { ReactNode } from "react";
 import HalkaArzKarnesi from "@/components/HalkaArzKarnesi";
 import HalkaArzSSS from "@/components/HalkaArzSSS";

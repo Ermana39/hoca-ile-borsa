@@ -6,7 +6,7 @@ import {
 } from "@/lib/haberler";
 import { getEnGuncelGunlukOzet } from "@/lib/gunluk-ozet";
 import { getHisseIcerikHedefi } from "@/lib/hisse-icerik-hedefi";
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import HaberKategoriEtiketi from "@/components/HaberKategoriEtiketi";
 import HaberIlgiliHaberler from "@/components/HaberIlgiliHaberler";
 import ContinueReading from "@/components/ContinueReading";

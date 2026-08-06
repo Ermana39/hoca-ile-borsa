@@ -5,7 +5,7 @@ export const metadata = {
   alternates: { canonical: "https://www.hocaileborsa.com/hesaplayici" },
 };
 
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import { IconTile } from "@/components/icons/IconTile";
 import type { CategoryIconName } from "@/components/icons/CategoryIcon";
 

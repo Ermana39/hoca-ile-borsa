@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import { hisseVarMi } from "@/lib/hisseler";
 
 // Bir hisse kodunu, künyesi VARSA /hisse/<kod> linkine çevirir;

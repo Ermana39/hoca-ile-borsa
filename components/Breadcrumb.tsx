@@ -1,6 +1,6 @@
 "use client";
 
-import Link from "next/link";
+import Link from "@/components/NoPrefetchLink";
 import { usePathname } from "next/navigation";
 
 const SITE_URL = "https://www.hocaileborsa.com";
