@@ -7,9 +7,9 @@ import { bekleyenDeger, halkaArzGetir } from "@/lib/halka-arz";
 const canonical = "https://www.hocaileborsa.com/halka-arz/takvim";
 const title = "Halka Arz Takvimi 2026 | Bu Haftaki Halka Arzlar";
 const description =
-  "3 Ağustos 2026 güncel halka arz takvimi: Quick Sigorta 6 Ağustos 2026 Perşembe günü Borsa İstanbul'da işleme başlayacak.";
-const sonGuncellemeIso = "2026-08-03";
-const sonGuncellemeMetni = "3 Ağustos 2026";
+  "7 Ağustos 2026 güncel halka arz takvimi: CITAS 10-11-12 Ağustos, VEYAS, KPEKS ve TKNKA 12-13-14 Ağustos tarihlerinde talep toplayacak. Quick Sigorta Borsa İstanbul'da işlemde.";
+const sonGuncellemeIso = "2026-08-07";
+const sonGuncellemeMetni = "7 Ağustos 2026";
 
 export const metadata: Metadata = {
   title: { absolute: `${title} | Hoca İle Borsa` },
@@ -23,10 +23,15 @@ export const metadata: Metadata = {
     "yeni halka arzlar",
     "halka arz talep toplama tarihleri",
     "halka arz işlem tarihleri",
+    "CITAS halka arz",
+    "VEYAS halka arz",
+    "KPEKS halka arz",
+    "TKNKA halka arz",
+    "10 Ağustos 2026 halka arz",
+    "12 Ağustos 2026 halka arz",
     "Quick Sigorta halka arz",
     "Quick Sigorta işlem tarihi",
-    "Quick Sigorta ne zaman işlem görecek",
-    "6 Ağustos 2026 halka arz",
+    "Quick Sigorta işlemde",
   ],
   openGraph: {
     title,
@@ -67,13 +72,34 @@ type IzahnameBekleyenSirket = {
 
 const dagitimSonucuBeklenenTakvimi: TakvimSirketi[] = [];
 
-const talepToplamaTakvimi: TakvimSirketi[] = [];
+const talepToplamaTakvimi: TakvimSirketi[] = [
+  {
+    slug: "citlekci-magazacilik",
+    tarih: "10-11-12 Ağustos 2026",
+    durum: "Talep toplayacak",
+  },
+  {
+    slug: "turker-vangolu-enerji-yatirim",
+    tarih: "12-13-14 Ağustos 2026",
+    durum: "Talep toplayacak",
+  },
+  {
+    slug: "kapeks-kimya",
+    tarih: "12-13-14 Ağustos 2026",
+    durum: "Talep toplayacak",
+  },
+  {
+    slug: "teknika-plast-teknik-kalip-plastik-san-ve-tic",
+    tarih: "12-13-14 Ağustos 2026",
+    durum: "Talep toplayacak",
+  },
+];
 
 const islemBaslangiciTakvimi: TakvimSirketi[] = [
   {
     slug: "quick-sigorta",
     tarih: "6 Ağustos 2026 Perşembe",
-    durum: "İşleme başlayacak",
+    durum: "İşlemde",
   },
 ];
 
@@ -151,7 +177,7 @@ export default function HalkaArzTakvimPage() {
     {
       soru: "Talep toplayacak halka arzlar hangileri?",
       cevap:
-        "Aktif takvimde talep toplayacak halka arz bulunmuyor. Yeni talep tarihleri açıklandığında bu bölüm güncellenecek.",
+        "Çitlekçi Mağazacılık Gıda CITAS 10-11-12 Ağustos 2026 tarihlerinde; Türker Vangölü Enerji VEYAS, Kapeks Kimya KPEKS ve Teknika Plast TKNKA ise 12-13-14 Ağustos 2026 tarihlerinde talep toplayacak.",
     },
     {
       soru: "Dağıtım sonuçları açıklanacak halka arzlar hangileri?",
@@ -159,9 +185,9 @@ export default function HalkaArzTakvimPage() {
         "Aktif takvimde dağıtım sonucu beklenen halka arz bulunmuyor. Yeni dağıtım sonuçları açıklandığında bu bölüm güncellenecek.",
     },
     {
-      soru: "Bu hafta hangi halka arzlar işleme başlayacak?",
+      soru: "Bu hafta hangi halka arzlar işlemde?",
       cevap:
-        "Quick Sigorta 6 Ağustos 2026 Perşembe günü Borsa İstanbul'da işleme başlayacak.",
+        "Quick Sigorta QUICK, 6 Ağustos 2026 Perşembe günü Borsa İstanbul'da işlem görmeye başladı ve işlemde.",
     },
     {
       soru: "Onaylı izahnamesi beklenen halka arzlar hangileri?",
@@ -270,10 +296,10 @@ export default function HalkaArzTakvimPage() {
             Güncel Halka Arz Takvimi 2026: Bu Hafta Hangi Halka Arzlar Var?
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 md:text-base">
-            Aktif takvimde talep toplayacak yeni bir halka arz bulunmuyor.
-            Quick Sigorta 6 Ağustos 2026 Perşembe günü Borsa
-            İstanbul&apos;da işleme başlayacak. Daha önce işlem tarihi açıklanan
-            diğer halka arzlar işlem görmeye başladı.
+            Çitlekçi Mağazacılık Gıda CITAS 10-11-12 Ağustos 2026
+            tarihlerinde; Türker Vangölü Enerji VEYAS, Kapeks Kimya KPEKS ve
+            Teknika Plast TKNKA 12-13-14 Ağustos 2026 tarihlerinde talep
+            toplayacak. Quick Sigorta QUICK, Borsa İstanbul&apos;da işlemde.
           </p>
 
           <div className="mt-5 rounded-2xl border border-blue-200 bg-blue-50 p-4 md:p-5">
@@ -281,8 +307,10 @@ export default function HalkaArzTakvimPage() {
               Bu haftanın kısa özeti
             </h2>
             <p className="mt-2 text-sm leading-7 text-blue-950/80 md:text-base">
-              Aktif takvimde talep toplayacak şirket bulunmuyor. Quick Sigorta
-              6 Ağustos 2026 Perşembe günü Borsa İstanbul&apos;da işleme başlayacak.
+              CITAS için talep toplama 10-11-12 Ağustos 2026 tarihlerinde;
+              VEYAS, KPEKS ve TKNKA için talep toplama 12-13-14 Ağustos 2026
+              tarihlerinde yapılacak. Quick Sigorta Borsa İstanbul&apos;da
+              işlemde.
             </p>
             <nav
               aria-label="Halka arz takvimi bölüm bağlantıları"
@@ -300,7 +328,7 @@ export default function HalkaArzTakvimPage() {
                       },
                     ]
                   : []),
-                { label: "İşlem tarihleri", href: "#islem-tarihleri" },
+                { label: "İşlem durumu", href: "#islem-tarihleri" },
                 {
                   label: "Sonuçlanan halka arzlar",
                   href: "#sonuclanan-halka-arzlar",
@@ -329,7 +357,7 @@ export default function HalkaArzTakvimPage() {
               deger: String(dagitimSonucuBeklenenler.length),
             },
             {
-              etiket: "İşlem Takvimi",
+              etiket: "İşlemde",
               deger: String(islemeBaslayacaklar.length),
             },
             { etiket: "Aktif Hisse", deger: String(aktifHisseSayisi) },
@@ -506,7 +534,7 @@ export default function HalkaArzTakvimPage() {
         >
           <div className="border-b border-slate-200 bg-cyan-50 px-5 py-4">
             <h2 className="text-lg font-bold text-cyan-900 md:text-xl">
-              İşleme Başlayacak Halka Arzlar
+              İşlemdeki Halka Arzlar
             </h2>
           </div>
 
@@ -516,7 +544,7 @@ export default function HalkaArzTakvimPage() {
                 <tr className="bg-slate-100 text-slate-600">
                   <th className="px-4 py-3 font-semibold">Hisse</th>
                   <th className="px-4 py-3 font-semibold">Şirket</th>
-                  <th className="px-4 py-3 font-semibold">İşlem Tarihi</th>
+                  <th className="px-4 py-3 font-semibold">İşlem Durumu</th>
                   <th className="px-4 py-3 font-semibold">Arz Fiyatı</th>
                   <th className="px-4 py-3 font-semibold">Pazar</th>
                   <th className="px-4 py-3 text-right font-semibold">
@@ -551,7 +579,7 @@ export default function HalkaArzTakvimPage() {
                       </Link>
                     </td>
                     <td className="px-4 py-3 font-semibold text-cyan-800">
-                      {item.tarih}
+                      {item.durum} · {item.tarih}
                     </td>
                     <td className="px-4 py-3 text-slate-700">{item.fiyat}</td>
                     <td className="px-4 py-3 text-slate-700">{item.pazar}</td>
@@ -704,8 +732,8 @@ export default function HalkaArzTakvimPage() {
                 Aktif Takvimdeki SPK Onaylı İzahnameler
               </h2>
               <p className="mt-1 text-sm leading-6 text-blue-900/80">
-                Bu bölüm dağıtım sonucu beklenen veya işleme başlayacak halka
-                arzların onaylı izahname sayfalarını gösterir.
+                Bu bölüm talep toplayacak veya işlemde olan halka arzların
+                onaylı izahname sayfalarını gösterir.
               </p>
             </div>
             <Link
