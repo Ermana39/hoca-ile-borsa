@@ -5,8 +5,8 @@ export const metadata = {
 };
 
 import Link from "@/components/NoPrefetchLink";
-import Script from "next/script";
 import yeniIsData from "./data/yeni-is-anlasmalari.json";
+import YeniIsAnlasmalariTablosu from "@/components/YeniIsAnlasmalariTablosu";
 
 export const revalidate = false;
 
@@ -201,13 +201,7 @@ const columns = [
 ];
 
 export default function YeniIsAnlasmalariPage() {
-  const satirlar = verileriOku();
   const guncellemeTarihi = yeniIsData.guncellemeTarihi || "-";
-
-  const headerScrollId = "yeni-is-header-scroll";
-  const headerWidthId = "yeni-is-header-width";
-  const bodyScrollId = "yeni-is-body-scroll";
-  const bodyWidthId = "yeni-is-body-width";
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -242,88 +236,7 @@ export default function YeniIsAnlasmalariPage() {
           Son güncelleme: {guncellemeTarihi}
         </div>
 
-        <section className="rounded-2xl border border-zinc-200 bg-zinc-50 p-4">
-          <div className="rounded-xl border border-zinc-200 bg-white">
-            <div className="sticky top-0 z-30 rounded-t-xl border-b border-zinc-200 bg-white">
-              <div
-                id={headerScrollId}
-                className="overflow-x-auto [&::-webkit-scrollbar]:hidden"
-                style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-              >
-                <div id={headerWidthId} className="min-w-max">
-                  <table className="min-w-full border-collapse text-sm">
-                    <thead className="bg-zinc-100 text-zinc-700">
-                      <tr>
-                        {columns.map((column) => (
-                          <th
-                            key={column.key}
-                            className={`${column.width} px-4 py-3 ${
-                              column.align === "right" ? "text-right" : "text-left"
-                            }`}
-                          >
-                            {column.label}
-                          </th>
-                        ))}
-                      </tr>
-                    </thead>
-                  </table>
-                </div>
-              </div>
-            </div>
-
-            <div id={bodyScrollId} className="overflow-x-auto rounded-b-xl">
-              <div id={bodyWidthId} className="min-w-max">
-                <table className="min-w-full border-collapse bg-white text-sm">
-                  <tbody>
-                    {satirlar.length > 0 ? (
-                      satirlar.map((item, index) => (
-                        <tr
-                          key={`${item.sembol}-${item.tarih}-${index}`}
-                          className={
-                            index % 2 === 0
-                              ? "border-t border-zinc-100 bg-white"
-                              : "border-t border-zinc-100 bg-sky-50/60"
-                          }
-                        >
-                          <td className="min-w-[140px] px-4 py-3 font-semibold text-zinc-900">
-                            {item.sembol}
-                          </td>
-                          <td className="min-w-[150px] px-4 py-3 text-zinc-700">
-                            {item.tarih || "-"}
-                          </td>
-                          <td className="min-w-[220px] px-4 py-3 text-right font-semibold text-zinc-900">
-                            {formatNumber(item.tutar, 0)}
-                          </td>
-                          <td className="min-w-[140px] px-4 py-3 text-zinc-700">
-                            {item.paraBirimi || "-"}
-                          </td>
-                          <td className="min-w-[170px] px-4 py-3 text-zinc-700">
-                            {item.bilanco || "-"}
-                          </td>
-                          <td className="min-w-[170px] px-4 py-3 text-right text-zinc-700">
-                            {formatNumber(item.yillikSatislar, 0)}
-                          </td>
-                          <td className="min-w-[250px] px-4 py-3 text-right text-zinc-700">
-                            {formatOran(item.oran)}
-                          </td>
-                        </tr>
-                      ))
-                    ) : (
-                      <tr>
-                        <td
-                          colSpan={7}
-                          className="px-4 py-8 text-center text-sm text-zinc-500"
-                        >
-                          Veri bulunamadı.
-                        </td>
-                      </tr>
-                    )}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-        </section>
+        <YeniIsAnlasmalariTablosu />
 
         <section className="mt-12 rounded-2xl border border-zinc-200 bg-white p-6">
           <h2 className="mb-4 text-2xl font-bold text-zinc-900">
@@ -360,63 +273,6 @@ export default function YeniIsAnlasmalariPage() {
         </section>
       </div>
 
-      <Script id="yeni-is-header-scroll-sync" strategy="afterInteractive">
-        {`
-          (function () {
-            const header = document.getElementById("${headerScrollId}");
-            const body = document.getElementById("${bodyScrollId}");
-            const headerWidth = document.getElementById("${headerWidthId}");
-            const bodyWidth = document.getElementById("${bodyWidthId}");
-
-            if (!header || !body || !headerWidth || !bodyWidth) return;
-
-            let source = "";
-
-            function syncWidths() {
-              const width = Math.max(headerWidth.scrollWidth, bodyWidth.scrollWidth);
-              headerWidth.style.width = width + "px";
-              bodyWidth.style.width = width + "px";
-              header.scrollLeft = body.scrollLeft;
-            }
-
-            header.addEventListener(
-              "scroll",
-              function () {
-                if (source === "body") {
-                  source = "";
-                  return;
-                }
-                source = "header";
-                body.scrollLeft = header.scrollLeft;
-              },
-              { passive: true }
-            );
-
-            body.addEventListener(
-              "scroll",
-              function () {
-                if (source === "header") {
-                  source = "";
-                  return;
-                }
-                source = "body";
-                header.scrollLeft = body.scrollLeft;
-              },
-              { passive: true }
-            );
-
-            syncWidths();
-
-            if (typeof ResizeObserver !== "undefined") {
-              const observer = new ResizeObserver(syncWidths);
-              observer.observe(headerWidth);
-              observer.observe(bodyWidth);
-            }
-
-            window.addEventListener("resize", syncWidths);
-          })();
-        `}
-      </Script>
     </main>
   );
 }

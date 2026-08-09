@@ -18,7 +18,7 @@ const DEFAULT_BLOCKED_COUNTRIES = [
 const SEARCH_BOT_ALLOWLIST =
   /googlebot|bingbot|slurp|duckduckbot|yandexbot|applebot(?!-extended)|adsbot-google|mediapartners-google/i;
 const COSTLY_CRAWLER_DENYLIST =
-  /ahrefsbot|semrushbot|mj12bot|dotbot|bytespider|gptbot|chatgpt-user|oai-searchbot|ccbot|claudebot|claude-web|anthropic-ai|perplexitybot|google-extended|applebot-extended|amazonbot|meta-externalagent|facebookbot|cohere-ai|diffbot|imagesiftbot|omgilibot|youbot|dataforseobot|serpstatbot|barkrowler|seekportbot|megaindex|zoominfobot|turnitinbot/i;
+  /ahrefsbot|semrushbot|mj12bot|dotbot|bytespider|gptbot|chatgpt-user|oai-searchbot|ccbot|claudebot|claude-web|claude-searchbot|anthropic-ai|perplexitybot|google-extended|applebot-extended|amazonbot|amzn-searchbot|meta-externalagent|facebookbot|cohere-ai|diffbot|imagesiftbot|omgilibot|youbot|dataforseobot|serpstatbot|serankingbacklinksbot|barkrowler|seekportbot|megaindex|zoominfobot|turnitinbot|palo alto networks|cortex-xpanse|rss-parser/i;
 
 function blockedCountries() {
   const raw = process.env.BLOCKED_COUNTRY_CODES;
