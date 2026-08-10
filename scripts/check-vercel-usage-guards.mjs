@@ -40,12 +40,21 @@ if (violations.length > 0) {
   process.exit(1);
 }
 
-const proxySource = fs.readFileSync(path.join(root, "proxy.ts"), "utf8");
-if (!proxySource.includes("COSTLY_CRAWLER_DENYLIST")) {
-  console.error("Maliyet üreten tarayıcı koruması proxy.ts içinde bulunamadı.");
-  process.exit(1);
+const proxyPath = path.join(root, "proxy.ts");
+if (fs.existsSync(proxyPath)) {
+  const proxySource = fs.readFileSync(proxyPath, "utf8");
+  const htmlGenelindeCalisiyor =
+    proxySource.includes("/((?!_next/static") ||
+    !proxySource.includes("matcher:");
+
+  if (htmlGenelindeCalisiyor) {
+    console.error(
+      "Proxy tum HTML isteklerinde calisiyor. Bu yapi Fast Origin Transfer tuketimini arttirir.",
+    );
+    process.exit(1);
+  }
 }
 
 console.log(
-  "Vercel kullanım korumaları doğrulandı: otomatik prefetch kapalı, tarayıcı filtresi etkin.",
+  "Vercel kullanim korumalari dogrulandi: otomatik prefetch kapali, genel HTML proxy'si yok.",
 );

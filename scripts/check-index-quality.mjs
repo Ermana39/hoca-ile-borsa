@@ -121,15 +121,25 @@ const politika = fs.readFileSync(
   path.join(root, "lib", "indexleme-politikasi.ts"),
   "utf8"
 );
-const proxy = fs.readFileSync(path.join(root, "proxy.ts"), "utf8");
+const taslakMetadata = fs.readFileSync(
+  path.join(root, "app", "halka-arz", "taslak-izahnameler", "[slug]", "page.tsx"),
+  "utf8"
+);
+const surecHaberiMetadata = fs.readFileSync(
+  path.join(root, "components", "HalkaArzSurecHaberi.tsx"),
+  "utf8"
+);
 const sitemap = fs.readFileSync(path.join(root, "app", "sitemap.ts"), "utf8");
 
 const hatalar = [];
 if (!politika.includes("HALKA_ARZ_TASLAK_DETAY_DESENI")) {
   hatalar.push("Taslak izahname noindex yolu tanımlı değil.");
 }
-if (!proxy.includes('"X-Robots-Tag", "noindex, follow"')) {
-  hatalar.push("Sunucu yanıtında X-Robots-Tag koruması yok.");
+if (!taslakMetadata.includes("index: false")) {
+  hatalar.push("Taslak izahname sayfalarında noindex metadata koruması yok.");
+}
+if (!surecHaberiMetadata.includes("index: false")) {
+  hatalar.push("Halka arz süreç haberlerinde noindex metadata koruması yok.");
 }
 if (!sitemap.includes("getSitemapTaslakIzahnameSluglari")) {
   hatalar.push("Sitemap taslak filtreleme kaynağını kullanmıyor.");
