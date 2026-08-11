@@ -155,7 +155,40 @@ function DegisimGrafigi({
   );
 }
 
-function HaberIcerikBolumu({ bolum }: { bolum: HaberBolumu }) {
+function getFonKapanisKodlari(kayit: HaberKaydi) {
+  if (!kayit.slug.endsWith("fonlar-gunluk-kapanis-degerlendirmesi")) {
+    return [];
+  }
+
+  return Array.from(
+    new Set(
+      kayit.kaynaklar.flatMap((kaynak) => {
+        const eslesme = kaynak.url.match(
+          /\/fonlar\/etki-analizi\/([a-z0-9-]+)(?:[/?#]|$)/i
+        );
+        return eslesme ? [eslesme[1].toLowerCase()] : [];
+      })
+    )
+  );
+}
+
+function getBolumFonKodlari(baslik: string, fonKodlari: string[]) {
+  const baslikKelimeleri = new Set(
+    baslik.toUpperCase().split(/[^A-Z0-9]+/).filter(Boolean)
+  );
+
+  return fonKodlari.filter((fonKodu) =>
+    baslikKelimeleri.has(fonKodu.toUpperCase())
+  );
+}
+
+function HaberIcerikBolumu({
+  bolum,
+  fonKodlari = [],
+}: {
+  bolum: HaberBolumu;
+  fonKodlari?: string[];
+}) {
   const vurgu = bolum.vurgu ?? "normal";
   const kapBaglantilari = [
     bolum.kapLink
@@ -297,25 +330,27 @@ function HaberIcerikBolumu({ bolum }: { bolum: HaberBolumu }) {
           ))}
         </ul>
       )}
+
+      {fonKodlari.length > 0 && (
+        <div className="mt-5 flex flex-wrap gap-2">
+          {fonKodlari.map((fonKodu) => (
+            <Link
+              key={fonKodu}
+              href={`/fonlar/${fonKodu}`}
+              prefetch={false}
+              className="inline-flex items-center justify-center rounded-lg border border-blue-700 bg-blue-700 px-4 py-2.5 text-sm font-bold text-white shadow-sm transition hover:border-blue-800 hover:bg-blue-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 md:text-base"
+            >
+              {fonKodu.toUpperCase()} fon sayfası
+            </Link>
+          ))}
+        </div>
+      )}
     </section>
   );
 }
 
 function FonKapanisYonlendirmeleri({ kayit }: { kayit: HaberKaydi }) {
-  if (!kayit.slug.endsWith("fonlar-gunluk-kapanis-degerlendirmesi")) {
-    return null;
-  }
-
-  const fonKodlari = Array.from(
-    new Set(
-      kayit.kaynaklar.flatMap((kaynak) => {
-        const eslesme = kaynak.url.match(
-          /\/fonlar\/etki-analizi\/([a-z0-9-]+)(?:[/?#]|$)/i
-        );
-        return eslesme ? [eslesme[1].toLocaleLowerCase("tr-TR")] : [];
-      })
-    )
-  );
+  const fonKodlari = getFonKapanisKodlari(kayit);
 
   if (fonKodlari.length === 0) return null;
 
@@ -332,43 +367,15 @@ function FonKapanisYonlendirmeleri({ kayit }: { kayit: HaberKaydi }) {
         id="haberdeki-fonlar-baslik"
         className="text-xl font-bold tracking-tight text-slate-900"
       >
-        Haberdeki fonları inceleyin
+        Fon analiz araçları
       </h2>
       <p className="mt-2 text-sm leading-7 text-slate-600 md:text-base">
-        Günlük kapanışta öne çıkan fonların güncel verilerine ve portföy etki
-        analizlerine ulaşın.
+        Haberdeki fonları karşılaştırın veya tüm yatırım fonlarını ayrıntılı
+        ölçütlerle tarayın.
       </p>
 
-      <div className="mt-4 grid gap-3 sm:grid-cols-2">
-        {fonKodlari.map((fonKodu) => {
-          const etiket = fonKodu.toUpperCase();
-
-          return (
-            <div
-              key={fonKodu}
-              className="flex min-w-0 items-center justify-between gap-3 rounded-lg border border-slate-200 bg-slate-50 p-3"
-            >
-              <Link
-                href={`/fonlar/${fonKodu}`}
-                prefetch={false}
-                className="min-w-0 font-bold text-blue-700 transition hover:text-blue-900 focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
-              >
-                {etiket} fon sayfası
-              </Link>
-              <Link
-                href={`/fonlar/etki-analizi/${fonKodu}`}
-                prefetch={false}
-                className="shrink-0 text-sm font-semibold text-slate-600 transition hover:text-blue-700 focus-visible:rounded focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
-              >
-                Etki analizi
-              </Link>
-            </div>
-          );
-        })}
-      </div>
-
       <nav
-        className="mt-5 flex flex-wrap gap-2"
+        className="mt-4 flex flex-wrap gap-2"
         aria-label="Fon analiz araçları"
       >
         <Link
@@ -478,6 +485,7 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
   const kapanisDegerlendirmesi = kayit.etiket
     .toLocaleLowerCase("tr-TR")
     .includes("kapanış değerlendirmesi");
+  const fonKapanisKodlari = getFonKapanisKodlari(kayit);
 
   return (
     <main className="min-h-screen bg-[#f8fafc] px-4 py-6 md:px-6">
@@ -608,7 +616,14 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
                 )}
 
               {kayit.kaynakOzeti.bolumler.map((bolum, index) => (
-                <HaberIcerikBolumu key={`kaynak-${index}-${bolum.baslik}`} bolum={bolum} />
+                <HaberIcerikBolumu
+                  key={`kaynak-${index}-${bolum.baslik}`}
+                  bolum={bolum}
+                  fonKodlari={getBolumFonKodlari(
+                    bolum.baslik,
+                    fonKapanisKodlari
+                  )}
+                />
               ))}
 
               {kayit.kapEtkiAnalizi && (
@@ -631,7 +646,14 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
                 )}
 
               {kayit.editorDegerlendirmesi.bolumler.map((bolum, index) => (
-                <HaberIcerikBolumu key={`yorum-${index}-${bolum.baslik}`} bolum={bolum} />
+                <HaberIcerikBolumu
+                  key={`yorum-${index}-${bolum.baslik}`}
+                  bolum={bolum}
+                  fonKodlari={getBolumFonKodlari(
+                    bolum.baslik,
+                    fonKapanisKodlari
+                  )}
+                />
               ))}
 
               <FonKapanisYonlendirmeleri kayit={kayit} />
