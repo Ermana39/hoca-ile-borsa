@@ -13,7 +13,7 @@ export type FonTarihselVeri = {
   yatirimciSayisi: number;
   fonToplamDeger: number;
   paraGirisiCikisi: number;
-  marj: number;
+  marj: number | null;
 };
 
 export type FonEtkiOzeti = {
@@ -25,11 +25,13 @@ export type FonEtkiOzeti = {
   toplamEtki: number;
   kaldiracli: boolean;
   profilOzeti: string;
+  sonGuncellemeIso: string;
 };
 
 export type FonEtkiSayfaVerisi = FonEtkiOzeti & {
   rows: FonEtkiSatiri[];
   tarihselVeriler: FonTarihselVeri[];
+  sonGuncelleme: string;
 };
 
 type FonHamVerisi = {
@@ -95,6 +97,14 @@ const fonProfilleri = [
     profilOzeti:
       "KHA kodlu Pardus Portföy İkinci Hisse Senedi (TL) Fonu, hisse senedi yoğun fon türündedir. Bu sayfa, portföydeki payların ağırlıkları ile günlük kapanış hareketlerini birleştirerek açıklanacak fon fiyatına yönelik tahmini etkiyi; yatırımcı sayısı, fon büyüklüğü ve para akışıyla birlikte izler.",
   },
+  {
+    kod: "THF",
+    fonAdi: "Tera Portföy Hisse Senedi (TL) Fonu",
+    fonTuru: "Hisse senedi yoğun fon",
+    slug: "thf",
+    profilOzeti:
+      "THF kodlu Tera Portföy Hisse Senedi (TL) Fonu, hisse senedi yoğun fon türündedir. Bu sayfa, son açıklanan portföy ağırlıklarını günlük kapanış hareketleriyle birleştirerek ertesi gün açıklanacak fon fiyatına yönelik tahmini etkiyi izler.",
+  },
 ] as const;
 
 function tarihEtiketi(iso: string) {
@@ -116,12 +126,17 @@ export const fonEtkiOzetleri: FonEtkiOzeti[] = fonProfilleri.map((profil) => {
   if (!hamVeri) {
     throw new Error(`Fon etki Excel verisi bulunamadı: ${profil.kod}`);
   }
+  const sonGuncellemeIso = hamVeri.tarihsel.at(-1)?.tarih;
+  if (!sonGuncellemeIso) {
+    throw new Error(`Fon etki tarihsel verisi bulunamadı: ${profil.kod}`);
+  }
 
   return {
     ...profil,
     toplamFonOrani: hamVeri.toplamFonOrani,
     toplamEtki: hamVeri.toplamEtki,
     kaldiracli: hamVeri.kaldiracli,
+    sonGuncellemeIso,
   };
 });
 
@@ -139,6 +154,7 @@ export function fonEtkiSayfaVerisiGetir(slug: string): FonEtkiSayfaVerisi {
     ...ozet,
     rows: hamVeri.portfoy,
     tarihselVeriler: hamVeri.tarihsel,
+    sonGuncelleme: tarihEtiketi(ozet.sonGuncellemeIso),
   };
 }
 
@@ -151,7 +167,7 @@ export function fonEtkiMetadataOlustur(slug: string): Metadata {
   const fon = fonEtkiOzetiGetir(slug);
   const canonical = `${siteUrl}/fonlar/etki-analizi/${fon.slug}`;
   const title = `${fon.kod} Fonu Etki Analizi: Yarınki Fon Fiyatı Tahmini`;
-  const description = `${fonEtkiSonGuncelleme.label} kapanışına göre ${fon.kod} fonunun tahmini etkisi ${fonEtkiYuzdeMetni(fon.toplamEtki)}. Portföy dağılımı, hisse katkıları, para girişi ve yatırımcı değişimini inceleyin.`;
+  const description = `${tarihEtiketi(fon.sonGuncellemeIso)} kapanışına göre ${fon.kod} fonunun tahmini etkisi ${fonEtkiYuzdeMetni(fon.toplamEtki)}. Portföy dağılımı, hisse katkıları, para girişi ve yatırımcı değişimini inceleyin.`;
 
   return {
     title: { absolute: title },
@@ -169,7 +185,7 @@ export function fonEtkiMetadataOlustur(slug: string): Metadata {
       description,
       url: canonical,
       type: "article",
-      modifiedTime: fonEtkiSonGuncelleme.iso,
+      modifiedTime: fon.sonGuncellemeIso,
     },
     twitter: {
       card: "summary_large_image",

@@ -46,14 +46,14 @@ export default function FonEtkiKatkiGrafigi({
         </div>
       </div>
 
-      <div className="mt-5 space-y-3">
+      <div className="mt-5 space-y-3 rounded-md border border-slate-700 bg-slate-950 px-4 py-5">
         {rowsToShow.map((row) => (
           <div
             key={row.sembol}
             className="grid grid-cols-[64px_minmax(0,1fr)_92px] items-center gap-3"
           >
-            <span className="text-sm font-bold text-slate-950">{row.sembol}</span>
-            <div className="h-3 overflow-hidden bg-slate-100">
+            <span className="text-sm font-bold text-slate-100">{row.sembol}</span>
+            <div className="h-3 overflow-hidden bg-slate-800">
               <div
                 className={`h-full ${
                   row.etki >= 0 ? "bg-emerald-600" : "bg-red-600"
@@ -65,7 +65,7 @@ export default function FonEtkiKatkiGrafigi({
             </div>
             <span
               className={`text-right text-sm font-bold ${
-                row.etki >= 0 ? "text-emerald-700" : "text-red-700"
+                row.etki >= 0 ? "text-emerald-400" : "text-red-400"
               }`}
             >
               {signedPercent(row.etki)}

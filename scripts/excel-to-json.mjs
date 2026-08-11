@@ -10,6 +10,39 @@ const OLASI_APP_DIZINLERI = [
 
 const EXCEL_DIZIN_ADLARI = new Set(["data", "_data"]);
 const FON_ETKI_EXCEL_ADI = "fon-etki-verileri.xlsx";
+const FON_TERCIH_EXCEL_ADI = "tercih-edilen-hisseler.xlsx";
+const FON_TERCIH_SUTUNLARI = [
+  "Sembol",
+  "Değişim",
+  "Son Toplam %",
+  "İlk Toplam %",
+  "Son Toplam Takas TL",
+  "İlk Toplam Takas TL",
+  "Takas TL Son(Emeklilik Fon)",
+  "% Son (Emeklilik Fon)",
+  "Takas TL İlk(Emeklilik Fon)",
+  "% İlk (Emeklilik Fon)",
+  "Takas TL Son(Yatırım Fon)",
+  "% Son (Yatırım Fon)",
+  "Takas TL İlk(Yatırım Fon)",
+  "% İlk (Yatırım Fon)",
+];
+const TR_TARIH_DESENI = /^(\d{2})\.(\d{2})\.(\d{4})$/;
+
+async function jsonDosyasiYaz(filePath, value) {
+  const content = JSON.stringify(value, null, 2);
+
+  for (let attempt = 0; attempt < 5; attempt += 1) {
+    try {
+      await fs.writeFile(filePath, content, "utf-8");
+      return;
+    } catch (error) {
+      const retryable = ["EBUSY", "EPERM", "EACCES", "UNKNOWN"].includes(error?.code);
+      if (!retryable || attempt === 4) throw error;
+      await new Promise((resolve) => setTimeout(resolve, 100 * 2 ** attempt));
+    }
+  }
+}
 
 function temizHucre(value) {
   if (value === null || value === undefined || value === "") return null;
@@ -21,76 +54,29 @@ function temizHucre(value) {
 }
 
 function sayiyaCevir(value) {
-  const temiz = temizHucre(value);
+  if (typeof value === "number") return Number.isFinite(value) ? value : null;
+  if (value === null || value === undefined || value === "") return null;
 
-  if (temiz === null) return null;
-  if (typeof temiz === "number") return temiz;
-
-  let metin = String(temiz).trim().replace(/\s+/g, "");
-
-  // Türkçe sayı biçimlerini de destekler: 9,14 veya 1.988.789,35
-  if (metin.includes(",")) {
-    metin = metin.replace(/\./g, "").replace(",", ".");
-  }
-
-  const sayi = Number(metin);
-  return Number.isFinite(sayi) ? sayi : null;
+  let text = String(value).trim().replace(/%/g, "").replace(/\s+/g, "");
+  if (!text) return null;
+  if (text.includes(",")) text = text.replace(/\./g, "").replace(",", ".");
+  const parsed = Number(text.replace(/[^\d.-]/g, ""));
+  return Number.isFinite(parsed) ? parsed : null;
 }
 
-function yuvarla(value, basamak = 10) {
-  if (value === null || value === undefined || !Number.isFinite(value)) {
-    return null;
-  }
-
-  const carpan = 10 ** basamak;
-  return Math.round((value + Number.EPSILON) * carpan) / carpan;
+function trTarihiIsoYap(value) {
+  const match = String(value ?? "").trim().match(TR_TARIH_DESENI);
+  if (!match) return null;
+  const iso = `${match[3]}-${match[2]}-${match[1]}`;
+  const date = new Date(`${iso}T00:00:00Z`);
+  return Number.isNaN(date.getTime()) || date.toISOString().slice(0, 10) !== iso
+    ? null
+    : iso;
 }
 
-function ikiHane(value) {
-  return String(value).padStart(2, "0");
-}
-
-function tarihiIsoYap(value) {
-  const temiz = temizHucre(value);
-  if (temiz === null) return null;
-
-  if (temiz instanceof Date && !Number.isNaN(temiz.getTime())) {
-    return [
-      temiz.getUTCFullYear(),
-      ikiHane(temiz.getUTCMonth() + 1),
-      ikiHane(temiz.getUTCDate()),
-    ].join("-");
-  }
-
-  if (typeof temiz === "number") {
-    // Excel seri tarihini UTC tarihe çevirir.
-    // 25569, 1970-01-01 tarihinin Excel seri karşılığıdır.
-    const milisaniye = Math.round((temiz - 25569) * 86400 * 1000);
-    const tarih = new Date(milisaniye);
-
-    if (Number.isNaN(tarih.getTime())) return null;
-
-    return tarih.toISOString().slice(0, 10);
-  }
-
-  const metin = String(temiz).trim();
-
-  const isoEslesme = metin.match(/^(\d{4})[-/.](\d{1,2})[-/.](\d{1,2})$/);
-  if (isoEslesme) {
-    return `${isoEslesme[1]}-${ikiHane(isoEslesme[2])}-${ikiHane(isoEslesme[3])}`;
-  }
-
-  const trEslesme = metin.match(/^(\d{1,2})[-/.](\d{1,2})[-/.](\d{4})$/);
-  if (trEslesme) {
-    return `${trEslesme[3]}-${ikiHane(trEslesme[2])}-${ikiHane(trEslesme[1])}`;
-  }
-
-  const tarih = new Date(metin);
-  if (!Number.isNaN(tarih.getTime())) {
-    return tarih.toISOString().slice(0, 10);
-  }
-
-  return null;
+function isoTarihiTrYap(value) {
+  const [year, month, day] = value.split("-");
+  return `${day}.${month}.${year}`;
 }
 
 async function dizinVarMi(dir) {
@@ -165,162 +151,123 @@ function convertSheetToData(sheet) {
   return { columns, rows, rawRows };
 }
 
-function fonSayfasiniDonustur(sheetName, sheet) {
-  const kod = String(sheetName).trim().toUpperCase();
-  const satirlar = XLSX.utils
-    .sheet_to_json(sheet, {
-      header: 1,
-      defval: null,
-      raw: true,
-    })
-    .map((row) => row.map((cell) => temizHucre(cell)));
+async function fonEtkiExceliniJsonaCevir(filePath, workbook) {
+  const jsonPath = filePath.replace(/\.xlsx$/i, ".json");
+  const output = JSON.parse(await fs.readFile(jsonPath, "utf8"));
+  const workbookCodes = workbook.SheetNames.map((name) => name.trim().toUpperCase());
 
-  const portfoy = [];
-  const tarihsel = [];
-  let toplamFonOrani = null;
-  let toplamEtki = null;
-  let tarihBaslangicSatiri = -1;
-
-  for (let index = 1; index < satirlar.length; index += 1) {
-    const satir = satirlar[index] ?? [];
-    const ilkHucre = String(satir[0] ?? "").trim();
-    const ilkHucreKucuk = ilkHucre.toLocaleLowerCase("tr-TR");
-
-    if (ilkHucreKucuk === "toplam") {
-      toplamFonOrani = sayiyaCevir(satir[1]);
-      toplamEtki = sayiyaCevir(satir[3]);
-      continue;
-    }
-
-    if (ilkHucreKucuk === "tarih") {
-      tarihBaslangicSatiri = index + 1;
-      break;
-    }
-
-    if (!ilkHucre) continue;
-
-    const fonOrani = sayiyaCevir(satir[1]);
-    const kapanisMarji = sayiyaCevir(satir[2]);
-    const etki = sayiyaCevir(satir[3]);
-
-    if (fonOrani === null && kapanisMarji === null && etki === null) continue;
-
-    if (fonOrani === null || kapanisMarji === null || etki === null) {
+  for (const code of workbookCodes) {
+    const fund = output.fonlar?.[code];
+    if (!fund?.portfoy?.length || !fund?.tarihsel?.length) {
       throw new Error(
-        `${kod} sayfasında eksik portföy verisi var. Excel satırı: ${index + 1}`
+        `${code}: özel fon etki içe aktarıcısının çıktısı eksik. Önce fon-etki:import çalıştırılmalı.`
       );
     }
-
-    portfoy.push({
-      sembol: ilkHucre.toUpperCase(),
-      fonOrani: yuvarla(fonOrani),
-      kapanisMarji: yuvarla(kapanisMarji),
-      etki: yuvarla(etki),
-    });
   }
-
-  if (tarihBaslangicSatiri >= 0) {
-    for (let index = tarihBaslangicSatiri; index < satirlar.length; index += 1) {
-      const satir = satirlar[index] ?? [];
-      const tarih = tarihiIsoYap(satir[0]);
-
-      if (!tarih) continue;
-
-      const yatirimciSayisi = sayiyaCevir(satir[1]);
-      const fonToplamDeger = sayiyaCevir(satir[3]);
-      const paraGirisiCikisi = sayiyaCevir(satir[4]);
-      const marjHam = sayiyaCevir(satir[5]);
-
-      if (
-        yatirimciSayisi === null ||
-        fonToplamDeger === null ||
-        paraGirisiCikisi === null ||
-        marjHam === null
-      ) {
-        throw new Error(
-          `${kod} sayfasında eksik tarihsel veri var. Excel satırı: ${index + 1}`
-        );
-      }
-
-      tarihsel.push({
-        tarih,
-        yatirimciSayisi: Math.round(yatirimciSayisi),
-        fonToplamDeger: Math.round(fonToplamDeger),
-        paraGirisiCikisi: Math.round(paraGirisiCikisi),
-        // Excel hücresi yüzde biçiminde 0,0047 tutuyorsa JSON'a 0,47 yazılır.
-        marj: yuvarla(marjHam * 100),
-      });
-    }
-  }
-
-  if (portfoy.length === 0) {
-    throw new Error(`${kod} sayfasında portföy satırı bulunamadı.`);
-  }
-
-  if (toplamFonOrani === null) {
-    toplamFonOrani = portfoy.reduce((toplam, satir) => toplam + satir.fonOrani, 0);
-  }
-
-  if (toplamEtki === null) {
-    toplamEtki = portfoy.reduce((toplam, satir) => toplam + satir.etki, 0);
-  }
-
-  toplamFonOrani = yuvarla(toplamFonOrani);
-  toplamEtki = yuvarla(toplamEtki);
-
-  return {
-    kod,
-    toplamFonOrani,
-    toplamEtki,
-    kaldiracli: toplamFonOrani > 100,
-    portfoy,
-    tarihsel,
-  };
-}
-
-async function fonEtkiExceliniJsonaCevir(filePath, workbook) {
-  const fonlar = {};
-  const tumTarihler = [];
-
-  for (const sheetName of workbook.SheetNames) {
-    const sheet = workbook.Sheets[sheetName];
-    const fon = fonSayfasiniDonustur(sheetName, sheet);
-
-    fonlar[fon.kod] = fon;
-
-    for (const satir of fon.tarihsel) {
-      tumTarihler.push(satir.tarih);
-    }
-  }
-
-  if (Object.keys(fonlar).length === 0) {
-    throw new Error("Fon etki Excel dosyasında fon sayfası bulunamadı.");
-  }
-
-  const stat = await fs.stat(filePath);
-  const sonGuncelleme =
-    tumTarihler.sort().at(-1) ?? stat.mtime.toISOString().slice(0, 10);
-
-  const jsonPath = filePath.replace(/\.xlsx$/i, ".json");
-
-  await fs.writeFile(
-    jsonPath,
-    JSON.stringify(
-      {
-        kaynakDosya: path.basename(filePath),
-        sonGuncelleme,
-        fonlar,
-      },
-      null,
-      2
-    ),
-    "utf-8"
-  );
 
   console.log(
-    `Fon etki Excel'i JSON'a çevrildi: ${path.relative(PROJE_KOKU, jsonPath)}`
+    `Fon etki JSON'u özel içe aktarıcıdan doğrulandı: ${path.relative(PROJE_KOKU, jsonPath)}`
   );
-  console.log(`Aktarılan fonlar: ${Object.keys(fonlar).join(", ")}`);
+  console.log(`Doğrulanan fonlar: ${workbookCodes.join(", ")}`);
+}
+
+async function fonTercihExceliniJsonaCevir(filePath, workbook) {
+  const firstSheetName = workbook.SheetNames[0];
+  if (!firstSheetName) {
+    throw new Error(`Excel dosyasında çalışma sayfası yok: ${filePath}`);
+  }
+
+  const firstSheetData = convertSheetToData(workbook.Sheets[firstSheetName]);
+  const eksikSutunlar = FON_TERCIH_SUTUNLARI.filter(
+    (column) => !firstSheetData.columns.includes(column)
+  );
+  if (eksikSutunlar.length > 0) {
+    throw new Error(`Fon tercih Excel'inde eksik sütunlar: ${eksikSutunlar.join(", ")}`);
+  }
+
+  const gorulenSemboller = new Set();
+  const rows = firstSheetData.rows.filter((row) => {
+    const sembol = String(row.Sembol ?? "").trim().toUpperCase();
+    if (!sembol) return false;
+
+    const sayisalAlanlarTam = FON_TERCIH_SUTUNLARI.slice(1).every(
+      (column) => sayiyaCevir(row[column]) !== null
+    );
+    if (!sayisalAlanlarTam) return false;
+    if (gorulenSemboller.has(sembol)) {
+      throw new Error(`Fon tercih Excel'inde tekrarlanan sembol: ${sembol}`);
+    }
+    gorulenSemboller.add(sembol);
+    row.Sembol = sembol;
+    return true;
+  });
+
+  if (rows.length < 100) {
+    throw new Error(`Fon tercih Excel'inde yalnızca ${rows.length} geçerli hisse satırı bulundu.`);
+  }
+
+  for (const row of rows) {
+    const degisim = sayiyaCevir(row["Değişim"]);
+    const sonToplamYuzde = sayiyaCevir(row["Son Toplam %"]);
+    const ilkToplamYuzde = sayiyaCevir(row["İlk Toplam %"]);
+    const sonToplamTakas = sayiyaCevir(row["Son Toplam Takas TL"]);
+    const ilkToplamTakas = sayiyaCevir(row["İlk Toplam Takas TL"]);
+    const sonEmeklilik = sayiyaCevir(row["Takas TL Son(Emeklilik Fon)"]);
+    const ilkEmeklilik = sayiyaCevir(row["Takas TL İlk(Emeklilik Fon)"]);
+    const sonYatirim = sayiyaCevir(row["Takas TL Son(Yatırım Fon)"]);
+    const ilkYatirim = sayiyaCevir(row["Takas TL İlk(Yatırım Fon)"]);
+
+    if (Math.abs(sonToplamYuzde - ilkToplamYuzde - degisim) > 0.011) {
+      throw new Error(`${row.Sembol}: haftalık fon payı değişimi tutarsız.`);
+    }
+    if (Math.abs(sonEmeklilik + sonYatirim - sonToplamTakas) > 1) {
+      throw new Error(`${row.Sembol}: son fon takas toplamı tutarsız.`);
+    }
+    if (Math.abs(ilkEmeklilik + ilkYatirim - ilkToplamTakas) > 1) {
+      throw new Error(`${row.Sembol}: ilk fon takas toplamı tutarsız.`);
+    }
+  }
+
+  const tarihler = [...new Set(
+    firstSheetData.rawRows.map((row) => trTarihiIsoYap(row[0])).filter(Boolean)
+  )].sort();
+  if (tarihler.length < 2) {
+    throw new Error("Fon tercih Excel'inde haftalık dönem tarihleri bulunamadı.");
+  }
+
+  const donemBaslangiciIso = tarihler[0];
+  const donemBitisiIso = tarihler.at(-1);
+  const gunFarki = Math.round(
+    (Date.parse(`${donemBitisiIso}T00:00:00Z`) -
+      Date.parse(`${donemBaslangiciIso}T00:00:00Z`)) /
+      86_400_000
+  );
+  if (gunFarki < 6 || gunFarki > 8) {
+    throw new Error(
+      `Fon tercih Excel'i son bir haftayı kapsamıyor: ${donemBaslangiciIso} - ${donemBitisiIso}`
+    );
+  }
+
+  const sheets = {};
+  for (const sheetName of workbook.SheetNames) {
+    sheets[sheetName] = convertSheetToData(workbook.Sheets[sheetName]);
+  }
+
+  const donemBaslangici = isoTarihiTrYap(donemBaslangiciIso);
+  const donemBitisi = isoTarihiTrYap(donemBitisiIso);
+  const jsonPath = filePath.replace(/\.xlsx$/i, ".json");
+  await jsonDosyasiYaz(jsonPath, {
+    ...firstSheetData,
+    rows,
+    sheets,
+    guncellemeTarihi: donemBitisi,
+    donemBaslangici,
+    donemBitisi,
+  });
+
+  console.log(
+    `Haftalık fon tercihleri doğrulandı: ${rows.length} hisse, ${donemBaslangici} - ${donemBitisi}`
+  );
 }
 
 async function genelExceliJsonaCevir(filePath, workbook) {
@@ -346,19 +293,11 @@ async function genelExceliJsonaCevir(filePath, workbook) {
 
   const jsonPath = filePath.replace(/\.xlsx$/i, ".json");
 
-  await fs.writeFile(
-    jsonPath,
-    JSON.stringify(
-      {
-        ...firstSheetData,
-        sheets,
-        guncellemeTarihi,
-      },
-      null,
-      2
-    ),
-    "utf-8"
-  );
+  await jsonDosyasiYaz(jsonPath, {
+    ...firstSheetData,
+    sheets,
+    guncellemeTarihi,
+  });
 
   console.log(`Excel JSON'a çevrildi: ${path.relative(PROJE_KOKU, jsonPath)}`);
 }
@@ -373,6 +312,11 @@ async function convertExcelToJson(filePath) {
 
   if (path.basename(filePath).toLowerCase() === FON_ETKI_EXCEL_ADI) {
     await fonEtkiExceliniJsonaCevir(filePath, workbook);
+    return;
+  }
+
+  if (path.basename(filePath).toLowerCase() === FON_TERCIH_EXCEL_ADI) {
+    await fonTercihExceliniJsonaCevir(filePath, workbook);
     return;
   }
 

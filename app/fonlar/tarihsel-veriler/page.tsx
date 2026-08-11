@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import FonTarihselExcelPage from "./_components/FonTarihselExcelPage";
 
 export const metadata: Metadata = {
-  title: "Menkul Kıymet Yatırım Fonları Tarihsel Veriler | Hoca İle Borsa",
+  title: "Yatırım Fonları Tarihsel Veriler ve Geçmiş Performans",
   description:
-    "Menkul kıymet yatırım fonlarının tarihsel verilerini inceleyin.",
+    "Yatırım fonlarının geçmiş fiyat, getiri, fon büyüklüğü ve yatırımcı verilerini inceleyerek tarihsel performanslarını karşılaştırın.",
   alternates: {
     canonical: "https://www.hocaileborsa.com/fonlar/tarihsel-veriler",
   },

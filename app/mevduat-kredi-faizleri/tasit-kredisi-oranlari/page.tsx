@@ -1,3 +1,4 @@
+import MarketChart from "@/components/charts/MarketChart";
 import Link from "@/components/NoPrefetchLink";
 import { KrediHesaplayici } from "@/components/faiz-hesaplayicilar";
 import { getFaizData } from "@/lib/faiz-data";
@@ -87,44 +88,6 @@ function formatDateLabel(value: unknown) {
   }
 
   return text;
-}
-
-function parseTrDateToUtc(value: string) {
-  const match = value.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})$/);
-
-  if (!match) return null;
-
-  const [, day, month, year] = match;
-
-  return Date.UTC(Number(year), Number(month) - 1, Number(day));
-}
-
-function getWeeklyLabelDates(dateValues: number[]) {
-  const sortedDates = [...new Set(dateValues)].sort((a, b) => a - b);
-  const visibleDates = new Set<number>();
-
-  if (!sortedDates.length) return visibleDates;
-
-  const weekMs = 7 * 24 * 60 * 60 * 1000;
-  const fixedStart = Date.UTC(2026, 3, 11);
-  const maxDate = sortedDates[sortedDates.length - 1];
-
-  let targetDate = fixedStart;
-  let cursor = 0;
-
-  while (targetDate <= maxDate) {
-    while (cursor < sortedDates.length && sortedDates[cursor] < targetDate) {
-      cursor += 1;
-    }
-
-    if (cursor < sortedDates.length) {
-      visibleDates.add(sortedDates[cursor]);
-    }
-
-    targetDate += weekMs;
-  }
-
-  return visibleDates;
 }
 
 function average(values: number[]) {
@@ -250,192 +213,15 @@ async function getTasitVerileri() {
 }
 
 function TasitGrafik({ data }: { data: GunlukOrtalamaSatiri[] }) {
-  if (!data.length) {
-    return (
-      <section className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
-        <h2 className="text-2xl font-bold text-zinc-900">
-          Günlük Ortalama Taşıt Kredisi Grafiği
-        </h2>
-        <p className="mt-3 text-sm text-zinc-600">
-          Grafik için yeterli veri bulunamadı.
-        </p>
-      </section>
-    );
-  }
-
-  const width = 960;
-  const height = 460;
-  const leftPadding = 72;
-  const rightPadding = 24;
-  const topPadding = 28;
-  const bottomPadding = 64;
-
-  const yAxisMin = 3.1;
-  const yAxisMax = 3.5;
-  const yAxisTicks = [3.1, 3.2, 3.3, 3.4, 3.5];
-
-  const chartInnerWidth = width - leftPadding - rightPadding;
-  const chartInnerHeight = height - topPadding - bottomPadding;
-  const yRange = yAxisMax - yAxisMin;
-
-  const parsedDates = data.map((item) => parseTrDateToUtc(item.tarih));
-  const allDatesValid = parsedDates.every((item) => item !== null);
-
-  const dateNumbers = parsedDates.filter(
-    (item): item is number => typeof item === "number"
-  );
-
-  const weeklyLabelDates = getWeeklyLabelDates(dateNumbers);
-
-  const useDateScale = allDatesValid && dateNumbers.length > 1;
-  const minDate = useDateScale ? Math.min(...dateNumbers) : 0;
-  const maxDate = useDateScale ? Math.max(...dateNumbers) : 0;
-  const dateRange = Math.max(maxDate - minDate, 1);
-
-  function getXByDate(dateValue: number) {
-    return leftPadding + ((dateValue - minDate) / dateRange) * chartInnerWidth;
-  }
-
-  function getYByValue(value: number) {
-    const normalized = (value - yAxisMin) / yRange;
-    return topPadding + (1 - normalized) * chartInnerHeight;
-  }
-
-  function formatAxisRate(value: number) {
-    return `%${value.toFixed(1).replace(".0", "").replace(".", ",")}`;
-  }
-
-  const points = data.map((item, index) => {
-    const dateValue = parsedDates[index];
-
-    const x =
-      useDateScale && dateValue !== null
-        ? getXByDate(dateValue)
-        : data.length === 1
-          ? leftPadding + chartInnerWidth / 2
-          : leftPadding + (index * chartInnerWidth) / (data.length - 1);
-
-    const y = getYByValue(item.ortalama);
-
-    return {
-      x,
-      y,
-      label: item.tarih,
-      value: item.ortalama,
-      dateValue,
-    };
-  });
-
-  const pathD = points
-    .map((point, index) => `${index === 0 ? "M" : "L"} ${point.x} ${point.y}`)
-    .join(" ");
-
   return (
-    <section className="rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
-      <div className="mb-5">
-        <h2 className="text-2xl font-bold text-zinc-900">
-          Günlük Ortalama Taşıt Kredisi Grafiği
-        </h2>
-        <p className="mt-2 text-sm text-zinc-600">
-          Günlük ortalama taşıt oran değişimini gösterir.
-        </p>
-      </div>
-
-      <div className="overflow-x-auto">
-        <div className="min-w-[960px]">
-          <svg viewBox={`0 0 ${width} ${height}`} className="h-[460px] w-full">
-            {yAxisTicks.map((tick) => {
-              const y = getYByValue(tick);
-
-              return (
-                <g key={tick}>
-                  <line
-                    x1={leftPadding}
-                    y1={y}
-                    x2={width - rightPadding}
-                    y2={y}
-                    stroke="#e5e7eb"
-                    strokeWidth="1"
-                  />
-                  <text
-                    x={leftPadding - 10}
-                    y={y + 4}
-                    textAnchor="end"
-                    fontSize="12"
-                    fill="#71717a"
-                  >
-                    {formatAxisRate(tick)}
-                  </text>
-                </g>
-              );
-            })}
-
-            <line
-              x1={leftPadding}
-              y1={topPadding}
-              x2={leftPadding}
-              y2={height - bottomPadding}
-              stroke="#d4d4d8"
-              strokeWidth="1"
-            />
-
-            <line
-              x1={leftPadding}
-              y1={height - bottomPadding}
-              x2={width - rightPadding}
-              y2={height - bottomPadding}
-              stroke="#d4d4d8"
-              strokeWidth="1"
-            />
-
-            <path
-              d={pathD}
-              fill="none"
-              stroke="#111827"
-              strokeWidth="3"
-              strokeLinejoin="round"
-              strokeLinecap="round"
-            />
-
-            {points.map((point, index) => {
-              const tarihGoster =
-                point.dateValue !== null && weeklyLabelDates.has(point.dateValue);
-
-              return (
-                <g key={`${point.label}-${index}`}>
-                  <circle cx={point.x} cy={point.y} r="4" fill="#111827" />
-
-                  {tarihGoster ? (
-                    <>
-                      <line
-                        x1={point.x}
-                        y1={height - bottomPadding}
-                        x2={point.x}
-                        y2={height - bottomPadding + 6}
-                        stroke="#a1a1aa"
-                        strokeWidth="1"
-                      />
-                      <text
-                        x={point.x}
-                        y={height - 22}
-                        textAnchor="middle"
-                        fontSize="11"
-                        fill="#71717a"
-                      >
-                        {point.label}
-                      </text>
-                    </>
-                  ) : null}
-                </g>
-              );
-            })}
-          </svg>
-        </div>
-      </div>
-    </section>
+    <MarketChart
+      title="Günlük Ortalama Taşıt Kredisi Grafiği"
+      series={data.map((item) => ({ date: item.tarih, value: item.ortalama }))}
+      unit="rate"
+      minWidth={760}
+    />
   );
 }
-
 function HesaplayiciAlani() {
   return (
     <KrediHesaplayici

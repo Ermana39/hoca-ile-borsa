@@ -11,7 +11,7 @@ const KAYNAK_DOSYA = path.join(
   "fon-etki-verileri.xlsx"
 );
 const CIKTI_DOSYA = KAYNAK_DOSYA.replace(/\.xlsx$/i, ".json");
-const BEKLENEN_FONLAR = ["TLY", "PHE", "PBR", "DFI", "KHA"];
+const BEKLENEN_FONLAR = ["TLY", "PHE", "PBR", "DFI", "KHA", "THF"];
 const NORMAL_TOPLAM_TOLERANSI = 0.02;
 const ETKI_TOLERANSI = 0.0002;
 
@@ -65,7 +65,7 @@ function yuvarla(value, digits = 10) {
   return Number(value.toFixed(digits));
 }
 
-function fonSayfasiniDonustur(sheet, kod) {
+function fonSayfasiniDonustur(sheet, kod, oncekiFon) {
   const rows = XLSX.utils.sheet_to_json(sheet, {
     header: 1,
     defval: null,
@@ -149,83 +149,94 @@ function fonSayfasiniDonustur(sheet, kod) {
       cells.includes("tarih") &&
       cells.includes("yatirimci sayisi") &&
       cells.includes("fon toplam deger") &&
-      cells.includes("para girisi/cikisi") &&
-      cells.includes("marj")
+      cells.includes("para girisi/cikisi")
     );
   });
 
+  let tarihsel;
+  let tarihselKaynak = "excel";
+
   if (tarihBasligi < 0) {
-    throw new Error(`${kod}: tarihsel veri başlıkları bulunamadı.`);
+    if (!Array.isArray(oncekiFon?.tarihsel) || oncekiFon.tarihsel.length < 2) {
+      throw new Error(
+        `${kod}: tarihsel veri başlıkları bulunamadı ve korunabilecek önceki veri yok.`
+      );
+    }
+    tarihsel = oncekiFon.tarihsel;
+    tarihselKaynak = "onceki-json";
+  } else {
+    const basliklar = rows[tarihBasligi].map(anahtar);
+    const tarihKolonu = basliklar.indexOf("tarih");
+    const yatirimciKolonu = basliklar.indexOf("yatirimci sayisi");
+    const fonDegerKolonu = basliklar.indexOf("fon toplam deger");
+    const paraAkisiKolonu = basliklar.indexOf("para girisi/cikisi");
+    const marjKolonu = basliklar.indexOf("marj");
+
+    tarihsel = rows
+      .slice(tarihBasligi + 1)
+      .filter((row) => row.some((cell) => cell !== null && cell !== ""))
+      .map((row, index) => {
+        const satirNo = tarihBasligi + index + 2;
+        const tarih = excelTarihiniIsoYap(
+          row[tarihKolonu],
+          `${kod}!${XLSX.utils.encode_col(tarihKolonu)}${satirNo}`
+        );
+        const yatirimciSayisi = sayi(
+          row[yatirimciKolonu],
+          "Yatırımcı sayısı",
+          `${kod}!${XLSX.utils.encode_col(yatirimciKolonu)}${satirNo}`
+        );
+        const fonToplamDeger = sayi(
+          row[fonDegerKolonu],
+          "Fon toplam değer",
+          `${kod}!${XLSX.utils.encode_col(fonDegerKolonu)}${satirNo}`
+        );
+        const paraGirisiCikisi = sayi(
+          row[paraAkisiKolonu],
+          "Para girişi/çıkışı",
+          `${kod}!${XLSX.utils.encode_col(paraAkisiKolonu)}${satirNo}`
+        );
+        const marj =
+          marjKolonu >= 0 && row[marjKolonu] !== null && row[marjKolonu] !== ""
+            ? sayi(
+                row[marjKolonu],
+                "Marj",
+                `${kod}!${XLSX.utils.encode_col(marjKolonu)}${satirNo}`
+              )
+            : null;
+
+        if (!Number.isInteger(yatirimciSayisi) || yatirimciSayisi < 0) {
+          throw new Error(
+            `${kod}!${XLSX.utils.encode_col(
+              yatirimciKolonu
+            )}${satirNo}: yatırımcı sayısı pozitif tam sayı olmalı.`
+          );
+        }
+        if (fonToplamDeger <= 0) {
+          throw new Error(
+            `${kod}!${XLSX.utils.encode_col(
+              fonDegerKolonu
+            )}${satirNo}: fon toplam değeri sıfırdan büyük olmalı.`
+          );
+        }
+        if (marj !== null && Math.abs(marj) > 1) {
+          throw new Error(
+            `${kod}!${XLSX.utils.encode_col(
+              marjKolonu
+            )}${satirNo}: marj Excel yüzde biçiminde ondalık değer olmalı (örnek: %2,11 için 0,0211).`
+          );
+        }
+
+        return {
+          tarih,
+          yatirimciSayisi,
+          fonToplamDeger: yuvarla(fonToplamDeger, 2),
+          paraGirisiCikisi: yuvarla(paraGirisiCikisi, 2),
+          marj: marj === null ? null : yuvarla(marj * 100, 4),
+        };
+      })
+      .sort((a, b) => a.tarih.localeCompare(b.tarih));
   }
-
-  const basliklar = rows[tarihBasligi].map(anahtar);
-  const tarihKolonu = basliklar.indexOf("tarih");
-  const yatirimciKolonu = basliklar.indexOf("yatirimci sayisi");
-  const fonDegerKolonu = basliklar.indexOf("fon toplam deger");
-  const paraAkisiKolonu = basliklar.indexOf("para girisi/cikisi");
-  const marjKolonu = basliklar.indexOf("marj");
-
-  const tarihsel = rows
-    .slice(tarihBasligi + 1)
-    .filter((row) => row.some((cell) => cell !== null && cell !== ""))
-    .map((row, index) => {
-      const satirNo = tarihBasligi + index + 2;
-      const tarih = excelTarihiniIsoYap(
-        row[tarihKolonu],
-        `${kod}!${XLSX.utils.encode_col(tarihKolonu)}${satirNo}`
-      );
-      const yatirimciSayisi = sayi(
-        row[yatirimciKolonu],
-        "Yatırımcı sayısı",
-        `${kod}!${XLSX.utils.encode_col(yatirimciKolonu)}${satirNo}`
-      );
-      const fonToplamDeger = sayi(
-        row[fonDegerKolonu],
-        "Fon toplam değer",
-        `${kod}!${XLSX.utils.encode_col(fonDegerKolonu)}${satirNo}`
-      );
-      const paraGirisiCikisi = sayi(
-        row[paraAkisiKolonu],
-        "Para girişi/çıkışı",
-        `${kod}!${XLSX.utils.encode_col(paraAkisiKolonu)}${satirNo}`
-      );
-      const marj = sayi(
-        row[marjKolonu],
-        "Marj",
-        `${kod}!${XLSX.utils.encode_col(marjKolonu)}${satirNo}`
-      );
-
-      if (!Number.isInteger(yatirimciSayisi) || yatirimciSayisi < 0) {
-        throw new Error(
-          `${kod}!${XLSX.utils.encode_col(
-            yatirimciKolonu
-          )}${satirNo}: yatırımcı sayısı pozitif tam sayı olmalı.`
-        );
-      }
-      if (fonToplamDeger <= 0) {
-        throw new Error(
-          `${kod}!${XLSX.utils.encode_col(
-            fonDegerKolonu
-          )}${satirNo}: fon toplam değeri sıfırdan büyük olmalı.`
-        );
-      }
-      if (Math.abs(marj) > 1) {
-        throw new Error(
-          `${kod}!${XLSX.utils.encode_col(
-            marjKolonu
-          )}${satirNo}: marj Excel yüzde biçiminde ondalık değer olmalı (örnek: %2,11 için 0,0211).`
-        );
-      }
-
-      return {
-        tarih,
-        yatirimciSayisi,
-        fonToplamDeger: yuvarla(fonToplamDeger, 2),
-        paraGirisiCikisi: yuvarla(paraGirisiCikisi, 2),
-        marj: yuvarla(marj * 100, 4),
-      };
-    })
-    .sort((a, b) => a.tarih.localeCompare(b.tarih));
 
   if (tarihsel.length < 2) {
     throw new Error(`${kod}: grafikler için en az iki tarihsel kayıt gerekli.`);
@@ -260,10 +271,18 @@ function fonSayfasiniDonustur(sheet, kod) {
     kaldiracli: toplamFonOrani > 100,
     portfoy,
     tarihsel,
+    tarihselKaynak,
   };
 }
 
 async function main() {
+  let oncekiCikti = null;
+  try {
+    oncekiCikti = JSON.parse(await fs.readFile(CIKTI_DOSYA, "utf8"));
+  } catch {
+    oncekiCikti = null;
+  }
+
   const buffer = await fs.readFile(KAYNAK_DOSYA);
   const workbook = XLSX.read(buffer, {
     type: "buffer",
@@ -281,25 +300,22 @@ async function main() {
   const fonlar = Object.fromEntries(
     BEKLENEN_FONLAR.map((kod) => [
       kod,
-      fonSayfasiniDonustur(workbook.Sheets[kod], kod),
+      fonSayfasiniDonustur(
+        workbook.Sheets[kod],
+        kod,
+        oncekiCikti?.fonlar?.[kod] ?? null
+      ),
     ])
   );
 
   const sonTarihler = Object.values(fonlar).map(
     (fon) => fon.tarihsel.at(-1).tarih
   );
-  const benzersizSonTarihler = new Set(sonTarihler);
-  if (benzersizSonTarihler.size !== 1) {
-    throw new Error(
-      `Fonların son tarihleri eşleşmiyor: ${BEKLENEN_FONLAR.map(
-        (kod) => `${kod}=${fonlar[kod].tarihsel.at(-1).tarih}`
-      ).join(", ")}`
-    );
-  }
+  const sonGuncelleme = [...sonTarihler].sort().at(-1);
 
   const cikti = {
     kaynakDosya: path.basename(KAYNAK_DOSYA),
-    sonGuncelleme: sonTarihler[0],
+    sonGuncelleme,
     fonlar,
   };
 

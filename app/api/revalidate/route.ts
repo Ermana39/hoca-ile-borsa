@@ -40,6 +40,10 @@ const BORSA_PATHS = [
 
 const FON_PATHS = [
   "/fonlar",
+  "/fonlar/fon-tarayici",
+  "/fonlar/fon-karsilastirma",
+  "/fonlar/para-girisi",
+  "/fonlar/yoneticiler",
   "/fonlar/getiri",
   "/fonlar/tarihsel-veriler",
   "/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler",

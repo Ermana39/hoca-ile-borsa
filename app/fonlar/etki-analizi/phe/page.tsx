@@ -2,7 +2,6 @@ import FonEtkiSeoPage from "../_components/FonEtkiSeoPage";
 import {
   fonEtkiMetadataOlustur,
   fonEtkiSayfaVerisiGetir,
-  fonEtkiSonGuncelleme,
 } from "../_data/fonEtkiOzetleri";
 
 export const metadata = fonEtkiMetadataOlustur("phe");
@@ -10,10 +9,5 @@ export const metadata = fonEtkiMetadataOlustur("phe");
 const veri = fonEtkiSayfaVerisiGetir("phe");
 
 export default function PheEtkiAnaliziPage() {
-  return (
-    <FonEtkiSeoPage
-      {...veri}
-      sonGuncelleme={fonEtkiSonGuncelleme.label}
-    />
-  );
+  return <FonEtkiSeoPage {...veri} />;
 }

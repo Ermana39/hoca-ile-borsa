@@ -1,5 +1,6 @@
 "use client";
 
+import MarketChart from "@/components/charts/MarketChart";
 import Link from "@/components/NoPrefetchLink";
 import { useMemo, useState } from "react";
 import { HesaplayiciRehberi } from "@/components/HesaplayiciRehberi";
@@ -273,119 +274,19 @@ function PortfoyGrafigi({
   seriler: YilSatiri[];
   gerekliPortfoy: number;
 }) {
-  const width = 720;
-  const height = 280;
-  const padX = 48;
-  const padY = 30;
-  const innerW = width - padX * 2;
-  const innerH = height - padY * 2;
-
-  const maxDeger = Math.max(...seriler.map((s) => s.portfoy), gerekliPortfoy, 1);
-  const barW = innerW / seriler.length;
-  const cubukW = Math.max(2, barW * 0.6);
-  const hedefY = height - padY - (gerekliPortfoy / maxDeger) * innerH;
-
   return (
-    <section className="mt-8 rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
-      <h2 className="mb-4 text-lg font-bold text-zinc-900">
-        Portföyün Yıllara Göre Gelişimi
-      </h2>
-      <div className="w-full overflow-x-auto">
-        <svg
-          viewBox={`0 0 ${width} ${height}`}
-          className="block w-full min-w-[640px]"
-          role="img"
-        >
-          {[0, 1, 2, 3, 4].map((i) => {
-            const yVal = (maxDeger / 4) * i;
-            const y = height - padY - (innerH / 4) * i;
-            return (
-              <g key={i}>
-                <line
-                  x1={padX}
-                  y1={y}
-                  x2={width - padX}
-                  y2={y}
-                  stroke="#e4e4e7"
-                  strokeWidth={1}
-                />
-                <text
-                  x={padX - 6}
-                  y={y + 4}
-                  textAnchor="end"
-                  className="fill-zinc-500"
-                  fontSize={10}
-                >
-                  {yVal >= 1_000_000
-                    ? `${(yVal / 1_000_000).toLocaleString("tr-TR", { maximumFractionDigits: 1 })} M`
-                    : Math.round(yVal).toLocaleString("tr-TR")}
-                </text>
-              </g>
-            );
-          })}
-          {seriler.map((s, i) => {
-            const x = padX + i * barW + (barW - cubukW) / 2;
-            const h = (s.portfoy / maxDeger) * innerH;
-            const ustunde = s.portfoy >= gerekliPortfoy;
-            return (
-              <g key={s.yil}>
-                <rect
-                  x={x}
-                  y={height - padY - h}
-                  width={cubukW}
-                  height={h}
-                  fill={ustunde ? "#10b981" : "#3b82f6"}
-                />
-                {(i % Math.ceil(seriler.length / 8) === 0 ||
-                  i === seriler.length - 1) && (
-                  <text
-                    x={x + cubukW / 2}
-                    y={height - padY + 14}
-                    textAnchor="middle"
-                    className="fill-zinc-500"
-                    fontSize={10}
-                  >
-                    {s.yil}.yıl
-                  </text>
-                )}
-              </g>
-            );
-          })}
-          <line
-            x1={padX}
-            y1={hedefY}
-            x2={width - padX}
-            y2={hedefY}
-            stroke="#ef4444"
-            strokeWidth={2}
-            strokeDasharray="6 4"
-          />
-          <text
-            x={width - padX}
-            y={hedefY - 6}
-            textAnchor="end"
-            className="fill-red-500"
-            fontSize={11}
-            fontWeight="bold"
-          >
-            Gerekli portföy
-          </text>
-        </svg>
-      </div>
-      <div className="mt-4 flex flex-wrap gap-4 text-xs text-zinc-600">
-        <div className="flex items-center gap-2">
-          <span className="inline-block h-3 w-3 rounded-sm bg-[#3b82f6]" /> Hedef
-          altındaki yıllar
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="inline-block h-3 w-3 rounded-sm bg-[#10b981]" /> Hedefe
-          ulaşılan yıllar
-        </div>
-        <div className="flex items-center gap-2">
-          <span className="inline-block h-1 w-4 bg-[#ef4444]" /> Gerekli portföy
-          çizgisi
-        </div>
-      </div>
-    </section>
+    <div className="mt-8">
+      <MarketChart
+        title="Portföyün Yıllara Göre Gelişimi"
+        series={seriler.map((item) => ({
+          date: `${2000 + item.yil}-01-01`,
+          label: `${item.yil}. yıl`,
+          value: item.portfoy,
+        }))}
+        unit="money"
+        referenceLine={{ label: "Gerekli portföy", value: gerekliPortfoy }}
+        minWidth={760}
+      />
+    </div>
   );
 }

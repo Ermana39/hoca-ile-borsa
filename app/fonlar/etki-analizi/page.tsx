@@ -9,9 +9,9 @@ import {
 const siteUrl = "https://www.hocaileborsa.com";
 const canonical = `${siteUrl}/fonlar/etki-analizi`;
 const title =
-  "Fonların Günlük Portföy Etkisi: TLY, PHE, PBR, DFI ve KHA";
+  "Fonların Günlük Portföy Etkisi: TLY, PHE, PBR, DFI, KHA ve THF";
 const description =
-  "TLY, PHE, PBR, DFI ve KHA fonlarının güncel portföy etkisini karşılaştırın. Tahmini fiyat değişimini, yatırımcı hareketini, para akışını ve veri kapsamını inceleyin.";
+  "TLY, PHE, PBR, DFI, KHA ve THF fonlarının güncel portföy etkisini karşılaştırın. Tahmini fiyat değişimini, yatırımcı hareketini, para akışını ve veri kapsamını inceleyin.";
 const image = `${siteUrl}/2026-fon-etki-analizi-tly-phe-pbr-dfi.webp`;
 
 export const metadata: Metadata = {
@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     "PBR fonu",
     "DFI fonu",
     "KHA fonu",
+    "THF fonu",
     "TEFAS fon fiyatı",
   ],
   openGraph: {
@@ -140,7 +141,7 @@ const jsonLd = {
     {
       "@type": "Dataset",
       "@id": `${canonical}#dataset`,
-      name: "TLY, PHE, PBR, DFI ve KHA fon kapanış etki karşılaştırması",
+      name: "TLY, PHE, PBR, DFI, KHA ve THF fon kapanış etki karşılaştırması",
       description,
       url: canonical,
       inLanguage: "tr-TR",
@@ -239,7 +240,7 @@ export default function FonEtkiAnaliziPage() {
           <p className="mt-4 text-base leading-8 text-slate-600">
             Fonların son açıklanan portföy dağılımları ile Borsa İstanbul günlük
             kapanış değişimleri birleştirilerek, açıklanacak fon fiyatına tahmini
-            etki hesaplanır. Bu merkez sayfa TLY, PHE, PBR, DFI ve KHA fonlarını
+            etki hesaplanır. Bu merkez sayfa TLY, PHE, PBR, DFI, KHA ve THF fonlarını
             aynı yöntemle karşılaştırır. Ayrıntılı sayfalarda hisse bazlı
             katkılar, tarihsel yatırımcı değişimi, fon büyüklüğü ve para akışı
             grafikleri yer alır.

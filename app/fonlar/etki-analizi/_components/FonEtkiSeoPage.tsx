@@ -1,5 +1,7 @@
 import Link from "@/components/NoPrefetchLink";
 import { getHisseIcerikHedefi } from "@/lib/hisse-icerik-hedefi";
+import { getFundDetail } from "@/lib/fon-platform";
+import FundChartsClient from "../../_components/FundChartsClient";
 import {
   fonEtkiOzetleri,
   fonEtkiYuzdeMetni,
@@ -7,7 +9,6 @@ import {
 } from "../_data/fonEtkiOzetleri";
 import FonEtkiTable, { type FonEtkiRow } from "./FonEtkiTable";
 import FonEtkiKatkiGrafigi from "./FonEtkiKatkiGrafigi";
-import FonTarihselGrafikler from "./FonTarihselGrafikler";
 
 const siteUrl = "https://www.hocaileborsa.com";
 
@@ -375,6 +376,7 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
   const yatirimciPozitif = degisimVerisi.yatirimciSayisi.degisim >= 0;
   const fonDegerPozitif = degisimVerisi.fonToplamDeger.degisim >= 0;
   const paraAkisiPozitif = degisimVerisi.paraGirisiCikisi >= 0;
+  const fonDetayi = getFundDetail(slug);
 
   return (
     <main className="min-h-screen bg-[#f8fafc] px-4 py-6 md:px-6">
@@ -615,7 +617,15 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
             </div>
           </dl>
 
-          <FonTarihselGrafikler kod={kod} veriler={tarihselVeriler} />
+          {fonDetayi ? (
+            <div className="mt-6">
+              <FundChartsClient history={fonDetayi.history} />
+            </div>
+          ) : (
+            <p className="mt-6 text-sm text-slate-500">
+              Grafik verisi bulunamadı.
+            </p>
+          )}
 
           <div className="mt-5 overflow-x-auto rounded-xl border border-slate-200">
             <table className="min-w-[720px] w-full border-collapse text-left text-sm">

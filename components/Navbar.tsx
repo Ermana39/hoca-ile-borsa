@@ -3,6 +3,7 @@
 import Link from "@/components/NoPrefetchLink";
 import { useState } from "react";
 import SiteSearch from "@/components/SiteSearch";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const navLinks = [
   { label: "Ana Sayfa", href: "/" },
@@ -49,6 +50,7 @@ export default function Navbar() {
 
         <div className="flex shrink-0 items-center gap-2">
           <SiteSearch onOpen={() => setOpen(false)} />
+          <ThemeToggle />
           <button
             className="flex h-9 w-9 items-center justify-center rounded-md border border-slate-700 bg-slate-800 text-slate-300 transition hover:bg-slate-700 xl:hidden"
             onClick={() => setOpen((v) => !v)}

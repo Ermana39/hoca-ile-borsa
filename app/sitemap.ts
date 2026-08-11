@@ -15,6 +15,10 @@ import {
   fonEtkiOzetleri,
   fonEtkiSonGuncelleme,
 } from "@/app/fonlar/etki-analizi/_data/fonEtkiOzetleri";
+import {
+  getCurrentFundsData,
+  getManagersData,
+} from "@/lib/fon-platform";
 import { sitemapteIndexlenebilirStatikYolMu } from "@/lib/indexleme-politikasi";
 
 const siteUrl = "https://www.hocaileborsa.com";
@@ -134,6 +138,28 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: fonEtkiSonGuncelleme.iso,
     })),
   ];
+  const fonData = getCurrentFundsData();
+  const managerData = getManagersData();
+  const fonPlatformRoutes = [
+    "/fonlar",
+    "/fonlar/fon-tarayici",
+    "/fonlar/fon-karsilastirma",
+    "/fonlar/para-girisi",
+    "/fonlar/yoneticiler",
+  ].map((route) => ({
+    route,
+    lastModified: fonData.sonIslemTarihi ?? pageUpdates.generatedAt,
+  }));
+  const fonDetailEntries = fonData.fonlar
+    .filter((fon) => fon.aktifMi)
+    .map((fon) => ({
+      route: `/fonlar/${fon.slug}`,
+      lastModified: fon.tarih,
+    }));
+  const yoneticiEntries = managerData.yoneticiler.map((yonetici) => ({
+    route: `/fonlar/yoneticiler/${yonetici.slug}`,
+    lastModified: managerData.sonIslemTarihi ?? fonData.sonIslemTarihi ?? pageUpdates.generatedAt,
+  }));
 
   // JSON'a taşınmış halka arz detay sayfaları (dinamik [slug] şablonuyla
   // servis edilir; pageUpdates'te yer almadıkları için burada eklenir).
@@ -203,6 +229,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Fon etki sayfalarının içerik tarihi günlük analiz verisinden gelir.
   // Statik route kayıtlarındaki eski dosya tarihi güncelliği gölgelememeli.
   for (const entry of fonEtkiEntries) {
+    routeEntries.set(entry.route, entry.lastModified);
+  }
+
+  for (const entry of [
+    ...fonPlatformRoutes,
+    ...fonDetailEntries,
+    ...yoneticiEntries,
+  ]) {
     routeEntries.set(entry.route, entry.lastModified);
   }
 

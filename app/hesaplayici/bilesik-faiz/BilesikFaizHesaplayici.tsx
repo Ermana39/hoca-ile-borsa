@@ -1,5 +1,6 @@
 "use client";
 
+import MarketChart from "@/components/charts/MarketChart";
 import Link from "@/components/NoPrefetchLink";
 import { useMemo, useState } from "react";
 import { HesaplayiciRehberi } from "@/components/HesaplayiciRehberi";
@@ -145,57 +146,21 @@ function BirikimGrafigi({
 }: {
   seriler: { yil: number; bakiye: number; toplamKatki: number; faizGetiri: number }[];
 }) {
-  const width = 720;
-  const height = 280;
-  const padX = 40;
-  const padY = 30;
-  const innerW = width - padX * 2;
-  const innerH = height - padY * 2;
-
-  const maxDeger = Math.max(...seriler.map((s) => s.bakiye), 1);
-  const barW = innerW / seriler.length;
-  const cubukW = Math.max(2, barW * 0.6);
-
   return (
-    <section className="mt-8 rounded-2xl border border-zinc-200 bg-white p-4 md:p-6">
-      <h2 className="mb-4 text-lg font-bold text-zinc-900">Yıllık Birikim Gelişimi</h2>
-      <div className="w-full overflow-x-auto">
-        <svg viewBox={`0 0 ${width} ${height}`} className="block w-full min-w-[640px]" role="img">
-          {[0, 1, 2, 3, 4].map((i) => {
-            const yVal = (maxDeger / 4) * i;
-            const y = height - padY - (innerH / 4) * i;
-            return (
-              <g key={i}>
-                <line x1={padX} y1={y} x2={width - padX} y2={y} stroke="#e4e4e7" strokeWidth={1} />
-                <text x={padX - 6} y={y + 4} textAnchor="end" className="fill-zinc-500" fontSize={10}>
-                  {Math.round(yVal).toLocaleString("tr-TR")}
-                </text>
-              </g>
-            );
-          })}
-          {seriler.map((s, i) => {
-            const x = padX + i * barW + (barW - cubukW) / 2;
-            const katkiH = (s.toplamKatki / maxDeger) * innerH;
-            const faizH = (s.faizGetiri / maxDeger) * innerH;
-            const baseY = height - padY;
-            return (
-              <g key={s.yil}>
-                <rect x={x} y={baseY - katkiH} width={cubukW} height={katkiH} fill="#3b82f6" />
-                <rect x={x} y={baseY - katkiH - faizH} width={cubukW} height={Math.max(0, faizH)} fill="#10b981" />
-                {(i % Math.ceil(seriler.length / 8) === 0 || i === seriler.length - 1) && (
-                  <text x={x + cubukW / 2} y={height - padY + 14} textAnchor="middle" className="fill-zinc-500" fontSize={10}>
-                    {s.yil}.yıl
-                  </text>
-                )}
-              </g>
-            );
-          })}
-        </svg>
-      </div>
-      <div className="mt-4 flex flex-wrap gap-4 text-xs text-zinc-600">
-        <div className="flex items-center gap-2"><span className="inline-block h-3 w-3 rounded-sm bg-[#3b82f6]" /> Yatırılan ana para</div>
-        <div className="flex items-center gap-2"><span className="inline-block h-3 w-3 rounded-sm bg-[#10b981]" /> Faiz/Getiri kazancı</div>
-      </div>
-    </section>
+    <div className="mt-8">
+      <MarketChart
+        title="Yıllık Birikim Gelişimi"
+        series={seriler.map((item) => ({
+          date: `${2000 + item.yil}-01-01`,
+          label: `${item.yil}. yıl`,
+          value: item.bakiye,
+          extra: item.toplamKatki,
+        }))}
+        unit="money"
+        extraLabel="Yatırılan"
+        valueLabel="Toplam birikim"
+        minWidth={760}
+      />
+    </div>
   );
 }

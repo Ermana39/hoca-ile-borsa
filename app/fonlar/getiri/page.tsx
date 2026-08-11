@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import FonGetiriExcelPage from "./_components/FonGetiriExcelPage";
 
 export const metadata: Metadata = {
-  title: "Menkul Kıymet Yatırım Fonları Getiri Analizi | Hoca İle Borsa",
+  title: "Yatırım Fonları Getiri Analizi ve Fon Performansları",
   description:
-    "Menkul kıymet yatırım fonlarının getiri verilerini dönemsel olarak inceleyin.",
+    "Yatırım fonlarının 1 ay, 3 ay, 6 ay, 1 yıl, 3 yıl ve 5 yıllık getirilerini inceleyin; fon performanslarını dönemsel olarak karşılaştırın.",
   alternates: {
     canonical: "https://www.hocaileborsa.com/fonlar/getiri",
   },

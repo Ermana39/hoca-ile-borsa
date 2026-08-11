@@ -256,6 +256,11 @@ const nextConfig = {
     "/hisseler": [
       "./data/hisseler/**/*.json",
     ],
+    "/fonlar/**": [
+      "./data/fonlar/**/*.json",
+      "./app/fonlar/**/*.json",
+      "./app/fonlar/**/*.xlsx",
+    ],
     // Dinamik halka arz şablonu JSON verilerini okur.
     "/halka-arz/taslak-izahnameler/[slug]": [
       "./data/halka-arz/**/*.json",
@@ -303,6 +308,7 @@ const nextConfig = {
       "./data/gunluk-ozet/**/*.json",
       "./data/halka-arz/**/*.json",
       "./data/haberler/**/*.json",
+      "./data/fonlar/**/*.json",
       // Temettü alt sayfası rotaları hisse JSON'larından türetilir.
       "./data/hisseler/**/*.json",
     ],

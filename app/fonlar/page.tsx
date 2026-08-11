@@ -1,353 +1,386 @@
-export const metadata = {
-  title: "Yatırım Fonları | Hoca İle Borsa",
-  description: "Yatırım fonları, fon türleri, risk seviyeleri, TEFAS verileri, getiri analizi, tarihsel veriler ve haftalık fon tercihlerini tek sayfada takip edin.",
+import type { Metadata } from "next";
+import Link from "@/components/NoPrefetchLink";
+import { ArrowRight } from "lucide-react";
+import {
+  FonBreadcrumb,
+  Leaderboard,
+  MetricCard,
+  ModuleLink,
+} from "./_components/FonUi";
+import FundQuickSearch from "./_components/FundQuickSearch";
+import {
+  formatCompactTL,
+  formatDate,
+  formatNumber,
+  formatSignedTL,
+} from "@/lib/fon-format";
+import { getCurrentFundsData, getDashboardData } from "@/lib/fon-platform";
+import { getHaftalikFonHisseTercihleri } from "@/lib/fon-tercihleri";
+import { hisseVarMi } from "@/lib/hisseler";
+
+export const metadata: Metadata = {
+  title: "Yatırım Fonları: Getiri, Para Akışı ve Fon Analizi",
+  description:
+    "Yatırım fonlarını getiri, risk, fon büyüklüğü, yatırımcı değişimi ve para akışına göre inceleyin; fon tarayıcı ve karşılaştırma araçlarını kullanın.",
   alternates: { canonical: "https://www.hocaileborsa.com/fonlar" },
 };
 
-import Link from "@/components/NoPrefetchLink";
-import { IconTile } from "@/components/icons/IconTile";
-import type { CategoryIconName } from "@/components/icons/CategoryIcon";
-
-const fonKutulari = [
-  {
-    title: "Haftalık Yatırım Fonlarının En Çok Tercih Ettiği Hisseler",
-    desc: "Yatırım fonlarının haftalık bazda en çok tercih ettiği hisseleri inceleyin.",
-    href: "/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler",
-    icon: "fon-haftalik-tercih" as CategoryIconName,
-    titleClassName: "text-[19px] md:text-[21px]",
-    seoDescription:
-      "Yatırım fonlarının haftalık bazda en çok yöneldiği hisseleri tek ekranda görerek fon tercihlerini daha yakından takip etmenizi sağlar.",
-  },
-  {
-    title: "Fon Getiri Analizi",
-    desc: "Fon tiplerine göre ayrılmış getiri ekranlarına ulaşın.",
-    href: "/fonlar/getiri",
-    icon: "fon-getiri" as CategoryIconName,
-    titleClassName: "text-[22px] md:text-[24px]",
-    seoDescription:
-      "Fon türlerine göre ayrılmış getiri ekranları sayesinde yatırım fonlarının performansını daha düzenli ve karşılaştırmalı şekilde inceleyebilirsiniz.",
-  },
-  {
-    title: "Fon Tarihsel Veriler",
-    desc: "Fon tiplerine göre ayrılmış tarihsel veri ekranlarına ulaşın.",
-    href: "/fonlar/tarihsel-veriler",
-    icon: "fon-tarihsel" as CategoryIconName,
-    titleClassName: "text-[22px] md:text-[24px]",
-    seoDescription:
-      "Fonların geçmiş dönem verilerini inceleyerek tarihsel performans, fiyat hareketi ve dönemsel değişimleri daha detaylı takip edebilirsiniz.",
-  },
-  {
-    title: "Fonların Günlük Portföy Etkisi",
-    desc: "Takip edilen fonların portföy hisselerinin ertesi gün fiyatına tahmini etkisini karşılaştırın.",
-    href: "/fonlar/etki-analizi",
-    icon: "fon-etki-analizi" as CategoryIconName,
-    titleClassName: "text-[19px] md:text-[21px]",
-    seoDescription:
-      "TLY, PHE, PBR, DFI ve KHA fonlarının günlük portföy etkisini karşılaştırın; ayrıntılı analiz sayfalarına ulaşın.",
-  },
-];
-
-const videoKartlari = [
-  {
-    title: "TLY Tera Portföy Birinci Serbest Fonu: Dağılım ve Strateji",
-    href: "https://youtu.be/S6xt7GxWWJ8",
-    image: "https://img.youtube.com/vi/S6xt7GxWWJ8/hqdefault.jpg",
-    alt: "TLY Tera Portföy Birinci Serbest Fonu video kapak görseli",
-  },
-  {
-    title:
-      "PHE Pusula Portföy Hisse Senedi Fonu Detaylı İnceleme | Strateji, Risk, Getiri",
-    href: "https://youtu.be/MgVAiBFZvto",
-    image: "https://img.youtube.com/vi/MgVAiBFZvto/hqdefault.jpg",
-    alt: "PHE Pusula Portföy Hisse Senedi Fonu video kapak görseli",
-  },
-  {
-    title: "DFI Atlas Portföy İkinci Serbest Fon",
-    href: "https://youtu.be/flipVqvQMDA",
-    image: "https://img.youtube.com/vi/flipVqvQMDA/hqdefault.jpg",
-    alt: "DFI Atlas Portföy İkinci Serbest Fon video kapak görseli",
-  },
-  {
-    title:
-      "Yeni YouTube Videosu | Fonlar, Borsa ve Yatırım Üzerine Detaylı İnceleme",
-    href: "https://youtu.be/chZfm2FpiHg",
-    image: "https://img.youtube.com/vi/chZfm2FpiHg/hqdefault.jpg",
-    alt: "Yeni YouTube video kapak görseli",
-  },
-];
-
-function FonKutusu({
-  title,
-  href,
-  icon,
-  desc,
-  seoDescription,
-  titleClassName,
-}: {
-  title: string;
-  href: string;
-  icon: CategoryIconName;
-  desc: string;
-  seoDescription: string;
-  titleClassName: string;
-}) {
-  return (
-    <Link
-      href={href}
-      prefetch={false}
-      aria-label={title}
-      className="group flex flex-1 flex-col rounded-2xl border border-slate-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-[0_8px_30px_rgba(15,23,42,0.10)]"
-    >
-      <div className="mb-4 flex items-center gap-3">
-        <IconTile
-          name={icon}
-          className="h-14 w-14 shrink-0 transition duration-300 group-hover:bg-blue-100"
-        />
-        <h2 className={`font-semibold text-zinc-900 ${titleClassName}`}>
-          {title}
-        </h2>
-      </div>
-
-      <p className="text-sm leading-6 text-slate-500 md:text-sm">
-        {desc}
-      </p>
-
-      <p className="mt-3 text-sm leading-6 text-slate-500 md:text-sm">
-        {seoDescription}
-      </p>
-    </Link>
-  );
-}
-
 export default function FonlarPage() {
+  const dashboard = getDashboardData();
+  const leaderboards = dashboard.liderTablolari;
+  const funds = getCurrentFundsData()
+    .fonlar.filter((fund) => fund.aktifMi)
+    .map((fund) => ({
+      kod: fund.kod,
+      ad: fund.ad,
+      slug: fund.slug,
+      yonetici: fund.yonetici,
+    }));
+  const haftalikTercihler = getHaftalikFonHisseTercihleri();
+  const enCokTercihEdilenHisseler = [...haftalikTercihler.hisseler]
+    .filter((hisse) => hisse.degisim > 0)
+    .sort((a, b) => b.degisim - a.degisim)
+    .slice(0, 10);
+
   return (
     <main className="min-h-screen bg-[#f8fafc]">
       <div className="mx-auto max-w-7xl px-4 py-6 md:px-6">
-        <nav className="mb-5 flex items-center gap-2 text-sm text-slate-500" aria-label="Breadcrumb">
-          <Link href="/" prefetch={false} className="hover:text-blue-600 transition">Ana Sayfa</Link>
-          <span className="text-slate-300">/</span>
-          <span className="text-slate-700 font-medium">Fonlar</span>
-        </nav>
+        <FonBreadcrumb current="Fonlar" />
 
         <section className="mb-6">
-          <h1 className="text-2xl font-bold text-slate-900 md:text-4xl">
-            Fonlar
+          <p className="text-sm font-semibold text-blue-700">
+            Son işlem tarihi: {formatDate(dashboard.sonIslemTarihi)}
+          </p>
+          <h1 className="mt-2 text-2xl font-bold text-slate-950 md:text-4xl">
+            Fon Analiz Platformu
           </h1>
-
-          <p className="mt-3 max-w-4xl text-sm leading-7 text-slate-500 md:text-sm">
-            Yatırım fonları ile ilgili haftalık tercihler, fon getiri analizi,
-            fon tarihsel verileri ve fonlara dair içeriklere bu sayfa üzerinden
-            toplu şekilde ulaşabilirsiniz. Farklı fon başlıklarını tek sayfada
-            görmek isteyen kullanıcılar için daha düzenli ve erişilebilir bir
-            yapı sunulmuştur.
+          <p className="mt-3 max-w-4xl text-sm leading-7 text-slate-600">
+            Yatırım fonlarını getiri, risk seviyesi, fon büyüklüğü, yatırımcı
+            ilgisi ve para akışıyla birlikte inceleyin. Fonları dönemsel olarak
+            karşılaştırın, öne çıkan fonları keşfedin ve portföy yönetim
+            şirketlerinin genel görünümünü takip edin.
           </p>
         </section>
 
-        <section className="py-6">
-          <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
-            {fonKutulari.map((item) => (
-              <FonKutusu key={item.href} {...item} />
-            ))}
-          </div>
+        <FundQuickSearch funds={funds} />
+
+        <section className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
+          <MetricCard
+            label="Takip Edilen Fon"
+            value={formatNumber(dashboard.ozet.toplamTakipEdilenFonSayisi)}
+            sub="Güncel olarak karşılaştırılabilen aktif fon sayısı"
+            tone="blue"
+          />
+          <MetricCard
+            label="Toplam Fon Büyüklüğü"
+            value={formatCompactTL(dashboard.ozet.toplamFonBuyuklugu)}
+            sub={`${formatNumber(dashboard.yoneticiSayisi)} yönetici / kurucu`}
+          />
+          <MetricCard
+            label="En Yüksek Para Girişi"
+            value={
+              dashboard.ozet.bugunEnYuksekParaGirisi
+                ? `${dashboard.ozet.bugunEnYuksekParaGirisi.kod} · ${formatSignedTL(
+                    dashboard.ozet.bugunEnYuksekParaGirisi.value
+                  )}`
+                : "-"
+            }
+            href={
+              dashboard.ozet.bugunEnYuksekParaGirisi
+                ? `/fonlar/${dashboard.ozet.bugunEnYuksekParaGirisi.slug}`
+                : undefined
+            }
+            tone="green"
+          />
+          <MetricCard
+            label="En Yüksek Para Çıkışı"
+            value={
+              dashboard.ozet.bugunEnYuksekParaCikisi
+                ? `${dashboard.ozet.bugunEnYuksekParaCikisi.kod} · ${formatSignedTL(
+                    dashboard.ozet.bugunEnYuksekParaCikisi.value
+                  )}`
+                : "-"
+            }
+            href={
+              dashboard.ozet.bugunEnYuksekParaCikisi
+                ? `/fonlar/${dashboard.ozet.bugunEnYuksekParaCikisi.slug}`
+                : undefined
+            }
+            tone="red"
+          />
+          <MetricCard
+            label="En Çok Yatırımcı Kazanan"
+            value={
+              dashboard.ozet.enCokYatirimciKazanan
+                ? `${dashboard.ozet.enCokYatirimciKazanan.kod} · ${formatNumber(
+                    dashboard.ozet.enCokYatirimciKazanan.value
+                  )}`
+                : "-"
+            }
+            href={
+              dashboard.ozet.enCokYatirimciKazanan
+                ? `/fonlar/${dashboard.ozet.enCokYatirimciKazanan.slug}`
+                : undefined
+            }
+            tone="green"
+          />
+          <MetricCard
+            label="En Çok Yatırımcı Kaybeden"
+            value={
+              dashboard.ozet.enCokYatirimciKaybeden
+                ? `${dashboard.ozet.enCokYatirimciKaybeden.kod} · ${formatNumber(
+                    dashboard.ozet.enCokYatirimciKaybeden.value
+                  )}`
+                : "-"
+            }
+            href={
+              dashboard.ozet.enCokYatirimciKaybeden
+                ? `/fonlar/${dashboard.ozet.enCokYatirimciKaybeden.slug}`
+                : undefined
+            }
+            tone="red"
+          />
         </section>
 
-        <section className="mt-10">
-          <div className="mb-5">
-            <h2 className="text-2xl font-bold text-zinc-900 md:text-3xl">
-              YouTube Videoları
-            </h2>
+        <section className="mt-8 grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-3">
+          <ModuleLink
+            href="/fonlar/etki-analizi"
+            title="Popüler Fonların Günlük Etki Analizi"
+            desc="TLY, PHE, PBR, DFI, KHA ve THF portföy içerikleri ile ertesi gün açıklanacak fon fiyatına tahmini etki."
+          />
+          <ModuleLink
+            href="/fonlar/para-girisi"
+            title="En Çok Para Girişi Alan Fonlar"
+            desc="Günlük, 5 günlük, 1 aylık ve 3 aylık net para akışı tabloları."
+          />
+          <ModuleLink
+            href="/fonlar/fon-tarayici"
+            title="Fon Tarayıcı"
+            desc="Fon kodu, tür, yönetici, risk, büyüklük, getiri ve akış filtreleri."
+          />
+          <ModuleLink
+            href="/fonlar/fon-karsilastirma"
+            title="Fon Karşılaştırma"
+            desc="2 ila 5 fonu getiri, risk, büyüklük, yatırımcı ve akış metrikleriyle kıyaslayın."
+          />
+          <ModuleLink
+            href="/fonlar/yoneticiler"
+            title="Yönetici Analizi"
+            desc="Portföy şirketlerini fon sayısı, büyüklük, yatırımcı ve nakit akışıyla izleyin."
+          />
+          <ModuleLink
+            href="/fonlar/getiri"
+            title="Fon Getiri Analizi"
+            desc="Fonların kısa, orta ve uzun vadeli dönemsel getirilerini inceleyin."
+          />
+          <ModuleLink
+            href="/fonlar/tarihsel-veriler"
+            title="Fon Tarihsel Veriler"
+            desc="Fon fiyatı, büyüklüğü ve yatırımcı sayısındaki tarihsel değişimi izleyin."
+          />
+          <ModuleLink
+            href="/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler"
+            title="Fonların Haftalık Hisse Tercihleri"
+            desc="Son bir haftada fonların payını en çok artırdığı hisseleri ve fon takasındaki değişimi inceleyin."
+          />
+        </section>
 
-            <p className="mt-2 text-sm text-slate-500 md:text-sm">
-              Fonlarla ilgili hazırladığım videolara buradan ulaşabilirsiniz.
-            </p>
-          </div>
+        <section className="mt-8 grid grid-cols-1 gap-4 xl:grid-cols-3">
+          <Leaderboard
+            title="En Çok Para Girişi Alan Fonlar"
+            items={leaderboards.enCokParaGirisi ?? []}
+            href="/fonlar/para-girisi"
+            kind="money"
+          />
+          <Leaderboard
+            title="En Çok Para Çıkışı Yaşayan Fonlar"
+            items={leaderboards.enCokParaCikisi ?? []}
+            href="/fonlar/para-girisi?period=gunluk"
+            kind="money"
+          />
+          <Leaderboard
+            title="En Büyük Fonlar"
+            items={leaderboards.enBuyukFonlar ?? []}
+            href="/fonlar/fon-tarayici?sort=fonToplamDeger&dir=desc"
+            kind="money"
+          />
+          <Leaderboard
+            title="Bugün En Çok Kazandıran Fonlar"
+            items={leaderboards.bugunEnCokKazandiran ?? []}
+            href="/fonlar/fon-tarayici?sort=gunlukGetiri&dir=desc"
+            kind="percent"
+          />
+          <Leaderboard
+            title="Bugün En Çok Kaybettiren Fonlar"
+            items={leaderboards.bugunEnCokKaybettiren ?? []}
+            href="/fonlar/fon-tarayici?sort=gunlukGetiri&dir=asc"
+            kind="percent"
+          />
+          <Leaderboard
+            title="1 Ayda En Çok Kazandıran Fonlar"
+            items={leaderboards.birAydaEnCokKazandiran ?? []}
+            href="/fonlar/fon-tarayici?sort=birAyGetiri&dir=desc"
+            kind="percent"
+          />
+          <Leaderboard
+            title="3 Ayda En Çok Kazandıran Fonlar"
+            items={leaderboards.ucAydaEnCokKazandiran ?? []}
+            href="/fonlar/fon-tarayici?sort=ucAyGetiri&dir=desc"
+            kind="percent"
+          />
+          <Leaderboard
+            title="1 Yılda En Çok Kazandıran Fonlar"
+            items={leaderboards.birYildaEnCokKazandiran ?? []}
+            href="/fonlar/fon-tarayici?sort=birYilGetiri&dir=desc"
+            kind="percent"
+          />
+          <Leaderboard
+            title="En Çok Yatırımcı Kazanan Fonlar"
+            items={leaderboards.enCokYatirimciKazanan ?? []}
+            href="/fonlar/fon-tarayici?sort=yatirimciDegisimi&dir=desc"
+            kind="number"
+          />
+        </section>
 
-          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {videoKartlari.map((video) => (
-              <a
-                key={video.href}
-                href={video.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition duration-300 hover:-translate-y-0.5 hover:border-blue-200 hover:shadow-[0_6px_24px_rgba(15,23,42,0.10)]"
-                aria-label={video.title}
+        <section className="mt-12" aria-labelledby="haftalik-fon-tercihleri-baslik">
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-sm font-semibold text-emerald-700">
+                {haftalikTercihler.donemBaslangici && haftalikTercihler.donemBitisi
+                  ? `${haftalikTercihler.donemBaslangici} - ${haftalikTercihler.donemBitisi}`
+                  : "Son 1 hafta"}
+              </p>
+              <h2
+                id="haftalik-fon-tercihleri-baslik"
+                className="mt-1 text-2xl font-bold text-slate-950"
               >
-                <div className="w-full">
-                  <div className="overflow-hidden rounded-t-2xl bg-zinc-100">
-                    {/* eslint-disable-next-line @next/next/no-img-element */}
-                    <img
-                      src={video.image}
-                      alt={video.alt}
-                      width={480}
-                      height={360}
-                      loading="lazy"
-                      decoding="async"
-                      className="block aspect-video w-full object-cover transition duration-300 group-hover:scale-[1.02]"
-                    />
-                  </div>
+                Fonların Son 1 Haftada En Çok Tercih Ettiği Hisseler
+              </h2>
+              <p className="mt-2 max-w-3xl text-sm leading-6 text-slate-600">
+                Fonların toplam payını en fazla artırdığı hisseler, haftanın ilk ve son
+                işlem günü karşılaştırılarak sıralanır.
+              </p>
+            </div>
+            <Link
+              href="/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler"
+              className="inline-flex w-fit items-center gap-2 text-sm font-semibold text-blue-700 hover:text-blue-900"
+            >
+              Tüm hisseleri incele
+              <ArrowRight aria-hidden="true" className="h-4 w-4" />
+            </Link>
+          </div>
 
-                  <div className="p-4">
-                    <h3 className="line-clamp-2 min-h-[56px] text-lg font-semibold leading-7 text-zinc-900">
-                      {video.title}
-                    </h3>
+          <div className="mt-5 overflow-x-auto rounded-lg border border-slate-200 bg-white shadow-sm">
+            <table className="w-full min-w-[720px] text-sm">
+              <thead className="bg-slate-100 text-left text-slate-700">
+                <tr>
+                  <th className="px-4 py-3 font-semibold">Hisse</th>
+                  <th className="px-4 py-3 text-right font-semibold">Haftalık Pay Değişimi</th>
+                  <th className="px-4 py-3 text-right font-semibold">Son Toplam Pay</th>
+                  <th className="px-4 py-3 text-right font-semibold">Son Fon Takası</th>
+                </tr>
+              </thead>
+              <tbody className="divide-y divide-slate-100">
+                {enCokTercihEdilenHisseler.map((hisse) => {
+                  const yuzdeFormat = new Intl.NumberFormat("tr-TR", {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2,
+                  });
+                  const sembol = (
+                    <span className="inline-flex min-w-20 justify-center rounded-md bg-slate-100 px-2 py-1 font-bold text-slate-800">
+                      {hisse.sembol}
+                    </span>
+                  );
 
-                    <div className="mt-4 inline-flex rounded-xl border border-red-200 bg-red-50 px-4 py-2 text-sm font-semibold text-red-700 transition group-hover:bg-red-100">
-                      Videoyu Aç
-                    </div>
-                  </div>
-                </div>
-              </a>
-            ))}
+                  return (
+                    <tr key={hisse.sembol} className="hover:bg-slate-50">
+                      <td className="px-4 py-3">
+                        {hisseVarMi(hisse.sembol) ? (
+                          <Link
+                            href={`/hisse/${hisse.sembol.toLowerCase()}`}
+                            className="hover:text-blue-700"
+                          >
+                            {sembol}
+                          </Link>
+                        ) : (
+                          sembol
+                        )}
+                      </td>
+                      <td className="px-4 py-3 text-right font-bold text-emerald-700">
+                        +{yuzdeFormat.format(hisse.degisim)} puan
+                      </td>
+                      <td className="px-4 py-3 text-right font-semibold text-slate-800">
+                        %{yuzdeFormat.format(hisse.sonToplamYuzde)}
+                      </td>
+                      <td className="px-4 py-3 text-right font-semibold text-slate-800">
+                        {formatCompactTL(hisse.sonToplamTakasTl)}
+                      </td>
+                    </tr>
+                  );
+                })}
+              </tbody>
+            </table>
           </div>
         </section>
 
-        <section className="mt-12 rounded-2xl border border-slate-200 bg-white p-5 md:p-7">
-          <h2 className="mb-4 text-2xl font-bold text-zinc-900">
-            Fonlar Sayfasında Neler Bulunur?
+        <section className="mt-12 border-t border-slate-200 pt-10">
+          <h2 className="text-2xl font-bold text-slate-950">
+            Yatırım Fonu Seçerken Hangi Verilere Bakılmalı?
           </h2>
+          <div className="mt-5 grid gap-8 text-sm leading-7 text-slate-600 md:text-base lg:grid-cols-2">
+            <div className="space-y-4">
+              <p>
+                Fon getirisi önemli bir başlangıç noktasıdır ancak tek başına
+                yeterli değildir. Bir aylık performans kısa vadeli hareketi,
+                altı aylık ve bir yıllık getiriler ise fonun farklı piyasa
+                koşullarındaki seyrini anlamaya yardımcı olur. Karşılaştırma
+                yaparken benzer yatırım stratejisine sahip fonları aynı dönem
+                üzerinden değerlendirmek daha anlamlı sonuç verir.
+              </p>
+              <p>
+                Risk değeri, fon fiyatındaki dalgalanma ihtiyacı hakkında genel
+                bir gösterge sunar. Fonun şemsiye türü, yatırım yaptığı varlıklar,
+                portföy yönetim şirketi ve yatırım süresi de risk-getiri dengesiyle
+                birlikte ele alınmalıdır.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <p>
+                Para girişi ve yatırımcı sayısındaki değişim, fona yönelik güncel
+                ilginin yönünü gösterir. Süreklilik gösteren para girişi ile artan
+                yatırımcı sayısı olumlu bir ilgiye işaret edebilir; yine de bu
+                göstergeler fonun gelecekteki getirisini garanti etmez.
+              </p>
+              <p>
+                Ayrıntılı seçim için <Link href="/fonlar/fon-tarayici" className="font-semibold text-blue-700 hover:underline">fon tarayıcıyı</Link>,
+                yan yana değerlendirme için <Link href="/fonlar/fon-karsilastirma" className="font-semibold text-blue-700 hover:underline">fon karşılaştırma aracını</Link> ve
+                güncel ilgi yönünü görmek için <Link href="/fonlar/para-girisi" className="font-semibold text-blue-700 hover:underline">fon para girişi sayfasını</Link> inceleyebilirsiniz.
+              </p>
+            </div>
+          </div>
 
-          <div className="space-y-4 text-sm leading-7 text-slate-600 md:text-base">
-            <p>
-              Hoca İle Borsa Fonlar sayfası, yatırım fonlarını tek başlık altında
-              takip etmek isteyen kullanıcılar için hazırlanmıştır. Bu bölümde
-              fonların haftalık tercihleri, getiri analizleri, tarihsel verileri,
-              kapanış etki hesaplamaları ve fonlara dair video içerikleri bir
-              arada sunulur. Amaç yalnızca fon isimlerini listelemek değil,
-              yatırımcının fon türlerini, risk seviyelerini ve fon seçiminde
-              dikkat edilmesi gereken temel noktaları daha anlaşılır şekilde
-              değerlendirmesine yardımcı olmaktır.
-            </p>
-
-            <p>
-              Yatırım fonları; farklı yatırım araçlarını tek bir portföy içinde
-              toplayan, profesyonel portföy yöneticileri tarafından yönetilen
-              kolektif yatırım ürünleridir. Bir fonun içinde hisse senedi,
-              devlet tahvili, özel sektör borçlanma aracı, ters repo, mevduat,
-              kıymetli maden, yabancı varlık veya farklı finansal araçlar yer
-              alabilir. Bu nedenle her fon aynı risk seviyesine sahip değildir.
-              Fon seçerken sadece geçmiş getiriye bakmak yeterli olmaz; fonun
-              türü, yatırım stratejisi, portföy dağılımı, yönetim ücreti,
-              risk değeri ve yatırımcının vade beklentisi birlikte
-              değerlendirilmelidir.
-            </p>
-
-            <h3 className="pt-3 text-xl font-bold text-zinc-900">
-              Fon Türleri ve Risk Seviyeleri
-            </h3>
-
-            <p>
-              Fon türleri, yatırımcının üstlendiği riskin ve beklediği getirinin
-              anlaşılması açısından önemlidir. Para piyasası fonları genellikle
-              kısa vadeli, düşük riskli ve likiditesi yüksek araçlara yatırım
-              yapar. Bu fonlar, nakdini kısa süreli değerlendirmek isteyen
-              yatırımcılar tarafından tercih edilebilir. Getiri potansiyeli
-              hisse senedi fonlarına göre daha sınırlı olabilir; ancak fiyat
-              dalgalanması da genellikle daha düşüktür.
-            </p>
-
-            <p>
-              Hisse senedi fonları ise portföyünün önemli bir bölümünü Borsa
-              İstanbul’da veya yurt dışı piyasalarda işlem gören paylara
-              yönlendiren fonlardır. Bu fonlarda getiri potansiyeli daha yüksek
-              olabilir; ancak piyasa hareketlerine bağlı olarak değer kaybı
-              riski de artar. Hisse senedi fonu seçerken fonun hangi sektörlere,
-              hangi şirketlere ve hangi yatırım temasına ağırlık verdiği
-              incelenmelidir. Sadece kısa vadeli performans değil, fonun uzun
-              vadeli stratejisi ve düşüş dönemlerindeki dayanıklılığı da
-              önemlidir.
-            </p>
-
-            <p>
-              Borçlanma araçları fonları; devlet tahvili, hazine bonosu ve özel
-              sektör borçlanma araçları gibi sabit getirili enstrümanlara
-              yatırım yapar. Bu fonlar faiz oranlarındaki değişimlerden
-              etkilenebilir. Faizlerin yükseldiği dönemlerde tahvil fiyatları
-              baskılanabilirken, faizlerin gerilediği dönemlerde bu fonlarda
-              olumlu performans görülebilir. Bu nedenle borçlanma araçları
-              fonlarında vade yapısı, portföy kalitesi ve faiz hassasiyeti
-              dikkate alınmalıdır.
-            </p>
-
-            <p>
-              Serbest fonlar, daha esnek yatırım stratejileri uygulayabilen ve
-              genellikle nitelikli yatırımcılara sunulan fonlardır. Bu fonlar
-              kaldıraç, türev ürünler, yoğunlaşmış portföy veya farklı piyasa
-              stratejileri kullanabilir. Serbest fonlarda getiri potansiyeli
-              yüksek olabilir; ancak risk yapısı standart fonlara göre daha
-              karmaşık olabilir. Bu nedenle serbest fonlar incelenirken fonun
-              izahnamesi, stratejisi, geçmiş dalgalanması ve yatırımcı profiline
-              uygunluğu dikkatle değerlendirilmelidir.
-            </p>
-
-            <h3 className="pt-3 text-xl font-bold text-zinc-900">
-              TEFAS Verileri Neden Önemlidir?
-            </h3>
-
-            <p>
-              TEFAS, yatırım fonlarının karşılaştırılabilmesi açısından önemli
-              bir veri kaynağıdır. Fon fiyatı, günlük getiri, dönemsel getiri,
-              portföy dağılımı, fon büyüklüğü, yatırımcı sayısı ve risk değeri
-              gibi bilgiler yatırımcıya fonu daha şeffaf şekilde inceleme imkânı
-              verir. Bir fonun yalnızca son gün getirisine bakmak yanıltıcı
-              olabilir. Haftalık, aylık, üç aylık, altı aylık ve yıllık
-              performans birlikte değerlendirildiğinde fonun piyasa koşullarına
-              nasıl tepki verdiği daha net görülebilir.
-            </p>
-
-            <p>
-              Fon seçerken TEFAS verileri üzerinden benzer kategorideki fonları
-              karşılaştırmak daha sağlıklı olur. Örneğin bir para piyasası fonu
-              ile hisse senedi fonunu aynı getiri beklentisiyle değerlendirmek
-              doğru değildir. Aynı şekilde serbest fonların risk ve strateji
-              yapısı klasik fonlardan farklı olabilir. Bu nedenle karşılaştırma
-              yapılırken fonların aynı kategori içinde incelenmesi gerekir.
-              Fonun geçmiş performansı gelecek getirisini garanti etmez; ancak
-              fon yönetiminin farklı piyasa koşullarında nasıl sonuç ürettiğini
-              görmek açısından fikir verebilir.
-            </p>
-
-            <h3 className="pt-3 text-xl font-bold text-zinc-900">
-              Fon Seçerken Dikkat Edilecek Noktalar
-            </h3>
-
-            <p>
-              Fon seçiminde ilk adım yatırımcının kendi risk profilini
-              belirlemesidir. Kısa vadede nakit ihtiyacı olan bir yatırımcı ile
-              uzun vadeli büyüme hedefleyen bir yatırımcının aynı fonu tercih
-              etmesi doğru olmayabilir. Risk seviyesi düşük ürünler daha sakin
-              bir getiri yapısı sunarken, yüksek riskli fonlarda kısa vadeli
-              dalgalanmalar daha belirgin olabilir. Bu nedenle yatırım süresi,
-              beklenen getiri, risk toleransı ve portföy çeşitlendirmesi birlikte
-              düşünülmelidir.
-            </p>
-
-            <p>
-              Yönetim ücreti, fon büyüklüğü, yatırımcı sayısı, portföy
-              yoğunlaşması, likidite durumu ve fonun yatırım stratejisi de
-              önemli başlıklardır. Çok kısa sürede yüksek getiri sağlamış bir
-              fon, her zaman en uygun fon anlamına gelmez. Bazen yüksek getiri
-              yüksek risk alınarak elde edilmiş olabilir. Bu yüzden fonun sadece
-              kazandırdığı döneme değil, dalgalı piyasalarda nasıl hareket
-              ettiğine de bakılmalıdır.
-            </p>
-
-            <p>
-              Bu sayfada yer alan fon içerikleri, yatırım fonlarını daha düzenli
-              takip etmeye yardımcı olmak amacıyla hazırlanır. Fon getiri
-              ekranları, tarihsel veriler, haftalık fon tercihleri ve kapanış
-              etki analizleri yatırımcıya ek bakış açısı sunabilir. Ancak burada
-              yer alan hiçbir içerik kişisel yatırım danışmanlığı kapsamında
-              değildir. Yatırım kararı vermeden önce fon izahnamesi, TEFAS
-              verileri, risk bildirimi ve kendi finansal durumunuz mutlaka
-              dikkate alınmalıdır.
-            </p>
-
-            <p className="rounded-xl border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
-              Bu sayfada yer alan bilgiler genel bilgilendirme amacı taşır.
-              Fonların geçmiş getirileri gelecekte aynı performansın
-              gerçekleşeceği anlamına gelmez. Yatırım kararları kişisel risk
-              profiline, vade beklentisine ve finansal duruma göre verilmelidir.
-            </p>
+          <div className="mt-10 grid gap-6 border-t border-slate-200 pt-8 md:grid-cols-3">
+            <div>
+              <h3 className="font-bold text-slate-950">Fon getirisi nasıl karşılaştırılır?</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                Aynı kategorideki fonların eşit dönem getirileri, risk seviyeleri
+                ve dalgalanma özellikleri birlikte değerlendirilmelidir.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-bold text-slate-950">Fon para girişi neyi gösterir?</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                Pozitif değer fona yönelen net ilgiyi, negatif değer fondan çıkan
+                tutarın daha yüksek olduğunu gösterir.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-bold text-slate-950">Geçmiş getiri yeterli midir?</h3>
+              <p className="mt-2 text-sm leading-6 text-slate-600">
+                Hayır. Geçmiş performans; risk, strateji, vade ve portföy yapısıyla
+                birlikte okunmalıdır ve gelecekteki getiriyi garanti etmez.
+              </p>
+            </div>
           </div>
         </section>
       </div>

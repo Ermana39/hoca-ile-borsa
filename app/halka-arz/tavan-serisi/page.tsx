@@ -45,35 +45,35 @@ export const metadata: Metadata = {
 };
 
 const guncelHalkaArzKapanislari: Record<string, string> = {
-  QUICK: "76.55",
-  KARCL: "55.75",
-  MASFN: "42.92",
-  ALBTN: "25.62",
-  METEN: "20.20",
-  SARAE: "73.65",
-  SSAAT: "38.52",
-  ISVEA: "42.40",
+  QUICK: "76.60",
+  KARCL: "61.30",
+  MASFN: "43.34",
+  ALBTN: "26.14",
+  METEN: "21.38",
+  SARAE: "74.00",
+  SSAAT: "39.08",
+  ISVEA: "46.64",
   EKIM: "17.47",
-  GOLDA: "12.54",
-  ORZAX: "99.10",
-  SOHOE: "10.61",
-  BETAE: "113.50",
-  EKDMR: "45.70",
-  AAGYO: "12.60",
-  MCARD: "176.00",
-  LXGYO: "10.83",
-  GENKM: "10.54",
-  SVGYO: "15.00",
-  EMPAE: "76.40",
-  ATATR: "14.63",
-  BESTE: "31.10",
-  AKHAN: "41.10",
-  NETCD: "150.00",
-  UCAYM: "27.50",
-  ZGYO: "33.80",
-  FRMPL: "35.70",
-  MEYSU: "12.35",
-  ARFYE: "26.70",
+  GOLDA: "12.30",
+  ORZAX: "97.05",
+  SOHOE: "10.57",
+  BETAE: "104.20",
+  EKDMR: "43.46",
+  AAGYO: "12.39",
+  MCARD: "158.40",
+  LXGYO: "10.37",
+  GENKM: "10.33",
+  SVGYO: "15.47",
+  EMPAE: "83.00",
+  ATATR: "14.09",
+  BESTE: "29.30",
+  AKHAN: "40.82",
+  NETCD: "138.00",
+  UCAYM: "26.92",
+  ZGYO: "30.42",
+  FRMPL: "35.94",
+  MEYSU: "12.09",
+  ARFYE: "24.04",
 };
 
 const quickHalkaArzVerisi = {
@@ -82,7 +82,7 @@ const quickHalkaArzVerisi = {
   katilimciSayisi: "961.387",
   dagitimSekli: "BİREYSELE %60",
   arzFiyati: "76.60",
-  guncelFiyat: "76.55",
+  guncelFiyat: "76.60",
   konsorsiyum: "GARANTİ",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -92,7 +92,7 @@ const karclHalkaArzVerisi = {
   katilimciSayisi: "814.853",
   dagitimSekli: "BİREYSELE %40",
   arzFiyati: "35.00",
-  guncelFiyat: "55.75",
+  guncelFiyat: "61.30",
   konsorsiyum: "A1 CAPİTAL, VAKIF, ZİRAAT",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -102,7 +102,7 @@ const masfnHalkaArzVerisi = {
   katilimciSayisi: "1.093.898",
   dagitimSekli: "BİREYSELE %80",
   arzFiyati: "45.68",
-  guncelFiyat: "42.92",
+  guncelFiyat: "43.34",
   konsorsiyum: "DENİZ",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -112,7 +112,7 @@ const albtnHalkaArzVerisi = {
   katilimciSayisi: "549.211",
   dagitimSekli: "TAMAMEN EŞİT",
   arzFiyati: "38.60",
-  guncelFiyat: "25.62",
+  guncelFiyat: "26.14",
   konsorsiyum: "TACİRLER",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -122,7 +122,7 @@ const metenHalkaArzVerisi = {
   katilimciSayisi: "961.387",
   dagitimSekli: "BİREYSELE %38",
   arzFiyati: "20.00",
-  guncelFiyat: "20.20",
+  guncelFiyat: "21.38",
   konsorsiyum: "İNFO",
 } as (typeof baseHalkaArzVerileri)[number];
 

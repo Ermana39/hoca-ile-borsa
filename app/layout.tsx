@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import AdSenseScript from "@/components/adsense-script";
+import { THEME_INITIALIZATION_SCRIPT } from "@/lib/theme";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.hocaileborsa.com"),
@@ -97,8 +98,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="tr">
+    <html lang="tr" data-theme="dark" suppressHydrationWarning>
       <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_INITIALIZATION_SCRIPT }} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}

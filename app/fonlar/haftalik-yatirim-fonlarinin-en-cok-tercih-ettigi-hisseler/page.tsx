@@ -1,10 +1,10 @@
 import Link from "@/components/NoPrefetchLink";
-import fonTercihData from "./data/tercih-edilen-hisseler.json";
 import FonTercihTableClient, {
   type FonSatiri,
   type FonTableRow,
 } from "./_components/FonTercihTableClient";
 import { hisseVarMi } from "@/lib/hisseler";
+import { getHaftalikFonHisseTercihleri } from "@/lib/fon-tercihleri";
 
 const siteUrl = "https://www.hocaileborsa.com";
 const sayfaUrl = `${siteUrl}/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler`;
@@ -21,31 +21,6 @@ export const metadata = {
 
 export const revalidate = false;
 
-type JsonRow = Record<string, string | number | null>;
-
-function temizMetin(deger: unknown) {
-  if (deger === null || deger === undefined) return "";
-  return String(deger).trim();
-}
-
-// Veride yüzde alanları "1.42 %" gibi NOKTA-ondalıklı metin olarak gelir
-// (binlik ayracı YOK); Türkçe biçimle karıştırılıp yanlış ayrıştırılmamalı.
-function yuzdeSayisi(deger: string | number | null | undefined): number | null {
-  if (deger === null || deger === undefined) return null;
-  if (typeof deger === "number") return deger;
-  const metin = deger.replace("%", "").trim();
-  if (!metin) return null;
-  const sayi = Number(metin);
-  return Number.isNaN(sayi) ? null : sayi;
-}
-
-function tlSayisi(deger: string | number | null | undefined): number {
-  if (typeof deger === "number") return deger;
-  if (!deger) return 0;
-  const sayi = Number(String(deger).replace(/[^0-9.-]/g, ""));
-  return Number.isNaN(sayi) ? 0 : sayi;
-}
-
 function tlFormat(deger: number) {
   return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 0 }).format(deger);
 }
@@ -57,52 +32,6 @@ function isoTarih(gununTarihi: string | undefined): string | undefined {
   if (parca.length !== 3) return undefined;
   const [gun, ay, yil] = parca;
   return `${yil}-${ay}-${gun}`;
-}
-
-// Kaynak Excel'deki ikinci bir mini-tablonun (tarih başlığı + günlük toplam
-// satırları) ana veri aralığına taşan kalıntı satırları; gerçek hisse kodu
-// değil, "Tarih" başlığı veya "gg.aa.yyyy" tarih deseni taşırlar.
-const TARIH_DESENI = /^\d{2}\.\d{2}\.\d{4}$/;
-
-function gercekHisseSatiriMi(sembol: string) {
-  if (TARIH_DESENI.test(sembol)) return false;
-  if (sembol.toLocaleLowerCase("tr") === "tarih") return false;
-  return true;
-}
-
-function fonVerileriniOku(): FonSatiri[] {
-  const rows = (fonTercihData.rows || []) as JsonRow[];
-
-  if (!rows.length) return [];
-
-  const headers =
-    Array.isArray(fonTercihData.columns) && fonTercihData.columns.length > 0
-      ? fonTercihData.columns
-      : Object.keys(rows[0] || {});
-
-  return rows
-    .filter((row) => gercekHisseSatiriMi(temizMetin(row[headers[0]])))
-    .map((row) => {
-      const sembol = temizMetin(row[headers[0]]) || null;
-      return {
-        sembol,
-        sayfasiVarMi: sembol ? hisseVarMi(sembol) : false,
-        degisim: row[headers[1]] ?? null,
-        sonToplamYuzde: row[headers[2]] ?? null,
-        ilkToplamYuzde: row[headers[3]] ?? null,
-        sonToplamTakasTl: row[headers[4]] ?? null,
-        ilkToplamTakasTl: row[headers[5]] ?? null,
-        takasTlSonEmeklilikFon: row[headers[6]] ?? null,
-        yuzdeSonEmeklilikFon: row[headers[7]] ?? null,
-        takasTlIlkEmeklilikFon: row[headers[8]] ?? null,
-        yuzdeIlkEmeklilikFon: row[headers[9]] ?? null,
-        takasTlSonYatirimFon: row[headers[10]] ?? null,
-        yuzdeSonYatirimFon: row[headers[11]] ?? null,
-        takasTlIlkYatirimFon: row[headers[12]] ?? null,
-        yuzdeIlkYatirimFon: row[headers[13]] ?? null,
-      };
-    })
-    .filter((item) => item.sembol);
 }
 
 function tabloSatirinaDonustur(row: FonSatiri): FonTableRow {
@@ -126,20 +55,23 @@ function tabloSatirinaDonustur(row: FonSatiri): FonTableRow {
 }
 
 export default function HaftalikYatirimFonlarininEnCokTercihEttigiHisselerPage() {
-  const fonVerileri = fonVerileriniOku();
-  const guncellemeTarihi = (fonTercihData as { guncellemeTarihi?: string })
-    .guncellemeTarihi;
+  const haftalikTercihler = getHaftalikFonHisseTercihleri();
+  const fonVerileri: FonSatiri[] = haftalikTercihler.hisseler.map((row) => ({
+    ...row,
+    sayfasiVarMi: hisseVarMi(row.sembol),
+  }));
+  const guncellemeTarihi = haftalikTercihler.guncellemeTarihi;
   const guncellemeIso = isoTarih(guncellemeTarihi);
 
   const degisimSirali = fonVerileri
-    .map((row) => ({ ...row, degisimSayi: yuzdeSayisi(row.degisim) }))
-    .filter((row): row is FonSatiri & { degisimSayi: number } => row.degisimSayi !== null)
+    .map((row) => ({ ...row, degisimSayi: Number(row.degisim) }))
+    .filter((row) => Number.isFinite(row.degisimSayi) && row.degisimSayi > 0)
     .sort((a, b) => b.degisimSayi - a.degisimSayi);
 
   const enCokArtanlar = degisimSirali.slice(0, 5);
 
   const takasSirali = [...fonVerileri]
-    .map((row) => ({ ...row, takasSayi: tlSayisi(row.sonToplamTakasTl) }))
+    .map((row) => ({ ...row, takasSayi: Number(row.sonToplamTakasTl) }))
     .sort((a, b) => b.takasSayi - a.takasSayi);
 
   const enYuksekTakas = takasSirali.slice(0, 5);
@@ -194,18 +126,25 @@ export default function HaftalikYatirimFonlarininEnCokTercihEttigiHisselerPage()
             <h1 className="text-3xl font-bold text-zinc-900">
               Haftalık Yatırım Fonlarının En Çok Tercih Ettiği Hisseler
             </h1>
-            {guncellemeIso && (
-              <time
-                dateTime={guncellemeIso}
-                className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-zinc-500 ring-1 ring-inset ring-zinc-200"
-              >
-                Son güncelleme: {guncellemeTarihi}
-              </time>
-            )}
+            <div className="flex flex-wrap items-center gap-2">
+              {haftalikTercihler.donemBaslangici && haftalikTercihler.donemBitisi ? (
+                <span className="rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700 ring-1 ring-inset ring-emerald-200">
+                  Son 1 hafta: {haftalikTercihler.donemBaslangici} - {haftalikTercihler.donemBitisi}
+                </span>
+              ) : null}
+              {guncellemeIso && (
+                <time
+                  dateTime={guncellemeIso}
+                  className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-zinc-500 ring-1 ring-inset ring-zinc-200"
+                >
+                  Son güncelleme: {guncellemeTarihi}
+                </time>
+              )}
+            </div>
           </div>
 
           <p className="max-w-5xl text-sm leading-7 text-zinc-700 md:text-base">
-            Bu sayfada yatırım fonlarının ve emeklilik fonlarının haftalık bazda
+            Bu sayfada yatırım fonlarının ve emeklilik fonlarının son bir haftada
             Borsa İstanbul hisselerinde oluşturduğu takas değişimleri yer alır.
             Fonların hangi hisselerde ağırlığını artırdığı, hangi hisselerde
             kurumsal talebin güçlendiği ve toplam fon takasındaki değişimin nasıl

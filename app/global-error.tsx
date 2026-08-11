@@ -1,9 +1,14 @@
 "use client";
 
+import { THEME_INITIALIZATION_SCRIPT } from "@/lib/theme";
+
 export default function GlobalError() {
   return (
-    <html lang="tr">
-      <body>
+    <html lang="tr" data-theme="dark" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: THEME_INITIALIZATION_SCRIPT }} />
+      </head>
+      <body className="site-background">
         <main className="min-h-screen bg-white px-4 py-10 md:px-6">
           <div className="mx-auto max-w-2xl rounded-2xl border border-zinc-200 bg-white p-6 text-center">
             <h1 className="text-2xl font-bold text-zinc-900">Beklenmeyen bir hata oluştu</h1>

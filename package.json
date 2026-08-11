@@ -5,6 +5,8 @@
   "scripts": {
     "predev": "npm run fon-etki:import && npm run excel-to-json",
     "dev": "next dev",
+    "update-funds": "node scripts/update-funds.mjs && node scripts/test-fund-platform.mjs",
+    "test-funds": "node scripts/test-fund-platform.mjs",
     "excel-to-json": "node scripts/excel-to-json.mjs && node scripts/check-temel-oranlar.mjs",
     "fon-etki:import": "node scripts/import-fon-etki-verileri.mjs",
     "oran-analizi:check": "node scripts/check-temel-oranlar.mjs",
@@ -28,13 +30,14 @@
     "halka-arz:taslak-arsivle": "node scripts/archive-ipo-draft.mjs",
     "halka-arz:karsilastirma-kontrol": "node scripts/archive-ipo-draft.mjs --check-approved",
     "halka-arz:ortaklik-yapisi": "node scripts/sync-ipo-ownership-structure.mjs",
-    "build": "npm run vercel-usage:check && npm run index-quality:check && npm run fon-etki:import && npm run excel-to-json && node scripts/generate-news-dates.mjs && node scripts/generate-hisse-profile-metadata.mjs && node scripts/generate-page-updates.mjs && node scripts/check-hisse-quality.mjs && node scripts/archive-ipo-draft.mjs --check-approved && next build",
+    "build": "npm run vercel-usage:check && npm run index-quality:check && npm run fon-etki:import && npm run excel-to-json && npm run test-funds && node scripts/generate-news-dates.mjs && node scripts/generate-hisse-profile-metadata.mjs && node scripts/generate-page-updates.mjs && node scripts/check-hisse-quality.mjs && node scripts/archive-ipo-draft.mjs --check-approved && next build",
     "start": "next start",
     "lint": "eslint"
   },
   "dependencies": {
     "@upstash/redis": "^1.37.0",
     "@vercel/analytics": "^2.0.1",
+    "lucide-react": "^0.468.0",
     "next": "16.2.9",
     "nodemailer": "^9.0.3",
     "react": "19.2.4",

@@ -1,118 +1,74 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
+import MarketChart, {
+  type MarketChartPoint,
+  type MarketChartUnit,
+} from "@/components/charts/MarketChart";
 import type { FonTarihselVeri } from "../_data/fonEtkiOzetleri";
 
 type GrafikTuru = "yatirimci" | "fonDegeri" | "paraAkisi" | "marj";
 
-const WIDTH = 760;
-const HEIGHT = 292;
-const PADDING = { top: 26, right: 24, bottom: 52, left: 76 };
-
 const grafikler = {
   yatirimci: {
     etiket: "Yatırımcı",
-    renk: "#2563EB",
+    baslik: "Yatırımcı Sayısı Grafiği",
+    unit: "number",
+    kind: "line",
+    includeZero: false,
     getValue: (row: FonTarihselVeri) => row.yatirimciSayisi,
   },
   fonDegeri: {
     etiket: "Fon değeri",
-    renk: "#0F766E",
+    baslik: "Fon Toplam Değer Grafiği",
+    unit: "money",
+    kind: "line",
+    includeZero: false,
     getValue: (row: FonTarihselVeri) => row.fonToplamDeger,
   },
   paraAkisi: {
     etiket: "Para akışı",
-    renk: "#16A34A",
+    baslik: "Nakit Giriş Çıkış",
+    unit: "money",
+    kind: "bar",
+    includeZero: true,
     getValue: (row: FonTarihselVeri) => row.paraGirisiCikisi,
   },
   marj: {
     etiket: "Marj",
-    renk: "#E11D48",
+    baslik: "Marj Grafiği",
+    unit: "percent",
+    kind: "line",
+    includeZero: true,
     getValue: (row: FonTarihselVeri) => row.marj,
   },
 } satisfies Record<
   GrafikTuru,
   {
     etiket: string;
-    renk: string;
-    getValue: (row: FonTarihselVeri) => number;
+    baslik: string;
+    unit: MarketChartUnit;
+    kind: "line" | "bar";
+    includeZero: boolean;
+    getValue: (row: FonTarihselVeri) => number | null;
   }
 >;
 
-function tarihEtiketi(iso: string) {
-  return new Intl.DateTimeFormat("tr-TR", {
-    day: "2-digit",
-    month: "short",
-    timeZone: "UTC",
-  }).format(new Date(`${iso}T00:00:00Z`));
-}
-
-function tamTarihEtiketi(iso: string) {
-  return new Intl.DateTimeFormat("tr-TR", {
-    day: "numeric",
-    month: "long",
-    year: "numeric",
-    timeZone: "UTC",
-  }).format(new Date(`${iso}T00:00:00Z`));
-}
-
-function tamSayi(value: number) {
-  return new Intl.NumberFormat("tr-TR", {
-    maximumFractionDigits: 0,
-  }).format(value);
-}
-
-function para(value: number) {
+function formatLatest(type: GrafikTuru, value: number) {
+  if (type === "yatirimci") {
+    return new Intl.NumberFormat("tr-TR", { maximumFractionDigits: 0 }).format(value);
+  }
+  if (type === "marj") {
+    return `%${new Intl.NumberFormat("tr-TR", {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2,
+    }).format(value)}`;
+  }
   return new Intl.NumberFormat("tr-TR", {
     style: "currency",
     currency: "TRY",
     maximumFractionDigits: 0,
   }).format(value);
-}
-
-function kisaSayi(value: number, paraBirimi = false) {
-  const absolute = Math.abs(value);
-  const sign = value < 0 ? "-" : "";
-  let result: string;
-
-  if (absolute >= 1_000_000_000) {
-    result = `${(absolute / 1_000_000_000).toLocaleString("tr-TR", {
-      maximumFractionDigits: 1,
-    })} Mr`;
-  } else if (absolute >= 1_000_000) {
-    result = `${(absolute / 1_000_000).toLocaleString("tr-TR", {
-      maximumFractionDigits: 1,
-    })} Mn`;
-  } else if (absolute >= 1_000) {
-    result = `${(absolute / 1_000).toLocaleString("tr-TR", {
-      maximumFractionDigits: 1,
-    })} bin`;
-  } else {
-    result = absolute.toLocaleString("tr-TR", { maximumFractionDigits: 0 });
-  }
-
-  return `${sign}${result}${paraBirimi ? " TL" : ""}`;
-}
-
-function formatValue(type: GrafikTuru, value: number) {
-  if (type === "yatirimci") return tamSayi(value);
-  if (type === "marj") {
-    const prefix = value < 0 ? "-" : "";
-    return `${prefix}%${Math.abs(value).toLocaleString("tr-TR", {
-      minimumFractionDigits: 2,
-      maximumFractionDigits: 2,
-    })}`;
-  }
-  return para(value);
-}
-
-function eksenDegeri(type: GrafikTuru, value: number) {
-  if (type === "marj") {
-    return `${value.toLocaleString("tr-TR", {
-      maximumFractionDigits: 2,
-    })}%`;
-  }
-  return kisaSayi(value, type !== "yatirimci");
 }
 
 export default function FonTarihselGrafikler({
@@ -123,33 +79,23 @@ export default function FonTarihselGrafikler({
   veriler: FonTarihselVeri[];
 }) {
   const [grafikTuru, setGrafikTuru] = useState<GrafikTuru>("yatirimci");
-  const config = grafikler[grafikTuru];
-  const values = veriler.map(config.getValue);
-  const latest = values.at(-1) ?? 0;
-  const includeZero = grafikTuru === "paraAkisi" || grafikTuru === "marj";
-  const rawMin = Math.min(...values, ...(includeZero ? [0] : []));
-  const rawMax = Math.max(...values, ...(includeZero ? [0] : []));
-  const rawRange = rawMax - rawMin;
-  const buffer = rawRange === 0 ? Math.max(Math.abs(rawMax) * 0.08, 1) : rawRange * 0.12;
-  const min = rawMin - buffer;
-  const max = rawMax + buffer;
-  const range = max - min || 1;
-  const chartWidth = WIDTH - PADDING.left - PADDING.right;
-  const chartHeight = HEIGHT - PADDING.top - PADDING.bottom;
-  const xForIndex = (index: number) =>
-    PADDING.left +
-    (veriler.length === 1 ? chartWidth / 2 : (index / (veriler.length - 1)) * chartWidth);
-  const yForValue = (value: number) =>
-    PADDING.top + ((max - value) / range) * chartHeight;
-  const points = values.map(
-    (value, index) => `${xForIndex(index)},${yForValue(value)}`
+  const kullanilabilirGrafikler = (Object.keys(grafikler) as GrafikTuru[]).filter((type) =>
+    veriler.some((row) => typeof grafikler[type].getValue(row) === "number")
   );
-  const zeroY = yForValue(0);
-  const dateStep = Math.max(1, Math.ceil(veriler.length / 6));
-  const yTicks = Array.from({ length: 5 }, (_, index) => {
-    const value = max - (range * index) / 4;
-    return { value, y: yForValue(value) };
-  });
+  const activeType = kullanilabilirGrafikler.includes(grafikTuru)
+    ? grafikTuru
+    : (kullanilabilirGrafikler[0] ?? "yatirimci");
+  const config = grafikler[activeType];
+  const series = useMemo<MarketChartPoint[]>(
+    () =>
+      veriler.flatMap((row) => {
+        const value = config.getValue(row);
+        if (typeof value !== "number" || !Number.isFinite(value)) return [];
+        return [{ date: row.tarih, value, extra: row.fonToplamDeger }];
+      }),
+    [config, veriler]
+  );
+  const latest = series.at(-1)?.value;
 
   return (
     <section className="mt-6 border-y border-slate-200 bg-white py-6">
@@ -160,18 +106,15 @@ export default function FonTarihselGrafikler({
             {kod} fonu veri grafikleri
           </h3>
         </div>
-        <div
-          className="grid grid-cols-2 rounded-md border border-slate-200 bg-slate-100 p-1 sm:grid-cols-4"
-          aria-label="Grafik türü"
-        >
-          {(Object.keys(grafikler) as GrafikTuru[]).map((type) => (
+        <div className="grid grid-cols-2 rounded-md border border-slate-200 bg-slate-100 p-1 sm:grid-cols-4" aria-label="Grafik türü">
+          {kullanilabilirGrafikler.map((type) => (
             <button
               key={type}
               type="button"
               onClick={() => setGrafikTuru(type)}
-              aria-pressed={grafikTuru === type}
-              className={`min-h-9 px-3 text-xs font-semibold transition sm:text-sm ${
-                grafikTuru === type
+              aria-pressed={activeType === type}
+              className={`min-h-9 px-3 text-xs font-semibold transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-sky-500 sm:text-sm ${
+                activeType === type
                   ? "rounded-sm bg-white text-slate-950 shadow-sm"
                   : "text-slate-600 hover:text-slate-950"
               }`}
@@ -184,143 +127,25 @@ export default function FonTarihselGrafikler({
 
       <dl className="mt-5 border-y border-slate-100">
         <div className="px-4 py-3 md:px-6">
-          <dt className="text-xs font-semibold uppercase text-slate-500">
-            Son değer
-          </dt>
+          <dt className="text-xs font-semibold uppercase text-slate-500">Son değer</dt>
           <dd className="mt-1 text-lg font-bold text-slate-950">
-            {formatValue(grafikTuru, latest)}
+            {typeof latest === "number" ? formatLatest(activeType, latest) : "-"}
           </dd>
         </div>
       </dl>
 
-      <div className="overflow-x-auto px-2 pt-5 md:px-4">
-        <svg
-          viewBox={`0 0 ${WIDTH} ${HEIGHT}`}
-          role="img"
-          aria-label={`${kod} ${config.etiket.toLocaleLowerCase(
-            "tr-TR"
-          )} tarihsel değişim grafiği`}
-          className="h-auto min-w-[640px] w-full"
-        >
-          {yTicks.map((tick) => (
-            <g key={tick.y}>
-              <line
-                x1={PADDING.left}
-                x2={WIDTH - PADDING.right}
-                y1={tick.y}
-                y2={tick.y}
-                stroke="#E2E8F0"
-                strokeWidth="1"
-              />
-              <text
-                x={PADDING.left - 10}
-                y={tick.y + 4}
-                textAnchor="end"
-                fontSize="11"
-                fill="#64748B"
-              >
-                {eksenDegeri(grafikTuru, tick.value)}
-              </text>
-            </g>
-          ))}
-
-          {grafikTuru === "paraAkisi" ? (
-            <>
-              <line
-                x1={PADDING.left}
-                x2={WIDTH - PADDING.right}
-                y1={zeroY}
-                y2={zeroY}
-                stroke="#64748B"
-                strokeWidth="1.5"
-              />
-              {veriler.map((row, index) => {
-                const value = row.paraGirisiCikisi;
-                const y = yForValue(value);
-                const barWidth = Math.min(54, chartWidth / Math.max(veriler.length, 2) / 1.8);
-                return (
-                  <rect
-                    key={row.tarih}
-                    x={xForIndex(index) - barWidth / 2}
-                    y={Math.min(y, zeroY)}
-                    width={barWidth}
-                    height={Math.max(Math.abs(zeroY - y), 2)}
-                    rx="3"
-                    fill={value >= 0 ? "#16A34A" : "#DC2626"}
-                  >
-                    <title>
-                      {tamTarihEtiketi(row.tarih)}: {para(value)}
-                    </title>
-                  </rect>
-                );
-              })}
-            </>
-          ) : (
-            <>
-              {grafikTuru === "marj" && (
-                <line
-                  x1={PADDING.left}
-                  x2={WIDTH - PADDING.right}
-                  y1={zeroY}
-                  y2={zeroY}
-                  stroke="#64748B"
-                  strokeWidth="1.5"
-                />
-              )}
-              <polyline
-                points={points.join(" ")}
-                fill="none"
-                stroke={config.renk}
-                strokeWidth="4"
-                strokeLinejoin="round"
-                strokeLinecap="round"
-              />
-              {veriler.map((row, index) => {
-                const value = config.getValue(row);
-                return (
-                  <circle
-                    key={row.tarih}
-                    cx={xForIndex(index)}
-                    cy={yForValue(value)}
-                    r="5"
-                    fill="#FFFFFF"
-                    stroke={config.renk}
-                    strokeWidth="3"
-                  >
-                    <title>
-                      {tamTarihEtiketi(row.tarih)}: {formatValue(grafikTuru, value)}
-                    </title>
-                  </circle>
-                );
-              })}
-            </>
-          )}
-
-          {veriler.map((row, index) => {
-            const show =
-              index === 0 ||
-              index === veriler.length - 1 ||
-              index % dateStep === 0;
-            if (!show) return null;
-            return (
-              <text
-                key={row.tarih}
-                x={xForIndex(index)}
-                y={HEIGHT - 18}
-                textAnchor="middle"
-                fontSize="11"
-                fill="#64748B"
-              >
-                {tarihEtiketi(row.tarih)}
-              </text>
-            );
-          })}
-        </svg>
+      <div className="px-4 pt-5 md:px-6">
+        <MarketChart
+          key={`${activeType}-${series.length}`}
+          title={config.baslik}
+          series={series}
+          kind={config.kind}
+          unit={config.unit}
+          includeZero={config.includeZero}
+          extraLabel={activeType === "paraAkisi" ? "Portföy" : undefined}
+          minWidth={820}
+        />
       </div>
-
-      <p className="px-4 pt-2 text-xs leading-5 text-slate-500 md:px-6">
-        Nokta veya sütunların üzerine gelerek tarih ve değeri görebilirsiniz.
-      </p>
     </section>
   );
 }

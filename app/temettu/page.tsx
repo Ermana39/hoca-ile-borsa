@@ -24,13 +24,6 @@ const temettuKutulari = [
       "Hedef aylık temettü geliriniz için gereken portföy büyüklüğünü ve hedefe kaç yılda ulaşacağınızı hesaplayabilirsiniz.",
   },
   {
-    title: "Temmuz Ayı Temettü Verenler",
-    href: "/temettu/temmuz-ayi-temettu-takvimi",
-    icon: "temettu-takvim" as CategoryIconName,
-    description:
-      "Temmuz ayında temettü veren şirketleri görüntüleyerek yaz dönemindeki temettü fırsatlarını takip edebilirsiniz.",
-  },
-  {
     title: "Ağustos Ayı Temettü Verenler",
     href: "/temettu/agustos-ayi-temettu-takvimi",
     icon: "temettu-takvim" as CategoryIconName,

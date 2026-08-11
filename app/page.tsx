@@ -126,7 +126,6 @@ const sayfaBasliklari: Record<string, string> = {
   "/temettu/temettu-egitimi": "Temettü Eğitimi",
   "/temettu/mayis-ayi-temettu-verenler": "Mayıs Ayı Temettü Verenler",
   "/temettu/haziran-ayi-temettu-verenler": "Haziran Ayı Temettü Verenler",
-  "/temettu/temmuz-ayi-temettu-verenler": "Temmuz Ayı Temettü Verenler",
   "/temettu/agustos-ayi-temettu-verenler": "Ağustos Ayı Temettü Verenler",
   "/temettu/eylul-ayi-temettu-verenler": "Eylül Ayı Temettü Verenler",
 
@@ -183,25 +182,26 @@ function KategoriKutusu({
 }
 
 
-function ViopEgitimBanner() {
+function YoutubeTanitimBanner() {
   return (
     <section className="px-4 pb-6 md:px-6">
-      <Link
-        href="/viop-egitim"
-        prefetch={false}
-        aria-label="VİOP eğitim serisi detay sayfasına git"
-        className="group block overflow-hidden rounded-2xl shadow-[0_10px_35px_rgba(15,23,42,0.12)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_45px_rgba(15,23,42,0.18)] focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:ring-offset-2"
+      <a
+        href="https://www.youtube.com/@hocaileborsa"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Hoca ile Borsa YouTube kanalını aç"
+        className="group block overflow-hidden rounded-2xl shadow-[0_10px_35px_rgba(15,23,42,0.12)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_45px_rgba(15,23,42,0.18)] focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
       >
         <Image
-          src="/viop-egitim-banner.png"
-          alt="Yaşayan VİOP eğitim seti lansman bannerı"
-          width={2112}
-          height={512}
+          src="/youtube-tanitim.webp"
+          alt="Hoca ile Borsa YouTube kanalında borsa eğitimleri, halka arz analizleri ve fon değerlendirmeleri"
+          width={2172}
+          height={724}
           unoptimized
           className="block h-auto w-full rounded-2xl"
           priority={false}
         />
-      </Link>
+      </a>
     </section>
   );
 }
@@ -451,8 +451,6 @@ export default function HomePage() {
           </div>
         </section>
 
-        <ViopEgitimBanner />
-
         <section className="px-4 pb-6 md:px-6">
           <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-[0_2px_12px_rgba(15,23,42,0.06)]">
             <div className="flex items-center justify-between border-b border-slate-100 px-5 py-4 md:px-6">
@@ -496,6 +494,8 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        <YoutubeTanitimBanner />
 
         <SonGuncellemelerBar items={guncellemeler} />
 
