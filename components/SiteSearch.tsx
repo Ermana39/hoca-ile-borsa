@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "@/components/NoPrefetchLink";
+import { Landmark } from "lucide-react";
 import { useRouter } from "next/navigation";
 import {
   useCallback,
@@ -19,6 +20,7 @@ const MIN_QUERY_LENGTH = 2;
 const MAX_RESULTS_PER_TYPE = 4;
 const TYPE_ORDER: SiteSearchItemType[] = [
   "sirket",
+  "fon",
   "haber",
   "halka-arz",
   "rehber",
@@ -26,6 +28,7 @@ const TYPE_ORDER: SiteSearchItemType[] = [
 
 const TYPE_LABELS: Record<SiteSearchItemType, string> = {
   sirket: "Şirketler",
+  fon: "Fonlar",
   haber: "Haberler",
   "halka-arz": "Halka Arzlar",
   rehber: "Rehberler",
@@ -33,6 +36,7 @@ const TYPE_LABELS: Record<SiteSearchItemType, string> = {
 
 const TYPE_STYLES: Record<SiteSearchItemType, string> = {
   sirket: "bg-blue-50 text-blue-700 ring-blue-200",
+  fon: "bg-cyan-50 text-cyan-700 ring-cyan-200",
   haber: "bg-amber-50 text-amber-700 ring-amber-200",
   "halka-arz": "bg-violet-50 text-violet-700 ring-violet-200",
   rehber: "bg-emerald-50 text-emerald-700 ring-emerald-200",
@@ -40,6 +44,7 @@ const TYPE_STYLES: Record<SiteSearchItemType, string> = {
 
 const QUICK_LINKS = [
   { label: "Şirketler", href: "/hisseler", type: "sirket" as const },
+  { label: "Fonlar", href: "/fonlar", type: "fon" as const },
   { label: "Haberler", href: "/haberler", type: "haber" as const },
   {
     label: "Halka Arz Takvimi",
@@ -168,6 +173,10 @@ function SearchTypeIcon({ type }: { type: SiteSearchItemType }) {
     );
   }
 
+  if (type === "fon") {
+    return <Landmark className={className} aria-hidden="true" />;
+  }
+
   if (type === "halka-arz") {
     return (
       <svg className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" aria-hidden="true">
@@ -201,11 +210,11 @@ export default function SiteSearch({ onOpen }: { onOpen?: () => void }) {
     setLoading(true);
     setError(false);
 
-    const request = fetch("/api/arama", { cache: "force-cache" }).then(
+    const request = fetch("/api/arama?v=2", { cache: "force-cache" }).then(
       async (response) => {
         if (!response.ok) throw new Error("Arama verisi yüklenemedi.");
         const payload = (await response.json()) as SiteSearchPayload;
-        if (payload.version !== 1 || !Array.isArray(payload.items)) {
+        if (payload.version !== 2 || !Array.isArray(payload.items)) {
           throw new Error("Arama verisi geçersiz.");
         }
         return payload;
@@ -364,7 +373,7 @@ export default function SiteSearch({ onOpen }: { onOpen?: () => void }) {
                     Site Genelinde Ara
                   </h2>
                   <p className="mt-0.5 text-xs text-slate-500">
-                    Şirket, haber, halka arz ve rehberleri birlikte arayın.
+                    Şirket, fon, haber, halka arz ve rehberleri birlikte arayın.
                   </p>
                 </div>
                 <button
@@ -393,7 +402,7 @@ export default function SiteSearch({ onOpen }: { onOpen?: () => void }) {
                     setActiveIndex(0);
                   }}
                   onKeyDown={handleInputKeyDown}
-                  placeholder="Örn. ASTOR, bedelsiz, halka arz kaç lot"
+                  placeholder="Örn. ASTOR, TLY, bedelsiz, halka arz kaç lot"
                   className="h-12 w-full rounded-xl border border-slate-300 bg-white pl-11 pr-10 text-sm font-medium text-slate-900 outline-none transition placeholder:font-normal placeholder:text-slate-400 focus:border-blue-400 focus:ring-4 focus:ring-blue-100 sm:text-base"
                   role="combobox"
                   aria-expanded={flatResults.length > 0}
@@ -430,7 +439,7 @@ export default function SiteSearch({ onOpen }: { onOpen?: () => void }) {
                   <p className="px-1 text-xs font-semibold uppercase tracking-wider text-slate-400">
                     Hızlı Bağlantılar
                   </p>
-                  <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4">
+                  <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-5">
                     {QUICK_LINKS.map((link) => (
                       <Link
                         key={link.href}
@@ -449,7 +458,7 @@ export default function SiteSearch({ onOpen }: { onOpen?: () => void }) {
                     ))}
                   </div>
                   <p className="mt-5 text-center text-xs leading-5 text-slate-500">
-                    En az iki karakter yazın. Hisse kodları ve tam başlık eşleşmeleri önce gösterilir.
+                    En az iki karakter yazın. Hisse ve fon kodları ile tam başlık eşleşmeleri önce gösterilir.
                   </p>
                 </div>
               ) : loading ? (
@@ -477,7 +486,7 @@ export default function SiteSearch({ onOpen }: { onOpen?: () => void }) {
                     </svg>
                   </span>
                   <p className="mt-3 text-sm font-semibold text-slate-800">“{query.trim()}” için sonuç bulunamadı.</p>
-                  <p className="mt-1 text-xs leading-5 text-slate-500">Hisse kodunu veya daha kısa bir konu ifadesini deneyin.</p>
+                  <p className="mt-1 text-xs leading-5 text-slate-500">Hisse veya fon kodunu ya da daha kısa bir konu ifadesini deneyin.</p>
                 </div>
               ) : (
                 <div className="space-y-5" role="listbox" aria-label="Arama sonuçları">

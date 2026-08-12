@@ -8,6 +8,7 @@ import {
   halkaArzGetir,
 } from "@/lib/halka-arz";
 import { getTumHisseler } from "@/lib/hisseler";
+import { getCurrentFundsData } from "@/lib/fon-platform";
 import { rehberler } from "@/lib/rehberler";
 import type {
   SiteSearchItem,
@@ -58,6 +59,24 @@ function getCompanyItems(): SiteSearchItem[] {
       keywords: [code, hisse.sirketAdi, "hisse", "şirket"],
     };
   });
+}
+
+function getFundItems(): SiteSearchItem[] {
+  return getCurrentFundsData()
+    .fonlar.filter((fund) => fund.aktifMi)
+    .map((fund) => {
+      const code = fund.kod.toUpperCase();
+
+      return {
+        id: `fon:${code}`,
+        type: "fon",
+        title: fund.ad,
+        href: `/fonlar/${fund.slug}`,
+        eyebrow: "Yatırım Fonu",
+        code,
+        description: `${fund.kategori} · ${fund.yonetici}`,
+      };
+    });
 }
 
 function getNewsItems(): SiteSearchItem[] {
@@ -176,6 +195,7 @@ export function getSiteSearchPayload(): SiteSearchPayload {
 
   for (const item of [
     ...getCompanyItems(),
+    ...getFundItems(),
     ...getNewsItems(),
     ...getIpoItems(),
     ...getGuideItems(),
@@ -184,7 +204,7 @@ export function getSiteSearchPayload(): SiteSearchPayload {
   }
 
   return {
-    version: 1,
+    version: 2,
     items: Array.from(uniqueItems.values()),
   };
 }

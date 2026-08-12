@@ -426,7 +426,7 @@ export default function HomePage() {
         <section className="px-4 pt-5 md:px-6 md:pt-6">
           <div className="overflow-hidden rounded-2xl">
             <Image
-              src="/banner2.webp"
+              src="/banner3.webp"
               alt="Hoca İle Borsa banner görseli"
               width={1228}
               height={414}

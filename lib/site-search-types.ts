@@ -1,5 +1,6 @@
 export type SiteSearchItemType =
   | "sirket"
+  | "fon"
   | "haber"
   | "halka-arz"
   | "rehber";
@@ -17,6 +18,6 @@ export type SiteSearchItem = {
 };
 
 export type SiteSearchPayload = {
-  version: 1;
+  version: 2;
   items: SiteSearchItem[];
 };
