@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "TRR",
     "slug": "trr",
@@ -12,13 +12,13 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 6.367516,
-    "tedavuldekiPaySayisi": 373214635,
-    "kisiSayisi": 462,
-    "fonToplamDeger": 2376450250.48,
-    "gunlukGetiri": 0.00105521,
+    "fiyat": 6.374234,
+    "tedavuldekiPaySayisi": 370110144,
+    "kisiSayisi": 457,
+    "fonToplamDeger": 2359168700.79,
+    "gunlukGetiri": 0.00105504,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 479244.72,
+      "gunluk": -19788752.08,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
+      "gunluk": -5,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TRR",
+        "fonAdi": "TEB PORTFÖY BEŞİNCİ SERBEST (TL) FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 6.374234,
+        "tedavuldekiPaySayisi": 370110144,
+        "kisiSayisi": 457,
+        "fonToplamDeger": 2359168700.79,
+        "gunlukGetiri": 0.00105504,
+        "paraGirisiCikisi": -19788752.08,
+        "yatirimciDegisimi": -5
+      },
       {
         "fonKodu": "TRR",
         "fonAdi": "TEB PORTFÖY BEŞİNCİ SERBEST (TL) FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00105521,
       "paraGirisiCikisi": 479244.72,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "TRR",
+      "fonAdi": "TEB PORTFÖY BEŞİNCİ SERBEST (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 6.374234,
+      "tedavuldekiPaySayisi": 370110144,
+      "kisiSayisi": 457,
+      "fonToplamDeger": 2359168700.79,
+      "gunlukGetiri": 0.00105504,
+      "paraGirisiCikisi": -19788752.08,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TRR",
+      "fonAdi": "TEB PORTFÖY BEŞİNCİ SERBEST (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 6.374234,
+      "tedavuldekiPaySayisi": 370110144,
+      "kisiSayisi": 457,
+      "fonToplamDeger": 2359168700.79,
+      "gunlukGetiri": 0.00105504,
+      "paraGirisiCikisi": -19788752.08,
+      "yatirimciDegisimi": -5
+    },
     {
       "fonKodu": "TRR",
       "fonAdi": "TEB PORTFÖY BEŞİNCİ SERBEST (TL) FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

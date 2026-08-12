@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "VKI",
     "slug": "vki",
@@ -12,13 +12,13 @@
     "yonetici": "ALBARAKA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "albaraka-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 3.07597,
-    "tedavuldekiPaySayisi": 557142883,
+    "fiyat": 3.079027,
+    "tedavuldekiPaySayisi": 553157463,
     "kisiSayisi": 366,
-    "fonToplamDeger": 1713754898.29,
-    "gunlukGetiri": 0.00099352,
+    "fonToplamDeger": 1703186722.91,
+    "gunlukGetiri": 0.00099383,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 29680834.28,
+      "gunluk": -12271215.79,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "VKI",
+        "fonAdi": "ALBARAKA PORTFÖY VAKIF KATILIM İKİNCİ KISA VADELİ KATILIM SERBEST (TL) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 3.079027,
+        "tedavuldekiPaySayisi": 553157463,
+        "kisiSayisi": 366,
+        "fonToplamDeger": 1703186722.91,
+        "gunlukGetiri": 0.00099383,
+        "paraGirisiCikisi": -12271215.79,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "VKI",
         "fonAdi": "ALBARAKA PORTFÖY VAKIF KATILIM İKİNCİ KISA VADELİ KATILIM SERBEST (TL) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00099352,
       "paraGirisiCikisi": 29680834.28,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "VKI",
+      "fonAdi": "ALBARAKA PORTFÖY VAKIF KATILIM İKİNCİ KISA VADELİ KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 3.079027,
+      "tedavuldekiPaySayisi": 553157463,
+      "kisiSayisi": 366,
+      "fonToplamDeger": 1703186722.91,
+      "gunlukGetiri": 0.00099383,
+      "paraGirisiCikisi": -12271215.79,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "VKI",
+      "fonAdi": "ALBARAKA PORTFÖY VAKIF KATILIM İKİNCİ KISA VADELİ KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 3.079027,
+      "tedavuldekiPaySayisi": 553157463,
+      "kisiSayisi": 366,
+      "fonToplamDeger": 1703186722.91,
+      "gunlukGetiri": 0.00099383,
+      "paraGirisiCikisi": -12271215.79,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "VKI",
       "fonAdi": "ALBARAKA PORTFÖY VAKIF KATILIM İKİNCİ KISA VADELİ KATILIM SERBEST (TL) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

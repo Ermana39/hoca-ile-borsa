@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "RPG",
     "slug": "rpg",
@@ -12,44 +12,56 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 6.132355,
-    "tedavuldekiPaySayisi": 145046997,
-    "kisiSayisi": 1472,
-    "fonToplamDeger": 889479628.38,
-    "gunlukGetiri": 0.00624816,
+    "fiyat": 6.197541,
+    "tedavuldekiPaySayisi": 145573377,
+    "kisiSayisi": 1492,
+    "fonToplamDeger": 902197032.36,
+    "gunlukGetiri": 0.01062985,
     "getiriler": {
-      "birAy": 0.08099600000000001,
-      "ucAy": -0.020815,
-      "altiAy": -0.07791000000000001,
-      "yilbasi": 0.089026,
-      "birYil": 0.497202,
-      "ucYil": 2.6805779999999997,
+      "birAy": 0.092486,
+      "ucAy": -0.008883,
+      "altiAy": -0.070201,
+      "yilbasi": 0.100602,
+      "birYil": 0.526121,
+      "ucYil": 2.727533,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -83387.76,
+      "gunluk": 3262261.63,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 8,
+      "gunluk": 20,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RPG",
+        "fonAdi": "ROTA PORTFÖY ALTIN FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 6.197541,
+        "tedavuldekiPaySayisi": 145573377,
+        "kisiSayisi": 1492,
+        "fonToplamDeger": 902197032.36,
+        "gunlukGetiri": 0.01062985,
+        "paraGirisiCikisi": 3262261.63,
+        "yatirimciDegisimi": 20
+      },
       {
         "fonKodu": "RPG",
         "fonAdi": "ROTA PORTFÖY ALTIN FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00624816,
       "paraGirisiCikisi": -83387.76,
       "yatirimciDegisimi": 8
+    },
+    {
+      "fonKodu": "RPG",
+      "fonAdi": "ROTA PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 6.197541,
+      "tedavuldekiPaySayisi": 145573377,
+      "kisiSayisi": 1492,
+      "fonToplamDeger": 902197032.36,
+      "gunlukGetiri": 0.01062985,
+      "paraGirisiCikisi": 3262261.63,
+      "yatirimciDegisimi": 20
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RPG",
+      "fonAdi": "ROTA PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 6.197541,
+      "tedavuldekiPaySayisi": 145573377,
+      "kisiSayisi": 1492,
+      "fonToplamDeger": 902197032.36,
+      "gunlukGetiri": 0.01062985,
+      "paraGirisiCikisi": 3262261.63,
+      "yatirimciDegisimi": 20
+    },
     {
       "fonKodu": "RPG",
       "fonAdi": "ROTA PORTFÖY ALTIN FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "FYI",
     "slug": "fyi",
@@ -12,44 +12,56 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 10.165168,
-    "tedavuldekiPaySayisi": 4303129,
-    "kisiSayisi": 207,
-    "fonToplamDeger": 43742028.74,
-    "gunlukGetiri": 0.00745155,
+    "fiyat": 10.084231,
+    "tedavuldekiPaySayisi": 4303073,
+    "kisiSayisi": 202,
+    "fonToplamDeger": 43393182.61,
+    "gunlukGetiri": -0.00796219,
     "getiriler": {
-      "birAy": 0.037136999999999996,
-      "ucAy": 0.084193,
-      "altiAy": 0.23543199999999997,
-      "yilbasi": 0.5282330000000001,
-      "birYil": 0.32397,
-      "ucYil": 1.748701,
-      "besYil": 4.437838
+      "birAy": 0.028879000000000002,
+      "ucAy": 0.064558,
+      "altiAy": 0.216864,
+      "yilbasi": 0.516065,
+      "birYil": 0.306298,
+      "ucYil": 1.706952,
+      "besYil": 4.394541
     },
     "paraAkisi": {
-      "gunluk": -1067698.42,
+      "gunluk": -564.72,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -5,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FYI",
+        "fonAdi": "AZİMUT PORTFÖY 4.0 SERBEST FON",
+        "tarih": "2026-08-12",
+        "fiyat": 10.084231,
+        "tedavuldekiPaySayisi": 4303073,
+        "kisiSayisi": 202,
+        "fonToplamDeger": 43393182.61,
+        "gunlukGetiri": -0.00796219,
+        "paraGirisiCikisi": -564.72,
+        "yatirimciDegisimi": -5
+      },
       {
         "fonKodu": "FYI",
         "fonAdi": "AZİMUT PORTFÖY 4.0 SERBEST FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00745155,
       "paraGirisiCikisi": -1067698.42,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "FYI",
+      "fonAdi": "AZİMUT PORTFÖY 4.0 SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 10.084231,
+      "tedavuldekiPaySayisi": 4303073,
+      "kisiSayisi": 202,
+      "fonToplamDeger": 43393182.61,
+      "gunlukGetiri": -0.00796219,
+      "paraGirisiCikisi": -564.72,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FYI",
+      "fonAdi": "AZİMUT PORTFÖY 4.0 SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 10.084231,
+      "tedavuldekiPaySayisi": 4303073,
+      "kisiSayisi": 202,
+      "fonToplamDeger": 43393182.61,
+      "gunlukGetiri": -0.00796219,
+      "paraGirisiCikisi": -564.72,
+      "yatirimciDegisimi": -5
+    },
     {
       "fonKodu": "FYI",
       "fonAdi": "AZİMUT PORTFÖY 4.0 SERBEST FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

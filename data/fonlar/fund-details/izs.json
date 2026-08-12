@@ -1,55 +1,67 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "IZS",
     "slug": "izs",
     "ad": "İSTANBUL PORTFÖY ALTINCI SERBEST FON",
     "kategori": "Serbest Şemsiye Fonu",
-    "riskDegeri": 6,
+    "riskDegeri": 7,
     "kapYoneticiKodu": "ISY",
     "yonetici": "İSTANBUL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "istanbul-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 9.711201,
-    "tedavuldekiPaySayisi": 8288919,
-    "kisiSayisi": 27,
-    "fonToplamDeger": 80495358.23,
-    "gunlukGetiri": 0.00488764,
+    "fiyat": 9.796052,
+    "tedavuldekiPaySayisi": 8291532,
+    "kisiSayisi": 28,
+    "fonToplamDeger": 81224277.34,
+    "gunlukGetiri": 0.00873744,
     "getiriler": {
-      "birAy": 0.061196,
-      "ucAy": 0.19691099999999997,
-      "altiAy": 0.114047,
-      "yilbasi": 0.06628300000000001,
-      "birYil": 0.102195,
-      "ucYil": 1.19956,
-      "besYil": 5.555771
+      "birAy": 0.070468,
+      "ucAy": 0.213565,
+      "altiAy": 0.119199,
+      "yilbasi": 0.0756,
+      "birYil": 0.107187,
+      "ucYil": 1.218779,
+      "besYil": 5.6130510000000005
     },
     "paraAkisi": {
-      "gunluk": 512168.74,
+      "gunluk": 25597.08,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": 1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IZS",
+        "fonAdi": "İSTANBUL PORTFÖY ALTINCI SERBEST FON",
+        "tarih": "2026-08-12",
+        "fiyat": 9.796052,
+        "tedavuldekiPaySayisi": 8291532,
+        "kisiSayisi": 28,
+        "fonToplamDeger": 81224277.34,
+        "gunlukGetiri": 0.00873744,
+        "paraGirisiCikisi": 25597.08,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "IZS",
         "fonAdi": "İSTANBUL PORTFÖY ALTINCI SERBEST FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00488764,
       "paraGirisiCikisi": 512168.74,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "IZS",
+      "fonAdi": "İSTANBUL PORTFÖY ALTINCI SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 9.796052,
+      "tedavuldekiPaySayisi": 8291532,
+      "kisiSayisi": 28,
+      "fonToplamDeger": 81224277.34,
+      "gunlukGetiri": 0.00873744,
+      "paraGirisiCikisi": 25597.08,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IZS",
+      "fonAdi": "İSTANBUL PORTFÖY ALTINCI SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 9.796052,
+      "tedavuldekiPaySayisi": 8291532,
+      "kisiSayisi": 28,
+      "fonToplamDeger": 81224277.34,
+      "gunlukGetiri": 0.00873744,
+      "paraGirisiCikisi": 25597.08,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "IZS",
       "fonAdi": "İSTANBUL PORTFÖY ALTINCI SERBEST FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

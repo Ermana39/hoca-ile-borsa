@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "RPS",
     "slug": "rps",
@@ -12,44 +12,56 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 63.217985,
-    "tedavuldekiPaySayisi": 2750135,
-    "kisiSayisi": 98,
-    "fonToplamDeger": 173857992.48,
-    "gunlukGetiri": 0.0017079,
+    "fiyat": 63.25269,
+    "tedavuldekiPaySayisi": 2753901,
+    "kisiSayisi": 99,
+    "fonToplamDeger": 174191646.28,
+    "gunlukGetiri": 0.00054897,
     "getiriler": {
-      "birAy": 0.016308,
-      "ucAy": 0.047198000000000004,
-      "altiAy": 0.084315,
-      "yilbasi": 0.11030699999999999,
-      "birYil": 0.217426,
-      "ucYil": 1.147531,
+      "birAy": 0.016866000000000003,
+      "ucAy": 0.045744999999999994,
+      "altiAy": 0.083464,
+      "yilbasi": 0.11091699999999999,
+      "birYil": 0.21569,
+      "ucYil": 1.146409,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": 238209.63,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": 1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RPS",
+        "fonAdi": "ROTA PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 63.25269,
+        "tedavuldekiPaySayisi": 2753901,
+        "kisiSayisi": 99,
+        "fonToplamDeger": 174191646.28,
+        "gunlukGetiri": 0.00054897,
+        "paraGirisiCikisi": 238209.63,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "RPS",
         "fonAdi": "ROTA PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.0017079,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "RPS",
+      "fonAdi": "ROTA PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 63.25269,
+      "tedavuldekiPaySayisi": 2753901,
+      "kisiSayisi": 99,
+      "fonToplamDeger": 174191646.28,
+      "gunlukGetiri": 0.00054897,
+      "paraGirisiCikisi": 238209.63,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RPS",
+      "fonAdi": "ROTA PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 63.25269,
+      "tedavuldekiPaySayisi": 2753901,
+      "kisiSayisi": 99,
+      "fonToplamDeger": 174191646.28,
+      "gunlukGetiri": 0.00054897,
+      "paraGirisiCikisi": 238209.63,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "RPS",
       "fonAdi": "ROTA PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

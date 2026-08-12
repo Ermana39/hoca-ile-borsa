@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "IHA",
     "slug": "iha",
@@ -12,24 +12,24 @@
     "yonetici": "ALLBATROSS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "allbatross-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 3.13727,
-    "tedavuldekiPaySayisi": 1900800,
-    "kisiSayisi": 324,
-    "fonToplamDeger": 5963322.13,
-    "gunlukGetiri": 0.00043464,
+    "fiyat": 3.103291,
+    "tedavuldekiPaySayisi": 1897261,
+    "kisiSayisi": 322,
+    "fonToplamDeger": 5887753.8,
+    "gunlukGetiri": -0.01083075,
     "getiriler": {
-      "birAy": -0.012627,
-      "ucAy": -0.07484099999999999,
-      "altiAy": -0.028994,
-      "yilbasi": 0.20122299999999999,
-      "birYil": 0.230574,
-      "ucYil": 1.4295079999999998,
+      "birAy": -0.023321,
+      "ucAy": -0.091334,
+      "altiAy": -0.044363,
+      "yilbasi": 0.18821300000000002,
+      "birYil": 0.214679,
+      "ucYil": 1.305422,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -323.14,
+      "gunluk": -10982.55,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IHA",
+        "fonAdi": "ALLBATROSS PORTFÖY İKİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 3.103291,
+        "tedavuldekiPaySayisi": 1897261,
+        "kisiSayisi": 322,
+        "fonToplamDeger": 5887753.8,
+        "gunlukGetiri": -0.01083075,
+        "paraGirisiCikisi": -10982.55,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "IHA",
         "fonAdi": "ALLBATROSS PORTFÖY İKİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00043464,
       "paraGirisiCikisi": -323.14,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "IHA",
+      "fonAdi": "ALLBATROSS PORTFÖY İKİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 3.103291,
+      "tedavuldekiPaySayisi": 1897261,
+      "kisiSayisi": 322,
+      "fonToplamDeger": 5887753.8,
+      "gunlukGetiri": -0.01083075,
+      "paraGirisiCikisi": -10982.55,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IHA",
+      "fonAdi": "ALLBATROSS PORTFÖY İKİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 3.103291,
+      "tedavuldekiPaySayisi": 1897261,
+      "kisiSayisi": 322,
+      "fonToplamDeger": 5887753.8,
+      "gunlukGetiri": -0.01083075,
+      "paraGirisiCikisi": -10982.55,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "IHA",
       "fonAdi": "ALLBATROSS PORTFÖY İKİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "GA1",
     "slug": "ga1",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.965726,
-    "tedavuldekiPaySayisi": 163402989,
-    "kisiSayisi": 1493,
-    "fonToplamDeger": 321205478.1,
-    "gunlukGetiri": 0.00283701,
+    "fiyat": 1.963654,
+    "tedavuldekiPaySayisi": 162888994,
+    "kisiSayisi": 1482,
+    "fonToplamDeger": 319857602.43,
+    "gunlukGetiri": -0.00105406,
     "getiriler": {
-      "birAy": 0.019941,
-      "ucAy": 0.075434,
-      "altiAy": 0.108142,
-      "yilbasi": 0.154369,
-      "birYil": 0.338106,
-      "ucYil": 1.802671,
-      "besYil": 3.4388769999999997
+      "birAy": 0.018866,
+      "ucAy": 0.077991,
+      "altiAy": 0.11118600000000001,
+      "yilbasi": 0.153152,
+      "birYil": 0.334602,
+      "ucYil": 1.794607,
+      "besYil": 3.4318560000000002
     },
     "paraAkisi": {
-      "gunluk": -251284.65,
+      "gunluk": -1009308.34,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": -11,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GA1",
+        "fonAdi": "GARANTİ PORTFÖY BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 1.963654,
+        "tedavuldekiPaySayisi": 162888994,
+        "kisiSayisi": 1482,
+        "fonToplamDeger": 319857602.43,
+        "gunlukGetiri": -0.00105406,
+        "paraGirisiCikisi": -1009308.34,
+        "yatirimciDegisimi": -11
+      },
       {
         "fonKodu": "GA1",
         "fonAdi": "GARANTİ PORTFÖY BORÇLANMA ARAÇLARI FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00283701,
       "paraGirisiCikisi": -251284.65,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "GA1",
+      "fonAdi": "GARANTİ PORTFÖY BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 1.963654,
+      "tedavuldekiPaySayisi": 162888994,
+      "kisiSayisi": 1482,
+      "fonToplamDeger": 319857602.43,
+      "gunlukGetiri": -0.00105406,
+      "paraGirisiCikisi": -1009308.34,
+      "yatirimciDegisimi": -11
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GA1",
+      "fonAdi": "GARANTİ PORTFÖY BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 1.963654,
+      "tedavuldekiPaySayisi": 162888994,
+      "kisiSayisi": 1482,
+      "fonToplamDeger": 319857602.43,
+      "gunlukGetiri": -0.00105406,
+      "paraGirisiCikisi": -1009308.34,
+      "yatirimciDegisimi": -11
+    },
     {
       "fonKodu": "GA1",
       "fonAdi": "GARANTİ PORTFÖY BORÇLANMA ARAÇLARI FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

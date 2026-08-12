@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "POD",
     "slug": "pod",
@@ -12,13 +12,13 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 68.461797,
-    "tedavuldekiPaySayisi": 64999335,
-    "kisiSayisi": 1410,
-    "fonToplamDeger": 4449971255.77,
-    "gunlukGetiri": 0.00624135,
+    "fiyat": 68.513176,
+    "tedavuldekiPaySayisi": 64821874,
+    "kisiSayisi": 1407,
+    "fonToplamDeger": 4441152434.47,
+    "gunlukGetiri": 0.00075048,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 4012614.38,
+      "gunluk": -12158416.73,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": -3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "POD",
+        "fonAdi": "DENİZ PORTFÖY ONBEŞİNCİ SERBEST (DÖVİZ-POUND) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 68.513176,
+        "tedavuldekiPaySayisi": 64821874,
+        "kisiSayisi": 1407,
+        "fonToplamDeger": 4441152434.47,
+        "gunlukGetiri": 0.00075048,
+        "paraGirisiCikisi": -12158416.73,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "POD",
         "fonAdi": "DENİZ PORTFÖY ONBEŞİNCİ SERBEST (DÖVİZ-POUND) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00624135,
       "paraGirisiCikisi": 4012614.38,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "POD",
+      "fonAdi": "DENİZ PORTFÖY ONBEŞİNCİ SERBEST (DÖVİZ-POUND) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 68.513176,
+      "tedavuldekiPaySayisi": 64821874,
+      "kisiSayisi": 1407,
+      "fonToplamDeger": 4441152434.47,
+      "gunlukGetiri": 0.00075048,
+      "paraGirisiCikisi": -12158416.73,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "POD",
+      "fonAdi": "DENİZ PORTFÖY ONBEŞİNCİ SERBEST (DÖVİZ-POUND) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 68.513176,
+      "tedavuldekiPaySayisi": 64821874,
+      "kisiSayisi": 1407,
+      "fonToplamDeger": 4441152434.47,
+      "gunlukGetiri": 0.00075048,
+      "paraGirisiCikisi": -12158416.73,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "POD",
       "fonAdi": "DENİZ PORTFÖY ONBEŞİNCİ SERBEST (DÖVİZ-POUND) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

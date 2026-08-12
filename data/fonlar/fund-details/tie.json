@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "TIE",
     "slug": "tie",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 0.720261,
-    "tedavuldekiPaySayisi": 2338757456,
-    "kisiSayisi": 18759,
-    "fonToplamDeger": 1684516767.62,
-    "gunlukGetiri": 0.00060292,
+    "fiyat": 0.713873,
+    "tedavuldekiPaySayisi": 2331851910,
+    "kisiSayisi": 18765,
+    "fonToplamDeger": 1664646420.04,
+    "gunlukGetiri": -0.00886901,
     "getiriler": {
-      "birAy": -0.057199,
-      "ucAy": -0.085794,
-      "altiAy": 0.052656,
-      "yilbasi": 0.282959,
-      "birYil": 0.30132000000000003,
-      "ucYil": 1.0711920000000001,
-      "besYil": 9.323362
+      "birAy": -0.065561,
+      "ucAy": -0.09717700000000001,
+      "altiAy": 0.037844,
+      "yilbasi": 0.271581,
+      "birYil": 0.281991,
+      "ucYil": 0.9898950000000001,
+      "besYil": 9.430488
     },
     "paraAkisi": {
-      "gunluk": 115937.53,
+      "gunluk": -4929682.84,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 12,
+      "gunluk": 6,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TIE",
+        "fonAdi": "İŞ PORTFÖY BIST 30 ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 0.713873,
+        "tedavuldekiPaySayisi": 2331851910,
+        "kisiSayisi": 18765,
+        "fonToplamDeger": 1664646420.04,
+        "gunlukGetiri": -0.00886901,
+        "paraGirisiCikisi": -4929682.84,
+        "yatirimciDegisimi": 6
+      },
       {
         "fonKodu": "TIE",
         "fonAdi": "İŞ PORTFÖY BIST 30 ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00060292,
       "paraGirisiCikisi": 115937.53,
       "yatirimciDegisimi": 12
+    },
+    {
+      "fonKodu": "TIE",
+      "fonAdi": "İŞ PORTFÖY BIST 30 ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 0.713873,
+      "tedavuldekiPaySayisi": 2331851910,
+      "kisiSayisi": 18765,
+      "fonToplamDeger": 1664646420.04,
+      "gunlukGetiri": -0.00886901,
+      "paraGirisiCikisi": -4929682.84,
+      "yatirimciDegisimi": 6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TIE",
+      "fonAdi": "İŞ PORTFÖY BIST 30 ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 0.713873,
+      "tedavuldekiPaySayisi": 2331851910,
+      "kisiSayisi": 18765,
+      "fonToplamDeger": 1664646420.04,
+      "gunlukGetiri": -0.00886901,
+      "paraGirisiCikisi": -4929682.84,
+      "yatirimciDegisimi": 6
+    },
     {
       "fonKodu": "TIE",
       "fonAdi": "İŞ PORTFÖY BIST 30 ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

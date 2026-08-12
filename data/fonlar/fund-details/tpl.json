@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "TPL",
     "slug": "tpl",
@@ -12,44 +12,56 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 21.089148,
-    "tedavuldekiPaySayisi": 23797182.01,
-    "kisiSayisi": 1519,
-    "fonToplamDeger": 501862288.69,
-    "gunlukGetiri": 0.00256418,
+    "fiyat": 21.069963,
+    "tedavuldekiPaySayisi": 23793185.01,
+    "kisiSayisi": 1518,
+    "fonToplamDeger": 501321519.48,
+    "gunlukGetiri": -0.00090971,
     "getiriler": {
-      "birAy": 0.019299999999999998,
-      "ucAy": 0.059678,
-      "altiAy": 0.096647,
-      "yilbasi": 0.11530099999999999,
-      "birYil": 0.21989,
-      "ucYil": 1.120679,
-      "besYil": 5.697749
+      "birAy": 0.018373,
+      "ucAy": 0.057398,
+      "altiAy": 0.095117,
+      "yilbasi": 0.114286,
+      "birYil": 0.215277,
+      "ucYil": 1.117935,
+      "besYil": 5.690483
     },
     "paraAkisi": {
-      "gunluk": -72884.1,
+      "gunluk": -84216.64,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TPL",
+        "fonAdi": "TEB PORTFÖY EUROBOND (DÖVİZ) BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 21.069963,
+        "tedavuldekiPaySayisi": 23793185.01,
+        "kisiSayisi": 1518,
+        "fonToplamDeger": 501321519.48,
+        "gunlukGetiri": -0.00090971,
+        "paraGirisiCikisi": -84216.64,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "TPL",
         "fonAdi": "TEB PORTFÖY EUROBOND (DÖVİZ) BORÇLANMA ARAÇLARI FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00256418,
       "paraGirisiCikisi": -72884.1,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "TPL",
+      "fonAdi": "TEB PORTFÖY EUROBOND (DÖVİZ) BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 21.069963,
+      "tedavuldekiPaySayisi": 23793185.01,
+      "kisiSayisi": 1518,
+      "fonToplamDeger": 501321519.48,
+      "gunlukGetiri": -0.00090971,
+      "paraGirisiCikisi": -84216.64,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TPL",
+      "fonAdi": "TEB PORTFÖY EUROBOND (DÖVİZ) BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 21.069963,
+      "tedavuldekiPaySayisi": 23793185.01,
+      "kisiSayisi": 1518,
+      "fonToplamDeger": 501321519.48,
+      "gunlukGetiri": -0.00090971,
+      "paraGirisiCikisi": -84216.64,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "TPL",
       "fonAdi": "TEB PORTFÖY EUROBOND (DÖVİZ) BORÇLANMA ARAÇLARI FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

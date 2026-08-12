@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "STI",
     "slug": "sti",
@@ -12,44 +12,56 @@
     "yonetici": "ATLAS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "atlas-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.261294,
-    "tedavuldekiPaySayisi": 145219448,
-    "kisiSayisi": 72,
-    "fonToplamDeger": 183164457.22,
-    "gunlukGetiri": 0.012911,
+    "fiyat": 1.257475,
+    "tedavuldekiPaySayisi": 145218601,
+    "kisiSayisi": 71,
+    "fonToplamDeger": 182608747.93,
+    "gunlukGetiri": -0.00302784,
     "getiriler": {
-      "birAy": 0.041971,
-      "ucAy": 0.00031600000000000004,
-      "altiAy": 0.122478,
-      "yilbasi": 0.240501,
-      "birYil": 0.056708,
+      "birAy": 0.038816,
+      "ucAy": -0.00243,
+      "altiAy": 0.11438000000000001,
+      "yilbasi": 0.23674499999999998,
+      "birYil": 0.04125,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -655.87,
+      "gunluk": -1065.08,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "STI",
+        "fonAdi": "ATLAS PORTFÖY SENTİMENT SERBEST FON",
+        "tarih": "2026-08-12",
+        "fiyat": 1.257475,
+        "tedavuldekiPaySayisi": 145218601,
+        "kisiSayisi": 71,
+        "fonToplamDeger": 182608747.93,
+        "gunlukGetiri": -0.00302784,
+        "paraGirisiCikisi": -1065.08,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "STI",
         "fonAdi": "ATLAS PORTFÖY SENTİMENT SERBEST FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.012911,
       "paraGirisiCikisi": -655.87,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "STI",
+      "fonAdi": "ATLAS PORTFÖY SENTİMENT SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.257475,
+      "tedavuldekiPaySayisi": 145218601,
+      "kisiSayisi": 71,
+      "fonToplamDeger": 182608747.93,
+      "gunlukGetiri": -0.00302784,
+      "paraGirisiCikisi": -1065.08,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "STI",
+      "fonAdi": "ATLAS PORTFÖY SENTİMENT SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.257475,
+      "tedavuldekiPaySayisi": 145218601,
+      "kisiSayisi": 71,
+      "fonToplamDeger": 182608747.93,
+      "gunlukGetiri": -0.00302784,
+      "paraGirisiCikisi": -1065.08,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "STI",
       "fonAdi": "ATLAS PORTFÖY SENTİMENT SERBEST FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

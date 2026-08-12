@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "YCK",
     "slug": "yck",
@@ -12,24 +12,24 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 4.512695,
-    "tedavuldekiPaySayisi": 88391616,
+    "fiyat": 4.466521,
+    "tedavuldekiPaySayisi": 88297745,
     "kisiSayisi": 154,
-    "fonToplamDeger": 398884424.01,
-    "gunlukGetiri": 0.00271861,
+    "fonToplamDeger": 394383703.9,
+    "gunlukGetiri": -0.01023202,
     "getiriler": {
-      "birAy": -0.040357000000000004,
-      "ucAy": 0.025569,
-      "altiAy": 0.166175,
-      "yilbasi": 0.291967,
-      "birYil": 0.40033499999999994,
-      "ucYil": 1.448253,
-      "besYil": 3.073704
+      "birAy": -0.050176,
+      "ucAy": -0.000494,
+      "altiAy": 0.148723,
+      "yilbasi": 0.278748,
+      "birYil": 0.381068,
+      "ucYil": 1.416886,
+      "besYil": 3.058743
     },
     "paraAkisi": {
-      "gunluk": 1137.2,
+      "gunluk": -419276.79,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YCK",
+        "fonAdi": "YAPI KREDİ PORTFÖY CİHANGİR SERBEST FON",
+        "tarih": "2026-08-12",
+        "fiyat": 4.466521,
+        "tedavuldekiPaySayisi": 88297745,
+        "kisiSayisi": 154,
+        "fonToplamDeger": 394383703.9,
+        "gunlukGetiri": -0.01023202,
+        "paraGirisiCikisi": -419276.79,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "YCK",
         "fonAdi": "YAPI KREDİ PORTFÖY CİHANGİR SERBEST FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00271861,
       "paraGirisiCikisi": 1137.2,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YCK",
+      "fonAdi": "YAPI KREDİ PORTFÖY CİHANGİR SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 4.466521,
+      "tedavuldekiPaySayisi": 88297745,
+      "kisiSayisi": 154,
+      "fonToplamDeger": 394383703.9,
+      "gunlukGetiri": -0.01023202,
+      "paraGirisiCikisi": -419276.79,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YCK",
+      "fonAdi": "YAPI KREDİ PORTFÖY CİHANGİR SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 4.466521,
+      "tedavuldekiPaySayisi": 88297745,
+      "kisiSayisi": 154,
+      "fonToplamDeger": 394383703.9,
+      "gunlukGetiri": -0.01023202,
+      "paraGirisiCikisi": -419276.79,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "YCK",
       "fonAdi": "YAPI KREDİ PORTFÖY CİHANGİR SERBEST FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "PPV",
     "slug": "ppv",
@@ -12,16 +12,16 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.138922,
-    "tedavuldekiPaySayisi": 6202690322,
-    "kisiSayisi": 160,
-    "fonToplamDeger": 7064379307.12,
-    "gunlukGetiri": 0.0010697,
+    "fiyat": 1.140144,
+    "tedavuldekiPaySayisi": 6178116849,
+    "kisiSayisi": 151,
+    "fonToplamDeger": 7043943165.27,
+    "gunlukGetiri": 0.00107294,
     "getiriler": {
-      "birAy": 0.031701,
-      "ucAy": 0.105241,
+      "birAy": 0.032808000000000004,
+      "ucAy": 0.105221,
       "altiAy": null,
       "yilbasi": null,
       "birYil": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -105086716.81,
+      "gunluk": -28017297.8,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -23,
+      "gunluk": -9,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PPV",
+        "fonAdi": "AKTİF PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 1.140144,
+        "tedavuldekiPaySayisi": 6178116849,
+        "kisiSayisi": 151,
+        "fonToplamDeger": 7043943165.27,
+        "gunlukGetiri": 0.00107294,
+        "paraGirisiCikisi": -28017297.8,
+        "yatirimciDegisimi": -9
+      },
       {
         "fonKodu": "PPV",
         "fonAdi": "AKTİF PORTFÖY PARA PİYASASI SERBEST (TL) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.0010697,
       "paraGirisiCikisi": -105086716.81,
       "yatirimciDegisimi": -23
+    },
+    {
+      "fonKodu": "PPV",
+      "fonAdi": "AKTİF PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.140144,
+      "tedavuldekiPaySayisi": 6178116849,
+      "kisiSayisi": 151,
+      "fonToplamDeger": 7043943165.27,
+      "gunlukGetiri": 0.00107294,
+      "paraGirisiCikisi": -28017297.8,
+      "yatirimciDegisimi": -9
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PPV",
+      "fonAdi": "AKTİF PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.140144,
+      "tedavuldekiPaySayisi": 6178116849,
+      "kisiSayisi": 151,
+      "fonToplamDeger": 7043943165.27,
+      "gunlukGetiri": 0.00107294,
+      "paraGirisiCikisi": -28017297.8,
+      "yatirimciDegisimi": -9
+    },
     {
       "fonKodu": "PPV",
       "fonAdi": "AKTİF PORTFÖY PARA PİYASASI SERBEST (TL) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

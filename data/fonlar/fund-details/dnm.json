@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "DNM",
     "slug": "dnm",
@@ -12,24 +12,24 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 52.110491,
-    "tedavuldekiPaySayisi": 26278554,
-    "kisiSayisi": 1010,
-    "fonToplamDeger": 1369388340.49,
-    "gunlukGetiri": 0.00635469,
+    "fiyat": 52.216217,
+    "tedavuldekiPaySayisi": 26079439,
+    "kisiSayisi": 1008,
+    "fonToplamDeger": 1361769654.68,
+    "gunlukGetiri": 0.00202888,
     "getiriler": {
-      "birAy": 0.034527999999999996,
-      "ucAy": 0.075294,
-      "altiAy": 0.082874,
-      "yilbasi": 0.111741,
-      "birYil": 0.235406,
+      "birAy": 0.036627,
+      "ucAy": 0.070546,
+      "altiAy": 0.08442999999999999,
+      "yilbasi": 0.11399699999999999,
+      "birYil": 0.236322,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -2057739.07,
+      "gunluk": -10397032.05,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DNM",
+        "fonAdi": "QNB PORTFÖY DİNAMİK DAĞILIMLI SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 52.216217,
+        "tedavuldekiPaySayisi": 26079439,
+        "kisiSayisi": 1008,
+        "fonToplamDeger": 1361769654.68,
+        "gunlukGetiri": 0.00202888,
+        "paraGirisiCikisi": -10397032.05,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "DNM",
         "fonAdi": "QNB PORTFÖY DİNAMİK DAĞILIMLI SERBEST (DÖVİZ) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00635469,
       "paraGirisiCikisi": -2057739.07,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "DNM",
+      "fonAdi": "QNB PORTFÖY DİNAMİK DAĞILIMLI SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 52.216217,
+      "tedavuldekiPaySayisi": 26079439,
+      "kisiSayisi": 1008,
+      "fonToplamDeger": 1361769654.68,
+      "gunlukGetiri": 0.00202888,
+      "paraGirisiCikisi": -10397032.05,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DNM",
+      "fonAdi": "QNB PORTFÖY DİNAMİK DAĞILIMLI SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 52.216217,
+      "tedavuldekiPaySayisi": 26079439,
+      "kisiSayisi": 1008,
+      "fonToplamDeger": 1361769654.68,
+      "gunlukGetiri": 0.00202888,
+      "paraGirisiCikisi": -10397032.05,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "DNM",
       "fonAdi": "QNB PORTFÖY DİNAMİK DAĞILIMLI SERBEST (DÖVİZ) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

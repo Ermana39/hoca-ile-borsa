@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "VPA",
     "slug": "vpa",
@@ -12,15 +12,15 @@
     "yonetici": "VAKIF KATILIM PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "vakif-katilim-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.098722,
-    "tedavuldekiPaySayisi": 7453384290,
-    "kisiSayisi": 2914,
-    "fonToplamDeger": 8189196584.06,
-    "gunlukGetiri": 0.00104321,
+    "fiyat": 1.099869,
+    "tedavuldekiPaySayisi": 7293585581,
+    "kisiSayisi": 2937,
+    "fonToplamDeger": 8021991018.07,
+    "gunlukGetiri": 0.00104394,
     "getiriler": {
-      "birAy": 0.030928,
+      "birAy": 0.032004000000000005,
       "ucAy": null,
       "altiAy": null,
       "yilbasi": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1253777140.38,
+      "gunluk": -175757646.27,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 4,
+      "gunluk": 23,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "VPA",
+        "fonAdi": "VAKIF KATILIM PORTFÖY PARA PİYASASI KATILIM FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 1.099869,
+        "tedavuldekiPaySayisi": 7293585581,
+        "kisiSayisi": 2937,
+        "fonToplamDeger": 8021991018.07,
+        "gunlukGetiri": 0.00104394,
+        "paraGirisiCikisi": -175757646.27,
+        "yatirimciDegisimi": 23
+      },
       {
         "fonKodu": "VPA",
         "fonAdi": "VAKIF KATILIM PORTFÖY PARA PİYASASI KATILIM FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00104321,
       "paraGirisiCikisi": -1253777140.38,
       "yatirimciDegisimi": 4
+    },
+    {
+      "fonKodu": "VPA",
+      "fonAdi": "VAKIF KATILIM PORTFÖY PARA PİYASASI KATILIM FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 1.099869,
+      "tedavuldekiPaySayisi": 7293585581,
+      "kisiSayisi": 2937,
+      "fonToplamDeger": 8021991018.07,
+      "gunlukGetiri": 0.00104394,
+      "paraGirisiCikisi": -175757646.27,
+      "yatirimciDegisimi": 23
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "VPA",
+      "fonAdi": "VAKIF KATILIM PORTFÖY PARA PİYASASI KATILIM FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 1.099869,
+      "tedavuldekiPaySayisi": 7293585581,
+      "kisiSayisi": 2937,
+      "fonToplamDeger": 8021991018.07,
+      "gunlukGetiri": 0.00104394,
+      "paraGirisiCikisi": -175757646.27,
+      "yatirimciDegisimi": 23
+    },
     {
       "fonKodu": "VPA",
       "fonAdi": "VAKIF KATILIM PORTFÖY PARA PİYASASI KATILIM FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

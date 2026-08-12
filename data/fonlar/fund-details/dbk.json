@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "DBK",
     "slug": "dbk",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 0.119754,
-    "tedavuldekiPaySayisi": 6063295906,
-    "kisiSayisi": 85344,
-    "fonToplamDeger": 726102920.18,
-    "gunlukGetiri": 0.00114532,
+    "fiyat": 0.119886,
+    "tedavuldekiPaySayisi": 5673216706,
+    "kisiSayisi": 85332,
+    "fonToplamDeger": 680141175.07,
+    "gunlukGetiri": 0.00110226,
     "getiriler": {
-      "birAy": 0.030257,
-      "ucAy": 0.09892300000000001,
-      "altiAy": 0.200963,
-      "yilbasi": 0.24925899999999998,
-      "birYil": 0.45525,
-      "ucYil": 2.325669,
-      "besYil": 3.804959
+      "birAy": 0.031393,
+      "ucAy": 0.099055,
+      "altiAy": 0.201311,
+      "yilbasi": 0.250636,
+      "birYil": 0.455139,
+      "ucYil": 2.321678,
+      "besYil": 3.808133
     },
     "paraAkisi": {
-      "gunluk": 874156.3,
+      "gunluk": -46765034.97,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -27,
+      "gunluk": -12,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DBK",
+        "fonAdi": "DENİZ PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 0.119886,
+        "tedavuldekiPaySayisi": 5673216706,
+        "kisiSayisi": 85332,
+        "fonToplamDeger": 680141175.07,
+        "gunlukGetiri": 0.00110226,
+        "paraGirisiCikisi": -46765034.97,
+        "yatirimciDegisimi": -12
+      },
       {
         "fonKodu": "DBK",
         "fonAdi": "DENİZ PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00114532,
       "paraGirisiCikisi": 874156.3,
       "yatirimciDegisimi": -27
+    },
+    {
+      "fonKodu": "DBK",
+      "fonAdi": "DENİZ PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 0.119886,
+      "tedavuldekiPaySayisi": 5673216706,
+      "kisiSayisi": 85332,
+      "fonToplamDeger": 680141175.07,
+      "gunlukGetiri": 0.00110226,
+      "paraGirisiCikisi": -46765034.97,
+      "yatirimciDegisimi": -12
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DBK",
+      "fonAdi": "DENİZ PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 0.119886,
+      "tedavuldekiPaySayisi": 5673216706,
+      "kisiSayisi": 85332,
+      "fonToplamDeger": 680141175.07,
+      "gunlukGetiri": 0.00110226,
+      "paraGirisiCikisi": -46765034.97,
+      "yatirimciDegisimi": -12
+    },
     {
       "fonKodu": "DBK",
       "fonAdi": "DENİZ PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

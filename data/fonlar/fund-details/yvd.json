@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "YVD",
     "slug": "yvd",
@@ -12,13 +12,13 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 4.369343,
-    "tedavuldekiPaySayisi": 9704764214,
-    "kisiSayisi": 81194,
-    "fonToplamDeger": 42403442991.12,
-    "gunlukGetiri": 0.00102363,
+    "fiyat": 4.373877,
+    "tedavuldekiPaySayisi": 9521608876,
+    "kisiSayisi": 81211,
+    "fonToplamDeger": 41646341580.63,
+    "gunlukGetiri": 0.00103768,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 95701099.28,
+      "gunluk": -801098920.31,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 77,
+      "gunluk": 17,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YVD",
+        "fonAdi": "YAPI KREDİ PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 4.373877,
+        "tedavuldekiPaySayisi": 9521608876,
+        "kisiSayisi": 81211,
+        "fonToplamDeger": 41646341580.63,
+        "gunlukGetiri": 0.00103768,
+        "paraGirisiCikisi": -801098920.31,
+        "yatirimciDegisimi": 17
+      },
       {
         "fonKodu": "YVD",
         "fonAdi": "YAPI KREDİ PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00102363,
       "paraGirisiCikisi": 95701099.28,
       "yatirimciDegisimi": 77
+    },
+    {
+      "fonKodu": "YVD",
+      "fonAdi": "YAPI KREDİ PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 4.373877,
+      "tedavuldekiPaySayisi": 9521608876,
+      "kisiSayisi": 81211,
+      "fonToplamDeger": 41646341580.63,
+      "gunlukGetiri": 0.00103768,
+      "paraGirisiCikisi": -801098920.31,
+      "yatirimciDegisimi": 17
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YVD",
+      "fonAdi": "YAPI KREDİ PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 4.373877,
+      "tedavuldekiPaySayisi": 9521608876,
+      "kisiSayisi": 81211,
+      "fonToplamDeger": 41646341580.63,
+      "gunlukGetiri": 0.00103768,
+      "paraGirisiCikisi": -801098920.31,
+      "yatirimciDegisimi": 17
+    },
     {
       "fonKodu": "YVD",
       "fonAdi": "YAPI KREDİ PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "GBP",
     "slug": "gbp",
@@ -12,13 +12,13 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 70.41669,
+    "fiyat": 70.239531,
     "tedavuldekiPaySayisi": 53983981,
     "kisiSayisi": 2,
-    "fonToplamDeger": 3801373273.5,
-    "gunlukGetiri": 0.00519531,
+    "fonToplamDeger": 3791809491.33,
+    "gunlukGetiri": -0.00251587,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GBP",
+        "fonAdi": "GARANTİ PORTFÖY YİRMİALTINCI SERBEST (DÖVİZ-AVRO) ÖZEL FON",
+        "tarih": "2026-08-12",
+        "fiyat": 70.239531,
+        "tedavuldekiPaySayisi": 53983981,
+        "kisiSayisi": 2,
+        "fonToplamDeger": 3791809491.33,
+        "gunlukGetiri": -0.00251587,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "GBP",
         "fonAdi": "GARANTİ PORTFÖY YİRMİALTINCI SERBEST (DÖVİZ-AVRO) ÖZEL FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00519531,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GBP",
+      "fonAdi": "GARANTİ PORTFÖY YİRMİALTINCI SERBEST (DÖVİZ-AVRO) ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 70.239531,
+      "tedavuldekiPaySayisi": 53983981,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 3791809491.33,
+      "gunlukGetiri": -0.00251587,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GBP",
+      "fonAdi": "GARANTİ PORTFÖY YİRMİALTINCI SERBEST (DÖVİZ-AVRO) ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 70.239531,
+      "tedavuldekiPaySayisi": 53983981,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 3791809491.33,
+      "gunlukGetiri": -0.00251587,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "GBP",
       "fonAdi": "GARANTİ PORTFÖY YİRMİALTINCI SERBEST (DÖVİZ-AVRO) ÖZEL FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

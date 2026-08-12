@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "HVU",
     "slug": "hvu",
@@ -12,44 +12,56 @@
     "yonetici": "ALLBATROSS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "allbatross-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 5.615144,
-    "tedavuldekiPaySayisi": 3019303.74,
-    "kisiSayisi": 809,
-    "fonToplamDeger": 16953825.14,
-    "gunlukGetiri": -0.0006585,
+    "fiyat": 5.570995,
+    "tedavuldekiPaySayisi": 3005453.74,
+    "kisiSayisi": 808,
+    "fonToplamDeger": 16743367.36,
+    "gunlukGetiri": -0.00786249,
     "getiriler": {
-      "birAy": -0.004443,
-      "ucAy": 0.037122999999999996,
-      "altiAy": 0.130514,
-      "yilbasi": 0.178673,
-      "birYil": 0.279763,
-      "ucYil": 1.7755779999999999,
+      "birAy": -0.012270000000000001,
+      "ucAy": 0.028911,
+      "altiAy": 0.120728,
+      "yilbasi": 0.169406,
+      "birYil": 0.262693,
+      "ucYil": 1.7113820000000002,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -61205.07,
+      "gunluk": -77158.28,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HVU",
+        "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-12",
+        "fiyat": 5.570995,
+        "tedavuldekiPaySayisi": 3005453.74,
+        "kisiSayisi": 808,
+        "fonToplamDeger": 16743367.36,
+        "gunlukGetiri": -0.00786249,
+        "paraGirisiCikisi": -77158.28,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "HVU",
         "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": -0.0006585,
       "paraGirisiCikisi": -61205.07,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HVU",
+      "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 5.570995,
+      "tedavuldekiPaySayisi": 3005453.74,
+      "kisiSayisi": 808,
+      "fonToplamDeger": 16743367.36,
+      "gunlukGetiri": -0.00786249,
+      "paraGirisiCikisi": -77158.28,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HVU",
+      "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 5.570995,
+      "tedavuldekiPaySayisi": 3005453.74,
+      "kisiSayisi": 808,
+      "fonToplamDeger": 16743367.36,
+      "gunlukGetiri": -0.00786249,
+      "paraGirisiCikisi": -77158.28,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "HVU",
       "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

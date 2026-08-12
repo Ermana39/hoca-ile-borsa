@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "ADE",
     "slug": "ade",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 0.885009,
-    "tedavuldekiPaySayisi": 812178660,
-    "kisiSayisi": 25695,
-    "fonToplamDeger": 718785537.14,
-    "gunlukGetiri": 0.00632328,
+    "fiyat": 0.886467,
+    "tedavuldekiPaySayisi": 810190890,
+    "kisiSayisi": 25735,
+    "fonToplamDeger": 718207695.97,
+    "gunlukGetiri": 0.00164744,
     "getiriler": {
-      "birAy": 0.062719,
-      "ucAy": 0.007383999999999999,
-      "altiAy": 0.006947,
-      "yilbasi": 0.105739,
-      "birYil": 0.258279,
-      "ucYil": 1.9601439999999999,
-      "besYil": 3.315791
+      "birAy": 0.06447,
+      "ucAy": 0.008178,
+      "altiAy": 0.004312,
+      "yilbasi": 0.10756,
+      "birYil": 0.260106,
+      "ucYil": 1.959487,
+      "besYil": 3.3209410000000004
     },
     "paraAkisi": {
-      "gunluk": 81355.34,
+      "gunluk": -1762092.51,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 7,
+      "gunluk": 40,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ADE",
+        "fonAdi": "AK PORTFÖY MUTLAK GETİRİ HEDEFLİ DEĞİŞKEN FON",
+        "tarih": "2026-08-12",
+        "fiyat": 0.886467,
+        "tedavuldekiPaySayisi": 810190890,
+        "kisiSayisi": 25735,
+        "fonToplamDeger": 718207695.97,
+        "gunlukGetiri": 0.00164744,
+        "paraGirisiCikisi": -1762092.51,
+        "yatirimciDegisimi": 40
+      },
       {
         "fonKodu": "ADE",
         "fonAdi": "AK PORTFÖY MUTLAK GETİRİ HEDEFLİ DEĞİŞKEN FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00632328,
       "paraGirisiCikisi": 81355.34,
       "yatirimciDegisimi": 7
+    },
+    {
+      "fonKodu": "ADE",
+      "fonAdi": "AK PORTFÖY MUTLAK GETİRİ HEDEFLİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 0.886467,
+      "tedavuldekiPaySayisi": 810190890,
+      "kisiSayisi": 25735,
+      "fonToplamDeger": 718207695.97,
+      "gunlukGetiri": 0.00164744,
+      "paraGirisiCikisi": -1762092.51,
+      "yatirimciDegisimi": 40
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ADE",
+      "fonAdi": "AK PORTFÖY MUTLAK GETİRİ HEDEFLİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 0.886467,
+      "tedavuldekiPaySayisi": 810190890,
+      "kisiSayisi": 25735,
+      "fonToplamDeger": 718207695.97,
+      "gunlukGetiri": 0.00164744,
+      "paraGirisiCikisi": -1762092.51,
+      "yatirimciDegisimi": 40
+    },
     {
       "fonKodu": "ADE",
       "fonAdi": "AK PORTFÖY MUTLAK GETİRİ HEDEFLİ DEĞİŞKEN FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "GZN",
     "slug": "gzn",
@@ -12,44 +12,56 @@
     "yonetici": "GLOBAL MD PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "global-md-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 49.599677,
-    "tedavuldekiPaySayisi": 7755712,
-    "kisiSayisi": 1110,
-    "fonToplamDeger": 384680806.46,
-    "gunlukGetiri": 0.00153796,
+    "fiyat": 49.440579,
+    "tedavuldekiPaySayisi": 7703072,
+    "kisiSayisi": 1117,
+    "fonToplamDeger": 380844339.05,
+    "gunlukGetiri": -0.00320764,
     "getiriler": {
-      "birAy": 0.020379,
-      "ucAy": 0.089763,
-      "altiAy": 0.288174,
-      "yilbasi": 0.42548499999999995,
-      "birYil": 0.564317,
-      "ucYil": 2.259872,
-      "besYil": 27.579639
+      "birAy": 0.017106,
+      "ucAy": 0.07789,
+      "altiAy": 0.280026,
+      "yilbasi": 0.420912,
+      "birYil": 0.5524830000000001,
+      "ucYil": 2.205999,
+      "besYil": 27.141157
     },
     "paraAkisi": {
-      "gunluk": -114128.86,
+      "gunluk": -2602552.08,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
+      "gunluk": 7,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GZN",
+        "fonAdi": "GLOBAL MD PORTFÖY BOĞAZİÇİ SERBEST FON",
+        "tarih": "2026-08-12",
+        "fiyat": 49.440579,
+        "tedavuldekiPaySayisi": 7703072,
+        "kisiSayisi": 1117,
+        "fonToplamDeger": 380844339.05,
+        "gunlukGetiri": -0.00320764,
+        "paraGirisiCikisi": -2602552.08,
+        "yatirimciDegisimi": 7
+      },
       {
         "fonKodu": "GZN",
         "fonAdi": "GLOBAL MD PORTFÖY BOĞAZİÇİ SERBEST FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00153796,
       "paraGirisiCikisi": -114128.86,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "GZN",
+      "fonAdi": "GLOBAL MD PORTFÖY BOĞAZİÇİ SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 49.440579,
+      "tedavuldekiPaySayisi": 7703072,
+      "kisiSayisi": 1117,
+      "fonToplamDeger": 380844339.05,
+      "gunlukGetiri": -0.00320764,
+      "paraGirisiCikisi": -2602552.08,
+      "yatirimciDegisimi": 7
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GZN",
+      "fonAdi": "GLOBAL MD PORTFÖY BOĞAZİÇİ SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 49.440579,
+      "tedavuldekiPaySayisi": 7703072,
+      "kisiSayisi": 1117,
+      "fonToplamDeger": 380844339.05,
+      "gunlukGetiri": -0.00320764,
+      "paraGirisiCikisi": -2602552.08,
+      "yatirimciDegisimi": 7
+    },
     {
       "fonKodu": "GZN",
       "fonAdi": "GLOBAL MD PORTFÖY BOĞAZİÇİ SERBEST FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

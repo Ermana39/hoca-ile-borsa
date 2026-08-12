@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "TIV",
     "slug": "tiv",
@@ -12,13 +12,13 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 52.401735,
-    "tedavuldekiPaySayisi": 390616994.11,
-    "kisiSayisi": 112398,
-    "fonToplamDeger": 20469008023.75,
-    "gunlukGetiri": 0.00127595,
+    "fiyat": 52.451851,
+    "tedavuldekiPaySayisi": 392374034.11,
+    "kisiSayisi": 112648,
+    "fonToplamDeger": 20580744195.57,
+    "gunlukGetiri": 0.00095638,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -51381473.22,
+      "gunluk": 92160000.28,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 20,
+      "gunluk": 250,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TIV",
+        "fonAdi": "İŞ PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 52.451851,
+        "tedavuldekiPaySayisi": 392374034.11,
+        "kisiSayisi": 112648,
+        "fonToplamDeger": 20580744195.57,
+        "gunlukGetiri": 0.00095638,
+        "paraGirisiCikisi": 92160000.28,
+        "yatirimciDegisimi": 250
+      },
       {
         "fonKodu": "TIV",
         "fonAdi": "İŞ PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00127595,
       "paraGirisiCikisi": -51381473.22,
       "yatirimciDegisimi": 20
+    },
+    {
+      "fonKodu": "TIV",
+      "fonAdi": "İŞ PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 52.451851,
+      "tedavuldekiPaySayisi": 392374034.11,
+      "kisiSayisi": 112648,
+      "fonToplamDeger": 20580744195.57,
+      "gunlukGetiri": 0.00095638,
+      "paraGirisiCikisi": 92160000.28,
+      "yatirimciDegisimi": 250
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TIV",
+      "fonAdi": "İŞ PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 52.451851,
+      "tedavuldekiPaySayisi": 392374034.11,
+      "kisiSayisi": 112648,
+      "fonToplamDeger": 20580744195.57,
+      "gunlukGetiri": 0.00095638,
+      "paraGirisiCikisi": 92160000.28,
+      "yatirimciDegisimi": 250
+    },
     {
       "fonKodu": "TIV",
       "fonAdi": "İŞ PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

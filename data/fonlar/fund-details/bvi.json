@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "BVI",
     "slug": "bvi",
@@ -12,13 +12,13 @@
     "yonetici": "BV PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "bv-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 2.862359,
+    "fiyat": 2.82422,
     "tedavuldekiPaySayisi": 101063959,
     "kisiSayisi": 28,
-    "fonToplamDeger": 289281360.17,
-    "gunlukGetiri": 0.00371102,
+    "fonToplamDeger": 285426842.9,
+    "gunlukGetiri": -0.01332432,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BVI",
+        "fonAdi": "BV PORTFÖY İKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 2.82422,
+        "tedavuldekiPaySayisi": 101063959,
+        "kisiSayisi": 28,
+        "fonToplamDeger": 285426842.9,
+        "gunlukGetiri": -0.01332432,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "BVI",
         "fonAdi": "BV PORTFÖY İKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00371102,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BVI",
+      "fonAdi": "BV PORTFÖY İKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 2.82422,
+      "tedavuldekiPaySayisi": 101063959,
+      "kisiSayisi": 28,
+      "fonToplamDeger": 285426842.9,
+      "gunlukGetiri": -0.01332432,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BVI",
+      "fonAdi": "BV PORTFÖY İKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 2.82422,
+      "tedavuldekiPaySayisi": 101063959,
+      "kisiSayisi": 28,
+      "fonToplamDeger": 285426842.9,
+      "gunlukGetiri": -0.01332432,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "BVI",
       "fonAdi": "BV PORTFÖY İKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

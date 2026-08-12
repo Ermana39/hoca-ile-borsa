@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "PLA",
     "slug": "pla",
@@ -12,13 +12,13 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.261962,
-    "tedavuldekiPaySayisi": 611915,
-    "kisiSayisi": 117,
-    "fonToplamDeger": 772213.23,
-    "gunlukGetiri": 0.00568925,
+    "fiyat": 1.263168,
+    "tedavuldekiPaySayisi": 608359,
+    "kisiSayisi": 115,
+    "fonToplamDeger": 768459.72,
+    "gunlukGetiri": 0.00095565,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 21844.56,
+      "gunluk": -4491.83,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": -2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PLA",
+        "fonAdi": "YAPI KREDİ PORTFÖY PLAY FON SEPETİ ÖZEL FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 1.263168,
+        "tedavuldekiPaySayisi": 608359,
+        "kisiSayisi": 115,
+        "fonToplamDeger": 768459.72,
+        "gunlukGetiri": 0.00095565,
+        "paraGirisiCikisi": -4491.83,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "PLA",
         "fonAdi": "YAPI KREDİ PORTFÖY PLAY FON SEPETİ ÖZEL FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00568925,
       "paraGirisiCikisi": 21844.56,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "PLA",
+      "fonAdi": "YAPI KREDİ PORTFÖY PLAY FON SEPETİ ÖZEL FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 1.263168,
+      "tedavuldekiPaySayisi": 608359,
+      "kisiSayisi": 115,
+      "fonToplamDeger": 768459.72,
+      "gunlukGetiri": 0.00095565,
+      "paraGirisiCikisi": -4491.83,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PLA",
+      "fonAdi": "YAPI KREDİ PORTFÖY PLAY FON SEPETİ ÖZEL FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 1.263168,
+      "tedavuldekiPaySayisi": 608359,
+      "kisiSayisi": 115,
+      "fonToplamDeger": 768459.72,
+      "gunlukGetiri": 0.00095565,
+      "paraGirisiCikisi": -4491.83,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "PLA",
       "fonAdi": "YAPI KREDİ PORTFÖY PLAY FON SEPETİ ÖZEL FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

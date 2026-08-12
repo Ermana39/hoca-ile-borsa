@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "PGD",
     "slug": "pgd",
@@ -12,44 +12,56 @@
     "yonetici": "ASTRA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "astra-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.75946,
-    "tedavuldekiPaySayisi": 114494545,
-    "kisiSayisi": 162,
-    "fonToplamDeger": 201448522.95,
-    "gunlukGetiri": 0.00295735,
+    "fiyat": 1.766749,
+    "tedavuldekiPaySayisi": 114471435,
+    "kisiSayisi": 163,
+    "fonToplamDeger": 202242274.13,
+    "gunlukGetiri": 0.00414275,
     "getiriler": {
-      "birAy": 0.0027900000000000004,
-      "ucAy": 0.10186999999999999,
-      "altiAy": 0.190559,
-      "yilbasi": 0.23288599999999998,
-      "birYil": 0.39293500000000003,
+      "birAy": 0.006945,
+      "ucAy": 0.102515,
+      "altiAy": 0.19428,
+      "yilbasi": 0.23799299999999998,
+      "birYil": 0.396889,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 2005.78,
+      "gunluk": -40829.57,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PGD",
+        "fonAdi": "ASTRA PORTFÖY AGRESİF DEĞİŞKEN FON",
+        "tarih": "2026-08-12",
+        "fiyat": 1.766749,
+        "tedavuldekiPaySayisi": 114471435,
+        "kisiSayisi": 163,
+        "fonToplamDeger": 202242274.13,
+        "gunlukGetiri": 0.00414275,
+        "paraGirisiCikisi": -40829.57,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "PGD",
         "fonAdi": "ASTRA PORTFÖY AGRESİF DEĞİŞKEN FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00295735,
       "paraGirisiCikisi": 2005.78,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "PGD",
+      "fonAdi": "ASTRA PORTFÖY AGRESİF DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.766749,
+      "tedavuldekiPaySayisi": 114471435,
+      "kisiSayisi": 163,
+      "fonToplamDeger": 202242274.13,
+      "gunlukGetiri": 0.00414275,
+      "paraGirisiCikisi": -40829.57,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PGD",
+      "fonAdi": "ASTRA PORTFÖY AGRESİF DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.766749,
+      "tedavuldekiPaySayisi": 114471435,
+      "kisiSayisi": 163,
+      "fonToplamDeger": 202242274.13,
+      "gunlukGetiri": 0.00414275,
+      "paraGirisiCikisi": -40829.57,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "PGD",
       "fonAdi": "ASTRA PORTFÖY AGRESİF DEĞİŞKEN FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

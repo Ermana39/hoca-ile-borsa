@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "HGV",
     "slug": "hgv",
@@ -12,24 +12,24 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 4.942002,
-    "tedavuldekiPaySayisi": 5251335,
+    "fiyat": 4.905362,
+    "tedavuldekiPaySayisi": 5251359,
     "kisiSayisi": 397,
-    "fonToplamDeger": 25952106.38,
-    "gunlukGetiri": -0.00558458,
+    "fonToplamDeger": 25759816.64,
+    "gunlukGetiri": -0.007414,
     "getiriler": {
-      "birAy": -0.0056110000000000005,
-      "ucAy": -0.114236,
-      "altiAy": -0.034085000000000004,
-      "yilbasi": 0.08509,
-      "birYil": -0.059553,
-      "ucYil": 1.550669,
+      "birAy": -0.012983,
+      "ucAy": -0.12523099999999998,
+      "altiAy": -0.041074,
+      "yilbasi": 0.077046,
+      "birYil": -0.071969,
+      "ucYil": 1.5197980000000002,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 4091.98,
+      "gunluk": 117.73,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HGV",
+        "fonAdi": "HEDEF PORTFÖY BİRİNCİ SERBEST FON",
+        "tarih": "2026-08-12",
+        "fiyat": 4.905362,
+        "tedavuldekiPaySayisi": 5251359,
+        "kisiSayisi": 397,
+        "fonToplamDeger": 25759816.64,
+        "gunlukGetiri": -0.007414,
+        "paraGirisiCikisi": 117.73,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "HGV",
         "fonAdi": "HEDEF PORTFÖY BİRİNCİ SERBEST FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": -0.00558458,
       "paraGirisiCikisi": 4091.98,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HGV",
+      "fonAdi": "HEDEF PORTFÖY BİRİNCİ SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 4.905362,
+      "tedavuldekiPaySayisi": 5251359,
+      "kisiSayisi": 397,
+      "fonToplamDeger": 25759816.64,
+      "gunlukGetiri": -0.007414,
+      "paraGirisiCikisi": 117.73,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HGV",
+      "fonAdi": "HEDEF PORTFÖY BİRİNCİ SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 4.905362,
+      "tedavuldekiPaySayisi": 5251359,
+      "kisiSayisi": 397,
+      "fonToplamDeger": 25759816.64,
+      "gunlukGetiri": -0.007414,
+      "paraGirisiCikisi": 117.73,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "HGV",
       "fonAdi": "HEDEF PORTFÖY BİRİNCİ SERBEST FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

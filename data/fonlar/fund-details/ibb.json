@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "IBB",
     "slug": "ibb",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 15.78896,
-    "tedavuldekiPaySayisi": 91982791,
-    "kisiSayisi": 9146,
-    "fonToplamDeger": 1452312642.67,
-    "gunlukGetiri": 0.00109056,
+    "fiyat": 15.785456,
+    "tedavuldekiPaySayisi": 91730340,
+    "kisiSayisi": 9132,
+    "fonToplamDeger": 1448005283.87,
+    "gunlukGetiri": -0.00022193,
     "getiriler": {
-      "birAy": 0.014592,
-      "ucAy": 0.10987,
-      "altiAy": 0.139096,
-      "yilbasi": 0.161634,
-      "birYil": 0.39556600000000003,
-      "ucYil": 1.5731720000000002,
-      "besYil": 7.636961
+      "birAy": 0.014367000000000001,
+      "ucAy": 0.10893900000000001,
+      "altiAy": 0.137085,
+      "yilbasi": 0.161376,
+      "birYil": 0.396659,
+      "ucYil": 1.560333,
+      "besYil": 7.6623
     },
     "paraAkisi": {
-      "gunluk": -192625.31,
+      "gunluk": -3985054.15,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -6,
+      "gunluk": -14,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IBB",
+        "fonAdi": "İŞ PORTFÖY ATAK DEĞİŞKEN FON",
+        "tarih": "2026-08-12",
+        "fiyat": 15.785456,
+        "tedavuldekiPaySayisi": 91730340,
+        "kisiSayisi": 9132,
+        "fonToplamDeger": 1448005283.87,
+        "gunlukGetiri": -0.00022193,
+        "paraGirisiCikisi": -3985054.15,
+        "yatirimciDegisimi": -14
+      },
       {
         "fonKodu": "IBB",
         "fonAdi": "İŞ PORTFÖY ATAK DEĞİŞKEN FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00109056,
       "paraGirisiCikisi": -192625.31,
       "yatirimciDegisimi": -6
+    },
+    {
+      "fonKodu": "IBB",
+      "fonAdi": "İŞ PORTFÖY ATAK DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 15.785456,
+      "tedavuldekiPaySayisi": 91730340,
+      "kisiSayisi": 9132,
+      "fonToplamDeger": 1448005283.87,
+      "gunlukGetiri": -0.00022193,
+      "paraGirisiCikisi": -3985054.15,
+      "yatirimciDegisimi": -14
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IBB",
+      "fonAdi": "İŞ PORTFÖY ATAK DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 15.785456,
+      "tedavuldekiPaySayisi": 91730340,
+      "kisiSayisi": 9132,
+      "fonToplamDeger": 1448005283.87,
+      "gunlukGetiri": -0.00022193,
+      "paraGirisiCikisi": -3985054.15,
+      "yatirimciDegisimi": -14
+    },
     {
       "fonKodu": "IBB",
       "fonAdi": "İŞ PORTFÖY ATAK DEĞİŞKEN FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

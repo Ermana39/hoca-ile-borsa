@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "BBF",
     "slug": "bbf",
@@ -12,44 +12,56 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 3.554365,
-    "tedavuldekiPaySayisi": 38213182,
-    "kisiSayisi": 888,
-    "fonToplamDeger": 135823604.47,
-    "gunlukGetiri": 0.00157322,
+    "fiyat": 3.558064,
+    "tedavuldekiPaySayisi": 38163940,
+    "kisiSayisi": 886,
+    "fonToplamDeger": 135789728.89,
+    "gunlukGetiri": 0.00104069,
     "getiriler": {
-      "birAy": 0.034573,
-      "ucAy": 0.09776,
-      "altiAy": 0.200335,
-      "yilbasi": 0.2565,
-      "birYil": 0.528547,
+      "birAy": 0.03565,
+      "ucAy": 0.09781599999999999,
+      "altiAy": 0.20062000000000002,
+      "yilbasi": 0.257807,
+      "birYil": 0.528364,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -24308046.32,
+      "gunluk": -175206.19,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BBF",
+        "fonAdi": "PARDUS PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 3.558064,
+        "tedavuldekiPaySayisi": 38163940,
+        "kisiSayisi": 886,
+        "fonToplamDeger": 135789728.89,
+        "gunlukGetiri": 0.00104069,
+        "paraGirisiCikisi": -175206.19,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "BBF",
         "fonAdi": "PARDUS PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00157322,
       "paraGirisiCikisi": -24308046.32,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BBF",
+      "fonAdi": "PARDUS PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 3.558064,
+      "tedavuldekiPaySayisi": 38163940,
+      "kisiSayisi": 886,
+      "fonToplamDeger": 135789728.89,
+      "gunlukGetiri": 0.00104069,
+      "paraGirisiCikisi": -175206.19,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BBF",
+      "fonAdi": "PARDUS PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 3.558064,
+      "tedavuldekiPaySayisi": 38163940,
+      "kisiSayisi": 886,
+      "fonToplamDeger": 135789728.89,
+      "gunlukGetiri": 0.00104069,
+      "paraGirisiCikisi": -175206.19,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "BBF",
       "fonAdi": "PARDUS PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

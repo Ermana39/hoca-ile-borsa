@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "AP2",
     "slug": "ap2",
@@ -12,13 +12,13 @@
     "yonetici": "ATLAS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "atlas-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 2.783974,
+    "fiyat": 2.743368,
     "tedavuldekiPaySayisi": 286997151,
     "kisiSayisi": 35,
-    "fonToplamDeger": 798992738.79,
-    "gunlukGetiri": 0.02333437,
+    "fonToplamDeger": 787338738.27,
+    "gunlukGetiri": -0.01458562,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AP2",
+        "fonAdi": "ATLAS PORTFÖY BEŞİNCİ SERBEST (TL) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 2.743368,
+        "tedavuldekiPaySayisi": 286997151,
+        "kisiSayisi": 35,
+        "fonToplamDeger": 787338738.27,
+        "gunlukGetiri": -0.01458562,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "AP2",
         "fonAdi": "ATLAS PORTFÖY BEŞİNCİ SERBEST (TL) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.02333437,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "AP2",
+      "fonAdi": "ATLAS PORTFÖY BEŞİNCİ SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 2.743368,
+      "tedavuldekiPaySayisi": 286997151,
+      "kisiSayisi": 35,
+      "fonToplamDeger": 787338738.27,
+      "gunlukGetiri": -0.01458562,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AP2",
+      "fonAdi": "ATLAS PORTFÖY BEŞİNCİ SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 2.743368,
+      "tedavuldekiPaySayisi": 286997151,
+      "kisiSayisi": 35,
+      "fonToplamDeger": 787338738.27,
+      "gunlukGetiri": -0.01458562,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "AP2",
       "fonAdi": "ATLAS PORTFÖY BEŞİNCİ SERBEST (TL) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

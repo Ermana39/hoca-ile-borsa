@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "PKV",
     "slug": "pkv",
@@ -12,44 +12,56 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 2.032898,
-    "tedavuldekiPaySayisi": 6929922754,
-    "kisiSayisi": 3128,
-    "fonToplamDeger": 14087828923.63,
-    "gunlukGetiri": 0.00118839,
+    "fiyat": 2.035306,
+    "tedavuldekiPaySayisi": 7164219412,
+    "kisiSayisi": 3124,
+    "fonToplamDeger": 14581378957.08,
+    "gunlukGetiri": 0.00118452,
     "getiriler": {
-      "birAy": 0.035657999999999995,
-      "ucAy": 0.11796699999999999,
-      "altiAy": 0.245629,
-      "yilbasi": 0.309295,
-      "birYil": 0.561745,
+      "birAy": 0.036885,
+      "ucAy": 0.117897,
+      "altiAy": 0.245612,
+      "yilbasi": 0.31084599999999996,
+      "birYil": 0.5616490000000001,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 196635870.73,
+      "gunluk": 476865393.81,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": -4,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PKV",
+        "fonAdi": "PARDUS PORTFÖY KISA VADELİ SERBEST (TL) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 2.035306,
+        "tedavuldekiPaySayisi": 7164219412,
+        "kisiSayisi": 3124,
+        "fonToplamDeger": 14581378957.08,
+        "gunlukGetiri": 0.00118452,
+        "paraGirisiCikisi": 476865393.81,
+        "yatirimciDegisimi": -4
+      },
       {
         "fonKodu": "PKV",
         "fonAdi": "PARDUS PORTFÖY KISA VADELİ SERBEST (TL) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00118839,
       "paraGirisiCikisi": 196635870.73,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "PKV",
+      "fonAdi": "PARDUS PORTFÖY KISA VADELİ SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 2.035306,
+      "tedavuldekiPaySayisi": 7164219412,
+      "kisiSayisi": 3124,
+      "fonToplamDeger": 14581378957.08,
+      "gunlukGetiri": 0.00118452,
+      "paraGirisiCikisi": 476865393.81,
+      "yatirimciDegisimi": -4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PKV",
+      "fonAdi": "PARDUS PORTFÖY KISA VADELİ SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 2.035306,
+      "tedavuldekiPaySayisi": 7164219412,
+      "kisiSayisi": 3124,
+      "fonToplamDeger": 14581378957.08,
+      "gunlukGetiri": 0.00118452,
+      "paraGirisiCikisi": 476865393.81,
+      "yatirimciDegisimi": -4
+    },
     {
       "fonKodu": "PKV",
       "fonAdi": "PARDUS PORTFÖY KISA VADELİ SERBEST (TL) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

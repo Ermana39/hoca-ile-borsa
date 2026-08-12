@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "YPT",
     "slug": "ypt",
@@ -12,13 +12,13 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 4.097351,
-    "tedavuldekiPaySayisi": 32130053623,
-    "kisiSayisi": 19545,
-    "fonToplamDeger": 131648111673.8,
-    "gunlukGetiri": 0.00106083,
+    "fiyat": 4.101694,
+    "tedavuldekiPaySayisi": 32908456020,
+    "kisiSayisi": 19544,
+    "fonToplamDeger": 134980420224.9,
+    "gunlukGetiri": 0.00105995,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1211577910.08,
+      "gunluk": 3192768441.36,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -21,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YPT",
+        "fonAdi": "YAPI KREDİ PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 4.101694,
+        "tedavuldekiPaySayisi": 32908456020,
+        "kisiSayisi": 19544,
+        "fonToplamDeger": 134980420224.9,
+        "gunlukGetiri": 0.00105995,
+        "paraGirisiCikisi": 3192768441.36,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "YPT",
         "fonAdi": "YAPI KREDİ PORTFÖY PARA PİYASASI SERBEST (TL) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00106083,
       "paraGirisiCikisi": -1211577910.08,
       "yatirimciDegisimi": -21
+    },
+    {
+      "fonKodu": "YPT",
+      "fonAdi": "YAPI KREDİ PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 4.101694,
+      "tedavuldekiPaySayisi": 32908456020,
+      "kisiSayisi": 19544,
+      "fonToplamDeger": 134980420224.9,
+      "gunlukGetiri": 0.00105995,
+      "paraGirisiCikisi": 3192768441.36,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YPT",
+      "fonAdi": "YAPI KREDİ PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 4.101694,
+      "tedavuldekiPaySayisi": 32908456020,
+      "kisiSayisi": 19544,
+      "fonToplamDeger": 134980420224.9,
+      "gunlukGetiri": 0.00105995,
+      "paraGirisiCikisi": 3192768441.36,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "YPT",
       "fonAdi": "YAPI KREDİ PORTFÖY PARA PİYASASI SERBEST (TL) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

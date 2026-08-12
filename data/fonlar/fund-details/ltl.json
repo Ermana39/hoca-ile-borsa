@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "LTL",
     "slug": "ltl",
@@ -12,15 +12,15 @@
     "yonetici": "AHLATCI PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ahlatci-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.094308,
-    "tedavuldekiPaySayisi": 995247181,
-    "kisiSayisi": 11599,
-    "fonToplamDeger": 1089106593.64,
-    "gunlukGetiri": 0.00203464,
+    "fiyat": 1.094309,
+    "tedavuldekiPaySayisi": 906568133,
+    "kisiSayisi": 10740,
+    "fonToplamDeger": 992065711.08,
+    "gunlukGetiri": 9.1e-7,
     "getiriler": {
-      "birAy": 0.009823,
+      "birAy": 0.009824000000000001,
       "ucAy": null,
       "altiAy": null,
       "yilbasi": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -227366070.43,
+      "gunluk": -97042280.34,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -761,
+      "gunluk": -859,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "LTL",
+        "fonAdi": "AHLATCI PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 1.094309,
+        "tedavuldekiPaySayisi": 906568133,
+        "kisiSayisi": 10740,
+        "fonToplamDeger": 992065711.08,
+        "gunlukGetiri": 9.1e-7,
+        "paraGirisiCikisi": -97042280.34,
+        "yatirimciDegisimi": -859
+      },
       {
         "fonKodu": "LTL",
         "fonAdi": "AHLATCI PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00203464,
       "paraGirisiCikisi": -227366070.43,
       "yatirimciDegisimi": -761
+    },
+    {
+      "fonKodu": "LTL",
+      "fonAdi": "AHLATCI PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.094309,
+      "tedavuldekiPaySayisi": 906568133,
+      "kisiSayisi": 10740,
+      "fonToplamDeger": 992065711.08,
+      "gunlukGetiri": 9.1e-7,
+      "paraGirisiCikisi": -97042280.34,
+      "yatirimciDegisimi": -859
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "LTL",
+      "fonAdi": "AHLATCI PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.094309,
+      "tedavuldekiPaySayisi": 906568133,
+      "kisiSayisi": 10740,
+      "fonToplamDeger": 992065711.08,
+      "gunlukGetiri": 9.1e-7,
+      "paraGirisiCikisi": -97042280.34,
+      "yatirimciDegisimi": -859
+    },
     {
       "fonKodu": "LTL",
       "fonAdi": "AHLATCI PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "FFD",
     "slug": "ffd",
@@ -12,13 +12,13 @@
     "yonetici": "FİBA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "fiba-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 0.05051,
-    "tedavuldekiPaySayisi": 5741342186,
-    "kisiSayisi": 513,
-    "fonToplamDeger": 289997191.69,
-    "gunlukGetiri": 0.00112976,
+    "fiyat": 0.050563,
+    "tedavuldekiPaySayisi": 12330484186,
+    "kisiSayisi": 566,
+    "fonToplamDeger": 623460917.56,
+    "gunlukGetiri": 0.0010493,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 15591729.86,
+      "gunluk": 333166786.95,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 139,
+      "gunluk": 53,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FFD",
+        "fonAdi": "FİBA PORTFÖY ÜÇÜNCÜ PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 0.050563,
+        "tedavuldekiPaySayisi": 12330484186,
+        "kisiSayisi": 566,
+        "fonToplamDeger": 623460917.56,
+        "gunlukGetiri": 0.0010493,
+        "paraGirisiCikisi": 333166786.95,
+        "yatirimciDegisimi": 53
+      },
       {
         "fonKodu": "FFD",
         "fonAdi": "FİBA PORTFÖY ÜÇÜNCÜ PARA PİYASASI (TL) FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00112976,
       "paraGirisiCikisi": 15591729.86,
       "yatirimciDegisimi": 139
+    },
+    {
+      "fonKodu": "FFD",
+      "fonAdi": "FİBA PORTFÖY ÜÇÜNCÜ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 0.050563,
+      "tedavuldekiPaySayisi": 12330484186,
+      "kisiSayisi": 566,
+      "fonToplamDeger": 623460917.56,
+      "gunlukGetiri": 0.0010493,
+      "paraGirisiCikisi": 333166786.95,
+      "yatirimciDegisimi": 53
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FFD",
+      "fonAdi": "FİBA PORTFÖY ÜÇÜNCÜ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 0.050563,
+      "tedavuldekiPaySayisi": 12330484186,
+      "kisiSayisi": 566,
+      "fonToplamDeger": 623460917.56,
+      "gunlukGetiri": 0.0010493,
+      "paraGirisiCikisi": 333166786.95,
+      "yatirimciDegisimi": 53
+    },
     {
       "fonKodu": "FFD",
       "fonAdi": "FİBA PORTFÖY ÜÇÜNCÜ PARA PİYASASI (TL) FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

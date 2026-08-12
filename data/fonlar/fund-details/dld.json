@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "DLD",
     "slug": "dld",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 7.580467,
-    "tedavuldekiPaySayisi": 8050455,
-    "kisiSayisi": 572,
-    "fonToplamDeger": 61026206.33,
-    "gunlukGetiri": 0.00136973,
+    "fiyat": 7.514642,
+    "tedavuldekiPaySayisi": 8044509,
+    "kisiSayisi": 573,
+    "fonToplamDeger": 60451604.25,
+    "gunlukGetiri": -0.0086835,
     "getiriler": {
-      "birAy": 0.026226,
-      "ucAy": -0.0016250000000000001,
-      "altiAy": 0.064362,
-      "yilbasi": 0.23705400000000001,
-      "birYil": 0.247587,
-      "ucYil": 1.209622,
+      "birAy": 0.017315,
+      "ucAy": -0.011049999999999999,
+      "altiAy": 0.049305,
+      "yilbasi": 0.226313,
+      "birYil": 0.229767,
+      "ucYil": 1.117466,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -398588.54,
+      "gunluk": -44682.06,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DLD",
+        "fonAdi": "DENİZ PORTFÖY SÜRDÜRÜLEBİLİRLİK HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 7.514642,
+        "tedavuldekiPaySayisi": 8044509,
+        "kisiSayisi": 573,
+        "fonToplamDeger": 60451604.25,
+        "gunlukGetiri": -0.0086835,
+        "paraGirisiCikisi": -44682.06,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "DLD",
         "fonAdi": "DENİZ PORTFÖY SÜRDÜRÜLEBİLİRLİK HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00136973,
       "paraGirisiCikisi": -398588.54,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "DLD",
+      "fonAdi": "DENİZ PORTFÖY SÜRDÜRÜLEBİLİRLİK HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 7.514642,
+      "tedavuldekiPaySayisi": 8044509,
+      "kisiSayisi": 573,
+      "fonToplamDeger": 60451604.25,
+      "gunlukGetiri": -0.0086835,
+      "paraGirisiCikisi": -44682.06,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DLD",
+      "fonAdi": "DENİZ PORTFÖY SÜRDÜRÜLEBİLİRLİK HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 7.514642,
+      "tedavuldekiPaySayisi": 8044509,
+      "kisiSayisi": 573,
+      "fonToplamDeger": 60451604.25,
+      "gunlukGetiri": -0.0086835,
+      "paraGirisiCikisi": -44682.06,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "DLD",
       "fonAdi": "DENİZ PORTFÖY SÜRDÜRÜLEBİLİRLİK HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

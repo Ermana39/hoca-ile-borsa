@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "AYR",
     "slug": "ayr",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 0.138602,
-    "tedavuldekiPaySayisi": 11842692000,
-    "kisiSayisi": 13118,
-    "fonToplamDeger": 1641421808.89,
-    "gunlukGetiri": 0.00106895,
+    "fiyat": 0.138753,
+    "tedavuldekiPaySayisi": 11827448480,
+    "kisiSayisi": 13116,
+    "fonToplamDeger": 1641095771.14,
+    "gunlukGetiri": 0.00108945,
     "getiriler": {
-      "birAy": 0.030659000000000002,
-      "ucAy": 0.10110799999999999,
-      "altiAy": 0.205927,
-      "yilbasi": 0.25451,
-      "birYil": 0.463513,
-      "ucYil": 2.360782,
-      "besYil": 4.027094
+      "birAy": 0.031782,
+      "ucAy": 0.101136,
+      "altiAy": 0.206076,
+      "yilbasi": 0.255876,
+      "birYil": 0.46342300000000003,
+      "ucYil": 2.356061,
+      "besYil": 4.030199
     },
     "paraAkisi": {
-      "gunluk": -10166943.19,
+      "gunluk": -2115084.13,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 12,
+      "gunluk": -2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AYR",
+        "fonAdi": "AK PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 0.138753,
+        "tedavuldekiPaySayisi": 11827448480,
+        "kisiSayisi": 13116,
+        "fonToplamDeger": 1641095771.14,
+        "gunlukGetiri": 0.00108945,
+        "paraGirisiCikisi": -2115084.13,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "AYR",
         "fonAdi": "AK PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI (TL) FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00106895,
       "paraGirisiCikisi": -10166943.19,
       "yatirimciDegisimi": 12
+    },
+    {
+      "fonKodu": "AYR",
+      "fonAdi": "AK PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 0.138753,
+      "tedavuldekiPaySayisi": 11827448480,
+      "kisiSayisi": 13116,
+      "fonToplamDeger": 1641095771.14,
+      "gunlukGetiri": 0.00108945,
+      "paraGirisiCikisi": -2115084.13,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AYR",
+      "fonAdi": "AK PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 0.138753,
+      "tedavuldekiPaySayisi": 11827448480,
+      "kisiSayisi": 13116,
+      "fonToplamDeger": 1641095771.14,
+      "gunlukGetiri": 0.00108945,
+      "paraGirisiCikisi": -2115084.13,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "AYR",
       "fonAdi": "AK PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI (TL) FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

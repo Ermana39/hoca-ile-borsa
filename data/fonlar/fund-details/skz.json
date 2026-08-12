@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "SKZ",
     "slug": "skz",
@@ -12,44 +12,56 @@
     "yonetici": "NEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "neo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.00273,
-    "tedavuldekiPaySayisi": 122192004,
-    "kisiSayisi": 787,
-    "fonToplamDeger": 122525551.97,
-    "gunlukGetiri": 0.0016072,
+    "fiyat": 1.002178,
+    "tedavuldekiPaySayisi": 122310281,
+    "kisiSayisi": 779,
+    "fonToplamDeger": 122576649.74,
+    "gunlukGetiri": -0.0005505,
     "getiriler": {
-      "birAy": 0.017337,
-      "ucAy": 0.07475,
-      "altiAy": 0.5415679999999999,
-      "yilbasi": 0.40537799999999996,
+      "birAy": 0.016777,
+      "ucAy": 0.073262,
+      "altiAy": 0.532497,
+      "yilbasi": 0.404604,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -283757.55,
+      "gunluk": 118534.61,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -12,
+      "gunluk": -8,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SKZ",
+        "fonAdi": "NEO PORTFÖY SEKİZİNCİ SERBEST FON",
+        "tarih": "2026-08-12",
+        "fiyat": 1.002178,
+        "tedavuldekiPaySayisi": 122310281,
+        "kisiSayisi": 779,
+        "fonToplamDeger": 122576649.74,
+        "gunlukGetiri": -0.0005505,
+        "paraGirisiCikisi": 118534.61,
+        "yatirimciDegisimi": -8
+      },
       {
         "fonKodu": "SKZ",
         "fonAdi": "NEO PORTFÖY SEKİZİNCİ SERBEST FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.0016072,
       "paraGirisiCikisi": -283757.55,
       "yatirimciDegisimi": -12
+    },
+    {
+      "fonKodu": "SKZ",
+      "fonAdi": "NEO PORTFÖY SEKİZİNCİ SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.002178,
+      "tedavuldekiPaySayisi": 122310281,
+      "kisiSayisi": 779,
+      "fonToplamDeger": 122576649.74,
+      "gunlukGetiri": -0.0005505,
+      "paraGirisiCikisi": 118534.61,
+      "yatirimciDegisimi": -8
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SKZ",
+      "fonAdi": "NEO PORTFÖY SEKİZİNCİ SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.002178,
+      "tedavuldekiPaySayisi": 122310281,
+      "kisiSayisi": 779,
+      "fonToplamDeger": 122576649.74,
+      "gunlukGetiri": -0.0005505,
+      "paraGirisiCikisi": 118534.61,
+      "yatirimciDegisimi": -8
+    },
     {
       "fonKodu": "SKZ",
       "fonAdi": "NEO PORTFÖY SEKİZİNCİ SERBEST FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

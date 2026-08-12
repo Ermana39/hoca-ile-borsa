@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "ECA",
     "slug": "eca",
@@ -12,44 +12,56 @@
     "yonetici": "GLOBAL MD PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "global-md-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.98296,
-    "tedavuldekiPaySayisi": 145715971,
-    "kisiSayisi": 510,
-    "fonToplamDeger": 288948882.79,
-    "gunlukGetiri": 0.0085969,
+    "fiyat": 1.975893,
+    "tedavuldekiPaySayisi": 146935556,
+    "kisiSayisi": 525,
+    "fonToplamDeger": 290328984.65,
+    "gunlukGetiri": -0.00356386,
     "getiriler": {
-      "birAy": 0.041576,
-      "ucAy": 0.149026,
-      "altiAy": 0.285198,
-      "yilbasi": 0.45176,
-      "birYil": 0.590958,
-      "ucYil": 2.1550219999999998,
-      "besYil": 10.71789
+      "birAy": 0.037864,
+      "ucAy": 0.14491199999999999,
+      "altiAy": 0.27099,
+      "yilbasi": 0.446586,
+      "birYil": 0.567323,
+      "ucYil": 2.0892679999999997,
+      "besYil": 10.776269
     },
     "paraAkisi": {
-      "gunluk": 462079.25,
+      "gunluk": 2409769.46,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 6,
+      "gunluk": 15,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ECA",
+        "fonAdi": "GLOBAL MD PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-12",
+        "fiyat": 1.975893,
+        "tedavuldekiPaySayisi": 146935556,
+        "kisiSayisi": 525,
+        "fonToplamDeger": 290328984.65,
+        "gunlukGetiri": -0.00356386,
+        "paraGirisiCikisi": 2409769.46,
+        "yatirimciDegisimi": 15
+      },
       {
         "fonKodu": "ECA",
         "fonAdi": "GLOBAL MD PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.0085969,
       "paraGirisiCikisi": 462079.25,
       "yatirimciDegisimi": 6
+    },
+    {
+      "fonKodu": "ECA",
+      "fonAdi": "GLOBAL MD PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.975893,
+      "tedavuldekiPaySayisi": 146935556,
+      "kisiSayisi": 525,
+      "fonToplamDeger": 290328984.65,
+      "gunlukGetiri": -0.00356386,
+      "paraGirisiCikisi": 2409769.46,
+      "yatirimciDegisimi": 15
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ECA",
+      "fonAdi": "GLOBAL MD PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.975893,
+      "tedavuldekiPaySayisi": 146935556,
+      "kisiSayisi": 525,
+      "fonToplamDeger": 290328984.65,
+      "gunlukGetiri": -0.00356386,
+      "paraGirisiCikisi": 2409769.46,
+      "yatirimciDegisimi": 15
+    },
     {
       "fonKodu": "ECA",
       "fonAdi": "GLOBAL MD PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

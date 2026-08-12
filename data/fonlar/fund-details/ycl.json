@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "YCL",
     "slug": "ycl",
@@ -12,13 +12,13 @@
     "yonetici": "ATA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ata-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 10.301677,
+    "fiyat": 10.228026,
     "tedavuldekiPaySayisi": 19405253,
     "kisiSayisi": 11,
-    "fonToplamDeger": 199906653.43,
-    "gunlukGetiri": 0.00338309,
+    "fonToplamDeger": 198477433.38,
+    "gunlukGetiri": -0.00714942,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -3090503.1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YCL",
+        "fonAdi": "ATA PORTFÖY BEŞİNCİ SERBEST FON",
+        "tarih": "2026-08-12",
+        "fiyat": 10.228026,
+        "tedavuldekiPaySayisi": 19405253,
+        "kisiSayisi": 11,
+        "fonToplamDeger": 198477433.38,
+        "gunlukGetiri": -0.00714942,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "YCL",
         "fonAdi": "ATA PORTFÖY BEŞİNCİ SERBEST FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00338309,
       "paraGirisiCikisi": -3090503.1,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YCL",
+      "fonAdi": "ATA PORTFÖY BEŞİNCİ SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 10.228026,
+      "tedavuldekiPaySayisi": 19405253,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 198477433.38,
+      "gunlukGetiri": -0.00714942,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YCL",
+      "fonAdi": "ATA PORTFÖY BEŞİNCİ SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 10.228026,
+      "tedavuldekiPaySayisi": 19405253,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 198477433.38,
+      "gunlukGetiri": -0.00714942,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "YCL",
       "fonAdi": "ATA PORTFÖY BEŞİNCİ SERBEST FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

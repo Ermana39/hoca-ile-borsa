@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "MTH",
     "slug": "mth",
@@ -12,44 +12,56 @@
     "yonetici": "MT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "mt-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 2.153641,
-    "tedavuldekiPaySayisi": 120154914,
-    "kisiSayisi": 3199,
-    "fonToplamDeger": 258770508.08,
-    "gunlukGetiri": 0.00812769,
+    "fiyat": 2.143577,
+    "tedavuldekiPaySayisi": 118676568,
+    "kisiSayisi": 3188,
+    "fonToplamDeger": 254392370.14,
+    "gunlukGetiri": -0.00467302,
     "getiriler": {
-      "birAy": 0.012100999999999999,
-      "ucAy": 0.081517,
-      "altiAy": 0.12745599999999999,
-      "yilbasi": 0.33419400000000005,
-      "birYil": 0.676157,
+      "birAy": 0.007371,
+      "ucAy": 0.068307,
+      "altiAy": 0.114163,
+      "yilbasi": 0.32795900000000006,
+      "birYil": 0.667088,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 590547.74,
+      "gunluk": -3168948.48,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -17,
+      "gunluk": -11,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MTH",
+        "fonAdi": "MT PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 2.143577,
+        "tedavuldekiPaySayisi": 118676568,
+        "kisiSayisi": 3188,
+        "fonToplamDeger": 254392370.14,
+        "gunlukGetiri": -0.00467302,
+        "paraGirisiCikisi": -3168948.48,
+        "yatirimciDegisimi": -11
+      },
       {
         "fonKodu": "MTH",
         "fonAdi": "MT PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00812769,
       "paraGirisiCikisi": 590547.74,
       "yatirimciDegisimi": -17
+    },
+    {
+      "fonKodu": "MTH",
+      "fonAdi": "MT PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 2.143577,
+      "tedavuldekiPaySayisi": 118676568,
+      "kisiSayisi": 3188,
+      "fonToplamDeger": 254392370.14,
+      "gunlukGetiri": -0.00467302,
+      "paraGirisiCikisi": -3168948.48,
+      "yatirimciDegisimi": -11
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MTH",
+      "fonAdi": "MT PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 2.143577,
+      "tedavuldekiPaySayisi": 118676568,
+      "kisiSayisi": 3188,
+      "fonToplamDeger": 254392370.14,
+      "gunlukGetiri": -0.00467302,
+      "paraGirisiCikisi": -3168948.48,
+      "yatirimciDegisimi": -11
+    },
     {
       "fonKodu": "MTH",
       "fonAdi": "MT PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

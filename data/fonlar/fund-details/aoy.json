@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "AOY",
     "slug": "aoy",
@@ -12,24 +12,24 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 0.363249,
-    "tedavuldekiPaySayisi": 3031131410,
-    "kisiSayisi": 36386,
-    "fonToplamDeger": 1101054999.41,
-    "gunlukGetiri": -0.00381745,
+    "fiyat": 0.367269,
+    "tedavuldekiPaySayisi": 3026190906,
+    "kisiSayisi": 36329,
+    "fonToplamDeger": 1111427582.44,
+    "gunlukGetiri": 0.01106679,
     "getiriler": {
-      "birAy": -0.008584000000000001,
-      "ucAy": -0.025837,
-      "altiAy": 0.071329,
-      "yilbasi": 0.18833100000000003,
-      "birYil": 0.566329,
-      "ucYil": 0.578918,
-      "besYil": 2.322774
+      "birAy": 0.002388,
+      "ucAy": -0.039943,
+      "altiAy": 0.06854,
+      "yilbasi": 0.201482,
+      "birYil": 0.6428870000000001,
+      "ucYil": 0.632459,
+      "besYil": 2.400072
     },
     "paraAkisi": {
-      "gunluk": -1844668.51,
+      "gunluk": -1814493.96,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AOY",
+        "fonAdi": "AK PORTFÖY ALTERNATİF ENERJİ YABANCI HİSSE SENEDİ FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 0.367269,
+        "tedavuldekiPaySayisi": 3026190906,
+        "kisiSayisi": 36329,
+        "fonToplamDeger": 1111427582.44,
+        "gunlukGetiri": 0.01106679,
+        "paraGirisiCikisi": -1814493.96,
+        "yatirimciDegisimi": -57
+      },
       {
         "fonKodu": "AOY",
         "fonAdi": "AK PORTFÖY ALTERNATİF ENERJİ YABANCI HİSSE SENEDİ FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": -0.00381745,
       "paraGirisiCikisi": -1844668.51,
       "yatirimciDegisimi": -57
+    },
+    {
+      "fonKodu": "AOY",
+      "fonAdi": "AK PORTFÖY ALTERNATİF ENERJİ YABANCI HİSSE SENEDİ FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 0.367269,
+      "tedavuldekiPaySayisi": 3026190906,
+      "kisiSayisi": 36329,
+      "fonToplamDeger": 1111427582.44,
+      "gunlukGetiri": 0.01106679,
+      "paraGirisiCikisi": -1814493.96,
+      "yatirimciDegisimi": -57
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AOY",
+      "fonAdi": "AK PORTFÖY ALTERNATİF ENERJİ YABANCI HİSSE SENEDİ FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 0.367269,
+      "tedavuldekiPaySayisi": 3026190906,
+      "kisiSayisi": 36329,
+      "fonToplamDeger": 1111427582.44,
+      "gunlukGetiri": 0.01106679,
+      "paraGirisiCikisi": -1814493.96,
+      "yatirimciDegisimi": -57
+    },
     {
       "fonKodu": "AOY",
       "fonAdi": "AK PORTFÖY ALTERNATİF ENERJİ YABANCI HİSSE SENEDİ FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

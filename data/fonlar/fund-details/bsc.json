@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "BSC",
     "slug": "bsc",
@@ -12,13 +12,13 @@
     "yonetici": "A1 CAPİTAL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "a1-capital-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 0.13396,
+    "fiyat": 0.134112,
     "tedavuldekiPaySayisi": 957331903,
     "kisiSayisi": 41,
-    "fonToplamDeger": 128244014,
-    "gunlukGetiri": 0.00109107,
+    "fonToplamDeger": 128389389.29,
+    "gunlukGetiri": 0.00113467,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -133.83,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BSC",
+        "fonAdi": "A1 CAPİTAL PORTFÖY BİRİNCİ SERBEST FON",
+        "tarih": "2026-08-12",
+        "fiyat": 0.134112,
+        "tedavuldekiPaySayisi": 957331903,
+        "kisiSayisi": 41,
+        "fonToplamDeger": 128389389.29,
+        "gunlukGetiri": 0.00113467,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "BSC",
         "fonAdi": "A1 CAPİTAL PORTFÖY BİRİNCİ SERBEST FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00109107,
       "paraGirisiCikisi": -133.83,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BSC",
+      "fonAdi": "A1 CAPİTAL PORTFÖY BİRİNCİ SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 0.134112,
+      "tedavuldekiPaySayisi": 957331903,
+      "kisiSayisi": 41,
+      "fonToplamDeger": 128389389.29,
+      "gunlukGetiri": 0.00113467,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BSC",
+      "fonAdi": "A1 CAPİTAL PORTFÖY BİRİNCİ SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 0.134112,
+      "tedavuldekiPaySayisi": 957331903,
+      "kisiSayisi": 41,
+      "fonToplamDeger": 128389389.29,
+      "gunlukGetiri": 0.00113467,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "BSC",
       "fonAdi": "A1 CAPİTAL PORTFÖY BİRİNCİ SERBEST FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

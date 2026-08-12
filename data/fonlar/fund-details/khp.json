@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "KHP",
     "slug": "khp",
@@ -12,13 +12,13 @@
     "yonetici": "KUVEYT TÜRK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kuveyt-turk-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.181267,
-    "tedavuldekiPaySayisi": 24976273400,
-    "kisiSayisi": 1610,
-    "fonToplamDeger": 29503642506.06,
-    "gunlukGetiri": 0.00142083,
+    "fiyat": 1.182948,
+    "tedavuldekiPaySayisi": 24763167892,
+    "kisiSayisi": 1590,
+    "fonToplamDeger": 29293551863.56,
+    "gunlukGetiri": 0.00142305,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 3348296155.27,
+      "gunluk": -252092734.48,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 140,
+      "gunluk": -20,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KHP",
+        "fonAdi": "KUVEYT TÜRK PORTFÖY PAYLAŞIMLI HESAP PARA PİYASASI KATILIM FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 1.182948,
+        "tedavuldekiPaySayisi": 24763167892,
+        "kisiSayisi": 1590,
+        "fonToplamDeger": 29293551863.56,
+        "gunlukGetiri": 0.00142305,
+        "paraGirisiCikisi": -252092734.48,
+        "yatirimciDegisimi": -20
+      },
       {
         "fonKodu": "KHP",
         "fonAdi": "KUVEYT TÜRK PORTFÖY PAYLAŞIMLI HESAP PARA PİYASASI KATILIM FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00142083,
       "paraGirisiCikisi": 3348296155.27,
       "yatirimciDegisimi": 140
+    },
+    {
+      "fonKodu": "KHP",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY PAYLAŞIMLI HESAP PARA PİYASASI KATILIM FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 1.182948,
+      "tedavuldekiPaySayisi": 24763167892,
+      "kisiSayisi": 1590,
+      "fonToplamDeger": 29293551863.56,
+      "gunlukGetiri": 0.00142305,
+      "paraGirisiCikisi": -252092734.48,
+      "yatirimciDegisimi": -20
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KHP",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY PAYLAŞIMLI HESAP PARA PİYASASI KATILIM FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 1.182948,
+      "tedavuldekiPaySayisi": 24763167892,
+      "kisiSayisi": 1590,
+      "fonToplamDeger": 29293551863.56,
+      "gunlukGetiri": 0.00142305,
+      "paraGirisiCikisi": -252092734.48,
+      "yatirimciDegisimi": -20
+    },
     {
       "fonKodu": "KHP",
       "fonAdi": "KUVEYT TÜRK PORTFÖY PAYLAŞIMLI HESAP PARA PİYASASI KATILIM FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

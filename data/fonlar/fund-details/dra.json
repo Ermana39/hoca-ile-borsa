@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "DRA",
     "slug": "dra",
@@ -12,44 +12,56 @@
     "yonetici": "NEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "neo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.251679,
-    "tedavuldekiPaySayisi": 34480677,
-    "kisiSayisi": 45,
-    "fonToplamDeger": 43158724.87,
-    "gunlukGetiri": 0.00674742,
+    "fiyat": 1.256235,
+    "tedavuldekiPaySayisi": 34441977,
+    "kisiSayisi": 44,
+    "fonToplamDeger": 43267218.8,
+    "gunlukGetiri": 0.00363991,
     "getiriler": {
-      "birAy": 0.044951,
-      "ucAy": 0.055861,
-      "altiAy": -0.128556,
-      "yilbasi": 0.057618,
-      "birYil": 0.18611799999999998,
+      "birAy": 0.048755,
+      "ucAy": 0.059781,
+      "altiAy": -0.126325,
+      "yilbasi": 0.061467,
+      "birYil": 0.175514,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -9507.75,
+      "gunluk": -48616.29,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DRA",
+        "fonAdi": "NEO PORTFÖY DORA SERBEST FON",
+        "tarih": "2026-08-12",
+        "fiyat": 1.256235,
+        "tedavuldekiPaySayisi": 34441977,
+        "kisiSayisi": 44,
+        "fonToplamDeger": 43267218.8,
+        "gunlukGetiri": 0.00363991,
+        "paraGirisiCikisi": -48616.29,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "DRA",
         "fonAdi": "NEO PORTFÖY DORA SERBEST FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00674742,
       "paraGirisiCikisi": -9507.75,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "DRA",
+      "fonAdi": "NEO PORTFÖY DORA SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.256235,
+      "tedavuldekiPaySayisi": 34441977,
+      "kisiSayisi": 44,
+      "fonToplamDeger": 43267218.8,
+      "gunlukGetiri": 0.00363991,
+      "paraGirisiCikisi": -48616.29,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DRA",
+      "fonAdi": "NEO PORTFÖY DORA SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.256235,
+      "tedavuldekiPaySayisi": 34441977,
+      "kisiSayisi": 44,
+      "fonToplamDeger": 43267218.8,
+      "gunlukGetiri": 0.00363991,
+      "paraGirisiCikisi": -48616.29,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "DRA",
       "fonAdi": "NEO PORTFÖY DORA SERBEST FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

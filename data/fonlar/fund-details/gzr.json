@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "GZR",
     "slug": "gzr",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 11.36848,
-    "tedavuldekiPaySayisi": 91527582,
-    "kisiSayisi": 2026,
-    "fonToplamDeger": 1040529490.93,
-    "gunlukGetiri": 0.00038789,
+    "fiyat": 11.271118,
+    "tedavuldekiPaySayisi": 91513283,
+    "kisiSayisi": 2025,
+    "fonToplamDeger": 1031456978.6,
+    "gunlukGetiri": -0.00856421,
     "getiriler": {
-      "birAy": -0.010851999999999999,
-      "ucAy": -0.067119,
-      "altiAy": 0.012543,
-      "yilbasi": 0.216362,
-      "birYil": 0.215332,
-      "ucYil": 1.1325,
-      "besYil": 10.393329000000001
+      "birAy": -0.019323,
+      "ucAy": -0.075129,
+      "altiAy": 0.00045400000000000003,
+      "yilbasi": 0.205945,
+      "birYil": 0.19798100000000002,
+      "ucYil": 1.0504,
+      "besYil": 10.469728
     },
     "paraAkisi": {
-      "gunluk": -115014.91,
+      "gunluk": -161165.72,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GZR",
+        "fonAdi": "GARANTİ PORTFÖY SÜRDÜRÜLEBİLİRLİK HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 11.271118,
+        "tedavuldekiPaySayisi": 91513283,
+        "kisiSayisi": 2025,
+        "fonToplamDeger": 1031456978.6,
+        "gunlukGetiri": -0.00856421,
+        "paraGirisiCikisi": -161165.72,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "GZR",
         "fonAdi": "GARANTİ PORTFÖY SÜRDÜRÜLEBİLİRLİK HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00038789,
       "paraGirisiCikisi": -115014.91,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GZR",
+      "fonAdi": "GARANTİ PORTFÖY SÜRDÜRÜLEBİLİRLİK HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 11.271118,
+      "tedavuldekiPaySayisi": 91513283,
+      "kisiSayisi": 2025,
+      "fonToplamDeger": 1031456978.6,
+      "gunlukGetiri": -0.00856421,
+      "paraGirisiCikisi": -161165.72,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GZR",
+      "fonAdi": "GARANTİ PORTFÖY SÜRDÜRÜLEBİLİRLİK HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 11.271118,
+      "tedavuldekiPaySayisi": 91513283,
+      "kisiSayisi": 2025,
+      "fonToplamDeger": 1031456978.6,
+      "gunlukGetiri": -0.00856421,
+      "paraGirisiCikisi": -161165.72,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "GZR",
       "fonAdi": "GARANTİ PORTFÖY SÜRDÜRÜLEBİLİRLİK HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

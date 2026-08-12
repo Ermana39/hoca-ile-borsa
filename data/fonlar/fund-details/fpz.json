@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "FPZ",
     "slug": "fpz",
@@ -12,44 +12,56 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 68.712583,
-    "tedavuldekiPaySayisi": 1932267915,
-    "kisiSayisi": 19460,
-    "fonToplamDeger": 132771118946.95,
-    "gunlukGetiri": 0.00250879,
+    "fiyat": 68.754313,
+    "tedavuldekiPaySayisi": 1909127839,
+    "kisiSayisi": 19417,
+    "fonToplamDeger": 131260772241.24,
+    "gunlukGetiri": 0.00060731,
     "getiriler": {
-      "birAy": 0.020146999999999998,
-      "ucAy": 0.062853,
-      "altiAy": 0.11259000000000001,
-      "yilbasi": 0.135031,
-      "birYil": 0.21692499999999998,
-      "ucYil": 1.001703,
-      "besYil": 5.602278
+      "birAy": 0.020766,
+      "ucAy": 0.060933,
+      "altiAy": 0.112685,
+      "yilbasi": 0.13571999999999998,
+      "birYil": 0.21519,
+      "ucYil": 1.003552,
+      "besYil": 5.606287
     },
     "paraAkisi": {
-      "gunluk": -1230221840.52,
+      "gunluk": -1590980028.15,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -95,
+      "gunluk": -43,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FPZ",
+        "fonAdi": "QNB PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 68.754313,
+        "tedavuldekiPaySayisi": 1909127839,
+        "kisiSayisi": 19417,
+        "fonToplamDeger": 131260772241.24,
+        "gunlukGetiri": 0.00060731,
+        "paraGirisiCikisi": -1590980028.15,
+        "yatirimciDegisimi": -43
+      },
       {
         "fonKodu": "FPZ",
         "fonAdi": "QNB PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00250879,
       "paraGirisiCikisi": -1230221840.52,
       "yatirimciDegisimi": -95
+    },
+    {
+      "fonKodu": "FPZ",
+      "fonAdi": "QNB PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 68.754313,
+      "tedavuldekiPaySayisi": 1909127839,
+      "kisiSayisi": 19417,
+      "fonToplamDeger": 131260772241.24,
+      "gunlukGetiri": 0.00060731,
+      "paraGirisiCikisi": -1590980028.15,
+      "yatirimciDegisimi": -43
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FPZ",
+      "fonAdi": "QNB PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 68.754313,
+      "tedavuldekiPaySayisi": 1909127839,
+      "kisiSayisi": 19417,
+      "fonToplamDeger": 131260772241.24,
+      "gunlukGetiri": 0.00060731,
+      "paraGirisiCikisi": -1590980028.15,
+      "yatirimciDegisimi": -43
+    },
     {
       "fonKodu": "FPZ",
       "fonAdi": "QNB PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "KDI",
     "slug": "kdi",
@@ -12,13 +12,13 @@
     "yonetici": "KARE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kare-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 57.263665,
+    "fiyat": 57.326535,
     "tedavuldekiPaySayisi": 5926148,
     "kisiSayisi": 12,
-    "fonToplamDeger": 339352955.23,
-    "gunlukGetiri": 0.00154912,
+    "fonToplamDeger": 339725531.37,
+    "gunlukGetiri": 0.0010979,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KDI",
+        "fonAdi": "KARE PORTFÖY İKİNCİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 57.326535,
+        "tedavuldekiPaySayisi": 5926148,
+        "kisiSayisi": 12,
+        "fonToplamDeger": 339725531.37,
+        "gunlukGetiri": 0.0010979,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "KDI",
         "fonAdi": "KARE PORTFÖY İKİNCİ SERBEST (DÖVİZ) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00154912,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KDI",
+      "fonAdi": "KARE PORTFÖY İKİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 57.326535,
+      "tedavuldekiPaySayisi": 5926148,
+      "kisiSayisi": 12,
+      "fonToplamDeger": 339725531.37,
+      "gunlukGetiri": 0.0010979,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KDI",
+      "fonAdi": "KARE PORTFÖY İKİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 57.326535,
+      "tedavuldekiPaySayisi": 5926148,
+      "kisiSayisi": 12,
+      "fonToplamDeger": 339725531.37,
+      "gunlukGetiri": 0.0010979,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "KDI",
       "fonAdi": "KARE PORTFÖY İKİNCİ SERBEST (DÖVİZ) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

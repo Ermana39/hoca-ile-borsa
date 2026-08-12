@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "IOO",
     "slug": "ioo",
@@ -12,24 +12,24 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 4.547958,
-    "tedavuldekiPaySayisi": 3915509493,
-    "kisiSayisi": 6082,
-    "fonToplamDeger": 17807571107.31,
-    "gunlukGetiri": 0.00111317,
+    "fiyat": 4.552704,
+    "tedavuldekiPaySayisi": 3913962872,
+    "kisiSayisi": 6070,
+    "fonToplamDeger": 17819114207.73,
+    "gunlukGetiri": 0.00104355,
     "getiriler": {
-      "birAy": 0.032092999999999997,
-      "ucAy": 0.100229,
-      "altiAy": 0.203762,
-      "yilbasi": 0.253839,
-      "birYil": 0.464651,
-      "ucYil": 2.5443610000000003,
+      "birAy": 0.033170000000000005,
+      "ucAy": 0.10025,
+      "altiAy": 0.204032,
+      "yilbasi": 0.255148,
+      "birYil": 0.464476,
+      "ucYil": 2.54066,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 239944897.49,
+      "gunluk": -7041307.61,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IOO",
+        "fonAdi": "İŞ PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 4.552704,
+        "tedavuldekiPaySayisi": 3913962872,
+        "kisiSayisi": 6070,
+        "fonToplamDeger": 17819114207.73,
+        "gunlukGetiri": 0.00104355,
+        "paraGirisiCikisi": -7041307.61,
+        "yatirimciDegisimi": -12
+      },
       {
         "fonKodu": "IOO",
         "fonAdi": "İŞ PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00111317,
       "paraGirisiCikisi": 239944897.49,
       "yatirimciDegisimi": -12
+    },
+    {
+      "fonKodu": "IOO",
+      "fonAdi": "İŞ PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 4.552704,
+      "tedavuldekiPaySayisi": 3913962872,
+      "kisiSayisi": 6070,
+      "fonToplamDeger": 17819114207.73,
+      "gunlukGetiri": 0.00104355,
+      "paraGirisiCikisi": -7041307.61,
+      "yatirimciDegisimi": -12
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IOO",
+      "fonAdi": "İŞ PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 4.552704,
+      "tedavuldekiPaySayisi": 3913962872,
+      "kisiSayisi": 6070,
+      "fonToplamDeger": 17819114207.73,
+      "gunlukGetiri": 0.00104355,
+      "paraGirisiCikisi": -7041307.61,
+      "yatirimciDegisimi": -12
+    },
     {
       "fonKodu": "IOO",
       "fonAdi": "İŞ PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

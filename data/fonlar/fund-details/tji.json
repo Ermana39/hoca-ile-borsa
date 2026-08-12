@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "TJI",
     "slug": "tji",
@@ -12,24 +12,24 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 6.315857,
-    "tedavuldekiPaySayisi": 92251070,
-    "kisiSayisi": 920,
-    "fonToplamDeger": 582644526.7,
-    "gunlukGetiri": 0.00272135,
+    "fiyat": 6.316472,
+    "tedavuldekiPaySayisi": 92187652,
+    "kisiSayisi": 917,
+    "fonToplamDeger": 582300729.49,
+    "gunlukGetiri": 0.00009737,
     "getiriler": {
-      "birAy": 0.018744,
-      "ucAy": -0.000414,
-      "altiAy": 0.06849,
-      "yilbasi": 0.189181,
-      "birYil": 0.38122700000000004,
-      "ucYil": 1.6650649999999998,
+      "birAy": 0.018844,
+      "ucAy": -0.00707,
+      "altiAy": 0.063131,
+      "yilbasi": 0.189297,
+      "birYil": 0.37976999999999994,
+      "ucYil": 1.6513499999999999,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 36101.44,
+      "gunluk": -400578.02,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TJI",
+        "fonAdi": "TEB PORTFÖY İKİNCİ FON SEPETİ FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 6.316472,
+        "tedavuldekiPaySayisi": 92187652,
+        "kisiSayisi": 917,
+        "fonToplamDeger": 582300729.49,
+        "gunlukGetiri": 0.00009737,
+        "paraGirisiCikisi": -400578.02,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "TJI",
         "fonAdi": "TEB PORTFÖY İKİNCİ FON SEPETİ FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00272135,
       "paraGirisiCikisi": 36101.44,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "TJI",
+      "fonAdi": "TEB PORTFÖY İKİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 6.316472,
+      "tedavuldekiPaySayisi": 92187652,
+      "kisiSayisi": 917,
+      "fonToplamDeger": 582300729.49,
+      "gunlukGetiri": 0.00009737,
+      "paraGirisiCikisi": -400578.02,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TJI",
+      "fonAdi": "TEB PORTFÖY İKİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 6.316472,
+      "tedavuldekiPaySayisi": 92187652,
+      "kisiSayisi": 917,
+      "fonToplamDeger": 582300729.49,
+      "gunlukGetiri": 0.00009737,
+      "paraGirisiCikisi": -400578.02,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "TJI",
       "fonAdi": "TEB PORTFÖY İKİNCİ FON SEPETİ FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

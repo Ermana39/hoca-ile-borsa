@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "PPE",
     "slug": "ppe",
@@ -12,44 +12,56 @@
     "yonetici": "PHİLLİP PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "phillip-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 62.54895,
-    "tedavuldekiPaySayisi": 11968087,
-    "kisiSayisi": 66,
-    "fonToplamDeger": 748591275.5,
-    "gunlukGetiri": 0.00318239,
+    "fiyat": 62.46755,
+    "tedavuldekiPaySayisi": 11971894,
+    "kisiSayisi": 67,
+    "fonToplamDeger": 747854888.26,
+    "gunlukGetiri": -0.00130138,
     "getiriler": {
-      "birAy": 0.022561,
-      "ucAy": 0.06402999999999999,
-      "altiAy": 0.09854900000000001,
-      "yilbasi": 0.118717,
-      "birYil": 0.250234,
+      "birAy": 0.021230000000000002,
+      "ucAy": 0.060638,
+      "altiAy": 0.096054,
+      "yilbasi": 0.117261,
+      "birYil": 0.241431,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": 237813.96,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": 1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PPE",
+        "fonAdi": "PHİLLİP PORTFÖY SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 62.46755,
+        "tedavuldekiPaySayisi": 11971894,
+        "kisiSayisi": 67,
+        "fonToplamDeger": 747854888.26,
+        "gunlukGetiri": -0.00130138,
+        "paraGirisiCikisi": 237813.96,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "PPE",
         "fonAdi": "PHİLLİP PORTFÖY SERBEST (DÖVİZ) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00318239,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PPE",
+      "fonAdi": "PHİLLİP PORTFÖY SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 62.46755,
+      "tedavuldekiPaySayisi": 11971894,
+      "kisiSayisi": 67,
+      "fonToplamDeger": 747854888.26,
+      "gunlukGetiri": -0.00130138,
+      "paraGirisiCikisi": 237813.96,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PPE",
+      "fonAdi": "PHİLLİP PORTFÖY SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 62.46755,
+      "tedavuldekiPaySayisi": 11971894,
+      "kisiSayisi": 67,
+      "fonToplamDeger": 747854888.26,
+      "gunlukGetiri": -0.00130138,
+      "paraGirisiCikisi": 237813.96,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "PPE",
       "fonAdi": "PHİLLİP PORTFÖY SERBEST (DÖVİZ) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

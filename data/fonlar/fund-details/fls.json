@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "FLS",
     "slug": "fls",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 62.186528,
-    "tedavuldekiPaySayisi": 63411613,
-    "kisiSayisi": 2211,
-    "fonToplamDeger": 3943348031.4,
-    "gunlukGetiri": 0.00528394,
+    "fiyat": 62.056427,
+    "tedavuldekiPaySayisi": 64175611,
+    "kisiSayisi": 2217,
+    "fonToplamDeger": 3982509115.76,
+    "gunlukGetiri": -0.00209211,
     "getiriler": {
-      "birAy": 0.034952000000000004,
-      "ucAy": 0.05529,
-      "altiAy": 0.09815,
-      "yilbasi": 0.13425,
-      "birYil": 0.265117,
+      "birAy": 0.032787000000000004,
+      "ucAy": 0.049227999999999994,
+      "altiAy": 0.093834,
+      "yilbasi": 0.131877,
+      "birYil": 0.258584,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 164946594.01,
+      "gunluk": 47410986.12,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
+      "gunluk": 6,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FLS",
+        "fonAdi": "YAPI KREDİ PORTFÖY FLORYA SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 62.056427,
+        "tedavuldekiPaySayisi": 64175611,
+        "kisiSayisi": 2217,
+        "fonToplamDeger": 3982509115.76,
+        "gunlukGetiri": -0.00209211,
+        "paraGirisiCikisi": 47410986.12,
+        "yatirimciDegisimi": 6
+      },
       {
         "fonKodu": "FLS",
         "fonAdi": "YAPI KREDİ PORTFÖY FLORYA SERBEST (DÖVİZ-AVRO) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00528394,
       "paraGirisiCikisi": 164946594.01,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "FLS",
+      "fonAdi": "YAPI KREDİ PORTFÖY FLORYA SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 62.056427,
+      "tedavuldekiPaySayisi": 64175611,
+      "kisiSayisi": 2217,
+      "fonToplamDeger": 3982509115.76,
+      "gunlukGetiri": -0.00209211,
+      "paraGirisiCikisi": 47410986.12,
+      "yatirimciDegisimi": 6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FLS",
+      "fonAdi": "YAPI KREDİ PORTFÖY FLORYA SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 62.056427,
+      "tedavuldekiPaySayisi": 64175611,
+      "kisiSayisi": 2217,
+      "fonToplamDeger": 3982509115.76,
+      "gunlukGetiri": -0.00209211,
+      "paraGirisiCikisi": 47410986.12,
+      "yatirimciDegisimi": 6
+    },
     {
       "fonKodu": "FLS",
       "fonAdi": "YAPI KREDİ PORTFÖY FLORYA SERBEST (DÖVİZ-AVRO) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

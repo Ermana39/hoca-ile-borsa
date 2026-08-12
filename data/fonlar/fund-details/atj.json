@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "ATJ",
     "slug": "atj",
@@ -12,21 +12,21 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 22.423052,
+    "fiyat": 22.126528,
     "tedavuldekiPaySayisi": 45294433,
     "kisiSayisi": 9,
-    "fonToplamDeger": 1015639411.07,
-    "gunlukGetiri": 0.00946045,
+    "fonToplamDeger": 1002208533.22,
+    "gunlukGetiri": -0.01322407,
     "getiriler": {
-      "birAy": 0.015331,
-      "ucAy": -0.049198000000000006,
-      "altiAy": 0.034950999999999996,
-      "yilbasi": 0.200943,
-      "birYil": 0.307801,
-      "ucYil": 1.4348150000000002,
-      "besYil": 14.538921
+      "birAy": 0.001904,
+      "ucAy": -0.066946,
+      "altiAy": 0.016712,
+      "yilbasi": 0.185061,
+      "birYil": 0.284698,
+      "ucYil": 1.337934,
+      "besYil": 14.427279
     },
     "paraAkisi": {
       "gunluk": 0,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ATJ",
+        "fonAdi": "AZİMUT PORTFÖY İKİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-12",
+        "fiyat": 22.126528,
+        "tedavuldekiPaySayisi": 45294433,
+        "kisiSayisi": 9,
+        "fonToplamDeger": 1002208533.22,
+        "gunlukGetiri": -0.01322407,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "ATJ",
         "fonAdi": "AZİMUT PORTFÖY İKİNCİ DEĞİŞKEN FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00946045,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "ATJ",
+      "fonAdi": "AZİMUT PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 22.126528,
+      "tedavuldekiPaySayisi": 45294433,
+      "kisiSayisi": 9,
+      "fonToplamDeger": 1002208533.22,
+      "gunlukGetiri": -0.01322407,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ATJ",
+      "fonAdi": "AZİMUT PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 22.126528,
+      "tedavuldekiPaySayisi": 45294433,
+      "kisiSayisi": 9,
+      "fonToplamDeger": 1002208533.22,
+      "gunlukGetiri": -0.01322407,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "ATJ",
       "fonAdi": "AZİMUT PORTFÖY İKİNCİ DEĞİŞKEN FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

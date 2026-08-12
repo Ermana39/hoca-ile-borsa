@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "HAI",
     "slug": "hai",
@@ -12,15 +12,15 @@
     "yonetici": "AHLATCI PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ahlatci-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.02197,
-    "tedavuldekiPaySayisi": 8969775,
-    "kisiSayisi": 235,
-    "fonToplamDeger": 9166843.84,
-    "gunlukGetiri": 0.00896445,
+    "fiyat": 1.028342,
+    "tedavuldekiPaySayisi": 9090743,
+    "kisiSayisi": 247,
+    "fonToplamDeger": 9348395.16,
+    "gunlukGetiri": 0.00623502,
     "getiriler": {
-      "birAy": 0.069142,
+      "birAy": 0.075808,
       "ucAy": null,
       "altiAy": null,
       "yilbasi": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 90155.13,
+      "gunluk": 124396.48,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 13,
+      "gunluk": 12,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HAI",
+        "fonAdi": "AHLATCI PORTFÖY ALTIN FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 1.028342,
+        "tedavuldekiPaySayisi": 9090743,
+        "kisiSayisi": 247,
+        "fonToplamDeger": 9348395.16,
+        "gunlukGetiri": 0.00623502,
+        "paraGirisiCikisi": 124396.48,
+        "yatirimciDegisimi": 12
+      },
       {
         "fonKodu": "HAI",
         "fonAdi": "AHLATCI PORTFÖY ALTIN FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00896445,
       "paraGirisiCikisi": 90155.13,
       "yatirimciDegisimi": 13
+    },
+    {
+      "fonKodu": "HAI",
+      "fonAdi": "AHLATCI PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 1.028342,
+      "tedavuldekiPaySayisi": 9090743,
+      "kisiSayisi": 247,
+      "fonToplamDeger": 9348395.16,
+      "gunlukGetiri": 0.00623502,
+      "paraGirisiCikisi": 124396.48,
+      "yatirimciDegisimi": 12
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HAI",
+      "fonAdi": "AHLATCI PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 1.028342,
+      "tedavuldekiPaySayisi": 9090743,
+      "kisiSayisi": 247,
+      "fonToplamDeger": 9348395.16,
+      "gunlukGetiri": 0.00623502,
+      "paraGirisiCikisi": 124396.48,
+      "yatirimciDegisimi": 12
+    },
     {
       "fonKodu": "HAI",
       "fonAdi": "AHLATCI PORTFÖY ALTIN FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

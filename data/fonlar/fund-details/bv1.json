@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "BV1",
     "slug": "bv1",
@@ -12,44 +12,56 @@
     "yonetici": "BV PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "bv-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.688989,
-    "tedavuldekiPaySayisi": 51067674,
-    "kisiSayisi": 482,
-    "fonToplamDeger": 86252748.57,
-    "gunlukGetiri": 0.01585441,
+    "fiyat": 1.642984,
+    "tedavuldekiPaySayisi": 51102528,
+    "kisiSayisi": 490,
+    "fonToplamDeger": 83960621.09,
+    "gunlukGetiri": -0.02723819,
     "getiriler": {
-      "birAy": 0.06851,
-      "ucAy": 0.03838,
-      "altiAy": 0.0695,
-      "yilbasi": 0.286628,
-      "birYil": 0.524372,
+      "birAy": 0.039405,
+      "ucAy": 0.004067,
+      "altiAy": 0.035549,
+      "yilbasi": 0.251583,
+      "birYil": 0.482126,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 22066.64,
+      "gunluk": 57264.56,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
+      "gunluk": 8,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BV1",
+        "fonAdi": "BV PORTFÖY BİRİNCİ HİSSE SENEDİ (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 1.642984,
+        "tedavuldekiPaySayisi": 51102528,
+        "kisiSayisi": 490,
+        "fonToplamDeger": 83960621.09,
+        "gunlukGetiri": -0.02723819,
+        "paraGirisiCikisi": 57264.56,
+        "yatirimciDegisimi": 8
+      },
       {
         "fonKodu": "BV1",
         "fonAdi": "BV PORTFÖY BİRİNCİ HİSSE SENEDİ (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.01585441,
       "paraGirisiCikisi": 22066.64,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "BV1",
+      "fonAdi": "BV PORTFÖY BİRİNCİ HİSSE SENEDİ (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.642984,
+      "tedavuldekiPaySayisi": 51102528,
+      "kisiSayisi": 490,
+      "fonToplamDeger": 83960621.09,
+      "gunlukGetiri": -0.02723819,
+      "paraGirisiCikisi": 57264.56,
+      "yatirimciDegisimi": 8
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BV1",
+      "fonAdi": "BV PORTFÖY BİRİNCİ HİSSE SENEDİ (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.642984,
+      "tedavuldekiPaySayisi": 51102528,
+      "kisiSayisi": 490,
+      "fonToplamDeger": 83960621.09,
+      "gunlukGetiri": -0.02723819,
+      "paraGirisiCikisi": 57264.56,
+      "yatirimciDegisimi": 8
+    },
     {
       "fonKodu": "BV1",
       "fonAdi": "BV PORTFÖY BİRİNCİ HİSSE SENEDİ (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

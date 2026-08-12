@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "OPJ",
     "slug": "opj",
@@ -12,13 +12,13 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.666265,
-    "tedavuldekiPaySayisi": 501712142,
-    "kisiSayisi": 2230,
-    "fonToplamDeger": 835985362.27,
-    "gunlukGetiri": 0.00104113,
+    "fiyat": 1.667978,
+    "tedavuldekiPaySayisi": 703210611,
+    "kisiSayisi": 2242,
+    "fonToplamDeger": 1172939583.31,
+    "gunlukGetiri": 0.00102805,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 238992302.3,
+      "gunluk": 336095013.33,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 194,
+      "gunluk": 12,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OPJ",
+        "fonAdi": "QNB PORTFÖY QNB PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 1.667978,
+        "tedavuldekiPaySayisi": 703210611,
+        "kisiSayisi": 2242,
+        "fonToplamDeger": 1172939583.31,
+        "gunlukGetiri": 0.00102805,
+        "paraGirisiCikisi": 336095013.33,
+        "yatirimciDegisimi": 12
+      },
       {
         "fonKodu": "OPJ",
         "fonAdi": "QNB PORTFÖY QNB PARA PİYASASI (TL) FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00104113,
       "paraGirisiCikisi": 238992302.3,
       "yatirimciDegisimi": 194
+    },
+    {
+      "fonKodu": "OPJ",
+      "fonAdi": "QNB PORTFÖY QNB PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 1.667978,
+      "tedavuldekiPaySayisi": 703210611,
+      "kisiSayisi": 2242,
+      "fonToplamDeger": 1172939583.31,
+      "gunlukGetiri": 0.00102805,
+      "paraGirisiCikisi": 336095013.33,
+      "yatirimciDegisimi": 12
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OPJ",
+      "fonAdi": "QNB PORTFÖY QNB PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 1.667978,
+      "tedavuldekiPaySayisi": 703210611,
+      "kisiSayisi": 2242,
+      "fonToplamDeger": 1172939583.31,
+      "gunlukGetiri": 0.00102805,
+      "paraGirisiCikisi": 336095013.33,
+      "yatirimciDegisimi": 12
+    },
     {
       "fonKodu": "OPJ",
       "fonAdi": "QNB PORTFÖY QNB PARA PİYASASI (TL) FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

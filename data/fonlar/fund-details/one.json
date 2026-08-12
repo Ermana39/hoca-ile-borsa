@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "ONE",
     "slug": "one",
@@ -12,44 +12,56 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.460755,
-    "tedavuldekiPaySayisi": 20773168.48,
-    "kisiSayisi": 675,
-    "fonToplamDeger": 30344509.81,
-    "gunlukGetiri": 0.00369664,
+    "fiyat": 1.444632,
+    "tedavuldekiPaySayisi": 20811218.48,
+    "kisiSayisi": 674,
+    "fonToplamDeger": 30064546.53,
+    "gunlukGetiri": -0.01103744,
     "getiriler": {
-      "birAy": -0.012075,
-      "ucAy": -0.043914999999999996,
-      "altiAy": 0.040754,
-      "yilbasi": 0.230777,
-      "birYil": 0.288757,
+      "birAy": -0.022979,
+      "ucAy": -0.057167,
+      "altiAy": 0.027945,
+      "yilbasi": 0.217192,
+      "birYil": 0.23451699999999998,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1522.11,
+      "gunluk": 54968.25,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ONE",
+        "fonAdi": "AKTİF PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 1.444632,
+        "tedavuldekiPaySayisi": 20811218.48,
+        "kisiSayisi": 674,
+        "fonToplamDeger": 30064546.53,
+        "gunlukGetiri": -0.01103744,
+        "paraGirisiCikisi": 54968.25,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "ONE",
         "fonAdi": "AKTİF PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00369664,
       "paraGirisiCikisi": 1522.11,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "ONE",
+      "fonAdi": "AKTİF PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.444632,
+      "tedavuldekiPaySayisi": 20811218.48,
+      "kisiSayisi": 674,
+      "fonToplamDeger": 30064546.53,
+      "gunlukGetiri": -0.01103744,
+      "paraGirisiCikisi": 54968.25,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ONE",
+      "fonAdi": "AKTİF PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.444632,
+      "tedavuldekiPaySayisi": 20811218.48,
+      "kisiSayisi": 674,
+      "fonToplamDeger": 30064546.53,
+      "gunlukGetiri": -0.01103744,
+      "paraGirisiCikisi": 54968.25,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "ONE",
       "fonAdi": "AKTİF PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

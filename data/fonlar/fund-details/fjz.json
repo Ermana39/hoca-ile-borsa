@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "FJZ",
     "slug": "fjz",
@@ -12,44 +12,56 @@
     "yonetici": "FİBA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "fiba-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 65.931449,
-    "tedavuldekiPaySayisi": 22599906,
+    "fiyat": 65.93217,
+    "tedavuldekiPaySayisi": 22603920,
     "kisiSayisi": 812,
-    "fonToplamDeger": 1490044541.98,
-    "gunlukGetiri": 0.00189601,
+    "fonToplamDeger": 1490325496.12,
+    "gunlukGetiri": 0.00001094,
     "getiriler": {
-      "birAy": 0.020701,
-      "ucAy": 0.061172000000000004,
-      "altiAy": 0.107286,
-      "yilbasi": 0.14147,
-      "birYil": 0.254185,
-      "ucYil": 1.339528,
-      "besYil": 6.643193999999999
+      "birAy": 0.020712,
+      "ucAy": 0.059332,
+      "altiAy": 0.10666,
+      "yilbasi": 0.141482,
+      "birYil": 0.250324,
+      "ucYil": 1.3381549999999998,
+      "besYil": 6.64347
     },
     "paraAkisi": {
-      "gunluk": -627865.19,
+      "gunluk": 264651.73,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FJZ",
+        "fonAdi": "FİBA PORTFÖY FIRTINA SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 65.93217,
+        "tedavuldekiPaySayisi": 22603920,
+        "kisiSayisi": 812,
+        "fonToplamDeger": 1490325496.12,
+        "gunlukGetiri": 0.00001094,
+        "paraGirisiCikisi": 264651.73,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "FJZ",
         "fonAdi": "FİBA PORTFÖY FIRTINA SERBEST (DÖVİZ) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00189601,
       "paraGirisiCikisi": -627865.19,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "FJZ",
+      "fonAdi": "FİBA PORTFÖY FIRTINA SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 65.93217,
+      "tedavuldekiPaySayisi": 22603920,
+      "kisiSayisi": 812,
+      "fonToplamDeger": 1490325496.12,
+      "gunlukGetiri": 0.00001094,
+      "paraGirisiCikisi": 264651.73,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FJZ",
+      "fonAdi": "FİBA PORTFÖY FIRTINA SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 65.93217,
+      "tedavuldekiPaySayisi": 22603920,
+      "kisiSayisi": 812,
+      "fonToplamDeger": 1490325496.12,
+      "gunlukGetiri": 0.00001094,
+      "paraGirisiCikisi": 264651.73,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "FJZ",
       "fonAdi": "FİBA PORTFÖY FIRTINA SERBEST (DÖVİZ) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

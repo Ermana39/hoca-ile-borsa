@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "HVK",
     "slug": "hvk",
@@ -12,44 +12,56 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 5.233616,
-    "tedavuldekiPaySayisi": 113285256,
-    "kisiSayisi": 1565,
-    "fonToplamDeger": 592891474.67,
-    "gunlukGetiri": 0.00110543,
+    "fiyat": 5.239839,
+    "tedavuldekiPaySayisi": 112665691,
+    "kisiSayisi": 1550,
+    "fonToplamDeger": 590350088.63,
+    "gunlukGetiri": 0.00118904,
     "getiriler": {
-      "birAy": -0.049943,
-      "ucAy": 0.015976,
-      "altiAy": 0.123666,
-      "yilbasi": 0.171866,
-      "birYil": 0.377556,
-      "ucYil": 2.427831,
+      "birAy": -0.048813,
+      "ucAy": 0.015918,
+      "altiAy": 0.12348200000000001,
+      "yilbasi": 0.17326,
+      "birYil": 0.37769199999999997,
+      "ucYil": 2.422418,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -3819749.4,
+      "gunluk": -3246420.85,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -13,
+      "gunluk": -15,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HVK",
+        "fonAdi": "HEDEF PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 5.239839,
+        "tedavuldekiPaySayisi": 112665691,
+        "kisiSayisi": 1550,
+        "fonToplamDeger": 590350088.63,
+        "gunlukGetiri": 0.00118904,
+        "paraGirisiCikisi": -3246420.85,
+        "yatirimciDegisimi": -15
+      },
       {
         "fonKodu": "HVK",
         "fonAdi": "HEDEF PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00110543,
       "paraGirisiCikisi": -3819749.4,
       "yatirimciDegisimi": -13
+    },
+    {
+      "fonKodu": "HVK",
+      "fonAdi": "HEDEF PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 5.239839,
+      "tedavuldekiPaySayisi": 112665691,
+      "kisiSayisi": 1550,
+      "fonToplamDeger": 590350088.63,
+      "gunlukGetiri": 0.00118904,
+      "paraGirisiCikisi": -3246420.85,
+      "yatirimciDegisimi": -15
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HVK",
+      "fonAdi": "HEDEF PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 5.239839,
+      "tedavuldekiPaySayisi": 112665691,
+      "kisiSayisi": 1550,
+      "fonToplamDeger": 590350088.63,
+      "gunlukGetiri": 0.00118904,
+      "paraGirisiCikisi": -3246420.85,
+      "yatirimciDegisimi": -15
+    },
     {
       "fonKodu": "HVK",
       "fonAdi": "HEDEF PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

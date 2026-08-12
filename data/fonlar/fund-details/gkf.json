@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "GKF",
     "slug": "gkf",
@@ -12,44 +12,56 @@
     "yonetici": "GLOBAL MD PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "global-md-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 4.419666,
-    "tedavuldekiPaySayisi": 9407503,
-    "kisiSayisi": 703,
-    "fonToplamDeger": 41578023.41,
-    "gunlukGetiri": -0.00113319,
+    "fiyat": 4.410437,
+    "tedavuldekiPaySayisi": 9342120,
+    "kisiSayisi": 701,
+    "fonToplamDeger": 41202833.91,
+    "gunlukGetiri": -0.00208817,
     "getiriler": {
-      "birAy": -0.047414,
-      "ucAy": -0.125635,
-      "altiAy": -0.002147,
-      "yilbasi": 0.138407,
-      "birYil": 0.12811,
-      "ucYil": 1.203267,
-      "besYil": 3.406961
+      "birAy": -0.049402999999999996,
+      "ucAy": -0.126257,
+      "altiAy": -0.004946,
+      "yilbasi": 0.13602999999999998,
+      "birYil": 0.11448,
+      "ucYil": 1.147742,
+      "besYil": 3.3968290000000003
     },
     "paraAkisi": {
-      "gunluk": -21514.93,
+      "gunluk": -288367.6,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GKF",
+        "fonAdi": "GLOBAL MD PORTFÖY KATILIM FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 4.410437,
+        "tedavuldekiPaySayisi": 9342120,
+        "kisiSayisi": 701,
+        "fonToplamDeger": 41202833.91,
+        "gunlukGetiri": -0.00208817,
+        "paraGirisiCikisi": -288367.6,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "GKF",
         "fonAdi": "GLOBAL MD PORTFÖY KATILIM FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": -0.00113319,
       "paraGirisiCikisi": -21514.93,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GKF",
+      "fonAdi": "GLOBAL MD PORTFÖY KATILIM FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 4.410437,
+      "tedavuldekiPaySayisi": 9342120,
+      "kisiSayisi": 701,
+      "fonToplamDeger": 41202833.91,
+      "gunlukGetiri": -0.00208817,
+      "paraGirisiCikisi": -288367.6,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GKF",
+      "fonAdi": "GLOBAL MD PORTFÖY KATILIM FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 4.410437,
+      "tedavuldekiPaySayisi": 9342120,
+      "kisiSayisi": 701,
+      "fonToplamDeger": 41202833.91,
+      "gunlukGetiri": -0.00208817,
+      "paraGirisiCikisi": -288367.6,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "GKF",
       "fonAdi": "GLOBAL MD PORTFÖY KATILIM FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "FDG",
     "slug": "fdg",
@@ -12,44 +12,56 @@
     "yonetici": "FONMAP PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "fonmap-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 2.661021,
-    "tedavuldekiPaySayisi": 30202292,
-    "kisiSayisi": 897,
-    "fonToplamDeger": 80368920.11,
-    "gunlukGetiri": 0.00259784,
+    "fiyat": 2.654526,
+    "tedavuldekiPaySayisi": 30222837,
+    "kisiSayisi": 898,
+    "fonToplamDeger": 80227304.42,
+    "gunlukGetiri": -0.00244079,
     "getiriler": {
-      "birAy": -0.015273000000000002,
-      "ucAy": -0.066646,
-      "altiAy": 0.050931,
-      "yilbasi": 0.13848000000000002,
-      "birYil": 0.335658,
+      "birAy": -0.017676,
+      "ucAy": -0.070091,
+      "altiAy": 0.041006,
+      "yilbasi": 0.135701,
+      "birYil": 0.324601,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -38691.25,
+      "gunluk": 54537.24,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -13,
+      "gunluk": 1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FDG",
+        "fonAdi": "FONMAP PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-12",
+        "fiyat": 2.654526,
+        "tedavuldekiPaySayisi": 30222837,
+        "kisiSayisi": 898,
+        "fonToplamDeger": 80227304.42,
+        "gunlukGetiri": -0.00244079,
+        "paraGirisiCikisi": 54537.24,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "FDG",
         "fonAdi": "FONMAP PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00259784,
       "paraGirisiCikisi": -38691.25,
       "yatirimciDegisimi": -13
+    },
+    {
+      "fonKodu": "FDG",
+      "fonAdi": "FONMAP PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 2.654526,
+      "tedavuldekiPaySayisi": 30222837,
+      "kisiSayisi": 898,
+      "fonToplamDeger": 80227304.42,
+      "gunlukGetiri": -0.00244079,
+      "paraGirisiCikisi": 54537.24,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FDG",
+      "fonAdi": "FONMAP PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 2.654526,
+      "tedavuldekiPaySayisi": 30222837,
+      "kisiSayisi": 898,
+      "fonToplamDeger": 80227304.42,
+      "gunlukGetiri": -0.00244079,
+      "paraGirisiCikisi": 54537.24,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "FDG",
       "fonAdi": "FONMAP PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

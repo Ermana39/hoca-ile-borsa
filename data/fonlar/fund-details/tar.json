@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "TAR",
     "slug": "tar",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 2.55516,
-    "tedavuldekiPaySayisi": 53225704,
-    "kisiSayisi": 6834,
-    "fonToplamDeger": 136000188.76,
-    "gunlukGetiri": 0.0054812,
+    "fiyat": 2.542266,
+    "tedavuldekiPaySayisi": 52858545,
+    "kisiSayisi": 6831,
+    "fonToplamDeger": 134380499.81,
+    "gunlukGetiri": -0.00504626,
     "getiriler": {
-      "birAy": 0.027395,
-      "ucAy": 0.091053,
-      "altiAy": 0.090038,
-      "yilbasi": 0.229089,
-      "birYil": 0.20933800000000002,
-      "ucYil": 0.639014,
+      "birAy": 0.02221,
+      "ucAy": 0.082295,
+      "altiAy": 0.087099,
+      "yilbasi": 0.222886,
+      "birYil": 0.204228,
+      "ucYil": 0.617792,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -11641.31,
+      "gunluk": -933415.84,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -22,
+      "gunluk": -3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TAR",
+        "fonAdi": "AK PORTFÖY TARIM VE GIDA TEKNOLOJİLERİ DEĞİŞKEN FON",
+        "tarih": "2026-08-12",
+        "fiyat": 2.542266,
+        "tedavuldekiPaySayisi": 52858545,
+        "kisiSayisi": 6831,
+        "fonToplamDeger": 134380499.81,
+        "gunlukGetiri": -0.00504626,
+        "paraGirisiCikisi": -933415.84,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "TAR",
         "fonAdi": "AK PORTFÖY TARIM VE GIDA TEKNOLOJİLERİ DEĞİŞKEN FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.0054812,
       "paraGirisiCikisi": -11641.31,
       "yatirimciDegisimi": -22
+    },
+    {
+      "fonKodu": "TAR",
+      "fonAdi": "AK PORTFÖY TARIM VE GIDA TEKNOLOJİLERİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 2.542266,
+      "tedavuldekiPaySayisi": 52858545,
+      "kisiSayisi": 6831,
+      "fonToplamDeger": 134380499.81,
+      "gunlukGetiri": -0.00504626,
+      "paraGirisiCikisi": -933415.84,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TAR",
+      "fonAdi": "AK PORTFÖY TARIM VE GIDA TEKNOLOJİLERİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 2.542266,
+      "tedavuldekiPaySayisi": 52858545,
+      "kisiSayisi": 6831,
+      "fonToplamDeger": 134380499.81,
+      "gunlukGetiri": -0.00504626,
+      "paraGirisiCikisi": -933415.84,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "TAR",
       "fonAdi": "AK PORTFÖY TARIM VE GIDA TEKNOLOJİLERİ DEĞİŞKEN FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

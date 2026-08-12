@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "RPX",
     "slug": "rpx",
@@ -12,24 +12,24 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 62.632674,
+    "fiyat": 62.670401,
     "tedavuldekiPaySayisi": 9824510,
     "kisiSayisi": 129,
-    "fonToplamDeger": 615335334.26,
-    "gunlukGetiri": 0.00225742,
+    "fonToplamDeger": 615705986.08,
+    "gunlukGetiri": 0.00060235,
     "getiriler": {
-      "birAy": 0.020054,
-      "ucAy": 0.060717999999999994,
-      "altiAy": 0.110414,
-      "yilbasi": 0.13398,
-      "birYil": 0.217699,
-      "ucYil": 1.023644,
+      "birAy": 0.020669,
+      "ucAy": 0.058808,
+      "altiAy": 0.11048,
+      "yilbasi": 0.134663,
+      "birYil": 0.215954,
+      "ucYil": 1.022753,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -42339.69,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RPX",
+        "fonAdi": "ROTA PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 62.670401,
+        "tedavuldekiPaySayisi": 9824510,
+        "kisiSayisi": 129,
+        "fonToplamDeger": 615705986.08,
+        "gunlukGetiri": 0.00060235,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "RPX",
         "fonAdi": "ROTA PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00225742,
       "paraGirisiCikisi": -42339.69,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "RPX",
+      "fonAdi": "ROTA PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 62.670401,
+      "tedavuldekiPaySayisi": 9824510,
+      "kisiSayisi": 129,
+      "fonToplamDeger": 615705986.08,
+      "gunlukGetiri": 0.00060235,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RPX",
+      "fonAdi": "ROTA PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 62.670401,
+      "tedavuldekiPaySayisi": 9824510,
+      "kisiSayisi": 129,
+      "fonToplamDeger": 615705986.08,
+      "gunlukGetiri": 0.00060235,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "RPX",
       "fonAdi": "ROTA PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

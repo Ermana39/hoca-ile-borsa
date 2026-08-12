@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "KAC",
     "slug": "kac",
@@ -12,12 +12,12 @@
     "yonetici": "EMLAK KATILIM PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "emlak-katilim-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 3.866481,
-    "tedavuldekiPaySayisi": 7183786182,
-    "kisiSayisi": 1802,
-    "fonToplamDeger": 27775970015.47,
+    "fiyat": 3.870426,
+    "tedavuldekiPaySayisi": 7167729959,
+    "kisiSayisi": 1799,
+    "fonToplamDeger": 27742167487.65,
     "gunlukGetiri": 0.00102031,
     "getiriler": {
       "birAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 6672561943,
+      "gunluk": -62144422.96,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
+      "gunluk": -3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KAC",
+        "fonAdi": "EMLAK KATILIM PORTFÖY KISA VADELİ KATILIM SERBEST (TL) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 3.870426,
+        "tedavuldekiPaySayisi": 7167729959,
+        "kisiSayisi": 1799,
+        "fonToplamDeger": 27742167487.65,
+        "gunlukGetiri": 0.00102031,
+        "paraGirisiCikisi": -62144422.96,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "KAC",
         "fonAdi": "EMLAK KATILIM PORTFÖY KISA VADELİ KATILIM SERBEST (TL) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00102031,
       "paraGirisiCikisi": 6672561943,
       "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "KAC",
+      "fonAdi": "EMLAK KATILIM PORTFÖY KISA VADELİ KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 3.870426,
+      "tedavuldekiPaySayisi": 7167729959,
+      "kisiSayisi": 1799,
+      "fonToplamDeger": 27742167487.65,
+      "gunlukGetiri": 0.00102031,
+      "paraGirisiCikisi": -62144422.96,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KAC",
+      "fonAdi": "EMLAK KATILIM PORTFÖY KISA VADELİ KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 3.870426,
+      "tedavuldekiPaySayisi": 7167729959,
+      "kisiSayisi": 1799,
+      "fonToplamDeger": 27742167487.65,
+      "gunlukGetiri": 0.00102031,
+      "paraGirisiCikisi": -62144422.96,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "KAC",
       "fonAdi": "EMLAK KATILIM PORTFÖY KISA VADELİ KATILIM SERBEST (TL) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

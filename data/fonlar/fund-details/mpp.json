@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "MPP",
     "slug": "mpp",
@@ -12,44 +12,56 @@
     "yonetici": "MEKSA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "meksa-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 21.569239,
-    "tedavuldekiPaySayisi": 17789444,
-    "kisiSayisi": 1329,
-    "fonToplamDeger": 383704768.75,
-    "gunlukGetiri": 0.00043154,
+    "fiyat": 21.472437,
+    "tedavuldekiPaySayisi": 17692128,
+    "kisiSayisi": 1321,
+    "fonToplamDeger": 379893107.75,
+    "gunlukGetiri": -0.00448797,
     "getiriler": {
-      "birAy": -0.062332,
-      "ucAy": -0.048661,
-      "altiAy": 0.003286,
-      "yilbasi": 0.090922,
-      "birYil": 0.246065,
-      "ucYil": 0.84065,
-      "besYil": 5.284247000000001
+      "birAy": -0.06654,
+      "ucAy": -0.060157999999999996,
+      "altiAy": -0.007122000000000001,
+      "yilbasi": 0.086026,
+      "birYil": 0.23920000000000002,
+      "ucYil": 0.838854,
+      "besYil": 5.215514
     },
     "paraAkisi": {
-      "gunluk": -1609841.72,
+      "gunluk": -2089611.68,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -9,
+      "gunluk": -8,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MPP",
+        "fonAdi": "MEKSA PORTFÖY PRİME SERBEST FON",
+        "tarih": "2026-08-12",
+        "fiyat": 21.472437,
+        "tedavuldekiPaySayisi": 17692128,
+        "kisiSayisi": 1321,
+        "fonToplamDeger": 379893107.75,
+        "gunlukGetiri": -0.00448797,
+        "paraGirisiCikisi": -2089611.68,
+        "yatirimciDegisimi": -8
+      },
       {
         "fonKodu": "MPP",
         "fonAdi": "MEKSA PORTFÖY PRİME SERBEST FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00043154,
       "paraGirisiCikisi": -1609841.72,
       "yatirimciDegisimi": -9
+    },
+    {
+      "fonKodu": "MPP",
+      "fonAdi": "MEKSA PORTFÖY PRİME SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 21.472437,
+      "tedavuldekiPaySayisi": 17692128,
+      "kisiSayisi": 1321,
+      "fonToplamDeger": 379893107.75,
+      "gunlukGetiri": -0.00448797,
+      "paraGirisiCikisi": -2089611.68,
+      "yatirimciDegisimi": -8
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MPP",
+      "fonAdi": "MEKSA PORTFÖY PRİME SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 21.472437,
+      "tedavuldekiPaySayisi": 17692128,
+      "kisiSayisi": 1321,
+      "fonToplamDeger": 379893107.75,
+      "gunlukGetiri": -0.00448797,
+      "paraGirisiCikisi": -2089611.68,
+      "yatirimciDegisimi": -8
+    },
     {
       "fonKodu": "MPP",
       "fonAdi": "MEKSA PORTFÖY PRİME SERBEST FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

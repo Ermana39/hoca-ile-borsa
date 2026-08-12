@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "HDK",
     "slug": "hdk",
@@ -12,44 +12,56 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 2.987932,
-    "tedavuldekiPaySayisi": 4040578,
+    "fiyat": 2.987483,
+    "tedavuldekiPaySayisi": 4041749,
     "kisiSayisi": 128,
-    "fonToplamDeger": 12072972.25,
-    "gunlukGetiri": 0.00175647,
+    "fonToplamDeger": 12074655.01,
+    "gunlukGetiri": -0.00015027,
     "getiriler": {
-      "birAy": 0.019944,
-      "ucAy": 0.06066099999999999,
-      "altiAy": 0.119441,
-      "yilbasi": 0.15644,
-      "birYil": 0.285741,
-      "ucYil": 1.889831,
+      "birAy": 0.019791,
+      "ucAy": 0.056531000000000005,
+      "altiAy": 0.118145,
+      "yilbasi": 0.156267,
+      "birYil": 0.284484,
+      "ucYil": 1.915377,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": 3498.34,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HDK",
+        "fonAdi": "HEDEF PORTFÖY VEGA İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 2.987483,
+        "tedavuldekiPaySayisi": 4041749,
+        "kisiSayisi": 128,
+        "fonToplamDeger": 12074655.01,
+        "gunlukGetiri": -0.00015027,
+        "paraGirisiCikisi": 3498.34,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "HDK",
         "fonAdi": "HEDEF PORTFÖY VEGA İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00175647,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "HDK",
+      "fonAdi": "HEDEF PORTFÖY VEGA İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 2.987483,
+      "tedavuldekiPaySayisi": 4041749,
+      "kisiSayisi": 128,
+      "fonToplamDeger": 12074655.01,
+      "gunlukGetiri": -0.00015027,
+      "paraGirisiCikisi": 3498.34,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HDK",
+      "fonAdi": "HEDEF PORTFÖY VEGA İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 2.987483,
+      "tedavuldekiPaySayisi": 4041749,
+      "kisiSayisi": 128,
+      "fonToplamDeger": 12074655.01,
+      "gunlukGetiri": -0.00015027,
+      "paraGirisiCikisi": 3498.34,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "HDK",
       "fonAdi": "HEDEF PORTFÖY VEGA İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

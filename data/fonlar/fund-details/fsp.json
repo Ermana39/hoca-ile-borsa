@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "FSP",
     "slug": "fsp",
@@ -12,18 +12,18 @@
     "yonetici": "FONMAP PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "fonmap-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 20.82633,
+    "fiyat": 20.856062,
     "tedavuldekiPaySayisi": 5365,
-    "kisiSayisi": 22,
-    "fonToplamDeger": 111733.26,
-    "gunlukGetiri": -0.17541649,
+    "kisiSayisi": 21,
+    "fonToplamDeger": 111892.77,
+    "gunlukGetiri": 0.00142762,
     "getiriler": {
-      "birAy": -0.17598299999999997,
-      "ucAy": -0.440912,
-      "altiAy": -0.469136,
-      "yilbasi": -0.464124,
+      "birAy": -0.174807,
+      "ucAy": -0.42337899999999995,
+      "altiAy": -0.468551,
+      "yilbasi": -0.463358,
       "birYil": null,
       "ucYil": null,
       "besYil": null
@@ -35,21 +35,33 @@
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FSP",
+        "fonAdi": "FONMAP PORTFÖY SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 20.856062,
+        "tedavuldekiPaySayisi": 5365,
+        "kisiSayisi": 21,
+        "fonToplamDeger": 111892.77,
+        "gunlukGetiri": 0.00142762,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "FSP",
         "fonAdi": "FONMAP PORTFÖY SERBEST (DÖVİZ) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": -0.17541649,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "FSP",
+      "fonAdi": "FONMAP PORTFÖY SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 20.856062,
+      "tedavuldekiPaySayisi": 5365,
+      "kisiSayisi": 21,
+      "fonToplamDeger": 111892.77,
+      "gunlukGetiri": 0.00142762,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FSP",
+      "fonAdi": "FONMAP PORTFÖY SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 20.856062,
+      "tedavuldekiPaySayisi": 5365,
+      "kisiSayisi": 21,
+      "fonToplamDeger": 111892.77,
+      "gunlukGetiri": 0.00142762,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "FSP",
       "fonAdi": "FONMAP PORTFÖY SERBEST (DÖVİZ) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

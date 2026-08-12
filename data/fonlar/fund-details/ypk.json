@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "YPK",
     "slug": "ypk",
@@ -12,21 +12,21 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 14.192576,
+    "fiyat": 14.166613,
     "tedavuldekiPaySayisi": 14585251,
     "kisiSayisi": 226,
-    "fonToplamDeger": 207002286.31,
-    "gunlukGetiri": 0.00450046,
+    "fonToplamDeger": 206623603.13,
+    "gunlukGetiri": -0.00182934,
     "getiriler": {
-      "birAy": 0.012035,
-      "ucAy": 0.049135,
-      "altiAy": 0.045018,
-      "yilbasi": 0.038609,
-      "birYil": 0.213158,
-      "ucYil": 1.4015289999999998,
-      "besYil": 5.0340050000000005
+      "birAy": 0.010184,
+      "ucAy": 0.051759000000000006,
+      "altiAy": 0.052077,
+      "yilbasi": 0.036709,
+      "birYil": 0.204735,
+      "ucYil": 1.39098,
+      "besYil": 5.045902
     },
     "paraAkisi": {
       "gunluk": 0,
@@ -35,21 +35,33 @@
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YPK",
+        "fonAdi": "YAPI KREDİ PORTFÖY GALATA SERBEST FON",
+        "tarih": "2026-08-12",
+        "fiyat": 14.166613,
+        "tedavuldekiPaySayisi": 14585251,
+        "kisiSayisi": 226,
+        "fonToplamDeger": 206623603.13,
+        "gunlukGetiri": -0.00182934,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "YPK",
         "fonAdi": "YAPI KREDİ PORTFÖY GALATA SERBEST FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00450046,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "YPK",
+      "fonAdi": "YAPI KREDİ PORTFÖY GALATA SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 14.166613,
+      "tedavuldekiPaySayisi": 14585251,
+      "kisiSayisi": 226,
+      "fonToplamDeger": 206623603.13,
+      "gunlukGetiri": -0.00182934,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YPK",
+      "fonAdi": "YAPI KREDİ PORTFÖY GALATA SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 14.166613,
+      "tedavuldekiPaySayisi": 14585251,
+      "kisiSayisi": 226,
+      "fonToplamDeger": 206623603.13,
+      "gunlukGetiri": -0.00182934,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "YPK",
       "fonAdi": "YAPI KREDİ PORTFÖY GALATA SERBEST FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

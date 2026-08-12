@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "YHB",
     "slug": "yhb",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 2.289398,
-    "tedavuldekiPaySayisi": 117613168,
-    "kisiSayisi": 7112,
-    "fonToplamDeger": 269263296.91,
-    "gunlukGetiri": 0.01049113,
+    "fiyat": 2.304565,
+    "tedavuldekiPaySayisi": 117630005,
+    "kisiSayisi": 7116,
+    "fonToplamDeger": 271085993.75,
+    "gunlukGetiri": 0.00662489,
     "getiriler": {
-      "birAy": 0.046398,
-      "ucAy": -0.030732,
-      "altiAy": 0.09042199999999999,
-      "yilbasi": 0.276759,
-      "birYil": 0.253236,
+      "birAy": 0.053330999999999996,
+      "ucAy": -0.028172000000000003,
+      "altiAy": 0.103047,
+      "yilbasi": 0.285217,
+      "birYil": 0.261373,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -37365.26,
+      "gunluk": 38801.96,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -8,
+      "gunluk": 4,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YHB",
+        "fonAdi": "YAPI KREDİ PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 2.304565,
+        "tedavuldekiPaySayisi": 117630005,
+        "kisiSayisi": 7116,
+        "fonToplamDeger": 271085993.75,
+        "gunlukGetiri": 0.00662489,
+        "paraGirisiCikisi": 38801.96,
+        "yatirimciDegisimi": 4
+      },
       {
         "fonKodu": "YHB",
         "fonAdi": "YAPI KREDİ PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.01049113,
       "paraGirisiCikisi": -37365.26,
       "yatirimciDegisimi": -8
+    },
+    {
+      "fonKodu": "YHB",
+      "fonAdi": "YAPI KREDİ PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 2.304565,
+      "tedavuldekiPaySayisi": 117630005,
+      "kisiSayisi": 7116,
+      "fonToplamDeger": 271085993.75,
+      "gunlukGetiri": 0.00662489,
+      "paraGirisiCikisi": 38801.96,
+      "yatirimciDegisimi": 4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YHB",
+      "fonAdi": "YAPI KREDİ PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 2.304565,
+      "tedavuldekiPaySayisi": 117630005,
+      "kisiSayisi": 7116,
+      "fonToplamDeger": 271085993.75,
+      "gunlukGetiri": 0.00662489,
+      "paraGirisiCikisi": 38801.96,
+      "yatirimciDegisimi": 4
+    },
     {
       "fonKodu": "YHB",
       "fonAdi": "YAPI KREDİ PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "CSH",
     "slug": "csh",
@@ -12,13 +12,13 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 6.438787,
+    "fiyat": 6.66584,
     "tedavuldekiPaySayisi": 1582322649,
     "kisiSayisi": 54,
-    "fonToplamDeger": 10188238331.58,
-    "gunlukGetiri": 0.04382017,
+    "fonToplamDeger": 10547508834.34,
+    "gunlukGetiri": 0.03526332,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -57.95,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "CSH",
+        "fonAdi": "PARDUS PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 6.66584,
+        "tedavuldekiPaySayisi": 1582322649,
+        "kisiSayisi": 54,
+        "fonToplamDeger": 10547508834.34,
+        "gunlukGetiri": 0.03526332,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "CSH",
         "fonAdi": "PARDUS PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.04382017,
       "paraGirisiCikisi": -57.95,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "CSH",
+      "fonAdi": "PARDUS PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 6.66584,
+      "tedavuldekiPaySayisi": 1582322649,
+      "kisiSayisi": 54,
+      "fonToplamDeger": 10547508834.34,
+      "gunlukGetiri": 0.03526332,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "CSH",
+      "fonAdi": "PARDUS PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 6.66584,
+      "tedavuldekiPaySayisi": 1582322649,
+      "kisiSayisi": 54,
+      "fonToplamDeger": 10547508834.34,
+      "gunlukGetiri": 0.03526332,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "CSH",
       "fonAdi": "PARDUS PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

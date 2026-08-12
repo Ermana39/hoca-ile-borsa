@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "SRA",
     "slug": "sra",
@@ -12,13 +12,13 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 15.911415,
+    "fiyat": 15.557999,
     "tedavuldekiPaySayisi": 140896981,
     "kisiSayisi": 1,
-    "fonToplamDeger": 2241870304.24,
-    "gunlukGetiri": 0.00489126,
+    "fonToplamDeger": 2192075147.68,
+    "gunlukGetiri": -0.02221148,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SRA",
+        "fonAdi": "AZİMUT PORTFÖY ASERVA SERBEST ÖZEL FON",
+        "tarih": "2026-08-12",
+        "fiyat": 15.557999,
+        "tedavuldekiPaySayisi": 140896981,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 2192075147.68,
+        "gunlukGetiri": -0.02221148,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "SRA",
         "fonAdi": "AZİMUT PORTFÖY ASERVA SERBEST ÖZEL FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00489126,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "SRA",
+      "fonAdi": "AZİMUT PORTFÖY ASERVA SERBEST ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 15.557999,
+      "tedavuldekiPaySayisi": 140896981,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 2192075147.68,
+      "gunlukGetiri": -0.02221148,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SRA",
+      "fonAdi": "AZİMUT PORTFÖY ASERVA SERBEST ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 15.557999,
+      "tedavuldekiPaySayisi": 140896981,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 2192075147.68,
+      "gunlukGetiri": -0.02221148,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "SRA",
       "fonAdi": "AZİMUT PORTFÖY ASERVA SERBEST ÖZEL FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

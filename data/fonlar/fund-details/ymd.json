@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "YMD",
     "slug": "ymd",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 56.350013,
-    "tedavuldekiPaySayisi": 136164532,
+    "fiyat": 56.383696,
+    "tedavuldekiPaySayisi": 136724997,
     "kisiSayisi": 1465,
-    "fonToplamDeger": 7672873105.41,
-    "gunlukGetiri": 0.0022454,
+    "fonToplamDeger": 7709060602.44,
+    "gunlukGetiri": 0.00059775,
     "getiriler": {
-      "birAy": 0.02035,
-      "ucAy": 0.06414500000000001,
-      "altiAy": 0.114024,
-      "yilbasi": 0.13548,
-      "birYil": 0.220166,
-      "ucYil": 1.021555,
+      "birAy": 0.02096,
+      "ucAy": 0.062225,
+      "altiAy": 0.11411500000000001,
+      "yilbasi": 0.136159,
+      "birYil": 0.218229,
+      "ucYil": 1.02281,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 4599288.06,
+      "gunluk": 31601088.18,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YMD",
+        "fonAdi": "YAPI KREDİ PORTFÖY MASLAK SERBEST (DÖVİZ- ABD DOLARI) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 56.383696,
+        "tedavuldekiPaySayisi": 136724997,
+        "kisiSayisi": 1465,
+        "fonToplamDeger": 7709060602.44,
+        "gunlukGetiri": 0.00059775,
+        "paraGirisiCikisi": 31601088.18,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "YMD",
         "fonAdi": "YAPI KREDİ PORTFÖY MASLAK SERBEST (DÖVİZ- ABD DOLARI) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.0022454,
       "paraGirisiCikisi": 4599288.06,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "YMD",
+      "fonAdi": "YAPI KREDİ PORTFÖY MASLAK SERBEST (DÖVİZ- ABD DOLARI) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 56.383696,
+      "tedavuldekiPaySayisi": 136724997,
+      "kisiSayisi": 1465,
+      "fonToplamDeger": 7709060602.44,
+      "gunlukGetiri": 0.00059775,
+      "paraGirisiCikisi": 31601088.18,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YMD",
+      "fonAdi": "YAPI KREDİ PORTFÖY MASLAK SERBEST (DÖVİZ- ABD DOLARI) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 56.383696,
+      "tedavuldekiPaySayisi": 136724997,
+      "kisiSayisi": 1465,
+      "fonToplamDeger": 7709060602.44,
+      "gunlukGetiri": 0.00059775,
+      "paraGirisiCikisi": 31601088.18,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "YMD",
       "fonAdi": "YAPI KREDİ PORTFÖY MASLAK SERBEST (DÖVİZ- ABD DOLARI) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

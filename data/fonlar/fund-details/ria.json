@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "RIA",
     "slug": "ria",
@@ -12,24 +12,24 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.365164,
+    "fiyat": 1.367484,
     "tedavuldekiPaySayisi": 14798978,
     "kisiSayisi": 48,
-    "fonToplamDeger": 20203034.82,
-    "gunlukGetiri": 0.00020954,
+    "fonToplamDeger": 20237365.59,
+    "gunlukGetiri": 0.00169943,
     "getiriler": {
-      "birAy": 0.020207000000000003,
-      "ucAy": 0.077179,
-      "altiAy": 0.157892,
-      "yilbasi": 0.193495,
-      "birYil": 0.355699,
+      "birAy": 0.02194,
+      "ucAy": 0.07699099999999999,
+      "altiAy": 0.16057200000000002,
+      "yilbasi": 0.195523,
+      "birYil": 0.357254,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -6025.83,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RIA",
+        "fonAdi": "ROTA PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 1.367484,
+        "tedavuldekiPaySayisi": 14798978,
+        "kisiSayisi": 48,
+        "fonToplamDeger": 20237365.59,
+        "gunlukGetiri": 0.00169943,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "RIA",
         "fonAdi": "ROTA PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00020954,
       "paraGirisiCikisi": -6025.83,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "RIA",
+      "fonAdi": "ROTA PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.367484,
+      "tedavuldekiPaySayisi": 14798978,
+      "kisiSayisi": 48,
+      "fonToplamDeger": 20237365.59,
+      "gunlukGetiri": 0.00169943,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RIA",
+      "fonAdi": "ROTA PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.367484,
+      "tedavuldekiPaySayisi": 14798978,
+      "kisiSayisi": 48,
+      "fonToplamDeger": 20237365.59,
+      "gunlukGetiri": 0.00169943,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "RIA",
       "fonAdi": "ROTA PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

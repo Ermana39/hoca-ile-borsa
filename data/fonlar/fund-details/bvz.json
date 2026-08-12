@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "BVZ",
     "slug": "bvz",
@@ -12,24 +12,24 @@
     "yonetici": "BV PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "bv-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 4.451431,
-    "tedavuldekiPaySayisi": 625850515,
-    "kisiSayisi": 658,
-    "fonToplamDeger": 2785930371.73,
-    "gunlukGetiri": 0.00123506,
+    "fiyat": 4.455667,
+    "tedavuldekiPaySayisi": 624326817,
+    "kisiSayisi": 657,
+    "fonToplamDeger": 2781792694.5,
+    "gunlukGetiri": 0.0009516,
     "getiriler": {
-      "birAy": 0.032517,
-      "ucAy": 0.104506,
-      "altiAy": 0.21503599999999998,
-      "yilbasi": 0.272956,
-      "birYil": 0.477925,
-      "ucYil": 2.891853,
+      "birAy": 0.033499,
+      "ucAy": 0.10350300000000001,
+      "altiAy": 0.21431,
+      "yilbasi": 0.274167,
+      "birYil": 0.478001,
+      "ucYil": 2.900337,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1367742.24,
+      "gunluk": -6789090.9,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BVZ",
+        "fonAdi": "BV PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST (TL) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 4.455667,
+        "tedavuldekiPaySayisi": 624326817,
+        "kisiSayisi": 657,
+        "fonToplamDeger": 2781792694.5,
+        "gunlukGetiri": 0.0009516,
+        "paraGirisiCikisi": -6789090.9,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "BVZ",
         "fonAdi": "BV PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST (TL) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00123506,
       "paraGirisiCikisi": -1367742.24,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "BVZ",
+      "fonAdi": "BV PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 4.455667,
+      "tedavuldekiPaySayisi": 624326817,
+      "kisiSayisi": 657,
+      "fonToplamDeger": 2781792694.5,
+      "gunlukGetiri": 0.0009516,
+      "paraGirisiCikisi": -6789090.9,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BVZ",
+      "fonAdi": "BV PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 4.455667,
+      "tedavuldekiPaySayisi": 624326817,
+      "kisiSayisi": 657,
+      "fonToplamDeger": 2781792694.5,
+      "gunlukGetiri": 0.0009516,
+      "paraGirisiCikisi": -6789090.9,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "BVZ",
       "fonAdi": "BV PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST (TL) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "KHU",
     "slug": "khu",
@@ -12,13 +12,13 @@
     "yonetici": "KUVEYT TÜRK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kuveyt-turk-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 36.415735,
+    "fiyat": 36.361981,
     "tedavuldekiPaySayisi": 95518,
     "kisiSayisi": 1,
-    "fonToplamDeger": 3478358.14,
-    "gunlukGetiri": 0.00507093,
+    "fonToplamDeger": 3473223.72,
+    "gunlukGetiri": -0.00147612,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KHU",
+        "fonAdi": "KUVEYT TÜRK PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ-AVRO) ÖZEL FON",
+        "tarih": "2026-08-12",
+        "fiyat": 36.361981,
+        "tedavuldekiPaySayisi": 95518,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 3473223.72,
+        "gunlukGetiri": -0.00147612,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "KHU",
         "fonAdi": "KUVEYT TÜRK PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ-AVRO) ÖZEL FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00507093,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KHU",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ-AVRO) ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 36.361981,
+      "tedavuldekiPaySayisi": 95518,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 3473223.72,
+      "gunlukGetiri": -0.00147612,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KHU",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ-AVRO) ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 36.361981,
+      "tedavuldekiPaySayisi": 95518,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 3473223.72,
+      "gunlukGetiri": -0.00147612,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "KHU",
       "fonAdi": "KUVEYT TÜRK PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ-AVRO) ÖZEL FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

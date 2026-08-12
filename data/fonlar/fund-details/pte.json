@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "PTE",
     "slug": "pte",
@@ -12,44 +12,56 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.681834,
-    "tedavuldekiPaySayisi": 28441049597.92,
+    "fiyat": 1.683642,
+    "tedavuldekiPaySayisi": 29322120221.92,
     "kisiSayisi": 4768,
-    "fonToplamDeger": 47833129866.48,
-    "gunlukGetiri": 0.00107677,
+    "fonToplamDeger": 49367946426.86,
+    "gunlukGetiri": 0.00107502,
     "getiriler": {
-      "birAy": 0.031702,
-      "ucAy": 0.103904,
-      "altiAy": 0.211489,
-      "yilbasi": 0.261194,
-      "birYil": 0.47231900000000004,
+      "birAy": 0.032811,
+      "ucAy": 0.10390700000000001,
+      "altiAy": 0.211587,
+      "yilbasi": 0.26255,
+      "birYil": 0.472181,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1042290373.12,
+      "gunluk": 1483407507.53,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 13,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PTE",
+        "fonAdi": "TEB PORTFÖY BİRİNCİ PARA PİYASASI SERBEST (TL) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 1.683642,
+        "tedavuldekiPaySayisi": 29322120221.92,
+        "kisiSayisi": 4768,
+        "fonToplamDeger": 49367946426.86,
+        "gunlukGetiri": 0.00107502,
+        "paraGirisiCikisi": 1483407507.53,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "PTE",
         "fonAdi": "TEB PORTFÖY BİRİNCİ PARA PİYASASI SERBEST (TL) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00107677,
       "paraGirisiCikisi": 1042290373.12,
       "yatirimciDegisimi": 13
+    },
+    {
+      "fonKodu": "PTE",
+      "fonAdi": "TEB PORTFÖY BİRİNCİ PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.683642,
+      "tedavuldekiPaySayisi": 29322120221.92,
+      "kisiSayisi": 4768,
+      "fonToplamDeger": 49367946426.86,
+      "gunlukGetiri": 0.00107502,
+      "paraGirisiCikisi": 1483407507.53,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PTE",
+      "fonAdi": "TEB PORTFÖY BİRİNCİ PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.683642,
+      "tedavuldekiPaySayisi": 29322120221.92,
+      "kisiSayisi": 4768,
+      "fonToplamDeger": 49367946426.86,
+      "gunlukGetiri": 0.00107502,
+      "paraGirisiCikisi": 1483407507.53,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "PTE",
       "fonAdi": "TEB PORTFÖY BİRİNCİ PARA PİYASASI SERBEST (TL) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

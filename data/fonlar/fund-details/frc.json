@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "FRC",
     "slug": "frc",
@@ -12,24 +12,24 @@
     "yonetici": "FONMAP PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "fonmap-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.480863,
-    "tedavuldekiPaySayisi": 52245549,
+    "fiyat": 1.455863,
+    "tedavuldekiPaySayisi": 52248992,
     "kisiSayisi": 232,
-    "fonToplamDeger": 77368487.75,
-    "gunlukGetiri": null,
+    "fonToplamDeger": 76067398.15,
+    "gunlukGetiri": -0.01688205,
     "getiriler": {
-      "birAy": -0.087752,
-      "ucAy": -0.247785,
-      "altiAy": -0.071587,
-      "yilbasi": 0.055345000000000005,
-      "birYil": 0.059782,
+      "birAy": -0.10315200000000001,
+      "ucAy": -0.26212399999999997,
+      "altiAy": -0.103492,
+      "yilbasi": 0.037528,
+      "birYil": 0.026797,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 421706.84,
+      "gunluk": 5012.54,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 0,
+      "observedDays": 1,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FRC",
+        "fonAdi": "FONMAP PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 1.455863,
+        "tedavuldekiPaySayisi": 52248992,
+        "kisiSayisi": 232,
+        "fonToplamDeger": 76067398.15,
+        "gunlukGetiri": -0.01688205,
+        "paraGirisiCikisi": 5012.54,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "FRC",
         "fonAdi": "FONMAP PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": null,
       "paraGirisiCikisi": 421706.84,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "FRC",
+      "fonAdi": "FONMAP PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.455863,
+      "tedavuldekiPaySayisi": 52248992,
+      "kisiSayisi": 232,
+      "fonToplamDeger": 76067398.15,
+      "gunlukGetiri": -0.01688205,
+      "paraGirisiCikisi": 5012.54,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FRC",
+      "fonAdi": "FONMAP PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.455863,
+      "tedavuldekiPaySayisi": 52248992,
+      "kisiSayisi": 232,
+      "fonToplamDeger": 76067398.15,
+      "gunlukGetiri": -0.01688205,
+      "paraGirisiCikisi": 5012.54,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "FRC",
       "fonAdi": "FONMAP PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 0,
+    "observedDays": 1,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "GMA",
     "slug": "gma",
@@ -12,44 +12,56 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 2.125654,
-    "tedavuldekiPaySayisi": 1205893269.56,
-    "kisiSayisi": 1506,
-    "fonToplamDeger": 2563312392.42,
-    "gunlukGetiri": 0.01215353,
+    "fiyat": 2.114434,
+    "tedavuldekiPaySayisi": 1205825543.56,
+    "kisiSayisi": 1507,
+    "fonToplamDeger": 2549639013.5,
+    "gunlukGetiri": -0.00527838,
     "getiriler": {
-      "birAy": 0.040344,
-      "ucAy": 0.065755,
-      "altiAy": 0.149044,
-      "yilbasi": 0.26834399999999997,
-      "birYil": 0.43131300000000006,
-      "ucYil": 1.757259,
-      "besYil": 8.801332
+      "birAy": 0.034853,
+      "ucAy": 0.0529,
+      "altiAy": 0.137528,
+      "yilbasi": 0.26165,
+      "birYil": 0.418671,
+      "ucYil": 1.711147,
+      "besYil": 8.824022
     },
     "paraAkisi": {
-      "gunluk": -557954.42,
+      "gunluk": -143202.16,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
+      "gunluk": 1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GMA",
+        "fonAdi": "AZİMUT PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-12",
+        "fiyat": 2.114434,
+        "tedavuldekiPaySayisi": 1205825543.56,
+        "kisiSayisi": 1507,
+        "fonToplamDeger": 2549639013.5,
+        "gunlukGetiri": -0.00527838,
+        "paraGirisiCikisi": -143202.16,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "GMA",
         "fonAdi": "AZİMUT PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.01215353,
       "paraGirisiCikisi": -557954.42,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "GMA",
+      "fonAdi": "AZİMUT PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 2.114434,
+      "tedavuldekiPaySayisi": 1205825543.56,
+      "kisiSayisi": 1507,
+      "fonToplamDeger": 2549639013.5,
+      "gunlukGetiri": -0.00527838,
+      "paraGirisiCikisi": -143202.16,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GMA",
+      "fonAdi": "AZİMUT PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 2.114434,
+      "tedavuldekiPaySayisi": 1205825543.56,
+      "kisiSayisi": 1507,
+      "fonToplamDeger": 2549639013.5,
+      "gunlukGetiri": -0.00527838,
+      "paraGirisiCikisi": -143202.16,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "GMA",
       "fonAdi": "AZİMUT PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

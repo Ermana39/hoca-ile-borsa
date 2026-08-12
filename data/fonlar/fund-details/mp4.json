@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "MP4",
     "slug": "mp4",
@@ -12,13 +12,13 @@
     "yonetici": "MT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "mt-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.893954,
+    "fiyat": 1.831759,
     "tedavuldekiPaySayisi": 1800673679,
     "kisiSayisi": 15,
-    "fonToplamDeger": 3410392902.2,
-    "gunlukGetiri": 0.01565618,
+    "fonToplamDeger": 3298399611.31,
+    "gunlukGetiri": -0.03283871,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -91409.8,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MP4",
+        "fonAdi": "MT PORTFÖY DÖRDÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 1.831759,
+        "tedavuldekiPaySayisi": 1800673679,
+        "kisiSayisi": 15,
+        "fonToplamDeger": 3298399611.31,
+        "gunlukGetiri": -0.03283871,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "MP4",
         "fonAdi": "MT PORTFÖY DÖRDÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.01565618,
       "paraGirisiCikisi": -91409.8,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "MP4",
+      "fonAdi": "MT PORTFÖY DÖRDÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.831759,
+      "tedavuldekiPaySayisi": 1800673679,
+      "kisiSayisi": 15,
+      "fonToplamDeger": 3298399611.31,
+      "gunlukGetiri": -0.03283871,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MP4",
+      "fonAdi": "MT PORTFÖY DÖRDÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.831759,
+      "tedavuldekiPaySayisi": 1800673679,
+      "kisiSayisi": 15,
+      "fonToplamDeger": 3298399611.31,
+      "gunlukGetiri": -0.03283871,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "MP4",
       "fonAdi": "MT PORTFÖY DÖRDÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

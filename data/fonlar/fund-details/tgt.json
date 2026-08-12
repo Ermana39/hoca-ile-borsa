@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "TGT",
     "slug": "tgt",
@@ -12,13 +12,13 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 0.118435,
-    "tedavuldekiPaySayisi": 26944995920,
-    "kisiSayisi": 61031,
-    "fonToplamDeger": 3191239286.17,
-    "gunlukGetiri": 0.00118348,
+    "fiyat": 0.118549,
+    "tedavuldekiPaySayisi": 26748351905,
+    "kisiSayisi": 60992,
+    "fonToplamDeger": 3170980129.67,
+    "gunlukGetiri": 0.00096255,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -12635797.11,
+      "gunluk": -23311951.33,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -22,
+      "gunluk": -39,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TGT",
+        "fonAdi": "GARANTİ PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 0.118549,
+        "tedavuldekiPaySayisi": 26748351905,
+        "kisiSayisi": 60992,
+        "fonToplamDeger": 3170980129.67,
+        "gunlukGetiri": 0.00096255,
+        "paraGirisiCikisi": -23311951.33,
+        "yatirimciDegisimi": -39
+      },
       {
         "fonKodu": "TGT",
         "fonAdi": "GARANTİ PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00118348,
       "paraGirisiCikisi": -12635797.11,
       "yatirimciDegisimi": -22
+    },
+    {
+      "fonKodu": "TGT",
+      "fonAdi": "GARANTİ PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 0.118549,
+      "tedavuldekiPaySayisi": 26748351905,
+      "kisiSayisi": 60992,
+      "fonToplamDeger": 3170980129.67,
+      "gunlukGetiri": 0.00096255,
+      "paraGirisiCikisi": -23311951.33,
+      "yatirimciDegisimi": -39
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TGT",
+      "fonAdi": "GARANTİ PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 0.118549,
+      "tedavuldekiPaySayisi": 26748351905,
+      "kisiSayisi": 60992,
+      "fonToplamDeger": 3170980129.67,
+      "gunlukGetiri": 0.00096255,
+      "paraGirisiCikisi": -23311951.33,
+      "yatirimciDegisimi": -39
+    },
     {
       "fonKodu": "TGT",
       "fonAdi": "GARANTİ PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

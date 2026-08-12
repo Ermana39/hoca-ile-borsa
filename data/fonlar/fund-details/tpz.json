@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "TPZ",
     "slug": "tpz",
@@ -12,44 +12,56 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 28.280367,
-    "tedavuldekiPaySayisi": 5002503,
-    "kisiSayisi": 1504,
-    "fonToplamDeger": 141472619.79,
-    "gunlukGetiri": 0.00175102,
+    "fiyat": 28.287352,
+    "tedavuldekiPaySayisi": 4854892,
+    "kisiSayisi": 1510,
+    "fonToplamDeger": 137332038.32,
+    "gunlukGetiri": 0.00024699,
     "getiriler": {
-      "birAy": 0.021235,
-      "ucAy": 0.06533800000000001,
-      "altiAy": 0.118798,
-      "yilbasi": 0.143369,
-      "birYil": 0.25651399999999996,
-      "ucYil": 1.249354,
-      "besYil": 6.612578999999999
+      "birAy": 0.021487,
+      "ucAy": 0.06374200000000001,
+      "altiAy": 0.11842000000000001,
+      "yilbasi": 0.143651,
+      "birYil": 0.253488,
+      "ucYil": 1.249468,
+      "besYil": 6.611675
     },
     "paraAkisi": {
-      "gunluk": 33399.11,
+      "gunluk": -4175524.32,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
+      "gunluk": 6,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TPZ",
+        "fonAdi": "TEB PORTFÖY KİRA SERTİFİKALARI (DÖVİZ) KATILIM FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 28.287352,
+        "tedavuldekiPaySayisi": 4854892,
+        "kisiSayisi": 1510,
+        "fonToplamDeger": 137332038.32,
+        "gunlukGetiri": 0.00024699,
+        "paraGirisiCikisi": -4175524.32,
+        "yatirimciDegisimi": 6
+      },
       {
         "fonKodu": "TPZ",
         "fonAdi": "TEB PORTFÖY KİRA SERTİFİKALARI (DÖVİZ) KATILIM FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00175102,
       "paraGirisiCikisi": 33399.11,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "TPZ",
+      "fonAdi": "TEB PORTFÖY KİRA SERTİFİKALARI (DÖVİZ) KATILIM FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 28.287352,
+      "tedavuldekiPaySayisi": 4854892,
+      "kisiSayisi": 1510,
+      "fonToplamDeger": 137332038.32,
+      "gunlukGetiri": 0.00024699,
+      "paraGirisiCikisi": -4175524.32,
+      "yatirimciDegisimi": 6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TPZ",
+      "fonAdi": "TEB PORTFÖY KİRA SERTİFİKALARI (DÖVİZ) KATILIM FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 28.287352,
+      "tedavuldekiPaySayisi": 4854892,
+      "kisiSayisi": 1510,
+      "fonToplamDeger": 137332038.32,
+      "gunlukGetiri": 0.00024699,
+      "paraGirisiCikisi": -4175524.32,
+      "yatirimciDegisimi": 6
+    },
     {
       "fonKodu": "TPZ",
       "fonAdi": "TEB PORTFÖY KİRA SERTİFİKALARI (DÖVİZ) KATILIM FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

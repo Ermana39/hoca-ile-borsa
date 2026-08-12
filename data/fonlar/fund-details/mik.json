@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "MIK",
     "slug": "mik",
@@ -12,13 +12,13 @@
     "yonetici": "MT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "mt-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 3.36026,
-    "tedavuldekiPaySayisi": 1404155754,
+    "fiyat": 3.362271,
+    "tedavuldekiPaySayisi": 1404180257,
     "kisiSayisi": 13,
-    "fonToplamDeger": 4718327743.84,
-    "gunlukGetiri": 0.00269393,
+    "fonToplamDeger": 4721234838.89,
+    "gunlukGetiri": 0.00059847,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": 82385.73,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MIK",
+        "fonAdi": "MT PORTFÖY İKİNCİ SERBEST FON",
+        "tarih": "2026-08-12",
+        "fiyat": 3.362271,
+        "tedavuldekiPaySayisi": 1404180257,
+        "kisiSayisi": 13,
+        "fonToplamDeger": 4721234838.89,
+        "gunlukGetiri": 0.00059847,
+        "paraGirisiCikisi": 82385.73,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "MIK",
         "fonAdi": "MT PORTFÖY İKİNCİ SERBEST FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00269393,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "MIK",
+      "fonAdi": "MT PORTFÖY İKİNCİ SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 3.362271,
+      "tedavuldekiPaySayisi": 1404180257,
+      "kisiSayisi": 13,
+      "fonToplamDeger": 4721234838.89,
+      "gunlukGetiri": 0.00059847,
+      "paraGirisiCikisi": 82385.73,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MIK",
+      "fonAdi": "MT PORTFÖY İKİNCİ SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 3.362271,
+      "tedavuldekiPaySayisi": 1404180257,
+      "kisiSayisi": 13,
+      "fonToplamDeger": 4721234838.89,
+      "gunlukGetiri": 0.00059847,
+      "paraGirisiCikisi": 82385.73,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "MIK",
       "fonAdi": "MT PORTFÖY İKİNCİ SERBEST FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

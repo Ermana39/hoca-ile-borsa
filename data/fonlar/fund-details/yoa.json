@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "YOA",
     "slug": "yoa",
@@ -12,13 +12,13 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 89.17721,
-    "tedavuldekiPaySayisi": 21440209,
+    "fiyat": 89.190667,
+    "tedavuldekiPaySayisi": 21438477,
     "kisiSayisi": 140,
-    "fonToplamDeger": 1911978014.52,
-    "gunlukGetiri": 0.00218484,
+    "fonToplamDeger": 1912112071.07,
+    "gunlukGetiri": 0.0001509,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": -154478.24,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YOA",
+        "fonAdi": "YAPI KREDİ PORTFÖY PY BORÇLANMA ARAÇLARI (DÖVİZ) ÖZEL FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 89.190667,
+        "tedavuldekiPaySayisi": 21438477,
+        "kisiSayisi": 140,
+        "fonToplamDeger": 1912112071.07,
+        "gunlukGetiri": 0.0001509,
+        "paraGirisiCikisi": -154478.24,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "YOA",
         "fonAdi": "YAPI KREDİ PORTFÖY PY BORÇLANMA ARAÇLARI (DÖVİZ) ÖZEL FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00218484,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YOA",
+      "fonAdi": "YAPI KREDİ PORTFÖY PY BORÇLANMA ARAÇLARI (DÖVİZ) ÖZEL FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 89.190667,
+      "tedavuldekiPaySayisi": 21438477,
+      "kisiSayisi": 140,
+      "fonToplamDeger": 1912112071.07,
+      "gunlukGetiri": 0.0001509,
+      "paraGirisiCikisi": -154478.24,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YOA",
+      "fonAdi": "YAPI KREDİ PORTFÖY PY BORÇLANMA ARAÇLARI (DÖVİZ) ÖZEL FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 89.190667,
+      "tedavuldekiPaySayisi": 21438477,
+      "kisiSayisi": 140,
+      "fonToplamDeger": 1912112071.07,
+      "gunlukGetiri": 0.0001509,
+      "paraGirisiCikisi": -154478.24,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "YOA",
       "fonAdi": "YAPI KREDİ PORTFÖY PY BORÇLANMA ARAÇLARI (DÖVİZ) ÖZEL FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

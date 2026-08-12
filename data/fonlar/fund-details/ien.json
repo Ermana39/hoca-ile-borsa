@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "IEN",
     "slug": "ien",
@@ -12,44 +12,56 @@
     "yonetici": "İSTANBUL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "istanbul-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.19986,
-    "tedavuldekiPaySayisi": 16542633,
-    "kisiSayisi": 105,
-    "fonToplamDeger": 19848847.29,
-    "gunlukGetiri": 0.00274869,
+    "fiyat": 1.199864,
+    "tedavuldekiPaySayisi": 16512322,
+    "kisiSayisi": 104,
+    "fonToplamDeger": 19812541.95,
+    "gunlukGetiri": 0.00000333,
     "getiriler": {
-      "birAy": -0.064068,
-      "ucAy": -0.10766,
-      "altiAy": -0.012485,
-      "yilbasi": 0.18696000000000002,
+      "birAy": -0.064065,
+      "ucAy": -0.09640499999999999,
+      "altiAy": -0.019029,
+      "yilbasi": 0.18696400000000002,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -6570.43,
+      "gunluk": -36369.08,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IEN",
+        "fonAdi": "İSTANBUL PORTFÖY İNŞAAT SEKTÖRÜ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 1.199864,
+        "tedavuldekiPaySayisi": 16512322,
+        "kisiSayisi": 104,
+        "fonToplamDeger": 19812541.95,
+        "gunlukGetiri": 0.00000333,
+        "paraGirisiCikisi": -36369.08,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "IEN",
         "fonAdi": "İSTANBUL PORTFÖY İNŞAAT SEKTÖRÜ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00274869,
       "paraGirisiCikisi": -6570.43,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "IEN",
+      "fonAdi": "İSTANBUL PORTFÖY İNŞAAT SEKTÖRÜ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.199864,
+      "tedavuldekiPaySayisi": 16512322,
+      "kisiSayisi": 104,
+      "fonToplamDeger": 19812541.95,
+      "gunlukGetiri": 0.00000333,
+      "paraGirisiCikisi": -36369.08,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IEN",
+      "fonAdi": "İSTANBUL PORTFÖY İNŞAAT SEKTÖRÜ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.199864,
+      "tedavuldekiPaySayisi": 16512322,
+      "kisiSayisi": 104,
+      "fonToplamDeger": 19812541.95,
+      "gunlukGetiri": 0.00000333,
+      "paraGirisiCikisi": -36369.08,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "IEN",
       "fonAdi": "İSTANBUL PORTFÖY İNŞAAT SEKTÖRÜ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

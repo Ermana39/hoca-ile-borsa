@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "PCN",
     "slug": "pcn",
@@ -12,13 +12,13 @@
     "yonetici": "PERFORM PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "perform-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 65.265861,
+    "fiyat": 65.304792,
     "tedavuldekiPaySayisi": 8605496,
     "kisiSayisi": 12,
-    "fonToplamDeger": 561645106.43,
-    "gunlukGetiri": 0.00256447,
+    "fonToplamDeger": 561980122.52,
+    "gunlukGetiri": 0.0005965,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PCN",
+        "fonAdi": "PERFORM PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 65.304792,
+        "tedavuldekiPaySayisi": 8605496,
+        "kisiSayisi": 12,
+        "fonToplamDeger": 561980122.52,
+        "gunlukGetiri": 0.0005965,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "PCN",
         "fonAdi": "PERFORM PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00256447,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PCN",
+      "fonAdi": "PERFORM PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 65.304792,
+      "tedavuldekiPaySayisi": 8605496,
+      "kisiSayisi": 12,
+      "fonToplamDeger": 561980122.52,
+      "gunlukGetiri": 0.0005965,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PCN",
+      "fonAdi": "PERFORM PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 65.304792,
+      "tedavuldekiPaySayisi": 8605496,
+      "kisiSayisi": 12,
+      "fonToplamDeger": 561980122.52,
+      "gunlukGetiri": 0.0005965,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "PCN",
       "fonAdi": "PERFORM PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

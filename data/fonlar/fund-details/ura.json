@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "URA",
     "slug": "ura",
@@ -12,44 +12,56 @@
     "yonetici": "ATA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ata-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.905054,
-    "tedavuldekiPaySayisi": 377698892,
-    "kisiSayisi": 9633,
-    "fonToplamDeger": 719536598.21,
-    "gunlukGetiri": 0.02572532,
+    "fiyat": 1.917969,
+    "tedavuldekiPaySayisi": 374061520,
+    "kisiSayisi": 9612,
+    "fonToplamDeger": 717438380.3,
+    "gunlukGetiri": 0.00677934,
     "getiriler": {
-      "birAy": 0.050617,
-      "ucAy": -0.067958,
-      "altiAy": 0.016981,
-      "yilbasi": 0.246641,
-      "birYil": 0.467035,
+      "birAy": 0.057739000000000006,
+      "ucAy": -0.087066,
+      "altiAy": 0.02262,
+      "yilbasi": 0.255092,
+      "birYil": 0.496946,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -4778721.28,
+      "gunluk": -6976366.74,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -31,
+      "gunluk": -21,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "URA",
+        "fonAdi": "ATA PORTFÖY ENERJİ DEĞİŞKEN FON",
+        "tarih": "2026-08-12",
+        "fiyat": 1.917969,
+        "tedavuldekiPaySayisi": 374061520,
+        "kisiSayisi": 9612,
+        "fonToplamDeger": 717438380.3,
+        "gunlukGetiri": 0.00677934,
+        "paraGirisiCikisi": -6976366.74,
+        "yatirimciDegisimi": -21
+      },
       {
         "fonKodu": "URA",
         "fonAdi": "ATA PORTFÖY ENERJİ DEĞİŞKEN FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.02572532,
       "paraGirisiCikisi": -4778721.28,
       "yatirimciDegisimi": -31
+    },
+    {
+      "fonKodu": "URA",
+      "fonAdi": "ATA PORTFÖY ENERJİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.917969,
+      "tedavuldekiPaySayisi": 374061520,
+      "kisiSayisi": 9612,
+      "fonToplamDeger": 717438380.3,
+      "gunlukGetiri": 0.00677934,
+      "paraGirisiCikisi": -6976366.74,
+      "yatirimciDegisimi": -21
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "URA",
+      "fonAdi": "ATA PORTFÖY ENERJİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.917969,
+      "tedavuldekiPaySayisi": 374061520,
+      "kisiSayisi": 9612,
+      "fonToplamDeger": 717438380.3,
+      "gunlukGetiri": 0.00677934,
+      "paraGirisiCikisi": -6976366.74,
+      "yatirimciDegisimi": -21
+    },
     {
       "fonKodu": "URA",
       "fonAdi": "ATA PORTFÖY ENERJİ DEĞİŞKEN FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

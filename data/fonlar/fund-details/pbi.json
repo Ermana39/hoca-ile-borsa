@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "PBI",
     "slug": "pbi",
@@ -12,44 +12,56 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 2.277085,
-    "tedavuldekiPaySayisi": 48965288,
-    "kisiSayisi": 610,
-    "fonToplamDeger": 111498129.11,
-    "gunlukGetiri": 0.00581069,
+    "fiyat": 2.277333,
+    "tedavuldekiPaySayisi": 49513715,
+    "kisiSayisi": 615,
+    "fonToplamDeger": 112759211,
+    "gunlukGetiri": 0.00010891,
     "getiriler": {
-      "birAy": 0.040473999999999996,
-      "ucAy": 0.07276500000000001,
-      "altiAy": 0.238736,
-      "yilbasi": 0.406902,
-      "birYil": 0.5978829999999999,
+      "birAy": 0.040587,
+      "ucAy": 0.064274,
+      "altiAy": 0.23384,
+      "yilbasi": 0.407055,
+      "birYil": 0.5851310000000001,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -50189.23,
+      "gunluk": 1248950.91,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
+      "gunluk": 5,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PBI",
+        "fonAdi": "PARDUS PORTFÖY BİRİNCİ FON SEPETİ FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 2.277333,
+        "tedavuldekiPaySayisi": 49513715,
+        "kisiSayisi": 615,
+        "fonToplamDeger": 112759211,
+        "gunlukGetiri": 0.00010891,
+        "paraGirisiCikisi": 1248950.91,
+        "yatirimciDegisimi": 5
+      },
       {
         "fonKodu": "PBI",
         "fonAdi": "PARDUS PORTFÖY BİRİNCİ FON SEPETİ FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00581069,
       "paraGirisiCikisi": -50189.23,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "PBI",
+      "fonAdi": "PARDUS PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 2.277333,
+      "tedavuldekiPaySayisi": 49513715,
+      "kisiSayisi": 615,
+      "fonToplamDeger": 112759211,
+      "gunlukGetiri": 0.00010891,
+      "paraGirisiCikisi": 1248950.91,
+      "yatirimciDegisimi": 5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PBI",
+      "fonAdi": "PARDUS PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 2.277333,
+      "tedavuldekiPaySayisi": 49513715,
+      "kisiSayisi": 615,
+      "fonToplamDeger": 112759211,
+      "gunlukGetiri": 0.00010891,
+      "paraGirisiCikisi": 1248950.91,
+      "yatirimciDegisimi": 5
+    },
     {
       "fonKodu": "PBI",
       "fonAdi": "PARDUS PORTFÖY BİRİNCİ FON SEPETİ FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

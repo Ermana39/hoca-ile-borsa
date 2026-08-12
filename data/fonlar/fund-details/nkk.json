@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "NKK",
     "slug": "nkk",
@@ -12,13 +12,13 @@
     "yonetici": "ATA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ata-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 7.989895,
+    "fiyat": 7.985887,
     "tedavuldekiPaySayisi": 188312373,
     "kisiSayisi": 12,
-    "fonToplamDeger": 1504596125.87,
-    "gunlukGetiri": 0.0011997,
+    "fonToplamDeger": 1503841404.09,
+    "gunlukGetiri": -0.00050163,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 15580.3,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NKK",
+        "fonAdi": "ATA PORTFÖY YÖNETİMİ A.Ş. SEKİZİNCİ SERBEST FON",
+        "tarih": "2026-08-12",
+        "fiyat": 7.985887,
+        "tedavuldekiPaySayisi": 188312373,
+        "kisiSayisi": 12,
+        "fonToplamDeger": 1503841404.09,
+        "gunlukGetiri": -0.00050163,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "NKK",
         "fonAdi": "ATA PORTFÖY YÖNETİMİ A.Ş. SEKİZİNCİ SERBEST FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.0011997,
       "paraGirisiCikisi": 15580.3,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "NKK",
+      "fonAdi": "ATA PORTFÖY YÖNETİMİ A.Ş. SEKİZİNCİ SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 7.985887,
+      "tedavuldekiPaySayisi": 188312373,
+      "kisiSayisi": 12,
+      "fonToplamDeger": 1503841404.09,
+      "gunlukGetiri": -0.00050163,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NKK",
+      "fonAdi": "ATA PORTFÖY YÖNETİMİ A.Ş. SEKİZİNCİ SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 7.985887,
+      "tedavuldekiPaySayisi": 188312373,
+      "kisiSayisi": 12,
+      "fonToplamDeger": 1503841404.09,
+      "gunlukGetiri": -0.00050163,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "NKK",
       "fonAdi": "ATA PORTFÖY YÖNETİMİ A.Ş. SEKİZİNCİ SERBEST FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

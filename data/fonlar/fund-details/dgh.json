@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "DGH",
     "slug": "dgh",
@@ -12,44 +12,56 @@
     "yonetici": "ATA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ata-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 10.672504,
-    "tedavuldekiPaySayisi": 370231594,
-    "kisiSayisi": 261,
-    "fonToplamDeger": 3951298060.85,
-    "gunlukGetiri": 0.0010725,
+    "fiyat": 10.684032,
+    "tedavuldekiPaySayisi": 375069303,
+    "kisiSayisi": 262,
+    "fonToplamDeger": 4007252338.6,
+    "gunlukGetiri": 0.00108016,
     "getiriler": {
-      "birAy": 0.032269,
-      "ucAy": 0.107644,
-      "altiAy": 0.219587,
-      "yilbasi": 0.27154,
-      "birYil": 0.49400799999999995,
-      "ucYil": 2.557486,
-      "besYil": 4.5289150000000005
+      "birAy": 0.033384,
+      "ucAy": 0.107619,
+      "altiAy": 0.21968800000000002,
+      "yilbasi": 0.272914,
+      "birYil": 0.49383000000000005,
+      "ucYil": 2.553205,
+      "besYil": 4.531956
     },
     "paraAkisi": {
-      "gunluk": 8356784.08,
+      "gunluk": 51686237.76,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
+      "gunluk": 1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DGH",
+        "fonAdi": "ATA PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 10.684032,
+        "tedavuldekiPaySayisi": 375069303,
+        "kisiSayisi": 262,
+        "fonToplamDeger": 4007252338.6,
+        "gunlukGetiri": 0.00108016,
+        "paraGirisiCikisi": 51686237.76,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "DGH",
         "fonAdi": "ATA PORTFÖY PARA PİYASASI SERBEST (TL) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.0010725,
       "paraGirisiCikisi": 8356784.08,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "DGH",
+      "fonAdi": "ATA PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 10.684032,
+      "tedavuldekiPaySayisi": 375069303,
+      "kisiSayisi": 262,
+      "fonToplamDeger": 4007252338.6,
+      "gunlukGetiri": 0.00108016,
+      "paraGirisiCikisi": 51686237.76,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DGH",
+      "fonAdi": "ATA PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 10.684032,
+      "tedavuldekiPaySayisi": 375069303,
+      "kisiSayisi": 262,
+      "fonToplamDeger": 4007252338.6,
+      "gunlukGetiri": 0.00108016,
+      "paraGirisiCikisi": 51686237.76,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "DGH",
       "fonAdi": "ATA PORTFÖY PARA PİYASASI SERBEST (TL) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "AHU",
     "slug": "ahu",
@@ -12,44 +12,56 @@
     "yonetici": "ATLAS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "atlas-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 11.26128,
-    "tedavuldekiPaySayisi": 13410327,
-    "kisiSayisi": 586,
-    "fonToplamDeger": 151017443.99,
-    "gunlukGetiri": 0.0018034,
+    "fiyat": 11.278741,
+    "tedavuldekiPaySayisi": 13410797,
+    "kisiSayisi": 589,
+    "fonToplamDeger": 151256906.06,
+    "gunlukGetiri": 0.00155053,
     "getiriler": {
-      "birAy": 0.032265999999999996,
-      "ucAy": 0.094223,
-      "altiAy": 0.19332899999999997,
-      "yilbasi": 0.24541000000000002,
-      "birYil": 0.440643,
-      "ucYil": 2.516045,
-      "besYil": 4.70302
+      "birAy": 0.033866,
+      "ucAy": 0.094853,
+      "altiAy": 0.19399,
+      "yilbasi": 0.247341,
+      "birYil": 0.44106900000000004,
+      "ucYil": 2.512747,
+      "besYil": 4.708818
     },
     "paraAkisi": {
-      "gunluk": -4211.72,
+      "gunluk": 5301.01,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": 3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AHU",
+        "fonAdi": "ATLAS PORTFÖY BİRİNCİ ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 11.278741,
+        "tedavuldekiPaySayisi": 13410797,
+        "kisiSayisi": 589,
+        "fonToplamDeger": 151256906.06,
+        "gunlukGetiri": 0.00155053,
+        "paraGirisiCikisi": 5301.01,
+        "yatirimciDegisimi": 3
+      },
       {
         "fonKodu": "AHU",
         "fonAdi": "ATLAS PORTFÖY BİRİNCİ ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.0018034,
       "paraGirisiCikisi": -4211.72,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "AHU",
+      "fonAdi": "ATLAS PORTFÖY BİRİNCİ ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 11.278741,
+      "tedavuldekiPaySayisi": 13410797,
+      "kisiSayisi": 589,
+      "fonToplamDeger": 151256906.06,
+      "gunlukGetiri": 0.00155053,
+      "paraGirisiCikisi": 5301.01,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AHU",
+      "fonAdi": "ATLAS PORTFÖY BİRİNCİ ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 11.278741,
+      "tedavuldekiPaySayisi": 13410797,
+      "kisiSayisi": 589,
+      "fonToplamDeger": 151256906.06,
+      "gunlukGetiri": 0.00155053,
+      "paraGirisiCikisi": 5301.01,
+      "yatirimciDegisimi": 3
+    },
     {
       "fonKodu": "AHU",
       "fonAdi": "ATLAS PORTFÖY BİRİNCİ ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

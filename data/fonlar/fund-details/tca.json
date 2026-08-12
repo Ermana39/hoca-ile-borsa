@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "TCA",
     "slug": "tca",
@@ -12,44 +12,56 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 0.77079,
-    "tedavuldekiPaySayisi": 17751683041.44,
-    "kisiSayisi": 45813,
-    "fonToplamDeger": 13682825771.28,
-    "gunlukGetiri": 0.00861548,
+    "fiyat": 0.775563,
+    "tedavuldekiPaySayisi": 17716302541.44,
+    "kisiSayisi": 45895,
+    "fonToplamDeger": 13740101501.18,
+    "gunlukGetiri": 0.00619235,
     "getiriler": {
-      "birAy": 0.061654999999999995,
-      "ucAy": -0.060774,
-      "altiAy": -0.129756,
-      "yilbasi": -0.044819000000000005,
-      "birYil": 0.31883,
-      "ucYil": 2.465517,
-      "besYil": 11.109439
+      "birAy": 0.068229,
+      "ucAy": -0.048366,
+      "altiAy": -0.12455999999999999,
+      "yilbasi": -0.038904,
+      "birYil": 0.339108,
+      "ucYil": 2.49786,
+      "besYil": 11.203788999999999
     },
     "paraAkisi": {
-      "gunluk": -484826.91,
+      "gunluk": -27439806.72,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 38,
+      "gunluk": 82,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TCA",
+        "fonAdi": "ZİRAAT PORTFÖY ALTIN KATILIM FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 0.775563,
+        "tedavuldekiPaySayisi": 17716302541.44,
+        "kisiSayisi": 45895,
+        "fonToplamDeger": 13740101501.18,
+        "gunlukGetiri": 0.00619235,
+        "paraGirisiCikisi": -27439806.72,
+        "yatirimciDegisimi": 82
+      },
       {
         "fonKodu": "TCA",
         "fonAdi": "ZİRAAT PORTFÖY ALTIN KATILIM FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00861548,
       "paraGirisiCikisi": -484826.91,
       "yatirimciDegisimi": 38
+    },
+    {
+      "fonKodu": "TCA",
+      "fonAdi": "ZİRAAT PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 0.775563,
+      "tedavuldekiPaySayisi": 17716302541.44,
+      "kisiSayisi": 45895,
+      "fonToplamDeger": 13740101501.18,
+      "gunlukGetiri": 0.00619235,
+      "paraGirisiCikisi": -27439806.72,
+      "yatirimciDegisimi": 82
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TCA",
+      "fonAdi": "ZİRAAT PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 0.775563,
+      "tedavuldekiPaySayisi": 17716302541.44,
+      "kisiSayisi": 45895,
+      "fonToplamDeger": 13740101501.18,
+      "gunlukGetiri": 0.00619235,
+      "paraGirisiCikisi": -27439806.72,
+      "yatirimciDegisimi": 82
+    },
     {
       "fonKodu": "TCA",
       "fonAdi": "ZİRAAT PORTFÖY ALTIN KATILIM FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

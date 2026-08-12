@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "HIA",
     "slug": "hia",
@@ -12,44 +12,56 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.535731,
-    "tedavuldekiPaySayisi": 865850602,
+    "fiyat": 1.538136,
+    "tedavuldekiPaySayisi": 865797930,
     "kisiSayisi": 268,
-    "fonToplamDeger": 1329713474.67,
-    "gunlukGetiri": 0.00081722,
+    "fonToplamDeger": 1331715324.84,
+    "gunlukGetiri": 0.00156603,
     "getiriler": {
-      "birAy": 0.029190999999999998,
-      "ucAy": 0.09775299999999999,
-      "altiAy": 0.197326,
-      "yilbasi": 0.24911999999999998,
-      "birYil": 0.47814999999999996,
+      "birAy": 0.030802999999999997,
+      "ucAy": 0.09662599999999999,
+      "altiAy": 0.198493,
+      "yilbasi": 0.251076,
+      "birYil": 0.47801099999999996,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -295631.29,
+      "gunluk": -81016.7,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HIA",
+        "fonAdi": "HEDEF PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST FON",
+        "tarih": "2026-08-12",
+        "fiyat": 1.538136,
+        "tedavuldekiPaySayisi": 865797930,
+        "kisiSayisi": 268,
+        "fonToplamDeger": 1331715324.84,
+        "gunlukGetiri": 0.00156603,
+        "paraGirisiCikisi": -81016.7,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "HIA",
         "fonAdi": "HEDEF PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00081722,
       "paraGirisiCikisi": -295631.29,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "HIA",
+      "fonAdi": "HEDEF PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.538136,
+      "tedavuldekiPaySayisi": 865797930,
+      "kisiSayisi": 268,
+      "fonToplamDeger": 1331715324.84,
+      "gunlukGetiri": 0.00156603,
+      "paraGirisiCikisi": -81016.7,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HIA",
+      "fonAdi": "HEDEF PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.538136,
+      "tedavuldekiPaySayisi": 865797930,
+      "kisiSayisi": 268,
+      "fonToplamDeger": 1331715324.84,
+      "gunlukGetiri": 0.00156603,
+      "paraGirisiCikisi": -81016.7,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "HIA",
       "fonAdi": "HEDEF PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

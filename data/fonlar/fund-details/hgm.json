@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "HGM",
     "slug": "hgm",
@@ -12,44 +12,56 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 3.954452,
-    "tedavuldekiPaySayisi": 44246074,
-    "kisiSayisi": 1806,
-    "fonToplamDeger": 174968982.39,
-    "gunlukGetiri": 0.00011507,
+    "fiyat": 3.913081,
+    "tedavuldekiPaySayisi": 39267247,
+    "kisiSayisi": 1809,
+    "fonToplamDeger": 153655924.08,
+    "gunlukGetiri": -0.01046188,
     "getiriler": {
-      "birAy": 0.040446,
-      "ucAy": -0.056316,
-      "altiAy": 0.167635,
-      "yilbasi": 0.419773,
-      "birYil": 0.39952,
-      "ucYil": 1.930574,
+      "birAy": 0.029561,
+      "ucAy": -0.071793,
+      "altiAy": 0.136801,
+      "yilbasi": 0.40491900000000003,
+      "birYil": 0.36729599999999996,
+      "ucYil": 1.777246,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1654657.4,
+      "gunluk": -19482553.34,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": 3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HGM",
+        "fonAdi": "HEDEF PORTFÖY İKİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 3.913081,
+        "tedavuldekiPaySayisi": 39267247,
+        "kisiSayisi": 1809,
+        "fonToplamDeger": 153655924.08,
+        "gunlukGetiri": -0.01046188,
+        "paraGirisiCikisi": -19482553.34,
+        "yatirimciDegisimi": 3
+      },
       {
         "fonKodu": "HGM",
         "fonAdi": "HEDEF PORTFÖY İKİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00011507,
       "paraGirisiCikisi": 1654657.4,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HGM",
+      "fonAdi": "HEDEF PORTFÖY İKİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 3.913081,
+      "tedavuldekiPaySayisi": 39267247,
+      "kisiSayisi": 1809,
+      "fonToplamDeger": 153655924.08,
+      "gunlukGetiri": -0.01046188,
+      "paraGirisiCikisi": -19482553.34,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HGM",
+      "fonAdi": "HEDEF PORTFÖY İKİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 3.913081,
+      "tedavuldekiPaySayisi": 39267247,
+      "kisiSayisi": 1809,
+      "fonToplamDeger": 153655924.08,
+      "gunlukGetiri": -0.01046188,
+      "paraGirisiCikisi": -19482553.34,
+      "yatirimciDegisimi": 3
+    },
     {
       "fonKodu": "HGM",
       "fonAdi": "HEDEF PORTFÖY İKİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

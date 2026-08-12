@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "HTF",
     "slug": "htf",
@@ -12,44 +12,56 @@
     "yonetici": "HSBC PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hsbc-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.431967,
-    "tedavuldekiPaySayisi": 3583391459,
+    "fiyat": 1.433479,
+    "tedavuldekiPaySayisi": 3562918075,
     "kisiSayisi": 551,
-    "fonToplamDeger": 5131297140.23,
-    "gunlukGetiri": 0.0010654,
+    "fonToplamDeger": 5107368076.85,
+    "gunlukGetiri": 0.00105589,
     "getiriler": {
-      "birAy": 0.03132,
-      "ucAy": 0.103014,
-      "altiAy": 0.209671,
-      "yilbasi": 0.258457,
+      "birAy": 0.032409,
+      "ucAy": 0.103005,
+      "altiAy": 0.209788,
+      "yilbasi": 0.259786,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 17785240.64,
+      "gunluk": -29348166.02,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HTF",
+        "fonAdi": "HSBC PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 1.433479,
+        "tedavuldekiPaySayisi": 3562918075,
+        "kisiSayisi": 551,
+        "fonToplamDeger": 5107368076.85,
+        "gunlukGetiri": 0.00105589,
+        "paraGirisiCikisi": -29348166.02,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "HTF",
         "fonAdi": "HSBC PORTFÖY PARA PİYASASI SERBEST (TL) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.0010654,
       "paraGirisiCikisi": 17785240.64,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "HTF",
+      "fonAdi": "HSBC PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.433479,
+      "tedavuldekiPaySayisi": 3562918075,
+      "kisiSayisi": 551,
+      "fonToplamDeger": 5107368076.85,
+      "gunlukGetiri": 0.00105589,
+      "paraGirisiCikisi": -29348166.02,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HTF",
+      "fonAdi": "HSBC PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.433479,
+      "tedavuldekiPaySayisi": 3562918075,
+      "kisiSayisi": 551,
+      "fonToplamDeger": 5107368076.85,
+      "gunlukGetiri": 0.00105589,
+      "paraGirisiCikisi": -29348166.02,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "HTF",
       "fonAdi": "HSBC PORTFÖY PARA PİYASASI SERBEST (TL) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

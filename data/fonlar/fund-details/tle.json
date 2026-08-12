@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "TLE",
     "slug": "tle",
@@ -12,44 +12,56 @@
     "yonetici": "AURA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aura-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 28.1178,
-    "tedavuldekiPaySayisi": 18775358,
+    "fiyat": 28.081064,
+    "tedavuldekiPaySayisi": 18755458,
     "kisiSayisi": 930,
-    "fonToplamDeger": 527921763.83,
-    "gunlukGetiri": 0.00350967,
+    "fonToplamDeger": 526673212.8,
+    "gunlukGetiri": -0.0013065,
     "getiriler": {
-      "birAy": 0.009538999999999999,
-      "ucAy": 0.043909000000000004,
-      "altiAy": 0.12869,
-      "yilbasi": 0.177086,
-      "birYil": 0.28956,
-      "ucYil": 1.397959,
-      "besYil": 6.254980000000001
+      "birAy": 0.00822,
+      "ucAy": 0.040944,
+      "altiAy": 0.125473,
+      "yilbasi": 0.175548,
+      "birYil": 0.283924,
+      "ucYil": 1.4077330000000001,
+      "besYil": 6.242738
     },
     "paraAkisi": {
-      "gunluk": 227754.18,
+      "gunluk": -558813.17,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TLE",
+        "fonAdi": "AURA PORTFÖY YABANCI BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 28.081064,
+        "tedavuldekiPaySayisi": 18755458,
+        "kisiSayisi": 930,
+        "fonToplamDeger": 526673212.8,
+        "gunlukGetiri": -0.0013065,
+        "paraGirisiCikisi": -558813.17,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "TLE",
         "fonAdi": "AURA PORTFÖY YABANCI BORÇLANMA ARAÇLARI FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00350967,
       "paraGirisiCikisi": 227754.18,
       "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "TLE",
+      "fonAdi": "AURA PORTFÖY YABANCI BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 28.081064,
+      "tedavuldekiPaySayisi": 18755458,
+      "kisiSayisi": 930,
+      "fonToplamDeger": 526673212.8,
+      "gunlukGetiri": -0.0013065,
+      "paraGirisiCikisi": -558813.17,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TLE",
+      "fonAdi": "AURA PORTFÖY YABANCI BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 28.081064,
+      "tedavuldekiPaySayisi": 18755458,
+      "kisiSayisi": 930,
+      "fonToplamDeger": 526673212.8,
+      "gunlukGetiri": -0.0013065,
+      "paraGirisiCikisi": -558813.17,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "TLE",
       "fonAdi": "AURA PORTFÖY YABANCI BORÇLANMA ARAÇLARI FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

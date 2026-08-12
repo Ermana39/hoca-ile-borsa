@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "SRL",
     "slug": "srl",
@@ -12,44 +12,56 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.77167,
-    "tedavuldekiPaySayisi": 141052453,
-    "kisiSayisi": 3983,
-    "fonToplamDeger": 249898415.27,
-    "gunlukGetiri": -0.00123347,
+    "fiyat": 1.766004,
+    "tedavuldekiPaySayisi": 127087532,
+    "kisiSayisi": 3986,
+    "fonToplamDeger": 224437068.82,
+    "gunlukGetiri": -0.00319811,
     "getiriler": {
-      "birAy": 0.061277,
-      "ucAy": 0.17207999999999998,
-      "altiAy": 0.22081900000000002,
-      "yilbasi": 0.406919,
-      "birYil": 0.560643,
+      "birAy": 0.057883,
+      "ucAy": 0.167417,
+      "altiAy": 0.21792,
+      "yilbasi": 0.40242,
+      "birYil": 0.554283,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -9326322.46,
+      "gunluk": -24662106.35,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -38,
+      "gunluk": 3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SRL",
+        "fonAdi": "PARDUS PORTFÖY SÜRDÜRÜLEBİLİRLİK HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 1.766004,
+        "tedavuldekiPaySayisi": 127087532,
+        "kisiSayisi": 3986,
+        "fonToplamDeger": 224437068.82,
+        "gunlukGetiri": -0.00319811,
+        "paraGirisiCikisi": -24662106.35,
+        "yatirimciDegisimi": 3
+      },
       {
         "fonKodu": "SRL",
         "fonAdi": "PARDUS PORTFÖY SÜRDÜRÜLEBİLİRLİK HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": -0.00123347,
       "paraGirisiCikisi": -9326322.46,
       "yatirimciDegisimi": -38
+    },
+    {
+      "fonKodu": "SRL",
+      "fonAdi": "PARDUS PORTFÖY SÜRDÜRÜLEBİLİRLİK HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.766004,
+      "tedavuldekiPaySayisi": 127087532,
+      "kisiSayisi": 3986,
+      "fonToplamDeger": 224437068.82,
+      "gunlukGetiri": -0.00319811,
+      "paraGirisiCikisi": -24662106.35,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SRL",
+      "fonAdi": "PARDUS PORTFÖY SÜRDÜRÜLEBİLİRLİK HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.766004,
+      "tedavuldekiPaySayisi": 127087532,
+      "kisiSayisi": 3986,
+      "fonToplamDeger": 224437068.82,
+      "gunlukGetiri": -0.00319811,
+      "paraGirisiCikisi": -24662106.35,
+      "yatirimciDegisimi": 3
+    },
     {
       "fonKodu": "SRL",
       "fonAdi": "PARDUS PORTFÖY SÜRDÜRÜLEBİLİRLİK HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

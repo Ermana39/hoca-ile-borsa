@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "HP3",
     "slug": "hp3",
@@ -12,44 +12,56 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 58.23131,
-    "tedavuldekiPaySayisi": 6568185,
-    "kisiSayisi": 190,
-    "fonToplamDeger": 382474013.69,
-    "gunlukGetiri": 0.00236331,
+    "fiyat": 58.265135,
+    "tedavuldekiPaySayisi": 6596431,
+    "kisiSayisi": 188,
+    "fonToplamDeger": 384341942.1,
+    "gunlukGetiri": 0.00058087,
     "getiriler": {
-      "birAy": 0.021964,
-      "ucAy": 0.06773799999999999,
-      "altiAy": 0.120086,
-      "yilbasi": 0.137435,
-      "birYil": 0.19700600000000001,
-      "ucYil": 1.119917,
+      "birAy": 0.022557,
+      "ucAy": 0.064886,
+      "altiAy": 0.121073,
+      "yilbasi": 0.138096,
+      "birYil": 0.195646,
+      "ucYil": 1.111987,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 211088.5,
+      "gunluk": 1645757,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": -2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HP3",
+        "fonAdi": "HEDEF PORTFÖY LİDYA SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 58.265135,
+        "tedavuldekiPaySayisi": 6596431,
+        "kisiSayisi": 188,
+        "fonToplamDeger": 384341942.1,
+        "gunlukGetiri": 0.00058087,
+        "paraGirisiCikisi": 1645757,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "HP3",
         "fonAdi": "HEDEF PORTFÖY LİDYA SERBEST (DÖVİZ) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00236331,
       "paraGirisiCikisi": 211088.5,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "HP3",
+      "fonAdi": "HEDEF PORTFÖY LİDYA SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 58.265135,
+      "tedavuldekiPaySayisi": 6596431,
+      "kisiSayisi": 188,
+      "fonToplamDeger": 384341942.1,
+      "gunlukGetiri": 0.00058087,
+      "paraGirisiCikisi": 1645757,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HP3",
+      "fonAdi": "HEDEF PORTFÖY LİDYA SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 58.265135,
+      "tedavuldekiPaySayisi": 6596431,
+      "kisiSayisi": 188,
+      "fonToplamDeger": 384341942.1,
+      "gunlukGetiri": 0.00058087,
+      "paraGirisiCikisi": 1645757,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "HP3",
       "fonAdi": "HEDEF PORTFÖY LİDYA SERBEST (DÖVİZ) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "TMU",
     "slug": "tmu",
@@ -12,44 +12,56 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.412196,
-    "tedavuldekiPaySayisi": 42471713,
+    "fiyat": 1.409737,
+    "tedavuldekiPaySayisi": 42478934,
     "kisiSayisi": 92,
-    "fonToplamDeger": 59978385.17,
-    "gunlukGetiri": 0.00662556,
+    "fonToplamDeger": 59884123.96,
+    "gunlukGetiri": -0.00174126,
     "getiriler": {
-      "birAy": 0.027113,
-      "ucAy": 0.069195,
-      "altiAy": 0.16301500000000002,
-      "yilbasi": 0.238171,
+      "birAy": 0.025324,
+      "ucAy": 0.06467200000000001,
+      "altiAy": 0.158751,
+      "yilbasi": 0.236015,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -107.33,
+      "gunluk": 10179.71,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TMU",
+        "fonAdi": "AZİMUT PORTFÖY TEMKİNLİ FON SEPETİ FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 1.409737,
+        "tedavuldekiPaySayisi": 42478934,
+        "kisiSayisi": 92,
+        "fonToplamDeger": 59884123.96,
+        "gunlukGetiri": -0.00174126,
+        "paraGirisiCikisi": 10179.71,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "TMU",
         "fonAdi": "AZİMUT PORTFÖY TEMKİNLİ FON SEPETİ FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00662556,
       "paraGirisiCikisi": -107.33,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "TMU",
+      "fonAdi": "AZİMUT PORTFÖY TEMKİNLİ FON SEPETİ FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 1.409737,
+      "tedavuldekiPaySayisi": 42478934,
+      "kisiSayisi": 92,
+      "fonToplamDeger": 59884123.96,
+      "gunlukGetiri": -0.00174126,
+      "paraGirisiCikisi": 10179.71,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TMU",
+      "fonAdi": "AZİMUT PORTFÖY TEMKİNLİ FON SEPETİ FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 1.409737,
+      "tedavuldekiPaySayisi": 42478934,
+      "kisiSayisi": 92,
+      "fonToplamDeger": 59884123.96,
+      "gunlukGetiri": -0.00174126,
+      "paraGirisiCikisi": 10179.71,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "TMU",
       "fonAdi": "AZİMUT PORTFÖY TEMKİNLİ FON SEPETİ FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

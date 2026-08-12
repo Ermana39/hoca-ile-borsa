@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "UPP",
     "slug": "upp",
@@ -12,44 +12,56 @@
     "yonetici": "ÜNLÜ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "unlu-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 6.95881,
-    "tedavuldekiPaySayisi": 379084981,
-    "kisiSayisi": 909,
-    "fonToplamDeger": 2637980443.36,
-    "gunlukGetiri": 0.00107447,
+    "fiyat": 6.96614,
+    "tedavuldekiPaySayisi": 380236412,
+    "kisiSayisi": 908,
+    "fonToplamDeger": 2648780250.28,
+    "gunlukGetiri": 0.00105334,
     "getiriler": {
-      "birAy": 0.031464,
-      "ucAy": 0.101592,
-      "altiAy": 0.20816400000000002,
-      "yilbasi": 0.25802800000000004,
-      "birYil": 0.468754,
-      "ucYil": 2.530269,
-      "besYil": 4.289699
+      "birAy": 0.032549999999999996,
+      "ucAy": 0.10170799999999999,
+      "altiAy": 0.208369,
+      "yilbasi": 0.259353,
+      "birYil": 0.468633,
+      "ucYil": 2.526024,
+      "besYil": 4.292696
     },
     "paraAkisi": {
-      "gunluk": 25051.72,
+      "gunluk": 8021029.55,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "UPP",
+        "fonAdi": "ÜNLÜ PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 6.96614,
+        "tedavuldekiPaySayisi": 380236412,
+        "kisiSayisi": 908,
+        "fonToplamDeger": 2648780250.28,
+        "gunlukGetiri": 0.00105334,
+        "paraGirisiCikisi": 8021029.55,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "UPP",
         "fonAdi": "ÜNLÜ PORTFÖY PARA PİYASASI (TL) FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00107447,
       "paraGirisiCikisi": 25051.72,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "UPP",
+      "fonAdi": "ÜNLÜ PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 6.96614,
+      "tedavuldekiPaySayisi": 380236412,
+      "kisiSayisi": 908,
+      "fonToplamDeger": 2648780250.28,
+      "gunlukGetiri": 0.00105334,
+      "paraGirisiCikisi": 8021029.55,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "UPP",
+      "fonAdi": "ÜNLÜ PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 6.96614,
+      "tedavuldekiPaySayisi": 380236412,
+      "kisiSayisi": 908,
+      "fonToplamDeger": 2648780250.28,
+      "gunlukGetiri": 0.00105334,
+      "paraGirisiCikisi": 8021029.55,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "UPP",
       "fonAdi": "ÜNLÜ PORTFÖY PARA PİYASASI (TL) FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

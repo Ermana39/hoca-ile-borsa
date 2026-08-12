@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "GVI",
     "slug": "gvi",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 5.570032,
-    "tedavuldekiPaySayisi": 212627310,
-    "kisiSayisi": 4680,
-    "fonToplamDeger": 1184340883.08,
-    "gunlukGetiri": 0.00220123,
+    "fiyat": 5.538698,
+    "tedavuldekiPaySayisi": 212364144,
+    "kisiSayisi": 4673,
+    "fonToplamDeger": 1176220753.64,
+    "gunlukGetiri": -0.00562546,
     "getiriler": {
-      "birAy": 0.016111,
-      "ucAy": -0.002416,
-      "altiAy": 0.013871,
-      "yilbasi": 0.15789999999999998,
-      "birYil": 0.285622,
-      "ucYil": 1.65191,
+      "birAy": 0.010395000000000001,
+      "ucAy": -0.014358,
+      "altiAy": 0.005541000000000001,
+      "yilbasi": 0.151386,
+      "birYil": 0.275051,
+      "ucYil": 1.620798,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -3187461.95,
+      "gunluk": -1457597,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": -7,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GVI",
+        "fonAdi": "GARANTİ PORTFÖY ÜÇÜNCÜ FON SEPETİ FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 5.538698,
+        "tedavuldekiPaySayisi": 212364144,
+        "kisiSayisi": 4673,
+        "fonToplamDeger": 1176220753.64,
+        "gunlukGetiri": -0.00562546,
+        "paraGirisiCikisi": -1457597,
+        "yatirimciDegisimi": -7
+      },
       {
         "fonKodu": "GVI",
         "fonAdi": "GARANTİ PORTFÖY ÜÇÜNCÜ FON SEPETİ FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00220123,
       "paraGirisiCikisi": -3187461.95,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "GVI",
+      "fonAdi": "GARANTİ PORTFÖY ÜÇÜNCÜ FON SEPETİ FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 5.538698,
+      "tedavuldekiPaySayisi": 212364144,
+      "kisiSayisi": 4673,
+      "fonToplamDeger": 1176220753.64,
+      "gunlukGetiri": -0.00562546,
+      "paraGirisiCikisi": -1457597,
+      "yatirimciDegisimi": -7
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GVI",
+      "fonAdi": "GARANTİ PORTFÖY ÜÇÜNCÜ FON SEPETİ FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 5.538698,
+      "tedavuldekiPaySayisi": 212364144,
+      "kisiSayisi": 4673,
+      "fonToplamDeger": 1176220753.64,
+      "gunlukGetiri": -0.00562546,
+      "paraGirisiCikisi": -1457597,
+      "yatirimciDegisimi": -7
+    },
     {
       "fonKodu": "GVI",
       "fonAdi": "GARANTİ PORTFÖY ÜÇÜNCÜ FON SEPETİ FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

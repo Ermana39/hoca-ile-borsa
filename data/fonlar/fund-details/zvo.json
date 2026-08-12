@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "ZVO",
     "slug": "zvo",
@@ -12,44 +12,56 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 3.597091,
-    "tedavuldekiPaySayisi": 230703457,
+    "fiyat": 3.625404,
+    "tedavuldekiPaySayisi": 230685703,
     "kisiSayisi": 341,
-    "fonToplamDeger": 829861331.03,
-    "gunlukGetiri": -0.02377881,
+    "fonToplamDeger": 836328807.71,
+    "gunlukGetiri": 0.00787108,
     "getiriler": {
-      "birAy": 0.060049,
-      "ucAy": -0.051639,
-      "altiAy": 0.00985,
-      "yilbasi": -0.142132,
-      "birYil": -0.156941,
-      "ucYil": 0.594031,
+      "birAy": 0.068393,
+      "ucAy": -0.044962,
+      "altiAy": -0.008863,
+      "yilbasi": -0.135379,
+      "birYil": -0.14393599999999998,
+      "ucYil": 0.605621,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 115445.04,
+      "gunluk": -64365.42,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZVO",
+        "fonAdi": "ZİRAAT PORTFÖY ÜÇÜNCÜ SERBEST (TL) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 3.625404,
+        "tedavuldekiPaySayisi": 230685703,
+        "kisiSayisi": 341,
+        "fonToplamDeger": 836328807.71,
+        "gunlukGetiri": 0.00787108,
+        "paraGirisiCikisi": -64365.42,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "ZVO",
         "fonAdi": "ZİRAAT PORTFÖY ÜÇÜNCÜ SERBEST (TL) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": -0.02377881,
       "paraGirisiCikisi": 115445.04,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "ZVO",
+      "fonAdi": "ZİRAAT PORTFÖY ÜÇÜNCÜ SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 3.625404,
+      "tedavuldekiPaySayisi": 230685703,
+      "kisiSayisi": 341,
+      "fonToplamDeger": 836328807.71,
+      "gunlukGetiri": 0.00787108,
+      "paraGirisiCikisi": -64365.42,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZVO",
+      "fonAdi": "ZİRAAT PORTFÖY ÜÇÜNCÜ SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 3.625404,
+      "tedavuldekiPaySayisi": 230685703,
+      "kisiSayisi": 341,
+      "fonToplamDeger": 836328807.71,
+      "gunlukGetiri": 0.00787108,
+      "paraGirisiCikisi": -64365.42,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "ZVO",
       "fonAdi": "ZİRAAT PORTFÖY ÜÇÜNCÜ SERBEST (TL) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

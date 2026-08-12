@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "GMR",
     "slug": "gmr",
@@ -12,44 +12,56 @@
     "yonetici": "INVEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "inveo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.392341,
-    "tedavuldekiPaySayisi": 139471551,
-    "kisiSayisi": 4683,
-    "fonToplamDeger": 194191913.23,
-    "gunlukGetiri": 0.00059,
+    "fiyat": 1.384816,
+    "tedavuldekiPaySayisi": 138985137,
+    "kisiSayisi": 4686,
+    "fonToplamDeger": 192468867.51,
+    "gunlukGetiri": -0.00540457,
     "getiriler": {
-      "birAy": -0.003982,
-      "ucAy": -0.07277700000000001,
-      "altiAy": -0.00803,
-      "yilbasi": 0.13065300000000002,
-      "birYil": 0.230269,
-      "ucYil": 1.060487,
-      "besYil": 10.52438
+      "birAy": -0.009365,
+      "ucAy": -0.08401,
+      "altiAy": -0.012365999999999999,
+      "yilbasi": 0.124542,
+      "birYil": 0.206432,
+      "ucYil": 0.9692189999999999,
+      "besYil": 10.715178000000002
     },
     "paraAkisi": {
-      "gunluk": -346312.8,
+      "gunluk": -673593.89,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
+      "gunluk": 3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GMR",
+        "fonAdi": "INVEO PORTFÖY BIST 30 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 1.384816,
+        "tedavuldekiPaySayisi": 138985137,
+        "kisiSayisi": 4686,
+        "fonToplamDeger": 192468867.51,
+        "gunlukGetiri": -0.00540457,
+        "paraGirisiCikisi": -673593.89,
+        "yatirimciDegisimi": 3
+      },
       {
         "fonKodu": "GMR",
         "fonAdi": "INVEO PORTFÖY BIST 30 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00059,
       "paraGirisiCikisi": -346312.8,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "GMR",
+      "fonAdi": "INVEO PORTFÖY BIST 30 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.384816,
+      "tedavuldekiPaySayisi": 138985137,
+      "kisiSayisi": 4686,
+      "fonToplamDeger": 192468867.51,
+      "gunlukGetiri": -0.00540457,
+      "paraGirisiCikisi": -673593.89,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GMR",
+      "fonAdi": "INVEO PORTFÖY BIST 30 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.384816,
+      "tedavuldekiPaySayisi": 138985137,
+      "kisiSayisi": 4686,
+      "fonToplamDeger": 192468867.51,
+      "gunlukGetiri": -0.00540457,
+      "paraGirisiCikisi": -673593.89,
+      "yatirimciDegisimi": 3
+    },
     {
       "fonKodu": "GMR",
       "fonAdi": "INVEO PORTFÖY BIST 30 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

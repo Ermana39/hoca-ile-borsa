@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "VMV",
     "slug": "vmv",
@@ -12,44 +12,56 @@
     "yonetici": "VEGA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "vega-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 2.755807,
-    "tedavuldekiPaySayisi": 2476649443,
+    "fiyat": 2.758682,
+    "tedavuldekiPaySayisi": 2476649767,
     "kisiSayisi": 153,
-    "fonToplamDeger": 6825166719.04,
-    "gunlukGetiri": 0.00175428,
+    "fonToplamDeger": 6832288011.96,
+    "gunlukGetiri": 0.00104325,
     "getiriler": {
-      "birAy": 0.032475000000000004,
-      "ucAy": 0.099269,
-      "altiAy": 0.21031,
-      "yilbasi": 0.264266,
-      "birYil": 0.479418,
+      "birAy": 0.033552,
+      "ucAy": 0.099414,
+      "altiAy": 0.210244,
+      "yilbasi": 0.26558499999999996,
+      "birYil": 0.478221,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 308.65,
+      "gunluk": 893.81,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "VMV",
+        "fonAdi": "VEGA PORTFÖY MAVİ SERBEST FON",
+        "tarih": "2026-08-12",
+        "fiyat": 2.758682,
+        "tedavuldekiPaySayisi": 2476649767,
+        "kisiSayisi": 153,
+        "fonToplamDeger": 6832288011.96,
+        "gunlukGetiri": 0.00104325,
+        "paraGirisiCikisi": 893.81,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "VMV",
         "fonAdi": "VEGA PORTFÖY MAVİ SERBEST FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00175428,
       "paraGirisiCikisi": 308.65,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "VMV",
+      "fonAdi": "VEGA PORTFÖY MAVİ SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 2.758682,
+      "tedavuldekiPaySayisi": 2476649767,
+      "kisiSayisi": 153,
+      "fonToplamDeger": 6832288011.96,
+      "gunlukGetiri": 0.00104325,
+      "paraGirisiCikisi": 893.81,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "VMV",
+      "fonAdi": "VEGA PORTFÖY MAVİ SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 2.758682,
+      "tedavuldekiPaySayisi": 2476649767,
+      "kisiSayisi": 153,
+      "fonToplamDeger": 6832288011.96,
+      "gunlukGetiri": 0.00104325,
+      "paraGirisiCikisi": 893.81,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "VMV",
       "fonAdi": "VEGA PORTFÖY MAVİ SERBEST FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

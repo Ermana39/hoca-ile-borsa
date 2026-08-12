@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "TMM",
     "slug": "tmm",
@@ -12,44 +12,56 @@
     "yonetici": "TERA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "tera-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 71.702683,
-    "tedavuldekiPaySayisi": 12493542,
-    "kisiSayisi": 1300,
-    "fonToplamDeger": 895820483.12,
-    "gunlukGetiri": 0.00355595,
+    "fiyat": 71.840362,
+    "tedavuldekiPaySayisi": 12590704,
+    "kisiSayisi": 1304,
+    "fonToplamDeger": 904520728.34,
+    "gunlukGetiri": 0.00192014,
     "getiriler": {
-      "birAy": 0.026633,
-      "ucAy": 0.077582,
-      "altiAy": 0.15757,
-      "yilbasi": 0.190089,
-      "birYil": 0.278238,
-      "ucYil": 2.009674,
+      "birAy": 0.028603999999999997,
+      "ucAy": 0.075264,
+      "altiAy": 0.15681699999999998,
+      "yilbasi": 0.19237400000000002,
+      "birYil": 0.27775700000000003,
+      "ucYil": 2.009057,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 946833.93,
+      "gunluk": 6980153.25,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
+      "gunluk": 4,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TMM",
+        "fonAdi": "TERA PORTFÖY İKİNCİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 71.840362,
+        "tedavuldekiPaySayisi": 12590704,
+        "kisiSayisi": 1304,
+        "fonToplamDeger": 904520728.34,
+        "gunlukGetiri": 0.00192014,
+        "paraGirisiCikisi": 6980153.25,
+        "yatirimciDegisimi": 4
+      },
       {
         "fonKodu": "TMM",
         "fonAdi": "TERA PORTFÖY İKİNCİ SERBEST (DÖVİZ) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00355595,
       "paraGirisiCikisi": 946833.93,
       "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "TMM",
+      "fonAdi": "TERA PORTFÖY İKİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 71.840362,
+      "tedavuldekiPaySayisi": 12590704,
+      "kisiSayisi": 1304,
+      "fonToplamDeger": 904520728.34,
+      "gunlukGetiri": 0.00192014,
+      "paraGirisiCikisi": 6980153.25,
+      "yatirimciDegisimi": 4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TMM",
+      "fonAdi": "TERA PORTFÖY İKİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 71.840362,
+      "tedavuldekiPaySayisi": 12590704,
+      "kisiSayisi": 1304,
+      "fonToplamDeger": 904520728.34,
+      "gunlukGetiri": 0.00192014,
+      "paraGirisiCikisi": 6980153.25,
+      "yatirimciDegisimi": 4
+    },
     {
       "fonKodu": "TMM",
       "fonAdi": "TERA PORTFÖY İKİNCİ SERBEST (DÖVİZ) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

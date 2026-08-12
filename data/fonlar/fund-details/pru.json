@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "PRU",
     "slug": "pru",
@@ -12,44 +12,56 @@
     "yonetici": "ALLBATROSS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "allbatross-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 3.617169,
-    "tedavuldekiPaySayisi": 843384263,
-    "kisiSayisi": 1589,
-    "fonToplamDeger": 3050663469.36,
-    "gunlukGetiri": 0.00120876,
+    "fiyat": 3.621728,
+    "tedavuldekiPaySayisi": 835786295,
+    "kisiSayisi": 1582,
+    "fonToplamDeger": 3026990867.18,
+    "gunlukGetiri": 0.00126038,
     "getiriler": {
-      "birAy": 0.036913999999999995,
-      "ucAy": 0.123916,
-      "altiAy": 0.26032900000000003,
-      "yilbasi": 0.322821,
-      "birYil": 0.585416,
-      "ucYil": 2.735221,
+      "birAy": 0.038221,
+      "ucAy": 0.123858,
+      "altiAy": 0.260246,
+      "yilbasi": 0.324489,
+      "birYil": 0.585478,
+      "ucYil": 2.730229,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -6445353.86,
+      "gunluk": -27517773.45,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -9,
+      "gunluk": -7,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PRU",
+        "fonAdi": "ALLBATROSS PORTFÖY KISA VADELİ SERBEST (TL) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 3.621728,
+        "tedavuldekiPaySayisi": 835786295,
+        "kisiSayisi": 1582,
+        "fonToplamDeger": 3026990867.18,
+        "gunlukGetiri": 0.00126038,
+        "paraGirisiCikisi": -27517773.45,
+        "yatirimciDegisimi": -7
+      },
       {
         "fonKodu": "PRU",
         "fonAdi": "ALLBATROSS PORTFÖY KISA VADELİ SERBEST (TL) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00120876,
       "paraGirisiCikisi": -6445353.86,
       "yatirimciDegisimi": -9
+    },
+    {
+      "fonKodu": "PRU",
+      "fonAdi": "ALLBATROSS PORTFÖY KISA VADELİ SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 3.621728,
+      "tedavuldekiPaySayisi": 835786295,
+      "kisiSayisi": 1582,
+      "fonToplamDeger": 3026990867.18,
+      "gunlukGetiri": 0.00126038,
+      "paraGirisiCikisi": -27517773.45,
+      "yatirimciDegisimi": -7
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PRU",
+      "fonAdi": "ALLBATROSS PORTFÖY KISA VADELİ SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 3.621728,
+      "tedavuldekiPaySayisi": 835786295,
+      "kisiSayisi": 1582,
+      "fonToplamDeger": 3026990867.18,
+      "gunlukGetiri": 0.00126038,
+      "paraGirisiCikisi": -27517773.45,
+      "yatirimciDegisimi": -7
+    },
     {
       "fonKodu": "PRU",
       "fonAdi": "ALLBATROSS PORTFÖY KISA VADELİ SERBEST (TL) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

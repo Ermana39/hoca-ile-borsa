@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "PHS",
     "slug": "phs",
@@ -12,13 +12,13 @@
     "yonetici": "PERFORM PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "perform-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 4.444305,
-    "tedavuldekiPaySayisi": 46317986,
+    "fiyat": 4.360827,
+    "tedavuldekiPaySayisi": 46305275,
     "kisiSayisi": 17,
-    "fonToplamDeger": 205851275.81,
-    "gunlukGetiri": 0.00966362,
+    "fonToplamDeger": 201929308.95,
+    "gunlukGetiri": -0.01878314,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -25325316.5,
+      "gunluk": -55430.47,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PHS",
+        "fonAdi": "PERFORM PORTFÖY İKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 4.360827,
+        "tedavuldekiPaySayisi": 46305275,
+        "kisiSayisi": 17,
+        "fonToplamDeger": 201929308.95,
+        "gunlukGetiri": -0.01878314,
+        "paraGirisiCikisi": -55430.47,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "PHS",
         "fonAdi": "PERFORM PORTFÖY İKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00966362,
       "paraGirisiCikisi": -25325316.5,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PHS",
+      "fonAdi": "PERFORM PORTFÖY İKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 4.360827,
+      "tedavuldekiPaySayisi": 46305275,
+      "kisiSayisi": 17,
+      "fonToplamDeger": 201929308.95,
+      "gunlukGetiri": -0.01878314,
+      "paraGirisiCikisi": -55430.47,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PHS",
+      "fonAdi": "PERFORM PORTFÖY İKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 4.360827,
+      "tedavuldekiPaySayisi": 46305275,
+      "kisiSayisi": 17,
+      "fonToplamDeger": 201929308.95,
+      "gunlukGetiri": -0.01878314,
+      "paraGirisiCikisi": -55430.47,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "PHS",
       "fonAdi": "PERFORM PORTFÖY İKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

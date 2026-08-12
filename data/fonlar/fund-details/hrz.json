@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "HRZ",
     "slug": "hrz",
@@ -12,44 +12,56 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 2.313141,
-    "tedavuldekiPaySayisi": 154659069,
-    "kisiSayisi": 7488,
-    "fonToplamDeger": 357748199.2,
-    "gunlukGetiri": 0.00106159,
+    "fiyat": 2.280595,
+    "tedavuldekiPaySayisi": 152361403,
+    "kisiSayisi": 7444,
+    "fonToplamDeger": 347474725.83,
+    "gunlukGetiri": -0.01407005,
     "getiriler": {
-      "birAy": -0.009899999999999999,
-      "ucAy": -0.040115,
-      "altiAy": 0.233762,
-      "yilbasi": 0.52376,
-      "birYil": 0.624298,
+      "birAy": -0.02383,
+      "ucAy": -0.05949499999999999,
+      "altiAy": 0.220559,
+      "yilbasi": 0.502321,
+      "birYil": 0.585676,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -12785253.08,
+      "gunluk": -5240045.59,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -72,
+      "gunluk": -44,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HRZ",
+        "fonAdi": "AKTİF PORTFÖY BIST HALKA ARZ ŞİRKETLERİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 2.280595,
+        "tedavuldekiPaySayisi": 152361403,
+        "kisiSayisi": 7444,
+        "fonToplamDeger": 347474725.83,
+        "gunlukGetiri": -0.01407005,
+        "paraGirisiCikisi": -5240045.59,
+        "yatirimciDegisimi": -44
+      },
       {
         "fonKodu": "HRZ",
         "fonAdi": "AKTİF PORTFÖY BIST HALKA ARZ ŞİRKETLERİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00106159,
       "paraGirisiCikisi": -12785253.08,
       "yatirimciDegisimi": -72
+    },
+    {
+      "fonKodu": "HRZ",
+      "fonAdi": "AKTİF PORTFÖY BIST HALKA ARZ ŞİRKETLERİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 2.280595,
+      "tedavuldekiPaySayisi": 152361403,
+      "kisiSayisi": 7444,
+      "fonToplamDeger": 347474725.83,
+      "gunlukGetiri": -0.01407005,
+      "paraGirisiCikisi": -5240045.59,
+      "yatirimciDegisimi": -44
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HRZ",
+      "fonAdi": "AKTİF PORTFÖY BIST HALKA ARZ ŞİRKETLERİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 2.280595,
+      "tedavuldekiPaySayisi": 152361403,
+      "kisiSayisi": 7444,
+      "fonToplamDeger": 347474725.83,
+      "gunlukGetiri": -0.01407005,
+      "paraGirisiCikisi": -5240045.59,
+      "yatirimciDegisimi": -44
+    },
     {
       "fonKodu": "HRZ",
       "fonAdi": "AKTİF PORTFÖY BIST HALKA ARZ ŞİRKETLERİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "KPR",
     "slug": "kpr",
@@ -12,13 +12,13 @@
     "yonetici": "KUVEYT TÜRK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kuveyt-turk-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.855158,
-    "tedavuldekiPaySayisi": 42794072082,
-    "kisiSayisi": 1306,
-    "fonToplamDeger": 79389769724.87,
-    "gunlukGetiri": 0.00104143,
+    "fiyat": 1.857082,
+    "tedavuldekiPaySayisi": 39207009768,
+    "kisiSayisi": 1319,
+    "fonToplamDeger": 72810628949.89,
+    "gunlukGetiri": 0.00103711,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1019372243.81,
+      "gunluk": -6661468856.21,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 4,
+      "gunluk": 13,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KPR",
+        "fonAdi": "KUVEYT TÜRK PORTFÖY PARA PİYASASI KATILIM SERBEST FON",
+        "tarih": "2026-08-12",
+        "fiyat": 1.857082,
+        "tedavuldekiPaySayisi": 39207009768,
+        "kisiSayisi": 1319,
+        "fonToplamDeger": 72810628949.89,
+        "gunlukGetiri": 0.00103711,
+        "paraGirisiCikisi": -6661468856.21,
+        "yatirimciDegisimi": 13
+      },
       {
         "fonKodu": "KPR",
         "fonAdi": "KUVEYT TÜRK PORTFÖY PARA PİYASASI KATILIM SERBEST FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00104143,
       "paraGirisiCikisi": 1019372243.81,
       "yatirimciDegisimi": 4
+    },
+    {
+      "fonKodu": "KPR",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY PARA PİYASASI KATILIM SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.857082,
+      "tedavuldekiPaySayisi": 39207009768,
+      "kisiSayisi": 1319,
+      "fonToplamDeger": 72810628949.89,
+      "gunlukGetiri": 0.00103711,
+      "paraGirisiCikisi": -6661468856.21,
+      "yatirimciDegisimi": 13
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KPR",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY PARA PİYASASI KATILIM SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.857082,
+      "tedavuldekiPaySayisi": 39207009768,
+      "kisiSayisi": 1319,
+      "fonToplamDeger": 72810628949.89,
+      "gunlukGetiri": 0.00103711,
+      "paraGirisiCikisi": -6661468856.21,
+      "yatirimciDegisimi": 13
+    },
     {
       "fonKodu": "KPR",
       "fonAdi": "KUVEYT TÜRK PORTFÖY PARA PİYASASI KATILIM SERBEST FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "HPD",
     "slug": "hpd",
@@ -12,44 +12,56 @@
     "yonetici": "HSBC PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hsbc-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 0.211828,
-    "tedavuldekiPaySayisi": 1361581772,
-    "kisiSayisi": 1462,
-    "fonToplamDeger": 288421785.36,
-    "gunlukGetiri": 0.00557789,
+    "fiyat": 0.212394,
+    "tedavuldekiPaySayisi": 1349382379,
+    "kisiSayisi": 1461,
+    "fonToplamDeger": 286600539.29,
+    "gunlukGetiri": 0.00267198,
     "getiriler": {
-      "birAy": 0.020052,
-      "ucAy": -0.029464999999999998,
-      "altiAy": 0.022942999999999998,
-      "yilbasi": 0.13369799999999998,
-      "birYil": 0.130551,
-      "ucYil": 1.104161,
-      "besYil": 5.046873
+      "birAy": 0.022777,
+      "ucAy": -0.025988,
+      "altiAy": 0.021208,
+      "yilbasi": 0.13672700000000002,
+      "birYil": 0.126842,
+      "ucYil": 1.102536,
+      "besYil": 5.076038
     },
     "paraAkisi": {
-      "gunluk": -524923.55,
+      "gunluk": -2591077.88,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HPD",
+        "fonAdi": "HSBC PORTFÖY İKİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-12",
+        "fiyat": 0.212394,
+        "tedavuldekiPaySayisi": 1349382379,
+        "kisiSayisi": 1461,
+        "fonToplamDeger": 286600539.29,
+        "gunlukGetiri": 0.00267198,
+        "paraGirisiCikisi": -2591077.88,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "HPD",
         "fonAdi": "HSBC PORTFÖY İKİNCİ DEĞİŞKEN FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00557789,
       "paraGirisiCikisi": -524923.55,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "HPD",
+      "fonAdi": "HSBC PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 0.212394,
+      "tedavuldekiPaySayisi": 1349382379,
+      "kisiSayisi": 1461,
+      "fonToplamDeger": 286600539.29,
+      "gunlukGetiri": 0.00267198,
+      "paraGirisiCikisi": -2591077.88,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HPD",
+      "fonAdi": "HSBC PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 0.212394,
+      "tedavuldekiPaySayisi": 1349382379,
+      "kisiSayisi": 1461,
+      "fonToplamDeger": 286600539.29,
+      "gunlukGetiri": 0.00267198,
+      "paraGirisiCikisi": -2591077.88,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "HPD",
       "fonAdi": "HSBC PORTFÖY İKİNCİ DEĞİŞKEN FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

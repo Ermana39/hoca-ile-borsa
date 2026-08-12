@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "FUA",
     "slug": "fua",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 5.18438,
-    "tedavuldekiPaySayisi": 60422793,
-    "kisiSayisi": 4801,
-    "fonToplamDeger": 313254706.85,
-    "gunlukGetiri": 0.00773924,
+    "fiyat": 5.170544,
+    "tedavuldekiPaySayisi": 60387381,
+    "kisiSayisi": 4796,
+    "fonToplamDeger": 312235605.52,
+    "gunlukGetiri": -0.00266879,
     "getiriler": {
-      "birAy": 0.019335,
-      "ucAy": -0.084634,
-      "altiAy": 0.031200000000000002,
-      "yilbasi": 0.20176100000000002,
-      "birYil": 0.21394300000000002,
-      "ucYil": 0.624412,
+      "birAy": 0.016615,
+      "ucAy": -0.095686,
+      "altiAy": 0.022157,
+      "yilbasi": 0.198554,
+      "birYil": 0.202131,
+      "ucYil": 0.566798,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 153068.82,
+      "gunluk": -183099.3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
+      "gunluk": -5,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FUA",
+        "fonAdi": "AK PORTFÖY İHRACATÇI ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 5.170544,
+        "tedavuldekiPaySayisi": 60387381,
+        "kisiSayisi": 4796,
+        "fonToplamDeger": 312235605.52,
+        "gunlukGetiri": -0.00266879,
+        "paraGirisiCikisi": -183099.3,
+        "yatirimciDegisimi": -5
+      },
       {
         "fonKodu": "FUA",
         "fonAdi": "AK PORTFÖY İHRACATÇI ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00773924,
       "paraGirisiCikisi": 153068.82,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "FUA",
+      "fonAdi": "AK PORTFÖY İHRACATÇI ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 5.170544,
+      "tedavuldekiPaySayisi": 60387381,
+      "kisiSayisi": 4796,
+      "fonToplamDeger": 312235605.52,
+      "gunlukGetiri": -0.00266879,
+      "paraGirisiCikisi": -183099.3,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FUA",
+      "fonAdi": "AK PORTFÖY İHRACATÇI ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 5.170544,
+      "tedavuldekiPaySayisi": 60387381,
+      "kisiSayisi": 4796,
+      "fonToplamDeger": 312235605.52,
+      "gunlukGetiri": -0.00266879,
+      "paraGirisiCikisi": -183099.3,
+      "yatirimciDegisimi": -5
+    },
     {
       "fonKodu": "FUA",
       "fonAdi": "AK PORTFÖY İHRACATÇI ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

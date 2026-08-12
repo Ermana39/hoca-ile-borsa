@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "BID",
     "slug": "bid",
@@ -12,44 +12,56 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 3.180176,
-    "tedavuldekiPaySayisi": 70382773,
+    "fiyat": 3.177544,
+    "tedavuldekiPaySayisi": 70509230,
     "kisiSayisi": 2029,
-    "fonToplamDeger": 223829572.8,
-    "gunlukGetiri": 0.00271822,
+    "fonToplamDeger": 224046186.31,
+    "gunlukGetiri": -0.00082763,
     "getiriler": {
-      "birAy": -0.020406,
-      "ucAy": -0.084289,
-      "altiAy": -0.08360799999999999,
-      "yilbasi": 0.0416,
-      "birYil": 0.08221,
-      "ucYil": 0.992886,
+      "birAy": -0.021216,
+      "ucAy": -0.081308,
+      "altiAy": -0.08353,
+      "yilbasi": 0.040738,
+      "birYil": 0.080111,
+      "ucYil": 0.916212,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -91932.53,
+      "gunluk": 401822.68,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BID",
+        "fonAdi": "QNB PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 3.177544,
+        "tedavuldekiPaySayisi": 70509230,
+        "kisiSayisi": 2029,
+        "fonToplamDeger": 224046186.31,
+        "gunlukGetiri": -0.00082763,
+        "paraGirisiCikisi": 401822.68,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "BID",
         "fonAdi": "QNB PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00271822,
       "paraGirisiCikisi": -91932.53,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "BID",
+      "fonAdi": "QNB PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 3.177544,
+      "tedavuldekiPaySayisi": 70509230,
+      "kisiSayisi": 2029,
+      "fonToplamDeger": 224046186.31,
+      "gunlukGetiri": -0.00082763,
+      "paraGirisiCikisi": 401822.68,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BID",
+      "fonAdi": "QNB PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 3.177544,
+      "tedavuldekiPaySayisi": 70509230,
+      "kisiSayisi": 2029,
+      "fonToplamDeger": 224046186.31,
+      "gunlukGetiri": -0.00082763,
+      "paraGirisiCikisi": 401822.68,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "BID",
       "fonAdi": "QNB PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

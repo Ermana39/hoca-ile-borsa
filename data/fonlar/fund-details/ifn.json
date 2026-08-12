@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "IFN",
     "slug": "ifn",
@@ -12,44 +12,56 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 9.193586,
-    "tedavuldekiPaySayisi": 450243,
-    "kisiSayisi": 427,
-    "fonToplamDeger": 4139347.53,
-    "gunlukGetiri": -0.00331056,
+    "fiyat": 9.112788,
+    "tedavuldekiPaySayisi": 450194,
+    "kisiSayisi": 426,
+    "fonToplamDeger": 4102522.39,
+    "gunlukGetiri": -0.00878852,
     "getiriler": {
-      "birAy": -0.02426,
-      "ucAy": -0.08133800000000001,
-      "altiAy": -0.023651,
-      "yilbasi": 0.159317,
-      "birYil": 0.13153800000000002,
-      "ucYil": 1.109897,
+      "birAy": -0.032835,
+      "ucAy": -0.094153,
+      "altiAy": -0.036825000000000004,
+      "yilbasi": 0.149129,
+      "birYil": 0.11770200000000001,
+      "ucYil": 1.023333,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -45.97,
+      "gunluk": -446.53,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IFN",
+        "fonAdi": "TEB PORTFÖY SÜRDÜRÜLEBİLİRLİK HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 9.112788,
+        "tedavuldekiPaySayisi": 450194,
+        "kisiSayisi": 426,
+        "fonToplamDeger": 4102522.39,
+        "gunlukGetiri": -0.00878852,
+        "paraGirisiCikisi": -446.53,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "IFN",
         "fonAdi": "TEB PORTFÖY SÜRDÜRÜLEBİLİRLİK HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": -0.00331056,
       "paraGirisiCikisi": -45.97,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "IFN",
+      "fonAdi": "TEB PORTFÖY SÜRDÜRÜLEBİLİRLİK HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 9.112788,
+      "tedavuldekiPaySayisi": 450194,
+      "kisiSayisi": 426,
+      "fonToplamDeger": 4102522.39,
+      "gunlukGetiri": -0.00878852,
+      "paraGirisiCikisi": -446.53,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IFN",
+      "fonAdi": "TEB PORTFÖY SÜRDÜRÜLEBİLİRLİK HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 9.112788,
+      "tedavuldekiPaySayisi": 450194,
+      "kisiSayisi": 426,
+      "fonToplamDeger": 4102522.39,
+      "gunlukGetiri": -0.00878852,
+      "paraGirisiCikisi": -446.53,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "IFN",
       "fonAdi": "TEB PORTFÖY SÜRDÜRÜLEBİLİRLİK HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

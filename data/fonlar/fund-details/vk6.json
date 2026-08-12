@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "VK6",
     "slug": "vk6",
@@ -12,13 +12,13 @@
     "yonetici": "V PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "v-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 4.109786,
-    "tedavuldekiPaySayisi": 19618434172.99,
-    "kisiSayisi": 159055,
-    "fonToplamDeger": 80627558952.67,
-    "gunlukGetiri": 0.00111078,
+    "fiyat": 4.114128,
+    "tedavuldekiPaySayisi": 20529434364.99,
+    "kisiSayisi": 159101,
+    "fonToplamDeger": 84460727085.95,
+    "gunlukGetiri": 0.0010565,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1476811857.47,
+      "gunluk": 3747971397.91,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 121,
+      "gunluk": 46,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "VK6",
+        "fonAdi": "V PORTFÖY VAKIFBANK PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 4.114128,
+        "tedavuldekiPaySayisi": 20529434364.99,
+        "kisiSayisi": 159101,
+        "fonToplamDeger": 84460727085.95,
+        "gunlukGetiri": 0.0010565,
+        "paraGirisiCikisi": 3747971397.91,
+        "yatirimciDegisimi": 46
+      },
       {
         "fonKodu": "VK6",
         "fonAdi": "V PORTFÖY VAKIFBANK PARA PİYASASI (TL) FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00111078,
       "paraGirisiCikisi": -1476811857.47,
       "yatirimciDegisimi": 121
+    },
+    {
+      "fonKodu": "VK6",
+      "fonAdi": "V PORTFÖY VAKIFBANK PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 4.114128,
+      "tedavuldekiPaySayisi": 20529434364.99,
+      "kisiSayisi": 159101,
+      "fonToplamDeger": 84460727085.95,
+      "gunlukGetiri": 0.0010565,
+      "paraGirisiCikisi": 3747971397.91,
+      "yatirimciDegisimi": 46
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "VK6",
+      "fonAdi": "V PORTFÖY VAKIFBANK PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 4.114128,
+      "tedavuldekiPaySayisi": 20529434364.99,
+      "kisiSayisi": 159101,
+      "fonToplamDeger": 84460727085.95,
+      "gunlukGetiri": 0.0010565,
+      "paraGirisiCikisi": 3747971397.91,
+      "yatirimciDegisimi": 46
+    },
     {
       "fonKodu": "VK6",
       "fonAdi": "V PORTFÖY VAKIFBANK PARA PİYASASI (TL) FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "TPF",
     "slug": "tpf",
@@ -12,44 +12,56 @@
     "yonetici": "TACİRLER PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "tacirler-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 10.9458,
-    "tedavuldekiPaySayisi": 11258764,
-    "kisiSayisi": 518,
-    "fonToplamDeger": 123236182.07,
-    "gunlukGetiri": 0.00005655,
+    "fiyat": 10.960698,
+    "tedavuldekiPaySayisi": 11258124,
+    "kisiSayisi": 517,
+    "fonToplamDeger": 123396898.1,
+    "gunlukGetiri": 0.00136107,
     "getiriler": {
-      "birAy": 0.021722,
-      "ucAy": 0.093662,
-      "altiAy": 0.212818,
-      "yilbasi": 0.260886,
-      "birYil": 0.46608400000000005,
-      "ucYil": 1.640717,
-      "besYil": 3.535625
+      "birAy": 0.023113,
+      "ucAy": 0.094474,
+      "altiAy": 0.214713,
+      "yilbasi": 0.262602,
+      "birYil": 0.466415,
+      "ucYil": 1.624926,
+      "besYil": 3.5373590000000004
     },
     "paraAkisi": {
-      "gunluk": 667.69,
+      "gunluk": -7014.85,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TPF",
+        "fonAdi": "TACİRLER PORTFÖY BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 10.960698,
+        "tedavuldekiPaySayisi": 11258124,
+        "kisiSayisi": 517,
+        "fonToplamDeger": 123396898.1,
+        "gunlukGetiri": 0.00136107,
+        "paraGirisiCikisi": -7014.85,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "TPF",
         "fonAdi": "TACİRLER PORTFÖY BORÇLANMA ARAÇLARI FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00005655,
       "paraGirisiCikisi": 667.69,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "TPF",
+      "fonAdi": "TACİRLER PORTFÖY BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 10.960698,
+      "tedavuldekiPaySayisi": 11258124,
+      "kisiSayisi": 517,
+      "fonToplamDeger": 123396898.1,
+      "gunlukGetiri": 0.00136107,
+      "paraGirisiCikisi": -7014.85,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TPF",
+      "fonAdi": "TACİRLER PORTFÖY BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 10.960698,
+      "tedavuldekiPaySayisi": 11258124,
+      "kisiSayisi": 517,
+      "fonToplamDeger": 123396898.1,
+      "gunlukGetiri": 0.00136107,
+      "paraGirisiCikisi": -7014.85,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "TPF",
       "fonAdi": "TACİRLER PORTFÖY BORÇLANMA ARAÇLARI FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "ZBJ",
     "slug": "zbj",
@@ -12,44 +12,56 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 5.122864,
-    "tedavuldekiPaySayisi": 12786361197.58,
-    "kisiSayisi": 20031,
-    "fonToplamDeger": 65502792366.66,
-    "gunlukGetiri": 0.00111096,
+    "fiyat": 5.128361,
+    "tedavuldekiPaySayisi": 13034827259.58,
+    "kisiSayisi": 20068,
+    "fonToplamDeger": 66847293589.06,
+    "gunlukGetiri": 0.00107303,
     "getiriler": {
-      "birAy": 0.032149000000000004,
-      "ucAy": 0.104599,
-      "altiAy": 0.21342300000000003,
-      "yilbasi": 0.26434599999999997,
-      "birYil": 0.478497,
-      "ucYil": 2.593182,
+      "birAy": 0.033257,
+      "ucAy": 0.104735,
+      "altiAy": 0.213696,
+      "yilbasi": 0.265703,
+      "birYil": 0.47848599999999997,
+      "ucYil": 2.588374,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -191272931.56,
+      "gunluk": 1274223662.18,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 16,
+      "gunluk": 37,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZBJ",
+        "fonAdi": "ZİRAAT PORTFÖY BAŞAK PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 5.128361,
+        "tedavuldekiPaySayisi": 13034827259.58,
+        "kisiSayisi": 20068,
+        "fonToplamDeger": 66847293589.06,
+        "gunlukGetiri": 0.00107303,
+        "paraGirisiCikisi": 1274223662.18,
+        "yatirimciDegisimi": 37
+      },
       {
         "fonKodu": "ZBJ",
         "fonAdi": "ZİRAAT PORTFÖY BAŞAK PARA PİYASASI (TL) FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00111096,
       "paraGirisiCikisi": -191272931.56,
       "yatirimciDegisimi": 16
+    },
+    {
+      "fonKodu": "ZBJ",
+      "fonAdi": "ZİRAAT PORTFÖY BAŞAK PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 5.128361,
+      "tedavuldekiPaySayisi": 13034827259.58,
+      "kisiSayisi": 20068,
+      "fonToplamDeger": 66847293589.06,
+      "gunlukGetiri": 0.00107303,
+      "paraGirisiCikisi": 1274223662.18,
+      "yatirimciDegisimi": 37
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZBJ",
+      "fonAdi": "ZİRAAT PORTFÖY BAŞAK PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 5.128361,
+      "tedavuldekiPaySayisi": 13034827259.58,
+      "kisiSayisi": 20068,
+      "fonToplamDeger": 66847293589.06,
+      "gunlukGetiri": 0.00107303,
+      "paraGirisiCikisi": 1274223662.18,
+      "yatirimciDegisimi": 37
+    },
     {
       "fonKodu": "ZBJ",
       "fonAdi": "ZİRAAT PORTFÖY BAŞAK PARA PİYASASI (TL) FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

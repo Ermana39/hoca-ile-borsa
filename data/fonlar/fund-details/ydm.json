@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "YDM",
     "slug": "ydm",
@@ -12,13 +12,13 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.856784,
+    "fiyat": 1.850618,
     "tedavuldekiPaySayisi": 678686262,
     "kisiSayisi": 2,
-    "fonToplamDeger": 1260174111.08,
-    "gunlukGetiri": 0.01329497,
+    "fonToplamDeger": 1255989115.41,
+    "gunlukGetiri": -0.0033208,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YDM",
+        "fonAdi": "AZİMUT PORTFÖY 24.0 SERBEST ÖZEL FON",
+        "tarih": "2026-08-12",
+        "fiyat": 1.850618,
+        "tedavuldekiPaySayisi": 678686262,
+        "kisiSayisi": 2,
+        "fonToplamDeger": 1255989115.41,
+        "gunlukGetiri": -0.0033208,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "YDM",
         "fonAdi": "AZİMUT PORTFÖY 24.0 SERBEST ÖZEL FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.01329497,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YDM",
+      "fonAdi": "AZİMUT PORTFÖY 24.0 SERBEST ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.850618,
+      "tedavuldekiPaySayisi": 678686262,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 1255989115.41,
+      "gunlukGetiri": -0.0033208,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YDM",
+      "fonAdi": "AZİMUT PORTFÖY 24.0 SERBEST ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.850618,
+      "tedavuldekiPaySayisi": 678686262,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 1255989115.41,
+      "gunlukGetiri": -0.0033208,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "YDM",
       "fonAdi": "AZİMUT PORTFÖY 24.0 SERBEST ÖZEL FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

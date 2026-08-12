@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "GO6",
     "slug": "go6",
@@ -12,44 +12,56 @@
     "yonetici": "ONE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "one-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 4.210055,
-    "tedavuldekiPaySayisi": 1293412279,
-    "kisiSayisi": 4070,
-    "fonToplamDeger": 5445337421.45,
-    "gunlukGetiri": 0.00117738,
+    "fiyat": 4.215055,
+    "tedavuldekiPaySayisi": 1282112120,
+    "kisiSayisi": 4064,
+    "fonToplamDeger": 5404173100.6,
+    "gunlukGetiri": 0.00118763,
     "getiriler": {
-      "birAy": 0.033071,
-      "ucAy": 0.110411,
-      "altiAy": 0.232637,
-      "yilbasi": 0.291947,
-      "birYil": 0.533975,
-      "ucYil": 2.7363429999999997,
+      "birAy": 0.034297,
+      "ucAy": 0.110489,
+      "altiAy": 0.232771,
+      "yilbasi": 0.29348199999999997,
+      "birYil": 0.5339240000000001,
+      "ucYil": 2.7319799999999996,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 10610858.43,
+      "gunluk": -47630791.69,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
+      "gunluk": -6,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GO6",
+        "fonAdi": "ONE PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 4.215055,
+        "tedavuldekiPaySayisi": 1282112120,
+        "kisiSayisi": 4064,
+        "fonToplamDeger": 5404173100.6,
+        "gunlukGetiri": 0.00118763,
+        "paraGirisiCikisi": -47630791.69,
+        "yatirimciDegisimi": -6
+      },
       {
         "fonKodu": "GO6",
         "fonAdi": "ONE PORTFÖY PARA PİYASASI (TL) FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00117738,
       "paraGirisiCikisi": 10610858.43,
       "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "GO6",
+      "fonAdi": "ONE PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 4.215055,
+      "tedavuldekiPaySayisi": 1282112120,
+      "kisiSayisi": 4064,
+      "fonToplamDeger": 5404173100.6,
+      "gunlukGetiri": 0.00118763,
+      "paraGirisiCikisi": -47630791.69,
+      "yatirimciDegisimi": -6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GO6",
+      "fonAdi": "ONE PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 4.215055,
+      "tedavuldekiPaySayisi": 1282112120,
+      "kisiSayisi": 4064,
+      "fonToplamDeger": 5404173100.6,
+      "gunlukGetiri": 0.00118763,
+      "paraGirisiCikisi": -47630791.69,
+      "yatirimciDegisimi": -6
+    },
     {
       "fonKodu": "GO6",
       "fonAdi": "ONE PORTFÖY PARA PİYASASI (TL) FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

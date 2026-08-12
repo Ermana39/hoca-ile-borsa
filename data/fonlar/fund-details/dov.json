@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "DOV",
     "slug": "dov",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 60.057877,
-    "tedavuldekiPaySayisi": 1196656029,
-    "kisiSayisi": 17241,
-    "fonToplamDeger": 71868620521.6,
-    "gunlukGetiri": 0.00496715,
+    "fiyat": 59.982758,
+    "tedavuldekiPaySayisi": 1191505122,
+    "kisiSayisi": 17230,
+    "fonToplamDeger": 71469763605.44,
+    "gunlukGetiri": -0.00125078,
     "getiriler": {
-      "birAy": 0.030732,
-      "ucAy": 0.042954,
-      "altiAy": 0.075623,
-      "yilbasi": 0.11272399999999999,
-      "birYil": 0.195152,
-      "ucYil": 1.009496,
+      "birAy": 0.029443,
+      "ucAy": 0.038189,
+      "altiAy": 0.072932,
+      "yilbasi": 0.111332,
+      "birYil": 0.190976,
+      "ucYil": 1.010172,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 352955578.73,
+      "gunluk": -308965608.06,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 6,
+      "gunluk": -11,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DOV",
+        "fonAdi": "DENİZ PORTFÖY ONÜÇÜNCÜ SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 59.982758,
+        "tedavuldekiPaySayisi": 1191505122,
+        "kisiSayisi": 17230,
+        "fonToplamDeger": 71469763605.44,
+        "gunlukGetiri": -0.00125078,
+        "paraGirisiCikisi": -308965608.06,
+        "yatirimciDegisimi": -11
+      },
       {
         "fonKodu": "DOV",
         "fonAdi": "DENİZ PORTFÖY ONÜÇÜNCÜ SERBEST (DÖVİZ-AVRO) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00496715,
       "paraGirisiCikisi": 352955578.73,
       "yatirimciDegisimi": 6
+    },
+    {
+      "fonKodu": "DOV",
+      "fonAdi": "DENİZ PORTFÖY ONÜÇÜNCÜ SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 59.982758,
+      "tedavuldekiPaySayisi": 1191505122,
+      "kisiSayisi": 17230,
+      "fonToplamDeger": 71469763605.44,
+      "gunlukGetiri": -0.00125078,
+      "paraGirisiCikisi": -308965608.06,
+      "yatirimciDegisimi": -11
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DOV",
+      "fonAdi": "DENİZ PORTFÖY ONÜÇÜNCÜ SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 59.982758,
+      "tedavuldekiPaySayisi": 1191505122,
+      "kisiSayisi": 17230,
+      "fonToplamDeger": 71469763605.44,
+      "gunlukGetiri": -0.00125078,
+      "paraGirisiCikisi": -308965608.06,
+      "yatirimciDegisimi": -11
+    },
     {
       "fonKodu": "DOV",
       "fonAdi": "DENİZ PORTFÖY ONÜÇÜNCÜ SERBEST (DÖVİZ-AVRO) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

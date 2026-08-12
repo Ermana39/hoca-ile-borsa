@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "TGA",
     "slug": "tga",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 0.478463,
-    "tedavuldekiPaySayisi": 1722818451,
-    "kisiSayisi": 6279,
-    "fonToplamDeger": 824304965.24,
-    "gunlukGetiri": 0.00164756,
+    "fiyat": 0.473715,
+    "tedavuldekiPaySayisi": 1722449772,
+    "kisiSayisi": 6278,
+    "fonToplamDeger": 815950370.6,
+    "gunlukGetiri": -0.00992344,
     "getiriler": {
-      "birAy": 0.035719,
-      "ucAy": 0.022927,
-      "altiAy": 0.059437,
-      "yilbasi": 0.19599,
-      "birYil": 0.246302,
-      "ucYil": 1.632983,
-      "besYil": 10.901473000000001
+      "birAy": 0.025441,
+      "ucAy": 0.0028539999999999998,
+      "altiAy": 0.048003,
+      "yilbasi": 0.18412199999999998,
+      "birYil": 0.23024,
+      "ucYil": 1.554615,
+      "besYil": 10.822776
     },
     "paraAkisi": {
-      "gunluk": -31341.72,
+      "gunluk": -174648.77,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TGA",
+        "fonAdi": "GARANTİ PORTFÖY AGRESİF DEĞİŞKEN FON",
+        "tarih": "2026-08-12",
+        "fiyat": 0.473715,
+        "tedavuldekiPaySayisi": 1722449772,
+        "kisiSayisi": 6278,
+        "fonToplamDeger": 815950370.6,
+        "gunlukGetiri": -0.00992344,
+        "paraGirisiCikisi": -174648.77,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "TGA",
         "fonAdi": "GARANTİ PORTFÖY AGRESİF DEĞİŞKEN FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00164756,
       "paraGirisiCikisi": -31341.72,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "TGA",
+      "fonAdi": "GARANTİ PORTFÖY AGRESİF DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 0.473715,
+      "tedavuldekiPaySayisi": 1722449772,
+      "kisiSayisi": 6278,
+      "fonToplamDeger": 815950370.6,
+      "gunlukGetiri": -0.00992344,
+      "paraGirisiCikisi": -174648.77,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TGA",
+      "fonAdi": "GARANTİ PORTFÖY AGRESİF DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 0.473715,
+      "tedavuldekiPaySayisi": 1722449772,
+      "kisiSayisi": 6278,
+      "fonToplamDeger": 815950370.6,
+      "gunlukGetiri": -0.00992344,
+      "paraGirisiCikisi": -174648.77,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "TGA",
       "fonAdi": "GARANTİ PORTFÖY AGRESİF DEĞİŞKEN FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "GAL",
     "slug": "gal",
@@ -12,13 +12,13 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 405.060823,
-    "tedavuldekiPaySayisi": 321704001,
-    "kisiSayisi": 58393,
-    "fonToplamDeger": 130309687495.77,
-    "gunlukGetiri": 0.00109389,
+    "fiyat": 405.485626,
+    "tedavuldekiPaySayisi": 159455989,
+    "kisiSayisi": 58069,
+    "fonToplamDeger": 64657111578.33,
+    "gunlukGetiri": 0.00104874,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 6149933564.86,
+      "gunluk": -65789236713.08,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -25,
+      "gunluk": -324,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GAL",
+        "fonAdi": "GARANTİ PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 405.485626,
+        "tedavuldekiPaySayisi": 159455989,
+        "kisiSayisi": 58069,
+        "fonToplamDeger": 64657111578.33,
+        "gunlukGetiri": 0.00104874,
+        "paraGirisiCikisi": -65789236713.08,
+        "yatirimciDegisimi": -324
+      },
       {
         "fonKodu": "GAL",
         "fonAdi": "GARANTİ PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00109389,
       "paraGirisiCikisi": 6149933564.86,
       "yatirimciDegisimi": -25
+    },
+    {
+      "fonKodu": "GAL",
+      "fonAdi": "GARANTİ PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 405.485626,
+      "tedavuldekiPaySayisi": 159455989,
+      "kisiSayisi": 58069,
+      "fonToplamDeger": 64657111578.33,
+      "gunlukGetiri": 0.00104874,
+      "paraGirisiCikisi": -65789236713.08,
+      "yatirimciDegisimi": -324
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GAL",
+      "fonAdi": "GARANTİ PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 405.485626,
+      "tedavuldekiPaySayisi": 159455989,
+      "kisiSayisi": 58069,
+      "fonToplamDeger": 64657111578.33,
+      "gunlukGetiri": 0.00104874,
+      "paraGirisiCikisi": -65789236713.08,
+      "yatirimciDegisimi": -324
+    },
     {
       "fonKodu": "GAL",
       "fonAdi": "GARANTİ PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

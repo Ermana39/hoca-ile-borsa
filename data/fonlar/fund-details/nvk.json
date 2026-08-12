@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "NVK",
     "slug": "nvk",
@@ -12,19 +12,19 @@
     "yonetici": "INVEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "inveo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 46.373961,
+    "fiyat": 46.40242,
     "tedavuldekiPaySayisi": 2212646,
     "kisiSayisi": 20,
-    "fonToplamDeger": 102609159.2,
-    "gunlukGetiri": 0.00198561,
+    "fonToplamDeger": 102672129.41,
+    "gunlukGetiri": 0.00061368,
     "getiriler": {
-      "birAy": 0.020072999999999997,
-      "ucAy": 0.059756000000000004,
-      "altiAy": 0.096798,
-      "yilbasi": 0.114812,
-      "birYil": 0.15825799999999998,
+      "birAy": 0.020699000000000002,
+      "ucAy": 0.058269,
+      "altiAy": 0.098239,
+      "yilbasi": 0.115496,
+      "birYil": 0.16166799999999998,
       "ucYil": null,
       "besYil": null
     },
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NVK",
+        "fonAdi": "INVEO PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 46.40242,
+        "tedavuldekiPaySayisi": 2212646,
+        "kisiSayisi": 20,
+        "fonToplamDeger": 102672129.41,
+        "gunlukGetiri": 0.00061368,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "NVK",
         "fonAdi": "INVEO PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00198561,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "NVK",
+      "fonAdi": "INVEO PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 46.40242,
+      "tedavuldekiPaySayisi": 2212646,
+      "kisiSayisi": 20,
+      "fonToplamDeger": 102672129.41,
+      "gunlukGetiri": 0.00061368,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NVK",
+      "fonAdi": "INVEO PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 46.40242,
+      "tedavuldekiPaySayisi": 2212646,
+      "kisiSayisi": 20,
+      "fonToplamDeger": 102672129.41,
+      "gunlukGetiri": 0.00061368,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "NVK",
       "fonAdi": "INVEO PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

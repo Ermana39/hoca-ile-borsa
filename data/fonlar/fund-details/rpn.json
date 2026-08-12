@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "RPN",
     "slug": "rpn",
@@ -12,20 +12,20 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 5.364635,
+    "fiyat": 5.268564,
     "tedavuldekiPaySayisi": 159059117,
     "kisiSayisi": 23,
-    "fonToplamDeger": 853294031.2,
-    "gunlukGetiri": 0.0094984,
+    "fonToplamDeger": 838013211.78,
+    "gunlukGetiri": -0.01790821,
     "getiriler": {
-      "birAy": 0.012815,
-      "ucAy": -0.008904,
-      "altiAy": -0.024848,
-      "yilbasi": 0.193701,
-      "birYil": 0.19808,
-      "ucYil": 0.671549,
+      "birAy": -0.005322,
+      "ucAy": -0.034065,
+      "altiAy": -0.035037,
+      "yilbasi": 0.17232399999999998,
+      "birYil": 0.16865200000000002,
+      "ucYil": 0.591387,
       "besYil": null
     },
     "paraAkisi": {
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RPN",
+        "fonAdi": "ROTA PORTFÖY NEV SERBEST FON",
+        "tarih": "2026-08-12",
+        "fiyat": 5.268564,
+        "tedavuldekiPaySayisi": 159059117,
+        "kisiSayisi": 23,
+        "fonToplamDeger": 838013211.78,
+        "gunlukGetiri": -0.01790821,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "RPN",
         "fonAdi": "ROTA PORTFÖY NEV SERBEST FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.0094984,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "RPN",
+      "fonAdi": "ROTA PORTFÖY NEV SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 5.268564,
+      "tedavuldekiPaySayisi": 159059117,
+      "kisiSayisi": 23,
+      "fonToplamDeger": 838013211.78,
+      "gunlukGetiri": -0.01790821,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RPN",
+      "fonAdi": "ROTA PORTFÖY NEV SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 5.268564,
+      "tedavuldekiPaySayisi": 159059117,
+      "kisiSayisi": 23,
+      "fonToplamDeger": 838013211.78,
+      "gunlukGetiri": -0.01790821,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "RPN",
       "fonAdi": "ROTA PORTFÖY NEV SERBEST FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

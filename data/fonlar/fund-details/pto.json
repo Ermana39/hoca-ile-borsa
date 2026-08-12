@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "PTO",
     "slug": "pto",
@@ -12,44 +12,56 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.821041,
-    "tedavuldekiPaySayisi": 204589218,
-    "kisiSayisi": 3825,
-    "fonToplamDeger": 372565413.25,
-    "gunlukGetiri": 0.00106041,
+    "fiyat": 1.821938,
+    "tedavuldekiPaySayisi": 197642313,
+    "kisiSayisi": 3934,
+    "fonToplamDeger": 360091955.61,
+    "gunlukGetiri": 0.00049258,
     "getiriler": {
-      "birAy": 0.095429,
-      "ucAy": 0.249911,
-      "altiAy": 0.348632,
-      "yilbasi": 0.605168,
-      "birYil": 0.668532,
+      "birAy": 0.095968,
+      "ucAy": 0.246161,
+      "altiAy": 0.340426,
+      "yilbasi": 0.605959,
+      "birYil": 0.6630780000000001,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -13366659.46,
+      "gunluk": -12656830.2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 74,
+      "gunluk": 109,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PTO",
+        "fonAdi": "PARDUS PORTFÖY TEMETTÜ ÖDEYEN ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 1.821938,
+        "tedavuldekiPaySayisi": 197642313,
+        "kisiSayisi": 3934,
+        "fonToplamDeger": 360091955.61,
+        "gunlukGetiri": 0.00049258,
+        "paraGirisiCikisi": -12656830.2,
+        "yatirimciDegisimi": 109
+      },
       {
         "fonKodu": "PTO",
         "fonAdi": "PARDUS PORTFÖY TEMETTÜ ÖDEYEN ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00106041,
       "paraGirisiCikisi": -13366659.46,
       "yatirimciDegisimi": 74
+    },
+    {
+      "fonKodu": "PTO",
+      "fonAdi": "PARDUS PORTFÖY TEMETTÜ ÖDEYEN ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.821938,
+      "tedavuldekiPaySayisi": 197642313,
+      "kisiSayisi": 3934,
+      "fonToplamDeger": 360091955.61,
+      "gunlukGetiri": 0.00049258,
+      "paraGirisiCikisi": -12656830.2,
+      "yatirimciDegisimi": 109
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PTO",
+      "fonAdi": "PARDUS PORTFÖY TEMETTÜ ÖDEYEN ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.821938,
+      "tedavuldekiPaySayisi": 197642313,
+      "kisiSayisi": 3934,
+      "fonToplamDeger": 360091955.61,
+      "gunlukGetiri": 0.00049258,
+      "paraGirisiCikisi": -12656830.2,
+      "yatirimciDegisimi": 109
+    },
     {
       "fonKodu": "PTO",
       "fonAdi": "PARDUS PORTFÖY TEMETTÜ ÖDEYEN ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

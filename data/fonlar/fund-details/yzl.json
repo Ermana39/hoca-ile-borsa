@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "YZL",
     "slug": "yzl",
@@ -12,13 +12,13 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 5.428069,
+    "fiyat": 5.458037,
     "tedavuldekiPaySayisi": 97604592,
     "kisiSayisi": 59,
-    "fonToplamDeger": 529804415.65,
-    "gunlukGetiri": -0.00095651,
+    "fonToplamDeger": 532729515.95,
+    "gunlukGetiri": 0.00552093,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -4583841.43,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YZL",
+        "fonAdi": "YAPI KREDİ PORTFÖY PY ÇAMLICA SERBEST ÖZEL FON",
+        "tarih": "2026-08-12",
+        "fiyat": 5.458037,
+        "tedavuldekiPaySayisi": 97604592,
+        "kisiSayisi": 59,
+        "fonToplamDeger": 532729515.95,
+        "gunlukGetiri": 0.00552093,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "YZL",
         "fonAdi": "YAPI KREDİ PORTFÖY PY ÇAMLICA SERBEST ÖZEL FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": -0.00095651,
       "paraGirisiCikisi": -4583841.43,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YZL",
+      "fonAdi": "YAPI KREDİ PORTFÖY PY ÇAMLICA SERBEST ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 5.458037,
+      "tedavuldekiPaySayisi": 97604592,
+      "kisiSayisi": 59,
+      "fonToplamDeger": 532729515.95,
+      "gunlukGetiri": 0.00552093,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YZL",
+      "fonAdi": "YAPI KREDİ PORTFÖY PY ÇAMLICA SERBEST ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 5.458037,
+      "tedavuldekiPaySayisi": 97604592,
+      "kisiSayisi": 59,
+      "fonToplamDeger": 532729515.95,
+      "gunlukGetiri": 0.00552093,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "YZL",
       "fonAdi": "YAPI KREDİ PORTFÖY PY ÇAMLICA SERBEST ÖZEL FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

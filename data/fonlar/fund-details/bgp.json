@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "BGP",
     "slug": "bgp",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 6.466028,
-    "tedavuldekiPaySayisi": 9598582393,
-    "kisiSayisi": 29234,
-    "fonToplamDeger": 62064704838.32,
-    "gunlukGetiri": 0.00108081,
+    "fiyat": 6.473023,
+    "tedavuldekiPaySayisi": 9635840540,
+    "kisiSayisi": 29230,
+    "fonToplamDeger": 62373014133.56,
+    "gunlukGetiri": 0.00108181,
     "getiriler": {
-      "birAy": 0.032194,
-      "ucAy": 0.10325699999999999,
-      "altiAy": 0.209018,
-      "yilbasi": 0.260299,
-      "birYil": 0.47446800000000006,
-      "ucYil": 2.611515,
-      "besYil": 4.44989
+      "birAy": 0.033311,
+      "ucAy": 0.103339,
+      "altiAy": 0.209215,
+      "yilbasi": 0.261662,
+      "birYil": 0.474426,
+      "ucYil": 2.607459,
+      "besYil": 4.453056
     },
     "paraAkisi": {
-      "gunluk": -12673945.09,
+      "gunluk": 241172842.47,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -43,
+      "gunluk": -4,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BGP",
+        "fonAdi": "AK PORTFÖY ÜÇÜNCÜ PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 6.473023,
+        "tedavuldekiPaySayisi": 9635840540,
+        "kisiSayisi": 29230,
+        "fonToplamDeger": 62373014133.56,
+        "gunlukGetiri": 0.00108181,
+        "paraGirisiCikisi": 241172842.47,
+        "yatirimciDegisimi": -4
+      },
       {
         "fonKodu": "BGP",
         "fonAdi": "AK PORTFÖY ÜÇÜNCÜ PARA PİYASASI (TL) FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00108081,
       "paraGirisiCikisi": -12673945.09,
       "yatirimciDegisimi": -43
+    },
+    {
+      "fonKodu": "BGP",
+      "fonAdi": "AK PORTFÖY ÜÇÜNCÜ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 6.473023,
+      "tedavuldekiPaySayisi": 9635840540,
+      "kisiSayisi": 29230,
+      "fonToplamDeger": 62373014133.56,
+      "gunlukGetiri": 0.00108181,
+      "paraGirisiCikisi": 241172842.47,
+      "yatirimciDegisimi": -4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BGP",
+      "fonAdi": "AK PORTFÖY ÜÇÜNCÜ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 6.473023,
+      "tedavuldekiPaySayisi": 9635840540,
+      "kisiSayisi": 29230,
+      "fonToplamDeger": 62373014133.56,
+      "gunlukGetiri": 0.00108181,
+      "paraGirisiCikisi": 241172842.47,
+      "yatirimciDegisimi": -4
+    },
     {
       "fonKodu": "BGP",
       "fonAdi": "AK PORTFÖY ÜÇÜNCÜ PARA PİYASASI (TL) FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

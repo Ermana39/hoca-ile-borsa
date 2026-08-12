@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "CAH",
     "slug": "cah",
@@ -12,44 +12,56 @@
     "yonetici": "A1 CAPİTAL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "a1-capital-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.360433,
-    "tedavuldekiPaySayisi": 27152601,
+    "fiyat": 1.349788,
+    "tedavuldekiPaySayisi": 27049119,
     "kisiSayisi": 257,
-    "fonToplamDeger": 36939306.78,
-    "gunlukGetiri": 0.00364887,
+    "fonToplamDeger": 36510569.56,
+    "gunlukGetiri": -0.00782471,
     "getiriler": {
-      "birAy": -0.008186,
-      "ucAy": -0.059544,
-      "altiAy": 0.049854,
-      "yilbasi": 0.295178,
+      "birAy": -0.015946000000000002,
+      "ucAy": -0.079836,
+      "altiAy": 0.038559,
+      "yilbasi": 0.285044,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -133828.52,
+      "gunluk": -139678.76,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "CAH",
+        "fonAdi": "A1 CAPİTAL PORTFÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 1.349788,
+        "tedavuldekiPaySayisi": 27049119,
+        "kisiSayisi": 257,
+        "fonToplamDeger": 36510569.56,
+        "gunlukGetiri": -0.00782471,
+        "paraGirisiCikisi": -139678.76,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "CAH",
         "fonAdi": "A1 CAPİTAL PORTFÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00364887,
       "paraGirisiCikisi": -133828.52,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "CAH",
+      "fonAdi": "A1 CAPİTAL PORTFÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.349788,
+      "tedavuldekiPaySayisi": 27049119,
+      "kisiSayisi": 257,
+      "fonToplamDeger": 36510569.56,
+      "gunlukGetiri": -0.00782471,
+      "paraGirisiCikisi": -139678.76,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "CAH",
+      "fonAdi": "A1 CAPİTAL PORTFÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.349788,
+      "tedavuldekiPaySayisi": 27049119,
+      "kisiSayisi": 257,
+      "fonToplamDeger": 36510569.56,
+      "gunlukGetiri": -0.00782471,
+      "paraGirisiCikisi": -139678.76,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "CAH",
       "fonAdi": "A1 CAPİTAL PORTFÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

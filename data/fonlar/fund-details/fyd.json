@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "FYD",
     "slug": "fyd",
@@ -12,44 +12,56 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 11.117433,
-    "tedavuldekiPaySayisi": 285269138.19,
-    "kisiSayisi": 5351,
-    "fonToplamDeger": 3171460642.57,
-    "gunlukGetiri": 0.00587523,
+    "fiyat": 11.026708,
+    "tedavuldekiPaySayisi": 285133826.19,
+    "kisiSayisi": 5344,
+    "fonToplamDeger": 3144087578.91,
+    "gunlukGetiri": -0.00816061,
     "getiriler": {
-      "birAy": 0.0043809999999999995,
-      "ucAy": -0.097395,
-      "altiAy": -0.05138,
-      "yilbasi": 0.09385,
-      "birYil": 0.1416,
-      "ucYil": 0.973536,
-      "besYil": 12.494962000000001
+      "birAy": -0.0038150000000000002,
+      "ucAy": -0.10849299999999999,
+      "altiAy": -0.06532,
+      "yilbasi": 0.084923,
+      "birYil": 0.128529,
+      "ucYil": 0.896765,
+      "besYil": 12.575275999999999
     },
     "paraAkisi": {
-      "gunluk": -3999263.06,
+      "gunluk": -1492045.91,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -9,
+      "gunluk": -7,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FYD",
+        "fonAdi": "QNB PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 11.026708,
+        "tedavuldekiPaySayisi": 285133826.19,
+        "kisiSayisi": 5344,
+        "fonToplamDeger": 3144087578.91,
+        "gunlukGetiri": -0.00816061,
+        "paraGirisiCikisi": -1492045.91,
+        "yatirimciDegisimi": -7
+      },
       {
         "fonKodu": "FYD",
         "fonAdi": "QNB PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00587523,
       "paraGirisiCikisi": -3999263.06,
       "yatirimciDegisimi": -9
+    },
+    {
+      "fonKodu": "FYD",
+      "fonAdi": "QNB PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 11.026708,
+      "tedavuldekiPaySayisi": 285133826.19,
+      "kisiSayisi": 5344,
+      "fonToplamDeger": 3144087578.91,
+      "gunlukGetiri": -0.00816061,
+      "paraGirisiCikisi": -1492045.91,
+      "yatirimciDegisimi": -7
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FYD",
+      "fonAdi": "QNB PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 11.026708,
+      "tedavuldekiPaySayisi": 285133826.19,
+      "kisiSayisi": 5344,
+      "fonToplamDeger": 3144087578.91,
+      "gunlukGetiri": -0.00816061,
+      "paraGirisiCikisi": -1492045.91,
+      "yatirimciDegisimi": -7
+    },
     {
       "fonKodu": "FYD",
       "fonAdi": "QNB PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "KMA",
     "slug": "kma",
@@ -12,13 +12,13 @@
     "yonetici": "KUVEYT TÜRK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kuveyt-turk-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 168.254284,
+    "fiyat": 168.351574,
     "tedavuldekiPaySayisi": 74818,
     "kisiSayisi": 1,
-    "fonToplamDeger": 12588449,
-    "gunlukGetiri": 0.00232391,
+    "fonToplamDeger": 12595728.07,
+    "gunlukGetiri": 0.00057823,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KMA",
+        "fonAdi": "KUVEYT TÜRK PORTFÖY KMA KATILIM SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-12",
+        "fiyat": 168.351574,
+        "tedavuldekiPaySayisi": 74818,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 12595728.07,
+        "gunlukGetiri": 0.00057823,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "KMA",
         "fonAdi": "KUVEYT TÜRK PORTFÖY KMA KATILIM SERBEST (DÖVİZ) ÖZEL FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00232391,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KMA",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY KMA KATILIM SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 168.351574,
+      "tedavuldekiPaySayisi": 74818,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 12595728.07,
+      "gunlukGetiri": 0.00057823,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KMA",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY KMA KATILIM SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 168.351574,
+      "tedavuldekiPaySayisi": 74818,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 12595728.07,
+      "gunlukGetiri": 0.00057823,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "KMA",
       "fonAdi": "KUVEYT TÜRK PORTFÖY KMA KATILIM SERBEST (DÖVİZ) ÖZEL FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

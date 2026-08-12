@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "DFO",
     "slug": "dfo",
@@ -12,13 +12,13 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 3.878014,
+    "fiyat": 3.851888,
     "tedavuldekiPaySayisi": 294965626,
     "kisiSayisi": 2,
-    "fonToplamDeger": 1143880774.27,
-    "gunlukGetiri": 0.01048919,
+    "fonToplamDeger": 1136174453.05,
+    "gunlukGetiri": -0.00673695,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DFO",
+        "fonAdi": "AZİMUT PORTFÖY DLS SERBEST ÖZEL FON",
+        "tarih": "2026-08-12",
+        "fiyat": 3.851888,
+        "tedavuldekiPaySayisi": 294965626,
+        "kisiSayisi": 2,
+        "fonToplamDeger": 1136174453.05,
+        "gunlukGetiri": -0.00673695,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "DFO",
         "fonAdi": "AZİMUT PORTFÖY DLS SERBEST ÖZEL FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.01048919,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DFO",
+      "fonAdi": "AZİMUT PORTFÖY DLS SERBEST ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 3.851888,
+      "tedavuldekiPaySayisi": 294965626,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 1136174453.05,
+      "gunlukGetiri": -0.00673695,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DFO",
+      "fonAdi": "AZİMUT PORTFÖY DLS SERBEST ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 3.851888,
+      "tedavuldekiPaySayisi": 294965626,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 1136174453.05,
+      "gunlukGetiri": -0.00673695,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "DFO",
       "fonAdi": "AZİMUT PORTFÖY DLS SERBEST ÖZEL FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

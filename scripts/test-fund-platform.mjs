@@ -34,6 +34,7 @@ const sourcePaths = {
   ),
 };
 const maxAbsoluteDailyReturn = 1;
+const maxFundValueRelativeDifference = 0.005;
 
 function readJson(fileName) {
   return JSON.parse(fs.readFileSync(path.join(dataDir, fileName), "utf8"));
@@ -243,15 +244,49 @@ const tarihselColumns = {
   toplam: tarihselTable.column("Fon Toplam Değer"),
 };
 const sourceSnapshots = tarihselTable.rows
-  .map((row) => ({
-    fonKodu: String(row[tarihselColumns.kod] ?? "").trim().toUpperCase(),
-    fonAdi: String(row[tarihselColumns.ad] ?? "").trim(),
-    tarih: parseDate(row[tarihselColumns.tarih]),
-    fiyat: round(parseNumber(row[tarihselColumns.fiyat]), 8),
-    tedavuldekiPaySayisi: round(parseNumber(row[tarihselColumns.pay]), 2),
-    kisiSayisi: round(parseNumber(row[tarihselColumns.kisi]), 0),
-    fonToplamDeger: round(parseNumber(row[tarihselColumns.toplam]), 2),
-  }))
+  .map((row) => {
+    const fiyat = round(parseNumber(row[tarihselColumns.fiyat]), 8);
+    const tedavuldekiPaySayisi = round(parseNumber(row[tarihselColumns.pay]), 2);
+    const kaynakFonToplamDeger = round(
+      parseNumber(row[tarihselColumns.toplam]),
+      2
+    );
+    const hesaplananFonToplamDeger =
+      typeof fiyat === "number" &&
+      fiyat > 0 &&
+      typeof tedavuldekiPaySayisi === "number" &&
+      tedavuldekiPaySayisi > 0
+        ? round(fiyat * tedavuldekiPaySayisi, 2)
+        : null;
+    const toplamDegerFarkOrani =
+      typeof kaynakFonToplamDeger === "number" &&
+      kaynakFonToplamDeger > 0 &&
+      typeof hesaplananFonToplamDeger === "number"
+        ? Math.abs(hesaplananFonToplamDeger - kaynakFonToplamDeger) /
+          kaynakFonToplamDeger
+        : null;
+    const toplamDegerDuzeltildi =
+      toplamDegerFarkOrani !== null &&
+      toplamDegerFarkOrani > maxFundValueRelativeDifference;
+
+    return {
+      fonKodu: String(row[tarihselColumns.kod] ?? "").trim().toUpperCase(),
+      fonAdi: String(row[tarihselColumns.ad] ?? "").trim(),
+      tarih: parseDate(row[tarihselColumns.tarih]),
+      fiyat,
+      tedavuldekiPaySayisi,
+      kisiSayisi: round(parseNumber(row[tarihselColumns.kisi]), 0),
+      fonToplamDeger: toplamDegerDuzeltildi
+        ? hesaplananFonToplamDeger
+        : kaynakFonToplamDeger,
+      ...(toplamDegerDuzeltildi
+        ? {
+            kaynakFonToplamDeger,
+            toplamDegerFarkOrani: round(toplamDegerFarkOrani, 8),
+          }
+        : {}),
+    };
+  })
   .filter((row) => row.fonKodu && row.tarih);
 const sourceSnapshotKeys = new Set();
 for (const row of sourceSnapshots) {
@@ -291,6 +326,19 @@ for (const row of sourceLatest) {
     assertSameNumber(fund[key], row[key], `${row.fonKodu} ${key}`);
   }
   assert(fund.aktifMi === hasValidFinancialSnapshot(row), `${row.fonKodu} aktiflik durumu yanlış.`);
+  if (typeof row.kaynakFonToplamDeger === "number") {
+    assert(
+      updateLog.veriUyarilari.some(
+        (uyari) =>
+          uyari.tur === "fon-toplam-degeri-duzeltildi" &&
+          uyari.fonKodu === row.fonKodu &&
+          uyari.tarih === row.tarih &&
+          uyari.kaynakFonToplamDeger === row.kaynakFonToplamDeger &&
+          uyari.hesaplananFonToplamDeger === row.fonToplamDeger
+      ),
+      `${row.fonKodu} toplam değer düzeltmesi uyarı kaydında yok.`
+    );
+  }
 }
 
 const totalFundSize = round(

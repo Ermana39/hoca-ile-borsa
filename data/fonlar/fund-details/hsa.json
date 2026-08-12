@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "HSA",
     "slug": "hsa",
@@ -12,44 +12,56 @@
     "yonetici": "HSBC PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hsbc-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1611.411491,
-    "tedavuldekiPaySayisi": 2502538,
-    "kisiSayisi": 2423,
-    "fonToplamDeger": 4032618490.83,
-    "gunlukGetiri": -0.00067156,
+    "fiyat": 1605.831838,
+    "tedavuldekiPaySayisi": 2502187,
+    "kisiSayisi": 2421,
+    "fonToplamDeger": 4018091549.43,
+    "gunlukGetiri": -0.00346259,
     "getiriler": {
-      "birAy": 0.010517,
-      "ucAy": -0.006515,
-      "altiAy": 0.070421,
-      "yilbasi": 0.196411,
-      "birYil": 0.21476099999999998,
-      "ucYil": 1.255288,
-      "besYil": 9.254064
+      "birAy": 0.007018,
+      "ucAy": -0.009008,
+      "altiAy": 0.062346000000000006,
+      "yilbasi": 0.192268,
+      "birYil": 0.20439800000000002,
+      "ucYil": 1.2059010000000001,
+      "besYil": 9.328966000000001
     },
     "paraAkisi": {
-      "gunluk": 243323.14,
+      "gunluk": -563646.98,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
+      "gunluk": -2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HSA",
+        "fonAdi": "HSBC PORTFÖY DEĞİŞKEN (TL) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 1605.831838,
+        "tedavuldekiPaySayisi": 2502187,
+        "kisiSayisi": 2421,
+        "fonToplamDeger": 4018091549.43,
+        "gunlukGetiri": -0.00346259,
+        "paraGirisiCikisi": -563646.98,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "HSA",
         "fonAdi": "HSBC PORTFÖY DEĞİŞKEN (TL) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": -0.00067156,
       "paraGirisiCikisi": 243323.14,
       "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "HSA",
+      "fonAdi": "HSBC PORTFÖY DEĞİŞKEN (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1605.831838,
+      "tedavuldekiPaySayisi": 2502187,
+      "kisiSayisi": 2421,
+      "fonToplamDeger": 4018091549.43,
+      "gunlukGetiri": -0.00346259,
+      "paraGirisiCikisi": -563646.98,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HSA",
+      "fonAdi": "HSBC PORTFÖY DEĞİŞKEN (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1605.831838,
+      "tedavuldekiPaySayisi": 2502187,
+      "kisiSayisi": 2421,
+      "fonToplamDeger": 4018091549.43,
+      "gunlukGetiri": -0.00346259,
+      "paraGirisiCikisi": -563646.98,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "HSA",
       "fonAdi": "HSBC PORTFÖY DEĞİŞKEN (TL) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

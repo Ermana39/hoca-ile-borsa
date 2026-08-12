@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "KRH",
     "slug": "krh",
@@ -12,13 +12,13 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.627864,
+    "fiyat": 1.636585,
     "tedavuldekiPaySayisi": 1303125470,
     "kisiSayisi": 41,
-    "fonToplamDeger": 2121311003.48,
-    "gunlukGetiri": 0.003619,
+    "fonToplamDeger": 2132675786.21,
+    "gunlukGetiri": 0.00535733,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1626.24,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KRH",
+        "fonAdi": "PARDUS PORTFÖY KARTAL HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 1.636585,
+        "tedavuldekiPaySayisi": 1303125470,
+        "kisiSayisi": 41,
+        "fonToplamDeger": 2132675786.21,
+        "gunlukGetiri": 0.00535733,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "KRH",
         "fonAdi": "PARDUS PORTFÖY KARTAL HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.003619,
       "paraGirisiCikisi": -1626.24,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KRH",
+      "fonAdi": "PARDUS PORTFÖY KARTAL HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.636585,
+      "tedavuldekiPaySayisi": 1303125470,
+      "kisiSayisi": 41,
+      "fonToplamDeger": 2132675786.21,
+      "gunlukGetiri": 0.00535733,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KRH",
+      "fonAdi": "PARDUS PORTFÖY KARTAL HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.636585,
+      "tedavuldekiPaySayisi": 1303125470,
+      "kisiSayisi": 41,
+      "fonToplamDeger": 2132675786.21,
+      "gunlukGetiri": 0.00535733,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "KRH",
       "fonAdi": "PARDUS PORTFÖY KARTAL HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

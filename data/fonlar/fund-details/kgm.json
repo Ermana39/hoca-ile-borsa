@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "KGM",
     "slug": "kgm",
@@ -12,44 +12,56 @@
     "yonetici": "KUVEYT TÜRK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kuveyt-turk-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 2.891482,
-    "tedavuldekiPaySayisi": 1026128721,
-    "kisiSayisi": 28893,
-    "fonToplamDeger": 2967032363.94,
-    "gunlukGetiri": 0.00348994,
+    "fiyat": 2.939365,
+    "tedavuldekiPaySayisi": 1022193385,
+    "kisiSayisi": 29068,
+    "fonToplamDeger": 3004599101.09,
+    "gunlukGetiri": 0.01656002,
     "getiriler": {
-      "birAy": 0.088249,
-      "ucAy": -0.155863,
-      "altiAy": -0.135054,
-      "yilbasi": -0.033863,
-      "birYil": 0.868467,
+      "birAy": 0.10627,
+      "ucAy": -0.177317,
+      "altiAy": -0.13477,
+      "yilbasi": -0.017864,
+      "birYil": 0.919745,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 3257748.92,
+      "gunluk": -11567388.9,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 34,
+      "gunluk": 175,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KGM",
+        "fonAdi": "KUVEYT TÜRK PORTFÖY GÜMÜŞ KATILIM FON SEPETİ FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 2.939365,
+        "tedavuldekiPaySayisi": 1022193385,
+        "kisiSayisi": 29068,
+        "fonToplamDeger": 3004599101.09,
+        "gunlukGetiri": 0.01656002,
+        "paraGirisiCikisi": -11567388.9,
+        "yatirimciDegisimi": 175
+      },
       {
         "fonKodu": "KGM",
         "fonAdi": "KUVEYT TÜRK PORTFÖY GÜMÜŞ KATILIM FON SEPETİ FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00348994,
       "paraGirisiCikisi": 3257748.92,
       "yatirimciDegisimi": 34
+    },
+    {
+      "fonKodu": "KGM",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY GÜMÜŞ KATILIM FON SEPETİ FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 2.939365,
+      "tedavuldekiPaySayisi": 1022193385,
+      "kisiSayisi": 29068,
+      "fonToplamDeger": 3004599101.09,
+      "gunlukGetiri": 0.01656002,
+      "paraGirisiCikisi": -11567388.9,
+      "yatirimciDegisimi": 175
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KGM",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY GÜMÜŞ KATILIM FON SEPETİ FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 2.939365,
+      "tedavuldekiPaySayisi": 1022193385,
+      "kisiSayisi": 29068,
+      "fonToplamDeger": 3004599101.09,
+      "gunlukGetiri": 0.01656002,
+      "paraGirisiCikisi": -11567388.9,
+      "yatirimciDegisimi": 175
+    },
     {
       "fonKodu": "KGM",
       "fonAdi": "KUVEYT TÜRK PORTFÖY GÜMÜŞ KATILIM FON SEPETİ FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

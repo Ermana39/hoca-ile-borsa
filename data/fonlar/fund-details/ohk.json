@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "OHK",
     "slug": "ohk",
@@ -12,44 +12,56 @@
     "yonetici": "OYAK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "oyak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 2.789903,
-    "tedavuldekiPaySayisi": 9817631,
-    "kisiSayisi": 1188,
-    "fonToplamDeger": 27390242.62,
-    "gunlukGetiri": 0.00478243,
+    "fiyat": 2.767106,
+    "tedavuldekiPaySayisi": 9634671,
+    "kisiSayisi": 1189,
+    "fonToplamDeger": 26660159.35,
+    "gunlukGetiri": -0.00817125,
     "getiriler": {
-      "birAy": 0.036221,
-      "ucAy": 0.008088,
-      "altiAy": 0.177815,
-      "yilbasi": 0.38475499999999996,
-      "birYil": 0.387401,
-      "ucYil": 1.204706,
+      "birAy": 0.027753999999999997,
+      "ucAy": -0.006575999999999999,
+      "altiAy": 0.165409,
+      "yilbasi": 0.37344,
+      "birYil": 0.367919,
+      "ucYil": 1.126397,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -10822.03,
+      "gunluk": -506269.71,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OHK",
+        "fonAdi": "OYAK PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 2.767106,
+        "tedavuldekiPaySayisi": 9634671,
+        "kisiSayisi": 1189,
+        "fonToplamDeger": 26660159.35,
+        "gunlukGetiri": -0.00817125,
+        "paraGirisiCikisi": -506269.71,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "OHK",
         "fonAdi": "OYAK PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00478243,
       "paraGirisiCikisi": -10822.03,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "OHK",
+      "fonAdi": "OYAK PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 2.767106,
+      "tedavuldekiPaySayisi": 9634671,
+      "kisiSayisi": 1189,
+      "fonToplamDeger": 26660159.35,
+      "gunlukGetiri": -0.00817125,
+      "paraGirisiCikisi": -506269.71,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OHK",
+      "fonAdi": "OYAK PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 2.767106,
+      "tedavuldekiPaySayisi": 9634671,
+      "kisiSayisi": 1189,
+      "fonToplamDeger": 26660159.35,
+      "gunlukGetiri": -0.00817125,
+      "paraGirisiCikisi": -506269.71,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "OHK",
       "fonAdi": "OYAK PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

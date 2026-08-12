@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "THV",
     "slug": "thv",
@@ -12,21 +12,21 @@
     "yonetici": "ATA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ata-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 56.319034,
+    "fiyat": 56.716839,
     "tedavuldekiPaySayisi": 45101206,
     "kisiSayisi": 17,
-    "fonToplamDeger": 2540056371.82,
-    "gunlukGetiri": -0.04451975,
+    "fonToplamDeger": 2557997833.99,
+    "gunlukGetiri": 0.00706342,
     "getiriler": {
-      "birAy": -0.129242,
-      "ucAy": -0.43756300000000004,
-      "altiAy": -0.865593,
-      "yilbasi": -0.7477809999999999,
-      "birYil": 2.193187,
-      "ucYil": 4.866121,
-      "besYil": 21.833343
+      "birAy": -0.123091,
+      "ucAy": -0.373399,
+      "altiAy": -0.849733,
+      "yilbasi": -0.746,
+      "birYil": 2.20603,
+      "ucYil": 4.579198,
+      "besYil": 22.579209000000002
     },
     "paraAkisi": {
       "gunluk": 0,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "THV",
+        "fonAdi": "ATA PORTFÖY BARBAROS HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 56.716839,
+        "tedavuldekiPaySayisi": 45101206,
+        "kisiSayisi": 17,
+        "fonToplamDeger": 2557997833.99,
+        "gunlukGetiri": 0.00706342,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "THV",
         "fonAdi": "ATA PORTFÖY BARBAROS HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": -0.04451975,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "THV",
+      "fonAdi": "ATA PORTFÖY BARBAROS HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 56.716839,
+      "tedavuldekiPaySayisi": 45101206,
+      "kisiSayisi": 17,
+      "fonToplamDeger": 2557997833.99,
+      "gunlukGetiri": 0.00706342,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "THV",
+      "fonAdi": "ATA PORTFÖY BARBAROS HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 56.716839,
+      "tedavuldekiPaySayisi": 45101206,
+      "kisiSayisi": 17,
+      "fonToplamDeger": 2557997833.99,
+      "gunlukGetiri": 0.00706342,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "THV",
       "fonAdi": "ATA PORTFÖY BARBAROS HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

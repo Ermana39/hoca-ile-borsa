@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "AFO",
     "slug": "afo",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.309134,
-    "tedavuldekiPaySayisi": 14778966096,
-    "kisiSayisi": 81326,
-    "fonToplamDeger": 19347649118.71,
-    "gunlukGetiri": 0.0129386,
+    "fiyat": 1.317257,
+    "tedavuldekiPaySayisi": 14775393583,
+    "kisiSayisi": 81438,
+    "fonToplamDeger": 19462984072.84,
+    "gunlukGetiri": 0.00620487,
     "getiriler": {
-      "birAy": 0.072255,
-      "ucAy": -0.035285000000000004,
-      "altiAy": -0.097567,
-      "yilbasi": 0.07254100000000001,
-      "birYil": 0.457132,
-      "ucYil": 2.602817,
-      "besYil": 11.2943
+      "birAy": 0.07890799999999999,
+      "ucAy": -0.022642000000000002,
+      "altiAy": -0.09331400000000001,
+      "yilbasi": 0.079196,
+      "birYil": 0.478509,
+      "ucYil": 2.637395,
+      "besYil": 11.420625
     },
     "paraAkisi": {
-      "gunluk": -5340646.19,
+      "gunluk": -4705917.76,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 37,
+      "gunluk": 112,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AFO",
+        "fonAdi": "AK PORTFÖY ALTIN FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 1.317257,
+        "tedavuldekiPaySayisi": 14775393583,
+        "kisiSayisi": 81438,
+        "fonToplamDeger": 19462984072.84,
+        "gunlukGetiri": 0.00620487,
+        "paraGirisiCikisi": -4705917.76,
+        "yatirimciDegisimi": 112
+      },
       {
         "fonKodu": "AFO",
         "fonAdi": "AK PORTFÖY ALTIN FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.0129386,
       "paraGirisiCikisi": -5340646.19,
       "yatirimciDegisimi": 37
+    },
+    {
+      "fonKodu": "AFO",
+      "fonAdi": "AK PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 1.317257,
+      "tedavuldekiPaySayisi": 14775393583,
+      "kisiSayisi": 81438,
+      "fonToplamDeger": 19462984072.84,
+      "gunlukGetiri": 0.00620487,
+      "paraGirisiCikisi": -4705917.76,
+      "yatirimciDegisimi": 112
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AFO",
+      "fonAdi": "AK PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 1.317257,
+      "tedavuldekiPaySayisi": 14775393583,
+      "kisiSayisi": 81438,
+      "fonToplamDeger": 19462984072.84,
+      "gunlukGetiri": 0.00620487,
+      "paraGirisiCikisi": -4705917.76,
+      "yatirimciDegisimi": 112
+    },
     {
       "fonKodu": "AFO",
       "fonAdi": "AK PORTFÖY ALTIN FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

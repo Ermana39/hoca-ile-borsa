@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "TPP",
     "slug": "tpp",
@@ -12,44 +12,56 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 75.883213,
+    "fiyat": 76.228787,
     "tedavuldekiPaySayisi": 24182000,
     "kisiSayisi": 390,
-    "fonToplamDeger": 1835007852.38,
-    "gunlukGetiri": 0.00279489,
+    "fonToplamDeger": 1843364522.63,
+    "gunlukGetiri": 0.00455402,
     "getiriler": {
-      "birAy": 0.021247,
-      "ucAy": 0.08370799999999999,
-      "altiAy": 0.181495,
-      "yilbasi": 0.26009899999999997,
-      "birYil": 0.657941,
-      "ucYil": 2.45808,
-      "besYil": 19.429643000000002
+      "birAy": 0.025897,
+      "ucAy": 0.080085,
+      "altiAy": 0.187628,
+      "yilbasi": 0.265838,
+      "birYil": 0.657404,
+      "ucYil": 2.483521,
+      "besYil": 19.52268
     },
     "paraAkisi": {
-      "gunluk": -75883.21,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TPP",
+        "fonAdi": "TEB PORTFÖY PUSULA SERBEST FON",
+        "tarih": "2026-08-12",
+        "fiyat": 76.228787,
+        "tedavuldekiPaySayisi": 24182000,
+        "kisiSayisi": 390,
+        "fonToplamDeger": 1843364522.63,
+        "gunlukGetiri": 0.00455402,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "TPP",
         "fonAdi": "TEB PORTFÖY PUSULA SERBEST FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00279489,
       "paraGirisiCikisi": -75883.21,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "TPP",
+      "fonAdi": "TEB PORTFÖY PUSULA SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 76.228787,
+      "tedavuldekiPaySayisi": 24182000,
+      "kisiSayisi": 390,
+      "fonToplamDeger": 1843364522.63,
+      "gunlukGetiri": 0.00455402,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TPP",
+      "fonAdi": "TEB PORTFÖY PUSULA SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 76.228787,
+      "tedavuldekiPaySayisi": 24182000,
+      "kisiSayisi": 390,
+      "fonToplamDeger": 1843364522.63,
+      "gunlukGetiri": 0.00455402,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "TPP",
       "fonAdi": "TEB PORTFÖY PUSULA SERBEST FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

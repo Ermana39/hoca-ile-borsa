@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "PPN",
     "slug": "ppn",
@@ -12,24 +12,24 @@
     "yonetici": "NUROL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "nurol-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 5.708611,
-    "tedavuldekiPaySayisi": 2137258662,
-    "kisiSayisi": 13579,
-    "fonToplamDeger": 12200777308.73,
-    "gunlukGetiri": 0.00109358,
+    "fiyat": 5.714786,
+    "tedavuldekiPaySayisi": 2132263887,
+    "kisiSayisi": 13558,
+    "fonToplamDeger": 12185431947.3,
+    "gunlukGetiri": 0.0010817,
     "getiriler": {
-      "birAy": 0.032524000000000004,
-      "ucAy": 0.105836,
-      "altiAy": 0.21683599999999997,
-      "yilbasi": 0.266468,
-      "birYil": 0.486899,
-      "ucYil": 2.680275,
-      "besYil": 4.706294
+      "birAy": 0.033639999999999996,
+      "ucAy": 0.105879,
+      "altiAy": 0.21706,
+      "yilbasi": 0.267838,
+      "birYil": 0.486817,
+      "ucYil": 2.675075,
+      "besYil": 4.710457
     },
     "paraAkisi": {
-      "gunluk": 16277350.73,
+      "gunluk": -28544070.24,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PPN",
+        "fonAdi": "NUROL PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 5.714786,
+        "tedavuldekiPaySayisi": 2132263887,
+        "kisiSayisi": 13558,
+        "fonToplamDeger": 12185431947.3,
+        "gunlukGetiri": 0.0010817,
+        "paraGirisiCikisi": -28544070.24,
+        "yatirimciDegisimi": -21
+      },
       {
         "fonKodu": "PPN",
         "fonAdi": "NUROL PORTFÖY PARA PİYASASI (TL) FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00109358,
       "paraGirisiCikisi": 16277350.73,
       "yatirimciDegisimi": -21
+    },
+    {
+      "fonKodu": "PPN",
+      "fonAdi": "NUROL PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 5.714786,
+      "tedavuldekiPaySayisi": 2132263887,
+      "kisiSayisi": 13558,
+      "fonToplamDeger": 12185431947.3,
+      "gunlukGetiri": 0.0010817,
+      "paraGirisiCikisi": -28544070.24,
+      "yatirimciDegisimi": -21
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PPN",
+      "fonAdi": "NUROL PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 5.714786,
+      "tedavuldekiPaySayisi": 2132263887,
+      "kisiSayisi": 13558,
+      "fonToplamDeger": 12185431947.3,
+      "gunlukGetiri": 0.0010817,
+      "paraGirisiCikisi": -28544070.24,
+      "yatirimciDegisimi": -21
+    },
     {
       "fonKodu": "PPN",
       "fonAdi": "NUROL PORTFÖY PARA PİYASASI (TL) FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

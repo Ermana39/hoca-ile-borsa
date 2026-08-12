@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "YTV",
     "slug": "ytv",
@@ -12,24 +12,24 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 3.079624,
-    "tedavuldekiPaySayisi": 71963312,
-    "kisiSayisi": 2281,
-    "fonToplamDeger": 221619937.52,
-    "gunlukGetiri": 0.00436135,
+    "fiyat": 3.075105,
+    "tedavuldekiPaySayisi": 69577526,
+    "kisiSayisi": 2282,
+    "fonToplamDeger": 213958195.4,
+    "gunlukGetiri": -0.00146739,
     "getiriler": {
-      "birAy": 0.032303,
-      "ucAy": 0.0664,
-      "altiAy": 0.11363,
-      "yilbasi": 0.308531,
-      "birYil": 0.38756300000000005,
-      "ucYil": 1.194402,
+      "birAy": 0.030788000000000003,
+      "ucAy": 0.055778,
+      "altiAy": 0.102203,
+      "yilbasi": 0.306611,
+      "birYil": 0.37813,
+      "ucYil": 1.176918,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -12882.07,
+      "gunluk": -7336542.46,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YTV",
+        "fonAdi": "YAPI KREDİ PORTFÖY TARIM DEĞİŞKEN FON",
+        "tarih": "2026-08-12",
+        "fiyat": 3.075105,
+        "tedavuldekiPaySayisi": 69577526,
+        "kisiSayisi": 2282,
+        "fonToplamDeger": 213958195.4,
+        "gunlukGetiri": -0.00146739,
+        "paraGirisiCikisi": -7336542.46,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "YTV",
         "fonAdi": "YAPI KREDİ PORTFÖY TARIM DEĞİŞKEN FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00436135,
       "paraGirisiCikisi": -12882.07,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "YTV",
+      "fonAdi": "YAPI KREDİ PORTFÖY TARIM DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 3.075105,
+      "tedavuldekiPaySayisi": 69577526,
+      "kisiSayisi": 2282,
+      "fonToplamDeger": 213958195.4,
+      "gunlukGetiri": -0.00146739,
+      "paraGirisiCikisi": -7336542.46,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YTV",
+      "fonAdi": "YAPI KREDİ PORTFÖY TARIM DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 3.075105,
+      "tedavuldekiPaySayisi": 69577526,
+      "kisiSayisi": 2282,
+      "fonToplamDeger": 213958195.4,
+      "gunlukGetiri": -0.00146739,
+      "paraGirisiCikisi": -7336542.46,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "YTV",
       "fonAdi": "YAPI KREDİ PORTFÖY TARIM DEĞİŞKEN FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

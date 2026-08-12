@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "KZU",
     "slug": "kzu",
@@ -12,44 +12,56 @@
     "yonetici": "KUVEYT TÜRK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kuveyt-turk-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 2.364138,
-    "tedavuldekiPaySayisi": 202444617,
-    "kisiSayisi": 5862,
-    "fonToplamDeger": 478607082.83,
-    "gunlukGetiri": 0.01075251,
+    "fiyat": 2.376674,
+    "tedavuldekiPaySayisi": 200403624,
+    "kisiSayisi": 5851,
+    "fonToplamDeger": 476293998.05,
+    "gunlukGetiri": 0.00530257,
     "getiriler": {
-      "birAy": 0.073312,
-      "ucAy": -0.023201,
-      "altiAy": -0.08240299999999999,
-      "yilbasi": 0.048265,
-      "birYil": 0.424494,
+      "birAy": 0.07900299999999999,
+      "ucAy": -0.011649,
+      "altiAy": -0.078761,
+      "yilbasi": 0.053824,
+      "birYil": 0.444384,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -180076.39,
+      "gunluk": -4850775,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
+      "gunluk": -11,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KZU",
+        "fonAdi": "KUVEYT TÜRK PORTFÖY İKİNCİ ALTIN KATILIM FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 2.376674,
+        "tedavuldekiPaySayisi": 200403624,
+        "kisiSayisi": 5851,
+        "fonToplamDeger": 476293998.05,
+        "gunlukGetiri": 0.00530257,
+        "paraGirisiCikisi": -4850775,
+        "yatirimciDegisimi": -11
+      },
       {
         "fonKodu": "KZU",
         "fonAdi": "KUVEYT TÜRK PORTFÖY İKİNCİ ALTIN KATILIM FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.01075251,
       "paraGirisiCikisi": -180076.39,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "KZU",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY İKİNCİ ALTIN KATILIM FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 2.376674,
+      "tedavuldekiPaySayisi": 200403624,
+      "kisiSayisi": 5851,
+      "fonToplamDeger": 476293998.05,
+      "gunlukGetiri": 0.00530257,
+      "paraGirisiCikisi": -4850775,
+      "yatirimciDegisimi": -11
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KZU",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY İKİNCİ ALTIN KATILIM FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 2.376674,
+      "tedavuldekiPaySayisi": 200403624,
+      "kisiSayisi": 5851,
+      "fonToplamDeger": 476293998.05,
+      "gunlukGetiri": 0.00530257,
+      "paraGirisiCikisi": -4850775,
+      "yatirimciDegisimi": -11
+    },
     {
       "fonKodu": "KZU",
       "fonAdi": "KUVEYT TÜRK PORTFÖY İKİNCİ ALTIN KATILIM FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

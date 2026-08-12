@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "KOB",
     "slug": "kob",
@@ -12,13 +12,13 @@
     "yonetici": "KUVEYT TÜRK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kuveyt-turk-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.403542,
-    "tedavuldekiPaySayisi": 1959388972,
+    "fiyat": 1.405045,
+    "tedavuldekiPaySayisi": 1926545170,
     "kisiSayisi": 71,
-    "fonToplamDeger": 2750084152.4,
-    "gunlukGetiri": 0.00107201,
+    "fonToplamDeger": 2706882873.91,
+    "gunlukGetiri": 0.00107086,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -23056441.99,
+      "gunluk": -46147019.78,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KOB",
+        "fonAdi": "KUVEYT TÜRK PORTFÖY KUVEYT TÜRK KATILIM BANKASI ÖZEL BANKACILIK KATILIM SERBEST ÖZEL FON",
+        "tarih": "2026-08-12",
+        "fiyat": 1.405045,
+        "tedavuldekiPaySayisi": 1926545170,
+        "kisiSayisi": 71,
+        "fonToplamDeger": 2706882873.91,
+        "gunlukGetiri": 0.00107086,
+        "paraGirisiCikisi": -46147019.78,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "KOB",
         "fonAdi": "KUVEYT TÜRK PORTFÖY KUVEYT TÜRK KATILIM BANKASI ÖZEL BANKACILIK KATILIM SERBEST ÖZEL FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00107201,
       "paraGirisiCikisi": -23056441.99,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "KOB",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY KUVEYT TÜRK KATILIM BANKASI ÖZEL BANKACILIK KATILIM SERBEST ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.405045,
+      "tedavuldekiPaySayisi": 1926545170,
+      "kisiSayisi": 71,
+      "fonToplamDeger": 2706882873.91,
+      "gunlukGetiri": 0.00107086,
+      "paraGirisiCikisi": -46147019.78,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KOB",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY KUVEYT TÜRK KATILIM BANKASI ÖZEL BANKACILIK KATILIM SERBEST ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.405045,
+      "tedavuldekiPaySayisi": 1926545170,
+      "kisiSayisi": 71,
+      "fonToplamDeger": 2706882873.91,
+      "gunlukGetiri": 0.00107086,
+      "paraGirisiCikisi": -46147019.78,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "KOB",
       "fonAdi": "KUVEYT TÜRK PORTFÖY KUVEYT TÜRK KATILIM BANKASI ÖZEL BANKACILIK KATILIM SERBEST ÖZEL FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

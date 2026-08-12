@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "EDD",
     "slug": "edd",
@@ -12,13 +12,13 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.122844,
-    "tedavuldekiPaySayisi": 20050837,
-    "kisiSayisi": 720,
-    "fonToplamDeger": 22513956.84,
-    "gunlukGetiri": 0.00126714,
+    "fiyat": 1.124602,
+    "tedavuldekiPaySayisi": 20116788,
+    "kisiSayisi": 756,
+    "fonToplamDeger": 22623387.24,
+    "gunlukGetiri": 0.00156567,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 105572.04,
+      "gunluk": 74168.63,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 4,
+      "gunluk": 36,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "EDD",
+        "fonAdi": "QNB PORTFÖY ENPARA DENGELİ DEĞİŞKEN ÖZEL FON",
+        "tarih": "2026-08-12",
+        "fiyat": 1.124602,
+        "tedavuldekiPaySayisi": 20116788,
+        "kisiSayisi": 756,
+        "fonToplamDeger": 22623387.24,
+        "gunlukGetiri": 0.00156567,
+        "paraGirisiCikisi": 74168.63,
+        "yatirimciDegisimi": 36
+      },
       {
         "fonKodu": "EDD",
         "fonAdi": "QNB PORTFÖY ENPARA DENGELİ DEĞİŞKEN ÖZEL FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00126714,
       "paraGirisiCikisi": 105572.04,
       "yatirimciDegisimi": 4
+    },
+    {
+      "fonKodu": "EDD",
+      "fonAdi": "QNB PORTFÖY ENPARA DENGELİ DEĞİŞKEN ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.124602,
+      "tedavuldekiPaySayisi": 20116788,
+      "kisiSayisi": 756,
+      "fonToplamDeger": 22623387.24,
+      "gunlukGetiri": 0.00156567,
+      "paraGirisiCikisi": 74168.63,
+      "yatirimciDegisimi": 36
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "EDD",
+      "fonAdi": "QNB PORTFÖY ENPARA DENGELİ DEĞİŞKEN ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.124602,
+      "tedavuldekiPaySayisi": 20116788,
+      "kisiSayisi": 756,
+      "fonToplamDeger": 22623387.24,
+      "gunlukGetiri": 0.00156567,
+      "paraGirisiCikisi": 74168.63,
+      "yatirimciDegisimi": 36
+    },
     {
       "fonKodu": "EDD",
       "fonAdi": "QNB PORTFÖY ENPARA DENGELİ DEĞİŞKEN ÖZEL FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

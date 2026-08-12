@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "TPV",
     "slug": "tpv",
@@ -12,44 +12,56 @@
     "yonetici": "AURA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aura-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 10.495126,
+    "fiyat": 10.463826,
     "tedavuldekiPaySayisi": 759889,
-    "kisiSayisi": 44,
-    "fonToplamDeger": 7975130.55,
-    "gunlukGetiri": -0.00176617,
+    "kisiSayisi": 43,
+    "fonToplamDeger": 7951346.12,
+    "gunlukGetiri": -0.00298234,
     "getiriler": {
-      "birAy": -0.000724,
-      "ucAy": 0.015907,
-      "altiAy": 0.024963000000000003,
-      "yilbasi": 0.020789,
-      "birYil": 0.068078,
-      "ucYil": 1.2084730000000001,
-      "besYil": 3.418333
+      "birAy": -0.003705,
+      "ucAy": 0.010412999999999999,
+      "altiAy": 0.021808,
+      "yilbasi": 0.017745,
+      "birYil": 0.060498,
+      "ucYil": 1.183746,
+      "besYil": 3.424232
     },
     "paraAkisi": {
-      "gunluk": -1049.51,
-      "besGun": null,
-      "birAy": null,
-      "ucAy": null
-    },
-    "yatirimciDegisimi": {
       "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "yatirimciDegisimi": {
+      "gunluk": -1,
+      "besGun": null,
+      "birAy": null,
+      "ucAy": null
+    },
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TPV",
+        "fonAdi": "AURA PORTFÖY İKİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-12",
+        "fiyat": 10.463826,
+        "tedavuldekiPaySayisi": 759889,
+        "kisiSayisi": 43,
+        "fonToplamDeger": 7951346.12,
+        "gunlukGetiri": -0.00298234,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "TPV",
         "fonAdi": "AURA PORTFÖY İKİNCİ DEĞİŞKEN FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": -0.00176617,
       "paraGirisiCikisi": -1049.51,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TPV",
+      "fonAdi": "AURA PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 10.463826,
+      "tedavuldekiPaySayisi": 759889,
+      "kisiSayisi": 43,
+      "fonToplamDeger": 7951346.12,
+      "gunlukGetiri": -0.00298234,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TPV",
+      "fonAdi": "AURA PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 10.463826,
+      "tedavuldekiPaySayisi": 759889,
+      "kisiSayisi": 43,
+      "fonToplamDeger": 7951346.12,
+      "gunlukGetiri": -0.00298234,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "TPV",
       "fonAdi": "AURA PORTFÖY İKİNCİ DEĞİŞKEN FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

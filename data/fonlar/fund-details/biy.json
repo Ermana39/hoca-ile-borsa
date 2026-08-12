@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "BIY",
     "slug": "biy",
@@ -12,44 +12,56 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.389412,
-    "tedavuldekiPaySayisi": 60616407,
-    "kisiSayisi": 333,
-    "fonToplamDeger": 84221174.75,
-    "gunlukGetiri": -0.00146179,
+    "fiyat": 1.384626,
+    "tedavuldekiPaySayisi": 60682807,
+    "kisiSayisi": 331,
+    "fonToplamDeger": 84023000.83,
+    "gunlukGetiri": -0.00344462,
     "getiriler": {
-      "birAy": 0.043612000000000005,
-      "ucAy": 0.051603,
-      "altiAy": 0.222957,
-      "yilbasi": 0.34250100000000006,
+      "birAy": 0.040017,
+      "ucAy": 0.041512,
+      "altiAy": 0.219692,
+      "yilbasi": 0.337877,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -125690.38,
+      "gunluk": 91939.17,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
+      "gunluk": -2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BIY",
+        "fonAdi": "AZİMUT PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 1.384626,
+        "tedavuldekiPaySayisi": 60682807,
+        "kisiSayisi": 331,
+        "fonToplamDeger": 84023000.83,
+        "gunlukGetiri": -0.00344462,
+        "paraGirisiCikisi": 91939.17,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "BIY",
         "fonAdi": "AZİMUT PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": -0.00146179,
       "paraGirisiCikisi": -125690.38,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "BIY",
+      "fonAdi": "AZİMUT PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.384626,
+      "tedavuldekiPaySayisi": 60682807,
+      "kisiSayisi": 331,
+      "fonToplamDeger": 84023000.83,
+      "gunlukGetiri": -0.00344462,
+      "paraGirisiCikisi": 91939.17,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BIY",
+      "fonAdi": "AZİMUT PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.384626,
+      "tedavuldekiPaySayisi": 60682807,
+      "kisiSayisi": 331,
+      "fonToplamDeger": 84023000.83,
+      "gunlukGetiri": -0.00344462,
+      "paraGirisiCikisi": 91939.17,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "BIY",
       "fonAdi": "AZİMUT PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

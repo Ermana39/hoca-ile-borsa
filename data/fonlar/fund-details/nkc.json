@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "NKC",
     "slug": "nkc",
@@ -12,44 +12,56 @@
     "yonetici": "NEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "neo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.237818,
-    "tedavuldekiPaySayisi": 309734315,
-    "kisiSayisi": 1151,
-    "fonToplamDeger": 383394736.14,
-    "gunlukGetiri": 0.00236132,
+    "fiyat": 1.234651,
+    "tedavuldekiPaySayisi": 308472229,
+    "kisiSayisi": 1150,
+    "fonToplamDeger": 380855452.88,
+    "gunlukGetiri": -0.00255853,
     "getiriler": {
-      "birAy": -0.024061,
-      "ucAy": -0.065667,
-      "altiAy": -0.003846,
-      "yilbasi": 0.16805,
-      "birYil": null,
+      "birAy": -0.026558000000000002,
+      "ucAy": -0.072467,
+      "altiAy": -0.004725,
+      "yilbasi": 0.165062,
+      "birYil": 0.232957,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 354898.51,
+      "gunluk": -1558235.74,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NKC",
+        "fonAdi": "NEO PORTFÖY İKİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 1.234651,
+        "tedavuldekiPaySayisi": 308472229,
+        "kisiSayisi": 1150,
+        "fonToplamDeger": 380855452.88,
+        "gunlukGetiri": -0.00255853,
+        "paraGirisiCikisi": -1558235.74,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "NKC",
         "fonAdi": "NEO PORTFÖY İKİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00236132,
       "paraGirisiCikisi": 354898.51,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "NKC",
+      "fonAdi": "NEO PORTFÖY İKİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.234651,
+      "tedavuldekiPaySayisi": 308472229,
+      "kisiSayisi": 1150,
+      "fonToplamDeger": 380855452.88,
+      "gunlukGetiri": -0.00255853,
+      "paraGirisiCikisi": -1558235.74,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NKC",
+      "fonAdi": "NEO PORTFÖY İKİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.234651,
+      "tedavuldekiPaySayisi": 308472229,
+      "kisiSayisi": 1150,
+      "fonToplamDeger": 380855452.88,
+      "gunlukGetiri": -0.00255853,
+      "paraGirisiCikisi": -1558235.74,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "NKC",
       "fonAdi": "NEO PORTFÖY İKİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

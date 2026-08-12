@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "GRO",
     "slug": "gro",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 53.896644,
-    "tedavuldekiPaySayisi": 3554331618,
-    "kisiSayisi": 27241,
-    "fonToplamDeger": 191566546269.04,
-    "gunlukGetiri": 0.00227068,
+    "fiyat": 53.930305,
+    "tedavuldekiPaySayisi": 3553203832,
+    "kisiSayisi": 27234,
+    "fonToplamDeger": 191625364991,
+    "gunlukGetiri": 0.00062455,
     "getiriler": {
-      "birAy": 0.020375,
-      "ucAy": 0.063348,
-      "altiAy": 0.112405,
-      "yilbasi": 0.134833,
-      "birYil": 0.217857,
-      "ucYil": 0.977491,
+      "birAy": 0.021012,
+      "ucAy": 0.061438,
+      "altiAy": 0.11251,
+      "yilbasi": 0.135541,
+      "birYil": 0.21605,
+      "ucYil": 0.977344,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -105538414.1,
+      "gunluk": -60821842.95,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 17,
+      "gunluk": -7,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GRO",
+        "fonAdi": "GARANTİ PORTFÖY OTUZUNCU SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 53.930305,
+        "tedavuldekiPaySayisi": 3553203832,
+        "kisiSayisi": 27234,
+        "fonToplamDeger": 191625364991,
+        "gunlukGetiri": 0.00062455,
+        "paraGirisiCikisi": -60821842.95,
+        "yatirimciDegisimi": -7
+      },
       {
         "fonKodu": "GRO",
         "fonAdi": "GARANTİ PORTFÖY OTUZUNCU SERBEST (DÖVİZ) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00227068,
       "paraGirisiCikisi": -105538414.1,
       "yatirimciDegisimi": 17
+    },
+    {
+      "fonKodu": "GRO",
+      "fonAdi": "GARANTİ PORTFÖY OTUZUNCU SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 53.930305,
+      "tedavuldekiPaySayisi": 3553203832,
+      "kisiSayisi": 27234,
+      "fonToplamDeger": 191625364991,
+      "gunlukGetiri": 0.00062455,
+      "paraGirisiCikisi": -60821842.95,
+      "yatirimciDegisimi": -7
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GRO",
+      "fonAdi": "GARANTİ PORTFÖY OTUZUNCU SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 53.930305,
+      "tedavuldekiPaySayisi": 3553203832,
+      "kisiSayisi": 27234,
+      "fonToplamDeger": 191625364991,
+      "gunlukGetiri": 0.00062455,
+      "paraGirisiCikisi": -60821842.95,
+      "yatirimciDegisimi": -7
+    },
     {
       "fonKodu": "GRO",
       "fonAdi": "GARANTİ PORTFÖY OTUZUNCU SERBEST (DÖVİZ) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

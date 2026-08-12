@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "TKK",
     "slug": "tkk",
@@ -12,13 +12,13 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.755844,
-    "tedavuldekiPaySayisi": 1034362100,
-    "kisiSayisi": 113444,
-    "fonToplamDeger": 1816178139.21,
-    "gunlukGetiri": 0.00218892,
+    "fiyat": 1.749773,
+    "tedavuldekiPaySayisi": 1033176350,
+    "kisiSayisi": 113405,
+    "fonToplamDeger": 1807824011.12,
+    "gunlukGetiri": -0.0034576,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -979760.95,
+      "gunluk": -2074793.33,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -64,
+      "gunluk": -39,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TKK",
+        "fonAdi": "İŞ PORTFÖY KUMBARA HESABI FON SEPETİ ÖZEL FON",
+        "tarih": "2026-08-12",
+        "fiyat": 1.749773,
+        "tedavuldekiPaySayisi": 1033176350,
+        "kisiSayisi": 113405,
+        "fonToplamDeger": 1807824011.12,
+        "gunlukGetiri": -0.0034576,
+        "paraGirisiCikisi": -2074793.33,
+        "yatirimciDegisimi": -39
+      },
       {
         "fonKodu": "TKK",
         "fonAdi": "İŞ PORTFÖY KUMBARA HESABI FON SEPETİ ÖZEL FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00218892,
       "paraGirisiCikisi": -979760.95,
       "yatirimciDegisimi": -64
+    },
+    {
+      "fonKodu": "TKK",
+      "fonAdi": "İŞ PORTFÖY KUMBARA HESABI FON SEPETİ ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.749773,
+      "tedavuldekiPaySayisi": 1033176350,
+      "kisiSayisi": 113405,
+      "fonToplamDeger": 1807824011.12,
+      "gunlukGetiri": -0.0034576,
+      "paraGirisiCikisi": -2074793.33,
+      "yatirimciDegisimi": -39
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TKK",
+      "fonAdi": "İŞ PORTFÖY KUMBARA HESABI FON SEPETİ ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.749773,
+      "tedavuldekiPaySayisi": 1033176350,
+      "kisiSayisi": 113405,
+      "fonToplamDeger": 1807824011.12,
+      "gunlukGetiri": -0.0034576,
+      "paraGirisiCikisi": -2074793.33,
+      "yatirimciDegisimi": -39
+    },
     {
       "fonKodu": "TKK",
       "fonAdi": "İŞ PORTFÖY KUMBARA HESABI FON SEPETİ ÖZEL FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

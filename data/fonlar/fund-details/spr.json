@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "SPR",
     "slug": "spr",
@@ -12,44 +12,56 @@
     "yonetici": "BV PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "bv-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.362147,
-    "tedavuldekiPaySayisi": 6652671,
-    "kisiSayisi": 166,
-    "fonToplamDeger": 9061918.04,
-    "gunlukGetiri": 0.00901945,
+    "fiyat": 1.345129,
+    "tedavuldekiPaySayisi": 6659594,
+    "kisiSayisi": 168,
+    "fonToplamDeger": 8958009.79,
+    "gunlukGetiri": -0.01249351,
     "getiriler": {
-      "birAy": 0.013962,
-      "ucAy": 0.07520299999999999,
-      "altiAy": 0.094134,
-      "yilbasi": 0.084343,
-      "birYil": 0.078347,
+      "birAy": 0.0012939999999999998,
+      "ucAy": 0.073704,
+      "altiAy": 0.07655300000000001,
+      "yilbasi": 0.070795,
+      "birYil": 0.058754999999999995,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 471.3,
+      "gunluk": 9312.33,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": 2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SPR",
+        "fonAdi": "BV PORTFÖY SPOR ENDÜSTRİSİ DEĞİŞKEN FON",
+        "tarih": "2026-08-12",
+        "fiyat": 1.345129,
+        "tedavuldekiPaySayisi": 6659594,
+        "kisiSayisi": 168,
+        "fonToplamDeger": 8958009.79,
+        "gunlukGetiri": -0.01249351,
+        "paraGirisiCikisi": 9312.33,
+        "yatirimciDegisimi": 2
+      },
       {
         "fonKodu": "SPR",
         "fonAdi": "BV PORTFÖY SPOR ENDÜSTRİSİ DEĞİŞKEN FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00901945,
       "paraGirisiCikisi": 471.3,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "SPR",
+      "fonAdi": "BV PORTFÖY SPOR ENDÜSTRİSİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.345129,
+      "tedavuldekiPaySayisi": 6659594,
+      "kisiSayisi": 168,
+      "fonToplamDeger": 8958009.79,
+      "gunlukGetiri": -0.01249351,
+      "paraGirisiCikisi": 9312.33,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SPR",
+      "fonAdi": "BV PORTFÖY SPOR ENDÜSTRİSİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.345129,
+      "tedavuldekiPaySayisi": 6659594,
+      "kisiSayisi": 168,
+      "fonToplamDeger": 8958009.79,
+      "gunlukGetiri": -0.01249351,
+      "paraGirisiCikisi": 9312.33,
+      "yatirimciDegisimi": 2
+    },
     {
       "fonKodu": "SPR",
       "fonAdi": "BV PORTFÖY SPOR ENDÜSTRİSİ DEĞİŞKEN FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

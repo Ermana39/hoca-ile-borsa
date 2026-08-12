@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "OGV",
     "slug": "ogv",
@@ -12,13 +12,13 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 71.34896,
+    "fiyat": 71.415096,
     "tedavuldekiPaySayisi": 3942995,
     "kisiSayisi": 1,
-    "fonToplamDeger": 281328594.38,
-    "gunlukGetiri": 0.00173043,
+    "fonToplamDeger": 281589365.11,
+    "gunlukGetiri": 0.00092694,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OGV",
+        "fonAdi": "QNB PORTFÖY HUNA SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-12",
+        "fiyat": 71.415096,
+        "tedavuldekiPaySayisi": 3942995,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 281589365.11,
+        "gunlukGetiri": 0.00092694,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "OGV",
         "fonAdi": "QNB PORTFÖY HUNA SERBEST (DÖVİZ) ÖZEL FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00173043,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "OGV",
+      "fonAdi": "QNB PORTFÖY HUNA SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 71.415096,
+      "tedavuldekiPaySayisi": 3942995,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 281589365.11,
+      "gunlukGetiri": 0.00092694,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OGV",
+      "fonAdi": "QNB PORTFÖY HUNA SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 71.415096,
+      "tedavuldekiPaySayisi": 3942995,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 281589365.11,
+      "gunlukGetiri": 0.00092694,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "OGV",
       "fonAdi": "QNB PORTFÖY HUNA SERBEST (DÖVİZ) ÖZEL FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

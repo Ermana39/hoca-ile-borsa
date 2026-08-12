@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "KKC",
     "slug": "kkc",
@@ -12,44 +12,56 @@
     "yonetici": "KARE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kare-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 57.050065,
+    "fiyat": 56.968586,
     "tedavuldekiPaySayisi": 2038215,
-    "kisiSayisi": 56,
-    "fonToplamDeger": 116280297.65,
-    "gunlukGetiri": 0.00495986,
+    "kisiSayisi": 55,
+    "fonToplamDeger": 116114226.2,
+    "gunlukGetiri": -0.0014282,
     "getiriler": {
-      "birAy": 0.029875,
-      "ucAy": 0.040842,
-      "altiAy": 0.072056,
-      "yilbasi": 0.108291,
-      "birYil": 0.194479,
+      "birAy": 0.028404,
+      "ucAy": 0.035905,
+      "altiAy": 0.069297,
+      "yilbasi": 0.106708,
+      "birYil": 0.19023199999999998,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 110049.58,
-      "besGun": null,
-      "birAy": null,
-      "ucAy": null
-    },
-    "yatirimciDegisimi": {
       "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "yatirimciDegisimi": {
+      "gunluk": -1,
+      "besGun": null,
+      "birAy": null,
+      "ucAy": null
+    },
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KKC",
+        "fonAdi": "KARE PORTFÖY KATILIM SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 56.968586,
+        "tedavuldekiPaySayisi": 2038215,
+        "kisiSayisi": 55,
+        "fonToplamDeger": 116114226.2,
+        "gunlukGetiri": -0.0014282,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "KKC",
         "fonAdi": "KARE PORTFÖY KATILIM SERBEST (DÖVİZ-AVRO) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00495986,
       "paraGirisiCikisi": 110049.58,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KKC",
+      "fonAdi": "KARE PORTFÖY KATILIM SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 56.968586,
+      "tedavuldekiPaySayisi": 2038215,
+      "kisiSayisi": 55,
+      "fonToplamDeger": 116114226.2,
+      "gunlukGetiri": -0.0014282,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KKC",
+      "fonAdi": "KARE PORTFÖY KATILIM SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 56.968586,
+      "tedavuldekiPaySayisi": 2038215,
+      "kisiSayisi": 55,
+      "fonToplamDeger": 116114226.2,
+      "gunlukGetiri": -0.0014282,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "KKC",
       "fonAdi": "KARE PORTFÖY KATILIM SERBEST (DÖVİZ-AVRO) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

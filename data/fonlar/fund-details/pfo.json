@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "PFO",
     "slug": "pfo",
@@ -12,24 +12,24 @@
     "yonetici": "PHİLLİP PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "phillip-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 2.291413,
-    "tedavuldekiPaySayisi": 32617982,
-    "kisiSayisi": 289,
-    "fonToplamDeger": 74741278.85,
-    "gunlukGetiri": 0.00714677,
+    "fiyat": 2.291581,
+    "tedavuldekiPaySayisi": 32604277,
+    "kisiSayisi": 290,
+    "fonToplamDeger": 74715352.85,
+    "gunlukGetiri": 0.00007332,
     "getiriler": {
-      "birAy": 0.013579,
-      "ucAy": 0.010988,
-      "altiAy": 0.028273000000000003,
-      "yilbasi": 0.15678,
-      "birYil": 0.29970199999999997,
+      "birAy": 0.013653,
+      "ucAy": 0.009802,
+      "altiAy": 0.025164,
+      "yilbasi": 0.156865,
+      "birYil": 0.29770399999999997,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1308.4,
+      "gunluk": -31406.12,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PFO",
+        "fonAdi": "PHİLLİP PORTFÖY FON SEPETİ FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 2.291581,
+        "tedavuldekiPaySayisi": 32604277,
+        "kisiSayisi": 290,
+        "fonToplamDeger": 74715352.85,
+        "gunlukGetiri": 0.00007332,
+        "paraGirisiCikisi": -31406.12,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "PFO",
         "fonAdi": "PHİLLİP PORTFÖY FON SEPETİ FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00714677,
       "paraGirisiCikisi": 1308.4,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "PFO",
+      "fonAdi": "PHİLLİP PORTFÖY FON SEPETİ FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 2.291581,
+      "tedavuldekiPaySayisi": 32604277,
+      "kisiSayisi": 290,
+      "fonToplamDeger": 74715352.85,
+      "gunlukGetiri": 0.00007332,
+      "paraGirisiCikisi": -31406.12,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PFO",
+      "fonAdi": "PHİLLİP PORTFÖY FON SEPETİ FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 2.291581,
+      "tedavuldekiPaySayisi": 32604277,
+      "kisiSayisi": 290,
+      "fonToplamDeger": 74715352.85,
+      "gunlukGetiri": 0.00007332,
+      "paraGirisiCikisi": -31406.12,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "PFO",
       "fonAdi": "PHİLLİP PORTFÖY FON SEPETİ FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

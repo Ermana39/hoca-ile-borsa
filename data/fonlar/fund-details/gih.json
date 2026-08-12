@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "GIH",
     "slug": "gih",
@@ -12,24 +12,24 @@
     "yonetici": "ALLBATROSS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "allbatross-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 2.332295,
-    "tedavuldekiPaySayisi": 4773245,
-    "kisiSayisi": 698,
-    "fonToplamDeger": 11132613.73,
-    "gunlukGetiri": 0.00822124,
+    "fiyat": 2.314343,
+    "tedavuldekiPaySayisi": 4773939,
+    "kisiSayisi": 696,
+    "fonToplamDeger": 11048531.95,
+    "gunlukGetiri": -0.00769714,
     "getiriler": {
-      "birAy": -0.010099,
-      "ucAy": -0.10234199999999999,
-      "altiAy": 0.061349999999999995,
-      "yilbasi": 0.302562,
-      "birYil": 0.239508,
-      "ucYil": 0.510885,
+      "birAy": -0.017719,
+      "ucAy": -0.115679,
+      "altiAy": 0.055934,
+      "yilbasi": 0.29253599999999996,
+      "birYil": 0.234069,
+      "ucYil": 0.443988,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -74498.17,
+      "gunluk": 1606.15,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GIH",
+        "fonAdi": "ALLBATROSS PORTFÖY GIDA VE İÇECEK SEKTÖRÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 2.314343,
+        "tedavuldekiPaySayisi": 4773939,
+        "kisiSayisi": 696,
+        "fonToplamDeger": 11048531.95,
+        "gunlukGetiri": -0.00769714,
+        "paraGirisiCikisi": 1606.15,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "GIH",
         "fonAdi": "ALLBATROSS PORTFÖY GIDA VE İÇECEK SEKTÖRÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00822124,
       "paraGirisiCikisi": -74498.17,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "GIH",
+      "fonAdi": "ALLBATROSS PORTFÖY GIDA VE İÇECEK SEKTÖRÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 2.314343,
+      "tedavuldekiPaySayisi": 4773939,
+      "kisiSayisi": 696,
+      "fonToplamDeger": 11048531.95,
+      "gunlukGetiri": -0.00769714,
+      "paraGirisiCikisi": 1606.15,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GIH",
+      "fonAdi": "ALLBATROSS PORTFÖY GIDA VE İÇECEK SEKTÖRÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 2.314343,
+      "tedavuldekiPaySayisi": 4773939,
+      "kisiSayisi": 696,
+      "fonToplamDeger": 11048531.95,
+      "gunlukGetiri": -0.00769714,
+      "paraGirisiCikisi": 1606.15,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "GIH",
       "fonAdi": "ALLBATROSS PORTFÖY GIDA VE İÇECEK SEKTÖRÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "KYA",
     "slug": "kya",
@@ -12,24 +12,24 @@
     "yonetici": "KARE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kare-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.204673,
-    "tedavuldekiPaySayisi": 57624351,
-    "kisiSayisi": 1610,
-    "fonToplamDeger": 69418509.83,
-    "gunlukGetiri": 0.01125866,
+    "fiyat": 1.190709,
+    "tedavuldekiPaySayisi": 57469951,
+    "kisiSayisi": 1607,
+    "fonToplamDeger": 68429997.47,
+    "gunlukGetiri": -0.01159153,
     "getiriler": {
-      "birAy": -0.000075,
-      "ucAy": -0.064324,
-      "altiAy": -0.064775,
-      "yilbasi": 0.111364,
-      "birYil": 0.142694,
-      "ucYil": 1.228458,
-      "besYil": 12.773515999999999
+      "birAy": -0.011665000000000002,
+      "ucAy": -0.077762,
+      "altiAy": -0.080736,
+      "yilbasi": 0.098482,
+      "birYil": 0.122919,
+      "ucYil": 1.135537,
+      "besYil": 12.801161
     },
     "paraAkisi": {
-      "gunluk": -7348.51,
+      "gunluk": -183845.47,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KYA",
+        "fonAdi": "KARE PORTFÖY HİSSE SENEDİ FONU(HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 1.190709,
+        "tedavuldekiPaySayisi": 57469951,
+        "kisiSayisi": 1607,
+        "fonToplamDeger": 68429997.47,
+        "gunlukGetiri": -0.01159153,
+        "paraGirisiCikisi": -183845.47,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "KYA",
         "fonAdi": "KARE PORTFÖY HİSSE SENEDİ FONU(HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.01125866,
       "paraGirisiCikisi": -7348.51,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "KYA",
+      "fonAdi": "KARE PORTFÖY HİSSE SENEDİ FONU(HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.190709,
+      "tedavuldekiPaySayisi": 57469951,
+      "kisiSayisi": 1607,
+      "fonToplamDeger": 68429997.47,
+      "gunlukGetiri": -0.01159153,
+      "paraGirisiCikisi": -183845.47,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KYA",
+      "fonAdi": "KARE PORTFÖY HİSSE SENEDİ FONU(HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.190709,
+      "tedavuldekiPaySayisi": 57469951,
+      "kisiSayisi": 1607,
+      "fonToplamDeger": 68429997.47,
+      "gunlukGetiri": -0.01159153,
+      "paraGirisiCikisi": -183845.47,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "KYA",
       "fonAdi": "KARE PORTFÖY HİSSE SENEDİ FONU(HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

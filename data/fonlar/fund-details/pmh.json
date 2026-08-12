@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "PMH",
     "slug": "pmh",
@@ -12,13 +12,13 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 0.007665,
+    "fiyat": 0.007808,
     "tedavuldekiPaySayisi": 3375437181,
     "kisiSayisi": 44,
-    "fonToplamDeger": 25871568.09,
-    "gunlukGetiri": -0.02418842,
+    "fonToplamDeger": 26356223.83,
+    "gunlukGetiri": 0.01865623,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -7.66,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PMH",
+        "fonAdi": "PARDUS PORTFÖY MARMARA HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 0.007808,
+        "tedavuldekiPaySayisi": 3375437181,
+        "kisiSayisi": 44,
+        "fonToplamDeger": 26356223.83,
+        "gunlukGetiri": 0.01865623,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "PMH",
         "fonAdi": "PARDUS PORTFÖY MARMARA HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": -0.02418842,
       "paraGirisiCikisi": -7.66,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PMH",
+      "fonAdi": "PARDUS PORTFÖY MARMARA HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 0.007808,
+      "tedavuldekiPaySayisi": 3375437181,
+      "kisiSayisi": 44,
+      "fonToplamDeger": 26356223.83,
+      "gunlukGetiri": 0.01865623,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PMH",
+      "fonAdi": "PARDUS PORTFÖY MARMARA HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 0.007808,
+      "tedavuldekiPaySayisi": 3375437181,
+      "kisiSayisi": 44,
+      "fonToplamDeger": 26356223.83,
+      "gunlukGetiri": 0.01865623,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "PMH",
       "fonAdi": "PARDUS PORTFÖY MARMARA HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

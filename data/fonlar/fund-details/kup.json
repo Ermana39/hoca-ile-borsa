@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "KUP",
     "slug": "kup",
@@ -12,13 +12,13 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 49.195321,
-    "tedavuldekiPaySayisi": 41056754,
+    "fiyat": 49.065291,
+    "tedavuldekiPaySayisi": 41542740,
     "kisiSayisi": 130,
-    "fonToplamDeger": 2019800207.2,
-    "gunlukGetiri": 0.00259093,
+    "fonToplamDeger": 2038306631.49,
+    "gunlukGetiri": -0.00264314,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": 23845044.51,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KUP",
+        "fonAdi": "AK PORTFÖY KAR PAYI ÖDEYEN SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 49.065291,
+        "tedavuldekiPaySayisi": 41542740,
+        "kisiSayisi": 130,
+        "fonToplamDeger": 2038306631.49,
+        "gunlukGetiri": -0.00264314,
+        "paraGirisiCikisi": 23845044.51,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "KUP",
         "fonAdi": "AK PORTFÖY KAR PAYI ÖDEYEN SERBEST (DÖVİZ) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00259093,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KUP",
+      "fonAdi": "AK PORTFÖY KAR PAYI ÖDEYEN SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 49.065291,
+      "tedavuldekiPaySayisi": 41542740,
+      "kisiSayisi": 130,
+      "fonToplamDeger": 2038306631.49,
+      "gunlukGetiri": -0.00264314,
+      "paraGirisiCikisi": 23845044.51,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KUP",
+      "fonAdi": "AK PORTFÖY KAR PAYI ÖDEYEN SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 49.065291,
+      "tedavuldekiPaySayisi": 41542740,
+      "kisiSayisi": 130,
+      "fonToplamDeger": 2038306631.49,
+      "gunlukGetiri": -0.00264314,
+      "paraGirisiCikisi": 23845044.51,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "KUP",
       "fonAdi": "AK PORTFÖY KAR PAYI ÖDEYEN SERBEST (DÖVİZ) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

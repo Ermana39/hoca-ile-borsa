@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "IIN",
     "slug": "iin",
@@ -12,44 +12,56 @@
     "yonetici": "INVEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "inveo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.396603,
-    "tedavuldekiPaySayisi": 982392463,
-    "kisiSayisi": 203,
-    "fonToplamDeger": 1372011814.23,
-    "gunlukGetiri": 0.00107232,
+    "fiyat": 1.398114,
+    "tedavuldekiPaySayisi": 997781445,
+    "kisiSayisi": 197,
+    "fonToplamDeger": 1395012220.63,
+    "gunlukGetiri": 0.00108191,
     "getiriler": {
-      "birAy": 0.038085,
-      "ucAy": 0.113194,
-      "altiAy": 0.225362,
-      "yilbasi": 0.278665,
+      "birAy": 0.039208,
+      "ucAy": 0.113162,
+      "altiAy": 0.225412,
+      "yilbasi": 0.280049,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -15474129.4,
+      "gunluk": 21515551.18,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -13,
+      "gunluk": -6,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IIN",
+        "fonAdi": "INVEO PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 1.398114,
+        "tedavuldekiPaySayisi": 997781445,
+        "kisiSayisi": 197,
+        "fonToplamDeger": 1395012220.63,
+        "gunlukGetiri": 0.00108191,
+        "paraGirisiCikisi": 21515551.18,
+        "yatirimciDegisimi": -6
+      },
       {
         "fonKodu": "IIN",
         "fonAdi": "INVEO PORTFÖY PARA PİYASASI SERBEST (TL) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00107232,
       "paraGirisiCikisi": -15474129.4,
       "yatirimciDegisimi": -13
+    },
+    {
+      "fonKodu": "IIN",
+      "fonAdi": "INVEO PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.398114,
+      "tedavuldekiPaySayisi": 997781445,
+      "kisiSayisi": 197,
+      "fonToplamDeger": 1395012220.63,
+      "gunlukGetiri": 0.00108191,
+      "paraGirisiCikisi": 21515551.18,
+      "yatirimciDegisimi": -6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IIN",
+      "fonAdi": "INVEO PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.398114,
+      "tedavuldekiPaySayisi": 997781445,
+      "kisiSayisi": 197,
+      "fonToplamDeger": 1395012220.63,
+      "gunlukGetiri": 0.00108191,
+      "paraGirisiCikisi": 21515551.18,
+      "yatirimciDegisimi": -6
+    },
     {
       "fonKodu": "IIN",
       "fonAdi": "INVEO PORTFÖY PARA PİYASASI SERBEST (TL) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

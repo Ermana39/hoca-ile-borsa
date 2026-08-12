@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "YCY",
     "slug": "ycy",
@@ -12,44 +12,56 @@
     "yonetici": "İSTANBUL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "istanbul-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 4.045767,
-    "tedavuldekiPaySayisi": 65917151,
-    "kisiSayisi": 271,
-    "fonToplamDeger": 266685446.24,
-    "gunlukGetiri": 0.00156531,
+    "fiyat": 4.048084,
+    "tedavuldekiPaySayisi": 65929505,
+    "kisiSayisi": 273,
+    "fonToplamDeger": 266888172.57,
+    "gunlukGetiri": 0.0005727,
     "getiriler": {
-      "birAy": 0.026285,
-      "ucAy": 0.084776,
-      "altiAy": 0.182395,
-      "yilbasi": 0.24127600000000002,
-      "birYil": 0.431165,
-      "ucYil": 1.7696539999999998,
+      "birAy": 0.026871999999999997,
+      "ucAy": 0.083734,
+      "altiAy": 0.181905,
+      "yilbasi": 0.24198699999999998,
+      "birYil": 0.429884,
+      "ucYil": 1.76674,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 97.1,
+      "gunluk": 50010.03,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": 2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YCY",
+        "fonAdi": "İSTANBUL PORTFÖY KATILIM FON SEPETİ FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 4.048084,
+        "tedavuldekiPaySayisi": 65929505,
+        "kisiSayisi": 273,
+        "fonToplamDeger": 266888172.57,
+        "gunlukGetiri": 0.0005727,
+        "paraGirisiCikisi": 50010.03,
+        "yatirimciDegisimi": 2
+      },
       {
         "fonKodu": "YCY",
         "fonAdi": "İSTANBUL PORTFÖY KATILIM FON SEPETİ FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00156531,
       "paraGirisiCikisi": 97.1,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YCY",
+      "fonAdi": "İSTANBUL PORTFÖY KATILIM FON SEPETİ FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 4.048084,
+      "tedavuldekiPaySayisi": 65929505,
+      "kisiSayisi": 273,
+      "fonToplamDeger": 266888172.57,
+      "gunlukGetiri": 0.0005727,
+      "paraGirisiCikisi": 50010.03,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YCY",
+      "fonAdi": "İSTANBUL PORTFÖY KATILIM FON SEPETİ FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 4.048084,
+      "tedavuldekiPaySayisi": 65929505,
+      "kisiSayisi": 273,
+      "fonToplamDeger": 266888172.57,
+      "gunlukGetiri": 0.0005727,
+      "paraGirisiCikisi": 50010.03,
+      "yatirimciDegisimi": 2
+    },
     {
       "fonKodu": "YCY",
       "fonAdi": "İSTANBUL PORTFÖY KATILIM FON SEPETİ FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

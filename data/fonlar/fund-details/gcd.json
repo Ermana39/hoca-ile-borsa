@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "GCD",
     "slug": "gcd",
@@ -12,13 +12,13 @@
     "yonetici": "ATLAS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "atlas-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 3.696916,
-    "tedavuldekiPaySayisi": 233598329,
+    "fiyat": 3.775961,
+    "tedavuldekiPaySayisi": 236303286,
     "kisiSayisi": 18,
-    "fonToplamDeger": 863593353.49,
-    "gunlukGetiri": 0.02565756,
+    "fonToplamDeger": 892272027.92,
+    "gunlukGetiri": 0.02138134,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": 10213812.14,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GCD",
+        "fonAdi": "ATLAS PORTFÖY UFUK HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 3.775961,
+        "tedavuldekiPaySayisi": 236303286,
+        "kisiSayisi": 18,
+        "fonToplamDeger": 892272027.92,
+        "gunlukGetiri": 0.02138134,
+        "paraGirisiCikisi": 10213812.14,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "GCD",
         "fonAdi": "ATLAS PORTFÖY UFUK HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.02565756,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GCD",
+      "fonAdi": "ATLAS PORTFÖY UFUK HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 3.775961,
+      "tedavuldekiPaySayisi": 236303286,
+      "kisiSayisi": 18,
+      "fonToplamDeger": 892272027.92,
+      "gunlukGetiri": 0.02138134,
+      "paraGirisiCikisi": 10213812.14,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GCD",
+      "fonAdi": "ATLAS PORTFÖY UFUK HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 3.775961,
+      "tedavuldekiPaySayisi": 236303286,
+      "kisiSayisi": 18,
+      "fonToplamDeger": 892272027.92,
+      "gunlukGetiri": 0.02138134,
+      "paraGirisiCikisi": 10213812.14,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "GCD",
       "fonAdi": "ATLAS PORTFÖY UFUK HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

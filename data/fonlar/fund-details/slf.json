@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "SLF",
     "slug": "slf",
@@ -12,13 +12,13 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 11.194428,
-    "tedavuldekiPaySayisi": 101757354,
-    "kisiSayisi": 6834,
-    "fonToplamDeger": 1139115388.37,
-    "gunlukGetiri": 0.00112728,
+    "fiyat": 11.206124,
+    "tedavuldekiPaySayisi": 102437467,
+    "kisiSayisi": 6824,
+    "fonToplamDeger": 1147927006.07,
+    "gunlukGetiri": 0.00104481,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -27745266.66,
+      "gunluk": 7621430.61,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -12,
+      "gunluk": -10,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SLF",
+        "fonAdi": "ROTA PORTFÖY ŞEKERBANK PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 11.206124,
+        "tedavuldekiPaySayisi": 102437467,
+        "kisiSayisi": 6824,
+        "fonToplamDeger": 1147927006.07,
+        "gunlukGetiri": 0.00104481,
+        "paraGirisiCikisi": 7621430.61,
+        "yatirimciDegisimi": -10
+      },
       {
         "fonKodu": "SLF",
         "fonAdi": "ROTA PORTFÖY ŞEKERBANK PARA PİYASASI (TL) FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00112728,
       "paraGirisiCikisi": -27745266.66,
       "yatirimciDegisimi": -12
+    },
+    {
+      "fonKodu": "SLF",
+      "fonAdi": "ROTA PORTFÖY ŞEKERBANK PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 11.206124,
+      "tedavuldekiPaySayisi": 102437467,
+      "kisiSayisi": 6824,
+      "fonToplamDeger": 1147927006.07,
+      "gunlukGetiri": 0.00104481,
+      "paraGirisiCikisi": 7621430.61,
+      "yatirimciDegisimi": -10
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SLF",
+      "fonAdi": "ROTA PORTFÖY ŞEKERBANK PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 11.206124,
+      "tedavuldekiPaySayisi": 102437467,
+      "kisiSayisi": 6824,
+      "fonToplamDeger": 1147927006.07,
+      "gunlukGetiri": 0.00104481,
+      "paraGirisiCikisi": 7621430.61,
+      "yatirimciDegisimi": -10
+    },
     {
       "fonKodu": "SLF",
       "fonAdi": "ROTA PORTFÖY ŞEKERBANK PARA PİYASASI (TL) FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

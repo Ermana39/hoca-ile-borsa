@@ -50,6 +50,7 @@ const updateLogPath = path.join(outputDir, "fund-update-log.json");
 
 const version = 1;
 const maxAbsoluteDailyReturn = 1;
+const maxFundValueRelativeDifference = 0.005;
 
 function normalizeText(value) {
   return String(value ?? "").replace(/\s+/g, " ").trim();
@@ -404,16 +405,30 @@ function parseTarihselRows(rawRows) {
     const fiyat = parseNumber(readCell(row, indexes.fiyat));
     const tedavuldekiPaySayisi = parseNumber(readCell(row, indexes.pay));
     const kisiSayisi = parseNumber(readCell(row, indexes.kisi));
-    const fonToplamDeger = parseNumber(readCell(row, indexes.toplamDeger));
+    const kaynakFonToplamDeger = parseNumber(readCell(row, indexes.toplamDeger));
 
     if (
       fiyat === null &&
       tedavuldekiPaySayisi === null &&
       kisiSayisi === null &&
-      fonToplamDeger === null
+      kaynakFonToplamDeger === null
     ) {
       continue;
     }
+
+    const hesaplananFonToplamDeger =
+      isPositiveFinite(fiyat) && isPositiveFinite(tedavuldekiPaySayisi)
+        ? round(fiyat * tedavuldekiPaySayisi, 2)
+        : null;
+    const toplamDegerFarkOrani =
+      isPositiveFinite(kaynakFonToplamDeger) &&
+      isPositiveFinite(hesaplananFonToplamDeger)
+        ? Math.abs(hesaplananFonToplamDeger - kaynakFonToplamDeger) /
+          kaynakFonToplamDeger
+        : null;
+    const toplamDegerDuzeltildi =
+      toplamDegerFarkOrani !== null &&
+      toplamDegerFarkOrani > maxFundValueRelativeDifference;
 
     snapshots.push({
       fonKodu,
@@ -422,7 +437,15 @@ function parseTarihselRows(rawRows) {
       fiyat: round(fiyat, 8),
       tedavuldekiPaySayisi: round(tedavuldekiPaySayisi, 2),
       kisiSayisi: kisiSayisi === null ? null : Math.round(kisiSayisi),
-      fonToplamDeger: round(fonToplamDeger, 2),
+      fonToplamDeger: toplamDegerDuzeltildi
+        ? hesaplananFonToplamDeger
+        : round(kaynakFonToplamDeger, 2),
+      ...(toplamDegerDuzeltildi
+        ? {
+            kaynakFonToplamDeger: round(kaynakFonToplamDeger, 2),
+            toplamDegerFarkOrani: round(toplamDegerFarkOrani, 8),
+          }
+        : {}),
     });
   }
 
@@ -514,6 +537,8 @@ function stableSnapshot(snapshot) {
     tedavuldekiPaySayisi: snapshot.tedavuldekiPaySayisi,
     kisiSayisi: snapshot.kisiSayisi,
     fonToplamDeger: snapshot.fonToplamDeger,
+    kaynakFonToplamDeger: snapshot.kaynakFonToplamDeger,
+    toplamDegerFarkOrani: snapshot.toplamDegerFarkOrani,
   });
 }
 
@@ -1105,6 +1130,17 @@ function buildFundData(snapshots, getiriMap, managerMap) {
 
   for (const [fonKodu, historyRows] of histories.entries()) {
     const enrichedRows = enrichHistory(historyRows);
+    for (const row of historyRows) {
+      if (!isPositiveFinite(row.kaynakFonToplamDeger)) continue;
+      dataWarnings.push({
+        fonKodu,
+        tarih: row.tarih,
+        tur: "fon-toplam-degeri-duzeltildi",
+        kaynakFonToplamDeger: row.kaynakFonToplamDeger,
+        hesaplananFonToplamDeger: row.fonToplamDeger,
+        farkOrani: row.toplamDegerFarkOrani,
+      });
+    }
     for (let index = 1; index < historyRows.length; index += 1) {
       const previous = historyRows[index - 1];
       const row = historyRows[index];
@@ -1354,7 +1390,7 @@ async function main() {
   console.log(`${stats.skipped} duplicate snapshot atlandı`);
   console.log(`${activeFunds.length - fundData.unknownManagers.length} fon yöneticiyle eşleşti`);
   console.log(`${fundData.unknownManagers.length} fon Bilinmiyor olarak işaretlendi`);
-  console.log(`${fundData.dataWarnings.length} uç fiyat hareketi getiri sıralamasından çıkarıldı`);
+  console.log(`${fundData.dataWarnings.length} veri uyarısı kaydedildi`);
   console.log("Para akışları, yatırımcı değişimleri ve lider tabloları hazırlandı");
 }
 

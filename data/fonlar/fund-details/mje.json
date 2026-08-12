@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "MJE",
     "slug": "mje",
@@ -12,13 +12,13 @@
     "yonetici": "ALBARAKA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "albaraka-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 57.25581,
-    "tedavuldekiPaySayisi": 124784427,
-    "kisiSayisi": 904,
-    "fonToplamDeger": 7144633392.4,
-    "gunlukGetiri": 0.00490391,
+    "fiyat": 57.181214,
+    "tedavuldekiPaySayisi": 124773459,
+    "kisiSayisi": 903,
+    "fonToplamDeger": 7134697906.36,
+    "gunlukGetiri": -0.00130285,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -2279869.1,
+      "gunluk": -627163.56,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MJE",
+        "fonAdi": "ALBARAKA PORTFÖY KATILIM SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 57.181214,
+        "tedavuldekiPaySayisi": 124773459,
+        "kisiSayisi": 903,
+        "fonToplamDeger": 7134697906.36,
+        "gunlukGetiri": -0.00130285,
+        "paraGirisiCikisi": -627163.56,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "MJE",
         "fonAdi": "ALBARAKA PORTFÖY KATILIM SERBEST (DÖVİZ-AVRO) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00490391,
       "paraGirisiCikisi": -2279869.1,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "MJE",
+      "fonAdi": "ALBARAKA PORTFÖY KATILIM SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 57.181214,
+      "tedavuldekiPaySayisi": 124773459,
+      "kisiSayisi": 903,
+      "fonToplamDeger": 7134697906.36,
+      "gunlukGetiri": -0.00130285,
+      "paraGirisiCikisi": -627163.56,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MJE",
+      "fonAdi": "ALBARAKA PORTFÖY KATILIM SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 57.181214,
+      "tedavuldekiPaySayisi": 124773459,
+      "kisiSayisi": 903,
+      "fonToplamDeger": 7134697906.36,
+      "gunlukGetiri": -0.00130285,
+      "paraGirisiCikisi": -627163.56,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "MJE",
       "fonAdi": "ALBARAKA PORTFÖY KATILIM SERBEST (DÖVİZ-AVRO) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

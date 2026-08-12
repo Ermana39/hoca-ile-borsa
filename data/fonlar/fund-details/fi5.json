@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "FI5",
     "slug": "fi5",
@@ -12,13 +12,13 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 734.408465,
-    "tedavuldekiPaySayisi": 154432517,
-    "kisiSayisi": 52704,
-    "fonToplamDeger": 113416547800.38,
-    "gunlukGetiri": 0.00109926,
+    "fiyat": 735.179523,
+    "tedavuldekiPaySayisi": 155206557,
+    "kisiSayisi": 52768,
+    "fonToplamDeger": 114104682550.32,
+    "gunlukGetiri": 0.0010499,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 3960041338.96,
+      "gunluk": 569058357.98,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -21,
+      "gunluk": 64,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FI5",
+        "fonAdi": "QNB PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 735.179523,
+        "tedavuldekiPaySayisi": 155206557,
+        "kisiSayisi": 52768,
+        "fonToplamDeger": 114104682550.32,
+        "gunlukGetiri": 0.0010499,
+        "paraGirisiCikisi": 569058357.98,
+        "yatirimciDegisimi": 64
+      },
       {
         "fonKodu": "FI5",
         "fonAdi": "QNB PORTFÖY PARA PİYASASI (TL) FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00109926,
       "paraGirisiCikisi": 3960041338.96,
       "yatirimciDegisimi": -21
+    },
+    {
+      "fonKodu": "FI5",
+      "fonAdi": "QNB PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 735.179523,
+      "tedavuldekiPaySayisi": 155206557,
+      "kisiSayisi": 52768,
+      "fonToplamDeger": 114104682550.32,
+      "gunlukGetiri": 0.0010499,
+      "paraGirisiCikisi": 569058357.98,
+      "yatirimciDegisimi": 64
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FI5",
+      "fonAdi": "QNB PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 735.179523,
+      "tedavuldekiPaySayisi": 155206557,
+      "kisiSayisi": 52768,
+      "fonToplamDeger": 114104682550.32,
+      "gunlukGetiri": 0.0010499,
+      "paraGirisiCikisi": 569058357.98,
+      "yatirimciDegisimi": 64
+    },
     {
       "fonKodu": "FI5",
       "fonAdi": "QNB PORTFÖY PARA PİYASASI (TL) FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "GVD",
     "slug": "gvd",
@@ -12,13 +12,13 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 18.50062,
+    "fiyat": 18.500913,
     "tedavuldekiPaySayisi": 22115,
     "kisiSayisi": 1,
-    "fonToplamDeger": 409141.21,
-    "gunlukGetiri": 0.00177617,
+    "fonToplamDeger": 409147.68,
+    "gunlukGetiri": 0.00001584,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GVD",
+        "fonAdi": "GARANTİ PORTFÖY KARABAĞLI SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-12",
+        "fiyat": 18.500913,
+        "tedavuldekiPaySayisi": 22115,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 409147.68,
+        "gunlukGetiri": 0.00001584,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "GVD",
         "fonAdi": "GARANTİ PORTFÖY KARABAĞLI SERBEST (DÖVİZ) ÖZEL FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00177617,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GVD",
+      "fonAdi": "GARANTİ PORTFÖY KARABAĞLI SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 18.500913,
+      "tedavuldekiPaySayisi": 22115,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 409147.68,
+      "gunlukGetiri": 0.00001584,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GVD",
+      "fonAdi": "GARANTİ PORTFÖY KARABAĞLI SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 18.500913,
+      "tedavuldekiPaySayisi": 22115,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 409147.68,
+      "gunlukGetiri": 0.00001584,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "GVD",
       "fonAdi": "GARANTİ PORTFÖY KARABAĞLI SERBEST (DÖVİZ) ÖZEL FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

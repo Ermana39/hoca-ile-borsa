@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "GJH",
     "slug": "gjh",
@@ -12,13 +12,13 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 3.89344,
-    "tedavuldekiPaySayisi": 23405471686,
-    "kisiSayisi": 24957,
-    "fonToplamDeger": 91127790855.64,
-    "gunlukGetiri": 0.00105468,
+    "fiyat": 3.897501,
+    "tedavuldekiPaySayisi": 38873773495,
+    "kisiSayisi": 25337,
+    "fonToplamDeger": 151510588968.48,
+    "gunlukGetiri": 0.00104304,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -5332874872.08,
+      "gunluk": 60287721768.88,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -273,
+      "gunluk": 380,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GJH",
+        "fonAdi": "GARANTİ PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 3.897501,
+        "tedavuldekiPaySayisi": 38873773495,
+        "kisiSayisi": 25337,
+        "fonToplamDeger": 151510588968.48,
+        "gunlukGetiri": 0.00104304,
+        "paraGirisiCikisi": 60287721768.88,
+        "yatirimciDegisimi": 380
+      },
       {
         "fonKodu": "GJH",
         "fonAdi": "GARANTİ PORTFÖY PARA PİYASASI SERBEST (TL) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00105468,
       "paraGirisiCikisi": -5332874872.08,
       "yatirimciDegisimi": -273
+    },
+    {
+      "fonKodu": "GJH",
+      "fonAdi": "GARANTİ PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 3.897501,
+      "tedavuldekiPaySayisi": 38873773495,
+      "kisiSayisi": 25337,
+      "fonToplamDeger": 151510588968.48,
+      "gunlukGetiri": 0.00104304,
+      "paraGirisiCikisi": 60287721768.88,
+      "yatirimciDegisimi": 380
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GJH",
+      "fonAdi": "GARANTİ PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 3.897501,
+      "tedavuldekiPaySayisi": 38873773495,
+      "kisiSayisi": 25337,
+      "fonToplamDeger": 151510588968.48,
+      "gunlukGetiri": 0.00104304,
+      "paraGirisiCikisi": 60287721768.88,
+      "yatirimciDegisimi": 380
+    },
     {
       "fonKodu": "GJH",
       "fonAdi": "GARANTİ PORTFÖY PARA PİYASASI SERBEST (TL) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

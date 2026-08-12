@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "AUV",
     "slug": "auv",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 49.964798,
-    "tedavuldekiPaySayisi": 12864495,
-    "kisiSayisi": 567,
-    "fonToplamDeger": 642771893.15,
-    "gunlukGetiri": 0.00274776,
+    "fiyat": 49.804007,
+    "tedavuldekiPaySayisi": 12812940,
+    "kisiSayisi": 564,
+    "fonToplamDeger": 638135756.45,
+    "gunlukGetiri": -0.00321809,
     "getiriler": {
-      "birAy": 0.016621,
-      "ucAy": 0.061762,
-      "altiAy": 0.087942,
-      "yilbasi": 0.111084,
-      "birYil": 0.245355,
+      "birAy": 0.013349,
+      "ucAy": 0.056226000000000005,
+      "altiAy": 0.082316,
+      "yilbasi": 0.10750799999999999,
+      "birYil": 0.23487200000000003,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -7195380.6,
+      "gunluk": -2567645.58,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
+      "gunluk": -3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AUV",
+        "fonAdi": "AK PORTFÖY UZUN VADELİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 49.804007,
+        "tedavuldekiPaySayisi": 12812940,
+        "kisiSayisi": 564,
+        "fonToplamDeger": 638135756.45,
+        "gunlukGetiri": -0.00321809,
+        "paraGirisiCikisi": -2567645.58,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "AUV",
         "fonAdi": "AK PORTFÖY UZUN VADELİ SERBEST (DÖVİZ) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00274776,
       "paraGirisiCikisi": -7195380.6,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "AUV",
+      "fonAdi": "AK PORTFÖY UZUN VADELİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 49.804007,
+      "tedavuldekiPaySayisi": 12812940,
+      "kisiSayisi": 564,
+      "fonToplamDeger": 638135756.45,
+      "gunlukGetiri": -0.00321809,
+      "paraGirisiCikisi": -2567645.58,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AUV",
+      "fonAdi": "AK PORTFÖY UZUN VADELİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 49.804007,
+      "tedavuldekiPaySayisi": 12812940,
+      "kisiSayisi": 564,
+      "fonToplamDeger": 638135756.45,
+      "gunlukGetiri": -0.00321809,
+      "paraGirisiCikisi": -2567645.58,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "AUV",
       "fonAdi": "AK PORTFÖY UZUN VADELİ SERBEST (DÖVİZ) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

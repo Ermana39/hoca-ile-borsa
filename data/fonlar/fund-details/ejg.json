@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "EJG",
     "slug": "ejg",
@@ -12,13 +12,13 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 9.651263,
+    "fiyat": 9.592652,
     "tedavuldekiPaySayisi": 68419205,
     "kisiSayisi": 1,
-    "fonToplamDeger": 660331768.65,
-    "gunlukGetiri": 0.00111062,
+    "fonToplamDeger": 656321641.51,
+    "gunlukGetiri": -0.00607288,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "EJG",
+        "fonAdi": "AZİMUT PORTFÖY İNAN SERBEST (TL) ÖZEL FON",
+        "tarih": "2026-08-12",
+        "fiyat": 9.592652,
+        "tedavuldekiPaySayisi": 68419205,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 656321641.51,
+        "gunlukGetiri": -0.00607288,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "EJG",
         "fonAdi": "AZİMUT PORTFÖY İNAN SERBEST (TL) ÖZEL FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00111062,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "EJG",
+      "fonAdi": "AZİMUT PORTFÖY İNAN SERBEST (TL) ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 9.592652,
+      "tedavuldekiPaySayisi": 68419205,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 656321641.51,
+      "gunlukGetiri": -0.00607288,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "EJG",
+      "fonAdi": "AZİMUT PORTFÖY İNAN SERBEST (TL) ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 9.592652,
+      "tedavuldekiPaySayisi": 68419205,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 656321641.51,
+      "gunlukGetiri": -0.00607288,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "EJG",
       "fonAdi": "AZİMUT PORTFÖY İNAN SERBEST (TL) ÖZEL FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "HDE",
     "slug": "hde",
@@ -12,13 +12,13 @@
     "yonetici": "HSBC PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hsbc-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 56.947824,
-    "tedavuldekiPaySayisi": 159637039,
-    "kisiSayisi": 4454,
-    "fonToplamDeger": 9090982026.82,
-    "gunlukGetiri": 0.00499483,
+    "fiyat": 56.86676,
+    "tedavuldekiPaySayisi": 159512420,
+    "kisiSayisi": 4450,
+    "fonToplamDeger": 9070954504.65,
+    "gunlukGetiri": -0.00142348,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 76124718.99,
+      "gunluk": -7086678.76,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": -4,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HDE",
+        "fonAdi": "HSBC PORTFÖY BEŞİNCİ SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 56.86676,
+        "tedavuldekiPaySayisi": 159512420,
+        "kisiSayisi": 4450,
+        "fonToplamDeger": 9070954504.65,
+        "gunlukGetiri": -0.00142348,
+        "paraGirisiCikisi": -7086678.76,
+        "yatirimciDegisimi": -4
+      },
       {
         "fonKodu": "HDE",
         "fonAdi": "HSBC PORTFÖY BEŞİNCİ SERBEST (DÖVİZ-AVRO) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00499483,
       "paraGirisiCikisi": 76124718.99,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "HDE",
+      "fonAdi": "HSBC PORTFÖY BEŞİNCİ SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 56.86676,
+      "tedavuldekiPaySayisi": 159512420,
+      "kisiSayisi": 4450,
+      "fonToplamDeger": 9070954504.65,
+      "gunlukGetiri": -0.00142348,
+      "paraGirisiCikisi": -7086678.76,
+      "yatirimciDegisimi": -4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HDE",
+      "fonAdi": "HSBC PORTFÖY BEŞİNCİ SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 56.86676,
+      "tedavuldekiPaySayisi": 159512420,
+      "kisiSayisi": 4450,
+      "fonToplamDeger": 9070954504.65,
+      "gunlukGetiri": -0.00142348,
+      "paraGirisiCikisi": -7086678.76,
+      "yatirimciDegisimi": -4
+    },
     {
       "fonKodu": "HDE",
       "fonAdi": "HSBC PORTFÖY BEŞİNCİ SERBEST (DÖVİZ-AVRO) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

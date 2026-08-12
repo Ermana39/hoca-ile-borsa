@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "URV",
     "slug": "urv",
@@ -12,13 +12,13 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 3.221955,
+    "fiyat": 3.19136,
     "tedavuldekiPaySayisi": 2685399860,
     "kisiSayisi": 2,
-    "fonToplamDeger": 8652236169.11,
-    "gunlukGetiri": -0.00422823,
+    "fonToplamDeger": 8570078389.16,
+    "gunlukGetiri": -0.00949579,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "URV",
+        "fonAdi": "AK PORTFÖY GELİNCİK SERBEST ÖZEL FON",
+        "tarih": "2026-08-12",
+        "fiyat": 3.19136,
+        "tedavuldekiPaySayisi": 2685399860,
+        "kisiSayisi": 2,
+        "fonToplamDeger": 8570078389.16,
+        "gunlukGetiri": -0.00949579,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "URV",
         "fonAdi": "AK PORTFÖY GELİNCİK SERBEST ÖZEL FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": -0.00422823,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "URV",
+      "fonAdi": "AK PORTFÖY GELİNCİK SERBEST ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 3.19136,
+      "tedavuldekiPaySayisi": 2685399860,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 8570078389.16,
+      "gunlukGetiri": -0.00949579,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "URV",
+      "fonAdi": "AK PORTFÖY GELİNCİK SERBEST ÖZEL FON",
+      "tarih": "2026-08-12",
+      "fiyat": 3.19136,
+      "tedavuldekiPaySayisi": 2685399860,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 8570078389.16,
+      "gunlukGetiri": -0.00949579,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "URV",
       "fonAdi": "AK PORTFÖY GELİNCİK SERBEST ÖZEL FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "FS1",
     "slug": "fs1",
@@ -12,13 +12,13 @@
     "yonetici": "ONE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "one-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.694354,
-    "tedavuldekiPaySayisi": 94986099,
-    "kisiSayisi": 243,
-    "fonToplamDeger": 160940089.13,
-    "gunlukGetiri": -0.0071204,
+    "fiyat": 1.703672,
+    "tedavuldekiPaySayisi": 94671893,
+    "kisiSayisi": 242,
+    "fonToplamDeger": 161289896.69,
+    "gunlukGetiri": 0.00549944,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -46665.9,
+      "gunluk": -535303.96,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FS1",
+        "fonAdi": "ONE PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 1.703672,
+        "tedavuldekiPaySayisi": 94671893,
+        "kisiSayisi": 242,
+        "fonToplamDeger": 161289896.69,
+        "gunlukGetiri": 0.00549944,
+        "paraGirisiCikisi": -535303.96,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "FS1",
         "fonAdi": "ONE PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": -0.0071204,
       "paraGirisiCikisi": -46665.9,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "FS1",
+      "fonAdi": "ONE PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.703672,
+      "tedavuldekiPaySayisi": 94671893,
+      "kisiSayisi": 242,
+      "fonToplamDeger": 161289896.69,
+      "gunlukGetiri": 0.00549944,
+      "paraGirisiCikisi": -535303.96,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FS1",
+      "fonAdi": "ONE PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 1.703672,
+      "tedavuldekiPaySayisi": 94671893,
+      "kisiSayisi": 242,
+      "fonToplamDeger": 161289896.69,
+      "gunlukGetiri": 0.00549944,
+      "paraGirisiCikisi": -535303.96,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "FS1",
       "fonAdi": "ONE PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

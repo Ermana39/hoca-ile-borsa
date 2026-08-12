@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "RAF",
     "slug": "raf",
@@ -12,20 +12,20 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 3.662995,
+    "fiyat": 3.618686,
     "tedavuldekiPaySayisi": 41879576,
     "kisiSayisi": 13,
-    "fonToplamDeger": 153404690.22,
-    "gunlukGetiri": -0.00170906,
+    "fonToplamDeger": 151549053.97,
+    "gunlukGetiri": -0.01209639,
     "getiriler": {
-      "birAy": 0.017254000000000002,
-      "ucAy": -0.030902,
-      "altiAy": 0.056764,
-      "yilbasi": 0.27487300000000003,
-      "birYil": 0.495432,
-      "ucYil": 1.329723,
+      "birAy": 0.004949,
+      "ucAy": -0.041314000000000003,
+      "altiAy": 0.0387,
+      "yilbasi": 0.259451,
+      "birYil": 0.465704,
+      "ucYil": 1.254592,
       "besYil": null
     },
     "paraAkisi": {
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RAF",
+        "fonAdi": "ROTA PORTFÖY ALTINCI SERBEST FON",
+        "tarih": "2026-08-12",
+        "fiyat": 3.618686,
+        "tedavuldekiPaySayisi": 41879576,
+        "kisiSayisi": 13,
+        "fonToplamDeger": 151549053.97,
+        "gunlukGetiri": -0.01209639,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "RAF",
         "fonAdi": "ROTA PORTFÖY ALTINCI SERBEST FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": -0.00170906,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "RAF",
+      "fonAdi": "ROTA PORTFÖY ALTINCI SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 3.618686,
+      "tedavuldekiPaySayisi": 41879576,
+      "kisiSayisi": 13,
+      "fonToplamDeger": 151549053.97,
+      "gunlukGetiri": -0.01209639,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RAF",
+      "fonAdi": "ROTA PORTFÖY ALTINCI SERBEST FON",
+      "tarih": "2026-08-12",
+      "fiyat": 3.618686,
+      "tedavuldekiPaySayisi": 41879576,
+      "kisiSayisi": 13,
+      "fonToplamDeger": 151549053.97,
+      "gunlukGetiri": -0.01209639,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "RAF",
       "fonAdi": "ROTA PORTFÖY ALTINCI SERBEST FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

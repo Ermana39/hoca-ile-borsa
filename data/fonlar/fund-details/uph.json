@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "UPH",
     "slug": "uph",
@@ -12,44 +12,56 @@
     "yonetici": "ÜNLÜ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "unlu-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 29.86593,
-    "tedavuldekiPaySayisi": 5917536,
-    "kisiSayisi": 533,
-    "fonToplamDeger": 176732718.61,
-    "gunlukGetiri": 0.00077939,
+    "fiyat": 29.581333,
+    "tedavuldekiPaySayisi": 5917383,
+    "kisiSayisi": 532,
+    "fonToplamDeger": 175044076.91,
+    "gunlukGetiri": -0.00952915,
     "getiriler": {
-      "birAy": -0.015371999999999999,
-      "ucAy": -0.083769,
-      "altiAy": -0.013462,
-      "yilbasi": 0.183915,
-      "birYil": 0.201592,
-      "ucYil": 1.120231,
-      "besYil": 10.936689
+      "birAy": -0.024755,
+      "ucAy": -0.094059,
+      "altiAy": -0.028658000000000003,
+      "yilbasi": 0.172634,
+      "birYil": 0.17751999999999998,
+      "ucYil": 1.026284,
+      "besYil": 10.988139
     },
     "paraAkisi": {
-      "gunluk": -36944.16,
+      "gunluk": -4525.94,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "UPH",
+        "fonAdi": "ÜNLÜ PORTFÖY HİSSE SENEDİ (TL) FONU(HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 29.581333,
+        "tedavuldekiPaySayisi": 5917383,
+        "kisiSayisi": 532,
+        "fonToplamDeger": 175044076.91,
+        "gunlukGetiri": -0.00952915,
+        "paraGirisiCikisi": -4525.94,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "UPH",
         "fonAdi": "ÜNLÜ PORTFÖY HİSSE SENEDİ (TL) FONU(HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00077939,
       "paraGirisiCikisi": -36944.16,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "UPH",
+      "fonAdi": "ÜNLÜ PORTFÖY HİSSE SENEDİ (TL) FONU(HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 29.581333,
+      "tedavuldekiPaySayisi": 5917383,
+      "kisiSayisi": 532,
+      "fonToplamDeger": 175044076.91,
+      "gunlukGetiri": -0.00952915,
+      "paraGirisiCikisi": -4525.94,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "UPH",
+      "fonAdi": "ÜNLÜ PORTFÖY HİSSE SENEDİ (TL) FONU(HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 29.581333,
+      "tedavuldekiPaySayisi": 5917383,
+      "kisiSayisi": 532,
+      "fonToplamDeger": 175044076.91,
+      "gunlukGetiri": -0.00952915,
+      "paraGirisiCikisi": -4525.94,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "UPH",
       "fonAdi": "ÜNLÜ PORTFÖY HİSSE SENEDİ (TL) FONU(HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

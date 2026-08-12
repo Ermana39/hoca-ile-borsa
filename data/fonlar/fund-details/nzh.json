@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "NZH",
     "slug": "nzh",
@@ -12,44 +12,56 @@
     "yonetici": "NEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "neo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 3.487125,
-    "tedavuldekiPaySayisi": 159512712,
-    "kisiSayisi": 299,
-    "fonToplamDeger": 556240726.24,
-    "gunlukGetiri": 0.01261528,
+    "fiyat": 3.463981,
+    "tedavuldekiPaySayisi": 159495016,
+    "kisiSayisi": 301,
+    "fonToplamDeger": 552487691.54,
+    "gunlukGetiri": -0.00663699,
     "getiriler": {
-      "birAy": 0.026288,
-      "ucAy": 0.02359,
-      "altiAy": 0.157619,
-      "yilbasi": 0.251432,
-      "birYil": 0.392763,
-      "ucYil": 1.0527389999999999,
-      "besYil": 2.197082
+      "birAy": 0.019476,
+      "ucAy": 0.007884,
+      "altiAy": 0.153312,
+      "yilbasi": 0.243126,
+      "birYil": 0.37892499999999996,
+      "ucYil": 1.032725,
+      "besYil": 2.1741200000000003
     },
     "paraAkisi": {
-      "gunluk": 101869.38,
+      "gunluk": -61298.61,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NZH",
+        "fonAdi": "NEO PORTFÖY İKİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-12",
+        "fiyat": 3.463981,
+        "tedavuldekiPaySayisi": 159495016,
+        "kisiSayisi": 301,
+        "fonToplamDeger": 552487691.54,
+        "gunlukGetiri": -0.00663699,
+        "paraGirisiCikisi": -61298.61,
+        "yatirimciDegisimi": 2
+      },
       {
         "fonKodu": "NZH",
         "fonAdi": "NEO PORTFÖY İKİNCİ DEĞİŞKEN FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.01261528,
       "paraGirisiCikisi": 101869.38,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "NZH",
+      "fonAdi": "NEO PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 3.463981,
+      "tedavuldekiPaySayisi": 159495016,
+      "kisiSayisi": 301,
+      "fonToplamDeger": 552487691.54,
+      "gunlukGetiri": -0.00663699,
+      "paraGirisiCikisi": -61298.61,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NZH",
+      "fonAdi": "NEO PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 3.463981,
+      "tedavuldekiPaySayisi": 159495016,
+      "kisiSayisi": 301,
+      "fonToplamDeger": 552487691.54,
+      "gunlukGetiri": -0.00663699,
+      "paraGirisiCikisi": -61298.61,
+      "yatirimciDegisimi": 2
+    },
     {
       "fonKodu": "NZH",
       "fonAdi": "NEO PORTFÖY İKİNCİ DEĞİŞKEN FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

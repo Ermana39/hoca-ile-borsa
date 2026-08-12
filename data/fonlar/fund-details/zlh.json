@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "ZLH",
     "slug": "zlh",
@@ -12,44 +12,56 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 11.640373,
-    "tedavuldekiPaySayisi": 39161100,
-    "kisiSayisi": 3402,
-    "fonToplamDeger": 455849805.44,
-    "gunlukGetiri": 0.00831172,
+    "fiyat": 11.50932,
+    "tedavuldekiPaySayisi": 39099800,
+    "kisiSayisi": 3393,
+    "fonToplamDeger": 450012103.44,
+    "gunlukGetiri": -0.01125849,
     "getiriler": {
-      "birAy": 0.027347999999999997,
-      "ucAy": -0.046879,
-      "altiAy": -0.008081,
-      "yilbasi": 0.12462300000000001,
-      "birYil": 0.243122,
-      "ucYil": 0.987205,
+      "birAy": 0.015782,
+      "ucAy": -0.062382999999999994,
+      "altiAy": -0.020701999999999998,
+      "yilbasi": 0.11196099999999999,
+      "birYil": 0.230737,
+      "ucYil": 0.881406,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1879920.24,
+      "gunluk": -705521.32,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": -9,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZLH",
+        "fonAdi": "ZİRAAT PORTFÖY BIST 100-30 ŞİRKETLERİ HİSSE SENEDİ FONU ( HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 11.50932,
+        "tedavuldekiPaySayisi": 39099800,
+        "kisiSayisi": 3393,
+        "fonToplamDeger": 450012103.44,
+        "gunlukGetiri": -0.01125849,
+        "paraGirisiCikisi": -705521.32,
+        "yatirimciDegisimi": -9
+      },
       {
         "fonKodu": "ZLH",
         "fonAdi": "ZİRAAT PORTFÖY BIST 100-30 ŞİRKETLERİ HİSSE SENEDİ FONU ( HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00831172,
       "paraGirisiCikisi": -1879920.24,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "ZLH",
+      "fonAdi": "ZİRAAT PORTFÖY BIST 100-30 ŞİRKETLERİ HİSSE SENEDİ FONU ( HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 11.50932,
+      "tedavuldekiPaySayisi": 39099800,
+      "kisiSayisi": 3393,
+      "fonToplamDeger": 450012103.44,
+      "gunlukGetiri": -0.01125849,
+      "paraGirisiCikisi": -705521.32,
+      "yatirimciDegisimi": -9
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZLH",
+      "fonAdi": "ZİRAAT PORTFÖY BIST 100-30 ŞİRKETLERİ HİSSE SENEDİ FONU ( HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 11.50932,
+      "tedavuldekiPaySayisi": 39099800,
+      "kisiSayisi": 3393,
+      "fonToplamDeger": 450012103.44,
+      "gunlukGetiri": -0.01125849,
+      "paraGirisiCikisi": -705521.32,
+      "yatirimciDegisimi": -9
+    },
     {
       "fonKodu": "ZLH",
       "fonAdi": "ZİRAAT PORTFÖY BIST 100-30 ŞİRKETLERİ HİSSE SENEDİ FONU ( HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "AP5",
     "slug": "ap5",
@@ -12,18 +12,18 @@
     "yonetici": "ATLAS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "atlas-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 0.853449,
+    "fiyat": 0.843982,
     "tedavuldekiPaySayisi": 1010581,
     "kisiSayisi": 12,
-    "fonToplamDeger": 862479.19,
-    "gunlukGetiri": 0.01644512,
+    "fonToplamDeger": 852912.47,
+    "gunlukGetiri": -0.01109264,
     "getiriler": {
-      "birAy": -0.049948,
-      "ucAy": -0.18747,
-      "altiAy": -0.299046,
-      "yilbasi": -0.183023,
+      "birAy": -0.060486000000000005,
+      "ucAy": -0.199022,
+      "altiAy": -0.316347,
+      "yilbasi": -0.192086,
       "birYil": null,
       "ucYil": null,
       "besYil": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AP5",
+        "fonAdi": "ATLAS PORTFÖY BEŞİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 0.843982,
+        "tedavuldekiPaySayisi": 1010581,
+        "kisiSayisi": 12,
+        "fonToplamDeger": 852912.47,
+        "gunlukGetiri": -0.01109264,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "AP5",
         "fonAdi": "ATLAS PORTFÖY BEŞİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.01644512,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "AP5",
+      "fonAdi": "ATLAS PORTFÖY BEŞİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 0.843982,
+      "tedavuldekiPaySayisi": 1010581,
+      "kisiSayisi": 12,
+      "fonToplamDeger": 852912.47,
+      "gunlukGetiri": -0.01109264,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AP5",
+      "fonAdi": "ATLAS PORTFÖY BEŞİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 0.843982,
+      "tedavuldekiPaySayisi": 1010581,
+      "kisiSayisi": 12,
+      "fonToplamDeger": 852912.47,
+      "gunlukGetiri": -0.01109264,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "AP5",
       "fonAdi": "ATLAS PORTFÖY BEŞİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

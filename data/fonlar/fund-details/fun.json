@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "FUN",
     "slug": "fun",
@@ -12,13 +12,13 @@
     "yonetici": "FİBA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "fiba-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 1.579867,
+    "fiyat": 1.58091,
     "tedavuldekiPaySayisi": 674260725,
     "kisiSayisi": 35,
-    "fonToplamDeger": 1065242199.67,
-    "gunlukGetiri": 0.00222411,
+    "fonToplamDeger": 1065945841.44,
+    "gunlukGetiri": 0.00066018,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 10087525.05,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FUN",
+        "fonAdi": "FİBA PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-12",
+        "fiyat": 1.58091,
+        "tedavuldekiPaySayisi": 674260725,
+        "kisiSayisi": 35,
+        "fonToplamDeger": 1065945841.44,
+        "gunlukGetiri": 0.00066018,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "FUN",
         "fonAdi": "FİBA PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00222411,
       "paraGirisiCikisi": 10087525.05,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "FUN",
+      "fonAdi": "FİBA PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.58091,
+      "tedavuldekiPaySayisi": 674260725,
+      "kisiSayisi": 35,
+      "fonToplamDeger": 1065945841.44,
+      "gunlukGetiri": 0.00066018,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FUN",
+      "fonAdi": "FİBA PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-12",
+      "fiyat": 1.58091,
+      "tedavuldekiPaySayisi": 674260725,
+      "kisiSayisi": 35,
+      "fonToplamDeger": 1065945841.44,
+      "gunlukGetiri": 0.00066018,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "FUN",
       "fonAdi": "FİBA PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "GPB",
     "slug": "gpb",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 12.008727,
-    "tedavuldekiPaySayisi": 103053271,
-    "kisiSayisi": 9527,
-    "fonToplamDeger": 1237538573.96,
-    "gunlukGetiri": 0.00151678,
+    "fiyat": 11.999764,
+    "tedavuldekiPaySayisi": 102904991,
+    "kisiSayisi": 9533,
+    "fonToplamDeger": 1234835574.98,
+    "gunlukGetiri": -0.00074637,
     "getiriler": {
-      "birAy": 0.028304,
-      "ucAy": 0.065039,
-      "altiAy": 0.140329,
-      "yilbasi": 0.213719,
-      "birYil": 0.389586,
-      "ucYil": 2.073439,
-      "besYil": 3.813416
+      "birAy": 0.027537,
+      "ucAy": 0.062219,
+      "altiAy": 0.138979,
+      "yilbasi": 0.21281300000000003,
+      "birYil": 0.386079,
+      "ucYil": 2.064855,
+      "besYil": 3.810159
     },
     "paraAkisi": {
-      "gunluk": -351939.76,
+      "gunluk": -1779325.01,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
+      "gunluk": 6,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GPB",
+        "fonAdi": "GARANTİ PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-12",
+        "fiyat": 11.999764,
+        "tedavuldekiPaySayisi": 102904991,
+        "kisiSayisi": 9533,
+        "fonToplamDeger": 1234835574.98,
+        "gunlukGetiri": -0.00074637,
+        "paraGirisiCikisi": -1779325.01,
+        "yatirimciDegisimi": 6
+      },
       {
         "fonKodu": "GPB",
         "fonAdi": "GARANTİ PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00151678,
       "paraGirisiCikisi": -351939.76,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "GPB",
+      "fonAdi": "GARANTİ PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 11.999764,
+      "tedavuldekiPaySayisi": 102904991,
+      "kisiSayisi": 9533,
+      "fonToplamDeger": 1234835574.98,
+      "gunlukGetiri": -0.00074637,
+      "paraGirisiCikisi": -1779325.01,
+      "yatirimciDegisimi": 6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GPB",
+      "fonAdi": "GARANTİ PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-12",
+      "fiyat": 11.999764,
+      "tedavuldekiPaySayisi": 102904991,
+      "kisiSayisi": 9533,
+      "fonToplamDeger": 1234835574.98,
+      "gunlukGetiri": -0.00074637,
+      "paraGirisiCikisi": -1779325.01,
+      "yatirimciDegisimi": 6
+    },
     {
       "fonKodu": "GPB",
       "fonAdi": "GARANTİ PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

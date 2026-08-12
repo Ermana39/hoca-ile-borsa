@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "BYZ",
     "slug": "byz",
@@ -12,13 +12,13 @@
     "yonetici": "A1 CAPİTAL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "a1-capital-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 0.778163,
+    "fiyat": 0.74807,
     "tedavuldekiPaySayisi": 82142873,
     "kisiSayisi": 40,
-    "fonToplamDeger": 63920579.7,
-    "gunlukGetiri": 0.03586566,
+    "fonToplamDeger": 61448622.41,
+    "gunlukGetiri": -0.03867185,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -777.38,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BYZ",
+        "fonAdi": "A1 CAPİTAL PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-12",
+        "fiyat": 0.74807,
+        "tedavuldekiPaySayisi": 82142873,
+        "kisiSayisi": 40,
+        "fonToplamDeger": 61448622.41,
+        "gunlukGetiri": -0.03867185,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "BYZ",
         "fonAdi": "A1 CAPİTAL PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.03586566,
       "paraGirisiCikisi": -777.38,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BYZ",
+      "fonAdi": "A1 CAPİTAL PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 0.74807,
+      "tedavuldekiPaySayisi": 82142873,
+      "kisiSayisi": 40,
+      "fonToplamDeger": 61448622.41,
+      "gunlukGetiri": -0.03867185,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BYZ",
+      "fonAdi": "A1 CAPİTAL PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-12",
+      "fiyat": 0.74807,
+      "tedavuldekiPaySayisi": 82142873,
+      "kisiSayisi": 40,
+      "fonToplamDeger": 61448622.41,
+      "gunlukGetiri": -0.03867185,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "BYZ",
       "fonAdi": "A1 CAPİTAL PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "PPI",
     "slug": "ppi",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 2.258887,
-    "tedavuldekiPaySayisi": 2227545219,
+    "fiyat": 2.261252,
+    "tedavuldekiPaySayisi": 2142225013,
     "kisiSayisi": 2794,
-    "fonToplamDeger": 5031772168.54,
-    "gunlukGetiri": 0.0010738,
+    "fonToplamDeger": 4844110854.12,
+    "gunlukGetiri": 0.00104698,
     "getiriler": {
-      "birAy": 0.031143,
-      "ucAy": 0.09921200000000001,
-      "altiAy": 0.202331,
-      "yilbasi": 0.253558,
-      "birYil": 0.46904,
+      "birAy": 0.032223,
+      "ucAy": 0.099396,
+      "altiAy": 0.202631,
+      "yilbasi": 0.254871,
+      "birYil": 0.468911,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 850844988.79,
+      "gunluk": -192930486.46,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 20,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PPI",
+        "fonAdi": "YAPI KREDİ PORTFÖY ÜÇÜNCÜ PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 2.261252,
+        "tedavuldekiPaySayisi": 2142225013,
+        "kisiSayisi": 2794,
+        "fonToplamDeger": 4844110854.12,
+        "gunlukGetiri": 0.00104698,
+        "paraGirisiCikisi": -192930486.46,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "PPI",
         "fonAdi": "YAPI KREDİ PORTFÖY ÜÇÜNCÜ PARA PİYASASI (TL) FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.0010738,
       "paraGirisiCikisi": 850844988.79,
       "yatirimciDegisimi": 20
+    },
+    {
+      "fonKodu": "PPI",
+      "fonAdi": "YAPI KREDİ PORTFÖY ÜÇÜNCÜ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 2.261252,
+      "tedavuldekiPaySayisi": 2142225013,
+      "kisiSayisi": 2794,
+      "fonToplamDeger": 4844110854.12,
+      "gunlukGetiri": 0.00104698,
+      "paraGirisiCikisi": -192930486.46,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PPI",
+      "fonAdi": "YAPI KREDİ PORTFÖY ÜÇÜNCÜ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 2.261252,
+      "tedavuldekiPaySayisi": 2142225013,
+      "kisiSayisi": 2794,
+      "fonToplamDeger": 4844110854.12,
+      "gunlukGetiri": 0.00104698,
+      "paraGirisiCikisi": -192930486.46,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "PPI",
       "fonAdi": "YAPI KREDİ PORTFÖY ÜÇÜNCÜ PARA PİYASASI (TL) FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

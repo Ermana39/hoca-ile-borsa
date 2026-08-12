@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-11T15:47:09.850Z",
-  "sonIslemTarihi": "2026-08-11",
+  "generatedAt": "2026-08-12T08:14:59.526Z",
+  "sonIslemTarihi": "2026-08-12",
   "fund": {
     "kod": "TFE",
     "slug": "tfe",
@@ -12,13 +12,13 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-11",
+    "tarih": "2026-08-12",
     "aktifMi": true,
-    "fiyat": 2.802045,
-    "tedavuldekiPaySayisi": 12814934,
+    "fiyat": 2.804858,
+    "tedavuldekiPaySayisi": 12657726,
     "kisiSayisi": 112,
-    "fonToplamDeger": 35908020.46,
-    "gunlukGetiri": 0.00127212,
+    "fonToplamDeger": 35503129.98,
+    "gunlukGetiri": 0.00100391,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1702102.24,
+      "gunluk": -440946.12,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TFE",
+        "fonAdi": "AKTİF PORTFÖY TÜRKİYE FİNANS ALA BANKACILIK KATILIM ÖZEL FONU",
+        "tarih": "2026-08-12",
+        "fiyat": 2.804858,
+        "tedavuldekiPaySayisi": 12657726,
+        "kisiSayisi": 112,
+        "fonToplamDeger": 35503129.98,
+        "gunlukGetiri": 0.00100391,
+        "paraGirisiCikisi": -440946.12,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "TFE",
         "fonAdi": "AKTİF PORTFÖY TÜRKİYE FİNANS ALA BANKACILIK KATILIM ÖZEL FONU",
@@ -100,9 +112,33 @@
       "gunlukGetiri": 0.00127212,
       "paraGirisiCikisi": 1702102.24,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "TFE",
+      "fonAdi": "AKTİF PORTFÖY TÜRKİYE FİNANS ALA BANKACILIK KATILIM ÖZEL FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 2.804858,
+      "tedavuldekiPaySayisi": 12657726,
+      "kisiSayisi": 112,
+      "fonToplamDeger": 35503129.98,
+      "gunlukGetiri": 0.00100391,
+      "paraGirisiCikisi": -440946.12,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TFE",
+      "fonAdi": "AKTİF PORTFÖY TÜRKİYE FİNANS ALA BANKACILIK KATILIM ÖZEL FONU",
+      "tarih": "2026-08-12",
+      "fiyat": 2.804858,
+      "tedavuldekiPaySayisi": 12657726,
+      "kisiSayisi": 112,
+      "fonToplamDeger": 35503129.98,
+      "gunlukGetiri": 0.00100391,
+      "paraGirisiCikisi": -440946.12,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "TFE",
       "fonAdi": "AKTİF PORTFÖY TÜRKİYE FİNANS ALA BANKACILIK KATILIM ÖZEL FONU",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
