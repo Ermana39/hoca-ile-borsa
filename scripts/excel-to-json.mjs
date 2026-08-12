@@ -79,6 +79,41 @@ function isoTarihiTrYap(value) {
   return `${day}.${month}.${year}`;
 }
 
+function gunFarkiniHesapla(baslangicIso, bitisIso) {
+  return Math.round(
+    (Date.parse(`${bitisIso}T00:00:00Z`) -
+      Date.parse(`${baslangicIso}T00:00:00Z`)) /
+      86_400_000
+  );
+}
+
+function haftalikDonemiBul(tarihler, konum) {
+  if (tarihler.length < 2) {
+    throw new Error(`${konum} haftalık dönem tarihleri bulunamadı.`);
+  }
+
+  const donemBitisiIso = tarihler.at(-1);
+  const adaylar = tarihler
+    .slice(0, -1)
+    .map((tarih) => ({
+      tarih,
+      gunFarki: gunFarkiniHesapla(tarih, donemBitisiIso),
+    }))
+    .filter((aday) => aday.gunFarki >= 6 && aday.gunFarki <= 8)
+    .sort((a, b) => Math.abs(a.gunFarki - 7) - Math.abs(b.gunFarki - 7));
+
+  if (!adaylar.length) {
+    throw new Error(
+      `${konum} son bir haftayı kapsamıyor: ${tarihler[0]} - ${donemBitisiIso}`
+    );
+  }
+
+  return {
+    donemBaslangiciIso: adaylar[0].tarih,
+    donemBitisiIso,
+  };
+}
+
 async function dizinVarMi(dir) {
   try {
     const stat = await fs.stat(dir);
@@ -231,22 +266,10 @@ async function fonTercihExceliniJsonaCevir(filePath, workbook) {
   const tarihler = [...new Set(
     firstSheetData.rawRows.map((row) => trTarihiIsoYap(row[0])).filter(Boolean)
   )].sort();
-  if (tarihler.length < 2) {
-    throw new Error("Fon tercih Excel'inde haftalık dönem tarihleri bulunamadı.");
-  }
-
-  const donemBaslangiciIso = tarihler[0];
-  const donemBitisiIso = tarihler.at(-1);
-  const gunFarki = Math.round(
-    (Date.parse(`${donemBitisiIso}T00:00:00Z`) -
-      Date.parse(`${donemBaslangiciIso}T00:00:00Z`)) /
-      86_400_000
+  const { donemBaslangiciIso, donemBitisiIso } = haftalikDonemiBul(
+    tarihler,
+    "Fon tercih Excel'i"
   );
-  if (gunFarki < 6 || gunFarki > 8) {
-    throw new Error(
-      `Fon tercih Excel'i son bir haftayı kapsamıyor: ${donemBaslangiciIso} - ${donemBitisiIso}`
-    );
-  }
 
   const sheets = {};
   for (const sheetName of workbook.SheetNames) {

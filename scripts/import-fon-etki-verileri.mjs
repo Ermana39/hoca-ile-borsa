@@ -83,7 +83,7 @@ function fonSayfasiniDonustur(sheet, kod, oncekiFon) {
     throw new Error(`${kod}: portföy toplam satırı bulunamadı.`);
   }
 
-  const portfoy = rows.slice(1, toplamSatiri).map((row, index) => {
+  const hamPortfoy = rows.slice(1, toplamSatiri).map((row, index) => {
     const satirNo = index + 2;
     const sembol = metin(row[0]).toLocaleUpperCase("tr-TR");
     if (!sembol) {
@@ -115,32 +115,53 @@ function fonSayfasiniDonustur(sheet, kod, oncekiFon) {
     };
   });
 
-  const semboller = new Set();
-  for (const row of portfoy) {
-    if (semboller.has(row.sembol)) {
-      throw new Error(`${kod}: ${row.sembol} sembolü birden fazla kez girilmiş.`);
-    }
-    semboller.add(row.sembol);
-  }
-
-  const toplamFonOrani = yuvarla(
-    portfoy.reduce((sum, row) => sum + row.fonOrani, 0)
-  );
-  const toplamEtki = yuvarla(
-    portfoy.reduce((sum, row) => sum + row.etki, 0)
-  );
   const excelToplamOran = sayi(
     rows[toplamSatiri][1],
     "Toplam fon oranı",
     `${kod}!B${toplamSatiri + 1}`
   );
 
-  if (
-    Math.abs(excelToplamOran - toplamFonOrani) > NORMAL_TOPLAM_TOLERANSI
-  ) {
+  let portfoy = hamPortfoy;
+  let toplamFonOrani = yuvarla(
+    portfoy.reduce((sum, row) => sum + row.fonOrani, 0)
+  );
+
+  if (Math.abs(excelToplamOran - toplamFonOrani) > NORMAL_TOPLAM_TOLERANSI) {
+    let araToplam = 0;
+    const kapsamSonu = hamPortfoy.findIndex((row) => {
+      araToplam = yuvarla(araToplam + row.fonOrani);
+      return Math.abs(excelToplamOran - araToplam) <= NORMAL_TOPLAM_TOLERANSI;
+    });
+
+    if (kapsamSonu >= 0 && kapsamSonu < hamPortfoy.length - 1) {
+      const disaridaKalanlar = hamPortfoy
+        .slice(kapsamSonu + 1)
+        .map((row) => row.sembol)
+        .join(", ");
+      console.warn(
+        `${kod}: Excel toplamı ilk ${kapsamSonu + 1} satırla uyuşuyor; hesap kapsamı dışında bırakılan satırlar: ${disaridaKalanlar}`
+      );
+      portfoy = hamPortfoy.slice(0, kapsamSonu + 1);
+      toplamFonOrani = yuvarla(
+        portfoy.reduce((sum, row) => sum + row.fonOrani, 0)
+      );
+    }
+  }
+
+  const toplamEtki = yuvarla(portfoy.reduce((sum, row) => sum + row.etki, 0));
+
+  if (Math.abs(excelToplamOran - toplamFonOrani) > NORMAL_TOPLAM_TOLERANSI) {
     throw new Error(
       `${kod}: toplam fon oranı uyuşmuyor. Excel=${excelToplamOran}, hesap=${toplamFonOrani}`
     );
+  }
+
+  const semboller = new Set();
+  for (const row of portfoy) {
+    if (semboller.has(row.sembol)) {
+      throw new Error(`${kod}: ${row.sembol} sembolü birden fazla kez girilmiş.`);
+    }
+    semboller.add(row.sembol);
   }
 
   const tarihBasligi = rows.findIndex((row) => {

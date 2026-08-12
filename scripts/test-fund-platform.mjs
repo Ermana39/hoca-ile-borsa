@@ -731,16 +731,23 @@ const tercihRawRows = XLSX.utils.sheet_to_json(tercihSheet, {
 });
 const tercihDates = [...new Set(tercihRawRows.map((row) => parseDate(row[0])).filter(Boolean))].sort();
 assert(tercihDates.length >= 2, "Haftalık fon tercih Excel'inde dönem tarihleri bulunamadı.");
-const tercihStart = tercihDates[0];
 const tercihEnd = tercihDates.at(-1);
-const tercihDaySpan = Math.round(
-  (Date.parse(`${tercihEnd}T00:00:00Z`) - Date.parse(`${tercihStart}T00:00:00Z`)) /
-    86_400_000
-);
+const tercihDateCandidates = tercihDates
+  .slice(0, -1)
+  .map((date) => ({
+    date,
+    daySpan: Math.round(
+      (Date.parse(`${tercihEnd}T00:00:00Z`) - Date.parse(`${date}T00:00:00Z`)) /
+        86_400_000
+    ),
+  }))
+  .filter((item) => item.daySpan >= 6 && item.daySpan <= 8)
+  .sort((a, b) => Math.abs(a.daySpan - 7) - Math.abs(b.daySpan - 7));
 assert(
-  tercihDaySpan >= 6 && tercihDaySpan <= 8,
-  `Haftalık fon tercih dönemi bir haftayı kapsamıyor: ${tercihStart} - ${tercihEnd}`
+  tercihDateCandidates.length > 0,
+  `Haftalık fon tercih dönemi bir haftayı kapsamıyor: ${tercihDates[0]} - ${tercihEnd}`
 );
+const tercihStart = tercihDateCandidates[0].date;
 
 const tercihJson = JSON.parse(fs.readFileSync(sourcePaths.tercihJson, "utf8"));
 assert(tercihJson.rows.length === tercihSourceRows.length, "Haftalık fon tercih JSON satır sayısı Excel ile uyuşmuyor.");
