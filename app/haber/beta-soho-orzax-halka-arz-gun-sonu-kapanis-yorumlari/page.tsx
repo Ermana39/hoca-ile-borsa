@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -17,7 +18,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "BETA, SOHO ve ORZAX Gün Sonu: İki Tavan, Bir Taban Kapanış",
   description:
-    "Beta Enerji, Soho Giyim ve Orzax İlaç halka arzlarında gün sonu kapanış verileri açıklandı. BETA ve ORZAX günü tavan fiyatla kapatırken SOHOE halka arz fiyatının altına indi.",
+    seoAciklamasi("Beta Enerji, Soho Giyim ve Orzax İlaç halka arzlarında gün sonu kapanış verileri açıklandı. BETA ve ORZAX günü tavan fiyatla kapatırken SOHOE halka arz fiyatının altına indi.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

@@ -1,6 +1,7 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 export const metadata = {
-  title: "Hacim Artışı Analizi | Hoca İle Borsa",
-  description: "İşlem hacmindeki artışı izleyerek piyasada ilginin yoğunlaştığı hisseleri fark edin.",
+  title: "BIST Hacim Artışı Analizi",
+  description: seoAciklamasi("İşlem hacmindeki artışı izleyerek piyasada ilginin yoğunlaştığı hisseleri fark edin.", "Güncel tablolar, karşılaştırmalar ve yatırımcıların takip edebileceği temel göstergeler birlikte sunulur."),
   alternates: { canonical: "https://www.hocaileborsa.com/borsa/hacim-artisi-analizi" },
 };
 

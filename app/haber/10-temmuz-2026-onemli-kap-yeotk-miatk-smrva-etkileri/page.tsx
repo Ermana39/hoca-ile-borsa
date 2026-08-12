@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -16,7 +17,7 @@ const haberGorsel = "https://www.hocaileborsa.com/kap-ozeti-discover.webp";
 export const metadata: Metadata = {
   title: "10 Temmuz 2026 Önemli KAP: YEOTK, MIATK, SMRVA Etkileri",
   description:
-    "10 Temmuz 2026 KAP haberlerinde YEOTK, MIATK, SMRVA, ECILC, DNFIN, MOPAS, KTLEV, KARSN, VAKBN, PEKGY ve TTKOM açıklamaları öne çıktı.",
+    seoAciklamasi("10 Temmuz 2026 KAP haberlerinde YEOTK, MIATK, SMRVA, ECILC, DNFIN, MOPAS, KTLEV, KARSN, VAKBN, PEKGY ve TTKOM açıklamaları öne çıktı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

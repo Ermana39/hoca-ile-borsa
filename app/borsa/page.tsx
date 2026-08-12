@@ -1,6 +1,7 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 export const metadata = {
-  title: "Borsa Analiz | Hoca İle Borsa",
-  description: "BIST hisse analizleri, teknik analiz, gösterge taramaları, pivot analizi ve günlük borsa verileri.",
+  title: "Borsa Analizleri ve Hisse Tarama Araçları",
+  description: seoAciklamasi("BIST hisse analizleri, teknik analiz, gösterge taramaları, pivot analizi ve günlük borsa verileri.", "Güncel tablolar, karşılaştırmalar ve yatırımcıların takip edebileceği temel göstergeler birlikte sunulur."),
   alternates: { canonical: "https://www.hocaileborsa.com/borsa" },
 };
 

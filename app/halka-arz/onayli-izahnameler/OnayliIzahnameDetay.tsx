@@ -12,6 +12,7 @@ import {
   type HalkaArzVeri,
 } from "@/lib/halka-arz";
 import { riskMaddeleri } from "@/lib/halka-arz-risk";
+import { halkaArzSeoMetinleri } from "@/lib/halka-arz-seo";
 
 export async function generateMetadata({
   params,
@@ -21,30 +22,27 @@ export async function generateMetadata({
   const { slug } = await params;
   const veri = halkaArzGetir(slug);
   if (!veri || veri.seo?.contentStatus !== "onayli") return {};
-  const canonical =
-    veri.seo?.canonical ||
-    `https://www.hocaileborsa.com/halka-arz/onayli-izahnameler/${slug}`;
-  const title = veri.baslikMeta.title;
-  const description = veri.baslikMeta.description;
+  const canonical = `https://www.hocaileborsa.com/halka-arz/onayli-izahnameler/${slug}`;
+  const seoMetinleri = halkaArzSeoMetinleri(veri, "onayli");
 
   return {
-    title,
-    description,
+    title: { absolute: seoMetinleri.title },
+    description: seoMetinleri.description,
     alternates: {
       canonical,
     },
     robots: veri.seo?.robots,
     openGraph: {
-      title,
-      description,
+      title: veri.baslikMeta.title,
+      description: veri.baslikMeta.description,
       url: canonical,
-      siteName: "Hoca ile Borsa",
+      siteName: "Hoca İle Borsa",
       type: "website",
     },
     twitter: {
       card: "summary_large_image",
-      title,
-      description,
+      title: veri.baslikMeta.title,
+      description: veri.baslikMeta.description,
     },
   };
 }
@@ -181,7 +179,7 @@ function YouTubeVideoCards({ videolar }: { videolar?: HalkaArzVideo[] }) {
                   </p>
                 )}
                 <div className="mt-3 text-xs font-bold text-red-600">
-                  YouTube'da aç →
+                  YouTube&apos;da aç →
                 </div>
               </div>
             </a>
@@ -710,16 +708,48 @@ export default async function OnayliIzahnameDetayPage({
       )
   );
   const tahsisat = tahsisatSatirlari(veri);
+  const canonical = `https://www.hocaileborsa.com/halka-arz/onayli-izahnameler/${slug}`;
+  const seoMetinleri = halkaArzSeoMetinleri(veri, "onayli");
+  const sorular = sssSorulari(veri);
   const donemler =
     veri.finansalDonemler && veri.finansalDonemler.length > 0
       ? veri.finansalDonemler
       : Array.from(
           new Set(veri.finansalVeriler.flatMap((r) => Object.keys(r.donemler)))
         );
-  const kod = veri.bistKodu || veri.ozet.bistKodu;
+  const kodAdayi = veri.bistKodu || veri.ozet.bistKodu;
+  const kod = bekleyenDeger(kodAdayi) ? undefined : kodAdayi;
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": `${canonical}#webpage`,
+      url: canonical,
+      name: `${kod ? `${kod} ` : ""}${veri.sirketAdi} Halka Arzı`,
+      description: seoMetinleri.description,
+      inLanguage: "tr-TR",
+      isPartOf: { "@id": "https://www.hocaileborsa.com/#website" },
+      about: { "@type": "Organization", name: veri.sirketAdi },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: sorular.map((item) => ({
+        "@type": "Question",
+        name: item.soru,
+        acceptedAnswer: { "@type": "Answer", text: item.cevap },
+      })),
+    },
+  ];
 
   return (
     <main className="min-h-screen bg-[#f8fafc] text-slate-900">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
+        }}
+      />
       <div className="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
         <section className="mb-8 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-sm">
           <div className="border-b border-slate-200 bg-gradient-to-r from-indigo-600 to-blue-600 px-6 py-7 text-white">

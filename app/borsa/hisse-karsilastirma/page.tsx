@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import type { Metadata } from "next";
 import Link from "@/components/NoPrefetchLink";
 import HisseKarsilastirmaAraci from "@/components/HisseKarsilastirmaAraci";
@@ -8,7 +9,7 @@ const canonicalUrl = "https://www.hocaileborsa.com/borsa/hisse-karsilastirma";
 export const metadata: Metadata = {
   title: "Hisse Karşılaştırma Aracı | Finansal Oran Karşılaştırması",
   description:
-    "İki veya üç BIST şirketini F/K, PD/DD, kârlılık, borçluluk, büyüme ve temettü verileriyle aynı ekranda karşılaştırın.",
+    seoAciklamasi("İki veya üç BIST şirketini F/K, PD/DD, kârlılık, borçluluk, büyüme ve temettü verileriyle aynı ekranda karşılaştırın.", "Güncel tablolar, karşılaştırmalar ve yatırımcıların takip edebileceği temel göstergeler birlikte sunulur."),
   alternates: { canonical: canonicalUrl },
   robots: { index: true, follow: true },
   openGraph: {

@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -11,7 +12,7 @@ const haberTarihi = formatHaberTarihi(haberSaati);
 export const metadata: Metadata = {
   title: "AKSEN BBVA ile 124 Milyon Dolarlık Kredi İmzaladı",
   description:
-    "Aksa Enerji, Mersin depolamalı RES yatırımı için BBVA ile 124 milyon dolarlık, 12 yıl vadeli kredi anlaşması imzaladı.",
+    seoAciklamasi("Aksa Enerji, Mersin depolamalı RES yatırımı için BBVA ile 124 milyon dolarlık, 12 yıl vadeli kredi anlaşması imzaladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/aksen-bbva-124-milyon-dolar-kredi-anlasmasi",

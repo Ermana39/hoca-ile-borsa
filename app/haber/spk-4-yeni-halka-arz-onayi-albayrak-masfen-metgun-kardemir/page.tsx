@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -87,7 +88,7 @@ const halkaArzlar = [
 
 export const metadata: Metadata = {
   title: pageTitle,
-  description: pageDescription,
+  description: seoAciklamasi(pageDescription, "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical,
   },
@@ -95,7 +96,7 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
     url: canonical,
-    siteName: "Hoca ile Borsa",
+    siteName: "Hoca İle Borsa",
     type: "article",
     images: [
       {

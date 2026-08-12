@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "ALTNY’den 134,1 Milyon Dolarlık Havacılık Ekipmanı Sözleşmesi",
   description:
-    "ALTNY bağlı ortaklığı TAAC Havacılık, yurt içindeki bir müşteriyle kritik havacılık ekipmanı tedariki için KDV hariç 134,1 milyon dolarlık sözleşme imzaladı.",
+    seoAciklamasi("ALTNY bağlı ortaklığı TAAC Havacılık, yurt içindeki bir müşteriyle kritik havacılık ekipmanı tedariki için KDV hariç 134,1 milyon dolarlık sözleşme imzaladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: { canonical: haberUrl },
   openGraph: {
     type: "article",

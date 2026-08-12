@@ -12,11 +12,13 @@ const title =
   "Fonların Günlük Portföy Etkisi: TLY, PHE, PBR, DFI, KHA ve THF";
 const description =
   "TLY, PHE, PBR, DFI, KHA ve THF fonlarının güncel portföy etkisini karşılaştırın. Tahmini fiyat değişimini, yatırımcı hareketini, para akışını ve veri kapsamını inceleyin.";
+const seoDescription =
+  "TLY, PHE, PBR, DFI, KHA ve THF fonlarının güncel portföy etkisi, tahmini fiyat değişimi, yatırımcı hareketi ve para akışını tek ekranda karşılaştırın.";
 const image = `${siteUrl}/2026-fon-etki-analizi-tly-phe-pbr-dfi.webp`;
 
 export const metadata: Metadata = {
   title,
-  description,
+  description: seoDescription,
   authors: [{ name: "Erman Hoca", url: `${siteUrl}/yazar/erman-hoca` }],
   alternates: { canonical },
   keywords: [

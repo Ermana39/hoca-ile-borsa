@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -9,7 +10,7 @@ import KapCardLinks from "@/components/KapCardLinks";
 export const metadata: Metadata = {
   title: "19 Haziran KAP: BOBET, MANAS, TOASO ve ANELE Öne Çıktı",
   description:
-    "BOBET, MANAS, TOASO, ANELE ve diğer şirketlerin 19 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.",
+    seoAciklamasi("BOBET, MANAS, TOASO, ANELE ve diğer şirketlerin 19 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/19-haziran-2026-onemli-kap-haberleri",

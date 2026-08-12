@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "CIMSA CAC Tesisi Devreye Alındı: Kapasite 197 Bin Tona Çıktı",
   description:
-    "Çimsa, Mersin Fabrikası'ndaki CAC kapasite artırımı yatırımını devreye aldı. Yıllık CAC klinkeri üretim kapasitesi 131 bin tondan 197 bin tona yükseldi.",
+    seoAciklamasi("Çimsa, Mersin Fabrikası'ndaki CAC kapasite artırımı yatırımını devreye aldı. Yıllık CAC klinkeri üretim kapasitesi 131 bin tondan 197 bin tona yükseldi.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

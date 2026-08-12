@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -9,9 +10,9 @@ const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
 
 export const metadata: Metadata = {
-  title: "FONET Aydın İl Sağlık Müdürlüğü SBYS İhalesinde En Uygun Teklifi Verdi",
+  title: { absolute: "FONET SBYS İhalesinde En Uygun Teklifi Verdi" },
   description:
-    "Fonet Bilgi Teknolojileri, Aydın İl Sağlık Müdürlüğü tarafından yapılan 36 aylık Sağlık Bilgi Yönetim Sistemi hizmet alımı ihalesinde 198,5 milyon TL ile en uygun teklifin şirket tarafından verildiğini açıkladı.",
+    seoAciklamasi("Fonet Bilgi Teknolojileri, Aydın İl Sağlık Müdürlüğü tarafından yapılan 36 aylık Sağlık Bilgi Yönetim Sistemi hizmet alımı ihalesinde 198,5 milyon TL ile en uygun teklifin şirket tarafından verildiğini açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/fonet-aydin-il-saglik-mudurlugu-sbys-ihalesi",

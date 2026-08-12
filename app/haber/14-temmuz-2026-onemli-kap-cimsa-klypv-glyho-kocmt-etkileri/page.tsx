@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -19,7 +20,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "14 Temmuz 2026 Önemli KAP: CIMSA, KLYPV, GLYHO, KOCMT Etkileri",
   description:
-    "14 Temmuz 2026 KAP akışında CIMSA CAC kapasite artışı, KLYPV 5,75 milyar TL sözleşme, GLYHO liman pay artışı, KOCMT Muş GES finansal kiralama, TNZTP bedelsiz, FORMT, ULUUN, KBORU, FORTE, ISGYO ve PRZMA bildirimleri öne çıktı.",
+    seoAciklamasi("14 Temmuz 2026 KAP akışında CIMSA CAC kapasite artışı, KLYPV 5,75 milyar TL sözleşme, GLYHO liman pay artışı, KOCMT Muş GES finansal kiralama, TNZTP bedelsiz, FORMT, ULUUN, KBORU, FORTE, ISGYO ve PRZMA bildirimleri öne çıktı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

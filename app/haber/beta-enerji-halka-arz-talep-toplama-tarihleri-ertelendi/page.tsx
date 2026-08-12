@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -8,7 +9,7 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 export const metadata: Metadata = {
   title: "Beta Enerji Halka Arzında Talep Toplama Tarihleri Ertelendi",
   description:
-    "Beta Enerji ve Teknoloji A.Ş.’nin daha önce 18-19 Haziran 2026 olarak duyurulan halka arz talep toplama tarihleri, izahnamede yapılması gereken güncelleme ihtiyacı nedeniyle ileri bir tarihe ertelendi.",
+    seoAciklamasi("Beta Enerji ve Teknoloji A.Ş.’nin daha önce 18-19 Haziran 2026 olarak duyurulan halka arz talep toplama tarihleri, izahnamede yapılması gereken güncelleme ihtiyacı nedeniyle ileri bir tarihe ertelendi.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/beta-enerji-halka-arz-talep-toplama-tarihleri-ertelendi",

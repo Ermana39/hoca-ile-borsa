@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -16,10 +17,11 @@ const haberGorsel =
   "https://www.hocaileborsa.com/ucaym-sancaktepe-sehir-hastanesi-1-35-milyar-tl-sozlesme.webp";
 
 export const metadata: Metadata = {
-  title:
-    "UCAYM Sancaktepe Şehir Hastanesi İçin 1,35 Milyar TL’lik Sözleşme İmzaladı",
+  title: {
+    absolute: "UCAYM: 1,35 Milyar TL’lik Şehir Hastanesi Sözleşmesi",
+  },
   description:
-    "Üçay Mühendislik, REC Uluslararası İnşaat ile İstanbul Sancaktepe Şehir Hastanesi projesinde mekanik ve elektrik işleri için toplam 1,35 milyar TL büyüklüğünde iki sözleşme imzaladı.",
+    seoAciklamasi("Üçay Mühendislik, REC Uluslararası İnşaat ile İstanbul Sancaktepe Şehir Hastanesi projesinde mekanik ve elektrik işleri için toplam 1,35 milyar TL büyüklüğünde iki sözleşme imzaladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

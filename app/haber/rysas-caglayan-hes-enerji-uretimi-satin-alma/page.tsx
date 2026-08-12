@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -11,7 +12,7 @@ const haberTarihi = formatHaberTarihi(haberSaati);
 export const metadata: Metadata = {
   title: "RYSAS Çağlayan HES Enerji Üretim A.Ş.’nin Tamamını Satın Aldı",
   description:
-    "Reysaş Taşımacılık ve Lojistik, Çağlayan HES Enerji Üretim A.Ş.’nin %100 hissesini 6,93 milyon dolar bedelle satın aldığını açıkladı. Şirket, enerji maliyetlerini azaltmayı ve karbon ayak izini düşürmeyi hedefliyor.",
+    seoAciklamasi("Reysaş Taşımacılık ve Lojistik, Çağlayan HES Enerji Üretim A.Ş.’nin %100 hissesini 6,93 milyon dolar bedelle satın aldığını açıkladı. Şirket, enerji maliyetlerini azaltmayı ve karbon ayak izini düşürmeyi hedefliyor.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/rysas-caglayan-hes-enerji-uretimi-satin-alma",

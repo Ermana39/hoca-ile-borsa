@@ -1,11 +1,12 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "QUAGR İkili Dip Formasyonu | Hoca İle Borsa",
+  title: "QUAGR İkili Dip Formasyonu Analizi",
   description:
-    "QUAGR günlük grafik teknik değerlendirmesi, destek ve direnç seviyeleri.",
+    seoAciklamasi("QUAGR günlük grafik teknik değerlendirmesi, destek ve direnç seviyeleri.", "Güncel tablolar, karşılaştırmalar ve yatırımcıların takip edebileceği temel göstergeler birlikte sunulur."),
   alternates: {
     canonical: "/borsa/formasyonlar/quagr-ikili-dip-formasyonu",
   },

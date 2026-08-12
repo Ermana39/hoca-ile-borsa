@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -9,7 +10,7 @@ import KapCardLinks from "@/components/KapCardLinks";
 export const metadata: Metadata = {
   title: "26 Haziran KAP: ARDYZ Sipariş, MARKA Görüşme, TRALT Karar",
   description:
-    "ARDYZ yapay zeka altyapı siparişi, MARKA yatırım görüşmesi, TRALT proje kararı ve 26 Haziran KAP bildirimleri.",
+    seoAciklamasi("ARDYZ yapay zeka altyapı siparişi, MARKA yatırım görüşmesi, TRALT proje kararı ve 26 Haziran KAP bildirimleri.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/26-haziran-2026-onemli-kap-haberleri",

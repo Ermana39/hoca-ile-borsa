@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -8,7 +9,7 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 export const metadata: Metadata = {
   title: "HRKET’ten %1300 Bedelsiz Sermaye Artırımı Başvurusu",
   description:
-    "Hareket Proje Taşımacılığı ve Yük Mühendisliği A.Ş. (HRKET), sermayesini 115,2 milyon TL’den 1,61 milyar TL’ye çıkarmak için %1300 oranında bedelsiz sermaye artırımı başvurusu yaptı.",
+    seoAciklamasi("Hareket Proje Taşımacılığı ve Yük Mühendisliği A.Ş. (HRKET), sermayesini 115,2 milyon TL’den 1,61 milyar TL’ye çıkarmak için %1300 oranında bedelsiz sermaye artırımı başvurusu yaptı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/hrket-1300-bedelsiz-sermaye-artirimi-basvurusu",

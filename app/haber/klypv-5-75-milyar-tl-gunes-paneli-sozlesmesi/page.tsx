@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "KLYPV 5,75 Milyar TL’lik Güneş Paneli Sözleşmesini Kesinleştirdi",
   description:
-    "Kalyon PV, güneş paneli satışına ilişkin nihai sözleşme tutarını 5,75 milyar TL olarak açıkladı. Teslimatlar başladı, hasılatın 2026 sonuna kadar kaydedilmesi bekleniyor.",
+    seoAciklamasi("Kalyon PV, güneş paneli satışına ilişkin nihai sözleşme tutarını 5,75 milyar TL olarak açıkladı. Teslimatlar başladı, hasılatın 2026 sonuna kadar kaydedilmesi bekleniyor.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

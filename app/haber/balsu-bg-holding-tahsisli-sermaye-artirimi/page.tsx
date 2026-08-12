@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -9,9 +10,9 @@ const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
 
 export const metadata: Metadata = {
-  title: "BALSU’dan BG Holding’e 4,64 Milyar TL’lik Tahsisli Sermaye Artırımı Kararı",
+  title: { absolute: "BALSU: 4,64 Milyar TL Tahsisli Sermaye Artırımı" },
   description:
-    "Balsu Gıda, özkaynak yapısını güçlendirmek amacıyla BG Holding A.Ş.’ye tahsisli sermaye artırımı yapılması için yönetim kurulu kararı aldığını açıkladı. Planlanan toplam satış hasılatı 4,64 milyar TL olarak duyuruldu.",
+    seoAciklamasi("Balsu Gıda, özkaynak yapısını güçlendirmek amacıyla BG Holding A.Ş.’ye tahsisli sermaye artırımı yapılması için yönetim kurulu kararı aldığını açıkladı. Planlanan toplam satış hasılatı 4,64 milyar TL olarak duyuruldu.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/balsu-bg-holding-tahsisli-sermaye-artirimi",

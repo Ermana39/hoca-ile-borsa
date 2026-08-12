@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "TRILC Tetadif Aşısının Ruhsatı Yeniden Aktif Hale Getirildi",
   description:
-    "TRILC, Tetadif 0.5 ml aşısının askıya alınan ruhsatına ilişkin işlemlerin iptal edildiğini ve ürün ruhsatının yeniden aktif statüye döndüğünü açıkladı.",
+    seoAciklamasi("TRILC, Tetadif 0.5 ml aşısının askıya alınan ruhsatına ilişkin işlemlerin iptal edildiğini ve ürün ruhsatının yeniden aktif statüye döndüğünü açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import type { Metadata } from "next";
 import { formasyonData } from "./data";
@@ -7,7 +8,7 @@ const sayfaUrl = `${siteUrl}/borsa/formasyonlar/${formasyonData.slug}`;
 
 export const metadata: Metadata = {
   title: `${formasyonData.kod} ${formasyonData.tur} | Günlük Grafik Teknik Analizi`,
-  description: `${formasyonData.kod} günlük grafikte ${formasyonData.tur} görünümüyle takip ediliyor. İlk direnç ${formasyonData.ilkDirenc}, hedef ${formasyonData.hedef}, bozulma seviyesi ${formasyonData.bozulma}.`,
+  description: seoAciklamasi(`${formasyonData.kod} günlük grafikte ${formasyonData.tur} görünümüyle takip ediliyor. İlk direnç ${formasyonData.ilkDirenc}, hedef ${formasyonData.hedef}, bozulma seviyesi ${formasyonData.bozulma}.`, "Güncel tablolar, karşılaştırmalar ve yatırımcıların takip edebileceği temel göstergeler birlikte sunulur."),
   alternates: {
     canonical: sayfaUrl,
   },
@@ -64,11 +65,11 @@ export default function TrenjUcluDipFormasyonuPage() {
     image: `${siteUrl}${formasyonData.gorsel}`,
     author: {
       "@type": "Organization",
-      name: "Hoca ile Borsa",
+      name: "Hoca İle Borsa",
     },
     publisher: {
       "@type": "Organization",
-      name: "Hoca ile Borsa",
+      name: "Hoca İle Borsa",
     },
     datePublished: "2026-07-06",
     dateModified: "2026-07-06",

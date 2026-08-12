@@ -10,10 +10,9 @@ const siteUrl = "https://www.hocaileborsa.com";
 const sayfaUrl = `${siteUrl}/fonlar/haftalik-yatirim-fonlarinin-en-cok-tercih-ettigi-hisseler`;
 
 export const metadata = {
-  title:
-    "Haftalık Yatırım Fonlarının En Çok Tercih Ettiği Hisseler | Fon Takas Verileri",
+  title: "Fonların En Çok Tercih Ettiği Hisseler: Haftalık",
   description:
-    "Yatırım fonlarının ve emeklilik fonlarının haftalık bazda en çok tercih ettiği Borsa İstanbul hisselerini, fon takas değişimlerini ve kurumsal para hareketlerini inceleyin.",
+    "Yatırım ve emeklilik fonlarının son haftada en çok artırdığı BIST hisselerini, fon takas değişimlerini ve kurumsal para hareketlerini karşılaştırmalı inceleyin.",
   alternates: {
     canonical: sayfaUrl,
   },

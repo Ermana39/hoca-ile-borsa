@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -16,9 +17,9 @@ const haberGorsel =
   "https://www.hocaileborsa.com/smrva-denizbank-426-milyon-tl-alacak-portfoyu-ihalesi.webp";
 
 export const metadata: Metadata = {
-  title: "SMRVA Denizbank’ın 426 Milyon TL’lik Alacak Portföyü İhalesini Kazandı",
+  title: { absolute: "SMRVA: 426 Milyon TL’lik Denizbank Alacak İhalesi" },
   description:
-    "Sümer Varlık Yönetim, Denizbank’ın 426,4 milyon TL anapara büyüklüğüne sahip tahsili gecikmiş bireysel alacak portföyü ihalesinde en yüksek teklifi verdi.",
+    seoAciklamasi("Sümer Varlık Yönetim, Denizbank’ın 426,4 milyon TL anapara büyüklüğüne sahip tahsili gecikmiş bireysel alacak portföyü ihalesinde en yüksek teklifi verdi.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

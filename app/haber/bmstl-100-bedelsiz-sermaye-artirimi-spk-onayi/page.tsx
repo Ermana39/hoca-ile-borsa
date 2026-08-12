@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -8,7 +9,7 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 export const metadata: Metadata = {
   title: "BMSTL’de %100 Bedelsiz Sermaye Artırımı İçin SPK Onayı",
   description:
-    "BMS Birleşik Metal Sanayi ve Ticaret A.Ş. (BMSTL), %100 oranındaki bedelsiz sermaye artırımı için SPK başvurusunun onaylandığını açıkladı. Şirket sermayesi 150 milyon TL'den 300 milyon TL'ye çıkarılacak.",
+    seoAciklamasi("BMS Birleşik Metal Sanayi ve Ticaret A.Ş. (BMSTL), %100 oranındaki bedelsiz sermaye artırımı için SPK başvurusunun onaylandığını açıkladı. Şirket sermayesi 150 milyon TL'den 300 milyon TL'ye çıkarılacak.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/bmstl-100-bedelsiz-sermaye-artirimi-spk-onayi",

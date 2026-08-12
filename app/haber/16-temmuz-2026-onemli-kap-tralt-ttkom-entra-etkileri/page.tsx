@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -19,7 +20,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "16 Temmuz 2026 Önemli KAP: TRALT, TTKOM, ENTRA Etkileri",
   description:
-    "16 Temmuz 2026 KAP özetinde TRALT ilk altın dökümü, TTKOM 1 milyar dolarlık sukuk kararı, ENTRA ÇED onayı ve günün diğer önemli şirket haberleri yer alıyor.",
+    seoAciklamasi("16 Temmuz 2026 KAP özetinde TRALT ilk altın dökümü, TTKOM 1 milyar dolarlık sukuk kararı, ENTRA ÇED onayı ve günün diğer önemli şirket haberleri yer alıyor.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

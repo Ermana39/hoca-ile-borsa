@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "PGSUS Haziran 2026 Trafik Verileri Açıklandı",
   description:
-    "Pegasus Haziran 2026 trafik verilerini açıkladı. Toplam misafir sayısı aylık bazda %3 artışla 3,74 milyona, yılın ilk yarısında ise %3 artışla 20,37 milyona ulaştı.",
+    seoAciklamasi("Pegasus Haziran 2026 trafik verilerini açıkladı. Toplam misafir sayısı aylık bazda %3 artışla 3,74 milyona, yılın ilk yarısında ise %3 artışla 20,37 milyona ulaştı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

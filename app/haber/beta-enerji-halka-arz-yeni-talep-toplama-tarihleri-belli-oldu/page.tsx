@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -8,7 +9,7 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 export const metadata: Metadata = {
   title: "Beta Enerji Halka Arzında Yeni Talep Toplama Tarihleri Belli Oldu",
   description:
-    "Daha önce ertelenen Beta Enerji ve Teknoloji A.Ş. halka arzında yeni talep toplama tarihleri belli oldu. Şirket payları 23-25 Haziran 2026 tarihleri arasında 40 TL fiyatla satışa sunulacak.",
+    seoAciklamasi("Daha önce ertelenen Beta Enerji ve Teknoloji A.Ş. halka arzında yeni talep toplama tarihleri belli oldu. Şirket payları 23-25 Haziran 2026 tarihleri arasında 40 TL fiyatla satışa sunulacak.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/beta-enerji-halka-arz-yeni-talep-toplama-tarihleri-belli-oldu",

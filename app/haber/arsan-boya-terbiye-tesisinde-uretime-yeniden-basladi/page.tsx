@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "ARSAN Boya Terbiye Tesisinde Üretime Yeniden Başladı",
   description:
-    "ARSAN, 6 Şubat 2023 depreminde hasar gören boya terbiye tesislerinde onarımın tamamlandığını, yapı kullanma izninin alındığını ve üretime yeniden başlandığını açıkladı.",
+    seoAciklamasi("ARSAN, 6 Şubat 2023 depreminde hasar gören boya terbiye tesislerinde onarımın tamamlandığını, yapı kullanma izninin alındığını ve üretime yeniden başlandığını açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

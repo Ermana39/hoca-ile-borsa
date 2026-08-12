@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -11,7 +12,7 @@ const haberTarihi = formatHaberTarihi(haberSaati);
 export const metadata: Metadata = {
   title: "GRTHO’dan %950 Bedelsiz Sermaye Artırımı İçin SPK Başvurusu",
   description:
-    "Grainturk Holding, 125 milyon TL olan çıkarılmış sermayesini tamamı iç kaynaklardan karşılanmak üzere 1,31 milyar TL’ye çıkaracak %950 bedelsiz sermaye artırımı için SPK başvurusu yaptığını açıkladı.",
+    seoAciklamasi("Grainturk Holding, 125 milyon TL olan çıkarılmış sermayesini tamamı iç kaynaklardan karşılanmak üzere 1,31 milyar TL’ye çıkaracak %950 bedelsiz sermaye artırımı için SPK başvurusu yaptığını açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/grtho-950-bedelsiz-sermaye-artirimi-spk-basvurusu",

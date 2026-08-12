@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -6,15 +7,16 @@ import AuthorBox from "@/components/AuthorBox";
 import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
-  title: "ABD Mahkemesi Halkbank Davasını Düşürdü: 9 Yıllık Süreç Sona Erdi",
+  title: { absolute: "HALKB: ABD Mahkemesi Halkbank Davasını Düşürdü" },
   description:
-    "ABD federal mahkemesi, Halkbank hakkında İran yaptırımları iddialarıyla açılan ceza davasının düşürülmesine karar verdi. Karar, HALKB hissesi ve bankacılık sektörü açısından önemli bir hukuki belirsizliği ortadan kaldırdı.",
+    seoAciklamasi("HALKB Halkbank hakkında ABD’de açılan dava düşürüldü. Kararın dokuz yıllık hukuki süreç, Halkbank hissesi ve bankacılık sektörü açısından etkisini okuyun.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
-      "https://www.hocaileborsa.com/haber/abd-mahkemesi-halkbank-davasini-dusurdu",
+      "https://www.hocaileborsa.com/haber/halkbank_abd_davasi",
   },
   openGraph: {
     type: "article",
+    title: "ABD Mahkemesi Halkbank Davasını Düşürdü: 9 Yıllık Süreç Sona Erdi",
     images: [
       {
         url: "https://www.hocaileborsa.com/halkbank-abd-davasi-dustu-discover.webp",
@@ -80,7 +82,7 @@ const jsonLd = {
     "ABD federal mahkemesi, Halkbank hakkında İran yaptırımları iddialarıyla açılan ceza davasının düşürülmesine karar verdi. Karar, HALKB hissesi ve bankacılık sektörü açısından önemli bir hukuki belirsizliği ortadan kaldırdı.",
   datePublished: "2026-06-17T16:30:00+03:00",
   dateModified: "2026-06-17T16:30:00+03:00",
-  url: "https://www.hocaileborsa.com/haber/abd-mahkemesi-halkbank-davasini-dusurdu",
+  url: "https://www.hocaileborsa.com/haber/halkbank_abd_davasi",
   author: {
     "@type": "Person",
     "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",

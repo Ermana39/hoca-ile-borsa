@@ -1,4 +1,5 @@
 import type { TemelOranlar } from "@/lib/oranYorumla";
+import { seoAciklamasi } from "@/lib/seo-metadata";
 
 type HisseKunyeSeoGirdisi = {
   kod: string;
@@ -61,6 +62,9 @@ export function hisseKunyeSeoMetinleri({
 
   return {
     baslik,
-    aciklama: `${kod} ${oranOzeti(temelOranlar)}; ${katilimMetni}. ${sonCumle}`,
+    aciklama: seoAciklamasi(
+      `${kod} ${oranOzeti(temelOranlar)}; ${katilimMetni}. ${sonCumle}`,
+      "Faaliyet alanı, güncel künye bilgileri ve yatırımcıların takip edebileceği temel başlıklar birlikte sunulur."
+    ),
   };
 }

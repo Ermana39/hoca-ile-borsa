@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -15,9 +16,9 @@ const haberGorsel =
   "https://www.hocaileborsa.com/tralt-canakkale-karapinar-projesinde-yurutmeyi-durdurma-karari.webp";
 
 export const metadata: Metadata = {
-  title: "TRALT Çanakkale Karapınar Projesinde Yürütmeyi Durdurma Kararı",
+  title: { absolute: "TRALT Karapınar Davası: Yürütmeyi Durdurma Kararı" },
   description:
-    "Türk Altın İşletmeleri, Çanakkale Karapınar Altın-Gümüş Madeni Açık Ocak İşletmesi Projesi için açılan davada yürütmenin durdurulması talebinin kabul edildiğini açıkladı.",
+    seoAciklamasi("Türk Altın İşletmeleri, Çanakkale Karapınar Altın-Gümüş Madeni Açık Ocak İşletmesi Projesi için açılan davada yürütmenin durdurulması talebinin kabul edildiğini açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -16,9 +17,9 @@ const haberGorsel =
   "https://www.hocaileborsa.com/astor-abd-31-7-milyon-dolar-guc-transformatoru-sozlesmesi.webp";
 
 export const metadata: Metadata = {
-  title: "ASTOR ABD ile 31,7 Milyon Dolarlık Güç Transformatörü Sözleşmesi İmzaladı",
+  title: { absolute: "ASTOR: 31,7 Milyon Dolarlık ABD Trafo Sözleşmesi" },
   description:
-    "ASTOR, ABD’de yerleşik bir firma ile 31,7 milyon dolar tutarında güç transformatörü tedarik sözleşmesi imzaladı. Sözleşmenin TL karşılığı 1,48 milyar TL seviyesinde.",
+    seoAciklamasi("ASTOR, ABD’de yerleşik bir firma ile 31,7 milyon dolar tutarında güç transformatörü tedarik sözleşmesi imzaladı. Sözleşmenin TL karşılığı 1,48 milyar TL seviyesinde.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

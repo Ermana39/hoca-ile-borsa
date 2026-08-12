@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -10,7 +11,7 @@ const haberSaati = "2026-06-27T15:13:00+03:00";
 export const metadata: Metadata = {
   title: "5 Halka Arzın Talep Toplama Tarihleri",
   description:
-    "ORZAX, SOHO, EKIM, ISVEA ve GOLDA halka arz talep toplama tarihleri belli oldu. Hangi gün hangi halka arz var? Tüm takvim ve izahname linkleri.",
+    seoAciklamasi("ORZAX, SOHO, EKIM, ISVEA ve GOLDA halka arz talep toplama tarihleri belli oldu. Hangi gün hangi halka arz var? Tüm takvim ve izahname linkleri.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/5-halka-arz-talep-toplama-tarihleri",

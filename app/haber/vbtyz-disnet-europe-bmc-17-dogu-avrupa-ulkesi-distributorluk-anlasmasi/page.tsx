@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "VBTYZ BMC Ürünleri İçin 17 Doğu Avrupa Ülkesinde Distribütör Oldu",
   description:
-    "VBTYZ’nin bağlı ortaklığı Disnet, Hollanda’da Disnet Europe B.V.’yi kurdu ve BMC ürünleri için 17 Doğu Avrupa ülkesinde 2030 sonuna kadar distribütörlük yetkisi aldı.",
+    seoAciklamasi("VBTYZ’nin bağlı ortaklığı Disnet, Hollanda’da Disnet Europe B.V.’yi kurdu ve BMC ürünleri için 17 Doğu Avrupa ülkesinde 2030 sonuna kadar distribütörlük yetkisi aldı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: { canonical: haberUrl },
   openGraph: {
     type: "article",

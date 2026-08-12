@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -9,7 +10,7 @@ import KapCardLinks from "@/components/KapCardLinks";
 export const metadata: Metadata = {
   title: "17 Haziran KAP: MIATK, DCTTR, BIMAS ve GRNYO Öne Çıktı",
   description:
-    "MIATK, DCTTR, BIMAS, GRNYO ve diğer şirketlerin 17 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.",
+    seoAciklamasi("MIATK, DCTTR, BIMAS, GRNYO ve diğer şirketlerin 17 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/17-haziran-2026-onemli-kap-haberleri",

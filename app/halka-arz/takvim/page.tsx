@@ -3,6 +3,7 @@ import Link from "@/components/NoPrefetchLink";
 import { halkaArzSonuclari } from "@/data/halka-arz-sonuclari";
 import { getHisseIcerikHedefi } from "@/lib/hisse-icerik-hedefi";
 import { bekleyenDeger, halkaArzGetir } from "@/lib/halka-arz";
+import { seoAciklamasi } from "@/lib/seo-metadata";
 
 const canonical = "https://www.hocaileborsa.com/halka-arz/takvim";
 const title = "Halka Arz Takvimi 2026 | Bu Haftaki Halka Arzlar";
@@ -12,8 +13,8 @@ const sonGuncellemeIso = "2026-08-07";
 const sonGuncellemeMetni = "7 Ağustos 2026";
 
 export const metadata: Metadata = {
-  title: { absolute: `${title} | Hoca İle Borsa` },
-  description,
+  title: { absolute: title },
+  description: seoAciklamasi(description),
   alternates: { canonical },
   keywords: [
     "halka arz takvimi",

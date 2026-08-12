@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -16,9 +17,9 @@ const haberGorsel =
   "https://www.hocaileborsa.com/miatk-tripy-calmcar-robotaxi-is-birligi.webp";
 
 export const metadata: Metadata = {
-  title: "MIATK Bağlı Ortaklığı Tripy, CalmCar ile Robotaxi İş Birliği İmzaladı",
+  title: { absolute: "MIATK: Tripy ve CalmCar Robotaxi İş Birliği" },
   description:
-    "MIATK bağlı ortaklığı Tripy Mobility, Çin merkezli CalmCar ile L4 seviyesinde otonom sürüş ve Robotaxi teknolojilerine yönelik stratejik iş birliği sözleşmesi imzaladı.",
+    seoAciklamasi("MIATK bağlı ortaklığı Tripy Mobility, Çin merkezli CalmCar ile L4 seviyesinde otonom sürüş ve Robotaxi teknolojilerine yönelik stratejik iş birliği sözleşmesi imzaladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

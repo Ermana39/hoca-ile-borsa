@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -8,7 +9,7 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 export const metadata: Metadata = {
   title: "KLNMA, JBIC ile 350 Milyon Dolarlık Kredi Anlaşması İmzaladı",
   description:
-    "Türkiye Kalkınma ve Yatırım Bankası (KLNMA), Japon Uluslararası İşbirliği Bankası (JBIC) ile yenilenebilir enerji ve enerji verimliliği yatırımlarının finansmanında kullanılmak üzere 350 milyon ABD doları tutarında kredi anlaşması imzaladı.",
+    seoAciklamasi("Türkiye Kalkınma ve Yatırım Bankası (KLNMA), Japon Uluslararası İşbirliği Bankası (JBIC) ile yenilenebilir enerji ve enerji verimliliği yatırımlarının finansmanında kullanılmak üzere 350 milyon ABD doları tutarında kredi anlaşması imzaladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/klnma-jbic-350-milyon-dolar-kredi-anlasmasi",

@@ -1,12 +1,13 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import GostergeTaramaSayfasi from "@/components/GostergeTaramaSayfasi";
 import { okuTarama } from "@/lib/gosterge-taramalari";
 
 export const revalidate = false;
 
 export const metadata = {
-  title: "RSI 40 Altı Hisseler | Hoca İle Borsa",
+  title: "RSI 40 Altındaki BIST Hisseleri",
   description:
-    "RSI değeri 40 seviyesinin altında olan Borsa İstanbul hisselerini inceleyin.",
+    seoAciklamasi("RSI değeri 40 seviyesinin altında olan Borsa İstanbul hisselerini inceleyin.", "Güncel tablolar, karşılaştırmalar ve yatırımcıların takip edebileceği temel göstergeler birlikte sunulur."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/borsa/gosterge-taramalari/rsi40-alti",

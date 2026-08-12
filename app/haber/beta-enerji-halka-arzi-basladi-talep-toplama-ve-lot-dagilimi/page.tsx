@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -6,10 +7,11 @@ import AuthorBox from "@/components/AuthorBox";
 import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
-  title:
-    "Beta Enerji Halka Arzı Başladı: Talep Toplama Tarihleri ve Olası Lot Dağılımı",
+  title: {
+    absolute: "BETAE Halka Arzı: Talep Tarihleri ve Olası Lot Dağılımı",
+  },
   description:
-    "Beta Enerji ve Teknoloji A.Ş. halka arzında talep toplama süreci başladı. BETAE halka arzı 23-24-25 Haziran 2026 tarihlerinde yapılacak. T1 ve T2 bakiye kullanılamayacak.",
+    seoAciklamasi("Beta Enerji ve Teknoloji A.Ş. halka arzında talep toplama süreci başladı. BETAE halka arzı 23-24-25 Haziran 2026 tarihlerinde yapılacak. T1 ve T2 bakiye kullanılamayacak.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/beta-enerji-halka-arzi-basladi-talep-toplama-ve-lot-dagilimi",

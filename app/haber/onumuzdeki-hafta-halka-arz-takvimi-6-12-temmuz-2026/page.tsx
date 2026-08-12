@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -17,7 +18,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "Önümüzdeki Haftanın Halka Arz Takvimi: 6-12 Temmuz 2026",
   description:
-    "6-12 Temmuz 2026 haftasında halka arz gündemi yoğun geçecek. SOHOE, ORZAX, GOLDA, EKIM ve ISVEA işlem görmeye başlayacak; SSAAT ve SARAE talep toplayacak.",
+    seoAciklamasi("6-12 Temmuz 2026 haftasında halka arz gündemi yoğun geçecek. SOHOE, ORZAX, GOLDA, EKIM ve ISVEA işlem görmeye başlayacak; SSAAT ve SARAE talep toplayacak.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

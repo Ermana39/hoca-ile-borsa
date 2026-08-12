@@ -1,6 +1,16 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Link from "@/components/NoPrefetchLink";
 
-export const metadata = { robots: { index: false, follow: true } };
+export const metadata = {
+  title: "Aylık Hacim Artışı Olan BIST Hisseleri",
+  description:
+    seoAciklamasi("Aylık ortalamasına göre işlem hacmi yükselen BIST hisselerini, güncel hacim tutarlarını ve artış oranlarını karşılaştırmalı olarak inceleyin.", "Güncel tablolar, karşılaştırmalar ve yatırımcıların takip edebileceği temel göstergeler birlikte sunulur."),
+  alternates: {
+    canonical:
+      "https://www.hocaileborsa.com/borsa/hacim-artisi-analizi/aylik-hacim-artisi-olanlar",
+  },
+  robots: { index: false, follow: true },
+};
 
 const veriler = [
   { sembol: "DCTTR", islemHacmi: "935,141,480", ortHacim: "124,532,734", artis: "650.92" },

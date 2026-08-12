@@ -12,7 +12,7 @@ import { getManagersData } from "@/lib/fon-platform";
 export const metadata: Metadata = {
   title: "Fon Yönetim Şirketleri ve Yönetici Analizi",
   description:
-    "Fon yöneticilerini yönetilen fon sayısı, toplam fon büyüklüğü, yatırımcı sayısı, para akışı ve ortalama getiriyle analiz edin.",
+    "Fon yönetim şirketlerini yönettikleri fon sayısı, toplam fon büyüklüğü, yatırımcı sayısı, para akışı ve ortalama getiri verileriyle karşılaştırın.",
   alternates: {
     canonical: "https://www.hocaileborsa.com/fonlar/yoneticiler",
   },

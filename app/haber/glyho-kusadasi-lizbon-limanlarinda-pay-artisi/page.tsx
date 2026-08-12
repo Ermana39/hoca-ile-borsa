@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "GLYHO Kuşadası ve Lizbon Limanlarında Pay Artışı Açıkladı",
   description:
-    "GLYHO, dolaylı bağlı ortaklıkları üzerinden Kuşadası Yolcu Limanı'nda payını %99,99'a çıkarırken Lizbon Yolcu Limanı'nda payını %60'a yükseltecek hisse alım sözleşmesi imzaladı.",
+    seoAciklamasi("GLYHO, dolaylı bağlı ortaklıkları üzerinden Kuşadası Yolcu Limanı'nda payını %99,99'a çıkarırken Lizbon Yolcu Limanı'nda payını %60'a yükseltecek hisse alım sözleşmesi imzaladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

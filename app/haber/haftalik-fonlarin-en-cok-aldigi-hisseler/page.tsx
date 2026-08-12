@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -19,7 +20,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "Bu Hafta Fonların En Çok Aldığı Hisseler Hangileri Oldu?",
   description:
-    "Haftalık fon verilerine göre bu hafta fonlar tarafından en çok tercih edilen hisseler arasında HEDEF, OZATD, EREGL, KTLEV, ODINE, TEHOL, ALKLC, TUPRS, GUNDG, PEKGY, EUPWR ve ASTOR öne çıktı.",
+    seoAciklamasi("Haftalık fon verilerine göre bu hafta fonlar tarafından en çok tercih edilen hisseler arasında HEDEF, OZATD, EREGL, KTLEV, ODINE, TEHOL, ALKLC, TUPRS, GUNDG, PEKGY, EUPWR ve ASTOR öne çıktı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "SDTTR 5,35 Milyon Dolarlık Savunma Sistemleri Sözleşmesi İmzaladı",
   description:
-    "SDTTR, yurt içi bir müşteriyle savunma sistemleri alanında 5,35 milyon dolar tutarında sözleşme imzaladı. Teslimatların 2026, 2027 ve 2028 yıllarında yapılması planlanıyor.",
+    seoAciklamasi("SDTTR, yurt içi bir müşteriyle savunma sistemleri alanında 5,35 milyon dolar tutarında sözleşme imzaladı. Teslimatların 2026, 2027 ve 2028 yıllarında yapılması planlanıyor.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

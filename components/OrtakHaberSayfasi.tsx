@@ -637,7 +637,7 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
                       Editoryal analiz
                     </p>
                     <h2 className="mt-1 text-xl font-bold text-slate-900">
-                      Hoca ile Borsa değerlendirmesi
+                      Hoca İle Borsa değerlendirmesi
                     </h2>
                     <p className="mt-3 text-sm leading-7 text-slate-700 md:text-base">
                       {kayit.editorDegerlendirmesi.giris}

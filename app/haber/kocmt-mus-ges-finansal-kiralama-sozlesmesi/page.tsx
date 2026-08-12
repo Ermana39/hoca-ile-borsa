@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "KOCMT Muş GES İçin 14,28 Milyon Dolarlık Finansman Sağladı",
   description:
-    "Koç Metalurji, Muş'ta planlanan 22,5 MWe GES projesi için QNB Finansal Kiralama ile 14,28 milyon dolar tutarında finansal kiralama sözleşmesi imzaladı.",
+    seoAciklamasi("Koç Metalurji, Muş'ta planlanan 22,5 MWe GES projesi için QNB Finansal Kiralama ile 14,28 milyon dolar tutarında finansal kiralama sözleşmesi imzaladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

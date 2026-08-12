@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -13,10 +14,11 @@ const yayinTarihi = "2026-07-20T09:00:00+03:00";
 const yayinTarihiEtiket = "20 Temmuz 2026";
 
 export const metadata: Metadata = {
-  title:
-    "20-26 Temmuz 2026 Haftalık Halka Arz Takvimi: METEN, KARCL, MASFN, ALBTN",
+  title: {
+    absolute: "20-26 Temmuz Halka Arz Takvimi: METEN, KARCL, MASFN",
+  },
   description:
-    "20-26 Temmuz 2026 haftalık halka arz takvimi: Metgün Enerji, Kardemir Çelik, Masfen Enerji ve Albayrak Hazır Beton talep toplama tarihleri, fiyat ve lot bilgileri.",
+    seoAciklamasi("20-26 Temmuz 2026 haftalık halka arz takvimi: Metgün Enerji, Kardemir Çelik, Masfen Enerji ve Albayrak Hazır Beton talep toplama tarihleri, fiyat ve lot bilgileri.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

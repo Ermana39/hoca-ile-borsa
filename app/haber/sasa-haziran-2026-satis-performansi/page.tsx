@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -11,7 +12,7 @@ const haberTarihi = formatHaberTarihi(haberSaati);
 export const metadata: Metadata = {
   title: "SASA Haziran 2026 Satış Performansını Açıkladı",
   description:
-    "SASA, 2026 Haziran ayında satış miktarının 148 kiloton, satış tutarının 200 milyon dolar, ihracatın ise 82 milyon dolar olduğunu açıkladı. Şirketin toplam cirosu yıllık bazda %52 arttı.",
+    seoAciklamasi("SASA, 2026 Haziran ayında satış miktarının 148 kiloton, satış tutarının 200 milyon dolar, ihracatın ise 82 milyon dolar olduğunu açıkladı. Şirketin toplam cirosu yıllık bazda %52 arttı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/sasa-haziran-2026-satis-performansi",

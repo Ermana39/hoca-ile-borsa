@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -9,7 +10,7 @@ import KapCardLinks from "@/components/KapCardLinks";
 export const metadata: Metadata = {
   title: "Brisa İzmit Fabrikasında Üretime Geçici Ara Verecek",
   description:
-    "Brisa, İzmit fabrikasında planlı bakım çalışmaları nedeniyle 28 Haziran - 7 Temmuz 2026 tarihleri arasında lastik üretimine geçici süreyle ara verileceğini açıkladı. Aksaray fabrikasında üretim devam edecek.",
+    seoAciklamasi("Brisa, İzmit fabrikasında planlı bakım çalışmaları nedeniyle 28 Haziran - 7 Temmuz 2026 tarihleri arasında lastik üretimine geçici süreyle ara verileceğini açıkladı. Aksaray fabrikasında üretim devam edecek.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/brisa-izmit-fabrikasi-planli-bakim-durusu",

@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -7,12 +8,12 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 import KapCardLinks from "@/components/KapCardLinks";
 
 export const metadata: Metadata = {
-  title: "15 Haziran KAP: ASELS, CVKMD, GRTHO ve DSTKF Özeti",
+  title: { absolute: "15 Haziran KAP: ASELS, CVKMD, GRTHO ve DSTKF Özeti" },
   description:
-    "ASELS, CVKMD, GRTHO, DSTKF ve diğer şirketlerin 15 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.",
+    seoAciklamasi("15 Haziran 2026 KAP özetinde ASELS, CVKMD, GRTHO, DSTKF ve diğer şirketlerin açıklamaları, öne çıkan gelişmeler ve olası piyasa etkileri yer alıyor.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
-      "https://www.hocaileborsa.com/haber/15-haziran-2026-pazartesi-kap-bildirimleri-ozeti",
+      "https://www.hocaileborsa.com/haber/15-haziran-2026-onemli-kap-haberleri",
   },
   openGraph: {
     type: "article",
@@ -96,7 +97,7 @@ const jsonLd = {
     "ASELS, CVKMD, GRTHO, DSTKF ve diğer şirketlerin 15 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.",
   datePublished: "2026-06-15T09:00:00+03:00",
   dateModified: "2026-06-15T09:00:00+03:00",
-  url: "https://www.hocaileborsa.com/haber/15-haziran-2026-pazartesi-kap-bildirimleri-ozeti",
+  url: "https://www.hocaileborsa.com/haber/15-haziran-2026-onemli-kap-haberleri",
   author: { "@type": "Person", "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person", name: "Erman Hoca", url: "https://www.hocaileborsa.com/yazar/erman-hoca" },
   publisher: {
     "@type": "Organization",

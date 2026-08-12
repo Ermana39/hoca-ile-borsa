@@ -22,6 +22,7 @@ import {
   getAllFundSlugs,
   getFundDetail,
 } from "@/lib/fon-platform";
+import { seoAciklamasi } from "@/lib/seo-metadata";
 
 export function generateStaticParams() {
   return getAllFundSlugs().map((kod) => ({ kod }));
@@ -43,12 +44,24 @@ export async function generateMetadata({
   }
 
   const fund = detail.fund;
+  const canonical = `https://www.hocaileborsa.com/fonlar/${fund.slug}`;
+  const seoTitle = `${fund.kod} Fonu: Getiri, Fiyat ve Güncel TEFAS Bilgileri`;
+  const seoDescription = seoAciklamasi(
+    `${fund.kod} fonunun güncel fiyatı, dönemsel getirileri, fon büyüklüğü, yatırımcı sayısı ve para akışı verileri.`,
+    `${fund.ad}, ${fund.kategori} kategorisinde ${fund.yonetici} tarafından yönetilir.`
+  );
 
   return {
-    title: `${fund.kod} Fonu - Getiri, Para Girişi ve Güncel Fon Analizi`,
-    description: `${fund.kod} fonunun güncel fiyatı, getirileri, yatırımcı sayısı, para giriş çıkışı, fon büyüklüğü ve tarihsel performans verileri.`,
+    title: { absolute: seoTitle },
+    description: seoDescription,
     alternates: {
-      canonical: `https://www.hocaileborsa.com/fonlar/${fund.slug}`,
+      canonical,
+    },
+    openGraph: {
+      type: "website",
+      url: canonical,
+      title: `${fund.kod} Fonu | ${fund.ad}`,
+      description: `${fund.ad} güncel fiyat, getiri, yatırımcı ve para akışı verileri.`,
     },
   };
 }
@@ -64,6 +77,12 @@ export default async function FonDetayPage({
   if (!detail) notFound();
 
   const fund = detail.fund;
+  const canonical = `https://www.hocaileborsa.com/fonlar/${fund.slug}`;
+  const seoTitle = `${fund.kod} Fonu: Getiri, Fiyat ve Güncel TEFAS Bilgileri`;
+  const seoDescription = seoAciklamasi(
+    `${fund.kod} fonunun güncel fiyatı, dönemsel getirileri, fon büyüklüğü, yatırımcı sayısı ve para akışı verileri.`,
+    `${fund.ad}, ${fund.kategori} kategorisinde ${fund.yonetici} tarafından yönetilir.`
+  );
   const riskText =
     typeof fund.riskDegeri === "number"
       ? formatNumber(fund.riskDegeri)
@@ -104,25 +123,42 @@ export default async function FonDetayPage({
       answer: `${fund.kod} fonu ${fund.yonetici} tarafından yönetilmektedir.`,
     },
   ];
-  const faqJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    mainEntity: faqItems.map((item) => ({
-      "@type": "Question",
-      name: item.question,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer,
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "@id": `${canonical}#webpage`,
+      url: canonical,
+      name: seoTitle,
+      description: seoDescription,
+      inLanguage: "tr-TR",
+      about: {
+        "@type": "FinancialProduct",
+        name: fund.ad,
+        identifier: fund.kod,
+        category: fund.kategori,
       },
-    })),
-  };
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: faqItems.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
+    },
+  ];
 
   return (
     <main className="min-h-screen bg-[#f8fafc]">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqJsonLd).replace(/</g, "\\u003c"),
+          __html: JSON.stringify(structuredData).replace(/</g, "\\u003c"),
         }}
       />
       <div className="mx-auto max-w-7xl px-4 py-6 md:px-6">

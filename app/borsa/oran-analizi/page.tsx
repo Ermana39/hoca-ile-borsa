@@ -1,6 +1,7 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 export const metadata = {
-  title: "Finansal Oran Analizi | Hoca İle Borsa",
-  description: "Şirketlerin finansal oranlarını inceleyerek değerleme, kârlılık ve borçluluk açısından karşılaştırın.",
+  title: "BIST Finansal Oran Analizi",
+  description: seoAciklamasi("Şirketlerin finansal oranlarını inceleyerek değerleme, kârlılık ve borçluluk açısından karşılaştırın.", "Güncel tablolar, karşılaştırmalar ve yatırımcıların takip edebileceği temel göstergeler birlikte sunulur."),
   alternates: { canonical: "https://www.hocaileborsa.com/borsa/oran-analizi" },
 };
 

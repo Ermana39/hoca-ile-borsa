@@ -1,6 +1,16 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Link from "@/components/NoPrefetchLink";
 
-export const metadata = { robots: { index: false, follow: true } };
+export const metadata = {
+  title: "Haftalık Hacim Artışı Olan BIST Hisseleri",
+  description:
+    seoAciklamasi("Haftalık ortalamasına göre işlem hacmi yükselen BIST hisselerini, güncel hacim tutarlarını ve artış oranlarını karşılaştırmalı olarak inceleyin.", "Güncel tablolar, karşılaştırmalar ve yatırımcıların takip edebileceği temel göstergeler birlikte sunulur."),
+  alternates: {
+    canonical:
+      "https://www.hocaileborsa.com/borsa/hacim-artisi-analizi/haftalik-hacim-artisi-olanlar",
+  },
+  robots: { index: false, follow: true },
+};
 
 const veriler = [
   { sembol: "ISBIR", islemHacmi: "6,117,430", ortHacim: "1,762,260", artis: "247.14" },

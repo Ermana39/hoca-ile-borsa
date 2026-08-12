@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "TTKOM 1 Milyar Dolara Kadar Sukuk İhracı Kararı Aldı",
   description:
-    "Türk Telekom, toplam tutarı 1 milyar ABD doları eşdeğerine kadar yurt dışı kira sertifikası ihracı için yönetim kurulu kararı aldı.",
+    seoAciklamasi("Türk Telekom, toplam tutarı 1 milyar ABD doları eşdeğerine kadar yurt dışı kira sertifikası ihracı için yönetim kurulu kararı aldı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

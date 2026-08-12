@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -10,7 +11,7 @@ const kapLink = "https://www.kap.org.tr/tr/Bildirim/1619472";
 export const metadata: Metadata = {
   title: "ORGE’den Yüzde 400 Bedelsiz Sermaye Artırımı Başvurusu",
   description:
-    "ORGE, sermayesini 80 milyon TL’den 400 milyon TL’ye çıkarmak için yüzde 400 oranında bedelsiz sermaye artırımı başvurusunda bulundu. Başvuru SPK onayı süreci açısından takip edilecek.",
+    seoAciklamasi("ORGE, sermayesini 80 milyon TL’den 400 milyon TL’ye çıkarmak için yüzde 400 oranında bedelsiz sermaye artırımı başvurusunda bulundu. Başvuru SPK onayı süreci açısından takip edilecek.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/orge-400-bedelsiz-sermaye-artirimi-basvurusu",

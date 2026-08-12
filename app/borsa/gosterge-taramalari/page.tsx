@@ -1,6 +1,7 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 export const metadata = {
-  title: "Gösterge Taramaları | Hoca İle Borsa",
-  description: "RSI, trend ve teknik filtrelere göre hazırlanmış hisse taramaları ile belirli kriterleri karşılayan hisseleri görün.",
+  title: "BIST Gösterge Taramaları",
+  description: seoAciklamasi("RSI, trend ve teknik filtrelere göre hazırlanmış hisse taramaları ile belirli kriterleri karşılayan hisseleri görün.", "Güncel tablolar, karşılaştırmalar ve yatırımcıların takip edebileceği temel göstergeler birlikte sunulur."),
   alternates: { canonical: "https://www.hocaileborsa.com/borsa/gosterge-taramalari" },
 };
 

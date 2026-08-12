@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -11,7 +12,7 @@ const haberTarihi = formatHaberTarihi(haberSaati);
 export const metadata: Metadata = {
   title: "ASTOR TEİAŞ ile 816 Milyon TL’lik Mobil Trafo Sözleşmesi İmzaladı",
   description:
-    "Astor Enerji, TEİAŞ tarafından açılan mobil trafo merkezi ve OG ünitesi temini ihalesinde 816,2 milyon TL bedelli sözleşme imzaladığını açıkladı.",
+    seoAciklamasi("Astor Enerji, TEİAŞ tarafından açılan mobil trafo merkezi ve OG ünitesi temini ihalesinde 816,2 milyon TL bedelli sözleşme imzaladığını açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/astor-teias-816-milyon-tl-mobil-trafo-sozlesmesi",

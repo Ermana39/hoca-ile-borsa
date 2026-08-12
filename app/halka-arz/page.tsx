@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Halka Arz | Hoca İle Borsa",
+  title: "Halka Arz Takvimi ve Şirket Bilgileri",
   description:
-    "Güncel halka arz verileri, kazanç hesaplama, talep hesaplama, izahname bilgileri ve halka arz tavan serisi takibi.",
+    "Güncel halka arz takvimi, onaylı ve taslak izahnameler, fiyat, talep tarihleri, lot hesaplama ve işlem başlangıcı açıklanan şirket bilgilerini inceleyin.",
   alternates: { canonical: "https://www.hocaileborsa.com/halka-arz" },
 };
 

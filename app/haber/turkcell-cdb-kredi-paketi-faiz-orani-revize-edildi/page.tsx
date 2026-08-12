@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -8,7 +9,7 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 export const metadata: Metadata = {
   title: "Turkcell CDB Kredi Paketinde Faiz Oranını Revize Etti",
   description:
-    "Turkcell, China Development Bank ile imzalanan kredi paketinin ikinci dilimini 1,23 milyar RMB'den 700 milyon RMB'ye revize etti. Faiz oranı masraflar dahil yüzde 4,98'den yüzde 4,30'a güncellendi.",
+    seoAciklamasi("Turkcell, China Development Bank ile imzalanan kredi paketinin ikinci dilimini 1,23 milyar RMB'den 700 milyon RMB'ye revize etti. Faiz oranı masraflar dahil yüzde 4,98'den yüzde 4,30'a güncellendi.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/turkcell-cdb-kredi-paketi-faiz-orani-revize-edildi",

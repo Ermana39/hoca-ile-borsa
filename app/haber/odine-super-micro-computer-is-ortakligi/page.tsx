@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -8,7 +9,7 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 export const metadata: Metadata = {
   title: "Odine, Super Micro Computer ile İş Ortaklığı Anlaşması İmzaladı",
   description:
-    "Odine Solutions, yapay zekâ, bulut, depolama ve 5G/Edge BT altyapıları alanında faaliyet gösteren Super Micro Computer ile Türkiye pazarına odaklı iş ortaklığı anlaşması imzaladı.",
+    seoAciklamasi("Odine Solutions, yapay zekâ, bulut, depolama ve 5G/Edge BT altyapıları alanında faaliyet gösteren Super Micro Computer ile Türkiye pazarına odaklı iş ortaklığı anlaşması imzaladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/odine-super-micro-computer-is-ortakligi",

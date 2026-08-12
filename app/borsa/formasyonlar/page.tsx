@@ -1,6 +1,7 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 export const metadata = {
-  title: "Grafik Formasyonları | Hoca İle Borsa",
-  description: "Grafik formasyonlarına göre öne çıkan hisseleri liste halinde inceleyin.",
+  title: "Grafik Formasyonları ve Teknik Analiz Örnekleri",
+  description: seoAciklamasi("Grafik formasyonlarına göre öne çıkan hisseleri liste halinde inceleyin.", "Güncel tablolar, karşılaştırmalar ve yatırımcıların takip edebileceği temel göstergeler birlikte sunulur."),
   alternates: { canonical: "https://www.hocaileborsa.com/borsa/formasyonlar" },
 };
 
@@ -74,7 +75,9 @@ export default async function FormasyonlarPage() {
         </div>
 
         <section className="mb-6">
-          <h1 className="text-3xl font-bold text-zinc-900">Formasyonlar</h1>
+          <h1 className="text-3xl font-bold text-zinc-900">
+            Grafik Formasyonları
+          </h1>
 
           <p className="mt-3 max-w-3xl text-sm leading-7 text-zinc-700 md:text-base">
             Borsa İstanbul hisselerinde oluşan teknik formasyonları, hisse kodu

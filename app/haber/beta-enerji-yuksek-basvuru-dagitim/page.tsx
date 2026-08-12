@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -6,10 +7,11 @@ import AuthorBox from "@/components/AuthorBox";
 import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
-  title:
-    "Beta Enerji Yüksek Başvuru Dağıtımı %1 Civarında Olabilir mi? BETAE Kaç Lot Verir?",
+  title: {
+    absolute: "BETAE Kaç Lot Verir? Yüksek Başvuru Dağıtım Tahmini",
+  },
   description:
-    "Beta Enerji halka arzında yüksek başvuru dağıtım oranı ne olur? BETAE yüksek başvuruda %1 - %0,90 civarı dağıtım ihtimali, minimum tutar ve kaç lot gelebilir hesaplaması.",
+    seoAciklamasi("Beta Enerji halka arzında yüksek başvuru dağıtım oranı ne olur? BETAE yüksek başvuruda %1 - %0,90 civarı dağıtım ihtimali, minimum tutar ve kaç lot gelebilir hesaplaması.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/beta-enerji-yuksek-basvuru-dagitim",

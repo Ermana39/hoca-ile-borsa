@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -17,6 +18,7 @@ const haberTarihi = formatHaberTarihi(haberSaati);
 
 const baslik =
   "Son Halka Arzların Gün Sonu Kapanış Değerlendirmesi (20 Temmuz 2026)";
+const seoBaslik = "20 Temmuz Halka Arz Kapanış Değerlendirmesi";
 const aciklama =
   "20 Temmuz 2026 son halka arz kapanış değerlendirmesi: SARAE ikinci işlem gününü tavan kapattı, GOLDA tavan serisini sürdürdü, ISVEA yeniden tavan yaptı, SSAAT halka arz fiyatının altında kaldı.";
 
@@ -104,15 +106,15 @@ const halkaArzlar = [
 ] as const;
 
 export const metadata: Metadata = {
-  title: baslik,
-  description: aciklama,
+  title: { absolute: seoBaslik },
+  description: seoAciklamasi(aciklama, "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: { canonical },
   openGraph: {
     type: "article",
     title: baslik,
     description: aciklama,
     url: canonical,
-    siteName: "Hoca ile Borsa",
+    siteName: "Hoca İle Borsa",
     images: [
       {
         url: `${siteUrl}${haberGorseli}`,

@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -9,9 +10,9 @@ const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
 
 export const metadata: Metadata = {
-  title: "EKGYO Eyüpsultan Kemerburgaz 3. Etap İhalesinde En Yüksek Teklif Açıklandı",
+  title: { absolute: "EKGYO Kemerburgaz 3. Etap İhale Sonucu" },
   description:
-    "Emlak Konut GYO, İstanbul Eyüpsultan Kemerburgaz 3. Etap arsa satışı karşılığı gelir paylaşımı işi ihalesinin 2. oturumunda en yüksek teklifin 36,66 milyar TL satış toplam geliri ve 15,40 milyar TL şirket payı toplam geliri olduğunu açıkladı.",
+    seoAciklamasi("Emlak Konut GYO, İstanbul Eyüpsultan Kemerburgaz 3. Etap arsa satışı karşılığı gelir paylaşımı işi ihalesinin 2. oturumunda en yüksek teklifin 36,66 milyar TL satış toplam geliri ve 15,40 milyar TL şirket payı toplam geliri olduğunu açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/ekgyo-eyupsultan-kemerburgaz-3-etap-ihale-sonucu",

@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "YEOTK Rixos ile 12,3 MWh Enerji Depolama Sözleşmesi İmzaladı",
   description:
-    "YEOTK, Rixos Hotels ile The Land of Legends tesisinde kullanılmak üzere toplam 12,3 MWh kapasiteli enerji depolama sistemlerinin tedariki ve süpervizyonu için sözleşme imzaladı.",
+    seoAciklamasi("YEOTK, Rixos Hotels ile The Land of Legends tesisinde kullanılmak üzere toplam 12,3 MWh kapasiteli enerji depolama sistemlerinin tedariki ve süpervizyonu için sözleşme imzaladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

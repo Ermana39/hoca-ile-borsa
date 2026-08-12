@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -19,7 +20,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "13 Temmuz 2026 Önemli KAP: AKFYE, PGSUS, UCAYM, VESTL Etkileri",
   description:
-    "13 Temmuz 2026 KAP akışında AKFYE bedelsiz sermaye artırımı, PGSUS trafik verileri, UCAYM sözleşmesi, VESTL Moody’s not indirimi, AKSEN, SDTTR, MIATK, ALGYO, ASTOR, SARAE ve diğer önemli bildirimler öne çıktı.",
+    seoAciklamasi("13 Temmuz 2026 KAP akışında AKFYE bedelsiz sermaye artırımı, PGSUS trafik verileri, UCAYM sözleşmesi, VESTL Moody’s not indirimi, AKSEN, SDTTR, MIATK, ALGYO, ASTOR, SARAE ve diğer önemli bildirimler öne çıktı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -15,10 +16,9 @@ const haberGorsel =
   "https://www.hocaileborsa.com/hekts-238-milyar-tl-tahsisli-sermaye-artirimi-spk-basvurusu.webp";
 
 export const metadata: Metadata = {
-  title:
-    "HEKTS 2,38 Milyar TL Tahsisli Sermaye Artırımı İçin SPK’ya Başvurdu",
+  title: { absolute: "HEKTS 2,38 Milyar TL Tahsisli Artırım SPK Başvurusu" },
   description:
-    "HEKTS, 2,38 milyar TL planlanan satış hasılatı ile OYAK’a tahsisli sermaye artırımı için SPK’ya başvurdu. Süreç başvuru aşamasında olup nihai tutar satış fiyatına göre belirlenecek.",
+    seoAciklamasi("HEKTS, 2,38 milyar TL planlanan satış hasılatı ile OYAK’a tahsisli sermaye artırımı için SPK’ya başvurdu. Süreç başvuru aşamasında olup nihai tutar satış fiyatına göre belirlenecek.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

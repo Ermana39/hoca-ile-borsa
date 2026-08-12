@@ -12,6 +12,7 @@ import {
   type HalkaArzVeri,
 } from "@/lib/halka-arz";
 import { riskMaddeleri, riskOzetCumlesi } from "@/lib/halka-arz-risk";
+import { halkaArzSeoMetinleri } from "@/lib/halka-arz-seo";
 
 export const dynamicParams = false;
 
@@ -117,6 +118,10 @@ export async function generateMetadata({
   const hamVeri = halkaArzGetir(slug);
   if (!hamVeri) return {};
   const veri = sinboTaslakVerisiniGuncelle(hamVeri);
+  const seoMetinleri = halkaArzSeoMetinleri(
+    veri,
+    veri.seo?.contentStatus === "onayli" ? "onayli" : "taslak"
+  );
   const robotsSeo = veri.seo?.robots;
   const robots = {
     // Taslak belge detayları tamamlanmamış içerik havuzudur. Sayfa erişilebilir
@@ -126,22 +131,30 @@ export async function generateMetadata({
   };
   if (veri.seo?.contentStatus === "onayli") {
     return {
-      title: veri.baslikMeta.title,
-      description: veri.baslikMeta.description,
+      title: { absolute: seoMetinleri.title },
+      description: seoMetinleri.description,
       robots,
       alternates: {
         canonical:
           veri.seo.canonical ||
           `https://www.hocaileborsa.com/halka-arz/onayli-izahnameler/${slug}`,
       },
+      openGraph: {
+        title: veri.baslikMeta.title,
+        description: veri.baslikMeta.description,
+      },
     };
   }
   return {
-    title: veri.baslikMeta.title,
-    description: veri.baslikMeta.description,
+    title: { absolute: seoMetinleri.title },
+    description: seoMetinleri.description,
     robots,
     alternates: {
       canonical: `https://www.hocaileborsa.com${taslakCanonicalYolu(veri, slug)}`,
+    },
+    openGraph: {
+      title: veri.baslikMeta.title,
+      description: veri.baslikMeta.description,
     },
   };
 }
@@ -207,34 +220,21 @@ function sssUret(veri: HalkaArzVeri): { soru: string; cevap: string }[] {
   return adaylar.filter((a) => a.cevap);
 }
 
-// Sayfadaki özet verilerden Article + FAQPage yapılandırılmış verisi üretir.
+// Sayfadaki özet verilerden WebPage + FAQPage yapılandırılmış verisi üretir.
 // Yalnızca sayfada görünen, kesinleşmiş (bekleyen olmayan) değerler kullanılır.
 function jsonLdUret(veri: HalkaArzVeri, slug: string) {
   const url = `https://www.hocaileborsa.com/halka-arz/taslak-izahnameler/${slug}`;
+  const seoMetinleri = halkaArzSeoMetinleri(veri, "taslak");
 
-  const article = {
+  const webPage = {
     "@context": "https://schema.org",
-    "@type": "Article",
-    headline: veri.baslikMeta.title,
-    description: veri.baslikMeta.description,
+    "@type": "WebPage",
+    "@id": `${url}#webpage`,
+    name: `${veri.sirketAdi} Halka Arzı`,
+    description: seoMetinleri.description,
     url,
-    mainEntityOfPage: url,
-    author: {
-      "@type": "Person",
-      "@id": "https://www.hocaileborsa.com/yazar/erman-hoca#person",
-      name: "Erman Hoca",
-      url: "https://www.hocaileborsa.com/yazar/erman-hoca",
-    },
-    publisher: {
-      "@type": "Organization",
-      "@id": "https://www.hocaileborsa.com/#organization",
-      name: "Hoca İle Borsa",
-      url: "https://www.hocaileborsa.com",
-      logo: {
-        "@type": "ImageObject",
-        url: "https://www.hocaileborsa.com/icon-512.png",
-      },
-    },
+    isPartOf: { "@id": "https://www.hocaileborsa.com/#website" },
+    inLanguage: "tr-TR",
     about: {
       "@type": "Organization",
       name: veri.sirketAdi,
@@ -243,7 +243,7 @@ function jsonLdUret(veri: HalkaArzVeri, slug: string) {
 
   const sorular = sssUret(veri);
 
-  const semalar: object[] = [article];
+  const semalar: object[] = [webPage];
   if (sorular.length >= 2) {
     semalar.push({
       "@context": "https://schema.org",
@@ -334,7 +334,9 @@ export default async function HalkaArzDinamikPage({
                 <p className="mb-2 inline-flex rounded-full bg-white/15 px-3 py-1 text-xs font-semibold tracking-wide">
                   Halka Arz İncelemesi
                 </p>
-                <h1 className="text-2xl font-bold sm:text-3xl">{veri.sirketAdi}</h1>
+                <h1 className="text-2xl font-bold sm:text-3xl">
+                  {veri.sirketAdi} Halka Arzı
+                </h1>
                 <p className="mt-2 text-sm text-blue-100 sm:text-base">
                   Taslak izahname verilerine göre hazırlanmış özet halka arz sayfası
                 </p>

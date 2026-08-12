@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -9,9 +10,9 @@ const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
 
 export const metadata: Metadata = {
-  title: "ASELSAN 40 Milyon Dolarlık Yeni Üretim ve Test Merkezlerini Devreye Aldı",
+  title: { absolute: "ASELS: 40 Milyon Dolarlık Üretim ve Test Merkezi" },
   description:
-    "ASELSAN, artan sipariş hacmini karşılamak ve üretim altyapısını güçlendirmek amacıyla 40 milyon dolar yatırımla tamamlanan Akıllı Mühimmat ve Sualtı Sistemleri İlave Üretim ve Test Merkezlerini devreye aldı.",
+    seoAciklamasi("ASELSAN, artan sipariş hacmini karşılamak ve üretim altyapısını güçlendirmek amacıyla 40 milyon dolar yatırımla tamamlanan Akıllı Mühimmat ve Sualtı Sistemleri İlave Üretim ve Test Merkezlerini devreye aldı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/asels-akilli-muhimmat-sualti-sistemleri-yeni-tesis",

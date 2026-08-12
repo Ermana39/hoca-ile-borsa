@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -16,12 +17,13 @@ const haberTarihi = formatHaberTarihi(haberSaati);
 
 const title =
   "Halka Arzlarda Gün Kapanışı: GOLDA Tavan, SOHOE Taban, ORZAX ve BETAE Yorumu";
+const seoTitle = "Halka Arz Kapanışı: GOLDA, SOHOE, ORZAX ve BETAE";
 const description =
   "GOLDA ilk işlem gününü tavan fiyatla kapattı. SOHOE 3. işlem gününde taban olurken ORZAX %5,40 yükseldi, BETAE 6. işlem gününde tavan serisini sürdürdü.";
 
 export const metadata: Metadata = {
-  title,
-  description,
+  title: { absolute: seoTitle },
+  description: seoAciklamasi(description, "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

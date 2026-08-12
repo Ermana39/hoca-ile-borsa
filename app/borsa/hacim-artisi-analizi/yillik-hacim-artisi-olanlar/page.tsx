@@ -1,6 +1,16 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Link from "@/components/NoPrefetchLink";
 
-export const metadata = { robots: { index: false, follow: true } };
+export const metadata = {
+  title: "Yıllık Hacim Artışı Olan BIST Hisseleri",
+  description:
+    seoAciklamasi("Yıllık ortalamasına göre işlem hacmi yükselen BIST hisselerini, güncel hacim tutarlarını ve artış oranlarını karşılaştırmalı olarak inceleyin.", "Güncel tablolar, karşılaştırmalar ve yatırımcıların takip edebileceği temel göstergeler birlikte sunulur."),
+  alternates: {
+    canonical:
+      "https://www.hocaileborsa.com/borsa/hacim-artisi-analizi/yillik-hacim-artisi-olanlar",
+  },
+  robots: { index: false, follow: true },
+};
 
 const veriler = [
   { sembol: "CWENE", islemHacmi: "12,159,626,736", ortHacim: "1,135,405,009", artis: "970.95" },

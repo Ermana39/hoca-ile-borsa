@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -16,9 +17,9 @@ const haberGorsel =
   "https://www.hocaileborsa.com/fonet-aydin-il-saglik-mudurlugu-198-milyon-tl-sbys-ihalesi.webp";
 
 export const metadata: Metadata = {
-  title: "FONET Aydın İl Sağlık Müdürlüğü 198,5 Milyon TL’lik SBYS İhalesini Kazandı",
+  title: { absolute: "FONET: 198,5 Milyon TL’lik SBYS İhalesini Kazandı" },
   description:
-    "FONET, Aydın İl Sağlık Müdürlüğü tarafından yapılan 36 aylık Sağlık Bilgi Yönetim Sistemi hizmet alımı ihalesini 198.476.457 TL bedelle kazandığını açıkladı.",
+    seoAciklamasi("FONET, Aydın İl Sağlık Müdürlüğü tarafından yapılan 36 aylık Sağlık Bilgi Yönetim Sistemi hizmet alımı ihalesini 198.476.457 TL bedelle kazandığını açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

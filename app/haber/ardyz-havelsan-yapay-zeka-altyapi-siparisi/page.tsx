@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -7,7 +8,7 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 export const metadata: Metadata = {
   title: "ARDYZ’den HAVELSAN’a 706.800 Dolarlık Sipariş",
   description:
-    "ARD Grup Bilişim, HAVELSAN’dan NVIDIA yapay zekâ hızlandırıcı teknolojileri ve DELL kurumsal çözümleriyle kurulacak altyapı sistemleri için 706.800 dolarlık sipariş aldığını açıkladı.",
+    seoAciklamasi("ARD Grup Bilişim, HAVELSAN’dan NVIDIA yapay zekâ hızlandırıcı teknolojileri ve DELL kurumsal çözümleriyle kurulacak altyapı sistemleri için 706.800 dolarlık sipariş aldığını açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/ardyz-havelsan-yapay-zeka-altyapi-siparisi",

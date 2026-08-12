@@ -5,9 +5,9 @@ import { getOnayliIzahnameListesi } from "@/lib/halka-arz";
 import { getIzahnameLogo } from "@/lib/izahname-logolar";
 
 export const metadata: Metadata = {
-  title: "Onaylı İzahnameler | Halka Arz SPK Onay Süreci ve Şirket Detayları",
+  title: "Onaylı Halka Arzlar ve İzahname Bilgileri",
   description:
-    "SPK tarafından onaylanan halka arz izahnamelerini, şirket detaylarını, halka arz fiyatlarını, talep toplama bilgilerini ve halka arz onay sürecine dair bilgilendirici açıklamaları inceleyin.",
+    "SPK onayı alan halka arz şirketlerinin onaylı izahnamelerini; fiyat, talep tarihleri, pay, dağıtım ve işlem bilgileriyle birlikte inceleyin.",
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/halka-arz/onayli-izahnameler",

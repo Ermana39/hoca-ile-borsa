@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -15,12 +16,13 @@ const haberTarihi = formatHaberTarihi(haberSaati);
 
 const baslik =
   "14.07.2026 Fonların Günlük Kapanış Değerlendirmesi: TLY, PHE, PBR, DFI";
+const seoBaslik = "14 Temmuz Fon Kapanışı: TLY, PHE, PBR ve DFI";
 const aciklama =
   "14 Temmuz fon kapanış değerlendirmesinde TLY, PHE, PBR ve DFI için yarınki fon fiyatı tahmini, portföy etkisi, para akışı ve yatırımcı değişimi.";
 
 export const metadata: Metadata = {
-  title: baslik,
-  description: aciklama,
+  title: { absolute: seoBaslik },
+  description: seoAciklamasi(aciklama, "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical,
   },

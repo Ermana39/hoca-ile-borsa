@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -9,9 +10,9 @@ const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
 
 export const metadata: Metadata = {
-  title: "ISGSY’de %487,89748 Bedelsiz Sermaye Artırımı Hak Kullanım Tarihi Açıklandı",
+  title: { absolute: "ISGSY %487,90 Bedelsiz Sermaye Artırımı Tarihi" },
   description:
-    "İş Girişim Sermayesi, çıkarılmış sermayesinin 85,05 milyon TL’den 500 milyon TL’ye yükseltilmesine ilişkin bedelsiz sermaye artırımı hak kullanım başlangıç tarihinin 3 Temmuz 2026 olarak belirlendiğini açıkladı.",
+    seoAciklamasi("İş Girişim Sermayesi, çıkarılmış sermayesinin 85,05 milyon TL’den 500 milyon TL’ye yükseltilmesine ilişkin bedelsiz sermaye artırımı hak kullanım başlangıç tarihinin 3 Temmuz 2026 olarak belirlendiğini açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/isgsy-487-bedelsiz-sermaye-artirimi-hak-kullanim",

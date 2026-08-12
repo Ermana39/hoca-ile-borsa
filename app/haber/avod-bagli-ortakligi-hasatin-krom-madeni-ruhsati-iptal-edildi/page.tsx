@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "AVOD Bağlı Ortaklığı HASAT’ın Krom Madeni Ruhsatı İptal Edildi",
   description:
-    "AVOD, bağlı ortaklığı HASAT bünyesindeki Muğla Köyceğiz krom madeni işletme ruhsatının 2026 yılı ruhsat ve rehabilitasyon bedellerinin süresinde ödenmemesi nedeniyle iptal edildiğini açıkladı.",
+    seoAciklamasi("AVOD, bağlı ortaklığı HASAT bünyesindeki Muğla Köyceğiz krom madeni işletme ruhsatının 2026 yılı ruhsat ve rehabilitasyon bedellerinin süresinde ödenmemesi nedeniyle iptal edildiğini açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

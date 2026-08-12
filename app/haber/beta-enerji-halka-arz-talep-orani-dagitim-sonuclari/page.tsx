@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel = "/beta-enerji-halka-arz-talep-oranlari.webp";
 
 export const metadata: Metadata = {
   title: "Beta Enerji Halka Arz Talep Oranı Açıklandı",
-  description: haberAciklama,
+  description: seoAciklamasi(haberAciklama, "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: `https://www.hocaileborsa.com/haber/${haberSlug}`,
   },

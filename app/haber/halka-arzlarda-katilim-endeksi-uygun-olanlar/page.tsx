@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -17,7 +18,7 @@ const katilimEndeksiRehberHref = "/rehberler/katilim-endeksi";
 
 export const metadata: Metadata = {
   title: "Halka Arzlarda Katılım Endeksi Durumu",
-  description: haberAciklama,
+  description: seoAciklamasi(haberAciklama, "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: `https://www.hocaileborsa.com/haber/${haberSlug}`,
   },

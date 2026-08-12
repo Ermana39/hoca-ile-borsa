@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -15,9 +16,9 @@ const haberGorsel =
   "https://www.hocaileborsa.com/arzum-240-milyon-tl-tahsisli-sermaye-artirimi-spk-basvurusu.webp";
 
 export const metadata: Metadata = {
-  title: "ARZUM 240 Milyon TL Tahsisli Sermaye Artırımı İçin SPK’ya Başvuruyor",
+  title: { absolute: "ARZUM 240 Milyon TL Tahsisli Artırım SPK Başvurusu" },
   description:
-    "ARZUM, mevcut ortakların rüçhan hakları tamamen kısıtlanarak 240 milyon TL satış hasılatı planlanan tahsisli sermaye artırımı için ihraç belgesi onayı başvurusu yapılmasına karar verdi.",
+    seoAciklamasi("ARZUM, mevcut ortakların rüçhan hakları tamamen kısıtlanarak 240 milyon TL satış hasılatı planlanan tahsisli sermaye artırımı için ihraç belgesi onayı başvurusu yapılmasına karar verdi.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -5,9 +6,9 @@ import AuthorBox from "@/components/AuthorBox";
 import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
-  title: "ALVES Polatlı OSB Yeni Üretim Tesisi İçin Saha Hazırlıklarına Başladı",
+  title: { absolute: "ALVES Polatlı OSB Üretim Tesisi Çalışmalarına Başladı" },
   description:
-    "Alves Kablo, Ankara Polatlı OSB’de yapılacak yeni üretim tesisi yatırımı kapsamında yaklaşık 1 milyon metreküplük hafriyat alımı için iş makinelerinin çalışmaya başladığını açıkladı.",
+    seoAciklamasi("Alves Kablo, Ankara Polatlı OSB’de yapılacak yeni üretim tesisi yatırımı kapsamında yaklaşık 1 milyon metreküplük hafriyat alımı için iş makinelerinin çalışmaya başladığını açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/alves-polatli-osb-yeni-uretim-tesisi-hafriyat-basladi",
@@ -142,7 +143,7 @@ className="object-cover"
 
             <div className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-5">
               <p className="text-sm font-bold text-amber-900 md:text-base">
-                Hoca ile Borsa yorumu:
+                Hoca İle Borsa yorumu:
               </p>
               <p className="mt-2 text-sm leading-7 text-amber-800 md:text-base">
                 ALVES haberinde öne çıkan nokta, yeni üretim tesisi yatırımının

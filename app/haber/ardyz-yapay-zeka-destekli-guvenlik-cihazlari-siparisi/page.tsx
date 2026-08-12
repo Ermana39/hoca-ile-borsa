@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -15,9 +16,9 @@ const haberGorsel =
   "https://www.hocaileborsa.com/ardyz-yapay-zeka-destekli-guvenlik-cihazlari-siparisi.webp";
 
 export const metadata: Metadata = {
-  title: "ARDYZ 3,45 Milyon Euroluk Yapay Zekâ Destekli Sistem Siparişi Aldı",
+  title: { absolute: "ARDYZ: 3,45 Milyon Euroluk Yapay Zekâ Sistem Siparişi" },
   description:
-    "ARDYZ, son kullanıcısı kamu tüzel kişisi olan bir proje kapsamında KDV dahil 3,45 milyon euro tutarında yapay zekâ destekli güvenlik cihazları ve dijital dönüşüm sistemleri siparişi aldığını açıkladı.",
+    seoAciklamasi("ARDYZ, son kullanıcısı kamu tüzel kişisi olan bir proje kapsamında KDV dahil 3,45 milyon euro tutarında yapay zekâ destekli güvenlik cihazları ve dijital dönüşüm sistemleri siparişi aldığını açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

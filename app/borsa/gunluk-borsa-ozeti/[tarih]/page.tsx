@@ -12,6 +12,10 @@ import {
   type KurumDeger,
   type OnemTipi,
 } from "@/lib/gunluk-ozet";
+import {
+  seoAciklamasi,
+  siteAdiniBasliktanCikar,
+} from "@/lib/seo-metadata";
 
 const SITE = "https://www.hocaileborsa.com";
 
@@ -32,21 +36,23 @@ export async function generateMetadata({
   if (!ozet) return {};
 
   const url = `${SITE}/borsa/gunluk-borsa-ozeti/${ozet.slug}`;
-  const baslik = ozet.seoBaslik || `${ozet.baslik} | Hoca ile Borsa`;
-  const aciklama =
+  const baslik = siteAdiniBasliktanCikar(ozet.seoBaslik || ozet.baslik);
+  const aciklama = seoAciklamasi(
     ozet.seoAciklama ||
-    `${ozet.baslik}: BIST 100 kapanışı, en çok yükselen ve düşen hisseler, para girişi-çıkışı, en hacimli hisseler, ekonomik takvim ve kurum dağılımı.`;
+      `${ozet.baslik}: BIST 100 kapanışı, en çok yükselen ve düşen hisseler, para girişi-çıkışı, en hacimli hisseler, ekonomik takvim ve kurum dağılımı.`,
+    "Günün öne çıkan Borsa İstanbul verilerini karşılaştırın."
+  );
   const gorsel = `${SITE}${ozet.gorsel || "/gunluk-ozet-discover.webp"}`;
 
   return {
-    title: baslik,
+    title: { absolute: baslik },
     description: aciklama,
     alternates: { canonical: url },
     openGraph: {
       title: ozet.baslik,
       description: aciklama,
       url,
-      siteName: "Hoca ile Borsa",
+      siteName: "Hoca İle Borsa",
       type: "article",
       publishedTime: ozet.isoTarih,
       images: [{ url: gorsel, width: 1200, height: 675, alt: ozet.baslik }],
@@ -283,7 +289,7 @@ function GunlukOzetIcerik({ ozet }: { ozet: GunlukOzet }) {
     },
     publisher: {
       "@type": "Organization",
-      name: "Hoca ile Borsa",
+      name: "Hoca İle Borsa",
       logo: { "@type": "ImageObject", url: `${SITE}/banner.webp` },
     },
   };

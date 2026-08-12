@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -17,7 +18,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "KARTN Çoğunluk Payları 72 Milyon Dolara Satılıyor",
   description:
-    "Kartonsan’da Pak Holding, Asil Holding ve Pak Gıda’nın sahip olduğu toplam %77,21 oranındaki payların 72 milyon dolar bedelle satışı için pay alım satım sözleşmesi imzalandı.",
+    seoAciklamasi("Kartonsan’da Pak Holding, Asil Holding ve Pak Gıda’nın sahip olduğu toplam %77,21 oranındaki payların 72 milyon dolar bedelle satışı için pay alım satım sözleşmesi imzalandı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

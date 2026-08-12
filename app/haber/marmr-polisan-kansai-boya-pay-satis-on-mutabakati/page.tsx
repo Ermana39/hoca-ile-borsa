@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -5,9 +6,11 @@ import AuthorBox from "@/components/AuthorBox";
 import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
-  title: "MARMR'den Polisan Kansai Boya Payları İçin 93 Milyon Dolarlık Ön Mutabakat",
+  title: {
+    absolute: "MARMR: Polisan Kansai Boya İçin 93 Milyon Dolarlık Mutabakat",
+  },
   description:
-    "Marmara Holding, %50 iştirak ettiği Polisan Kansai Boya'daki paylarının tamamını Kansai Paint'e 93 milyon dolar bedel üzerinden satmak için bağlayıcı olmayan ön mutabakat imzaladı.",
+    seoAciklamasi("Marmara Holding, %50 iştirak ettiği Polisan Kansai Boya'daki paylarının tamamını Kansai Paint'e 93 milyon dolar bedel üzerinden satmak için bağlayıcı olmayan ön mutabakat imzaladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/marmr-polisan-kansai-boya-pay-satis-on-mutabakati",

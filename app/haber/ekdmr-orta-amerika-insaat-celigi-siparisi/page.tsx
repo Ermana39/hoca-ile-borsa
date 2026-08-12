@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -9,9 +10,9 @@ const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
 
 export const metadata: Metadata = {
-  title: "EKDMR Orta Amerika’dan 4,97 Milyon Dolarlık İnşaat Çeliği Siparişi Aldı",
+  title: { absolute: "EKDMR: 4,97 Milyon Dolarlık İnşaat Çeliği Siparişi" },
   description:
-    "Ekinciler Demir ve Çelik, Orta Amerika Bölgesi’ne sevk edilmek üzere 4,97 milyon dolar tutarında inşaat çeliği siparişi aldığını açıkladı. Bölgeden yıl içinde alınan sipariş toplamı 26,08 milyon dolara ulaştı.",
+    seoAciklamasi("Ekinciler Demir ve Çelik, Orta Amerika Bölgesi’ne sevk edilmek üzere 4,97 milyon dolar tutarında inşaat çeliği siparişi aldığını açıkladı. Bölgeden yıl içinde alınan sipariş toplamı 26,08 milyon dolara ulaştı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/ekdmr-orta-amerika-insaat-celigi-siparisi",

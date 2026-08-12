@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -9,7 +10,7 @@ import KapCardLinks from "@/components/KapCardLinks";
 export const metadata: Metadata = {
   title: "12 Haziran KAP: GESAN, VBTYZ, HALKB ve ISCTR Özeti",
   description:
-    "GESAN, VBTYZ, HALKB, ISCTR ve diğer şirketlerin 12 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.",
+    seoAciklamasi("GESAN, VBTYZ, HALKB, ISCTR ve diğer şirketlerin 12 Haziran KAP bildirimlerinde öne çıkan gelişmeler ve olası etkiler.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/12-haziran-2026-cuma-kap-bildirimleri-ozeti",

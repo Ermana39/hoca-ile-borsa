@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "PGSUS 149,9 Milyon Dolarlık Tahvil İhracını Tamamladı",
   description:
-    "Pegasus, yurt dışındaki nitelikli yatırımcılara yönelik 149,9 milyon dolarlık tahvil ihracını tamamladı. Satış tutarı şirket hesaplarına aktarıldı.",
+    seoAciklamasi("Pegasus, yurt dışındaki nitelikli yatırımcılara yönelik 149,9 milyon dolarlık tahvil ihracını tamamladı. Satış tutarı şirket hesaplarına aktarıldı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

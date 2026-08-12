@@ -1,7 +1,8 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 export const metadata = {
   robots: { index: false, follow: true },
-  title: "Dip Zirve Analizi | Hoca İle Borsa",
-  description: "Hisselerin dip ve zirve bölgelerine uzaklığını takip ederek teknik görünümü daha hızlı yorumlayın.",
+  title: "Dip Zirve Analizi: BIST Hisse Seviyeleri",
+  description: seoAciklamasi("Hisselerin dip ve zirve bölgelerine uzaklığını takip ederek teknik görünümü daha hızlı yorumlayın.", "Güncel tablolar, karşılaştırmalar ve yatırımcıların takip edebileceği temel göstergeler birlikte sunulur."),
   alternates: { canonical: "https://www.hocaileborsa.com/borsa/dip-zirve-analizi" },
 };
 

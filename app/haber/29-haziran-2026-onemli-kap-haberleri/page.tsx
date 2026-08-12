@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -13,7 +14,7 @@ const haberTarihi = formatHaberTarihi(haberSaati);
 export const metadata: Metadata = {
   title: "29 Haziran KAP: YEOTK GES, GOODY Bedelsiz, GRTHO Başvuru",
   description:
-    "YEOTK GES ön anlaşması, GOODY bedelsiz hak kullanımı, GRTHO sermaye artırımı başvurusu ve günün KAP özetleri.",
+    seoAciklamasi("YEOTK GES ön anlaşması, GOODY bedelsiz hak kullanımı, GRTHO sermaye artırımı başvurusu ve günün KAP özetleri.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/29-haziran-2026-onemli-kap-haberleri",

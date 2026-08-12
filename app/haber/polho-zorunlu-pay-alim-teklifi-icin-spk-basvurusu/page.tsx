@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "POLHO Zorunlu Pay Alım Teklifi İçin SPK Başvurusu Yapıldı",
   description:
-    "POLHO’nun hakim ortağı CoreX, 8 Temmuz 2026’da tamamlanan pay devri sonrası zorunlu pay alım teklifi bilgi formunun onayı için SPK’ya başvurdu.",
+    seoAciklamasi("POLHO’nun hakim ortağı CoreX, 8 Temmuz 2026’da tamamlanan pay devri sonrası zorunlu pay alım teklifi bilgi formunun onayı için SPK’ya başvurdu.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

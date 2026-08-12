@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "VESTL Eurobondlar İçin Finansal Danışman Atadı",
   description:
-    "VESTL, XS2817919587 ve US92548MAA53 ISIN kodlu yurt dışı tahvillerine ilişkin stratejik alternatiflerin değerlendirilmesi için Houlihan Lokey’i finansal danışman olarak atadı.",
+    seoAciklamasi("VESTL, XS2817919587 ve US92548MAA53 ISIN kodlu yurt dışı tahvillerine ilişkin stratejik alternatiflerin değerlendirilmesi için Houlihan Lokey’i finansal danışman olarak atadı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

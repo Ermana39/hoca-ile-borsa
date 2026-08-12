@@ -9,10 +9,8 @@ import { THEME_INITIALIZATION_SCRIPT } from "@/lib/theme";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.hocaileborsa.com"),
-  title: {
-    default: "Hoca İle Borsa - Borsa, Halka Arz ve Finans Analizi",
-    template: "%s | Hoca İle Borsa",
-  },
+  applicationName: "Hoca İle Borsa",
+  title: "Hoca İle Borsa - Borsa, Halka Arz ve Finans Analizi",
   description:
     "Türkiye borsası, halka arz haberleri, temettü takvimi, yatırım fonları ve mevduat faiz oranlarını takip edebileceğiniz kapsamlı finans platformu.",
   keywords: [
@@ -73,7 +71,8 @@ const organizationJsonLd = {
   "@type": "Organization",
   "@id": "https://www.hocaileborsa.com/#organization",
   name: "Hoca İle Borsa",
-  url: "https://www.hocaileborsa.com",
+  alternateName: "hocaileborsa",
+  url: "https://www.hocaileborsa.com/",
   logo: "https://www.hocaileborsa.com/icon-512.png",
   sameAs: [
     "https://x.com/HocaileBorsa",

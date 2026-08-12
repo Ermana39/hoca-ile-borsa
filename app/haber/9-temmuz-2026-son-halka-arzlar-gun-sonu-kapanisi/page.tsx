@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -16,12 +17,13 @@ const haberTarihi = formatHaberTarihi(haberSaati);
 
 const title =
   "09.07.2026 Son Halka Arzlarda Gün Sonu: EKIM Taban, GOLDA ve BETAE Tavan";
+const seoTitle = "9 Temmuz Halka Arz Kapanışı: EKIM, GOLDA ve BETAE";
 const description =
   "09 Temmuz 2026 son halka arzlarda gün sonu kapanışı: EKIM ilk gün taban kapattı, GOLDA tavan serisi oluşturdu, ORZAX %1,31 yükseldi, SOHOE halka arz fiyatının altında kaldı, BETAE tavan kapattı.";
 
 export const metadata: Metadata = {
-  title,
-  description,
+  title: { absolute: seoTitle },
+  description: seoAciklamasi(description, "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

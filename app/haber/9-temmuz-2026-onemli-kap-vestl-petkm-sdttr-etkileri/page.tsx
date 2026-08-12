@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -16,7 +17,7 @@ const haberGorsel = "https://www.hocaileborsa.com/kap-ozeti-discover.webp";
 export const metadata: Metadata = {
   title: "9 Temmuz 2026 Önemli KAP: VESTL, PETKM, SDTTR Etkileri",
   description:
-    "9 Temmuz 2026 KAP haberlerinde VESTL eurobond süreci, PETKM Master Plan, SDTTR siparişi, DCTTR pay takası, PRZMA varlık satışı ve BORLS ödeme açıklaması öne çıktı.",
+    seoAciklamasi("9 Temmuz 2026 KAP haberlerinde VESTL eurobond süreci, PETKM Master Plan, SDTTR siparişi, DCTTR pay takası, PRZMA varlık satışı ve BORLS ödeme açıklaması öne çıktı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: { canonical: haberUrl },
   openGraph: {
     type: "article",

@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -17,7 +18,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "PETKM Master Plan’da FEED Aşamasına Geçiş Hazırlıklarına Başladı",
   description:
-    "PETKM, Master Plan kapsamında Pre-FEED aşamasının 2025 sonunda tamamlandığını ve FEED sürecine geçiş için hazırlıkların başladığını açıkladı. SOCAR ile Technip Energies Italy arasında iyi niyet anlaşması imzalandı.",
+    seoAciklamasi("PETKM, Master Plan kapsamında Pre-FEED aşamasının 2025 sonunda tamamlandığını ve FEED sürecine geçiş için hazırlıkların başladığını açıkladı. SOCAR ile Technip Energies Italy arasında iyi niyet anlaşması imzalandı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

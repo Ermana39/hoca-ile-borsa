@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel = "/5-halka-arz-talep-bilgileri.webp";
 
 export const metadata: Metadata = {
   title: "5 Halka Arzda Talep Bilgileri",
-  description: haberAciklama,
+  description: seoAciklamasi(haberAciklama, "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: `https://www.hocaileborsa.com/haber/${haberSlug}`,
   },

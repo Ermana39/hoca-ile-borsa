@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -6,10 +7,11 @@ import AuthorBox from "@/components/AuthorBox";
 import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
-  title:
-    "SPK’dan Türkiye Sigorta ve Goodyear İçin Bedelsiz Sermaye Artırımı Onayı",
+  title: {
+    absolute: "TURSG ve GOODY Bedelsiz Sermaye Artırımı SPK Onayı",
+  },
   description:
-    "SPK, Türkiye Sigorta ve Goodyear Lastikleri Türk AŞ’nin bedelsiz sermaye artırımı kapsamındaki pay ihraçlarını onayladı. TURSG ve GOODY sermaye artırımı detayları.",
+    seoAciklamasi("SPK, Türkiye Sigorta ve Goodyear Lastikleri Türk AŞ’nin bedelsiz sermaye artırımı kapsamındaki pay ihraçlarını onayladı. TURSG ve GOODY sermaye artırımı detayları.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/turkiye-sigorta-goodyear-bedelsiz-sermaye-artirimi",

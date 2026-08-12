@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import ContinueReading from "@/components/ContinueReading";
 import HalkaArzKarnesi from "@/components/HalkaArzKarnesi";
 import HalkaArzSSS from "@/components/HalkaArzSSS";
+import { halkaArzSeoMetinleri } from "@/lib/halka-arz-seo";
 import {
   bekleyenDeger,
   tahsisatMetni,
@@ -220,13 +221,23 @@ const veri: HalkaArzVeri = {
   ]
 };
 
+const canonical =
+  veri.seo?.canonical ||
+  "https://www.hocaileborsa.com/halka-arz/onayli-izahnameler/sa-ra-enerji-insaat-tic-ve-san";
+const seoMetinleri = halkaArzSeoMetinleri(veri, "onayli");
+
 export const metadata: Metadata = {
-  title: veri.baslikMeta.title,
-  description: veri.baslikMeta.description,
+  title: { absolute: seoMetinleri.title },
+  description: seoMetinleri.description,
   alternates: {
-    canonical: veri.seo?.canonical || "https://www.hocaileborsa.com/halka-arz/onayli-izahnameler/sa-ra-enerji-insaat-tic-ve-san",
+    canonical,
   },
   robots: veri.seo?.robots,
+  openGraph: {
+    title: veri.baslikMeta.title,
+    description: veri.baslikMeta.description,
+    url: canonical,
+  },
 };
 
 function gorunur(item: BilgiKarti) {

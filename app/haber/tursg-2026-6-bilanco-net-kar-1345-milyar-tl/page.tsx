@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "TURSG 2026/6 Bilanço: Net Kâr %44 Artarak 13,5 Milyar TL",
   description:
-    "Türkiye Sigorta'nın 2026 ilk yarı net kârı %44 artışla 13,45 milyar TL'ye, prim üretimi 94,21 milyar TL'ye çıktı. Bileşik rasyo %88'e geriledi.",
+    seoAciklamasi("Türkiye Sigorta'nın 2026 ilk yarı net kârı %44 artışla 13,45 milyar TL'ye, prim üretimi 94,21 milyar TL'ye çıktı. Bileşik rasyo %88'e geriledi.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: { canonical: haberUrl },
   openGraph: {
     type: "article",

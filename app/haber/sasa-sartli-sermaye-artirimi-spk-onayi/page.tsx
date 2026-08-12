@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -11,7 +12,7 @@ const haberTarihi = formatHaberTarihi(haberSaati);
 export const metadata: Metadata = {
   title: "SASA Şarta Bağlı Sermaye Artırımında SPK Onayı Aldı",
   description:
-    "SASA, şarta bağlı sermaye artırımı başvurusunun SPK tarafından onaylandığını açıkladı. Sermaye 47,04 milyar TL’den 52,50 milyar TL’ye yükselecek.",
+    seoAciklamasi("SASA, şarta bağlı sermaye artırımı başvurusunun SPK tarafından onaylandığını açıkladı. Sermaye 47,04 milyar TL’den 52,50 milyar TL’ye yükselecek.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/sasa-sartli-sermaye-artirimi-spk-onayi",

@@ -4,7 +4,7 @@ import FonTarihselExcelPage from "./_components/FonTarihselExcelPage";
 export const metadata: Metadata = {
   title: "Yatırım Fonları Tarihsel Veriler ve Geçmiş Performans",
   description:
-    "Yatırım fonlarının geçmiş fiyat, getiri, fon büyüklüğü ve yatırımcı verilerini inceleyerek tarihsel performanslarını karşılaştırın.",
+    "Yatırım fonlarının geçmiş fiyat, dönemsel getiri, fon büyüklüğü ve yatırımcı sayılarını tarih aralığına göre inceleyin ve performanslarını karşılaştırın.",
   alternates: {
     canonical: "https://www.hocaileborsa.com/fonlar/tarihsel-veriler",
   },

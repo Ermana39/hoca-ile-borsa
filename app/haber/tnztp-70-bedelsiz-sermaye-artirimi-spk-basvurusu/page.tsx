@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "TNZTP %70 Bedelsiz Sermaye Artırımı İçin SPK’ya Başvurdu",
   description:
-    "Tapdi Oksijen, 400 milyon TL olan çıkarılmış sermayesini 680 milyon TL’ye yükseltecek %70 bedelsiz sermaye artırımı için SPK’ya başvurdu.",
+    seoAciklamasi("Tapdi Oksijen, 400 milyon TL olan çıkarılmış sermayesini 680 milyon TL’ye yükseltecek %70 bedelsiz sermaye artırımı için SPK’ya başvurdu.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

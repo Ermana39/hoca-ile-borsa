@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -7,7 +8,7 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 export const metadata: Metadata = {
   title: "BALSU Pay Satışı: 4,64 Milyar TL Sermaye Avansı Ne Demek?",
   description:
-    "BALSU'da BG Holding pay satışı, 358 milyon TL nominal pay başvurusu ve 4,64 milyar TL sermaye avansı planı yatırımcı açısından ne ifade ediyor?",
+    seoAciklamasi("BALSU'da BG Holding pay satışı, 358 milyon TL nominal pay başvurusu ve 4,64 milyar TL sermaye avansı planı yatırımcı açısından ne ifade ediyor?", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/balsu-bg-holding-pay-satisi-sermaye-avansi",

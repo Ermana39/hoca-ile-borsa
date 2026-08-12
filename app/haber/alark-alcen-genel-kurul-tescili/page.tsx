@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -8,7 +9,7 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 export const metadata: Metadata = {
   title: "ALARK Alcen Genel Kurul Tesciliyle Enerji Yapısını Güncelledi",
   description:
-    "ALARK, Alcen Enerji’de alınan olağanüstü genel kurul kararının ticaret siciline tescil edildiğini ve işlemin geçerlilik kazandığını açıkladı.",
+    seoAciklamasi("ALARK, Alcen Enerji’de alınan olağanüstü genel kurul kararının ticaret siciline tescil edildiğini ve işlemin geçerlilik kazandığını açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/alark-alcen-genel-kurul-tescili",

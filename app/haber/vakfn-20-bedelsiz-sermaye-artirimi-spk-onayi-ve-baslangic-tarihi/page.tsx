@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "VAKFN %20 Bedelsiz Sermaye Artırımı SPK Onayı ve Başlangıç Tarihi",
   description:
-    "VAKFN, 5 milyar TL olan sermayesini 1 milyar TL bedelsiz artırımla 6 milyar TL’ye çıkarıyor. SPK onayı geldi, bedelsiz pay alma hakkı başlangıç tarihi 21 Temmuz 2026 olarak açıklandı.",
+    seoAciklamasi("VAKFN, 5 milyar TL olan sermayesini 1 milyar TL bedelsiz artırımla 6 milyar TL’ye çıkarıyor. SPK onayı geldi, bedelsiz pay alma hakkı başlangıç tarihi 21 Temmuz 2026 olarak açıklandı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

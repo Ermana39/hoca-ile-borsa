@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -11,7 +12,7 @@ const haberTarihi = formatHaberTarihi(haberSaati);
 export const metadata: Metadata = {
   title: "INFO %100 Bedelsiz Sermaye Artırımı İçin SPK'ya Başvurdu",
   description:
-    "İnfo Yatırım, çıkarılmış sermayesini 960,34 milyon TL'den 1,92 milyar TL'ye yükseltmek için %100 bedelsiz sermaye artırımı kapsamında SPK'ya başvurdu.",
+    seoAciklamasi("İnfo Yatırım, çıkarılmış sermayesini 960,34 milyon TL'den 1,92 milyar TL'ye yükseltmek için %100 bedelsiz sermaye artırımı kapsamında SPK'ya başvurdu.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/info-100-bedelsiz-sermaye-artirimi-spk-basvurusu",

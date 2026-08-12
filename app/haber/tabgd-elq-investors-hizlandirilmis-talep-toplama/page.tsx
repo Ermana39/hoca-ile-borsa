@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -11,7 +12,7 @@ const haberTarihi = formatHaberTarihi(haberSaati);
 export const metadata: Metadata = {
   title: "TABGD’de ELQ Investors’tan Hızlandırılmış Talep Toplama Süreci",
   description:
-    "TAB Gıda payları için ELQ Investors VIII Ltd tarafından nitelikli kurumsal alıcılara yönelik hızlandırılmış talep toplama süreci başlatıldı. Satışa konu payların azami oranı %5,63 olarak açıklandı.",
+    seoAciklamasi("TAB Gıda payları için ELQ Investors VIII Ltd tarafından nitelikli kurumsal alıcılara yönelik hızlandırılmış talep toplama süreci başlatıldı. Satışa konu payların azami oranı %5,63 olarak açıklandı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/tabgd-elq-investors-hizlandirilmis-talep-toplama",

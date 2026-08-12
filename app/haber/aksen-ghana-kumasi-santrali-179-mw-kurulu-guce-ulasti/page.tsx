@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "AKSEN Ghana Kumasi Santrali 179 MW Kurulu Güce Ulaştı",
   description:
-    "Aksa Enerji, Ghana Kumasi kombine çevrim doğalgaz santralinin ilk fazında kombine çevrim sürecinin tamamlandığını ve kurulu gücün 179 MW seviyesine ulaştığını açıkladı.",
+    seoAciklamasi("Aksa Enerji, Ghana Kumasi kombine çevrim doğalgaz santralinin ilk fazında kombine çevrim sürecinin tamamlandığını ve kurulu gücün 179 MW seviyesine ulaştığını açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

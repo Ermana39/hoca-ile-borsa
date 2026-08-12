@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "YEOTK İngiltere’de 196 MWp GES Sözleşmesi İmzaladı",
   description:
-    "YEOTK’nin %75 bağlı ortaklığı Rey Renewable Energy, İngiltere’de üç ayrı sahada toplam 196 MWp güneş enerjisi santralinin anahtar teslim yapımı için sözleşme imzaladı.",
+    seoAciklamasi("YEOTK’nin %75 bağlı ortaklığı Rey Renewable Energy, İngiltere’de üç ayrı sahada toplam 196 MWp güneş enerjisi santralinin anahtar teslim yapımı için sözleşme imzaladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: { canonical: haberUrl },
   openGraph: {
     type: "article",

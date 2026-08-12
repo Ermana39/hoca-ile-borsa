@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "SDTTR Bağlı Ortaklığı 1,27 Milyon Dolarlık Sipariş Aldı",
   description:
-    "SDTTR, %95 pay sahibi olduğu bağlı ortaklığı BKM Bursa Kalıp A.Ş.’nin yurt içi bir müşteriden üretim alanında 1,27 milyon dolarlık sipariş aldığını açıkladı.",
+    seoAciklamasi("SDTTR, %95 pay sahibi olduğu bağlı ortaklığı BKM Bursa Kalıp A.Ş.’nin yurt içi bir müşteriden üretim alanında 1,27 milyon dolarlık sipariş aldığını açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

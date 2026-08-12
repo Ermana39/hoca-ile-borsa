@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -11,7 +12,7 @@ const haberTarihi = formatHaberTarihi(haberSaati);
 export const metadata: Metadata = {
   title: "GOODY Bedelsiz Pay Alma Hakkı 2 Temmuz’da Başlıyor",
   description:
-    "Goodyear Lastikleri, 270 milyon TL olan çıkarılmış sermayesini tamamı iç kaynaklardan karşılanmak üzere 1,52 milyar TL’ye çıkaracak bedelsiz sermaye artırımı için bedelsiz pay alma hakkı kullanım başlangıç tarihini 2 Temmuz 2026 olarak açıkladı.",
+    seoAciklamasi("Goodyear Lastikleri, 270 milyon TL olan çıkarılmış sermayesini tamamı iç kaynaklardan karşılanmak üzere 1,52 milyar TL’ye çıkaracak bedelsiz sermaye artırımı için bedelsiz pay alma hakkı kullanım başlangıç tarihini 2 Temmuz 2026 olarak açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/goody-bedelsiz-pay-alma-hakki-2-temmuzda-basliyor",

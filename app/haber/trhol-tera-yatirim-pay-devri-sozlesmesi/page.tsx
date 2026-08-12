@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -8,7 +9,7 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 export const metadata: Metadata = {
   title: "TRHOL, Tera Yatırım Paylarının Devri İçin Sözleşme İmzaladı",
   description:
-    "Tera Finansal Yatırımlar Holding A.Ş. (TRHOL), Tera Yatırım Menkul Değerler A.Ş. sermayesinin %6,3'ünü temsil eden B grubu payların devralınmasına ilişkin sözleşme imzalandığını ve pay devrinin önemli bölümünün tamamlandığını açıkladı.",
+    seoAciklamasi("Tera Finansal Yatırımlar Holding A.Ş. (TRHOL), Tera Yatırım Menkul Değerler A.Ş. sermayesinin %6,3'ünü temsil eden B grubu payların devralınmasına ilişkin sözleşme imzalandığını ve pay devrinin önemli bölümünün tamamlandığını açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/trhol-tera-yatirim-pay-devri-sozlesmesi",
@@ -184,7 +185,7 @@ className="object-cover"
               </div>
 
               <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm font-medium leading-7 text-emerald-900 md:text-base">
-                Hoca ile Borsa yorumu: TRHOL haberinde ana başlık, Tera Yatırım
+                Hoca İle Borsa yorumu: TRHOL haberinde ana başlık, Tera Yatırım
                 paylarının devralınmasıyla grup içi finansal iştirak yapısında
                 güçlenme ihtimalidir. İşlem, doğrudan günlük operasyonel ciro
                 etkisinden çok ortaklık yapısı ve finansal pozisyon açısından

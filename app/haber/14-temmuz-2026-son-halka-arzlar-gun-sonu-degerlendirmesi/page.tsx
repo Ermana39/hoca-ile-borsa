@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -17,12 +18,13 @@ const haberTarihi = formatHaberTarihi(haberSaati);
 
 const title =
   "14 Temmuz Son Halka Arzlarda Gün Sonu: ISVEA, GOLDA, ORZAX ve BETAE Tavan";
+const seoTitle = "14 Temmuz Halka Arz Kapanışı: ISVEA, GOLDA ve ORZAX";
 const description =
   "14 Temmuz 2026 son halka arzlarda gün sonu kapanış değerlendirmesi: ISVEA 3. işlem gününü, GOLDA 5. işlem gününü, ORZAX ve BETAE tavan fiyatla kapattı. SOHOE ve EKIM günü ekside tamamladı.";
 
 export const metadata: Metadata = {
-  title,
-  description,
+  title: { absolute: seoTitle },
+  description: seoAciklamasi(description, "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

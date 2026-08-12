@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -8,7 +9,7 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 export const metadata: Metadata = {
   title: "Aksa Enerji’nin Manisa Depolamalı RES Projesine EPDK Onayı",
   description:
-    "Aksa Enerji, Manisa’da 82,16 MWe kurulu güce ve 95 MWh depolama kapasitesine sahip Manisa Depolamalı RES Projesi için elektrik üretim lisansı başvurusunun EPDK tarafından onaylandığını açıkladı.",
+    seoAciklamasi("Aksa Enerji, Manisa’da 82,16 MWe kurulu güce ve 95 MWh depolama kapasitesine sahip Manisa Depolamalı RES Projesi için elektrik üretim lisansı başvurusunun EPDK tarafından onaylandığını açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/aksen-manisa-depolamali-res-epdk-lisans-onayi",
@@ -151,7 +152,7 @@ className="object-cover"
 
             <div className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-5">
               <p className="text-sm font-bold text-amber-900 md:text-base">
-                Hoca ile Borsa yorumu:
+                Hoca İle Borsa yorumu:
               </p>
               <p className="mt-2 text-sm leading-7 text-amber-800 md:text-base">
                 AKSEN haberinde öne çıkan başlık, depolamalı yenilenebilir enerji

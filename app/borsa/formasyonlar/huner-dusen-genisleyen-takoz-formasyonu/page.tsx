@@ -1,11 +1,12 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "HUNER Düşen Genişleyen Takoz Formasyonu | Hoca İle Borsa",
+  title: "HUNER Düşen Genişleyen Takoz Formasyonu",
   description:
-    "HUNER günlük grafik teknik değerlendirmesi, destek ve direnç seviyeleri.",
+    seoAciklamasi("HUNER günlük grafik teknik değerlendirmesi, destek ve direnç seviyeleri.", "Güncel tablolar, karşılaştırmalar ve yatırımcıların takip edebileceği temel göstergeler birlikte sunulur."),
   alternates: {
     canonical: "/borsa/formasyonlar/huner-dusen-genisleyen-takoz-formasyonu",
   },

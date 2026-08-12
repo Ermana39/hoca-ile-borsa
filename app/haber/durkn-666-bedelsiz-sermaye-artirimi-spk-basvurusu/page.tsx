@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -17,7 +18,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "DURKN %666 Bedelsiz Sermaye Artırımı İçin SPK’ya Başvurdu",
   description:
-    "DURKN, 132,5 milyon TL olan sermayesini %666,03773 bedelsiz artırımla 1,015 milyar TL’ye çıkarmak için SPK’ya başvurdu. Artırım iç kaynaklardan karşılanacak.",
+    seoAciklamasi("DURKN, 132,5 milyon TL olan sermayesini %666,03773 bedelsiz artırımla 1,015 milyar TL’ye çıkarmak için SPK’ya başvurdu. Artırım iç kaynaklardan karşılanacak.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

@@ -16,6 +16,7 @@ import {
   getManagersData,
   type ManagerSummary,
 } from "@/lib/fon-platform";
+import { seoAciklamasi } from "@/lib/seo-metadata";
 
 export function generateStaticParams() {
   return getAllManagerSlugs().map((slug) => ({ slug }));
@@ -36,11 +37,21 @@ export async function generateMetadata({
     };
   }
 
+  const kisaYoneticiAdi = manager.yonetici
+    .replace(/\s+PORTFÖY YÖNETİMİ A\.?Ş\.?$/iu, "")
+    .trim();
+  const canonical = `https://www.hocaileborsa.com/fonlar/yoneticiler/${manager.slug}`;
+  const seoTitle = `${kisaYoneticiAdi} Portföy Fonları: Getiri ve Para Akışı`;
+  const seoDescription = seoAciklamasi(
+    `${manager.yonetici} tarafından yönetilen fonların toplam büyüklüğü, yatırımcı sayısı, para akışı ve dönemsel getirileri.`,
+    "Fonlar aynı tabloda karşılaştırılır."
+  );
+
   return {
-    title: `${manager.yonetici} Fonları ve Para Akışı Analizi`,
-    description: `${manager.yonetici} tarafından yönetilen fonlar, toplam büyüklük, yatırımcı sayısı, para giriş çıkışı ve ortalama getiri verileri.`,
+    title: { absolute: seoTitle },
+    description: seoDescription,
     alternates: {
-      canonical: `https://www.hocaileborsa.com/fonlar/yoneticiler/${manager.slug}`,
+      canonical,
     },
   };
 }

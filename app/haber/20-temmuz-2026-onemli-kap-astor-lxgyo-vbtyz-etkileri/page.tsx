@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -17,7 +18,7 @@ const haberGorsel = "https://www.hocaileborsa.com/kap-ozeti-discover.webp";
 export const metadata: Metadata = {
   title: "20 Temmuz 2026 Önemli KAP: ASTOR, LXGYO, VBTYZ Etkileri",
   description:
-    "20 Temmuz 2026 önemli KAP haberlerinde ASTOR 351,1 milyon TL’lik TEİAŞ ihalesini kazandı, LXGYO 3,9 milyar TL değerli proje için sözleşme imzaladı, VBTYZ 17 ülkede distribütörlük yetkisi aldı.",
+    seoAciklamasi("20 Temmuz 2026 önemli KAP haberlerinde ASTOR 351,1 milyon TL’lik TEİAŞ ihalesini kazandı, LXGYO 3,9 milyar TL değerli proje için sözleşme imzaladı, VBTYZ 17 ülkede distribütörlük yetkisi aldı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: { canonical: haberUrl },
   openGraph: {
     type: "article",

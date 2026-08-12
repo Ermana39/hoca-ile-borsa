@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -17,7 +18,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "ESCAR’da Pay Devri Tamamlandı: Bulls Yatırım Yeni Ana Ortak Oldu",
   description:
-    "ESCAR’da şirket sermayesinin yüzde 77,62’sini temsil eden payların Bulls Yatırım Holding’e devri tamamlandı. Nihai devir bedeli 141,41 milyon dolar olarak açıklandı.",
+    seoAciklamasi("ESCAR’da şirket sermayesinin yüzde 77,62’sini temsil eden payların Bulls Yatırım Holding’e devri tamamlandı. Nihai devir bedeli 141,41 milyon dolar olarak açıklandı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

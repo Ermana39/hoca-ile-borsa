@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -9,9 +10,9 @@ const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
 
 export const metadata: Metadata = {
-  title: "ALTNY Bağlı Ortaklığı TAAC Havacılık’tan 13,2 Milyon Dolarlık Sözleşme",
+  title: { absolute: "ALTNY: TAAC’tan 13,2 Milyon Dolarlık Sözleşme" },
   description:
-    "Altınay Savunma bağlı ortaklığı TAAC Havacılık, yurt dışında yerleşik bir müşteriyle kritik havacılık ekipmanlarının geliştirilmesi ve tedarikine yönelik 13,2 milyon dolar tutarında sözleşme imzaladı.",
+    seoAciklamasi("Altınay Savunma bağlı ortaklığı TAAC Havacılık, yurt dışında yerleşik bir müşteriyle kritik havacılık ekipmanlarının geliştirilmesi ve tedarikine yönelik 13,2 milyon dolar tutarında sözleşme imzaladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/altny-taac-havacilik-13-2-milyon-dolar-sozlesme",

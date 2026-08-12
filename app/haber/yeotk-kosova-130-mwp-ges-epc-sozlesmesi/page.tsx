@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -17,7 +18,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "YEOTK Kosova’da 130 MWp GES İçin EPC Sözleşmesi İmzaladı",
   description:
-    "YEOTK, Kosova’da 130 MWp kapasiteli güneş enerjisi santrali için yüksek gerilim trafo merkezi, iletim hatları ve şebeke bağlantı altyapısını kapsayan tam anahtar teslim EPC sözleşmesi imzaladı.",
+    seoAciklamasi("YEOTK, Kosova’da 130 MWp kapasiteli güneş enerjisi santrali için yüksek gerilim trafo merkezi, iletim hatları ve şebeke bağlantı altyapısını kapsayan tam anahtar teslim EPC sözleşmesi imzaladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

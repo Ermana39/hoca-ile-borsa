@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "AKFYE %500 Bedelsiz Sermaye Artırımı İçin SPK’ya Başvurdu",
   description:
-    "Akfen Yenilenebilir Enerji, 1,197 milyar TL olan sermayesini %500 bedelsiz artırarak 7,182 milyar TL’ye çıkarmak için SPK’ya başvurdu.",
+    seoAciklamasi("Akfen Yenilenebilir Enerji, 1,197 milyar TL olan sermayesini %500 bedelsiz artırarak 7,182 milyar TL’ye çıkarmak için SPK’ya başvurdu.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

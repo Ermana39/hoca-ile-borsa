@@ -1,6 +1,7 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 export const metadata = {
-  title: "Borsa Eğitim Videoları | Hoca İle Borsa",
-  description: "Borsa, halka arz, teknik analiz ve finans başlıklarında hazırlanan eğitim videoları.",
+  title: "Borsa Eğitim Videoları",
+  description: seoAciklamasi("Borsa, halka arz, teknik analiz ve finans başlıklarında hazırlanan eğitim videoları.", "Güncel tablolar, karşılaştırmalar ve yatırımcıların takip edebileceği temel göstergeler birlikte sunulur."),
   alternates: { canonical: "https://www.hocaileborsa.com/borsa/egitim-videolari" },
 };
 

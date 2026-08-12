@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "ARMGD %1.510 Bedelsiz Sermaye Artırımı Kararı Aldı",
   description:
-    "ARMGD, 263,98 milyon TL olan sermayesini iç kaynaklardan %1.510,14935 oranında artırarak 4,25 milyar TL’ye çıkarma kararı aldı.",
+    seoAciklamasi("ARMGD, 263,98 milyon TL olan sermayesini iç kaynaklardan %1.510,14935 oranında artırarak 4,25 milyar TL’ye çıkarma kararı aldı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

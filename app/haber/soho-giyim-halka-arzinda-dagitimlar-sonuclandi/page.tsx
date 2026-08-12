@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -11,7 +12,7 @@ const haberTarihi = formatHaberTarihi(haberSaati);
 export const metadata: Metadata = {
   title: "SOHO Giyim Halka Arzında Dağıtımlar Sonuçlandı",
   description:
-    "SOHO Giyim halka arzında dağıtımlar tamamlandı. En yüksek 390.085 lot alan yatırımcı bulunurken, gözler Golda Gıda halka arzındaki talep sayılarına çevrildi.",
+    seoAciklamasi("SOHO Giyim halka arzında dağıtımlar tamamlandı. En yüksek 390.085 lot alan yatırımcı bulunurken, gözler Golda Gıda halka arzındaki talep sayılarına çevrildi.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/soho-giyim-halka-arzinda-dagitimlar-sonuclandi",

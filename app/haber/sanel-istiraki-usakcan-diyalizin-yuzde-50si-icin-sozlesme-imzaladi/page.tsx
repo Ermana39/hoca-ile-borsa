@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -19,7 +20,7 @@ export const metadata: Metadata = {
   title:
     "SANEL İştiraki Uşakcan Diyaliz’in %50’si İçin Sözleşme İmzaladı",
   description:
-    "SANEL’in %48,90 iştiraki Salacak Sağlık, Uşakcan Diyaliz’in %50’sini temsil eden 300 bin payı 74 milyon TL bedelle almak için sözleşme imzaladı.",
+    seoAciklamasi("SANEL’in %48,90 iştiraki Salacak Sağlık, Uşakcan Diyaliz’in %50’sini temsil eden 300 bin payı 74 milyon TL bedelle almak için sözleşme imzaladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

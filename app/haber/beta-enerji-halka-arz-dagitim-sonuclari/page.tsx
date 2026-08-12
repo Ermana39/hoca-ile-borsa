@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -8,7 +9,7 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 export const metadata: Metadata = {
   title: "Beta Enerji Halka Arz Dağıtım Sonuçları Açıklandı",
   description:
-    "Beta Enerji halka arzında dağıtım sonuçları açıklandı. BETAE halka arzına 1.124.953 yatırımcı katıldı, en fazla 28 lot dağıtım gerçekleşti.",
+    seoAciklamasi("Beta Enerji halka arzında dağıtım sonuçları açıklandı. BETAE halka arzına 1.124.953 yatırımcı katıldı, en fazla 28 lot dağıtım gerçekleşti.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/beta-enerji-halka-arz-dagitim-sonuclari",

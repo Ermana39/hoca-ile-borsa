@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "CWENE Güneş Hücresinde %25,11 Verimlilik Doğrulandı",
   description:
-    "CW Enerji, bağlı ortaklığı CW Solar Cell’in seri üretim hattından alınan G12R güneş hücrelerinde %25,11 verimlilik değerinin Fraunhofer ISE tarafından doğrulandığını açıkladı.",
+    seoAciklamasi("CW Enerji, bağlı ortaklığı CW Solar Cell’in seri üretim hattından alınan G12R güneş hücrelerinde %25,11 verimlilik değerinin Fraunhofer ISE tarafından doğrulandığını açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -8,7 +9,7 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 export const metadata: Metadata = {
   title: "DERHL’de Bedelsiz Sermaye Artırımı ve SPK’dan Suç Duyurusu Kararı",
   description:
-    "Derlüks Yatırım Holding, sermayesini yüzde 401 oranında artırarak 989,2 milyon TL’ye çıkarmak için SPK’ya başvurdu. SPK bülteninde ise DERHL pay piyasasındaki işlemler ve sosyal medya paylaşımları nedeniyle suç duyurusu kararı yer aldı.",
+    seoAciklamasi("Derlüks Yatırım Holding, sermayesini yüzde 401 oranında artırarak 989,2 milyon TL’ye çıkarmak için SPK’ya başvurdu. SPK bülteninde ise DERHL pay piyasasındaki işlemler ve sosyal medya paylaşımları nedeniyle suç duyurusu kararı yer aldı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/derhl-bedelsiz-sermaye-artirimi-spk-suc-duyurusu",

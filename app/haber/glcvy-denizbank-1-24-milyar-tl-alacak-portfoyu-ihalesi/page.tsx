@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -16,9 +17,9 @@ const haberGorsel =
   "https://www.hocaileborsa.com/glcvy-denizbank-1-24-milyar-tl-alacak-portfoyu-ihalesi.webp";
 
 export const metadata: Metadata = {
-  title: "GLCVY Denizbank’ın 1,24 Milyar TL’lik Alacak Portföyü İhalesini Kazandı",
+  title: { absolute: "GLCVY: 1,24 Milyar TL’lik Denizbank Alacak İhalesi" },
   description:
-    "Gelecek Varlık Yönetimi, Denizbank’ın tahsili gecikmiş alacak satışında 1.243 milyon TL anapara büyüklüğündeki 2 bireysel ve 1 ticari portföy için en yüksek teklifi verdi.",
+    seoAciklamasi("Gelecek Varlık Yönetimi, Denizbank’ın tahsili gecikmiş alacak satışında 1.243 milyon TL anapara büyüklüğündeki 2 bireysel ve 1 ticari portföy için en yüksek teklifi verdi.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

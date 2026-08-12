@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "YEOTK Türk Ytong ile 8,44 Milyon Dolarlık GES Sözleşmesi İmzaladı",
   description:
-    "YEOTK, Türk Ytong Sanayi A.Ş. ile Mardin’de anahtar teslim kurulacak güneş santrali için 8,44 milyon dolar + KDV tutarında sözleşme imzaladı.",
+    seoAciklamasi("YEOTK, Türk Ytong Sanayi A.Ş. ile Mardin’de anahtar teslim kurulacak güneş santrali için 8,44 milyon dolar + KDV tutarında sözleşme imzaladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

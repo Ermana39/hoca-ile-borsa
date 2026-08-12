@@ -5,13 +5,17 @@ import HalkaArzKarnesi from "@/components/HalkaArzKarnesi";
 import HalkaArzSSS from "@/components/HalkaArzSSS";
 
 export const metadata: Metadata = {
-  title:
-    "Ekinciler Demir ve Çelik Sanayi A.Ş. Halka Arz Detayları 2026 | EKDMR Onaylı İzahname",
+  title: { absolute: "EKDMR Ekinciler Halka Arz: Tarih, Fiyat ve Lot" },
   description:
-    "Ekinciler Demir ve Çelik Sanayi A.Ş. EKDMR onaylı izahname bilgileri, talep toplama tarihleri, halka arz fiyatı, lot dağılımı, finansal görünüm, çarpan analizi ve tahmini lot tablosu.",
+    "EKDMR Ekinciler halka arzı 13-15 Mayıs 2026'da 45,00 TL sabit fiyatla talep topladı. Onaylı izahname, pay, dağıtım ve finansal bilgileri inceleyin.",
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/halka-arz/onayli-izahnameler/ekinciler-demir-celik-ekdmr",
+  },
+  openGraph: {
+    title: "Ekinciler Demir Çelik Halka Arz Detayları",
+    description:
+      "EKDMR halka arzının talep tarihleri, fiyatı, pay dağılımı ve onaylı izahname bilgileri.",
   },
 };
 

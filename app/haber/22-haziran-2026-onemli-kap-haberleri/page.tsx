@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -9,7 +10,7 @@ import KapCardLinks from "@/components/KapCardLinks";
 export const metadata: Metadata = {
   title: "22 Haziran KAP: TCELL Finansman, ORGE Bedelsiz, HLGYO Artırım",
   description:
-    "TCELL finansman gelişmesi, ORGE bedelsiz başvurusu, HLGYO sermaye artırımı kararı ve 22 Haziran KAP etkileri.",
+    seoAciklamasi("TCELL finansman gelişmesi, ORGE bedelsiz başvurusu, HLGYO sermaye artırımı kararı ve 22 Haziran KAP etkileri.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/22-haziran-2026-onemli-kap-haberleri",

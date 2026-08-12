@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
 import { getTumGunlukOzetler } from "@/lib/gunluk-ozet";
@@ -5,9 +6,9 @@ import { getTumGunlukOzetler } from "@/lib/gunluk-ozet";
 const SITE = "https://www.hocaileborsa.com";
 
 export const metadata: Metadata = {
-  title: "Günlük Borsa Özeti Arşivi | Hoca ile Borsa",
+    title: "Günlük Borsa Özeti Arşivi",
   description:
-    "BIST 100 kapanışı, en çok yükselen ve düşen hisseler, para girişi-çıkışı, kurum dağılımı ve ekonomik takvim içeren günlük borsa özetleri.",
+    seoAciklamasi("BIST 100 kapanışı, en çok yükselen ve düşen hisseler, para girişi-çıkışı, kurum dağılımı ve ekonomik takvim içeren günlük borsa özetleri.", "Güncel tablolar, karşılaştırmalar ve yatırımcıların takip edebileceği temel göstergeler birlikte sunulur."),
   alternates: {
     canonical: `${SITE}/borsa/gunluk-borsa-ozeti`,
   },
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
     description:
       "Günlük borsa özetlerini tarih sırasına göre inceleyin; BIST kapanışı, para akışı, hacim ve kurum verilerini takip edin.",
     url: `${SITE}/borsa/gunluk-borsa-ozeti`,
-    siteName: "Hoca ile Borsa",
+    siteName: "Hoca İle Borsa",
     type: "website",
   },
 };

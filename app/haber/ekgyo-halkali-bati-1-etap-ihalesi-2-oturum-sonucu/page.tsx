@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -11,7 +12,7 @@ const haberTarihi = formatHaberTarihi(haberSaati);
 export const metadata: Metadata = {
   title: "EKGYO Halkalı Batı 1. Etap İhalesinde En Yüksek Teklif Açıklandı",
   description:
-    "Emlak Konut GYO, İstanbul Küçükçekmece Halkalı Batı 1. Etap ihalesinin 2. oturum sonucunu açıkladı. En yüksek teklif 7,789 milyar TL arsa satışı karşılığı satış toplam geliri üzerinden oluştu.",
+    seoAciklamasi("Emlak Konut GYO, İstanbul Küçükçekmece Halkalı Batı 1. Etap ihalesinin 2. oturum sonucunu açıkladı. En yüksek teklif 7,789 milyar TL arsa satışı karşılığı satış toplam geliri üzerinden oluştu.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/ekgyo-halkali-bati-1-etap-ihalesi-2-oturum-sonucu",

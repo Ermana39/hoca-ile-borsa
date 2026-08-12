@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -17,7 +18,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "TCKRC Bulgaristan’da 10 Milyon Euroluk İş Birliği Açıkladı",
   description:
-    "TCKRC, Bulgaristan’da hasarlı otokorkulukların bakım, onarım ve acil müdahale çalışmaları için iş birliği sözleşmesi imzaladı. Toplam iş hacminin yaklaşık 10 milyon euroya ulaşması bekleniyor.",
+    seoAciklamasi("TCKRC, Bulgaristan’da hasarlı otokorkulukların bakım, onarım ve acil müdahale çalışmaları için iş birliği sözleşmesi imzaladı. Toplam iş hacminin yaklaşık 10 milyon euroya ulaşması bekleniyor.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

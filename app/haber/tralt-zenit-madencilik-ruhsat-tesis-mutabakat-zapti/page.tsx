@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -8,7 +9,7 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 export const metadata: Metadata = {
   title: "TRALT’ten 69,9 Milyon Dolarlık Maden Ruhsatı Hamlesi",
   description:
-    "TRALT, Zenit Madencilik bünyesindeki altı işletme ruhsatı ve Sındırgı cevher işleme tesisinin alınması için mutabakat zaptı imzaladı.",
+    seoAciklamasi("TRALT, Zenit Madencilik bünyesindeki altı işletme ruhsatı ve Sındırgı cevher işleme tesisinin alınması için mutabakat zaptı imzaladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/tralt-zenit-madencilik-ruhsat-tesis-mutabakat-zapti",

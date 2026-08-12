@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -11,7 +12,7 @@ const haberTarihi = formatHaberTarihi(haberSaati);
 export const metadata: Metadata = {
   title: "KAREL 5,86 Milyon Dolarlık Askeri Elektronik Sözleşmesi İmzaladı",
   description:
-    "KAREL, Türkiye’de faaliyet gösteren yerli bir müşteriyle savunma sanayinde kullanılacak askeri elektronik teçhizat için 5,86 milyon dolarlık sözleşme imzaladı.",
+    seoAciklamasi("KAREL, Türkiye’de faaliyet gösteren yerli bir müşteriyle savunma sanayinde kullanılacak askeri elektronik teçhizat için 5,86 milyon dolarlık sözleşme imzaladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/karel-586-milyon-dolar-askeri-elektronik-sozlesmesi",

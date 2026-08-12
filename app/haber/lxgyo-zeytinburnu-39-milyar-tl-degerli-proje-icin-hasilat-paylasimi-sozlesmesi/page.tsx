@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -16,9 +17,11 @@ const haberGorsel =
   "https://www.hocaileborsa.com/lxgyo-zeytinburnu-39-milyar-tl-degerli-proje-icin-hasilat-paylasimi-sozlesmesi.webp";
 
 export const metadata: Metadata = {
-  title: "LXGYO Zeytinburnu’nda 3,9 Milyar TL Değerli Proje İçin Sözleşme İmzaladı",
+  title: {
+    absolute: "LXGYO: 3,9 Milyar TL’lik Zeytinburnu Proje Sözleşmesi",
+  },
   description:
-    "Luxera GYO, Zeytinburnu Sümer Mahallesi'ndeki taşınmaz için NBG Zeytinburnu ile %50-%50 hasılat paylaşımı esaslı inşaat sözleşmesi imzaladı.",
+    seoAciklamasi("Luxera GYO, Zeytinburnu Sümer Mahallesi'ndeki taşınmaz için NBG Zeytinburnu ile %50-%50 hasılat paylaşımı esaslı inşaat sözleşmesi imzaladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: { canonical: haberUrl },
   openGraph: {
     type: "article",

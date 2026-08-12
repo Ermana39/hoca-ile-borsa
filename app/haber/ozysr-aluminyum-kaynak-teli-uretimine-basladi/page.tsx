@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -17,7 +18,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "OZYSR Alüminyum Kaynak Teli Üretimine Başladı",
   description:
-    "Özyaşar Tel, Ar-Ge Merkezi tarafından geliştirilen alüminyum kaynak telinde ilk müşteri siparişlerinin ardından üretime geçti. Aylık üretim kapasitesi 60 ton olarak açıklandı.",
+    seoAciklamasi("Özyaşar Tel, Ar-Ge Merkezi tarafından geliştirilen alüminyum kaynak telinde ilk müşteri siparişlerinin ardından üretime geçti. Aylık üretim kapasitesi 60 ton olarak açıklandı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

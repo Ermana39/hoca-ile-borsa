@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -16,7 +17,7 @@ const haberGorsel = "https://www.hocaileborsa.com/kap-ozeti-discover.webp";
 export const metadata: Metadata = {
   title: "8 Temmuz 2026 Önemli KAP: ESCAR, ASTOR, ARZUM Etkileri",
   description:
-    "8 Temmuz 2026 önemli KAP haberlerinde ESCAR pay devri, ASTOR 42,5 milyon dolarlık sözleşme, ARZUM tahsisli sermaye artırımı, ARDYZ siparişi ve TRALT mahkeme kararı öne çıktı.",
+    seoAciklamasi("8 Temmuz 2026 önemli KAP haberlerinde ESCAR pay devri, ASTOR 42,5 milyon dolarlık sözleşme, ARZUM tahsisli sermaye artırımı, ARDYZ siparişi ve TRALT mahkeme kararı öne çıktı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

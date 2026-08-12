@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import fonEtkiHamVeri from "./fon-etki-verileri.json";
 
 export type FonEtkiSatiri = {
@@ -167,7 +168,9 @@ export function fonEtkiMetadataOlustur(slug: string): Metadata {
   const fon = fonEtkiOzetiGetir(slug);
   const canonical = `${siteUrl}/fonlar/etki-analizi/${fon.slug}`;
   const title = `${fon.kod} Fonu Etki Analizi: Yarınki Fon Fiyatı Tahmini`;
-  const description = `${tarihEtiketi(fon.sonGuncellemeIso)} kapanışına göre ${fon.kod} fonunun tahmini etkisi ${fonEtkiYuzdeMetni(fon.toplamEtki)}. Portföy dağılımı, hisse katkıları, para girişi ve yatırımcı değişimini inceleyin.`;
+  const description = seoAciklamasi(
+    `${tarihEtiketi(fon.sonGuncellemeIso)} kapanışına göre ${fon.kod} fonunun tahmini etkisi ${fonEtkiYuzdeMetni(fon.toplamEtki)}. Portföy dağılımı, hisse katkıları, para girişi ve yatırımcı değişimini inceleyin.`
+  );
 
   return {
     title: { absolute: title },

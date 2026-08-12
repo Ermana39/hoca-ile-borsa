@@ -15,6 +15,19 @@ import {
   ANA_SAYFA_HABER_LIMIT,
 } from "@/lib/haberler";
 
+const websiteJsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "@id": "https://www.hocaileborsa.com/#website",
+  url: "https://www.hocaileborsa.com/",
+  name: "Hoca İle Borsa",
+  alternateName: "hocaileborsa",
+  publisher: {
+    "@id": "https://www.hocaileborsa.com/#organization",
+  },
+  inLanguage: "tr-TR",
+};
+
 export const revalidate = false;
 
 type GuncellemeItem = {
@@ -189,12 +202,12 @@ function YoutubeTanitimBanner() {
         href="https://www.youtube.com/@hocaileborsa"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Hoca ile Borsa YouTube kanalını aç"
+        aria-label="Hoca İle Borsa YouTube kanalını aç"
         className="group block overflow-hidden rounded-2xl shadow-[0_10px_35px_rgba(15,23,42,0.12)] transition duration-300 hover:-translate-y-0.5 hover:shadow-[0_14px_45px_rgba(15,23,42,0.18)] focus:outline-none focus:ring-2 focus:ring-red-500 focus:ring-offset-2"
       >
         <Image
           src="/youtube-tanitim.webp"
-          alt="Hoca ile Borsa YouTube kanalında borsa eğitimleri, halka arz analizleri ve fon değerlendirmeleri"
+          alt="Hoca İle Borsa YouTube kanalında borsa eğitimleri, halka arz analizleri ve fon değerlendirmeleri"
           width={2172}
           height={724}
           unoptimized
@@ -422,6 +435,12 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(websiteJsonLd).replace(/</g, "\\u003c"),
+        }}
+      />
       <div className="mx-auto max-w-7xl">
         <section className="px-4 pt-5 md:px-6 md:pt-6">
           <div className="overflow-hidden rounded-2xl">

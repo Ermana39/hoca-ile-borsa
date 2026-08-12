@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "DCTTR, U2 AI Studio’da %4 Pay Edinme Kararı Aldı",
   description:
-    "DCTTR, TRK Teknoloji’de sahip olduğu %4 payı takas yöntemiyle U2 AI Studio’ya devrederek U2 AI Studio sermayesinin %4’ünü temsil eden pay edinme kararı aldı.",
+    seoAciklamasi("DCTTR, TRK Teknoloji’de sahip olduğu %4 payı takas yöntemiyle U2 AI Studio’ya devrederek U2 AI Studio sermayesinin %4’ünü temsil eden pay edinme kararı aldı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

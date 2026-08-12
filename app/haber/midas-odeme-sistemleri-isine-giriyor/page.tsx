@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -6,10 +7,11 @@ import AuthorBox from "@/components/AuthorBox";
 import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
-  title:
-    "Midas Ödeme Sistemleri Alanına Giriyor: Dijital Cüzdan ve Ön Ödemeli Kart Hamlesi",
+  title: {
+    absolute: "Midas Dijital Cüzdan ve Ön Ödemeli Kart İşine Giriyor",
+  },
   description:
-    "Midas, elektronik para kurumu lisansı için TCMB’ye başvurdu. Şirket dijital cüzdan, ön ödemeli kart ve para transferi hizmetleriyle ödeme sistemleri alanına hazırlanıyor.",
+    seoAciklamasi("Midas, elektronik para kurumu lisansı için TCMB’ye başvurdu. Şirket dijital cüzdan, ön ödemeli kart ve para transferi hizmetleriyle ödeme sistemleri alanına hazırlanıyor.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/midas-odeme-sistemleri-isine-giriyor",

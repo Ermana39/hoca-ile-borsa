@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -6,10 +7,11 @@ import AuthorBox from "@/components/AuthorBox";
 import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
-  title:
-    "SpaceX Halka Arzı Sonrası ABD Borsaları Yükseldi: Nasdaq, S&P 500 ve Dow Jones Haftayı Artıda Kapattı",
+  title: {
+    absolute: "SpaceX Halka Arzı: Nasdaq, S&P 500 ve Dow Jones Yükseldi",
+  },
   description:
-    "SpaceX halka arzı sonrası New York borsasında yükseliş görüldü. Nasdaq, S&P 500 ve Dow Jones endekslerinde haftanın son işlem gününde pozitif kapanış gerçekleşti.",
+    seoAciklamasi("SpaceX halka arzı sonrası New York borsasında yükseliş görüldü. Nasdaq, S&P 500 ve Dow Jones endekslerinde haftanın son işlem gününde pozitif kapanış gerçekleşti.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/spacex-halka-arzi-abd-borsalari-yukseldi",

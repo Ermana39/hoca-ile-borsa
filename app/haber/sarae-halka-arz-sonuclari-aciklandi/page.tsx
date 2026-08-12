@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -16,10 +17,9 @@ const haberGorsel =
   "https://www.hocaileborsa.com/sarae-halka-arz-sonuclari-aciklandi.webp";
 
 export const metadata: Metadata = {
-  title:
-    "Şa-Ra Enerji Halka Arz Sonuçları Açıklandı: 729.560 Yatırımcıya Dağıtım",
+  title: { absolute: "SARAE Halka Arz Sonuçları ve Lot Dağılımı" },
   description:
-    "Şa-Ra Enerji halka arzında 89 milyon lot dağıtıldı. Toplam 729.560 yatırımcıya dağıtım yapılırken bireysel yatırımcı başına en fazla 156 lot verildi.",
+    seoAciklamasi("Şa-Ra Enerji halka arzında 89 milyon lot dağıtıldı. Toplam 729.560 yatırımcıya dağıtım yapılırken bireysel yatırımcı başına en fazla 156 lot verildi.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -17,7 +18,7 @@ const haberKisaTarihi = new Intl.DateTimeFormat("tr-TR", {
 export const metadata: Metadata = {
   title: "YEOTK Zambiya’da İkinci Faz GES Yatırımı İçin Ön Anlaşma İmzaladı",
   description:
-    "YEO Teknoloji bağlı ortaklığı CALL Energy, Zambiya’da 60 MWdc kapasiteli ikinci faz güneş enerjisi yatırımı için bağlayıcı ön anlaşmalar imzaladı. Proje tamamlandığında CALL Energy’nin Zambiya’daki güneş enerjisi portföyünün 120 MWdc seviyesine ulaşması hedefleniyor.",
+    seoAciklamasi("YEO Teknoloji bağlı ortaklığı CALL Energy, Zambiya’da 60 MWdc kapasiteli ikinci faz güneş enerjisi yatırımı için bağlayıcı ön anlaşmalar imzaladı. Proje tamamlandığında CALL Energy’nin Zambiya’daki güneş enerjisi portföyünün 120 MWdc seviyesine ulaşması hedefleniyor.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/yeotk-zambiya-ikinci-faz-ges-yatirimi",

@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -9,9 +10,9 @@ const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
 
 export const metadata: Metadata = {
-  title: "KAREL Bağlı Ortaklığı Daiichi’den 100 Milyon Dolarlık Proje Nominasyonu",
+  title: { absolute: "KAREL: Daiichi’den 100 Milyon Dolarlık Proje" },
   description:
-    "Karel Elektronik, yüzde 54 oranında pay sahibi olduğu bağlı ortaklığı Daiichi Elektronik’in lider bir OEM otomotiv şirketiyle araç bileşenlerinin geliştirilmesi, validasyonu ve seri üretimi için yaklaşık 5 yıl süreli 100 milyon dolarlık proje nominasyonu aldığını açıkladı.",
+    seoAciklamasi("Karel Elektronik, yüzde 54 oranında pay sahibi olduğu bağlı ortaklığı Daiichi Elektronik’in lider bir OEM otomotiv şirketiyle araç bileşenlerinin geliştirilmesi, validasyonu ve seri üretimi için yaklaşık 5 yıl süreli 100 milyon dolarlık proje nominasyonu aldığını açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/karel-daiichi-100-milyon-dolar-oem-proje-nominasyonu",

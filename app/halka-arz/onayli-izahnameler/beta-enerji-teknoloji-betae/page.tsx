@@ -3,13 +3,17 @@ import HalkaArzKarnesi from "@/components/HalkaArzKarnesi";
 import HalkaArzSSS from "@/components/HalkaArzSSS";
 
 export const metadata: Metadata = {
-  title:
-    "Beta Enerji ve Teknoloji A.Ş. Halka Arz Detayları 2026 | Güncel Talep Toplama Tarihleri",
+  title: { absolute: "BETAE Beta Enerji Halka Arz: Tarih, Fiyat ve Lot" },
   description:
-    "Beta Enerji ve Teknoloji A.Ş. halka arzında yeni talep toplama tarihleri belli oldu. BETAE halka arzı 23-24-25 Haziran 2026 tarihlerinde 40,00 TL sabit fiyatla talep toplayacak.",
+    "BETAE Beta Enerji halka arzı 23-25 Haziran 2026'da 40,00 TL sabit fiyatla talep toplayacak. Toplam pay, dağıtım ve fon kullanım bilgilerini inceleyin.",
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/halka-arz/onayli-izahnameler/beta-enerji-teknoloji-betae",
+  },
+  openGraph: {
+    title: "Beta Enerji Halka Arz Detayları ve Talep Tarihleri",
+    description:
+      "Beta Enerji halka arzının talep tarihleri, fiyatı, pay dağılımı ve izahname bilgileri.",
   },
 };
 

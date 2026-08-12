@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -16,9 +17,9 @@ const haberGorsel =
   "https://www.hocaileborsa.com/miatk-korfez-bolgesi-projeleri-is-birligi.webp";
 
 export const metadata: Metadata = {
-  title: "MIATK Körfez Bölgesi Projeleri İçin İş Birliği Sözleşmesi İmzaladı",
+  title: { absolute: "MIATK Körfez Projeleri İçin İş Birliği Sözleşmesi" },
   description:
-    "MIATK, Katar merkezli Al Jaber Engineering W.L.L. ile Körfez Bölgesi’nde demiryolu, metro, altyapı, inşaat ve teknoloji çözümleri için iş birliği sözleşmesi imzaladı.",
+    seoAciklamasi("MIATK, Katar merkezli Al Jaber Engineering W.L.L. ile Körfez Bölgesi’nde demiryolu, metro, altyapı, inşaat ve teknoloji çözümleri için iş birliği sözleşmesi imzaladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

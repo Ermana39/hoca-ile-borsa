@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import type { Metadata } from "next";
 
 const formasyonData = {
@@ -12,12 +13,12 @@ const formasyonData = {
 };
 
 const sayfaUrl =
-  "https://hocaileborsa.com/formasyonlar/deva-ters-omuz-bas-omuz-formasyonu";
+  "https://www.hocaileborsa.com/borsa/formasyonlar/deva-ters-omuz-bas-omuz-formasyonu";
 
 export const metadata: Metadata = {
   title: "DEVA Ters Omuz Baş Omuz Formasyonu | Saatlik Teknik Analiz",
   description:
-    "DEVA saatlik grafikte ters omuz baş omuz formasyonunu onayladı. 78,66 TL ilk direnç, 82,38 TL formasyon hedefi ve 73,50 TL bozulma seviyesi olarak izleniyor.",
+    seoAciklamasi("DEVA saatlik grafikte ters omuz baş omuz formasyonunu onayladı. 78,66 TL ilk direnç, 82,38 TL formasyon hedefi ve 73,50 TL bozulma seviyesi olarak izleniyor.", "Güncel tablolar, karşılaştırmalar ve yatırımcıların takip edebileceği temel göstergeler birlikte sunulur."),
   alternates: {
     canonical: sayfaUrl,
   },
@@ -144,11 +145,11 @@ export default function DevaTersOmuzBasOmuzFormasyonuPage() {
       "DEVA saatlik grafikte ters omuz baş omuz formasyonu görünümü, teknik seviyeler, direnç, hedef fiyat ve bozulma seviyesiyle birlikte değerlendirildi.",
     author: {
       "@type": "Organization",
-      name: "Hoca ile Borsa",
+      name: "Hoca İle Borsa",
     },
     publisher: {
       "@type": "Organization",
-      name: "Hoca ile Borsa",
+      name: "Hoca İle Borsa",
     },
     datePublished: "2026-07-20",
     dateModified: "2026-07-20",

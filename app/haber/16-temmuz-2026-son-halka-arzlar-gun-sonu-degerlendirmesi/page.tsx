@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -16,10 +17,11 @@ const haberGorsel =
   "https://www.hocaileborsa.com/16-temmuz-2026-son-halka-arzlar-gun-sonu-degerlendirmesi.webp";
 
 export const metadata: Metadata = {
-  title:
-    "16 Temmuz Son Halka Arzlarda Gün Sonu: GOLDA Tavan, ISVEA ve BETAE Taban",
+  title: {
+    absolute: "16 Temmuz Halka Arz Kapanışı: GOLDA, ISVEA ve BETAE",
+  },
   description:
-    "16 Temmuz gün sonu halka arz kapanışlarında GOLDA 6. tavanını yaptı, ISVEA ve BETAE taban kapattı, SSAAT ilk işlem gününde yüzde 10 geriledi.",
+    seoAciklamasi("16 Temmuz gün sonu halka arz kapanışlarında GOLDA 6. tavanını yaptı, ISVEA ve BETAE taban kapattı, SSAAT ilk işlem gününde yüzde 10 geriledi.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

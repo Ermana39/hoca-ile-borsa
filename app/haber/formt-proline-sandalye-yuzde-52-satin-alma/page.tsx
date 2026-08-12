@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "FORMT, Proline Sandalye’nin %52’sini 330 Milyon TL’ye Alıyor",
   description:
-    "FORMT, Proline Sandalye Metal Sanayi ve Ticaret A.Ş.’nin %52 payını 330 milyon TL devir bedeliyle satın almak için anlaşma sağladığını açıkladı.",
+    seoAciklamasi("FORMT, Proline Sandalye Metal Sanayi ve Ticaret A.Ş.’nin %52 payını 330 milyon TL devir bedeliyle satın almak için anlaşma sağladığını açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -8,7 +9,7 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 export const metadata: Metadata = {
   title: "DERHL Bağlı Ortaklığı Soho Giyim’e Halka Arz Onayı",
   description:
-    "DERHL, %68,69 oranında pay sahibi olduğu Soho Giyim’in ilk halka arz izahnamesinin SPK tarafından onaylandığını açıkladı.",
+    seoAciklamasi("DERHL, %68,69 oranında pay sahibi olduğu Soho Giyim’in ilk halka arz izahnamesinin SPK tarafından onaylandığını açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/derhl-soho-giyim-halka-arz-onayi",
@@ -187,7 +188,7 @@ className="object-cover"
               </div>
 
               <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-4 text-sm font-medium leading-7 text-emerald-900 md:text-base">
-                Hoca ile Borsa yorumu: Bu açıklamada asıl önemli nokta, DERHL’nin
+                Hoca İle Borsa yorumu: Bu açıklamada asıl önemli nokta, DERHL’nin
                 bağlı ortaklığı Soho Giyim’in halka arz sürecinde SPK izahname
                 onayını almış olmasıdır. Halka arz sürecinde fiyat, talep
                 toplama tarihi ve dağıtım yöntemi kesinleşmeden yatırımcı

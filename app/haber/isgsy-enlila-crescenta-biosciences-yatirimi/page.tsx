@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -8,7 +9,7 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 export const metadata: Metadata = {
   title: "ISGSY Enlila Üzerinden ABD’li Crescenta’ya Yatırım Yaptı",
   description:
-    "ISGSY, %70 pay sahibi olduğu Enlila Sağlık’ın ABD merkezli Crescenta Biosciences’a 24 milyon dolar karşılığında %50,1 ortak olacağını açıkladı.",
+    seoAciklamasi("ISGSY, %70 pay sahibi olduğu Enlila Sağlık’ın ABD merkezli Crescenta Biosciences’a 24 milyon dolar karşılığında %50,1 ortak olacağını açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/isgsy-enlila-crescenta-biosciences-yatirimi",

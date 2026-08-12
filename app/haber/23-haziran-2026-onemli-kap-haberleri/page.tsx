@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -9,7 +10,7 @@ import KapCardLinks from "@/components/KapCardLinks";
 export const metadata: Metadata = {
   title: "23 Haziran KAP: BRISA Duruş, TCELL Kredi, KTLEV Temettü",
   description:
-    "BRISA üretim duruşu, TCELL kredi paketi, KTLEV ve SVGYO temettü gündemi ile 23 Haziran KAP bildirimleri.",
+    seoAciklamasi("BRISA üretim duruşu, TCELL kredi paketi, KTLEV ve SVGYO temettü gündemi ile 23 Haziran KAP bildirimleri.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/23-haziran-2026-onemli-kap-haberleri",

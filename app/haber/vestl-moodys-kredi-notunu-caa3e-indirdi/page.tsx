@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "VESTL Moody’s Kredi Notunu Caa3’e İndirdi",
   description:
-    "Moody’s, Vestel Elektronik’in uzun vadeli CFR notunu Caa2’den Caa3’e, PDR notunu Caa2-PD’den Caa3-PD’ye düşürdü. 2029 vadeli 500 milyon dolarlık tahvil notu da Caa3’e revize edildi.",
+    seoAciklamasi("Moody’s, Vestel Elektronik’in uzun vadeli CFR notunu Caa2’den Caa3’e, PDR notunu Caa2-PD’den Caa3-PD’ye düşürdü. 2029 vadeli 500 milyon dolarlık tahvil notu da Caa3’e revize edildi.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import type { Metadata } from "next";
 import Link from "@/components/NoPrefetchLink";
 import tedbirData from "./data/tedbir.json";
@@ -10,7 +11,7 @@ const description =
 
 export const metadata: Metadata = {
   title: { absolute: title },
-  description,
+  description: seoAciklamasi(description, "Güncel tablolar, karşılaştırmalar ve yatırımcıların takip edebileceği temel göstergeler birlikte sunulur."),
   alternates: {
     canonical,
   },

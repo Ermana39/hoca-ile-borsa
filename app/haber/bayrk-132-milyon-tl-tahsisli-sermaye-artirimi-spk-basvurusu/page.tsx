@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -16,9 +17,9 @@ const haberGorsel =
   "https://www.hocaileborsa.com/bayrk-132-milyon-tl-tahsisli-sermaye-artirimi-spk-basvurusu.webp";
 
 export const metadata: Metadata = {
-  title: "BAYRK 132 Milyon TL Tahsisli Sermaye Artırımı İçin SPK’ya Başvurdu",
+  title: { absolute: "BAYRK 132 Milyon TL Tahsisli Artırım SPK Başvurusu" },
   description:
-    "BAYRK, Kurt Taban Ayakkabı’nın 132 milyon TL tutarındaki şirket alacağına mahsup edilmek üzere tahsisli sermaye artırımı için SPK’ya başvurdu.",
+    seoAciklamasi("BAYRK, Kurt Taban Ayakkabı’nın 132 milyon TL tutarındaki şirket alacağına mahsup edilmek üzere tahsisli sermaye artırımı için SPK’ya başvurdu.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

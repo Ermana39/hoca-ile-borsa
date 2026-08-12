@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -8,7 +9,7 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 export const metadata: Metadata = {
   title: "MSCI’den Türkiye Uyarısı: Şeffaflık ve Bilgi Akışı İzlenecek",
   description:
-    "MSCI, Türkiye piyasasında hissedarlık şeffaflığı, bilgi akışı ve olası koordineli işlem davranışlarına ilişkin gelişmeleri Kasım 2026 MSCI Endeks Gözden Geçirmesi’ne kadar izlemeye devam edeceğini açıkladı.",
+    seoAciklamasi("MSCI, Türkiye piyasasında hissedarlık şeffaflığı, bilgi akışı ve olası koordineli işlem davranışlarına ilişkin gelişmeleri Kasım 2026 MSCI Endeks Gözden Geçirmesi’ne kadar izlemeye devam edeceğini açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/msci-turkiye-uyarisi-seffaflik-bilgi-akisi",
@@ -158,7 +159,7 @@ className="object-cover"
 
             <div className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-5">
               <p className="text-sm font-bold text-amber-900 md:text-base">
-                Hoca ile Borsa yorumu:
+                Hoca İle Borsa yorumu:
               </p>
               <p className="mt-2 text-sm leading-7 text-amber-800 md:text-base">
                 MSCI açıklaması, Borsa İstanbul açısından doğrudan bir

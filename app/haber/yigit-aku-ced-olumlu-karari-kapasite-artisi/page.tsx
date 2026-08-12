@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -8,7 +9,7 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 export const metadata: Metadata = {
   title: "YIGIT Akü İçin ÇED Olumlu Kararı Açıklandı",
   description:
-    "YIGIT, akü, kurşun ergitme ve plastik parça üretiminde kapasite artışı için yapılan başvuruda ÇED Olumlu Kararı alındığını açıkladı.",
+    seoAciklamasi("YIGIT, akü, kurşun ergitme ve plastik parça üretiminde kapasite artışı için yapılan başvuruda ÇED Olumlu Kararı alındığını açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/yigit-aku-ced-olumlu-karari-kapasite-artisi",

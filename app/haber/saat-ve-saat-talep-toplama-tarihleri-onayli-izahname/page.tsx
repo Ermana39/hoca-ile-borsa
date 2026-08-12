@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -11,7 +12,7 @@ const haberTarihi = formatHaberTarihi(haberSaati);
 export const metadata: Metadata = {
   title: "Saat ve Saat Halka Arzı: SSAAT Talep Tarihi, Fiyat ve Lot",
   description:
-    "SSAAT halka arzında 6-7-8 Temmuz talep tarihi, 56 TL fiyat, eşit dağıtım, T1-T2 durumu, katılım endeksi ve onaylı izahname bilgileri.",
+    seoAciklamasi("SSAAT halka arzında 6-7-8 Temmuz talep tarihi, 56 TL fiyat, eşit dağıtım, T1-T2 durumu, katılım endeksi ve onaylı izahname bilgileri.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/saat-ve-saat-talep-toplama-tarihleri-onayli-izahname",

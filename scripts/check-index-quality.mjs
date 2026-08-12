@@ -130,6 +130,35 @@ const surecHaberiMetadata = fs.readFileSync(
   "utf8"
 );
 const sitemap = fs.readFileSync(path.join(root, "app", "sitemap.ts"), "utf8");
+const anaSayfa = fs.readFileSync(path.join(root, "app", "page.tsx"), "utf8");
+const kokLayout = fs.readFileSync(path.join(root, "app", "layout.tsx"), "utf8");
+const nextConfig = fs.readFileSync(path.join(root, "next.config.js"), "utf8");
+
+function kaynakDosyalariniBul(dir) {
+  return fs.readdirSync(dir, { withFileTypes: true }).flatMap((entry) => {
+    const tamYol = path.join(dir, entry.name);
+    if (entry.isDirectory()) return kaynakDosyalariniBul(tamYol);
+    return /\.(?:js|mjs|ts|tsx)$/.test(entry.name) ? [tamYol] : [];
+  });
+}
+
+const siteKaynakDosyalari = ["app", "components", "lib"].flatMap((dir) =>
+  kaynakDosyalariniBul(path.join(root, dir))
+);
+
+const wwwOlmayanSiteUrlDosyalari = [];
+const tutarsizMarkaAdiDosyalari = [];
+
+for (const file of siteKaynakDosyalari) {
+  const kaynak = fs.readFileSync(file, "utf8");
+  const goreliYol = path.relative(root, file);
+  if (/https?:\/\/hocaileborsa\.com/i.test(kaynak)) {
+    wwwOlmayanSiteUrlDosyalari.push(goreliYol);
+  }
+  if (kaynak.includes("Hoca ile Borsa")) {
+    tutarsizMarkaAdiDosyalari.push(goreliYol);
+  }
+}
 
 const hatalar = [];
 if (!politika.includes("HALKA_ARZ_TASLAK_DETAY_DESENI")) {
@@ -143,6 +172,35 @@ if (!surecHaberiMetadata.includes("index: false")) {
 }
 if (!sitemap.includes("getSitemapTaslakIzahnameSluglari")) {
   hatalar.push("Sitemap taslak filtreleme kaynağını kullanmıyor.");
+}
+if (
+  !anaSayfa.includes('"@type": "WebSite"') ||
+  !anaSayfa.includes('name: "Hoca İle Borsa"') ||
+  !anaSayfa.includes('url: "https://www.hocaileborsa.com/"')
+) {
+  hatalar.push("Ana sayfadaki WebSite marka kimliği eksik veya tutarsız.");
+}
+if (
+  !kokLayout.includes('metadataBase: new URL("https://www.hocaileborsa.com")') ||
+  !kokLayout.includes('siteName: "Hoca İle Borsa"')
+) {
+  hatalar.push("Kök metadata site adresi veya marka adı standarda uymuyor.");
+}
+if (
+  !nextConfig.includes('value: "hocaileborsa.com"') ||
+  !nextConfig.includes('destination: "https://www.hocaileborsa.com/:path*"')
+) {
+  hatalar.push("www olmayan alan adının kalıcı yönlendirmesi eksik.");
+}
+if (wwwOlmayanSiteUrlDosyalari.length > 0) {
+  hatalar.push(
+    `www olmayan site URL'si bulundu: ${wwwOlmayanSiteUrlDosyalari.join(", ")}`
+  );
+}
+if (tutarsizMarkaAdiDosyalari.length > 0) {
+  hatalar.push(
+    `Tutarsız marka adı bulundu: ${tutarsizMarkaAdiDosyalari.join(", ")}`
+  );
 }
 
 console.log(`Şirket künyesi: ${hisseler.length}`);

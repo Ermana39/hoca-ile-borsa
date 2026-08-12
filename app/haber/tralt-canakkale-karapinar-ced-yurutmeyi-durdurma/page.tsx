@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -5,9 +6,9 @@ import AuthorBox from "@/components/AuthorBox";
 import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
-  title: "TRALT Çanakkale Karapınar Projesinde Yürütmeyi Durdurma Kararı",
+  title: { absolute: "TRALT Karapınar ÇED Davasında Kesin Ara Karar" },
   description:
-    "Türk Altın İşletmeleri, Çanakkale Karapınar Altın-Gümüş Madeni Açık Ocak İşletmesi Projesi için verilen ÇED olumlu kararına karşı açılan davada yürütmeyi durdurma isteminin kesin olarak kabul edildiğini açıkladı.",
+    seoAciklamasi("TRALT Karapınar Projesi için verilen ÇED olumlu kararına ilişkin davada yürütmeyi durdurma istemi kesin olarak kabul edildi. Kararın ayrıntılarını okuyun.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/tralt-canakkale-karapinar-ced-yurutmeyi-durdurma",

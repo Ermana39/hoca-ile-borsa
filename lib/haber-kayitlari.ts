@@ -10,6 +10,11 @@ import {
   isHaberKategori,
   type HaberKategori,
 } from "@/lib/haber-kategorileri";
+import {
+  seoAciklamasi,
+  seoBasliginiSinirla,
+  siteAdiniBasliktanCikar,
+} from "@/lib/seo-metadata";
 
 const SITE_URL = "https://www.hocaileborsa.com";
 export const HABER_KAYIT_SURUMU = 1;
@@ -337,10 +342,23 @@ export function haberMetadata(kayit: HaberKaydi): Metadata {
   const yazar = getYazar(kayit.yazarSlug) ?? getYazar(varsayilanYazar);
   const kategori = getKategori(kayit.kategori);
   const indexlenebilir = haberKaydiIndexlenebilirMi(kayit);
+  const tekHisseKodu =
+    kayit.ilgiliHisseler.length === 1 ? kayit.ilgiliHisseler[0] : undefined;
+  const temizBaslik = siteAdiniBasliktanCikar(kayit.baslik);
+  const kodluBaslik =
+    tekHisseKodu &&
+    !temizBaslik.slice(0, 24).toLocaleUpperCase("tr-TR").includes(tekHisseKodu)
+      ? `${tekHisseKodu}: ${temizBaslik}`
+      : temizBaslik;
+  const seoTitle = seoBasliginiSinirla(kodluBaslik, 65);
+  const seoDescription = seoAciklamasi(
+    kayit.aciklama,
+    `${kayit.etiket} kapsamında gelişmenin ayrıntıları ve veriye dayalı değerlendirmesi.`
+  );
 
   return {
-    title: kayit.baslik,
-    description: kayit.aciklama,
+    title: { absolute: seoTitle },
+    description: seoDescription,
     robots: {
       index: indexlenebilir,
       follow: true,

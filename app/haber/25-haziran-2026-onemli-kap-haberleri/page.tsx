@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -9,7 +10,7 @@ import KapCardLinks from "@/components/KapCardLinks";
 export const metadata: Metadata = {
   title: "25 Haziran KAP: DERHL Onay, TRALT Mutabakat, ISGSY Bedelsiz",
   description:
-    "DERHL halka arz onayı, TRALT mutabakat zaptı, ISGSY bedelsiz sermaye artırımı ve 25 Haziran KAP etkileri.",
+    seoAciklamasi("DERHL halka arz onayı, TRALT mutabakat zaptı, ISGSY bedelsiz sermaye artırımı ve 25 Haziran KAP etkileri.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/25-haziran-2026-onemli-kap-haberleri",

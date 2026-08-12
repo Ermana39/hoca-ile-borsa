@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "ENTRA Depolamalı Güvenli RES İçin ÇED Olumlu Kararı Aldı",
   description:
-    "ENTRA, Tokat’ta planlanan 100 MWe kurulu güce ve 100 MWh depolama kapasitesine sahip Depolamalı Güvenli RES projesi için ÇED Olumlu Kararı aldı.",
+    seoAciklamasi("ENTRA, Tokat’ta planlanan 100 MWe kurulu güce ve 100 MWh depolama kapasitesine sahip Depolamalı Güvenli RES projesi için ÇED Olumlu Kararı aldı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

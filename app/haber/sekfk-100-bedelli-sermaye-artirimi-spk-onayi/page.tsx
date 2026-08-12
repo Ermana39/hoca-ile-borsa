@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "SEKFK %100 Bedelli Sermaye Artırımı İçin SPK Onayı Aldı",
   description:
-    "Şeker Finansal Kiralama, sermayesini 100 milyon TL’den 200 milyon TL’ye çıkaracak %100 bedelli sermaye artırımı için SPK onayı aldı. Rüçhan hakkı kullanım fiyatı 1 TL.",
+    seoAciklamasi("Şeker Finansal Kiralama, sermayesini 100 milyon TL’den 200 milyon TL’ye çıkaracak %100 bedelli sermaye artırımı için SPK onayı aldı. Rüçhan hakkı kullanım fiyatı 1 TL.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: { canonical: haberUrl },
   openGraph: {
     type: "article",

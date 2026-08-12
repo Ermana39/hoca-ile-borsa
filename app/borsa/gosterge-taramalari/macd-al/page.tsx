@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import GostergeTaramaSayfasi from "@/components/GostergeTaramaSayfasi";
 import { okuTarama } from "@/lib/gosterge-taramalari";
 import { TARAMA_SEO } from "@/lib/gosterge-tarama-seo";
@@ -5,9 +6,9 @@ import { TARAMA_SEO } from "@/lib/gosterge-tarama-seo";
 export const revalidate = false;
 
 export const metadata = {
-  title: "MACD Al Veren Hisseler | Hoca İle Borsa",
+  title: "MACD Al Sinyali Veren BIST Hisseleri",
   description:
-    "MACD göstergesine göre al sinyali üreten Borsa İstanbul hisselerini ve taramanın nasıl yorumlanabileceğini inceleyin.",
+    seoAciklamasi("MACD göstergesine göre al sinyali üreten Borsa İstanbul hisselerini ve taramanın nasıl yorumlanabileceğini inceleyin.", "Güncel tablolar, karşılaştırmalar ve yatırımcıların takip edebileceği temel göstergeler birlikte sunulur."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/borsa/gosterge-taramalari/macd-al",

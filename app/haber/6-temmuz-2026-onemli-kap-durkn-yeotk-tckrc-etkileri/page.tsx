@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -17,7 +18,7 @@ const haberGorsel = "https://www.hocaileborsa.com/kap-ozeti-discover.webp";
 export const metadata: Metadata = {
   title: "6 Temmuz 2026 Önemli KAP: DURKN, YEOTK, TCKRC Etkileri",
   description:
-    "DURKN %666 bedelsiz başvurusu, YEOTK 130 MWp Kosova GES sözleşmesi, TCKRC 10 milyon EUR iş birliği ve 6 Temmuz KAP haberlerinde olası etkiler.",
+    seoAciklamasi("DURKN %666 bedelsiz başvurusu, YEOTK 130 MWp Kosova GES sözleşmesi, TCKRC 10 milyon EUR iş birliği ve 6 Temmuz KAP haberlerinde olası etkiler.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

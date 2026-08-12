@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "TURGG Kartal Arazisinde Ağır Metal Tespiti Açıklandı",
   description:
-    "TURGG, Kartal Çavuşoğlu Mahallesi’ndeki arazisine ilişkin yapılan analizde yüksek oranda kurşun ve ağır metaller tespit edildiğini açıkladı.",
+    seoAciklamasi("TURGG, Kartal Çavuşoğlu Mahallesi’ndeki arazisine ilişkin yapılan analizde yüksek oranda kurşun ve ağır metaller tespit edildiğini açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

@@ -8,9 +8,9 @@ export const revalidate = false;
 const siteUrl = "https://www.hocaileborsa.com";
 
 export const metadata: Metadata = {
-  title: "Hisse Künyeleri — BIST Şirketleri | Hoca İle Borsa",
+  title: { absolute: "Hisse Künyeleri: BIST Şirket Bilgileri" },
   description:
-    "Borsa İstanbul şirketleri için hisse künye sayfaları, şirket bilgileri, ortaklık yapısı, iştirakler, borsa bilgileri, temettü geçmişi ve önemli KAP gelişmeleri.",
+    "Borsa İstanbul şirketlerinin hisse künyeleri, ortaklık yapısı, iştirakleri, borsa bilgileri, temettü geçmişi ve önemli KAP gelişmelerini inceleyin.",
   alternates: { canonical: `${siteUrl}/hisseler` },
   openGraph: {
     type: "website",
@@ -57,7 +57,7 @@ export default async function HisselerPage({
             Hisse Künyeleri
           </h1>
           <p className="mt-4 max-w-4xl text-sm leading-7 text-slate-700 md:text-base">
-            Hoca ile Borsa hisse künyeleri, Borsa İstanbul’da işlem gören
+            Hoca İle Borsa hisse künyeleri, Borsa İstanbul’da işlem gören
             şirketleri tek sayfada daha anlaşılır şekilde incelemek isteyen
             yatırımcılar için hazırlanır. Her şirket sayfasında şirket profili,
             faaliyet alanı, ortaklık yapısı, iştirak bilgileri, borsa bilgileri,

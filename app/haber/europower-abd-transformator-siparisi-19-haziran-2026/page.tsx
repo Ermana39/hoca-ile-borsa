@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -9,10 +10,9 @@ const kapKaynakLink =
   "https://www.kap.org.tr/tr/bildirim-sorgu-sonuc?member=8acae2c4794d364a017af66863e41bae";
 
 export const metadata: Metadata = {
-  title:
-    "Europower World Enerji’ye ABD’den 10,8 Milyon Dolarlık Güç Transformatörü Siparişi",
+  title: { absolute: "EUPWR: ABD’den 10,8 Milyon Dolarlık Trafo Siparişi" },
   description:
-    "Europower World Enerji, ABD’de yerleşik iki ayrı firmadan yüksek mühendislik ürünü güç transformatörlerinin üretimi ve tedarikine yönelik toplam 10,8 milyon dolarlık sipariş aldı.",
+    seoAciklamasi("Europower World Enerji, ABD’de yerleşik iki ayrı firmadan yüksek mühendislik ürünü güç transformatörlerinin üretimi ve tedarikine yönelik toplam 10,8 milyon dolarlık sipariş aldı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/europower-abd-transformator-siparisi-19-haziran-2026",

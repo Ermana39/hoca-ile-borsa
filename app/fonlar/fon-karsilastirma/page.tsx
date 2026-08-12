@@ -15,7 +15,7 @@ import { getCurrentFundsData, type Fund } from "@/lib/fon-platform";
 export const metadata: Metadata = {
   title: "Fon Karşılaştırma: Getiri, Risk ve Para Akışı Analizi",
   description:
-    "2 ila 5 yatırım fonunu risk, güncel fiyat, fon büyüklüğü, yatırımcı sayısı, para akışı ve dönemsel getiriyle karşılaştırın.",
+    "2 ila 5 yatırım fonunu güncel fiyat, risk, fon büyüklüğü, yatırımcı sayısı, para akışı ve dönemsel getiriye göre aynı ekranda karşılaştırın.",
   alternates: {
     canonical: "https://www.hocaileborsa.com/fonlar/fon-karsilastirma",
   },

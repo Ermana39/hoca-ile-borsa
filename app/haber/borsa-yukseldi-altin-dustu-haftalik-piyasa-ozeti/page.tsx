@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -6,10 +7,11 @@ import AuthorBox from "@/components/AuthorBox";
 import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
-  title:
-    "Borsa Haftayı Yükselişle Kapattı, Altın Geriledi | Haftalık Piyasa Özeti",
+  title: {
+    absolute: "Borsa Yükseldi, Altın Geriledi: Haftalık Piyasa Özeti",
+  },
   description:
-    "BIST 100 haftayı yüzde 1,78 yükselişle 13.938,48 puandan tamamladı. Altın haftalık bazda değer kaybederken döviz tarafında sınırlı yükseliş görüldü.",
+    seoAciklamasi("BIST 100 haftayı yüzde 1,78 yükselişle 13.938,48 puandan tamamladı. Altın haftalık bazda değer kaybederken döviz tarafında sınırlı yükseliş görüldü.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/borsa-yukseldi-altin-dustu-haftalik-piyasa-ozeti",

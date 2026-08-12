@@ -1,10 +1,11 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import type { Metadata } from "next";
 import HaberAltKisim from "@/components/HaberAltKisim";
 
 export const metadata: Metadata = {
-  title: "12 Haziran 2026 En Çok Para Girişi ve Çıkışı Olan Hisseler | Hoca İle Borsa",
+  title: "12 Haziran Para Girişi ve Çıkışı Olan Hisseler",
   description:
-    "12 Haziran 2026 tarihinde Borsa İstanbul’da en çok para girişi ve para çıkışı olan hisseler, fiyat değişimleri ve günlük para akışı tablosu.",
+    seoAciklamasi("12 Haziran 2026 tarihinde Borsa İstanbul’da en çok para girişi ve para çıkışı olan hisseler, fiyat değişimleri ve günlük para akışı tablosu.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/12-haziran-2026-en-cok-para-girisi-cikisi-olan-hisseler",

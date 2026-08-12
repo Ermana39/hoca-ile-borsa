@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -16,9 +17,9 @@ const haberGorsel =
   "https://www.hocaileborsa.com/yeotk-120-mwh-bataryali-enerji-depolama-projesi.webp";
 
 export const metadata: Metadata = {
-  title: "YEOTK 120 MWh Bataryalı Enerji Depolama Projesi İçin Sözleşme İmzaladı",
+  title: { absolute: "YEOTK: 120 MWh Enerji Depolama Projesi Sözleşmesi" },
   description:
-    "YEOTK bağlı ortaklığı CALL Enerji ve Inavitas ortaklığıyla kurulan Solesco3, Saves Enerji Grubu ile 120 MWh bataryalı enerji depolama projesi için sözleşme imzaladı.",
+    seoAciklamasi("YEOTK bağlı ortaklığı CALL Enerji ve Inavitas ortaklığıyla kurulan Solesco3, Saves Enerji Grubu ile 120 MWh bataryalı enerji depolama projesi için sözleşme imzaladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: { canonical: haberUrl },
   openGraph: {
     type: "article",

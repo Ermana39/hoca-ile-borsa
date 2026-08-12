@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -8,7 +9,7 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 export const metadata: Metadata = {
   title: "KTLEV ve SVGYO İçin Temettü Günü: Hak Kullanım Tarihi 23 Haziran",
   description:
-    "23 Haziran 2026 Salı günü KTLEV ve SVGYO payları için temettü hak kullanım tarihi olacak. KTLEV net 0,0821255 TL, SVGYO net 0,0077 TL temettü ödeyecek.",
+    seoAciklamasi("23 Haziran 2026 Salı günü KTLEV ve SVGYO payları için temettü hak kullanım tarihi olacak. KTLEV net 0,0821255 TL, SVGYO net 0,0077 TL temettü ödeyecek.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/ktlev-svgyo-23-haziran-2026-temettu-gundemi",
@@ -214,7 +215,7 @@ className="object-cover"
 
             <div className="mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-5">
               <p className="text-sm font-bold text-amber-900 md:text-base">
-                Hoca ile Borsa yorumu:
+                Hoca İle Borsa yorumu:
               </p>
               <p className="mt-2 text-sm leading-7 text-amber-800 md:text-base">
                 KTLEV ve SVGYO temettüleri tutar olarak sınırlı görünse de,

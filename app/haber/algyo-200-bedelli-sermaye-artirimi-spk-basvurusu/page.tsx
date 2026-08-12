@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "ALGYO %200 Bedelli Sermaye Artırımı İçin SPK’ya Başvurdu",
   description:
-    "Alarko GYO, sermayesini 2,028 milyar TL’den 6,085 milyar TL’ye çıkarmak için %200 bedelli sermaye artırımı kapsamında SPK’ya başvurdu.",
+    seoAciklamasi("Alarko GYO, sermayesini 2,028 milyar TL’den 6,085 milyar TL’ye çıkarmak için %200 bedelli sermaye artırımı kapsamında SPK’ya başvurdu.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

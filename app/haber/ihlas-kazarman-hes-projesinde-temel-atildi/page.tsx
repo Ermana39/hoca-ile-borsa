@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -7,7 +8,7 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 export const metadata: Metadata = {
   title: "IHLAS Kazarman HES Projesinde Temel Atıldı",
   description:
-    "IHLAS iştiraki Orta Asya Investment Holding'in Kırgızistan'da geliştirdiği 912 MW Kazarman HES projesinde temel atma töreni yapıldı.",
+    seoAciklamasi("IHLAS iştiraki Orta Asya Investment Holding'in Kırgızistan'da geliştirdiği 912 MW Kazarman HES projesinde temel atma töreni yapıldı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/ihlas-kazarman-hes-projesinde-temel-atildi",

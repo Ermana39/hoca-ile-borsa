@@ -39,7 +39,7 @@ export async function generateMetadata({
   const n = parseSayfa(sayfa) ?? 1;
 
   return {
-    title: `${bilgi.baslik} - Sayfa ${n} | Hoca İle Borsa`,
+    title: `${bilgi.baslik} Haberleri - Sayfa ${n}`,
     description: `${bilgi.metaDescription} (Sayfa ${n})`,
     alternates: {
       canonical: `${SITE}/haberler/kategori/${bilgi.slug}/sayfa/${n}`,

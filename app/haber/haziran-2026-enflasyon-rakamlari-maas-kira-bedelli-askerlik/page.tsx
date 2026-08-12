@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -9,9 +10,9 @@ const haberSaati = getHaberDosyaTarihi(import.meta.url);
 const haberTarihi = formatHaberTarihi(haberSaati);
 
 export const metadata: Metadata = {
-  title: "Haziran 2026 Enflasyonu Açıklandı: Maaş, Kira ve Bedelli Askerlik Etkisi",
+  title: { absolute: "Haziran 2026 Enflasyonu: Maaş ve Kira Artışı Etkisi" },
   description:
-    "Haziran 2026 enflasyonu aylık %0,99, yıllık %32,11 oldu. 6 aylık TÜFE %17,76’ya çıktı. Kira artış oranı, emekli ve memur maaşı zammı ile bedelli askerlik hesabı haberimizde.",
+    seoAciklamasi("Haziran 2026 enflasyonu aylık %0,99, yıllık %32,11 oldu. 6 aylık TÜFE %17,76’ya çıktı. Kira artış oranı, emekli ve memur maaşı zammı ile bedelli askerlik hesabı haberimizde.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/haziran-2026-enflasyon-rakamlari-maas-kira-bedelli-askerlik",

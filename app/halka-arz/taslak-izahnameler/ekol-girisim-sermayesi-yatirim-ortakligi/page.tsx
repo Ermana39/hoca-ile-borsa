@@ -4,10 +4,20 @@ import HalkaArzOrtaklikYapisi from "@/components/HalkaArzOrtaklikYapisi";
 import { halkaArzGetir } from "@/lib/halka-arz";
 
 export const metadata: Metadata = {
-  title:
-    "Ekol Girişim Sermayesi Yatırım Ortaklığı A.Ş. Halka Arz Detayları 2026 | Taslak İzahname ve Finansal Veriler",
+  title: {
+    absolute: "Ekol Girişim Sermayesi Halka Arz Taslak İzahnamesi",
+  },
   description:
-    "Ekol Girişim Sermayesi Yatırım Ortaklığı A.Ş. halka arz detayları, taslak izahname özeti, halka arz tarihi, fiyat aralığı, lot miktarı, dağıtım yöntemi, fon kullanım alanları ve finansal veriler.",
+    "Ekol Girişim Sermayesi halka arz taslak izahnamesindeki 125 milyon lot, eşit dağıtım, aracı kurum, fon kullanımı ve finansal verileri inceleyin.",
+  alternates: {
+    canonical:
+      "https://www.hocaileborsa.com/halka-arz/taslak-izahnameler/ekol-girisim-sermayesi-yatirim-ortakligi",
+  },
+  openGraph: {
+    title: "Ekol Girişim Sermayesi Halka Arz Detayları",
+    description:
+      "Ekol Girişim Sermayesi halka arzının taslak izahname, pay ve dağıtım bilgileri.",
+  },
 };
 
 export default function EkolGirisimSermayesiYatirimOrtakligiASPage() {
@@ -101,7 +111,7 @@ export default function EkolGirisimSermayesiYatirimOrtakligiASPage() {
                   Halka Arz İncelemesi
                 </p>
                 <h1 className="text-2xl font-bold sm:text-3xl">
-                  Ekol Girişim Sermayesi Yatırım Ortaklığı A.Ş.
+                  Ekol Girişim Sermayesi Yatırım Ortaklığı A.Ş. Halka Arzı
                 </h1>
                 <p className="mt-2 text-sm text-blue-100 sm:text-base">
                   Taslak izahname verilerine göre hazırlanmış özet halka arz sayfası

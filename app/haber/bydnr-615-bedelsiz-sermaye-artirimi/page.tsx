@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -11,7 +12,7 @@ const haberTarihi = formatHaberTarihi(haberSaati);
 export const metadata: Metadata = {
   title: "BYDNR’den %615 Bedelsiz Sermaye Artırımı Kararı",
   description:
-    "Baydöner Restoranları, çıkarılmış sermayesini 84 milyon TL’den 600,6 milyon TL’ye yükseltmek için %615 oranında bedelsiz sermaye artırımı kararı aldığını açıkladı.",
+    seoAciklamasi("Baydöner Restoranları, çıkarılmış sermayesini 84 milyon TL’den 600,6 milyon TL’ye yükseltmek için %615 oranında bedelsiz sermaye artırımı kararı aldığını açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/bydnr-615-bedelsiz-sermaye-artirimi",

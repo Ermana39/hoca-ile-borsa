@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "TRALT Mollakara Altın Madeninde İlk Altın Dökümünü Gerçekleştirdi",
   description:
-    "TRALT, Ağrı Diyadin’deki Mollakara Altın Madeni Projesi’nde ilk altın dökümünü gerçekleştirdi. İlk üretimde 7.474,2 gram altın elde edildi.",
+    seoAciklamasi("TRALT, Ağrı Diyadin’deki Mollakara Altın Madeni Projesi’nde ilk altın dökümünü gerçekleştirdi. İlk üretimde 7.474,2 gram altın elde edildi.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

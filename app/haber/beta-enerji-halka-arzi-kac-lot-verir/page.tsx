@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -8,7 +9,7 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 export const metadata: Metadata = {
   title: "Beta Enerji Halka Arzı Kaç Lot Verir? Kişi Başı Kaç Lot Düşer?",
   description:
-    "Beta Enerji halka arzı kaç lot verir, kişi başı kaç lot düşer? 700 bin ile 1,2 milyon katılım senaryosuna göre Beta Enerji halka arzında tahmini lot ve tutar hesabı.",
+    seoAciklamasi("Beta Enerji halka arzı kaç lot verir, kişi başı kaç lot düşer? 700 bin ile 1,2 milyon katılım senaryosuna göre Beta Enerji halka arzında tahmini lot ve tutar hesabı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/beta-enerji-halka-arzi-kac-lot-verir",

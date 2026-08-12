@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -9,7 +10,7 @@ import KapCardLinks from "@/components/KapCardLinks";
 export const metadata: Metadata = {
   title: "HLGYO'dan %56,25 Bedelsiz Sermaye Artırımı Kararı",
   description:
-    "Halk GYO, sermayesini 3,84 milyar TL'den 6 milyar TL'ye çıkarmak için %56,25 oranında bedelsiz sermaye artırımı kararı aldı. Artırımın 2025 yılı dönem kârından karşılanması planlanıyor.",
+    seoAciklamasi("Halk GYO, sermayesini 3,84 milyar TL'den 6 milyar TL'ye çıkarmak için %56,25 oranında bedelsiz sermaye artırımı kararı aldı. Artırımın 2025 yılı dönem kârından karşılanması planlanıyor.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/hlgyo-5625-bedelsiz-sermaye-artirimi-karari",

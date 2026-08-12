@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -8,7 +9,7 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 export const metadata: Metadata = {
   title: "Turcas'a Shell & Turcas'tan 8 Milyon Dolar İmtiyazlı Temettü",
   description:
-    "Turcas Holding, %30 oranındaki iştiraki Shell & Turcas Petrol A.Ş.'de sahip olduğu imtiyazlı paylar kapsamında 8 milyon ABD doları tutarında imtiyazlı temettü ödemesi alacağını açıkladı.",
+    seoAciklamasi("Turcas Holding, %30 oranındaki iştiraki Shell & Turcas Petrol A.Ş.'de sahip olduğu imtiyazlı paylar kapsamında 8 milyon ABD doları tutarında imtiyazlı temettü ödemesi alacağını açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/trcas-shell-turcas-8-milyon-dolar-imtiyazli-temettu",

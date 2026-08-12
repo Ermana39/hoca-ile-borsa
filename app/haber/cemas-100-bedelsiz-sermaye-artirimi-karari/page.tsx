@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "CEMAS %100 Bedelsiz Sermaye Artırımı Kararı Aldı",
   description:
-    "Çemaş Döküm, çıkarılmış sermayesini 791 milyon TL’den 1,582 milyar TL’ye yükseltmek için %100 bedelsiz sermaye artırımı kararı aldı.",
+    seoAciklamasi("Çemaş Döküm, çıkarılmış sermayesini 791 milyon TL’den 1,582 milyar TL’ye yükseltmek için %100 bedelsiz sermaye artırımı kararı aldı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

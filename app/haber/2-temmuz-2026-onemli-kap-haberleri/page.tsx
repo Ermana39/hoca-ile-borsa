@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -13,7 +14,7 @@ const haberTarihi = formatHaberTarihi(haberSaati);
 export const metadata: Metadata = {
   title: "2 Temmuz KAP: AKSEN Kredi, KAREL Sözleşme, ERCB Sipariş",
   description:
-    "AKSEN 124 milyon dolar kredi, KAREL savunma sözleşmesi, ERCB 15 milyon dolar sipariş, SASA sermaye artırımı ve diğer KAP etkileri.",
+    seoAciklamasi("AKSEN 124 milyon dolar kredi, KAREL savunma sözleşmesi, ERCB 15 milyon dolar sipariş, SASA sermaye artırımı ve diğer KAP etkileri.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/2-temmuz-2026-onemli-kap-haberleri",

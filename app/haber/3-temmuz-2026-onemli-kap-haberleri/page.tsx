@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -13,7 +14,7 @@ const haberTarihi = formatHaberTarihi(haberSaati);
 export const metadata: Metadata = {
   title: "3 Temmuz 2026 Önemli KAP: INFO, ASTOR, HEKTS Etkileri",
   description:
-    "INFO %100 bedelsiz başvurusu, ASTOR 816 milyon TL TEİAŞ sözleşmesi, HEKTS tahsisli artırım ve 3 Temmuz KAP haberlerinde olası etkiler.",
+    seoAciklamasi("INFO %100 bedelsiz başvurusu, ASTOR 816 milyon TL TEİAŞ sözleşmesi, HEKTS tahsisli artırım ve 3 Temmuz KAP haberlerinde olası etkiler.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/3-temmuz-2026-onemli-kap-haberleri",

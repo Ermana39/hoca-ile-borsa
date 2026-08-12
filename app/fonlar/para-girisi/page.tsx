@@ -9,7 +9,7 @@ const validPeriods = new Set<PeriodKey>(["gunluk", "besGun", "birAy", "ucAy"]);
 export const metadata: Metadata = {
   title: "Fon Para Girişi ve Çıkışı: Güncel Fon Para Akışı",
   description:
-    "Yatırım fonlarında günlük, 5 günlük, 1 aylık ve 3 aylık net para girişi çıkışı tabloları.",
+    "Yatırım fonlarında günlük, 5 günlük, 1 aylık ve 3 aylık net para giriş çıkışlarını; fon büyüklüğü ve yatırımcı değişimiyle birlikte inceleyin.",
   alternates: {
     canonical: "https://www.hocaileborsa.com/fonlar/para-girisi",
   },

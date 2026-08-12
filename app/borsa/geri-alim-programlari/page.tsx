@@ -1,6 +1,7 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 export const metadata = {
-  title: "Pay Geri Alım Programları | Hoca İle Borsa",
-  description: "Şirketlerin pay geri alım programlarını ve piyasaya olası etkilerini düzenli şekilde izleyin.",
+  title: "Pay Geri Alım Programları ve Güncel Hisseler",
+  description: seoAciklamasi("Şirketlerin pay geri alım programlarını ve piyasaya olası etkilerini düzenli şekilde izleyin.", "Güncel tablolar, karşılaştırmalar ve yatırımcıların takip edebileceği temel göstergeler birlikte sunulur."),
   alternates: { canonical: "https://www.hocaileborsa.com/borsa/geri-alim-programlari" },
 };
 

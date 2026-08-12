@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "ULUUN Rüzgar Enerjisi Projesinde TEDAŞ Kabul Süreci Başladı",
   description:
-    "ULUUN, 13,96 MWm gücündeki lisanssız rüzgar enerjisi santrali projesinde iki türbinin mekanik montajının tamamlandığını ve TEDAŞ kabul süreçlerinin başlatıldığını açıkladı.",
+    seoAciklamasi("ULUUN, 13,96 MWm gücündeki lisanssız rüzgar enerjisi santrali projesinde iki türbinin mekanik montajının tamamlandığını ve TEDAŞ kabul süreçlerinin başlatıldığını açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

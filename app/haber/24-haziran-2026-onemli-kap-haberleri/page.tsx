@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -9,7 +10,7 @@ import KapCardLinks from "@/components/KapCardLinks";
 export const metadata: Metadata = {
   title: "24 Haziran KAP: HRKET Bedelsiz, KLNMA Kredi, ALVES Yatırım",
   description:
-    "HRKET bedelsiz başvurusu, KLNMA 350 milyon dolar kredi anlaşması, ALVES yatırım süreci ve 24 Haziran KAP özetleri.",
+    seoAciklamasi("HRKET bedelsiz başvurusu, KLNMA 350 milyon dolar kredi anlaşması, ALVES yatırım süreci ve 24 Haziran KAP özetleri.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/24-haziran-2026-onemli-kap-haberleri",

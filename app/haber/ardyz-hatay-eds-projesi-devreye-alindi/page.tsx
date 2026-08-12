@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "ARDYZ Hatay EDS Projesini Devreye Aldı",
   description:
-    "ARDYZ, Hatay Büyükşehir Belediyesi Elektronik Denetleme Sistemleri projesinin devreye alındığını ve gelir paylaşımı modeliyle 15 yıl işletileceğini açıkladı.",
+    seoAciklamasi("ARDYZ, Hatay Büyükşehir Belediyesi Elektronik Denetleme Sistemleri projesinin devreye alındığını ve gelir paylaşımı modeliyle 15 yıl işletileceğini açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

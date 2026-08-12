@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -7,7 +8,7 @@ import HaberAltKisim from "@/components/HaberAltKisim";
 export const metadata: Metadata = {
   title: "MARKA Bağlı Ortaklığı Westplast’ın %55’i İçin Sözleşme İmzaladı",
   description:
-    "Marka Yatırım Holding, %100 bağlı ortaklığı Momentum Girişim Holding’in Westplast Plastik’in %55 payını 79,75 milyon TL bedelle devralmak için pay devir sözleşmesi imzaladığını açıkladı.",
+    seoAciklamasi("Marka Yatırım Holding, %100 bağlı ortaklığı Momentum Girişim Holding’in Westplast Plastik’in %55 payını 79,75 milyon TL bedelle devralmak için pay devir sözleşmesi imzaladığını açıkladı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/marka-momentum-westplast-pay-devri",

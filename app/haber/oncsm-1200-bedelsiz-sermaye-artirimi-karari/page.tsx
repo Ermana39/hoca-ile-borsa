@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -18,7 +19,7 @@ const haberGorsel =
 export const metadata: Metadata = {
   title: "ONCSM %1200 Bedelsiz Sermaye Artırımı Kararı Aldı",
   description:
-    "Oncosem, 23,85 milyon TL olan çıkarılmış sermayesini iç kaynaklardan %1200 oranında bedelsiz artırarak 310,05 milyon TL’ye çıkarma kararı aldı.",
+    seoAciklamasi("Oncosem, 23,85 milyon TL olan çıkarılmış sermayesini iç kaynaklardan %1200 oranında bedelsiz artırarak 310,05 milyon TL’ye çıkarma kararı aldı.", "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical: haberUrl,
   },

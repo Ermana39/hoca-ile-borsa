@@ -1,3 +1,4 @@
+import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -9,7 +10,7 @@ const pageDescription =
 
 export const metadata: Metadata = {
   title: pageTitle,
-  description: pageDescription,
+  description: seoAciklamasi(pageDescription, "Haberde gelişmenin ayrıntıları, açıklanan veriler ve yatırımcıların izleyebileceği temel noktalar yer alıyor."),
   alternates: {
     canonical:
       "https://www.hocaileborsa.com/haber/spk-5-yeni-halka-arz-onayi-verdi",
@@ -18,7 +19,7 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
     url: "https://www.hocaileborsa.com/haber/spk-5-yeni-halka-arz-onayi-verdi",
-    siteName: "Hoca ile Borsa",
+    siteName: "Hoca İle Borsa",
     type: "article",
     images: [
       {
