@@ -30,11 +30,11 @@ const kartStilleri: Record<HaberVurgu, string> = {
   takip: "border-slate-200 bg-white text-slate-700",
 };
 
-const etkiKartStilleri = {
-  olumlu: "border-emerald-200 bg-emerald-50 text-emerald-950",
-  olumsuz: "border-rose-200 bg-rose-50 text-rose-950",
-  dengeli: "border-amber-200 bg-amber-50 text-amber-950",
-  notr: "border-slate-200 bg-slate-50 text-slate-800",
+const editorBaslikStilleri: Record<HaberVurgu, string> = {
+  normal: "text-slate-900",
+  analiz: "text-blue-700",
+  risk: "text-rose-700",
+  takip: "text-emerald-700",
 };
 
 function jsonLdGuvenli(veri: unknown) {
@@ -186,169 +186,6 @@ function getBolumFonKodlari(baslik: string, fonKodlari: string[]) {
 
   return fonKodlari.filter((fonKodu) =>
     baslikKelimeleri.has(fonKodu.toUpperCase())
-  );
-}
-
-function metinKisalt(value: string, maxLength = 170) {
-  const temiz = value.replace(/\s+/g, " ").trim();
-  if (temiz.length <= maxLength) return temiz;
-
-  const parca = temiz.slice(0, maxLength - 1);
-  const sonBosluk = parca.lastIndexOf(" ");
-  return `${parca.slice(0, sonBosluk > 80 ? sonBosluk : parca.length).trim()}...`;
-}
-
-function ilkBolumMetni(bolumler: HaberBolumu[], vurgu: HaberVurgu) {
-  const bolum = bolumler.find((item) => (item.vurgu ?? "normal") === vurgu);
-  if (!bolum) return "";
-
-  return (
-    bolum.giris ||
-    bolum.maddeler?.[0] ||
-    bolum.kartlar?.[0]?.aciklama ||
-    bolum.paragraflar?.find((paragraf) => paragraf.trim().length > 0) ||
-    ""
-  );
-}
-
-function metinlerdeGecer(kayit: HaberKaydi, desen: RegExp) {
-  const metin = [
-    kayit.baslik,
-    kayit.aciklama,
-    kayit.etiket,
-    kayit.kaynakOzeti.giris.join(" "),
-    kayit.editorDegerlendirmesi.giris,
-    kayit.kapEtkiAnalizi?.ozet ?? "",
-    ...(kayit.kapEtkiAnalizi?.riskler ?? []),
-  ].join(" ");
-
-  return desen.test(metin);
-}
-
-function haberYonunuBul(kayit: HaberKaydi): {
-  deger: string;
-  aciklama: string;
-  ton: keyof typeof etkiKartStilleri;
-} {
-  const pozitif = metinlerdeGecer(
-    kayit,
-    /olumlu|pozitif|artış|büyüme|sözleşme|sipariş|ihale|onay|katkı|güçlü/i
-  );
-  const negatif = metinlerdeGecer(
-    kayit,
-    /olumsuz|negatif|risk|red|iptal|durdurma|konkordato|zarar|baskı|gerileme/i
-  );
-
-  if (pozitif && negatif) {
-    return {
-      deger: "Dengeli okunmalı",
-      aciklama:
-        "Haberde destekleyici başlıklar var; ancak finansal etkiyi sınırlayabilecek riskler de izlenmeli.",
-      ton: "dengeli",
-    };
-  }
-
-  if (pozitif) {
-    return {
-      deger: "Olumluya yakın",
-      aciklama:
-        "Açıklama ilk bakışta destekleyici bir gelişmeye işaret ediyor; kalıcılık finansallara yansıma hızıyla anlaşılır.",
-      ton: "olumlu",
-    };
-  }
-
-  if (negatif) {
-    return {
-      deger: "Olumsuza yakın",
-      aciklama:
-        "Gelişme kısa vadede temkinli okunmalı; nihai etki sonraki açıklamalar ve finansal sonuçlarla netleşir.",
-      ton: "olumsuz",
-    };
-  }
-
-  return {
-    deger: "İzleme gerektirir",
-    aciklama:
-      "Açıklama tek başına güçlü bir yön üretmiyor; detaylar ve sonraki veri akışıyla birlikte değerlendirilmeli.",
-    ton: "notr",
-  };
-}
-
-function HaberEtkiCercevesi({ kayit }: { kayit: HaberKaydi }) {
-  const yon = haberYonunuBul(kayit);
-  const analizMetni =
-    ilkBolumMetni(kayit.editorDegerlendirmesi.bolumler, "analiz") ||
-    kayit.kapEtkiAnalizi?.ozet ||
-    kayit.editorDegerlendirmesi.giris;
-  const riskMetni =
-    kayit.kapEtkiAnalizi?.riskler?.[0] ||
-    ilkBolumMetni(kayit.editorDegerlendirmesi.bolumler, "risk");
-  const takipMetni =
-    kayit.kapEtkiAnalizi?.takipEdilecekler?.[0] ||
-    ilkBolumMetni(kayit.editorDegerlendirmesi.bolumler, "takip");
-  const etkiAlani =
-    kayit.ilgiliHisseler.length > 0
-      ? `İlgili hisse: ${kayit.ilgiliHisseler.join(", ")}. Etki; haberin büyüklüğü, zamanlaması ve finansallara yansıma biçimiyle okunmalı.`
-      : "Etki alanı; haberin konusu, takvimi ve sonraki resmi açıklamalarla birlikte değerlendirilmeli.";
-
-  const kartlar = [
-    {
-      baslik: "Haberin yönü",
-      deger: yon.deger,
-      aciklama: yon.aciklama,
-      ton: yon.ton,
-    },
-    {
-      baslik: "Olumlu taraf",
-      deger: "Destekleyici başlık",
-      aciklama: metinKisalt(analizMetni || "Olumlu taraf için açıklanan veri ve şirketin beklentisi birlikte okunmalı."),
-      ton: "olumlu" as const,
-    },
-    {
-      baslik: "Riskli taraf",
-      deger: "Sınırlayıcı unsur",
-      aciklama: metinKisalt(riskMetni || "Finansal etkinin zamanı, tutarı ve kârlılığa dönüşme biçimi kesin kabul edilmemeli."),
-      ton: "olumsuz" as const,
-    },
-    {
-      baslik: "Neyi izlemeli?",
-      deger: "Sonraki veri",
-      aciklama: metinKisalt(takipMetni || etkiAlani),
-      ton: "notr" as const,
-    },
-  ];
-
-  return (
-    <section
-      className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm md:p-6"
-      aria-labelledby="haber-etki-cercevesi"
-    >
-      <p className="text-xs font-bold uppercase tracking-wider text-blue-700">
-        Hızlı okuma
-      </p>
-      <h2
-        id="haber-etki-cercevesi"
-        className="mt-1 text-xl font-bold tracking-tight text-slate-900"
-      >
-        Bu haber nasıl okunmalı?
-      </h2>
-      <div className="mt-4 grid gap-4 md:grid-cols-2">
-        {kartlar.map((kart) => (
-          <article
-            key={kart.baslik}
-            className={`rounded-xl border p-4 ${etkiKartStilleri[kart.ton]}`}
-          >
-            <p className="text-xs font-bold uppercase tracking-wider opacity-75">
-              {kart.baslik}
-            </p>
-            <h3 className="mt-1 text-base font-black text-slate-950">
-              {kart.deger}
-            </h3>
-            <p className="mt-2 text-sm leading-6">{kart.aciklama}</p>
-          </article>
-        ))}
-      </div>
-    </section>
   );
 }
 
@@ -515,6 +352,174 @@ function HaberIcerikBolumu({
           ))}
         </div>
       )}
+    </section>
+  );
+}
+
+function HaberEditoryalAnaliz({
+  kayit,
+  kapanisDegerlendirmesi,
+}: {
+  kayit: HaberKaydi;
+  kapanisDegerlendirmesi: boolean;
+}) {
+  const { giris, bolumler } = kayit.editorDegerlendirmesi;
+  const gorunurGiris = !kapanisDegerlendirmesi && giris.trim().length > 0;
+  if (!gorunurGiris && bolumler.length === 0) return null;
+
+  return (
+    <section
+      className="border-y border-slate-200 py-7 md:py-9"
+      aria-labelledby="haber-editoryal-analiz"
+    >
+      <p className="text-xs font-bold uppercase tracking-wider text-blue-700">
+        Analiz ve değerlendirme
+      </p>
+      <h2
+        id="haber-editoryal-analiz"
+        className="mt-1 text-xl font-bold tracking-tight text-slate-900 md:text-2xl"
+      >
+        Gelişmenin olası etkileri
+      </h2>
+
+      {gorunurGiris && (
+        <p className="mt-4 text-base font-medium leading-8 text-slate-700 md:text-lg">
+          {giris}
+        </p>
+      )}
+
+      <div className="mt-6 divide-y divide-slate-200 border-t border-slate-200">
+        {bolumler.map((bolum, bolumIndex) => {
+          const vurgu = bolum.vurgu ?? "normal";
+          const fonKodlari = getBolumFonKodlari(
+            bolum.baslik,
+            getFonKapanisKodlari(kayit)
+          );
+
+          return (
+            <section
+              key={`editor-${bolumIndex}-${bolum.baslik}`}
+              className="py-6 first:pt-5 last:pb-0"
+            >
+              <h3
+                className={`text-lg font-bold leading-7 md:text-xl ${editorBaslikStilleri[vurgu]}`}
+              >
+                {bolum.baslik}
+              </h3>
+
+              {bolum.giris && (
+                <p className="mt-3 text-sm leading-7 text-slate-700 md:text-base">
+                  {bolum.giris}
+                </p>
+              )}
+
+              {bolum.paragraflar && bolum.paragraflar.length > 0 && (
+                <div className="mt-3 space-y-4">
+                  {bolum.paragraflar.map((paragraf, index) => (
+                    <Fragment key={`${bolum.baslik}-editor-paragraf-${index}`}>
+                      <HaberParagrafi
+                        id={`${bolum.baslik}-editor-paragraf-${index}`}
+                        paragraf={paragraf}
+                      />
+                      {index === 1 && bolum.degisimGrafigi && (
+                        <DegisimGrafigi grafik={bolum.degisimGrafigi} />
+                      )}
+                    </Fragment>
+                  ))}
+                </div>
+              )}
+
+              {bolum.kartlar && bolum.kartlar.length > 0 && (
+                <div className="mt-4 space-y-4">
+                  {bolum.kartlar.map((kart, index) => (
+                    <div
+                      key={`${kart.baslik}-${index}`}
+                      className="border-l-2 border-slate-300 pl-4"
+                    >
+                      <h4 className="font-bold text-slate-900">
+                        {kart.baslik}
+                      </h4>
+                      <p className="mt-1 text-sm leading-7 text-slate-700 md:text-base">
+                        {kart.aciklama}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {bolum.maddeler && bolum.maddeler.length > 0 && (
+                <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 marker:text-slate-400 md:text-base">
+                  {bolum.maddeler.map((madde, index) => (
+                    <li key={`${bolum.baslik}-editor-madde-${index}`}>
+                      {madde}
+                    </li>
+                  ))}
+                </ul>
+              )}
+
+              {bolum.tablo && bolum.tablo.basliklar.length > 0 && (
+                <div className="mt-5 overflow-x-auto border-y border-slate-200">
+                  <table className="min-w-full text-sm">
+                    <thead className="bg-slate-50 text-slate-700">
+                      <tr>
+                        {bolum.tablo.basliklar.map((baslik, index) => (
+                          <th
+                            key={`${bolum.baslik}-editor-tablo-baslik-${index}`}
+                            className="px-4 py-3 text-left font-bold"
+                          >
+                            {baslik}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {bolum.tablo.satirlar.map((satir, satirIndex) => (
+                        <tr key={`${bolum.baslik}-editor-satir-${satirIndex}`}>
+                          {satir.map((hucre, hucreIndex) => (
+                            <td
+                              key={`${bolum.baslik}-editor-hucre-${satirIndex}-${hucreIndex}`}
+                              className={`border-t border-slate-100 px-4 py-3 text-slate-700 ${
+                                hucreIndex === 0 ? "font-semibold text-slate-900" : ""
+                              }`}
+                            >
+                              {hucre}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              )}
+
+              {bolum.haberLink && (
+                <Link
+                  href={bolum.haberLink}
+                  prefetch={false}
+                  className="mt-5 inline-flex items-center justify-center rounded-lg border border-blue-700 bg-blue-700 px-4 py-2.5 text-sm font-bold text-white transition hover:border-blue-800 hover:bg-blue-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
+                >
+                  {bolum.haberLinkMetni ?? "Haberin detaylarını oku"}
+                </Link>
+              )}
+
+              {fonKodlari.length > 0 && (
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {fonKodlari.map((fonKodu) => (
+                    <Link
+                      key={fonKodu}
+                      href={`/fonlar/${fonKodu}`}
+                      prefetch={false}
+                      className="inline-flex items-center justify-center rounded-lg border border-blue-700 bg-blue-700 px-4 py-2.5 text-sm font-bold text-white transition hover:border-blue-800 hover:bg-blue-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
+                    >
+                      {fonKodu.toUpperCase()} fon sayfası
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </section>
+          );
+        })}
+      </div>
     </section>
   );
 }
@@ -736,8 +741,6 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
                 ))}
               </div>
 
-              <HaberEtkiCercevesi kayit={kayit} />
-
               {kayit.kaynakOzeti.ozetKartlari.length > 0 && (
                 <section aria-label="Haber özeti" className="grid gap-4 sm:grid-cols-2">
                   {kayit.kaynakOzeti.ozetKartlari.map((kart, index) => (
@@ -798,35 +801,14 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
                 />
               ))}
 
+              <HaberEditoryalAnaliz
+                kayit={kayit}
+                kapanisDegerlendirmesi={kapanisDegerlendirmesi}
+              />
+
               {kayit.kapEtkiAnalizi && (
                 <KapEtkiAnalizi analiz={kayit.kapEtkiAnalizi} />
               )}
-
-              {!kapanisDegerlendirmesi &&
-                kayit.editorDegerlendirmesi.giris.trim() !== "" && (
-                  <section className="rounded-2xl border border-blue-300 bg-blue-50 p-5 md:p-6">
-                    <p className="text-xs font-bold uppercase tracking-wider text-blue-700">
-                      Editoryal analiz
-                    </p>
-                    <h2 className="mt-1 text-xl font-bold text-slate-900">
-                      Hoca İle Borsa değerlendirmesi
-                    </h2>
-                    <p className="mt-3 text-sm leading-7 text-slate-700 md:text-base">
-                      {kayit.editorDegerlendirmesi.giris}
-                    </p>
-                  </section>
-                )}
-
-              {kayit.editorDegerlendirmesi.bolumler.map((bolum, index) => (
-                <HaberIcerikBolumu
-                  key={`yorum-${index}-${bolum.baslik}`}
-                  bolum={bolum}
-                  fonKodlari={getBolumFonKodlari(
-                    bolum.baslik,
-                    fonKapanisKodlari
-                  )}
-                />
-              ))}
 
               <FonKapanisYonlendirmeleri kayit={kayit} />
 

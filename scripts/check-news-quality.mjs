@@ -19,21 +19,6 @@ const HISSE_ZORUNLU_KATEGORILER = new Set([
   "sermaye-artirimi",
   "sirket-haberleri",
 ]);
-const KAP_ETKI_OLAY_TURLERI = new Set([
-  "sozlesme",
-  "ihale",
-  "yatirim",
-  "kapasite",
-  "bedelsiz",
-  "donemsel-satis",
-  "diger",
-]);
-const KAP_ETKI_METRIK_TURLERI = new Set([
-  "tutar-orani",
-  "kapasite-artisi",
-  "bedelsiz",
-  "hesaplanamadi",
-]);
 const KAP_PARA_BIRIMLERI = new Set(["TRY", "USD", "EUR", "GBP"]);
 
 const slugArgIndex = process.argv.findIndex((arg) => arg === "--slug");
@@ -259,13 +244,49 @@ function haberBakisAcisiniKontrolEt(dosya, veri, zorunlu) {
   }
 }
 
+function haberEditorDerinliginiKontrolEt(dosya, veri, zorunlu) {
+  const degerlendirme = veri.editorDegerlendirmesi;
+  const editorMetni = metinleriTopla(degerlendirme)
+    .join(" ")
+    .replace(/\s+/g, " ")
+    .trim();
+
+  if (editorMetni.length < 700) {
+    kaliteMesaji(
+      dosya,
+      "Editoryal değerlendirme kısa kalmış; kaynağı tekrar etmeden olumlu tarafı, sınırlayıcı unsuru, etki alanını ve izlenecek gelişmeleri gerekçeleriyle açıklayın.",
+      zorunlu
+    );
+  }
+
+  const editorBolumleri = Array.isArray(degerlendirme?.bolumler)
+    ? degerlendirme.bolumler
+    : [];
+  const dolguBaslikliBolum = editorBolumleri.find((bolum) =>
+    /veri bekleniyor|bilgi yok|hesaplanamıyor|henüz açıklanmadı|henüz paylaşılmadı/i.test(
+      String(bolum?.baslik ?? "")
+    )
+  );
+
+  if (dolguBaslikliBolum) {
+    kaliteMesaji(
+      dosya,
+      `"${dolguBaslikliBolum.baslik}" bağımsız bir analiz bölümü olmamalı; açıklanmayan bilgiyi yalnızca yorumun sınırını göstermek için ilgili etki paragrafında bir kez belirtin.`,
+      zorunlu
+    );
+  }
+}
+
 function kapEtkiAnaliziKontrolEt(dosya, analiz) {
   if (!analiz || typeof analiz !== "object" || Array.isArray(analiz)) {
     hata(dosya, "KAP kaynaklı şirket haberinde kapEtkiAnalizi nesnesi zorunludur.");
     return;
   }
 
-  if (!KAP_ETKI_OLAY_TURLERI.has(analiz.olayTuru)) {
+  if (
+    !bosOlmayanMetin(analiz.olayTuru) ||
+    !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(analiz.olayTuru)
+  ) {
     hata(dosya, `Geçersiz KAP olay türü: ${analiz.olayTuru ?? "boş"}`);
   }
   if (!bosOlmayanMetin(analiz.ozet) || analiz.ozet.trim().length < 80) {
@@ -282,7 +303,10 @@ function kapEtkiAnaliziKontrolEt(dosya, analiz) {
         hata(dosya, `${alan} bir nesne olmalı.`);
         continue;
       }
-      if (!KAP_ETKI_METRIK_TURLERI.has(metrik.tur)) {
+      if (
+        !bosOlmayanMetin(metrik.tur) ||
+        !/^[a-z0-9çğıöşü]+(?:-[a-z0-9çğıöşü]+)*$/i.test(metrik.tur)
+      ) {
         hata(dosya, `${alan} için geçersiz metrik türü: ${metrik.tur ?? "boş"}`);
         continue;
       }
@@ -301,10 +325,6 @@ function kapEtkiAnaliziKontrolEt(dosya, analiz) {
       }
 
       hesaplananMetrikSayisi += 1;
-
-      if (!bosOlmayanMetin(metrik.aciklama) || metrik.aciklama.trim().length < 50) {
-        hata(dosya, `${alan}.aciklama en az 50 karakterle yorumlanmalı.`);
-      }
 
       if (metrik.tur === "kapasite-artisi") {
         if (!pozitifSayi(metrik.mevcutKapasite)) {
@@ -338,6 +358,27 @@ function kapEtkiAnaliziKontrolEt(dosya, analiz) {
         }
         if (metrik.referansFiyat !== undefined && !pozitifSayi(metrik.referansFiyat)) {
           hata(dosya, `${alan}.referansFiyat verildiyse pozitif sayı olmalı.`);
+        }
+        continue;
+      }
+
+      if (metrik.tur !== "tutar-orani") {
+        const metinDegeriGecerli =
+          bosOlmayanMetin(metrik.deger) &&
+          !/veri bekleniyor|bilgi yok|veri yok|henüz (?:açıklanmadı|paylaşılmadı)|açıklanmadı|paylaşılmadı|hesaplanamıyor|belirtilmedi/i.test(
+            metrik.deger
+          );
+        const gorunurDegerVar =
+          pozitifSayi(metrik.olayTutari) ||
+          Number.isFinite(metrik.oran) ||
+          Number.isFinite(metrik.deger) ||
+          metinDegeriGecerli;
+        if (!gorunurDegerVar) {
+          hesaplananMetrikSayisi -= 1;
+          uyari(
+            dosya,
+            `${alan} görünür ve sonlu bir sayısal değer içermediği için sayfada gösterilmeyecek.`
+          );
         }
         continue;
       }
@@ -735,6 +776,9 @@ for (const { dosya, goreliDosya, veri } of kayitlar) {
   if (/\b(?:TODO|TBD|Lorem ipsum|BURAYA YAZ)\b/i.test(tumMetin)) {
     hata(goreliDosya, "Yayın metninde yer tutucu ifade bulundu.");
   }
+  if (/\b(?:NaN|undefined|null)\b/i.test(tumMetin)) {
+    hata(goreliDosya, "Yayın metninde geçersiz veya hesaplanamamış bir değer bulundu.");
+  }
   if (/<\/?[a-z][^>]*>/i.test(tumMetin)) {
     hata(goreliDosya, "JSON metin alanlarında HTML etiketi kullanılmamalı.");
   }
@@ -744,6 +788,7 @@ for (const { dosya, goreliDosya, veri } of kayitlar) {
 
   haberTekrarlariniKontrolEt(goreliDosya, veri, yayinAdayi);
   haberBakisAcisiniKontrolEt(goreliDosya, veri, yayinAdayi);
+  haberEditorDerinliginiKontrolEt(goreliDosya, veri, yayinAdayi);
 
   const icerikKarakteri = metinleriTopla({
     kaynakOzeti: veri.kaynakOzeti,

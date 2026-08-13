@@ -10,7 +10,8 @@ JSON olmalı; açıklama, Markdown kod bloğu veya JSON dışında metin içerme
 - Aynı olayı, rakamı veya açıklamayı girişte, kartlarda ve alt bölümlerde tekrar tekrar yazma.
 - Kaynak özetinde bir bilgi bir kez açıklandıysa sonraki bölümde aynı bilgiyi yeniden anlatmak yerine anlamını ve etkisini açıkla.
 - Haberi uzatmak için dolgu cümleleri, genel piyasa ifadeleri veya kaynaksız tahminler ekleme.
-- Açıklanmayan tutar, oran, tarih veya sonuç hakkında veri uydurma; belirsizliği açıkça belirt.
+- Açıklanmayan tutar, oran, tarih veya sonuç hakkında veri uydurma.
+- “Veri bekleniyor”, “bilgi yok”, “henüz açıklanmadı” gibi ifadeler için ayrı bölüm, kart veya madde listesi oluşturma. Eksik bilgi yorumun sınırını gerçekten değiştiriyorsa ilgili etki paragrafında yalnızca bir kez ve neden önemli olduğunu açıklayarak belirt.
 
 ## Editoryal değerlendirme
 
@@ -22,8 +23,9 @@ Her haberin `editorDegerlendirmesi` bölümünde olayın niteliğine uygun olara
 4. `Takip edilecek başlıklar`: Etkinin doğrulanması için sonraki KAP açıklaması veya finansal tablolarda izlenecek somut gelişmeler.
 
 Olumlu ya da olumsuz yön kaynaklardan kesin biçimde çıkarılamıyorsa bunu kesin
-hüküm gibi yazma. “Olumluya yakın”, “sınırlı etkili”, “etkisi henüz
-ölçülemiyor” gibi gerekçeli ve ölçülü dil kullan.
+hüküm gibi yazma. Eksik bilgileri sıralamak yerine açıklanan gelişmenin kesin
+olarak neyi değiştirdiğini, neyi değiştirmediğini ve etkinin hangi koşula bağlı
+olduğunu gerekçeli ve ölçülü dille anlat.
 
 ## Tekrarı önleme
 
@@ -31,6 +33,7 @@ hüküm gibi yazma. “Olumluya yakın”, “sınırlı etkili”, “etkisi he
 - Kaynak cümlelerini farklı kelimelerle yeniden yazıp yeni analiz gibi gösterme.
 - Her bölüm okuyucuya önceki bölümde bulunmayan bir cevap vermeli.
 - `kaynakOzeti` “ne oldu?” sorusunu; `editorDegerlendirmesi` “neden önemli, neyi etkiler, risk nedir, bundan sonra ne izlenir?” sorularını cevaplamalı.
+- `editorDegerlendirmesi` yalnızca kısa sonuç cümlelerinden oluşmamalı; her yorumun dayandığı açıklanmış veri ve çıkarım zinciri görünür olmalı.
 
 ## Güvenlik ve doğruluk
 

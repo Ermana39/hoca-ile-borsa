@@ -126,21 +126,31 @@ export type KapHesaplanamadiMetrigi = {
   gerekliVeriler: string[];
 };
 
+export type KapGenelMetrik = {
+  tur: string;
+  baslik: string;
+  aciklama?: string;
+  oran?: number;
+  deger?: number | string;
+  olayEtiketi?: string;
+  olayTutari?: number;
+  olayParaBirimi?: string;
+  referansEtiketi?: string;
+  referansTutari?: number;
+  referansParaBirimi?: string;
+  referansDonemi?: string;
+  [alan: string]: unknown;
+};
+
 export type KapEtkiMetrigi =
   | KapTutarOraniMetrigi
   | KapKapasiteArtisiMetrigi
   | KapBedelsizMetrigi
-  | KapHesaplanamadiMetrigi;
+  | KapHesaplanamadiMetrigi
+  | KapGenelMetrik;
 
 export type KapEtkiAnalizi = {
-  olayTuru:
-    | "sozlesme"
-    | "ihale"
-    | "yatirim"
-    | "kapasite"
-    | "bedelsiz"
-    | "donemsel-satis"
-    | "diger";
+  olayTuru: string;
   ozet: string;
   metrikler: KapEtkiMetrigi[];
   riskler: string[];
