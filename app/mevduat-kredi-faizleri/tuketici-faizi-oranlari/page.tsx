@@ -191,7 +191,6 @@ async function getTuketiciVerileri() {
 
     const grafikVerisi: GunlukOrtalamaSatiri[] = preparedRows
       .filter((row) => !Number.isNaN(row.ortalama))
-      .slice(-30)
       .map((row) => ({
         tarih: row.tarih,
         ortalama: row.ortalama,

@@ -65,8 +65,29 @@ const kayit = {
   },
   editorDegerlendirmesi: {
     giris:
-      "Bu bölüm, resmî kaynaktaki bilgilerden hareketle hazırlanmış editoryal değerlendirmedir.",
-    bolumler: [],
+      "Bu bölümde yalnızca resmî kaynağı tekrar etmeyin; gelişmenin olumlu tarafını, sınırlayıcı riskini, finansal/operasyonel etkisini ve izlenecek sonraki başlıkları özetleyin.",
+    bolumler: [
+      {
+        baslik: "Haberin olumlu tarafı",
+        maddeler: [],
+        vurgu: "analiz",
+      },
+      {
+        baslik: "Riskli veya sınırlayıcı taraf",
+        maddeler: [],
+        vurgu: "risk",
+      },
+      {
+        baslik: "Nerelere etki edebilir?",
+        paragraflar: [],
+        vurgu: "analiz",
+      },
+      {
+        baslik: "Takip edilecek başlıklar",
+        maddeler: [],
+        vurgu: "takip",
+      },
+    ],
   },
   kapEtkiAnalizi: {
     olayTuru: "diger",

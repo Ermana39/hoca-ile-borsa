@@ -15,13 +15,18 @@ ortak şablondan üretilir.
 
 ## İş Akışı
 
-1. `npm run news:new -- haber-slug "Haber başlığı"` komutuyla taslak açılır.
-2. KAP veya diğer resmî kaynak okunur ve JSON alanları doldurulur.
+Haber metni ve JSON kaydı çoğunlukla ayrı bir ChatGPT sohbetinde hazırlanır.
+`news:new` komutu yalnızca isteğe bağlı boş taslak üreticisidir; editoryal kalite
+kuralları haberin nerede hazırlandığına bağlı değildir.
+
+1. Ayrı ChatGPT sohbetine `docs/chatgpt-haber-talimatlari.md` dosyasındaki talimat ve güncel bir örnek haber JSON'u verilir.
+2. Hazırlanan JSON, `data/haberler/<slug>.json` konumuna eklenir.
 3. Görsel `public/<slug>.webp` adıyla eklenir. Görsel en az 1200x675 piksel ve
    16:9 oranında olmalıdır. JSON içindeki ölçüler gerçek dosyayla aynı yazılır.
-4. `npm run news:check -- --slug=haber-slug` çalıştırılır.
-5. Kontrol geçtikten sonra `durum` alanı `yayinda` yapılır.
-6. `npm run news:check` ve ardından proje doğrulamaları çalıştırılır.
+4. `npm run news:review -- --slug=haber-slug` çalıştırılır. Bu komut taslağı
+   yayınlamadan tekrarları ve farklı bakış açılarını sıkı biçimde denetler.
+5. Düzeltmelerden sonra `npm run news:publish -- --slug=haber-slug` çalıştırılır.
+6. Proje doğrulamaları ve site derlemesi çalıştırılır.
 
 `taslak` kayıtlar sitede, haber listelerinde ve sitemap'te görünmez. Belirli bir
 taslağı `--slug` ile kontrol etmek, onu yayın adayı gibi tam denetime sokar.

@@ -27,6 +27,7 @@
     "news-dates": "node scripts/generate-news-dates.mjs",
     "news:new": "node scripts/create-news.mjs",
     "news:check": "node scripts/check-news-quality.mjs",
+    "news:review": "node scripts/check-news-quality.mjs --strict",
     "news:publish": "node scripts/check-news-quality.mjs --publish",
     "halka-arz:taslak-arsivle": "node scripts/archive-ipo-draft.mjs",
     "halka-arz:karsilastirma-kontrol": "node scripts/archive-ipo-draft.mjs --check-approved",

@@ -41,10 +41,13 @@ const hedefSlug =
   process.argv.find((arg) => arg.startsWith("--slug="))?.slice(7) ||
   (slugArgIndex >= 0 ? process.argv[slugArgIndex + 1] : undefined);
 const yayinaAl = process.argv.includes("--publish");
+const sikiInceleme = process.argv.includes("--strict");
 
-if (yayinaAl && !hedefSlug) {
+if ((yayinaAl || sikiInceleme) && !hedefSlug) {
   console.error(
-    "Yayınlanacak haber belirtilmeli: npm run news:publish -- --slug=<haber-slug>"
+    yayinaAl
+      ? "Yayınlanacak haber belirtilmeli: npm run news:publish -- --slug=<haber-slug>"
+      : "İncelenecek haber belirtilmeli: npm run news:review -- --slug=<haber-slug>"
   );
   process.exit(1);
 }
@@ -130,6 +133,130 @@ function doluMetinDizisi(deger, enAz) {
     deger.length >= enAz &&
     deger.every((item) => bosOlmayanMetin(item))
   );
+}
+
+function kaliteMesaji(dosya, mesaj, zorunlu) {
+  if (zorunlu) hata(dosya, mesaj);
+  else uyari(dosya, mesaj);
+}
+
+function cumlelereAyir(metinler) {
+  return metinler
+    .flatMap((metin) => String(metin ?? "").split(/[.!?]\s+/))
+    .map((cumle) => cumle.trim())
+    .filter((cumle) => cumle.length >= 55);
+}
+
+function tekrarAnahtari(metin) {
+  return normalize(metin)
+    .replace(/\b\d[\d.,]*\b/g, "#")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function haberTekrarlariniKontrolEt(dosya, veri, zorunlu) {
+  const metinler = metinleriTopla({
+    kaynakOzeti: veri.kaynakOzeti,
+    editorDegerlendirmesi: veri.editorDegerlendirmesi,
+    sorular: veri.sorular,
+  });
+
+  const tekrarlar = new Map();
+  for (const cumle of cumlelereAyir(metinler)) {
+    const anahtar = tekrarAnahtari(cumle);
+    if (anahtar.length < 45) continue;
+    tekrarlar.set(anahtar, (tekrarlar.get(anahtar) ?? 0) + 1);
+  }
+
+  const cokTekrarlananCumle = [...tekrarlar.values()].some((adet) => adet >= 3);
+  if (cokTekrarlananCumle) {
+    kaliteMesaji(
+      dosya,
+      "Haber metninde aynı cümle/fikir çok sık tekrar ediyor; tekrar yerine etki, risk veya farklı bakış açısı ekleyin.",
+      zorunlu
+    );
+  }
+
+  const sayisalTekrarlar = new Map();
+  const tumMetin = metinler.join(" ");
+  for (const eslesme of tumMetin.matchAll(
+    /\b\d[\d.,]*(?:\s*(?:milyon|milyar|bin|mn|tl|euro|dolar|usd|ay|yıl|%))?/gi
+  )) {
+    const hamDeger = eslesme[0].trim();
+    const birimVar = /[a-zçğıöşü%]/i.test(hamDeger);
+    const rakamSayisi = hamDeger.replace(/\D/g, "").length;
+    if (!birimVar && rakamSayisi < 4) continue;
+
+    const anahtar = normalize(eslesme[0]);
+    if (anahtar.length < 2) continue;
+    sayisalTekrarlar.set(anahtar, (sayisalTekrarlar.get(anahtar) ?? 0) + 1);
+  }
+
+  const cokTekrarlananSayi = [...sayisalTekrarlar.entries()].find(
+    ([anahtar, adet]) => adet >= 6 && !/202\d/.test(anahtar)
+  );
+  if (cokTekrarlananSayi) {
+    kaliteMesaji(
+      dosya,
+      `"${cokTekrarlananSayi[0]}" bilgisi haberde çok fazla tekrar ediyor; aynı veriyi yeniden yazmak yerine neyi etkilediğini açıklayın.`,
+      zorunlu
+    );
+  }
+}
+
+function haberBakisAcisiniKontrolEt(dosya, veri, zorunlu) {
+  const editorBolumleri = Array.isArray(veri.editorDegerlendirmesi?.bolumler)
+    ? veri.editorDegerlendirmesi.bolumler
+    : [];
+  const basliklar = editorBolumleri.map((bolum) => normalize(bolum?.baslik));
+  const tumEditorMetni = normalize(
+    metinleriTopla({
+      editorDegerlendirmesi: veri.editorDegerlendirmesi,
+      kapEtkiAnalizi: veri.kapEtkiAnalizi,
+    }).join(" ")
+  );
+
+  const olumluVar =
+    basliklar.some((baslik) => /olumlu|pozitif|guclu|destek|firsat/.test(baslik)) ||
+    /olumlu|pozitif|guclu|destekleyici|katki/.test(tumEditorMetni);
+  const olumsuzVar =
+    basliklar.some((baslik) => /olumsuz|negatif|risk|dikkat|sinirlayici|baski/.test(baslik)) ||
+    /olumsuz|negatif|risk|dikkat|sinirlayici|baski/.test(tumEditorMetni);
+  const etkiVar =
+    basliklar.some((baslik) => /etki|neden onemli|nasil okunmali|finansal|operasyonel|sektor/.test(baslik)) ||
+    /finansal|operasyonel|ciro|karlilik|nakit|borc|marj|sektor|rekabet/.test(tumEditorMetni);
+  const takipVar =
+    basliklar.some((baslik) => /takip|izlenecek|sonraki/.test(baslik)) ||
+    /takip|izlenecek|sonraki aciklama|finansal tablo/.test(tumEditorMetni);
+
+  if (!olumluVar) {
+    kaliteMesaji(
+      dosya,
+      "Editoryal analizde haberin olumlu/destekleyici tarafı somut biçimde yazılmalı.",
+      zorunlu
+    );
+  }
+  if (!olumsuzVar) {
+    kaliteMesaji(
+      dosya,
+      "Editoryal analizde haberin olumsuz/riskli veya sınırlayıcı tarafı somut biçimde yazılmalı.",
+      zorunlu
+    );
+  }
+  if (!etkiVar) {
+    kaliteMesaji(
+      dosya,
+      "Editoryal analizde gelişmenin finansal, operasyonel, sektörel veya yatırımcı algısı etkisi açıklanmalı.",
+      zorunlu
+    );
+  }
+  if (!takipVar) {
+    kaliteMesaji(
+      dosya,
+      "Editoryal analizde sonraki açıklamalarda izlenecek başlıklar bulunmalı.",
+      zorunlu
+    );
+  }
 }
 
 function kapEtkiAnaliziKontrolEt(dosya, analiz) {
@@ -377,8 +504,11 @@ for (const { dosya, goreliDosya, veri } of kayitlar) {
 
   const dosyaSlug = dosya.replace(/\.json$/, "");
   const hedefKayit = veri.slug === hedefSlug;
-  const yayinAdayi = yayinaAl && hedefKayit;
-  const katiKontrol = veri.durum === "yayinda" || hedefKayit;
+  if (sikiInceleme && !hedefKayit) continue;
+  const yayinAdayi = (yayinaAl || sikiInceleme) && hedefKayit;
+  const katiKontrol = sikiInceleme
+    ? hedefKayit
+    : veri.durum === "yayinda" || hedefKayit;
 
   if (veri.surum !== 1) hata(goreliDosya, "surum alanı 1 olmalı.");
   if (!/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(veri.slug || "")) {
@@ -390,7 +520,7 @@ for (const { dosya, goreliDosya, veri } of kayitlar) {
   if (veri.durum !== "taslak" && veri.durum !== "yayinda") {
     hata(goreliDosya, "durum yalnızca taslak veya yayinda olabilir.");
   }
-  if (hedefKayit && veri.durum === "taslak" && !yayinaAl) {
+  if (hedefKayit && veri.durum === "taslak" && !yayinaAl && !sikiInceleme) {
     hata(
       goreliDosya,
       `Haber hâlâ taslak. Yayınlamak için: npm run news:publish -- --slug=${veri.slug}`
@@ -612,6 +742,9 @@ for (const { dosya, goreliDosya, veri } of kayitlar) {
     hata(goreliDosya, "Yatırım tavsiyesi veya kesin getiri vaadi niteliğinde ifade bulundu.");
   }
 
+  haberTekrarlariniKontrolEt(goreliDosya, veri, yayinAdayi);
+  haberBakisAcisiniKontrolEt(goreliDosya, veri, yayinAdayi);
+
   const icerikKarakteri = metinleriTopla({
     kaynakOzeti: veri.kaynakOzeti,
     editorDegerlendirmesi: veri.editorDegerlendirmesi,
@@ -640,18 +773,22 @@ const eskiIdler = new Map();
 const eskiBasliklar = new Map();
 
 for (const haber of eskiHaberler) {
-  if (eskiHrefler.has(haber.href)) {
+  if (!sikiInceleme && eskiHrefler.has(haber.href)) {
     uyari("app/data/news.ts", `Tekrarlanan eski haber adresi: ${haber.href}`);
   }
   eskiHrefler.set(haber.href, haber);
 
-  if (eskiIdler.has(haber.id)) {
+  if (!sikiInceleme && eskiIdler.has(haber.id)) {
     uyari("app/data/news.ts", `Tekrarlanan eski haber id'si: ${haber.id}`);
   }
   eskiIdler.set(haber.id, haber.href);
   eskiBasliklar.set(normalize(haber.title), haber.href);
 
-  if (haber.image && !fs.existsSync(path.join(PUBLIC_DIZINI, haber.image.replace(/^\/+/, "")))) {
+  if (
+    !sikiInceleme &&
+    haber.image &&
+    !fs.existsSync(path.join(PUBLIC_DIZINI, haber.image.replace(/^\/+/, "")))
+  ) {
     uyari("app/data/news.ts", `Eski haber görseli bulunamadı: ${haber.image}`);
   }
 
@@ -662,13 +799,14 @@ for (const haber of eskiHaberler) {
       yayindaSayiliyorMu(veri) &&
       `/haber/${veri.slug}` === haber.href
   );
-  if (slug && !statikSayfa && !yeniSayfa) {
+  if (!sikiInceleme && slug && !statikSayfa && !yeniSayfa) {
     hata("app/data/news.ts", `Listede var ancak sayfası bulunamadı: ${haber.href}`);
   }
 }
 
 for (const { goreliDosya, veri } of kayitlar) {
   if (!veri || (veri.durum !== "yayinda" && veri.slug !== hedefSlug)) continue;
+  if (sikiInceleme && veri.slug !== hedefSlug) continue;
   const href = `/haber/${veri.slug}`;
   if (eskiHrefler.has(href)) {
     hata(goreliDosya, "Bu adres app/data/news.ts içinde de var; yeni sistem tek kaynak olmalı.");
@@ -679,7 +817,7 @@ for (const { goreliDosya, veri } of kayitlar) {
   }
 }
 
-if (fs.existsSync(HABER_SAYFA_DIZINI)) {
+if (!sikiInceleme && fs.existsSync(HABER_SAYFA_DIZINI)) {
   for (const klasor of fs.readdirSync(HABER_SAYFA_DIZINI, { withFileTypes: true })) {
     if (!klasor.isDirectory() || klasor.name.startsWith("[")) continue;
     const page = path.join(HABER_SAYFA_DIZINI, klasor.name, "page.tsx");
