@@ -202,6 +202,9 @@ export function haberKaydiIndexlenebilirMi(kayit: HaberKaydi): boolean {
 function temelKayitGecerli(veri: unknown): veri is HaberKaydi {
   if (!veri || typeof veri !== "object") return false;
   const kayit = veri as Partial<HaberKaydi>;
+  const gorsel = kayit.gorsel;
+  const kaynakOzeti = kayit.kaynakOzeti;
+  const editorDegerlendirmesi = kayit.editorDegerlendirmesi;
 
   return (
     kayit.surum === HABER_KAYIT_SURUMU &&
@@ -211,9 +214,32 @@ function temelKayitGecerli(veri: unknown): veri is HaberKaydi {
     typeof kayit.aciklama === "string" &&
     typeof kayit.kategori === "string" &&
     isHaberKategori(kayit.kategori) &&
-    Boolean(kayit.kaynakOzeti) &&
-    Boolean(kayit.editorDegerlendirmesi) &&
-    Array.isArray(kayit.kaynaklar)
+    typeof kayit.etiket === "string" &&
+    typeof kayit.yayinTarihi === "string" &&
+    typeof kayit.guncellemeTarihi === "string" &&
+    typeof kayit.yazarSlug === "string" &&
+    typeof gorsel?.src === "string" &&
+    typeof gorsel.alt === "string" &&
+    Number.isFinite(gorsel.genislik) &&
+    gorsel.genislik > 0 &&
+    Number.isFinite(gorsel.yukseklik) &&
+    gorsel.yukseklik > 0 &&
+    Array.isArray(kayit.ilgiliHisseler) &&
+    kayit.ilgiliHisseler.every((kod) => typeof kod === "string") &&
+    Array.isArray(kaynakOzeti?.giris) &&
+    kaynakOzeti.giris.every((paragraf) => typeof paragraf === "string") &&
+    Array.isArray(kaynakOzeti.ozetKartlari) &&
+    Array.isArray(kaynakOzeti.temelBilgiler) &&
+    Array.isArray(kaynakOzeti.bolumler) &&
+    typeof editorDegerlendirmesi?.giris === "string" &&
+    Array.isArray(editorDegerlendirmesi.bolumler) &&
+    Array.isArray(kayit.kaynaklar) &&
+    kayit.kaynaklar.every(
+      (kaynak) =>
+        typeof kaynak.ad === "string" &&
+        typeof kaynak.url === "string" &&
+        typeof kaynak.tur === "string"
+    )
   );
 }
 

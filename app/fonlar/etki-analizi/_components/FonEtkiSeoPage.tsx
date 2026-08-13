@@ -1,6 +1,6 @@
 import Link from "@/components/NoPrefetchLink";
 import { getHisseIcerikHedefi } from "@/lib/hisse-icerik-hedefi";
-import { getFundDetail } from "@/lib/fon-platform";
+import { getFundDetail, type FundHistoryRow } from "@/lib/fon-platform";
 import FundChartsClient from "../../_components/FundChartsClient";
 import {
   fonEtkiOzetleri,
@@ -33,11 +33,54 @@ export type DegisimSatiri = {
 };
 
 export type FonDegisimVerisi = {
+  dunTarihi: string;
+  bugunTarihi: string;
   yatirimciSayisi: DegisimSatiri;
   fonToplamDeger: DegisimSatiri;
   paraGirisiCikisi: number;
   yorum: string;
 };
+
+function guncelTarihselVerilerOlustur(
+  kod: string,
+  history: FundHistoryRow[]
+): FonTarihselVeri[] {
+  const tarihselVeriler = history
+    .flatMap((row): FonTarihselVeri[] => {
+      const { kisiSayisi, fonToplamDeger, paraGirisiCikisi, gunlukGetiri } = row;
+
+      if (
+        !row.tarih ||
+        typeof kisiSayisi !== "number" ||
+        !Number.isFinite(kisiSayisi) ||
+        typeof fonToplamDeger !== "number" ||
+        !Number.isFinite(fonToplamDeger) ||
+        fonToplamDeger <= 0 ||
+        typeof paraGirisiCikisi !== "number" ||
+        !Number.isFinite(paraGirisiCikisi)
+      ) {
+        return [];
+      }
+
+      return [{
+        tarih: row.tarih,
+        yatirimciSayisi: kisiSayisi,
+        fonToplamDeger,
+        paraGirisiCikisi,
+        marj:
+          typeof gunlukGetiri === "number" && Number.isFinite(gunlukGetiri)
+            ? gunlukGetiri * 100
+            : null,
+      }];
+    })
+    .sort((a, b) => a.tarih.localeCompare(b.tarih));
+
+  if (tarihselVeriler.length < 2) {
+    throw new Error(`${kod}: güncel değişim hesabı için en az iki geçerli fon kaydı gerekli.`);
+  }
+
+  return tarihselVeriler;
+}
 
 function degisimVerisiOlustur({
   kod,
@@ -85,6 +128,8 @@ function degisimVerisiOlustur({
   };
 
   return {
+    dunTarihi: dun.tarih,
+    bugunTarihi: bugun.tarih,
     yatirimciSayisi: {
       dun: dun.yatirimciSayisi,
       bugun: bugun.yatirimciSayisi,
@@ -120,6 +165,14 @@ function fmtCurrency(value: number) {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
   }).format(value);
+}
+
+function fmtShortDate(value: string) {
+  return new Intl.DateTimeFormat("tr-TR", {
+    day: "numeric",
+    month: "short",
+    timeZone: "UTC",
+  }).format(new Date(`${value}T00:00:00Z`));
 }
 
 function signedPercent(value: number, digits = 2) {
@@ -352,13 +405,19 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
     toplamEtki,
     kaldiracli,
     sonGuncelleme,
-    tarihselVeriler,
   } = props;
+  const fonDetayi = getFundDetail(slug);
+
+  if (!fonDetayi) {
+    throw new Error(`${kod}: güncel fon detayı bulunamadı.`);
+  }
+
+  const guncelTarihselVeriler = guncelTarihselVerilerOlustur(kod, fonDetayi.history);
   const degisimVerisi = degisimVerisiOlustur({
     kod,
     rows,
     toplamEtki,
-    tarihselVeriler,
+    tarihselVeriler: guncelTarihselVeriler,
   });
   const mostPositive = getMostPositive(rows);
   const mostNegative = getMostNegative(rows);
@@ -376,7 +435,6 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
   const yatirimciPozitif = degisimVerisi.yatirimciSayisi.degisim >= 0;
   const fonDegerPozitif = degisimVerisi.fonToplamDeger.degisim >= 0;
   const paraAkisiPozitif = degisimVerisi.paraGirisiCikisi >= 0;
-  const fonDetayi = getFundDetail(slug);
 
   return (
     <main className="min-h-screen bg-[#f8fafc] px-4 py-6 md:px-6">
@@ -617,23 +675,21 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
             </div>
           </dl>
 
-          {fonDetayi ? (
-            <div className="mt-6">
-              <FundChartsClient history={fonDetayi.history} />
-            </div>
-          ) : (
-            <p className="mt-6 text-sm text-slate-500">
-              Grafik verisi bulunamadı.
-            </p>
-          )}
+          <div className="mt-6">
+            <FundChartsClient history={fonDetayi.history} />
+          </div>
 
           <div className="mt-5 overflow-x-auto rounded-xl border border-slate-200">
             <table className="min-w-[720px] w-full border-collapse text-left text-sm">
               <thead className="bg-slate-50 text-xs uppercase text-slate-500">
                 <tr>
                   <th className="px-4 py-3 font-semibold">Gösterge</th>
-                  <th className="px-4 py-3 font-semibold">Dün</th>
-                  <th className="px-4 py-3 font-semibold">Bugün</th>
+                  <th className="px-4 py-3 font-semibold">
+                    Dün ({fmtShortDate(degisimVerisi.dunTarihi)})
+                  </th>
+                  <th className="px-4 py-3 font-semibold">
+                    Bugün ({fmtShortDate(degisimVerisi.bugunTarihi)})
+                  </th>
                   <th className="px-4 py-3 font-semibold">Değişim</th>
                 </tr>
               </thead>

@@ -624,6 +624,21 @@ for (const code of expectedEffectFunds) {
 
   const dates = new Set();
   const detail = JSON.parse(fs.readFileSync(path.join(detailDir, `${code.toLowerCase()}.json`), "utf8"));
+  const currentHistory = detail.history.filter(
+    (row) =>
+      row.tarih &&
+      Number.isFinite(row.kisiSayisi) &&
+      Number.isFinite(row.fonToplamDeger) &&
+      row.fonToplamDeger > 0 &&
+      Number.isFinite(row.paraGirisiCikisi)
+  );
+  assert(currentHistory.length >= 2, `${code} güncel değişim verisi yetersiz.`);
+  const currentLastRow = currentHistory.at(-1);
+  assert(
+    currentLastRow.tarih === detail.sonIslemTarihi &&
+      currentLastRow.tarih === detail.fund.tarih,
+    `${code} güncel değişim verisi son işlem tarihiyle uyuşmuyor.`
+  );
   const mainByDate = new Map(detail.history.map((row) => [row.tarih, row]));
   for (const row of effectFund.tarihsel) {
     assert(!dates.has(row.tarih), `${code} etki geçmişinde tekrarlanan tarih: ${row.tarih}`);
