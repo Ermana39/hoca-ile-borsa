@@ -30,6 +30,10 @@ const kontroller = [
     noindex: false,
   },
   {
+    yol: "/haber/dcttr-yuzde-10-pay-satis-bilgi-formu-spk-basvurusu",
+    noindex: false,
+  },
+  {
     yol: "/haberler/kategori/halka-arz",
     noindex: true,
   },
@@ -77,6 +81,10 @@ const sitemapKontrolleri = [
   {
     ad: "editoryal şirket haberi",
     olmali: "/haber/akfye-500-bedelsiz-sermaye-artirimi-karari",
+  },
+  {
+    ad: "yayındaki yeni şirket haberi",
+    olmali: "/haber/dcttr-yuzde-10-pay-satis-bilgi-formu-spk-basvurusu",
   },
 ];
 

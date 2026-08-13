@@ -185,56 +185,8 @@ export type HaberKaydi = {
   yasalUyari?: string;
 };
 
-function metinUzunlugu(value?: string): number {
-  return typeof value === "string" ? value.trim().length : 0;
-}
-
-function bolumMetinUzunlugu(bolum: HaberBolumu): number {
-  return (
-    metinUzunlugu(bolum.giris) +
-    (bolum.paragraflar ?? []).reduce(
-      (toplam, metin) => toplam + metinUzunlugu(metin),
-      0
-    ) +
-    (bolum.maddeler ?? []).reduce(
-      (toplam, metin) => toplam + metinUzunlugu(metin),
-      0
-    ) +
-    (bolum.kartlar ?? []).reduce(
-      (toplam, kart) =>
-        toplam + metinUzunlugu(kart.baslik) + metinUzunlugu(kart.aciklama),
-      0
-    )
-  );
-}
-
 export function haberKaydiIndexlenebilirMi(kayit: HaberKaydi): boolean {
-  if (kayit.durum !== "yayinda") return false;
-
-  const kaynakGirisi = (kayit.kaynakOzeti.giris ?? []).reduce(
-    (toplam, metin) => toplam + metinUzunlugu(metin),
-    0
-  );
-  const kaynakBolumleri = (kayit.kaynakOzeti.bolumler ?? []).reduce(
-    (toplam, bolum) => toplam + bolumMetinUzunlugu(bolum),
-    0
-  );
-  const editorKapsami = (kayit.editorDegerlendirmesi.bolumler ?? []).reduce(
-    (toplam, bolum) => toplam + bolumMetinUzunlugu(bolum),
-    metinUzunlugu(kayit.editorDegerlendirmesi.giris)
-  );
-  const toplamAnalizKapsami = kaynakGirisi + kaynakBolumleri + editorKapsami;
-  const kaynakVar = kayit.kaynaklar.some((kaynak) =>
-    /^https?:\/\//i.test(kaynak.url)
-  );
-
-  return Boolean(
-    kaynakGirisi >= 220 &&
-      kaynakBolumleri >= 400 &&
-      editorKapsami >= 400 &&
-      toplamAnalizKapsami >= 1600 &&
-      kaynakVar
-  );
+  return kayit.durum === "yayinda";
 }
 
 function temelKayitGecerli(veri: unknown): veri is HaberKaydi {
