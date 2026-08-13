@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "DRD",
     "slug": "drd",
@@ -12,13 +12,13 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 55.298246,
-    "tedavuldekiPaySayisi": 30928293,
+    "fiyat": 55.21345,
+    "tedavuldekiPaySayisi": 30898398,
     "kisiSayisi": 149,
-    "fonToplamDeger": 1710280359.56,
-    "gunlukGetiri": -0.00132469,
+    "fonToplamDeger": 1706007166.87,
+    "gunlukGetiri": -0.00153343,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": -1650606.09,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DRD",
+        "fonAdi": "DENİZ PORTFÖY KAR PAYI ÖDEYEN ONBİRİNCİ SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 55.21345,
+        "tedavuldekiPaySayisi": 30898398,
+        "kisiSayisi": 149,
+        "fonToplamDeger": 1706007166.87,
+        "gunlukGetiri": -0.00153343,
+        "paraGirisiCikisi": -1650606.09,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "DRD",
         "fonAdi": "DENİZ PORTFÖY KAR PAYI ÖDEYEN ONBİRİNCİ SERBEST (DÖVİZ-AVRO) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00132469,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DRD",
+      "fonAdi": "DENİZ PORTFÖY KAR PAYI ÖDEYEN ONBİRİNCİ SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 55.21345,
+      "tedavuldekiPaySayisi": 30898398,
+      "kisiSayisi": 149,
+      "fonToplamDeger": 1706007166.87,
+      "gunlukGetiri": -0.00153343,
+      "paraGirisiCikisi": -1650606.09,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DRD",
+      "fonAdi": "DENİZ PORTFÖY KAR PAYI ÖDEYEN ONBİRİNCİ SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 55.21345,
+      "tedavuldekiPaySayisi": 30898398,
+      "kisiSayisi": 149,
+      "fonToplamDeger": 1706007166.87,
+      "gunlukGetiri": -0.00153343,
+      "paraGirisiCikisi": -1650606.09,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "DRD",
       "fonAdi": "DENİZ PORTFÖY KAR PAYI ÖDEYEN ONBİRİNCİ SERBEST (DÖVİZ-AVRO) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

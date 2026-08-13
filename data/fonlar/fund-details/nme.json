@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "NME",
     "slug": "nme",
@@ -12,24 +12,24 @@
     "yonetici": "NUROL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "nurol-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 57.195705,
-    "tedavuldekiPaySayisi": 1107939,
+    "fiyat": 57.229092,
+    "tedavuldekiPaySayisi": 1093449,
     "kisiSayisi": 55,
-    "fonToplamDeger": 63369351.72,
-    "gunlukGetiri": -0.00128666,
+    "fonToplamDeger": 62577093.76,
+    "gunlukGetiri": 0.00058373,
     "getiriler": {
-      "birAy": 0.028517,
-      "ucAy": 0.035167000000000004,
-      "altiAy": 0.068012,
-      "yilbasi": 0.105655,
-      "birYil": 0.187696,
+      "birAy": 0.029117999999999998,
+      "ucAy": 0.037389,
+      "altiAy": 0.07194300000000001,
+      "yilbasi": 0.106301,
+      "birYil": 0.191855,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": -829249.54,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NME",
+        "fonAdi": "NUROL PORTFÖY MERCAN KATILIM SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 57.229092,
+        "tedavuldekiPaySayisi": 1093449,
+        "kisiSayisi": 55,
+        "fonToplamDeger": 62577093.76,
+        "gunlukGetiri": 0.00058373,
+        "paraGirisiCikisi": -829249.54,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "NME",
         "fonAdi": "NUROL PORTFÖY MERCAN KATILIM SERBEST (DÖVİZ) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00128666,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "NME",
+      "fonAdi": "NUROL PORTFÖY MERCAN KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 57.229092,
+      "tedavuldekiPaySayisi": 1093449,
+      "kisiSayisi": 55,
+      "fonToplamDeger": 62577093.76,
+      "gunlukGetiri": 0.00058373,
+      "paraGirisiCikisi": -829249.54,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NME",
+      "fonAdi": "NUROL PORTFÖY MERCAN KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 57.229092,
+      "tedavuldekiPaySayisi": 1093449,
+      "kisiSayisi": 55,
+      "fonToplamDeger": 62577093.76,
+      "gunlukGetiri": 0.00058373,
+      "paraGirisiCikisi": -829249.54,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "NME",
       "fonAdi": "NUROL PORTFÖY MERCAN KATILIM SERBEST (DÖVİZ) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

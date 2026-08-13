@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "TAU",
     "slug": "tau",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 0.593118,
-    "tedavuldekiPaySayisi": 3858381308,
-    "kisiSayisi": 35392,
-    "fonToplamDeger": 2288477063.76,
-    "gunlukGetiri": -0.00592138,
+    "fiyat": 0.617274,
+    "tedavuldekiPaySayisi": 3821523152,
+    "kisiSayisi": 35269,
+    "fonToplamDeger": 2358926366.34,
+    "gunlukGetiri": 0.04072714,
     "getiriler": {
-      "birAy": -0.079945,
-      "ucAy": -0.143738,
-      "altiAy": -0.190215,
-      "yilbasi": -0.061881000000000005,
-      "birYil": -0.050004999999999994,
-      "ucYil": 1.247051,
-      "besYil": 12.137193
+      "birAy": -0.042474,
+      "ucAy": -0.076989,
+      "altiAy": -0.21107299999999998,
+      "yilbasi": -0.023674,
+      "birYil": -0.005353,
+      "ucYil": 1.3385669999999998,
+      "besYil": 12.296155
     },
     "paraAkisi": {
-      "gunluk": 11843215.93,
+      "gunluk": -22751581.39,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -39,
+      "gunluk": -123,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TAU",
+        "fonAdi": "İŞ PORTFÖY BIST BANKA ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-13",
+        "fiyat": 0.617274,
+        "tedavuldekiPaySayisi": 3821523152,
+        "kisiSayisi": 35269,
+        "fonToplamDeger": 2358926366.34,
+        "gunlukGetiri": 0.04072714,
+        "paraGirisiCikisi": -22751581.39,
+        "yatirimciDegisimi": -123
+      },
       {
         "fonKodu": "TAU",
         "fonAdi": "İŞ PORTFÖY BIST BANKA ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00592138,
       "paraGirisiCikisi": 11843215.93,
       "yatirimciDegisimi": -39
+    },
+    {
+      "fonKodu": "TAU",
+      "fonAdi": "İŞ PORTFÖY BIST BANKA ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 0.617274,
+      "tedavuldekiPaySayisi": 3821523152,
+      "kisiSayisi": 35269,
+      "fonToplamDeger": 2358926366.34,
+      "gunlukGetiri": 0.04072714,
+      "paraGirisiCikisi": -22751581.39,
+      "yatirimciDegisimi": -123
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TAU",
+      "fonAdi": "İŞ PORTFÖY BIST BANKA ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 0.617274,
+      "tedavuldekiPaySayisi": 3821523152,
+      "kisiSayisi": 35269,
+      "fonToplamDeger": 2358926366.34,
+      "gunlukGetiri": 0.04072714,
+      "paraGirisiCikisi": -22751581.39,
+      "yatirimciDegisimi": -123
+    },
     {
       "fonKodu": "TAU",
       "fonAdi": "İŞ PORTFÖY BIST BANKA ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

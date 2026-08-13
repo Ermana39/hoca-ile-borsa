@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "IRY",
     "slug": "iry",
@@ -12,24 +12,24 @@
     "yonetici": "INVEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "inveo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 3.963166,
-    "tedavuldekiPaySayisi": 456576343,
-    "kisiSayisi": 2332,
-    "fonToplamDeger": 1809487662.26,
-    "gunlukGetiri": 0.0010844,
+    "fiyat": 3.967793,
+    "tedavuldekiPaySayisi": 460109028,
+    "kisiSayisi": 2331,
+    "fonToplamDeger": 1825617157.01,
+    "gunlukGetiri": 0.0011675,
     "getiriler": {
-      "birAy": 0.033609,
-      "ucAy": 0.107235,
-      "altiAy": 0.21693,
-      "yilbasi": 0.270953,
-      "birYil": 0.491209,
-      "ucYil": 2.638606,
+      "birAy": 0.034815,
+      "ucAy": 0.107299,
+      "altiAy": 0.21705300000000002,
+      "yilbasi": 0.272437,
+      "birYil": 0.491257,
+      "ucYil": 2.642854,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 10566010.6,
+      "gunluk": 14016962.81,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IRY",
+        "fonAdi": "INVEO PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 3.967793,
+        "tedavuldekiPaySayisi": 460109028,
+        "kisiSayisi": 2331,
+        "fonToplamDeger": 1825617157.01,
+        "gunlukGetiri": 0.0011675,
+        "paraGirisiCikisi": 14016962.81,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "IRY",
         "fonAdi": "INVEO PORTFÖY PARA PİYASASI (TL) FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.0010844,
       "paraGirisiCikisi": 10566010.6,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "IRY",
+      "fonAdi": "INVEO PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 3.967793,
+      "tedavuldekiPaySayisi": 460109028,
+      "kisiSayisi": 2331,
+      "fonToplamDeger": 1825617157.01,
+      "gunlukGetiri": 0.0011675,
+      "paraGirisiCikisi": 14016962.81,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IRY",
+      "fonAdi": "INVEO PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 3.967793,
+      "tedavuldekiPaySayisi": 460109028,
+      "kisiSayisi": 2331,
+      "fonToplamDeger": 1825617157.01,
+      "gunlukGetiri": 0.0011675,
+      "paraGirisiCikisi": 14016962.81,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "IRY",
       "fonAdi": "INVEO PORTFÖY PARA PİYASASI (TL) FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

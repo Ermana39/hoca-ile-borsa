@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "RDT",
     "slug": "rdt",
@@ -12,44 +12,56 @@
     "yonetici": "PHİLLİP PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "phillip-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 0.896678,
-    "tedavuldekiPaySayisi": 81212649,
-    "kisiSayisi": 54,
-    "fonToplamDeger": 72821562.2,
-    "gunlukGetiri": -0.00681193,
+    "fiyat": 0.899987,
+    "tedavuldekiPaySayisi": 81246453,
+    "kisiSayisi": 55,
+    "fonToplamDeger": 73120720.26,
+    "gunlukGetiri": 0.00369029,
     "getiriler": {
-      "birAy": 0.032773,
-      "ucAy": -0.06683,
-      "altiAy": -0.24235600000000002,
-      "yilbasi": -0.192313,
-      "birYil": -0.17383800000000002,
+      "birAy": 0.036584,
+      "ucAy": -0.050586,
+      "altiAy": -0.23174399999999998,
+      "yilbasi": -0.189332,
+      "birYil": -0.16639800000000002,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -78896.9,
+      "gunluk": 30423.16,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": 1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RDT",
+        "fonAdi": "PHİLLİP PORTFÖY RODOSTO SERBEST FON",
+        "tarih": "2026-08-13",
+        "fiyat": 0.899987,
+        "tedavuldekiPaySayisi": 81246453,
+        "kisiSayisi": 55,
+        "fonToplamDeger": 73120720.26,
+        "gunlukGetiri": 0.00369029,
+        "paraGirisiCikisi": 30423.16,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "RDT",
         "fonAdi": "PHİLLİP PORTFÖY RODOSTO SERBEST FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00681193,
       "paraGirisiCikisi": -78896.9,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "RDT",
+      "fonAdi": "PHİLLİP PORTFÖY RODOSTO SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 0.899987,
+      "tedavuldekiPaySayisi": 81246453,
+      "kisiSayisi": 55,
+      "fonToplamDeger": 73120720.26,
+      "gunlukGetiri": 0.00369029,
+      "paraGirisiCikisi": 30423.16,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RDT",
+      "fonAdi": "PHİLLİP PORTFÖY RODOSTO SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 0.899987,
+      "tedavuldekiPaySayisi": 81246453,
+      "kisiSayisi": 55,
+      "fonToplamDeger": 73120720.26,
+      "gunlukGetiri": 0.00369029,
+      "paraGirisiCikisi": 30423.16,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "RDT",
       "fonAdi": "PHİLLİP PORTFÖY RODOSTO SERBEST FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

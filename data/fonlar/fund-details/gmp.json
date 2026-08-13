@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "GMP",
     "slug": "gmp",
@@ -12,13 +12,13 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 62.510053,
-    "tedavuldekiPaySayisi": 25752184,
+    "fiyat": 62.648363,
+    "tedavuldekiPaySayisi": 25599906,
     "kisiSayisi": 1,
-    "fonToplamDeger": 1609770375.5,
-    "gunlukGetiri": -0.00188014,
+    "fonToplamDeger": 1603792202.5,
+    "gunlukGetiri": 0.0022126,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": -9539967.42,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GMP",
+        "fonAdi": "GARANTİ PORTFÖY GM SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-13",
+        "fiyat": 62.648363,
+        "tedavuldekiPaySayisi": 25599906,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 1603792202.5,
+        "gunlukGetiri": 0.0022126,
+        "paraGirisiCikisi": -9539967.42,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "GMP",
         "fonAdi": "GARANTİ PORTFÖY GM SERBEST (DÖVİZ) ÖZEL FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00188014,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GMP",
+      "fonAdi": "GARANTİ PORTFÖY GM SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-13",
+      "fiyat": 62.648363,
+      "tedavuldekiPaySayisi": 25599906,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 1603792202.5,
+      "gunlukGetiri": 0.0022126,
+      "paraGirisiCikisi": -9539967.42,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GMP",
+      "fonAdi": "GARANTİ PORTFÖY GM SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-13",
+      "fiyat": 62.648363,
+      "tedavuldekiPaySayisi": 25599906,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 1603792202.5,
+      "gunlukGetiri": 0.0022126,
+      "paraGirisiCikisi": -9539967.42,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "GMP",
       "fonAdi": "GARANTİ PORTFÖY GM SERBEST (DÖVİZ) ÖZEL FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "TLY",
     "slug": "tly",
@@ -12,44 +12,56 @@
     "yonetici": "TERA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "tera-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 8458.606687,
-    "tedavuldekiPaySayisi": 31509701,
-    "kisiSayisi": 103933,
-    "fonToplamDeger": 266528167581.73,
-    "gunlukGetiri": 0.00172438,
+    "fiyat": 8534.110427,
+    "tedavuldekiPaySayisi": 32247735,
+    "kisiSayisi": 105216,
+    "fonToplamDeger": 275205731524.42,
+    "gunlukGetiri": 0.00892626,
     "getiriler": {
-      "birAy": 0.149199,
-      "ucAy": 0.541431,
-      "altiAy": 1.426688,
-      "yilbasi": 1.852163,
-      "birYil": 8.799853,
-      "ucYil": 645.4296790000001,
-      "besYil": 5978.339384
+      "birAy": 0.15945700000000002,
+      "ucAy": 0.549195,
+      "altiAy": 1.401624,
+      "yilbasi": 1.8776220000000001,
+      "birYil": 8.330505,
+      "ucYil": 651.19988,
+      "besYil": 6351.961024
     },
     "paraAkisi": {
-      "gunluk": 3634874758.57,
+      "gunluk": 6298463654.88,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1572,
+      "gunluk": 1283,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TLY",
+        "fonAdi": "TERA PORTFÖY BİRİNCİ SERBEST FON",
+        "tarih": "2026-08-13",
+        "fiyat": 8534.110427,
+        "tedavuldekiPaySayisi": 32247735,
+        "kisiSayisi": 105216,
+        "fonToplamDeger": 275205731524.42,
+        "gunlukGetiri": 0.00892626,
+        "paraGirisiCikisi": 6298463654.88,
+        "yatirimciDegisimi": 1283
+      },
       {
         "fonKodu": "TLY",
         "fonAdi": "TERA PORTFÖY BİRİNCİ SERBEST FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00172438,
       "paraGirisiCikisi": 3634874758.57,
       "yatirimciDegisimi": 1572
+    },
+    {
+      "fonKodu": "TLY",
+      "fonAdi": "TERA PORTFÖY BİRİNCİ SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 8534.110427,
+      "tedavuldekiPaySayisi": 32247735,
+      "kisiSayisi": 105216,
+      "fonToplamDeger": 275205731524.42,
+      "gunlukGetiri": 0.00892626,
+      "paraGirisiCikisi": 6298463654.88,
+      "yatirimciDegisimi": 1283
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TLY",
+      "fonAdi": "TERA PORTFÖY BİRİNCİ SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 8534.110427,
+      "tedavuldekiPaySayisi": 32247735,
+      "kisiSayisi": 105216,
+      "fonToplamDeger": 275205731524.42,
+      "gunlukGetiri": 0.00892626,
+      "paraGirisiCikisi": 6298463654.88,
+      "yatirimciDegisimi": 1283
+    },
     {
       "fonKodu": "TLY",
       "fonAdi": "TERA PORTFÖY BİRİNCİ SERBEST FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

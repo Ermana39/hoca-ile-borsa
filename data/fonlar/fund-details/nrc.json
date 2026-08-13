@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "NRC",
     "slug": "nrc",
@@ -12,44 +12,56 @@
     "yonetici": "NEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "neo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 11.354162,
-    "tedavuldekiPaySayisi": 20856378,
-    "kisiSayisi": 3687,
-    "fonToplamDeger": 236806687.46,
-    "gunlukGetiri": -0.00975872,
+    "fiyat": 11.450887,
+    "tedavuldekiPaySayisi": 20764274,
+    "kisiSayisi": 3678,
+    "fonToplamDeger": 237769348.23,
+    "gunlukGetiri": 0.0085189,
     "getiriler": {
-      "birAy": -0.057854,
-      "ucAy": -0.09572599999999999,
-      "altiAy": -0.005046,
-      "yilbasi": 0.181194,
-      "birYil": 0.16484500000000002,
-      "ucYil": 0.965912,
+      "birAy": -0.049828000000000004,
+      "ucAy": -0.07663299999999999,
+      "altiAy": -0.025638,
+      "yilbasi": 0.19125699999999998,
+      "birYil": 0.17703499999999997,
+      "ucYil": 0.9826590000000001,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -2174322.02,
+      "gunluk": -1054672.5,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": -9,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NRC",
+        "fonAdi": "NEO PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-13",
+        "fiyat": 11.450887,
+        "tedavuldekiPaySayisi": 20764274,
+        "kisiSayisi": 3678,
+        "fonToplamDeger": 237769348.23,
+        "gunlukGetiri": 0.0085189,
+        "paraGirisiCikisi": -1054672.5,
+        "yatirimciDegisimi": -9
+      },
       {
         "fonKodu": "NRC",
         "fonAdi": "NEO PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00975872,
       "paraGirisiCikisi": -2174322.02,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "NRC",
+      "fonAdi": "NEO PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-13",
+      "fiyat": 11.450887,
+      "tedavuldekiPaySayisi": 20764274,
+      "kisiSayisi": 3678,
+      "fonToplamDeger": 237769348.23,
+      "gunlukGetiri": 0.0085189,
+      "paraGirisiCikisi": -1054672.5,
+      "yatirimciDegisimi": -9
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NRC",
+      "fonAdi": "NEO PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-13",
+      "fiyat": 11.450887,
+      "tedavuldekiPaySayisi": 20764274,
+      "kisiSayisi": 3678,
+      "fonToplamDeger": 237769348.23,
+      "gunlukGetiri": 0.0085189,
+      "paraGirisiCikisi": -1054672.5,
+      "yatirimciDegisimi": -9
+    },
     {
       "fonKodu": "NRC",
       "fonAdi": "NEO PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

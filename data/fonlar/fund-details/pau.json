@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "PAU",
     "slug": "pau",
@@ -12,13 +12,13 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 67.464333,
-    "tedavuldekiPaySayisi": 165102788,
-    "kisiSayisi": 3835,
-    "fonToplamDeger": 11138549484.98,
-    "gunlukGetiri": 0.0007582,
+    "fiyat": 67.572117,
+    "tedavuldekiPaySayisi": 164958302,
+    "kisiSayisi": 3834,
+    "fonToplamDeger": 11146581672.26,
+    "gunlukGetiri": 0.00159764,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 7549191.4,
+      "gunluk": -9763224.9,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PAU",
+        "fonAdi": "GARANTİ PORTFÖY SERBEST (DÖVİZ-POUND) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 67.572117,
+        "tedavuldekiPaySayisi": 164958302,
+        "kisiSayisi": 3834,
+        "fonToplamDeger": 11146581672.26,
+        "gunlukGetiri": 0.00159764,
+        "paraGirisiCikisi": -9763224.9,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "PAU",
         "fonAdi": "GARANTİ PORTFÖY SERBEST (DÖVİZ-POUND) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.0007582,
       "paraGirisiCikisi": 7549191.4,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "PAU",
+      "fonAdi": "GARANTİ PORTFÖY SERBEST (DÖVİZ-POUND) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 67.572117,
+      "tedavuldekiPaySayisi": 164958302,
+      "kisiSayisi": 3834,
+      "fonToplamDeger": 11146581672.26,
+      "gunlukGetiri": 0.00159764,
+      "paraGirisiCikisi": -9763224.9,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PAU",
+      "fonAdi": "GARANTİ PORTFÖY SERBEST (DÖVİZ-POUND) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 67.572117,
+      "tedavuldekiPaySayisi": 164958302,
+      "kisiSayisi": 3834,
+      "fonToplamDeger": 11146581672.26,
+      "gunlukGetiri": 0.00159764,
+      "paraGirisiCikisi": -9763224.9,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "PAU",
       "fonAdi": "GARANTİ PORTFÖY SERBEST (DÖVİZ-POUND) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

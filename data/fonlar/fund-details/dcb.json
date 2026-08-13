@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "DCB",
     "slug": "dcb",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 4.723517,
-    "tedavuldekiPaySayisi": 29703538010,
-    "kisiSayisi": 22491,
-    "fonToplamDeger": 140305160136.09,
-    "gunlukGetiri": 0.00106241,
+    "fiyat": 4.728546,
+    "tedavuldekiPaySayisi": 26272359217,
+    "kisiSayisi": 22457,
+    "fonToplamDeger": 124230053566.93,
+    "gunlukGetiri": 0.00106467,
     "getiriler": {
-      "birAy": 0.032696,
-      "ucAy": 0.105029,
-      "altiAy": 0.21263100000000001,
-      "yilbasi": 0.26340399999999997,
-      "birYil": 0.473201,
-      "ucYil": 2.621615,
+      "birAy": 0.033795,
+      "ucAy": 0.10500400000000001,
+      "altiAy": 0.21273,
+      "yilbasi": 0.264749,
+      "birYil": 0.47308700000000004,
+      "ucYil": 2.625471,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1171544749.07,
+      "gunluk": -16224486756.92,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -27,
+      "gunluk": -34,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DCB",
+        "fonAdi": "DENİZ PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 4.728546,
+        "tedavuldekiPaySayisi": 26272359217,
+        "kisiSayisi": 22457,
+        "fonToplamDeger": 124230053566.93,
+        "gunlukGetiri": 0.00106467,
+        "paraGirisiCikisi": -16224486756.92,
+        "yatirimciDegisimi": -34
+      },
       {
         "fonKodu": "DCB",
         "fonAdi": "DENİZ PORTFÖY PARA PİYASASI SERBEST (TL) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00106241,
       "paraGirisiCikisi": 1171544749.07,
       "yatirimciDegisimi": -27
+    },
+    {
+      "fonKodu": "DCB",
+      "fonAdi": "DENİZ PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 4.728546,
+      "tedavuldekiPaySayisi": 26272359217,
+      "kisiSayisi": 22457,
+      "fonToplamDeger": 124230053566.93,
+      "gunlukGetiri": 0.00106467,
+      "paraGirisiCikisi": -16224486756.92,
+      "yatirimciDegisimi": -34
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DCB",
+      "fonAdi": "DENİZ PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 4.728546,
+      "tedavuldekiPaySayisi": 26272359217,
+      "kisiSayisi": 22457,
+      "fonToplamDeger": 124230053566.93,
+      "gunlukGetiri": 0.00106467,
+      "paraGirisiCikisi": -16224486756.92,
+      "yatirimciDegisimi": -34
+    },
     {
       "fonKodu": "DCB",
       "fonAdi": "DENİZ PORTFÖY PARA PİYASASI SERBEST (TL) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

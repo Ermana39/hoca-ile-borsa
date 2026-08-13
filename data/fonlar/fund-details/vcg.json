@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "VCG",
     "slug": "vcg",
@@ -12,13 +12,13 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 5.67998,
+    "fiyat": 5.687487,
     "tedavuldekiPaySayisi": 346606007,
     "kisiSayisi": 13,
-    "fonToplamDeger": 1968715225.23,
-    "gunlukGetiri": 0.0008181,
+    "fonToplamDeger": 1971317260.34,
+    "gunlukGetiri": 0.00132166,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -35,21 +35,33 @@
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "VCG",
+        "fonAdi": "AZİMUT PORTFÖY DÖRDÜNCÜ SERBEST (TL) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 5.687487,
+        "tedavuldekiPaySayisi": 346606007,
+        "kisiSayisi": 13,
+        "fonToplamDeger": 1971317260.34,
+        "gunlukGetiri": 0.00132166,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "VCG",
         "fonAdi": "AZİMUT PORTFÖY DÖRDÜNCÜ SERBEST (TL) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.0008181,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "VCG",
+      "fonAdi": "AZİMUT PORTFÖY DÖRDÜNCÜ SERBEST (TL) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 5.687487,
+      "tedavuldekiPaySayisi": 346606007,
+      "kisiSayisi": 13,
+      "fonToplamDeger": 1971317260.34,
+      "gunlukGetiri": 0.00132166,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "VCG",
+      "fonAdi": "AZİMUT PORTFÖY DÖRDÜNCÜ SERBEST (TL) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 5.687487,
+      "tedavuldekiPaySayisi": 346606007,
+      "kisiSayisi": 13,
+      "fonToplamDeger": 1971317260.34,
+      "gunlukGetiri": 0.00132166,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "VCG",
       "fonAdi": "AZİMUT PORTFÖY DÖRDÜNCÜ SERBEST (TL) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

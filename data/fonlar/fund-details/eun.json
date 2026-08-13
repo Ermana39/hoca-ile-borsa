@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "EUN",
     "slug": "eun",
@@ -12,24 +12,24 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 63.317324,
-    "tedavuldekiPaySayisi": 96587110,
-    "kisiSayisi": 3486,
-    "fonToplamDeger": 6115637355.09,
-    "gunlukGetiri": -0.00197001,
+    "fiyat": 63.416735,
+    "tedavuldekiPaySayisi": 96608737,
+    "kisiSayisi": 3484,
+    "fonToplamDeger": 6126610717.36,
+    "gunlukGetiri": 0.00157004,
     "getiriler": {
-      "birAy": 0.028206000000000002,
-      "ucAy": 0.046574,
-      "altiAy": 0.07459500000000001,
-      "yilbasi": 0.11252599999999999,
-      "birYil": 0.21764299999999998,
+      "birAy": 0.029820000000000003,
+      "ucAy": 0.051488,
+      "altiAy": 0.077237,
+      "yilbasi": 0.11427300000000001,
+      "birYil": 0.22266100000000003,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 945201.01,
+      "gunluk": 1371513.73,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "EUN",
+        "fonAdi": "GARANTİ PORTFÖY İKİNCİ SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 63.416735,
+        "tedavuldekiPaySayisi": 96608737,
+        "kisiSayisi": 3484,
+        "fonToplamDeger": 6126610717.36,
+        "gunlukGetiri": 0.00157004,
+        "paraGirisiCikisi": 1371513.73,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "EUN",
         "fonAdi": "GARANTİ PORTFÖY İKİNCİ SERBEST (DÖVİZ-AVRO) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00197001,
       "paraGirisiCikisi": 945201.01,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "EUN",
+      "fonAdi": "GARANTİ PORTFÖY İKİNCİ SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 63.416735,
+      "tedavuldekiPaySayisi": 96608737,
+      "kisiSayisi": 3484,
+      "fonToplamDeger": 6126610717.36,
+      "gunlukGetiri": 0.00157004,
+      "paraGirisiCikisi": 1371513.73,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "EUN",
+      "fonAdi": "GARANTİ PORTFÖY İKİNCİ SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 63.416735,
+      "tedavuldekiPaySayisi": 96608737,
+      "kisiSayisi": 3484,
+      "fonToplamDeger": 6126610717.36,
+      "gunlukGetiri": 0.00157004,
+      "paraGirisiCikisi": 1371513.73,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "EUN",
       "fonAdi": "GARANTİ PORTFÖY İKİNCİ SERBEST (DÖVİZ-AVRO) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

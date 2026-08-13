@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "AKU",
     "slug": "aku",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 0.915675,
-    "tedavuldekiPaySayisi": 2496437492,
-    "kisiSayisi": 16985,
-    "fonToplamDeger": 2285925473.13,
-    "gunlukGetiri": -0.00851185,
+    "fiyat": 0.945878,
+    "tedavuldekiPaySayisi": 2391169923,
+    "kisiSayisi": 16951,
+    "fonToplamDeger": 2261755820.94,
+    "gunlukGetiri": 0.03298441,
     "getiriler": {
-      "birAy": -0.036164,
-      "ucAy": -0.067485,
-      "altiAy": 0.054721,
-      "yilbasi": 0.29462299999999997,
-      "birYil": 0.308025,
-      "ucYil": 0.993167,
-      "besYil": 9.656553
+      "birAy": -0.004372,
+      "ucAy": -0.013149,
+      "altiAy": 0.051588,
+      "yilbasi": 0.33732500000000004,
+      "birYil": 0.361934,
+      "ucYil": 1.058911,
+      "besYil": 9.720472
     },
     "paraAkisi": {
-      "gunluk": -574546.69,
+      "gunluk": -99570277.63,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 27,
+      "gunluk": -34,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AKU",
+        "fonAdi": "AK PORTFÖY BIST 30 ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-13",
+        "fiyat": 0.945878,
+        "tedavuldekiPaySayisi": 2391169923,
+        "kisiSayisi": 16951,
+        "fonToplamDeger": 2261755820.94,
+        "gunlukGetiri": 0.03298441,
+        "paraGirisiCikisi": -99570277.63,
+        "yatirimciDegisimi": -34
+      },
       {
         "fonKodu": "AKU",
         "fonAdi": "AK PORTFÖY BIST 30 ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00851185,
       "paraGirisiCikisi": -574546.69,
       "yatirimciDegisimi": 27
+    },
+    {
+      "fonKodu": "AKU",
+      "fonAdi": "AK PORTFÖY BIST 30 ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 0.945878,
+      "tedavuldekiPaySayisi": 2391169923,
+      "kisiSayisi": 16951,
+      "fonToplamDeger": 2261755820.94,
+      "gunlukGetiri": 0.03298441,
+      "paraGirisiCikisi": -99570277.63,
+      "yatirimciDegisimi": -34
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AKU",
+      "fonAdi": "AK PORTFÖY BIST 30 ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 0.945878,
+      "tedavuldekiPaySayisi": 2391169923,
+      "kisiSayisi": 16951,
+      "fonToplamDeger": 2261755820.94,
+      "gunlukGetiri": 0.03298441,
+      "paraGirisiCikisi": -99570277.63,
+      "yatirimciDegisimi": -34
+    },
     {
       "fonKodu": "AKU",
       "fonAdi": "AK PORTFÖY BIST 30 ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

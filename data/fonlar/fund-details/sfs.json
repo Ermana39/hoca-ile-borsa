@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "SFS",
     "slug": "sfs",
@@ -12,24 +12,24 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.387952,
-    "tedavuldekiPaySayisi": 22208643,
+    "fiyat": 1.395331,
+    "tedavuldekiPaySayisi": 22282492,
     "kisiSayisi": 77,
-    "fonToplamDeger": 30824538.74,
-    "gunlukGetiri": -0.0061324,
+    "fonToplamDeger": 31091455.53,
+    "gunlukGetiri": 0.00531647,
     "getiriler": {
-      "birAy": 0.019986999999999998,
-      "ucAy": 0.020425,
-      "altiAy": 0.119322,
-      "yilbasi": 0.255248,
+      "birAy": 0.025409,
+      "ucAy": 0.029852,
+      "altiAy": 0.11072900000000001,
+      "yilbasi": 0.261922,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 128883.83,
+      "gunluk": 103043.8,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SFS",
+        "fonAdi": "AZİMUT PORTFÖY AGRESİF FON SEPETİ FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 1.395331,
+        "tedavuldekiPaySayisi": 22282492,
+        "kisiSayisi": 77,
+        "fonToplamDeger": 31091455.53,
+        "gunlukGetiri": 0.00531647,
+        "paraGirisiCikisi": 103043.8,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "SFS",
         "fonAdi": "AZİMUT PORTFÖY AGRESİF FON SEPETİ FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.0061324,
       "paraGirisiCikisi": 128883.83,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "SFS",
+      "fonAdi": "AZİMUT PORTFÖY AGRESİF FON SEPETİ FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 1.395331,
+      "tedavuldekiPaySayisi": 22282492,
+      "kisiSayisi": 77,
+      "fonToplamDeger": 31091455.53,
+      "gunlukGetiri": 0.00531647,
+      "paraGirisiCikisi": 103043.8,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SFS",
+      "fonAdi": "AZİMUT PORTFÖY AGRESİF FON SEPETİ FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 1.395331,
+      "tedavuldekiPaySayisi": 22282492,
+      "kisiSayisi": 77,
+      "fonToplamDeger": 31091455.53,
+      "gunlukGetiri": 0.00531647,
+      "paraGirisiCikisi": 103043.8,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "SFS",
       "fonAdi": "AZİMUT PORTFÖY AGRESİF FON SEPETİ FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

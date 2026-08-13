@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "HGH",
     "slug": "hgh",
@@ -12,13 +12,13 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.796956,
-    "tedavuldekiPaySayisi": 36665864,
+    "fiyat": 1.791747,
+    "tedavuldekiPaySayisi": 33326884,
     "kisiSayisi": 21,
-    "fonToplamDeger": 65886938.65,
-    "gunlukGetiri": 0.02125826,
+    "fonToplamDeger": 59713345.96,
+    "gunlukGetiri": -0.00289879,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": -5982607.4,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HGH",
+        "fonAdi": "HEDEF PORTFÖY GÜNEŞ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-13",
+        "fiyat": 1.791747,
+        "tedavuldekiPaySayisi": 33326884,
+        "kisiSayisi": 21,
+        "fonToplamDeger": 59713345.96,
+        "gunlukGetiri": -0.00289879,
+        "paraGirisiCikisi": -5982607.4,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "HGH",
         "fonAdi": "HEDEF PORTFÖY GÜNEŞ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.02125826,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HGH",
+      "fonAdi": "HEDEF PORTFÖY GÜNEŞ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 1.791747,
+      "tedavuldekiPaySayisi": 33326884,
+      "kisiSayisi": 21,
+      "fonToplamDeger": 59713345.96,
+      "gunlukGetiri": -0.00289879,
+      "paraGirisiCikisi": -5982607.4,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HGH",
+      "fonAdi": "HEDEF PORTFÖY GÜNEŞ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 1.791747,
+      "tedavuldekiPaySayisi": 33326884,
+      "kisiSayisi": 21,
+      "fonToplamDeger": 59713345.96,
+      "gunlukGetiri": -0.00289879,
+      "paraGirisiCikisi": -5982607.4,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "HGH",
       "fonAdi": "HEDEF PORTFÖY GÜNEŞ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

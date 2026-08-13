@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "BHF",
     "slug": "bhf",
@@ -12,44 +12,56 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 3.026788,
-    "tedavuldekiPaySayisi": 63968008,
-    "kisiSayisi": 1624,
-    "fonToplamDeger": 193617619.97,
-    "gunlukGetiri": -0.00483938,
+    "fiyat": 3.044567,
+    "tedavuldekiPaySayisi": 63450302,
+    "kisiSayisi": 1613,
+    "fonToplamDeger": 193178702.71,
+    "gunlukGetiri": 0.00587388,
     "getiriler": {
-      "birAy": 0.012614,
-      "ucAy": -0.033307,
-      "altiAy": 0.083408,
-      "yilbasi": 0.41106499999999996,
-      "birYil": 0.476901,
+      "birAy": 0.018562000000000002,
+      "ucAy": -0.020893000000000002,
+      "altiAy": 0.06232,
+      "yilbasi": 0.419353,
+      "birYil": 0.48999699999999996,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -2765542.9,
+      "gunluk": -1576190.6,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -10,
+      "gunluk": -11,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BHF",
+        "fonAdi": "PARDUS PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-13",
+        "fiyat": 3.044567,
+        "tedavuldekiPaySayisi": 63450302,
+        "kisiSayisi": 1613,
+        "fonToplamDeger": 193178702.71,
+        "gunlukGetiri": 0.00587388,
+        "paraGirisiCikisi": -1576190.6,
+        "yatirimciDegisimi": -11
+      },
       {
         "fonKodu": "BHF",
         "fonAdi": "PARDUS PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00483938,
       "paraGirisiCikisi": -2765542.9,
       "yatirimciDegisimi": -10
+    },
+    {
+      "fonKodu": "BHF",
+      "fonAdi": "PARDUS PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-13",
+      "fiyat": 3.044567,
+      "tedavuldekiPaySayisi": 63450302,
+      "kisiSayisi": 1613,
+      "fonToplamDeger": 193178702.71,
+      "gunlukGetiri": 0.00587388,
+      "paraGirisiCikisi": -1576190.6,
+      "yatirimciDegisimi": -11
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BHF",
+      "fonAdi": "PARDUS PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-13",
+      "fiyat": 3.044567,
+      "tedavuldekiPaySayisi": 63450302,
+      "kisiSayisi": 1613,
+      "fonToplamDeger": 193178702.71,
+      "gunlukGetiri": 0.00587388,
+      "paraGirisiCikisi": -1576190.6,
+      "yatirimciDegisimi": -11
+    },
     {
       "fonKodu": "BHF",
       "fonAdi": "PARDUS PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "LHP",
     "slug": "lhp",
@@ -12,13 +12,13 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 56.527292,
+    "fiyat": 56.546945,
     "tedavuldekiPaySayisi": 1476365,
-    "kisiSayisi": 95,
-    "fonToplamDeger": 83454915.13,
-    "gunlukGetiri": 0.00049526,
+    "kisiSayisi": 94,
+    "fonToplamDeger": 83483930.83,
+    "gunlukGetiri": 0.00034767,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -2600.26,
-      "besGun": null,
-      "birAy": null,
-      "ucAy": null
-    },
-    "yatirimciDegisimi": {
       "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "yatirimciDegisimi": {
+      "gunluk": -1,
+      "besGun": null,
+      "birAy": null,
+      "ucAy": null
+    },
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "LHP",
+        "fonAdi": "AK PORTFÖY YEDİNCİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 56.546945,
+        "tedavuldekiPaySayisi": 1476365,
+        "kisiSayisi": 94,
+        "fonToplamDeger": 83483930.83,
+        "gunlukGetiri": 0.00034767,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "LHP",
         "fonAdi": "AK PORTFÖY YEDİNCİ SERBEST (DÖVİZ) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00049526,
       "paraGirisiCikisi": -2600.26,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "LHP",
+      "fonAdi": "AK PORTFÖY YEDİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 56.546945,
+      "tedavuldekiPaySayisi": 1476365,
+      "kisiSayisi": 94,
+      "fonToplamDeger": 83483930.83,
+      "gunlukGetiri": 0.00034767,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "LHP",
+      "fonAdi": "AK PORTFÖY YEDİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 56.546945,
+      "tedavuldekiPaySayisi": 1476365,
+      "kisiSayisi": 94,
+      "fonToplamDeger": 83483930.83,
+      "gunlukGetiri": 0.00034767,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "LHP",
       "fonAdi": "AK PORTFÖY YEDİNCİ SERBEST (DÖVİZ) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "YJH",
     "slug": "yjh",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 3.900167,
-    "tedavuldekiPaySayisi": 51420528,
-    "kisiSayisi": 4173,
-    "fonToplamDeger": 200548660.89,
-    "gunlukGetiri": 0.00176457,
+    "fiyat": 3.980697,
+    "tedavuldekiPaySayisi": 51175316,
+    "kisiSayisi": 4155,
+    "fonToplamDeger": 203713413.99,
+    "gunlukGetiri": 0.02064783,
     "getiriler": {
-      "birAy": 0.006019,
-      "ucAy": -0.02734,
-      "altiAy": 0.09627599999999999,
-      "yilbasi": 0.247066,
-      "birYil": 0.496175,
-      "ucYil": 0.834182,
+      "birAy": 0.026791,
+      "ucAy": 0.0054069999999999995,
+      "altiAy": 0.117454,
+      "yilbasi": 0.27281500000000003,
+      "birYil": 0.528759,
+      "ucYil": 0.872053,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1540955.98,
+      "gunluk": -976114.67,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -18,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YJH",
+        "fonAdi": "YAPI KREDİ PORTFÖY TEMİZ ENERJİ DEĞİŞKEN FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 3.980697,
+        "tedavuldekiPaySayisi": 51175316,
+        "kisiSayisi": 4155,
+        "fonToplamDeger": 203713413.99,
+        "gunlukGetiri": 0.02064783,
+        "paraGirisiCikisi": -976114.67,
+        "yatirimciDegisimi": -18
+      },
       {
         "fonKodu": "YJH",
         "fonAdi": "YAPI KREDİ PORTFÖY TEMİZ ENERJİ DEĞİŞKEN FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00176457,
       "paraGirisiCikisi": -1540955.98,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YJH",
+      "fonAdi": "YAPI KREDİ PORTFÖY TEMİZ ENERJİ DEĞİŞKEN FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 3.980697,
+      "tedavuldekiPaySayisi": 51175316,
+      "kisiSayisi": 4155,
+      "fonToplamDeger": 203713413.99,
+      "gunlukGetiri": 0.02064783,
+      "paraGirisiCikisi": -976114.67,
+      "yatirimciDegisimi": -18
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YJH",
+      "fonAdi": "YAPI KREDİ PORTFÖY TEMİZ ENERJİ DEĞİŞKEN FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 3.980697,
+      "tedavuldekiPaySayisi": 51175316,
+      "kisiSayisi": 4155,
+      "fonToplamDeger": 203713413.99,
+      "gunlukGetiri": 0.02064783,
+      "paraGirisiCikisi": -976114.67,
+      "yatirimciDegisimi": -18
+    },
     {
       "fonKodu": "YJH",
       "fonAdi": "YAPI KREDİ PORTFÖY TEMİZ ENERJİ DEĞİŞKEN FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

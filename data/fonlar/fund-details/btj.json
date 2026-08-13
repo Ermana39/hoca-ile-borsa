@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "BTJ",
     "slug": "btj",
@@ -12,24 +12,24 @@
     "yonetici": "ATLAS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "atlas-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.361395,
-    "tedavuldekiPaySayisi": 9127910,
+    "fiyat": 1.359999,
+    "tedavuldekiPaySayisi": 9128277,
     "kisiSayisi": 57,
-    "fonToplamDeger": 12426692.34,
-    "gunlukGetiri": 0.00091019,
+    "fonToplamDeger": 12414448.04,
+    "gunlukGetiri": -0.00102542,
     "getiriler": {
-      "birAy": 0.024192,
-      "ucAy": 0.07696,
-      "altiAy": 0.161821,
-      "yilbasi": 0.19572099999999998,
+      "birAy": 0.023142,
+      "ucAy": 0.07459500000000001,
+      "altiAy": 0.160363,
+      "yilbasi": 0.194495,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 99.38,
+      "gunluk": 499.12,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BTJ",
+        "fonAdi": "ATLAS PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-13",
+        "fiyat": 1.359999,
+        "tedavuldekiPaySayisi": 9128277,
+        "kisiSayisi": 57,
+        "fonToplamDeger": 12414448.04,
+        "gunlukGetiri": -0.00102542,
+        "paraGirisiCikisi": 499.12,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "BTJ",
         "fonAdi": "ATLAS PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00091019,
       "paraGirisiCikisi": 99.38,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BTJ",
+      "fonAdi": "ATLAS PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 1.359999,
+      "tedavuldekiPaySayisi": 9128277,
+      "kisiSayisi": 57,
+      "fonToplamDeger": 12414448.04,
+      "gunlukGetiri": -0.00102542,
+      "paraGirisiCikisi": 499.12,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BTJ",
+      "fonAdi": "ATLAS PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 1.359999,
+      "tedavuldekiPaySayisi": 9128277,
+      "kisiSayisi": 57,
+      "fonToplamDeger": 12414448.04,
+      "gunlukGetiri": -0.00102542,
+      "paraGirisiCikisi": 499.12,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "BTJ",
       "fonAdi": "ATLAS PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

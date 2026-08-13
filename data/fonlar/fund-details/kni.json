@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "KNI",
     "slug": "kni",
@@ -12,44 +12,56 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.362183,
-    "tedavuldekiPaySayisi": 12643352129,
-    "kisiSayisi": 456,
-    "fonToplamDeger": 17222554409.63,
-    "gunlukGetiri": 0.00100307,
+    "fiyat": 1.363553,
+    "tedavuldekiPaySayisi": 12593259858,
+    "kisiSayisi": 454,
+    "fonToplamDeger": 17171574689.91,
+    "gunlukGetiri": 0.00100574,
     "getiriler": {
-      "birAy": 0.030933000000000002,
-      "ucAy": 0.09809200000000001,
-      "altiAy": 0.19926,
-      "yilbasi": 0.247303,
+      "birAy": 0.03197,
+      "ucAy": 0.098093,
+      "altiAy": 0.199347,
+      "yilbasi": 0.248557,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -87755525.82,
+      "gunluk": -68303466.4,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
+      "gunluk": -2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KNI",
+        "fonAdi": "AZİMUT PORTFÖY İKİNCİ PARA PİYASASI SERBEST (TL) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 1.363553,
+        "tedavuldekiPaySayisi": 12593259858,
+        "kisiSayisi": 454,
+        "fonToplamDeger": 17171574689.91,
+        "gunlukGetiri": 0.00100574,
+        "paraGirisiCikisi": -68303466.4,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "KNI",
         "fonAdi": "AZİMUT PORTFÖY İKİNCİ PARA PİYASASI SERBEST (TL) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00100307,
       "paraGirisiCikisi": -87755525.82,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "KNI",
+      "fonAdi": "AZİMUT PORTFÖY İKİNCİ PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 1.363553,
+      "tedavuldekiPaySayisi": 12593259858,
+      "kisiSayisi": 454,
+      "fonToplamDeger": 17171574689.91,
+      "gunlukGetiri": 0.00100574,
+      "paraGirisiCikisi": -68303466.4,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KNI",
+      "fonAdi": "AZİMUT PORTFÖY İKİNCİ PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 1.363553,
+      "tedavuldekiPaySayisi": 12593259858,
+      "kisiSayisi": 454,
+      "fonToplamDeger": 17171574689.91,
+      "gunlukGetiri": 0.00100574,
+      "paraGirisiCikisi": -68303466.4,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "KNI",
       "fonAdi": "AZİMUT PORTFÖY İKİNCİ PARA PİYASASI SERBEST (TL) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

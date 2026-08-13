@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "BIA",
     "slug": "bia",
@@ -12,13 +12,13 @@
     "yonetici": "TRIVE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "trive-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 0.223273,
-    "tedavuldekiPaySayisi": 3702290,
+    "fiyat": 0.221604,
+    "tedavuldekiPaySayisi": 3732290,
     "kisiSayisi": 18,
-    "fonToplamDeger": 826620.68,
-    "gunlukGetiri": -0.02334116,
+    "fonToplamDeger": 827089.51,
+    "gunlukGetiri": -0.00747515,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": 6648.12,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BIA",
+        "fonAdi": "TRİVE PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-13",
+        "fiyat": 0.221604,
+        "tedavuldekiPaySayisi": 3732290,
+        "kisiSayisi": 18,
+        "fonToplamDeger": 827089.51,
+        "gunlukGetiri": -0.00747515,
+        "paraGirisiCikisi": 6648.12,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "BIA",
         "fonAdi": "TRİVE PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.02334116,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BIA",
+      "fonAdi": "TRİVE PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 0.221604,
+      "tedavuldekiPaySayisi": 3732290,
+      "kisiSayisi": 18,
+      "fonToplamDeger": 827089.51,
+      "gunlukGetiri": -0.00747515,
+      "paraGirisiCikisi": 6648.12,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BIA",
+      "fonAdi": "TRİVE PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 0.221604,
+      "tedavuldekiPaySayisi": 3732290,
+      "kisiSayisi": 18,
+      "fonToplamDeger": 827089.51,
+      "gunlukGetiri": -0.00747515,
+      "paraGirisiCikisi": 6648.12,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "BIA",
       "fonAdi": "TRİVE PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

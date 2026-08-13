@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "TPC",
     "slug": "tpc",
@@ -12,44 +12,56 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 13.144418,
-    "tedavuldekiPaySayisi": 456407907,
-    "kisiSayisi": 12813,
-    "fonToplamDeger": 5999216324.76,
-    "gunlukGetiri": 0.00763769,
+    "fiyat": 13.295648,
+    "tedavuldekiPaySayisi": 456228163,
+    "kisiSayisi": 12788,
+    "fonToplamDeger": 6065849266.99,
+    "gunlukGetiri": 0.01150526,
     "getiriler": {
-      "birAy": 0.089476,
-      "ucAy": -0.08091100000000001,
-      "altiAy": -0.084677,
-      "yilbasi": 0.049671,
-      "birYil": 0.447759,
-      "ucYil": 1.793698,
-      "besYil": 6.186316000000001
+      "birAy": 0.10201,
+      "ucAy": -0.06748599999999999,
+      "altiAy": -0.063065,
+      "yilbasi": 0.061746999999999996,
+      "birYil": 0.463905,
+      "ucYil": 1.8258400000000001,
+      "besYil": 6.2916110000000005
     },
     "paraAkisi": {
-      "gunluk": -98951967.37,
+      "gunluk": -2389812.95,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 7,
+      "gunluk": -25,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TPC",
+        "fonAdi": "TEB PORTFÖY KIYMETLİ MADENLER FON SEPETİ FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 13.295648,
+        "tedavuldekiPaySayisi": 456228163,
+        "kisiSayisi": 12788,
+        "fonToplamDeger": 6065849266.99,
+        "gunlukGetiri": 0.01150526,
+        "paraGirisiCikisi": -2389812.95,
+        "yatirimciDegisimi": -25
+      },
       {
         "fonKodu": "TPC",
         "fonAdi": "TEB PORTFÖY KIYMETLİ MADENLER FON SEPETİ FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00763769,
       "paraGirisiCikisi": -98951967.37,
       "yatirimciDegisimi": 7
+    },
+    {
+      "fonKodu": "TPC",
+      "fonAdi": "TEB PORTFÖY KIYMETLİ MADENLER FON SEPETİ FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 13.295648,
+      "tedavuldekiPaySayisi": 456228163,
+      "kisiSayisi": 12788,
+      "fonToplamDeger": 6065849266.99,
+      "gunlukGetiri": 0.01150526,
+      "paraGirisiCikisi": -2389812.95,
+      "yatirimciDegisimi": -25
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TPC",
+      "fonAdi": "TEB PORTFÖY KIYMETLİ MADENLER FON SEPETİ FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 13.295648,
+      "tedavuldekiPaySayisi": 456228163,
+      "kisiSayisi": 12788,
+      "fonToplamDeger": 6065849266.99,
+      "gunlukGetiri": 0.01150526,
+      "paraGirisiCikisi": -2389812.95,
+      "yatirimciDegisimi": -25
+    },
     {
       "fonKodu": "TPC",
       "fonAdi": "TEB PORTFÖY KIYMETLİ MADENLER FON SEPETİ FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

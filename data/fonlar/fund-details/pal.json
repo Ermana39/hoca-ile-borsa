@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "PAL",
     "slug": "pal",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 56.756003,
-    "tedavuldekiPaySayisi": 2831503658,
-    "kisiSayisi": 31953,
-    "fonToplamDeger": 160704829344.51,
-    "gunlukGetiri": 0.00059511,
+    "fiyat": 56.783145,
+    "tedavuldekiPaySayisi": 2773533221,
+    "kisiSayisi": 31909,
+    "fonToplamDeger": 157489939296.33,
+    "gunlukGetiri": 0.00047822,
     "getiriler": {
-      "birAy": 0.021183999999999998,
-      "ucAy": 0.061464,
-      "altiAy": 0.11262,
-      "yilbasi": 0.13591,
-      "birYil": 0.21668500000000002,
-      "ucYil": 0.9870789999999999,
-      "besYil": 5.506342
+      "birAy": 0.021671999999999997,
+      "ucAy": 0.061475999999999996,
+      "altiAy": 0.112839,
+      "yilbasi": 0.136454,
+      "birYil": 0.216921,
+      "ucYil": 0.98803,
+      "besYil": 5.549488
     },
     "paraAkisi": {
-      "gunluk": -144662538.25,
+      "gunluk": -3291743729.88,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -51,
+      "gunluk": -44,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PAL",
+        "fonAdi": "AK PORTFÖY ALTINCI SERBEST(DÖVİZ) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 56.783145,
+        "tedavuldekiPaySayisi": 2773533221,
+        "kisiSayisi": 31909,
+        "fonToplamDeger": 157489939296.33,
+        "gunlukGetiri": 0.00047822,
+        "paraGirisiCikisi": -3291743729.88,
+        "yatirimciDegisimi": -44
+      },
       {
         "fonKodu": "PAL",
         "fonAdi": "AK PORTFÖY ALTINCI SERBEST(DÖVİZ) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00059511,
       "paraGirisiCikisi": -144662538.25,
       "yatirimciDegisimi": -51
+    },
+    {
+      "fonKodu": "PAL",
+      "fonAdi": "AK PORTFÖY ALTINCI SERBEST(DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 56.783145,
+      "tedavuldekiPaySayisi": 2773533221,
+      "kisiSayisi": 31909,
+      "fonToplamDeger": 157489939296.33,
+      "gunlukGetiri": 0.00047822,
+      "paraGirisiCikisi": -3291743729.88,
+      "yatirimciDegisimi": -44
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PAL",
+      "fonAdi": "AK PORTFÖY ALTINCI SERBEST(DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 56.783145,
+      "tedavuldekiPaySayisi": 2773533221,
+      "kisiSayisi": 31909,
+      "fonToplamDeger": 157489939296.33,
+      "gunlukGetiri": 0.00047822,
+      "paraGirisiCikisi": -3291743729.88,
+      "yatirimciDegisimi": -44
+    },
     {
       "fonKodu": "PAL",
       "fonAdi": "AK PORTFÖY ALTINCI SERBEST(DÖVİZ) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

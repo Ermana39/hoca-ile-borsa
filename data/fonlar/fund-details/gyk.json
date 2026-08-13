@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "GYK",
     "slug": "gyk",
@@ -12,44 +12,56 @@
     "yonetici": "INVEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "inveo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 0.113458,
-    "tedavuldekiPaySayisi": 727452806,
-    "kisiSayisi": 279,
-    "fonToplamDeger": 82535101.31,
-    "gunlukGetiri": 0.00101462,
+    "fiyat": 0.113596,
+    "tedavuldekiPaySayisi": 727445125,
+    "kisiSayisi": 278,
+    "fonToplamDeger": 82634758.05,
+    "gunlukGetiri": 0.00121631,
     "getiriler": {
-      "birAy": 0.030986,
-      "ucAy": 0.098792,
-      "altiAy": 0.18327200000000002,
-      "yilbasi": 0.233333,
-      "birYil": 0.44249499999999997,
-      "ucYil": 2.188187,
-      "besYil": 4.218139
+      "birAy": 0.032240000000000005,
+      "ucAy": 0.099171,
+      "altiAy": 0.183353,
+      "yilbasi": 0.234833,
+      "birYil": 0.442965,
+      "ucYil": 2.192065,
+      "besYil": 4.221844
     },
     "paraAkisi": {
-      "gunluk": 2040231.6,
+      "gunluk": -872.53,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GYK",
+        "fonAdi": "INVEO PORTFÖY BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 0.113596,
+        "tedavuldekiPaySayisi": 727445125,
+        "kisiSayisi": 278,
+        "fonToplamDeger": 82634758.05,
+        "gunlukGetiri": 0.00121631,
+        "paraGirisiCikisi": -872.53,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "GYK",
         "fonAdi": "INVEO PORTFÖY BORÇLANMA ARAÇLARI (TL) FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00101462,
       "paraGirisiCikisi": 2040231.6,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "GYK",
+      "fonAdi": "INVEO PORTFÖY BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 0.113596,
+      "tedavuldekiPaySayisi": 727445125,
+      "kisiSayisi": 278,
+      "fonToplamDeger": 82634758.05,
+      "gunlukGetiri": 0.00121631,
+      "paraGirisiCikisi": -872.53,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GYK",
+      "fonAdi": "INVEO PORTFÖY BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 0.113596,
+      "tedavuldekiPaySayisi": 727445125,
+      "kisiSayisi": 278,
+      "fonToplamDeger": 82634758.05,
+      "gunlukGetiri": 0.00121631,
+      "paraGirisiCikisi": -872.53,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "GYK",
       "fonAdi": "INVEO PORTFÖY BORÇLANMA ARAÇLARI (TL) FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "MLT",
     "slug": "mlt",
@@ -12,24 +12,24 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.269066,
-    "tedavuldekiPaySayisi": 17849249,
+    "fiyat": 1.298063,
+    "tedavuldekiPaySayisi": 17846083,
     "kisiSayisi": 84,
-    "fonToplamDeger": 22651880.52,
-    "gunlukGetiri": -0.01261208,
+    "fonToplamDeger": 23165338.41,
+    "gunlukGetiri": 0.02284909,
     "getiriler": {
-      "birAy": -0.039695999999999995,
-      "ucAy": -0.097833,
-      "altiAy": -0.034761,
-      "yilbasi": 0.188082,
+      "birAy": -0.017754000000000002,
+      "ucAy": -0.05911400000000001,
+      "altiAy": -0.04322600000000001,
+      "yilbasi": 0.215228,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 97.72,
+      "gunluk": -4109.67,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MLT",
+        "fonAdi": "DENİZ PORTFÖY MELTEM HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-13",
+        "fiyat": 1.298063,
+        "tedavuldekiPaySayisi": 17846083,
+        "kisiSayisi": 84,
+        "fonToplamDeger": 23165338.41,
+        "gunlukGetiri": 0.02284909,
+        "paraGirisiCikisi": -4109.67,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "MLT",
         "fonAdi": "DENİZ PORTFÖY MELTEM HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.01261208,
       "paraGirisiCikisi": 97.72,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "MLT",
+      "fonAdi": "DENİZ PORTFÖY MELTEM HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 1.298063,
+      "tedavuldekiPaySayisi": 17846083,
+      "kisiSayisi": 84,
+      "fonToplamDeger": 23165338.41,
+      "gunlukGetiri": 0.02284909,
+      "paraGirisiCikisi": -4109.67,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MLT",
+      "fonAdi": "DENİZ PORTFÖY MELTEM HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 1.298063,
+      "tedavuldekiPaySayisi": 17846083,
+      "kisiSayisi": 84,
+      "fonToplamDeger": 23165338.41,
+      "gunlukGetiri": 0.02284909,
+      "paraGirisiCikisi": -4109.67,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "MLT",
       "fonAdi": "DENİZ PORTFÖY MELTEM HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

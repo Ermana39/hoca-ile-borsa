@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "YOS",
     "slug": "yos",
@@ -12,13 +12,13 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 56.147706,
-    "tedavuldekiPaySayisi": 21864769,
-    "kisiSayisi": 274,
-    "fonToplamDeger": 1227656630.48,
-    "gunlukGetiri": -0.00124933,
+    "fiyat": 56.182427,
+    "tedavuldekiPaySayisi": 22149744,
+    "kisiSayisi": 273,
+    "fonToplamDeger": 1244426368.2,
+    "gunlukGetiri": 0.00061839,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 8152590.76,
+      "gunluk": 16010587.13,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YOS",
+        "fonAdi": "YAPI KREDİ PORTFÖY ODEABANK SERBEST (DÖVİZ-AVRO) ÖZEL FON",
+        "tarih": "2026-08-13",
+        "fiyat": 56.182427,
+        "tedavuldekiPaySayisi": 22149744,
+        "kisiSayisi": 273,
+        "fonToplamDeger": 1244426368.2,
+        "gunlukGetiri": 0.00061839,
+        "paraGirisiCikisi": 16010587.13,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "YOS",
         "fonAdi": "YAPI KREDİ PORTFÖY ODEABANK SERBEST (DÖVİZ-AVRO) ÖZEL FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00124933,
       "paraGirisiCikisi": 8152590.76,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "YOS",
+      "fonAdi": "YAPI KREDİ PORTFÖY ODEABANK SERBEST (DÖVİZ-AVRO) ÖZEL FON",
+      "tarih": "2026-08-13",
+      "fiyat": 56.182427,
+      "tedavuldekiPaySayisi": 22149744,
+      "kisiSayisi": 273,
+      "fonToplamDeger": 1244426368.2,
+      "gunlukGetiri": 0.00061839,
+      "paraGirisiCikisi": 16010587.13,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YOS",
+      "fonAdi": "YAPI KREDİ PORTFÖY ODEABANK SERBEST (DÖVİZ-AVRO) ÖZEL FON",
+      "tarih": "2026-08-13",
+      "fiyat": 56.182427,
+      "tedavuldekiPaySayisi": 22149744,
+      "kisiSayisi": 273,
+      "fonToplamDeger": 1244426368.2,
+      "gunlukGetiri": 0.00061839,
+      "paraGirisiCikisi": 16010587.13,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "YOS",
       "fonAdi": "YAPI KREDİ PORTFÖY ODEABANK SERBEST (DÖVİZ-AVRO) ÖZEL FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

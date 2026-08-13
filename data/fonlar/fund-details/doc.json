@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "DOC",
     "slug": "doc",
@@ -12,13 +12,13 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 47.839507,
-    "tedavuldekiPaySayisi": 102203341,
-    "kisiSayisi": 175,
-    "fonToplamDeger": 4889357461.02,
-    "gunlukGetiri": 0.00052815,
+    "fiyat": 47.855859,
+    "tedavuldekiPaySayisi": 102203272,
+    "kisiSayisi": 174,
+    "fonToplamDeger": 4891025335.12,
+    "gunlukGetiri": 0.00034181,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": -3302.05,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DOC",
+        "fonAdi": "DENİZ PORTFÖY KAR PAYI ÖDEYEN ONİKİNCİ SERBEST (DÖVIZ) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 47.855859,
+        "tedavuldekiPaySayisi": 102203272,
+        "kisiSayisi": 174,
+        "fonToplamDeger": 4891025335.12,
+        "gunlukGetiri": 0.00034181,
+        "paraGirisiCikisi": -3302.05,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "DOC",
         "fonAdi": "DENİZ PORTFÖY KAR PAYI ÖDEYEN ONİKİNCİ SERBEST (DÖVIZ) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00052815,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DOC",
+      "fonAdi": "DENİZ PORTFÖY KAR PAYI ÖDEYEN ONİKİNCİ SERBEST (DÖVIZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 47.855859,
+      "tedavuldekiPaySayisi": 102203272,
+      "kisiSayisi": 174,
+      "fonToplamDeger": 4891025335.12,
+      "gunlukGetiri": 0.00034181,
+      "paraGirisiCikisi": -3302.05,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DOC",
+      "fonAdi": "DENİZ PORTFÖY KAR PAYI ÖDEYEN ONİKİNCİ SERBEST (DÖVIZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 47.855859,
+      "tedavuldekiPaySayisi": 102203272,
+      "kisiSayisi": 174,
+      "fonToplamDeger": 4891025335.12,
+      "gunlukGetiri": 0.00034181,
+      "paraGirisiCikisi": -3302.05,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "DOC",
       "fonAdi": "DENİZ PORTFÖY KAR PAYI ÖDEYEN ONİKİNCİ SERBEST (DÖVIZ) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

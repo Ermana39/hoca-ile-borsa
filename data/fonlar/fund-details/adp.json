@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "ADP",
     "slug": "adp",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.181072,
-    "tedavuldekiPaySayisi": 3050559245,
-    "kisiSayisi": 21402,
-    "fonToplamDeger": 3602929637.8,
-    "gunlukGetiri": -0.00603412,
+    "fiyat": 1.228804,
+    "tedavuldekiPaySayisi": 3048098265,
+    "kisiSayisi": 21372,
+    "fonToplamDeger": 3745516022.39,
+    "gunlukGetiri": 0.04041413,
     "getiriler": {
-      "birAy": -0.077725,
-      "ucAy": -0.135808,
-      "altiAy": -0.18053,
-      "yilbasi": -0.053834999999999994,
-      "birYil": -0.032784,
-      "ucYil": 1.237777,
-      "besYil": 12.158843999999998
+      "birAy": -0.040452,
+      "ucAy": -0.070895,
+      "altiAy": -0.199512,
+      "yilbasi": -0.015597000000000001,
+      "birYil": 0.012054,
+      "ucYil": 1.328215,
+      "besYil": 12.320802
     },
     "paraAkisi": {
-      "gunluk": -1555651.35,
+      "gunluk": -3024062.07,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -7,
+      "gunluk": -30,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ADP",
+        "fonAdi": "AK PORTFÖY BIST BANKA ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-13",
+        "fiyat": 1.228804,
+        "tedavuldekiPaySayisi": 3048098265,
+        "kisiSayisi": 21372,
+        "fonToplamDeger": 3745516022.39,
+        "gunlukGetiri": 0.04041413,
+        "paraGirisiCikisi": -3024062.07,
+        "yatirimciDegisimi": -30
+      },
       {
         "fonKodu": "ADP",
         "fonAdi": "AK PORTFÖY BIST BANKA ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00603412,
       "paraGirisiCikisi": -1555651.35,
       "yatirimciDegisimi": -7
+    },
+    {
+      "fonKodu": "ADP",
+      "fonAdi": "AK PORTFÖY BIST BANKA ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 1.228804,
+      "tedavuldekiPaySayisi": 3048098265,
+      "kisiSayisi": 21372,
+      "fonToplamDeger": 3745516022.39,
+      "gunlukGetiri": 0.04041413,
+      "paraGirisiCikisi": -3024062.07,
+      "yatirimciDegisimi": -30
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ADP",
+      "fonAdi": "AK PORTFÖY BIST BANKA ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 1.228804,
+      "tedavuldekiPaySayisi": 3048098265,
+      "kisiSayisi": 21372,
+      "fonToplamDeger": 3745516022.39,
+      "gunlukGetiri": 0.04041413,
+      "paraGirisiCikisi": -3024062.07,
+      "yatirimciDegisimi": -30
+    },
     {
       "fonKodu": "ADP",
       "fonAdi": "AK PORTFÖY BIST BANKA ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

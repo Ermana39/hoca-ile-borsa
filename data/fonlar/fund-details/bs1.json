@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "BS1",
     "slug": "bs1",
@@ -12,44 +12,56 @@
     "yonetici": "AHLATCI PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ahlatci-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.215056,
-    "tedavuldekiPaySayisi": 6952627,
+    "fiyat": 1.240989,
+    "tedavuldekiPaySayisi": 6940393,
     "kisiSayisi": 134,
-    "fonToplamDeger": 8447829.73,
-    "gunlukGetiri": 0.00470744,
+    "fonToplamDeger": 8612948.57,
+    "gunlukGetiri": 0.02134305,
     "getiriler": {
-      "birAy": -0.005943,
-      "ucAy": 0.020016,
-      "altiAy": 0.11437599999999999,
-      "yilbasi": 0.22672,
+      "birAy": 0.015273000000000002,
+      "ucAy": 0.038438,
+      "altiAy": 0.130828,
+      "yilbasi": 0.25290199999999996,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -11528.45,
+      "gunluk": -15182.26,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BS1",
+        "fonAdi": "AHLATCI PORTFÖY BİRİNCİ SERBEST (TL) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 1.240989,
+        "tedavuldekiPaySayisi": 6940393,
+        "kisiSayisi": 134,
+        "fonToplamDeger": 8612948.57,
+        "gunlukGetiri": 0.02134305,
+        "paraGirisiCikisi": -15182.26,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "BS1",
         "fonAdi": "AHLATCI PORTFÖY BİRİNCİ SERBEST (TL) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00470744,
       "paraGirisiCikisi": -11528.45,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "BS1",
+      "fonAdi": "AHLATCI PORTFÖY BİRİNCİ SERBEST (TL) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 1.240989,
+      "tedavuldekiPaySayisi": 6940393,
+      "kisiSayisi": 134,
+      "fonToplamDeger": 8612948.57,
+      "gunlukGetiri": 0.02134305,
+      "paraGirisiCikisi": -15182.26,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BS1",
+      "fonAdi": "AHLATCI PORTFÖY BİRİNCİ SERBEST (TL) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 1.240989,
+      "tedavuldekiPaySayisi": 6940393,
+      "kisiSayisi": 134,
+      "fonToplamDeger": 8612948.57,
+      "gunlukGetiri": 0.02134305,
+      "paraGirisiCikisi": -15182.26,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "BS1",
       "fonAdi": "AHLATCI PORTFÖY BİRİNCİ SERBEST (TL) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

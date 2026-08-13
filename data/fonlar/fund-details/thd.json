@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "THD",
     "slug": "thd",
@@ -12,44 +12,56 @@
     "yonetici": "TRIVE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "trive-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 2.657935,
-    "tedavuldekiPaySayisi": 3190444,
-    "kisiSayisi": 206,
-    "fonToplamDeger": 8479993.48,
-    "gunlukGetiri": -0.0096928,
+    "fiyat": 2.682961,
+    "tedavuldekiPaySayisi": 3193700,
+    "kisiSayisi": 202,
+    "fonToplamDeger": 8568572.26,
+    "gunlukGetiri": 0.00941558,
     "getiriler": {
-      "birAy": -0.012117,
-      "ucAy": -0.08520799999999999,
-      "altiAy": -0.018494,
-      "yilbasi": 0.19920200000000002,
-      "birYil": 0.20802800000000002,
-      "ucYil": 1.079491,
+      "birAy": -0.002815,
+      "ucAy": -0.068147,
+      "altiAy": -0.035898,
+      "yilbasi": 0.21049299999999999,
+      "birYil": 0.23163,
+      "ucYil": 1.099071,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -86824.1,
+      "gunluk": 8735.72,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": -4,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "THD",
+        "fonAdi": "TRIVE PORTFÖY BİRİNCİ HİSSE SENEDİ (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-13",
+        "fiyat": 2.682961,
+        "tedavuldekiPaySayisi": 3193700,
+        "kisiSayisi": 202,
+        "fonToplamDeger": 8568572.26,
+        "gunlukGetiri": 0.00941558,
+        "paraGirisiCikisi": 8735.72,
+        "yatirimciDegisimi": -4
+      },
       {
         "fonKodu": "THD",
         "fonAdi": "TRIVE PORTFÖY BİRİNCİ HİSSE SENEDİ (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.0096928,
       "paraGirisiCikisi": -86824.1,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "THD",
+      "fonAdi": "TRIVE PORTFÖY BİRİNCİ HİSSE SENEDİ (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 2.682961,
+      "tedavuldekiPaySayisi": 3193700,
+      "kisiSayisi": 202,
+      "fonToplamDeger": 8568572.26,
+      "gunlukGetiri": 0.00941558,
+      "paraGirisiCikisi": 8735.72,
+      "yatirimciDegisimi": -4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "THD",
+      "fonAdi": "TRIVE PORTFÖY BİRİNCİ HİSSE SENEDİ (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 2.682961,
+      "tedavuldekiPaySayisi": 3193700,
+      "kisiSayisi": 202,
+      "fonToplamDeger": 8568572.26,
+      "gunlukGetiri": 0.00941558,
+      "paraGirisiCikisi": 8735.72,
+      "yatirimciDegisimi": -4
+    },
     {
       "fonKodu": "THD",
       "fonAdi": "TRIVE PORTFÖY BİRİNCİ HİSSE SENEDİ (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

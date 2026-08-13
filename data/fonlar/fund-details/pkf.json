@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "PKF",
     "slug": "pkf",
@@ -12,44 +12,56 @@
     "yonetici": "ATA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ata-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 4.685763,
-    "tedavuldekiPaySayisi": 83662098,
-    "kisiSayisi": 1558,
-    "fonToplamDeger": 392020727.67,
-    "gunlukGetiri": 0.00440559,
+    "fiyat": 4.732508,
+    "tedavuldekiPaySayisi": 83606418,
+    "kisiSayisi": 1556,
+    "fonToplamDeger": 395668046.62,
+    "gunlukGetiri": 0.00997596,
     "getiriler": {
-      "birAy": 0.076562,
-      "ucAy": -0.025611000000000002,
-      "altiAy": -0.083891,
-      "yilbasi": 0.067519,
-      "birYil": 0.477549,
-      "ucYil": 2.7880239999999996,
+      "birAy": 0.087302,
+      "ucAy": -0.023374000000000002,
+      "altiAy": -0.07517800000000001,
+      "yilbasi": 0.078169,
+      "birYil": 0.476834,
+      "ucYil": 2.825813,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -155946.88,
+      "gunluk": -263506.05,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -7,
+      "gunluk": -2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PKF",
+        "fonAdi": "ATA PORTFÖY ALTIN KATILIM FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 4.732508,
+        "tedavuldekiPaySayisi": 83606418,
+        "kisiSayisi": 1556,
+        "fonToplamDeger": 395668046.62,
+        "gunlukGetiri": 0.00997596,
+        "paraGirisiCikisi": -263506.05,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "PKF",
         "fonAdi": "ATA PORTFÖY ALTIN KATILIM FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00440559,
       "paraGirisiCikisi": -155946.88,
       "yatirimciDegisimi": -7
+    },
+    {
+      "fonKodu": "PKF",
+      "fonAdi": "ATA PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 4.732508,
+      "tedavuldekiPaySayisi": 83606418,
+      "kisiSayisi": 1556,
+      "fonToplamDeger": 395668046.62,
+      "gunlukGetiri": 0.00997596,
+      "paraGirisiCikisi": -263506.05,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PKF",
+      "fonAdi": "ATA PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 4.732508,
+      "tedavuldekiPaySayisi": 83606418,
+      "kisiSayisi": 1556,
+      "fonToplamDeger": 395668046.62,
+      "gunlukGetiri": 0.00997596,
+      "paraGirisiCikisi": -263506.05,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "PKF",
       "fonAdi": "ATA PORTFÖY ALTIN KATILIM FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

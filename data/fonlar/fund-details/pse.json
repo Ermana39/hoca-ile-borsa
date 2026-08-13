@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "PSE",
     "slug": "pse",
@@ -12,44 +12,56 @@
     "yonetici": "ATLAS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "atlas-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.85331,
-    "tedavuldekiPaySayisi": 14276027993,
-    "kisiSayisi": 6324,
-    "fonToplamDeger": 26457898456.96,
-    "gunlukGetiri": 0.00124689,
+    "fiyat": 1.855547,
+    "tedavuldekiPaySayisi": 14199114055,
+    "kisiSayisi": 6272,
+    "fonToplamDeger": 26347126808.73,
+    "gunlukGetiri": 0.00120703,
     "getiriler": {
-      "birAy": 0.037940999999999996,
-      "ucAy": 0.122703,
-      "altiAy": 0.25783,
-      "yilbasi": 0.328623,
-      "birYil": 0.5874,
+      "birAy": 0.039194,
+      "ucAy": 0.122672,
+      "altiAy": 0.257721,
+      "yilbasi": 0.330227,
+      "birYil": 0.5875119999999999,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -339162594.66,
+      "gunluk": -142717426.91,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -42,
+      "gunluk": -52,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PSE",
+        "fonAdi": "ATLAS PORTFÖY PARA PİYASASI SERBEST FON",
+        "tarih": "2026-08-13",
+        "fiyat": 1.855547,
+        "tedavuldekiPaySayisi": 14199114055,
+        "kisiSayisi": 6272,
+        "fonToplamDeger": 26347126808.73,
+        "gunlukGetiri": 0.00120703,
+        "paraGirisiCikisi": -142717426.91,
+        "yatirimciDegisimi": -52
+      },
       {
         "fonKodu": "PSE",
         "fonAdi": "ATLAS PORTFÖY PARA PİYASASI SERBEST FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00124689,
       "paraGirisiCikisi": -339162594.66,
       "yatirimciDegisimi": -42
+    },
+    {
+      "fonKodu": "PSE",
+      "fonAdi": "ATLAS PORTFÖY PARA PİYASASI SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 1.855547,
+      "tedavuldekiPaySayisi": 14199114055,
+      "kisiSayisi": 6272,
+      "fonToplamDeger": 26347126808.73,
+      "gunlukGetiri": 0.00120703,
+      "paraGirisiCikisi": -142717426.91,
+      "yatirimciDegisimi": -52
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PSE",
+      "fonAdi": "ATLAS PORTFÖY PARA PİYASASI SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 1.855547,
+      "tedavuldekiPaySayisi": 14199114055,
+      "kisiSayisi": 6272,
+      "fonToplamDeger": 26347126808.73,
+      "gunlukGetiri": 0.00120703,
+      "paraGirisiCikisi": -142717426.91,
+      "yatirimciDegisimi": -52
+    },
     {
       "fonKodu": "PSE",
       "fonAdi": "ATLAS PORTFÖY PARA PİYASASI SERBEST FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

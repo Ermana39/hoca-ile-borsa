@@ -1,31 +1,31 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "NTB",
     "slug": "ntb",
     "ad": "AZİMUT PORTFÖY AVŞAR HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
-    "kategori": "Bilinmiyor",
-    "riskDegeri": null,
+    "kategori": "Serbest Şemsiye Fonu",
+    "riskDegeri": 6,
     "kapYoneticiKodu": "GPO",
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 5.528891,
+    "fiyat": 5.645747,
     "tedavuldekiPaySayisi": 550964241,
     "kisiSayisi": 1,
-    "fonToplamDeger": 3046221152.14,
-    "gunlukGetiri": -0.00877669,
+    "fonToplamDeger": 3110604679.88,
+    "gunlukGetiri": 0.02113552,
     "getiriler": {
-      "birAy": null,
-      "ucAy": null,
-      "altiAy": null,
-      "yilbasi": null,
-      "birYil": null,
-      "ucYil": null,
+      "birAy": 0.002943,
+      "ucAy": 0.005255999999999999,
+      "altiAy": -0.026232000000000002,
+      "yilbasi": 0.241175,
+      "birYil": 0.196077,
+      "ucYil": 0.77026,
       "besYil": null
     },
     "paraAkisi": {
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NTB",
+        "fonAdi": "AZİMUT PORTFÖY AVŞAR HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-13",
+        "fiyat": 5.645747,
+        "tedavuldekiPaySayisi": 550964241,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 3110604679.88,
+        "gunlukGetiri": 0.02113552,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "NTB",
         "fonAdi": "AZİMUT PORTFÖY AVŞAR HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00877669,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "NTB",
+      "fonAdi": "AZİMUT PORTFÖY AVŞAR HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 5.645747,
+      "tedavuldekiPaySayisi": 550964241,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 3110604679.88,
+      "gunlukGetiri": 0.02113552,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NTB",
+      "fonAdi": "AZİMUT PORTFÖY AVŞAR HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 5.645747,
+      "tedavuldekiPaySayisi": 550964241,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 3110604679.88,
+      "gunlukGetiri": 0.02113552,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "NTB",
       "fonAdi": "AZİMUT PORTFÖY AVŞAR HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

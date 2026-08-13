@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "NZU",
     "slug": "nzu",
@@ -12,19 +12,19 @@
     "yonetici": "NUROL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "nurol-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 50.732334,
+    "fiyat": 50.755321,
     "tedavuldekiPaySayisi": 974276,
     "kisiSayisi": 34,
-    "fonToplamDeger": 49427295.59,
-    "gunlukGetiri": 0.00059232,
+    "fonToplamDeger": 49449690.86,
+    "gunlukGetiri": 0.0004531,
     "getiriler": {
-      "birAy": 0.02077,
-      "ucAy": 0.060517,
-      "altiAy": 0.11224,
-      "yilbasi": 0.136234,
-      "birYil": 0.21925999999999998,
+      "birAy": 0.021233,
+      "ucAy": 0.060494000000000006,
+      "altiAy": 0.112399,
+      "yilbasi": 0.13674899999999998,
+      "birYil": 0.21947399999999997,
       "ucYil": null,
       "besYil": null
     },
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NZU",
+        "fonAdi": "NUROL PORTFÖY ZÜMRÜT KATILIM SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 50.755321,
+        "tedavuldekiPaySayisi": 974276,
+        "kisiSayisi": 34,
+        "fonToplamDeger": 49449690.86,
+        "gunlukGetiri": 0.0004531,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "NZU",
         "fonAdi": "NUROL PORTFÖY ZÜMRÜT KATILIM SERBEST (DÖVİZ) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00059232,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "NZU",
+      "fonAdi": "NUROL PORTFÖY ZÜMRÜT KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 50.755321,
+      "tedavuldekiPaySayisi": 974276,
+      "kisiSayisi": 34,
+      "fonToplamDeger": 49449690.86,
+      "gunlukGetiri": 0.0004531,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NZU",
+      "fonAdi": "NUROL PORTFÖY ZÜMRÜT KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 50.755321,
+      "tedavuldekiPaySayisi": 974276,
+      "kisiSayisi": 34,
+      "fonToplamDeger": 49449690.86,
+      "gunlukGetiri": 0.0004531,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "NZU",
       "fonAdi": "NUROL PORTFÖY ZÜMRÜT KATILIM SERBEST (DÖVİZ) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

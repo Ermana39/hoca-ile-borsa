@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "NKA",
     "slug": "nka",
@@ -12,19 +12,19 @@
     "yonetici": "NEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "neo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 49.263044,
+    "fiyat": 49.284817,
     "tedavuldekiPaySayisi": 2655543,
-    "kisiSayisi": 17,
-    "fonToplamDeger": 130820132.31,
-    "gunlukGetiri": 0.00059311,
+    "kisiSayisi": 16,
+    "fonToplamDeger": 130877950.8,
+    "gunlukGetiri": 0.00044197,
     "getiriler": {
-      "birAy": 0.019927999999999998,
-      "ucAy": 0.058001,
-      "altiAy": 0.106388,
-      "yilbasi": 0.128819,
-      "birYil": 0.200566,
+      "birAy": 0.020379,
+      "ucAy": 0.057977,
+      "altiAy": 0.10663399999999999,
+      "yilbasi": 0.12931800000000002,
+      "birYil": 0.200811,
       "ucYil": null,
       "besYil": null
     },
@@ -35,21 +35,33 @@
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NKA",
+        "fonAdi": "NEO PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 49.284817,
+        "tedavuldekiPaySayisi": 2655543,
+        "kisiSayisi": 16,
+        "fonToplamDeger": 130877950.8,
+        "gunlukGetiri": 0.00044197,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "NKA",
         "fonAdi": "NEO PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00059311,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "NKA",
+      "fonAdi": "NEO PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 49.284817,
+      "tedavuldekiPaySayisi": 2655543,
+      "kisiSayisi": 16,
+      "fonToplamDeger": 130877950.8,
+      "gunlukGetiri": 0.00044197,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NKA",
+      "fonAdi": "NEO PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 49.284817,
+      "tedavuldekiPaySayisi": 2655543,
+      "kisiSayisi": 16,
+      "fonToplamDeger": 130877950.8,
+      "gunlukGetiri": 0.00044197,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "NKA",
       "fonAdi": "NEO PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

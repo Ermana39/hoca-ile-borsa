@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "ESP",
     "slug": "esp",
@@ -12,44 +12,56 @@
     "yonetici": "AURA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aura-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 0.373581,
-    "tedavuldekiPaySayisi": 72700024,
-    "kisiSayisi": 295,
-    "fonToplamDeger": 27159329.44,
-    "gunlukGetiri": -0.01140541,
+    "fiyat": 0.364108,
+    "tedavuldekiPaySayisi": 72403224,
+    "kisiSayisi": 294,
+    "fonToplamDeger": 26362573.5,
+    "gunlukGetiri": -0.02535729,
     "getiriler": {
-      "birAy": -0.156552,
-      "ucAy": -0.284426,
-      "altiAy": -0.282362,
-      "yilbasi": -0.533802,
-      "birYil": -0.634021,
+      "birAy": -0.177939,
+      "ucAy": -0.2884,
+      "altiAy": -0.306949,
+      "yilbasi": -0.545623,
+      "birYil": -0.645296,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -548603.7,
+      "gunluk": -108067.25,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ESP",
+        "fonAdi": "AURA PORTFÖY EMTİA SERBEST FON",
+        "tarih": "2026-08-13",
+        "fiyat": 0.364108,
+        "tedavuldekiPaySayisi": 72403224,
+        "kisiSayisi": 294,
+        "fonToplamDeger": 26362573.5,
+        "gunlukGetiri": -0.02535729,
+        "paraGirisiCikisi": -108067.25,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "ESP",
         "fonAdi": "AURA PORTFÖY EMTİA SERBEST FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.01140541,
       "paraGirisiCikisi": -548603.7,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "ESP",
+      "fonAdi": "AURA PORTFÖY EMTİA SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 0.364108,
+      "tedavuldekiPaySayisi": 72403224,
+      "kisiSayisi": 294,
+      "fonToplamDeger": 26362573.5,
+      "gunlukGetiri": -0.02535729,
+      "paraGirisiCikisi": -108067.25,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ESP",
+      "fonAdi": "AURA PORTFÖY EMTİA SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 0.364108,
+      "tedavuldekiPaySayisi": 72403224,
+      "kisiSayisi": 294,
+      "fonToplamDeger": 26362573.5,
+      "gunlukGetiri": -0.02535729,
+      "paraGirisiCikisi": -108067.25,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "ESP",
       "fonAdi": "AURA PORTFÖY EMTİA SERBEST FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

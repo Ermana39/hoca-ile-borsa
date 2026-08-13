@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "IAY",
     "slug": "iay",
@@ -12,44 +12,56 @@
     "yonetici": "INVEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "inveo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.488865,
-    "tedavuldekiPaySayisi": 31617157,
-    "kisiSayisi": 192,
-    "fonToplamDeger": 47073687.38,
-    "gunlukGetiri": 0.00582676,
+    "fiyat": 1.503472,
+    "tedavuldekiPaySayisi": 31628837,
+    "kisiSayisi": 193,
+    "fonToplamDeger": 47553069.43,
+    "gunlukGetiri": 0.00981083,
     "getiriler": {
-      "birAy": 0.074832,
-      "ucAy": -0.028974000000000003,
-      "altiAy": -0.09282,
-      "yilbasi": 0.065086,
-      "birYil": 0.455916,
+      "birAy": 0.085377,
+      "ucAy": -0.024698,
+      "altiAy": -0.08371,
+      "yilbasi": 0.075536,
+      "birYil": 0.463595,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 99730.13,
+      "gunluk": 17560.55,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IAY",
+        "fonAdi": "INVEO PORTFÖY ALTIN KATILIM FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 1.503472,
+        "tedavuldekiPaySayisi": 31628837,
+        "kisiSayisi": 193,
+        "fonToplamDeger": 47553069.43,
+        "gunlukGetiri": 0.00981083,
+        "paraGirisiCikisi": 17560.55,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "IAY",
         "fonAdi": "INVEO PORTFÖY ALTIN KATILIM FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00582676,
       "paraGirisiCikisi": 99730.13,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "IAY",
+      "fonAdi": "INVEO PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 1.503472,
+      "tedavuldekiPaySayisi": 31628837,
+      "kisiSayisi": 193,
+      "fonToplamDeger": 47553069.43,
+      "gunlukGetiri": 0.00981083,
+      "paraGirisiCikisi": 17560.55,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IAY",
+      "fonAdi": "INVEO PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 1.503472,
+      "tedavuldekiPaySayisi": 31628837,
+      "kisiSayisi": 193,
+      "fonToplamDeger": 47553069.43,
+      "gunlukGetiri": 0.00981083,
+      "paraGirisiCikisi": 17560.55,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "IAY",
       "fonAdi": "INVEO PORTFÖY ALTIN KATILIM FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

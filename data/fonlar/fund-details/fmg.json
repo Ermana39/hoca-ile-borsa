@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "FMG",
     "slug": "fmg",
@@ -12,44 +12,56 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 3.265167,
-    "tedavuldekiPaySayisi": 3726584153,
-    "kisiSayisi": 10664,
-    "fonToplamDeger": 12167919463.17,
-    "gunlukGetiri": 0.00520711,
+    "fiyat": 3.412478,
+    "tedavuldekiPaySayisi": 3750716381,
+    "kisiSayisi": 10643,
+    "fonToplamDeger": 12799235744.82,
+    "gunlukGetiri": 0.04511592,
     "getiriler": {
-      "birAy": 0.077753,
-      "ucAy": -0.185185,
-      "altiAy": -0.19284400000000002,
-      "yilbasi": -0.044564000000000006,
-      "birYil": 0.877294,
+      "birAy": 0.12637600000000002,
+      "ucAy": -0.170181,
+      "altiAy": -0.143891,
+      "yilbasi": -0.001459,
+      "birYil": 0.962655,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 235622068.35,
+      "gunluk": 82350697.14,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
+      "gunluk": -21,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FMG",
+        "fonAdi": "QNB PORTFÖY GÜMÜŞ SERBEST FON",
+        "tarih": "2026-08-13",
+        "fiyat": 3.412478,
+        "tedavuldekiPaySayisi": 3750716381,
+        "kisiSayisi": 10643,
+        "fonToplamDeger": 12799235744.82,
+        "gunlukGetiri": 0.04511592,
+        "paraGirisiCikisi": 82350697.14,
+        "yatirimciDegisimi": -21
+      },
       {
         "fonKodu": "FMG",
         "fonAdi": "QNB PORTFÖY GÜMÜŞ SERBEST FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00520711,
       "paraGirisiCikisi": 235622068.35,
       "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "FMG",
+      "fonAdi": "QNB PORTFÖY GÜMÜŞ SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 3.412478,
+      "tedavuldekiPaySayisi": 3750716381,
+      "kisiSayisi": 10643,
+      "fonToplamDeger": 12799235744.82,
+      "gunlukGetiri": 0.04511592,
+      "paraGirisiCikisi": 82350697.14,
+      "yatirimciDegisimi": -21
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FMG",
+      "fonAdi": "QNB PORTFÖY GÜMÜŞ SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 3.412478,
+      "tedavuldekiPaySayisi": 3750716381,
+      "kisiSayisi": 10643,
+      "fonToplamDeger": 12799235744.82,
+      "gunlukGetiri": 0.04511592,
+      "paraGirisiCikisi": 82350697.14,
+      "yatirimciDegisimi": -21
+    },
     {
       "fonKodu": "FMG",
       "fonAdi": "QNB PORTFÖY GÜMÜŞ SERBEST FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

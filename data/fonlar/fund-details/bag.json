@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "BAG",
     "slug": "bag",
@@ -12,44 +12,56 @@
     "yonetici": "BULLS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "bulls-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.008493,
-    "tedavuldekiPaySayisi": 89599208,
-    "kisiSayisi": 184,
-    "fonToplamDeger": 90360171.55,
-    "gunlukGetiri": -0.00516901,
+    "fiyat": 1.033683,
+    "tedavuldekiPaySayisi": 89505907,
+    "kisiSayisi": 177,
+    "fonToplamDeger": 92520703.43,
+    "gunlukGetiri": 0.02497786,
     "getiriler": {
-      "birAy": 0.007807,
-      "ucAy": 0.052902,
-      "altiAy": 0.11823399999999999,
+      "birAy": 0.03298,
+      "ucAy": 0.078583,
+      "altiAy": 0.124077,
       "yilbasi": null,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1221996.01,
+      "gunluk": -96443.66,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": -7,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BAG",
+        "fonAdi": "BULLS PORTFÖY ATAK DEĞIŞKEN FON",
+        "tarih": "2026-08-13",
+        "fiyat": 1.033683,
+        "tedavuldekiPaySayisi": 89505907,
+        "kisiSayisi": 177,
+        "fonToplamDeger": 92520703.43,
+        "gunlukGetiri": 0.02497786,
+        "paraGirisiCikisi": -96443.66,
+        "yatirimciDegisimi": -7
+      },
       {
         "fonKodu": "BAG",
         "fonAdi": "BULLS PORTFÖY ATAK DEĞIŞKEN FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00516901,
       "paraGirisiCikisi": -1221996.01,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "BAG",
+      "fonAdi": "BULLS PORTFÖY ATAK DEĞIŞKEN FON",
+      "tarih": "2026-08-13",
+      "fiyat": 1.033683,
+      "tedavuldekiPaySayisi": 89505907,
+      "kisiSayisi": 177,
+      "fonToplamDeger": 92520703.43,
+      "gunlukGetiri": 0.02497786,
+      "paraGirisiCikisi": -96443.66,
+      "yatirimciDegisimi": -7
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BAG",
+      "fonAdi": "BULLS PORTFÖY ATAK DEĞIŞKEN FON",
+      "tarih": "2026-08-13",
+      "fiyat": 1.033683,
+      "tedavuldekiPaySayisi": 89505907,
+      "kisiSayisi": 177,
+      "fonToplamDeger": 92520703.43,
+      "gunlukGetiri": 0.02497786,
+      "paraGirisiCikisi": -96443.66,
+      "yatirimciDegisimi": -7
+    },
     {
       "fonKodu": "BAG",
       "fonAdi": "BULLS PORTFÖY ATAK DEĞIŞKEN FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

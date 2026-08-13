@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "IIH",
     "slug": "iih",
@@ -12,44 +12,56 @@
     "yonetici": "İSTANBUL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "istanbul-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 32.32885,
-    "tedavuldekiPaySayisi": 55339907,
-    "kisiSayisi": 22013,
-    "fonToplamDeger": 1789075530.62,
-    "gunlukGetiri": -0.00901145,
+    "fiyat": 32.92464,
+    "tedavuldekiPaySayisi": 55299350,
+    "kisiSayisi": 21955,
+    "fonToplamDeger": 1820711190.83,
+    "gunlukGetiri": 0.01842905,
     "getiriler": {
-      "birAy": -0.001809,
-      "ucAy": -0.059738,
-      "altiAy": -0.017969,
-      "yilbasi": 0.17441600000000002,
-      "birYil": 0.186736,
-      "ucYil": 1.579154,
-      "besYil": 18.061788
+      "birAy": 0.016587,
+      "ucAy": -0.017308,
+      "altiAy": -0.031055000000000003,
+      "yilbasi": 0.19606,
+      "birYil": 0.21607800000000002,
+      "ucYil": 1.626685,
+      "besYil": 18.054846
     },
     "paraAkisi": {
-      "gunluk": -2589605.54,
+      "gunluk": -1335324.62,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 10,
+      "gunluk": -58,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IIH",
+        "fonAdi": "İSTANBUL PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-13",
+        "fiyat": 32.92464,
+        "tedavuldekiPaySayisi": 55299350,
+        "kisiSayisi": 21955,
+        "fonToplamDeger": 1820711190.83,
+        "gunlukGetiri": 0.01842905,
+        "paraGirisiCikisi": -1335324.62,
+        "yatirimciDegisimi": -58
+      },
       {
         "fonKodu": "IIH",
         "fonAdi": "İSTANBUL PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00901145,
       "paraGirisiCikisi": -2589605.54,
       "yatirimciDegisimi": 10
+    },
+    {
+      "fonKodu": "IIH",
+      "fonAdi": "İSTANBUL PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 32.92464,
+      "tedavuldekiPaySayisi": 55299350,
+      "kisiSayisi": 21955,
+      "fonToplamDeger": 1820711190.83,
+      "gunlukGetiri": 0.01842905,
+      "paraGirisiCikisi": -1335324.62,
+      "yatirimciDegisimi": -58
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IIH",
+      "fonAdi": "İSTANBUL PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 32.92464,
+      "tedavuldekiPaySayisi": 55299350,
+      "kisiSayisi": 21955,
+      "fonToplamDeger": 1820711190.83,
+      "gunlukGetiri": 0.01842905,
+      "paraGirisiCikisi": -1335324.62,
+      "yatirimciDegisimi": -58
+    },
     {
       "fonKodu": "IIH",
       "fonAdi": "İSTANBUL PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

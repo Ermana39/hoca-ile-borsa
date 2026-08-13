@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "YZK",
     "slug": "yzk",
@@ -12,24 +12,24 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 7.830491,
-    "tedavuldekiPaySayisi": 27125770,
+    "fiyat": 7.839804,
+    "tedavuldekiPaySayisi": 27125756,
     "kisiSayisi": 194,
-    "fonToplamDeger": 212408107.71,
-    "gunlukGetiri": -0.00000345,
+    "fonToplamDeger": 212660616.57,
+    "gunlukGetiri": 0.00118933,
     "getiriler": {
-      "birAy": 0.018198000000000002,
-      "ucAy": 0.05268900000000001,
-      "altiAy": 0.083048,
-      "yilbasi": 0.107254,
-      "birYil": 0.241212,
-      "ucYil": 1.21673,
-      "besYil": 5.150167
+      "birAy": 0.019409,
+      "ucAy": 0.056051000000000004,
+      "altiAy": 0.085386,
+      "yilbasi": 0.10857100000000001,
+      "birYil": 0.241738,
+      "ucYil": 1.219366,
+      "besYil": 5.196772999999999
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": -109.76,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YZK",
+        "fonAdi": "YAPI KREDİ PORTFÖY KALAMIŞ SERBEST FON",
+        "tarih": "2026-08-13",
+        "fiyat": 7.839804,
+        "tedavuldekiPaySayisi": 27125756,
+        "kisiSayisi": 194,
+        "fonToplamDeger": 212660616.57,
+        "gunlukGetiri": 0.00118933,
+        "paraGirisiCikisi": -109.76,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "YZK",
         "fonAdi": "YAPI KREDİ PORTFÖY KALAMIŞ SERBEST FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00000345,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YZK",
+      "fonAdi": "YAPI KREDİ PORTFÖY KALAMIŞ SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 7.839804,
+      "tedavuldekiPaySayisi": 27125756,
+      "kisiSayisi": 194,
+      "fonToplamDeger": 212660616.57,
+      "gunlukGetiri": 0.00118933,
+      "paraGirisiCikisi": -109.76,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YZK",
+      "fonAdi": "YAPI KREDİ PORTFÖY KALAMIŞ SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 7.839804,
+      "tedavuldekiPaySayisi": 27125756,
+      "kisiSayisi": 194,
+      "fonToplamDeger": 212660616.57,
+      "gunlukGetiri": 0.00118933,
+      "paraGirisiCikisi": -109.76,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "YZK",
       "fonAdi": "YAPI KREDİ PORTFÖY KALAMIŞ SERBEST FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

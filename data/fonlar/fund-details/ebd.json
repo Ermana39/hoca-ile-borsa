@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "EBD",
     "slug": "ebd",
@@ -12,44 +12,56 @@
     "yonetici": "GLOBAL MD PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "global-md-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 0.262506,
-    "tedavuldekiPaySayisi": 305414346,
-    "kisiSayisi": 617,
-    "fonToplamDeger": 80172962.48,
-    "gunlukGetiri": -0.00193525,
+    "fiyat": 0.262673,
+    "tedavuldekiPaySayisi": 304864431,
+    "kisiSayisi": 610,
+    "fonToplamDeger": 80079650.78,
+    "gunlukGetiri": 0.00063618,
     "getiriler": {
-      "birAy": -0.016898,
-      "ucAy": 0.043512,
-      "altiAy": 0.248299,
-      "yilbasi": 0.405752,
-      "birYil": 0.5160170000000001,
-      "ucYil": 2.119316,
-      "besYil": 7.612119
+      "birAy": -0.016272,
+      "ucAy": 0.02672,
+      "altiAy": 0.247556,
+      "yilbasi": 0.40664700000000004,
+      "birYil": 0.520767,
+      "ucYil": 2.1212999999999997,
+      "besYil": 7.562539
     },
     "paraAkisi": {
-      "gunluk": -1126449.73,
+      "gunluk": -144447.82,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": -7,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "EBD",
+        "fonAdi": "GLOBAL MD PORTFÖY İKİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-13",
+        "fiyat": 0.262673,
+        "tedavuldekiPaySayisi": 304864431,
+        "kisiSayisi": 610,
+        "fonToplamDeger": 80079650.78,
+        "gunlukGetiri": 0.00063618,
+        "paraGirisiCikisi": -144447.82,
+        "yatirimciDegisimi": -7
+      },
       {
         "fonKodu": "EBD",
         "fonAdi": "GLOBAL MD PORTFÖY İKİNCİ DEĞİŞKEN FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00193525,
       "paraGirisiCikisi": -1126449.73,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "EBD",
+      "fonAdi": "GLOBAL MD PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-13",
+      "fiyat": 0.262673,
+      "tedavuldekiPaySayisi": 304864431,
+      "kisiSayisi": 610,
+      "fonToplamDeger": 80079650.78,
+      "gunlukGetiri": 0.00063618,
+      "paraGirisiCikisi": -144447.82,
+      "yatirimciDegisimi": -7
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "EBD",
+      "fonAdi": "GLOBAL MD PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-13",
+      "fiyat": 0.262673,
+      "tedavuldekiPaySayisi": 304864431,
+      "kisiSayisi": 610,
+      "fonToplamDeger": 80079650.78,
+      "gunlukGetiri": 0.00063618,
+      "paraGirisiCikisi": -144447.82,
+      "yatirimciDegisimi": -7
+    },
     {
       "fonKodu": "EBD",
       "fonAdi": "GLOBAL MD PORTFÖY İKİNCİ DEĞİŞKEN FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "GZH",
     "slug": "gzh",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 4.951888,
-    "tedavuldekiPaySayisi": 81001054,
-    "kisiSayisi": 5908,
-    "fonToplamDeger": 401108144.07,
-    "gunlukGetiri": -0.00065508,
+    "fiyat": 5.0338,
+    "tedavuldekiPaySayisi": 80772724,
+    "kisiSayisi": 5891,
+    "fonToplamDeger": 406593755.42,
+    "gunlukGetiri": 0.01654157,
     "getiriler": {
-      "birAy": -0.000669,
-      "ucAy": -0.062072,
-      "altiAy": 0.046586999999999996,
-      "yilbasi": 0.26587700000000003,
-      "birYil": 0.535185,
-      "ucYil": 0.817417,
-      "besYil": 4.082321
+      "birAy": 0.015861,
+      "ucAy": -0.033746,
+      "altiAy": 0.059116,
+      "yilbasi": 0.286816,
+      "birYil": 0.560669,
+      "ucYil": 0.84748,
+      "besYil": 4.213213
     },
     "paraAkisi": {
-      "gunluk": -944681.58,
+      "gunluk": -1149367.55,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -15,
+      "gunluk": -17,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GZH",
+        "fonAdi": "GARANTİ PORTFÖY TEMİZ ENERJİ DEĞİŞKEN FON",
+        "tarih": "2026-08-13",
+        "fiyat": 5.0338,
+        "tedavuldekiPaySayisi": 80772724,
+        "kisiSayisi": 5891,
+        "fonToplamDeger": 406593755.42,
+        "gunlukGetiri": 0.01654157,
+        "paraGirisiCikisi": -1149367.55,
+        "yatirimciDegisimi": -17
+      },
       {
         "fonKodu": "GZH",
         "fonAdi": "GARANTİ PORTFÖY TEMİZ ENERJİ DEĞİŞKEN FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00065508,
       "paraGirisiCikisi": -944681.58,
       "yatirimciDegisimi": -15
+    },
+    {
+      "fonKodu": "GZH",
+      "fonAdi": "GARANTİ PORTFÖY TEMİZ ENERJİ DEĞİŞKEN FON",
+      "tarih": "2026-08-13",
+      "fiyat": 5.0338,
+      "tedavuldekiPaySayisi": 80772724,
+      "kisiSayisi": 5891,
+      "fonToplamDeger": 406593755.42,
+      "gunlukGetiri": 0.01654157,
+      "paraGirisiCikisi": -1149367.55,
+      "yatirimciDegisimi": -17
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GZH",
+      "fonAdi": "GARANTİ PORTFÖY TEMİZ ENERJİ DEĞİŞKEN FON",
+      "tarih": "2026-08-13",
+      "fiyat": 5.0338,
+      "tedavuldekiPaySayisi": 80772724,
+      "kisiSayisi": 5891,
+      "fonToplamDeger": 406593755.42,
+      "gunlukGetiri": 0.01654157,
+      "paraGirisiCikisi": -1149367.55,
+      "yatirimciDegisimi": -17
+    },
     {
       "fonKodu": "GZH",
       "fonAdi": "GARANTİ PORTFÖY TEMİZ ENERJİ DEĞİŞKEN FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

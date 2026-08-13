@@ -296,7 +296,10 @@ for (const row of sourceSnapshots) {
 }
 const sourceLatestDate = sourceSnapshots.map((row) => row.tarih).sort().at(-1);
 const sourceLatest = sourceSnapshots.filter((row) => row.tarih === sourceLatestDate);
-assert(sourceLatestDate === current.sonIslemTarihi, "Kaynak Excel tarihi üretilen son işlem tarihiyle uyuşmuyor.");
+assert(
+  sourceLatestDate === current.sonIslemTarihi,
+  `Kaynak Excel tarihi (${sourceLatestDate ?? "bulunamadı"}) üretilen son işlem tarihiyle (${current.sonIslemTarihi ?? "bulunamadı"}) uyuşmuyor.`
+);
 assert(updateLog.islenenSnapshotSayisi === sourceSnapshots.length, "İşlenen snapshot sayısı kaynakla uyuşmuyor.");
 
 const currentByCode = new Map(current.fonlar.map((fund) => [fund.kod, fund]));

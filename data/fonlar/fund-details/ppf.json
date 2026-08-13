@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "PPF",
     "slug": "ppf",
@@ -12,13 +12,13 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 5.167464,
+    "fiyat": 5.109888,
     "tedavuldekiPaySayisi": 106984833,
     "kisiSayisi": 22,
-    "fonToplamDeger": 552840297.48,
-    "gunlukGetiri": 0.00569558,
+    "fonToplamDeger": 546680551.03,
+    "gunlukGetiri": -0.01114202,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PPF",
+        "fonAdi": "AZİMUT PORTFÖY AKÇE SERBEST FON",
+        "tarih": "2026-08-13",
+        "fiyat": 5.109888,
+        "tedavuldekiPaySayisi": 106984833,
+        "kisiSayisi": 22,
+        "fonToplamDeger": 546680551.03,
+        "gunlukGetiri": -0.01114202,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "PPF",
         "fonAdi": "AZİMUT PORTFÖY AKÇE SERBEST FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00569558,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PPF",
+      "fonAdi": "AZİMUT PORTFÖY AKÇE SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 5.109888,
+      "tedavuldekiPaySayisi": 106984833,
+      "kisiSayisi": 22,
+      "fonToplamDeger": 546680551.03,
+      "gunlukGetiri": -0.01114202,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PPF",
+      "fonAdi": "AZİMUT PORTFÖY AKÇE SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 5.109888,
+      "tedavuldekiPaySayisi": 106984833,
+      "kisiSayisi": 22,
+      "fonToplamDeger": 546680551.03,
+      "gunlukGetiri": -0.01114202,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "PPF",
       "fonAdi": "AZİMUT PORTFÖY AKÇE SERBEST FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "ZJV",
     "slug": "zjv",
@@ -12,44 +12,56 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 10.5509,
-    "tedavuldekiPaySayisi": 62860300,
-    "kisiSayisi": 1354,
-    "fonToplamDeger": 663232768.36,
-    "gunlukGetiri": -0.00984032,
+    "fiyat": 10.567226,
+    "tedavuldekiPaySayisi": 62857200,
+    "kisiSayisi": 1352,
+    "fonToplamDeger": 664226207,
+    "gunlukGetiri": 0.00154736,
     "getiriler": {
-      "birAy": -0.0058530000000000006,
-      "ucAy": -0.075411,
-      "altiAy": -0.024014999999999998,
-      "yilbasi": 0.12308400000000001,
-      "birYil": 0.1972,
-      "ucYil": 0.949457,
-      "besYil": 9.674651
+      "birAy": -0.004314,
+      "ucAy": -0.069358,
+      "altiAy": -0.039458,
+      "yilbasi": 0.124822,
+      "birYil": 0.20340599999999998,
+      "ucYil": 0.952474,
+      "besYil": 9.617233
     },
     "paraAkisi": {
-      "gunluk": 23211.98,
+      "gunluk": -32758.4,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": -2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZJV",
+        "fonAdi": "ZİRAAT PORTFÖY BIST 30 DIŞI YILDIZ PAZAR ŞİRKETLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-13",
+        "fiyat": 10.567226,
+        "tedavuldekiPaySayisi": 62857200,
+        "kisiSayisi": 1352,
+        "fonToplamDeger": 664226207,
+        "gunlukGetiri": 0.00154736,
+        "paraGirisiCikisi": -32758.4,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "ZJV",
         "fonAdi": "ZİRAAT PORTFÖY BIST 30 DIŞI YILDIZ PAZAR ŞİRKETLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00984032,
       "paraGirisiCikisi": 23211.98,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "ZJV",
+      "fonAdi": "ZİRAAT PORTFÖY BIST 30 DIŞI YILDIZ PAZAR ŞİRKETLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 10.567226,
+      "tedavuldekiPaySayisi": 62857200,
+      "kisiSayisi": 1352,
+      "fonToplamDeger": 664226207,
+      "gunlukGetiri": 0.00154736,
+      "paraGirisiCikisi": -32758.4,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZJV",
+      "fonAdi": "ZİRAAT PORTFÖY BIST 30 DIŞI YILDIZ PAZAR ŞİRKETLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 10.567226,
+      "tedavuldekiPaySayisi": 62857200,
+      "kisiSayisi": 1352,
+      "fonToplamDeger": 664226207,
+      "gunlukGetiri": 0.00154736,
+      "paraGirisiCikisi": -32758.4,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "ZJV",
       "fonAdi": "ZİRAAT PORTFÖY BIST 30 DIŞI YILDIZ PAZAR ŞİRKETLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

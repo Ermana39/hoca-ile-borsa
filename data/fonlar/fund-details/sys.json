@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "SYS",
     "slug": "sys",
@@ -12,13 +12,13 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 48.774478,
+    "fiyat": 48.798648,
     "tedavuldekiPaySayisi": 36065007,
     "kisiSayisi": 121,
-    "fonToplamDeger": 1759051905.5,
-    "gunlukGetiri": 0.0005056,
+    "fonToplamDeger": 1759923566.28,
+    "gunlukGetiri": 0.00049555,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SYS",
+        "fonAdi": "YAPI KREDİ PORTFÖY ŞUBAT 2028 KAR PAYI ÖDEYEN SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 48.798648,
+        "tedavuldekiPaySayisi": 36065007,
+        "kisiSayisi": 121,
+        "fonToplamDeger": 1759923566.28,
+        "gunlukGetiri": 0.00049555,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "SYS",
         "fonAdi": "YAPI KREDİ PORTFÖY ŞUBAT 2028 KAR PAYI ÖDEYEN SERBEST (DÖVİZ) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.0005056,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "SYS",
+      "fonAdi": "YAPI KREDİ PORTFÖY ŞUBAT 2028 KAR PAYI ÖDEYEN SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 48.798648,
+      "tedavuldekiPaySayisi": 36065007,
+      "kisiSayisi": 121,
+      "fonToplamDeger": 1759923566.28,
+      "gunlukGetiri": 0.00049555,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SYS",
+      "fonAdi": "YAPI KREDİ PORTFÖY ŞUBAT 2028 KAR PAYI ÖDEYEN SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 48.798648,
+      "tedavuldekiPaySayisi": 36065007,
+      "kisiSayisi": 121,
+      "fonToplamDeger": 1759923566.28,
+      "gunlukGetiri": 0.00049555,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "SYS",
       "fonAdi": "YAPI KREDİ PORTFÖY ŞUBAT 2028 KAR PAYI ÖDEYEN SERBEST (DÖVİZ) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

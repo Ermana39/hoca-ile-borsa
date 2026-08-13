@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "YP1",
     "slug": "yp1",
@@ -12,13 +12,13 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 64.123979,
+    "fiyat": 64.208927,
     "tedavuldekiPaySayisi": 3412953,
     "kisiSayisi": 3,
-    "fonToplamDeger": 218852127.44,
-    "gunlukGetiri": 0.00066647,
+    "fonToplamDeger": 219142051.2,
+    "gunlukGetiri": 0.00132475,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YP1",
+        "fonAdi": "YAPI KREDİ PORTFÖY PY GÜMÜŞSUYU SERBEST (DÖVIZ) ÖZEL FON",
+        "tarih": "2026-08-13",
+        "fiyat": 64.208927,
+        "tedavuldekiPaySayisi": 3412953,
+        "kisiSayisi": 3,
+        "fonToplamDeger": 219142051.2,
+        "gunlukGetiri": 0.00132475,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "YP1",
         "fonAdi": "YAPI KREDİ PORTFÖY PY GÜMÜŞSUYU SERBEST (DÖVIZ) ÖZEL FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00066647,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YP1",
+      "fonAdi": "YAPI KREDİ PORTFÖY PY GÜMÜŞSUYU SERBEST (DÖVIZ) ÖZEL FON",
+      "tarih": "2026-08-13",
+      "fiyat": 64.208927,
+      "tedavuldekiPaySayisi": 3412953,
+      "kisiSayisi": 3,
+      "fonToplamDeger": 219142051.2,
+      "gunlukGetiri": 0.00132475,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YP1",
+      "fonAdi": "YAPI KREDİ PORTFÖY PY GÜMÜŞSUYU SERBEST (DÖVIZ) ÖZEL FON",
+      "tarih": "2026-08-13",
+      "fiyat": 64.208927,
+      "tedavuldekiPaySayisi": 3412953,
+      "kisiSayisi": 3,
+      "fonToplamDeger": 219142051.2,
+      "gunlukGetiri": 0.00132475,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "YP1",
       "fonAdi": "YAPI KREDİ PORTFÖY PY GÜMÜŞSUYU SERBEST (DÖVIZ) ÖZEL FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

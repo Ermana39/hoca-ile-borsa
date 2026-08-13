@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "EID",
     "slug": "eid",
@@ -12,44 +12,56 @@
     "yonetici": "ASTRA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "astra-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.869303,
-    "tedavuldekiPaySayisi": 47316277,
-    "kisiSayisi": 1899,
-    "fonToplamDeger": 88448477.52,
-    "gunlukGetiri": -0.00257666,
+    "fiyat": 1.897375,
+    "tedavuldekiPaySayisi": 47314621,
+    "kisiSayisi": 1891,
+    "fonToplamDeger": 89773564.07,
+    "gunlukGetiri": 0.01501736,
     "getiriler": {
-      "birAy": -0.017349,
-      "ucAy": -0.040011,
-      "altiAy": -0.014068,
-      "yilbasi": 0.168363,
-      "birYil": 0.20252199999999998,
-      "ucYil": 1.3997110000000001,
-      "besYil": 13.350772999999998
+      "birAy": -0.0025919999999999997,
+      "ucAy": -0.00838,
+      "altiAy": -0.029115000000000002,
+      "yilbasi": 0.18590900000000002,
+      "birYil": 0.22187,
+      "ucYil": 1.435748,
+      "besYil": 13.264905
     },
     "paraAkisi": {
-      "gunluk": -457777.35,
+      "gunluk": -3142.05,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
+      "gunluk": -8,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "EID",
+        "fonAdi": "ASTRA PORTFÖY HİSSE SENEDİ FONU (HİSSE YOĞUN FON)",
+        "tarih": "2026-08-13",
+        "fiyat": 1.897375,
+        "tedavuldekiPaySayisi": 47314621,
+        "kisiSayisi": 1891,
+        "fonToplamDeger": 89773564.07,
+        "gunlukGetiri": 0.01501736,
+        "paraGirisiCikisi": -3142.05,
+        "yatirimciDegisimi": -8
+      },
       {
         "fonKodu": "EID",
         "fonAdi": "ASTRA PORTFÖY HİSSE SENEDİ FONU (HİSSE YOĞUN FON)",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00257666,
       "paraGirisiCikisi": -457777.35,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "EID",
+      "fonAdi": "ASTRA PORTFÖY HİSSE SENEDİ FONU (HİSSE YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 1.897375,
+      "tedavuldekiPaySayisi": 47314621,
+      "kisiSayisi": 1891,
+      "fonToplamDeger": 89773564.07,
+      "gunlukGetiri": 0.01501736,
+      "paraGirisiCikisi": -3142.05,
+      "yatirimciDegisimi": -8
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "EID",
+      "fonAdi": "ASTRA PORTFÖY HİSSE SENEDİ FONU (HİSSE YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 1.897375,
+      "tedavuldekiPaySayisi": 47314621,
+      "kisiSayisi": 1891,
+      "fonToplamDeger": 89773564.07,
+      "gunlukGetiri": 0.01501736,
+      "paraGirisiCikisi": -3142.05,
+      "yatirimciDegisimi": -8
+    },
     {
       "fonKodu": "EID",
       "fonAdi": "ASTRA PORTFÖY HİSSE SENEDİ FONU (HİSSE YOĞUN FON)",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

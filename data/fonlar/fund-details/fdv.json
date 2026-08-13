@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "FDV",
     "slug": "fdv",
@@ -12,20 +12,20 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 5.894304,
+    "fiyat": 5.907676,
     "tedavuldekiPaySayisi": 245000000,
     "kisiSayisi": 1,
-    "fonToplamDeger": 1444104381.35,
-    "gunlukGetiri": -0.00701807,
+    "fonToplamDeger": 1447380728.75,
+    "gunlukGetiri": 0.00226863,
     "getiriler": {
-      "birAy": 0.027909000000000003,
-      "ucAy": 0.096457,
-      "altiAy": 0.238707,
-      "yilbasi": 0.384284,
-      "birYil": 0.5960719999999999,
-      "ucYil": 2.92618,
+      "birAy": 0.030240999999999997,
+      "ucAy": 0.100078,
+      "altiAy": 0.228689,
+      "yilbasi": 0.387425,
+      "birYil": 0.594568,
+      "ucYil": 2.935087,
       "besYil": null
     },
     "paraAkisi": {
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FDV",
+        "fonAdi": "AZİMUT PORTFÖY DMR SERBEST FON",
+        "tarih": "2026-08-13",
+        "fiyat": 5.907676,
+        "tedavuldekiPaySayisi": 245000000,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 1447380728.75,
+        "gunlukGetiri": 0.00226863,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "FDV",
         "fonAdi": "AZİMUT PORTFÖY DMR SERBEST FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00701807,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "FDV",
+      "fonAdi": "AZİMUT PORTFÖY DMR SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 5.907676,
+      "tedavuldekiPaySayisi": 245000000,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 1447380728.75,
+      "gunlukGetiri": 0.00226863,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FDV",
+      "fonAdi": "AZİMUT PORTFÖY DMR SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 5.907676,
+      "tedavuldekiPaySayisi": 245000000,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 1447380728.75,
+      "gunlukGetiri": 0.00226863,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "FDV",
       "fonAdi": "AZİMUT PORTFÖY DMR SERBEST FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "IRF",
     "slug": "irf",
@@ -12,44 +12,56 @@
     "yonetici": "İSTANBUL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "istanbul-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 7.358847,
-    "tedavuldekiPaySayisi": 72802577,
-    "kisiSayisi": 2006,
-    "fonToplamDeger": 535743011.47,
-    "gunlukGetiri": 0.0012237,
+    "fiyat": 7.382455,
+    "tedavuldekiPaySayisi": 72965576,
+    "kisiSayisi": 2004,
+    "fonToplamDeger": 538665097.57,
+    "gunlukGetiri": 0.00320811,
     "getiriler": {
-      "birAy": 0.038506,
-      "ucAy": 0.135585,
-      "altiAy": 0.251737,
-      "yilbasi": 0.33476100000000003,
-      "birYil": 0.598149,
-      "ucYil": 2.478081,
+      "birAy": 0.041838,
+      "ucAy": 0.138758,
+      "altiAy": 0.24913900000000003,
+      "yilbasi": 0.339043,
+      "birYil": 0.604243,
+      "ucYil": 2.489239,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1953692.93,
+      "gunluk": 1203332.78,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 4,
+      "gunluk": -2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IRF",
+        "fonAdi": "İSTANBUL PORTFÖY BİRİNCİ FON SEPETİ FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 7.382455,
+        "tedavuldekiPaySayisi": 72965576,
+        "kisiSayisi": 2004,
+        "fonToplamDeger": 538665097.57,
+        "gunlukGetiri": 0.00320811,
+        "paraGirisiCikisi": 1203332.78,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "IRF",
         "fonAdi": "İSTANBUL PORTFÖY BİRİNCİ FON SEPETİ FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.0012237,
       "paraGirisiCikisi": 1953692.93,
       "yatirimciDegisimi": 4
+    },
+    {
+      "fonKodu": "IRF",
+      "fonAdi": "İSTANBUL PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 7.382455,
+      "tedavuldekiPaySayisi": 72965576,
+      "kisiSayisi": 2004,
+      "fonToplamDeger": 538665097.57,
+      "gunlukGetiri": 0.00320811,
+      "paraGirisiCikisi": 1203332.78,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IRF",
+      "fonAdi": "İSTANBUL PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 7.382455,
+      "tedavuldekiPaySayisi": 72965576,
+      "kisiSayisi": 2004,
+      "fonToplamDeger": 538665097.57,
+      "gunlukGetiri": 0.00320811,
+      "paraGirisiCikisi": 1203332.78,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "IRF",
       "fonAdi": "İSTANBUL PORTFÖY BİRİNCİ FON SEPETİ FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

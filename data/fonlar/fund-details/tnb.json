@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "TNB",
     "slug": "tnb",
@@ -12,13 +12,13 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 49.862634,
-    "tedavuldekiPaySayisi": 14235255,
+    "fiyat": 49.923072,
+    "tedavuldekiPaySayisi": 14231905,
     "kisiSayisi": 82,
-    "fonToplamDeger": 709807310.93,
-    "gunlukGetiri": 0.00029726,
+    "fonToplamDeger": 710500415.8,
+    "gunlukGetiri": 0.00121209,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": -167242.29,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TNB",
+        "fonAdi": "TEB PORTFÖY ING BANK KAR PAYI ÖDEYEN SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-13",
+        "fiyat": 49.923072,
+        "tedavuldekiPaySayisi": 14231905,
+        "kisiSayisi": 82,
+        "fonToplamDeger": 710500415.8,
+        "gunlukGetiri": 0.00121209,
+        "paraGirisiCikisi": -167242.29,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "TNB",
         "fonAdi": "TEB PORTFÖY ING BANK KAR PAYI ÖDEYEN SERBEST (DÖVİZ) ÖZEL FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00029726,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TNB",
+      "fonAdi": "TEB PORTFÖY ING BANK KAR PAYI ÖDEYEN SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-13",
+      "fiyat": 49.923072,
+      "tedavuldekiPaySayisi": 14231905,
+      "kisiSayisi": 82,
+      "fonToplamDeger": 710500415.8,
+      "gunlukGetiri": 0.00121209,
+      "paraGirisiCikisi": -167242.29,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TNB",
+      "fonAdi": "TEB PORTFÖY ING BANK KAR PAYI ÖDEYEN SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-13",
+      "fiyat": 49.923072,
+      "tedavuldekiPaySayisi": 14231905,
+      "kisiSayisi": 82,
+      "fonToplamDeger": 710500415.8,
+      "gunlukGetiri": 0.00121209,
+      "paraGirisiCikisi": -167242.29,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "TNB",
       "fonAdi": "TEB PORTFÖY ING BANK KAR PAYI ÖDEYEN SERBEST (DÖVİZ) ÖZEL FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

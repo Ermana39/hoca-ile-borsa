@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "KIS",
     "slug": "kis",
@@ -12,44 +12,56 @@
     "yonetici": "ASTRA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "astra-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 0.219363,
-    "tedavuldekiPaySayisi": 414587072,
-    "kisiSayisi": 772,
-    "fonToplamDeger": 90944956.9,
-    "gunlukGetiri": -0.00010028,
+    "fiyat": 0.219344,
+    "tedavuldekiPaySayisi": 414732833,
+    "kisiSayisi": 770,
+    "fonToplamDeger": 90969337.4,
+    "gunlukGetiri": -0.00008661,
     "getiriler": {
-      "birAy": 0.016949000000000002,
-      "ucAy": 0.042268,
-      "altiAy": 0.085961,
-      "yilbasi": 0.10475799999999999,
-      "birYil": 0.20950500000000002,
-      "ucYil": 1.0454569999999999,
-      "besYil": 5.479295
+      "birAy": 0.016861,
+      "ucAy": 0.041894999999999995,
+      "altiAy": 0.085319,
+      "yilbasi": 0.104663,
+      "birYil": 0.209,
+      "ucYil": 1.04528,
+      "besYil": 5.5178139999999996
     },
     "paraAkisi": {
-      "gunluk": -218939.63,
+      "gunluk": 31971.8,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
+      "gunluk": -2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KIS",
+        "fonAdi": "ASTRA PORTFÖY KİRA SERTİFİKASI KATILIM (DÖVİZ) FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 0.219344,
+        "tedavuldekiPaySayisi": 414732833,
+        "kisiSayisi": 770,
+        "fonToplamDeger": 90969337.4,
+        "gunlukGetiri": -0.00008661,
+        "paraGirisiCikisi": 31971.8,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "KIS",
         "fonAdi": "ASTRA PORTFÖY KİRA SERTİFİKASI KATILIM (DÖVİZ) FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00010028,
       "paraGirisiCikisi": -218939.63,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "KIS",
+      "fonAdi": "ASTRA PORTFÖY KİRA SERTİFİKASI KATILIM (DÖVİZ) FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 0.219344,
+      "tedavuldekiPaySayisi": 414732833,
+      "kisiSayisi": 770,
+      "fonToplamDeger": 90969337.4,
+      "gunlukGetiri": -0.00008661,
+      "paraGirisiCikisi": 31971.8,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KIS",
+      "fonAdi": "ASTRA PORTFÖY KİRA SERTİFİKASI KATILIM (DÖVİZ) FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 0.219344,
+      "tedavuldekiPaySayisi": 414732833,
+      "kisiSayisi": 770,
+      "fonToplamDeger": 90969337.4,
+      "gunlukGetiri": -0.00008661,
+      "paraGirisiCikisi": 31971.8,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "KIS",
       "fonAdi": "ASTRA PORTFÖY KİRA SERTİFİKASI KATILIM (DÖVİZ) FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

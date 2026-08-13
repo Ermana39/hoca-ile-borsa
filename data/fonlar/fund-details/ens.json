@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "ENS",
     "slug": "ens",
@@ -12,13 +12,13 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.196632,
-    "tedavuldekiPaySayisi": 34879730,
-    "kisiSayisi": 1698,
-    "fonToplamDeger": 41738196.32,
-    "gunlukGetiri": -0.00371412,
+    "fiyat": 1.206947,
+    "tedavuldekiPaySayisi": 34650829,
+    "kisiSayisi": 1716,
+    "fonToplamDeger": 41821697.08,
+    "gunlukGetiri": 0.00862003,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 208753.65,
+      "gunluk": -276271.38,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 11,
+      "gunluk": 18,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ENS",
+        "fonAdi": "QNB PORTFÖY ENPARA DEĞİŞKEN ÖZEL FON",
+        "tarih": "2026-08-13",
+        "fiyat": 1.206947,
+        "tedavuldekiPaySayisi": 34650829,
+        "kisiSayisi": 1716,
+        "fonToplamDeger": 41821697.08,
+        "gunlukGetiri": 0.00862003,
+        "paraGirisiCikisi": -276271.38,
+        "yatirimciDegisimi": 18
+      },
       {
         "fonKodu": "ENS",
         "fonAdi": "QNB PORTFÖY ENPARA DEĞİŞKEN ÖZEL FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00371412,
       "paraGirisiCikisi": 208753.65,
       "yatirimciDegisimi": 11
+    },
+    {
+      "fonKodu": "ENS",
+      "fonAdi": "QNB PORTFÖY ENPARA DEĞİŞKEN ÖZEL FON",
+      "tarih": "2026-08-13",
+      "fiyat": 1.206947,
+      "tedavuldekiPaySayisi": 34650829,
+      "kisiSayisi": 1716,
+      "fonToplamDeger": 41821697.08,
+      "gunlukGetiri": 0.00862003,
+      "paraGirisiCikisi": -276271.38,
+      "yatirimciDegisimi": 18
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ENS",
+      "fonAdi": "QNB PORTFÖY ENPARA DEĞİŞKEN ÖZEL FON",
+      "tarih": "2026-08-13",
+      "fiyat": 1.206947,
+      "tedavuldekiPaySayisi": 34650829,
+      "kisiSayisi": 1716,
+      "fonToplamDeger": 41821697.08,
+      "gunlukGetiri": 0.00862003,
+      "paraGirisiCikisi": -276271.38,
+      "yatirimciDegisimi": 18
+    },
     {
       "fonKodu": "ENS",
       "fonAdi": "QNB PORTFÖY ENPARA DEĞİŞKEN ÖZEL FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

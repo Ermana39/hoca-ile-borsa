@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "HMK",
     "slug": "hmk",
@@ -12,13 +12,13 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 311.097138,
-    "tedavuldekiPaySayisi": 515218,
-    "kisiSayisi": 63,
-    "fonToplamDeger": 160282845.14,
-    "gunlukGetiri": -0.01369493,
+    "fiyat": 314.881384,
+    "tedavuldekiPaySayisi": 509923,
+    "kisiSayisi": 61,
+    "fonToplamDeger": 160565259.72,
+    "gunlukGetiri": 0.01216419,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1951823.44,
+      "gunluk": -1667296.93,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HMK",
+        "fonAdi": "HEDEF PORTFÖY EGE HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-13",
+        "fiyat": 314.881384,
+        "tedavuldekiPaySayisi": 509923,
+        "kisiSayisi": 61,
+        "fonToplamDeger": 160565259.72,
+        "gunlukGetiri": 0.01216419,
+        "paraGirisiCikisi": -1667296.93,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "HMK",
         "fonAdi": "HEDEF PORTFÖY EGE HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.01369493,
       "paraGirisiCikisi": -1951823.44,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HMK",
+      "fonAdi": "HEDEF PORTFÖY EGE HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 314.881384,
+      "tedavuldekiPaySayisi": 509923,
+      "kisiSayisi": 61,
+      "fonToplamDeger": 160565259.72,
+      "gunlukGetiri": 0.01216419,
+      "paraGirisiCikisi": -1667296.93,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HMK",
+      "fonAdi": "HEDEF PORTFÖY EGE HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 314.881384,
+      "tedavuldekiPaySayisi": 509923,
+      "kisiSayisi": 61,
+      "fonToplamDeger": 160565259.72,
+      "gunlukGetiri": 0.01216419,
+      "paraGirisiCikisi": -1667296.93,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "HMK",
       "fonAdi": "HEDEF PORTFÖY EGE HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

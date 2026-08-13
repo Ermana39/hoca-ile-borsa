@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "MTS",
     "slug": "mts",
@@ -12,44 +12,56 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 2.726933,
-    "tedavuldekiPaySayisi": 13836116,
-    "kisiSayisi": 690,
-    "fonToplamDeger": 37730164.65,
-    "gunlukGetiri": 0,
+    "fiyat": 2.756846,
+    "tedavuldekiPaySayisi": 10308476,
+    "kisiSayisi": 691,
+    "fonToplamDeger": 28418881.78,
+    "gunlukGetiri": 0.01096947,
     "getiriler": {
-      "birAy": 0.011529000000000001,
-      "ucAy": -0.029647999999999997,
-      "altiAy": 0.047134,
-      "yilbasi": 0.158698,
-      "birYil": 0.267302,
-      "ucYil": 0.989074,
+      "birAy": 0.022625000000000003,
+      "ucAy": -0.003407,
+      "altiAy": 0.053507,
+      "yilbasi": 0.17140899999999998,
+      "birYil": 0.277814,
+      "ucYil": 1.010893,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": -9725160.22,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MTS",
+        "fonAdi": "AKTİF PORTFÖY TARIM VE SÜRDÜRÜLEBİLİRLİK FON SEPETİ FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 2.756846,
+        "tedavuldekiPaySayisi": 10308476,
+        "kisiSayisi": 691,
+        "fonToplamDeger": 28418881.78,
+        "gunlukGetiri": 0.01096947,
+        "paraGirisiCikisi": -9725160.22,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "MTS",
         "fonAdi": "AKTİF PORTFÖY TARIM VE SÜRDÜRÜLEBİLİRLİK FON SEPETİ FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "MTS",
+      "fonAdi": "AKTİF PORTFÖY TARIM VE SÜRDÜRÜLEBİLİRLİK FON SEPETİ FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 2.756846,
+      "tedavuldekiPaySayisi": 10308476,
+      "kisiSayisi": 691,
+      "fonToplamDeger": 28418881.78,
+      "gunlukGetiri": 0.01096947,
+      "paraGirisiCikisi": -9725160.22,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MTS",
+      "fonAdi": "AKTİF PORTFÖY TARIM VE SÜRDÜRÜLEBİLİRLİK FON SEPETİ FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 2.756846,
+      "tedavuldekiPaySayisi": 10308476,
+      "kisiSayisi": 691,
+      "fonToplamDeger": 28418881.78,
+      "gunlukGetiri": 0.01096947,
+      "paraGirisiCikisi": -9725160.22,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "MTS",
       "fonAdi": "AKTİF PORTFÖY TARIM VE SÜRDÜRÜLEBİLİRLİK FON SEPETİ FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "OIL",
     "slug": "oil",
@@ -12,24 +12,24 @@
     "yonetici": "OSMANLI PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "osmanli-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 3.881969,
-    "tedavuldekiPaySayisi": 11187979,
-    "kisiSayisi": 653,
-    "fonToplamDeger": 43431388.98,
-    "gunlukGetiri": 0.00796747,
+    "fiyat": 3.914452,
+    "tedavuldekiPaySayisi": 11194288,
+    "kisiSayisi": 652,
+    "fonToplamDeger": 43819504.35,
+    "gunlukGetiri": 0.00836766,
     "getiriler": {
-      "birAy": 0.08201599999999999,
-      "ucAy": -0.013856,
-      "altiAy": -0.026926000000000002,
-      "yilbasi": 0.126074,
-      "birYil": 0.156691,
-      "ucYil": 0.752486,
+      "birAy": 0.09107,
+      "ucAy": -0.009717,
+      "altiAy": -0.030289,
+      "yilbasi": 0.135497,
+      "birYil": 0.172644,
+      "ucYil": 0.76715,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -77204.6,
+      "gunluk": 24696.28,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OIL",
+        "fonAdi": "OSMANLI PORTFÖY ALTIN FON SEPETİ FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 3.914452,
+        "tedavuldekiPaySayisi": 11194288,
+        "kisiSayisi": 652,
+        "fonToplamDeger": 43819504.35,
+        "gunlukGetiri": 0.00836766,
+        "paraGirisiCikisi": 24696.28,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "OIL",
         "fonAdi": "OSMANLI PORTFÖY ALTIN FON SEPETİ FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00796747,
       "paraGirisiCikisi": -77204.6,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "OIL",
+      "fonAdi": "OSMANLI PORTFÖY ALTIN FON SEPETİ FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 3.914452,
+      "tedavuldekiPaySayisi": 11194288,
+      "kisiSayisi": 652,
+      "fonToplamDeger": 43819504.35,
+      "gunlukGetiri": 0.00836766,
+      "paraGirisiCikisi": 24696.28,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OIL",
+      "fonAdi": "OSMANLI PORTFÖY ALTIN FON SEPETİ FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 3.914452,
+      "tedavuldekiPaySayisi": 11194288,
+      "kisiSayisi": 652,
+      "fonToplamDeger": 43819504.35,
+      "gunlukGetiri": 0.00836766,
+      "paraGirisiCikisi": 24696.28,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "OIL",
       "fonAdi": "OSMANLI PORTFÖY ALTIN FON SEPETİ FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

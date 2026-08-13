@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "RTG",
     "slug": "rtg",
@@ -12,44 +12,56 @@
     "yonetici": "ATA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ata-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 5.73058,
-    "tedavuldekiPaySayisi": 45080175,
-    "kisiSayisi": 4940,
-    "fonToplamDeger": 258335560.76,
-    "gunlukGetiri": -0.0020436,
+    "fiyat": 5.808889,
+    "tedavuldekiPaySayisi": 45087847,
+    "kisiSayisi": 4934,
+    "fonToplamDeger": 261910278.58,
+    "gunlukGetiri": 0.01366511,
     "getiriler": {
-      "birAy": -0.011423,
-      "ucAy": 0.028117999999999997,
-      "altiAy": 0.342877,
-      "yilbasi": 0.40732300000000005,
-      "birYil": 0.59941,
-      "ucYil": 2.170191,
+      "birAy": 0.002086,
+      "ucAy": 0.065323,
+      "altiAy": 0.358216,
+      "yilbasi": 0.426555,
+      "birYil": 0.624166,
+      "ucYil": 2.213512,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -406240.82,
+      "gunluk": 44565.8,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": -6,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RTG",
+        "fonAdi": "ATA PORTFÖY ROBOTİK TEKNOLOJİLERİ DEĞİŞKEN FON",
+        "tarih": "2026-08-13",
+        "fiyat": 5.808889,
+        "tedavuldekiPaySayisi": 45087847,
+        "kisiSayisi": 4934,
+        "fonToplamDeger": 261910278.58,
+        "gunlukGetiri": 0.01366511,
+        "paraGirisiCikisi": 44565.8,
+        "yatirimciDegisimi": -6
+      },
       {
         "fonKodu": "RTG",
         "fonAdi": "ATA PORTFÖY ROBOTİK TEKNOLOJİLERİ DEĞİŞKEN FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.0020436,
       "paraGirisiCikisi": -406240.82,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "RTG",
+      "fonAdi": "ATA PORTFÖY ROBOTİK TEKNOLOJİLERİ DEĞİŞKEN FON",
+      "tarih": "2026-08-13",
+      "fiyat": 5.808889,
+      "tedavuldekiPaySayisi": 45087847,
+      "kisiSayisi": 4934,
+      "fonToplamDeger": 261910278.58,
+      "gunlukGetiri": 0.01366511,
+      "paraGirisiCikisi": 44565.8,
+      "yatirimciDegisimi": -6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RTG",
+      "fonAdi": "ATA PORTFÖY ROBOTİK TEKNOLOJİLERİ DEĞİŞKEN FON",
+      "tarih": "2026-08-13",
+      "fiyat": 5.808889,
+      "tedavuldekiPaySayisi": 45087847,
+      "kisiSayisi": 4934,
+      "fonToplamDeger": 261910278.58,
+      "gunlukGetiri": 0.01366511,
+      "paraGirisiCikisi": 44565.8,
+      "yatirimciDegisimi": -6
+    },
     {
       "fonKodu": "RTG",
       "fonAdi": "ATA PORTFÖY ROBOTİK TEKNOLOJİLERİ DEĞİŞKEN FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

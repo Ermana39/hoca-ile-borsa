@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "TE4",
     "slug": "te4",
@@ -12,44 +12,56 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 6.469326,
-    "tedavuldekiPaySayisi": 266289064,
-    "kisiSayisi": 1448,
-    "fonToplamDeger": 1722710671.82,
-    "gunlukGetiri": 0.00113309,
+    "fiyat": 6.479765,
+    "tedavuldekiPaySayisi": 265884434,
+    "kisiSayisi": 1441,
+    "fonToplamDeger": 1722868710.33,
+    "gunlukGetiri": 0.00161361,
     "getiriler": {
-      "birAy": 0.032174999999999995,
-      "ucAy": 0.09070700000000001,
-      "altiAy": 0.196627,
-      "yilbasi": 0.258893,
-      "birYil": 0.48741799999999996,
-      "ucYil": 1.871222,
-      "besYil": 4.931428
+      "birAy": 0.033841,
+      "ucAy": 0.091492,
+      "altiAy": 0.195561,
+      "yilbasi": 0.260925,
+      "birYil": 0.488669,
+      "ucYil": 1.875855,
+      "besYil": 4.930223
     },
     "paraAkisi": {
-      "gunluk": -1204316.79,
+      "gunluk": -2621907.31,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 10,
+      "gunluk": -7,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TE4",
+        "fonAdi": "TEB PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-13",
+        "fiyat": 6.479765,
+        "tedavuldekiPaySayisi": 265884434,
+        "kisiSayisi": 1441,
+        "fonToplamDeger": 1722868710.33,
+        "gunlukGetiri": 0.00161361,
+        "paraGirisiCikisi": -2621907.31,
+        "yatirimciDegisimi": -7
+      },
       {
         "fonKodu": "TE4",
         "fonAdi": "TEB PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00113309,
       "paraGirisiCikisi": -1204316.79,
       "yatirimciDegisimi": 10
+    },
+    {
+      "fonKodu": "TE4",
+      "fonAdi": "TEB PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-13",
+      "fiyat": 6.479765,
+      "tedavuldekiPaySayisi": 265884434,
+      "kisiSayisi": 1441,
+      "fonToplamDeger": 1722868710.33,
+      "gunlukGetiri": 0.00161361,
+      "paraGirisiCikisi": -2621907.31,
+      "yatirimciDegisimi": -7
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TE4",
+      "fonAdi": "TEB PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-13",
+      "fiyat": 6.479765,
+      "tedavuldekiPaySayisi": 265884434,
+      "kisiSayisi": 1441,
+      "fonToplamDeger": 1722868710.33,
+      "gunlukGetiri": 0.00161361,
+      "paraGirisiCikisi": -2621907.31,
+      "yatirimciDegisimi": -7
+    },
     {
       "fonKodu": "TE4",
       "fonAdi": "TEB PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

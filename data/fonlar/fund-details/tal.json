@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "TAL",
     "slug": "tal",
@@ -12,44 +12,56 @@
     "yonetici": "ATLAS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "atlas-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 2.728379,
-    "tedavuldekiPaySayisi": 12746339,
-    "kisiSayisi": 730,
-    "fonToplamDeger": 34776848.28,
-    "gunlukGetiri": 0.00561007,
+    "fiyat": 2.759539,
+    "tedavuldekiPaySayisi": 12742420,
+    "kisiSayisi": 731,
+    "fonToplamDeger": 35163202.41,
+    "gunlukGetiri": 0.0114207,
     "getiriler": {
-      "birAy": 0.072592,
-      "ucAy": -0.043542,
-      "altiAy": -0.10442,
-      "yilbasi": 0.057928,
-      "birYil": 0.423705,
+      "birAy": 0.084841,
+      "ucAy": -0.039348999999999995,
+      "altiAy": -0.092194,
+      "yilbasi": 0.070011,
+      "birYil": 0.433044,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 61115.69,
+      "gunluk": -10814.63,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TAL",
+        "fonAdi": "ATLAS PORTFÖY ALTIN KATILIM FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 2.759539,
+        "tedavuldekiPaySayisi": 12742420,
+        "kisiSayisi": 731,
+        "fonToplamDeger": 35163202.41,
+        "gunlukGetiri": 0.0114207,
+        "paraGirisiCikisi": -10814.63,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "TAL",
         "fonAdi": "ATLAS PORTFÖY ALTIN KATILIM FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00561007,
       "paraGirisiCikisi": 61115.69,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "TAL",
+      "fonAdi": "ATLAS PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 2.759539,
+      "tedavuldekiPaySayisi": 12742420,
+      "kisiSayisi": 731,
+      "fonToplamDeger": 35163202.41,
+      "gunlukGetiri": 0.0114207,
+      "paraGirisiCikisi": -10814.63,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TAL",
+      "fonAdi": "ATLAS PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 2.759539,
+      "tedavuldekiPaySayisi": 12742420,
+      "kisiSayisi": 731,
+      "fonToplamDeger": 35163202.41,
+      "gunlukGetiri": 0.0114207,
+      "paraGirisiCikisi": -10814.63,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "TAL",
       "fonAdi": "ATLAS PORTFÖY ALTIN KATILIM FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

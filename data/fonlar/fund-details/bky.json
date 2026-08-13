@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "BKY",
     "slug": "bky",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 49.508374,
-    "tedavuldekiPaySayisi": 140124070,
-    "kisiSayisi": 962,
-    "fonToplamDeger": 6937314864.53,
-    "gunlukGetiri": 0.00065409,
+    "fiyat": 49.533706,
+    "tedavuldekiPaySayisi": 140193677,
+    "kisiSayisi": 961,
+    "fonToplamDeger": 6944312397.68,
+    "gunlukGetiri": 0.00051167,
     "getiriler": {
-      "birAy": 0.021952,
-      "ucAy": 0.06472,
-      "altiAy": 0.12096299999999999,
-      "yilbasi": 0.145631,
+      "birAy": 0.022475000000000002,
+      "ucAy": 0.06468,
+      "altiAy": 0.12117499999999999,
+      "yilbasi": 0.146217,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 590541974.6,
+      "gunluk": 3447892.67,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 7,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BKY",
+        "fonAdi": "YAPI KREDİ PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 49.533706,
+        "tedavuldekiPaySayisi": 140193677,
+        "kisiSayisi": 961,
+        "fonToplamDeger": 6944312397.68,
+        "gunlukGetiri": 0.00051167,
+        "paraGirisiCikisi": 3447892.67,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "BKY",
         "fonAdi": "YAPI KREDİ PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00065409,
       "paraGirisiCikisi": 590541974.6,
       "yatirimciDegisimi": 7
+    },
+    {
+      "fonKodu": "BKY",
+      "fonAdi": "YAPI KREDİ PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 49.533706,
+      "tedavuldekiPaySayisi": 140193677,
+      "kisiSayisi": 961,
+      "fonToplamDeger": 6944312397.68,
+      "gunlukGetiri": 0.00051167,
+      "paraGirisiCikisi": 3447892.67,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BKY",
+      "fonAdi": "YAPI KREDİ PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 49.533706,
+      "tedavuldekiPaySayisi": 140193677,
+      "kisiSayisi": 961,
+      "fonToplamDeger": 6944312397.68,
+      "gunlukGetiri": 0.00051167,
+      "paraGirisiCikisi": 3447892.67,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "BKY",
       "fonAdi": "YAPI KREDİ PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "NZT",
     "slug": "nzt",
@@ -12,44 +12,56 @@
     "yonetici": "NEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "neo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 6.009099,
-    "tedavuldekiPaySayisi": 1603311299,
-    "kisiSayisi": 430,
-    "fonToplamDeger": 9634456033.39,
-    "gunlukGetiri": 0.00104718,
+    "fiyat": 6.015394,
+    "tedavuldekiPaySayisi": 1547165496,
+    "kisiSayisi": 424,
+    "fonToplamDeger": 9306809593.46,
+    "gunlukGetiri": 0.00104758,
     "getiriler": {
-      "birAy": 0.031923,
-      "ucAy": 0.101863,
-      "altiAy": 0.20749099999999998,
-      "yilbasi": 0.257719,
-      "birYil": 0.46793399999999996,
-      "ucYil": 2.589903,
-      "besYil": 3.727264
+      "birAy": 0.033004,
+      "ucAy": 0.101845,
+      "altiAy": 0.207592,
+      "yilbasi": 0.259036,
+      "birYil": 0.467791,
+      "ucYil": 2.593664,
+      "besYil": 3.734916
     },
     "paraAkisi": {
-      "gunluk": 169426558.32,
+      "gunluk": -337739126.49,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 4,
+      "gunluk": -6,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NZT",
+        "fonAdi": "NEO PORTFÖY PARA PİYASASI SERBEST FON",
+        "tarih": "2026-08-13",
+        "fiyat": 6.015394,
+        "tedavuldekiPaySayisi": 1547165496,
+        "kisiSayisi": 424,
+        "fonToplamDeger": 9306809593.46,
+        "gunlukGetiri": 0.00104758,
+        "paraGirisiCikisi": -337739126.49,
+        "yatirimciDegisimi": -6
+      },
       {
         "fonKodu": "NZT",
         "fonAdi": "NEO PORTFÖY PARA PİYASASI SERBEST FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00104718,
       "paraGirisiCikisi": 169426558.32,
       "yatirimciDegisimi": 4
+    },
+    {
+      "fonKodu": "NZT",
+      "fonAdi": "NEO PORTFÖY PARA PİYASASI SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 6.015394,
+      "tedavuldekiPaySayisi": 1547165496,
+      "kisiSayisi": 424,
+      "fonToplamDeger": 9306809593.46,
+      "gunlukGetiri": 0.00104758,
+      "paraGirisiCikisi": -337739126.49,
+      "yatirimciDegisimi": -6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NZT",
+      "fonAdi": "NEO PORTFÖY PARA PİYASASI SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 6.015394,
+      "tedavuldekiPaySayisi": 1547165496,
+      "kisiSayisi": 424,
+      "fonToplamDeger": 9306809593.46,
+      "gunlukGetiri": 0.00104758,
+      "paraGirisiCikisi": -337739126.49,
+      "yatirimciDegisimi": -6
+    },
     {
       "fonKodu": "NZT",
       "fonAdi": "NEO PORTFÖY PARA PİYASASI SERBEST FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

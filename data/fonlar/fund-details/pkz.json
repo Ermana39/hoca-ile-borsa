@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "PKZ",
     "slug": "pkz",
@@ -12,13 +12,13 @@
     "yonetici": "PUSULA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pusula-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 12.27655,
-    "tedavuldekiPaySayisi": 4147349617,
+    "fiyat": 13.210654,
+    "tedavuldekiPaySayisi": 4161197156,
     "kisiSayisi": 16,
-    "fonToplamDeger": 50915145886.6,
-    "gunlukGetiri": 0.10456811,
+    "fonToplamDeger": 54972134777.4,
+    "gunlukGetiri": 0.07608848,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 457291212.03,
+      "gunluk": 182935046.48,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PKZ",
+        "fonAdi": "PUSULA PORTFÖY KUZEY HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-13",
+        "fiyat": 13.210654,
+        "tedavuldekiPaySayisi": 4161197156,
+        "kisiSayisi": 16,
+        "fonToplamDeger": 54972134777.4,
+        "gunlukGetiri": 0.07608848,
+        "paraGirisiCikisi": 182935046.48,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "PKZ",
         "fonAdi": "PUSULA PORTFÖY KUZEY HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.10456811,
       "paraGirisiCikisi": 457291212.03,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "PKZ",
+      "fonAdi": "PUSULA PORTFÖY KUZEY HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 13.210654,
+      "tedavuldekiPaySayisi": 4161197156,
+      "kisiSayisi": 16,
+      "fonToplamDeger": 54972134777.4,
+      "gunlukGetiri": 0.07608848,
+      "paraGirisiCikisi": 182935046.48,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PKZ",
+      "fonAdi": "PUSULA PORTFÖY KUZEY HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 13.210654,
+      "tedavuldekiPaySayisi": 4161197156,
+      "kisiSayisi": 16,
+      "fonToplamDeger": 54972134777.4,
+      "gunlukGetiri": 0.07608848,
+      "paraGirisiCikisi": 182935046.48,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "PKZ",
       "fonAdi": "PUSULA PORTFÖY KUZEY HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

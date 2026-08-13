@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "IFV",
     "slug": "ifv",
@@ -12,44 +12,56 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 4.613517,
-    "tedavuldekiPaySayisi": 3210103,
-    "kisiSayisi": 167,
-    "fonToplamDeger": 14809865.75,
-    "gunlukGetiri": 0.00173705,
+    "fiyat": 4.611935,
+    "tedavuldekiPaySayisi": 3190121,
+    "kisiSayisi": 170,
+    "fonToplamDeger": 14712632.18,
+    "gunlukGetiri": -0.00034291,
     "getiriler": {
-      "birAy": 0.033749,
-      "ucAy": 0.094335,
-      "altiAy": 0.20034300000000002,
-      "yilbasi": 0.255054,
-      "birYil": 0.46493,
-      "ucYil": 2.328493,
+      "birAy": 0.033394,
+      "ucAy": 0.09413500000000001,
+      "altiAy": 0.19862,
+      "yilbasi": 0.254623,
+      "birYil": 0.462769,
+      "ucYil": 2.3273509999999997,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 9333.14,
+      "gunluk": -92155.69,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": 3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IFV",
+        "fonAdi": "TEB PORTFÖY BİRİNCİ KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 4.611935,
+        "tedavuldekiPaySayisi": 3190121,
+        "kisiSayisi": 170,
+        "fonToplamDeger": 14712632.18,
+        "gunlukGetiri": -0.00034291,
+        "paraGirisiCikisi": -92155.69,
+        "yatirimciDegisimi": 3
+      },
       {
         "fonKodu": "IFV",
         "fonAdi": "TEB PORTFÖY BİRİNCİ KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00173705,
       "paraGirisiCikisi": 9333.14,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "IFV",
+      "fonAdi": "TEB PORTFÖY BİRİNCİ KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 4.611935,
+      "tedavuldekiPaySayisi": 3190121,
+      "kisiSayisi": 170,
+      "fonToplamDeger": 14712632.18,
+      "gunlukGetiri": -0.00034291,
+      "paraGirisiCikisi": -92155.69,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IFV",
+      "fonAdi": "TEB PORTFÖY BİRİNCİ KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 4.611935,
+      "tedavuldekiPaySayisi": 3190121,
+      "kisiSayisi": 170,
+      "fonToplamDeger": 14712632.18,
+      "gunlukGetiri": -0.00034291,
+      "paraGirisiCikisi": -92155.69,
+      "yatirimciDegisimi": 3
+    },
     {
       "fonKodu": "IFV",
       "fonAdi": "TEB PORTFÖY BİRİNCİ KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

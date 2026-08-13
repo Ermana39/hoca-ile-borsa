@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "DZE",
     "slug": "dze",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 0.967215,
-    "tedavuldekiPaySayisi": 197753100,
-    "kisiSayisi": 2852,
-    "fonToplamDeger": 191269738.46,
-    "gunlukGetiri": -0.00844937,
+    "fiyat": 0.993459,
+    "tedavuldekiPaySayisi": 197578500,
+    "kisiSayisi": 2845,
+    "fonToplamDeger": 196286233.22,
+    "gunlukGetiri": 0.02713357,
     "getiriler": {
-      "birAy": -0.013923000000000001,
-      "ucAy": -0.081111,
-      "altiAy": -0.00819,
-      "yilbasi": 0.193434,
-      "birYil": 0.21875699999999998,
-      "ucYil": 0.824931,
-      "besYil": 9.396025
+      "birAy": 0.012832,
+      "ucAy": -0.036032,
+      "altiAy": -0.011384,
+      "yilbasi": 0.22581600000000002,
+      "birYil": 0.262136,
+      "ucYil": 0.874447,
+      "besYil": 9.428155
     },
     "paraAkisi": {
-      "gunluk": -251282.46,
+      "gunluk": -173457.94,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 6,
+      "gunluk": -7,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DZE",
+        "fonAdi": "DENİZ PORTFÖY BIST 100 ENDEKSİ HİSSE SENEDİ FONU(HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-13",
+        "fiyat": 0.993459,
+        "tedavuldekiPaySayisi": 197578500,
+        "kisiSayisi": 2845,
+        "fonToplamDeger": 196286233.22,
+        "gunlukGetiri": 0.02713357,
+        "paraGirisiCikisi": -173457.94,
+        "yatirimciDegisimi": -7
+      },
       {
         "fonKodu": "DZE",
         "fonAdi": "DENİZ PORTFÖY BIST 100 ENDEKSİ HİSSE SENEDİ FONU(HİSSE SENEDİ YOĞUN FON)",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00844937,
       "paraGirisiCikisi": -251282.46,
       "yatirimciDegisimi": 6
+    },
+    {
+      "fonKodu": "DZE",
+      "fonAdi": "DENİZ PORTFÖY BIST 100 ENDEKSİ HİSSE SENEDİ FONU(HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 0.993459,
+      "tedavuldekiPaySayisi": 197578500,
+      "kisiSayisi": 2845,
+      "fonToplamDeger": 196286233.22,
+      "gunlukGetiri": 0.02713357,
+      "paraGirisiCikisi": -173457.94,
+      "yatirimciDegisimi": -7
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DZE",
+      "fonAdi": "DENİZ PORTFÖY BIST 100 ENDEKSİ HİSSE SENEDİ FONU(HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 0.993459,
+      "tedavuldekiPaySayisi": 197578500,
+      "kisiSayisi": 2845,
+      "fonToplamDeger": 196286233.22,
+      "gunlukGetiri": 0.02713357,
+      "paraGirisiCikisi": -173457.94,
+      "yatirimciDegisimi": -7
+    },
     {
       "fonKodu": "DZE",
       "fonAdi": "DENİZ PORTFÖY BIST 100 ENDEKSİ HİSSE SENEDİ FONU(HİSSE SENEDİ YOĞUN FON)",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "TBT",
     "slug": "tbt",
@@ -12,44 +12,56 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 52.617324,
-    "tedavuldekiPaySayisi": 7308323.52,
-    "kisiSayisi": 2457,
-    "fonToplamDeger": 384544427.32,
-    "gunlukGetiri": -0.00222832,
+    "fiyat": 52.708321,
+    "tedavuldekiPaySayisi": 7274463.52,
+    "kisiSayisi": 2448,
+    "fonToplamDeger": 383424757.06,
+    "gunlukGetiri": 0.00172941,
     "getiriler": {
-      "birAy": 0.008349,
-      "ucAy": 0.044010999999999995,
-      "altiAy": 0.027341,
-      "yilbasi": 0.020723,
-      "birYil": 0.17427299999999998,
-      "ucYil": 0.735017,
-      "besYil": 1.2972890000000001
+      "birAy": 0.010092,
+      "ucAy": 0.048082,
+      "altiAy": 0.023069000000000003,
+      "yilbasi": 0.022488,
+      "birYil": 0.178783,
+      "ucYil": 0.7380169999999999,
+      "besYil": 1.298706
     },
     "paraAkisi": {
-      "gunluk": -455455.56,
+      "gunluk": -1784703.75,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
+      "gunluk": -9,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TBT",
+        "fonAdi": "TEB PORTFÖY BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 52.708321,
+        "tedavuldekiPaySayisi": 7274463.52,
+        "kisiSayisi": 2448,
+        "fonToplamDeger": 383424757.06,
+        "gunlukGetiri": 0.00172941,
+        "paraGirisiCikisi": -1784703.75,
+        "yatirimciDegisimi": -9
+      },
       {
         "fonKodu": "TBT",
         "fonAdi": "TEB PORTFÖY BORÇLANMA ARAÇLARI FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00222832,
       "paraGirisiCikisi": -455455.56,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "TBT",
+      "fonAdi": "TEB PORTFÖY BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 52.708321,
+      "tedavuldekiPaySayisi": 7274463.52,
+      "kisiSayisi": 2448,
+      "fonToplamDeger": 383424757.06,
+      "gunlukGetiri": 0.00172941,
+      "paraGirisiCikisi": -1784703.75,
+      "yatirimciDegisimi": -9
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TBT",
+      "fonAdi": "TEB PORTFÖY BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 52.708321,
+      "tedavuldekiPaySayisi": 7274463.52,
+      "kisiSayisi": 2448,
+      "fonToplamDeger": 383424757.06,
+      "gunlukGetiri": 0.00172941,
+      "paraGirisiCikisi": -1784703.75,
+      "yatirimciDegisimi": -9
+    },
     {
       "fonKodu": "TBT",
       "fonAdi": "TEB PORTFÖY BORÇLANMA ARAÇLARI FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

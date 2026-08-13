@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "EPP",
     "slug": "epp",
@@ -12,44 +12,56 @@
     "yonetici": "EMAA BLUE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "emaa-blue-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.466053,
-    "tedavuldekiPaySayisi": 1370327478,
+    "fiyat": 1.467634,
+    "tedavuldekiPaySayisi": 1368963198,
     "kisiSayisi": 48,
-    "fonToplamDeger": 2008973335.7,
-    "gunlukGetiri": 0.00107957,
+    "fonToplamDeger": 2009137559.62,
+    "gunlukGetiri": 0.00107841,
     "getiriler": {
-      "birAy": 0.033285,
-      "ucAy": 0.10699600000000001,
-      "altiAy": 0.21611999999999998,
-      "yilbasi": 0.26882,
+      "birAy": 0.0344,
+      "ucAy": 0.106958,
+      "altiAy": 0.21619,
+      "yilbasi": 0.270188,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 34670386.86,
+      "gunluk": -2002263.71,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "EPP",
+        "fonAdi": "EMAA BLUE PORTFÖY PARA PİYASASI SERBEST FON",
+        "tarih": "2026-08-13",
+        "fiyat": 1.467634,
+        "tedavuldekiPaySayisi": 1368963198,
+        "kisiSayisi": 48,
+        "fonToplamDeger": 2009137559.62,
+        "gunlukGetiri": 0.00107841,
+        "paraGirisiCikisi": -2002263.71,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "EPP",
         "fonAdi": "EMAA BLUE PORTFÖY PARA PİYASASI SERBEST FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00107957,
       "paraGirisiCikisi": 34670386.86,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "EPP",
+      "fonAdi": "EMAA BLUE PORTFÖY PARA PİYASASI SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 1.467634,
+      "tedavuldekiPaySayisi": 1368963198,
+      "kisiSayisi": 48,
+      "fonToplamDeger": 2009137559.62,
+      "gunlukGetiri": 0.00107841,
+      "paraGirisiCikisi": -2002263.71,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "EPP",
+      "fonAdi": "EMAA BLUE PORTFÖY PARA PİYASASI SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 1.467634,
+      "tedavuldekiPaySayisi": 1368963198,
+      "kisiSayisi": 48,
+      "fonToplamDeger": 2009137559.62,
+      "gunlukGetiri": 0.00107841,
+      "paraGirisiCikisi": -2002263.71,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "EPP",
       "fonAdi": "EMAA BLUE PORTFÖY PARA PİYASASI SERBEST FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

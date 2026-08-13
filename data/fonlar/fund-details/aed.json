@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "AED",
     "slug": "aed",
@@ -12,44 +12,56 @@
     "yonetici": "ATA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ata-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 111.933239,
-    "tedavuldekiPaySayisi": 554562.28,
-    "kisiSayisi": 1373,
-    "fonToplamDeger": 62073952.03,
-    "gunlukGetiri": -0.00168708,
+    "fiyat": 114.099243,
+    "tedavuldekiPaySayisi": 553184.09,
+    "kisiSayisi": 1374,
+    "fonToplamDeger": 63117886.09,
+    "gunlukGetiri": 0.01935086,
     "getiriler": {
-      "birAy": 0.017374,
-      "ucAy": -0.010111000000000002,
-      "altiAy": 0.049943999999999995,
-      "yilbasi": 0.282267,
-      "birYil": 0.34306,
-      "ucYil": 1.48347,
-      "besYil": 8.946218
+      "birAy": 0.037061000000000004,
+      "ucAy": 0.021322,
+      "altiAy": 0.045407,
+      "yilbasi": 0.30707999999999996,
+      "birYil": 0.37661700000000004,
+      "ucYil": 1.5315280000000002,
+      "besYil": 9.055682000000001
     },
     "paraAkisi": {
-      "gunluk": -126708.43,
+      "gunluk": -157250.44,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AED",
+        "fonAdi": "ATA PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-13",
+        "fiyat": 114.099243,
+        "tedavuldekiPaySayisi": 553184.09,
+        "kisiSayisi": 1374,
+        "fonToplamDeger": 63117886.09,
+        "gunlukGetiri": 0.01935086,
+        "paraGirisiCikisi": -157250.44,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "AED",
         "fonAdi": "ATA PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00168708,
       "paraGirisiCikisi": -126708.43,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "AED",
+      "fonAdi": "ATA PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-13",
+      "fiyat": 114.099243,
+      "tedavuldekiPaySayisi": 553184.09,
+      "kisiSayisi": 1374,
+      "fonToplamDeger": 63117886.09,
+      "gunlukGetiri": 0.01935086,
+      "paraGirisiCikisi": -157250.44,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AED",
+      "fonAdi": "ATA PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-13",
+      "fiyat": 114.099243,
+      "tedavuldekiPaySayisi": 553184.09,
+      "kisiSayisi": 1374,
+      "fonToplamDeger": 63117886.09,
+      "gunlukGetiri": 0.01935086,
+      "paraGirisiCikisi": -157250.44,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "AED",
       "fonAdi": "ATA PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

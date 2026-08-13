@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "DAT",
     "slug": "dat",
@@ -12,13 +12,13 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 97.691255,
-    "tedavuldekiPaySayisi": 3400001,
+    "fiyat": 97.764524,
+    "tedavuldekiPaySayisi": 2782588,
     "kisiSayisi": 6,
-    "fonToplamDeger": 332150363.22,
-    "gunlukGetiri": 0.00036437,
+    "fonToplamDeger": 272038392.42,
+    "gunlukGetiri": 0.00075001,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": -60361088.06,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DAT",
+        "fonAdi": "DENİZ PORTFÖY ARMUT SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-13",
+        "fiyat": 97.764524,
+        "tedavuldekiPaySayisi": 2782588,
+        "kisiSayisi": 6,
+        "fonToplamDeger": 272038392.42,
+        "gunlukGetiri": 0.00075001,
+        "paraGirisiCikisi": -60361088.06,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "DAT",
         "fonAdi": "DENİZ PORTFÖY ARMUT SERBEST (DÖVİZ) ÖZEL FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00036437,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DAT",
+      "fonAdi": "DENİZ PORTFÖY ARMUT SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-13",
+      "fiyat": 97.764524,
+      "tedavuldekiPaySayisi": 2782588,
+      "kisiSayisi": 6,
+      "fonToplamDeger": 272038392.42,
+      "gunlukGetiri": 0.00075001,
+      "paraGirisiCikisi": -60361088.06,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DAT",
+      "fonAdi": "DENİZ PORTFÖY ARMUT SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-13",
+      "fiyat": 97.764524,
+      "tedavuldekiPaySayisi": 2782588,
+      "kisiSayisi": 6,
+      "fonToplamDeger": 272038392.42,
+      "gunlukGetiri": 0.00075001,
+      "paraGirisiCikisi": -60361088.06,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "DAT",
       "fonAdi": "DENİZ PORTFÖY ARMUT SERBEST (DÖVİZ) ÖZEL FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

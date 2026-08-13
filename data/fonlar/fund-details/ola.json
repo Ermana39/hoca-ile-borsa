@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "OLA",
     "slug": "ola",
@@ -12,24 +12,24 @@
     "yonetici": "OSMANLI PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "osmanli-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 53.149431,
-    "tedavuldekiPaySayisi": 383593.99,
+    "fiyat": 53.175152,
+    "tedavuldekiPaySayisi": 382593.99,
     "kisiSayisi": 30,
-    "fonToplamDeger": 20387802.38,
-    "gunlukGetiri": -0.00207239,
+    "fonToplamDeger": 20344493.58,
+    "gunlukGetiri": 0.00048394,
     "getiriler": {
-      "birAy": 0.022332,
-      "ucAy": 0.020238,
-      "altiAy": 0.035308,
-      "yilbasi": 0.067698,
-      "birYil": 0.132717,
-      "ucYil": 0.9141320000000001,
+      "birAy": 0.022827,
+      "ucAy": 0.023174999999999998,
+      "altiAy": 0.038740000000000004,
+      "yilbasi": 0.068214,
+      "birYil": 0.137257,
+      "ucYil": 0.915059,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": -53175.15,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OLA",
+        "fonAdi": "OSMANLI PORTFÖY İKİNCİ SERBEST (DÖVİZ- AVRO) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 53.175152,
+        "tedavuldekiPaySayisi": 382593.99,
+        "kisiSayisi": 30,
+        "fonToplamDeger": 20344493.58,
+        "gunlukGetiri": 0.00048394,
+        "paraGirisiCikisi": -53175.15,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "OLA",
         "fonAdi": "OSMANLI PORTFÖY İKİNCİ SERBEST (DÖVİZ- AVRO) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00207239,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "OLA",
+      "fonAdi": "OSMANLI PORTFÖY İKİNCİ SERBEST (DÖVİZ- AVRO) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 53.175152,
+      "tedavuldekiPaySayisi": 382593.99,
+      "kisiSayisi": 30,
+      "fonToplamDeger": 20344493.58,
+      "gunlukGetiri": 0.00048394,
+      "paraGirisiCikisi": -53175.15,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OLA",
+      "fonAdi": "OSMANLI PORTFÖY İKİNCİ SERBEST (DÖVİZ- AVRO) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 53.175152,
+      "tedavuldekiPaySayisi": 382593.99,
+      "kisiSayisi": 30,
+      "fonToplamDeger": 20344493.58,
+      "gunlukGetiri": 0.00048394,
+      "paraGirisiCikisi": -53175.15,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "OLA",
       "fonAdi": "OSMANLI PORTFÖY İKİNCİ SERBEST (DÖVİZ- AVRO) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

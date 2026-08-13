@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "EZM",
     "slug": "ezm",
@@ -12,13 +12,13 @@
     "yonetici": "KUVEYT TÜRK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kuveyt-turk-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 44.345297,
+    "fiyat": 44.342503,
     "tedavuldekiPaySayisi": 100000,
     "kisiSayisi": 1,
-    "fonToplamDeger": 4434529.72,
-    "gunlukGetiri": 0.00052825,
+    "fonToplamDeger": 4434250.25,
+    "gunlukGetiri": -0.00006301,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "EZM",
+        "fonAdi": "KUVEYT TÜRK PORTFÖY EZM KATILIM SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-13",
+        "fiyat": 44.342503,
+        "tedavuldekiPaySayisi": 100000,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 4434250.25,
+        "gunlukGetiri": -0.00006301,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "EZM",
         "fonAdi": "KUVEYT TÜRK PORTFÖY EZM KATILIM SERBEST (DÖVİZ) ÖZEL FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00052825,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "EZM",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY EZM KATILIM SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-13",
+      "fiyat": 44.342503,
+      "tedavuldekiPaySayisi": 100000,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 4434250.25,
+      "gunlukGetiri": -0.00006301,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "EZM",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY EZM KATILIM SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-13",
+      "fiyat": 44.342503,
+      "tedavuldekiPaySayisi": 100000,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 4434250.25,
+      "gunlukGetiri": -0.00006301,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "EZM",
       "fonAdi": "KUVEYT TÜRK PORTFÖY EZM KATILIM SERBEST (DÖVİZ) ÖZEL FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

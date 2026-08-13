@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "YPU",
     "slug": "ypu",
@@ -12,13 +12,13 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 66.302332,
-    "tedavuldekiPaySayisi": 72491449,
-    "kisiSayisi": 1888,
-    "fonToplamDeger": 4806352108.46,
-    "gunlukGetiri": 0.00075094,
+    "fiyat": 66.398624,
+    "tedavuldekiPaySayisi": 72568962,
+    "kisiSayisi": 1896,
+    "fonToplamDeger": 4818479232.27,
+    "gunlukGetiri": 0.00145232,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -72767605,
+      "gunluk": 5146756.54,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
+      "gunluk": 8,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YPU",
+        "fonAdi": "YAPI KREDİ PORTFÖY SERBEST (DÖVİZ-POUND) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 66.398624,
+        "tedavuldekiPaySayisi": 72568962,
+        "kisiSayisi": 1896,
+        "fonToplamDeger": 4818479232.27,
+        "gunlukGetiri": 0.00145232,
+        "paraGirisiCikisi": 5146756.54,
+        "yatirimciDegisimi": 8
+      },
       {
         "fonKodu": "YPU",
         "fonAdi": "YAPI KREDİ PORTFÖY SERBEST (DÖVİZ-POUND) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00075094,
       "paraGirisiCikisi": -72767605,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "YPU",
+      "fonAdi": "YAPI KREDİ PORTFÖY SERBEST (DÖVİZ-POUND) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 66.398624,
+      "tedavuldekiPaySayisi": 72568962,
+      "kisiSayisi": 1896,
+      "fonToplamDeger": 4818479232.27,
+      "gunlukGetiri": 0.00145232,
+      "paraGirisiCikisi": 5146756.54,
+      "yatirimciDegisimi": 8
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YPU",
+      "fonAdi": "YAPI KREDİ PORTFÖY SERBEST (DÖVİZ-POUND) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 66.398624,
+      "tedavuldekiPaySayisi": 72568962,
+      "kisiSayisi": 1896,
+      "fonToplamDeger": 4818479232.27,
+      "gunlukGetiri": 0.00145232,
+      "paraGirisiCikisi": 5146756.54,
+      "yatirimciDegisimi": 8
+    },
     {
       "fonKodu": "YPU",
       "fonAdi": "YAPI KREDİ PORTFÖY SERBEST (DÖVİZ-POUND) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

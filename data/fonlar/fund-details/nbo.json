@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "NBO",
     "slug": "nbo",
@@ -12,44 +12,56 @@
     "yonetici": "NEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "neo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.498601,
-    "tedavuldekiPaySayisi": 1324068855,
-    "kisiSayisi": 407,
-    "fonToplamDeger": 1984251165.12,
-    "gunlukGetiri": 0.00111896,
+    "fiyat": 1.50081,
+    "tedavuldekiPaySayisi": 1325855761,
+    "kisiSayisi": 409,
+    "fonToplamDeger": 1989857311.62,
+    "gunlukGetiri": 0.00147404,
     "getiriler": {
-      "birAy": 0.0337,
-      "ucAy": 0.105779,
-      "altiAy": 0.223161,
-      "yilbasi": 0.292451,
+      "birAy": 0.035224000000000005,
+      "ucAy": 0.10613,
+      "altiAy": 0.223268,
+      "yilbasi": 0.294356,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -57045694.71,
+      "gunluk": 2681806.39,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 15,
+      "gunluk": 2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NBO",
+        "fonAdi": "NEO PORTFÖY BORÇLANMA ARACI FONLARI FON SEPETİ FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 1.50081,
+        "tedavuldekiPaySayisi": 1325855761,
+        "kisiSayisi": 409,
+        "fonToplamDeger": 1989857311.62,
+        "gunlukGetiri": 0.00147404,
+        "paraGirisiCikisi": 2681806.39,
+        "yatirimciDegisimi": 2
+      },
       {
         "fonKodu": "NBO",
         "fonAdi": "NEO PORTFÖY BORÇLANMA ARACI FONLARI FON SEPETİ FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00111896,
       "paraGirisiCikisi": -57045694.71,
       "yatirimciDegisimi": 15
+    },
+    {
+      "fonKodu": "NBO",
+      "fonAdi": "NEO PORTFÖY BORÇLANMA ARACI FONLARI FON SEPETİ FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 1.50081,
+      "tedavuldekiPaySayisi": 1325855761,
+      "kisiSayisi": 409,
+      "fonToplamDeger": 1989857311.62,
+      "gunlukGetiri": 0.00147404,
+      "paraGirisiCikisi": 2681806.39,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NBO",
+      "fonAdi": "NEO PORTFÖY BORÇLANMA ARACI FONLARI FON SEPETİ FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 1.50081,
+      "tedavuldekiPaySayisi": 1325855761,
+      "kisiSayisi": 409,
+      "fonToplamDeger": 1989857311.62,
+      "gunlukGetiri": 0.00147404,
+      "paraGirisiCikisi": 2681806.39,
+      "yatirimciDegisimi": 2
+    },
     {
       "fonKodu": "NBO",
       "fonAdi": "NEO PORTFÖY BORÇLANMA ARACI FONLARI FON SEPETİ FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

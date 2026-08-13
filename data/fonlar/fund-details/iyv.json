@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "IYV",
     "slug": "iyv",
@@ -12,44 +12,56 @@
     "yonetici": "İSTANBUL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "istanbul-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.088327,
+    "fiyat": 1.106519,
     "tedavuldekiPaySayisi": 171596983,
-    "kisiSayisi": 69,
-    "fonToplamDeger": 186753697.85,
-    "gunlukGetiri": -0.0077252,
+    "kisiSayisi": 66,
+    "fonToplamDeger": 189875270.58,
+    "gunlukGetiri": 0.01671556,
     "getiriler": {
-      "birAy": -0.03105,
-      "ucAy": -0.073956,
-      "altiAy": -0.06469699999999999,
-      "yilbasi": 0.055289000000000005,
+      "birAy": -0.014854000000000001,
+      "ucAy": -0.032902,
+      "altiAy": -0.078752,
+      "yilbasi": 0.07292900000000001,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -2983244.7,
-      "besGun": null,
-      "birAy": null,
-      "ucAy": null
-    },
-    "yatirimciDegisimi": {
       "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "yatirimciDegisimi": {
+      "gunluk": -3,
+      "besGun": null,
+      "birAy": null,
+      "ucAy": null
+    },
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IYV",
+        "fonAdi": "İSTANBUL PORTFÖY AŞİYAN SERBEST FON",
+        "tarih": "2026-08-13",
+        "fiyat": 1.106519,
+        "tedavuldekiPaySayisi": 171596983,
+        "kisiSayisi": 66,
+        "fonToplamDeger": 189875270.58,
+        "gunlukGetiri": 0.01671556,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "IYV",
         "fonAdi": "İSTANBUL PORTFÖY AŞİYAN SERBEST FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.0077252,
       "paraGirisiCikisi": -2983244.7,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "IYV",
+      "fonAdi": "İSTANBUL PORTFÖY AŞİYAN SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 1.106519,
+      "tedavuldekiPaySayisi": 171596983,
+      "kisiSayisi": 66,
+      "fonToplamDeger": 189875270.58,
+      "gunlukGetiri": 0.01671556,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IYV",
+      "fonAdi": "İSTANBUL PORTFÖY AŞİYAN SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 1.106519,
+      "tedavuldekiPaySayisi": 171596983,
+      "kisiSayisi": 66,
+      "fonToplamDeger": 189875270.58,
+      "gunlukGetiri": 0.01671556,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "IYV",
       "fonAdi": "İSTANBUL PORTFÖY AŞİYAN SERBEST FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "BVF",
     "slug": "bvf",
@@ -12,44 +12,56 @@
     "yonetici": "BV PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "bv-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.399329,
-    "tedavuldekiPaySayisi": 1297748926,
-    "kisiSayisi": 529,
-    "fonToplamDeger": 1815977512.68,
-    "gunlukGetiri": 0.00101007,
+    "fiyat": 1.401327,
+    "tedavuldekiPaySayisi": 1301042062,
+    "kisiSayisi": 532,
+    "fonToplamDeger": 1823184924.88,
+    "gunlukGetiri": 0.00142783,
     "getiriler": {
-      "birAy": 0.033815,
-      "ucAy": 0.107019,
-      "altiAy": 0.21577100000000002,
-      "yilbasi": 0.27203700000000003,
+      "birAy": 0.035291,
+      "ucAy": 0.107489,
+      "altiAy": 0.216153,
+      "yilbasi": 0.273854,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -2579292.19,
+      "gunluk": 4614760.39,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -26,
+      "gunluk": 3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BVF",
+        "fonAdi": "BV PORTFÖY PARA PİYASASI (TL) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 1.401327,
+        "tedavuldekiPaySayisi": 1301042062,
+        "kisiSayisi": 532,
+        "fonToplamDeger": 1823184924.88,
+        "gunlukGetiri": 0.00142783,
+        "paraGirisiCikisi": 4614760.39,
+        "yatirimciDegisimi": 3
+      },
       {
         "fonKodu": "BVF",
         "fonAdi": "BV PORTFÖY PARA PİYASASI (TL) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00101007,
       "paraGirisiCikisi": -2579292.19,
       "yatirimciDegisimi": -26
+    },
+    {
+      "fonKodu": "BVF",
+      "fonAdi": "BV PORTFÖY PARA PİYASASI (TL) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 1.401327,
+      "tedavuldekiPaySayisi": 1301042062,
+      "kisiSayisi": 532,
+      "fonToplamDeger": 1823184924.88,
+      "gunlukGetiri": 0.00142783,
+      "paraGirisiCikisi": 4614760.39,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BVF",
+      "fonAdi": "BV PORTFÖY PARA PİYASASI (TL) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 1.401327,
+      "tedavuldekiPaySayisi": 1301042062,
+      "kisiSayisi": 532,
+      "fonToplamDeger": 1823184924.88,
+      "gunlukGetiri": 0.00142783,
+      "paraGirisiCikisi": 4614760.39,
+      "yatirimciDegisimi": 3
+    },
     {
       "fonKodu": "BVF",
       "fonAdi": "BV PORTFÖY PARA PİYASASI (TL) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

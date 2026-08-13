@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "FS5",
     "slug": "fs5",
@@ -12,19 +12,19 @@
     "yonetici": "ONE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "one-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.973055,
+    "fiyat": 1.980957,
     "tedavuldekiPaySayisi": 4871508,
     "kisiSayisi": 8,
-    "fonToplamDeger": 9611755.34,
-    "gunlukGetiri": -0.02160783,
+    "fonToplamDeger": 9650247.9,
+    "gunlukGetiri": 0.00400496,
     "getiriler": {
-      "birAy": -0.062951,
-      "ucAy": -0.225929,
-      "altiAy": -0.18209,
-      "yilbasi": -0.15590400000000001,
-      "birYil": -0.045259,
+      "birAy": -0.059199,
+      "ucAy": -0.224512,
+      "altiAy": -0.18269100000000002,
+      "yilbasi": -0.152523,
+      "birYil": -0.041462000000000006,
       "ucYil": null,
       "besYil": null
     },
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FS5",
+        "fonAdi": "ONE PORTFÖY BİRİNCİ İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-13",
+        "fiyat": 1.980957,
+        "tedavuldekiPaySayisi": 4871508,
+        "kisiSayisi": 8,
+        "fonToplamDeger": 9650247.9,
+        "gunlukGetiri": 0.00400496,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "FS5",
         "fonAdi": "ONE PORTFÖY BİRİNCİ İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.02160783,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "FS5",
+      "fonAdi": "ONE PORTFÖY BİRİNCİ İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 1.980957,
+      "tedavuldekiPaySayisi": 4871508,
+      "kisiSayisi": 8,
+      "fonToplamDeger": 9650247.9,
+      "gunlukGetiri": 0.00400496,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FS5",
+      "fonAdi": "ONE PORTFÖY BİRİNCİ İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 1.980957,
+      "tedavuldekiPaySayisi": 4871508,
+      "kisiSayisi": 8,
+      "fonToplamDeger": 9650247.9,
+      "gunlukGetiri": 0.00400496,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "FS5",
       "fonAdi": "ONE PORTFÖY BİRİNCİ İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

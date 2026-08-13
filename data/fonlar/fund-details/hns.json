@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "HNS",
     "slug": "hns",
@@ -12,13 +12,13 @@
     "yonetici": "HSBC PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hsbc-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 47.843883,
+    "fiyat": 47.886829,
     "tedavuldekiPaySayisi": 12494446,
     "kisiSayisi": 169,
-    "fonToplamDeger": 597782807.27,
-    "gunlukGetiri": 0.00030923,
+    "fonToplamDeger": 598319394.46,
+    "gunlukGetiri": 0.00089763,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 571638.71,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HNS",
+        "fonAdi": "HSBC PORTFÖY KAR PAYI ÖDEYEN MAYIS 2029 SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 47.886829,
+        "tedavuldekiPaySayisi": 12494446,
+        "kisiSayisi": 169,
+        "fonToplamDeger": 598319394.46,
+        "gunlukGetiri": 0.00089763,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "HNS",
         "fonAdi": "HSBC PORTFÖY KAR PAYI ÖDEYEN MAYIS 2029 SERBEST (DÖVİZ) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00030923,
       "paraGirisiCikisi": 571638.71,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "HNS",
+      "fonAdi": "HSBC PORTFÖY KAR PAYI ÖDEYEN MAYIS 2029 SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 47.886829,
+      "tedavuldekiPaySayisi": 12494446,
+      "kisiSayisi": 169,
+      "fonToplamDeger": 598319394.46,
+      "gunlukGetiri": 0.00089763,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HNS",
+      "fonAdi": "HSBC PORTFÖY KAR PAYI ÖDEYEN MAYIS 2029 SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 47.886829,
+      "tedavuldekiPaySayisi": 12494446,
+      "kisiSayisi": 169,
+      "fonToplamDeger": 598319394.46,
+      "gunlukGetiri": 0.00089763,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "HNS",
       "fonAdi": "HSBC PORTFÖY KAR PAYI ÖDEYEN MAYIS 2029 SERBEST (DÖVİZ) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

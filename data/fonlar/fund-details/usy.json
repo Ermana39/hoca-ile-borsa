@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "USY",
     "slug": "usy",
@@ -12,24 +12,24 @@
     "yonetici": "ÜNLÜ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "unlu-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 0.258353,
-    "tedavuldekiPaySayisi": 5197604952,
-    "kisiSayisi": 397,
-    "fonToplamDeger": 1342818286.61,
-    "gunlukGetiri": 0.00203624,
+    "fiyat": 0.259543,
+    "tedavuldekiPaySayisi": 5195894649,
+    "kisiSayisi": 396,
+    "fonToplamDeger": 1348556821.85,
+    "gunlukGetiri": 0.0046061,
     "getiriler": {
-      "birAy": 0.031448000000000004,
-      "ucAy": 0.073742,
-      "altiAy": 0.147822,
-      "yilbasi": 0.19064399999999998,
-      "birYil": 0.519178,
-      "ucYil": 1.593203,
-      "besYil": 9.424606
+      "birAy": 0.036199,
+      "ucAy": 0.08017300000000001,
+      "altiAy": 0.151968,
+      "yilbasi": 0.196128,
+      "birYil": 0.525763,
+      "ucYil": 1.605147,
+      "besYil": 9.472622
     },
     "paraAkisi": {
-      "gunluk": -24564804.43,
+      "gunluk": -443897.17,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "USY",
+        "fonAdi": "ÜNLÜ PORTFÖY DEĞER YATIRIMLARI SERBEST FON",
+        "tarih": "2026-08-13",
+        "fiyat": 0.259543,
+        "tedavuldekiPaySayisi": 5195894649,
+        "kisiSayisi": 396,
+        "fonToplamDeger": 1348556821.85,
+        "gunlukGetiri": 0.0046061,
+        "paraGirisiCikisi": -443897.17,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "USY",
         "fonAdi": "ÜNLÜ PORTFÖY DEĞER YATIRIMLARI SERBEST FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00203624,
       "paraGirisiCikisi": -24564804.43,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "USY",
+      "fonAdi": "ÜNLÜ PORTFÖY DEĞER YATIRIMLARI SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 0.259543,
+      "tedavuldekiPaySayisi": 5195894649,
+      "kisiSayisi": 396,
+      "fonToplamDeger": 1348556821.85,
+      "gunlukGetiri": 0.0046061,
+      "paraGirisiCikisi": -443897.17,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "USY",
+      "fonAdi": "ÜNLÜ PORTFÖY DEĞER YATIRIMLARI SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 0.259543,
+      "tedavuldekiPaySayisi": 5195894649,
+      "kisiSayisi": 396,
+      "fonToplamDeger": 1348556821.85,
+      "gunlukGetiri": 0.0046061,
+      "paraGirisiCikisi": -443897.17,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "USY",
       "fonAdi": "ÜNLÜ PORTFÖY DEĞER YATIRIMLARI SERBEST FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

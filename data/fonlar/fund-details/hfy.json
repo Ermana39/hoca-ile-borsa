@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "HFY",
     "slug": "hfy",
@@ -12,13 +12,13 @@
     "yonetici": "ALBARAKA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "albaraka-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.296517,
-    "tedavuldekiPaySayisi": 467346414,
+    "fiyat": 1.297846,
+    "tedavuldekiPaySayisi": 335527864,
     "kisiSayisi": 34,
-    "fonToplamDeger": 605922723.45,
-    "gunlukGetiri": 0.00101606,
+    "fonToplamDeger": 435463662.07,
+    "gunlukGetiri": 0.00102505,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 9445541.23,
+      "gunluk": -171080177.84,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HFY",
+        "fonAdi": "ALBARAKA PORTFÖY HAYAT FİNANS KISA VADELİ KATILIM SERBEST FON",
+        "tarih": "2026-08-13",
+        "fiyat": 1.297846,
+        "tedavuldekiPaySayisi": 335527864,
+        "kisiSayisi": 34,
+        "fonToplamDeger": 435463662.07,
+        "gunlukGetiri": 0.00102505,
+        "paraGirisiCikisi": -171080177.84,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "HFY",
         "fonAdi": "ALBARAKA PORTFÖY HAYAT FİNANS KISA VADELİ KATILIM SERBEST FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00101606,
       "paraGirisiCikisi": 9445541.23,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "HFY",
+      "fonAdi": "ALBARAKA PORTFÖY HAYAT FİNANS KISA VADELİ KATILIM SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 1.297846,
+      "tedavuldekiPaySayisi": 335527864,
+      "kisiSayisi": 34,
+      "fonToplamDeger": 435463662.07,
+      "gunlukGetiri": 0.00102505,
+      "paraGirisiCikisi": -171080177.84,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HFY",
+      "fonAdi": "ALBARAKA PORTFÖY HAYAT FİNANS KISA VADELİ KATILIM SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 1.297846,
+      "tedavuldekiPaySayisi": 335527864,
+      "kisiSayisi": 34,
+      "fonToplamDeger": 435463662.07,
+      "gunlukGetiri": 0.00102505,
+      "paraGirisiCikisi": -171080177.84,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "HFY",
       "fonAdi": "ALBARAKA PORTFÖY HAYAT FİNANS KISA VADELİ KATILIM SERBEST FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "TNI",
     "slug": "tni",
@@ -12,13 +12,13 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 11.180347,
-    "tedavuldekiPaySayisi": 699258949,
-    "kisiSayisi": 2655,
-    "fonToplamDeger": 7817957463.02,
-    "gunlukGetiri": 0.00114941,
+    "fiyat": 11.216612,
+    "tedavuldekiPaySayisi": 696476068,
+    "kisiSayisi": 2648,
+    "fonToplamDeger": 7812101604.52,
+    "gunlukGetiri": 0.00324364,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -7762526.1,
+      "gunluk": -31214496.42,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
+      "gunluk": -7,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TNI",
+        "fonAdi": "TEB PORTFÖY ING BANK ÖZEL BANKACILIK VE PLATİNUM DEĞİŞKEN ÖZEL FON",
+        "tarih": "2026-08-13",
+        "fiyat": 11.216612,
+        "tedavuldekiPaySayisi": 696476068,
+        "kisiSayisi": 2648,
+        "fonToplamDeger": 7812101604.52,
+        "gunlukGetiri": 0.00324364,
+        "paraGirisiCikisi": -31214496.42,
+        "yatirimciDegisimi": -7
+      },
       {
         "fonKodu": "TNI",
         "fonAdi": "TEB PORTFÖY ING BANK ÖZEL BANKACILIK VE PLATİNUM DEĞİŞKEN ÖZEL FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00114941,
       "paraGirisiCikisi": -7762526.1,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "TNI",
+      "fonAdi": "TEB PORTFÖY ING BANK ÖZEL BANKACILIK VE PLATİNUM DEĞİŞKEN ÖZEL FON",
+      "tarih": "2026-08-13",
+      "fiyat": 11.216612,
+      "tedavuldekiPaySayisi": 696476068,
+      "kisiSayisi": 2648,
+      "fonToplamDeger": 7812101604.52,
+      "gunlukGetiri": 0.00324364,
+      "paraGirisiCikisi": -31214496.42,
+      "yatirimciDegisimi": -7
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TNI",
+      "fonAdi": "TEB PORTFÖY ING BANK ÖZEL BANKACILIK VE PLATİNUM DEĞİŞKEN ÖZEL FON",
+      "tarih": "2026-08-13",
+      "fiyat": 11.216612,
+      "tedavuldekiPaySayisi": 696476068,
+      "kisiSayisi": 2648,
+      "fonToplamDeger": 7812101604.52,
+      "gunlukGetiri": 0.00324364,
+      "paraGirisiCikisi": -31214496.42,
+      "yatirimciDegisimi": -7
+    },
     {
       "fonKodu": "TNI",
       "fonAdi": "TEB PORTFÖY ING BANK ÖZEL BANKACILIK VE PLATİNUM DEĞİŞKEN ÖZEL FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

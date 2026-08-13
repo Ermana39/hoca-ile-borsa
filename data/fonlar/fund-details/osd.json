@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "OSD",
     "slug": "osd",
@@ -12,44 +12,56 @@
     "yonetici": "OSMANLI PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "osmanli-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 14.103509,
-    "tedavuldekiPaySayisi": 43028543,
-    "kisiSayisi": 868,
-    "fonToplamDeger": 606853441.31,
-    "gunlukGetiri": 0.00113142,
+    "fiyat": 14.118926,
+    "tedavuldekiPaySayisi": 43015442,
+    "kisiSayisi": 867,
+    "fonToplamDeger": 607331863.59,
+    "gunlukGetiri": 0.00109313,
     "getiriler": {
-      "birAy": 0.033653,
-      "ucAy": 0.10628299999999999,
-      "altiAy": 0.21776800000000002,
-      "yilbasi": 0.27283999999999997,
-      "birYil": 0.493866,
-      "ucYil": 2.649941,
-      "besYil": 4.8103
+      "birAy": 0.034783,
+      "ucAy": 0.106202,
+      "altiAy": 0.21763200000000002,
+      "yilbasi": 0.274231,
+      "birYil": 0.49383699999999997,
+      "ucYil": 2.65393,
+      "besYil": 4.8125279999999995
     },
     "paraAkisi": {
-      "gunluk": -1140184.08,
+      "gunluk": -184972.05,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OSD",
+        "fonAdi": "OSMANLI PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 14.118926,
+        "tedavuldekiPaySayisi": 43015442,
+        "kisiSayisi": 867,
+        "fonToplamDeger": 607331863.59,
+        "gunlukGetiri": 0.00109313,
+        "paraGirisiCikisi": -184972.05,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "OSD",
         "fonAdi": "OSMANLI PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00113142,
       "paraGirisiCikisi": -1140184.08,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "OSD",
+      "fonAdi": "OSMANLI PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 14.118926,
+      "tedavuldekiPaySayisi": 43015442,
+      "kisiSayisi": 867,
+      "fonToplamDeger": 607331863.59,
+      "gunlukGetiri": 0.00109313,
+      "paraGirisiCikisi": -184972.05,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OSD",
+      "fonAdi": "OSMANLI PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 14.118926,
+      "tedavuldekiPaySayisi": 43015442,
+      "kisiSayisi": 867,
+      "fonToplamDeger": 607331863.59,
+      "gunlukGetiri": 0.00109313,
+      "paraGirisiCikisi": -184972.05,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "OSD",
       "fonAdi": "OSMANLI PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "FFH",
     "slug": "ffh",
@@ -12,44 +12,56 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 8.502178,
-    "tedavuldekiPaySayisi": 185029641,
-    "kisiSayisi": 1990,
-    "fonToplamDeger": 1573154972.04,
-    "gunlukGetiri": 0.00083766,
+    "fiyat": 8.561886,
+    "tedavuldekiPaySayisi": 185120392,
+    "kisiSayisi": 1992,
+    "fonToplamDeger": 1584979754.59,
+    "gunlukGetiri": 0.00702267,
     "getiriler": {
-      "birAy": 0.029436,
-      "ucAy": 0.05136,
-      "altiAy": 0.15365,
-      "yilbasi": 0.25049,
-      "birYil": 0.47566600000000003,
-      "ucYil": 1.901396,
-      "besYil": 6.817369
+      "birAy": 0.036665,
+      "ucAy": 0.058979,
+      "altiAy": 0.158634,
+      "yilbasi": 0.259272,
+      "birYil": 0.490178,
+      "ucYil": 1.921771,
+      "besYil": 6.872491999999999
     },
     "paraAkisi": {
-      "gunluk": -23030725.27,
+      "gunluk": 776999.72,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 18,
+      "gunluk": 2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FFH",
+        "fonAdi": "QNB PORTFÖY ÇOKLU VARLIK KATILIM FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 8.561886,
+        "tedavuldekiPaySayisi": 185120392,
+        "kisiSayisi": 1992,
+        "fonToplamDeger": 1584979754.59,
+        "gunlukGetiri": 0.00702267,
+        "paraGirisiCikisi": 776999.72,
+        "yatirimciDegisimi": 2
+      },
       {
         "fonKodu": "FFH",
         "fonAdi": "QNB PORTFÖY ÇOKLU VARLIK KATILIM FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00083766,
       "paraGirisiCikisi": -23030725.27,
       "yatirimciDegisimi": 18
+    },
+    {
+      "fonKodu": "FFH",
+      "fonAdi": "QNB PORTFÖY ÇOKLU VARLIK KATILIM FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 8.561886,
+      "tedavuldekiPaySayisi": 185120392,
+      "kisiSayisi": 1992,
+      "fonToplamDeger": 1584979754.59,
+      "gunlukGetiri": 0.00702267,
+      "paraGirisiCikisi": 776999.72,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FFH",
+      "fonAdi": "QNB PORTFÖY ÇOKLU VARLIK KATILIM FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 8.561886,
+      "tedavuldekiPaySayisi": 185120392,
+      "kisiSayisi": 1992,
+      "fonToplamDeger": 1584979754.59,
+      "gunlukGetiri": 0.00702267,
+      "paraGirisiCikisi": 776999.72,
+      "yatirimciDegisimi": 2
+    },
     {
       "fonKodu": "FFH",
       "fonAdi": "QNB PORTFÖY ÇOKLU VARLIK KATILIM FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

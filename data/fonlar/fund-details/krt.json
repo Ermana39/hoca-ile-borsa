@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "KRT",
     "slug": "krt",
@@ -12,44 +12,56 @@
     "yonetici": "KARE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kare-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 74.340878,
-    "tedavuldekiPaySayisi": 9799340,
-    "kisiSayisi": 165,
-    "fonToplamDeger": 728491534.8,
-    "gunlukGetiri": 0.00054158,
+    "fiyat": 74.385359,
+    "tedavuldekiPaySayisi": 9831277,
+    "kisiSayisi": 166,
+    "fonToplamDeger": 731303065.02,
+    "gunlukGetiri": 0.00059834,
     "getiriler": {
-      "birAy": 0.02165,
-      "ucAy": 0.061481,
-      "altiAy": 0.108077,
-      "yilbasi": 0.138065,
-      "birYil": 0.226969,
-      "ucYil": 1.136623,
-      "besYil": 6.157279
+      "birAy": 0.022261000000000003,
+      "ucAy": 0.062419,
+      "altiAy": 0.10817,
+      "yilbasi": 0.13874599999999998,
+      "birYil": 0.226724,
+      "ucYil": 1.137901,
+      "besYil": 6.201404
     },
     "paraAkisi": {
-      "gunluk": -5214566.55,
+      "gunluk": 2375645.21,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KRT",
+        "fonAdi": "KARE PORTFÖY TÜRKİYE ODAKLI SERBEST (DÖVİZ ) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 74.385359,
+        "tedavuldekiPaySayisi": 9831277,
+        "kisiSayisi": 166,
+        "fonToplamDeger": 731303065.02,
+        "gunlukGetiri": 0.00059834,
+        "paraGirisiCikisi": 2375645.21,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "KRT",
         "fonAdi": "KARE PORTFÖY TÜRKİYE ODAKLI SERBEST (DÖVİZ ) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00054158,
       "paraGirisiCikisi": -5214566.55,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "KRT",
+      "fonAdi": "KARE PORTFÖY TÜRKİYE ODAKLI SERBEST (DÖVİZ ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 74.385359,
+      "tedavuldekiPaySayisi": 9831277,
+      "kisiSayisi": 166,
+      "fonToplamDeger": 731303065.02,
+      "gunlukGetiri": 0.00059834,
+      "paraGirisiCikisi": 2375645.21,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KRT",
+      "fonAdi": "KARE PORTFÖY TÜRKİYE ODAKLI SERBEST (DÖVİZ ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 74.385359,
+      "tedavuldekiPaySayisi": 9831277,
+      "kisiSayisi": 166,
+      "fonToplamDeger": 731303065.02,
+      "gunlukGetiri": 0.00059834,
+      "paraGirisiCikisi": 2375645.21,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "KRT",
       "fonAdi": "KARE PORTFÖY TÜRKİYE ODAKLI SERBEST (DÖVİZ ) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

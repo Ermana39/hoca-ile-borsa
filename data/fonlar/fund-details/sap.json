@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "SAP",
     "slug": "sap",
@@ -12,13 +12,13 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.832622,
-    "tedavuldekiPaySayisi": 196689645,
-    "kisiSayisi": 376,
-    "fonToplamDeger": 360457751.16,
-    "gunlukGetiri": 0.0010362,
+    "fiyat": 1.834511,
+    "tedavuldekiPaySayisi": 166589655,
+    "kisiSayisi": 378,
+    "fonToplamDeger": 305610625.42,
+    "gunlukGetiri": 0.00103076,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -7581474.75,
+      "gunluk": -55218762.75,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": 2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SAP",
+        "fonAdi": "AK PORTFÖY ŞEKERBANK PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 1.834511,
+        "tedavuldekiPaySayisi": 166589655,
+        "kisiSayisi": 378,
+        "fonToplamDeger": 305610625.42,
+        "gunlukGetiri": 0.00103076,
+        "paraGirisiCikisi": -55218762.75,
+        "yatirimciDegisimi": 2
+      },
       {
         "fonKodu": "SAP",
         "fonAdi": "AK PORTFÖY ŞEKERBANK PARA PİYASASI (TL) FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.0010362,
       "paraGirisiCikisi": -7581474.75,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "SAP",
+      "fonAdi": "AK PORTFÖY ŞEKERBANK PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 1.834511,
+      "tedavuldekiPaySayisi": 166589655,
+      "kisiSayisi": 378,
+      "fonToplamDeger": 305610625.42,
+      "gunlukGetiri": 0.00103076,
+      "paraGirisiCikisi": -55218762.75,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SAP",
+      "fonAdi": "AK PORTFÖY ŞEKERBANK PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 1.834511,
+      "tedavuldekiPaySayisi": 166589655,
+      "kisiSayisi": 378,
+      "fonToplamDeger": 305610625.42,
+      "gunlukGetiri": 0.00103076,
+      "paraGirisiCikisi": -55218762.75,
+      "yatirimciDegisimi": 2
+    },
     {
       "fonKodu": "SAP",
       "fonAdi": "AK PORTFÖY ŞEKERBANK PARA PİYASASI (TL) FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

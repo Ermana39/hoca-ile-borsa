@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "GLC",
     "slug": "glc",
@@ -12,24 +12,24 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 4.267522,
-    "tedavuldekiPaySayisi": 3869775,
+    "fiyat": 4.302805,
+    "tedavuldekiPaySayisi": 3869752,
     "kisiSayisi": 69,
-    "fonToplamDeger": 16514351.38,
-    "gunlukGetiri": 0,
+    "fonToplamDeger": 16650786.33,
+    "gunlukGetiri": 0.0082678,
     "getiriler": {
-      "birAy": 0.021558,
-      "ucAy": -0.018111,
-      "altiAy": 0.031046,
-      "yilbasi": 0.062596,
-      "birYil": 0.199452,
-      "ucYil": 1.499528,
+      "birAy": 0.030004,
+      "ucAy": -0.002596,
+      "altiAy": 0.039861,
+      "yilbasi": 0.071381,
+      "birYil": 0.20729,
+      "ucYil": 1.5201939999999998,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": -98.96,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GLC",
+        "fonAdi": "AKTİF PORTFÖY ÜÇÜNCÜ FON SEPETİ FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 4.302805,
+        "tedavuldekiPaySayisi": 3869752,
+        "kisiSayisi": 69,
+        "fonToplamDeger": 16650786.33,
+        "gunlukGetiri": 0.0082678,
+        "paraGirisiCikisi": -98.96,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "GLC",
         "fonAdi": "AKTİF PORTFÖY ÜÇÜNCÜ FON SEPETİ FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GLC",
+      "fonAdi": "AKTİF PORTFÖY ÜÇÜNCÜ FON SEPETİ FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 4.302805,
+      "tedavuldekiPaySayisi": 3869752,
+      "kisiSayisi": 69,
+      "fonToplamDeger": 16650786.33,
+      "gunlukGetiri": 0.0082678,
+      "paraGirisiCikisi": -98.96,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GLC",
+      "fonAdi": "AKTİF PORTFÖY ÜÇÜNCÜ FON SEPETİ FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 4.302805,
+      "tedavuldekiPaySayisi": 3869752,
+      "kisiSayisi": 69,
+      "fonToplamDeger": 16650786.33,
+      "gunlukGetiri": 0.0082678,
+      "paraGirisiCikisi": -98.96,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "GLC",
       "fonAdi": "AKTİF PORTFÖY ÜÇÜNCÜ FON SEPETİ FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

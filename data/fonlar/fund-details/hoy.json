@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "HOY",
     "slug": "hoy",
@@ -12,24 +12,24 @@
     "yonetici": "HSBC PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hsbc-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 0.365989,
-    "tedavuldekiPaySayisi": 3769075902,
-    "kisiSayisi": 2558,
-    "fonToplamDeger": 1379438968.58,
-    "gunlukGetiri": 0.00072185,
+    "fiyat": 0.367414,
+    "tedavuldekiPaySayisi": 3759563438,
+    "kisiSayisi": 2555,
+    "fonToplamDeger": 1381316332.79,
+    "gunlukGetiri": 0.00389356,
     "getiriler": {
-      "birAy": 0.027557,
-      "ucAy": 0.065892,
-      "altiAy": 0.154842,
-      "yilbasi": 0.22709700000000002,
-      "birYil": 0.374034,
-      "ucYil": 1.4996690000000001,
-      "besYil": 6.255928
+      "birAy": 0.031558,
+      "ucAy": 0.078482,
+      "altiAy": 0.156103,
+      "yilbasi": 0.231875,
+      "birYil": 0.377852,
+      "ucYil": 1.509401,
+      "besYil": 6.328347
     },
     "paraAkisi": {
-      "gunluk": -1591573.44,
+      "gunluk": -3495012.45,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HOY",
+        "fonAdi": "HSBC PORTFÖY YABANCI BYF FON SEPETI",
+        "tarih": "2026-08-13",
+        "fiyat": 0.367414,
+        "tedavuldekiPaySayisi": 3759563438,
+        "kisiSayisi": 2555,
+        "fonToplamDeger": 1381316332.79,
+        "gunlukGetiri": 0.00389356,
+        "paraGirisiCikisi": -3495012.45,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "HOY",
         "fonAdi": "HSBC PORTFÖY YABANCI BYF FON SEPETI",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00072185,
       "paraGirisiCikisi": -1591573.44,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "HOY",
+      "fonAdi": "HSBC PORTFÖY YABANCI BYF FON SEPETI",
+      "tarih": "2026-08-13",
+      "fiyat": 0.367414,
+      "tedavuldekiPaySayisi": 3759563438,
+      "kisiSayisi": 2555,
+      "fonToplamDeger": 1381316332.79,
+      "gunlukGetiri": 0.00389356,
+      "paraGirisiCikisi": -3495012.45,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HOY",
+      "fonAdi": "HSBC PORTFÖY YABANCI BYF FON SEPETI",
+      "tarih": "2026-08-13",
+      "fiyat": 0.367414,
+      "tedavuldekiPaySayisi": 3759563438,
+      "kisiSayisi": 2555,
+      "fonToplamDeger": 1381316332.79,
+      "gunlukGetiri": 0.00389356,
+      "paraGirisiCikisi": -3495012.45,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "HOY",
       "fonAdi": "HSBC PORTFÖY YABANCI BYF FON SEPETI",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

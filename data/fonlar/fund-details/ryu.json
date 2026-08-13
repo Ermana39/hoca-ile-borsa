@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "RYU",
     "slug": "ryu",
@@ -12,13 +12,13 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 48.814264,
+    "fiyat": 48.884603,
     "tedavuldekiPaySayisi": 10527011,
     "kisiSayisi": 57,
-    "fonToplamDeger": 513868290,
-    "gunlukGetiri": 0.00078354,
+    "fonToplamDeger": 514608755.61,
+    "gunlukGetiri": 0.00144095,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1317.99,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RYU",
+        "fonAdi": "ROTA PORTFÖY YİRMİÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 48.884603,
+        "tedavuldekiPaySayisi": 10527011,
+        "kisiSayisi": 57,
+        "fonToplamDeger": 514608755.61,
+        "gunlukGetiri": 0.00144095,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "RYU",
         "fonAdi": "ROTA PORTFÖY YİRMİÜÇÜNCÜ SERBEST (DÖVİZ) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00078354,
       "paraGirisiCikisi": 1317.99,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "RYU",
+      "fonAdi": "ROTA PORTFÖY YİRMİÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 48.884603,
+      "tedavuldekiPaySayisi": 10527011,
+      "kisiSayisi": 57,
+      "fonToplamDeger": 514608755.61,
+      "gunlukGetiri": 0.00144095,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RYU",
+      "fonAdi": "ROTA PORTFÖY YİRMİÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 48.884603,
+      "tedavuldekiPaySayisi": 10527011,
+      "kisiSayisi": 57,
+      "fonToplamDeger": 514608755.61,
+      "gunlukGetiri": 0.00144095,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "RYU",
       "fonAdi": "ROTA PORTFÖY YİRMİÜÇÜNCÜ SERBEST (DÖVİZ) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

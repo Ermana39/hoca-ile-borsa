@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "LRT",
     "slug": "lrt",
@@ -12,13 +12,13 @@
     "yonetici": "ATA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ata-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 3.631842,
+    "fiyat": 3.637103,
     "tedavuldekiPaySayisi": 245457201,
     "kisiSayisi": 12,
-    "fonToplamDeger": 891461838.35,
-    "gunlukGetiri": 0.00064417,
+    "fonToplamDeger": 892753059.32,
+    "gunlukGetiri": 0.00144858,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 50032211.81,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "LRT",
+        "fonAdi": "ATA PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
+        "tarih": "2026-08-13",
+        "fiyat": 3.637103,
+        "tedavuldekiPaySayisi": 245457201,
+        "kisiSayisi": 12,
+        "fonToplamDeger": 892753059.32,
+        "gunlukGetiri": 0.00144858,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "LRT",
         "fonAdi": "ATA PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00064417,
       "paraGirisiCikisi": 50032211.81,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "LRT",
+      "fonAdi": "ATA PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 3.637103,
+      "tedavuldekiPaySayisi": 245457201,
+      "kisiSayisi": 12,
+      "fonToplamDeger": 892753059.32,
+      "gunlukGetiri": 0.00144858,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "LRT",
+      "fonAdi": "ATA PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 3.637103,
+      "tedavuldekiPaySayisi": 245457201,
+      "kisiSayisi": 12,
+      "fonToplamDeger": 892753059.32,
+      "gunlukGetiri": 0.00144858,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "LRT",
       "fonAdi": "ATA PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "MPI",
     "slug": "mpi",
@@ -12,44 +12,56 @@
     "yonetici": "MEKSA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "meksa-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 3.076776,
+    "fiyat": 3.079339,
     "tedavuldekiPaySayisi": 23263002,
-    "kisiSayisi": 38,
-    "fonToplamDeger": 71575048.47,
-    "gunlukGetiri": 0.0003674,
+    "kisiSayisi": 37,
+    "fonToplamDeger": 71634668.36,
+    "gunlukGetiri": 0.00083301,
     "getiriler": {
-      "birAy": 0.030041,
-      "ucAy": 0.101578,
-      "altiAy": 0.20428999999999997,
-      "yilbasi": 0.243712,
-      "birYil": 0.438815,
+      "birAy": 0.030899,
+      "ucAy": 0.100844,
+      "altiAy": 0.20365200000000003,
+      "yilbasi": 0.244748,
+      "birYil": 0.438077,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 390.75,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MPI",
+        "fonAdi": "MEKSA PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST (TL) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 3.079339,
+        "tedavuldekiPaySayisi": 23263002,
+        "kisiSayisi": 37,
+        "fonToplamDeger": 71634668.36,
+        "gunlukGetiri": 0.00083301,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "MPI",
         "fonAdi": "MEKSA PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST (TL) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.0003674,
       "paraGirisiCikisi": 390.75,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "MPI",
+      "fonAdi": "MEKSA PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST (TL) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 3.079339,
+      "tedavuldekiPaySayisi": 23263002,
+      "kisiSayisi": 37,
+      "fonToplamDeger": 71634668.36,
+      "gunlukGetiri": 0.00083301,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MPI",
+      "fonAdi": "MEKSA PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST (TL) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 3.079339,
+      "tedavuldekiPaySayisi": 23263002,
+      "kisiSayisi": 37,
+      "fonToplamDeger": 71634668.36,
+      "gunlukGetiri": 0.00083301,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "MPI",
       "fonAdi": "MEKSA PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST (TL) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

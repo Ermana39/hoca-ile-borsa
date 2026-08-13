@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "PUT",
     "slug": "put",
@@ -12,13 +12,13 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 7.94493,
+    "fiyat": 7.965672,
     "tedavuldekiPaySayisi": 877787362,
     "kisiSayisi": 1,
-    "fonToplamDeger": 6973959420.29,
-    "gunlukGetiri": 0.0026998,
+    "fonToplamDeger": 6992166463,
+    "gunlukGetiri": 0.00261072,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PUT",
+        "fonAdi": "AK PORTFÖY ÖPY BEŞİNCİ SERBEST ÖZEL FON",
+        "tarih": "2026-08-13",
+        "fiyat": 7.965672,
+        "tedavuldekiPaySayisi": 877787362,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 6992166463,
+        "gunlukGetiri": 0.00261072,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "PUT",
         "fonAdi": "AK PORTFÖY ÖPY BEŞİNCİ SERBEST ÖZEL FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.0026998,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PUT",
+      "fonAdi": "AK PORTFÖY ÖPY BEŞİNCİ SERBEST ÖZEL FON",
+      "tarih": "2026-08-13",
+      "fiyat": 7.965672,
+      "tedavuldekiPaySayisi": 877787362,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 6992166463,
+      "gunlukGetiri": 0.00261072,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PUT",
+      "fonAdi": "AK PORTFÖY ÖPY BEŞİNCİ SERBEST ÖZEL FON",
+      "tarih": "2026-08-13",
+      "fiyat": 7.965672,
+      "tedavuldekiPaySayisi": 877787362,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 6992166463,
+      "gunlukGetiri": 0.00261072,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "PUT",
       "fonAdi": "AK PORTFÖY ÖPY BEŞİNCİ SERBEST ÖZEL FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

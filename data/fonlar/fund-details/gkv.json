@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "GKV",
     "slug": "gkv",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 8.170636,
-    "tedavuldekiPaySayisi": 43228552,
-    "kisiSayisi": 4165,
-    "fonToplamDeger": 353204750.45,
-    "gunlukGetiri": -0.00199427,
+    "fiyat": 8.33094,
+    "tedavuldekiPaySayisi": 43157840,
+    "kisiSayisi": 4146,
+    "fonToplamDeger": 359545380.15,
+    "gunlukGetiri": 0.01961953,
     "getiriler": {
-      "birAy": -0.001598,
-      "ucAy": -0.030924,
-      "altiAy": 0.17505099999999998,
-      "yilbasi": 0.416169,
-      "birYil": 0.432429,
-      "ucYil": 1.220763,
+      "birAy": 0.01799,
+      "ucAy": -0.004497,
+      "altiAy": 0.17793199999999998,
+      "yilbasi": 0.443953,
+      "birYil": 0.472684,
+      "ucYil": 1.264333,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -976554.41,
+      "gunluk": -589097.43,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 16,
+      "gunluk": -19,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GKV",
+        "fonAdi": "GARANTİ PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-13",
+        "fiyat": 8.33094,
+        "tedavuldekiPaySayisi": 43157840,
+        "kisiSayisi": 4146,
+        "fonToplamDeger": 359545380.15,
+        "gunlukGetiri": 0.01961953,
+        "paraGirisiCikisi": -589097.43,
+        "yatirimciDegisimi": -19
+      },
       {
         "fonKodu": "GKV",
         "fonAdi": "GARANTİ PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00199427,
       "paraGirisiCikisi": -976554.41,
       "yatirimciDegisimi": 16
+    },
+    {
+      "fonKodu": "GKV",
+      "fonAdi": "GARANTİ PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 8.33094,
+      "tedavuldekiPaySayisi": 43157840,
+      "kisiSayisi": 4146,
+      "fonToplamDeger": 359545380.15,
+      "gunlukGetiri": 0.01961953,
+      "paraGirisiCikisi": -589097.43,
+      "yatirimciDegisimi": -19
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GKV",
+      "fonAdi": "GARANTİ PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 8.33094,
+      "tedavuldekiPaySayisi": 43157840,
+      "kisiSayisi": 4146,
+      "fonToplamDeger": 359545380.15,
+      "gunlukGetiri": 0.01961953,
+      "paraGirisiCikisi": -589097.43,
+      "yatirimciDegisimi": -19
+    },
     {
       "fonKodu": "GKV",
       "fonAdi": "GARANTİ PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "AL5",
     "slug": "al5",
@@ -12,13 +12,13 @@
     "yonetici": "ALBARAKA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "albaraka-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 53.697396,
-    "tedavuldekiPaySayisi": 257783148,
-    "kisiSayisi": 2360,
-    "fonToplamDeger": 13842283897.84,
-    "gunlukGetiri": 0.0005551,
+    "fiyat": 53.71911,
+    "tedavuldekiPaySayisi": 258515378,
+    "kisiSayisi": 2361,
+    "fonToplamDeger": 13887215947.38,
+    "gunlukGetiri": 0.00040438,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1405314.55,
+      "gunluk": 39334743.92,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": 1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AL5",
+        "fonAdi": "ALBARAKA PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 53.71911,
+        "tedavuldekiPaySayisi": 258515378,
+        "kisiSayisi": 2361,
+        "fonToplamDeger": 13887215947.38,
+        "gunlukGetiri": 0.00040438,
+        "paraGirisiCikisi": 39334743.92,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "AL5",
         "fonAdi": "ALBARAKA PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.0005551,
       "paraGirisiCikisi": 1405314.55,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "AL5",
+      "fonAdi": "ALBARAKA PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 53.71911,
+      "tedavuldekiPaySayisi": 258515378,
+      "kisiSayisi": 2361,
+      "fonToplamDeger": 13887215947.38,
+      "gunlukGetiri": 0.00040438,
+      "paraGirisiCikisi": 39334743.92,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AL5",
+      "fonAdi": "ALBARAKA PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 53.71911,
+      "tedavuldekiPaySayisi": 258515378,
+      "kisiSayisi": 2361,
+      "fonToplamDeger": 13887215947.38,
+      "gunlukGetiri": 0.00040438,
+      "paraGirisiCikisi": 39334743.92,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "AL5",
       "fonAdi": "ALBARAKA PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "SVB",
     "slug": "svb",
@@ -12,44 +12,56 @@
     "yonetici": "STRATEJİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "strateji-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 9.220088,
-    "tedavuldekiPaySayisi": 26675112,
-    "kisiSayisi": 1362,
-    "fonToplamDeger": 245946890.36,
-    "gunlukGetiri": -0.00678354,
+    "fiyat": 9.203822,
+    "tedavuldekiPaySayisi": 26686139,
+    "kisiSayisi": 1357,
+    "fonToplamDeger": 245614465.53,
+    "gunlukGetiri": -0.00176419,
     "getiriler": {
-      "birAy": -0.001892,
-      "ucAy": -0.042339,
-      "altiAy": -0.00009900000000000001,
-      "yilbasi": 0.14066499999999998,
-      "birYil": 0.271704,
-      "ucYil": 1.931069,
+      "birAy": -0.003653,
+      "ucAy": -0.023898000000000003,
+      "altiAy": -0.015202,
+      "yilbasi": 0.138653,
+      "birYil": 0.27531,
+      "ucYil": 1.9258979999999999,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -3798.68,
+      "gunluk": 101490.55,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
+      "gunluk": -5,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SVB",
+        "fonAdi": "STRATEJİ PORTFÖY AGRESİF DEĞİŞKEN FON",
+        "tarih": "2026-08-13",
+        "fiyat": 9.203822,
+        "tedavuldekiPaySayisi": 26686139,
+        "kisiSayisi": 1357,
+        "fonToplamDeger": 245614465.53,
+        "gunlukGetiri": -0.00176419,
+        "paraGirisiCikisi": 101490.55,
+        "yatirimciDegisimi": -5
+      },
       {
         "fonKodu": "SVB",
         "fonAdi": "STRATEJİ PORTFÖY AGRESİF DEĞİŞKEN FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00678354,
       "paraGirisiCikisi": -3798.68,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "SVB",
+      "fonAdi": "STRATEJİ PORTFÖY AGRESİF DEĞİŞKEN FON",
+      "tarih": "2026-08-13",
+      "fiyat": 9.203822,
+      "tedavuldekiPaySayisi": 26686139,
+      "kisiSayisi": 1357,
+      "fonToplamDeger": 245614465.53,
+      "gunlukGetiri": -0.00176419,
+      "paraGirisiCikisi": 101490.55,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SVB",
+      "fonAdi": "STRATEJİ PORTFÖY AGRESİF DEĞİŞKEN FON",
+      "tarih": "2026-08-13",
+      "fiyat": 9.203822,
+      "tedavuldekiPaySayisi": 26686139,
+      "kisiSayisi": 1357,
+      "fonToplamDeger": 245614465.53,
+      "gunlukGetiri": -0.00176419,
+      "paraGirisiCikisi": 101490.55,
+      "yatirimciDegisimi": -5
+    },
     {
       "fonKodu": "SVB",
       "fonAdi": "STRATEJİ PORTFÖY AGRESİF DEĞİŞKEN FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

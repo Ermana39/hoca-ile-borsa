@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "RJG",
     "slug": "rjg",
@@ -12,44 +12,56 @@
     "yonetici": "RE-PIE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "re-pie-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 3.430587,
-    "tedavuldekiPaySayisi": 25627469,
-    "kisiSayisi": 557,
-    "fonToplamDeger": 87917270.17,
-    "gunlukGetiri": 0.00517592,
+    "fiyat": 3.461322,
+    "tedavuldekiPaySayisi": 25536650,
+    "kisiSayisi": 554,
+    "fonToplamDeger": 88390570.24,
+    "gunlukGetiri": 0.00895911,
     "getiriler": {
-      "birAy": 0.079103,
-      "ucAy": -0.018373999999999998,
-      "altiAy": -0.081766,
-      "yilbasi": 0.050161,
-      "birYil": 0.47868499999999997,
+      "birAy": 0.088771,
+      "ucAy": -0.016102,
+      "altiAy": -0.071844,
+      "yilbasi": 0.059569000000000004,
+      "birYil": 0.478891,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 94540.12,
+      "gunluk": -314353.8,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
+      "gunluk": -3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RJG",
+        "fonAdi": "RE-PIE PORTFÖY ALTIN KATILIM FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 3.461322,
+        "tedavuldekiPaySayisi": 25536650,
+        "kisiSayisi": 554,
+        "fonToplamDeger": 88390570.24,
+        "gunlukGetiri": 0.00895911,
+        "paraGirisiCikisi": -314353.8,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "RJG",
         "fonAdi": "RE-PIE PORTFÖY ALTIN KATILIM FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00517592,
       "paraGirisiCikisi": 94540.12,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "RJG",
+      "fonAdi": "RE-PIE PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 3.461322,
+      "tedavuldekiPaySayisi": 25536650,
+      "kisiSayisi": 554,
+      "fonToplamDeger": 88390570.24,
+      "gunlukGetiri": 0.00895911,
+      "paraGirisiCikisi": -314353.8,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RJG",
+      "fonAdi": "RE-PIE PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 3.461322,
+      "tedavuldekiPaySayisi": 25536650,
+      "kisiSayisi": 554,
+      "fonToplamDeger": 88390570.24,
+      "gunlukGetiri": 0.00895911,
+      "paraGirisiCikisi": -314353.8,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "RJG",
       "fonAdi": "RE-PIE PORTFÖY ALTIN KATILIM FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

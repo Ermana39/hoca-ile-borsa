@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "GVA",
     "slug": "gva",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 4.144818,
-    "tedavuldekiPaySayisi": 23709765,
-    "kisiSayisi": 3490,
-    "fonToplamDeger": 98272651.96,
-    "gunlukGetiri": -0.00814292,
+    "fiyat": 4.18081,
+    "tedavuldekiPaySayisi": 23670640,
+    "kisiSayisi": 3487,
+    "fonToplamDeger": 98962439.51,
+    "gunlukGetiri": 0.00868361,
     "getiriler": {
-      "birAy": -0.01573,
-      "ucAy": -0.08655499999999999,
-      "altiAy": 0.075457,
-      "yilbasi": 0.185079,
-      "birYil": 0.404621,
-      "ucYil": 1.1905970000000001,
+      "birAy": -0.007183,
+      "ucAy": -0.068529,
+      "altiAy": 0.077764,
+      "yilbasi": 0.19537,
+      "birYil": 0.41712400000000005,
+      "ucYil": 1.209619,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 578508.83,
+      "gunluk": -163574.19,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 4,
+      "gunluk": -3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GVA",
+        "fonAdi": "GARANTİ PORTFÖY ELEKTRİKLİ VE OTONOM ARAÇLAR DEĞİŞKEN FON",
+        "tarih": "2026-08-13",
+        "fiyat": 4.18081,
+        "tedavuldekiPaySayisi": 23670640,
+        "kisiSayisi": 3487,
+        "fonToplamDeger": 98962439.51,
+        "gunlukGetiri": 0.00868361,
+        "paraGirisiCikisi": -163574.19,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "GVA",
         "fonAdi": "GARANTİ PORTFÖY ELEKTRİKLİ VE OTONOM ARAÇLAR DEĞİŞKEN FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00814292,
       "paraGirisiCikisi": 578508.83,
       "yatirimciDegisimi": 4
+    },
+    {
+      "fonKodu": "GVA",
+      "fonAdi": "GARANTİ PORTFÖY ELEKTRİKLİ VE OTONOM ARAÇLAR DEĞİŞKEN FON",
+      "tarih": "2026-08-13",
+      "fiyat": 4.18081,
+      "tedavuldekiPaySayisi": 23670640,
+      "kisiSayisi": 3487,
+      "fonToplamDeger": 98962439.51,
+      "gunlukGetiri": 0.00868361,
+      "paraGirisiCikisi": -163574.19,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GVA",
+      "fonAdi": "GARANTİ PORTFÖY ELEKTRİKLİ VE OTONOM ARAÇLAR DEĞİŞKEN FON",
+      "tarih": "2026-08-13",
+      "fiyat": 4.18081,
+      "tedavuldekiPaySayisi": 23670640,
+      "kisiSayisi": 3487,
+      "fonToplamDeger": 98962439.51,
+      "gunlukGetiri": 0.00868361,
+      "paraGirisiCikisi": -163574.19,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "GVA",
       "fonAdi": "GARANTİ PORTFÖY ELEKTRİKLİ VE OTONOM ARAÇLAR DEĞİŞKEN FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

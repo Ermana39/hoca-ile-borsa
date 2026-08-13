@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "DOL",
     "slug": "dol",
@@ -12,44 +12,56 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 52.479636,
-    "tedavuldekiPaySayisi": 99565708,
-    "kisiSayisi": 388,
-    "fonToplamDeger": 5225172115.78,
-    "gunlukGetiri": 0.00057142,
+    "fiyat": 52.503833,
+    "tedavuldekiPaySayisi": 99348754,
+    "kisiSayisi": 383,
+    "fonToplamDeger": 5216190432.64,
+    "gunlukGetiri": 0.00046107,
     "getiriler": {
-      "birAy": 0.021098,
-      "ucAy": 0.061529,
-      "altiAy": 0.11335800000000001,
-      "yilbasi": 0.136823,
-      "birYil": 0.21860600000000002,
+      "birAy": 0.021568999999999998,
+      "ucAy": 0.061589,
+      "altiAy": 0.113529,
+      "yilbasi": 0.137347,
+      "birYil": 0.218812,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1873365.57,
+      "gunluk": -11390916.58,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
+      "gunluk": -5,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DOL",
+        "fonAdi": "AKTİF PORTFÖY ÜÇÜNCÜ AKTİF SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 52.503833,
+        "tedavuldekiPaySayisi": 99348754,
+        "kisiSayisi": 383,
+        "fonToplamDeger": 5216190432.64,
+        "gunlukGetiri": 0.00046107,
+        "paraGirisiCikisi": -11390916.58,
+        "yatirimciDegisimi": -5
+      },
       {
         "fonKodu": "DOL",
         "fonAdi": "AKTİF PORTFÖY ÜÇÜNCÜ AKTİF SERBEST (DÖVİZ) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00057142,
       "paraGirisiCikisi": 1873365.57,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "DOL",
+      "fonAdi": "AKTİF PORTFÖY ÜÇÜNCÜ AKTİF SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 52.503833,
+      "tedavuldekiPaySayisi": 99348754,
+      "kisiSayisi": 383,
+      "fonToplamDeger": 5216190432.64,
+      "gunlukGetiri": 0.00046107,
+      "paraGirisiCikisi": -11390916.58,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DOL",
+      "fonAdi": "AKTİF PORTFÖY ÜÇÜNCÜ AKTİF SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 52.503833,
+      "tedavuldekiPaySayisi": 99348754,
+      "kisiSayisi": 383,
+      "fonToplamDeger": 5216190432.64,
+      "gunlukGetiri": 0.00046107,
+      "paraGirisiCikisi": -11390916.58,
+      "yatirimciDegisimi": -5
+    },
     {
       "fonKodu": "DOL",
       "fonAdi": "AKTİF PORTFÖY ÜÇÜNCÜ AKTİF SERBEST (DÖVİZ) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

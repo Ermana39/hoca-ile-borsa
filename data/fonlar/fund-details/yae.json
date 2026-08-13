@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "YAE",
     "slug": "yae",
@@ -12,16 +12,16 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.17154,
-    "tedavuldekiPaySayisi": 56990013,
-    "kisiSayisi": 591,
-    "fonToplamDeger": 66766059.26,
-    "gunlukGetiri": 0.0012358,
+    "fiyat": 1.173191,
+    "tedavuldekiPaySayisi": 56909977,
+    "kisiSayisi": 589,
+    "fonToplamDeger": 66766246.66,
+    "gunlukGetiri": 0.00140926,
     "getiriler": {
-      "birAy": 0.031244,
-      "ucAy": 0.091881,
+      "birAy": 0.032698,
+      "ucAy": 0.092745,
       "altiAy": null,
       "yilbasi": null,
       "birYil": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -83356.24,
+      "gunluk": -93897.51,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YAE",
+        "fonAdi": "YAPI KREDİ PORTFÖY TLREF'E ENDEKSLİ BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 1.173191,
+        "tedavuldekiPaySayisi": 56909977,
+        "kisiSayisi": 589,
+        "fonToplamDeger": 66766246.66,
+        "gunlukGetiri": 0.00140926,
+        "paraGirisiCikisi": -93897.51,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "YAE",
         "fonAdi": "YAPI KREDİ PORTFÖY TLREF'E ENDEKSLİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.0012358,
       "paraGirisiCikisi": -83356.24,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YAE",
+      "fonAdi": "YAPI KREDİ PORTFÖY TLREF'E ENDEKSLİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 1.173191,
+      "tedavuldekiPaySayisi": 56909977,
+      "kisiSayisi": 589,
+      "fonToplamDeger": 66766246.66,
+      "gunlukGetiri": 0.00140926,
+      "paraGirisiCikisi": -93897.51,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YAE",
+      "fonAdi": "YAPI KREDİ PORTFÖY TLREF'E ENDEKSLİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 1.173191,
+      "tedavuldekiPaySayisi": 56909977,
+      "kisiSayisi": 589,
+      "fonToplamDeger": 66766246.66,
+      "gunlukGetiri": 0.00140926,
+      "paraGirisiCikisi": -93897.51,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "YAE",
       "fonAdi": "YAPI KREDİ PORTFÖY TLREF'E ENDEKSLİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

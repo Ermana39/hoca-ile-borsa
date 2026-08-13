@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "KOT",
     "slug": "kot",
@@ -12,44 +12,56 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.395699,
-    "tedavuldekiPaySayisi": 123344943,
-    "kisiSayisi": 3368,
-    "fonToplamDeger": 172152419.5,
-    "gunlukGetiri": -0.00586424,
+    "fiyat": 1.446147,
+    "tedavuldekiPaySayisi": 123393070,
+    "kisiSayisi": 3359,
+    "fonToplamDeger": 178444497.48,
+    "gunlukGetiri": 0.03614533,
     "getiriler": {
-      "birAy": 0.022938999999999998,
-      "ucAy": -0.036809,
-      "altiAy": 0.003296,
-      "yilbasi": 0.16572900000000002,
-      "birYil": 0.17390999999999998,
+      "birAy": 0.059913,
+      "ucAy": 0.027516,
+      "altiAy": -0.011003,
+      "yilbasi": 0.207864,
+      "birYil": 0.22104,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -410290.84,
+      "gunluk": 69598.72,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
+      "gunluk": -9,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KOT",
+        "fonAdi": "AZİMUT PORTFÖY KOÇ TOPLULUĞU ŞİRKETLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-13",
+        "fiyat": 1.446147,
+        "tedavuldekiPaySayisi": 123393070,
+        "kisiSayisi": 3359,
+        "fonToplamDeger": 178444497.48,
+        "gunlukGetiri": 0.03614533,
+        "paraGirisiCikisi": 69598.72,
+        "yatirimciDegisimi": -9
+      },
       {
         "fonKodu": "KOT",
         "fonAdi": "AZİMUT PORTFÖY KOÇ TOPLULUĞU ŞİRKETLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00586424,
       "paraGirisiCikisi": -410290.84,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "KOT",
+      "fonAdi": "AZİMUT PORTFÖY KOÇ TOPLULUĞU ŞİRKETLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 1.446147,
+      "tedavuldekiPaySayisi": 123393070,
+      "kisiSayisi": 3359,
+      "fonToplamDeger": 178444497.48,
+      "gunlukGetiri": 0.03614533,
+      "paraGirisiCikisi": 69598.72,
+      "yatirimciDegisimi": -9
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KOT",
+      "fonAdi": "AZİMUT PORTFÖY KOÇ TOPLULUĞU ŞİRKETLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 1.446147,
+      "tedavuldekiPaySayisi": 123393070,
+      "kisiSayisi": 3359,
+      "fonToplamDeger": 178444497.48,
+      "gunlukGetiri": 0.03614533,
+      "paraGirisiCikisi": 69598.72,
+      "yatirimciDegisimi": -9
+    },
     {
       "fonKodu": "KOT",
       "fonAdi": "AZİMUT PORTFÖY KOÇ TOPLULUĞU ŞİRKETLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

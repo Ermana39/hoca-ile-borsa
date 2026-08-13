@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "ANL",
     "slug": "anl",
@@ -12,13 +12,13 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 37.123473,
-    "tedavuldekiPaySayisi": 15000709,
-    "kisiSayisi": 3683,
-    "fonToplamDeger": 556878412.84,
-    "gunlukGetiri": 0.00105694,
+    "fiyat": 37.159856,
+    "tedavuldekiPaySayisi": 15505306,
+    "kisiSayisi": 3682,
+    "fonToplamDeger": 576174938.39,
+    "gunlukGetiri": 0.00098005,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -507180.89,
+      "gunluk": 18750751.86,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ANL",
+        "fonAdi": "AK PORTFÖY ALTERNATİF BANK PARA PİYASASI (TL)FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 37.159856,
+        "tedavuldekiPaySayisi": 15505306,
+        "kisiSayisi": 3682,
+        "fonToplamDeger": 576174938.39,
+        "gunlukGetiri": 0.00098005,
+        "paraGirisiCikisi": 18750751.86,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "ANL",
         "fonAdi": "AK PORTFÖY ALTERNATİF BANK PARA PİYASASI (TL)FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00105694,
       "paraGirisiCikisi": -507180.89,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "ANL",
+      "fonAdi": "AK PORTFÖY ALTERNATİF BANK PARA PİYASASI (TL)FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 37.159856,
+      "tedavuldekiPaySayisi": 15505306,
+      "kisiSayisi": 3682,
+      "fonToplamDeger": 576174938.39,
+      "gunlukGetiri": 0.00098005,
+      "paraGirisiCikisi": 18750751.86,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ANL",
+      "fonAdi": "AK PORTFÖY ALTERNATİF BANK PARA PİYASASI (TL)FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 37.159856,
+      "tedavuldekiPaySayisi": 15505306,
+      "kisiSayisi": 3682,
+      "fonToplamDeger": 576174938.39,
+      "gunlukGetiri": 0.00098005,
+      "paraGirisiCikisi": 18750751.86,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "ANL",
       "fonAdi": "AK PORTFÖY ALTERNATİF BANK PARA PİYASASI (TL)FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "BTZ",
     "slug": "btz",
@@ -12,44 +12,56 @@
     "yonetici": "ATLAS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "atlas-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.214303,
-    "tedavuldekiPaySayisi": 7356558,
-    "kisiSayisi": 192,
-    "fonToplamDeger": 8933089.97,
-    "gunlukGetiri": -0.00747721,
+    "fiyat": 1.222633,
+    "tedavuldekiPaySayisi": 7256969,
+    "kisiSayisi": 191,
+    "fonToplamDeger": 8872607.27,
+    "gunlukGetiri": 0.0068599,
     "getiriler": {
-      "birAy": -0.012960000000000001,
-      "ucAy": -0.096364,
-      "altiAy": -0.065323,
-      "yilbasi": 0.07663400000000001,
-      "birYil": 0.146536,
+      "birAy": -0.006189,
+      "ucAy": -0.078998,
+      "altiAy": -0.076397,
+      "yilbasi": 0.084019,
+      "birYil": 0.162961,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 15668.15,
+      "gunluk": -121760.8,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BTZ",
+        "fonAdi": "ATLAS PORTFÖY BIST 30 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-13",
+        "fiyat": 1.222633,
+        "tedavuldekiPaySayisi": 7256969,
+        "kisiSayisi": 191,
+        "fonToplamDeger": 8872607.27,
+        "gunlukGetiri": 0.0068599,
+        "paraGirisiCikisi": -121760.8,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "BTZ",
         "fonAdi": "ATLAS PORTFÖY BIST 30 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00747721,
       "paraGirisiCikisi": 15668.15,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BTZ",
+      "fonAdi": "ATLAS PORTFÖY BIST 30 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 1.222633,
+      "tedavuldekiPaySayisi": 7256969,
+      "kisiSayisi": 191,
+      "fonToplamDeger": 8872607.27,
+      "gunlukGetiri": 0.0068599,
+      "paraGirisiCikisi": -121760.8,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BTZ",
+      "fonAdi": "ATLAS PORTFÖY BIST 30 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 1.222633,
+      "tedavuldekiPaySayisi": 7256969,
+      "kisiSayisi": 191,
+      "fonToplamDeger": 8872607.27,
+      "gunlukGetiri": 0.0068599,
+      "paraGirisiCikisi": -121760.8,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "BTZ",
       "fonAdi": "ATLAS PORTFÖY BIST 30 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "GMD",
     "slug": "gmd",
@@ -12,24 +12,24 @@
     "yonetici": "GLOBAL MD PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "global-md-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 2.704088,
+    "fiyat": 2.722853,
     "tedavuldekiPaySayisi": 1181608,
     "kisiSayisi": 108,
-    "fonToplamDeger": 3195172.11,
-    "gunlukGetiri": -0.00174504,
+    "fonToplamDeger": 3217345.27,
+    "gunlukGetiri": 0.00693949,
     "getiriler": {
-      "birAy": 0.001084,
-      "ucAy": 0.02117,
-      "altiAy": 0.126671,
-      "yilbasi": 0.181656,
-      "birYil": -0.138884,
-      "ucYil": 0.373371,
+      "birAy": 0.008031,
+      "ucAy": 0.032869999999999996,
+      "altiAy": 0.129026,
+      "yilbasi": 0.18985600000000002,
+      "birYil": -0.15539999999999998,
+      "ucYil": 0.38290199999999996,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -202.81,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GMD",
+        "fonAdi": "GLOBAL MD PORTFÖY BİRİNCİ FON SEPETİ FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 2.722853,
+        "tedavuldekiPaySayisi": 1181608,
+        "kisiSayisi": 108,
+        "fonToplamDeger": 3217345.27,
+        "gunlukGetiri": 0.00693949,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "GMD",
         "fonAdi": "GLOBAL MD PORTFÖY BİRİNCİ FON SEPETİ FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00174504,
       "paraGirisiCikisi": -202.81,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GMD",
+      "fonAdi": "GLOBAL MD PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 2.722853,
+      "tedavuldekiPaySayisi": 1181608,
+      "kisiSayisi": 108,
+      "fonToplamDeger": 3217345.27,
+      "gunlukGetiri": 0.00693949,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GMD",
+      "fonAdi": "GLOBAL MD PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 2.722853,
+      "tedavuldekiPaySayisi": 1181608,
+      "kisiSayisi": 108,
+      "fonToplamDeger": 3217345.27,
+      "gunlukGetiri": 0.00693949,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "GMD",
       "fonAdi": "GLOBAL MD PORTFÖY BİRİNCİ FON SEPETİ FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

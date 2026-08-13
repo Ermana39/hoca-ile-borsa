@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "NCS",
     "slug": "ncs",
@@ -12,44 +12,56 @@
     "yonetici": "NUROL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "nurol-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 57.36606,
-    "tedavuldekiPaySayisi": 139370951,
-    "kisiSayisi": 1776,
-    "fonToplamDeger": 7995162284.49,
-    "gunlukGetiri": 0.00064157,
+    "fiyat": 57.394634,
+    "tedavuldekiPaySayisi": 139810266,
+    "kisiSayisi": 1772,
+    "fonToplamDeger": 8024358999.53,
+    "gunlukGetiri": 0.0004981,
     "getiriler": {
-      "birAy": 0.022113999999999998,
-      "ucAy": 0.064408,
-      "altiAy": 0.119951,
-      "yilbasi": 0.14474,
-      "birYil": 0.23041899999999998,
-      "ucYil": 1.122542,
+      "birAy": 0.022624,
+      "ucAy": 0.06439199999999999,
+      "altiAy": 0.120199,
+      "yilbasi": 0.145311,
+      "birYil": 0.230667,
+      "ucYil": 1.123599,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -16092384.52,
+      "gunluk": 25214323.64,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -4,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NCS",
+        "fonAdi": "NUROL PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 57.394634,
+        "tedavuldekiPaySayisi": 139810266,
+        "kisiSayisi": 1772,
+        "fonToplamDeger": 8024358999.53,
+        "gunlukGetiri": 0.0004981,
+        "paraGirisiCikisi": 25214323.64,
+        "yatirimciDegisimi": -4
+      },
       {
         "fonKodu": "NCS",
         "fonAdi": "NUROL PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00064157,
       "paraGirisiCikisi": -16092384.52,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "NCS",
+      "fonAdi": "NUROL PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 57.394634,
+      "tedavuldekiPaySayisi": 139810266,
+      "kisiSayisi": 1772,
+      "fonToplamDeger": 8024358999.53,
+      "gunlukGetiri": 0.0004981,
+      "paraGirisiCikisi": 25214323.64,
+      "yatirimciDegisimi": -4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NCS",
+      "fonAdi": "NUROL PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 57.394634,
+      "tedavuldekiPaySayisi": 139810266,
+      "kisiSayisi": 1772,
+      "fonToplamDeger": 8024358999.53,
+      "gunlukGetiri": 0.0004981,
+      "paraGirisiCikisi": 25214323.64,
+      "yatirimciDegisimi": -4
+    },
     {
       "fonKodu": "NCS",
       "fonAdi": "NUROL PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

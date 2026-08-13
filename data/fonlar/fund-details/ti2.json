@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "TI2",
     "slug": "ti2",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 0.124863,
-    "tedavuldekiPaySayisi": 27093618756,
-    "kisiSayisi": 20964,
-    "fonToplamDeger": 3382997585.41,
-    "gunlukGetiri": -0.0129017,
+    "fiyat": 0.125825,
+    "tedavuldekiPaySayisi": 27098018622,
+    "kisiSayisi": 20922,
+    "fonToplamDeger": 3409598523.21,
+    "gunlukGetiri": 0.00770444,
     "getiriler": {
-      "birAy": -0.015858,
-      "ucAy": -0.082753,
-      "altiAy": -0.054634,
-      "yilbasi": 0.12922599999999998,
-      "birYil": 0.137528,
-      "ucYil": 1.373728,
-      "besYil": 15.331944
+      "birAy": -0.008276,
+      "ucAy": -0.05933,
+      "altiAy": -0.07557699999999999,
+      "yilbasi": 0.137926,
+      "birYil": 0.151505,
+      "ucYil": 1.3920160000000001,
+      "besYil": 15.186829
     },
     "paraAkisi": {
-      "gunluk": -6316536.36,
+      "gunluk": 553613.14,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 51,
+      "gunluk": -42,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TI2",
+        "fonAdi": "İŞ PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-13",
+        "fiyat": 0.125825,
+        "tedavuldekiPaySayisi": 27098018622,
+        "kisiSayisi": 20922,
+        "fonToplamDeger": 3409598523.21,
+        "gunlukGetiri": 0.00770444,
+        "paraGirisiCikisi": 553613.14,
+        "yatirimciDegisimi": -42
+      },
       {
         "fonKodu": "TI2",
         "fonAdi": "İŞ PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.0129017,
       "paraGirisiCikisi": -6316536.36,
       "yatirimciDegisimi": 51
+    },
+    {
+      "fonKodu": "TI2",
+      "fonAdi": "İŞ PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 0.125825,
+      "tedavuldekiPaySayisi": 27098018622,
+      "kisiSayisi": 20922,
+      "fonToplamDeger": 3409598523.21,
+      "gunlukGetiri": 0.00770444,
+      "paraGirisiCikisi": 553613.14,
+      "yatirimciDegisimi": -42
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TI2",
+      "fonAdi": "İŞ PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 0.125825,
+      "tedavuldekiPaySayisi": 27098018622,
+      "kisiSayisi": 20922,
+      "fonToplamDeger": 3409598523.21,
+      "gunlukGetiri": 0.00770444,
+      "paraGirisiCikisi": 553613.14,
+      "yatirimciDegisimi": -42
+    },
     {
       "fonKodu": "TI2",
       "fonAdi": "İŞ PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "FSU",
     "slug": "fsu",
@@ -12,44 +12,56 @@
     "yonetici": "TERA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "tera-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.267418,
-    "tedavuldekiPaySayisi": 600499225,
-    "kisiSayisi": 4184,
-    "fonToplamDeger": 761083249.19,
-    "gunlukGetiri": 0.00051154,
+    "fiyat": 1.295584,
+    "tedavuldekiPaySayisi": 598851839,
+    "kisiSayisi": 4164,
+    "fonToplamDeger": 775862847.77,
+    "gunlukGetiri": 0.02222313,
     "getiriler": {
-      "birAy": 0.023073,
-      "ucAy": -0.092202,
-      "altiAy": 0.069804,
-      "yilbasi": 0.186079,
+      "birAy": 0.045808999999999996,
+      "ucAy": -0.064619,
+      "altiAy": 0.078545,
+      "yilbasi": 0.21243700000000001,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -5333776.56,
+      "gunluk": -2134326.94,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
+      "gunluk": -20,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FSU",
+        "fonAdi": "TERA PORTFÖY FON SEPETİ FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 1.295584,
+        "tedavuldekiPaySayisi": 598851839,
+        "kisiSayisi": 4164,
+        "fonToplamDeger": 775862847.77,
+        "gunlukGetiri": 0.02222313,
+        "paraGirisiCikisi": -2134326.94,
+        "yatirimciDegisimi": -20
+      },
       {
         "fonKodu": "FSU",
         "fonAdi": "TERA PORTFÖY FON SEPETİ FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00051154,
       "paraGirisiCikisi": -5333776.56,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "FSU",
+      "fonAdi": "TERA PORTFÖY FON SEPETİ FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 1.295584,
+      "tedavuldekiPaySayisi": 598851839,
+      "kisiSayisi": 4164,
+      "fonToplamDeger": 775862847.77,
+      "gunlukGetiri": 0.02222313,
+      "paraGirisiCikisi": -2134326.94,
+      "yatirimciDegisimi": -20
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FSU",
+      "fonAdi": "TERA PORTFÖY FON SEPETİ FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 1.295584,
+      "tedavuldekiPaySayisi": 598851839,
+      "kisiSayisi": 4164,
+      "fonToplamDeger": 775862847.77,
+      "gunlukGetiri": 0.02222313,
+      "paraGirisiCikisi": -2134326.94,
+      "yatirimciDegisimi": -20
+    },
     {
       "fonKodu": "FSU",
       "fonAdi": "TERA PORTFÖY FON SEPETİ FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

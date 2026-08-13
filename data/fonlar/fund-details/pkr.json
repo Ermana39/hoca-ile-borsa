@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "PKR",
     "slug": "pkr",
@@ -12,44 +12,56 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.524015,
-    "tedavuldekiPaySayisi": 366548551,
-    "kisiSayisi": 217,
-    "fonToplamDeger": 558625533.13,
-    "gunlukGetiri": 0.00103124,
+    "fiyat": 1.525545,
+    "tedavuldekiPaySayisi": 366603259,
+    "kisiSayisi": 216,
+    "fonToplamDeger": 559269802.79,
+    "gunlukGetiri": 0.00100393,
     "getiriler": {
-      "birAy": 0.015851999999999998,
-      "ucAy": 0.08451800000000001,
-      "altiAy": 0.185839,
-      "yilbasi": 0.23399,
-      "birYil": 0.434093,
+      "birAy": 0.016871,
+      "ucAy": 0.08446300000000001,
+      "altiAy": 0.185733,
+      "yilbasi": 0.235229,
+      "birYil": 0.433949,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 17987052.92,
+      "gunluk": 83459.52,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PKR",
+        "fonAdi": "ROTA PORTFÖY PARA PİYASASI KATILIM FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 1.525545,
+        "tedavuldekiPaySayisi": 366603259,
+        "kisiSayisi": 216,
+        "fonToplamDeger": 559269802.79,
+        "gunlukGetiri": 0.00100393,
+        "paraGirisiCikisi": 83459.52,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "PKR",
         "fonAdi": "ROTA PORTFÖY PARA PİYASASI KATILIM FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00103124,
       "paraGirisiCikisi": 17987052.92,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PKR",
+      "fonAdi": "ROTA PORTFÖY PARA PİYASASI KATILIM FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 1.525545,
+      "tedavuldekiPaySayisi": 366603259,
+      "kisiSayisi": 216,
+      "fonToplamDeger": 559269802.79,
+      "gunlukGetiri": 0.00100393,
+      "paraGirisiCikisi": 83459.52,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PKR",
+      "fonAdi": "ROTA PORTFÖY PARA PİYASASI KATILIM FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 1.525545,
+      "tedavuldekiPaySayisi": 366603259,
+      "kisiSayisi": 216,
+      "fonToplamDeger": 559269802.79,
+      "gunlukGetiri": 0.00100393,
+      "paraGirisiCikisi": 83459.52,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "PKR",
       "fonAdi": "ROTA PORTFÖY PARA PİYASASI KATILIM FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

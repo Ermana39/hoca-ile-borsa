@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "PDG",
     "slug": "pdg",
@@ -12,13 +12,13 @@
     "yonetici": "PUSULA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pusula-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 0.651412,
-    "tedavuldekiPaySayisi": 1132143310,
+    "fiyat": 0.613534,
+    "tedavuldekiPaySayisi": 1173591734,
     "kisiSayisi": 11,
-    "fonToplamDeger": 737491705.7,
-    "gunlukGetiri": 0.00320638,
+    "fonToplamDeger": 720038609.69,
+    "gunlukGetiri": -0.05814753,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -73234066.49,
+      "gunluk": 25430017.37,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PDG",
+        "fonAdi": "PUSULA PORTFÖY DOĞU HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-13",
+        "fiyat": 0.613534,
+        "tedavuldekiPaySayisi": 1173591734,
+        "kisiSayisi": 11,
+        "fonToplamDeger": 720038609.69,
+        "gunlukGetiri": -0.05814753,
+        "paraGirisiCikisi": 25430017.37,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "PDG",
         "fonAdi": "PUSULA PORTFÖY DOĞU HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00320638,
       "paraGirisiCikisi": -73234066.49,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PDG",
+      "fonAdi": "PUSULA PORTFÖY DOĞU HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 0.613534,
+      "tedavuldekiPaySayisi": 1173591734,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 720038609.69,
+      "gunlukGetiri": -0.05814753,
+      "paraGirisiCikisi": 25430017.37,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PDG",
+      "fonAdi": "PUSULA PORTFÖY DOĞU HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 0.613534,
+      "tedavuldekiPaySayisi": 1173591734,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 720038609.69,
+      "gunlukGetiri": -0.05814753,
+      "paraGirisiCikisi": 25430017.37,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "PDG",
       "fonAdi": "PUSULA PORTFÖY DOĞU HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

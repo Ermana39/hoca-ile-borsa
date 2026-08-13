@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "OVR",
     "slug": "ovr",
@@ -12,13 +12,13 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 68.09342,
+    "fiyat": 68.208992,
     "tedavuldekiPaySayisi": 7132953,
     "kisiSayisi": 1,
-    "fonToplamDeger": 485707164.53,
-    "gunlukGetiri": 0.00032343,
+    "fonToplamDeger": 486531536.34,
+    "gunlukGetiri": 0.00169726,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OVR",
+        "fonAdi": "QNB PORTFÖY FAGİ SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-13",
+        "fiyat": 68.208992,
+        "tedavuldekiPaySayisi": 7132953,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 486531536.34,
+        "gunlukGetiri": 0.00169726,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "OVR",
         "fonAdi": "QNB PORTFÖY FAGİ SERBEST (DÖVİZ) ÖZEL FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00032343,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "OVR",
+      "fonAdi": "QNB PORTFÖY FAGİ SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-13",
+      "fiyat": 68.208992,
+      "tedavuldekiPaySayisi": 7132953,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 486531536.34,
+      "gunlukGetiri": 0.00169726,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OVR",
+      "fonAdi": "QNB PORTFÖY FAGİ SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-13",
+      "fiyat": 68.208992,
+      "tedavuldekiPaySayisi": 7132953,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 486531536.34,
+      "gunlukGetiri": 0.00169726,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "OVR",
       "fonAdi": "QNB PORTFÖY FAGİ SERBEST (DÖVİZ) ÖZEL FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

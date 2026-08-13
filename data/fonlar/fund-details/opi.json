@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "OPI",
     "slug": "opi",
@@ -12,44 +12,56 @@
     "yonetici": "OSMANLI PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "osmanli-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 22.155669,
-    "tedavuldekiPaySayisi": 9657023,
-    "kisiSayisi": 1562,
-    "fonToplamDeger": 213957806.37,
-    "gunlukGetiri": -0.0122497,
+    "fiyat": 22.551158,
+    "tedavuldekiPaySayisi": 9649520,
+    "kisiSayisi": 1559,
+    "fonToplamDeger": 217607852.55,
+    "gunlukGetiri": 0.01785047,
     "getiriler": {
-      "birAy": -0.018671,
-      "ucAy": -0.115933,
-      "altiAy": -0.051292,
-      "yilbasi": 0.131664,
-      "birYil": 0.165136,
-      "ucYil": 0.807531,
-      "besYil": 9.683311
+      "birAy": -0.001154,
+      "ucAy": -0.07812000000000001,
+      "altiAy": -0.06295200000000001,
+      "yilbasi": 0.151865,
+      "birYil": 0.191951,
+      "ucYil": 0.8397960000000001,
+      "besYil": 9.700837
     },
     "paraAkisi": {
-      "gunluk": -1284186.89,
+      "gunluk": -169201.34,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
+      "gunluk": -3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OPI",
+        "fonAdi": "OSMANLI PORTFÖY KAR PAYI ÖDEYEN HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-13",
+        "fiyat": 22.551158,
+        "tedavuldekiPaySayisi": 9649520,
+        "kisiSayisi": 1559,
+        "fonToplamDeger": 217607852.55,
+        "gunlukGetiri": 0.01785047,
+        "paraGirisiCikisi": -169201.34,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "OPI",
         "fonAdi": "OSMANLI PORTFÖY KAR PAYI ÖDEYEN HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.0122497,
       "paraGirisiCikisi": -1284186.89,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "OPI",
+      "fonAdi": "OSMANLI PORTFÖY KAR PAYI ÖDEYEN HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 22.551158,
+      "tedavuldekiPaySayisi": 9649520,
+      "kisiSayisi": 1559,
+      "fonToplamDeger": 217607852.55,
+      "gunlukGetiri": 0.01785047,
+      "paraGirisiCikisi": -169201.34,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OPI",
+      "fonAdi": "OSMANLI PORTFÖY KAR PAYI ÖDEYEN HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 22.551158,
+      "tedavuldekiPaySayisi": 9649520,
+      "kisiSayisi": 1559,
+      "fonToplamDeger": 217607852.55,
+      "gunlukGetiri": 0.01785047,
+      "paraGirisiCikisi": -169201.34,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "OPI",
       "fonAdi": "OSMANLI PORTFÖY KAR PAYI ÖDEYEN HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

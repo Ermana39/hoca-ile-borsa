@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "HMC",
     "slug": "hmc",
@@ -12,44 +12,56 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 7.803863,
+    "fiyat": 7.87033,
     "tedavuldekiPaySayisi": 56716556,
-    "kisiSayisi": 116,
-    "fonToplamDeger": 442608214.97,
-    "gunlukGetiri": -0.00314467,
+    "kisiSayisi": 115,
+    "fonToplamDeger": 446377997.26,
+    "gunlukGetiri": 0.00851719,
     "getiriler": {
-      "birAy": 0.022825,
-      "ucAy": 0.015231,
-      "altiAy": 0.031173000000000003,
-      "yilbasi": 0.086444,
-      "birYil": 0.130278,
-      "ucYil": 0.9190590000000001,
+      "birAy": 0.031537,
+      "ucAy": 0.014757,
+      "altiAy": 0.029895,
+      "yilbasi": 0.09569699999999999,
+      "birYil": 0.14535299999999998,
+      "ucYil": 0.935404,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 156.08,
-      "besGun": null,
-      "birAy": null,
-      "ucAy": null
-    },
-    "yatirimciDegisimi": {
       "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "yatirimciDegisimi": {
+      "gunluk": -1,
+      "besGun": null,
+      "birAy": null,
+      "ucAy": null
+    },
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HMC",
+        "fonAdi": "HEDEF PORTFÖY EKİNOKS SERBEST (TL) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 7.87033,
+        "tedavuldekiPaySayisi": 56716556,
+        "kisiSayisi": 115,
+        "fonToplamDeger": 446377997.26,
+        "gunlukGetiri": 0.00851719,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "HMC",
         "fonAdi": "HEDEF PORTFÖY EKİNOKS SERBEST (TL) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00314467,
       "paraGirisiCikisi": 156.08,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HMC",
+      "fonAdi": "HEDEF PORTFÖY EKİNOKS SERBEST (TL) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 7.87033,
+      "tedavuldekiPaySayisi": 56716556,
+      "kisiSayisi": 115,
+      "fonToplamDeger": 446377997.26,
+      "gunlukGetiri": 0.00851719,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HMC",
+      "fonAdi": "HEDEF PORTFÖY EKİNOKS SERBEST (TL) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 7.87033,
+      "tedavuldekiPaySayisi": 56716556,
+      "kisiSayisi": 115,
+      "fonToplamDeger": 446377997.26,
+      "gunlukGetiri": 0.00851719,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "HMC",
       "fonAdi": "HEDEF PORTFÖY EKİNOKS SERBEST (TL) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

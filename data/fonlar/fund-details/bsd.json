@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "BSD",
     "slug": "bsd",
@@ -12,44 +12,56 @@
     "yonetici": "BV PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "bv-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.185007,
-    "tedavuldekiPaySayisi": 293147220,
+    "fiyat": 1.186179,
+    "tedavuldekiPaySayisi": 292994172,
     "kisiSayisi": 90,
-    "fonToplamDeger": 347381544.59,
-    "gunlukGetiri": 0.00085051,
+    "fonToplamDeger": 347543572.77,
+    "gunlukGetiri": 0.00098902,
     "getiriler": {
-      "birAy": 0.018846,
-      "ucAy": 0.061163999999999996,
-      "altiAy": 0.11622199999999999,
-      "yilbasi": 0.14358100000000001,
+      "birAy": 0.019853,
+      "ucAy": 0.061022,
+      "altiAy": 0.116503,
+      "yilbasi": 0.144712,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -6228523.59,
+      "gunluk": -181542.32,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BSD",
+        "fonAdi": "BV PORTFÖY SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 1.186179,
+        "tedavuldekiPaySayisi": 292994172,
+        "kisiSayisi": 90,
+        "fonToplamDeger": 347543572.77,
+        "gunlukGetiri": 0.00098902,
+        "paraGirisiCikisi": -181542.32,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "BSD",
         "fonAdi": "BV PORTFÖY SERBEST (DÖVİZ) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00085051,
       "paraGirisiCikisi": -6228523.59,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "BSD",
+      "fonAdi": "BV PORTFÖY SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 1.186179,
+      "tedavuldekiPaySayisi": 292994172,
+      "kisiSayisi": 90,
+      "fonToplamDeger": 347543572.77,
+      "gunlukGetiri": 0.00098902,
+      "paraGirisiCikisi": -181542.32,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BSD",
+      "fonAdi": "BV PORTFÖY SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 1.186179,
+      "tedavuldekiPaySayisi": 292994172,
+      "kisiSayisi": 90,
+      "fonToplamDeger": 347543572.77,
+      "gunlukGetiri": 0.00098902,
+      "paraGirisiCikisi": -181542.32,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "BSD",
       "fonAdi": "BV PORTFÖY SERBEST (DÖVİZ) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

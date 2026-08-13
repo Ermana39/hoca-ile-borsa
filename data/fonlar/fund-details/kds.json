@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "KDS",
     "slug": "kds",
@@ -12,13 +12,13 @@
     "yonetici": "KUVEYT TÜRK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kuveyt-turk-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 54.332627,
-    "tedavuldekiPaySayisi": 524015966,
-    "kisiSayisi": 1380,
-    "fonToplamDeger": 28471164057.92,
-    "gunlukGetiri": 0.00060735,
+    "fiyat": 54.357311,
+    "tedavuldekiPaySayisi": 523334284,
+    "kisiSayisi": 1383,
+    "fonToplamDeger": 28447044551.9,
+    "gunlukGetiri": 0.00045431,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -160142049.46,
+      "gunluk": -37054400.48,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
+      "gunluk": 3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KDS",
+        "fonAdi": "KUVEYT TÜRK PORTFÖY YEDİNCİ KATILIM SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 54.357311,
+        "tedavuldekiPaySayisi": 523334284,
+        "kisiSayisi": 1383,
+        "fonToplamDeger": 28447044551.9,
+        "gunlukGetiri": 0.00045431,
+        "paraGirisiCikisi": -37054400.48,
+        "yatirimciDegisimi": 3
+      },
       {
         "fonKodu": "KDS",
         "fonAdi": "KUVEYT TÜRK PORTFÖY YEDİNCİ KATILIM SERBEST (DÖVİZ) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00060735,
       "paraGirisiCikisi": -160142049.46,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "KDS",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY YEDİNCİ KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 54.357311,
+      "tedavuldekiPaySayisi": 523334284,
+      "kisiSayisi": 1383,
+      "fonToplamDeger": 28447044551.9,
+      "gunlukGetiri": 0.00045431,
+      "paraGirisiCikisi": -37054400.48,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KDS",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY YEDİNCİ KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 54.357311,
+      "tedavuldekiPaySayisi": 523334284,
+      "kisiSayisi": 1383,
+      "fonToplamDeger": 28447044551.9,
+      "gunlukGetiri": 0.00045431,
+      "paraGirisiCikisi": -37054400.48,
+      "yatirimciDegisimi": 3
+    },
     {
       "fonKodu": "KDS",
       "fonAdi": "KUVEYT TÜRK PORTFÖY YEDİNCİ KATILIM SERBEST (DÖVİZ) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

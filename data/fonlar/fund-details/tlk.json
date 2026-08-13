@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "TLK",
     "slug": "tlk",
@@ -12,44 +12,56 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.751489,
-    "tedavuldekiPaySayisi": 2267863528,
-    "kisiSayisi": 1031,
-    "fonToplamDeger": 3972137190.65,
-    "gunlukGetiri": 0.00103562,
+    "fiyat": 1.75332,
+    "tedavuldekiPaySayisi": 2272141783,
+    "kisiSayisi": 1036,
+    "fonToplamDeger": 3983790577.5,
+    "gunlukGetiri": 0.0010454,
     "getiriler": {
-      "birAy": 0.032307,
-      "ucAy": 0.101711,
-      "altiAy": 0.204157,
-      "yilbasi": 0.253147,
-      "birYil": 0.457477,
+      "birAy": 0.033386,
+      "ucAy": 0.101719,
+      "altiAy": 0.204259,
+      "yilbasi": 0.254457,
+      "birYil": 0.457357,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 382877572.67,
+      "gunluk": 7501150.06,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -6,
+      "gunluk": 5,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TLK",
+        "fonAdi": "AKTİF PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 1.75332,
+        "tedavuldekiPaySayisi": 2272141783,
+        "kisiSayisi": 1036,
+        "fonToplamDeger": 3983790577.5,
+        "gunlukGetiri": 0.0010454,
+        "paraGirisiCikisi": 7501150.06,
+        "yatirimciDegisimi": 5
+      },
       {
         "fonKodu": "TLK",
         "fonAdi": "AKTİF PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00103562,
       "paraGirisiCikisi": 382877572.67,
       "yatirimciDegisimi": -6
+    },
+    {
+      "fonKodu": "TLK",
+      "fonAdi": "AKTİF PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 1.75332,
+      "tedavuldekiPaySayisi": 2272141783,
+      "kisiSayisi": 1036,
+      "fonToplamDeger": 3983790577.5,
+      "gunlukGetiri": 0.0010454,
+      "paraGirisiCikisi": 7501150.06,
+      "yatirimciDegisimi": 5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TLK",
+      "fonAdi": "AKTİF PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 1.75332,
+      "tedavuldekiPaySayisi": 2272141783,
+      "kisiSayisi": 1036,
+      "fonToplamDeger": 3983790577.5,
+      "gunlukGetiri": 0.0010454,
+      "paraGirisiCikisi": 7501150.06,
+      "yatirimciDegisimi": 5
+    },
     {
       "fonKodu": "TLK",
       "fonAdi": "AKTİF PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

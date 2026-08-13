@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "KRC",
     "slug": "krc",
@@ -12,44 +12,56 @@
     "yonetici": "KARE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kare-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 0.143979,
-    "tedavuldekiPaySayisi": 208469320,
+    "fiyat": 0.144246,
+    "tedavuldekiPaySayisi": 203354320,
     "kisiSayisi": 146,
-    "fonToplamDeger": 30015145.17,
-    "gunlukGetiri": -0.00038879,
+    "fonToplamDeger": 29333018.59,
+    "gunlukGetiri": 0.00185444,
     "getiriler": {
-      "birAy": 0.024361,
-      "ucAy": 0.077018,
-      "altiAy": 0.11419,
-      "yilbasi": 0.150249,
-      "birYil": 0.349457,
-      "ucYil": 2.037403,
-      "besYil": 3.659967
+      "birAy": 0.02626,
+      "ucAy": 0.078346,
+      "altiAy": 0.11352499999999999,
+      "yilbasi": 0.15238200000000002,
+      "birYil": 0.351213,
+      "ucYil": 2.043036,
+      "besYil": 3.651296
     },
     "paraAkisi": {
-      "gunluk": 431.94,
+      "gunluk": -737818.29,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KRC",
+        "fonAdi": "KARE PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-13",
+        "fiyat": 0.144246,
+        "tedavuldekiPaySayisi": 203354320,
+        "kisiSayisi": 146,
+        "fonToplamDeger": 29333018.59,
+        "gunlukGetiri": 0.00185444,
+        "paraGirisiCikisi": -737818.29,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "KRC",
         "fonAdi": "KARE PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00038879,
       "paraGirisiCikisi": 431.94,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "KRC",
+      "fonAdi": "KARE PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 0.144246,
+      "tedavuldekiPaySayisi": 203354320,
+      "kisiSayisi": 146,
+      "fonToplamDeger": 29333018.59,
+      "gunlukGetiri": 0.00185444,
+      "paraGirisiCikisi": -737818.29,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KRC",
+      "fonAdi": "KARE PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-13",
+      "fiyat": 0.144246,
+      "tedavuldekiPaySayisi": 203354320,
+      "kisiSayisi": 146,
+      "fonToplamDeger": 29333018.59,
+      "gunlukGetiri": 0.00185444,
+      "paraGirisiCikisi": -737818.29,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "KRC",
       "fonAdi": "KARE PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

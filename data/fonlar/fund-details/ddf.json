@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "DDF",
     "slug": "ddf",
@@ -12,24 +12,24 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 12.49035,
-    "tedavuldekiPaySayisi": 9060342,
-    "kisiSayisi": 575,
-    "fonToplamDeger": 113166847.15,
-    "gunlukGetiri": -0.00426226,
+    "fiyat": 12.76399,
+    "tedavuldekiPaySayisi": 8995144,
+    "kisiSayisi": 605,
+    "fonToplamDeger": 114813925.17,
+    "gunlukGetiri": 0.02190811,
     "getiriler": {
-      "birAy": 0.140907,
-      "ucAy": 0.034763,
-      "altiAy": 0.281242,
-      "yilbasi": 0.5099360000000001,
-      "birYil": 0.41131999999999996,
-      "ucYil": 3.348847,
-      "besYil": 7.166638000000001
+      "birAy": 0.165902,
+      "ucAy": 0.07297100000000001,
+      "altiAy": 0.27076100000000003,
+      "yilbasi": 0.543016,
+      "birYil": 0.450712,
+      "ucYil": 3.4441219999999997,
+      "besYil": 7.345554
     },
     "paraAkisi": {
-      "gunluk": 8357080.85,
+      "gunluk": -832186.62,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DDF",
+        "fonAdi": "DENİZ PORTFÖY DİNAMO HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-13",
+        "fiyat": 12.76399,
+        "tedavuldekiPaySayisi": 8995144,
+        "kisiSayisi": 605,
+        "fonToplamDeger": 114813925.17,
+        "gunlukGetiri": 0.02190811,
+        "paraGirisiCikisi": -832186.62,
+        "yatirimciDegisimi": 30
+      },
       {
         "fonKodu": "DDF",
         "fonAdi": "DENİZ PORTFÖY DİNAMO HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00426226,
       "paraGirisiCikisi": 8357080.85,
       "yatirimciDegisimi": 30
+    },
+    {
+      "fonKodu": "DDF",
+      "fonAdi": "DENİZ PORTFÖY DİNAMO HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 12.76399,
+      "tedavuldekiPaySayisi": 8995144,
+      "kisiSayisi": 605,
+      "fonToplamDeger": 114813925.17,
+      "gunlukGetiri": 0.02190811,
+      "paraGirisiCikisi": -832186.62,
+      "yatirimciDegisimi": 30
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DDF",
+      "fonAdi": "DENİZ PORTFÖY DİNAMO HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 12.76399,
+      "tedavuldekiPaySayisi": 8995144,
+      "kisiSayisi": 605,
+      "fonToplamDeger": 114813925.17,
+      "gunlukGetiri": 0.02190811,
+      "paraGirisiCikisi": -832186.62,
+      "yatirimciDegisimi": 30
+    },
     {
       "fonKodu": "DDF",
       "fonAdi": "DENİZ PORTFÖY DİNAMO HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

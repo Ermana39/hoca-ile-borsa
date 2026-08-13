@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "DKL",
     "slug": "dkl",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 50.353205,
-    "tedavuldekiPaySayisi": 7456696,
+    "fiyat": 50.386269,
+    "tedavuldekiPaySayisi": 7455745,
     "kisiSayisi": 101,
-    "fonToplamDeger": 375468542.47,
-    "gunlukGetiri": 0.00040689,
+    "fonToplamDeger": 375667174.06,
+    "gunlukGetiri": 0.00065664,
     "getiriler": {
-      "birAy": 0.020891000000000003,
-      "ucAy": 0.057314,
-      "altiAy": 0.105242,
-      "yilbasi": 0.128728,
-      "birYil": 0.213503,
+      "birAy": 0.021561,
+      "ucAy": 0.058312,
+      "altiAy": 0.10508800000000001,
+      "yilbasi": 0.129469,
+      "birYil": 0.213939,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1510.6,
+      "gunluk": -47917.34,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DKL",
+        "fonAdi": "DENİZ PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 50.386269,
+        "tedavuldekiPaySayisi": 7455745,
+        "kisiSayisi": 101,
+        "fonToplamDeger": 375667174.06,
+        "gunlukGetiri": 0.00065664,
+        "paraGirisiCikisi": -47917.34,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "DKL",
         "fonAdi": "DENİZ PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00040689,
       "paraGirisiCikisi": -1510.6,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "DKL",
+      "fonAdi": "DENİZ PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 50.386269,
+      "tedavuldekiPaySayisi": 7455745,
+      "kisiSayisi": 101,
+      "fonToplamDeger": 375667174.06,
+      "gunlukGetiri": 0.00065664,
+      "paraGirisiCikisi": -47917.34,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DKL",
+      "fonAdi": "DENİZ PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 50.386269,
+      "tedavuldekiPaySayisi": 7455745,
+      "kisiSayisi": 101,
+      "fonToplamDeger": 375667174.06,
+      "gunlukGetiri": 0.00065664,
+      "paraGirisiCikisi": -47917.34,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "DKL",
       "fonAdi": "DENİZ PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

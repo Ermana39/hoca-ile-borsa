@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "PAO",
     "slug": "pao",
@@ -12,44 +12,56 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.135995,
-    "tedavuldekiPaySayisi": 23510189,
-    "kisiSayisi": 247,
-    "fonToplamDeger": 26707457.44,
-    "gunlukGetiri": -0.02623686,
+    "fiyat": 1.103724,
+    "tedavuldekiPaySayisi": 23484428,
+    "kisiSayisi": 246,
+    "fonToplamDeger": 25920316.69,
+    "gunlukGetiri": -0.0284077,
     "getiriler": {
-      "birAy": -0.035148,
-      "ucAy": -0.20469,
-      "altiAy": -0.131043,
-      "yilbasi": 0.023349,
-      "birYil": -0.033087,
+      "birAy": -0.062557,
+      "ucAy": -0.19981400000000002,
+      "altiAy": -0.16794599999999998,
+      "yilbasi": -0.0057220000000000005,
+      "birYil": -0.049718,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -242261.16,
+      "gunluk": -28433.03,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PAO",
+        "fonAdi": "PARDUS PORTFÖY ANADOLU HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-13",
+        "fiyat": 1.103724,
+        "tedavuldekiPaySayisi": 23484428,
+        "kisiSayisi": 246,
+        "fonToplamDeger": 25920316.69,
+        "gunlukGetiri": -0.0284077,
+        "paraGirisiCikisi": -28433.03,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "PAO",
         "fonAdi": "PARDUS PORTFÖY ANADOLU HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.02623686,
       "paraGirisiCikisi": -242261.16,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PAO",
+      "fonAdi": "PARDUS PORTFÖY ANADOLU HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 1.103724,
+      "tedavuldekiPaySayisi": 23484428,
+      "kisiSayisi": 246,
+      "fonToplamDeger": 25920316.69,
+      "gunlukGetiri": -0.0284077,
+      "paraGirisiCikisi": -28433.03,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PAO",
+      "fonAdi": "PARDUS PORTFÖY ANADOLU HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 1.103724,
+      "tedavuldekiPaySayisi": 23484428,
+      "kisiSayisi": 246,
+      "fonToplamDeger": 25920316.69,
+      "gunlukGetiri": -0.0284077,
+      "paraGirisiCikisi": -28433.03,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "PAO",
       "fonAdi": "PARDUS PORTFÖY ANADOLU HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

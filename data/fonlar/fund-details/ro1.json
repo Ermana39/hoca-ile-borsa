@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "RO1",
     "slug": "ro1",
@@ -12,13 +12,13 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.280118,
-    "tedavuldekiPaySayisi": 173363874,
+    "fiyat": 1.281459,
+    "tedavuldekiPaySayisi": 172439739,
     "kisiSayisi": 22,
-    "fonToplamDeger": 221926204.57,
-    "gunlukGetiri": 0.00105336,
+    "fonToplamDeger": 220974503.9,
+    "gunlukGetiri": 0.00104756,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": -1184241.11,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RO1",
+        "fonAdi": "ROTA PORTFÖY BİRİNCİ PARA PİYASASI SERBEST FON",
+        "tarih": "2026-08-13",
+        "fiyat": 1.281459,
+        "tedavuldekiPaySayisi": 172439739,
+        "kisiSayisi": 22,
+        "fonToplamDeger": 220974503.9,
+        "gunlukGetiri": 0.00104756,
+        "paraGirisiCikisi": -1184241.11,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "RO1",
         "fonAdi": "ROTA PORTFÖY BİRİNCİ PARA PİYASASI SERBEST FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00105336,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "RO1",
+      "fonAdi": "ROTA PORTFÖY BİRİNCİ PARA PİYASASI SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 1.281459,
+      "tedavuldekiPaySayisi": 172439739,
+      "kisiSayisi": 22,
+      "fonToplamDeger": 220974503.9,
+      "gunlukGetiri": 0.00104756,
+      "paraGirisiCikisi": -1184241.11,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RO1",
+      "fonAdi": "ROTA PORTFÖY BİRİNCİ PARA PİYASASI SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 1.281459,
+      "tedavuldekiPaySayisi": 172439739,
+      "kisiSayisi": 22,
+      "fonToplamDeger": 220974503.9,
+      "gunlukGetiri": 0.00104756,
+      "paraGirisiCikisi": -1184241.11,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "RO1",
       "fonAdi": "ROTA PORTFÖY BİRİNCİ PARA PİYASASI SERBEST FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "OJB",
     "slug": "ojb",
@@ -12,44 +12,56 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 53.030629,
-    "tedavuldekiPaySayisi": 520982412,
-    "kisiSayisi": 6884,
-    "fonToplamDeger": 27628024873.42,
-    "gunlukGetiri": 0.00058789,
+    "fiyat": 53.052118,
+    "tedavuldekiPaySayisi": 513578976,
+    "kisiSayisi": 6828,
+    "fonToplamDeger": 27246452205.44,
+    "gunlukGetiri": 0.00040522,
     "getiriler": {
-      "birAy": 0.020341,
-      "ucAy": 0.060196,
-      "altiAy": 0.111546,
-      "yilbasi": 0.134252,
-      "birYil": 0.21236899999999997,
-      "ucYil": 0.935327,
-      "besYil": 5.195026
+      "birAy": 0.020755,
+      "ucAy": 0.060127,
+      "altiAy": 0.11170400000000001,
+      "yilbasi": 0.134712,
+      "birYil": 0.212557,
+      "ucYil": 0.9361109999999999,
+      "besYil": 5.197536
     },
     "paraAkisi": {
-      "gunluk": -52487754.45,
+      "gunluk": -392767960.28,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -59,
+      "gunluk": -56,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OJB",
+        "fonAdi": "QNB PORTFÖY BEŞİNCİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-13",
+        "fiyat": 53.052118,
+        "tedavuldekiPaySayisi": 513578976,
+        "kisiSayisi": 6828,
+        "fonToplamDeger": 27246452205.44,
+        "gunlukGetiri": 0.00040522,
+        "paraGirisiCikisi": -392767960.28,
+        "yatirimciDegisimi": -56
+      },
       {
         "fonKodu": "OJB",
         "fonAdi": "QNB PORTFÖY BEŞİNCİ SERBEST (DÖVİZ) FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00058789,
       "paraGirisiCikisi": -52487754.45,
       "yatirimciDegisimi": -59
+    },
+    {
+      "fonKodu": "OJB",
+      "fonAdi": "QNB PORTFÖY BEŞİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 53.052118,
+      "tedavuldekiPaySayisi": 513578976,
+      "kisiSayisi": 6828,
+      "fonToplamDeger": 27246452205.44,
+      "gunlukGetiri": 0.00040522,
+      "paraGirisiCikisi": -392767960.28,
+      "yatirimciDegisimi": -56
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OJB",
+      "fonAdi": "QNB PORTFÖY BEŞİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-13",
+      "fiyat": 53.052118,
+      "tedavuldekiPaySayisi": 513578976,
+      "kisiSayisi": 6828,
+      "fonToplamDeger": 27246452205.44,
+      "gunlukGetiri": 0.00040522,
+      "paraGirisiCikisi": -392767960.28,
+      "yatirimciDegisimi": -56
+    },
     {
       "fonKodu": "OJB",
       "fonAdi": "QNB PORTFÖY BEŞİNCİ SERBEST (DÖVİZ) FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

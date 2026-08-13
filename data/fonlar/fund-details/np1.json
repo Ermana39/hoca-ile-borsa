@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "NP1",
     "slug": "np1",
@@ -12,13 +12,13 @@
     "yonetici": "NEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "neo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 5.110768,
+    "fiyat": 4.996809,
     "tedavuldekiPaySayisi": 291932511,
     "kisiSayisi": 158,
-    "fonToplamDeger": 1491999191.92,
-    "gunlukGetiri": -0.01619947,
+    "fonToplamDeger": 1458731009.12,
+    "gunlukGetiri": -0.02229782,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -536630.64,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NP1",
+        "fonAdi": "NEO PORTFÖY YASEMİN SERBEST FON",
+        "tarih": "2026-08-13",
+        "fiyat": 4.996809,
+        "tedavuldekiPaySayisi": 291932511,
+        "kisiSayisi": 158,
+        "fonToplamDeger": 1458731009.12,
+        "gunlukGetiri": -0.02229782,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "NP1",
         "fonAdi": "NEO PORTFÖY YASEMİN SERBEST FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.01619947,
       "paraGirisiCikisi": -536630.64,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "NP1",
+      "fonAdi": "NEO PORTFÖY YASEMİN SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 4.996809,
+      "tedavuldekiPaySayisi": 291932511,
+      "kisiSayisi": 158,
+      "fonToplamDeger": 1458731009.12,
+      "gunlukGetiri": -0.02229782,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NP1",
+      "fonAdi": "NEO PORTFÖY YASEMİN SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 4.996809,
+      "tedavuldekiPaySayisi": 291932511,
+      "kisiSayisi": 158,
+      "fonToplamDeger": 1458731009.12,
+      "gunlukGetiri": -0.02229782,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "NP1",
       "fonAdi": "NEO PORTFÖY YASEMİN SERBEST FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

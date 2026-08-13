@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "SCZ",
     "slug": "scz",
@@ -12,13 +12,13 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.542139,
-    "tedavuldekiPaySayisi": 53269862,
+    "fiyat": 1.544042,
+    "tedavuldekiPaySayisi": 53298577,
     "kisiSayisi": 166,
-    "fonToplamDeger": 82149546.23,
-    "gunlukGetiri": 0.00130639,
+    "fonToplamDeger": 82295252.42,
+    "gunlukGetiri": 0.001234,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": 44337.17,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SCZ",
+        "fonAdi": "AK PORTFÖY SEKİZİNCİ SERBEST FON",
+        "tarih": "2026-08-13",
+        "fiyat": 1.544042,
+        "tedavuldekiPaySayisi": 53298577,
+        "kisiSayisi": 166,
+        "fonToplamDeger": 82295252.42,
+        "gunlukGetiri": 0.001234,
+        "paraGirisiCikisi": 44337.17,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "SCZ",
         "fonAdi": "AK PORTFÖY SEKİZİNCİ SERBEST FON",
@@ -124,9 +136,33 @@
       "gunlukGetiri": 0.00130639,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "SCZ",
+      "fonAdi": "AK PORTFÖY SEKİZİNCİ SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 1.544042,
+      "tedavuldekiPaySayisi": 53298577,
+      "kisiSayisi": 166,
+      "fonToplamDeger": 82295252.42,
+      "gunlukGetiri": 0.001234,
+      "paraGirisiCikisi": 44337.17,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SCZ",
+      "fonAdi": "AK PORTFÖY SEKİZİNCİ SERBEST FON",
+      "tarih": "2026-08-13",
+      "fiyat": 1.544042,
+      "tedavuldekiPaySayisi": 53298577,
+      "kisiSayisi": 166,
+      "fonToplamDeger": 82295252.42,
+      "gunlukGetiri": 0.001234,
+      "paraGirisiCikisi": 44337.17,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "SCZ",
       "fonAdi": "AK PORTFÖY SEKİZİNCİ SERBEST FON",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-12T08:14:59.526Z",
-  "sonIslemTarihi": "2026-08-12",
+  "generatedAt": "2026-08-13T09:27:43.363Z",
+  "sonIslemTarihi": "2026-08-13",
   "fund": {
     "kod": "RPI",
     "slug": "rpi",
@@ -12,44 +12,56 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-12",
+    "tarih": "2026-08-13",
     "aktifMi": true,
-    "fiyat": 1.433987,
-    "tedavuldekiPaySayisi": 9437416,
-    "kisiSayisi": 340,
-    "fonToplamDeger": 13533132.48,
-    "gunlukGetiri": -0.00745179,
+    "fiyat": 1.454117,
+    "tedavuldekiPaySayisi": 9312093,
+    "kisiSayisi": 333,
+    "fonToplamDeger": 13540872.09,
+    "gunlukGetiri": 0.01403778,
     "getiriler": {
-      "birAy": 0.005921999999999999,
-      "ucAy": 0.000112,
-      "altiAy": 0.093883,
-      "yilbasi": 0.278854,
-      "birYil": 0.303358,
+      "birAy": 0.020043000000000002,
+      "ucAy": 0.031952,
+      "altiAy": 0.088812,
+      "yilbasi": 0.29680700000000004,
+      "birYil": 0.32767,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -57203.18,
+      "gunluk": -182234.3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
+      "gunluk": -7,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 3,
+    "tarihselGunSayisi": 4,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 2,
+      "observedDays": 3,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RPI",
+        "fonAdi": "ROTA PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-13",
+        "fiyat": 1.454117,
+        "tedavuldekiPaySayisi": 9312093,
+        "kisiSayisi": 333,
+        "fonToplamDeger": 13540872.09,
+        "gunlukGetiri": 0.01403778,
+        "paraGirisiCikisi": -182234.3,
+        "yatirimciDegisimi": -7
+      },
       {
         "fonKodu": "RPI",
         "fonAdi": "ROTA PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -124,9 +136,33 @@
       "gunlukGetiri": -0.00745179,
       "paraGirisiCikisi": -57203.18,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "RPI",
+      "fonAdi": "ROTA PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 1.454117,
+      "tedavuldekiPaySayisi": 9312093,
+      "kisiSayisi": 333,
+      "fonToplamDeger": 13540872.09,
+      "gunlukGetiri": 0.01403778,
+      "paraGirisiCikisi": -182234.3,
+      "yatirimciDegisimi": -7
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RPI",
+      "fonAdi": "ROTA PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-13",
+      "fiyat": 1.454117,
+      "tedavuldekiPaySayisi": 9312093,
+      "kisiSayisi": 333,
+      "fonToplamDeger": 13540872.09,
+      "gunlukGetiri": 0.01403778,
+      "paraGirisiCikisi": -182234.3,
+      "yatirimciDegisimi": -7
+    },
     {
       "fonKodu": "RPI",
       "fonAdi": "ROTA PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -167,7 +203,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 2,
+    "observedDays": 3,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
