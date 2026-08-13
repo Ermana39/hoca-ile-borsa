@@ -108,23 +108,21 @@ function tumOzetleriYukle(): GunlukOzet[] {
   return ozetler.sort((a, b) => b.isoTarih.localeCompare(a.isoTarih));
 }
 
-const ozetler: GunlukOzet[] = tumOzetleriYukle();
-
 export function getTumGunlukOzetler(): GunlukOzet[] {
-  return ozetler;
+  return tumOzetleriYukle();
 }
 
 export function getGunlukOzetBySlug(slug: string): GunlukOzet | undefined {
-  return ozetler.find((o) => o.slug === slug);
+  return tumOzetleriYukle().find((o) => o.slug === slug);
 }
 
 export function getTumGunlukOzetSluglari(): string[] {
-  return ozetler.map((o) => o.slug);
+  return tumOzetleriYukle().map((o) => o.slug);
 }
 
 // En güncel (en yeni tarihli) özet. Hiç özet yoksa undefined.
 export function getEnGuncelGunlukOzet(): GunlukOzet | undefined {
-  return ozetler[0];
+  return tumOzetleriYukle()[0];
 }
 
 // --- Haber akışı entegrasyonu ----------------------------------------------
@@ -143,7 +141,7 @@ export type GunlukOzetHaberKaydi = {
 };
 
 export function getGunlukOzetHaberKayitlari(): GunlukOzetHaberKaydi[] {
-  return ozetler.map((o) => ({
+  return tumOzetleriYukle().map((o) => ({
     // ISO tarihten benzersiz, haber id'leriyle çakışmayan büyük bir id üret
     // (örn. "2026-06-12" -> 20260612). Haber id'leri ~1000 aralığında.
     id: Number(o.isoTarih.replace(/-/g, "")) || 0,
