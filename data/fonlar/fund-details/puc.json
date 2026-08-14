@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "PUC",
     "slug": "puc",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 7.324399,
-    "tedavuldekiPaySayisi": 108351300,
-    "kisiSayisi": 729,
-    "fonToplamDeger": 793608175.99,
-    "gunlukGetiri": 0.00108221,
+    "fiyat": 7.333086,
+    "tedavuldekiPaySayisi": 108018013,
+    "kisiSayisi": 728,
+    "fonToplamDeger": 792105432.4,
+    "gunlukGetiri": 0.00118604,
     "getiriler": {
-      "birAy": 0.034332,
-      "ucAy": 0.105563,
-      "altiAy": 0.215733,
-      "yilbasi": 0.268395,
-      "birYil": 0.480735,
-      "ucYil": 2.5268379999999997,
-      "besYil": 3.968116
+      "birAy": 0.034433,
+      "ucAy": 0.10566800000000001,
+      "altiAy": 0.21355899999999997,
+      "yilbasi": 0.2699,
+      "birYil": 0.480792,
+      "ucYil": 2.531021,
+      "besYil": 3.966143
     },
     "paraAkisi": {
-      "gunluk": 6620802.58,
+      "gunluk": -2444022.23,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PUC",
+        "fonAdi": "AK PORTFÖY BİRİNCİ KISA VADELİ SERBEST (TL) FON",
+        "tarih": "2026-08-14",
+        "fiyat": 7.333086,
+        "tedavuldekiPaySayisi": 108018013,
+        "kisiSayisi": 728,
+        "fonToplamDeger": 792105432.4,
+        "gunlukGetiri": 0.00118604,
+        "paraGirisiCikisi": -2444022.23,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "PUC",
         "fonAdi": "AK PORTFÖY BİRİNCİ KISA VADELİ SERBEST (TL) FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00108221,
       "paraGirisiCikisi": 6620802.58,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "PUC",
+      "fonAdi": "AK PORTFÖY BİRİNCİ KISA VADELİ SERBEST (TL) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 7.333086,
+      "tedavuldekiPaySayisi": 108018013,
+      "kisiSayisi": 728,
+      "fonToplamDeger": 792105432.4,
+      "gunlukGetiri": 0.00118604,
+      "paraGirisiCikisi": -2444022.23,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PUC",
+      "fonAdi": "AK PORTFÖY BİRİNCİ KISA VADELİ SERBEST (TL) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 7.333086,
+      "tedavuldekiPaySayisi": 108018013,
+      "kisiSayisi": 728,
+      "fonToplamDeger": 792105432.4,
+      "gunlukGetiri": 0.00118604,
+      "paraGirisiCikisi": -2444022.23,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "PUC",
       "fonAdi": "AK PORTFÖY BİRİNCİ KISA VADELİ SERBEST (TL) FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

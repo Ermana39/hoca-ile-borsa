@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "OPD",
     "slug": "opd",
@@ -12,24 +12,24 @@
     "yonetici": "OSMANLI PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "osmanli-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 8.456007,
-    "tedavuldekiPaySayisi": 7945854,
+    "fiyat": 8.470537,
+    "tedavuldekiPaySayisi": 7946103,
     "kisiSayisi": 20,
-    "fonToplamDeger": 67190195.57,
-    "gunlukGetiri": 0.00101439,
+    "fonToplamDeger": 67307758.93,
+    "gunlukGetiri": 0.00171831,
     "getiriler": {
-      "birAy": 0.031937,
-      "ucAy": 0.099298,
-      "altiAy": 0.201901,
-      "yilbasi": 0.253408,
-      "birYil": 0.453494,
-      "ucYil": 2.433875,
-      "besYil": 4.810483
+      "birAy": 0.032496,
+      "ucAy": 0.10005800000000001,
+      "altiAy": 0.200487,
+      "yilbasi": 0.255562,
+      "birYil": 0.454325,
+      "ucYil": 2.439776,
+      "besYil": 4.820467
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": 2109.16,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OPD",
+        "fonAdi": "OSMANLI PORTFÖY ANKA SERBEST FON",
+        "tarih": "2026-08-14",
+        "fiyat": 8.470537,
+        "tedavuldekiPaySayisi": 7946103,
+        "kisiSayisi": 20,
+        "fonToplamDeger": 67307758.93,
+        "gunlukGetiri": 0.00171831,
+        "paraGirisiCikisi": 2109.16,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "OPD",
         "fonAdi": "OSMANLI PORTFÖY ANKA SERBEST FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00101439,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "OPD",
+      "fonAdi": "OSMANLI PORTFÖY ANKA SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 8.470537,
+      "tedavuldekiPaySayisi": 7946103,
+      "kisiSayisi": 20,
+      "fonToplamDeger": 67307758.93,
+      "gunlukGetiri": 0.00171831,
+      "paraGirisiCikisi": 2109.16,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OPD",
+      "fonAdi": "OSMANLI PORTFÖY ANKA SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 8.470537,
+      "tedavuldekiPaySayisi": 7946103,
+      "kisiSayisi": 20,
+      "fonToplamDeger": 67307758.93,
+      "gunlukGetiri": 0.00171831,
+      "paraGirisiCikisi": 2109.16,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "OPD",
       "fonAdi": "OSMANLI PORTFÖY ANKA SERBEST FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

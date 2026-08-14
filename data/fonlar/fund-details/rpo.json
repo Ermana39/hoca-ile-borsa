@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "RPO",
     "slug": "rpo",
@@ -12,13 +12,13 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 6.474005,
+    "fiyat": 6.438773,
     "tedavuldekiPaySayisi": 242983168,
     "kisiSayisi": 3,
-    "fonToplamDeger": 1573074320.32,
-    "gunlukGetiri": 0.0179418,
+    "fonToplamDeger": 1564513380.44,
+    "gunlukGetiri": -0.00544207,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RPO",
+        "fonAdi": "ROTA PORTFÖY FORTİS SERBEST (TL) ÖZEL FON",
+        "tarih": "2026-08-14",
+        "fiyat": 6.438773,
+        "tedavuldekiPaySayisi": 242983168,
+        "kisiSayisi": 3,
+        "fonToplamDeger": 1564513380.44,
+        "gunlukGetiri": -0.00544207,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "RPO",
         "fonAdi": "ROTA PORTFÖY FORTİS SERBEST (TL) ÖZEL FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.0179418,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "RPO",
+      "fonAdi": "ROTA PORTFÖY FORTİS SERBEST (TL) ÖZEL FON",
+      "tarih": "2026-08-14",
+      "fiyat": 6.438773,
+      "tedavuldekiPaySayisi": 242983168,
+      "kisiSayisi": 3,
+      "fonToplamDeger": 1564513380.44,
+      "gunlukGetiri": -0.00544207,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RPO",
+      "fonAdi": "ROTA PORTFÖY FORTİS SERBEST (TL) ÖZEL FON",
+      "tarih": "2026-08-14",
+      "fiyat": 6.438773,
+      "tedavuldekiPaySayisi": 242983168,
+      "kisiSayisi": 3,
+      "fonToplamDeger": 1564513380.44,
+      "gunlukGetiri": -0.00544207,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "RPO",
       "fonAdi": "ROTA PORTFÖY FORTİS SERBEST (TL) ÖZEL FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

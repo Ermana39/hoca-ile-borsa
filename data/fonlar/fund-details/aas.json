@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "AAS",
     "slug": "aas",
@@ -12,44 +12,56 @@
     "yonetici": "ATA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ata-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 12.664679,
-    "tedavuldekiPaySayisi": 1338136,
-    "kisiSayisi": 146,
-    "fonToplamDeger": 16947063.28,
-    "gunlukGetiri": -0.00176259,
+    "fiyat": 12.767215,
+    "tedavuldekiPaySayisi": 1338264,
+    "kisiSayisi": 145,
+    "fonToplamDeger": 17085904.07,
+    "gunlukGetiri": 0.00809622,
     "getiriler": {
-      "birAy": 0.045062,
-      "ucAy": 0.069863,
-      "altiAy": 0.181421,
-      "yilbasi": 0.21583100000000002,
-      "birYil": 0.391063,
-      "ucYil": 1.252069,
-      "besYil": 2.6842059999999996
+      "birAy": 0.053239,
+      "ucAy": 0.074807,
+      "altiAy": 0.209808,
+      "yilbasi": 0.22567399999999999,
+      "birYil": 0.392731,
+      "ucYil": 1.270302,
+      "besYil": 2.698718
     },
     "paraAkisi": {
-      "gunluk": 143174.2,
+      "gunluk": 1634.2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AAS",
+        "fonAdi": "ATA PORTFÖY FON SEPETİ SERBEST FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 12.767215,
+        "tedavuldekiPaySayisi": 1338264,
+        "kisiSayisi": 145,
+        "fonToplamDeger": 17085904.07,
+        "gunlukGetiri": 0.00809622,
+        "paraGirisiCikisi": 1634.2,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "AAS",
         "fonAdi": "ATA PORTFÖY FON SEPETİ SERBEST FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": -0.00176259,
       "paraGirisiCikisi": 143174.2,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "AAS",
+      "fonAdi": "ATA PORTFÖY FON SEPETİ SERBEST FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 12.767215,
+      "tedavuldekiPaySayisi": 1338264,
+      "kisiSayisi": 145,
+      "fonToplamDeger": 17085904.07,
+      "gunlukGetiri": 0.00809622,
+      "paraGirisiCikisi": 1634.2,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AAS",
+      "fonAdi": "ATA PORTFÖY FON SEPETİ SERBEST FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 12.767215,
+      "tedavuldekiPaySayisi": 1338264,
+      "kisiSayisi": 145,
+      "fonToplamDeger": 17085904.07,
+      "gunlukGetiri": 0.00809622,
+      "paraGirisiCikisi": 1634.2,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "AAS",
       "fonAdi": "ATA PORTFÖY FON SEPETİ SERBEST FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "PKP",
     "slug": "pkp",
@@ -12,44 +12,56 @@
     "yonetici": "ATA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ata-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.24648,
-    "tedavuldekiPaySayisi": 328191086,
-    "kisiSayisi": 98,
-    "fonToplamDeger": 409083624.24,
-    "gunlukGetiri": 0.00106573,
+    "fiyat": 1.247798,
+    "tedavuldekiPaySayisi": 326976576,
+    "kisiSayisi": 97,
+    "fonToplamDeger": 408000612.45,
+    "gunlukGetiri": 0.00105738,
     "getiriler": {
-      "birAy": 0.034041999999999996,
-      "ucAy": 0.104199,
-      "altiAy": 0.209334,
+      "birAy": 0.034014,
+      "ucAy": 0.104183,
+      "altiAy": 0.20705500000000002,
       "yilbasi": null,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1901991.37,
+      "gunluk": -1515463.15,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PKP",
+        "fonAdi": "ATA PORTFÖY PARA PİYASASI KATILIM SERBEST FON",
+        "tarih": "2026-08-14",
+        "fiyat": 1.247798,
+        "tedavuldekiPaySayisi": 326976576,
+        "kisiSayisi": 97,
+        "fonToplamDeger": 408000612.45,
+        "gunlukGetiri": 0.00105738,
+        "paraGirisiCikisi": -1515463.15,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "PKP",
         "fonAdi": "ATA PORTFÖY PARA PİYASASI KATILIM SERBEST FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00106573,
       "paraGirisiCikisi": 1901991.37,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "PKP",
+      "fonAdi": "ATA PORTFÖY PARA PİYASASI KATILIM SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.247798,
+      "tedavuldekiPaySayisi": 326976576,
+      "kisiSayisi": 97,
+      "fonToplamDeger": 408000612.45,
+      "gunlukGetiri": 0.00105738,
+      "paraGirisiCikisi": -1515463.15,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PKP",
+      "fonAdi": "ATA PORTFÖY PARA PİYASASI KATILIM SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.247798,
+      "tedavuldekiPaySayisi": 326976576,
+      "kisiSayisi": 97,
+      "fonToplamDeger": 408000612.45,
+      "gunlukGetiri": 0.00105738,
+      "paraGirisiCikisi": -1515463.15,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "PKP",
       "fonAdi": "ATA PORTFÖY PARA PİYASASI KATILIM SERBEST FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "HLR",
     "slug": "hlr",
@@ -12,13 +12,13 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 100.729,
+    "fiyat": 111.795967,
     "tedavuldekiPaySayisi": 28595024,
     "kisiSayisi": 14,
-    "fonToplamDeger": 2880348160.3,
-    "gunlukGetiri": -0.0472093,
+    "fonToplamDeger": 3196808354.41,
+    "gunlukGetiri": 0.10986873,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 35744592.21,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HLR",
+        "fonAdi": "HEDEF PORTFÖY ADA HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 111.795967,
+        "tedavuldekiPaySayisi": 28595024,
+        "kisiSayisi": 14,
+        "fonToplamDeger": 3196808354.41,
+        "gunlukGetiri": 0.10986873,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "HLR",
         "fonAdi": "HEDEF PORTFÖY ADA HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": -0.0472093,
       "paraGirisiCikisi": 35744592.21,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HLR",
+      "fonAdi": "HEDEF PORTFÖY ADA HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 111.795967,
+      "tedavuldekiPaySayisi": 28595024,
+      "kisiSayisi": 14,
+      "fonToplamDeger": 3196808354.41,
+      "gunlukGetiri": 0.10986873,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HLR",
+      "fonAdi": "HEDEF PORTFÖY ADA HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 111.795967,
+      "tedavuldekiPaySayisi": 28595024,
+      "kisiSayisi": 14,
+      "fonToplamDeger": 3196808354.41,
+      "gunlukGetiri": 0.10986873,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "HLR",
       "fonAdi": "HEDEF PORTFÖY ADA HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

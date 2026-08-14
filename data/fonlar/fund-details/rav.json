@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "RAV",
     "slug": "rav",
@@ -12,13 +12,13 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.491531,
+    "fiyat": 1.502923,
     "tedavuldekiPaySayisi": 735373680,
     "kisiSayisi": 12,
-    "fonToplamDeger": 1096832992.07,
-    "gunlukGetiri": -0.00249255,
+    "fonToplamDeger": 1105210064.62,
+    "gunlukGetiri": 0.00763779,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RAV",
+        "fonAdi": "ROTA PORTFÖY ALEV SERBEST FON",
+        "tarih": "2026-08-14",
+        "fiyat": 1.502923,
+        "tedavuldekiPaySayisi": 735373680,
+        "kisiSayisi": 12,
+        "fonToplamDeger": 1105210064.62,
+        "gunlukGetiri": 0.00763779,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "RAV",
         "fonAdi": "ROTA PORTFÖY ALEV SERBEST FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": -0.00249255,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "RAV",
+      "fonAdi": "ROTA PORTFÖY ALEV SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.502923,
+      "tedavuldekiPaySayisi": 735373680,
+      "kisiSayisi": 12,
+      "fonToplamDeger": 1105210064.62,
+      "gunlukGetiri": 0.00763779,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RAV",
+      "fonAdi": "ROTA PORTFÖY ALEV SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.502923,
+      "tedavuldekiPaySayisi": 735373680,
+      "kisiSayisi": 12,
+      "fonToplamDeger": 1105210064.62,
+      "gunlukGetiri": 0.00763779,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "RAV",
       "fonAdi": "ROTA PORTFÖY ALEV SERBEST FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

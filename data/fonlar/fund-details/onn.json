@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "ONN",
     "slug": "onn",
@@ -12,44 +12,56 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 6.372317,
-    "tedavuldekiPaySayisi": 202317452,
+    "fiyat": 6.384657,
+    "tedavuldekiPaySayisi": 202288126,
     "kisiSayisi": 579,
-    "fonToplamDeger": 1289230892.11,
-    "gunlukGetiri": 0.001092,
+    "fonToplamDeger": 1291540372.34,
+    "gunlukGetiri": 0.0019365,
     "getiriler": {
-      "birAy": 0.030823,
-      "ucAy": 0.094802,
-      "altiAy": 0.195378,
-      "yilbasi": 0.247029,
-      "birYil": 0.462696,
-      "ucYil": 2.467312,
-      "besYil": 4.18505
+      "birAy": 0.032681,
+      "ucAy": 0.09579,
+      "altiAy": 0.19418,
+      "yilbasi": 0.24944400000000003,
+      "birYil": 0.463643,
+      "ucYil": 2.474027,
+      "besYil": 4.187219
     },
     "paraAkisi": {
-      "gunluk": 49468736.56,
+      "gunluk": -187236.45,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ONN",
+        "fonAdi": "AKTİF PORTFÖY AKTİF ONİKS SERBEST (TL) FON",
+        "tarih": "2026-08-14",
+        "fiyat": 6.384657,
+        "tedavuldekiPaySayisi": 202288126,
+        "kisiSayisi": 579,
+        "fonToplamDeger": 1291540372.34,
+        "gunlukGetiri": 0.0019365,
+        "paraGirisiCikisi": -187236.45,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "ONN",
         "fonAdi": "AKTİF PORTFÖY AKTİF ONİKS SERBEST (TL) FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.001092,
       "paraGirisiCikisi": 49468736.56,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "ONN",
+      "fonAdi": "AKTİF PORTFÖY AKTİF ONİKS SERBEST (TL) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 6.384657,
+      "tedavuldekiPaySayisi": 202288126,
+      "kisiSayisi": 579,
+      "fonToplamDeger": 1291540372.34,
+      "gunlukGetiri": 0.0019365,
+      "paraGirisiCikisi": -187236.45,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ONN",
+      "fonAdi": "AKTİF PORTFÖY AKTİF ONİKS SERBEST (TL) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 6.384657,
+      "tedavuldekiPaySayisi": 202288126,
+      "kisiSayisi": 579,
+      "fonToplamDeger": 1291540372.34,
+      "gunlukGetiri": 0.0019365,
+      "paraGirisiCikisi": -187236.45,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "ONN",
       "fonAdi": "AKTİF PORTFÖY AKTİF ONİKS SERBEST (TL) FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

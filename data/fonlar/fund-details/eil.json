@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "EIL",
     "slug": "eil",
@@ -12,44 +12,56 @@
     "yonetici": "ASTRA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "astra-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 5.233152,
-    "tedavuldekiPaySayisi": 196924035,
-    "kisiSayisi": 1503,
-    "fonToplamDeger": 1030533477.77,
-    "gunlukGetiri": 0.00113081,
+    "fiyat": 5.238896,
+    "tedavuldekiPaySayisi": 196364825,
+    "kisiSayisi": 1498,
+    "fonToplamDeger": 1028734971.78,
+    "gunlukGetiri": 0.00109762,
     "getiriler": {
-      "birAy": 0.034789,
-      "ucAy": 0.105814,
-      "altiAy": 0.214942,
-      "yilbasi": 0.270872,
-      "birYil": 0.49418,
-      "ucYil": 2.60981,
-      "besYil": 4.255414
+      "birAy": 0.03472,
+      "ucAy": 0.10546900000000001,
+      "altiAy": 0.21251899999999999,
+      "yilbasi": 0.27226700000000004,
+      "birYil": 0.494463,
+      "ucYil": 2.613772,
+      "besYil": 4.252726
     },
     "paraAkisi": {
-      "gunluk": -2220824.11,
+      "gunluk": -2929643.03,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -8,
+      "gunluk": -5,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "EIL",
+        "fonAdi": "ASTRA PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 5.238896,
+        "tedavuldekiPaySayisi": 196364825,
+        "kisiSayisi": 1498,
+        "fonToplamDeger": 1028734971.78,
+        "gunlukGetiri": 0.00109762,
+        "paraGirisiCikisi": -2929643.03,
+        "yatirimciDegisimi": -5
+      },
       {
         "fonKodu": "EIL",
         "fonAdi": "ASTRA PORTFÖY PARA PİYASASI (TL) FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00113081,
       "paraGirisiCikisi": -2220824.11,
       "yatirimciDegisimi": -8
+    },
+    {
+      "fonKodu": "EIL",
+      "fonAdi": "ASTRA PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 5.238896,
+      "tedavuldekiPaySayisi": 196364825,
+      "kisiSayisi": 1498,
+      "fonToplamDeger": 1028734971.78,
+      "gunlukGetiri": 0.00109762,
+      "paraGirisiCikisi": -2929643.03,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "EIL",
+      "fonAdi": "ASTRA PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 5.238896,
+      "tedavuldekiPaySayisi": 196364825,
+      "kisiSayisi": 1498,
+      "fonToplamDeger": 1028734971.78,
+      "gunlukGetiri": 0.00109762,
+      "paraGirisiCikisi": -2929643.03,
+      "yatirimciDegisimi": -5
+    },
     {
       "fonKodu": "EIL",
       "fonAdi": "ASTRA PORTFÖY PARA PİYASASI (TL) FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

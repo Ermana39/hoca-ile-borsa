@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "KCR",
     "slug": "kcr",
@@ -12,15 +12,15 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.068537,
-    "tedavuldekiPaySayisi": 55719162,
-    "kisiSayisi": 266,
-    "fonToplamDeger": 59537962.86,
-    "gunlukGetiri": 0.00949945,
+    "fiyat": 1.062369,
+    "tedavuldekiPaySayisi": 57104121,
+    "kisiSayisi": 293,
+    "fonToplamDeger": 60665640.13,
+    "gunlukGetiri": -0.00577238,
     "getiriler": {
-      "birAy": 0.083714,
+      "birAy": 0.08562099999999999,
       "ucAy": null,
       "altiAy": null,
       "yilbasi": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1026249.65,
+      "gunluk": 1471337.51,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 20,
+      "gunluk": 27,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KCR",
+        "fonAdi": "AK PORTFÖY KÜLÇE ALTIN KATILIM FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 1.062369,
+        "tedavuldekiPaySayisi": 57104121,
+        "kisiSayisi": 293,
+        "fonToplamDeger": 60665640.13,
+        "gunlukGetiri": -0.00577238,
+        "paraGirisiCikisi": 1471337.51,
+        "yatirimciDegisimi": 27
+      },
       {
         "fonKodu": "KCR",
         "fonAdi": "AK PORTFÖY KÜLÇE ALTIN KATILIM FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00949945,
       "paraGirisiCikisi": 1026249.65,
       "yatirimciDegisimi": 20
+    },
+    {
+      "fonKodu": "KCR",
+      "fonAdi": "AK PORTFÖY KÜLÇE ALTIN KATILIM FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.062369,
+      "tedavuldekiPaySayisi": 57104121,
+      "kisiSayisi": 293,
+      "fonToplamDeger": 60665640.13,
+      "gunlukGetiri": -0.00577238,
+      "paraGirisiCikisi": 1471337.51,
+      "yatirimciDegisimi": 27
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KCR",
+      "fonAdi": "AK PORTFÖY KÜLÇE ALTIN KATILIM FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.062369,
+      "tedavuldekiPaySayisi": 57104121,
+      "kisiSayisi": 293,
+      "fonToplamDeger": 60665640.13,
+      "gunlukGetiri": -0.00577238,
+      "paraGirisiCikisi": 1471337.51,
+      "yatirimciDegisimi": 27
+    },
     {
       "fonKodu": "KCR",
       "fonAdi": "AK PORTFÖY KÜLÇE ALTIN KATILIM FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

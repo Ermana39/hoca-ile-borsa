@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "IRO",
     "slug": "iro",
@@ -12,24 +12,24 @@
     "yonetici": "İSTANBUL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "istanbul-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 2.162843,
-    "tedavuldekiPaySayisi": 19870563,
+    "fiyat": 2.162191,
+    "tedavuldekiPaySayisi": 19799563,
     "kisiSayisi": 93,
-    "fonToplamDeger": 42976900.73,
-    "gunlukGetiri": 0.01005175,
+    "fonToplamDeger": 42810441.7,
+    "gunlukGetiri": -0.00030146,
     "getiriler": {
-      "birAy": -0.012803,
-      "ucAy": 0.12670299999999998,
-      "altiAy": 0.25843499999999997,
-      "yilbasi": 0.2782,
-      "birYil": 0.39512,
+      "birAy": 0.000268,
+      "ucAy": 0.132057,
+      "altiAy": 0.273168,
+      "yilbasi": 0.277814,
+      "birYil": 0.373686,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 194655.87,
+      "gunluk": -153515.56,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IRO",
+        "fonAdi": "İSTANBUL PORTFÖY ROBOTİK TEKNOLOJİLERİ SERBEST FON",
+        "tarih": "2026-08-14",
+        "fiyat": 2.162191,
+        "tedavuldekiPaySayisi": 19799563,
+        "kisiSayisi": 93,
+        "fonToplamDeger": 42810441.7,
+        "gunlukGetiri": -0.00030146,
+        "paraGirisiCikisi": -153515.56,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "IRO",
         "fonAdi": "İSTANBUL PORTFÖY ROBOTİK TEKNOLOJİLERİ SERBEST FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.01005175,
       "paraGirisiCikisi": 194655.87,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "IRO",
+      "fonAdi": "İSTANBUL PORTFÖY ROBOTİK TEKNOLOJİLERİ SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 2.162191,
+      "tedavuldekiPaySayisi": 19799563,
+      "kisiSayisi": 93,
+      "fonToplamDeger": 42810441.7,
+      "gunlukGetiri": -0.00030146,
+      "paraGirisiCikisi": -153515.56,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IRO",
+      "fonAdi": "İSTANBUL PORTFÖY ROBOTİK TEKNOLOJİLERİ SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 2.162191,
+      "tedavuldekiPaySayisi": 19799563,
+      "kisiSayisi": 93,
+      "fonToplamDeger": 42810441.7,
+      "gunlukGetiri": -0.00030146,
+      "paraGirisiCikisi": -153515.56,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "IRO",
       "fonAdi": "İSTANBUL PORTFÖY ROBOTİK TEKNOLOJİLERİ SERBEST FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

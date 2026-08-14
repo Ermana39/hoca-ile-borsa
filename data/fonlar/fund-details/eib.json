@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "EIB",
     "slug": "eib",
@@ -12,24 +12,24 @@
     "yonetici": "ASTRA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "astra-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 0.671519,
-    "tedavuldekiPaySayisi": 450088068,
-    "kisiSayisi": 525,
-    "fonToplamDeger": 302242875.71,
-    "gunlukGetiri": -0.00021886,
+    "fiyat": 0.672473,
+    "tedavuldekiPaySayisi": 449693698,
+    "kisiSayisi": 524,
+    "fonToplamDeger": 302406828.95,
+    "gunlukGetiri": 0.00142066,
     "getiriler": {
-      "birAy": 0.011257,
-      "ucAy": 0.11850300000000001,
-      "altiAy": 0.22792300000000001,
-      "yilbasi": 0.277359,
-      "birYil": 0.458834,
-      "ucYil": 2.480184,
-      "besYil": 6.978791
+      "birAy": 0.009991,
+      "ucAy": 0.11549,
+      "altiAy": 0.226366,
+      "yilbasi": 0.279173,
+      "birYil": 0.459192,
+      "ucYil": 2.485129,
+      "besYil": 6.967973
     },
     "paraAkisi": {
-      "gunluk": 9608.09,
+      "gunluk": -265203.18,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "EIB",
+        "fonAdi": "ASTRA PORTFÖY DEĞİŞKEN FON",
+        "tarih": "2026-08-14",
+        "fiyat": 0.672473,
+        "tedavuldekiPaySayisi": 449693698,
+        "kisiSayisi": 524,
+        "fonToplamDeger": 302406828.95,
+        "gunlukGetiri": 0.00142066,
+        "paraGirisiCikisi": -265203.18,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "EIB",
         "fonAdi": "ASTRA PORTFÖY DEĞİŞKEN FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": -0.00021886,
       "paraGirisiCikisi": 9608.09,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "EIB",
+      "fonAdi": "ASTRA PORTFÖY DEĞİŞKEN FON",
+      "tarih": "2026-08-14",
+      "fiyat": 0.672473,
+      "tedavuldekiPaySayisi": 449693698,
+      "kisiSayisi": 524,
+      "fonToplamDeger": 302406828.95,
+      "gunlukGetiri": 0.00142066,
+      "paraGirisiCikisi": -265203.18,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "EIB",
+      "fonAdi": "ASTRA PORTFÖY DEĞİŞKEN FON",
+      "tarih": "2026-08-14",
+      "fiyat": 0.672473,
+      "tedavuldekiPaySayisi": 449693698,
+      "kisiSayisi": 524,
+      "fonToplamDeger": 302406828.95,
+      "gunlukGetiri": 0.00142066,
+      "paraGirisiCikisi": -265203.18,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "EIB",
       "fonAdi": "ASTRA PORTFÖY DEĞİŞKEN FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

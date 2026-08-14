@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "DP1",
     "slug": "dp1",
@@ -12,13 +12,13 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 17.938459,
+    "fiyat": 17.884725,
     "tedavuldekiPaySayisi": 284576837,
     "kisiSayisi": 7,
-    "fonToplamDeger": 5104869845.6,
-    "gunlukGetiri": 0.00778879,
+    "fonToplamDeger": 5089578382.54,
+    "gunlukGetiri": -0.00299546,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DP1",
+        "fonAdi": "DENİZ PORTFÖY DELTA SERBEST ÖZEL FON",
+        "tarih": "2026-08-14",
+        "fiyat": 17.884725,
+        "tedavuldekiPaySayisi": 284576837,
+        "kisiSayisi": 7,
+        "fonToplamDeger": 5089578382.54,
+        "gunlukGetiri": -0.00299546,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "DP1",
         "fonAdi": "DENİZ PORTFÖY DELTA SERBEST ÖZEL FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00778879,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DP1",
+      "fonAdi": "DENİZ PORTFÖY DELTA SERBEST ÖZEL FON",
+      "tarih": "2026-08-14",
+      "fiyat": 17.884725,
+      "tedavuldekiPaySayisi": 284576837,
+      "kisiSayisi": 7,
+      "fonToplamDeger": 5089578382.54,
+      "gunlukGetiri": -0.00299546,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DP1",
+      "fonAdi": "DENİZ PORTFÖY DELTA SERBEST ÖZEL FON",
+      "tarih": "2026-08-14",
+      "fiyat": 17.884725,
+      "tedavuldekiPaySayisi": 284576837,
+      "kisiSayisi": 7,
+      "fonToplamDeger": 5089578382.54,
+      "gunlukGetiri": -0.00299546,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "DP1",
       "fonAdi": "DENİZ PORTFÖY DELTA SERBEST ÖZEL FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

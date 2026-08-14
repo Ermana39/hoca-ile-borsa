@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "VAY",
     "slug": "vay",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.562369,
-    "tedavuldekiPaySayisi": 26219167,
-    "kisiSayisi": 3029,
-    "fonToplamDeger": 40964025.99,
-    "gunlukGetiri": 0.01605733,
+    "fiyat": 1.563371,
+    "tedavuldekiPaySayisi": 26213539,
+    "kisiSayisi": 3019,
+    "fonToplamDeger": 40981481.11,
+    "gunlukGetiri": 0.00064133,
     "getiriler": {
-      "birAy": -0.001845,
-      "ucAy": -0.023588,
-      "altiAy": -0.063206,
-      "yilbasi": 0.129079,
-      "birYil": 0.113084,
+      "birAy": 0.008591,
+      "ucAy": -0.011033999999999999,
+      "altiAy": -0.06460099999999999,
+      "yilbasi": 0.129803,
+      "birYil": 0.112869,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -40056.02,
+      "gunluk": -8798.65,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -6,
+      "gunluk": -10,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "VAY",
+        "fonAdi": "AK PORTFÖY DEĞER ODAKLI 100 ŞİRKETLERİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 1.563371,
+        "tedavuldekiPaySayisi": 26213539,
+        "kisiSayisi": 3019,
+        "fonToplamDeger": 40981481.11,
+        "gunlukGetiri": 0.00064133,
+        "paraGirisiCikisi": -8798.65,
+        "yatirimciDegisimi": -10
+      },
       {
         "fonKodu": "VAY",
         "fonAdi": "AK PORTFÖY DEĞER ODAKLI 100 ŞİRKETLERİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.01605733,
       "paraGirisiCikisi": -40056.02,
       "yatirimciDegisimi": -6
+    },
+    {
+      "fonKodu": "VAY",
+      "fonAdi": "AK PORTFÖY DEĞER ODAKLI 100 ŞİRKETLERİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.563371,
+      "tedavuldekiPaySayisi": 26213539,
+      "kisiSayisi": 3019,
+      "fonToplamDeger": 40981481.11,
+      "gunlukGetiri": 0.00064133,
+      "paraGirisiCikisi": -8798.65,
+      "yatirimciDegisimi": -10
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "VAY",
+      "fonAdi": "AK PORTFÖY DEĞER ODAKLI 100 ŞİRKETLERİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.563371,
+      "tedavuldekiPaySayisi": 26213539,
+      "kisiSayisi": 3019,
+      "fonToplamDeger": 40981481.11,
+      "gunlukGetiri": 0.00064133,
+      "paraGirisiCikisi": -8798.65,
+      "yatirimciDegisimi": -10
+    },
     {
       "fonKodu": "VAY",
       "fonAdi": "AK PORTFÖY DEĞER ODAKLI 100 ŞİRKETLERİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

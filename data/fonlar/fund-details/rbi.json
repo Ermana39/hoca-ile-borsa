@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "RBI",
     "slug": "rbi",
@@ -12,44 +12,56 @@
     "yonetici": "RE-PIE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "re-pie-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 55.950169,
-    "tedavuldekiPaySayisi": 1267927,
-    "kisiSayisi": 91,
-    "fonToplamDeger": 70940729.98,
-    "gunlukGetiri": 0.0022521,
+    "fiyat": 55.971212,
+    "tedavuldekiPaySayisi": 1264476,
+    "kisiSayisi": 90,
+    "fonToplamDeger": 70774254.21,
+    "gunlukGetiri": 0.0003761,
     "getiriler": {
-      "birAy": 0.00302,
-      "ucAy": 0.030109,
-      "altiAy": 0.071361,
-      "yilbasi": 0.098492,
-      "birYil": 0.183979,
+      "birAy": 0.00048,
+      "ucAy": 0.030167000000000003,
+      "altiAy": 0.072212,
+      "yilbasi": 0.09890499999999999,
+      "birYil": 0.181672,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": -193156.65,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RBI",
+        "fonAdi": "RE-PIE PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-14",
+        "fiyat": 55.971212,
+        "tedavuldekiPaySayisi": 1264476,
+        "kisiSayisi": 90,
+        "fonToplamDeger": 70774254.21,
+        "gunlukGetiri": 0.0003761,
+        "paraGirisiCikisi": -193156.65,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "RBI",
         "fonAdi": "RE-PIE PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.0022521,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "RBI",
+      "fonAdi": "RE-PIE PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 55.971212,
+      "tedavuldekiPaySayisi": 1264476,
+      "kisiSayisi": 90,
+      "fonToplamDeger": 70774254.21,
+      "gunlukGetiri": 0.0003761,
+      "paraGirisiCikisi": -193156.65,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RBI",
+      "fonAdi": "RE-PIE PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 55.971212,
+      "tedavuldekiPaySayisi": 1264476,
+      "kisiSayisi": 90,
+      "fonToplamDeger": 70774254.21,
+      "gunlukGetiri": 0.0003761,
+      "paraGirisiCikisi": -193156.65,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "RBI",
       "fonAdi": "RE-PIE PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

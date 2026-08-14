@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "OVD",
     "slug": "ovd",
@@ -12,44 +12,56 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 3.367043,
-    "tedavuldekiPaySayisi": 211707938,
-    "kisiSayisi": 3011,
-    "fonToplamDeger": 712829790.28,
-    "gunlukGetiri": 0.0031327,
+    "fiyat": 3.358885,
+    "tedavuldekiPaySayisi": 211995016,
+    "kisiSayisi": 3022,
+    "fonToplamDeger": 712066888.06,
+    "gunlukGetiri": -0.0024229,
     "getiriler": {
-      "birAy": 0.08797700000000001,
-      "ucAy": 0.003851,
-      "altiAy": 0.18956299999999998,
-      "yilbasi": 0.293379,
-      "birYil": 0.5803309999999999,
-      "ucYil": 1.465827,
+      "birAy": 0.08023300000000001,
+      "ucAy": -0.006923,
+      "altiAy": 0.205889,
+      "yilbasi": 0.290245,
+      "birYil": 0.572526,
+      "ucYil": 1.4598529999999998,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1009984.95,
+      "gunluk": 964261.99,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 10,
+      "gunluk": 11,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OVD",
+        "fonAdi": "QNB PORTFÖY EMTİA FON SEPETİ FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 3.358885,
+        "tedavuldekiPaySayisi": 211995016,
+        "kisiSayisi": 3022,
+        "fonToplamDeger": 712066888.06,
+        "gunlukGetiri": -0.0024229,
+        "paraGirisiCikisi": 964261.99,
+        "yatirimciDegisimi": 11
+      },
       {
         "fonKodu": "OVD",
         "fonAdi": "QNB PORTFÖY EMTİA FON SEPETİ FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.0031327,
       "paraGirisiCikisi": -1009984.95,
       "yatirimciDegisimi": 10
+    },
+    {
+      "fonKodu": "OVD",
+      "fonAdi": "QNB PORTFÖY EMTİA FON SEPETİ FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 3.358885,
+      "tedavuldekiPaySayisi": 211995016,
+      "kisiSayisi": 3022,
+      "fonToplamDeger": 712066888.06,
+      "gunlukGetiri": -0.0024229,
+      "paraGirisiCikisi": 964261.99,
+      "yatirimciDegisimi": 11
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OVD",
+      "fonAdi": "QNB PORTFÖY EMTİA FON SEPETİ FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 3.358885,
+      "tedavuldekiPaySayisi": 211995016,
+      "kisiSayisi": 3022,
+      "fonToplamDeger": 712066888.06,
+      "gunlukGetiri": -0.0024229,
+      "paraGirisiCikisi": 964261.99,
+      "yatirimciDegisimi": 11
+    },
     {
       "fonKodu": "OVD",
       "fonAdi": "QNB PORTFÖY EMTİA FON SEPETİ FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

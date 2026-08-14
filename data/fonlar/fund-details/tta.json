@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "TTA",
     "slug": "tta",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 0.626853,
-    "tedavuldekiPaySayisi": 42816991670,
-    "kisiSayisi": 221576,
-    "fonToplamDeger": 26839943368.81,
-    "gunlukGetiri": 0.00967225,
+    "fiyat": 0.622452,
+    "tedavuldekiPaySayisi": 42796647887,
+    "kisiSayisi": 221226,
+    "fonToplamDeger": 26638842628.88,
+    "gunlukGetiri": -0.00702078,
     "getiriler": {
-      "birAy": 0.08436500000000001,
-      "ucAy": -0.014903999999999999,
-      "altiAy": -0.098125,
-      "yilbasi": 0.02038,
-      "birYil": 0.406825,
-      "ucYil": 2.510248,
-      "besYil": 11.086243
+      "birAy": 0.085627,
+      "ucAy": -0.019025,
+      "altiAy": -0.094376,
+      "yilbasi": 0.013216,
+      "birYil": 0.412974,
+      "ucYil": 2.4856030000000002,
+      "besYil": 11.015984000000001
     },
     "paraAkisi": {
-      "gunluk": 62905053.35,
+      "gunluk": -12663028.42,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -560,
+      "gunluk": -350,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TTA",
+        "fonAdi": "İŞ PORTFÖY ALTIN FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 0.622452,
+        "tedavuldekiPaySayisi": 42796647887,
+        "kisiSayisi": 221226,
+        "fonToplamDeger": 26638842628.88,
+        "gunlukGetiri": -0.00702078,
+        "paraGirisiCikisi": -12663028.42,
+        "yatirimciDegisimi": -350
+      },
       {
         "fonKodu": "TTA",
         "fonAdi": "İŞ PORTFÖY ALTIN FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00967225,
       "paraGirisiCikisi": 62905053.35,
       "yatirimciDegisimi": -560
+    },
+    {
+      "fonKodu": "TTA",
+      "fonAdi": "İŞ PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 0.622452,
+      "tedavuldekiPaySayisi": 42796647887,
+      "kisiSayisi": 221226,
+      "fonToplamDeger": 26638842628.88,
+      "gunlukGetiri": -0.00702078,
+      "paraGirisiCikisi": -12663028.42,
+      "yatirimciDegisimi": -350
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TTA",
+      "fonAdi": "İŞ PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 0.622452,
+      "tedavuldekiPaySayisi": 42796647887,
+      "kisiSayisi": 221226,
+      "fonToplamDeger": 26638842628.88,
+      "gunlukGetiri": -0.00702078,
+      "paraGirisiCikisi": -12663028.42,
+      "yatirimciDegisimi": -350
+    },
     {
       "fonKodu": "TTA",
       "fonAdi": "İŞ PORTFÖY ALTIN FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

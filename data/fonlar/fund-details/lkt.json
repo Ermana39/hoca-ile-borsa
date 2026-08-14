@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "LKT",
     "slug": "lkt",
@@ -12,44 +12,56 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.861981,
-    "tedavuldekiPaySayisi": 115676425,
-    "kisiSayisi": 351,
-    "fonToplamDeger": 215387311.14,
-    "gunlukGetiri": 0.00148665,
+    "fiyat": 1.86406,
+    "tedavuldekiPaySayisi": 93267910,
+    "kisiSayisi": 389,
+    "fonToplamDeger": 173856989.1,
+    "gunlukGetiri": 0.00111655,
     "getiriler": {
-      "birAy": 0.032874,
-      "ucAy": 0.09798299999999999,
-      "altiAy": 0.20015999999999998,
-      "yilbasi": 0.24921800000000002,
-      "birYil": 0.442977,
+      "birAy": 0.032959999999999996,
+      "ucAy": 0.09808299999999999,
+      "altiAy": 0.198212,
+      "yilbasi": 0.250613,
+      "birYil": 0.443102,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 14232100.19,
+      "gunluk": -41770816.47,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -52,
+      "gunluk": 38,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "LKT",
+        "fonAdi": "AKTİF PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 1.86406,
+        "tedavuldekiPaySayisi": 93267910,
+        "kisiSayisi": 389,
+        "fonToplamDeger": 173856989.1,
+        "gunlukGetiri": 0.00111655,
+        "paraGirisiCikisi": -41770816.47,
+        "yatirimciDegisimi": 38
+      },
       {
         "fonKodu": "LKT",
         "fonAdi": "AKTİF PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00148665,
       "paraGirisiCikisi": 14232100.19,
       "yatirimciDegisimi": -52
+    },
+    {
+      "fonKodu": "LKT",
+      "fonAdi": "AKTİF PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.86406,
+      "tedavuldekiPaySayisi": 93267910,
+      "kisiSayisi": 389,
+      "fonToplamDeger": 173856989.1,
+      "gunlukGetiri": 0.00111655,
+      "paraGirisiCikisi": -41770816.47,
+      "yatirimciDegisimi": 38
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "LKT",
+      "fonAdi": "AKTİF PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.86406,
+      "tedavuldekiPaySayisi": 93267910,
+      "kisiSayisi": 389,
+      "fonToplamDeger": 173856989.1,
+      "gunlukGetiri": 0.00111655,
+      "paraGirisiCikisi": -41770816.47,
+      "yatirimciDegisimi": 38
+    },
     {
       "fonKodu": "LKT",
       "fonAdi": "AKTİF PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

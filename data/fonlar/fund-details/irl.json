@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "IRL",
     "slug": "irl",
@@ -12,13 +12,13 @@
     "yonetici": "İSTANBUL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "istanbul-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 17.76933,
+    "fiyat": 17.695876,
     "tedavuldekiPaySayisi": 15165905,
-    "kisiSayisi": 17,
-    "fonToplamDeger": 269487974.68,
-    "gunlukGetiri": 0.00593496,
+    "kisiSayisi": 16,
+    "fonToplamDeger": 268373971.67,
+    "gunlukGetiri": -0.00413375,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -481388.92,
-      "besGun": null,
-      "birAy": null,
-      "ucAy": null
-    },
-    "yatirimciDegisimi": {
       "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "yatirimciDegisimi": {
+      "gunluk": -1,
+      "besGun": null,
+      "birAy": null,
+      "ucAy": null
+    },
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IRL",
+        "fonAdi": "İSTANBUL PORTFÖY KEY SERBEST FON",
+        "tarih": "2026-08-14",
+        "fiyat": 17.695876,
+        "tedavuldekiPaySayisi": 15165905,
+        "kisiSayisi": 16,
+        "fonToplamDeger": 268373971.67,
+        "gunlukGetiri": -0.00413375,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "IRL",
         "fonAdi": "İSTANBUL PORTFÖY KEY SERBEST FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00593496,
       "paraGirisiCikisi": -481388.92,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "IRL",
+      "fonAdi": "İSTANBUL PORTFÖY KEY SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 17.695876,
+      "tedavuldekiPaySayisi": 15165905,
+      "kisiSayisi": 16,
+      "fonToplamDeger": 268373971.67,
+      "gunlukGetiri": -0.00413375,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IRL",
+      "fonAdi": "İSTANBUL PORTFÖY KEY SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 17.695876,
+      "tedavuldekiPaySayisi": 15165905,
+      "kisiSayisi": 16,
+      "fonToplamDeger": 268373971.67,
+      "gunlukGetiri": -0.00413375,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "IRL",
       "fonAdi": "İSTANBUL PORTFÖY KEY SERBEST FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

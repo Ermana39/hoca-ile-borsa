@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "RDF",
     "slug": "rdf",
@@ -12,24 +12,24 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.584543,
-    "tedavuldekiPaySayisi": 250482805,
-    "kisiSayisi": 705,
-    "fonToplamDeger": 396900789.2,
-    "gunlukGetiri": 0.00742787,
+    "fiyat": 1.586305,
+    "tedavuldekiPaySayisi": 250358881,
+    "kisiSayisi": 698,
+    "fonToplamDeger": 397145550.87,
+    "gunlukGetiri": 0.00111199,
     "getiriler": {
-      "birAy": -0.0027900000000000004,
-      "ucAy": -0.0524,
-      "altiAy": -0.035402,
-      "yilbasi": 0.239054,
-      "birYil": 0.415559,
+      "birAy": 0.017276,
+      "ucAy": -0.043411,
+      "altiAy": -0.040782,
+      "yilbasi": 0.24043199999999998,
+      "birYil": 0.418961,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1942199.71,
+      "gunluk": -196581.26,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RDF",
+        "fonAdi": "ROTA PORTFÖY DOKUZUNCU HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 1.586305,
+        "tedavuldekiPaySayisi": 250358881,
+        "kisiSayisi": 698,
+        "fonToplamDeger": 397145550.87,
+        "gunlukGetiri": 0.00111199,
+        "paraGirisiCikisi": -196581.26,
+        "yatirimciDegisimi": -7
+      },
       {
         "fonKodu": "RDF",
         "fonAdi": "ROTA PORTFÖY DOKUZUNCU HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00742787,
       "paraGirisiCikisi": -1942199.71,
       "yatirimciDegisimi": -7
+    },
+    {
+      "fonKodu": "RDF",
+      "fonAdi": "ROTA PORTFÖY DOKUZUNCU HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.586305,
+      "tedavuldekiPaySayisi": 250358881,
+      "kisiSayisi": 698,
+      "fonToplamDeger": 397145550.87,
+      "gunlukGetiri": 0.00111199,
+      "paraGirisiCikisi": -196581.26,
+      "yatirimciDegisimi": -7
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RDF",
+      "fonAdi": "ROTA PORTFÖY DOKUZUNCU HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.586305,
+      "tedavuldekiPaySayisi": 250358881,
+      "kisiSayisi": 698,
+      "fonToplamDeger": 397145550.87,
+      "gunlukGetiri": 0.00111199,
+      "paraGirisiCikisi": -196581.26,
+      "yatirimciDegisimi": -7
+    },
     {
       "fonKodu": "RDF",
       "fonAdi": "ROTA PORTFÖY DOKUZUNCU HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

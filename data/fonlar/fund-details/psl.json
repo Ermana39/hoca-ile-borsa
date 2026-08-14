@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "PSL",
     "slug": "psl",
@@ -12,44 +12,56 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 8.434286,
-    "tedavuldekiPaySayisi": 32282181,
-    "kisiSayisi": 54,
-    "fonToplamDeger": 272277139.21,
-    "gunlukGetiri": 0.00085712,
+    "fiyat": 8.440094,
+    "tedavuldekiPaySayisi": 32282362,
+    "kisiSayisi": 55,
+    "fonToplamDeger": 272466166.09,
+    "gunlukGetiri": 0.00068862,
     "getiriler": {
-      "birAy": 0.027277999999999997,
-      "ucAy": 0.075208,
-      "altiAy": 0.134206,
-      "yilbasi": 0.17080700000000001,
-      "birYil": 0.289877,
-      "ucYil": 1.2959,
-      "besYil": 6.239625
+      "birAy": 0.025122,
+      "ucAy": 0.074402,
+      "altiAy": 0.1349,
+      "yilbasi": 0.17161300000000002,
+      "birYil": 0.287634,
+      "ucYil": 1.2974809999999999,
+      "besYil": 6.262776
     },
     "paraAkisi": {
-      "gunluk": -67514325.56,
+      "gunluk": 1527.66,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": 1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PSL",
+        "fonAdi": "AZİMUT PORTFÖY 8.0 SERBEST FON",
+        "tarih": "2026-08-14",
+        "fiyat": 8.440094,
+        "tedavuldekiPaySayisi": 32282362,
+        "kisiSayisi": 55,
+        "fonToplamDeger": 272466166.09,
+        "gunlukGetiri": 0.00068862,
+        "paraGirisiCikisi": 1527.66,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "PSL",
         "fonAdi": "AZİMUT PORTFÖY 8.0 SERBEST FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00085712,
       "paraGirisiCikisi": -67514325.56,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PSL",
+      "fonAdi": "AZİMUT PORTFÖY 8.0 SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 8.440094,
+      "tedavuldekiPaySayisi": 32282362,
+      "kisiSayisi": 55,
+      "fonToplamDeger": 272466166.09,
+      "gunlukGetiri": 0.00068862,
+      "paraGirisiCikisi": 1527.66,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PSL",
+      "fonAdi": "AZİMUT PORTFÖY 8.0 SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 8.440094,
+      "tedavuldekiPaySayisi": 32282362,
+      "kisiSayisi": 55,
+      "fonToplamDeger": 272466166.09,
+      "gunlukGetiri": 0.00068862,
+      "paraGirisiCikisi": 1527.66,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "PSL",
       "fonAdi": "AZİMUT PORTFÖY 8.0 SERBEST FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

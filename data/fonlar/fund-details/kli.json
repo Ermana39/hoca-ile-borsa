@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "KLI",
     "slug": "kli",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.29976,
-    "tedavuldekiPaySayisi": 230049822,
-    "kisiSayisi": 153,
-    "fonToplamDeger": 299009668.37,
-    "gunlukGetiri": 0.00107057,
+    "fiyat": 1.301144,
+    "tedavuldekiPaySayisi": 229267619,
+    "kisiSayisi": 155,
+    "fonToplamDeger": 298310289,
+    "gunlukGetiri": 0.00106481,
     "getiriler": {
-      "birAy": 0.033826999999999996,
-      "ucAy": 0.103899,
-      "altiAy": 0.21109100000000003,
-      "yilbasi": 0.262542,
+      "birAy": 0.03381,
+      "ucAy": 0.103896,
+      "altiAy": 0.208795,
+      "yilbasi": 0.263886,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 862067.12,
+      "gunluk": -1017758.74,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": 2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KLI",
+        "fonAdi": "AK PORTFÖY PARA PİYASASI KATILIM SERBEST FON",
+        "tarih": "2026-08-14",
+        "fiyat": 1.301144,
+        "tedavuldekiPaySayisi": 229267619,
+        "kisiSayisi": 155,
+        "fonToplamDeger": 298310289,
+        "gunlukGetiri": 0.00106481,
+        "paraGirisiCikisi": -1017758.74,
+        "yatirimciDegisimi": 2
+      },
       {
         "fonKodu": "KLI",
         "fonAdi": "AK PORTFÖY PARA PİYASASI KATILIM SERBEST FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00107057,
       "paraGirisiCikisi": 862067.12,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KLI",
+      "fonAdi": "AK PORTFÖY PARA PİYASASI KATILIM SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.301144,
+      "tedavuldekiPaySayisi": 229267619,
+      "kisiSayisi": 155,
+      "fonToplamDeger": 298310289,
+      "gunlukGetiri": 0.00106481,
+      "paraGirisiCikisi": -1017758.74,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KLI",
+      "fonAdi": "AK PORTFÖY PARA PİYASASI KATILIM SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.301144,
+      "tedavuldekiPaySayisi": 229267619,
+      "kisiSayisi": 155,
+      "fonToplamDeger": 298310289,
+      "gunlukGetiri": 0.00106481,
+      "paraGirisiCikisi": -1017758.74,
+      "yatirimciDegisimi": 2
+    },
     {
       "fonKodu": "KLI",
       "fonAdi": "AK PORTFÖY PARA PİYASASI KATILIM SERBEST FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

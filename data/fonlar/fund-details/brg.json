@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "BRG",
     "slug": "brg",
@@ -12,13 +12,13 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 5.074873,
-    "tedavuldekiPaySayisi": 354425625,
-    "kisiSayisi": 1599,
-    "fonToplamDeger": 1798665073.5,
-    "gunlukGetiri": 0.00113254,
+    "fiyat": 5.080208,
+    "tedavuldekiPaySayisi": 356488050,
+    "kisiSayisi": 1602,
+    "fonToplamDeger": 1811033365.38,
+    "gunlukGetiri": 0.00105126,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 14698867.23,
+      "gunluk": 10477547.98,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BRG",
+        "fonAdi": "TEB PORTFÖY BURGAN BANK PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 5.080208,
+        "tedavuldekiPaySayisi": 356488050,
+        "kisiSayisi": 1602,
+        "fonToplamDeger": 1811033365.38,
+        "gunlukGetiri": 0.00105126,
+        "paraGirisiCikisi": 10477547.98,
+        "yatirimciDegisimi": 3
+      },
       {
         "fonKodu": "BRG",
         "fonAdi": "TEB PORTFÖY BURGAN BANK PARA PİYASASI (TL) FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00113254,
       "paraGirisiCikisi": 14698867.23,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "BRG",
+      "fonAdi": "TEB PORTFÖY BURGAN BANK PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 5.080208,
+      "tedavuldekiPaySayisi": 356488050,
+      "kisiSayisi": 1602,
+      "fonToplamDeger": 1811033365.38,
+      "gunlukGetiri": 0.00105126,
+      "paraGirisiCikisi": 10477547.98,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BRG",
+      "fonAdi": "TEB PORTFÖY BURGAN BANK PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 5.080208,
+      "tedavuldekiPaySayisi": 356488050,
+      "kisiSayisi": 1602,
+      "fonToplamDeger": 1811033365.38,
+      "gunlukGetiri": 0.00105126,
+      "paraGirisiCikisi": 10477547.98,
+      "yatirimciDegisimi": 3
+    },
     {
       "fonKodu": "BRG",
       "fonAdi": "TEB PORTFÖY BURGAN BANK PARA PİYASASI (TL) FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

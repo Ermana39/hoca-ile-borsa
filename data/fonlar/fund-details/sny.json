@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "SNY",
     "slug": "sny",
@@ -12,44 +12,56 @@
     "yonetici": "ATLAS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "atlas-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.350565,
-    "tedavuldekiPaySayisi": 348730964,
-    "kisiSayisi": 527,
-    "fonToplamDeger": 470983673.44,
-    "gunlukGetiri": 0.00092417,
+    "fiyat": 1.418364,
+    "tedavuldekiPaySayisi": 348628285,
+    "kisiSayisi": 517,
+    "fonToplamDeger": 494481727.16,
+    "gunlukGetiri": 0.05020047,
     "getiriler": {
-      "birAy": 0.042572,
-      "ucAy": -0.531646,
-      "altiAy": -0.140359,
-      "yilbasi": -0.081334,
-      "birYil": 0.33157,
+      "birAy": 0.052115,
+      "ucAy": -0.508883,
+      "altiAy": -0.144654,
+      "yilbasi": -0.035216,
+      "birYil": 0.39177599999999996,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -10688569.94,
+      "gunluk": -145636.2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
+      "gunluk": -10,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SNY",
+        "fonAdi": "ATLAS PORTFÖY SANAYİ SEKTÖRÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 1.418364,
+        "tedavuldekiPaySayisi": 348628285,
+        "kisiSayisi": 517,
+        "fonToplamDeger": 494481727.16,
+        "gunlukGetiri": 0.05020047,
+        "paraGirisiCikisi": -145636.2,
+        "yatirimciDegisimi": -10
+      },
       {
         "fonKodu": "SNY",
         "fonAdi": "ATLAS PORTFÖY SANAYİ SEKTÖRÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00092417,
       "paraGirisiCikisi": -10688569.94,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "SNY",
+      "fonAdi": "ATLAS PORTFÖY SANAYİ SEKTÖRÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.418364,
+      "tedavuldekiPaySayisi": 348628285,
+      "kisiSayisi": 517,
+      "fonToplamDeger": 494481727.16,
+      "gunlukGetiri": 0.05020047,
+      "paraGirisiCikisi": -145636.2,
+      "yatirimciDegisimi": -10
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SNY",
+      "fonAdi": "ATLAS PORTFÖY SANAYİ SEKTÖRÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.418364,
+      "tedavuldekiPaySayisi": 348628285,
+      "kisiSayisi": 517,
+      "fonToplamDeger": 494481727.16,
+      "gunlukGetiri": 0.05020047,
+      "paraGirisiCikisi": -145636.2,
+      "yatirimciDegisimi": -10
+    },
     {
       "fonKodu": "SNY",
       "fonAdi": "ATLAS PORTFÖY SANAYİ SEKTÖRÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

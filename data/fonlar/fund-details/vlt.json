@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "VLT",
     "slug": "vlt",
@@ -12,15 +12,15 @@
     "yonetici": "VAKIF KATILIM PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "vakif-katilim-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.019346,
-    "tedavuldekiPaySayisi": 56773526,
-    "kisiSayisi": 448,
-    "fonToplamDeger": 57871876.69,
-    "gunlukGetiri": 0.01061129,
+    "fiyat": 1.013233,
+    "tedavuldekiPaySayisi": 60953298,
+    "kisiSayisi": 458,
+    "fonToplamDeger": 61759902.7,
+    "gunlukGetiri": -0.00599698,
     "getiriler": {
-      "birAy": 0.084871,
+      "birAy": 0.086874,
       "ucAy": null,
       "altiAy": null,
       "yilbasi": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 225984.93,
+      "gunluk": 4235082.92,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 17,
+      "gunluk": 10,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "VLT",
+        "fonAdi": "VAKIF KATILIM PORTFÖY ALTIN KATILIM FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 1.013233,
+        "tedavuldekiPaySayisi": 60953298,
+        "kisiSayisi": 458,
+        "fonToplamDeger": 61759902.7,
+        "gunlukGetiri": -0.00599698,
+        "paraGirisiCikisi": 4235082.92,
+        "yatirimciDegisimi": 10
+      },
       {
         "fonKodu": "VLT",
         "fonAdi": "VAKIF KATILIM PORTFÖY ALTIN KATILIM FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.01061129,
       "paraGirisiCikisi": 225984.93,
       "yatirimciDegisimi": 17
+    },
+    {
+      "fonKodu": "VLT",
+      "fonAdi": "VAKIF KATILIM PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.013233,
+      "tedavuldekiPaySayisi": 60953298,
+      "kisiSayisi": 458,
+      "fonToplamDeger": 61759902.7,
+      "gunlukGetiri": -0.00599698,
+      "paraGirisiCikisi": 4235082.92,
+      "yatirimciDegisimi": 10
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "VLT",
+      "fonAdi": "VAKIF KATILIM PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.013233,
+      "tedavuldekiPaySayisi": 60953298,
+      "kisiSayisi": 458,
+      "fonToplamDeger": 61759902.7,
+      "gunlukGetiri": -0.00599698,
+      "paraGirisiCikisi": 4235082.92,
+      "yatirimciDegisimi": 10
+    },
     {
       "fonKodu": "VLT",
       "fonAdi": "VAKIF KATILIM PORTFÖY ALTIN KATILIM FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

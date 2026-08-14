@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "NJR",
     "slug": "njr",
@@ -12,44 +12,56 @@
     "yonetici": "NUROL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "nurol-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 5.775479,
-    "tedavuldekiPaySayisi": 303385954,
-    "kisiSayisi": 2528,
-    "fonToplamDeger": 1752199326.02,
-    "gunlukGetiri": 0.00106442,
+    "fiyat": 5.781901,
+    "tedavuldekiPaySayisi": 303375828,
+    "kisiSayisi": 2521,
+    "fonToplamDeger": 1754089146.12,
+    "gunlukGetiri": 0.00111194,
     "getiriler": {
-      "birAy": 0.035337,
-      "ucAy": 0.115305,
-      "altiAy": 0.22947700000000001,
-      "yilbasi": 0.277762,
-      "birYil": 0.505347,
-      "ucYil": 2.721697,
+      "birAy": 0.035316,
+      "ucAy": 0.10993,
+      "altiAy": 0.227012,
+      "yilbasi": 0.27918299999999996,
+      "birYil": 0.50593,
+      "ucYil": 2.7258359999999997,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 368901513.33,
+      "gunluk": -58547.53,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
+      "gunluk": -7,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NJR",
+        "fonAdi": "NUROL PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 5.781901,
+        "tedavuldekiPaySayisi": 303375828,
+        "kisiSayisi": 2521,
+        "fonToplamDeger": 1754089146.12,
+        "gunlukGetiri": 0.00111194,
+        "paraGirisiCikisi": -58547.53,
+        "yatirimciDegisimi": -7
+      },
       {
         "fonKodu": "NJR",
         "fonAdi": "NUROL PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00106442,
       "paraGirisiCikisi": 368901513.33,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "NJR",
+      "fonAdi": "NUROL PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 5.781901,
+      "tedavuldekiPaySayisi": 303375828,
+      "kisiSayisi": 2521,
+      "fonToplamDeger": 1754089146.12,
+      "gunlukGetiri": 0.00111194,
+      "paraGirisiCikisi": -58547.53,
+      "yatirimciDegisimi": -7
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NJR",
+      "fonAdi": "NUROL PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 5.781901,
+      "tedavuldekiPaySayisi": 303375828,
+      "kisiSayisi": 2521,
+      "fonToplamDeger": 1754089146.12,
+      "gunlukGetiri": 0.00111194,
+      "paraGirisiCikisi": -58547.53,
+      "yatirimciDegisimi": -7
+    },
     {
       "fonKodu": "NJR",
       "fonAdi": "NUROL PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

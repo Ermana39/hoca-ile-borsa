@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "KLS",
     "slug": "kls",
@@ -12,24 +12,24 @@
     "yonetici": "ALLBATROSS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "allbatross-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 41.472686,
+    "fiyat": 41.477273,
     "tedavuldekiPaySayisi": 22568,
     "kisiSayisi": 2,
-    "fonToplamDeger": 935955.57,
-    "gunlukGetiri": -0.00006454,
+    "fonToplamDeger": 936059.09,
+    "gunlukGetiri": 0.0001106,
     "getiriler": {
-      "birAy": 0.01052,
-      "ucAy": 0.009753,
-      "altiAy": -0.002526,
-      "yilbasi": -0.009891,
-      "birYil": 0.030366,
+      "birAy": 0.008539,
+      "ucAy": 0.010055000000000001,
+      "altiAy": -0.000939,
+      "yilbasi": -0.009781,
+      "birYil": 0.029941,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -82945.37,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KLS",
+        "fonAdi": "ALLBATROSS PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-14",
+        "fiyat": 41.477273,
+        "tedavuldekiPaySayisi": 22568,
+        "kisiSayisi": 2,
+        "fonToplamDeger": 936059.09,
+        "gunlukGetiri": 0.0001106,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "KLS",
         "fonAdi": "ALLBATROSS PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": -0.00006454,
       "paraGirisiCikisi": -82945.37,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KLS",
+      "fonAdi": "ALLBATROSS PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 41.477273,
+      "tedavuldekiPaySayisi": 22568,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 936059.09,
+      "gunlukGetiri": 0.0001106,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KLS",
+      "fonAdi": "ALLBATROSS PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 41.477273,
+      "tedavuldekiPaySayisi": 22568,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 936059.09,
+      "gunlukGetiri": 0.0001106,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "KLS",
       "fonAdi": "ALLBATROSS PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

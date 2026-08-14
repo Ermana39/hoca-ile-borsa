@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "AHZ",
     "slug": "ahz",
@@ -12,13 +12,13 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 31.032612,
+    "fiyat": 31.030843,
     "tedavuldekiPaySayisi": 1749021,
     "kisiSayisi": 13,
-    "fonToplamDeger": 54276689.48,
-    "gunlukGetiri": 0.00081655,
+    "fonToplamDeger": 54273596.25,
+    "gunlukGetiri": -0.000057,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AHZ",
+        "fonAdi": "AZİMUT PORTFÖY ATAK FON SEPETİ SERBEST FON",
+        "tarih": "2026-08-14",
+        "fiyat": 31.030843,
+        "tedavuldekiPaySayisi": 1749021,
+        "kisiSayisi": 13,
+        "fonToplamDeger": 54273596.25,
+        "gunlukGetiri": -0.000057,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "AHZ",
         "fonAdi": "AZİMUT PORTFÖY ATAK FON SEPETİ SERBEST FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00081655,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "AHZ",
+      "fonAdi": "AZİMUT PORTFÖY ATAK FON SEPETİ SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 31.030843,
+      "tedavuldekiPaySayisi": 1749021,
+      "kisiSayisi": 13,
+      "fonToplamDeger": 54273596.25,
+      "gunlukGetiri": -0.000057,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AHZ",
+      "fonAdi": "AZİMUT PORTFÖY ATAK FON SEPETİ SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 31.030843,
+      "tedavuldekiPaySayisi": 1749021,
+      "kisiSayisi": 13,
+      "fonToplamDeger": 54273596.25,
+      "gunlukGetiri": -0.000057,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "AHZ",
       "fonAdi": "AZİMUT PORTFÖY ATAK FON SEPETİ SERBEST FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

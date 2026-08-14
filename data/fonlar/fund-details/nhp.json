@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "NHP",
     "slug": "nhp",
@@ -12,44 +12,56 @@
     "yonetici": "NEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "neo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 5.602311,
-    "tedavuldekiPaySayisi": 2163815,
-    "kisiSayisi": 156,
-    "fonToplamDeger": 12122364.69,
-    "gunlukGetiri": null,
+    "fiyat": 5.601082,
+    "tedavuldekiPaySayisi": 2163797,
+    "kisiSayisi": 155,
+    "fonToplamDeger": 12119604.56,
+    "gunlukGetiri": -0.00021937,
     "getiriler": {
-      "birAy": -0.014183,
-      "ucAy": 0.029603,
-      "altiAy": 0.122403,
-      "yilbasi": 0.151413,
-      "birYil": 0.350775,
-      "ucYil": 1.702497,
+      "birAy": -0.013098,
+      "ucAy": 0.028088000000000002,
+      "altiAy": 0.12195,
+      "yilbasi": 0.15116,
+      "birYil": 0.348781,
+      "ucYil": 1.701904,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": null,
+      "gunluk": -100.82,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NHP",
+        "fonAdi": "NEO PORTFÖY BİRİNCİ FON SEPETİ FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 5.601082,
+        "tedavuldekiPaySayisi": 2163797,
+        "kisiSayisi": 155,
+        "fonToplamDeger": 12119604.56,
+        "gunlukGetiri": -0.00021937,
+        "paraGirisiCikisi": -100.82,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "NHP",
         "fonAdi": "NEO PORTFÖY BİRİNCİ FON SEPETİ FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": null,
       "paraGirisiCikisi": null,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "NHP",
+      "fonAdi": "NEO PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 5.601082,
+      "tedavuldekiPaySayisi": 2163797,
+      "kisiSayisi": 155,
+      "fonToplamDeger": 12119604.56,
+      "gunlukGetiri": -0.00021937,
+      "paraGirisiCikisi": -100.82,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NHP",
+      "fonAdi": "NEO PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 5.601082,
+      "tedavuldekiPaySayisi": 2163797,
+      "kisiSayisi": 155,
+      "fonToplamDeger": 12119604.56,
+      "gunlukGetiri": -0.00021937,
+      "paraGirisiCikisi": -100.82,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "NHP",
       "fonAdi": "NEO PORTFÖY BİRİNCİ FON SEPETİ FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

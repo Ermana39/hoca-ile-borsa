@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "IHK",
     "slug": "ihk",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 16.622341,
-    "tedavuldekiPaySayisi": 99003000,
-    "kisiSayisi": 29511,
-    "fonToplamDeger": 1645661578.76,
-    "gunlukGetiri": 0.00999634,
+    "fiyat": 16.516297,
+    "tedavuldekiPaySayisi": 98854524,
+    "kisiSayisi": 29448,
+    "fonToplamDeger": 1632710643.49,
+    "gunlukGetiri": -0.00637961,
     "getiriler": {
-      "birAy": -0.006927,
-      "ucAy": -0.046666,
-      "altiAy": -0.084086,
-      "yilbasi": 0.139687,
-      "birYil": 0.140701,
-      "ucYil": 1.401448,
-      "besYil": 15.570855
+      "birAy": 0.00020400000000000003,
+      "ucAy": -0.049739000000000005,
+      "altiAy": -0.093458,
+      "yilbasi": 0.132417,
+      "birYil": 0.13780599999999998,
+      "ucYil": 1.386128,
+      "besYil": 15.363916
     },
     "paraAkisi": {
-      "gunluk": -6942154.5,
+      "gunluk": -2452273.71,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -67,
+      "gunluk": -63,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IHK",
+        "fonAdi": "İŞ PORTFÖY İŞ'TE KADIN HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 16.516297,
+        "tedavuldekiPaySayisi": 98854524,
+        "kisiSayisi": 29448,
+        "fonToplamDeger": 1632710643.49,
+        "gunlukGetiri": -0.00637961,
+        "paraGirisiCikisi": -2452273.71,
+        "yatirimciDegisimi": -63
+      },
       {
         "fonKodu": "IHK",
         "fonAdi": "İŞ PORTFÖY İŞ'TE KADIN HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00999634,
       "paraGirisiCikisi": -6942154.5,
       "yatirimciDegisimi": -67
+    },
+    {
+      "fonKodu": "IHK",
+      "fonAdi": "İŞ PORTFÖY İŞ'TE KADIN HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 16.516297,
+      "tedavuldekiPaySayisi": 98854524,
+      "kisiSayisi": 29448,
+      "fonToplamDeger": 1632710643.49,
+      "gunlukGetiri": -0.00637961,
+      "paraGirisiCikisi": -2452273.71,
+      "yatirimciDegisimi": -63
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IHK",
+      "fonAdi": "İŞ PORTFÖY İŞ'TE KADIN HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 16.516297,
+      "tedavuldekiPaySayisi": 98854524,
+      "kisiSayisi": 29448,
+      "fonToplamDeger": 1632710643.49,
+      "gunlukGetiri": -0.00637961,
+      "paraGirisiCikisi": -2452273.71,
+      "yatirimciDegisimi": -63
+    },
     {
       "fonKodu": "IHK",
       "fonAdi": "İŞ PORTFÖY İŞ'TE KADIN HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

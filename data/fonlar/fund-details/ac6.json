@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "AC6",
     "slug": "ac6",
@@ -12,44 +12,56 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 57.091797,
-    "tedavuldekiPaySayisi": 1303156,
-    "kisiSayisi": 87,
-    "fonToplamDeger": 74399518.42,
-    "gunlukGetiri": 0.00089166,
+    "fiyat": 57.136034,
+    "tedavuldekiPaySayisi": 1301409,
+    "kisiSayisi": 86,
+    "fonToplamDeger": 74357348.52,
+    "gunlukGetiri": 0.00077484,
     "getiriler": {
-      "birAy": 0.028858,
-      "ucAy": 0.01989,
-      "altiAy": 0.048285999999999996,
-      "yilbasi": 0.094678,
-      "birYil": 0.151038,
-      "ucYil": 1.015805,
+      "birAy": 0.027465000000000003,
+      "ucAy": 0.034733,
+      "altiAy": 0.048565,
+      "yilbasi": 0.095526,
+      "birYil": 0.149609,
+      "ucYil": 1.017367,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 39964.26,
+      "gunluk": -99816.65,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AC6",
+        "fonAdi": "PARDUS PORTFÖY DÖRDÜNCÜ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-14",
+        "fiyat": 57.136034,
+        "tedavuldekiPaySayisi": 1301409,
+        "kisiSayisi": 86,
+        "fonToplamDeger": 74357348.52,
+        "gunlukGetiri": 0.00077484,
+        "paraGirisiCikisi": -99816.65,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "AC6",
         "fonAdi": "PARDUS PORTFÖY DÖRDÜNCÜ SERBEST (DÖVİZ) FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00089166,
       "paraGirisiCikisi": 39964.26,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "AC6",
+      "fonAdi": "PARDUS PORTFÖY DÖRDÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 57.136034,
+      "tedavuldekiPaySayisi": 1301409,
+      "kisiSayisi": 86,
+      "fonToplamDeger": 74357348.52,
+      "gunlukGetiri": 0.00077484,
+      "paraGirisiCikisi": -99816.65,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AC6",
+      "fonAdi": "PARDUS PORTFÖY DÖRDÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 57.136034,
+      "tedavuldekiPaySayisi": 1301409,
+      "kisiSayisi": 86,
+      "fonToplamDeger": 74357348.52,
+      "gunlukGetiri": 0.00077484,
+      "paraGirisiCikisi": -99816.65,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "AC6",
       "fonAdi": "PARDUS PORTFÖY DÖRDÜNCÜ SERBEST (DÖVİZ) FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

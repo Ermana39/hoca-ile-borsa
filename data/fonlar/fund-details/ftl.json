@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "FTL",
     "slug": "ftl",
@@ -12,44 +12,56 @@
     "yonetici": "ONE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "one-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.518748,
-    "tedavuldekiPaySayisi": 177922861,
-    "kisiSayisi": 240,
-    "fonToplamDeger": 270220065.92,
-    "gunlukGetiri": 0.00104735,
+    "fiyat": 1.520283,
+    "tedavuldekiPaySayisi": 178221327,
+    "kisiSayisi": 243,
+    "fonToplamDeger": 270946868.4,
+    "gunlukGetiri": 0.0010107,
     "getiriler": {
-      "birAy": 0.033123,
-      "ucAy": 0.10238,
-      "altiAy": 0.20753699999999997,
-      "yilbasi": 0.25810500000000003,
-      "birYil": 0.45970300000000003,
+      "birAy": 0.033073,
+      "ucAy": 0.102237,
+      "altiAy": 0.205148,
+      "yilbasi": 0.25937699999999997,
+      "birYil": 0.45956800000000003,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -44734778.53,
+      "gunluk": 453752.79,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": 3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FTL",
+        "fonAdi": "ONE PORTFÖY PARA PİYASASI KATILIM FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 1.520283,
+        "tedavuldekiPaySayisi": 178221327,
+        "kisiSayisi": 243,
+        "fonToplamDeger": 270946868.4,
+        "gunlukGetiri": 0.0010107,
+        "paraGirisiCikisi": 453752.79,
+        "yatirimciDegisimi": 3
+      },
       {
         "fonKodu": "FTL",
         "fonAdi": "ONE PORTFÖY PARA PİYASASI KATILIM FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00104735,
       "paraGirisiCikisi": -44734778.53,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "FTL",
+      "fonAdi": "ONE PORTFÖY PARA PİYASASI KATILIM FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.520283,
+      "tedavuldekiPaySayisi": 178221327,
+      "kisiSayisi": 243,
+      "fonToplamDeger": 270946868.4,
+      "gunlukGetiri": 0.0010107,
+      "paraGirisiCikisi": 453752.79,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FTL",
+      "fonAdi": "ONE PORTFÖY PARA PİYASASI KATILIM FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.520283,
+      "tedavuldekiPaySayisi": 178221327,
+      "kisiSayisi": 243,
+      "fonToplamDeger": 270946868.4,
+      "gunlukGetiri": 0.0010107,
+      "paraGirisiCikisi": 453752.79,
+      "yatirimciDegisimi": 3
+    },
     {
       "fonKodu": "FTL",
       "fonAdi": "ONE PORTFÖY PARA PİYASASI KATILIM FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

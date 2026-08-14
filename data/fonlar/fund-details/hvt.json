@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "HVT",
     "slug": "hvt",
@@ -12,24 +12,24 @@
     "yonetici": "ALLBATROSS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "allbatross-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 4.682602,
-    "tedavuldekiPaySayisi": 141467309,
-    "kisiSayisi": 1841,
-    "fonToplamDeger": 662435088.59,
-    "gunlukGetiri": 0.00093861,
+    "fiyat": 4.688354,
+    "tedavuldekiPaySayisi": 141177147,
+    "kisiSayisi": 1838,
+    "fonToplamDeger": 661888455.46,
+    "gunlukGetiri": 0.00122838,
     "getiriler": {
-      "birAy": 0.035693,
-      "ucAy": 0.10770300000000001,
-      "altiAy": 0.22671600000000003,
-      "yilbasi": 0.29003,
-      "birYil": 0.522992,
-      "ucYil": 2.723129,
+      "birAy": 0.035803,
+      "ucAy": 0.10784,
+      "altiAy": 0.224171,
+      "yilbasi": 0.291615,
+      "birYil": 0.523052,
+      "ucYil": 2.727703,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -518387.45,
+      "gunluk": -1360382.17,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HVT",
+        "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 4.688354,
+        "tedavuldekiPaySayisi": 141177147,
+        "kisiSayisi": 1838,
+        "fonToplamDeger": 661888455.46,
+        "gunlukGetiri": 0.00122838,
+        "paraGirisiCikisi": -1360382.17,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "HVT",
         "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00093861,
       "paraGirisiCikisi": -518387.45,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "HVT",
+      "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 4.688354,
+      "tedavuldekiPaySayisi": 141177147,
+      "kisiSayisi": 1838,
+      "fonToplamDeger": 661888455.46,
+      "gunlukGetiri": 0.00122838,
+      "paraGirisiCikisi": -1360382.17,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HVT",
+      "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 4.688354,
+      "tedavuldekiPaySayisi": 141177147,
+      "kisiSayisi": 1838,
+      "fonToplamDeger": 661888455.46,
+      "gunlukGetiri": 0.00122838,
+      "paraGirisiCikisi": -1360382.17,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "HVT",
       "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

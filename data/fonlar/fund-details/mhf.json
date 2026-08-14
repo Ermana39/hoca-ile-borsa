@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "MHF",
     "slug": "mhf",
@@ -12,44 +12,56 @@
     "yonetici": "MT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "mt-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 2.308454,
-    "tedavuldekiPaySayisi": 212177762,
-    "kisiSayisi": 4393,
-    "fonToplamDeger": 489802572.37,
-    "gunlukGetiri": -0.00307354,
+    "fiyat": 2.33034,
+    "tedavuldekiPaySayisi": 206911404,
+    "kisiSayisi": 4250,
+    "fonToplamDeger": 482173982.8,
+    "gunlukGetiri": 0.0094808,
     "getiriler": {
-      "birAy": -0.005716,
-      "ucAy": 0.11416,
-      "altiAy": 0.293565,
-      "yilbasi": 0.534991,
-      "birYil": 0.758849,
+      "birAy": -0.0065439999999999995,
+      "ucAy": 0.16371,
+      "altiAy": 0.300963,
+      "yilbasi": 0.549544,
+      "birYil": 0.778746,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -23599105.94,
+      "gunluk": -12272404.7,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -70,
+      "gunluk": -143,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MHF",
+        "fonAdi": "MT PORTFÖY BIST HALKA ARZ ŞİRKETLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 2.33034,
+        "tedavuldekiPaySayisi": 206911404,
+        "kisiSayisi": 4250,
+        "fonToplamDeger": 482173982.8,
+        "gunlukGetiri": 0.0094808,
+        "paraGirisiCikisi": -12272404.7,
+        "yatirimciDegisimi": -143
+      },
       {
         "fonKodu": "MHF",
         "fonAdi": "MT PORTFÖY BIST HALKA ARZ ŞİRKETLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": -0.00307354,
       "paraGirisiCikisi": -23599105.94,
       "yatirimciDegisimi": -70
+    },
+    {
+      "fonKodu": "MHF",
+      "fonAdi": "MT PORTFÖY BIST HALKA ARZ ŞİRKETLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 2.33034,
+      "tedavuldekiPaySayisi": 206911404,
+      "kisiSayisi": 4250,
+      "fonToplamDeger": 482173982.8,
+      "gunlukGetiri": 0.0094808,
+      "paraGirisiCikisi": -12272404.7,
+      "yatirimciDegisimi": -143
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MHF",
+      "fonAdi": "MT PORTFÖY BIST HALKA ARZ ŞİRKETLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 2.33034,
+      "tedavuldekiPaySayisi": 206911404,
+      "kisiSayisi": 4250,
+      "fonToplamDeger": 482173982.8,
+      "gunlukGetiri": 0.0094808,
+      "paraGirisiCikisi": -12272404.7,
+      "yatirimciDegisimi": -143
+    },
     {
       "fonKodu": "MHF",
       "fonAdi": "MT PORTFÖY BIST HALKA ARZ ŞİRKETLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

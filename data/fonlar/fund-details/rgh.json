@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "RGH",
     "slug": "rgh",
@@ -12,44 +12,56 @@
     "yonetici": "RE-PIE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "re-pie-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.136579,
-    "tedavuldekiPaySayisi": 34407705,
-    "kisiSayisi": 23,
-    "fonToplamDeger": 39107088.98,
-    "gunlukGetiri": 0.00281191,
+    "fiyat": 1.143113,
+    "tedavuldekiPaySayisi": 34407131,
+    "kisiSayisi": 24,
+    "fonToplamDeger": 39331254.9,
+    "gunlukGetiri": 0.00574883,
     "getiriler": {
-      "birAy": 0.027374999999999997,
-      "ucAy": 0.062239,
-      "altiAy": 0.070411,
-      "yilbasi": 0.122812,
+      "birAy": 0.026223,
+      "ucAy": 0.062897,
+      "altiAy": 0.07560800000000001,
+      "yilbasi": 0.129267,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 189.81,
+      "gunluk": -656.15,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": 1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RGH",
+        "fonAdi": "RE-PIE PORTFÖY MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 1.143113,
+        "tedavuldekiPaySayisi": 34407131,
+        "kisiSayisi": 24,
+        "fonToplamDeger": 39331254.9,
+        "gunlukGetiri": 0.00574883,
+        "paraGirisiCikisi": -656.15,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "RGH",
         "fonAdi": "RE-PIE PORTFÖY MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00281191,
       "paraGirisiCikisi": 189.81,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "RGH",
+      "fonAdi": "RE-PIE PORTFÖY MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.143113,
+      "tedavuldekiPaySayisi": 34407131,
+      "kisiSayisi": 24,
+      "fonToplamDeger": 39331254.9,
+      "gunlukGetiri": 0.00574883,
+      "paraGirisiCikisi": -656.15,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RGH",
+      "fonAdi": "RE-PIE PORTFÖY MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.143113,
+      "tedavuldekiPaySayisi": 34407131,
+      "kisiSayisi": 24,
+      "fonToplamDeger": 39331254.9,
+      "gunlukGetiri": 0.00574883,
+      "paraGirisiCikisi": -656.15,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "RGH",
       "fonAdi": "RE-PIE PORTFÖY MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

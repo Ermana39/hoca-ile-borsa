@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "KPF",
     "slug": "kpf",
@@ -12,44 +12,56 @@
     "yonetici": "NEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "neo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.758738,
-    "tedavuldekiPaySayisi": 751053173,
-    "kisiSayisi": 300,
-    "fonToplamDeger": 1320905833.15,
-    "gunlukGetiri": 0.00097551,
+    "fiyat": 1.76443,
+    "tedavuldekiPaySayisi": 750840571,
+    "kisiSayisi": 297,
+    "fonToplamDeger": 1324805315.25,
+    "gunlukGetiri": 0.00323641,
     "getiriler": {
-      "birAy": 0.029184,
-      "ucAy": 0.115339,
-      "altiAy": 0.223914,
-      "yilbasi": 0.253861,
-      "birYil": 0.5275110000000001,
+      "birAy": 0.026425,
+      "ucAy": 0.115333,
+      "altiAy": 0.226568,
+      "yilbasi": 0.257919,
+      "birYil": 0.531985,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 18628273.26,
+      "gunluk": -375121.35,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KPF",
+        "fonAdi": "NEO PORTFÖY MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 1.76443,
+        "tedavuldekiPaySayisi": 750840571,
+        "kisiSayisi": 297,
+        "fonToplamDeger": 1324805315.25,
+        "gunlukGetiri": 0.00323641,
+        "paraGirisiCikisi": -375121.35,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "KPF",
         "fonAdi": "NEO PORTFÖY MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00097551,
       "paraGirisiCikisi": 18628273.26,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KPF",
+      "fonAdi": "NEO PORTFÖY MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.76443,
+      "tedavuldekiPaySayisi": 750840571,
+      "kisiSayisi": 297,
+      "fonToplamDeger": 1324805315.25,
+      "gunlukGetiri": 0.00323641,
+      "paraGirisiCikisi": -375121.35,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KPF",
+      "fonAdi": "NEO PORTFÖY MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.76443,
+      "tedavuldekiPaySayisi": 750840571,
+      "kisiSayisi": 297,
+      "fonToplamDeger": 1324805315.25,
+      "gunlukGetiri": 0.00323641,
+      "paraGirisiCikisi": -375121.35,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "KPF",
       "fonAdi": "NEO PORTFÖY MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

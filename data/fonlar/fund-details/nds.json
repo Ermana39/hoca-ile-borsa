@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "NDS",
     "slug": "nds",
@@ -12,13 +12,13 @@
     "yonetici": "NEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "neo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 0.947052,
+    "fiyat": 0.945026,
     "tedavuldekiPaySayisi": 641580634,
     "kisiSayisi": 13,
-    "fonToplamDeger": 607610330.53,
-    "gunlukGetiri": 0.00704039,
+    "fonToplamDeger": 606310380.14,
+    "gunlukGetiri": -0.00213927,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NDS",
+        "fonAdi": "NEO PORTFÖY DÖRDÜNCÜ SERBEST FON",
+        "tarih": "2026-08-14",
+        "fiyat": 0.945026,
+        "tedavuldekiPaySayisi": 641580634,
+        "kisiSayisi": 13,
+        "fonToplamDeger": 606310380.14,
+        "gunlukGetiri": -0.00213927,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "NDS",
         "fonAdi": "NEO PORTFÖY DÖRDÜNCÜ SERBEST FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00704039,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "NDS",
+      "fonAdi": "NEO PORTFÖY DÖRDÜNCÜ SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 0.945026,
+      "tedavuldekiPaySayisi": 641580634,
+      "kisiSayisi": 13,
+      "fonToplamDeger": 606310380.14,
+      "gunlukGetiri": -0.00213927,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NDS",
+      "fonAdi": "NEO PORTFÖY DÖRDÜNCÜ SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 0.945026,
+      "tedavuldekiPaySayisi": 641580634,
+      "kisiSayisi": 13,
+      "fonToplamDeger": 606310380.14,
+      "gunlukGetiri": -0.00213927,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "NDS",
       "fonAdi": "NEO PORTFÖY DÖRDÜNCÜ SERBEST FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

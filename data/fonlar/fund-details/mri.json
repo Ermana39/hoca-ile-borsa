@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "MRI",
     "slug": "mri",
@@ -12,44 +12,56 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.22656,
-    "tedavuldekiPaySayisi": 10751208,
-    "kisiSayisi": 119,
-    "fonToplamDeger": 13186998.27,
-    "gunlukGetiri": -0.01251584,
+    "fiyat": 1.231104,
+    "tedavuldekiPaySayisi": 10751155,
+    "kisiSayisi": 118,
+    "fonToplamDeger": 13235784.76,
+    "gunlukGetiri": 0.00370467,
     "getiriler": {
-      "birAy": 0.004311,
-      "ucAy": -0.033697,
-      "altiAy": -0.045797,
-      "yilbasi": 0.037064,
-      "birYil": 0.067989,
+      "birAy": -0.000804,
+      "ucAy": -0.018887,
+      "altiAy": -0.039148999999999996,
+      "yilbasi": 0.040906000000000005,
+      "birYil": 0.064231,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -4798.3,
+      "gunluk": -65.25,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MRI",
+        "fonAdi": "TEB PORTFÖY MERİDYEN SERBEST FON",
+        "tarih": "2026-08-14",
+        "fiyat": 1.231104,
+        "tedavuldekiPaySayisi": 10751155,
+        "kisiSayisi": 118,
+        "fonToplamDeger": 13235784.76,
+        "gunlukGetiri": 0.00370467,
+        "paraGirisiCikisi": -65.25,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "MRI",
         "fonAdi": "TEB PORTFÖY MERİDYEN SERBEST FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": -0.01251584,
       "paraGirisiCikisi": -4798.3,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "MRI",
+      "fonAdi": "TEB PORTFÖY MERİDYEN SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.231104,
+      "tedavuldekiPaySayisi": 10751155,
+      "kisiSayisi": 118,
+      "fonToplamDeger": 13235784.76,
+      "gunlukGetiri": 0.00370467,
+      "paraGirisiCikisi": -65.25,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MRI",
+      "fonAdi": "TEB PORTFÖY MERİDYEN SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.231104,
+      "tedavuldekiPaySayisi": 10751155,
+      "kisiSayisi": 118,
+      "fonToplamDeger": 13235784.76,
+      "gunlukGetiri": 0.00370467,
+      "paraGirisiCikisi": -65.25,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "MRI",
       "fonAdi": "TEB PORTFÖY MERİDYEN SERBEST FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

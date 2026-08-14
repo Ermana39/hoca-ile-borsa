@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "NSD",
     "slug": "nsd",
@@ -12,44 +12,56 @@
     "yonetici": "NUROL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "nurol-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 64.977996,
-    "tedavuldekiPaySayisi": 214568517,
-    "kisiSayisi": 176,
-    "fonToplamDeger": 13942232214.06,
-    "gunlukGetiri": 0.00047391,
+    "fiyat": 65.009931,
+    "tedavuldekiPaySayisi": 214576595,
+    "kisiSayisi": 177,
+    "fonToplamDeger": 13949609529.35,
+    "gunlukGetiri": 0.00049147,
     "getiriler": {
-      "birAy": 0.022007,
-      "ucAy": 0.062667,
-      "altiAy": 0.12554500000000002,
-      "yilbasi": 0.150042,
-      "birYil": 0.235267,
-      "ucYil": 1.1065260000000001,
+      "birAy": 0.020135,
+      "ucAy": 0.06265,
+      "altiAy": 0.12642,
+      "yilbasi": 0.15060700000000002,
+      "birYil": 0.235136,
+      "ucYil": 1.1075620000000002,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 239318832.62,
+      "gunluk": 525150.22,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": 1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NSD",
+        "fonAdi": "NUROL PORTFÖY DÖRDÜNCÜ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-14",
+        "fiyat": 65.009931,
+        "tedavuldekiPaySayisi": 214576595,
+        "kisiSayisi": 177,
+        "fonToplamDeger": 13949609529.35,
+        "gunlukGetiri": 0.00049147,
+        "paraGirisiCikisi": 525150.22,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "NSD",
         "fonAdi": "NUROL PORTFÖY DÖRDÜNCÜ SERBEST (DÖVİZ) FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00047391,
       "paraGirisiCikisi": 239318832.62,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "NSD",
+      "fonAdi": "NUROL PORTFÖY DÖRDÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 65.009931,
+      "tedavuldekiPaySayisi": 214576595,
+      "kisiSayisi": 177,
+      "fonToplamDeger": 13949609529.35,
+      "gunlukGetiri": 0.00049147,
+      "paraGirisiCikisi": 525150.22,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NSD",
+      "fonAdi": "NUROL PORTFÖY DÖRDÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 65.009931,
+      "tedavuldekiPaySayisi": 214576595,
+      "kisiSayisi": 177,
+      "fonToplamDeger": 13949609529.35,
+      "gunlukGetiri": 0.00049147,
+      "paraGirisiCikisi": 525150.22,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "NSD",
       "fonAdi": "NUROL PORTFÖY DÖRDÜNCÜ SERBEST (DÖVİZ) FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "YPP",
     "slug": "ypp",
@@ -12,13 +12,13 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 24.831791,
+    "fiyat": 24.759187,
     "tedavuldekiPaySayisi": 187058807,
     "kisiSayisi": 1,
-    "fonToplamDeger": 4645005266.36,
-    "gunlukGetiri": 0.01806682,
+    "fonToplamDeger": 4631424000.43,
+    "gunlukGetiri": -0.00292383,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YPP",
+        "fonAdi": "YAPI KREDİ PORTFÖY PY KUZGUNCUK SERBEST ÖZEL FON",
+        "tarih": "2026-08-14",
+        "fiyat": 24.759187,
+        "tedavuldekiPaySayisi": 187058807,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 4631424000.43,
+        "gunlukGetiri": -0.00292383,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "YPP",
         "fonAdi": "YAPI KREDİ PORTFÖY PY KUZGUNCUK SERBEST ÖZEL FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.01806682,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YPP",
+      "fonAdi": "YAPI KREDİ PORTFÖY PY KUZGUNCUK SERBEST ÖZEL FON",
+      "tarih": "2026-08-14",
+      "fiyat": 24.759187,
+      "tedavuldekiPaySayisi": 187058807,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 4631424000.43,
+      "gunlukGetiri": -0.00292383,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YPP",
+      "fonAdi": "YAPI KREDİ PORTFÖY PY KUZGUNCUK SERBEST ÖZEL FON",
+      "tarih": "2026-08-14",
+      "fiyat": 24.759187,
+      "tedavuldekiPaySayisi": 187058807,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 4631424000.43,
+      "gunlukGetiri": -0.00292383,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "YPP",
       "fonAdi": "YAPI KREDİ PORTFÖY PY KUZGUNCUK SERBEST ÖZEL FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "HKG",
     "slug": "hkg",
@@ -12,44 +12,56 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.504058,
-    "tedavuldekiPaySayisi": 24717393,
-    "kisiSayisi": 995,
-    "fonToplamDeger": 37176400.31,
-    "gunlukGetiri": 0.01837197,
+    "fiyat": 1.502725,
+    "tedavuldekiPaySayisi": 24599713,
+    "kisiSayisi": 1004,
+    "fonToplamDeger": 36966610.17,
+    "gunlukGetiri": -0.00088627,
     "getiriler": {
-      "birAy": 0.082308,
-      "ucAy": 0.045732,
-      "altiAy": 0.031368,
-      "yilbasi": 0.23711,
-      "birYil": 0.315811,
+      "birAy": 0.083233,
+      "ucAy": 0.054705000000000004,
+      "altiAy": 0.027264,
+      "yilbasi": 0.23601299999999997,
+      "birYil": 0.31606100000000004,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 362643.42,
+      "gunluk": -176840.68,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
+      "gunluk": 9,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HKG",
+        "fonAdi": "ZİRAAT PORTFÖY HALK'IN ÜRETEN KADINLARI DEĞİŞKEN FON",
+        "tarih": "2026-08-14",
+        "fiyat": 1.502725,
+        "tedavuldekiPaySayisi": 24599713,
+        "kisiSayisi": 1004,
+        "fonToplamDeger": 36966610.17,
+        "gunlukGetiri": -0.00088627,
+        "paraGirisiCikisi": -176840.68,
+        "yatirimciDegisimi": 9
+      },
       {
         "fonKodu": "HKG",
         "fonAdi": "ZİRAAT PORTFÖY HALK'IN ÜRETEN KADINLARI DEĞİŞKEN FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.01837197,
       "paraGirisiCikisi": 362643.42,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "HKG",
+      "fonAdi": "ZİRAAT PORTFÖY HALK'IN ÜRETEN KADINLARI DEĞİŞKEN FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.502725,
+      "tedavuldekiPaySayisi": 24599713,
+      "kisiSayisi": 1004,
+      "fonToplamDeger": 36966610.17,
+      "gunlukGetiri": -0.00088627,
+      "paraGirisiCikisi": -176840.68,
+      "yatirimciDegisimi": 9
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HKG",
+      "fonAdi": "ZİRAAT PORTFÖY HALK'IN ÜRETEN KADINLARI DEĞİŞKEN FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.502725,
+      "tedavuldekiPaySayisi": 24599713,
+      "kisiSayisi": 1004,
+      "fonToplamDeger": 36966610.17,
+      "gunlukGetiri": -0.00088627,
+      "paraGirisiCikisi": -176840.68,
+      "yatirimciDegisimi": 9
+    },
     {
       "fonKodu": "HKG",
       "fonAdi": "ZİRAAT PORTFÖY HALK'IN ÜRETEN KADINLARI DEĞİŞKEN FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

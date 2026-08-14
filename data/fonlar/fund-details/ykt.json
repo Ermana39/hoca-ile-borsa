@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "YKT",
     "slug": "ykt",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 0.887587,
-    "tedavuldekiPaySayisi": 37867594027,
-    "kisiSayisi": 86924,
-    "fonToplamDeger": 33610771942.5,
-    "gunlukGetiri": 0.00890018,
+    "fiyat": 0.881984,
+    "tedavuldekiPaySayisi": 37863921616,
+    "kisiSayisi": 86940,
+    "fonToplamDeger": 33395382652.95,
+    "gunlukGetiri": -0.00631262,
     "getiriler": {
-      "birAy": 0.091453,
-      "ucAy": -0.015263,
-      "altiAy": -0.078129,
-      "yilbasi": 0.094066,
-      "birYil": 0.463252,
-      "ucYil": 2.934828,
-      "besYil": 12.184007999999999
+      "birAy": 0.09325,
+      "ucAy": -0.019806,
+      "altiAy": -0.071387,
+      "yilbasi": 0.087159,
+      "birYil": 0.46875700000000003,
+      "ucYil": 2.909989,
+      "besYil": 12.109739999999999
     },
     "paraAkisi": {
-      "gunluk": -19461342.62,
+      "gunluk": -3239007.74,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -70,
+      "gunluk": 16,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YKT",
+        "fonAdi": "YAPI KREDİ PORTFÖY ALTIN FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 0.881984,
+        "tedavuldekiPaySayisi": 37863921616,
+        "kisiSayisi": 86940,
+        "fonToplamDeger": 33395382652.95,
+        "gunlukGetiri": -0.00631262,
+        "paraGirisiCikisi": -3239007.74,
+        "yatirimciDegisimi": 16
+      },
       {
         "fonKodu": "YKT",
         "fonAdi": "YAPI KREDİ PORTFÖY ALTIN FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00890018,
       "paraGirisiCikisi": -19461342.62,
       "yatirimciDegisimi": -70
+    },
+    {
+      "fonKodu": "YKT",
+      "fonAdi": "YAPI KREDİ PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 0.881984,
+      "tedavuldekiPaySayisi": 37863921616,
+      "kisiSayisi": 86940,
+      "fonToplamDeger": 33395382652.95,
+      "gunlukGetiri": -0.00631262,
+      "paraGirisiCikisi": -3239007.74,
+      "yatirimciDegisimi": 16
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YKT",
+      "fonAdi": "YAPI KREDİ PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 0.881984,
+      "tedavuldekiPaySayisi": 37863921616,
+      "kisiSayisi": 86940,
+      "fonToplamDeger": 33395382652.95,
+      "gunlukGetiri": -0.00631262,
+      "paraGirisiCikisi": -3239007.74,
+      "yatirimciDegisimi": 16
+    },
     {
       "fonKodu": "YKT",
       "fonAdi": "YAPI KREDİ PORTFÖY ALTIN FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

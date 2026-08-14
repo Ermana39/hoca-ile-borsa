@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "IPP",
     "slug": "ipp",
@@ -12,13 +12,13 @@
     "yonetici": "PERFORM PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "perform-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 0.179913,
-    "tedavuldekiPaySayisi": 40512971771,
-    "kisiSayisi": 167,
-    "fonToplamDeger": 7288816698.34,
-    "gunlukGetiri": 0.00248514,
+    "fiyat": 0.180113,
+    "tedavuldekiPaySayisi": 40318397178,
+    "kisiSayisi": 166,
+    "fonToplamDeger": 7261853230.85,
+    "gunlukGetiri": 0.00111165,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -501670.13,
+      "gunluk": -35045413.67,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IPP",
+        "fonAdi": "PERFORM PORTFÖY BIRINCI SERBEST FON",
+        "tarih": "2026-08-14",
+        "fiyat": 0.180113,
+        "tedavuldekiPaySayisi": 40318397178,
+        "kisiSayisi": 166,
+        "fonToplamDeger": 7261853230.85,
+        "gunlukGetiri": 0.00111165,
+        "paraGirisiCikisi": -35045413.67,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "IPP",
         "fonAdi": "PERFORM PORTFÖY BIRINCI SERBEST FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00248514,
       "paraGirisiCikisi": -501670.13,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "IPP",
+      "fonAdi": "PERFORM PORTFÖY BIRINCI SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 0.180113,
+      "tedavuldekiPaySayisi": 40318397178,
+      "kisiSayisi": 166,
+      "fonToplamDeger": 7261853230.85,
+      "gunlukGetiri": 0.00111165,
+      "paraGirisiCikisi": -35045413.67,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IPP",
+      "fonAdi": "PERFORM PORTFÖY BIRINCI SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 0.180113,
+      "tedavuldekiPaySayisi": 40318397178,
+      "kisiSayisi": 166,
+      "fonToplamDeger": 7261853230.85,
+      "gunlukGetiri": 0.00111165,
+      "paraGirisiCikisi": -35045413.67,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "IPP",
       "fonAdi": "PERFORM PORTFÖY BIRINCI SERBEST FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

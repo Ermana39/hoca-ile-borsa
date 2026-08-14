@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "OLD",
     "slug": "old",
@@ -12,44 +12,56 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 3.262035,
-    "tedavuldekiPaySayisi": 46647273,
-    "kisiSayisi": 5627,
-    "fonToplamDeger": 152165040.86,
-    "gunlukGetiri": 0.00142691,
+    "fiyat": 3.240334,
+    "tedavuldekiPaySayisi": 46492802,
+    "kisiSayisi": 5617,
+    "fonToplamDeger": 150652193.29,
+    "gunlukGetiri": -0.0066526,
     "getiriler": {
-      "birAy": 0.025651,
-      "ucAy": 0.021979000000000002,
-      "altiAy": 0.085413,
-      "yilbasi": 0.18343,
-      "birYil": 0.337744,
-      "ucYil": 0.718761,
+      "birAy": 0.026625999999999997,
+      "ucAy": 0.012817,
+      "altiAy": 0.102355,
+      "yilbasi": 0.17555700000000002,
+      "birYil": 0.30654800000000004,
+      "ucYil": 0.7073269999999999,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 66085.57,
+      "gunluk": -500537.63,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
+      "gunluk": -10,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OLD",
+        "fonAdi": "QNB PORTFÖY TEMİZ ENERJİ VE SU FON SEPETİ FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 3.240334,
+        "tedavuldekiPaySayisi": 46492802,
+        "kisiSayisi": 5617,
+        "fonToplamDeger": 150652193.29,
+        "gunlukGetiri": -0.0066526,
+        "paraGirisiCikisi": -500537.63,
+        "yatirimciDegisimi": -10
+      },
       {
         "fonKodu": "OLD",
         "fonAdi": "QNB PORTFÖY TEMİZ ENERJİ VE SU FON SEPETİ FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00142691,
       "paraGirisiCikisi": 66085.57,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "OLD",
+      "fonAdi": "QNB PORTFÖY TEMİZ ENERJİ VE SU FON SEPETİ FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 3.240334,
+      "tedavuldekiPaySayisi": 46492802,
+      "kisiSayisi": 5617,
+      "fonToplamDeger": 150652193.29,
+      "gunlukGetiri": -0.0066526,
+      "paraGirisiCikisi": -500537.63,
+      "yatirimciDegisimi": -10
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OLD",
+      "fonAdi": "QNB PORTFÖY TEMİZ ENERJİ VE SU FON SEPETİ FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 3.240334,
+      "tedavuldekiPaySayisi": 46492802,
+      "kisiSayisi": 5617,
+      "fonToplamDeger": 150652193.29,
+      "gunlukGetiri": -0.0066526,
+      "paraGirisiCikisi": -500537.63,
+      "yatirimciDegisimi": -10
+    },
     {
       "fonKodu": "OLD",
       "fonAdi": "QNB PORTFÖY TEMİZ ENERJİ VE SU FON SEPETİ FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

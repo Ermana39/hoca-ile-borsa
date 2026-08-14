@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "PHK",
     "slug": "phk",
@@ -12,44 +12,56 @@
     "yonetici": "PHİLLİP PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "phillip-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.555429,
-    "tedavuldekiPaySayisi": 52527927,
-    "kisiSayisi": 251,
-    "fonToplamDeger": 81703442.24,
-    "gunlukGetiri": 0.01252911,
+    "fiyat": 1.560717,
+    "tedavuldekiPaySayisi": 52523445,
+    "kisiSayisi": 248,
+    "fonToplamDeger": 81974258.57,
+    "gunlukGetiri": 0.00339971,
     "getiriler": {
-      "birAy": 0.007721,
-      "ucAy": -0.035428,
-      "altiAy": 0.117521,
-      "yilbasi": 0.346562,
-      "birYil": 0.34314999999999996,
+      "birAy": 0.020883,
+      "ucAy": -0.026051,
+      "altiAy": 0.117336,
+      "yilbasi": 0.35113999999999995,
+      "birYil": 0.347824,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -27996.17,
+      "gunluk": -6995.13,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PHK",
+        "fonAdi": "PHİLLİP PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 1.560717,
+        "tedavuldekiPaySayisi": 52523445,
+        "kisiSayisi": 248,
+        "fonToplamDeger": 81974258.57,
+        "gunlukGetiri": 0.00339971,
+        "paraGirisiCikisi": -6995.13,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "PHK",
         "fonAdi": "PHİLLİP PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.01252911,
       "paraGirisiCikisi": -27996.17,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PHK",
+      "fonAdi": "PHİLLİP PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.560717,
+      "tedavuldekiPaySayisi": 52523445,
+      "kisiSayisi": 248,
+      "fonToplamDeger": 81974258.57,
+      "gunlukGetiri": 0.00339971,
+      "paraGirisiCikisi": -6995.13,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PHK",
+      "fonAdi": "PHİLLİP PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.560717,
+      "tedavuldekiPaySayisi": 52523445,
+      "kisiSayisi": 248,
+      "fonToplamDeger": 81974258.57,
+      "gunlukGetiri": 0.00339971,
+      "paraGirisiCikisi": -6995.13,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "PHK",
       "fonAdi": "PHİLLİP PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

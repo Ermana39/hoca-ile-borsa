@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "HTZ",
     "slug": "htz",
@@ -12,13 +12,13 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 12.658777,
+    "fiyat": 12.648565,
     "tedavuldekiPaySayisi": 6936066,
     "kisiSayisi": 13,
-    "fonToplamDeger": 87802113.41,
-    "gunlukGetiri": 0.01216854,
+    "fonToplamDeger": 87731279.73,
+    "gunlukGetiri": -0.00080671,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HTZ",
+        "fonAdi": "HEDEF PORTFÖY TURKUAZ SERBEST FON",
+        "tarih": "2026-08-14",
+        "fiyat": 12.648565,
+        "tedavuldekiPaySayisi": 6936066,
+        "kisiSayisi": 13,
+        "fonToplamDeger": 87731279.73,
+        "gunlukGetiri": -0.00080671,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "HTZ",
         "fonAdi": "HEDEF PORTFÖY TURKUAZ SERBEST FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.01216854,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HTZ",
+      "fonAdi": "HEDEF PORTFÖY TURKUAZ SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 12.648565,
+      "tedavuldekiPaySayisi": 6936066,
+      "kisiSayisi": 13,
+      "fonToplamDeger": 87731279.73,
+      "gunlukGetiri": -0.00080671,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HTZ",
+      "fonAdi": "HEDEF PORTFÖY TURKUAZ SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 12.648565,
+      "tedavuldekiPaySayisi": 6936066,
+      "kisiSayisi": 13,
+      "fonToplamDeger": 87731279.73,
+      "gunlukGetiri": -0.00080671,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "HTZ",
       "fonAdi": "HEDEF PORTFÖY TURKUAZ SERBEST FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

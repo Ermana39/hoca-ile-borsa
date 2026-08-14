@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "EYT",
     "slug": "eyt",
@@ -12,44 +12,56 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
     "fiyat": 3.022038,
     "tedavuldekiPaySayisi": 14407474,
-    "kisiSayisi": 503,
+    "kisiSayisi": 502,
     "fonToplamDeger": 43539927.42,
-    "gunlukGetiri": 0.00769097,
+    "gunlukGetiri": 0,
     "getiriler": {
-      "birAy": 0.043461999999999994,
-      "ucAy": 0.046069000000000006,
-      "altiAy": 0.126464,
+      "birAy": 0.050717,
+      "ucAy": 0.045637,
+      "altiAy": 0.128791,
       "yilbasi": 0.25173100000000004,
-      "birYil": 0.524041,
+      "birYil": 0.514475,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -142755.03,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "EYT",
+        "fonAdi": "AKTİF PORTFÖY İKİNCİ FON SEPETİ FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 3.022038,
+        "tedavuldekiPaySayisi": 14407474,
+        "kisiSayisi": 502,
+        "fonToplamDeger": 43539927.42,
+        "gunlukGetiri": 0,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "EYT",
         "fonAdi": "AKTİF PORTFÖY İKİNCİ FON SEPETİ FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00769097,
       "paraGirisiCikisi": -142755.03,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "EYT",
+      "fonAdi": "AKTİF PORTFÖY İKİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 3.022038,
+      "tedavuldekiPaySayisi": 14407474,
+      "kisiSayisi": 502,
+      "fonToplamDeger": 43539927.42,
+      "gunlukGetiri": 0,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "EYT",
+      "fonAdi": "AKTİF PORTFÖY İKİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 3.022038,
+      "tedavuldekiPaySayisi": 14407474,
+      "kisiSayisi": 502,
+      "fonToplamDeger": 43539927.42,
+      "gunlukGetiri": 0,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "EYT",
       "fonAdi": "AKTİF PORTFÖY İKİNCİ FON SEPETİ FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

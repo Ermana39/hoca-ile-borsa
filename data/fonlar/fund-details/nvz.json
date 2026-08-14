@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "NVZ",
     "slug": "nvz",
@@ -12,24 +12,24 @@
     "yonetici": "NEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "neo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 57.615589,
-    "tedavuldekiPaySayisi": 9000963,
+    "fiyat": 57.603261,
+    "tedavuldekiPaySayisi": 8844300,
     "kisiSayisi": 338,
-    "fonToplamDeger": 518595781.18,
-    "gunlukGetiri": 0.00073769,
+    "fonToplamDeger": 509460520.9,
+    "gunlukGetiri": -0.00021397,
     "getiriler": {
-      "birAy": 0.031282000000000004,
-      "ucAy": 0.043422999999999996,
-      "altiAy": 0.094084,
-      "yilbasi": 0.130086,
-      "birYil": 0.223323,
+      "birAy": 0.0291,
+      "ucAy": 0.045249,
+      "altiAy": 0.095787,
+      "yilbasi": 0.12984500000000002,
+      "birYil": 0.21231000000000003,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 84694.92,
+      "gunluk": -9024299.68,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NVZ",
+        "fonAdi": "NEO PORTFÖY ORSA SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-14",
+        "fiyat": 57.603261,
+        "tedavuldekiPaySayisi": 8844300,
+        "kisiSayisi": 338,
+        "fonToplamDeger": 509460520.9,
+        "gunlukGetiri": -0.00021397,
+        "paraGirisiCikisi": -9024299.68,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "NVZ",
         "fonAdi": "NEO PORTFÖY ORSA SERBEST (DÖVİZ) FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00073769,
       "paraGirisiCikisi": 84694.92,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "NVZ",
+      "fonAdi": "NEO PORTFÖY ORSA SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 57.603261,
+      "tedavuldekiPaySayisi": 8844300,
+      "kisiSayisi": 338,
+      "fonToplamDeger": 509460520.9,
+      "gunlukGetiri": -0.00021397,
+      "paraGirisiCikisi": -9024299.68,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NVZ",
+      "fonAdi": "NEO PORTFÖY ORSA SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 57.603261,
+      "tedavuldekiPaySayisi": 8844300,
+      "kisiSayisi": 338,
+      "fonToplamDeger": 509460520.9,
+      "gunlukGetiri": -0.00021397,
+      "paraGirisiCikisi": -9024299.68,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "NVZ",
       "fonAdi": "NEO PORTFÖY ORSA SERBEST (DÖVİZ) FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

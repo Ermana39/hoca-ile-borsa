@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "DZS",
     "slug": "dzs",
@@ -12,13 +12,13 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.549712,
-    "tedavuldekiPaySayisi": 33800203,
-    "kisiSayisi": 124,
-    "fonToplamDeger": 52380595.36,
-    "gunlukGetiri": 0.00143717,
+    "fiyat": 1.55159,
+    "tedavuldekiPaySayisi": 33610556,
+    "kisiSayisi": 125,
+    "fonToplamDeger": 52149792.02,
+    "gunlukGetiri": 0.00121184,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": -294254.39,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": 1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DZS",
+        "fonAdi": "AK PORTFÖY DOKUZUNCU SERBEST FON",
+        "tarih": "2026-08-14",
+        "fiyat": 1.55159,
+        "tedavuldekiPaySayisi": 33610556,
+        "kisiSayisi": 125,
+        "fonToplamDeger": 52149792.02,
+        "gunlukGetiri": 0.00121184,
+        "paraGirisiCikisi": -294254.39,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "DZS",
         "fonAdi": "AK PORTFÖY DOKUZUNCU SERBEST FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00143717,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DZS",
+      "fonAdi": "AK PORTFÖY DOKUZUNCU SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.55159,
+      "tedavuldekiPaySayisi": 33610556,
+      "kisiSayisi": 125,
+      "fonToplamDeger": 52149792.02,
+      "gunlukGetiri": 0.00121184,
+      "paraGirisiCikisi": -294254.39,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DZS",
+      "fonAdi": "AK PORTFÖY DOKUZUNCU SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.55159,
+      "tedavuldekiPaySayisi": 33610556,
+      "kisiSayisi": 125,
+      "fonToplamDeger": 52149792.02,
+      "gunlukGetiri": 0.00121184,
+      "paraGirisiCikisi": -294254.39,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "DZS",
       "fonAdi": "AK PORTFÖY DOKUZUNCU SERBEST FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

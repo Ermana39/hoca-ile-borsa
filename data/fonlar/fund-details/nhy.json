@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "NHY",
     "slug": "nhy",
@@ -12,44 +12,56 @@
     "yonetici": "NEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "neo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 5.980154,
-    "tedavuldekiPaySayisi": 27517266,
-    "kisiSayisi": 2091,
-    "fonToplamDeger": 164557500,
-    "gunlukGetiri": 0.01273181,
+    "fiyat": 5.974492,
+    "tedavuldekiPaySayisi": 27491212,
+    "kisiSayisi": 2086,
+    "fonToplamDeger": 164246023.46,
+    "gunlukGetiri": -0.0009468,
     "getiriler": {
-      "birAy": -0.021461,
-      "ucAy": -0.025164,
-      "altiAy": 0.046002,
-      "yilbasi": 0.289317,
-      "birYil": 0.305597,
-      "ucYil": 1.11569,
+      "birAy": -0.017491,
+      "ucAy": -0.0032329999999999998,
+      "altiAy": 0.047714,
+      "yilbasi": 0.288096,
+      "birYil": 0.3072,
+      "ucYil": 1.113687,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -475613.61,
+      "gunluk": -155659.41,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -15,
+      "gunluk": -5,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NHY",
+        "fonAdi": "NEO PORTFÖY BİRİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 5.974492,
+        "tedavuldekiPaySayisi": 27491212,
+        "kisiSayisi": 2086,
+        "fonToplamDeger": 164246023.46,
+        "gunlukGetiri": -0.0009468,
+        "paraGirisiCikisi": -155659.41,
+        "yatirimciDegisimi": -5
+      },
       {
         "fonKodu": "NHY",
         "fonAdi": "NEO PORTFÖY BİRİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.01273181,
       "paraGirisiCikisi": -475613.61,
       "yatirimciDegisimi": -15
+    },
+    {
+      "fonKodu": "NHY",
+      "fonAdi": "NEO PORTFÖY BİRİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 5.974492,
+      "tedavuldekiPaySayisi": 27491212,
+      "kisiSayisi": 2086,
+      "fonToplamDeger": 164246023.46,
+      "gunlukGetiri": -0.0009468,
+      "paraGirisiCikisi": -155659.41,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NHY",
+      "fonAdi": "NEO PORTFÖY BİRİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 5.974492,
+      "tedavuldekiPaySayisi": 27491212,
+      "kisiSayisi": 2086,
+      "fonToplamDeger": 164246023.46,
+      "gunlukGetiri": -0.0009468,
+      "paraGirisiCikisi": -155659.41,
+      "yatirimciDegisimi": -5
+    },
     {
       "fonKodu": "NHY",
       "fonAdi": "NEO PORTFÖY BİRİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

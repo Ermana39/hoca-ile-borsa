@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "FAL",
     "slug": "fal",
@@ -12,44 +12,56 @@
     "yonetici": "ONE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "one-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.24693,
-    "tedavuldekiPaySayisi": 268008016,
-    "kisiSayisi": 670,
-    "fonToplamDeger": 334187202.71,
-    "gunlukGetiri": 0.00638083,
+    "fiyat": 1.241193,
+    "tedavuldekiPaySayisi": 267545320,
+    "kisiSayisi": 669,
+    "fonToplamDeger": 332075389.67,
+    "gunlukGetiri": -0.0046009,
     "getiriler": {
-      "birAy": 0.07831400000000001,
-      "ucAy": -0.016348,
-      "altiAy": -0.083547,
-      "yilbasi": 0.10494500000000001,
+      "birAy": 0.086175,
+      "ucAy": -0.022172,
+      "altiAy": -0.07674500000000001,
+      "yilbasi": 0.099861,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1731443.36,
+      "gunluk": -574295.04,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FAL",
+        "fonAdi": "ONE PORTFÖY ALTIN FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 1.241193,
+        "tedavuldekiPaySayisi": 267545320,
+        "kisiSayisi": 669,
+        "fonToplamDeger": 332075389.67,
+        "gunlukGetiri": -0.0046009,
+        "paraGirisiCikisi": -574295.04,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "FAL",
         "fonAdi": "ONE PORTFÖY ALTIN FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00638083,
       "paraGirisiCikisi": -1731443.36,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "FAL",
+      "fonAdi": "ONE PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.241193,
+      "tedavuldekiPaySayisi": 267545320,
+      "kisiSayisi": 669,
+      "fonToplamDeger": 332075389.67,
+      "gunlukGetiri": -0.0046009,
+      "paraGirisiCikisi": -574295.04,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FAL",
+      "fonAdi": "ONE PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.241193,
+      "tedavuldekiPaySayisi": 267545320,
+      "kisiSayisi": 669,
+      "fonToplamDeger": 332075389.67,
+      "gunlukGetiri": -0.0046009,
+      "paraGirisiCikisi": -574295.04,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "FAL",
       "fonAdi": "ONE PORTFÖY ALTIN FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

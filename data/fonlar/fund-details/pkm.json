@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "PKM",
     "slug": "pkm",
@@ -12,15 +12,15 @@
     "yonetici": "PUSULA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pusula-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.060111,
-    "tedavuldekiPaySayisi": 450617746,
-    "kisiSayisi": 519,
-    "fonToplamDeger": 477704708.02,
-    "gunlukGetiri": 0.00106706,
+    "fiyat": 1.061168,
+    "tedavuldekiPaySayisi": 449115231,
+    "kisiSayisi": 514,
+    "fonToplamDeger": 476586692.65,
+    "gunlukGetiri": 0.00099707,
     "getiriler": {
-      "birAy": 0.033647,
+      "birAy": 0.033578000000000004,
       "ucAy": null,
       "altiAy": null,
       "yilbasi": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1623135.95,
+      "gunluk": -1594420.84,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -8,
+      "gunluk": -5,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PKM",
+        "fonAdi": "PUSULA PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 1.061168,
+        "tedavuldekiPaySayisi": 449115231,
+        "kisiSayisi": 514,
+        "fonToplamDeger": 476586692.65,
+        "gunlukGetiri": 0.00099707,
+        "paraGirisiCikisi": -1594420.84,
+        "yatirimciDegisimi": -5
+      },
       {
         "fonKodu": "PKM",
         "fonAdi": "PUSULA PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00106706,
       "paraGirisiCikisi": -1623135.95,
       "yatirimciDegisimi": -8
+    },
+    {
+      "fonKodu": "PKM",
+      "fonAdi": "PUSULA PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.061168,
+      "tedavuldekiPaySayisi": 449115231,
+      "kisiSayisi": 514,
+      "fonToplamDeger": 476586692.65,
+      "gunlukGetiri": 0.00099707,
+      "paraGirisiCikisi": -1594420.84,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PKM",
+      "fonAdi": "PUSULA PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.061168,
+      "tedavuldekiPaySayisi": 449115231,
+      "kisiSayisi": 514,
+      "fonToplamDeger": 476586692.65,
+      "gunlukGetiri": 0.00099707,
+      "paraGirisiCikisi": -1594420.84,
+      "yatirimciDegisimi": -5
+    },
     {
       "fonKodu": "PKM",
       "fonAdi": "PUSULA PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

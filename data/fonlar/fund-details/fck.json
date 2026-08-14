@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "FCK",
     "slug": "fck",
@@ -12,44 +12,56 @@
     "yonetici": "ONE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "one-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.837633,
-    "tedavuldekiPaySayisi": 163938007,
-    "kisiSayisi": 583,
-    "fonToplamDeger": 301257886.63,
-    "gunlukGetiri": 0.00936458,
+    "fiyat": 1.852092,
+    "tedavuldekiPaySayisi": 163937827,
+    "kisiSayisi": 582,
+    "fonToplamDeger": 303627935.09,
+    "gunlukGetiri": 0.00786827,
     "getiriler": {
-      "birAy": -0.042962999999999994,
-      "ucAy": -0.081008,
-      "altiAy": 0.057755,
-      "yilbasi": 0.190618,
-      "birYil": 0.286107,
+      "birAy": -0.024805999999999998,
+      "ucAy": -0.071508,
+      "altiAy": 0.060328999999999994,
+      "yilbasi": 0.199986,
+      "birYil": 0.301889,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 32226.57,
+      "gunluk": -333.38,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FCK",
+        "fonAdi": "ONE PORTFÖY ÇOKLU VARLIK KATILIM FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 1.852092,
+        "tedavuldekiPaySayisi": 163937827,
+        "kisiSayisi": 582,
+        "fonToplamDeger": 303627935.09,
+        "gunlukGetiri": 0.00786827,
+        "paraGirisiCikisi": -333.38,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "FCK",
         "fonAdi": "ONE PORTFÖY ÇOKLU VARLIK KATILIM FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00936458,
       "paraGirisiCikisi": 32226.57,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "FCK",
+      "fonAdi": "ONE PORTFÖY ÇOKLU VARLIK KATILIM FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.852092,
+      "tedavuldekiPaySayisi": 163937827,
+      "kisiSayisi": 582,
+      "fonToplamDeger": 303627935.09,
+      "gunlukGetiri": 0.00786827,
+      "paraGirisiCikisi": -333.38,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FCK",
+      "fonAdi": "ONE PORTFÖY ÇOKLU VARLIK KATILIM FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.852092,
+      "tedavuldekiPaySayisi": 163937827,
+      "kisiSayisi": 582,
+      "fonToplamDeger": 303627935.09,
+      "gunlukGetiri": 0.00786827,
+      "paraGirisiCikisi": -333.38,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "FCK",
       "fonAdi": "ONE PORTFÖY ÇOKLU VARLIK KATILIM FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

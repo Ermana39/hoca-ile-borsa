@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "EBI",
     "slug": "ebi",
@@ -12,24 +12,24 @@
     "yonetici": "EMAA BLUE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "emaa-blue-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 56.427878,
-    "tedavuldekiPaySayisi": 13830089,
+    "fiyat": 56.427545,
+    "tedavuldekiPaySayisi": 13830091,
     "kisiSayisi": 23,
-    "fonToplamDeger": 780402571.42,
-    "gunlukGetiri": 0.00125318,
+    "fonToplamDeger": 780398078.15,
+    "gunlukGetiri": -0.0000059,
     "getiriler": {
-      "birAy": 0.02979,
-      "ucAy": 0.049945,
-      "altiAy": 0.070868,
-      "yilbasi": 0.108404,
+      "birAy": 0.028711,
+      "ucAy": 0.052796,
+      "altiAy": 0.071267,
+      "yilbasi": 0.10839700000000001,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": 112.86,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "EBI",
+        "fonAdi": "EMAA BLUE PORTFÖY İKİNCİ SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-14",
+        "fiyat": 56.427545,
+        "tedavuldekiPaySayisi": 13830091,
+        "kisiSayisi": 23,
+        "fonToplamDeger": 780398078.15,
+        "gunlukGetiri": -0.0000059,
+        "paraGirisiCikisi": 112.86,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "EBI",
         "fonAdi": "EMAA BLUE PORTFÖY İKİNCİ SERBEST (DÖVİZ-AVRO) FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00125318,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "EBI",
+      "fonAdi": "EMAA BLUE PORTFÖY İKİNCİ SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 56.427545,
+      "tedavuldekiPaySayisi": 13830091,
+      "kisiSayisi": 23,
+      "fonToplamDeger": 780398078.15,
+      "gunlukGetiri": -0.0000059,
+      "paraGirisiCikisi": 112.86,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "EBI",
+      "fonAdi": "EMAA BLUE PORTFÖY İKİNCİ SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 56.427545,
+      "tedavuldekiPaySayisi": 13830091,
+      "kisiSayisi": 23,
+      "fonToplamDeger": 780398078.15,
+      "gunlukGetiri": -0.0000059,
+      "paraGirisiCikisi": 112.86,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "EBI",
       "fonAdi": "EMAA BLUE PORTFÖY İKİNCİ SERBEST (DÖVİZ-AVRO) FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

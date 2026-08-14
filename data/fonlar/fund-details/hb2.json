@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "HB2",
     "slug": "hb2",
@@ -12,13 +12,13 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 57.137888,
-    "tedavuldekiPaySayisi": 209004365,
-    "kisiSayisi": 174,
-    "fonToplamDeger": 11942068015.62,
-    "gunlukGetiri": 0.00058983,
+    "fiyat": 57.1169,
+    "tedavuldekiPaySayisi": 208684077,
+    "kisiSayisi": 173,
+    "fonToplamDeger": 11919387615.46,
+    "gunlukGetiri": -0.00036732,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -149479685.83,
+      "gunluk": -18293857.67,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HB2",
+        "fonAdi": "ZİRAAT PORTFÖY HALKBANK SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-14",
+        "fiyat": 57.1169,
+        "tedavuldekiPaySayisi": 208684077,
+        "kisiSayisi": 173,
+        "fonToplamDeger": 11919387615.46,
+        "gunlukGetiri": -0.00036732,
+        "paraGirisiCikisi": -18293857.67,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "HB2",
         "fonAdi": "ZİRAAT PORTFÖY HALKBANK SERBEST (DÖVİZ-AVRO) FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00058983,
       "paraGirisiCikisi": -149479685.83,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "HB2",
+      "fonAdi": "ZİRAAT PORTFÖY HALKBANK SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 57.1169,
+      "tedavuldekiPaySayisi": 208684077,
+      "kisiSayisi": 173,
+      "fonToplamDeger": 11919387615.46,
+      "gunlukGetiri": -0.00036732,
+      "paraGirisiCikisi": -18293857.67,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HB2",
+      "fonAdi": "ZİRAAT PORTFÖY HALKBANK SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 57.1169,
+      "tedavuldekiPaySayisi": 208684077,
+      "kisiSayisi": 173,
+      "fonToplamDeger": 11919387615.46,
+      "gunlukGetiri": -0.00036732,
+      "paraGirisiCikisi": -18293857.67,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "HB2",
       "fonAdi": "ZİRAAT PORTFÖY HALKBANK SERBEST (DÖVİZ-AVRO) FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

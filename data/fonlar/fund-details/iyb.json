@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "IYB",
     "slug": "iyb",
@@ -12,44 +12,56 @@
     "yonetici": "AURA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aura-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 5.819509,
-    "tedavuldekiPaySayisi": 16077473,
-    "kisiSayisi": 339,
-    "fonToplamDeger": 93562999.96,
-    "gunlukGetiri": 0.0072551,
+    "fiyat": 5.85975,
+    "tedavuldekiPaySayisi": 16022273,
+    "kisiSayisi": 336,
+    "fonToplamDeger": 93886519.77,
+    "gunlukGetiri": 0.00691484,
     "getiriler": {
-      "birAy": -0.020785,
-      "ucAy": -0.0006320000000000001,
-      "altiAy": 0.12142,
-      "yilbasi": 0.21826399999999999,
-      "birYil": 0.404603,
-      "ucYil": 1.997147,
-      "besYil": 6.128117
+      "birAy": -0.008631999999999999,
+      "ucAy": 0.006056000000000001,
+      "altiAy": 0.12610200000000002,
+      "yilbasi": 0.226688,
+      "birYil": 0.41057299999999997,
+      "ucYil": 2.017872,
+      "besYil": 6.156613999999999
     },
     "paraAkisi": {
-      "gunluk": -233944.26,
+      "gunluk": -323458.2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
+      "gunluk": -3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IYB",
+        "fonAdi": "AURA PORTFÖY DEĞİŞKEN FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 5.85975,
+        "tedavuldekiPaySayisi": 16022273,
+        "kisiSayisi": 336,
+        "fonToplamDeger": 93886519.77,
+        "gunlukGetiri": 0.00691484,
+        "paraGirisiCikisi": -323458.2,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "IYB",
         "fonAdi": "AURA PORTFÖY DEĞİŞKEN FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.0072551,
       "paraGirisiCikisi": -233944.26,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "IYB",
+      "fonAdi": "AURA PORTFÖY DEĞİŞKEN FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 5.85975,
+      "tedavuldekiPaySayisi": 16022273,
+      "kisiSayisi": 336,
+      "fonToplamDeger": 93886519.77,
+      "gunlukGetiri": 0.00691484,
+      "paraGirisiCikisi": -323458.2,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IYB",
+      "fonAdi": "AURA PORTFÖY DEĞİŞKEN FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 5.85975,
+      "tedavuldekiPaySayisi": 16022273,
+      "kisiSayisi": 336,
+      "fonToplamDeger": 93886519.77,
+      "gunlukGetiri": 0.00691484,
+      "paraGirisiCikisi": -323458.2,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "IYB",
       "fonAdi": "AURA PORTFÖY DEĞİŞKEN FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

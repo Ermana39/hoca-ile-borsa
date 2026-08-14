@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "AHN",
     "slug": "ahn",
@@ -12,44 +12,56 @@
     "yonetici": "ATLAS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "atlas-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 69.124015,
-    "tedavuldekiPaySayisi": 441453,
-    "kisiSayisi": 98,
-    "fonToplamDeger": 30515003.66,
-    "gunlukGetiri": 0.00292935,
+    "fiyat": 69.134411,
+    "tedavuldekiPaySayisi": 452520,
+    "kisiSayisi": 101,
+    "fonToplamDeger": 31284703.63,
+    "gunlukGetiri": 0.0001504,
     "getiriler": {
-      "birAy": 0.037172000000000004,
-      "ucAy": 0.029828999999999998,
-      "altiAy": 0.053576,
-      "yilbasi": 0.081141,
-      "birYil": 0.172163,
-      "ucYil": 1.027479,
-      "besYil": 5.760028
+      "birAy": 0.038382,
+      "ucAy": 0.026793,
+      "altiAy": 0.053487,
+      "yilbasi": 0.081304,
+      "birYil": 0.171639,
+      "ucYil": 1.027784,
+      "besYil": 5.792089999999999
     },
     "paraAkisi": {
-      "gunluk": 43962.87,
+      "gunluk": 765110.53,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
+      "gunluk": 3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AHN",
+        "fonAdi": "ATLAS PORTFÖY SERBEST(DÖVİZ)FON",
+        "tarih": "2026-08-14",
+        "fiyat": 69.134411,
+        "tedavuldekiPaySayisi": 452520,
+        "kisiSayisi": 101,
+        "fonToplamDeger": 31284703.63,
+        "gunlukGetiri": 0.0001504,
+        "paraGirisiCikisi": 765110.53,
+        "yatirimciDegisimi": 3
+      },
       {
         "fonKodu": "AHN",
         "fonAdi": "ATLAS PORTFÖY SERBEST(DÖVİZ)FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00292935,
       "paraGirisiCikisi": 43962.87,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "AHN",
+      "fonAdi": "ATLAS PORTFÖY SERBEST(DÖVİZ)FON",
+      "tarih": "2026-08-14",
+      "fiyat": 69.134411,
+      "tedavuldekiPaySayisi": 452520,
+      "kisiSayisi": 101,
+      "fonToplamDeger": 31284703.63,
+      "gunlukGetiri": 0.0001504,
+      "paraGirisiCikisi": 765110.53,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AHN",
+      "fonAdi": "ATLAS PORTFÖY SERBEST(DÖVİZ)FON",
+      "tarih": "2026-08-14",
+      "fiyat": 69.134411,
+      "tedavuldekiPaySayisi": 452520,
+      "kisiSayisi": 101,
+      "fonToplamDeger": 31284703.63,
+      "gunlukGetiri": 0.0001504,
+      "paraGirisiCikisi": 765110.53,
+      "yatirimciDegisimi": 3
+    },
     {
       "fonKodu": "AHN",
       "fonAdi": "ATLAS PORTFÖY SERBEST(DÖVİZ)FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "NTD",
     "slug": "ntd",
@@ -12,13 +12,13 @@
     "yonetici": "ÜNLÜ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "unlu-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 0.375777,
+    "fiyat": 0.371674,
     "tedavuldekiPaySayisi": 1355423321,
     "kisiSayisi": 1,
-    "fonToplamDeger": 509336587,
-    "gunlukGetiri": 0.01398839,
+    "fonToplamDeger": 503775422.05,
+    "gunlukGetiri": -0.01091871,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NTD",
+        "fonAdi": "ÜNLÜ PORTFÖY UFT HİSSE SENEDİ SERBEST ÖZEL FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 0.371674,
+        "tedavuldekiPaySayisi": 1355423321,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 503775422.05,
+        "gunlukGetiri": -0.01091871,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "NTD",
         "fonAdi": "ÜNLÜ PORTFÖY UFT HİSSE SENEDİ SERBEST ÖZEL FON (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.01398839,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "NTD",
+      "fonAdi": "ÜNLÜ PORTFÖY UFT HİSSE SENEDİ SERBEST ÖZEL FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 0.371674,
+      "tedavuldekiPaySayisi": 1355423321,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 503775422.05,
+      "gunlukGetiri": -0.01091871,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NTD",
+      "fonAdi": "ÜNLÜ PORTFÖY UFT HİSSE SENEDİ SERBEST ÖZEL FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 0.371674,
+      "tedavuldekiPaySayisi": 1355423321,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 503775422.05,
+      "gunlukGetiri": -0.01091871,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "NTD",
       "fonAdi": "ÜNLÜ PORTFÖY UFT HİSSE SENEDİ SERBEST ÖZEL FON (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "IJH",
     "slug": "ijh",
@@ -12,44 +12,56 @@
     "yonetici": "ICBC TURKEY PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "icbc-turkey-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 7.193829,
-    "tedavuldekiPaySayisi": 6388728,
+    "fiyat": 7.193942,
+    "tedavuldekiPaySayisi": 6388578,
     "kisiSayisi": 405,
-    "fonToplamDeger": 45959413.6,
-    "gunlukGetiri": 0.00318687,
+    "fonToplamDeger": 45959057.48,
+    "gunlukGetiri": 0.00001571,
     "getiriler": {
-      "birAy": 0.030777000000000002,
-      "ucAy": 0.057522000000000004,
-      "altiAy": 0.121508,
-      "yilbasi": 0.19418,
-      "birYil": 0.343521,
-      "ucYil": 2.060861,
-      "besYil": 5.98207
+      "birAy": 0.031138,
+      "ucAy": 0.055655,
+      "altiAy": 0.12165699999999999,
+      "yilbasi": 0.19419899999999998,
+      "birYil": 0.342557,
+      "ucYil": 2.060909,
+      "besYil": 5.974801
     },
     "paraAkisi": {
-      "gunluk": -1079.07,
+      "gunluk": -1079.09,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -11,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IJH",
+        "fonAdi": "TEB PORTFÖY ICBC TURKEY FON SEPETİ FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 7.193942,
+        "tedavuldekiPaySayisi": 6388578,
+        "kisiSayisi": 405,
+        "fonToplamDeger": 45959057.48,
+        "gunlukGetiri": 0.00001571,
+        "paraGirisiCikisi": -1079.09,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "IJH",
         "fonAdi": "TEB PORTFÖY ICBC TURKEY FON SEPETİ FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00318687,
       "paraGirisiCikisi": -1079.07,
       "yatirimciDegisimi": -11
+    },
+    {
+      "fonKodu": "IJH",
+      "fonAdi": "TEB PORTFÖY ICBC TURKEY FON SEPETİ FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 7.193942,
+      "tedavuldekiPaySayisi": 6388578,
+      "kisiSayisi": 405,
+      "fonToplamDeger": 45959057.48,
+      "gunlukGetiri": 0.00001571,
+      "paraGirisiCikisi": -1079.09,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IJH",
+      "fonAdi": "TEB PORTFÖY ICBC TURKEY FON SEPETİ FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 7.193942,
+      "tedavuldekiPaySayisi": 6388578,
+      "kisiSayisi": 405,
+      "fonToplamDeger": 45959057.48,
+      "gunlukGetiri": 0.00001571,
+      "paraGirisiCikisi": -1079.09,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "IJH",
       "fonAdi": "TEB PORTFÖY ICBC TURKEY FON SEPETİ FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

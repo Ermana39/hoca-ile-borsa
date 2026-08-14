@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "PMP",
     "slug": "pmp",
@@ -12,44 +12,56 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 0.84491,
-    "tedavuldekiPaySayisi": 21717677,
-    "kisiSayisi": 442,
-    "fonToplamDeger": 18349479.68,
-    "gunlukGetiri": -0.00167665,
+    "fiyat": 0.852357,
+    "tedavuldekiPaySayisi": 21488726,
+    "kisiSayisi": 440,
+    "fonToplamDeger": 18316066.94,
+    "gunlukGetiri": 0.00881396,
     "getiriler": {
-      "birAy": -0.143158,
-      "ucAy": -0.268529,
-      "altiAy": -0.330563,
-      "yilbasi": -0.325955,
-      "birYil": -0.390315,
+      "birAy": -0.105473,
+      "ucAy": -0.226642,
+      "altiAy": -0.31000900000000003,
+      "yilbasi": -0.32001399999999997,
+      "birYil": -0.38640599999999997,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 9189.24,
+      "gunluk": -195147.99,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
+      "gunluk": -2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PMP",
+        "fonAdi": "PARDUS PORTFÖY MODEL PORTFÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 0.852357,
+        "tedavuldekiPaySayisi": 21488726,
+        "kisiSayisi": 440,
+        "fonToplamDeger": 18316066.94,
+        "gunlukGetiri": 0.00881396,
+        "paraGirisiCikisi": -195147.99,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "PMP",
         "fonAdi": "PARDUS PORTFÖY MODEL PORTFÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": -0.00167665,
       "paraGirisiCikisi": 9189.24,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "PMP",
+      "fonAdi": "PARDUS PORTFÖY MODEL PORTFÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 0.852357,
+      "tedavuldekiPaySayisi": 21488726,
+      "kisiSayisi": 440,
+      "fonToplamDeger": 18316066.94,
+      "gunlukGetiri": 0.00881396,
+      "paraGirisiCikisi": -195147.99,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PMP",
+      "fonAdi": "PARDUS PORTFÖY MODEL PORTFÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 0.852357,
+      "tedavuldekiPaySayisi": 21488726,
+      "kisiSayisi": 440,
+      "fonToplamDeger": 18316066.94,
+      "gunlukGetiri": 0.00881396,
+      "paraGirisiCikisi": -195147.99,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "PMP",
       "fonAdi": "PARDUS PORTFÖY MODEL PORTFÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

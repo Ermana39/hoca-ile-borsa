@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "PRY",
     "slug": "pry",
@@ -12,44 +12,56 @@
     "yonetici": "PUSULA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pusula-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 3.13607,
-    "tedavuldekiPaySayisi": 35180716727,
-    "kisiSayisi": 52159,
-    "fonToplamDeger": 110329190848.17,
-    "gunlukGetiri": 0.00132123,
+    "fiyat": 3.140174,
+    "tedavuldekiPaySayisi": 35134945390,
+    "kisiSayisi": 52183,
+    "fonToplamDeger": 110329842887.7,
+    "gunlukGetiri": 0.00130864,
     "getiriler": {
-      "birAy": 0.040956,
-      "ucAy": 0.125789,
-      "altiAy": 0.260143,
-      "yilbasi": 0.33022199999999996,
-      "birYil": 0.597002,
+      "birAy": 0.040981,
+      "ucAy": 0.12568,
+      "altiAy": 0.257146,
+      "yilbasi": 0.331963,
+      "birYil": 0.5974309999999999,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1206336974.95,
+      "gunluk": -143729962.39,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -96,
+      "gunluk": 24,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PRY",
+        "fonAdi": "PUSULA PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 3.140174,
+        "tedavuldekiPaySayisi": 35134945390,
+        "kisiSayisi": 52183,
+        "fonToplamDeger": 110329842887.7,
+        "gunlukGetiri": 0.00130864,
+        "paraGirisiCikisi": -143729962.39,
+        "yatirimciDegisimi": 24
+      },
       {
         "fonKodu": "PRY",
         "fonAdi": "PUSULA PORTFÖY PARA PİYASASI (TL) FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00132123,
       "paraGirisiCikisi": -1206336974.95,
       "yatirimciDegisimi": -96
+    },
+    {
+      "fonKodu": "PRY",
+      "fonAdi": "PUSULA PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 3.140174,
+      "tedavuldekiPaySayisi": 35134945390,
+      "kisiSayisi": 52183,
+      "fonToplamDeger": 110329842887.7,
+      "gunlukGetiri": 0.00130864,
+      "paraGirisiCikisi": -143729962.39,
+      "yatirimciDegisimi": 24
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PRY",
+      "fonAdi": "PUSULA PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 3.140174,
+      "tedavuldekiPaySayisi": 35134945390,
+      "kisiSayisi": 52183,
+      "fonToplamDeger": 110329842887.7,
+      "gunlukGetiri": 0.00130864,
+      "paraGirisiCikisi": -143729962.39,
+      "yatirimciDegisimi": 24
+    },
     {
       "fonKodu": "PRY",
       "fonAdi": "PUSULA PORTFÖY PARA PİYASASI (TL) FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

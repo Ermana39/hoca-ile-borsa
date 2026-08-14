@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "PIL",
     "slug": "pil",
@@ -12,44 +12,56 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 4.017179,
-    "tedavuldekiPaySayisi": 126787146,
-    "kisiSayisi": 7825,
-    "fonToplamDeger": 509326667.95,
-    "gunlukGetiri": 0.00871291,
+    "fiyat": 4.013648,
+    "tedavuldekiPaySayisi": 126588423,
+    "kisiSayisi": 7796,
+    "fonToplamDeger": 508081352.47,
+    "gunlukGetiri": -0.00087898,
     "getiriler": {
-      "birAy": 0.042442,
-      "ucAy": -0.044231999999999994,
-      "altiAy": 0.098051,
-      "yilbasi": 0.291387,
-      "birYil": 0.816234,
-      "ucYil": 2.114121,
+      "birAy": 0.055479,
+      "ucAy": -0.063763,
+      "altiAy": 0.125786,
+      "yilbasi": 0.290252,
+      "birYil": 0.7923739999999999,
+      "ucYil": 2.1113839999999997,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -2572609.47,
+      "gunluk": -797604.17,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -9,
+      "gunluk": -29,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PIL",
+        "fonAdi": "ROTA PORTFÖY PİL TEKNOLOJİLERİ VE ENERJİ FON SEPETİ FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 4.013648,
+        "tedavuldekiPaySayisi": 126588423,
+        "kisiSayisi": 7796,
+        "fonToplamDeger": 508081352.47,
+        "gunlukGetiri": -0.00087898,
+        "paraGirisiCikisi": -797604.17,
+        "yatirimciDegisimi": -29
+      },
       {
         "fonKodu": "PIL",
         "fonAdi": "ROTA PORTFÖY PİL TEKNOLOJİLERİ VE ENERJİ FON SEPETİ FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00871291,
       "paraGirisiCikisi": -2572609.47,
       "yatirimciDegisimi": -9
+    },
+    {
+      "fonKodu": "PIL",
+      "fonAdi": "ROTA PORTFÖY PİL TEKNOLOJİLERİ VE ENERJİ FON SEPETİ FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 4.013648,
+      "tedavuldekiPaySayisi": 126588423,
+      "kisiSayisi": 7796,
+      "fonToplamDeger": 508081352.47,
+      "gunlukGetiri": -0.00087898,
+      "paraGirisiCikisi": -797604.17,
+      "yatirimciDegisimi": -29
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PIL",
+      "fonAdi": "ROTA PORTFÖY PİL TEKNOLOJİLERİ VE ENERJİ FON SEPETİ FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 4.013648,
+      "tedavuldekiPaySayisi": 126588423,
+      "kisiSayisi": 7796,
+      "fonToplamDeger": 508081352.47,
+      "gunlukGetiri": -0.00087898,
+      "paraGirisiCikisi": -797604.17,
+      "yatirimciDegisimi": -29
+    },
     {
       "fonKodu": "PIL",
       "fonAdi": "ROTA PORTFÖY PİL TEKNOLOJİLERİ VE ENERJİ FON SEPETİ FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

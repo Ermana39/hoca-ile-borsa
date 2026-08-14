@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "MBL",
     "slug": "mbl",
@@ -12,24 +12,24 @@
     "yonetici": "MEKSA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "meksa-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 0.285202,
+    "fiyat": 0.285493,
     "tedavuldekiPaySayisi": 72948173,
     "kisiSayisi": 215,
-    "fonToplamDeger": 20804987.72,
-    "gunlukGetiri": 0.00101083,
+    "fonToplamDeger": 20826205.96,
+    "gunlukGetiri": 0.00102033,
     "getiriler": {
-      "birAy": 0.031911999999999996,
-      "ucAy": 0.09797800000000001,
-      "altiAy": 0.202106,
-      "yilbasi": 0.24916,
-      "birYil": 0.44835099999999994,
-      "ucYil": 2.317807,
-      "besYil": 3.0263999999999998
+      "birAy": 0.031983000000000004,
+      "ucAy": 0.09799899999999999,
+      "altiAy": 0.199954,
+      "yilbasi": 0.250435,
+      "birYil": 0.448086,
+      "ucYil": 2.321192,
+      "besYil": 3.0289729999999997
     },
     "paraAkisi": {
-      "gunluk": -633.15,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MBL",
+        "fonAdi": "MEKSA PORTFÖY İKİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-14",
+        "fiyat": 0.285493,
+        "tedavuldekiPaySayisi": 72948173,
+        "kisiSayisi": 215,
+        "fonToplamDeger": 20826205.96,
+        "gunlukGetiri": 0.00102033,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "MBL",
         "fonAdi": "MEKSA PORTFÖY İKİNCİ DEĞİŞKEN FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00101083,
       "paraGirisiCikisi": -633.15,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "MBL",
+      "fonAdi": "MEKSA PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-14",
+      "fiyat": 0.285493,
+      "tedavuldekiPaySayisi": 72948173,
+      "kisiSayisi": 215,
+      "fonToplamDeger": 20826205.96,
+      "gunlukGetiri": 0.00102033,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MBL",
+      "fonAdi": "MEKSA PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-14",
+      "fiyat": 0.285493,
+      "tedavuldekiPaySayisi": 72948173,
+      "kisiSayisi": 215,
+      "fonToplamDeger": 20826205.96,
+      "gunlukGetiri": 0.00102033,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "MBL",
       "fonAdi": "MEKSA PORTFÖY İKİNCİ DEĞİŞKEN FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

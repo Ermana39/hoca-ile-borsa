@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "KTI",
     "slug": "kti",
@@ -12,44 +12,56 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 2.12605,
-    "tedavuldekiPaySayisi": 131520492,
-    "kisiSayisi": 544,
-    "fonToplamDeger": 279619190.96,
-    "gunlukGetiri": 0.02153829,
+    "fiyat": 2.115491,
+    "tedavuldekiPaySayisi": 131642989,
+    "kisiSayisi": 547,
+    "fonToplamDeger": 278489574.87,
+    "gunlukGetiri": -0.00496649,
     "getiriler": {
-      "birAy": 0.054458,
-      "ucAy": 0.031795,
-      "altiAy": 0.158713,
-      "yilbasi": 0.3627,
-      "birYil": 0.40435699999999997,
+      "birAy": 0.0635,
+      "ucAy": 0.029349,
+      "altiAy": 0.150401,
+      "yilbasi": 0.355932,
+      "birYil": 0.39846899999999996,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 10330219.7,
+      "gunluk": 259141.3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 6,
+      "gunluk": 3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KTI",
+        "fonAdi": "AZİMUT PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 2.115491,
+        "tedavuldekiPaySayisi": 131642989,
+        "kisiSayisi": 547,
+        "fonToplamDeger": 278489574.87,
+        "gunlukGetiri": -0.00496649,
+        "paraGirisiCikisi": 259141.3,
+        "yatirimciDegisimi": 3
+      },
       {
         "fonKodu": "KTI",
         "fonAdi": "AZİMUT PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.02153829,
       "paraGirisiCikisi": 10330219.7,
       "yatirimciDegisimi": 6
+    },
+    {
+      "fonKodu": "KTI",
+      "fonAdi": "AZİMUT PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 2.115491,
+      "tedavuldekiPaySayisi": 131642989,
+      "kisiSayisi": 547,
+      "fonToplamDeger": 278489574.87,
+      "gunlukGetiri": -0.00496649,
+      "paraGirisiCikisi": 259141.3,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KTI",
+      "fonAdi": "AZİMUT PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 2.115491,
+      "tedavuldekiPaySayisi": 131642989,
+      "kisiSayisi": 547,
+      "fonToplamDeger": 278489574.87,
+      "gunlukGetiri": -0.00496649,
+      "paraGirisiCikisi": 259141.3,
+      "yatirimciDegisimi": 3
+    },
     {
       "fonKodu": "KTI",
       "fonAdi": "AZİMUT PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

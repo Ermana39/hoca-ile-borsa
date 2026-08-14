@@ -449,7 +449,11 @@ for (const row of managerTable.rows) {
 }
 for (const fund of current.fonlar) {
   const source = sourceManagers.get(fund.kod);
-  assert(source, `${fund.kod} için yönetici eşleşmesi yok.`);
+  if (!source) {
+    assert(!fund.aktifMi, `${fund.kod} aktif fon için yönetici eşleşmesi yok.`);
+    assert(fund.yonetici === "Bilinmiyor", `${fund.kod} eşleşmesiz pasif fon yönetici bilgisi yanlış.`);
+    continue;
+  }
   assert(fund.yonetici === source.yonetici, `${fund.kod} yönetici bilgisi yanlış.`);
   assert(fund.kapYoneticiKodu === source.kap, `${fund.kod} KAP yönetici kodu yanlış.`);
 }

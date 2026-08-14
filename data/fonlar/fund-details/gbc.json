@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "GBC",
     "slug": "gbc",
@@ -12,44 +12,56 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 0.315182,
-    "tedavuldekiPaySayisi": 835709462.48,
-    "kisiSayisi": 1666,
-    "fonToplamDeger": 263400762.09,
-    "gunlukGetiri": 0.00422487,
+    "fiyat": 0.317179,
+    "tedavuldekiPaySayisi": 835646955.48,
+    "kisiSayisi": 1671,
+    "fonToplamDeger": 265049407.62,
+    "gunlukGetiri": 0.00633602,
     "getiriler": {
-      "birAy": 0.026655,
-      "ucAy": 0.069109,
-      "altiAy": 0.209754,
-      "yilbasi": 0.267828,
-      "birYil": 0.426886,
-      "ucYil": 1.745607,
-      "besYil": 6.314844000000001
+      "birAy": 0.039338000000000005,
+      "ucAy": 0.075639,
+      "altiAy": 0.244547,
+      "yilbasi": 0.27586099999999997,
+      "birYil": 0.419736,
+      "ucYil": 1.763004,
+      "besYil": 6.301710000000001
     },
     "paraAkisi": {
-      "gunluk": 140537.45,
+      "gunluk": -19825.91,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 9,
+      "gunluk": 5,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GBC",
+        "fonAdi": "AZİMUT PORTFÖY YABANCI HİSSE SENEDİ FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 0.317179,
+        "tedavuldekiPaySayisi": 835646955.48,
+        "kisiSayisi": 1671,
+        "fonToplamDeger": 265049407.62,
+        "gunlukGetiri": 0.00633602,
+        "paraGirisiCikisi": -19825.91,
+        "yatirimciDegisimi": 5
+      },
       {
         "fonKodu": "GBC",
         "fonAdi": "AZİMUT PORTFÖY YABANCI HİSSE SENEDİ FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00422487,
       "paraGirisiCikisi": 140537.45,
       "yatirimciDegisimi": 9
+    },
+    {
+      "fonKodu": "GBC",
+      "fonAdi": "AZİMUT PORTFÖY YABANCI HİSSE SENEDİ FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 0.317179,
+      "tedavuldekiPaySayisi": 835646955.48,
+      "kisiSayisi": 1671,
+      "fonToplamDeger": 265049407.62,
+      "gunlukGetiri": 0.00633602,
+      "paraGirisiCikisi": -19825.91,
+      "yatirimciDegisimi": 5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GBC",
+      "fonAdi": "AZİMUT PORTFÖY YABANCI HİSSE SENEDİ FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 0.317179,
+      "tedavuldekiPaySayisi": 835646955.48,
+      "kisiSayisi": 1671,
+      "fonToplamDeger": 265049407.62,
+      "gunlukGetiri": 0.00633602,
+      "paraGirisiCikisi": -19825.91,
+      "yatirimciDegisimi": 5
+    },
     {
       "fonKodu": "GBC",
       "fonAdi": "AZİMUT PORTFÖY YABANCI HİSSE SENEDİ FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

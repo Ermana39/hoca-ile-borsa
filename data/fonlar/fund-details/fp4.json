@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "FP4",
     "slug": "fp4",
@@ -12,24 +12,24 @@
     "yonetici": "ONE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "one-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 0.848922,
-    "tedavuldekiPaySayisi": 169375840,
+    "fiyat": 0.833269,
+    "tedavuldekiPaySayisi": 169385132,
     "kisiSayisi": 141,
-    "fonToplamDeger": 143786854.2,
-    "gunlukGetiri": 0.00891708,
+    "fonToplamDeger": 141143384.76,
+    "gunlukGetiri": -0.01843868,
     "getiriler": {
-      "birAy": -0.213682,
-      "ucAy": -0.328891,
-      "altiAy": -0.327576,
-      "yilbasi": -0.224488,
+      "birAy": -0.228836,
+      "ucAy": -0.321671,
+      "altiAy": -0.344356,
+      "yilbasi": -0.23878699999999997,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 414.27,
+      "gunluk": 7742.74,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FP4",
+        "fonAdi": "ONE PORTFÖY DÖRDÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 0.833269,
+        "tedavuldekiPaySayisi": 169385132,
+        "kisiSayisi": 141,
+        "fonToplamDeger": 141143384.76,
+        "gunlukGetiri": -0.01843868,
+        "paraGirisiCikisi": 7742.74,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "FP4",
         "fonAdi": "ONE PORTFÖY DÖRDÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00891708,
       "paraGirisiCikisi": 414.27,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "FP4",
+      "fonAdi": "ONE PORTFÖY DÖRDÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 0.833269,
+      "tedavuldekiPaySayisi": 169385132,
+      "kisiSayisi": 141,
+      "fonToplamDeger": 141143384.76,
+      "gunlukGetiri": -0.01843868,
+      "paraGirisiCikisi": 7742.74,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FP4",
+      "fonAdi": "ONE PORTFÖY DÖRDÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 0.833269,
+      "tedavuldekiPaySayisi": 169385132,
+      "kisiSayisi": 141,
+      "fonToplamDeger": 141143384.76,
+      "gunlukGetiri": -0.01843868,
+      "paraGirisiCikisi": 7742.74,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "FP4",
       "fonAdi": "ONE PORTFÖY DÖRDÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

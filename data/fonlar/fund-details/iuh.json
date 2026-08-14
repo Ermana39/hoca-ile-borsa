@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "IUH",
     "slug": "iuh",
@@ -12,44 +12,56 @@
     "yonetici": "INVEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "inveo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 6.359013,
-    "tedavuldekiPaySayisi": 1987156.66,
-    "kisiSayisi": 720,
-    "fonToplamDeger": 12636355.99,
-    "gunlukGetiri": 0.00932052,
+    "fiyat": 6.358654,
+    "tedavuldekiPaySayisi": 1987688.66,
+    "kisiSayisi": 715,
+    "fonToplamDeger": 12639024.37,
+    "gunlukGetiri": -0.00005646,
     "getiriler": {
-      "birAy": 0.041033999999999994,
-      "ucAy": 0.09781599999999999,
-      "altiAy": 0.346153,
-      "yilbasi": 0.43359699999999995,
-      "birYil": 0.620633,
-      "ucYil": 2.3146,
+      "birAy": 0.048836000000000004,
+      "ucAy": 0.10075200000000001,
+      "altiAy": 0.36468000000000006,
+      "yilbasi": 0.43351599999999996,
+      "birYil": 0.609483,
+      "ucYil": 2.314413,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 20736.74,
+      "gunluk": 3382.8,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": -5,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IUH",
+        "fonAdi": "INVEO PORTFÖY DÖNÜŞTÜRÜCÜ TEKNOLOJİLER FON SEPETİ FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 6.358654,
+        "tedavuldekiPaySayisi": 1987688.66,
+        "kisiSayisi": 715,
+        "fonToplamDeger": 12639024.37,
+        "gunlukGetiri": -0.00005646,
+        "paraGirisiCikisi": 3382.8,
+        "yatirimciDegisimi": -5
+      },
       {
         "fonKodu": "IUH",
         "fonAdi": "INVEO PORTFÖY DÖNÜŞTÜRÜCÜ TEKNOLOJİLER FON SEPETİ FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00932052,
       "paraGirisiCikisi": 20736.74,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "IUH",
+      "fonAdi": "INVEO PORTFÖY DÖNÜŞTÜRÜCÜ TEKNOLOJİLER FON SEPETİ FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 6.358654,
+      "tedavuldekiPaySayisi": 1987688.66,
+      "kisiSayisi": 715,
+      "fonToplamDeger": 12639024.37,
+      "gunlukGetiri": -0.00005646,
+      "paraGirisiCikisi": 3382.8,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IUH",
+      "fonAdi": "INVEO PORTFÖY DÖNÜŞTÜRÜCÜ TEKNOLOJİLER FON SEPETİ FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 6.358654,
+      "tedavuldekiPaySayisi": 1987688.66,
+      "kisiSayisi": 715,
+      "fonToplamDeger": 12639024.37,
+      "gunlukGetiri": -0.00005646,
+      "paraGirisiCikisi": 3382.8,
+      "yatirimciDegisimi": -5
+    },
     {
       "fonKodu": "IUH",
       "fonAdi": "INVEO PORTFÖY DÖNÜŞTÜRÜCÜ TEKNOLOJİLER FON SEPETİ FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

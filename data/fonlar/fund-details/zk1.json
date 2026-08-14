@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "ZK1",
     "slug": "zk1",
@@ -12,13 +12,13 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 50.344553,
-    "tedavuldekiPaySayisi": 44805141,
+    "fiyat": 50.366956,
+    "tedavuldekiPaySayisi": 44792783,
     "kisiSayisi": 108,
-    "fonToplamDeger": 2255694786.13,
-    "gunlukGetiri": 0.00043006,
+    "fonToplamDeger": 2256076134.16,
+    "gunlukGetiri": 0.00044499,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 9534150.76,
+      "gunluk": -622434.84,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZK1",
+        "fonAdi": "ZİRAAT PORTFÖY BAŞAK KATILIM SERBEST (DÖVİZ-AMERİKAN DOLARI) FON",
+        "tarih": "2026-08-14",
+        "fiyat": 50.366956,
+        "tedavuldekiPaySayisi": 44792783,
+        "kisiSayisi": 108,
+        "fonToplamDeger": 2256076134.16,
+        "gunlukGetiri": 0.00044499,
+        "paraGirisiCikisi": -622434.84,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "ZK1",
         "fonAdi": "ZİRAAT PORTFÖY BAŞAK KATILIM SERBEST (DÖVİZ-AMERİKAN DOLARI) FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00043006,
       "paraGirisiCikisi": 9534150.76,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "ZK1",
+      "fonAdi": "ZİRAAT PORTFÖY BAŞAK KATILIM SERBEST (DÖVİZ-AMERİKAN DOLARI) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 50.366956,
+      "tedavuldekiPaySayisi": 44792783,
+      "kisiSayisi": 108,
+      "fonToplamDeger": 2256076134.16,
+      "gunlukGetiri": 0.00044499,
+      "paraGirisiCikisi": -622434.84,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZK1",
+      "fonAdi": "ZİRAAT PORTFÖY BAŞAK KATILIM SERBEST (DÖVİZ-AMERİKAN DOLARI) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 50.366956,
+      "tedavuldekiPaySayisi": 44792783,
+      "kisiSayisi": 108,
+      "fonToplamDeger": 2256076134.16,
+      "gunlukGetiri": 0.00044499,
+      "paraGirisiCikisi": -622434.84,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "ZK1",
       "fonAdi": "ZİRAAT PORTFÖY BAŞAK KATILIM SERBEST (DÖVİZ-AMERİKAN DOLARI) FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "NAU",
     "slug": "nau",
@@ -12,44 +12,56 @@
     "yonetici": "NEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "neo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 3.109986,
-    "tedavuldekiPaySayisi": 829730392,
-    "kisiSayisi": 9928,
-    "fonToplamDeger": 2580449519.44,
-    "gunlukGetiri": 0.00802894,
+    "fiyat": 3.095432,
+    "tedavuldekiPaySayisi": 758222601,
+    "kisiSayisi": 9919,
+    "fonToplamDeger": 2347026185.73,
+    "gunlukGetiri": -0.00467976,
     "getiriler": {
-      "birAy": 0.077412,
-      "ucAy": -0.034437,
-      "altiAy": -0.103355,
-      "yilbasi": 0.061741000000000004,
-      "birYil": 0.44665,
+      "birAy": 0.079751,
+      "ucAy": -0.033963,
+      "altiAy": -0.095575,
+      "yilbasi": 0.056773,
+      "birYil": 0.45333399999999996,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 7229165.57,
+      "gunluk": -221347504.51,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -21,
+      "gunluk": -9,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NAU",
+        "fonAdi": "NEO PORTFÖY ALTIN FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 3.095432,
+        "tedavuldekiPaySayisi": 758222601,
+        "kisiSayisi": 9919,
+        "fonToplamDeger": 2347026185.73,
+        "gunlukGetiri": -0.00467976,
+        "paraGirisiCikisi": -221347504.51,
+        "yatirimciDegisimi": -9
+      },
       {
         "fonKodu": "NAU",
         "fonAdi": "NEO PORTFÖY ALTIN FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00802894,
       "paraGirisiCikisi": 7229165.57,
       "yatirimciDegisimi": -21
+    },
+    {
+      "fonKodu": "NAU",
+      "fonAdi": "NEO PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 3.095432,
+      "tedavuldekiPaySayisi": 758222601,
+      "kisiSayisi": 9919,
+      "fonToplamDeger": 2347026185.73,
+      "gunlukGetiri": -0.00467976,
+      "paraGirisiCikisi": -221347504.51,
+      "yatirimciDegisimi": -9
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NAU",
+      "fonAdi": "NEO PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 3.095432,
+      "tedavuldekiPaySayisi": 758222601,
+      "kisiSayisi": 9919,
+      "fonToplamDeger": 2347026185.73,
+      "gunlukGetiri": -0.00467976,
+      "paraGirisiCikisi": -221347504.51,
+      "yatirimciDegisimi": -9
+    },
     {
       "fonKodu": "NAU",
       "fonAdi": "NEO PORTFÖY ALTIN FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

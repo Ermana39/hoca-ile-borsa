@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "AEV",
     "slug": "aev",
@@ -12,44 +12,56 @@
     "yonetici": "ALLBATROSS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "allbatross-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 2.098715,
-    "tedavuldekiPaySayisi": 4333596,
-    "kisiSayisi": 436,
-    "fonToplamDeger": 9094984.05,
-    "gunlukGetiri": 0.00198754,
+    "fiyat": 2.107944,
+    "tedavuldekiPaySayisi": 4297815,
+    "kisiSayisi": 433,
+    "fonToplamDeger": 9059554.5,
+    "gunlukGetiri": 0.00439745,
     "getiriler": {
-      "birAy": 0.008213,
-      "ucAy": 0.025354,
-      "altiAy": 0.10851000000000001,
-      "yilbasi": 0.353983,
-      "birYil": 0.484351,
+      "birAy": 0.028056,
+      "ucAy": 0.040573,
+      "altiAy": 0.10765000000000001,
+      "yilbasi": 0.359938,
+      "birYil": 0.476847,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -310945.61,
+      "gunluk": -75424.34,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": -3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AEV",
+        "fonAdi": "ALLBATROSS PORTFÖY SANAYİ ŞİRKETLERİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 2.107944,
+        "tedavuldekiPaySayisi": 4297815,
+        "kisiSayisi": 433,
+        "fonToplamDeger": 9059554.5,
+        "gunlukGetiri": 0.00439745,
+        "paraGirisiCikisi": -75424.34,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "AEV",
         "fonAdi": "ALLBATROSS PORTFÖY SANAYİ ŞİRKETLERİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00198754,
       "paraGirisiCikisi": -310945.61,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "AEV",
+      "fonAdi": "ALLBATROSS PORTFÖY SANAYİ ŞİRKETLERİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 2.107944,
+      "tedavuldekiPaySayisi": 4297815,
+      "kisiSayisi": 433,
+      "fonToplamDeger": 9059554.5,
+      "gunlukGetiri": 0.00439745,
+      "paraGirisiCikisi": -75424.34,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AEV",
+      "fonAdi": "ALLBATROSS PORTFÖY SANAYİ ŞİRKETLERİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 2.107944,
+      "tedavuldekiPaySayisi": 4297815,
+      "kisiSayisi": 433,
+      "fonToplamDeger": 9059554.5,
+      "gunlukGetiri": 0.00439745,
+      "paraGirisiCikisi": -75424.34,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "AEV",
       "fonAdi": "ALLBATROSS PORTFÖY SANAYİ ŞİRKETLERİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "NSK",
     "slug": "nsk",
@@ -12,44 +12,56 @@
     "yonetici": "NEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "neo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 6.66548,
-    "tedavuldekiPaySayisi": 58903520,
+    "fiyat": 6.681032,
+    "tedavuldekiPaySayisi": 58902771,
     "kisiSayisi": 87,
-    "fonToplamDeger": 392620211.98,
-    "gunlukGetiri": 0.00133266,
+    "fonToplamDeger": 393531270.15,
+    "gunlukGetiri": 0.00233322,
     "getiriler": {
-      "birAy": 0.036897,
-      "ucAy": 0.099811,
-      "altiAy": 0.21631499999999998,
-      "yilbasi": 0.274852,
-      "birYil": 0.45044199999999995,
-      "ucYil": 2.535238,
-      "besYil": 5.034549999999999
+      "birAy": 0.037078,
+      "ucAy": 0.101263,
+      "altiAy": 0.21421800000000002,
+      "yilbasi": 0.277827,
+      "birYil": 0.451849,
+      "ucYil": 2.5434870000000003,
+      "besYil": 5.039683999999999
     },
     "paraAkisi": {
-      "gunluk": -20,
+      "gunluk": -5004.09,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NSK",
+        "fonAdi": "NEO PORTFÖY BİRİNCİ SERBEST FON",
+        "tarih": "2026-08-14",
+        "fiyat": 6.681032,
+        "tedavuldekiPaySayisi": 58902771,
+        "kisiSayisi": 87,
+        "fonToplamDeger": 393531270.15,
+        "gunlukGetiri": 0.00233322,
+        "paraGirisiCikisi": -5004.09,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "NSK",
         "fonAdi": "NEO PORTFÖY BİRİNCİ SERBEST FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00133266,
       "paraGirisiCikisi": -20,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "NSK",
+      "fonAdi": "NEO PORTFÖY BİRİNCİ SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 6.681032,
+      "tedavuldekiPaySayisi": 58902771,
+      "kisiSayisi": 87,
+      "fonToplamDeger": 393531270.15,
+      "gunlukGetiri": 0.00233322,
+      "paraGirisiCikisi": -5004.09,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NSK",
+      "fonAdi": "NEO PORTFÖY BİRİNCİ SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 6.681032,
+      "tedavuldekiPaySayisi": 58902771,
+      "kisiSayisi": 87,
+      "fonToplamDeger": 393531270.15,
+      "gunlukGetiri": 0.00233322,
+      "paraGirisiCikisi": -5004.09,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "NSK",
       "fonAdi": "NEO PORTFÖY BİRİNCİ SERBEST FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

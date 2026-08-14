@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "BDS",
     "slug": "bds",
@@ -12,44 +12,56 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 2.118552,
-    "tedavuldekiPaySayisi": 117072051,
-    "kisiSayisi": 8092,
-    "fonToplamDeger": 248023252.74,
-    "gunlukGetiri": -0.00098037,
+    "fiyat": 2.132477,
+    "tedavuldekiPaySayisi": 116465681,
+    "kisiSayisi": 8046,
+    "fonToplamDeger": 248360384.04,
+    "gunlukGetiri": 0.00657289,
     "getiriler": {
-      "birAy": -0.080163,
-      "ucAy": -0.176579,
-      "altiAy": -0.191497,
-      "yilbasi": -0.096142,
-      "birYil": -0.068061,
+      "birAy": -0.070501,
+      "ucAy": -0.152667,
+      "altiAy": -0.189967,
+      "yilbasi": -0.09020099999999999,
+      "birYil": -0.066011,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -2116804.19,
+      "gunluk": -1293070.08,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -52,
+      "gunluk": -46,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BDS",
+        "fonAdi": "PARDUS PORTFÖY BIST 30 DIŞI ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 2.132477,
+        "tedavuldekiPaySayisi": 116465681,
+        "kisiSayisi": 8046,
+        "fonToplamDeger": 248360384.04,
+        "gunlukGetiri": 0.00657289,
+        "paraGirisiCikisi": -1293070.08,
+        "yatirimciDegisimi": -46
+      },
       {
         "fonKodu": "BDS",
         "fonAdi": "PARDUS PORTFÖY BIST 30 DIŞI ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": -0.00098037,
       "paraGirisiCikisi": -2116804.19,
       "yatirimciDegisimi": -52
+    },
+    {
+      "fonKodu": "BDS",
+      "fonAdi": "PARDUS PORTFÖY BIST 30 DIŞI ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 2.132477,
+      "tedavuldekiPaySayisi": 116465681,
+      "kisiSayisi": 8046,
+      "fonToplamDeger": 248360384.04,
+      "gunlukGetiri": 0.00657289,
+      "paraGirisiCikisi": -1293070.08,
+      "yatirimciDegisimi": -46
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BDS",
+      "fonAdi": "PARDUS PORTFÖY BIST 30 DIŞI ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 2.132477,
+      "tedavuldekiPaySayisi": 116465681,
+      "kisiSayisi": 8046,
+      "fonToplamDeger": 248360384.04,
+      "gunlukGetiri": 0.00657289,
+      "paraGirisiCikisi": -1293070.08,
+      "yatirimciDegisimi": -46
+    },
     {
       "fonKodu": "BDS",
       "fonAdi": "PARDUS PORTFÖY BIST 30 DIŞI ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

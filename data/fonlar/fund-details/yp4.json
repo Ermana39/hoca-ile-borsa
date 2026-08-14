@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "YP4",
     "slug": "yp4",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 54.224776,
-    "tedavuldekiPaySayisi": 2460900549,
-    "kisiSayisi": 29581,
-    "fonToplamDeger": 133441781867.87,
-    "gunlukGetiri": 0.00047739,
+    "fiyat": 54.251737,
+    "tedavuldekiPaySayisi": 2462071115,
+    "kisiSayisi": 29571,
+    "fonToplamDeger": 133571633609.55,
+    "gunlukGetiri": 0.00049721,
     "getiriler": {
-      "birAy": 0.021589,
-      "ucAy": 0.061369999999999994,
-      "altiAy": 0.11245200000000001,
-      "yilbasi": 0.13528700000000002,
-      "birYil": 0.21347000000000002,
-      "ucYil": 0.971039,
+      "birAy": 0.019732,
+      "ucAy": 0.061384,
+      "altiAy": 0.11342599999999999,
+      "yilbasi": 0.135852,
+      "birYil": 0.213377,
+      "ucYil": 0.972019,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -125192698.76,
+      "gunluk": 63505238.77,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -25,
+      "gunluk": -10,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YP4",
+        "fonAdi": "YAPI KREDİ PORTFÖY FERİKÖY SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-14",
+        "fiyat": 54.251737,
+        "tedavuldekiPaySayisi": 2462071115,
+        "kisiSayisi": 29571,
+        "fonToplamDeger": 133571633609.55,
+        "gunlukGetiri": 0.00049721,
+        "paraGirisiCikisi": 63505238.77,
+        "yatirimciDegisimi": -10
+      },
       {
         "fonKodu": "YP4",
         "fonAdi": "YAPI KREDİ PORTFÖY FERİKÖY SERBEST (DÖVİZ) FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00047739,
       "paraGirisiCikisi": -125192698.76,
       "yatirimciDegisimi": -25
+    },
+    {
+      "fonKodu": "YP4",
+      "fonAdi": "YAPI KREDİ PORTFÖY FERİKÖY SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 54.251737,
+      "tedavuldekiPaySayisi": 2462071115,
+      "kisiSayisi": 29571,
+      "fonToplamDeger": 133571633609.55,
+      "gunlukGetiri": 0.00049721,
+      "paraGirisiCikisi": 63505238.77,
+      "yatirimciDegisimi": -10
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YP4",
+      "fonAdi": "YAPI KREDİ PORTFÖY FERİKÖY SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 54.251737,
+      "tedavuldekiPaySayisi": 2462071115,
+      "kisiSayisi": 29571,
+      "fonToplamDeger": 133571633609.55,
+      "gunlukGetiri": 0.00049721,
+      "paraGirisiCikisi": 63505238.77,
+      "yatirimciDegisimi": -10
+    },
     {
       "fonKodu": "YP4",
       "fonAdi": "YAPI KREDİ PORTFÖY FERİKÖY SERBEST (DÖVİZ) FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

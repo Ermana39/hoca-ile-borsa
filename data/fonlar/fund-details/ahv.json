@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "AHV",
     "slug": "ahv",
@@ -12,44 +12,56 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 21.422203,
-    "tedavuldekiPaySayisi": 6006748,
-    "kisiSayisi": 180,
-    "fonToplamDeger": 128677772.49,
-    "gunlukGetiri": 0.00370913,
+    "fiyat": 21.421011,
+    "tedavuldekiPaySayisi": 6011908,
+    "kisiSayisi": 184,
+    "fonToplamDeger": 128781147.6,
+    "gunlukGetiri": -0.00005564,
     "getiriler": {
-      "birAy": 0.028822999999999998,
-      "ucAy": 0.057436,
-      "altiAy": 0.154359,
-      "yilbasi": 0.272617,
-      "birYil": 0.437457,
-      "ucYil": 1.9296360000000001,
-      "besYil": 8.073906
+      "birAy": 0.031021999999999997,
+      "ucAy": 0.05593600000000001,
+      "altiAy": 0.156101,
+      "yilbasi": 0.272546,
+      "birYil": 0.43808199999999997,
+      "ucYil": 1.9294730000000002,
+      "besYil": 8.099491
     },
     "paraAkisi": {
-      "gunluk": -70907.49,
+      "gunluk": 110532.42,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 4,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AHV",
+        "fonAdi": "AZİMUT PORTFÖY DENGELİ FON SEPETİ FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 21.421011,
+        "tedavuldekiPaySayisi": 6011908,
+        "kisiSayisi": 184,
+        "fonToplamDeger": 128781147.6,
+        "gunlukGetiri": -0.00005564,
+        "paraGirisiCikisi": 110532.42,
+        "yatirimciDegisimi": 4
+      },
       {
         "fonKodu": "AHV",
         "fonAdi": "AZİMUT PORTFÖY DENGELİ FON SEPETİ FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00370913,
       "paraGirisiCikisi": -70907.49,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "AHV",
+      "fonAdi": "AZİMUT PORTFÖY DENGELİ FON SEPETİ FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 21.421011,
+      "tedavuldekiPaySayisi": 6011908,
+      "kisiSayisi": 184,
+      "fonToplamDeger": 128781147.6,
+      "gunlukGetiri": -0.00005564,
+      "paraGirisiCikisi": 110532.42,
+      "yatirimciDegisimi": 4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AHV",
+      "fonAdi": "AZİMUT PORTFÖY DENGELİ FON SEPETİ FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 21.421011,
+      "tedavuldekiPaySayisi": 6011908,
+      "kisiSayisi": 184,
+      "fonToplamDeger": 128781147.6,
+      "gunlukGetiri": -0.00005564,
+      "paraGirisiCikisi": 110532.42,
+      "yatirimciDegisimi": 4
+    },
     {
       "fonKodu": "AHV",
       "fonAdi": "AZİMUT PORTFÖY DENGELİ FON SEPETİ FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

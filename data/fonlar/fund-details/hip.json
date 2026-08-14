@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "HIP",
     "slug": "hip",
@@ -12,13 +12,13 @@
     "yonetici": "HSBC PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hsbc-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 2.153298,
-    "tedavuldekiPaySayisi": 1018864948,
-    "kisiSayisi": 1204,
-    "fonToplamDeger": 2193920187.65,
-    "gunlukGetiri": 0.00105252,
+    "fiyat": 2.155448,
+    "tedavuldekiPaySayisi": 988676457,
+    "kisiSayisi": 1183,
+    "fonToplamDeger": 2131040546.92,
+    "gunlukGetiri": 0.00099847,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 110537752.67,
+      "gunluk": -65069722.55,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 21,
+      "gunluk": -21,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HIP",
+        "fonAdi": "HSBC PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 2.155448,
+        "tedavuldekiPaySayisi": 988676457,
+        "kisiSayisi": 1183,
+        "fonToplamDeger": 2131040546.92,
+        "gunlukGetiri": 0.00099847,
+        "paraGirisiCikisi": -65069722.55,
+        "yatirimciDegisimi": -21
+      },
       {
         "fonKodu": "HIP",
         "fonAdi": "HSBC PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00105252,
       "paraGirisiCikisi": 110537752.67,
       "yatirimciDegisimi": 21
+    },
+    {
+      "fonKodu": "HIP",
+      "fonAdi": "HSBC PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 2.155448,
+      "tedavuldekiPaySayisi": 988676457,
+      "kisiSayisi": 1183,
+      "fonToplamDeger": 2131040546.92,
+      "gunlukGetiri": 0.00099847,
+      "paraGirisiCikisi": -65069722.55,
+      "yatirimciDegisimi": -21
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HIP",
+      "fonAdi": "HSBC PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 2.155448,
+      "tedavuldekiPaySayisi": 988676457,
+      "kisiSayisi": 1183,
+      "fonToplamDeger": 2131040546.92,
+      "gunlukGetiri": 0.00099847,
+      "paraGirisiCikisi": -65069722.55,
+      "yatirimciDegisimi": -21
+    },
     {
       "fonKodu": "HIP",
       "fonAdi": "HSBC PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

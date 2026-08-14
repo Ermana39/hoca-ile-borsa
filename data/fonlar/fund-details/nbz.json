@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "NBZ",
     "slug": "nbz",
@@ -12,44 +12,56 @@
     "yonetici": "NEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "neo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 72.124948,
-    "tedavuldekiPaySayisi": 19413390,
-    "kisiSayisi": 283,
-    "fonToplamDeger": 1400189738.18,
-    "gunlukGetiri": 0.00049497,
+    "fiyat": 72.168199,
+    "tedavuldekiPaySayisi": 19413543,
+    "kisiSayisi": 281,
+    "fonToplamDeger": 1401040442.36,
+    "gunlukGetiri": 0.00059967,
     "getiriler": {
-      "birAy": 0.021427,
-      "ucAy": 0.06072,
-      "altiAy": 0.114545,
-      "yilbasi": 0.13806200000000002,
-      "birYil": 0.226585,
-      "ucYil": 0.995862,
-      "besYil": 6.04169
+      "birAy": 0.019613000000000002,
+      "ucAy": 0.060626,
+      "altiAy": 0.11543799999999999,
+      "yilbasi": 0.138744,
+      "birYil": 0.226719,
+      "ucYil": 0.997059,
+      "besYil": 6.065132999999999
     },
     "paraAkisi": {
-      "gunluk": -1456635.45,
+      "gunluk": 11041.73,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": -2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NBZ",
+        "fonAdi": "NEO PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-14",
+        "fiyat": 72.168199,
+        "tedavuldekiPaySayisi": 19413543,
+        "kisiSayisi": 281,
+        "fonToplamDeger": 1401040442.36,
+        "gunlukGetiri": 0.00059967,
+        "paraGirisiCikisi": 11041.73,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "NBZ",
         "fonAdi": "NEO PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00049497,
       "paraGirisiCikisi": -1456635.45,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "NBZ",
+      "fonAdi": "NEO PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 72.168199,
+      "tedavuldekiPaySayisi": 19413543,
+      "kisiSayisi": 281,
+      "fonToplamDeger": 1401040442.36,
+      "gunlukGetiri": 0.00059967,
+      "paraGirisiCikisi": 11041.73,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NBZ",
+      "fonAdi": "NEO PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 72.168199,
+      "tedavuldekiPaySayisi": 19413543,
+      "kisiSayisi": 281,
+      "fonToplamDeger": 1401040442.36,
+      "gunlukGetiri": 0.00059967,
+      "paraGirisiCikisi": 11041.73,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "NBZ",
       "fonAdi": "NEO PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

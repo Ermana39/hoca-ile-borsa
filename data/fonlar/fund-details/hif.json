@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "HIF",
     "slug": "hif",
@@ -12,24 +12,24 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 0.521702,
-    "tedavuldekiPaySayisi": 21180131,
-    "kisiSayisi": 52,
-    "fonToplamDeger": 11049706.38,
-    "gunlukGetiri": 0.02303336,
+    "fiyat": 0.523362,
+    "tedavuldekiPaySayisi": 21181089,
+    "kisiSayisi": 53,
+    "fonToplamDeger": 11085384.1,
+    "gunlukGetiri": 0.00318189,
     "getiriler": {
-      "birAy": 0.003976,
-      "ucAy": -0.167938,
-      "altiAy": -0.414302,
-      "yilbasi": -0.357481,
+      "birAy": 0.017497,
+      "ucAy": -0.154673,
+      "altiAy": -0.40149500000000005,
+      "yilbasi": -0.355436,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1022.54,
+      "gunluk": 501.38,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HIF",
+        "fonAdi": "HEDEF PORTFÖY İKİNCİ SERBEST FON",
+        "tarih": "2026-08-14",
+        "fiyat": 0.523362,
+        "tedavuldekiPaySayisi": 21181089,
+        "kisiSayisi": 53,
+        "fonToplamDeger": 11085384.1,
+        "gunlukGetiri": 0.00318189,
+        "paraGirisiCikisi": 501.38,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "HIF",
         "fonAdi": "HEDEF PORTFÖY İKİNCİ SERBEST FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.02303336,
       "paraGirisiCikisi": 1022.54,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "HIF",
+      "fonAdi": "HEDEF PORTFÖY İKİNCİ SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 0.523362,
+      "tedavuldekiPaySayisi": 21181089,
+      "kisiSayisi": 53,
+      "fonToplamDeger": 11085384.1,
+      "gunlukGetiri": 0.00318189,
+      "paraGirisiCikisi": 501.38,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HIF",
+      "fonAdi": "HEDEF PORTFÖY İKİNCİ SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 0.523362,
+      "tedavuldekiPaySayisi": 21181089,
+      "kisiSayisi": 53,
+      "fonToplamDeger": 11085384.1,
+      "gunlukGetiri": 0.00318189,
+      "paraGirisiCikisi": 501.38,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "HIF",
       "fonAdi": "HEDEF PORTFÖY İKİNCİ SERBEST FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "ACU",
     "slug": "acu",
@@ -12,21 +12,21 @@
     "yonetici": "İSTANBUL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "istanbul-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 56.642267,
+    "fiyat": 56.67357,
     "tedavuldekiPaySayisi": 25285755,
-    "kisiSayisi": 159,
-    "fonToplamDeger": 1432242491.11,
-    "gunlukGetiri": 0.00052651,
+    "kisiSayisi": 158,
+    "fonToplamDeger": 1433034006.72,
+    "gunlukGetiri": 0.00055264,
     "getiriler": {
-      "birAy": 0.022348,
-      "ucAy": 0.06397800000000001,
-      "altiAy": 0.120143,
-      "yilbasi": 0.145519,
-      "birYil": 0.24507500000000002,
-      "ucYil": 1.042233,
-      "besYil": 4.368071
+      "birAy": 0.020396,
+      "ucAy": 0.064043,
+      "altiAy": 0.12094900000000001,
+      "yilbasi": 0.146152,
+      "birYil": 0.244771,
+      "ucYil": 1.043361,
+      "besYil": 4.386724
     },
     "paraAkisi": {
       "gunluk": 0,
@@ -35,21 +35,33 @@
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ACU",
+        "fonAdi": "İSTANBUL PORTFÖY URARTU SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-14",
+        "fiyat": 56.67357,
+        "tedavuldekiPaySayisi": 25285755,
+        "kisiSayisi": 158,
+        "fonToplamDeger": 1433034006.72,
+        "gunlukGetiri": 0.00055264,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "ACU",
         "fonAdi": "İSTANBUL PORTFÖY URARTU SERBEST (DÖVİZ) FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00052651,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "ACU",
+      "fonAdi": "İSTANBUL PORTFÖY URARTU SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 56.67357,
+      "tedavuldekiPaySayisi": 25285755,
+      "kisiSayisi": 158,
+      "fonToplamDeger": 1433034006.72,
+      "gunlukGetiri": 0.00055264,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ACU",
+      "fonAdi": "İSTANBUL PORTFÖY URARTU SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 56.67357,
+      "tedavuldekiPaySayisi": 25285755,
+      "kisiSayisi": 158,
+      "fonToplamDeger": 1433034006.72,
+      "gunlukGetiri": 0.00055264,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "ACU",
       "fonAdi": "İSTANBUL PORTFÖY URARTU SERBEST (DÖVİZ) FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

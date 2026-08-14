@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "NKM",
     "slug": "nkm",
@@ -12,16 +12,16 @@
     "yonetici": "NEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "neo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.014523,
-    "tedavuldekiPaySayisi": 52063981,
-    "kisiSayisi": 478,
-    "fonToplamDeger": 52820123.6,
-    "gunlukGetiri": 0.00206433,
+    "fiyat": 1.011554,
+    "tedavuldekiPaySayisi": 52292752,
+    "kisiSayisi": 476,
+    "fonToplamDeger": 52896956.43,
+    "gunlukGetiri": -0.0029265,
     "getiriler": {
-      "birAy": 0.011798999999999999,
-      "ucAy": -0.038169,
+      "birAy": 0.018041,
+      "ucAy": -0.031917,
       "altiAy": null,
       "yilbasi": null,
       "birYil": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 302548.01,
+      "gunluk": 231414.22,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -6,
+      "gunluk": -2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NKM",
+        "fonAdi": "NEO PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 1.011554,
+        "tedavuldekiPaySayisi": 52292752,
+        "kisiSayisi": 476,
+        "fonToplamDeger": 52896956.43,
+        "gunlukGetiri": -0.0029265,
+        "paraGirisiCikisi": 231414.22,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "NKM",
         "fonAdi": "NEO PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00206433,
       "paraGirisiCikisi": 302548.01,
       "yatirimciDegisimi": -6
+    },
+    {
+      "fonKodu": "NKM",
+      "fonAdi": "NEO PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.011554,
+      "tedavuldekiPaySayisi": 52292752,
+      "kisiSayisi": 476,
+      "fonToplamDeger": 52896956.43,
+      "gunlukGetiri": -0.0029265,
+      "paraGirisiCikisi": 231414.22,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NKM",
+      "fonAdi": "NEO PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.011554,
+      "tedavuldekiPaySayisi": 52292752,
+      "kisiSayisi": 476,
+      "fonToplamDeger": 52896956.43,
+      "gunlukGetiri": -0.0029265,
+      "paraGirisiCikisi": 231414.22,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "NKM",
       "fonAdi": "NEO PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

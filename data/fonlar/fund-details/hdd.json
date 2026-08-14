@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "HDD",
     "slug": "hdd",
@@ -12,15 +12,15 @@
     "yonetici": "AHLATCI PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ahlatci-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.057834,
-    "tedavuldekiPaySayisi": 5654566,
-    "kisiSayisi": 106,
-    "fonToplamDeger": 5981589.68,
-    "gunlukGetiri": 0.01410576,
+    "fiyat": 1.059626,
+    "tedavuldekiPaySayisi": 5562425,
+    "kisiSayisi": 105,
+    "fonToplamDeger": 5894089.75,
+    "gunlukGetiri": 0.00169403,
     "getiriler": {
-      "birAy": 0.051609999999999996,
+      "birAy": 0.056165,
       "ucAy": null,
       "altiAy": null,
       "yilbasi": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 66672.1,
+      "gunluk": -97635,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HDD",
+        "fonAdi": "AHLATCI PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-14",
+        "fiyat": 1.059626,
+        "tedavuldekiPaySayisi": 5562425,
+        "kisiSayisi": 105,
+        "fonToplamDeger": 5894089.75,
+        "gunlukGetiri": 0.00169403,
+        "paraGirisiCikisi": -97635,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "HDD",
         "fonAdi": "AHLATCI PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.01410576,
       "paraGirisiCikisi": 66672.1,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HDD",
+      "fonAdi": "AHLATCI PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.059626,
+      "tedavuldekiPaySayisi": 5562425,
+      "kisiSayisi": 105,
+      "fonToplamDeger": 5894089.75,
+      "gunlukGetiri": 0.00169403,
+      "paraGirisiCikisi": -97635,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HDD",
+      "fonAdi": "AHLATCI PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.059626,
+      "tedavuldekiPaySayisi": 5562425,
+      "kisiSayisi": 105,
+      "fonToplamDeger": 5894089.75,
+      "gunlukGetiri": 0.00169403,
+      "paraGirisiCikisi": -97635,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "HDD",
       "fonAdi": "AHLATCI PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

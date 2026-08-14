@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "OSN",
     "slug": "osn",
@@ -12,13 +12,13 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.540948,
-    "tedavuldekiPaySayisi": 22488543,
-    "kisiSayisi": 105,
-    "fonToplamDeger": 34653671.69,
-    "gunlukGetiri": 0.00141477,
+    "fiyat": 1.542663,
+    "tedavuldekiPaySayisi": 22419759,
+    "kisiSayisi": 104,
+    "fonToplamDeger": 34586140.97,
+    "gunlukGetiri": 0.00111295,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -622767.97,
+      "gunluk": -106110.53,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OSN",
+        "fonAdi": "AK PORTFÖY ONUNCU SERBEST FON",
+        "tarih": "2026-08-14",
+        "fiyat": 1.542663,
+        "tedavuldekiPaySayisi": 22419759,
+        "kisiSayisi": 104,
+        "fonToplamDeger": 34586140.97,
+        "gunlukGetiri": 0.00111295,
+        "paraGirisiCikisi": -106110.53,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "OSN",
         "fonAdi": "AK PORTFÖY ONUNCU SERBEST FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00141477,
       "paraGirisiCikisi": -622767.97,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "OSN",
+      "fonAdi": "AK PORTFÖY ONUNCU SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.542663,
+      "tedavuldekiPaySayisi": 22419759,
+      "kisiSayisi": 104,
+      "fonToplamDeger": 34586140.97,
+      "gunlukGetiri": 0.00111295,
+      "paraGirisiCikisi": -106110.53,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OSN",
+      "fonAdi": "AK PORTFÖY ONUNCU SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.542663,
+      "tedavuldekiPaySayisi": 22419759,
+      "kisiSayisi": 104,
+      "fonToplamDeger": 34586140.97,
+      "gunlukGetiri": 0.00111295,
+      "paraGirisiCikisi": -106110.53,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "OSN",
       "fonAdi": "AK PORTFÖY ONUNCU SERBEST FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

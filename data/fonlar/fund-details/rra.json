@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "RRA",
     "slug": "rra",
@@ -12,44 +12,56 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.489639,
-    "tedavuldekiPaySayisi": 1888786455,
-    "kisiSayisi": 220,
-    "fonToplamDeger": 2813610874.87,
-    "gunlukGetiri": 0.00109475,
+    "fiyat": 1.491313,
+    "tedavuldekiPaySayisi": 1901707377,
+    "kisiSayisi": 221,
+    "fonToplamDeger": 2836039986.65,
+    "gunlukGetiri": 0.00112376,
     "getiriler": {
-      "birAy": 0.029785,
-      "ucAy": 0.10249599999999999,
-      "altiAy": 0.214782,
-      "yilbasi": 0.271803,
+      "birAy": 0.029790999999999998,
+      "ucAy": 0.10251099999999999,
+      "altiAy": 0.21241800000000002,
+      "yilbasi": 0.273232,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -280629070.67,
+      "gunluk": 19269138.95,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": 1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RRA",
+        "fonAdi": "ROTA PORTFÖY PARA PİYASASI SERBEST FON",
+        "tarih": "2026-08-14",
+        "fiyat": 1.491313,
+        "tedavuldekiPaySayisi": 1901707377,
+        "kisiSayisi": 221,
+        "fonToplamDeger": 2836039986.65,
+        "gunlukGetiri": 0.00112376,
+        "paraGirisiCikisi": 19269138.95,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "RRA",
         "fonAdi": "ROTA PORTFÖY PARA PİYASASI SERBEST FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00109475,
       "paraGirisiCikisi": -280629070.67,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "RRA",
+      "fonAdi": "ROTA PORTFÖY PARA PİYASASI SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.491313,
+      "tedavuldekiPaySayisi": 1901707377,
+      "kisiSayisi": 221,
+      "fonToplamDeger": 2836039986.65,
+      "gunlukGetiri": 0.00112376,
+      "paraGirisiCikisi": 19269138.95,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RRA",
+      "fonAdi": "ROTA PORTFÖY PARA PİYASASI SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.491313,
+      "tedavuldekiPaySayisi": 1901707377,
+      "kisiSayisi": 221,
+      "fonToplamDeger": 2836039986.65,
+      "gunlukGetiri": 0.00112376,
+      "paraGirisiCikisi": 19269138.95,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "RRA",
       "fonAdi": "ROTA PORTFÖY PARA PİYASASI SERBEST FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

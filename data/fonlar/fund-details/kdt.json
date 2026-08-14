@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "KDT",
     "slug": "kdt",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 54.393177,
-    "tedavuldekiPaySayisi": 60467960,
-    "kisiSayisi": 1170,
-    "fonToplamDeger": 3289044457.54,
-    "gunlukGetiri": 0.00065831,
+    "fiyat": 54.444049,
+    "tedavuldekiPaySayisi": 60399410,
+    "kisiSayisi": 1171,
+    "fonToplamDeger": 3288388445.31,
+    "gunlukGetiri": 0.00093526,
     "getiriler": {
-      "birAy": 0.023333,
-      "ucAy": 0.062787,
-      "altiAy": 0.111357,
-      "yilbasi": 0.134035,
-      "birYil": 0.238976,
+      "birAy": 0.022321,
+      "ucAy": 0.063318,
+      "altiAy": 0.11252599999999999,
+      "yilbasi": 0.135096,
+      "birYil": 0.23774499999999998,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 9449182.71,
+      "gunluk": -3732139.56,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
+      "gunluk": 1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KDT",
+        "fonAdi": "GARANTİ PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-14",
+        "fiyat": 54.444049,
+        "tedavuldekiPaySayisi": 60399410,
+        "kisiSayisi": 1171,
+        "fonToplamDeger": 3288388445.31,
+        "gunlukGetiri": 0.00093526,
+        "paraGirisiCikisi": -3732139.56,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "KDT",
         "fonAdi": "GARANTİ PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00065831,
       "paraGirisiCikisi": 9449182.71,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "KDT",
+      "fonAdi": "GARANTİ PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 54.444049,
+      "tedavuldekiPaySayisi": 60399410,
+      "kisiSayisi": 1171,
+      "fonToplamDeger": 3288388445.31,
+      "gunlukGetiri": 0.00093526,
+      "paraGirisiCikisi": -3732139.56,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KDT",
+      "fonAdi": "GARANTİ PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 54.444049,
+      "tedavuldekiPaySayisi": 60399410,
+      "kisiSayisi": 1171,
+      "fonToplamDeger": 3288388445.31,
+      "gunlukGetiri": 0.00093526,
+      "paraGirisiCikisi": -3732139.56,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "KDT",
       "fonAdi": "GARANTİ PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

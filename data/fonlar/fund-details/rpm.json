@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "RPM",
     "slug": "rpm",
@@ -12,44 +12,56 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 4.429649,
-    "tedavuldekiPaySayisi": 19502594,
-    "kisiSayisi": 2821,
-    "fonToplamDeger": 86389652.93,
-    "gunlukGetiri": 0.01022276,
+    "fiyat": 4.426801,
+    "tedavuldekiPaySayisi": 19597518,
+    "kisiSayisi": 2816,
+    "fonToplamDeger": 86754318.34,
+    "gunlukGetiri": -0.00064294,
     "getiriler": {
-      "birAy": 0.06042,
-      "ucAy": 0.156387,
-      "altiAy": 0.20149,
-      "yilbasi": 0.306599,
-      "birYil": 0.674635,
-      "ucYil": 1.390225,
+      "birAy": 0.063995,
+      "ucAy": 0.15915800000000002,
+      "altiAy": 0.205221,
+      "yilbasi": 0.305759,
+      "birYil": 0.657396,
+      "ucYil": 1.388688,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 4076588.26,
+      "gunluk": 420209.66,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 7,
+      "gunluk": -5,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RPM",
+        "fonAdi": "ROTA PORTFÖY İLAÇ VE MEDİKAL TEKNOLOJİLERİ DEĞİŞKEN FON",
+        "tarih": "2026-08-14",
+        "fiyat": 4.426801,
+        "tedavuldekiPaySayisi": 19597518,
+        "kisiSayisi": 2816,
+        "fonToplamDeger": 86754318.34,
+        "gunlukGetiri": -0.00064294,
+        "paraGirisiCikisi": 420209.66,
+        "yatirimciDegisimi": -5
+      },
       {
         "fonKodu": "RPM",
         "fonAdi": "ROTA PORTFÖY İLAÇ VE MEDİKAL TEKNOLOJİLERİ DEĞİŞKEN FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.01022276,
       "paraGirisiCikisi": 4076588.26,
       "yatirimciDegisimi": 7
+    },
+    {
+      "fonKodu": "RPM",
+      "fonAdi": "ROTA PORTFÖY İLAÇ VE MEDİKAL TEKNOLOJİLERİ DEĞİŞKEN FON",
+      "tarih": "2026-08-14",
+      "fiyat": 4.426801,
+      "tedavuldekiPaySayisi": 19597518,
+      "kisiSayisi": 2816,
+      "fonToplamDeger": 86754318.34,
+      "gunlukGetiri": -0.00064294,
+      "paraGirisiCikisi": 420209.66,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RPM",
+      "fonAdi": "ROTA PORTFÖY İLAÇ VE MEDİKAL TEKNOLOJİLERİ DEĞİŞKEN FON",
+      "tarih": "2026-08-14",
+      "fiyat": 4.426801,
+      "tedavuldekiPaySayisi": 19597518,
+      "kisiSayisi": 2816,
+      "fonToplamDeger": 86754318.34,
+      "gunlukGetiri": -0.00064294,
+      "paraGirisiCikisi": 420209.66,
+      "yatirimciDegisimi": -5
+    },
     {
       "fonKodu": "RPM",
       "fonAdi": "ROTA PORTFÖY İLAÇ VE MEDİKAL TEKNOLOJİLERİ DEĞİŞKEN FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

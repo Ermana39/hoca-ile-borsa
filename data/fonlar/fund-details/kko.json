@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "KKO",
     "slug": "kko",
@@ -12,13 +12,13 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 48.836265,
-    "tedavuldekiPaySayisi": 46210471,
+    "fiyat": 48.854529,
+    "tedavuldekiPaySayisi": 46203177,
     "kisiSayisi": 258,
-    "fonToplamDeger": 2256746829.15,
-    "gunlukGetiri": 0.00035775,
+    "fonToplamDeger": 2257234442.28,
+    "gunlukGetiri": 0.00037398,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": -356344.93,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KKO",
+        "fonAdi": "YAPI KREDİ PORTFÖY KASIM 2026 KAR PAYI ÖDEYEN SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-14",
+        "fiyat": 48.854529,
+        "tedavuldekiPaySayisi": 46203177,
+        "kisiSayisi": 258,
+        "fonToplamDeger": 2257234442.28,
+        "gunlukGetiri": 0.00037398,
+        "paraGirisiCikisi": -356344.93,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "KKO",
         "fonAdi": "YAPI KREDİ PORTFÖY KASIM 2026 KAR PAYI ÖDEYEN SERBEST (DÖVİZ) FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00035775,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KKO",
+      "fonAdi": "YAPI KREDİ PORTFÖY KASIM 2026 KAR PAYI ÖDEYEN SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 48.854529,
+      "tedavuldekiPaySayisi": 46203177,
+      "kisiSayisi": 258,
+      "fonToplamDeger": 2257234442.28,
+      "gunlukGetiri": 0.00037398,
+      "paraGirisiCikisi": -356344.93,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KKO",
+      "fonAdi": "YAPI KREDİ PORTFÖY KASIM 2026 KAR PAYI ÖDEYEN SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 48.854529,
+      "tedavuldekiPaySayisi": 46203177,
+      "kisiSayisi": 258,
+      "fonToplamDeger": 2257234442.28,
+      "gunlukGetiri": 0.00037398,
+      "paraGirisiCikisi": -356344.93,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "KKO",
       "fonAdi": "YAPI KREDİ PORTFÖY KASIM 2026 KAR PAYI ÖDEYEN SERBEST (DÖVİZ) FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

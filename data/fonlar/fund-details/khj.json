@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "KHJ",
     "slug": "khj",
@@ -12,44 +12,56 @@
     "yonetici": "ATLAS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "atlas-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.151283,
-    "tedavuldekiPaySayisi": 12652406,
-    "kisiSayisi": 480,
-    "fonToplamDeger": 14566501.79,
-    "gunlukGetiri": -0.00054258,
+    "fiyat": 1.155041,
+    "tedavuldekiPaySayisi": 12464810,
+    "kisiSayisi": 475,
+    "fonToplamDeger": 14397361.37,
+    "gunlukGetiri": 0.00326418,
     "getiriler": {
-      "birAy": -0.013191999999999999,
-      "ucAy": -0.102682,
-      "altiAy": 0.039819,
-      "yilbasi": 0.260077,
-      "birYil": 0.215009,
+      "birAy": 0.000606,
+      "ucAy": -0.07730000000000001,
+      "altiAy": 0.036265,
+      "yilbasi": 0.26419,
+      "birYil": 0.22307300000000002,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -74003.32,
+      "gunluk": -216681.07,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -11,
+      "gunluk": -5,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KHJ",
+        "fonAdi": "ATLAS PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 1.155041,
+        "tedavuldekiPaySayisi": 12464810,
+        "kisiSayisi": 475,
+        "fonToplamDeger": 14397361.37,
+        "gunlukGetiri": 0.00326418,
+        "paraGirisiCikisi": -216681.07,
+        "yatirimciDegisimi": -5
+      },
       {
         "fonKodu": "KHJ",
         "fonAdi": "ATLAS PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": -0.00054258,
       "paraGirisiCikisi": -74003.32,
       "yatirimciDegisimi": -11
+    },
+    {
+      "fonKodu": "KHJ",
+      "fonAdi": "ATLAS PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.155041,
+      "tedavuldekiPaySayisi": 12464810,
+      "kisiSayisi": 475,
+      "fonToplamDeger": 14397361.37,
+      "gunlukGetiri": 0.00326418,
+      "paraGirisiCikisi": -216681.07,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KHJ",
+      "fonAdi": "ATLAS PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.155041,
+      "tedavuldekiPaySayisi": 12464810,
+      "kisiSayisi": 475,
+      "fonToplamDeger": 14397361.37,
+      "gunlukGetiri": 0.00326418,
+      "paraGirisiCikisi": -216681.07,
+      "yatirimciDegisimi": -5
+    },
     {
       "fonKodu": "KHJ",
       "fonAdi": "ATLAS PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

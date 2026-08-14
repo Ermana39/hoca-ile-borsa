@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "CVK",
     "slug": "cvk",
@@ -12,44 +12,56 @@
     "yonetici": "INVEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "inveo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 5.035949,
-    "tedavuldekiPaySayisi": 123120954,
-    "kisiSayisi": 1913,
-    "fonToplamDeger": 620030808.86,
-    "gunlukGetiri": 0.00289181,
+    "fiyat": 5.041745,
+    "tedavuldekiPaySayisi": 123109616,
+    "kisiSayisi": 1914,
+    "fonToplamDeger": 620687330.01,
+    "gunlukGetiri": 0.00115093,
     "getiriler": {
-      "birAy": 0.031576,
-      "ucAy": 0.060783,
-      "altiAy": 0.143535,
-      "yilbasi": 0.232867,
-      "birYil": 0.38379800000000003,
-      "ucYil": 2.272957,
+      "birAy": 0.031021,
+      "ucAy": 0.062085999999999995,
+      "altiAy": 0.140427,
+      "yilbasi": 0.234285,
+      "birYil": 0.384716,
+      "ucYil": 2.276724,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 20768.25,
+      "gunluk": -57163.3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "CVK",
+        "fonAdi": "INVEO PORTFÖY ÇOKLU VARLIK KATILIM FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 5.041745,
+        "tedavuldekiPaySayisi": 123109616,
+        "kisiSayisi": 1914,
+        "fonToplamDeger": 620687330.01,
+        "gunlukGetiri": 0.00115093,
+        "paraGirisiCikisi": -57163.3,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "CVK",
         "fonAdi": "INVEO PORTFÖY ÇOKLU VARLIK KATILIM FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00289181,
       "paraGirisiCikisi": 20768.25,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "CVK",
+      "fonAdi": "INVEO PORTFÖY ÇOKLU VARLIK KATILIM FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 5.041745,
+      "tedavuldekiPaySayisi": 123109616,
+      "kisiSayisi": 1914,
+      "fonToplamDeger": 620687330.01,
+      "gunlukGetiri": 0.00115093,
+      "paraGirisiCikisi": -57163.3,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "CVK",
+      "fonAdi": "INVEO PORTFÖY ÇOKLU VARLIK KATILIM FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 5.041745,
+      "tedavuldekiPaySayisi": 123109616,
+      "kisiSayisi": 1914,
+      "fonToplamDeger": 620687330.01,
+      "gunlukGetiri": 0.00115093,
+      "paraGirisiCikisi": -57163.3,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "CVK",
       "fonAdi": "INVEO PORTFÖY ÇOKLU VARLIK KATILIM FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

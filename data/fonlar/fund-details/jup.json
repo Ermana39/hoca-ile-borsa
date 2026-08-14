@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "JUP",
     "slug": "jup",
@@ -12,24 +12,24 @@
     "yonetici": "AURA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aura-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 0.534198,
+    "fiyat": 0.534538,
     "tedavuldekiPaySayisi": 101714414,
     "kisiSayisi": 56,
-    "fonToplamDeger": 54335626.58,
-    "gunlukGetiri": 0.00055066,
+    "fonToplamDeger": 54370202.51,
+    "gunlukGetiri": 0.00063647,
     "getiriler": {
-      "birAy": 0.018614,
-      "ucAy": 0.054009,
-      "altiAy": 0.09153399999999999,
-      "yilbasi": 0.102942,
-      "birYil": 0.102048,
+      "birAy": 0.017230000000000002,
+      "ucAy": 0.054345,
+      "altiAy": 0.091658,
+      "yilbasi": 0.103644,
+      "birYil": 0.101187,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1014.98,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "JUP",
+        "fonAdi": "AURA PORTFÖY JÜPİTER SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-14",
+        "fiyat": 0.534538,
+        "tedavuldekiPaySayisi": 101714414,
+        "kisiSayisi": 56,
+        "fonToplamDeger": 54370202.51,
+        "gunlukGetiri": 0.00063647,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "JUP",
         "fonAdi": "AURA PORTFÖY JÜPİTER SERBEST (DÖVİZ) FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00055066,
       "paraGirisiCikisi": -1014.98,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "JUP",
+      "fonAdi": "AURA PORTFÖY JÜPİTER SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 0.534538,
+      "tedavuldekiPaySayisi": 101714414,
+      "kisiSayisi": 56,
+      "fonToplamDeger": 54370202.51,
+      "gunlukGetiri": 0.00063647,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "JUP",
+      "fonAdi": "AURA PORTFÖY JÜPİTER SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 0.534538,
+      "tedavuldekiPaySayisi": 101714414,
+      "kisiSayisi": 56,
+      "fonToplamDeger": 54370202.51,
+      "gunlukGetiri": 0.00063647,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "JUP",
       "fonAdi": "AURA PORTFÖY JÜPİTER SERBEST (DÖVİZ) FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

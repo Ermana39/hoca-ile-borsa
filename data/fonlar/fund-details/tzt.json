@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "TZT",
     "slug": "tzt",
@@ -12,44 +12,56 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 0.166918,
-    "tedavuldekiPaySayisi": 1811513526.04,
-    "kisiSayisi": 5788,
-    "fonToplamDeger": 302374323.45,
-    "gunlukGetiri": 0.00144591,
+    "fiyat": 0.167256,
+    "tedavuldekiPaySayisi": 1810519026.04,
+    "kisiSayisi": 5785,
+    "fonToplamDeger": 302819562.99,
+    "gunlukGetiri": 0.00202495,
     "getiriler": {
-      "birAy": 0.020430999999999998,
-      "ucAy": 0.071354,
-      "altiAy": 0.101558,
-      "yilbasi": 0.13728400000000002,
-      "birYil": 0.343037,
-      "ucYil": 1.619143,
-      "besYil": 3.82687
+      "birAy": 0.023955999999999998,
+      "ucAy": 0.074599,
+      "altiAy": 0.101325,
+      "yilbasi": 0.13958700000000002,
+      "birYil": 0.346905,
+      "ucYil": 1.6244470000000002,
+      "besYil": 3.828825
     },
     "paraAkisi": {
-      "gunluk": -894096.27,
+      "gunluk": -166336.09,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 5,
+      "gunluk": -3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TZT",
+        "fonAdi": "ZİRAAT PORTFÖY BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 0.167256,
+        "tedavuldekiPaySayisi": 1810519026.04,
+        "kisiSayisi": 5785,
+        "fonToplamDeger": 302819562.99,
+        "gunlukGetiri": 0.00202495,
+        "paraGirisiCikisi": -166336.09,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "TZT",
         "fonAdi": "ZİRAAT PORTFÖY BORÇLANMA ARAÇLARI (TL) FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00144591,
       "paraGirisiCikisi": -894096.27,
       "yatirimciDegisimi": 5
+    },
+    {
+      "fonKodu": "TZT",
+      "fonAdi": "ZİRAAT PORTFÖY BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 0.167256,
+      "tedavuldekiPaySayisi": 1810519026.04,
+      "kisiSayisi": 5785,
+      "fonToplamDeger": 302819562.99,
+      "gunlukGetiri": 0.00202495,
+      "paraGirisiCikisi": -166336.09,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TZT",
+      "fonAdi": "ZİRAAT PORTFÖY BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 0.167256,
+      "tedavuldekiPaySayisi": 1810519026.04,
+      "kisiSayisi": 5785,
+      "fonToplamDeger": 302819562.99,
+      "gunlukGetiri": 0.00202495,
+      "paraGirisiCikisi": -166336.09,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "TZT",
       "fonAdi": "ZİRAAT PORTFÖY BORÇLANMA ARAÇLARI (TL) FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

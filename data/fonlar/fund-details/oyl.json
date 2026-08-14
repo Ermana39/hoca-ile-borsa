@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "OYL",
     "slug": "oyl",
@@ -12,13 +12,13 @@
     "yonetici": "OYAK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "oyak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 0.160421,
-    "tedavuldekiPaySayisi": 21660902304,
-    "kisiSayisi": 8194,
-    "fonToplamDeger": 3474855851.78,
-    "gunlukGetiri": 0.00107333,
+    "fiyat": 0.160599,
+    "tedavuldekiPaySayisi": 21881987791,
+    "kisiSayisi": 8175,
+    "fonToplamDeger": 3514225885.09,
+    "gunlukGetiri": 0.00110958,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -47213958.5,
+      "gunluk": 35506108.13,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -149,
+      "gunluk": -19,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OYL",
+        "fonAdi": "OYAK PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 0.160599,
+        "tedavuldekiPaySayisi": 21881987791,
+        "kisiSayisi": 8175,
+        "fonToplamDeger": 3514225885.09,
+        "gunlukGetiri": 0.00110958,
+        "paraGirisiCikisi": 35506108.13,
+        "yatirimciDegisimi": -19
+      },
       {
         "fonKodu": "OYL",
         "fonAdi": "OYAK PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00107333,
       "paraGirisiCikisi": -47213958.5,
       "yatirimciDegisimi": -149
+    },
+    {
+      "fonKodu": "OYL",
+      "fonAdi": "OYAK PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 0.160599,
+      "tedavuldekiPaySayisi": 21881987791,
+      "kisiSayisi": 8175,
+      "fonToplamDeger": 3514225885.09,
+      "gunlukGetiri": 0.00110958,
+      "paraGirisiCikisi": 35506108.13,
+      "yatirimciDegisimi": -19
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OYL",
+      "fonAdi": "OYAK PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 0.160599,
+      "tedavuldekiPaySayisi": 21881987791,
+      "kisiSayisi": 8175,
+      "fonToplamDeger": 3514225885.09,
+      "gunlukGetiri": 0.00110958,
+      "paraGirisiCikisi": 35506108.13,
+      "yatirimciDegisimi": -19
+    },
     {
       "fonKodu": "OYL",
       "fonAdi": "OYAK PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

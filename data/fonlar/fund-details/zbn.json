@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "ZBN",
     "slug": "zbn",
@@ -12,13 +12,13 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 23.699588,
-    "tedavuldekiPaySayisi": 6442457,
+    "fiyat": 23.677741,
+    "tedavuldekiPaySayisi": 6440681,
     "kisiSayisi": 172,
-    "fonToplamDeger": 152683577.83,
-    "gunlukGetiri": 0.00835464,
+    "fonToplamDeger": 152500774.15,
+    "gunlukGetiri": -0.00092183,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 308.09,
+      "gunluk": -42051.67,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZBN",
+        "fonAdi": "ZİRAAT PORTFÖY HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 23.677741,
+        "tedavuldekiPaySayisi": 6440681,
+        "kisiSayisi": 172,
+        "fonToplamDeger": 152500774.15,
+        "gunlukGetiri": -0.00092183,
+        "paraGirisiCikisi": -42051.67,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "ZBN",
         "fonAdi": "ZİRAAT PORTFÖY HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00835464,
       "paraGirisiCikisi": 308.09,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "ZBN",
+      "fonAdi": "ZİRAAT PORTFÖY HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 23.677741,
+      "tedavuldekiPaySayisi": 6440681,
+      "kisiSayisi": 172,
+      "fonToplamDeger": 152500774.15,
+      "gunlukGetiri": -0.00092183,
+      "paraGirisiCikisi": -42051.67,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZBN",
+      "fonAdi": "ZİRAAT PORTFÖY HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 23.677741,
+      "tedavuldekiPaySayisi": 6440681,
+      "kisiSayisi": 172,
+      "fonToplamDeger": 152500774.15,
+      "gunlukGetiri": -0.00092183,
+      "paraGirisiCikisi": -42051.67,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "ZBN",
       "fonAdi": "ZİRAAT PORTFÖY HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "AYA",
     "slug": "aya",
@@ -12,44 +12,56 @@
     "yonetici": "ATA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ata-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 18.849874,
-    "tedavuldekiPaySayisi": 58924278,
-    "kisiSayisi": 9813,
-    "fonToplamDeger": 1110715234.1,
-    "gunlukGetiri": 0.0119682,
+    "fiyat": 18.725866,
+    "tedavuldekiPaySayisi": 58955379,
+    "kisiSayisi": 9791,
+    "fonToplamDeger": 1103990538.94,
+    "gunlukGetiri": -0.00657872,
     "getiriler": {
-      "birAy": 0.025710999999999998,
-      "ucAy": -0.025346999999999998,
-      "altiAy": -0.042396,
-      "yilbasi": 0.16636099999999998,
-      "birYil": 0.21028400000000003,
-      "ucYil": 0.855746,
-      "besYil": 6.546137
+      "birAy": 0.024577,
+      "ucAy": -0.025381,
+      "altiAy": -0.048920000000000005,
+      "yilbasi": 0.158688,
+      "birYil": 0.203506,
+      "ucYil": 0.8435380000000001,
+      "besYil": 6.4472119999999995
     },
     "paraAkisi": {
-      "gunluk": -4028459.54,
+      "gunluk": 582393.16,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -35,
+      "gunluk": -22,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AYA",
+        "fonAdi": "ATA PORTFÖY KAR PAYI ÖDEYEN HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 18.725866,
+        "tedavuldekiPaySayisi": 58955379,
+        "kisiSayisi": 9791,
+        "fonToplamDeger": 1103990538.94,
+        "gunlukGetiri": -0.00657872,
+        "paraGirisiCikisi": 582393.16,
+        "yatirimciDegisimi": -22
+      },
       {
         "fonKodu": "AYA",
         "fonAdi": "ATA PORTFÖY KAR PAYI ÖDEYEN HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.0119682,
       "paraGirisiCikisi": -4028459.54,
       "yatirimciDegisimi": -35
+    },
+    {
+      "fonKodu": "AYA",
+      "fonAdi": "ATA PORTFÖY KAR PAYI ÖDEYEN HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 18.725866,
+      "tedavuldekiPaySayisi": 58955379,
+      "kisiSayisi": 9791,
+      "fonToplamDeger": 1103990538.94,
+      "gunlukGetiri": -0.00657872,
+      "paraGirisiCikisi": 582393.16,
+      "yatirimciDegisimi": -22
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AYA",
+      "fonAdi": "ATA PORTFÖY KAR PAYI ÖDEYEN HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 18.725866,
+      "tedavuldekiPaySayisi": 58955379,
+      "kisiSayisi": 9791,
+      "fonToplamDeger": 1103990538.94,
+      "gunlukGetiri": -0.00657872,
+      "paraGirisiCikisi": 582393.16,
+      "yatirimciDegisimi": -22
+    },
     {
       "fonKodu": "AYA",
       "fonAdi": "ATA PORTFÖY KAR PAYI ÖDEYEN HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

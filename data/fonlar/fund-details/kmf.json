@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "KMF",
     "slug": "kmf",
@@ -12,44 +12,56 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 3.474254,
-    "tedavuldekiPaySayisi": 417477911,
-    "kisiSayisi": 2223,
-    "fonToplamDeger": 1450424439.02,
-    "gunlukGetiri": 0.00806334,
+    "fiyat": 3.454828,
+    "tedavuldekiPaySayisi": 417446452,
+    "kisiSayisi": 2214,
+    "fonToplamDeger": 1442205526.11,
+    "gunlukGetiri": -0.00559142,
     "getiriler": {
-      "birAy": 0.08206200000000001,
-      "ucAy": -0.011313,
-      "altiAy": -0.057657999999999994,
-      "yilbasi": 0.12125400000000001,
-      "birYil": 0.49451,
+      "birAy": 0.085245,
+      "ucAy": -0.018172999999999998,
+      "altiAy": -0.053216,
+      "yilbasi": 0.114985,
+      "birYil": 0.5029,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 12305078.07,
+      "gunluk": -108685.43,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -31,
+      "gunluk": -9,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KMF",
+        "fonAdi": "AZİMUT PORTFÖY ALTIN KATILIM FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 3.454828,
+        "tedavuldekiPaySayisi": 417446452,
+        "kisiSayisi": 2214,
+        "fonToplamDeger": 1442205526.11,
+        "gunlukGetiri": -0.00559142,
+        "paraGirisiCikisi": -108685.43,
+        "yatirimciDegisimi": -9
+      },
       {
         "fonKodu": "KMF",
         "fonAdi": "AZİMUT PORTFÖY ALTIN KATILIM FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00806334,
       "paraGirisiCikisi": 12305078.07,
       "yatirimciDegisimi": -31
+    },
+    {
+      "fonKodu": "KMF",
+      "fonAdi": "AZİMUT PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 3.454828,
+      "tedavuldekiPaySayisi": 417446452,
+      "kisiSayisi": 2214,
+      "fonToplamDeger": 1442205526.11,
+      "gunlukGetiri": -0.00559142,
+      "paraGirisiCikisi": -108685.43,
+      "yatirimciDegisimi": -9
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KMF",
+      "fonAdi": "AZİMUT PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 3.454828,
+      "tedavuldekiPaySayisi": 417446452,
+      "kisiSayisi": 2214,
+      "fonToplamDeger": 1442205526.11,
+      "gunlukGetiri": -0.00559142,
+      "paraGirisiCikisi": -108685.43,
+      "yatirimciDegisimi": -9
+    },
     {
       "fonKodu": "KMF",
       "fonAdi": "AZİMUT PORTFÖY ALTIN KATILIM FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

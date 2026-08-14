@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "AOJ",
     "slug": "aoj",
@@ -12,24 +12,24 @@
     "yonetici": "ALLBATROSS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "allbatross-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.559448,
-    "tedavuldekiPaySayisi": 12512047,
-    "kisiSayisi": 204,
-    "fonToplamDeger": 19511884.86,
-    "gunlukGetiri": 0.0112614,
+    "fiyat": 1.566073,
+    "tedavuldekiPaySayisi": 12487611,
+    "kisiSayisi": 202,
+    "fonToplamDeger": 19556509.11,
+    "gunlukGetiri": 0.0042483,
     "getiriler": {
-      "birAy": -0.033576999999999996,
-      "ucAy": -0.050168,
-      "altiAy": 0.013774999999999999,
-      "yilbasi": 0.154205,
-      "birYil": 0.057424,
+      "birAy": -0.02666,
+      "ucAy": -0.034546,
+      "altiAy": -0.018752,
+      "yilbasi": 0.159109,
+      "birYil": 0.046603000000000006,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -17213.19,
+      "gunluk": -38268.56,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AOJ",
+        "fonAdi": "ALLBATROSS PORTFÖY İNŞAAT SEKTÖRÜ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 1.566073,
+        "tedavuldekiPaySayisi": 12487611,
+        "kisiSayisi": 202,
+        "fonToplamDeger": 19556509.11,
+        "gunlukGetiri": 0.0042483,
+        "paraGirisiCikisi": -38268.56,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "AOJ",
         "fonAdi": "ALLBATROSS PORTFÖY İNŞAAT SEKTÖRÜ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.0112614,
       "paraGirisiCikisi": -17213.19,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "AOJ",
+      "fonAdi": "ALLBATROSS PORTFÖY İNŞAAT SEKTÖRÜ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.566073,
+      "tedavuldekiPaySayisi": 12487611,
+      "kisiSayisi": 202,
+      "fonToplamDeger": 19556509.11,
+      "gunlukGetiri": 0.0042483,
+      "paraGirisiCikisi": -38268.56,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AOJ",
+      "fonAdi": "ALLBATROSS PORTFÖY İNŞAAT SEKTÖRÜ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.566073,
+      "tedavuldekiPaySayisi": 12487611,
+      "kisiSayisi": 202,
+      "fonToplamDeger": 19556509.11,
+      "gunlukGetiri": 0.0042483,
+      "paraGirisiCikisi": -38268.56,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "AOJ",
       "fonAdi": "ALLBATROSS PORTFÖY İNŞAAT SEKTÖRÜ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

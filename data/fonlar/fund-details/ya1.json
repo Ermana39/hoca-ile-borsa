@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "YA1",
     "slug": "ya1",
@@ -12,13 +12,13 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.410851,
-    "tedavuldekiPaySayisi": 12002498603,
+    "fiyat": 1.412351,
+    "tedavuldekiPaySayisi": 11991646596,
     "kisiSayisi": 22,
-    "fonToplamDeger": 16933736954.83,
-    "gunlukGetiri": 0.00106432,
+    "fonToplamDeger": 16936415948.89,
+    "gunlukGetiri": 0.00106319,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
+      "gunluk": -15326842.94,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YA1",
+        "fonAdi": "YAPI KREDİ PORTFÖY BİRİNCİ SERBEST FON",
+        "tarih": "2026-08-14",
+        "fiyat": 1.412351,
+        "tedavuldekiPaySayisi": 11991646596,
+        "kisiSayisi": 22,
+        "fonToplamDeger": 16936415948.89,
+        "gunlukGetiri": 0.00106319,
+        "paraGirisiCikisi": -15326842.94,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "YA1",
         "fonAdi": "YAPI KREDİ PORTFÖY BİRİNCİ SERBEST FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00106432,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YA1",
+      "fonAdi": "YAPI KREDİ PORTFÖY BİRİNCİ SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.412351,
+      "tedavuldekiPaySayisi": 11991646596,
+      "kisiSayisi": 22,
+      "fonToplamDeger": 16936415948.89,
+      "gunlukGetiri": 0.00106319,
+      "paraGirisiCikisi": -15326842.94,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YA1",
+      "fonAdi": "YAPI KREDİ PORTFÖY BİRİNCİ SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.412351,
+      "tedavuldekiPaySayisi": 11991646596,
+      "kisiSayisi": 22,
+      "fonToplamDeger": 16936415948.89,
+      "gunlukGetiri": 0.00106319,
+      "paraGirisiCikisi": -15326842.94,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "YA1",
       "fonAdi": "YAPI KREDİ PORTFÖY BİRİNCİ SERBEST FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

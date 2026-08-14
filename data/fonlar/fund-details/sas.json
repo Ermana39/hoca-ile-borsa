@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "SAS",
     "slug": "sas",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.552527,
-    "tedavuldekiPaySayisi": 605806382,
-    "kisiSayisi": 42088,
-    "fonToplamDeger": 940530760.63,
-    "gunlukGetiri": 0.01042888,
+    "fiyat": 1.561382,
+    "tedavuldekiPaySayisi": 604502600,
+    "kisiSayisi": 42001,
+    "fonToplamDeger": 943859268.29,
+    "gunlukGetiri": 0.0057036,
     "getiriler": {
-      "birAy": -0.0064849999999999994,
-      "ucAy": -0.067715,
-      "altiAy": -0.108709,
-      "yilbasi": 0.09048199999999999,
-      "birYil": 0.12102700000000001,
+      "birAy": 0.011344,
+      "ucAy": -0.058506999999999997,
+      "altiAy": -0.098911,
+      "yilbasi": 0.096702,
+      "birYil": 0.120898,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -4089508.27,
+      "gunluk": -2035701.75,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -80,
+      "gunluk": -87,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SAS",
+        "fonAdi": "AK PORTFÖY SABANCI TOPLULUĞU ŞİRKETLERİ ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 1.561382,
+        "tedavuldekiPaySayisi": 604502600,
+        "kisiSayisi": 42001,
+        "fonToplamDeger": 943859268.29,
+        "gunlukGetiri": 0.0057036,
+        "paraGirisiCikisi": -2035701.75,
+        "yatirimciDegisimi": -87
+      },
       {
         "fonKodu": "SAS",
         "fonAdi": "AK PORTFÖY SABANCI TOPLULUĞU ŞİRKETLERİ ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.01042888,
       "paraGirisiCikisi": -4089508.27,
       "yatirimciDegisimi": -80
+    },
+    {
+      "fonKodu": "SAS",
+      "fonAdi": "AK PORTFÖY SABANCI TOPLULUĞU ŞİRKETLERİ ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.561382,
+      "tedavuldekiPaySayisi": 604502600,
+      "kisiSayisi": 42001,
+      "fonToplamDeger": 943859268.29,
+      "gunlukGetiri": 0.0057036,
+      "paraGirisiCikisi": -2035701.75,
+      "yatirimciDegisimi": -87
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SAS",
+      "fonAdi": "AK PORTFÖY SABANCI TOPLULUĞU ŞİRKETLERİ ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.561382,
+      "tedavuldekiPaySayisi": 604502600,
+      "kisiSayisi": 42001,
+      "fonToplamDeger": 943859268.29,
+      "gunlukGetiri": 0.0057036,
+      "paraGirisiCikisi": -2035701.75,
+      "yatirimciDegisimi": -87
+    },
     {
       "fonKodu": "SAS",
       "fonAdi": "AK PORTFÖY SABANCI TOPLULUĞU ŞİRKETLERİ ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

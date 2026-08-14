@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "MAS",
     "slug": "mas",
@@ -12,24 +12,24 @@
     "yonetici": "MARMARA CAPİTAL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "marmara-capital-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 12.379047,
-    "tedavuldekiPaySayisi": 63270709,
-    "kisiSayisi": 156,
-    "fonToplamDeger": 783231074.93,
-    "gunlukGetiri": -0.00989715,
+    "fiyat": 12.555645,
+    "tedavuldekiPaySayisi": 63277796,
+    "kisiSayisi": 161,
+    "fonToplamDeger": 794493524.13,
+    "gunlukGetiri": 0.01426588,
     "getiriler": {
-      "birAy": -0.059817,
-      "ucAy": -0.068181,
-      "altiAy": 0.09550499999999999,
-      "yilbasi": 0.264889,
-      "birYil": 0.466775,
-      "ucYil": 1.464708,
-      "besYil": 11.576395999999999
+      "birAy": -0.028987,
+      "ucAy": -0.035796999999999995,
+      "altiAy": 0.096884,
+      "yilbasi": 0.282933,
+      "birYil": 0.490174,
+      "ucYil": 1.49987,
+      "besYil": 11.784761000000001
     },
     "paraAkisi": {
-      "gunluk": -2781225.25,
+      "gunluk": 88981.86,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MAS",
+        "fonAdi": "MARMARA CAPİTAL PORTFÖY HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 12.555645,
+        "tedavuldekiPaySayisi": 63277796,
+        "kisiSayisi": 161,
+        "fonToplamDeger": 794493524.13,
+        "gunlukGetiri": 0.01426588,
+        "paraGirisiCikisi": 88981.86,
+        "yatirimciDegisimi": 5
+      },
       {
         "fonKodu": "MAS",
         "fonAdi": "MARMARA CAPİTAL PORTFÖY HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": -0.00989715,
       "paraGirisiCikisi": -2781225.25,
       "yatirimciDegisimi": 5
+    },
+    {
+      "fonKodu": "MAS",
+      "fonAdi": "MARMARA CAPİTAL PORTFÖY HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 12.555645,
+      "tedavuldekiPaySayisi": 63277796,
+      "kisiSayisi": 161,
+      "fonToplamDeger": 794493524.13,
+      "gunlukGetiri": 0.01426588,
+      "paraGirisiCikisi": 88981.86,
+      "yatirimciDegisimi": 5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MAS",
+      "fonAdi": "MARMARA CAPİTAL PORTFÖY HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 12.555645,
+      "tedavuldekiPaySayisi": 63277796,
+      "kisiSayisi": 161,
+      "fonToplamDeger": 794493524.13,
+      "gunlukGetiri": 0.01426588,
+      "paraGirisiCikisi": 88981.86,
+      "yatirimciDegisimi": 5
+    },
     {
       "fonKodu": "MAS",
       "fonAdi": "MARMARA CAPİTAL PORTFÖY HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "BRT",
     "slug": "brt",
@@ -12,24 +12,24 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 0.899637,
-    "tedavuldekiPaySayisi": 18133383,
-    "kisiSayisi": 362,
-    "fonToplamDeger": 16313454.84,
-    "gunlukGetiri": -0.00183293,
+    "fiyat": 0.912356,
+    "tedavuldekiPaySayisi": 17917893,
+    "kisiSayisi": 361,
+    "fonToplamDeger": 16347503.11,
+    "gunlukGetiri": 0.01413792,
     "getiriler": {
-      "birAy": -0.134979,
-      "ucAy": -0.279333,
-      "altiAy": -0.347945,
-      "yilbasi": -0.30531600000000003,
-      "birYil": -0.340994,
+      "birAy": -0.09182399999999999,
+      "ucAy": -0.239761,
+      "altiAy": -0.334824,
+      "yilbasi": -0.295494,
+      "birYil": -0.337702,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -132453.56,
+      "gunluk": -196603.59,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BRT",
+        "fonAdi": "PARDUS PORTFÖY BEREKET HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 0.912356,
+        "tedavuldekiPaySayisi": 17917893,
+        "kisiSayisi": 361,
+        "fonToplamDeger": 16347503.11,
+        "gunlukGetiri": 0.01413792,
+        "paraGirisiCikisi": -196603.59,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "BRT",
         "fonAdi": "PARDUS PORTFÖY BEREKET HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": -0.00183293,
       "paraGirisiCikisi": -132453.56,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "BRT",
+      "fonAdi": "PARDUS PORTFÖY BEREKET HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 0.912356,
+      "tedavuldekiPaySayisi": 17917893,
+      "kisiSayisi": 361,
+      "fonToplamDeger": 16347503.11,
+      "gunlukGetiri": 0.01413792,
+      "paraGirisiCikisi": -196603.59,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BRT",
+      "fonAdi": "PARDUS PORTFÖY BEREKET HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 0.912356,
+      "tedavuldekiPaySayisi": 17917893,
+      "kisiSayisi": 361,
+      "fonToplamDeger": 16347503.11,
+      "gunlukGetiri": 0.01413792,
+      "paraGirisiCikisi": -196603.59,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "BRT",
       "fonAdi": "PARDUS PORTFÖY BEREKET HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

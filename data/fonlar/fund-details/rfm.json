@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "RFM",
     "slug": "rfm",
@@ -12,15 +12,15 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.093667,
-    "tedavuldekiPaySayisi": 20703654,
-    "kisiSayisi": 284,
-    "fonToplamDeger": 22642893.42,
-    "gunlukGetiri": 0.00587614,
+    "fiyat": 1.083591,
+    "tedavuldekiPaySayisi": 21050224,
+    "kisiSayisi": 306,
+    "fonToplamDeger": 22809842.6,
+    "gunlukGetiri": -0.00921304,
     "getiriler": {
-      "birAy": null,
+      "birAy": 0.085906,
       "ucAy": null,
       "altiAy": null,
       "yilbasi": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 818178.84,
+      "gunluk": 375540.13,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 15,
+      "gunluk": 22,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RFM",
+        "fonAdi": "ROTA PORTFÖY ENERJİ VE METAL FON SEPETİ FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 1.083591,
+        "tedavuldekiPaySayisi": 21050224,
+        "kisiSayisi": 306,
+        "fonToplamDeger": 22809842.6,
+        "gunlukGetiri": -0.00921304,
+        "paraGirisiCikisi": 375540.13,
+        "yatirimciDegisimi": 22
+      },
       {
         "fonKodu": "RFM",
         "fonAdi": "ROTA PORTFÖY ENERJİ VE METAL FON SEPETİ FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00587614,
       "paraGirisiCikisi": 818178.84,
       "yatirimciDegisimi": 15
+    },
+    {
+      "fonKodu": "RFM",
+      "fonAdi": "ROTA PORTFÖY ENERJİ VE METAL FON SEPETİ FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.083591,
+      "tedavuldekiPaySayisi": 21050224,
+      "kisiSayisi": 306,
+      "fonToplamDeger": 22809842.6,
+      "gunlukGetiri": -0.00921304,
+      "paraGirisiCikisi": 375540.13,
+      "yatirimciDegisimi": 22
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RFM",
+      "fonAdi": "ROTA PORTFÖY ENERJİ VE METAL FON SEPETİ FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.083591,
+      "tedavuldekiPaySayisi": 21050224,
+      "kisiSayisi": 306,
+      "fonToplamDeger": 22809842.6,
+      "gunlukGetiri": -0.00921304,
+      "paraGirisiCikisi": 375540.13,
+      "yatirimciDegisimi": 22
+    },
     {
       "fonKodu": "RFM",
       "fonAdi": "ROTA PORTFÖY ENERJİ VE METAL FON SEPETİ FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

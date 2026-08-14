@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "FID",
     "slug": "fid",
@@ -12,24 +12,24 @@
     "yonetici": "FİBA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "fiba-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.01425,
-    "tedavuldekiPaySayisi": 864490712,
-    "kisiSayisi": 1688,
-    "fonToplamDeger": 876809946,
-    "gunlukGetiri": 0.01326713,
+    "fiyat": 1.017746,
+    "tedavuldekiPaySayisi": 854614108,
+    "kisiSayisi": 1691,
+    "fonToplamDeger": 869779986.9,
+    "gunlukGetiri": 0.00344688,
     "getiriler": {
-      "birAy": 0.012255,
-      "ucAy": -0.004445,
-      "altiAy": 0.0163,
-      "yilbasi": 0.129042,
-      "birYil": 0.16305599999999998,
-      "ucYil": 0.9455939999999999,
-      "besYil": 6.848349
+      "birAy": 0.021804,
+      "ucAy": 0.007070999999999999,
+      "altiAy": 0.013741000000000001,
+      "yilbasi": 0.132934,
+      "birYil": 0.168767,
+      "ucYil": 0.952301,
+      "besYil": 6.855403
     },
     "paraAkisi": {
-      "gunluk": 1922549.42,
+      "gunluk": -10051874.21,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FID",
+        "fonAdi": "FİBA PORTFÖY ÇOKLU VARLIK İKİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-14",
+        "fiyat": 1.017746,
+        "tedavuldekiPaySayisi": 854614108,
+        "kisiSayisi": 1691,
+        "fonToplamDeger": 869779986.9,
+        "gunlukGetiri": 0.00344688,
+        "paraGirisiCikisi": -10051874.21,
+        "yatirimciDegisimi": 3
+      },
       {
         "fonKodu": "FID",
         "fonAdi": "FİBA PORTFÖY ÇOKLU VARLIK İKİNCİ DEĞİŞKEN FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.01326713,
       "paraGirisiCikisi": 1922549.42,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "FID",
+      "fonAdi": "FİBA PORTFÖY ÇOKLU VARLIK İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.017746,
+      "tedavuldekiPaySayisi": 854614108,
+      "kisiSayisi": 1691,
+      "fonToplamDeger": 869779986.9,
+      "gunlukGetiri": 0.00344688,
+      "paraGirisiCikisi": -10051874.21,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FID",
+      "fonAdi": "FİBA PORTFÖY ÇOKLU VARLIK İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.017746,
+      "tedavuldekiPaySayisi": 854614108,
+      "kisiSayisi": 1691,
+      "fonToplamDeger": 869779986.9,
+      "gunlukGetiri": 0.00344688,
+      "paraGirisiCikisi": -10051874.21,
+      "yatirimciDegisimi": 3
+    },
     {
       "fonKodu": "FID",
       "fonAdi": "FİBA PORTFÖY ÇOKLU VARLIK İKİNCİ DEĞİŞKEN FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

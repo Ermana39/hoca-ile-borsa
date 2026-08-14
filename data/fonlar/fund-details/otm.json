@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "OTM",
     "slug": "otm",
@@ -12,44 +12,56 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.282849,
-    "tedavuldekiPaySayisi": 10510023,
-    "kisiSayisi": 96,
-    "fonToplamDeger": 13482767.98,
-    "gunlukGetiri": 0.00717747,
+    "fiyat": 1.284225,
+    "tedavuldekiPaySayisi": 10510412,
+    "kisiSayisi": 95,
+    "fonToplamDeger": 13497735.19,
+    "gunlukGetiri": 0.00107261,
     "getiriler": {
-      "birAy": -0.023698999999999998,
-      "ucAy": -0.037891,
-      "altiAy": -0.079058,
-      "yilbasi": 0.017939,
-      "birYil": 0.065376,
+      "birAy": -0.017298,
+      "ucAy": -0.030493000000000003,
+      "altiAy": -0.082919,
+      "yilbasi": 0.019031,
+      "birYil": 0.061474,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1209.73,
+      "gunluk": 499.56,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OTM",
+        "fonAdi": "AZİMUT PORTFÖY OTOMOTİV SEKTÖRÜ DEĞİŞKEN FON",
+        "tarih": "2026-08-14",
+        "fiyat": 1.284225,
+        "tedavuldekiPaySayisi": 10510412,
+        "kisiSayisi": 95,
+        "fonToplamDeger": 13497735.19,
+        "gunlukGetiri": 0.00107261,
+        "paraGirisiCikisi": 499.56,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "OTM",
         "fonAdi": "AZİMUT PORTFÖY OTOMOTİV SEKTÖRÜ DEĞİŞKEN FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00717747,
       "paraGirisiCikisi": 1209.73,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "OTM",
+      "fonAdi": "AZİMUT PORTFÖY OTOMOTİV SEKTÖRÜ DEĞİŞKEN FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.284225,
+      "tedavuldekiPaySayisi": 10510412,
+      "kisiSayisi": 95,
+      "fonToplamDeger": 13497735.19,
+      "gunlukGetiri": 0.00107261,
+      "paraGirisiCikisi": 499.56,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OTM",
+      "fonAdi": "AZİMUT PORTFÖY OTOMOTİV SEKTÖRÜ DEĞİŞKEN FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.284225,
+      "tedavuldekiPaySayisi": 10510412,
+      "kisiSayisi": 95,
+      "fonToplamDeger": 13497735.19,
+      "gunlukGetiri": 0.00107261,
+      "paraGirisiCikisi": 499.56,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "OTM",
       "fonAdi": "AZİMUT PORTFÖY OTOMOTİV SEKTÖRÜ DEĞİŞKEN FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "SHE",
     "slug": "she",
@@ -12,44 +12,56 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 3.552384,
-    "tedavuldekiPaySayisi": 14945156,
-    "kisiSayisi": 648,
-    "fonToplamDeger": 53090932.85,
-    "gunlukGetiri": 0.01000829,
+    "fiyat": 3.542064,
+    "tedavuldekiPaySayisi": 14944581,
+    "kisiSayisi": 646,
+    "fonToplamDeger": 52934669.53,
+    "gunlukGetiri": -0.00290509,
     "getiriler": {
-      "birAy": 0.00219,
-      "ucAy": -0.04929700000000001,
-      "altiAy": -0.045580999999999997,
-      "yilbasi": 0.145706,
-      "birYil": 0.17319500000000002,
-      "ucYil": 1.4267189999999998,
+      "birAy": 0.011145,
+      "ucAy": -0.038966,
+      "altiAy": -0.051390000000000005,
+      "yilbasi": 0.142378,
+      "birYil": 0.167598,
+      "ucYil": 1.419669,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -89150.63,
+      "gunluk": -2036.69,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SHE",
+        "fonAdi": "TEB PORTFÖY ÖNCE KADIN DEĞİŞKEN FON",
+        "tarih": "2026-08-14",
+        "fiyat": 3.542064,
+        "tedavuldekiPaySayisi": 14944581,
+        "kisiSayisi": 646,
+        "fonToplamDeger": 52934669.53,
+        "gunlukGetiri": -0.00290509,
+        "paraGirisiCikisi": -2036.69,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "SHE",
         "fonAdi": "TEB PORTFÖY ÖNCE KADIN DEĞİŞKEN FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.01000829,
       "paraGirisiCikisi": -89150.63,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "SHE",
+      "fonAdi": "TEB PORTFÖY ÖNCE KADIN DEĞİŞKEN FON",
+      "tarih": "2026-08-14",
+      "fiyat": 3.542064,
+      "tedavuldekiPaySayisi": 14944581,
+      "kisiSayisi": 646,
+      "fonToplamDeger": 52934669.53,
+      "gunlukGetiri": -0.00290509,
+      "paraGirisiCikisi": -2036.69,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SHE",
+      "fonAdi": "TEB PORTFÖY ÖNCE KADIN DEĞİŞKEN FON",
+      "tarih": "2026-08-14",
+      "fiyat": 3.542064,
+      "tedavuldekiPaySayisi": 14944581,
+      "kisiSayisi": 646,
+      "fonToplamDeger": 52934669.53,
+      "gunlukGetiri": -0.00290509,
+      "paraGirisiCikisi": -2036.69,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "SHE",
       "fonAdi": "TEB PORTFÖY ÖNCE KADIN DEĞİŞKEN FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "RKV",
     "slug": "rkv",
@@ -12,44 +12,56 @@
     "yonetici": "RE-PIE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "re-pie-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 2.581046,
-    "tedavuldekiPaySayisi": 213676756,
+    "fiyat": 2.583498,
+    "tedavuldekiPaySayisi": 216015077,
     "kisiSayisi": 237,
-    "fonToplamDeger": 551509543.99,
-    "gunlukGetiri": 0.00102544,
+    "fonToplamDeger": 558074525.49,
+    "gunlukGetiri": 0.00095,
     "getiriler": {
-      "birAy": 0.033616,
-      "ucAy": 0.100579,
-      "altiAy": 0.20167300000000002,
-      "yilbasi": 0.251977,
-      "birYil": 0.45549100000000003,
+      "birAy": 0.03352,
+      "ucAy": 0.100469,
+      "altiAy": 0.199383,
+      "yilbasi": 0.25316700000000003,
+      "birYil": 0.455273,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 11173701.74,
+      "gunluk": 6041047.63,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RKV",
+        "fonAdi": "RE-PIE PORTFÖY KISA VADELİ KATILIM SERBEST (TL) FON",
+        "tarih": "2026-08-14",
+        "fiyat": 2.583498,
+        "tedavuldekiPaySayisi": 216015077,
+        "kisiSayisi": 237,
+        "fonToplamDeger": 558074525.49,
+        "gunlukGetiri": 0.00095,
+        "paraGirisiCikisi": 6041047.63,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "RKV",
         "fonAdi": "RE-PIE PORTFÖY KISA VADELİ KATILIM SERBEST (TL) FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00102544,
       "paraGirisiCikisi": 11173701.74,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "RKV",
+      "fonAdi": "RE-PIE PORTFÖY KISA VADELİ KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 2.583498,
+      "tedavuldekiPaySayisi": 216015077,
+      "kisiSayisi": 237,
+      "fonToplamDeger": 558074525.49,
+      "gunlukGetiri": 0.00095,
+      "paraGirisiCikisi": 6041047.63,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RKV",
+      "fonAdi": "RE-PIE PORTFÖY KISA VADELİ KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 2.583498,
+      "tedavuldekiPaySayisi": 216015077,
+      "kisiSayisi": 237,
+      "fonToplamDeger": 558074525.49,
+      "gunlukGetiri": 0.00095,
+      "paraGirisiCikisi": 6041047.63,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "RKV",
       "fonAdi": "RE-PIE PORTFÖY KISA VADELİ KATILIM SERBEST (TL) FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

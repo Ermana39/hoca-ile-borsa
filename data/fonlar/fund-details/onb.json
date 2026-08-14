@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "ONB",
     "slug": "onb",
@@ -12,13 +12,13 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 52.215096,
-    "tedavuldekiPaySayisi": 108300371,
+    "fiyat": 52.240552,
+    "tedavuldekiPaySayisi": 108371117,
     "kisiSayisi": 588,
-    "fonToplamDeger": 5654914321.73,
-    "gunlukGetiri": 0.00047156,
+    "fonToplamDeger": 5661366933.87,
+    "gunlukGetiri": 0.00048752,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -47227875.54,
+      "gunluk": 3695810.09,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ONB",
+        "fonAdi": "TEB PORTFÖY ALTERNATİF BANK SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-14",
+        "fiyat": 52.240552,
+        "tedavuldekiPaySayisi": 108371117,
+        "kisiSayisi": 588,
+        "fonToplamDeger": 5661366933.87,
+        "gunlukGetiri": 0.00048752,
+        "paraGirisiCikisi": 3695810.09,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "ONB",
         "fonAdi": "TEB PORTFÖY ALTERNATİF BANK SERBEST (DÖVİZ) ÖZEL FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00047156,
       "paraGirisiCikisi": -47227875.54,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "ONB",
+      "fonAdi": "TEB PORTFÖY ALTERNATİF BANK SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-14",
+      "fiyat": 52.240552,
+      "tedavuldekiPaySayisi": 108371117,
+      "kisiSayisi": 588,
+      "fonToplamDeger": 5661366933.87,
+      "gunlukGetiri": 0.00048752,
+      "paraGirisiCikisi": 3695810.09,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ONB",
+      "fonAdi": "TEB PORTFÖY ALTERNATİF BANK SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-14",
+      "fiyat": 52.240552,
+      "tedavuldekiPaySayisi": 108371117,
+      "kisiSayisi": 588,
+      "fonToplamDeger": 5661366933.87,
+      "gunlukGetiri": 0.00048752,
+      "paraGirisiCikisi": 3695810.09,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "ONB",
       "fonAdi": "TEB PORTFÖY ALTERNATİF BANK SERBEST (DÖVİZ) ÖZEL FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

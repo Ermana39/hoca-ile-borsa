@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "UCP",
     "slug": "ucp",
@@ -12,13 +12,13 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.313979,
-    "tedavuldekiPaySayisi": 17965720959,
+    "fiyat": 1.315369,
+    "tedavuldekiPaySayisi": 12257867180,
     "kisiSayisi": 25,
-    "fonToplamDeger": 23606577353.19,
-    "gunlukGetiri": 0.00106584,
+    "fonToplamDeger": 16123612737.27,
+    "gunlukGetiri": 0.00105786,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 7507993799.53,
+      "gunluk": -7507933917.43,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "UCP",
+        "fonAdi": "AK PORTFÖY ÜÇÜNCÜ PARA PİYASASI SERBEST (TL) FON",
+        "tarih": "2026-08-14",
+        "fiyat": 1.315369,
+        "tedavuldekiPaySayisi": 12257867180,
+        "kisiSayisi": 25,
+        "fonToplamDeger": 16123612737.27,
+        "gunlukGetiri": 0.00105786,
+        "paraGirisiCikisi": -7507933917.43,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "UCP",
         "fonAdi": "AK PORTFÖY ÜÇÜNCÜ PARA PİYASASI SERBEST (TL) FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00106584,
       "paraGirisiCikisi": 7507993799.53,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "UCP",
+      "fonAdi": "AK PORTFÖY ÜÇÜNCÜ PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.315369,
+      "tedavuldekiPaySayisi": 12257867180,
+      "kisiSayisi": 25,
+      "fonToplamDeger": 16123612737.27,
+      "gunlukGetiri": 0.00105786,
+      "paraGirisiCikisi": -7507933917.43,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "UCP",
+      "fonAdi": "AK PORTFÖY ÜÇÜNCÜ PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.315369,
+      "tedavuldekiPaySayisi": 12257867180,
+      "kisiSayisi": 25,
+      "fonToplamDeger": 16123612737.27,
+      "gunlukGetiri": 0.00105786,
+      "paraGirisiCikisi": -7507933917.43,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "UCP",
       "fonAdi": "AK PORTFÖY ÜÇÜNCÜ PARA PİYASASI SERBEST (TL) FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

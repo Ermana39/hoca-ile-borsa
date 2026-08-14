@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "TTV",
     "slug": "ttv",
@@ -12,24 +12,24 @@
     "yonetici": "TACİRLER PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "tacirler-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 8.700324,
-    "tedavuldekiPaySayisi": 331486320,
+    "fiyat": 8.719618,
+    "tedavuldekiPaySayisi": 326888858,
     "kisiSayisi": 33,
-    "fonToplamDeger": 2884038310.74,
-    "gunlukGetiri": 0.00126004,
+    "fonToplamDeger": 2850346028.57,
+    "gunlukGetiri": 0.00221762,
     "getiriler": {
-      "birAy": 0.020983,
-      "ucAy": 0.09350699999999999,
-      "altiAy": 0.195021,
-      "yilbasi": 0.234466,
-      "birYil": 0.416556,
-      "ucYil": 2.5518620000000003,
-      "besYil": 5.94396
+      "birAy": 0.01799,
+      "ucAy": 0.09511900000000001,
+      "altiAy": 0.194642,
+      "yilbasi": 0.23720400000000003,
+      "birYil": 0.41896500000000003,
+      "ucYil": 2.5597380000000003,
+      "besYil": 5.960748
     },
     "paraAkisi": {
-      "gunluk": 147.91,
+      "gunluk": -40088112.41,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TTV",
+        "fonAdi": "TACİRLER PORTFÖY VEGA SERBEST (TL) FON",
+        "tarih": "2026-08-14",
+        "fiyat": 8.719618,
+        "tedavuldekiPaySayisi": 326888858,
+        "kisiSayisi": 33,
+        "fonToplamDeger": 2850346028.57,
+        "gunlukGetiri": 0.00221762,
+        "paraGirisiCikisi": -40088112.41,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "TTV",
         "fonAdi": "TACİRLER PORTFÖY VEGA SERBEST (TL) FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00126004,
       "paraGirisiCikisi": 147.91,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TTV",
+      "fonAdi": "TACİRLER PORTFÖY VEGA SERBEST (TL) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 8.719618,
+      "tedavuldekiPaySayisi": 326888858,
+      "kisiSayisi": 33,
+      "fonToplamDeger": 2850346028.57,
+      "gunlukGetiri": 0.00221762,
+      "paraGirisiCikisi": -40088112.41,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TTV",
+      "fonAdi": "TACİRLER PORTFÖY VEGA SERBEST (TL) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 8.719618,
+      "tedavuldekiPaySayisi": 326888858,
+      "kisiSayisi": 33,
+      "fonToplamDeger": 2850346028.57,
+      "gunlukGetiri": 0.00221762,
+      "paraGirisiCikisi": -40088112.41,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "TTV",
       "fonAdi": "TACİRLER PORTFÖY VEGA SERBEST (TL) FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

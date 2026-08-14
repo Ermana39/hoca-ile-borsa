@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "IAU",
     "slug": "iau",
@@ -12,24 +12,24 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 2.633531,
-    "tedavuldekiPaySayisi": 13051945,
-    "kisiSayisi": 226,
-    "fonToplamDeger": 34372700.16,
-    "gunlukGetiri": 0.00072769,
+    "fiyat": 2.639255,
+    "tedavuldekiPaySayisi": 12972468,
+    "kisiSayisi": 224,
+    "fonToplamDeger": 34237645.23,
+    "gunlukGetiri": 0.00217351,
     "getiriler": {
-      "birAy": 0.028075000000000003,
-      "ucAy": 0.085176,
-      "altiAy": 0.17806,
-      "yilbasi": 0.215615,
-      "birYil": 0.38535400000000003,
-      "ucYil": 1.858854,
+      "birAy": 0.028948,
+      "ucAy": 0.088362,
+      "altiAy": 0.17824500000000001,
+      "yilbasi": 0.218257,
+      "birYil": 0.38770200000000005,
+      "ucYil": 1.865068,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -90659.3,
+      "gunluk": -209760.07,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IAU",
+        "fonAdi": "PARDUS PORTFÖY İKİNCİ İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 2.639255,
+        "tedavuldekiPaySayisi": 12972468,
+        "kisiSayisi": 224,
+        "fonToplamDeger": 34237645.23,
+        "gunlukGetiri": 0.00217351,
+        "paraGirisiCikisi": -209760.07,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "IAU",
         "fonAdi": "PARDUS PORTFÖY İKİNCİ İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00072769,
       "paraGirisiCikisi": -90659.3,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "IAU",
+      "fonAdi": "PARDUS PORTFÖY İKİNCİ İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 2.639255,
+      "tedavuldekiPaySayisi": 12972468,
+      "kisiSayisi": 224,
+      "fonToplamDeger": 34237645.23,
+      "gunlukGetiri": 0.00217351,
+      "paraGirisiCikisi": -209760.07,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IAU",
+      "fonAdi": "PARDUS PORTFÖY İKİNCİ İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 2.639255,
+      "tedavuldekiPaySayisi": 12972468,
+      "kisiSayisi": 224,
+      "fonToplamDeger": 34237645.23,
+      "gunlukGetiri": 0.00217351,
+      "paraGirisiCikisi": -209760.07,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "IAU",
       "fonAdi": "PARDUS PORTFÖY İKİNCİ İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

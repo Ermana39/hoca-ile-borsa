@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "IJI",
     "slug": "iji",
@@ -12,44 +12,56 @@
     "yonetici": "İSTANBUL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "istanbul-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 10.402969,
-    "tedavuldekiPaySayisi": 17311571,
-    "kisiSayisi": 125,
-    "fonToplamDeger": 180091727.87,
-    "gunlukGetiri": 0.00986757,
+    "fiyat": 10.331905,
+    "tedavuldekiPaySayisi": 17404058,
+    "kisiSayisi": 128,
+    "fonToplamDeger": 179817077.33,
+    "gunlukGetiri": -0.00683113,
     "getiriler": {
-      "birAy": 0.046795,
-      "ucAy": -0.033288000000000005,
-      "altiAy": 0.444939,
-      "yilbasi": 0.546081,
-      "birYil": 1.061881,
-      "ucYil": 2.925147,
+      "birAy": 0.046708999999999994,
+      "ucAy": -0.017447999999999998,
+      "altiAy": 0.387543,
+      "yilbasi": 0.5355190000000001,
+      "birYil": 1.0407,
+      "ucYil": 2.898333,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 7876607.98,
+      "gunluk": 955566.9,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 10,
+      "gunluk": 3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IJI",
+        "fonAdi": "İSTANBUL PORTFÖY HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON )",
+        "tarih": "2026-08-14",
+        "fiyat": 10.331905,
+        "tedavuldekiPaySayisi": 17404058,
+        "kisiSayisi": 128,
+        "fonToplamDeger": 179817077.33,
+        "gunlukGetiri": -0.00683113,
+        "paraGirisiCikisi": 955566.9,
+        "yatirimciDegisimi": 3
+      },
       {
         "fonKodu": "IJI",
         "fonAdi": "İSTANBUL PORTFÖY HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON )",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00986757,
       "paraGirisiCikisi": 7876607.98,
       "yatirimciDegisimi": 10
+    },
+    {
+      "fonKodu": "IJI",
+      "fonAdi": "İSTANBUL PORTFÖY HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON )",
+      "tarih": "2026-08-14",
+      "fiyat": 10.331905,
+      "tedavuldekiPaySayisi": 17404058,
+      "kisiSayisi": 128,
+      "fonToplamDeger": 179817077.33,
+      "gunlukGetiri": -0.00683113,
+      "paraGirisiCikisi": 955566.9,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IJI",
+      "fonAdi": "İSTANBUL PORTFÖY HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON )",
+      "tarih": "2026-08-14",
+      "fiyat": 10.331905,
+      "tedavuldekiPaySayisi": 17404058,
+      "kisiSayisi": 128,
+      "fonToplamDeger": 179817077.33,
+      "gunlukGetiri": -0.00683113,
+      "paraGirisiCikisi": 955566.9,
+      "yatirimciDegisimi": 3
+    },
     {
       "fonKodu": "IJI",
       "fonAdi": "İSTANBUL PORTFÖY HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON )",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

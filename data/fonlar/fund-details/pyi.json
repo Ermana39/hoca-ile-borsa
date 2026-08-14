@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "PYI",
     "slug": "pyi",
@@ -12,13 +12,13 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 17.185325,
+    "fiyat": 16.656135,
     "tedavuldekiPaySayisi": 341941442,
     "kisiSayisi": 44,
-    "fonToplamDeger": 5876374849.43,
-    "gunlukGetiri": 0.05762524,
+    "fonToplamDeger": 5695422814.88,
+    "gunlukGetiri": -0.03079313,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -63465.41,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PYI",
+        "fonAdi": "PARDUS PORTFÖY YİRMİİKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 16.656135,
+        "tedavuldekiPaySayisi": 341941442,
+        "kisiSayisi": 44,
+        "fonToplamDeger": 5695422814.88,
+        "gunlukGetiri": -0.03079313,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "PYI",
         "fonAdi": "PARDUS PORTFÖY YİRMİİKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.05762524,
       "paraGirisiCikisi": -63465.41,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PYI",
+      "fonAdi": "PARDUS PORTFÖY YİRMİİKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 16.656135,
+      "tedavuldekiPaySayisi": 341941442,
+      "kisiSayisi": 44,
+      "fonToplamDeger": 5695422814.88,
+      "gunlukGetiri": -0.03079313,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PYI",
+      "fonAdi": "PARDUS PORTFÖY YİRMİİKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 16.656135,
+      "tedavuldekiPaySayisi": 341941442,
+      "kisiSayisi": 44,
+      "fonToplamDeger": 5695422814.88,
+      "gunlukGetiri": -0.03079313,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "PYI",
       "fonAdi": "PARDUS PORTFÖY YİRMİİKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

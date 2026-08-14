@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "IHV",
     "slug": "ihv",
@@ -12,24 +12,24 @@
     "yonetici": "INVEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "inveo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.847294,
-    "tedavuldekiPaySayisi": 169092757,
+    "fiyat": 1.840498,
+    "tedavuldekiPaySayisi": 169092859,
     "kisiSayisi": 46,
-    "fonToplamDeger": 312364004.82,
-    "gunlukGetiri": 0.00176352,
+    "fonToplamDeger": 311215008.13,
+    "gunlukGetiri": -0.00367889,
     "getiriler": {
-      "birAy": -0.031819,
-      "ucAy": -0.05448,
-      "altiAy": -0.069386,
-      "yilbasi": 0.07642299999999999,
-      "birYil": -0.023062999999999997,
+      "birAy": -0.017551,
+      "ucAy": -0.047399,
+      "altiAy": -0.077812,
+      "yilbasi": 0.072463,
+      "birYil": 0.010612,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 10206.3,
+      "gunluk": 187.73,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IHV",
+        "fonAdi": "INVEO PORTFÖY BEŞİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 1.840498,
+        "tedavuldekiPaySayisi": 169092859,
+        "kisiSayisi": 46,
+        "fonToplamDeger": 311215008.13,
+        "gunlukGetiri": -0.00367889,
+        "paraGirisiCikisi": 187.73,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "IHV",
         "fonAdi": "INVEO PORTFÖY BEŞİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00176352,
       "paraGirisiCikisi": 10206.3,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "IHV",
+      "fonAdi": "INVEO PORTFÖY BEŞİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.840498,
+      "tedavuldekiPaySayisi": 169092859,
+      "kisiSayisi": 46,
+      "fonToplamDeger": 311215008.13,
+      "gunlukGetiri": -0.00367889,
+      "paraGirisiCikisi": 187.73,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IHV",
+      "fonAdi": "INVEO PORTFÖY BEŞİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.840498,
+      "tedavuldekiPaySayisi": 169092859,
+      "kisiSayisi": 46,
+      "fonToplamDeger": 311215008.13,
+      "gunlukGetiri": -0.00367889,
+      "paraGirisiCikisi": 187.73,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "IHV",
       "fonAdi": "INVEO PORTFÖY BEŞİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

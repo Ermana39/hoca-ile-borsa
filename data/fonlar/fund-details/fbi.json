@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "FBI",
     "slug": "fbi",
@@ -12,44 +12,56 @@
     "yonetici": "FİBA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "fiba-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 52.775824,
-    "tedavuldekiPaySayisi": 277623678,
-    "kisiSayisi": 5024,
-    "fonToplamDeger": 14651818424.97,
-    "gunlukGetiri": 0.00048821,
+    "fiyat": 52.805451,
+    "tedavuldekiPaySayisi": 277535233,
+    "kisiSayisi": 5019,
+    "fonToplamDeger": 14655373236.35,
+    "gunlukGetiri": 0.00056137,
     "getiriler": {
-      "birAy": 0.021541,
-      "ucAy": 0.060965,
-      "altiAy": 0.11239800000000001,
-      "yilbasi": 0.135493,
-      "birYil": 0.211918,
+      "birAy": 0.019726,
+      "ucAy": 0.061066,
+      "altiAy": 0.11338100000000001,
+      "yilbasi": 0.13613,
+      "birYil": 0.21191500000000002,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -12500006.69,
+      "gunluk": -4670378.11,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": -5,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FBI",
+        "fonAdi": "FİBA PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-14",
+        "fiyat": 52.805451,
+        "tedavuldekiPaySayisi": 277535233,
+        "kisiSayisi": 5019,
+        "fonToplamDeger": 14655373236.35,
+        "gunlukGetiri": 0.00056137,
+        "paraGirisiCikisi": -4670378.11,
+        "yatirimciDegisimi": -5
+      },
       {
         "fonKodu": "FBI",
         "fonAdi": "FİBA PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00048821,
       "paraGirisiCikisi": -12500006.69,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "FBI",
+      "fonAdi": "FİBA PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 52.805451,
+      "tedavuldekiPaySayisi": 277535233,
+      "kisiSayisi": 5019,
+      "fonToplamDeger": 14655373236.35,
+      "gunlukGetiri": 0.00056137,
+      "paraGirisiCikisi": -4670378.11,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FBI",
+      "fonAdi": "FİBA PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 52.805451,
+      "tedavuldekiPaySayisi": 277535233,
+      "kisiSayisi": 5019,
+      "fonToplamDeger": 14655373236.35,
+      "gunlukGetiri": 0.00056137,
+      "paraGirisiCikisi": -4670378.11,
+      "yatirimciDegisimi": -5
+    },
     {
       "fonKodu": "FBI",
       "fonAdi": "FİBA PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

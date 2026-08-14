@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "MPS",
     "slug": "mps",
@@ -12,44 +12,56 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 23.97028,
-    "tedavuldekiPaySayisi": 6385084.32,
-    "kisiSayisi": 2499,
-    "fonToplamDeger": 153052259.18,
-    "gunlukGetiri": 0.01336433,
+    "fiyat": 24.074761,
+    "tedavuldekiPaySayisi": 6385149.32,
+    "kisiSayisi": 2497,
+    "fonToplamDeger": 153720943.27,
+    "gunlukGetiri": 0.00435877,
     "getiriler": {
-      "birAy": 0.013663000000000002,
-      "ucAy": -0.055639,
-      "altiAy": 0.045557,
-      "yilbasi": 0.272753,
-      "birYil": 0.30125,
-      "ucYil": 1.1264669999999999,
-      "besYil": 8.400979999999999
+      "birAy": 0.02468,
+      "ucAy": -0.042072000000000005,
+      "altiAy": 0.047725,
+      "yilbasi": 0.2783,
+      "birYil": 0.30379100000000003,
+      "ucYil": 1.135736,
+      "besYil": 8.413492
     },
     "paraAkisi": {
-      "gunluk": -23562.79,
+      "gunluk": 1564.86,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -7,
+      "gunluk": -2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MPS",
+        "fonAdi": "AKTİF PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 24.074761,
+        "tedavuldekiPaySayisi": 6385149.32,
+        "kisiSayisi": 2497,
+        "fonToplamDeger": 153720943.27,
+        "gunlukGetiri": 0.00435877,
+        "paraGirisiCikisi": 1564.86,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "MPS",
         "fonAdi": "AKTİF PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.01336433,
       "paraGirisiCikisi": -23562.79,
       "yatirimciDegisimi": -7
+    },
+    {
+      "fonKodu": "MPS",
+      "fonAdi": "AKTİF PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 24.074761,
+      "tedavuldekiPaySayisi": 6385149.32,
+      "kisiSayisi": 2497,
+      "fonToplamDeger": 153720943.27,
+      "gunlukGetiri": 0.00435877,
+      "paraGirisiCikisi": 1564.86,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MPS",
+      "fonAdi": "AKTİF PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 24.074761,
+      "tedavuldekiPaySayisi": 6385149.32,
+      "kisiSayisi": 2497,
+      "fonToplamDeger": 153720943.27,
+      "gunlukGetiri": 0.00435877,
+      "paraGirisiCikisi": 1564.86,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "MPS",
       "fonAdi": "AKTİF PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

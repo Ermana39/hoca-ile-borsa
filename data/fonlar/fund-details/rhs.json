@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "RHS",
     "slug": "rhs",
@@ -12,44 +12,56 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 7.378561,
-    "tedavuldekiPaySayisi": 110517731,
-    "kisiSayisi": 1551,
-    "fonToplamDeger": 815461835.99,
-    "gunlukGetiri": 0.01966471,
+    "fiyat": 7.364948,
+    "tedavuldekiPaySayisi": 110506541,
+    "kisiSayisi": 1544,
+    "fonToplamDeger": 813874914.39,
+    "gunlukGetiri": -0.00184494,
     "getiriler": {
-      "birAy": -0.005673,
-      "ucAy": -0.021204,
-      "altiAy": -0.008158,
-      "yilbasi": 0.238898,
-      "birYil": 0.34952,
-      "ucYil": 1.809274,
+      "birAy": 0.002452,
+      "ucAy": -0.030474,
+      "altiAy": -0.00897,
+      "yilbasi": 0.23661200000000002,
+      "birYil": 0.34928400000000004,
+      "ucYil": 1.804091,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -302971.09,
+      "gunluk": -82413.77,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -11,
+      "gunluk": -7,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RHS",
+        "fonAdi": "ROTA PORTFÖY HİSSE SENEDİ (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 7.364948,
+        "tedavuldekiPaySayisi": 110506541,
+        "kisiSayisi": 1544,
+        "fonToplamDeger": 813874914.39,
+        "gunlukGetiri": -0.00184494,
+        "paraGirisiCikisi": -82413.77,
+        "yatirimciDegisimi": -7
+      },
       {
         "fonKodu": "RHS",
         "fonAdi": "ROTA PORTFÖY HİSSE SENEDİ (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.01966471,
       "paraGirisiCikisi": -302971.09,
       "yatirimciDegisimi": -11
+    },
+    {
+      "fonKodu": "RHS",
+      "fonAdi": "ROTA PORTFÖY HİSSE SENEDİ (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 7.364948,
+      "tedavuldekiPaySayisi": 110506541,
+      "kisiSayisi": 1544,
+      "fonToplamDeger": 813874914.39,
+      "gunlukGetiri": -0.00184494,
+      "paraGirisiCikisi": -82413.77,
+      "yatirimciDegisimi": -7
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RHS",
+      "fonAdi": "ROTA PORTFÖY HİSSE SENEDİ (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 7.364948,
+      "tedavuldekiPaySayisi": 110506541,
+      "kisiSayisi": 1544,
+      "fonToplamDeger": 813874914.39,
+      "gunlukGetiri": -0.00184494,
+      "paraGirisiCikisi": -82413.77,
+      "yatirimciDegisimi": -7
+    },
     {
       "fonKodu": "RHS",
       "fonAdi": "ROTA PORTFÖY HİSSE SENEDİ (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

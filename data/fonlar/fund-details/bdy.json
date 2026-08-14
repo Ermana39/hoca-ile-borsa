@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "BDY",
     "slug": "bdy",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.673162,
-    "tedavuldekiPaySayisi": 56634415,
-    "kisiSayisi": 2289,
-    "fonToplamDeger": 94758554.8,
-    "gunlukGetiri": 0.0052855,
+    "fiyat": 1.690632,
+    "tedavuldekiPaySayisi": 56631147,
+    "kisiSayisi": 2290,
+    "fonToplamDeger": 95742449.4,
+    "gunlukGetiri": 0.01044131,
     "getiriler": {
-      "birAy": 0.031536,
-      "ucAy": -0.006395,
-      "altiAy": 0.030255999999999998,
-      "yilbasi": 0.187216,
-      "birYil": 0.23911300000000002,
+      "birAy": 0.046494999999999995,
+      "ucAy": 0.02466,
+      "altiAy": 0.033542999999999996,
+      "yilbasi": 0.199612,
+      "birYil": 0.24915500000000002,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -365841.89,
+      "gunluk": -5524.99,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -6,
+      "gunluk": 1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BDY",
+        "fonAdi": "AK PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 1.690632,
+        "tedavuldekiPaySayisi": 56631147,
+        "kisiSayisi": 2290,
+        "fonToplamDeger": 95742449.4,
+        "gunlukGetiri": 0.01044131,
+        "paraGirisiCikisi": -5524.99,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "BDY",
         "fonAdi": "AK PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.0052855,
       "paraGirisiCikisi": -365841.89,
       "yatirimciDegisimi": -6
+    },
+    {
+      "fonKodu": "BDY",
+      "fonAdi": "AK PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.690632,
+      "tedavuldekiPaySayisi": 56631147,
+      "kisiSayisi": 2290,
+      "fonToplamDeger": 95742449.4,
+      "gunlukGetiri": 0.01044131,
+      "paraGirisiCikisi": -5524.99,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BDY",
+      "fonAdi": "AK PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.690632,
+      "tedavuldekiPaySayisi": 56631147,
+      "kisiSayisi": 2290,
+      "fonToplamDeger": 95742449.4,
+      "gunlukGetiri": 0.01044131,
+      "paraGirisiCikisi": -5524.99,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "BDY",
       "fonAdi": "AK PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "LLA",
     "slug": "lla",
@@ -12,44 +12,56 @@
     "yonetici": "ALLBATROSS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "allbatross-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.170602,
-    "tedavuldekiPaySayisi": 24582930,
-    "kisiSayisi": 791,
-    "fonToplamDeger": 28776823.44,
-    "gunlukGetiri": 0.00880918,
+    "fiyat": 1.169342,
+    "tedavuldekiPaySayisi": 24526862,
+    "kisiSayisi": 787,
+    "fonToplamDeger": 28680282.96,
+    "gunlukGetiri": -0.00107637,
     "getiriler": {
-      "birAy": -0.034712,
-      "ucAy": -0.11394299999999999,
-      "altiAy": -0.175275,
-      "yilbasi": -0.045089,
-      "birYil": -0.543553,
-      "ucYil": 0.21719100000000002,
+      "birAy": -0.031418,
+      "ucAy": -0.087065,
+      "altiAy": -0.186799,
+      "yilbasi": -0.046116000000000004,
+      "birYil": -0.546277,
+      "ucYil": 0.21588100000000002,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -112736,
+      "gunluk": -65562.67,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
+      "gunluk": -4,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "LLA",
+        "fonAdi": "ALLBATROSS PORTFÖY AYDIN HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 1.169342,
+        "tedavuldekiPaySayisi": 24526862,
+        "kisiSayisi": 787,
+        "fonToplamDeger": 28680282.96,
+        "gunlukGetiri": -0.00107637,
+        "paraGirisiCikisi": -65562.67,
+        "yatirimciDegisimi": -4
+      },
       {
         "fonKodu": "LLA",
         "fonAdi": "ALLBATROSS PORTFÖY AYDIN HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00880918,
       "paraGirisiCikisi": -112736,
       "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "LLA",
+      "fonAdi": "ALLBATROSS PORTFÖY AYDIN HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.169342,
+      "tedavuldekiPaySayisi": 24526862,
+      "kisiSayisi": 787,
+      "fonToplamDeger": 28680282.96,
+      "gunlukGetiri": -0.00107637,
+      "paraGirisiCikisi": -65562.67,
+      "yatirimciDegisimi": -4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "LLA",
+      "fonAdi": "ALLBATROSS PORTFÖY AYDIN HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.169342,
+      "tedavuldekiPaySayisi": 24526862,
+      "kisiSayisi": 787,
+      "fonToplamDeger": 28680282.96,
+      "gunlukGetiri": -0.00107637,
+      "paraGirisiCikisi": -65562.67,
+      "yatirimciDegisimi": -4
+    },
     {
       "fonKodu": "LLA",
       "fonAdi": "ALLBATROSS PORTFÖY AYDIN HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

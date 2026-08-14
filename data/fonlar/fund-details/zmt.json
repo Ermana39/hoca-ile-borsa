@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "ZMT",
     "slug": "zmt",
@@ -12,44 +12,56 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 62.6312,
-    "tedavuldekiPaySayisi": 26383678,
-    "kisiSayisi": 308,
-    "fonToplamDeger": 1652441402.22,
-    "gunlukGetiri": 0.00101917,
+    "fiyat": 62.627102,
+    "tedavuldekiPaySayisi": 26406490,
+    "kisiSayisi": 307,
+    "fonToplamDeger": 1653761946.53,
+    "gunlukGetiri": -0.00006543,
     "getiriler": {
-      "birAy": 0.031675,
-      "ucAy": 0.053323999999999996,
-      "altiAy": 0.08527900000000001,
-      "yilbasi": 0.126099,
-      "birYil": 0.21839200000000003,
+      "birAy": 0.030002,
+      "ucAy": 0.05395,
+      "altiAy": 0.08537499999999999,
+      "yilbasi": 0.126025,
+      "birYil": 0.205918,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 5777602.94,
+      "gunluk": 1428649.45,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZMT",
+        "fonAdi": "AZİMUT PORTFÖY 22.0 SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-14",
+        "fiyat": 62.627102,
+        "tedavuldekiPaySayisi": 26406490,
+        "kisiSayisi": 307,
+        "fonToplamDeger": 1653761946.53,
+        "gunlukGetiri": -0.00006543,
+        "paraGirisiCikisi": 1428649.45,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "ZMT",
         "fonAdi": "AZİMUT PORTFÖY 22.0 SERBEST (DÖVİZ-AVRO) FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00101917,
       "paraGirisiCikisi": 5777602.94,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "ZMT",
+      "fonAdi": "AZİMUT PORTFÖY 22.0 SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 62.627102,
+      "tedavuldekiPaySayisi": 26406490,
+      "kisiSayisi": 307,
+      "fonToplamDeger": 1653761946.53,
+      "gunlukGetiri": -0.00006543,
+      "paraGirisiCikisi": 1428649.45,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZMT",
+      "fonAdi": "AZİMUT PORTFÖY 22.0 SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 62.627102,
+      "tedavuldekiPaySayisi": 26406490,
+      "kisiSayisi": 307,
+      "fonToplamDeger": 1653761946.53,
+      "gunlukGetiri": -0.00006543,
+      "paraGirisiCikisi": 1428649.45,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "ZMT",
       "fonAdi": "AZİMUT PORTFÖY 22.0 SERBEST (DÖVİZ-AVRO) FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

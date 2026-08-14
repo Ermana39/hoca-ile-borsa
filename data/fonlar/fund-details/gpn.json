@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "GPN",
     "slug": "gpn",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.378929,
-    "tedavuldekiPaySayisi": 3723675802,
-    "kisiSayisi": 4668,
-    "fonToplamDeger": 5134683082.03,
-    "gunlukGetiri": 0.00105555,
+    "fiyat": 1.380629,
+    "tedavuldekiPaySayisi": 3669825510,
+    "kisiSayisi": 4702,
+    "fonToplamDeger": 5066669262.94,
+    "gunlukGetiri": 0.00123284,
     "getiriler": {
-      "birAy": 0.033795,
-      "ucAy": 0.102827,
-      "altiAy": 0.208025,
-      "yilbasi": 0.259149,
+      "birAy": 0.033921,
+      "ucAy": 0.10311999999999999,
+      "altiAy": 0.20585599999999998,
+      "yilbasi": 0.260701,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 59387140.54,
+      "gunluk": -74347274.79,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 29,
+      "gunluk": 34,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GPN",
+        "fonAdi": "GARANTİ PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 1.380629,
+        "tedavuldekiPaySayisi": 3669825510,
+        "kisiSayisi": 4702,
+        "fonToplamDeger": 5066669262.94,
+        "gunlukGetiri": 0.00123284,
+        "paraGirisiCikisi": -74347274.79,
+        "yatirimciDegisimi": 34
+      },
       {
         "fonKodu": "GPN",
         "fonAdi": "GARANTİ PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00105555,
       "paraGirisiCikisi": 59387140.54,
       "yatirimciDegisimi": 29
+    },
+    {
+      "fonKodu": "GPN",
+      "fonAdi": "GARANTİ PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.380629,
+      "tedavuldekiPaySayisi": 3669825510,
+      "kisiSayisi": 4702,
+      "fonToplamDeger": 5066669262.94,
+      "gunlukGetiri": 0.00123284,
+      "paraGirisiCikisi": -74347274.79,
+      "yatirimciDegisimi": 34
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GPN",
+      "fonAdi": "GARANTİ PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.380629,
+      "tedavuldekiPaySayisi": 3669825510,
+      "kisiSayisi": 4702,
+      "fonToplamDeger": 5066669262.94,
+      "gunlukGetiri": 0.00123284,
+      "paraGirisiCikisi": -74347274.79,
+      "yatirimciDegisimi": 34
+    },
     {
       "fonKodu": "GPN",
       "fonAdi": "GARANTİ PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

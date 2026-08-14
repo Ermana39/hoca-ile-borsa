@@ -613,6 +613,8 @@ function hasValidFinancialSnapshot(row) {
 }
 
 function validateSourceData({ currentSnapshots, getiriMap, managerMap, existingSnapshots }) {
+  const sourceWarnings = [];
+
   if (currentSnapshots.length === 0) {
     throw new Error("Tarihsel veri Excel dosyasında işlenebilir fon kaydı bulunamadı.");
   }
@@ -626,16 +628,29 @@ function validateSourceData({ currentSnapshots, getiriMap, managerMap, existingS
   const latestSourceDate = currentSnapshots.map((row) => row.tarih).sort().at(-1);
   const latestRows = currentSnapshots.filter((row) => row.tarih === latestSourceDate);
   const validRows = latestRows.filter(hasValidFinancialSnapshot);
+  const validRatio = latestRows.length > 0 ? validRows.length / latestRows.length : 0;
+  const invalidRows = latestRows.filter((row) => !hasValidFinancialSnapshot(row));
 
   if (latestRows.length < 100) {
     throw new Error(
       `${latestSourceDate} tarihli fon verisi beklenenden düşük: ${latestRows.length} kayıt.`
     );
   }
-  if (validRows.length / latestRows.length < 0.95) {
+  if (validRows.length < 100) {
     throw new Error(
-      `${latestSourceDate} tarihli fon verilerinin %95'inden azı geçerli fiyat, pay ve toplam değer içeriyor.`
+      `${latestSourceDate} tarihli fon verisinde geçerli fiyat, pay ve toplam değer içeren kayıt sayısı beklenenden düşük: ${validRows.length}.`
     );
+  }
+  if (validRatio < 0.95) {
+    sourceWarnings.push({
+      tur: "gunluk-kaynakta-eksik-finansal-veri",
+      tarih: latestSourceDate,
+      toplamKayitSayisi: latestRows.length,
+      gecerliKayitSayisi: validRows.length,
+      gecersizKayitSayisi: invalidRows.length,
+      gecerliOran: round(validRatio, 8),
+      ornekFonKodlari: invalidRows.slice(0, 20).map((row) => row.fonKodu),
+    });
   }
 
   const managerCoverage = latestRows.filter((row) => managerMap.has(row.fonKodu)).length;
@@ -665,6 +680,13 @@ function validateSourceData({ currentSnapshots, getiriMap, managerMap, existingS
         .join(", ")}`
     );
   }
+
+  return {
+    latestSourceDate,
+    latestRowCount: latestRows.length,
+    validLatestRowCount: validRows.length,
+    sourceWarnings,
+  };
 }
 
 function enrichHistory(rows) {
@@ -1291,7 +1313,7 @@ async function main() {
   const getiriMap = parseGetiriRows(getFirstSheetRows(sourcePaths.getiri));
   const managerMap = parseManagerRows(getFirstSheetRows(sourcePaths.yoneticiler));
 
-  validateSourceData({
+  const sourceValidation = validateSourceData({
     currentSnapshots,
     getiriMap,
     managerMap,
@@ -1376,8 +1398,14 @@ async function main() {
     yoneticiyleEslesenFonSayisi: activeFunds.length - fundData.unknownManagers.length,
     bilinmeyenYoneticiSayisi: fundData.unknownManagers.length,
     bilinmeyenYoneticiFonlari: fundData.unknownManagers,
-    veriUyarisiSayisi: fundData.dataWarnings.length,
-    veriUyarilari: fundData.dataWarnings,
+    kaynakDogrulama: {
+      sonKaynakTarihi: sourceValidation.latestSourceDate,
+      sonKaynakKayitSayisi: sourceValidation.latestRowCount,
+      sonKaynakGecerliKayitSayisi: sourceValidation.validLatestRowCount,
+    },
+    veriUyarisiSayisi:
+      sourceValidation.sourceWarnings.length + fundData.dataWarnings.length,
+    veriUyarilari: [...sourceValidation.sourceWarnings, ...fundData.dataWarnings],
   });
 
   await writeLegacyExcelJson(sourcePaths.getiri);
@@ -1390,7 +1418,16 @@ async function main() {
   console.log(`${stats.skipped} duplicate snapshot atlandı`);
   console.log(`${activeFunds.length - fundData.unknownManagers.length} fon yöneticiyle eşleşti`);
   console.log(`${fundData.unknownManagers.length} fon Bilinmiyor olarak işaretlendi`);
-  console.log(`${fundData.dataWarnings.length} veri uyarısı kaydedildi`);
+  console.log(
+    `${sourceValidation.sourceWarnings.length + fundData.dataWarnings.length} veri uyarısı kaydedildi`
+  );
+  for (const warning of sourceValidation.sourceWarnings) {
+    if (warning.tur === "gunluk-kaynakta-eksik-finansal-veri") {
+      console.warn(
+        `${warning.tarih} kaynak uyarısı: ${warning.gecersizKayitSayisi}/${warning.toplamKayitSayisi} fon eksik finansal veriyle geldi; geçerli fonlarla güncelleme sürdürüldü.`
+      );
+    }
+  }
   console.log("Para akışları, yatırımcı değişimleri ve lider tabloları hazırlandı");
 }
 

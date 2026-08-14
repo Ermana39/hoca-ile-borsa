@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "BFT",
     "slug": "bft",
@@ -12,24 +12,24 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.13704,
-    "tedavuldekiPaySayisi": 223185178,
-    "kisiSayisi": 548,
-    "fonToplamDeger": 253770480.05,
-    "gunlukGetiri": 0.03651844,
+    "fiyat": 1.131082,
+    "tedavuldekiPaySayisi": 223190559,
+    "kisiSayisi": 544,
+    "fonToplamDeger": 252446904.92,
+    "gunlukGetiri": -0.00523992,
     "getiriler": {
-      "birAy": 0.0031569999999999997,
-      "ucAy": -0.027273000000000002,
-      "altiAy": -0.145494,
-      "yilbasi": 0.038667,
-      "birYil": 0.063792,
+      "birAy": 0.008282000000000001,
+      "ucAy": -0.025243,
+      "altiAy": -0.14351,
+      "yilbasi": 0.033224000000000004,
+      "birYil": 0.054865000000000004,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 29145427.95,
+      "gunluk": 6086.35,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BFT",
+        "fonAdi": "AZİMUT PORTFÖY BANKA VE FİNANS SEKTÖRÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 1.131082,
+        "tedavuldekiPaySayisi": 223190559,
+        "kisiSayisi": 544,
+        "fonToplamDeger": 252446904.92,
+        "gunlukGetiri": -0.00523992,
+        "paraGirisiCikisi": 6086.35,
+        "yatirimciDegisimi": -4
+      },
       {
         "fonKodu": "BFT",
         "fonAdi": "AZİMUT PORTFÖY BANKA VE FİNANS SEKTÖRÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.03651844,
       "paraGirisiCikisi": 29145427.95,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "BFT",
+      "fonAdi": "AZİMUT PORTFÖY BANKA VE FİNANS SEKTÖRÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.131082,
+      "tedavuldekiPaySayisi": 223190559,
+      "kisiSayisi": 544,
+      "fonToplamDeger": 252446904.92,
+      "gunlukGetiri": -0.00523992,
+      "paraGirisiCikisi": 6086.35,
+      "yatirimciDegisimi": -4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BFT",
+      "fonAdi": "AZİMUT PORTFÖY BANKA VE FİNANS SEKTÖRÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.131082,
+      "tedavuldekiPaySayisi": 223190559,
+      "kisiSayisi": 544,
+      "fonToplamDeger": 252446904.92,
+      "gunlukGetiri": -0.00523992,
+      "paraGirisiCikisi": 6086.35,
+      "yatirimciDegisimi": -4
+    },
     {
       "fonKodu": "BFT",
       "fonAdi": "AZİMUT PORTFÖY BANKA VE FİNANS SEKTÖRÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

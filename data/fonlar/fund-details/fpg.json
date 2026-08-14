@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "FPG",
     "slug": "fpg",
@@ -12,44 +12,56 @@
     "yonetici": "FİBA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "fiba-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 2.240329,
-    "tedavuldekiPaySayisi": 388385139,
-    "kisiSayisi": 2084,
-    "fonToplamDeger": 870110495.88,
-    "gunlukGetiri": 0.03383609,
+    "fiyat": 2.188301,
+    "tedavuldekiPaySayisi": 388221919,
+    "kisiSayisi": 2083,
+    "fonToplamDeger": 849546581.8,
+    "gunlukGetiri": -0.02322337,
     "getiriler": {
-      "birAy": 0.130468,
-      "ucAy": -0.176182,
-      "altiAy": -0.13501,
-      "yilbasi": -0.009403,
-      "birYil": 0.8944150000000001,
+      "birAy": 0.12092900000000001,
+      "ucAy": -0.22116599999999997,
+      "altiAy": -0.099375,
+      "yilbasi": -0.032408,
+      "birYil": 0.824236,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -178251.78,
+      "gunluk": -357174.49,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FPG",
+        "fonAdi": "FİBA PORTFÖY GÜMÜŞ SERBEST FON",
+        "tarih": "2026-08-14",
+        "fiyat": 2.188301,
+        "tedavuldekiPaySayisi": 388221919,
+        "kisiSayisi": 2083,
+        "fonToplamDeger": 849546581.8,
+        "gunlukGetiri": -0.02322337,
+        "paraGirisiCikisi": -357174.49,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "FPG",
         "fonAdi": "FİBA PORTFÖY GÜMÜŞ SERBEST FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.03383609,
       "paraGirisiCikisi": -178251.78,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "FPG",
+      "fonAdi": "FİBA PORTFÖY GÜMÜŞ SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 2.188301,
+      "tedavuldekiPaySayisi": 388221919,
+      "kisiSayisi": 2083,
+      "fonToplamDeger": 849546581.8,
+      "gunlukGetiri": -0.02322337,
+      "paraGirisiCikisi": -357174.49,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FPG",
+      "fonAdi": "FİBA PORTFÖY GÜMÜŞ SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 2.188301,
+      "tedavuldekiPaySayisi": 388221919,
+      "kisiSayisi": 2083,
+      "fonToplamDeger": 849546581.8,
+      "gunlukGetiri": -0.02322337,
+      "paraGirisiCikisi": -357174.49,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "FPG",
       "fonAdi": "FİBA PORTFÖY GÜMÜŞ SERBEST FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

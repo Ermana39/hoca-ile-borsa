@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "EKF",
     "slug": "ekf",
@@ -12,44 +12,56 @@
     "yonetici": "ASTRA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "astra-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 0.135434,
-    "tedavuldekiPaySayisi": 12277188854,
-    "kisiSayisi": 5154,
-    "fonToplamDeger": 1662748297.98,
-    "gunlukGetiri": 0.00101999,
+    "fiyat": 0.135572,
+    "tedavuldekiPaySayisi": 12266239076,
+    "kisiSayisi": 5145,
+    "fonToplamDeger": 1662957406.36,
+    "gunlukGetiri": 0.00101895,
     "getiriler": {
-      "birAy": -0.006478,
-      "ucAy": 0.064063,
-      "altiAy": 0.173137,
-      "yilbasi": 0.22683499999999998,
-      "birYil": 0.43416600000000005,
-      "ucYil": 2.200841,
-      "besYil": 5.355718
+      "birAy": 0.034482,
+      "ucAy": 0.06366,
+      "altiAy": 0.17063099999999998,
+      "yilbasi": 0.22808499999999998,
+      "birYil": 0.433881,
+      "ucYil": 2.204103,
+      "besYil": 5.352357
     },
     "paraAkisi": {
-      "gunluk": -40494025.45,
+      "gunluk": -1484483.3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -29,
+      "gunluk": -9,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "EKF",
+        "fonAdi": "ASTRA PORTFÖY KİRA SERTİFİKASI KATILIM (TL) FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 0.135572,
+        "tedavuldekiPaySayisi": 12266239076,
+        "kisiSayisi": 5145,
+        "fonToplamDeger": 1662957406.36,
+        "gunlukGetiri": 0.00101895,
+        "paraGirisiCikisi": -1484483.3,
+        "yatirimciDegisimi": -9
+      },
       {
         "fonKodu": "EKF",
         "fonAdi": "ASTRA PORTFÖY KİRA SERTİFİKASI KATILIM (TL) FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00101999,
       "paraGirisiCikisi": -40494025.45,
       "yatirimciDegisimi": -29
+    },
+    {
+      "fonKodu": "EKF",
+      "fonAdi": "ASTRA PORTFÖY KİRA SERTİFİKASI KATILIM (TL) FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 0.135572,
+      "tedavuldekiPaySayisi": 12266239076,
+      "kisiSayisi": 5145,
+      "fonToplamDeger": 1662957406.36,
+      "gunlukGetiri": 0.00101895,
+      "paraGirisiCikisi": -1484483.3,
+      "yatirimciDegisimi": -9
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "EKF",
+      "fonAdi": "ASTRA PORTFÖY KİRA SERTİFİKASI KATILIM (TL) FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 0.135572,
+      "tedavuldekiPaySayisi": 12266239076,
+      "kisiSayisi": 5145,
+      "fonToplamDeger": 1662957406.36,
+      "gunlukGetiri": 0.00101895,
+      "paraGirisiCikisi": -1484483.3,
+      "yatirimciDegisimi": -9
+    },
     {
       "fonKodu": "EKF",
       "fonAdi": "ASTRA PORTFÖY KİRA SERTİFİKASI KATILIM (TL) FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

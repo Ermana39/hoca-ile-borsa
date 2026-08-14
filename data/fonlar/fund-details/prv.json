@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "PRV",
     "slug": "prv",
@@ -12,24 +12,24 @@
     "yonetici": "ASTRA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "astra-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.334007,
-    "tedavuldekiPaySayisi": 3013393060,
+    "fiyat": 1.335408,
+    "tedavuldekiPaySayisi": 3005327023,
     "kisiSayisi": 84,
-    "fonToplamDeger": 4019887983.58,
-    "gunlukGetiri": 0.00105057,
+    "fonToplamDeger": 4013338784.11,
+    "gunlukGetiri": 0.00105022,
     "getiriler": {
-      "birAy": 0.033053,
-      "ucAy": 0.103502,
-      "altiAy": 0.211162,
-      "yilbasi": 0.26873400000000003,
+      "birAy": 0.033262,
+      "ucAy": 0.10340500000000001,
+      "altiAy": 0.208833,
+      "yilbasi": 0.270067,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -11942525.58,
+      "gunluk": -10771450.34,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PRV",
+        "fonAdi": "ASTRA PORTFÖY PARA PİYASASI SERBEST FON",
+        "tarih": "2026-08-14",
+        "fiyat": 1.335408,
+        "tedavuldekiPaySayisi": 3005327023,
+        "kisiSayisi": 84,
+        "fonToplamDeger": 4013338784.11,
+        "gunlukGetiri": 0.00105022,
+        "paraGirisiCikisi": -10771450.34,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "PRV",
         "fonAdi": "ASTRA PORTFÖY PARA PİYASASI SERBEST FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00105057,
       "paraGirisiCikisi": -11942525.58,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PRV",
+      "fonAdi": "ASTRA PORTFÖY PARA PİYASASI SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.335408,
+      "tedavuldekiPaySayisi": 3005327023,
+      "kisiSayisi": 84,
+      "fonToplamDeger": 4013338784.11,
+      "gunlukGetiri": 0.00105022,
+      "paraGirisiCikisi": -10771450.34,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PRV",
+      "fonAdi": "ASTRA PORTFÖY PARA PİYASASI SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.335408,
+      "tedavuldekiPaySayisi": 3005327023,
+      "kisiSayisi": 84,
+      "fonToplamDeger": 4013338784.11,
+      "gunlukGetiri": 0.00105022,
+      "paraGirisiCikisi": -10771450.34,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "PRV",
       "fonAdi": "ASTRA PORTFÖY PARA PİYASASI SERBEST FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

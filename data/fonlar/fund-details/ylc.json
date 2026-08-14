@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "YLC",
     "slug": "ylc",
@@ -12,44 +12,56 @@
     "yonetici": "ATA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ata-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 3.878547,
-    "tedavuldekiPaySayisi": 20174762,
-    "kisiSayisi": 1366,
-    "fonToplamDeger": 78248761.94,
-    "gunlukGetiri": 0.00007658,
+    "fiyat": 3.895416,
+    "tedavuldekiPaySayisi": 20113553,
+    "kisiSayisi": 1356,
+    "fonToplamDeger": 78350657.73,
+    "gunlukGetiri": 0.00434931,
     "getiriler": {
-      "birAy": 0.025936,
-      "ucAy": 0.018716999999999998,
-      "altiAy": 0.072321,
-      "yilbasi": 0.277708,
-      "birYil": 0.340082,
-      "ucYil": 0.81095,
+      "birAy": 0.027404,
+      "ucAy": 0.020079,
+      "altiAy": 0.08241799999999999,
+      "yilbasi": 0.283265,
+      "birYil": 0.34703,
+      "ucYil": 0.818827,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -4196.59,
+      "gunluk": -238434.52,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": -10,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YLC",
+        "fonAdi": "ATA PORTFÖY TARIM VE GIDA DEĞİŞKEN FON",
+        "tarih": "2026-08-14",
+        "fiyat": 3.895416,
+        "tedavuldekiPaySayisi": 20113553,
+        "kisiSayisi": 1356,
+        "fonToplamDeger": 78350657.73,
+        "gunlukGetiri": 0.00434931,
+        "paraGirisiCikisi": -238434.52,
+        "yatirimciDegisimi": -10
+      },
       {
         "fonKodu": "YLC",
         "fonAdi": "ATA PORTFÖY TARIM VE GIDA DEĞİŞKEN FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00007658,
       "paraGirisiCikisi": -4196.59,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "YLC",
+      "fonAdi": "ATA PORTFÖY TARIM VE GIDA DEĞİŞKEN FON",
+      "tarih": "2026-08-14",
+      "fiyat": 3.895416,
+      "tedavuldekiPaySayisi": 20113553,
+      "kisiSayisi": 1356,
+      "fonToplamDeger": 78350657.73,
+      "gunlukGetiri": 0.00434931,
+      "paraGirisiCikisi": -238434.52,
+      "yatirimciDegisimi": -10
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YLC",
+      "fonAdi": "ATA PORTFÖY TARIM VE GIDA DEĞİŞKEN FON",
+      "tarih": "2026-08-14",
+      "fiyat": 3.895416,
+      "tedavuldekiPaySayisi": 20113553,
+      "kisiSayisi": 1356,
+      "fonToplamDeger": 78350657.73,
+      "gunlukGetiri": 0.00434931,
+      "paraGirisiCikisi": -238434.52,
+      "yatirimciDegisimi": -10
+    },
     {
       "fonKodu": "YLC",
       "fonAdi": "ATA PORTFÖY TARIM VE GIDA DEĞİŞKEN FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

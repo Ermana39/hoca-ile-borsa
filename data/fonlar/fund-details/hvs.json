@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "HVS",
     "slug": "hvs",
@@ -12,44 +12,56 @@
     "yonetici": "HSBC PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hsbc-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.584557,
-    "tedavuldekiPaySayisi": 1719078524,
-    "kisiSayisi": 10192,
-    "fonToplamDeger": 2723977588.4,
-    "gunlukGetiri": 0.0273474,
+    "fiyat": 1.586821,
+    "tedavuldekiPaySayisi": 1717531917,
+    "kisiSayisi": 10189,
+    "fonToplamDeger": 2725416131.3,
+    "gunlukGetiri": 0.00142879,
     "getiriler": {
-      "birAy": 0.008690999999999999,
-      "ucAy": -0.030746000000000002,
-      "altiAy": -0.007286,
-      "yilbasi": 0.2783,
-      "birYil": 0.259133,
-      "ucYil": 1.171066,
-      "besYil": 15.373619000000001
+      "birAy": 0.01872,
+      "ucAy": -0.021440999999999998,
+      "altiAy": -0.010345,
+      "yilbasi": 0.280127,
+      "birYil": 0.255609,
+      "ucYil": 1.1741679999999999,
+      "besYil": 15.27225
     },
     "paraAkisi": {
-      "gunluk": 3295523.62,
+      "gunluk": -2454188.47,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -7,
+      "gunluk": -3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HVS",
+        "fonAdi": "HSBC PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 1.586821,
+        "tedavuldekiPaySayisi": 1717531917,
+        "kisiSayisi": 10189,
+        "fonToplamDeger": 2725416131.3,
+        "gunlukGetiri": 0.00142879,
+        "paraGirisiCikisi": -2454188.47,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "HVS",
         "fonAdi": "HSBC PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.0273474,
       "paraGirisiCikisi": 3295523.62,
       "yatirimciDegisimi": -7
+    },
+    {
+      "fonKodu": "HVS",
+      "fonAdi": "HSBC PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.586821,
+      "tedavuldekiPaySayisi": 1717531917,
+      "kisiSayisi": 10189,
+      "fonToplamDeger": 2725416131.3,
+      "gunlukGetiri": 0.00142879,
+      "paraGirisiCikisi": -2454188.47,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HVS",
+      "fonAdi": "HSBC PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 1.586821,
+      "tedavuldekiPaySayisi": 1717531917,
+      "kisiSayisi": 10189,
+      "fonToplamDeger": 2725416131.3,
+      "gunlukGetiri": 0.00142879,
+      "paraGirisiCikisi": -2454188.47,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "HVS",
       "fonAdi": "HSBC PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

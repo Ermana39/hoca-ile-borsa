@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "FAK",
     "slug": "fak",
@@ -12,44 +12,56 @@
     "yonetici": "FONMAP PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "fonmap-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.299723,
-    "tedavuldekiPaySayisi": 17506853,
-    "kisiSayisi": 363,
-    "fonToplamDeger": 22754051.4,
-    "gunlukGetiri": 0.01410927,
+    "fiyat": 1.296514,
+    "tedavuldekiPaySayisi": 17459572,
+    "kisiSayisi": 360,
+    "fonToplamDeger": 22636586.51,
+    "gunlukGetiri": -0.00246899,
     "getiriler": {
-      "birAy": 0.06561499999999999,
-      "ucAy": -0.045968,
-      "altiAy": -0.10932700000000001,
-      "yilbasi": -0.134947,
+      "birAy": 0.080404,
+      "ucAy": -0.04954,
+      "altiAy": -0.10289,
+      "yilbasi": -0.13708299999999998,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -9183.84,
+      "gunluk": -61300.48,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
+      "gunluk": -3,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FAK",
+        "fonAdi": "FONMAP PORTFÖY ALTIN KATILIM FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 1.296514,
+        "tedavuldekiPaySayisi": 17459572,
+        "kisiSayisi": 360,
+        "fonToplamDeger": 22636586.51,
+        "gunlukGetiri": -0.00246899,
+        "paraGirisiCikisi": -61300.48,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "FAK",
         "fonAdi": "FONMAP PORTFÖY ALTIN KATILIM FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.01410927,
       "paraGirisiCikisi": -9183.84,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "FAK",
+      "fonAdi": "FONMAP PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.296514,
+      "tedavuldekiPaySayisi": 17459572,
+      "kisiSayisi": 360,
+      "fonToplamDeger": 22636586.51,
+      "gunlukGetiri": -0.00246899,
+      "paraGirisiCikisi": -61300.48,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FAK",
+      "fonAdi": "FONMAP PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.296514,
+      "tedavuldekiPaySayisi": 17459572,
+      "kisiSayisi": 360,
+      "fonToplamDeger": 22636586.51,
+      "gunlukGetiri": -0.00246899,
+      "paraGirisiCikisi": -61300.48,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "FAK",
       "fonAdi": "FONMAP PORTFÖY ALTIN KATILIM FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

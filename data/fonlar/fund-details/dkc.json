@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "DKC",
     "slug": "dkc",
@@ -12,17 +12,17 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 0.598905,
+    "fiyat": 0.600383,
     "tedavuldekiPaySayisi": 17586692,
     "kisiSayisi": 23,
-    "fonToplamDeger": 10532757.27,
-    "gunlukGetiri": 0.00140788,
+    "fonToplamDeger": 10558758.47,
+    "gunlukGetiri": 0.00246784,
     "getiriler": {
-      "birAy": 0.025741999999999998,
-      "ucAy": -0.068664,
-      "altiAy": -0.422203,
+      "birAy": 0.036976,
+      "ucAy": -0.067398,
+      "altiAy": -0.253111,
       "yilbasi": null,
       "birYil": null,
       "ucYil": null,
@@ -35,21 +35,33 @@
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DKC",
+        "fonAdi": "DENİZ PORTFÖY İKİNCİ SERBEST FON",
+        "tarih": "2026-08-14",
+        "fiyat": 0.600383,
+        "tedavuldekiPaySayisi": 17586692,
+        "kisiSayisi": 23,
+        "fonToplamDeger": 10558758.47,
+        "gunlukGetiri": 0.00246784,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "DKC",
         "fonAdi": "DENİZ PORTFÖY İKİNCİ SERBEST FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00140788,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "DKC",
+      "fonAdi": "DENİZ PORTFÖY İKİNCİ SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 0.600383,
+      "tedavuldekiPaySayisi": 17586692,
+      "kisiSayisi": 23,
+      "fonToplamDeger": 10558758.47,
+      "gunlukGetiri": 0.00246784,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DKC",
+      "fonAdi": "DENİZ PORTFÖY İKİNCİ SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 0.600383,
+      "tedavuldekiPaySayisi": 17586692,
+      "kisiSayisi": 23,
+      "fonToplamDeger": 10558758.47,
+      "gunlukGetiri": 0.00246784,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "DKC",
       "fonAdi": "DENİZ PORTFÖY İKİNCİ SERBEST FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

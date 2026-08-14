@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "NVC",
     "slug": "nvc",
@@ -12,44 +12,56 @@
     "yonetici": "NEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "neo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 3.744058,
+    "fiyat": 3.736288,
     "tedavuldekiPaySayisi": 25603134,
     "kisiSayisi": 89,
-    "fonToplamDeger": 95859630.45,
-    "gunlukGetiri": 0.01710055,
+    "fonToplamDeger": 95660684.52,
+    "gunlukGetiri": -0.00207529,
     "getiriler": {
-      "birAy": -0.00086,
-      "ucAy": -0.183366,
-      "altiAy": -0.123195,
-      "yilbasi": -0.061656,
-      "birYil": 0.12217399999999999,
-      "ucYil": 1.090666,
+      "birAy": 0.022240000000000003,
+      "ucAy": -0.181202,
+      "altiAy": -0.128028,
+      "yilbasi": -0.06360400000000001,
+      "birYil": 0.108805,
+      "ucYil": 1.086327,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -2194.02,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NVC",
+        "fonAdi": "NEO PORTFÖY VENTO SERBEST FON",
+        "tarih": "2026-08-14",
+        "fiyat": 3.736288,
+        "tedavuldekiPaySayisi": 25603134,
+        "kisiSayisi": 89,
+        "fonToplamDeger": 95660684.52,
+        "gunlukGetiri": -0.00207529,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "NVC",
         "fonAdi": "NEO PORTFÖY VENTO SERBEST FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.01710055,
       "paraGirisiCikisi": -2194.02,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "NVC",
+      "fonAdi": "NEO PORTFÖY VENTO SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 3.736288,
+      "tedavuldekiPaySayisi": 25603134,
+      "kisiSayisi": 89,
+      "fonToplamDeger": 95660684.52,
+      "gunlukGetiri": -0.00207529,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NVC",
+      "fonAdi": "NEO PORTFÖY VENTO SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 3.736288,
+      "tedavuldekiPaySayisi": 25603134,
+      "kisiSayisi": 89,
+      "fonToplamDeger": 95660684.52,
+      "gunlukGetiri": -0.00207529,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "NVC",
       "fonAdi": "NEO PORTFÖY VENTO SERBEST FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

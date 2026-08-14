@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "BRF",
     "slug": "brf",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.587737,
-    "tedavuldekiPaySayisi": 52597365,
-    "kisiSayisi": 1064,
-    "fonToplamDeger": 83510763.49,
-    "gunlukGetiri": 0.01463476,
+    "fiyat": 1.589702,
+    "tedavuldekiPaySayisi": 52396202,
+    "kisiSayisi": 1060,
+    "fonToplamDeger": 83294351.89,
+    "gunlukGetiri": 0.00123761,
     "getiriler": {
-      "birAy": 0.013944000000000002,
-      "ucAy": 0.025639,
-      "altiAy": 0.114402,
-      "yilbasi": 0.291862,
-      "birYil": 0.479832,
+      "birAy": 0.031562,
+      "ucAy": 0.022663000000000003,
+      "altiAy": 0.13058899999999998,
+      "yilbasi": 0.29346099999999997,
+      "birYil": 0.462267,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -953564.68,
+      "gunluk": -319789.22,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": -4,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BRF",
+        "fonAdi": "DENİZ PORTFÖY BİRİNCİ FON SEPETİ FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 1.589702,
+        "tedavuldekiPaySayisi": 52396202,
+        "kisiSayisi": 1060,
+        "fonToplamDeger": 83294351.89,
+        "gunlukGetiri": 0.00123761,
+        "paraGirisiCikisi": -319789.22,
+        "yatirimciDegisimi": -4
+      },
       {
         "fonKodu": "BRF",
         "fonAdi": "DENİZ PORTFÖY BİRİNCİ FON SEPETİ FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.01463476,
       "paraGirisiCikisi": -953564.68,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "BRF",
+      "fonAdi": "DENİZ PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.589702,
+      "tedavuldekiPaySayisi": 52396202,
+      "kisiSayisi": 1060,
+      "fonToplamDeger": 83294351.89,
+      "gunlukGetiri": 0.00123761,
+      "paraGirisiCikisi": -319789.22,
+      "yatirimciDegisimi": -4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BRF",
+      "fonAdi": "DENİZ PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.589702,
+      "tedavuldekiPaySayisi": 52396202,
+      "kisiSayisi": 1060,
+      "fonToplamDeger": 83294351.89,
+      "gunlukGetiri": 0.00123761,
+      "paraGirisiCikisi": -319789.22,
+      "yatirimciDegisimi": -4
+    },
     {
       "fonKodu": "BRF",
       "fonAdi": "DENİZ PORTFÖY BİRİNCİ FON SEPETİ FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

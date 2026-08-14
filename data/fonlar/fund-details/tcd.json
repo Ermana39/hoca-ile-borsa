@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "TCD",
     "slug": "tcd",
@@ -12,44 +12,56 @@
     "yonetici": "TACİRLER PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "tacirler-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 49.083402,
-    "tedavuldekiPaySayisi": 30195740,
-    "kisiSayisi": 11830,
-    "fonToplamDeger": 1482109658.18,
-    "gunlukGetiri": 0.02376873,
+    "fiyat": 49.220265,
+    "tedavuldekiPaySayisi": 30138655,
+    "kisiSayisi": 11817,
+    "fonToplamDeger": 1483432577.21,
+    "gunlukGetiri": 0.00278838,
     "getiriler": {
-      "birAy": 0.021477,
-      "ucAy": 0.031356,
-      "altiAy": 0.10631600000000001,
-      "yilbasi": 0.320453,
-      "birYil": 0.380923,
-      "ucYil": 0.973263,
-      "besYil": 9.425215
+      "birAy": 0.034998,
+      "ucAy": 0.040829000000000004,
+      "altiAy": 0.108516,
+      "yilbasi": 0.324135,
+      "birYil": 0.387928,
+      "ucYil": 0.9787649999999999,
+      "besYil": 9.33202
     },
     "paraAkisi": {
-      "gunluk": -3510592.16,
+      "gunluk": -2809738.83,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -20,
+      "gunluk": -13,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TCD",
+        "fonAdi": "TACİRLER PORTFÖY DEĞIŞKEN FON",
+        "tarih": "2026-08-14",
+        "fiyat": 49.220265,
+        "tedavuldekiPaySayisi": 30138655,
+        "kisiSayisi": 11817,
+        "fonToplamDeger": 1483432577.21,
+        "gunlukGetiri": 0.00278838,
+        "paraGirisiCikisi": -2809738.83,
+        "yatirimciDegisimi": -13
+      },
       {
         "fonKodu": "TCD",
         "fonAdi": "TACİRLER PORTFÖY DEĞIŞKEN FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.02376873,
       "paraGirisiCikisi": -3510592.16,
       "yatirimciDegisimi": -20
+    },
+    {
+      "fonKodu": "TCD",
+      "fonAdi": "TACİRLER PORTFÖY DEĞIŞKEN FON",
+      "tarih": "2026-08-14",
+      "fiyat": 49.220265,
+      "tedavuldekiPaySayisi": 30138655,
+      "kisiSayisi": 11817,
+      "fonToplamDeger": 1483432577.21,
+      "gunlukGetiri": 0.00278838,
+      "paraGirisiCikisi": -2809738.83,
+      "yatirimciDegisimi": -13
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TCD",
+      "fonAdi": "TACİRLER PORTFÖY DEĞIŞKEN FON",
+      "tarih": "2026-08-14",
+      "fiyat": 49.220265,
+      "tedavuldekiPaySayisi": 30138655,
+      "kisiSayisi": 11817,
+      "fonToplamDeger": 1483432577.21,
+      "gunlukGetiri": 0.00278838,
+      "paraGirisiCikisi": -2809738.83,
+      "yatirimciDegisimi": -13
+    },
     {
       "fonKodu": "TCD",
       "fonAdi": "TACİRLER PORTFÖY DEĞIŞKEN FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

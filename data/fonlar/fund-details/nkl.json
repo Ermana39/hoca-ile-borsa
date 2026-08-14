@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "NKL",
     "slug": "nkl",
@@ -12,13 +12,13 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 3.516727,
-    "tedavuldekiPaySayisi": 4372048605,
+    "fiyat": 3.520429,
+    "tedavuldekiPaySayisi": 4318003171,
     "kisiSayisi": 2254,
-    "fonToplamDeger": 15375301796.71,
-    "gunlukGetiri": 0.00106633,
+    "fonToplamDeger": 15201221429.38,
+    "gunlukGetiri": 0.00105268,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1272288594.33,
+      "gunluk": -190263113.17,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 16,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NKL",
+        "fonAdi": "AKTİF PORTFÖY KISA VADELİ SERBEST (TL) FON",
+        "tarih": "2026-08-14",
+        "fiyat": 3.520429,
+        "tedavuldekiPaySayisi": 4318003171,
+        "kisiSayisi": 2254,
+        "fonToplamDeger": 15201221429.38,
+        "gunlukGetiri": 0.00105268,
+        "paraGirisiCikisi": -190263113.17,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "NKL",
         "fonAdi": "AKTİF PORTFÖY KISA VADELİ SERBEST (TL) FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00106633,
       "paraGirisiCikisi": 1272288594.33,
       "yatirimciDegisimi": 16
+    },
+    {
+      "fonKodu": "NKL",
+      "fonAdi": "AKTİF PORTFÖY KISA VADELİ SERBEST (TL) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 3.520429,
+      "tedavuldekiPaySayisi": 4318003171,
+      "kisiSayisi": 2254,
+      "fonToplamDeger": 15201221429.38,
+      "gunlukGetiri": 0.00105268,
+      "paraGirisiCikisi": -190263113.17,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NKL",
+      "fonAdi": "AKTİF PORTFÖY KISA VADELİ SERBEST (TL) FON",
+      "tarih": "2026-08-14",
+      "fiyat": 3.520429,
+      "tedavuldekiPaySayisi": 4318003171,
+      "kisiSayisi": 2254,
+      "fonToplamDeger": 15201221429.38,
+      "gunlukGetiri": 0.00105268,
+      "paraGirisiCikisi": -190263113.17,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "NKL",
       "fonAdi": "AKTİF PORTFÖY KISA VADELİ SERBEST (TL) FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

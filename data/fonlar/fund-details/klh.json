@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "KLH",
     "slug": "klh",
@@ -12,44 +12,56 @@
     "yonetici": "ATLAS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "atlas-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 2.768913,
-    "tedavuldekiPaySayisi": 67001161,
-    "kisiSayisi": 2511,
-    "fonToplamDeger": 185520393.4,
-    "gunlukGetiri": 0.0129122,
+    "fiyat": 2.748074,
+    "tedavuldekiPaySayisi": 66300665,
+    "kisiSayisi": 2494,
+    "fonToplamDeger": 182199112.59,
+    "gunlukGetiri": -0.00752606,
     "getiriler": {
-      "birAy": -0.057855,
-      "ucAy": -0.163916,
-      "altiAy": 0.023839000000000003,
-      "yilbasi": 0.268005,
-      "birYil": 0.489274,
+      "birAy": -0.047502,
+      "ucAy": -0.15860200000000002,
+      "altiAy": 0.02572,
+      "yilbasi": 0.25846199999999997,
+      "birYil": 0.513201,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -237683.49,
+      "gunluk": -1925014.84,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -26,
+      "gunluk": -17,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KLH",
+        "fonAdi": "ATLAS PORTFÖY KATILIM HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-14",
+        "fiyat": 2.748074,
+        "tedavuldekiPaySayisi": 66300665,
+        "kisiSayisi": 2494,
+        "fonToplamDeger": 182199112.59,
+        "gunlukGetiri": -0.00752606,
+        "paraGirisiCikisi": -1925014.84,
+        "yatirimciDegisimi": -17
+      },
       {
         "fonKodu": "KLH",
         "fonAdi": "ATLAS PORTFÖY KATILIM HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.0129122,
       "paraGirisiCikisi": -237683.49,
       "yatirimciDegisimi": -26
+    },
+    {
+      "fonKodu": "KLH",
+      "fonAdi": "ATLAS PORTFÖY KATILIM HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 2.748074,
+      "tedavuldekiPaySayisi": 66300665,
+      "kisiSayisi": 2494,
+      "fonToplamDeger": 182199112.59,
+      "gunlukGetiri": -0.00752606,
+      "paraGirisiCikisi": -1925014.84,
+      "yatirimciDegisimi": -17
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KLH",
+      "fonAdi": "ATLAS PORTFÖY KATILIM HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-14",
+      "fiyat": 2.748074,
+      "tedavuldekiPaySayisi": 66300665,
+      "kisiSayisi": 2494,
+      "fonToplamDeger": 182199112.59,
+      "gunlukGetiri": -0.00752606,
+      "paraGirisiCikisi": -1925014.84,
+      "yatirimciDegisimi": -17
+    },
     {
       "fonKodu": "KLH",
       "fonAdi": "ATLAS PORTFÖY KATILIM HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

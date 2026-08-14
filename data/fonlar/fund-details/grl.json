@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "GRL",
     "slug": "grl",
@@ -12,44 +12,56 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.799777,
-    "tedavuldekiPaySayisi": 317297043,
-    "kisiSayisi": 287,
-    "fonToplamDeger": 571064041.24,
-    "gunlukGetiri": 0.01386862,
+    "fiyat": 1.800993,
+    "tedavuldekiPaySayisi": 317159236,
+    "kisiSayisi": 286,
+    "fonToplamDeger": 571201502.09,
+    "gunlukGetiri": 0.00067564,
     "getiriler": {
-      "birAy": 0.030198999999999997,
-      "ucAy": 0.02713,
-      "altiAy": 0.086882,
-      "yilbasi": 0.200497,
-      "birYil": 0.36039299999999996,
+      "birAy": 0.042728999999999996,
+      "ucAy": 0.027909000000000003,
+      "altiAy": 0.079138,
+      "yilbasi": 0.20130800000000001,
+      "birYil": 0.361298,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -15829.04,
+      "gunluk": -248189.44,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GRL",
+        "fonAdi": "QNB PORTFÖY AGRESİF SERBEST FON",
+        "tarih": "2026-08-14",
+        "fiyat": 1.800993,
+        "tedavuldekiPaySayisi": 317159236,
+        "kisiSayisi": 286,
+        "fonToplamDeger": 571201502.09,
+        "gunlukGetiri": 0.00067564,
+        "paraGirisiCikisi": -248189.44,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "GRL",
         "fonAdi": "QNB PORTFÖY AGRESİF SERBEST FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.01386862,
       "paraGirisiCikisi": -15829.04,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GRL",
+      "fonAdi": "QNB PORTFÖY AGRESİF SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.800993,
+      "tedavuldekiPaySayisi": 317159236,
+      "kisiSayisi": 286,
+      "fonToplamDeger": 571201502.09,
+      "gunlukGetiri": 0.00067564,
+      "paraGirisiCikisi": -248189.44,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GRL",
+      "fonAdi": "QNB PORTFÖY AGRESİF SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 1.800993,
+      "tedavuldekiPaySayisi": 317159236,
+      "kisiSayisi": 286,
+      "fonToplamDeger": 571201502.09,
+      "gunlukGetiri": 0.00067564,
+      "paraGirisiCikisi": -248189.44,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "GRL",
       "fonAdi": "QNB PORTFÖY AGRESİF SERBEST FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

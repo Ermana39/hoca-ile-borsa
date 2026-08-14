@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "TCB",
     "slug": "tcb",
@@ -12,44 +12,56 @@
     "yonetici": "TACİRLER PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "tacirler-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 0.232829,
-    "tedavuldekiPaySayisi": 13105285107,
-    "kisiSayisi": 4688,
-    "fonToplamDeger": 3051287670.09,
-    "gunlukGetiri": 0.00097592,
+    "fiyat": 0.233093,
+    "tedavuldekiPaySayisi": 13136390001,
+    "kisiSayisi": 4693,
+    "fonToplamDeger": 3062003631.29,
+    "gunlukGetiri": 0.00113388,
     "getiriler": {
-      "birAy": 0.034226,
-      "ucAy": 0.103643,
-      "altiAy": 0.20948899999999998,
-      "yilbasi": 0.261604,
-      "birYil": 0.471273,
-      "ucYil": 2.533387,
-      "besYil": 3.778332
+      "birAy": 0.034286,
+      "ucAy": 0.103597,
+      "altiAy": 0.207267,
+      "yilbasi": 0.263034,
+      "birYil": 0.471352,
+      "ucYil": 2.537393,
+      "besYil": 3.7746370000000002
     },
     "paraAkisi": {
-      "gunluk": 4723502.74,
+      "gunluk": 7250333.06,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
+      "gunluk": 5,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TCB",
+        "fonAdi": "TACİRLER PORTFÖY PARA PİYASASI FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 0.233093,
+        "tedavuldekiPaySayisi": 13136390001,
+        "kisiSayisi": 4693,
+        "fonToplamDeger": 3062003631.29,
+        "gunlukGetiri": 0.00113388,
+        "paraGirisiCikisi": 7250333.06,
+        "yatirimciDegisimi": 5
+      },
       {
         "fonKodu": "TCB",
         "fonAdi": "TACİRLER PORTFÖY PARA PİYASASI FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00097592,
       "paraGirisiCikisi": 4723502.74,
       "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "TCB",
+      "fonAdi": "TACİRLER PORTFÖY PARA PİYASASI FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 0.233093,
+      "tedavuldekiPaySayisi": 13136390001,
+      "kisiSayisi": 4693,
+      "fonToplamDeger": 3062003631.29,
+      "gunlukGetiri": 0.00113388,
+      "paraGirisiCikisi": 7250333.06,
+      "yatirimciDegisimi": 5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TCB",
+      "fonAdi": "TACİRLER PORTFÖY PARA PİYASASI FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 0.233093,
+      "tedavuldekiPaySayisi": 13136390001,
+      "kisiSayisi": 4693,
+      "fonToplamDeger": 3062003631.29,
+      "gunlukGetiri": 0.00113388,
+      "paraGirisiCikisi": 7250333.06,
+      "yatirimciDegisimi": 5
+    },
     {
       "fonKodu": "TCB",
       "fonAdi": "TACİRLER PORTFÖY PARA PİYASASI FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

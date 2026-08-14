@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "SPP",
     "slug": "spp",
@@ -12,44 +12,56 @@
     "yonetici": "SPARTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "sparta-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.583758,
-    "tedavuldekiPaySayisi": 381551503,
-    "kisiSayisi": 759,
-    "fonToplamDeger": 604285141.99,
-    "gunlukGetiri": 0.00110556,
+    "fiyat": 1.585468,
+    "tedavuldekiPaySayisi": 356785651,
+    "kisiSayisi": 760,
+    "fonToplamDeger": 565672122.33,
+    "gunlukGetiri": 0.00107971,
     "getiriler": {
-      "birAy": 0.03556,
-      "ucAy": 0.110225,
-      "altiAy": 0.227885,
-      "yilbasi": 0.275159,
-      "birYil": 0.495103,
+      "birAy": 0.035509,
+      "ucAy": 0.110014,
+      "altiAy": 0.225382,
+      "yilbasi": 0.276536,
+      "birYil": 0.49511000000000005,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 33339889.21,
+      "gunluk": -39265465.84,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 4,
+      "gunluk": 1,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SPP",
+        "fonAdi": "SPARTA PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 1.585468,
+        "tedavuldekiPaySayisi": 356785651,
+        "kisiSayisi": 760,
+        "fonToplamDeger": 565672122.33,
+        "gunlukGetiri": 0.00107971,
+        "paraGirisiCikisi": -39265465.84,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "SPP",
         "fonAdi": "SPARTA PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00110556,
       "paraGirisiCikisi": 33339889.21,
       "yatirimciDegisimi": 4
+    },
+    {
+      "fonKodu": "SPP",
+      "fonAdi": "SPARTA PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.585468,
+      "tedavuldekiPaySayisi": 356785651,
+      "kisiSayisi": 760,
+      "fonToplamDeger": 565672122.33,
+      "gunlukGetiri": 0.00107971,
+      "paraGirisiCikisi": -39265465.84,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SPP",
+      "fonAdi": "SPARTA PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.585468,
+      "tedavuldekiPaySayisi": 356785651,
+      "kisiSayisi": 760,
+      "fonToplamDeger": 565672122.33,
+      "gunlukGetiri": 0.00107971,
+      "paraGirisiCikisi": -39265465.84,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "SPP",
       "fonAdi": "SPARTA PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

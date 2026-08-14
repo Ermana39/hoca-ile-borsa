@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "BAI",
     "slug": "bai",
@@ -12,15 +12,15 @@
     "yonetici": "BV PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "bv-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 1.091178,
-    "tedavuldekiPaySayisi": 40779577,
-    "kisiSayisi": 65,
-    "fonToplamDeger": 44497793.41,
-    "gunlukGetiri": 0.00828488,
+    "fiyat": 1.086056,
+    "tedavuldekiPaySayisi": 40747353,
+    "kisiSayisi": 67,
+    "fonToplamDeger": 44253891.47,
+    "gunlukGetiri": -0.00469401,
     "getiriler": {
-      "birAy": 0.08834,
+      "birAy": 0.093302,
       "ucAy": null,
       "altiAy": null,
       "yilbasi": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1770556.33,
+      "gunluk": -34997.07,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": 2,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BAI",
+        "fonAdi": "BV PORTFÖY ALTIN KATILIM FONU",
+        "tarih": "2026-08-14",
+        "fiyat": 1.086056,
+        "tedavuldekiPaySayisi": 40747353,
+        "kisiSayisi": 67,
+        "fonToplamDeger": 44253891.47,
+        "gunlukGetiri": -0.00469401,
+        "paraGirisiCikisi": -34997.07,
+        "yatirimciDegisimi": 2
+      },
       {
         "fonKodu": "BAI",
         "fonAdi": "BV PORTFÖY ALTIN KATILIM FONU",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00828488,
       "paraGirisiCikisi": 1770556.33,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "BAI",
+      "fonAdi": "BV PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.086056,
+      "tedavuldekiPaySayisi": 40747353,
+      "kisiSayisi": 67,
+      "fonToplamDeger": 44253891.47,
+      "gunlukGetiri": -0.00469401,
+      "paraGirisiCikisi": -34997.07,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BAI",
+      "fonAdi": "BV PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-14",
+      "fiyat": 1.086056,
+      "tedavuldekiPaySayisi": 40747353,
+      "kisiSayisi": 67,
+      "fonToplamDeger": 44253891.47,
+      "gunlukGetiri": -0.00469401,
+      "paraGirisiCikisi": -34997.07,
+      "yatirimciDegisimi": 2
+    },
     {
       "fonKodu": "BAI",
       "fonAdi": "BV PORTFÖY ALTIN KATILIM FONU",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

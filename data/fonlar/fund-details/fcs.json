@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-13T12:17:23.721Z",
-  "sonIslemTarihi": "2026-08-13",
+  "generatedAt": "2026-08-14T07:02:55.538Z",
+  "sonIslemTarihi": "2026-08-14",
   "fund": {
     "kod": "FCS",
     "slug": "fcs",
@@ -12,13 +12,13 @@
     "yonetici": "FİBA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "fiba-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-13",
+    "tarih": "2026-08-14",
     "aktifMi": true,
-    "fiyat": 2.311952,
+    "fiyat": 2.314555,
     "tedavuldekiPaySayisi": 1146356729,
     "kisiSayisi": 200,
-    "fonToplamDeger": 2650321308.17,
-    "gunlukGetiri": 0.00112672,
+    "fonToplamDeger": 2653305560.04,
+    "gunlukGetiri": 0.00112589,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 150170.53,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 4,
+    "tarihselGunSayisi": 5,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FCS",
+        "fonAdi": "FİBA PORTFÖY İKİNCİ SERBEST FON",
+        "tarih": "2026-08-14",
+        "fiyat": 2.314555,
+        "tedavuldekiPaySayisi": 1146356729,
+        "kisiSayisi": 200,
+        "fonToplamDeger": 2653305560.04,
+        "gunlukGetiri": 0.00112589,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "FCS",
         "fonAdi": "FİBA PORTFÖY İKİNCİ SERBEST FON",
@@ -148,9 +160,33 @@
       "gunlukGetiri": 0.00112672,
       "paraGirisiCikisi": 150170.53,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "FCS",
+      "fonAdi": "FİBA PORTFÖY İKİNCİ SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 2.314555,
+      "tedavuldekiPaySayisi": 1146356729,
+      "kisiSayisi": 200,
+      "fonToplamDeger": 2653305560.04,
+      "gunlukGetiri": 0.00112589,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FCS",
+      "fonAdi": "FİBA PORTFÖY İKİNCİ SERBEST FON",
+      "tarih": "2026-08-14",
+      "fiyat": 2.314555,
+      "tedavuldekiPaySayisi": 1146356729,
+      "kisiSayisi": 200,
+      "fonToplamDeger": 2653305560.04,
+      "gunlukGetiri": 0.00112589,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "FCS",
       "fonAdi": "FİBA PORTFÖY İKİNCİ SERBEST FON",
@@ -203,7 +239,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
