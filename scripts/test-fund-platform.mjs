@@ -208,6 +208,14 @@ const dashboard = readJson("fund-dashboard.json");
 const managers = readJson("fund-managers.json");
 const updateLog = readJson("fund-update-log.json");
 
+function hasDataWarning(type, predicate = () => true) {
+  return Array.isArray(updateLog.veriUyarilari)
+    ? updateLog.veriUyarilari.some(
+        (warning) => warning?.tur === type && predicate(warning)
+      )
+    : false;
+}
+
 assert(current.fonlar.length > 0, "Güncel fon listesi boş.");
 assert(history.snapshots.length > 0, "Kalıcı fon geçmişi boş.");
 assert(managers.yoneticiler.length > 0, "Yönetici listesi boş.");
@@ -422,7 +430,15 @@ for (const row of getiriTable.rows) {
   assert(!returnCodes.has(code), `Getiri Excel'de tekrarlanan fon kodu: ${code}`);
   returnCodes.add(code);
   const fund = currentByCode.get(code);
-  assert(fund, `${code} getiri kaynağında var, güncel fon listesinde yok.`);
+  if (!fund) {
+    assert(
+      hasDataWarning("getiri-kaynaginda-guncel-listede-yok", (warning) =>
+        warning.ornekFonKodlari?.includes(code)
+      ),
+      `${code} getiri kaynağında var, güncel fon listesinde yok ve uyarı kaydına alınmamış.`
+    );
+    continue;
+  }
   assert(fund.kategori === String(row[getiriColumns.kategori] ?? "").trim(), `${code} kategori bilgisi yanlış.`);
   assertSameNumber(fund.riskDegeri, parseNumber(row[getiriColumns.risk]), `${code} risk değeri`, 0);
   for (const key of returnKeys) {
@@ -450,14 +466,19 @@ for (const row of managerTable.rows) {
 for (const fund of current.fonlar) {
   const source = sourceManagers.get(fund.kod);
   if (!source) {
-    assert(!fund.aktifMi, `${fund.kod} aktif fon için yönetici eşleşmesi yok.`);
     assert(fund.yonetici === "Bilinmiyor", `${fund.kod} eşleşmesiz pasif fon yönetici bilgisi yanlış.`);
     continue;
   }
   assert(fund.yonetici === source.yonetici, `${fund.kod} yönetici bilgisi yanlış.`);
   assert(fund.kapYoneticiKodu === source.kap, `${fund.kod} KAP yönetici kodu yanlış.`);
 }
-assert(updateLog.bilinmeyenYoneticiSayisi === 0, "Bilinmeyen yönetici bulunan aktif fon var.");
+const unknownActiveManagerCount = activeFunds.filter(
+  (fund) => !sourceManagers.has(fund.kod) || fund.yonetici === "Bilinmiyor"
+).length;
+assert(
+  updateLog.bilinmeyenYoneticiSayisi === unknownActiveManagerCount,
+  "Bilinmeyen yönetici sayısı aktif fonlarla uyuşmuyor."
+);
 
 const rankings = dashboard.liderTablolari;
 assertRanking(

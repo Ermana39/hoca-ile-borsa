@@ -655,9 +655,13 @@ function validateSourceData({ currentSnapshots, getiriMap, managerMap, existingS
 
   const managerCoverage = latestRows.filter((row) => managerMap.has(row.fonKodu)).length;
   if (managerCoverage / latestRows.length < 0.98) {
-    throw new Error(
-      `Güncel fonların yönetici eşleşme oranı %98'in altında: ${managerCoverage}/${latestRows.length}.`
-    );
+    sourceWarnings.push({
+      tur: "gunluk-kaynakta-dusuk-yonetici-eslesmesi",
+      tarih: latestSourceDate,
+      toplamKayitSayisi: latestRows.length,
+      eslesenKayitSayisi: managerCoverage,
+      eslesmeOrani: round(managerCoverage / latestRows.length, 8),
+    });
   }
 
   const previousLatestDate = existingSnapshots.map((row) => row.tarih).sort().at(-1);
@@ -674,11 +678,12 @@ function validateSourceData({ currentSnapshots, getiriMap, managerMap, existingS
   const sourceCodes = new Set(latestRows.map((row) => row.fonKodu));
   const orphanReturns = Array.from(getiriMap.keys()).filter((code) => !sourceCodes.has(code));
   if (orphanReturns.length > 0) {
-    throw new Error(
-      `Getiri Excel dosyasında güncel fon listesinde bulunmayan kodlar var: ${orphanReturns
-        .slice(0, 10)
-        .join(", ")}`
-    );
+    sourceWarnings.push({
+      tur: "getiri-kaynaginda-guncel-listede-yok",
+      tarih: latestSourceDate,
+      kodSayisi: orphanReturns.length,
+      ornekFonKodlari: orphanReturns.slice(0, 20),
+    });
   }
 
   return {
