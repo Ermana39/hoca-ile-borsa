@@ -486,8 +486,12 @@ export default function HomePage() {
 
             {gosterilenHaberler.length > 0 ? (
               <div className="grid grid-cols-1 gap-3 p-4 lg:grid-cols-2 md:p-5">
-                {gosterilenHaberler.map((item) => (
-                  <HaberKart key={item.id || item.href} item={item} />
+                {gosterilenHaberler.map((item, index) => (
+                  <HaberKart
+                    key={item.id || item.href}
+                    item={item}
+                    eager={index < ANA_SAYFA_HABER_LIMIT}
+                  />
                 ))}
               </div>
             ) : (

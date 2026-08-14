@@ -2,14 +2,34 @@ import Link from "@/components/NoPrefetchLink";
 import type { NewsItem } from "@/lib/haberler";
 import { getKategori } from "@/lib/haber-kategorileri";
 
-export default function HaberKart({ item }: { item: NewsItem }) {
+function haberGorselYolu(item: NewsItem) {
+  const gorsel = item.image?.trim();
+
+  if (!gorsel) {
+    return item.id ? `/haber${item.id}.png` : "/placeholder.png";
+  }
+
+  if (
+    gorsel.startsWith("/") ||
+    gorsel.startsWith("http://") ||
+    gorsel.startsWith("https://") ||
+    gorsel.startsWith("data:")
+  ) {
+    return gorsel;
+  }
+
+  return `/${gorsel.replace(/^\.?\//, "")}`;
+}
+
+export default function HaberKart({
+  item,
+  eager = false,
+}: {
+  item: NewsItem;
+  eager?: boolean;
+}) {
   const kategori = item.category ? getKategori(item.category) : undefined;
-  const haberGorseli =
-    item.image && item.image.trim() !== ""
-      ? item.image
-      : item.id
-        ? `/haber${item.id}.png`
-        : "/placeholder.png";
+  const haberGorseli = haberGorselYolu(item);
 
   return (
     <Link
@@ -23,9 +43,9 @@ export default function HaberKart({ item }: { item: NewsItem }) {
         <img
           src={haberGorseli}
           alt={item.alt || item.title}
-          loading="lazy"
+          loading={eager ? "eager" : "lazy"}
           decoding="async"
-          fetchPriority="low"
+          fetchPriority="auto"
           width={160}
           height={90}
           className="h-full w-full object-cover transition duration-500 group-hover:scale-[1.04]"
