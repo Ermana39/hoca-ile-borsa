@@ -270,6 +270,7 @@ function BilgiNotu() {
 function ozetSatirlari(veri: HalkaArzVeri) {
   const o = veri.ozet;
   return [
+    { label: "Başvuru Tarihi", value: o.basvuruTarihi },
     { label: "Halka Arz Tarihi", value: o.halkaArzTarihi },
     { label: "Halka Arz Fiyatı / Aralığı", value: o.fiyatAralik },
     { label: "Dağıtım Yöntemi", value: o.dagitimYontemi },
