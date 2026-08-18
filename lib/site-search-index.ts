@@ -52,7 +52,7 @@ function getCompanyItems(): SiteSearchItem[] {
       id: `sirket:${code}`,
       type: "sirket",
       title: hisse.sirketAdi,
-      href: `/hisse/${hisse.kod.toLocaleLowerCase("tr-TR")}`,
+      href: `/hisse/${hisse.kod.toLowerCase()}`,
       eyebrow: code,
       code,
       description: `${code} hisse künyesi, şirket bilgileri, KAP haberleri ve sermaye geçmişi.`,

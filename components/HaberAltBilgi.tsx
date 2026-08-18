@@ -161,6 +161,36 @@ function relatedItems(href: string, kategori?: string): RelatedContentItem[] {
   return Array.from(items.values()).slice(0, 6);
 }
 
+function hisseBazliHaberler(href: string, limit = 6): RelatedContentItem[] {
+  const ilgiliHisseler = getHaberIlgiliHisseler(href).map((kod) =>
+    kod.toLocaleUpperCase("tr-TR")
+  );
+  if (ilgiliHisseler.length === 0) return [];
+
+  const hisseSeti = new Set(ilgiliHisseler);
+
+  return getAllNews()
+    .filter((item) => item.href !== href)
+    .filter((item) =>
+      (item.ilgiliHisseler ?? []).some((kod) =>
+        hisseSeti.has(kod.toLocaleUpperCase("tr-TR"))
+      )
+    )
+    .slice(0, limit)
+    .map((item) => ({
+      title: item.title,
+      href: item.href,
+      description: item.description,
+      type: item.publishedAt
+        ? new Date(item.publishedAt).toLocaleDateString("tr-TR", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })
+        : "Geçmiş haber",
+    }));
+}
+
 function ctaMetni(kategori?: string, href?: string) {
   if (kategori === "kap-bildirimleri" || href?.includes("kap")) {
     return {
@@ -190,6 +220,7 @@ export default function HaberAltBilgi({ href }: { href: string }) {
   const slug = getHaberKategorisi(href);
   const ilgiliHisseler = getHaberIlgiliHisseler(href);
   const ilgiliVar = getIlgiliHaberler(href, 4).length > 0;
+  const hisseHaberleri = hisseBazliHaberler(href);
   const cta = ctaMetni(slug, href);
 
   return (
@@ -239,6 +270,17 @@ export default function HaberAltBilgi({ href }: { href: string }) {
         title="Bu haberle ilgili diğer içerikler"
         items={relatedItems(href, slug)}
       />
+
+      {hisseHaberleri.length > 0 && (
+        <RelatedContent
+          title={
+            ilgiliHisseler.length === 1
+              ? `${ilgiliHisseler[0]} ile ilgili geçmiş haberler`
+              : "İlgili hisselerin geçmiş haberleri"
+          }
+          items={hisseHaberleri}
+        />
+      )}
 
       {ilgiliVar && <HaberIlgiliHaberler href={href} />}
 

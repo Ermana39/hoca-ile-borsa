@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import Link from "@/components/NoPrefetchLink";
 import {
-  halkaArzKapanisTarihi,
   halkaArzSonuclari as baseHalkaArzVerileri,
 } from "@/data/halka-arz-sonuclari";
 import {
@@ -16,6 +15,8 @@ const canonical = "https://www.hocaileborsa.com/halka-arz/tavan-serisi";
 const title = "2026 Halka Arz Tavan Serisi: Güncel Performans Takibi";
 const description =
   "2026 halka arzlarının gerçekleşen tavan serisi ve performans tablosu: arz fiyatı, gün sonu kapanışı, getiri, marj ve BIST 100 karşılaştırması.";
+
+const tavanSerisiKapanisTarihi = "2026-08-18";
 
 export const metadata: Metadata = {
   title: { absolute: title },
@@ -45,36 +46,47 @@ export const metadata: Metadata = {
 };
 
 const guncelHalkaArzKapanislari: Record<string, string> = {
-  QUICK: "73.95",
-  KARCL: "87.00",
-  MASFN: "43.38",
-  ALBTN: "26.50",
-  METEN: "22.74",
-  SARAE: "75.50",
-  SSAAT: "39.02",
-  ISVEA: "54.95",
-  EKIM: "17.35",
-  GOLDA: "11.86",
-  ORZAX: "99.60",
-  SOHOE: "10.52",
-  BETAE: "101.90",
-  EKDMR: "46.42",
-  AAGYO: "12.64",
-  MCARD: "160.20",
-  LXGYO: "10.83",
-  GENKM: "11.02",
-  SVGYO: "15.23",
-  EMPAE: "77.55",
-  ATATR: "15.72",
-  BESTE: "36.30",
-  AKHAN: "40.28",
-  NETCD: "129.20",
-  UCAYM: "28.44",
-  ZGYO: "37.30",
-  FRMPL: "38.00",
-  MEYSU: "12.20",
-  ARFYE: "24.02",
+  CITAS: "81.05",
+  QUICK: "74.05",
+  KARCL: "95.70",
+  MASFN: "45.28",
+  ALBTN: "26.68",
+  METEN: "25.00",
+  SARAE: "75.35",
+  SSAAT: "37.14",
+  ISVEA: "60.40",
+  EKIM: "17.05",
+  GOLDA: "11.50",
+  ORZAX: "101.60",
+  SOHOE: "10.39",
+  BETAE: "98.50",
+  EKDMR: "46.50",
+  AAGYO: "12.45",
+  MCARD: "161.90",
+  LXGYO: "10.51",
+  GENKM: "10.44",
+  SVGYO: "16.75",
+  EMPAE: "73.60",
+  ATATR: "15.39",
+  BESTE: "33.56",
+  AKHAN: "40.16",
+  NETCD: "127.20",
+  UCAYM: "26.46",
+  ZGYO: "33.58",
+  FRMPL: "36.10",
+  MEYSU: "11.62",
+  ARFYE: "21.62",
 };
+
+const citasHalkaArzVerisi = {
+  hisse: "CITAS",
+  islemTarihi: "18.08.2026",
+  katilimciSayisi: "556.728",
+  dagitimSekli: "BİREYSELE %40",
+  arzFiyati: "73.70",
+  guncelFiyat: "81.05",
+  konsorsiyum: "TERA",
+} as (typeof baseHalkaArzVerileri)[number];
 
 const quickHalkaArzVerisi = {
   hisse: "QUICK",
@@ -127,6 +139,7 @@ const metenHalkaArzVerisi = {
 } as (typeof baseHalkaArzVerileri)[number];
 
 const halkaArzVerileri = [
+  citasHalkaArzVerisi,
   quickHalkaArzVerisi,
   karclHalkaArzVerisi,
   masfnHalkaArzVerisi,
@@ -143,7 +156,10 @@ const halkaArzVerileri = [
     ...guncelItem,
     hisseGetirisi,
     marj: yuzdeMetni(hisseGetirisi, 0),
-    bistKarsilastirmasi: getHalkaArzBistKarsilastirmasi(guncelItem),
+    bistKarsilastirmasi: getHalkaArzBistKarsilastirmasi(
+      guncelItem,
+      tavanSerisiKapanisTarihi
+    ),
     detayHedefi: getHisseIcerikHedefi(guncelItem.hisse),
   };
 });
@@ -385,7 +401,7 @@ export default function HalkaArzTavanSerisiPage() {
           </p>
 
           <div className="mt-5 rounded-2xl border border-blue-200 bg-blue-50 p-4 text-sm font-medium leading-7 text-blue-900">
-            Halka arz kapanış fiyatları {isoTarihMetni(halkaArzKapanisTarihi)}
+            Halka arz kapanış fiyatları {isoTarihMetni(tavanSerisiKapanisTarihi)}
             {" "}seansına aittir. Marj otomatik hesaplanır. BIST 100 bitiş seviyesi
             günlük borsa özetinden; arşiv öncesi başlangıç seviyeleri kayıtlı tarihsel
             kapanışlardan alınır.

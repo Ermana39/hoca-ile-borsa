@@ -27,6 +27,15 @@ export function getHisseIcerikHedefi(
   const kod = sembol.trim().toLocaleUpperCase("tr-TR");
   if (!kod) return undefined;
 
+  if (hisseVarMi(kod)) {
+    return {
+      href: `/hisse/${kod.toLowerCase()}`,
+      etiket: `${kod} hisse künye sayfasını aç`,
+      baslik: "Hisse künye sayfasını aç",
+      tur: "hisse-kunye",
+    };
+  }
+
   const onayliIzahnameYolu = onayliIzahnameYollari.get(kod);
   if (onayliIzahnameYolu) {
     return {
@@ -34,15 +43,6 @@ export function getHisseIcerikHedefi(
       etiket: `${kod} onaylı izahname sayfasını aç`,
       baslik: "Onaylı izahnameyi aç",
       tur: "onayli-izahname",
-    };
-  }
-
-  if (hisseVarMi(kod)) {
-    return {
-      href: `/hisse/${kod.toLocaleLowerCase("tr-TR")}`,
-      etiket: `${kod} hisse künye sayfasını aç`,
-      baslik: "Hisse künye sayfasını aç",
-      tur: "hisse-kunye",
     };
   }
 

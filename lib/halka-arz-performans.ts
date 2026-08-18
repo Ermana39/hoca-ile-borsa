@@ -81,16 +81,17 @@ function oncekiOzet(
 }
 
 export function getHalkaArzBistKarsilastirmasi(
-  sonuc: HalkaArzSonucu
+  sonuc: HalkaArzSonucu,
+  bitisTarihi = halkaArzKapanisTarihi
 ): HalkaArzBistKarsilastirmasi | undefined {
   const islemTarihi = islemTarihiniIsoYap(sonuc.islemTarihi);
-  if (!islemTarihi || halkaArzKapanisTarihi < islemTarihi) return undefined;
+  if (!islemTarihi || bitisTarihi < islemTarihi) return undefined;
 
   const ozetler = getTumGunlukOzetler();
   const gunlukOzetBaslangici = oncekiOzet(ozetler, islemTarihi);
   const tarihselBaslangic = halkaArzBistBaslangiclari[islemTarihi];
   const bitis = ozetler.find(
-    (ozet) => ozet.isoTarih === halkaArzKapanisTarihi
+    (ozet) => ozet.isoTarih === bitisTarihi
   );
   if ((!gunlukOzetBaslangici && !tarihselBaslangic) || !bitis) {
     return undefined;

@@ -8,9 +8,9 @@ import { seoAciklamasi } from "@/lib/seo-metadata";
 const canonical = "https://www.hocaileborsa.com/halka-arz/takvim";
 const title = "Halka Arz Takvimi 2026 | Güncel Halka Arzlar";
 const description =
-  "14 Ağustos 2026 güncel halka arz takvimi: CITAS 18 Ağustos'ta işlem görmeye başlayacak; VEYAS, KPEKS ve TKNKA için dağıtım sonuçları bekleniyor.";
-const sonGuncellemeIso = "2026-08-14";
-const sonGuncellemeMetni = "14 Ağustos 2026";
+  "18 Ağustos 2026 güncel halka arz takvimi: TKNKA, VEYAS ve KPEKS 20 Ağustos Perşembe günü Borsa İstanbul'da işlem görmeye başlayacak.";
+const sonGuncellemeIso = "2026-08-18";
+const sonGuncellemeMetni = "18 Ağustos 2026";
 
 export const metadata: Metadata = {
   title: { absolute: title },
@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     "VEYAS halka arz",
     "KPEKS halka arz",
     "TKNKA halka arz",
+    "20 Ağustos 2026 halka arz",
     "10 Ağustos 2026 halka arz",
     "12 Ağustos 2026 halka arz",
     "CITAS işlem tarihi",
@@ -72,30 +73,30 @@ type IzahnameBekleyenSirket = {
 };
 
 const dagitimSonucuBeklenenTakvimi: TakvimSirketi[] = [
-  {
-    slug: "turker-vangolu-enerji-yatirim",
-    tarih: "12-13-14 Ağustos 2026 talep toplama",
-    durum: "Dağıtım sonuçları bekleniyor",
-  },
-  {
-    slug: "kapeks-kimya",
-    tarih: "12-13-14 Ağustos 2026 talep toplama",
-    durum: "Dağıtım sonuçları bekleniyor",
-  },
-  {
-    slug: "teknika-plast-teknik-kalip-plastik-san-ve-tic",
-    tarih: "12-13-14 Ağustos 2026 talep toplama",
-    durum: "Dağıtım sonuçları bekleniyor",
-  },
 ];
 
 const talepToplamaTakvimi: TakvimSirketi[] = [];
 
 const islemBaslangiciTakvimi: TakvimSirketi[] = [
   {
+    slug: "turker-vangolu-enerji-yatirim",
+    tarih: "20 Ağustos 2026 Perşembe",
+    durum: "İşleme başlayacak",
+  },
+  {
+    slug: "kapeks-kimya",
+    tarih: "20 Ağustos 2026 Perşembe",
+    durum: "İşleme başlayacak",
+  },
+  {
+    slug: "teknika-plast-teknik-kalip-plastik-san-ve-tic",
+    tarih: "20 Ağustos 2026 Perşembe",
+    durum: "İşleme başlayacak",
+  },
+  {
     slug: "citlekci-magazacilik",
     tarih: "18 Ağustos 2026 Salı",
-    durum: "İşleme başlayacak",
+    durum: "İşlemde",
   },
 ];
 
@@ -175,17 +176,17 @@ export default function HalkaArzTakvimPage() {
     {
       soru: "Talep toplayacak halka arzlar hangileri?",
       cevap:
-        "Aktif takvimde talep toplaması süren halka arz bulunmuyor. Çitlekçi Mağazacılık Gıda CITAS için işlem başlangıcı 18 Ağustos 2026 olarak açıklandı.",
+        "Aktif takvimde talep toplaması süren halka arz bulunmuyor. TKNKA, VEYAS ve KPEKS için işlem başlangıcı 20 Ağustos 2026 Perşembe olarak açıklandı.",
     },
     {
       soru: "Dağıtım sonuçları açıklanacak halka arzlar hangileri?",
       cevap:
-        "Türker Vangölü Enerji VEYAS, Kapeks Kimya KPEKS ve Teknika Plast TKNKA için dağıtım sonuçları bekleniyor.",
+        "Aktif takvimde dağıtım sonucu beklenen halka arz bulunmuyor. TKNKA, VEYAS ve KPEKS için işlem başlangıç tarihi 20 Ağustos 2026 Perşembe olarak güncellendi.",
     },
     {
       soru: "Bu hafta hangi halka arzlar işlemde?",
       cevap:
-        "Çitlekçi Mağazacılık Gıda CITAS, 18 Ağustos 2026 Salı günü Borsa İstanbul'da işlem görmeye başlayacak.",
+        "Çitlekçi Mağazacılık Gıda CITAS 18 Ağustos 2026 Salı günü işlem görmeye başladı. Teknika Plast TKNKA, Türker Vangölü Enerji VEYAS ve Kapeks Kimya KPEKS 20 Ağustos 2026 Perşembe günü işlem görmeye başlayacak.",
     },
     {
       soru: "Onaylı izahnamesi beklenen halka arzlar hangileri?",
