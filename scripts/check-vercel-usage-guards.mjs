@@ -17,8 +17,20 @@ if (nextConfig.output !== "export") {
 if (nextConfig.images?.unoptimized !== true) {
   violations.push("next.config.js: images.unoptimized=true olmali");
 }
-if (!fs.existsSync(path.join(root, "vercel.mjs"))) {
+const vercelConfigPath = path.join(root, "vercel.mjs");
+if (!fs.existsSync(vercelConfigPath)) {
   violations.push("vercel.mjs: statik yayin yapilandirmasi eksik");
+} else {
+  const vercelConfigSource = fs.readFileSync(vercelConfigPath, "utf8");
+  if (!/framework\s*:\s*null/.test(vercelConfigSource)) {
+    violations.push("vercel.mjs: framework null olmali; Vercel Next manifest aramamali");
+  }
+  if (!/outputDirectory\s*:\s*["']out["']/.test(vercelConfigSource)) {
+    violations.push("vercel.mjs: outputDirectory 'out' olmali");
+  }
+  if (!/buildCommand\s*:\s*["']npm run build["']/.test(vercelConfigSource)) {
+    violations.push("vercel.mjs: buildCommand 'npm run build' olmali");
+  }
 }
 
 function walk(directory) {
