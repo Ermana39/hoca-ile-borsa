@@ -1,6 +1,6 @@
 "use client";
 
-import { ChevronLeft, ChevronRight, ZoomIn, ZoomOut } from "lucide-react";
+import { ChevronLeft, ChevronRight, Maximize2, Minimize2, ZoomIn, ZoomOut } from "lucide-react";
 import { useEffect, useMemo, useRef, useState } from "react";
 
 export type MarketChartPoint = {
@@ -121,13 +121,31 @@ export default function MarketChart({
   const fingerprint = `${normalized.length}-${normalized.at(0)?.date ?? ""}-${normalized.at(-1)?.date ?? ""}`;
   const [range, setRange] = useState<Range>({ start: 0, end: Math.max(0, normalized.length - 1) });
   const [hoverIndex, setHoverIndex] = useState<number | null>(null);
+  const [isExpanded, setIsExpanded] = useState(false);
   const svgRef = useRef<SVGSVGElement | null>(null);
-  const dragRef = useRef<{ x: number; start: number; end: number } | null>(null);
+  const dragRef = useRef<{ x: number; y: number; start: number; end: number } | null>(null);
+  const pointerMovedRef = useRef(false);
 
   useEffect(() => {
     setRange({ start: 0, end: Math.max(0, normalized.length - 1) });
     setHoverIndex(null);
   }, [fingerprint, normalized.length]);
+
+  useEffect(() => {
+    if (!isExpanded) return;
+
+    document.body.classList.add("chart-fullscreen-open");
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setIsExpanded(false);
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => {
+      document.body.classList.remove("chart-fullscreen-open");
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isExpanded]);
 
   const visible = normalized.slice(range.start, range.end + 1);
   const minimumPointCount = kind === "bar" ? 1 : 2;
@@ -210,7 +228,14 @@ export default function MarketChart({
   };
 
   return (
-    <section className={`market-chart-card ${className}`}>
+    <section
+      className={`market-chart-card chart-expandable-card ${
+        isExpanded ? "chart-expandable-card-expanded" : ""
+      } ${className}`}
+      role={isExpanded ? "dialog" : undefined}
+      aria-modal={isExpanded ? "true" : undefined}
+      aria-label={isExpanded ? `${title} tam ekran grafik` : undefined}
+    >
       <div className="market-chart-toolbar">
         <h2 className="market-chart-title">{title}</h2>
         <div className="market-chart-controls" aria-label="Grafik kontrolleri">
@@ -225,6 +250,19 @@ export default function MarketChart({
           </button>
           <button type="button" className={controlClass(!canZoomOut)} disabled={!canZoomOut} onClick={() => zoom(1.4)} aria-label="Grafiği uzaklaştır" title="Uzaklaştır">
             <ZoomOut aria-hidden="true" size={16} />
+          </button>
+          <button
+            type="button"
+            className={controlClass(false)}
+            onClick={() => setIsExpanded((value) => !value)}
+            aria-label={isExpanded ? "Grafiği normal boyuta indir" : "Grafiği tam ekran aç"}
+            title={isExpanded ? "Normal boyut" : "Tam ekran"}
+          >
+            {isExpanded ? (
+              <Minimize2 aria-hidden="true" size={16} />
+            ) : (
+              <Maximize2 aria-hidden="true" size={16} />
+            )}
           </button>
         </div>
       </div>
@@ -244,11 +282,18 @@ export default function MarketChart({
           }}
           onPointerDown={(event) => {
             event.currentTarget.setPointerCapture(event.pointerId);
-            dragRef.current = { x: event.clientX, start: range.start, end: range.end };
+            pointerMovedRef.current = false;
+            dragRef.current = { x: event.clientX, y: event.clientY, start: range.start, end: range.end };
           }}
           onPointerMove={(event) => {
             setHoverIndex(pointerIndex(event.clientX));
             if (!dragRef.current || normalized.length <= visible.length) return;
+            if (
+              Math.abs(event.clientX - dragRef.current.x) > 6 ||
+              Math.abs(event.clientY - dragRef.current.y) > 6
+            ) {
+              pointerMovedRef.current = true;
+            }
             const rect = svgRef.current?.getBoundingClientRect();
             if (!rect) return;
             const dragSpan = dragRef.current.end - dragRef.current.start + 1;
@@ -265,6 +310,10 @@ export default function MarketChart({
           onPointerLeave={() => {
             dragRef.current = null;
             setHoverIndex(null);
+          }}
+          onClick={() => {
+            if (!isExpanded && !pointerMovedRef.current) setIsExpanded(true);
+            pointerMovedRef.current = false;
           }}
         >
           <rect width={WIDTH} height={HEIGHT} fill="var(--chart-plot-bg)" />

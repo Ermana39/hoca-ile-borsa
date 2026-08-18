@@ -142,6 +142,23 @@ html[data-theme="light"] .theme-toggle-to-dark {
   color: var(--text);
 }
 
+body.chart-fullscreen-open {
+  overflow: hidden;
+}
+
+.chart-expandable-card-expanded {
+  position: fixed !important;
+  inset: 0;
+  z-index: 1000;
+  display: flex !important;
+  width: 100dvw;
+  height: 100dvh;
+  max-width: none !important;
+  flex-direction: column;
+  border-radius: 0 !important;
+  box-shadow: 0 24px 80px rgb(0 0 0 / 0.42);
+}
+
 .market-chart-toolbar {
   display: flex;
   min-height: 52px;
@@ -197,6 +214,7 @@ html[data-theme="light"] .theme-toggle-to-dark {
 .market-chart-scroller {
   overflow-x: auto;
   background: var(--chart-plot-bg);
+  overscroll-behavior: contain;
 }
 
 .market-chart-svg {
@@ -205,6 +223,85 @@ html[data-theme="light"] .theme-toggle-to-dark {
   height: auto;
   touch-action: none;
   user-select: none;
+}
+
+.market-chart-card:not(.chart-expandable-card-expanded) .market-chart-svg {
+  cursor: zoom-in;
+}
+
+.chart-expandable-card-expanded .market-chart-toolbar {
+  padding-top: max(10px, env(safe-area-inset-top));
+  padding-right: max(12px, env(safe-area-inset-right));
+  padding-left: max(12px, env(safe-area-inset-left));
+}
+
+.chart-expandable-card-expanded .market-chart-scroller {
+  min-height: 0;
+  flex: 1;
+  overflow: hidden;
+}
+
+.chart-expandable-card-expanded .chart-expandable-body {
+  min-height: 0;
+  flex: 1;
+  overflow: auto;
+}
+
+.chart-expandable-card-expanded .market-chart-svg {
+  width: 100%;
+  min-width: 100% !important;
+  height: 100%;
+}
+
+.fon-etki-katki-bars {
+  cursor: zoom-in;
+}
+
+.fon-etki-katki-expanded {
+  margin: 0 !important;
+  padding: 16px !important;
+}
+
+.fon-etki-katki-expanded .fon-etki-katki-bars {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: clamp(12px, 3vh, 28px);
+  cursor: default;
+}
+
+.fon-etki-katki-expanded .fon-etki-katki-row {
+  grid-template-columns: 84px minmax(0, 1fr) 116px;
+}
+
+.fon-etki-katki-expanded .fon-etki-katki-bar {
+  height: clamp(14px, 2.8vh, 28px);
+}
+
+@media (max-width: 767px) and (orientation: portrait) {
+  .chart-expandable-card-expanded {
+    inset: auto;
+    top: 50%;
+    left: 50%;
+    width: 100dvh;
+    height: 100dvw;
+    transform: translate(-50%, -50%) rotate(90deg);
+    transform-origin: center;
+  }
+
+  .chart-expandable-card-expanded .market-chart-toolbar {
+    min-height: 48px;
+    padding: 8px 12px;
+  }
+
+  .chart-expandable-card-expanded .market-chart-title {
+    font-size: 0.8125rem;
+  }
+
+  .chart-expandable-card-expanded .market-chart-control {
+    width: 28px;
+    height: 28px;
+  }
 }
 
 .market-chart-empty {
