@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GZM",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 60153587,
     "kisiSayisi": 974,
     "fonToplamDeger": 607093469.69,
-    "gunlukGetiri": 0.00437481,
+    "gunlukGetiri": 0.00297921,
     "getiriler": {
       "birAy": 0.047977,
       "ucAy": 0.168187,
@@ -29,22 +29,22 @@
       "besYil": 6.9833680000000005
     },
     "paraAkisi": {
-      "gunluk": 2106574.47,
-      "besGun": 85647014.97,
+      "gunluk": -6981975.96,
+      "besGun": 73632208.56,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 29,
-      "besGun": 213,
+      "gunluk": 6,
+      "besGun": 187,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 60153587,
         "kisiSayisi": 974,
         "fonToplamDeger": 607093469.69,
-        "gunlukGetiri": 0.00437481,
-        "paraGirisiCikisi": 2106574.47,
-        "yatirimciDegisimi": 29
+        "gunlukGetiri": 0.00297921,
+        "paraGirisiCikisi": -6981975.96,
+        "yatirimciDegisimi": 6
+      },
+      {
+        "fonKodu": "GZM",
+        "fonAdi": "GLOBAL MD PORTFÖY DURU SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 10.062412,
+        "tedavuldekiPaySayisi": 60845393,
+        "kisiSayisi": 968,
+        "fonToplamDeger": 612251436.65,
+        "gunlukGetiri": 0.00139146,
+        "paraGirisiCikisi": 9061554.19,
+        "yatirimciDegisimi": 23
       },
       {
         "fonKodu": "GZM",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "GZM",
       "fonAdi": "GLOBAL MD PORTFÖY DURU SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 10.062412,
+      "tedavuldekiPaySayisi": 60845393,
+      "kisiSayisi": 968,
+      "fonToplamDeger": 612251436.65,
+      "gunlukGetiri": 0.00139146,
+      "paraGirisiCikisi": 9061554.19,
+      "yatirimciDegisimi": 23
+    },
+    {
+      "fonKodu": "GZM",
+      "fonAdi": "GLOBAL MD PORTFÖY DURU SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 10.09239,
       "tedavuldekiPaySayisi": 60153587,
       "kisiSayisi": 974,
       "fonToplamDeger": 607093469.69,
-      "gunlukGetiri": 0.00437481,
-      "paraGirisiCikisi": 2106574.47,
-      "yatirimciDegisimi": 29
+      "gunlukGetiri": 0.00297921,
+      "paraGirisiCikisi": -6981975.96,
+      "yatirimciDegisimi": 6
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 60153587,
       "kisiSayisi": 974,
       "fonToplamDeger": 607093469.69,
-      "gunlukGetiri": 0.00437481,
-      "paraGirisiCikisi": 2106574.47,
-      "yatirimciDegisimi": 29
+      "gunlukGetiri": 0.00297921,
+      "paraGirisiCikisi": -6981975.96,
+      "yatirimciDegisimi": 6
+    },
+    {
+      "fonKodu": "GZM",
+      "fonAdi": "GLOBAL MD PORTFÖY DURU SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 10.062412,
+      "tedavuldekiPaySayisi": 60845393,
+      "kisiSayisi": 968,
+      "fonToplamDeger": 612251436.65,
+      "gunlukGetiri": 0.00139146,
+      "paraGirisiCikisi": 9061554.19,
+      "yatirimciDegisimi": 23
     },
     {
       "fonKodu": "GZM",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

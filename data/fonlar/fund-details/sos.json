@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "SOS",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 11406067,
     "kisiSayisi": 298,
     "fonToplamDeger": 18406663.13,
-    "gunlukGetiri": 0.00506531,
+    "gunlukGetiri": 0.01173638,
     "getiriler": {
       "birAy": 0.048971,
       "ucAy": 0.16271999999999998,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -76784.36,
-      "besGun": -1047921.06,
+      "gunluk": -317299.3,
+      "besGun": -778484.51,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 11,
-      "besGun": 9,
+      "gunluk": 3,
+      "besGun": 11,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 11406067,
         "kisiSayisi": 298,
         "fonToplamDeger": 18406663.13,
-        "gunlukGetiri": 0.00506531,
-        "paraGirisiCikisi": -76784.36,
-        "yatirimciDegisimi": 11
+        "gunlukGetiri": 0.01173638,
+        "paraGirisiCikisi": -317299.3,
+        "yatirimciDegisimi": 3
+      },
+      {
+        "fonKodu": "SOS",
+        "fonAdi": "HEDEF PORTFÖY SAĞLIK SEKTÖRÜ DEĞİŞKEN FON",
+        "tarih": "2026-08-17",
+        "fiyat": 1.595041,
+        "tedavuldekiPaySayisi": 11602688,
+        "kisiSayisi": 295,
+        "fonToplamDeger": 18506757.34,
+        "gunlukGetiri": -0.00659368,
+        "paraGirisiCikisi": 237724.91,
+        "yatirimciDegisimi": 8
       },
       {
         "fonKodu": "SOS",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "SOS",
       "fonAdi": "HEDEF PORTFÖY SAĞLIK SEKTÖRÜ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.595041,
+      "tedavuldekiPaySayisi": 11602688,
+      "kisiSayisi": 295,
+      "fonToplamDeger": 18506757.34,
+      "gunlukGetiri": -0.00659368,
+      "paraGirisiCikisi": 237724.91,
+      "yatirimciDegisimi": 8
+    },
+    {
+      "fonKodu": "SOS",
+      "fonAdi": "HEDEF PORTFÖY SAĞLIK SEKTÖRÜ DEĞİŞKEN FON",
       "tarih": "2026-08-18",
       "fiyat": 1.613761,
       "tedavuldekiPaySayisi": 11406067,
       "kisiSayisi": 298,
       "fonToplamDeger": 18406663.13,
-      "gunlukGetiri": 0.00506531,
-      "paraGirisiCikisi": -76784.36,
-      "yatirimciDegisimi": 11
+      "gunlukGetiri": 0.01173638,
+      "paraGirisiCikisi": -317299.3,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 11406067,
       "kisiSayisi": 298,
       "fonToplamDeger": 18406663.13,
-      "gunlukGetiri": 0.00506531,
-      "paraGirisiCikisi": -76784.36,
-      "yatirimciDegisimi": 11
+      "gunlukGetiri": 0.01173638,
+      "paraGirisiCikisi": -317299.3,
+      "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "SOS",
+      "fonAdi": "HEDEF PORTFÖY SAĞLIK SEKTÖRÜ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.595041,
+      "tedavuldekiPaySayisi": 11602688,
+      "kisiSayisi": 295,
+      "fonToplamDeger": 18506757.34,
+      "gunlukGetiri": -0.00659368,
+      "paraGirisiCikisi": 237724.91,
+      "yatirimciDegisimi": 8
     },
     {
       "fonKodu": "SOS",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

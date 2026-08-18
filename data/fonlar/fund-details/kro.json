@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KRO",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 6399481,
     "kisiSayisi": 59,
     "fonToplamDeger": 307250598.8,
-    "gunlukGetiri": 0.00315769,
+    "gunlukGetiri": 0.00205494,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 6399481,
         "kisiSayisi": 59,
         "fonToplamDeger": 307250598.8,
-        "gunlukGetiri": 0.00315769,
+        "gunlukGetiri": 0.00205494,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "KRO",
+        "fonAdi": "DENİZ PORTFÖY KAR PAYI ÖDEYEN ONUNCU SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 47.913341,
+        "tedavuldekiPaySayisi": 6399481,
+        "kisiSayisi": 59,
+        "fonToplamDeger": 306620513.36,
+        "gunlukGetiri": 0.00110049,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "KRO",
       "fonAdi": "DENİZ PORTFÖY KAR PAYI ÖDEYEN ONUNCU SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 47.913341,
+      "tedavuldekiPaySayisi": 6399481,
+      "kisiSayisi": 59,
+      "fonToplamDeger": 306620513.36,
+      "gunlukGetiri": 0.00110049,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KRO",
+      "fonAdi": "DENİZ PORTFÖY KAR PAYI ÖDEYEN ONUNCU SERBEST (DÖVİZ) FON",
       "tarih": "2026-08-18",
       "fiyat": 48.0118,
       "tedavuldekiPaySayisi": 6399481,
       "kisiSayisi": 59,
       "fonToplamDeger": 307250598.8,
-      "gunlukGetiri": 0.00315769,
+      "gunlukGetiri": 0.00205494,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 6399481,
       "kisiSayisi": 59,
       "fonToplamDeger": 307250598.8,
-      "gunlukGetiri": 0.00315769,
+      "gunlukGetiri": 0.00205494,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KRO",
+      "fonAdi": "DENİZ PORTFÖY KAR PAYI ÖDEYEN ONUNCU SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 47.913341,
+      "tedavuldekiPaySayisi": 6399481,
+      "kisiSayisi": 59,
+      "fonToplamDeger": 306620513.36,
+      "gunlukGetiri": 0.00110049,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

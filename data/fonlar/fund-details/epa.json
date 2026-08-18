@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "EPA",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 382588872,
     "kisiSayisi": 156,
     "fonToplamDeger": 525345095.86,
-    "gunlukGetiri": 0.00409791,
+    "gunlukGetiri": 0.00101112,
     "getiriler": {
       "birAy": 0.031542,
       "ucAy": 0.10305,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -21577037.86,
-      "besGun": -21035761.21,
+      "gunluk": -21479669.07,
+      "besGun": -20843318.82,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 1,
-      "besGun": 2,
+      "besGun": 3,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 382588872,
         "kisiSayisi": 156,
         "fonToplamDeger": 525345095.86,
-        "gunlukGetiri": 0.00409791,
-        "paraGirisiCikisi": -21577037.86,
+        "gunlukGetiri": 0.00101112,
+        "paraGirisiCikisi": -21479669.07,
         "yatirimciDegisimi": 1
+      },
+      {
+        "fonKodu": "EPA",
+        "fonAdi": "EMAA BLUE PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 1.371745,
+        "tedavuldekiPaySayisi": 398231701,
+        "kisiSayisi": 155,
+        "fonToplamDeger": 546272501.33,
+        "gunlukGetiri": 0.00308367,
+        "paraGirisiCikisi": -97270.44,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "EPA",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "EPA",
       "fonAdi": "EMAA BLUE PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.371745,
+      "tedavuldekiPaySayisi": 398231701,
+      "kisiSayisi": 155,
+      "fonToplamDeger": 546272501.33,
+      "gunlukGetiri": 0.00308367,
+      "paraGirisiCikisi": -97270.44,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "EPA",
+      "fonAdi": "EMAA BLUE PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
       "tarih": "2026-08-18",
       "fiyat": 1.373132,
       "tedavuldekiPaySayisi": 382588872,
       "kisiSayisi": 156,
       "fonToplamDeger": 525345095.86,
-      "gunlukGetiri": 0.00409791,
-      "paraGirisiCikisi": -21577037.86,
+      "gunlukGetiri": 0.00101112,
+      "paraGirisiCikisi": -21479669.07,
       "yatirimciDegisimi": 1
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 382588872,
       "kisiSayisi": 156,
       "fonToplamDeger": 525345095.86,
-      "gunlukGetiri": 0.00409791,
-      "paraGirisiCikisi": -21577037.86,
+      "gunlukGetiri": 0.00101112,
+      "paraGirisiCikisi": -21479669.07,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "EPA",
+      "fonAdi": "EMAA BLUE PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.371745,
+      "tedavuldekiPaySayisi": 398231701,
+      "kisiSayisi": 155,
+      "fonToplamDeger": 546272501.33,
+      "gunlukGetiri": 0.00308367,
+      "paraGirisiCikisi": -97270.44,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "EPA",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

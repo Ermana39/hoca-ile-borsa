@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BON",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 17630450,
     "kisiSayisi": 299,
     "fonToplamDeger": 24925566.65,
-    "gunlukGetiri": 0.0047902,
+    "gunlukGetiri": 0.00158266,
     "getiriler": {
       "birAy": 0.084393,
       "ucAy": 0.127128,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -30701182.25,
-      "besGun": -55471953.87,
+      "gunluk": -33699356.51,
+      "besGun": -35285894.47,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 16,
-      "besGun": 37,
+      "gunluk": 10,
+      "besGun": 35,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 17630450,
         "kisiSayisi": 299,
         "fonToplamDeger": 24925566.65,
-        "gunlukGetiri": 0.0047902,
-        "paraGirisiCikisi": -30701182.25,
-        "yatirimciDegisimi": 16
+        "gunlukGetiri": 0.00158266,
+        "paraGirisiCikisi": -33699356.51,
+        "yatirimciDegisimi": 10
+      },
+      {
+        "fonKodu": "BON",
+        "fonAdi": "A1 CAPİTAL PORTFÖY BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 1.411545,
+        "tedavuldekiPaySayisi": 41466818,
+        "kisiSayisi": 289,
+        "fonToplamDeger": 58532290.07,
+        "gunlukGetiri": 0.00320247,
+        "paraGirisiCikisi": 2993436.66,
+        "yatirimciDegisimi": 6
       },
       {
         "fonKodu": "BON",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "BON",
       "fonAdi": "A1 CAPİTAL PORTFÖY BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.411545,
+      "tedavuldekiPaySayisi": 41466818,
+      "kisiSayisi": 289,
+      "fonToplamDeger": 58532290.07,
+      "gunlukGetiri": 0.00320247,
+      "paraGirisiCikisi": 2993436.66,
+      "yatirimciDegisimi": 6
+    },
+    {
+      "fonKodu": "BON",
+      "fonAdi": "A1 CAPİTAL PORTFÖY BORÇLANMA ARAÇLARI FONU",
       "tarih": "2026-08-18",
       "fiyat": 1.413779,
       "tedavuldekiPaySayisi": 17630450,
       "kisiSayisi": 299,
       "fonToplamDeger": 24925566.65,
-      "gunlukGetiri": 0.0047902,
-      "paraGirisiCikisi": -30701182.25,
-      "yatirimciDegisimi": 16
+      "gunlukGetiri": 0.00158266,
+      "paraGirisiCikisi": -33699356.51,
+      "yatirimciDegisimi": 10
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 17630450,
       "kisiSayisi": 299,
       "fonToplamDeger": 24925566.65,
-      "gunlukGetiri": 0.0047902,
-      "paraGirisiCikisi": -30701182.25,
-      "yatirimciDegisimi": 16
+      "gunlukGetiri": 0.00158266,
+      "paraGirisiCikisi": -33699356.51,
+      "yatirimciDegisimi": 10
+    },
+    {
+      "fonKodu": "BON",
+      "fonAdi": "A1 CAPİTAL PORTFÖY BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.411545,
+      "tedavuldekiPaySayisi": 41466818,
+      "kisiSayisi": 289,
+      "fonToplamDeger": 58532290.07,
+      "gunlukGetiri": 0.00320247,
+      "paraGirisiCikisi": 2993436.66,
+      "yatirimciDegisimi": 6
     },
     {
       "fonKodu": "BON",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

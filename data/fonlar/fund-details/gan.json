@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GAN",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 2693060,
     "kisiSayisi": 11,
     "fonToplamDeger": 21520519,
-    "gunlukGetiri": 0.00363242,
+    "gunlukGetiri": -0.00674611,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 2693060,
         "kisiSayisi": 11,
         "fonToplamDeger": 21520519,
-        "gunlukGetiri": 0.00363242,
+        "gunlukGetiri": -0.00674611,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "GAN",
+        "fonAdi": "INVEO PORTFÖY ALFON SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 8.045378,
+        "tedavuldekiPaySayisi": 2693060,
+        "kisiSayisi": 11,
+        "fonToplamDeger": 21666685.78,
+        "gunlukGetiri": 0.01044902,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "GAN",
       "fonAdi": "INVEO PORTFÖY ALFON SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 8.045378,
+      "tedavuldekiPaySayisi": 2693060,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 21666685.78,
+      "gunlukGetiri": 0.01044902,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GAN",
+      "fonAdi": "INVEO PORTFÖY ALFON SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 7.991103,
       "tedavuldekiPaySayisi": 2693060,
       "kisiSayisi": 11,
       "fonToplamDeger": 21520519,
-      "gunlukGetiri": 0.00363242,
+      "gunlukGetiri": -0.00674611,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 2693060,
       "kisiSayisi": 11,
       "fonToplamDeger": 21520519,
-      "gunlukGetiri": 0.00363242,
+      "gunlukGetiri": -0.00674611,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GAN",
+      "fonAdi": "INVEO PORTFÖY ALFON SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 8.045378,
+      "tedavuldekiPaySayisi": 2693060,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 21666685.78,
+      "gunlukGetiri": 0.01044902,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

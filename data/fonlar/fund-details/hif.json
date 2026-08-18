@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "HIF",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 21180459,
     "kisiSayisi": 52,
     "fonToplamDeger": 11097698.4,
-    "gunlukGetiri": 0.0011407,
+    "gunlukGetiri": -0.00072282,
     "getiriler": {
       "birAy": 0.011625000000000002,
       "ucAy": -0.127652,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -330.09,
-      "besGun": 22026.99,
+      "gunluk": 499.33,
+      "besGun": 20996.34,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": -1,
-      "besGun": 3,
+      "besGun": 2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 21180459,
         "kisiSayisi": 52,
         "fonToplamDeger": 11097698.4,
-        "gunlukGetiri": 0.0011407,
-        "paraGirisiCikisi": -330.09,
+        "gunlukGetiri": -0.00072282,
+        "paraGirisiCikisi": 499.33,
         "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "HIF",
+        "fonAdi": "HEDEF PORTFÖY İKİNCİ SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 0.524338,
+        "tedavuldekiPaySayisi": 21179506,
+        "kisiSayisi": 53,
+        "fonToplamDeger": 11105220.73,
+        "gunlukGetiri": 0.00186487,
+        "paraGirisiCikisi": -830.03,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "HIF",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "HIF",
       "fonAdi": "HEDEF PORTFÖY İKİNCİ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 0.524338,
+      "tedavuldekiPaySayisi": 21179506,
+      "kisiSayisi": 53,
+      "fonToplamDeger": 11105220.73,
+      "gunlukGetiri": 0.00186487,
+      "paraGirisiCikisi": -830.03,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HIF",
+      "fonAdi": "HEDEF PORTFÖY İKİNCİ SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 0.523959,
       "tedavuldekiPaySayisi": 21180459,
       "kisiSayisi": 52,
       "fonToplamDeger": 11097698.4,
-      "gunlukGetiri": 0.0011407,
-      "paraGirisiCikisi": -330.09,
+      "gunlukGetiri": -0.00072282,
+      "paraGirisiCikisi": 499.33,
       "yatirimciDegisimi": -1
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 21180459,
       "kisiSayisi": 52,
       "fonToplamDeger": 11097698.4,
-      "gunlukGetiri": 0.0011407,
-      "paraGirisiCikisi": -330.09,
+      "gunlukGetiri": -0.00072282,
+      "paraGirisiCikisi": 499.33,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "HIF",
+      "fonAdi": "HEDEF PORTFÖY İKİNCİ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 0.524338,
+      "tedavuldekiPaySayisi": 21179506,
+      "kisiSayisi": 53,
+      "fonToplamDeger": 11105220.73,
+      "gunlukGetiri": 0.00186487,
+      "paraGirisiCikisi": -830.03,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "HIF",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

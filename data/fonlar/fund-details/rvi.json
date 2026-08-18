@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "RVI",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 15019044,
     "kisiSayisi": 11,
     "fonToplamDeger": 18445769.18,
-    "gunlukGetiri": -0.01101751,
+    "gunlukGetiri": 0.00256977,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 15019044,
         "kisiSayisi": 11,
         "fonToplamDeger": 18445769.18,
-        "gunlukGetiri": -0.01101751,
+        "gunlukGetiri": 0.00256977,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "RVI",
+        "fonAdi": "ROTA PORTFÖY ONALTINCI SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 1.225011,
+        "tedavuldekiPaySayisi": 15019044,
+        "kisiSayisi": 11,
+        "fonToplamDeger": 18398492.87,
+        "gunlukGetiri": -0.01355246,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "RVI",
       "fonAdi": "ROTA PORTFÖY ONALTINCI SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.225011,
+      "tedavuldekiPaySayisi": 15019044,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 18398492.87,
+      "gunlukGetiri": -0.01355246,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "RVI",
+      "fonAdi": "ROTA PORTFÖY ONALTINCI SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 1.228159,
       "tedavuldekiPaySayisi": 15019044,
       "kisiSayisi": 11,
       "fonToplamDeger": 18445769.18,
-      "gunlukGetiri": -0.01101751,
+      "gunlukGetiri": 0.00256977,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 15019044,
       "kisiSayisi": 11,
       "fonToplamDeger": 18445769.18,
-      "gunlukGetiri": -0.01101751,
+      "gunlukGetiri": 0.00256977,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "RVI",
+      "fonAdi": "ROTA PORTFÖY ONALTINCI SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.225011,
+      "tedavuldekiPaySayisi": 15019044,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 18398492.87,
+      "gunlukGetiri": -0.01355246,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PCE",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 78760343,
     "kisiSayisi": 155,
     "fonToplamDeger": 101809061.66,
-    "gunlukGetiri": 0.00620234,
+    "gunlukGetiri": 0.00466954,
     "getiriler": {
       "birAy": 0.038921000000000004,
       "ucAy": 0.09379,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1115824.52,
-      "besGun": -25717037,
+      "gunluk": -360447.32,
+      "besGun": -25713526.13,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 78760343,
         "kisiSayisi": 155,
         "fonToplamDeger": 101809061.66,
-        "gunlukGetiri": 0.00620234,
-        "paraGirisiCikisi": -1115824.52,
+        "gunlukGetiri": 0.00466954,
+        "paraGirisiCikisi": -360447.32,
         "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "PCE",
+        "fonAdi": "PARDUS PORTFÖY İNCİ SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 1.286636,
+        "tedavuldekiPaySayisi": 79039188,
+        "kisiSayisi": 156,
+        "fonToplamDeger": 101694672.5,
+        "gunlukGetiri": 0.00152568,
+        "paraGirisiCikisi": -751866.33,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "PCE",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "PCE",
       "fonAdi": "PARDUS PORTFÖY İNCİ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.286636,
+      "tedavuldekiPaySayisi": 79039188,
+      "kisiSayisi": 156,
+      "fonToplamDeger": 101694672.5,
+      "gunlukGetiri": 0.00152568,
+      "paraGirisiCikisi": -751866.33,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PCE",
+      "fonAdi": "PARDUS PORTFÖY İNCİ SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 1.292644,
       "tedavuldekiPaySayisi": 78760343,
       "kisiSayisi": 155,
       "fonToplamDeger": 101809061.66,
-      "gunlukGetiri": 0.00620234,
-      "paraGirisiCikisi": -1115824.52,
+      "gunlukGetiri": 0.00466954,
+      "paraGirisiCikisi": -360447.32,
       "yatirimciDegisimi": -1
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 78760343,
       "kisiSayisi": 155,
       "fonToplamDeger": 101809061.66,
-      "gunlukGetiri": 0.00620234,
-      "paraGirisiCikisi": -1115824.52,
+      "gunlukGetiri": 0.00466954,
+      "paraGirisiCikisi": -360447.32,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "PCE",
+      "fonAdi": "PARDUS PORTFÖY İNCİ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.286636,
+      "tedavuldekiPaySayisi": 79039188,
+      "kisiSayisi": 156,
+      "fonToplamDeger": 101694672.5,
+      "gunlukGetiri": 0.00152568,
+      "paraGirisiCikisi": -751866.33,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "PCE",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

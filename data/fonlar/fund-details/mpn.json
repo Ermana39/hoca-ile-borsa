@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "MPN",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 6099902,
     "kisiSayisi": 300,
     "fonToplamDeger": 375261760.81,
-    "gunlukGetiri": 0.0036099,
+    "gunlukGetiri": 0.00208538,
     "getiriler": {
       "birAy": 0.023698,
       "ucAy": 0.061273999999999995,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 67179.09,
-      "besGun": -654044.49,
+      "gunluk": 24792.28,
+      "besGun": -2436416.06,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
-      "besGun": -4,
+      "gunluk": -2,
+      "besGun": -6,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 6099902,
         "kisiSayisi": 300,
         "fonToplamDeger": 375261760.81,
-        "gunlukGetiri": 0.0036099,
-        "paraGirisiCikisi": 67179.09,
-        "yatirimciDegisimi": -3
+        "gunlukGetiri": 0.00208538,
+        "paraGirisiCikisi": 24792.28,
+        "yatirimciDegisimi": -2
+      },
+      {
+        "fonKodu": "MPN",
+        "fonAdi": "AKTİF PORTFÖY İKİNCİ AKTİF SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 61.391286,
+        "tedavuldekiPaySayisi": 6099499,
+        "kisiSayisi": 302,
+        "fonToplamDeger": 374456089.37,
+        "gunlukGetiri": 0.00152135,
+        "paraGirisiCikisi": 42298.6,
+        "yatirimciDegisimi": -1
       },
       {
         "fonKodu": "MPN",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "MPN",
       "fonAdi": "AKTİF PORTFÖY İKİNCİ AKTİF SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 61.391286,
+      "tedavuldekiPaySayisi": 6099499,
+      "kisiSayisi": 302,
+      "fonToplamDeger": 374456089.37,
+      "gunlukGetiri": 0.00152135,
+      "paraGirisiCikisi": 42298.6,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "MPN",
+      "fonAdi": "AKTİF PORTFÖY İKİNCİ AKTİF SERBEST (DÖVİZ) FON",
       "tarih": "2026-08-18",
       "fiyat": 61.51931,
       "tedavuldekiPaySayisi": 6099902,
       "kisiSayisi": 300,
       "fonToplamDeger": 375261760.81,
-      "gunlukGetiri": 0.0036099,
-      "paraGirisiCikisi": 67179.09,
-      "yatirimciDegisimi": -3
+      "gunlukGetiri": 0.00208538,
+      "paraGirisiCikisi": 24792.28,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 6099902,
       "kisiSayisi": 300,
       "fonToplamDeger": 375261760.81,
-      "gunlukGetiri": 0.0036099,
-      "paraGirisiCikisi": 67179.09,
-      "yatirimciDegisimi": -3
+      "gunlukGetiri": 0.00208538,
+      "paraGirisiCikisi": 24792.28,
+      "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "MPN",
+      "fonAdi": "AKTİF PORTFÖY İKİNCİ AKTİF SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 61.391286,
+      "tedavuldekiPaySayisi": 6099499,
+      "kisiSayisi": 302,
+      "fonToplamDeger": 374456089.37,
+      "gunlukGetiri": 0.00152135,
+      "paraGirisiCikisi": 42298.6,
+      "yatirimciDegisimi": -1
     },
     {
       "fonKodu": "MPN",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

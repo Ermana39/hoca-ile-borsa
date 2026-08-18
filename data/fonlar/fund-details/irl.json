@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IRL",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 15165905,
     "kisiSayisi": 16,
     "fonToplamDeger": 269554733.24,
-    "gunlukGetiri": 0.00439967,
+    "gunlukGetiri": -0.0022114,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 15165905,
         "kisiSayisi": 16,
         "fonToplamDeger": 269554733.24,
-        "gunlukGetiri": 0.00439967,
+        "gunlukGetiri": -0.0022114,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "IRL",
+        "fonAdi": "İSTANBUL PORTFÖY KEY SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 17.813124,
+        "tedavuldekiPaySayisi": 15165905,
+        "kisiSayisi": 16,
+        "fonToplamDeger": 270152140.16,
+        "gunlukGetiri": 0.00662572,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "IRL",
       "fonAdi": "İSTANBUL PORTFÖY KEY SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 17.813124,
+      "tedavuldekiPaySayisi": 15165905,
+      "kisiSayisi": 16,
+      "fonToplamDeger": 270152140.16,
+      "gunlukGetiri": 0.00662572,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "IRL",
+      "fonAdi": "İSTANBUL PORTFÖY KEY SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 17.773732,
       "tedavuldekiPaySayisi": 15165905,
       "kisiSayisi": 16,
       "fonToplamDeger": 269554733.24,
-      "gunlukGetiri": 0.00439967,
+      "gunlukGetiri": -0.0022114,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 15165905,
       "kisiSayisi": 16,
       "fonToplamDeger": 269554733.24,
-      "gunlukGetiri": 0.00439967,
+      "gunlukGetiri": -0.0022114,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "IRL",
+      "fonAdi": "İSTANBUL PORTFÖY KEY SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 17.813124,
+      "tedavuldekiPaySayisi": 15165905,
+      "kisiSayisi": 16,
+      "fonToplamDeger": 270152140.16,
+      "gunlukGetiri": 0.00662572,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

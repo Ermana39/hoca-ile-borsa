@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GTA",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 15319082187,
     "kisiSayisi": 75038,
     "fonToplamDeger": 24550365814.15,
-    "gunlukGetiri": 0.00662162,
+    "gunlukGetiri": 0.01213923,
     "getiriler": {
       "birAy": 0.11460699999999999,
       "ucAy": 0.003271,
@@ -29,22 +29,22 @@
       "besYil": 11.068044
     },
     "paraAkisi": {
-      "gunluk": 267976444.85,
-      "besGun": 145039691.75,
+      "gunluk": -20871789.63,
+      "besGun": 169548547.51,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 47,
-      "besGun": 362,
+      "gunluk": -2,
+      "besGun": 266,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 15319082187,
         "kisiSayisi": 75038,
         "fonToplamDeger": 24550365814.15,
-        "gunlukGetiri": 0.00662162,
-        "paraGirisiCikisi": 267976444.85,
-        "yatirimciDegisimi": 47
+        "gunlukGetiri": 0.01213923,
+        "paraGirisiCikisi": -20871789.63,
+        "yatirimciDegisimi": -2
+      },
+      {
+        "fonKodu": "GTA",
+        "fonAdi": "GARANTİ PORTFÖY ALTIN FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 1.583379,
+        "tedavuldekiPaySayisi": 15332105892,
+        "kisiSayisi": 75040,
+        "fonToplamDeger": 24276527872.55,
+        "gunlukGetiri": -0.00545143,
+        "paraGirisiCikisi": 285383894.08,
+        "yatirimciDegisimi": 49
       },
       {
         "fonKodu": "GTA",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "GTA",
       "fonAdi": "GARANTİ PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.583379,
+      "tedavuldekiPaySayisi": 15332105892,
+      "kisiSayisi": 75040,
+      "fonToplamDeger": 24276527872.55,
+      "gunlukGetiri": -0.00545143,
+      "paraGirisiCikisi": 285383894.08,
+      "yatirimciDegisimi": 49
+    },
+    {
+      "fonKodu": "GTA",
+      "fonAdi": "GARANTİ PORTFÖY ALTIN FONU",
       "tarih": "2026-08-18",
       "fiyat": 1.6026,
       "tedavuldekiPaySayisi": 15319082187,
       "kisiSayisi": 75038,
       "fonToplamDeger": 24550365814.15,
-      "gunlukGetiri": 0.00662162,
-      "paraGirisiCikisi": 267976444.85,
-      "yatirimciDegisimi": 47
+      "gunlukGetiri": 0.01213923,
+      "paraGirisiCikisi": -20871789.63,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 15319082187,
       "kisiSayisi": 75038,
       "fonToplamDeger": 24550365814.15,
-      "gunlukGetiri": 0.00662162,
-      "paraGirisiCikisi": 267976444.85,
-      "yatirimciDegisimi": 47
+      "gunlukGetiri": 0.01213923,
+      "paraGirisiCikisi": -20871789.63,
+      "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "GTA",
+      "fonAdi": "GARANTİ PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.583379,
+      "tedavuldekiPaySayisi": 15332105892,
+      "kisiSayisi": 75040,
+      "fonToplamDeger": 24276527872.55,
+      "gunlukGetiri": -0.00545143,
+      "paraGirisiCikisi": 285383894.08,
+      "yatirimciDegisimi": 49
     },
     {
       "fonKodu": "GTA",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

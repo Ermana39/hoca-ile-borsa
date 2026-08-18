@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KVS",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 7719482147,
     "kisiSayisi": 2403,
     "fonToplamDeger": 29338513465.05,
-    "gunlukGetiri": 0.00442779,
+    "gunlukGetiri": 0.00111713,
     "getiriler": {
       "birAy": 0.032976,
       "ucAy": 0.10886900000000001,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -260944125.08,
-      "besGun": 411109040.18,
+      "gunluk": 223960462.34,
+      "besGun": 108044569.38,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -11,
+      "gunluk": -5,
       "besGun": -7,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 7719482147,
         "kisiSayisi": 2403,
         "fonToplamDeger": 29338513465.05,
-        "gunlukGetiri": 0.00442779,
-        "paraGirisiCikisi": -260944125.08,
-        "yatirimciDegisimi": -11
+        "gunlukGetiri": 0.00111713,
+        "paraGirisiCikisi": 223960462.34,
+        "yatirimciDegisimi": -5
+      },
+      {
+        "fonKodu": "KVS",
+        "fonAdi": "AZİMUT PORTFÖY KISA VADELİ SERBEST (TL) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 3.79634,
+        "tedavuldekiPaySayisi": 7660554193,
+        "kisiSayisi": 2408,
+        "fonToplamDeger": 29082069081.4,
+        "gunlukGetiri": 0.00330697,
+        "paraGirisiCikisi": -484363491.12,
+        "yatirimciDegisimi": -6
       },
       {
         "fonKodu": "KVS",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "KVS",
       "fonAdi": "AZİMUT PORTFÖY KISA VADELİ SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 3.79634,
+      "tedavuldekiPaySayisi": 7660554193,
+      "kisiSayisi": 2408,
+      "fonToplamDeger": 29082069081.4,
+      "gunlukGetiri": 0.00330697,
+      "paraGirisiCikisi": -484363491.12,
+      "yatirimciDegisimi": -6
+    },
+    {
+      "fonKodu": "KVS",
+      "fonAdi": "AZİMUT PORTFÖY KISA VADELİ SERBEST (TL) FON",
       "tarih": "2026-08-18",
       "fiyat": 3.800581,
       "tedavuldekiPaySayisi": 7719482147,
       "kisiSayisi": 2403,
       "fonToplamDeger": 29338513465.05,
-      "gunlukGetiri": 0.00442779,
-      "paraGirisiCikisi": -260944125.08,
-      "yatirimciDegisimi": -11
+      "gunlukGetiri": 0.00111713,
+      "paraGirisiCikisi": 223960462.34,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 7719482147,
       "kisiSayisi": 2403,
       "fonToplamDeger": 29338513465.05,
-      "gunlukGetiri": 0.00442779,
-      "paraGirisiCikisi": -260944125.08,
-      "yatirimciDegisimi": -11
+      "gunlukGetiri": 0.00111713,
+      "paraGirisiCikisi": 223960462.34,
+      "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "KVS",
+      "fonAdi": "AZİMUT PORTFÖY KISA VADELİ SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 3.79634,
+      "tedavuldekiPaySayisi": 7660554193,
+      "kisiSayisi": 2408,
+      "fonToplamDeger": 29082069081.4,
+      "gunlukGetiri": 0.00330697,
+      "paraGirisiCikisi": -484363491.12,
+      "yatirimciDegisimi": -6
     },
     {
       "fonKodu": "KVS",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

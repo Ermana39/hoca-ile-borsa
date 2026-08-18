@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BTP",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 2465227529,
     "kisiSayisi": 25,
     "fonToplamDeger": 1456853767.14,
-    "gunlukGetiri": 0.0048204,
+    "gunlukGetiri": 0.00118422,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 28455659.18,
-      "besGun": 372365820.45,
+      "gunluk": 63002773.57,
+      "besGun": 369941561.02,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 2465227529,
         "kisiSayisi": 25,
         "fonToplamDeger": 1456853767.14,
-        "gunlukGetiri": 0.0048204,
-        "paraGirisiCikisi": 28455659.18,
+        "gunlukGetiri": 0.00118422,
+        "paraGirisiCikisi": 63002773.57,
         "yatirimciDegisimi": 2
+      },
+      {
+        "fonKodu": "BTP",
+        "fonAdi": "TRİVE PORTFÖY PARA PİYASASI SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 0.590262,
+        "tedavuldekiPaySayisi": 2358616816,
+        "kisiSayisi": 23,
+        "fonToplamDeger": 1392200849.87,
+        "gunlukGetiri": 0.00363187,
+        "paraGirisiCikisi": -34506251.39,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "BTP",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "BTP",
       "fonAdi": "TRİVE PORTFÖY PARA PİYASASI SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 0.590262,
+      "tedavuldekiPaySayisi": 2358616816,
+      "kisiSayisi": 23,
+      "fonToplamDeger": 1392200849.87,
+      "gunlukGetiri": 0.00363187,
+      "paraGirisiCikisi": -34506251.39,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BTP",
+      "fonAdi": "TRİVE PORTFÖY PARA PİYASASI SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 0.590961,
       "tedavuldekiPaySayisi": 2465227529,
       "kisiSayisi": 25,
       "fonToplamDeger": 1456853767.14,
-      "gunlukGetiri": 0.0048204,
-      "paraGirisiCikisi": 28455659.18,
+      "gunlukGetiri": 0.00118422,
+      "paraGirisiCikisi": 63002773.57,
       "yatirimciDegisimi": 2
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 2465227529,
       "kisiSayisi": 25,
       "fonToplamDeger": 1456853767.14,
-      "gunlukGetiri": 0.0048204,
-      "paraGirisiCikisi": 28455659.18,
+      "gunlukGetiri": 0.00118422,
+      "paraGirisiCikisi": 63002773.57,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "BTP",
+      "fonAdi": "TRİVE PORTFÖY PARA PİYASASI SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 0.590262,
+      "tedavuldekiPaySayisi": 2358616816,
+      "kisiSayisi": 23,
+      "fonToplamDeger": 1392200849.87,
+      "gunlukGetiri": 0.00363187,
+      "paraGirisiCikisi": -34506251.39,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "BTP",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

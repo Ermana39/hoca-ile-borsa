@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "AU1",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 42840199,
     "kisiSayisi": 824,
     "fonToplamDeger": 51357314.29,
-    "gunlukGetiri": 0.00655751,
+    "gunlukGetiri": 0.00931681,
     "getiriler": {
       "birAy": 0.13720100000000002,
       "ucAy": 0.019043,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 4325107.49,
-      "besGun": 8050460.67,
+      "gunluk": 1434283.85,
+      "besGun": 7531120.06,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 40,
-      "besGun": 144,
+      "gunluk": 10,
+      "besGun": 125,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 42840199,
         "kisiSayisi": 824,
         "fonToplamDeger": 51357314.29,
-        "gunlukGetiri": 0.00655751,
-        "paraGirisiCikisi": 4325107.49,
-        "yatirimciDegisimi": 40
+        "gunlukGetiri": 0.00931681,
+        "paraGirisiCikisi": 1434283.85,
+        "yatirimciDegisimi": 10
+      },
+      {
+        "fonKodu": "AU1",
+        "fonAdi": "A1 CAPİTAL PORTFÖY ALTIN FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 1.187745,
+        "tedavuldekiPaySayisi": 41643777,
+        "kisiSayisi": 814,
+        "fonToplamDeger": 49462192.44,
+        "gunlukGetiri": -0.00273383,
+        "paraGirisiCikisi": 2864138.98,
+        "yatirimciDegisimi": 30
       },
       {
         "fonKodu": "AU1",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "AU1",
       "fonAdi": "A1 CAPİTAL PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.187745,
+      "tedavuldekiPaySayisi": 41643777,
+      "kisiSayisi": 814,
+      "fonToplamDeger": 49462192.44,
+      "gunlukGetiri": -0.00273383,
+      "paraGirisiCikisi": 2864138.98,
+      "yatirimciDegisimi": 30
+    },
+    {
+      "fonKodu": "AU1",
+      "fonAdi": "A1 CAPİTAL PORTFÖY ALTIN FONU",
       "tarih": "2026-08-18",
       "fiyat": 1.198811,
       "tedavuldekiPaySayisi": 42840199,
       "kisiSayisi": 824,
       "fonToplamDeger": 51357314.29,
-      "gunlukGetiri": 0.00655751,
-      "paraGirisiCikisi": 4325107.49,
-      "yatirimciDegisimi": 40
+      "gunlukGetiri": 0.00931681,
+      "paraGirisiCikisi": 1434283.85,
+      "yatirimciDegisimi": 10
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 42840199,
       "kisiSayisi": 824,
       "fonToplamDeger": 51357314.29,
-      "gunlukGetiri": 0.00655751,
-      "paraGirisiCikisi": 4325107.49,
-      "yatirimciDegisimi": 40
+      "gunlukGetiri": 0.00931681,
+      "paraGirisiCikisi": 1434283.85,
+      "yatirimciDegisimi": 10
+    },
+    {
+      "fonKodu": "AU1",
+      "fonAdi": "A1 CAPİTAL PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.187745,
+      "tedavuldekiPaySayisi": 41643777,
+      "kisiSayisi": 814,
+      "fonToplamDeger": 49462192.44,
+      "gunlukGetiri": -0.00273383,
+      "paraGirisiCikisi": 2864138.98,
+      "yatirimciDegisimi": 30
     },
     {
       "fonKodu": "AU1",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IOG",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 984643403,
     "kisiSayisi": 19232,
     "fonToplamDeger": 13636245227.43,
-    "gunlukGetiri": 0.01338164,
+    "gunlukGetiri": 0.00836293,
     "getiriler": {
       "birAy": 0.17734100000000003,
       "ucAy": -0.09941499999999999,
@@ -29,22 +29,22 @@
       "besYil": 12.527887
     },
     "paraAkisi": {
-      "gunluk": -57846718.58,
-      "besGun": -148427972.21,
+      "gunluk": -6370889.59,
+      "besGun": -147890171.74,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -72,
-      "besGun": -172,
+      "gunluk": -27,
+      "besGun": -133,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 984643403,
         "kisiSayisi": 19232,
         "fonToplamDeger": 13636245227.43,
-        "gunlukGetiri": 0.01338164,
-        "paraGirisiCikisi": -57846718.58,
-        "yatirimciDegisimi": -72
+        "gunlukGetiri": 0.00836293,
+        "paraGirisiCikisi": -6370889.59,
+        "yatirimciDegisimi": -27
+      },
+      {
+        "fonKodu": "IOG",
+        "fonAdi": "İŞ PORTFÖY GÜMÜŞ SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 13.73406,
+        "tedavuldekiPaySayisi": 985103431,
+        "kisiSayisi": 19259,
+        "fonToplamDeger": 13529469439.74,
+        "gunlukGetiri": 0.00497708,
+        "paraGirisiCikisi": -51048910.46,
+        "yatirimciDegisimi": -45
       },
       {
         "fonKodu": "IOG",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "IOG",
       "fonAdi": "İŞ PORTFÖY GÜMÜŞ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 13.73406,
+      "tedavuldekiPaySayisi": 985103431,
+      "kisiSayisi": 19259,
+      "fonToplamDeger": 13529469439.74,
+      "gunlukGetiri": 0.00497708,
+      "paraGirisiCikisi": -51048910.46,
+      "yatirimciDegisimi": -45
+    },
+    {
+      "fonKodu": "IOG",
+      "fonAdi": "İŞ PORTFÖY GÜMÜŞ SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 13.848917,
       "tedavuldekiPaySayisi": 984643403,
       "kisiSayisi": 19232,
       "fonToplamDeger": 13636245227.43,
-      "gunlukGetiri": 0.01338164,
-      "paraGirisiCikisi": -57846718.58,
-      "yatirimciDegisimi": -72
+      "gunlukGetiri": 0.00836293,
+      "paraGirisiCikisi": -6370889.59,
+      "yatirimciDegisimi": -27
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 984643403,
       "kisiSayisi": 19232,
       "fonToplamDeger": 13636245227.43,
-      "gunlukGetiri": 0.01338164,
-      "paraGirisiCikisi": -57846718.58,
-      "yatirimciDegisimi": -72
+      "gunlukGetiri": 0.00836293,
+      "paraGirisiCikisi": -6370889.59,
+      "yatirimciDegisimi": -27
+    },
+    {
+      "fonKodu": "IOG",
+      "fonAdi": "İŞ PORTFÖY GÜMÜŞ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 13.73406,
+      "tedavuldekiPaySayisi": 985103431,
+      "kisiSayisi": 19259,
+      "fonToplamDeger": 13529469439.74,
+      "gunlukGetiri": 0.00497708,
+      "paraGirisiCikisi": -51048910.46,
+      "yatirimciDegisimi": -45
     },
     {
       "fonKodu": "IOG",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GL1",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 926907,
     "kisiSayisi": 925,
     "fonToplamDeger": 1383910631.35,
-    "gunlukGetiri": 0.00007946,
+    "gunlukGetiri": 0.00203436,
     "getiriler": {
       "birAy": 0.036974,
       "ucAy": 0.027436,
@@ -29,22 +29,22 @@
       "besYil": 13.209818
     },
     "paraAkisi": {
-      "gunluk": 1137697.63,
-      "besGun": -8578407.59,
+      "gunluk": -6773929.35,
+      "besGun": -8705486.95,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 9,
-      "besGun": 5,
+      "gunluk": -1,
+      "besGun": 4,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 926907,
         "kisiSayisi": 925,
         "fonToplamDeger": 1383910631.35,
-        "gunlukGetiri": 0.00007946,
-        "paraGirisiCikisi": 1137697.63,
-        "yatirimciDegisimi": 9
+        "gunlukGetiri": 0.00203436,
+        "paraGirisiCikisi": -6773929.35,
+        "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "GL1",
+        "fonAdi": "AZİMUT PYŞ BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-17",
+        "fiyat": 1490.010294,
+        "tedavuldekiPaySayisi": 931444,
+        "kisiSayisi": 926,
+        "fonToplamDeger": 1387861148.36,
+        "gunlukGetiri": -0.00195093,
+        "paraGirisiCikisi": 7895564.55,
+        "yatirimciDegisimi": 10
       },
       {
         "fonKodu": "GL1",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "GL1",
       "fonAdi": "AZİMUT PYŞ BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 1490.010294,
+      "tedavuldekiPaySayisi": 931444,
+      "kisiSayisi": 926,
+      "fonToplamDeger": 1387861148.36,
+      "gunlukGetiri": -0.00195093,
+      "paraGirisiCikisi": 7895564.55,
+      "yatirimciDegisimi": 10
+    },
+    {
+      "fonKodu": "GL1",
+      "fonAdi": "AZİMUT PYŞ BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
       "tarih": "2026-08-18",
       "fiyat": 1493.041515,
       "tedavuldekiPaySayisi": 926907,
       "kisiSayisi": 925,
       "fonToplamDeger": 1383910631.35,
-      "gunlukGetiri": 0.00007946,
-      "paraGirisiCikisi": 1137697.63,
-      "yatirimciDegisimi": 9
+      "gunlukGetiri": 0.00203436,
+      "paraGirisiCikisi": -6773929.35,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 926907,
       "kisiSayisi": 925,
       "fonToplamDeger": 1383910631.35,
-      "gunlukGetiri": 0.00007946,
-      "paraGirisiCikisi": 1137697.63,
-      "yatirimciDegisimi": 9
+      "gunlukGetiri": 0.00203436,
+      "paraGirisiCikisi": -6773929.35,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "GL1",
+      "fonAdi": "AZİMUT PYŞ BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 1490.010294,
+      "tedavuldekiPaySayisi": 931444,
+      "kisiSayisi": 926,
+      "fonToplamDeger": 1387861148.36,
+      "gunlukGetiri": -0.00195093,
+      "paraGirisiCikisi": 7895564.55,
+      "yatirimciDegisimi": 10
     },
     {
       "fonKodu": "GL1",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

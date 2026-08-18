@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BUV",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 12733803,
     "kisiSayisi": 266,
     "fonToplamDeger": 15592561.68,
-    "gunlukGetiri": -0.0060336,
+    "gunlukGetiri": -0.00568008,
     "getiriler": {
       "birAy": -0.043722000000000004,
       "ucAy": -0.116756,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -112111.73,
-      "besGun": -2056265.96,
+      "gunluk": 199858.32,
+      "besGun": -2058145.16,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
-      "besGun": -12,
+      "gunluk": -2,
+      "besGun": -11,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 12733803,
         "kisiSayisi": 266,
         "fonToplamDeger": 15592561.68,
-        "gunlukGetiri": -0.0060336,
-        "paraGirisiCikisi": -112111.73,
-        "yatirimciDegisimi": -3
+        "gunlukGetiri": -0.00568008,
+        "paraGirisiCikisi": 199858.32,
+        "yatirimciDegisimi": -2
+      },
+      {
+        "fonKodu": "BUV",
+        "fonAdi": "BULLS PORTFÖY VOLTRAN SERBEST (TL) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 1.231497,
+        "tedavuldekiPaySayisi": 12570587,
+        "kisiSayisi": 268,
+        "fonToplamDeger": 15480640.64,
+        "gunlukGetiri": -0.00035554,
+        "paraGirisiCikisi": -313752.19,
+        "yatirimciDegisimi": -1
       },
       {
         "fonKodu": "BUV",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "BUV",
       "fonAdi": "BULLS PORTFÖY VOLTRAN SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.231497,
+      "tedavuldekiPaySayisi": 12570587,
+      "kisiSayisi": 268,
+      "fonToplamDeger": 15480640.64,
+      "gunlukGetiri": -0.00035554,
+      "paraGirisiCikisi": -313752.19,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "BUV",
+      "fonAdi": "BULLS PORTFÖY VOLTRAN SERBEST (TL) FON",
       "tarih": "2026-08-18",
       "fiyat": 1.224502,
       "tedavuldekiPaySayisi": 12733803,
       "kisiSayisi": 266,
       "fonToplamDeger": 15592561.68,
-      "gunlukGetiri": -0.0060336,
-      "paraGirisiCikisi": -112111.73,
-      "yatirimciDegisimi": -3
+      "gunlukGetiri": -0.00568008,
+      "paraGirisiCikisi": 199858.32,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 12733803,
       "kisiSayisi": 266,
       "fonToplamDeger": 15592561.68,
-      "gunlukGetiri": -0.0060336,
-      "paraGirisiCikisi": -112111.73,
-      "yatirimciDegisimi": -3
+      "gunlukGetiri": -0.00568008,
+      "paraGirisiCikisi": 199858.32,
+      "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "BUV",
+      "fonAdi": "BULLS PORTFÖY VOLTRAN SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.231497,
+      "tedavuldekiPaySayisi": 12570587,
+      "kisiSayisi": 268,
+      "fonToplamDeger": 15480640.64,
+      "gunlukGetiri": -0.00035554,
+      "paraGirisiCikisi": -313752.19,
+      "yatirimciDegisimi": -1
     },
     {
       "fonKodu": "BUV",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

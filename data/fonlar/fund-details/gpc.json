@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GPC",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 94350456,
     "kisiSayisi": 3584,
     "fonToplamDeger": 6815726133.17,
-    "gunlukGetiri": null,
+    "gunlukGetiri": 0.00136837,
     "getiriler": {
       "birAy": 0.023561000000000002,
       "ucAy": 0.071532,
@@ -29,22 +29,22 @@
       "besYil": 6.189373000000001
     },
     "paraAkisi": {
-      "gunluk": null,
+      "gunluk": 11419157.63,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
-      "besGun": -35,
+      "gunluk": 4,
+      "besGun": -23,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 94350456,
         "kisiSayisi": 3584,
         "fonToplamDeger": 6815726133.17,
+        "gunlukGetiri": 0.00136837,
+        "paraGirisiCikisi": 11419157.63,
+        "yatirimciDegisimi": 4
+      },
+      {
+        "fonKodu": "GPC",
+        "fonAdi": "GARANTİ PORTFÖY İKİNCİ SERBEST ( DÖVİZ ) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 72.139688,
+        "tedavuldekiPaySayisi": 94192380,
+        "kisiSayisi": 3580,
+        "fonToplamDeger": 6795008945.43,
         "gunlukGetiri": null,
         "paraGirisiCikisi": null,
-        "yatirimciDegisimi": 2
+        "yatirimciDegisimi": -2
       },
       {
         "fonKodu": "GPC",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "GPC",
       "fonAdi": "GARANTİ PORTFÖY İKİNCİ SERBEST ( DÖVİZ ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 72.139688,
+      "tedavuldekiPaySayisi": 94192380,
+      "kisiSayisi": 3580,
+      "fonToplamDeger": 6795008945.43,
+      "gunlukGetiri": null,
+      "paraGirisiCikisi": null,
+      "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "GPC",
+      "fonAdi": "GARANTİ PORTFÖY İKİNCİ SERBEST ( DÖVİZ ) FON",
       "tarih": "2026-08-18",
       "fiyat": 72.238402,
       "tedavuldekiPaySayisi": 94350456,
       "kisiSayisi": 3584,
       "fonToplamDeger": 6815726133.17,
-      "gunlukGetiri": null,
-      "paraGirisiCikisi": null,
-      "yatirimciDegisimi": 2
+      "gunlukGetiri": 0.00136837,
+      "paraGirisiCikisi": 11419157.63,
+      "yatirimciDegisimi": 4
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 94350456,
       "kisiSayisi": 3584,
       "fonToplamDeger": 6815726133.17,
+      "gunlukGetiri": 0.00136837,
+      "paraGirisiCikisi": 11419157.63,
+      "yatirimciDegisimi": 4
+    },
+    {
+      "fonKodu": "GPC",
+      "fonAdi": "GARANTİ PORTFÖY İKİNCİ SERBEST ( DÖVİZ ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 72.139688,
+      "tedavuldekiPaySayisi": 94192380,
+      "kisiSayisi": 3580,
+      "fonToplamDeger": 6795008945.43,
       "gunlukGetiri": null,
       "paraGirisiCikisi": null,
-      "yatirimciDegisimi": 2
+      "yatirimciDegisimi": -2
     },
     {
       "fonKodu": "GPC",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

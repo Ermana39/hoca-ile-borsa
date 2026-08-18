@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KSP",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 25335000,
     "kisiSayisi": 361,
     "fonToplamDeger": 1639641321.77,
-    "gunlukGetiri": 0.005816,
+    "gunlukGetiri": 0.00217928,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 25335000,
         "kisiSayisi": 361,
         "fonToplamDeger": 1639641321.77,
-        "gunlukGetiri": 0.005816,
+        "gunlukGetiri": 0.00217928,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "KSP",
+        "fonAdi": "QNB PORTFÖY KAR PAYI ÖDEYEN SERBEST (DÖVİZ-POUND) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 64.577693,
+        "tedavuldekiPaySayisi": 25335000,
+        "kisiSayisi": 361,
+        "fonToplamDeger": 1636075855.47,
+        "gunlukGetiri": 0.00362881,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "KSP",
       "fonAdi": "QNB PORTFÖY KAR PAYI ÖDEYEN SERBEST (DÖVİZ-POUND) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 64.577693,
+      "tedavuldekiPaySayisi": 25335000,
+      "kisiSayisi": 361,
+      "fonToplamDeger": 1636075855.47,
+      "gunlukGetiri": 0.00362881,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KSP",
+      "fonAdi": "QNB PORTFÖY KAR PAYI ÖDEYEN SERBEST (DÖVİZ-POUND) FON",
       "tarih": "2026-08-18",
       "fiyat": 64.718426,
       "tedavuldekiPaySayisi": 25335000,
       "kisiSayisi": 361,
       "fonToplamDeger": 1639641321.77,
-      "gunlukGetiri": 0.005816,
+      "gunlukGetiri": 0.00217928,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 25335000,
       "kisiSayisi": 361,
       "fonToplamDeger": 1639641321.77,
-      "gunlukGetiri": 0.005816,
+      "gunlukGetiri": 0.00217928,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KSP",
+      "fonAdi": "QNB PORTFÖY KAR PAYI ÖDEYEN SERBEST (DÖVİZ-POUND) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 64.577693,
+      "tedavuldekiPaySayisi": 25335000,
+      "kisiSayisi": 361,
+      "fonToplamDeger": 1636075855.47,
+      "gunlukGetiri": 0.00362881,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "RBA",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 88324190,
     "kisiSayisi": 5412,
     "fonToplamDeger": 1902173522.04,
-    "gunlukGetiri": 0.00477125,
+    "gunlukGetiri": 0.00848213,
     "getiriler": {
       "birAy": 0.112476,
       "ucAy": -0.014592,
@@ -29,22 +29,22 @@
       "besYil": 10.643044999999999
     },
     "paraAkisi": {
-      "gunluk": 1658.29,
-      "besGun": 1988846.08,
+      "gunluk": -146769.67,
+      "besGun": 2379357.22,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 16,
-      "besGun": 15,
+      "gunluk": 1,
+      "besGun": 20,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 88324190,
         "kisiSayisi": 5412,
         "fonToplamDeger": 1902173522.04,
-        "gunlukGetiri": 0.00477125,
-        "paraGirisiCikisi": 1658.29,
-        "yatirimciDegisimi": 16
+        "gunlukGetiri": 0.00848213,
+        "paraGirisiCikisi": -146769.67,
+        "yatirimciDegisimi": 1
+      },
+      {
+        "fonKodu": "RBA",
+        "fonAdi": "ALBARAKA PORTFÖY BEREKET VAKFI NA DESTEK ALTIN KATILIM FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 21.355132,
+        "tedavuldekiPaySayisi": 88331005,
+        "kisiSayisi": 5411,
+        "fonToplamDeger": 1886320310.61,
+        "gunlukGetiri": -0.00367967,
+        "paraGirisiCikisi": 147179.57,
+        "yatirimciDegisimi": 15
       },
       {
         "fonKodu": "RBA",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "RBA",
       "fonAdi": "ALBARAKA PORTFÖY BEREKET VAKFI NA DESTEK ALTIN KATILIM FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 21.355132,
+      "tedavuldekiPaySayisi": 88331005,
+      "kisiSayisi": 5411,
+      "fonToplamDeger": 1886320310.61,
+      "gunlukGetiri": -0.00367967,
+      "paraGirisiCikisi": 147179.57,
+      "yatirimciDegisimi": 15
+    },
+    {
+      "fonKodu": "RBA",
+      "fonAdi": "ALBARAKA PORTFÖY BEREKET VAKFI NA DESTEK ALTIN KATILIM FONU",
       "tarih": "2026-08-18",
       "fiyat": 21.536269,
       "tedavuldekiPaySayisi": 88324190,
       "kisiSayisi": 5412,
       "fonToplamDeger": 1902173522.04,
-      "gunlukGetiri": 0.00477125,
-      "paraGirisiCikisi": 1658.29,
-      "yatirimciDegisimi": 16
+      "gunlukGetiri": 0.00848213,
+      "paraGirisiCikisi": -146769.67,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 88324190,
       "kisiSayisi": 5412,
       "fonToplamDeger": 1902173522.04,
-      "gunlukGetiri": 0.00477125,
-      "paraGirisiCikisi": 1658.29,
-      "yatirimciDegisimi": 16
+      "gunlukGetiri": 0.00848213,
+      "paraGirisiCikisi": -146769.67,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "RBA",
+      "fonAdi": "ALBARAKA PORTFÖY BEREKET VAKFI NA DESTEK ALTIN KATILIM FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 21.355132,
+      "tedavuldekiPaySayisi": 88331005,
+      "kisiSayisi": 5411,
+      "fonToplamDeger": 1886320310.61,
+      "gunlukGetiri": -0.00367967,
+      "paraGirisiCikisi": 147179.57,
+      "yatirimciDegisimi": 15
     },
     {
       "fonKodu": "RBA",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "AVT",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 17395222,
     "kisiSayisi": 19751,
     "fonToplamDeger": 3926799444.11,
-    "gunlukGetiri": 0.0041232,
+    "gunlukGetiri": 0.00106385,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -102329123.74,
-      "besGun": 57643182.41,
+      "gunluk": -25073406.28,
+      "besGun": 42563489.16,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 36,
-      "besGun": 164,
+      "gunluk": 43,
+      "besGun": 145,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 17395222,
         "kisiSayisi": 19751,
         "fonToplamDeger": 3926799444.11,
-        "gunlukGetiri": 0.0041232,
-        "paraGirisiCikisi": -102329123.74,
-        "yatirimciDegisimi": 36
+        "gunlukGetiri": 0.00106385,
+        "paraGirisiCikisi": -25073406.28,
+        "yatirimciDegisimi": 43
+      },
+      {
+        "fonKodu": "AVT",
+        "fonAdi": "AK PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 225.500219,
+        "tedavuldekiPaySayisi": 17506294,
+        "kisiSayisi": 19708,
+        "fonToplamDeger": 3947673137.18,
+        "gunlukGetiri": 0.0030561,
+        "paraGirisiCikisi": -77173616.45,
+        "yatirimciDegisimi": -7
       },
       {
         "fonKodu": "AVT",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "AVT",
       "fonAdi": "AK PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 225.500219,
+      "tedavuldekiPaySayisi": 17506294,
+      "kisiSayisi": 19708,
+      "fonToplamDeger": 3947673137.18,
+      "gunlukGetiri": 0.0030561,
+      "paraGirisiCikisi": -77173616.45,
+      "yatirimciDegisimi": -7
+    },
+    {
+      "fonKodu": "AVT",
+      "fonAdi": "AK PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
       "tarih": "2026-08-18",
       "fiyat": 225.740117,
       "tedavuldekiPaySayisi": 17395222,
       "kisiSayisi": 19751,
       "fonToplamDeger": 3926799444.11,
-      "gunlukGetiri": 0.0041232,
-      "paraGirisiCikisi": -102329123.74,
-      "yatirimciDegisimi": 36
+      "gunlukGetiri": 0.00106385,
+      "paraGirisiCikisi": -25073406.28,
+      "yatirimciDegisimi": 43
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 17395222,
       "kisiSayisi": 19751,
       "fonToplamDeger": 3926799444.11,
-      "gunlukGetiri": 0.0041232,
-      "paraGirisiCikisi": -102329123.74,
-      "yatirimciDegisimi": 36
+      "gunlukGetiri": 0.00106385,
+      "paraGirisiCikisi": -25073406.28,
+      "yatirimciDegisimi": 43
+    },
+    {
+      "fonKodu": "AVT",
+      "fonAdi": "AK PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 225.500219,
+      "tedavuldekiPaySayisi": 17506294,
+      "kisiSayisi": 19708,
+      "fonToplamDeger": 3947673137.18,
+      "gunlukGetiri": 0.0030561,
+      "paraGirisiCikisi": -77173616.45,
+      "yatirimciDegisimi": -7
     },
     {
       "fonKodu": "AVT",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

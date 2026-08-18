@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GPI",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 40133042,
     "kisiSayisi": 2813,
     "fonToplamDeger": 743038630.23,
-    "gunlukGetiri": null,
+    "gunlukGetiri": 0.00106301,
     "getiriler": {
       "birAy": 0.032941,
       "ucAy": 0.076252,
@@ -29,22 +29,22 @@
       "besYil": 6.31062
     },
     "paraAkisi": {
-      "gunluk": null,
+      "gunluk": -559800.98,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
-      "besGun": -6,
+      "gunluk": 0,
+      "besGun": -8,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,6 +58,18 @@
         "tedavuldekiPaySayisi": 40133042,
         "kisiSayisi": 2813,
         "fonToplamDeger": 743038630.23,
+        "gunlukGetiri": 0.00106301,
+        "paraGirisiCikisi": -559800.98,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "GPI",
+        "fonAdi": "GARANTİ PORTFÖY İKİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-17",
+        "fiyat": 18.494726,
+        "tedavuldekiPaySayisi": 40163278,
+        "kisiSayisi": 2813,
+        "fonToplamDeger": 742808827.07,
         "gunlukGetiri": null,
         "paraGirisiCikisi": null,
         "yatirimciDegisimi": -3
@@ -188,14 +200,26 @@
     {
       "fonKodu": "GPI",
       "fonAdi": "GARANTİ PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 18.494726,
+      "tedavuldekiPaySayisi": 40163278,
+      "kisiSayisi": 2813,
+      "fonToplamDeger": 742808827.07,
+      "gunlukGetiri": null,
+      "paraGirisiCikisi": null,
+      "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "GPI",
+      "fonAdi": "GARANTİ PORTFÖY İKİNCİ DEĞİŞKEN FON",
       "tarih": "2026-08-18",
       "fiyat": 18.514386,
       "tedavuldekiPaySayisi": 40133042,
       "kisiSayisi": 2813,
       "fonToplamDeger": 743038630.23,
-      "gunlukGetiri": null,
-      "paraGirisiCikisi": null,
-      "yatirimciDegisimi": -3
+      "gunlukGetiri": 0.00106301,
+      "paraGirisiCikisi": -559800.98,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,6 +231,18 @@
       "tedavuldekiPaySayisi": 40133042,
       "kisiSayisi": 2813,
       "fonToplamDeger": 743038630.23,
+      "gunlukGetiri": 0.00106301,
+      "paraGirisiCikisi": -559800.98,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GPI",
+      "fonAdi": "GARANTİ PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 18.494726,
+      "tedavuldekiPaySayisi": 40163278,
+      "kisiSayisi": 2813,
+      "fonToplamDeger": 742808827.07,
       "gunlukGetiri": null,
       "paraGirisiCikisi": null,
       "yatirimciDegisimi": -3
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

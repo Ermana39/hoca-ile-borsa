@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "NSA",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 419940483,
     "kisiSayisi": 351,
     "fonToplamDeger": 1068118110.68,
-    "gunlukGetiri": 0.00423647,
+    "gunlukGetiri": 0.00105557,
     "getiriler": {
       "birAy": 0.031711,
       "ucAy": 0.104696,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 76988535.36,
-      "besGun": 84121336.45,
+      "gunluk": 5754892.86,
+      "besGun": 73820305.97,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
-      "besGun": -16,
+      "gunluk": -1,
+      "besGun": -12,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 419940483,
         "kisiSayisi": 351,
         "fonToplamDeger": 1068118110.68,
-        "gunlukGetiri": 0.00423647,
-        "paraGirisiCikisi": 76988535.36,
-        "yatirimciDegisimi": -5
+        "gunlukGetiri": 0.00105557,
+        "paraGirisiCikisi": 5754892.86,
+        "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "NSA",
+        "fonAdi": "NEO PORTFÖY PARA PİYASASI KATILIM SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 2.540817,
+        "tedavuldekiPaySayisi": 417677894,
+        "kisiSayisi": 352,
+        "fonToplamDeger": 1061243086.06,
+        "gunlukGetiri": 0.00317755,
+        "paraGirisiCikisi": 71158529.97,
+        "yatirimciDegisimi": -4
       },
       {
         "fonKodu": "NSA",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "NSA",
       "fonAdi": "NEO PORTFÖY PARA PİYASASI KATILIM SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 2.540817,
+      "tedavuldekiPaySayisi": 417677894,
+      "kisiSayisi": 352,
+      "fonToplamDeger": 1061243086.06,
+      "gunlukGetiri": 0.00317755,
+      "paraGirisiCikisi": 71158529.97,
+      "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "NSA",
+      "fonAdi": "NEO PORTFÖY PARA PİYASASI KATILIM SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 2.543499,
       "tedavuldekiPaySayisi": 419940483,
       "kisiSayisi": 351,
       "fonToplamDeger": 1068118110.68,
-      "gunlukGetiri": 0.00423647,
-      "paraGirisiCikisi": 76988535.36,
-      "yatirimciDegisimi": -5
+      "gunlukGetiri": 0.00105557,
+      "paraGirisiCikisi": 5754892.86,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 419940483,
       "kisiSayisi": 351,
       "fonToplamDeger": 1068118110.68,
-      "gunlukGetiri": 0.00423647,
-      "paraGirisiCikisi": 76988535.36,
-      "yatirimciDegisimi": -5
+      "gunlukGetiri": 0.00105557,
+      "paraGirisiCikisi": 5754892.86,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "NSA",
+      "fonAdi": "NEO PORTFÖY PARA PİYASASI KATILIM SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 2.540817,
+      "tedavuldekiPaySayisi": 417677894,
+      "kisiSayisi": 352,
+      "fonToplamDeger": 1061243086.06,
+      "gunlukGetiri": 0.00317755,
+      "paraGirisiCikisi": 71158529.97,
+      "yatirimciDegisimi": -4
     },
     {
       "fonKodu": "NSA",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

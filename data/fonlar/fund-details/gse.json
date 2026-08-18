@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GSE",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 21302659,
     "kisiSayisi": 109,
     "fonToplamDeger": 1383038402.93,
-    "gunlukGetiri": 0.00290767,
+    "gunlukGetiri": 0.00212176,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 21302659,
         "kisiSayisi": 109,
         "fonToplamDeger": 1383038402.93,
-        "gunlukGetiri": 0.00290767,
+        "gunlukGetiri": 0.00212176,
         "paraGirisiCikisi": 7173242.92,
         "yatirimciDegisimi": 1
+      },
+      {
+        "fonKodu": "GSE",
+        "fonAdi": "AZİMUT PORTFÖY 7.0 SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 64.785816,
+        "tedavuldekiPaySayisi": 21192171,
+        "kisiSayisi": 108,
+        "fonToplamDeger": 1372952093.35,
+        "gunlukGetiri": 0.00078424,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "GSE",
@@ -188,12 +200,24 @@
     {
       "fonKodu": "GSE",
       "fonAdi": "AZİMUT PORTFÖY 7.0 SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 64.785816,
+      "tedavuldekiPaySayisi": 21192171,
+      "kisiSayisi": 108,
+      "fonToplamDeger": 1372952093.35,
+      "gunlukGetiri": 0.00078424,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GSE",
+      "fonAdi": "AZİMUT PORTFÖY 7.0 SERBEST (DÖVİZ) FON",
       "tarih": "2026-08-18",
       "fiyat": 64.923276,
       "tedavuldekiPaySayisi": 21302659,
       "kisiSayisi": 109,
       "fonToplamDeger": 1383038402.93,
-      "gunlukGetiri": 0.00290767,
+      "gunlukGetiri": 0.00212176,
       "paraGirisiCikisi": 7173242.92,
       "yatirimciDegisimi": 1
     }
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 21302659,
       "kisiSayisi": 109,
       "fonToplamDeger": 1383038402.93,
-      "gunlukGetiri": 0.00290767,
+      "gunlukGetiri": 0.00212176,
       "paraGirisiCikisi": 7173242.92,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "GSE",
+      "fonAdi": "AZİMUT PORTFÖY 7.0 SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 64.785816,
+      "tedavuldekiPaySayisi": 21192171,
+      "kisiSayisi": 108,
+      "fonToplamDeger": 1372952093.35,
+      "gunlukGetiri": 0.00078424,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "GSE",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

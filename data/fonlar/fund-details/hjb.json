@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "HJB",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 25539187,
     "kisiSayisi": 1560,
     "fonToplamDeger": 116288522.9,
-    "gunlukGetiri": -0.00130021,
+    "gunlukGetiri": 0.00481317,
     "getiriler": {
       "birAy": 0.089404,
       "ucAy": 0.032332,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1427544,
-      "besGun": -17252096.8,
+      "gunluk": -810079.63,
+      "besGun": -17175116.69,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -15,
-      "besGun": -19,
+      "gunluk": -3,
+      "besGun": -22,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 25539187,
         "kisiSayisi": 1560,
         "fonToplamDeger": 116288522.9,
-        "gunlukGetiri": -0.00130021,
-        "paraGirisiCikisi": -1427544,
-        "yatirimciDegisimi": -15
+        "gunlukGetiri": 0.00481317,
+        "paraGirisiCikisi": -810079.63,
+        "yatirimciDegisimi": -3
+      },
+      {
+        "fonKodu": "HJB",
+        "fonAdi": "HEDEF PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-17",
+        "fiyat": 4.531526,
+        "tedavuldekiPaySayisi": 25717096,
+        "kisiSayisi": 1563,
+        "fonToplamDeger": 116537679.81,
+        "gunlukGetiri": -0.00608409,
+        "paraGirisiCikisi": -614506.65,
+        "yatirimciDegisimi": -12
       },
       {
         "fonKodu": "HJB",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "HJB",
       "fonAdi": "HEDEF PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 4.531526,
+      "tedavuldekiPaySayisi": 25717096,
+      "kisiSayisi": 1563,
+      "fonToplamDeger": 116537679.81,
+      "gunlukGetiri": -0.00608409,
+      "paraGirisiCikisi": -614506.65,
+      "yatirimciDegisimi": -12
+    },
+    {
+      "fonKodu": "HJB",
+      "fonAdi": "HEDEF PORTFÖY BİRİNCİ DEĞİŞKEN FON",
       "tarih": "2026-08-18",
       "fiyat": 4.553337,
       "tedavuldekiPaySayisi": 25539187,
       "kisiSayisi": 1560,
       "fonToplamDeger": 116288522.9,
-      "gunlukGetiri": -0.00130021,
-      "paraGirisiCikisi": -1427544,
-      "yatirimciDegisimi": -15
+      "gunlukGetiri": 0.00481317,
+      "paraGirisiCikisi": -810079.63,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 25539187,
       "kisiSayisi": 1560,
       "fonToplamDeger": 116288522.9,
-      "gunlukGetiri": -0.00130021,
-      "paraGirisiCikisi": -1427544,
-      "yatirimciDegisimi": -15
+      "gunlukGetiri": 0.00481317,
+      "paraGirisiCikisi": -810079.63,
+      "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "HJB",
+      "fonAdi": "HEDEF PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 4.531526,
+      "tedavuldekiPaySayisi": 25717096,
+      "kisiSayisi": 1563,
+      "fonToplamDeger": 116537679.81,
+      "gunlukGetiri": -0.00608409,
+      "paraGirisiCikisi": -614506.65,
+      "yatirimciDegisimi": -12
     },
     {
       "fonKodu": "HJB",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

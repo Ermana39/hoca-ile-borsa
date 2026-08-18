@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IRY",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 470049750,
     "kisiSayisi": 2334,
     "fonToplamDeger": 1875169639.16,
-    "gunlukGetiri": 0.00434639,
+    "gunlukGetiri": 0.00103509,
     "getiriler": {
       "birAy": 0.032921,
       "ucAy": 0.10691800000000001,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 37549525.61,
-      "besGun": 57982432.67,
+      "gunluk": 18318849.64,
+      "besGun": 64210492.67,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 5,
-      "besGun": -12,
+      "gunluk": 6,
+      "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 470049750,
         "kisiSayisi": 2334,
         "fonToplamDeger": 1875169639.16,
-        "gunlukGetiri": 0.00434639,
-        "paraGirisiCikisi": 37549525.61,
-        "yatirimciDegisimi": 5
+        "gunlukGetiri": 0.00103509,
+        "paraGirisiCikisi": 18318849.64,
+        "yatirimciDegisimi": 6
+      },
+      {
+        "fonKodu": "IRY",
+        "fonAdi": "INVEO PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 3.985175,
+        "tedavuldekiPaySayisi": 465457754,
+        "kisiSayisi": 2328,
+        "fonToplamDeger": 1854930468.51,
+        "gunlukGetiri": 0.00330788,
+        "paraGirisiCikisi": 19210791.14,
+        "yatirimciDegisimi": -1
       },
       {
         "fonKodu": "IRY",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "IRY",
       "fonAdi": "INVEO PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 3.985175,
+      "tedavuldekiPaySayisi": 465457754,
+      "kisiSayisi": 2328,
+      "fonToplamDeger": 1854930468.51,
+      "gunlukGetiri": 0.00330788,
+      "paraGirisiCikisi": 19210791.14,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "IRY",
+      "fonAdi": "INVEO PORTFÖY PARA PİYASASI (TL) FONU",
       "tarih": "2026-08-18",
       "fiyat": 3.9893,
       "tedavuldekiPaySayisi": 470049750,
       "kisiSayisi": 2334,
       "fonToplamDeger": 1875169639.16,
-      "gunlukGetiri": 0.00434639,
-      "paraGirisiCikisi": 37549525.61,
-      "yatirimciDegisimi": 5
+      "gunlukGetiri": 0.00103509,
+      "paraGirisiCikisi": 18318849.64,
+      "yatirimciDegisimi": 6
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 470049750,
       "kisiSayisi": 2334,
       "fonToplamDeger": 1875169639.16,
-      "gunlukGetiri": 0.00434639,
-      "paraGirisiCikisi": 37549525.61,
-      "yatirimciDegisimi": 5
+      "gunlukGetiri": 0.00103509,
+      "paraGirisiCikisi": 18318849.64,
+      "yatirimciDegisimi": 6
+    },
+    {
+      "fonKodu": "IRY",
+      "fonAdi": "INVEO PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 3.985175,
+      "tedavuldekiPaySayisi": 465457754,
+      "kisiSayisi": 2328,
+      "fonToplamDeger": 1854930468.51,
+      "gunlukGetiri": 0.00330788,
+      "paraGirisiCikisi": 19210791.14,
+      "yatirimciDegisimi": -1
     },
     {
       "fonKodu": "IRY",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

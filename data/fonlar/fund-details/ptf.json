@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PTF",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 526331035,
     "kisiSayisi": 277,
     "fonToplamDeger": 758013603.93,
-    "gunlukGetiri": 0.00530861,
+    "gunlukGetiri": 0.00203443,
     "getiriler": {
       "birAy": 0.032095,
       "ucAy": 0.076791,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -70001777.93,
-      "besGun": -84307741.52,
+      "gunluk": -69220486.75,
+      "besGun": -76701822.23,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
-      "besGun": -8,
+      "gunluk": -3,
+      "besGun": -6,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 526331035,
         "kisiSayisi": 277,
         "fonToplamDeger": 758013603.93,
-        "gunlukGetiri": 0.00530861,
-        "paraGirisiCikisi": -70001777.93,
-        "yatirimciDegisimi": -5
+        "gunlukGetiri": 0.00203443,
+        "paraGirisiCikisi": -69220486.75,
+        "yatirimciDegisimi": -3
+      },
+      {
+        "fonKodu": "PTF",
+        "fonAdi": "QNB PORTFÖY TREND SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 1.43726,
+        "tedavuldekiPaySayisi": 574394676,
+        "kisiSayisi": 280,
+        "fonToplamDeger": 825554643.16,
+        "gunlukGetiri": 0.00326753,
+        "paraGirisiCikisi": -779704.93,
+        "yatirimciDegisimi": -2
       },
       {
         "fonKodu": "PTF",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "PTF",
       "fonAdi": "QNB PORTFÖY TREND SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.43726,
+      "tedavuldekiPaySayisi": 574394676,
+      "kisiSayisi": 280,
+      "fonToplamDeger": 825554643.16,
+      "gunlukGetiri": 0.00326753,
+      "paraGirisiCikisi": -779704.93,
+      "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "PTF",
+      "fonAdi": "QNB PORTFÖY TREND SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 1.440184,
       "tedavuldekiPaySayisi": 526331035,
       "kisiSayisi": 277,
       "fonToplamDeger": 758013603.93,
-      "gunlukGetiri": 0.00530861,
-      "paraGirisiCikisi": -70001777.93,
-      "yatirimciDegisimi": -5
+      "gunlukGetiri": 0.00203443,
+      "paraGirisiCikisi": -69220486.75,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 526331035,
       "kisiSayisi": 277,
       "fonToplamDeger": 758013603.93,
-      "gunlukGetiri": 0.00530861,
-      "paraGirisiCikisi": -70001777.93,
-      "yatirimciDegisimi": -5
+      "gunlukGetiri": 0.00203443,
+      "paraGirisiCikisi": -69220486.75,
+      "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "PTF",
+      "fonAdi": "QNB PORTFÖY TREND SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.43726,
+      "tedavuldekiPaySayisi": 574394676,
+      "kisiSayisi": 280,
+      "fonToplamDeger": 825554643.16,
+      "gunlukGetiri": 0.00326753,
+      "paraGirisiCikisi": -779704.93,
+      "yatirimciDegisimi": -2
     },
     {
       "fonKodu": "PTF",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

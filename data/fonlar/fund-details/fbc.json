@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "FBC",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 86933501,
     "kisiSayisi": 5897,
     "fonToplamDeger": 179272462.93,
-    "gunlukGetiri": 0.01208905,
+    "gunlukGetiri": 0.0075954,
     "getiriler": {
       "birAy": -0.026080000000000002,
       "ucAy": -0.10925800000000001,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -2913359.88,
-      "besGun": -4708813.56,
+      "gunluk": -2758550.04,
+      "besGun": -4903759.36,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -42,
-      "besGun": -79,
+      "gunluk": -16,
+      "besGun": -78,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 86933501,
         "kisiSayisi": 5897,
         "fonToplamDeger": 179272462.93,
-        "gunlukGetiri": 0.01208905,
-        "paraGirisiCikisi": -2913359.88,
-        "yatirimciDegisimi": -42
+        "gunlukGetiri": 0.0075954,
+        "paraGirisiCikisi": -2758550.04,
+        "yatirimciDegisimi": -16
+      },
+      {
+        "fonKodu": "FBC",
+        "fonAdi": "ONE PORTFÖY KAR PAYI ÖDEYEN KATILIM FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 2.046634,
+        "tedavuldekiPaySayisi": 88271188,
+        "kisiSayisi": 5913,
+        "fonToplamDeger": 180658788.06,
+        "gunlukGetiri": 0.00445977,
+        "paraGirisiCikisi": -153642.86,
+        "yatirimciDegisimi": -26
       },
       {
         "fonKodu": "FBC",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "FBC",
       "fonAdi": "ONE PORTFÖY KAR PAYI ÖDEYEN KATILIM FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.046634,
+      "tedavuldekiPaySayisi": 88271188,
+      "kisiSayisi": 5913,
+      "fonToplamDeger": 180658788.06,
+      "gunlukGetiri": 0.00445977,
+      "paraGirisiCikisi": -153642.86,
+      "yatirimciDegisimi": -26
+    },
+    {
+      "fonKodu": "FBC",
+      "fonAdi": "ONE PORTFÖY KAR PAYI ÖDEYEN KATILIM FONU",
       "tarih": "2026-08-18",
       "fiyat": 2.062179,
       "tedavuldekiPaySayisi": 86933501,
       "kisiSayisi": 5897,
       "fonToplamDeger": 179272462.93,
-      "gunlukGetiri": 0.01208905,
-      "paraGirisiCikisi": -2913359.88,
-      "yatirimciDegisimi": -42
+      "gunlukGetiri": 0.0075954,
+      "paraGirisiCikisi": -2758550.04,
+      "yatirimciDegisimi": -16
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 86933501,
       "kisiSayisi": 5897,
       "fonToplamDeger": 179272462.93,
-      "gunlukGetiri": 0.01208905,
-      "paraGirisiCikisi": -2913359.88,
-      "yatirimciDegisimi": -42
+      "gunlukGetiri": 0.0075954,
+      "paraGirisiCikisi": -2758550.04,
+      "yatirimciDegisimi": -16
+    },
+    {
+      "fonKodu": "FBC",
+      "fonAdi": "ONE PORTFÖY KAR PAYI ÖDEYEN KATILIM FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.046634,
+      "tedavuldekiPaySayisi": 88271188,
+      "kisiSayisi": 5913,
+      "fonToplamDeger": 180658788.06,
+      "gunlukGetiri": 0.00445977,
+      "paraGirisiCikisi": -153642.86,
+      "yatirimciDegisimi": -26
     },
     {
       "fonKodu": "FBC",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

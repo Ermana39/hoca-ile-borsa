@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "FYD",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 278390700.19,
     "kisiSayisi": 5283,
     "fonToplamDeger": 3180216386.68,
-    "gunlukGetiri": 0.00080705,
+    "gunlukGetiri": -0.00222124,
     "getiriler": {
       "birAy": 0.036635,
       "ucAy": -0.029895,
@@ -29,22 +29,22 @@
       "besYil": 12.536868
     },
     "paraAkisi": {
-      "gunluk": -3141745.32,
-      "besGun": -82429381.77,
+      "gunluk": -4865985.16,
+      "besGun": -78426280.23,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -26,
-      "besGun": -77,
+      "gunluk": -19,
+      "besGun": -68,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 278390700.19,
         "kisiSayisi": 5283,
         "fonToplamDeger": 3180216386.68,
-        "gunlukGetiri": 0.00080705,
-        "paraGirisiCikisi": -3141745.32,
-        "yatirimciDegisimi": -26
+        "gunlukGetiri": -0.00222124,
+        "paraGirisiCikisi": -4865985.16,
+        "yatirimciDegisimi": -19
+      },
+      {
+        "fonKodu": "FYD",
+        "fonAdi": "QNB PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-17",
+        "fiyat": 11.449004,
+        "tedavuldekiPaySayisi": 278816660.19,
+        "kisiSayisi": 5302,
+        "fonToplamDeger": 3192173052.78,
+        "gunlukGetiri": 0.00303504,
+        "paraGirisiCikisi": 1728078.32,
+        "yatirimciDegisimi": -7
       },
       {
         "fonKodu": "FYD",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "FYD",
       "fonAdi": "QNB PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 11.449004,
+      "tedavuldekiPaySayisi": 278816660.19,
+      "kisiSayisi": 5302,
+      "fonToplamDeger": 3192173052.78,
+      "gunlukGetiri": 0.00303504,
+      "paraGirisiCikisi": 1728078.32,
+      "yatirimciDegisimi": -7
+    },
+    {
+      "fonKodu": "FYD",
+      "fonAdi": "QNB PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
       "tarih": "2026-08-18",
       "fiyat": 11.423573,
       "tedavuldekiPaySayisi": 278390700.19,
       "kisiSayisi": 5283,
       "fonToplamDeger": 3180216386.68,
-      "gunlukGetiri": 0.00080705,
-      "paraGirisiCikisi": -3141745.32,
-      "yatirimciDegisimi": -26
+      "gunlukGetiri": -0.00222124,
+      "paraGirisiCikisi": -4865985.16,
+      "yatirimciDegisimi": -19
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 278390700.19,
       "kisiSayisi": 5283,
       "fonToplamDeger": 3180216386.68,
-      "gunlukGetiri": 0.00080705,
-      "paraGirisiCikisi": -3141745.32,
-      "yatirimciDegisimi": -26
+      "gunlukGetiri": -0.00222124,
+      "paraGirisiCikisi": -4865985.16,
+      "yatirimciDegisimi": -19
+    },
+    {
+      "fonKodu": "FYD",
+      "fonAdi": "QNB PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 11.449004,
+      "tedavuldekiPaySayisi": 278816660.19,
+      "kisiSayisi": 5302,
+      "fonToplamDeger": 3192173052.78,
+      "gunlukGetiri": 0.00303504,
+      "paraGirisiCikisi": 1728078.32,
+      "yatirimciDegisimi": -7
     },
     {
       "fonKodu": "FYD",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

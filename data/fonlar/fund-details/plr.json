@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PLR",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 539411141,
     "kisiSayisi": 902,
     "fonToplamDeger": 898583476.93,
-    "gunlukGetiri": 0.00434933,
+    "gunlukGetiri": 0.00104921,
     "getiriler": {
       "birAy": 0.03213,
       "ucAy": 0.105155,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -7176676.47,
-      "besGun": -18796318.81,
+      "gunluk": -19187352.16,
+      "besGun": -21219226.85,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 8,
-      "besGun": 11,
+      "gunluk": -7,
+      "besGun": 9,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 539411141,
         "kisiSayisi": 902,
         "fonToplamDeger": 898583476.93,
-        "gunlukGetiri": 0.00434933,
-        "paraGirisiCikisi": -7176676.47,
-        "yatirimciDegisimi": 8
+        "gunlukGetiri": 0.00104921,
+        "paraGirisiCikisi": -19187352.16,
+        "yatirimciDegisimi": -7
+      },
+      {
+        "fonKodu": "PLR",
+        "fonAdi": "OSMANLI PORTFÖY PARA PİYASASI FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 1.664114,
+        "tedavuldekiPaySayisi": 550929127,
+        "kisiSayisi": 909,
+        "fonToplamDeger": 916808899.69,
+        "gunlukGetiri": 0.00329666,
+        "paraGirisiCikisi": 11998087.21,
+        "yatirimciDegisimi": 15
       },
       {
         "fonKodu": "PLR",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "PLR",
       "fonAdi": "OSMANLI PORTFÖY PARA PİYASASI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.664114,
+      "tedavuldekiPaySayisi": 550929127,
+      "kisiSayisi": 909,
+      "fonToplamDeger": 916808899.69,
+      "gunlukGetiri": 0.00329666,
+      "paraGirisiCikisi": 11998087.21,
+      "yatirimciDegisimi": 15
+    },
+    {
+      "fonKodu": "PLR",
+      "fonAdi": "OSMANLI PORTFÖY PARA PİYASASI FONU",
       "tarih": "2026-08-18",
       "fiyat": 1.66586,
       "tedavuldekiPaySayisi": 539411141,
       "kisiSayisi": 902,
       "fonToplamDeger": 898583476.93,
-      "gunlukGetiri": 0.00434933,
-      "paraGirisiCikisi": -7176676.47,
-      "yatirimciDegisimi": 8
+      "gunlukGetiri": 0.00104921,
+      "paraGirisiCikisi": -19187352.16,
+      "yatirimciDegisimi": -7
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 539411141,
       "kisiSayisi": 902,
       "fonToplamDeger": 898583476.93,
-      "gunlukGetiri": 0.00434933,
-      "paraGirisiCikisi": -7176676.47,
-      "yatirimciDegisimi": 8
+      "gunlukGetiri": 0.00104921,
+      "paraGirisiCikisi": -19187352.16,
+      "yatirimciDegisimi": -7
+    },
+    {
+      "fonKodu": "PLR",
+      "fonAdi": "OSMANLI PORTFÖY PARA PİYASASI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.664114,
+      "tedavuldekiPaySayisi": 550929127,
+      "kisiSayisi": 909,
+      "fonToplamDeger": 916808899.69,
+      "gunlukGetiri": 0.00329666,
+      "paraGirisiCikisi": 11998087.21,
+      "yatirimciDegisimi": 15
     },
     {
       "fonKodu": "PLR",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

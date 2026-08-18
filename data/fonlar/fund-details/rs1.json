@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "RS1",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 526514044,
     "kisiSayisi": 127,
     "fonToplamDeger": 847382438.06,
-    "gunlukGetiri": 0.00436024,
+    "gunlukGetiri": 0.00108355,
     "getiriler": {
       "birAy": 0.031823000000000004,
       "ucAy": 0.10517699999999999,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -14435393.34,
-      "besGun": -19587904.15,
+      "gunluk": -14435626.7,
+      "besGun": -22045347.28,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 1,
-      "besGun": 2,
+      "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 526514044,
         "kisiSayisi": 127,
         "fonToplamDeger": 847382438.06,
-        "gunlukGetiri": 0.00436024,
-        "paraGirisiCikisi": -14435393.34,
+        "gunlukGetiri": 0.00108355,
+        "paraGirisiCikisi": -14435626.7,
         "yatirimciDegisimi": 1
+      },
+      {
+        "fonKodu": "RS1",
+        "fonAdi": "ROTA PORTFÖY BİRİNCİ KISA VADELİ SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 1.607678,
+        "tedavuldekiPaySayisi": 535483503,
+        "kisiSayisi": 126,
+        "fonToplamDeger": 860884913.15,
+        "gunlukGetiri": 0.00327315,
+        "paraGirisiCikisi": 233.11,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "RS1",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "RS1",
       "fonAdi": "ROTA PORTFÖY BİRİNCİ KISA VADELİ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.607678,
+      "tedavuldekiPaySayisi": 535483503,
+      "kisiSayisi": 126,
+      "fonToplamDeger": 860884913.15,
+      "gunlukGetiri": 0.00327315,
+      "paraGirisiCikisi": 233.11,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "RS1",
+      "fonAdi": "ROTA PORTFÖY BİRİNCİ KISA VADELİ SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 1.60942,
       "tedavuldekiPaySayisi": 526514044,
       "kisiSayisi": 127,
       "fonToplamDeger": 847382438.06,
-      "gunlukGetiri": 0.00436024,
-      "paraGirisiCikisi": -14435393.34,
+      "gunlukGetiri": 0.00108355,
+      "paraGirisiCikisi": -14435626.7,
       "yatirimciDegisimi": 1
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 526514044,
       "kisiSayisi": 127,
       "fonToplamDeger": 847382438.06,
-      "gunlukGetiri": 0.00436024,
-      "paraGirisiCikisi": -14435393.34,
+      "gunlukGetiri": 0.00108355,
+      "paraGirisiCikisi": -14435626.7,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "RS1",
+      "fonAdi": "ROTA PORTFÖY BİRİNCİ KISA VADELİ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.607678,
+      "tedavuldekiPaySayisi": 535483503,
+      "kisiSayisi": 126,
+      "fonToplamDeger": 860884913.15,
+      "gunlukGetiri": 0.00327315,
+      "paraGirisiCikisi": 233.11,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "RS1",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

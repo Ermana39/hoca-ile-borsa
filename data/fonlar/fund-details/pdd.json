@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PDD",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 145058063,
     "kisiSayisi": 173,
     "fonToplamDeger": 861390529.41,
-    "gunlukGetiri": 0.00385126,
+    "gunlukGetiri": 0.00148716,
     "getiriler": {
       "birAy": 0.0239,
       "ucAy": 0.078033,
@@ -29,22 +29,22 @@
       "besYil": 4.37591
     },
     "paraAkisi": {
-      "gunluk": -206645.02,
-      "besGun": -5508465.46,
+      "gunluk": -5861.05,
+      "besGun": -5447896.97,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": -1,
-      "besGun": -3,
+      "besGun": -2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 145058063,
         "kisiSayisi": 173,
         "fonToplamDeger": 861390529.41,
-        "gunlukGetiri": 0.00385126,
-        "paraGirisiCikisi": -206645.02,
+        "gunlukGetiri": 0.00148716,
+        "paraGirisiCikisi": -5861.05,
         "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "PDD",
+        "fonAdi": "ASTRA PORTFÖY KATILIM FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 5.929428,
+        "tedavuldekiPaySayisi": 145059050,
+        "kisiSayisi": 174,
+        "fonToplamDeger": 860117132.38,
+        "gunlukGetiri": 0.00236059,
+        "paraGirisiCikisi": -200485.82,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "PDD",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "PDD",
       "fonAdi": "ASTRA PORTFÖY KATILIM FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 5.929428,
+      "tedavuldekiPaySayisi": 145059050,
+      "kisiSayisi": 174,
+      "fonToplamDeger": 860117132.38,
+      "gunlukGetiri": 0.00236059,
+      "paraGirisiCikisi": -200485.82,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PDD",
+      "fonAdi": "ASTRA PORTFÖY KATILIM FONU",
       "tarih": "2026-08-18",
       "fiyat": 5.938246,
       "tedavuldekiPaySayisi": 145058063,
       "kisiSayisi": 173,
       "fonToplamDeger": 861390529.41,
-      "gunlukGetiri": 0.00385126,
-      "paraGirisiCikisi": -206645.02,
+      "gunlukGetiri": 0.00148716,
+      "paraGirisiCikisi": -5861.05,
       "yatirimciDegisimi": -1
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 145058063,
       "kisiSayisi": 173,
       "fonToplamDeger": 861390529.41,
-      "gunlukGetiri": 0.00385126,
-      "paraGirisiCikisi": -206645.02,
+      "gunlukGetiri": 0.00148716,
+      "paraGirisiCikisi": -5861.05,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "PDD",
+      "fonAdi": "ASTRA PORTFÖY KATILIM FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 5.929428,
+      "tedavuldekiPaySayisi": 145059050,
+      "kisiSayisi": 174,
+      "fonToplamDeger": 860117132.38,
+      "gunlukGetiri": 0.00236059,
+      "paraGirisiCikisi": -200485.82,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "PDD",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

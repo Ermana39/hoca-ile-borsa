@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PPK",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 2645557726,
     "kisiSayisi": 3117,
     "fonToplamDeger": 5934148410.79,
-    "gunlukGetiri": 0.00407933,
+    "gunlukGetiri": 0.00101125,
     "getiriler": {
       "birAy": 0.030871,
       "ucAy": 0.101848,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 6119978.85,
-      "besGun": 150336096.08,
+      "gunluk": -31319216.98,
+      "besGun": 102327106.83,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 13,
-      "besGun": 45,
+      "gunluk": 5,
+      "besGun": 39,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 2645557726,
         "kisiSayisi": 3117,
         "fonToplamDeger": 5934148410.79,
-        "gunlukGetiri": 0.00407933,
-        "paraGirisiCikisi": 6119978.85,
-        "yatirimciDegisimi": 13
+        "gunlukGetiri": 0.00101125,
+        "paraGirisiCikisi": -31319216.98,
+        "yatirimciDegisimi": 5
+      },
+      {
+        "fonKodu": "PPK",
+        "fonAdi": "QNB PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 2.240795,
+        "tedavuldekiPaySayisi": 2659520439,
+        "kisiSayisi": 3112,
+        "fonToplamDeger": 5959439374.96,
+        "gunlukGetiri": 0.00306498,
+        "paraGirisiCikisi": 37401373.76,
+        "yatirimciDegisimi": 8
       },
       {
         "fonKodu": "PPK",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "PPK",
       "fonAdi": "QNB PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.240795,
+      "tedavuldekiPaySayisi": 2659520439,
+      "kisiSayisi": 3112,
+      "fonToplamDeger": 5959439374.96,
+      "gunlukGetiri": 0.00306498,
+      "paraGirisiCikisi": 37401373.76,
+      "yatirimciDegisimi": 8
+    },
+    {
+      "fonKodu": "PPK",
+      "fonAdi": "QNB PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
       "tarih": "2026-08-18",
       "fiyat": 2.243061,
       "tedavuldekiPaySayisi": 2645557726,
       "kisiSayisi": 3117,
       "fonToplamDeger": 5934148410.79,
-      "gunlukGetiri": 0.00407933,
-      "paraGirisiCikisi": 6119978.85,
-      "yatirimciDegisimi": 13
+      "gunlukGetiri": 0.00101125,
+      "paraGirisiCikisi": -31319216.98,
+      "yatirimciDegisimi": 5
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 2645557726,
       "kisiSayisi": 3117,
       "fonToplamDeger": 5934148410.79,
-      "gunlukGetiri": 0.00407933,
-      "paraGirisiCikisi": 6119978.85,
-      "yatirimciDegisimi": 13
+      "gunlukGetiri": 0.00101125,
+      "paraGirisiCikisi": -31319216.98,
+      "yatirimciDegisimi": 5
+    },
+    {
+      "fonKodu": "PPK",
+      "fonAdi": "QNB PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.240795,
+      "tedavuldekiPaySayisi": 2659520439,
+      "kisiSayisi": 3112,
+      "fonToplamDeger": 5959439374.96,
+      "gunlukGetiri": 0.00306498,
+      "paraGirisiCikisi": 37401373.76,
+      "yatirimciDegisimi": 8
     },
     {
       "fonKodu": "PPK",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

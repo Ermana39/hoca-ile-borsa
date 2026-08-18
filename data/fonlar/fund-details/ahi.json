@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "AHI",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 3248439,
     "kisiSayisi": 2651,
     "fonToplamDeger": 117439211.39,
-    "gunlukGetiri": 0.00013503,
+    "gunlukGetiri": -0.0050729,
     "getiriler": {
       "birAy": -0.022151999999999998,
       "ucAy": -0.048841,
@@ -29,22 +29,22 @@
       "besYil": 14.96572
     },
     "paraAkisi": {
-      "gunluk": -261274.16,
-      "besGun": -307670.02,
+      "gunluk": -356825.23,
+      "besGun": -698295.65,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 7,
-      "besGun": 38,
+      "gunluk": 1,
+      "besGun": 31,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 3248439,
         "kisiSayisi": 2651,
         "fonToplamDeger": 117439211.39,
-        "gunlukGetiri": 0.00013503,
-        "paraGirisiCikisi": -261274.16,
-        "yatirimciDegisimi": 7
+        "gunlukGetiri": -0.0050729,
+        "paraGirisiCikisi": -356825.23,
+        "yatirimciDegisimi": 1
+      },
+      {
+        "fonKodu": "AHI",
+        "fonAdi": "ATLAS PORTFÖY BİRİNCİ HİSSE SENEDİ FONU(HİSSE SENEDİ YOĞUN)",
+        "tarih": "2026-08-17",
+        "fiyat": 36.336839,
+        "tedavuldekiPaySayisi": 3258309,
+        "kisiSayisi": 2650,
+        "fonToplamDeger": 118396650.47,
+        "gunlukGetiri": 0.00523448,
+        "paraGirisiCikisi": 96038.27,
+        "yatirimciDegisimi": 6
       },
       {
         "fonKodu": "AHI",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "AHI",
       "fonAdi": "ATLAS PORTFÖY BİRİNCİ HİSSE SENEDİ FONU(HİSSE SENEDİ YOĞUN)",
+      "tarih": "2026-08-17",
+      "fiyat": 36.336839,
+      "tedavuldekiPaySayisi": 3258309,
+      "kisiSayisi": 2650,
+      "fonToplamDeger": 118396650.47,
+      "gunlukGetiri": 0.00523448,
+      "paraGirisiCikisi": 96038.27,
+      "yatirimciDegisimi": 6
+    },
+    {
+      "fonKodu": "AHI",
+      "fonAdi": "ATLAS PORTFÖY BİRİNCİ HİSSE SENEDİ FONU(HİSSE SENEDİ YOĞUN)",
       "tarih": "2026-08-18",
       "fiyat": 36.152506,
       "tedavuldekiPaySayisi": 3248439,
       "kisiSayisi": 2651,
       "fonToplamDeger": 117439211.39,
-      "gunlukGetiri": 0.00013503,
-      "paraGirisiCikisi": -261274.16,
-      "yatirimciDegisimi": 7
+      "gunlukGetiri": -0.0050729,
+      "paraGirisiCikisi": -356825.23,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 3248439,
       "kisiSayisi": 2651,
       "fonToplamDeger": 117439211.39,
-      "gunlukGetiri": 0.00013503,
-      "paraGirisiCikisi": -261274.16,
-      "yatirimciDegisimi": 7
+      "gunlukGetiri": -0.0050729,
+      "paraGirisiCikisi": -356825.23,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "AHI",
+      "fonAdi": "ATLAS PORTFÖY BİRİNCİ HİSSE SENEDİ FONU(HİSSE SENEDİ YOĞUN)",
+      "tarih": "2026-08-17",
+      "fiyat": 36.336839,
+      "tedavuldekiPaySayisi": 3258309,
+      "kisiSayisi": 2650,
+      "fonToplamDeger": 118396650.47,
+      "gunlukGetiri": 0.00523448,
+      "paraGirisiCikisi": 96038.27,
+      "yatirimciDegisimi": 6
     },
     {
       "fonKodu": "AHI",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

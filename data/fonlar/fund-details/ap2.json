@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "AP2",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 279236705,
     "kisiSayisi": 34,
     "fonToplamDeger": 823720332.73,
-    "gunlukGetiri": 0.03705469,
+    "gunlukGetiri": 0.00310395,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 279236705,
         "kisiSayisi": 34,
         "fonToplamDeger": 823720332.73,
-        "gunlukGetiri": 0.03705469,
+        "gunlukGetiri": 0.00310395,
         "paraGirisiCikisi": -22892539.66,
         "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "AP2",
+        "fonAdi": "ATLAS PORTFÖY BEŞİNCİ SERBEST (TL) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 2.940772,
+        "tedavuldekiPaySayisi": 286997151,
+        "kisiSayisi": 35,
+        "fonToplamDeger": 843993292.57,
+        "gunlukGetiri": 0.03384569,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "AP2",
@@ -188,12 +200,24 @@
     {
       "fonKodu": "AP2",
       "fonAdi": "ATLAS PORTFÖY BEŞİNCİ SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 2.940772,
+      "tedavuldekiPaySayisi": 286997151,
+      "kisiSayisi": 35,
+      "fonToplamDeger": 843993292.57,
+      "gunlukGetiri": 0.03384569,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "AP2",
+      "fonAdi": "ATLAS PORTFÖY BEŞİNCİ SERBEST (TL) FON",
       "tarih": "2026-08-18",
       "fiyat": 2.9499,
       "tedavuldekiPaySayisi": 279236705,
       "kisiSayisi": 34,
       "fonToplamDeger": 823720332.73,
-      "gunlukGetiri": 0.03705469,
+      "gunlukGetiri": 0.00310395,
       "paraGirisiCikisi": -22892539.66,
       "yatirimciDegisimi": -1
     }
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 279236705,
       "kisiSayisi": 34,
       "fonToplamDeger": 823720332.73,
-      "gunlukGetiri": 0.03705469,
+      "gunlukGetiri": 0.00310395,
       "paraGirisiCikisi": -22892539.66,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "AP2",
+      "fonAdi": "ATLAS PORTFÖY BEŞİNCİ SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 2.940772,
+      "tedavuldekiPaySayisi": 286997151,
+      "kisiSayisi": 35,
+      "fonToplamDeger": 843993292.57,
+      "gunlukGetiri": 0.03384569,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "AP2",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

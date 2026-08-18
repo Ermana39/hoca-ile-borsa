@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BHI",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 900888377,
     "kisiSayisi": 433,
     "fonToplamDeger": 2113294416.05,
-    "gunlukGetiri": 0.00254162,
+    "gunlukGetiri": 0.00113609,
     "getiriler": {
       "birAy": 0.026751999999999998,
       "ucAy": 0.098177,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -4704960.73,
-      "besGun": 87478429.02,
+      "gunluk": 16636075.21,
+      "besGun": 60872673.44,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": -1,
-      "besGun": 3,
+      "besGun": -1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 900888377,
         "kisiSayisi": 433,
         "fonToplamDeger": 2113294416.05,
-        "gunlukGetiri": 0.00254162,
-        "paraGirisiCikisi": -4704960.73,
+        "gunlukGetiri": 0.00113609,
+        "paraGirisiCikisi": 16636075.21,
         "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "BHI",
+        "fonAdi": "BV PORTFÖY MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-17",
+        "fiyat": 2.343127,
+        "tedavuldekiPaySayisi": 893796488,
+        "kisiSayisi": 434,
+        "fonToplamDeger": 2094278684.88,
+        "gunlukGetiri": 0.00140394,
+        "paraGirisiCikisi": -21316818.14,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "BHI",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "BHI",
       "fonAdi": "BV PORTFÖY MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 2.343127,
+      "tedavuldekiPaySayisi": 893796488,
+      "kisiSayisi": 434,
+      "fonToplamDeger": 2094278684.88,
+      "gunlukGetiri": 0.00140394,
+      "paraGirisiCikisi": -21316818.14,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BHI",
+      "fonAdi": "BV PORTFÖY MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
       "tarih": "2026-08-18",
       "fiyat": 2.345789,
       "tedavuldekiPaySayisi": 900888377,
       "kisiSayisi": 433,
       "fonToplamDeger": 2113294416.05,
-      "gunlukGetiri": 0.00254162,
-      "paraGirisiCikisi": -4704960.73,
+      "gunlukGetiri": 0.00113609,
+      "paraGirisiCikisi": 16636075.21,
       "yatirimciDegisimi": -1
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 900888377,
       "kisiSayisi": 433,
       "fonToplamDeger": 2113294416.05,
-      "gunlukGetiri": 0.00254162,
-      "paraGirisiCikisi": -4704960.73,
+      "gunlukGetiri": 0.00113609,
+      "paraGirisiCikisi": 16636075.21,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "BHI",
+      "fonAdi": "BV PORTFÖY MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 2.343127,
+      "tedavuldekiPaySayisi": 893796488,
+      "kisiSayisi": 434,
+      "fonToplamDeger": 2094278684.88,
+      "gunlukGetiri": 0.00140394,
+      "paraGirisiCikisi": -21316818.14,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "BHI",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

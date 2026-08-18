@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BLT",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 189939876,
     "kisiSayisi": 3087,
     "fonToplamDeger": 356446535.38,
-    "gunlukGetiri": 0.01019384,
+    "gunlukGetiri": 0.00936687,
     "getiriler": {
       "birAy": 0.109813,
       "ucAy": 0.078601,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -9432041.17,
-      "besGun": 10150845.7,
+      "gunluk": -8898360.07,
+      "besGun": 3920563.33,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 17,
-      "besGun": 129,
+      "gunluk": 5,
+      "besGun": 78,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 189939876,
         "kisiSayisi": 3087,
         "fonToplamDeger": 356446535.38,
-        "gunlukGetiri": 0.01019384,
-        "paraGirisiCikisi": -9432041.17,
-        "yatirimciDegisimi": 17
+        "gunlukGetiri": 0.00936687,
+        "paraGirisiCikisi": -8898360.07,
+        "yatirimciDegisimi": 5
+      },
+      {
+        "fonKodu": "BLT",
+        "fonAdi": "BULLS PORTFÖY ALTIN FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 1.859213,
+        "tedavuldekiPaySayisi": 194681551,
+        "kisiSayisi": 3082,
+        "fonToplamDeger": 361954552.92,
+        "gunlukGetiri": 0.0008193,
+        "paraGirisiCikisi": -528728.57,
+        "yatirimciDegisimi": 12
       },
       {
         "fonKodu": "BLT",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "BLT",
       "fonAdi": "BULLS PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.859213,
+      "tedavuldekiPaySayisi": 194681551,
+      "kisiSayisi": 3082,
+      "fonToplamDeger": 361954552.92,
+      "gunlukGetiri": 0.0008193,
+      "paraGirisiCikisi": -528728.57,
+      "yatirimciDegisimi": 12
+    },
+    {
+      "fonKodu": "BLT",
+      "fonAdi": "BULLS PORTFÖY ALTIN FONU",
       "tarih": "2026-08-18",
       "fiyat": 1.876628,
       "tedavuldekiPaySayisi": 189939876,
       "kisiSayisi": 3087,
       "fonToplamDeger": 356446535.38,
-      "gunlukGetiri": 0.01019384,
-      "paraGirisiCikisi": -9432041.17,
-      "yatirimciDegisimi": 17
+      "gunlukGetiri": 0.00936687,
+      "paraGirisiCikisi": -8898360.07,
+      "yatirimciDegisimi": 5
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 189939876,
       "kisiSayisi": 3087,
       "fonToplamDeger": 356446535.38,
-      "gunlukGetiri": 0.01019384,
-      "paraGirisiCikisi": -9432041.17,
-      "yatirimciDegisimi": 17
+      "gunlukGetiri": 0.00936687,
+      "paraGirisiCikisi": -8898360.07,
+      "yatirimciDegisimi": 5
+    },
+    {
+      "fonKodu": "BLT",
+      "fonAdi": "BULLS PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.859213,
+      "tedavuldekiPaySayisi": 194681551,
+      "kisiSayisi": 3082,
+      "fonToplamDeger": 361954552.92,
+      "gunlukGetiri": 0.0008193,
+      "paraGirisiCikisi": -528728.57,
+      "yatirimciDegisimi": 12
     },
     {
       "fonKodu": "BLT",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

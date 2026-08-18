@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "CVE",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 110022256,
     "kisiSayisi": 1,
     "fonToplamDeger": 302491447.28,
-    "gunlukGetiri": 0.00418201,
+    "gunlukGetiri": 0.0013629,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 110022256,
         "kisiSayisi": 1,
         "fonToplamDeger": 302491447.28,
-        "gunlukGetiri": 0.00418201,
+        "gunlukGetiri": 0.0013629,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "CVE",
+        "fonAdi": "AK PORTFÖY BİRİNCİ KAMU BORÇLANMA ARAÇLARI (TL) ÖZEL FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 2.745624,
+        "tedavuldekiPaySayisi": 110022256,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 302079793.23,
+        "gunlukGetiri": 0.00281528,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "CVE",
       "fonAdi": "AK PORTFÖY BİRİNCİ KAMU BORÇLANMA ARAÇLARI (TL) ÖZEL FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.745624,
+      "tedavuldekiPaySayisi": 110022256,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 302079793.23,
+      "gunlukGetiri": 0.00281528,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "CVE",
+      "fonAdi": "AK PORTFÖY BİRİNCİ KAMU BORÇLANMA ARAÇLARI (TL) ÖZEL FONU",
       "tarih": "2026-08-18",
       "fiyat": 2.749366,
       "tedavuldekiPaySayisi": 110022256,
       "kisiSayisi": 1,
       "fonToplamDeger": 302491447.28,
-      "gunlukGetiri": 0.00418201,
+      "gunlukGetiri": 0.0013629,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 110022256,
       "kisiSayisi": 1,
       "fonToplamDeger": 302491447.28,
-      "gunlukGetiri": 0.00418201,
+      "gunlukGetiri": 0.0013629,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "CVE",
+      "fonAdi": "AK PORTFÖY BİRİNCİ KAMU BORÇLANMA ARAÇLARI (TL) ÖZEL FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.745624,
+      "tedavuldekiPaySayisi": 110022256,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 302079793.23,
+      "gunlukGetiri": 0.00281528,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

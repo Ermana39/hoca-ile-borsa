@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "RBK",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 5779171,
     "kisiSayisi": 1122,
     "fonToplamDeger": 50709601.07,
-    "gunlukGetiri": 0.00280927,
+    "gunlukGetiri": 0.00129725,
     "getiriler": {
       "birAy": 0.02505,
       "ucAy": 0.074504,
@@ -29,22 +29,22 @@
       "besYil": 4.92278
     },
     "paraAkisi": {
-      "gunluk": -2031403.92,
-      "besGun": -2888603.62,
+      "gunluk": -681352.27,
+      "besGun": -584703.95,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 4,
+      "gunluk": 7,
       "besGun": 11,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 5779171,
         "kisiSayisi": 1122,
         "fonToplamDeger": 50709601.07,
-        "gunlukGetiri": 0.00280927,
-        "paraGirisiCikisi": -2031403.92,
-        "yatirimciDegisimi": 4
+        "gunlukGetiri": 0.00129725,
+        "paraGirisiCikisi": -681352.27,
+        "yatirimciDegisimi": 7
+      },
+      {
+        "fonKodu": "RBK",
+        "fonAdi": "ALBARAKA PORTFÖY KATILIM FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 8.763178,
+        "tedavuldekiPaySayisi": 5856822,
+        "kisiSayisi": 1115,
+        "fonToplamDeger": 51324376.29,
+        "gunlukGetiri": 0.00151006,
+        "paraGirisiCikisi": -1348302.57,
+        "yatirimciDegisimi": -3
       },
       {
         "fonKodu": "RBK",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "RBK",
       "fonAdi": "ALBARAKA PORTFÖY KATILIM FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 8.763178,
+      "tedavuldekiPaySayisi": 5856822,
+      "kisiSayisi": 1115,
+      "fonToplamDeger": 51324376.29,
+      "gunlukGetiri": 0.00151006,
+      "paraGirisiCikisi": -1348302.57,
+      "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "RBK",
+      "fonAdi": "ALBARAKA PORTFÖY KATILIM FONU",
       "tarih": "2026-08-18",
       "fiyat": 8.774546,
       "tedavuldekiPaySayisi": 5779171,
       "kisiSayisi": 1122,
       "fonToplamDeger": 50709601.07,
-      "gunlukGetiri": 0.00280927,
-      "paraGirisiCikisi": -2031403.92,
-      "yatirimciDegisimi": 4
+      "gunlukGetiri": 0.00129725,
+      "paraGirisiCikisi": -681352.27,
+      "yatirimciDegisimi": 7
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 5779171,
       "kisiSayisi": 1122,
       "fonToplamDeger": 50709601.07,
-      "gunlukGetiri": 0.00280927,
-      "paraGirisiCikisi": -2031403.92,
-      "yatirimciDegisimi": 4
+      "gunlukGetiri": 0.00129725,
+      "paraGirisiCikisi": -681352.27,
+      "yatirimciDegisimi": 7
+    },
+    {
+      "fonKodu": "RBK",
+      "fonAdi": "ALBARAKA PORTFÖY KATILIM FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 8.763178,
+      "tedavuldekiPaySayisi": 5856822,
+      "kisiSayisi": 1115,
+      "fonToplamDeger": 51324376.29,
+      "gunlukGetiri": 0.00151006,
+      "paraGirisiCikisi": -1348302.57,
+      "yatirimciDegisimi": -3
     },
     {
       "fonKodu": "RBK",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

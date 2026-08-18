@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "AL7",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 2288751050,
     "kisiSayisi": 107,
     "fonToplamDeger": 8588802561.47,
-    "gunlukGetiri": 0.00409868,
+    "gunlukGetiri": 0.00102353,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 298502660.8,
-      "besGun": -55246774.46,
+      "gunluk": 21680796.96,
+      "besGun": -60368318.86,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
+      "gunluk": 0,
       "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 2288751050,
         "kisiSayisi": 107,
         "fonToplamDeger": 8588802561.47,
-        "gunlukGetiri": 0.00409868,
-        "paraGirisiCikisi": 298502660.8,
+        "gunlukGetiri": 0.00102353,
+        "paraGirisiCikisi": 21680796.96,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "AL7",
+        "fonAdi": "ALBARAKA PORTFÖY İKİNCİ KISA VADELİ KATILIM SERBEST (TL) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 3.748778,
+        "tedavuldekiPaySayisi": 2282973533,
+        "kisiSayisi": 107,
+        "fonToplamDeger": 8558361746.36,
+        "gunlukGetiri": 0.00307201,
+        "paraGirisiCikisi": 276538817.09,
         "yatirimciDegisimi": -2
       },
       {
@@ -188,14 +200,26 @@
     {
       "fonKodu": "AL7",
       "fonAdi": "ALBARAKA PORTFÖY İKİNCİ KISA VADELİ KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 3.748778,
+      "tedavuldekiPaySayisi": 2282973533,
+      "kisiSayisi": 107,
+      "fonToplamDeger": 8558361746.36,
+      "gunlukGetiri": 0.00307201,
+      "paraGirisiCikisi": 276538817.09,
+      "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "AL7",
+      "fonAdi": "ALBARAKA PORTFÖY İKİNCİ KISA VADELİ KATILIM SERBEST (TL) FON",
       "tarih": "2026-08-18",
       "fiyat": 3.752615,
       "tedavuldekiPaySayisi": 2288751050,
       "kisiSayisi": 107,
       "fonToplamDeger": 8588802561.47,
-      "gunlukGetiri": 0.00409868,
-      "paraGirisiCikisi": 298502660.8,
-      "yatirimciDegisimi": -2
+      "gunlukGetiri": 0.00102353,
+      "paraGirisiCikisi": 21680796.96,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 2288751050,
       "kisiSayisi": 107,
       "fonToplamDeger": 8588802561.47,
-      "gunlukGetiri": 0.00409868,
-      "paraGirisiCikisi": 298502660.8,
+      "gunlukGetiri": 0.00102353,
+      "paraGirisiCikisi": 21680796.96,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "AL7",
+      "fonAdi": "ALBARAKA PORTFÖY İKİNCİ KISA VADELİ KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 3.748778,
+      "tedavuldekiPaySayisi": 2282973533,
+      "kisiSayisi": 107,
+      "fonToplamDeger": 8558361746.36,
+      "gunlukGetiri": 0.00307201,
+      "paraGirisiCikisi": 276538817.09,
       "yatirimciDegisimi": -2
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

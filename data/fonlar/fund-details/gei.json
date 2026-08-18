@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GEI",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 37387728,
     "kisiSayisi": 11,
     "fonToplamDeger": 1168623364.54,
-    "gunlukGetiri": -0.03139887,
+    "gunlukGetiri": 0.07796246,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 37387728,
         "kisiSayisi": 11,
         "fonToplamDeger": 1168623364.54,
-        "gunlukGetiri": -0.03139887,
+        "gunlukGetiri": 0.07796246,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "GEI",
+        "fonAdi": "INVEO PORTFÖY EVEREST SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 28.996251,
+        "tedavuldekiPaySayisi": 37387728,
+        "kisiSayisi": 11,
+        "fonToplamDeger": 1084103946.98,
+        "gunlukGetiri": -0.10145189,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "GEI",
       "fonAdi": "INVEO PORTFÖY EVEREST SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 28.996251,
+      "tedavuldekiPaySayisi": 37387728,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 1084103946.98,
+      "gunlukGetiri": -0.10145189,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GEI",
+      "fonAdi": "INVEO PORTFÖY EVEREST SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 31.25687,
       "tedavuldekiPaySayisi": 37387728,
       "kisiSayisi": 11,
       "fonToplamDeger": 1168623364.54,
-      "gunlukGetiri": -0.03139887,
+      "gunlukGetiri": 0.07796246,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 37387728,
       "kisiSayisi": 11,
       "fonToplamDeger": 1168623364.54,
-      "gunlukGetiri": -0.03139887,
+      "gunlukGetiri": 0.07796246,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GEI",
+      "fonAdi": "INVEO PORTFÖY EVEREST SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 28.996251,
+      "tedavuldekiPaySayisi": 37387728,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 1084103946.98,
+      "gunlukGetiri": -0.10145189,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "HB1",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 379657918,
     "kisiSayisi": 328,
     "fonToplamDeger": 19149939954.31,
-    "gunlukGetiri": 0.00296001,
+    "gunlukGetiri": 0.00197656,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 13999012.83,
-      "besGun": 45672222.4,
+      "gunluk": 15531631.81,
+      "besGun": 55266431.26,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 379657918,
         "kisiSayisi": 328,
         "fonToplamDeger": 19149939954.31,
-        "gunlukGetiri": 0.00296001,
-        "paraGirisiCikisi": 13999012.83,
+        "gunlukGetiri": 0.00197656,
+        "paraGirisiCikisi": 15531631.81,
         "yatirimciDegisimi": 1
+      },
+      {
+        "fonKodu": "HB1",
+        "fonAdi": "ZİRAAT PORTFÖY HALKBANK SERBEST (DÖVİZ-AMERİKAN DOLARI) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 50.340485,
+        "tedavuldekiPaySayisi": 379349995,
+        "kisiSayisi": 327,
+        "fonToplamDeger": 19096662809.54,
+        "gunlukGetiri": 0.00098151,
+        "paraGirisiCikisi": -1529595.64,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "HB1",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "HB1",
       "fonAdi": "ZİRAAT PORTFÖY HALKBANK SERBEST (DÖVİZ-AMERİKAN DOLARI) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 50.340485,
+      "tedavuldekiPaySayisi": 379349995,
+      "kisiSayisi": 327,
+      "fonToplamDeger": 19096662809.54,
+      "gunlukGetiri": 0.00098151,
+      "paraGirisiCikisi": -1529595.64,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HB1",
+      "fonAdi": "ZİRAAT PORTFÖY HALKBANK SERBEST (DÖVİZ-AMERİKAN DOLARI) FON",
       "tarih": "2026-08-18",
       "fiyat": 50.439986,
       "tedavuldekiPaySayisi": 379657918,
       "kisiSayisi": 328,
       "fonToplamDeger": 19149939954.31,
-      "gunlukGetiri": 0.00296001,
-      "paraGirisiCikisi": 13999012.83,
+      "gunlukGetiri": 0.00197656,
+      "paraGirisiCikisi": 15531631.81,
       "yatirimciDegisimi": 1
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 379657918,
       "kisiSayisi": 328,
       "fonToplamDeger": 19149939954.31,
-      "gunlukGetiri": 0.00296001,
-      "paraGirisiCikisi": 13999012.83,
+      "gunlukGetiri": 0.00197656,
+      "paraGirisiCikisi": 15531631.81,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "HB1",
+      "fonAdi": "ZİRAAT PORTFÖY HALKBANK SERBEST (DÖVİZ-AMERİKAN DOLARI) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 50.340485,
+      "tedavuldekiPaySayisi": 379349995,
+      "kisiSayisi": 327,
+      "fonToplamDeger": 19096662809.54,
+      "gunlukGetiri": 0.00098151,
+      "paraGirisiCikisi": -1529595.64,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "HB1",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

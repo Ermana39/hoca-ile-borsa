@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BHE",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 19591446,
     "kisiSayisi": 66,
     "fonToplamDeger": 37656345.55,
-    "gunlukGetiri": 0.00866777,
+    "gunlukGetiri": 0.00601753,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -35,16 +35,16 @@
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 0,
       "besGun": -1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 19591446,
         "kisiSayisi": 66,
         "fonToplamDeger": 37656345.55,
-        "gunlukGetiri": 0.00866777,
+        "gunlukGetiri": 0.00601753,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "BHE",
+        "fonAdi": "AK PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-17",
+        "fiyat": 1.910584,
+        "tedavuldekiPaySayisi": 19591446,
+        "kisiSayisi": 66,
+        "fonToplamDeger": 37431109.76,
+        "gunlukGetiri": 0.00263439,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": -1
       },
@@ -188,14 +200,26 @@
     {
       "fonKodu": "BHE",
       "fonAdi": "AK PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 1.910584,
+      "tedavuldekiPaySayisi": 19591446,
+      "kisiSayisi": 66,
+      "fonToplamDeger": 37431109.76,
+      "gunlukGetiri": 0.00263439,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "BHE",
+      "fonAdi": "AK PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
       "tarih": "2026-08-18",
       "fiyat": 1.922081,
       "tedavuldekiPaySayisi": 19591446,
       "kisiSayisi": 66,
       "fonToplamDeger": 37656345.55,
-      "gunlukGetiri": 0.00866777,
+      "gunlukGetiri": 0.00601753,
       "paraGirisiCikisi": 0,
-      "yatirimciDegisimi": -1
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 19591446,
       "kisiSayisi": 66,
       "fonToplamDeger": 37656345.55,
-      "gunlukGetiri": 0.00866777,
+      "gunlukGetiri": 0.00601753,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BHE",
+      "fonAdi": "AK PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 1.910584,
+      "tedavuldekiPaySayisi": 19591446,
+      "kisiSayisi": 66,
+      "fonToplamDeger": 37431109.76,
+      "gunlukGetiri": 0.00263439,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": -1
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

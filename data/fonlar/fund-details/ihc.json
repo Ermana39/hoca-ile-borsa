@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IHC",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 51255630,
     "kisiSayisi": 533,
     "fonToplamDeger": 413310589.59,
-    "gunlukGetiri": -0.00427705,
+    "gunlukGetiri": -0.0092588,
     "getiriler": {
       "birAy": 0.043433,
       "ucAy": 0.277878,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1416874.66,
-      "besGun": 38915836.69,
+      "gunluk": 291817.64,
+      "besGun": 35326249.65,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
-      "besGun": 57,
+      "gunluk": 0,
+      "besGun": 44,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 51255630,
         "kisiSayisi": 533,
         "fonToplamDeger": 413310589.59,
-        "gunlukGetiri": -0.00427705,
-        "paraGirisiCikisi": -1416874.66,
+        "gunlukGetiri": -0.0092588,
+        "paraGirisiCikisi": 291817.64,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "IHC",
+        "fonAdi": "INVEO PORTFÖY INTER SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 8.139069,
+        "tedavuldekiPaySayisi": 51219441,
+        "kisiSayisi": 533,
+        "fonToplamDeger": 416878545.46,
+        "gunlukGetiri": 0.00502831,
+        "paraGirisiCikisi": -1724660.58,
         "yatirimciDegisimi": 3
       },
       {
@@ -188,14 +200,26 @@
     {
       "fonKodu": "IHC",
       "fonAdi": "INVEO PORTFÖY INTER SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 8.139069,
+      "tedavuldekiPaySayisi": 51219441,
+      "kisiSayisi": 533,
+      "fonToplamDeger": 416878545.46,
+      "gunlukGetiri": 0.00502831,
+      "paraGirisiCikisi": -1724660.58,
+      "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "IHC",
+      "fonAdi": "INVEO PORTFÖY INTER SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 8.063711,
       "tedavuldekiPaySayisi": 51255630,
       "kisiSayisi": 533,
       "fonToplamDeger": 413310589.59,
-      "gunlukGetiri": -0.00427705,
-      "paraGirisiCikisi": -1416874.66,
-      "yatirimciDegisimi": 3
+      "gunlukGetiri": -0.0092588,
+      "paraGirisiCikisi": 291817.64,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 51255630,
       "kisiSayisi": 533,
       "fonToplamDeger": 413310589.59,
-      "gunlukGetiri": -0.00427705,
-      "paraGirisiCikisi": -1416874.66,
+      "gunlukGetiri": -0.0092588,
+      "paraGirisiCikisi": 291817.64,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "IHC",
+      "fonAdi": "INVEO PORTFÖY INTER SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 8.139069,
+      "tedavuldekiPaySayisi": 51219441,
+      "kisiSayisi": 533,
+      "fonToplamDeger": 416878545.46,
+      "gunlukGetiri": 0.00502831,
+      "paraGirisiCikisi": -1724660.58,
       "yatirimciDegisimi": 3
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IIS",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 31995937.25,
     "kisiSayisi": 149,
     "fonToplamDeger": 1715329807.79,
-    "gunlukGetiri": null,
+    "gunlukGetiri": 0.01208636,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": null,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,6 +58,18 @@
         "tedavuldekiPaySayisi": 31995937.25,
         "kisiSayisi": 149,
         "fonToplamDeger": 1715329807.79,
+        "gunlukGetiri": 0.01208636,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "IIS",
+        "fonAdi": "İSTANBUL PORTFÖY İKİNCİ SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 52.970641,
+        "tedavuldekiPaySayisi": 31995937.25,
+        "kisiSayisi": 149,
+        "fonToplamDeger": 1694845290.15,
         "gunlukGetiri": null,
         "paraGirisiCikisi": null,
         "yatirimciDegisimi": 0
@@ -188,13 +200,25 @@
     {
       "fonKodu": "IIS",
       "fonAdi": "İSTANBUL PORTFÖY İKİNCİ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 52.970641,
+      "tedavuldekiPaySayisi": 31995937.25,
+      "kisiSayisi": 149,
+      "fonToplamDeger": 1694845290.15,
+      "gunlukGetiri": null,
+      "paraGirisiCikisi": null,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "IIS",
+      "fonAdi": "İSTANBUL PORTFÖY İKİNCİ SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 53.610863,
       "tedavuldekiPaySayisi": 31995937.25,
       "kisiSayisi": 149,
       "fonToplamDeger": 1715329807.79,
-      "gunlukGetiri": null,
-      "paraGirisiCikisi": null,
+      "gunlukGetiri": 0.01208636,
+      "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
   ],
@@ -207,6 +231,18 @@
       "tedavuldekiPaySayisi": 31995937.25,
       "kisiSayisi": 149,
       "fonToplamDeger": 1715329807.79,
+      "gunlukGetiri": 0.01208636,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "IIS",
+      "fonAdi": "İSTANBUL PORTFÖY İKİNCİ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 52.970641,
+      "tedavuldekiPaySayisi": 31995937.25,
+      "kisiSayisi": 149,
+      "fonToplamDeger": 1694845290.15,
       "gunlukGetiri": null,
       "paraGirisiCikisi": null,
       "yatirimciDegisimi": 0
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

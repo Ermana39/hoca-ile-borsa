@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ZPE",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 35915449.84,
     "kisiSayisi": 7065,
     "fonToplamDeger": 1246891150.57,
-    "gunlukGetiri": 0.01724309,
+    "gunlukGetiri": 0.01589099,
     "getiriler": {
       "birAy": 0.029592,
       "ucAy": 0.019271,
@@ -29,22 +29,22 @@
       "besYil": 10.310829000000002
     },
     "paraAkisi": {
-      "gunluk": 1494827.22,
-      "besGun": -1936324.11,
+      "gunluk": -343459.27,
+      "besGun": -798844.72,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 28,
-      "besGun": 38,
+      "gunluk": 22,
+      "besGun": 35,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 35915449.84,
         "kisiSayisi": 7065,
         "fonToplamDeger": 1246891150.57,
-        "gunlukGetiri": 0.01724309,
-        "paraGirisiCikisi": 1494827.22,
-        "yatirimciDegisimi": 28
+        "gunlukGetiri": 0.01589099,
+        "paraGirisiCikisi": -343459.27,
+        "yatirimciDegisimi": 22
+      },
+      {
+        "fonKodu": "ZPE",
+        "fonAdi": "ZİRAAT PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-17",
+        "fiyat": 34.174339,
+        "tedavuldekiPaySayisi": 35925342.84,
+        "kisiSayisi": 7043,
+        "fonToplamDeger": 1227724846.61,
+        "gunlukGetiri": 0.00133095,
+        "paraGirisiCikisi": 1809531.25,
+        "yatirimciDegisimi": 6
       },
       {
         "fonKodu": "ZPE",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "ZPE",
       "fonAdi": "ZİRAAT PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 34.174339,
+      "tedavuldekiPaySayisi": 35925342.84,
+      "kisiSayisi": 7043,
+      "fonToplamDeger": 1227724846.61,
+      "gunlukGetiri": 0.00133095,
+      "paraGirisiCikisi": 1809531.25,
+      "yatirimciDegisimi": 6
+    },
+    {
+      "fonKodu": "ZPE",
+      "fonAdi": "ZİRAAT PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
       "tarih": "2026-08-18",
       "fiyat": 34.717403,
       "tedavuldekiPaySayisi": 35915449.84,
       "kisiSayisi": 7065,
       "fonToplamDeger": 1246891150.57,
-      "gunlukGetiri": 0.01724309,
-      "paraGirisiCikisi": 1494827.22,
-      "yatirimciDegisimi": 28
+      "gunlukGetiri": 0.01589099,
+      "paraGirisiCikisi": -343459.27,
+      "yatirimciDegisimi": 22
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 35915449.84,
       "kisiSayisi": 7065,
       "fonToplamDeger": 1246891150.57,
-      "gunlukGetiri": 0.01724309,
-      "paraGirisiCikisi": 1494827.22,
-      "yatirimciDegisimi": 28
+      "gunlukGetiri": 0.01589099,
+      "paraGirisiCikisi": -343459.27,
+      "yatirimciDegisimi": 22
+    },
+    {
+      "fonKodu": "ZPE",
+      "fonAdi": "ZİRAAT PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 34.174339,
+      "tedavuldekiPaySayisi": 35925342.84,
+      "kisiSayisi": 7043,
+      "fonToplamDeger": 1227724846.61,
+      "gunlukGetiri": 0.00133095,
+      "paraGirisiCikisi": 1809531.25,
+      "yatirimciDegisimi": 6
     },
     {
       "fonKodu": "ZPE",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

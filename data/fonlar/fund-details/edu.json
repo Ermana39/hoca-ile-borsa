@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "EDU",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 101234940,
     "kisiSayisi": 663,
     "fonToplamDeger": 364011072.52,
-    "gunlukGetiri": 0.00444495,
+    "gunlukGetiri": 0.00178726,
     "getiriler": {
       "birAy": 0.029634999999999998,
       "ucAy": 0.08567399999999999,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -68660.01,
-      "besGun": -130249.85,
+      "gunluk": -16820.71,
+      "besGun": -629354.62,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 101234940,
         "kisiSayisi": 663,
         "fonToplamDeger": 364011072.52,
-        "gunlukGetiri": 0.00444495,
-        "paraGirisiCikisi": -68660.01,
+        "gunlukGetiri": 0.00178726,
+        "paraGirisiCikisi": -16820.71,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "EDU",
+        "fonAdi": "İŞ PORTFÖY TEV EĞİTİME DESTEK DEĞİŞKEN FON",
+        "tarih": "2026-08-17",
+        "fiyat": 3.589291,
+        "tedavuldekiPaySayisi": 101239618,
+        "kisiSayisi": 663,
+        "fonToplamDeger": 363378457.15,
+        "gunlukGetiri": 0.00265295,
+        "paraGirisiCikisi": -51746.81,
         "yatirimciDegisimi": 0
       },
       {
@@ -188,13 +200,25 @@
     {
       "fonKodu": "EDU",
       "fonAdi": "İŞ PORTFÖY TEV EĞİTİME DESTEK DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 3.589291,
+      "tedavuldekiPaySayisi": 101239618,
+      "kisiSayisi": 663,
+      "fonToplamDeger": 363378457.15,
+      "gunlukGetiri": 0.00265295,
+      "paraGirisiCikisi": -51746.81,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "EDU",
+      "fonAdi": "İŞ PORTFÖY TEV EĞİTİME DESTEK DEĞİŞKEN FON",
       "tarih": "2026-08-18",
       "fiyat": 3.595706,
       "tedavuldekiPaySayisi": 101234940,
       "kisiSayisi": 663,
       "fonToplamDeger": 364011072.52,
-      "gunlukGetiri": 0.00444495,
-      "paraGirisiCikisi": -68660.01,
+      "gunlukGetiri": 0.00178726,
+      "paraGirisiCikisi": -16820.71,
       "yatirimciDegisimi": 0
     }
   ],
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 101234940,
       "kisiSayisi": 663,
       "fonToplamDeger": 364011072.52,
-      "gunlukGetiri": 0.00444495,
-      "paraGirisiCikisi": -68660.01,
+      "gunlukGetiri": 0.00178726,
+      "paraGirisiCikisi": -16820.71,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "EDU",
+      "fonAdi": "İŞ PORTFÖY TEV EĞİTİME DESTEK DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 3.589291,
+      "tedavuldekiPaySayisi": 101239618,
+      "kisiSayisi": 663,
+      "fonToplamDeger": 363378457.15,
+      "gunlukGetiri": 0.00265295,
+      "paraGirisiCikisi": -51746.81,
       "yatirimciDegisimi": 0
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

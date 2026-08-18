@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PRH",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 285000547,
     "kisiSayisi": 312,
     "fonToplamDeger": 622317430.24,
-    "gunlukGetiri": 0.00421126,
+    "gunlukGetiri": 0.0010246,
     "getiriler": {
       "birAy": 0.031835,
       "ucAy": 0.10347400000000001,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -11389294.65,
-      "besGun": -22710466.25,
+      "gunluk": -6736082.75,
+      "besGun": -23274673.76,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
+      "gunluk": -1,
       "besGun": -2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 285000547,
         "kisiSayisi": 312,
         "fonToplamDeger": 622317430.24,
-        "gunlukGetiri": 0.00421126,
-        "paraGirisiCikisi": -11389294.65,
-        "yatirimciDegisimi": -2
+        "gunlukGetiri": 0.0010246,
+        "paraGirisiCikisi": -6736082.75,
+        "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "PRH",
+        "fonAdi": "AURA PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 2.181331,
+        "tedavuldekiPaySayisi": 288085447,
+        "kisiSayisi": 313,
+        "fonToplamDeger": 628409687.28,
+        "gunlukGetiri": 0.00318339,
+        "paraGirisiCikisi": -4648449.08,
+        "yatirimciDegisimi": -1
       },
       {
         "fonKodu": "PRH",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "PRH",
       "fonAdi": "AURA PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.181331,
+      "tedavuldekiPaySayisi": 288085447,
+      "kisiSayisi": 313,
+      "fonToplamDeger": 628409687.28,
+      "gunlukGetiri": 0.00318339,
+      "paraGirisiCikisi": -4648449.08,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "PRH",
+      "fonAdi": "AURA PORTFÖY PARA PİYASASI (TL) FONU",
       "tarih": "2026-08-18",
       "fiyat": 2.183566,
       "tedavuldekiPaySayisi": 285000547,
       "kisiSayisi": 312,
       "fonToplamDeger": 622317430.24,
-      "gunlukGetiri": 0.00421126,
-      "paraGirisiCikisi": -11389294.65,
-      "yatirimciDegisimi": -2
+      "gunlukGetiri": 0.0010246,
+      "paraGirisiCikisi": -6736082.75,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 285000547,
       "kisiSayisi": 312,
       "fonToplamDeger": 622317430.24,
-      "gunlukGetiri": 0.00421126,
-      "paraGirisiCikisi": -11389294.65,
-      "yatirimciDegisimi": -2
+      "gunlukGetiri": 0.0010246,
+      "paraGirisiCikisi": -6736082.75,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "PRH",
+      "fonAdi": "AURA PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.181331,
+      "tedavuldekiPaySayisi": 288085447,
+      "kisiSayisi": 313,
+      "fonToplamDeger": 628409687.28,
+      "gunlukGetiri": 0.00318339,
+      "paraGirisiCikisi": -4648449.08,
+      "yatirimciDegisimi": -1
     },
     {
       "fonKodu": "PRH",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TFU",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 401295472,
     "kisiSayisi": 1378,
     "fonToplamDeger": 515306788.82,
-    "gunlukGetiri": 0.00218057,
+    "gunlukGetiri": 0.00054542,
     "getiriler": {
       "birAy": 0.018506,
       "ucAy": 0.082651,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -481061.53,
-      "besGun": -13433294.05,
+      "gunluk": -152091.04,
+      "besGun": -6937537.3,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -7,
-      "besGun": -49,
+      "gunluk": -2,
+      "besGun": -43,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 401295472,
         "kisiSayisi": 1378,
         "fonToplamDeger": 515306788.82,
-        "gunlukGetiri": 0.00218057,
-        "paraGirisiCikisi": -481061.53,
-        "yatirimciDegisimi": -7
+        "gunlukGetiri": 0.00054542,
+        "paraGirisiCikisi": -152091.04,
+        "yatirimciDegisimi": -2
+      },
+      {
+        "fonKodu": "TFU",
+        "fonAdi": "İŞ PORTFÖY TÜFEYE ENDEKSLİ BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 1.283408,
+        "tedavuldekiPaySayisi": 401413913,
+        "kisiSayisi": 1380,
+        "fonToplamDeger": 515177769.17,
+        "gunlukGetiri": 0.00163426,
+        "paraGirisiCikisi": -328791.16,
+        "yatirimciDegisimi": -5
       },
       {
         "fonKodu": "TFU",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "TFU",
       "fonAdi": "İŞ PORTFÖY TÜFEYE ENDEKSLİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.283408,
+      "tedavuldekiPaySayisi": 401413913,
+      "kisiSayisi": 1380,
+      "fonToplamDeger": 515177769.17,
+      "gunlukGetiri": 0.00163426,
+      "paraGirisiCikisi": -328791.16,
+      "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "TFU",
+      "fonAdi": "İŞ PORTFÖY TÜFEYE ENDEKSLİ BORÇLANMA ARAÇLARI (TL) FONU",
       "tarih": "2026-08-18",
       "fiyat": 1.284108,
       "tedavuldekiPaySayisi": 401295472,
       "kisiSayisi": 1378,
       "fonToplamDeger": 515306788.82,
-      "gunlukGetiri": 0.00218057,
-      "paraGirisiCikisi": -481061.53,
-      "yatirimciDegisimi": -7
+      "gunlukGetiri": 0.00054542,
+      "paraGirisiCikisi": -152091.04,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 401295472,
       "kisiSayisi": 1378,
       "fonToplamDeger": 515306788.82,
-      "gunlukGetiri": 0.00218057,
-      "paraGirisiCikisi": -481061.53,
-      "yatirimciDegisimi": -7
+      "gunlukGetiri": 0.00054542,
+      "paraGirisiCikisi": -152091.04,
+      "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "TFU",
+      "fonAdi": "İŞ PORTFÖY TÜFEYE ENDEKSLİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.283408,
+      "tedavuldekiPaySayisi": 401413913,
+      "kisiSayisi": 1380,
+      "fonToplamDeger": 515177769.17,
+      "gunlukGetiri": 0.00163426,
+      "paraGirisiCikisi": -328791.16,
+      "yatirimciDegisimi": -5
     },
     {
       "fonKodu": "TFU",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

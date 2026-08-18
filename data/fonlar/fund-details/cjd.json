@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "CJD",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 9190305,
     "kisiSayisi": 182,
     "fonToplamDeger": 470826599.48,
-    "gunlukGetiri": 0.01065083,
+    "gunlukGetiri": 0.0061396,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 387434401.42,
-      "besGun": 450685771.84,
+      "gunluk": 306291947.98,
+      "besGun": 450190629.97,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 155,
+      "gunluk": 120,
       "besGun": 169,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 9190305,
         "kisiSayisi": 182,
         "fonToplamDeger": 470826599.48,
-        "gunlukGetiri": 0.01065083,
-        "paraGirisiCikisi": 387434401.42,
-        "yatirimciDegisimi": 155
+        "gunlukGetiri": 0.0061396,
+        "paraGirisiCikisi": 306291947.98,
+        "yatirimciDegisimi": 120
+      },
+      {
+        "fonKodu": "CJD",
+        "fonAdi": "AK PORTFÖY SEKİZİNCİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 50.918175,
+        "tedavuldekiPaySayisi": 3211636,
+        "kisiSayisi": 62,
+        "fonToplamDeger": 163530642.49,
+        "gunlukGetiri": 0.0044837,
+        "paraGirisiCikisi": 80647311.57,
+        "yatirimciDegisimi": 35
       },
       {
         "fonKodu": "CJD",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "CJD",
       "fonAdi": "AK PORTFÖY SEKİZİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 50.918175,
+      "tedavuldekiPaySayisi": 3211636,
+      "kisiSayisi": 62,
+      "fonToplamDeger": 163530642.49,
+      "gunlukGetiri": 0.0044837,
+      "paraGirisiCikisi": 80647311.57,
+      "yatirimciDegisimi": 35
+    },
+    {
+      "fonKodu": "CJD",
+      "fonAdi": "AK PORTFÖY SEKİZİNCİ SERBEST (DÖVİZ) FON",
       "tarih": "2026-08-18",
       "fiyat": 51.230792,
       "tedavuldekiPaySayisi": 9190305,
       "kisiSayisi": 182,
       "fonToplamDeger": 470826599.48,
-      "gunlukGetiri": 0.01065083,
-      "paraGirisiCikisi": 387434401.42,
-      "yatirimciDegisimi": 155
+      "gunlukGetiri": 0.0061396,
+      "paraGirisiCikisi": 306291947.98,
+      "yatirimciDegisimi": 120
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 9190305,
       "kisiSayisi": 182,
       "fonToplamDeger": 470826599.48,
-      "gunlukGetiri": 0.01065083,
-      "paraGirisiCikisi": 387434401.42,
-      "yatirimciDegisimi": 155
+      "gunlukGetiri": 0.0061396,
+      "paraGirisiCikisi": 306291947.98,
+      "yatirimciDegisimi": 120
+    },
+    {
+      "fonKodu": "CJD",
+      "fonAdi": "AK PORTFÖY SEKİZİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 50.918175,
+      "tedavuldekiPaySayisi": 3211636,
+      "kisiSayisi": 62,
+      "fonToplamDeger": 163530642.49,
+      "gunlukGetiri": 0.0044837,
+      "paraGirisiCikisi": 80647311.57,
+      "yatirimciDegisimi": 35
     },
     {
       "fonKodu": "CJD",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

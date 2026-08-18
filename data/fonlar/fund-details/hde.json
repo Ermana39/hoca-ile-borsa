@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "HDE",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 159695060,
     "kisiSayisi": 4454,
     "fonToplamDeger": 9163875024.05,
-    "gunlukGetiri": 0.00877381,
+    "gunlukGetiri": 0.0056281,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 6824228.08,
-      "besGun": 79490400.32,
+      "gunluk": 622497.13,
+      "besGun": 3330972.72,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 10,
-      "besGun": -1,
+      "gunluk": 4,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 159695060,
         "kisiSayisi": 4454,
         "fonToplamDeger": 9163875024.05,
-        "gunlukGetiri": 0.00877381,
-        "paraGirisiCikisi": 6824228.08,
-        "yatirimciDegisimi": 10
+        "gunlukGetiri": 0.0056281,
+        "paraGirisiCikisi": 622497.13,
+        "yatirimciDegisimi": 4
+      },
+      {
+        "fonKodu": "HDE",
+        "fonAdi": "HSBC PORTFÖY BEŞİNCİ SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 57.062432,
+        "tedavuldekiPaySayisi": 159684212,
+        "kisiSayisi": 4450,
+        "fonToplamDeger": 9111969534.62,
+        "gunlukGetiri": 0.00312811,
+        "paraGirisiCikisi": 6167022.34,
+        "yatirimciDegisimi": 6
       },
       {
         "fonKodu": "HDE",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "HDE",
       "fonAdi": "HSBC PORTFÖY BEŞİNCİ SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 57.062432,
+      "tedavuldekiPaySayisi": 159684212,
+      "kisiSayisi": 4450,
+      "fonToplamDeger": 9111969534.62,
+      "gunlukGetiri": 0.00312811,
+      "paraGirisiCikisi": 6167022.34,
+      "yatirimciDegisimi": 6
+    },
+    {
+      "fonKodu": "HDE",
+      "fonAdi": "HSBC PORTFÖY BEŞİNCİ SERBEST (DÖVİZ-AVRO) FON",
       "tarih": "2026-08-18",
       "fiyat": 57.383585,
       "tedavuldekiPaySayisi": 159695060,
       "kisiSayisi": 4454,
       "fonToplamDeger": 9163875024.05,
-      "gunlukGetiri": 0.00877381,
-      "paraGirisiCikisi": 6824228.08,
-      "yatirimciDegisimi": 10
+      "gunlukGetiri": 0.0056281,
+      "paraGirisiCikisi": 622497.13,
+      "yatirimciDegisimi": 4
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 159695060,
       "kisiSayisi": 4454,
       "fonToplamDeger": 9163875024.05,
-      "gunlukGetiri": 0.00877381,
-      "paraGirisiCikisi": 6824228.08,
-      "yatirimciDegisimi": 10
+      "gunlukGetiri": 0.0056281,
+      "paraGirisiCikisi": 622497.13,
+      "yatirimciDegisimi": 4
+    },
+    {
+      "fonKodu": "HDE",
+      "fonAdi": "HSBC PORTFÖY BEŞİNCİ SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 57.062432,
+      "tedavuldekiPaySayisi": 159684212,
+      "kisiSayisi": 4450,
+      "fonToplamDeger": 9111969534.62,
+      "gunlukGetiri": 0.00312811,
+      "paraGirisiCikisi": 6167022.34,
+      "yatirimciDegisimi": 6
     },
     {
       "fonKodu": "HDE",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

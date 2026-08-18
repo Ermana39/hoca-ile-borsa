@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BTE",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 43348368,
     "kisiSayisi": 1001,
     "fonToplamDeger": 227875870.95,
-    "gunlukGetiri": 0.01666374,
+    "gunlukGetiri": 0.00199432,
     "getiriler": {
       "birAy": 0.09706200000000001,
       "ucAy": 0.196198,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1501429.96,
-      "besGun": -595460.94,
+      "gunluk": -185729.77,
+      "besGun": -732841.57,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 8,
-      "besGun": 32,
+      "besGun": 26,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 43348368,
         "kisiSayisi": 1001,
         "fonToplamDeger": 227875870.95,
-        "gunlukGetiri": 0.01666374,
-        "paraGirisiCikisi": -1501429.96,
+        "gunlukGetiri": 0.00199432,
+        "paraGirisiCikisi": -185729.77,
         "yatirimciDegisimi": 8
+      },
+      {
+        "fonKodu": "BTE",
+        "fonAdi": "BV PORTFÖY OYUN VE TEKNOLOJİ DEĞİŞKEN FON",
+        "tarih": "2026-08-17",
+        "fiyat": 5.246387,
+        "tedavuldekiPaySayisi": 43383699,
+        "kisiSayisi": 993,
+        "fonToplamDeger": 227607671.21,
+        "gunlukGetiri": 0.01464022,
+        "paraGirisiCikisi": -1313081.48,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "BTE",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "BTE",
       "fonAdi": "BV PORTFÖY OYUN VE TEKNOLOJİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 5.246387,
+      "tedavuldekiPaySayisi": 43383699,
+      "kisiSayisi": 993,
+      "fonToplamDeger": 227607671.21,
+      "gunlukGetiri": 0.01464022,
+      "paraGirisiCikisi": -1313081.48,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BTE",
+      "fonAdi": "BV PORTFÖY OYUN VE TEKNOLOJİ DEĞİŞKEN FON",
       "tarih": "2026-08-18",
       "fiyat": 5.25685,
       "tedavuldekiPaySayisi": 43348368,
       "kisiSayisi": 1001,
       "fonToplamDeger": 227875870.95,
-      "gunlukGetiri": 0.01666374,
-      "paraGirisiCikisi": -1501429.96,
+      "gunlukGetiri": 0.00199432,
+      "paraGirisiCikisi": -185729.77,
       "yatirimciDegisimi": 8
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 43348368,
       "kisiSayisi": 1001,
       "fonToplamDeger": 227875870.95,
-      "gunlukGetiri": 0.01666374,
-      "paraGirisiCikisi": -1501429.96,
+      "gunlukGetiri": 0.00199432,
+      "paraGirisiCikisi": -185729.77,
       "yatirimciDegisimi": 8
+    },
+    {
+      "fonKodu": "BTE",
+      "fonAdi": "BV PORTFÖY OYUN VE TEKNOLOJİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 5.246387,
+      "tedavuldekiPaySayisi": 43383699,
+      "kisiSayisi": 993,
+      "fonToplamDeger": 227607671.21,
+      "gunlukGetiri": 0.01464022,
+      "paraGirisiCikisi": -1313081.48,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "BTE",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

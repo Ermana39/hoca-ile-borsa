@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DOR",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 7202062,
     "kisiSayisi": 1,
     "fonToplamDeger": 526825921.63,
-    "gunlukGetiri": 0.00370535,
+    "gunlukGetiri": 0.00163824,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 7202062,
         "kisiSayisi": 1,
         "fonToplamDeger": 526825921.63,
-        "gunlukGetiri": 0.00370535,
+        "gunlukGetiri": 0.00163824,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "DOR",
+        "fonAdi": "AZİMUT PORTFÖY OKSİJEN SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-17",
+        "fiyat": 73.029678,
+        "tedavuldekiPaySayisi": 7202062,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 525964270.64,
+        "gunlukGetiri": 0.00206373,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "DOR",
       "fonAdi": "AZİMUT PORTFÖY OKSİJEN SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 73.029678,
+      "tedavuldekiPaySayisi": 7202062,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 525964270.64,
+      "gunlukGetiri": 0.00206373,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DOR",
+      "fonAdi": "AZİMUT PORTFÖY OKSİJEN SERBEST (DÖVİZ) ÖZEL FON",
       "tarih": "2026-08-18",
       "fiyat": 73.149318,
       "tedavuldekiPaySayisi": 7202062,
       "kisiSayisi": 1,
       "fonToplamDeger": 526825921.63,
-      "gunlukGetiri": 0.00370535,
+      "gunlukGetiri": 0.00163824,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 7202062,
       "kisiSayisi": 1,
       "fonToplamDeger": 526825921.63,
-      "gunlukGetiri": 0.00370535,
+      "gunlukGetiri": 0.00163824,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DOR",
+      "fonAdi": "AZİMUT PORTFÖY OKSİJEN SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 73.029678,
+      "tedavuldekiPaySayisi": 7202062,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 525964270.64,
+      "gunlukGetiri": 0.00206373,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

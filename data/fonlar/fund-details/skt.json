@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "SKT",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 313706562,
     "kisiSayisi": 2015,
     "fonToplamDeger": 36539665.63,
-    "gunlukGetiri": 0.00407745,
+    "gunlukGetiri": 0.00079908,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 670222.98,
-      "besGun": 205013.74,
+      "gunluk": 323401.88,
+      "besGun": -176585.79,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 1,
-      "besGun": -4,
+      "besGun": -3,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 313706562,
         "kisiSayisi": 2015,
         "fonToplamDeger": 36539665.63,
-        "gunlukGetiri": 0.00407745,
-        "paraGirisiCikisi": 670222.98,
+        "gunlukGetiri": 0.00079908,
+        "paraGirisiCikisi": 323401.88,
         "yatirimciDegisimi": 1
+      },
+      {
+        "fonKodu": "SKT",
+        "fonAdi": "FİBA PORTFÖY ŞEKERBANK KISA VADELİ BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 0.116384,
+        "tedavuldekiPaySayisi": 310930032,
+        "kisiSayisi": 2014,
+        "fonToplamDeger": 36187395.3,
+        "gunlukGetiri": 0.00327575,
+        "paraGirisiCikisi": 346544.18,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "SKT",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "SKT",
       "fonAdi": "FİBA PORTFÖY ŞEKERBANK KISA VADELİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 0.116384,
+      "tedavuldekiPaySayisi": 310930032,
+      "kisiSayisi": 2014,
+      "fonToplamDeger": 36187395.3,
+      "gunlukGetiri": 0.00327575,
+      "paraGirisiCikisi": 346544.18,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "SKT",
+      "fonAdi": "FİBA PORTFÖY ŞEKERBANK KISA VADELİ BORÇLANMA ARAÇLARI FONU",
       "tarih": "2026-08-18",
       "fiyat": 0.116477,
       "tedavuldekiPaySayisi": 313706562,
       "kisiSayisi": 2015,
       "fonToplamDeger": 36539665.63,
-      "gunlukGetiri": 0.00407745,
-      "paraGirisiCikisi": 670222.98,
+      "gunlukGetiri": 0.00079908,
+      "paraGirisiCikisi": 323401.88,
       "yatirimciDegisimi": 1
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 313706562,
       "kisiSayisi": 2015,
       "fonToplamDeger": 36539665.63,
-      "gunlukGetiri": 0.00407745,
-      "paraGirisiCikisi": 670222.98,
+      "gunlukGetiri": 0.00079908,
+      "paraGirisiCikisi": 323401.88,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "SKT",
+      "fonAdi": "FİBA PORTFÖY ŞEKERBANK KISA VADELİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 0.116384,
+      "tedavuldekiPaySayisi": 310930032,
+      "kisiSayisi": 2014,
+      "fonToplamDeger": 36187395.3,
+      "gunlukGetiri": 0.00327575,
+      "paraGirisiCikisi": 346544.18,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "SKT",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

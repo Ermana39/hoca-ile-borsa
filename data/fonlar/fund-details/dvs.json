@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DVS",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 212831055,
     "kisiSayisi": 314,
     "fonToplamDeger": 333286328.38,
-    "gunlukGetiri": 0.00430076,
+    "gunlukGetiri": 0.0010151,
     "getiriler": {
       "birAy": 0.032098,
       "ucAy": 0.103034,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 8413882.75,
-      "besGun": 40970657.61,
+      "gunluk": 5459911.5,
+      "besGun": 44206447.06,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
-      "besGun": 5,
+      "gunluk": 1,
+      "besGun": 6,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 212831055,
         "kisiSayisi": 314,
         "fonToplamDeger": 333286328.38,
-        "gunlukGetiri": 0.00430076,
-        "paraGirisiCikisi": 8413882.75,
-        "yatirimciDegisimi": -4
+        "gunlukGetiri": 0.0010151,
+        "paraGirisiCikisi": 5459911.5,
+        "yatirimciDegisimi": 1
+      },
+      {
+        "fonKodu": "DVS",
+        "fonAdi": "DENİZ PORTFÖY KISA VADELİ SERBEST (TL) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 1.564379,
+        "tedavuldekiPaySayisi": 209344448,
+        "kisiSayisi": 313,
+        "fonToplamDeger": 327494023.65,
+        "gunlukGetiri": 0.00328232,
+        "paraGirisiCikisi": 2950975.71,
+        "yatirimciDegisimi": -5
       },
       {
         "fonKodu": "DVS",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "DVS",
       "fonAdi": "DENİZ PORTFÖY KISA VADELİ SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.564379,
+      "tedavuldekiPaySayisi": 209344448,
+      "kisiSayisi": 313,
+      "fonToplamDeger": 327494023.65,
+      "gunlukGetiri": 0.00328232,
+      "paraGirisiCikisi": 2950975.71,
+      "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "DVS",
+      "fonAdi": "DENİZ PORTFÖY KISA VADELİ SERBEST (TL) FON",
       "tarih": "2026-08-18",
       "fiyat": 1.565967,
       "tedavuldekiPaySayisi": 212831055,
       "kisiSayisi": 314,
       "fonToplamDeger": 333286328.38,
-      "gunlukGetiri": 0.00430076,
-      "paraGirisiCikisi": 8413882.75,
-      "yatirimciDegisimi": -4
+      "gunlukGetiri": 0.0010151,
+      "paraGirisiCikisi": 5459911.5,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 212831055,
       "kisiSayisi": 314,
       "fonToplamDeger": 333286328.38,
-      "gunlukGetiri": 0.00430076,
-      "paraGirisiCikisi": 8413882.75,
-      "yatirimciDegisimi": -4
+      "gunlukGetiri": 0.0010151,
+      "paraGirisiCikisi": 5459911.5,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "DVS",
+      "fonAdi": "DENİZ PORTFÖY KISA VADELİ SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.564379,
+      "tedavuldekiPaySayisi": 209344448,
+      "kisiSayisi": 313,
+      "fonToplamDeger": 327494023.65,
+      "gunlukGetiri": 0.00328232,
+      "paraGirisiCikisi": 2950975.71,
+      "yatirimciDegisimi": -5
     },
     {
       "fonKodu": "DVS",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

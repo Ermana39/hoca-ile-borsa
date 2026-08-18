@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "FHI",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 48974090,
     "kisiSayisi": 11,
     "fonToplamDeger": 71374795.63,
-    "gunlukGetiri": 0.00179407,
+    "gunlukGetiri": 0.0020193,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 48974090,
         "kisiSayisi": 11,
         "fonToplamDeger": 71374795.63,
-        "gunlukGetiri": 0.00179407,
+        "gunlukGetiri": 0.0020193,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "FHI",
+        "fonAdi": "FONMAP PORTFÖY İKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-17",
+        "fiyat": 1.454462,
+        "tedavuldekiPaySayisi": 48974090,
+        "kisiSayisi": 11,
+        "fonToplamDeger": 71230964.73,
+        "gunlukGetiri": -0.00022477,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "FHI",
       "fonAdi": "FONMAP PORTFÖY İKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 1.454462,
+      "tedavuldekiPaySayisi": 48974090,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 71230964.73,
+      "gunlukGetiri": -0.00022477,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "FHI",
+      "fonAdi": "FONMAP PORTFÖY İKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
       "tarih": "2026-08-18",
       "fiyat": 1.457399,
       "tedavuldekiPaySayisi": 48974090,
       "kisiSayisi": 11,
       "fonToplamDeger": 71374795.63,
-      "gunlukGetiri": 0.00179407,
+      "gunlukGetiri": 0.0020193,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 48974090,
       "kisiSayisi": 11,
       "fonToplamDeger": 71374795.63,
-      "gunlukGetiri": 0.00179407,
+      "gunlukGetiri": 0.0020193,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "FHI",
+      "fonAdi": "FONMAP PORTFÖY İKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 1.454462,
+      "tedavuldekiPaySayisi": 48974090,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 71230964.73,
+      "gunlukGetiri": -0.00022477,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

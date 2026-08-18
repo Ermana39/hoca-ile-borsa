@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "SSE",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 31504588703,
     "kisiSayisi": 11,
     "fonToplamDeger": 105298517.07,
-    "gunlukGetiri": 0.00089847,
+    "gunlukGetiri": 0.01673258,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 31504588703,
         "kisiSayisi": 11,
         "fonToplamDeger": 105298517.07,
-        "gunlukGetiri": 0.00089847,
+        "gunlukGetiri": 0.01673258,
         "paraGirisiCikisi": 50836.63,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "SSE",
+        "fonAdi": "ATLAS PORTFÖY İKİNCİ SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 0.003287,
+        "tedavuldekiPaySayisi": 31489377264,
+        "kisiSayisi": 11,
+        "fonToplamDeger": 103519914.52,
+        "gunlukGetiri": -0.01557353,
+        "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
       {
@@ -188,12 +200,24 @@
     {
       "fonKodu": "SSE",
       "fonAdi": "ATLAS PORTFÖY İKİNCİ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 0.003287,
+      "tedavuldekiPaySayisi": 31489377264,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 103519914.52,
+      "gunlukGetiri": -0.01557353,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "SSE",
+      "fonAdi": "ATLAS PORTFÖY İKİNCİ SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 0.003342,
       "tedavuldekiPaySayisi": 31504588703,
       "kisiSayisi": 11,
       "fonToplamDeger": 105298517.07,
-      "gunlukGetiri": 0.00089847,
+      "gunlukGetiri": 0.01673258,
       "paraGirisiCikisi": 50836.63,
       "yatirimciDegisimi": 0
     }
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 31504588703,
       "kisiSayisi": 11,
       "fonToplamDeger": 105298517.07,
-      "gunlukGetiri": 0.00089847,
+      "gunlukGetiri": 0.01673258,
       "paraGirisiCikisi": 50836.63,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "SSE",
+      "fonAdi": "ATLAS PORTFÖY İKİNCİ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 0.003287,
+      "tedavuldekiPaySayisi": 31489377264,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 103519914.52,
+      "gunlukGetiri": -0.01557353,
+      "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

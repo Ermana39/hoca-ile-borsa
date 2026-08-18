@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PDR",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 2249115622,
     "kisiSayisi": 2,
     "fonToplamDeger": 2288403550.4,
-    "gunlukGetiri": 0.00132464,
+    "gunlukGetiri": -0.00388473,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 2249115622,
         "kisiSayisi": 2,
         "fonToplamDeger": 2288403550.4,
-        "gunlukGetiri": 0.00132464,
+        "gunlukGetiri": -0.00388473,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "PDR",
+        "fonAdi": "PHİLLİP PORTFÖY SÜRDÜRÜLEBİLİRLİK SERBEST ÖZEL FON",
+        "tarih": "2026-08-17",
+        "fiyat": 1.021436,
+        "tedavuldekiPaySayisi": 2249115622,
+        "kisiSayisi": 2,
+        "fonToplamDeger": 2297327319.01,
+        "gunlukGetiri": 0.00522969,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "PDR",
       "fonAdi": "PHİLLİP PORTFÖY SÜRDÜRÜLEBİLİRLİK SERBEST ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.021436,
+      "tedavuldekiPaySayisi": 2249115622,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 2297327319.01,
+      "gunlukGetiri": 0.00522969,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PDR",
+      "fonAdi": "PHİLLİP PORTFÖY SÜRDÜRÜLEBİLİRLİK SERBEST ÖZEL FON",
       "tarih": "2026-08-18",
       "fiyat": 1.017468,
       "tedavuldekiPaySayisi": 2249115622,
       "kisiSayisi": 2,
       "fonToplamDeger": 2288403550.4,
-      "gunlukGetiri": 0.00132464,
+      "gunlukGetiri": -0.00388473,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 2249115622,
       "kisiSayisi": 2,
       "fonToplamDeger": 2288403550.4,
-      "gunlukGetiri": 0.00132464,
+      "gunlukGetiri": -0.00388473,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PDR",
+      "fonAdi": "PHİLLİP PORTFÖY SÜRDÜRÜLEBİLİRLİK SERBEST ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.021436,
+      "tedavuldekiPaySayisi": 2249115622,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 2297327319.01,
+      "gunlukGetiri": 0.00522969,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

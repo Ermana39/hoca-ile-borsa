@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "FYO",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 1611044045.01,
     "kisiSayisi": 1530,
     "fonToplamDeger": 1906169897.49,
-    "gunlukGetiri": 0.00421653,
+    "gunlukGetiri": 0.00116516,
     "getiriler": {
       "birAy": 0.030992000000000002,
       "ucAy": 0.101522,
@@ -29,22 +29,22 @@
       "besYil": 3.969127
     },
     "paraAkisi": {
-      "gunluk": 15753231.55,
-      "besGun": 41228194.21,
+      "gunluk": 15573503.96,
+      "besGun": 33130645.66,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 8,
-      "besGun": 23,
+      "gunluk": 7,
+      "besGun": 24,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 1611044045.01,
         "kisiSayisi": 1530,
         "fonToplamDeger": 1906169897.49,
-        "gunlukGetiri": 0.00421653,
-        "paraGirisiCikisi": 15753231.55,
-        "yatirimciDegisimi": 8
+        "gunlukGetiri": 0.00116516,
+        "paraGirisiCikisi": 15573503.96,
+        "yatirimciDegisimi": 7
+      },
+      {
+        "fonKodu": "FYO",
+        "fonAdi": "QNB PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 1.181812,
+        "tedavuldekiPaySayisi": 1597881732.01,
+        "kisiSayisi": 1523,
+        "fonToplamDeger": 1888395504.93,
+        "gunlukGetiri": 0.00304782,
+        "paraGirisiCikisi": 179518.42,
+        "yatirimciDegisimi": 1
       },
       {
         "fonKodu": "FYO",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "FYO",
       "fonAdi": "QNB PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.181812,
+      "tedavuldekiPaySayisi": 1597881732.01,
+      "kisiSayisi": 1523,
+      "fonToplamDeger": 1888395504.93,
+      "gunlukGetiri": 0.00304782,
+      "paraGirisiCikisi": 179518.42,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "FYO",
+      "fonAdi": "QNB PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
       "tarih": "2026-08-18",
       "fiyat": 1.183189,
       "tedavuldekiPaySayisi": 1611044045.01,
       "kisiSayisi": 1530,
       "fonToplamDeger": 1906169897.49,
-      "gunlukGetiri": 0.00421653,
-      "paraGirisiCikisi": 15753231.55,
-      "yatirimciDegisimi": 8
+      "gunlukGetiri": 0.00116516,
+      "paraGirisiCikisi": 15573503.96,
+      "yatirimciDegisimi": 7
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 1611044045.01,
       "kisiSayisi": 1530,
       "fonToplamDeger": 1906169897.49,
-      "gunlukGetiri": 0.00421653,
-      "paraGirisiCikisi": 15753231.55,
-      "yatirimciDegisimi": 8
+      "gunlukGetiri": 0.00116516,
+      "paraGirisiCikisi": 15573503.96,
+      "yatirimciDegisimi": 7
+    },
+    {
+      "fonKodu": "FYO",
+      "fonAdi": "QNB PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.181812,
+      "tedavuldekiPaySayisi": 1597881732.01,
+      "kisiSayisi": 1523,
+      "fonToplamDeger": 1888395504.93,
+      "gunlukGetiri": 0.00304782,
+      "paraGirisiCikisi": 179518.42,
+      "yatirimciDegisimi": 1
     },
     {
       "fonKodu": "FYO",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

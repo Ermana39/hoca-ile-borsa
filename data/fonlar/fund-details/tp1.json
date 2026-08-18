@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TP1",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 5611179,
     "kisiSayisi": 1,
     "fonToplamDeger": 381398433.55,
-    "gunlukGetiri": 0.0026212,
+    "gunlukGetiri": 0.00168635,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 5611179,
         "kisiSayisi": 1,
         "fonToplamDeger": 381398433.55,
-        "gunlukGetiri": 0.0026212,
+        "gunlukGetiri": 0.00168635,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "TP1",
+        "fonAdi": "TEB PORTFÖY UYUM SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-17",
+        "fiyat": 67.856746,
+        "tedavuldekiPaySayisi": 5611179,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 380756345.64,
+        "gunlukGetiri": 0.00093328,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "TP1",
       "fonAdi": "TEB PORTFÖY UYUM SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 67.856746,
+      "tedavuldekiPaySayisi": 5611179,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 380756345.64,
+      "gunlukGetiri": 0.00093328,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TP1",
+      "fonAdi": "TEB PORTFÖY UYUM SERBEST (DÖVİZ) ÖZEL FON",
       "tarih": "2026-08-18",
       "fiyat": 67.971176,
       "tedavuldekiPaySayisi": 5611179,
       "kisiSayisi": 1,
       "fonToplamDeger": 381398433.55,
-      "gunlukGetiri": 0.0026212,
+      "gunlukGetiri": 0.00168635,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 5611179,
       "kisiSayisi": 1,
       "fonToplamDeger": 381398433.55,
-      "gunlukGetiri": 0.0026212,
+      "gunlukGetiri": 0.00168635,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TP1",
+      "fonAdi": "TEB PORTFÖY UYUM SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 67.856746,
+      "tedavuldekiPaySayisi": 5611179,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 380756345.64,
+      "gunlukGetiri": 0.00093328,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

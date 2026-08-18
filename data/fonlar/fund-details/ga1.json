@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GA1",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 160314058,
     "kisiSayisi": 1474,
     "fonToplamDeger": 317918648.65,
-    "gunlukGetiri": 0.00392336,
+    "gunlukGetiri": 0.00172907,
     "getiriler": {
       "birAy": 0.028357999999999998,
       "ucAy": 0.09261699999999999,
@@ -29,22 +29,22 @@
       "besYil": 3.462532
     },
     "paraAkisi": {
-      "gunluk": -3267076.28,
-      "besGun": -6351469.78,
+      "gunluk": 34539.64,
+      "besGun": -6094486.25,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": -3,
-      "besGun": -20,
+      "besGun": -19,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 160314058,
         "kisiSayisi": 1474,
         "fonToplamDeger": 317918648.65,
-        "gunlukGetiri": 0.00392336,
-        "paraGirisiCikisi": -3267076.28,
+        "gunlukGetiri": 0.00172907,
+        "paraGirisiCikisi": 34539.64,
         "yatirimciDegisimi": -3
+      },
+      {
+        "fonKodu": "GA1",
+        "fonAdi": "GARANTİ PORTFÖY BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 1.979676,
+        "tedavuldekiPaySayisi": 160296641,
+        "kisiSayisi": 1477,
+        "fonToplamDeger": 317335374.99,
+        "gunlukGetiri": 0.0021905,
+        "paraGirisiCikisi": -3295917.04,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "GA1",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "GA1",
       "fonAdi": "GARANTİ PORTFÖY BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.979676,
+      "tedavuldekiPaySayisi": 160296641,
+      "kisiSayisi": 1477,
+      "fonToplamDeger": 317335374.99,
+      "gunlukGetiri": 0.0021905,
+      "paraGirisiCikisi": -3295917.04,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GA1",
+      "fonAdi": "GARANTİ PORTFÖY BORÇLANMA ARAÇLARI FONU",
       "tarih": "2026-08-18",
       "fiyat": 1.983099,
       "tedavuldekiPaySayisi": 160314058,
       "kisiSayisi": 1474,
       "fonToplamDeger": 317918648.65,
-      "gunlukGetiri": 0.00392336,
-      "paraGirisiCikisi": -3267076.28,
+      "gunlukGetiri": 0.00172907,
+      "paraGirisiCikisi": 34539.64,
       "yatirimciDegisimi": -3
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 160314058,
       "kisiSayisi": 1474,
       "fonToplamDeger": 317918648.65,
-      "gunlukGetiri": 0.00392336,
-      "paraGirisiCikisi": -3267076.28,
+      "gunlukGetiri": 0.00172907,
+      "paraGirisiCikisi": 34539.64,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "GA1",
+      "fonAdi": "GARANTİ PORTFÖY BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.979676,
+      "tedavuldekiPaySayisi": 160296641,
+      "kisiSayisi": 1477,
+      "fonToplamDeger": 317335374.99,
+      "gunlukGetiri": 0.0021905,
+      "paraGirisiCikisi": -3295917.04,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "GA1",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

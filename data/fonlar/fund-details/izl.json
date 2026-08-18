@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IZL",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 2048414.11,
     "kisiSayisi": 19,
     "fonToplamDeger": 106780458.15,
-    "gunlukGetiri": 0.00272391,
+    "gunlukGetiri": 0.00143756,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 2048414.11,
         "kisiSayisi": 19,
         "fonToplamDeger": 106780458.15,
-        "gunlukGetiri": 0.00272391,
+        "gunlukGetiri": 0.00143756,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "IZL",
+        "fonAdi": "İŞ PORTFÖY EYLÜL 2027 SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 52.053525,
+        "tedavuldekiPaySayisi": 2048414.11,
+        "kisiSayisi": 19,
+        "fonToplamDeger": 106627175.8,
+        "gunlukGetiri": 0.0012845,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "IZL",
       "fonAdi": "İŞ PORTFÖY EYLÜL 2027 SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 52.053525,
+      "tedavuldekiPaySayisi": 2048414.11,
+      "kisiSayisi": 19,
+      "fonToplamDeger": 106627175.8,
+      "gunlukGetiri": 0.0012845,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "IZL",
+      "fonAdi": "İŞ PORTFÖY EYLÜL 2027 SERBEST (DÖVİZ) FON",
       "tarih": "2026-08-18",
       "fiyat": 52.128355,
       "tedavuldekiPaySayisi": 2048414.11,
       "kisiSayisi": 19,
       "fonToplamDeger": 106780458.15,
-      "gunlukGetiri": 0.00272391,
+      "gunlukGetiri": 0.00143756,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 2048414.11,
       "kisiSayisi": 19,
       "fonToplamDeger": 106780458.15,
-      "gunlukGetiri": 0.00272391,
+      "gunlukGetiri": 0.00143756,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "IZL",
+      "fonAdi": "İŞ PORTFÖY EYLÜL 2027 SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 52.053525,
+      "tedavuldekiPaySayisi": 2048414.11,
+      "kisiSayisi": 19,
+      "fonToplamDeger": 106627175.8,
+      "gunlukGetiri": 0.0012845,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

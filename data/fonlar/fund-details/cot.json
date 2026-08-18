@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "COT",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 9263711,
     "kisiSayisi": 194,
     "fonToplamDeger": 550072806.94,
-    "gunlukGetiri": 0.00816069,
+    "gunlukGetiri": 0.00427009,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 80874.63,
-      "besGun": 620863.47,
+      "gunluk": 30164.69,
+      "besGun": 611926.96,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": -1,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 9263711,
         "kisiSayisi": 194,
         "fonToplamDeger": 550072806.94,
-        "gunlukGetiri": 0.00816069,
-        "paraGirisiCikisi": 80874.63,
+        "gunlukGetiri": 0.00427009,
+        "paraGirisiCikisi": 30164.69,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "COT",
+        "fonAdi": "AK PORTFÖY 2030 SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 59.126837,
+        "tedavuldekiPaySayisi": 9263203,
+        "kisiSayisi": 194,
+        "fonToplamDeger": 547703897.18,
+        "gunlukGetiri": 0.00387406,
+        "paraGirisiCikisi": 50494.32,
         "yatirimciDegisimi": 0
       },
       {
@@ -188,13 +200,25 @@
     {
       "fonKodu": "COT",
       "fonAdi": "AK PORTFÖY 2030 SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 59.126837,
+      "tedavuldekiPaySayisi": 9263203,
+      "kisiSayisi": 194,
+      "fonToplamDeger": 547703897.18,
+      "gunlukGetiri": 0.00387406,
+      "paraGirisiCikisi": 50494.32,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "COT",
+      "fonAdi": "AK PORTFÖY 2030 SERBEST (DÖVİZ-AVRO) FON",
       "tarih": "2026-08-18",
       "fiyat": 59.379314,
       "tedavuldekiPaySayisi": 9263711,
       "kisiSayisi": 194,
       "fonToplamDeger": 550072806.94,
-      "gunlukGetiri": 0.00816069,
-      "paraGirisiCikisi": 80874.63,
+      "gunlukGetiri": 0.00427009,
+      "paraGirisiCikisi": 30164.69,
       "yatirimciDegisimi": 0
     }
   ],
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 9263711,
       "kisiSayisi": 194,
       "fonToplamDeger": 550072806.94,
-      "gunlukGetiri": 0.00816069,
-      "paraGirisiCikisi": 80874.63,
+      "gunlukGetiri": 0.00427009,
+      "paraGirisiCikisi": 30164.69,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "COT",
+      "fonAdi": "AK PORTFÖY 2030 SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 59.126837,
+      "tedavuldekiPaySayisi": 9263203,
+      "kisiSayisi": 194,
+      "fonToplamDeger": 547703897.18,
+      "gunlukGetiri": 0.00387406,
+      "paraGirisiCikisi": 50494.32,
       "yatirimciDegisimi": 0
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TI7",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 15079109,
     "kisiSayisi": 9712,
     "fonToplamDeger": 1180698631.72,
-    "gunlukGetiri": 0.00443148,
+    "gunlukGetiri": 0.00178938,
     "getiriler": {
       "birAy": 0.029561999999999998,
       "ucAy": 0.07111200000000001,
@@ -29,22 +29,22 @@
       "besYil": 5.863674
     },
     "paraAkisi": {
-      "gunluk": -2727590.67,
-      "besGun": -8011496.5,
+      "gunluk": -2622981.48,
+      "besGun": -7552380.24,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -17,
-      "besGun": -51,
+      "gunluk": -5,
+      "besGun": -49,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 15079109,
         "kisiSayisi": 9712,
         "fonToplamDeger": 1180698631.72,
-        "gunlukGetiri": 0.00443148,
-        "paraGirisiCikisi": -2727590.67,
-        "yatirimciDegisimi": -17
+        "gunlukGetiri": 0.00178938,
+        "paraGirisiCikisi": -2622981.48,
+        "yatirimciDegisimi": -5
+      },
+      {
+        "fonKodu": "TI7",
+        "fonAdi": "İŞ PORTFÖY DENGELİ DEĞİŞKEN FON",
+        "tarih": "2026-08-17",
+        "fiyat": 78.160433,
+        "tedavuldekiPaySayisi": 15112608,
+        "kisiSayisi": 9717,
+        "fonToplamDeger": 1181207978.24,
+        "gunlukGetiri": 0.00263737,
+        "paraGirisiCikisi": -104422.34,
+        "yatirimciDegisimi": -12
       },
       {
         "fonKodu": "TI7",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "TI7",
       "fonAdi": "İŞ PORTFÖY DENGELİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 78.160433,
+      "tedavuldekiPaySayisi": 15112608,
+      "kisiSayisi": 9717,
+      "fonToplamDeger": 1181207978.24,
+      "gunlukGetiri": 0.00263737,
+      "paraGirisiCikisi": -104422.34,
+      "yatirimciDegisimi": -12
+    },
+    {
+      "fonKodu": "TI7",
+      "fonAdi": "İŞ PORTFÖY DENGELİ DEĞİŞKEN FON",
       "tarih": "2026-08-18",
       "fiyat": 78.300292,
       "tedavuldekiPaySayisi": 15079109,
       "kisiSayisi": 9712,
       "fonToplamDeger": 1180698631.72,
-      "gunlukGetiri": 0.00443148,
-      "paraGirisiCikisi": -2727590.67,
-      "yatirimciDegisimi": -17
+      "gunlukGetiri": 0.00178938,
+      "paraGirisiCikisi": -2622981.48,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 15079109,
       "kisiSayisi": 9712,
       "fonToplamDeger": 1180698631.72,
-      "gunlukGetiri": 0.00443148,
-      "paraGirisiCikisi": -2727590.67,
-      "yatirimciDegisimi": -17
+      "gunlukGetiri": 0.00178938,
+      "paraGirisiCikisi": -2622981.48,
+      "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "TI7",
+      "fonAdi": "İŞ PORTFÖY DENGELİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 78.160433,
+      "tedavuldekiPaySayisi": 15112608,
+      "kisiSayisi": 9717,
+      "fonToplamDeger": 1181207978.24,
+      "gunlukGetiri": 0.00263737,
+      "paraGirisiCikisi": -104422.34,
+      "yatirimciDegisimi": -12
     },
     {
       "fonKodu": "TI7",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

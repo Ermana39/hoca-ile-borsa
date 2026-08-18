@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TPR",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 21524221,
     "kisiSayisi": 1,
     "fonToplamDeger": 10147166.28,
-    "gunlukGetiri": 0.00893516,
+    "gunlukGetiri": 0.00360201,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -30,21 +30,21 @@
     },
     "paraAkisi": {
       "gunluk": 0,
-      "besGun": 9702.8,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": -1,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 21524221,
         "kisiSayisi": 1,
         "fonToplamDeger": 10147166.28,
-        "gunlukGetiri": 0.00893516,
+        "gunlukGetiri": 0.00360201,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "TPR",
+        "fonAdi": "İŞ PORTFÖY PY HİSSE SENEDİ (TL) ÖZEL FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-17",
+        "fiyat": 0.469738,
+        "tedavuldekiPaySayisi": 21524221,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 10110746.99,
+        "gunlukGetiri": 0.00531401,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "TPR",
       "fonAdi": "İŞ PORTFÖY PY HİSSE SENEDİ (TL) ÖZEL FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 0.469738,
+      "tedavuldekiPaySayisi": 21524221,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 10110746.99,
+      "gunlukGetiri": 0.00531401,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TPR",
+      "fonAdi": "İŞ PORTFÖY PY HİSSE SENEDİ (TL) ÖZEL FONU (HİSSE SENEDİ YOĞUN FON)",
       "tarih": "2026-08-18",
       "fiyat": 0.47143,
       "tedavuldekiPaySayisi": 21524221,
       "kisiSayisi": 1,
       "fonToplamDeger": 10147166.28,
-      "gunlukGetiri": 0.00893516,
+      "gunlukGetiri": 0.00360201,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 21524221,
       "kisiSayisi": 1,
       "fonToplamDeger": 10147166.28,
-      "gunlukGetiri": 0.00893516,
+      "gunlukGetiri": 0.00360201,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TPR",
+      "fonAdi": "İŞ PORTFÖY PY HİSSE SENEDİ (TL) ÖZEL FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 0.469738,
+      "tedavuldekiPaySayisi": 21524221,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 10110746.99,
+      "gunlukGetiri": 0.00531401,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

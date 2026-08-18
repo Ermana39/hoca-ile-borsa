@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IDL",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 702546991,
     "kisiSayisi": 3656,
     "fonToplamDeger": 4227583494.39,
-    "gunlukGetiri": 0.0042136,
+    "gunlukGetiri": 0.00096662,
     "getiriler": {
       "birAy": 0.031949,
       "ucAy": 0.103184,
@@ -29,22 +29,22 @@
       "besYil": 4.346944
     },
     "paraAkisi": {
-      "gunluk": -60410884.09,
-      "besGun": 164756720.11,
+      "gunluk": 36488393.44,
+      "besGun": 44175489.13,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 29,
-      "besGun": -188,
+      "gunluk": -153,
+      "besGun": 21,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 702546991,
         "kisiSayisi": 3656,
         "fonToplamDeger": 4227583494.39,
-        "gunlukGetiri": 0.0042136,
-        "paraGirisiCikisi": -60410884.09,
-        "yatirimciDegisimi": 29
+        "gunlukGetiri": 0.00096662,
+        "paraGirisiCikisi": 36488393.44,
+        "yatirimciDegisimi": -153
+      },
+      {
+        "fonKodu": "IDL",
+        "fonAdi": "AKTİF PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 6.011699,
+        "tedavuldekiPaySayisi": 696483288,
+        "kisiSayisi": 3809,
+        "fonToplamDeger": 4187047842.44,
+        "gunlukGetiri": 0.00324385,
+        "paraGirisiCikisi": -96805703.66,
+        "yatirimciDegisimi": 182
       },
       {
         "fonKodu": "IDL",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "IDL",
       "fonAdi": "AKTİF PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 6.011699,
+      "tedavuldekiPaySayisi": 696483288,
+      "kisiSayisi": 3809,
+      "fonToplamDeger": 4187047842.44,
+      "gunlukGetiri": 0.00324385,
+      "paraGirisiCikisi": -96805703.66,
+      "yatirimciDegisimi": 182
+    },
+    {
+      "fonKodu": "IDL",
+      "fonAdi": "AKTİF PORTFÖY PARA PİYASASI (TL) FONU",
       "tarih": "2026-08-18",
       "fiyat": 6.01751,
       "tedavuldekiPaySayisi": 702546991,
       "kisiSayisi": 3656,
       "fonToplamDeger": 4227583494.39,
-      "gunlukGetiri": 0.0042136,
-      "paraGirisiCikisi": -60410884.09,
-      "yatirimciDegisimi": 29
+      "gunlukGetiri": 0.00096662,
+      "paraGirisiCikisi": 36488393.44,
+      "yatirimciDegisimi": -153
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 702546991,
       "kisiSayisi": 3656,
       "fonToplamDeger": 4227583494.39,
-      "gunlukGetiri": 0.0042136,
-      "paraGirisiCikisi": -60410884.09,
-      "yatirimciDegisimi": 29
+      "gunlukGetiri": 0.00096662,
+      "paraGirisiCikisi": 36488393.44,
+      "yatirimciDegisimi": -153
+    },
+    {
+      "fonKodu": "IDL",
+      "fonAdi": "AKTİF PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 6.011699,
+      "tedavuldekiPaySayisi": 696483288,
+      "kisiSayisi": 3809,
+      "fonToplamDeger": 4187047842.44,
+      "gunlukGetiri": 0.00324385,
+      "paraGirisiCikisi": -96805703.66,
+      "yatirimciDegisimi": 182
     },
     {
       "fonKodu": "IDL",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

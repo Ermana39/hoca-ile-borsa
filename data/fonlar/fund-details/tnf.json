@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TNF",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 1216123947,
     "kisiSayisi": 3,
     "fonToplamDeger": 5156085084.45,
-    "gunlukGetiri": 0.00432571,
+    "gunlukGetiri": 0.00107976,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 1216123947,
         "kisiSayisi": 3,
         "fonToplamDeger": 5156085084.45,
-        "gunlukGetiri": 0.00432571,
+        "gunlukGetiri": 0.00107976,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "TNF",
+        "fonAdi": "TEB PORTFÖY ONUNCU SERBEST (TL) ÖZEL FON",
+        "tarih": "2026-08-17",
+        "fiyat": 4.235196,
+        "tedavuldekiPaySayisi": 1216123947,
+        "kisiSayisi": 3,
+        "fonToplamDeger": 5150523125.47,
+        "gunlukGetiri": 0.00324244,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "TNF",
       "fonAdi": "TEB PORTFÖY ONUNCU SERBEST (TL) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 4.235196,
+      "tedavuldekiPaySayisi": 1216123947,
+      "kisiSayisi": 3,
+      "fonToplamDeger": 5150523125.47,
+      "gunlukGetiri": 0.00324244,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TNF",
+      "fonAdi": "TEB PORTFÖY ONUNCU SERBEST (TL) ÖZEL FON",
       "tarih": "2026-08-18",
       "fiyat": 4.239769,
       "tedavuldekiPaySayisi": 1216123947,
       "kisiSayisi": 3,
       "fonToplamDeger": 5156085084.45,
-      "gunlukGetiri": 0.00432571,
+      "gunlukGetiri": 0.00107976,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 1216123947,
       "kisiSayisi": 3,
       "fonToplamDeger": 5156085084.45,
-      "gunlukGetiri": 0.00432571,
+      "gunlukGetiri": 0.00107976,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TNF",
+      "fonAdi": "TEB PORTFÖY ONUNCU SERBEST (TL) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 4.235196,
+      "tedavuldekiPaySayisi": 1216123947,
+      "kisiSayisi": 3,
+      "fonToplamDeger": 5150523125.47,
+      "gunlukGetiri": 0.00324244,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

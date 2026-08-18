@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KTU",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 32515349,
     "kisiSayisi": 1,
     "fonToplamDeger": 964223591.07,
-    "gunlukGetiri": 0.01691553,
+    "gunlukGetiri": 0.01027403,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 32515349,
         "kisiSayisi": 1,
         "fonToplamDeger": 964223591.07,
-        "gunlukGetiri": 0.01691553,
+        "gunlukGetiri": 0.01027403,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "KTU",
+        "fonAdi": "KUVEYT TÜRK PORTFÖY NEOVA KATILIM SERBEST (TL) ÖZEL FON",
+        "tarih": "2026-08-17",
+        "fiyat": 29.352841,
+        "tedavuldekiPaySayisi": 32515349,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 954417876.81,
+        "gunlukGetiri": 0.00657395,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "KTU",
       "fonAdi": "KUVEYT TÜRK PORTFÖY NEOVA KATILIM SERBEST (TL) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 29.352841,
+      "tedavuldekiPaySayisi": 32515349,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 954417876.81,
+      "gunlukGetiri": 0.00657395,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KTU",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY NEOVA KATILIM SERBEST (TL) ÖZEL FON",
       "tarih": "2026-08-18",
       "fiyat": 29.654413,
       "tedavuldekiPaySayisi": 32515349,
       "kisiSayisi": 1,
       "fonToplamDeger": 964223591.07,
-      "gunlukGetiri": 0.01691553,
+      "gunlukGetiri": 0.01027403,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 32515349,
       "kisiSayisi": 1,
       "fonToplamDeger": 964223591.07,
-      "gunlukGetiri": 0.01691553,
+      "gunlukGetiri": 0.01027403,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KTU",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY NEOVA KATILIM SERBEST (TL) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 29.352841,
+      "tedavuldekiPaySayisi": 32515349,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 954417876.81,
+      "gunlukGetiri": 0.00657395,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

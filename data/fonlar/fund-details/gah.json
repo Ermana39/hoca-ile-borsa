@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GAH",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 29709969,
     "kisiSayisi": 2706,
     "fonToplamDeger": 376161842.61,
-    "gunlukGetiri": null,
+    "gunlukGetiri": 0.00115383,
     "getiriler": {
       "birAy": 0.032953,
       "ucAy": 0.07564799999999999,
@@ -29,22 +29,22 @@
       "besYil": 6.148533
     },
     "paraAkisi": {
-      "gunluk": null,
+      "gunluk": 92768.11,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -8,
-      "besGun": -10,
+      "gunluk": -2,
+      "besGun": -9,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 29709969,
         "kisiSayisi": 2706,
         "fonToplamDeger": 376161842.61,
+        "gunlukGetiri": 0.00115383,
+        "paraGirisiCikisi": 92768.11,
+        "yatirimciDegisimi": -2
+      },
+      {
+        "fonKodu": "GAH",
+        "fonAdi": "GARANTİ PORTFÖY MUTLAK GETİRİ HEDEFLİ DEĞİŞKEN FON",
+        "tarih": "2026-08-17",
+        "fiyat": 12.64654,
+        "tedavuldekiPaySayisi": 29702642,
+        "kisiSayisi": 2708,
+        "fonToplamDeger": 375635637.51,
         "gunlukGetiri": null,
         "paraGirisiCikisi": null,
-        "yatirimciDegisimi": -8
+        "yatirimciDegisimi": -6
       },
       {
         "fonKodu": "GAH",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "GAH",
       "fonAdi": "GARANTİ PORTFÖY MUTLAK GETİRİ HEDEFLİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 12.64654,
+      "tedavuldekiPaySayisi": 29702642,
+      "kisiSayisi": 2708,
+      "fonToplamDeger": 375635637.51,
+      "gunlukGetiri": null,
+      "paraGirisiCikisi": null,
+      "yatirimciDegisimi": -6
+    },
+    {
+      "fonKodu": "GAH",
+      "fonAdi": "GARANTİ PORTFÖY MUTLAK GETİRİ HEDEFLİ DEĞİŞKEN FON",
       "tarih": "2026-08-18",
       "fiyat": 12.661132,
       "tedavuldekiPaySayisi": 29709969,
       "kisiSayisi": 2706,
       "fonToplamDeger": 376161842.61,
-      "gunlukGetiri": null,
-      "paraGirisiCikisi": null,
-      "yatirimciDegisimi": -8
+      "gunlukGetiri": 0.00115383,
+      "paraGirisiCikisi": 92768.11,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 29709969,
       "kisiSayisi": 2706,
       "fonToplamDeger": 376161842.61,
+      "gunlukGetiri": 0.00115383,
+      "paraGirisiCikisi": 92768.11,
+      "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "GAH",
+      "fonAdi": "GARANTİ PORTFÖY MUTLAK GETİRİ HEDEFLİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 12.64654,
+      "tedavuldekiPaySayisi": 29702642,
+      "kisiSayisi": 2708,
+      "fonToplamDeger": 375635637.51,
       "gunlukGetiri": null,
       "paraGirisiCikisi": null,
-      "yatirimciDegisimi": -8
+      "yatirimciDegisimi": -6
     },
     {
       "fonKodu": "GAH",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

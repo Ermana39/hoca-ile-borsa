@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GOL",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 1608737735,
     "kisiSayisi": 11917,
     "fonToplamDeger": 4523035945.92,
-    "gunlukGetiri": 0.00583997,
+    "gunlukGetiri": 0.01021954,
     "getiriler": {
       "birAy": 0.113849,
       "ucAy": -0.004808,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -9548430.19,
-      "besGun": -21479048.73,
+      "gunluk": -5965692.2,
+      "besGun": -26257411.19,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 21,
-      "besGun": 32,
+      "gunluk": 1,
+      "besGun": 41,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 1608737735,
         "kisiSayisi": 11917,
         "fonToplamDeger": 4523035945.92,
-        "gunlukGetiri": 0.00583997,
-        "paraGirisiCikisi": -9548430.19,
-        "yatirimciDegisimi": 21
+        "gunlukGetiri": 0.01021954,
+        "paraGirisiCikisi": -5965692.2,
+        "yatirimciDegisimi": 1
+      },
+      {
+        "fonKodu": "GOL",
+        "fonAdi": "GARANTİ PORTFÖY ALTIN KATILIM FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 2.783101,
+        "tedavuldekiPaySayisi": 1610859592,
+        "kisiSayisi": 11916,
+        "fonToplamDeger": 4483185503.48,
+        "gunlukGetiri": -0.00433526,
+        "paraGirisiCikisi": -3546494.47,
+        "yatirimciDegisimi": 20
       },
       {
         "fonKodu": "GOL",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "GOL",
       "fonAdi": "GARANTİ PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.783101,
+      "tedavuldekiPaySayisi": 1610859592,
+      "kisiSayisi": 11916,
+      "fonToplamDeger": 4483185503.48,
+      "gunlukGetiri": -0.00433526,
+      "paraGirisiCikisi": -3546494.47,
+      "yatirimciDegisimi": 20
+    },
+    {
+      "fonKodu": "GOL",
+      "fonAdi": "GARANTİ PORTFÖY ALTIN KATILIM FONU",
       "tarih": "2026-08-18",
       "fiyat": 2.811543,
       "tedavuldekiPaySayisi": 1608737735,
       "kisiSayisi": 11917,
       "fonToplamDeger": 4523035945.92,
-      "gunlukGetiri": 0.00583997,
-      "paraGirisiCikisi": -9548430.19,
-      "yatirimciDegisimi": 21
+      "gunlukGetiri": 0.01021954,
+      "paraGirisiCikisi": -5965692.2,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 1608737735,
       "kisiSayisi": 11917,
       "fonToplamDeger": 4523035945.92,
-      "gunlukGetiri": 0.00583997,
-      "paraGirisiCikisi": -9548430.19,
-      "yatirimciDegisimi": 21
+      "gunlukGetiri": 0.01021954,
+      "paraGirisiCikisi": -5965692.2,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "GOL",
+      "fonAdi": "GARANTİ PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.783101,
+      "tedavuldekiPaySayisi": 1610859592,
+      "kisiSayisi": 11916,
+      "fonToplamDeger": 4483185503.48,
+      "gunlukGetiri": -0.00433526,
+      "paraGirisiCikisi": -3546494.47,
+      "yatirimciDegisimi": 20
     },
     {
       "fonKodu": "GOL",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

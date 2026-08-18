@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "OTJ",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 457790734,
     "kisiSayisi": 22617,
     "fonToplamDeger": 3303301054.98,
-    "gunlukGetiri": null,
+    "gunlukGetiri": 0.0112952,
     "getiriler": {
       "birAy": 0.139829,
       "ucAy": -0.040382,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": null,
+      "gunluk": -4661118.72,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -50,
-      "besGun": -110,
+      "gunluk": -32,
+      "besGun": -98,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 457790734,
         "kisiSayisi": 22617,
         "fonToplamDeger": 3303301054.98,
+        "gunlukGetiri": 0.0112952,
+        "paraGirisiCikisi": -4661118.72,
+        "yatirimciDegisimi": -32
+      },
+      {
+        "fonKodu": "OTJ",
+        "fonAdi": "OYAK PORTFÖY KIYMETLİ MADENLER KATILIM FON SEPETİ FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 7.135152,
+        "tedavuldekiPaySayisi": 458436699,
+        "kisiSayisi": 22649,
+        "fonToplamDeger": 3271015418.73,
         "gunlukGetiri": null,
         "paraGirisiCikisi": null,
-        "yatirimciDegisimi": -50
+        "yatirimciDegisimi": -18
       },
       {
         "fonKodu": "OTJ",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "OTJ",
       "fonAdi": "OYAK PORTFÖY KIYMETLİ MADENLER KATILIM FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 7.135152,
+      "tedavuldekiPaySayisi": 458436699,
+      "kisiSayisi": 22649,
+      "fonToplamDeger": 3271015418.73,
+      "gunlukGetiri": null,
+      "paraGirisiCikisi": null,
+      "yatirimciDegisimi": -18
+    },
+    {
+      "fonKodu": "OTJ",
+      "fonAdi": "OYAK PORTFÖY KIYMETLİ MADENLER KATILIM FON SEPETİ FONU",
       "tarih": "2026-08-18",
       "fiyat": 7.215745,
       "tedavuldekiPaySayisi": 457790734,
       "kisiSayisi": 22617,
       "fonToplamDeger": 3303301054.98,
-      "gunlukGetiri": null,
-      "paraGirisiCikisi": null,
-      "yatirimciDegisimi": -50
+      "gunlukGetiri": 0.0112952,
+      "paraGirisiCikisi": -4661118.72,
+      "yatirimciDegisimi": -32
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 457790734,
       "kisiSayisi": 22617,
       "fonToplamDeger": 3303301054.98,
+      "gunlukGetiri": 0.0112952,
+      "paraGirisiCikisi": -4661118.72,
+      "yatirimciDegisimi": -32
+    },
+    {
+      "fonKodu": "OTJ",
+      "fonAdi": "OYAK PORTFÖY KIYMETLİ MADENLER KATILIM FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 7.135152,
+      "tedavuldekiPaySayisi": 458436699,
+      "kisiSayisi": 22649,
+      "fonToplamDeger": 3271015418.73,
       "gunlukGetiri": null,
       "paraGirisiCikisi": null,
-      "yatirimciDegisimi": -50
+      "yatirimciDegisimi": -18
     },
     {
       "fonKodu": "OTJ",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

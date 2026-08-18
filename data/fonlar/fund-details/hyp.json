@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "HYP",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 52494848,
     "kisiSayisi": 62,
     "fonToplamDeger": 557598086.09,
-    "gunlukGetiri": 0.00405471,
+    "gunlukGetiri": 0.00155042,
     "getiriler": {
       "birAy": 0.031775000000000005,
       "ucAy": 0.092388,
@@ -29,22 +29,22 @@
       "besYil": 7.531864000000001
     },
     "paraAkisi": {
-      "gunluk": -6192.6,
-      "besGun": 117992.71,
+      "gunluk": -5109.16,
+      "besGun": 134245.53,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": -1,
-      "besGun": -1,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 52494848,
         "kisiSayisi": 62,
         "fonToplamDeger": 557598086.09,
-        "gunlukGetiri": 0.00405471,
-        "paraGirisiCikisi": -6192.6,
+        "gunlukGetiri": 0.00155042,
+        "paraGirisiCikisi": -5109.16,
         "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "HYP",
+        "fonAdi": "AZİMUT PORTFÖY İVME SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 10.605515,
+        "tedavuldekiPaySayisi": 52495329,
+        "kisiSayisi": 63,
+        "fonToplamDeger": 556740015.15,
+        "gunlukGetiri": 0.00250041,
+        "paraGirisiCikisi": -1081.76,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "HYP",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "HYP",
       "fonAdi": "AZİMUT PORTFÖY İVME SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 10.605515,
+      "tedavuldekiPaySayisi": 52495329,
+      "kisiSayisi": 63,
+      "fonToplamDeger": 556740015.15,
+      "gunlukGetiri": 0.00250041,
+      "paraGirisiCikisi": -1081.76,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HYP",
+      "fonAdi": "AZİMUT PORTFÖY İVME SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 10.621958,
       "tedavuldekiPaySayisi": 52494848,
       "kisiSayisi": 62,
       "fonToplamDeger": 557598086.09,
-      "gunlukGetiri": 0.00405471,
-      "paraGirisiCikisi": -6192.6,
+      "gunlukGetiri": 0.00155042,
+      "paraGirisiCikisi": -5109.16,
       "yatirimciDegisimi": -1
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 52494848,
       "kisiSayisi": 62,
       "fonToplamDeger": 557598086.09,
-      "gunlukGetiri": 0.00405471,
-      "paraGirisiCikisi": -6192.6,
+      "gunlukGetiri": 0.00155042,
+      "paraGirisiCikisi": -5109.16,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "HYP",
+      "fonAdi": "AZİMUT PORTFÖY İVME SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 10.605515,
+      "tedavuldekiPaySayisi": 52495329,
+      "kisiSayisi": 63,
+      "fonToplamDeger": 556740015.15,
+      "gunlukGetiri": 0.00250041,
+      "paraGirisiCikisi": -1081.76,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "HYP",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

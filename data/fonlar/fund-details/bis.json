@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BIS",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 442222701,
     "kisiSayisi": 60,
     "fonToplamDeger": 786252030.72,
-    "gunlukGetiri": 0.00332664,
+    "gunlukGetiri": 0.00074298,
     "getiriler": {
       "birAy": 0.026185,
       "ucAy": 0.074419,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -5228505.16,
-      "besGun": -2276264.25,
+      "gunluk": -1015.21,
+      "besGun": -2272383.23,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 442222701,
         "kisiSayisi": 60,
         "fonToplamDeger": 786252030.72,
-        "gunlukGetiri": 0.00332664,
-        "paraGirisiCikisi": -5228505.16,
+        "gunlukGetiri": 0.00074298,
+        "paraGirisiCikisi": -1015.21,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "BIS",
+        "fonAdi": "BV PORTFÖY BİRİNCİ SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 1.776635,
+        "tedavuldekiPaySayisi": 442223272,
+        "kisiSayisi": 60,
+        "fonToplamDeger": 785669385.45,
+        "gunlukGetiri": 0.00258174,
+        "paraGirisiCikisi": -5223608.93,
         "yatirimciDegisimi": 0
       },
       {
@@ -188,13 +200,25 @@
     {
       "fonKodu": "BIS",
       "fonAdi": "BV PORTFÖY BİRİNCİ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.776635,
+      "tedavuldekiPaySayisi": 442223272,
+      "kisiSayisi": 60,
+      "fonToplamDeger": 785669385.45,
+      "gunlukGetiri": 0.00258174,
+      "paraGirisiCikisi": -5223608.93,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BIS",
+      "fonAdi": "BV PORTFÖY BİRİNCİ SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 1.777955,
       "tedavuldekiPaySayisi": 442222701,
       "kisiSayisi": 60,
       "fonToplamDeger": 786252030.72,
-      "gunlukGetiri": 0.00332664,
-      "paraGirisiCikisi": -5228505.16,
+      "gunlukGetiri": 0.00074298,
+      "paraGirisiCikisi": -1015.21,
       "yatirimciDegisimi": 0
     }
   ],
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 442222701,
       "kisiSayisi": 60,
       "fonToplamDeger": 786252030.72,
-      "gunlukGetiri": 0.00332664,
-      "paraGirisiCikisi": -5228505.16,
+      "gunlukGetiri": 0.00074298,
+      "paraGirisiCikisi": -1015.21,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BIS",
+      "fonAdi": "BV PORTFÖY BİRİNCİ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.776635,
+      "tedavuldekiPaySayisi": 442223272,
+      "kisiSayisi": 60,
+      "fonToplamDeger": 785669385.45,
+      "gunlukGetiri": 0.00258174,
+      "paraGirisiCikisi": -5223608.93,
       "yatirimciDegisimi": 0
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

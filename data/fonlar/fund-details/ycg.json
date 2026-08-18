@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YCG",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 3330205,
     "kisiSayisi": 4,
     "fonToplamDeger": 202476577.72,
-    "gunlukGetiri": 0.00403783,
+    "gunlukGetiri": 0.00231203,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 3330205,
         "kisiSayisi": 4,
         "fonToplamDeger": 202476577.72,
-        "gunlukGetiri": 0.00403783,
+        "gunlukGetiri": 0.00231203,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "YCG",
+        "fonAdi": "YAPI KREDİ PORTFÖY KARŞIYAKA SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-17",
+        "fiyat": 60.659787,
+        "tedavuldekiPaySayisi": 3330205,
+        "kisiSayisi": 4,
+        "fonToplamDeger": 202009527.32,
+        "gunlukGetiri": 0.00172182,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "YCG",
       "fonAdi": "YAPI KREDİ PORTFÖY KARŞIYAKA SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 60.659787,
+      "tedavuldekiPaySayisi": 3330205,
+      "kisiSayisi": 4,
+      "fonToplamDeger": 202009527.32,
+      "gunlukGetiri": 0.00172182,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YCG",
+      "fonAdi": "YAPI KREDİ PORTFÖY KARŞIYAKA SERBEST (DÖVİZ) ÖZEL FON",
       "tarih": "2026-08-18",
       "fiyat": 60.800034,
       "tedavuldekiPaySayisi": 3330205,
       "kisiSayisi": 4,
       "fonToplamDeger": 202476577.72,
-      "gunlukGetiri": 0.00403783,
+      "gunlukGetiri": 0.00231203,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 3330205,
       "kisiSayisi": 4,
       "fonToplamDeger": 202476577.72,
-      "gunlukGetiri": 0.00403783,
+      "gunlukGetiri": 0.00231203,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YCG",
+      "fonAdi": "YAPI KREDİ PORTFÖY KARŞIYAKA SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 60.659787,
+      "tedavuldekiPaySayisi": 3330205,
+      "kisiSayisi": 4,
+      "fonToplamDeger": 202009527.32,
+      "gunlukGetiri": 0.00172182,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

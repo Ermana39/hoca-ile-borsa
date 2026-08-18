@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PO9",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 269061644,
     "kisiSayisi": 160,
     "fonToplamDeger": 217400724.31,
-    "gunlukGetiri": 0.02764349,
+    "gunlukGetiri": 0.0248944,
     "getiriler": {
       "birAy": 0.125244,
       "ucAy": -0.0038309999999999998,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 4442581.78,
-      "besGun": 7124415.01,
+      "gunluk": -2035.34,
+      "besGun": 7029666.37,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
-      "besGun": 16,
+      "gunluk": -4,
+      "besGun": 12,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 269061644,
         "kisiSayisi": 160,
         "fonToplamDeger": 217400724.31,
-        "gunlukGetiri": 0.02764349,
-        "paraGirisiCikisi": 4442581.78,
-        "yatirimciDegisimi": -3
+        "gunlukGetiri": 0.0248944,
+        "paraGirisiCikisi": -2035.34,
+        "yatirimciDegisimi": -4
+      },
+      {
+        "fonKodu": "PO9",
+        "fonAdi": "PARDUS PORTFÖY ONDOKUZUNCU HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-17",
+        "fiyat": 0.78837,
+        "tedavuldekiPaySayisi": 269064163,
+        "kisiSayisi": 164,
+        "fonToplamDeger": 212122147.08,
+        "gunlukGetiri": 0.00268232,
+        "paraGirisiCikisi": 4336658.6,
+        "yatirimciDegisimi": 1
       },
       {
         "fonKodu": "PO9",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "PO9",
       "fonAdi": "PARDUS PORTFÖY ONDOKUZUNCU HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 0.78837,
+      "tedavuldekiPaySayisi": 269064163,
+      "kisiSayisi": 164,
+      "fonToplamDeger": 212122147.08,
+      "gunlukGetiri": 0.00268232,
+      "paraGirisiCikisi": 4336658.6,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "PO9",
+      "fonAdi": "PARDUS PORTFÖY ONDOKUZUNCU HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
       "tarih": "2026-08-18",
       "fiyat": 0.807996,
       "tedavuldekiPaySayisi": 269061644,
       "kisiSayisi": 160,
       "fonToplamDeger": 217400724.31,
-      "gunlukGetiri": 0.02764349,
-      "paraGirisiCikisi": 4442581.78,
-      "yatirimciDegisimi": -3
+      "gunlukGetiri": 0.0248944,
+      "paraGirisiCikisi": -2035.34,
+      "yatirimciDegisimi": -4
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 269061644,
       "kisiSayisi": 160,
       "fonToplamDeger": 217400724.31,
-      "gunlukGetiri": 0.02764349,
-      "paraGirisiCikisi": 4442581.78,
-      "yatirimciDegisimi": -3
+      "gunlukGetiri": 0.0248944,
+      "paraGirisiCikisi": -2035.34,
+      "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "PO9",
+      "fonAdi": "PARDUS PORTFÖY ONDOKUZUNCU HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 0.78837,
+      "tedavuldekiPaySayisi": 269064163,
+      "kisiSayisi": 164,
+      "fonToplamDeger": 212122147.08,
+      "gunlukGetiri": 0.00268232,
+      "paraGirisiCikisi": 4336658.6,
+      "yatirimciDegisimi": 1
     },
     {
       "fonKodu": "PO9",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

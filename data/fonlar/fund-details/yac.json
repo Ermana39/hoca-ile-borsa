@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YAC",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 374012663,
     "kisiSayisi": 9848,
     "fonToplamDeger": 5493714324.95,
-    "gunlukGetiri": 0.00906398,
+    "gunlukGetiri": 0.00535539,
     "getiriler": {
       "birAy": 0.059512,
       "ucAy": 0.049338,
@@ -29,22 +29,22 @@
       "besYil": 5.937862
     },
     "paraAkisi": {
-      "gunluk": -5330470.27,
-      "besGun": -46415865.98,
+      "gunluk": -3887302.79,
+      "besGun": -38028649.49,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": -25,
+      "gunluk": -2,
+      "besGun": -16,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 374012663,
         "kisiSayisi": 9848,
         "fonToplamDeger": 5493714324.95,
-        "gunlukGetiri": 0.00906398,
-        "paraGirisiCikisi": -5330470.27,
-        "yatirimciDegisimi": 0
+        "gunlukGetiri": 0.00535539,
+        "paraGirisiCikisi": -3887302.79,
+        "yatirimciDegisimi": -2
+      },
+      {
+        "fonKodu": "YAC",
+        "fonAdi": "YAPI KREDİ PORTFÖY İKİNCİ FON SEPETİ FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 14.610334,
+        "tedavuldekiPaySayisi": 374277311,
+        "kisiSayisi": 9850,
+        "fonToplamDeger": 5468316511.18,
+        "gunlukGetiri": 0.00368883,
+        "paraGirisiCikisi": -1435479.93,
+        "yatirimciDegisimi": 2
       },
       {
         "fonKodu": "YAC",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "YAC",
       "fonAdi": "YAPI KREDİ PORTFÖY İKİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 14.610334,
+      "tedavuldekiPaySayisi": 374277311,
+      "kisiSayisi": 9850,
+      "fonToplamDeger": 5468316511.18,
+      "gunlukGetiri": 0.00368883,
+      "paraGirisiCikisi": -1435479.93,
+      "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "YAC",
+      "fonAdi": "YAPI KREDİ PORTFÖY İKİNCİ FON SEPETİ FONU",
       "tarih": "2026-08-18",
       "fiyat": 14.688578,
       "tedavuldekiPaySayisi": 374012663,
       "kisiSayisi": 9848,
       "fonToplamDeger": 5493714324.95,
-      "gunlukGetiri": 0.00906398,
-      "paraGirisiCikisi": -5330470.27,
-      "yatirimciDegisimi": 0
+      "gunlukGetiri": 0.00535539,
+      "paraGirisiCikisi": -3887302.79,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 374012663,
       "kisiSayisi": 9848,
       "fonToplamDeger": 5493714324.95,
-      "gunlukGetiri": 0.00906398,
-      "paraGirisiCikisi": -5330470.27,
-      "yatirimciDegisimi": 0
+      "gunlukGetiri": 0.00535539,
+      "paraGirisiCikisi": -3887302.79,
+      "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "YAC",
+      "fonAdi": "YAPI KREDİ PORTFÖY İKİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 14.610334,
+      "tedavuldekiPaySayisi": 374277311,
+      "kisiSayisi": 9850,
+      "fonToplamDeger": 5468316511.18,
+      "gunlukGetiri": 0.00368883,
+      "paraGirisiCikisi": -1435479.93,
+      "yatirimciDegisimi": 2
     },
     {
       "fonKodu": "YAC",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "MJH",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 6085154,
     "kisiSayisi": 29,
     "fonToplamDeger": 27042587.83,
-    "gunlukGetiri": -0.00679927,
+    "gunlukGetiri": -0.01936911,
     "getiriler": {
       "birAy": -0.07668599999999999,
       "ucAy": 0.004378,
@@ -29,8 +29,8 @@
       "besYil": 3.079271
     },
     "paraAkisi": {
-      "gunluk": 97.77,
-      "besGun": 97.77,
+      "gunluk": 0,
+      "besGun": 99.7,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 6085154,
         "kisiSayisi": 29,
         "fonToplamDeger": 27042587.83,
-        "gunlukGetiri": -0.00679927,
-        "paraGirisiCikisi": 97.77,
+        "gunlukGetiri": -0.01936911,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "MJH",
+        "fonAdi": "AKTİF PORTFÖY FORTUNA SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 4.531804,
+        "tedavuldekiPaySayisi": 6085154,
+        "kisiSayisi": 29,
+        "fonToplamDeger": 27576722.92,
+        "gunlukGetiri": 0.01281811,
+        "paraGirisiCikisi": 99.7,
         "yatirimciDegisimi": 0
       },
       {
@@ -188,13 +200,25 @@
     {
       "fonKodu": "MJH",
       "fonAdi": "AKTİF PORTFÖY FORTUNA SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 4.531804,
+      "tedavuldekiPaySayisi": 6085154,
+      "kisiSayisi": 29,
+      "fonToplamDeger": 27576722.92,
+      "gunlukGetiri": 0.01281811,
+      "paraGirisiCikisi": 99.7,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "MJH",
+      "fonAdi": "AKTİF PORTFÖY FORTUNA SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 4.444027,
       "tedavuldekiPaySayisi": 6085154,
       "kisiSayisi": 29,
       "fonToplamDeger": 27042587.83,
-      "gunlukGetiri": -0.00679927,
-      "paraGirisiCikisi": 97.77,
+      "gunlukGetiri": -0.01936911,
+      "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
   ],
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 6085154,
       "kisiSayisi": 29,
       "fonToplamDeger": 27042587.83,
-      "gunlukGetiri": -0.00679927,
-      "paraGirisiCikisi": 97.77,
+      "gunlukGetiri": -0.01936911,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "MJH",
+      "fonAdi": "AKTİF PORTFÖY FORTUNA SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 4.531804,
+      "tedavuldekiPaySayisi": 6085154,
+      "kisiSayisi": 29,
+      "fonToplamDeger": 27576722.92,
+      "gunlukGetiri": 0.01281811,
+      "paraGirisiCikisi": 99.7,
       "yatirimciDegisimi": 0
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PTN",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 432982376,
     "kisiSayisi": 875,
     "fonToplamDeger": 706023035.38,
-    "gunlukGetiri": 0.00678432,
+    "gunlukGetiri": 0.00836883,
     "getiriler": {
       "birAy": 0.114501,
       "ucAy": 0.012072000000000001,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -536398.93,
-      "besGun": 95410365.87,
+      "gunluk": -89471.3,
+      "besGun": 95739838.67,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
-      "besGun": 30,
+      "gunluk": -3,
+      "besGun": 19,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 432982376,
         "kisiSayisi": 875,
         "fonToplamDeger": 706023035.38,
-        "gunlukGetiri": 0.00678432,
-        "paraGirisiCikisi": -536398.93,
-        "yatirimciDegisimi": -2
+        "gunlukGetiri": 0.00836883,
+        "paraGirisiCikisi": -89471.3,
+        "yatirimciDegisimi": -3
+      },
+      {
+        "fonKodu": "PTN",
+        "fonAdi": "PHİLLİP PORTFÖY ALTIN FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 1.617072,
+        "tedavuldekiPaySayisi": 433037246,
+        "kisiSayisi": 878,
+        "fonToplamDeger": 700252429.71,
+        "gunlukGetiri": -0.00157136,
+        "paraGirisiCikisi": -443218.41,
+        "yatirimciDegisimi": 1
       },
       {
         "fonKodu": "PTN",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "PTN",
       "fonAdi": "PHİLLİP PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.617072,
+      "tedavuldekiPaySayisi": 433037246,
+      "kisiSayisi": 878,
+      "fonToplamDeger": 700252429.71,
+      "gunlukGetiri": -0.00157136,
+      "paraGirisiCikisi": -443218.41,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "PTN",
+      "fonAdi": "PHİLLİP PORTFÖY ALTIN FONU",
       "tarih": "2026-08-18",
       "fiyat": 1.630605,
       "tedavuldekiPaySayisi": 432982376,
       "kisiSayisi": 875,
       "fonToplamDeger": 706023035.38,
-      "gunlukGetiri": 0.00678432,
-      "paraGirisiCikisi": -536398.93,
-      "yatirimciDegisimi": -2
+      "gunlukGetiri": 0.00836883,
+      "paraGirisiCikisi": -89471.3,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 432982376,
       "kisiSayisi": 875,
       "fonToplamDeger": 706023035.38,
-      "gunlukGetiri": 0.00678432,
-      "paraGirisiCikisi": -536398.93,
-      "yatirimciDegisimi": -2
+      "gunlukGetiri": 0.00836883,
+      "paraGirisiCikisi": -89471.3,
+      "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "PTN",
+      "fonAdi": "PHİLLİP PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.617072,
+      "tedavuldekiPaySayisi": 433037246,
+      "kisiSayisi": 878,
+      "fonToplamDeger": 700252429.71,
+      "gunlukGetiri": -0.00157136,
+      "paraGirisiCikisi": -443218.41,
+      "yatirimciDegisimi": 1
     },
     {
       "fonKodu": "PTN",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

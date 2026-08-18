@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "AIS",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 136944579963,
     "kisiSayisi": 21329,
     "fonToplamDeger": 14663259908.36,
-    "gunlukGetiri": 0.00417335,
+    "gunlukGetiri": 0.00100967,
     "getiriler": {
       "birAy": 0.030816,
       "ucAy": 0.102197,
@@ -29,22 +29,22 @@
       "besYil": 3.7277460000000002
     },
     "paraAkisi": {
-      "gunluk": 110723603.26,
-      "besGun": 649905987.06,
+      "gunluk": 15949517.11,
+      "besGun": 655133486.47,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 190,
-      "besGun": 499,
+      "gunluk": 149,
+      "besGun": 368,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 136944579963,
         "kisiSayisi": 21329,
         "fonToplamDeger": 14663259908.36,
-        "gunlukGetiri": 0.00417335,
-        "paraGirisiCikisi": 110723603.26,
-        "yatirimciDegisimi": 190
+        "gunlukGetiri": 0.00100967,
+        "paraGirisiCikisi": 15949517.11,
+        "yatirimciDegisimi": 149
+      },
+      {
+        "fonKodu": "AIS",
+        "fonAdi": "AK PORTFÖY PARA PİYASASI KATILIM FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 0.106966,
+        "tedavuldekiPaySayisi": 136795622073,
+        "kisiSayisi": 21180,
+        "fonToplamDeger": 14632452311.64,
+        "gunlukGetiri": 0.00316049,
+        "paraGirisiCikisi": 94678492.44,
+        "yatirimciDegisimi": 41
       },
       {
         "fonKodu": "AIS",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "AIS",
       "fonAdi": "AK PORTFÖY PARA PİYASASI KATILIM FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 0.106966,
+      "tedavuldekiPaySayisi": 136795622073,
+      "kisiSayisi": 21180,
+      "fonToplamDeger": 14632452311.64,
+      "gunlukGetiri": 0.00316049,
+      "paraGirisiCikisi": 94678492.44,
+      "yatirimciDegisimi": 41
+    },
+    {
+      "fonKodu": "AIS",
+      "fonAdi": "AK PORTFÖY PARA PİYASASI KATILIM FONU",
       "tarih": "2026-08-18",
       "fiyat": 0.107074,
       "tedavuldekiPaySayisi": 136944579963,
       "kisiSayisi": 21329,
       "fonToplamDeger": 14663259908.36,
-      "gunlukGetiri": 0.00417335,
-      "paraGirisiCikisi": 110723603.26,
-      "yatirimciDegisimi": 190
+      "gunlukGetiri": 0.00100967,
+      "paraGirisiCikisi": 15949517.11,
+      "yatirimciDegisimi": 149
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 136944579963,
       "kisiSayisi": 21329,
       "fonToplamDeger": 14663259908.36,
-      "gunlukGetiri": 0.00417335,
-      "paraGirisiCikisi": 110723603.26,
-      "yatirimciDegisimi": 190
+      "gunlukGetiri": 0.00100967,
+      "paraGirisiCikisi": 15949517.11,
+      "yatirimciDegisimi": 149
+    },
+    {
+      "fonKodu": "AIS",
+      "fonAdi": "AK PORTFÖY PARA PİYASASI KATILIM FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 0.106966,
+      "tedavuldekiPaySayisi": 136795622073,
+      "kisiSayisi": 21180,
+      "fonToplamDeger": 14632452311.64,
+      "gunlukGetiri": 0.00316049,
+      "paraGirisiCikisi": 94678492.44,
+      "yatirimciDegisimi": 41
     },
     {
       "fonKodu": "AIS",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

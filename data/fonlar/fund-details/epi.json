@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "EPI",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 251325459,
     "kisiSayisi": 289,
     "fonToplamDeger": 284844201.5,
-    "gunlukGetiri": 0.01440743,
+    "gunlukGetiri": 0.00524188,
     "getiriler": {
       "birAy": -0.007538,
       "ucAy": -0.036624,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1077.83,
-      "besGun": -28594.17,
+      "gunluk": 1151.5,
+      "besGun": 22689.07,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
-      "besGun": -2,
+      "gunluk": -3,
+      "besGun": -4,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 251325459,
         "kisiSayisi": 289,
         "fonToplamDeger": 284844201.5,
-        "gunlukGetiri": 0.01440743,
-        "paraGirisiCikisi": 1077.83,
-        "yatirimciDegisimi": -4
+        "gunlukGetiri": 0.00524188,
+        "paraGirisiCikisi": 1151.5,
+        "yatirimciDegisimi": -3
+      },
+      {
+        "fonKodu": "EPI",
+        "fonAdi": "EMAA BLUE PORTFÖY İNŞAAT SEKTÖRÜ KATILIM FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 1.127458,
+        "tedavuldekiPaySayisi": 251324443,
+        "kisiSayisi": 292,
+        "fonToplamDeger": 283357703.37,
+        "gunlukGetiri": 0.00911775,
+        "paraGirisiCikisi": -73.28,
+        "yatirimciDegisimi": -1
       },
       {
         "fonKodu": "EPI",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "EPI",
       "fonAdi": "EMAA BLUE PORTFÖY İNŞAAT SEKTÖRÜ KATILIM FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.127458,
+      "tedavuldekiPaySayisi": 251324443,
+      "kisiSayisi": 292,
+      "fonToplamDeger": 283357703.37,
+      "gunlukGetiri": 0.00911775,
+      "paraGirisiCikisi": -73.28,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "EPI",
+      "fonAdi": "EMAA BLUE PORTFÖY İNŞAAT SEKTÖRÜ KATILIM FONU",
       "tarih": "2026-08-18",
       "fiyat": 1.133368,
       "tedavuldekiPaySayisi": 251325459,
       "kisiSayisi": 289,
       "fonToplamDeger": 284844201.5,
-      "gunlukGetiri": 0.01440743,
-      "paraGirisiCikisi": 1077.83,
-      "yatirimciDegisimi": -4
+      "gunlukGetiri": 0.00524188,
+      "paraGirisiCikisi": 1151.5,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 251325459,
       "kisiSayisi": 289,
       "fonToplamDeger": 284844201.5,
-      "gunlukGetiri": 0.01440743,
-      "paraGirisiCikisi": 1077.83,
-      "yatirimciDegisimi": -4
+      "gunlukGetiri": 0.00524188,
+      "paraGirisiCikisi": 1151.5,
+      "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "EPI",
+      "fonAdi": "EMAA BLUE PORTFÖY İNŞAAT SEKTÖRÜ KATILIM FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.127458,
+      "tedavuldekiPaySayisi": 251324443,
+      "kisiSayisi": 292,
+      "fonToplamDeger": 283357703.37,
+      "gunlukGetiri": 0.00911775,
+      "paraGirisiCikisi": -73.28,
+      "yatirimciDegisimi": -1
     },
     {
       "fonKodu": "EPI",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

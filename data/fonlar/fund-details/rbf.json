@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "RBF",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 10921812,
     "kisiSayisi": 84,
     "fonToplamDeger": 19253238.95,
-    "gunlukGetiri": 0.003969,
+    "gunlukGetiri": 0.00130643,
     "getiriler": {
       "birAy": 0.027216999999999998,
       "ucAy": 0.06443800000000001,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 447.76,
-      "besGun": 664593.86,
+      "gunluk": 349.04,
+      "besGun": 665169.05,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": 0,
       "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 10921812,
         "kisiSayisi": 84,
         "fonToplamDeger": 19253238.95,
-        "gunlukGetiri": 0.003969,
-        "paraGirisiCikisi": 447.76,
+        "gunlukGetiri": 0.00130643,
+        "paraGirisiCikisi": 349.04,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "RBF",
+        "fonAdi": "ROTA PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 1.760525,
+        "tedavuldekiPaySayisi": 10921614,
+        "kisiSayisi": 84,
+        "fonToplamDeger": 19227775.45,
+        "gunlukGetiri": 0.0026591,
+        "paraGirisiCikisi": 98.59,
         "yatirimciDegisimi": 1
       },
       {
@@ -188,14 +200,26 @@
     {
       "fonKodu": "RBF",
       "fonAdi": "ROTA PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.760525,
+      "tedavuldekiPaySayisi": 10921614,
+      "kisiSayisi": 84,
+      "fonToplamDeger": 19227775.45,
+      "gunlukGetiri": 0.0026591,
+      "paraGirisiCikisi": 98.59,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "RBF",
+      "fonAdi": "ROTA PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
       "tarih": "2026-08-18",
       "fiyat": 1.762825,
       "tedavuldekiPaySayisi": 10921812,
       "kisiSayisi": 84,
       "fonToplamDeger": 19253238.95,
-      "gunlukGetiri": 0.003969,
-      "paraGirisiCikisi": 447.76,
-      "yatirimciDegisimi": 1
+      "gunlukGetiri": 0.00130643,
+      "paraGirisiCikisi": 349.04,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 10921812,
       "kisiSayisi": 84,
       "fonToplamDeger": 19253238.95,
-      "gunlukGetiri": 0.003969,
-      "paraGirisiCikisi": 447.76,
+      "gunlukGetiri": 0.00130643,
+      "paraGirisiCikisi": 349.04,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "RBF",
+      "fonAdi": "ROTA PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.760525,
+      "tedavuldekiPaySayisi": 10921614,
+      "kisiSayisi": 84,
+      "fonToplamDeger": 19227775.45,
+      "gunlukGetiri": 0.0026591,
+      "paraGirisiCikisi": 98.59,
       "yatirimciDegisimi": 1
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PYD",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 182530202,
     "kisiSayisi": 44,
     "fonToplamDeger": 54147624.99,
-    "gunlukGetiri": 0.01625529,
+    "gunlukGetiri": 0.0423914,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -30,7 +30,7 @@
     },
     "paraAkisi": {
       "gunluk": 0,
-      "besGun": -295.95,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 182530202,
         "kisiSayisi": 44,
         "fonToplamDeger": 54147624.99,
-        "gunlukGetiri": 0.01625529,
+        "gunlukGetiri": 0.0423914,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "PYD",
+        "fonAdi": "PARDUS PORTFÖY YİRMİBİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-17",
+        "fiyat": 0.284586,
+        "tedavuldekiPaySayisi": 182530202,
+        "kisiSayisi": 44,
+        "fonToplamDeger": 51945457.12,
+        "gunlukGetiri": -0.02507323,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "PYD",
       "fonAdi": "PARDUS PORTFÖY YİRMİBİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 0.284586,
+      "tedavuldekiPaySayisi": 182530202,
+      "kisiSayisi": 44,
+      "fonToplamDeger": 51945457.12,
+      "gunlukGetiri": -0.02507323,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PYD",
+      "fonAdi": "PARDUS PORTFÖY YİRMİBİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
       "tarih": "2026-08-18",
       "fiyat": 0.29665,
       "tedavuldekiPaySayisi": 182530202,
       "kisiSayisi": 44,
       "fonToplamDeger": 54147624.99,
-      "gunlukGetiri": 0.01625529,
+      "gunlukGetiri": 0.0423914,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 182530202,
       "kisiSayisi": 44,
       "fonToplamDeger": 54147624.99,
-      "gunlukGetiri": 0.01625529,
+      "gunlukGetiri": 0.0423914,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PYD",
+      "fonAdi": "PARDUS PORTFÖY YİRMİBİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 0.284586,
+      "tedavuldekiPaySayisi": 182530202,
+      "kisiSayisi": 44,
+      "fonToplamDeger": 51945457.12,
+      "gunlukGetiri": -0.02507323,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

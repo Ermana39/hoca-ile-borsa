@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PAF",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 82643100,
     "kisiSayisi": 3357,
     "fonToplamDeger": 294889342.01,
-    "gunlukGetiri": 0.0053918,
+    "gunlukGetiri": 0.00869492,
     "getiriler": {
       "birAy": 0.11682600000000001,
       "ucAy": 0.0034449999999999997,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -353671.96,
-      "besGun": -2076168.03,
+      "gunluk": -393703.89,
+      "besGun": -2352553.34,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
+      "gunluk": 1,
       "besGun": -7,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 82643100,
         "kisiSayisi": 3357,
         "fonToplamDeger": 294889342.01,
-        "gunlukGetiri": 0.0053918,
-        "paraGirisiCikisi": -353671.96,
-        "yatirimciDegisimi": 2
+        "gunlukGetiri": 0.00869492,
+        "paraGirisiCikisi": -393703.89,
+        "yatirimciDegisimi": 1
+      },
+      {
+        "fonKodu": "PAF",
+        "fonAdi": "PARDUS PORTFÖY ALTIN FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 3.537469,
+        "tedavuldekiPaySayisi": 82753436,
+        "kisiSayisi": 3356,
+        "fonToplamDeger": 292737685.19,
+        "gunlukGetiri": -0.00327464,
+        "paraGirisiCikisi": 39686.86,
+        "yatirimciDegisimi": 1
       },
       {
         "fonKodu": "PAF",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "PAF",
       "fonAdi": "PARDUS PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 3.537469,
+      "tedavuldekiPaySayisi": 82753436,
+      "kisiSayisi": 3356,
+      "fonToplamDeger": 292737685.19,
+      "gunlukGetiri": -0.00327464,
+      "paraGirisiCikisi": 39686.86,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "PAF",
+      "fonAdi": "PARDUS PORTFÖY ALTIN FONU",
       "tarih": "2026-08-18",
       "fiyat": 3.568227,
       "tedavuldekiPaySayisi": 82643100,
       "kisiSayisi": 3357,
       "fonToplamDeger": 294889342.01,
-      "gunlukGetiri": 0.0053918,
-      "paraGirisiCikisi": -353671.96,
-      "yatirimciDegisimi": 2
+      "gunlukGetiri": 0.00869492,
+      "paraGirisiCikisi": -393703.89,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 82643100,
       "kisiSayisi": 3357,
       "fonToplamDeger": 294889342.01,
-      "gunlukGetiri": 0.0053918,
-      "paraGirisiCikisi": -353671.96,
-      "yatirimciDegisimi": 2
+      "gunlukGetiri": 0.00869492,
+      "paraGirisiCikisi": -393703.89,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "PAF",
+      "fonAdi": "PARDUS PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 3.537469,
+      "tedavuldekiPaySayisi": 82753436,
+      "kisiSayisi": 3356,
+      "fonToplamDeger": 292737685.19,
+      "gunlukGetiri": -0.00327464,
+      "paraGirisiCikisi": 39686.86,
+      "yatirimciDegisimi": 1
     },
     {
       "fonKodu": "PAF",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "UP1",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 221089741,
     "kisiSayisi": 1476,
     "fonToplamDeger": 1383910174.76,
-    "gunlukGetiri": 0.00538696,
+    "gunlukGetiri": 0.0080577,
     "getiriler": {
       "birAy": 0.105916,
       "ucAy": 0.008128,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -880072.48,
-      "besGun": 8405975.41,
+      "gunluk": -66119.05,
+      "besGun": 8575338.29,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": -2,
+      "gunluk": 2,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 221089741,
         "kisiSayisi": 1476,
         "fonToplamDeger": 1383910174.76,
-        "gunlukGetiri": 0.00538696,
-        "paraGirisiCikisi": -880072.48,
-        "yatirimciDegisimi": 1
+        "gunlukGetiri": 0.0080577,
+        "paraGirisiCikisi": -66119.05,
+        "yatirimciDegisimi": 2
+      },
+      {
+        "fonKodu": "UP1",
+        "fonAdi": "ÜNLÜ PORTFÖY ALTIN FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 6.209461,
+        "tedavuldekiPaySayisi": 221100304,
+        "kisiSayisi": 1474,
+        "fonToplamDeger": 1372913772.43,
+        "gunlukGetiri": -0.00264939,
+        "paraGirisiCikisi": -807447.26,
+        "yatirimciDegisimi": -1
       },
       {
         "fonKodu": "UP1",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "UP1",
       "fonAdi": "ÜNLÜ PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 6.209461,
+      "tedavuldekiPaySayisi": 221100304,
+      "kisiSayisi": 1474,
+      "fonToplamDeger": 1372913772.43,
+      "gunlukGetiri": -0.00264939,
+      "paraGirisiCikisi": -807447.26,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "UP1",
+      "fonAdi": "ÜNLÜ PORTFÖY ALTIN FONU",
       "tarih": "2026-08-18",
       "fiyat": 6.259495,
       "tedavuldekiPaySayisi": 221089741,
       "kisiSayisi": 1476,
       "fonToplamDeger": 1383910174.76,
-      "gunlukGetiri": 0.00538696,
-      "paraGirisiCikisi": -880072.48,
-      "yatirimciDegisimi": 1
+      "gunlukGetiri": 0.0080577,
+      "paraGirisiCikisi": -66119.05,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 221089741,
       "kisiSayisi": 1476,
       "fonToplamDeger": 1383910174.76,
-      "gunlukGetiri": 0.00538696,
-      "paraGirisiCikisi": -880072.48,
-      "yatirimciDegisimi": 1
+      "gunlukGetiri": 0.0080577,
+      "paraGirisiCikisi": -66119.05,
+      "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "UP1",
+      "fonAdi": "ÜNLÜ PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 6.209461,
+      "tedavuldekiPaySayisi": 221100304,
+      "kisiSayisi": 1474,
+      "fonToplamDeger": 1372913772.43,
+      "gunlukGetiri": -0.00264939,
+      "paraGirisiCikisi": -807447.26,
+      "yatirimciDegisimi": -1
     },
     {
       "fonKodu": "UP1",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "RIK",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 121784036,
     "kisiSayisi": 4203,
     "fonToplamDeger": 669952095.96,
-    "gunlukGetiri": -0.00374135,
+    "gunlukGetiri": -0.00732477,
     "getiriler": {
       "birAy": -0.033478,
       "ucAy": -0.034579,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -20970550.52,
-      "besGun": -74429491.06,
+      "gunluk": -11128923.45,
+      "besGun": -66585122.18,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -89,
-      "besGun": -281,
+      "gunluk": -33,
+      "besGun": -238,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 121784036,
         "kisiSayisi": 4203,
         "fonToplamDeger": 669952095.96,
-        "gunlukGetiri": -0.00374135,
-        "paraGirisiCikisi": -20970550.52,
-        "yatirimciDegisimi": -89
+        "gunlukGetiri": -0.00732477,
+        "paraGirisiCikisi": -11128923.45,
+        "yatirimciDegisimi": -33
+      },
+      {
+        "fonKodu": "RIK",
+        "fonAdi": "RE-PIE PORTFÖY İKİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-17",
+        "fiyat": 5.541741,
+        "tedavuldekiPaySayisi": 123807054,
+        "kisiSayisi": 4236,
+        "fonToplamDeger": 686106596.33,
+        "gunlukGetiri": 0.00360987,
+        "paraGirisiCikisi": -9914246.69,
+        "yatirimciDegisimi": -56
       },
       {
         "fonKodu": "RIK",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "RIK",
       "fonAdi": "RE-PIE PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 5.541741,
+      "tedavuldekiPaySayisi": 123807054,
+      "kisiSayisi": 4236,
+      "fonToplamDeger": 686106596.33,
+      "gunlukGetiri": 0.00360987,
+      "paraGirisiCikisi": -9914246.69,
+      "yatirimciDegisimi": -56
+    },
+    {
+      "fonKodu": "RIK",
+      "fonAdi": "RE-PIE PORTFÖY İKİNCİ DEĞİŞKEN FON",
       "tarih": "2026-08-18",
       "fiyat": 5.501149,
       "tedavuldekiPaySayisi": 121784036,
       "kisiSayisi": 4203,
       "fonToplamDeger": 669952095.96,
-      "gunlukGetiri": -0.00374135,
-      "paraGirisiCikisi": -20970550.52,
-      "yatirimciDegisimi": -89
+      "gunlukGetiri": -0.00732477,
+      "paraGirisiCikisi": -11128923.45,
+      "yatirimciDegisimi": -33
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 121784036,
       "kisiSayisi": 4203,
       "fonToplamDeger": 669952095.96,
-      "gunlukGetiri": -0.00374135,
-      "paraGirisiCikisi": -20970550.52,
-      "yatirimciDegisimi": -89
+      "gunlukGetiri": -0.00732477,
+      "paraGirisiCikisi": -11128923.45,
+      "yatirimciDegisimi": -33
+    },
+    {
+      "fonKodu": "RIK",
+      "fonAdi": "RE-PIE PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 5.541741,
+      "tedavuldekiPaySayisi": 123807054,
+      "kisiSayisi": 4236,
+      "fonToplamDeger": 686106596.33,
+      "gunlukGetiri": 0.00360987,
+      "paraGirisiCikisi": -9914246.69,
+      "yatirimciDegisimi": -56
     },
     {
       "fonKodu": "RIK",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

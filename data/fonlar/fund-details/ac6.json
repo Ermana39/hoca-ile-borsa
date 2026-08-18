@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "AC6",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 1303293,
     "kisiSayisi": 84,
     "fonToplamDeger": 74365612.18,
-    "gunlukGetiri": -0.0013346,
+    "gunlukGetiri": -0.00137524,
     "getiriler": {
       "birAy": 0.018156000000000002,
       "ucAy": 0.035305,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 107500.63,
-      "besGun": 77758.48,
+      "gunluk": 0,
+      "besGun": 47796.28,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
+      "gunluk": -1,
       "besGun": -3,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 1303293,
         "kisiSayisi": 84,
         "fonToplamDeger": 74365612.18,
-        "gunlukGetiri": -0.0013346,
-        "paraGirisiCikisi": 107500.63,
-        "yatirimciDegisimi": -2
+        "gunlukGetiri": -0.00137524,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "AC6",
+        "fonAdi": "PARDUS PORTFÖY DÖRDÜNCÜ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 57.138359,
+        "tedavuldekiPaySayisi": 1303293,
+        "kisiSayisi": 85,
+        "fonToplamDeger": 74468022.71,
+        "gunlukGetiri": 0.00004069,
+        "paraGirisiCikisi": 107648.67,
+        "yatirimciDegisimi": -1
       },
       {
         "fonKodu": "AC6",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "AC6",
       "fonAdi": "PARDUS PORTFÖY DÖRDÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 57.138359,
+      "tedavuldekiPaySayisi": 1303293,
+      "kisiSayisi": 85,
+      "fonToplamDeger": 74468022.71,
+      "gunlukGetiri": 0.00004069,
+      "paraGirisiCikisi": 107648.67,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "AC6",
+      "fonAdi": "PARDUS PORTFÖY DÖRDÜNCÜ SERBEST (DÖVİZ) FON",
       "tarih": "2026-08-18",
       "fiyat": 57.05978,
       "tedavuldekiPaySayisi": 1303293,
       "kisiSayisi": 84,
       "fonToplamDeger": 74365612.18,
-      "gunlukGetiri": -0.0013346,
-      "paraGirisiCikisi": 107500.63,
-      "yatirimciDegisimi": -2
+      "gunlukGetiri": -0.00137524,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 1303293,
       "kisiSayisi": 84,
       "fonToplamDeger": 74365612.18,
-      "gunlukGetiri": -0.0013346,
-      "paraGirisiCikisi": 107500.63,
-      "yatirimciDegisimi": -2
+      "gunlukGetiri": -0.00137524,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "AC6",
+      "fonAdi": "PARDUS PORTFÖY DÖRDÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 57.138359,
+      "tedavuldekiPaySayisi": 1303293,
+      "kisiSayisi": 85,
+      "fonToplamDeger": 74468022.71,
+      "gunlukGetiri": 0.00004069,
+      "paraGirisiCikisi": 107648.67,
+      "yatirimciDegisimi": -1
     },
     {
       "fonKodu": "AC6",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GPG",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 62807222,
     "kisiSayisi": 3059,
     "fonToplamDeger": 1080211157.62,
-    "gunlukGetiri": -0.00630364,
+    "gunlukGetiri": -0.00972732,
     "getiriler": {
       "birAy": 0.032768,
       "ucAy": 0.242726,
@@ -29,22 +29,22 @@
       "besYil": 8.662393
     },
     "paraAkisi": {
-      "gunluk": -1184088.33,
-      "besGun": 43750331.49,
+      "gunluk": 75072.92,
+      "besGun": 39680520.08,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
-      "besGun": 128,
+      "gunluk": -15,
+      "besGun": 93,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 62807222,
         "kisiSayisi": 3059,
         "fonToplamDeger": 1080211157.62,
-        "gunlukGetiri": -0.00630364,
-        "paraGirisiCikisi": -1184088.33,
-        "yatirimciDegisimi": -5
+        "gunlukGetiri": -0.00972732,
+        "paraGirisiCikisi": 75072.92,
+        "yatirimciDegisimi": -15
+      },
+      {
+        "fonKodu": "GPG",
+        "fonAdi": "INVEO PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-17",
+        "fiyat": 17.367779,
+        "tedavuldekiPaySayisi": 62802857,
+        "kisiSayisi": 3074,
+        "fonToplamDeger": 1090746116.18,
+        "gunlukGetiri": 0.00345731,
+        "paraGirisiCikisi": -1271529.84,
+        "yatirimciDegisimi": 10
       },
       {
         "fonKodu": "GPG",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "GPG",
       "fonAdi": "INVEO PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 17.367779,
+      "tedavuldekiPaySayisi": 62802857,
+      "kisiSayisi": 3074,
+      "fonToplamDeger": 1090746116.18,
+      "gunlukGetiri": 0.00345731,
+      "paraGirisiCikisi": -1271529.84,
+      "yatirimciDegisimi": 10
+    },
+    {
+      "fonKodu": "GPG",
+      "fonAdi": "INVEO PORTFÖY BİRİNCİ DEĞİŞKEN FON",
       "tarih": "2026-08-18",
       "fiyat": 17.198837,
       "tedavuldekiPaySayisi": 62807222,
       "kisiSayisi": 3059,
       "fonToplamDeger": 1080211157.62,
-      "gunlukGetiri": -0.00630364,
-      "paraGirisiCikisi": -1184088.33,
-      "yatirimciDegisimi": -5
+      "gunlukGetiri": -0.00972732,
+      "paraGirisiCikisi": 75072.92,
+      "yatirimciDegisimi": -15
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 62807222,
       "kisiSayisi": 3059,
       "fonToplamDeger": 1080211157.62,
-      "gunlukGetiri": -0.00630364,
-      "paraGirisiCikisi": -1184088.33,
-      "yatirimciDegisimi": -5
+      "gunlukGetiri": -0.00972732,
+      "paraGirisiCikisi": 75072.92,
+      "yatirimciDegisimi": -15
+    },
+    {
+      "fonKodu": "GPG",
+      "fonAdi": "INVEO PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 17.367779,
+      "tedavuldekiPaySayisi": 62802857,
+      "kisiSayisi": 3074,
+      "fonToplamDeger": 1090746116.18,
+      "gunlukGetiri": 0.00345731,
+      "paraGirisiCikisi": -1271529.84,
+      "yatirimciDegisimi": 10
     },
     {
       "fonKodu": "GPG",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

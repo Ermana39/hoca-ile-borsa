@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "HVA",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 551204,
     "kisiSayisi": 17,
     "fonToplamDeger": 201091018.62,
-    "gunlukGetiri": -0.02230652,
+    "gunlukGetiri": -0.07064054,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 551204,
         "kisiSayisi": 17,
         "fonToplamDeger": 201091018.62,
-        "gunlukGetiri": -0.02230652,
+        "gunlukGetiri": -0.07064054,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "HVA",
+        "fonAdi": "HEDEF PORTFÖY ECE HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-17",
+        "fiyat": 392.551453,
+        "tedavuldekiPaySayisi": 551204,
+        "kisiSayisi": 17,
+        "fonToplamDeger": 216375931.31,
+        "gunlukGetiri": 0.05200789,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "HVA",
       "fonAdi": "HEDEF PORTFÖY ECE HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 392.551453,
+      "tedavuldekiPaySayisi": 551204,
+      "kisiSayisi": 17,
+      "fonToplamDeger": 216375931.31,
+      "gunlukGetiri": 0.05200789,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HVA",
+      "fonAdi": "HEDEF PORTFÖY ECE HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
       "tarih": "2026-08-18",
       "fiyat": 364.821407,
       "tedavuldekiPaySayisi": 551204,
       "kisiSayisi": 17,
       "fonToplamDeger": 201091018.62,
-      "gunlukGetiri": -0.02230652,
+      "gunlukGetiri": -0.07064054,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 551204,
       "kisiSayisi": 17,
       "fonToplamDeger": 201091018.62,
-      "gunlukGetiri": -0.02230652,
+      "gunlukGetiri": -0.07064054,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HVA",
+      "fonAdi": "HEDEF PORTFÖY ECE HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 392.551453,
+      "tedavuldekiPaySayisi": 551204,
+      "kisiSayisi": 17,
+      "fonToplamDeger": 216375931.31,
+      "gunlukGetiri": 0.05200789,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

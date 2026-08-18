@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DMZ",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 10000000,
     "kisiSayisi": 5,
     "fonToplamDeger": 644793048.22,
-    "gunlukGetiri": 0.00385775,
+    "gunlukGetiri": 0.00170129,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 10000000,
         "kisiSayisi": 5,
         "fonToplamDeger": 644793048.22,
-        "gunlukGetiri": 0.00385775,
+        "gunlukGetiri": 0.00170129,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "DMZ",
+        "fonAdi": "DENİZ PORTFÖY ZEYTİN SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-17",
+        "fiyat": 64.369793,
+        "tedavuldekiPaySayisi": 10000000,
+        "kisiSayisi": 5,
+        "fonToplamDeger": 643697931.2,
+        "gunlukGetiri": 0.00215279,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "DMZ",
       "fonAdi": "DENİZ PORTFÖY ZEYTİN SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 64.369793,
+      "tedavuldekiPaySayisi": 10000000,
+      "kisiSayisi": 5,
+      "fonToplamDeger": 643697931.2,
+      "gunlukGetiri": 0.00215279,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DMZ",
+      "fonAdi": "DENİZ PORTFÖY ZEYTİN SERBEST (DÖVİZ) ÖZEL FON",
       "tarih": "2026-08-18",
       "fiyat": 64.479305,
       "tedavuldekiPaySayisi": 10000000,
       "kisiSayisi": 5,
       "fonToplamDeger": 644793048.22,
-      "gunlukGetiri": 0.00385775,
+      "gunlukGetiri": 0.00170129,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 10000000,
       "kisiSayisi": 5,
       "fonToplamDeger": 644793048.22,
-      "gunlukGetiri": 0.00385775,
+      "gunlukGetiri": 0.00170129,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DMZ",
+      "fonAdi": "DENİZ PORTFÖY ZEYTİN SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 64.369793,
+      "tedavuldekiPaySayisi": 10000000,
+      "kisiSayisi": 5,
+      "fonToplamDeger": 643697931.2,
+      "gunlukGetiri": 0.00215279,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "AS1",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 150456,
     "kisiSayisi": 40,
     "fonToplamDeger": 6853455.07,
-    "gunlukGetiri": 0.00476909,
+    "gunlukGetiri": 0.00259371,
     "getiriler": {
       "birAy": 0.016549,
       "ucAy": 0.010904,
@@ -30,7 +30,7 @@
     },
     "paraAkisi": {
       "gunluk": 0,
-      "besGun": 90.54,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 150456,
         "kisiSayisi": 40,
         "fonToplamDeger": 6853455.07,
-        "gunlukGetiri": 0.00476909,
+        "gunlukGetiri": 0.00259371,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "AS1",
+        "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 45.433384,
+        "tedavuldekiPaySayisi": 150456,
+        "kisiSayisi": 40,
+        "fonToplamDeger": 6835725.24,
+        "gunlukGetiri": 0.00216976,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "AS1",
       "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 45.433384,
+      "tedavuldekiPaySayisi": 150456,
+      "kisiSayisi": 40,
+      "fonToplamDeger": 6835725.24,
+      "gunlukGetiri": 0.00216976,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "AS1",
+      "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
       "tarih": "2026-08-18",
       "fiyat": 45.551225,
       "tedavuldekiPaySayisi": 150456,
       "kisiSayisi": 40,
       "fonToplamDeger": 6853455.07,
-      "gunlukGetiri": 0.00476909,
+      "gunlukGetiri": 0.00259371,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 150456,
       "kisiSayisi": 40,
       "fonToplamDeger": 6853455.07,
-      "gunlukGetiri": 0.00476909,
+      "gunlukGetiri": 0.00259371,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "AS1",
+      "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 45.433384,
+      "tedavuldekiPaySayisi": 150456,
+      "kisiSayisi": 40,
+      "fonToplamDeger": 6835725.24,
+      "gunlukGetiri": 0.00216976,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

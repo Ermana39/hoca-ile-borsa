@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KDO",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 19383088,
     "kisiSayisi": 527,
     "fonToplamDeger": 1095033292.72,
-    "gunlukGetiri": 0.00864226,
+    "gunlukGetiri": 0.00553354,
     "getiriler": {
       "birAy": 0.030621999999999996,
       "ucAy": 0.056105,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -814760.28,
-      "besGun": 154935050.17,
+      "gunluk": -437774.05,
+      "besGun": -4134332.9,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -6,
-      "besGun": -1,
+      "gunluk": -1,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 19383088,
         "kisiSayisi": 527,
         "fonToplamDeger": 1095033292.72,
-        "gunlukGetiri": 0.00864226,
-        "paraGirisiCikisi": -814760.28,
-        "yatirimciDegisimi": -6
+        "gunlukGetiri": 0.00553354,
+        "paraGirisiCikisi": -437774.05,
+        "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "KDO",
+        "fonAdi": "İŞ PORTFÖY KATILIM SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 56.183371,
+        "tedavuldekiPaySayisi": 19390837,
+        "kisiSayisi": 528,
+        "fonToplamDeger": 1089442584.02,
+        "gunlukGetiri": 0.00309161,
+        "paraGirisiCikisi": -374911.63,
+        "yatirimciDegisimi": -5
       },
       {
         "fonKodu": "KDO",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "KDO",
       "fonAdi": "İŞ PORTFÖY KATILIM SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 56.183371,
+      "tedavuldekiPaySayisi": 19390837,
+      "kisiSayisi": 528,
+      "fonToplamDeger": 1089442584.02,
+      "gunlukGetiri": 0.00309161,
+      "paraGirisiCikisi": -374911.63,
+      "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "KDO",
+      "fonAdi": "İŞ PORTFÖY KATILIM SERBEST (DÖVİZ-AVRO) FON",
       "tarih": "2026-08-18",
       "fiyat": 56.494264,
       "tedavuldekiPaySayisi": 19383088,
       "kisiSayisi": 527,
       "fonToplamDeger": 1095033292.72,
-      "gunlukGetiri": 0.00864226,
-      "paraGirisiCikisi": -814760.28,
-      "yatirimciDegisimi": -6
+      "gunlukGetiri": 0.00553354,
+      "paraGirisiCikisi": -437774.05,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 19383088,
       "kisiSayisi": 527,
       "fonToplamDeger": 1095033292.72,
-      "gunlukGetiri": 0.00864226,
-      "paraGirisiCikisi": -814760.28,
-      "yatirimciDegisimi": -6
+      "gunlukGetiri": 0.00553354,
+      "paraGirisiCikisi": -437774.05,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "KDO",
+      "fonAdi": "İŞ PORTFÖY KATILIM SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 56.183371,
+      "tedavuldekiPaySayisi": 19390837,
+      "kisiSayisi": 528,
+      "fonToplamDeger": 1089442584.02,
+      "gunlukGetiri": 0.00309161,
+      "paraGirisiCikisi": -374911.63,
+      "yatirimciDegisimi": -5
     },
     {
       "fonKodu": "KDO",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

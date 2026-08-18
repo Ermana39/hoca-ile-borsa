@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "OFA",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 4329619,
     "kisiSayisi": 129,
     "fonToplamDeger": 248581518.6,
-    "gunlukGetiri": 0.00861526,
+    "gunlukGetiri": 0.00556488,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1655939.75,
-      "besGun": -1623918.63,
+      "gunluk": 55347.27,
+      "besGun": -1640948.54,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": 1,
       "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 4329619,
         "kisiSayisi": 129,
         "fonToplamDeger": 248581518.6,
-        "gunlukGetiri": 0.00861526,
-        "paraGirisiCikisi": -1655939.75,
-        "yatirimciDegisimi": 0
+        "gunlukGetiri": 0.00556488,
+        "paraGirisiCikisi": 55347.27,
+        "yatirimciDegisimi": 1
+      },
+      {
+        "fonKodu": "OFA",
+        "fonAdi": "OYAK PORTFÖY TÜRKİYE FİNANS KATILIM SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 57.096444,
+        "tedavuldekiPaySayisi": 4328655,
+        "kisiSayisi": 128,
+        "fonToplamDeger": 247150806.56,
+        "gunlukGetiri": 0.0030335,
+        "paraGirisiCikisi": -1701816.61,
+        "yatirimciDegisimi": -1
       },
       {
         "fonKodu": "OFA",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "OFA",
       "fonAdi": "OYAK PORTFÖY TÜRKİYE FİNANS KATILIM SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 57.096444,
+      "tedavuldekiPaySayisi": 4328655,
+      "kisiSayisi": 128,
+      "fonToplamDeger": 247150806.56,
+      "gunlukGetiri": 0.0030335,
+      "paraGirisiCikisi": -1701816.61,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "OFA",
+      "fonAdi": "OYAK PORTFÖY TÜRKİYE FİNANS KATILIM SERBEST (DÖVİZ-AVRO) FON",
       "tarih": "2026-08-18",
       "fiyat": 57.414179,
       "tedavuldekiPaySayisi": 4329619,
       "kisiSayisi": 129,
       "fonToplamDeger": 248581518.6,
-      "gunlukGetiri": 0.00861526,
-      "paraGirisiCikisi": -1655939.75,
-      "yatirimciDegisimi": 0
+      "gunlukGetiri": 0.00556488,
+      "paraGirisiCikisi": 55347.27,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 4329619,
       "kisiSayisi": 129,
       "fonToplamDeger": 248581518.6,
-      "gunlukGetiri": 0.00861526,
-      "paraGirisiCikisi": -1655939.75,
-      "yatirimciDegisimi": 0
+      "gunlukGetiri": 0.00556488,
+      "paraGirisiCikisi": 55347.27,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "OFA",
+      "fonAdi": "OYAK PORTFÖY TÜRKİYE FİNANS KATILIM SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 57.096444,
+      "tedavuldekiPaySayisi": 4328655,
+      "kisiSayisi": 128,
+      "fonToplamDeger": 247150806.56,
+      "gunlukGetiri": 0.0030335,
+      "paraGirisiCikisi": -1701816.61,
+      "yatirimciDegisimi": -1
     },
     {
       "fonKodu": "OFA",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

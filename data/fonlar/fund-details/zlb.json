@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ZLB",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 9754940,
     "kisiSayisi": 47,
     "fonToplamDeger": 490788682.39,
-    "gunlukGetiri": 0.00355352,
+    "gunlukGetiri": 0.00227179,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -7244900.5,
-      "besGun": -7244900.5,
+      "gunluk": 0,
+      "besGun": -7228478.88,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 9754940,
         "kisiSayisi": 47,
         "fonToplamDeger": 490788682.39,
-        "gunlukGetiri": 0.00355352,
-        "paraGirisiCikisi": -7244900.5,
+        "gunlukGetiri": 0.00227179,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "ZLB",
+        "fonAdi": "TEB PORTFÖY TEB ÖZEL BANKACILIK SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-17",
+        "fiyat": 50.19777,
+        "tedavuldekiPaySayisi": 9754940,
+        "kisiSayisi": 47,
+        "fonToplamDeger": 489676235.8,
+        "gunlukGetiri": 0.00127882,
+        "paraGirisiCikisi": -7228478.88,
         "yatirimciDegisimi": 0
       },
       {
@@ -188,13 +200,25 @@
     {
       "fonKodu": "ZLB",
       "fonAdi": "TEB PORTFÖY TEB ÖZEL BANKACILIK SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 50.19777,
+      "tedavuldekiPaySayisi": 9754940,
+      "kisiSayisi": 47,
+      "fonToplamDeger": 489676235.8,
+      "gunlukGetiri": 0.00127882,
+      "paraGirisiCikisi": -7228478.88,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "ZLB",
+      "fonAdi": "TEB PORTFÖY TEB ÖZEL BANKACILIK SERBEST (DÖVİZ) ÖZEL FON",
       "tarih": "2026-08-18",
       "fiyat": 50.311809,
       "tedavuldekiPaySayisi": 9754940,
       "kisiSayisi": 47,
       "fonToplamDeger": 490788682.39,
-      "gunlukGetiri": 0.00355352,
-      "paraGirisiCikisi": -7244900.5,
+      "gunlukGetiri": 0.00227179,
+      "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
   ],
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 9754940,
       "kisiSayisi": 47,
       "fonToplamDeger": 490788682.39,
-      "gunlukGetiri": 0.00355352,
-      "paraGirisiCikisi": -7244900.5,
+      "gunlukGetiri": 0.00227179,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "ZLB",
+      "fonAdi": "TEB PORTFÖY TEB ÖZEL BANKACILIK SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 50.19777,
+      "tedavuldekiPaySayisi": 9754940,
+      "kisiSayisi": 47,
+      "fonToplamDeger": 489676235.8,
+      "gunlukGetiri": 0.00127882,
+      "paraGirisiCikisi": -7228478.88,
       "yatirimciDegisimi": 0
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

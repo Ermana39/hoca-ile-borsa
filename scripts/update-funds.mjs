@@ -1,6 +1,7 @@
 import fs from "node:fs/promises";
 import fsSync from "node:fs";
 import path from "node:path";
+import { execFileSync } from "node:child_process";
 
 const XLSX_MODULE = await import("xlsx");
 const XLSX = XLSX_MODULE?.default || XLSX_MODULE;
@@ -51,6 +52,21 @@ const updateLogPath = path.join(outputDir, "fund-update-log.json");
 const version = 1;
 const maxAbsoluteDailyReturn = 1;
 const maxFundValueRelativeDifference = 0.005;
+const recurringMarketClosedDays = new Set([
+  "01-01",
+  "04-23",
+  "05-01",
+  "05-19",
+  "07-15",
+  "08-30",
+  "10-29",
+]);
+const datedMarketClosedDays = new Set([
+  "2026-03-20",
+  "2026-05-27",
+  "2026-05-28",
+  "2026-05-29",
+]);
 
 function normalizeText(value) {
   return String(value ?? "").replace(/\s+/g, " ").trim();
@@ -203,8 +219,12 @@ function readWorkbook(filePath) {
 
 function getFirstSheetRows(filePath) {
   const workbook = readWorkbook(filePath);
+  return getFirstSheetRowsFromWorkbook(workbook, filePath);
+}
+
+function getFirstSheetRowsFromWorkbook(workbook, sourceLabel) {
   const sheetName = workbook.SheetNames[0];
-  if (!sheetName) throw new Error(`Excel sayfası bulunamadı: ${filePath}`);
+  if (!sheetName) throw new Error(`Excel sayfası bulunamadı: ${sourceLabel}`);
 
   const rows = XLSX.utils.sheet_to_json(workbook.Sheets[sheetName], {
     header: 1,
@@ -213,6 +233,15 @@ function getFirstSheetRows(filePath) {
   });
 
   return rows.map((row) => row.map((cell) => cleanCell(cell)));
+}
+
+function getFirstSheetRowsFromBuffer(buffer, sourceLabel) {
+  const workbook = XLSX.read(buffer, {
+    type: "buffer",
+    cellDates: false,
+    raw: true,
+  });
+  return getFirstSheetRowsFromWorkbook(workbook, sourceLabel);
 }
 
 function findHeaderRow(rows, requiredHeaders) {
@@ -610,6 +639,139 @@ function hasValidFinancialSnapshot(row) {
     isPositiveFinite(row.tedavuldekiPaySayisi) &&
     isPositiveFinite(row.fonToplamDeger)
   );
+}
+
+function recoverMissingSnapshotsFromGit(existingSnapshots, currentSnapshots) {
+  const existingDates = new Set(existingSnapshots.map((row) => row.tarih));
+  const historyDates = Array.from(existingDates).sort();
+  const currentDates = Array.from(new Set(currentSnapshots.map((row) => row.tarih))).sort();
+  const earliestHistoryDate = historyDates[0] ?? currentDates[0] ?? null;
+  const latestCurrentDate = currentDates.at(-1) ?? null;
+
+  if (!earliestHistoryDate || !latestCurrentDate || !fsSync.existsSync(path.join(rootDir, ".git"))) {
+    return { snapshots: [], sourceDates: [], inspectedCommitCount: 0 };
+  }
+
+  const sourceRelativePath = path.relative(rootDir, sourcePaths.tarihsel).split(path.sep).join("/");
+  let commits = [];
+
+  try {
+    commits = execFileSync(
+      "git",
+      ["log", "--format=%H", "--", sourceRelativePath],
+      {
+        cwd: rootDir,
+        encoding: "utf8",
+        windowsHide: true,
+        maxBuffer: 4 * 1024 * 1024,
+      }
+    )
+      .split(/\r?\n/)
+      .map((value) => value.trim())
+      .filter((value) => /^[0-9a-f]{40}$/i.test(value));
+  } catch (error) {
+    console.warn(`Fon kaynak geçmişi Git üzerinden okunamadı: ${error.message}`);
+    return { snapshots: [], sourceDates: [], inspectedCommitCount: 0 };
+  }
+
+  const candidatesByDate = new Map();
+  const sourceDates = new Set();
+  let inspectedCommitCount = 0;
+
+  for (const commit of commits) {
+    try {
+      const buffer = execFileSync("git", ["show", `${commit}:${sourceRelativePath}`], {
+        cwd: rootDir,
+        windowsHide: true,
+        maxBuffer: 64 * 1024 * 1024,
+      });
+      const rows = parseTarihselRows(
+        getFirstSheetRowsFromBuffer(buffer, `git:${commit.slice(0, 8)}:${sourceRelativePath}`)
+      );
+      inspectedCommitCount += 1;
+
+      const rowsByDate = new Map();
+      for (const row of rows) {
+        if (!rowsByDate.has(row.tarih)) rowsByDate.set(row.tarih, []);
+        rowsByDate.get(row.tarih).push(row);
+      }
+
+      const workbookDates = Array.from(rowsByDate.keys()).sort();
+      for (const [date, dateRows] of rowsByDate) {
+        if (date < earliestHistoryDate || date > latestCurrentDate) continue;
+        sourceDates.add(date);
+        if (existingDates.has(date)) continue;
+
+        const validCount = dateRows.filter(hasValidFinancialSnapshot).length;
+        const validRatio = dateRows.length > 0 ? validCount / dateRows.length : 0;
+        if (dateRows.length < 100 || validRatio < 0.95) continue;
+
+        const previous = candidatesByDate.get(date);
+        if (!previous || validCount > previous.validCount) {
+          candidatesByDate.set(date, { rows: dateRows, validCount });
+        }
+      }
+
+      if (workbookDates.length > 0 && workbookDates.every((date) => date < earliestHistoryDate)) {
+        break;
+      }
+    } catch (error) {
+      console.warn(`Fon kaynağının ${commit.slice(0, 8)} sürümü okunamadı: ${error.message}`);
+    }
+  }
+
+  const snapshots = Array.from(candidatesByDate.entries())
+    .sort(([dateA], [dateB]) => dateA.localeCompare(dateB))
+    .flatMap(([, candidate]) => candidate.rows);
+
+  const availableDates = new Set([
+    ...existingDates,
+    ...currentDates,
+    ...snapshots.map((row) => row.tarih),
+  ]);
+  const unrecoveredSourceDates = Array.from(sourceDates)
+    .filter((date) => !availableDates.has(date))
+    .sort();
+
+  if (unrecoveredSourceDates.length > 0) {
+    throw new Error(
+      `Git geçmişindeki fon kaynak tarihleri arşive kurtarılamadı: ${unrecoveredSourceDates.join(", ")}.`
+    );
+  }
+
+  return {
+    snapshots,
+    sourceDates: Array.from(sourceDates).sort(),
+    inspectedCommitCount,
+  };
+}
+
+function isExpectedFundTradingDay(isoDate) {
+  const date = new Date(`${isoDate}T00:00:00Z`);
+  const day = date.getUTCDay();
+  if (day === 0 || day === 6) return false;
+  if (recurringMarketClosedDays.has(isoDate.slice(5))) return false;
+  return !datedMarketClosedDays.has(isoDate);
+}
+
+function listMissingTradingDates(previousLatestDate, latestSourceDate, snapshots) {
+  if (!previousLatestDate || !latestSourceDate || latestSourceDate <= previousLatestDate) return [];
+
+  const snapshotDates = new Set(snapshots.map((row) => row.tarih));
+  const cursor = new Date(`${previousLatestDate}T00:00:00Z`);
+  const end = new Date(`${latestSourceDate}T00:00:00Z`);
+  const missing = [];
+
+  cursor.setUTCDate(cursor.getUTCDate() + 1);
+  while (cursor < end) {
+    const isoDate = cursor.toISOString().slice(0, 10);
+    if (isExpectedFundTradingDay(isoDate) && !snapshotDates.has(isoDate)) {
+      missing.push(isoDate);
+    }
+    cursor.setUTCDate(cursor.getUTCDate() + 1);
+  }
+
+  return missing;
 }
 
 function validateSourceData({ currentSnapshots, getiriMap, managerMap, existingSnapshots }) {
@@ -1302,16 +1464,6 @@ function buildFundData(snapshots, getiriMap, managerMap) {
 
 async function main() {
   await fs.mkdir(outputDir, { recursive: true });
-  const resolvedDetailDir = path.resolve(detailDir);
-  const resolvedOutputDir = path.resolve(outputDir);
-  if (
-    resolvedDetailDir.startsWith(`${resolvedOutputDir}${path.sep}`) &&
-    path.basename(resolvedDetailDir) === "fund-details"
-  ) {
-    await fs.rm(resolvedDetailDir, { recursive: true, force: true });
-  }
-  await fs.mkdir(detailDir, { recursive: true });
-
   const existingHistory = await readJson(historyPath, { snapshots: [] });
   const legacySnapshots = await loadLegacyTarihselSnapshots();
   const currentSnapshots = parseTarihselRows(getFirstSheetRows(sourcePaths.tarihsel));
@@ -1325,15 +1477,48 @@ async function main() {
     existingSnapshots: existingHistory.snapshots ?? [],
   });
 
-  const incomingSnapshots = [...legacySnapshots, ...currentSnapshots];
+  const previousLatestDate = (existingHistory.snapshots ?? [])
+    .map((row) => row.tarih)
+    .sort()
+    .at(-1);
+  const gitRecovery = recoverMissingSnapshotsFromGit(
+    existingHistory.snapshots ?? [],
+    currentSnapshots
+  );
+  const incomingSnapshots = [
+    ...legacySnapshots,
+    ...gitRecovery.snapshots,
+    ...currentSnapshots,
+  ];
   const { snapshots, stats } = mergeSnapshots(
     existingHistory.snapshots ?? [],
     incomingSnapshots
   );
+  const missingTradingDates = listMissingTradingDates(
+    previousLatestDate,
+    sourceValidation.latestSourceDate,
+    snapshots
+  );
+  if (missingTradingDates.length > 0) {
+    throw new Error(
+      `Kalıcı fon geçmişinde eksik işlem günü var: ${missingTradingDates.join(", ")}. ` +
+        "Yeni kaynak yayımlanmadan önce eksik gün kurtarılmalıdır."
+    );
+  }
   const generatedAt = new Date().toISOString();
 
   const fundData = buildFundData(snapshots, getiriMap, managerMap);
   const activeFunds = fundData.activeFunds;
+
+  const resolvedDetailDir = path.resolve(detailDir);
+  const resolvedOutputDir = path.resolve(outputDir);
+  if (
+    resolvedDetailDir.startsWith(`${resolvedOutputDir}${path.sep}`) &&
+    path.basename(resolvedDetailDir) === "fund-details"
+  ) {
+    await fs.rm(resolvedDetailDir, { recursive: true, force: true });
+  }
+  await fs.mkdir(detailDir, { recursive: true });
 
   await writeJson(historyPath, {
     version,
@@ -1407,6 +1592,11 @@ async function main() {
       sonKaynakTarihi: sourceValidation.latestSourceDate,
       sonKaynakKayitSayisi: sourceValidation.latestRowCount,
       sonKaynakGecerliKayitSayisi: sourceValidation.validLatestRowCount,
+      gitGecmisindeIncelenenSurumSayisi: gitRecovery.inspectedCommitCount,
+      gitGecmisindenKurtarilanTarihler: Array.from(
+        new Set(gitRecovery.snapshots.map((row) => row.tarih))
+      ).sort(),
+      gitGecmisindenKurtarilanKayitSayisi: gitRecovery.snapshots.length,
     },
     veriUyarisiSayisi:
       sourceValidation.sourceWarnings.length + fundData.dataWarnings.length,
@@ -1421,6 +1611,14 @@ async function main() {
   console.log(`${stats.added} yeni kalıcı snapshot eklendi`);
   console.log(`${stats.updated} mevcut snapshot güncellendi`);
   console.log(`${stats.skipped} duplicate snapshot atlandı`);
+  if (gitRecovery.snapshots.length > 0) {
+    const recoveredDates = Array.from(
+      new Set(gitRecovery.snapshots.map((row) => row.tarih))
+    ).sort();
+    console.log(
+      `Git kaynak geçmişinden ${gitRecovery.snapshots.length} snapshot kurtarıldı: ${recoveredDates.join(", ")}`
+    );
+  }
   console.log(`${activeFunds.length - fundData.unknownManagers.length} fon yöneticiyle eşleşti`);
   console.log(`${fundData.unknownManagers.length} fon Bilinmiyor olarak işaretlendi`);
   console.log(

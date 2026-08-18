@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "OBN",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 4658407,
     "kisiSayisi": 242,
     "fonToplamDeger": 270995497.5,
-    "gunlukGetiri": 0.00383752,
+    "gunlukGetiri": 0.00179852,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -3080108.44,
-      "besGun": -3083891.51,
+      "gunluk": -2960387.53,
+      "besGun": -3083676.58,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": -1,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 4658407,
         "kisiSayisi": 242,
         "fonToplamDeger": 270995497.5,
-        "gunlukGetiri": 0.00383752,
-        "paraGirisiCikisi": -3080108.44,
+        "gunlukGetiri": 0.00179852,
+        "paraGirisiCikisi": -2960387.53,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "OBN",
+        "fonAdi": "AK PORTFÖY ONBEŞİNCİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 58.068989,
+        "tedavuldekiPaySayisi": 4709296,
+        "kisiSayisi": 242,
+        "fonToplamDeger": 273464059.47,
+        "gunlukGetiri": 0.00203534,
+        "paraGirisiCikisi": -119505.98,
         "yatirimciDegisimi": 0
       },
       {
@@ -188,13 +200,25 @@
     {
       "fonKodu": "OBN",
       "fonAdi": "AK PORTFÖY ONBEŞİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 58.068989,
+      "tedavuldekiPaySayisi": 4709296,
+      "kisiSayisi": 242,
+      "fonToplamDeger": 273464059.47,
+      "gunlukGetiri": 0.00203534,
+      "paraGirisiCikisi": -119505.98,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "OBN",
+      "fonAdi": "AK PORTFÖY ONBEŞİNCİ SERBEST (DÖVİZ) FON",
       "tarih": "2026-08-18",
       "fiyat": 58.173427,
       "tedavuldekiPaySayisi": 4658407,
       "kisiSayisi": 242,
       "fonToplamDeger": 270995497.5,
-      "gunlukGetiri": 0.00383752,
-      "paraGirisiCikisi": -3080108.44,
+      "gunlukGetiri": 0.00179852,
+      "paraGirisiCikisi": -2960387.53,
       "yatirimciDegisimi": 0
     }
   ],
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 4658407,
       "kisiSayisi": 242,
       "fonToplamDeger": 270995497.5,
-      "gunlukGetiri": 0.00383752,
-      "paraGirisiCikisi": -3080108.44,
+      "gunlukGetiri": 0.00179852,
+      "paraGirisiCikisi": -2960387.53,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "OBN",
+      "fonAdi": "AK PORTFÖY ONBEŞİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 58.068989,
+      "tedavuldekiPaySayisi": 4709296,
+      "kisiSayisi": 242,
+      "fonToplamDeger": 273464059.47,
+      "gunlukGetiri": 0.00203534,
+      "paraGirisiCikisi": -119505.98,
       "yatirimciDegisimi": 0
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

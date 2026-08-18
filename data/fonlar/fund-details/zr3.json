@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ZR3",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 300291933,
     "kisiSayisi": 139,
     "fonToplamDeger": 149296087.59,
-    "gunlukGetiri": -0.01721946,
+    "gunlukGetiri": -0.01057743,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 205768.72,
-      "besGun": -1601424.35,
+      "gunluk": 203820.31,
+      "besGun": -1590672.99,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": -6,
+      "gunluk": 1,
+      "besGun": -4,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 300291933,
         "kisiSayisi": 139,
         "fonToplamDeger": 149296087.59,
-        "gunlukGetiri": -0.01721946,
-        "paraGirisiCikisi": 205768.72,
-        "yatirimciDegisimi": -1
+        "gunlukGetiri": -0.01057743,
+        "paraGirisiCikisi": 203820.31,
+        "yatirimciDegisimi": 1
+      },
+      {
+        "fonKodu": "ZR3",
+        "fonAdi": "ZİRAAT PORTFÖY ONÜÇÜNCÜ SERBEST (TL) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 0.502485,
+        "tedavuldekiPaySayisi": 299881972,
+        "kisiSayisi": 138,
+        "fonToplamDeger": 150686336.2,
+        "gunlukGetiri": -0.00671304,
+        "paraGirisiCikisi": 1969.24,
+        "yatirimciDegisimi": -2
       },
       {
         "fonKodu": "ZR3",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "ZR3",
       "fonAdi": "ZİRAAT PORTFÖY ONÜÇÜNCÜ SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 0.502485,
+      "tedavuldekiPaySayisi": 299881972,
+      "kisiSayisi": 138,
+      "fonToplamDeger": 150686336.2,
+      "gunlukGetiri": -0.00671304,
+      "paraGirisiCikisi": 1969.24,
+      "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "ZR3",
+      "fonAdi": "ZİRAAT PORTFÖY ONÜÇÜNCÜ SERBEST (TL) FON",
       "tarih": "2026-08-18",
       "fiyat": 0.49717,
       "tedavuldekiPaySayisi": 300291933,
       "kisiSayisi": 139,
       "fonToplamDeger": 149296087.59,
-      "gunlukGetiri": -0.01721946,
-      "paraGirisiCikisi": 205768.72,
-      "yatirimciDegisimi": -1
+      "gunlukGetiri": -0.01057743,
+      "paraGirisiCikisi": 203820.31,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 300291933,
       "kisiSayisi": 139,
       "fonToplamDeger": 149296087.59,
-      "gunlukGetiri": -0.01721946,
-      "paraGirisiCikisi": 205768.72,
-      "yatirimciDegisimi": -1
+      "gunlukGetiri": -0.01057743,
+      "paraGirisiCikisi": 203820.31,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "ZR3",
+      "fonAdi": "ZİRAAT PORTFÖY ONÜÇÜNCÜ SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 0.502485,
+      "tedavuldekiPaySayisi": 299881972,
+      "kisiSayisi": 138,
+      "fonToplamDeger": 150686336.2,
+      "gunlukGetiri": -0.00671304,
+      "paraGirisiCikisi": 1969.24,
+      "yatirimciDegisimi": -2
     },
     {
       "fonKodu": "ZR3",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

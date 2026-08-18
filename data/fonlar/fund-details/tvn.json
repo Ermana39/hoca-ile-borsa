@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TVN",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 3046090,
     "kisiSayisi": 525,
     "fonToplamDeger": 8908183.98,
-    "gunlukGetiri": 0.00811048,
+    "gunlukGetiri": 0.00549358,
     "getiriler": {
       "birAy": 0.057663,
       "ucAy": 0.137219,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 324077.51,
-      "besGun": 476478.43,
+      "gunluk": 1351.1,
+      "besGun": 489404.27,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 2,
-      "besGun": 0,
+      "besGun": -1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 3046090,
         "kisiSayisi": 525,
         "fonToplamDeger": 8908183.98,
-        "gunlukGetiri": 0.00811048,
-        "paraGirisiCikisi": 324077.51,
+        "gunlukGetiri": 0.00549358,
+        "paraGirisiCikisi": 1351.1,
         "yatirimciDegisimi": 2
+      },
+      {
+        "fonKodu": "TVN",
+        "fonAdi": "TRIVE PORTFÖY BİRİNCİ FON SEPETİ FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 2.908487,
+        "tedavuldekiPaySayisi": 3045628,
+        "kisiSayisi": 523,
+        "fonToplamDeger": 8858169,
+        "gunlukGetiri": 0.00260261,
+        "paraGirisiCikisi": 320963.17,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "TVN",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "TVN",
       "fonAdi": "TRIVE PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.908487,
+      "tedavuldekiPaySayisi": 3045628,
+      "kisiSayisi": 523,
+      "fonToplamDeger": 8858169,
+      "gunlukGetiri": 0.00260261,
+      "paraGirisiCikisi": 320963.17,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TVN",
+      "fonAdi": "TRIVE PORTFÖY BİRİNCİ FON SEPETİ FONU",
       "tarih": "2026-08-18",
       "fiyat": 2.924465,
       "tedavuldekiPaySayisi": 3046090,
       "kisiSayisi": 525,
       "fonToplamDeger": 8908183.98,
-      "gunlukGetiri": 0.00811048,
-      "paraGirisiCikisi": 324077.51,
+      "gunlukGetiri": 0.00549358,
+      "paraGirisiCikisi": 1351.1,
       "yatirimciDegisimi": 2
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 3046090,
       "kisiSayisi": 525,
       "fonToplamDeger": 8908183.98,
-      "gunlukGetiri": 0.00811048,
-      "paraGirisiCikisi": 324077.51,
+      "gunlukGetiri": 0.00549358,
+      "paraGirisiCikisi": 1351.1,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "TVN",
+      "fonAdi": "TRIVE PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.908487,
+      "tedavuldekiPaySayisi": 3045628,
+      "kisiSayisi": 523,
+      "fonToplamDeger": 8858169,
+      "gunlukGetiri": 0.00260261,
+      "paraGirisiCikisi": 320963.17,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "TVN",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

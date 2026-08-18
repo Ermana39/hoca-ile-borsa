@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "EDP",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 57473183,
     "kisiSayisi": 53,
     "fonToplamDeger": 66929138.21,
-    "gunlukGetiri": 0.00455468,
+    "gunlukGetiri": 0.00111586,
     "getiriler": {
       "birAy": 0.033197000000000004,
       "ucAy": 0.108141,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 889640,
-      "besGun": 1829489.12,
+      "gunluk": 459816.21,
+      "besGun": 1875877.94,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
-      "besGun": 2,
+      "gunluk": -1,
+      "besGun": 4,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 57473183,
         "kisiSayisi": 53,
         "fonToplamDeger": 66929138.21,
-        "gunlukGetiri": 0.00455468,
-        "paraGirisiCikisi": 889640,
-        "yatirimciDegisimi": 3
+        "gunlukGetiri": 0.00111586,
+        "paraGirisiCikisi": 459816.21,
+        "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "EDP",
+        "fonAdi": "NEO PORTFÖY KORUNCUK EĞİTİME DESTEK PARA PİYASASI SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 1.16323,
+        "tedavuldekiPaySayisi": 57078331,
+        "kisiSayisi": 54,
+        "fonToplamDeger": 66395242.47,
+        "gunlukGetiri": 0.00343499,
+        "paraGirisiCikisi": 429344.7,
+        "yatirimciDegisimi": 4
       },
       {
         "fonKodu": "EDP",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "EDP",
       "fonAdi": "NEO PORTFÖY KORUNCUK EĞİTİME DESTEK PARA PİYASASI SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.16323,
+      "tedavuldekiPaySayisi": 57078331,
+      "kisiSayisi": 54,
+      "fonToplamDeger": 66395242.47,
+      "gunlukGetiri": 0.00343499,
+      "paraGirisiCikisi": 429344.7,
+      "yatirimciDegisimi": 4
+    },
+    {
+      "fonKodu": "EDP",
+      "fonAdi": "NEO PORTFÖY KORUNCUK EĞİTİME DESTEK PARA PİYASASI SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 1.164528,
       "tedavuldekiPaySayisi": 57473183,
       "kisiSayisi": 53,
       "fonToplamDeger": 66929138.21,
-      "gunlukGetiri": 0.00455468,
-      "paraGirisiCikisi": 889640,
-      "yatirimciDegisimi": 3
+      "gunlukGetiri": 0.00111586,
+      "paraGirisiCikisi": 459816.21,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 57473183,
       "kisiSayisi": 53,
       "fonToplamDeger": 66929138.21,
-      "gunlukGetiri": 0.00455468,
-      "paraGirisiCikisi": 889640,
-      "yatirimciDegisimi": 3
+      "gunlukGetiri": 0.00111586,
+      "paraGirisiCikisi": 459816.21,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "EDP",
+      "fonAdi": "NEO PORTFÖY KORUNCUK EĞİTİME DESTEK PARA PİYASASI SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.16323,
+      "tedavuldekiPaySayisi": 57078331,
+      "kisiSayisi": 54,
+      "fonToplamDeger": 66395242.47,
+      "gunlukGetiri": 0.00343499,
+      "paraGirisiCikisi": 429344.7,
+      "yatirimciDegisimi": 4
     },
     {
       "fonKodu": "EDP",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

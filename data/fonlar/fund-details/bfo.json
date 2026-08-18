@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BFO",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 203562943,
     "kisiSayisi": 1,
     "fonToplamDeger": 11010871448.48,
-    "gunlukGetiri": 0.00686828,
+    "gunlukGetiri": 0.00389666,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 203562943,
         "kisiSayisi": 1,
         "fonToplamDeger": 11010871448.48,
-        "gunlukGetiri": 0.00686828,
+        "gunlukGetiri": 0.00389666,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "BFO",
+        "fonAdi": "İŞ PORTFÖY BFO1 SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-17",
+        "fiyat": 53.880791,
+        "tedavuldekiPaySayisi": 203562943,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 10968132329.16,
+        "gunlukGetiri": 0.00296008,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "BFO",
       "fonAdi": "İŞ PORTFÖY BFO1 SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 53.880791,
+      "tedavuldekiPaySayisi": 203562943,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 10968132329.16,
+      "gunlukGetiri": 0.00296008,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BFO",
+      "fonAdi": "İŞ PORTFÖY BFO1 SERBEST (DÖVİZ) ÖZEL FON",
       "tarih": "2026-08-18",
       "fiyat": 54.090746,
       "tedavuldekiPaySayisi": 203562943,
       "kisiSayisi": 1,
       "fonToplamDeger": 11010871448.48,
-      "gunlukGetiri": 0.00686828,
+      "gunlukGetiri": 0.00389666,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 203562943,
       "kisiSayisi": 1,
       "fonToplamDeger": 11010871448.48,
-      "gunlukGetiri": 0.00686828,
+      "gunlukGetiri": 0.00389666,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BFO",
+      "fonAdi": "İŞ PORTFÖY BFO1 SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 53.880791,
+      "tedavuldekiPaySayisi": 203562943,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 10968132329.16,
+      "gunlukGetiri": 0.00296008,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

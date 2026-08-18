@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "VPP",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 27636893,
     "kisiSayisi": 552,
     "fonToplamDeger": 1478943324.39,
-    "gunlukGetiri": 0.00309741,
+    "gunlukGetiri": 0.00218412,
     "getiriler": {
       "birAy": 0.032841999999999996,
       "ucAy": 0.091689,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 21318710.65,
-      "besGun": 82605595,
+      "gunluk": 8582956.22,
+      "besGun": 70433160.19,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 4,
-      "besGun": 14,
+      "gunluk": 3,
+      "besGun": 12,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 27636893,
         "kisiSayisi": 552,
         "fonToplamDeger": 1478943324.39,
-        "gunlukGetiri": 0.00309741,
-        "paraGirisiCikisi": 21318710.65,
-        "yatirimciDegisimi": 4
+        "gunlukGetiri": 0.00218412,
+        "paraGirisiCikisi": 8582956.22,
+        "yatirimciDegisimi": 3
+      },
+      {
+        "fonKodu": "VPP",
+        "fonAdi": "VEGA PORTFÖY PARLA SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 53.396747,
+        "tedavuldekiPaySayisi": 27476504,
+        "kisiSayisi": 549,
+        "fonToplamDeger": 1467155925.16,
+        "gunlukGetiri": 0.0009113,
+        "paraGirisiCikisi": 12707998.61,
+        "yatirimciDegisimi": 1
       },
       {
         "fonKodu": "VPP",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "VPP",
       "fonAdi": "VEGA PORTFÖY PARLA SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 53.396747,
+      "tedavuldekiPaySayisi": 27476504,
+      "kisiSayisi": 549,
+      "fonToplamDeger": 1467155925.16,
+      "gunlukGetiri": 0.0009113,
+      "paraGirisiCikisi": 12707998.61,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "VPP",
+      "fonAdi": "VEGA PORTFÖY PARLA SERBEST (DÖVİZ) FON",
       "tarih": "2026-08-18",
       "fiyat": 53.513372,
       "tedavuldekiPaySayisi": 27636893,
       "kisiSayisi": 552,
       "fonToplamDeger": 1478943324.39,
-      "gunlukGetiri": 0.00309741,
-      "paraGirisiCikisi": 21318710.65,
-      "yatirimciDegisimi": 4
+      "gunlukGetiri": 0.00218412,
+      "paraGirisiCikisi": 8582956.22,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 27636893,
       "kisiSayisi": 552,
       "fonToplamDeger": 1478943324.39,
-      "gunlukGetiri": 0.00309741,
-      "paraGirisiCikisi": 21318710.65,
-      "yatirimciDegisimi": 4
+      "gunlukGetiri": 0.00218412,
+      "paraGirisiCikisi": 8582956.22,
+      "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "VPP",
+      "fonAdi": "VEGA PORTFÖY PARLA SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 53.396747,
+      "tedavuldekiPaySayisi": 27476504,
+      "kisiSayisi": 549,
+      "fonToplamDeger": 1467155925.16,
+      "gunlukGetiri": 0.0009113,
+      "paraGirisiCikisi": 12707998.61,
+      "yatirimciDegisimi": 1
     },
     {
       "fonKodu": "VPP",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ACU",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 25281210,
     "kisiSayisi": 160,
     "fonToplamDeger": 1436799140.59,
-    "gunlukGetiri": 0.00280764,
+    "gunlukGetiri": 0.00181987,
     "getiriler": {
       "birAy": 0.021402,
       "ucAy": 0.065387,
@@ -30,21 +30,21 @@
     },
     "paraAkisi": {
       "gunluk": -258304.57,
-      "besGun": -7908507.8,
+      "besGun": -258304.57,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 2,
-      "besGun": 4,
+      "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 25281210,
         "kisiSayisi": 160,
         "fonToplamDeger": 1436799140.59,
-        "gunlukGetiri": 0.00280764,
+        "gunlukGetiri": 0.00181987,
         "paraGirisiCikisi": -258304.57,
         "yatirimciDegisimi": 2
+      },
+      {
+        "fonKodu": "ACU",
+        "fonAdi": "İSTANBUL PORTFÖY URARTU SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 56.729449,
+        "tedavuldekiPaySayisi": 25285755,
+        "kisiSayisi": 158,
+        "fonToplamDeger": 1434446952.5,
+        "gunlukGetiri": 0.00098598,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "ACU",
@@ -188,12 +200,24 @@
     {
       "fonKodu": "ACU",
       "fonAdi": "İSTANBUL PORTFÖY URARTU SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 56.729449,
+      "tedavuldekiPaySayisi": 25285755,
+      "kisiSayisi": 158,
+      "fonToplamDeger": 1434446952.5,
+      "gunlukGetiri": 0.00098598,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "ACU",
+      "fonAdi": "İSTANBUL PORTFÖY URARTU SERBEST (DÖVİZ) FON",
       "tarih": "2026-08-18",
       "fiyat": 56.832689,
       "tedavuldekiPaySayisi": 25281210,
       "kisiSayisi": 160,
       "fonToplamDeger": 1436799140.59,
-      "gunlukGetiri": 0.00280764,
+      "gunlukGetiri": 0.00181987,
       "paraGirisiCikisi": -258304.57,
       "yatirimciDegisimi": 2
     }
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 25281210,
       "kisiSayisi": 160,
       "fonToplamDeger": 1436799140.59,
-      "gunlukGetiri": 0.00280764,
+      "gunlukGetiri": 0.00181987,
       "paraGirisiCikisi": -258304.57,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "ACU",
+      "fonAdi": "İSTANBUL PORTFÖY URARTU SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 56.729449,
+      "tedavuldekiPaySayisi": 25285755,
+      "kisiSayisi": 158,
+      "fonToplamDeger": 1434446952.5,
+      "gunlukGetiri": 0.00098598,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "ACU",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BBP",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 9797480,
     "kisiSayisi": 620,
     "fonToplamDeger": 21989767.44,
-    "gunlukGetiri": 0.00303489,
+    "gunlukGetiri": 0.00006283,
     "getiriler": {
       "birAy": 0.027645,
       "ucAy": 0.088924,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -160757.37,
-      "besGun": -1155380.24,
+      "gunluk": -1218.73,
+      "besGun": -1084338.86,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
-      "besGun": -1,
+      "gunluk": -2,
+      "besGun": -2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 9797480,
         "kisiSayisi": 620,
         "fonToplamDeger": 21989767.44,
-        "gunlukGetiri": 0.00303489,
-        "paraGirisiCikisi": -160757.37,
-        "yatirimciDegisimi": 2
+        "gunlukGetiri": 0.00006283,
+        "paraGirisiCikisi": -1218.73,
+        "yatirimciDegisimi": -2
+      },
+      {
+        "fonKodu": "BBP",
+        "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 2.24429,
+        "tedavuldekiPaySayisi": 9798023,
+        "kisiSayisi": 622,
+        "fonToplamDeger": 21989602.28,
+        "gunlukGetiri": 0.00297188,
+        "paraGirisiCikisi": -159528.62,
+        "yatirimciDegisimi": 4
       },
       {
         "fonKodu": "BBP",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "BBP",
       "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.24429,
+      "tedavuldekiPaySayisi": 9798023,
+      "kisiSayisi": 622,
+      "fonToplamDeger": 21989602.28,
+      "gunlukGetiri": 0.00297188,
+      "paraGirisiCikisi": -159528.62,
+      "yatirimciDegisimi": 4
+    },
+    {
+      "fonKodu": "BBP",
+      "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
       "tarih": "2026-08-18",
       "fiyat": 2.244431,
       "tedavuldekiPaySayisi": 9797480,
       "kisiSayisi": 620,
       "fonToplamDeger": 21989767.44,
-      "gunlukGetiri": 0.00303489,
-      "paraGirisiCikisi": -160757.37,
-      "yatirimciDegisimi": 2
+      "gunlukGetiri": 0.00006283,
+      "paraGirisiCikisi": -1218.73,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 9797480,
       "kisiSayisi": 620,
       "fonToplamDeger": 21989767.44,
-      "gunlukGetiri": 0.00303489,
-      "paraGirisiCikisi": -160757.37,
-      "yatirimciDegisimi": 2
+      "gunlukGetiri": 0.00006283,
+      "paraGirisiCikisi": -1218.73,
+      "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "BBP",
+      "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.24429,
+      "tedavuldekiPaySayisi": 9798023,
+      "kisiSayisi": 622,
+      "fonToplamDeger": 21989602.28,
+      "gunlukGetiri": 0.00297188,
+      "paraGirisiCikisi": -159528.62,
+      "yatirimciDegisimi": 4
     },
     {
       "fonKodu": "BBP",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

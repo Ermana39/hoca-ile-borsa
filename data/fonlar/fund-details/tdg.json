@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TDG",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 1379427651,
     "kisiSayisi": 2062,
     "fonToplamDeger": 726632086.61,
-    "gunlukGetiri": -0.00026001,
+    "gunlukGetiri": 0.00011392,
     "getiriler": {
       "birAy": 0.013456,
       "ucAy": 0.048886000000000006,
@@ -29,22 +29,22 @@
       "besYil": 4.560677999999999
     },
     "paraAkisi": {
-      "gunluk": -746792.43,
-      "besGun": -732819.5,
+      "gunluk": -42533.48,
+      "besGun": -715716.72,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
+      "gunluk": 0,
       "besGun": -11,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 1379427651,
         "kisiSayisi": 2062,
         "fonToplamDeger": 726632086.61,
-        "gunlukGetiri": -0.00026001,
-        "paraGirisiCikisi": -746792.43,
+        "gunlukGetiri": 0.00011392,
+        "paraGirisiCikisi": -42533.48,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "TDG",
+        "fonAdi": "İŞ PORTFÖY YABANCI BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 0.526703,
+        "tedavuldekiPaySayisi": 1379508396,
+        "kisiSayisi": 2062,
+        "fonToplamDeger": 726591363.12,
+        "gunlukGetiri": -0.00037388,
+        "paraGirisiCikisi": -704178.74,
         "yatirimciDegisimi": -5
       },
       {
@@ -188,14 +200,26 @@
     {
       "fonKodu": "TDG",
       "fonAdi": "İŞ PORTFÖY YABANCI BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 0.526703,
+      "tedavuldekiPaySayisi": 1379508396,
+      "kisiSayisi": 2062,
+      "fonToplamDeger": 726591363.12,
+      "gunlukGetiri": -0.00037388,
+      "paraGirisiCikisi": -704178.74,
+      "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "TDG",
+      "fonAdi": "İŞ PORTFÖY YABANCI BORÇLANMA ARAÇLARI FONU",
       "tarih": "2026-08-18",
       "fiyat": 0.526763,
       "tedavuldekiPaySayisi": 1379427651,
       "kisiSayisi": 2062,
       "fonToplamDeger": 726632086.61,
-      "gunlukGetiri": -0.00026001,
-      "paraGirisiCikisi": -746792.43,
-      "yatirimciDegisimi": -5
+      "gunlukGetiri": 0.00011392,
+      "paraGirisiCikisi": -42533.48,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 1379427651,
       "kisiSayisi": 2062,
       "fonToplamDeger": 726632086.61,
-      "gunlukGetiri": -0.00026001,
-      "paraGirisiCikisi": -746792.43,
+      "gunlukGetiri": 0.00011392,
+      "paraGirisiCikisi": -42533.48,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TDG",
+      "fonAdi": "İŞ PORTFÖY YABANCI BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 0.526703,
+      "tedavuldekiPaySayisi": 1379508396,
+      "kisiSayisi": 2062,
+      "fonToplamDeger": 726591363.12,
+      "gunlukGetiri": -0.00037388,
+      "paraGirisiCikisi": -704178.74,
       "yatirimciDegisimi": -5
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

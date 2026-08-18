@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ONF",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 47700984,
     "kisiSayisi": 827,
     "fonToplamDeger": 3157776016.1,
-    "gunlukGetiri": 0.0083728,
+    "gunlukGetiri": 0.00470874,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -6643042.49,
-      "besGun": 6268831.13,
+      "gunluk": -2172994.94,
+      "besGun": -2374881.6,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
-      "besGun": 11,
+      "gunluk": 0,
+      "besGun": 8,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 47700984,
         "kisiSayisi": 827,
         "fonToplamDeger": 3157776016.1,
-        "gunlukGetiri": 0.0083728,
-        "paraGirisiCikisi": -6643042.49,
+        "gunlukGetiri": 0.00470874,
+        "paraGirisiCikisi": -2172994.94,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "ONF",
+        "fonAdi": "AK PORTFÖY ONALTINCI SERBEST (DÖVİZ-POUND) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 65.889134,
+        "tedavuldekiPaySayisi": 47733809,
+        "kisiSayisi": 827,
+        "fonToplamDeger": 3145139334.9,
+        "gunlukGetiri": 0.00364689,
+        "paraGirisiCikisi": -4449097.88,
         "yatirimciDegisimi": 2
       },
       {
@@ -188,14 +200,26 @@
     {
       "fonKodu": "ONF",
       "fonAdi": "AK PORTFÖY ONALTINCI SERBEST (DÖVİZ-POUND) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 65.889134,
+      "tedavuldekiPaySayisi": 47733809,
+      "kisiSayisi": 827,
+      "fonToplamDeger": 3145139334.9,
+      "gunlukGetiri": 0.00364689,
+      "paraGirisiCikisi": -4449097.88,
+      "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "ONF",
+      "fonAdi": "AK PORTFÖY ONALTINCI SERBEST (DÖVİZ-POUND) FON",
       "tarih": "2026-08-18",
       "fiyat": 66.199389,
       "tedavuldekiPaySayisi": 47700984,
       "kisiSayisi": 827,
       "fonToplamDeger": 3157776016.1,
-      "gunlukGetiri": 0.0083728,
-      "paraGirisiCikisi": -6643042.49,
-      "yatirimciDegisimi": 2
+      "gunlukGetiri": 0.00470874,
+      "paraGirisiCikisi": -2172994.94,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 47700984,
       "kisiSayisi": 827,
       "fonToplamDeger": 3157776016.1,
-      "gunlukGetiri": 0.0083728,
-      "paraGirisiCikisi": -6643042.49,
+      "gunlukGetiri": 0.00470874,
+      "paraGirisiCikisi": -2172994.94,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "ONF",
+      "fonAdi": "AK PORTFÖY ONALTINCI SERBEST (DÖVİZ-POUND) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 65.889134,
+      "tedavuldekiPaySayisi": 47733809,
+      "kisiSayisi": 827,
+      "fonToplamDeger": 3145139334.9,
+      "gunlukGetiri": 0.00364689,
+      "paraGirisiCikisi": -4449097.88,
       "yatirimciDegisimi": 2
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

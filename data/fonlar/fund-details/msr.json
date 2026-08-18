@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "MSR",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 15228050,
     "kisiSayisi": 14,
     "fonToplamDeger": 30177318.61,
-    "gunlukGetiri": 0.00019331,
+    "gunlukGetiri": 0.00031246,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 15228050,
         "kisiSayisi": 14,
         "fonToplamDeger": 30177318.61,
-        "gunlukGetiri": 0.00019331,
+        "gunlukGetiri": 0.00031246,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "MSR",
+        "fonAdi": "MEKSA PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 1.981074,
+        "tedavuldekiPaySayisi": 15228050,
+        "kisiSayisi": 14,
+        "fonToplamDeger": 30167898.42,
+        "gunlukGetiri": -0.00011911,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "MSR",
       "fonAdi": "MEKSA PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.981074,
+      "tedavuldekiPaySayisi": 15228050,
+      "kisiSayisi": 14,
+      "fonToplamDeger": 30167898.42,
+      "gunlukGetiri": -0.00011911,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "MSR",
+      "fonAdi": "MEKSA PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 1.981693,
       "tedavuldekiPaySayisi": 15228050,
       "kisiSayisi": 14,
       "fonToplamDeger": 30177318.61,
-      "gunlukGetiri": 0.00019331,
+      "gunlukGetiri": 0.00031246,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 15228050,
       "kisiSayisi": 14,
       "fonToplamDeger": 30177318.61,
-      "gunlukGetiri": 0.00019331,
+      "gunlukGetiri": 0.00031246,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "MSR",
+      "fonAdi": "MEKSA PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.981074,
+      "tedavuldekiPaySayisi": 15228050,
+      "kisiSayisi": 14,
+      "fonToplamDeger": 30167898.42,
+      "gunlukGetiri": -0.00011911,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

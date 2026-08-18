@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DTM",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 42885034,
     "kisiSayisi": 2726,
     "fonToplamDeger": 61243639.53,
-    "gunlukGetiri": -0.00027862,
+    "gunlukGetiri": -0.00243787,
     "getiriler": {
       "birAy": 0.006404999999999999,
       "ucAy": 0.027753,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 112502,
-      "besGun": 78349.32,
+      "gunluk": -19880.43,
+      "besGun": 27336.03,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 10,
-      "besGun": 41,
+      "gunluk": 3,
+      "besGun": 31,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 42885034,
         "kisiSayisi": 2726,
         "fonToplamDeger": 61243639.53,
-        "gunlukGetiri": -0.00027862,
-        "paraGirisiCikisi": 112502,
-        "yatirimciDegisimi": 10
+        "gunlukGetiri": -0.00243787,
+        "paraGirisiCikisi": -19880.43,
+        "yatirimciDegisimi": 3
+      },
+      {
+        "fonKodu": "DTM",
+        "fonAdi": "DENİZ PORTFÖY TEMETTÜ ÖDEYEN ŞİRKETLER DEĞİŞKEN FON",
+        "tarih": "2026-08-17",
+        "fiyat": 1.431579,
+        "tedavuldekiPaySayisi": 42898955,
+        "kisiSayisi": 2723,
+        "fonToplamDeger": 61413252.32,
+        "gunlukGetiri": 0.00216453,
+        "paraGirisiCikisi": 132705.94,
+        "yatirimciDegisimi": 7
       },
       {
         "fonKodu": "DTM",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "DTM",
       "fonAdi": "DENİZ PORTFÖY TEMETTÜ ÖDEYEN ŞİRKETLER DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.431579,
+      "tedavuldekiPaySayisi": 42898955,
+      "kisiSayisi": 2723,
+      "fonToplamDeger": 61413252.32,
+      "gunlukGetiri": 0.00216453,
+      "paraGirisiCikisi": 132705.94,
+      "yatirimciDegisimi": 7
+    },
+    {
+      "fonKodu": "DTM",
+      "fonAdi": "DENİZ PORTFÖY TEMETTÜ ÖDEYEN ŞİRKETLER DEĞİŞKEN FON",
       "tarih": "2026-08-18",
       "fiyat": 1.428089,
       "tedavuldekiPaySayisi": 42885034,
       "kisiSayisi": 2726,
       "fonToplamDeger": 61243639.53,
-      "gunlukGetiri": -0.00027862,
-      "paraGirisiCikisi": 112502,
-      "yatirimciDegisimi": 10
+      "gunlukGetiri": -0.00243787,
+      "paraGirisiCikisi": -19880.43,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 42885034,
       "kisiSayisi": 2726,
       "fonToplamDeger": 61243639.53,
-      "gunlukGetiri": -0.00027862,
-      "paraGirisiCikisi": 112502,
-      "yatirimciDegisimi": 10
+      "gunlukGetiri": -0.00243787,
+      "paraGirisiCikisi": -19880.43,
+      "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "DTM",
+      "fonAdi": "DENİZ PORTFÖY TEMETTÜ ÖDEYEN ŞİRKETLER DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.431579,
+      "tedavuldekiPaySayisi": 42898955,
+      "kisiSayisi": 2723,
+      "fonToplamDeger": 61413252.32,
+      "gunlukGetiri": 0.00216453,
+      "paraGirisiCikisi": 132705.94,
+      "yatirimciDegisimi": 7
     },
     {
       "fonKodu": "DTM",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

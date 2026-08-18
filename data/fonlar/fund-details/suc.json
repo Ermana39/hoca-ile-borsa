@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "SUC",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 25914949,
     "kisiSayisi": 524,
     "fonToplamDeger": 598574288.97,
-    "gunlukGetiri": 0.00092615,
+    "gunlukGetiri": 0.00273767,
     "getiriler": {
       "birAy": 0.07525699999999999,
       "ucAy": 0.08205,
@@ -29,22 +29,22 @@
       "besYil": 7.3538049999999995
     },
     "paraAkisi": {
-      "gunluk": -1520379.38,
-      "besGun": -19099817.18,
+      "gunluk": -1495133.66,
+      "besGun": 728491.77,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 1,
-      "besGun": 6,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 25914949,
         "kisiSayisi": 524,
         "fonToplamDeger": 598574288.97,
-        "gunlukGetiri": 0.00092615,
-        "paraGirisiCikisi": -1520379.38,
+        "gunlukGetiri": 0.00273767,
+        "paraGirisiCikisi": -1495133.66,
         "yatirimciDegisimi": 1
+      },
+      {
+        "fonKodu": "SUC",
+        "fonAdi": "ÜNLÜ PORTFÖY ÜÇÜNCÜ DEĞIŞKEN FON",
+        "tarih": "2026-08-17",
+        "fiyat": 23.034584,
+        "tedavuldekiPaySayisi": 25979680,
+        "kisiSayisi": 523,
+        "fonToplamDeger": 598431113.38,
+        "gunlukGetiri": -0.00180657,
+        "paraGirisiCikisi": -25176.8,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "SUC",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "SUC",
       "fonAdi": "ÜNLÜ PORTFÖY ÜÇÜNCÜ DEĞIŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 23.034584,
+      "tedavuldekiPaySayisi": 25979680,
+      "kisiSayisi": 523,
+      "fonToplamDeger": 598431113.38,
+      "gunlukGetiri": -0.00180657,
+      "paraGirisiCikisi": -25176.8,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "SUC",
+      "fonAdi": "ÜNLÜ PORTFÖY ÜÇÜNCÜ DEĞIŞKEN FON",
       "tarih": "2026-08-18",
       "fiyat": 23.097645,
       "tedavuldekiPaySayisi": 25914949,
       "kisiSayisi": 524,
       "fonToplamDeger": 598574288.97,
-      "gunlukGetiri": 0.00092615,
-      "paraGirisiCikisi": -1520379.38,
+      "gunlukGetiri": 0.00273767,
+      "paraGirisiCikisi": -1495133.66,
       "yatirimciDegisimi": 1
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 25914949,
       "kisiSayisi": 524,
       "fonToplamDeger": 598574288.97,
-      "gunlukGetiri": 0.00092615,
-      "paraGirisiCikisi": -1520379.38,
+      "gunlukGetiri": 0.00273767,
+      "paraGirisiCikisi": -1495133.66,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "SUC",
+      "fonAdi": "ÜNLÜ PORTFÖY ÜÇÜNCÜ DEĞIŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 23.034584,
+      "tedavuldekiPaySayisi": 25979680,
+      "kisiSayisi": 523,
+      "fonToplamDeger": 598431113.38,
+      "gunlukGetiri": -0.00180657,
+      "paraGirisiCikisi": -25176.8,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "SUC",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

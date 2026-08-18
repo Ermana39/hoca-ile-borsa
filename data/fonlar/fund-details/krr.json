@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KRR",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 20037511,
     "kisiSayisi": 589,
     "fonToplamDeger": 22832811.16,
-    "gunlukGetiri": 0.00030461,
+    "gunlukGetiri": 0.00008601,
     "getiriler": {
       "birAy": 0.021165,
       "ucAy": 0.017961,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 84563.66,
-      "besGun": -459093.59,
+      "gunluk": -23403.11,
+      "besGun": -445276.93,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
-      "besGun": -3,
+      "gunluk": 4,
+      "besGun": 2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 20037511,
         "kisiSayisi": 589,
         "fonToplamDeger": 22832811.16,
-        "gunlukGetiri": 0.00030461,
-        "paraGirisiCikisi": 84563.66,
-        "yatirimciDegisimi": 3
+        "gunlukGetiri": 0.00008601,
+        "paraGirisiCikisi": -23403.11,
+        "yatirimciDegisimi": 4
+      },
+      {
+        "fonKodu": "KRR",
+        "fonAdi": "İŞ PORTFÖY KARMA FON",
+        "tarih": "2026-08-17",
+        "fiyat": 1.139405,
+        "tedavuldekiPaySayisi": 20058049,
+        "kisiSayisi": 585,
+        "fonToplamDeger": 22854233.1,
+        "gunlukGetiri": 0.00021858,
+        "paraGirisiCikisi": 107957.48,
+        "yatirimciDegisimi": -1
       },
       {
         "fonKodu": "KRR",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "KRR",
       "fonAdi": "İŞ PORTFÖY KARMA FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.139405,
+      "tedavuldekiPaySayisi": 20058049,
+      "kisiSayisi": 585,
+      "fonToplamDeger": 22854233.1,
+      "gunlukGetiri": 0.00021858,
+      "paraGirisiCikisi": 107957.48,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "KRR",
+      "fonAdi": "İŞ PORTFÖY KARMA FON",
       "tarih": "2026-08-18",
       "fiyat": 1.139503,
       "tedavuldekiPaySayisi": 20037511,
       "kisiSayisi": 589,
       "fonToplamDeger": 22832811.16,
-      "gunlukGetiri": 0.00030461,
-      "paraGirisiCikisi": 84563.66,
-      "yatirimciDegisimi": 3
+      "gunlukGetiri": 0.00008601,
+      "paraGirisiCikisi": -23403.11,
+      "yatirimciDegisimi": 4
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 20037511,
       "kisiSayisi": 589,
       "fonToplamDeger": 22832811.16,
-      "gunlukGetiri": 0.00030461,
-      "paraGirisiCikisi": 84563.66,
-      "yatirimciDegisimi": 3
+      "gunlukGetiri": 0.00008601,
+      "paraGirisiCikisi": -23403.11,
+      "yatirimciDegisimi": 4
+    },
+    {
+      "fonKodu": "KRR",
+      "fonAdi": "İŞ PORTFÖY KARMA FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.139405,
+      "tedavuldekiPaySayisi": 20058049,
+      "kisiSayisi": 585,
+      "fonToplamDeger": 22854233.1,
+      "gunlukGetiri": 0.00021858,
+      "paraGirisiCikisi": 107957.48,
+      "yatirimciDegisimi": -1
     },
     {
       "fonKodu": "KRR",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "FSH",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 78654613,
     "kisiSayisi": 549,
     "fonToplamDeger": 385606018.88,
-    "gunlukGetiri": 0.00851406,
+    "gunlukGetiri": 0.00080023,
     "getiriler": {
       "birAy": 0.074851,
       "ucAy": 0.082249,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1982501.86,
-      "besGun": -1857412.16,
+      "gunluk": 1432134.82,
+      "besGun": -1298212.55,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 78654613,
         "kisiSayisi": 549,
         "fonToplamDeger": 385606018.88,
-        "gunlukGetiri": 0.00851406,
-        "paraGirisiCikisi": 1982501.86,
+        "gunlukGetiri": 0.00080023,
+        "paraGirisiCikisi": 1432134.82,
         "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "FSH",
+        "fonAdi": "FİBA PORTFÖY FON SEPETİ SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 4.898603,
+        "tedavuldekiPaySayisi": 78362491,
+        "kisiSayisi": 550,
+        "fonToplamDeger": 383866715.93,
+        "gunlukGetiri": 0.00770766,
+        "paraGirisiCikisi": 549926.97,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "FSH",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "FSH",
       "fonAdi": "FİBA PORTFÖY FON SEPETİ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 4.898603,
+      "tedavuldekiPaySayisi": 78362491,
+      "kisiSayisi": 550,
+      "fonToplamDeger": 383866715.93,
+      "gunlukGetiri": 0.00770766,
+      "paraGirisiCikisi": 549926.97,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "FSH",
+      "fonAdi": "FİBA PORTFÖY FON SEPETİ SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 4.902523,
       "tedavuldekiPaySayisi": 78654613,
       "kisiSayisi": 549,
       "fonToplamDeger": 385606018.88,
-      "gunlukGetiri": 0.00851406,
-      "paraGirisiCikisi": 1982501.86,
+      "gunlukGetiri": 0.00080023,
+      "paraGirisiCikisi": 1432134.82,
       "yatirimciDegisimi": -1
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 78654613,
       "kisiSayisi": 549,
       "fonToplamDeger": 385606018.88,
-      "gunlukGetiri": 0.00851406,
-      "paraGirisiCikisi": 1982501.86,
+      "gunlukGetiri": 0.00080023,
+      "paraGirisiCikisi": 1432134.82,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "FSH",
+      "fonAdi": "FİBA PORTFÖY FON SEPETİ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 4.898603,
+      "tedavuldekiPaySayisi": 78362491,
+      "kisiSayisi": 550,
+      "fonToplamDeger": 383866715.93,
+      "gunlukGetiri": 0.00770766,
+      "paraGirisiCikisi": 549926.97,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "FSH",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

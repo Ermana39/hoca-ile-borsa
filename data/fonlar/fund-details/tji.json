@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TJI",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 92285808,
     "kisiSayisi": 908,
     "fonToplamDeger": 594420176.22,
-    "gunlukGetiri": 0.00700517,
+    "gunlukGetiri": null,
     "getiriler": {
       "birAy": 0.049153,
       "ucAy": 0.034112,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1008924.17,
-      "besGun": 270421.05,
+      "gunluk": null,
+      "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": -15,
+      "gunluk": 2,
+      "besGun": -12,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 92285808,
         "kisiSayisi": 908,
         "fonToplamDeger": 594420176.22,
-        "gunlukGetiri": 0.00700517,
-        "paraGirisiCikisi": 1008924.17,
-        "yatirimciDegisimi": 1
+        "gunlukGetiri": null,
+        "paraGirisiCikisi": null,
+        "yatirimciDegisimi": 2
+      },
+      {
+        "fonKodu": "TJI",
+        "fonAdi": "TEB PORTFÖY İKİNCİ FON SEPETİ FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 0,
+        "tedavuldekiPaySayisi": 0,
+        "kisiSayisi": 906,
+        "fonToplamDeger": 0,
+        "gunlukGetiri": null,
+        "paraGirisiCikisi": null,
+        "yatirimciDegisimi": -1
       },
       {
         "fonKodu": "TJI",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "TJI",
       "fonAdi": "TEB PORTFÖY İKİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 0,
+      "tedavuldekiPaySayisi": 0,
+      "kisiSayisi": 906,
+      "fonToplamDeger": 0,
+      "gunlukGetiri": null,
+      "paraGirisiCikisi": null,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "TJI",
+      "fonAdi": "TEB PORTFÖY İKİNCİ FON SEPETİ FONU",
       "tarih": "2026-08-18",
       "fiyat": 6.441079,
       "tedavuldekiPaySayisi": 92285808,
       "kisiSayisi": 908,
       "fonToplamDeger": 594420176.22,
-      "gunlukGetiri": 0.00700517,
-      "paraGirisiCikisi": 1008924.17,
-      "yatirimciDegisimi": 1
+      "gunlukGetiri": null,
+      "paraGirisiCikisi": null,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 92285808,
       "kisiSayisi": 908,
       "fonToplamDeger": 594420176.22,
-      "gunlukGetiri": 0.00700517,
-      "paraGirisiCikisi": 1008924.17,
-      "yatirimciDegisimi": 1
+      "gunlukGetiri": null,
+      "paraGirisiCikisi": null,
+      "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "TJI",
+      "fonAdi": "TEB PORTFÖY İKİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 0,
+      "tedavuldekiPaySayisi": 0,
+      "kisiSayisi": 906,
+      "fonToplamDeger": 0,
+      "gunlukGetiri": null,
+      "paraGirisiCikisi": null,
+      "yatirimciDegisimi": -1
     },
     {
       "fonKodu": "TJI",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

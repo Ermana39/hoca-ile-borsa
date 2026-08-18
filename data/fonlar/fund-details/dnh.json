@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DNH",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 15803534,
     "kisiSayisi": 65,
     "fonToplamDeger": 17799565.54,
-    "gunlukGetiri": 0.00080149,
+    "gunlukGetiri": -0.00439064,
     "getiriler": {
       "birAy": -0.021762,
       "ucAy": -0.043132000000000004,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -9803.34,
-      "besGun": -494977.41,
+      "gunluk": -10053.38,
+      "besGun": -494976.31,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": 0,
       "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 15803534,
         "kisiSayisi": 65,
         "fonToplamDeger": 17799565.54,
-        "gunlukGetiri": 0.00080149,
-        "paraGirisiCikisi": -9803.34,
+        "gunlukGetiri": -0.00439064,
+        "paraGirisiCikisi": -10053.38,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "DNH",
+        "fonAdi": "DENİZ PORTFÖY İNŞAAT SEKTÖRÜ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-17",
+        "fiyat": 1.13127,
+        "tedavuldekiPaySayisi": 15812460,
+        "kisiSayisi": 65,
+        "fonToplamDeger": 17888154.98,
+        "gunlukGetiri": 0.00521503,
+        "paraGirisiCikisi": 251.14,
         "yatirimciDegisimi": 1
       },
       {
@@ -188,14 +200,26 @@
     {
       "fonKodu": "DNH",
       "fonAdi": "DENİZ PORTFÖY İNŞAAT SEKTÖRÜ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 1.13127,
+      "tedavuldekiPaySayisi": 15812460,
+      "kisiSayisi": 65,
+      "fonToplamDeger": 17888154.98,
+      "gunlukGetiri": 0.00521503,
+      "paraGirisiCikisi": 251.14,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "DNH",
+      "fonAdi": "DENİZ PORTFÖY İNŞAAT SEKTÖRÜ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
       "tarih": "2026-08-18",
       "fiyat": 1.126303,
       "tedavuldekiPaySayisi": 15803534,
       "kisiSayisi": 65,
       "fonToplamDeger": 17799565.54,
-      "gunlukGetiri": 0.00080149,
-      "paraGirisiCikisi": -9803.34,
-      "yatirimciDegisimi": 1
+      "gunlukGetiri": -0.00439064,
+      "paraGirisiCikisi": -10053.38,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 15803534,
       "kisiSayisi": 65,
       "fonToplamDeger": 17799565.54,
-      "gunlukGetiri": 0.00080149,
-      "paraGirisiCikisi": -9803.34,
+      "gunlukGetiri": -0.00439064,
+      "paraGirisiCikisi": -10053.38,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DNH",
+      "fonAdi": "DENİZ PORTFÖY İNŞAAT SEKTÖRÜ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 1.13127,
+      "tedavuldekiPaySayisi": 15812460,
+      "kisiSayisi": 65,
+      "fonToplamDeger": 17888154.98,
+      "gunlukGetiri": 0.00521503,
+      "paraGirisiCikisi": 251.14,
       "yatirimciDegisimi": 1
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IAE",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 130777029,
     "kisiSayisi": 452,
     "fonToplamDeger": 279023410.57,
-    "gunlukGetiri": 0.00584959,
+    "gunlukGetiri": 0.00177105,
     "getiriler": {
       "birAy": 0.040838,
       "ucAy": 0.074532,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 582467.61,
-      "besGun": 20042503.77,
+      "gunluk": 59740.27,
+      "besGun": 20052101.63,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 130777029,
         "kisiSayisi": 452,
         "fonToplamDeger": 279023410.57,
-        "gunlukGetiri": 0.00584959,
-        "paraGirisiCikisi": 582467.61,
+        "gunlukGetiri": 0.00177105,
+        "paraGirisiCikisi": 59740.27,
         "yatirimciDegisimi": 1
+      },
+      {
+        "fonKodu": "IAE",
+        "fonAdi": "İSTANBUL PORTFÖY AGRESİF DEĞİŞKEN FON",
+        "tarih": "2026-08-17",
+        "fiyat": 2.129809,
+        "tedavuldekiPaySayisi": 130749029,
+        "kisiSayisi": 451,
+        "fonToplamDeger": 278470414.74,
+        "gunlukGetiri": 0.00407133,
+        "paraGirisiCikisi": 521803.2,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "IAE",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "IAE",
       "fonAdi": "İSTANBUL PORTFÖY AGRESİF DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 2.129809,
+      "tedavuldekiPaySayisi": 130749029,
+      "kisiSayisi": 451,
+      "fonToplamDeger": 278470414.74,
+      "gunlukGetiri": 0.00407133,
+      "paraGirisiCikisi": 521803.2,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "IAE",
+      "fonAdi": "İSTANBUL PORTFÖY AGRESİF DEĞİŞKEN FON",
       "tarih": "2026-08-18",
       "fiyat": 2.133581,
       "tedavuldekiPaySayisi": 130777029,
       "kisiSayisi": 452,
       "fonToplamDeger": 279023410.57,
-      "gunlukGetiri": 0.00584959,
-      "paraGirisiCikisi": 582467.61,
+      "gunlukGetiri": 0.00177105,
+      "paraGirisiCikisi": 59740.27,
       "yatirimciDegisimi": 1
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 130777029,
       "kisiSayisi": 452,
       "fonToplamDeger": 279023410.57,
-      "gunlukGetiri": 0.00584959,
-      "paraGirisiCikisi": 582467.61,
+      "gunlukGetiri": 0.00177105,
+      "paraGirisiCikisi": 59740.27,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "IAE",
+      "fonAdi": "İSTANBUL PORTFÖY AGRESİF DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 2.129809,
+      "tedavuldekiPaySayisi": 130749029,
+      "kisiSayisi": 451,
+      "fonToplamDeger": 278470414.74,
+      "gunlukGetiri": 0.00407133,
+      "paraGirisiCikisi": 521803.2,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "IAE",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

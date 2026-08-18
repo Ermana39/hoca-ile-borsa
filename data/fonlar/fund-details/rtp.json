@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "RTP",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 24915024,
     "kisiSayisi": 1426,
     "fonToplamDeger": 298499354.49,
-    "gunlukGetiri": 0.01632817,
+    "gunlukGetiri": 0.00618896,
     "getiriler": {
       "birAy": -0.092564,
       "ucAy": -0.050092,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -8355386.01,
-      "besGun": -2272219.2,
+      "gunluk": 16337333.7,
+      "besGun": -9589306.25,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -18,
-      "besGun": -88,
+      "gunluk": -6,
+      "besGun": -70,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 24915024,
         "kisiSayisi": 1426,
         "fonToplamDeger": 298499354.49,
-        "gunlukGetiri": 0.01632817,
-        "paraGirisiCikisi": -8355386.01,
-        "yatirimciDegisimi": -18
+        "gunlukGetiri": 0.00618896,
+        "paraGirisiCikisi": 16337333.7,
+        "yatirimciDegisimi": -6
+      },
+      {
+        "fonKodu": "RTP",
+        "fonAdi": "RE-PIE PORTFÖY BİRİNCİ SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 11.907005,
+        "tedavuldekiPaySayisi": 23551386,
+        "kisiSayisi": 1432,
+        "fonToplamDeger": 280426477.46,
+        "gunlukGetiri": 0.01007684,
+        "paraGirisiCikisi": -24540837.4,
+        "yatirimciDegisimi": -12
       },
       {
         "fonKodu": "RTP",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "RTP",
       "fonAdi": "RE-PIE PORTFÖY BİRİNCİ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 11.907005,
+      "tedavuldekiPaySayisi": 23551386,
+      "kisiSayisi": 1432,
+      "fonToplamDeger": 280426477.46,
+      "gunlukGetiri": 0.01007684,
+      "paraGirisiCikisi": -24540837.4,
+      "yatirimciDegisimi": -12
+    },
+    {
+      "fonKodu": "RTP",
+      "fonAdi": "RE-PIE PORTFÖY BİRİNCİ SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 11.980697,
       "tedavuldekiPaySayisi": 24915024,
       "kisiSayisi": 1426,
       "fonToplamDeger": 298499354.49,
-      "gunlukGetiri": 0.01632817,
-      "paraGirisiCikisi": -8355386.01,
-      "yatirimciDegisimi": -18
+      "gunlukGetiri": 0.00618896,
+      "paraGirisiCikisi": 16337333.7,
+      "yatirimciDegisimi": -6
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 24915024,
       "kisiSayisi": 1426,
       "fonToplamDeger": 298499354.49,
-      "gunlukGetiri": 0.01632817,
-      "paraGirisiCikisi": -8355386.01,
-      "yatirimciDegisimi": -18
+      "gunlukGetiri": 0.00618896,
+      "paraGirisiCikisi": 16337333.7,
+      "yatirimciDegisimi": -6
+    },
+    {
+      "fonKodu": "RTP",
+      "fonAdi": "RE-PIE PORTFÖY BİRİNCİ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 11.907005,
+      "tedavuldekiPaySayisi": 23551386,
+      "kisiSayisi": 1432,
+      "fonToplamDeger": 280426477.46,
+      "gunlukGetiri": 0.01007684,
+      "paraGirisiCikisi": -24540837.4,
+      "yatirimciDegisimi": -12
     },
     {
       "fonKodu": "RTP",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

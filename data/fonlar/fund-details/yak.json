@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YAK",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 217474248.41,
     "kisiSayisi": 108147,
     "fonToplamDeger": 1115061071.92,
-    "gunlukGetiri": 0.00237783,
+    "gunlukGetiri": -0.00004466,
     "getiriler": {
       "birAy": 0.019834,
       "ucAy": 0.054646,
@@ -29,22 +29,22 @@
       "besYil": 6.326341
     },
     "paraAkisi": {
-      "gunluk": -588093.92,
-      "besGun": -11038871.7,
+      "gunluk": -319242.64,
+      "besGun": -10488631.38,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -35,
-      "besGun": -111,
+      "gunluk": -11,
+      "besGun": -102,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 217474248.41,
         "kisiSayisi": 108147,
         "fonToplamDeger": 1115061071.92,
-        "gunlukGetiri": 0.00237783,
-        "paraGirisiCikisi": -588093.92,
-        "yatirimciDegisimi": -35
+        "gunlukGetiri": -0.00004466,
+        "paraGirisiCikisi": -319242.64,
+        "yatirimciDegisimi": -11
+      },
+      {
+        "fonKodu": "YAK",
+        "fonAdi": "YAPI KREDİ PORTFÖY KARMA FON",
+        "tarih": "2026-08-17",
+        "fiyat": 5.127554,
+        "tedavuldekiPaySayisi": 217536511.41,
+        "kisiSayisi": 108158,
+        "fonToplamDeger": 1115430308.2,
+        "gunlukGetiri": 0.0024226,
+        "paraGirisiCikisi": -268863.29,
+        "yatirimciDegisimi": -24
       },
       {
         "fonKodu": "YAK",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "YAK",
       "fonAdi": "YAPI KREDİ PORTFÖY KARMA FON",
+      "tarih": "2026-08-17",
+      "fiyat": 5.127554,
+      "tedavuldekiPaySayisi": 217536511.41,
+      "kisiSayisi": 108158,
+      "fonToplamDeger": 1115430308.2,
+      "gunlukGetiri": 0.0024226,
+      "paraGirisiCikisi": -268863.29,
+      "yatirimciDegisimi": -24
+    },
+    {
+      "fonKodu": "YAK",
+      "fonAdi": "YAPI KREDİ PORTFÖY KARMA FON",
       "tarih": "2026-08-18",
       "fiyat": 5.127325,
       "tedavuldekiPaySayisi": 217474248.41,
       "kisiSayisi": 108147,
       "fonToplamDeger": 1115061071.92,
-      "gunlukGetiri": 0.00237783,
-      "paraGirisiCikisi": -588093.92,
-      "yatirimciDegisimi": -35
+      "gunlukGetiri": -0.00004466,
+      "paraGirisiCikisi": -319242.64,
+      "yatirimciDegisimi": -11
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 217474248.41,
       "kisiSayisi": 108147,
       "fonToplamDeger": 1115061071.92,
-      "gunlukGetiri": 0.00237783,
-      "paraGirisiCikisi": -588093.92,
-      "yatirimciDegisimi": -35
+      "gunlukGetiri": -0.00004466,
+      "paraGirisiCikisi": -319242.64,
+      "yatirimciDegisimi": -11
+    },
+    {
+      "fonKodu": "YAK",
+      "fonAdi": "YAPI KREDİ PORTFÖY KARMA FON",
+      "tarih": "2026-08-17",
+      "fiyat": 5.127554,
+      "tedavuldekiPaySayisi": 217536511.41,
+      "kisiSayisi": 108158,
+      "fonToplamDeger": 1115430308.2,
+      "gunlukGetiri": 0.0024226,
+      "paraGirisiCikisi": -268863.29,
+      "yatirimciDegisimi": -24
     },
     {
       "fonKodu": "YAK",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

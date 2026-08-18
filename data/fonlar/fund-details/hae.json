@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "HAE",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 51824054,
     "kisiSayisi": 1238,
     "fonToplamDeger": 2900585184.02,
-    "gunlukGetiri": 0.00285299,
+    "gunlukGetiri": 0.00195574,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 286621.67,
-      "besGun": 1334675.26,
+      "gunluk": 0,
+      "besGun": 857917.26,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": 2,
+      "gunluk": 0,
+      "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 51824054,
         "kisiSayisi": 1238,
         "fonToplamDeger": 2900585184.02,
-        "gunlukGetiri": 0.00285299,
-        "paraGirisiCikisi": 286621.67,
+        "gunlukGetiri": 0.00195574,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "HAE",
+        "fonAdi": "HSBC PORTFÖY EKİM 2026 SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 55.860614,
+        "tedavuldekiPaySayisi": 51824054,
+        "kisiSayisi": 1238,
+        "fonToplamDeger": 2894923486.05,
+        "gunlukGetiri": 0.00089549,
+        "paraGirisiCikisi": 286062.2,
         "yatirimciDegisimi": 1
       },
       {
@@ -188,14 +200,26 @@
     {
       "fonKodu": "HAE",
       "fonAdi": "HSBC PORTFÖY EKİM 2026 SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 55.860614,
+      "tedavuldekiPaySayisi": 51824054,
+      "kisiSayisi": 1238,
+      "fonToplamDeger": 2894923486.05,
+      "gunlukGetiri": 0.00089549,
+      "paraGirisiCikisi": 286062.2,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "HAE",
+      "fonAdi": "HSBC PORTFÖY EKİM 2026 SERBEST (DÖVİZ) FON",
       "tarih": "2026-08-18",
       "fiyat": 55.969863,
       "tedavuldekiPaySayisi": 51824054,
       "kisiSayisi": 1238,
       "fonToplamDeger": 2900585184.02,
-      "gunlukGetiri": 0.00285299,
-      "paraGirisiCikisi": 286621.67,
-      "yatirimciDegisimi": 1
+      "gunlukGetiri": 0.00195574,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 51824054,
       "kisiSayisi": 1238,
       "fonToplamDeger": 2900585184.02,
-      "gunlukGetiri": 0.00285299,
-      "paraGirisiCikisi": 286621.67,
+      "gunlukGetiri": 0.00195574,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HAE",
+      "fonAdi": "HSBC PORTFÖY EKİM 2026 SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 55.860614,
+      "tedavuldekiPaySayisi": 51824054,
+      "kisiSayisi": 1238,
+      "fonToplamDeger": 2894923486.05,
+      "gunlukGetiri": 0.00089549,
+      "paraGirisiCikisi": 286062.2,
       "yatirimciDegisimi": 1
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "SKL",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 67517211,
     "kisiSayisi": 744,
     "fonToplamDeger": 136868216.12,
-    "gunlukGetiri": 0.00416246,
+    "gunlukGetiri": 0.00096879,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1180192.28,
-      "besGun": -11942165.24,
+      "gunluk": 2519838.94,
+      "besGun": -3978290.41,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": -4,
+      "gunluk": -3,
+      "besGun": -1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 67517211,
         "kisiSayisi": 744,
         "fonToplamDeger": 136868216.12,
-        "gunlukGetiri": 0.00416246,
-        "paraGirisiCikisi": 1180192.28,
-        "yatirimciDegisimi": -1
+        "gunlukGetiri": 0.00096879,
+        "paraGirisiCikisi": 2519838.94,
+        "yatirimciDegisimi": -3
+      },
+      {
+        "fonKodu": "SKL",
+        "fonAdi": "TEB PORTFÖY ŞEKERBANK PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 2.025198,
+        "tedavuldekiPaySayisi": 66274172,
+        "kisiSayisi": 747,
+        "fonToplamDeger": 134218351.36,
+        "gunlukGetiri": 0.00319058,
+        "paraGirisiCikisi": -1338350.07,
+        "yatirimciDegisimi": 2
       },
       {
         "fonKodu": "SKL",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "SKL",
       "fonAdi": "TEB PORTFÖY ŞEKERBANK PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.025198,
+      "tedavuldekiPaySayisi": 66274172,
+      "kisiSayisi": 747,
+      "fonToplamDeger": 134218351.36,
+      "gunlukGetiri": 0.00319058,
+      "paraGirisiCikisi": -1338350.07,
+      "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "SKL",
+      "fonAdi": "TEB PORTFÖY ŞEKERBANK PARA PİYASASI (TL) FONU",
       "tarih": "2026-08-18",
       "fiyat": 2.02716,
       "tedavuldekiPaySayisi": 67517211,
       "kisiSayisi": 744,
       "fonToplamDeger": 136868216.12,
-      "gunlukGetiri": 0.00416246,
-      "paraGirisiCikisi": 1180192.28,
-      "yatirimciDegisimi": -1
+      "gunlukGetiri": 0.00096879,
+      "paraGirisiCikisi": 2519838.94,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 67517211,
       "kisiSayisi": 744,
       "fonToplamDeger": 136868216.12,
-      "gunlukGetiri": 0.00416246,
-      "paraGirisiCikisi": 1180192.28,
-      "yatirimciDegisimi": -1
+      "gunlukGetiri": 0.00096879,
+      "paraGirisiCikisi": 2519838.94,
+      "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "SKL",
+      "fonAdi": "TEB PORTFÖY ŞEKERBANK PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.025198,
+      "tedavuldekiPaySayisi": 66274172,
+      "kisiSayisi": 747,
+      "fonToplamDeger": 134218351.36,
+      "gunlukGetiri": 0.00319058,
+      "paraGirisiCikisi": -1338350.07,
+      "yatirimciDegisimi": 2
     },
     {
       "fonKodu": "SKL",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

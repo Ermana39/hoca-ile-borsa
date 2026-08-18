@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "FP4",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 168750959,
     "kisiSayisi": 139,
     "fonToplamDeger": 140098828.8,
-    "gunlukGetiri": -0.00366988,
+    "gunlukGetiri": -0.00063438,
     "getiriler": {
       "birAy": -0.267007,
       "ucAy": -0.32171,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -526497.4,
-      "besGun": -1499008.56,
+      "gunluk": -526704.95,
+      "besGun": -471838.4,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
-      "besGun": 0,
+      "gunluk": 0,
+      "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 168750959,
         "kisiSayisi": 139,
         "fonToplamDeger": 140098828.8,
-        "gunlukGetiri": -0.00366988,
-        "paraGirisiCikisi": -526497.4,
+        "gunlukGetiri": -0.00063438,
+        "paraGirisiCikisi": -526704.95,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "FP4",
+        "fonAdi": "ONE PORTFÖY DÖRDÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-17",
+        "fiyat": 0.830738,
+        "tedavuldekiPaySayisi": 169385382,
+        "kisiSayisi": 139,
+        "fonToplamDeger": 140714854.35,
+        "gunlukGetiri": -0.00303743,
+        "paraGirisiCikisi": 207.68,
         "yatirimciDegisimi": -2
       },
       {
@@ -188,14 +200,26 @@
     {
       "fonKodu": "FP4",
       "fonAdi": "ONE PORTFÖY DÖRDÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 0.830738,
+      "tedavuldekiPaySayisi": 169385382,
+      "kisiSayisi": 139,
+      "fonToplamDeger": 140714854.35,
+      "gunlukGetiri": -0.00303743,
+      "paraGirisiCikisi": 207.68,
+      "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "FP4",
+      "fonAdi": "ONE PORTFÖY DÖRDÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
       "tarih": "2026-08-18",
       "fiyat": 0.830211,
       "tedavuldekiPaySayisi": 168750959,
       "kisiSayisi": 139,
       "fonToplamDeger": 140098828.8,
-      "gunlukGetiri": -0.00366988,
-      "paraGirisiCikisi": -526497.4,
-      "yatirimciDegisimi": -2
+      "gunlukGetiri": -0.00063438,
+      "paraGirisiCikisi": -526704.95,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 168750959,
       "kisiSayisi": 139,
       "fonToplamDeger": 140098828.8,
-      "gunlukGetiri": -0.00366988,
-      "paraGirisiCikisi": -526497.4,
+      "gunlukGetiri": -0.00063438,
+      "paraGirisiCikisi": -526704.95,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "FP4",
+      "fonAdi": "ONE PORTFÖY DÖRDÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 0.830738,
+      "tedavuldekiPaySayisi": 169385382,
+      "kisiSayisi": 139,
+      "fonToplamDeger": 140714854.35,
+      "gunlukGetiri": -0.00303743,
+      "paraGirisiCikisi": 207.68,
       "yatirimciDegisimi": -2
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TZT",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 1817751026.04,
     "kisiSayisi": 5788,
     "fonToplamDeger": 305248618.18,
-    "gunlukGetiri": 0.00401181,
+    "gunlukGetiri": 0.00117451,
     "getiriler": {
       "birAy": 0.024582000000000003,
       "ucAy": 0.081746,
@@ -29,8 +29,8 @@
       "besYil": 3.841627
     },
     "paraAkisi": {
-      "gunluk": 1214448.06,
-      "besGun": -506487.22,
+      "gunluk": 935017.54,
+      "besGun": -263171.28,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 1817751026.04,
         "kisiSayisi": 5788,
         "fonToplamDeger": 305248618.18,
-        "gunlukGetiri": 0.00401181,
-        "paraGirisiCikisi": 1214448.06,
+        "gunlukGetiri": 0.00117451,
+        "paraGirisiCikisi": 935017.54,
         "yatirimciDegisimi": 3
+      },
+      {
+        "fonKodu": "TZT",
+        "fonAdi": "ZİRAAT PORTFÖY BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 0.16773,
+        "tedavuldekiPaySayisi": 1812183026.04,
+        "kisiSayisi": 5785,
+        "fonToplamDeger": 303957047.39,
+        "gunlukGetiri": 0.00283398,
+        "paraGirisiCikisi": 279102.72,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "TZT",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "TZT",
       "fonAdi": "ZİRAAT PORTFÖY BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 0.16773,
+      "tedavuldekiPaySayisi": 1812183026.04,
+      "kisiSayisi": 5785,
+      "fonToplamDeger": 303957047.39,
+      "gunlukGetiri": 0.00283398,
+      "paraGirisiCikisi": 279102.72,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TZT",
+      "fonAdi": "ZİRAAT PORTFÖY BORÇLANMA ARAÇLARI (TL) FONU",
       "tarih": "2026-08-18",
       "fiyat": 0.167927,
       "tedavuldekiPaySayisi": 1817751026.04,
       "kisiSayisi": 5788,
       "fonToplamDeger": 305248618.18,
-      "gunlukGetiri": 0.00401181,
-      "paraGirisiCikisi": 1214448.06,
+      "gunlukGetiri": 0.00117451,
+      "paraGirisiCikisi": 935017.54,
       "yatirimciDegisimi": 3
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 1817751026.04,
       "kisiSayisi": 5788,
       "fonToplamDeger": 305248618.18,
-      "gunlukGetiri": 0.00401181,
-      "paraGirisiCikisi": 1214448.06,
+      "gunlukGetiri": 0.00117451,
+      "paraGirisiCikisi": 935017.54,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "TZT",
+      "fonAdi": "ZİRAAT PORTFÖY BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 0.16773,
+      "tedavuldekiPaySayisi": 1812183026.04,
+      "kisiSayisi": 5785,
+      "fonToplamDeger": 303957047.39,
+      "gunlukGetiri": 0.00283398,
+      "paraGirisiCikisi": 279102.72,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "TZT",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

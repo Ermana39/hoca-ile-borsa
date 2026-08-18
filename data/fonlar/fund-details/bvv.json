@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BVV",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 54745402,
     "kisiSayisi": 1079,
     "fonToplamDeger": 198251841.88,
-    "gunlukGetiri": 0.00428911,
+    "gunlukGetiri": 0.00034612,
     "getiriler": {
       "birAy": 0.064609,
       "ucAy": 0.135236,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -249329.4,
-      "besGun": 832390.6,
+      "gunluk": -1792748.98,
+      "besGun": 143421.86,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 38,
-      "besGun": 54,
+      "gunluk": 25,
+      "besGun": 50,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 54745402,
         "kisiSayisi": 1079,
         "fonToplamDeger": 198251841.88,
-        "gunlukGetiri": 0.00428911,
-        "paraGirisiCikisi": -249329.4,
-        "yatirimciDegisimi": 38
+        "gunlukGetiri": 0.00034612,
+        "paraGirisiCikisi": -1792748.98,
+        "yatirimciDegisimi": 25
+      },
+      {
+        "fonKodu": "BVV",
+        "fonAdi": "BV PORTFÖY TEKNOLOJİ DEĞİŞKEN FON",
+        "tarih": "2026-08-17",
+        "fiyat": 3.620089,
+        "tedavuldekiPaySayisi": 55240453,
+        "kisiSayisi": 1054,
+        "fonToplamDeger": 199975381.85,
+        "gunlukGetiri": 0.00394162,
+        "paraGirisiCikisi": 1542885.55,
+        "yatirimciDegisimi": 13
       },
       {
         "fonKodu": "BVV",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "BVV",
       "fonAdi": "BV PORTFÖY TEKNOLOJİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 3.620089,
+      "tedavuldekiPaySayisi": 55240453,
+      "kisiSayisi": 1054,
+      "fonToplamDeger": 199975381.85,
+      "gunlukGetiri": 0.00394162,
+      "paraGirisiCikisi": 1542885.55,
+      "yatirimciDegisimi": 13
+    },
+    {
+      "fonKodu": "BVV",
+      "fonAdi": "BV PORTFÖY TEKNOLOJİ DEĞİŞKEN FON",
       "tarih": "2026-08-18",
       "fiyat": 3.621342,
       "tedavuldekiPaySayisi": 54745402,
       "kisiSayisi": 1079,
       "fonToplamDeger": 198251841.88,
-      "gunlukGetiri": 0.00428911,
-      "paraGirisiCikisi": -249329.4,
-      "yatirimciDegisimi": 38
+      "gunlukGetiri": 0.00034612,
+      "paraGirisiCikisi": -1792748.98,
+      "yatirimciDegisimi": 25
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 54745402,
       "kisiSayisi": 1079,
       "fonToplamDeger": 198251841.88,
-      "gunlukGetiri": 0.00428911,
-      "paraGirisiCikisi": -249329.4,
-      "yatirimciDegisimi": 38
+      "gunlukGetiri": 0.00034612,
+      "paraGirisiCikisi": -1792748.98,
+      "yatirimciDegisimi": 25
+    },
+    {
+      "fonKodu": "BVV",
+      "fonAdi": "BV PORTFÖY TEKNOLOJİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 3.620089,
+      "tedavuldekiPaySayisi": 55240453,
+      "kisiSayisi": 1054,
+      "fonToplamDeger": 199975381.85,
+      "gunlukGetiri": 0.00394162,
+      "paraGirisiCikisi": 1542885.55,
+      "yatirimciDegisimi": 13
     },
     {
       "fonKodu": "BVV",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

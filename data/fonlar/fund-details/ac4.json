@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "AC4",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 483698227,
     "kisiSayisi": 4045,
     "fonToplamDeger": 1930899219.24,
-    "gunlukGetiri": 0.0044706,
+    "gunlukGetiri": 0.00101683,
     "getiriler": {
       "birAy": 0.033963,
       "ucAy": 0.110115,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -413857332.55,
-      "besGun": -380675953.3,
+      "gunluk": -314347783.36,
+      "besGun": -434817333.22,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 8,
-      "besGun": 49,
+      "gunluk": 19,
+      "besGun": 37,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 483698227,
         "kisiSayisi": 4045,
         "fonToplamDeger": 1930899219.24,
-        "gunlukGetiri": 0.0044706,
-        "paraGirisiCikisi": -413857332.55,
-        "yatirimciDegisimi": 8
+        "gunlukGetiri": 0.00101683,
+        "paraGirisiCikisi": -314347783.36,
+        "yatirimciDegisimi": 19
+      },
+      {
+        "fonKodu": "AC4",
+        "fonAdi": "PARDUS PORTFÖY PARA PİYASASI (TL) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 3.987895,
+        "tedavuldekiPaySayisi": 562443648,
+        "kisiSayisi": 4026,
+        "fonToplamDeger": 2242966291.34,
+        "gunlukGetiri": 0.00345027,
+        "paraGirisiCikisi": -99408467.96,
+        "yatirimciDegisimi": -11
       },
       {
         "fonKodu": "AC4",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "AC4",
       "fonAdi": "PARDUS PORTFÖY PARA PİYASASI (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 3.987895,
+      "tedavuldekiPaySayisi": 562443648,
+      "kisiSayisi": 4026,
+      "fonToplamDeger": 2242966291.34,
+      "gunlukGetiri": 0.00345027,
+      "paraGirisiCikisi": -99408467.96,
+      "yatirimciDegisimi": -11
+    },
+    {
+      "fonKodu": "AC4",
+      "fonAdi": "PARDUS PORTFÖY PARA PİYASASI (TL) FON",
       "tarih": "2026-08-18",
       "fiyat": 3.99195,
       "tedavuldekiPaySayisi": 483698227,
       "kisiSayisi": 4045,
       "fonToplamDeger": 1930899219.24,
-      "gunlukGetiri": 0.0044706,
-      "paraGirisiCikisi": -413857332.55,
-      "yatirimciDegisimi": 8
+      "gunlukGetiri": 0.00101683,
+      "paraGirisiCikisi": -314347783.36,
+      "yatirimciDegisimi": 19
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 483698227,
       "kisiSayisi": 4045,
       "fonToplamDeger": 1930899219.24,
-      "gunlukGetiri": 0.0044706,
-      "paraGirisiCikisi": -413857332.55,
-      "yatirimciDegisimi": 8
+      "gunlukGetiri": 0.00101683,
+      "paraGirisiCikisi": -314347783.36,
+      "yatirimciDegisimi": 19
+    },
+    {
+      "fonKodu": "AC4",
+      "fonAdi": "PARDUS PORTFÖY PARA PİYASASI (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 3.987895,
+      "tedavuldekiPaySayisi": 562443648,
+      "kisiSayisi": 4026,
+      "fonToplamDeger": 2242966291.34,
+      "gunlukGetiri": 0.00345027,
+      "paraGirisiCikisi": -99408467.96,
+      "yatirimciDegisimi": -11
     },
     {
       "fonKodu": "AC4",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KSL",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 4468312,
     "kisiSayisi": 118,
     "fonToplamDeger": 251776599.88,
-    "gunlukGetiri": 0.00860561,
+    "gunlukGetiri": 0.00556716,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 4468312,
         "kisiSayisi": 118,
         "fonToplamDeger": 251776599.88,
-        "gunlukGetiri": 0.00860561,
+        "gunlukGetiri": 0.00556716,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "KSL",
+        "fonAdi": "ALBARAKA PORTFÖY İKİNCİ KATILIM SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 56.035183,
+        "tedavuldekiPaySayisi": 4468312,
+        "kisiSayisi": 118,
+        "fonToplamDeger": 250382679.62,
+        "gunlukGetiri": 0.00302162,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "KSL",
       "fonAdi": "ALBARAKA PORTFÖY İKİNCİ KATILIM SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 56.035183,
+      "tedavuldekiPaySayisi": 4468312,
+      "kisiSayisi": 118,
+      "fonToplamDeger": 250382679.62,
+      "gunlukGetiri": 0.00302162,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KSL",
+      "fonAdi": "ALBARAKA PORTFÖY İKİNCİ KATILIM SERBEST (DÖVİZ-AVRO) FON",
       "tarih": "2026-08-18",
       "fiyat": 56.34714,
       "tedavuldekiPaySayisi": 4468312,
       "kisiSayisi": 118,
       "fonToplamDeger": 251776599.88,
-      "gunlukGetiri": 0.00860561,
+      "gunlukGetiri": 0.00556716,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 4468312,
       "kisiSayisi": 118,
       "fonToplamDeger": 251776599.88,
-      "gunlukGetiri": 0.00860561,
+      "gunlukGetiri": 0.00556716,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KSL",
+      "fonAdi": "ALBARAKA PORTFÖY İKİNCİ KATILIM SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 56.035183,
+      "tedavuldekiPaySayisi": 4468312,
+      "kisiSayisi": 118,
+      "fonToplamDeger": 250382679.62,
+      "gunlukGetiri": 0.00302162,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

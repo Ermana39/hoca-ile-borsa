@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IPP",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 40206496514,
     "kisiSayisi": 165,
     "fonToplamDeger": 7273777631.11,
-    "gunlukGetiri": 0.00443055,
+    "gunlukGetiri": 0.00360588,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -20244061.02,
-      "besGun": -55791144.82,
+      "gunluk": -32563.98,
+      "besGun": -55718526.39,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 40206496514,
         "kisiSayisi": 165,
         "fonToplamDeger": 7273777631.11,
-        "gunlukGetiri": 0.00443055,
-        "paraGirisiCikisi": -20244061.02,
+        "gunlukGetiri": 0.00360588,
+        "paraGirisiCikisi": -32563.98,
         "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "IPP",
+        "fonAdi": "PERFORM PORTFÖY BIRINCI SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 0.180261,
+        "tedavuldekiPaySayisi": 40206676514,
+        "kisiSayisi": 166,
+        "fonToplamDeger": 7247684266.53,
+        "gunlukGetiri": 0.00082171,
+        "paraGirisiCikisi": -20138878.61,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "IPP",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "IPP",
       "fonAdi": "PERFORM PORTFÖY BIRINCI SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 0.180261,
+      "tedavuldekiPaySayisi": 40206676514,
+      "kisiSayisi": 166,
+      "fonToplamDeger": 7247684266.53,
+      "gunlukGetiri": 0.00082171,
+      "paraGirisiCikisi": -20138878.61,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "IPP",
+      "fonAdi": "PERFORM PORTFÖY BIRINCI SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 0.180911,
       "tedavuldekiPaySayisi": 40206496514,
       "kisiSayisi": 165,
       "fonToplamDeger": 7273777631.11,
-      "gunlukGetiri": 0.00443055,
-      "paraGirisiCikisi": -20244061.02,
+      "gunlukGetiri": 0.00360588,
+      "paraGirisiCikisi": -32563.98,
       "yatirimciDegisimi": -1
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 40206496514,
       "kisiSayisi": 165,
       "fonToplamDeger": 7273777631.11,
-      "gunlukGetiri": 0.00443055,
-      "paraGirisiCikisi": -20244061.02,
+      "gunlukGetiri": 0.00360588,
+      "paraGirisiCikisi": -32563.98,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "IPP",
+      "fonAdi": "PERFORM PORTFÖY BIRINCI SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 0.180261,
+      "tedavuldekiPaySayisi": 40206676514,
+      "kisiSayisi": 166,
+      "fonToplamDeger": 7247684266.53,
+      "gunlukGetiri": 0.00082171,
+      "paraGirisiCikisi": -20138878.61,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "IPP",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

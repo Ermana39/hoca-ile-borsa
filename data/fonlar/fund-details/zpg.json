@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ZPG",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 153164180.43,
     "kisiSayisi": 6325,
     "fonToplamDeger": 1628996957.55,
-    "gunlukGetiri": 0.00384345,
+    "gunlukGetiri": 0.0009707,
     "getiriler": {
       "birAy": 0.028141,
       "ucAy": 0.092972,
@@ -29,22 +29,22 @@
       "besYil": 4.060552
     },
     "paraAkisi": {
-      "gunluk": 4259780.93,
-      "besGun": 21424057.47,
+      "gunluk": -1997179.12,
+      "besGun": 7777927.69,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
-      "besGun": 83,
+      "gunluk": -4,
+      "besGun": 64,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 153164180.43,
         "kisiSayisi": 6325,
         "fonToplamDeger": 1628996957.55,
-        "gunlukGetiri": 0.00384345,
-        "paraGirisiCikisi": 4259780.93,
-        "yatirimciDegisimi": 3
+        "gunlukGetiri": 0.0009707,
+        "paraGirisiCikisi": -1997179.12,
+        "yatirimciDegisimi": -4
+      },
+      {
+        "fonKodu": "ZPG",
+        "fonAdi": "ZİRAAT PORTFÖY KİRA SERTİFİKALARI (SUKUK) KATILIM FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 10.625312,
+        "tedavuldekiPaySayisi": 153351962.43,
+        "kisiSayisi": 6329,
+        "fonToplamDeger": 1629412468.03,
+        "gunlukGetiri": 0.00286996,
+        "paraGirisiCikisi": 6250892.3,
+        "yatirimciDegisimi": 7
       },
       {
         "fonKodu": "ZPG",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "ZPG",
       "fonAdi": "ZİRAAT PORTFÖY KİRA SERTİFİKALARI (SUKUK) KATILIM FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 10.625312,
+      "tedavuldekiPaySayisi": 153351962.43,
+      "kisiSayisi": 6329,
+      "fonToplamDeger": 1629412468.03,
+      "gunlukGetiri": 0.00286996,
+      "paraGirisiCikisi": 6250892.3,
+      "yatirimciDegisimi": 7
+    },
+    {
+      "fonKodu": "ZPG",
+      "fonAdi": "ZİRAAT PORTFÖY KİRA SERTİFİKALARI (SUKUK) KATILIM FONU",
       "tarih": "2026-08-18",
       "fiyat": 10.635626,
       "tedavuldekiPaySayisi": 153164180.43,
       "kisiSayisi": 6325,
       "fonToplamDeger": 1628996957.55,
-      "gunlukGetiri": 0.00384345,
-      "paraGirisiCikisi": 4259780.93,
-      "yatirimciDegisimi": 3
+      "gunlukGetiri": 0.0009707,
+      "paraGirisiCikisi": -1997179.12,
+      "yatirimciDegisimi": -4
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 153164180.43,
       "kisiSayisi": 6325,
       "fonToplamDeger": 1628996957.55,
-      "gunlukGetiri": 0.00384345,
-      "paraGirisiCikisi": 4259780.93,
-      "yatirimciDegisimi": 3
+      "gunlukGetiri": 0.0009707,
+      "paraGirisiCikisi": -1997179.12,
+      "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "ZPG",
+      "fonAdi": "ZİRAAT PORTFÖY KİRA SERTİFİKALARI (SUKUK) KATILIM FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 10.625312,
+      "tedavuldekiPaySayisi": 153351962.43,
+      "kisiSayisi": 6329,
+      "fonToplamDeger": 1629412468.03,
+      "gunlukGetiri": 0.00286996,
+      "paraGirisiCikisi": 6250892.3,
+      "yatirimciDegisimi": 7
     },
     {
       "fonKodu": "ZPG",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

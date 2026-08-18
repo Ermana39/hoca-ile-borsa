@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "CFO",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 824310577,
     "kisiSayisi": 478,
     "fonToplamDeger": 2069140074.47,
-    "gunlukGetiri": 0.00423876,
+    "gunlukGetiri": 0.00101811,
     "getiriler": {
       "birAy": 0.031936,
       "ucAy": 0.10426500000000001,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -2622043.29,
-      "besGun": -4155483.4,
+      "gunluk": -2866847.79,
+      "besGun": -1784528.25,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": -1,
-      "besGun": -3,
+      "besGun": -1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 824310577,
         "kisiSayisi": 478,
         "fonToplamDeger": 2069140074.47,
-        "gunlukGetiri": 0.00423876,
-        "paraGirisiCikisi": -2622043.29,
+        "gunlukGetiri": 0.00101811,
+        "paraGirisiCikisi": -2866847.79,
         "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "CFO",
+        "fonAdi": "ROTA PORTFÖY İKİNCİ PARA PİYASASI FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 2.507593,
+        "tedavuldekiPaySayisi": 825452681,
+        "kisiSayisi": 479,
+        "fonToplamDeger": 2069898973.66,
+        "gunlukGetiri": 0.00321738,
+        "paraGirisiCikisi": 244555.51,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "CFO",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "CFO",
       "fonAdi": "ROTA PORTFÖY İKİNCİ PARA PİYASASI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.507593,
+      "tedavuldekiPaySayisi": 825452681,
+      "kisiSayisi": 479,
+      "fonToplamDeger": 2069898973.66,
+      "gunlukGetiri": 0.00321738,
+      "paraGirisiCikisi": 244555.51,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "CFO",
+      "fonAdi": "ROTA PORTFÖY İKİNCİ PARA PİYASASI FONU",
       "tarih": "2026-08-18",
       "fiyat": 2.510146,
       "tedavuldekiPaySayisi": 824310577,
       "kisiSayisi": 478,
       "fonToplamDeger": 2069140074.47,
-      "gunlukGetiri": 0.00423876,
-      "paraGirisiCikisi": -2622043.29,
+      "gunlukGetiri": 0.00101811,
+      "paraGirisiCikisi": -2866847.79,
       "yatirimciDegisimi": -1
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 824310577,
       "kisiSayisi": 478,
       "fonToplamDeger": 2069140074.47,
-      "gunlukGetiri": 0.00423876,
-      "paraGirisiCikisi": -2622043.29,
+      "gunlukGetiri": 0.00101811,
+      "paraGirisiCikisi": -2866847.79,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "CFO",
+      "fonAdi": "ROTA PORTFÖY İKİNCİ PARA PİYASASI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.507593,
+      "tedavuldekiPaySayisi": 825452681,
+      "kisiSayisi": 479,
+      "fonToplamDeger": 2069898973.66,
+      "gunlukGetiri": 0.00321738,
+      "paraGirisiCikisi": 244555.51,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "CFO",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

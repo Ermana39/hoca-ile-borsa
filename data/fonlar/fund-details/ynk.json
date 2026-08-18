@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YNK",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 415060491,
     "kisiSayisi": 1168,
     "fonToplamDeger": 19966661828.47,
-    "gunlukGetiri": 0.00334711,
+    "gunlukGetiri": 0.00183309,
     "getiriler": {
       "birAy": 0.007135,
       "ucAy": 0.053657,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 10108633.69,
-      "besGun": 122372558.13,
+      "gunluk": -2627470.26,
+      "besGun": 74588487.36,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": 4,
+      "gunluk": 0,
+      "besGun": 2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 415060491,
         "kisiSayisi": 1168,
         "fonToplamDeger": 19966661828.47,
-        "gunlukGetiri": 0.00334711,
-        "paraGirisiCikisi": 10108633.69,
+        "gunlukGetiri": 0.00183309,
+        "paraGirisiCikisi": -2627470.26,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "YNK",
+        "fonAdi": "YAPI KREDİ PORTFÖY NİŞANTAŞI KAR PAYI ÖDEYEN SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 48.017406,
+        "tedavuldekiPaySayisi": 415115110,
+        "kisiSayisi": 1168,
+        "fonToplamDeger": 19932750776.49,
+        "gunlukGetiri": 0.00151125,
+        "paraGirisiCikisi": 12712800.31,
         "yatirimciDegisimi": 1
       },
       {
@@ -188,14 +200,26 @@
     {
       "fonKodu": "YNK",
       "fonAdi": "YAPI KREDİ PORTFÖY NİŞANTAŞI KAR PAYI ÖDEYEN SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 48.017406,
+      "tedavuldekiPaySayisi": 415115110,
+      "kisiSayisi": 1168,
+      "fonToplamDeger": 19932750776.49,
+      "gunlukGetiri": 0.00151125,
+      "paraGirisiCikisi": 12712800.31,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "YNK",
+      "fonAdi": "YAPI KREDİ PORTFÖY NİŞANTAŞI KAR PAYI ÖDEYEN SERBEST (DÖVİZ) FON",
       "tarih": "2026-08-18",
       "fiyat": 48.105426,
       "tedavuldekiPaySayisi": 415060491,
       "kisiSayisi": 1168,
       "fonToplamDeger": 19966661828.47,
-      "gunlukGetiri": 0.00334711,
-      "paraGirisiCikisi": 10108633.69,
-      "yatirimciDegisimi": 1
+      "gunlukGetiri": 0.00183309,
+      "paraGirisiCikisi": -2627470.26,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 415060491,
       "kisiSayisi": 1168,
       "fonToplamDeger": 19966661828.47,
-      "gunlukGetiri": 0.00334711,
-      "paraGirisiCikisi": 10108633.69,
+      "gunlukGetiri": 0.00183309,
+      "paraGirisiCikisi": -2627470.26,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YNK",
+      "fonAdi": "YAPI KREDİ PORTFÖY NİŞANTAŞI KAR PAYI ÖDEYEN SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 48.017406,
+      "tedavuldekiPaySayisi": 415115110,
+      "kisiSayisi": 1168,
+      "fonToplamDeger": 19932750776.49,
+      "gunlukGetiri": 0.00151125,
+      "paraGirisiCikisi": 12712800.31,
       "yatirimciDegisimi": 1
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

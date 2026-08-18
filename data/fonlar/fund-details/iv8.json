@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IV8",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 14378533,
     "kisiSayisi": 136,
     "fonToplamDeger": 32902627.31,
-    "gunlukGetiri": 0.00368787,
+    "gunlukGetiri": 0.00086952,
     "getiriler": {
       "birAy": 0.027527,
       "ucAy": 0.087522,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 698561.09,
-      "besGun": 690681.6,
+      "gunluk": 700400.9,
+      "besGun": 693108.54,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": 2,
       "besGun": -6,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 14378533,
         "kisiSayisi": 136,
         "fonToplamDeger": 32902627.31,
-        "gunlukGetiri": 0.00368787,
-        "paraGirisiCikisi": 698561.09,
-        "yatirimciDegisimi": 0
+        "gunlukGetiri": 0.00086952,
+        "paraGirisiCikisi": 700400.9,
+        "yatirimciDegisimi": 2
+      },
+      {
+        "fonKodu": "IV8",
+        "fonAdi": "INVEO PORTFÖY KİRA SERTİFİKALARI KATILIM FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 2.286328,
+        "tedavuldekiPaySayisi": 14072456,
+        "kisiSayisi": 134,
+        "fonToplamDeger": 32174244.25,
+        "gunlukGetiri": 0.0028159,
+        "paraGirisiCikisi": -1838.21,
+        "yatirimciDegisimi": -2
       },
       {
         "fonKodu": "IV8",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "IV8",
       "fonAdi": "INVEO PORTFÖY KİRA SERTİFİKALARI KATILIM FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.286328,
+      "tedavuldekiPaySayisi": 14072456,
+      "kisiSayisi": 134,
+      "fonToplamDeger": 32174244.25,
+      "gunlukGetiri": 0.0028159,
+      "paraGirisiCikisi": -1838.21,
+      "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "IV8",
+      "fonAdi": "INVEO PORTFÖY KİRA SERTİFİKALARI KATILIM FONU",
       "tarih": "2026-08-18",
       "fiyat": 2.288316,
       "tedavuldekiPaySayisi": 14378533,
       "kisiSayisi": 136,
       "fonToplamDeger": 32902627.31,
-      "gunlukGetiri": 0.00368787,
-      "paraGirisiCikisi": 698561.09,
-      "yatirimciDegisimi": 0
+      "gunlukGetiri": 0.00086952,
+      "paraGirisiCikisi": 700400.9,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 14378533,
       "kisiSayisi": 136,
       "fonToplamDeger": 32902627.31,
-      "gunlukGetiri": 0.00368787,
-      "paraGirisiCikisi": 698561.09,
-      "yatirimciDegisimi": 0
+      "gunlukGetiri": 0.00086952,
+      "paraGirisiCikisi": 700400.9,
+      "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "IV8",
+      "fonAdi": "INVEO PORTFÖY KİRA SERTİFİKALARI KATILIM FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.286328,
+      "tedavuldekiPaySayisi": 14072456,
+      "kisiSayisi": 134,
+      "fonToplamDeger": 32174244.25,
+      "gunlukGetiri": 0.0028159,
+      "paraGirisiCikisi": -1838.21,
+      "yatirimciDegisimi": -2
     },
     {
       "fonKodu": "IV8",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

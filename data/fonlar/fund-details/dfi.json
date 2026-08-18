@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DFI",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 6126022999,
     "kisiSayisi": 52004,
     "fonToplamDeger": 33468164065.69,
-    "gunlukGetiri": 0.00463307,
+    "gunlukGetiri": 0.00454329,
     "getiriler": {
       "birAy": 0.072643,
       "ucAy": 0.39441400000000004,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1131213722.51,
-      "besGun": -1506885662.12,
+      "gunluk": -712081644.03,
+      "besGun": -1460856638.7,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -61,
-      "besGun": -224,
+      "gunluk": -218,
+      "besGun": -170,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 6126022999,
         "kisiSayisi": 52004,
         "fonToplamDeger": 33468164065.69,
-        "gunlukGetiri": 0.00463307,
-        "paraGirisiCikisi": -1131213722.51,
-        "yatirimciDegisimi": -61
+        "gunlukGetiri": 0.00454329,
+        "paraGirisiCikisi": -712081644.03,
+        "yatirimciDegisimi": -218
+      },
+      {
+        "fonKodu": "DFI",
+        "fonAdi": "ATLAS PORTFÖY SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 5.438569,
+        "tedavuldekiPaySayisi": 6256362631,
+        "kisiSayisi": 52222,
+        "fonToplamDeger": 34025662897.02,
+        "gunlukGetiri": 0.00008937,
+        "paraGirisiCikisi": -417236451.98,
+        "yatirimciDegisimi": 157
       },
       {
         "fonKodu": "DFI",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "DFI",
       "fonAdi": "ATLAS PORTFÖY SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 5.438569,
+      "tedavuldekiPaySayisi": 6256362631,
+      "kisiSayisi": 52222,
+      "fonToplamDeger": 34025662897.02,
+      "gunlukGetiri": 0.00008937,
+      "paraGirisiCikisi": -417236451.98,
+      "yatirimciDegisimi": 157
+    },
+    {
+      "fonKodu": "DFI",
+      "fonAdi": "ATLAS PORTFÖY SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 5.463278,
       "tedavuldekiPaySayisi": 6126022999,
       "kisiSayisi": 52004,
       "fonToplamDeger": 33468164065.69,
-      "gunlukGetiri": 0.00463307,
-      "paraGirisiCikisi": -1131213722.51,
-      "yatirimciDegisimi": -61
+      "gunlukGetiri": 0.00454329,
+      "paraGirisiCikisi": -712081644.03,
+      "yatirimciDegisimi": -218
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 6126022999,
       "kisiSayisi": 52004,
       "fonToplamDeger": 33468164065.69,
-      "gunlukGetiri": 0.00463307,
-      "paraGirisiCikisi": -1131213722.51,
-      "yatirimciDegisimi": -61
+      "gunlukGetiri": 0.00454329,
+      "paraGirisiCikisi": -712081644.03,
+      "yatirimciDegisimi": -218
+    },
+    {
+      "fonKodu": "DFI",
+      "fonAdi": "ATLAS PORTFÖY SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 5.438569,
+      "tedavuldekiPaySayisi": 6256362631,
+      "kisiSayisi": 52222,
+      "fonToplamDeger": 34025662897.02,
+      "gunlukGetiri": 0.00008937,
+      "paraGirisiCikisi": -417236451.98,
+      "yatirimciDegisimi": 157
     },
     {
       "fonKodu": "DFI",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "OTK",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 581116,
     "kisiSayisi": 62,
     "fonToplamDeger": 4866835.83,
-    "gunlukGetiri": 0.00353497,
+    "gunlukGetiri": 0.00060407,
     "getiriler": {
       "birAy": 0.028860999999999998,
       "ucAy": 0.093508,
@@ -29,22 +29,22 @@
       "besYil": 3.709639
     },
     "paraAkisi": {
-      "gunluk": -5016.61,
-      "besGun": -2040.69,
+      "gunluk": -4011.62,
+      "besGun": -5908.98,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": -2,
+      "besGun": -1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 581116,
         "kisiSayisi": 62,
         "fonToplamDeger": 4866835.83,
-        "gunlukGetiri": 0.00353497,
-        "paraGirisiCikisi": -5016.61,
+        "gunlukGetiri": 0.00060407,
+        "paraGirisiCikisi": -4011.62,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "OTK",
+        "fonAdi": "OYAK PORTFÖY BİRİNCİ KATILIM SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 8.369926,
+        "tedavuldekiPaySayisi": 581595,
+        "kisiSayisi": 62,
+        "fonToplamDeger": 4867907.24,
+        "gunlukGetiri": 0.00292913,
+        "paraGirisiCikisi": -1004.39,
         "yatirimciDegisimi": 0
       },
       {
@@ -188,13 +200,25 @@
     {
       "fonKodu": "OTK",
       "fonAdi": "OYAK PORTFÖY BİRİNCİ KATILIM SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 8.369926,
+      "tedavuldekiPaySayisi": 581595,
+      "kisiSayisi": 62,
+      "fonToplamDeger": 4867907.24,
+      "gunlukGetiri": 0.00292913,
+      "paraGirisiCikisi": -1004.39,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "OTK",
+      "fonAdi": "OYAK PORTFÖY BİRİNCİ KATILIM SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 8.374982,
       "tedavuldekiPaySayisi": 581116,
       "kisiSayisi": 62,
       "fonToplamDeger": 4866835.83,
-      "gunlukGetiri": 0.00353497,
-      "paraGirisiCikisi": -5016.61,
+      "gunlukGetiri": 0.00060407,
+      "paraGirisiCikisi": -4011.62,
       "yatirimciDegisimi": 0
     }
   ],
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 581116,
       "kisiSayisi": 62,
       "fonToplamDeger": 4866835.83,
-      "gunlukGetiri": 0.00353497,
-      "paraGirisiCikisi": -5016.61,
+      "gunlukGetiri": 0.00060407,
+      "paraGirisiCikisi": -4011.62,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "OTK",
+      "fonAdi": "OYAK PORTFÖY BİRİNCİ KATILIM SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 8.369926,
+      "tedavuldekiPaySayisi": 581595,
+      "kisiSayisi": 62,
+      "fonToplamDeger": 4867907.24,
+      "gunlukGetiri": 0.00292913,
+      "paraGirisiCikisi": -1004.39,
       "yatirimciDegisimi": 0
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

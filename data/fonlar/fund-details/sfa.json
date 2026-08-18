@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "SFA",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 52482730,
     "kisiSayisi": 18,
     "fonToplamDeger": 1224097987.69,
-    "gunlukGetiri": 0.00237393,
+    "gunlukGetiri": 0.00249754,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -30,7 +30,7 @@
     },
     "paraAkisi": {
       "gunluk": 0,
-      "besGun": 15080155.68,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 52482730,
         "kisiSayisi": 18,
         "fonToplamDeger": 1224097987.69,
-        "gunlukGetiri": 0.00237393,
+        "gunlukGetiri": 0.00249754,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "SFA",
+        "fonAdi": "STATECH PORTFÖY ALPHA HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-17",
+        "fiyat": 23.265718,
+        "tedavuldekiPaySayisi": 52482730,
+        "kisiSayisi": 18,
+        "fonToplamDeger": 1221048416.46,
+        "gunlukGetiri": -0.0001233,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "SFA",
       "fonAdi": "STATECH PORTFÖY ALPHA HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 23.265718,
+      "tedavuldekiPaySayisi": 52482730,
+      "kisiSayisi": 18,
+      "fonToplamDeger": 1221048416.46,
+      "gunlukGetiri": -0.0001233,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "SFA",
+      "fonAdi": "STATECH PORTFÖY ALPHA HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
       "tarih": "2026-08-18",
       "fiyat": 23.323825,
       "tedavuldekiPaySayisi": 52482730,
       "kisiSayisi": 18,
       "fonToplamDeger": 1224097987.69,
-      "gunlukGetiri": 0.00237393,
+      "gunlukGetiri": 0.00249754,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 52482730,
       "kisiSayisi": 18,
       "fonToplamDeger": 1224097987.69,
-      "gunlukGetiri": 0.00237393,
+      "gunlukGetiri": 0.00249754,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "SFA",
+      "fonAdi": "STATECH PORTFÖY ALPHA HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 23.265718,
+      "tedavuldekiPaySayisi": 52482730,
+      "kisiSayisi": 18,
+      "fonToplamDeger": 1221048416.46,
+      "gunlukGetiri": -0.0001233,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

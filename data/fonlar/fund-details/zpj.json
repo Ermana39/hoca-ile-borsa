@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ZPJ",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 10649634,
     "kisiSayisi": 330,
     "fonToplamDeger": 119173501.03,
-    "gunlukGetiri": 0.01647643,
+    "gunlukGetiri": 0.02426519,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 193358.66,
-      "besGun": -2065834.15,
+      "gunluk": -1119.04,
+      "besGun": -2070286.7,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": 0,
       "besGun": -6,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 10649634,
         "kisiSayisi": 330,
         "fonToplamDeger": 119173501.03,
-        "gunlukGetiri": 0.01647643,
-        "paraGirisiCikisi": 193358.66,
+        "gunlukGetiri": 0.02426519,
+        "paraGirisiCikisi": -1119.04,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "ZPJ",
+        "fonAdi": "ZİRAAT PORTFÖY KATILIM HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-17",
+        "fiyat": 10.925281,
+        "tedavuldekiPaySayisi": 10649734,
+        "kisiSayisi": 330,
+        "fonToplamDeger": 116351332.75,
+        "gunlukGetiri": -0.00760424,
+        "paraGirisiCikisi": 189870.46,
         "yatirimciDegisimi": 1
       },
       {
@@ -188,14 +200,26 @@
     {
       "fonKodu": "ZPJ",
       "fonAdi": "ZİRAAT PORTFÖY KATILIM HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 10.925281,
+      "tedavuldekiPaySayisi": 10649734,
+      "kisiSayisi": 330,
+      "fonToplamDeger": 116351332.75,
+      "gunlukGetiri": -0.00760424,
+      "paraGirisiCikisi": 189870.46,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "ZPJ",
+      "fonAdi": "ZİRAAT PORTFÖY KATILIM HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
       "tarih": "2026-08-18",
       "fiyat": 11.190385,
       "tedavuldekiPaySayisi": 10649634,
       "kisiSayisi": 330,
       "fonToplamDeger": 119173501.03,
-      "gunlukGetiri": 0.01647643,
-      "paraGirisiCikisi": 193358.66,
-      "yatirimciDegisimi": 1
+      "gunlukGetiri": 0.02426519,
+      "paraGirisiCikisi": -1119.04,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 10649634,
       "kisiSayisi": 330,
       "fonToplamDeger": 119173501.03,
-      "gunlukGetiri": 0.01647643,
-      "paraGirisiCikisi": 193358.66,
+      "gunlukGetiri": 0.02426519,
+      "paraGirisiCikisi": -1119.04,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "ZPJ",
+      "fonAdi": "ZİRAAT PORTFÖY KATILIM HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 10.925281,
+      "tedavuldekiPaySayisi": 10649734,
+      "kisiSayisi": 330,
+      "fonToplamDeger": 116351332.75,
+      "gunlukGetiri": -0.00760424,
+      "paraGirisiCikisi": 189870.46,
       "yatirimciDegisimi": 1
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

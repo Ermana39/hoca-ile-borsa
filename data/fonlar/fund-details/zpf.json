@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ZPF",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 32352207,
     "kisiSayisi": 3376,
     "fonToplamDeger": 749644475.73,
-    "gunlukGetiri": 0.0031706,
+    "gunlukGetiri": 0.00179621,
     "getiriler": {
       "birAy": 0.021587000000000002,
       "ucAy": 0.062829,
@@ -29,22 +29,22 @@
       "besYil": 5.9708749999999995
     },
     "paraAkisi": {
-      "gunluk": 632763.36,
-      "besGun": 1341119.36,
+      "gunluk": -96439.18,
+      "besGun": -110582.99,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 9,
-      "besGun": 17,
+      "gunluk": 4,
+      "besGun": 13,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 32352207,
         "kisiSayisi": 3376,
         "fonToplamDeger": 749644475.73,
-        "gunlukGetiri": 0.0031706,
-        "paraGirisiCikisi": 632763.36,
-        "yatirimciDegisimi": 9
+        "gunlukGetiri": 0.00179621,
+        "paraGirisiCikisi": -96439.18,
+        "yatirimciDegisimi": 4
+      },
+      {
+        "fonKodu": "ZPF",
+        "fonAdi": "ZİRAAT PORTFÖY KATILIM FONU (DÖVİZ)",
+        "tarih": "2026-08-17",
+        "fiyat": 23.129809,
+        "tedavuldekiPaySayisi": 32356369,
+        "kisiSayisi": 3372,
+        "fonToplamDeger": 748396645.87,
+        "gunlukGetiri": 0.00137193,
+        "paraGirisiCikisi": 727895.09,
+        "yatirimciDegisimi": 5
       },
       {
         "fonKodu": "ZPF",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "ZPF",
       "fonAdi": "ZİRAAT PORTFÖY KATILIM FONU (DÖVİZ)",
+      "tarih": "2026-08-17",
+      "fiyat": 23.129809,
+      "tedavuldekiPaySayisi": 32356369,
+      "kisiSayisi": 3372,
+      "fonToplamDeger": 748396645.87,
+      "gunlukGetiri": 0.00137193,
+      "paraGirisiCikisi": 727895.09,
+      "yatirimciDegisimi": 5
+    },
+    {
+      "fonKodu": "ZPF",
+      "fonAdi": "ZİRAAT PORTFÖY KATILIM FONU (DÖVİZ)",
       "tarih": "2026-08-18",
       "fiyat": 23.171355,
       "tedavuldekiPaySayisi": 32352207,
       "kisiSayisi": 3376,
       "fonToplamDeger": 749644475.73,
-      "gunlukGetiri": 0.0031706,
-      "paraGirisiCikisi": 632763.36,
-      "yatirimciDegisimi": 9
+      "gunlukGetiri": 0.00179621,
+      "paraGirisiCikisi": -96439.18,
+      "yatirimciDegisimi": 4
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 32352207,
       "kisiSayisi": 3376,
       "fonToplamDeger": 749644475.73,
-      "gunlukGetiri": 0.0031706,
-      "paraGirisiCikisi": 632763.36,
-      "yatirimciDegisimi": 9
+      "gunlukGetiri": 0.00179621,
+      "paraGirisiCikisi": -96439.18,
+      "yatirimciDegisimi": 4
+    },
+    {
+      "fonKodu": "ZPF",
+      "fonAdi": "ZİRAAT PORTFÖY KATILIM FONU (DÖVİZ)",
+      "tarih": "2026-08-17",
+      "fiyat": 23.129809,
+      "tedavuldekiPaySayisi": 32356369,
+      "kisiSayisi": 3372,
+      "fonToplamDeger": 748396645.87,
+      "gunlukGetiri": 0.00137193,
+      "paraGirisiCikisi": 727895.09,
+      "yatirimciDegisimi": 5
     },
     {
       "fonKodu": "ZPF",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ZPH",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 400945245,
     "kisiSayisi": 56,
     "fonToplamDeger": 605303664.87,
-    "gunlukGetiri": 0.00421457,
+    "gunlukGetiri": 0.00105099,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 248868391.87,
-      "besGun": 248662849.32,
+      "gunluk": -30912032.19,
+      "besGun": 248473549.58,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": 0,
+      "gunluk": -1,
+      "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 400945245,
         "kisiSayisi": 56,
         "fonToplamDeger": 605303664.87,
-        "gunlukGetiri": 0.00421457,
-        "paraGirisiCikisi": 248868391.87,
-        "yatirimciDegisimi": 1
+        "gunlukGetiri": 0.00105099,
+        "paraGirisiCikisi": -30912032.19,
+        "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "ZPH",
+        "fonAdi": "ZİRAAT PORTFÖY PAYLAŞIMLI HESAP PARA PİYASASI KATILIM SERBEST (TL) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 1.508107,
+        "tedavuldekiPaySayisi": 421420966,
+        "kisiSayisi": 57,
+        "fonToplamDeger": 635548077.15,
+        "gunlukGetiri": 0.00316026,
+        "paraGirisiCikisi": 279486687.34,
+        "yatirimciDegisimi": 2
       },
       {
         "fonKodu": "ZPH",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "ZPH",
       "fonAdi": "ZİRAAT PORTFÖY PAYLAŞIMLI HESAP PARA PİYASASI KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.508107,
+      "tedavuldekiPaySayisi": 421420966,
+      "kisiSayisi": 57,
+      "fonToplamDeger": 635548077.15,
+      "gunlukGetiri": 0.00316026,
+      "paraGirisiCikisi": 279486687.34,
+      "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "ZPH",
+      "fonAdi": "ZİRAAT PORTFÖY PAYLAŞIMLI HESAP PARA PİYASASI KATILIM SERBEST (TL) FON",
       "tarih": "2026-08-18",
       "fiyat": 1.509692,
       "tedavuldekiPaySayisi": 400945245,
       "kisiSayisi": 56,
       "fonToplamDeger": 605303664.87,
-      "gunlukGetiri": 0.00421457,
-      "paraGirisiCikisi": 248868391.87,
-      "yatirimciDegisimi": 1
+      "gunlukGetiri": 0.00105099,
+      "paraGirisiCikisi": -30912032.19,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 400945245,
       "kisiSayisi": 56,
       "fonToplamDeger": 605303664.87,
-      "gunlukGetiri": 0.00421457,
-      "paraGirisiCikisi": 248868391.87,
-      "yatirimciDegisimi": 1
+      "gunlukGetiri": 0.00105099,
+      "paraGirisiCikisi": -30912032.19,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "ZPH",
+      "fonAdi": "ZİRAAT PORTFÖY PAYLAŞIMLI HESAP PARA PİYASASI KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.508107,
+      "tedavuldekiPaySayisi": 421420966,
+      "kisiSayisi": 57,
+      "fonToplamDeger": 635548077.15,
+      "gunlukGetiri": 0.00316026,
+      "paraGirisiCikisi": 279486687.34,
+      "yatirimciDegisimi": 2
     },
     {
       "fonKodu": "ZPH",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

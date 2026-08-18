@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DSP",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 9541355,
     "kisiSayisi": 1030,
     "fonToplamDeger": 141292900.17,
-    "gunlukGetiri": 0.00333479,
+    "gunlukGetiri": 0.00268715,
     "getiriler": {
       "birAy": 0.037596,
       "ucAy": 0.073791,
@@ -29,22 +29,22 @@
       "besYil": 6.600742
     },
     "paraAkisi": {
-      "gunluk": -146826.01,
-      "besGun": -1309742.4,
+      "gunluk": -169438.55,
+      "besGun": -1548392.28,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
-      "besGun": -5,
+      "gunluk": 2,
+      "besGun": -6,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 9541355,
         "kisiSayisi": 1030,
         "fonToplamDeger": 141292900.17,
-        "gunlukGetiri": 0.00333479,
-        "paraGirisiCikisi": -146826.01,
-        "yatirimciDegisimi": -2
+        "gunlukGetiri": 0.00268715,
+        "paraGirisiCikisi": -169438.55,
+        "yatirimciDegisimi": 2
+      },
+      {
+        "fonKodu": "DSP",
+        "fonAdi": "DENİZ PORTFÖY DENGELİ FON SEPETİ FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 14.768787,
+        "tedavuldekiPaySayisi": 9552797,
+        "kisiSayisi": 1028,
+        "fonToplamDeger": 141083227.48,
+        "gunlukGetiri": 0.0006459,
+        "paraGirisiCikisi": 22551.94,
+        "yatirimciDegisimi": -4
       },
       {
         "fonKodu": "DSP",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "DSP",
       "fonAdi": "DENİZ PORTFÖY DENGELİ FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 14.768787,
+      "tedavuldekiPaySayisi": 9552797,
+      "kisiSayisi": 1028,
+      "fonToplamDeger": 141083227.48,
+      "gunlukGetiri": 0.0006459,
+      "paraGirisiCikisi": 22551.94,
+      "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "DSP",
+      "fonAdi": "DENİZ PORTFÖY DENGELİ FON SEPETİ FONU",
       "tarih": "2026-08-18",
       "fiyat": 14.808473,
       "tedavuldekiPaySayisi": 9541355,
       "kisiSayisi": 1030,
       "fonToplamDeger": 141292900.17,
-      "gunlukGetiri": 0.00333479,
-      "paraGirisiCikisi": -146826.01,
-      "yatirimciDegisimi": -2
+      "gunlukGetiri": 0.00268715,
+      "paraGirisiCikisi": -169438.55,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 9541355,
       "kisiSayisi": 1030,
       "fonToplamDeger": 141292900.17,
-      "gunlukGetiri": 0.00333479,
-      "paraGirisiCikisi": -146826.01,
-      "yatirimciDegisimi": -2
+      "gunlukGetiri": 0.00268715,
+      "paraGirisiCikisi": -169438.55,
+      "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "DSP",
+      "fonAdi": "DENİZ PORTFÖY DENGELİ FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 14.768787,
+      "tedavuldekiPaySayisi": 9552797,
+      "kisiSayisi": 1028,
+      "fonToplamDeger": 141083227.48,
+      "gunlukGetiri": 0.0006459,
+      "paraGirisiCikisi": 22551.94,
+      "yatirimciDegisimi": -4
     },
     {
       "fonKodu": "DSP",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DBZ",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 5221149800,
     "kisiSayisi": 2919,
     "fonToplamDeger": 731766745.79,
-    "gunlukGetiri": 0.00413392,
+    "gunlukGetiri": 0.00103565,
     "getiriler": {
       "birAy": 0.030817,
       "ucAy": 0.100741,
@@ -29,22 +29,22 @@
       "besYil": 3.944227
     },
     "paraAkisi": {
-      "gunluk": 6783916.11,
-      "besGun": -4002023.61,
+      "gunluk": 2288224.28,
+      "besGun": -4832883.81,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -7,
-      "besGun": -13,
+      "gunluk": 3,
+      "besGun": -15,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 5221149800,
         "kisiSayisi": 2919,
         "fonToplamDeger": 731766745.79,
-        "gunlukGetiri": 0.00413392,
-        "paraGirisiCikisi": 6783916.11,
-        "yatirimciDegisimi": -7
+        "gunlukGetiri": 0.00103565,
+        "paraGirisiCikisi": 2288224.28,
+        "yatirimciDegisimi": 3
+      },
+      {
+        "fonKodu": "DBZ",
+        "fonAdi": "DENİZ PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 0.140009,
+        "tedavuldekiPaySayisi": 5204823300,
+        "kisiSayisi": 2916,
+        "fonToplamDeger": 728720812.83,
+        "gunlukGetiri": 0.00309507,
+        "paraGirisiCikisi": 4491040.69,
+        "yatirimciDegisimi": -10
       },
       {
         "fonKodu": "DBZ",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "DBZ",
       "fonAdi": "DENİZ PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 0.140009,
+      "tedavuldekiPaySayisi": 5204823300,
+      "kisiSayisi": 2916,
+      "fonToplamDeger": 728720812.83,
+      "gunlukGetiri": 0.00309507,
+      "paraGirisiCikisi": 4491040.69,
+      "yatirimciDegisimi": -10
+    },
+    {
+      "fonKodu": "DBZ",
+      "fonAdi": "DENİZ PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
       "tarih": "2026-08-18",
       "fiyat": 0.140154,
       "tedavuldekiPaySayisi": 5221149800,
       "kisiSayisi": 2919,
       "fonToplamDeger": 731766745.79,
-      "gunlukGetiri": 0.00413392,
-      "paraGirisiCikisi": 6783916.11,
-      "yatirimciDegisimi": -7
+      "gunlukGetiri": 0.00103565,
+      "paraGirisiCikisi": 2288224.28,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 5221149800,
       "kisiSayisi": 2919,
       "fonToplamDeger": 731766745.79,
-      "gunlukGetiri": 0.00413392,
-      "paraGirisiCikisi": 6783916.11,
-      "yatirimciDegisimi": -7
+      "gunlukGetiri": 0.00103565,
+      "paraGirisiCikisi": 2288224.28,
+      "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "DBZ",
+      "fonAdi": "DENİZ PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 0.140009,
+      "tedavuldekiPaySayisi": 5204823300,
+      "kisiSayisi": 2916,
+      "fonToplamDeger": 728720812.83,
+      "gunlukGetiri": 0.00309507,
+      "paraGirisiCikisi": 4491040.69,
+      "yatirimciDegisimi": -10
     },
     {
       "fonKodu": "DBZ",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

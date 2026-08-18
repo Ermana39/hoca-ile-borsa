@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GGA",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 123364230,
     "kisiSayisi": 3,
     "fonToplamDeger": 8289774732.13,
-    "gunlukGetiri": 0.00317687,
+    "gunlukGetiri": null,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": 0,
+      "gunluk": null,
+      "besGun": null,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 123364230,
         "kisiSayisi": 3,
         "fonToplamDeger": 8289774732.13,
-        "gunlukGetiri": 0.00317687,
-        "paraGirisiCikisi": 0,
+        "gunlukGetiri": null,
+        "paraGirisiCikisi": null,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "GGA",
+        "fonAdi": "GARANTİ PORTFÖY YEDİNCİ SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-17",
+        "fiyat": 0,
+        "tedavuldekiPaySayisi": 0,
+        "kisiSayisi": 3,
+        "fonToplamDeger": 0,
+        "gunlukGetiri": null,
+        "paraGirisiCikisi": null,
         "yatirimciDegisimi": 0
       },
       {
@@ -188,13 +200,25 @@
     {
       "fonKodu": "GGA",
       "fonAdi": "GARANTİ PORTFÖY YEDİNCİ SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 0,
+      "tedavuldekiPaySayisi": 0,
+      "kisiSayisi": 3,
+      "fonToplamDeger": 0,
+      "gunlukGetiri": null,
+      "paraGirisiCikisi": null,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GGA",
+      "fonAdi": "GARANTİ PORTFÖY YEDİNCİ SERBEST (DÖVİZ) ÖZEL FON",
       "tarih": "2026-08-18",
       "fiyat": 67.197556,
       "tedavuldekiPaySayisi": 123364230,
       "kisiSayisi": 3,
       "fonToplamDeger": 8289774732.13,
-      "gunlukGetiri": 0.00317687,
-      "paraGirisiCikisi": 0,
+      "gunlukGetiri": null,
+      "paraGirisiCikisi": null,
       "yatirimciDegisimi": 0
     }
   ],
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 123364230,
       "kisiSayisi": 3,
       "fonToplamDeger": 8289774732.13,
-      "gunlukGetiri": 0.00317687,
-      "paraGirisiCikisi": 0,
+      "gunlukGetiri": null,
+      "paraGirisiCikisi": null,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GGA",
+      "fonAdi": "GARANTİ PORTFÖY YEDİNCİ SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 0,
+      "tedavuldekiPaySayisi": 0,
+      "kisiSayisi": 3,
+      "fonToplamDeger": 0,
+      "gunlukGetiri": null,
+      "paraGirisiCikisi": null,
       "yatirimciDegisimi": 0
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

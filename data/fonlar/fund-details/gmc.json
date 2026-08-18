@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GMC",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 540321023,
     "kisiSayisi": 21275,
     "fonToplamDeger": 4263467881.42,
-    "gunlukGetiri": 0.01525112,
+    "gunlukGetiri": null,
     "getiriler": {
       "birAy": 0.211962,
       "ucAy": -0.12253,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 588529.78,
+      "gunluk": null,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
-      "besGun": 57,
+      "gunluk": -10,
+      "besGun": 68,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 540321023,
         "kisiSayisi": 21275,
         "fonToplamDeger": 4263467881.42,
-        "gunlukGetiri": 0.01525112,
-        "paraGirisiCikisi": 588529.78,
-        "yatirimciDegisimi": -4
+        "gunlukGetiri": null,
+        "paraGirisiCikisi": null,
+        "yatirimciDegisimi": -10
+      },
+      {
+        "fonKodu": "GMC",
+        "fonAdi": "TEB PORTFÖY GÜMÜŞ FON SEPETİ FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 0,
+        "tedavuldekiPaySayisi": 0,
+        "kisiSayisi": 21285,
+        "fonToplamDeger": 0,
+        "gunlukGetiri": null,
+        "paraGirisiCikisi": null,
+        "yatirimciDegisimi": 6
       },
       {
         "fonKodu": "GMC",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "GMC",
       "fonAdi": "TEB PORTFÖY GÜMÜŞ FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 0,
+      "tedavuldekiPaySayisi": 0,
+      "kisiSayisi": 21285,
+      "fonToplamDeger": 0,
+      "gunlukGetiri": null,
+      "paraGirisiCikisi": null,
+      "yatirimciDegisimi": 6
+    },
+    {
+      "fonKodu": "GMC",
+      "fonAdi": "TEB PORTFÖY GÜMÜŞ FON SEPETİ FONU",
       "tarih": "2026-08-18",
       "fiyat": 7.89062,
       "tedavuldekiPaySayisi": 540321023,
       "kisiSayisi": 21275,
       "fonToplamDeger": 4263467881.42,
-      "gunlukGetiri": 0.01525112,
-      "paraGirisiCikisi": 588529.78,
-      "yatirimciDegisimi": -4
+      "gunlukGetiri": null,
+      "paraGirisiCikisi": null,
+      "yatirimciDegisimi": -10
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 540321023,
       "kisiSayisi": 21275,
       "fonToplamDeger": 4263467881.42,
-      "gunlukGetiri": 0.01525112,
-      "paraGirisiCikisi": 588529.78,
-      "yatirimciDegisimi": -4
+      "gunlukGetiri": null,
+      "paraGirisiCikisi": null,
+      "yatirimciDegisimi": -10
+    },
+    {
+      "fonKodu": "GMC",
+      "fonAdi": "TEB PORTFÖY GÜMÜŞ FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 0,
+      "tedavuldekiPaySayisi": 0,
+      "kisiSayisi": 21285,
+      "fonToplamDeger": 0,
+      "gunlukGetiri": null,
+      "paraGirisiCikisi": null,
+      "yatirimciDegisimi": 6
     },
     {
       "fonKodu": "GMC",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

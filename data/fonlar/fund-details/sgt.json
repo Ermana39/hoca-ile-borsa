@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "SGT",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 106053691,
     "kisiSayisi": 2517,
     "fonToplamDeger": 211457710.27,
-    "gunlukGetiri": null,
+    "gunlukGetiri": -0.01219379,
     "getiriler": {
       "birAy": 0.07502,
       "ucAy": 0.233274,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": null,
+      "gunluk": 4116632.02,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 23,
-      "besGun": 105,
+      "besGun": 99,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 1,
+      "observedDays": 2,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 106053691,
         "kisiSayisi": 2517,
         "fonToplamDeger": 211457710.27,
+        "gunlukGetiri": -0.01219379,
+        "paraGirisiCikisi": 4116632.02,
+        "yatirimciDegisimi": 23
+      },
+      {
+        "fonKodu": "SGT",
+        "fonAdi": "GARANTİ PORTFÖY SİBER GÜVENLİK TEKNOLOJİLERİ DEĞİŞKEN FON",
+        "tarih": "2026-08-17",
+        "fiyat": 2.018487,
+        "tedavuldekiPaySayisi": 103989051,
+        "kisiSayisi": 2494,
+        "fonToplamDeger": 209900527.93,
         "gunlukGetiri": null,
         "paraGirisiCikisi": null,
-        "yatirimciDegisimi": 23
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "SGT",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "SGT",
       "fonAdi": "GARANTİ PORTFÖY SİBER GÜVENLİK TEKNOLOJİLERİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 2.018487,
+      "tedavuldekiPaySayisi": 103989051,
+      "kisiSayisi": 2494,
+      "fonToplamDeger": 209900527.93,
+      "gunlukGetiri": null,
+      "paraGirisiCikisi": null,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "SGT",
+      "fonAdi": "GARANTİ PORTFÖY SİBER GÜVENLİK TEKNOLOJİLERİ DEĞİŞKEN FON",
       "tarih": "2026-08-18",
       "fiyat": 1.993874,
       "tedavuldekiPaySayisi": 106053691,
       "kisiSayisi": 2517,
       "fonToplamDeger": 211457710.27,
-      "gunlukGetiri": null,
-      "paraGirisiCikisi": null,
+      "gunlukGetiri": -0.01219379,
+      "paraGirisiCikisi": 4116632.02,
       "yatirimciDegisimi": 23
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 106053691,
       "kisiSayisi": 2517,
       "fonToplamDeger": 211457710.27,
+      "gunlukGetiri": -0.01219379,
+      "paraGirisiCikisi": 4116632.02,
+      "yatirimciDegisimi": 23
+    },
+    {
+      "fonKodu": "SGT",
+      "fonAdi": "GARANTİ PORTFÖY SİBER GÜVENLİK TEKNOLOJİLERİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 2.018487,
+      "tedavuldekiPaySayisi": 103989051,
+      "kisiSayisi": 2494,
+      "fonToplamDeger": 209900527.93,
       "gunlukGetiri": null,
       "paraGirisiCikisi": null,
-      "yatirimciDegisimi": 23
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "SGT",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 1,
+    "observedDays": 2,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

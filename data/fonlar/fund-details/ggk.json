@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GGK",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 184376223,
     "kisiSayisi": 12072,
     "fonToplamDeger": 2561720479.09,
-    "gunlukGetiri": 0.00598225,
+    "gunlukGetiri": 0.01006871,
     "getiriler": {
       "birAy": 0.109846,
       "ucAy": -0.002118,
@@ -29,22 +29,22 @@
       "besYil": 12.756993
     },
     "paraAkisi": {
-      "gunluk": -4427623.99,
-      "besGun": -9273005.68,
+      "gunluk": -1280983.74,
+      "besGun": -8912886.83,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -19,
-      "besGun": -71,
+      "gunluk": -12,
+      "besGun": -58,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 184376223,
         "kisiSayisi": 12072,
         "fonToplamDeger": 2561720479.09,
-        "gunlukGetiri": 0.00598225,
-        "paraGirisiCikisi": -4427623.99,
-        "yatirimciDegisimi": -19
+        "gunlukGetiri": 0.01006871,
+        "paraGirisiCikisi": -1280983.74,
+        "yatirimciDegisimi": -12
+      },
+      {
+        "fonKodu": "GGK",
+        "fonAdi": "INVEO PORTFÖY ALTIN FON",
+        "tarih": "2026-08-17",
+        "fiyat": 13.755485,
+        "tedavuldekiPaySayisi": 184468420,
+        "kisiSayisi": 12084,
+        "fonToplamDeger": 2537452643.85,
+        "gunlukGetiri": -0.00404573,
+        "paraGirisiCikisi": -3115273.47,
+        "yatirimciDegisimi": -7
       },
       {
         "fonKodu": "GGK",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "GGK",
       "fonAdi": "INVEO PORTFÖY ALTIN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 13.755485,
+      "tedavuldekiPaySayisi": 184468420,
+      "kisiSayisi": 12084,
+      "fonToplamDeger": 2537452643.85,
+      "gunlukGetiri": -0.00404573,
+      "paraGirisiCikisi": -3115273.47,
+      "yatirimciDegisimi": -7
+    },
+    {
+      "fonKodu": "GGK",
+      "fonAdi": "INVEO PORTFÖY ALTIN FON",
       "tarih": "2026-08-18",
       "fiyat": 13.893985,
       "tedavuldekiPaySayisi": 184376223,
       "kisiSayisi": 12072,
       "fonToplamDeger": 2561720479.09,
-      "gunlukGetiri": 0.00598225,
-      "paraGirisiCikisi": -4427623.99,
-      "yatirimciDegisimi": -19
+      "gunlukGetiri": 0.01006871,
+      "paraGirisiCikisi": -1280983.74,
+      "yatirimciDegisimi": -12
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 184376223,
       "kisiSayisi": 12072,
       "fonToplamDeger": 2561720479.09,
-      "gunlukGetiri": 0.00598225,
-      "paraGirisiCikisi": -4427623.99,
-      "yatirimciDegisimi": -19
+      "gunlukGetiri": 0.01006871,
+      "paraGirisiCikisi": -1280983.74,
+      "yatirimciDegisimi": -12
+    },
+    {
+      "fonKodu": "GGK",
+      "fonAdi": "INVEO PORTFÖY ALTIN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 13.755485,
+      "tedavuldekiPaySayisi": 184468420,
+      "kisiSayisi": 12084,
+      "fonToplamDeger": 2537452643.85,
+      "gunlukGetiri": -0.00404573,
+      "paraGirisiCikisi": -3115273.47,
+      "yatirimciDegisimi": -7
     },
     {
       "fonKodu": "GGK",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

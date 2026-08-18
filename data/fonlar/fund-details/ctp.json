@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "CTP",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 9051870,
     "kisiSayisi": 1,
     "fonToplamDeger": 568734114.41,
-    "gunlukGetiri": 0.00345751,
+    "gunlukGetiri": 0.00152703,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 9051870,
         "kisiSayisi": 1,
         "fonToplamDeger": 568734114.41,
-        "gunlukGetiri": 0.00345751,
+        "gunlukGetiri": 0.00152703,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "CTP",
+        "fonAdi": "İŞ PORTFÖY AAF SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-17",
+        "fiyat": 62.734768,
+        "tedavuldekiPaySayisi": 9051870,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 567866967.24,
+        "gunlukGetiri": 0.00192754,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "CTP",
       "fonAdi": "İŞ PORTFÖY AAF SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 62.734768,
+      "tedavuldekiPaySayisi": 9051870,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 567866967.24,
+      "gunlukGetiri": 0.00192754,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "CTP",
+      "fonAdi": "İŞ PORTFÖY AAF SERBEST (DÖVİZ) ÖZEL FON",
       "tarih": "2026-08-18",
       "fiyat": 62.830566,
       "tedavuldekiPaySayisi": 9051870,
       "kisiSayisi": 1,
       "fonToplamDeger": 568734114.41,
-      "gunlukGetiri": 0.00345751,
+      "gunlukGetiri": 0.00152703,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 9051870,
       "kisiSayisi": 1,
       "fonToplamDeger": 568734114.41,
-      "gunlukGetiri": 0.00345751,
+      "gunlukGetiri": 0.00152703,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "CTP",
+      "fonAdi": "İŞ PORTFÖY AAF SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 62.734768,
+      "tedavuldekiPaySayisi": 9051870,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 567866967.24,
+      "gunlukGetiri": 0.00192754,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

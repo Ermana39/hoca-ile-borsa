@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KUB",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 813649385,
     "kisiSayisi": 3669,
     "fonToplamDeger": 611750351.85,
-    "gunlukGetiri": 0.00465944,
+    "gunlukGetiri": 0.00259363,
     "getiriler": {
       "birAy": 0.045041000000000005,
       "ucAy": 0.059561,
@@ -29,22 +29,22 @@
       "besYil": 6.762898
     },
     "paraAkisi": {
-      "gunluk": -346218,
-      "besGun": -2441105.48,
+      "gunluk": -265630.63,
+      "besGun": -1213253.85,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -12,
-      "besGun": -34,
+      "gunluk": -2,
+      "besGun": -29,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 813649385,
         "kisiSayisi": 3669,
         "fonToplamDeger": 611750351.85,
-        "gunlukGetiri": 0.00465944,
-        "paraGirisiCikisi": -346218,
-        "yatirimciDegisimi": -12
+        "gunlukGetiri": 0.00259363,
+        "paraGirisiCikisi": -265630.63,
+        "yatirimciDegisimi": -2
+      },
+      {
+        "fonKodu": "KUB",
+        "fonAdi": "KARE PORTFÖY DEĞİŞKEN (DÖVİZ) FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 0.749915,
+        "tedavuldekiPaySayisi": 814002683,
+        "kisiSayisi": 3671,
+        "fonToplamDeger": 610432844.64,
+        "gunlukGetiri": 0.00206047,
+        "paraGirisiCikisi": -80378.89,
+        "yatirimciDegisimi": -10
       },
       {
         "fonKodu": "KUB",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "KUB",
       "fonAdi": "KARE PORTFÖY DEĞİŞKEN (DÖVİZ) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 0.749915,
+      "tedavuldekiPaySayisi": 814002683,
+      "kisiSayisi": 3671,
+      "fonToplamDeger": 610432844.64,
+      "gunlukGetiri": 0.00206047,
+      "paraGirisiCikisi": -80378.89,
+      "yatirimciDegisimi": -10
+    },
+    {
+      "fonKodu": "KUB",
+      "fonAdi": "KARE PORTFÖY DEĞİŞKEN (DÖVİZ) FONU",
       "tarih": "2026-08-18",
       "fiyat": 0.75186,
       "tedavuldekiPaySayisi": 813649385,
       "kisiSayisi": 3669,
       "fonToplamDeger": 611750351.85,
-      "gunlukGetiri": 0.00465944,
-      "paraGirisiCikisi": -346218,
-      "yatirimciDegisimi": -12
+      "gunlukGetiri": 0.00259363,
+      "paraGirisiCikisi": -265630.63,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 813649385,
       "kisiSayisi": 3669,
       "fonToplamDeger": 611750351.85,
-      "gunlukGetiri": 0.00465944,
-      "paraGirisiCikisi": -346218,
-      "yatirimciDegisimi": -12
+      "gunlukGetiri": 0.00259363,
+      "paraGirisiCikisi": -265630.63,
+      "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "KUB",
+      "fonAdi": "KARE PORTFÖY DEĞİŞKEN (DÖVİZ) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 0.749915,
+      "tedavuldekiPaySayisi": 814002683,
+      "kisiSayisi": 3671,
+      "fonToplamDeger": 610432844.64,
+      "gunlukGetiri": 0.00206047,
+      "paraGirisiCikisi": -80378.89,
+      "yatirimciDegisimi": -10
     },
     {
       "fonKodu": "KUB",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

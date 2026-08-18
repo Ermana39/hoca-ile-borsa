@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PA2",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 35532322,
     "kisiSayisi": 392,
     "fonToplamDeger": 39132358.92,
-    "gunlukGetiri": 0.00601517,
+    "gunlukGetiri": 0.01169313,
     "getiriler": {
       "birAy": 0.103446,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 4557539.39,
-      "besGun": 5990309.61,
+      "gunluk": 494735.83,
+      "besGun": 5151778.31,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 33,
-      "besGun": 110,
+      "gunluk": 9,
+      "besGun": 103,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 35532322,
         "kisiSayisi": 392,
         "fonToplamDeger": 39132358.92,
-        "gunlukGetiri": 0.00601517,
-        "paraGirisiCikisi": 4557539.39,
-        "yatirimciDegisimi": 33
+        "gunlukGetiri": 0.01169313,
+        "paraGirisiCikisi": 494735.83,
+        "yatirimciDegisimi": 9
+      },
+      {
+        "fonKodu": "PA2",
+        "fonAdi": "PUSULA PORTFÖY ALTIN KATILIM FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 1.088588,
+        "tedavuldekiPaySayisi": 35083100,
+        "kisiSayisi": 383,
+        "fonToplamDeger": 38191058.04,
+        "gunlukGetiri": -0.00561233,
+        "paraGirisiCikisi": 4015845.76,
+        "yatirimciDegisimi": 24
       },
       {
         "fonKodu": "PA2",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "PA2",
       "fonAdi": "PUSULA PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.088588,
+      "tedavuldekiPaySayisi": 35083100,
+      "kisiSayisi": 383,
+      "fonToplamDeger": 38191058.04,
+      "gunlukGetiri": -0.00561233,
+      "paraGirisiCikisi": 4015845.76,
+      "yatirimciDegisimi": 24
+    },
+    {
+      "fonKodu": "PA2",
+      "fonAdi": "PUSULA PORTFÖY ALTIN KATILIM FONU",
       "tarih": "2026-08-18",
       "fiyat": 1.101317,
       "tedavuldekiPaySayisi": 35532322,
       "kisiSayisi": 392,
       "fonToplamDeger": 39132358.92,
-      "gunlukGetiri": 0.00601517,
-      "paraGirisiCikisi": 4557539.39,
-      "yatirimciDegisimi": 33
+      "gunlukGetiri": 0.01169313,
+      "paraGirisiCikisi": 494735.83,
+      "yatirimciDegisimi": 9
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 35532322,
       "kisiSayisi": 392,
       "fonToplamDeger": 39132358.92,
-      "gunlukGetiri": 0.00601517,
-      "paraGirisiCikisi": 4557539.39,
-      "yatirimciDegisimi": 33
+      "gunlukGetiri": 0.01169313,
+      "paraGirisiCikisi": 494735.83,
+      "yatirimciDegisimi": 9
+    },
+    {
+      "fonKodu": "PA2",
+      "fonAdi": "PUSULA PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.088588,
+      "tedavuldekiPaySayisi": 35083100,
+      "kisiSayisi": 383,
+      "fonToplamDeger": 38191058.04,
+      "gunlukGetiri": -0.00561233,
+      "paraGirisiCikisi": 4015845.76,
+      "yatirimciDegisimi": 24
     },
     {
       "fonKodu": "PA2",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

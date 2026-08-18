@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GZP",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 496253176,
     "kisiSayisi": 9911,
     "fonToplamDeger": 3812120007.83,
-    "gunlukGetiri": null,
+    "gunlukGetiri": 0.00182111,
     "getiriler": {
       "birAy": 0.032629,
       "ucAy": 0.071836,
@@ -29,22 +29,22 @@
       "besYil": 6.056585
     },
     "paraAkisi": {
-      "gunluk": null,
+      "gunluk": 2290975.43,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 29,
-      "besGun": 76,
+      "gunluk": 21,
+      "besGun": 61,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 496253176,
         "kisiSayisi": 9911,
         "fonToplamDeger": 3812120007.83,
+        "gunlukGetiri": 0.00182111,
+        "paraGirisiCikisi": 2290975.43,
+        "yatirimciDegisimi": 21
+      },
+      {
+        "fonKodu": "GZP",
+        "fonAdi": "GARANTİ PORTFÖY BİRİNCİ FON SEPETİ FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 7.667841,
+        "tedavuldekiPaySayisi": 495954942,
+        "kisiSayisi": 9890,
+        "fonToplamDeger": 3802903712.1,
         "gunlukGetiri": null,
         "paraGirisiCikisi": null,
-        "yatirimciDegisimi": 29
+        "yatirimciDegisimi": 8
       },
       {
         "fonKodu": "GZP",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "GZP",
       "fonAdi": "GARANTİ PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 7.667841,
+      "tedavuldekiPaySayisi": 495954942,
+      "kisiSayisi": 9890,
+      "fonToplamDeger": 3802903712.1,
+      "gunlukGetiri": null,
+      "paraGirisiCikisi": null,
+      "yatirimciDegisimi": 8
+    },
+    {
+      "fonKodu": "GZP",
+      "fonAdi": "GARANTİ PORTFÖY BİRİNCİ FON SEPETİ FONU",
       "tarih": "2026-08-18",
       "fiyat": 7.681805,
       "tedavuldekiPaySayisi": 496253176,
       "kisiSayisi": 9911,
       "fonToplamDeger": 3812120007.83,
-      "gunlukGetiri": null,
-      "paraGirisiCikisi": null,
-      "yatirimciDegisimi": 29
+      "gunlukGetiri": 0.00182111,
+      "paraGirisiCikisi": 2290975.43,
+      "yatirimciDegisimi": 21
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 496253176,
       "kisiSayisi": 9911,
       "fonToplamDeger": 3812120007.83,
+      "gunlukGetiri": 0.00182111,
+      "paraGirisiCikisi": 2290975.43,
+      "yatirimciDegisimi": 21
+    },
+    {
+      "fonKodu": "GZP",
+      "fonAdi": "GARANTİ PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 7.667841,
+      "tedavuldekiPaySayisi": 495954942,
+      "kisiSayisi": 9890,
+      "fonToplamDeger": 3802903712.1,
       "gunlukGetiri": null,
       "paraGirisiCikisi": null,
-      "yatirimciDegisimi": 29
+      "yatirimciDegisimi": 8
     },
     {
       "fonKodu": "GZP",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KNV",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 4490340,
     "kisiSayisi": 5,
     "fonToplamDeger": 323125638.33,
-    "gunlukGetiri": 0.00875448,
+    "gunlukGetiri": 0.00410095,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 4490340,
         "kisiSayisi": 5,
         "fonToplamDeger": 323125638.33,
-        "gunlukGetiri": 0.00875448,
+        "gunlukGetiri": 0.00410095,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "KNV",
+        "fonAdi": "AK PORTFÖY OPERA SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-17",
+        "fiyat": 71.666272,
+        "tedavuldekiPaySayisi": 4490340,
+        "kisiSayisi": 5,
+        "fonToplamDeger": 321805929.11,
+        "gunlukGetiri": 0.00463453,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "KNV",
       "fonAdi": "AK PORTFÖY OPERA SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 71.666272,
+      "tedavuldekiPaySayisi": 4490340,
+      "kisiSayisi": 5,
+      "fonToplamDeger": 321805929.11,
+      "gunlukGetiri": 0.00463453,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KNV",
+      "fonAdi": "AK PORTFÖY OPERA SERBEST (DÖVİZ) ÖZEL FON",
       "tarih": "2026-08-18",
       "fiyat": 71.960172,
       "tedavuldekiPaySayisi": 4490340,
       "kisiSayisi": 5,
       "fonToplamDeger": 323125638.33,
-      "gunlukGetiri": 0.00875448,
+      "gunlukGetiri": 0.00410095,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 4490340,
       "kisiSayisi": 5,
       "fonToplamDeger": 323125638.33,
-      "gunlukGetiri": 0.00875448,
+      "gunlukGetiri": 0.00410095,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KNV",
+      "fonAdi": "AK PORTFÖY OPERA SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 71.666272,
+      "tedavuldekiPaySayisi": 4490340,
+      "kisiSayisi": 5,
+      "fonToplamDeger": 321805929.11,
+      "gunlukGetiri": 0.00463453,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GMI",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 487471493,
     "kisiSayisi": 5244,
     "fonToplamDeger": 654720291.22,
-    "gunlukGetiri": -0.00987256,
+    "gunlukGetiri": 0.00183794,
     "getiriler": {
       "birAy": 0.130963,
       "ucAy": -0.144378,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -21084371.36,
-      "besGun": 5845240.36,
+      "gunluk": 826196.83,
+      "besGun": -2124521.19,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -8,
+      "gunluk": -7,
       "besGun": -21,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 487471493,
         "kisiSayisi": 5244,
         "fonToplamDeger": 654720291.22,
-        "gunlukGetiri": -0.00987256,
-        "paraGirisiCikisi": -21084371.36,
-        "yatirimciDegisimi": -8
+        "gunlukGetiri": 0.00183794,
+        "paraGirisiCikisi": 826196.83,
+        "yatirimciDegisimi": -7
+      },
+      {
+        "fonKodu": "GMI",
+        "fonAdi": "AK PORTFÖY GÜMÜŞ SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 1.340631,
+        "tedavuldekiPaySayisi": 486856349,
+        "kisiSayisi": 5251,
+        "fonToplamDeger": 652694761.44,
+        "gunlukGetiri": -0.01168902,
+        "paraGirisiCikisi": -21870371.75,
+        "yatirimciDegisimi": -1
       },
       {
         "fonKodu": "GMI",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "GMI",
       "fonAdi": "AK PORTFÖY GÜMÜŞ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.340631,
+      "tedavuldekiPaySayisi": 486856349,
+      "kisiSayisi": 5251,
+      "fonToplamDeger": 652694761.44,
+      "gunlukGetiri": -0.01168902,
+      "paraGirisiCikisi": -21870371.75,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "GMI",
+      "fonAdi": "AK PORTFÖY GÜMÜŞ SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 1.343095,
       "tedavuldekiPaySayisi": 487471493,
       "kisiSayisi": 5244,
       "fonToplamDeger": 654720291.22,
-      "gunlukGetiri": -0.00987256,
-      "paraGirisiCikisi": -21084371.36,
-      "yatirimciDegisimi": -8
+      "gunlukGetiri": 0.00183794,
+      "paraGirisiCikisi": 826196.83,
+      "yatirimciDegisimi": -7
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 487471493,
       "kisiSayisi": 5244,
       "fonToplamDeger": 654720291.22,
-      "gunlukGetiri": -0.00987256,
-      "paraGirisiCikisi": -21084371.36,
-      "yatirimciDegisimi": -8
+      "gunlukGetiri": 0.00183794,
+      "paraGirisiCikisi": 826196.83,
+      "yatirimciDegisimi": -7
+    },
+    {
+      "fonKodu": "GMI",
+      "fonAdi": "AK PORTFÖY GÜMÜŞ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.340631,
+      "tedavuldekiPaySayisi": 486856349,
+      "kisiSayisi": 5251,
+      "fonToplamDeger": 652694761.44,
+      "gunlukGetiri": -0.01168902,
+      "paraGirisiCikisi": -21870371.75,
+      "yatirimciDegisimi": -1
     },
     {
       "fonKodu": "GMI",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

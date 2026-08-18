@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KUT",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 675380138,
     "kisiSayisi": 40885,
     "fonToplamDeger": 8255568198.07,
-    "gunlukGetiri": 0.01605587,
+    "gunlukGetiri": 0.02225888,
     "getiriler": {
       "birAy": 0.144867,
       "ucAy": -0.032448000000000005,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -7353526.59,
-      "besGun": 28367211.56,
+      "gunluk": -10369024.38,
+      "besGun": -16450464.17,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 38,
-      "besGun": 163,
+      "gunluk": -4,
+      "besGun": 161,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 675380138,
         "kisiSayisi": 40885,
         "fonToplamDeger": 8255568198.07,
-        "gunlukGetiri": 0.01605587,
-        "paraGirisiCikisi": -7353526.59,
-        "yatirimciDegisimi": 38
+        "gunlukGetiri": 0.02225888,
+        "paraGirisiCikisi": -10369024.38,
+        "yatirimciDegisimi": -4
+      },
+      {
+        "fonKodu": "KUT",
+        "fonAdi": "KUVEYT TÜRK PORTFÖY KIYMETLİ MADENLER KATILIM FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 11.957428,
+        "tedavuldekiPaySayisi": 676228418,
+        "kisiSayisi": 40889,
+        "fonToplamDeger": 8085952661.75,
+        "gunlukGetiri": -0.00606795,
+        "paraGirisiCikisi": 2949837.7,
+        "yatirimciDegisimi": 42
       },
       {
         "fonKodu": "KUT",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "KUT",
       "fonAdi": "KUVEYT TÜRK PORTFÖY KIYMETLİ MADENLER KATILIM FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 11.957428,
+      "tedavuldekiPaySayisi": 676228418,
+      "kisiSayisi": 40889,
+      "fonToplamDeger": 8085952661.75,
+      "gunlukGetiri": -0.00606795,
+      "paraGirisiCikisi": 2949837.7,
+      "yatirimciDegisimi": 42
+    },
+    {
+      "fonKodu": "KUT",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY KIYMETLİ MADENLER KATILIM FONU",
       "tarih": "2026-08-18",
       "fiyat": 12.223587,
       "tedavuldekiPaySayisi": 675380138,
       "kisiSayisi": 40885,
       "fonToplamDeger": 8255568198.07,
-      "gunlukGetiri": 0.01605587,
-      "paraGirisiCikisi": -7353526.59,
-      "yatirimciDegisimi": 38
+      "gunlukGetiri": 0.02225888,
+      "paraGirisiCikisi": -10369024.38,
+      "yatirimciDegisimi": -4
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 675380138,
       "kisiSayisi": 40885,
       "fonToplamDeger": 8255568198.07,
-      "gunlukGetiri": 0.01605587,
-      "paraGirisiCikisi": -7353526.59,
-      "yatirimciDegisimi": 38
+      "gunlukGetiri": 0.02225888,
+      "paraGirisiCikisi": -10369024.38,
+      "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "KUT",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY KIYMETLİ MADENLER KATILIM FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 11.957428,
+      "tedavuldekiPaySayisi": 676228418,
+      "kisiSayisi": 40889,
+      "fonToplamDeger": 8085952661.75,
+      "gunlukGetiri": -0.00606795,
+      "paraGirisiCikisi": 2949837.7,
+      "yatirimciDegisimi": 42
     },
     {
       "fonKodu": "KUT",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

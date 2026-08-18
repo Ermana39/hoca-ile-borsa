@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KNC",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 5362076,
     "kisiSayisi": 16,
     "fonToplamDeger": 361813718.87,
-    "gunlukGetiri": 0.0037302,
+    "gunlukGetiri": 0.00208129,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 5362076,
         "kisiSayisi": 16,
         "fonToplamDeger": 361813718.87,
-        "gunlukGetiri": 0.0037302,
+        "gunlukGetiri": 0.00208129,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "KNC",
+        "fonAdi": "AK PORTFÖY ÖPY ÜÇÜNCÜ SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-17",
+        "fiyat": 67.336279,
+        "tedavuldekiPaySayisi": 5362076,
+        "kisiSayisi": 16,
+        "fonToplamDeger": 361062243.33,
+        "gunlukGetiri": 0.00164549,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "KNC",
       "fonAdi": "AK PORTFÖY ÖPY ÜÇÜNCÜ SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 67.336279,
+      "tedavuldekiPaySayisi": 5362076,
+      "kisiSayisi": 16,
+      "fonToplamDeger": 361062243.33,
+      "gunlukGetiri": 0.00164549,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KNC",
+      "fonAdi": "AK PORTFÖY ÖPY ÜÇÜNCÜ SERBEST (DÖVİZ) ÖZEL FON",
       "tarih": "2026-08-18",
       "fiyat": 67.476425,
       "tedavuldekiPaySayisi": 5362076,
       "kisiSayisi": 16,
       "fonToplamDeger": 361813718.87,
-      "gunlukGetiri": 0.0037302,
+      "gunlukGetiri": 0.00208129,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 5362076,
       "kisiSayisi": 16,
       "fonToplamDeger": 361813718.87,
-      "gunlukGetiri": 0.0037302,
+      "gunlukGetiri": 0.00208129,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KNC",
+      "fonAdi": "AK PORTFÖY ÖPY ÜÇÜNCÜ SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 67.336279,
+      "tedavuldekiPaySayisi": 5362076,
+      "kisiSayisi": 16,
+      "fonToplamDeger": 361062243.33,
+      "gunlukGetiri": 0.00164549,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

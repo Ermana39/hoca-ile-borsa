@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PPV",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 6173231616,
     "kisiSayisi": 149,
     "fonToplamDeger": 7083622006.35,
-    "gunlukGetiri": 0.00427889,
+    "gunlukGetiri": 0.00106783,
     "getiriler": {
       "birAy": 0.031588,
       "ucAy": 0.105077,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -45372921.2,
-      "besGun": -138962560.64,
+      "gunluk": -24611581.17,
+      "besGun": -33853697.9,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": -34,
+      "gunluk": -12,
+      "besGun": -11,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 6173231616,
         "kisiSayisi": 149,
         "fonToplamDeger": 7083622006.35,
-        "gunlukGetiri": 0.00427889,
-        "paraGirisiCikisi": -45372921.2,
-        "yatirimciDegisimi": 1
+        "gunlukGetiri": 0.00106783,
+        "paraGirisiCikisi": -24611581.17,
+        "yatirimciDegisimi": -12
+      },
+      {
+        "fonKodu": "PPV",
+        "fonAdi": "AKTİF PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 1.14625,
+        "tedavuldekiPaySayisi": 6194680103,
+        "kisiSayisi": 161,
+        "fonToplamDeger": 7100652509.42,
+        "gunlukGetiri": 0.00320764,
+        "paraGirisiCikisi": -20739194.1,
+        "yatirimciDegisimi": 13
       },
       {
         "fonKodu": "PPV",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "PPV",
       "fonAdi": "AKTİF PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.14625,
+      "tedavuldekiPaySayisi": 6194680103,
+      "kisiSayisi": 161,
+      "fonToplamDeger": 7100652509.42,
+      "gunlukGetiri": 0.00320764,
+      "paraGirisiCikisi": -20739194.1,
+      "yatirimciDegisimi": 13
+    },
+    {
+      "fonKodu": "PPV",
+      "fonAdi": "AKTİF PORTFÖY PARA PİYASASI SERBEST (TL) FON",
       "tarih": "2026-08-18",
       "fiyat": 1.147474,
       "tedavuldekiPaySayisi": 6173231616,
       "kisiSayisi": 149,
       "fonToplamDeger": 7083622006.35,
-      "gunlukGetiri": 0.00427889,
-      "paraGirisiCikisi": -45372921.2,
-      "yatirimciDegisimi": 1
+      "gunlukGetiri": 0.00106783,
+      "paraGirisiCikisi": -24611581.17,
+      "yatirimciDegisimi": -12
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 6173231616,
       "kisiSayisi": 149,
       "fonToplamDeger": 7083622006.35,
-      "gunlukGetiri": 0.00427889,
-      "paraGirisiCikisi": -45372921.2,
-      "yatirimciDegisimi": 1
+      "gunlukGetiri": 0.00106783,
+      "paraGirisiCikisi": -24611581.17,
+      "yatirimciDegisimi": -12
+    },
+    {
+      "fonKodu": "PPV",
+      "fonAdi": "AKTİF PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.14625,
+      "tedavuldekiPaySayisi": 6194680103,
+      "kisiSayisi": 161,
+      "fonToplamDeger": 7100652509.42,
+      "gunlukGetiri": 0.00320764,
+      "paraGirisiCikisi": -20739194.1,
+      "yatirimciDegisimi": 13
     },
     {
       "fonKodu": "PPV",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

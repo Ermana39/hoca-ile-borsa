@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "P1A",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 310636858,
     "kisiSayisi": 348,
     "fonToplamDeger": 473669602.94,
-    "gunlukGetiri": 0.00475283,
+    "gunlukGetiri": 0.00119171,
     "getiriler": {
       "birAy": 0.035596,
       "ucAy": 0.117314,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -67063817.17,
-      "besGun": -146931555.99,
+      "gunluk": -37512756.87,
+      "besGun": -127612044.41,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": -8,
-      "besGun": -13,
+      "besGun": -14,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 310636858,
         "kisiSayisi": 348,
         "fonToplamDeger": 473669602.94,
-        "gunlukGetiri": 0.00475283,
-        "paraGirisiCikisi": -67063817.17,
+        "gunlukGetiri": 0.00119171,
+        "paraGirisiCikisi": -37512756.87,
         "yatirimciDegisimi": -8
+      },
+      {
+        "fonKodu": "P1A",
+        "fonAdi": "A1 CAPİTAL PORTFÖY PARA PİYASASI (TL) SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 1.523019,
+        "tedavuldekiPaySayisi": 335238065,
+        "kisiSayisi": 356,
+        "fonToplamDeger": 510574014.84,
+        "gunlukGetiri": 0.00355688,
+        "paraGirisiCikisi": -29515885.86,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "P1A",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "P1A",
       "fonAdi": "A1 CAPİTAL PORTFÖY PARA PİYASASI (TL) SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.523019,
+      "tedavuldekiPaySayisi": 335238065,
+      "kisiSayisi": 356,
+      "fonToplamDeger": 510574014.84,
+      "gunlukGetiri": 0.00355688,
+      "paraGirisiCikisi": -29515885.86,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "P1A",
+      "fonAdi": "A1 CAPİTAL PORTFÖY PARA PİYASASI (TL) SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 1.524834,
       "tedavuldekiPaySayisi": 310636858,
       "kisiSayisi": 348,
       "fonToplamDeger": 473669602.94,
-      "gunlukGetiri": 0.00475283,
-      "paraGirisiCikisi": -67063817.17,
+      "gunlukGetiri": 0.00119171,
+      "paraGirisiCikisi": -37512756.87,
       "yatirimciDegisimi": -8
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 310636858,
       "kisiSayisi": 348,
       "fonToplamDeger": 473669602.94,
-      "gunlukGetiri": 0.00475283,
-      "paraGirisiCikisi": -67063817.17,
+      "gunlukGetiri": 0.00119171,
+      "paraGirisiCikisi": -37512756.87,
       "yatirimciDegisimi": -8
+    },
+    {
+      "fonKodu": "P1A",
+      "fonAdi": "A1 CAPİTAL PORTFÖY PARA PİYASASI (TL) SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.523019,
+      "tedavuldekiPaySayisi": 335238065,
+      "kisiSayisi": 356,
+      "fonToplamDeger": 510574014.84,
+      "gunlukGetiri": 0.00355688,
+      "paraGirisiCikisi": -29515885.86,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "P1A",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

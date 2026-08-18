@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "FHP",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 2924147640,
     "kisiSayisi": 48,
     "fonToplamDeger": 9915338530.05,
-    "gunlukGetiri": 0.00431987,
+    "gunlukGetiri": 0.00107345,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -3112794874.01,
-      "besGun": 556507135.95,
+      "gunluk": -1149664600.15,
+      "besGun": -680227296.15,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 2924147640,
         "kisiSayisi": 48,
         "fonToplamDeger": 9915338530.05,
-        "gunlukGetiri": 0.00431987,
-        "paraGirisiCikisi": -3112794874.01,
+        "gunlukGetiri": 0.00107345,
+        "paraGirisiCikisi": -1149664600.15,
         "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "FHP",
+        "fonAdi": "FİBA PORTFÖY ÖPY PARA PİYASASI SERBEST (TL) ÖZEL FON",
+        "tarih": "2026-08-17",
+        "fiyat": 3.387211,
+        "tedavuldekiPaySayisi": 3263197028,
+        "kisiSayisi": 49,
+        "fonToplamDeger": 11053135824.4,
+        "gunlukGetiri": 0.00324294,
+        "paraGirisiCikisi": -1961025212.3,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "FHP",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "FHP",
       "fonAdi": "FİBA PORTFÖY ÖPY PARA PİYASASI SERBEST (TL) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 3.387211,
+      "tedavuldekiPaySayisi": 3263197028,
+      "kisiSayisi": 49,
+      "fonToplamDeger": 11053135824.4,
+      "gunlukGetiri": 0.00324294,
+      "paraGirisiCikisi": -1961025212.3,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "FHP",
+      "fonAdi": "FİBA PORTFÖY ÖPY PARA PİYASASI SERBEST (TL) ÖZEL FON",
       "tarih": "2026-08-18",
       "fiyat": 3.390847,
       "tedavuldekiPaySayisi": 2924147640,
       "kisiSayisi": 48,
       "fonToplamDeger": 9915338530.05,
-      "gunlukGetiri": 0.00431987,
-      "paraGirisiCikisi": -3112794874.01,
+      "gunlukGetiri": 0.00107345,
+      "paraGirisiCikisi": -1149664600.15,
       "yatirimciDegisimi": -1
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 2924147640,
       "kisiSayisi": 48,
       "fonToplamDeger": 9915338530.05,
-      "gunlukGetiri": 0.00431987,
-      "paraGirisiCikisi": -3112794874.01,
+      "gunlukGetiri": 0.00107345,
+      "paraGirisiCikisi": -1149664600.15,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "FHP",
+      "fonAdi": "FİBA PORTFÖY ÖPY PARA PİYASASI SERBEST (TL) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 3.387211,
+      "tedavuldekiPaySayisi": 3263197028,
+      "kisiSayisi": 49,
+      "fonToplamDeger": 11053135824.4,
+      "gunlukGetiri": 0.00324294,
+      "paraGirisiCikisi": -1961025212.3,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "FHP",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

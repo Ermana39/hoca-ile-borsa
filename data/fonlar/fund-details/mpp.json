@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "MPP",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 17437679,
     "kisiSayisi": 1280,
     "fonToplamDeger": 379130438.64,
-    "gunlukGetiri": 0.00357,
+    "gunlukGetiri": 0.00260242,
     "getiriler": {
       "birAy": 0.024184999999999998,
       "ucAy": -0.015861,
@@ -29,22 +29,22 @@
       "besYil": 5.416321
     },
     "paraAkisi": {
-      "gunluk": -3063886.02,
-      "besGun": -9217287.13,
+      "gunluk": -1648697.68,
+      "besGun": -7603772.06,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -18,
-      "besGun": -58,
+      "gunluk": -10,
+      "besGun": -49,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 17437679,
         "kisiSayisi": 1280,
         "fonToplamDeger": 379130438.64,
-        "gunlukGetiri": 0.00357,
-        "paraGirisiCikisi": -3063886.02,
-        "yatirimciDegisimi": -18
+        "gunlukGetiri": 0.00260242,
+        "paraGirisiCikisi": -1648697.68,
+        "yatirimciDegisimi": -10
+      },
+      {
+        "fonKodu": "MPP",
+        "fonAdi": "MEKSA PORTFÖY PRİME SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 21.685589,
+        "tedavuldekiPaySayisi": 17513509,
+        "kisiSayisi": 1290,
+        "fonToplamDeger": 379790752,
+        "gunlukGetiri": 0.00096507,
+        "paraGirisiCikisi": -1411514.99,
+        "yatirimciDegisimi": -8
       },
       {
         "fonKodu": "MPP",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "MPP",
       "fonAdi": "MEKSA PORTFÖY PRİME SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 21.685589,
+      "tedavuldekiPaySayisi": 17513509,
+      "kisiSayisi": 1290,
+      "fonToplamDeger": 379790752,
+      "gunlukGetiri": 0.00096507,
+      "paraGirisiCikisi": -1411514.99,
+      "yatirimciDegisimi": -8
+    },
+    {
+      "fonKodu": "MPP",
+      "fonAdi": "MEKSA PORTFÖY PRİME SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 21.742024,
       "tedavuldekiPaySayisi": 17437679,
       "kisiSayisi": 1280,
       "fonToplamDeger": 379130438.64,
-      "gunlukGetiri": 0.00357,
-      "paraGirisiCikisi": -3063886.02,
-      "yatirimciDegisimi": -18
+      "gunlukGetiri": 0.00260242,
+      "paraGirisiCikisi": -1648697.68,
+      "yatirimciDegisimi": -10
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 17437679,
       "kisiSayisi": 1280,
       "fonToplamDeger": 379130438.64,
-      "gunlukGetiri": 0.00357,
-      "paraGirisiCikisi": -3063886.02,
-      "yatirimciDegisimi": -18
+      "gunlukGetiri": 0.00260242,
+      "paraGirisiCikisi": -1648697.68,
+      "yatirimciDegisimi": -10
+    },
+    {
+      "fonKodu": "MPP",
+      "fonAdi": "MEKSA PORTFÖY PRİME SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 21.685589,
+      "tedavuldekiPaySayisi": 17513509,
+      "kisiSayisi": 1290,
+      "fonToplamDeger": 379790752,
+      "gunlukGetiri": 0.00096507,
+      "paraGirisiCikisi": -1411514.99,
+      "yatirimciDegisimi": -8
     },
     {
       "fonKodu": "MPP",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

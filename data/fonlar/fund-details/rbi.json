@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "RBI",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 1224039,
     "kisiSayisi": 89,
     "fonToplamDeger": 68777057.67,
-    "gunlukGetiri": 0.00388421,
+    "gunlukGetiri": 0.00639442,
     "getiriler": {
       "birAy": 0.009538999999999999,
       "ucAy": 0.033802,
@@ -30,21 +30,21 @@
     },
     "paraAkisi": {
       "gunluk": -2272099.07,
-      "besGun": -4317454.95,
+      "besGun": -4316896.8,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": -1,
-      "besGun": -3,
+      "besGun": -2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 1224039,
         "kisiSayisi": 89,
         "fonToplamDeger": 68777057.67,
-        "gunlukGetiri": 0.00388421,
+        "gunlukGetiri": 0.00639442,
         "paraGirisiCikisi": -2272099.07,
         "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "RBI",
+        "fonAdi": "RE-PIE PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 55.831605,
+        "tedavuldekiPaySayisi": 1264476,
+        "kisiSayisi": 90,
+        "fonToplamDeger": 70597724.66,
+        "gunlukGetiri": -0.00249426,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "RBI",
@@ -188,12 +200,24 @@
     {
       "fonKodu": "RBI",
       "fonAdi": "RE-PIE PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 55.831605,
+      "tedavuldekiPaySayisi": 1264476,
+      "kisiSayisi": 90,
+      "fonToplamDeger": 70597724.66,
+      "gunlukGetiri": -0.00249426,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "RBI",
+      "fonAdi": "RE-PIE PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
       "tarih": "2026-08-18",
       "fiyat": 56.188616,
       "tedavuldekiPaySayisi": 1224039,
       "kisiSayisi": 89,
       "fonToplamDeger": 68777057.67,
-      "gunlukGetiri": 0.00388421,
+      "gunlukGetiri": 0.00639442,
       "paraGirisiCikisi": -2272099.07,
       "yatirimciDegisimi": -1
     }
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 1224039,
       "kisiSayisi": 89,
       "fonToplamDeger": 68777057.67,
-      "gunlukGetiri": 0.00388421,
+      "gunlukGetiri": 0.00639442,
       "paraGirisiCikisi": -2272099.07,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "RBI",
+      "fonAdi": "RE-PIE PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 55.831605,
+      "tedavuldekiPaySayisi": 1264476,
+      "kisiSayisi": 90,
+      "fonToplamDeger": 70597724.66,
+      "gunlukGetiri": -0.00249426,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "RBI",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

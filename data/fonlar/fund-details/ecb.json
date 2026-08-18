@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ECB",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 14782236,
     "kisiSayisi": 3174,
     "fonToplamDeger": 787725966.42,
-    "gunlukGetiri": 0.00411117,
+    "gunlukGetiri": 0.00100516,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -120778331.75,
-      "besGun": 59198244.74,
+      "gunluk": -90080263.97,
+      "besGun": 9271279.05,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 30,
-      "besGun": 24,
+      "gunluk": 7,
+      "besGun": 35,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 14782236,
         "kisiSayisi": 3174,
         "fonToplamDeger": 787725966.42,
-        "gunlukGetiri": 0.00411117,
-        "paraGirisiCikisi": -120778331.75,
-        "yatirimciDegisimi": 30
+        "gunlukGetiri": 0.00100516,
+        "paraGirisiCikisi": -90080263.97,
+        "yatirimciDegisimi": 7
+      },
+      {
+        "fonKodu": "ECB",
+        "fonAdi": "GLOBAL MD PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 53.235178,
+        "tedavuldekiPaySayisi": 16472656,
+        "kisiSayisi": 3167,
+        "fonToplamDeger": 876924776.93,
+        "gunlukGetiri": 0.00310289,
+        "paraGirisiCikisi": -30667242.23,
+        "yatirimciDegisimi": 23
       },
       {
         "fonKodu": "ECB",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "ECB",
       "fonAdi": "GLOBAL MD PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 53.235178,
+      "tedavuldekiPaySayisi": 16472656,
+      "kisiSayisi": 3167,
+      "fonToplamDeger": 876924776.93,
+      "gunlukGetiri": 0.00310289,
+      "paraGirisiCikisi": -30667242.23,
+      "yatirimciDegisimi": 23
+    },
+    {
+      "fonKodu": "ECB",
+      "fonAdi": "GLOBAL MD PORTFÖY PARA PİYASASI (TL) FONU",
       "tarih": "2026-08-18",
       "fiyat": 53.288688,
       "tedavuldekiPaySayisi": 14782236,
       "kisiSayisi": 3174,
       "fonToplamDeger": 787725966.42,
-      "gunlukGetiri": 0.00411117,
-      "paraGirisiCikisi": -120778331.75,
-      "yatirimciDegisimi": 30
+      "gunlukGetiri": 0.00100516,
+      "paraGirisiCikisi": -90080263.97,
+      "yatirimciDegisimi": 7
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 14782236,
       "kisiSayisi": 3174,
       "fonToplamDeger": 787725966.42,
-      "gunlukGetiri": 0.00411117,
-      "paraGirisiCikisi": -120778331.75,
-      "yatirimciDegisimi": 30
+      "gunlukGetiri": 0.00100516,
+      "paraGirisiCikisi": -90080263.97,
+      "yatirimciDegisimi": 7
+    },
+    {
+      "fonKodu": "ECB",
+      "fonAdi": "GLOBAL MD PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 53.235178,
+      "tedavuldekiPaySayisi": 16472656,
+      "kisiSayisi": 3167,
+      "fonToplamDeger": 876924776.93,
+      "gunlukGetiri": 0.00310289,
+      "paraGirisiCikisi": -30667242.23,
+      "yatirimciDegisimi": 23
     },
     {
       "fonKodu": "ECB",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

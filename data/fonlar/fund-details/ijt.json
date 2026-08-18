@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IJT",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 152988458,
     "kisiSayisi": 1645,
     "fonToplamDeger": 1083108526.75,
-    "gunlukGetiri": 0.00363153,
+    "gunlukGetiri": 0.00389751,
     "getiriler": {
       "birAy": 0.0041860000000000005,
       "ucAy": 0.039954,
@@ -29,8 +29,8 @@
       "besYil": 6.4636890000000005
     },
     "paraAkisi": {
-      "gunluk": 451613544.36,
-      "besGun": 451103803.99,
+      "gunluk": -1042545.86,
+      "besGun": 449515227.85,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 152988458,
         "kisiSayisi": 1645,
         "fonToplamDeger": 1083108526.75,
-        "gunlukGetiri": 0.00363153,
-        "paraGirisiCikisi": 451613544.36,
+        "gunlukGetiri": 0.00389751,
+        "paraGirisiCikisi": -1042545.86,
         "yatirimciDegisimi": -4
+      },
+      {
+        "fonKodu": "IJT",
+        "fonAdi": "İŞ PORTFÖY TARIM SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 7.052189,
+        "tedavuldekiPaySayisi": 153135717,
+        "kisiSayisi": 1649,
+        "fonToplamDeger": 1079942051.33,
+        "gunlukGetiri": -0.00026495,
+        "paraGirisiCikisi": 450898706.54,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "IJT",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "IJT",
       "fonAdi": "İŞ PORTFÖY TARIM SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 7.052189,
+      "tedavuldekiPaySayisi": 153135717,
+      "kisiSayisi": 1649,
+      "fonToplamDeger": 1079942051.33,
+      "gunlukGetiri": -0.00026495,
+      "paraGirisiCikisi": 450898706.54,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "IJT",
+      "fonAdi": "İŞ PORTFÖY TARIM SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 7.079675,
       "tedavuldekiPaySayisi": 152988458,
       "kisiSayisi": 1645,
       "fonToplamDeger": 1083108526.75,
-      "gunlukGetiri": 0.00363153,
-      "paraGirisiCikisi": 451613544.36,
+      "gunlukGetiri": 0.00389751,
+      "paraGirisiCikisi": -1042545.86,
       "yatirimciDegisimi": -4
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 152988458,
       "kisiSayisi": 1645,
       "fonToplamDeger": 1083108526.75,
-      "gunlukGetiri": 0.00363153,
-      "paraGirisiCikisi": 451613544.36,
+      "gunlukGetiri": 0.00389751,
+      "paraGirisiCikisi": -1042545.86,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "IJT",
+      "fonAdi": "İŞ PORTFÖY TARIM SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 7.052189,
+      "tedavuldekiPaySayisi": 153135717,
+      "kisiSayisi": 1649,
+      "fonToplamDeger": 1079942051.33,
+      "gunlukGetiri": -0.00026495,
+      "paraGirisiCikisi": 450898706.54,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "IJT",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

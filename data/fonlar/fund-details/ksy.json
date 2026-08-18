@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KSY",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 374474256,
     "kisiSayisi": 86,
     "fonToplamDeger": 4123518680.91,
-    "gunlukGetiri": 0.0045244,
+    "gunlukGetiri": 0.00111754,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 2650982.7,
-      "besGun": 1289637.12,
+      "gunluk": 3003350.32,
+      "besGun": 2651376.05,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 374474256,
         "kisiSayisi": 86,
         "fonToplamDeger": 4123518680.91,
-        "gunlukGetiri": 0.0045244,
-        "paraGirisiCikisi": 2650982.7,
+        "gunlukGetiri": 0.00111754,
+        "paraGirisiCikisi": 3003350.32,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "KSY",
+        "fonAdi": "YAPI KREDİ PORTFÖY PY KANDİLLİ SERBEST ÖZEL FON",
+        "tarih": "2026-08-17",
+        "fiyat": 10.999196,
+        "tedavuldekiPaySayisi": 374201509,
+        "kisiSayisi": 86,
+        "fonToplamDeger": 4115915918.17,
+        "gunlukGetiri": 0.00340306,
+        "paraGirisiCikisi": -351974.27,
         "yatirimciDegisimi": 0
       },
       {
@@ -188,13 +200,25 @@
     {
       "fonKodu": "KSY",
       "fonAdi": "YAPI KREDİ PORTFÖY PY KANDİLLİ SERBEST ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 10.999196,
+      "tedavuldekiPaySayisi": 374201509,
+      "kisiSayisi": 86,
+      "fonToplamDeger": 4115915918.17,
+      "gunlukGetiri": 0.00340306,
+      "paraGirisiCikisi": -351974.27,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KSY",
+      "fonAdi": "YAPI KREDİ PORTFÖY PY KANDİLLİ SERBEST ÖZEL FON",
       "tarih": "2026-08-18",
       "fiyat": 11.011488,
       "tedavuldekiPaySayisi": 374474256,
       "kisiSayisi": 86,
       "fonToplamDeger": 4123518680.91,
-      "gunlukGetiri": 0.0045244,
-      "paraGirisiCikisi": 2650982.7,
+      "gunlukGetiri": 0.00111754,
+      "paraGirisiCikisi": 3003350.32,
       "yatirimciDegisimi": 0
     }
   ],
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 374474256,
       "kisiSayisi": 86,
       "fonToplamDeger": 4123518680.91,
-      "gunlukGetiri": 0.0045244,
-      "paraGirisiCikisi": 2650982.7,
+      "gunlukGetiri": 0.00111754,
+      "paraGirisiCikisi": 3003350.32,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KSY",
+      "fonAdi": "YAPI KREDİ PORTFÖY PY KANDİLLİ SERBEST ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 10.999196,
+      "tedavuldekiPaySayisi": 374201509,
+      "kisiSayisi": 86,
+      "fonToplamDeger": 4115915918.17,
+      "gunlukGetiri": 0.00340306,
+      "paraGirisiCikisi": -351974.27,
       "yatirimciDegisimi": 0
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

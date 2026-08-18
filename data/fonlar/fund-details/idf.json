@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IDF",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 168624717,
     "kisiSayisi": 4340,
     "fonToplamDeger": 12999519810.67,
-    "gunlukGetiri": 0.00328522,
+    "gunlukGetiri": 0.00119925,
     "getiriler": {
       "birAy": 0.021676,
       "ucAy": 0.06457099999999999,
@@ -29,22 +29,22 @@
       "besYil": 6.704353
     },
     "paraAkisi": {
-      "gunluk": 21186882.42,
-      "besGun": -186987209.43,
+      "gunluk": 18107079.96,
+      "besGun": 48466955.36,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": -7,
+      "gunluk": 1,
+      "besGun": -6,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 168624717,
         "kisiSayisi": 4340,
         "fonToplamDeger": 12999519810.67,
-        "gunlukGetiri": 0.00328522,
-        "paraGirisiCikisi": 21186882.42,
-        "yatirimciDegisimi": 0
+        "gunlukGetiri": 0.00119925,
+        "paraGirisiCikisi": 18107079.96,
+        "yatirimciDegisimi": 1
+      },
+      {
+        "fonKodu": "IDF",
+        "fonAdi": "İŞ PORTFÖY SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 76.999085,
+        "tedavuldekiPaySayisi": 168389839,
+        "kisiSayisi": 4339,
+        "fonToplamDeger": 12965863455.73,
+        "gunlukGetiri": 0.00208347,
+        "paraGirisiCikisi": 3076113.45,
+        "yatirimciDegisimi": -1
       },
       {
         "fonKodu": "IDF",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "IDF",
       "fonAdi": "İŞ PORTFÖY SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 76.999085,
+      "tedavuldekiPaySayisi": 168389839,
+      "kisiSayisi": 4339,
+      "fonToplamDeger": 12965863455.73,
+      "gunlukGetiri": 0.00208347,
+      "paraGirisiCikisi": 3076113.45,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "IDF",
+      "fonAdi": "İŞ PORTFÖY SERBEST (DÖVİZ) FON",
       "tarih": "2026-08-18",
       "fiyat": 77.091426,
       "tedavuldekiPaySayisi": 168624717,
       "kisiSayisi": 4340,
       "fonToplamDeger": 12999519810.67,
-      "gunlukGetiri": 0.00328522,
-      "paraGirisiCikisi": 21186882.42,
-      "yatirimciDegisimi": 0
+      "gunlukGetiri": 0.00119925,
+      "paraGirisiCikisi": 18107079.96,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 168624717,
       "kisiSayisi": 4340,
       "fonToplamDeger": 12999519810.67,
-      "gunlukGetiri": 0.00328522,
-      "paraGirisiCikisi": 21186882.42,
-      "yatirimciDegisimi": 0
+      "gunlukGetiri": 0.00119925,
+      "paraGirisiCikisi": 18107079.96,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "IDF",
+      "fonAdi": "İŞ PORTFÖY SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 76.999085,
+      "tedavuldekiPaySayisi": 168389839,
+      "kisiSayisi": 4339,
+      "fonToplamDeger": 12965863455.73,
+      "gunlukGetiri": 0.00208347,
+      "paraGirisiCikisi": 3076113.45,
+      "yatirimciDegisimi": -1
     },
     {
       "fonKodu": "IDF",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

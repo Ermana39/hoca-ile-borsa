@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "OUD",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 2210828,
     "kisiSayisi": 121,
     "fonToplamDeger": 147939657.27,
-    "gunlukGetiri": 0.00370022,
+    "gunlukGetiri": 0.00167796,
     "getiriler": {
       "birAy": 0.021342,
       "ucAy": 0.065563,
@@ -29,8 +29,8 @@
       "besYil": 6.6405840000000005
     },
     "paraAkisi": {
-      "gunluk": 95689.81,
-      "besGun": 95889.82,
+      "gunluk": 0,
+      "besGun": 95729.53,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 2210828,
         "kisiSayisi": 121,
         "fonToplamDeger": 147939657.27,
-        "gunlukGetiri": 0.00370022,
-        "paraGirisiCikisi": 95689.81,
+        "gunlukGetiri": 0.00167796,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "OUD",
+        "fonAdi": "OSMANLI PORTFÖY ATLANTİK SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 66.803857,
+        "tedavuldekiPaySayisi": 2210828,
+        "kisiSayisi": 121,
+        "fonToplamDeger": 147691836.88,
+        "gunlukGetiri": 0.00201888,
+        "paraGirisiCikisi": 95529.52,
         "yatirimciDegisimi": 0
       },
       {
@@ -188,13 +200,25 @@
     {
       "fonKodu": "OUD",
       "fonAdi": "OSMANLI PORTFÖY ATLANTİK SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 66.803857,
+      "tedavuldekiPaySayisi": 2210828,
+      "kisiSayisi": 121,
+      "fonToplamDeger": 147691836.88,
+      "gunlukGetiri": 0.00201888,
+      "paraGirisiCikisi": 95529.52,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "OUD",
+      "fonAdi": "OSMANLI PORTFÖY ATLANTİK SERBEST (DÖVİZ) FON",
       "tarih": "2026-08-18",
       "fiyat": 66.915951,
       "tedavuldekiPaySayisi": 2210828,
       "kisiSayisi": 121,
       "fonToplamDeger": 147939657.27,
-      "gunlukGetiri": 0.00370022,
-      "paraGirisiCikisi": 95689.81,
+      "gunlukGetiri": 0.00167796,
+      "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
   ],
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 2210828,
       "kisiSayisi": 121,
       "fonToplamDeger": 147939657.27,
-      "gunlukGetiri": 0.00370022,
-      "paraGirisiCikisi": 95689.81,
+      "gunlukGetiri": 0.00167796,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "OUD",
+      "fonAdi": "OSMANLI PORTFÖY ATLANTİK SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 66.803857,
+      "tedavuldekiPaySayisi": 2210828,
+      "kisiSayisi": 121,
+      "fonToplamDeger": 147691836.88,
+      "gunlukGetiri": 0.00201888,
+      "paraGirisiCikisi": 95529.52,
       "yatirimciDegisimi": 0
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

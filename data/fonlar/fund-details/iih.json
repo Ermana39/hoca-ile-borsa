@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IIH",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 55023054,
     "kisiSayisi": 21876,
     "fonToplamDeger": 1806254681.45,
-    "gunlukGetiri": 0.00126347,
+    "gunlukGetiri": -0.00510226,
     "getiriler": {
       "birAy": 0.007917,
       "ucAy": -0.015023,
@@ -29,22 +29,22 @@
       "besYil": 17.739733
     },
     "paraAkisi": {
-      "gunluk": -4789624.75,
-      "besGun": -13223631.05,
+      "gunluk": -1515469.26,
+      "besGun": -13006353.51,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -53,
-      "besGun": -137,
+      "gunluk": -21,
+      "besGun": -127,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 55023054,
         "kisiSayisi": 21876,
         "fonToplamDeger": 1806254681.45,
-        "gunlukGetiri": 0.00126347,
-        "paraGirisiCikisi": -4789624.75,
-        "yatirimciDegisimi": -53
+        "gunlukGetiri": -0.00510226,
+        "paraGirisiCikisi": -1515469.26,
+        "yatirimciDegisimi": -21
+      },
+      {
+        "fonKodu": "IIH",
+        "fonAdi": "İSTANBUL PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-17",
+        "fiyat": 32.995586,
+        "tedavuldekiPaySayisi": 55069219,
+        "kisiSayisi": 21897,
+        "fonToplamDeger": 1817041155.42,
+        "gunlukGetiri": 0.00639838,
+        "paraGirisiCikisi": -3290946.75,
+        "yatirimciDegisimi": -32
       },
       {
         "fonKodu": "IIH",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "IIH",
       "fonAdi": "İSTANBUL PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 32.995586,
+      "tedavuldekiPaySayisi": 55069219,
+      "kisiSayisi": 21897,
+      "fonToplamDeger": 1817041155.42,
+      "gunlukGetiri": 0.00639838,
+      "paraGirisiCikisi": -3290946.75,
+      "yatirimciDegisimi": -32
+    },
+    {
+      "fonKodu": "IIH",
+      "fonAdi": "İSTANBUL PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
       "tarih": "2026-08-18",
       "fiyat": 32.827234,
       "tedavuldekiPaySayisi": 55023054,
       "kisiSayisi": 21876,
       "fonToplamDeger": 1806254681.45,
-      "gunlukGetiri": 0.00126347,
-      "paraGirisiCikisi": -4789624.75,
-      "yatirimciDegisimi": -53
+      "gunlukGetiri": -0.00510226,
+      "paraGirisiCikisi": -1515469.26,
+      "yatirimciDegisimi": -21
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 55023054,
       "kisiSayisi": 21876,
       "fonToplamDeger": 1806254681.45,
-      "gunlukGetiri": 0.00126347,
-      "paraGirisiCikisi": -4789624.75,
-      "yatirimciDegisimi": -53
+      "gunlukGetiri": -0.00510226,
+      "paraGirisiCikisi": -1515469.26,
+      "yatirimciDegisimi": -21
+    },
+    {
+      "fonKodu": "IIH",
+      "fonAdi": "İSTANBUL PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 32.995586,
+      "tedavuldekiPaySayisi": 55069219,
+      "kisiSayisi": 21897,
+      "fonToplamDeger": 1817041155.42,
+      "gunlukGetiri": 0.00639838,
+      "paraGirisiCikisi": -3290946.75,
+      "yatirimciDegisimi": -32
     },
     {
       "fonKodu": "IIH",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

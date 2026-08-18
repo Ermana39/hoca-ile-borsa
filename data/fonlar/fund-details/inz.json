@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "INZ",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 34399915,
     "kisiSayisi": 16,
     "fonToplamDeger": 118791070.48,
-    "gunlukGetiri": 0.00259821,
+    "gunlukGetiri": 0.00254437,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 200.29,
-      "besGun": 200.29,
+      "gunluk": 0,
+      "besGun": 199.78,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": 0,
       "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 34399915,
         "kisiSayisi": 16,
         "fonToplamDeger": 118791070.48,
-        "gunlukGetiri": 0.00259821,
-        "paraGirisiCikisi": 200.29,
+        "gunlukGetiri": 0.00254437,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "INZ",
+        "fonAdi": "INVEO PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST (TL) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 3.444473,
+        "tedavuldekiPaySayisi": 34399915,
+        "kisiSayisi": 16,
+        "fonToplamDeger": 118489569.26,
+        "gunlukGetiri": 0.00005371,
+        "paraGirisiCikisi": 199.78,
         "yatirimciDegisimi": 1
       },
       {
@@ -188,14 +200,26 @@
     {
       "fonKodu": "INZ",
       "fonAdi": "INVEO PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 3.444473,
+      "tedavuldekiPaySayisi": 34399915,
+      "kisiSayisi": 16,
+      "fonToplamDeger": 118489569.26,
+      "gunlukGetiri": 0.00005371,
+      "paraGirisiCikisi": 199.78,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "INZ",
+      "fonAdi": "INVEO PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST (TL) FON",
       "tarih": "2026-08-18",
       "fiyat": 3.453237,
       "tedavuldekiPaySayisi": 34399915,
       "kisiSayisi": 16,
       "fonToplamDeger": 118791070.48,
-      "gunlukGetiri": 0.00259821,
-      "paraGirisiCikisi": 200.29,
-      "yatirimciDegisimi": 1
+      "gunlukGetiri": 0.00254437,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 34399915,
       "kisiSayisi": 16,
       "fonToplamDeger": 118791070.48,
-      "gunlukGetiri": 0.00259821,
-      "paraGirisiCikisi": 200.29,
+      "gunlukGetiri": 0.00254437,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "INZ",
+      "fonAdi": "INVEO PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 3.444473,
+      "tedavuldekiPaySayisi": 34399915,
+      "kisiSayisi": 16,
+      "fonToplamDeger": 118489569.26,
+      "gunlukGetiri": 0.00005371,
+      "paraGirisiCikisi": 199.78,
       "yatirimciDegisimi": 1
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

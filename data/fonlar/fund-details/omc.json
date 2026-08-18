@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "OMC",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 5659003,
     "kisiSayisi": 2,
     "fonToplamDeger": 407658206.79,
-    "gunlukGetiri": 0.00242445,
+    "gunlukGetiri": 0.00145435,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 5659003,
         "kisiSayisi": 2,
         "fonToplamDeger": 407658206.79,
-        "gunlukGetiri": 0.00242445,
+        "gunlukGetiri": 0.00145435,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "OMC",
+        "fonAdi": "QNB PORTFÖY ORKİDE SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-17",
+        "fiyat": 71.932492,
+        "tedavuldekiPaySayisi": 5659003,
+        "kisiSayisi": 2,
+        "fonToplamDeger": 407066190.07,
+        "gunlukGetiri": 0.00096869,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "OMC",
       "fonAdi": "QNB PORTFÖY ORKİDE SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 71.932492,
+      "tedavuldekiPaySayisi": 5659003,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 407066190.07,
+      "gunlukGetiri": 0.00096869,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "OMC",
+      "fonAdi": "QNB PORTFÖY ORKİDE SERBEST (DÖVİZ) ÖZEL FON",
       "tarih": "2026-08-18",
       "fiyat": 72.037107,
       "tedavuldekiPaySayisi": 5659003,
       "kisiSayisi": 2,
       "fonToplamDeger": 407658206.79,
-      "gunlukGetiri": 0.00242445,
+      "gunlukGetiri": 0.00145435,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 5659003,
       "kisiSayisi": 2,
       "fonToplamDeger": 407658206.79,
-      "gunlukGetiri": 0.00242445,
+      "gunlukGetiri": 0.00145435,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "OMC",
+      "fonAdi": "QNB PORTFÖY ORKİDE SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 71.932492,
+      "tedavuldekiPaySayisi": 5659003,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 407066190.07,
+      "gunlukGetiri": 0.00096869,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

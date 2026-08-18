@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "EME",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 33398148,
     "kisiSayisi": 16,
     "fonToplamDeger": 37464913.71,
-    "gunlukGetiri": -0.01010224,
+    "gunlukGetiri": -0.00516412,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -9363.38,
-      "besGun": -9363.38,
+      "gunluk": 0,
+      "besGun": -9411.99,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 33398148,
         "kisiSayisi": 16,
         "fonToplamDeger": 37464913.71,
-        "gunlukGetiri": -0.01010224,
-        "paraGirisiCikisi": -9363.38,
+        "gunlukGetiri": -0.00516412,
+        "paraGirisiCikisi": 0,
         "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "EME",
+        "fonAdi": "STRATEJİ PORTFÖY EMERALD HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-17",
+        "fiyat": 1.127589,
+        "tedavuldekiPaySayisi": 33398148,
+        "kisiSayisi": 17,
+        "fonToplamDeger": 37659399.86,
+        "gunlukGetiri": -0.00496376,
+        "paraGirisiCikisi": -9411.99,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "EME",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "EME",
       "fonAdi": "STRATEJİ PORTFÖY EMERALD HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 1.127589,
+      "tedavuldekiPaySayisi": 33398148,
+      "kisiSayisi": 17,
+      "fonToplamDeger": 37659399.86,
+      "gunlukGetiri": -0.00496376,
+      "paraGirisiCikisi": -9411.99,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "EME",
+      "fonAdi": "STRATEJİ PORTFÖY EMERALD HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
       "tarih": "2026-08-18",
       "fiyat": 1.121766,
       "tedavuldekiPaySayisi": 33398148,
       "kisiSayisi": 16,
       "fonToplamDeger": 37464913.71,
-      "gunlukGetiri": -0.01010224,
-      "paraGirisiCikisi": -9363.38,
+      "gunlukGetiri": -0.00516412,
+      "paraGirisiCikisi": 0,
       "yatirimciDegisimi": -1
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 33398148,
       "kisiSayisi": 16,
       "fonToplamDeger": 37464913.71,
-      "gunlukGetiri": -0.01010224,
-      "paraGirisiCikisi": -9363.38,
+      "gunlukGetiri": -0.00516412,
+      "paraGirisiCikisi": 0,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "EME",
+      "fonAdi": "STRATEJİ PORTFÖY EMERALD HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 1.127589,
+      "tedavuldekiPaySayisi": 33398148,
+      "kisiSayisi": 17,
+      "fonToplamDeger": 37659399.86,
+      "gunlukGetiri": -0.00496376,
+      "paraGirisiCikisi": -9411.99,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "EME",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

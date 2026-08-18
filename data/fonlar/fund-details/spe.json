@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "SPE",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 38833886,
     "kisiSayisi": 1232,
     "fonToplamDeger": 4193467514.08,
-    "gunlukGetiri": 0.00396427,
+    "gunlukGetiri": 0.00198537,
     "getiriler": {
       "birAy": 0.023885999999999998,
       "ucAy": 0.073475,
@@ -29,8 +29,8 @@
       "besYil": 8.091664
     },
     "paraAkisi": {
-      "gunluk": 2834167.77,
-      "besGun": 74417818.46,
+      "gunluk": -1550661.02,
+      "besGun": 29472346.24,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 38833886,
         "kisiSayisi": 1232,
         "fonToplamDeger": 4193467514.08,
-        "gunlukGetiri": 0.00396427,
-        "paraGirisiCikisi": 2834167.77,
+        "gunlukGetiri": 0.00198537,
+        "paraGirisiCikisi": -1550661.02,
         "yatirimciDegisimi": 3
+      },
+      {
+        "fonKodu": "SPE",
+        "fonAdi": "AZIMUT PORTFÖY 5.0 SERBEST (DÖVIZ) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 107.770786,
+        "tedavuldekiPaySayisi": 38848246,
+        "kisiSayisi": 1229,
+        "fonToplamDeger": 4186706020,
+        "gunlukGetiri": 0.00197497,
+        "paraGirisiCikisi": 4376140.54,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "SPE",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "SPE",
       "fonAdi": "AZIMUT PORTFÖY 5.0 SERBEST (DÖVIZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 107.770786,
+      "tedavuldekiPaySayisi": 38848246,
+      "kisiSayisi": 1229,
+      "fonToplamDeger": 4186706020,
+      "gunlukGetiri": 0.00197497,
+      "paraGirisiCikisi": 4376140.54,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "SPE",
+      "fonAdi": "AZIMUT PORTFÖY 5.0 SERBEST (DÖVIZ) FON",
       "tarih": "2026-08-18",
       "fiyat": 107.984751,
       "tedavuldekiPaySayisi": 38833886,
       "kisiSayisi": 1232,
       "fonToplamDeger": 4193467514.08,
-      "gunlukGetiri": 0.00396427,
-      "paraGirisiCikisi": 2834167.77,
+      "gunlukGetiri": 0.00198537,
+      "paraGirisiCikisi": -1550661.02,
       "yatirimciDegisimi": 3
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 38833886,
       "kisiSayisi": 1232,
       "fonToplamDeger": 4193467514.08,
-      "gunlukGetiri": 0.00396427,
-      "paraGirisiCikisi": 2834167.77,
+      "gunlukGetiri": 0.00198537,
+      "paraGirisiCikisi": -1550661.02,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "SPE",
+      "fonAdi": "AZIMUT PORTFÖY 5.0 SERBEST (DÖVIZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 107.770786,
+      "tedavuldekiPaySayisi": 38848246,
+      "kisiSayisi": 1229,
+      "fonToplamDeger": 4186706020,
+      "gunlukGetiri": 0.00197497,
+      "paraGirisiCikisi": 4376140.54,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "SPE",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BDC",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 39069115,
     "kisiSayisi": 31,
     "fonToplamDeger": 351142220.47,
-    "gunlukGetiri": 0.00921527,
+    "gunlukGetiri": 0.00347845,
     "getiriler": {
       "birAy": 0.045296,
       "ucAy": -0.033313,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 39069115,
         "kisiSayisi": 31,
         "fonToplamDeger": 351142220.47,
-        "gunlukGetiri": 0.00921527,
+        "gunlukGetiri": 0.00347845,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "BDC",
+        "fonAdi": "AURA PORTFÖY BODRUM SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 8.956564,
+        "tedavuldekiPaySayisi": 39069115,
+        "kisiSayisi": 32,
+        "fonToplamDeger": 349925047.65,
+        "gunlukGetiri": 0.00571693,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "BDC",
@@ -188,12 +200,24 @@
     {
       "fonKodu": "BDC",
       "fonAdi": "AURA PORTFÖY BODRUM SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 8.956564,
+      "tedavuldekiPaySayisi": 39069115,
+      "kisiSayisi": 32,
+      "fonToplamDeger": 349925047.65,
+      "gunlukGetiri": 0.00571693,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BDC",
+      "fonAdi": "AURA PORTFÖY BODRUM SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 8.987719,
       "tedavuldekiPaySayisi": 39069115,
       "kisiSayisi": 31,
       "fonToplamDeger": 351142220.47,
-      "gunlukGetiri": 0.00921527,
+      "gunlukGetiri": 0.00347845,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": -1
     }
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 39069115,
       "kisiSayisi": 31,
       "fonToplamDeger": 351142220.47,
-      "gunlukGetiri": 0.00921527,
+      "gunlukGetiri": 0.00347845,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "BDC",
+      "fonAdi": "AURA PORTFÖY BODRUM SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 8.956564,
+      "tedavuldekiPaySayisi": 39069115,
+      "kisiSayisi": 32,
+      "fonToplamDeger": 349925047.65,
+      "gunlukGetiri": 0.00571693,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "BDC",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

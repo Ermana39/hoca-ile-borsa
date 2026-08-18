@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GUV",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 322379971,
     "kisiSayisi": 1803,
     "fonToplamDeger": 552142223.96,
-    "gunlukGetiri": 0.00091927,
+    "gunlukGetiri": 0.00042991,
     "getiriler": {
       "birAy": 0.024100999999999997,
       "ucAy": 0.07482899999999999,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 176064.46,
-      "besGun": -2632088.13,
+      "gunluk": 114246.05,
+      "besGun": -2208049.66,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
-      "besGun": -26,
+      "gunluk": 0,
+      "besGun": -22,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 322379971,
         "kisiSayisi": 1803,
         "fonToplamDeger": 552142223.96,
-        "gunlukGetiri": 0.00091927,
-        "paraGirisiCikisi": 176064.46,
+        "gunlukGetiri": 0.00042991,
+        "paraGirisiCikisi": 114246.05,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "GUV",
+        "fonAdi": "GARANTİ PORTFÖY UZUN VADELİ BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 1.71197,
+        "tedavuldekiPaySayisi": 322313266,
+        "kisiSayisi": 1803,
+        "fonToplamDeger": 551790723.25,
+        "gunlukGetiri": 0.00048915,
+        "paraGirisiCikisi": 61791.85,
         "yatirimciDegisimi": -4
       },
       {
@@ -188,14 +200,26 @@
     {
       "fonKodu": "GUV",
       "fonAdi": "GARANTİ PORTFÖY UZUN VADELİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.71197,
+      "tedavuldekiPaySayisi": 322313266,
+      "kisiSayisi": 1803,
+      "fonToplamDeger": 551790723.25,
+      "gunlukGetiri": 0.00048915,
+      "paraGirisiCikisi": 61791.85,
+      "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "GUV",
+      "fonAdi": "GARANTİ PORTFÖY UZUN VADELİ BORÇLANMA ARAÇLARI FONU",
       "tarih": "2026-08-18",
       "fiyat": 1.712706,
       "tedavuldekiPaySayisi": 322379971,
       "kisiSayisi": 1803,
       "fonToplamDeger": 552142223.96,
-      "gunlukGetiri": 0.00091927,
-      "paraGirisiCikisi": 176064.46,
-      "yatirimciDegisimi": -4
+      "gunlukGetiri": 0.00042991,
+      "paraGirisiCikisi": 114246.05,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 322379971,
       "kisiSayisi": 1803,
       "fonToplamDeger": 552142223.96,
-      "gunlukGetiri": 0.00091927,
-      "paraGirisiCikisi": 176064.46,
+      "gunlukGetiri": 0.00042991,
+      "paraGirisiCikisi": 114246.05,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GUV",
+      "fonAdi": "GARANTİ PORTFÖY UZUN VADELİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.71197,
+      "tedavuldekiPaySayisi": 322313266,
+      "kisiSayisi": 1803,
+      "fonToplamDeger": 551790723.25,
+      "gunlukGetiri": 0.00048915,
+      "paraGirisiCikisi": 61791.85,
       "yatirimciDegisimi": -4
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

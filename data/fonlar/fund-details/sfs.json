@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "SFS",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 22295412,
     "kisiSayisi": 78,
     "fonToplamDeger": 31258902.56,
-    "gunlukGetiri": 0.00493352,
+    "gunlukGetiri": 0.0015938,
     "getiriler": {
       "birAy": 0.031691,
       "ucAy": 0.040724,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 18215.21,
-      "besGun": 249939.05,
+      "gunluk": 18065.2,
+      "besGun": 250042.16,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": 2,
+      "gunluk": 2,
+      "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 22295412,
         "kisiSayisi": 78,
         "fonToplamDeger": 31258902.56,
-        "gunlukGetiri": 0.00493352,
-        "paraGirisiCikisi": 18215.21,
-        "yatirimciDegisimi": 1
+        "gunlukGetiri": 0.0015938,
+        "paraGirisiCikisi": 18065.2,
+        "yatirimciDegisimi": 2
+      },
+      {
+        "fonKodu": "SFS",
+        "fonAdi": "AZİMUT PORTFÖY AGRESİF FON SEPETİ FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 1.399802,
+        "tedavuldekiPaySayisi": 22282527,
+        "kisiSayisi": 76,
+        "fonToplamDeger": 31191128.23,
+        "gunlukGetiri": 0.00333441,
+        "paraGirisiCikisi": 149.78,
+        "yatirimciDegisimi": -1
       },
       {
         "fonKodu": "SFS",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "SFS",
       "fonAdi": "AZİMUT PORTFÖY AGRESİF FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.399802,
+      "tedavuldekiPaySayisi": 22282527,
+      "kisiSayisi": 76,
+      "fonToplamDeger": 31191128.23,
+      "gunlukGetiri": 0.00333441,
+      "paraGirisiCikisi": 149.78,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "SFS",
+      "fonAdi": "AZİMUT PORTFÖY AGRESİF FON SEPETİ FONU",
       "tarih": "2026-08-18",
       "fiyat": 1.402033,
       "tedavuldekiPaySayisi": 22295412,
       "kisiSayisi": 78,
       "fonToplamDeger": 31258902.56,
-      "gunlukGetiri": 0.00493352,
-      "paraGirisiCikisi": 18215.21,
-      "yatirimciDegisimi": 1
+      "gunlukGetiri": 0.0015938,
+      "paraGirisiCikisi": 18065.2,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 22295412,
       "kisiSayisi": 78,
       "fonToplamDeger": 31258902.56,
-      "gunlukGetiri": 0.00493352,
-      "paraGirisiCikisi": 18215.21,
-      "yatirimciDegisimi": 1
+      "gunlukGetiri": 0.0015938,
+      "paraGirisiCikisi": 18065.2,
+      "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "SFS",
+      "fonAdi": "AZİMUT PORTFÖY AGRESİF FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.399802,
+      "tedavuldekiPaySayisi": 22282527,
+      "kisiSayisi": 76,
+      "fonToplamDeger": 31191128.23,
+      "gunlukGetiri": 0.00333441,
+      "paraGirisiCikisi": 149.78,
+      "yatirimciDegisimi": -1
     },
     {
       "fonKodu": "SFS",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

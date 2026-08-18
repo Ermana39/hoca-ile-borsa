@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ZK1",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 44665382,
     "kisiSayisi": 108,
     "fonToplamDeger": 2256167611.56,
-    "gunlukGetiri": 0.00289301,
+    "gunlukGetiri": 0.0019592,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -6435364.42,
-      "besGun": -10566843.8,
+      "gunluk": 0,
+      "besGun": -10554260.27,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 44665382,
         "kisiSayisi": 108,
         "fonToplamDeger": 2256167611.56,
-        "gunlukGetiri": 0.00289301,
-        "paraGirisiCikisi": -6435364.42,
+        "gunlukGetiri": 0.0019592,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "ZK1",
+        "fonAdi": "ZİRAAT PORTFÖY BAŞAK KATILIM SERBEST (DÖVİZ-AMERİKAN DOLARI) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 50.413897,
+        "tedavuldekiPaySayisi": 44665382,
+        "kisiSayisi": 108,
+        "fonToplamDeger": 2251755955.02,
+        "gunlukGetiri": 0.00093198,
+        "paraGirisiCikisi": -6422780.89,
         "yatirimciDegisimi": 0
       },
       {
@@ -188,13 +200,25 @@
     {
       "fonKodu": "ZK1",
       "fonAdi": "ZİRAAT PORTFÖY BAŞAK KATILIM SERBEST (DÖVİZ-AMERİKAN DOLARI) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 50.413897,
+      "tedavuldekiPaySayisi": 44665382,
+      "kisiSayisi": 108,
+      "fonToplamDeger": 2251755955.02,
+      "gunlukGetiri": 0.00093198,
+      "paraGirisiCikisi": -6422780.89,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "ZK1",
+      "fonAdi": "ZİRAAT PORTFÖY BAŞAK KATILIM SERBEST (DÖVİZ-AMERİKAN DOLARI) FON",
       "tarih": "2026-08-18",
       "fiyat": 50.512668,
       "tedavuldekiPaySayisi": 44665382,
       "kisiSayisi": 108,
       "fonToplamDeger": 2256167611.56,
-      "gunlukGetiri": 0.00289301,
-      "paraGirisiCikisi": -6435364.42,
+      "gunlukGetiri": 0.0019592,
+      "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
   ],
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 44665382,
       "kisiSayisi": 108,
       "fonToplamDeger": 2256167611.56,
-      "gunlukGetiri": 0.00289301,
-      "paraGirisiCikisi": -6435364.42,
+      "gunlukGetiri": 0.0019592,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "ZK1",
+      "fonAdi": "ZİRAAT PORTFÖY BAŞAK KATILIM SERBEST (DÖVİZ-AMERİKAN DOLARI) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 50.413897,
+      "tedavuldekiPaySayisi": 44665382,
+      "kisiSayisi": 108,
+      "fonToplamDeger": 2251755955.02,
+      "gunlukGetiri": 0.00093198,
+      "paraGirisiCikisi": -6422780.89,
       "yatirimciDegisimi": 0
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

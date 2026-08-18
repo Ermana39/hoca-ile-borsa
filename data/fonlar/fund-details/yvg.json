@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YVG",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 95050621,
     "kisiSayisi": 1221,
     "fonToplamDeger": 6018353942.99,
-    "gunlukGetiri": 0.0088826,
+    "gunlukGetiri": 0.00562238,
     "getiriler": {
       "birAy": 0.033914,
       "ucAy": 0.057807000000000004,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 81140810.53,
-      "besGun": 67655118.91,
+      "gunluk": 83600563.14,
+      "besGun": 70930363.9,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": 0,
       "besGun": -5,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 95050621,
         "kisiSayisi": 1221,
         "fonToplamDeger": 6018353942.99,
-        "gunlukGetiri": 0.0088826,
-        "paraGirisiCikisi": 81140810.53,
+        "gunlukGetiri": 0.00562238,
+        "paraGirisiCikisi": 83600563.14,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "YVG",
+        "fonAdi": "YAPI KREDİ PORTFÖY SARIYER SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 62.963351,
+        "tedavuldekiPaySayisi": 93730279,
+        "kisiSayisi": 1221,
+        "fonToplamDeger": 5901572442.64,
+        "gunlukGetiri": 0.00324199,
+        "paraGirisiCikisi": -2446000.26,
         "yatirimciDegisimi": 1
       },
       {
@@ -188,14 +200,26 @@
     {
       "fonKodu": "YVG",
       "fonAdi": "YAPI KREDİ PORTFÖY SARIYER SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 62.963351,
+      "tedavuldekiPaySayisi": 93730279,
+      "kisiSayisi": 1221,
+      "fonToplamDeger": 5901572442.64,
+      "gunlukGetiri": 0.00324199,
+      "paraGirisiCikisi": -2446000.26,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "YVG",
+      "fonAdi": "YAPI KREDİ PORTFÖY SARIYER SERBEST (DÖVİZ-AVRO) FON",
       "tarih": "2026-08-18",
       "fiyat": 63.317355,
       "tedavuldekiPaySayisi": 95050621,
       "kisiSayisi": 1221,
       "fonToplamDeger": 6018353942.99,
-      "gunlukGetiri": 0.0088826,
-      "paraGirisiCikisi": 81140810.53,
-      "yatirimciDegisimi": 1
+      "gunlukGetiri": 0.00562238,
+      "paraGirisiCikisi": 83600563.14,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 95050621,
       "kisiSayisi": 1221,
       "fonToplamDeger": 6018353942.99,
-      "gunlukGetiri": 0.0088826,
-      "paraGirisiCikisi": 81140810.53,
+      "gunlukGetiri": 0.00562238,
+      "paraGirisiCikisi": 83600563.14,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YVG",
+      "fonAdi": "YAPI KREDİ PORTFÖY SARIYER SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 62.963351,
+      "tedavuldekiPaySayisi": 93730279,
+      "kisiSayisi": 1221,
+      "fonToplamDeger": 5901572442.64,
+      "gunlukGetiri": 0.00324199,
+      "paraGirisiCikisi": -2446000.26,
       "yatirimciDegisimi": 1
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

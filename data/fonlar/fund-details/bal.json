@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BAL",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 21974290,
     "kisiSayisi": 1,
     "fonToplamDeger": 1097030956.82,
-    "gunlukGetiri": 0.00367672,
+    "gunlukGetiri": 0.00250082,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 21974290,
         "kisiSayisi": 1,
         "fonToplamDeger": 1097030956.82,
-        "gunlukGetiri": 0.00367672,
+        "gunlukGetiri": 0.00250082,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "BAL",
+        "fonAdi": "QNB PORTFÖY BALY SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-17",
+        "fiyat": 49.798848,
+        "tedavuldekiPaySayisi": 21974290,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 1094294330.94,
+        "gunlukGetiri": 0.00117297,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "BAL",
       "fonAdi": "QNB PORTFÖY BALY SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 49.798848,
+      "tedavuldekiPaySayisi": 21974290,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 1094294330.94,
+      "gunlukGetiri": 0.00117297,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BAL",
+      "fonAdi": "QNB PORTFÖY BALY SERBEST (DÖVİZ) ÖZEL FON",
       "tarih": "2026-08-18",
       "fiyat": 49.923386,
       "tedavuldekiPaySayisi": 21974290,
       "kisiSayisi": 1,
       "fonToplamDeger": 1097030956.82,
-      "gunlukGetiri": 0.00367672,
+      "gunlukGetiri": 0.00250082,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 21974290,
       "kisiSayisi": 1,
       "fonToplamDeger": 1097030956.82,
-      "gunlukGetiri": 0.00367672,
+      "gunlukGetiri": 0.00250082,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BAL",
+      "fonAdi": "QNB PORTFÖY BALY SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 49.798848,
+      "tedavuldekiPaySayisi": 21974290,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 1094294330.94,
+      "gunlukGetiri": 0.00117297,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

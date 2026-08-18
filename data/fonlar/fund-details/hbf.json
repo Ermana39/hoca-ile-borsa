@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "HBF",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 123022755,
     "kisiSayisi": 10950,
     "fonToplamDeger": 6293605861.66,
-    "gunlukGetiri": 0.00704375,
+    "gunlukGetiri": 0.01100262,
     "getiriler": {
       "birAy": 0.11256000000000001,
       "ucAy": 0.009795,
@@ -29,22 +29,22 @@
       "besYil": 11.789758999999998
     },
     "paraAkisi": {
-      "gunluk": -117466484.04,
-      "besGun": -232886505.44,
+      "gunluk": -5621759.54,
+      "besGun": -196325972.38,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -32,
-      "besGun": -71,
+      "gunluk": -16,
+      "besGun": -63,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 123022755,
         "kisiSayisi": 10950,
         "fonToplamDeger": 6293605861.66,
-        "gunlukGetiri": 0.00704375,
-        "paraGirisiCikisi": -117466484.04,
-        "yatirimciDegisimi": -32
+        "gunlukGetiri": 0.01100262,
+        "paraGirisiCikisi": -5621759.54,
+        "yatirimciDegisimi": -16
+      },
+      {
+        "fonKodu": "HBF",
+        "fonAdi": "HSBC PORTFÖY ALTIN FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 50.601316,
+        "tedavuldekiPaySayisi": 123132645,
+        "kisiSayisi": 10966,
+        "fonToplamDeger": 6230673864.28,
+        "gunlukGetiri": -0.00391579,
+        "paraGirisiCikisi": -110627531.92,
+        "yatirimciDegisimi": -16
       },
       {
         "fonKodu": "HBF",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "HBF",
       "fonAdi": "HSBC PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 50.601316,
+      "tedavuldekiPaySayisi": 123132645,
+      "kisiSayisi": 10966,
+      "fonToplamDeger": 6230673864.28,
+      "gunlukGetiri": -0.00391579,
+      "paraGirisiCikisi": -110627531.92,
+      "yatirimciDegisimi": -16
+    },
+    {
+      "fonKodu": "HBF",
+      "fonAdi": "HSBC PORTFÖY ALTIN FONU",
       "tarih": "2026-08-18",
       "fiyat": 51.158063,
       "tedavuldekiPaySayisi": 123022755,
       "kisiSayisi": 10950,
       "fonToplamDeger": 6293605861.66,
-      "gunlukGetiri": 0.00704375,
-      "paraGirisiCikisi": -117466484.04,
-      "yatirimciDegisimi": -32
+      "gunlukGetiri": 0.01100262,
+      "paraGirisiCikisi": -5621759.54,
+      "yatirimciDegisimi": -16
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 123022755,
       "kisiSayisi": 10950,
       "fonToplamDeger": 6293605861.66,
-      "gunlukGetiri": 0.00704375,
-      "paraGirisiCikisi": -117466484.04,
-      "yatirimciDegisimi": -32
+      "gunlukGetiri": 0.01100262,
+      "paraGirisiCikisi": -5621759.54,
+      "yatirimciDegisimi": -16
+    },
+    {
+      "fonKodu": "HBF",
+      "fonAdi": "HSBC PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 50.601316,
+      "tedavuldekiPaySayisi": 123132645,
+      "kisiSayisi": 10966,
+      "fonToplamDeger": 6230673864.28,
+      "gunlukGetiri": -0.00391579,
+      "paraGirisiCikisi": -110627531.92,
+      "yatirimciDegisimi": -16
     },
     {
       "fonKodu": "HBF",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

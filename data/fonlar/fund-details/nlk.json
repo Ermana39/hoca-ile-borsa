@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "NLK",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 2455824322,
     "kisiSayisi": 1032,
     "fonToplamDeger": 4615620559.19,
-    "gunlukGetiri": 0.00442716,
+    "gunlukGetiri": 0.00110473,
     "getiriler": {
       "birAy": 0.032608,
       "ucAy": 0.107266,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -13744145.36,
-      "besGun": -279287877.03,
+      "gunluk": 26755055.51,
+      "besGun": -398805184.65,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": 10,
+      "gunluk": -6,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 2455824322,
         "kisiSayisi": 1032,
         "fonToplamDeger": 4615620559.19,
-        "gunlukGetiri": 0.00442716,
-        "paraGirisiCikisi": -13744145.36,
-        "yatirimciDegisimi": -1
+        "gunlukGetiri": 0.00110473,
+        "paraGirisiCikisi": 26755055.51,
+        "yatirimciDegisimi": -6
+      },
+      {
+        "fonKodu": "NLK",
+        "fonAdi": "NUROL PORTFÖY KISA VADELİ SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 1.877385,
+        "tedavuldekiPaySayisi": 2441588813,
+        "kisiSayisi": 1038,
+        "fonToplamDeger": 4583802584.45,
+        "gunlukGetiri": 0.00331877,
+        "paraGirisiCikisi": -40454509.64,
+        "yatirimciDegisimi": 5
       },
       {
         "fonKodu": "NLK",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "NLK",
       "fonAdi": "NUROL PORTFÖY KISA VADELİ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.877385,
+      "tedavuldekiPaySayisi": 2441588813,
+      "kisiSayisi": 1038,
+      "fonToplamDeger": 4583802584.45,
+      "gunlukGetiri": 0.00331877,
+      "paraGirisiCikisi": -40454509.64,
+      "yatirimciDegisimi": 5
+    },
+    {
+      "fonKodu": "NLK",
+      "fonAdi": "NUROL PORTFÖY KISA VADELİ SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 1.879459,
       "tedavuldekiPaySayisi": 2455824322,
       "kisiSayisi": 1032,
       "fonToplamDeger": 4615620559.19,
-      "gunlukGetiri": 0.00442716,
-      "paraGirisiCikisi": -13744145.36,
-      "yatirimciDegisimi": -1
+      "gunlukGetiri": 0.00110473,
+      "paraGirisiCikisi": 26755055.51,
+      "yatirimciDegisimi": -6
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 2455824322,
       "kisiSayisi": 1032,
       "fonToplamDeger": 4615620559.19,
-      "gunlukGetiri": 0.00442716,
-      "paraGirisiCikisi": -13744145.36,
-      "yatirimciDegisimi": -1
+      "gunlukGetiri": 0.00110473,
+      "paraGirisiCikisi": 26755055.51,
+      "yatirimciDegisimi": -6
+    },
+    {
+      "fonKodu": "NLK",
+      "fonAdi": "NUROL PORTFÖY KISA VADELİ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.877385,
+      "tedavuldekiPaySayisi": 2441588813,
+      "kisiSayisi": 1038,
+      "fonToplamDeger": 4583802584.45,
+      "gunlukGetiri": 0.00331877,
+      "paraGirisiCikisi": -40454509.64,
+      "yatirimciDegisimi": 5
     },
     {
       "fonKodu": "NLK",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

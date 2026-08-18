@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TI2",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 26833607258,
     "kisiSayisi": 20838,
     "fonToplamDeger": 3374125828.55,
-    "gunlukGetiri": 0.00687032,
+    "gunlukGetiri": -0.00015108,
     "getiriler": {
       "birAy": -0.008023,
       "ucAy": -0.044571,
@@ -29,22 +29,22 @@
       "besYil": 14.929388
     },
     "paraAkisi": {
-      "gunluk": -25172006.43,
-      "besGun": -43287385.46,
+      "gunluk": -14844134.93,
+      "besGun": -38957256.68,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -66,
-      "besGun": -71,
+      "gunluk": -19,
+      "besGun": -75,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 26833607258,
         "kisiSayisi": 20838,
         "fonToplamDeger": 3374125828.55,
-        "gunlukGetiri": 0.00687032,
-        "paraGirisiCikisi": -25172006.43,
-        "yatirimciDegisimi": -66
+        "gunlukGetiri": -0.00015108,
+        "paraGirisiCikisi": -14844134.93,
+        "yatirimciDegisimi": -19
+      },
+      {
+        "fonKodu": "TI2",
+        "fonAdi": "İŞ PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-17",
+        "fiyat": 0.125762,
+        "tedavuldekiPaySayisi": 26951658640,
+        "kisiSayisi": 20857,
+        "fonToplamDeger": 3389482096.33,
+        "gunlukGetiri": 0.00702246,
+        "paraGirisiCikisi": -10329432.06,
+        "yatirimciDegisimi": -47
       },
       {
         "fonKodu": "TI2",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "TI2",
       "fonAdi": "İŞ PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 0.125762,
+      "tedavuldekiPaySayisi": 26951658640,
+      "kisiSayisi": 20857,
+      "fonToplamDeger": 3389482096.33,
+      "gunlukGetiri": 0.00702246,
+      "paraGirisiCikisi": -10329432.06,
+      "yatirimciDegisimi": -47
+    },
+    {
+      "fonKodu": "TI2",
+      "fonAdi": "İŞ PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
       "tarih": "2026-08-18",
       "fiyat": 0.125743,
       "tedavuldekiPaySayisi": 26833607258,
       "kisiSayisi": 20838,
       "fonToplamDeger": 3374125828.55,
-      "gunlukGetiri": 0.00687032,
-      "paraGirisiCikisi": -25172006.43,
-      "yatirimciDegisimi": -66
+      "gunlukGetiri": -0.00015108,
+      "paraGirisiCikisi": -14844134.93,
+      "yatirimciDegisimi": -19
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 26833607258,
       "kisiSayisi": 20838,
       "fonToplamDeger": 3374125828.55,
-      "gunlukGetiri": 0.00687032,
-      "paraGirisiCikisi": -25172006.43,
-      "yatirimciDegisimi": -66
+      "gunlukGetiri": -0.00015108,
+      "paraGirisiCikisi": -14844134.93,
+      "yatirimciDegisimi": -19
+    },
+    {
+      "fonKodu": "TI2",
+      "fonAdi": "İŞ PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 0.125762,
+      "tedavuldekiPaySayisi": 26951658640,
+      "kisiSayisi": 20857,
+      "fonToplamDeger": 3389482096.33,
+      "gunlukGetiri": 0.00702246,
+      "paraGirisiCikisi": -10329432.06,
+      "yatirimciDegisimi": -47
     },
     {
       "fonKodu": "TI2",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

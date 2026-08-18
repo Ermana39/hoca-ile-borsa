@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PFS",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 5328137,
     "kisiSayisi": 91,
     "fonToplamDeger": 15923388.85,
-    "gunlukGetiri": 0.00538394,
+    "gunlukGetiri": 0.00159462,
     "getiriler": {
       "birAy": 0.05287,
       "ucAy": 0.10259399999999999,
@@ -30,21 +30,21 @@
     },
     "paraAkisi": {
       "gunluk": 297285.71,
-      "besGun": 294039.27,
+      "besGun": 297605.13,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 2,
-      "besGun": 0,
+      "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 5328137,
         "kisiSayisi": 91,
         "fonToplamDeger": 15923388.85,
-        "gunlukGetiri": 0.00538394,
+        "gunlukGetiri": 0.00159462,
         "paraGirisiCikisi": 297285.71,
         "yatirimciDegisimi": 2
+      },
+      {
+        "fonKodu": "PFS",
+        "fonAdi": "ATLAS PORTFÖY FON SEPETİ FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 2.983789,
+        "tedavuldekiPaySayisi": 5228662,
+        "kisiSayisi": 89,
+        "fonToplamDeger": 15601222.96,
+        "gunlukGetiri": 0.00378329,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "PFS",
@@ -188,12 +200,24 @@
     {
       "fonKodu": "PFS",
       "fonAdi": "ATLAS PORTFÖY FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.983789,
+      "tedavuldekiPaySayisi": 5228662,
+      "kisiSayisi": 89,
+      "fonToplamDeger": 15601222.96,
+      "gunlukGetiri": 0.00378329,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PFS",
+      "fonAdi": "ATLAS PORTFÖY FON SEPETİ FONU",
       "tarih": "2026-08-18",
       "fiyat": 2.988547,
       "tedavuldekiPaySayisi": 5328137,
       "kisiSayisi": 91,
       "fonToplamDeger": 15923388.85,
-      "gunlukGetiri": 0.00538394,
+      "gunlukGetiri": 0.00159462,
       "paraGirisiCikisi": 297285.71,
       "yatirimciDegisimi": 2
     }
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 5328137,
       "kisiSayisi": 91,
       "fonToplamDeger": 15923388.85,
-      "gunlukGetiri": 0.00538394,
+      "gunlukGetiri": 0.00159462,
       "paraGirisiCikisi": 297285.71,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "PFS",
+      "fonAdi": "ATLAS PORTFÖY FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.983789,
+      "tedavuldekiPaySayisi": 5228662,
+      "kisiSayisi": 89,
+      "fonToplamDeger": 15601222.96,
+      "gunlukGetiri": 0.00378329,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "PFS",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

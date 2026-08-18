@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ZPC",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 165095699,
     "kisiSayisi": 2764,
     "fonToplamDeger": 3174584954.03,
-    "gunlukGetiri": 0.00147158,
+    "gunlukGetiri": 0.00237395,
     "getiriler": {
       "birAy": 0.025248,
       "ucAy": 0.023499,
@@ -29,22 +29,22 @@
       "besYil": 7.08821
     },
     "paraAkisi": {
-      "gunluk": -421686.62,
-      "besGun": -3762823.9,
+      "gunluk": 21651.58,
+      "besGun": -2480621.2,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -8,
-      "besGun": -30,
+      "gunluk": -4,
+      "besGun": -28,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 165095699,
         "kisiSayisi": 2764,
         "fonToplamDeger": 3174584954.03,
-        "gunlukGetiri": 0.00147158,
-        "paraGirisiCikisi": -421686.62,
-        "yatirimciDegisimi": -8
+        "gunlukGetiri": 0.00237395,
+        "paraGirisiCikisi": 21651.58,
+        "yatirimciDegisimi": -4
+      },
+      {
+        "fonKodu": "ZPC",
+        "fonAdi": "ZİRAAT PORTFÖY FON SEPETİ FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 19.183216,
+        "tedavuldekiPaySayisi": 165094573,
+        "kisiSayisi": 2768,
+        "fonToplamDeger": 3167044870.88,
+        "gunlukGetiri": -0.00090024,
+        "paraGirisiCikisi": -442288.23,
+        "yatirimciDegisimi": -4
       },
       {
         "fonKodu": "ZPC",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "ZPC",
       "fonAdi": "ZİRAAT PORTFÖY FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 19.183216,
+      "tedavuldekiPaySayisi": 165094573,
+      "kisiSayisi": 2768,
+      "fonToplamDeger": 3167044870.88,
+      "gunlukGetiri": -0.00090024,
+      "paraGirisiCikisi": -442288.23,
+      "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "ZPC",
+      "fonAdi": "ZİRAAT PORTFÖY FON SEPETİ FONU",
       "tarih": "2026-08-18",
       "fiyat": 19.228756,
       "tedavuldekiPaySayisi": 165095699,
       "kisiSayisi": 2764,
       "fonToplamDeger": 3174584954.03,
-      "gunlukGetiri": 0.00147158,
-      "paraGirisiCikisi": -421686.62,
-      "yatirimciDegisimi": -8
+      "gunlukGetiri": 0.00237395,
+      "paraGirisiCikisi": 21651.58,
+      "yatirimciDegisimi": -4
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 165095699,
       "kisiSayisi": 2764,
       "fonToplamDeger": 3174584954.03,
-      "gunlukGetiri": 0.00147158,
-      "paraGirisiCikisi": -421686.62,
-      "yatirimciDegisimi": -8
+      "gunlukGetiri": 0.00237395,
+      "paraGirisiCikisi": 21651.58,
+      "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "ZPC",
+      "fonAdi": "ZİRAAT PORTFÖY FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 19.183216,
+      "tedavuldekiPaySayisi": 165094573,
+      "kisiSayisi": 2768,
+      "fonToplamDeger": 3167044870.88,
+      "gunlukGetiri": -0.00090024,
+      "paraGirisiCikisi": -442288.23,
+      "yatirimciDegisimi": -4
     },
     {
       "fonKodu": "ZPC",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

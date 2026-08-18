@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "AJN",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 6848049,
     "kisiSayisi": 272,
     "fonToplamDeger": 422236223.15,
-    "gunlukGetiri": 0.00259405,
+    "gunlukGetiri": 0.00188255,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -178191.29,
-      "besGun": -751512.58,
+      "gunluk": 0,
+      "besGun": -751177.76,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": -4,
+      "besGun": -1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 6848049,
         "kisiSayisi": 272,
         "fonToplamDeger": 422236223.15,
-        "gunlukGetiri": 0.00259405,
-        "paraGirisiCikisi": -178191.29,
+        "gunlukGetiri": 0.00188255,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "AJN",
+        "fonAdi": "AK PORTFÖY DÖRDÜNCÜ SERBEST (DÖVIZ) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 61.54203,
+        "tedavuldekiPaySayisi": 6848049,
+        "kisiSayisi": 272,
+        "fonToplamDeger": 421442838.59,
+        "gunlukGetiri": 0.00071017,
+        "paraGirisiCikisi": -177856.47,
         "yatirimciDegisimi": 0
       },
       {
@@ -188,13 +200,25 @@
     {
       "fonKodu": "AJN",
       "fonAdi": "AK PORTFÖY DÖRDÜNCÜ SERBEST (DÖVIZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 61.54203,
+      "tedavuldekiPaySayisi": 6848049,
+      "kisiSayisi": 272,
+      "fonToplamDeger": 421442838.59,
+      "gunlukGetiri": 0.00071017,
+      "paraGirisiCikisi": -177856.47,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "AJN",
+      "fonAdi": "AK PORTFÖY DÖRDÜNCÜ SERBEST (DÖVIZ) FON",
       "tarih": "2026-08-18",
       "fiyat": 61.657886,
       "tedavuldekiPaySayisi": 6848049,
       "kisiSayisi": 272,
       "fonToplamDeger": 422236223.15,
-      "gunlukGetiri": 0.00259405,
-      "paraGirisiCikisi": -178191.29,
+      "gunlukGetiri": 0.00188255,
+      "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
   ],
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 6848049,
       "kisiSayisi": 272,
       "fonToplamDeger": 422236223.15,
-      "gunlukGetiri": 0.00259405,
-      "paraGirisiCikisi": -178191.29,
+      "gunlukGetiri": 0.00188255,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "AJN",
+      "fonAdi": "AK PORTFÖY DÖRDÜNCÜ SERBEST (DÖVIZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 61.54203,
+      "tedavuldekiPaySayisi": 6848049,
+      "kisiSayisi": 272,
+      "fonToplamDeger": 421442838.59,
+      "gunlukGetiri": 0.00071017,
+      "paraGirisiCikisi": -177856.47,
       "yatirimciDegisimi": 0
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

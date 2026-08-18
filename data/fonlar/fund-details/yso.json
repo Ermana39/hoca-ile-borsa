@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YSO",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 52463827,
     "kisiSayisi": 348,
     "fonToplamDeger": 82569743.7,
-    "gunlukGetiri": 0.00551685,
+    "gunlukGetiri": 0.0081848,
     "getiriler": {
       "birAy": 0.041335,
       "ucAy": 0.22991299999999998,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -996329.49,
-      "besGun": 3667835.7,
+      "gunluk": -52265.69,
+      "besGun": 3761535.46,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 4,
-      "besGun": 6,
+      "gunluk": 2,
+      "besGun": 5,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 52463827,
         "kisiSayisi": 348,
         "fonToplamDeger": 82569743.7,
-        "gunlukGetiri": 0.00551685,
-        "paraGirisiCikisi": -996329.49,
-        "yatirimciDegisimi": 4
+        "gunlukGetiri": 0.0081848,
+        "paraGirisiCikisi": -52265.69,
+        "yatirimciDegisimi": 2
+      },
+      {
+        "fonKodu": "YSO",
+        "fonAdi": "YAPI KREDİ PORTFÖY SAĞLIK SEKTÖRÜ SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 1.561064,
+        "tedavuldekiPaySayisi": 52497036,
+        "kisiSayisi": 346,
+        "fonToplamDeger": 81951246.95,
+        "gunlukGetiri": -0.0026463,
+        "paraGirisiCikisi": -936399.56,
+        "yatirimciDegisimi": 2
       },
       {
         "fonKodu": "YSO",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "YSO",
       "fonAdi": "YAPI KREDİ PORTFÖY SAĞLIK SEKTÖRÜ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.561064,
+      "tedavuldekiPaySayisi": 52497036,
+      "kisiSayisi": 346,
+      "fonToplamDeger": 81951246.95,
+      "gunlukGetiri": -0.0026463,
+      "paraGirisiCikisi": -936399.56,
+      "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "YSO",
+      "fonAdi": "YAPI KREDİ PORTFÖY SAĞLIK SEKTÖRÜ SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 1.573841,
       "tedavuldekiPaySayisi": 52463827,
       "kisiSayisi": 348,
       "fonToplamDeger": 82569743.7,
-      "gunlukGetiri": 0.00551685,
-      "paraGirisiCikisi": -996329.49,
-      "yatirimciDegisimi": 4
+      "gunlukGetiri": 0.0081848,
+      "paraGirisiCikisi": -52265.69,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 52463827,
       "kisiSayisi": 348,
       "fonToplamDeger": 82569743.7,
-      "gunlukGetiri": 0.00551685,
-      "paraGirisiCikisi": -996329.49,
-      "yatirimciDegisimi": 4
+      "gunlukGetiri": 0.0081848,
+      "paraGirisiCikisi": -52265.69,
+      "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "YSO",
+      "fonAdi": "YAPI KREDİ PORTFÖY SAĞLIK SEKTÖRÜ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.561064,
+      "tedavuldekiPaySayisi": 52497036,
+      "kisiSayisi": 346,
+      "fonToplamDeger": 81951246.95,
+      "gunlukGetiri": -0.0026463,
+      "paraGirisiCikisi": -936399.56,
+      "yatirimciDegisimi": 2
     },
     {
       "fonKodu": "YSO",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IUC",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 485353634,
     "kisiSayisi": 1,
     "fonToplamDeger": 967159437.76,
-    "gunlukGetiri": -0.01268987,
+    "gunlukGetiri": 0.00187737,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 485353634,
         "kisiSayisi": 1,
         "fonToplamDeger": 967159437.76,
-        "gunlukGetiri": -0.01268987,
+        "gunlukGetiri": 0.00187737,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "IUC",
+        "fonAdi": "INVEO PORTFÖY GEDİK YATIRIM SERBEST (TL) ÖZEL FON",
+        "tarih": "2026-08-17",
+        "fiyat": 1.988956,
+        "tedavuldekiPaySayisi": 485353634,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 965347032.81,
+        "gunlukGetiri": -0.01453994,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "IUC",
       "fonAdi": "INVEO PORTFÖY GEDİK YATIRIM SERBEST (TL) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.988956,
+      "tedavuldekiPaySayisi": 485353634,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 965347032.81,
+      "gunlukGetiri": -0.01453994,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "IUC",
+      "fonAdi": "INVEO PORTFÖY GEDİK YATIRIM SERBEST (TL) ÖZEL FON",
       "tarih": "2026-08-18",
       "fiyat": 1.99269,
       "tedavuldekiPaySayisi": 485353634,
       "kisiSayisi": 1,
       "fonToplamDeger": 967159437.76,
-      "gunlukGetiri": -0.01268987,
+      "gunlukGetiri": 0.00187737,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 485353634,
       "kisiSayisi": 1,
       "fonToplamDeger": 967159437.76,
-      "gunlukGetiri": -0.01268987,
+      "gunlukGetiri": 0.00187737,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "IUC",
+      "fonAdi": "INVEO PORTFÖY GEDİK YATIRIM SERBEST (TL) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.988956,
+      "tedavuldekiPaySayisi": 485353634,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 965347032.81,
+      "gunlukGetiri": -0.01453994,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

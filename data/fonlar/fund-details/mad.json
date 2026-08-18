@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "MAD",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 22170596,
     "kisiSayisi": 371,
     "fonToplamDeger": 22575827.21,
-    "gunlukGetiri": 0.0024513,
+    "gunlukGetiri": -0.00080855,
     "getiriler": {
       "birAy": -0.019066,
       "ucAy": -0.010841,
@@ -29,22 +29,22 @@
       "besYil": 7.325521999999999
     },
     "paraAkisi": {
-      "gunluk": -1356.35,
-      "besGun": -160584.17,
+      "gunluk": -1456.14,
+      "besGun": -160784,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": -1,
+      "besGun": -2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 22170596,
         "kisiSayisi": 371,
         "fonToplamDeger": 22575827.21,
-        "gunlukGetiri": 0.0024513,
-        "paraGirisiCikisi": -1356.35,
+        "gunlukGetiri": -0.00080855,
+        "paraGirisiCikisi": -1456.14,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "MAD",
+        "fonAdi": "MEKSA PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-17",
+        "fiyat": 1.019102,
+        "tedavuldekiPaySayisi": 22172026,
+        "kisiSayisi": 371,
+        "fonToplamDeger": 22595551.01,
+        "gunlukGetiri": 0.00326249,
+        "paraGirisiCikisi": 99.87,
         "yatirimciDegisimi": 0
       },
       {
@@ -188,13 +200,25 @@
     {
       "fonKodu": "MAD",
       "fonAdi": "MEKSA PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.019102,
+      "tedavuldekiPaySayisi": 22172026,
+      "kisiSayisi": 371,
+      "fonToplamDeger": 22595551.01,
+      "gunlukGetiri": 0.00326249,
+      "paraGirisiCikisi": 99.87,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "MAD",
+      "fonAdi": "MEKSA PORTFÖY BİRİNCİ DEĞİŞKEN FON",
       "tarih": "2026-08-18",
       "fiyat": 1.018278,
       "tedavuldekiPaySayisi": 22170596,
       "kisiSayisi": 371,
       "fonToplamDeger": 22575827.21,
-      "gunlukGetiri": 0.0024513,
-      "paraGirisiCikisi": -1356.35,
+      "gunlukGetiri": -0.00080855,
+      "paraGirisiCikisi": -1456.14,
       "yatirimciDegisimi": 0
     }
   ],
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 22170596,
       "kisiSayisi": 371,
       "fonToplamDeger": 22575827.21,
-      "gunlukGetiri": 0.0024513,
-      "paraGirisiCikisi": -1356.35,
+      "gunlukGetiri": -0.00080855,
+      "paraGirisiCikisi": -1456.14,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "MAD",
+      "fonAdi": "MEKSA PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.019102,
+      "tedavuldekiPaySayisi": 22172026,
+      "kisiSayisi": 371,
+      "fonToplamDeger": 22595551.01,
+      "gunlukGetiri": 0.00326249,
+      "paraGirisiCikisi": 99.87,
       "yatirimciDegisimi": 0
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

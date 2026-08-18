@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "AAL",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 617219399,
     "kisiSayisi": 4482,
     "fonToplamDeger": 2145766550.45,
-    "gunlukGetiri": 0.00427158,
+    "gunlukGetiri": 0.00104063,
     "getiriler": {
       "birAy": 0.017948,
       "ucAy": 0.071523,
@@ -29,22 +29,22 @@
       "besYil": 3.9373970000000003
     },
     "paraAkisi": {
-      "gunluk": 25638563.84,
-      "besGun": -3649362.12,
+      "gunluk": 33669012.27,
+      "besGun": -34078246,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 14,
-      "besGun": -33,
+      "gunluk": 20,
+      "besGun": -12,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 617219399,
         "kisiSayisi": 4482,
         "fonToplamDeger": 2145766550.45,
-        "gunlukGetiri": 0.00427158,
-        "paraGirisiCikisi": 25638563.84,
-        "yatirimciDegisimi": 14
+        "gunlukGetiri": 0.00104063,
+        "paraGirisiCikisi": 33669012.27,
+        "yatirimciDegisimi": 20
+      },
+      {
+        "fonKodu": "AAL",
+        "fonAdi": "ATA PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 3.472891,
+        "tedavuldekiPaySayisi": 607534669,
+        "kisiSayisi": 4462,
+        "fonToplamDeger": 2109901496.62,
+        "gunlukGetiri": 0.00322759,
+        "paraGirisiCikisi": -8022100.38,
+        "yatirimciDegisimi": -6
       },
       {
         "fonKodu": "AAL",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "AAL",
       "fonAdi": "ATA PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 3.472891,
+      "tedavuldekiPaySayisi": 607534669,
+      "kisiSayisi": 4462,
+      "fonToplamDeger": 2109901496.62,
+      "gunlukGetiri": 0.00322759,
+      "paraGirisiCikisi": -8022100.38,
+      "yatirimciDegisimi": -6
+    },
+    {
+      "fonKodu": "AAL",
+      "fonAdi": "ATA PORTFÖY PARA PİYASASI (TL) FONU",
       "tarih": "2026-08-18",
       "fiyat": 3.476505,
       "tedavuldekiPaySayisi": 617219399,
       "kisiSayisi": 4482,
       "fonToplamDeger": 2145766550.45,
-      "gunlukGetiri": 0.00427158,
-      "paraGirisiCikisi": 25638563.84,
-      "yatirimciDegisimi": 14
+      "gunlukGetiri": 0.00104063,
+      "paraGirisiCikisi": 33669012.27,
+      "yatirimciDegisimi": 20
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 617219399,
       "kisiSayisi": 4482,
       "fonToplamDeger": 2145766550.45,
-      "gunlukGetiri": 0.00427158,
-      "paraGirisiCikisi": 25638563.84,
-      "yatirimciDegisimi": 14
+      "gunlukGetiri": 0.00104063,
+      "paraGirisiCikisi": 33669012.27,
+      "yatirimciDegisimi": 20
+    },
+    {
+      "fonKodu": "AAL",
+      "fonAdi": "ATA PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 3.472891,
+      "tedavuldekiPaySayisi": 607534669,
+      "kisiSayisi": 4462,
+      "fonToplamDeger": 2109901496.62,
+      "gunlukGetiri": 0.00322759,
+      "paraGirisiCikisi": -8022100.38,
+      "yatirimciDegisimi": -6
     },
     {
       "fonKodu": "AAL",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DYJ",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 23490997,
     "kisiSayisi": 154,
     "fonToplamDeger": 1135770334.49,
-    "gunlukGetiri": 0.00458385,
+    "gunlukGetiri": 0.00282397,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 23490997,
         "kisiSayisi": 154,
         "fonToplamDeger": 1135770334.49,
-        "gunlukGetiri": 0.00458385,
+        "gunlukGetiri": 0.00282397,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "DYJ",
+        "fonAdi": "DENİZ PORTFÖY KAR PAYI ÖDEYEN ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 48.213023,
+        "tedavuldekiPaySayisi": 23490997,
+        "kisiSayisi": 154,
+        "fonToplamDeger": 1132571976.54,
+        "gunlukGetiri": 0.00175492,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "DYJ",
       "fonAdi": "DENİZ PORTFÖY KAR PAYI ÖDEYEN ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 48.213023,
+      "tedavuldekiPaySayisi": 23490997,
+      "kisiSayisi": 154,
+      "fonToplamDeger": 1132571976.54,
+      "gunlukGetiri": 0.00175492,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DYJ",
+      "fonAdi": "DENİZ PORTFÖY KAR PAYI ÖDEYEN ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
       "tarih": "2026-08-18",
       "fiyat": 48.349175,
       "tedavuldekiPaySayisi": 23490997,
       "kisiSayisi": 154,
       "fonToplamDeger": 1135770334.49,
-      "gunlukGetiri": 0.00458385,
+      "gunlukGetiri": 0.00282397,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 23490997,
       "kisiSayisi": 154,
       "fonToplamDeger": 1135770334.49,
-      "gunlukGetiri": 0.00458385,
+      "gunlukGetiri": 0.00282397,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DYJ",
+      "fonAdi": "DENİZ PORTFÖY KAR PAYI ÖDEYEN ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 48.213023,
+      "tedavuldekiPaySayisi": 23490997,
+      "kisiSayisi": 154,
+      "fonToplamDeger": 1132571976.54,
+      "gunlukGetiri": 0.00175492,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

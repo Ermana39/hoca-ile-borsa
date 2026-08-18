@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BHN",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 469740674,
     "kisiSayisi": 41,
     "fonToplamDeger": 624852841.76,
-    "gunlukGetiri": 0.03057781,
+    "gunlukGetiri": -0.02189941,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -3246320.75,
-      "besGun": -3247579.77,
+      "gunluk": 0,
+      "besGun": -3319005,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 469740674,
         "kisiSayisi": 41,
         "fonToplamDeger": 624852841.76,
-        "gunlukGetiri": 0.03057781,
-        "paraGirisiCikisi": -3246320.75,
+        "gunlukGetiri": -0.02189941,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "BHN",
+        "fonAdi": "A1 CAPİTAL PORTFÖY BANKACILIK SEKTÖRÜ DIŞI ŞİRKETLER HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-17",
+        "fiyat": 1.359991,
+        "tedavuldekiPaySayisi": 469740674,
+        "kisiSayisi": 41,
+        "fonToplamDeger": 638843159.51,
+        "gunlukGetiri": 0.05365217,
+        "paraGirisiCikisi": -3319005,
         "yatirimciDegisimi": 0
       },
       {
@@ -188,13 +200,25 @@
     {
       "fonKodu": "BHN",
       "fonAdi": "A1 CAPİTAL PORTFÖY BANKACILIK SEKTÖRÜ DIŞI ŞİRKETLER HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 1.359991,
+      "tedavuldekiPaySayisi": 469740674,
+      "kisiSayisi": 41,
+      "fonToplamDeger": 638843159.51,
+      "gunlukGetiri": 0.05365217,
+      "paraGirisiCikisi": -3319005,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BHN",
+      "fonAdi": "A1 CAPİTAL PORTFÖY BANKACILIK SEKTÖRÜ DIŞI ŞİRKETLER HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
       "tarih": "2026-08-18",
       "fiyat": 1.330208,
       "tedavuldekiPaySayisi": 469740674,
       "kisiSayisi": 41,
       "fonToplamDeger": 624852841.76,
-      "gunlukGetiri": 0.03057781,
-      "paraGirisiCikisi": -3246320.75,
+      "gunlukGetiri": -0.02189941,
+      "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
   ],
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 469740674,
       "kisiSayisi": 41,
       "fonToplamDeger": 624852841.76,
-      "gunlukGetiri": 0.03057781,
-      "paraGirisiCikisi": -3246320.75,
+      "gunlukGetiri": -0.02189941,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BHN",
+      "fonAdi": "A1 CAPİTAL PORTFÖY BANKACILIK SEKTÖRÜ DIŞI ŞİRKETLER HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 1.359991,
+      "tedavuldekiPaySayisi": 469740674,
+      "kisiSayisi": 41,
+      "fonToplamDeger": 638843159.51,
+      "gunlukGetiri": 0.05365217,
+      "paraGirisiCikisi": -3319005,
       "yatirimciDegisimi": 0
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GBZ",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 321296145,
     "kisiSayisi": 3267,
     "fonToplamDeger": 1119993245.25,
-    "gunlukGetiri": 0.00931088,
+    "gunlukGetiri": 0.00976522,
     "getiriler": {
       "birAy": 0.084695,
       "ucAy": 0.008307,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 2347866.14,
-      "besGun": 2371530.75,
+      "gunluk": -344312.34,
+      "besGun": 2524936.4,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -6,
+      "gunluk": -1,
       "besGun": -4,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 321296145,
         "kisiSayisi": 3267,
         "fonToplamDeger": 1119993245.25,
-        "gunlukGetiri": 0.00931088,
-        "paraGirisiCikisi": 2347866.14,
-        "yatirimciDegisimi": -6
+        "gunlukGetiri": 0.00976522,
+        "paraGirisiCikisi": -344312.34,
+        "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "GBZ",
+        "fonAdi": "AZİMUT PORTFÖY EMTİA FON SEPETİ FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 3.452149,
+        "tedavuldekiPaySayisi": 321394919,
+        "kisiSayisi": 3268,
+        "fonToplamDeger": 1109503031.98,
+        "gunlukGetiri": -0.00044995,
+        "paraGirisiCikisi": 2666143,
+        "yatirimciDegisimi": -5
       },
       {
         "fonKodu": "GBZ",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "GBZ",
       "fonAdi": "AZİMUT PORTFÖY EMTİA FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 3.452149,
+      "tedavuldekiPaySayisi": 321394919,
+      "kisiSayisi": 3268,
+      "fonToplamDeger": 1109503031.98,
+      "gunlukGetiri": -0.00044995,
+      "paraGirisiCikisi": 2666143,
+      "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "GBZ",
+      "fonAdi": "AZİMUT PORTFÖY EMTİA FON SEPETİ FONU",
       "tarih": "2026-08-18",
       "fiyat": 3.48586,
       "tedavuldekiPaySayisi": 321296145,
       "kisiSayisi": 3267,
       "fonToplamDeger": 1119993245.25,
-      "gunlukGetiri": 0.00931088,
-      "paraGirisiCikisi": 2347866.14,
-      "yatirimciDegisimi": -6
+      "gunlukGetiri": 0.00976522,
+      "paraGirisiCikisi": -344312.34,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 321296145,
       "kisiSayisi": 3267,
       "fonToplamDeger": 1119993245.25,
-      "gunlukGetiri": 0.00931088,
-      "paraGirisiCikisi": 2347866.14,
-      "yatirimciDegisimi": -6
+      "gunlukGetiri": 0.00976522,
+      "paraGirisiCikisi": -344312.34,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "GBZ",
+      "fonAdi": "AZİMUT PORTFÖY EMTİA FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 3.452149,
+      "tedavuldekiPaySayisi": 321394919,
+      "kisiSayisi": 3268,
+      "fonToplamDeger": 1109503031.98,
+      "gunlukGetiri": -0.00044995,
+      "paraGirisiCikisi": 2666143,
+      "yatirimciDegisimi": -5
     },
     {
       "fonKodu": "GBZ",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

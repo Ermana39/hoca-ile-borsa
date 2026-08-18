@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "FPR",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 15083820,
     "kisiSayisi": 28,
     "fonToplamDeger": 164323398.2,
-    "gunlukGetiri": -0.00336234,
+    "gunlukGetiri": -0.00425808,
     "getiriler": {
       "birAy": 0.010631999999999999,
       "ucAy": -0.01567,
@@ -29,8 +29,8 @@
       "besYil": 9.066341999999999
     },
     "paraAkisi": {
-      "gunluk": 206.99,
-      "besGun": 497.56,
+      "gunluk": 0,
+      "besGun": 498.44,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 15083820,
         "kisiSayisi": 28,
         "fonToplamDeger": 164323398.2,
-        "gunlukGetiri": -0.00336234,
-        "paraGirisiCikisi": 206.99,
+        "gunlukGetiri": -0.00425808,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "FPR",
+        "fonAdi": "STRATEJİ PORTFÖY FOREST HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-17",
+        "fiyat": 10.940603,
+        "tedavuldekiPaySayisi": 15083820,
+        "kisiSayisi": 28,
+        "fonToplamDeger": 165026080.37,
+        "gunlukGetiri": 0.00089957,
+        "paraGirisiCikisi": 207.87,
         "yatirimciDegisimi": 0
       },
       {
@@ -188,13 +200,25 @@
     {
       "fonKodu": "FPR",
       "fonAdi": "STRATEJİ PORTFÖY FOREST HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 10.940603,
+      "tedavuldekiPaySayisi": 15083820,
+      "kisiSayisi": 28,
+      "fonToplamDeger": 165026080.37,
+      "gunlukGetiri": 0.00089957,
+      "paraGirisiCikisi": 207.87,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "FPR",
+      "fonAdi": "STRATEJİ PORTFÖY FOREST HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
       "tarih": "2026-08-18",
       "fiyat": 10.894017,
       "tedavuldekiPaySayisi": 15083820,
       "kisiSayisi": 28,
       "fonToplamDeger": 164323398.2,
-      "gunlukGetiri": -0.00336234,
-      "paraGirisiCikisi": 206.99,
+      "gunlukGetiri": -0.00425808,
+      "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
   ],
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 15083820,
       "kisiSayisi": 28,
       "fonToplamDeger": 164323398.2,
-      "gunlukGetiri": -0.00336234,
-      "paraGirisiCikisi": 206.99,
+      "gunlukGetiri": -0.00425808,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "FPR",
+      "fonAdi": "STRATEJİ PORTFÖY FOREST HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 10.940603,
+      "tedavuldekiPaySayisi": 15083820,
+      "kisiSayisi": 28,
+      "fonToplamDeger": 165026080.37,
+      "gunlukGetiri": 0.00089957,
+      "paraGirisiCikisi": 207.87,
       "yatirimciDegisimi": 0
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

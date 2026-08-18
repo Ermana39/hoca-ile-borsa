@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IJV",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 488923356,
     "kisiSayisi": 2839,
     "fonToplamDeger": 2744986012.98,
-    "gunlukGetiri": 0.00437288,
+    "gunlukGetiri": 0.00106466,
     "getiriler": {
       "birAy": 0.032193,
       "ucAy": 0.103242,
@@ -29,22 +29,22 @@
       "besYil": 4.3837459999999995
     },
     "paraAkisi": {
-      "gunluk": 1205956.34,
-      "besGun": -8343274.11,
+      "gunluk": -2896481.43,
+      "besGun": -4731122.37,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -8,
-      "besGun": -8,
+      "gunluk": -6,
+      "besGun": -1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 488923356,
         "kisiSayisi": 2839,
         "fonToplamDeger": 2744986012.98,
-        "gunlukGetiri": 0.00437288,
-        "paraGirisiCikisi": 1205956.34,
-        "yatirimciDegisimi": -8
+        "gunlukGetiri": 0.00106466,
+        "paraGirisiCikisi": -2896481.43,
+        "yatirimciDegisimi": -6
+      },
+      {
+        "fonKodu": "IJV",
+        "fonAdi": "İSTANBUL PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 5.608377,
+        "tedavuldekiPaySayisi": 489439263,
+        "kisiSayisi": 2845,
+        "fonToplamDeger": 2744959912.84,
+        "gunlukGetiri": 0.00330471,
+        "paraGirisiCikisi": 4098074.72,
+        "yatirimciDegisimi": -2
       },
       {
         "fonKodu": "IJV",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "IJV",
       "fonAdi": "İSTANBUL PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 5.608377,
+      "tedavuldekiPaySayisi": 489439263,
+      "kisiSayisi": 2845,
+      "fonToplamDeger": 2744959912.84,
+      "gunlukGetiri": 0.00330471,
+      "paraGirisiCikisi": 4098074.72,
+      "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "IJV",
+      "fonAdi": "İSTANBUL PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
       "tarih": "2026-08-18",
       "fiyat": 5.614348,
       "tedavuldekiPaySayisi": 488923356,
       "kisiSayisi": 2839,
       "fonToplamDeger": 2744986012.98,
-      "gunlukGetiri": 0.00437288,
-      "paraGirisiCikisi": 1205956.34,
-      "yatirimciDegisimi": -8
+      "gunlukGetiri": 0.00106466,
+      "paraGirisiCikisi": -2896481.43,
+      "yatirimciDegisimi": -6
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 488923356,
       "kisiSayisi": 2839,
       "fonToplamDeger": 2744986012.98,
-      "gunlukGetiri": 0.00437288,
-      "paraGirisiCikisi": 1205956.34,
-      "yatirimciDegisimi": -8
+      "gunlukGetiri": 0.00106466,
+      "paraGirisiCikisi": -2896481.43,
+      "yatirimciDegisimi": -6
+    },
+    {
+      "fonKodu": "IJV",
+      "fonAdi": "İSTANBUL PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 5.608377,
+      "tedavuldekiPaySayisi": 489439263,
+      "kisiSayisi": 2845,
+      "fonToplamDeger": 2744959912.84,
+      "gunlukGetiri": 0.00330471,
+      "paraGirisiCikisi": 4098074.72,
+      "yatirimciDegisimi": -2
     },
     {
       "fonKodu": "IJV",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

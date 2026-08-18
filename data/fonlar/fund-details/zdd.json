@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ZDD",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 68206015,
     "kisiSayisi": 1395,
     "fonToplamDeger": 508072902.47,
-    "gunlukGetiri": 0.00240823,
+    "gunlukGetiri": -0.00027955,
     "getiriler": {
       "birAy": 0.029779,
       "ucAy": 0.07259,
@@ -29,22 +29,22 @@
       "besYil": 4.977023
     },
     "paraAkisi": {
-      "gunluk": 176081.64,
-      "besGun": 558075.66,
+      "gunluk": 22310.03,
+      "besGun": 1054646.4,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 7,
-      "besGun": 12,
+      "gunluk": 8,
+      "besGun": 11,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 68206015,
         "kisiSayisi": 1395,
         "fonToplamDeger": 508072902.47,
-        "gunlukGetiri": 0.00240823,
-        "paraGirisiCikisi": 176081.64,
-        "yatirimciDegisimi": 7
+        "gunlukGetiri": -0.00027955,
+        "paraGirisiCikisi": 22310.03,
+        "yatirimciDegisimi": 8
+      },
+      {
+        "fonKodu": "ZDD",
+        "fonAdi": "ZİRAAT PORTFÖY TEMKİNLİ DEĞİŞKEN FON",
+        "tarih": "2026-08-17",
+        "fiyat": 7.451175,
+        "tedavuldekiPaySayisi": 68203020,
+        "kisiSayisi": 1387,
+        "fonToplamDeger": 508192660.35,
+        "gunlukGetiri": 0.00268853,
+        "paraGirisiCikisi": 153814.61,
+        "yatirimciDegisimi": -1
       },
       {
         "fonKodu": "ZDD",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "ZDD",
       "fonAdi": "ZİRAAT PORTFÖY TEMKİNLİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 7.451175,
+      "tedavuldekiPaySayisi": 68203020,
+      "kisiSayisi": 1387,
+      "fonToplamDeger": 508192660.35,
+      "gunlukGetiri": 0.00268853,
+      "paraGirisiCikisi": 153814.61,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "ZDD",
+      "fonAdi": "ZİRAAT PORTFÖY TEMKİNLİ DEĞİŞKEN FON",
       "tarih": "2026-08-18",
       "fiyat": 7.449092,
       "tedavuldekiPaySayisi": 68206015,
       "kisiSayisi": 1395,
       "fonToplamDeger": 508072902.47,
-      "gunlukGetiri": 0.00240823,
-      "paraGirisiCikisi": 176081.64,
-      "yatirimciDegisimi": 7
+      "gunlukGetiri": -0.00027955,
+      "paraGirisiCikisi": 22310.03,
+      "yatirimciDegisimi": 8
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 68206015,
       "kisiSayisi": 1395,
       "fonToplamDeger": 508072902.47,
-      "gunlukGetiri": 0.00240823,
-      "paraGirisiCikisi": 176081.64,
-      "yatirimciDegisimi": 7
+      "gunlukGetiri": -0.00027955,
+      "paraGirisiCikisi": 22310.03,
+      "yatirimciDegisimi": 8
+    },
+    {
+      "fonKodu": "ZDD",
+      "fonAdi": "ZİRAAT PORTFÖY TEMKİNLİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 7.451175,
+      "tedavuldekiPaySayisi": 68203020,
+      "kisiSayisi": 1387,
+      "fonToplamDeger": 508192660.35,
+      "gunlukGetiri": 0.00268853,
+      "paraGirisiCikisi": 153814.61,
+      "yatirimciDegisimi": -1
     },
     {
       "fonKodu": "ZDD",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

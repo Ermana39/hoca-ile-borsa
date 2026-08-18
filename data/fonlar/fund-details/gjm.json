@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GJM",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 10192999,
     "kisiSayisi": 69,
     "fonToplamDeger": 447133059.34,
-    "gunlukGetiri": 0.0223567,
+    "gunlukGetiri": 0.01533108,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 15441.07,
-      "besGun": -37505.09,
+      "gunluk": 0,
+      "besGun": -37738.24,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 10192999,
         "kisiSayisi": 69,
         "fonToplamDeger": 447133059.34,
-        "gunlukGetiri": 0.0223567,
-        "paraGirisiCikisi": 15441.07,
+        "gunlukGetiri": 0.01533108,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "GJM",
+        "fonAdi": "GLOBAL MD PORTFÖY ADA SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 43.204314,
+        "tedavuldekiPaySayisi": 10192999,
+        "kisiSayisi": 69,
+        "fonToplamDeger": 440381529.98,
+        "gunlukGetiri": 0.00691953,
+        "paraGirisiCikisi": 15207.92,
         "yatirimciDegisimi": 0
       },
       {
@@ -188,13 +200,25 @@
     {
       "fonKodu": "GJM",
       "fonAdi": "GLOBAL MD PORTFÖY ADA SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 43.204314,
+      "tedavuldekiPaySayisi": 10192999,
+      "kisiSayisi": 69,
+      "fonToplamDeger": 440381529.98,
+      "gunlukGetiri": 0.00691953,
+      "paraGirisiCikisi": 15207.92,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GJM",
+      "fonAdi": "GLOBAL MD PORTFÖY ADA SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 43.866683,
       "tedavuldekiPaySayisi": 10192999,
       "kisiSayisi": 69,
       "fonToplamDeger": 447133059.34,
-      "gunlukGetiri": 0.0223567,
-      "paraGirisiCikisi": 15441.07,
+      "gunlukGetiri": 0.01533108,
+      "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
   ],
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 10192999,
       "kisiSayisi": 69,
       "fonToplamDeger": 447133059.34,
-      "gunlukGetiri": 0.0223567,
-      "paraGirisiCikisi": 15441.07,
+      "gunlukGetiri": 0.01533108,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GJM",
+      "fonAdi": "GLOBAL MD PORTFÖY ADA SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 43.204314,
+      "tedavuldekiPaySayisi": 10192999,
+      "kisiSayisi": 69,
+      "fonToplamDeger": 440381529.98,
+      "gunlukGetiri": 0.00691953,
+      "paraGirisiCikisi": 15207.92,
       "yatirimciDegisimi": 0
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

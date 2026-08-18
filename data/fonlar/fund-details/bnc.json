@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BNC",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 284136560,
     "kisiSayisi": 241,
     "fonToplamDeger": 617136335.3,
-    "gunlukGetiri": 0.00293913,
+    "gunlukGetiri": 0.00212424,
     "getiriler": {
       "birAy": 0.029902,
       "ucAy": 0.091197,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -5962.06,
-      "besGun": -66312023.49,
+      "gunluk": 199.82,
+      "besGun": -66312010.43,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
+      "gunluk": 0,
       "besGun": -2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 284136560,
         "kisiSayisi": 241,
         "fonToplamDeger": 617136335.3,
-        "gunlukGetiri": 0.00293913,
-        "paraGirisiCikisi": -5962.06,
+        "gunlukGetiri": 0.00212424,
+        "paraGirisiCikisi": 199.82,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "BNC",
+        "fonAdi": "AK PORTFÖY BEŞİNCİ SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 2.167367,
+        "tedavuldekiPaySayisi": 284136468,
+        "kisiSayisi": 241,
+        "fonToplamDeger": 615828117.29,
+        "gunlukGetiri": 0.00081317,
+        "paraGirisiCikisi": -6148.82,
         "yatirimciDegisimi": -2
       },
       {
@@ -188,14 +200,26 @@
     {
       "fonKodu": "BNC",
       "fonAdi": "AK PORTFÖY BEŞİNCİ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 2.167367,
+      "tedavuldekiPaySayisi": 284136468,
+      "kisiSayisi": 241,
+      "fonToplamDeger": 615828117.29,
+      "gunlukGetiri": 0.00081317,
+      "paraGirisiCikisi": -6148.82,
+      "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "BNC",
+      "fonAdi": "AK PORTFÖY BEŞİNCİ SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 2.171971,
       "tedavuldekiPaySayisi": 284136560,
       "kisiSayisi": 241,
       "fonToplamDeger": 617136335.3,
-      "gunlukGetiri": 0.00293913,
-      "paraGirisiCikisi": -5962.06,
-      "yatirimciDegisimi": -2
+      "gunlukGetiri": 0.00212424,
+      "paraGirisiCikisi": 199.82,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 284136560,
       "kisiSayisi": 241,
       "fonToplamDeger": 617136335.3,
-      "gunlukGetiri": 0.00293913,
-      "paraGirisiCikisi": -5962.06,
+      "gunlukGetiri": 0.00212424,
+      "paraGirisiCikisi": 199.82,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BNC",
+      "fonAdi": "AK PORTFÖY BEŞİNCİ SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 2.167367,
+      "tedavuldekiPaySayisi": 284136468,
+      "kisiSayisi": 241,
+      "fonToplamDeger": 615828117.29,
+      "gunlukGetiri": 0.00081317,
+      "paraGirisiCikisi": -6148.82,
       "yatirimciDegisimi": -2
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

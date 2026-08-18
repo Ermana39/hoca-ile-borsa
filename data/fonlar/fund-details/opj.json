@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "OPJ",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 556064118,
     "kisiSayisi": 2382,
     "fonToplamDeger": 933311959.51,
-    "gunlukGetiri": 0.00414419,
+    "gunlukGetiri": 0.00102702,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -207687262.16,
-      "besGun": 328407643.99,
+      "gunluk": -398680526.59,
+      "besGun": 89219389.89,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 132,
-      "besGun": 346,
+      "gunluk": 258,
+      "besGun": 152,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 556064118,
         "kisiSayisi": 2382,
         "fonToplamDeger": 933311959.51,
-        "gunlukGetiri": 0.00414419,
-        "paraGirisiCikisi": -207687262.16,
-        "yatirimciDegisimi": 132
+        "gunlukGetiri": 0.00102702,
+        "paraGirisiCikisi": -398680526.59,
+        "yatirimciDegisimi": 258
+      },
+      {
+        "fonKodu": "OPJ",
+        "fonAdi": "QNB PORTFÖY QNB PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 1.676703,
+        "tedavuldekiPaySayisi": 793596642,
+        "kisiSayisi": 2124,
+        "fonToplamDeger": 1330625722.73,
+        "gunlukGetiri": 0.00311397,
+        "paraGirisiCikisi": 190797312.63,
+        "yatirimciDegisimi": -126
       },
       {
         "fonKodu": "OPJ",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "OPJ",
       "fonAdi": "QNB PORTFÖY QNB PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.676703,
+      "tedavuldekiPaySayisi": 793596642,
+      "kisiSayisi": 2124,
+      "fonToplamDeger": 1330625722.73,
+      "gunlukGetiri": 0.00311397,
+      "paraGirisiCikisi": 190797312.63,
+      "yatirimciDegisimi": -126
+    },
+    {
+      "fonKodu": "OPJ",
+      "fonAdi": "QNB PORTFÖY QNB PARA PİYASASI (TL) FONU",
       "tarih": "2026-08-18",
       "fiyat": 1.678425,
       "tedavuldekiPaySayisi": 556064118,
       "kisiSayisi": 2382,
       "fonToplamDeger": 933311959.51,
-      "gunlukGetiri": 0.00414419,
-      "paraGirisiCikisi": -207687262.16,
-      "yatirimciDegisimi": 132
+      "gunlukGetiri": 0.00102702,
+      "paraGirisiCikisi": -398680526.59,
+      "yatirimciDegisimi": 258
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 556064118,
       "kisiSayisi": 2382,
       "fonToplamDeger": 933311959.51,
-      "gunlukGetiri": 0.00414419,
-      "paraGirisiCikisi": -207687262.16,
-      "yatirimciDegisimi": 132
+      "gunlukGetiri": 0.00102702,
+      "paraGirisiCikisi": -398680526.59,
+      "yatirimciDegisimi": 258
+    },
+    {
+      "fonKodu": "OPJ",
+      "fonAdi": "QNB PORTFÖY QNB PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.676703,
+      "tedavuldekiPaySayisi": 793596642,
+      "kisiSayisi": 2124,
+      "fonToplamDeger": 1330625722.73,
+      "gunlukGetiri": 0.00311397,
+      "paraGirisiCikisi": 190797312.63,
+      "yatirimciDegisimi": -126
     },
     {
       "fonKodu": "OPJ",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

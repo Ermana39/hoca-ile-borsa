@@ -1,7 +1,7 @@
 export const metadata = {
-  title: "Halka Arz Takvimi ve Şirket Bilgileri",
+  title: "Halka Arz Rehberi 2026: Şirketler, İzahnameler ve Araçlar",
   description:
-    "Güncel halka arz takvimi, onaylı ve taslak izahnameler, fiyat, talep tarihleri, lot hesaplama ve işlem başlangıcı açıklanan şirket bilgilerini inceleyin.",
+    "Onaylı ve taslak izahnameleri, halka arz şirketlerini, lot ve kazanç araçlarını inceleyin; güncel takvime, analizlere ve halka arz sonuçlarına ulaşın.",
   alternates: { canonical: "https://www.hocaileborsa.com/halka-arz" },
 };
 
@@ -23,7 +23,9 @@ export default function HalkaArzPage() {
           </Link>
         </div>
 
-        <h1 className="mb-6 text-3xl font-bold text-zinc-900">Halka Arz</h1>
+        <h1 className="mb-6 text-3xl font-bold text-zinc-900">
+          Halka Arz Rehberi 2026
+        </h1>
 
         <div className="mb-8 grid grid-cols-1 gap-3 md:grid-cols-2">
           <Link
@@ -48,7 +50,7 @@ export default function HalkaArzPage() {
           <Link
             href="/halka-arz/takvim"
             prefetch={false}
-            aria-label="Halka Arz Takvimi"
+            aria-label="2026 Halka Arz Takvimi"
             className="group relative flex min-h-[240px] flex-col rounded-2xl border border-blue-300 bg-blue-50 p-3 shadow-sm transition hover:border-blue-400 hover:bg-blue-100"
           >
             <span className="absolute right-5 top-5 z-10 rounded-full bg-blue-700 px-3 py-1 text-xs font-bold text-white">
@@ -64,7 +66,7 @@ export default function HalkaArzPage() {
             <div className="flex flex-1 items-center justify-center px-2 pb-2 text-center">
               <div>
                 <h2 className="text-2xl font-semibold leading-tight text-zinc-900 md:text-3xl">
-                  Halka Arz Takvimi
+                  2026 Halka Arz Takvimi
                 </h2>
                 <p className="mt-2 text-sm leading-6 text-slate-600">
                   Talep, dağıtım ve işlem tarihlerini takip et

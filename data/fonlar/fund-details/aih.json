@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "AIH",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 9510664,
     "kisiSayisi": 4,
     "fonToplamDeger": 180879578.53,
-    "gunlukGetiri": 0.07589934,
+    "gunlukGetiri": 0.01396614,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -2531186.41,
-      "besGun": -2531186.41,
+      "gunluk": 0,
+      "besGun": -2496322.42,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 9510664,
         "kisiSayisi": 4,
         "fonToplamDeger": 180879578.53,
-        "gunlukGetiri": 0.07589934,
-        "paraGirisiCikisi": -2531186.41,
+        "gunlukGetiri": 0.01396614,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "AIH",
+        "fonAdi": "AK PORTFÖY RTH HİSSE SENEDİ SERBEST ÖZEL FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-17",
+        "fiyat": 18.756649,
+        "tedavuldekiPaySayisi": 9510664,
+        "kisiSayisi": 4,
+        "fonToplamDeger": 178388185.99,
+        "gunlukGetiri": 0.06108015,
+        "paraGirisiCikisi": -2496322.42,
         "yatirimciDegisimi": 0
       },
       {
@@ -188,13 +200,25 @@
     {
       "fonKodu": "AIH",
       "fonAdi": "AK PORTFÖY RTH HİSSE SENEDİ SERBEST ÖZEL FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 18.756649,
+      "tedavuldekiPaySayisi": 9510664,
+      "kisiSayisi": 4,
+      "fonToplamDeger": 178388185.99,
+      "gunlukGetiri": 0.06108015,
+      "paraGirisiCikisi": -2496322.42,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "AIH",
+      "fonAdi": "AK PORTFÖY RTH HİSSE SENEDİ SERBEST ÖZEL FON (HİSSE SENEDİ YOĞUN FON)",
       "tarih": "2026-08-18",
       "fiyat": 19.018607,
       "tedavuldekiPaySayisi": 9510664,
       "kisiSayisi": 4,
       "fonToplamDeger": 180879578.53,
-      "gunlukGetiri": 0.07589934,
-      "paraGirisiCikisi": -2531186.41,
+      "gunlukGetiri": 0.01396614,
+      "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
   ],
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 9510664,
       "kisiSayisi": 4,
       "fonToplamDeger": 180879578.53,
-      "gunlukGetiri": 0.07589934,
-      "paraGirisiCikisi": -2531186.41,
+      "gunlukGetiri": 0.01396614,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "AIH",
+      "fonAdi": "AK PORTFÖY RTH HİSSE SENEDİ SERBEST ÖZEL FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 18.756649,
+      "tedavuldekiPaySayisi": 9510664,
+      "kisiSayisi": 4,
+      "fonToplamDeger": 178388185.99,
+      "gunlukGetiri": 0.06108015,
+      "paraGirisiCikisi": -2496322.42,
       "yatirimciDegisimi": 0
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

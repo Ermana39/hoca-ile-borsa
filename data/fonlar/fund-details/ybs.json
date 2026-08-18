@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YBS",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 13872960304,
     "kisiSayisi": 11814,
     "fonToplamDeger": 2012503822.22,
-    "gunlukGetiri": 0.00409064,
+    "gunlukGetiri": 0.00113179,
     "getiriler": {
       "birAy": 0.031067,
       "ucAy": 0.101789,
@@ -29,22 +29,22 @@
       "besYil": 3.999207
     },
     "paraAkisi": {
-      "gunluk": 772888.98,
-      "besGun": 16846357.81,
+      "gunluk": -820099.58,
+      "besGun": 13330441.06,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": 91,
+      "gunluk": 4,
+      "besGun": 75,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 13872960304,
         "kisiSayisi": 11814,
         "fonToplamDeger": 2012503822.22,
-        "gunlukGetiri": 0.00409064,
-        "paraGirisiCikisi": 772888.98,
-        "yatirimciDegisimi": 1
+        "gunlukGetiri": 0.00113179,
+        "paraGirisiCikisi": -820099.58,
+        "yatirimciDegisimi": 4
+      },
+      {
+        "fonKodu": "YBS",
+        "fonAdi": "YAPI KREDİ PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 0.144903,
+        "tedavuldekiPaySayisi": 13878613551,
+        "kisiSayisi": 11810,
+        "fonToplamDeger": 2011048809.94,
+        "gunlukGetiri": 0.00295551,
+        "paraGirisiCikisi": 1591187.67,
+        "yatirimciDegisimi": -3
       },
       {
         "fonKodu": "YBS",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "YBS",
       "fonAdi": "YAPI KREDİ PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 0.144903,
+      "tedavuldekiPaySayisi": 13878613551,
+      "kisiSayisi": 11810,
+      "fonToplamDeger": 2011048809.94,
+      "gunlukGetiri": 0.00295551,
+      "paraGirisiCikisi": 1591187.67,
+      "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "YBS",
+      "fonAdi": "YAPI KREDİ PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
       "tarih": "2026-08-18",
       "fiyat": 0.145067,
       "tedavuldekiPaySayisi": 13872960304,
       "kisiSayisi": 11814,
       "fonToplamDeger": 2012503822.22,
-      "gunlukGetiri": 0.00409064,
-      "paraGirisiCikisi": 772888.98,
-      "yatirimciDegisimi": 1
+      "gunlukGetiri": 0.00113179,
+      "paraGirisiCikisi": -820099.58,
+      "yatirimciDegisimi": 4
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 13872960304,
       "kisiSayisi": 11814,
       "fonToplamDeger": 2012503822.22,
-      "gunlukGetiri": 0.00409064,
-      "paraGirisiCikisi": 772888.98,
-      "yatirimciDegisimi": 1
+      "gunlukGetiri": 0.00113179,
+      "paraGirisiCikisi": -820099.58,
+      "yatirimciDegisimi": 4
+    },
+    {
+      "fonKodu": "YBS",
+      "fonAdi": "YAPI KREDİ PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 0.144903,
+      "tedavuldekiPaySayisi": 13878613551,
+      "kisiSayisi": 11810,
+      "fonToplamDeger": 2011048809.94,
+      "gunlukGetiri": 0.00295551,
+      "paraGirisiCikisi": 1591187.67,
+      "yatirimciDegisimi": -3
     },
     {
       "fonKodu": "YBS",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

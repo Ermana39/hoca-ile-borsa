@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PCS",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 11430616607,
     "kisiSayisi": 30,
     "fonToplamDeger": 95430691344.15,
-    "gunlukGetiri": 0.00391758,
+    "gunlukGetiri": -0.04616857,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1464737703.79,
-      "besGun": 5371656603.77,
+      "gunluk": -190766295.3,
+      "besGun": 3880742224.08,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": 1,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 11430616607,
         "kisiSayisi": 30,
         "fonToplamDeger": 95430691344.15,
-        "gunlukGetiri": 0.00391758,
-        "paraGirisiCikisi": -1464737703.79,
+        "gunlukGetiri": -0.04616857,
+        "paraGirisiCikisi": -190766295.3,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "PCS",
+        "fonAdi": "PUSULA PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-17",
+        "fiyat": 8.752795,
+        "tedavuldekiPaySayisi": 11453466452,
+        "kisiSayisi": 30,
+        "fonToplamDeger": 100249843161.61,
+        "gunlukGetiri": 0.05251048,
+        "paraGirisiCikisi": -1335635799,
         "yatirimciDegisimi": 0
       },
       {
@@ -188,13 +200,25 @@
     {
       "fonKodu": "PCS",
       "fonAdi": "PUSULA PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 8.752795,
+      "tedavuldekiPaySayisi": 11453466452,
+      "kisiSayisi": 30,
+      "fonToplamDeger": 100249843161.61,
+      "gunlukGetiri": 0.05251048,
+      "paraGirisiCikisi": -1335635799,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PCS",
+      "fonAdi": "PUSULA PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
       "tarih": "2026-08-18",
       "fiyat": 8.348691,
       "tedavuldekiPaySayisi": 11430616607,
       "kisiSayisi": 30,
       "fonToplamDeger": 95430691344.15,
-      "gunlukGetiri": 0.00391758,
-      "paraGirisiCikisi": -1464737703.79,
+      "gunlukGetiri": -0.04616857,
+      "paraGirisiCikisi": -190766295.3,
       "yatirimciDegisimi": 0
     }
   ],
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 11430616607,
       "kisiSayisi": 30,
       "fonToplamDeger": 95430691344.15,
-      "gunlukGetiri": 0.00391758,
-      "paraGirisiCikisi": -1464737703.79,
+      "gunlukGetiri": -0.04616857,
+      "paraGirisiCikisi": -190766295.3,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PCS",
+      "fonAdi": "PUSULA PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 8.752795,
+      "tedavuldekiPaySayisi": 11453466452,
+      "kisiSayisi": 30,
+      "fonToplamDeger": 100249843161.61,
+      "gunlukGetiri": 0.05251048,
+      "paraGirisiCikisi": -1335635799,
       "yatirimciDegisimi": 0
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TTV",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 326888993,
     "kisiSayisi": 33,
     "fonToplamDeger": 2855762360,
-    "gunlukGetiri": 0.00189985,
+    "gunlukGetiri": 0.00153632,
     "getiriler": {
       "birAy": 0.011418,
       "ucAy": 0.08853799999999999,
@@ -29,8 +29,8 @@
       "besYil": 5.951072
     },
     "paraAkisi": {
-      "gunluk": 1179.38,
-      "besGun": -40086785.12,
+      "gunluk": 995.92,
+      "besGun": -40086785.4,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 326888993,
         "kisiSayisi": 33,
         "fonToplamDeger": 2855762360,
-        "gunlukGetiri": 0.00189985,
-        "paraGirisiCikisi": 1179.38,
+        "gunlukGetiri": 0.00153632,
+        "paraGirisiCikisi": 995.92,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "TTV",
+        "fonAdi": "TACİRLER PORTFÖY VEGA SERBEST (TL) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 8.722783,
+        "tedavuldekiPaySayisi": 326888879,
+        "kisiSayisi": 33,
+        "fonToplamDeger": 2851380860.39,
+        "gunlukGetiri": 0.00036297,
+        "paraGirisiCikisi": 183.18,
         "yatirimciDegisimi": 0
       },
       {
@@ -188,13 +200,25 @@
     {
       "fonKodu": "TTV",
       "fonAdi": "TACİRLER PORTFÖY VEGA SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 8.722783,
+      "tedavuldekiPaySayisi": 326888879,
+      "kisiSayisi": 33,
+      "fonToplamDeger": 2851380860.39,
+      "gunlukGetiri": 0.00036297,
+      "paraGirisiCikisi": 183.18,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TTV",
+      "fonAdi": "TACİRLER PORTFÖY VEGA SERBEST (TL) FON",
       "tarih": "2026-08-18",
       "fiyat": 8.736184,
       "tedavuldekiPaySayisi": 326888993,
       "kisiSayisi": 33,
       "fonToplamDeger": 2855762360,
-      "gunlukGetiri": 0.00189985,
-      "paraGirisiCikisi": 1179.38,
+      "gunlukGetiri": 0.00153632,
+      "paraGirisiCikisi": 995.92,
       "yatirimciDegisimi": 0
     }
   ],
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 326888993,
       "kisiSayisi": 33,
       "fonToplamDeger": 2855762360,
-      "gunlukGetiri": 0.00189985,
-      "paraGirisiCikisi": 1179.38,
+      "gunlukGetiri": 0.00153632,
+      "paraGirisiCikisi": 995.92,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TTV",
+      "fonAdi": "TACİRLER PORTFÖY VEGA SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 8.722783,
+      "tedavuldekiPaySayisi": 326888879,
+      "kisiSayisi": 33,
+      "fonToplamDeger": 2851380860.39,
+      "gunlukGetiri": 0.00036297,
+      "paraGirisiCikisi": 183.18,
       "yatirimciDegisimi": 0
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

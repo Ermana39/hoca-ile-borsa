@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DTV",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 60375603,
     "kisiSayisi": 4,
     "fonToplamDeger": 4192143060.97,
-    "gunlukGetiri": 0.00409404,
+    "gunlukGetiri": 0.00170917,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 60375603,
         "kisiSayisi": 4,
         "fonToplamDeger": 4192143060.97,
-        "gunlukGetiri": 0.00409404,
+        "gunlukGetiri": 0.00170917,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "DTV",
+        "fonAdi": "DENİZ PORTFÖY CEY SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-17",
+        "fiyat": 69.315915,
+        "tedavuldekiPaySayisi": 60375603,
+        "kisiSayisi": 4,
+        "fonToplamDeger": 4184990187.61,
+        "gunlukGetiri": 0.00238079,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "DTV",
       "fonAdi": "DENİZ PORTFÖY CEY SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 69.315915,
+      "tedavuldekiPaySayisi": 60375603,
+      "kisiSayisi": 4,
+      "fonToplamDeger": 4184990187.61,
+      "gunlukGetiri": 0.00238079,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DTV",
+      "fonAdi": "DENİZ PORTFÖY CEY SERBEST (DÖVİZ) ÖZEL FON",
       "tarih": "2026-08-18",
       "fiyat": 69.434388,
       "tedavuldekiPaySayisi": 60375603,
       "kisiSayisi": 4,
       "fonToplamDeger": 4192143060.97,
-      "gunlukGetiri": 0.00409404,
+      "gunlukGetiri": 0.00170917,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 60375603,
       "kisiSayisi": 4,
       "fonToplamDeger": 4192143060.97,
-      "gunlukGetiri": 0.00409404,
+      "gunlukGetiri": 0.00170917,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DTV",
+      "fonAdi": "DENİZ PORTFÖY CEY SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 69.315915,
+      "tedavuldekiPaySayisi": 60375603,
+      "kisiSayisi": 4,
+      "fonToplamDeger": 4184990187.61,
+      "gunlukGetiri": 0.00238079,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

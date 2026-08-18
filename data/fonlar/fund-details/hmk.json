@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "HMK",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 462256,
     "kisiSayisi": 59,
     "fonToplamDeger": 145756704.93,
-    "gunlukGetiri": -0.0095044,
+    "gunlukGetiri": -0.00002917,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -15030166.96,
-      "besGun": -18649287.33,
+      "gunluk": 0,
+      "besGun": -18649725.82,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 462256,
         "kisiSayisi": 59,
         "fonToplamDeger": 145756704.93,
-        "gunlukGetiri": -0.0095044,
-        "paraGirisiCikisi": -15030166.96,
+        "gunlukGetiri": -0.00002917,
+        "paraGirisiCikisi": 0,
         "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "HMK",
+        "fonAdi": "HEDEF PORTFÖY EGE HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-17",
+        "fiyat": 315.325182,
+        "tedavuldekiPaySayisi": 462256,
+        "kisiSayisi": 60,
+        "fonToplamDeger": 145760957.2,
+        "gunlukGetiri": -0.00947551,
+        "paraGirisiCikisi": -15030605.45,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "HMK",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "HMK",
       "fonAdi": "HEDEF PORTFÖY EGE HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 315.325182,
+      "tedavuldekiPaySayisi": 462256,
+      "kisiSayisi": 60,
+      "fonToplamDeger": 145760957.2,
+      "gunlukGetiri": -0.00947551,
+      "paraGirisiCikisi": -15030605.45,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HMK",
+      "fonAdi": "HEDEF PORTFÖY EGE HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
       "tarih": "2026-08-18",
       "fiyat": 315.315983,
       "tedavuldekiPaySayisi": 462256,
       "kisiSayisi": 59,
       "fonToplamDeger": 145756704.93,
-      "gunlukGetiri": -0.0095044,
-      "paraGirisiCikisi": -15030166.96,
+      "gunlukGetiri": -0.00002917,
+      "paraGirisiCikisi": 0,
       "yatirimciDegisimi": -1
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 462256,
       "kisiSayisi": 59,
       "fonToplamDeger": 145756704.93,
-      "gunlukGetiri": -0.0095044,
-      "paraGirisiCikisi": -15030166.96,
+      "gunlukGetiri": -0.00002917,
+      "paraGirisiCikisi": 0,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "HMK",
+      "fonAdi": "HEDEF PORTFÖY EGE HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 315.325182,
+      "tedavuldekiPaySayisi": 462256,
+      "kisiSayisi": 60,
+      "fonToplamDeger": 145760957.2,
+      "gunlukGetiri": -0.00947551,
+      "paraGirisiCikisi": -15030605.45,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "HMK",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

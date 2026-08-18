@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BPZ",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 345744549,
     "kisiSayisi": 1183,
     "fonToplamDeger": 547862402.43,
-    "gunlukGetiri": 0.00481167,
+    "gunlukGetiri": 0.00122579,
     "getiriler": {
       "birAy": 0.035745,
       "ucAy": 0.117264,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 34973590.81,
-      "besGun": 86009669.76,
+      "gunluk": -21259876.11,
+      "besGun": 11982443.14,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
-      "besGun": 86,
+      "gunluk": -1,
+      "besGun": 79,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 345744549,
         "kisiSayisi": 1183,
         "fonToplamDeger": 547862402.43,
-        "gunlukGetiri": 0.00481167,
-        "paraGirisiCikisi": 34973590.81,
-        "yatirimciDegisimi": 2
+        "gunlukGetiri": 0.00122579,
+        "paraGirisiCikisi": -21259876.11,
+        "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "BPZ",
+        "fonAdi": "BULLS PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 1.582647,
+        "tedavuldekiPaySayisi": 359161216,
+        "kisiSayisi": 1184,
+        "fonToplamDeger": 568425576.88,
+        "gunlukGetiri": 0.00358149,
+        "paraGirisiCikisi": 56164620.64,
+        "yatirimciDegisimi": 3
       },
       {
         "fonKodu": "BPZ",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "BPZ",
       "fonAdi": "BULLS PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.582647,
+      "tedavuldekiPaySayisi": 359161216,
+      "kisiSayisi": 1184,
+      "fonToplamDeger": 568425576.88,
+      "gunlukGetiri": 0.00358149,
+      "paraGirisiCikisi": 56164620.64,
+      "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "BPZ",
+      "fonAdi": "BULLS PORTFÖY PARA PİYASASI (TL) FONU",
       "tarih": "2026-08-18",
       "fiyat": 1.584587,
       "tedavuldekiPaySayisi": 345744549,
       "kisiSayisi": 1183,
       "fonToplamDeger": 547862402.43,
-      "gunlukGetiri": 0.00481167,
-      "paraGirisiCikisi": 34973590.81,
-      "yatirimciDegisimi": 2
+      "gunlukGetiri": 0.00122579,
+      "paraGirisiCikisi": -21259876.11,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 345744549,
       "kisiSayisi": 1183,
       "fonToplamDeger": 547862402.43,
-      "gunlukGetiri": 0.00481167,
-      "paraGirisiCikisi": 34973590.81,
-      "yatirimciDegisimi": 2
+      "gunlukGetiri": 0.00122579,
+      "paraGirisiCikisi": -21259876.11,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "BPZ",
+      "fonAdi": "BULLS PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.582647,
+      "tedavuldekiPaySayisi": 359161216,
+      "kisiSayisi": 1184,
+      "fonToplamDeger": 568425576.88,
+      "gunlukGetiri": 0.00358149,
+      "paraGirisiCikisi": 56164620.64,
+      "yatirimciDegisimi": 3
     },
     {
       "fonKodu": "BPZ",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

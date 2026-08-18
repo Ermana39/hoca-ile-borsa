@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "OPB",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 3691513,
     "kisiSayisi": 414,
     "fonToplamDeger": 50081228.61,
-    "gunlukGetiri": 0.00889509,
+    "gunlukGetiri": 0.00401492,
     "getiriler": {
       "birAy": 0.035886,
       "ucAy": 0.062483000000000004,
@@ -29,22 +29,22 @@
       "besYil": 6.791806
     },
     "paraAkisi": {
-      "gunluk": -2767.58,
-      "besGun": 46605.53,
+      "gunluk": -4721.17,
+      "besGun": 46704.1,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": -1,
+      "gunluk": -1,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 3691513,
         "kisiSayisi": 414,
         "fonToplamDeger": 50081228.61,
-        "gunlukGetiri": 0.00889509,
-        "paraGirisiCikisi": -2767.58,
-        "yatirimciDegisimi": 0
+        "gunlukGetiri": 0.00401492,
+        "paraGirisiCikisi": -4721.17,
+        "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "OPB",
+        "fonAdi": "OSMANLI PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-17",
+        "fiyat": 13.512335,
+        "tedavuldekiPaySayisi": 3691861,
+        "kisiSayisi": 415,
+        "fonToplamDeger": 49885663.02,
+        "gunlukGetiri": 0.00486065,
+        "paraGirisiCikisi": 1945.78,
+        "yatirimciDegisimi": 1
       },
       {
         "fonKodu": "OPB",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "OPB",
       "fonAdi": "OSMANLI PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 13.512335,
+      "tedavuldekiPaySayisi": 3691861,
+      "kisiSayisi": 415,
+      "fonToplamDeger": 49885663.02,
+      "gunlukGetiri": 0.00486065,
+      "paraGirisiCikisi": 1945.78,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "OPB",
+      "fonAdi": "OSMANLI PORTFÖY BİRİNCİ DEĞİŞKEN FON",
       "tarih": "2026-08-18",
       "fiyat": 13.566586,
       "tedavuldekiPaySayisi": 3691513,
       "kisiSayisi": 414,
       "fonToplamDeger": 50081228.61,
-      "gunlukGetiri": 0.00889509,
-      "paraGirisiCikisi": -2767.58,
-      "yatirimciDegisimi": 0
+      "gunlukGetiri": 0.00401492,
+      "paraGirisiCikisi": -4721.17,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 3691513,
       "kisiSayisi": 414,
       "fonToplamDeger": 50081228.61,
-      "gunlukGetiri": 0.00889509,
-      "paraGirisiCikisi": -2767.58,
-      "yatirimciDegisimi": 0
+      "gunlukGetiri": 0.00401492,
+      "paraGirisiCikisi": -4721.17,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "OPB",
+      "fonAdi": "OSMANLI PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 13.512335,
+      "tedavuldekiPaySayisi": 3691861,
+      "kisiSayisi": 415,
+      "fonToplamDeger": 49885663.02,
+      "gunlukGetiri": 0.00486065,
+      "paraGirisiCikisi": 1945.78,
+      "yatirimciDegisimi": 1
     },
     {
       "fonKodu": "OPB",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "MBL",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 72950274,
     "kisiSayisi": 216,
     "fonToplamDeger": 20913931.48,
-    "gunlukGetiri": 0.00418224,
+    "gunlukGetiri": 0.00103006,
     "getiriler": {
       "birAy": 0.030044,
       "ucAy": 0.098237,
@@ -29,22 +29,22 @@
       "besYil": 3.0392099999999997
     },
     "paraAkisi": {
-      "gunluk": 602.33,
-      "besGun": -1152.7,
+      "gunluk": 0,
+      "besGun": -1042.03,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": 0,
       "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 72950274,
         "kisiSayisi": 216,
         "fonToplamDeger": 20913931.48,
-        "gunlukGetiri": 0.00418224,
-        "paraGirisiCikisi": 602.33,
+        "gunlukGetiri": 0.00103006,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "MBL",
+        "fonAdi": "MEKSA PORTFÖY İKİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-17",
+        "fiyat": 0.286392,
+        "tedavuldekiPaySayisi": 72950274,
+        "kisiSayisi": 216,
+        "fonToplamDeger": 20892403.84,
+        "gunlukGetiri": 0.00314894,
+        "paraGirisiCikisi": 601.71,
         "yatirimciDegisimi": 1
       },
       {
@@ -188,14 +200,26 @@
     {
       "fonKodu": "MBL",
       "fonAdi": "MEKSA PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 0.286392,
+      "tedavuldekiPaySayisi": 72950274,
+      "kisiSayisi": 216,
+      "fonToplamDeger": 20892403.84,
+      "gunlukGetiri": 0.00314894,
+      "paraGirisiCikisi": 601.71,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "MBL",
+      "fonAdi": "MEKSA PORTFÖY İKİNCİ DEĞİŞKEN FON",
       "tarih": "2026-08-18",
       "fiyat": 0.286687,
       "tedavuldekiPaySayisi": 72950274,
       "kisiSayisi": 216,
       "fonToplamDeger": 20913931.48,
-      "gunlukGetiri": 0.00418224,
-      "paraGirisiCikisi": 602.33,
-      "yatirimciDegisimi": 1
+      "gunlukGetiri": 0.00103006,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 72950274,
       "kisiSayisi": 216,
       "fonToplamDeger": 20913931.48,
-      "gunlukGetiri": 0.00418224,
-      "paraGirisiCikisi": 602.33,
+      "gunlukGetiri": 0.00103006,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "MBL",
+      "fonAdi": "MEKSA PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 0.286392,
+      "tedavuldekiPaySayisi": 72950274,
+      "kisiSayisi": 216,
+      "fonToplamDeger": 20892403.84,
+      "gunlukGetiri": 0.00314894,
+      "paraGirisiCikisi": 601.71,
       "yatirimciDegisimi": 1
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

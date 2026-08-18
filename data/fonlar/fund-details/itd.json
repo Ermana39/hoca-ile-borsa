@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ITD",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 37000272,
     "kisiSayisi": 1,
     "fonToplamDeger": 2546001558.37,
-    "gunlukGetiri": 0.00314149,
+    "gunlukGetiri": 0.00063653,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 37000272,
         "kisiSayisi": 1,
         "fonToplamDeger": 2546001558.37,
-        "gunlukGetiri": 0.00314149,
+        "gunlukGetiri": 0.00063653,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "ITD",
+        "fonAdi": "İŞ PORTFÖY TE2 SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-17",
+        "fiyat": 68.766575,
+        "tedavuldekiPaySayisi": 37000272,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 2544381968.59,
+        "gunlukGetiri": 0.00250337,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "ITD",
       "fonAdi": "İŞ PORTFÖY TE2 SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 68.766575,
+      "tedavuldekiPaySayisi": 37000272,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 2544381968.59,
+      "gunlukGetiri": 0.00250337,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "ITD",
+      "fonAdi": "İŞ PORTFÖY TE2 SERBEST (DÖVİZ) ÖZEL FON",
       "tarih": "2026-08-18",
       "fiyat": 68.810347,
       "tedavuldekiPaySayisi": 37000272,
       "kisiSayisi": 1,
       "fonToplamDeger": 2546001558.37,
-      "gunlukGetiri": 0.00314149,
+      "gunlukGetiri": 0.00063653,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 37000272,
       "kisiSayisi": 1,
       "fonToplamDeger": 2546001558.37,
-      "gunlukGetiri": 0.00314149,
+      "gunlukGetiri": 0.00063653,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "ITD",
+      "fonAdi": "İŞ PORTFÖY TE2 SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 68.766575,
+      "tedavuldekiPaySayisi": 37000272,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 2544381968.59,
+      "gunlukGetiri": 0.00250337,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DNK",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 380070754,
     "kisiSayisi": 133,
     "fonToplamDeger": 652347919.5,
-    "gunlukGetiri": 0.01102274,
+    "gunlukGetiri": 0.0043089,
     "getiriler": {
       "birAy": 0.029028,
       "ucAy": -0.027776000000000002,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 5054.75,
-      "besGun": -5463.46,
+      "gunluk": 0,
+      "besGun": -5485.14,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 0,
       "besGun": -3,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 380070754,
         "kisiSayisi": 133,
         "fonToplamDeger": 652347919.5,
-        "gunlukGetiri": 0.01102274,
-        "paraGirisiCikisi": 5054.75,
+        "gunlukGetiri": 0.0043089,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "DNK",
+        "fonAdi": "TACİRLER PORTFÖY DENGE KATILIM SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 1.709021,
+        "tedavuldekiPaySayisi": 380070754,
+        "kisiSayisi": 133,
+        "fonToplamDeger": 649548893.12,
+        "gunlukGetiri": 0.00668504,
+        "paraGirisiCikisi": 5033.07,
         "yatirimciDegisimi": -1
       },
       {
@@ -188,14 +200,26 @@
     {
       "fonKodu": "DNK",
       "fonAdi": "TACİRLER PORTFÖY DENGE KATILIM SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.709021,
+      "tedavuldekiPaySayisi": 380070754,
+      "kisiSayisi": 133,
+      "fonToplamDeger": 649548893.12,
+      "gunlukGetiri": 0.00668504,
+      "paraGirisiCikisi": 5033.07,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "DNK",
+      "fonAdi": "TACİRLER PORTFÖY DENGE KATILIM SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 1.716385,
       "tedavuldekiPaySayisi": 380070754,
       "kisiSayisi": 133,
       "fonToplamDeger": 652347919.5,
-      "gunlukGetiri": 0.01102274,
-      "paraGirisiCikisi": 5054.75,
-      "yatirimciDegisimi": -1
+      "gunlukGetiri": 0.0043089,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 380070754,
       "kisiSayisi": 133,
       "fonToplamDeger": 652347919.5,
-      "gunlukGetiri": 0.01102274,
-      "paraGirisiCikisi": 5054.75,
+      "gunlukGetiri": 0.0043089,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DNK",
+      "fonAdi": "TACİRLER PORTFÖY DENGE KATILIM SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.709021,
+      "tedavuldekiPaySayisi": 380070754,
+      "kisiSayisi": 133,
+      "fonToplamDeger": 649548893.12,
+      "gunlukGetiri": 0.00668504,
+      "paraGirisiCikisi": 5033.07,
       "yatirimciDegisimi": -1
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

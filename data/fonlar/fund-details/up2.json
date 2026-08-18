@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "UP2",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 649878046.14,
     "kisiSayisi": 300,
     "fonToplamDeger": 2733221797.62,
-    "gunlukGetiri": 0.00425557,
+    "gunlukGetiri": 0.00106897,
     "getiriler": {
       "birAy": 0.031597,
       "ucAy": 0.10472300000000001,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 36071871.73,
-      "besGun": 40945393.58,
+      "gunluk": 12408868.52,
+      "besGun": 3735794.12,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
-      "besGun": -4,
+      "gunluk": 1,
+      "besGun": -3,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 649878046.14,
         "kisiSayisi": 300,
         "fonToplamDeger": 2733221797.62,
-        "gunlukGetiri": 0.00425557,
-        "paraGirisiCikisi": 36071871.73,
-        "yatirimciDegisimi": -2
+        "gunlukGetiri": 0.00106897,
+        "paraGirisiCikisi": 12408868.52,
+        "yatirimciDegisimi": 1
+      },
+      {
+        "fonKodu": "UP2",
+        "fonAdi": "ÜNLÜ PORTFÖY PARA PİYASASI SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 4.201255,
+        "tedavuldekiPaySayisi": 646927590.14,
+        "kisiSayisi": 299,
+        "fonToplamDeger": 2717907846.85,
+        "gunlukGetiri": 0.0031832,
+        "paraGirisiCikisi": 23637735.27,
+        "yatirimciDegisimi": -3
       },
       {
         "fonKodu": "UP2",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "UP2",
       "fonAdi": "ÜNLÜ PORTFÖY PARA PİYASASI SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 4.201255,
+      "tedavuldekiPaySayisi": 646927590.14,
+      "kisiSayisi": 299,
+      "fonToplamDeger": 2717907846.85,
+      "gunlukGetiri": 0.0031832,
+      "paraGirisiCikisi": 23637735.27,
+      "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "UP2",
+      "fonAdi": "ÜNLÜ PORTFÖY PARA PİYASASI SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 4.205746,
       "tedavuldekiPaySayisi": 649878046.14,
       "kisiSayisi": 300,
       "fonToplamDeger": 2733221797.62,
-      "gunlukGetiri": 0.00425557,
-      "paraGirisiCikisi": 36071871.73,
-      "yatirimciDegisimi": -2
+      "gunlukGetiri": 0.00106897,
+      "paraGirisiCikisi": 12408868.52,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 649878046.14,
       "kisiSayisi": 300,
       "fonToplamDeger": 2733221797.62,
-      "gunlukGetiri": 0.00425557,
-      "paraGirisiCikisi": 36071871.73,
-      "yatirimciDegisimi": -2
+      "gunlukGetiri": 0.00106897,
+      "paraGirisiCikisi": 12408868.52,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "UP2",
+      "fonAdi": "ÜNLÜ PORTFÖY PARA PİYASASI SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 4.201255,
+      "tedavuldekiPaySayisi": 646927590.14,
+      "kisiSayisi": 299,
+      "fonToplamDeger": 2717907846.85,
+      "gunlukGetiri": 0.0031832,
+      "paraGirisiCikisi": 23637735.27,
+      "yatirimciDegisimi": -3
     },
     {
       "fonKodu": "UP2",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

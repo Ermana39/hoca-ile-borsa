@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "MJE",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 124883384,
     "kisiSayisi": 906,
     "fonToplamDeger": 7203804697.55,
-    "gunlukGetiri": 0.00863925,
+    "gunlukGetiri": 0.00557486,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 706862.84,
-      "besGun": 3390558.84,
+      "gunluk": 436092.95,
+      "besGun": 5668926.8,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": 0,
+      "gunluk": -1,
+      "besGun": 2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 124883384,
         "kisiSayisi": 906,
         "fonToplamDeger": 7203804697.55,
-        "gunlukGetiri": 0.00863925,
-        "paraGirisiCikisi": 706862.84,
-        "yatirimciDegisimi": 0
+        "gunlukGetiri": 0.00557486,
+        "paraGirisiCikisi": 436092.95,
+        "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "MJE",
+        "fonAdi": "ALBARAKA PORTFÖY KATILIM SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 57.364454,
+        "tedavuldekiPaySayisi": 124875824,
+        "kisiSayisi": 907,
+        "fonToplamDeger": 7163433464.25,
+        "gunlukGetiri": 0.00304739,
+        "paraGirisiCikisi": 269268.75,
+        "yatirimciDegisimi": 1
       },
       {
         "fonKodu": "MJE",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "MJE",
       "fonAdi": "ALBARAKA PORTFÖY KATILIM SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 57.364454,
+      "tedavuldekiPaySayisi": 124875824,
+      "kisiSayisi": 907,
+      "fonToplamDeger": 7163433464.25,
+      "gunlukGetiri": 0.00304739,
+      "paraGirisiCikisi": 269268.75,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "MJE",
+      "fonAdi": "ALBARAKA PORTFÖY KATILIM SERBEST (DÖVİZ-AVRO) FON",
       "tarih": "2026-08-18",
       "fiyat": 57.684253,
       "tedavuldekiPaySayisi": 124883384,
       "kisiSayisi": 906,
       "fonToplamDeger": 7203804697.55,
-      "gunlukGetiri": 0.00863925,
-      "paraGirisiCikisi": 706862.84,
-      "yatirimciDegisimi": 0
+      "gunlukGetiri": 0.00557486,
+      "paraGirisiCikisi": 436092.95,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 124883384,
       "kisiSayisi": 906,
       "fonToplamDeger": 7203804697.55,
-      "gunlukGetiri": 0.00863925,
-      "paraGirisiCikisi": 706862.84,
-      "yatirimciDegisimi": 0
+      "gunlukGetiri": 0.00557486,
+      "paraGirisiCikisi": 436092.95,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "MJE",
+      "fonAdi": "ALBARAKA PORTFÖY KATILIM SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 57.364454,
+      "tedavuldekiPaySayisi": 124875824,
+      "kisiSayisi": 907,
+      "fonToplamDeger": 7163433464.25,
+      "gunlukGetiri": 0.00304739,
+      "paraGirisiCikisi": 269268.75,
+      "yatirimciDegisimi": 1
     },
     {
       "fonKodu": "MJE",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

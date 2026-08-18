@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YPD",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 1468661,
     "kisiSayisi": 2,
     "fonToplamDeger": 100339130.26,
-    "gunlukGetiri": 0.00273762,
+    "gunlukGetiri": 0.00139477,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 1468661,
         "kisiSayisi": 2,
         "fonToplamDeger": 100339130.26,
-        "gunlukGetiri": 0.00273762,
+        "gunlukGetiri": 0.00139477,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "YPD",
+        "fonAdi": "YAPI KREDİ PORTFÖY ALARA SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-17",
+        "fiyat": 68.224985,
+        "tedavuldekiPaySayisi": 1468661,
+        "kisiSayisi": 2,
+        "fonToplamDeger": 100199374.69,
+        "gunlukGetiri": 0.00134098,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "YPD",
       "fonAdi": "YAPI KREDİ PORTFÖY ALARA SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 68.224985,
+      "tedavuldekiPaySayisi": 1468661,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 100199374.69,
+      "gunlukGetiri": 0.00134098,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YPD",
+      "fonAdi": "YAPI KREDİ PORTFÖY ALARA SERBEST (DÖVİZ) ÖZEL FON",
       "tarih": "2026-08-18",
       "fiyat": 68.320143,
       "tedavuldekiPaySayisi": 1468661,
       "kisiSayisi": 2,
       "fonToplamDeger": 100339130.26,
-      "gunlukGetiri": 0.00273762,
+      "gunlukGetiri": 0.00139477,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 1468661,
       "kisiSayisi": 2,
       "fonToplamDeger": 100339130.26,
-      "gunlukGetiri": 0.00273762,
+      "gunlukGetiri": 0.00139477,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YPD",
+      "fonAdi": "YAPI KREDİ PORTFÖY ALARA SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 68.224985,
+      "tedavuldekiPaySayisi": 1468661,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 100199374.69,
+      "gunlukGetiri": 0.00134098,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

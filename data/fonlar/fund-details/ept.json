@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "EPT",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 957597275,
     "kisiSayisi": 73,
     "fonToplamDeger": 1274837779.07,
-    "gunlukGetiri": 0.00425377,
+    "gunlukGetiri": 0.00102035,
     "getiriler": {
       "birAy": 0.031859,
       "ucAy": 0.103673,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -968844.84,
-      "besGun": -3661202.66,
+      "gunluk": -1021607.78,
+      "besGun": -13488899.64,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
-      "besGun": 4,
+      "gunluk": 0,
+      "besGun": 3,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 957597275,
         "kisiSayisi": 73,
         "fonToplamDeger": 1274837779.07,
-        "gunlukGetiri": 0.00425377,
-        "paraGirisiCikisi": -968844.84,
+        "gunlukGetiri": 0.00102035,
+        "paraGirisiCikisi": -1021607.78,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "EPT",
+        "fonAdi": "EMAA BLUE PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 1.329931,
+        "tedavuldekiPaySayisi": 958364658,
+        "kisiSayisi": 73,
+        "fonToplamDeger": 1274559137.94,
+        "gunlukGetiri": 0.00323012,
+        "paraGirisiCikisi": 52709.16,
         "yatirimciDegisimi": 2
       },
       {
@@ -188,14 +200,26 @@
     {
       "fonKodu": "EPT",
       "fonAdi": "EMAA BLUE PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.329931,
+      "tedavuldekiPaySayisi": 958364658,
+      "kisiSayisi": 73,
+      "fonToplamDeger": 1274559137.94,
+      "gunlukGetiri": 0.00323012,
+      "paraGirisiCikisi": 52709.16,
+      "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "EPT",
+      "fonAdi": "EMAA BLUE PORTFÖY PARA PİYASASI (TL) FONU",
       "tarih": "2026-08-18",
       "fiyat": 1.331288,
       "tedavuldekiPaySayisi": 957597275,
       "kisiSayisi": 73,
       "fonToplamDeger": 1274837779.07,
-      "gunlukGetiri": 0.00425377,
-      "paraGirisiCikisi": -968844.84,
-      "yatirimciDegisimi": 2
+      "gunlukGetiri": 0.00102035,
+      "paraGirisiCikisi": -1021607.78,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 957597275,
       "kisiSayisi": 73,
       "fonToplamDeger": 1274837779.07,
-      "gunlukGetiri": 0.00425377,
-      "paraGirisiCikisi": -968844.84,
+      "gunlukGetiri": 0.00102035,
+      "paraGirisiCikisi": -1021607.78,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "EPT",
+      "fonAdi": "EMAA BLUE PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.329931,
+      "tedavuldekiPaySayisi": 958364658,
+      "kisiSayisi": 73,
+      "fonToplamDeger": 1274559137.94,
+      "gunlukGetiri": 0.00323012,
+      "paraGirisiCikisi": 52709.16,
       "yatirimciDegisimi": 2
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

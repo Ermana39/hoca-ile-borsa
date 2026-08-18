@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DOV",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 1197645424,
     "kisiSayisi": 17217,
     "fonToplamDeger": 72494700153.47,
-    "gunlukGetiri": 0.00886859,
+    "gunlukGetiri": 0.00563411,
     "getiriler": {
       "birAy": 0.033917,
       "ucAy": 0.057123,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 426276580.16,
-      "besGun": 416144539.89,
+      "gunluk": 572402762.56,
+      "besGun": 64007640.23,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": -18,
+      "gunluk": 9,
+      "besGun": -24,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 1197645424,
         "kisiSayisi": 17217,
         "fonToplamDeger": 72494700153.47,
-        "gunlukGetiri": 0.00886859,
-        "paraGirisiCikisi": 426276580.16,
-        "yatirimciDegisimi": 0
+        "gunlukGetiri": 0.00563411,
+        "paraGirisiCikisi": 572402762.56,
+        "yatirimciDegisimi": 9
+      },
+      {
+        "fonKodu": "DOV",
+        "fonAdi": "DENİZ PORTFÖY ONÜÇÜNCÜ SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 60.191893,
+        "tedavuldekiPaySayisi": 1188189070,
+        "kisiSayisi": 17208,
+        "fonToplamDeger": 71519349870.19,
+        "gunlukGetiri": 0.00321636,
+        "paraGirisiCikisi": -145307503.33,
+        "yatirimciDegisimi": -9
       },
       {
         "fonKodu": "DOV",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "DOV",
       "fonAdi": "DENİZ PORTFÖY ONÜÇÜNCÜ SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 60.191893,
+      "tedavuldekiPaySayisi": 1188189070,
+      "kisiSayisi": 17208,
+      "fonToplamDeger": 71519349870.19,
+      "gunlukGetiri": 0.00321636,
+      "paraGirisiCikisi": -145307503.33,
+      "yatirimciDegisimi": -9
+    },
+    {
+      "fonKodu": "DOV",
+      "fonAdi": "DENİZ PORTFÖY ONÜÇÜNCÜ SERBEST (DÖVİZ-AVRO) FON",
       "tarih": "2026-08-18",
       "fiyat": 60.531021,
       "tedavuldekiPaySayisi": 1197645424,
       "kisiSayisi": 17217,
       "fonToplamDeger": 72494700153.47,
-      "gunlukGetiri": 0.00886859,
-      "paraGirisiCikisi": 426276580.16,
-      "yatirimciDegisimi": 0
+      "gunlukGetiri": 0.00563411,
+      "paraGirisiCikisi": 572402762.56,
+      "yatirimciDegisimi": 9
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 1197645424,
       "kisiSayisi": 17217,
       "fonToplamDeger": 72494700153.47,
-      "gunlukGetiri": 0.00886859,
-      "paraGirisiCikisi": 426276580.16,
-      "yatirimciDegisimi": 0
+      "gunlukGetiri": 0.00563411,
+      "paraGirisiCikisi": 572402762.56,
+      "yatirimciDegisimi": 9
+    },
+    {
+      "fonKodu": "DOV",
+      "fonAdi": "DENİZ PORTFÖY ONÜÇÜNCÜ SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 60.191893,
+      "tedavuldekiPaySayisi": 1188189070,
+      "kisiSayisi": 17208,
+      "fonToplamDeger": 71519349870.19,
+      "gunlukGetiri": 0.00321636,
+      "paraGirisiCikisi": -145307503.33,
+      "yatirimciDegisimi": -9
     },
     {
       "fonKodu": "DOV",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YBE",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 2726070024,
     "kisiSayisi": 13994,
     "fonToplamDeger": 5039466821.28,
-    "gunlukGetiri": 0.00265114,
+    "gunlukGetiri": 0.00111505,
     "getiriler": {
       "birAy": 0.025372,
       "ucAy": 0.08137499999999999,
@@ -29,22 +29,22 @@
       "besYil": 6.3002769999999995
     },
     "paraAkisi": {
-      "gunluk": 23849586.42,
-      "besGun": 16237212.16,
+      "gunluk": -347978.68,
+      "besGun": 16733461.77,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -6,
-      "besGun": -11,
+      "gunluk": 3,
+      "besGun": -20,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 2726070024,
         "kisiSayisi": 13994,
         "fonToplamDeger": 5039466821.28,
-        "gunlukGetiri": 0.00265114,
-        "paraGirisiCikisi": 23849586.42,
-        "yatirimciDegisimi": -6
+        "gunlukGetiri": 0.00111505,
+        "paraGirisiCikisi": -347978.68,
+        "yatirimciDegisimi": 3
+      },
+      {
+        "fonKodu": "YBE",
+        "fonAdi": "YAPI KREDİ PORTFÖY EUROBOND (DOLAR) BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 1.846561,
+        "tedavuldekiPaySayisi": 2726258261,
+        "kisiSayisi": 13991,
+        "fonToplamDeger": 5034201428.1,
+        "gunlukGetiri": 0.00153439,
+        "paraGirisiCikisi": 24170613.76,
+        "yatirimciDegisimi": -9
       },
       {
         "fonKodu": "YBE",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "YBE",
       "fonAdi": "YAPI KREDİ PORTFÖY EUROBOND (DOLAR) BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.846561,
+      "tedavuldekiPaySayisi": 2726258261,
+      "kisiSayisi": 13991,
+      "fonToplamDeger": 5034201428.1,
+      "gunlukGetiri": 0.00153439,
+      "paraGirisiCikisi": 24170613.76,
+      "yatirimciDegisimi": -9
+    },
+    {
+      "fonKodu": "YBE",
+      "fonAdi": "YAPI KREDİ PORTFÖY EUROBOND (DOLAR) BORÇLANMA ARAÇLARI FONU",
       "tarih": "2026-08-18",
       "fiyat": 1.84862,
       "tedavuldekiPaySayisi": 2726070024,
       "kisiSayisi": 13994,
       "fonToplamDeger": 5039466821.28,
-      "gunlukGetiri": 0.00265114,
-      "paraGirisiCikisi": 23849586.42,
-      "yatirimciDegisimi": -6
+      "gunlukGetiri": 0.00111505,
+      "paraGirisiCikisi": -347978.68,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 2726070024,
       "kisiSayisi": 13994,
       "fonToplamDeger": 5039466821.28,
-      "gunlukGetiri": 0.00265114,
-      "paraGirisiCikisi": 23849586.42,
-      "yatirimciDegisimi": -6
+      "gunlukGetiri": 0.00111505,
+      "paraGirisiCikisi": -347978.68,
+      "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "YBE",
+      "fonAdi": "YAPI KREDİ PORTFÖY EUROBOND (DOLAR) BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.846561,
+      "tedavuldekiPaySayisi": 2726258261,
+      "kisiSayisi": 13991,
+      "fonToplamDeger": 5034201428.1,
+      "gunlukGetiri": 0.00153439,
+      "paraGirisiCikisi": 24170613.76,
+      "yatirimciDegisimi": -9
     },
     {
       "fonKodu": "YBE",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

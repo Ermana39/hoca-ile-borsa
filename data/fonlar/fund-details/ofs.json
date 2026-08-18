@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "OFS",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 22659905,
     "kisiSayisi": 435,
     "fonToplamDeger": 185568945.99,
-    "gunlukGetiri": null,
+    "gunlukGetiri": 0.00266383,
     "getiriler": {
       "birAy": 0.049876,
       "ucAy": 0.044996999999999995,
@@ -29,22 +29,22 @@
       "besYil": 6.47811
     },
     "paraAkisi": {
-      "gunluk": null,
+      "gunluk": 3627.86,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
-      "besGun": -1,
+      "gunluk": 1,
+      "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 3,
+      "observedDays": 4,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 22659905,
         "kisiSayisi": 435,
         "fonToplamDeger": 185568945.99,
+        "gunlukGetiri": 0.00266383,
+        "paraGirisiCikisi": 3627.86,
+        "yatirimciDegisimi": 1
+      },
+      {
+        "fonKodu": "OFS",
+        "fonAdi": "OYAK PORTFÖY BİRİNCİ FON SEPETİ FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 8.167551,
+        "tedavuldekiPaySayisi": 22659462,
+        "kisiSayisi": 434,
+        "fonToplamDeger": 185072308.36,
         "gunlukGetiri": null,
         "paraGirisiCikisi": null,
-        "yatirimciDegisimi": 2
+        "yatirimciDegisimi": 1
       },
       {
         "fonKodu": "OFS",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "OFS",
       "fonAdi": "OYAK PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 8.167551,
+      "tedavuldekiPaySayisi": 22659462,
+      "kisiSayisi": 434,
+      "fonToplamDeger": 185072308.36,
+      "gunlukGetiri": null,
+      "paraGirisiCikisi": null,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "OFS",
+      "fonAdi": "OYAK PORTFÖY BİRİNCİ FON SEPETİ FONU",
       "tarih": "2026-08-18",
       "fiyat": 8.189308,
       "tedavuldekiPaySayisi": 22659905,
       "kisiSayisi": 435,
       "fonToplamDeger": 185568945.99,
-      "gunlukGetiri": null,
-      "paraGirisiCikisi": null,
-      "yatirimciDegisimi": 2
+      "gunlukGetiri": 0.00266383,
+      "paraGirisiCikisi": 3627.86,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 22659905,
       "kisiSayisi": 435,
       "fonToplamDeger": 185568945.99,
+      "gunlukGetiri": 0.00266383,
+      "paraGirisiCikisi": 3627.86,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "OFS",
+      "fonAdi": "OYAK PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 8.167551,
+      "tedavuldekiPaySayisi": 22659462,
+      "kisiSayisi": 434,
+      "fonToplamDeger": 185072308.36,
       "gunlukGetiri": null,
       "paraGirisiCikisi": null,
-      "yatirimciDegisimi": 2
+      "yatirimciDegisimi": 1
     },
     {
       "fonKodu": "OFS",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 3,
+    "observedDays": 4,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

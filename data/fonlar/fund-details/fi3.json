@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "FI3",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 1999129.8,
     "kisiSayisi": 9691,
     "fonToplamDeger": 1577479590.97,
-    "gunlukGetiri": 0.00495129,
+    "gunlukGetiri": 0.00159675,
     "getiriler": {
       "birAy": 0.032197,
       "ucAy": 0.07458999999999999,
@@ -29,22 +29,22 @@
       "besYil": 3.166108
     },
     "paraAkisi": {
-      "gunluk": 13139812.18,
-      "besGun": -20004200.51,
+      "gunluk": 11298092.17,
+      "besGun": -19827312.38,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": -17,
+      "gunluk": 1,
+      "besGun": -10,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 1999129.8,
         "kisiSayisi": 9691,
         "fonToplamDeger": 1577479590.97,
-        "gunlukGetiri": 0.00495129,
-        "paraGirisiCikisi": 13139812.18,
-        "yatirimciDegisimi": 0
+        "gunlukGetiri": 0.00159675,
+        "paraGirisiCikisi": 11298092.17,
+        "yatirimciDegisimi": 1
+      },
+      {
+        "fonKodu": "FI3",
+        "fonAdi": "QNB PORTFÖY BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 787.825165,
+        "tedavuldekiPaySayisi": 1984811.8,
+        "kisiSayisi": 9690,
+        "fonToplamDeger": 1563684687.69,
+        "gunlukGetiri": 0.00334919,
+        "paraGirisiCikisi": 1838783.94,
+        "yatirimciDegisimi": -1
       },
       {
         "fonKodu": "FI3",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "FI3",
       "fonAdi": "QNB PORTFÖY BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 787.825165,
+      "tedavuldekiPaySayisi": 1984811.8,
+      "kisiSayisi": 9690,
+      "fonToplamDeger": 1563684687.69,
+      "gunlukGetiri": 0.00334919,
+      "paraGirisiCikisi": 1838783.94,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "FI3",
+      "fonAdi": "QNB PORTFÖY BORÇLANMA ARAÇLARI FONU",
       "tarih": "2026-08-18",
       "fiyat": 789.083124,
       "tedavuldekiPaySayisi": 1999129.8,
       "kisiSayisi": 9691,
       "fonToplamDeger": 1577479590.97,
-      "gunlukGetiri": 0.00495129,
-      "paraGirisiCikisi": 13139812.18,
-      "yatirimciDegisimi": 0
+      "gunlukGetiri": 0.00159675,
+      "paraGirisiCikisi": 11298092.17,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 1999129.8,
       "kisiSayisi": 9691,
       "fonToplamDeger": 1577479590.97,
-      "gunlukGetiri": 0.00495129,
-      "paraGirisiCikisi": 13139812.18,
-      "yatirimciDegisimi": 0
+      "gunlukGetiri": 0.00159675,
+      "paraGirisiCikisi": 11298092.17,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "FI3",
+      "fonAdi": "QNB PORTFÖY BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 787.825165,
+      "tedavuldekiPaySayisi": 1984811.8,
+      "kisiSayisi": 9690,
+      "fonToplamDeger": 1563684687.69,
+      "gunlukGetiri": 0.00334919,
+      "paraGirisiCikisi": 1838783.94,
+      "yatirimciDegisimi": -1
     },
     {
       "fonKodu": "FI3",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

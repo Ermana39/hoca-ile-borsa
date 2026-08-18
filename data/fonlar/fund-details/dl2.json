@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DL2",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 3699267512,
     "kisiSayisi": 656,
     "fonToplamDeger": 9139877927.61,
-    "gunlukGetiri": 0.00423157,
+    "gunlukGetiri": 0.00099341,
     "getiriler": {
       "birAy": 0.032002,
       "ucAy": 0.102706,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -12901503026.98,
-      "besGun": 7096065,
+      "gunluk": -12783132545.6,
+      "besGun": -33202964.42,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": -3,
-      "besGun": 11,
+      "besGun": 8,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 3699267512,
         "kisiSayisi": 656,
         "fonToplamDeger": 9139877927.61,
-        "gunlukGetiri": 0.00423157,
-        "paraGirisiCikisi": -12901503026.98,
+        "gunlukGetiri": 0.00099341,
+        "paraGirisiCikisi": -12783132545.6,
         "yatirimciDegisimi": -3
+      },
+      {
+        "fonKodu": "DL2",
+        "fonAdi": "DENİZ PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 2.468274,
+        "tedavuldekiPaySayisi": 8873104087,
+        "kisiSayisi": 659,
+        "fonToplamDeger": 21901249879.62,
+        "gunlukGetiri": 0.00323495,
+        "paraGirisiCikisi": -118253008.04,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "DL2",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "DL2",
       "fonAdi": "DENİZ PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.468274,
+      "tedavuldekiPaySayisi": 8873104087,
+      "kisiSayisi": 659,
+      "fonToplamDeger": 21901249879.62,
+      "gunlukGetiri": 0.00323495,
+      "paraGirisiCikisi": -118253008.04,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DL2",
+      "fonAdi": "DENİZ PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
       "tarih": "2026-08-18",
       "fiyat": 2.470726,
       "tedavuldekiPaySayisi": 3699267512,
       "kisiSayisi": 656,
       "fonToplamDeger": 9139877927.61,
-      "gunlukGetiri": 0.00423157,
-      "paraGirisiCikisi": -12901503026.98,
+      "gunlukGetiri": 0.00099341,
+      "paraGirisiCikisi": -12783132545.6,
       "yatirimciDegisimi": -3
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 3699267512,
       "kisiSayisi": 656,
       "fonToplamDeger": 9139877927.61,
-      "gunlukGetiri": 0.00423157,
-      "paraGirisiCikisi": -12901503026.98,
+      "gunlukGetiri": 0.00099341,
+      "paraGirisiCikisi": -12783132545.6,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "DL2",
+      "fonAdi": "DENİZ PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.468274,
+      "tedavuldekiPaySayisi": 8873104087,
+      "kisiSayisi": 659,
+      "fonToplamDeger": 21901249879.62,
+      "gunlukGetiri": 0.00323495,
+      "paraGirisiCikisi": -118253008.04,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "DL2",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

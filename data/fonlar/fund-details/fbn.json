@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "FBN",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 40408496,
     "kisiSayisi": 33,
     "fonToplamDeger": 219073072.34,
-    "gunlukGetiri": 0.00384432,
+    "gunlukGetiri": 0.00124457,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -30,21 +30,21 @@
     },
     "paraAkisi": {
       "gunluk": 0,
-      "besGun": 446.21,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": -1,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 40408496,
         "kisiSayisi": 33,
         "fonToplamDeger": 219073072.34,
-        "gunlukGetiri": 0.00384432,
+        "gunlukGetiri": 0.00124457,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "FBN",
+        "fonAdi": "FİBA PORTFÖY SAFİR SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 5.414722,
+        "tedavuldekiPaySayisi": 40408496,
+        "kisiSayisi": 33,
+        "fonToplamDeger": 218800767.77,
+        "gunlukGetiri": 0.00259652,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "FBN",
       "fonAdi": "FİBA PORTFÖY SAFİR SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 5.414722,
+      "tedavuldekiPaySayisi": 40408496,
+      "kisiSayisi": 33,
+      "fonToplamDeger": 218800767.77,
+      "gunlukGetiri": 0.00259652,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "FBN",
+      "fonAdi": "FİBA PORTFÖY SAFİR SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 5.421461,
       "tedavuldekiPaySayisi": 40408496,
       "kisiSayisi": 33,
       "fonToplamDeger": 219073072.34,
-      "gunlukGetiri": 0.00384432,
+      "gunlukGetiri": 0.00124457,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 40408496,
       "kisiSayisi": 33,
       "fonToplamDeger": 219073072.34,
-      "gunlukGetiri": 0.00384432,
+      "gunlukGetiri": 0.00124457,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "FBN",
+      "fonAdi": "FİBA PORTFÖY SAFİR SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 5.414722,
+      "tedavuldekiPaySayisi": 40408496,
+      "kisiSayisi": 33,
+      "fonToplamDeger": 218800767.77,
+      "gunlukGetiri": 0.00259652,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

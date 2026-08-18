@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PKL",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 1399826640,
     "kisiSayisi": 13,
     "fonToplamDeger": 3481815606.07,
-    "gunlukGetiri": 0.00394341,
+    "gunlukGetiri": 0.00113625,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -275663361.4,
-      "besGun": -375762202.45,
+      "gunluk": -150170437.01,
+      "besGun": -375619773.38,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 1399826640,
         "kisiSayisi": 13,
         "fonToplamDeger": 3481815606.07,
-        "gunlukGetiri": 0.00394341,
-        "paraGirisiCikisi": -275663361.4,
+        "gunlukGetiri": 0.00113625,
+        "paraGirisiCikisi": -150170437.01,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "PKL",
+        "fonAdi": "PUSULA PORTFÖY KATILIM SERBEST (TL) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 2.484496,
+        "tedavuldekiPaySayisi": 1460201058,
+        "kisiSayisi": 13,
+        "fonToplamDeger": 3627864070.37,
+        "gunlukGetiri": 0.00280398,
+        "paraGirisiCikisi": -125350495.32,
         "yatirimciDegisimi": 0
       },
       {
@@ -188,13 +200,25 @@
     {
       "fonKodu": "PKL",
       "fonAdi": "PUSULA PORTFÖY KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 2.484496,
+      "tedavuldekiPaySayisi": 1460201058,
+      "kisiSayisi": 13,
+      "fonToplamDeger": 3627864070.37,
+      "gunlukGetiri": 0.00280398,
+      "paraGirisiCikisi": -125350495.32,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PKL",
+      "fonAdi": "PUSULA PORTFÖY KATILIM SERBEST (TL) FON",
       "tarih": "2026-08-18",
       "fiyat": 2.487319,
       "tedavuldekiPaySayisi": 1399826640,
       "kisiSayisi": 13,
       "fonToplamDeger": 3481815606.07,
-      "gunlukGetiri": 0.00394341,
-      "paraGirisiCikisi": -275663361.4,
+      "gunlukGetiri": 0.00113625,
+      "paraGirisiCikisi": -150170437.01,
       "yatirimciDegisimi": 0
     }
   ],
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 1399826640,
       "kisiSayisi": 13,
       "fonToplamDeger": 3481815606.07,
-      "gunlukGetiri": 0.00394341,
-      "paraGirisiCikisi": -275663361.4,
+      "gunlukGetiri": 0.00113625,
+      "paraGirisiCikisi": -150170437.01,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PKL",
+      "fonAdi": "PUSULA PORTFÖY KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 2.484496,
+      "tedavuldekiPaySayisi": 1460201058,
+      "kisiSayisi": 13,
+      "fonToplamDeger": 3627864070.37,
+      "gunlukGetiri": 0.00280398,
+      "paraGirisiCikisi": -125350495.32,
       "yatirimciDegisimi": 0
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

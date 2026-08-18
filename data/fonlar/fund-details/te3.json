@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TE3",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 27843539,
     "kisiSayisi": 2841,
     "fonToplamDeger": 1123124771.38,
-    "gunlukGetiri": 0.00266811,
+    "gunlukGetiri": 0.00185011,
     "getiriler": {
       "birAy": 0.040114000000000004,
       "ucAy": 0.037438,
@@ -29,22 +29,22 @@
       "besYil": 5.398204
     },
     "paraAkisi": {
-      "gunluk": -402401.89,
-      "besGun": -6399718.63,
+      "gunluk": 391914.27,
+      "besGun": -2427917.29,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
-      "besGun": -3,
+      "gunluk": -1,
+      "besGun": -1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 27843539,
         "kisiSayisi": 2841,
         "fonToplamDeger": 1123124771.38,
-        "gunlukGetiri": 0.00266811,
-        "paraGirisiCikisi": -402401.89,
-        "yatirimciDegisimi": 2
+        "gunlukGetiri": 0.00185011,
+        "paraGirisiCikisi": 391914.27,
+        "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "TE3",
+        "fonAdi": "TEB PORTFÖY MUTLAK GETİRİ HEDEFLİ DEĞİŞKEN FON",
+        "tarih": "2026-08-17",
+        "fiyat": 40.262508,
+        "tedavuldekiPaySayisi": 27833823,
+        "kisiSayisi": 2842,
+        "fonToplamDeger": 1120659532.54,
+        "gunlukGetiri": 0.00081649,
+        "paraGirisiCikisi": -792849.31,
+        "yatirimciDegisimi": 3
       },
       {
         "fonKodu": "TE3",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "TE3",
       "fonAdi": "TEB PORTFÖY MUTLAK GETİRİ HEDEFLİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 40.262508,
+      "tedavuldekiPaySayisi": 27833823,
+      "kisiSayisi": 2842,
+      "fonToplamDeger": 1120659532.54,
+      "gunlukGetiri": 0.00081649,
+      "paraGirisiCikisi": -792849.31,
+      "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "TE3",
+      "fonAdi": "TEB PORTFÖY MUTLAK GETİRİ HEDEFLİ DEĞİŞKEN FON",
       "tarih": "2026-08-18",
       "fiyat": 40.336998,
       "tedavuldekiPaySayisi": 27843539,
       "kisiSayisi": 2841,
       "fonToplamDeger": 1123124771.38,
-      "gunlukGetiri": 0.00266811,
-      "paraGirisiCikisi": -402401.89,
-      "yatirimciDegisimi": 2
+      "gunlukGetiri": 0.00185011,
+      "paraGirisiCikisi": 391914.27,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 27843539,
       "kisiSayisi": 2841,
       "fonToplamDeger": 1123124771.38,
-      "gunlukGetiri": 0.00266811,
-      "paraGirisiCikisi": -402401.89,
-      "yatirimciDegisimi": 2
+      "gunlukGetiri": 0.00185011,
+      "paraGirisiCikisi": 391914.27,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "TE3",
+      "fonAdi": "TEB PORTFÖY MUTLAK GETİRİ HEDEFLİ DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 40.262508,
+      "tedavuldekiPaySayisi": 27833823,
+      "kisiSayisi": 2842,
+      "fonToplamDeger": 1120659532.54,
+      "gunlukGetiri": 0.00081649,
+      "paraGirisiCikisi": -792849.31,
+      "yatirimciDegisimi": 3
     },
     {
       "fonKodu": "TE3",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KSA",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 3379231250,
     "kisiSayisi": 3539,
     "fonToplamDeger": 13852502865.61,
-    "gunlukGetiri": 0.00468754,
+    "gunlukGetiri": 0.00116203,
     "getiriler": {
       "birAy": 0.034024,
       "ucAy": 0.11113300000000001,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 774858215.27,
-      "besGun": 1484734443.58,
+      "gunluk": 503545910.01,
+      "besGun": 1249424452.52,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 56,
-      "besGun": 231,
+      "gunluk": 27,
+      "besGun": 185,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 3379231250,
         "kisiSayisi": 3539,
         "fonToplamDeger": 13852502865.61,
-        "gunlukGetiri": 0.00468754,
-        "paraGirisiCikisi": 774858215.27,
-        "yatirimciDegisimi": 56
+        "gunlukGetiri": 0.00116203,
+        "paraGirisiCikisi": 503545910.01,
+        "yatirimciDegisimi": 27
+      },
+      {
+        "fonKodu": "KSA",
+        "fonAdi": "HEDEF PORTFÖY KISA VADELİ SERBEST (TL) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 4.094548,
+        "tedavuldekiPaySayisi": 3256394382,
+        "kisiSayisi": 3512,
+        "fonToplamDeger": 13333463008.63,
+        "gunlukGetiri": 0.00352141,
+        "paraGirisiCikisi": 270997397.33,
+        "yatirimciDegisimi": 29
       },
       {
         "fonKodu": "KSA",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "KSA",
       "fonAdi": "HEDEF PORTFÖY KISA VADELİ SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 4.094548,
+      "tedavuldekiPaySayisi": 3256394382,
+      "kisiSayisi": 3512,
+      "fonToplamDeger": 13333463008.63,
+      "gunlukGetiri": 0.00352141,
+      "paraGirisiCikisi": 270997397.33,
+      "yatirimciDegisimi": 29
+    },
+    {
+      "fonKodu": "KSA",
+      "fonAdi": "HEDEF PORTFÖY KISA VADELİ SERBEST (TL) FON",
       "tarih": "2026-08-18",
       "fiyat": 4.099306,
       "tedavuldekiPaySayisi": 3379231250,
       "kisiSayisi": 3539,
       "fonToplamDeger": 13852502865.61,
-      "gunlukGetiri": 0.00468754,
-      "paraGirisiCikisi": 774858215.27,
-      "yatirimciDegisimi": 56
+      "gunlukGetiri": 0.00116203,
+      "paraGirisiCikisi": 503545910.01,
+      "yatirimciDegisimi": 27
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 3379231250,
       "kisiSayisi": 3539,
       "fonToplamDeger": 13852502865.61,
-      "gunlukGetiri": 0.00468754,
-      "paraGirisiCikisi": 774858215.27,
-      "yatirimciDegisimi": 56
+      "gunlukGetiri": 0.00116203,
+      "paraGirisiCikisi": 503545910.01,
+      "yatirimciDegisimi": 27
+    },
+    {
+      "fonKodu": "KSA",
+      "fonAdi": "HEDEF PORTFÖY KISA VADELİ SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 4.094548,
+      "tedavuldekiPaySayisi": 3256394382,
+      "kisiSayisi": 3512,
+      "fonToplamDeger": 13333463008.63,
+      "gunlukGetiri": 0.00352141,
+      "paraGirisiCikisi": 270997397.33,
+      "yatirimciDegisimi": 29
     },
     {
       "fonKodu": "KSA",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

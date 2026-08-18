@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KDS",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 519917026,
     "kisiSayisi": 1380,
     "fonToplamDeger": 28359364398.02,
-    "gunlukGetiri": 0.0029987,
+    "gunlukGetiri": 0.00198575,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -129606996.98,
-      "besGun": -460909981.79,
+      "gunluk": -80075626.16,
+      "besGun": -383326059.16,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": -6,
+      "gunluk": 1,
+      "besGun": -4,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 519917026,
         "kisiSayisi": 1380,
         "fonToplamDeger": 28359364398.02,
-        "gunlukGetiri": 0.0029987,
-        "paraGirisiCikisi": -129606996.98,
-        "yatirimciDegisimi": -1
+        "gunlukGetiri": 0.00198575,
+        "paraGirisiCikisi": -80075626.16,
+        "yatirimciDegisimi": 1
+      },
+      {
+        "fonKodu": "KDS",
+        "fonAdi": "KUVEYT TÜRK PORTFÖY YEDİNCİ KATILIM SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 54.437843,
+        "tedavuldekiPaySayisi": 521385066,
+        "kisiSayisi": 1379,
+        "fonToplamDeger": 28383078485.79,
+        "gunlukGetiri": 0.00101094,
+        "paraGirisiCikisi": -49433208.78,
+        "yatirimciDegisimi": -2
       },
       {
         "fonKodu": "KDS",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "KDS",
       "fonAdi": "KUVEYT TÜRK PORTFÖY YEDİNCİ KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 54.437843,
+      "tedavuldekiPaySayisi": 521385066,
+      "kisiSayisi": 1379,
+      "fonToplamDeger": 28383078485.79,
+      "gunlukGetiri": 0.00101094,
+      "paraGirisiCikisi": -49433208.78,
+      "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "KDS",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY YEDİNCİ KATILIM SERBEST (DÖVİZ) FON",
       "tarih": "2026-08-18",
       "fiyat": 54.545943,
       "tedavuldekiPaySayisi": 519917026,
       "kisiSayisi": 1380,
       "fonToplamDeger": 28359364398.02,
-      "gunlukGetiri": 0.0029987,
-      "paraGirisiCikisi": -129606996.98,
-      "yatirimciDegisimi": -1
+      "gunlukGetiri": 0.00198575,
+      "paraGirisiCikisi": -80075626.16,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 519917026,
       "kisiSayisi": 1380,
       "fonToplamDeger": 28359364398.02,
-      "gunlukGetiri": 0.0029987,
-      "paraGirisiCikisi": -129606996.98,
-      "yatirimciDegisimi": -1
+      "gunlukGetiri": 0.00198575,
+      "paraGirisiCikisi": -80075626.16,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "KDS",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY YEDİNCİ KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 54.437843,
+      "tedavuldekiPaySayisi": 521385066,
+      "kisiSayisi": 1379,
+      "fonToplamDeger": 28383078485.79,
+      "gunlukGetiri": 0.00101094,
+      "paraGirisiCikisi": -49433208.78,
+      "yatirimciDegisimi": -2
     },
     {
       "fonKodu": "KDS",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

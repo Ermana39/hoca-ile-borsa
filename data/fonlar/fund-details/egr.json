@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "EGR",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 243992100,
     "kisiSayisi": 82,
     "fonToplamDeger": 249690721.65,
-    "gunlukGetiri": 0.00403732,
+    "gunlukGetiri": -0.00014851,
     "getiriler": {
       "birAy": 0.048762,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 7804.11,
-      "besGun": 9918643.67,
+      "gunluk": 149.41,
+      "besGun": 10017904.97,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
-      "besGun": 2,
+      "gunluk": 0,
+      "besGun": 4,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 243992100,
         "kisiSayisi": 82,
         "fonToplamDeger": 249690721.65,
-        "gunlukGetiri": 0.00403732,
-        "paraGirisiCikisi": 7804.11,
+        "gunlukGetiri": -0.00014851,
+        "paraGirisiCikisi": 149.41,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "EGR",
+        "fonAdi": "EMAA BLUE PORTFÖY AGRESİF DEĞİŞKEN FON",
+        "tarih": "2026-08-17",
+        "fiyat": 1.023508,
+        "tedavuldekiPaySayisi": 243991954,
+        "kisiSayisi": 82,
+        "fonToplamDeger": 249727765.28,
+        "gunlukGetiri": 0.00418645,
+        "paraGirisiCikisi": 7655.84,
         "yatirimciDegisimi": 2
       },
       {
@@ -188,14 +200,26 @@
     {
       "fonKodu": "EGR",
       "fonAdi": "EMAA BLUE PORTFÖY AGRESİF DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.023508,
+      "tedavuldekiPaySayisi": 243991954,
+      "kisiSayisi": 82,
+      "fonToplamDeger": 249727765.28,
+      "gunlukGetiri": 0.00418645,
+      "paraGirisiCikisi": 7655.84,
+      "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "EGR",
+      "fonAdi": "EMAA BLUE PORTFÖY AGRESİF DEĞİŞKEN FON",
       "tarih": "2026-08-18",
       "fiyat": 1.023356,
       "tedavuldekiPaySayisi": 243992100,
       "kisiSayisi": 82,
       "fonToplamDeger": 249690721.65,
-      "gunlukGetiri": 0.00403732,
-      "paraGirisiCikisi": 7804.11,
-      "yatirimciDegisimi": 2
+      "gunlukGetiri": -0.00014851,
+      "paraGirisiCikisi": 149.41,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 243992100,
       "kisiSayisi": 82,
       "fonToplamDeger": 249690721.65,
-      "gunlukGetiri": 0.00403732,
-      "paraGirisiCikisi": 7804.11,
+      "gunlukGetiri": -0.00014851,
+      "paraGirisiCikisi": 149.41,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "EGR",
+      "fonAdi": "EMAA BLUE PORTFÖY AGRESİF DEĞİŞKEN FON",
+      "tarih": "2026-08-17",
+      "fiyat": 1.023508,
+      "tedavuldekiPaySayisi": 243991954,
+      "kisiSayisi": 82,
+      "fonToplamDeger": 249727765.28,
+      "gunlukGetiri": 0.00418645,
+      "paraGirisiCikisi": 7655.84,
       "yatirimciDegisimi": 2
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

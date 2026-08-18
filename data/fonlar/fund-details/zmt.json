@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ZMT",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 26524935,
     "kisiSayisi": 307,
     "fonToplamDeger": 1675320307.34,
-    "gunlukGetiri": 0.00851232,
+    "gunlukGetiri": 0.00525356,
     "getiriler": {
       "birAy": 0.036196,
       "ucAy": 0.069254,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 7481010.36,
-      "besGun": 14233998.07,
+      "gunluk": 55328.34,
+      "besGun": 14084847.9,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -1,
       "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 26524935,
         "kisiSayisi": 307,
         "fonToplamDeger": 1675320307.34,
-        "gunlukGetiri": 0.00851232,
-        "paraGirisiCikisi": 7481010.36,
-        "yatirimciDegisimi": 0
+        "gunlukGetiri": 0.00525356,
+        "paraGirisiCikisi": 55328.34,
+        "yatirimciDegisimi": -1
+      },
+      {
+        "fonKodu": "ZMT",
+        "fonAdi": "AZİMUT PORTFÖY 22.0 SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 62.830122,
+        "tedavuldekiPaySayisi": 26524059,
+        "kisiSayisi": 308,
+        "fonToplamDeger": 1666509863.93,
+        "gunlukGetiri": 0.00324173,
+        "paraGirisiCikisi": 7386874.61,
+        "yatirimciDegisimi": 1
       },
       {
         "fonKodu": "ZMT",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "ZMT",
       "fonAdi": "AZİMUT PORTFÖY 22.0 SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 62.830122,
+      "tedavuldekiPaySayisi": 26524059,
+      "kisiSayisi": 308,
+      "fonToplamDeger": 1666509863.93,
+      "gunlukGetiri": 0.00324173,
+      "paraGirisiCikisi": 7386874.61,
+      "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "ZMT",
+      "fonAdi": "AZİMUT PORTFÖY 22.0 SERBEST (DÖVİZ-AVRO) FON",
       "tarih": "2026-08-18",
       "fiyat": 63.160204,
       "tedavuldekiPaySayisi": 26524935,
       "kisiSayisi": 307,
       "fonToplamDeger": 1675320307.34,
-      "gunlukGetiri": 0.00851232,
-      "paraGirisiCikisi": 7481010.36,
-      "yatirimciDegisimi": 0
+      "gunlukGetiri": 0.00525356,
+      "paraGirisiCikisi": 55328.34,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 26524935,
       "kisiSayisi": 307,
       "fonToplamDeger": 1675320307.34,
-      "gunlukGetiri": 0.00851232,
-      "paraGirisiCikisi": 7481010.36,
-      "yatirimciDegisimi": 0
+      "gunlukGetiri": 0.00525356,
+      "paraGirisiCikisi": 55328.34,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "ZMT",
+      "fonAdi": "AZİMUT PORTFÖY 22.0 SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 62.830122,
+      "tedavuldekiPaySayisi": 26524059,
+      "kisiSayisi": 308,
+      "fonToplamDeger": 1666509863.93,
+      "gunlukGetiri": 0.00324173,
+      "paraGirisiCikisi": 7386874.61,
+      "yatirimciDegisimi": 1
     },
     {
       "fonKodu": "ZMT",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

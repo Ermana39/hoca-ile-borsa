@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YLB",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 58947200643,
     "kisiSayisi": 353720,
     "fonToplamDeger": 106884462913.62,
-    "gunlukGetiri": 0.00420685,
+    "gunlukGetiri": 0.00104067,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 353670956.78,
-      "besGun": 1201875971.98,
+      "gunluk": 109603639.25,
+      "besGun": 931866404.44,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2224,
-      "besGun": 3063,
+      "gunluk": 2336,
+      "besGun": 2118,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 58947200643,
         "kisiSayisi": 353720,
         "fonToplamDeger": 106884462913.62,
-        "gunlukGetiri": 0.00420685,
-        "paraGirisiCikisi": 353670956.78,
-        "yatirimciDegisimi": 2224
+        "gunlukGetiri": 0.00104067,
+        "paraGirisiCikisi": 109603639.25,
+        "yatirimciDegisimi": 2336
+      },
+      {
+        "fonKodu": "YLB",
+        "fonAdi": "YAPI KREDİ PORTFÖY PARA PİYASASI FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 1.811339,
+        "tedavuldekiPaySayisi": 58886753815,
+        "kisiSayisi": 351384,
+        "fonToplamDeger": 106663895584,
+        "gunlukGetiri": 0.00316289,
+        "paraGirisiCikisi": 243813588.87,
+        "yatirimciDegisimi": -112
       },
       {
         "fonKodu": "YLB",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "YLB",
       "fonAdi": "YAPI KREDİ PORTFÖY PARA PİYASASI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.811339,
+      "tedavuldekiPaySayisi": 58886753815,
+      "kisiSayisi": 351384,
+      "fonToplamDeger": 106663895584,
+      "gunlukGetiri": 0.00316289,
+      "paraGirisiCikisi": 243813588.87,
+      "yatirimciDegisimi": -112
+    },
+    {
+      "fonKodu": "YLB",
+      "fonAdi": "YAPI KREDİ PORTFÖY PARA PİYASASI FONU",
       "tarih": "2026-08-18",
       "fiyat": 1.813224,
       "tedavuldekiPaySayisi": 58947200643,
       "kisiSayisi": 353720,
       "fonToplamDeger": 106884462913.62,
-      "gunlukGetiri": 0.00420685,
-      "paraGirisiCikisi": 353670956.78,
-      "yatirimciDegisimi": 2224
+      "gunlukGetiri": 0.00104067,
+      "paraGirisiCikisi": 109603639.25,
+      "yatirimciDegisimi": 2336
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 58947200643,
       "kisiSayisi": 353720,
       "fonToplamDeger": 106884462913.62,
-      "gunlukGetiri": 0.00420685,
-      "paraGirisiCikisi": 353670956.78,
-      "yatirimciDegisimi": 2224
+      "gunlukGetiri": 0.00104067,
+      "paraGirisiCikisi": 109603639.25,
+      "yatirimciDegisimi": 2336
+    },
+    {
+      "fonKodu": "YLB",
+      "fonAdi": "YAPI KREDİ PORTFÖY PARA PİYASASI FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.811339,
+      "tedavuldekiPaySayisi": 58886753815,
+      "kisiSayisi": 351384,
+      "fonToplamDeger": 106663895584,
+      "gunlukGetiri": 0.00316289,
+      "paraGirisiCikisi": 243813588.87,
+      "yatirimciDegisimi": -112
     },
     {
       "fonKodu": "YLB",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

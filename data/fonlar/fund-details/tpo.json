@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TPO",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 585531154,
     "kisiSayisi": 3,
     "fonToplamDeger": 105766867.59,
-    "gunlukGetiri": 0.00437036,
+    "gunlukGetiri": 0.0010696,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 585531154,
         "kisiSayisi": 3,
         "fonToplamDeger": 105766867.59,
-        "gunlukGetiri": 0.00437036,
+        "gunlukGetiri": 0.0010696,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "TPO",
+        "fonAdi": "İŞ PORTFÖY PY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI (TL) ÖZEL FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 0.180441,
+        "tedavuldekiPaySayisi": 585531154,
+        "kisiSayisi": 3,
+        "fonToplamDeger": 105653702.57,
+        "gunlukGetiri": 0.00329723,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "TPO",
       "fonAdi": "İŞ PORTFÖY PY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI (TL) ÖZEL FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 0.180441,
+      "tedavuldekiPaySayisi": 585531154,
+      "kisiSayisi": 3,
+      "fonToplamDeger": 105653702.57,
+      "gunlukGetiri": 0.00329723,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TPO",
+      "fonAdi": "İŞ PORTFÖY PY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI (TL) ÖZEL FONU",
       "tarih": "2026-08-18",
       "fiyat": 0.180634,
       "tedavuldekiPaySayisi": 585531154,
       "kisiSayisi": 3,
       "fonToplamDeger": 105766867.59,
-      "gunlukGetiri": 0.00437036,
+      "gunlukGetiri": 0.0010696,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 585531154,
       "kisiSayisi": 3,
       "fonToplamDeger": 105766867.59,
-      "gunlukGetiri": 0.00437036,
+      "gunlukGetiri": 0.0010696,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TPO",
+      "fonAdi": "İŞ PORTFÖY PY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI (TL) ÖZEL FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 0.180441,
+      "tedavuldekiPaySayisi": 585531154,
+      "kisiSayisi": 3,
+      "fonToplamDeger": 105653702.57,
+      "gunlukGetiri": 0.00329723,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

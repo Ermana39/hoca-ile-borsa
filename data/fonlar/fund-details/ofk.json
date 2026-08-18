@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "OFK",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 20132222,
     "kisiSayisi": 265,
     "fonToplamDeger": 1045193952.85,
-    "gunlukGetiri": 0.00282109,
+    "gunlukGetiri": 0.00194108,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 181915.32,
-      "besGun": -743656.81,
+      "gunluk": 7475.97,
+      "besGun": -56775.39,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": -1,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 20132222,
         "kisiSayisi": 265,
         "fonToplamDeger": 1045193952.85,
-        "gunlukGetiri": 0.00282109,
-        "paraGirisiCikisi": 181915.32,
+        "gunlukGetiri": 0.00194108,
+        "paraGirisiCikisi": 7475.97,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "OFK",
+        "fonAdi": "OYAK PORTFÖY TÜRKİYE FİNANS KATILIM SERBEST (DÖVİZ-ABD DOLARI) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 51.815894,
+        "tedavuldekiPaySayisi": 20132078,
+        "kisiSayisi": 265,
+        "fonToplamDeger": 1043161617.56,
+        "gunlukGetiri": 0.0008783,
+        "paraGirisiCikisi": 174101.4,
         "yatirimciDegisimi": 0
       },
       {
@@ -188,13 +200,25 @@
     {
       "fonKodu": "OFK",
       "fonAdi": "OYAK PORTFÖY TÜRKİYE FİNANS KATILIM SERBEST (DÖVİZ-ABD DOLARI) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 51.815894,
+      "tedavuldekiPaySayisi": 20132078,
+      "kisiSayisi": 265,
+      "fonToplamDeger": 1043161617.56,
+      "gunlukGetiri": 0.0008783,
+      "paraGirisiCikisi": 174101.4,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "OFK",
+      "fonAdi": "OYAK PORTFÖY TÜRKİYE FİNANS KATILIM SERBEST (DÖVİZ-ABD DOLARI) FON",
       "tarih": "2026-08-18",
       "fiyat": 51.916473,
       "tedavuldekiPaySayisi": 20132222,
       "kisiSayisi": 265,
       "fonToplamDeger": 1045193952.85,
-      "gunlukGetiri": 0.00282109,
-      "paraGirisiCikisi": 181915.32,
+      "gunlukGetiri": 0.00194108,
+      "paraGirisiCikisi": 7475.97,
       "yatirimciDegisimi": 0
     }
   ],
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 20132222,
       "kisiSayisi": 265,
       "fonToplamDeger": 1045193952.85,
-      "gunlukGetiri": 0.00282109,
-      "paraGirisiCikisi": 181915.32,
+      "gunlukGetiri": 0.00194108,
+      "paraGirisiCikisi": 7475.97,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "OFK",
+      "fonAdi": "OYAK PORTFÖY TÜRKİYE FİNANS KATILIM SERBEST (DÖVİZ-ABD DOLARI) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 51.815894,
+      "tedavuldekiPaySayisi": 20132078,
+      "kisiSayisi": 265,
+      "fonToplamDeger": 1043161617.56,
+      "gunlukGetiri": 0.0008783,
+      "paraGirisiCikisi": 174101.4,
       "yatirimciDegisimi": 0
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

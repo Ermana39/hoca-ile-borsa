@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "VNK",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 1607052799,
     "kisiSayisi": 245,
     "fonToplamDeger": 3868010632.9,
-    "gunlukGetiri": 0.005475,
+    "gunlukGetiri": 0.00472202,
     "getiriler": {
       "birAy": 0.019074,
       "ucAy": 0.014985,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -472772.34,
-      "besGun": -193858374.95,
+      "gunluk": 0,
+      "besGun": -193881178.17,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
-      "besGun": -14,
+      "gunluk": -2,
+      "besGun": -10,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 1607052799,
         "kisiSayisi": 245,
         "fonToplamDeger": 3868010632.9,
-        "gunlukGetiri": 0.005475,
-        "paraGirisiCikisi": -472772.34,
-        "yatirimciDegisimi": -3
+        "gunlukGetiri": 0.00472202,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": -2
+      },
+      {
+        "fonKodu": "VNK",
+        "fonAdi": "VEGA PORTFÖY ANKA SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 2.395585,
+        "tedavuldekiPaySayisi": 1607052799,
+        "kisiSayisi": 247,
+        "fonToplamDeger": 3849831357.17,
+        "gunlukGetiri": 0.00074944,
+        "paraGirisiCikisi": -470550.39,
+        "yatirimciDegisimi": -1
       },
       {
         "fonKodu": "VNK",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "VNK",
       "fonAdi": "VEGA PORTFÖY ANKA SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 2.395585,
+      "tedavuldekiPaySayisi": 1607052799,
+      "kisiSayisi": 247,
+      "fonToplamDeger": 3849831357.17,
+      "gunlukGetiri": 0.00074944,
+      "paraGirisiCikisi": -470550.39,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "VNK",
+      "fonAdi": "VEGA PORTFÖY ANKA SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 2.406897,
       "tedavuldekiPaySayisi": 1607052799,
       "kisiSayisi": 245,
       "fonToplamDeger": 3868010632.9,
-      "gunlukGetiri": 0.005475,
-      "paraGirisiCikisi": -472772.34,
-      "yatirimciDegisimi": -3
+      "gunlukGetiri": 0.00472202,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 1607052799,
       "kisiSayisi": 245,
       "fonToplamDeger": 3868010632.9,
-      "gunlukGetiri": 0.005475,
-      "paraGirisiCikisi": -472772.34,
-      "yatirimciDegisimi": -3
+      "gunlukGetiri": 0.00472202,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "VNK",
+      "fonAdi": "VEGA PORTFÖY ANKA SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 2.395585,
+      "tedavuldekiPaySayisi": 1607052799,
+      "kisiSayisi": 247,
+      "fonToplamDeger": 3849831357.17,
+      "gunlukGetiri": 0.00074944,
+      "paraGirisiCikisi": -470550.39,
+      "yatirimciDegisimi": -1
     },
     {
       "fonKodu": "VNK",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

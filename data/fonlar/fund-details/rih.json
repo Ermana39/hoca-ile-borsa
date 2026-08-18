@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "RIH",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 14271287,
     "kisiSayisi": 1479,
     "fonToplamDeger": 169582935.16,
-    "gunlukGetiri": 0.01152388,
+    "gunlukGetiri": -0.00672625,
     "getiriler": {
       "birAy": 0.310383,
       "ucAy": 0.644319,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -42355667.85,
-      "besGun": -41023160.06,
+      "gunluk": -49337909.59,
+      "besGun": -64324385.03,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -138,
-      "besGun": -243,
+      "gunluk": -35,
+      "besGun": -312,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 14271287,
         "kisiSayisi": 1479,
         "fonToplamDeger": 169582935.16,
-        "gunlukGetiri": 0.01152388,
-        "paraGirisiCikisi": -42355667.85,
-        "yatirimciDegisimi": -138
+        "gunlukGetiri": -0.00672625,
+        "paraGirisiCikisi": -49337909.59,
+        "yatirimciDegisimi": -35
+      },
+      {
+        "fonKodu": "RIH",
+        "fonAdi": "RE-PIE PORTFÖY İKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-17",
+        "fiyat": 11.963274,
+        "tedavuldekiPaySayisi": 18423329,
+        "kisiSayisi": 1514,
+        "fonToplamDeger": 220403332.03,
+        "gunlukGetiri": 0.01837372,
+        "paraGirisiCikisi": 7029524.1,
+        "yatirimciDegisimi": -103
       },
       {
         "fonKodu": "RIH",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "RIH",
       "fonAdi": "RE-PIE PORTFÖY İKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 11.963274,
+      "tedavuldekiPaySayisi": 18423329,
+      "kisiSayisi": 1514,
+      "fonToplamDeger": 220403332.03,
+      "gunlukGetiri": 0.01837372,
+      "paraGirisiCikisi": 7029524.1,
+      "yatirimciDegisimi": -103
+    },
+    {
+      "fonKodu": "RIH",
+      "fonAdi": "RE-PIE PORTFÖY İKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
       "tarih": "2026-08-18",
       "fiyat": 11.882806,
       "tedavuldekiPaySayisi": 14271287,
       "kisiSayisi": 1479,
       "fonToplamDeger": 169582935.16,
-      "gunlukGetiri": 0.01152388,
-      "paraGirisiCikisi": -42355667.85,
-      "yatirimciDegisimi": -138
+      "gunlukGetiri": -0.00672625,
+      "paraGirisiCikisi": -49337909.59,
+      "yatirimciDegisimi": -35
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 14271287,
       "kisiSayisi": 1479,
       "fonToplamDeger": 169582935.16,
-      "gunlukGetiri": 0.01152388,
-      "paraGirisiCikisi": -42355667.85,
-      "yatirimciDegisimi": -138
+      "gunlukGetiri": -0.00672625,
+      "paraGirisiCikisi": -49337909.59,
+      "yatirimciDegisimi": -35
+    },
+    {
+      "fonKodu": "RIH",
+      "fonAdi": "RE-PIE PORTFÖY İKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 11.963274,
+      "tedavuldekiPaySayisi": 18423329,
+      "kisiSayisi": 1514,
+      "fonToplamDeger": 220403332.03,
+      "gunlukGetiri": 0.01837372,
+      "paraGirisiCikisi": 7029524.1,
+      "yatirimciDegisimi": -103
     },
     {
       "fonKodu": "RIH",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

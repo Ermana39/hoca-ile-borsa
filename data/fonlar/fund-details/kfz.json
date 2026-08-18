@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KFZ",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 82683881,
     "kisiSayisi": 1,
     "fonToplamDeger": 368589098.98,
-    "gunlukGetiri": 0.00414786,
+    "gunlukGetiri": 0.00103746,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,7 +58,19 @@
         "tedavuldekiPaySayisi": 82683881,
         "kisiSayisi": 1,
         "fonToplamDeger": 368589098.98,
-        "gunlukGetiri": 0.00414786,
+        "gunlukGetiri": 0.00103746,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "KFZ",
+        "fonAdi": "KUVEYT TÜRK PORTFÖY KFZ KATILIM SERBEST ÖZEL FON",
+        "tarih": "2026-08-17",
+        "fiyat": 4.453191,
+        "tedavuldekiPaySayisi": 82683881,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 368207095.63,
+        "gunlukGetiri": 0.00310718,
         "paraGirisiCikisi": 0,
         "yatirimciDegisimi": 0
       },
@@ -188,12 +200,24 @@
     {
       "fonKodu": "KFZ",
       "fonAdi": "KUVEYT TÜRK PORTFÖY KFZ KATILIM SERBEST ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 4.453191,
+      "tedavuldekiPaySayisi": 82683881,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 368207095.63,
+      "gunlukGetiri": 0.00310718,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KFZ",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY KFZ KATILIM SERBEST ÖZEL FON",
       "tarih": "2026-08-18",
       "fiyat": 4.457811,
       "tedavuldekiPaySayisi": 82683881,
       "kisiSayisi": 1,
       "fonToplamDeger": 368589098.98,
-      "gunlukGetiri": 0.00414786,
+      "gunlukGetiri": 0.00103746,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
@@ -207,7 +231,19 @@
       "tedavuldekiPaySayisi": 82683881,
       "kisiSayisi": 1,
       "fonToplamDeger": 368589098.98,
-      "gunlukGetiri": 0.00414786,
+      "gunlukGetiri": 0.00103746,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KFZ",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY KFZ KATILIM SERBEST ÖZEL FON",
+      "tarih": "2026-08-17",
+      "fiyat": 4.453191,
+      "tedavuldekiPaySayisi": 82683881,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 368207095.63,
+      "gunlukGetiri": 0.00310718,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     },
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

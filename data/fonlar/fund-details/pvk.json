@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PVK",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 6979518880,
     "kisiSayisi": 8320,
     "fonToplamDeger": 40159262775.42,
-    "gunlukGetiri": 0.00403175,
+    "gunlukGetiri": 0.00100712,
     "getiriler": {
       "birAy": 0.029533,
       "ucAy": 0.09690099999999999,
@@ -29,22 +29,22 @@
       "besYil": 3.8704300000000003
     },
     "paraAkisi": {
-      "gunluk": -534993690.33,
-      "besGun": 3306675440.29,
+      "gunluk": -259006053.29,
+      "besGun": 3190146040.28,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -9,
-      "besGun": -42,
+      "gunluk": -21,
+      "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 6979518880,
         "kisiSayisi": 8320,
         "fonToplamDeger": 40159262775.42,
-        "gunlukGetiri": 0.00403175,
-        "paraGirisiCikisi": -534993690.33,
-        "yatirimciDegisimi": -9
+        "gunlukGetiri": 0.00100712,
+        "paraGirisiCikisi": -259006053.29,
+        "yatirimciDegisimi": -21
+      },
+      {
+        "fonKodu": "PVK",
+        "fonAdi": "ALBARAKA PORTFÖY KISA VADELİ KATILIM SERBEST (TL) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 5.748084,
+        "tedavuldekiPaySayisi": 7024533091,
+        "kisiSayisi": 8341,
+        "fonToplamDeger": 40377606050.2,
+        "gunlukGetiri": 0.00302158,
+        "paraGirisiCikisi": -275709964.52,
+        "yatirimciDegisimi": 12
       },
       {
         "fonKodu": "PVK",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "PVK",
       "fonAdi": "ALBARAKA PORTFÖY KISA VADELİ KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 5.748084,
+      "tedavuldekiPaySayisi": 7024533091,
+      "kisiSayisi": 8341,
+      "fonToplamDeger": 40377606050.2,
+      "gunlukGetiri": 0.00302158,
+      "paraGirisiCikisi": -275709964.52,
+      "yatirimciDegisimi": 12
+    },
+    {
+      "fonKodu": "PVK",
+      "fonAdi": "ALBARAKA PORTFÖY KISA VADELİ KATILIM SERBEST (TL) FON",
       "tarih": "2026-08-18",
       "fiyat": 5.753873,
       "tedavuldekiPaySayisi": 6979518880,
       "kisiSayisi": 8320,
       "fonToplamDeger": 40159262775.42,
-      "gunlukGetiri": 0.00403175,
-      "paraGirisiCikisi": -534993690.33,
-      "yatirimciDegisimi": -9
+      "gunlukGetiri": 0.00100712,
+      "paraGirisiCikisi": -259006053.29,
+      "yatirimciDegisimi": -21
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 6979518880,
       "kisiSayisi": 8320,
       "fonToplamDeger": 40159262775.42,
-      "gunlukGetiri": 0.00403175,
-      "paraGirisiCikisi": -534993690.33,
-      "yatirimciDegisimi": -9
+      "gunlukGetiri": 0.00100712,
+      "paraGirisiCikisi": -259006053.29,
+      "yatirimciDegisimi": -21
+    },
+    {
+      "fonKodu": "PVK",
+      "fonAdi": "ALBARAKA PORTFÖY KISA VADELİ KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 5.748084,
+      "tedavuldekiPaySayisi": 7024533091,
+      "kisiSayisi": 8341,
+      "fonToplamDeger": 40377606050.2,
+      "gunlukGetiri": 0.00302158,
+      "paraGirisiCikisi": -275709964.52,
+      "yatirimciDegisimi": 12
     },
     {
       "fonKodu": "PVK",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

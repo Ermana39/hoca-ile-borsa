@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PRD",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 196463331,
     "kisiSayisi": 606,
     "fonToplamDeger": 458470800.6,
-    "gunlukGetiri": 0.00457903,
+    "gunlukGetiri": 0.00109392,
     "getiriler": {
       "birAy": 0.033839,
       "ucAy": 0.109215,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -28470976.1,
-      "besGun": -67931098.76,
+      "gunluk": -1028813.71,
+      "besGun": -71183457.54,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
-      "besGun": 2,
+      "gunluk": 3,
+      "besGun": -2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 196463331,
         "kisiSayisi": 606,
         "fonToplamDeger": 458470800.6,
-        "gunlukGetiri": 0.00457903,
-        "paraGirisiCikisi": -28470976.1,
-        "yatirimciDegisimi": 2
+        "gunlukGetiri": 0.00109392,
+        "paraGirisiCikisi": -1028813.71,
+        "yatirimciDegisimi": 3
+      },
+      {
+        "fonKodu": "PRD",
+        "fonAdi": "PİRAMİT PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 2.33107,
+        "tedavuldekiPaySayisi": 196904197,
+        "kisiSayisi": 603,
+        "fonToplamDeger": 458997552.72,
+        "gunlukGetiri": 0.0034813,
+        "paraGirisiCikisi": -27412175.71,
+        "yatirimciDegisimi": -1
       },
       {
         "fonKodu": "PRD",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "PRD",
       "fonAdi": "PİRAMİT PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.33107,
+      "tedavuldekiPaySayisi": 196904197,
+      "kisiSayisi": 603,
+      "fonToplamDeger": 458997552.72,
+      "gunlukGetiri": 0.0034813,
+      "paraGirisiCikisi": -27412175.71,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "PRD",
+      "fonAdi": "PİRAMİT PORTFÖY PARA PİYASASI (TL) FONU",
       "tarih": "2026-08-18",
       "fiyat": 2.33362,
       "tedavuldekiPaySayisi": 196463331,
       "kisiSayisi": 606,
       "fonToplamDeger": 458470800.6,
-      "gunlukGetiri": 0.00457903,
-      "paraGirisiCikisi": -28470976.1,
-      "yatirimciDegisimi": 2
+      "gunlukGetiri": 0.00109392,
+      "paraGirisiCikisi": -1028813.71,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 196463331,
       "kisiSayisi": 606,
       "fonToplamDeger": 458470800.6,
-      "gunlukGetiri": 0.00457903,
-      "paraGirisiCikisi": -28470976.1,
-      "yatirimciDegisimi": 2
+      "gunlukGetiri": 0.00109392,
+      "paraGirisiCikisi": -1028813.71,
+      "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "PRD",
+      "fonAdi": "PİRAMİT PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 2.33107,
+      "tedavuldekiPaySayisi": 196904197,
+      "kisiSayisi": 603,
+      "fonToplamDeger": 458997552.72,
+      "gunlukGetiri": 0.0034813,
+      "paraGirisiCikisi": -27412175.71,
+      "yatirimciDegisimi": -1
     },
     {
       "fonKodu": "PRD",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

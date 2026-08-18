@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "OIR",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 3750176,
     "kisiSayisi": 225,
     "fonToplamDeger": 19019035.31,
-    "gunlukGetiri": 0.0050296,
+    "gunlukGetiri": 0.00450905,
     "getiriler": {
       "birAy": 0.037945,
       "ucAy": 0.064986,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -26949.98,
-      "besGun": -356455.75,
+      "gunluk": -2946.54,
+      "besGun": -355553.76,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
+      "gunluk": -2,
       "besGun": -4,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 3750176,
         "kisiSayisi": 225,
         "fonToplamDeger": 19019035.31,
-        "gunlukGetiri": 0.0050296,
-        "paraGirisiCikisi": -26949.98,
-        "yatirimciDegisimi": -3
+        "gunlukGetiri": 0.00450905,
+        "paraGirisiCikisi": -2946.54,
+        "yatirimciDegisimi": -2
+      },
+      {
+        "fonKodu": "OIR",
+        "fonAdi": "OSMANLI PORTFÖY DENGELİ FON SEPETİ FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 5.04874,
+        "tedavuldekiPaySayisi": 3750757,
+        "kisiSayisi": 227,
+        "fonToplamDeger": 18936597,
+        "gunlukGetiri": 0.00051822,
+        "paraGirisiCikisi": -23895.69,
+        "yatirimciDegisimi": -1
       },
       {
         "fonKodu": "OIR",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "OIR",
       "fonAdi": "OSMANLI PORTFÖY DENGELİ FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 5.04874,
+      "tedavuldekiPaySayisi": 3750757,
+      "kisiSayisi": 227,
+      "fonToplamDeger": 18936597,
+      "gunlukGetiri": 0.00051822,
+      "paraGirisiCikisi": -23895.69,
+      "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "OIR",
+      "fonAdi": "OSMANLI PORTFÖY DENGELİ FON SEPETİ FONU",
       "tarih": "2026-08-18",
       "fiyat": 5.071505,
       "tedavuldekiPaySayisi": 3750176,
       "kisiSayisi": 225,
       "fonToplamDeger": 19019035.31,
-      "gunlukGetiri": 0.0050296,
-      "paraGirisiCikisi": -26949.98,
-      "yatirimciDegisimi": -3
+      "gunlukGetiri": 0.00450905,
+      "paraGirisiCikisi": -2946.54,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 3750176,
       "kisiSayisi": 225,
       "fonToplamDeger": 19019035.31,
-      "gunlukGetiri": 0.0050296,
-      "paraGirisiCikisi": -26949.98,
-      "yatirimciDegisimi": -3
+      "gunlukGetiri": 0.00450905,
+      "paraGirisiCikisi": -2946.54,
+      "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "OIR",
+      "fonAdi": "OSMANLI PORTFÖY DENGELİ FON SEPETİ FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 5.04874,
+      "tedavuldekiPaySayisi": 3750757,
+      "kisiSayisi": 227,
+      "fonToplamDeger": 18936597,
+      "gunlukGetiri": 0.00051822,
+      "paraGirisiCikisi": -23895.69,
+      "yatirimciDegisimi": -1
     },
     {
       "fonKodu": "OIR",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

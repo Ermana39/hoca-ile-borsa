@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "SIA",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 4011986,
     "kisiSayisi": 11,
     "fonToplamDeger": 3890028.95,
-    "gunlukGetiri": 0.0231895,
+    "gunlukGetiri": 0.01440311,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -106455512.39,
-      "besGun": -136511944.73,
+      "gunluk": 0,
+      "besGun": -135000424.49,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 4011986,
         "kisiSayisi": 11,
         "fonToplamDeger": 3890028.95,
-        "gunlukGetiri": 0.0231895,
-        "paraGirisiCikisi": -106455512.39,
+        "gunlukGetiri": 0.01440311,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "SIA",
+        "fonAdi": "SPARTA PORTFÖY BİRİNCİ İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-17",
+        "fiyat": 0.955835,
+        "tedavuldekiPaySayisi": 4011986,
+        "kisiSayisi": 11,
+        "fonToplamDeger": 3834796.09,
+        "gunlukGetiri": 0.00866164,
+        "paraGirisiCikisi": -104943992.15,
         "yatirimciDegisimi": 0
       },
       {
@@ -188,13 +200,25 @@
     {
       "fonKodu": "SIA",
       "fonAdi": "SPARTA PORTFÖY BİRİNCİ İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 0.955835,
+      "tedavuldekiPaySayisi": 4011986,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 3834796.09,
+      "gunlukGetiri": 0.00866164,
+      "paraGirisiCikisi": -104943992.15,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "SIA",
+      "fonAdi": "SPARTA PORTFÖY BİRİNCİ İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
       "tarih": "2026-08-18",
       "fiyat": 0.969602,
       "tedavuldekiPaySayisi": 4011986,
       "kisiSayisi": 11,
       "fonToplamDeger": 3890028.95,
-      "gunlukGetiri": 0.0231895,
-      "paraGirisiCikisi": -106455512.39,
+      "gunlukGetiri": 0.01440311,
+      "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
   ],
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 4011986,
       "kisiSayisi": 11,
       "fonToplamDeger": 3890028.95,
-      "gunlukGetiri": 0.0231895,
-      "paraGirisiCikisi": -106455512.39,
+      "gunlukGetiri": 0.01440311,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "SIA",
+      "fonAdi": "SPARTA PORTFÖY BİRİNCİ İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 0.955835,
+      "tedavuldekiPaySayisi": 4011986,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 3834796.09,
+      "gunlukGetiri": 0.00866164,
+      "paraGirisiCikisi": -104943992.15,
       "yatirimciDegisimi": 0
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

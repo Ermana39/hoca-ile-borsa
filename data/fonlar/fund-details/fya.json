@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "FYA",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 28933126183.69,
     "kisiSayisi": 147,
     "fonToplamDeger": 1506716309.68,
-    "gunlukGetiri": -0.0077738,
+    "gunlukGetiri": -0.00197397,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1984452.42,
-      "besGun": -15329254.68,
+      "gunluk": 0,
+      "besGun": -15333179.69,
       "birAy": null,
       "ucAy": null
     },
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,8 +58,20 @@
         "tedavuldekiPaySayisi": 28933126183.69,
         "kisiSayisi": 147,
         "fonToplamDeger": 1506716309.68,
-        "gunlukGetiri": -0.0077738,
-        "paraGirisiCikisi": -1984452.42,
+        "gunlukGetiri": -0.00197397,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "FYA",
+        "fonAdi": "İSTANBUL PORTFÖY ARK II SERBEST FON",
+        "tarih": "2026-08-17",
+        "fiyat": 0.052179,
+        "tedavuldekiPaySayisi": 28933126183.69,
+        "kisiSayisi": 147,
+        "fonToplamDeger": 1509713935.19,
+        "gunlukGetiri": -0.00581129,
+        "paraGirisiCikisi": -1988377.43,
         "yatirimciDegisimi": 0
       },
       {
@@ -188,13 +200,25 @@
     {
       "fonKodu": "FYA",
       "fonAdi": "İSTANBUL PORTFÖY ARK II SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 0.052179,
+      "tedavuldekiPaySayisi": 28933126183.69,
+      "kisiSayisi": 147,
+      "fonToplamDeger": 1509713935.19,
+      "gunlukGetiri": -0.00581129,
+      "paraGirisiCikisi": -1988377.43,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "FYA",
+      "fonAdi": "İSTANBUL PORTFÖY ARK II SERBEST FON",
       "tarih": "2026-08-18",
       "fiyat": 0.052076,
       "tedavuldekiPaySayisi": 28933126183.69,
       "kisiSayisi": 147,
       "fonToplamDeger": 1506716309.68,
-      "gunlukGetiri": -0.0077738,
-      "paraGirisiCikisi": -1984452.42,
+      "gunlukGetiri": -0.00197397,
+      "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
     }
   ],
@@ -207,8 +231,20 @@
       "tedavuldekiPaySayisi": 28933126183.69,
       "kisiSayisi": 147,
       "fonToplamDeger": 1506716309.68,
-      "gunlukGetiri": -0.0077738,
-      "paraGirisiCikisi": -1984452.42,
+      "gunlukGetiri": -0.00197397,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "FYA",
+      "fonAdi": "İSTANBUL PORTFÖY ARK II SERBEST FON",
+      "tarih": "2026-08-17",
+      "fiyat": 0.052179,
+      "tedavuldekiPaySayisi": 28933126183.69,
+      "kisiSayisi": 147,
+      "fonToplamDeger": 1509713935.19,
+      "gunlukGetiri": -0.00581129,
+      "paraGirisiCikisi": -1988377.43,
       "yatirimciDegisimi": 0
     },
     {
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

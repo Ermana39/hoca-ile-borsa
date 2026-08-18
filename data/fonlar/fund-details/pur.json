@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PUR",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 12983582085,
     "kisiSayisi": 39751,
     "fonToplamDeger": 135159801981.73,
-    "gunlukGetiri": 0.00423784,
+    "gunlukGetiri": 0.00105846,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1618585759.17,
-      "besGun": 2528720829.64,
+      "gunluk": -1604312897.11,
+      "besGun": -2190050490.7,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -113,
-      "besGun": -341,
+      "gunluk": -91,
+      "besGun": -241,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 12983582085,
         "kisiSayisi": 39751,
         "fonToplamDeger": 135159801981.73,
-        "gunlukGetiri": 0.00423784,
-        "paraGirisiCikisi": -1618585759.17,
-        "yatirimciDegisimi": -113
+        "gunlukGetiri": 0.00105846,
+        "paraGirisiCikisi": -1604312897.11,
+        "yatirimciDegisimi": -91
+      },
+      {
+        "fonKodu": "PUR",
+        "fonAdi": "AK PORTFÖY BİRİNCİ PARA PİYASASI SERBEST (TL) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 10.399048,
+        "tedavuldekiPaySayisi": 13137693941,
+        "kisiSayisi": 39842,
+        "fonToplamDeger": 136619515853.6,
+        "gunlukGetiri": 0.00317602,
+        "paraGirisiCikisi": -14257770.75,
+        "yatirimciDegisimi": -22
       },
       {
         "fonKodu": "PUR",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "PUR",
       "fonAdi": "AK PORTFÖY BİRİNCİ PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 10.399048,
+      "tedavuldekiPaySayisi": 13137693941,
+      "kisiSayisi": 39842,
+      "fonToplamDeger": 136619515853.6,
+      "gunlukGetiri": 0.00317602,
+      "paraGirisiCikisi": -14257770.75,
+      "yatirimciDegisimi": -22
+    },
+    {
+      "fonKodu": "PUR",
+      "fonAdi": "AK PORTFÖY BİRİNCİ PARA PİYASASI SERBEST (TL) FON",
       "tarih": "2026-08-18",
       "fiyat": 10.410055,
       "tedavuldekiPaySayisi": 12983582085,
       "kisiSayisi": 39751,
       "fonToplamDeger": 135159801981.73,
-      "gunlukGetiri": 0.00423784,
-      "paraGirisiCikisi": -1618585759.17,
-      "yatirimciDegisimi": -113
+      "gunlukGetiri": 0.00105846,
+      "paraGirisiCikisi": -1604312897.11,
+      "yatirimciDegisimi": -91
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 12983582085,
       "kisiSayisi": 39751,
       "fonToplamDeger": 135159801981.73,
-      "gunlukGetiri": 0.00423784,
-      "paraGirisiCikisi": -1618585759.17,
-      "yatirimciDegisimi": -113
+      "gunlukGetiri": 0.00105846,
+      "paraGirisiCikisi": -1604312897.11,
+      "yatirimciDegisimi": -91
+    },
+    {
+      "fonKodu": "PUR",
+      "fonAdi": "AK PORTFÖY BİRİNCİ PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 10.399048,
+      "tedavuldekiPaySayisi": 13137693941,
+      "kisiSayisi": 39842,
+      "fonToplamDeger": 136619515853.6,
+      "gunlukGetiri": 0.00317602,
+      "paraGirisiCikisi": -14257770.75,
+      "yatirimciDegisimi": -22
     },
     {
       "fonKodu": "PUR",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

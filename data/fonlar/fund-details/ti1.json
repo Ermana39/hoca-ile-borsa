@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TI1",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 132184942.65,
     "kisiSayisi": 238741,
     "fonToplamDeger": 219481219522.48,
-    "gunlukGetiri": 0.004174,
+    "gunlukGetiri": 0.00102648,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1634892959.92,
-      "besGun": -5331954371.07,
+      "gunluk": 1982830244.98,
+      "besGun": -3434030501.57,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -162,
-      "besGun": -173,
+      "gunluk": 104,
+      "besGun": 187,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 132184942.65,
         "kisiSayisi": 238741,
         "fonToplamDeger": 219481219522.48,
-        "gunlukGetiri": 0.004174,
-        "paraGirisiCikisi": 1634892959.92,
-        "yatirimciDegisimi": -162
+        "gunlukGetiri": 0.00102648,
+        "paraGirisiCikisi": 1982830244.98,
+        "yatirimciDegisimi": 104
+      },
+      {
+        "fonKodu": "TI1",
+        "fonAdi": "İŞ PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 1658.707516,
+        "tedavuldekiPaySayisi": 130990761.65,
+        "kisiSayisi": 238637,
+        "fonToplamDeger": 217275360872.81,
+        "gunlukGetiri": 0.00314429,
+        "paraGirisiCikisi": -347580501.27,
+        "yatirimciDegisimi": -266
       },
       {
         "fonKodu": "TI1",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "TI1",
       "fonAdi": "İŞ PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1658.707516,
+      "tedavuldekiPaySayisi": 130990761.65,
+      "kisiSayisi": 238637,
+      "fonToplamDeger": 217275360872.81,
+      "gunlukGetiri": 0.00314429,
+      "paraGirisiCikisi": -347580501.27,
+      "yatirimciDegisimi": -266
+    },
+    {
+      "fonKodu": "TI1",
+      "fonAdi": "İŞ PORTFÖY PARA PİYASASI (TL) FONU",
       "tarih": "2026-08-18",
       "fiyat": 1660.410143,
       "tedavuldekiPaySayisi": 132184942.65,
       "kisiSayisi": 238741,
       "fonToplamDeger": 219481219522.48,
-      "gunlukGetiri": 0.004174,
-      "paraGirisiCikisi": 1634892959.92,
-      "yatirimciDegisimi": -162
+      "gunlukGetiri": 0.00102648,
+      "paraGirisiCikisi": 1982830244.98,
+      "yatirimciDegisimi": 104
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 132184942.65,
       "kisiSayisi": 238741,
       "fonToplamDeger": 219481219522.48,
-      "gunlukGetiri": 0.004174,
-      "paraGirisiCikisi": 1634892959.92,
-      "yatirimciDegisimi": -162
+      "gunlukGetiri": 0.00102648,
+      "paraGirisiCikisi": 1982830244.98,
+      "yatirimciDegisimi": 104
+    },
+    {
+      "fonKodu": "TI1",
+      "fonAdi": "İŞ PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1658.707516,
+      "tedavuldekiPaySayisi": 130990761.65,
+      "kisiSayisi": 238637,
+      "fonToplamDeger": 217275360872.81,
+      "gunlukGetiri": 0.00314429,
+      "paraGirisiCikisi": -347580501.27,
+      "yatirimciDegisimi": -266
     },
     {
       "fonKodu": "TI1",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

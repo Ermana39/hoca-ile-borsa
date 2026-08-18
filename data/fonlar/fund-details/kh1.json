@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KH1",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 68792644,
     "kisiSayisi": 989,
     "fonToplamDeger": 90971579.49,
-    "gunlukGetiri": 0.01438111,
+    "gunlukGetiri": 0.01179816,
     "getiriler": {
       "birAy": 0.025663000000000002,
       "ucAy": -0.003438,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 129061.24,
-      "besGun": 902058.38,
+      "gunluk": 5497.23,
+      "besGun": -5547315.32,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 4,
-      "besGun": 4,
+      "gunluk": -2,
+      "besGun": -3,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 68792644,
         "kisiSayisi": 989,
         "fonToplamDeger": 90971579.49,
-        "gunlukGetiri": 0.01438111,
-        "paraGirisiCikisi": 129061.24,
-        "yatirimciDegisimi": 4
+        "gunlukGetiri": 0.01179816,
+        "paraGirisiCikisi": 5497.23,
+        "yatirimciDegisimi": -2
+      },
+      {
+        "fonKodu": "KH1",
+        "fonAdi": "AK PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-17",
+        "fiyat": 1.306983,
+        "tedavuldekiPaySayisi": 68788487,
+        "kisiSayisi": 991,
+        "fonToplamDeger": 89905360.88,
+        "gunlukGetiri": 0.00255282,
+        "paraGirisiCikisi": 122123.18,
+        "yatirimciDegisimi": 6
       },
       {
         "fonKodu": "KH1",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "KH1",
       "fonAdi": "AK PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 1.306983,
+      "tedavuldekiPaySayisi": 68788487,
+      "kisiSayisi": 991,
+      "fonToplamDeger": 89905360.88,
+      "gunlukGetiri": 0.00255282,
+      "paraGirisiCikisi": 122123.18,
+      "yatirimciDegisimi": 6
+    },
+    {
+      "fonKodu": "KH1",
+      "fonAdi": "AK PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
       "tarih": "2026-08-18",
       "fiyat": 1.322403,
       "tedavuldekiPaySayisi": 68792644,
       "kisiSayisi": 989,
       "fonToplamDeger": 90971579.49,
-      "gunlukGetiri": 0.01438111,
-      "paraGirisiCikisi": 129061.24,
-      "yatirimciDegisimi": 4
+      "gunlukGetiri": 0.01179816,
+      "paraGirisiCikisi": 5497.23,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 68792644,
       "kisiSayisi": 989,
       "fonToplamDeger": 90971579.49,
-      "gunlukGetiri": 0.01438111,
-      "paraGirisiCikisi": 129061.24,
-      "yatirimciDegisimi": 4
+      "gunlukGetiri": 0.01179816,
+      "paraGirisiCikisi": 5497.23,
+      "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "KH1",
+      "fonAdi": "AK PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-17",
+      "fiyat": 1.306983,
+      "tedavuldekiPaySayisi": 68788487,
+      "kisiSayisi": 991,
+      "fonToplamDeger": 89905360.88,
+      "gunlukGetiri": 0.00255282,
+      "paraGirisiCikisi": 122123.18,
+      "yatirimciDegisimi": 6
     },
     {
       "fonKodu": "KH1",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ENR",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 1454379555,
     "kisiSayisi": 12760,
     "fonToplamDeger": 1745412438.7,
-    "gunlukGetiri": 0.00424086,
+    "gunlukGetiri": 0.00107188,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 123257904.61,
-      "besGun": 264057332.42,
+      "gunluk": 150763784.72,
+      "besGun": 170628236.24,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1188,
+      "gunluk": 1260,
       "besGun": 1807,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 1454379555,
         "kisiSayisi": 12760,
         "fonToplamDeger": 1745412438.7,
-        "gunlukGetiri": 0.00424086,
-        "paraGirisiCikisi": 123257904.61,
-        "yatirimciDegisimi": 1188
+        "gunlukGetiri": 0.00107188,
+        "paraGirisiCikisi": 150763784.72,
+        "yatirimciDegisimi": 1260
+      },
+      {
+        "fonKodu": "ENR",
+        "fonAdi": "QNB PORTFÖY ENPARA PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-17",
+        "fiyat": 1.198823,
+        "tedavuldekiPaySayisi": 1328754374,
+        "kisiSayisi": 11500,
+        "fonToplamDeger": 1592941475.82,
+        "gunlukGetiri": 0.00316558,
+        "paraGirisiCikisi": -27476428.54,
+        "yatirimciDegisimi": -72
       },
       {
         "fonKodu": "ENR",
@@ -188,14 +200,26 @@
     {
       "fonKodu": "ENR",
       "fonAdi": "QNB PORTFÖY ENPARA PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.198823,
+      "tedavuldekiPaySayisi": 1328754374,
+      "kisiSayisi": 11500,
+      "fonToplamDeger": 1592941475.82,
+      "gunlukGetiri": 0.00316558,
+      "paraGirisiCikisi": -27476428.54,
+      "yatirimciDegisimi": -72
+    },
+    {
+      "fonKodu": "ENR",
+      "fonAdi": "QNB PORTFÖY ENPARA PARA PİYASASI (TL) FONU",
       "tarih": "2026-08-18",
       "fiyat": 1.200108,
       "tedavuldekiPaySayisi": 1454379555,
       "kisiSayisi": 12760,
       "fonToplamDeger": 1745412438.7,
-      "gunlukGetiri": 0.00424086,
-      "paraGirisiCikisi": 123257904.61,
-      "yatirimciDegisimi": 1188
+      "gunlukGetiri": 0.00107188,
+      "paraGirisiCikisi": 150763784.72,
+      "yatirimciDegisimi": 1260
     }
   ],
   "sonOtuzIslemGunu": [
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 1454379555,
       "kisiSayisi": 12760,
       "fonToplamDeger": 1745412438.7,
-      "gunlukGetiri": 0.00424086,
-      "paraGirisiCikisi": 123257904.61,
-      "yatirimciDegisimi": 1188
+      "gunlukGetiri": 0.00107188,
+      "paraGirisiCikisi": 150763784.72,
+      "yatirimciDegisimi": 1260
+    },
+    {
+      "fonKodu": "ENR",
+      "fonAdi": "QNB PORTFÖY ENPARA PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-17",
+      "fiyat": 1.198823,
+      "tedavuldekiPaySayisi": 1328754374,
+      "kisiSayisi": 11500,
+      "fonToplamDeger": 1592941475.82,
+      "gunlukGetiri": 0.00316558,
+      "paraGirisiCikisi": -27476428.54,
+      "yatirimciDegisimi": -72
     },
     {
       "fonKodu": "ENR",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

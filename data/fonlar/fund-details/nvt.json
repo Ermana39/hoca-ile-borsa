@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T15:58:13.772Z",
+  "generatedAt": "2026-08-18T17:45:12.259Z",
   "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "NVT",
@@ -18,7 +18,7 @@
     "tedavuldekiPaySayisi": 95470396,
     "kisiSayisi": 50,
     "fonToplamDeger": 442906915.26,
-    "gunlukGetiri": 0.00363317,
+    "gunlukGetiri": 0.00243348,
     "getiriler": {
       "birAy": 0.030535,
       "ucAy": 0.100779,
@@ -29,22 +29,22 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 12797298.9,
-      "besGun": 12180182.94,
+      "gunluk": 12902924.37,
+      "besGun": -1144980.62,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 2,
-      "besGun": 2,
+      "besGun": -1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 6,
+    "tarihselGunSayisi": 7,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 5,
+      "observedDays": 6,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -58,9 +58,21 @@
         "tedavuldekiPaySayisi": 95470396,
         "kisiSayisi": 50,
         "fonToplamDeger": 442906915.26,
-        "gunlukGetiri": 0.00363317,
-        "paraGirisiCikisi": 12797298.9,
+        "gunlukGetiri": 0.00243348,
+        "paraGirisiCikisi": 12902924.37,
         "yatirimciDegisimi": 2
+      },
+      {
+        "fonKodu": "NVT",
+        "fonAdi": "NEO PORTFÖY ÜÇÜNCÜ SERBEST (TL) FON",
+        "tarih": "2026-08-17",
+        "fiyat": 4.627945,
+        "tedavuldekiPaySayisi": 92689118,
+        "kisiSayisi": 48,
+        "fonToplamDeger": 428960115.3,
+        "gunlukGetiri": 0.00119678,
+        "paraGirisiCikisi": -105369.05,
+        "yatirimciDegisimi": 0
       },
       {
         "fonKodu": "NVT",
@@ -188,13 +200,25 @@
     {
       "fonKodu": "NVT",
       "fonAdi": "NEO PORTFÖY ÜÇÜNCÜ SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 4.627945,
+      "tedavuldekiPaySayisi": 92689118,
+      "kisiSayisi": 48,
+      "fonToplamDeger": 428960115.3,
+      "gunlukGetiri": 0.00119678,
+      "paraGirisiCikisi": -105369.05,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "NVT",
+      "fonAdi": "NEO PORTFÖY ÜÇÜNCÜ SERBEST (TL) FON",
       "tarih": "2026-08-18",
       "fiyat": 4.639207,
       "tedavuldekiPaySayisi": 95470396,
       "kisiSayisi": 50,
       "fonToplamDeger": 442906915.26,
-      "gunlukGetiri": 0.00363317,
-      "paraGirisiCikisi": 12797298.9,
+      "gunlukGetiri": 0.00243348,
+      "paraGirisiCikisi": 12902924.37,
       "yatirimciDegisimi": 2
     }
   ],
@@ -207,9 +231,21 @@
       "tedavuldekiPaySayisi": 95470396,
       "kisiSayisi": 50,
       "fonToplamDeger": 442906915.26,
-      "gunlukGetiri": 0.00363317,
-      "paraGirisiCikisi": 12797298.9,
+      "gunlukGetiri": 0.00243348,
+      "paraGirisiCikisi": 12902924.37,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "NVT",
+      "fonAdi": "NEO PORTFÖY ÜÇÜNCÜ SERBEST (TL) FON",
+      "tarih": "2026-08-17",
+      "fiyat": 4.627945,
+      "tedavuldekiPaySayisi": 92689118,
+      "kisiSayisi": 48,
+      "fonToplamDeger": 428960115.3,
+      "gunlukGetiri": 0.00119678,
+      "paraGirisiCikisi": -105369.05,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "NVT",
@@ -275,7 +311,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 5,
+    "observedDays": 6,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
