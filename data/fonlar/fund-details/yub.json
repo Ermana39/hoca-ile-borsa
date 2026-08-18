@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YUB",
     "slug": "yub",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 5.284711,
-    "tedavuldekiPaySayisi": 72893008,
-    "kisiSayisi": 582,
-    "fonToplamDeger": 385218448.06,
-    "gunlukGetiri": -0.00108365,
+    "fiyat": 5.283349,
+    "tedavuldekiPaySayisi": 72859898,
+    "kisiSayisi": 580,
+    "fonToplamDeger": 384944255.35,
+    "gunlukGetiri": -0.00025772,
     "getiriler": {
-      "birAy": 0.033494,
-      "ucAy": -0.025958000000000002,
-      "altiAy": -0.052181,
-      "yilbasi": 0.20735499999999998,
-      "birYil": 0.178886,
-      "ucYil": 0.902384,
+      "birAy": 0.024834000000000002,
+      "ucAy": -0.015715,
+      "altiAy": -0.043023,
+      "yilbasi": 0.207044,
+      "birYil": 0.20490200000000003,
+      "ucYil": 0.901954,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -50516.55,
-      "besGun": null,
+      "gunluk": -174931.69,
+      "besGun": -3584044.5,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": -2,
-      "besGun": null,
+      "besGun": -11,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YUB",
+        "fonAdi": "YAPI KREDİ PORTFÖY KARAKÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 5.283349,
+        "tedavuldekiPaySayisi": 72859898,
+        "kisiSayisi": 580,
+        "fonToplamDeger": 384944255.35,
+        "gunlukGetiri": -0.00025772,
+        "paraGirisiCikisi": -174931.69,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "YUB",
         "fonAdi": "YAPI KREDİ PORTFÖY KARAKÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00108365,
       "paraGirisiCikisi": -50516.55,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "YUB",
+      "fonAdi": "YAPI KREDİ PORTFÖY KARAKÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 5.283349,
+      "tedavuldekiPaySayisi": 72859898,
+      "kisiSayisi": 580,
+      "fonToplamDeger": 384944255.35,
+      "gunlukGetiri": -0.00025772,
+      "paraGirisiCikisi": -174931.69,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YUB",
+      "fonAdi": "YAPI KREDİ PORTFÖY KARAKÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 5.283349,
+      "tedavuldekiPaySayisi": 72859898,
+      "kisiSayisi": 580,
+      "fonToplamDeger": 384944255.35,
+      "gunlukGetiri": -0.00025772,
+      "paraGirisiCikisi": -174931.69,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "YUB",
       "fonAdi": "YAPI KREDİ PORTFÖY KARAKÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BST",
     "slug": "bst",
@@ -12,44 +12,56 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 10.414949,
-    "tedavuldekiPaySayisi": 4141428,
-    "kisiSayisi": 573,
-    "fonToplamDeger": 43132759.69,
-    "gunlukGetiri": 0.01062045,
+    "fiyat": 10.560178,
+    "tedavuldekiPaySayisi": 4045519,
+    "kisiSayisi": 571,
+    "fonToplamDeger": 42721402.39,
+    "gunlukGetiri": 0.01394428,
     "getiriler": {
-      "birAy": 0.023071,
-      "ucAy": 0.009122,
-      "altiAy": 0.021835,
-      "yilbasi": 0.19965599999999997,
-      "birYil": 0.228439,
-      "ucYil": 2.0237309999999997,
+      "birAy": 0.017905,
+      "ucAy": 0.019021,
+      "altiAy": 0.041918,
+      "yilbasi": 0.216385,
+      "birYil": 0.24972899999999998,
+      "ucYil": 2.013724,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -27557.96,
-      "besGun": null,
+      "gunluk": -1012816.11,
+      "besGun": -1144243.98,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
-      "besGun": null,
+      "gunluk": -2,
+      "besGun": -10,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BST",
+        "fonAdi": "PARDUS PORTFÖY BANKACILIK SEKTÖRÜ DIŞI ŞİRKETLER HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 10.560178,
+        "tedavuldekiPaySayisi": 4045519,
+        "kisiSayisi": 571,
+        "fonToplamDeger": 42721402.39,
+        "gunlukGetiri": 0.01394428,
+        "paraGirisiCikisi": -1012816.11,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "BST",
         "fonAdi": "PARDUS PORTFÖY BANKACILIK SEKTÖRÜ DIŞI ŞİRKETLER HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.01062045,
       "paraGirisiCikisi": -27557.96,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "BST",
+      "fonAdi": "PARDUS PORTFÖY BANKACILIK SEKTÖRÜ DIŞI ŞİRKETLER HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 10.560178,
+      "tedavuldekiPaySayisi": 4045519,
+      "kisiSayisi": 571,
+      "fonToplamDeger": 42721402.39,
+      "gunlukGetiri": 0.01394428,
+      "paraGirisiCikisi": -1012816.11,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BST",
+      "fonAdi": "PARDUS PORTFÖY BANKACILIK SEKTÖRÜ DIŞI ŞİRKETLER HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 10.560178,
+      "tedavuldekiPaySayisi": 4045519,
+      "kisiSayisi": 571,
+      "fonToplamDeger": 42721402.39,
+      "gunlukGetiri": 0.01394428,
+      "paraGirisiCikisi": -1012816.11,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "BST",
       "fonAdi": "PARDUS PORTFÖY BANKACILIK SEKTÖRÜ DIŞI ŞİRKETLER HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

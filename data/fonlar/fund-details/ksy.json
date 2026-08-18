@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KSY",
     "slug": "ksy",
@@ -12,13 +12,13 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 10.961892,
-    "tedavuldekiPaySayisi": 374233509,
+    "fiyat": 11.011488,
+    "tedavuldekiPaySayisi": 374474256,
     "kisiSayisi": 86,
-    "fonToplamDeger": 4102307266.45,
-    "gunlukGetiri": 0.00113256,
+    "fonToplamDeger": 4123518680.91,
+    "gunlukGetiri": 0.0045244,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": 2650982.7,
+      "besGun": 1289637.12,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KSY",
+        "fonAdi": "YAPI KREDİ PORTFÖY PY KANDİLLİ SERBEST ÖZEL FON",
+        "tarih": "2026-08-18",
+        "fiyat": 11.011488,
+        "tedavuldekiPaySayisi": 374474256,
+        "kisiSayisi": 86,
+        "fonToplamDeger": 4123518680.91,
+        "gunlukGetiri": 0.0045244,
+        "paraGirisiCikisi": 2650982.7,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "KSY",
         "fonAdi": "YAPI KREDİ PORTFÖY PY KANDİLLİ SERBEST ÖZEL FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00113256,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KSY",
+      "fonAdi": "YAPI KREDİ PORTFÖY PY KANDİLLİ SERBEST ÖZEL FON",
+      "tarih": "2026-08-18",
+      "fiyat": 11.011488,
+      "tedavuldekiPaySayisi": 374474256,
+      "kisiSayisi": 86,
+      "fonToplamDeger": 4123518680.91,
+      "gunlukGetiri": 0.0045244,
+      "paraGirisiCikisi": 2650982.7,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KSY",
+      "fonAdi": "YAPI KREDİ PORTFÖY PY KANDİLLİ SERBEST ÖZEL FON",
+      "tarih": "2026-08-18",
+      "fiyat": 11.011488,
+      "tedavuldekiPaySayisi": 374474256,
+      "kisiSayisi": 86,
+      "fonToplamDeger": 4123518680.91,
+      "gunlukGetiri": 0.0045244,
+      "paraGirisiCikisi": 2650982.7,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "KSY",
       "fonAdi": "YAPI KREDİ PORTFÖY PY KANDİLLİ SERBEST ÖZEL FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

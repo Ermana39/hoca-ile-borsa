@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ZPO",
     "slug": "zpo",
@@ -12,15 +12,15 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.032249,
-    "tedavuldekiPaySayisi": 1186630713,
-    "kisiSayisi": 1057,
-    "fonToplamDeger": 1224897947.51,
-    "gunlukGetiri": 0.00108716,
+    "fiyat": 1.036542,
+    "tedavuldekiPaySayisi": 1013330595,
+    "kisiSayisi": 1148,
+    "fonToplamDeger": 1050359228.04,
+    "gunlukGetiri": 0.00415888,
     "getiriler": {
-      "birAy": null,
+      "birAy": 0.033035,
       "ucAy": null,
       "altiAy": null,
       "yilbasi": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 154990939.36,
-      "besGun": null,
+      "gunluk": -179632850.91,
+      "besGun": -596988976.32,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 8,
-      "besGun": null,
+      "gunluk": 91,
+      "besGun": 127,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZPO",
+        "fonAdi": "ZİRAAT PORTFÖY PARA PİYASASI KATILIM FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.036542,
+        "tedavuldekiPaySayisi": 1013330595,
+        "kisiSayisi": 1148,
+        "fonToplamDeger": 1050359228.04,
+        "gunlukGetiri": 0.00415888,
+        "paraGirisiCikisi": -179632850.91,
+        "yatirimciDegisimi": 91
+      },
       {
         "fonKodu": "ZPO",
         "fonAdi": "ZİRAAT PORTFÖY PARA PİYASASI KATILIM FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00108716,
       "paraGirisiCikisi": 154990939.36,
       "yatirimciDegisimi": 8
+    },
+    {
+      "fonKodu": "ZPO",
+      "fonAdi": "ZİRAAT PORTFÖY PARA PİYASASI KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.036542,
+      "tedavuldekiPaySayisi": 1013330595,
+      "kisiSayisi": 1148,
+      "fonToplamDeger": 1050359228.04,
+      "gunlukGetiri": 0.00415888,
+      "paraGirisiCikisi": -179632850.91,
+      "yatirimciDegisimi": 91
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZPO",
+      "fonAdi": "ZİRAAT PORTFÖY PARA PİYASASI KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.036542,
+      "tedavuldekiPaySayisi": 1013330595,
+      "kisiSayisi": 1148,
+      "fonToplamDeger": 1050359228.04,
+      "gunlukGetiri": 0.00415888,
+      "paraGirisiCikisi": -179632850.91,
+      "yatirimciDegisimi": 91
+    },
     {
       "fonKodu": "ZPO",
       "fonAdi": "ZİRAAT PORTFÖY PARA PİYASASI KATILIM FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

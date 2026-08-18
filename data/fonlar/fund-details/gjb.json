@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GJB",
     "slug": "gjb",
@@ -12,44 +12,56 @@
     "yonetici": "INVEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "inveo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 10.581919,
-    "tedavuldekiPaySayisi": 7347295,
-    "kisiSayisi": 987,
-    "fonToplamDeger": 77748480.29,
-    "gunlukGetiri": 0.00003629,
+    "fiyat": 10.591194,
+    "tedavuldekiPaySayisi": 7328667,
+    "kisiSayisi": 984,
+    "fonToplamDeger": 77619334.66,
+    "gunlukGetiri": 0.0008765,
     "getiriler": {
-      "birAy": 0.014705,
-      "ucAy": -0.004743,
-      "altiAy": 0.065282,
-      "yilbasi": 0.220608,
-      "birYil": 0.512738,
-      "ucYil": 1.894041,
-      "besYil": 9.247482
+      "birAy": 0.031331000000000005,
+      "ucAy": 0.006824,
+      "altiAy": 0.063023,
+      "yilbasi": 0.221678,
+      "birYil": 0.517549,
+      "ucYil": 1.839581,
+      "besYil": 9.213125
     },
     "paraAkisi": {
-      "gunluk": -1820.09,
-      "besGun": null,
+      "gunluk": -197292.76,
+      "besGun": -1118097.88,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": -3,
-      "besGun": null,
+      "besGun": -10,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GJB",
+        "fonAdi": "INVEO PORTFÖY BİRİNCİ FON SEPETİ FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 10.591194,
+        "tedavuldekiPaySayisi": 7328667,
+        "kisiSayisi": 984,
+        "fonToplamDeger": 77619334.66,
+        "gunlukGetiri": 0.0008765,
+        "paraGirisiCikisi": -197292.76,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "GJB",
         "fonAdi": "INVEO PORTFÖY BİRİNCİ FON SEPETİ FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00003629,
       "paraGirisiCikisi": -1820.09,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "GJB",
+      "fonAdi": "INVEO PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 10.591194,
+      "tedavuldekiPaySayisi": 7328667,
+      "kisiSayisi": 984,
+      "fonToplamDeger": 77619334.66,
+      "gunlukGetiri": 0.0008765,
+      "paraGirisiCikisi": -197292.76,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GJB",
+      "fonAdi": "INVEO PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 10.591194,
+      "tedavuldekiPaySayisi": 7328667,
+      "kisiSayisi": 984,
+      "fonToplamDeger": 77619334.66,
+      "gunlukGetiri": 0.0008765,
+      "paraGirisiCikisi": -197292.76,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "GJB",
       "fonAdi": "INVEO PORTFÖY BİRİNCİ FON SEPETİ FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

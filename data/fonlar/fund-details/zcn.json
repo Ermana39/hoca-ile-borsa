@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ZCN",
     "slug": "zcn",
@@ -12,44 +12,56 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 3.9606,
-    "tedavuldekiPaySayisi": 144094200,
-    "kisiSayisi": 6597,
-    "fonToplamDeger": 570699485.56,
-    "gunlukGetiri": -0.00645855,
+    "fiyat": 3.999215,
+    "tedavuldekiPaySayisi": 144007400,
+    "kisiSayisi": 6563,
+    "fonToplamDeger": 575916561.04,
+    "gunlukGetiri": 0.00974979,
     "getiriler": {
-      "birAy": 0.07022400000000001,
-      "ucAy": -0.034068,
-      "altiAy": 0.12611,
-      "yilbasi": 0.204826,
-      "birYil": 0.486216,
-      "ucYil": 1.684023,
+      "birAy": 0.078927,
+      "ucAy": 0.009681,
+      "altiAy": 0.138777,
+      "yilbasi": 0.216572,
+      "birYil": 0.504622,
+      "ucYil": 1.7289160000000001,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -827369.34,
-      "besGun": null,
+      "gunluk": -347131.86,
+      "besGun": -2424866.58,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -9,
-      "besGun": null,
+      "gunluk": -34,
+      "besGun": -50,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZCN",
+        "fonAdi": "ZİRAAT PORTFÖY EMTİA FON SEPETİ FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 3.999215,
+        "tedavuldekiPaySayisi": 144007400,
+        "kisiSayisi": 6563,
+        "fonToplamDeger": 575916561.04,
+        "gunlukGetiri": 0.00974979,
+        "paraGirisiCikisi": -347131.86,
+        "yatirimciDegisimi": -34
+      },
       {
         "fonKodu": "ZCN",
         "fonAdi": "ZİRAAT PORTFÖY EMTİA FON SEPETİ FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00645855,
       "paraGirisiCikisi": -827369.34,
       "yatirimciDegisimi": -9
+    },
+    {
+      "fonKodu": "ZCN",
+      "fonAdi": "ZİRAAT PORTFÖY EMTİA FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 3.999215,
+      "tedavuldekiPaySayisi": 144007400,
+      "kisiSayisi": 6563,
+      "fonToplamDeger": 575916561.04,
+      "gunlukGetiri": 0.00974979,
+      "paraGirisiCikisi": -347131.86,
+      "yatirimciDegisimi": -34
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZCN",
+      "fonAdi": "ZİRAAT PORTFÖY EMTİA FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 3.999215,
+      "tedavuldekiPaySayisi": 144007400,
+      "kisiSayisi": 6563,
+      "fonToplamDeger": 575916561.04,
+      "gunlukGetiri": 0.00974979,
+      "paraGirisiCikisi": -347131.86,
+      "yatirimciDegisimi": -34
+    },
     {
       "fonKodu": "ZCN",
       "fonAdi": "ZİRAAT PORTFÖY EMTİA FON SEPETİ FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

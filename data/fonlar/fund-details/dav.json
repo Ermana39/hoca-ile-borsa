@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DAV",
     "slug": "dav",
@@ -12,13 +12,13 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 57.527883,
-    "tedavuldekiPaySayisi": 20092669,
-    "kisiSayisi": 212,
-    "fonToplamDeger": 1155888713.44,
-    "gunlukGetiri": -0.00032641,
+    "fiyat": 58.040548,
+    "tedavuldekiPaySayisi": 20666073,
+    "kisiSayisi": 217,
+    "fonToplamDeger": 1199470196.37,
+    "gunlukGetiri": 0.00891159,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 13404,
-      "besGun": null,
+      "gunluk": 33280682.39,
+      "besGun": 39404628.93,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": null,
+      "gunluk": 5,
+      "besGun": 13,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DAV",
+        "fonAdi": "DENİZ PORTFÖY 2026 SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 58.040548,
+        "tedavuldekiPaySayisi": 20666073,
+        "kisiSayisi": 217,
+        "fonToplamDeger": 1199470196.37,
+        "gunlukGetiri": 0.00891159,
+        "paraGirisiCikisi": 33280682.39,
+        "yatirimciDegisimi": 5
+      },
       {
         "fonKodu": "DAV",
         "fonAdi": "DENİZ PORTFÖY 2026 SERBEST (DÖVİZ-AVRO) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00032641,
       "paraGirisiCikisi": 13404,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "DAV",
+      "fonAdi": "DENİZ PORTFÖY 2026 SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 58.040548,
+      "tedavuldekiPaySayisi": 20666073,
+      "kisiSayisi": 217,
+      "fonToplamDeger": 1199470196.37,
+      "gunlukGetiri": 0.00891159,
+      "paraGirisiCikisi": 33280682.39,
+      "yatirimciDegisimi": 5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DAV",
+      "fonAdi": "DENİZ PORTFÖY 2026 SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 58.040548,
+      "tedavuldekiPaySayisi": 20666073,
+      "kisiSayisi": 217,
+      "fonToplamDeger": 1199470196.37,
+      "gunlukGetiri": 0.00891159,
+      "paraGirisiCikisi": 33280682.39,
+      "yatirimciDegisimi": 5
+    },
     {
       "fonKodu": "DAV",
       "fonAdi": "DENİZ PORTFÖY 2026 SERBEST (DÖVİZ-AVRO) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

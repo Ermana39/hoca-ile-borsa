@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GTL",
     "slug": "gtl",
@@ -12,13 +12,13 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.13364,
-    "tedavuldekiPaySayisi": 1515787298809,
-    "kisiSayisi": 346713,
-    "fonToplamDeger": 202570123096.6,
-    "gunlukGetiri": 0.00104869,
+    "fiyat": 0.134189,
+    "tedavuldekiPaySayisi": 1497764223115,
+    "kisiSayisi": 346741,
+    "fonToplamDeger": 200982809050.2,
+    "gunlukGetiri": 0.00410805,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 542888179.79,
-      "besGun": null,
+      "gunluk": -2418498504.3,
+      "besGun": -76888892.31,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 342,
-      "besGun": null,
+      "gunluk": 28,
+      "besGun": 241,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GTL",
+        "fonAdi": "GARANTİ PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 0.134189,
+        "tedavuldekiPaySayisi": 1497764223115,
+        "kisiSayisi": 346741,
+        "fonToplamDeger": 200982809050.2,
+        "gunlukGetiri": 0.00410805,
+        "paraGirisiCikisi": -2418498504.3,
+        "yatirimciDegisimi": 28
+      },
       {
         "fonKodu": "GTL",
         "fonAdi": "GARANTİ PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00104869,
       "paraGirisiCikisi": 542888179.79,
       "yatirimciDegisimi": 342
+    },
+    {
+      "fonKodu": "GTL",
+      "fonAdi": "GARANTİ PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.134189,
+      "tedavuldekiPaySayisi": 1497764223115,
+      "kisiSayisi": 346741,
+      "fonToplamDeger": 200982809050.2,
+      "gunlukGetiri": 0.00410805,
+      "paraGirisiCikisi": -2418498504.3,
+      "yatirimciDegisimi": 28
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GTL",
+      "fonAdi": "GARANTİ PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.134189,
+      "tedavuldekiPaySayisi": 1497764223115,
+      "kisiSayisi": 346741,
+      "fonToplamDeger": 200982809050.2,
+      "gunlukGetiri": 0.00410805,
+      "paraGirisiCikisi": -2418498504.3,
+      "yatirimciDegisimi": 28
+    },
     {
       "fonKodu": "GTL",
       "fonAdi": "GARANTİ PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

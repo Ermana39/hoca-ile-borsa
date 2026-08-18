@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "AJK",
     "slug": "ajk",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 64.273799,
-    "tedavuldekiPaySayisi": 1947432,
-    "kisiSayisi": 131,
-    "fonToplamDeger": 125168852.93,
-    "gunlukGetiri": 0.00053581,
+    "fiyat": 64.459672,
+    "tedavuldekiPaySayisi": 1953945,
+    "kisiSayisi": 132,
+    "fonToplamDeger": 125950653.21,
+    "gunlukGetiri": 0.00289189,
     "getiriler": {
-      "birAy": 0.018897,
-      "ucAy": 0.058673,
-      "altiAy": 0.110428,
-      "yilbasi": 0.135777,
-      "birYil": 0.21740700000000002,
-      "ucYil": 0.837889,
-      "besYil": 5.107821
+      "birAy": 0.019756,
+      "ucAy": 0.060956,
+      "altiAy": 0.110742,
+      "yilbasi": 0.139062,
+      "birYil": 0.21793600000000002,
+      "ucYil": 0.8393590000000001,
+      "besYil": 5.2102520000000005
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": 419825.84,
+      "besGun": -339858.02,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": 1,
+      "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AJK",
+        "fonAdi": "AK PORTFÖY 0-5 YIL VADELİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 64.459672,
+        "tedavuldekiPaySayisi": 1953945,
+        "kisiSayisi": 132,
+        "fonToplamDeger": 125950653.21,
+        "gunlukGetiri": 0.00289189,
+        "paraGirisiCikisi": 419825.84,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "AJK",
         "fonAdi": "AK PORTFÖY 0-5 YIL VADELİ SERBEST (DÖVİZ) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00053581,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "AJK",
+      "fonAdi": "AK PORTFÖY 0-5 YIL VADELİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 64.459672,
+      "tedavuldekiPaySayisi": 1953945,
+      "kisiSayisi": 132,
+      "fonToplamDeger": 125950653.21,
+      "gunlukGetiri": 0.00289189,
+      "paraGirisiCikisi": 419825.84,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AJK",
+      "fonAdi": "AK PORTFÖY 0-5 YIL VADELİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 64.459672,
+      "tedavuldekiPaySayisi": 1953945,
+      "kisiSayisi": 132,
+      "fonToplamDeger": 125950653.21,
+      "gunlukGetiri": 0.00289189,
+      "paraGirisiCikisi": 419825.84,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "AJK",
       "fonAdi": "AK PORTFÖY 0-5 YIL VADELİ SERBEST (DÖVİZ) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

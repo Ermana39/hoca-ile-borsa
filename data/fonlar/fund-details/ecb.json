@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ECB",
     "slug": "ecb",
@@ -12,13 +12,13 @@
     "yonetici": "GLOBAL MD PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "global-md-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 53.070506,
-    "tedavuldekiPaySayisi": 17048727,
-    "kisiSayisi": 3144,
-    "fonToplamDeger": 904784560.37,
-    "gunlukGetiri": 0.0010512,
+    "fiyat": 53.288688,
+    "tedavuldekiPaySayisi": 14782236,
+    "kisiSayisi": 3174,
+    "fonToplamDeger": 787725966.42,
+    "gunlukGetiri": 0.00411117,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 58574129.75,
-      "besGun": null,
+      "gunluk": -120778331.75,
+      "besGun": 59198244.74,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -9,
-      "besGun": null,
+      "gunluk": 30,
+      "besGun": 24,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ECB",
+        "fonAdi": "GLOBAL MD PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 53.288688,
+        "tedavuldekiPaySayisi": 14782236,
+        "kisiSayisi": 3174,
+        "fonToplamDeger": 787725966.42,
+        "gunlukGetiri": 0.00411117,
+        "paraGirisiCikisi": -120778331.75,
+        "yatirimciDegisimi": 30
+      },
       {
         "fonKodu": "ECB",
         "fonAdi": "GLOBAL MD PORTFÖY PARA PİYASASI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.0010512,
       "paraGirisiCikisi": 58574129.75,
       "yatirimciDegisimi": -9
+    },
+    {
+      "fonKodu": "ECB",
+      "fonAdi": "GLOBAL MD PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 53.288688,
+      "tedavuldekiPaySayisi": 14782236,
+      "kisiSayisi": 3174,
+      "fonToplamDeger": 787725966.42,
+      "gunlukGetiri": 0.00411117,
+      "paraGirisiCikisi": -120778331.75,
+      "yatirimciDegisimi": 30
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ECB",
+      "fonAdi": "GLOBAL MD PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 53.288688,
+      "tedavuldekiPaySayisi": 14782236,
+      "kisiSayisi": 3174,
+      "fonToplamDeger": 787725966.42,
+      "gunlukGetiri": 0.00411117,
+      "paraGirisiCikisi": -120778331.75,
+      "yatirimciDegisimi": 30
+    },
     {
       "fonKodu": "ECB",
       "fonAdi": "GLOBAL MD PORTFÖY PARA PİYASASI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

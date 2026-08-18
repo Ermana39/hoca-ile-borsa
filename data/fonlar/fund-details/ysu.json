@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YSU",
     "slug": "ysu",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.172739,
-    "tedavuldekiPaySayisi": 1406316397,
-    "kisiSayisi": 6118,
-    "fonToplamDeger": 242925389.64,
-    "gunlukGetiri": 0.00338064,
+    "fiyat": 0.173236,
+    "tedavuldekiPaySayisi": 1405846855,
+    "kisiSayisi": 6115,
+    "fonToplamDeger": 243542688.07,
+    "gunlukGetiri": 0.00287717,
     "getiriler": {
-      "birAy": 0.023117000000000002,
-      "ucAy": 0.062486,
-      "altiAy": 0.095267,
-      "yilbasi": 0.183257,
-      "birYil": 0.337476,
-      "ucYil": 1.59672,
-      "besYil": 6.2735270000000005
+      "birAy": 0.024883000000000002,
+      "ucAy": 0.071216,
+      "altiAy": 0.09438,
+      "yilbasi": 0.186662,
+      "birYil": 0.339851,
+      "ucYil": 1.605562,
+      "besYil": 6.2739329999999995
     },
     "paraAkisi": {
-      "gunluk": -337819.62,
-      "besGun": null,
+      "gunluk": -81341.58,
+      "besGun": -508697.24,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
-      "besGun": null,
+      "gunluk": -3,
+      "besGun": -27,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YSU",
+        "fonAdi": "YAPI KREDİ PORTFÖY ÜÇÜNCÜ DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 0.173236,
+        "tedavuldekiPaySayisi": 1405846855,
+        "kisiSayisi": 6115,
+        "fonToplamDeger": 243542688.07,
+        "gunlukGetiri": 0.00287717,
+        "paraGirisiCikisi": -81341.58,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "YSU",
         "fonAdi": "YAPI KREDİ PORTFÖY ÜÇÜNCÜ DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00338064,
       "paraGirisiCikisi": -337819.62,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "YSU",
+      "fonAdi": "YAPI KREDİ PORTFÖY ÜÇÜNCÜ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 0.173236,
+      "tedavuldekiPaySayisi": 1405846855,
+      "kisiSayisi": 6115,
+      "fonToplamDeger": 243542688.07,
+      "gunlukGetiri": 0.00287717,
+      "paraGirisiCikisi": -81341.58,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YSU",
+      "fonAdi": "YAPI KREDİ PORTFÖY ÜÇÜNCÜ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 0.173236,
+      "tedavuldekiPaySayisi": 1405846855,
+      "kisiSayisi": 6115,
+      "fonToplamDeger": 243542688.07,
+      "gunlukGetiri": 0.00287717,
+      "paraGirisiCikisi": -81341.58,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "YSU",
       "fonAdi": "YAPI KREDİ PORTFÖY ÜÇÜNCÜ DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

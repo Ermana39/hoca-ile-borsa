@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "FSG",
     "slug": "fsg",
@@ -12,44 +12,56 @@
     "yonetici": "FİBA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "fiba-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 3.67199,
-    "tedavuldekiPaySayisi": 183936157,
-    "kisiSayisi": 750,
-    "fonToplamDeger": 675411715.23,
-    "gunlukGetiri": 0.00057032,
+    "fiyat": 3.688542,
+    "tedavuldekiPaySayisi": 182223737,
+    "kisiSayisi": 745,
+    "fonToplamDeger": 672139997.49,
+    "gunlukGetiri": 0.00450764,
     "getiriler": {
-      "birAy": 0.006951000000000001,
-      "ucAy": -0.022345,
-      "altiAy": -0.023792,
-      "yilbasi": 0.168706,
-      "birYil": 0.181973,
-      "ucYil": 1.065993,
+      "birAy": -0.001363,
+      "ucAy": -0.006008,
+      "altiAy": -0.014767999999999998,
+      "yilbasi": 0.17397400000000002,
+      "birYil": 0.20183900000000002,
+      "ucYil": 1.073819,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1366321.78,
-      "besGun": null,
+      "gunluk": -6316333.09,
+      "besGun": -10400995.4,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": null,
+      "gunluk": -5,
+      "besGun": -12,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FSG",
+        "fonAdi": "FİBA PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 3.688542,
+        "tedavuldekiPaySayisi": 182223737,
+        "kisiSayisi": 745,
+        "fonToplamDeger": 672139997.49,
+        "gunlukGetiri": 0.00450764,
+        "paraGirisiCikisi": -6316333.09,
+        "yatirimciDegisimi": -5
+      },
       {
         "fonKodu": "FSG",
         "fonAdi": "FİBA PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00057032,
       "paraGirisiCikisi": -1366321.78,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "FSG",
+      "fonAdi": "FİBA PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 3.688542,
+      "tedavuldekiPaySayisi": 182223737,
+      "kisiSayisi": 745,
+      "fonToplamDeger": 672139997.49,
+      "gunlukGetiri": 0.00450764,
+      "paraGirisiCikisi": -6316333.09,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FSG",
+      "fonAdi": "FİBA PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 3.688542,
+      "tedavuldekiPaySayisi": 182223737,
+      "kisiSayisi": 745,
+      "fonToplamDeger": 672139997.49,
+      "gunlukGetiri": 0.00450764,
+      "paraGirisiCikisi": -6316333.09,
+      "yatirimciDegisimi": -5
+    },
     {
       "fonKodu": "FSG",
       "fonAdi": "FİBA PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

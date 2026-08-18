@@ -1,4 +1,6 @@
 import type { MetadataRoute } from "next";
+
+export const dynamic = "force-static";
 import pageUpdates from "@/lib/page-updates.generated.json";
 import { getIndexlenebilirNews } from "@/lib/haberler";
 import { HABER_KATEGORILERI } from "@/lib/haber-kategorileri";

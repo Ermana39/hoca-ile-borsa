@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IRT",
     "slug": "irt",
@@ -12,44 +12,56 @@
     "yonetici": "INVEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "inveo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 8.043682,
-    "tedavuldekiPaySayisi": 16200524,
-    "kisiSayisi": 1526,
-    "fonToplamDeger": 130311858.45,
-    "gunlukGetiri": 0.00664784,
+    "fiyat": 8.037211,
+    "tedavuldekiPaySayisi": 16245848,
+    "kisiSayisi": 1533,
+    "fonToplamDeger": 130571308.41,
+    "gunlukGetiri": -0.00080448,
     "getiriler": {
-      "birAy": 0.056631999999999995,
-      "ucAy": 0.087803,
-      "altiAy": 0.372264,
-      "yilbasi": 0.47954,
-      "birYil": 0.848023,
-      "ucYil": 2.998494,
+      "birAy": 0.077358,
+      "ucAy": 0.104327,
+      "altiAy": 0.360197,
+      "yilbasi": 0.47834899999999997,
+      "birYil": 0.818845,
+      "ucYil": 3.00978,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -5606.45,
-      "besGun": null,
+      "gunluk": 364278.55,
+      "besGun": -1144031.34,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 4,
-      "besGun": null,
+      "gunluk": 7,
+      "besGun": 5,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IRT",
+        "fonAdi": "INVEO PORTFÖY TEKNOLOJİ DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 8.037211,
+        "tedavuldekiPaySayisi": 16245848,
+        "kisiSayisi": 1533,
+        "fonToplamDeger": 130571308.41,
+        "gunlukGetiri": -0.00080448,
+        "paraGirisiCikisi": 364278.55,
+        "yatirimciDegisimi": 7
+      },
       {
         "fonKodu": "IRT",
         "fonAdi": "INVEO PORTFÖY TEKNOLOJİ DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00664784,
       "paraGirisiCikisi": -5606.45,
       "yatirimciDegisimi": 4
+    },
+    {
+      "fonKodu": "IRT",
+      "fonAdi": "INVEO PORTFÖY TEKNOLOJİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 8.037211,
+      "tedavuldekiPaySayisi": 16245848,
+      "kisiSayisi": 1533,
+      "fonToplamDeger": 130571308.41,
+      "gunlukGetiri": -0.00080448,
+      "paraGirisiCikisi": 364278.55,
+      "yatirimciDegisimi": 7
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IRT",
+      "fonAdi": "INVEO PORTFÖY TEKNOLOJİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 8.037211,
+      "tedavuldekiPaySayisi": 16245848,
+      "kisiSayisi": 1533,
+      "fonToplamDeger": 130571308.41,
+      "gunlukGetiri": -0.00080448,
+      "paraGirisiCikisi": 364278.55,
+      "yatirimciDegisimi": 7
+    },
     {
       "fonKodu": "IRT",
       "fonAdi": "INVEO PORTFÖY TEKNOLOJİ DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

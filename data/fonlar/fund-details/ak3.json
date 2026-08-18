@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "AK3",
     "slug": "ak3",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 52.322668,
-    "tedavuldekiPaySayisi": 152686468,
-    "kisiSayisi": 20410,
-    "fonToplamDeger": 7988963305.01,
-    "gunlukGetiri": 0.00340887,
+    "fiyat": 52.629594,
+    "tedavuldekiPaySayisi": 152519391,
+    "kisiSayisi": 20361,
+    "fonToplamDeger": 8027033668.54,
+    "gunlukGetiri": 0.00586602,
     "getiriler": {
-      "birAy": 0.037575,
-      "ucAy": -0.042452,
-      "altiAy": 0.012713,
-      "yilbasi": 0.284661,
-      "birYil": 0.36906999999999995,
-      "ucYil": 1.724699,
-      "besYil": 15.351963000000001
+      "birAy": 0.027589000000000002,
+      "ucAy": -0.033464999999999995,
+      "altiAy": 0.030986,
+      "yilbasi": 0.292197,
+      "birYil": 0.392351,
+      "ucYil": 1.717622,
+      "besYil": 15.280912
     },
     "paraAkisi": {
-      "gunluk": -20396317.79,
-      "besGun": null,
+      "gunluk": -8793194.68,
+      "besGun": -26704243.93,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -21,
-      "besGun": null,
+      "gunluk": -49,
+      "besGun": -30,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AK3",
+        "fonAdi": "AK PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 52.629594,
+        "tedavuldekiPaySayisi": 152519391,
+        "kisiSayisi": 20361,
+        "fonToplamDeger": 8027033668.54,
+        "gunlukGetiri": 0.00586602,
+        "paraGirisiCikisi": -8793194.68,
+        "yatirimciDegisimi": -49
+      },
       {
         "fonKodu": "AK3",
         "fonAdi": "AK PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00340887,
       "paraGirisiCikisi": -20396317.79,
       "yatirimciDegisimi": -21
+    },
+    {
+      "fonKodu": "AK3",
+      "fonAdi": "AK PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 52.629594,
+      "tedavuldekiPaySayisi": 152519391,
+      "kisiSayisi": 20361,
+      "fonToplamDeger": 8027033668.54,
+      "gunlukGetiri": 0.00586602,
+      "paraGirisiCikisi": -8793194.68,
+      "yatirimciDegisimi": -49
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AK3",
+      "fonAdi": "AK PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 52.629594,
+      "tedavuldekiPaySayisi": 152519391,
+      "kisiSayisi": 20361,
+      "fonToplamDeger": 8027033668.54,
+      "gunlukGetiri": 0.00586602,
+      "paraGirisiCikisi": -8793194.68,
+      "yatirimciDegisimi": -49
+    },
     {
       "fonKodu": "AK3",
       "fonAdi": "AK PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

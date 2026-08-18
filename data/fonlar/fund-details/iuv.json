@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IUV",
     "slug": "iuv",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 67.053703,
-    "tedavuldekiPaySayisi": 320419715,
-    "kisiSayisi": 6441,
-    "fonToplamDeger": 21485328290.01,
-    "gunlukGetiri": 0.00088232,
+    "fiyat": 67.279614,
+    "tedavuldekiPaySayisi": 315195394,
+    "kisiSayisi": 6431,
+    "fonToplamDeger": 21206224538.01,
+    "gunlukGetiri": 0.00336911,
     "getiriler": {
-      "birAy": 0.023558,
-      "ucAy": 0.064041,
-      "altiAy": 0.101436,
-      "yilbasi": 0.13980399999999998,
-      "birYil": 0.253359,
-      "ucYil": 1.3402260000000001,
+      "birAy": 0.024777999999999998,
+      "ucAy": 0.069581,
+      "altiAy": 0.100643,
+      "yilbasi": 0.143644,
+      "birYil": 0.25138,
+      "ucYil": 1.345515,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -9915432.22,
-      "besGun": null,
+      "gunluk": -351490300.29,
+      "besGun": -395200998.52,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
-      "besGun": null,
+      "gunluk": -10,
+      "besGun": -18,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IUV",
+        "fonAdi": "İŞ PORTFÖY BEŞİNCİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 67.279614,
+        "tedavuldekiPaySayisi": 315195394,
+        "kisiSayisi": 6431,
+        "fonToplamDeger": 21206224538.01,
+        "gunlukGetiri": 0.00336911,
+        "paraGirisiCikisi": -351490300.29,
+        "yatirimciDegisimi": -10
+      },
       {
         "fonKodu": "IUV",
         "fonAdi": "İŞ PORTFÖY BEŞİNCİ SERBEST (DÖVİZ) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00088232,
       "paraGirisiCikisi": -9915432.22,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "IUV",
+      "fonAdi": "İŞ PORTFÖY BEŞİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 67.279614,
+      "tedavuldekiPaySayisi": 315195394,
+      "kisiSayisi": 6431,
+      "fonToplamDeger": 21206224538.01,
+      "gunlukGetiri": 0.00336911,
+      "paraGirisiCikisi": -351490300.29,
+      "yatirimciDegisimi": -10
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IUV",
+      "fonAdi": "İŞ PORTFÖY BEŞİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 67.279614,
+      "tedavuldekiPaySayisi": 315195394,
+      "kisiSayisi": 6431,
+      "fonToplamDeger": 21206224538.01,
+      "gunlukGetiri": 0.00336911,
+      "paraGirisiCikisi": -351490300.29,
+      "yatirimciDegisimi": -10
+    },
     {
       "fonKodu": "IUV",
       "fonAdi": "İŞ PORTFÖY BEŞİNCİ SERBEST (DÖVİZ) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

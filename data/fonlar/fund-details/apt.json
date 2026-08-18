@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "APT",
     "slug": "apt",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.15976,
-    "tedavuldekiPaySayisi": 1753877101,
-    "kisiSayisi": 13026,
-    "fonToplamDeger": 280200205.41,
-    "gunlukGetiri": 0.00460296,
+    "fiyat": 0.160244,
+    "tedavuldekiPaySayisi": 1753898566,
+    "kisiSayisi": 13012,
+    "fonToplamDeger": 281051291.34,
+    "gunlukGetiri": 0.00302954,
     "getiriler": {
-      "birAy": 0.027256999999999997,
-      "ucAy": 0.07574499999999999,
-      "altiAy": 0.08404500000000001,
-      "yilbasi": 0.12474600000000001,
-      "birYil": 0.317337,
-      "ucYil": 1.117345,
-      "besYil": 1.943854
+      "birAy": 0.029032,
+      "ucAy": 0.08396,
+      "altiAy": 0.083066,
+      "yilbasi": 0.12815300000000002,
+      "birYil": 0.314952,
+      "ucYil": 1.133912,
+      "besYil": 1.9476669999999998
     },
     "paraAkisi": {
-      "gunluk": 89545.64,
-      "besGun": null,
+      "gunluk": 3439.64,
+      "besGun": 12979484.16,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -12,
-      "besGun": null,
+      "gunluk": -14,
+      "besGun": -59,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "APT",
+        "fonAdi": "AK PORTFÖY ORTA VADELI BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 0.160244,
+        "tedavuldekiPaySayisi": 1753898566,
+        "kisiSayisi": 13012,
+        "fonToplamDeger": 281051291.34,
+        "gunlukGetiri": 0.00302954,
+        "paraGirisiCikisi": 3439.64,
+        "yatirimciDegisimi": -14
+      },
       {
         "fonKodu": "APT",
         "fonAdi": "AK PORTFÖY ORTA VADELI BORÇLANMA ARAÇLARI FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00460296,
       "paraGirisiCikisi": 89545.64,
       "yatirimciDegisimi": -12
+    },
+    {
+      "fonKodu": "APT",
+      "fonAdi": "AK PORTFÖY ORTA VADELI BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.160244,
+      "tedavuldekiPaySayisi": 1753898566,
+      "kisiSayisi": 13012,
+      "fonToplamDeger": 281051291.34,
+      "gunlukGetiri": 0.00302954,
+      "paraGirisiCikisi": 3439.64,
+      "yatirimciDegisimi": -14
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "APT",
+      "fonAdi": "AK PORTFÖY ORTA VADELI BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.160244,
+      "tedavuldekiPaySayisi": 1753898566,
+      "kisiSayisi": 13012,
+      "fonToplamDeger": 281051291.34,
+      "gunlukGetiri": 0.00302954,
+      "paraGirisiCikisi": 3439.64,
+      "yatirimciDegisimi": -14
+    },
     {
       "fonKodu": "APT",
       "fonAdi": "AK PORTFÖY ORTA VADELI BORÇLANMA ARAÇLARI FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

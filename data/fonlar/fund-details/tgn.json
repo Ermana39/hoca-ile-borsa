@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TGN",
     "slug": "tgn",
@@ -12,13 +12,13 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.438843,
-    "tedavuldekiPaySayisi": 1894611118,
-    "kisiSayisi": 2034,
-    "fonToplamDeger": 2726047084.69,
-    "gunlukGetiri": 0.00106379,
+    "fiyat": 1.444971,
+    "tedavuldekiPaySayisi": 1848002159,
+    "kisiSayisi": 2021,
+    "fonToplamDeger": 2670308758.48,
+    "gunlukGetiri": 0.00425898,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 77985122.26,
-      "besGun": null,
+      "gunluk": -67348594.1,
+      "besGun": -19757675.4,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -6,
-      "besGun": null,
+      "gunluk": -13,
+      "besGun": -53,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TGN",
+        "fonAdi": "TEB PORTFÖY ING BANK PARA PİYASASI SERBEST (TL) ÖZEL FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.444971,
+        "tedavuldekiPaySayisi": 1848002159,
+        "kisiSayisi": 2021,
+        "fonToplamDeger": 2670308758.48,
+        "gunlukGetiri": 0.00425898,
+        "paraGirisiCikisi": -67348594.1,
+        "yatirimciDegisimi": -13
+      },
       {
         "fonKodu": "TGN",
         "fonAdi": "TEB PORTFÖY ING BANK PARA PİYASASI SERBEST (TL) ÖZEL FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00106379,
       "paraGirisiCikisi": 77985122.26,
       "yatirimciDegisimi": -6
+    },
+    {
+      "fonKodu": "TGN",
+      "fonAdi": "TEB PORTFÖY ING BANK PARA PİYASASI SERBEST (TL) ÖZEL FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.444971,
+      "tedavuldekiPaySayisi": 1848002159,
+      "kisiSayisi": 2021,
+      "fonToplamDeger": 2670308758.48,
+      "gunlukGetiri": 0.00425898,
+      "paraGirisiCikisi": -67348594.1,
+      "yatirimciDegisimi": -13
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TGN",
+      "fonAdi": "TEB PORTFÖY ING BANK PARA PİYASASI SERBEST (TL) ÖZEL FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.444971,
+      "tedavuldekiPaySayisi": 1848002159,
+      "kisiSayisi": 2021,
+      "fonToplamDeger": 2670308758.48,
+      "gunlukGetiri": 0.00425898,
+      "paraGirisiCikisi": -67348594.1,
+      "yatirimciDegisimi": -13
+    },
     {
       "fonKodu": "TGN",
       "fonAdi": "TEB PORTFÖY ING BANK PARA PİYASASI SERBEST (TL) ÖZEL FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

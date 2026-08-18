@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BDA",
     "slug": "bda",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 56.158473,
-    "tedavuldekiPaySayisi": 109588820,
-    "kisiSayisi": 773,
-    "fonToplamDeger": 6154340841.18,
-    "gunlukGetiri": -0.00034809,
+    "fiyat": 56.654819,
+    "tedavuldekiPaySayisi": 109370604,
+    "kisiSayisi": 777,
+    "fonToplamDeger": 6196371797.14,
+    "gunlukGetiri": 0.00883831,
     "getiriler": {
-      "birAy": 0.028151000000000002,
-      "ucAy": 0.043784000000000003,
-      "altiAy": 0.08016400000000001,
-      "yilbasi": 0.11184,
+      "birAy": 0.033921,
+      "ucAy": 0.058043,
+      "altiAy": 0.088621,
+      "yilbasi": 0.12166600000000001,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 5170791.4,
-      "besGun": null,
+      "gunluk": -12362987.98,
+      "besGun": 1004097775.82,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
-      "besGun": null,
+      "gunluk": 4,
+      "besGun": 28,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BDA",
+        "fonAdi": "YAPI KREDİ PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 56.654819,
+        "tedavuldekiPaySayisi": 109370604,
+        "kisiSayisi": 777,
+        "fonToplamDeger": 6196371797.14,
+        "gunlukGetiri": 0.00883831,
+        "paraGirisiCikisi": -12362987.98,
+        "yatirimciDegisimi": 4
+      },
       {
         "fonKodu": "BDA",
         "fonAdi": "YAPI KREDİ PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ-AVRO) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00034809,
       "paraGirisiCikisi": 5170791.4,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "BDA",
+      "fonAdi": "YAPI KREDİ PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 56.654819,
+      "tedavuldekiPaySayisi": 109370604,
+      "kisiSayisi": 777,
+      "fonToplamDeger": 6196371797.14,
+      "gunlukGetiri": 0.00883831,
+      "paraGirisiCikisi": -12362987.98,
+      "yatirimciDegisimi": 4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BDA",
+      "fonAdi": "YAPI KREDİ PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 56.654819,
+      "tedavuldekiPaySayisi": 109370604,
+      "kisiSayisi": 777,
+      "fonToplamDeger": 6196371797.14,
+      "gunlukGetiri": 0.00883831,
+      "paraGirisiCikisi": -12362987.98,
+      "yatirimciDegisimi": 4
+    },
     {
       "fonKodu": "BDA",
       "fonAdi": "YAPI KREDİ PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ-AVRO) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

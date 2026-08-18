@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "RGD",
     "slug": "rgd",
@@ -12,44 +12,56 @@
     "yonetici": "RE-PIE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "re-pie-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.118249,
-    "tedavuldekiPaySayisi": 24849072,
-    "kisiSayisi": 121,
-    "fonToplamDeger": 27787442.36,
-    "gunlukGetiri": 0.00174864,
+    "fiyat": 1.125928,
+    "tedavuldekiPaySayisi": 24904624,
+    "kisiSayisi": 124,
+    "fonToplamDeger": 28040816.29,
+    "gunlukGetiri": 0.00686699,
     "getiriler": {
-      "birAy": 0.068079,
-      "ucAy": 0.050758,
-      "altiAy": 0.031847,
+      "birAy": 0.032708,
+      "ucAy": 0.070649,
+      "altiAy": 0.040908,
       "yilbasi": null,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -150260.24,
-      "besGun": null,
+      "gunluk": 62547.55,
+      "besGun": -1161938.88,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": null,
+      "gunluk": 3,
+      "besGun": 2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RGD",
+        "fonAdi": "RE-PIE PORTFÖY AGRESİF DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.125928,
+        "tedavuldekiPaySayisi": 24904624,
+        "kisiSayisi": 124,
+        "fonToplamDeger": 28040816.29,
+        "gunlukGetiri": 0.00686699,
+        "paraGirisiCikisi": 62547.55,
+        "yatirimciDegisimi": 3
+      },
       {
         "fonKodu": "RGD",
         "fonAdi": "RE-PIE PORTFÖY AGRESİF DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00174864,
       "paraGirisiCikisi": -150260.24,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "RGD",
+      "fonAdi": "RE-PIE PORTFÖY AGRESİF DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.125928,
+      "tedavuldekiPaySayisi": 24904624,
+      "kisiSayisi": 124,
+      "fonToplamDeger": 28040816.29,
+      "gunlukGetiri": 0.00686699,
+      "paraGirisiCikisi": 62547.55,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RGD",
+      "fonAdi": "RE-PIE PORTFÖY AGRESİF DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.125928,
+      "tedavuldekiPaySayisi": 24904624,
+      "kisiSayisi": 124,
+      "fonToplamDeger": 28040816.29,
+      "gunlukGetiri": 0.00686699,
+      "paraGirisiCikisi": 62547.55,
+      "yatirimciDegisimi": 3
+    },
     {
       "fonKodu": "RGD",
       "fonAdi": "RE-PIE PORTFÖY AGRESİF DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TJF",
     "slug": "tjf",
@@ -12,44 +12,56 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 5.311392,
-    "tedavuldekiPaySayisi": 10177924,
+    "fiyat": 5.329793,
+    "tedavuldekiPaySayisi": 10162360,
     "kisiSayisi": 545,
-    "fonToplamDeger": 54058943.17,
-    "gunlukGetiri": 0.00020828,
+    "fonToplamDeger": 54163274.68,
+    "gunlukGetiri": 0.00346444,
     "getiriler": {
-      "birAy": 0.018806,
-      "ucAy": -0.003727,
-      "altiAy": 0.06398,
-      "yilbasi": 0.22965800000000003,
-      "birYil": 0.310972,
-      "ucYil": 1.118369,
-      "besYil": 4.3051960000000005
+      "birAy": 0.026543,
+      "ucAy": 0.008488,
+      "altiAy": 0.067273,
+      "yilbasi": 0.233918,
+      "birYil": 0.320419,
+      "ucYil": 1.17695,
+      "besYil": 4.475243
     },
     "paraAkisi": {
-      "gunluk": 2294.52,
-      "besGun": null,
+      "gunluk": -82952.9,
+      "besGun": -278721.35,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": -4,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TJF",
+        "fonAdi": "TEB PORTFÖY SÜRDÜRÜLEBİLİRLİK FON SEPETİ FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 5.329793,
+        "tedavuldekiPaySayisi": 10162360,
+        "kisiSayisi": 545,
+        "fonToplamDeger": 54163274.68,
+        "gunlukGetiri": 0.00346444,
+        "paraGirisiCikisi": -82952.9,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "TJF",
         "fonAdi": "TEB PORTFÖY SÜRDÜRÜLEBİLİRLİK FON SEPETİ FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00020828,
       "paraGirisiCikisi": 2294.52,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "TJF",
+      "fonAdi": "TEB PORTFÖY SÜRDÜRÜLEBİLİRLİK FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 5.329793,
+      "tedavuldekiPaySayisi": 10162360,
+      "kisiSayisi": 545,
+      "fonToplamDeger": 54163274.68,
+      "gunlukGetiri": 0.00346444,
+      "paraGirisiCikisi": -82952.9,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TJF",
+      "fonAdi": "TEB PORTFÖY SÜRDÜRÜLEBİLİRLİK FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 5.329793,
+      "tedavuldekiPaySayisi": 10162360,
+      "kisiSayisi": 545,
+      "fonToplamDeger": 54163274.68,
+      "gunlukGetiri": 0.00346444,
+      "paraGirisiCikisi": -82952.9,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "TJF",
       "fonAdi": "TEB PORTFÖY SÜRDÜRÜLEBİLİRLİK FON SEPETİ FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

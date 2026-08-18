@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GZL",
     "slug": "gzl",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 5.582807,
-    "tedavuldekiPaySayisi": 65232945,
-    "kisiSayisi": 6077,
-    "fonToplamDeger": 364182937.23,
-    "gunlukGetiri": 0.00745812,
+    "fiyat": 5.581698,
+    "tedavuldekiPaySayisi": 65282656,
+    "kisiSayisi": 6076,
+    "fonToplamDeger": 364388060.16,
+    "gunlukGetiri": -0.00019865,
     "getiriler": {
-      "birAy": 0.021582,
-      "ucAy": 0.034215,
-      "altiAy": 0.094901,
-      "yilbasi": 0.338778,
-      "birYil": 0.41767699999999996,
-      "ucYil": 0.824161,
+      "birAy": 0.0029649999999999998,
+      "ucAy": 0.03992,
+      "altiAy": 0.094841,
+      "yilbasi": 0.338512,
+      "birYil": 0.413838,
+      "ucYil": 0.846345,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -539790.44,
-      "besGun": null,
+      "gunluk": 277471.79,
+      "besGun": -3372211.51,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -16,
-      "besGun": null,
+      "gunluk": -1,
+      "besGun": -25,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GZL",
+        "fonAdi": "GARANTİ PORTFÖY TARIM VE GIDA SEKTÖRÜ DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 5.581698,
+        "tedavuldekiPaySayisi": 65282656,
+        "kisiSayisi": 6076,
+        "fonToplamDeger": 364388060.16,
+        "gunlukGetiri": -0.00019865,
+        "paraGirisiCikisi": 277471.79,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "GZL",
         "fonAdi": "GARANTİ PORTFÖY TARIM VE GIDA SEKTÖRÜ DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00745812,
       "paraGirisiCikisi": -539790.44,
       "yatirimciDegisimi": -16
+    },
+    {
+      "fonKodu": "GZL",
+      "fonAdi": "GARANTİ PORTFÖY TARIM VE GIDA SEKTÖRÜ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 5.581698,
+      "tedavuldekiPaySayisi": 65282656,
+      "kisiSayisi": 6076,
+      "fonToplamDeger": 364388060.16,
+      "gunlukGetiri": -0.00019865,
+      "paraGirisiCikisi": 277471.79,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GZL",
+      "fonAdi": "GARANTİ PORTFÖY TARIM VE GIDA SEKTÖRÜ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 5.581698,
+      "tedavuldekiPaySayisi": 65282656,
+      "kisiSayisi": 6076,
+      "fonToplamDeger": 364388060.16,
+      "gunlukGetiri": -0.00019865,
+      "paraGirisiCikisi": 277471.79,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "GZL",
       "fonAdi": "GARANTİ PORTFÖY TARIM VE GIDA SEKTÖRÜ DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

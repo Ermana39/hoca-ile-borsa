@@ -1,12 +1,8 @@
 import fs from "fs/promises";
 import path from "path";
-import { unstable_cache } from "next/cache";
+import { Suspense } from "react";
 import Link from "@/components/NoPrefetchLink";
-import FonTarihselTableClient from "./FonTarihselTableClient";
-
-type SearchParams = Promise<{
-  q?: string;
-}>;
+import FonTarihselSearchClient from "./FonTarihselSearchClient";
 
 type CellValue = string | number | null;
 
@@ -22,10 +18,8 @@ type JsonData = {
 type Props = {
   title: string;
   description: string;
-  excelRelativePath: string;
   pageBasePath: string;
   backHref?: string;
-  searchParams: SearchParams;
 };
 
 function normalizeText(value: unknown) {
@@ -107,10 +101,16 @@ function isDateHeader(header: string) {
   return normalizeKey(header).includes("tarih");
 }
 
-const getJsonData = unstable_cache(
-  async (excelRelativePath: string) => {
-  const jsonRelativePath = excelRelativePath.replace(/\.xlsx$/i, ".json");
-  const filePath = path.join(process.cwd(), jsonRelativePath);
+async function getJsonData() {
+  const filePath = path.join(
+    process.cwd(),
+    "app",
+    "fonlar",
+    "tarihsel-veriler",
+    "menkul-kiymet-yatirim-fonlari",
+    "data",
+    "menkul-kiymet-yatirim-fonlari-tarihsel.json"
+  );
 
   const file = await fs.readFile(filePath, "utf-8");
   const data = JSON.parse(file) as JsonData;
@@ -180,34 +180,14 @@ const getJsonData = unstable_cache(
     rows,
     guncellemeTarihi,
   };
-  },
-  ["fon-tarihsel-json-data"],
-  { revalidate: false }
-);
+}
 
 export default async function FonTarihselExcelPage({
   title,
   description,
-  excelRelativePath,
-  pageBasePath,
   backHref = "/fonlar/tarihsel-veriler",
-  searchParams,
 }: Props) {
-  const params = await searchParams;
-  const q = (params.q ?? "").toLocaleLowerCase("tr-TR").trim();
-
-  const { headers, rows, guncellemeTarihi } = await getJsonData(excelRelativePath);
-
-  const filteredRows = rows.filter((row) => {
-    if (!q) return true;
-
-    const text = row
-      .map((cell) => String(cell ?? ""))
-      .join(" ")
-      .toLocaleLowerCase("tr-TR");
-
-    return text.includes(q);
-  });
+  const { headers, rows, guncellemeTarihi } = await getJsonData();
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -237,19 +217,9 @@ export default async function FonTarihselExcelPage({
           Son güncelleme: {guncellemeTarihi}
         </p>
 
-        <section className="mb-6 rounded-2xl border border-zinc-200 bg-white p-4">
-          <form action={pageBasePath} method="get">
-            <input
-              type="text"
-              name="q"
-              defaultValue={params.q ?? ""}
-              placeholder="Tabloda ara"
-              className="w-full rounded-xl border border-zinc-300 px-4 py-3 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-zinc-500"
-            />
-          </form>
-        </section>
-
-        <FonTarihselTableClient headers={headers} rows={filteredRows} />
+        <Suspense fallback={<p className="text-sm text-zinc-500">Veriler hazırlanıyor...</p>}>
+          <FonTarihselSearchClient headers={headers} rows={rows} />
+        </Suspense>
       </div>
     </main>
   );

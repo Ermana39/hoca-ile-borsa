@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "MPE",
     "slug": "mpe",
@@ -12,44 +12,56 @@
     "yonetici": "MT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "mt-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.375555,
-    "tedavuldekiPaySayisi": 68026426,
-    "kisiSayisi": 129,
-    "fonToplamDeger": 93574062.74,
-    "gunlukGetiri": 0.00101079,
+    "fiyat": 1.381021,
+    "tedavuldekiPaySayisi": 67107206,
+    "kisiSayisi": 121,
+    "fonToplamDeger": 92676439.73,
+    "gunlukGetiri": 0.00397367,
     "getiriler": {
-      "birAy": -0.007951,
-      "ucAy": 0.056503,
-      "altiAy": 0.152423,
-      "yilbasi": 0.20366299999999998,
+      "birAy": -0.010079,
+      "ucAy": 0.056343,
+      "altiAy": 0.154776,
+      "yilbasi": 0.208446,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -850560.68,
-      "besGun": null,
+      "gunluk": -1269462.12,
+      "besGun": -4284580.13,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
-      "besGun": null,
+      "gunluk": -8,
+      "besGun": -12,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MPE",
+        "fonAdi": "MT PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.381021,
+        "tedavuldekiPaySayisi": 67107206,
+        "kisiSayisi": 121,
+        "fonToplamDeger": 92676439.73,
+        "gunlukGetiri": 0.00397367,
+        "paraGirisiCikisi": -1269462.12,
+        "yatirimciDegisimi": -8
+      },
       {
         "fonKodu": "MPE",
         "fonAdi": "MT PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00101079,
       "paraGirisiCikisi": -850560.68,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "MPE",
+      "fonAdi": "MT PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.381021,
+      "tedavuldekiPaySayisi": 67107206,
+      "kisiSayisi": 121,
+      "fonToplamDeger": 92676439.73,
+      "gunlukGetiri": 0.00397367,
+      "paraGirisiCikisi": -1269462.12,
+      "yatirimciDegisimi": -8
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MPE",
+      "fonAdi": "MT PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.381021,
+      "tedavuldekiPaySayisi": 67107206,
+      "kisiSayisi": 121,
+      "fonToplamDeger": 92676439.73,
+      "gunlukGetiri": 0.00397367,
+      "paraGirisiCikisi": -1269462.12,
+      "yatirimciDegisimi": -8
+    },
     {
       "fonKodu": "MPE",
       "fonAdi": "MT PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

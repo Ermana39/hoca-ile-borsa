@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "NPH",
     "slug": "nph",
@@ -12,44 +12,56 @@
     "yonetici": "NUROL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "nurol-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.542977,
-    "tedavuldekiPaySayisi": 139396921,
-    "kisiSayisi": 774,
-    "fonToplamDeger": 215086181.18,
-    "gunlukGetiri": -0.00008684,
+    "fiyat": 1.555743,
+    "tedavuldekiPaySayisi": 139351762,
+    "kisiSayisi": 769,
+    "fonToplamDeger": 216795485.34,
+    "gunlukGetiri": 0.00827362,
     "getiriler": {
-      "birAy": 0.008639,
-      "ucAy": -0.144508,
-      "altiAy": -0.144696,
-      "yilbasi": 0.014903999999999999,
-      "birYil": 0.037969,
+      "birAy": 0.011127,
+      "ucAy": -0.132793,
+      "altiAy": -0.145105,
+      "yilbasi": 0.023301,
+      "birYil": 0.048211000000000004,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -257834.54,
-      "besGun": null,
+      "gunluk": -70255.8,
+      "besGun": -420019.18,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
-      "besGun": null,
+      "gunluk": -5,
+      "besGun": -13,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NPH",
+        "fonAdi": "NUROL PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.555743,
+        "tedavuldekiPaySayisi": 139351762,
+        "kisiSayisi": 769,
+        "fonToplamDeger": 216795485.34,
+        "gunlukGetiri": 0.00827362,
+        "paraGirisiCikisi": -70255.8,
+        "yatirimciDegisimi": -5
+      },
       {
         "fonKodu": "NPH",
         "fonAdi": "NUROL PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00008684,
       "paraGirisiCikisi": -257834.54,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "NPH",
+      "fonAdi": "NUROL PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.555743,
+      "tedavuldekiPaySayisi": 139351762,
+      "kisiSayisi": 769,
+      "fonToplamDeger": 216795485.34,
+      "gunlukGetiri": 0.00827362,
+      "paraGirisiCikisi": -70255.8,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NPH",
+      "fonAdi": "NUROL PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.555743,
+      "tedavuldekiPaySayisi": 139351762,
+      "kisiSayisi": 769,
+      "fonToplamDeger": 216795485.34,
+      "gunlukGetiri": 0.00827362,
+      "paraGirisiCikisi": -70255.8,
+      "yatirimciDegisimi": -5
+    },
     {
       "fonKodu": "NPH",
       "fonAdi": "NUROL PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

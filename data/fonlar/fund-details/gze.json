@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GZE",
     "slug": "gze",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 7.578166,
-    "tedavuldekiPaySayisi": 187251058,
-    "kisiSayisi": 4185,
-    "fonToplamDeger": 1419019569.96,
-    "gunlukGetiri": -0.00247297,
+    "fiyat": 7.62998,
+    "tedavuldekiPaySayisi": 187192015,
+    "kisiSayisi": 4164,
+    "fonToplamDeger": 1428271297.48,
+    "gunlukGetiri": 0.00683727,
     "getiriler": {
-      "birAy": 0.08333,
-      "ucAy": -0.025029,
-      "altiAy": 0.157311,
-      "yilbasi": 0.22386,
-      "birYil": 0.557065,
-      "ucYil": 1.4511269999999998,
-      "besYil": null
+      "birAy": 0.077402,
+      "ucAy": 0.0048270000000000006,
+      "altiAy": 0.185412,
+      "yilbasi": 0.232228,
+      "birYil": 0.566658,
+      "ucYil": 1.5013919999999998,
+      "besYil": 6.678717000000001
     },
     "paraAkisi": {
-      "gunluk": 3608510.46,
-      "besGun": null,
+      "gunluk": -450496.91,
+      "besGun": -6674262.59,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": null,
+      "gunluk": -21,
+      "besGun": -30,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GZE",
+        "fonAdi": "GARANTİ PORTFÖY EMTİA SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 7.62998,
+        "tedavuldekiPaySayisi": 187192015,
+        "kisiSayisi": 4164,
+        "fonToplamDeger": 1428271297.48,
+        "gunlukGetiri": 0.00683727,
+        "paraGirisiCikisi": -450496.91,
+        "yatirimciDegisimi": -21
+      },
       {
         "fonKodu": "GZE",
         "fonAdi": "GARANTİ PORTFÖY EMTİA SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00247297,
       "paraGirisiCikisi": 3608510.46,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "GZE",
+      "fonAdi": "GARANTİ PORTFÖY EMTİA SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 7.62998,
+      "tedavuldekiPaySayisi": 187192015,
+      "kisiSayisi": 4164,
+      "fonToplamDeger": 1428271297.48,
+      "gunlukGetiri": 0.00683727,
+      "paraGirisiCikisi": -450496.91,
+      "yatirimciDegisimi": -21
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GZE",
+      "fonAdi": "GARANTİ PORTFÖY EMTİA SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 7.62998,
+      "tedavuldekiPaySayisi": 187192015,
+      "kisiSayisi": 4164,
+      "fonToplamDeger": 1428271297.48,
+      "gunlukGetiri": 0.00683727,
+      "paraGirisiCikisi": -450496.91,
+      "yatirimciDegisimi": -21
+    },
     {
       "fonKodu": "GZE",
       "fonAdi": "GARANTİ PORTFÖY EMTİA SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

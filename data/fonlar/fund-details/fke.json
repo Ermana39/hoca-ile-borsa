@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "FKE",
     "slug": "fke",
@@ -12,44 +12,56 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 58.771205,
-    "tedavuldekiPaySayisi": 836075077,
-    "kisiSayisi": 12186,
-    "fonToplamDeger": 49137139497.24,
-    "gunlukGetiri": -0.00036462,
+    "fiyat": 59.287541,
+    "tedavuldekiPaySayisi": 835883004,
+    "kisiSayisi": 12191,
+    "fonToplamDeger": 49557447638.28,
+    "gunlukGetiri": 0.00878553,
     "getiriler": {
-      "birAy": 0.02754,
-      "ucAy": 0.041101,
-      "altiAy": 0.075669,
-      "yilbasi": 0.10709099999999999,
-      "birYil": 0.178045,
-      "ucYil": 0.971342,
+      "birAy": 0.033407,
+      "ucAy": 0.05546,
+      "altiAy": 0.084037,
+      "yilbasi": 0.11681699999999999,
+      "birYil": 0.189045,
+      "ucYil": 1.003794,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 32182465.37,
-      "besGun": null,
+      "gunluk": -11387535.86,
+      "besGun": 614512635.43,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
-      "besGun": null,
+      "gunluk": 5,
+      "besGun": 25,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FKE",
+        "fonAdi": "QNB PORTFÖY KRİSTAL SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 59.287541,
+        "tedavuldekiPaySayisi": 835883004,
+        "kisiSayisi": 12191,
+        "fonToplamDeger": 49557447638.28,
+        "gunlukGetiri": 0.00878553,
+        "paraGirisiCikisi": -11387535.86,
+        "yatirimciDegisimi": 5
+      },
       {
         "fonKodu": "FKE",
         "fonAdi": "QNB PORTFÖY KRİSTAL SERBEST (DÖVİZ-AVRO) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00036462,
       "paraGirisiCikisi": 32182465.37,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "FKE",
+      "fonAdi": "QNB PORTFÖY KRİSTAL SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 59.287541,
+      "tedavuldekiPaySayisi": 835883004,
+      "kisiSayisi": 12191,
+      "fonToplamDeger": 49557447638.28,
+      "gunlukGetiri": 0.00878553,
+      "paraGirisiCikisi": -11387535.86,
+      "yatirimciDegisimi": 5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FKE",
+      "fonAdi": "QNB PORTFÖY KRİSTAL SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 59.287541,
+      "tedavuldekiPaySayisi": 835883004,
+      "kisiSayisi": 12191,
+      "fonToplamDeger": 49557447638.28,
+      "gunlukGetiri": 0.00878553,
+      "paraGirisiCikisi": -11387535.86,
+      "yatirimciDegisimi": 5
+    },
     {
       "fonKodu": "FKE",
       "fonAdi": "QNB PORTFÖY KRİSTAL SERBEST (DÖVİZ-AVRO) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

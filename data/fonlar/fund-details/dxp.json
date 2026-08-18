@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DXP",
     "slug": "dxp",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.891539,
-    "tedavuldekiPaySayisi": 25815958,
-    "kisiSayisi": 1053,
-    "fonToplamDeger": 48831882.66,
-    "gunlukGetiri": 0.00808261,
+    "fiyat": 1.920007,
+    "tedavuldekiPaySayisi": 25234911,
+    "kisiSayisi": 1051,
+    "fonToplamDeger": 48451209.01,
+    "gunlukGetiri": 0.01505018,
     "getiriler": {
-      "birAy": 0.062823,
-      "ucAy": -0.000688,
-      "altiAy": 0.031955,
-      "yilbasi": 0.254268,
-      "birYil": 0.306603,
+      "birAy": 0.046359000000000004,
+      "ucAy": 0.021543,
+      "altiAy": 0.046032000000000003,
+      "yilbasi": 0.27314499999999997,
+      "birYil": 0.329625,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 63707.03,
-      "besGun": null,
+      "gunluk": -1115614.31,
+      "besGun": -1761593.93,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": -2,
+      "besGun": -9,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DXP",
+        "fonAdi": "DENİZ PORTFÖY İHRACATÇI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.920007,
+        "tedavuldekiPaySayisi": 25234911,
+        "kisiSayisi": 1051,
+        "fonToplamDeger": 48451209.01,
+        "gunlukGetiri": 0.01505018,
+        "paraGirisiCikisi": -1115614.31,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "DXP",
         "fonAdi": "DENİZ PORTFÖY İHRACATÇI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00808261,
       "paraGirisiCikisi": 63707.03,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DXP",
+      "fonAdi": "DENİZ PORTFÖY İHRACATÇI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.920007,
+      "tedavuldekiPaySayisi": 25234911,
+      "kisiSayisi": 1051,
+      "fonToplamDeger": 48451209.01,
+      "gunlukGetiri": 0.01505018,
+      "paraGirisiCikisi": -1115614.31,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DXP",
+      "fonAdi": "DENİZ PORTFÖY İHRACATÇI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.920007,
+      "tedavuldekiPaySayisi": 25234911,
+      "kisiSayisi": 1051,
+      "fonToplamDeger": 48451209.01,
+      "gunlukGetiri": 0.01505018,
+      "paraGirisiCikisi": -1115614.31,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "DXP",
       "fonAdi": "DENİZ PORTFÖY İHRACATÇI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

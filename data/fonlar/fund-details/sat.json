@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "SAT",
     "slug": "sat",
@@ -12,13 +12,13 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 241.879481,
+    "fiyat": 240.181473,
     "tedavuldekiPaySayisi": 7952624,
     "kisiSayisi": 4,
-    "fonToplamDeger": 1923576564.22,
-    "gunlukGetiri": -0.00339575,
+    "fonToplamDeger": 1910072945.66,
+    "gunlukGetiri": -0.00702006,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -30,26 +30,38 @@
     },
     "paraAkisi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SAT",
+        "fonAdi": "AZİMUT PORTFÖY RASAT HİSSE SENEDİ SERBEST ÖZEL FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 240.181473,
+        "tedavuldekiPaySayisi": 7952624,
+        "kisiSayisi": 4,
+        "fonToplamDeger": 1910072945.66,
+        "gunlukGetiri": -0.00702006,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "SAT",
         "fonAdi": "AZİMUT PORTFÖY RASAT HİSSE SENEDİ SERBEST ÖZEL FON (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00339575,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "SAT",
+      "fonAdi": "AZİMUT PORTFÖY RASAT HİSSE SENEDİ SERBEST ÖZEL FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 240.181473,
+      "tedavuldekiPaySayisi": 7952624,
+      "kisiSayisi": 4,
+      "fonToplamDeger": 1910072945.66,
+      "gunlukGetiri": -0.00702006,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SAT",
+      "fonAdi": "AZİMUT PORTFÖY RASAT HİSSE SENEDİ SERBEST ÖZEL FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 240.181473,
+      "tedavuldekiPaySayisi": 7952624,
+      "kisiSayisi": 4,
+      "fonToplamDeger": 1910072945.66,
+      "gunlukGetiri": -0.00702006,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "SAT",
       "fonAdi": "AZİMUT PORTFÖY RASAT HİSSE SENEDİ SERBEST ÖZEL FON (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "AC1",
     "slug": "ac1",
@@ -12,44 +12,56 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 3.203707,
-    "tedavuldekiPaySayisi": 70776232,
-    "kisiSayisi": 193,
-    "fonToplamDeger": 226746332.54,
-    "gunlukGetiri": 0.00104082,
+    "fiyat": 3.216903,
+    "tedavuldekiPaySayisi": 72738669,
+    "kisiSayisi": 197,
+    "fonToplamDeger": 233993249.45,
+    "gunlukGetiri": 0.00411898,
     "getiriler": {
-      "birAy": 0.032456,
-      "ucAy": 0.100747,
-      "altiAy": 0.20288,
-      "yilbasi": 0.256015,
-      "birYil": 0.451464,
-      "ucYil": 2.174275,
+      "birAy": 0.030203,
+      "ucAy": 0.100724,
+      "altiAy": 0.205543,
+      "yilbasi": 0.261188,
+      "birYil": 0.45102400000000004,
+      "ucYil": 2.181502,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 4324225.95,
-      "besGun": null,
+      "gunluk": 6312969.47,
+      "besGun": -115857097.83,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 4,
-      "besGun": null,
+      "besGun": 6,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AC1",
+        "fonAdi": "PARDUS PORTFÖY KISA VADELİ KATILIM SERBEST FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 3.216903,
+        "tedavuldekiPaySayisi": 72738669,
+        "kisiSayisi": 197,
+        "fonToplamDeger": 233993249.45,
+        "gunlukGetiri": 0.00411898,
+        "paraGirisiCikisi": 6312969.47,
+        "yatirimciDegisimi": 4
+      },
       {
         "fonKodu": "AC1",
         "fonAdi": "PARDUS PORTFÖY KISA VADELİ KATILIM SERBEST FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00104082,
       "paraGirisiCikisi": 4324225.95,
       "yatirimciDegisimi": 4
+    },
+    {
+      "fonKodu": "AC1",
+      "fonAdi": "PARDUS PORTFÖY KISA VADELİ KATILIM SERBEST FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 3.216903,
+      "tedavuldekiPaySayisi": 72738669,
+      "kisiSayisi": 197,
+      "fonToplamDeger": 233993249.45,
+      "gunlukGetiri": 0.00411898,
+      "paraGirisiCikisi": 6312969.47,
+      "yatirimciDegisimi": 4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AC1",
+      "fonAdi": "PARDUS PORTFÖY KISA VADELİ KATILIM SERBEST FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 3.216903,
+      "tedavuldekiPaySayisi": 72738669,
+      "kisiSayisi": 197,
+      "fonToplamDeger": 233993249.45,
+      "gunlukGetiri": 0.00411898,
+      "paraGirisiCikisi": 6312969.47,
+      "yatirimciDegisimi": 4
+    },
     {
       "fonKodu": "AC1",
       "fonAdi": "PARDUS PORTFÖY KISA VADELİ KATILIM SERBEST FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

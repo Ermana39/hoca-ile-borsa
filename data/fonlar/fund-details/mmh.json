@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "MMH",
     "slug": "mmh",
@@ -12,44 +12,56 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 16.401364,
-    "tedavuldekiPaySayisi": 9184334,
-    "kisiSayisi": 1375,
-    "fonToplamDeger": 150635604.88,
-    "gunlukGetiri": 0.0006326,
+    "fiyat": 16.410305,
+    "tedavuldekiPaySayisi": 9233229,
+    "kisiSayisi": 1368,
+    "fonToplamDeger": 151520108.55,
+    "gunlukGetiri": 0.00054514,
     "getiriler": {
-      "birAy": 0.009645,
-      "ucAy": -0.029109,
-      "altiAy": 0.014895,
-      "yilbasi": 0.291149,
-      "birYil": 0.328167,
-      "ucYil": 1.279033,
-      "besYil": 12.111305
+      "birAy": 0.007018,
+      "ucAy": -0.015109,
+      "altiAy": 0.022028,
+      "yilbasi": 0.29185300000000003,
+      "birYil": 0.340194,
+      "ucYil": 1.274258,
+      "besYil": 11.991387999999999
     },
     "paraAkisi": {
-      "gunluk": -4484706.97,
-      "besGun": null,
+      "gunluk": 802381.86,
+      "besGun": -4511606.14,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -8,
-      "besGun": null,
+      "gunluk": -7,
+      "besGun": -23,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MMH",
+        "fonAdi": "AKTİF PORTFÖY BIST 30 ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 16.410305,
+        "tedavuldekiPaySayisi": 9233229,
+        "kisiSayisi": 1368,
+        "fonToplamDeger": 151520108.55,
+        "gunlukGetiri": 0.00054514,
+        "paraGirisiCikisi": 802381.86,
+        "yatirimciDegisimi": -7
+      },
       {
         "fonKodu": "MMH",
         "fonAdi": "AKTİF PORTFÖY BIST 30 ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.0006326,
       "paraGirisiCikisi": -4484706.97,
       "yatirimciDegisimi": -8
+    },
+    {
+      "fonKodu": "MMH",
+      "fonAdi": "AKTİF PORTFÖY BIST 30 ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 16.410305,
+      "tedavuldekiPaySayisi": 9233229,
+      "kisiSayisi": 1368,
+      "fonToplamDeger": 151520108.55,
+      "gunlukGetiri": 0.00054514,
+      "paraGirisiCikisi": 802381.86,
+      "yatirimciDegisimi": -7
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MMH",
+      "fonAdi": "AKTİF PORTFÖY BIST 30 ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 16.410305,
+      "tedavuldekiPaySayisi": 9233229,
+      "kisiSayisi": 1368,
+      "fonToplamDeger": 151520108.55,
+      "gunlukGetiri": 0.00054514,
+      "paraGirisiCikisi": 802381.86,
+      "yatirimciDegisimi": -7
+    },
     {
       "fonKodu": "MMH",
       "fonAdi": "AKTİF PORTFÖY BIST 30 ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

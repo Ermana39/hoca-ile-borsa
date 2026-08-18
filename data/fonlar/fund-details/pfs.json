@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PFS",
     "slug": "pfs",
@@ -12,44 +12,56 @@
     "yonetici": "ATLAS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "atlas-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 2.972543,
-    "tedavuldekiPaySayisi": 5228662,
-    "kisiSayisi": 89,
-    "fonToplamDeger": 15542423.24,
-    "gunlukGetiri": 0.00150434,
+    "fiyat": 2.988547,
+    "tedavuldekiPaySayisi": 5328137,
+    "kisiSayisi": 91,
+    "fonToplamDeger": 15923388.85,
+    "gunlukGetiri": 0.00538394,
     "getiriler": {
-      "birAy": 0.032639,
-      "ucAy": 0.100161,
-      "altiAy": 0.15662900000000002,
-      "yilbasi": 0.264431,
-      "birYil": 0.492325,
-      "ucYil": 1.9789089999999998,
+      "birAy": 0.05287,
+      "ucAy": 0.10259399999999999,
+      "altiAy": 0.163818,
+      "yilbasi": 0.271239,
+      "birYil": 0.49599400000000005,
+      "ucYil": 1.986325,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 2972.54,
-      "besGun": null,
+      "gunluk": 297285.71,
+      "besGun": 294039.27,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": 2,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PFS",
+        "fonAdi": "ATLAS PORTFÖY FON SEPETİ FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 2.988547,
+        "tedavuldekiPaySayisi": 5328137,
+        "kisiSayisi": 91,
+        "fonToplamDeger": 15923388.85,
+        "gunlukGetiri": 0.00538394,
+        "paraGirisiCikisi": 297285.71,
+        "yatirimciDegisimi": 2
+      },
       {
         "fonKodu": "PFS",
         "fonAdi": "ATLAS PORTFÖY FON SEPETİ FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00150434,
       "paraGirisiCikisi": 2972.54,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PFS",
+      "fonAdi": "ATLAS PORTFÖY FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 2.988547,
+      "tedavuldekiPaySayisi": 5328137,
+      "kisiSayisi": 91,
+      "fonToplamDeger": 15923388.85,
+      "gunlukGetiri": 0.00538394,
+      "paraGirisiCikisi": 297285.71,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PFS",
+      "fonAdi": "ATLAS PORTFÖY FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 2.988547,
+      "tedavuldekiPaySayisi": 5328137,
+      "kisiSayisi": 91,
+      "fonToplamDeger": 15923388.85,
+      "gunlukGetiri": 0.00538394,
+      "paraGirisiCikisi": 297285.71,
+      "yatirimciDegisimi": 2
+    },
     {
       "fonKodu": "PFS",
       "fonAdi": "ATLAS PORTFÖY FON SEPETİ FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

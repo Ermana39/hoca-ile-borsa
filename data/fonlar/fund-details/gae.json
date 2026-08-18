@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GAE",
     "slug": "gae",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.448823,
-    "tedavuldekiPaySayisi": 3109854592,
-    "kisiSayisi": 14752,
-    "fonToplamDeger": 1395775331.6,
-    "gunlukGetiri": 0.00326581,
+    "fiyat": 0.448371,
+    "tedavuldekiPaySayisi": 3102053866,
+    "kisiSayisi": 14719,
+    "fonToplamDeger": 1390870443.6,
+    "gunlukGetiri": -0.00100708,
     "getiriler": {
-      "birAy": -0.010409,
-      "ucAy": -0.033095,
-      "altiAy": 0.0264,
-      "yilbasi": 0.305109,
-      "birYil": 0.31228300000000003,
-      "ucYil": 1.03136,
-      "besYil": 9.401701000000001
+      "birAy": 0.000301,
+      "ucAy": -0.020562,
+      "altiAy": 0.032014,
+      "yilbasi": 0.303794,
+      "birYil": 0.32223399999999996,
+      "ucYil": 1.038513,
+      "besYil": 9.287749999999999
     },
     "paraAkisi": {
-      "gunluk": -2690026.49,
-      "besGun": null,
+      "gunluk": -3497619.32,
+      "besGun": -30491500.29,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -25,
-      "besGun": null,
+      "gunluk": -33,
+      "besGun": -105,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GAE",
+        "fonAdi": "GARANTİ PORTFÖY BİST30 ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 0.448371,
+        "tedavuldekiPaySayisi": 3102053866,
+        "kisiSayisi": 14719,
+        "fonToplamDeger": 1390870443.6,
+        "gunlukGetiri": -0.00100708,
+        "paraGirisiCikisi": -3497619.32,
+        "yatirimciDegisimi": -33
+      },
       {
         "fonKodu": "GAE",
         "fonAdi": "GARANTİ PORTFÖY BİST30 ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00326581,
       "paraGirisiCikisi": -2690026.49,
       "yatirimciDegisimi": -25
+    },
+    {
+      "fonKodu": "GAE",
+      "fonAdi": "GARANTİ PORTFÖY BİST30 ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 0.448371,
+      "tedavuldekiPaySayisi": 3102053866,
+      "kisiSayisi": 14719,
+      "fonToplamDeger": 1390870443.6,
+      "gunlukGetiri": -0.00100708,
+      "paraGirisiCikisi": -3497619.32,
+      "yatirimciDegisimi": -33
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GAE",
+      "fonAdi": "GARANTİ PORTFÖY BİST30 ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 0.448371,
+      "tedavuldekiPaySayisi": 3102053866,
+      "kisiSayisi": 14719,
+      "fonToplamDeger": 1390870443.6,
+      "gunlukGetiri": -0.00100708,
+      "paraGirisiCikisi": -3497619.32,
+      "yatirimciDegisimi": -33
+    },
     {
       "fonKodu": "GAE",
       "fonAdi": "GARANTİ PORTFÖY BİST30 ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

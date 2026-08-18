@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KIE",
     "slug": "kie",
@@ -12,44 +12,56 @@
     "yonetici": "TRIVE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "trive-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 4.609069,
-    "tedavuldekiPaySayisi": 43622671,
-    "kisiSayisi": 874,
-    "fonToplamDeger": 201059896.91,
-    "gunlukGetiri": 0.00131305,
+    "fiyat": 4.631449,
+    "tedavuldekiPaySayisi": 46088200,
+    "kisiSayisi": 909,
+    "fonToplamDeger": 213455155.17,
+    "gunlukGetiri": 0.00485564,
     "getiriler": {
-      "birAy": 0.038602,
-      "ucAy": 0.111433,
-      "altiAy": 0.217755,
-      "yilbasi": 0.250981,
-      "birYil": 0.45834400000000003,
-      "ucYil": 2.556147,
+      "birAy": 0.03616,
+      "ucAy": 0.11194599999999999,
+      "altiAy": 0.221067,
+      "yilbasi": 0.25705500000000003,
+      "birYil": 0.45860100000000004,
+      "ucYil": 2.561987,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 10926835.11,
-      "besGun": null,
+      "gunluk": 11418971.82,
+      "besGun": 18540457.69,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": null,
+      "gunluk": 35,
+      "besGun": 47,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KIE",
+        "fonAdi": "TRIVE PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 4.631449,
+        "tedavuldekiPaySayisi": 46088200,
+        "kisiSayisi": 909,
+        "fonToplamDeger": 213455155.17,
+        "gunlukGetiri": 0.00485564,
+        "paraGirisiCikisi": 11418971.82,
+        "yatirimciDegisimi": 35
+      },
       {
         "fonKodu": "KIE",
         "fonAdi": "TRIVE PORTFÖY PARA PİYASASI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00131305,
       "paraGirisiCikisi": 10926835.11,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "KIE",
+      "fonAdi": "TRIVE PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 4.631449,
+      "tedavuldekiPaySayisi": 46088200,
+      "kisiSayisi": 909,
+      "fonToplamDeger": 213455155.17,
+      "gunlukGetiri": 0.00485564,
+      "paraGirisiCikisi": 11418971.82,
+      "yatirimciDegisimi": 35
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KIE",
+      "fonAdi": "TRIVE PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 4.631449,
+      "tedavuldekiPaySayisi": 46088200,
+      "kisiSayisi": 909,
+      "fonToplamDeger": 213455155.17,
+      "gunlukGetiri": 0.00485564,
+      "paraGirisiCikisi": 11418971.82,
+      "yatirimciDegisimi": 35
+    },
     {
       "fonKodu": "KIE",
       "fonAdi": "TRIVE PORTFÖY PARA PİYASASI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

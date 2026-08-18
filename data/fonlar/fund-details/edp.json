@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "EDP",
     "slug": "edp",
@@ -12,16 +12,16 @@
     "yonetici": "NEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "neo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.159248,
-    "tedavuldekiPaySayisi": 56709234,
-    "kisiSayisi": 50,
-    "fonToplamDeger": 65740045.59,
-    "gunlukGetiri": 0.00113997,
+    "fiyat": 1.164528,
+    "tedavuldekiPaySayisi": 57473183,
+    "kisiSayisi": 53,
+    "fonToplamDeger": 66929138.21,
+    "gunlukGetiri": 0.00455468,
     "getiriler": {
-      "birAy": 0.035653000000000004,
-      "ucAy": 0.107889,
+      "birAy": 0.033197000000000004,
+      "ucAy": 0.108141,
       "altiAy": null,
       "yilbasi": null,
       "birYil": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 8717.54,
-      "besGun": null,
+      "gunluk": 889640,
+      "besGun": 1829489.12,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": 3,
+      "besGun": 2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "EDP",
+        "fonAdi": "NEO PORTFÖY KORUNCUK EĞİTİME DESTEK PARA PİYASASI SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.164528,
+        "tedavuldekiPaySayisi": 57473183,
+        "kisiSayisi": 53,
+        "fonToplamDeger": 66929138.21,
+        "gunlukGetiri": 0.00455468,
+        "paraGirisiCikisi": 889640,
+        "yatirimciDegisimi": 3
+      },
       {
         "fonKodu": "EDP",
         "fonAdi": "NEO PORTFÖY KORUNCUK EĞİTİME DESTEK PARA PİYASASI SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00113997,
       "paraGirisiCikisi": 8717.54,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "EDP",
+      "fonAdi": "NEO PORTFÖY KORUNCUK EĞİTİME DESTEK PARA PİYASASI SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.164528,
+      "tedavuldekiPaySayisi": 57473183,
+      "kisiSayisi": 53,
+      "fonToplamDeger": 66929138.21,
+      "gunlukGetiri": 0.00455468,
+      "paraGirisiCikisi": 889640,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "EDP",
+      "fonAdi": "NEO PORTFÖY KORUNCUK EĞİTİME DESTEK PARA PİYASASI SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.164528,
+      "tedavuldekiPaySayisi": 57473183,
+      "kisiSayisi": 53,
+      "fonToplamDeger": 66929138.21,
+      "gunlukGetiri": 0.00455468,
+      "paraGirisiCikisi": 889640,
+      "yatirimciDegisimi": 3
+    },
     {
       "fonKodu": "EDP",
       "fonAdi": "NEO PORTFÖY KORUNCUK EĞİTİME DESTEK PARA PİYASASI SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "CKL",
     "slug": "ckl",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.549784,
-    "tedavuldekiPaySayisi": 466858719,
-    "kisiSayisi": 968,
-    "fonToplamDeger": 723529953.59,
-    "gunlukGetiri": -0.00574439,
+    "fiyat": 1.569067,
+    "tedavuldekiPaySayisi": 468176822,
+    "kisiSayisi": 1010,
+    "fonToplamDeger": 734600821.71,
+    "gunlukGetiri": 0.01244238,
     "getiriler": {
-      "birAy": 0.113852,
-      "ucAy": 0.069381,
-      "altiAy": 0.190234,
-      "yilbasi": 0.33401200000000003,
-      "birYil": 0.46305399999999997,
+      "birAy": 0.134608,
+      "ucAy": 0.082818,
+      "altiAy": 0.208179,
+      "yilbasi": 0.35061,
+      "birYil": 0.474062,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 6267634.9,
-      "besGun": null,
+      "gunluk": 2068191.92,
+      "besGun": 3668172.09,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 11,
-      "besGun": null,
+      "gunluk": 42,
+      "besGun": 110,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "CKL",
+        "fonAdi": "YAPI KREDİ PORTFÖY ÇOKLU VARLIK DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.569067,
+        "tedavuldekiPaySayisi": 468176822,
+        "kisiSayisi": 1010,
+        "fonToplamDeger": 734600821.71,
+        "gunlukGetiri": 0.01244238,
+        "paraGirisiCikisi": 2068191.92,
+        "yatirimciDegisimi": 42
+      },
       {
         "fonKodu": "CKL",
         "fonAdi": "YAPI KREDİ PORTFÖY ÇOKLU VARLIK DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00574439,
       "paraGirisiCikisi": 6267634.9,
       "yatirimciDegisimi": 11
+    },
+    {
+      "fonKodu": "CKL",
+      "fonAdi": "YAPI KREDİ PORTFÖY ÇOKLU VARLIK DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.569067,
+      "tedavuldekiPaySayisi": 468176822,
+      "kisiSayisi": 1010,
+      "fonToplamDeger": 734600821.71,
+      "gunlukGetiri": 0.01244238,
+      "paraGirisiCikisi": 2068191.92,
+      "yatirimciDegisimi": 42
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "CKL",
+      "fonAdi": "YAPI KREDİ PORTFÖY ÇOKLU VARLIK DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.569067,
+      "tedavuldekiPaySayisi": 468176822,
+      "kisiSayisi": 1010,
+      "fonToplamDeger": 734600821.71,
+      "gunlukGetiri": 0.01244238,
+      "paraGirisiCikisi": 2068191.92,
+      "yatirimciDegisimi": 42
+    },
     {
       "fonKodu": "CKL",
       "fonAdi": "YAPI KREDİ PORTFÖY ÇOKLU VARLIK DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

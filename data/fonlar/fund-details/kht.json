@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KHT",
     "slug": "kht",
@@ -12,44 +12,56 @@
     "yonetici": "ALLBATROSS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "allbatross-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 2.439399,
-    "tedavuldekiPaySayisi": 3295394,
+    "fiyat": 2.423815,
+    "tedavuldekiPaySayisi": 3216589,
     "kisiSayisi": 220,
-    "fonToplamDeger": 8038780.37,
-    "gunlukGetiri": 0.00869052,
+    "fonToplamDeger": 7796416.58,
+    "gunlukGetiri": -0.00638846,
     "getiriler": {
-      "birAy": -0.009256,
-      "ucAy": -0.095304,
-      "altiAy": -0.086142,
-      "yilbasi": 0.18064699999999997,
-      "birYil": -0.214717,
-      "ucYil": 0.449568,
+      "birAy": 0.025308999999999998,
+      "ucAy": -0.07506,
+      "altiAy": -0.137312,
+      "yilbasi": 0.173104,
+      "birYil": -0.24072700000000002,
+      "ucYil": 0.432677,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 46355.9,
-      "besGun": null,
+      "gunluk": -191008.74,
+      "besGun": -167224.88,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": -5,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KHT",
+        "fonAdi": "ALLBATROSS PORTFÖY KARTAL HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 2.423815,
+        "tedavuldekiPaySayisi": 3216589,
+        "kisiSayisi": 220,
+        "fonToplamDeger": 7796416.58,
+        "gunlukGetiri": -0.00638846,
+        "paraGirisiCikisi": -191008.74,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "KHT",
         "fonAdi": "ALLBATROSS PORTFÖY KARTAL HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00869052,
       "paraGirisiCikisi": 46355.9,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "KHT",
+      "fonAdi": "ALLBATROSS PORTFÖY KARTAL HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 2.423815,
+      "tedavuldekiPaySayisi": 3216589,
+      "kisiSayisi": 220,
+      "fonToplamDeger": 7796416.58,
+      "gunlukGetiri": -0.00638846,
+      "paraGirisiCikisi": -191008.74,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KHT",
+      "fonAdi": "ALLBATROSS PORTFÖY KARTAL HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 2.423815,
+      "tedavuldekiPaySayisi": 3216589,
+      "kisiSayisi": 220,
+      "fonToplamDeger": 7796416.58,
+      "gunlukGetiri": -0.00638846,
+      "paraGirisiCikisi": -191008.74,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "KHT",
       "fonAdi": "ALLBATROSS PORTFÖY KARTAL HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

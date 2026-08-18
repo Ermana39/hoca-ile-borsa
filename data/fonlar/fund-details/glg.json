@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GLG",
     "slug": "glg",
@@ -12,44 +12,56 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 7.784079,
-    "tedavuldekiPaySayisi": 3477739,
-    "kisiSayisi": 358,
-    "fonToplamDeger": 27070994.52,
-    "gunlukGetiri": 0.00494541,
+    "fiyat": 7.796945,
+    "tedavuldekiPaySayisi": 3686269,
+    "kisiSayisi": 349,
+    "fonToplamDeger": 28741637.49,
+    "gunlukGetiri": 0.00165286,
     "getiriler": {
-      "birAy": -0.02836,
-      "ucAy": -0.12049,
-      "altiAy": -0.10851100000000001,
-      "yilbasi": 0.150063,
-      "birYil": 0.338182,
-      "ucYil": 1.348955,
+      "birAy": -0.034518,
+      "ucAy": -0.109886,
+      "altiAy": -0.104122,
+      "yilbasi": 0.15196400000000002,
+      "birYil": 0.36100499999999996,
+      "ucYil": 1.367937,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -2119417.89,
-      "besGun": null,
+      "gunluk": 1625896.94,
+      "besGun": -551125.14,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": null,
+      "gunluk": -9,
+      "besGun": -16,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GLG",
+        "fonAdi": "AKTİF PORTFÖY CAPİTAL HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 7.796945,
+        "tedavuldekiPaySayisi": 3686269,
+        "kisiSayisi": 349,
+        "fonToplamDeger": 28741637.49,
+        "gunlukGetiri": 0.00165286,
+        "paraGirisiCikisi": 1625896.94,
+        "yatirimciDegisimi": -9
+      },
       {
         "fonKodu": "GLG",
         "fonAdi": "AKTİF PORTFÖY CAPİTAL HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00494541,
       "paraGirisiCikisi": -2119417.89,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "GLG",
+      "fonAdi": "AKTİF PORTFÖY CAPİTAL HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 7.796945,
+      "tedavuldekiPaySayisi": 3686269,
+      "kisiSayisi": 349,
+      "fonToplamDeger": 28741637.49,
+      "gunlukGetiri": 0.00165286,
+      "paraGirisiCikisi": 1625896.94,
+      "yatirimciDegisimi": -9
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GLG",
+      "fonAdi": "AKTİF PORTFÖY CAPİTAL HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 7.796945,
+      "tedavuldekiPaySayisi": 3686269,
+      "kisiSayisi": 349,
+      "fonToplamDeger": 28741637.49,
+      "gunlukGetiri": 0.00165286,
+      "paraGirisiCikisi": 1625896.94,
+      "yatirimciDegisimi": -9
+    },
     {
       "fonKodu": "GLG",
       "fonAdi": "AKTİF PORTFÖY CAPİTAL HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

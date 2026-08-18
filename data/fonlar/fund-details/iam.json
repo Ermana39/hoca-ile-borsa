@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IAM",
     "slug": "iam",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.733243,
-    "tedavuldekiPaySayisi": 45692930,
-    "kisiSayisi": 2832,
-    "fonToplamDeger": 79196933.34,
-    "gunlukGetiri": 0.00111823,
+    "fiyat": 1.740787,
+    "tedavuldekiPaySayisi": 45366370,
+    "kisiSayisi": 2814,
+    "fonToplamDeger": 78973168.48,
+    "gunlukGetiri": 0.00435253,
     "getiriler": {
-      "birAy": 0.031697,
-      "ucAy": 0.026687,
-      "altiAy": 0.048373,
-      "yilbasi": 0.172974,
-      "birYil": 0.335991,
+      "birAy": 0.044083,
+      "ucAy": 0.037626,
+      "altiAy": 0.056174999999999996,
+      "yilbasi": 0.17808,
+      "birYil": 0.34598799999999996,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -114907.08,
-      "besGun": null,
+      "gunluk": -568471.4,
+      "besGun": -18456474.29,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -14,
-      "besGun": null,
+      "gunluk": -18,
+      "besGun": -57,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IAM",
+        "fonAdi": "İŞ PORTFÖY AGRESİF FON SEPETİ FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.740787,
+        "tedavuldekiPaySayisi": 45366370,
+        "kisiSayisi": 2814,
+        "fonToplamDeger": 78973168.48,
+        "gunlukGetiri": 0.00435253,
+        "paraGirisiCikisi": -568471.4,
+        "yatirimciDegisimi": -18
+      },
       {
         "fonKodu": "IAM",
         "fonAdi": "İŞ PORTFÖY AGRESİF FON SEPETİ FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00111823,
       "paraGirisiCikisi": -114907.08,
       "yatirimciDegisimi": -14
+    },
+    {
+      "fonKodu": "IAM",
+      "fonAdi": "İŞ PORTFÖY AGRESİF FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.740787,
+      "tedavuldekiPaySayisi": 45366370,
+      "kisiSayisi": 2814,
+      "fonToplamDeger": 78973168.48,
+      "gunlukGetiri": 0.00435253,
+      "paraGirisiCikisi": -568471.4,
+      "yatirimciDegisimi": -18
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IAM",
+      "fonAdi": "İŞ PORTFÖY AGRESİF FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.740787,
+      "tedavuldekiPaySayisi": 45366370,
+      "kisiSayisi": 2814,
+      "fonToplamDeger": 78973168.48,
+      "gunlukGetiri": 0.00435253,
+      "paraGirisiCikisi": -568471.4,
+      "yatirimciDegisimi": -18
+    },
     {
       "fonKodu": "IAM",
       "fonAdi": "İŞ PORTFÖY AGRESİF FON SEPETİ FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

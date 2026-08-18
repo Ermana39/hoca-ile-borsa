@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PCS",
     "slug": "pcs",
@@ -12,13 +12,13 @@
     "yonetici": "PUSULA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pusula-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 8.316112,
-    "tedavuldekiPaySayisi": 11606061800,
+    "fiyat": 8.348691,
+    "tedavuldekiPaySayisi": 11430616607,
     "kisiSayisi": 30,
-    "fonToplamDeger": 96517307348.34,
-    "gunlukGetiri": -0.01501898,
+    "fonToplamDeger": 95430691344.15,
+    "gunlukGetiri": 0.00391758,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 720553033.64,
-      "besGun": null,
+      "gunluk": -1464737703.79,
+      "besGun": 5371656603.77,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PCS",
+        "fonAdi": "PUSULA PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 8.348691,
+        "tedavuldekiPaySayisi": 11430616607,
+        "kisiSayisi": 30,
+        "fonToplamDeger": 95430691344.15,
+        "gunlukGetiri": 0.00391758,
+        "paraGirisiCikisi": -1464737703.79,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "PCS",
         "fonAdi": "PUSULA PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.01501898,
       "paraGirisiCikisi": 720553033.64,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PCS",
+      "fonAdi": "PUSULA PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 8.348691,
+      "tedavuldekiPaySayisi": 11430616607,
+      "kisiSayisi": 30,
+      "fonToplamDeger": 95430691344.15,
+      "gunlukGetiri": 0.00391758,
+      "paraGirisiCikisi": -1464737703.79,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PCS",
+      "fonAdi": "PUSULA PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 8.348691,
+      "tedavuldekiPaySayisi": 11430616607,
+      "kisiSayisi": 30,
+      "fonToplamDeger": 95430691344.15,
+      "gunlukGetiri": 0.00391758,
+      "paraGirisiCikisi": -1464737703.79,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "PCS",
       "fonAdi": "PUSULA PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "SSK",
     "slug": "ssk",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.739543,
-    "tedavuldekiPaySayisi": 27169622,
-    "kisiSayisi": 583,
-    "fonToplamDeger": 47262731.36,
-    "gunlukGetiri": 0.00443801,
+    "fiyat": 1.73645,
+    "tedavuldekiPaySayisi": 27475857,
+    "kisiSayisi": 582,
+    "fonToplamDeger": 47710446.52,
+    "gunlukGetiri": -0.00177805,
     "getiriler": {
-      "birAy": 0.053887,
-      "ucAy": 0.15609,
-      "altiAy": 0.157893,
-      "yilbasi": 0.226288,
-      "birYil": 0.475741,
+      "birAy": 0.040202,
+      "ucAy": 0.155652,
+      "altiAy": 0.145886,
+      "yilbasi": 0.22410699999999997,
+      "birYil": 0.44769,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -398866.77,
-      "besGun": null,
+      "gunluk": 531761.77,
+      "besGun": 417634.58,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": null,
+      "gunluk": -1,
+      "besGun": 2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SSK",
+        "fonAdi": "DENİZ PORTFÖY SAĞLIK SEKTÖRÜ DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.73645,
+        "tedavuldekiPaySayisi": 27475857,
+        "kisiSayisi": 582,
+        "fonToplamDeger": 47710446.52,
+        "gunlukGetiri": -0.00177805,
+        "paraGirisiCikisi": 531761.77,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "SSK",
         "fonAdi": "DENİZ PORTFÖY SAĞLIK SEKTÖRÜ DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00443801,
       "paraGirisiCikisi": -398866.77,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "SSK",
+      "fonAdi": "DENİZ PORTFÖY SAĞLIK SEKTÖRÜ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.73645,
+      "tedavuldekiPaySayisi": 27475857,
+      "kisiSayisi": 582,
+      "fonToplamDeger": 47710446.52,
+      "gunlukGetiri": -0.00177805,
+      "paraGirisiCikisi": 531761.77,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SSK",
+      "fonAdi": "DENİZ PORTFÖY SAĞLIK SEKTÖRÜ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.73645,
+      "tedavuldekiPaySayisi": 27475857,
+      "kisiSayisi": 582,
+      "fonToplamDeger": 47710446.52,
+      "gunlukGetiri": -0.00177805,
+      "paraGirisiCikisi": 531761.77,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "SSK",
       "fonAdi": "DENİZ PORTFÖY SAĞLIK SEKTÖRÜ DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

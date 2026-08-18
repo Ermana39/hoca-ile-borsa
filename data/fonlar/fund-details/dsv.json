@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DSV",
     "slug": "dsv",
@@ -12,13 +12,13 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 49.080397,
-    "tedavuldekiPaySayisi": 36784336,
-    "kisiSayisi": 45,
-    "fonToplamDeger": 1805389826.95,
-    "gunlukGetiri": 0.00096994,
+    "fiyat": 49.22225,
+    "tedavuldekiPaySayisi": 29334336,
+    "kisiSayisi": 44,
+    "fonToplamDeger": 1443902010.12,
+    "gunlukGetiri": 0.00289022,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -297949126.76,
-      "besGun": null,
+      "gunluk": -366705762.5,
+      "besGun": -1392853200.5,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": null,
+      "gunluk": -1,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DSV",
+        "fonAdi": "DENİZ PORTFÖY 2028 SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 49.22225,
+        "tedavuldekiPaySayisi": 29334336,
+        "kisiSayisi": 44,
+        "fonToplamDeger": 1443902010.12,
+        "gunlukGetiri": 0.00289022,
+        "paraGirisiCikisi": -366705762.5,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "DSV",
         "fonAdi": "DENİZ PORTFÖY 2028 SERBEST (DÖVİZ) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00096994,
       "paraGirisiCikisi": -297949126.76,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "DSV",
+      "fonAdi": "DENİZ PORTFÖY 2028 SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 49.22225,
+      "tedavuldekiPaySayisi": 29334336,
+      "kisiSayisi": 44,
+      "fonToplamDeger": 1443902010.12,
+      "gunlukGetiri": 0.00289022,
+      "paraGirisiCikisi": -366705762.5,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DSV",
+      "fonAdi": "DENİZ PORTFÖY 2028 SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 49.22225,
+      "tedavuldekiPaySayisi": 29334336,
+      "kisiSayisi": 44,
+      "fonToplamDeger": 1443902010.12,
+      "gunlukGetiri": 0.00289022,
+      "paraGirisiCikisi": -366705762.5,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "DSV",
       "fonAdi": "DENİZ PORTFÖY 2028 SERBEST (DÖVİZ) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

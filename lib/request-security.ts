@@ -1,10 +1,8 @@
-import { NextRequest } from "next/server";
-
 function normalizeOrigin(value: string) {
   return value.trim().replace(/\/+$/, "");
 }
 
-export function isSameOriginRequest(request: NextRequest) {
+export function isSameOriginRequest(request: Request) {
   const origin = request.headers.get("origin");
   const host = request.headers.get("host");
   const forwardedProto = request.headers.get("x-forwarded-proto");

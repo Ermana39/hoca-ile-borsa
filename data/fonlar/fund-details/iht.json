@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IHT",
     "slug": "iht",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 3.742186,
-    "tedavuldekiPaySayisi": 21603820,
-    "kisiSayisi": 3357,
-    "fonToplamDeger": 80845503.2,
-    "gunlukGetiri": 0.00771502,
+    "fiyat": 3.775498,
+    "tedavuldekiPaySayisi": 21464854,
+    "kisiSayisi": 3348,
+    "fonToplamDeger": 81040513.98,
+    "gunlukGetiri": 0.00890175,
     "getiriler": {
-      "birAy": 0.018285,
-      "ucAy": -0.024,
-      "altiAy": -0.000354,
-      "yilbasi": 0.190714,
-      "birYil": 0.169295,
-      "ucYil": 0.6528660000000001,
+      "birAy": 0.006079,
+      "ucAy": -0.008686000000000001,
+      "altiAy": 0.003342,
+      "yilbasi": 0.201314,
+      "birYil": 0.182271,
+      "ucYil": 0.6502469999999999,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -134254.66,
-      "besGun": null,
+      "gunluk": -524665.86,
+      "besGun": -1215452.43,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -6,
-      "besGun": null,
+      "gunluk": -9,
+      "besGun": -34,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IHT",
+        "fonAdi": "İŞ PORTFÖY İHRACATÇI ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 3.775498,
+        "tedavuldekiPaySayisi": 21464854,
+        "kisiSayisi": 3348,
+        "fonToplamDeger": 81040513.98,
+        "gunlukGetiri": 0.00890175,
+        "paraGirisiCikisi": -524665.86,
+        "yatirimciDegisimi": -9
+      },
       {
         "fonKodu": "IHT",
         "fonAdi": "İŞ PORTFÖY İHRACATÇI ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00771502,
       "paraGirisiCikisi": -134254.66,
       "yatirimciDegisimi": -6
+    },
+    {
+      "fonKodu": "IHT",
+      "fonAdi": "İŞ PORTFÖY İHRACATÇI ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 3.775498,
+      "tedavuldekiPaySayisi": 21464854,
+      "kisiSayisi": 3348,
+      "fonToplamDeger": 81040513.98,
+      "gunlukGetiri": 0.00890175,
+      "paraGirisiCikisi": -524665.86,
+      "yatirimciDegisimi": -9
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IHT",
+      "fonAdi": "İŞ PORTFÖY İHRACATÇI ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 3.775498,
+      "tedavuldekiPaySayisi": 21464854,
+      "kisiSayisi": 3348,
+      "fonToplamDeger": 81040513.98,
+      "gunlukGetiri": 0.00890175,
+      "paraGirisiCikisi": -524665.86,
+      "yatirimciDegisimi": -9
+    },
     {
       "fonKodu": "IHT",
       "fonAdi": "İŞ PORTFÖY İHRACATÇI ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

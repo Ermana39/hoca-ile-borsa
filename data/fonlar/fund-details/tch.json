@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TCH",
     "slug": "tch",
@@ -12,13 +12,13 @@
     "yonetici": "TACİRLER PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "tacirler-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 2.223242,
+    "fiyat": 2.231573,
     "tedavuldekiPaySayisi": 107088184,
     "kisiSayisi": 57,
-    "fonToplamDeger": 238082952.73,
-    "gunlukGetiri": 0.00004273,
+    "fonToplamDeger": 238975049.33,
+    "gunlukGetiri": 0.00374723,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -30,26 +30,38 @@
     },
     "paraAkisi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": -1649183.59,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": -1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TCH",
+        "fonAdi": "TACİRLER PORTFÖY TAÇ SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 2.231573,
+        "tedavuldekiPaySayisi": 107088184,
+        "kisiSayisi": 57,
+        "fonToplamDeger": 238975049.33,
+        "gunlukGetiri": 0.00374723,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "TCH",
         "fonAdi": "TACİRLER PORTFÖY TAÇ SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00004273,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TCH",
+      "fonAdi": "TACİRLER PORTFÖY TAÇ SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 2.231573,
+      "tedavuldekiPaySayisi": 107088184,
+      "kisiSayisi": 57,
+      "fonToplamDeger": 238975049.33,
+      "gunlukGetiri": 0.00374723,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TCH",
+      "fonAdi": "TACİRLER PORTFÖY TAÇ SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 2.231573,
+      "tedavuldekiPaySayisi": 107088184,
+      "kisiSayisi": 57,
+      "fonToplamDeger": 238975049.33,
+      "gunlukGetiri": 0.00374723,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "TCH",
       "fonAdi": "TACİRLER PORTFÖY TAÇ SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

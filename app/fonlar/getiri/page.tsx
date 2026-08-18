@@ -10,24 +10,14 @@ export const metadata: Metadata = {
   },
 };
 
-type Props = {
-  searchParams: Promise<{
-    q?: string;
-    sort?: string;
-    dir?: string;
-  }>;
-};
-
-export default async function FonGetiriLandingPage({ searchParams }: Props) {
+export default function FonGetiriLandingPage() {
   return (
     <div className="min-h-screen bg-white">
       <FonGetiriExcelPage
         title="Menkul Kıymet Yatırım Fonları"
         description="Menkul kıymet yatırım fonlarının getiri verilerini dönemsel olarak inceleyin."
-        excelRelativePath="app/fonlar/getiri/menkul-kiymet-yatirim-fonlari/data/menkul-kiymet-yatirim-fonlari-getiri.xlsx"
         pageBasePath="/fonlar/getiri"
         backHref="/fonlar"
-        searchParams={searchParams}
       />
 
       <div className="mx-auto max-w-7xl px-4 pb-10 md:px-6">

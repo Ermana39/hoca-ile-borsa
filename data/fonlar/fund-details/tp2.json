@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TP2",
     "slug": "tp2",
@@ -12,44 +12,56 @@
     "yonetici": "TERA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "tera-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 2.150958,
-    "tedavuldekiPaySayisi": 90292247137,
-    "kisiSayisi": 152140,
-    "fonToplamDeger": 194214857183.36,
-    "gunlukGetiri": 0.00128666,
+    "fiyat": 2.16186,
+    "tedavuldekiPaySayisi": 91568388345,
+    "kisiSayisi": 154769,
+    "fonToplamDeger": 197958077863.33,
+    "gunlukGetiri": 0.00506844,
     "getiriler": {
-      "birAy": 0.041028,
-      "ucAy": 0.12516,
-      "altiAy": 0.256882,
-      "yilbasi": 0.332774,
-      "birYil": 0.602737,
+      "birAy": 0.038229,
+      "ucAy": 0.124996,
+      "altiAy": 0.25989999999999996,
+      "yilbasi": 0.33953000000000005,
+      "birYil": 0.603259,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 2310782959.61,
-      "besGun": null,
+      "gunluk": 2758838631.93,
+      "besGun": 8042422864.08,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 550,
-      "besGun": null,
+      "gunluk": 2629,
+      "besGun": 5580,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TP2",
+        "fonAdi": "TERA PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 2.16186,
+        "tedavuldekiPaySayisi": 91568388345,
+        "kisiSayisi": 154769,
+        "fonToplamDeger": 197958077863.33,
+        "gunlukGetiri": 0.00506844,
+        "paraGirisiCikisi": 2758838631.93,
+        "yatirimciDegisimi": 2629
+      },
       {
         "fonKodu": "TP2",
         "fonAdi": "TERA PORTFÖY PARA PİYASASI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00128666,
       "paraGirisiCikisi": 2310782959.61,
       "yatirimciDegisimi": 550
+    },
+    {
+      "fonKodu": "TP2",
+      "fonAdi": "TERA PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 2.16186,
+      "tedavuldekiPaySayisi": 91568388345,
+      "kisiSayisi": 154769,
+      "fonToplamDeger": 197958077863.33,
+      "gunlukGetiri": 0.00506844,
+      "paraGirisiCikisi": 2758838631.93,
+      "yatirimciDegisimi": 2629
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TP2",
+      "fonAdi": "TERA PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 2.16186,
+      "tedavuldekiPaySayisi": 91568388345,
+      "kisiSayisi": 154769,
+      "fonToplamDeger": 197958077863.33,
+      "gunlukGetiri": 0.00506844,
+      "paraGirisiCikisi": 2758838631.93,
+      "yatirimciDegisimi": 2629
+    },
     {
       "fonKodu": "TP2",
       "fonAdi": "TERA PORTFÖY PARA PİYASASI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

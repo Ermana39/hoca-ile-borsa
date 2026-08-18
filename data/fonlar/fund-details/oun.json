@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "OUN",
     "slug": "oun",
@@ -12,13 +12,13 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 53.780311,
-    "tedavuldekiPaySayisi": 4317850,
+    "fiyat": 53.988472,
+    "tedavuldekiPaySayisi": 4310640,
     "kisiSayisi": 318,
-    "fonToplamDeger": 232215314.76,
-    "gunlukGetiri": 0.00060064,
+    "fonToplamDeger": 232724868.48,
+    "gunlukGetiri": 0.00387058,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": -389256.88,
+      "besGun": -241613.44,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OUN",
+        "fonAdi": "AK PORTFÖY ONÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 53.988472,
+        "tedavuldekiPaySayisi": 4310640,
+        "kisiSayisi": 318,
+        "fonToplamDeger": 232724868.48,
+        "gunlukGetiri": 0.00387058,
+        "paraGirisiCikisi": -389256.88,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "OUN",
         "fonAdi": "AK PORTFÖY ONÜÇÜNCÜ SERBEST (DÖVİZ) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00060064,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "OUN",
+      "fonAdi": "AK PORTFÖY ONÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 53.988472,
+      "tedavuldekiPaySayisi": 4310640,
+      "kisiSayisi": 318,
+      "fonToplamDeger": 232724868.48,
+      "gunlukGetiri": 0.00387058,
+      "paraGirisiCikisi": -389256.88,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OUN",
+      "fonAdi": "AK PORTFÖY ONÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 53.988472,
+      "tedavuldekiPaySayisi": 4310640,
+      "kisiSayisi": 318,
+      "fonToplamDeger": 232724868.48,
+      "gunlukGetiri": 0.00387058,
+      "paraGirisiCikisi": -389256.88,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "OUN",
       "fonAdi": "AK PORTFÖY ONÜÇÜNCÜ SERBEST (DÖVİZ) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

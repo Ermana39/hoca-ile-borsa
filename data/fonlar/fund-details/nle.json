@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "NLE",
     "slug": "nle",
@@ -12,44 +12,56 @@
     "yonetici": "NUROL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "nurol-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.561421,
-    "tedavuldekiPaySayisi": 232443113,
-    "kisiSayisi": 9624,
-    "fonToplamDeger": 362941595.58,
-    "gunlukGetiri": -0.00295775,
+    "fiyat": 1.561206,
+    "tedavuldekiPaySayisi": 231521681,
+    "kisiSayisi": 9605,
+    "fonToplamDeger": 361453122.38,
+    "gunlukGetiri": -0.0001377,
     "getiriler": {
-      "birAy": -0.009500999999999999,
-      "ucAy": 0.034748,
-      "altiAy": 0.072821,
-      "yilbasi": 0.258814,
-      "birYil": 0.24502400000000002,
+      "birAy": -0.018549,
+      "ucAy": 0.021185999999999997,
+      "altiAy": 0.05962,
+      "yilbasi": 0.25864,
+      "birYil": 0.24464300000000003,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -734498.68,
-      "besGun": null,
+      "gunluk": -1438545.17,
+      "besGun": -3961782.92,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -22,
-      "besGun": null,
+      "gunluk": -19,
+      "besGun": -75,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NLE",
+        "fonAdi": "NUROL PORTFÖY EMLAK SEKTÖRÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.561206,
+        "tedavuldekiPaySayisi": 231521681,
+        "kisiSayisi": 9605,
+        "fonToplamDeger": 361453122.38,
+        "gunlukGetiri": -0.0001377,
+        "paraGirisiCikisi": -1438545.17,
+        "yatirimciDegisimi": -19
+      },
       {
         "fonKodu": "NLE",
         "fonAdi": "NUROL PORTFÖY EMLAK SEKTÖRÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00295775,
       "paraGirisiCikisi": -734498.68,
       "yatirimciDegisimi": -22
+    },
+    {
+      "fonKodu": "NLE",
+      "fonAdi": "NUROL PORTFÖY EMLAK SEKTÖRÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.561206,
+      "tedavuldekiPaySayisi": 231521681,
+      "kisiSayisi": 9605,
+      "fonToplamDeger": 361453122.38,
+      "gunlukGetiri": -0.0001377,
+      "paraGirisiCikisi": -1438545.17,
+      "yatirimciDegisimi": -19
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NLE",
+      "fonAdi": "NUROL PORTFÖY EMLAK SEKTÖRÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.561206,
+      "tedavuldekiPaySayisi": 231521681,
+      "kisiSayisi": 9605,
+      "fonToplamDeger": 361453122.38,
+      "gunlukGetiri": -0.0001377,
+      "paraGirisiCikisi": -1438545.17,
+      "yatirimciDegisimi": -19
+    },
     {
       "fonKodu": "NLE",
       "fonAdi": "NUROL PORTFÖY EMLAK SEKTÖRÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

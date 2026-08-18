@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "AFA",
     "slug": "afa",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.290593,
-    "tedavuldekiPaySayisi": 4323170243,
-    "kisiSayisi": 46030,
-    "fonToplamDeger": 5579455184.93,
-    "gunlukGetiri": 0.00554666,
+    "fiyat": 1.288764,
+    "tedavuldekiPaySayisi": 4323727831,
+    "kisiSayisi": 46093,
+    "fonToplamDeger": 5572262678.87,
+    "gunlukGetiri": -0.00141718,
     "getiriler": {
-      "birAy": 0.055556,
-      "ucAy": 0.113125,
-      "altiAy": 0.293602,
-      "yilbasi": 0.274218,
-      "birYil": 0.438092,
-      "ucYil": 2.087351,
-      "besYil": 7.999637
+      "birAy": 0.065178,
+      "ucAy": 0.104661,
+      "altiAy": 0.292669,
+      "yilbasi": 0.272412,
+      "birYil": 0.43302799999999997,
+      "ucYil": 2.118734,
+      "besYil": 8.202565
     },
     "paraAkisi": {
-      "gunluk": -490524.72,
-      "besGun": null,
+      "gunluk": 718599.34,
+      "besGun": 29635532.13,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 76,
-      "besGun": null,
+      "gunluk": 63,
+      "besGun": 536,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AFA",
+        "fonAdi": "AK PORTFÖY AMERİKA YABANCI HİSSE SENEDİ FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.288764,
+        "tedavuldekiPaySayisi": 4323727831,
+        "kisiSayisi": 46093,
+        "fonToplamDeger": 5572262678.87,
+        "gunlukGetiri": -0.00141718,
+        "paraGirisiCikisi": 718599.34,
+        "yatirimciDegisimi": 63
+      },
       {
         "fonKodu": "AFA",
         "fonAdi": "AK PORTFÖY AMERİKA YABANCI HİSSE SENEDİ FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00554666,
       "paraGirisiCikisi": -490524.72,
       "yatirimciDegisimi": 76
+    },
+    {
+      "fonKodu": "AFA",
+      "fonAdi": "AK PORTFÖY AMERİKA YABANCI HİSSE SENEDİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.288764,
+      "tedavuldekiPaySayisi": 4323727831,
+      "kisiSayisi": 46093,
+      "fonToplamDeger": 5572262678.87,
+      "gunlukGetiri": -0.00141718,
+      "paraGirisiCikisi": 718599.34,
+      "yatirimciDegisimi": 63
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AFA",
+      "fonAdi": "AK PORTFÖY AMERİKA YABANCI HİSSE SENEDİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.288764,
+      "tedavuldekiPaySayisi": 4323727831,
+      "kisiSayisi": 46093,
+      "fonToplamDeger": 5572262678.87,
+      "gunlukGetiri": -0.00141718,
+      "paraGirisiCikisi": 718599.34,
+      "yatirimciDegisimi": 63
+    },
     {
       "fonKodu": "AFA",
       "fonAdi": "AK PORTFÖY AMERİKA YABANCI HİSSE SENEDİ FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

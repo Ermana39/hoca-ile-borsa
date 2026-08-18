@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "EC2",
     "slug": "ec2",
@@ -12,44 +12,56 @@
     "yonetici": "GLOBAL MD PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "global-md-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 82.519938,
-    "tedavuldekiPaySayisi": 761702.8,
-    "kisiSayisi": 2004,
-    "fonToplamDeger": 62855667.83,
-    "gunlukGetiri": -0.00102765,
+    "fiyat": 82.439494,
+    "tedavuldekiPaySayisi": 759633.8,
+    "kisiSayisi": 1996,
+    "fonToplamDeger": 62623826.11,
+    "gunlukGetiri": -0.00097484,
     "getiriler": {
-      "birAy": -0.0196,
-      "ucAy": -0.083321,
-      "altiAy": -0.113877,
-      "yilbasi": 0.006396,
-      "birYil": -0.023176000000000002,
-      "ucYil": 0.91687,
-      "besYil": 11.481105
+      "birAy": -0.030813999999999998,
+      "ucAy": -0.077845,
+      "altiAy": -0.124612,
+      "yilbasi": 0.005415,
+      "birYil": -0.022543999999999998,
+      "ucYil": 0.860054,
+      "besYil": 11.267063
     },
     "paraAkisi": {
-      "gunluk": -106615.76,
-      "besGun": null,
+      "gunluk": -170567.31,
+      "besGun": -846192.19,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
-      "besGun": null,
+      "gunluk": -8,
+      "besGun": -31,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "EC2",
+        "fonAdi": "GLOBAL MD PORTFÖY BİRİNCİ HİSSE SENEDİ FONU(HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 82.439494,
+        "tedavuldekiPaySayisi": 759633.8,
+        "kisiSayisi": 1996,
+        "fonToplamDeger": 62623826.11,
+        "gunlukGetiri": -0.00097484,
+        "paraGirisiCikisi": -170567.31,
+        "yatirimciDegisimi": -8
+      },
       {
         "fonKodu": "EC2",
         "fonAdi": "GLOBAL MD PORTFÖY BİRİNCİ HİSSE SENEDİ FONU(HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00102765,
       "paraGirisiCikisi": -106615.76,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "EC2",
+      "fonAdi": "GLOBAL MD PORTFÖY BİRİNCİ HİSSE SENEDİ FONU(HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 82.439494,
+      "tedavuldekiPaySayisi": 759633.8,
+      "kisiSayisi": 1996,
+      "fonToplamDeger": 62623826.11,
+      "gunlukGetiri": -0.00097484,
+      "paraGirisiCikisi": -170567.31,
+      "yatirimciDegisimi": -8
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "EC2",
+      "fonAdi": "GLOBAL MD PORTFÖY BİRİNCİ HİSSE SENEDİ FONU(HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 82.439494,
+      "tedavuldekiPaySayisi": 759633.8,
+      "kisiSayisi": 1996,
+      "fonToplamDeger": 62623826.11,
+      "gunlukGetiri": -0.00097484,
+      "paraGirisiCikisi": -170567.31,
+      "yatirimciDegisimi": -8
+    },
     {
       "fonKodu": "EC2",
       "fonAdi": "GLOBAL MD PORTFÖY BİRİNCİ HİSSE SENEDİ FONU(HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PLR",
     "slug": "plr",
@@ -12,44 +12,56 @@
     "yonetici": "OSMANLI PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "osmanli-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.658646,
-    "tedavuldekiPaySayisi": 543719232,
-    "kisiSayisi": 894,
-    "fonToplamDeger": 901837661.09,
-    "gunlukGetiri": 0.0010719,
+    "fiyat": 1.66586,
+    "tedavuldekiPaySayisi": 539411141,
+    "kisiSayisi": 902,
+    "fonToplamDeger": 898583476.93,
+    "gunlukGetiri": 0.00434933,
     "getiriler": {
-      "birAy": 0.034469,
-      "ucAy": 0.10522500000000001,
-      "altiAy": 0.21309799999999998,
-      "yilbasi": 0.27222999999999997,
-      "birYil": 0.48894799999999994,
+      "birAy": 0.03213,
+      "ucAy": 0.105155,
+      "altiAy": 0.215686,
+      "yilbasi": 0.277764,
+      "birYil": 0.48823700000000003,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 3620771.14,
-      "besGun": null,
+      "gunluk": -7176676.47,
+      "besGun": -18796318.81,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": 8,
+      "besGun": 11,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PLR",
+        "fonAdi": "OSMANLI PORTFÖY PARA PİYASASI FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.66586,
+        "tedavuldekiPaySayisi": 539411141,
+        "kisiSayisi": 902,
+        "fonToplamDeger": 898583476.93,
+        "gunlukGetiri": 0.00434933,
+        "paraGirisiCikisi": -7176676.47,
+        "yatirimciDegisimi": 8
+      },
       {
         "fonKodu": "PLR",
         "fonAdi": "OSMANLI PORTFÖY PARA PİYASASI FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.0010719,
       "paraGirisiCikisi": 3620771.14,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PLR",
+      "fonAdi": "OSMANLI PORTFÖY PARA PİYASASI FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.66586,
+      "tedavuldekiPaySayisi": 539411141,
+      "kisiSayisi": 902,
+      "fonToplamDeger": 898583476.93,
+      "gunlukGetiri": 0.00434933,
+      "paraGirisiCikisi": -7176676.47,
+      "yatirimciDegisimi": 8
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PLR",
+      "fonAdi": "OSMANLI PORTFÖY PARA PİYASASI FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.66586,
+      "tedavuldekiPaySayisi": 539411141,
+      "kisiSayisi": 902,
+      "fonToplamDeger": 898583476.93,
+      "gunlukGetiri": 0.00434933,
+      "paraGirisiCikisi": -7176676.47,
+      "yatirimciDegisimi": 8
+    },
     {
       "fonKodu": "PLR",
       "fonAdi": "OSMANLI PORTFÖY PARA PİYASASI FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

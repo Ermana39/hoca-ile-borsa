@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TND",
     "slug": "tnd",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.492007,
-    "tedavuldekiPaySayisi": 127545627,
-    "kisiSayisi": 492,
-    "fonToplamDeger": 190299017.52,
-    "gunlukGetiri": 0.00106211,
+    "fiyat": 1.498185,
+    "tedavuldekiPaySayisi": 127452809,
+    "kisiSayisi": 493,
+    "fonToplamDeger": 190947918.49,
+    "gunlukGetiri": 0.00414073,
     "getiriler": {
-      "birAy": 0.032778,
-      "ucAy": 0.100795,
-      "altiAy": 0.20291599999999999,
-      "yilbasi": 0.256699,
-      "birYil": 0.45504300000000003,
+      "birAy": 0.030699999999999998,
+      "ucAy": 0.10071,
+      "altiAy": 0.20559899999999998,
+      "yilbasi": 0.261903,
+      "birYil": 0.454602,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 125577.75,
-      "besGun": null,
+      "gunluk": -139058.54,
+      "besGun": -1873950.59,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 9,
-      "besGun": null,
+      "gunluk": 1,
+      "besGun": 15,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TND",
+        "fonAdi": "İŞ PORTFÖY TTF TENİSE DESTEK DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.498185,
+        "tedavuldekiPaySayisi": 127452809,
+        "kisiSayisi": 493,
+        "fonToplamDeger": 190947918.49,
+        "gunlukGetiri": 0.00414073,
+        "paraGirisiCikisi": -139058.54,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "TND",
         "fonAdi": "İŞ PORTFÖY TTF TENİSE DESTEK DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00106211,
       "paraGirisiCikisi": 125577.75,
       "yatirimciDegisimi": 9
+    },
+    {
+      "fonKodu": "TND",
+      "fonAdi": "İŞ PORTFÖY TTF TENİSE DESTEK DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.498185,
+      "tedavuldekiPaySayisi": 127452809,
+      "kisiSayisi": 493,
+      "fonToplamDeger": 190947918.49,
+      "gunlukGetiri": 0.00414073,
+      "paraGirisiCikisi": -139058.54,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TND",
+      "fonAdi": "İŞ PORTFÖY TTF TENİSE DESTEK DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.498185,
+      "tedavuldekiPaySayisi": 127452809,
+      "kisiSayisi": 493,
+      "fonToplamDeger": 190947918.49,
+      "gunlukGetiri": 0.00414073,
+      "paraGirisiCikisi": -139058.54,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "TND",
       "fonAdi": "İŞ PORTFÖY TTF TENİSE DESTEK DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

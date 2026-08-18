@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "AK2",
     "slug": "ak2",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.537285,
-    "tedavuldekiPaySayisi": 309794323,
-    "kisiSayisi": 9086,
-    "fonToplamDeger": 166447866.61,
-    "gunlukGetiri": 0.00500741,
+    "fiyat": 0.537804,
+    "tedavuldekiPaySayisi": 316715501,
+    "kisiSayisi": 9085,
+    "fonToplamDeger": 170330890.13,
+    "gunlukGetiri": 0.00096597,
     "getiriler": {
-      "birAy": 0.024065,
-      "ucAy": 0.058479,
-      "altiAy": 0.040970000000000006,
-      "yilbasi": 0.067204,
-      "birYil": 0.24015,
-      "ucYil": 0.664276,
-      "besYil": 1.281465
+      "birAy": 0.025091000000000002,
+      "ucAy": 0.067264,
+      "altiAy": 0.037385,
+      "yilbasi": 0.068235,
+      "birYil": 0.237207,
+      "ucYil": 0.6826990000000001,
+      "besYil": 1.277499
     },
     "paraAkisi": {
-      "gunluk": 410154.24,
-      "besGun": null,
+      "gunluk": 3722237.21,
+      "besGun": 3489478.22,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": -1,
-      "besGun": null,
+      "besGun": -27,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AK2",
+        "fonAdi": "AK PORTFÖY UZUN VADELİ BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 0.537804,
+        "tedavuldekiPaySayisi": 316715501,
+        "kisiSayisi": 9085,
+        "fonToplamDeger": 170330890.13,
+        "gunlukGetiri": 0.00096597,
+        "paraGirisiCikisi": 3722237.21,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "AK2",
         "fonAdi": "AK PORTFÖY UZUN VADELİ BORÇLANMA ARAÇLARI FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00500741,
       "paraGirisiCikisi": 410154.24,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "AK2",
+      "fonAdi": "AK PORTFÖY UZUN VADELİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.537804,
+      "tedavuldekiPaySayisi": 316715501,
+      "kisiSayisi": 9085,
+      "fonToplamDeger": 170330890.13,
+      "gunlukGetiri": 0.00096597,
+      "paraGirisiCikisi": 3722237.21,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AK2",
+      "fonAdi": "AK PORTFÖY UZUN VADELİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.537804,
+      "tedavuldekiPaySayisi": 316715501,
+      "kisiSayisi": 9085,
+      "fonToplamDeger": 170330890.13,
+      "gunlukGetiri": 0.00096597,
+      "paraGirisiCikisi": 3722237.21,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "AK2",
       "fonAdi": "AK PORTFÖY UZUN VADELİ BORÇLANMA ARAÇLARI FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

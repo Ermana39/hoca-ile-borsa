@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "HBU",
     "slug": "hbu",
@@ -12,44 +12,56 @@
     "yonetici": "HSBC PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hsbc-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.421006,
-    "tedavuldekiPaySayisi": 324408421,
-    "kisiSayisi": 2790,
-    "fonToplamDeger": 460986271.71,
-    "gunlukGetiri": 0.00322499,
+    "fiyat": 1.424575,
+    "tedavuldekiPaySayisi": 324141621,
+    "kisiSayisi": 2787,
+    "fonToplamDeger": 461764161.05,
+    "gunlukGetiri": 0.0025116,
     "getiriler": {
-      "birAy": -0.013805000000000001,
-      "ucAy": -0.034712,
-      "altiAy": 0.032818,
-      "yilbasi": 0.328947,
-      "birYil": 0.34552900000000003,
-      "ucYil": 1.061123,
-      "besYil": 10.346353999999998
+      "birAy": 0.007195,
+      "ucAy": -0.016257999999999998,
+      "altiAy": 0.041552,
+      "yilbasi": 0.33228499999999994,
+      "birYil": 0.36032899999999995,
+      "ucYil": 1.070982,
+      "besYil": 10.257458
     },
     "paraAkisi": {
-      "gunluk": -555329.14,
-      "besGun": null,
+      "gunluk": -380076.61,
+      "besGun": -2504753.93,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -9,
-      "besGun": null,
+      "gunluk": -3,
+      "besGun": -13,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HBU",
+        "fonAdi": "HSBC PORTFÖY BİST 30 ENDEKSİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.424575,
+        "tedavuldekiPaySayisi": 324141621,
+        "kisiSayisi": 2787,
+        "fonToplamDeger": 461764161.05,
+        "gunlukGetiri": 0.0025116,
+        "paraGirisiCikisi": -380076.61,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "HBU",
         "fonAdi": "HSBC PORTFÖY BİST 30 ENDEKSİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00322499,
       "paraGirisiCikisi": -555329.14,
       "yatirimciDegisimi": -9
+    },
+    {
+      "fonKodu": "HBU",
+      "fonAdi": "HSBC PORTFÖY BİST 30 ENDEKSİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.424575,
+      "tedavuldekiPaySayisi": 324141621,
+      "kisiSayisi": 2787,
+      "fonToplamDeger": 461764161.05,
+      "gunlukGetiri": 0.0025116,
+      "paraGirisiCikisi": -380076.61,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HBU",
+      "fonAdi": "HSBC PORTFÖY BİST 30 ENDEKSİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.424575,
+      "tedavuldekiPaySayisi": 324141621,
+      "kisiSayisi": 2787,
+      "fonToplamDeger": 461764161.05,
+      "gunlukGetiri": 0.0025116,
+      "paraGirisiCikisi": -380076.61,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "HBU",
       "fonAdi": "HSBC PORTFÖY BİST 30 ENDEKSİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

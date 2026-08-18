@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IDL",
     "slug": "idl",
@@ -12,44 +12,56 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 5.992261,
-    "tedavuldekiPaySayisi": 712586174,
-    "kisiSayisi": 3627,
-    "fonToplamDeger": 4270002576.43,
-    "gunlukGetiri": 0.00109176,
+    "fiyat": 6.01751,
+    "tedavuldekiPaySayisi": 702546991,
+    "kisiSayisi": 3656,
+    "fonToplamDeger": 4227583494.39,
+    "gunlukGetiri": 0.0042136,
     "getiriler": {
-      "birAy": 0.034308,
-      "ucAy": 0.10340999999999999,
-      "altiAy": 0.20725300000000002,
-      "yilbasi": 0.263531,
-      "birYil": 0.46697299999999997,
-      "ucYil": 2.539275,
-      "besYil": 4.329733
+      "birAy": 0.031949,
+      "ucAy": 0.103184,
+      "altiAy": 0.20957599999999998,
+      "yilbasi": 0.268855,
+      "birYil": 0.466227,
+      "ucYil": 2.543243,
+      "besYil": 4.346944
     },
     "paraAkisi": {
-      "gunluk": 92125380.15,
-      "besGun": null,
+      "gunluk": -60410884.09,
+      "besGun": 164756720.11,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
-      "besGun": null,
+      "gunluk": 29,
+      "besGun": -188,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IDL",
+        "fonAdi": "AKTİF PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 6.01751,
+        "tedavuldekiPaySayisi": 702546991,
+        "kisiSayisi": 3656,
+        "fonToplamDeger": 4227583494.39,
+        "gunlukGetiri": 0.0042136,
+        "paraGirisiCikisi": -60410884.09,
+        "yatirimciDegisimi": 29
+      },
       {
         "fonKodu": "IDL",
         "fonAdi": "AKTİF PORTFÖY PARA PİYASASI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00109176,
       "paraGirisiCikisi": 92125380.15,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "IDL",
+      "fonAdi": "AKTİF PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 6.01751,
+      "tedavuldekiPaySayisi": 702546991,
+      "kisiSayisi": 3656,
+      "fonToplamDeger": 4227583494.39,
+      "gunlukGetiri": 0.0042136,
+      "paraGirisiCikisi": -60410884.09,
+      "yatirimciDegisimi": 29
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IDL",
+      "fonAdi": "AKTİF PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 6.01751,
+      "tedavuldekiPaySayisi": 702546991,
+      "kisiSayisi": 3656,
+      "fonToplamDeger": 4227583494.39,
+      "gunlukGetiri": 0.0042136,
+      "paraGirisiCikisi": -60410884.09,
+      "yatirimciDegisimi": 29
+    },
     {
       "fonKodu": "IDL",
       "fonAdi": "AKTİF PORTFÖY PARA PİYASASI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

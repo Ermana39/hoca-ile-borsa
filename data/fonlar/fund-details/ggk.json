@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GGK",
     "slug": "ggk",
@@ -12,44 +12,56 @@
     "yonetici": "INVEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "inveo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 13.811362,
-    "tedavuldekiPaySayisi": 184694895,
-    "kisiSayisi": 12091,
-    "fonToplamDeger": 2550888143.64,
-    "gunlukGetiri": -0.00600841,
+    "fiyat": 13.893985,
+    "tedavuldekiPaySayisi": 184376223,
+    "kisiSayisi": 12072,
+    "fonToplamDeger": 2561720479.09,
+    "gunlukGetiri": 0.00598225,
     "getiriler": {
-      "birAy": 0.085952,
-      "ucAy": -0.02413,
-      "altiAy": -0.082494,
-      "yilbasi": 0.06915199999999999,
-      "birYil": 0.47033299999999995,
-      "ucYil": 3.001933,
-      "besYil": 12.699927
+      "birAy": 0.109846,
+      "ucAy": -0.002118,
+      "altiAy": -0.07983799999999999,
+      "yilbasi": 0.075548,
+      "birYil": 0.483536,
+      "ucYil": 2.953304,
+      "besYil": 12.756993
     },
     "paraAkisi": {
-      "gunluk": -939296.92,
-      "besGun": null,
+      "gunluk": -4427623.99,
+      "besGun": -9273005.68,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": null,
+      "gunluk": -19,
+      "besGun": -71,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GGK",
+        "fonAdi": "INVEO PORTFÖY ALTIN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 13.893985,
+        "tedavuldekiPaySayisi": 184376223,
+        "kisiSayisi": 12072,
+        "fonToplamDeger": 2561720479.09,
+        "gunlukGetiri": 0.00598225,
+        "paraGirisiCikisi": -4427623.99,
+        "yatirimciDegisimi": -19
+      },
       {
         "fonKodu": "GGK",
         "fonAdi": "INVEO PORTFÖY ALTIN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00600841,
       "paraGirisiCikisi": -939296.92,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "GGK",
+      "fonAdi": "INVEO PORTFÖY ALTIN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 13.893985,
+      "tedavuldekiPaySayisi": 184376223,
+      "kisiSayisi": 12072,
+      "fonToplamDeger": 2561720479.09,
+      "gunlukGetiri": 0.00598225,
+      "paraGirisiCikisi": -4427623.99,
+      "yatirimciDegisimi": -19
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GGK",
+      "fonAdi": "INVEO PORTFÖY ALTIN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 13.893985,
+      "tedavuldekiPaySayisi": 184376223,
+      "kisiSayisi": 12072,
+      "fonToplamDeger": 2561720479.09,
+      "gunlukGetiri": 0.00598225,
+      "paraGirisiCikisi": -4427623.99,
+      "yatirimciDegisimi": -19
+    },
     {
       "fonKodu": "GGK",
       "fonAdi": "INVEO PORTFÖY ALTIN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

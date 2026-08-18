@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ZPR",
     "slug": "zpr",
@@ -12,44 +12,56 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.531693,
-    "tedavuldekiPaySayisi": 15092061587,
-    "kisiSayisi": 894,
-    "fonToplamDeger": 23116408343.26,
-    "gunlukGetiri": 0.00109607,
+    "fiyat": 1.538373,
+    "tedavuldekiPaySayisi": 18023196919,
+    "kisiSayisi": 906,
+    "fonToplamDeger": 27726395264.87,
+    "gunlukGetiri": 0.00436119,
     "getiriler": {
-      "birAy": 0.034434,
-      "ucAy": 0.105479,
-      "altiAy": 0.209648,
-      "yilbasi": 0.26633,
-      "birYil": 0.483685,
+      "birAy": 0.032178,
+      "ucAy": 0.105512,
+      "altiAy": 0.21250800000000003,
+      "yilbasi": 0.271852,
+      "birYil": 0.482565,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -3886864360.68,
-      "besGun": null,
+      "gunluk": 4509179454.09,
+      "besGun": 436918537.44,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
-      "besGun": null,
+      "gunluk": 12,
+      "besGun": 17,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZPR",
+        "fonAdi": "ZİRAAT PORTFÖY PARA PİYASASI SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.538373,
+        "tedavuldekiPaySayisi": 18023196919,
+        "kisiSayisi": 906,
+        "fonToplamDeger": 27726395264.87,
+        "gunlukGetiri": 0.00436119,
+        "paraGirisiCikisi": 4509179454.09,
+        "yatirimciDegisimi": 12
+      },
       {
         "fonKodu": "ZPR",
         "fonAdi": "ZİRAAT PORTFÖY PARA PİYASASI SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00109607,
       "paraGirisiCikisi": -3886864360.68,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "ZPR",
+      "fonAdi": "ZİRAAT PORTFÖY PARA PİYASASI SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.538373,
+      "tedavuldekiPaySayisi": 18023196919,
+      "kisiSayisi": 906,
+      "fonToplamDeger": 27726395264.87,
+      "gunlukGetiri": 0.00436119,
+      "paraGirisiCikisi": 4509179454.09,
+      "yatirimciDegisimi": 12
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZPR",
+      "fonAdi": "ZİRAAT PORTFÖY PARA PİYASASI SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.538373,
+      "tedavuldekiPaySayisi": 18023196919,
+      "kisiSayisi": 906,
+      "fonToplamDeger": 27726395264.87,
+      "gunlukGetiri": 0.00436119,
+      "paraGirisiCikisi": 4509179454.09,
+      "yatirimciDegisimi": 12
+    },
     {
       "fonKodu": "ZPR",
       "fonAdi": "ZİRAAT PORTFÖY PARA PİYASASI SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

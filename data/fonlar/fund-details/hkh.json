@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "HKH",
     "slug": "hkh",
@@ -12,44 +12,56 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 8.314801,
-    "tedavuldekiPaySayisi": 100665620,
-    "kisiSayisi": 13735,
-    "fonToplamDeger": 837014620.01,
-    "gunlukGetiri": 0.00182803,
+    "fiyat": 8.468893,
+    "tedavuldekiPaySayisi": 97462527,
+    "kisiSayisi": 13665,
+    "fonToplamDeger": 825399691,
+    "gunlukGetiri": 0.01853225,
     "getiriler": {
-      "birAy": -0.018772,
-      "ucAy": -0.06066099999999999,
-      "altiAy": -0.084268,
-      "yilbasi": 0.053364,
-      "birYil": 0.03113,
-      "ucYil": 0.916486,
+      "birAy": -0.013863,
+      "ucAy": -0.051581999999999996,
+      "altiAy": -0.076783,
+      "yilbasi": 0.07288599999999999,
+      "birYil": 0.06390900000000001,
+      "ucYil": 0.924913,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1743605.45,
-      "besGun": null,
+      "gunluk": -27126651.89,
+      "besGun": -195773204.1,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -63,
-      "besGun": null,
+      "gunluk": -70,
+      "besGun": -238,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HKH",
+        "fonAdi": "HEDEF PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 8.468893,
+        "tedavuldekiPaySayisi": 97462527,
+        "kisiSayisi": 13665,
+        "fonToplamDeger": 825399691,
+        "gunlukGetiri": 0.01853225,
+        "paraGirisiCikisi": -27126651.89,
+        "yatirimciDegisimi": -70
+      },
       {
         "fonKodu": "HKH",
         "fonAdi": "HEDEF PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00182803,
       "paraGirisiCikisi": -1743605.45,
       "yatirimciDegisimi": -63
+    },
+    {
+      "fonKodu": "HKH",
+      "fonAdi": "HEDEF PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 8.468893,
+      "tedavuldekiPaySayisi": 97462527,
+      "kisiSayisi": 13665,
+      "fonToplamDeger": 825399691,
+      "gunlukGetiri": 0.01853225,
+      "paraGirisiCikisi": -27126651.89,
+      "yatirimciDegisimi": -70
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HKH",
+      "fonAdi": "HEDEF PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 8.468893,
+      "tedavuldekiPaySayisi": 97462527,
+      "kisiSayisi": 13665,
+      "fonToplamDeger": 825399691,
+      "gunlukGetiri": 0.01853225,
+      "paraGirisiCikisi": -27126651.89,
+      "yatirimciDegisimi": -70
+    },
     {
       "fonKodu": "HKH",
       "fonAdi": "HEDEF PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

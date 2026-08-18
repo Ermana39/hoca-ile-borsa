@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "EDN",
     "slug": "edn",
@@ -12,15 +12,15 @@
     "yonetici": "EMAA BLUE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "emaa-blue-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.022691,
-    "tedavuldekiPaySayisi": 259998753,
+    "fiyat": 1.024944,
+    "tedavuldekiPaySayisi": 260013516,
     "kisiSayisi": 34,
-    "fonToplamDeger": 265898508.56,
-    "gunlukGetiri": 0.00204879,
+    "fonToplamDeger": 266499391.89,
+    "gunlukGetiri": 0.00220301,
     "getiriler": {
-      "birAy": 0.027048000000000003,
+      "birAy": 0.028027000000000003,
       "ucAy": null,
       "altiAy": null,
       "yilbasi": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -110.45,
-      "besGun": null,
+      "gunluk": 15131.25,
+      "besGun": 40146279.28,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "EDN",
+        "fonAdi": "EMAA BLUE PORTFÖY DENGELİ DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.024944,
+        "tedavuldekiPaySayisi": 260013516,
+        "kisiSayisi": 34,
+        "fonToplamDeger": 266499391.89,
+        "gunlukGetiri": 0.00220301,
+        "paraGirisiCikisi": 15131.25,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "EDN",
         "fonAdi": "EMAA BLUE PORTFÖY DENGELİ DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00204879,
       "paraGirisiCikisi": -110.45,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "EDN",
+      "fonAdi": "EMAA BLUE PORTFÖY DENGELİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.024944,
+      "tedavuldekiPaySayisi": 260013516,
+      "kisiSayisi": 34,
+      "fonToplamDeger": 266499391.89,
+      "gunlukGetiri": 0.00220301,
+      "paraGirisiCikisi": 15131.25,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "EDN",
+      "fonAdi": "EMAA BLUE PORTFÖY DENGELİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.024944,
+      "tedavuldekiPaySayisi": 260013516,
+      "kisiSayisi": 34,
+      "fonToplamDeger": 266499391.89,
+      "gunlukGetiri": 0.00220301,
+      "paraGirisiCikisi": 15131.25,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "EDN",
       "fonAdi": "EMAA BLUE PORTFÖY DENGELİ DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TTE",
     "slug": "tte",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.816762,
-    "tedavuldekiPaySayisi": 2293793817,
-    "kisiSayisi": 45681,
-    "fonToplamDeger": 4167276667.02,
-    "gunlukGetiri": 0.01171336,
+    "fiyat": 1.809837,
+    "tedavuldekiPaySayisi": 2315895342,
+    "kisiSayisi": 46039,
+    "fonToplamDeger": 4191393686.85,
+    "gunlukGetiri": -0.00381173,
     "getiriler": {
-      "birAy": 0.099782,
-      "ucAy": 0.144529,
-      "altiAy": 0.548924,
-      "yilbasi": 0.8082670000000001,
-      "birYil": 0.822103,
-      "ucYil": 2.989814,
-      "besYil": 12.187399000000001
+      "birAy": 0.09158799999999999,
+      "ucAy": 0.12136,
+      "altiAy": 0.521269,
+      "yilbasi": 0.801374,
+      "birYil": 0.807928,
+      "ucYil": 2.931855,
+      "besYil": 12.160727999999999
     },
     "paraAkisi": {
-      "gunluk": -498270.6,
-      "besGun": null,
+      "gunluk": 40000157.7,
+      "besGun": 40835092.38,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 88,
-      "besGun": null,
+      "gunluk": 358,
+      "besGun": 614,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TTE",
+        "fonAdi": "İŞ PORTFÖY BIST TEKNOLOJİ AĞIRLIK SINIRLAMALI ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.809837,
+        "tedavuldekiPaySayisi": 2315895342,
+        "kisiSayisi": 46039,
+        "fonToplamDeger": 4191393686.85,
+        "gunlukGetiri": -0.00381173,
+        "paraGirisiCikisi": 40000157.7,
+        "yatirimciDegisimi": 358
+      },
       {
         "fonKodu": "TTE",
         "fonAdi": "İŞ PORTFÖY BIST TEKNOLOJİ AĞIRLIK SINIRLAMALI ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.01171336,
       "paraGirisiCikisi": -498270.6,
       "yatirimciDegisimi": 88
+    },
+    {
+      "fonKodu": "TTE",
+      "fonAdi": "İŞ PORTFÖY BIST TEKNOLOJİ AĞIRLIK SINIRLAMALI ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.809837,
+      "tedavuldekiPaySayisi": 2315895342,
+      "kisiSayisi": 46039,
+      "fonToplamDeger": 4191393686.85,
+      "gunlukGetiri": -0.00381173,
+      "paraGirisiCikisi": 40000157.7,
+      "yatirimciDegisimi": 358
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TTE",
+      "fonAdi": "İŞ PORTFÖY BIST TEKNOLOJİ AĞIRLIK SINIRLAMALI ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.809837,
+      "tedavuldekiPaySayisi": 2315895342,
+      "kisiSayisi": 46039,
+      "fonToplamDeger": 4191393686.85,
+      "gunlukGetiri": -0.00381173,
+      "paraGirisiCikisi": 40000157.7,
+      "yatirimciDegisimi": 358
+    },
     {
       "fonKodu": "TTE",
       "fonAdi": "İŞ PORTFÖY BIST TEKNOLOJİ AĞIRLIK SINIRLAMALI ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

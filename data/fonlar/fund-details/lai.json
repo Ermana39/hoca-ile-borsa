@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "LAI",
     "slug": "lai",
@@ -12,13 +12,13 @@
     "yonetici": "ATLAS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "atlas-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.962803,
-    "tedavuldekiPaySayisi": 252657491,
-    "kisiSayisi": 38,
-    "fonToplamDeger": 243259358.52,
-    "gunlukGetiri": 0.03046321,
+    "fiyat": 1.021993,
+    "tedavuldekiPaySayisi": 150808828,
+    "kisiSayisi": 14,
+    "fonToplamDeger": 154125579.94,
+    "gunlukGetiri": 0.06147675,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": -104088620.65,
+      "besGun": -104088620.65,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": -24,
+      "besGun": -24,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "LAI",
+        "fonAdi": "ATLAS PORTFÖY İKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.021993,
+        "tedavuldekiPaySayisi": 150808828,
+        "kisiSayisi": 14,
+        "fonToplamDeger": 154125579.94,
+        "gunlukGetiri": 0.06147675,
+        "paraGirisiCikisi": -104088620.65,
+        "yatirimciDegisimi": -24
+      },
       {
         "fonKodu": "LAI",
         "fonAdi": "ATLAS PORTFÖY İKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.03046321,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "LAI",
+      "fonAdi": "ATLAS PORTFÖY İKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.021993,
+      "tedavuldekiPaySayisi": 150808828,
+      "kisiSayisi": 14,
+      "fonToplamDeger": 154125579.94,
+      "gunlukGetiri": 0.06147675,
+      "paraGirisiCikisi": -104088620.65,
+      "yatirimciDegisimi": -24
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "LAI",
+      "fonAdi": "ATLAS PORTFÖY İKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.021993,
+      "tedavuldekiPaySayisi": 150808828,
+      "kisiSayisi": 14,
+      "fonToplamDeger": 154125579.94,
+      "gunlukGetiri": 0.06147675,
+      "paraGirisiCikisi": -104088620.65,
+      "yatirimciDegisimi": -24
+    },
     {
       "fonKodu": "LAI",
       "fonAdi": "ATLAS PORTFÖY İKİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

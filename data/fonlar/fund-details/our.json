@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "OUR",
     "slug": "our",
@@ -12,13 +12,13 @@
     "yonetici": "OSMANLI PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "osmanli-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 83.706414,
+    "fiyat": 83.98365,
     "tedavuldekiPaySayisi": 375508,
     "kisiSayisi": 11,
-    "fonToplamDeger": 31432428.24,
-    "gunlukGetiri": 0.00055424,
+    "fonToplamDeger": 31536532.39,
+    "gunlukGetiri": 0.003312,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -30,26 +30,38 @@
     },
     "paraAkisi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OUR",
+        "fonAdi": "OSMANLI PORTFÖY PASİFİK SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 83.98365,
+        "tedavuldekiPaySayisi": 375508,
+        "kisiSayisi": 11,
+        "fonToplamDeger": 31536532.39,
+        "gunlukGetiri": 0.003312,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "OUR",
         "fonAdi": "OSMANLI PORTFÖY PASİFİK SERBEST (DÖVİZ) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00055424,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "OUR",
+      "fonAdi": "OSMANLI PORTFÖY PASİFİK SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 83.98365,
+      "tedavuldekiPaySayisi": 375508,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 31536532.39,
+      "gunlukGetiri": 0.003312,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OUR",
+      "fonAdi": "OSMANLI PORTFÖY PASİFİK SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 83.98365,
+      "tedavuldekiPaySayisi": 375508,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 31536532.39,
+      "gunlukGetiri": 0.003312,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "OUR",
       "fonAdi": "OSMANLI PORTFÖY PASİFİK SERBEST (DÖVİZ) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

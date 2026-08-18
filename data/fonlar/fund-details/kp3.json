@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KP3",
     "slug": "kp3",
@@ -12,44 +12,56 @@
     "yonetici": "KARE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kare-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 52.620525,
+    "fiyat": 53.079588,
     "tedavuldekiPaySayisi": 267344,
-    "kisiSayisi": 12,
-    "fonToplamDeger": 14067781.67,
-    "gunlukGetiri": -0.00039349,
+    "kisiSayisi": 11,
+    "fonToplamDeger": 14190509.36,
+    "gunlukGetiri": 0.00872403,
     "getiriler": {
-      "birAy": 0.023389000000000004,
-      "ucAy": 0.030212,
-      "altiAy": 0.056139999999999995,
-      "yilbasi": 0.06826,
-      "birYil": 0.117582,
+      "birAy": 0.029517,
+      "ucAy": 0.044539,
+      "altiAy": 0.063223,
+      "yilbasi": 0.07758,
+      "birYil": 0.125914,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 157.86,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": -427847.78,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": -1,
+      "besGun": -1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KP3",
+        "fonAdi": "KARE PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 53.079588,
+        "tedavuldekiPaySayisi": 267344,
+        "kisiSayisi": 11,
+        "fonToplamDeger": 14190509.36,
+        "gunlukGetiri": 0.00872403,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "KP3",
         "fonAdi": "KARE PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00039349,
       "paraGirisiCikisi": 157.86,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KP3",
+      "fonAdi": "KARE PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 53.079588,
+      "tedavuldekiPaySayisi": 267344,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 14190509.36,
+      "gunlukGetiri": 0.00872403,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KP3",
+      "fonAdi": "KARE PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 53.079588,
+      "tedavuldekiPaySayisi": 267344,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 14190509.36,
+      "gunlukGetiri": 0.00872403,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "KP3",
       "fonAdi": "KARE PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

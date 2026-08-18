@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KHC",
     "slug": "khc",
@@ -12,44 +12,56 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 2.116394,
-    "tedavuldekiPaySayisi": 33231824,
-    "kisiSayisi": 1514,
-    "fonToplamDeger": 70331626.38,
-    "gunlukGetiri": 0.0033594,
+    "fiyat": 2.138646,
+    "tedavuldekiPaySayisi": 23839173,
+    "kisiSayisi": 1505,
+    "fonToplamDeger": 50983557.85,
+    "gunlukGetiri": 0.01051411,
     "getiriler": {
-      "birAy": -0.006368,
-      "ucAy": -0.058624,
-      "altiAy": 0.069006,
-      "yilbasi": 0.283283,
-      "birYil": 0.339281,
+      "birAy": -0.010554,
+      "ucAy": -0.047472,
+      "altiAy": 0.067083,
+      "yilbasi": 0.296775,
+      "birYil": 0.353489,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -20043133.72,
-      "besGun": null,
+      "gunluk": -20087555.49,
+      "besGun": -51813979.78,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": -9,
-      "besGun": null,
+      "besGun": -28,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KHC",
+        "fonAdi": "PARDUS PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 2.138646,
+        "tedavuldekiPaySayisi": 23839173,
+        "kisiSayisi": 1505,
+        "fonToplamDeger": 50983557.85,
+        "gunlukGetiri": 0.01051411,
+        "paraGirisiCikisi": -20087555.49,
+        "yatirimciDegisimi": -9
+      },
       {
         "fonKodu": "KHC",
         "fonAdi": "PARDUS PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.0033594,
       "paraGirisiCikisi": -20043133.72,
       "yatirimciDegisimi": -9
+    },
+    {
+      "fonKodu": "KHC",
+      "fonAdi": "PARDUS PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 2.138646,
+      "tedavuldekiPaySayisi": 23839173,
+      "kisiSayisi": 1505,
+      "fonToplamDeger": 50983557.85,
+      "gunlukGetiri": 0.01051411,
+      "paraGirisiCikisi": -20087555.49,
+      "yatirimciDegisimi": -9
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KHC",
+      "fonAdi": "PARDUS PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 2.138646,
+      "tedavuldekiPaySayisi": 23839173,
+      "kisiSayisi": 1505,
+      "fonToplamDeger": 50983557.85,
+      "gunlukGetiri": 0.01051411,
+      "paraGirisiCikisi": -20087555.49,
+      "yatirimciDegisimi": -9
+    },
     {
       "fonKodu": "KHC",
       "fonAdi": "PARDUS PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

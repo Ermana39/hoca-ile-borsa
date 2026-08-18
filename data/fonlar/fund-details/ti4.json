@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TI4",
     "slug": "ti4",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.064428,
-    "tedavuldekiPaySayisi": 31090600870,
-    "kisiSayisi": 14091,
-    "fonToplamDeger": 2003107432.01,
-    "gunlukGetiri": 0.00128992,
+    "fiyat": 0.06467,
+    "tedavuldekiPaySayisi": 30981089840,
+    "kisiSayisi": 14058,
+    "fonToplamDeger": 2003532292.33,
+    "gunlukGetiri": 0.00375613,
     "getiriler": {
-      "birAy": 0.024749,
-      "ucAy": 0.083661,
-      "altiAy": 0.137922,
-      "yilbasi": 0.157549,
-      "birYil": 0.38626399999999994,
-      "ucYil": 2.156676,
-      "besYil": 5.5663789999999995
+      "birAy": 0.024135,
+      "ucAy": 0.081547,
+      "altiAy": 0.134044,
+      "yilbasi": 0.16189699999999999,
+      "birYil": 0.385895,
+      "ucYil": 2.156027,
+      "besYil": 5.592998
     },
     "paraAkisi": {
-      "gunluk": -16365982.58,
-      "besGun": null,
+      "gunluk": -7082078.31,
+      "besGun": -33143334.2,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": -33,
+      "besGun": -112,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TI4",
+        "fonAdi": "İŞ PORTFÖY TEMKİNLİ DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 0.06467,
+        "tedavuldekiPaySayisi": 30981089840,
+        "kisiSayisi": 14058,
+        "fonToplamDeger": 2003532292.33,
+        "gunlukGetiri": 0.00375613,
+        "paraGirisiCikisi": -7082078.31,
+        "yatirimciDegisimi": -33
+      },
       {
         "fonKodu": "TI4",
         "fonAdi": "İŞ PORTFÖY TEMKİNLİ DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00128992,
       "paraGirisiCikisi": -16365982.58,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TI4",
+      "fonAdi": "İŞ PORTFÖY TEMKİNLİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 0.06467,
+      "tedavuldekiPaySayisi": 30981089840,
+      "kisiSayisi": 14058,
+      "fonToplamDeger": 2003532292.33,
+      "gunlukGetiri": 0.00375613,
+      "paraGirisiCikisi": -7082078.31,
+      "yatirimciDegisimi": -33
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TI4",
+      "fonAdi": "İŞ PORTFÖY TEMKİNLİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 0.06467,
+      "tedavuldekiPaySayisi": 30981089840,
+      "kisiSayisi": 14058,
+      "fonToplamDeger": 2003532292.33,
+      "gunlukGetiri": 0.00375613,
+      "paraGirisiCikisi": -7082078.31,
+      "yatirimciDegisimi": -33
+    },
     {
       "fonKodu": "TI4",
       "fonAdi": "İŞ PORTFÖY TEMKİNLİ DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

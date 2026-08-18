@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YLB",
     "slug": "ylb",
@@ -12,13 +12,13 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.805628,
-    "tedavuldekiPaySayisi": 58752149752,
-    "kisiSayisi": 351496,
-    "fonToplamDeger": 106084527236.11,
-    "gunlukGetiri": 0.00106003,
+    "fiyat": 1.813224,
+    "tedavuldekiPaySayisi": 58947200643,
+    "kisiSayisi": 353720,
+    "fonToplamDeger": 106884462913.62,
+    "gunlukGetiri": 0.00420685,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 350462754.55,
-      "besGun": null,
+      "gunluk": 353670956.78,
+      "besGun": 1201875971.98,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 399,
-      "besGun": null,
+      "gunluk": 2224,
+      "besGun": 3063,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YLB",
+        "fonAdi": "YAPI KREDİ PORTFÖY PARA PİYASASI FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.813224,
+        "tedavuldekiPaySayisi": 58947200643,
+        "kisiSayisi": 353720,
+        "fonToplamDeger": 106884462913.62,
+        "gunlukGetiri": 0.00420685,
+        "paraGirisiCikisi": 353670956.78,
+        "yatirimciDegisimi": 2224
+      },
       {
         "fonKodu": "YLB",
         "fonAdi": "YAPI KREDİ PORTFÖY PARA PİYASASI FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00106003,
       "paraGirisiCikisi": 350462754.55,
       "yatirimciDegisimi": 399
+    },
+    {
+      "fonKodu": "YLB",
+      "fonAdi": "YAPI KREDİ PORTFÖY PARA PİYASASI FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.813224,
+      "tedavuldekiPaySayisi": 58947200643,
+      "kisiSayisi": 353720,
+      "fonToplamDeger": 106884462913.62,
+      "gunlukGetiri": 0.00420685,
+      "paraGirisiCikisi": 353670956.78,
+      "yatirimciDegisimi": 2224
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YLB",
+      "fonAdi": "YAPI KREDİ PORTFÖY PARA PİYASASI FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.813224,
+      "tedavuldekiPaySayisi": 58947200643,
+      "kisiSayisi": 353720,
+      "fonToplamDeger": 106884462913.62,
+      "gunlukGetiri": 0.00420685,
+      "paraGirisiCikisi": 353670956.78,
+      "yatirimciDegisimi": 2224
+    },
     {
       "fonKodu": "YLB",
       "fonAdi": "YAPI KREDİ PORTFÖY PARA PİYASASI FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

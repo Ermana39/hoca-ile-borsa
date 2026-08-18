@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "SKL",
     "slug": "skl",
@@ -12,13 +12,13 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 2.018757,
-    "tedavuldekiPaySayisi": 66935021,
-    "kisiSayisi": 745,
-    "fonToplamDeger": 135125574.86,
-    "gunlukGetiri": 0.00104828,
+    "fiyat": 2.02716,
+    "tedavuldekiPaySayisi": 67517211,
+    "kisiSayisi": 744,
+    "fonToplamDeger": 136868216.12,
+    "gunlukGetiri": 0.00416246,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1106424.19,
-      "besGun": null,
+      "gunluk": 1180192.28,
+      "besGun": -11942165.24,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": -1,
-      "besGun": null,
+      "besGun": -4,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SKL",
+        "fonAdi": "TEB PORTFÖY ŞEKERBANK PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 2.02716,
+        "tedavuldekiPaySayisi": 67517211,
+        "kisiSayisi": 744,
+        "fonToplamDeger": 136868216.12,
+        "gunlukGetiri": 0.00416246,
+        "paraGirisiCikisi": 1180192.28,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "SKL",
         "fonAdi": "TEB PORTFÖY ŞEKERBANK PARA PİYASASI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00104828,
       "paraGirisiCikisi": 1106424.19,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "SKL",
+      "fonAdi": "TEB PORTFÖY ŞEKERBANK PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 2.02716,
+      "tedavuldekiPaySayisi": 67517211,
+      "kisiSayisi": 744,
+      "fonToplamDeger": 136868216.12,
+      "gunlukGetiri": 0.00416246,
+      "paraGirisiCikisi": 1180192.28,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SKL",
+      "fonAdi": "TEB PORTFÖY ŞEKERBANK PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 2.02716,
+      "tedavuldekiPaySayisi": 67517211,
+      "kisiSayisi": 744,
+      "fonToplamDeger": 136868216.12,
+      "gunlukGetiri": 0.00416246,
+      "paraGirisiCikisi": 1180192.28,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "SKL",
       "fonAdi": "TEB PORTFÖY ŞEKERBANK PARA PİYASASI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

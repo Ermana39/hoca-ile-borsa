@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import Link from "@/components/NoPrefetchLink";
-import { FonBreadcrumb, ManagerTable, MetricCard } from "../_components/FonUi";
+import { FonBreadcrumb, MetricCard, type ManagerTableItem } from "../_components/FonUi";
+import ManagerSearchClient from "./ManagerSearchClient";
 import {
   formatCompactTL,
   formatDate,
@@ -18,29 +20,18 @@ export const metadata: Metadata = {
   },
 };
 
-function normalizeSearch(value: string) {
-  return value
-    .toLocaleLowerCase("tr-TR")
-    .replace(/ı/g, "i")
-    .replace(/ğ/g, "g")
-    .replace(/ü/g, "u")
-    .replace(/ş/g, "s")
-    .replace(/ö/g, "o")
-    .replace(/ç/g, "c")
-    .trim();
-}
-
-export default async function FonYoneticilerPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ q?: string }>;
-}) {
-  const params = await searchParams;
+export default function FonYoneticilerPage() {
   const data = getManagersData();
-  const q = normalizeSearch(params.q ?? "");
-  const managers = data.yoneticiler.filter((manager) =>
-    q ? normalizeSearch(manager.yonetici).includes(q) : true
-  );
+  const managers: ManagerTableItem[] = data.yoneticiler.map((manager) => ({
+    slug: manager.slug,
+    yonetici: manager.yonetici,
+    yonetilenFonSayisi: manager.yonetilenFonSayisi,
+    toplamFonBuyuklugu: manager.toplamFonBuyuklugu,
+    toplamYatirimciSayisi: manager.toplamYatirimciSayisi,
+    paraAkisi: manager.paraAkisi,
+    ortalamaGetiri: manager.ortalamaGetiri,
+    enBuyukFon: manager.enBuyukFon,
+  }));
   const biggest = data.yoneticiler[0] ?? null;
   const topFlow = [...data.yoneticiler]
     .filter(
@@ -86,24 +77,9 @@ export default async function FonYoneticilerPage({
           />
         </section>
 
-        <form action="/fonlar/yoneticiler" className="mb-5 rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-          <div className="flex flex-col gap-2 md:flex-row">
-            <input
-              name="q"
-              defaultValue={params.q ?? ""}
-              placeholder="Yönetici / kurucu ara"
-              className="w-full rounded-xl border border-slate-200 bg-white px-3 py-3 text-sm text-slate-900 outline-none focus:border-blue-400"
-            />
-            <button type="submit" className="rounded-xl bg-blue-700 px-5 py-2 text-sm font-bold text-white hover:bg-blue-800">
-              Ara
-            </button>
-            <Link href="/fonlar/yoneticiler" className="rounded-xl border border-slate-200 bg-white px-5 py-2 text-center text-sm font-bold text-slate-700 hover:bg-slate-50">
-              Temizle
-            </Link>
-          </div>
-        </form>
-
-        <ManagerTable managers={managers} />
+        <Suspense fallback={<p className="text-sm text-slate-500">Yöneticiler hazırlanıyor...</p>}>
+          <ManagerSearchClient managers={managers} />
+        </Suspense>
 
         <section className="mt-12 border-t border-slate-200 pt-10">
           <h2 className="text-2xl font-bold text-slate-950">

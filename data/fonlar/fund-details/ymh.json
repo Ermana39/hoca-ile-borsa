@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YMH",
     "slug": "ymh",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.581524,
-    "tedavuldekiPaySayisi": 265986841,
-    "kisiSayisi": 321,
-    "fonToplamDeger": 420664478.53,
-    "gunlukGetiri": 0.00282105,
+    "fiyat": 1.584109,
+    "tedavuldekiPaySayisi": 265687170,
+    "kisiSayisi": 320,
+    "fonToplamDeger": 420877483.89,
+    "gunlukGetiri": 0.0016345,
     "getiriler": {
-      "birAy": 0.027498,
-      "ucAy": 0.084856,
-      "altiAy": 0.15990500000000002,
-      "yilbasi": 0.201756,
-      "birYil": 0.34547100000000003,
+      "birAy": 0.023616,
+      "ucAy": 0.07983,
+      "altiAy": 0.158933,
+      "yilbasi": 0.20372,
+      "birYil": 0.34204300000000004,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1165804.6,
-      "besGun": null,
+      "gunluk": -474711.53,
+      "besGun": -39617500.78,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": -1,
-      "besGun": null,
+      "besGun": -5,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YMH",
+        "fonAdi": "YAPI KREDİ PORTFÖY MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.584109,
+        "tedavuldekiPaySayisi": 265687170,
+        "kisiSayisi": 320,
+        "fonToplamDeger": 420877483.89,
+        "gunlukGetiri": 0.0016345,
+        "paraGirisiCikisi": -474711.53,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "YMH",
         "fonAdi": "YAPI KREDİ PORTFÖY MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00282105,
       "paraGirisiCikisi": -1165804.6,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "YMH",
+      "fonAdi": "YAPI KREDİ PORTFÖY MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.584109,
+      "tedavuldekiPaySayisi": 265687170,
+      "kisiSayisi": 320,
+      "fonToplamDeger": 420877483.89,
+      "gunlukGetiri": 0.0016345,
+      "paraGirisiCikisi": -474711.53,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YMH",
+      "fonAdi": "YAPI KREDİ PORTFÖY MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.584109,
+      "tedavuldekiPaySayisi": 265687170,
+      "kisiSayisi": 320,
+      "fonToplamDeger": 420877483.89,
+      "gunlukGetiri": 0.0016345,
+      "paraGirisiCikisi": -474711.53,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "YMH",
       "fonAdi": "YAPI KREDİ PORTFÖY MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

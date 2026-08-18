@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KRS",
     "slug": "krs",
@@ -12,44 +12,56 @@
     "yonetici": "KARE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kare-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.52047,
-    "tedavuldekiPaySayisi": 2900805400,
-    "kisiSayisi": 1136,
-    "fonToplamDeger": 1509783112.29,
-    "gunlukGetiri": 0.00220093,
+    "fiyat": 0.523738,
+    "tedavuldekiPaySayisi": 2889914966,
+    "kisiSayisi": 1134,
+    "fonToplamDeger": 1513557485.63,
+    "gunlukGetiri": 0.00627894,
     "getiriler": {
-      "birAy": 0.035074999999999995,
-      "ucAy": 0.043367,
-      "altiAy": 0.070675,
-      "yilbasi": 0.13666999999999999,
-      "birYil": 0.25509699999999996,
-      "ucYil": 1.249455,
-      "besYil": 5.5505830000000005
+      "birAy": 0.051556,
+      "ucAy": 0.058845999999999996,
+      "altiAy": 0.08847200000000001,
+      "yilbasi": 0.143807,
+      "birYil": 0.25809,
+      "ucYil": 1.2987700000000002,
+      "besYil": 5.74225
     },
     "paraAkisi": {
-      "gunluk": -578520.1,
-      "besGun": null,
+      "gunluk": -5703734.12,
+      "besGun": -11155283.18,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": null,
+      "gunluk": -2,
+      "besGun": -15,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KRS",
+        "fonAdi": "KARE PORTFÖY SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 0.523738,
+        "tedavuldekiPaySayisi": 2889914966,
+        "kisiSayisi": 1134,
+        "fonToplamDeger": 1513557485.63,
+        "gunlukGetiri": 0.00627894,
+        "paraGirisiCikisi": -5703734.12,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "KRS",
         "fonAdi": "KARE PORTFÖY SERBEST (DÖVİZ) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00220093,
       "paraGirisiCikisi": -578520.1,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "KRS",
+      "fonAdi": "KARE PORTFÖY SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 0.523738,
+      "tedavuldekiPaySayisi": 2889914966,
+      "kisiSayisi": 1134,
+      "fonToplamDeger": 1513557485.63,
+      "gunlukGetiri": 0.00627894,
+      "paraGirisiCikisi": -5703734.12,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KRS",
+      "fonAdi": "KARE PORTFÖY SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 0.523738,
+      "tedavuldekiPaySayisi": 2889914966,
+      "kisiSayisi": 1134,
+      "fonToplamDeger": 1513557485.63,
+      "gunlukGetiri": 0.00627894,
+      "paraGirisiCikisi": -5703734.12,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "KRS",
       "fonAdi": "KARE PORTFÖY SERBEST (DÖVİZ) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

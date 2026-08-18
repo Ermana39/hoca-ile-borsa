@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "HVV",
     "slug": "hvv",
@@ -12,13 +12,13 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 69.144383,
+    "fiyat": 69.440553,
     "tedavuldekiPaySayisi": 45552140,
     "kisiSayisi": 1,
-    "fonToplamDeger": 3149674613.56,
-    "gunlukGetiri": 0.00036437,
+    "fonToplamDeger": 3163165801.02,
+    "gunlukGetiri": 0.00428336,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -30,26 +30,38 @@
     },
     "paraAkisi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HVV",
+        "fonAdi": "AK PORTFÖY HERAKLES SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-18",
+        "fiyat": 69.440553,
+        "tedavuldekiPaySayisi": 45552140,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 3163165801.02,
+        "gunlukGetiri": 0.00428336,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "HVV",
         "fonAdi": "AK PORTFÖY HERAKLES SERBEST (DÖVİZ) ÖZEL FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00036437,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HVV",
+      "fonAdi": "AK PORTFÖY HERAKLES SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-18",
+      "fiyat": 69.440553,
+      "tedavuldekiPaySayisi": 45552140,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 3163165801.02,
+      "gunlukGetiri": 0.00428336,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HVV",
+      "fonAdi": "AK PORTFÖY HERAKLES SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-18",
+      "fiyat": 69.440553,
+      "tedavuldekiPaySayisi": 45552140,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 3163165801.02,
+      "gunlukGetiri": 0.00428336,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "HVV",
       "fonAdi": "AK PORTFÖY HERAKLES SERBEST (DÖVİZ) ÖZEL FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "FYT",
     "slug": "fyt",
@@ -12,13 +12,13 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.362944,
-    "tedavuldekiPaySayisi": 8605892131,
-    "kisiSayisi": 96914,
-    "fonToplamDeger": 3123455260.07,
-    "gunlukGetiri": 0.00127731,
+    "fiyat": 0.364414,
+    "tedavuldekiPaySayisi": 8652820607,
+    "kisiSayisi": 96873,
+    "fonToplamDeger": 3153205189.83,
+    "gunlukGetiri": 0.00405021,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -247577499.39,
-      "besGun": null,
+      "gunluk": 17101393.65,
+      "besGun": -205060939.08,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -10,
-      "besGun": null,
+      "gunluk": -41,
+      "besGun": -154,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FYT",
+        "fonAdi": "QNB PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 0.364414,
+        "tedavuldekiPaySayisi": 8652820607,
+        "kisiSayisi": 96873,
+        "fonToplamDeger": 3153205189.83,
+        "gunlukGetiri": 0.00405021,
+        "paraGirisiCikisi": 17101393.65,
+        "yatirimciDegisimi": -41
+      },
       {
         "fonKodu": "FYT",
         "fonAdi": "QNB PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00127731,
       "paraGirisiCikisi": -247577499.39,
       "yatirimciDegisimi": -10
+    },
+    {
+      "fonKodu": "FYT",
+      "fonAdi": "QNB PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.364414,
+      "tedavuldekiPaySayisi": 8652820607,
+      "kisiSayisi": 96873,
+      "fonToplamDeger": 3153205189.83,
+      "gunlukGetiri": 0.00405021,
+      "paraGirisiCikisi": 17101393.65,
+      "yatirimciDegisimi": -41
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FYT",
+      "fonAdi": "QNB PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.364414,
+      "tedavuldekiPaySayisi": 8652820607,
+      "kisiSayisi": 96873,
+      "fonToplamDeger": 3153205189.83,
+      "gunlukGetiri": 0.00405021,
+      "paraGirisiCikisi": 17101393.65,
+      "yatirimciDegisimi": -41
+    },
     {
       "fonKodu": "FYT",
       "fonAdi": "QNB PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

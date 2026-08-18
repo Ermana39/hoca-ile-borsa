@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KPD",
     "slug": "kpd",
@@ -12,44 +12,56 @@
     "yonetici": "KUVEYT TÜRK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kuveyt-turk-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 48.641217,
-    "tedavuldekiPaySayisi": 6383206,
-    "kisiSayisi": 548,
-    "fonToplamDeger": 310486910.83,
-    "gunlukGetiri": 0.00155569,
+    "fiyat": 48.736911,
+    "tedavuldekiPaySayisi": 6264819,
+    "kisiSayisi": 547,
+    "fonToplamDeger": 305327927.5,
+    "gunlukGetiri": 0.00196734,
     "getiriler": {
-      "birAy": 0.017341,
-      "ucAy": 0.048799999999999996,
-      "altiAy": 0.074266,
-      "yilbasi": 0.093459,
-      "birYil": 0.176964,
+      "birAy": 0.017585,
+      "ucAy": 0.05141,
+      "altiAy": 0.073235,
+      "yilbasi": 0.09561,
+      "birYil": 0.17546,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1025016.37,
-      "besGun": null,
+      "gunluk": -5769816.68,
+      "besGun": -51251169.47,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
-      "besGun": null,
+      "gunluk": -1,
+      "besGun": -8,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KPD",
+        "fonAdi": "KUVEYT TÜRK PORTFÖY KAR PAYI ÖDEYEN KATILIM SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 48.736911,
+        "tedavuldekiPaySayisi": 6264819,
+        "kisiSayisi": 547,
+        "fonToplamDeger": 305327927.5,
+        "gunlukGetiri": 0.00196734,
+        "paraGirisiCikisi": -5769816.68,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "KPD",
         "fonAdi": "KUVEYT TÜRK PORTFÖY KAR PAYI ÖDEYEN KATILIM SERBEST (DÖVİZ) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00155569,
       "paraGirisiCikisi": 1025016.37,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "KPD",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY KAR PAYI ÖDEYEN KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 48.736911,
+      "tedavuldekiPaySayisi": 6264819,
+      "kisiSayisi": 547,
+      "fonToplamDeger": 305327927.5,
+      "gunlukGetiri": 0.00196734,
+      "paraGirisiCikisi": -5769816.68,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KPD",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY KAR PAYI ÖDEYEN KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 48.736911,
+      "tedavuldekiPaySayisi": 6264819,
+      "kisiSayisi": 547,
+      "fonToplamDeger": 305327927.5,
+      "gunlukGetiri": 0.00196734,
+      "paraGirisiCikisi": -5769816.68,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "KPD",
       "fonAdi": "KUVEYT TÜRK PORTFÖY KAR PAYI ÖDEYEN KATILIM SERBEST (DÖVİZ) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

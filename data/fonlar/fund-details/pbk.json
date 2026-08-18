@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PBK",
     "slug": "pbk",
@@ -12,44 +12,56 @@
     "yonetici": "ASTRA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "astra-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 58.022023,
-    "tedavuldekiPaySayisi": 1847328,
-    "kisiSayisi": 117,
-    "fonToplamDeger": 107185708.36,
-    "gunlukGetiri": 0.00142627,
+    "fiyat": 58.212777,
+    "tedavuldekiPaySayisi": 1847238,
+    "kisiSayisi": 115,
+    "fonToplamDeger": 107532854,
+    "gunlukGetiri": 0.00328761,
     "getiriler": {
-      "birAy": 0.017678,
-      "ucAy": 0.046807999999999995,
-      "altiAy": 0.088657,
-      "yilbasi": 0.112409,
-      "birYil": 0.22365400000000002,
-      "ucYil": 1.046383,
-      "besYil": 5.885351000000001
+      "birAy": 0.018992,
+      "ucAy": 0.05027,
+      "altiAy": 0.08768100000000001,
+      "yilbasi": 0.116067,
+      "birYil": 0.223816,
+      "ucYil": 1.054919,
+      "besYil": 6.000807
     },
     "paraAkisi": {
-      "gunluk": -868589.68,
-      "besGun": null,
+      "gunluk": -5239.15,
+      "besGun": -9028713.65,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": null,
+      "gunluk": -2,
+      "besGun": -3,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PBK",
+        "fonAdi": "ASTRA PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 58.212777,
+        "tedavuldekiPaySayisi": 1847238,
+        "kisiSayisi": 115,
+        "fonToplamDeger": 107532854,
+        "gunlukGetiri": 0.00328761,
+        "paraGirisiCikisi": -5239.15,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "PBK",
         "fonAdi": "ASTRA PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00142627,
       "paraGirisiCikisi": -868589.68,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "PBK",
+      "fonAdi": "ASTRA PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 58.212777,
+      "tedavuldekiPaySayisi": 1847238,
+      "kisiSayisi": 115,
+      "fonToplamDeger": 107532854,
+      "gunlukGetiri": 0.00328761,
+      "paraGirisiCikisi": -5239.15,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PBK",
+      "fonAdi": "ASTRA PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 58.212777,
+      "tedavuldekiPaySayisi": 1847238,
+      "kisiSayisi": 115,
+      "fonToplamDeger": 107532854,
+      "gunlukGetiri": 0.00328761,
+      "paraGirisiCikisi": -5239.15,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "PBK",
       "fonAdi": "ASTRA PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

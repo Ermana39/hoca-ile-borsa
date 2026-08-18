@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IOP",
     "slug": "iop",
@@ -12,13 +12,13 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 6.275961,
-    "tedavuldekiPaySayisi": 1088415409,
-    "kisiSayisi": 6487,
-    "fonToplamDeger": 6830852775.01,
-    "gunlukGetiri": 0.00107014,
+    "fiyat": 6.302943,
+    "tedavuldekiPaySayisi": 1082393506,
+    "kisiSayisi": 6479,
+    "fonToplamDeger": 6822264073.66,
+    "gunlukGetiri": 0.00429926,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 23108872.9,
-      "besGun": null,
+      "gunluk": -37955711.36,
+      "besGun": -173425185.82,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": null,
+      "gunluk": -8,
+      "besGun": -52,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IOP",
+        "fonAdi": "İŞ PORTFÖY ODEABANK PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 6.302943,
+        "tedavuldekiPaySayisi": 1082393506,
+        "kisiSayisi": 6479,
+        "fonToplamDeger": 6822264073.66,
+        "gunlukGetiri": 0.00429926,
+        "paraGirisiCikisi": -37955711.36,
+        "yatirimciDegisimi": -8
+      },
       {
         "fonKodu": "IOP",
         "fonAdi": "İŞ PORTFÖY ODEABANK PARA PİYASASI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00107014,
       "paraGirisiCikisi": 23108872.9,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "IOP",
+      "fonAdi": "İŞ PORTFÖY ODEABANK PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 6.302943,
+      "tedavuldekiPaySayisi": 1082393506,
+      "kisiSayisi": 6479,
+      "fonToplamDeger": 6822264073.66,
+      "gunlukGetiri": 0.00429926,
+      "paraGirisiCikisi": -37955711.36,
+      "yatirimciDegisimi": -8
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IOP",
+      "fonAdi": "İŞ PORTFÖY ODEABANK PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 6.302943,
+      "tedavuldekiPaySayisi": 1082393506,
+      "kisiSayisi": 6479,
+      "fonToplamDeger": 6822264073.66,
+      "gunlukGetiri": 0.00429926,
+      "paraGirisiCikisi": -37955711.36,
+      "yatirimciDegisimi": -8
+    },
     {
       "fonKodu": "IOP",
       "fonAdi": "İŞ PORTFÖY ODEABANK PARA PİYASASI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

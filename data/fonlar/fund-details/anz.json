@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ANZ",
     "slug": "anz",
@@ -12,44 +12,56 @@
     "yonetici": "ATA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ata-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 21.771784,
+    "fiyat": 21.828962,
     "tedavuldekiPaySayisi": 11826017,
     "kisiSayisi": 160,
-    "fonToplamDeger": 257473484.01,
-    "gunlukGetiri": 0.00151291,
+    "fonToplamDeger": 258149673.91,
+    "gunlukGetiri": 0.00262624,
     "getiriler": {
-      "birAy": 0.020215999999999998,
-      "ucAy": 0.059682000000000006,
-      "altiAy": 0.096676,
-      "yilbasi": 0.128883,
-      "birYil": 0.229241,
-      "ucYil": 1.145105,
-      "besYil": 6.130567999999999
+      "birAy": 0.021376,
+      "ucAy": 0.063328,
+      "altiAy": 0.09547499999999999,
+      "yilbasi": 0.131847,
+      "birYil": 0.226897,
+      "ucYil": 1.148136,
+      "besYil": 6.2448950000000005
     },
     "paraAkisi": {
-      "gunluk": 435.44,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": -4717460.65,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": -3,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ANZ",
+        "fonAdi": "ATA PORTFÖY DÖRDÜNCÜ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 21.828962,
+        "tedavuldekiPaySayisi": 11826017,
+        "kisiSayisi": 160,
+        "fonToplamDeger": 258149673.91,
+        "gunlukGetiri": 0.00262624,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "ANZ",
         "fonAdi": "ATA PORTFÖY DÖRDÜNCÜ SERBEST (DÖVİZ) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00151291,
       "paraGirisiCikisi": 435.44,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "ANZ",
+      "fonAdi": "ATA PORTFÖY DÖRDÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 21.828962,
+      "tedavuldekiPaySayisi": 11826017,
+      "kisiSayisi": 160,
+      "fonToplamDeger": 258149673.91,
+      "gunlukGetiri": 0.00262624,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ANZ",
+      "fonAdi": "ATA PORTFÖY DÖRDÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 21.828962,
+      "tedavuldekiPaySayisi": 11826017,
+      "kisiSayisi": 160,
+      "fonToplamDeger": 258149673.91,
+      "gunlukGetiri": 0.00262624,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "ANZ",
       "fonAdi": "ATA PORTFÖY DÖRDÜNCÜ SERBEST (DÖVİZ) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

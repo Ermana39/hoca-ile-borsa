@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IPG",
     "slug": "ipg",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 9.53279,
-    "tedavuldekiPaySayisi": 36822795,
-    "kisiSayisi": 1757,
-    "fonToplamDeger": 351023984.75,
-    "gunlukGetiri": -0.00032372,
+    "fiyat": 9.58018,
+    "tedavuldekiPaySayisi": 36820687,
+    "kisiSayisi": 1752,
+    "fonToplamDeger": 352748816.61,
+    "gunlukGetiri": 0.00497126,
     "getiriler": {
-      "birAy": 0.01957,
-      "ucAy": 0.056361,
-      "altiAy": 0.051681,
-      "yilbasi": 0.12917199999999998,
-      "birYil": 0.313208,
-      "ucYil": 1.560316,
-      "besYil": 4.849156
+      "birAy": 0.020928,
+      "ucAy": 0.064774,
+      "altiAy": 0.059101999999999995,
+      "yilbasi": 0.134786,
+      "birYil": 0.31940999999999997,
+      "ucYil": 1.586621,
+      "besYil": 4.873433
     },
     "paraAkisi": {
-      "gunluk": -11830.19,
-      "besGun": null,
+      "gunluk": -20195.02,
+      "besGun": -914460.23,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
-      "besGun": null,
+      "gunluk": -5,
+      "besGun": -7,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IPG",
+        "fonAdi": "İŞ PORTFÖY ATAK FON SEPETİ FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 9.58018,
+        "tedavuldekiPaySayisi": 36820687,
+        "kisiSayisi": 1752,
+        "fonToplamDeger": 352748816.61,
+        "gunlukGetiri": 0.00497126,
+        "paraGirisiCikisi": -20195.02,
+        "yatirimciDegisimi": -5
+      },
       {
         "fonKodu": "IPG",
         "fonAdi": "İŞ PORTFÖY ATAK FON SEPETİ FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00032372,
       "paraGirisiCikisi": -11830.19,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "IPG",
+      "fonAdi": "İŞ PORTFÖY ATAK FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 9.58018,
+      "tedavuldekiPaySayisi": 36820687,
+      "kisiSayisi": 1752,
+      "fonToplamDeger": 352748816.61,
+      "gunlukGetiri": 0.00497126,
+      "paraGirisiCikisi": -20195.02,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IPG",
+      "fonAdi": "İŞ PORTFÖY ATAK FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 9.58018,
+      "tedavuldekiPaySayisi": 36820687,
+      "kisiSayisi": 1752,
+      "fonToplamDeger": 352748816.61,
+      "gunlukGetiri": 0.00497126,
+      "paraGirisiCikisi": -20195.02,
+      "yatirimciDegisimi": -5
+    },
     {
       "fonKodu": "IPG",
       "fonAdi": "İŞ PORTFÖY ATAK FON SEPETİ FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

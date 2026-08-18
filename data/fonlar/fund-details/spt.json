@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "SPT",
     "slug": "spt",
@@ -12,44 +12,56 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 2.156716,
-    "tedavuldekiPaySayisi": 43466190,
-    "kisiSayisi": 796,
-    "fonToplamDeger": 93744220.83,
-    "gunlukGetiri": 0,
+    "fiyat": 2.177368,
+    "tedavuldekiPaySayisi": 43586256,
+    "kisiSayisi": 797,
+    "fonToplamDeger": 94903306.44,
+    "gunlukGetiri": 0.00957567,
     "getiriler": {
-      "birAy": 0.049429,
-      "ucAy": 0.046713,
-      "altiAy": 0.138663,
-      "yilbasi": 0.249901,
-      "birYil": 0.5249860000000001,
+      "birAy": 0.057131,
+      "ucAy": 0.06280999999999999,
+      "altiAy": 0.150471,
+      "yilbasi": 0.26187,
+      "birYil": 0.539116,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": 261427.87,
+      "besGun": -5221216.85,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": 1,
+      "besGun": -9,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SPT",
+        "fonAdi": "AKTİF PORTFÖY KATILIM FON SEPETİ FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 2.177368,
+        "tedavuldekiPaySayisi": 43586256,
+        "kisiSayisi": 797,
+        "fonToplamDeger": 94903306.44,
+        "gunlukGetiri": 0.00957567,
+        "paraGirisiCikisi": 261427.87,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "SPT",
         "fonAdi": "AKTİF PORTFÖY KATILIM FON SEPETİ FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "SPT",
+      "fonAdi": "AKTİF PORTFÖY KATILIM FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 2.177368,
+      "tedavuldekiPaySayisi": 43586256,
+      "kisiSayisi": 797,
+      "fonToplamDeger": 94903306.44,
+      "gunlukGetiri": 0.00957567,
+      "paraGirisiCikisi": 261427.87,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SPT",
+      "fonAdi": "AKTİF PORTFÖY KATILIM FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 2.177368,
+      "tedavuldekiPaySayisi": 43586256,
+      "kisiSayisi": 797,
+      "fonToplamDeger": 94903306.44,
+      "gunlukGetiri": 0.00957567,
+      "paraGirisiCikisi": 261427.87,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "SPT",
       "fonAdi": "AKTİF PORTFÖY KATILIM FON SEPETİ FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

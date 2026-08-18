@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "RBH",
     "slug": "rbh",
@@ -12,44 +12,56 @@
     "yonetici": "ALBARAKA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "albaraka-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 33.273329,
-    "tedavuldekiPaySayisi": 29198869,
-    "kisiSayisi": 4989,
-    "fonToplamDeger": 971543565.12,
-    "gunlukGetiri": 0.00912844,
+    "fiyat": 33.937033,
+    "tedavuldekiPaySayisi": 29105732,
+    "kisiSayisi": 4986,
+    "fonToplamDeger": 987762177.77,
+    "gunlukGetiri": 0.01994703,
     "getiriler": {
-      "birAy": 0.049409999999999996,
-      "ucAy": 0.009467999999999999,
-      "altiAy": 0.121372,
-      "yilbasi": 0.38558,
-      "birYil": 0.448913,
-      "ucYil": 1.5846969999999998,
-      "besYil": 11.331187
+      "birAy": 0.037915000000000004,
+      "ucAy": 0.032648,
+      "altiAy": 0.143175,
+      "yilbasi": 0.41321800000000003,
+      "birYil": 0.485261,
+      "ucYil": 1.5102350000000002,
+      "besYil": 11.524097
     },
     "paraAkisi": {
-      "gunluk": -13162962.23,
-      "besGun": null,
+      "gunluk": -3160793.44,
+      "besGun": -28791661.86,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -10,
-      "besGun": null,
+      "gunluk": -3,
+      "besGun": -19,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RBH",
+        "fonAdi": "ALBARAKA PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 33.937033,
+        "tedavuldekiPaySayisi": 29105732,
+        "kisiSayisi": 4986,
+        "fonToplamDeger": 987762177.77,
+        "gunlukGetiri": 0.01994703,
+        "paraGirisiCikisi": -3160793.44,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "RBH",
         "fonAdi": "ALBARAKA PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00912844,
       "paraGirisiCikisi": -13162962.23,
       "yatirimciDegisimi": -10
+    },
+    {
+      "fonKodu": "RBH",
+      "fonAdi": "ALBARAKA PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 33.937033,
+      "tedavuldekiPaySayisi": 29105732,
+      "kisiSayisi": 4986,
+      "fonToplamDeger": 987762177.77,
+      "gunlukGetiri": 0.01994703,
+      "paraGirisiCikisi": -3160793.44,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RBH",
+      "fonAdi": "ALBARAKA PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 33.937033,
+      "tedavuldekiPaySayisi": 29105732,
+      "kisiSayisi": 4986,
+      "fonToplamDeger": 987762177.77,
+      "gunlukGetiri": 0.01994703,
+      "paraGirisiCikisi": -3160793.44,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "RBH",
       "fonAdi": "ALBARAKA PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

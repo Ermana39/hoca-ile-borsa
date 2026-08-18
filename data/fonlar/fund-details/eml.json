@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "EML",
     "slug": "eml",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.247113,
-    "tedavuldekiPaySayisi": 34807936,
+    "fiyat": 1.251048,
+    "tedavuldekiPaySayisi": 34596168,
     "kisiSayisi": 969,
-    "fonToplamDeger": 43409417.14,
-    "gunlukGetiri": 0.00948768,
+    "fonToplamDeger": 43281469.2,
+    "gunlukGetiri": 0.00315529,
     "getiriler": {
-      "birAy": 0.016538,
-      "ucAy": 0.043855000000000005,
-      "altiAy": 0.12009299999999999,
-      "yilbasi": 0.273089,
+      "birAy": 0.003569,
+      "ucAy": 0.050793,
+      "altiAy": 0.109852,
+      "yilbasi": 0.277106,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -255618.26,
-      "besGun": null,
+      "gunluk": -264931.93,
+      "besGun": -66067.66,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": 10,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "EML",
+        "fonAdi": "AK PORTFÖY EMLAK SEKTÖRÜ DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.251048,
+        "tedavuldekiPaySayisi": 34596168,
+        "kisiSayisi": 969,
+        "fonToplamDeger": 43281469.2,
+        "gunlukGetiri": 0.00315529,
+        "paraGirisiCikisi": -264931.93,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "EML",
         "fonAdi": "AK PORTFÖY EMLAK SEKTÖRÜ DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00948768,
       "paraGirisiCikisi": -255618.26,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "EML",
+      "fonAdi": "AK PORTFÖY EMLAK SEKTÖRÜ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.251048,
+      "tedavuldekiPaySayisi": 34596168,
+      "kisiSayisi": 969,
+      "fonToplamDeger": 43281469.2,
+      "gunlukGetiri": 0.00315529,
+      "paraGirisiCikisi": -264931.93,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "EML",
+      "fonAdi": "AK PORTFÖY EMLAK SEKTÖRÜ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.251048,
+      "tedavuldekiPaySayisi": 34596168,
+      "kisiSayisi": 969,
+      "fonToplamDeger": 43281469.2,
+      "gunlukGetiri": 0.00315529,
+      "paraGirisiCikisi": -264931.93,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "EML",
       "fonAdi": "AK PORTFÖY EMLAK SEKTÖRÜ DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

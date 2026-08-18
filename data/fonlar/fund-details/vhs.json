@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "VHS",
     "slug": "vhs",
@@ -12,15 +12,15 @@
     "yonetici": "VAKIF KATILIM PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "vakif-katilim-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.965274,
-    "tedavuldekiPaySayisi": 46008877,
-    "kisiSayisi": 377,
-    "fonToplamDeger": 44411150.62,
-    "gunlukGetiri": 0.0035139,
+    "fiyat": 0.977224,
+    "tedavuldekiPaySayisi": 46308342,
+    "kisiSayisi": 384,
+    "fonToplamDeger": 45253634.27,
+    "gunlukGetiri": 0.0123799,
     "getiriler": {
-      "birAy": -0.008629,
+      "birAy": -0.016101,
       "ucAy": null,
       "altiAy": null,
       "yilbasi": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 150780.63,
-      "besGun": null,
+      "gunluk": 292644.39,
+      "besGun": 984766.34,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": null,
+      "gunluk": 7,
+      "besGun": 8,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "VHS",
+        "fonAdi": "VAKIF KATILIM PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 0.977224,
+        "tedavuldekiPaySayisi": 46308342,
+        "kisiSayisi": 384,
+        "fonToplamDeger": 45253634.27,
+        "gunlukGetiri": 0.0123799,
+        "paraGirisiCikisi": 292644.39,
+        "yatirimciDegisimi": 7
+      },
       {
         "fonKodu": "VHS",
         "fonAdi": "VAKIF KATILIM PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.0035139,
       "paraGirisiCikisi": 150780.63,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "VHS",
+      "fonAdi": "VAKIF KATILIM PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 0.977224,
+      "tedavuldekiPaySayisi": 46308342,
+      "kisiSayisi": 384,
+      "fonToplamDeger": 45253634.27,
+      "gunlukGetiri": 0.0123799,
+      "paraGirisiCikisi": 292644.39,
+      "yatirimciDegisimi": 7
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "VHS",
+      "fonAdi": "VAKIF KATILIM PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 0.977224,
+      "tedavuldekiPaySayisi": 46308342,
+      "kisiSayisi": 384,
+      "fonToplamDeger": 45253634.27,
+      "gunlukGetiri": 0.0123799,
+      "paraGirisiCikisi": 292644.39,
+      "yatirimciDegisimi": 7
+    },
     {
       "fonKodu": "VHS",
       "fonAdi": "VAKIF KATILIM PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

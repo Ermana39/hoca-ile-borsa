@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "SD1",
     "slug": "sd1",
@@ -12,13 +12,13 @@
     "yonetici": "SPARTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "sparta-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.008097,
-    "tedavuldekiPaySayisi": 31672521,
-    "kisiSayisi": 127,
-    "fonToplamDeger": 31928989.22,
-    "gunlukGetiri": -0.00129186,
+    "fiyat": 1.024286,
+    "tedavuldekiPaySayisi": 33483524,
+    "kisiSayisi": 137,
+    "fonToplamDeger": 34296689.44,
+    "gunlukGetiri": 0.01605897,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1882685.67,
-      "besGun": null,
+      "gunluk": 1854985.02,
+      "besGun": 4447584.49,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 21,
-      "besGun": null,
+      "gunluk": 10,
+      "besGun": 45,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SD1",
+        "fonAdi": "SPARTA PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.024286,
+        "tedavuldekiPaySayisi": 33483524,
+        "kisiSayisi": 137,
+        "fonToplamDeger": 34296689.44,
+        "gunlukGetiri": 0.01605897,
+        "paraGirisiCikisi": 1854985.02,
+        "yatirimciDegisimi": 10
+      },
       {
         "fonKodu": "SD1",
         "fonAdi": "SPARTA PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00129186,
       "paraGirisiCikisi": 1882685.67,
       "yatirimciDegisimi": 21
+    },
+    {
+      "fonKodu": "SD1",
+      "fonAdi": "SPARTA PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.024286,
+      "tedavuldekiPaySayisi": 33483524,
+      "kisiSayisi": 137,
+      "fonToplamDeger": 34296689.44,
+      "gunlukGetiri": 0.01605897,
+      "paraGirisiCikisi": 1854985.02,
+      "yatirimciDegisimi": 10
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SD1",
+      "fonAdi": "SPARTA PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.024286,
+      "tedavuldekiPaySayisi": 33483524,
+      "kisiSayisi": 137,
+      "fonToplamDeger": 34296689.44,
+      "gunlukGetiri": 0.01605897,
+      "paraGirisiCikisi": 1854985.02,
+      "yatirimciDegisimi": 10
+    },
     {
       "fonKodu": "SD1",
       "fonAdi": "SPARTA PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

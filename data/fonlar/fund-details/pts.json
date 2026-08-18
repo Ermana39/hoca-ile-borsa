@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PTS",
     "slug": "pts",
@@ -12,44 +12,56 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.589997,
-    "tedavuldekiPaySayisi": 5448110342,
-    "kisiSayisi": 939,
-    "fonToplamDeger": 8662480678.96,
-    "gunlukGetiri": 0.00105646,
+    "fiyat": 1.596723,
+    "tedavuldekiPaySayisi": 5362450422,
+    "kisiSayisi": 947,
+    "fonToplamDeger": 8562345250.87,
+    "gunlukGetiri": 0.0042302,
     "getiriler": {
-      "birAy": 0.033699,
-      "ucAy": 0.10452600000000001,
-      "altiAy": 0.209293,
-      "yilbasi": 0.26476700000000003,
-      "birYil": 0.47057699999999997,
+      "birAy": 0.031404,
+      "ucAy": 0.104415,
+      "altiAy": 0.212055,
+      "yilbasi": 0.270117,
+      "birYil": 0.470046,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 37682119.59,
-      "besGun": null,
+      "gunluk": -136775164.44,
+      "besGun": 168933226.02,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
-      "besGun": null,
+      "gunluk": 8,
+      "besGun": 9,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PTS",
+        "fonAdi": "QNB PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.596723,
+        "tedavuldekiPaySayisi": 5362450422,
+        "kisiSayisi": 947,
+        "fonToplamDeger": 8562345250.87,
+        "gunlukGetiri": 0.0042302,
+        "paraGirisiCikisi": -136775164.44,
+        "yatirimciDegisimi": 8
+      },
       {
         "fonKodu": "PTS",
         "fonAdi": "QNB PORTFÖY PARA PİYASASI SERBEST (TL) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00105646,
       "paraGirisiCikisi": 37682119.59,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "PTS",
+      "fonAdi": "QNB PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.596723,
+      "tedavuldekiPaySayisi": 5362450422,
+      "kisiSayisi": 947,
+      "fonToplamDeger": 8562345250.87,
+      "gunlukGetiri": 0.0042302,
+      "paraGirisiCikisi": -136775164.44,
+      "yatirimciDegisimi": 8
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PTS",
+      "fonAdi": "QNB PORTFÖY PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.596723,
+      "tedavuldekiPaySayisi": 5362450422,
+      "kisiSayisi": 947,
+      "fonToplamDeger": 8562345250.87,
+      "gunlukGetiri": 0.0042302,
+      "paraGirisiCikisi": -136775164.44,
+      "yatirimciDegisimi": 8
+    },
     {
       "fonKodu": "PTS",
       "fonAdi": "QNB PORTFÖY PARA PİYASASI SERBEST (TL) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

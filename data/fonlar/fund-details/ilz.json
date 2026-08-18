@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ILZ",
     "slug": "ilz",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 8.143604,
-    "tedavuldekiPaySayisi": 125012796,
-    "kisiSayisi": 6488,
-    "fonToplamDeger": 1018054658.39,
-    "gunlukGetiri": 0.00066046,
+    "fiyat": 8.172308,
+    "tedavuldekiPaySayisi": 133150986,
+    "kisiSayisi": 6472,
+    "fonToplamDeger": 1088150881.09,
+    "gunlukGetiri": 0.00352473,
     "getiriler": {
-      "birAy": 0.026732999999999996,
-      "ucAy": 0.080743,
-      "altiAy": 0.101579,
-      "yilbasi": 0.12937900000000002,
-      "birYil": 0.38112999999999997,
-      "ucYil": 2.164431,
-      "besYil": 6.6038310000000005
+      "birAy": 0.025873,
+      "ucAy": 0.08185700000000001,
+      "altiAy": 0.102643,
+      "yilbasi": 0.13336,
+      "birYil": 0.383168,
+      "ucYil": 2.174435,
+      "besYil": 6.6359580000000005
     },
     "paraAkisi": {
-      "gunluk": -2594218.35,
-      "besGun": null,
+      "gunluk": 66507795.24,
+      "besGun": 59567609.78,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -23,
-      "besGun": null,
+      "gunluk": -16,
+      "besGun": -39,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ILZ",
+        "fonAdi": "İŞ PORTFÖY TEMKİNLİ FON SEPETİ FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 8.172308,
+        "tedavuldekiPaySayisi": 133150986,
+        "kisiSayisi": 6472,
+        "fonToplamDeger": 1088150881.09,
+        "gunlukGetiri": 0.00352473,
+        "paraGirisiCikisi": 66507795.24,
+        "yatirimciDegisimi": -16
+      },
       {
         "fonKodu": "ILZ",
         "fonAdi": "İŞ PORTFÖY TEMKİNLİ FON SEPETİ FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00066046,
       "paraGirisiCikisi": -2594218.35,
       "yatirimciDegisimi": -23
+    },
+    {
+      "fonKodu": "ILZ",
+      "fonAdi": "İŞ PORTFÖY TEMKİNLİ FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 8.172308,
+      "tedavuldekiPaySayisi": 133150986,
+      "kisiSayisi": 6472,
+      "fonToplamDeger": 1088150881.09,
+      "gunlukGetiri": 0.00352473,
+      "paraGirisiCikisi": 66507795.24,
+      "yatirimciDegisimi": -16
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ILZ",
+      "fonAdi": "İŞ PORTFÖY TEMKİNLİ FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 8.172308,
+      "tedavuldekiPaySayisi": 133150986,
+      "kisiSayisi": 6472,
+      "fonToplamDeger": 1088150881.09,
+      "gunlukGetiri": 0.00352473,
+      "paraGirisiCikisi": 66507795.24,
+      "yatirimciDegisimi": -16
+    },
     {
       "fonKodu": "ILZ",
       "fonAdi": "İŞ PORTFÖY TEMKİNLİ FON SEPETİ FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

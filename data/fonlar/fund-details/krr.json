@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KRR",
     "slug": "krr",
@@ -12,16 +12,16 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.139156,
-    "tedavuldekiPaySayisi": 19963300,
-    "kisiSayisi": 586,
-    "fonToplamDeger": 22741310.57,
-    "gunlukGetiri": 0.00209364,
+    "fiyat": 1.139503,
+    "tedavuldekiPaySayisi": 20037511,
+    "kisiSayisi": 589,
+    "fonToplamDeger": 22832811.16,
+    "gunlukGetiri": 0.00030461,
     "getiriler": {
-      "birAy": 0.026631000000000002,
-      "ucAy": 0.013028999999999999,
+      "birAy": 0.021165,
+      "ucAy": 0.017961,
       "altiAy": null,
       "yilbasi": null,
       "birYil": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -154560.69,
-      "besGun": null,
+      "gunluk": 84563.66,
+      "besGun": -459093.59,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 4,
-      "besGun": null,
+      "gunluk": 3,
+      "besGun": -3,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KRR",
+        "fonAdi": "İŞ PORTFÖY KARMA FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.139503,
+        "tedavuldekiPaySayisi": 20037511,
+        "kisiSayisi": 589,
+        "fonToplamDeger": 22832811.16,
+        "gunlukGetiri": 0.00030461,
+        "paraGirisiCikisi": 84563.66,
+        "yatirimciDegisimi": 3
+      },
       {
         "fonKodu": "KRR",
         "fonAdi": "İŞ PORTFÖY KARMA FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00209364,
       "paraGirisiCikisi": -154560.69,
       "yatirimciDegisimi": 4
+    },
+    {
+      "fonKodu": "KRR",
+      "fonAdi": "İŞ PORTFÖY KARMA FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.139503,
+      "tedavuldekiPaySayisi": 20037511,
+      "kisiSayisi": 589,
+      "fonToplamDeger": 22832811.16,
+      "gunlukGetiri": 0.00030461,
+      "paraGirisiCikisi": 84563.66,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KRR",
+      "fonAdi": "İŞ PORTFÖY KARMA FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.139503,
+      "tedavuldekiPaySayisi": 20037511,
+      "kisiSayisi": 589,
+      "fonToplamDeger": 22832811.16,
+      "gunlukGetiri": 0.00030461,
+      "paraGirisiCikisi": 84563.66,
+      "yatirimciDegisimi": 3
+    },
     {
       "fonKodu": "KRR",
       "fonAdi": "İŞ PORTFÖY KARMA FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

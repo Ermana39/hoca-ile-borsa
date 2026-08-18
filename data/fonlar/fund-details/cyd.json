@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "CYD",
     "slug": "cyd",
@@ -12,13 +12,13 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 57.322026,
-    "tedavuldekiPaySayisi": 23964395,
-    "kisiSayisi": 404,
-    "fonToplamDeger": 1373687662.66,
-    "gunlukGetiri": -0.00036078,
+    "fiyat": 57.833865,
+    "tedavuldekiPaySayisi": 23957499,
+    "kisiSayisi": 403,
+    "fonToplamDeger": 1385554755.71,
+    "gunlukGetiri": 0.00892919,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 54914.5,
-      "besGun": null,
+      "gunluk": -398822.33,
+      "besGun": -6196394.91,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": -1,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "CYD",
+        "fonAdi": "AK PORTFÖY 2027 SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 57.833865,
+        "tedavuldekiPaySayisi": 23957499,
+        "kisiSayisi": 403,
+        "fonToplamDeger": 1385554755.71,
+        "gunlukGetiri": 0.00892919,
+        "paraGirisiCikisi": -398822.33,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "CYD",
         "fonAdi": "AK PORTFÖY 2027 SERBEST (DÖVİZ-AVRO) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00036078,
       "paraGirisiCikisi": 54914.5,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "CYD",
+      "fonAdi": "AK PORTFÖY 2027 SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 57.833865,
+      "tedavuldekiPaySayisi": 23957499,
+      "kisiSayisi": 403,
+      "fonToplamDeger": 1385554755.71,
+      "gunlukGetiri": 0.00892919,
+      "paraGirisiCikisi": -398822.33,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "CYD",
+      "fonAdi": "AK PORTFÖY 2027 SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 57.833865,
+      "tedavuldekiPaySayisi": 23957499,
+      "kisiSayisi": 403,
+      "fonToplamDeger": 1385554755.71,
+      "gunlukGetiri": 0.00892919,
+      "paraGirisiCikisi": -398822.33,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "CYD",
       "fonAdi": "AK PORTFÖY 2027 SERBEST (DÖVİZ-AVRO) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

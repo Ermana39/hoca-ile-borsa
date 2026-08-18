@@ -110,6 +110,12 @@ const icerikler: Record<
   },
 };
 
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return Object.keys(icerikler).map((slug) => ({ slug }));
+}
+
 export async function generateMetadata({
   params,
 }: {

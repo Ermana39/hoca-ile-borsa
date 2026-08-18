@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GO9",
     "slug": "go9",
@@ -12,44 +12,56 @@
     "yonetici": "ONE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "one-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 2.74949,
-    "tedavuldekiPaySayisi": 173743409,
-    "kisiSayisi": 1778,
-    "fonToplamDeger": 477705807.73,
-    "gunlukGetiri": 0.00259703,
+    "fiyat": 2.728866,
+    "tedavuldekiPaySayisi": 174759979,
+    "kisiSayisi": 1767,
+    "fonToplamDeger": 476896586.12,
+    "gunlukGetiri": -0.00750103,
     "getiriler": {
-      "birAy": 0.012072000000000001,
-      "ucAy": 0.044050000000000006,
-      "altiAy": 0.13519899999999999,
-      "yilbasi": 0.458426,
-      "birYil": 0.612216,
+      "birAy": -0.010069,
+      "ucAy": 0.041128,
+      "altiAy": 0.115908,
+      "yilbasi": 0.44748600000000005,
+      "birYil": 0.595314,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -583612.25,
-      "besGun": null,
+      "gunluk": 2774083.31,
+      "besGun": -17498334.51,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -6,
-      "besGun": null,
+      "gunluk": -11,
+      "besGun": -10,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GO9",
+        "fonAdi": "ONE PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 2.728866,
+        "tedavuldekiPaySayisi": 174759979,
+        "kisiSayisi": 1767,
+        "fonToplamDeger": 476896586.12,
+        "gunlukGetiri": -0.00750103,
+        "paraGirisiCikisi": 2774083.31,
+        "yatirimciDegisimi": -11
+      },
       {
         "fonKodu": "GO9",
         "fonAdi": "ONE PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00259703,
       "paraGirisiCikisi": -583612.25,
       "yatirimciDegisimi": -6
+    },
+    {
+      "fonKodu": "GO9",
+      "fonAdi": "ONE PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 2.728866,
+      "tedavuldekiPaySayisi": 174759979,
+      "kisiSayisi": 1767,
+      "fonToplamDeger": 476896586.12,
+      "gunlukGetiri": -0.00750103,
+      "paraGirisiCikisi": 2774083.31,
+      "yatirimciDegisimi": -11
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GO9",
+      "fonAdi": "ONE PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 2.728866,
+      "tedavuldekiPaySayisi": 174759979,
+      "kisiSayisi": 1767,
+      "fonToplamDeger": 476896586.12,
+      "gunlukGetiri": -0.00750103,
+      "paraGirisiCikisi": 2774083.31,
+      "yatirimciDegisimi": -11
+    },
     {
       "fonKodu": "GO9",
       "fonAdi": "ONE PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

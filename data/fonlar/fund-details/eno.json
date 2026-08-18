@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ENO",
     "slug": "eno",
@@ -12,13 +12,13 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 48.245763,
-    "tedavuldekiPaySayisi": 1382802,
+    "fiyat": 48.404975,
+    "tedavuldekiPaySayisi": 1414926,
     "kisiSayisi": 106,
-    "fonToplamDeger": 66714338.12,
-    "gunlukGetiri": 0.00043828,
+    "fonToplamDeger": 68489457.48,
+    "gunlukGetiri": 0.00330002,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 144.74,
-      "besGun": null,
+      "gunluk": 1554961.42,
+      "besGun": 2051386.15,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ENO",
+        "fonAdi": "QNB PORTFÖY ENPARA SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 48.404975,
+        "tedavuldekiPaySayisi": 1414926,
+        "kisiSayisi": 106,
+        "fonToplamDeger": 68489457.48,
+        "gunlukGetiri": 0.00330002,
+        "paraGirisiCikisi": 1554961.42,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "ENO",
         "fonAdi": "QNB PORTFÖY ENPARA SERBEST (DÖVİZ) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00043828,
       "paraGirisiCikisi": 144.74,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "ENO",
+      "fonAdi": "QNB PORTFÖY ENPARA SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 48.404975,
+      "tedavuldekiPaySayisi": 1414926,
+      "kisiSayisi": 106,
+      "fonToplamDeger": 68489457.48,
+      "gunlukGetiri": 0.00330002,
+      "paraGirisiCikisi": 1554961.42,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ENO",
+      "fonAdi": "QNB PORTFÖY ENPARA SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 48.404975,
+      "tedavuldekiPaySayisi": 1414926,
+      "kisiSayisi": 106,
+      "fonToplamDeger": 68489457.48,
+      "gunlukGetiri": 0.00330002,
+      "paraGirisiCikisi": 1554961.42,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "ENO",
       "fonAdi": "QNB PORTFÖY ENPARA SERBEST (DÖVİZ) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

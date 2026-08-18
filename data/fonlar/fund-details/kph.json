@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KPH",
     "slug": "kph",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.235335,
-    "tedavuldekiPaySayisi": 432081745,
-    "kisiSayisi": 11987,
-    "fonToplamDeger": 533765769.78,
-    "gunlukGetiri": -0.00776943,
+    "fiyat": 1.244817,
+    "tedavuldekiPaySayisi": 430575659,
+    "kisiSayisi": 11929,
+    "fonToplamDeger": 535988044.71,
+    "gunlukGetiri": 0.00767565,
     "getiriler": {
-      "birAy": -0.01072,
-      "ucAy": -0.092995,
-      "altiAy": -0.08001799999999999,
-      "yilbasi": 0.102341,
-      "birYil": 0.156813,
+      "birAy": -0.014372000000000001,
+      "ucAy": -0.073725,
+      "altiAy": -0.078259,
+      "yilbasi": 0.110802,
+      "birYil": 0.17387799999999998,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1175392.84,
-      "besGun": null,
+      "gunluk": -1874801.46,
+      "besGun": -5417424.95,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -46,
-      "besGun": null,
+      "gunluk": -58,
+      "besGun": -170,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KPH",
+        "fonAdi": "İŞ PORTFÖY KAR PAYI ÖDEYEN HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.244817,
+        "tedavuldekiPaySayisi": 430575659,
+        "kisiSayisi": 11929,
+        "fonToplamDeger": 535988044.71,
+        "gunlukGetiri": 0.00767565,
+        "paraGirisiCikisi": -1874801.46,
+        "yatirimciDegisimi": -58
+      },
       {
         "fonKodu": "KPH",
         "fonAdi": "İŞ PORTFÖY KAR PAYI ÖDEYEN HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00776943,
       "paraGirisiCikisi": -1175392.84,
       "yatirimciDegisimi": -46
+    },
+    {
+      "fonKodu": "KPH",
+      "fonAdi": "İŞ PORTFÖY KAR PAYI ÖDEYEN HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.244817,
+      "tedavuldekiPaySayisi": 430575659,
+      "kisiSayisi": 11929,
+      "fonToplamDeger": 535988044.71,
+      "gunlukGetiri": 0.00767565,
+      "paraGirisiCikisi": -1874801.46,
+      "yatirimciDegisimi": -58
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KPH",
+      "fonAdi": "İŞ PORTFÖY KAR PAYI ÖDEYEN HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.244817,
+      "tedavuldekiPaySayisi": 430575659,
+      "kisiSayisi": 11929,
+      "fonToplamDeger": 535988044.71,
+      "gunlukGetiri": 0.00767565,
+      "paraGirisiCikisi": -1874801.46,
+      "yatirimciDegisimi": -58
+    },
     {
       "fonKodu": "KPH",
       "fonAdi": "İŞ PORTFÖY KAR PAYI ÖDEYEN HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

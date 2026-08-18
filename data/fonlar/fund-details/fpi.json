@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "FPI",
     "slug": "fpi",
@@ -12,44 +12,56 @@
     "yonetici": "FONMAP PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "fonmap-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 2.618822,
-    "tedavuldekiPaySayisi": 28282913,
+    "fiyat": 2.629892,
+    "tedavuldekiPaySayisi": 24796111,
     "kisiSayisi": 158,
-    "fonToplamDeger": 74067920.67,
-    "gunlukGetiri": 0.00091001,
+    "fonToplamDeger": 65211105.8,
+    "gunlukGetiri": 0.00422709,
     "getiriler": {
-      "birAy": 0.032917999999999996,
-      "ucAy": 0.099,
-      "altiAy": 0.20324899999999999,
-      "yilbasi": 0.257046,
-      "birYil": 0.455953,
+      "birAy": 0.030893999999999998,
+      "ucAy": 0.099156,
+      "altiAy": 0.20599699999999999,
+      "yilbasi": 0.262359,
+      "birYil": 0.455522,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 487.1,
-      "besGun": null,
+      "gunluk": -9169912.69,
+      "besGun": -4510567.83,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FPI",
+        "fonAdi": "FONMAP PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 2.629892,
+        "tedavuldekiPaySayisi": 24796111,
+        "kisiSayisi": 158,
+        "fonToplamDeger": 65211105.8,
+        "gunlukGetiri": 0.00422709,
+        "paraGirisiCikisi": -9169912.69,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "FPI",
         "fonAdi": "FONMAP PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00091001,
       "paraGirisiCikisi": 487.1,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "FPI",
+      "fonAdi": "FONMAP PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 2.629892,
+      "tedavuldekiPaySayisi": 24796111,
+      "kisiSayisi": 158,
+      "fonToplamDeger": 65211105.8,
+      "gunlukGetiri": 0.00422709,
+      "paraGirisiCikisi": -9169912.69,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FPI",
+      "fonAdi": "FONMAP PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 2.629892,
+      "tedavuldekiPaySayisi": 24796111,
+      "kisiSayisi": 158,
+      "fonToplamDeger": 65211105.8,
+      "gunlukGetiri": 0.00422709,
+      "paraGirisiCikisi": -9169912.69,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "FPI",
       "fonAdi": "FONMAP PORTFÖY BİRİNCİ PARA PİYASASI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

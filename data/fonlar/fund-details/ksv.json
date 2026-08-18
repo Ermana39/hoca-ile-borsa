@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KSV",
     "slug": "ksv",
@@ -12,44 +12,56 @@
     "yonetici": "KUVEYT TÜRK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kuveyt-turk-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 5.693814,
-    "tedavuldekiPaySayisi": 5662272972,
-    "kisiSayisi": 9925,
-    "fonToplamDeger": 32239929878.57,
-    "gunlukGetiri": 0.00094455,
+    "fiyat": 5.716277,
+    "tedavuldekiPaySayisi": 5642789164,
+    "kisiSayisi": 9904,
+    "fonToplamDeger": 32255743458.13,
+    "gunlukGetiri": 0.00394516,
     "getiriler": {
-      "birAy": 0.030162,
-      "ucAy": 0.095023,
-      "altiAy": 0.188218,
-      "yilbasi": 0.237887,
-      "birYil": 0.421556,
-      "ucYil": 2.198583,
-      "besYil": 3.734339
+      "birAy": 0.028300000000000002,
+      "ucAy": 0.095038,
+      "altiAy": 0.19078900000000001,
+      "yilbasi": 0.24277,
+      "birYil": 0.42112499999999997,
+      "ucYil": 2.201566,
+      "besYil": 3.7484800000000003
     },
     "paraAkisi": {
-      "gunluk": -161187324.98,
-      "besGun": null,
+      "gunluk": -111374843.54,
+      "besGun": -280533811.38,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -20,
-      "besGun": null,
+      "gunluk": -21,
+      "besGun": -119,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KSV",
+        "fonAdi": "KUVEYT TÜRK PORTFÖY KISA VADELİ KATILIM SERBEST (TL) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 5.716277,
+        "tedavuldekiPaySayisi": 5642789164,
+        "kisiSayisi": 9904,
+        "fonToplamDeger": 32255743458.13,
+        "gunlukGetiri": 0.00394516,
+        "paraGirisiCikisi": -111374843.54,
+        "yatirimciDegisimi": -21
+      },
       {
         "fonKodu": "KSV",
         "fonAdi": "KUVEYT TÜRK PORTFÖY KISA VADELİ KATILIM SERBEST (TL) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00094455,
       "paraGirisiCikisi": -161187324.98,
       "yatirimciDegisimi": -20
+    },
+    {
+      "fonKodu": "KSV",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY KISA VADELİ KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 5.716277,
+      "tedavuldekiPaySayisi": 5642789164,
+      "kisiSayisi": 9904,
+      "fonToplamDeger": 32255743458.13,
+      "gunlukGetiri": 0.00394516,
+      "paraGirisiCikisi": -111374843.54,
+      "yatirimciDegisimi": -21
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KSV",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY KISA VADELİ KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 5.716277,
+      "tedavuldekiPaySayisi": 5642789164,
+      "kisiSayisi": 9904,
+      "fonToplamDeger": 32255743458.13,
+      "gunlukGetiri": 0.00394516,
+      "paraGirisiCikisi": -111374843.54,
+      "yatirimciDegisimi": -21
+    },
     {
       "fonKodu": "KSV",
       "fonAdi": "KUVEYT TÜRK PORTFÖY KISA VADELİ KATILIM SERBEST (TL) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

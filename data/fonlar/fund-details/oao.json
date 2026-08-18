@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "OAO",
     "slug": "oao",
@@ -12,13 +12,13 @@
     "yonetici": "Bilinmiyor",
     "yoneticiSlug": "bilinmiyor",
     "yoneticiKaynak": "",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.002633,
-    "tedavuldekiPaySayisi": 24973451,
-    "kisiSayisi": 38,
-    "fonToplamDeger": 25039207.42,
-    "gunlukGetiri": null,
+    "fiyat": 1.006628,
+    "tedavuldekiPaySayisi": 135186245,
+    "kisiSayisi": 98,
+    "fonToplamDeger": 136082247.4,
+    "gunlukGetiri": 0.00398451,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": null,
+      "gunluk": 110943284.4,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": null,
+      "gunluk": 60,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 1,
+    "tarihselGunSayisi": 2,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 0,
+      "observedDays": 1,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OAO",
+        "fonAdi": "TEB PORTFÖY ODEABANK AYRICALIKLI VE ÖZEL BANKACILIK DEĞİŞKEN ÖZEL FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.006628,
+        "tedavuldekiPaySayisi": 135186245,
+        "kisiSayisi": 98,
+        "fonToplamDeger": 136082247.4,
+        "gunlukGetiri": 0.00398451,
+        "paraGirisiCikisi": 110943284.4,
+        "yatirimciDegisimi": 60
+      },
       {
         "fonKodu": "OAO",
         "fonAdi": "TEB PORTFÖY ODEABANK AYRICALIKLI VE ÖZEL BANKACILIK DEĞİŞKEN ÖZEL FON",
@@ -76,9 +88,33 @@
       "gunlukGetiri": null,
       "paraGirisiCikisi": null,
       "yatirimciDegisimi": null
+    },
+    {
+      "fonKodu": "OAO",
+      "fonAdi": "TEB PORTFÖY ODEABANK AYRICALIKLI VE ÖZEL BANKACILIK DEĞİŞKEN ÖZEL FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.006628,
+      "tedavuldekiPaySayisi": 135186245,
+      "kisiSayisi": 98,
+      "fonToplamDeger": 136082247.4,
+      "gunlukGetiri": 0.00398451,
+      "paraGirisiCikisi": 110943284.4,
+      "yatirimciDegisimi": 60
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OAO",
+      "fonAdi": "TEB PORTFÖY ODEABANK AYRICALIKLI VE ÖZEL BANKACILIK DEĞİŞKEN ÖZEL FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.006628,
+      "tedavuldekiPaySayisi": 135186245,
+      "kisiSayisi": 98,
+      "fonToplamDeger": 136082247.4,
+      "gunlukGetiri": 0.00398451,
+      "paraGirisiCikisi": 110943284.4,
+      "yatirimciDegisimi": 60
+    },
     {
       "fonKodu": "OAO",
       "fonAdi": "TEB PORTFÖY ODEABANK AYRICALIKLI VE ÖZEL BANKACILIK DEĞİŞKEN ÖZEL FON",
@@ -95,7 +131,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 0,
+    "observedDays": 1,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -29,13 +29,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function HisselerPage({
-  searchParams,
-}: {
-  searchParams?: Promise<{ q?: string | string[] }>;
-}) {
-  const params = await searchParams;
-  const q = Array.isArray(params?.q) ? params.q[0] : params?.q;
+export default function HisselerPage() {
   const hisseler = getTumHisseler();
 
   return (
@@ -71,7 +65,7 @@ export default async function HisselerPage({
           </p>
         </header>
 
-        <HisseListesi hisseler={hisseler} initialArama={q ?? ""} />
+        <HisseListesi hisseler={hisseler} />
 
         <section className="mt-12 grid gap-5 md:grid-cols-3">
           <div className="rounded-2xl border border-slate-200 bg-white p-5">

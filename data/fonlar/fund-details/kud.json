@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KUD",
     "slug": "kud",
@@ -12,44 +12,56 @@
     "yonetici": "KUVEYT TÜRK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kuveyt-turk-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.723814,
-    "tedavuldekiPaySayisi": 105066192,
-    "kisiSayisi": 2126,
-    "fonToplamDeger": 181114551.09,
-    "gunlukGetiri": -0.0011363,
+    "fiyat": 1.748564,
+    "tedavuldekiPaySayisi": 103933121,
+    "kisiSayisi": 2135,
+    "fonToplamDeger": 181733760.11,
+    "gunlukGetiri": 0.0143577,
     "getiriler": {
-      "birAy": 0.046348,
-      "ucAy": 0.084824,
-      "altiAy": 0.22616399999999998,
-      "yilbasi": 0.39354599999999995,
-      "birYil": 0.5194420000000001,
+      "birAy": 0.054946999999999996,
+      "ucAy": 0.096652,
+      "altiAy": 0.240878,
+      "yilbasi": 0.41355400000000003,
+      "birYil": 0.552001,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 470530.55,
-      "besGun": null,
+      "gunluk": -1981247.16,
+      "besGun": -5068106.79,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": null,
+      "gunluk": 9,
+      "besGun": 36,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KUD",
+        "fonAdi": "KUVEYT TÜRK PORTFÖY DİNAMİK KATILIM FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.748564,
+        "tedavuldekiPaySayisi": 103933121,
+        "kisiSayisi": 2135,
+        "fonToplamDeger": 181733760.11,
+        "gunlukGetiri": 0.0143577,
+        "paraGirisiCikisi": -1981247.16,
+        "yatirimciDegisimi": 9
+      },
       {
         "fonKodu": "KUD",
         "fonAdi": "KUVEYT TÜRK PORTFÖY DİNAMİK KATILIM FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.0011363,
       "paraGirisiCikisi": 470530.55,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "KUD",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY DİNAMİK KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.748564,
+      "tedavuldekiPaySayisi": 103933121,
+      "kisiSayisi": 2135,
+      "fonToplamDeger": 181733760.11,
+      "gunlukGetiri": 0.0143577,
+      "paraGirisiCikisi": -1981247.16,
+      "yatirimciDegisimi": 9
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KUD",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY DİNAMİK KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.748564,
+      "tedavuldekiPaySayisi": 103933121,
+      "kisiSayisi": 2135,
+      "fonToplamDeger": 181733760.11,
+      "gunlukGetiri": 0.0143577,
+      "paraGirisiCikisi": -1981247.16,
+      "yatirimciDegisimi": 9
+    },
     {
       "fonKodu": "KUD",
       "fonAdi": "KUVEYT TÜRK PORTFÖY DİNAMİK KATILIM FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

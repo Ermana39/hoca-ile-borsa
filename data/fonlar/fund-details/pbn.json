@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PBN",
     "slug": "pbn",
@@ -12,44 +12,56 @@
     "yonetici": "PİRAMİT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "piramit-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.539526,
-    "tedavuldekiPaySayisi": 312504825,
-    "kisiSayisi": 808,
-    "fonToplamDeger": 481109319.45,
-    "gunlukGetiri": 0.01135231,
+    "fiyat": 1.513291,
+    "tedavuldekiPaySayisi": 310477848,
+    "kisiSayisi": 752,
+    "fonToplamDeger": 469843388.27,
+    "gunlukGetiri": -0.01704096,
     "getiriler": {
-      "birAy": 0.225874,
-      "ucAy": 0.06599300000000001,
-      "altiAy": 0.032447,
-      "yilbasi": 0.392292,
-      "birYil": -0.08152,
+      "birAy": 0.17497800000000002,
+      "ucAy": 0.074237,
+      "altiAy": 0.0066820000000000004,
+      "yilbasi": 0.368566,
+      "birYil": -0.109739,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -69032044.09,
-      "besGun": null,
+      "gunluk": -3067406.05,
+      "besGun": -69606306.39,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -16,
-      "besGun": null,
+      "gunluk": -56,
+      "besGun": -63,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PBN",
+        "fonAdi": "PİRAMİT PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.513291,
+        "tedavuldekiPaySayisi": 310477848,
+        "kisiSayisi": 752,
+        "fonToplamDeger": 469843388.27,
+        "gunlukGetiri": -0.01704096,
+        "paraGirisiCikisi": -3067406.05,
+        "yatirimciDegisimi": -56
+      },
       {
         "fonKodu": "PBN",
         "fonAdi": "PİRAMİT PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.01135231,
       "paraGirisiCikisi": -69032044.09,
       "yatirimciDegisimi": -16
+    },
+    {
+      "fonKodu": "PBN",
+      "fonAdi": "PİRAMİT PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.513291,
+      "tedavuldekiPaySayisi": 310477848,
+      "kisiSayisi": 752,
+      "fonToplamDeger": 469843388.27,
+      "gunlukGetiri": -0.01704096,
+      "paraGirisiCikisi": -3067406.05,
+      "yatirimciDegisimi": -56
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PBN",
+      "fonAdi": "PİRAMİT PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.513291,
+      "tedavuldekiPaySayisi": 310477848,
+      "kisiSayisi": 752,
+      "fonToplamDeger": 469843388.27,
+      "gunlukGetiri": -0.01704096,
+      "paraGirisiCikisi": -3067406.05,
+      "yatirimciDegisimi": -56
+    },
     {
       "fonKodu": "PBN",
       "fonAdi": "PİRAMİT PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "VFO",
     "slug": "vfo",
@@ -12,15 +12,15 @@
     "yonetici": "V PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "v-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.002073,
-    "tedavuldekiPaySayisi": 105425274,
-    "kisiSayisi": 2754,
-    "fonToplamDeger": 105643835,
-    "gunlukGetiri": -0.00648908,
+    "fiyat": 1.007843,
+    "tedavuldekiPaySayisi": 131581286,
+    "kisiSayisi": 3111,
+    "fonToplamDeger": 132613343.72,
+    "gunlukGetiri": 0.00575806,
     "getiriler": {
-      "birAy": 0.07372,
+      "birAy": 0.10230700000000001,
       "ucAy": null,
       "altiAy": null,
       "yilbasi": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 13232779.8,
-      "besGun": null,
+      "gunluk": 26361153.6,
+      "besGun": 64366575.25,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 270,
-      "besGun": null,
+      "gunluk": 357,
+      "besGun": 1166,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "VFO",
+        "fonAdi": "V PORTFÖY ALTIN KATILIM FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.007843,
+        "tedavuldekiPaySayisi": 131581286,
+        "kisiSayisi": 3111,
+        "fonToplamDeger": 132613343.72,
+        "gunlukGetiri": 0.00575806,
+        "paraGirisiCikisi": 26361153.6,
+        "yatirimciDegisimi": 357
+      },
       {
         "fonKodu": "VFO",
         "fonAdi": "V PORTFÖY ALTIN KATILIM FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00648908,
       "paraGirisiCikisi": 13232779.8,
       "yatirimciDegisimi": 270
+    },
+    {
+      "fonKodu": "VFO",
+      "fonAdi": "V PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.007843,
+      "tedavuldekiPaySayisi": 131581286,
+      "kisiSayisi": 3111,
+      "fonToplamDeger": 132613343.72,
+      "gunlukGetiri": 0.00575806,
+      "paraGirisiCikisi": 26361153.6,
+      "yatirimciDegisimi": 357
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "VFO",
+      "fonAdi": "V PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.007843,
+      "tedavuldekiPaySayisi": 131581286,
+      "kisiSayisi": 3111,
+      "fonToplamDeger": 132613343.72,
+      "gunlukGetiri": 0.00575806,
+      "paraGirisiCikisi": 26361153.6,
+      "yatirimciDegisimi": 357
+    },
     {
       "fonKodu": "VFO",
       "fonAdi": "V PORTFÖY ALTIN KATILIM FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

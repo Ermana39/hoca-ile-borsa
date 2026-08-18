@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TSI",
     "slug": "tsi",
@@ -12,13 +12,13 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.205438,
-    "tedavuldekiPaySayisi": 109922360534,
-    "kisiSayisi": 77575,
-    "fonToplamDeger": 22582184469.74,
-    "gunlukGetiri": 0.00106715,
+    "fiyat": 0.206258,
+    "tedavuldekiPaySayisi": 112106513765,
+    "kisiSayisi": 78476,
+    "fonToplamDeger": 23122911897.42,
+    "gunlukGetiri": 0.00399147,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -35086898.8,
-      "besGun": null,
+      "gunluk": 450499077.12,
+      "besGun": 223504874.08,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -157,
-      "besGun": null,
+      "gunluk": 901,
+      "besGun": -600,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TSI",
+        "fonAdi": "İŞ PORTFÖY MAKSİMUM HESAP KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 0.206258,
+        "tedavuldekiPaySayisi": 112106513765,
+        "kisiSayisi": 78476,
+        "fonToplamDeger": 23122911897.42,
+        "gunlukGetiri": 0.00399147,
+        "paraGirisiCikisi": 450499077.12,
+        "yatirimciDegisimi": 901
+      },
       {
         "fonKodu": "TSI",
         "fonAdi": "İŞ PORTFÖY MAKSİMUM HESAP KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00106715,
       "paraGirisiCikisi": -35086898.8,
       "yatirimciDegisimi": -157
+    },
+    {
+      "fonKodu": "TSI",
+      "fonAdi": "İŞ PORTFÖY MAKSİMUM HESAP KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.206258,
+      "tedavuldekiPaySayisi": 112106513765,
+      "kisiSayisi": 78476,
+      "fonToplamDeger": 23122911897.42,
+      "gunlukGetiri": 0.00399147,
+      "paraGirisiCikisi": 450499077.12,
+      "yatirimciDegisimi": 901
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TSI",
+      "fonAdi": "İŞ PORTFÖY MAKSİMUM HESAP KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.206258,
+      "tedavuldekiPaySayisi": 112106513765,
+      "kisiSayisi": 78476,
+      "fonToplamDeger": 23122911897.42,
+      "gunlukGetiri": 0.00399147,
+      "paraGirisiCikisi": 450499077.12,
+      "yatirimciDegisimi": 901
+    },
     {
       "fonKodu": "TSI",
       "fonAdi": "İŞ PORTFÖY MAKSİMUM HESAP KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

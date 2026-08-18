@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PIR",
     "slug": "pir",
@@ -12,44 +12,56 @@
     "yonetici": "PİRAMİT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "piramit-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.675831,
-    "tedavuldekiPaySayisi": 69044062,
-    "kisiSayisi": 923,
-    "fonToplamDeger": 115706191,
-    "gunlukGetiri": -0.00637561,
+    "fiyat": 1.685249,
+    "tedavuldekiPaySayisi": 68362011,
+    "kisiSayisi": 921,
+    "fonToplamDeger": 115206980.38,
+    "gunlukGetiri": 0.0056199,
     "getiriler": {
-      "birAy": 0.088327,
-      "ucAy": -0.018696,
-      "altiAy": -0.053193000000000004,
-      "yilbasi": 0.101289,
-      "birYil": 0.6128170000000001,
+      "birAy": 0.11559100000000001,
+      "ucAy": 0.002712,
+      "altiAy": -0.039585,
+      "yilbasi": 0.10747899999999999,
+      "birYil": 0.622274,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 125023.7,
-      "besGun": null,
+      "gunluk": -1149425.77,
+      "besGun": -2457540.07,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": null,
+      "gunluk": -2,
+      "besGun": -9,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PIR",
+        "fonAdi": "PİRAMİT PORTFÖY ALTIN FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.685249,
+        "tedavuldekiPaySayisi": 68362011,
+        "kisiSayisi": 921,
+        "fonToplamDeger": 115206980.38,
+        "gunlukGetiri": 0.0056199,
+        "paraGirisiCikisi": -1149425.77,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "PIR",
         "fonAdi": "PİRAMİT PORTFÖY ALTIN FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00637561,
       "paraGirisiCikisi": 125023.7,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "PIR",
+      "fonAdi": "PİRAMİT PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.685249,
+      "tedavuldekiPaySayisi": 68362011,
+      "kisiSayisi": 921,
+      "fonToplamDeger": 115206980.38,
+      "gunlukGetiri": 0.0056199,
+      "paraGirisiCikisi": -1149425.77,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PIR",
+      "fonAdi": "PİRAMİT PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.685249,
+      "tedavuldekiPaySayisi": 68362011,
+      "kisiSayisi": 921,
+      "fonToplamDeger": 115206980.38,
+      "gunlukGetiri": 0.0056199,
+      "paraGirisiCikisi": -1149425.77,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "PIR",
       "fonAdi": "PİRAMİT PORTFÖY ALTIN FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

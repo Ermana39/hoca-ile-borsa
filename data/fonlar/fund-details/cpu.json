@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "CPU",
     "slug": "cpu",
@@ -12,44 +12,56 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 3.913016,
-    "tedavuldekiPaySayisi": 418336758,
-    "kisiSayisi": 17042,
-    "fonToplamDeger": 1636958408.75,
-    "gunlukGetiri": 0.00881348,
+    "fiyat": 3.947422,
+    "tedavuldekiPaySayisi": 422352026,
+    "kisiSayisi": 17144,
+    "fonToplamDeger": 1667201666.74,
+    "gunlukGetiri": 0.00879271,
     "getiriler": {
-      "birAy": 0.04896,
-      "ucAy": 0.098598,
-      "altiAy": 0.458039,
-      "yilbasi": 0.601397,
-      "birYil": 0.880621,
+      "birAy": 0.092191,
+      "ucAy": 0.10400000000000001,
+      "altiAy": 0.465384,
+      "yilbasi": 0.6154769999999999,
+      "birYil": 0.9158700000000001,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 497324.77,
-      "besGun": null,
+      "gunluk": 15849957.24,
+      "besGun": 36133270.49,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 16,
-      "besGun": null,
+      "gunluk": 102,
+      "besGun": 368,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "CPU",
+        "fonAdi": "AKTİF PORTFÖY TEKNOLOJİ KATILIM FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 3.947422,
+        "tedavuldekiPaySayisi": 422352026,
+        "kisiSayisi": 17144,
+        "fonToplamDeger": 1667201666.74,
+        "gunlukGetiri": 0.00879271,
+        "paraGirisiCikisi": 15849957.24,
+        "yatirimciDegisimi": 102
+      },
       {
         "fonKodu": "CPU",
         "fonAdi": "AKTİF PORTFÖY TEKNOLOJİ KATILIM FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00881348,
       "paraGirisiCikisi": 497324.77,
       "yatirimciDegisimi": 16
+    },
+    {
+      "fonKodu": "CPU",
+      "fonAdi": "AKTİF PORTFÖY TEKNOLOJİ KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 3.947422,
+      "tedavuldekiPaySayisi": 422352026,
+      "kisiSayisi": 17144,
+      "fonToplamDeger": 1667201666.74,
+      "gunlukGetiri": 0.00879271,
+      "paraGirisiCikisi": 15849957.24,
+      "yatirimciDegisimi": 102
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "CPU",
+      "fonAdi": "AKTİF PORTFÖY TEKNOLOJİ KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 3.947422,
+      "tedavuldekiPaySayisi": 422352026,
+      "kisiSayisi": 17144,
+      "fonToplamDeger": 1667201666.74,
+      "gunlukGetiri": 0.00879271,
+      "paraGirisiCikisi": 15849957.24,
+      "yatirimciDegisimi": 102
+    },
     {
       "fonKodu": "CPU",
       "fonAdi": "AKTİF PORTFÖY TEKNOLOJİ KATILIM FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

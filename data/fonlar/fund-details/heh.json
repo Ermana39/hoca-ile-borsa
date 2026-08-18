@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "HEH",
     "slug": "heh",
@@ -12,44 +12,56 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 3.282126,
-    "tedavuldekiPaySayisi": 195732242,
-    "kisiSayisi": 1507,
-    "fonToplamDeger": 642417813.37,
-    "gunlukGetiri": 0.00260937,
+    "fiyat": 3.284912,
+    "tedavuldekiPaySayisi": 195948676,
+    "kisiSayisi": 1497,
+    "fonToplamDeger": 643674100.91,
+    "gunlukGetiri": 0.00084884,
     "getiriler": {
-      "birAy": 0.029283999999999998,
-      "ucAy": 0.106158,
-      "altiAy": 0.192452,
-      "yilbasi": 0.234997,
-      "birYil": 0.40756100000000006,
-      "ucYil": 2.7662299999999997,
+      "birAy": 0.020577,
+      "ucAy": 0.095581,
+      "altiAy": 0.192608,
+      "yilbasi": 0.236045,
+      "birYil": 0.403856,
+      "ucYil": 2.709602,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -914630.05,
-      "besGun": null,
+      "gunluk": 710966.64,
+      "besGun": -7503272.81,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -11,
-      "besGun": null,
+      "gunluk": -10,
+      "besGun": -37,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HEH",
+        "fonAdi": "HEDEF PORTFÖY ALGO EVEREST İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 3.284912,
+        "tedavuldekiPaySayisi": 195948676,
+        "kisiSayisi": 1497,
+        "fonToplamDeger": 643674100.91,
+        "gunlukGetiri": 0.00084884,
+        "paraGirisiCikisi": 710966.64,
+        "yatirimciDegisimi": -10
+      },
       {
         "fonKodu": "HEH",
         "fonAdi": "HEDEF PORTFÖY ALGO EVEREST İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00260937,
       "paraGirisiCikisi": -914630.05,
       "yatirimciDegisimi": -11
+    },
+    {
+      "fonKodu": "HEH",
+      "fonAdi": "HEDEF PORTFÖY ALGO EVEREST İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 3.284912,
+      "tedavuldekiPaySayisi": 195948676,
+      "kisiSayisi": 1497,
+      "fonToplamDeger": 643674100.91,
+      "gunlukGetiri": 0.00084884,
+      "paraGirisiCikisi": 710966.64,
+      "yatirimciDegisimi": -10
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HEH",
+      "fonAdi": "HEDEF PORTFÖY ALGO EVEREST İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 3.284912,
+      "tedavuldekiPaySayisi": 195948676,
+      "kisiSayisi": 1497,
+      "fonToplamDeger": 643674100.91,
+      "gunlukGetiri": 0.00084884,
+      "paraGirisiCikisi": 710966.64,
+      "yatirimciDegisimi": -10
+    },
     {
       "fonKodu": "HEH",
       "fonAdi": "HEDEF PORTFÖY ALGO EVEREST İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

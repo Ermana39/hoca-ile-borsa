@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PPG",
     "slug": "ppg",
@@ -12,44 +12,56 @@
     "yonetici": "ALBARAKA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "albaraka-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.444348,
-    "tedavuldekiPaySayisi": 1718679454,
-    "kisiSayisi": 1685,
-    "fonToplamDeger": 2482371202.67,
-    "gunlukGetiri": 0.00102504,
+    "fiyat": 1.450191,
+    "tedavuldekiPaySayisi": 1673478851,
+    "kisiSayisi": 1705,
+    "fonToplamDeger": 2426864477.93,
+    "gunlukGetiri": 0.00404542,
     "getiriler": {
-      "birAy": 0.032229,
-      "ucAy": 0.10070399999999999,
-      "altiAy": 0.202054,
-      "yilbasi": 0.256797,
+      "birAy": 0.029952999999999997,
+      "ucAy": 0.100493,
+      "altiAy": 0.204601,
+      "yilbasi": 0.261882,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 4546242.76,
-      "besGun": null,
+      "gunluk": -65549507.67,
+      "besGun": -41361962.91,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 5,
-      "besGun": null,
+      "gunluk": 20,
+      "besGun": 40,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PPG",
+        "fonAdi": "ALBARAKA PORTFÖY PARA PİYASASI KATILIM FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.450191,
+        "tedavuldekiPaySayisi": 1673478851,
+        "kisiSayisi": 1705,
+        "fonToplamDeger": 2426864477.93,
+        "gunlukGetiri": 0.00404542,
+        "paraGirisiCikisi": -65549507.67,
+        "yatirimciDegisimi": 20
+      },
       {
         "fonKodu": "PPG",
         "fonAdi": "ALBARAKA PORTFÖY PARA PİYASASI KATILIM FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00102504,
       "paraGirisiCikisi": 4546242.76,
       "yatirimciDegisimi": 5
+    },
+    {
+      "fonKodu": "PPG",
+      "fonAdi": "ALBARAKA PORTFÖY PARA PİYASASI KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.450191,
+      "tedavuldekiPaySayisi": 1673478851,
+      "kisiSayisi": 1705,
+      "fonToplamDeger": 2426864477.93,
+      "gunlukGetiri": 0.00404542,
+      "paraGirisiCikisi": -65549507.67,
+      "yatirimciDegisimi": 20
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PPG",
+      "fonAdi": "ALBARAKA PORTFÖY PARA PİYASASI KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.450191,
+      "tedavuldekiPaySayisi": 1673478851,
+      "kisiSayisi": 1705,
+      "fonToplamDeger": 2426864477.93,
+      "gunlukGetiri": 0.00404542,
+      "paraGirisiCikisi": -65549507.67,
+      "yatirimciDegisimi": 20
+    },
     {
       "fonKodu": "PPG",
       "fonAdi": "ALBARAKA PORTFÖY PARA PİYASASI KATILIM FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

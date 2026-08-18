@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "OJT",
     "slug": "ojt",
@@ -12,44 +12,56 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 13.209698,
-    "tedavuldekiPaySayisi": 367262652,
-    "kisiSayisi": 11189,
-    "fonToplamDeger": 4851428715.09,
-    "gunlukGetiri": 0.01136932,
+    "fiyat": 13.258458,
+    "tedavuldekiPaySayisi": 365125063,
+    "kisiSayisi": 11191,
+    "fonToplamDeger": 4840995440.92,
+    "gunlukGetiri": 0.00369123,
     "getiriler": {
-      "birAy": 0.057358,
-      "ucAy": 0.107354,
-      "altiAy": 0.409278,
-      "yilbasi": 0.436944,
-      "birYil": 0.608108,
-      "ucYil": 2.8691289999999996,
-      "besYil": 10.839119
+      "birAy": 0.099091,
+      "ucAy": 0.106861,
+      "altiAy": 0.417271,
+      "yilbasi": 0.44224800000000003,
+      "birYil": 0.6286809999999999,
+      "ucYil": 2.9033100000000003,
+      "besYil": 11.14684
     },
     "paraAkisi": {
-      "gunluk": -5593778.72,
-      "besGun": null,
+      "gunluk": -28341133.98,
+      "besGun": -40736856.25,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -25,
-      "besGun": null,
+      "gunluk": 2,
+      "besGun": -17,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OJT",
+        "fonAdi": "QNB PORTFÖY TEKNOLOJİ FON SEPETİ FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 13.258458,
+        "tedavuldekiPaySayisi": 365125063,
+        "kisiSayisi": 11191,
+        "fonToplamDeger": 4840995440.92,
+        "gunlukGetiri": 0.00369123,
+        "paraGirisiCikisi": -28341133.98,
+        "yatirimciDegisimi": 2
+      },
       {
         "fonKodu": "OJT",
         "fonAdi": "QNB PORTFÖY TEKNOLOJİ FON SEPETİ FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.01136932,
       "paraGirisiCikisi": -5593778.72,
       "yatirimciDegisimi": -25
+    },
+    {
+      "fonKodu": "OJT",
+      "fonAdi": "QNB PORTFÖY TEKNOLOJİ FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 13.258458,
+      "tedavuldekiPaySayisi": 365125063,
+      "kisiSayisi": 11191,
+      "fonToplamDeger": 4840995440.92,
+      "gunlukGetiri": 0.00369123,
+      "paraGirisiCikisi": -28341133.98,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OJT",
+      "fonAdi": "QNB PORTFÖY TEKNOLOJİ FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 13.258458,
+      "tedavuldekiPaySayisi": 365125063,
+      "kisiSayisi": 11191,
+      "fonToplamDeger": 4840995440.92,
+      "gunlukGetiri": 0.00369123,
+      "paraGirisiCikisi": -28341133.98,
+      "yatirimciDegisimi": 2
+    },
     {
       "fonKodu": "OJT",
       "fonAdi": "QNB PORTFÖY TEKNOLOJİ FON SEPETİ FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TRO",
     "slug": "tro",
@@ -12,44 +12,56 @@
     "yonetici": "TRIVE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "trive-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 2.512811,
-    "tedavuldekiPaySayisi": 11847903,
+    "fiyat": 2.526889,
+    "tedavuldekiPaySayisi": 11708140,
     "kisiSayisi": 390,
-    "fonToplamDeger": 29771544.3,
-    "gunlukGetiri": -0.00574716,
+    "fonToplamDeger": 29585166.77,
+    "gunlukGetiri": 0.00560249,
     "getiriler": {
-      "birAy": 0.08256999999999999,
-      "ucAy": -0.017849,
-      "altiAy": -0.061445999999999994,
-      "yilbasi": 0.09856,
-      "birYil": 0.518091,
+      "birAy": 0.104263,
+      "ucAy": 0.000741,
+      "altiAy": -0.054076000000000006,
+      "yilbasi": 0.10471399999999999,
+      "birYil": 0.529493,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -70396.4,
-      "besGun": null,
+      "gunluk": -353165.59,
+      "besGun": -388237.62,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": -5,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TRO",
+        "fonAdi": "TRIVE PORTFÖY ALTIN FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 2.526889,
+        "tedavuldekiPaySayisi": 11708140,
+        "kisiSayisi": 390,
+        "fonToplamDeger": 29585166.77,
+        "gunlukGetiri": 0.00560249,
+        "paraGirisiCikisi": -353165.59,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "TRO",
         "fonAdi": "TRIVE PORTFÖY ALTIN FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00574716,
       "paraGirisiCikisi": -70396.4,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TRO",
+      "fonAdi": "TRIVE PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 2.526889,
+      "tedavuldekiPaySayisi": 11708140,
+      "kisiSayisi": 390,
+      "fonToplamDeger": 29585166.77,
+      "gunlukGetiri": 0.00560249,
+      "paraGirisiCikisi": -353165.59,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TRO",
+      "fonAdi": "TRIVE PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 2.526889,
+      "tedavuldekiPaySayisi": 11708140,
+      "kisiSayisi": 390,
+      "fonToplamDeger": 29585166.77,
+      "gunlukGetiri": 0.00560249,
+      "paraGirisiCikisi": -353165.59,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "TRO",
       "fonAdi": "TRIVE PORTFÖY ALTIN FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

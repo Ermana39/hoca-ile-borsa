@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PPJ",
     "slug": "ppj",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.837596,
-    "tedavuldekiPaySayisi": 47194779824,
-    "kisiSayisi": 6736,
-    "fonToplamDeger": 86724930670.78,
-    "gunlukGetiri": 0.00108575,
+    "fiyat": 1.84559,
+    "tedavuldekiPaySayisi": 43478944977,
+    "kisiSayisi": 6732,
+    "fonToplamDeger": 80244312607.81,
+    "gunlukGetiri": 0.00435025,
     "getiriler": {
-      "birAy": 0.034477,
-      "ucAy": 0.10633100000000001,
-      "altiAy": 0.214433,
-      "yilbasi": 0.270923,
-      "birYil": 0.481421,
+      "birAy": 0.032143000000000005,
+      "ucAy": 0.106264,
+      "altiAy": 0.217294,
+      "yilbasi": 0.276452,
+      "birYil": 0.480954,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1825813183.77,
-      "besGun": null,
+      "gunluk": -6857907635.27,
+      "besGun": -5557469437.13,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -16,
-      "besGun": null,
+      "gunluk": -4,
+      "besGun": -41,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PPJ",
+        "fonAdi": "AK PORTFÖY İKİNCİ PARA PİYASASI SERBEST (TL) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.84559,
+        "tedavuldekiPaySayisi": 43478944977,
+        "kisiSayisi": 6732,
+        "fonToplamDeger": 80244312607.81,
+        "gunlukGetiri": 0.00435025,
+        "paraGirisiCikisi": -6857907635.27,
+        "yatirimciDegisimi": -4
+      },
       {
         "fonKodu": "PPJ",
         "fonAdi": "AK PORTFÖY İKİNCİ PARA PİYASASI SERBEST (TL) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00108575,
       "paraGirisiCikisi": 1825813183.77,
       "yatirimciDegisimi": -16
+    },
+    {
+      "fonKodu": "PPJ",
+      "fonAdi": "AK PORTFÖY İKİNCİ PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.84559,
+      "tedavuldekiPaySayisi": 43478944977,
+      "kisiSayisi": 6732,
+      "fonToplamDeger": 80244312607.81,
+      "gunlukGetiri": 0.00435025,
+      "paraGirisiCikisi": -6857907635.27,
+      "yatirimciDegisimi": -4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PPJ",
+      "fonAdi": "AK PORTFÖY İKİNCİ PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.84559,
+      "tedavuldekiPaySayisi": 43478944977,
+      "kisiSayisi": 6732,
+      "fonToplamDeger": 80244312607.81,
+      "gunlukGetiri": 0.00435025,
+      "paraGirisiCikisi": -6857907635.27,
+      "yatirimciDegisimi": -4
+    },
     {
       "fonKodu": "PPJ",
       "fonAdi": "AK PORTFÖY İKİNCİ PARA PİYASASI SERBEST (TL) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "FHP",
     "slug": "fhp",
@@ -12,13 +12,13 @@
     "yonetici": "FİBA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "fiba-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 3.376262,
-    "tedavuldekiPaySayisi": 3842146852,
-    "kisiSayisi": 49,
-    "fonToplamDeger": 12972092783.81,
-    "gunlukGetiri": 0.00107008,
+    "fiyat": 3.390847,
+    "tedavuldekiPaySayisi": 2924147640,
+    "kisiSayisi": 48,
+    "fonToplamDeger": 9915338530.05,
+    "gunlukGetiri": 0.00431987,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -232398232.12,
-      "besGun": null,
+      "gunluk": -3112794874.01,
+      "besGun": 556507135.95,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": -1,
-      "besGun": null,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FHP",
+        "fonAdi": "FİBA PORTFÖY ÖPY PARA PİYASASI SERBEST (TL) ÖZEL FON",
+        "tarih": "2026-08-18",
+        "fiyat": 3.390847,
+        "tedavuldekiPaySayisi": 2924147640,
+        "kisiSayisi": 48,
+        "fonToplamDeger": 9915338530.05,
+        "gunlukGetiri": 0.00431987,
+        "paraGirisiCikisi": -3112794874.01,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "FHP",
         "fonAdi": "FİBA PORTFÖY ÖPY PARA PİYASASI SERBEST (TL) ÖZEL FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00107008,
       "paraGirisiCikisi": -232398232.12,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "FHP",
+      "fonAdi": "FİBA PORTFÖY ÖPY PARA PİYASASI SERBEST (TL) ÖZEL FON",
+      "tarih": "2026-08-18",
+      "fiyat": 3.390847,
+      "tedavuldekiPaySayisi": 2924147640,
+      "kisiSayisi": 48,
+      "fonToplamDeger": 9915338530.05,
+      "gunlukGetiri": 0.00431987,
+      "paraGirisiCikisi": -3112794874.01,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FHP",
+      "fonAdi": "FİBA PORTFÖY ÖPY PARA PİYASASI SERBEST (TL) ÖZEL FON",
+      "tarih": "2026-08-18",
+      "fiyat": 3.390847,
+      "tedavuldekiPaySayisi": 2924147640,
+      "kisiSayisi": 48,
+      "fonToplamDeger": 9915338530.05,
+      "gunlukGetiri": 0.00431987,
+      "paraGirisiCikisi": -3112794874.01,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "FHP",
       "fonAdi": "FİBA PORTFÖY ÖPY PARA PİYASASI SERBEST (TL) ÖZEL FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

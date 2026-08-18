@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BOL",
     "slug": "bol",
@@ -12,44 +12,56 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.680364,
-    "tedavuldekiPaySayisi": 59959550,
-    "kisiSayisi": 237,
-    "fonToplamDeger": 100753872.59,
-    "gunlukGetiri": 0.00268937,
+    "fiyat": 1.686507,
+    "tedavuldekiPaySayisi": 60665634,
+    "kisiSayisi": 244,
+    "fonToplamDeger": 102313018.48,
+    "gunlukGetiri": 0.00365576,
     "getiriler": {
-      "birAy": 0.033402,
-      "ucAy": 0.07148399999999999,
-      "altiAy": 0.138311,
-      "yilbasi": 0.17538900000000002,
-      "birYil": 0.368385,
+      "birAy": 0.032136,
+      "ucAy": 0.079273,
+      "altiAy": 0.138197,
+      "yilbasi": 0.17968599999999998,
+      "birYil": 0.36839799999999995,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 41192.44,
-      "besGun": null,
+      "gunluk": 1190815.61,
+      "besGun": -23417039.23,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": 7,
+      "besGun": 12,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BOL",
+        "fonAdi": "AKTİF PORTFÖY BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.686507,
+        "tedavuldekiPaySayisi": 60665634,
+        "kisiSayisi": 244,
+        "fonToplamDeger": 102313018.48,
+        "gunlukGetiri": 0.00365576,
+        "paraGirisiCikisi": 1190815.61,
+        "yatirimciDegisimi": 7
+      },
       {
         "fonKodu": "BOL",
         "fonAdi": "AKTİF PORTFÖY BORÇLANMA ARAÇLARI FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00268937,
       "paraGirisiCikisi": 41192.44,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BOL",
+      "fonAdi": "AKTİF PORTFÖY BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.686507,
+      "tedavuldekiPaySayisi": 60665634,
+      "kisiSayisi": 244,
+      "fonToplamDeger": 102313018.48,
+      "gunlukGetiri": 0.00365576,
+      "paraGirisiCikisi": 1190815.61,
+      "yatirimciDegisimi": 7
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BOL",
+      "fonAdi": "AKTİF PORTFÖY BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.686507,
+      "tedavuldekiPaySayisi": 60665634,
+      "kisiSayisi": 244,
+      "fonToplamDeger": 102313018.48,
+      "gunlukGetiri": 0.00365576,
+      "paraGirisiCikisi": 1190815.61,
+      "yatirimciDegisimi": 7
+    },
     {
       "fonKodu": "BOL",
       "fonAdi": "AKTİF PORTFÖY BORÇLANMA ARAÇLARI FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

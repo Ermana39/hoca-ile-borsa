@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "HKJ",
     "slug": "hkj",
@@ -12,44 +12,56 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.391714,
-    "tedavuldekiPaySayisi": 9329826461,
-    "kisiSayisi": 2270,
-    "fonToplamDeger": 12984452424.32,
-    "gunlukGetiri": 0.00124822,
+    "fiyat": 1.398583,
+    "tedavuldekiPaySayisi": 10266325289,
+    "kisiSayisi": 2287,
+    "fonToplamDeger": 14358308033.77,
+    "gunlukGetiri": 0.00493564,
     "getiriler": {
-      "birAy": 0.038321999999999995,
-      "ucAy": 0.11546200000000001,
-      "altiAy": 0.235723,
-      "yilbasi": 0.30580999999999997,
+      "birAy": 0.036021,
+      "ucAy": 0.11567999999999999,
+      "altiAy": 0.238952,
+      "yilbasi": 0.312255,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 311141268.17,
-      "besGun": null,
+      "gunluk": 1309771340.36,
+      "besGun": 1540183410.11,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 6,
-      "besGun": null,
+      "gunluk": 17,
+      "besGun": 64,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HKJ",
+        "fonAdi": "HEDEF PORTFÖY PARA PİYASASI SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.398583,
+        "tedavuldekiPaySayisi": 10266325289,
+        "kisiSayisi": 2287,
+        "fonToplamDeger": 14358308033.77,
+        "gunlukGetiri": 0.00493564,
+        "paraGirisiCikisi": 1309771340.36,
+        "yatirimciDegisimi": 17
+      },
       {
         "fonKodu": "HKJ",
         "fonAdi": "HEDEF PORTFÖY PARA PİYASASI SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00124822,
       "paraGirisiCikisi": 311141268.17,
       "yatirimciDegisimi": 6
+    },
+    {
+      "fonKodu": "HKJ",
+      "fonAdi": "HEDEF PORTFÖY PARA PİYASASI SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.398583,
+      "tedavuldekiPaySayisi": 10266325289,
+      "kisiSayisi": 2287,
+      "fonToplamDeger": 14358308033.77,
+      "gunlukGetiri": 0.00493564,
+      "paraGirisiCikisi": 1309771340.36,
+      "yatirimciDegisimi": 17
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HKJ",
+      "fonAdi": "HEDEF PORTFÖY PARA PİYASASI SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.398583,
+      "tedavuldekiPaySayisi": 10266325289,
+      "kisiSayisi": 2287,
+      "fonToplamDeger": 14358308033.77,
+      "gunlukGetiri": 0.00493564,
+      "paraGirisiCikisi": 1309771340.36,
+      "yatirimciDegisimi": 17
+    },
     {
       "fonKodu": "HKJ",
       "fonAdi": "HEDEF PORTFÖY PARA PİYASASI SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

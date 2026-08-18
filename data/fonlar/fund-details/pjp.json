@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PJP",
     "slug": "pjp",
@@ -12,44 +12,56 @@
     "yonetici": "PERFORM PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "perform-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 49.728991,
+    "fiyat": 49.865829,
     "tedavuldekiPaySayisi": 8151483,
     "kisiSayisi": 15,
-    "fonToplamDeger": 405365027.16,
-    "gunlukGetiri": 0.00107052,
+    "fonToplamDeger": 406480455.55,
+    "gunlukGetiri": 0.00275167,
     "getiriler": {
-      "birAy": 0.020995,
-      "ucAy": 0.06275,
-      "altiAy": 0.11302,
-      "yilbasi": 0.147189,
+      "birAy": 0.021557,
+      "ucAy": 0.065234,
+      "altiAy": 0.11219900000000001,
+      "yilbasi": 0.15034599999999998,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": -37347912.01,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": -1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PJP",
+        "fonAdi": "PERFORM PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 49.865829,
+        "tedavuldekiPaySayisi": 8151483,
+        "kisiSayisi": 15,
+        "fonToplamDeger": 406480455.55,
+        "gunlukGetiri": 0.00275167,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "PJP",
         "fonAdi": "PERFORM PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00107052,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PJP",
+      "fonAdi": "PERFORM PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 49.865829,
+      "tedavuldekiPaySayisi": 8151483,
+      "kisiSayisi": 15,
+      "fonToplamDeger": 406480455.55,
+      "gunlukGetiri": 0.00275167,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PJP",
+      "fonAdi": "PERFORM PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 49.865829,
+      "tedavuldekiPaySayisi": 8151483,
+      "kisiSayisi": 15,
+      "fonToplamDeger": 406480455.55,
+      "gunlukGetiri": 0.00275167,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "PJP",
       "fonAdi": "PERFORM PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "CFO",
     "slug": "cfo",
@@ -12,44 +12,56 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 2.499551,
-    "tedavuldekiPaySayisi": 825355155,
-    "kisiSayisi": 479,
-    "fonToplamDeger": 2063017283.16,
-    "gunlukGetiri": 0.00102283,
+    "fiyat": 2.510146,
+    "tedavuldekiPaySayisi": 824310577,
+    "kisiSayisi": 478,
+    "fonToplamDeger": 2069140074.47,
+    "gunlukGetiri": 0.00423876,
     "getiriler": {
-      "birAy": 0.034343,
-      "ucAy": 0.10436400000000001,
-      "altiAy": 0.210681,
-      "yilbasi": 0.267516,
-      "birYil": 0.476687,
+      "birAy": 0.031936,
+      "ucAy": 0.10426500000000001,
+      "altiAy": 0.21331,
+      "yilbasi": 0.27288799999999996,
+      "birYil": 0.476281,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -343365.82,
-      "besGun": null,
+      "gunluk": -2622043.29,
+      "besGun": -4155483.4,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": -1,
+      "besGun": -3,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "CFO",
+        "fonAdi": "ROTA PORTFÖY İKİNCİ PARA PİYASASI FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 2.510146,
+        "tedavuldekiPaySayisi": 824310577,
+        "kisiSayisi": 478,
+        "fonToplamDeger": 2069140074.47,
+        "gunlukGetiri": 0.00423876,
+        "paraGirisiCikisi": -2622043.29,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "CFO",
         "fonAdi": "ROTA PORTFÖY İKİNCİ PARA PİYASASI FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00102283,
       "paraGirisiCikisi": -343365.82,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "CFO",
+      "fonAdi": "ROTA PORTFÖY İKİNCİ PARA PİYASASI FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 2.510146,
+      "tedavuldekiPaySayisi": 824310577,
+      "kisiSayisi": 478,
+      "fonToplamDeger": 2069140074.47,
+      "gunlukGetiri": 0.00423876,
+      "paraGirisiCikisi": -2622043.29,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "CFO",
+      "fonAdi": "ROTA PORTFÖY İKİNCİ PARA PİYASASI FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 2.510146,
+      "tedavuldekiPaySayisi": 824310577,
+      "kisiSayisi": 478,
+      "fonToplamDeger": 2069140074.47,
+      "gunlukGetiri": 0.00423876,
+      "paraGirisiCikisi": -2622043.29,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "CFO",
       "fonAdi": "ROTA PORTFÖY İKİNCİ PARA PİYASASI FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

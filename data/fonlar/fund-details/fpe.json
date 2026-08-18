@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "FPE",
     "slug": "fpe",
@@ -12,44 +12,56 @@
     "yonetici": "FİBA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "fiba-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 76.280871,
-    "tedavuldekiPaySayisi": 4441770,
-    "kisiSayisi": 1436,
-    "fonToplamDeger": 338822084.19,
-    "gunlukGetiri": 0.00281952,
+    "fiyat": 76.429885,
+    "tedavuldekiPaySayisi": 4436735,
+    "kisiSayisi": 1432,
+    "fonToplamDeger": 339099146.22,
+    "gunlukGetiri": 0.00195349,
     "getiriler": {
-      "birAy": 0.023617,
-      "ucAy": 0.067366,
-      "altiAy": 0.098883,
-      "yilbasi": 0.126626,
-      "birYil": 0.23387,
-      "ucYil": 1.295505,
-      "besYil": 6.540395
+      "birAy": 0.024089,
+      "ucAy": 0.071938,
+      "altiAy": 0.09667999999999999,
+      "yilbasi": 0.128827,
+      "birYil": 0.233155,
+      "ucYil": 1.312317,
+      "besYil": 6.639665
     },
     "paraAkisi": {
-      "gunluk": -167360.23,
-      "besGun": null,
+      "gunluk": -384824.47,
+      "besGun": -224365.02,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
-      "besGun": null,
+      "gunluk": -4,
+      "besGun": -5,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FPE",
+        "fonAdi": "FİBA PORTFÖY EUROBOND BORÇLANMA ARAÇLARI (DÖVİZ) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 76.429885,
+        "tedavuldekiPaySayisi": 4436735,
+        "kisiSayisi": 1432,
+        "fonToplamDeger": 339099146.22,
+        "gunlukGetiri": 0.00195349,
+        "paraGirisiCikisi": -384824.47,
+        "yatirimciDegisimi": -4
+      },
       {
         "fonKodu": "FPE",
         "fonAdi": "FİBA PORTFÖY EUROBOND BORÇLANMA ARAÇLARI (DÖVİZ) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00281952,
       "paraGirisiCikisi": -167360.23,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "FPE",
+      "fonAdi": "FİBA PORTFÖY EUROBOND BORÇLANMA ARAÇLARI (DÖVİZ) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 76.429885,
+      "tedavuldekiPaySayisi": 4436735,
+      "kisiSayisi": 1432,
+      "fonToplamDeger": 339099146.22,
+      "gunlukGetiri": 0.00195349,
+      "paraGirisiCikisi": -384824.47,
+      "yatirimciDegisimi": -4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FPE",
+      "fonAdi": "FİBA PORTFÖY EUROBOND BORÇLANMA ARAÇLARI (DÖVİZ) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 76.429885,
+      "tedavuldekiPaySayisi": 4436735,
+      "kisiSayisi": 1432,
+      "fonToplamDeger": 339099146.22,
+      "gunlukGetiri": 0.00195349,
+      "paraGirisiCikisi": -384824.47,
+      "yatirimciDegisimi": -4
+    },
     {
       "fonKodu": "FPE",
       "fonAdi": "FİBA PORTFÖY EUROBOND BORÇLANMA ARAÇLARI (DÖVİZ) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

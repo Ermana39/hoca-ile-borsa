@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "OJK",
     "slug": "ojk",
@@ -12,44 +12,56 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 13.380257,
-    "tedavuldekiPaySayisi": 3470102901,
-    "kisiSayisi": 27825,
-    "fonToplamDeger": 46430869085.92,
-    "gunlukGetiri": -0.00557832,
+    "fiyat": 13.471692,
+    "tedavuldekiPaySayisi": 3466577318,
+    "kisiSayisi": 27827,
+    "fonToplamDeger": 46700661334.51,
+    "gunlukGetiri": 0.00683358,
     "getiriler": {
-      "birAy": 0.09160700000000001,
-      "ucAy": -0.011083,
-      "altiAy": -0.063212,
-      "yilbasi": 0.10593,
-      "birYil": 0.5225719999999999,
-      "ucYil": 3.028914,
+      "birAy": 0.113932,
+      "ucAy": 0.015664,
+      "altiAy": -0.055237,
+      "yilbasi": 0.11348699999999999,
+      "birYil": 0.53725,
+      "ucYil": 3.038477,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -39349971.05,
-      "besGun": null,
+      "gunluk": -47495568.3,
+      "besGun": -338601456.85,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 10,
-      "besGun": null,
+      "gunluk": 2,
+      "besGun": 20,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OJK",
+        "fonAdi": "QNB PORTFÖY ALTIN FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 13.471692,
+        "tedavuldekiPaySayisi": 3466577318,
+        "kisiSayisi": 27827,
+        "fonToplamDeger": 46700661334.51,
+        "gunlukGetiri": 0.00683358,
+        "paraGirisiCikisi": -47495568.3,
+        "yatirimciDegisimi": 2
+      },
       {
         "fonKodu": "OJK",
         "fonAdi": "QNB PORTFÖY ALTIN FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00557832,
       "paraGirisiCikisi": -39349971.05,
       "yatirimciDegisimi": 10
+    },
+    {
+      "fonKodu": "OJK",
+      "fonAdi": "QNB PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 13.471692,
+      "tedavuldekiPaySayisi": 3466577318,
+      "kisiSayisi": 27827,
+      "fonToplamDeger": 46700661334.51,
+      "gunlukGetiri": 0.00683358,
+      "paraGirisiCikisi": -47495568.3,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OJK",
+      "fonAdi": "QNB PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 13.471692,
+      "tedavuldekiPaySayisi": 3466577318,
+      "kisiSayisi": 27827,
+      "fonToplamDeger": 46700661334.51,
+      "gunlukGetiri": 0.00683358,
+      "paraGirisiCikisi": -47495568.3,
+      "yatirimciDegisimi": 2
+    },
     {
       "fonKodu": "OJK",
       "fonAdi": "QNB PORTFÖY ALTIN FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ZPK",
     "slug": "zpk",
@@ -12,13 +12,13 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 8.346979,
-    "tedavuldekiPaySayisi": 2261825640,
-    "kisiSayisi": 29365,
-    "fonToplamDeger": 18879411359.97,
-    "gunlukGetiri": 0.00115504,
+    "fiyat": 8.380481,
+    "tedavuldekiPaySayisi": 2251563491,
+    "kisiSayisi": 29735,
+    "fonToplamDeger": 18869185938.07,
+    "gunlukGetiri": 0.00401367,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -223727709.07,
-      "besGun": null,
+      "gunluk": -86001744.71,
+      "besGun": -104872147.79,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 39,
-      "besGun": null,
+      "gunluk": 370,
+      "besGun": 509,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZPK",
+        "fonAdi": "ZİRAAT PORTFÖY KISA VADELİ KİRA SERTİFİKASI KATILIM (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 8.380481,
+        "tedavuldekiPaySayisi": 2251563491,
+        "kisiSayisi": 29735,
+        "fonToplamDeger": 18869185938.07,
+        "gunlukGetiri": 0.00401367,
+        "paraGirisiCikisi": -86001744.71,
+        "yatirimciDegisimi": 370
+      },
       {
         "fonKodu": "ZPK",
         "fonAdi": "ZİRAAT PORTFÖY KISA VADELİ KİRA SERTİFİKASI KATILIM (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00115504,
       "paraGirisiCikisi": -223727709.07,
       "yatirimciDegisimi": 39
+    },
+    {
+      "fonKodu": "ZPK",
+      "fonAdi": "ZİRAAT PORTFÖY KISA VADELİ KİRA SERTİFİKASI KATILIM (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 8.380481,
+      "tedavuldekiPaySayisi": 2251563491,
+      "kisiSayisi": 29735,
+      "fonToplamDeger": 18869185938.07,
+      "gunlukGetiri": 0.00401367,
+      "paraGirisiCikisi": -86001744.71,
+      "yatirimciDegisimi": 370
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZPK",
+      "fonAdi": "ZİRAAT PORTFÖY KISA VADELİ KİRA SERTİFİKASI KATILIM (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 8.380481,
+      "tedavuldekiPaySayisi": 2251563491,
+      "kisiSayisi": 29735,
+      "fonToplamDeger": 18869185938.07,
+      "gunlukGetiri": 0.00401367,
+      "paraGirisiCikisi": -86001744.71,
+      "yatirimciDegisimi": 370
+    },
     {
       "fonKodu": "ZPK",
       "fonAdi": "ZİRAAT PORTFÖY KISA VADELİ KİRA SERTİFİKASI KATILIM (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

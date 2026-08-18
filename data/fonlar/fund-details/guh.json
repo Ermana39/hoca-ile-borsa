@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GUH",
     "slug": "guh",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.466344,
-    "tedavuldekiPaySayisi": 10235761127,
-    "kisiSayisi": 38252,
-    "fonToplamDeger": 4773389092.84,
-    "gunlukGetiri": 0.01298532,
+    "fiyat": 0.473084,
+    "tedavuldekiPaySayisi": 10265442173,
+    "kisiSayisi": 38217,
+    "fonToplamDeger": 4856420923.3,
+    "gunlukGetiri": 0.01445285,
     "getiriler": {
-      "birAy": 0.040273,
-      "ucAy": 0.12345800000000001,
-      "altiAy": 0.491862,
-      "yilbasi": 0.47801699999999997,
-      "birYil": 0.8013979999999999,
-      "ucYil": 2.6951889999999996,
-      "besYil": 8.584315
+      "birAy": 0.109,
+      "ucAy": 0.137938,
+      "altiAy": 0.51204,
+      "yilbasi": 0.499379,
+      "birYil": 0.848143,
+      "ucYil": 2.801459,
+      "besYil": 9.00516
     },
     "paraAkisi": {
-      "gunluk": -945367.43,
-      "besGun": null,
+      "gunluk": 14041627.97,
+      "besGun": 972280.97,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -73,
-      "besGun": null,
+      "gunluk": -35,
+      "besGun": 209,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GUH",
+        "fonAdi": "GARANTİ PORTFÖY YABANCI TEKNOLOJİ HİSSE SENEDİ FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 0.473084,
+        "tedavuldekiPaySayisi": 10265442173,
+        "kisiSayisi": 38217,
+        "fonToplamDeger": 4856420923.3,
+        "gunlukGetiri": 0.01445285,
+        "paraGirisiCikisi": 14041627.97,
+        "yatirimciDegisimi": -35
+      },
       {
         "fonKodu": "GUH",
         "fonAdi": "GARANTİ PORTFÖY YABANCI TEKNOLOJİ HİSSE SENEDİ FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.01298532,
       "paraGirisiCikisi": -945367.43,
       "yatirimciDegisimi": -73
+    },
+    {
+      "fonKodu": "GUH",
+      "fonAdi": "GARANTİ PORTFÖY YABANCI TEKNOLOJİ HİSSE SENEDİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.473084,
+      "tedavuldekiPaySayisi": 10265442173,
+      "kisiSayisi": 38217,
+      "fonToplamDeger": 4856420923.3,
+      "gunlukGetiri": 0.01445285,
+      "paraGirisiCikisi": 14041627.97,
+      "yatirimciDegisimi": -35
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GUH",
+      "fonAdi": "GARANTİ PORTFÖY YABANCI TEKNOLOJİ HİSSE SENEDİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.473084,
+      "tedavuldekiPaySayisi": 10265442173,
+      "kisiSayisi": 38217,
+      "fonToplamDeger": 4856420923.3,
+      "gunlukGetiri": 0.01445285,
+      "paraGirisiCikisi": 14041627.97,
+      "yatirimciDegisimi": -35
+    },
     {
       "fonKodu": "GUH",
       "fonAdi": "GARANTİ PORTFÖY YABANCI TEKNOLOJİ HİSSE SENEDİ FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

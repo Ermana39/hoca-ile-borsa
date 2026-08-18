@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DUD",
     "slug": "dud",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 52.642173,
-    "tedavuldekiPaySayisi": 6865600,
-    "kisiSayisi": 278,
-    "fonToplamDeger": 361420105.73,
-    "gunlukGetiri": 0.00458136,
+    "fiyat": 52.866137,
+    "tedavuldekiPaySayisi": 6828543,
+    "kisiSayisi": 275,
+    "fonToplamDeger": 360998686.86,
+    "gunlukGetiri": 0.00425446,
     "getiriler": {
-      "birAy": 0.017459,
-      "ucAy": 0.079985,
-      "altiAy": 0.096464,
-      "yilbasi": 0.132267,
-      "birYil": 0.276896,
+      "birAy": 0.026089,
+      "ucAy": 0.09327400000000001,
+      "altiAy": 0.091148,
+      "yilbasi": 0.13708399999999998,
+      "birYil": 0.286447,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 356966.58,
-      "besGun": null,
+      "gunluk": -1959060.44,
+      "besGun": -44657972.41,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": -3,
+      "besGun": -5,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DUD",
+        "fonAdi": "DENİZ PORTFÖY UZUN VADELİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 52.866137,
+        "tedavuldekiPaySayisi": 6828543,
+        "kisiSayisi": 275,
+        "fonToplamDeger": 360998686.86,
+        "gunlukGetiri": 0.00425446,
+        "paraGirisiCikisi": -1959060.44,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "DUD",
         "fonAdi": "DENİZ PORTFÖY UZUN VADELİ SERBEST (DÖVİZ) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00458136,
       "paraGirisiCikisi": 356966.58,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DUD",
+      "fonAdi": "DENİZ PORTFÖY UZUN VADELİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 52.866137,
+      "tedavuldekiPaySayisi": 6828543,
+      "kisiSayisi": 275,
+      "fonToplamDeger": 360998686.86,
+      "gunlukGetiri": 0.00425446,
+      "paraGirisiCikisi": -1959060.44,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DUD",
+      "fonAdi": "DENİZ PORTFÖY UZUN VADELİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 52.866137,
+      "tedavuldekiPaySayisi": 6828543,
+      "kisiSayisi": 275,
+      "fonToplamDeger": 360998686.86,
+      "gunlukGetiri": 0.00425446,
+      "paraGirisiCikisi": -1959060.44,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "DUD",
       "fonAdi": "DENİZ PORTFÖY UZUN VADELİ SERBEST (DÖVİZ) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

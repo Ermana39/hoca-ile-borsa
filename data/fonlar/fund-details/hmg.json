@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "HMG",
     "slug": "hmg",
@@ -12,44 +12,56 @@
     "yonetici": "HSBC PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hsbc-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.068207,
-    "tedavuldekiPaySayisi": 103438294741,
-    "kisiSayisi": 6193,
-    "fonToplamDeger": 7055178091.94,
-    "gunlukGetiri": 0.00208624,
+    "fiyat": 0.068236,
+    "tedavuldekiPaySayisi": 103856042474,
+    "kisiSayisi": 6173,
+    "fonToplamDeger": 7086744145.99,
+    "gunlukGetiri": 0.00042518,
     "getiriler": {
-      "birAy": 0.033815,
-      "ucAy": 0.096082,
-      "altiAy": 0.135213,
-      "yilbasi": 0.169731,
-      "birYil": 0.280185,
-      "ucYil": 1.882311,
-      "besYil": 4.91151
+      "birAy": 0.026986,
+      "ucAy": 0.087669,
+      "altiAy": 0.134072,
+      "yilbasi": 0.170228,
+      "birYil": 0.28012899999999996,
+      "ucYil": 1.869108,
+      "besYil": 4.909414
     },
     "paraAkisi": {
-      "gunluk": 112561486.5,
-      "besGun": null,
+      "gunluk": 28505434.31,
+      "besGun": 207357244.79,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 9,
-      "besGun": null,
+      "gunluk": -20,
+      "besGun": -11,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HMG",
+        "fonAdi": "HSBC PYŞ MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST (TL) FON(HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 0.068236,
+        "tedavuldekiPaySayisi": 103856042474,
+        "kisiSayisi": 6173,
+        "fonToplamDeger": 7086744145.99,
+        "gunlukGetiri": 0.00042518,
+        "paraGirisiCikisi": 28505434.31,
+        "yatirimciDegisimi": -20
+      },
       {
         "fonKodu": "HMG",
         "fonAdi": "HSBC PYŞ MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST (TL) FON(HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00208624,
       "paraGirisiCikisi": 112561486.5,
       "yatirimciDegisimi": 9
+    },
+    {
+      "fonKodu": "HMG",
+      "fonAdi": "HSBC PYŞ MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST (TL) FON(HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 0.068236,
+      "tedavuldekiPaySayisi": 103856042474,
+      "kisiSayisi": 6173,
+      "fonToplamDeger": 7086744145.99,
+      "gunlukGetiri": 0.00042518,
+      "paraGirisiCikisi": 28505434.31,
+      "yatirimciDegisimi": -20
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HMG",
+      "fonAdi": "HSBC PYŞ MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST (TL) FON(HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 0.068236,
+      "tedavuldekiPaySayisi": 103856042474,
+      "kisiSayisi": 6173,
+      "fonToplamDeger": 7086744145.99,
+      "gunlukGetiri": 0.00042518,
+      "paraGirisiCikisi": 28505434.31,
+      "yatirimciDegisimi": -20
+    },
     {
       "fonKodu": "HMG",
       "fonAdi": "HSBC PYŞ MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST (TL) FON(HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

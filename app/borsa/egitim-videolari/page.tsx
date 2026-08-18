@@ -76,9 +76,7 @@ async function getVideoMeta(video: VideoItem): Promise<ResolvedVideo> {
       video.url
     )}&format=json`;
 
-    const response = await fetch(oembedUrl, {
-      next: { revalidate: 86400 },
-    });
+    const response = await fetch(oembedUrl, { cache: "force-cache" });
 
     if (!response.ok) {
       return fallback;

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ZP6",
     "slug": "zp6",
@@ -12,44 +12,56 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 58.333009,
-    "tedavuldekiPaySayisi": 108833262,
-    "kisiSayisi": 1532,
-    "fonToplamDeger": 6348571698.2,
-    "gunlukGetiri": 0.00074782,
+    "fiyat": 58.497601,
+    "tedavuldekiPaySayisi": 108278429,
+    "kisiSayisi": 1524,
+    "fonToplamDeger": 6334028339.45,
+    "gunlukGetiri": 0.00282159,
     "getiriler": {
-      "birAy": 0.020186000000000003,
-      "ucAy": 0.059907,
-      "altiAy": 0.109406,
-      "yilbasi": 0.132382,
-      "birYil": 0.21432600000000002,
-      "ucYil": 1.026687,
+      "birAy": 0.020842,
+      "ucAy": 0.062005,
+      "altiAy": 0.10946600000000001,
+      "yilbasi": 0.135577,
+      "birYil": 0.214906,
+      "ucYil": 1.02633,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 13851231.32,
-      "besGun": null,
+      "gunluk": -32456399.46,
+      "besGun": -14092169.43,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
-      "besGun": null,
+      "gunluk": -8,
+      "besGun": -7,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZP6",
+        "fonAdi": "ZİRAAT PORTFÖY SEDEF KATILIM SERBEST (DÖVİZ - AMERİKAN DOLARI) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 58.497601,
+        "tedavuldekiPaySayisi": 108278429,
+        "kisiSayisi": 1524,
+        "fonToplamDeger": 6334028339.45,
+        "gunlukGetiri": 0.00282159,
+        "paraGirisiCikisi": -32456399.46,
+        "yatirimciDegisimi": -8
+      },
       {
         "fonKodu": "ZP6",
         "fonAdi": "ZİRAAT PORTFÖY SEDEF KATILIM SERBEST (DÖVİZ - AMERİKAN DOLARI) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00074782,
       "paraGirisiCikisi": 13851231.32,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "ZP6",
+      "fonAdi": "ZİRAAT PORTFÖY SEDEF KATILIM SERBEST (DÖVİZ - AMERİKAN DOLARI) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 58.497601,
+      "tedavuldekiPaySayisi": 108278429,
+      "kisiSayisi": 1524,
+      "fonToplamDeger": 6334028339.45,
+      "gunlukGetiri": 0.00282159,
+      "paraGirisiCikisi": -32456399.46,
+      "yatirimciDegisimi": -8
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZP6",
+      "fonAdi": "ZİRAAT PORTFÖY SEDEF KATILIM SERBEST (DÖVİZ - AMERİKAN DOLARI) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 58.497601,
+      "tedavuldekiPaySayisi": 108278429,
+      "kisiSayisi": 1524,
+      "fonToplamDeger": 6334028339.45,
+      "gunlukGetiri": 0.00282159,
+      "paraGirisiCikisi": -32456399.46,
+      "yatirimciDegisimi": -8
+    },
     {
       "fonKodu": "ZP6",
       "fonAdi": "ZİRAAT PORTFÖY SEDEF KATILIM SERBEST (DÖVİZ - AMERİKAN DOLARI) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

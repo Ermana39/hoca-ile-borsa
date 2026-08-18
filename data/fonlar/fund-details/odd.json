@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ODD",
     "slug": "odd",
@@ -12,44 +12,56 @@
     "yonetici": "OYAK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "oyak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 10.903575,
+    "fiyat": 10.944595,
     "tedavuldekiPaySayisi": 42625854,
-    "kisiSayisi": 30,
-    "fonToplamDeger": 464774203.67,
-    "gunlukGetiri": 0.00444344,
+    "kisiSayisi": 29,
+    "fonToplamDeger": 466522712.07,
+    "gunlukGetiri": 0.00376207,
     "getiriler": {
-      "birAy": 0.031855,
-      "ucAy": 0.068978,
-      "altiAy": 0.136456,
-      "yilbasi": 0.19790400000000002,
-      "birYil": 0.372062,
-      "ucYil": 1.427036,
-      "besYil": 5.079702
+      "birAy": 0.031351,
+      "ucAy": 0.070518,
+      "altiAy": 0.137012,
+      "yilbasi": 0.20241,
+      "birYil": 0.373231,
+      "ucYil": 1.4179140000000001,
+      "besYil": 4.922009
     },
     "paraAkisi": {
-      "gunluk": -10.9,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": -16467.52,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": -1,
+      "besGun": -2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ODD",
+        "fonAdi": "OYAK PORTFÖY DÖRDÜNCÜ SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 10.944595,
+        "tedavuldekiPaySayisi": 42625854,
+        "kisiSayisi": 29,
+        "fonToplamDeger": 466522712.07,
+        "gunlukGetiri": 0.00376207,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "ODD",
         "fonAdi": "OYAK PORTFÖY DÖRDÜNCÜ SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00444344,
       "paraGirisiCikisi": -10.9,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "ODD",
+      "fonAdi": "OYAK PORTFÖY DÖRDÜNCÜ SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 10.944595,
+      "tedavuldekiPaySayisi": 42625854,
+      "kisiSayisi": 29,
+      "fonToplamDeger": 466522712.07,
+      "gunlukGetiri": 0.00376207,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ODD",
+      "fonAdi": "OYAK PORTFÖY DÖRDÜNCÜ SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 10.944595,
+      "tedavuldekiPaySayisi": 42625854,
+      "kisiSayisi": 29,
+      "fonToplamDeger": 466522712.07,
+      "gunlukGetiri": 0.00376207,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "ODD",
       "fonAdi": "OYAK PORTFÖY DÖRDÜNCÜ SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

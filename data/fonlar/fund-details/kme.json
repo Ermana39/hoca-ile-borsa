@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KME",
     "slug": "kme",
@@ -12,44 +12,56 @@
     "yonetici": "KUVEYT TÜRK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kuveyt-turk-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.579106,
-    "tedavuldekiPaySayisi": 79488359,
-    "kisiSayisi": 1194,
-    "fonToplamDeger": 125520569.88,
-    "gunlukGetiri": 0.00122244,
+    "fiyat": 1.586146,
+    "tedavuldekiPaySayisi": 78731971,
+    "kisiSayisi": 1188,
+    "fonToplamDeger": 124880415.43,
+    "gunlukGetiri": 0.00445822,
     "getiriler": {
-      "birAy": -0.002656,
-      "ucAy": 0.039264,
-      "altiAy": 0.139225,
-      "yilbasi": 0.232428,
-      "birYil": 0.422917,
+      "birAy": 0.006131,
+      "ucAy": 0.04109,
+      "altiAy": 0.14194,
+      "yilbasi": 0.23792200000000002,
+      "birYil": 0.426093,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -773311.89,
-      "besGun": null,
+      "gunluk": -1199741.8,
+      "besGun": -5406673.92,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": null,
+      "gunluk": -6,
+      "besGun": -22,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KME",
+        "fonAdi": "KUVEYT TÜRK PORTFÖY TEMKİNLİ KATILIM FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.586146,
+        "tedavuldekiPaySayisi": 78731971,
+        "kisiSayisi": 1188,
+        "fonToplamDeger": 124880415.43,
+        "gunlukGetiri": 0.00445822,
+        "paraGirisiCikisi": -1199741.8,
+        "yatirimciDegisimi": -6
+      },
       {
         "fonKodu": "KME",
         "fonAdi": "KUVEYT TÜRK PORTFÖY TEMKİNLİ KATILIM FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00122244,
       "paraGirisiCikisi": -773311.89,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "KME",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY TEMKİNLİ KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.586146,
+      "tedavuldekiPaySayisi": 78731971,
+      "kisiSayisi": 1188,
+      "fonToplamDeger": 124880415.43,
+      "gunlukGetiri": 0.00445822,
+      "paraGirisiCikisi": -1199741.8,
+      "yatirimciDegisimi": -6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KME",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY TEMKİNLİ KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.586146,
+      "tedavuldekiPaySayisi": 78731971,
+      "kisiSayisi": 1188,
+      "fonToplamDeger": 124880415.43,
+      "gunlukGetiri": 0.00445822,
+      "paraGirisiCikisi": -1199741.8,
+      "yatirimciDegisimi": -6
+    },
     {
       "fonKodu": "KME",
       "fonAdi": "KUVEYT TÜRK PORTFÖY TEMKİNLİ KATILIM FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "RBR",
     "slug": "rbr",
@@ -12,44 +12,56 @@
     "yonetici": "RE-PIE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "re-pie-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 3.720059,
-    "tedavuldekiPaySayisi": 28442725,
-    "kisiSayisi": 871,
-    "fonToplamDeger": 105808623.03,
-    "gunlukGetiri": 0.00191141,
+    "fiyat": 3.728814,
+    "tedavuldekiPaySayisi": 27190760,
+    "kisiSayisi": 908,
+    "fonToplamDeger": 101389278.14,
+    "gunlukGetiri": 0.00235346,
     "getiriler": {
-      "birAy": 0.229948,
-      "ucAy": 0.255047,
-      "altiAy": 0.32824,
-      "yilbasi": 0.456334,
-      "birYil": 0.7424689999999999,
-      "ucYil": 2.07587,
+      "birAy": 0.224358,
+      "ucAy": 0.252844,
+      "altiAy": 0.329706,
+      "yilbasi": 0.45976100000000003,
+      "birYil": 0.748498,
+      "ucYil": 2.080621,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 2337863.64,
-      "besGun": null,
+      "gunluk": -4668344.62,
+      "besGun": 18037059.36,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 28,
-      "besGun": null,
+      "gunluk": 37,
+      "besGun": 188,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RBR",
+        "fonAdi": "RE-PIE PORTFÖY BİRİNCİ KATILIM SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 3.728814,
+        "tedavuldekiPaySayisi": 27190760,
+        "kisiSayisi": 908,
+        "fonToplamDeger": 101389278.14,
+        "gunlukGetiri": 0.00235346,
+        "paraGirisiCikisi": -4668344.62,
+        "yatirimciDegisimi": 37
+      },
       {
         "fonKodu": "RBR",
         "fonAdi": "RE-PIE PORTFÖY BİRİNCİ KATILIM SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00191141,
       "paraGirisiCikisi": 2337863.64,
       "yatirimciDegisimi": 28
+    },
+    {
+      "fonKodu": "RBR",
+      "fonAdi": "RE-PIE PORTFÖY BİRİNCİ KATILIM SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 3.728814,
+      "tedavuldekiPaySayisi": 27190760,
+      "kisiSayisi": 908,
+      "fonToplamDeger": 101389278.14,
+      "gunlukGetiri": 0.00235346,
+      "paraGirisiCikisi": -4668344.62,
+      "yatirimciDegisimi": 37
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RBR",
+      "fonAdi": "RE-PIE PORTFÖY BİRİNCİ KATILIM SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 3.728814,
+      "tedavuldekiPaySayisi": 27190760,
+      "kisiSayisi": 908,
+      "fonToplamDeger": 101389278.14,
+      "gunlukGetiri": 0.00235346,
+      "paraGirisiCikisi": -4668344.62,
+      "yatirimciDegisimi": 37
+    },
     {
       "fonKodu": "RBR",
       "fonAdi": "RE-PIE PORTFÖY BİRİNCİ KATILIM SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

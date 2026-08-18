@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YIS",
     "slug": "yis",
@@ -12,13 +12,13 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.411442,
+    "fiyat": 1.417568,
     "tedavuldekiPaySayisi": 740375889,
     "kisiSayisi": 1,
-    "fonToplamDeger": 1044997987.09,
-    "gunlukGetiri": 0.00108304,
+    "fonToplamDeger": 1049533216.81,
+    "gunlukGetiri": 0.00434024,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 150161.9,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": 150161.9,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YIS",
+        "fonAdi": "YAPI KREDİ PORTFÖY İKİNCİ SERBEST ÖZEL FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.417568,
+        "tedavuldekiPaySayisi": 740375889,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 1049533216.81,
+        "gunlukGetiri": 0.00434024,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "YIS",
         "fonAdi": "YAPI KREDİ PORTFÖY İKİNCİ SERBEST ÖZEL FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00108304,
       "paraGirisiCikisi": 150161.9,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YIS",
+      "fonAdi": "YAPI KREDİ PORTFÖY İKİNCİ SERBEST ÖZEL FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.417568,
+      "tedavuldekiPaySayisi": 740375889,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 1049533216.81,
+      "gunlukGetiri": 0.00434024,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YIS",
+      "fonAdi": "YAPI KREDİ PORTFÖY İKİNCİ SERBEST ÖZEL FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.417568,
+      "tedavuldekiPaySayisi": 740375889,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 1049533216.81,
+      "gunlukGetiri": 0.00434024,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "YIS",
       "fonAdi": "YAPI KREDİ PORTFÖY İKİNCİ SERBEST ÖZEL FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

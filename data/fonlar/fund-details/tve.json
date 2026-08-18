@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TVE",
     "slug": "tve",
@@ -12,44 +12,56 @@
     "yonetici": "EMAA BLUE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "emaa-blue-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.109064,
-    "tedavuldekiPaySayisi": 261616298,
-    "kisiSayisi": 320,
-    "fonToplamDeger": 290149134.12,
-    "gunlukGetiri": -0.00179558,
+    "fiyat": 1.124296,
+    "tedavuldekiPaySayisi": 190175900,
+    "kisiSayisi": 326,
+    "fonToplamDeger": 213813920.2,
+    "gunlukGetiri": 0.0137341,
     "getiriler": {
-      "birAy": -0.00871,
-      "ucAy": -0.070199,
-      "altiAy": -0.023219,
-      "yilbasi": 0.12365500000000001,
+      "birAy": -0.017118,
+      "ucAy": -0.061376,
+      "altiAy": -0.013124,
+      "yilbasi": 0.139087,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 45507.11,
-      "besGun": null,
+      "gunluk": -80320153.71,
+      "besGun": -80238286.65,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 15,
-      "besGun": null,
+      "gunluk": 6,
+      "besGun": 34,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TVE",
+        "fonAdi": "EMAA BLUE PORTFÖY TARIM VE GIDA SEKTÖRÜ KATILIM FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.124296,
+        "tedavuldekiPaySayisi": 190175900,
+        "kisiSayisi": 326,
+        "fonToplamDeger": 213813920.2,
+        "gunlukGetiri": 0.0137341,
+        "paraGirisiCikisi": -80320153.71,
+        "yatirimciDegisimi": 6
+      },
       {
         "fonKodu": "TVE",
         "fonAdi": "EMAA BLUE PORTFÖY TARIM VE GIDA SEKTÖRÜ KATILIM FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00179558,
       "paraGirisiCikisi": 45507.11,
       "yatirimciDegisimi": 15
+    },
+    {
+      "fonKodu": "TVE",
+      "fonAdi": "EMAA BLUE PORTFÖY TARIM VE GIDA SEKTÖRÜ KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.124296,
+      "tedavuldekiPaySayisi": 190175900,
+      "kisiSayisi": 326,
+      "fonToplamDeger": 213813920.2,
+      "gunlukGetiri": 0.0137341,
+      "paraGirisiCikisi": -80320153.71,
+      "yatirimciDegisimi": 6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TVE",
+      "fonAdi": "EMAA BLUE PORTFÖY TARIM VE GIDA SEKTÖRÜ KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.124296,
+      "tedavuldekiPaySayisi": 190175900,
+      "kisiSayisi": 326,
+      "fonToplamDeger": 213813920.2,
+      "gunlukGetiri": 0.0137341,
+      "paraGirisiCikisi": -80320153.71,
+      "yatirimciDegisimi": 6
+    },
     {
       "fonKodu": "TVE",
       "fonAdi": "EMAA BLUE PORTFÖY TARIM VE GIDA SEKTÖRÜ KATILIM FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

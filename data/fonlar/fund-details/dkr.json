@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DKR",
     "slug": "dkr",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.967893,
-    "tedavuldekiPaySayisi": 464480674,
-    "kisiSayisi": 2562,
-    "fonToplamDeger": 449567759.01,
-    "gunlukGetiri": 0.03536239,
+    "fiyat": 0.95294,
+    "tedavuldekiPaySayisi": 389153176,
+    "kisiSayisi": 2204,
+    "fonToplamDeger": 370839485.85,
+    "gunlukGetiri": -0.01544902,
     "getiriler": {
-      "birAy": -0.019226,
-      "ucAy": 0.25034500000000004,
-      "altiAy": 0.302263,
-      "yilbasi": 0.6274219999999999,
-      "birYil": 0.313019,
+      "birAy": -0.077809,
+      "ucAy": 0.24340299999999998,
+      "altiAy": 0.264207,
+      "yilbasi": 0.60228,
+      "birYil": 0.36172400000000005,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -12750968.18,
-      "besGun": null,
+      "gunluk": -71782585.94,
+      "besGun": -225503235.61,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -373,
-      "besGun": null,
+      "gunluk": -358,
+      "besGun": -1058,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DKR",
+        "fonAdi": "DENİZ PORTFÖY ONDÖRDÜNCÜ SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 0.95294,
+        "tedavuldekiPaySayisi": 389153176,
+        "kisiSayisi": 2204,
+        "fonToplamDeger": 370839485.85,
+        "gunlukGetiri": -0.01544902,
+        "paraGirisiCikisi": -71782585.94,
+        "yatirimciDegisimi": -358
+      },
       {
         "fonKodu": "DKR",
         "fonAdi": "DENİZ PORTFÖY ONDÖRDÜNCÜ SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.03536239,
       "paraGirisiCikisi": -12750968.18,
       "yatirimciDegisimi": -373
+    },
+    {
+      "fonKodu": "DKR",
+      "fonAdi": "DENİZ PORTFÖY ONDÖRDÜNCÜ SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 0.95294,
+      "tedavuldekiPaySayisi": 389153176,
+      "kisiSayisi": 2204,
+      "fonToplamDeger": 370839485.85,
+      "gunlukGetiri": -0.01544902,
+      "paraGirisiCikisi": -71782585.94,
+      "yatirimciDegisimi": -358
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DKR",
+      "fonAdi": "DENİZ PORTFÖY ONDÖRDÜNCÜ SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 0.95294,
+      "tedavuldekiPaySayisi": 389153176,
+      "kisiSayisi": 2204,
+      "fonToplamDeger": 370839485.85,
+      "gunlukGetiri": -0.01544902,
+      "paraGirisiCikisi": -71782585.94,
+      "yatirimciDegisimi": -358
+    },
     {
       "fonKodu": "DKR",
       "fonAdi": "DENİZ PORTFÖY ONDÖRDÜNCÜ SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

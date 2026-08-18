@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IVF",
     "slug": "ivf",
@@ -12,44 +12,56 @@
     "yonetici": "İSTANBUL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "istanbul-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 6.41395,
-    "tedavuldekiPaySayisi": 12594490,
-    "kisiSayisi": 1281,
-    "fonToplamDeger": 80780428.66,
-    "gunlukGetiri": 0.0036304,
+    "fiyat": 6.505212,
+    "tedavuldekiPaySayisi": 12486676,
+    "kisiSayisi": 1280,
+    "fonToplamDeger": 81228480.14,
+    "gunlukGetiri": 0.01422867,
     "getiriler": {
-      "birAy": 0.03436,
-      "ucAy": -0.019125,
-      "altiAy": 0.134512,
-      "yilbasi": 0.408069,
-      "birYil": 0.432525,
-      "ucYil": 1.298024,
+      "birAy": 0.030159,
+      "ucAy": -0.006391,
+      "altiAy": 0.15154600000000001,
+      "yilbasi": 0.42810400000000004,
+      "birYil": 0.465704,
+      "ucYil": 1.293321,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -253979.59,
-      "besGun": null,
+      "gunluk": -701352.93,
+      "besGun": -102466650.86,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
-      "besGun": null,
+      "gunluk": -1,
+      "besGun": -14,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IVF",
+        "fonAdi": "İSTANBUL PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 6.505212,
+        "tedavuldekiPaySayisi": 12486676,
+        "kisiSayisi": 1280,
+        "fonToplamDeger": 81228480.14,
+        "gunlukGetiri": 0.01422867,
+        "paraGirisiCikisi": -701352.93,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "IVF",
         "fonAdi": "İSTANBUL PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.0036304,
       "paraGirisiCikisi": -253979.59,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "IVF",
+      "fonAdi": "İSTANBUL PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 6.505212,
+      "tedavuldekiPaySayisi": 12486676,
+      "kisiSayisi": 1280,
+      "fonToplamDeger": 81228480.14,
+      "gunlukGetiri": 0.01422867,
+      "paraGirisiCikisi": -701352.93,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IVF",
+      "fonAdi": "İSTANBUL PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 6.505212,
+      "tedavuldekiPaySayisi": 12486676,
+      "kisiSayisi": 1280,
+      "fonToplamDeger": 81228480.14,
+      "gunlukGetiri": 0.01422867,
+      "paraGirisiCikisi": -701352.93,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "IVF",
       "fonAdi": "İSTANBUL PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

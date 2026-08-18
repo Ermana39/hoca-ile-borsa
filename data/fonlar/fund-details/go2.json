@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GO2",
     "slug": "go2",
@@ -12,44 +12,56 @@
     "yonetici": "ONE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "one-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 4.911479,
-    "tedavuldekiPaySayisi": 5299184,
-    "kisiSayisi": 458,
-    "fonToplamDeger": 26026829.62,
-    "gunlukGetiri": 0.00010141,
+    "fiyat": 4.934398,
+    "tedavuldekiPaySayisi": 5267203,
+    "kisiSayisi": 452,
+    "fonToplamDeger": 25990476.1,
+    "gunlukGetiri": 0.00466642,
     "getiriler": {
-      "birAy": 0.029153,
-      "ucAy": 0.048234000000000006,
-      "altiAy": 0.136523,
-      "yilbasi": 0.24517399999999998,
-      "birYil": 0.478814,
-      "ucYil": 2.350032,
+      "birAy": 0.028656,
+      "ucAy": 0.052853000000000004,
+      "altiAy": 0.139126,
+      "yilbasi": 0.25098400000000004,
+      "birYil": 0.479538,
+      "ucYil": 2.344849,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -26281.32,
-      "besGun": null,
+      "gunluk": -157806.98,
+      "besGun": -477795.69,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
-      "besGun": null,
+      "gunluk": -6,
+      "besGun": -15,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GO2",
+        "fonAdi": "ONE PORTFÖY KATILIM FON SEPETİ FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 4.934398,
+        "tedavuldekiPaySayisi": 5267203,
+        "kisiSayisi": 452,
+        "fonToplamDeger": 25990476.1,
+        "gunlukGetiri": 0.00466642,
+        "paraGirisiCikisi": -157806.98,
+        "yatirimciDegisimi": -6
+      },
       {
         "fonKodu": "GO2",
         "fonAdi": "ONE PORTFÖY KATILIM FON SEPETİ FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00010141,
       "paraGirisiCikisi": -26281.32,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "GO2",
+      "fonAdi": "ONE PORTFÖY KATILIM FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 4.934398,
+      "tedavuldekiPaySayisi": 5267203,
+      "kisiSayisi": 452,
+      "fonToplamDeger": 25990476.1,
+      "gunlukGetiri": 0.00466642,
+      "paraGirisiCikisi": -157806.98,
+      "yatirimciDegisimi": -6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GO2",
+      "fonAdi": "ONE PORTFÖY KATILIM FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 4.934398,
+      "tedavuldekiPaySayisi": 5267203,
+      "kisiSayisi": 452,
+      "fonToplamDeger": 25990476.1,
+      "gunlukGetiri": 0.00466642,
+      "paraGirisiCikisi": -157806.98,
+      "yatirimciDegisimi": -6
+    },
     {
       "fonKodu": "GO2",
       "fonAdi": "ONE PORTFÖY KATILIM FON SEPETİ FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

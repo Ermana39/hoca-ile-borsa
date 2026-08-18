@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "FPH",
     "slug": "fph",
@@ -12,44 +12,56 @@
     "yonetici": "FİBA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "fiba-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 33.873921,
-    "tedavuldekiPaySayisi": 37208490,
-    "kisiSayisi": 4543,
-    "fonToplamDeger": 1260397455.88,
-    "gunlukGetiri": 0.00032741,
+    "fiyat": 34.037051,
+    "tedavuldekiPaySayisi": 36995220,
+    "kisiSayisi": 4532,
+    "fonToplamDeger": 1259208193.85,
+    "gunlukGetiri": 0.0048158,
     "getiriler": {
-      "birAy": 0.020158,
-      "ucAy": -0.008456,
-      "altiAy": -0.011958,
-      "yilbasi": 0.172817,
-      "birYil": 0.18339200000000003,
-      "ucYil": 1.073197,
-      "besYil": 10.319356
+      "birAy": 0.008773,
+      "ucAy": 0.007455000000000001,
+      "altiAy": -0.0028020000000000002,
+      "yilbasi": 0.17846499999999998,
+      "birYil": 0.201143,
+      "ucYil": 1.064841,
+      "besYil": 10.237143999999999
     },
     "paraAkisi": {
-      "gunluk": -1389542.11,
-      "besGun": null,
+      "gunluk": -7259081.87,
+      "besGun": -12442046.15,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -9,
-      "besGun": null,
+      "gunluk": -11,
+      "besGun": -36,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FPH",
+        "fonAdi": "FİBA PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 34.037051,
+        "tedavuldekiPaySayisi": 36995220,
+        "kisiSayisi": 4532,
+        "fonToplamDeger": 1259208193.85,
+        "gunlukGetiri": 0.0048158,
+        "paraGirisiCikisi": -7259081.87,
+        "yatirimciDegisimi": -11
+      },
       {
         "fonKodu": "FPH",
         "fonAdi": "FİBA PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00032741,
       "paraGirisiCikisi": -1389542.11,
       "yatirimciDegisimi": -9
+    },
+    {
+      "fonKodu": "FPH",
+      "fonAdi": "FİBA PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 34.037051,
+      "tedavuldekiPaySayisi": 36995220,
+      "kisiSayisi": 4532,
+      "fonToplamDeger": 1259208193.85,
+      "gunlukGetiri": 0.0048158,
+      "paraGirisiCikisi": -7259081.87,
+      "yatirimciDegisimi": -11
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FPH",
+      "fonAdi": "FİBA PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 34.037051,
+      "tedavuldekiPaySayisi": 36995220,
+      "kisiSayisi": 4532,
+      "fonToplamDeger": 1259208193.85,
+      "gunlukGetiri": 0.0048158,
+      "paraGirisiCikisi": -7259081.87,
+      "yatirimciDegisimi": -11
+    },
     {
       "fonKodu": "FPH",
       "fonAdi": "FİBA PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

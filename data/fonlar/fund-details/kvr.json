@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KVR",
     "slug": "kvr",
@@ -12,44 +12,56 @@
     "yonetici": "ATLAS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "atlas-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.284293,
-    "tedavuldekiPaySayisi": 98882828,
-    "kisiSayisi": 50,
-    "fonToplamDeger": 126994506.42,
-    "gunlukGetiri": 0.00104447,
+    "fiyat": 1.28969,
+    "tedavuldekiPaySayisi": 92631601,
+    "kisiSayisi": 51,
+    "fonToplamDeger": 119466042.47,
+    "gunlukGetiri": 0.00420231,
     "getiriler": {
-      "birAy": 0.033209,
-      "ucAy": 0.101931,
-      "altiAy": 0.20092500000000002,
-      "yilbasi": 0.254162,
+      "birAy": 0.030939,
+      "ucAy": 0.101907,
+      "altiAy": 0.203688,
+      "yilbasi": 0.259432,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -201196.06,
-      "besGun": null,
+      "gunluk": -8062144.95,
+      "besGun": -10254429.05,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": 1,
+      "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KVR",
+        "fonAdi": "ATLAS PORTFÖY KISA VADELİ KATILIM SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.28969,
+        "tedavuldekiPaySayisi": 92631601,
+        "kisiSayisi": 51,
+        "fonToplamDeger": 119466042.47,
+        "gunlukGetiri": 0.00420231,
+        "paraGirisiCikisi": -8062144.95,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "KVR",
         "fonAdi": "ATLAS PORTFÖY KISA VADELİ KATILIM SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00104447,
       "paraGirisiCikisi": -201196.06,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KVR",
+      "fonAdi": "ATLAS PORTFÖY KISA VADELİ KATILIM SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.28969,
+      "tedavuldekiPaySayisi": 92631601,
+      "kisiSayisi": 51,
+      "fonToplamDeger": 119466042.47,
+      "gunlukGetiri": 0.00420231,
+      "paraGirisiCikisi": -8062144.95,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KVR",
+      "fonAdi": "ATLAS PORTFÖY KISA VADELİ KATILIM SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.28969,
+      "tedavuldekiPaySayisi": 92631601,
+      "kisiSayisi": 51,
+      "fonToplamDeger": 119466042.47,
+      "gunlukGetiri": 0.00420231,
+      "paraGirisiCikisi": -8062144.95,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "KVR",
       "fonAdi": "ATLAS PORTFÖY KISA VADELİ KATILIM SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

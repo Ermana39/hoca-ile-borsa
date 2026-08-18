@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BLD",
     "slug": "bld",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.656077,
-    "tedavuldekiPaySayisi": 309922777,
-    "kisiSayisi": 738,
-    "fonToplamDeger": 513256137.31,
-    "gunlukGetiri": 0.00104997,
+    "fiyat": 1.663069,
+    "tedavuldekiPaySayisi": 308981004,
+    "kisiSayisi": 737,
+    "fonToplamDeger": 513856629.33,
+    "gunlukGetiri": 0.00422203,
     "getiriler": {
-      "birAy": 0.033246000000000005,
-      "ucAy": 0.10322800000000001,
-      "altiAy": 0.204903,
-      "yilbasi": 0.25878799999999996,
-      "birYil": 0.461556,
+      "birAy": 0.031243,
+      "ucAy": 0.104106,
+      "altiAy": 0.207704,
+      "yilbasi": 0.264103,
+      "birYil": 0.46104599999999996,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -155595.06,
-      "besGun": null,
+      "gunluk": -1566233.48,
+      "besGun": -10593462,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": -1,
+      "besGun": -10,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BLD",
+        "fonAdi": "DENİZ PORTFÖY BALEV EĞİTİME DESTEK SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.663069,
+        "tedavuldekiPaySayisi": 308981004,
+        "kisiSayisi": 737,
+        "fonToplamDeger": 513856629.33,
+        "gunlukGetiri": 0.00422203,
+        "paraGirisiCikisi": -1566233.48,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "BLD",
         "fonAdi": "DENİZ PORTFÖY BALEV EĞİTİME DESTEK SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00104997,
       "paraGirisiCikisi": -155595.06,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BLD",
+      "fonAdi": "DENİZ PORTFÖY BALEV EĞİTİME DESTEK SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.663069,
+      "tedavuldekiPaySayisi": 308981004,
+      "kisiSayisi": 737,
+      "fonToplamDeger": 513856629.33,
+      "gunlukGetiri": 0.00422203,
+      "paraGirisiCikisi": -1566233.48,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BLD",
+      "fonAdi": "DENİZ PORTFÖY BALEV EĞİTİME DESTEK SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.663069,
+      "tedavuldekiPaySayisi": 308981004,
+      "kisiSayisi": 737,
+      "fonToplamDeger": 513856629.33,
+      "gunlukGetiri": 0.00422203,
+      "paraGirisiCikisi": -1566233.48,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "BLD",
       "fonAdi": "DENİZ PORTFÖY BALEV EĞİTİME DESTEK SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

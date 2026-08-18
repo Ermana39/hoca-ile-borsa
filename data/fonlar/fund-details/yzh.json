@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YZH",
     "slug": "yzh",
@@ -12,44 +12,56 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 10.579822,
-    "tedavuldekiPaySayisi": 59456521,
-    "kisiSayisi": 5662,
-    "fonToplamDeger": 629039436.59,
-    "gunlukGetiri": -0.00225044,
+    "fiyat": 10.456177,
+    "tedavuldekiPaySayisi": 59368052,
+    "kisiSayisi": 5635,
+    "fonToplamDeger": 620762871.4,
+    "gunlukGetiri": -0.01168687,
     "getiriler": {
-      "birAy": -0.031703,
-      "ucAy": -0.068258,
-      "altiAy": -0.206738,
-      "yilbasi": -0.021145,
-      "birYil": 0.00054,
-      "ucYil": 1.2773430000000001,
-      "besYil": 11.89689
+      "birAy": -0.035082,
+      "ucAy": -0.067351,
+      "altiAy": -0.211309,
+      "yilbasi": -0.032585,
+      "birYil": 0.006155000000000001,
+      "ucYil": 1.238956,
+      "besYil": 11.39183
     },
     "paraAkisi": {
-      "gunluk": -1114510.19,
-      "besGun": null,
+      "gunluk": -925047.52,
+      "besGun": -5677463.94,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -18,
-      "besGun": null,
+      "gunluk": -27,
+      "besGun": -75,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YZH",
+        "fonAdi": "TEB PORTFÖY BIST BANKA ENDEKSİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN)",
+        "tarih": "2026-08-18",
+        "fiyat": 10.456177,
+        "tedavuldekiPaySayisi": 59368052,
+        "kisiSayisi": 5635,
+        "fonToplamDeger": 620762871.4,
+        "gunlukGetiri": -0.01168687,
+        "paraGirisiCikisi": -925047.52,
+        "yatirimciDegisimi": -27
+      },
       {
         "fonKodu": "YZH",
         "fonAdi": "TEB PORTFÖY BIST BANKA ENDEKSİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00225044,
       "paraGirisiCikisi": -1114510.19,
       "yatirimciDegisimi": -18
+    },
+    {
+      "fonKodu": "YZH",
+      "fonAdi": "TEB PORTFÖY BIST BANKA ENDEKSİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN)",
+      "tarih": "2026-08-18",
+      "fiyat": 10.456177,
+      "tedavuldekiPaySayisi": 59368052,
+      "kisiSayisi": 5635,
+      "fonToplamDeger": 620762871.4,
+      "gunlukGetiri": -0.01168687,
+      "paraGirisiCikisi": -925047.52,
+      "yatirimciDegisimi": -27
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YZH",
+      "fonAdi": "TEB PORTFÖY BIST BANKA ENDEKSİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN)",
+      "tarih": "2026-08-18",
+      "fiyat": 10.456177,
+      "tedavuldekiPaySayisi": 59368052,
+      "kisiSayisi": 5635,
+      "fonToplamDeger": 620762871.4,
+      "gunlukGetiri": -0.01168687,
+      "paraGirisiCikisi": -925047.52,
+      "yatirimciDegisimi": -27
+    },
     {
       "fonKodu": "YZH",
       "fonAdi": "TEB PORTFÖY BIST BANKA ENDEKSİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

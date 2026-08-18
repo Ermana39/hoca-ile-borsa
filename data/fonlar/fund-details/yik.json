@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YIK",
     "slug": "yik",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.524445,
-    "tedavuldekiPaySayisi": 16465144704,
-    "kisiSayisi": 1485,
-    "fonToplamDeger": 25100208933.83,
-    "gunlukGetiri": 0.00106381,
+    "fiyat": 1.530936,
+    "tedavuldekiPaySayisi": 16611610558,
+    "kisiSayisi": 1502,
+    "fonToplamDeger": 25431318403.47,
+    "gunlukGetiri": 0.00425794,
     "getiriler": {
-      "birAy": 0.033597999999999996,
-      "ucAy": 0.103166,
-      "altiAy": 0.209026,
-      "yilbasi": 0.265071,
-      "birYil": 0.474904,
+      "birAy": 0.031386,
+      "ucAy": 0.103142,
+      "altiAy": 0.211801,
+      "yilbasi": 0.270458,
+      "birYil": 0.474477,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 100567125.96,
-      "besGun": null,
+      "gunluk": 224229848.66,
+      "besGun": 1414074423.78,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 11,
-      "besGun": null,
+      "gunluk": 17,
+      "besGun": 58,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YIK",
+        "fonAdi": "YAPI KREDİ PORTFÖY İKİNCİ PARA PİYASASI SERBEST (TL) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.530936,
+        "tedavuldekiPaySayisi": 16611610558,
+        "kisiSayisi": 1502,
+        "fonToplamDeger": 25431318403.47,
+        "gunlukGetiri": 0.00425794,
+        "paraGirisiCikisi": 224229848.66,
+        "yatirimciDegisimi": 17
+      },
       {
         "fonKodu": "YIK",
         "fonAdi": "YAPI KREDİ PORTFÖY İKİNCİ PARA PİYASASI SERBEST (TL) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00106381,
       "paraGirisiCikisi": 100567125.96,
       "yatirimciDegisimi": 11
+    },
+    {
+      "fonKodu": "YIK",
+      "fonAdi": "YAPI KREDİ PORTFÖY İKİNCİ PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.530936,
+      "tedavuldekiPaySayisi": 16611610558,
+      "kisiSayisi": 1502,
+      "fonToplamDeger": 25431318403.47,
+      "gunlukGetiri": 0.00425794,
+      "paraGirisiCikisi": 224229848.66,
+      "yatirimciDegisimi": 17
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YIK",
+      "fonAdi": "YAPI KREDİ PORTFÖY İKİNCİ PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.530936,
+      "tedavuldekiPaySayisi": 16611610558,
+      "kisiSayisi": 1502,
+      "fonToplamDeger": 25431318403.47,
+      "gunlukGetiri": 0.00425794,
+      "paraGirisiCikisi": 224229848.66,
+      "yatirimciDegisimi": 17
+    },
     {
       "fonKodu": "YIK",
       "fonAdi": "YAPI KREDİ PORTFÖY İKİNCİ PARA PİYASASI SERBEST (TL) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

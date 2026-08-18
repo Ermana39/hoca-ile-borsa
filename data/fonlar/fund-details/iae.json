@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IAE",
     "slug": "iae",
@@ -12,44 +12,56 @@
     "yonetici": "İSTANBUL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "istanbul-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 2.121173,
-    "tedavuldekiPaySayisi": 130504029,
-    "kisiSayisi": 451,
-    "fonToplamDeger": 276821567.53,
-    "gunlukGetiri": -0.00164261,
+    "fiyat": 2.133581,
+    "tedavuldekiPaySayisi": 130777029,
+    "kisiSayisi": 452,
+    "fonToplamDeger": 279023410.57,
+    "gunlukGetiri": 0.00584959,
     "getiriler": {
-      "birAy": 0.051222000000000004,
-      "ucAy": 0.065632,
-      "altiAy": 0.15348900000000001,
-      "yilbasi": 0.504483,
-      "birYil": 0.498902,
+      "birAy": 0.040838,
+      "ucAy": 0.074532,
+      "altiAy": 0.149925,
+      "yilbasi": 0.5132829999999999,
+      "birYil": 0.50806,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 9667835.63,
-      "besGun": null,
+      "gunluk": 582467.61,
+      "besGun": 20042503.77,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
-      "besGun": null,
+      "gunluk": 1,
+      "besGun": 11,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IAE",
+        "fonAdi": "İSTANBUL PORTFÖY AGRESİF DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 2.133581,
+        "tedavuldekiPaySayisi": 130777029,
+        "kisiSayisi": 452,
+        "fonToplamDeger": 279023410.57,
+        "gunlukGetiri": 0.00584959,
+        "paraGirisiCikisi": 582467.61,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "IAE",
         "fonAdi": "İSTANBUL PORTFÖY AGRESİF DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00164261,
       "paraGirisiCikisi": 9667835.63,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "IAE",
+      "fonAdi": "İSTANBUL PORTFÖY AGRESİF DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 2.133581,
+      "tedavuldekiPaySayisi": 130777029,
+      "kisiSayisi": 452,
+      "fonToplamDeger": 279023410.57,
+      "gunlukGetiri": 0.00584959,
+      "paraGirisiCikisi": 582467.61,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IAE",
+      "fonAdi": "İSTANBUL PORTFÖY AGRESİF DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 2.133581,
+      "tedavuldekiPaySayisi": 130777029,
+      "kisiSayisi": 452,
+      "fonToplamDeger": 279023410.57,
+      "gunlukGetiri": 0.00584959,
+      "paraGirisiCikisi": 582467.61,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "IAE",
       "fonAdi": "İSTANBUL PORTFÖY AGRESİF DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

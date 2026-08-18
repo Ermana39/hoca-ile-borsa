@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DSD",
     "slug": "dsd",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 71.272344,
-    "tedavuldekiPaySayisi": 48891810,
+    "fiyat": 71.875562,
+    "tedavuldekiPaySayisi": 49667686,
     "kisiSayisi": 1428,
-    "fonToplamDeger": 3484633908.83,
-    "gunlukGetiri": 0.00006863,
+    "fonToplamDeger": 3569892826.82,
+    "gunlukGetiri": 0.00846356,
     "getiriler": {
-      "birAy": 0.029266,
-      "ucAy": 0.05503,
-      "altiAy": 0.073527,
-      "yilbasi": 0.117691,
-      "birYil": 0.220945,
-      "ucYil": 1.230858,
-      "besYil": 5.514751
+      "birAy": 0.036641,
+      "ucAy": 0.072411,
+      "altiAy": 0.078311,
+      "yilbasi": 0.12714999999999999,
+      "birYil": 0.23261800000000002,
+      "ucYil": 1.261518,
+      "besYil": 5.65612
     },
     "paraAkisi": {
-      "gunluk": -627154362.7,
-      "besGun": null,
+      "gunluk": 55766523.54,
+      "besGun": -1268359618.09,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DSD",
+        "fonAdi": "DENİZ PORTFÖY İKİNCİ SERBEST (DÖVİZ_AVRO) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 71.875562,
+        "tedavuldekiPaySayisi": 49667686,
+        "kisiSayisi": 1428,
+        "fonToplamDeger": 3569892826.82,
+        "gunlukGetiri": 0.00846356,
+        "paraGirisiCikisi": 55766523.54,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "DSD",
         "fonAdi": "DENİZ PORTFÖY İKİNCİ SERBEST (DÖVİZ_AVRO) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00006863,
       "paraGirisiCikisi": -627154362.7,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "DSD",
+      "fonAdi": "DENİZ PORTFÖY İKİNCİ SERBEST (DÖVİZ_AVRO) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 71.875562,
+      "tedavuldekiPaySayisi": 49667686,
+      "kisiSayisi": 1428,
+      "fonToplamDeger": 3569892826.82,
+      "gunlukGetiri": 0.00846356,
+      "paraGirisiCikisi": 55766523.54,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DSD",
+      "fonAdi": "DENİZ PORTFÖY İKİNCİ SERBEST (DÖVİZ_AVRO) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 71.875562,
+      "tedavuldekiPaySayisi": 49667686,
+      "kisiSayisi": 1428,
+      "fonToplamDeger": 3569892826.82,
+      "gunlukGetiri": 0.00846356,
+      "paraGirisiCikisi": 55766523.54,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "DSD",
       "fonAdi": "DENİZ PORTFÖY İKİNCİ SERBEST (DÖVİZ_AVRO) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

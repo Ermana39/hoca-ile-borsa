@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BFS",
     "slug": "bfs",
@@ -12,44 +12,56 @@
     "yonetici": "BULLS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "bulls-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.000755,
-    "tedavuldekiPaySayisi": 18497928,
-    "kisiSayisi": 222,
-    "fonToplamDeger": 18511885.57,
-    "gunlukGetiri": -0.00910735,
+    "fiyat": 1.010045,
+    "tedavuldekiPaySayisi": 19025433,
+    "kisiSayisi": 235,
+    "fonToplamDeger": 19216537.65,
+    "gunlukGetiri": 0.00928299,
     "getiriler": {
-      "birAy": 0.08911799999999999,
-      "ucAy": -0.047840999999999995,
-      "altiAy": 0.009864000000000001,
+      "birAy": 0.115465,
+      "ucAy": -0.012470000000000002,
+      "altiAy": 0.041375999999999996,
       "yilbasi": null,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 333327.47,
-      "besGun": null,
+      "gunluk": 532803.79,
+      "besGun": 2809684.43,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 10,
-      "besGun": null,
+      "gunluk": 13,
+      "besGun": 64,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BFS",
+        "fonAdi": "BULLS PORTFÖY EMTİA FON SEPETİ FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.010045,
+        "tedavuldekiPaySayisi": 19025433,
+        "kisiSayisi": 235,
+        "fonToplamDeger": 19216537.65,
+        "gunlukGetiri": 0.00928299,
+        "paraGirisiCikisi": 532803.79,
+        "yatirimciDegisimi": 13
+      },
       {
         "fonKodu": "BFS",
         "fonAdi": "BULLS PORTFÖY EMTİA FON SEPETİ FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00910735,
       "paraGirisiCikisi": 333327.47,
       "yatirimciDegisimi": 10
+    },
+    {
+      "fonKodu": "BFS",
+      "fonAdi": "BULLS PORTFÖY EMTİA FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.010045,
+      "tedavuldekiPaySayisi": 19025433,
+      "kisiSayisi": 235,
+      "fonToplamDeger": 19216537.65,
+      "gunlukGetiri": 0.00928299,
+      "paraGirisiCikisi": 532803.79,
+      "yatirimciDegisimi": 13
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BFS",
+      "fonAdi": "BULLS PORTFÖY EMTİA FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.010045,
+      "tedavuldekiPaySayisi": 19025433,
+      "kisiSayisi": 235,
+      "fonToplamDeger": 19216537.65,
+      "gunlukGetiri": 0.00928299,
+      "paraGirisiCikisi": 532803.79,
+      "yatirimciDegisimi": 13
+    },
     {
       "fonKodu": "BFS",
       "fonAdi": "BULLS PORTFÖY EMTİA FON SEPETİ FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

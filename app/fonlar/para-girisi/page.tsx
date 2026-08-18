@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import Link from "@/components/NoPrefetchLink";
-import { FlowTable, FonBreadcrumb, PeriodLinks } from "../_components/FonUi";
-import { getCurrentFundsData, type PeriodKey } from "@/lib/fon-platform";
+import { FonBreadcrumb, type FlowFund } from "../_components/FonUi";
+import { getCurrentFundsData } from "@/lib/fon-platform";
 import { formatDate } from "@/lib/fon-format";
-
-const validPeriods = new Set<PeriodKey>(["gunluk", "besGun", "birAy", "ucAy"]);
+import FlowPeriodClient from "./FlowPeriodClient";
 
 export const metadata: Metadata = {
   title: "Fon Para Girişi ve Çıkışı: Güncel Fon Para Akışı",
@@ -15,17 +15,21 @@ export const metadata: Metadata = {
   },
 };
 
-export default async function FonParaGirisiPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ period?: string }>;
-}) {
-  const params = await searchParams;
-  const period = validPeriods.has(params.period as PeriodKey)
-    ? (params.period as PeriodKey)
-    : "gunluk";
+export default function FonParaGirisiPage() {
   const data = getCurrentFundsData();
-  const activeFunds = data.fonlar.filter((fund) => fund.aktifMi);
+  const activeFunds: FlowFund[] = data.fonlar
+    .filter((fund) => fund.aktifMi)
+    .map((fund) => ({
+      kod: fund.kod,
+      slug: fund.slug,
+      ad: fund.ad,
+      yonetici: fund.yonetici,
+      yoneticiSlug: fund.yoneticiSlug,
+      paraAkisi: fund.paraAkisi,
+      fonToplamDeger: fund.fonToplamDeger,
+      gunlukGetiri: fund.gunlukGetiri,
+      yatirimciDegisimi: fund.yatirimciDegisimi,
+    }));
 
   return (
     <main className="min-h-screen bg-[#f8fafc]">
@@ -47,25 +51,9 @@ export default async function FonParaGirisiPage({
           </p>
         </section>
 
-        <div className="mb-5">
-          <PeriodLinks active={period} basePath="/fonlar/para-girisi" />
-        </div>
-
-        <section className="space-y-8">
-          <div>
-            <h2 className="mb-3 text-xl font-bold text-slate-950">
-              En Çok Para Girişi Alan Fonlar
-            </h2>
-            <FlowTable funds={activeFunds} period={period} direction="in" />
-          </div>
-
-          <div>
-            <h2 className="mb-3 text-xl font-bold text-slate-950">
-              En Çok Para Çıkışı Yaşayan Fonlar
-            </h2>
-            <FlowTable funds={activeFunds} period={period} direction="out" />
-          </div>
-        </section>
+        <Suspense fallback={<p className="text-sm text-slate-500">Para akışları hazırlanıyor...</p>}>
+          <FlowPeriodClient funds={activeFunds} />
+        </Suspense>
 
         <section className="mt-12 border-t border-slate-200 pt-10">
           <h2 className="text-2xl font-bold text-slate-950">

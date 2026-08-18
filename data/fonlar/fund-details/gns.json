@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GNS",
     "slug": "gns",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.547542,
-    "tedavuldekiPaySayisi": 45919626,
-    "kisiSayisi": 1579,
-    "fonToplamDeger": 71062543.61,
-    "gunlukGetiri": 0.01026097,
+    "fiyat": 1.56179,
+    "tedavuldekiPaySayisi": 45613997,
+    "kisiSayisi": 1570,
+    "fonToplamDeger": 71239490.59,
+    "gunlukGetiri": 0.00920686,
     "getiriler": {
-      "birAy": -0.044576000000000005,
-      "ucAy": -0.051165,
-      "altiAy": 0.054522,
-      "yilbasi": 0.196691,
-      "birYil": 0.262393,
+      "birAy": -0.066873,
+      "ucAy": -0.028603,
+      "altiAy": 0.053475999999999996,
+      "yilbasi": 0.207709,
+      "birYil": 0.26367999999999997,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -176648.82,
-      "besGun": null,
+      "gunluk": -477328.32,
+      "besGun": -1711572.61,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -10,
-      "besGun": null,
+      "gunluk": -9,
+      "besGun": -40,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GNS",
+        "fonAdi": "GARANTİ PORTFÖY ENERJİ ŞİRKETLERİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.56179,
+        "tedavuldekiPaySayisi": 45613997,
+        "kisiSayisi": 1570,
+        "fonToplamDeger": 71239490.59,
+        "gunlukGetiri": 0.00920686,
+        "paraGirisiCikisi": -477328.32,
+        "yatirimciDegisimi": -9
+      },
       {
         "fonKodu": "GNS",
         "fonAdi": "GARANTİ PORTFÖY ENERJİ ŞİRKETLERİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.01026097,
       "paraGirisiCikisi": -176648.82,
       "yatirimciDegisimi": -10
+    },
+    {
+      "fonKodu": "GNS",
+      "fonAdi": "GARANTİ PORTFÖY ENERJİ ŞİRKETLERİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.56179,
+      "tedavuldekiPaySayisi": 45613997,
+      "kisiSayisi": 1570,
+      "fonToplamDeger": 71239490.59,
+      "gunlukGetiri": 0.00920686,
+      "paraGirisiCikisi": -477328.32,
+      "yatirimciDegisimi": -9
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GNS",
+      "fonAdi": "GARANTİ PORTFÖY ENERJİ ŞİRKETLERİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.56179,
+      "tedavuldekiPaySayisi": 45613997,
+      "kisiSayisi": 1570,
+      "fonToplamDeger": 71239490.59,
+      "gunlukGetiri": 0.00920686,
+      "paraGirisiCikisi": -477328.32,
+      "yatirimciDegisimi": -9
+    },
     {
       "fonKodu": "GNS",
       "fonAdi": "GARANTİ PORTFÖY ENERJİ ŞİRKETLERİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

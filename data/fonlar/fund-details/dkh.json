@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DKH",
     "slug": "dkh",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 3.711056,
-    "tedavuldekiPaySayisi": 57113985,
-    "kisiSayisi": 1432,
-    "fonToplamDeger": 211953189.4,
-    "gunlukGetiri": 0.00304612,
+    "fiyat": 3.770124,
+    "tedavuldekiPaySayisi": 57013232,
+    "kisiSayisi": 1424,
+    "fonToplamDeger": 214946945.84,
+    "gunlukGetiri": 0.01591676,
     "getiriler": {
-      "birAy": 0.024579,
-      "ucAy": -0.019948,
-      "altiAy": 0.086962,
-      "yilbasi": 0.289026,
-      "birYil": 0.33071399999999995,
-      "ucYil": 1.354254,
+      "birAy": 0.019216,
+      "ucAy": -0.007167,
+      "altiAy": 0.09826399999999999,
+      "yilbasi": 0.309543,
+      "birYil": 0.354344,
+      "ucYil": 1.337395,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -924939.89,
-      "besGun": null,
+      "gunluk": -379851.3,
+      "besGun": -1743147,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": -8,
+      "besGun": -18,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DKH",
+        "fonAdi": "DENİZ PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 3.770124,
+        "tedavuldekiPaySayisi": 57013232,
+        "kisiSayisi": 1424,
+        "fonToplamDeger": 214946945.84,
+        "gunlukGetiri": 0.01591676,
+        "paraGirisiCikisi": -379851.3,
+        "yatirimciDegisimi": -8
+      },
       {
         "fonKodu": "DKH",
         "fonAdi": "DENİZ PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00304612,
       "paraGirisiCikisi": -924939.89,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DKH",
+      "fonAdi": "DENİZ PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 3.770124,
+      "tedavuldekiPaySayisi": 57013232,
+      "kisiSayisi": 1424,
+      "fonToplamDeger": 214946945.84,
+      "gunlukGetiri": 0.01591676,
+      "paraGirisiCikisi": -379851.3,
+      "yatirimciDegisimi": -8
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DKH",
+      "fonAdi": "DENİZ PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 3.770124,
+      "tedavuldekiPaySayisi": 57013232,
+      "kisiSayisi": 1424,
+      "fonToplamDeger": 214946945.84,
+      "gunlukGetiri": 0.01591676,
+      "paraGirisiCikisi": -379851.3,
+      "yatirimciDegisimi": -8
+    },
     {
       "fonKodu": "DKH",
       "fonAdi": "DENİZ PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

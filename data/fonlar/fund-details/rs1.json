@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "RS1",
     "slug": "rs1",
@@ -12,44 +12,56 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.602433,
-    "tedavuldekiPaySayisi": 535483358,
-    "kisiSayisi": 126,
-    "fonToplamDeger": 858076302.9,
-    "gunlukGetiri": 0.00109078,
+    "fiyat": 1.60942,
+    "tedavuldekiPaySayisi": 526514044,
+    "kisiSayisi": 127,
+    "fonToplamDeger": 847382438.06,
+    "gunlukGetiri": 0.00436024,
     "getiriler": {
-      "birAy": 0.033997,
-      "ucAy": 0.105681,
-      "altiAy": 0.21482600000000002,
-      "yilbasi": 0.273263,
-      "birYil": 0.493705,
+      "birAy": 0.031823000000000004,
+      "ucAy": 0.10517699999999999,
+      "altiAy": 0.21764299999999998,
+      "yilbasi": 0.278814,
+      "birYil": 0.49296799999999996,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1818638.07,
-      "besGun": null,
+      "gunluk": -14435393.34,
+      "besGun": -19587904.15,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 1,
-      "besGun": null,
+      "besGun": 2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RS1",
+        "fonAdi": "ROTA PORTFÖY BİRİNCİ KISA VADELİ SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.60942,
+        "tedavuldekiPaySayisi": 526514044,
+        "kisiSayisi": 127,
+        "fonToplamDeger": 847382438.06,
+        "gunlukGetiri": 0.00436024,
+        "paraGirisiCikisi": -14435393.34,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "RS1",
         "fonAdi": "ROTA PORTFÖY BİRİNCİ KISA VADELİ SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00109078,
       "paraGirisiCikisi": 1818638.07,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "RS1",
+      "fonAdi": "ROTA PORTFÖY BİRİNCİ KISA VADELİ SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.60942,
+      "tedavuldekiPaySayisi": 526514044,
+      "kisiSayisi": 127,
+      "fonToplamDeger": 847382438.06,
+      "gunlukGetiri": 0.00436024,
+      "paraGirisiCikisi": -14435393.34,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RS1",
+      "fonAdi": "ROTA PORTFÖY BİRİNCİ KISA VADELİ SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.60942,
+      "tedavuldekiPaySayisi": 526514044,
+      "kisiSayisi": 127,
+      "fonToplamDeger": 847382438.06,
+      "gunlukGetiri": 0.00436024,
+      "paraGirisiCikisi": -14435393.34,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "RS1",
       "fonAdi": "ROTA PORTFÖY BİRİNCİ KISA VADELİ SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

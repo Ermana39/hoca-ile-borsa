@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DVU",
     "slug": "dvu",
@@ -12,13 +12,13 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 8.469043,
+    "fiyat": 8.518125,
     "tedavuldekiPaySayisi": 167311605,
     "kisiSayisi": 5,
-    "fonToplamDeger": 1416969110.54,
-    "gunlukGetiri": 0.00106832,
+    "fonToplamDeger": 1425181234.99,
+    "gunlukGetiri": 0.00579546,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -30,26 +30,38 @@
     },
     "paraAkisi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DVU",
+        "fonAdi": "AZİMUT PORTFÖY 17.0 SERBEST ÖZEL FON",
+        "tarih": "2026-08-18",
+        "fiyat": 8.518125,
+        "tedavuldekiPaySayisi": 167311605,
+        "kisiSayisi": 5,
+        "fonToplamDeger": 1425181234.99,
+        "gunlukGetiri": 0.00579546,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "DVU",
         "fonAdi": "AZİMUT PORTFÖY 17.0 SERBEST ÖZEL FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00106832,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DVU",
+      "fonAdi": "AZİMUT PORTFÖY 17.0 SERBEST ÖZEL FON",
+      "tarih": "2026-08-18",
+      "fiyat": 8.518125,
+      "tedavuldekiPaySayisi": 167311605,
+      "kisiSayisi": 5,
+      "fonToplamDeger": 1425181234.99,
+      "gunlukGetiri": 0.00579546,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DVU",
+      "fonAdi": "AZİMUT PORTFÖY 17.0 SERBEST ÖZEL FON",
+      "tarih": "2026-08-18",
+      "fiyat": 8.518125,
+      "tedavuldekiPaySayisi": 167311605,
+      "kisiSayisi": 5,
+      "fonToplamDeger": 1425181234.99,
+      "gunlukGetiri": 0.00579546,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "DVU",
       "fonAdi": "AZİMUT PORTFÖY 17.0 SERBEST ÖZEL FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

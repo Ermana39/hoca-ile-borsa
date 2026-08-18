@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GNP",
     "slug": "gnp",
@@ -12,13 +12,13 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.461986,
-    "tedavuldekiPaySayisi": 1831657123,
-    "kisiSayisi": 6204,
-    "fonToplamDeger": 2677857408.46,
-    "gunlukGetiri": 0.00102911,
+    "fiyat": 1.468002,
+    "tedavuldekiPaySayisi": 1584991681,
+    "kisiSayisi": 8487,
+    "fonToplamDeger": 2326770443.44,
+    "gunlukGetiri": 0.00411495,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 384825014.86,
-      "besGun": null,
+      "gunluk": -362105362.19,
+      "besGun": 741815378.67,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 742,
-      "besGun": null,
+      "gunluk": 2283,
+      "besGun": 3358,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GNP",
+        "fonAdi": "GARANTİ PORTFÖY NEMA PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.468002,
+        "tedavuldekiPaySayisi": 1584991681,
+        "kisiSayisi": 8487,
+        "fonToplamDeger": 2326770443.44,
+        "gunlukGetiri": 0.00411495,
+        "paraGirisiCikisi": -362105362.19,
+        "yatirimciDegisimi": 2283
+      },
       {
         "fonKodu": "GNP",
         "fonAdi": "GARANTİ PORTFÖY NEMA PARA PİYASASI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00102911,
       "paraGirisiCikisi": 384825014.86,
       "yatirimciDegisimi": 742
+    },
+    {
+      "fonKodu": "GNP",
+      "fonAdi": "GARANTİ PORTFÖY NEMA PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.468002,
+      "tedavuldekiPaySayisi": 1584991681,
+      "kisiSayisi": 8487,
+      "fonToplamDeger": 2326770443.44,
+      "gunlukGetiri": 0.00411495,
+      "paraGirisiCikisi": -362105362.19,
+      "yatirimciDegisimi": 2283
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GNP",
+      "fonAdi": "GARANTİ PORTFÖY NEMA PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.468002,
+      "tedavuldekiPaySayisi": 1584991681,
+      "kisiSayisi": 8487,
+      "fonToplamDeger": 2326770443.44,
+      "gunlukGetiri": 0.00411495,
+      "paraGirisiCikisi": -362105362.19,
+      "yatirimciDegisimi": 2283
+    },
     {
       "fonKodu": "GNP",
       "fonAdi": "GARANTİ PORTFÖY NEMA PARA PİYASASI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

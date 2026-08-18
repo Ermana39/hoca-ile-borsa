@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TMZ",
     "slug": "tmz",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.947979,
-    "tedavuldekiPaySayisi": 26029447,
+    "fiyat": 1.960132,
+    "tedavuldekiPaySayisi": 25861568,
     "kisiSayisi": 2543,
-    "fonToplamDeger": 50704805,
-    "gunlukGetiri": 0.00096295,
+    "fonToplamDeger": 50692097.2,
+    "gunlukGetiri": 0.00623877,
     "getiriler": {
-      "birAy": 0.023842,
-      "ucAy": 0.011269,
-      "altiAy": 0.118311,
-      "yilbasi": 0.20985900000000002,
-      "birYil": 0.33083199999999996,
+      "birAy": 0.029528,
+      "ucAy": 0.039527,
+      "altiAy": 0.131543,
+      "yilbasi": 0.21740700000000002,
+      "birYil": 0.33886299999999997,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 25919.81,
-      "besGun": null,
+      "gunluk": -329065,
+      "besGun": -323597.98,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": -8,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TMZ",
+        "fonAdi": "İŞ PORTFÖY SÜRDÜRÜLEBİLİRLİK VE TARIM FON SEPETİ FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.960132,
+        "tedavuldekiPaySayisi": 25861568,
+        "kisiSayisi": 2543,
+        "fonToplamDeger": 50692097.2,
+        "gunlukGetiri": 0.00623877,
+        "paraGirisiCikisi": -329065,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "TMZ",
         "fonAdi": "İŞ PORTFÖY SÜRDÜRÜLEBİLİRLİK VE TARIM FON SEPETİ FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00096295,
       "paraGirisiCikisi": 25919.81,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "TMZ",
+      "fonAdi": "İŞ PORTFÖY SÜRDÜRÜLEBİLİRLİK VE TARIM FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.960132,
+      "tedavuldekiPaySayisi": 25861568,
+      "kisiSayisi": 2543,
+      "fonToplamDeger": 50692097.2,
+      "gunlukGetiri": 0.00623877,
+      "paraGirisiCikisi": -329065,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TMZ",
+      "fonAdi": "İŞ PORTFÖY SÜRDÜRÜLEBİLİRLİK VE TARIM FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.960132,
+      "tedavuldekiPaySayisi": 25861568,
+      "kisiSayisi": 2543,
+      "fonToplamDeger": 50692097.2,
+      "gunlukGetiri": 0.00623877,
+      "paraGirisiCikisi": -329065,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "TMZ",
       "fonAdi": "İŞ PORTFÖY SÜRDÜRÜLEBİLİRLİK VE TARIM FON SEPETİ FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

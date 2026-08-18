@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DBA",
     "slug": "dba",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.742124,
-    "tedavuldekiPaySayisi": 13406606789,
-    "kisiSayisi": 25391,
-    "fonToplamDeger": 9949368345.53,
-    "gunlukGetiri": -0.00552898,
+    "fiyat": 0.746996,
+    "tedavuldekiPaySayisi": 13346242989,
+    "kisiSayisi": 25376,
+    "fonToplamDeger": 9969587005.36,
+    "gunlukGetiri": 0.00656494,
     "getiriler": {
-      "birAy": 0.08993999999999999,
-      "ucAy": -0.018494999999999998,
-      "altiAy": -0.06434000000000001,
-      "yilbasi": 0.100659,
-      "birYil": 0.508336,
-      "ucYil": 2.7892469999999996,
-      "besYil": 11.869128
+      "birAy": 0.11228500000000001,
+      "ucAy": 0.007653,
+      "altiAy": -0.059737,
+      "yilbasi": 0.10788500000000001,
+      "birYil": 0.521984,
+      "ucYil": 2.784443,
+      "besYil": 11.929622
     },
     "paraAkisi": {
-      "gunluk": -5577210.28,
-      "besGun": null,
+      "gunluk": -45091517.14,
+      "besGun": -59704612.62,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 8,
-      "besGun": null,
+      "gunluk": -15,
+      "besGun": 8,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DBA",
+        "fonAdi": "DENİZ PORTFÖY ALTIN FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 0.746996,
+        "tedavuldekiPaySayisi": 13346242989,
+        "kisiSayisi": 25376,
+        "fonToplamDeger": 9969587005.36,
+        "gunlukGetiri": 0.00656494,
+        "paraGirisiCikisi": -45091517.14,
+        "yatirimciDegisimi": -15
+      },
       {
         "fonKodu": "DBA",
         "fonAdi": "DENİZ PORTFÖY ALTIN FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00552898,
       "paraGirisiCikisi": -5577210.28,
       "yatirimciDegisimi": 8
+    },
+    {
+      "fonKodu": "DBA",
+      "fonAdi": "DENİZ PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.746996,
+      "tedavuldekiPaySayisi": 13346242989,
+      "kisiSayisi": 25376,
+      "fonToplamDeger": 9969587005.36,
+      "gunlukGetiri": 0.00656494,
+      "paraGirisiCikisi": -45091517.14,
+      "yatirimciDegisimi": -15
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DBA",
+      "fonAdi": "DENİZ PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.746996,
+      "tedavuldekiPaySayisi": 13346242989,
+      "kisiSayisi": 25376,
+      "fonToplamDeger": 9969587005.36,
+      "gunlukGetiri": 0.00656494,
+      "paraGirisiCikisi": -45091517.14,
+      "yatirimciDegisimi": -15
+    },
     {
       "fonKodu": "DBA",
       "fonAdi": "DENİZ PORTFÖY ALTIN FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

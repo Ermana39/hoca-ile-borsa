@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PYB",
     "slug": "pyb",
@@ -12,13 +12,13 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.852896,
-    "tedavuldekiPaySayisi": 510804257,
-    "kisiSayisi": 1095,
-    "fonToplamDeger": 946467026.51,
-    "gunlukGetiri": 0.00104865,
+    "fiyat": 1.860562,
+    "tedavuldekiPaySayisi": 470564596,
+    "kisiSayisi": 1117,
+    "fonToplamDeger": 875514802.76,
+    "gunlukGetiri": 0.00413731,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 13688026.47,
-      "besGun": null,
+      "gunluk": -74868384.15,
+      "besGun": -80455630.39,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -8,
-      "besGun": null,
+      "gunluk": 22,
+      "besGun": 6,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PYB",
+        "fonAdi": "TEB PORTFÖY ALTERNATİFBANK PARA PİYASASI (TL) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.860562,
+        "tedavuldekiPaySayisi": 470564596,
+        "kisiSayisi": 1117,
+        "fonToplamDeger": 875514802.76,
+        "gunlukGetiri": 0.00413731,
+        "paraGirisiCikisi": -74868384.15,
+        "yatirimciDegisimi": 22
+      },
       {
         "fonKodu": "PYB",
         "fonAdi": "TEB PORTFÖY ALTERNATİFBANK PARA PİYASASI (TL) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00104865,
       "paraGirisiCikisi": 13688026.47,
       "yatirimciDegisimi": -8
+    },
+    {
+      "fonKodu": "PYB",
+      "fonAdi": "TEB PORTFÖY ALTERNATİFBANK PARA PİYASASI (TL) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.860562,
+      "tedavuldekiPaySayisi": 470564596,
+      "kisiSayisi": 1117,
+      "fonToplamDeger": 875514802.76,
+      "gunlukGetiri": 0.00413731,
+      "paraGirisiCikisi": -74868384.15,
+      "yatirimciDegisimi": 22
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PYB",
+      "fonAdi": "TEB PORTFÖY ALTERNATİFBANK PARA PİYASASI (TL) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.860562,
+      "tedavuldekiPaySayisi": 470564596,
+      "kisiSayisi": 1117,
+      "fonToplamDeger": 875514802.76,
+      "gunlukGetiri": 0.00413731,
+      "paraGirisiCikisi": -74868384.15,
+      "yatirimciDegisimi": 22
+    },
     {
       "fonKodu": "PYB",
       "fonAdi": "TEB PORTFÖY ALTERNATİFBANK PARA PİYASASI (TL) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

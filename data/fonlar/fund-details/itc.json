@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ITC",
     "slug": "itc",
@@ -12,44 +12,56 @@
     "yonetici": "INVEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "inveo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.169708,
-    "tedavuldekiPaySayisi": 21438811,
-    "kisiSayisi": 288,
-    "fonToplamDeger": 25077157.42,
-    "gunlukGetiri": 0.00075032,
+    "fiyat": 1.160053,
+    "tedavuldekiPaySayisi": 21391929,
+    "kisiSayisi": 286,
+    "fonToplamDeger": 24815771.31,
+    "gunlukGetiri": -0.0082542,
     "getiriler": {
-      "birAy": -0.004998,
-      "ucAy": -0.07105,
-      "altiAy": -0.067552,
+      "birAy": -0.01808,
+      "ucAy": -0.067661,
+      "altiAy": -0.07284,
       "yilbasi": null,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -50943.12,
-      "besGun": null,
+      "gunluk": -54385.6,
+      "besGun": -219297.65,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
-      "besGun": null,
+      "gunluk": -2,
+      "besGun": -4,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ITC",
+        "fonAdi": "INVEO PORTFÖY TEMETTÜ ÖDEYEN ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.160053,
+        "tedavuldekiPaySayisi": 21391929,
+        "kisiSayisi": 286,
+        "fonToplamDeger": 24815771.31,
+        "gunlukGetiri": -0.0082542,
+        "paraGirisiCikisi": -54385.6,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "ITC",
         "fonAdi": "INVEO PORTFÖY TEMETTÜ ÖDEYEN ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00075032,
       "paraGirisiCikisi": -50943.12,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "ITC",
+      "fonAdi": "INVEO PORTFÖY TEMETTÜ ÖDEYEN ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.160053,
+      "tedavuldekiPaySayisi": 21391929,
+      "kisiSayisi": 286,
+      "fonToplamDeger": 24815771.31,
+      "gunlukGetiri": -0.0082542,
+      "paraGirisiCikisi": -54385.6,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ITC",
+      "fonAdi": "INVEO PORTFÖY TEMETTÜ ÖDEYEN ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.160053,
+      "tedavuldekiPaySayisi": 21391929,
+      "kisiSayisi": 286,
+      "fonToplamDeger": 24815771.31,
+      "gunlukGetiri": -0.0082542,
+      "paraGirisiCikisi": -54385.6,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "ITC",
       "fonAdi": "INVEO PORTFÖY TEMETTÜ ÖDEYEN ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

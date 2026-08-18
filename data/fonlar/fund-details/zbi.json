@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ZBI",
     "slug": "zbi",
@@ -12,44 +12,56 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 2.257123,
-    "tedavuldekiPaySayisi": 90383878,
-    "kisiSayisi": 1800,
-    "fonToplamDeger": 204007498.82,
-    "gunlukGetiri": 0.0016575,
+    "fiyat": 2.271594,
+    "tedavuldekiPaySayisi": 79145576,
+    "kisiSayisi": 1799,
+    "fonToplamDeger": 179786579.89,
+    "gunlukGetiri": 0.00641126,
     "getiriler": {
-      "birAy": 0.031931,
-      "ucAy": 0.082126,
-      "altiAy": 0.17625,
-      "yilbasi": 0.262478,
-      "birYil": 0.444904,
+      "birAy": 0.030478,
+      "ucAy": 0.085107,
+      "altiAy": 0.18279,
+      "yilbasi": 0.27057200000000003,
+      "birYil": 0.449567,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -786264.28,
-      "besGun": null,
+      "gunluk": -25528859.39,
+      "besGun": -27230262.46,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
-      "besGun": null,
+      "gunluk": -1,
+      "besGun": 10,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZBI",
+        "fonAdi": "ZİRAAT PORTFÖY TEMKİNLİ KATILIM FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 2.271594,
+        "tedavuldekiPaySayisi": 79145576,
+        "kisiSayisi": 1799,
+        "fonToplamDeger": 179786579.89,
+        "gunlukGetiri": 0.00641126,
+        "paraGirisiCikisi": -25528859.39,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "ZBI",
         "fonAdi": "ZİRAAT PORTFÖY TEMKİNLİ KATILIM FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.0016575,
       "paraGirisiCikisi": -786264.28,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "ZBI",
+      "fonAdi": "ZİRAAT PORTFÖY TEMKİNLİ KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 2.271594,
+      "tedavuldekiPaySayisi": 79145576,
+      "kisiSayisi": 1799,
+      "fonToplamDeger": 179786579.89,
+      "gunlukGetiri": 0.00641126,
+      "paraGirisiCikisi": -25528859.39,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZBI",
+      "fonAdi": "ZİRAAT PORTFÖY TEMKİNLİ KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 2.271594,
+      "tedavuldekiPaySayisi": 79145576,
+      "kisiSayisi": 1799,
+      "fonToplamDeger": 179786579.89,
+      "gunlukGetiri": 0.00641126,
+      "paraGirisiCikisi": -25528859.39,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "ZBI",
       "fonAdi": "ZİRAAT PORTFÖY TEMKİNLİ KATILIM FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ST1",
     "slug": "st1",
@@ -12,44 +12,56 @@
     "yonetici": "STRATEJİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "strateji-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 185.003635,
-    "tedavuldekiPaySayisi": 3467133.66,
-    "kisiSayisi": 2508,
-    "fonToplamDeger": 641432331.54,
-    "gunlukGetiri": -0.00307128,
+    "fiyat": 186.863403,
+    "tedavuldekiPaySayisi": 3463112.66,
+    "kisiSayisi": 2503,
+    "fonToplamDeger": 647129017.07,
+    "gunlukGetiri": 0.0100526,
     "getiriler": {
-      "birAy": 0.011857,
-      "ucAy": -0.066552,
-      "altiAy": -0.084204,
-      "yilbasi": 0.138245,
-      "birYil": 0.026535000000000003,
-      "ucYil": 0.48680300000000004,
-      "besYil": 9.121292
+      "birAy": 0.005495,
+      "ucAy": -0.060625,
+      "altiAy": -0.081251,
+      "yilbasi": 0.149688,
+      "birYil": 0.048807,
+      "ucYil": 0.410089,
+      "besYil": 9.098453
     },
     "paraAkisi": {
-      "gunluk": -28305.56,
-      "besGun": null,
+      "gunluk": -751377.74,
+      "besGun": -2426204.16,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -6,
-      "besGun": null,
+      "gunluk": -5,
+      "besGun": -35,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ST1",
+        "fonAdi": "STRATEJİ PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 186.863403,
+        "tedavuldekiPaySayisi": 3463112.66,
+        "kisiSayisi": 2503,
+        "fonToplamDeger": 647129017.07,
+        "gunlukGetiri": 0.0100526,
+        "paraGirisiCikisi": -751377.74,
+        "yatirimciDegisimi": -5
+      },
       {
         "fonKodu": "ST1",
         "fonAdi": "STRATEJİ PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00307128,
       "paraGirisiCikisi": -28305.56,
       "yatirimciDegisimi": -6
+    },
+    {
+      "fonKodu": "ST1",
+      "fonAdi": "STRATEJİ PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 186.863403,
+      "tedavuldekiPaySayisi": 3463112.66,
+      "kisiSayisi": 2503,
+      "fonToplamDeger": 647129017.07,
+      "gunlukGetiri": 0.0100526,
+      "paraGirisiCikisi": -751377.74,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ST1",
+      "fonAdi": "STRATEJİ PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 186.863403,
+      "tedavuldekiPaySayisi": 3463112.66,
+      "kisiSayisi": 2503,
+      "fonToplamDeger": 647129017.07,
+      "gunlukGetiri": 0.0100526,
+      "paraGirisiCikisi": -751377.74,
+      "yatirimciDegisimi": -5
+    },
     {
       "fonKodu": "ST1",
       "fonAdi": "STRATEJİ PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

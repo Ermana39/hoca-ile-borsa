@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "RPX",
     "slug": "rpx",
@@ -12,44 +12,56 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 62.727901,
+    "fiyat": 62.914277,
     "tedavuldekiPaySayisi": 9834260,
     "kisiSayisi": 129,
-    "fonToplamDeger": 616882491.43,
-    "gunlukGetiri": 0.00046578,
+    "fonToplamDeger": 618715356.78,
+    "gunlukGetiri": 0.00297118,
     "getiriler": {
-      "birAy": 0.019258,
-      "ucAy": 0.058771000000000004,
-      "altiAy": 0.111484,
-      "yilbasi": 0.135704,
-      "birYil": 0.216063,
-      "ucYil": 1.0246089999999999,
+      "birAy": 0.020113,
+      "ucAy": 0.060208000000000005,
+      "altiAy": 0.11174300000000001,
+      "yilbasi": 0.139078,
+      "birYil": 0.21692799999999998,
+      "ucYil": 1.03251,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 3090854.59,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": 570411.6,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RPX",
+        "fonAdi": "ROTA PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 62.914277,
+        "tedavuldekiPaySayisi": 9834260,
+        "kisiSayisi": 129,
+        "fonToplamDeger": 618715356.78,
+        "gunlukGetiri": 0.00297118,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "RPX",
         "fonAdi": "ROTA PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00046578,
       "paraGirisiCikisi": 3090854.59,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "RPX",
+      "fonAdi": "ROTA PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 62.914277,
+      "tedavuldekiPaySayisi": 9834260,
+      "kisiSayisi": 129,
+      "fonToplamDeger": 618715356.78,
+      "gunlukGetiri": 0.00297118,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RPX",
+      "fonAdi": "ROTA PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 62.914277,
+      "tedavuldekiPaySayisi": 9834260,
+      "kisiSayisi": 129,
+      "fonToplamDeger": 618715356.78,
+      "gunlukGetiri": 0.00297118,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "RPX",
       "fonAdi": "ROTA PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "HAM",
     "slug": "ham",
@@ -12,44 +12,56 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 3.080236,
-    "tedavuldekiPaySayisi": 507237919,
-    "kisiSayisi": 7543,
-    "fonToplamDeger": 1562412750.55,
-    "gunlukGetiri": -0.00446695,
+    "fiyat": 3.101408,
+    "tedavuldekiPaySayisi": 505640772,
+    "kisiSayisi": 7579,
+    "fonToplamDeger": 1568198163.32,
+    "gunlukGetiri": 0.0068735,
     "getiriler": {
-      "birAy": 0.09102600000000001,
-      "ucAy": -0.027826,
-      "altiAy": -0.055907,
-      "yilbasi": 0.10154500000000001,
-      "birYil": 0.568923,
+      "birAy": 0.11492699999999999,
+      "ucAy": -0.007058999999999999,
+      "altiAy": -0.050635000000000006,
+      "yilbasi": 0.109116,
+      "birYil": 0.582126,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 8116092.27,
-      "besGun": null,
+      "gunluk": -4953404.48,
+      "besGun": -1324993.79,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 10,
-      "besGun": null,
+      "gunluk": 36,
+      "besGun": 155,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HAM",
+        "fonAdi": "HEDEF PORTFÖY ALTIN KATILIM FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 3.101408,
+        "tedavuldekiPaySayisi": 505640772,
+        "kisiSayisi": 7579,
+        "fonToplamDeger": 1568198163.32,
+        "gunlukGetiri": 0.0068735,
+        "paraGirisiCikisi": -4953404.48,
+        "yatirimciDegisimi": 36
+      },
       {
         "fonKodu": "HAM",
         "fonAdi": "HEDEF PORTFÖY ALTIN KATILIM FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00446695,
       "paraGirisiCikisi": 8116092.27,
       "yatirimciDegisimi": 10
+    },
+    {
+      "fonKodu": "HAM",
+      "fonAdi": "HEDEF PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 3.101408,
+      "tedavuldekiPaySayisi": 505640772,
+      "kisiSayisi": 7579,
+      "fonToplamDeger": 1568198163.32,
+      "gunlukGetiri": 0.0068735,
+      "paraGirisiCikisi": -4953404.48,
+      "yatirimciDegisimi": 36
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HAM",
+      "fonAdi": "HEDEF PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 3.101408,
+      "tedavuldekiPaySayisi": 505640772,
+      "kisiSayisi": 7579,
+      "fonToplamDeger": 1568198163.32,
+      "gunlukGetiri": 0.0068735,
+      "paraGirisiCikisi": -4953404.48,
+      "yatirimciDegisimi": 36
+    },
     {
       "fonKodu": "HAM",
       "fonAdi": "HEDEF PORTFÖY ALTIN KATILIM FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

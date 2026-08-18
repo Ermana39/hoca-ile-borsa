@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GAS",
     "slug": "gas",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.317103,
-    "tedavuldekiPaySayisi": 10304505018,
-    "kisiSayisi": 2263,
-    "fonToplamDeger": 3267591185.64,
-    "gunlukGetiri": 0.00080164,
+    "fiyat": 0.318128,
+    "tedavuldekiPaySayisi": 10390134262,
+    "kisiSayisi": 2262,
+    "fonToplamDeger": 3305395994.62,
+    "gunlukGetiri": 0.00323239,
     "getiriler": {
-      "birAy": 0.020175000000000002,
-      "ucAy": 0.060673000000000005,
-      "altiAy": 0.105983,
-      "yilbasi": 0.130585,
-      "birYil": 0.22475699999999998,
-      "ucYil": 1.085696,
-      "besYil": 5.879038
+      "birAy": 0.021009000000000003,
+      "ucAy": 0.06355000000000001,
+      "altiAy": 0.106074,
+      "yilbasi": 0.134239,
+      "birYil": 0.225337,
+      "ucYil": 1.087166,
+      "besYil": 5.996591
     },
     "paraAkisi": {
-      "gunluk": 1343143.03,
-      "besGun": null,
+      "gunluk": 27241060.14,
+      "besGun": 37577429.14,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
-      "besGun": null,
+      "gunluk": -1,
+      "besGun": 2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GAS",
+        "fonAdi": "GARANTİ PORTFÖY ÜÇÜNCÜ SERBEST(DÖVİZ) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 0.318128,
+        "tedavuldekiPaySayisi": 10390134262,
+        "kisiSayisi": 2262,
+        "fonToplamDeger": 3305395994.62,
+        "gunlukGetiri": 0.00323239,
+        "paraGirisiCikisi": 27241060.14,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "GAS",
         "fonAdi": "GARANTİ PORTFÖY ÜÇÜNCÜ SERBEST(DÖVİZ) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00080164,
       "paraGirisiCikisi": 1343143.03,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "GAS",
+      "fonAdi": "GARANTİ PORTFÖY ÜÇÜNCÜ SERBEST(DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 0.318128,
+      "tedavuldekiPaySayisi": 10390134262,
+      "kisiSayisi": 2262,
+      "fonToplamDeger": 3305395994.62,
+      "gunlukGetiri": 0.00323239,
+      "paraGirisiCikisi": 27241060.14,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GAS",
+      "fonAdi": "GARANTİ PORTFÖY ÜÇÜNCÜ SERBEST(DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 0.318128,
+      "tedavuldekiPaySayisi": 10390134262,
+      "kisiSayisi": 2262,
+      "fonToplamDeger": 3305395994.62,
+      "gunlukGetiri": 0.00323239,
+      "paraGirisiCikisi": 27241060.14,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "GAS",
       "fonAdi": "GARANTİ PORTFÖY ÜÇÜNCÜ SERBEST(DÖVİZ) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TZV",
     "slug": "tzv",
@@ -12,13 +12,13 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 941.10353,
-    "tedavuldekiPaySayisi": 29474471.5,
-    "kisiSayisi": 131659,
-    "fonToplamDeger": 27738529182.39,
-    "gunlukGetiri": 0.00120005,
+    "fiyat": 944.947144,
+    "tedavuldekiPaySayisi": 26040493,
+    "kisiSayisi": 133483,
+    "fonToplamDeger": 24606889501.46,
+    "gunlukGetiri": 0.00408416,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 3841014300.72,
-      "besGun": null,
+      "gunluk": -3244928176.13,
+      "besGun": 288056259.22,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -53,
-      "besGun": null,
+      "gunluk": 1824,
+      "besGun": 511,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TZV",
+        "fonAdi": "ZİRAAT PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 944.947144,
+        "tedavuldekiPaySayisi": 26040493,
+        "kisiSayisi": 133483,
+        "fonToplamDeger": 24606889501.46,
+        "gunlukGetiri": 0.00408416,
+        "paraGirisiCikisi": -3244928176.13,
+        "yatirimciDegisimi": 1824
+      },
       {
         "fonKodu": "TZV",
         "fonAdi": "ZİRAAT PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00120005,
       "paraGirisiCikisi": 3841014300.72,
       "yatirimciDegisimi": -53
+    },
+    {
+      "fonKodu": "TZV",
+      "fonAdi": "ZİRAAT PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 944.947144,
+      "tedavuldekiPaySayisi": 26040493,
+      "kisiSayisi": 133483,
+      "fonToplamDeger": 24606889501.46,
+      "gunlukGetiri": 0.00408416,
+      "paraGirisiCikisi": -3244928176.13,
+      "yatirimciDegisimi": 1824
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TZV",
+      "fonAdi": "ZİRAAT PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 944.947144,
+      "tedavuldekiPaySayisi": 26040493,
+      "kisiSayisi": 133483,
+      "fonToplamDeger": 24606889501.46,
+      "gunlukGetiri": 0.00408416,
+      "paraGirisiCikisi": -3244928176.13,
+      "yatirimciDegisimi": 1824
+    },
     {
       "fonKodu": "TZV",
       "fonAdi": "ZİRAAT PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

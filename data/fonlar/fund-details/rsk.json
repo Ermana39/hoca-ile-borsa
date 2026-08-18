@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "RSK",
     "slug": "rsk",
@@ -12,44 +12,56 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.917224,
-    "tedavuldekiPaySayisi": 163069498,
-    "kisiSayisi": 325,
-    "fonToplamDeger": 312640793.42,
-    "gunlukGetiri": 0.00289587,
+    "fiyat": 1.922509,
+    "tedavuldekiPaySayisi": 161175003,
+    "kisiSayisi": 309,
+    "fonToplamDeger": 309860414.89,
+    "gunlukGetiri": 0.00275659,
     "getiriler": {
-      "birAy": 0.030996000000000003,
-      "ucAy": 0.104292,
-      "altiAy": 0.229831,
-      "yilbasi": 0.35043799999999997,
-      "birYil": 0.753277,
+      "birAy": -0.005261,
+      "ucAy": 0.11706200000000001,
+      "altiAy": 0.222901,
+      "yilbasi": 0.354161,
+      "birYil": 0.7402209999999999,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1946258.44,
-      "besGun": null,
+      "gunluk": -3642183.69,
+      "besGun": -18310498.46,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -21,
-      "besGun": null,
+      "gunluk": -16,
+      "besGun": -39,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RSK",
+        "fonAdi": "ROTA PORTFÖY ONSEKİZİNCİ SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.922509,
+        "tedavuldekiPaySayisi": 161175003,
+        "kisiSayisi": 309,
+        "fonToplamDeger": 309860414.89,
+        "gunlukGetiri": 0.00275659,
+        "paraGirisiCikisi": -3642183.69,
+        "yatirimciDegisimi": -16
+      },
       {
         "fonKodu": "RSK",
         "fonAdi": "ROTA PORTFÖY ONSEKİZİNCİ SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00289587,
       "paraGirisiCikisi": -1946258.44,
       "yatirimciDegisimi": -21
+    },
+    {
+      "fonKodu": "RSK",
+      "fonAdi": "ROTA PORTFÖY ONSEKİZİNCİ SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.922509,
+      "tedavuldekiPaySayisi": 161175003,
+      "kisiSayisi": 309,
+      "fonToplamDeger": 309860414.89,
+      "gunlukGetiri": 0.00275659,
+      "paraGirisiCikisi": -3642183.69,
+      "yatirimciDegisimi": -16
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RSK",
+      "fonAdi": "ROTA PORTFÖY ONSEKİZİNCİ SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.922509,
+      "tedavuldekiPaySayisi": 161175003,
+      "kisiSayisi": 309,
+      "fonToplamDeger": 309860414.89,
+      "gunlukGetiri": 0.00275659,
+      "paraGirisiCikisi": -3642183.69,
+      "yatirimciDegisimi": -16
+    },
     {
       "fonKodu": "RSK",
       "fonAdi": "ROTA PORTFÖY ONSEKİZİNCİ SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

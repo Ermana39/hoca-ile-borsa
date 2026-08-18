@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "MTD",
     "slug": "mtd",
@@ -12,44 +12,56 @@
     "yonetici": "BV PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "bv-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.279681,
-    "tedavuldekiPaySayisi": 113653496,
-    "kisiSayisi": 1545,
-    "fonToplamDeger": 145440163.63,
-    "gunlukGetiri": -0.00843198,
+    "fiyat": 1.283364,
+    "tedavuldekiPaySayisi": 111569401,
+    "kisiSayisi": 1531,
+    "fonToplamDeger": 143184123.59,
+    "gunlukGetiri": 0.00287806,
     "getiriler": {
-      "birAy": 0.053957,
-      "ucAy": -0.094897,
-      "altiAy": 0.081426,
-      "yilbasi": 0.210699,
+      "birAy": 0.08959500000000001,
+      "ucAy": -0.05351,
+      "altiAy": 0.091827,
+      "yilbasi": 0.21418299999999998,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -163570.11,
-      "besGun": null,
+      "gunluk": -2674652.5,
+      "besGun": -1951333.14,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
-      "besGun": null,
+      "gunluk": -14,
+      "besGun": 5,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MTD",
+        "fonAdi": "BV PORTFÖY MALZEME TEKNOLOJİLERİ DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.283364,
+        "tedavuldekiPaySayisi": 111569401,
+        "kisiSayisi": 1531,
+        "fonToplamDeger": 143184123.59,
+        "gunlukGetiri": 0.00287806,
+        "paraGirisiCikisi": -2674652.5,
+        "yatirimciDegisimi": -14
+      },
       {
         "fonKodu": "MTD",
         "fonAdi": "BV PORTFÖY MALZEME TEKNOLOJİLERİ DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00843198,
       "paraGirisiCikisi": -163570.11,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "MTD",
+      "fonAdi": "BV PORTFÖY MALZEME TEKNOLOJİLERİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.283364,
+      "tedavuldekiPaySayisi": 111569401,
+      "kisiSayisi": 1531,
+      "fonToplamDeger": 143184123.59,
+      "gunlukGetiri": 0.00287806,
+      "paraGirisiCikisi": -2674652.5,
+      "yatirimciDegisimi": -14
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MTD",
+      "fonAdi": "BV PORTFÖY MALZEME TEKNOLOJİLERİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.283364,
+      "tedavuldekiPaySayisi": 111569401,
+      "kisiSayisi": 1531,
+      "fonToplamDeger": 143184123.59,
+      "gunlukGetiri": 0.00287806,
+      "paraGirisiCikisi": -2674652.5,
+      "yatirimciDegisimi": -14
+    },
     {
       "fonKodu": "MTD",
       "fonAdi": "BV PORTFÖY MALZEME TEKNOLOJİLERİ DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

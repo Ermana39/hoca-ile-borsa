@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "CJD",
     "slug": "cjd",
@@ -12,13 +12,13 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 50.690892,
-    "tedavuldekiPaySayisi": 1627775,
-    "kisiSayisi": 27,
-    "fonToplamDeger": 82513366.35,
-    "gunlukGetiri": -0.00003612,
+    "fiyat": 51.230792,
+    "tedavuldekiPaySayisi": 9190305,
+    "kisiSayisi": 182,
+    "fonToplamDeger": 470826599.48,
+    "gunlukGetiri": 0.01065083,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 63665276.5,
-      "besGun": null,
+      "gunluk": 387434401.42,
+      "besGun": 450685771.84,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 14,
-      "besGun": null,
+      "gunluk": 155,
+      "besGun": 169,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "CJD",
+        "fonAdi": "AK PORTFÖY SEKİZİNCİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 51.230792,
+        "tedavuldekiPaySayisi": 9190305,
+        "kisiSayisi": 182,
+        "fonToplamDeger": 470826599.48,
+        "gunlukGetiri": 0.01065083,
+        "paraGirisiCikisi": 387434401.42,
+        "yatirimciDegisimi": 155
+      },
       {
         "fonKodu": "CJD",
         "fonAdi": "AK PORTFÖY SEKİZİNCİ SERBEST (DÖVİZ) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00003612,
       "paraGirisiCikisi": 63665276.5,
       "yatirimciDegisimi": 14
+    },
+    {
+      "fonKodu": "CJD",
+      "fonAdi": "AK PORTFÖY SEKİZİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 51.230792,
+      "tedavuldekiPaySayisi": 9190305,
+      "kisiSayisi": 182,
+      "fonToplamDeger": 470826599.48,
+      "gunlukGetiri": 0.01065083,
+      "paraGirisiCikisi": 387434401.42,
+      "yatirimciDegisimi": 155
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "CJD",
+      "fonAdi": "AK PORTFÖY SEKİZİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 51.230792,
+      "tedavuldekiPaySayisi": 9190305,
+      "kisiSayisi": 182,
+      "fonToplamDeger": 470826599.48,
+      "gunlukGetiri": 0.01065083,
+      "paraGirisiCikisi": 387434401.42,
+      "yatirimciDegisimi": 155
+    },
     {
       "fonKodu": "CJD",
       "fonAdi": "AK PORTFÖY SEKİZİNCİ SERBEST (DÖVİZ) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

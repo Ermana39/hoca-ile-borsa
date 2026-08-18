@@ -13,11 +13,38 @@ import {
 import type {
   Fund,
   FundListItem,
+  FundPeriodValues,
   ManagerSummary,
   PeriodKey,
   ReturnKey,
 } from "@/lib/fon-platform";
-import { getPeriodLabel, getReturnLabel } from "@/lib/fon-platform";
+import { getPeriodLabel, getReturnLabel } from "@/lib/fon-labels";
+
+export type FlowFund = Pick<
+  Fund,
+  | "kod"
+  | "slug"
+  | "ad"
+  | "yonetici"
+  | "yoneticiSlug"
+  | "paraAkisi"
+  | "fonToplamDeger"
+  | "gunlukGetiri"
+  | "yatirimciDegisimi"
+>;
+
+export type ManagerTableItem = Pick<
+  ManagerSummary,
+  | "slug"
+  | "yonetici"
+  | "yonetilenFonSayisi"
+  | "toplamFonBuyuklugu"
+  | "toplamYatirimciSayisi"
+> & {
+  paraAkisi: FundPeriodValues;
+  ortalamaGetiri: ManagerSummary["ortalamaGetiri"];
+  enBuyukFon: FundListItem | null;
+};
 
 export function FonBreadcrumb({
   current,
@@ -183,7 +210,7 @@ export function FlowTable({
   period,
   direction,
 }: {
-  funds: Fund[];
+  funds: FlowFund[];
   period: PeriodKey;
   direction: "in" | "out";
 }) {
@@ -325,7 +352,7 @@ export function FundPeriodGrid({
   );
 }
 
-export function ManagerTable({ managers }: { managers: ManagerSummary[] }) {
+export function ManagerTable({ managers }: { managers: ManagerTableItem[] }) {
   return (
     <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
       <table className="w-full min-w-[1120px] text-sm">

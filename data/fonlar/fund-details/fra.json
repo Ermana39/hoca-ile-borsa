@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "FRA",
     "slug": "fra",
@@ -12,44 +12,56 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 32.219194,
+    "fiyat": 31.936755,
     "tedavuldekiPaySayisi": 16346222,
     "kisiSayisi": 2,
-    "fonToplamDeger": 526662089.95,
-    "gunlukGetiri": 0.00338678,
+    "fonToplamDeger": 522045288.18,
+    "gunlukGetiri": -0.00876617,
     "getiriler": {
-      "birAy": 0.012612000000000002,
-      "ucAy": -0.024768,
-      "altiAy": -0.020289,
-      "yilbasi": 0.123702,
-      "birYil": 0.183339,
-      "ucYil": 0.8488880000000001,
-      "besYil": 7.9325779999999995
+      "birAy": -0.009112,
+      "ucAy": -0.030899,
+      "altiAy": -0.028357999999999998,
+      "yilbasi": 0.113851,
+      "birYil": 0.179402,
+      "ucYil": 0.83268,
+      "besYil": 7.854274
     },
     "paraAkisi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FRA",
+        "fonAdi": "AZİMUT PORTFÖY MAB SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 31.936755,
+        "tedavuldekiPaySayisi": 16346222,
+        "kisiSayisi": 2,
+        "fonToplamDeger": 522045288.18,
+        "gunlukGetiri": -0.00876617,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "FRA",
         "fonAdi": "AZİMUT PORTFÖY MAB SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00338678,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "FRA",
+      "fonAdi": "AZİMUT PORTFÖY MAB SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 31.936755,
+      "tedavuldekiPaySayisi": 16346222,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 522045288.18,
+      "gunlukGetiri": -0.00876617,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FRA",
+      "fonAdi": "AZİMUT PORTFÖY MAB SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 31.936755,
+      "tedavuldekiPaySayisi": 16346222,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 522045288.18,
+      "gunlukGetiri": -0.00876617,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "FRA",
       "fonAdi": "AZİMUT PORTFÖY MAB SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

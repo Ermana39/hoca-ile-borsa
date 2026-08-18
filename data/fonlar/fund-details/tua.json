@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TUA",
     "slug": "tua",
@@ -12,44 +12,56 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.453215,
-    "tedavuldekiPaySayisi": 10539773575.21,
-    "kisiSayisi": 31696,
-    "fonToplamDeger": 15316555917.61,
-    "gunlukGetiri": -0.00558446,
+    "fiyat": 1.462449,
+    "tedavuldekiPaySayisi": 10538393938.21,
+    "kisiSayisi": 31674,
+    "fonToplamDeger": 15411860115.49,
+    "gunlukGetiri": 0.00635419,
     "getiriler": {
-      "birAy": 0.09314299999999999,
-      "ucAy": -0.024099,
-      "altiAy": -0.074671,
-      "yilbasi": 0.079562,
-      "birYil": 0.47292,
-      "ucYil": 2.894067,
-      "besYil": 11.899923
+      "birAy": 0.117533,
+      "ucAy": 0.003996,
+      "altiAy": -0.06751299999999999,
+      "yilbasi": 0.08642200000000001,
+      "birYil": 0.486424,
+      "ucYil": 2.899396,
+      "besYil": 11.953719000000001
     },
     "paraAkisi": {
-      "gunluk": -1804067.6,
-      "besGun": null,
+      "gunluk": -2017648.75,
+      "besGun": 36074211.68,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": null,
+      "gunluk": -22,
+      "besGun": -69,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TUA",
+        "fonAdi": "TEB PORTFÖY ALTIN FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.462449,
+        "tedavuldekiPaySayisi": 10538393938.21,
+        "kisiSayisi": 31674,
+        "fonToplamDeger": 15411860115.49,
+        "gunlukGetiri": 0.00635419,
+        "paraGirisiCikisi": -2017648.75,
+        "yatirimciDegisimi": -22
+      },
       {
         "fonKodu": "TUA",
         "fonAdi": "TEB PORTFÖY ALTIN FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00558446,
       "paraGirisiCikisi": -1804067.6,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "TUA",
+      "fonAdi": "TEB PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.462449,
+      "tedavuldekiPaySayisi": 10538393938.21,
+      "kisiSayisi": 31674,
+      "fonToplamDeger": 15411860115.49,
+      "gunlukGetiri": 0.00635419,
+      "paraGirisiCikisi": -2017648.75,
+      "yatirimciDegisimi": -22
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TUA",
+      "fonAdi": "TEB PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.462449,
+      "tedavuldekiPaySayisi": 10538393938.21,
+      "kisiSayisi": 31674,
+      "fonToplamDeger": 15411860115.49,
+      "gunlukGetiri": 0.00635419,
+      "paraGirisiCikisi": -2017648.75,
+      "yatirimciDegisimi": -22
+    },
     {
       "fonKodu": "TUA",
       "fonAdi": "TEB PORTFÖY ALTIN FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

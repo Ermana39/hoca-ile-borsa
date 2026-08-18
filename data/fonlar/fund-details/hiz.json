@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "HIZ",
     "slug": "hiz",
@@ -12,44 +12,56 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 2.075968,
-    "tedavuldekiPaySayisi": 98549134,
-    "kisiSayisi": 1095,
-    "fonToplamDeger": 204584871.94,
-    "gunlukGetiri": 0.00022115,
+    "fiyat": 2.073495,
+    "tedavuldekiPaySayisi": 98164711,
+    "kisiSayisi": 1085,
+    "fonToplamDeger": 203544040.88,
+    "gunlukGetiri": -0.00119125,
     "getiriler": {
-      "birAy": 0.024066,
-      "ucAy": 0.044778000000000005,
-      "altiAy": 0.22902999999999998,
-      "yilbasi": 0.364487,
-      "birYil": 0.5478029999999999,
+      "birAy": 0.036354000000000004,
+      "ucAy": 0.038266,
+      "altiAy": 0.23027799999999998,
+      "yilbasi": 0.362862,
+      "birYil": 0.559063,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 170169.17,
-      "besGun": null,
+      "gunluk": -797099.17,
+      "besGun": -508266.24,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": -10,
+      "besGun": -11,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HIZ",
+        "fonAdi": "AZİMUT PORTFÖY DİNAMİK DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 2.073495,
+        "tedavuldekiPaySayisi": 98164711,
+        "kisiSayisi": 1085,
+        "fonToplamDeger": 203544040.88,
+        "gunlukGetiri": -0.00119125,
+        "paraGirisiCikisi": -797099.17,
+        "yatirimciDegisimi": -10
+      },
       {
         "fonKodu": "HIZ",
         "fonAdi": "AZİMUT PORTFÖY DİNAMİK DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00022115,
       "paraGirisiCikisi": 170169.17,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HIZ",
+      "fonAdi": "AZİMUT PORTFÖY DİNAMİK DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 2.073495,
+      "tedavuldekiPaySayisi": 98164711,
+      "kisiSayisi": 1085,
+      "fonToplamDeger": 203544040.88,
+      "gunlukGetiri": -0.00119125,
+      "paraGirisiCikisi": -797099.17,
+      "yatirimciDegisimi": -10
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HIZ",
+      "fonAdi": "AZİMUT PORTFÖY DİNAMİK DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 2.073495,
+      "tedavuldekiPaySayisi": 98164711,
+      "kisiSayisi": 1085,
+      "fonToplamDeger": 203544040.88,
+      "gunlukGetiri": -0.00119125,
+      "paraGirisiCikisi": -797099.17,
+      "yatirimciDegisimi": -10
+    },
     {
       "fonKodu": "HIZ",
       "fonAdi": "AZİMUT PORTFÖY DİNAMİK DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

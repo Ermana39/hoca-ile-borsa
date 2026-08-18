@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "AP7",
     "slug": "ap7",
@@ -12,44 +12,56 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 2.649647,
-    "tedavuldekiPaySayisi": 99228005,
-    "kisiSayisi": 482,
-    "fonToplamDeger": 262919206.1,
-    "gunlukGetiri": 0.00270274,
+    "fiyat": 2.651776,
+    "tedavuldekiPaySayisi": 98634105,
+    "kisiSayisi": 479,
+    "fonToplamDeger": 261555593.36,
+    "gunlukGetiri": 0.0008035,
     "getiriler": {
-      "birAy": 0.033544,
-      "ucAy": 0.115929,
-      "altiAy": 0.232197,
-      "yilbasi": 0.280382,
-      "birYil": 0.495256,
+      "birAy": 0.025137999999999997,
+      "ucAy": 0.110779,
+      "altiAy": 0.228499,
+      "yilbasi": 0.281411,
+      "birYil": 0.489613,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -96576.98,
-      "besGun": null,
+      "gunluk": -1574889.77,
+      "besGun": -1375453.41,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": null,
+      "gunluk": -3,
+      "besGun": -6,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AP7",
+        "fonAdi": "PARDUS PORTFÖY ALGO ETNA İSTATİSTİKSEL ARBİTRAJ SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 2.651776,
+        "tedavuldekiPaySayisi": 98634105,
+        "kisiSayisi": 479,
+        "fonToplamDeger": 261555593.36,
+        "gunlukGetiri": 0.0008035,
+        "paraGirisiCikisi": -1574889.77,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "AP7",
         "fonAdi": "PARDUS PORTFÖY ALGO ETNA İSTATİSTİKSEL ARBİTRAJ SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00270274,
       "paraGirisiCikisi": -96576.98,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "AP7",
+      "fonAdi": "PARDUS PORTFÖY ALGO ETNA İSTATİSTİKSEL ARBİTRAJ SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 2.651776,
+      "tedavuldekiPaySayisi": 98634105,
+      "kisiSayisi": 479,
+      "fonToplamDeger": 261555593.36,
+      "gunlukGetiri": 0.0008035,
+      "paraGirisiCikisi": -1574889.77,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AP7",
+      "fonAdi": "PARDUS PORTFÖY ALGO ETNA İSTATİSTİKSEL ARBİTRAJ SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 2.651776,
+      "tedavuldekiPaySayisi": 98634105,
+      "kisiSayisi": 479,
+      "fonToplamDeger": 261555593.36,
+      "gunlukGetiri": 0.0008035,
+      "paraGirisiCikisi": -1574889.77,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "AP7",
       "fonAdi": "PARDUS PORTFÖY ALGO ETNA İSTATİSTİKSEL ARBİTRAJ SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

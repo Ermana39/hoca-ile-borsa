@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "RBB",
     "slug": "rbb",
@@ -12,44 +12,56 @@
     "yonetici": "RE-PIE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "re-pie-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.645844,
-    "tedavuldekiPaySayisi": 9637629,
-    "kisiSayisi": 37,
-    "fonToplamDeger": 15862038.18,
-    "gunlukGetiri": 0.00160479,
+    "fiyat": 1.65132,
+    "tedavuldekiPaySayisi": 9637689,
+    "kisiSayisi": 38,
+    "fonToplamDeger": 15914904.22,
+    "gunlukGetiri": 0.00332717,
     "getiriler": {
-      "birAy": 0.03089,
-      "ucAy": 0.09542,
-      "altiAy": 0.17539000000000002,
-      "yilbasi": 0.22603,
-      "birYil": 0.419478,
+      "birAy": 0.028239,
+      "ucAy": 0.09469699999999999,
+      "altiAy": 0.1757,
+      "yilbasi": 0.23010999999999998,
+      "birYil": 0.41896,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": 99.08,
+      "besGun": -15007.8,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": 1,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RBB",
+        "fonAdi": "RE-PIE PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.65132,
+        "tedavuldekiPaySayisi": 9637689,
+        "kisiSayisi": 38,
+        "fonToplamDeger": 15914904.22,
+        "gunlukGetiri": 0.00332717,
+        "paraGirisiCikisi": 99.08,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "RBB",
         "fonAdi": "RE-PIE PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00160479,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "RBB",
+      "fonAdi": "RE-PIE PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.65132,
+      "tedavuldekiPaySayisi": 9637689,
+      "kisiSayisi": 38,
+      "fonToplamDeger": 15914904.22,
+      "gunlukGetiri": 0.00332717,
+      "paraGirisiCikisi": 99.08,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RBB",
+      "fonAdi": "RE-PIE PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.65132,
+      "tedavuldekiPaySayisi": 9637689,
+      "kisiSayisi": 38,
+      "fonToplamDeger": 15914904.22,
+      "gunlukGetiri": 0.00332717,
+      "paraGirisiCikisi": 99.08,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "RBB",
       "fonAdi": "RE-PIE PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BHL",
     "slug": "bhl",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.300673,
-    "tedavuldekiPaySayisi": 74831870,
-    "kisiSayisi": 805,
-    "fonToplamDeger": 97331807.64,
-    "gunlukGetiri": 0.00660377,
+    "fiyat": 1.304471,
+    "tedavuldekiPaySayisi": 74608663,
+    "kisiSayisi": 800,
+    "fonToplamDeger": 97324817.16,
+    "gunlukGetiri": 0.00292003,
     "getiriler": {
-      "birAy": 0.045635,
-      "ucAy": 0.01814,
-      "altiAy": 0.07982,
-      "yilbasi": 0.305646,
-      "birYil": 0.40666800000000003,
+      "birAy": 0.03349,
+      "ucAy": 0.020238999999999997,
+      "altiAy": 0.076288,
+      "yilbasi": 0.30945900000000004,
+      "birYil": 0.41835700000000003,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -195868.35,
-      "besGun": null,
+      "gunluk": -291167.06,
+      "besGun": -583235.37,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -6,
-      "besGun": null,
+      "gunluk": -5,
+      "besGun": -28,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BHL",
+        "fonAdi": "İŞ PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.304471,
+        "tedavuldekiPaySayisi": 74608663,
+        "kisiSayisi": 800,
+        "fonToplamDeger": 97324817.16,
+        "gunlukGetiri": 0.00292003,
+        "paraGirisiCikisi": -291167.06,
+        "yatirimciDegisimi": -5
+      },
       {
         "fonKodu": "BHL",
         "fonAdi": "İŞ PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00660377,
       "paraGirisiCikisi": -195868.35,
       "yatirimciDegisimi": -6
+    },
+    {
+      "fonKodu": "BHL",
+      "fonAdi": "İŞ PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.304471,
+      "tedavuldekiPaySayisi": 74608663,
+      "kisiSayisi": 800,
+      "fonToplamDeger": 97324817.16,
+      "gunlukGetiri": 0.00292003,
+      "paraGirisiCikisi": -291167.06,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BHL",
+      "fonAdi": "İŞ PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.304471,
+      "tedavuldekiPaySayisi": 74608663,
+      "kisiSayisi": 800,
+      "fonToplamDeger": 97324817.16,
+      "gunlukGetiri": 0.00292003,
+      "paraGirisiCikisi": -291167.06,
+      "yatirimciDegisimi": -5
+    },
     {
       "fonKodu": "BHL",
       "fonAdi": "İŞ PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

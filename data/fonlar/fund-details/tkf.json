@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TKF",
     "slug": "tkf",
@@ -12,44 +12,56 @@
     "yonetici": "TACİRLER PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "tacirler-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 68.311269,
-    "tedavuldekiPaySayisi": 14384142,
-    "kisiSayisi": 4320,
-    "fonToplamDeger": 982598999.56,
-    "gunlukGetiri": 0.00170016,
+    "fiyat": 68.281734,
+    "tedavuldekiPaySayisi": 14359424,
+    "kisiSayisi": 4317,
+    "fonToplamDeger": 980486367.64,
+    "gunlukGetiri": -0.00043236,
     "getiriler": {
-      "birAy": 0.036652,
-      "ucAy": 0.033132,
-      "altiAy": 0.047004000000000004,
-      "yilbasi": 0.271302,
-      "birYil": 0.31110299999999996,
-      "ucYil": 1.204402,
-      "besYil": 8.959682
+      "birAy": 0.024814,
+      "ucAy": 0.041916,
+      "altiAy": 0.043385999999999994,
+      "yilbasi": 0.270752,
+      "birYil": 0.310261,
+      "ucYil": 1.163991,
+      "besYil": 8.881801000000001
     },
     "paraAkisi": {
-      "gunluk": -809898.41,
-      "besGun": null,
+      "gunluk": -1687787.9,
+      "besGun": -3805215.8,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
-      "besGun": null,
+      "gunluk": -3,
+      "besGun": -19,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TKF",
+        "fonAdi": "TACİRLER PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 68.281734,
+        "tedavuldekiPaySayisi": 14359424,
+        "kisiSayisi": 4317,
+        "fonToplamDeger": 980486367.64,
+        "gunlukGetiri": -0.00043236,
+        "paraGirisiCikisi": -1687787.9,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "TKF",
         "fonAdi": "TACİRLER PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00170016,
       "paraGirisiCikisi": -809898.41,
       "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "TKF",
+      "fonAdi": "TACİRLER PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 68.281734,
+      "tedavuldekiPaySayisi": 14359424,
+      "kisiSayisi": 4317,
+      "fonToplamDeger": 980486367.64,
+      "gunlukGetiri": -0.00043236,
+      "paraGirisiCikisi": -1687787.9,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TKF",
+      "fonAdi": "TACİRLER PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 68.281734,
+      "tedavuldekiPaySayisi": 14359424,
+      "kisiSayisi": 4317,
+      "fonToplamDeger": 980486367.64,
+      "gunlukGetiri": -0.00043236,
+      "paraGirisiCikisi": -1687787.9,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "TKF",
       "fonAdi": "TACİRLER PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

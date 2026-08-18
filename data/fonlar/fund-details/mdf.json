@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "MDF",
     "slug": "mdf",
@@ -12,44 +12,56 @@
     "yonetici": "FİBA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "fiba-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.26821,
-    "tedavuldekiPaySayisi": 398227072,
-    "kisiSayisi": 965,
-    "fonToplamDeger": 505035402.66,
-    "gunlukGetiri": -0.0014008,
+    "fiyat": 1.280045,
+    "tedavuldekiPaySayisi": 394815941,
+    "kisiSayisi": 959,
+    "fonToplamDeger": 505382111.42,
+    "gunlukGetiri": 0.00933205,
     "getiriler": {
-      "birAy": 0.078416,
-      "ucAy": -0.033094,
-      "altiAy": 0.07323400000000001,
-      "yilbasi": 0.123252,
+      "birAy": 0.06625600000000001,
+      "ucAy": -0.004151,
+      "altiAy": 0.086394,
+      "yilbasi": 0.133734,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -711794.28,
-      "besGun": null,
+      "gunluk": -4366401.18,
+      "besGun": -6731724.55,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": null,
+      "gunluk": -6,
+      "besGun": -8,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MDF",
+        "fonAdi": "FİBA PORTFÖY MODEL EMTİA FON SEPETİ SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.280045,
+        "tedavuldekiPaySayisi": 394815941,
+        "kisiSayisi": 959,
+        "fonToplamDeger": 505382111.42,
+        "gunlukGetiri": 0.00933205,
+        "paraGirisiCikisi": -4366401.18,
+        "yatirimciDegisimi": -6
+      },
       {
         "fonKodu": "MDF",
         "fonAdi": "FİBA PORTFÖY MODEL EMTİA FON SEPETİ SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.0014008,
       "paraGirisiCikisi": -711794.28,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "MDF",
+      "fonAdi": "FİBA PORTFÖY MODEL EMTİA FON SEPETİ SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.280045,
+      "tedavuldekiPaySayisi": 394815941,
+      "kisiSayisi": 959,
+      "fonToplamDeger": 505382111.42,
+      "gunlukGetiri": 0.00933205,
+      "paraGirisiCikisi": -4366401.18,
+      "yatirimciDegisimi": -6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MDF",
+      "fonAdi": "FİBA PORTFÖY MODEL EMTİA FON SEPETİ SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.280045,
+      "tedavuldekiPaySayisi": 394815941,
+      "kisiSayisi": 959,
+      "fonToplamDeger": 505382111.42,
+      "gunlukGetiri": 0.00933205,
+      "paraGirisiCikisi": -4366401.18,
+      "yatirimciDegisimi": -6
+    },
     {
       "fonKodu": "MDF",
       "fonAdi": "FİBA PORTFÖY MODEL EMTİA FON SEPETİ SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

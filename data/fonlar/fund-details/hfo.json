@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "HFO",
     "slug": "hfo",
@@ -12,15 +12,15 @@
     "yonetici": "AHLATCI PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ahlatci-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.017652,
-    "tedavuldekiPaySayisi": 4577463,
-    "kisiSayisi": 138,
-    "fonToplamDeger": 4658264.04,
-    "gunlukGetiri": 0.00197115,
+    "fiyat": 1.0291,
+    "tedavuldekiPaySayisi": 4503636,
+    "kisiSayisi": 145,
+    "fonToplamDeger": 4634693.34,
+    "gunlukGetiri": 0.01124943,
     "getiriler": {
-      "birAy": 0.035271,
+      "birAy": 0.036728000000000004,
       "ucAy": null,
       "altiAy": null,
       "yilbasi": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 39877.71,
-      "besGun": null,
+      "gunluk": -75975.37,
+      "besGun": -114561.48,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
-      "besGun": null,
+      "gunluk": 7,
+      "besGun": 16,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HFO",
+        "fonAdi": "AHLATCI PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.0291,
+        "tedavuldekiPaySayisi": 4503636,
+        "kisiSayisi": 145,
+        "fonToplamDeger": 4634693.34,
+        "gunlukGetiri": 0.01124943,
+        "paraGirisiCikisi": -75975.37,
+        "yatirimciDegisimi": 7
+      },
       {
         "fonKodu": "HFO",
         "fonAdi": "AHLATCI PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00197115,
       "paraGirisiCikisi": 39877.71,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "HFO",
+      "fonAdi": "AHLATCI PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.0291,
+      "tedavuldekiPaySayisi": 4503636,
+      "kisiSayisi": 145,
+      "fonToplamDeger": 4634693.34,
+      "gunlukGetiri": 0.01124943,
+      "paraGirisiCikisi": -75975.37,
+      "yatirimciDegisimi": 7
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HFO",
+      "fonAdi": "AHLATCI PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.0291,
+      "tedavuldekiPaySayisi": 4503636,
+      "kisiSayisi": 145,
+      "fonToplamDeger": 4634693.34,
+      "gunlukGetiri": 0.01124943,
+      "paraGirisiCikisi": -75975.37,
+      "yatirimciDegisimi": 7
+    },
     {
       "fonKodu": "HFO",
       "fonAdi": "AHLATCI PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

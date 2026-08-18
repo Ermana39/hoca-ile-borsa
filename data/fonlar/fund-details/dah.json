@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DAH",
     "slug": "dah",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 3.600945,
-    "tedavuldekiPaySayisi": 164303500,
-    "kisiSayisi": 2573,
-    "fonToplamDeger": 591647883.98,
-    "gunlukGetiri": -0.00128329,
+    "fiyat": 3.583742,
+    "tedavuldekiPaySayisi": 164156200,
+    "kisiSayisi": 2564,
+    "fonToplamDeger": 588293504.27,
+    "gunlukGetiri": -0.00477736,
     "getiriler": {
-      "birAy": 0.03687,
-      "ucAy": -0.045384,
-      "altiAy": -0.067923,
-      "yilbasi": 0.20116299999999998,
-      "birYil": 0.23363399999999998,
-      "ucYil": 1.0703360000000002,
-      "besYil": 11.337200000000001
+      "birAy": 0.013624,
+      "ucAy": -0.029714,
+      "altiAy": -0.066717,
+      "yilbasi": 0.19542500000000002,
+      "birYil": 0.24731999999999998,
+      "ucYil": 1.050776,
+      "besYil": 11.158952999999999
     },
     "paraAkisi": {
-      "gunluk": -1441098.19,
-      "besGun": null,
+      "gunluk": -527885.2,
+      "besGun": -3323597.51,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 6,
-      "besGun": null,
+      "gunluk": -9,
+      "besGun": -13,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DAH",
+        "fonAdi": "DENİZ PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 3.583742,
+        "tedavuldekiPaySayisi": 164156200,
+        "kisiSayisi": 2564,
+        "fonToplamDeger": 588293504.27,
+        "gunlukGetiri": -0.00477736,
+        "paraGirisiCikisi": -527885.2,
+        "yatirimciDegisimi": -9
+      },
       {
         "fonKodu": "DAH",
         "fonAdi": "DENİZ PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00128329,
       "paraGirisiCikisi": -1441098.19,
       "yatirimciDegisimi": 6
+    },
+    {
+      "fonKodu": "DAH",
+      "fonAdi": "DENİZ PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 3.583742,
+      "tedavuldekiPaySayisi": 164156200,
+      "kisiSayisi": 2564,
+      "fonToplamDeger": 588293504.27,
+      "gunlukGetiri": -0.00477736,
+      "paraGirisiCikisi": -527885.2,
+      "yatirimciDegisimi": -9
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DAH",
+      "fonAdi": "DENİZ PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 3.583742,
+      "tedavuldekiPaySayisi": 164156200,
+      "kisiSayisi": 2564,
+      "fonToplamDeger": 588293504.27,
+      "gunlukGetiri": -0.00477736,
+      "paraGirisiCikisi": -527885.2,
+      "yatirimciDegisimi": -9
+    },
     {
       "fonKodu": "DAH",
       "fonAdi": "DENİZ PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

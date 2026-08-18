@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PPD",
     "slug": "ppd",
@@ -12,44 +12,56 @@
     "yonetici": "PERFORM PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "perform-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 34.299992,
-    "tedavuldekiPaySayisi": 65293282,
+    "fiyat": 34.52567,
+    "tedavuldekiPaySayisi": 65865847,
     "kisiSayisi": 108,
-    "fonToplamDeger": 2239559053.87,
-    "gunlukGetiri": -0.0012578,
+    "fonToplamDeger": 2274062516.55,
+    "gunlukGetiri": 0.00657954,
     "getiriler": {
-      "birAy": 0.024672,
-      "ucAy": -0.022919000000000002,
-      "altiAy": 0.018552,
-      "yilbasi": 0.264311,
-      "birYil": 0.475633,
-      "ucYil": 1.7202279999999999,
-      "besYil": 31.03502
+      "birAy": 0.015821,
+      "ucAy": -0.011063,
+      "altiAy": 0.032159,
+      "yilbasi": 0.272629,
+      "birYil": 0.483596,
+      "ucYil": 1.6677860000000002,
+      "besYil": 31.126884
     },
     "paraAkisi": {
-      "gunluk": -25194819.02,
-      "besGun": null,
+      "gunluk": 19768190.24,
+      "besGun": -59097718.75,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": -1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PPD",
+        "fonAdi": "PERFORM PORTFÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 34.52567,
+        "tedavuldekiPaySayisi": 65865847,
+        "kisiSayisi": 108,
+        "fonToplamDeger": 2274062516.55,
+        "gunlukGetiri": 0.00657954,
+        "paraGirisiCikisi": 19768190.24,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "PPD",
         "fonAdi": "PERFORM PORTFÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.0012578,
       "paraGirisiCikisi": -25194819.02,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PPD",
+      "fonAdi": "PERFORM PORTFÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 34.52567,
+      "tedavuldekiPaySayisi": 65865847,
+      "kisiSayisi": 108,
+      "fonToplamDeger": 2274062516.55,
+      "gunlukGetiri": 0.00657954,
+      "paraGirisiCikisi": 19768190.24,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PPD",
+      "fonAdi": "PERFORM PORTFÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 34.52567,
+      "tedavuldekiPaySayisi": 65865847,
+      "kisiSayisi": 108,
+      "fonToplamDeger": 2274062516.55,
+      "gunlukGetiri": 0.00657954,
+      "paraGirisiCikisi": 19768190.24,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "PPD",
       "fonAdi": "PERFORM PORTFÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

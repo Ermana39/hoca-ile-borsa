@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GSE",
     "slug": "gse",
@@ -12,13 +12,13 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 64.735048,
-    "tedavuldekiPaySayisi": 21192171,
-    "kisiSayisi": 108,
-    "fonToplamDeger": 1371876200.84,
-    "gunlukGetiri": 0.00048817,
+    "fiyat": 64.923276,
+    "tedavuldekiPaySayisi": 21302659,
+    "kisiSayisi": 109,
+    "fonToplamDeger": 1383038402.93,
+    "gunlukGetiri": 0.00290767,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": 7173242.92,
+      "besGun": 7173242.92,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": 1,
+      "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GSE",
+        "fonAdi": "AZİMUT PORTFÖY 7.0 SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 64.923276,
+        "tedavuldekiPaySayisi": 21302659,
+        "kisiSayisi": 109,
+        "fonToplamDeger": 1383038402.93,
+        "gunlukGetiri": 0.00290767,
+        "paraGirisiCikisi": 7173242.92,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "GSE",
         "fonAdi": "AZİMUT PORTFÖY 7.0 SERBEST (DÖVİZ) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00048817,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GSE",
+      "fonAdi": "AZİMUT PORTFÖY 7.0 SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 64.923276,
+      "tedavuldekiPaySayisi": 21302659,
+      "kisiSayisi": 109,
+      "fonToplamDeger": 1383038402.93,
+      "gunlukGetiri": 0.00290767,
+      "paraGirisiCikisi": 7173242.92,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GSE",
+      "fonAdi": "AZİMUT PORTFÖY 7.0 SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 64.923276,
+      "tedavuldekiPaySayisi": 21302659,
+      "kisiSayisi": 109,
+      "fonToplamDeger": 1383038402.93,
+      "gunlukGetiri": 0.00290767,
+      "paraGirisiCikisi": 7173242.92,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "GSE",
       "fonAdi": "AZİMUT PORTFÖY 7.0 SERBEST (DÖVİZ) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PKD",
     "slug": "pkd",
@@ -12,44 +12,56 @@
     "yonetici": "PUSULA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pusula-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.933808,
-    "tedavuldekiPaySayisi": 20432827,
-    "kisiSayisi": 98,
-    "fonToplamDeger": 19080332.67,
-    "gunlukGetiri": 0.00567126,
+    "fiyat": 0.944485,
+    "tedavuldekiPaySayisi": 20933035,
+    "kisiSayisi": 104,
+    "fonToplamDeger": 19770928.81,
+    "gunlukGetiri": 0.01143383,
     "getiriler": {
-      "birAy": 0.048396999999999996,
-      "ucAy": 0.07671,
-      "altiAy": 0.10174,
-      "yilbasi": 0.12170500000000001,
-      "birYil": 0.117974,
+      "birAy": 0.057538,
+      "ucAy": 0.08607799999999999,
+      "altiAy": 0.118737,
+      "yilbasi": 0.13452999999999998,
+      "birYil": 0.137151,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -34245.54,
-      "besGun": null,
+      "gunluk": 472438.95,
+      "besGun": 1075914.2,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": 6,
+      "besGun": 18,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PKD",
+        "fonAdi": "PUSULA PORTFÖY İKİNCİ KATILIM HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 0.944485,
+        "tedavuldekiPaySayisi": 20933035,
+        "kisiSayisi": 104,
+        "fonToplamDeger": 19770928.81,
+        "gunlukGetiri": 0.01143383,
+        "paraGirisiCikisi": 472438.95,
+        "yatirimciDegisimi": 6
+      },
       {
         "fonKodu": "PKD",
         "fonAdi": "PUSULA PORTFÖY İKİNCİ KATILIM HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00567126,
       "paraGirisiCikisi": -34245.54,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PKD",
+      "fonAdi": "PUSULA PORTFÖY İKİNCİ KATILIM HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 0.944485,
+      "tedavuldekiPaySayisi": 20933035,
+      "kisiSayisi": 104,
+      "fonToplamDeger": 19770928.81,
+      "gunlukGetiri": 0.01143383,
+      "paraGirisiCikisi": 472438.95,
+      "yatirimciDegisimi": 6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PKD",
+      "fonAdi": "PUSULA PORTFÖY İKİNCİ KATILIM HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 0.944485,
+      "tedavuldekiPaySayisi": 20933035,
+      "kisiSayisi": 104,
+      "fonToplamDeger": 19770928.81,
+      "gunlukGetiri": 0.01143383,
+      "paraGirisiCikisi": 472438.95,
+      "yatirimciDegisimi": 6
+    },
     {
       "fonKodu": "PKD",
       "fonAdi": "PUSULA PORTFÖY İKİNCİ KATILIM HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PVK",
     "slug": "pvk",
@@ -12,44 +12,56 @@
     "yonetici": "ALBARAKA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "albaraka-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 5.730768,
-    "tedavuldekiPaySayisi": 7072498633,
-    "kisiSayisi": 8329,
-    "fonToplamDeger": 40530850710.6,
-    "gunlukGetiri": 0.00100734,
+    "fiyat": 5.753873,
+    "tedavuldekiPaySayisi": 6979518880,
+    "kisiSayisi": 8320,
+    "fonToplamDeger": 40159262775.42,
+    "gunlukGetiri": 0.00403175,
     "getiriler": {
-      "birAy": 0.031609,
-      "ucAy": 0.096897,
-      "altiAy": 0.194326,
-      "yilbasi": 0.246828,
-      "birYil": 0.439651,
-      "ucYil": 2.302871,
-      "besYil": 3.855419
+      "birAy": 0.029533,
+      "ucAy": 0.09690099999999999,
+      "altiAy": 0.19688099999999997,
+      "yilbasi": 0.251855,
+      "birYil": 0.43920099999999995,
+      "ucYil": 2.3060460000000003,
+      "besYil": 3.8704300000000003
     },
     "paraAkisi": {
-      "gunluk": 3113085827.69,
-      "besGun": null,
+      "gunluk": -534993690.33,
+      "besGun": 3306675440.29,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 9,
-      "besGun": null,
+      "gunluk": -9,
+      "besGun": -42,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PVK",
+        "fonAdi": "ALBARAKA PORTFÖY KISA VADELİ KATILIM SERBEST (TL) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 5.753873,
+        "tedavuldekiPaySayisi": 6979518880,
+        "kisiSayisi": 8320,
+        "fonToplamDeger": 40159262775.42,
+        "gunlukGetiri": 0.00403175,
+        "paraGirisiCikisi": -534993690.33,
+        "yatirimciDegisimi": -9
+      },
       {
         "fonKodu": "PVK",
         "fonAdi": "ALBARAKA PORTFÖY KISA VADELİ KATILIM SERBEST (TL) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00100734,
       "paraGirisiCikisi": 3113085827.69,
       "yatirimciDegisimi": 9
+    },
+    {
+      "fonKodu": "PVK",
+      "fonAdi": "ALBARAKA PORTFÖY KISA VADELİ KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 5.753873,
+      "tedavuldekiPaySayisi": 6979518880,
+      "kisiSayisi": 8320,
+      "fonToplamDeger": 40159262775.42,
+      "gunlukGetiri": 0.00403175,
+      "paraGirisiCikisi": -534993690.33,
+      "yatirimciDegisimi": -9
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PVK",
+      "fonAdi": "ALBARAKA PORTFÖY KISA VADELİ KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 5.753873,
+      "tedavuldekiPaySayisi": 6979518880,
+      "kisiSayisi": 8320,
+      "fonToplamDeger": 40159262775.42,
+      "gunlukGetiri": 0.00403175,
+      "paraGirisiCikisi": -534993690.33,
+      "yatirimciDegisimi": -9
+    },
     {
       "fonKodu": "PVK",
       "fonAdi": "ALBARAKA PORTFÖY KISA VADELİ KATILIM SERBEST (TL) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "VKV",
     "slug": "vkv",
@@ -12,15 +12,15 @@
     "yonetici": "VAKIF KATILIM PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "vakif-katilim-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.07598,
-    "tedavuldekiPaySayisi": 404269146,
-    "kisiSayisi": 810,
-    "fonToplamDeger": 434985350.57,
-    "gunlukGetiri": 0.00103734,
+    "fiyat": 1.080435,
+    "tedavuldekiPaySayisi": 396252060,
+    "kisiSayisi": 831,
+    "fonToplamDeger": 428124707.16,
+    "gunlukGetiri": 0.00414041,
     "getiriler": {
-      "birAy": 0.0327,
+      "birAy": 0.030606,
       "ucAy": null,
       "altiAy": null,
       "yilbasi": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 34100514.44,
-      "besGun": null,
+      "gunluk": -8661940.31,
+      "besGun": 141872385.38,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 22,
-      "besGun": null,
+      "gunluk": 21,
+      "besGun": 79,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "VKV",
+        "fonAdi": "VAKIF KATILIM PORTFÖY KISA VADELİ KİRA SERTİFİKALARI KATILIM FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.080435,
+        "tedavuldekiPaySayisi": 396252060,
+        "kisiSayisi": 831,
+        "fonToplamDeger": 428124707.16,
+        "gunlukGetiri": 0.00414041,
+        "paraGirisiCikisi": -8661940.31,
+        "yatirimciDegisimi": 21
+      },
       {
         "fonKodu": "VKV",
         "fonAdi": "VAKIF KATILIM PORTFÖY KISA VADELİ KİRA SERTİFİKALARI KATILIM FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00103734,
       "paraGirisiCikisi": 34100514.44,
       "yatirimciDegisimi": 22
+    },
+    {
+      "fonKodu": "VKV",
+      "fonAdi": "VAKIF KATILIM PORTFÖY KISA VADELİ KİRA SERTİFİKALARI KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.080435,
+      "tedavuldekiPaySayisi": 396252060,
+      "kisiSayisi": 831,
+      "fonToplamDeger": 428124707.16,
+      "gunlukGetiri": 0.00414041,
+      "paraGirisiCikisi": -8661940.31,
+      "yatirimciDegisimi": 21
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "VKV",
+      "fonAdi": "VAKIF KATILIM PORTFÖY KISA VADELİ KİRA SERTİFİKALARI KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.080435,
+      "tedavuldekiPaySayisi": 396252060,
+      "kisiSayisi": 831,
+      "fonToplamDeger": 428124707.16,
+      "gunlukGetiri": 0.00414041,
+      "paraGirisiCikisi": -8661940.31,
+      "yatirimciDegisimi": 21
+    },
     {
       "fonKodu": "VKV",
       "fonAdi": "VAKIF KATILIM PORTFÖY KISA VADELİ KİRA SERTİFİKALARI KATILIM FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

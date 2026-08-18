@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "FIT",
     "slug": "fit",
@@ -12,44 +12,56 @@
     "yonetici": "FİBA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "fiba-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.227659,
-    "tedavuldekiPaySayisi": 841232214,
-    "kisiSayisi": 542,
-    "fonToplamDeger": 191513703.55,
-    "gunlukGetiri": 0.00499276,
+    "fiyat": 0.227866,
+    "tedavuldekiPaySayisi": 832831214,
+    "kisiSayisi": 543,
+    "fonToplamDeger": 189774307.45,
+    "gunlukGetiri": 0.00090925,
     "getiriler": {
-      "birAy": 0.020229,
-      "ucAy": 0.058593,
-      "altiAy": 0.018677,
-      "yilbasi": 0.036222,
-      "birYil": 0.21119700000000002,
-      "ucYil": 0.920428,
-      "besYil": 1.8093219999999999
+      "birAy": 0.022784,
+      "ucAy": 0.069412,
+      "altiAy": 0.014153,
+      "yilbasi": 0.037164,
+      "birYil": 0.207864,
+      "ucYil": 0.9190170000000001,
+      "besYil": 1.807684
     },
     "paraAkisi": {
-      "gunluk": 24814.83,
-      "besGun": null,
+      "gunluk": -1914302.27,
+      "besGun": -2093763.23,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 1,
-      "besGun": null,
+      "besGun": 8,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FIT",
+        "fonAdi": "FİBA PORTFÖY BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 0.227866,
+        "tedavuldekiPaySayisi": 832831214,
+        "kisiSayisi": 543,
+        "fonToplamDeger": 189774307.45,
+        "gunlukGetiri": 0.00090925,
+        "paraGirisiCikisi": -1914302.27,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "FIT",
         "fonAdi": "FİBA PORTFÖY BORÇLANMA ARAÇLARI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00499276,
       "paraGirisiCikisi": 24814.83,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "FIT",
+      "fonAdi": "FİBA PORTFÖY BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.227866,
+      "tedavuldekiPaySayisi": 832831214,
+      "kisiSayisi": 543,
+      "fonToplamDeger": 189774307.45,
+      "gunlukGetiri": 0.00090925,
+      "paraGirisiCikisi": -1914302.27,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FIT",
+      "fonAdi": "FİBA PORTFÖY BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.227866,
+      "tedavuldekiPaySayisi": 832831214,
+      "kisiSayisi": 543,
+      "fonToplamDeger": 189774307.45,
+      "gunlukGetiri": 0.00090925,
+      "paraGirisiCikisi": -1914302.27,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "FIT",
       "fonAdi": "FİBA PORTFÖY BORÇLANMA ARAÇLARI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

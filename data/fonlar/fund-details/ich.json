@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ICH",
     "slug": "ich",
@@ -12,44 +12,56 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 2.407425,
-    "tedavuldekiPaySayisi": 292251788,
-    "kisiSayisi": 3224,
-    "fonToplamDeger": 703574399.81,
-    "gunlukGetiri": 0.00255863,
+    "fiyat": 2.4239,
+    "tedavuldekiPaySayisi": 350304043,
+    "kisiSayisi": 3591,
+    "fonToplamDeger": 849102109.04,
+    "gunlukGetiri": 0.00684341,
     "getiriler": {
-      "birAy": 0.093189,
-      "ucAy": 0.160762,
-      "altiAy": 0.381459,
-      "yilbasi": 0.561843,
-      "birYil": 0.7894329999999999,
+      "birAy": 0.083147,
+      "ucAy": 0.170429,
+      "altiAy": 0.387843,
+      "yilbasi": 0.572531,
+      "birYil": 0.766092,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 42449518.35,
-      "besGun": null,
+      "gunluk": 140712860.89,
+      "besGun": 377306390.08,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 171,
-      "besGun": null,
+      "gunluk": 367,
+      "besGun": 1224,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ICH",
+        "fonAdi": "PARDUS PORTFÖY İKİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 2.4239,
+        "tedavuldekiPaySayisi": 350304043,
+        "kisiSayisi": 3591,
+        "fonToplamDeger": 849102109.04,
+        "gunlukGetiri": 0.00684341,
+        "paraGirisiCikisi": 140712860.89,
+        "yatirimciDegisimi": 367
+      },
       {
         "fonKodu": "ICH",
         "fonAdi": "PARDUS PORTFÖY İKİNCİ DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00255863,
       "paraGirisiCikisi": 42449518.35,
       "yatirimciDegisimi": 171
+    },
+    {
+      "fonKodu": "ICH",
+      "fonAdi": "PARDUS PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 2.4239,
+      "tedavuldekiPaySayisi": 350304043,
+      "kisiSayisi": 3591,
+      "fonToplamDeger": 849102109.04,
+      "gunlukGetiri": 0.00684341,
+      "paraGirisiCikisi": 140712860.89,
+      "yatirimciDegisimi": 367
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ICH",
+      "fonAdi": "PARDUS PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 2.4239,
+      "tedavuldekiPaySayisi": 350304043,
+      "kisiSayisi": 3591,
+      "fonToplamDeger": 849102109.04,
+      "gunlukGetiri": 0.00684341,
+      "paraGirisiCikisi": 140712860.89,
+      "yatirimciDegisimi": 367
+    },
     {
       "fonKodu": "ICH",
       "fonAdi": "PARDUS PORTFÖY İKİNCİ DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

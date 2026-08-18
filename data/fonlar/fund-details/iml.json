@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IML",
     "slug": "iml",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.710724,
-    "tedavuldekiPaySayisi": 525112437,
-    "kisiSayisi": 4799,
-    "fonToplamDeger": 898322594.02,
-    "gunlukGetiri": 0.00322715,
+    "fiyat": 1.71021,
+    "tedavuldekiPaySayisi": 524221950,
+    "kisiSayisi": 4765,
+    "fonToplamDeger": 896529663.79,
+    "gunlukGetiri": -0.00030046,
     "getiriler": {
-      "birAy": 0.001471,
-      "ucAy": -0.007512,
-      "altiAy": -0.044364,
-      "yilbasi": 0.207708,
-      "birYil": 0.30177499999999996,
+      "birAy": -0.006511,
+      "ucAy": 0.010564,
+      "altiAy": -0.049611,
+      "yilbasi": 0.207345,
+      "birYil": 0.305433,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1918241.66,
-      "besGun": null,
+      "gunluk": -1522919.77,
+      "besGun": -19994711.75,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -21,
-      "besGun": null,
+      "gunluk": -34,
+      "besGun": -88,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IML",
+        "fonAdi": "İŞ PORTFÖY MODEL PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.71021,
+        "tedavuldekiPaySayisi": 524221950,
+        "kisiSayisi": 4765,
+        "fonToplamDeger": 896529663.79,
+        "gunlukGetiri": -0.00030046,
+        "paraGirisiCikisi": -1522919.77,
+        "yatirimciDegisimi": -34
+      },
       {
         "fonKodu": "IML",
         "fonAdi": "İŞ PORTFÖY MODEL PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00322715,
       "paraGirisiCikisi": -1918241.66,
       "yatirimciDegisimi": -21
+    },
+    {
+      "fonKodu": "IML",
+      "fonAdi": "İŞ PORTFÖY MODEL PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.71021,
+      "tedavuldekiPaySayisi": 524221950,
+      "kisiSayisi": 4765,
+      "fonToplamDeger": 896529663.79,
+      "gunlukGetiri": -0.00030046,
+      "paraGirisiCikisi": -1522919.77,
+      "yatirimciDegisimi": -34
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IML",
+      "fonAdi": "İŞ PORTFÖY MODEL PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.71021,
+      "tedavuldekiPaySayisi": 524221950,
+      "kisiSayisi": 4765,
+      "fonToplamDeger": 896529663.79,
+      "gunlukGetiri": -0.00030046,
+      "paraGirisiCikisi": -1522919.77,
+      "yatirimciDegisimi": -34
+    },
     {
       "fonKodu": "IML",
       "fonAdi": "İŞ PORTFÖY MODEL PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

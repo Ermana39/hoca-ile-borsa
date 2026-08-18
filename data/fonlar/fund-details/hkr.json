@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "HKR",
     "slug": "hkr",
@@ -12,44 +12,56 @@
     "yonetici": "HSBC PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hsbc-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 3.953092,
-    "tedavuldekiPaySayisi": 385327730,
-    "kisiSayisi": 1547,
-    "fonToplamDeger": 1523235971,
-    "gunlukGetiri": 0.00527726,
+    "fiyat": 3.93806,
+    "tedavuldekiPaySayisi": 385300955,
+    "kisiSayisi": 1531,
+    "fonToplamDeger": 1517338198.26,
+    "gunlukGetiri": -0.00380259,
     "getiriler": {
-      "birAy": 0.012929999999999999,
-      "ucAy": -0.042674000000000004,
-      "altiAy": -0.052115,
-      "yilbasi": 0.22751200000000002,
-      "birYil": 0.164222,
-      "ucYil": 0.8705280000000001,
+      "birAy": 0.007893,
+      "ucAy": -0.030390999999999998,
+      "altiAy": -0.050126,
+      "yilbasi": 0.22284400000000001,
+      "birYil": 0.177056,
+      "ucYil": 0.862531,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -6333406.82,
-      "besGun": null,
+      "gunluk": -105441.56,
+      "besGun": -14320226.55,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
-      "besGun": null,
+      "gunluk": -16,
+      "besGun": -23,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HKR",
+        "fonAdi": "HSBC PORTFÖY KIRMIZI HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 3.93806,
+        "tedavuldekiPaySayisi": 385300955,
+        "kisiSayisi": 1531,
+        "fonToplamDeger": 1517338198.26,
+        "gunlukGetiri": -0.00380259,
+        "paraGirisiCikisi": -105441.56,
+        "yatirimciDegisimi": -16
+      },
       {
         "fonKodu": "HKR",
         "fonAdi": "HSBC PORTFÖY KIRMIZI HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00527726,
       "paraGirisiCikisi": -6333406.82,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "HKR",
+      "fonAdi": "HSBC PORTFÖY KIRMIZI HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 3.93806,
+      "tedavuldekiPaySayisi": 385300955,
+      "kisiSayisi": 1531,
+      "fonToplamDeger": 1517338198.26,
+      "gunlukGetiri": -0.00380259,
+      "paraGirisiCikisi": -105441.56,
+      "yatirimciDegisimi": -16
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HKR",
+      "fonAdi": "HSBC PORTFÖY KIRMIZI HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 3.93806,
+      "tedavuldekiPaySayisi": 385300955,
+      "kisiSayisi": 1531,
+      "fonToplamDeger": 1517338198.26,
+      "gunlukGetiri": -0.00380259,
+      "paraGirisiCikisi": -105441.56,
+      "yatirimciDegisimi": -16
+    },
     {
       "fonKodu": "HKR",
       "fonAdi": "HSBC PORTFÖY KIRMIZI HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "EDT",
     "slug": "edt",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 2.242369,
-    "tedavuldekiPaySayisi": 435294820,
-    "kisiSayisi": 652,
-    "fonToplamDeger": 976091717.39,
-    "gunlukGetiri": 0.00103927,
+    "fiyat": 2.251735,
+    "tedavuldekiPaySayisi": 435841983,
+    "kisiSayisi": 649,
+    "fonToplamDeger": 981400821.63,
+    "gunlukGetiri": 0.00417683,
     "getiriler": {
-      "birAy": 0.033053,
-      "ucAy": 0.103082,
-      "altiAy": 0.205693,
-      "yilbasi": 0.259669,
-      "birYil": 0.462081,
+      "birAy": 0.030983999999999998,
+      "ucAy": 0.103229,
+      "altiAy": 0.208418,
+      "yilbasi": 0.26493,
+      "birYil": 0.461525,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1493417.75,
-      "besGun": null,
+      "gunluk": 1232066.08,
+      "besGun": -4244042.5,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": -3,
-      "besGun": null,
+      "besGun": -12,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "EDT",
+        "fonAdi": "DENİZ PORTFÖY TED EĞİTİME DESTEK SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 2.251735,
+        "tedavuldekiPaySayisi": 435841983,
+        "kisiSayisi": 649,
+        "fonToplamDeger": 981400821.63,
+        "gunlukGetiri": 0.00417683,
+        "paraGirisiCikisi": 1232066.08,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "EDT",
         "fonAdi": "DENİZ PORTFÖY TED EĞİTİME DESTEK SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00103927,
       "paraGirisiCikisi": -1493417.75,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "EDT",
+      "fonAdi": "DENİZ PORTFÖY TED EĞİTİME DESTEK SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 2.251735,
+      "tedavuldekiPaySayisi": 435841983,
+      "kisiSayisi": 649,
+      "fonToplamDeger": 981400821.63,
+      "gunlukGetiri": 0.00417683,
+      "paraGirisiCikisi": 1232066.08,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "EDT",
+      "fonAdi": "DENİZ PORTFÖY TED EĞİTİME DESTEK SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 2.251735,
+      "tedavuldekiPaySayisi": 435841983,
+      "kisiSayisi": 649,
+      "fonToplamDeger": 981400821.63,
+      "gunlukGetiri": 0.00417683,
+      "paraGirisiCikisi": 1232066.08,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "EDT",
       "fonAdi": "DENİZ PORTFÖY TED EĞİTİME DESTEK SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

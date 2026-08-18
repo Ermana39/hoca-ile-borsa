@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "RPP",
     "slug": "rpp",
@@ -12,44 +12,56 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 4.926785,
-    "tedavuldekiPaySayisi": 1322922271,
-    "kisiSayisi": 7762,
-    "fonToplamDeger": 6517753530.05,
-    "gunlukGetiri": 0.00117232,
+    "fiyat": 4.9478,
+    "tedavuldekiPaySayisi": 1325609160,
+    "kisiSayisi": 7725,
+    "fonToplamDeger": 6558849166.32,
+    "gunlukGetiri": 0.00426546,
     "getiriler": {
-      "birAy": 0.034239,
-      "ucAy": 0.103744,
-      "altiAy": 0.209941,
-      "yilbasi": 0.266866,
-      "birYil": 0.475289,
-      "ucYil": 2.625403,
+      "birAy": 0.031782,
+      "ucAy": 0.103688,
+      "altiAy": 0.21257,
+      "yilbasi": 0.27227,
+      "birYil": 0.474935,
+      "ucYil": 2.629221,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -4940264.68,
-      "besGun": null,
+      "gunluk": 13294189.39,
+      "besGun": -33622813.21,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -20,
-      "besGun": null,
+      "gunluk": -37,
+      "besGun": -168,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RPP",
+        "fonAdi": "ROTA PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 4.9478,
+        "tedavuldekiPaySayisi": 1325609160,
+        "kisiSayisi": 7725,
+        "fonToplamDeger": 6558849166.32,
+        "gunlukGetiri": 0.00426546,
+        "paraGirisiCikisi": 13294189.39,
+        "yatirimciDegisimi": -37
+      },
       {
         "fonKodu": "RPP",
         "fonAdi": "ROTA PORTFÖY PARA PİYASASI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00117232,
       "paraGirisiCikisi": -4940264.68,
       "yatirimciDegisimi": -20
+    },
+    {
+      "fonKodu": "RPP",
+      "fonAdi": "ROTA PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 4.9478,
+      "tedavuldekiPaySayisi": 1325609160,
+      "kisiSayisi": 7725,
+      "fonToplamDeger": 6558849166.32,
+      "gunlukGetiri": 0.00426546,
+      "paraGirisiCikisi": 13294189.39,
+      "yatirimciDegisimi": -37
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RPP",
+      "fonAdi": "ROTA PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 4.9478,
+      "tedavuldekiPaySayisi": 1325609160,
+      "kisiSayisi": 7725,
+      "fonToplamDeger": 6558849166.32,
+      "gunlukGetiri": 0.00426546,
+      "paraGirisiCikisi": 13294189.39,
+      "yatirimciDegisimi": -37
+    },
     {
       "fonKodu": "RPP",
       "fonAdi": "ROTA PORTFÖY PARA PİYASASI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

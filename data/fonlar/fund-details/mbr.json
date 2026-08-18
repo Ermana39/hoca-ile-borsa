@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "MBR",
     "slug": "mbr",
@@ -12,44 +12,56 @@
     "yonetici": "MT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "mt-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.736283,
-    "tedavuldekiPaySayisi": 259440218,
-    "kisiSayisi": 484,
-    "fonToplamDeger": 450461621.08,
-    "gunlukGetiri": 0.00382792,
+    "fiyat": 1.743601,
+    "tedavuldekiPaySayisi": 257186822,
+    "kisiSayisi": 463,
+    "fonToplamDeger": 448431234.1,
+    "gunlukGetiri": 0.00421475,
     "getiriler": {
-      "birAy": 0.032872,
-      "ucAy": 0.143077,
-      "altiAy": 0.233726,
-      "yilbasi": 0.351252,
-      "birYil": 0.541969,
+      "birAy": 0.033636,
+      "ucAy": 0.145341,
+      "altiAy": 0.234593,
+      "yilbasi": 0.35694699999999996,
+      "birYil": 0.542119,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -5763431.68,
-      "besGun": null,
+      "gunluk": -3929023.52,
+      "besGun": -55805870.11,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -16,
-      "besGun": null,
+      "gunluk": -21,
+      "besGun": -56,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MBR",
+        "fonAdi": "MT PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.743601,
+        "tedavuldekiPaySayisi": 257186822,
+        "kisiSayisi": 463,
+        "fonToplamDeger": 448431234.1,
+        "gunlukGetiri": 0.00421475,
+        "paraGirisiCikisi": -3929023.52,
+        "yatirimciDegisimi": -21
+      },
       {
         "fonKodu": "MBR",
         "fonAdi": "MT PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00382792,
       "paraGirisiCikisi": -5763431.68,
       "yatirimciDegisimi": -16
+    },
+    {
+      "fonKodu": "MBR",
+      "fonAdi": "MT PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.743601,
+      "tedavuldekiPaySayisi": 257186822,
+      "kisiSayisi": 463,
+      "fonToplamDeger": 448431234.1,
+      "gunlukGetiri": 0.00421475,
+      "paraGirisiCikisi": -3929023.52,
+      "yatirimciDegisimi": -21
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MBR",
+      "fonAdi": "MT PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.743601,
+      "tedavuldekiPaySayisi": 257186822,
+      "kisiSayisi": 463,
+      "fonToplamDeger": 448431234.1,
+      "gunlukGetiri": 0.00421475,
+      "paraGirisiCikisi": -3929023.52,
+      "yatirimciDegisimi": -21
+    },
     {
       "fonKodu": "MBR",
       "fonAdi": "MT PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

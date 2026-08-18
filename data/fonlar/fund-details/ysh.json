@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YSH",
     "slug": "ysh",
@@ -12,15 +12,15 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.001162,
-    "tedavuldekiPaySayisi": 57653510,
-    "kisiSayisi": 349,
-    "fonToplamDeger": 57720480.19,
-    "gunlukGetiri": 0.00749917,
+    "fiyat": 1.023587,
+    "tedavuldekiPaySayisi": 58201340,
+    "kisiSayisi": 354,
+    "fonToplamDeger": 59574130.07,
+    "gunlukGetiri": 0.02239897,
     "getiriler": {
-      "birAy": 0.047904999999999996,
+      "birAy": 0.13506,
       "ucAy": null,
       "altiAy": null,
       "yilbasi": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 168730.84,
-      "besGun": null,
+      "gunluk": 560751.67,
+      "besGun": 3706966.09,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 4,
-      "besGun": null,
+      "gunluk": 5,
+      "besGun": 15,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YSH",
+        "fonAdi": "YAPI KREDİ PORTFÖY BÜYÜK ÖLÇEKLİ ŞİRKETLER DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.023587,
+        "tedavuldekiPaySayisi": 58201340,
+        "kisiSayisi": 354,
+        "fonToplamDeger": 59574130.07,
+        "gunlukGetiri": 0.02239897,
+        "paraGirisiCikisi": 560751.67,
+        "yatirimciDegisimi": 5
+      },
       {
         "fonKodu": "YSH",
         "fonAdi": "YAPI KREDİ PORTFÖY BÜYÜK ÖLÇEKLİ ŞİRKETLER DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00749917,
       "paraGirisiCikisi": 168730.84,
       "yatirimciDegisimi": 4
+    },
+    {
+      "fonKodu": "YSH",
+      "fonAdi": "YAPI KREDİ PORTFÖY BÜYÜK ÖLÇEKLİ ŞİRKETLER DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.023587,
+      "tedavuldekiPaySayisi": 58201340,
+      "kisiSayisi": 354,
+      "fonToplamDeger": 59574130.07,
+      "gunlukGetiri": 0.02239897,
+      "paraGirisiCikisi": 560751.67,
+      "yatirimciDegisimi": 5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YSH",
+      "fonAdi": "YAPI KREDİ PORTFÖY BÜYÜK ÖLÇEKLİ ŞİRKETLER DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.023587,
+      "tedavuldekiPaySayisi": 58201340,
+      "kisiSayisi": 354,
+      "fonToplamDeger": 59574130.07,
+      "gunlukGetiri": 0.02239897,
+      "paraGirisiCikisi": 560751.67,
+      "yatirimciDegisimi": 5
+    },
     {
       "fonKodu": "YSH",
       "fonAdi": "YAPI KREDİ PORTFÖY BÜYÜK ÖLÇEKLİ ŞİRKETLER DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

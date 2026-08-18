@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PAF",
     "slug": "paf",
@@ -12,44 +12,56 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 3.549091,
-    "tedavuldekiPaySayisi": 82742217,
-    "kisiSayisi": 3355,
-    "fonToplamDeger": 293659669.77,
-    "gunlukGetiri": -0.00618535,
+    "fiyat": 3.568227,
+    "tedavuldekiPaySayisi": 82643100,
+    "kisiSayisi": 3357,
+    "fonToplamDeger": 294889342.01,
+    "gunlukGetiri": 0.0053918,
     "getiriler": {
-      "birAy": 0.095825,
-      "ucAy": -0.018029,
-      "altiAy": -0.070823,
-      "yilbasi": 0.051062,
-      "birYil": 0.497619,
+      "birAy": 0.11682600000000001,
+      "ucAy": 0.0034449999999999997,
+      "altiAy": -0.059763000000000004,
+      "yilbasi": 0.056729,
+      "birYil": 0.508389,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1340452.63,
-      "besGun": null,
+      "gunluk": -353671.96,
+      "besGun": -2076168.03,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -9,
-      "besGun": null,
+      "gunluk": 2,
+      "besGun": -7,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PAF",
+        "fonAdi": "PARDUS PORTFÖY ALTIN FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 3.568227,
+        "tedavuldekiPaySayisi": 82643100,
+        "kisiSayisi": 3357,
+        "fonToplamDeger": 294889342.01,
+        "gunlukGetiri": 0.0053918,
+        "paraGirisiCikisi": -353671.96,
+        "yatirimciDegisimi": 2
+      },
       {
         "fonKodu": "PAF",
         "fonAdi": "PARDUS PORTFÖY ALTIN FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00618535,
       "paraGirisiCikisi": -1340452.63,
       "yatirimciDegisimi": -9
+    },
+    {
+      "fonKodu": "PAF",
+      "fonAdi": "PARDUS PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 3.568227,
+      "tedavuldekiPaySayisi": 82643100,
+      "kisiSayisi": 3357,
+      "fonToplamDeger": 294889342.01,
+      "gunlukGetiri": 0.0053918,
+      "paraGirisiCikisi": -353671.96,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PAF",
+      "fonAdi": "PARDUS PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 3.568227,
+      "tedavuldekiPaySayisi": 82643100,
+      "kisiSayisi": 3357,
+      "fonToplamDeger": 294889342.01,
+      "gunlukGetiri": 0.0053918,
+      "paraGirisiCikisi": -353671.96,
+      "yatirimciDegisimi": 2
+    },
     {
       "fonKodu": "PAF",
       "fonAdi": "PARDUS PORTFÖY ALTIN FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

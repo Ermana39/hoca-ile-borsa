@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YAC",
     "slug": "yac",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 14.556637,
-    "tedavuldekiPaySayisi": 374375562,
+    "fiyat": 14.688578,
+    "tedavuldekiPaySayisi": 374012663,
     "kisiSayisi": 9848,
-    "fonToplamDeger": 5449649049.79,
-    "gunlukGetiri": 0.00130206,
+    "fonToplamDeger": 5493714324.95,
+    "gunlukGetiri": 0.00906398,
     "getiriler": {
-      "birAy": 0.042412,
-      "ucAy": 0.033712,
-      "altiAy": 0.063905,
-      "yilbasi": 0.168994,
-      "birYil": 0.322672,
-      "ucYil": 1.408618,
-      "besYil": 5.843477
+      "birAy": 0.059512,
+      "ucAy": 0.049338,
+      "altiAy": 0.07500899999999999,
+      "yilbasi": 0.17959,
+      "birYil": 0.337222,
+      "ucYil": 1.420734,
+      "besYil": 5.937862
     },
     "paraAkisi": {
-      "gunluk": -1080233.48,
-      "besGun": null,
+      "gunluk": -5330470.27,
+      "besGun": -46415865.98,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": -25,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YAC",
+        "fonAdi": "YAPI KREDİ PORTFÖY İKİNCİ FON SEPETİ FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 14.688578,
+        "tedavuldekiPaySayisi": 374012663,
+        "kisiSayisi": 9848,
+        "fonToplamDeger": 5493714324.95,
+        "gunlukGetiri": 0.00906398,
+        "paraGirisiCikisi": -5330470.27,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "YAC",
         "fonAdi": "YAPI KREDİ PORTFÖY İKİNCİ FON SEPETİ FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00130206,
       "paraGirisiCikisi": -1080233.48,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "YAC",
+      "fonAdi": "YAPI KREDİ PORTFÖY İKİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 14.688578,
+      "tedavuldekiPaySayisi": 374012663,
+      "kisiSayisi": 9848,
+      "fonToplamDeger": 5493714324.95,
+      "gunlukGetiri": 0.00906398,
+      "paraGirisiCikisi": -5330470.27,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YAC",
+      "fonAdi": "YAPI KREDİ PORTFÖY İKİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 14.688578,
+      "tedavuldekiPaySayisi": 374012663,
+      "kisiSayisi": 9848,
+      "fonToplamDeger": 5493714324.95,
+      "gunlukGetiri": 0.00906398,
+      "paraGirisiCikisi": -5330470.27,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "YAC",
       "fonAdi": "YAPI KREDİ PORTFÖY İKİNCİ FON SEPETİ FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

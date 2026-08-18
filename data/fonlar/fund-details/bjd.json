@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BJD",
     "slug": "bjd",
@@ -12,44 +12,56 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 53.025215,
-    "tedavuldekiPaySayisi": 14906612,
-    "kisiSayisi": 111,
-    "fonToplamDeger": 790426302.68,
-    "gunlukGetiri": 0.00045244,
+    "fiyat": 53.180789,
+    "tedavuldekiPaySayisi": 14357231,
+    "kisiSayisi": 110,
+    "fonToplamDeger": 763528865.66,
+    "gunlukGetiri": 0.00293396,
     "getiriler": {
-      "birAy": 0.018876,
-      "ucAy": 0.059218,
-      "altiAy": 0.108623,
-      "yilbasi": 0.130859,
-      "birYil": 0.207086,
-      "ucYil": 0.896593,
-      "besYil": 5.194994
+      "birAy": 0.019779,
+      "ucAy": 0.06066099999999999,
+      "altiAy": 0.10893000000000001,
+      "yilbasi": 0.134177,
+      "birYil": 0.20827400000000001,
+      "ucYil": 0.897671,
+      "besYil": 5.302658
     },
     "paraAkisi": {
-      "gunluk": -3035322.38,
-      "besGun": null,
+      "gunluk": -29216515.04,
+      "besGun": 14524651.94,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": -1,
+      "besGun": 4,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BJD",
+        "fonAdi": "AZİMUT PORTFÖY 13.0 SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 53.180789,
+        "tedavuldekiPaySayisi": 14357231,
+        "kisiSayisi": 110,
+        "fonToplamDeger": 763528865.66,
+        "gunlukGetiri": 0.00293396,
+        "paraGirisiCikisi": -29216515.04,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "BJD",
         "fonAdi": "AZİMUT PORTFÖY 13.0 SERBEST (DÖVİZ) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00045244,
       "paraGirisiCikisi": -3035322.38,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BJD",
+      "fonAdi": "AZİMUT PORTFÖY 13.0 SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 53.180789,
+      "tedavuldekiPaySayisi": 14357231,
+      "kisiSayisi": 110,
+      "fonToplamDeger": 763528865.66,
+      "gunlukGetiri": 0.00293396,
+      "paraGirisiCikisi": -29216515.04,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BJD",
+      "fonAdi": "AZİMUT PORTFÖY 13.0 SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 53.180789,
+      "tedavuldekiPaySayisi": 14357231,
+      "kisiSayisi": 110,
+      "fonToplamDeger": 763528865.66,
+      "gunlukGetiri": 0.00293396,
+      "paraGirisiCikisi": -29216515.04,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "BJD",
       "fonAdi": "AZİMUT PORTFÖY 13.0 SERBEST (DÖVİZ) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

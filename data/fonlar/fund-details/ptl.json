@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PTL",
     "slug": "ptl",
@@ -12,13 +12,13 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.853692,
-    "tedavuldekiPaySayisi": 497759255,
-    "kisiSayisi": 1613,
-    "fonToplamDeger": 922692162.07,
-    "gunlukGetiri": 0.0010536,
+    "fiyat": 1.861521,
+    "tedavuldekiPaySayisi": 467093206,
+    "kisiSayisi": 1947,
+    "fonToplamDeger": 869503771.22,
+    "gunlukGetiri": 0.00422346,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 130351361.92,
-      "besGun": null,
+      "gunluk": -57085494.2,
+      "besGun": 14996565.32,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 41,
-      "besGun": null,
+      "gunluk": 334,
+      "besGun": 391,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PTL",
+        "fonAdi": "TEB PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.861521,
+        "tedavuldekiPaySayisi": 467093206,
+        "kisiSayisi": 1947,
+        "fonToplamDeger": 869503771.22,
+        "gunlukGetiri": 0.00422346,
+        "paraGirisiCikisi": -57085494.2,
+        "yatirimciDegisimi": 334
+      },
       {
         "fonKodu": "PTL",
         "fonAdi": "TEB PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.0010536,
       "paraGirisiCikisi": 130351361.92,
       "yatirimciDegisimi": 41
+    },
+    {
+      "fonKodu": "PTL",
+      "fonAdi": "TEB PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.861521,
+      "tedavuldekiPaySayisi": 467093206,
+      "kisiSayisi": 1947,
+      "fonToplamDeger": 869503771.22,
+      "gunlukGetiri": 0.00422346,
+      "paraGirisiCikisi": -57085494.2,
+      "yatirimciDegisimi": 334
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PTL",
+      "fonAdi": "TEB PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.861521,
+      "tedavuldekiPaySayisi": 467093206,
+      "kisiSayisi": 1947,
+      "fonToplamDeger": 869503771.22,
+      "gunlukGetiri": 0.00422346,
+      "paraGirisiCikisi": -57085494.2,
+      "yatirimciDegisimi": 334
+    },
     {
       "fonKodu": "PTL",
       "fonAdi": "TEB PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

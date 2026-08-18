@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IPB",
     "slug": "ipb",
@@ -12,44 +12,56 @@
     "yonetici": "İSTANBUL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "istanbul-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.892516,
-    "tedavuldekiPaySayisi": 1218238529.57,
-    "kisiSayisi": 15283,
-    "fonToplamDeger": 1087297734.41,
-    "gunlukGetiri": -0.00953273,
+    "fiyat": 0.894635,
+    "tedavuldekiPaySayisi": 1216724709.57,
+    "kisiSayisi": 15265,
+    "fonToplamDeger": 1088524610.06,
+    "gunlukGetiri": 0.00237419,
     "getiriler": {
-      "birAy": 0.043593,
-      "ucAy": 0.06051,
-      "altiAy": 0.165574,
-      "yilbasi": 0.333168,
-      "birYil": 0.342174,
-      "ucYil": 2.0275,
-      "besYil": 17.007707
+      "birAy": 0.030042,
+      "ucAy": 0.062622,
+      "altiAy": 0.165606,
+      "yilbasi": 0.336333,
+      "birYil": 0.34915399999999996,
+      "ucYil": 2.00656,
+      "besYil": 17.379009
     },
     "paraAkisi": {
-      "gunluk": -2671500.31,
-      "besGun": null,
+      "gunluk": -1354316.36,
+      "besGun": -7925360.6,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -17,
-      "besGun": null,
+      "gunluk": -18,
+      "besGun": -71,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IPB",
+        "fonAdi": "İSTANBUL PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 0.894635,
+        "tedavuldekiPaySayisi": 1216724709.57,
+        "kisiSayisi": 15265,
+        "fonToplamDeger": 1088524610.06,
+        "gunlukGetiri": 0.00237419,
+        "paraGirisiCikisi": -1354316.36,
+        "yatirimciDegisimi": -18
+      },
       {
         "fonKodu": "IPB",
         "fonAdi": "İSTANBUL PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00953273,
       "paraGirisiCikisi": -2671500.31,
       "yatirimciDegisimi": -17
+    },
+    {
+      "fonKodu": "IPB",
+      "fonAdi": "İSTANBUL PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 0.894635,
+      "tedavuldekiPaySayisi": 1216724709.57,
+      "kisiSayisi": 15265,
+      "fonToplamDeger": 1088524610.06,
+      "gunlukGetiri": 0.00237419,
+      "paraGirisiCikisi": -1354316.36,
+      "yatirimciDegisimi": -18
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IPB",
+      "fonAdi": "İSTANBUL PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 0.894635,
+      "tedavuldekiPaySayisi": 1216724709.57,
+      "kisiSayisi": 15265,
+      "fonToplamDeger": 1088524610.06,
+      "gunlukGetiri": 0.00237419,
+      "paraGirisiCikisi": -1354316.36,
+      "yatirimciDegisimi": -18
+    },
     {
       "fonKodu": "IPB",
       "fonAdi": "İSTANBUL PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

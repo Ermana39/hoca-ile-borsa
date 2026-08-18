@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TTL",
     "slug": "ttl",
@@ -12,44 +12,56 @@
     "yonetici": "TACİRLER PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "tacirler-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 38.28804,
-    "tedavuldekiPaySayisi": 7880115,
-    "kisiSayisi": 376,
-    "fonToplamDeger": 301714157.44,
-    "gunlukGetiri": 0.00223254,
+    "fiyat": 38.406107,
+    "tedavuldekiPaySayisi": 7879529,
+    "kisiSayisi": 375,
+    "fonToplamDeger": 302622031.24,
+    "gunlukGetiri": 0.00308365,
     "getiriler": {
-      "birAy": 0.012596000000000001,
-      "ucAy": 0.013685000000000001,
-      "altiAy": 0.066048,
-      "yilbasi": 0.27963,
-      "birYil": 0.34991900000000004,
-      "ucYil": 3.6873880000000003,
-      "besYil": 17.481165
+      "birAy": 0.012811,
+      "ucAy": 0.019409,
+      "altiAy": 0.06312999999999999,
+      "yilbasi": 0.283576,
+      "birYil": 0.35641199999999995,
+      "ucYil": 3.569647,
+      "besYil": 17.51176
     },
     "paraAkisi": {
-      "gunluk": 4632.85,
-      "besGun": null,
+      "gunluk": -22505.98,
+      "besGun": -1495677.24,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": -1,
-      "besGun": null,
+      "besGun": -5,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TTL",
+        "fonAdi": "TACİRLER PORTFÖY KARTOPU SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 38.406107,
+        "tedavuldekiPaySayisi": 7879529,
+        "kisiSayisi": 375,
+        "fonToplamDeger": 302622031.24,
+        "gunlukGetiri": 0.00308365,
+        "paraGirisiCikisi": -22505.98,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "TTL",
         "fonAdi": "TACİRLER PORTFÖY KARTOPU SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00223254,
       "paraGirisiCikisi": 4632.85,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "TTL",
+      "fonAdi": "TACİRLER PORTFÖY KARTOPU SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 38.406107,
+      "tedavuldekiPaySayisi": 7879529,
+      "kisiSayisi": 375,
+      "fonToplamDeger": 302622031.24,
+      "gunlukGetiri": 0.00308365,
+      "paraGirisiCikisi": -22505.98,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TTL",
+      "fonAdi": "TACİRLER PORTFÖY KARTOPU SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 38.406107,
+      "tedavuldekiPaySayisi": 7879529,
+      "kisiSayisi": 375,
+      "fonToplamDeger": 302622031.24,
+      "gunlukGetiri": 0.00308365,
+      "paraGirisiCikisi": -22505.98,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "TTL",
       "fonAdi": "TACİRLER PORTFÖY KARTOPU SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

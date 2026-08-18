@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "OKD",
     "slug": "okd",
@@ -12,44 +12,56 @@
     "yonetici": "OYAK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "oyak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.602703,
-    "tedavuldekiPaySayisi": 143283006,
+    "fiyat": 0.603797,
+    "tedavuldekiPaySayisi": 139730897,
     "kisiSayisi": 986,
-    "fonToplamDeger": 86357101.48,
-    "gunlukGetiri": 0.00076049,
+    "fonToplamDeger": 84369084.92,
+    "gunlukGetiri": 0.00181516,
     "getiriler": {
-      "birAy": 0.03857,
-      "ucAy": 0.043685,
-      "altiAy": 0.072286,
-      "yilbasi": 0.249361,
-      "birYil": 0.37076099999999995,
-      "ucYil": 1.89266,
-      "besYil": 10.480056999999999
+      "birAy": 0.029074,
+      "ucAy": 0.051684,
+      "altiAy": 0.068771,
+      "yilbasi": 0.251629,
+      "birYil": 0.373155,
+      "ucYil": 1.8766900000000002,
+      "besYil": 10.451599000000002
     },
     "paraAkisi": {
-      "gunluk": 83748.6,
-      "besGun": null,
+      "gunluk": -2144752.76,
+      "besGun": -2297601.72,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": -3,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OKD",
+        "fonAdi": "OYAK PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 0.603797,
+        "tedavuldekiPaySayisi": 139730897,
+        "kisiSayisi": 986,
+        "fonToplamDeger": 84369084.92,
+        "gunlukGetiri": 0.00181516,
+        "paraGirisiCikisi": -2144752.76,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "OKD",
         "fonAdi": "OYAK PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00076049,
       "paraGirisiCikisi": 83748.6,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "OKD",
+      "fonAdi": "OYAK PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 0.603797,
+      "tedavuldekiPaySayisi": 139730897,
+      "kisiSayisi": 986,
+      "fonToplamDeger": 84369084.92,
+      "gunlukGetiri": 0.00181516,
+      "paraGirisiCikisi": -2144752.76,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OKD",
+      "fonAdi": "OYAK PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 0.603797,
+      "tedavuldekiPaySayisi": 139730897,
+      "kisiSayisi": 986,
+      "fonToplamDeger": 84369084.92,
+      "gunlukGetiri": 0.00181516,
+      "paraGirisiCikisi": -2144752.76,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "OKD",
       "fonAdi": "OYAK PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

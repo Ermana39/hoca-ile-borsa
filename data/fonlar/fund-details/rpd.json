@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "RPD",
     "slug": "rpd",
@@ -12,44 +12,56 @@
     "yonetici": "RE-PIE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "re-pie-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 14.686265,
-    "tedavuldekiPaySayisi": 19134476,
-    "kisiSayisi": 1917,
-    "fonToplamDeger": 281013978.95,
-    "gunlukGetiri": -0.00162941,
+    "fiyat": 14.815326,
+    "tedavuldekiPaySayisi": 19027971,
+    "kisiSayisi": 1905,
+    "fonToplamDeger": 281905585.1,
+    "gunlukGetiri": 0.00878787,
     "getiriler": {
-      "birAy": 0.0047279999999999996,
-      "ucAy": 0.074515,
-      "altiAy": 0.11796,
-      "yilbasi": 0.22477599999999998,
-      "birYil": 0.379816,
-      "ucYil": 2.60908,
-      "besYil": 12.238538
+      "birAy": 0.019013,
+      "ucAy": 0.085062,
+      "altiAy": 0.12416600000000001,
+      "yilbasi": 0.235539,
+      "birYil": 0.382014,
+      "ucYil": 2.5878769999999998,
+      "besYil": 12.339942
     },
     "paraAkisi": {
-      "gunluk": -120368.63,
-      "besGun": null,
+      "gunluk": -1577906.3,
+      "besGun": -2852989.5,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -8,
-      "besGun": null,
+      "gunluk": -12,
+      "besGun": -29,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RPD",
+        "fonAdi": "RE-PIE PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 14.815326,
+        "tedavuldekiPaySayisi": 19027971,
+        "kisiSayisi": 1905,
+        "fonToplamDeger": 281905585.1,
+        "gunlukGetiri": 0.00878787,
+        "paraGirisiCikisi": -1577906.3,
+        "yatirimciDegisimi": -12
+      },
       {
         "fonKodu": "RPD",
         "fonAdi": "RE-PIE PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00162941,
       "paraGirisiCikisi": -120368.63,
       "yatirimciDegisimi": -8
+    },
+    {
+      "fonKodu": "RPD",
+      "fonAdi": "RE-PIE PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 14.815326,
+      "tedavuldekiPaySayisi": 19027971,
+      "kisiSayisi": 1905,
+      "fonToplamDeger": 281905585.1,
+      "gunlukGetiri": 0.00878787,
+      "paraGirisiCikisi": -1577906.3,
+      "yatirimciDegisimi": -12
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RPD",
+      "fonAdi": "RE-PIE PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 14.815326,
+      "tedavuldekiPaySayisi": 19027971,
+      "kisiSayisi": 1905,
+      "fonToplamDeger": 281905585.1,
+      "gunlukGetiri": 0.00878787,
+      "paraGirisiCikisi": -1577906.3,
+      "yatirimciDegisimi": -12
+    },
     {
       "fonKodu": "RPD",
       "fonAdi": "RE-PIE PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

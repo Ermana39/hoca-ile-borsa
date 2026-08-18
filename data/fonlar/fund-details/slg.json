@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "SLG",
     "slug": "slg",
@@ -12,44 +12,56 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.37688,
-    "tedavuldekiPaySayisi": 360925715,
-    "kisiSayisi": 773,
-    "fonToplamDeger": 496951411.12,
-    "gunlukGetiri": -0.00053643,
+    "fiyat": 1.369137,
+    "tedavuldekiPaySayisi": 360759790,
+    "kisiSayisi": 767,
+    "fonToplamDeger": 493929458.75,
+    "gunlukGetiri": -0.00562358,
     "getiriler": {
-      "birAy": 0.015314000000000001,
-      "ucAy": 0.012764,
-      "altiAy": 0.047493,
-      "yilbasi": 0.303981,
+      "birAy": -0.011075,
+      "ucAy": 0.017993,
+      "altiAy": 0.044696999999999994,
+      "yilbasi": 0.296648,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1013280.41,
-      "besGun": null,
+      "gunluk": -227174.06,
+      "besGun": 23737831.71,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -9,
-      "besGun": null,
+      "gunluk": -6,
+      "besGun": -26,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SLG",
+        "fonAdi": "QNB PORTFÖY ALGORİTMİK STRATEJİLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.369137,
+        "tedavuldekiPaySayisi": 360759790,
+        "kisiSayisi": 767,
+        "fonToplamDeger": 493929458.75,
+        "gunlukGetiri": -0.00562358,
+        "paraGirisiCikisi": -227174.06,
+        "yatirimciDegisimi": -6
+      },
       {
         "fonKodu": "SLG",
         "fonAdi": "QNB PORTFÖY ALGORİTMİK STRATEJİLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00053643,
       "paraGirisiCikisi": -1013280.41,
       "yatirimciDegisimi": -9
+    },
+    {
+      "fonKodu": "SLG",
+      "fonAdi": "QNB PORTFÖY ALGORİTMİK STRATEJİLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.369137,
+      "tedavuldekiPaySayisi": 360759790,
+      "kisiSayisi": 767,
+      "fonToplamDeger": 493929458.75,
+      "gunlukGetiri": -0.00562358,
+      "paraGirisiCikisi": -227174.06,
+      "yatirimciDegisimi": -6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SLG",
+      "fonAdi": "QNB PORTFÖY ALGORİTMİK STRATEJİLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.369137,
+      "tedavuldekiPaySayisi": 360759790,
+      "kisiSayisi": 767,
+      "fonToplamDeger": 493929458.75,
+      "gunlukGetiri": -0.00562358,
+      "paraGirisiCikisi": -227174.06,
+      "yatirimciDegisimi": -6
+    },
     {
       "fonKodu": "SLG",
       "fonAdi": "QNB PORTFÖY ALGORİTMİK STRATEJİLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

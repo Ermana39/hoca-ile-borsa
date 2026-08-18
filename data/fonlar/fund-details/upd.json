@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "UPD",
     "slug": "upd",
@@ -12,44 +12,56 @@
     "yonetici": "ÜNLÜ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "unlu-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 22.011804,
-    "tedavuldekiPaySayisi": 115128192,
-    "kisiSayisi": 256,
-    "fonToplamDeger": 2534179178.85,
-    "gunlukGetiri": 0.0022446,
+    "fiyat": 22.058676,
+    "tedavuldekiPaySayisi": 115039204,
+    "kisiSayisi": 252,
+    "fonToplamDeger": 2537612576.83,
+    "gunlukGetiri": 0.0021294,
     "getiriler": {
-      "birAy": 0.028048000000000003,
-      "ucAy": 0.065801,
-      "altiAy": 0.108111,
-      "yilbasi": 0.13573000000000002,
-      "birYil": 0.264561,
-      "ucYil": 1.087088,
-      "besYil": 5.883535
+      "birAy": 0.027989,
+      "ucAy": 0.068327,
+      "altiAy": 0.107547,
+      "yilbasi": 0.138148,
+      "birYil": 0.263488,
+      "ucYil": 1.088916,
+      "besYil": 5.898193
     },
     "paraAkisi": {
-      "gunluk": -25794246.36,
-      "besGun": null,
+      "gunluk": -1962957.46,
+      "besGun": -36554764.19,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
-      "besGun": null,
+      "gunluk": -4,
+      "besGun": -7,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "UPD",
+        "fonAdi": "ÜNLÜ PORTFÖY DÖRDÜNCÜ SERBEST (DÖVIZ) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 22.058676,
+        "tedavuldekiPaySayisi": 115039204,
+        "kisiSayisi": 252,
+        "fonToplamDeger": 2537612576.83,
+        "gunlukGetiri": 0.0021294,
+        "paraGirisiCikisi": -1962957.46,
+        "yatirimciDegisimi": -4
+      },
       {
         "fonKodu": "UPD",
         "fonAdi": "ÜNLÜ PORTFÖY DÖRDÜNCÜ SERBEST (DÖVIZ) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.0022446,
       "paraGirisiCikisi": -25794246.36,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "UPD",
+      "fonAdi": "ÜNLÜ PORTFÖY DÖRDÜNCÜ SERBEST (DÖVIZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 22.058676,
+      "tedavuldekiPaySayisi": 115039204,
+      "kisiSayisi": 252,
+      "fonToplamDeger": 2537612576.83,
+      "gunlukGetiri": 0.0021294,
+      "paraGirisiCikisi": -1962957.46,
+      "yatirimciDegisimi": -4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "UPD",
+      "fonAdi": "ÜNLÜ PORTFÖY DÖRDÜNCÜ SERBEST (DÖVIZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 22.058676,
+      "tedavuldekiPaySayisi": 115039204,
+      "kisiSayisi": 252,
+      "fonToplamDeger": 2537612576.83,
+      "gunlukGetiri": 0.0021294,
+      "paraGirisiCikisi": -1962957.46,
+      "yatirimciDegisimi": -4
+    },
     {
       "fonKodu": "UPD",
       "fonAdi": "ÜNLÜ PORTFÖY DÖRDÜNCÜ SERBEST (DÖVIZ) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TLH",
     "slug": "tlh",
@@ -12,44 +12,56 @@
     "yonetici": "AURA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aura-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 27.098554,
-    "tedavuldekiPaySayisi": 4780717,
-    "kisiSayisi": 339,
-    "fonToplamDeger": 129550517.28,
-    "gunlukGetiri": 0.01107013,
+    "fiyat": 27.084513,
+    "tedavuldekiPaySayisi": 4758117,
+    "kisiSayisi": 336,
+    "fonToplamDeger": 128871280.52,
+    "gunlukGetiri": -0.00051815,
     "getiriler": {
-      "birAy": -0.053404999999999994,
-      "ucAy": -0.123675,
-      "altiAy": -0.122667,
-      "yilbasi": 0.106592,
-      "birYil": 0.141314,
-      "ucYil": 0.9307940000000001,
-      "besYil": 11.981729
+      "birAy": -0.050863,
+      "ucAy": -0.11446999999999999,
+      "altiAy": -0.124093,
+      "yilbasi": 0.106019,
+      "birYil": 0.140382,
+      "ucYil": 0.884735,
+      "besYil": 11.809635
     },
     "paraAkisi": {
-      "gunluk": 16259.13,
-      "besGun": null,
+      "gunluk": -612109.99,
+      "besGun": -579995.87,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
-      "besGun": null,
+      "gunluk": -3,
+      "besGun": -2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TLH",
+        "fonAdi": "AURA PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 27.084513,
+        "tedavuldekiPaySayisi": 4758117,
+        "kisiSayisi": 336,
+        "fonToplamDeger": 128871280.52,
+        "gunlukGetiri": -0.00051815,
+        "paraGirisiCikisi": -612109.99,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "TLH",
         "fonAdi": "AURA PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.01107013,
       "paraGirisiCikisi": 16259.13,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "TLH",
+      "fonAdi": "AURA PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 27.084513,
+      "tedavuldekiPaySayisi": 4758117,
+      "kisiSayisi": 336,
+      "fonToplamDeger": 128871280.52,
+      "gunlukGetiri": -0.00051815,
+      "paraGirisiCikisi": -612109.99,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TLH",
+      "fonAdi": "AURA PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 27.084513,
+      "tedavuldekiPaySayisi": 4758117,
+      "kisiSayisi": 336,
+      "fonToplamDeger": 128871280.52,
+      "gunlukGetiri": -0.00051815,
+      "paraGirisiCikisi": -612109.99,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "TLH",
       "fonAdi": "AURA PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "RPL",
     "slug": "rpl",
@@ -12,44 +12,56 @@
     "yonetici": "RE-PIE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "re-pie-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.736227,
-    "tedavuldekiPaySayisi": 71905303,
+    "fiyat": 1.734212,
+    "tedavuldekiPaySayisi": 71905533,
     "kisiSayisi": 23,
-    "fonToplamDeger": 124843954.38,
-    "gunlukGetiri": 0.00370037,
+    "fonToplamDeger": 124699434.78,
+    "gunlukGetiri": -0.00116056,
     "getiriler": {
-      "birAy": 0.032415,
-      "ucAy": 0.111603,
-      "altiAy": 0.188185,
-      "yilbasi": 0.24369800000000003,
-      "birYil": 0.37997,
+      "birAy": 0.027472,
+      "ucAy": 0.104649,
+      "altiAy": 0.185388,
+      "yilbasi": 0.242254,
+      "birYil": 0.375903,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": 398.87,
+      "besGun": 9296.22,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RPL",
+        "fonAdi": "RE-PIE PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.734212,
+        "tedavuldekiPaySayisi": 71905533,
+        "kisiSayisi": 23,
+        "fonToplamDeger": 124699434.78,
+        "gunlukGetiri": -0.00116056,
+        "paraGirisiCikisi": 398.87,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "RPL",
         "fonAdi": "RE-PIE PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00370037,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "RPL",
+      "fonAdi": "RE-PIE PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.734212,
+      "tedavuldekiPaySayisi": 71905533,
+      "kisiSayisi": 23,
+      "fonToplamDeger": 124699434.78,
+      "gunlukGetiri": -0.00116056,
+      "paraGirisiCikisi": 398.87,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RPL",
+      "fonAdi": "RE-PIE PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.734212,
+      "tedavuldekiPaySayisi": 71905533,
+      "kisiSayisi": 23,
+      "fonToplamDeger": 124699434.78,
+      "gunlukGetiri": -0.00116056,
+      "paraGirisiCikisi": 398.87,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "RPL",
       "fonAdi": "RE-PIE PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

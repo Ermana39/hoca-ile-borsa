@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "HPT",
     "slug": "hpt",
@@ -12,44 +12,56 @@
     "yonetici": "HSBC PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hsbc-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.112359,
-    "tedavuldekiPaySayisi": 27467442820,
-    "kisiSayisi": 10217,
-    "fonToplamDeger": 3086225597.89,
-    "gunlukGetiri": 0.00105131,
+    "fiyat": 0.112793,
+    "tedavuldekiPaySayisi": 27254179960,
+    "kisiSayisi": 10201,
+    "fonToplamDeger": 3074074938.33,
+    "gunlukGetiri": 0.00386262,
     "getiriler": {
-      "birAy": 0.03237,
-      "ucAy": 0.09501,
-      "altiAy": 0.185122,
-      "yilbasi": 0.23847100000000002,
-      "birYil": 0.437938,
-      "ucYil": 2.20102,
-      "besYil": 3.458337
+      "birAy": 0.029838,
+      "ucAy": 0.094504,
+      "altiAy": 0.186857,
+      "yilbasi": 0.24325399999999997,
+      "birYil": 0.43758600000000003,
+      "ucYil": 2.203709,
+      "besYil": 3.4714769999999997
     },
     "paraAkisi": {
-      "gunluk": 86765379.68,
-      "besGun": null,
+      "gunluk": -24054557.77,
+      "besGun": 43450086.64,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
-      "besGun": null,
+      "gunluk": -16,
+      "besGun": -45,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HPT",
+        "fonAdi": "HSBC PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 0.112793,
+        "tedavuldekiPaySayisi": 27254179960,
+        "kisiSayisi": 10201,
+        "fonToplamDeger": 3074074938.33,
+        "gunlukGetiri": 0.00386262,
+        "paraGirisiCikisi": -24054557.77,
+        "yatirimciDegisimi": -16
+      },
       {
         "fonKodu": "HPT",
         "fonAdi": "HSBC PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00105131,
       "paraGirisiCikisi": 86765379.68,
       "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "HPT",
+      "fonAdi": "HSBC PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.112793,
+      "tedavuldekiPaySayisi": 27254179960,
+      "kisiSayisi": 10201,
+      "fonToplamDeger": 3074074938.33,
+      "gunlukGetiri": 0.00386262,
+      "paraGirisiCikisi": -24054557.77,
+      "yatirimciDegisimi": -16
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HPT",
+      "fonAdi": "HSBC PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.112793,
+      "tedavuldekiPaySayisi": 27254179960,
+      "kisiSayisi": 10201,
+      "fonToplamDeger": 3074074938.33,
+      "gunlukGetiri": 0.00386262,
+      "paraGirisiCikisi": -24054557.77,
+      "yatirimciDegisimi": -16
+    },
     {
       "fonKodu": "HPT",
       "fonAdi": "HSBC PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

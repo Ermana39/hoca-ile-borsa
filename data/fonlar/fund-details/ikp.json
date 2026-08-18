@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IKP",
     "slug": "ikp",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 9.290623,
-    "tedavuldekiPaySayisi": 116134845,
-    "kisiSayisi": 13208,
-    "fonToplamDeger": 1078965013.46,
-    "gunlukGetiri": -0.00724481,
+    "fiyat": 9.424114,
+    "tedavuldekiPaySayisi": 115693572,
+    "kisiSayisi": 13145,
+    "fonToplamDeger": 1090309425.75,
+    "gunlukGetiri": 0.01436836,
     "getiriler": {
-      "birAy": 0.014426000000000001,
-      "ucAy": 0.023302999999999997,
-      "altiAy": 0.19816199999999998,
-      "yilbasi": 0.344817,
-      "birYil": 0.558746,
-      "ucYil": 2.012673,
-      "besYil": 7.171417
+      "birAy": 0.038242,
+      "ucAy": 0.030196,
+      "altiAy": 0.20354299999999997,
+      "yilbasi": 0.36414,
+      "birYil": 0.599047,
+      "ucYil": 2.136928,
+      "besYil": 7.559105
     },
     "paraAkisi": {
-      "gunluk": -1095745.37,
-      "besGun": null,
+      "gunluk": -4158607.06,
+      "besGun": -15668801.39,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -71,
-      "besGun": null,
+      "gunluk": -63,
+      "besGun": -173,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IKP",
+        "fonAdi": "İŞ PORTFÖY YENİLENEBİLİR ENERJİ KARMA FON",
+        "tarih": "2026-08-18",
+        "fiyat": 9.424114,
+        "tedavuldekiPaySayisi": 115693572,
+        "kisiSayisi": 13145,
+        "fonToplamDeger": 1090309425.75,
+        "gunlukGetiri": 0.01436836,
+        "paraGirisiCikisi": -4158607.06,
+        "yatirimciDegisimi": -63
+      },
       {
         "fonKodu": "IKP",
         "fonAdi": "İŞ PORTFÖY YENİLENEBİLİR ENERJİ KARMA FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00724481,
       "paraGirisiCikisi": -1095745.37,
       "yatirimciDegisimi": -71
+    },
+    {
+      "fonKodu": "IKP",
+      "fonAdi": "İŞ PORTFÖY YENİLENEBİLİR ENERJİ KARMA FON",
+      "tarih": "2026-08-18",
+      "fiyat": 9.424114,
+      "tedavuldekiPaySayisi": 115693572,
+      "kisiSayisi": 13145,
+      "fonToplamDeger": 1090309425.75,
+      "gunlukGetiri": 0.01436836,
+      "paraGirisiCikisi": -4158607.06,
+      "yatirimciDegisimi": -63
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IKP",
+      "fonAdi": "İŞ PORTFÖY YENİLENEBİLİR ENERJİ KARMA FON",
+      "tarih": "2026-08-18",
+      "fiyat": 9.424114,
+      "tedavuldekiPaySayisi": 115693572,
+      "kisiSayisi": 13145,
+      "fonToplamDeger": 1090309425.75,
+      "gunlukGetiri": 0.01436836,
+      "paraGirisiCikisi": -4158607.06,
+      "yatirimciDegisimi": -63
+    },
     {
       "fonKodu": "IKP",
       "fonAdi": "İŞ PORTFÖY YENİLENEBİLİR ENERJİ KARMA FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

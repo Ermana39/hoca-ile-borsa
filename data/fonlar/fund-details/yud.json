@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YUD",
     "slug": "yud",
@@ -12,13 +12,13 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 75.478335,
-    "tedavuldekiPaySayisi": 3403000,
+    "fiyat": 75.67546,
+    "tedavuldekiPaySayisi": 3393500,
     "kisiSayisi": 2,
-    "fonToplamDeger": 256852772.78,
-    "gunlukGetiri": 0.00242766,
+    "fonToplamDeger": 256804674.34,
+    "gunlukGetiri": 0.00261168,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": -718916.87,
+      "besGun": -718916.87,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YUD",
+        "fonAdi": "YAPI KREDİ PORTFÖY BODRUM SERBEST [DÖVİZ] ÖZEL FON",
+        "tarih": "2026-08-18",
+        "fiyat": 75.67546,
+        "tedavuldekiPaySayisi": 3393500,
+        "kisiSayisi": 2,
+        "fonToplamDeger": 256804674.34,
+        "gunlukGetiri": 0.00261168,
+        "paraGirisiCikisi": -718916.87,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "YUD",
         "fonAdi": "YAPI KREDİ PORTFÖY BODRUM SERBEST [DÖVİZ] ÖZEL FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00242766,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YUD",
+      "fonAdi": "YAPI KREDİ PORTFÖY BODRUM SERBEST [DÖVİZ] ÖZEL FON",
+      "tarih": "2026-08-18",
+      "fiyat": 75.67546,
+      "tedavuldekiPaySayisi": 3393500,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 256804674.34,
+      "gunlukGetiri": 0.00261168,
+      "paraGirisiCikisi": -718916.87,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YUD",
+      "fonAdi": "YAPI KREDİ PORTFÖY BODRUM SERBEST [DÖVİZ] ÖZEL FON",
+      "tarih": "2026-08-18",
+      "fiyat": 75.67546,
+      "tedavuldekiPaySayisi": 3393500,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 256804674.34,
+      "gunlukGetiri": 0.00261168,
+      "paraGirisiCikisi": -718916.87,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "YUD",
       "fonAdi": "YAPI KREDİ PORTFÖY BODRUM SERBEST [DÖVİZ] ÖZEL FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

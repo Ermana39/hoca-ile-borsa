@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GKH",
     "slug": "gkh",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 4.450184,
-    "tedavuldekiPaySayisi": 1439081761,
-    "kisiSayisi": 1870,
-    "fonToplamDeger": 6404178274.39,
-    "gunlukGetiri": 0.0010246,
+    "fiyat": 4.468106,
+    "tedavuldekiPaySayisi": 1426141100,
+    "kisiSayisi": 1856,
+    "fonToplamDeger": 6372149144.98,
+    "gunlukGetiri": 0.00402725,
     "getiriler": {
-      "birAy": 0.032168,
-      "ucAy": 0.100548,
-      "altiAy": 0.201706,
-      "yilbasi": 0.25668,
-      "birYil": 0.457026,
-      "ucYil": 2.381221,
+      "birAy": 0.029989,
+      "ucAy": 0.100427,
+      "altiAy": 0.204146,
+      "yilbasi": 0.261741,
+      "birYil": 0.456474,
+      "ucYil": 2.383199,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 103180155,
-      "besGun": null,
+      "gunluk": -57820245.06,
+      "besGun": 151439843.52,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
-      "besGun": null,
+      "gunluk": -14,
+      "besGun": -23,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GKH",
+        "fonAdi": "GARANTİ PORTFÖY PARA PİYASASI KATILIM SERBEST (TL) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 4.468106,
+        "tedavuldekiPaySayisi": 1426141100,
+        "kisiSayisi": 1856,
+        "fonToplamDeger": 6372149144.98,
+        "gunlukGetiri": 0.00402725,
+        "paraGirisiCikisi": -57820245.06,
+        "yatirimciDegisimi": -14
+      },
       {
         "fonKodu": "GKH",
         "fonAdi": "GARANTİ PORTFÖY PARA PİYASASI KATILIM SERBEST (TL) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.0010246,
       "paraGirisiCikisi": 103180155,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "GKH",
+      "fonAdi": "GARANTİ PORTFÖY PARA PİYASASI KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 4.468106,
+      "tedavuldekiPaySayisi": 1426141100,
+      "kisiSayisi": 1856,
+      "fonToplamDeger": 6372149144.98,
+      "gunlukGetiri": 0.00402725,
+      "paraGirisiCikisi": -57820245.06,
+      "yatirimciDegisimi": -14
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GKH",
+      "fonAdi": "GARANTİ PORTFÖY PARA PİYASASI KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 4.468106,
+      "tedavuldekiPaySayisi": 1426141100,
+      "kisiSayisi": 1856,
+      "fonToplamDeger": 6372149144.98,
+      "gunlukGetiri": 0.00402725,
+      "paraGirisiCikisi": -57820245.06,
+      "yatirimciDegisimi": -14
+    },
     {
       "fonKodu": "GKH",
       "fonAdi": "GARANTİ PORTFÖY PARA PİYASASI KATILIM SERBEST (TL) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

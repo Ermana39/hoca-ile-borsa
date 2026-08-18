@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DPI",
     "slug": "dpi",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 8.809203,
-    "tedavuldekiPaySayisi": 42657340,
+    "fiyat": 8.817669,
+    "tedavuldekiPaySayisi": 42652241,
     "kisiSayisi": 124,
-    "fonToplamDeger": 375777166.82,
-    "gunlukGetiri": 0.00335888,
+    "fonToplamDeger": 376093361.01,
+    "gunlukGetiri": 0.00096104,
     "getiriler": {
-      "birAy": 0.030583,
-      "ucAy": 0.09402100000000001,
-      "altiAy": 0.18540700000000002,
-      "yilbasi": 0.231965,
-      "birYil": 0.40773899999999996,
-      "ucYil": 2.451483,
-      "besYil": 5.847146
+      "birAy": 0.025782,
+      "ucAy": 0.08755,
+      "altiAy": 0.18320599999999998,
+      "yilbasi": 0.23314900000000002,
+      "birYil": 0.405328,
+      "ucYil": 2.4548,
+      "besYil": 5.853727
     },
     "paraAkisi": {
-      "gunluk": -12024.56,
-      "besGun": null,
+      "gunluk": -44961.29,
+      "besGun": 491476.37,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DPI",
+        "fonAdi": "DENİZ PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 8.817669,
+        "tedavuldekiPaySayisi": 42652241,
+        "kisiSayisi": 124,
+        "fonToplamDeger": 376093361.01,
+        "gunlukGetiri": 0.00096104,
+        "paraGirisiCikisi": -44961.29,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "DPI",
         "fonAdi": "DENİZ PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00335888,
       "paraGirisiCikisi": -12024.56,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "DPI",
+      "fonAdi": "DENİZ PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 8.817669,
+      "tedavuldekiPaySayisi": 42652241,
+      "kisiSayisi": 124,
+      "fonToplamDeger": 376093361.01,
+      "gunlukGetiri": 0.00096104,
+      "paraGirisiCikisi": -44961.29,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DPI",
+      "fonAdi": "DENİZ PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 8.817669,
+      "tedavuldekiPaySayisi": 42652241,
+      "kisiSayisi": 124,
+      "fonToplamDeger": 376093361.01,
+      "gunlukGetiri": 0.00096104,
+      "paraGirisiCikisi": -44961.29,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "DPI",
       "fonAdi": "DENİZ PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

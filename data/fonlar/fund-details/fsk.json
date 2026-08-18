@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "FSK",
     "slug": "fsk",
@@ -12,44 +12,56 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 6.068028,
-    "tedavuldekiPaySayisi": 1186479857,
-    "kisiSayisi": 2518,
-    "fonToplamDeger": 7199593090.73,
-    "gunlukGetiri": 0.00121075,
+    "fiyat": 6.093674,
+    "tedavuldekiPaySayisi": 901324389,
+    "kisiSayisi": 2541,
+    "fonToplamDeger": 5492377198.26,
+    "gunlukGetiri": 0.00422641,
     "getiriler": {
-      "birAy": 0.034236,
-      "ucAy": 0.101468,
-      "altiAy": 0.201538,
-      "yilbasi": 0.258676,
-      "birYil": 0.469595,
-      "ucYil": 2.521713,
-      "besYil": 4.185015
+      "birAy": 0.031873,
+      "ucAy": 0.10148199999999999,
+      "altiAy": 0.203981,
+      "yilbasi": 0.263995,
+      "birYil": 0.469266,
+      "ucYil": 2.526177,
+      "besYil": 4.20223
     },
     "paraAkisi": {
-      "gunluk": 1819528305.35,
-      "besGun": null,
+      "gunluk": -1737644461.31,
+      "besGun": -1924153186.93,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 5,
-      "besGun": null,
+      "gunluk": 23,
+      "besGun": 29,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FSK",
+        "fonAdi": "QNB PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 6.093674,
+        "tedavuldekiPaySayisi": 901324389,
+        "kisiSayisi": 2541,
+        "fonToplamDeger": 5492377198.26,
+        "gunlukGetiri": 0.00422641,
+        "paraGirisiCikisi": -1737644461.31,
+        "yatirimciDegisimi": 23
+      },
       {
         "fonKodu": "FSK",
         "fonAdi": "QNB PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00121075,
       "paraGirisiCikisi": 1819528305.35,
       "yatirimciDegisimi": 5
+    },
+    {
+      "fonKodu": "FSK",
+      "fonAdi": "QNB PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 6.093674,
+      "tedavuldekiPaySayisi": 901324389,
+      "kisiSayisi": 2541,
+      "fonToplamDeger": 5492377198.26,
+      "gunlukGetiri": 0.00422641,
+      "paraGirisiCikisi": -1737644461.31,
+      "yatirimciDegisimi": 23
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FSK",
+      "fonAdi": "QNB PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 6.093674,
+      "tedavuldekiPaySayisi": 901324389,
+      "kisiSayisi": 2541,
+      "fonToplamDeger": 5492377198.26,
+      "gunlukGetiri": 0.00422641,
+      "paraGirisiCikisi": -1737644461.31,
+      "yatirimciDegisimi": 23
+    },
     {
       "fonKodu": "FSK",
       "fonAdi": "QNB PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KMN",
     "slug": "kmn",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.942735,
-    "tedavuldekiPaySayisi": 437641406,
-    "kisiSayisi": 4783,
-    "fonToplamDeger": 412579842.64,
-    "gunlukGetiri": -0.0141323,
+    "fiyat": 0.945331,
+    "tedavuldekiPaySayisi": 438032120,
+    "kisiSayisi": 4839,
+    "fonToplamDeger": 414085385.78,
+    "gunlukGetiri": 0.00275369,
     "getiriler": {
-      "birAy": 0.100894,
-      "ucAy": -0.114956,
-      "altiAy": -0.085565,
+      "birAy": 0.128836,
+      "ucAy": -0.055202,
+      "altiAy": -0.066414,
       "yilbasi": null,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1071594.62,
-      "besGun": null,
+      "gunluk": 369354.06,
+      "besGun": 4265149.2,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 19,
-      "besGun": null,
+      "gunluk": 56,
+      "besGun": 110,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KMN",
+        "fonAdi": "YAPI KREDİ PORTFÖY KIYMETLİ MADENLER KATILIM FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 0.945331,
+        "tedavuldekiPaySayisi": 438032120,
+        "kisiSayisi": 4839,
+        "fonToplamDeger": 414085385.78,
+        "gunlukGetiri": 0.00275369,
+        "paraGirisiCikisi": 369354.06,
+        "yatirimciDegisimi": 56
+      },
       {
         "fonKodu": "KMN",
         "fonAdi": "YAPI KREDİ PORTFÖY KIYMETLİ MADENLER KATILIM FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.0141323,
       "paraGirisiCikisi": 1071594.62,
       "yatirimciDegisimi": 19
+    },
+    {
+      "fonKodu": "KMN",
+      "fonAdi": "YAPI KREDİ PORTFÖY KIYMETLİ MADENLER KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.945331,
+      "tedavuldekiPaySayisi": 438032120,
+      "kisiSayisi": 4839,
+      "fonToplamDeger": 414085385.78,
+      "gunlukGetiri": 0.00275369,
+      "paraGirisiCikisi": 369354.06,
+      "yatirimciDegisimi": 56
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KMN",
+      "fonAdi": "YAPI KREDİ PORTFÖY KIYMETLİ MADENLER KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.945331,
+      "tedavuldekiPaySayisi": 438032120,
+      "kisiSayisi": 4839,
+      "fonToplamDeger": 414085385.78,
+      "gunlukGetiri": 0.00275369,
+      "paraGirisiCikisi": 369354.06,
+      "yatirimciDegisimi": 56
+    },
     {
       "fonKodu": "KMN",
       "fonAdi": "YAPI KREDİ PORTFÖY KIYMETLİ MADENLER KATILIM FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

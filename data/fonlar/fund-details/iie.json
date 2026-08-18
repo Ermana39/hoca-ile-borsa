@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IIE",
     "slug": "iie",
@@ -12,44 +12,56 @@
     "yonetici": "BULLS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "bulls-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 7.118986,
-    "tedavuldekiPaySayisi": 108014325,
-    "kisiSayisi": 3829,
-    "fonToplamDeger": 768952452.56,
-    "gunlukGetiri": -0.04879292,
+    "fiyat": 6.981757,
+    "tedavuldekiPaySayisi": 106912027,
+    "kisiSayisi": 3792,
+    "fonToplamDeger": 746433793.47,
+    "gunlukGetiri": -0.01927648,
     "getiriler": {
-      "birAy": -0.139116,
-      "ucAy": -0.14357,
-      "altiAy": -0.149112,
-      "yilbasi": -0.047525000000000005,
-      "birYil": -0.22991299999999998,
-      "ucYil": 2.387745,
+      "birAy": -0.153312,
+      "ucAy": -0.174729,
+      "altiAy": -0.153689,
+      "yilbasi": -0.065886,
+      "birYil": -0.263676,
+      "ucYil": 2.0078460000000002,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1886851.64,
-      "besGun": null,
+      "gunluk": -7695976.78,
+      "besGun": -18687622.78,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -20,
-      "besGun": null,
+      "gunluk": -37,
+      "besGun": -117,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IIE",
+        "fonAdi": "BULLS PORTFÖY İKİNCİ SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 6.981757,
+        "tedavuldekiPaySayisi": 106912027,
+        "kisiSayisi": 3792,
+        "fonToplamDeger": 746433793.47,
+        "gunlukGetiri": -0.01927648,
+        "paraGirisiCikisi": -7695976.78,
+        "yatirimciDegisimi": -37
+      },
       {
         "fonKodu": "IIE",
         "fonAdi": "BULLS PORTFÖY İKİNCİ SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.04879292,
       "paraGirisiCikisi": -1886851.64,
       "yatirimciDegisimi": -20
+    },
+    {
+      "fonKodu": "IIE",
+      "fonAdi": "BULLS PORTFÖY İKİNCİ SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 6.981757,
+      "tedavuldekiPaySayisi": 106912027,
+      "kisiSayisi": 3792,
+      "fonToplamDeger": 746433793.47,
+      "gunlukGetiri": -0.01927648,
+      "paraGirisiCikisi": -7695976.78,
+      "yatirimciDegisimi": -37
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IIE",
+      "fonAdi": "BULLS PORTFÖY İKİNCİ SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 6.981757,
+      "tedavuldekiPaySayisi": 106912027,
+      "kisiSayisi": 3792,
+      "fonToplamDeger": 746433793.47,
+      "gunlukGetiri": -0.01927648,
+      "paraGirisiCikisi": -7695976.78,
+      "yatirimciDegisimi": -37
+    },
     {
       "fonKodu": "IIE",
       "fonAdi": "BULLS PORTFÖY İKİNCİ SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ALC",
     "slug": "alc",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.36846,
-    "tedavuldekiPaySayisi": 4338636291,
-    "kisiSayisi": 24988,
-    "fonToplamDeger": 1598615694.77,
-    "gunlukGetiri": 0.00291244,
+    "fiyat": 0.369847,
+    "tedavuldekiPaySayisi": 4330503843,
+    "kisiSayisi": 24933,
+    "fonToplamDeger": 1601622871.41,
+    "gunlukGetiri": 0.00376432,
     "getiriler": {
-      "birAy": 0.047499,
-      "ucAy": -0.021747000000000002,
-      "altiAy": 0.020059999999999998,
-      "yilbasi": 0.28314,
-      "birYil": 0.37776600000000005,
-      "ucYil": 1.665577,
-      "besYil": 9.819239
+      "birAy": 0.035928,
+      "ucAy": -0.01317,
+      "altiAy": 0.034963,
+      "yilbasi": 0.28797,
+      "birYil": 0.39665,
+      "ucYil": 1.6915190000000002,
+      "besYil": 9.862836999999999
     },
     "paraAkisi": {
-      "gunluk": -6138503.07,
-      "besGun": null,
+      "gunluk": -3007761.5,
+      "besGun": -10830591.55,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -22,
-      "besGun": null,
+      "gunluk": -55,
+      "besGun": -107,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ALC",
+        "fonAdi": "AK PORTFÖY KAR PAYI ÖDEYEN ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 0.369847,
+        "tedavuldekiPaySayisi": 4330503843,
+        "kisiSayisi": 24933,
+        "fonToplamDeger": 1601622871.41,
+        "gunlukGetiri": 0.00376432,
+        "paraGirisiCikisi": -3007761.5,
+        "yatirimciDegisimi": -55
+      },
       {
         "fonKodu": "ALC",
         "fonAdi": "AK PORTFÖY KAR PAYI ÖDEYEN ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00291244,
       "paraGirisiCikisi": -6138503.07,
       "yatirimciDegisimi": -22
+    },
+    {
+      "fonKodu": "ALC",
+      "fonAdi": "AK PORTFÖY KAR PAYI ÖDEYEN ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 0.369847,
+      "tedavuldekiPaySayisi": 4330503843,
+      "kisiSayisi": 24933,
+      "fonToplamDeger": 1601622871.41,
+      "gunlukGetiri": 0.00376432,
+      "paraGirisiCikisi": -3007761.5,
+      "yatirimciDegisimi": -55
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ALC",
+      "fonAdi": "AK PORTFÖY KAR PAYI ÖDEYEN ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 0.369847,
+      "tedavuldekiPaySayisi": 4330503843,
+      "kisiSayisi": 24933,
+      "fonToplamDeger": 1601622871.41,
+      "gunlukGetiri": 0.00376432,
+      "paraGirisiCikisi": -3007761.5,
+      "yatirimciDegisimi": -55
+    },
     {
       "fonKodu": "ALC",
       "fonAdi": "AK PORTFÖY KAR PAYI ÖDEYEN ŞİRKETLER HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

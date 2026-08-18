@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BFE",
     "slug": "bfe",
@@ -12,44 +12,56 @@
     "yonetici": "ALLBATROSS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "allbatross-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.793488,
-    "tedavuldekiPaySayisi": 5209163,
+    "fiyat": 1.791388,
+    "tedavuldekiPaySayisi": 5346384,
     "kisiSayisi": 57,
-    "fonToplamDeger": 9342573.68,
-    "gunlukGetiri": 0.00118513,
+    "fonToplamDeger": 9577448.01,
+    "gunlukGetiri": -0.0011709,
     "getiriler": {
-      "birAy": 0.014031,
-      "ucAy": 0.011976,
-      "altiAy": 0.026018,
-      "yilbasi": 0.13091,
-      "birYil": 0.306662,
+      "birAy": 0.000091,
+      "ucAy": 0.021840000000000002,
+      "altiAy": 0.025441,
+      "yilbasi": 0.129586,
+      "birYil": 0.305593,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 4003.07,
-      "besGun": null,
+      "gunluk": 245816.05,
+      "besGun": 246267.25,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": -2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BFE",
+        "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ FON SEPETİ FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.791388,
+        "tedavuldekiPaySayisi": 5346384,
+        "kisiSayisi": 57,
+        "fonToplamDeger": 9577448.01,
+        "gunlukGetiri": -0.0011709,
+        "paraGirisiCikisi": 245816.05,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "BFE",
         "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ FON SEPETİ FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00118513,
       "paraGirisiCikisi": 4003.07,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "BFE",
+      "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.791388,
+      "tedavuldekiPaySayisi": 5346384,
+      "kisiSayisi": 57,
+      "fonToplamDeger": 9577448.01,
+      "gunlukGetiri": -0.0011709,
+      "paraGirisiCikisi": 245816.05,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BFE",
+      "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.791388,
+      "tedavuldekiPaySayisi": 5346384,
+      "kisiSayisi": 57,
+      "fonToplamDeger": 9577448.01,
+      "gunlukGetiri": -0.0011709,
+      "paraGirisiCikisi": 245816.05,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "BFE",
       "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ FON SEPETİ FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

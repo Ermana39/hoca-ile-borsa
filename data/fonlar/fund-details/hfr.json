@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "HFR",
     "slug": "hfr",
@@ -12,44 +12,56 @@
     "yonetici": "A1 CAPİTAL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "a1-capital-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.45342,
-    "tedavuldekiPaySayisi": 28493849,
-    "kisiSayisi": 469,
-    "fonToplamDeger": 41413536.38,
-    "gunlukGetiri": 0.00212226,
+    "fiyat": 1.456569,
+    "tedavuldekiPaySayisi": 26559526,
+    "kisiSayisi": 463,
+    "fonToplamDeger": 38685795.5,
+    "gunlukGetiri": 0.00216661,
     "getiriler": {
-      "birAy": 0.010150999999999999,
-      "ucAy": -0.061784,
-      "altiAy": -0.026439,
-      "yilbasi": 0.21039000000000002,
+      "birAy": 0.010950999999999999,
+      "ucAy": -0.050599,
+      "altiAy": -0.017876,
+      "yilbasi": 0.213012,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -135016.9,
-      "besGun": null,
+      "gunluk": -2817474.92,
+      "besGun": -4945087.64,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": null,
+      "gunluk": -6,
+      "besGun": -22,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HFR",
+        "fonAdi": "A1 CAPİTAL PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.456569,
+        "tedavuldekiPaySayisi": 26559526,
+        "kisiSayisi": 463,
+        "fonToplamDeger": 38685795.5,
+        "gunlukGetiri": 0.00216661,
+        "paraGirisiCikisi": -2817474.92,
+        "yatirimciDegisimi": -6
+      },
       {
         "fonKodu": "HFR",
         "fonAdi": "A1 CAPİTAL PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00212226,
       "paraGirisiCikisi": -135016.9,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "HFR",
+      "fonAdi": "A1 CAPİTAL PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.456569,
+      "tedavuldekiPaySayisi": 26559526,
+      "kisiSayisi": 463,
+      "fonToplamDeger": 38685795.5,
+      "gunlukGetiri": 0.00216661,
+      "paraGirisiCikisi": -2817474.92,
+      "yatirimciDegisimi": -6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HFR",
+      "fonAdi": "A1 CAPİTAL PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.456569,
+      "tedavuldekiPaySayisi": 26559526,
+      "kisiSayisi": 463,
+      "fonToplamDeger": 38685795.5,
+      "gunlukGetiri": 0.00216661,
+      "paraGirisiCikisi": -2817474.92,
+      "yatirimciDegisimi": -6
+    },
     {
       "fonKodu": "HFR",
       "fonAdi": "A1 CAPİTAL PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

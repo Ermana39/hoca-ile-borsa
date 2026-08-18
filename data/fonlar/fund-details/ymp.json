@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YMP",
     "slug": "ymp",
@@ -12,13 +12,13 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.149059,
-    "tedavuldekiPaySayisi": 370213201,
-    "kisiSayisi": 105,
-    "fonToplamDeger": 425396950.74,
-    "gunlukGetiri": 0.00111171,
+    "fiyat": 1.153981,
+    "tedavuldekiPaySayisi": 371676711,
+    "kisiSayisi": 107,
+    "fonToplamDeger": 428907912.13,
+    "gunlukGetiri": 0.00428351,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 305765.75,
-      "besGun": null,
+      "gunluk": 1688862.73,
+      "besGun": -1572254.5,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": 2,
+      "besGun": 6,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YMP",
+        "fonAdi": "QNB PORTFÖY YMK PARA PİYASASI (TL) ÖZEL FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.153981,
+        "tedavuldekiPaySayisi": 371676711,
+        "kisiSayisi": 107,
+        "fonToplamDeger": 428907912.13,
+        "gunlukGetiri": 0.00428351,
+        "paraGirisiCikisi": 1688862.73,
+        "yatirimciDegisimi": 2
+      },
       {
         "fonKodu": "YMP",
         "fonAdi": "QNB PORTFÖY YMK PARA PİYASASI (TL) ÖZEL FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00111171,
       "paraGirisiCikisi": 305765.75,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YMP",
+      "fonAdi": "QNB PORTFÖY YMK PARA PİYASASI (TL) ÖZEL FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.153981,
+      "tedavuldekiPaySayisi": 371676711,
+      "kisiSayisi": 107,
+      "fonToplamDeger": 428907912.13,
+      "gunlukGetiri": 0.00428351,
+      "paraGirisiCikisi": 1688862.73,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YMP",
+      "fonAdi": "QNB PORTFÖY YMK PARA PİYASASI (TL) ÖZEL FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.153981,
+      "tedavuldekiPaySayisi": 371676711,
+      "kisiSayisi": 107,
+      "fonToplamDeger": 428907912.13,
+      "gunlukGetiri": 0.00428351,
+      "paraGirisiCikisi": 1688862.73,
+      "yatirimciDegisimi": 2
+    },
     {
       "fonKodu": "YMP",
       "fonAdi": "QNB PORTFÖY YMK PARA PİYASASI (TL) ÖZEL FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

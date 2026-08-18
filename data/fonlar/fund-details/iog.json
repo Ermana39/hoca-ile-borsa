@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IOG",
     "slug": "iog",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 13.666043,
-    "tedavuldekiPaySayisi": 988820388,
-    "kisiSayisi": 19304,
-    "fonToplamDeger": 13513261564.22,
-    "gunlukGetiri": -0.01646902,
+    "fiyat": 13.848917,
+    "tedavuldekiPaySayisi": 984643403,
+    "kisiSayisi": 19232,
+    "fonToplamDeger": 13636245227.43,
+    "gunlukGetiri": 0.01338164,
     "getiriler": {
-      "birAy": 0.117593,
-      "ucAy": -0.20374199999999998,
-      "altiAy": -0.107289,
-      "yilbasi": -0.044546,
-      "birYil": 0.849426,
-      "ucYil": 3.710444,
-      "besYil": 12.266161
+      "birAy": 0.17734100000000003,
+      "ucAy": -0.09941499999999999,
+      "altiAy": -0.051205999999999995,
+      "yilbasi": -0.031760000000000004,
+      "birYil": 0.893874,
+      "ucYil": 3.815348,
+      "besYil": 12.527887
     },
     "paraAkisi": {
-      "gunluk": -12543582.56,
-      "besGun": null,
+      "gunluk": -57846718.58,
+      "besGun": -148427972.21,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -41,
-      "besGun": null,
+      "gunluk": -72,
+      "besGun": -172,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IOG",
+        "fonAdi": "İŞ PORTFÖY GÜMÜŞ SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 13.848917,
+        "tedavuldekiPaySayisi": 984643403,
+        "kisiSayisi": 19232,
+        "fonToplamDeger": 13636245227.43,
+        "gunlukGetiri": 0.01338164,
+        "paraGirisiCikisi": -57846718.58,
+        "yatirimciDegisimi": -72
+      },
       {
         "fonKodu": "IOG",
         "fonAdi": "İŞ PORTFÖY GÜMÜŞ SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.01646902,
       "paraGirisiCikisi": -12543582.56,
       "yatirimciDegisimi": -41
+    },
+    {
+      "fonKodu": "IOG",
+      "fonAdi": "İŞ PORTFÖY GÜMÜŞ SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 13.848917,
+      "tedavuldekiPaySayisi": 984643403,
+      "kisiSayisi": 19232,
+      "fonToplamDeger": 13636245227.43,
+      "gunlukGetiri": 0.01338164,
+      "paraGirisiCikisi": -57846718.58,
+      "yatirimciDegisimi": -72
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IOG",
+      "fonAdi": "İŞ PORTFÖY GÜMÜŞ SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 13.848917,
+      "tedavuldekiPaySayisi": 984643403,
+      "kisiSayisi": 19232,
+      "fonToplamDeger": 13636245227.43,
+      "gunlukGetiri": 0.01338164,
+      "paraGirisiCikisi": -57846718.58,
+      "yatirimciDegisimi": -72
+    },
     {
       "fonKodu": "IOG",
       "fonAdi": "İŞ PORTFÖY GÜMÜŞ SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

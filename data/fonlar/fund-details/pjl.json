@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PJL",
     "slug": "pjl",
@@ -12,44 +12,56 @@
     "yonetici": "PHİLLİP PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "phillip-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 5.161744,
-    "tedavuldekiPaySayisi": 226790944,
-    "kisiSayisi": 2138,
-    "fonToplamDeger": 1170636869.14,
-    "gunlukGetiri": 0.00106337,
+    "fiyat": 5.183097,
+    "tedavuldekiPaySayisi": 227663845,
+    "kisiSayisi": 1710,
+    "fonToplamDeger": 1180003809.24,
+    "gunlukGetiri": 0.00413678,
     "getiriler": {
-      "birAy": 0.033151,
-      "ucAy": 0.101494,
-      "altiAy": 0.204159,
-      "yilbasi": 0.259875,
-      "birYil": 0.46695099999999995,
-      "ucYil": 2.5075659999999997,
+      "birAy": 0.031124,
+      "ucAy": 0.101361,
+      "altiAy": 0.20657599999999998,
+      "yilbasi": 0.265087,
+      "birYil": 0.466415,
+      "ucYil": 2.510974,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -3172650.46,
-      "besGun": null,
+      "gunluk": 4524330.55,
+      "besGun": -21714806.89,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -193,
-      "besGun": null,
+      "gunluk": -428,
+      "besGun": -717,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PJL",
+        "fonAdi": "PHİLLİP PORTFÖY PARA PİYASASI FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 5.183097,
+        "tedavuldekiPaySayisi": 227663845,
+        "kisiSayisi": 1710,
+        "fonToplamDeger": 1180003809.24,
+        "gunlukGetiri": 0.00413678,
+        "paraGirisiCikisi": 4524330.55,
+        "yatirimciDegisimi": -428
+      },
       {
         "fonKodu": "PJL",
         "fonAdi": "PHİLLİP PORTFÖY PARA PİYASASI FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00106337,
       "paraGirisiCikisi": -3172650.46,
       "yatirimciDegisimi": -193
+    },
+    {
+      "fonKodu": "PJL",
+      "fonAdi": "PHİLLİP PORTFÖY PARA PİYASASI FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 5.183097,
+      "tedavuldekiPaySayisi": 227663845,
+      "kisiSayisi": 1710,
+      "fonToplamDeger": 1180003809.24,
+      "gunlukGetiri": 0.00413678,
+      "paraGirisiCikisi": 4524330.55,
+      "yatirimciDegisimi": -428
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PJL",
+      "fonAdi": "PHİLLİP PORTFÖY PARA PİYASASI FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 5.183097,
+      "tedavuldekiPaySayisi": 227663845,
+      "kisiSayisi": 1710,
+      "fonToplamDeger": 1180003809.24,
+      "gunlukGetiri": 0.00413678,
+      "paraGirisiCikisi": 4524330.55,
+      "yatirimciDegisimi": -428
+    },
     {
       "fonKodu": "PJL",
       "fonAdi": "PHİLLİP PORTFÖY PARA PİYASASI FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

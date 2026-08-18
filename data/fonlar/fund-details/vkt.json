@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "VKT",
     "slug": "vkt",
@@ -12,13 +12,13 @@
     "yonetici": "V PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "v-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.120823,
-    "tedavuldekiPaySayisi": 31950946284.96,
-    "kisiSayisi": 42360,
-    "fonToplamDeger": 3860394464.74,
-    "gunlukGetiri": 0.00130111,
+    "fiyat": 0.121307,
+    "tedavuldekiPaySayisi": 32709588484.96,
+    "kisiSayisi": 42432,
+    "fonToplamDeger": 3967895655.78,
+    "gunlukGetiri": 0.00400586,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -5735794.03,
-      "besGun": null,
+      "gunluk": 92028609.36,
+      "besGun": 129775405.14,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -74,
-      "besGun": null,
+      "gunluk": 72,
+      "besGun": -337,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "VKT",
+        "fonAdi": "V PORTFÖY VAKIFBANK KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 0.121307,
+        "tedavuldekiPaySayisi": 32709588484.96,
+        "kisiSayisi": 42432,
+        "fonToplamDeger": 3967895655.78,
+        "gunlukGetiri": 0.00400586,
+        "paraGirisiCikisi": 92028609.36,
+        "yatirimciDegisimi": 72
+      },
       {
         "fonKodu": "VKT",
         "fonAdi": "V PORTFÖY VAKIFBANK KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00130111,
       "paraGirisiCikisi": -5735794.03,
       "yatirimciDegisimi": -74
+    },
+    {
+      "fonKodu": "VKT",
+      "fonAdi": "V PORTFÖY VAKIFBANK KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.121307,
+      "tedavuldekiPaySayisi": 32709588484.96,
+      "kisiSayisi": 42432,
+      "fonToplamDeger": 3967895655.78,
+      "gunlukGetiri": 0.00400586,
+      "paraGirisiCikisi": 92028609.36,
+      "yatirimciDegisimi": 72
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "VKT",
+      "fonAdi": "V PORTFÖY VAKIFBANK KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.121307,
+      "tedavuldekiPaySayisi": 32709588484.96,
+      "kisiSayisi": 42432,
+      "fonToplamDeger": 3967895655.78,
+      "gunlukGetiri": 0.00400586,
+      "paraGirisiCikisi": 92028609.36,
+      "yatirimciDegisimi": 72
+    },
     {
       "fonKodu": "VKT",
       "fonAdi": "V PORTFÖY VAKIFBANK KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

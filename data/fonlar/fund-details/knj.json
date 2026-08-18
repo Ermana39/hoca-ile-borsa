@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KNJ",
     "slug": "knj",
@@ -12,44 +12,56 @@
     "yonetici": "KUVEYT TÜRK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kuveyt-turk-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.999022,
-    "tedavuldekiPaySayisi": 343019054,
-    "kisiSayisi": 13518,
-    "fonToplamDeger": 685702561.19,
-    "gunlukGetiri": -0.00713425,
+    "fiyat": 2.059197,
+    "tedavuldekiPaySayisi": 356554141,
+    "kisiSayisi": 13700,
+    "fonToplamDeger": 734215198.1,
+    "gunlukGetiri": 0.03010222,
     "getiriler": {
-      "birAy": 0.057421,
-      "ucAy": 0.049645,
-      "altiAy": 0.203804,
-      "yilbasi": 0.42735100000000004,
-      "birYil": 0.642629,
+      "birAy": 0.08586,
+      "ucAy": 0.076437,
+      "altiAy": 0.24049600000000002,
+      "yilbasi": 0.470317,
+      "birYil": 0.680668,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 17114390.97,
-      "besGun": null,
+      "gunluk": 27871410.55,
+      "besGun": 48522060.56,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 109,
-      "besGun": null,
+      "gunluk": 182,
+      "besGun": 633,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KNJ",
+        "fonAdi": "KUVEYT TÜRK PORTFÖY ENERJİ KATILIM FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 2.059197,
+        "tedavuldekiPaySayisi": 356554141,
+        "kisiSayisi": 13700,
+        "fonToplamDeger": 734215198.1,
+        "gunlukGetiri": 0.03010222,
+        "paraGirisiCikisi": 27871410.55,
+        "yatirimciDegisimi": 182
+      },
       {
         "fonKodu": "KNJ",
         "fonAdi": "KUVEYT TÜRK PORTFÖY ENERJİ KATILIM FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00713425,
       "paraGirisiCikisi": 17114390.97,
       "yatirimciDegisimi": 109
+    },
+    {
+      "fonKodu": "KNJ",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY ENERJİ KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 2.059197,
+      "tedavuldekiPaySayisi": 356554141,
+      "kisiSayisi": 13700,
+      "fonToplamDeger": 734215198.1,
+      "gunlukGetiri": 0.03010222,
+      "paraGirisiCikisi": 27871410.55,
+      "yatirimciDegisimi": 182
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KNJ",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY ENERJİ KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 2.059197,
+      "tedavuldekiPaySayisi": 356554141,
+      "kisiSayisi": 13700,
+      "fonToplamDeger": 734215198.1,
+      "gunlukGetiri": 0.03010222,
+      "paraGirisiCikisi": 27871410.55,
+      "yatirimciDegisimi": 182
+    },
     {
       "fonKodu": "KNJ",
       "fonAdi": "KUVEYT TÜRK PORTFÖY ENERJİ KATILIM FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

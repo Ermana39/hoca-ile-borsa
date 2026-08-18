@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IBK",
     "slug": "ibk",
@@ -12,13 +12,13 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.135389,
-    "tedavuldekiPaySayisi": 1674298149,
-    "kisiSayisi": 120697,
-    "fonToplamDeger": 226681869.32,
-    "gunlukGetiri": 0.00103513,
+    "fiyat": 0.135968,
+    "tedavuldekiPaySayisi": 1674011684,
+    "kisiSayisi": 121274,
+    "fonToplamDeger": 227611478.85,
+    "gunlukGetiri": 0.00427657,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -108514.55,
-      "besGun": null,
+      "gunluk": -38950.07,
+      "besGun": -566540.07,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -128,
-      "besGun": null,
+      "gunluk": 577,
+      "besGun": 7,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IBK",
+        "fonAdi": "İŞ PORTFÖY ÜÇÜNCÜ KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 0.135968,
+        "tedavuldekiPaySayisi": 1674011684,
+        "kisiSayisi": 121274,
+        "fonToplamDeger": 227611478.85,
+        "gunlukGetiri": 0.00427657,
+        "paraGirisiCikisi": -38950.07,
+        "yatirimciDegisimi": 577
+      },
       {
         "fonKodu": "IBK",
         "fonAdi": "İŞ PORTFÖY ÜÇÜNCÜ KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00103513,
       "paraGirisiCikisi": -108514.55,
       "yatirimciDegisimi": -128
+    },
+    {
+      "fonKodu": "IBK",
+      "fonAdi": "İŞ PORTFÖY ÜÇÜNCÜ KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.135968,
+      "tedavuldekiPaySayisi": 1674011684,
+      "kisiSayisi": 121274,
+      "fonToplamDeger": 227611478.85,
+      "gunlukGetiri": 0.00427657,
+      "paraGirisiCikisi": -38950.07,
+      "yatirimciDegisimi": 577
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IBK",
+      "fonAdi": "İŞ PORTFÖY ÜÇÜNCÜ KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.135968,
+      "tedavuldekiPaySayisi": 1674011684,
+      "kisiSayisi": 121274,
+      "fonToplamDeger": 227611478.85,
+      "gunlukGetiri": 0.00427657,
+      "paraGirisiCikisi": -38950.07,
+      "yatirimciDegisimi": 577
+    },
     {
       "fonKodu": "IBK",
       "fonAdi": "İŞ PORTFÖY ÜÇÜNCÜ KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

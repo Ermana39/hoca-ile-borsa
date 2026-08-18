@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TGR",
     "slug": "tgr",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 7.078971,
-    "tedavuldekiPaySayisi": 16585112,
-    "kisiSayisi": 5757,
-    "fonToplamDeger": 117405520.64,
-    "gunlukGetiri": 0.00722777,
+    "fiyat": 7.030798,
+    "tedavuldekiPaySayisi": 16551040,
+    "kisiSayisi": 5730,
+    "fonToplamDeger": 116367016.97,
+    "gunlukGetiri": -0.00680509,
     "getiriler": {
-      "birAy": 0.042770999999999997,
-      "ucAy": 0.12706,
-      "altiAy": 0.055564999999999996,
-      "yilbasi": 0.124024,
-      "birYil": 0.113777,
-      "ucYil": 1.01585,
-      "besYil": 6.733326
+      "birAy": 0.047487,
+      "ucAy": 0.12198700000000001,
+      "altiAy": 0.043786,
+      "yilbasi": 0.11637399999999999,
+      "birYil": 0.09298500000000001,
+      "ucYil": 1.0395480000000001,
+      "besYil": 6.931419
     },
     "paraAkisi": {
-      "gunluk": -628924.1,
-      "besGun": null,
+      "gunluk": -239553.35,
+      "besGun": -1642440.75,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -21,
-      "besGun": null,
+      "gunluk": -27,
+      "besGun": -59,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TGR",
+        "fonAdi": "AK PORTFÖY TURİZM VE SEYAHAT SEKTÖRÜ DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 7.030798,
+        "tedavuldekiPaySayisi": 16551040,
+        "kisiSayisi": 5730,
+        "fonToplamDeger": 116367016.97,
+        "gunlukGetiri": -0.00680509,
+        "paraGirisiCikisi": -239553.35,
+        "yatirimciDegisimi": -27
+      },
       {
         "fonKodu": "TGR",
         "fonAdi": "AK PORTFÖY TURİZM VE SEYAHAT SEKTÖRÜ DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00722777,
       "paraGirisiCikisi": -628924.1,
       "yatirimciDegisimi": -21
+    },
+    {
+      "fonKodu": "TGR",
+      "fonAdi": "AK PORTFÖY TURİZM VE SEYAHAT SEKTÖRÜ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 7.030798,
+      "tedavuldekiPaySayisi": 16551040,
+      "kisiSayisi": 5730,
+      "fonToplamDeger": 116367016.97,
+      "gunlukGetiri": -0.00680509,
+      "paraGirisiCikisi": -239553.35,
+      "yatirimciDegisimi": -27
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TGR",
+      "fonAdi": "AK PORTFÖY TURİZM VE SEYAHAT SEKTÖRÜ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 7.030798,
+      "tedavuldekiPaySayisi": 16551040,
+      "kisiSayisi": 5730,
+      "fonToplamDeger": 116367016.97,
+      "gunlukGetiri": -0.00680509,
+      "paraGirisiCikisi": -239553.35,
+      "yatirimciDegisimi": -27
+    },
     {
       "fonKodu": "TGR",
       "fonAdi": "AK PORTFÖY TURİZM VE SEYAHAT SEKTÖRÜ DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -32,7 +32,7 @@
     "halka-arz:taslak-arsivle": "node scripts/archive-ipo-draft.mjs",
     "halka-arz:karsilastirma-kontrol": "node scripts/archive-ipo-draft.mjs --check-approved",
     "halka-arz:ortaklik-yapisi": "node scripts/sync-ipo-ownership-structure.mjs",
-    "build": "npm run vercel-usage:check && npm run index-quality:check && npm run fon-etki:import && npm run excel-to-json && npm run update-funds && node scripts/generate-news-dates.mjs && node scripts/generate-hisse-profile-metadata.mjs && node scripts/generate-page-updates.mjs && node scripts/check-hisse-quality.mjs && node scripts/archive-ipo-draft.mjs --check-approved && next build",
+    "build": "npm run vercel-usage:check && npm run index-quality:check && npm run fon-etki:import && npm run excel-to-json && npm run update-funds && node scripts/generate-news-dates.mjs && node scripts/generate-hisse-profile-metadata.mjs && node scripts/generate-page-updates.mjs && node scripts/check-hisse-quality.mjs && node scripts/archive-ipo-draft.mjs --check-approved && node scripts/build-static-export.mjs",
     "start": "next start",
     "lint": "eslint"
   },

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "MTF",
     "slug": "mtf",
@@ -12,44 +12,56 @@
     "yonetici": "MT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "mt-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.405918,
+    "fiyat": 1.40948,
     "tedavuldekiPaySayisi": 53658789,
     "kisiSayisi": 43,
-    "fonToplamDeger": 75439840.48,
-    "gunlukGetiri": 0.00102814,
+    "fonToplamDeger": 75630966.14,
+    "gunlukGetiri": 0.00253358,
     "getiriler": {
-      "birAy": 0.027187000000000003,
-      "ucAy": 0.07747799999999999,
-      "altiAy": 0.170468,
-      "yilbasi": 0.206591,
-      "birYil": 0.333797,
+      "birAy": 0.023965,
+      "ucAy": 0.074843,
+      "altiAy": 0.17113199999999998,
+      "yilbasi": 0.209648,
+      "birYil": 0.330991,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 99.82,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": 280281.05,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MTF",
+        "fonAdi": "MT PORTFÖY BİRİNCİ İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.40948,
+        "tedavuldekiPaySayisi": 53658789,
+        "kisiSayisi": 43,
+        "fonToplamDeger": 75630966.14,
+        "gunlukGetiri": 0.00253358,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "MTF",
         "fonAdi": "MT PORTFÖY BİRİNCİ İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00102814,
       "paraGirisiCikisi": 99.82,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "MTF",
+      "fonAdi": "MT PORTFÖY BİRİNCİ İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.40948,
+      "tedavuldekiPaySayisi": 53658789,
+      "kisiSayisi": 43,
+      "fonToplamDeger": 75630966.14,
+      "gunlukGetiri": 0.00253358,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MTF",
+      "fonAdi": "MT PORTFÖY BİRİNCİ İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.40948,
+      "tedavuldekiPaySayisi": 53658789,
+      "kisiSayisi": 43,
+      "fonToplamDeger": 75630966.14,
+      "gunlukGetiri": 0.00253358,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "MTF",
       "fonAdi": "MT PORTFÖY BİRİNCİ İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

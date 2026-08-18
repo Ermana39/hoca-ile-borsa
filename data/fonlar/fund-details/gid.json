@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GID",
     "slug": "gid",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.651926,
-    "tedavuldekiPaySayisi": 27172742,
-    "kisiSayisi": 1960,
-    "fonToplamDeger": 44887346.17,
-    "gunlukGetiri": 0.00555393,
+    "fiyat": 1.660761,
+    "tedavuldekiPaySayisi": 26467165,
+    "kisiSayisi": 1951,
+    "fonToplamDeger": 43955639.25,
+    "gunlukGetiri": 0.0053483,
     "getiriler": {
-      "birAy": -0.01229,
-      "ucAy": -0.013597999999999999,
-      "altiAy": -0.00831,
-      "yilbasi": 0.132161,
-      "birYil": 0.19796500000000003,
+      "birAy": -0.0049,
+      "ucAy": -0.006444999999999999,
+      "altiAy": -0.010088,
+      "yilbasi": 0.138216,
+      "birYil": 0.202404,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -85188.17,
-      "besGun": null,
+      "gunluk": -1171794.76,
+      "besGun": -2144825.77,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
-      "besGun": null,
+      "gunluk": -9,
+      "besGun": -30,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GID",
+        "fonAdi": "GARANTİ PORTFÖY İNŞAAT SEKTÖRÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.660761,
+        "tedavuldekiPaySayisi": 26467165,
+        "kisiSayisi": 1951,
+        "fonToplamDeger": 43955639.25,
+        "gunlukGetiri": 0.0053483,
+        "paraGirisiCikisi": -1171794.76,
+        "yatirimciDegisimi": -9
+      },
       {
         "fonKodu": "GID",
         "fonAdi": "GARANTİ PORTFÖY İNŞAAT SEKTÖRÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00555393,
       "paraGirisiCikisi": -85188.17,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "GID",
+      "fonAdi": "GARANTİ PORTFÖY İNŞAAT SEKTÖRÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.660761,
+      "tedavuldekiPaySayisi": 26467165,
+      "kisiSayisi": 1951,
+      "fonToplamDeger": 43955639.25,
+      "gunlukGetiri": 0.0053483,
+      "paraGirisiCikisi": -1171794.76,
+      "yatirimciDegisimi": -9
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GID",
+      "fonAdi": "GARANTİ PORTFÖY İNŞAAT SEKTÖRÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.660761,
+      "tedavuldekiPaySayisi": 26467165,
+      "kisiSayisi": 1951,
+      "fonToplamDeger": 43955639.25,
+      "gunlukGetiri": 0.0053483,
+      "paraGirisiCikisi": -1171794.76,
+      "yatirimciDegisimi": -9
+    },
     {
       "fonKodu": "GID",
       "fonAdi": "GARANTİ PORTFÖY İNŞAAT SEKTÖRÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

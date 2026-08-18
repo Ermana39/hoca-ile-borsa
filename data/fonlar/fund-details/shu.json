@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "SHU",
     "slug": "shu",
@@ -12,44 +12,56 @@
     "yonetici": "SPARTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "sparta-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.368751,
-    "tedavuldekiPaySayisi": 114353466,
-    "kisiSayisi": 19,
-    "fonToplamDeger": 156521375.61,
-    "gunlukGetiri": 0.01283403,
+    "fiyat": 1.4111,
+    "tedavuldekiPaySayisi": 181913164,
+    "kisiSayisi": 21,
+    "fonToplamDeger": 256697655.39,
+    "gunlukGetiri": 0.03093989,
     "getiriler": {
-      "birAy": -0.013047999999999999,
-      "ucAy": -0.018799999999999997,
-      "altiAy": 0.037589000000000004,
-      "yilbasi": 0.38980200000000004,
+      "birAy": -0.017362,
+      "ucAy": 0.023728,
+      "altiAy": 0.055425,
+      "yilbasi": 0.432803,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 5013528.23,
-      "besGun": null,
+      "gunluk": 95333489.85,
+      "besGun": 138244744.33,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": 2,
+      "besGun": 5,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SHU",
+        "fonAdi": "SPARTA PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.4111,
+        "tedavuldekiPaySayisi": 181913164,
+        "kisiSayisi": 21,
+        "fonToplamDeger": 256697655.39,
+        "gunlukGetiri": 0.03093989,
+        "paraGirisiCikisi": 95333489.85,
+        "yatirimciDegisimi": 2
+      },
       {
         "fonKodu": "SHU",
         "fonAdi": "SPARTA PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.01283403,
       "paraGirisiCikisi": 5013528.23,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "SHU",
+      "fonAdi": "SPARTA PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.4111,
+      "tedavuldekiPaySayisi": 181913164,
+      "kisiSayisi": 21,
+      "fonToplamDeger": 256697655.39,
+      "gunlukGetiri": 0.03093989,
+      "paraGirisiCikisi": 95333489.85,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SHU",
+      "fonAdi": "SPARTA PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.4111,
+      "tedavuldekiPaySayisi": 181913164,
+      "kisiSayisi": 21,
+      "fonToplamDeger": 256697655.39,
+      "gunlukGetiri": 0.03093989,
+      "paraGirisiCikisi": 95333489.85,
+      "yatirimciDegisimi": 2
+    },
     {
       "fonKodu": "SHU",
       "fonAdi": "SPARTA PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GTY",
     "slug": "gty",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 6.423783,
-    "tedavuldekiPaySayisi": 64816259,
-    "kisiSayisi": 540,
-    "fonToplamDeger": 416365587.53,
-    "gunlukGetiri": 0.00482313,
+    "fiyat": 6.478267,
+    "tedavuldekiPaySayisi": 64631583,
+    "kisiSayisi": 536,
+    "fonToplamDeger": 418700647.74,
+    "gunlukGetiri": 0.00848161,
     "getiriler": {
-      "birAy": 0.052361000000000005,
-      "ucAy": 0.08108599999999999,
-      "altiAy": 0.08567999999999999,
-      "yilbasi": 0.22381299999999998,
-      "birYil": 0.378642,
-      "ucYil": 1.736662,
-      "besYil": 4.776943999999999
+      "birAy": 0.060090000000000005,
+      "ucAy": 0.11263999999999999,
+      "altiAy": 0.094559,
+      "yilbasi": 0.23419299999999998,
+      "birYil": 0.41283499999999995,
+      "ucYil": 1.7681120000000001,
+      "besYil": 5.001874
     },
     "paraAkisi": {
-      "gunluk": -725669.07,
-      "besGun": null,
+      "gunluk": -1196380.44,
+      "besGun": -6740105.17,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": -4,
+      "besGun": -11,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GTY",
+        "fonAdi": "GARANTİ PORTFÖY TREND SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 6.478267,
+        "tedavuldekiPaySayisi": 64631583,
+        "kisiSayisi": 536,
+        "fonToplamDeger": 418700647.74,
+        "gunlukGetiri": 0.00848161,
+        "paraGirisiCikisi": -1196380.44,
+        "yatirimciDegisimi": -4
+      },
       {
         "fonKodu": "GTY",
         "fonAdi": "GARANTİ PORTFÖY TREND SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00482313,
       "paraGirisiCikisi": -725669.07,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GTY",
+      "fonAdi": "GARANTİ PORTFÖY TREND SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 6.478267,
+      "tedavuldekiPaySayisi": 64631583,
+      "kisiSayisi": 536,
+      "fonToplamDeger": 418700647.74,
+      "gunlukGetiri": 0.00848161,
+      "paraGirisiCikisi": -1196380.44,
+      "yatirimciDegisimi": -4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GTY",
+      "fonAdi": "GARANTİ PORTFÖY TREND SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 6.478267,
+      "tedavuldekiPaySayisi": 64631583,
+      "kisiSayisi": 536,
+      "fonToplamDeger": 418700647.74,
+      "gunlukGetiri": 0.00848161,
+      "paraGirisiCikisi": -1196380.44,
+      "yatirimciDegisimi": -4
+    },
     {
       "fonKodu": "GTY",
       "fonAdi": "GARANTİ PORTFÖY TREND SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

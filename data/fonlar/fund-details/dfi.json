@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DFI",
     "slug": "dfi",
@@ -12,44 +12,56 @@
     "yonetici": "ATLAS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "atlas-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 5.438083,
-    "tedavuldekiPaySayisi": 6333080689,
-    "kisiSayisi": 52065,
-    "fonToplamDeger": 34439819908.21,
-    "gunlukGetiri": 0.00448984,
+    "fiyat": 5.463278,
+    "tedavuldekiPaySayisi": 6126022999,
+    "kisiSayisi": 52004,
+    "fonToplamDeger": 33468164065.69,
+    "gunlukGetiri": 0.00463307,
     "getiriler": {
-      "birAy": 0.079928,
-      "ucAy": 0.39554900000000004,
-      "altiAy": 0.7820529999999999,
-      "yilbasi": 1.020195,
-      "birYil": 12.482995,
-      "ucYil": 21.308802999999997,
+      "birAy": 0.072643,
+      "ucAy": 0.39441400000000004,
+      "altiAy": 0.771891,
+      "yilbasi": 1.029555,
+      "birYil": 12.411062999999999,
+      "ucYil": 20.797659,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 186917533.29,
-      "besGun": null,
+      "gunluk": -1131213722.51,
+      "besGun": -1506885662.12,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 202,
-      "besGun": null,
+      "gunluk": -61,
+      "besGun": -224,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DFI",
+        "fonAdi": "ATLAS PORTFÖY SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 5.463278,
+        "tedavuldekiPaySayisi": 6126022999,
+        "kisiSayisi": 52004,
+        "fonToplamDeger": 33468164065.69,
+        "gunlukGetiri": 0.00463307,
+        "paraGirisiCikisi": -1131213722.51,
+        "yatirimciDegisimi": -61
+      },
       {
         "fonKodu": "DFI",
         "fonAdi": "ATLAS PORTFÖY SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00448984,
       "paraGirisiCikisi": 186917533.29,
       "yatirimciDegisimi": 202
+    },
+    {
+      "fonKodu": "DFI",
+      "fonAdi": "ATLAS PORTFÖY SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 5.463278,
+      "tedavuldekiPaySayisi": 6126022999,
+      "kisiSayisi": 52004,
+      "fonToplamDeger": 33468164065.69,
+      "gunlukGetiri": 0.00463307,
+      "paraGirisiCikisi": -1131213722.51,
+      "yatirimciDegisimi": -61
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DFI",
+      "fonAdi": "ATLAS PORTFÖY SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 5.463278,
+      "tedavuldekiPaySayisi": 6126022999,
+      "kisiSayisi": 52004,
+      "fonToplamDeger": 33468164065.69,
+      "gunlukGetiri": 0.00463307,
+      "paraGirisiCikisi": -1131213722.51,
+      "yatirimciDegisimi": -61
+    },
     {
       "fonKodu": "DFI",
       "fonAdi": "ATLAS PORTFÖY SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

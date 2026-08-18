@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "FZJ",
     "slug": "fzj",
@@ -12,44 +12,56 @@
     "yonetici": "FİBA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "fiba-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 5.62551,
-    "tedavuldekiPaySayisi": 206687626.63,
-    "kisiSayisi": 2139,
-    "fonToplamDeger": 1162723400.93,
-    "gunlukGetiri": -0.00001209,
+    "fiyat": 5.65401,
+    "tedavuldekiPaySayisi": 206504616.63,
+    "kisiSayisi": 2135,
+    "fonToplamDeger": 1167579183.78,
+    "gunlukGetiri": 0.00506621,
     "getiriler": {
-      "birAy": 0.032701,
-      "ucAy": 0.055122,
-      "altiAy": 0.105105,
-      "yilbasi": 0.192233,
-      "birYil": 0.344851,
-      "ucYil": 1.8798810000000001,
+      "birAy": 0.031884,
+      "ucAy": 0.061965000000000006,
+      "altiAy": 0.11038,
+      "yilbasi": 0.198273,
+      "birYil": 0.352583,
+      "ucYil": 1.8812170000000001,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -971829.35,
-      "besGun": null,
+      "gunluk": -1034740.37,
+      "besGun": -6406643.57,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": -4,
+      "besGun": -7,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FZJ",
+        "fonAdi": "FİBA PORTFÖY BİRİNCİ FON SEPETİ FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 5.65401,
+        "tedavuldekiPaySayisi": 206504616.63,
+        "kisiSayisi": 2135,
+        "fonToplamDeger": 1167579183.78,
+        "gunlukGetiri": 0.00506621,
+        "paraGirisiCikisi": -1034740.37,
+        "yatirimciDegisimi": -4
+      },
       {
         "fonKodu": "FZJ",
         "fonAdi": "FİBA PORTFÖY BİRİNCİ FON SEPETİ FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00001209,
       "paraGirisiCikisi": -971829.35,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "FZJ",
+      "fonAdi": "FİBA PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 5.65401,
+      "tedavuldekiPaySayisi": 206504616.63,
+      "kisiSayisi": 2135,
+      "fonToplamDeger": 1167579183.78,
+      "gunlukGetiri": 0.00506621,
+      "paraGirisiCikisi": -1034740.37,
+      "yatirimciDegisimi": -4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FZJ",
+      "fonAdi": "FİBA PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 5.65401,
+      "tedavuldekiPaySayisi": 206504616.63,
+      "kisiSayisi": 2135,
+      "fonToplamDeger": 1167579183.78,
+      "gunlukGetiri": 0.00506621,
+      "paraGirisiCikisi": -1034740.37,
+      "yatirimciDegisimi": -4
+    },
     {
       "fonKodu": "FZJ",
       "fonAdi": "FİBA PORTFÖY BİRİNCİ FON SEPETİ FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

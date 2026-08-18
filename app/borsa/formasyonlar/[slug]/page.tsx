@@ -46,6 +46,12 @@ const yorumlar: Record<string, { baslik: string; yorum: string }> = {
   },
 };
 
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  return Object.keys(yorumlar).map((slug) => ({ slug }));
+}
+
 export default async function FormasyonDetayPage({
   params,
 }: {

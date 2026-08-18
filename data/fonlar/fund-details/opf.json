@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "OPF",
     "slug": "opf",
@@ -12,44 +12,56 @@
     "yonetici": "OSMANLI PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "osmanli-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 3.257022,
-    "tedavuldekiPaySayisi": 136894430,
-    "kisiSayisi": 1067,
-    "fonToplamDeger": 445868184.75,
-    "gunlukGetiri": 0.00535083,
+    "fiyat": 3.282518,
+    "tedavuldekiPaySayisi": 136825930,
+    "kisiSayisi": 1062,
+    "fonToplamDeger": 449133605.51,
+    "gunlukGetiri": 0.00782801,
     "getiriler": {
-      "birAy": 0.033537,
-      "ucAy": 0.059219,
-      "altiAy": 0.312673,
-      "yilbasi": 0.388161,
-      "birYil": 0.633723,
+      "birAy": 0.07377399999999999,
+      "ucAy": 0.075832,
+      "altiAy": 0.327806,
+      "yilbasi": 0.399028,
+      "birYil": 0.6481910000000001,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1504962.38,
-      "besGun": null,
+      "gunluk": -224852.48,
+      "besGun": -3977652.88,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -6,
-      "besGun": null,
+      "gunluk": -5,
+      "besGun": -18,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OPF",
+        "fonAdi": "OSMANLI PORTFÖY AGRESİF DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 3.282518,
+        "tedavuldekiPaySayisi": 136825930,
+        "kisiSayisi": 1062,
+        "fonToplamDeger": 449133605.51,
+        "gunlukGetiri": 0.00782801,
+        "paraGirisiCikisi": -224852.48,
+        "yatirimciDegisimi": -5
+      },
       {
         "fonKodu": "OPF",
         "fonAdi": "OSMANLI PORTFÖY AGRESİF DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00535083,
       "paraGirisiCikisi": -1504962.38,
       "yatirimciDegisimi": -6
+    },
+    {
+      "fonKodu": "OPF",
+      "fonAdi": "OSMANLI PORTFÖY AGRESİF DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 3.282518,
+      "tedavuldekiPaySayisi": 136825930,
+      "kisiSayisi": 1062,
+      "fonToplamDeger": 449133605.51,
+      "gunlukGetiri": 0.00782801,
+      "paraGirisiCikisi": -224852.48,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OPF",
+      "fonAdi": "OSMANLI PORTFÖY AGRESİF DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 3.282518,
+      "tedavuldekiPaySayisi": 136825930,
+      "kisiSayisi": 1062,
+      "fonToplamDeger": 449133605.51,
+      "gunlukGetiri": 0.00782801,
+      "paraGirisiCikisi": -224852.48,
+      "yatirimciDegisimi": -5
+    },
     {
       "fonKodu": "OPF",
       "fonAdi": "OSMANLI PORTFÖY AGRESİF DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

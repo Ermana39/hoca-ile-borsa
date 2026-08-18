@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "RE6",
     "slug": "re6",
@@ -12,13 +12,13 @@
     "yonetici": "RE-PIE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "re-pie-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.391139,
-    "tedavuldekiPaySayisi": 151365211,
+    "fiyat": 0.985474,
+    "tedavuldekiPaySayisi": 223248754,
     "kisiSayisi": 11,
-    "fonToplamDeger": 210569975.61,
-    "gunlukGetiri": -0.02366344,
+    "fonToplamDeger": 220005855.58,
+    "gunlukGetiri": -0.29160637,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 92275522.76,
-      "besGun": null,
+      "gunluk": 70839362.65,
+      "besGun": 236817192.1,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RE6",
+        "fonAdi": "RE-PIE PORTFÖY ALTINCI HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 0.985474,
+        "tedavuldekiPaySayisi": 223248754,
+        "kisiSayisi": 11,
+        "fonToplamDeger": 220005855.58,
+        "gunlukGetiri": -0.29160637,
+        "paraGirisiCikisi": 70839362.65,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "RE6",
         "fonAdi": "RE-PIE PORTFÖY ALTINCI HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.02366344,
       "paraGirisiCikisi": 92275522.76,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "RE6",
+      "fonAdi": "RE-PIE PORTFÖY ALTINCI HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 0.985474,
+      "tedavuldekiPaySayisi": 223248754,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 220005855.58,
+      "gunlukGetiri": -0.29160637,
+      "paraGirisiCikisi": 70839362.65,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RE6",
+      "fonAdi": "RE-PIE PORTFÖY ALTINCI HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 0.985474,
+      "tedavuldekiPaySayisi": 223248754,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 220005855.58,
+      "gunlukGetiri": -0.29160637,
+      "paraGirisiCikisi": 70839362.65,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "RE6",
       "fonAdi": "RE-PIE PORTFÖY ALTINCI HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

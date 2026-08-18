@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YZT",
     "slug": "yzt",
@@ -12,15 +12,15 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.010598,
-    "tedavuldekiPaySayisi": 314402388,
-    "kisiSayisi": 6542,
-    "fonToplamDeger": 317734493.8,
-    "gunlukGetiri": 0.01854469,
+    "fiyat": 1.016088,
+    "tedavuldekiPaySayisi": 344308073,
+    "kisiSayisi": 6824,
+    "fonToplamDeger": 349847163.94,
+    "gunlukGetiri": 0.00543243,
     "getiriler": {
-      "birAy": 0.09382,
+      "birAy": 0.165264,
       "ucAy": null,
       "altiAy": null,
       "yilbasi": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -544007.94,
-      "besGun": null,
+      "gunluk": 30386807.66,
+      "besGun": 39785668.19,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 77,
-      "besGun": null,
+      "gunluk": 282,
+      "besGun": 657,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YZT",
+        "fonAdi": "AK PORTFÖY YAPAY ZEKA TEKNOLOJİLERİ ŞİRKETLERİ DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.016088,
+        "tedavuldekiPaySayisi": 344308073,
+        "kisiSayisi": 6824,
+        "fonToplamDeger": 349847163.94,
+        "gunlukGetiri": 0.00543243,
+        "paraGirisiCikisi": 30386807.66,
+        "yatirimciDegisimi": 282
+      },
       {
         "fonKodu": "YZT",
         "fonAdi": "AK PORTFÖY YAPAY ZEKA TEKNOLOJİLERİ ŞİRKETLERİ DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.01854469,
       "paraGirisiCikisi": -544007.94,
       "yatirimciDegisimi": 77
+    },
+    {
+      "fonKodu": "YZT",
+      "fonAdi": "AK PORTFÖY YAPAY ZEKA TEKNOLOJİLERİ ŞİRKETLERİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.016088,
+      "tedavuldekiPaySayisi": 344308073,
+      "kisiSayisi": 6824,
+      "fonToplamDeger": 349847163.94,
+      "gunlukGetiri": 0.00543243,
+      "paraGirisiCikisi": 30386807.66,
+      "yatirimciDegisimi": 282
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YZT",
+      "fonAdi": "AK PORTFÖY YAPAY ZEKA TEKNOLOJİLERİ ŞİRKETLERİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.016088,
+      "tedavuldekiPaySayisi": 344308073,
+      "kisiSayisi": 6824,
+      "fonToplamDeger": 349847163.94,
+      "gunlukGetiri": 0.00543243,
+      "paraGirisiCikisi": 30386807.66,
+      "yatirimciDegisimi": 282
+    },
     {
       "fonKodu": "YZT",
       "fonAdi": "AK PORTFÖY YAPAY ZEKA TEKNOLOJİLERİ ŞİRKETLERİ DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

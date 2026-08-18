@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IST",
     "slug": "ist",
@@ -12,44 +12,56 @@
     "yonetici": "İSTANBUL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "istanbul-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.193147,
-    "tedavuldekiPaySayisi": 7861289550.89,
-    "kisiSayisi": 3061,
-    "fonToplamDeger": 1518388003.73,
-    "gunlukGetiri": 0.00108844,
+    "fiyat": 0.193962,
+    "tedavuldekiPaySayisi": 7857397100.89,
+    "kisiSayisi": 3064,
+    "fonToplamDeger": 1524035247.02,
+    "gunlukGetiri": 0.00421958,
     "getiriler": {
-      "birAy": 0.034874999999999996,
-      "ucAy": 0.104764,
-      "altiAy": 0.21171299999999998,
-      "yilbasi": 0.27026900000000004,
-      "birYil": 0.485792,
-      "ucYil": 2.55422,
-      "besYil": 4.427307
+      "birAy": 0.032421000000000005,
+      "ucAy": 0.10476200000000001,
+      "altiAy": 0.21432700000000002,
+      "yilbasi": 0.275629,
+      "birYil": 0.485343,
+      "ucYil": 2.558087,
+      "besYil": 4.445159
     },
     "paraAkisi": {
-      "gunluk": 166424784.78,
-      "besGun": null,
+      "gunluk": -754987.39,
+      "besGun": -90801367.23,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
-      "besGun": null,
+      "gunluk": 3,
+      "besGun": -10,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IST",
+        "fonAdi": "İSTANBUL PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 0.193962,
+        "tedavuldekiPaySayisi": 7857397100.89,
+        "kisiSayisi": 3064,
+        "fonToplamDeger": 1524035247.02,
+        "gunlukGetiri": 0.00421958,
+        "paraGirisiCikisi": -754987.39,
+        "yatirimciDegisimi": 3
+      },
       {
         "fonKodu": "IST",
         "fonAdi": "İSTANBUL PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00108844,
       "paraGirisiCikisi": 166424784.78,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "IST",
+      "fonAdi": "İSTANBUL PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.193962,
+      "tedavuldekiPaySayisi": 7857397100.89,
+      "kisiSayisi": 3064,
+      "fonToplamDeger": 1524035247.02,
+      "gunlukGetiri": 0.00421958,
+      "paraGirisiCikisi": -754987.39,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IST",
+      "fonAdi": "İSTANBUL PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.193962,
+      "tedavuldekiPaySayisi": 7857397100.89,
+      "kisiSayisi": 3064,
+      "fonToplamDeger": 1524035247.02,
+      "gunlukGetiri": 0.00421958,
+      "paraGirisiCikisi": -754987.39,
+      "yatirimciDegisimi": 3
+    },
     {
       "fonKodu": "IST",
       "fonAdi": "İSTANBUL PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

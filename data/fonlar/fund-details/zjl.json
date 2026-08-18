@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ZJL",
     "slug": "zjl",
@@ -12,44 +12,56 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 14.601393,
-    "tedavuldekiPaySayisi": 27668200,
-    "kisiSayisi": 2630,
-    "fonToplamDeger": 403994249.72,
-    "gunlukGetiri": 0.00045701,
+    "fiyat": 14.814558,
+    "tedavuldekiPaySayisi": 27576600,
+    "kisiSayisi": 2619,
+    "fonToplamDeger": 408535150.08,
+    "gunlukGetiri": 0.01459895,
     "getiriler": {
-      "birAy": 0.000795,
-      "ucAy": 0.0008640000000000001,
-      "altiAy": 0.024142999999999998,
-      "yilbasi": 0.15364699999999998,
-      "birYil": 0.281376,
-      "ucYil": 1.656618,
-      "besYil": 13.472385999999998
+      "birAy": -0.013836,
+      "ucAy": 0.010572,
+      "altiAy": 0.025284,
+      "yilbasi": 0.170489,
+      "birYil": 0.300733,
+      "ucYil": 1.585584,
+      "besYil": 13.580469
     },
     "paraAkisi": {
-      "gunluk": -96369.19,
-      "besGun": null,
+      "gunluk": -1357013.51,
+      "besGun": -2316324.22,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": -11,
+      "besGun": -18,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZJL",
+        "fonAdi": "ZİRAAT PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 14.814558,
+        "tedavuldekiPaySayisi": 27576600,
+        "kisiSayisi": 2619,
+        "fonToplamDeger": 408535150.08,
+        "gunlukGetiri": 0.01459895,
+        "paraGirisiCikisi": -1357013.51,
+        "yatirimciDegisimi": -11
+      },
       {
         "fonKodu": "ZJL",
         "fonAdi": "ZİRAAT PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00045701,
       "paraGirisiCikisi": -96369.19,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "ZJL",
+      "fonAdi": "ZİRAAT PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 14.814558,
+      "tedavuldekiPaySayisi": 27576600,
+      "kisiSayisi": 2619,
+      "fonToplamDeger": 408535150.08,
+      "gunlukGetiri": 0.01459895,
+      "paraGirisiCikisi": -1357013.51,
+      "yatirimciDegisimi": -11
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZJL",
+      "fonAdi": "ZİRAAT PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 14.814558,
+      "tedavuldekiPaySayisi": 27576600,
+      "kisiSayisi": 2619,
+      "fonToplamDeger": 408535150.08,
+      "gunlukGetiri": 0.01459895,
+      "paraGirisiCikisi": -1357013.51,
+      "yatirimciDegisimi": -11
+    },
     {
       "fonKodu": "ZJL",
       "fonAdi": "ZİRAAT PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

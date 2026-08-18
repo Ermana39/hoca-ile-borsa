@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TYH",
     "slug": "tyh",
@@ -12,44 +12,56 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 2.046232,
-    "tedavuldekiPaySayisi": 553121850.84,
-    "kisiSayisi": 6307,
-    "fonToplamDeger": 1131815501.81,
-    "gunlukGetiri": -0.00123879,
+    "fiyat": 2.043547,
+    "tedavuldekiPaySayisi": 550907463.84,
+    "kisiSayisi": 6308,
+    "fonToplamDeger": 1125805257.68,
+    "gunlukGetiri": -0.00131217,
     "getiriler": {
-      "birAy": 0.018197,
-      "ucAy": -0.038542,
-      "altiAy": -0.08053300000000001,
-      "yilbasi": 0.156198,
-      "birYil": 0.17740100000000003,
-      "ucYil": 1.065086,
-      "besYil": 12.525408
+      "birAy": 0.008488,
+      "ucAy": -0.027752,
+      "altiAy": -0.078332,
+      "yilbasi": 0.15468099999999999,
+      "birYil": 0.190044,
+      "ucYil": 1.035361,
+      "besYil": 12.41403
     },
     "paraAkisi": {
-      "gunluk": -1862101.81,
-      "besGun": null,
+      "gunluk": -4525203.91,
+      "besGun": -7903931.22,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -8,
-      "besGun": null,
+      "gunluk": 1,
+      "besGun": -50,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TYH",
+        "fonAdi": "TEB PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 2.043547,
+        "tedavuldekiPaySayisi": 550907463.84,
+        "kisiSayisi": 6308,
+        "fonToplamDeger": 1125805257.68,
+        "gunlukGetiri": -0.00131217,
+        "paraGirisiCikisi": -4525203.91,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "TYH",
         "fonAdi": "TEB PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00123879,
       "paraGirisiCikisi": -1862101.81,
       "yatirimciDegisimi": -8
+    },
+    {
+      "fonKodu": "TYH",
+      "fonAdi": "TEB PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 2.043547,
+      "tedavuldekiPaySayisi": 550907463.84,
+      "kisiSayisi": 6308,
+      "fonToplamDeger": 1125805257.68,
+      "gunlukGetiri": -0.00131217,
+      "paraGirisiCikisi": -4525203.91,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TYH",
+      "fonAdi": "TEB PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 2.043547,
+      "tedavuldekiPaySayisi": 550907463.84,
+      "kisiSayisi": 6308,
+      "fonToplamDeger": 1125805257.68,
+      "gunlukGetiri": -0.00131217,
+      "paraGirisiCikisi": -4525203.91,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "TYH",
       "fonAdi": "TEB PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

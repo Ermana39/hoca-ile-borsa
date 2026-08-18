@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PGS",
     "slug": "pgs",
@@ -12,44 +12,56 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.277164,
-    "tedavuldekiPaySayisi": 131690841,
+    "fiyat": 1.291903,
+    "tedavuldekiPaySayisi": 130984552,
     "kisiSayisi": 441,
-    "fonToplamDeger": 168190813.32,
-    "gunlukGetiri": 0.01276057,
+    "fonToplamDeger": 169219314.05,
+    "gunlukGetiri": 0.01154041,
     "getiriler": {
-      "birAy": -0.019906,
-      "ucAy": -0.029775,
-      "altiAy": -0.08629300000000001,
-      "yilbasi": 0.185687,
-      "birYil": 0.16004100000000002,
+      "birAy": -0.016451,
+      "ucAy": -0.008174,
+      "altiAy": -0.092042,
+      "yilbasi": 0.19937000000000002,
+      "birYil": 0.177362,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -794286.17,
-      "besGun": null,
+      "gunluk": -912456.88,
+      "besGun": -3091022.89,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": -5,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PGS",
+        "fonAdi": "AZİMUT PORTFÖY PAY GERİ ALIMI YAPAN ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.291903,
+        "tedavuldekiPaySayisi": 130984552,
+        "kisiSayisi": 441,
+        "fonToplamDeger": 169219314.05,
+        "gunlukGetiri": 0.01154041,
+        "paraGirisiCikisi": -912456.88,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "PGS",
         "fonAdi": "AZİMUT PORTFÖY PAY GERİ ALIMI YAPAN ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.01276057,
       "paraGirisiCikisi": -794286.17,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "PGS",
+      "fonAdi": "AZİMUT PORTFÖY PAY GERİ ALIMI YAPAN ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.291903,
+      "tedavuldekiPaySayisi": 130984552,
+      "kisiSayisi": 441,
+      "fonToplamDeger": 169219314.05,
+      "gunlukGetiri": 0.01154041,
+      "paraGirisiCikisi": -912456.88,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PGS",
+      "fonAdi": "AZİMUT PORTFÖY PAY GERİ ALIMI YAPAN ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.291903,
+      "tedavuldekiPaySayisi": 130984552,
+      "kisiSayisi": 441,
+      "fonToplamDeger": 169219314.05,
+      "gunlukGetiri": 0.01154041,
+      "paraGirisiCikisi": -912456.88,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "PGS",
       "fonAdi": "AZİMUT PORTFÖY PAY GERİ ALIMI YAPAN ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

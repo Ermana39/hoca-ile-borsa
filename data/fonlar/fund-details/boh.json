@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BOH",
     "slug": "boh",
@@ -12,13 +12,13 @@
     "yonetici": "BULLS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "bulls-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.802079,
+    "fiyat": 0.801506,
     "tedavuldekiPaySayisi": 250569682,
     "kisiSayisi": 11,
-    "fonToplamDeger": 200976574.61,
-    "gunlukGetiri": 0.00265264,
+    "fonToplamDeger": 200833049.77,
+    "gunlukGetiri": -0.00071439,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -30,26 +30,38 @@
     },
     "paraAkisi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BOH",
+        "fonAdi": "BULLS PORTFÖY BIST 30 DIŞI ŞİRKETLER HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 0.801506,
+        "tedavuldekiPaySayisi": 250569682,
+        "kisiSayisi": 11,
+        "fonToplamDeger": 200833049.77,
+        "gunlukGetiri": -0.00071439,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "BOH",
         "fonAdi": "BULLS PORTFÖY BIST 30 DIŞI ŞİRKETLER HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00265264,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BOH",
+      "fonAdi": "BULLS PORTFÖY BIST 30 DIŞI ŞİRKETLER HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 0.801506,
+      "tedavuldekiPaySayisi": 250569682,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 200833049.77,
+      "gunlukGetiri": -0.00071439,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BOH",
+      "fonAdi": "BULLS PORTFÖY BIST 30 DIŞI ŞİRKETLER HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 0.801506,
+      "tedavuldekiPaySayisi": 250569682,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 200833049.77,
+      "gunlukGetiri": -0.00071439,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "BOH",
       "fonAdi": "BULLS PORTFÖY BIST 30 DIŞI ŞİRKETLER HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KDV",
     "slug": "kdv",
@@ -12,13 +12,13 @@
     "yonetici": "KUVEYT TÜRK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kuveyt-turk-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 48.599717,
-    "tedavuldekiPaySayisi": 467461515,
-    "kisiSayisi": 201,
-    "fonToplamDeger": 22718497349.51,
-    "gunlukGetiri": 0.0004893,
+    "fiyat": 48.748973,
+    "tedavuldekiPaySayisi": 472476239,
+    "kisiSayisi": 205,
+    "fonToplamDeger": 23032731608.46,
+    "gunlukGetiri": 0.00307113,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -26724109.58,
-      "besGun": null,
+      "gunluk": 244462644.88,
+      "besGun": -405638649.85,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": null,
+      "gunluk": 4,
+      "besGun": 9,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KDV",
+        "fonAdi": "KUVEYT TÜRK PORTFÖY DOKUZUNCU KATILIM SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 48.748973,
+        "tedavuldekiPaySayisi": 472476239,
+        "kisiSayisi": 205,
+        "fonToplamDeger": 23032731608.46,
+        "gunlukGetiri": 0.00307113,
+        "paraGirisiCikisi": 244462644.88,
+        "yatirimciDegisimi": 4
+      },
       {
         "fonKodu": "KDV",
         "fonAdi": "KUVEYT TÜRK PORTFÖY DOKUZUNCU KATILIM SERBEST (DÖVİZ) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.0004893,
       "paraGirisiCikisi": -26724109.58,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "KDV",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY DOKUZUNCU KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 48.748973,
+      "tedavuldekiPaySayisi": 472476239,
+      "kisiSayisi": 205,
+      "fonToplamDeger": 23032731608.46,
+      "gunlukGetiri": 0.00307113,
+      "paraGirisiCikisi": 244462644.88,
+      "yatirimciDegisimi": 4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KDV",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY DOKUZUNCU KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 48.748973,
+      "tedavuldekiPaySayisi": 472476239,
+      "kisiSayisi": 205,
+      "fonToplamDeger": 23032731608.46,
+      "gunlukGetiri": 0.00307113,
+      "paraGirisiCikisi": 244462644.88,
+      "yatirimciDegisimi": 4
+    },
     {
       "fonKodu": "KDV",
       "fonAdi": "KUVEYT TÜRK PORTFÖY DOKUZUNCU KATILIM SERBEST (DÖVİZ) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

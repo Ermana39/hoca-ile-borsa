@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TZL",
     "slug": "tzl",
@@ -12,13 +12,13 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.137124,
-    "tedavuldekiPaySayisi": 732921697232.17,
-    "kisiSayisi": 181915,
-    "fonToplamDeger": 100500890613.02,
-    "gunlukGetiri": 0.00110972,
+    "fiyat": 0.137701,
+    "tedavuldekiPaySayisi": 769979930232.17,
+    "kisiSayisi": 183194,
+    "fonToplamDeger": 106027082970.16,
+    "gunlukGetiri": 0.00420787,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1145467733.67,
-      "besGun": null,
+      "gunluk": 5102955742.33,
+      "besGun": 7849262269.68,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 22,
-      "besGun": null,
+      "gunluk": 1279,
+      "besGun": 1658,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TZL",
+        "fonAdi": "ZİRAAT PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 0.137701,
+        "tedavuldekiPaySayisi": 769979930232.17,
+        "kisiSayisi": 183194,
+        "fonToplamDeger": 106027082970.16,
+        "gunlukGetiri": 0.00420787,
+        "paraGirisiCikisi": 5102955742.33,
+        "yatirimciDegisimi": 1279
+      },
       {
         "fonKodu": "TZL",
         "fonAdi": "ZİRAAT PORTFÖY PARA PİYASASI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00110972,
       "paraGirisiCikisi": 1145467733.67,
       "yatirimciDegisimi": 22
+    },
+    {
+      "fonKodu": "TZL",
+      "fonAdi": "ZİRAAT PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.137701,
+      "tedavuldekiPaySayisi": 769979930232.17,
+      "kisiSayisi": 183194,
+      "fonToplamDeger": 106027082970.16,
+      "gunlukGetiri": 0.00420787,
+      "paraGirisiCikisi": 5102955742.33,
+      "yatirimciDegisimi": 1279
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TZL",
+      "fonAdi": "ZİRAAT PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.137701,
+      "tedavuldekiPaySayisi": 769979930232.17,
+      "kisiSayisi": 183194,
+      "fonToplamDeger": 106027082970.16,
+      "gunlukGetiri": 0.00420787,
+      "paraGirisiCikisi": 5102955742.33,
+      "yatirimciDegisimi": 1279
+    },
     {
       "fonKodu": "TZL",
       "fonAdi": "ZİRAAT PORTFÖY PARA PİYASASI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

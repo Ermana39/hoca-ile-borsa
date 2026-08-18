@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YAK",
     "slug": "yak",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 5.115162,
-    "tedavuldekiPaySayisi": 217588946.41,
-    "kisiSayisi": 108182,
-    "fonToplamDeger": 1113002794.37,
-    "gunlukGetiri": 0.00286656,
+    "fiyat": 5.127325,
+    "tedavuldekiPaySayisi": 217474248.41,
+    "kisiSayisi": 108147,
+    "fonToplamDeger": 1115061071.92,
+    "gunlukGetiri": 0.00237783,
     "getiriler": {
-      "birAy": 0.020691,
-      "ucAy": 0.047668999999999996,
-      "altiAy": 0.080288,
-      "yilbasi": 0.19688300000000003,
-      "birYil": 0.330963,
-      "ucYil": 1.34979,
-      "besYil": 6.323633
+      "birAy": 0.019834,
+      "ucAy": 0.054646,
+      "altiAy": 0.079178,
+      "yilbasi": 0.199729,
+      "birYil": 0.336115,
+      "ucYil": 1.361455,
+      "besYil": 6.326341
     },
     "paraAkisi": {
-      "gunluk": -62701.66,
-      "besGun": null,
+      "gunluk": -588093.92,
+      "besGun": -11038871.7,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -34,
-      "besGun": null,
+      "gunluk": -35,
+      "besGun": -111,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YAK",
+        "fonAdi": "YAPI KREDİ PORTFÖY KARMA FON",
+        "tarih": "2026-08-18",
+        "fiyat": 5.127325,
+        "tedavuldekiPaySayisi": 217474248.41,
+        "kisiSayisi": 108147,
+        "fonToplamDeger": 1115061071.92,
+        "gunlukGetiri": 0.00237783,
+        "paraGirisiCikisi": -588093.92,
+        "yatirimciDegisimi": -35
+      },
       {
         "fonKodu": "YAK",
         "fonAdi": "YAPI KREDİ PORTFÖY KARMA FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00286656,
       "paraGirisiCikisi": -62701.66,
       "yatirimciDegisimi": -34
+    },
+    {
+      "fonKodu": "YAK",
+      "fonAdi": "YAPI KREDİ PORTFÖY KARMA FON",
+      "tarih": "2026-08-18",
+      "fiyat": 5.127325,
+      "tedavuldekiPaySayisi": 217474248.41,
+      "kisiSayisi": 108147,
+      "fonToplamDeger": 1115061071.92,
+      "gunlukGetiri": 0.00237783,
+      "paraGirisiCikisi": -588093.92,
+      "yatirimciDegisimi": -35
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YAK",
+      "fonAdi": "YAPI KREDİ PORTFÖY KARMA FON",
+      "tarih": "2026-08-18",
+      "fiyat": 5.127325,
+      "tedavuldekiPaySayisi": 217474248.41,
+      "kisiSayisi": 108147,
+      "fonToplamDeger": 1115061071.92,
+      "gunlukGetiri": 0.00237783,
+      "paraGirisiCikisi": -588093.92,
+      "yatirimciDegisimi": -35
+    },
     {
       "fonKodu": "YAK",
       "fonAdi": "YAPI KREDİ PORTFÖY KARMA FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

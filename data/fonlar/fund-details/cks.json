@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "CKS",
     "slug": "cks",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 60.751644,
-    "tedavuldekiPaySayisi": 89111891,
-    "kisiSayisi": 2347,
-    "fonToplamDeger": 5413693884.06,
-    "gunlukGetiri": 0.00085249,
+    "fiyat": 60.974995,
+    "tedavuldekiPaySayisi": 89028872,
+    "kisiSayisi": 2345,
+    "fonToplamDeger": 5428535052.46,
+    "gunlukGetiri": 0.00367646,
     "getiriler": {
-      "birAy": 0.019986999999999998,
-      "ucAy": 0.060376000000000006,
-      "altiAy": 0.10847699999999999,
-      "yilbasi": 0.135482,
-      "birYil": 0.243505,
-      "ucYil": 1.162657,
+      "birAy": 0.021640000000000003,
+      "ucAy": 0.064882,
+      "altiAy": 0.10861499999999999,
+      "yilbasi": 0.139656,
+      "birYil": 0.24488800000000002,
+      "ucYil": 1.1710479999999999,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 6526002.35,
-      "besGun": null,
+      "gunluk": -5062083.11,
+      "besGun": 51205163.32,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 4,
-      "besGun": null,
+      "gunluk": -2,
+      "besGun": 10,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "CKS",
+        "fonAdi": "İŞ PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 60.974995,
+        "tedavuldekiPaySayisi": 89028872,
+        "kisiSayisi": 2345,
+        "fonToplamDeger": 5428535052.46,
+        "gunlukGetiri": 0.00367646,
+        "paraGirisiCikisi": -5062083.11,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "CKS",
         "fonAdi": "İŞ PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00085249,
       "paraGirisiCikisi": 6526002.35,
       "yatirimciDegisimi": 4
+    },
+    {
+      "fonKodu": "CKS",
+      "fonAdi": "İŞ PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 60.974995,
+      "tedavuldekiPaySayisi": 89028872,
+      "kisiSayisi": 2345,
+      "fonToplamDeger": 5428535052.46,
+      "gunlukGetiri": 0.00367646,
+      "paraGirisiCikisi": -5062083.11,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "CKS",
+      "fonAdi": "İŞ PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 60.974995,
+      "tedavuldekiPaySayisi": 89028872,
+      "kisiSayisi": 2345,
+      "fonToplamDeger": 5428535052.46,
+      "gunlukGetiri": 0.00367646,
+      "paraGirisiCikisi": -5062083.11,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "CKS",
       "fonAdi": "İŞ PORTFÖY BİRİNCİ KATILIM SERBEST (DÖVİZ) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

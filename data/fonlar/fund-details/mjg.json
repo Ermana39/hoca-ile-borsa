@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "MJG",
     "slug": "mjg",
@@ -12,44 +12,56 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 11.058696,
-    "tedavuldekiPaySayisi": 90759946,
-    "kisiSayisi": 7601,
-    "fonToplamDeger": 1003686692,
-    "gunlukGetiri": 0,
+    "fiyat": 11.057051,
+    "tedavuldekiPaySayisi": 90696842,
+    "kisiSayisi": 7602,
+    "fonToplamDeger": 1002839614.58,
+    "gunlukGetiri": -0.00014875,
     "getiriler": {
-      "birAy": 0.139705,
-      "ucAy": -0.197788,
-      "altiAy": -0.078978,
-      "yilbasi": -0.026004,
-      "birYil": 0.859734,
-      "ucYil": 3.6718669999999998,
-      "besYil": 11.900922000000001
+      "birAy": 0.18760300000000002,
+      "ucAy": -0.094084,
+      "altiAy": -0.029794,
+      "yilbasi": -0.026149,
+      "birYil": 0.884891,
+      "ucYil": 3.678825,
+      "besYil": 12.084168
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": -697744.15,
+      "besGun": -7258512.31,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -13,
-      "besGun": null,
+      "gunluk": 1,
+      "besGun": -15,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MJG",
+        "fonAdi": "AKTİF PORTFÖY GÜMÜŞ FON SEPETİ FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 11.057051,
+        "tedavuldekiPaySayisi": 90696842,
+        "kisiSayisi": 7602,
+        "fonToplamDeger": 1002839614.58,
+        "gunlukGetiri": -0.00014875,
+        "paraGirisiCikisi": -697744.15,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "MJG",
         "fonAdi": "AKTİF PORTFÖY GÜMÜŞ FON SEPETİ FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": -13
+    },
+    {
+      "fonKodu": "MJG",
+      "fonAdi": "AKTİF PORTFÖY GÜMÜŞ FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 11.057051,
+      "tedavuldekiPaySayisi": 90696842,
+      "kisiSayisi": 7602,
+      "fonToplamDeger": 1002839614.58,
+      "gunlukGetiri": -0.00014875,
+      "paraGirisiCikisi": -697744.15,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MJG",
+      "fonAdi": "AKTİF PORTFÖY GÜMÜŞ FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 11.057051,
+      "tedavuldekiPaySayisi": 90696842,
+      "kisiSayisi": 7602,
+      "fonToplamDeger": 1002839614.58,
+      "gunlukGetiri": -0.00014875,
+      "paraGirisiCikisi": -697744.15,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "MJG",
       "fonAdi": "AKTİF PORTFÖY GÜMÜŞ FON SEPETİ FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

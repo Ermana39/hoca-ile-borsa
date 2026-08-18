@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IMB",
     "slug": "imb",
@@ -12,44 +12,56 @@
     "yonetici": "İSTANBUL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "istanbul-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.212673,
+    "fiyat": 1.203804,
     "tedavuldekiPaySayisi": 3576478,
-    "kisiSayisi": 189,
-    "fonToplamDeger": 4337099.86,
-    "gunlukGetiri": 0.00027715,
+    "kisiSayisi": 188,
+    "fonToplamDeger": 4305378.95,
+    "gunlukGetiri": -0.0073136,
     "getiriler": {
-      "birAy": 0.004671,
-      "ucAy": -0.048598,
-      "altiAy": -0.049284,
-      "yilbasi": 0.117665,
-      "birYil": 0.165227,
+      "birAy": -0.020652,
+      "ucAy": -0.036723,
+      "altiAy": -0.055304,
+      "yilbasi": 0.10949099999999999,
+      "birYil": 0.154015,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -31347.6,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": -204007.74,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": -1,
+      "besGun": -8,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IMB",
+        "fonAdi": "İSTANBUL PORTFÖY ALGORİTMİK MODEL HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.203804,
+        "tedavuldekiPaySayisi": 3576478,
+        "kisiSayisi": 188,
+        "fonToplamDeger": 4305378.95,
+        "gunlukGetiri": -0.0073136,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "IMB",
         "fonAdi": "İSTANBUL PORTFÖY ALGORİTMİK MODEL HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00027715,
       "paraGirisiCikisi": -31347.6,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "IMB",
+      "fonAdi": "İSTANBUL PORTFÖY ALGORİTMİK MODEL HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.203804,
+      "tedavuldekiPaySayisi": 3576478,
+      "kisiSayisi": 188,
+      "fonToplamDeger": 4305378.95,
+      "gunlukGetiri": -0.0073136,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IMB",
+      "fonAdi": "İSTANBUL PORTFÖY ALGORİTMİK MODEL HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.203804,
+      "tedavuldekiPaySayisi": 3576478,
+      "kisiSayisi": 188,
+      "fonToplamDeger": 4305378.95,
+      "gunlukGetiri": -0.0073136,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "IMB",
       "fonAdi": "İSTANBUL PORTFÖY ALGORİTMİK MODEL HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

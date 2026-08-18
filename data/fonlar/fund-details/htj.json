@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "HTJ",
     "slug": "htj",
@@ -12,44 +12,56 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 2.003235,
-    "tedavuldekiPaySayisi": 16334066,
-    "kisiSayisi": 215,
-    "fonToplamDeger": 32720977.53,
-    "gunlukGetiri": 0.01929306,
+    "fiyat": 2.006023,
+    "tedavuldekiPaySayisi": 16391656,
+    "kisiSayisi": 223,
+    "fonToplamDeger": 32882032.53,
+    "gunlukGetiri": 0.00139175,
     "getiriler": {
-      "birAy": 0.079607,
-      "ucAy": 0.09825300000000001,
-      "altiAy": 0.31873,
-      "yilbasi": 0.326942,
-      "birYil": 0.453158,
+      "birAy": 0.106653,
+      "ucAy": 0.091823,
+      "altiAy": 0.315446,
+      "yilbasi": 0.328789,
+      "birYil": 0.46611800000000003,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 5252123.59,
-      "besGun": null,
+      "gunluk": 115526.86,
+      "besGun": 6041551.2,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": 8,
+      "besGun": 11,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HTJ",
+        "fonAdi": "HEDEF PORTFÖY TEKNOLOJİ DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 2.006023,
+        "tedavuldekiPaySayisi": 16391656,
+        "kisiSayisi": 223,
+        "fonToplamDeger": 32882032.53,
+        "gunlukGetiri": 0.00139175,
+        "paraGirisiCikisi": 115526.86,
+        "yatirimciDegisimi": 8
+      },
       {
         "fonKodu": "HTJ",
         "fonAdi": "HEDEF PORTFÖY TEKNOLOJİ DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.01929306,
       "paraGirisiCikisi": 5252123.59,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HTJ",
+      "fonAdi": "HEDEF PORTFÖY TEKNOLOJİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 2.006023,
+      "tedavuldekiPaySayisi": 16391656,
+      "kisiSayisi": 223,
+      "fonToplamDeger": 32882032.53,
+      "gunlukGetiri": 0.00139175,
+      "paraGirisiCikisi": 115526.86,
+      "yatirimciDegisimi": 8
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HTJ",
+      "fonAdi": "HEDEF PORTFÖY TEKNOLOJİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 2.006023,
+      "tedavuldekiPaySayisi": 16391656,
+      "kisiSayisi": 223,
+      "fonToplamDeger": 32882032.53,
+      "gunlukGetiri": 0.00139175,
+      "paraGirisiCikisi": 115526.86,
+      "yatirimciDegisimi": 8
+    },
     {
       "fonKodu": "HTJ",
       "fonAdi": "HEDEF PORTFÖY TEKNOLOJİ DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

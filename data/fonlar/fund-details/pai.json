@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PAI",
     "slug": "pai",
@@ -12,13 +12,13 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 6.345885,
-    "tedavuldekiPaySayisi": 67380045,
-    "kisiSayisi": 519,
-    "fonToplamDeger": 427586019.93,
-    "gunlukGetiri": -0.00177375,
+    "fiyat": 6.379646,
+    "tedavuldekiPaySayisi": 67279990,
+    "kisiSayisi": 521,
+    "fonToplamDeger": 429222520.18,
+    "gunlukGetiri": 0.00532014,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -971554.99,
-      "besGun": null,
+      "gunluk": -638315.48,
+      "besGun": -18794524.85,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 6,
-      "besGun": null,
+      "gunluk": 2,
+      "besGun": 13,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PAI",
+        "fonAdi": "AK PORTFÖY ING ÖZEL BANKACILIK VE PLATINUM MUTLAK GETİRİ HEDEFLİ DEĞİŞKEN ÖZEL FON",
+        "tarih": "2026-08-18",
+        "fiyat": 6.379646,
+        "tedavuldekiPaySayisi": 67279990,
+        "kisiSayisi": 521,
+        "fonToplamDeger": 429222520.18,
+        "gunlukGetiri": 0.00532014,
+        "paraGirisiCikisi": -638315.48,
+        "yatirimciDegisimi": 2
+      },
       {
         "fonKodu": "PAI",
         "fonAdi": "AK PORTFÖY ING ÖZEL BANKACILIK VE PLATINUM MUTLAK GETİRİ HEDEFLİ DEĞİŞKEN ÖZEL FON",
@@ -176,9 +188,33 @@
       "gunlukGetiri": -0.00177375,
       "paraGirisiCikisi": -971554.99,
       "yatirimciDegisimi": 6
+    },
+    {
+      "fonKodu": "PAI",
+      "fonAdi": "AK PORTFÖY ING ÖZEL BANKACILIK VE PLATINUM MUTLAK GETİRİ HEDEFLİ DEĞİŞKEN ÖZEL FON",
+      "tarih": "2026-08-18",
+      "fiyat": 6.379646,
+      "tedavuldekiPaySayisi": 67279990,
+      "kisiSayisi": 521,
+      "fonToplamDeger": 429222520.18,
+      "gunlukGetiri": 0.00532014,
+      "paraGirisiCikisi": -638315.48,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PAI",
+      "fonAdi": "AK PORTFÖY ING ÖZEL BANKACILIK VE PLATINUM MUTLAK GETİRİ HEDEFLİ DEĞİŞKEN ÖZEL FON",
+      "tarih": "2026-08-18",
+      "fiyat": 6.379646,
+      "tedavuldekiPaySayisi": 67279990,
+      "kisiSayisi": 521,
+      "fonToplamDeger": 429222520.18,
+      "gunlukGetiri": 0.00532014,
+      "paraGirisiCikisi": -638315.48,
+      "yatirimciDegisimi": 2
+    },
     {
       "fonKodu": "PAI",
       "fonAdi": "AK PORTFÖY ING ÖZEL BANKACILIK VE PLATINUM MUTLAK GETİRİ HEDEFLİ DEĞİŞKEN ÖZEL FON",
@@ -245,7 +281,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ULH",
     "slug": "ulh",
@@ -12,44 +12,56 @@
     "yonetici": "ÜNLÜ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "unlu-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 6.765577,
-    "tedavuldekiPaySayisi": 196635393,
-    "kisiSayisi": 242,
-    "fonToplamDeger": 1330351799.54,
-    "gunlukGetiri": 0.0144865,
+    "fiyat": 6.6774,
+    "tedavuldekiPaySayisi": 196634037,
+    "kisiSayisi": 241,
+    "fonToplamDeger": 1313004157.95,
+    "gunlukGetiri": -0.01303318,
     "getiriler": {
-      "birAy": 0.030716,
-      "ucAy": 0.03001,
-      "altiAy": 0.146434,
-      "yilbasi": 0.19197299999999998,
-      "birYil": 0.319391,
-      "ucYil": 2.1885,
+      "birAy": 0.034692,
+      "ucAy": 0.01045,
+      "altiAy": 0.142285,
+      "yilbasi": 0.17643799999999998,
+      "birYil": 0.298406,
+      "ucYil": 2.116504,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1112396.17,
-      "besGun": null,
+      "gunluk": -9054.55,
+      "besGun": 58544.98,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": -1,
-      "besGun": null,
+      "besGun": -4,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ULH",
+        "fonAdi": "ÜNLÜ PORTFÖY ONUNCU SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 6.6774,
+        "tedavuldekiPaySayisi": 196634037,
+        "kisiSayisi": 241,
+        "fonToplamDeger": 1313004157.95,
+        "gunlukGetiri": -0.01303318,
+        "paraGirisiCikisi": -9054.55,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "ULH",
         "fonAdi": "ÜNLÜ PORTFÖY ONUNCU SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.0144865,
       "paraGirisiCikisi": 1112396.17,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "ULH",
+      "fonAdi": "ÜNLÜ PORTFÖY ONUNCU SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 6.6774,
+      "tedavuldekiPaySayisi": 196634037,
+      "kisiSayisi": 241,
+      "fonToplamDeger": 1313004157.95,
+      "gunlukGetiri": -0.01303318,
+      "paraGirisiCikisi": -9054.55,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ULH",
+      "fonAdi": "ÜNLÜ PORTFÖY ONUNCU SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 6.6774,
+      "tedavuldekiPaySayisi": 196634037,
+      "kisiSayisi": 241,
+      "fonToplamDeger": 1313004157.95,
+      "gunlukGetiri": -0.01303318,
+      "paraGirisiCikisi": -9054.55,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "ULH",
       "fonAdi": "ÜNLÜ PORTFÖY ONUNCU SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

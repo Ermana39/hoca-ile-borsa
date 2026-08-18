@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "VPS",
     "slug": "vps",
@@ -12,44 +12,56 @@
     "yonetici": "VEGA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "vega-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.882369,
-    "tedavuldekiPaySayisi": 1575300787,
-    "kisiSayisi": 6128,
-    "fonToplamDeger": 1389996034.27,
-    "gunlukGetiri": -0.00289401,
+    "fiyat": 0.889404,
+    "tedavuldekiPaySayisi": 1564066864,
+    "kisiSayisi": 6100,
+    "fonToplamDeger": 1391087906.07,
+    "gunlukGetiri": 0.00797285,
     "getiriler": {
-      "birAy": -0.267014,
-      "ucAy": -0.376627,
-      "altiAy": -0.291885,
+      "birAy": -0.27605,
+      "ucAy": -0.365101,
+      "altiAy": -0.29021,
       "yilbasi": null,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -19131240.54,
-      "besGun": null,
+      "gunluk": -9991496.05,
+      "besGun": -50040254.42,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -20,
-      "besGun": null,
+      "gunluk": -28,
+      "besGun": -126,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "VPS",
+        "fonAdi": "VEGA PORTFÖY SALUR HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 0.889404,
+        "tedavuldekiPaySayisi": 1564066864,
+        "kisiSayisi": 6100,
+        "fonToplamDeger": 1391087906.07,
+        "gunlukGetiri": 0.00797285,
+        "paraGirisiCikisi": -9991496.05,
+        "yatirimciDegisimi": -28
+      },
       {
         "fonKodu": "VPS",
         "fonAdi": "VEGA PORTFÖY SALUR HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00289401,
       "paraGirisiCikisi": -19131240.54,
       "yatirimciDegisimi": -20
+    },
+    {
+      "fonKodu": "VPS",
+      "fonAdi": "VEGA PORTFÖY SALUR HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 0.889404,
+      "tedavuldekiPaySayisi": 1564066864,
+      "kisiSayisi": 6100,
+      "fonToplamDeger": 1391087906.07,
+      "gunlukGetiri": 0.00797285,
+      "paraGirisiCikisi": -9991496.05,
+      "yatirimciDegisimi": -28
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "VPS",
+      "fonAdi": "VEGA PORTFÖY SALUR HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 0.889404,
+      "tedavuldekiPaySayisi": 1564066864,
+      "kisiSayisi": 6100,
+      "fonToplamDeger": 1391087906.07,
+      "gunlukGetiri": 0.00797285,
+      "paraGirisiCikisi": -9991496.05,
+      "yatirimciDegisimi": -28
+    },
     {
       "fonKodu": "VPS",
       "fonAdi": "VEGA PORTFÖY SALUR HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

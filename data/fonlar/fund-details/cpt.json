@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "CPT",
     "slug": "cpt",
@@ -12,44 +12,56 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 3.953916,
-    "tedavuldekiPaySayisi": 285776834,
-    "kisiSayisi": 14524,
-    "fonToplamDeger": 1129937687.75,
-    "gunlukGetiri": 0.0184628,
+    "fiyat": 3.965439,
+    "tedavuldekiPaySayisi": 286568061,
+    "kisiSayisi": 14557,
+    "fonToplamDeger": 1136368292.46,
+    "gunlukGetiri": 0.00291433,
     "getiriler": {
-      "birAy": 0.014416,
-      "ucAy": 0.072157,
-      "altiAy": 0.40125999999999995,
-      "yilbasi": 0.733942,
-      "birYil": 1.219251,
+      "birAy": 0.059444,
+      "ucAy": 0.08764699999999999,
+      "altiAy": 0.407902,
+      "yilbasi": 0.7389960000000001,
+      "birYil": 1.264454,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -2807493.87,
-      "besGun": null,
+      "gunluk": 3137562.4,
+      "besGun": -13553903.93,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -81,
-      "besGun": null,
+      "gunluk": 33,
+      "besGun": 107,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "CPT",
+        "fonAdi": "ROTA PORTFÖY ÇİP TEKNOLOJİLERİ DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 3.965439,
+        "tedavuldekiPaySayisi": 286568061,
+        "kisiSayisi": 14557,
+        "fonToplamDeger": 1136368292.46,
+        "gunlukGetiri": 0.00291433,
+        "paraGirisiCikisi": 3137562.4,
+        "yatirimciDegisimi": 33
+      },
       {
         "fonKodu": "CPT",
         "fonAdi": "ROTA PORTFÖY ÇİP TEKNOLOJİLERİ DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.0184628,
       "paraGirisiCikisi": -2807493.87,
       "yatirimciDegisimi": -81
+    },
+    {
+      "fonKodu": "CPT",
+      "fonAdi": "ROTA PORTFÖY ÇİP TEKNOLOJİLERİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 3.965439,
+      "tedavuldekiPaySayisi": 286568061,
+      "kisiSayisi": 14557,
+      "fonToplamDeger": 1136368292.46,
+      "gunlukGetiri": 0.00291433,
+      "paraGirisiCikisi": 3137562.4,
+      "yatirimciDegisimi": 33
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "CPT",
+      "fonAdi": "ROTA PORTFÖY ÇİP TEKNOLOJİLERİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 3.965439,
+      "tedavuldekiPaySayisi": 286568061,
+      "kisiSayisi": 14557,
+      "fonToplamDeger": 1136368292.46,
+      "gunlukGetiri": 0.00291433,
+      "paraGirisiCikisi": 3137562.4,
+      "yatirimciDegisimi": 33
+    },
     {
       "fonKodu": "CPT",
       "fonAdi": "ROTA PORTFÖY ÇİP TEKNOLOJİLERİ DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

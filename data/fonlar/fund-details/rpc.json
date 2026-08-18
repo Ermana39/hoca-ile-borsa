@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "RPC",
     "slug": "rpc",
@@ -12,44 +12,56 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 5.34446,
-    "tedavuldekiPaySayisi": 4440657,
-    "kisiSayisi": 554,
-    "fonToplamDeger": 23732915.51,
-    "gunlukGetiri": -0.00270407,
+    "fiyat": 5.345996,
+    "tedavuldekiPaySayisi": 4445971,
+    "kisiSayisi": 555,
+    "fonToplamDeger": 23768143.14,
+    "gunlukGetiri": 0.0002874,
     "getiriler": {
-      "birAy": 0.052127999999999994,
-      "ucAy": 0.060164999999999996,
-      "altiAy": 0.12676199999999999,
-      "yilbasi": 0.327928,
-      "birYil": 0.535232,
-      "ucYil": 1.669889,
+      "birAy": 0.053793,
+      "ucAy": 0.06836,
+      "altiAy": 0.126667,
+      "yilbasi": 0.32831000000000005,
+      "birYil": 0.541914,
+      "ucYil": 1.7172040000000002,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -5820.12,
-      "besGun": null,
+      "gunluk": 28408.62,
+      "besGun": -14665.13,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
-      "besGun": null,
+      "gunluk": 1,
+      "besGun": 4,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RPC",
+        "fonAdi": "ROTA PORTFÖY İKLİM DEĞİŞİKLİĞİ ÇÖZÜMLERİ DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 5.345996,
+        "tedavuldekiPaySayisi": 4445971,
+        "kisiSayisi": 555,
+        "fonToplamDeger": 23768143.14,
+        "gunlukGetiri": 0.0002874,
+        "paraGirisiCikisi": 28408.62,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "RPC",
         "fonAdi": "ROTA PORTFÖY İKLİM DEĞİŞİKLİĞİ ÇÖZÜMLERİ DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00270407,
       "paraGirisiCikisi": -5820.12,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "RPC",
+      "fonAdi": "ROTA PORTFÖY İKLİM DEĞİŞİKLİĞİ ÇÖZÜMLERİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 5.345996,
+      "tedavuldekiPaySayisi": 4445971,
+      "kisiSayisi": 555,
+      "fonToplamDeger": 23768143.14,
+      "gunlukGetiri": 0.0002874,
+      "paraGirisiCikisi": 28408.62,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RPC",
+      "fonAdi": "ROTA PORTFÖY İKLİM DEĞİŞİKLİĞİ ÇÖZÜMLERİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 5.345996,
+      "tedavuldekiPaySayisi": 4445971,
+      "kisiSayisi": 555,
+      "fonToplamDeger": 23768143.14,
+      "gunlukGetiri": 0.0002874,
+      "paraGirisiCikisi": 28408.62,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "RPC",
       "fonAdi": "ROTA PORTFÖY İKLİM DEĞİŞİKLİĞİ ÇÖZÜMLERİ DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

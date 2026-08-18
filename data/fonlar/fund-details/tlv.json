@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TLV",
     "slug": "tlv",
@@ -12,44 +12,56 @@
     "yonetici": "TERA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "tera-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.354988,
-    "tedavuldekiPaySayisi": 2845235842,
-    "kisiSayisi": 10023,
-    "fonToplamDeger": 3855260438.98,
-    "gunlukGetiri": 0.00104686,
+    "fiyat": 1.3606,
+    "tedavuldekiPaySayisi": 2877203491,
+    "kisiSayisi": 10264,
+    "fonToplamDeger": 3914724394.36,
+    "gunlukGetiri": 0.00414173,
     "getiriler": {
-      "birAy": 0.034765000000000004,
-      "ucAy": 0.10484299999999999,
-      "altiAy": 0.223746,
-      "yilbasi": 0.288777,
+      "birAy": 0.032482000000000004,
+      "ucAy": 0.10405099999999999,
+      "altiAy": 0.226037,
+      "yilbasi": 0.294115,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -154732766.59,
-      "besGun": null,
+      "gunluk": 43495183.23,
+      "besGun": 74342927.57,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -7,
-      "besGun": null,
+      "gunluk": 241,
+      "besGun": 393,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TLV",
+        "fonAdi": "TERA PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.3606,
+        "tedavuldekiPaySayisi": 2877203491,
+        "kisiSayisi": 10264,
+        "fonToplamDeger": 3914724394.36,
+        "gunlukGetiri": 0.00414173,
+        "paraGirisiCikisi": 43495183.23,
+        "yatirimciDegisimi": 241
+      },
       {
         "fonKodu": "TLV",
         "fonAdi": "TERA PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00104686,
       "paraGirisiCikisi": -154732766.59,
       "yatirimciDegisimi": -7
+    },
+    {
+      "fonKodu": "TLV",
+      "fonAdi": "TERA PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.3606,
+      "tedavuldekiPaySayisi": 2877203491,
+      "kisiSayisi": 10264,
+      "fonToplamDeger": 3914724394.36,
+      "gunlukGetiri": 0.00414173,
+      "paraGirisiCikisi": 43495183.23,
+      "yatirimciDegisimi": 241
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TLV",
+      "fonAdi": "TERA PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.3606,
+      "tedavuldekiPaySayisi": 2877203491,
+      "kisiSayisi": 10264,
+      "fonToplamDeger": 3914724394.36,
+      "gunlukGetiri": 0.00414173,
+      "paraGirisiCikisi": 43495183.23,
+      "yatirimciDegisimi": 241
+    },
     {
       "fonKodu": "TLV",
       "fonAdi": "TERA PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

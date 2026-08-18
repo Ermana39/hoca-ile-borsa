@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KDE",
     "slug": "kde",
@@ -12,44 +12,56 @@
     "yonetici": "KUVEYT TÜRK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kuveyt-turk-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.75938,
-    "tedavuldekiPaySayisi": 338980289,
-    "kisiSayisi": 3400,
-    "fonToplamDeger": 596394972.5,
-    "gunlukGetiri": 0.00129189,
+    "fiyat": 1.768709,
+    "tedavuldekiPaySayisi": 343301222,
+    "kisiSayisi": 3414,
+    "fonToplamDeger": 607200093.75,
+    "gunlukGetiri": 0.00530244,
     "getiriler": {
-      "birAy": 0.031681,
-      "ucAy": 0.09631500000000001,
-      "altiAy": 0.24049600000000002,
-      "yilbasi": 0.38618699999999995,
-      "birYil": 0.554378,
+      "birAy": 0.034914,
+      "ucAy": 0.099885,
+      "altiAy": 0.24503599999999998,
+      "yilbasi": 0.393537,
+      "birYil": 0.5676,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1921498.07,
-      "besGun": null,
+      "gunluk": 7642473.09,
+      "besGun": 1429658.26,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 13,
-      "besGun": null,
+      "gunluk": 14,
+      "besGun": 64,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KDE",
+        "fonAdi": "KUVEYT TÜRK PORTFÖY DENGELİ KATILIM FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.768709,
+        "tedavuldekiPaySayisi": 343301222,
+        "kisiSayisi": 3414,
+        "fonToplamDeger": 607200093.75,
+        "gunlukGetiri": 0.00530244,
+        "paraGirisiCikisi": 7642473.09,
+        "yatirimciDegisimi": 14
+      },
       {
         "fonKodu": "KDE",
         "fonAdi": "KUVEYT TÜRK PORTFÖY DENGELİ KATILIM FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00129189,
       "paraGirisiCikisi": -1921498.07,
       "yatirimciDegisimi": 13
+    },
+    {
+      "fonKodu": "KDE",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY DENGELİ KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.768709,
+      "tedavuldekiPaySayisi": 343301222,
+      "kisiSayisi": 3414,
+      "fonToplamDeger": 607200093.75,
+      "gunlukGetiri": 0.00530244,
+      "paraGirisiCikisi": 7642473.09,
+      "yatirimciDegisimi": 14
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KDE",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY DENGELİ KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.768709,
+      "tedavuldekiPaySayisi": 343301222,
+      "kisiSayisi": 3414,
+      "fonToplamDeger": 607200093.75,
+      "gunlukGetiri": 0.00530244,
+      "paraGirisiCikisi": 7642473.09,
+      "yatirimciDegisimi": 14
+    },
     {
       "fonKodu": "KDE",
       "fonAdi": "KUVEYT TÜRK PORTFÖY DENGELİ KATILIM FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

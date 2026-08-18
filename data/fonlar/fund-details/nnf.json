@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "NNF",
     "slug": "nnf",
@@ -12,44 +12,56 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 22.990255,
-    "tedavuldekiPaySayisi": 96275632,
-    "kisiSayisi": 18735,
-    "fonToplamDeger": 2213401291.58,
-    "gunlukGetiri": 0.00252198,
+    "fiyat": 22.870477,
+    "tedavuldekiPaySayisi": 94660795,
+    "kisiSayisi": 18597,
+    "fonToplamDeger": 2164937560.81,
+    "gunlukGetiri": -0.00520995,
     "getiriler": {
-      "birAy": -0.00621,
-      "ucAy": -0.000395,
-      "altiAy": -0.073282,
-      "yilbasi": 0.12926500000000002,
-      "birYil": 0.070564,
-      "ucYil": 1.091504,
-      "besYil": 13.774915
+      "birAy": -0.016984,
+      "ucAy": -0.011044,
+      "altiAy": -0.08924599999999999,
+      "yilbasi": 0.123382,
+      "birYil": 0.081075,
+      "ucYil": 1.040022,
+      "besYil": 13.646404
     },
     "paraAkisi": {
-      "gunluk": -42688443.43,
-      "besGun": null,
+      "gunluk": -36932092.47,
+      "besGun": -191311585.09,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -135,
-      "besGun": null,
+      "gunluk": -138,
+      "besGun": -478,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NNF",
+        "fonAdi": "HEDEF PORTFÖY BİRİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 22.870477,
+        "tedavuldekiPaySayisi": 94660795,
+        "kisiSayisi": 18597,
+        "fonToplamDeger": 2164937560.81,
+        "gunlukGetiri": -0.00520995,
+        "paraGirisiCikisi": -36932092.47,
+        "yatirimciDegisimi": -138
+      },
       {
         "fonKodu": "NNF",
         "fonAdi": "HEDEF PORTFÖY BİRİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00252198,
       "paraGirisiCikisi": -42688443.43,
       "yatirimciDegisimi": -135
+    },
+    {
+      "fonKodu": "NNF",
+      "fonAdi": "HEDEF PORTFÖY BİRİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 22.870477,
+      "tedavuldekiPaySayisi": 94660795,
+      "kisiSayisi": 18597,
+      "fonToplamDeger": 2164937560.81,
+      "gunlukGetiri": -0.00520995,
+      "paraGirisiCikisi": -36932092.47,
+      "yatirimciDegisimi": -138
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NNF",
+      "fonAdi": "HEDEF PORTFÖY BİRİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 22.870477,
+      "tedavuldekiPaySayisi": 94660795,
+      "kisiSayisi": 18597,
+      "fonToplamDeger": 2164937560.81,
+      "gunlukGetiri": -0.00520995,
+      "paraGirisiCikisi": -36932092.47,
+      "yatirimciDegisimi": -138
+    },
     {
       "fonKodu": "NNF",
       "fonAdi": "HEDEF PORTFÖY BİRİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

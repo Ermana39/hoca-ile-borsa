@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YLO",
     "slug": "ylo",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 5.667254,
-    "tedavuldekiPaySayisi": 45873467,
-    "kisiSayisi": 5159,
-    "fonToplamDeger": 259976609.75,
-    "gunlukGetiri": 0.00102677,
+    "fiyat": 5.666753,
+    "tedavuldekiPaySayisi": 45411910,
+    "kisiSayisi": 5155,
+    "fonToplamDeger": 257338075.16,
+    "gunlukGetiri": -0.0000884,
     "getiriler": {
-      "birAy": 0.027803,
-      "ucAy": 0.050717,
-      "altiAy": 0.231738,
-      "yilbasi": 0.351637,
-      "birYil": 0.6112810000000001,
-      "ucYil": 1.899283,
+      "birAy": 0.062142,
+      "ucAy": 0.060658000000000004,
+      "altiAy": 0.23581600000000003,
+      "yilbasi": 0.351518,
+      "birYil": 0.622575,
+      "ucYil": 1.951362,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 277.7,
-      "besGun": null,
+      "gunluk": -2615529.51,
+      "besGun": -3182288.98,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
-      "besGun": null,
+      "gunluk": -4,
+      "besGun": -6,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YLO",
+        "fonAdi": "YAPI KREDİ PORTFÖY ELEKTRİKLİ ARAÇLAR DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 5.666753,
+        "tedavuldekiPaySayisi": 45411910,
+        "kisiSayisi": 5155,
+        "fonToplamDeger": 257338075.16,
+        "gunlukGetiri": -0.0000884,
+        "paraGirisiCikisi": -2615529.51,
+        "yatirimciDegisimi": -4
+      },
       {
         "fonKodu": "YLO",
         "fonAdi": "YAPI KREDİ PORTFÖY ELEKTRİKLİ ARAÇLAR DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00102677,
       "paraGirisiCikisi": 277.7,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "YLO",
+      "fonAdi": "YAPI KREDİ PORTFÖY ELEKTRİKLİ ARAÇLAR DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 5.666753,
+      "tedavuldekiPaySayisi": 45411910,
+      "kisiSayisi": 5155,
+      "fonToplamDeger": 257338075.16,
+      "gunlukGetiri": -0.0000884,
+      "paraGirisiCikisi": -2615529.51,
+      "yatirimciDegisimi": -4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YLO",
+      "fonAdi": "YAPI KREDİ PORTFÖY ELEKTRİKLİ ARAÇLAR DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 5.666753,
+      "tedavuldekiPaySayisi": 45411910,
+      "kisiSayisi": 5155,
+      "fonToplamDeger": 257338075.16,
+      "gunlukGetiri": -0.0000884,
+      "paraGirisiCikisi": -2615529.51,
+      "yatirimciDegisimi": -4
+    },
     {
       "fonKodu": "YLO",
       "fonAdi": "YAPI KREDİ PORTFÖY ELEKTRİKLİ ARAÇLAR DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

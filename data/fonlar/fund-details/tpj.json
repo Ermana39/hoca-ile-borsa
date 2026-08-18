@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TPJ",
     "slug": "tpj",
@@ -12,44 +12,56 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 78.025808,
-    "tedavuldekiPaySayisi": 28847448,
-    "kisiSayisi": 1478,
-    "fonToplamDeger": 2250845449.26,
-    "gunlukGetiri": 0.00115328,
+    "fiyat": 78.312957,
+    "tedavuldekiPaySayisi": 28817420,
+    "kisiSayisi": 1469,
+    "fonToplamDeger": 2256777362.67,
+    "gunlukGetiri": 0.00368018,
     "getiriler": {
-      "birAy": 0.02276,
-      "ucAy": 0.06727699999999999,
-      "altiAy": 0.108746,
-      "yilbasi": 0.132979,
-      "birYil": 0.24204599999999998,
-      "ucYil": 1.222621,
-      "besYil": 6.393365999999999
+      "birAy": 0.023447,
+      "ucAy": 0.073091,
+      "altiAy": 0.10833,
+      "yilbasi": 0.137149,
+      "birYil": 0.243821,
+      "ucYil": 1.239886,
+      "besYil": 6.520469
     },
     "paraAkisi": {
-      "gunluk": 139198.04,
-      "besGun": null,
+      "gunluk": -2351581.47,
+      "besGun": -202229541.8,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": -9,
+      "besGun": -11,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TPJ",
+        "fonAdi": "TEB PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 78.312957,
+        "tedavuldekiPaySayisi": 28817420,
+        "kisiSayisi": 1469,
+        "fonToplamDeger": 2256777362.67,
+        "gunlukGetiri": 0.00368018,
+        "paraGirisiCikisi": -2351581.47,
+        "yatirimciDegisimi": -9
+      },
       {
         "fonKodu": "TPJ",
         "fonAdi": "TEB PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00115328,
       "paraGirisiCikisi": 139198.04,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TPJ",
+      "fonAdi": "TEB PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 78.312957,
+      "tedavuldekiPaySayisi": 28817420,
+      "kisiSayisi": 1469,
+      "fonToplamDeger": 2256777362.67,
+      "gunlukGetiri": 0.00368018,
+      "paraGirisiCikisi": -2351581.47,
+      "yatirimciDegisimi": -9
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TPJ",
+      "fonAdi": "TEB PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 78.312957,
+      "tedavuldekiPaySayisi": 28817420,
+      "kisiSayisi": 1469,
+      "fonToplamDeger": 2256777362.67,
+      "gunlukGetiri": 0.00368018,
+      "paraGirisiCikisi": -2351581.47,
+      "yatirimciDegisimi": -9
+    },
     {
       "fonKodu": "TPJ",
       "fonAdi": "TEB PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

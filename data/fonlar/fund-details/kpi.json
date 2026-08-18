@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KPI",
     "slug": "kpi",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.461093,
-    "tedavuldekiPaySayisi": 3410096826,
-    "kisiSayisi": 6260,
-    "fonToplamDeger": 4982469286.38,
-    "gunlukGetiri": 0.00104963,
+    "fiyat": 1.467211,
+    "tedavuldekiPaySayisi": 3426713473,
+    "kisiSayisi": 6419,
+    "fonToplamDeger": 5027710938.57,
+    "gunlukGetiri": 0.00418728,
     "getiriler": {
-      "birAy": 0.033035,
-      "ucAy": 0.10175000000000001,
-      "altiAy": 0.203943,
-      "yilbasi": 0.257668,
-      "birYil": 0.456271,
+      "birAy": 0.030823,
+      "ucAy": 0.101815,
+      "altiAy": 0.206674,
+      "yilbasi": 0.262934,
+      "birYil": 0.455961,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 103791502.72,
-      "besGun": null,
+      "gunluk": 24380127.26,
+      "besGun": 399432198.38,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -13,
-      "besGun": null,
+      "gunluk": 159,
+      "besGun": 205,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KPI",
+        "fonAdi": "İŞ PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.467211,
+        "tedavuldekiPaySayisi": 3426713473,
+        "kisiSayisi": 6419,
+        "fonToplamDeger": 5027710938.57,
+        "gunlukGetiri": 0.00418728,
+        "paraGirisiCikisi": 24380127.26,
+        "yatirimciDegisimi": 159
+      },
       {
         "fonKodu": "KPI",
         "fonAdi": "İŞ PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00104963,
       "paraGirisiCikisi": 103791502.72,
       "yatirimciDegisimi": -13
+    },
+    {
+      "fonKodu": "KPI",
+      "fonAdi": "İŞ PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.467211,
+      "tedavuldekiPaySayisi": 3426713473,
+      "kisiSayisi": 6419,
+      "fonToplamDeger": 5027710938.57,
+      "gunlukGetiri": 0.00418728,
+      "paraGirisiCikisi": 24380127.26,
+      "yatirimciDegisimi": 159
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KPI",
+      "fonAdi": "İŞ PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.467211,
+      "tedavuldekiPaySayisi": 3426713473,
+      "kisiSayisi": 6419,
+      "fonToplamDeger": 5027710938.57,
+      "gunlukGetiri": 0.00418728,
+      "paraGirisiCikisi": 24380127.26,
+      "yatirimciDegisimi": 159
+    },
     {
       "fonKodu": "KPI",
       "fonAdi": "İŞ PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TMC",
     "slug": "tmc",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.162873,
-    "tedavuldekiPaySayisi": 1077208216,
-    "kisiSayisi": 11979,
-    "fonToplamDeger": 175448261.82,
-    "gunlukGetiri": -0.00328621,
+    "fiyat": 0.162719,
+    "tedavuldekiPaySayisi": 1052044102,
+    "kisiSayisi": 11926,
+    "fonToplamDeger": 171187660.88,
+    "gunlukGetiri": -0.00094552,
     "getiriler": {
-      "birAy": 0.032403,
-      "ucAy": 0.08866500000000001,
-      "altiAy": 0.093937,
-      "yilbasi": 0.154997,
-      "birYil": 0.282,
-      "ucYil": 1.5850810000000002,
-      "besYil": 4.426387
+      "birAy": 0.014167,
+      "ucAy": 0.083659,
+      "altiAy": 0.093439,
+      "yilbasi": 0.153905,
+      "birYil": 0.278192,
+      "ucYil": 1.601714,
+      "besYil": 4.408103
     },
     "paraAkisi": {
-      "gunluk": -1119572.55,
-      "besGun": null,
+      "gunluk": -4094679.47,
+      "besGun": 1952347.7,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 24,
-      "besGun": null,
+      "gunluk": -53,
+      "besGun": 76,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TMC",
+        "fonAdi": "İŞ PORTFÖY TEMA DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 0.162719,
+        "tedavuldekiPaySayisi": 1052044102,
+        "kisiSayisi": 11926,
+        "fonToplamDeger": 171187660.88,
+        "gunlukGetiri": -0.00094552,
+        "paraGirisiCikisi": -4094679.47,
+        "yatirimciDegisimi": -53
+      },
       {
         "fonKodu": "TMC",
         "fonAdi": "İŞ PORTFÖY TEMA DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00328621,
       "paraGirisiCikisi": -1119572.55,
       "yatirimciDegisimi": 24
+    },
+    {
+      "fonKodu": "TMC",
+      "fonAdi": "İŞ PORTFÖY TEMA DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 0.162719,
+      "tedavuldekiPaySayisi": 1052044102,
+      "kisiSayisi": 11926,
+      "fonToplamDeger": 171187660.88,
+      "gunlukGetiri": -0.00094552,
+      "paraGirisiCikisi": -4094679.47,
+      "yatirimciDegisimi": -53
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TMC",
+      "fonAdi": "İŞ PORTFÖY TEMA DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 0.162719,
+      "tedavuldekiPaySayisi": 1052044102,
+      "kisiSayisi": 11926,
+      "fonToplamDeger": 171187660.88,
+      "gunlukGetiri": -0.00094552,
+      "paraGirisiCikisi": -4094679.47,
+      "yatirimciDegisimi": -53
+    },
     {
       "fonKodu": "TMC",
       "fonAdi": "İŞ PORTFÖY TEMA DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

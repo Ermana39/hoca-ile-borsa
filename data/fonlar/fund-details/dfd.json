@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DFD",
     "slug": "dfd",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 2.650895,
-    "tedavuldekiPaySayisi": 52562553,
-    "kisiSayisi": 445,
-    "fonToplamDeger": 139337818.26,
-    "gunlukGetiri": -0.00701373,
+    "fiyat": 2.671559,
+    "tedavuldekiPaySayisi": 52477110,
+    "kisiSayisi": 441,
+    "fonToplamDeger": 140195709.45,
+    "gunlukGetiri": 0.0077951,
     "getiriler": {
-      "birAy": 0.062814,
-      "ucAy": -0.017557,
-      "altiAy": 0.159093,
-      "yilbasi": 0.212238,
-      "birYil": 0.404559,
-      "ucYil": 1.0724200000000002,
+      "birAy": 0.065439,
+      "ucAy": 0.011687000000000001,
+      "altiAy": 0.175386,
+      "yilbasi": 0.22168700000000002,
+      "birYil": 0.417032,
+      "ucYil": 1.113261,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -287195.31,
-      "besGun": null,
+      "gunluk": -228266.02,
+      "besGun": -540807.3,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": null,
+      "gunluk": -4,
+      "besGun": -8,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DFD",
+        "fonAdi": "DENİZ PORTFÖY EMTİA SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 2.671559,
+        "tedavuldekiPaySayisi": 52477110,
+        "kisiSayisi": 441,
+        "fonToplamDeger": 140195709.45,
+        "gunlukGetiri": 0.0077951,
+        "paraGirisiCikisi": -228266.02,
+        "yatirimciDegisimi": -4
+      },
       {
         "fonKodu": "DFD",
         "fonAdi": "DENİZ PORTFÖY EMTİA SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00701373,
       "paraGirisiCikisi": -287195.31,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "DFD",
+      "fonAdi": "DENİZ PORTFÖY EMTİA SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 2.671559,
+      "tedavuldekiPaySayisi": 52477110,
+      "kisiSayisi": 441,
+      "fonToplamDeger": 140195709.45,
+      "gunlukGetiri": 0.0077951,
+      "paraGirisiCikisi": -228266.02,
+      "yatirimciDegisimi": -4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DFD",
+      "fonAdi": "DENİZ PORTFÖY EMTİA SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 2.671559,
+      "tedavuldekiPaySayisi": 52477110,
+      "kisiSayisi": 441,
+      "fonToplamDeger": 140195709.45,
+      "gunlukGetiri": 0.0077951,
+      "paraGirisiCikisi": -228266.02,
+      "yatirimciDegisimi": -4
+    },
     {
       "fonKodu": "DFD",
       "fonAdi": "DENİZ PORTFÖY EMTİA SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

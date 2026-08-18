@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "OPH",
     "slug": "oph",
@@ -12,44 +12,56 @@
     "yonetici": "OSMANLI PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "osmanli-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 25.817148,
-    "tedavuldekiPaySayisi": 35532476,
-    "kisiSayisi": 2516,
-    "fonToplamDeger": 917347195.31,
-    "gunlukGetiri": 0.00046308,
+    "fiyat": 26.009156,
+    "tedavuldekiPaySayisi": 35529976,
+    "kisiSayisi": 2515,
+    "fonToplamDeger": 924104696.96,
+    "gunlukGetiri": 0.00743723,
     "getiriler": {
-      "birAy": 0.023906,
-      "ucAy": -0.009588,
-      "altiAy": 0.026174,
-      "yilbasi": 0.254769,
-      "birYil": 0.321885,
-      "ucYil": 0.973758,
-      "besYil": 10.683728
+      "birAy": 0.007745999999999999,
+      "ucAy": 0.003174,
+      "altiAy": 0.033208,
+      "yilbasi": 0.264101,
+      "birYil": 0.34254399999999996,
+      "ucYil": 0.935877,
+      "besYil": 10.695075
     },
     "paraAkisi": {
-      "gunluk": 33097.58,
-      "besGun": null,
+      "gunluk": -65022.89,
+      "besGun": 412851.64,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
-      "besGun": null,
+      "gunluk": -1,
+      "besGun": -5,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OPH",
+        "fonAdi": "OSMANLI PORTFÖY BİRİNCİ HİSSE SENEDİ FONU(HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 26.009156,
+        "tedavuldekiPaySayisi": 35529976,
+        "kisiSayisi": 2515,
+        "fonToplamDeger": 924104696.96,
+        "gunlukGetiri": 0.00743723,
+        "paraGirisiCikisi": -65022.89,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "OPH",
         "fonAdi": "OSMANLI PORTFÖY BİRİNCİ HİSSE SENEDİ FONU(HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00046308,
       "paraGirisiCikisi": 33097.58,
       "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "OPH",
+      "fonAdi": "OSMANLI PORTFÖY BİRİNCİ HİSSE SENEDİ FONU(HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 26.009156,
+      "tedavuldekiPaySayisi": 35529976,
+      "kisiSayisi": 2515,
+      "fonToplamDeger": 924104696.96,
+      "gunlukGetiri": 0.00743723,
+      "paraGirisiCikisi": -65022.89,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OPH",
+      "fonAdi": "OSMANLI PORTFÖY BİRİNCİ HİSSE SENEDİ FONU(HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 26.009156,
+      "tedavuldekiPaySayisi": 35529976,
+      "kisiSayisi": 2515,
+      "fonToplamDeger": 924104696.96,
+      "gunlukGetiri": 0.00743723,
+      "paraGirisiCikisi": -65022.89,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "OPH",
       "fonAdi": "OSMANLI PORTFÖY BİRİNCİ HİSSE SENEDİ FONU(HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

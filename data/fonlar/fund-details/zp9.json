@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ZP9",
     "slug": "zp9",
@@ -12,44 +12,56 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 60.131029,
-    "tedavuldekiPaySayisi": 35994419,
+    "fiyat": 60.661673,
+    "tedavuldekiPaySayisi": 35967197,
     "kisiSayisi": 805,
-    "fonToplamDeger": 2164381435.94,
-    "gunlukGetiri": -0.00033388,
+    "fonToplamDeger": 2181830325.74,
+    "gunlukGetiri": 0.00882479,
     "getiriler": {
-      "birAy": 0.027715,
-      "ucAy": 0.040605,
-      "altiAy": 0.073398,
-      "yilbasi": 0.10381,
-      "birYil": 0.17127099999999998,
-      "ucYil": 0.9676560000000001,
+      "birAy": 0.033623,
+      "ucAy": 0.055015,
+      "altiAy": 0.081864,
+      "yilbasi": 0.113551,
+      "birYil": 0.182317,
+      "ucYil": 0.999512,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 24597258.85,
-      "besGun": null,
+      "gunluk": -1651332.06,
+      "besGun": 6387028.53,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 4,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": 7,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZP9",
+        "fonAdi": "ZİRAAT PORTFÖY AKİK KATILIM SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 60.661673,
+        "tedavuldekiPaySayisi": 35967197,
+        "kisiSayisi": 805,
+        "fonToplamDeger": 2181830325.74,
+        "gunlukGetiri": 0.00882479,
+        "paraGirisiCikisi": -1651332.06,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "ZP9",
         "fonAdi": "ZİRAAT PORTFÖY AKİK KATILIM SERBEST (DÖVİZ-AVRO) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00033388,
       "paraGirisiCikisi": 24597258.85,
       "yatirimciDegisimi": 4
+    },
+    {
+      "fonKodu": "ZP9",
+      "fonAdi": "ZİRAAT PORTFÖY AKİK KATILIM SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 60.661673,
+      "tedavuldekiPaySayisi": 35967197,
+      "kisiSayisi": 805,
+      "fonToplamDeger": 2181830325.74,
+      "gunlukGetiri": 0.00882479,
+      "paraGirisiCikisi": -1651332.06,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZP9",
+      "fonAdi": "ZİRAAT PORTFÖY AKİK KATILIM SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 60.661673,
+      "tedavuldekiPaySayisi": 35967197,
+      "kisiSayisi": 805,
+      "fonToplamDeger": 2181830325.74,
+      "gunlukGetiri": 0.00882479,
+      "paraGirisiCikisi": -1651332.06,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "ZP9",
       "fonAdi": "ZİRAAT PORTFÖY AKİK KATILIM SERBEST (DÖVİZ-AVRO) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

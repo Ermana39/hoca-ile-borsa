@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ODN",
     "slug": "odn",
@@ -12,13 +12,13 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 57.727094,
-    "tedavuldekiPaySayisi": 480609418,
-    "kisiSayisi": 3447,
-    "fonToplamDeger": 27744184848.84,
-    "gunlukGetiri": 0.00074874,
+    "fiyat": 57.930284,
+    "tedavuldekiPaySayisi": 506267478,
+    "kisiSayisi": 3696,
+    "fonToplamDeger": 29328218598.37,
+    "gunlukGetiri": 0.00351984,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 783184234.75,
-      "besGun": null,
+      "gunluk": 1486378702.69,
+      "besGun": 4568774855.26,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 102,
-      "besGun": null,
+      "gunluk": 249,
+      "besGun": 580,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ODN",
+        "fonAdi": "AK PORTFÖY ONDÖRDÜNCÜ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 57.930284,
+        "tedavuldekiPaySayisi": 506267478,
+        "kisiSayisi": 3696,
+        "fonToplamDeger": 29328218598.37,
+        "gunlukGetiri": 0.00351984,
+        "paraGirisiCikisi": 1486378702.69,
+        "yatirimciDegisimi": 249
+      },
       {
         "fonKodu": "ODN",
         "fonAdi": "AK PORTFÖY ONDÖRDÜNCÜ SERBEST (DÖVİZ) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00074874,
       "paraGirisiCikisi": 783184234.75,
       "yatirimciDegisimi": 102
+    },
+    {
+      "fonKodu": "ODN",
+      "fonAdi": "AK PORTFÖY ONDÖRDÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 57.930284,
+      "tedavuldekiPaySayisi": 506267478,
+      "kisiSayisi": 3696,
+      "fonToplamDeger": 29328218598.37,
+      "gunlukGetiri": 0.00351984,
+      "paraGirisiCikisi": 1486378702.69,
+      "yatirimciDegisimi": 249
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ODN",
+      "fonAdi": "AK PORTFÖY ONDÖRDÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 57.930284,
+      "tedavuldekiPaySayisi": 506267478,
+      "kisiSayisi": 3696,
+      "fonToplamDeger": 29328218598.37,
+      "gunlukGetiri": 0.00351984,
+      "paraGirisiCikisi": 1486378702.69,
+      "yatirimciDegisimi": 249
+    },
     {
       "fonKodu": "ODN",
       "fonAdi": "AK PORTFÖY ONDÖRDÜNCÜ SERBEST (DÖVİZ) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

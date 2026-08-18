@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TKM",
     "slug": "tkm",
@@ -12,13 +12,13 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.213764,
-    "tedavuldekiPaySayisi": 349703752530,
-    "kisiSayisi": 504877,
-    "fonToplamDeger": 74753936221.63,
-    "gunlukGetiri": 0.00104898,
+    "fiyat": 0.21467,
+    "tedavuldekiPaySayisi": 341069046021,
+    "kisiSayisi": 503148,
+    "fonToplamDeger": 73217160736.92,
+    "gunlukGetiri": 0.00423832,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 657921088.9,
-      "besGun": null,
+      "gunluk": -1853612446.29,
+      "besGun": -188400567.6,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -53,
-      "besGun": null,
+      "gunluk": -1729,
+      "besGun": -2737,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TKM",
+        "fonAdi": "TEB PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 0.21467,
+        "tedavuldekiPaySayisi": 341069046021,
+        "kisiSayisi": 503148,
+        "fonToplamDeger": 73217160736.92,
+        "gunlukGetiri": 0.00423832,
+        "paraGirisiCikisi": -1853612446.29,
+        "yatirimciDegisimi": -1729
+      },
       {
         "fonKodu": "TKM",
         "fonAdi": "TEB PORTFÖY PARA PİYASASI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00104898,
       "paraGirisiCikisi": 657921088.9,
       "yatirimciDegisimi": -53
+    },
+    {
+      "fonKodu": "TKM",
+      "fonAdi": "TEB PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.21467,
+      "tedavuldekiPaySayisi": 341069046021,
+      "kisiSayisi": 503148,
+      "fonToplamDeger": 73217160736.92,
+      "gunlukGetiri": 0.00423832,
+      "paraGirisiCikisi": -1853612446.29,
+      "yatirimciDegisimi": -1729
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TKM",
+      "fonAdi": "TEB PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.21467,
+      "tedavuldekiPaySayisi": 341069046021,
+      "kisiSayisi": 503148,
+      "fonToplamDeger": 73217160736.92,
+      "gunlukGetiri": 0.00423832,
+      "paraGirisiCikisi": -1853612446.29,
+      "yatirimciDegisimi": -1729
+    },
     {
       "fonKodu": "TKM",
       "fonAdi": "TEB PORTFÖY PARA PİYASASI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

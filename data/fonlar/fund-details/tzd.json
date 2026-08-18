@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TZD",
     "slug": "tzd",
@@ -12,44 +12,56 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 2.503999,
-    "tedavuldekiPaySayisi": 268796399.05,
-    "kisiSayisi": 7876,
-    "fonToplamDeger": 673065946.7,
-    "gunlukGetiri": -0.00069201,
+    "fiyat": 2.493089,
+    "tedavuldekiPaySayisi": 268134099.05,
+    "kisiSayisi": 7857,
+    "fonToplamDeger": 668482190.71,
+    "gunlukGetiri": -0.00435703,
     "getiriler": {
-      "birAy": 0.049953000000000004,
-      "ucAy": -0.00043200000000000004,
-      "altiAy": 0.009753,
-      "yilbasi": 0.214975,
-      "birYil": 0.237111,
-      "ucYil": 0.861159,
-      "besYil": 10.540815
+      "birAy": 0.013531999999999999,
+      "ucAy": 0.014338,
+      "altiAy": 0.007699,
+      "yilbasi": 0.209681,
+      "birYil": 0.247534,
+      "ucYil": 0.8124720000000001,
+      "besYil": 10.36741
     },
     "paraAkisi": {
-      "gunluk": 586186.17,
-      "besGun": null,
+      "gunluk": -1651172.84,
+      "besGun": -5005529.49,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -9,
-      "besGun": null,
+      "gunluk": -19,
+      "besGun": -25,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TZD",
+        "fonAdi": "ZİRAAT PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 2.493089,
+        "tedavuldekiPaySayisi": 268134099.05,
+        "kisiSayisi": 7857,
+        "fonToplamDeger": 668482190.71,
+        "gunlukGetiri": -0.00435703,
+        "paraGirisiCikisi": -1651172.84,
+        "yatirimciDegisimi": -19
+      },
       {
         "fonKodu": "TZD",
         "fonAdi": "ZİRAAT PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00069201,
       "paraGirisiCikisi": 586186.17,
       "yatirimciDegisimi": -9
+    },
+    {
+      "fonKodu": "TZD",
+      "fonAdi": "ZİRAAT PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 2.493089,
+      "tedavuldekiPaySayisi": 268134099.05,
+      "kisiSayisi": 7857,
+      "fonToplamDeger": 668482190.71,
+      "gunlukGetiri": -0.00435703,
+      "paraGirisiCikisi": -1651172.84,
+      "yatirimciDegisimi": -19
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TZD",
+      "fonAdi": "ZİRAAT PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 2.493089,
+      "tedavuldekiPaySayisi": 268134099.05,
+      "kisiSayisi": 7857,
+      "fonToplamDeger": 668482190.71,
+      "gunlukGetiri": -0.00435703,
+      "paraGirisiCikisi": -1651172.84,
+      "yatirimciDegisimi": -19
+    },
     {
       "fonKodu": "TZD",
       "fonAdi": "ZİRAAT PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

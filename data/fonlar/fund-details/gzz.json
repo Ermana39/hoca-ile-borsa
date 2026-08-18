@@ -1,55 +1,67 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GZZ",
     "slug": "gzz",
     "ad": "GARANTİ PORTFÖY FİNANSAL TEKNOLOJİLER DEĞİŞKEN FON",
     "kategori": "Değişken Şemsiye Fonu",
-    "riskDegeri": 6,
+    "riskDegeri": 5,
     "kapYoneticiKodu": "GPY",
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 7.004404,
-    "tedavuldekiPaySayisi": 9208708,
-    "kisiSayisi": 1214,
-    "fonToplamDeger": 64501509.89,
-    "gunlukGetiri": 0.01164319,
+    "fiyat": 7.010762,
+    "tedavuldekiPaySayisi": 9152252,
+    "kisiSayisi": 1212,
+    "fonToplamDeger": 64164264.55,
+    "gunlukGetiri": 0.00090771,
     "getiriler": {
-      "birAy": 0.047108,
-      "ucAy": 0.08466900000000001,
-      "altiAy": 0.059821,
-      "yilbasi": 0.077927,
-      "birYil": 0.183003,
-      "ucYil": 1.606867,
+      "birAy": 0.053301,
+      "ucAy": 0.088551,
+      "altiAy": 0.0512,
+      "yilbasi": 0.078905,
+      "birYil": 0.18381,
+      "ucYil": 1.6448740000000002,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 89971.57,
-      "besGun": null,
+      "gunluk": -395799.58,
+      "besGun": -692397.49,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -6,
-      "besGun": null,
+      "gunluk": -2,
+      "besGun": -9,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GZZ",
+        "fonAdi": "GARANTİ PORTFÖY FİNANSAL TEKNOLOJİLER DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 7.010762,
+        "tedavuldekiPaySayisi": 9152252,
+        "kisiSayisi": 1212,
+        "fonToplamDeger": 64164264.55,
+        "gunlukGetiri": 0.00090771,
+        "paraGirisiCikisi": -395799.58,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "GZZ",
         "fonAdi": "GARANTİ PORTFÖY FİNANSAL TEKNOLOJİLER DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.01164319,
       "paraGirisiCikisi": 89971.57,
       "yatirimciDegisimi": -6
+    },
+    {
+      "fonKodu": "GZZ",
+      "fonAdi": "GARANTİ PORTFÖY FİNANSAL TEKNOLOJİLER DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 7.010762,
+      "tedavuldekiPaySayisi": 9152252,
+      "kisiSayisi": 1212,
+      "fonToplamDeger": 64164264.55,
+      "gunlukGetiri": 0.00090771,
+      "paraGirisiCikisi": -395799.58,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GZZ",
+      "fonAdi": "GARANTİ PORTFÖY FİNANSAL TEKNOLOJİLER DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 7.010762,
+      "tedavuldekiPaySayisi": 9152252,
+      "kisiSayisi": 1212,
+      "fonToplamDeger": 64164264.55,
+      "gunlukGetiri": 0.00090771,
+      "paraGirisiCikisi": -395799.58,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "GZZ",
       "fonAdi": "GARANTİ PORTFÖY FİNANSAL TEKNOLOJİLER DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

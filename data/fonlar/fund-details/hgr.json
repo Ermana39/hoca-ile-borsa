@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "HGR",
     "slug": "hgr",
@@ -12,44 +12,56 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.330307,
-    "tedavuldekiPaySayisi": 24580946,
-    "kisiSayisi": 154,
-    "fonToplamDeger": 32700202.94,
-    "gunlukGetiri": 0.00166479,
+    "fiyat": 1.335552,
+    "tedavuldekiPaySayisi": 25088847,
+    "kisiSayisi": 155,
+    "fonToplamDeger": 33507467.54,
+    "gunlukGetiri": 0.0039427,
     "getiriler": {
-      "birAy": 0.040271999999999995,
-      "ucAy": 0.093614,
-      "altiAy": 0.175802,
-      "yilbasi": 0.29993,
+      "birAy": 0.035912,
+      "ucAy": 0.10091699999999999,
+      "altiAy": 0.182707,
+      "yilbasi": 0.305055,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -26450.49,
-      "besGun": null,
+      "gunluk": 678328.2,
+      "besGun": 615764.12,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": 1,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HGR",
+        "fonAdi": "HEDEF PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.335552,
+        "tedavuldekiPaySayisi": 25088847,
+        "kisiSayisi": 155,
+        "fonToplamDeger": 33507467.54,
+        "gunlukGetiri": 0.0039427,
+        "paraGirisiCikisi": 678328.2,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "HGR",
         "fonAdi": "HEDEF PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00166479,
       "paraGirisiCikisi": -26450.49,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HGR",
+      "fonAdi": "HEDEF PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.335552,
+      "tedavuldekiPaySayisi": 25088847,
+      "kisiSayisi": 155,
+      "fonToplamDeger": 33507467.54,
+      "gunlukGetiri": 0.0039427,
+      "paraGirisiCikisi": 678328.2,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HGR",
+      "fonAdi": "HEDEF PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.335552,
+      "tedavuldekiPaySayisi": 25088847,
+      "kisiSayisi": 155,
+      "fonToplamDeger": 33507467.54,
+      "gunlukGetiri": 0.0039427,
+      "paraGirisiCikisi": 678328.2,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "HGR",
       "fonAdi": "HEDEF PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

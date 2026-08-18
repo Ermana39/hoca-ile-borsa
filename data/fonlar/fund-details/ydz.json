@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YDZ",
     "slug": "ydz",
@@ -12,13 +12,13 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 54.767312,
-    "tedavuldekiPaySayisi": 206671608,
-    "kisiSayisi": 2924,
-    "fonToplamDeger": 11318848491.27,
-    "gunlukGetiri": 0.00050912,
+    "fiyat": 54.937544,
+    "tedavuldekiPaySayisi": 206328171,
+    "kisiSayisi": 2917,
+    "fonToplamDeger": 11335162993.65,
+    "gunlukGetiri": 0.00310828,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -38908834.37,
-      "besGun": null,
+      "gunluk": -18867585.3,
+      "besGun": -158894943.74,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
-      "besGun": null,
+      "gunluk": -7,
+      "besGun": -2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YDZ",
+        "fonAdi": "YAPI KREDİ PORTFÖY ODEABANK DÖRDÜNCÜ SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-18",
+        "fiyat": 54.937544,
+        "tedavuldekiPaySayisi": 206328171,
+        "kisiSayisi": 2917,
+        "fonToplamDeger": 11335162993.65,
+        "gunlukGetiri": 0.00310828,
+        "paraGirisiCikisi": -18867585.3,
+        "yatirimciDegisimi": -7
+      },
       {
         "fonKodu": "YDZ",
         "fonAdi": "YAPI KREDİ PORTFÖY ODEABANK DÖRDÜNCÜ SERBEST (DÖVİZ) ÖZEL FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00050912,
       "paraGirisiCikisi": -38908834.37,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "YDZ",
+      "fonAdi": "YAPI KREDİ PORTFÖY ODEABANK DÖRDÜNCÜ SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-18",
+      "fiyat": 54.937544,
+      "tedavuldekiPaySayisi": 206328171,
+      "kisiSayisi": 2917,
+      "fonToplamDeger": 11335162993.65,
+      "gunlukGetiri": 0.00310828,
+      "paraGirisiCikisi": -18867585.3,
+      "yatirimciDegisimi": -7
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YDZ",
+      "fonAdi": "YAPI KREDİ PORTFÖY ODEABANK DÖRDÜNCÜ SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-18",
+      "fiyat": 54.937544,
+      "tedavuldekiPaySayisi": 206328171,
+      "kisiSayisi": 2917,
+      "fonToplamDeger": 11335162993.65,
+      "gunlukGetiri": 0.00310828,
+      "paraGirisiCikisi": -18867585.3,
+      "yatirimciDegisimi": -7
+    },
     {
       "fonKodu": "YDZ",
       "fonAdi": "YAPI KREDİ PORTFÖY ODEABANK DÖRDÜNCÜ SERBEST (DÖVİZ) ÖZEL FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

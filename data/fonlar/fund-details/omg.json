@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "OMG",
     "slug": "omg",
@@ -12,44 +12,56 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.823829,
-    "tedavuldekiPaySayisi": 719357536,
-    "kisiSayisi": 727,
-    "fonToplamDeger": 1311985151.64,
-    "gunlukGetiri": 0.00123244,
+    "fiyat": 1.826067,
+    "tedavuldekiPaySayisi": 718331505,
+    "kisiSayisi": 728,
+    "fonToplamDeger": 1311721161.14,
+    "gunlukGetiri": 0.00122709,
     "getiriler": {
-      "birAy": 0.029785,
-      "ucAy": -0.0070030000000000005,
-      "altiAy": 0.060740999999999996,
-      "yilbasi": 0.344108,
-      "birYil": 0.425638,
+      "birAy": 0.017118,
+      "ucAy": 0.005112,
+      "altiAy": 0.061187,
+      "yilbasi": 0.345757,
+      "birYil": 0.44259,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1893796.55,
-      "besGun": null,
+      "gunluk": -1873601.35,
+      "besGun": -16918040.86,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": 1,
+      "besGun": -16,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OMG",
+        "fonAdi": "AZİMUT PORTFÖY İKİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.826067,
+        "tedavuldekiPaySayisi": 718331505,
+        "kisiSayisi": 728,
+        "fonToplamDeger": 1311721161.14,
+        "gunlukGetiri": 0.00122709,
+        "paraGirisiCikisi": -1873601.35,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "OMG",
         "fonAdi": "AZİMUT PORTFÖY İKİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00123244,
       "paraGirisiCikisi": -1893796.55,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "OMG",
+      "fonAdi": "AZİMUT PORTFÖY İKİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.826067,
+      "tedavuldekiPaySayisi": 718331505,
+      "kisiSayisi": 728,
+      "fonToplamDeger": 1311721161.14,
+      "gunlukGetiri": 0.00122709,
+      "paraGirisiCikisi": -1873601.35,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OMG",
+      "fonAdi": "AZİMUT PORTFÖY İKİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.826067,
+      "tedavuldekiPaySayisi": 718331505,
+      "kisiSayisi": 728,
+      "fonToplamDeger": 1311721161.14,
+      "gunlukGetiri": 0.00122709,
+      "paraGirisiCikisi": -1873601.35,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "OMG",
       "fonAdi": "AZİMUT PORTFÖY İKİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

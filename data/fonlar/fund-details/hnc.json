@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "HNC",
     "slug": "hnc",
@@ -12,44 +12,56 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.366211,
-    "tedavuldekiPaySayisi": 3765379,
-    "kisiSayisi": 105,
-    "fonToplamDeger": 5144302.84,
-    "gunlukGetiri": 0.00689758,
+    "fiyat": 1.360724,
+    "tedavuldekiPaySayisi": 3773760,
+    "kisiSayisi": 103,
+    "fonToplamDeger": 5135046.14,
+    "gunlukGetiri": -0.00401622,
     "getiriler": {
-      "birAy": 0.020291999999999998,
-      "ucAy": -0.050739,
-      "altiAy": 0.045572999999999995,
-      "yilbasi": 0.215033,
-      "birYil": 0.20948599999999998,
+      "birAy": 0.001149,
+      "ucAy": -0.037124000000000004,
+      "altiAy": 0.035757,
+      "yilbasi": 0.210153,
+      "birYil": 0.20776499999999998,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 4590.47,
-      "besGun": null,
+      "gunluk": 11404.23,
+      "besGun": 16544.2,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": null,
+      "gunluk": -2,
+      "besGun": -2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HNC",
+        "fonAdi": "HEDEF PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.360724,
+        "tedavuldekiPaySayisi": 3773760,
+        "kisiSayisi": 103,
+        "fonToplamDeger": 5135046.14,
+        "gunlukGetiri": -0.00401622,
+        "paraGirisiCikisi": 11404.23,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "HNC",
         "fonAdi": "HEDEF PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00689758,
       "paraGirisiCikisi": 4590.47,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "HNC",
+      "fonAdi": "HEDEF PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.360724,
+      "tedavuldekiPaySayisi": 3773760,
+      "kisiSayisi": 103,
+      "fonToplamDeger": 5135046.14,
+      "gunlukGetiri": -0.00401622,
+      "paraGirisiCikisi": 11404.23,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HNC",
+      "fonAdi": "HEDEF PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.360724,
+      "tedavuldekiPaySayisi": 3773760,
+      "kisiSayisi": 103,
+      "fonToplamDeger": 5135046.14,
+      "gunlukGetiri": -0.00401622,
+      "paraGirisiCikisi": 11404.23,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "HNC",
       "fonAdi": "HEDEF PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

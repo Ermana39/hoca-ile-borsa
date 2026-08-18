@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ASJ",
     "slug": "asj",
@@ -12,44 +12,56 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 3.858975,
-    "tedavuldekiPaySayisi": 15775554,
-    "kisiSayisi": 759,
-    "fonToplamDeger": 60877469.79,
-    "gunlukGetiri": 0.00001425,
+    "fiyat": 3.862708,
+    "tedavuldekiPaySayisi": 15746008,
+    "kisiSayisi": 757,
+    "fonToplamDeger": 60822229.99,
+    "gunlukGetiri": 0.00096736,
     "getiriler": {
-      "birAy": 0.015848,
-      "ucAy": -0.008673,
-      "altiAy": 0.005155999999999999,
-      "yilbasi": 0.29412900000000003,
-      "birYil": 0.24637599999999998,
-      "ucYil": 1.5215319999999999,
+      "birAy": 0.001273,
+      "ucAy": 0.005750999999999999,
+      "altiAy": 0.013375999999999999,
+      "yilbasi": 0.295381,
+      "birYil": 0.25144,
+      "ucYil": 1.475392,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 72490.85,
-      "besGun": null,
+      "gunluk": -114127.57,
+      "besGun": -595123.86,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": -2,
+      "besGun": -9,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ASJ",
+        "fonAdi": "AKTİF PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 3.862708,
+        "tedavuldekiPaySayisi": 15746008,
+        "kisiSayisi": 757,
+        "fonToplamDeger": 60822229.99,
+        "gunlukGetiri": 0.00096736,
+        "paraGirisiCikisi": -114127.57,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "ASJ",
         "fonAdi": "AKTİF PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00001425,
       "paraGirisiCikisi": 72490.85,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "ASJ",
+      "fonAdi": "AKTİF PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 3.862708,
+      "tedavuldekiPaySayisi": 15746008,
+      "kisiSayisi": 757,
+      "fonToplamDeger": 60822229.99,
+      "gunlukGetiri": 0.00096736,
+      "paraGirisiCikisi": -114127.57,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ASJ",
+      "fonAdi": "AKTİF PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 3.862708,
+      "tedavuldekiPaySayisi": 15746008,
+      "kisiSayisi": 757,
+      "fonToplamDeger": 60822229.99,
+      "gunlukGetiri": 0.00096736,
+      "paraGirisiCikisi": -114127.57,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "ASJ",
       "fonAdi": "AKTİF PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

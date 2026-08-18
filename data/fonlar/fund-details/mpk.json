@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "MPK",
     "slug": "mpk",
@@ -12,44 +12,56 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 9.825052,
-    "tedavuldekiPaySayisi": 29313910.96,
-    "kisiSayisi": 1505,
-    "fonToplamDeger": 288010694.08,
-    "gunlukGetiri": 0.00098549,
+    "fiyat": 9.861905,
+    "tedavuldekiPaySayisi": 29176870.96,
+    "kisiSayisi": 1507,
+    "fonToplamDeger": 287739516.92,
+    "gunlukGetiri": 0.00375092,
     "getiriler": {
-      "birAy": 0.032388,
-      "ucAy": 0.097257,
-      "altiAy": 0.19365300000000002,
-      "yilbasi": 0.24928899999999998,
-      "birYil": 0.44423900000000005,
-      "ucYil": 2.2677959999999997,
-      "besYil": 4.313257
+      "birAy": 0.030056,
+      "ucAy": 0.097247,
+      "altiAy": 0.195883,
+      "yilbasi": 0.253975,
+      "birYil": 0.443241,
+      "ucYil": 2.269781,
+      "besYil": 4.327744
     },
     "paraAkisi": {
-      "gunluk": 397393.88,
-      "besGun": null,
+      "gunluk": -1351475.46,
+      "besGun": 54109.51,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 6,
-      "besGun": null,
+      "gunluk": 2,
+      "besGun": 21,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MPK",
+        "fonAdi": "AKTİF PORTFÖY KİRA SERTİFİKASI KATILIM (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 9.861905,
+        "tedavuldekiPaySayisi": 29176870.96,
+        "kisiSayisi": 1507,
+        "fonToplamDeger": 287739516.92,
+        "gunlukGetiri": 0.00375092,
+        "paraGirisiCikisi": -1351475.46,
+        "yatirimciDegisimi": 2
+      },
       {
         "fonKodu": "MPK",
         "fonAdi": "AKTİF PORTFÖY KİRA SERTİFİKASI KATILIM (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00098549,
       "paraGirisiCikisi": 397393.88,
       "yatirimciDegisimi": 6
+    },
+    {
+      "fonKodu": "MPK",
+      "fonAdi": "AKTİF PORTFÖY KİRA SERTİFİKASI KATILIM (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 9.861905,
+      "tedavuldekiPaySayisi": 29176870.96,
+      "kisiSayisi": 1507,
+      "fonToplamDeger": 287739516.92,
+      "gunlukGetiri": 0.00375092,
+      "paraGirisiCikisi": -1351475.46,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MPK",
+      "fonAdi": "AKTİF PORTFÖY KİRA SERTİFİKASI KATILIM (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 9.861905,
+      "tedavuldekiPaySayisi": 29176870.96,
+      "kisiSayisi": 1507,
+      "fonToplamDeger": 287739516.92,
+      "gunlukGetiri": 0.00375092,
+      "paraGirisiCikisi": -1351475.46,
+      "yatirimciDegisimi": 2
+    },
     {
       "fonKodu": "MPK",
       "fonAdi": "AKTİF PORTFÖY KİRA SERTİFİKASI KATILIM (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

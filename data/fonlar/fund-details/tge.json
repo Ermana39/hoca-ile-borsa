@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TGE",
     "slug": "tge",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.289574,
-    "tedavuldekiPaySayisi": 10757084639,
+    "fiyat": 0.291868,
+    "tedavuldekiPaySayisi": 10754348206,
     "kisiSayisi": 37324,
-    "fonToplamDeger": 3114977288.98,
-    "gunlukGetiri": -0.01106167,
+    "fonToplamDeger": 3138852591.99,
+    "gunlukGetiri": 0.00792198,
     "getiriler": {
-      "birAy": 0.074267,
-      "ucAy": -0.021739,
-      "altiAy": 0.250822,
-      "yilbasi": 0.333588,
-      "birYil": 0.6146739999999999,
-      "ucYil": 1.485358,
-      "besYil": 7.288937
+      "birAy": 0.062493,
+      "ucAy": 0.00249,
+      "altiAy": 0.263492,
+      "yilbasi": 0.34415300000000004,
+      "birYil": 0.628255,
+      "ucYil": 1.541917,
+      "besYil": 7.5750210000000004
     },
     "paraAkisi": {
-      "gunluk": 603681.58,
-      "besGun": null,
+      "gunluk": -798677.23,
+      "besGun": -16797707.01,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -38,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": 12,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TGE",
+        "fonAdi": "İŞ PORTFÖY EMTİA YABANCI BYF FON SEPETİ FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 0.291868,
+        "tedavuldekiPaySayisi": 10754348206,
+        "kisiSayisi": 37324,
+        "fonToplamDeger": 3138852591.99,
+        "gunlukGetiri": 0.00792198,
+        "paraGirisiCikisi": -798677.23,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "TGE",
         "fonAdi": "İŞ PORTFÖY EMTİA YABANCI BYF FON SEPETİ FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.01106167,
       "paraGirisiCikisi": 603681.58,
       "yatirimciDegisimi": -38
+    },
+    {
+      "fonKodu": "TGE",
+      "fonAdi": "İŞ PORTFÖY EMTİA YABANCI BYF FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.291868,
+      "tedavuldekiPaySayisi": 10754348206,
+      "kisiSayisi": 37324,
+      "fonToplamDeger": 3138852591.99,
+      "gunlukGetiri": 0.00792198,
+      "paraGirisiCikisi": -798677.23,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TGE",
+      "fonAdi": "İŞ PORTFÖY EMTİA YABANCI BYF FON SEPETİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.291868,
+      "tedavuldekiPaySayisi": 10754348206,
+      "kisiSayisi": 37324,
+      "fonToplamDeger": 3138852591.99,
+      "gunlukGetiri": 0.00792198,
+      "paraGirisiCikisi": -798677.23,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "TGE",
       "fonAdi": "İŞ PORTFÖY EMTİA YABANCI BYF FON SEPETİ FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

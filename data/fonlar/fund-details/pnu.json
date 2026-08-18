@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PNU",
     "slug": "pnu",
@@ -12,16 +12,16 @@
     "yonetici": "PUSULA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pusula-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.223532,
-    "tedavuldekiPaySayisi": 29446386156,
-    "kisiSayisi": 22133,
-    "fonToplamDeger": 36028606364.66,
-    "gunlukGetiri": 0.00129629,
+    "fiyat": 1.230042,
+    "tedavuldekiPaySayisi": 30603856824,
+    "kisiSayisi": 23238,
+    "fonToplamDeger": 37644026936.69,
+    "gunlukGetiri": 0.00532066,
     "getiriler": {
-      "birAy": 0.041759000000000004,
-      "ucAy": 0.12744999999999998,
+      "birAy": 0.039022,
+      "ucAy": 0.127364,
       "altiAy": null,
       "yilbasi": null,
       "birYil": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1496008985.33,
-      "besGun": null,
+      "gunluk": 1423737535.41,
+      "besGun": 5052299004.85,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 362,
-      "besGun": null,
+      "gunluk": 1105,
+      "besGun": 2320,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PNU",
+        "fonAdi": "PUSULA PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.230042,
+        "tedavuldekiPaySayisi": 30603856824,
+        "kisiSayisi": 23238,
+        "fonToplamDeger": 37644026936.69,
+        "gunlukGetiri": 0.00532066,
+        "paraGirisiCikisi": 1423737535.41,
+        "yatirimciDegisimi": 1105
+      },
       {
         "fonKodu": "PNU",
         "fonAdi": "PUSULA PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00129629,
       "paraGirisiCikisi": 1496008985.33,
       "yatirimciDegisimi": 362
+    },
+    {
+      "fonKodu": "PNU",
+      "fonAdi": "PUSULA PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.230042,
+      "tedavuldekiPaySayisi": 30603856824,
+      "kisiSayisi": 23238,
+      "fonToplamDeger": 37644026936.69,
+      "gunlukGetiri": 0.00532066,
+      "paraGirisiCikisi": 1423737535.41,
+      "yatirimciDegisimi": 1105
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PNU",
+      "fonAdi": "PUSULA PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.230042,
+      "tedavuldekiPaySayisi": 30603856824,
+      "kisiSayisi": 23238,
+      "fonToplamDeger": 37644026936.69,
+      "gunlukGetiri": 0.00532066,
+      "paraGirisiCikisi": 1423737535.41,
+      "yatirimciDegisimi": 1105
+    },
     {
       "fonKodu": "PNU",
       "fonAdi": "PUSULA PORTFÖY İKİNCİ PARA PİYASASI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

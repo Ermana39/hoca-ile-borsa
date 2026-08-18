@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BSM",
     "slug": "bsm",
@@ -12,44 +12,56 @@
     "yonetici": "GLOBAL MD PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "global-md-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.743659,
-    "tedavuldekiPaySayisi": 1327738269,
-    "kisiSayisi": 2892,
-    "fonToplamDeger": 2315122238.37,
-    "gunlukGetiri": 0.00268201,
+    "fiyat": 1.752129,
+    "tedavuldekiPaySayisi": 1329029362,
+    "kisiSayisi": 2856,
+    "fonToplamDeger": 2328630971.35,
+    "gunlukGetiri": 0.0048576,
     "getiriler": {
-      "birAy": 0.047488,
-      "ucAy": 0.158337,
-      "altiAy": 0.392502,
-      "yilbasi": 0.51751,
+      "birAy": 0.045094,
+      "ucAy": 0.15652,
+      "altiAy": 0.39116599999999996,
+      "yilbasi": 0.524882,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 56349498.35,
-      "besGun": null,
+      "gunluk": 2262161.49,
+      "besGun": 87456413.64,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 31,
-      "besGun": null,
+      "gunluk": -36,
+      "besGun": 59,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BSM",
+        "fonAdi": "GLOBAL MD PORTFÖY BERRAK SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.752129,
+        "tedavuldekiPaySayisi": 1329029362,
+        "kisiSayisi": 2856,
+        "fonToplamDeger": 2328630971.35,
+        "gunlukGetiri": 0.0048576,
+        "paraGirisiCikisi": 2262161.49,
+        "yatirimciDegisimi": -36
+      },
       {
         "fonKodu": "BSM",
         "fonAdi": "GLOBAL MD PORTFÖY BERRAK SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00268201,
       "paraGirisiCikisi": 56349498.35,
       "yatirimciDegisimi": 31
+    },
+    {
+      "fonKodu": "BSM",
+      "fonAdi": "GLOBAL MD PORTFÖY BERRAK SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.752129,
+      "tedavuldekiPaySayisi": 1329029362,
+      "kisiSayisi": 2856,
+      "fonToplamDeger": 2328630971.35,
+      "gunlukGetiri": 0.0048576,
+      "paraGirisiCikisi": 2262161.49,
+      "yatirimciDegisimi": -36
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BSM",
+      "fonAdi": "GLOBAL MD PORTFÖY BERRAK SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.752129,
+      "tedavuldekiPaySayisi": 1329029362,
+      "kisiSayisi": 2856,
+      "fonToplamDeger": 2328630971.35,
+      "gunlukGetiri": 0.0048576,
+      "paraGirisiCikisi": 2262161.49,
+      "yatirimciDegisimi": -36
+    },
     {
       "fonKodu": "BSM",
       "fonAdi": "GLOBAL MD PORTFÖY BERRAK SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

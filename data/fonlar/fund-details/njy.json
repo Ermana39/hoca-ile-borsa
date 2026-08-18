@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "NJY",
     "slug": "njy",
@@ -12,44 +12,56 @@
     "yonetici": "NUROL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "nurol-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 7.462615,
-    "tedavuldekiPaySayisi": 43299975,
-    "kisiSayisi": 1403,
-    "fonToplamDeger": 323131028.17,
-    "gunlukGetiri": 0.00121512,
+    "fiyat": 7.491514,
+    "tedavuldekiPaySayisi": 43402102,
+    "kisiSayisi": 1397,
+    "fonToplamDeger": 325147454.65,
+    "gunlukGetiri": 0.0038725,
     "getiriler": {
-      "birAy": 0.032715999999999995,
-      "ucAy": 0.10085000000000001,
-      "altiAy": 0.20396899999999998,
-      "yilbasi": 0.257881,
-      "birYil": 0.45829300000000006,
-      "ucYil": 2.311424,
+      "birAy": 0.030688,
+      "ucAy": 0.100862,
+      "altiAy": 0.205722,
+      "yilbasi": 0.26275200000000004,
+      "birYil": 0.45789,
+      "ucYil": 2.3084700000000002,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 75058.98,
-      "besGun": null,
+      "gunluk": 765085.85,
+      "besGun": 8858864.17,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
-      "besGun": null,
+      "gunluk": -6,
+      "besGun": -9,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NJY",
+        "fonAdi": "NUROL PORTFÖY BİRİNCİ KATILIM FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 7.491514,
+        "tedavuldekiPaySayisi": 43402102,
+        "kisiSayisi": 1397,
+        "fonToplamDeger": 325147454.65,
+        "gunlukGetiri": 0.0038725,
+        "paraGirisiCikisi": 765085.85,
+        "yatirimciDegisimi": -6
+      },
       {
         "fonKodu": "NJY",
         "fonAdi": "NUROL PORTFÖY BİRİNCİ KATILIM FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00121512,
       "paraGirisiCikisi": 75058.98,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "NJY",
+      "fonAdi": "NUROL PORTFÖY BİRİNCİ KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 7.491514,
+      "tedavuldekiPaySayisi": 43402102,
+      "kisiSayisi": 1397,
+      "fonToplamDeger": 325147454.65,
+      "gunlukGetiri": 0.0038725,
+      "paraGirisiCikisi": 765085.85,
+      "yatirimciDegisimi": -6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NJY",
+      "fonAdi": "NUROL PORTFÖY BİRİNCİ KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 7.491514,
+      "tedavuldekiPaySayisi": 43402102,
+      "kisiSayisi": 1397,
+      "fonToplamDeger": 325147454.65,
+      "gunlukGetiri": 0.0038725,
+      "paraGirisiCikisi": 765085.85,
+      "yatirimciDegisimi": -6
+    },
     {
       "fonKodu": "NJY",
       "fonAdi": "NUROL PORTFÖY BİRİNCİ KATILIM FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

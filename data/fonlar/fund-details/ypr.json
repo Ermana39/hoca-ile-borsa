@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YPR",
     "slug": "ypr",
@@ -12,44 +12,56 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.672171,
-    "tedavuldekiPaySayisi": 47402508,
-    "kisiSayisi": 336,
-    "fonToplamDeger": 79265096.17,
-    "gunlukGetiri": -0.00117195,
+    "fiyat": 1.672297,
+    "tedavuldekiPaySayisi": 47240364,
+    "kisiSayisi": 334,
+    "fonToplamDeger": 78999912.58,
+    "gunlukGetiri": 0.00007535,
     "getiriler": {
-      "birAy": 0.025693999999999998,
-      "ucAy": -0.008363,
-      "altiAy": 0.040777,
-      "yilbasi": 0.288446,
-      "birYil": 0.390978,
+      "birAy": 0.016763,
+      "ucAy": 0.004214,
+      "altiAy": 0.040944,
+      "yilbasi": 0.288543,
+      "birYil": 0.39898000000000006,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -911137.55,
-      "besGun": null,
+      "gunluk": -271152.92,
+      "besGun": -1263516.93,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
-      "besGun": null,
+      "gunluk": -2,
+      "besGun": -7,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YPR",
+        "fonAdi": "AZİMUT PORTFÖY YILDIZ PAZAR ŞİRKETLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.672297,
+        "tedavuldekiPaySayisi": 47240364,
+        "kisiSayisi": 334,
+        "fonToplamDeger": 78999912.58,
+        "gunlukGetiri": 0.00007535,
+        "paraGirisiCikisi": -271152.92,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "YPR",
         "fonAdi": "AZİMUT PORTFÖY YILDIZ PAZAR ŞİRKETLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00117195,
       "paraGirisiCikisi": -911137.55,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "YPR",
+      "fonAdi": "AZİMUT PORTFÖY YILDIZ PAZAR ŞİRKETLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.672297,
+      "tedavuldekiPaySayisi": 47240364,
+      "kisiSayisi": 334,
+      "fonToplamDeger": 78999912.58,
+      "gunlukGetiri": 0.00007535,
+      "paraGirisiCikisi": -271152.92,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YPR",
+      "fonAdi": "AZİMUT PORTFÖY YILDIZ PAZAR ŞİRKETLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.672297,
+      "tedavuldekiPaySayisi": 47240364,
+      "kisiSayisi": 334,
+      "fonToplamDeger": 78999912.58,
+      "gunlukGetiri": 0.00007535,
+      "paraGirisiCikisi": -271152.92,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "YPR",
       "fonAdi": "AZİMUT PORTFÖY YILDIZ PAZAR ŞİRKETLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

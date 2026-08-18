@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "FBV",
     "slug": "fbv",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 7.63061,
-    "tedavuldekiPaySayisi": 84149615,
-    "kisiSayisi": 1957,
-    "fonToplamDeger": 642112898.53,
-    "gunlukGetiri": -0.00231202,
+    "fiyat": 7.7049,
+    "tedavuldekiPaySayisi": 83935111,
+    "kisiSayisi": 1956,
+    "fonToplamDeger": 646711662.16,
+    "gunlukGetiri": 0.00973579,
     "getiriler": {
-      "birAy": 0.06326999999999999,
-      "ucAy": 0.022111000000000002,
-      "altiAy": 0.095477,
-      "yilbasi": 0.24962800000000002,
-      "birYil": 0.411766,
-      "ucYil": 2.167358,
-      "besYil": 6.220685
+      "birAy": 0.070465,
+      "ucAy": 0.047021,
+      "altiAy": 0.09990199999999999,
+      "yilbasi": 0.261794,
+      "birYil": 0.432879,
+      "ucYil": 2.250249,
+      "besYil": 6.303347
     },
     "paraAkisi": {
-      "gunluk": -184134.25,
-      "besGun": null,
+      "gunluk": -1652731.87,
+      "besGun": -832781.7,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -7,
-      "besGun": null,
+      "gunluk": -1,
+      "besGun": 2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FBV",
+        "fonAdi": "İŞ PORTFÖY MODEL SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 7.7049,
+        "tedavuldekiPaySayisi": 83935111,
+        "kisiSayisi": 1956,
+        "fonToplamDeger": 646711662.16,
+        "gunlukGetiri": 0.00973579,
+        "paraGirisiCikisi": -1652731.87,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "FBV",
         "fonAdi": "İŞ PORTFÖY MODEL SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00231202,
       "paraGirisiCikisi": -184134.25,
       "yatirimciDegisimi": -7
+    },
+    {
+      "fonKodu": "FBV",
+      "fonAdi": "İŞ PORTFÖY MODEL SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 7.7049,
+      "tedavuldekiPaySayisi": 83935111,
+      "kisiSayisi": 1956,
+      "fonToplamDeger": 646711662.16,
+      "gunlukGetiri": 0.00973579,
+      "paraGirisiCikisi": -1652731.87,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FBV",
+      "fonAdi": "İŞ PORTFÖY MODEL SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 7.7049,
+      "tedavuldekiPaySayisi": 83935111,
+      "kisiSayisi": 1956,
+      "fonToplamDeger": 646711662.16,
+      "gunlukGetiri": 0.00973579,
+      "paraGirisiCikisi": -1652731.87,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "FBV",
       "fonAdi": "İŞ PORTFÖY MODEL SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

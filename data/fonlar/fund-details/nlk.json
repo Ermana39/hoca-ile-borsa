@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "NLK",
     "slug": "nlk",
@@ -12,44 +12,56 @@
     "yonetici": "NUROL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "nurol-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.871175,
-    "tedavuldekiPaySayisi": 2463137142,
-    "kisiSayisi": 1033,
-    "fonToplamDeger": 4608960022.14,
-    "gunlukGetiri": 0.00110802,
+    "fiyat": 1.879459,
+    "tedavuldekiPaySayisi": 2455824322,
+    "kisiSayisi": 1032,
+    "fonToplamDeger": 4615620559.19,
+    "gunlukGetiri": 0.00442716,
     "getiriler": {
-      "birAy": 0.03499,
-      "ucAy": 0.10729799999999999,
-      "altiAy": 0.219007,
-      "yilbasi": 0.278736,
-      "birYil": 0.49952199999999997,
+      "birAy": 0.032608,
+      "ucAy": 0.107266,
+      "altiAy": 0.221821,
+      "yilbasi": 0.28439800000000004,
+      "birYil": 0.499161,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -264163130.62,
-      "besGun": null,
+      "gunluk": -13744145.36,
+      "besGun": -279287877.03,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
-      "besGun": null,
+      "gunluk": -1,
+      "besGun": 10,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NLK",
+        "fonAdi": "NUROL PORTFÖY KISA VADELİ SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.879459,
+        "tedavuldekiPaySayisi": 2455824322,
+        "kisiSayisi": 1032,
+        "fonToplamDeger": 4615620559.19,
+        "gunlukGetiri": 0.00442716,
+        "paraGirisiCikisi": -13744145.36,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "NLK",
         "fonAdi": "NUROL PORTFÖY KISA VADELİ SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00110802,
       "paraGirisiCikisi": -264163130.62,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "NLK",
+      "fonAdi": "NUROL PORTFÖY KISA VADELİ SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.879459,
+      "tedavuldekiPaySayisi": 2455824322,
+      "kisiSayisi": 1032,
+      "fonToplamDeger": 4615620559.19,
+      "gunlukGetiri": 0.00442716,
+      "paraGirisiCikisi": -13744145.36,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NLK",
+      "fonAdi": "NUROL PORTFÖY KISA VADELİ SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.879459,
+      "tedavuldekiPaySayisi": 2455824322,
+      "kisiSayisi": 1032,
+      "fonToplamDeger": 4615620559.19,
+      "gunlukGetiri": 0.00442716,
+      "paraGirisiCikisi": -13744145.36,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "NLK",
       "fonAdi": "NUROL PORTFÖY KISA VADELİ SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

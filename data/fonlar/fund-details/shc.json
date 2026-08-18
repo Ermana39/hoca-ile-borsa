@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "SHC",
     "slug": "shc",
@@ -12,13 +12,13 @@
     "yonetici": "STRATEJİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "strateji-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.011809,
-    "tedavuldekiPaySayisi": 64768648,
-    "kisiSayisi": 123,
-    "fonToplamDeger": 65533483,
-    "gunlukGetiri": 0.00128648,
+    "fiyat": 1.010955,
+    "tedavuldekiPaySayisi": 65103505,
+    "kisiSayisi": 118,
+    "fonToplamDeger": 65816718.82,
+    "gunlukGetiri": -0.00084403,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -33558.67,
-      "besGun": null,
+      "gunluk": 338525.36,
+      "besGun": 3651740.28,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": null,
+      "gunluk": -5,
+      "besGun": 8,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SHC",
+        "fonAdi": "STRATEJİ PORTFÖY İKİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.010955,
+        "tedavuldekiPaySayisi": 65103505,
+        "kisiSayisi": 118,
+        "fonToplamDeger": 65816718.82,
+        "gunlukGetiri": -0.00084403,
+        "paraGirisiCikisi": 338525.36,
+        "yatirimciDegisimi": -5
+      },
       {
         "fonKodu": "SHC",
         "fonAdi": "STRATEJİ PORTFÖY İKİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00128648,
       "paraGirisiCikisi": -33558.67,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "SHC",
+      "fonAdi": "STRATEJİ PORTFÖY İKİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.010955,
+      "tedavuldekiPaySayisi": 65103505,
+      "kisiSayisi": 118,
+      "fonToplamDeger": 65816718.82,
+      "gunlukGetiri": -0.00084403,
+      "paraGirisiCikisi": 338525.36,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SHC",
+      "fonAdi": "STRATEJİ PORTFÖY İKİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.010955,
+      "tedavuldekiPaySayisi": 65103505,
+      "kisiSayisi": 118,
+      "fonToplamDeger": 65816718.82,
+      "gunlukGetiri": -0.00084403,
+      "paraGirisiCikisi": 338525.36,
+      "yatirimciDegisimi": -5
+    },
     {
       "fonKodu": "SHC",
       "fonAdi": "STRATEJİ PORTFÖY İKİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

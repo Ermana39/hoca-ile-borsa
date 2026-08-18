@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ZSF",
     "slug": "zsf",
@@ -12,44 +12,56 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 52.37147,
+    "fiyat": 52.416962,
     "tedavuldekiPaySayisi": 761412,
     "kisiSayisi": 1607,
-    "fonToplamDeger": 39876265.9,
-    "gunlukGetiri": -0.00554239,
+    "fonToplamDeger": 39910903.52,
+    "gunlukGetiri": 0.00086864,
     "getiriler": {
-      "birAy": 0.020856,
-      "ucAy": 0.022143000000000003,
-      "altiAy": -0.048246000000000004,
-      "yilbasi": 0.05696,
-      "birYil": 0.06251000000000001,
-      "ucYil": 0.912939,
+      "birAy": 0.037388,
+      "ucAy": 0.028845,
+      "altiAy": -0.042012,
+      "yilbasi": 0.057878,
+      "birYil": 0.064454,
+      "ucYil": 0.9374429999999999,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 112703.4,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": -682049.25,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 8,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": 17,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZSF",
+        "fonAdi": "ZİRAAT PORTFÖY S&P/OIC COMCEC (İSEDAK) 50 SHARİAH ŞİRKETLERİ YABANCI HİSSE SENEDİ FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 52.416962,
+        "tedavuldekiPaySayisi": 761412,
+        "kisiSayisi": 1607,
+        "fonToplamDeger": 39910903.52,
+        "gunlukGetiri": 0.00086864,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "ZSF",
         "fonAdi": "ZİRAAT PORTFÖY S&P/OIC COMCEC (İSEDAK) 50 SHARİAH ŞİRKETLERİ YABANCI HİSSE SENEDİ FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00554239,
       "paraGirisiCikisi": 112703.4,
       "yatirimciDegisimi": 8
+    },
+    {
+      "fonKodu": "ZSF",
+      "fonAdi": "ZİRAAT PORTFÖY S&P/OIC COMCEC (İSEDAK) 50 SHARİAH ŞİRKETLERİ YABANCI HİSSE SENEDİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 52.416962,
+      "tedavuldekiPaySayisi": 761412,
+      "kisiSayisi": 1607,
+      "fonToplamDeger": 39910903.52,
+      "gunlukGetiri": 0.00086864,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZSF",
+      "fonAdi": "ZİRAAT PORTFÖY S&P/OIC COMCEC (İSEDAK) 50 SHARİAH ŞİRKETLERİ YABANCI HİSSE SENEDİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 52.416962,
+      "tedavuldekiPaySayisi": 761412,
+      "kisiSayisi": 1607,
+      "fonToplamDeger": 39910903.52,
+      "gunlukGetiri": 0.00086864,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "ZSF",
       "fonAdi": "ZİRAAT PORTFÖY S&P/OIC COMCEC (İSEDAK) 50 SHARİAH ŞİRKETLERİ YABANCI HİSSE SENEDİ FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

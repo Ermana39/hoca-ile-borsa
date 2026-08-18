@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YHZ",
     "slug": "yhz",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 10.286418,
-    "tedavuldekiPaySayisi": 139488457,
-    "kisiSayisi": 16793,
-    "fonToplamDeger": 1434836626.67,
-    "gunlukGetiri": 0.01381086,
+    "fiyat": 10.258158,
+    "tedavuldekiPaySayisi": 145804527,
+    "kisiSayisi": 17150,
+    "fonToplamDeger": 1495685923.28,
+    "gunlukGetiri": -0.00274731,
     "getiriler": {
-      "birAy": 0.13625400000000001,
-      "ucAy": 0.171621,
-      "altiAy": 0.518234,
-      "yilbasi": 0.767701,
-      "birYil": 0.8419249999999999,
-      "ucYil": 3.23804,
-      "besYil": 10.703009
+      "birAy": 0.129863,
+      "ucAy": 0.149572,
+      "altiAy": 0.5001530000000001,
+      "yilbasi": 0.762845,
+      "birYil": 0.827176,
+      "ucYil": 3.261893,
+      "besYil": 10.745355
     },
     "paraAkisi": {
-      "gunluk": 13889904.52,
-      "besGun": null,
+      "gunluk": 64791244,
+      "besGun": 109789150.75,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 89,
-      "besGun": null,
+      "gunluk": 357,
+      "besGun": 678,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YHZ",
+        "fonAdi": "YAPI KREDİ PORTFÖY BIST TEKNOLOJİ AĞIRLIK SINIRLAMALI ENDEKSİ HİSSE SENEDİ FONU ( HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 10.258158,
+        "tedavuldekiPaySayisi": 145804527,
+        "kisiSayisi": 17150,
+        "fonToplamDeger": 1495685923.28,
+        "gunlukGetiri": -0.00274731,
+        "paraGirisiCikisi": 64791244,
+        "yatirimciDegisimi": 357
+      },
       {
         "fonKodu": "YHZ",
         "fonAdi": "YAPI KREDİ PORTFÖY BIST TEKNOLOJİ AĞIRLIK SINIRLAMALI ENDEKSİ HİSSE SENEDİ FONU ( HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.01381086,
       "paraGirisiCikisi": 13889904.52,
       "yatirimciDegisimi": 89
+    },
+    {
+      "fonKodu": "YHZ",
+      "fonAdi": "YAPI KREDİ PORTFÖY BIST TEKNOLOJİ AĞIRLIK SINIRLAMALI ENDEKSİ HİSSE SENEDİ FONU ( HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 10.258158,
+      "tedavuldekiPaySayisi": 145804527,
+      "kisiSayisi": 17150,
+      "fonToplamDeger": 1495685923.28,
+      "gunlukGetiri": -0.00274731,
+      "paraGirisiCikisi": 64791244,
+      "yatirimciDegisimi": 357
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YHZ",
+      "fonAdi": "YAPI KREDİ PORTFÖY BIST TEKNOLOJİ AĞIRLIK SINIRLAMALI ENDEKSİ HİSSE SENEDİ FONU ( HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 10.258158,
+      "tedavuldekiPaySayisi": 145804527,
+      "kisiSayisi": 17150,
+      "fonToplamDeger": 1495685923.28,
+      "gunlukGetiri": -0.00274731,
+      "paraGirisiCikisi": 64791244,
+      "yatirimciDegisimi": 357
+    },
     {
       "fonKodu": "YHZ",
       "fonAdi": "YAPI KREDİ PORTFÖY BIST TEKNOLOJİ AĞIRLIK SINIRLAMALI ENDEKSİ HİSSE SENEDİ FONU ( HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

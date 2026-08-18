@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PHE",
     "slug": "phe",
@@ -12,44 +12,56 @@
     "yonetici": "PUSULA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pusula-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 3.987364,
-    "tedavuldekiPaySayisi": 10137608522,
-    "kisiSayisi": 127409,
-    "fonToplamDeger": 40422335951.66,
-    "gunlukGetiri": -0.00344003,
+    "fiyat": 4.00217,
+    "tedavuldekiPaySayisi": 9861053671,
+    "kisiSayisi": 128776,
+    "fonToplamDeger": 39465615357.2,
+    "gunlukGetiri": 0.00371323,
     "getiriler": {
-      "birAy": 0.030805,
-      "ucAy": 0.35580300000000004,
-      "altiAy": 0.9076569999999999,
-      "yilbasi": 1.756545,
-      "birYil": 2.306804,
+      "birAy": 0.030762,
+      "ucAy": 0.38528,
+      "altiAy": 0.882577,
+      "yilbasi": 1.76678,
+      "birYil": 2.346951,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -386197304.53,
-      "besGun": null,
+      "gunluk": -1106819528.03,
+      "besGun": -4808164723.21,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -385,
-      "besGun": null,
+      "gunluk": 1367,
+      "besGun": -4544,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PHE",
+        "fonAdi": "PUSULA PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 4.00217,
+        "tedavuldekiPaySayisi": 9861053671,
+        "kisiSayisi": 128776,
+        "fonToplamDeger": 39465615357.2,
+        "gunlukGetiri": 0.00371323,
+        "paraGirisiCikisi": -1106819528.03,
+        "yatirimciDegisimi": 1367
+      },
       {
         "fonKodu": "PHE",
         "fonAdi": "PUSULA PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00344003,
       "paraGirisiCikisi": -386197304.53,
       "yatirimciDegisimi": -385
+    },
+    {
+      "fonKodu": "PHE",
+      "fonAdi": "PUSULA PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 4.00217,
+      "tedavuldekiPaySayisi": 9861053671,
+      "kisiSayisi": 128776,
+      "fonToplamDeger": 39465615357.2,
+      "gunlukGetiri": 0.00371323,
+      "paraGirisiCikisi": -1106819528.03,
+      "yatirimciDegisimi": 1367
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PHE",
+      "fonAdi": "PUSULA PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 4.00217,
+      "tedavuldekiPaySayisi": 9861053671,
+      "kisiSayisi": 128776,
+      "fonToplamDeger": 39465615357.2,
+      "gunlukGetiri": 0.00371323,
+      "paraGirisiCikisi": -1106819528.03,
+      "yatirimciDegisimi": 1367
+    },
     {
       "fonKodu": "PHE",
       "fonAdi": "PUSULA PORTFÖY HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

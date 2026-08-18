@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PA2",
     "slug": "pa2",
@@ -12,15 +12,15 @@
     "yonetici": "PUSULA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pusula-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.094732,
-    "tedavuldekiPaySayisi": 31394059,
-    "kisiSayisi": 359,
-    "fonToplamDeger": 34368070.5,
-    "gunlukGetiri": -0.00488137,
+    "fiyat": 1.101317,
+    "tedavuldekiPaySayisi": 35532322,
+    "kisiSayisi": 392,
+    "fonToplamDeger": 39132358.92,
+    "gunlukGetiri": 0.00601517,
     "getiriler": {
-      "birAy": 0.082075,
+      "birAy": 0.103446,
       "ucAy": null,
       "altiAy": null,
       "yilbasi": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1063395.3,
-      "besGun": null,
+      "gunluk": 4557539.39,
+      "besGun": 5990309.61,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 24,
-      "besGun": null,
+      "gunluk": 33,
+      "besGun": 110,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PA2",
+        "fonAdi": "PUSULA PORTFÖY ALTIN KATILIM FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.101317,
+        "tedavuldekiPaySayisi": 35532322,
+        "kisiSayisi": 392,
+        "fonToplamDeger": 39132358.92,
+        "gunlukGetiri": 0.00601517,
+        "paraGirisiCikisi": 4557539.39,
+        "yatirimciDegisimi": 33
+      },
       {
         "fonKodu": "PA2",
         "fonAdi": "PUSULA PORTFÖY ALTIN KATILIM FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00488137,
       "paraGirisiCikisi": 1063395.3,
       "yatirimciDegisimi": 24
+    },
+    {
+      "fonKodu": "PA2",
+      "fonAdi": "PUSULA PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.101317,
+      "tedavuldekiPaySayisi": 35532322,
+      "kisiSayisi": 392,
+      "fonToplamDeger": 39132358.92,
+      "gunlukGetiri": 0.00601517,
+      "paraGirisiCikisi": 4557539.39,
+      "yatirimciDegisimi": 33
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PA2",
+      "fonAdi": "PUSULA PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.101317,
+      "tedavuldekiPaySayisi": 35532322,
+      "kisiSayisi": 392,
+      "fonToplamDeger": 39132358.92,
+      "gunlukGetiri": 0.00601517,
+      "paraGirisiCikisi": 4557539.39,
+      "yatirimciDegisimi": 33
+    },
     {
       "fonKodu": "PA2",
       "fonAdi": "PUSULA PORTFÖY ALTIN KATILIM FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

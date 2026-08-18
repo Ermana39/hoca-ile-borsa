@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "VRK",
     "slug": "vrk",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.304985,
-    "tedavuldekiPaySayisi": 34139232,
-    "kisiSayisi": 148,
-    "fonToplamDeger": 44551191.83,
-    "gunlukGetiri": 0.00541854,
+    "fiyat": 1.308873,
+    "tedavuldekiPaySayisi": 35689746,
+    "kisiSayisi": 146,
+    "fonToplamDeger": 46713352.3,
+    "gunlukGetiri": 0.00297934,
     "getiriler": {
-      "birAy": 0.040374999999999994,
-      "ucAy": 0.041817,
-      "altiAy": 0.103481,
-      "yilbasi": 0.21162,
+      "birAy": 0.035803,
+      "ucAy": 0.05009,
+      "altiAy": 0.105098,
+      "yilbasi": 0.21523,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1644390.72,
-      "besGun": null,
+      "gunluk": 2029425.91,
+      "besGun": 916076.23,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": -2,
+      "besGun": 2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "VRK",
+        "fonAdi": "DENİZ PORTFÖY ÇOKLU VARLIK KATILIM FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.308873,
+        "tedavuldekiPaySayisi": 35689746,
+        "kisiSayisi": 146,
+        "fonToplamDeger": 46713352.3,
+        "gunlukGetiri": 0.00297934,
+        "paraGirisiCikisi": 2029425.91,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "VRK",
         "fonAdi": "DENİZ PORTFÖY ÇOKLU VARLIK KATILIM FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00541854,
       "paraGirisiCikisi": -1644390.72,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "VRK",
+      "fonAdi": "DENİZ PORTFÖY ÇOKLU VARLIK KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.308873,
+      "tedavuldekiPaySayisi": 35689746,
+      "kisiSayisi": 146,
+      "fonToplamDeger": 46713352.3,
+      "gunlukGetiri": 0.00297934,
+      "paraGirisiCikisi": 2029425.91,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "VRK",
+      "fonAdi": "DENİZ PORTFÖY ÇOKLU VARLIK KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.308873,
+      "tedavuldekiPaySayisi": 35689746,
+      "kisiSayisi": 146,
+      "fonToplamDeger": 46713352.3,
+      "gunlukGetiri": 0.00297934,
+      "paraGirisiCikisi": 2029425.91,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "VRK",
       "fonAdi": "DENİZ PORTFÖY ÇOKLU VARLIK KATILIM FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

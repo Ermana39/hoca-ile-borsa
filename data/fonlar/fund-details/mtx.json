@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "MTX",
     "slug": "mtx",
@@ -12,44 +12,56 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 5.402761,
-    "tedavuldekiPaySayisi": 15870144,
-    "kisiSayisi": 2131,
-    "fonToplamDeger": 85742588.71,
-    "gunlukGetiri": 0.00482815,
+    "fiyat": 5.425762,
+    "tedavuldekiPaySayisi": 15830384,
+    "kisiSayisi": 2120,
+    "fonToplamDeger": 85891898.45,
+    "gunlukGetiri": 0.00425727,
     "getiriler": {
-      "birAy": 0.025922,
-      "ucAy": 0.039033000000000005,
-      "altiAy": 0.24882400000000002,
-      "yilbasi": 0.18590199999999998,
-      "birYil": 0.314305,
-      "ucYil": 2.088383,
+      "birAy": 0.07395299999999999,
+      "ucAy": 0.045510999999999996,
+      "altiAy": 0.253875,
+      "yilbasi": 0.19095099999999998,
+      "birYil": 0.32711799999999996,
+      "ucYil": 2.1249029999999998,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 67464.28,
-      "besGun": null,
+      "gunluk": -215728.3,
+      "besGun": -876886.67,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
-      "besGun": null,
+      "gunluk": -11,
+      "besGun": -22,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MTX",
+        "fonAdi": "TEB PORTFÖY ÜÇÜNCÜ DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 5.425762,
+        "tedavuldekiPaySayisi": 15830384,
+        "kisiSayisi": 2120,
+        "fonToplamDeger": 85891898.45,
+        "gunlukGetiri": 0.00425727,
+        "paraGirisiCikisi": -215728.3,
+        "yatirimciDegisimi": -11
+      },
       {
         "fonKodu": "MTX",
         "fonAdi": "TEB PORTFÖY ÜÇÜNCÜ DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00482815,
       "paraGirisiCikisi": 67464.28,
       "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "MTX",
+      "fonAdi": "TEB PORTFÖY ÜÇÜNCÜ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 5.425762,
+      "tedavuldekiPaySayisi": 15830384,
+      "kisiSayisi": 2120,
+      "fonToplamDeger": 85891898.45,
+      "gunlukGetiri": 0.00425727,
+      "paraGirisiCikisi": -215728.3,
+      "yatirimciDegisimi": -11
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MTX",
+      "fonAdi": "TEB PORTFÖY ÜÇÜNCÜ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 5.425762,
+      "tedavuldekiPaySayisi": 15830384,
+      "kisiSayisi": 2120,
+      "fonToplamDeger": 85891898.45,
+      "gunlukGetiri": 0.00425727,
+      "paraGirisiCikisi": -215728.3,
+      "yatirimciDegisimi": -11
+    },
     {
       "fonKodu": "MTX",
       "fonAdi": "TEB PORTFÖY ÜÇÜNCÜ DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DHI",
     "slug": "dhi",
@@ -12,13 +12,13 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.556919,
-    "tedavuldekiPaySayisi": 5008123066,
+    "fiyat": 0.546445,
+    "tedavuldekiPaySayisi": 5146350749,
     "kisiSayisi": 46,
-    "fonToplamDeger": 2789120315.05,
-    "gunlukGetiri": -0.01020684,
+    "fonToplamDeger": 2812197483.69,
+    "gunlukGetiri": -0.01880704,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": 75533826.24,
+      "besGun": 146763680.83,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DHI",
+        "fonAdi": "PARDUS PORTFÖY DOKUZUNCU HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 0.546445,
+        "tedavuldekiPaySayisi": 5146350749,
+        "kisiSayisi": 46,
+        "fonToplamDeger": 2812197483.69,
+        "gunlukGetiri": -0.01880704,
+        "paraGirisiCikisi": 75533826.24,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "DHI",
         "fonAdi": "PARDUS PORTFÖY DOKUZUNCU HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.01020684,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DHI",
+      "fonAdi": "PARDUS PORTFÖY DOKUZUNCU HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 0.546445,
+      "tedavuldekiPaySayisi": 5146350749,
+      "kisiSayisi": 46,
+      "fonToplamDeger": 2812197483.69,
+      "gunlukGetiri": -0.01880704,
+      "paraGirisiCikisi": 75533826.24,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DHI",
+      "fonAdi": "PARDUS PORTFÖY DOKUZUNCU HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 0.546445,
+      "tedavuldekiPaySayisi": 5146350749,
+      "kisiSayisi": 46,
+      "fonToplamDeger": 2812197483.69,
+      "gunlukGetiri": -0.01880704,
+      "paraGirisiCikisi": 75533826.24,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "DHI",
       "fonAdi": "PARDUS PORTFÖY DOKUZUNCU HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

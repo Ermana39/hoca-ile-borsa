@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YFV",
     "slug": "yfv",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.104273,
-    "tedavuldekiPaySayisi": 8432777760,
-    "kisiSayisi": 7430,
-    "fonToplamDeger": 879310913.46,
-    "gunlukGetiri": 0.00087347,
+    "fiyat": 0.104619,
+    "tedavuldekiPaySayisi": 8424059156,
+    "kisiSayisi": 7436,
+    "fonToplamDeger": 881317603.12,
+    "gunlukGetiri": 0.00331821,
     "getiriler": {
-      "birAy": 0.021953999999999998,
-      "ucAy": 0.068207,
-      "altiAy": 0.145404,
-      "yilbasi": 0.20235499999999998,
-      "birYil": 0.388973,
-      "ucYil": 1.8866900000000002,
-      "besYil": 3.9620729999999997
+      "birAy": 0.020146,
+      "ucAy": 0.068118,
+      "altiAy": 0.146836,
+      "yilbasi": 0.206344,
+      "birYil": 0.38833,
+      "ucYil": 1.888193,
+      "besYil": 3.9688440000000003
     },
     "paraAkisi": {
-      "gunluk": -11173285,
-      "besGun": null,
+      "gunluk": -912131.63,
+      "besGun": -14356425.66,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 5,
-      "besGun": null,
+      "gunluk": 6,
+      "besGun": 31,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YFV",
+        "fonAdi": "YAPI KREDİ PORTFÖY KİRA SERTİFİKALARI KATILIM FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 0.104619,
+        "tedavuldekiPaySayisi": 8424059156,
+        "kisiSayisi": 7436,
+        "fonToplamDeger": 881317603.12,
+        "gunlukGetiri": 0.00331821,
+        "paraGirisiCikisi": -912131.63,
+        "yatirimciDegisimi": 6
+      },
       {
         "fonKodu": "YFV",
         "fonAdi": "YAPI KREDİ PORTFÖY KİRA SERTİFİKALARI KATILIM FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00087347,
       "paraGirisiCikisi": -11173285,
       "yatirimciDegisimi": 5
+    },
+    {
+      "fonKodu": "YFV",
+      "fonAdi": "YAPI KREDİ PORTFÖY KİRA SERTİFİKALARI KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.104619,
+      "tedavuldekiPaySayisi": 8424059156,
+      "kisiSayisi": 7436,
+      "fonToplamDeger": 881317603.12,
+      "gunlukGetiri": 0.00331821,
+      "paraGirisiCikisi": -912131.63,
+      "yatirimciDegisimi": 6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YFV",
+      "fonAdi": "YAPI KREDİ PORTFÖY KİRA SERTİFİKALARI KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.104619,
+      "tedavuldekiPaySayisi": 8424059156,
+      "kisiSayisi": 7436,
+      "fonToplamDeger": 881317603.12,
+      "gunlukGetiri": 0.00331821,
+      "paraGirisiCikisi": -912131.63,
+      "yatirimciDegisimi": 6
+    },
     {
       "fonKodu": "YFV",
       "fonAdi": "YAPI KREDİ PORTFÖY KİRA SERTİFİKALARI KATILIM FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

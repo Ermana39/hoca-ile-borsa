@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GBN",
     "slug": "gbn",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 6.817905,
-    "tedavuldekiPaySayisi": 920256370,
-    "kisiSayisi": 398,
-    "fonToplamDeger": 6274220853.91,
-    "gunlukGetiri": 0.00103305,
+    "fiyat": 6.845953,
+    "tedavuldekiPaySayisi": 920051658,
+    "kisiSayisi": 397,
+    "fonToplamDeger": 6298630508.06,
+    "gunlukGetiri": 0.00411387,
     "getiriler": {
-      "birAy": 0.032558,
-      "ucAy": 0.10066800000000001,
-      "altiAy": 0.20393999999999998,
-      "yilbasi": 0.257357,
-      "birYil": 0.45712400000000003,
-      "ucYil": 2.546007,
-      "besYil": 4.409589
+      "birAy": 0.030384,
+      "ucAy": 0.10058299999999999,
+      "altiAy": 0.206596,
+      "yilbasi": 0.26253,
+      "birYil": 0.456543,
+      "ucYil": 2.5496309999999998,
+      "besYil": 4.4263580000000005
     },
     "paraAkisi": {
-      "gunluk": -1273393.75,
-      "besGun": null,
+      "gunluk": -1401448.73,
+      "besGun": -1223926.17,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
-      "besGun": null,
+      "gunluk": -1,
+      "besGun": -9,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GBN",
+        "fonAdi": "GARANTİ PORTFÖY BEŞİNCİ (TL) SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 6.845953,
+        "tedavuldekiPaySayisi": 920051658,
+        "kisiSayisi": 397,
+        "fonToplamDeger": 6298630508.06,
+        "gunlukGetiri": 0.00411387,
+        "paraGirisiCikisi": -1401448.73,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "GBN",
         "fonAdi": "GARANTİ PORTFÖY BEŞİNCİ (TL) SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00103305,
       "paraGirisiCikisi": -1273393.75,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "GBN",
+      "fonAdi": "GARANTİ PORTFÖY BEŞİNCİ (TL) SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 6.845953,
+      "tedavuldekiPaySayisi": 920051658,
+      "kisiSayisi": 397,
+      "fonToplamDeger": 6298630508.06,
+      "gunlukGetiri": 0.00411387,
+      "paraGirisiCikisi": -1401448.73,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GBN",
+      "fonAdi": "GARANTİ PORTFÖY BEŞİNCİ (TL) SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 6.845953,
+      "tedavuldekiPaySayisi": 920051658,
+      "kisiSayisi": 397,
+      "fonToplamDeger": 6298630508.06,
+      "gunlukGetiri": 0.00411387,
+      "paraGirisiCikisi": -1401448.73,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "GBN",
       "fonAdi": "GARANTİ PORTFÖY BEŞİNCİ (TL) SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

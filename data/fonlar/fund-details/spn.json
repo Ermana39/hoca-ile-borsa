@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "SPN",
     "slug": "spn",
@@ -12,44 +12,56 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 9.934246,
-    "tedavuldekiPaySayisi": 156622830,
-    "kisiSayisi": 383,
-    "fonToplamDeger": 1555929777.96,
-    "gunlukGetiri": 0.0019022,
+    "fiyat": 9.960249,
+    "tedavuldekiPaySayisi": 156568455,
+    "kisiSayisi": 378,
+    "fonToplamDeger": 1559460865.89,
+    "gunlukGetiri": 0.00261751,
     "getiriler": {
-      "birAy": 0.025885,
-      "ucAy": 0.086592,
-      "altiAy": 0.171541,
-      "yilbasi": 0.214046,
-      "birYil": 0.390608,
-      "ucYil": 2.156705,
-      "besYil": 5.245624
+      "birAy": 0.022416000000000002,
+      "ucAy": 0.079974,
+      "altiAy": 0.17207,
+      "yilbasi": 0.217224,
+      "birYil": 0.3886,
+      "ucYil": 2.164968,
+      "besYil": 5.261971999999999
     },
     "paraAkisi": {
-      "gunluk": -411089.03,
-      "besGun": null,
+      "gunluk": -541588.54,
+      "besGun": -22245805,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": -5,
+      "besGun": -13,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SPN",
+        "fonAdi": "AZİMUT PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 9.960249,
+        "tedavuldekiPaySayisi": 156568455,
+        "kisiSayisi": 378,
+        "fonToplamDeger": 1559460865.89,
+        "gunlukGetiri": 0.00261751,
+        "paraGirisiCikisi": -541588.54,
+        "yatirimciDegisimi": -5
+      },
       {
         "fonKodu": "SPN",
         "fonAdi": "AZİMUT PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.0019022,
       "paraGirisiCikisi": -411089.03,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "SPN",
+      "fonAdi": "AZİMUT PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 9.960249,
+      "tedavuldekiPaySayisi": 156568455,
+      "kisiSayisi": 378,
+      "fonToplamDeger": 1559460865.89,
+      "gunlukGetiri": 0.00261751,
+      "paraGirisiCikisi": -541588.54,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SPN",
+      "fonAdi": "AZİMUT PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 9.960249,
+      "tedavuldekiPaySayisi": 156568455,
+      "kisiSayisi": 378,
+      "fonToplamDeger": 1559460865.89,
+      "gunlukGetiri": 0.00261751,
+      "paraGirisiCikisi": -541588.54,
+      "yatirimciDegisimi": -5
+    },
     {
       "fonKodu": "SPN",
       "fonAdi": "AZİMUT PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

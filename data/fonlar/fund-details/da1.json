@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "DA1",
     "slug": "da1",
@@ -12,44 +12,56 @@
     "yonetici": "A1 CAPİTAL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "a1-capital-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 48.774728,
-    "tedavuldekiPaySayisi": 228384,
+    "fiyat": 48.910497,
+    "tedavuldekiPaySayisi": 228386,
     "kisiSayisi": 45,
-    "fonToplamDeger": 11139367.43,
-    "gunlukGetiri": 0.00058131,
+    "fonToplamDeger": 11170472.78,
+    "gunlukGetiri": 0.00278359,
     "getiriler": {
-      "birAy": 0.014349,
-      "ucAy": 0.047381,
-      "altiAy": 0.08616,
-      "yilbasi": 0.10908699999999999,
+      "birAy": 0.015395,
+      "ucAy": 0.050602999999999995,
+      "altiAy": 0.085787,
+      "yilbasi": 0.112175,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": null,
+      "gunluk": 97.82,
+      "besGun": -973601.4,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DA1",
+        "fonAdi": "A1 CAPİTAL PORTFÖY SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-18",
+        "fiyat": 48.910497,
+        "tedavuldekiPaySayisi": 228386,
+        "kisiSayisi": 45,
+        "fonToplamDeger": 11170472.78,
+        "gunlukGetiri": 0.00278359,
+        "paraGirisiCikisi": 97.82,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "DA1",
         "fonAdi": "A1 CAPİTAL PORTFÖY SERBEST (DÖVİZ) FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00058131,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DA1",
+      "fonAdi": "A1 CAPİTAL PORTFÖY SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 48.910497,
+      "tedavuldekiPaySayisi": 228386,
+      "kisiSayisi": 45,
+      "fonToplamDeger": 11170472.78,
+      "gunlukGetiri": 0.00278359,
+      "paraGirisiCikisi": 97.82,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DA1",
+      "fonAdi": "A1 CAPİTAL PORTFÖY SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-18",
+      "fiyat": 48.910497,
+      "tedavuldekiPaySayisi": 228386,
+      "kisiSayisi": 45,
+      "fonToplamDeger": 11170472.78,
+      "gunlukGetiri": 0.00278359,
+      "paraGirisiCikisi": 97.82,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "DA1",
       "fonAdi": "A1 CAPİTAL PORTFÖY SERBEST (DÖVİZ) FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

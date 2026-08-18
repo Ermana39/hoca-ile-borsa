@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BRR",
     "slug": "brr",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.646383,
-    "tedavuldekiPaySayisi": 54437877,
-    "kisiSayisi": 310,
-    "fonToplamDeger": 89625588.53,
-    "gunlukGetiri": 0.00129725,
+    "fiyat": 1.65256,
+    "tedavuldekiPaySayisi": 56356884,
+    "kisiSayisi": 317,
+    "fonToplamDeger": 93133116.09,
+    "gunlukGetiri": 0.00375186,
     "getiriler": {
-      "birAy": 0.034008,
-      "ucAy": 0.105295,
-      "altiAy": 0.200774,
-      "yilbasi": 0.25938300000000003,
-      "birYil": 0.47157699999999997,
+      "birAy": 0.030192999999999998,
+      "ucAy": 0.103367,
+      "altiAy": 0.20180900000000002,
+      "yilbasi": 0.264108,
+      "birYil": 0.47131500000000004,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 145634.1,
-      "besGun": null,
+      "gunluk": 3171274.21,
+      "besGun": 4336048.17,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
-      "besGun": null,
+      "gunluk": 7,
+      "besGun": 14,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BRR",
+        "fonAdi": "AK PORTFÖY İKİNCİ KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 1.65256,
+        "tedavuldekiPaySayisi": 56356884,
+        "kisiSayisi": 317,
+        "fonToplamDeger": 93133116.09,
+        "gunlukGetiri": 0.00375186,
+        "paraGirisiCikisi": 3171274.21,
+        "yatirimciDegisimi": 7
+      },
       {
         "fonKodu": "BRR",
         "fonAdi": "AK PORTFÖY İKİNCİ KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00129725,
       "paraGirisiCikisi": 145634.1,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "BRR",
+      "fonAdi": "AK PORTFÖY İKİNCİ KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.65256,
+      "tedavuldekiPaySayisi": 56356884,
+      "kisiSayisi": 317,
+      "fonToplamDeger": 93133116.09,
+      "gunlukGetiri": 0.00375186,
+      "paraGirisiCikisi": 3171274.21,
+      "yatirimciDegisimi": 7
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BRR",
+      "fonAdi": "AK PORTFÖY İKİNCİ KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 1.65256,
+      "tedavuldekiPaySayisi": 56356884,
+      "kisiSayisi": 317,
+      "fonToplamDeger": 93133116.09,
+      "gunlukGetiri": 0.00375186,
+      "paraGirisiCikisi": 3171274.21,
+      "yatirimciDegisimi": 7
+    },
     {
       "fonKodu": "BRR",
       "fonAdi": "AK PORTFÖY İKİNCİ KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

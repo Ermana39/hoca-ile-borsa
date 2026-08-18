@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "MCU",
     "slug": "mcu",
@@ -12,44 +12,56 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.389916,
-    "tedavuldekiPaySayisi": 118758802,
-    "kisiSayisi": 150,
-    "fonToplamDeger": 165064774.76,
-    "gunlukGetiri": 0.00172971,
+    "fiyat": 1.39545,
+    "tedavuldekiPaySayisi": 116400096,
+    "kisiSayisi": 153,
+    "fonToplamDeger": 162430539.42,
+    "gunlukGetiri": 0.00398154,
     "getiriler": {
-      "birAy": 0.04385,
-      "ucAy": 0.09790800000000001,
-      "altiAy": 0.21540900000000002,
-      "yilbasi": 0.28171399999999996,
-      "birYil": 0.35179900000000003,
+      "birAy": 0.038173,
+      "ucAy": 0.097665,
+      "altiAy": 0.21573399999999998,
+      "yilbasi": 0.286817,
+      "birYil": 0.35115999999999997,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 3536443.89,
-      "besGun": null,
+      "gunluk": -3291456.29,
+      "besGun": 36778259.19,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
-      "besGun": null,
+      "gunluk": 3,
+      "besGun": 10,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MCU",
+        "fonAdi": "AZİMUT PORTFÖY MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-18",
+        "fiyat": 1.39545,
+        "tedavuldekiPaySayisi": 116400096,
+        "kisiSayisi": 153,
+        "fonToplamDeger": 162430539.42,
+        "gunlukGetiri": 0.00398154,
+        "paraGirisiCikisi": -3291456.29,
+        "yatirimciDegisimi": 3
+      },
       {
         "fonKodu": "MCU",
         "fonAdi": "AZİMUT PORTFÖY MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00172971,
       "paraGirisiCikisi": 3536443.89,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "MCU",
+      "fonAdi": "AZİMUT PORTFÖY MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.39545,
+      "tedavuldekiPaySayisi": 116400096,
+      "kisiSayisi": 153,
+      "fonToplamDeger": 162430539.42,
+      "gunlukGetiri": 0.00398154,
+      "paraGirisiCikisi": -3291456.29,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MCU",
+      "fonAdi": "AZİMUT PORTFÖY MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-18",
+      "fiyat": 1.39545,
+      "tedavuldekiPaySayisi": 116400096,
+      "kisiSayisi": 153,
+      "fonToplamDeger": 162430539.42,
+      "gunlukGetiri": 0.00398154,
+      "paraGirisiCikisi": -3291456.29,
+      "yatirimciDegisimi": 3
+    },
     {
       "fonKodu": "MCU",
       "fonAdi": "AZİMUT PORTFÖY MUTLAK GETİRİ HEDEFLİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "NBH",
     "slug": "nbh",
@@ -12,44 +12,56 @@
     "yonetici": "NEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "neo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 6.898724,
+    "fiyat": 6.931549,
     "tedavuldekiPaySayisi": 309764095,
     "kisiSayisi": 191,
-    "fonToplamDeger": 2136976906.32,
-    "gunlukGetiri": 0.0019565,
+    "fonToplamDeger": 2147145013.75,
+    "gunlukGetiri": 0.00475813,
     "getiriler": {
-      "birAy": 0.050541,
-      "ucAy": 0.148373,
-      "altiAy": 0.29034,
-      "yilbasi": 0.370559,
-      "birYil": 0.648571,
-      "ucYil": 2.091298,
-      "besYil": 5.712826
+      "birAy": 0.045171,
+      "ucAy": 0.150704,
+      "altiAy": 0.288554,
+      "yilbasi": 0.377081,
+      "birYil": 0.65345,
+      "ucYil": 2.062181,
+      "besYil": 5.744765999999999
     },
     "paraAkisi": {
-      "gunluk": 1312551.23,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": 134159182.48,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": 24,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NBH",
+        "fonAdi": "NEO PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 6.931549,
+        "tedavuldekiPaySayisi": 309764095,
+        "kisiSayisi": 191,
+        "fonToplamDeger": 2147145013.75,
+        "gunlukGetiri": 0.00475813,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "NBH",
         "fonAdi": "NEO PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.0019565,
       "paraGirisiCikisi": 1312551.23,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "NBH",
+      "fonAdi": "NEO PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 6.931549,
+      "tedavuldekiPaySayisi": 309764095,
+      "kisiSayisi": 191,
+      "fonToplamDeger": 2147145013.75,
+      "gunlukGetiri": 0.00475813,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NBH",
+      "fonAdi": "NEO PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 6.931549,
+      "tedavuldekiPaySayisi": 309764095,
+      "kisiSayisi": 191,
+      "fonToplamDeger": 2147145013.75,
+      "gunlukGetiri": 0.00475813,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "NBH",
       "fonAdi": "NEO PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

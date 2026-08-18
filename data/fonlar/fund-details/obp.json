@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "OBP",
     "slug": "obp",
@@ -12,44 +12,56 @@
     "yonetici": "OYAK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "oyak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.204033,
-    "tedavuldekiPaySayisi": 188687519,
+    "fiyat": 0.204668,
+    "tedavuldekiPaySayisi": 188460634,
     "kisiSayisi": 819,
-    "fonToplamDeger": 38498460.67,
-    "gunlukGetiri": 0.003724,
+    "fonToplamDeger": 38571773.9,
+    "gunlukGetiri": 0.00311224,
     "getiriler": {
-      "birAy": 0.032258,
-      "ucAy": 0.072751,
-      "altiAy": 0.088083,
-      "yilbasi": 0.186977,
-      "birYil": 0.34157200000000004,
-      "ucYil": 1.998237,
-      "besYil": 5.246418
+      "birAy": 0.028984,
+      "ucAy": 0.079689,
+      "altiAy": 0.087127,
+      "yilbasi": 0.190671,
+      "birYil": 0.34752000000000005,
+      "ucYil": 1.894511,
+      "besYil": 5.255898999999999
     },
     "paraAkisi": {
-      "gunluk": -2784.44,
-      "besGun": null,
+      "gunluk": -46436.1,
+      "besGun": -217984.78,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
-      "besGun": null,
+      "gunluk": 0,
+      "besGun": -4,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OBP",
+        "fonAdi": "OYAK PORTFÖY İKİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 0.204668,
+        "tedavuldekiPaySayisi": 188460634,
+        "kisiSayisi": 819,
+        "fonToplamDeger": 38571773.9,
+        "gunlukGetiri": 0.00311224,
+        "paraGirisiCikisi": -46436.1,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "OBP",
         "fonAdi": "OYAK PORTFÖY İKİNCİ DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.003724,
       "paraGirisiCikisi": -2784.44,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "OBP",
+      "fonAdi": "OYAK PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 0.204668,
+      "tedavuldekiPaySayisi": 188460634,
+      "kisiSayisi": 819,
+      "fonToplamDeger": 38571773.9,
+      "gunlukGetiri": 0.00311224,
+      "paraGirisiCikisi": -46436.1,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OBP",
+      "fonAdi": "OYAK PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 0.204668,
+      "tedavuldekiPaySayisi": 188460634,
+      "kisiSayisi": 819,
+      "fonToplamDeger": 38571773.9,
+      "gunlukGetiri": 0.00311224,
+      "paraGirisiCikisi": -46436.1,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "OBP",
       "fonAdi": "OYAK PORTFÖY İKİNCİ DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

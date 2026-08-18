@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "YHP",
     "slug": "yhp",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 4.542818,
+    "fiyat": 4.553233,
     "tedavuldekiPaySayisi": 390000000,
     "kisiSayisi": 1,
-    "fonToplamDeger": 1771698924.83,
-    "gunlukGetiri": 0.00492439,
+    "fonToplamDeger": 1775760752.11,
+    "gunlukGetiri": 0.00229263,
     "getiriler": {
-      "birAy": 0.051458000000000004,
-      "ucAy": 0.089263,
-      "altiAy": 0.097112,
-      "yilbasi": 0.289303,
-      "birYil": 0.45549799999999996,
-      "ucYil": 1.9655779999999998,
-      "besYil": 3.2231549999999998
+      "birAy": 0.031052,
+      "ucAy": 0.09193899999999999,
+      "altiAy": 0.097358,
+      "yilbasi": 0.292259,
+      "birYil": 0.471833,
+      "ucYil": 1.9460659999999999,
+      "besYil": 3.228458
     },
     "paraAkisi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": null,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YHP",
+        "fonAdi": "YAPI KREDİ PORTFÖY KADIKÖY SERBEST FON",
+        "tarih": "2026-08-18",
+        "fiyat": 4.553233,
+        "tedavuldekiPaySayisi": 390000000,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 1775760752.11,
+        "gunlukGetiri": 0.00229263,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "YHP",
         "fonAdi": "YAPI KREDİ PORTFÖY KADIKÖY SERBEST FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00492439,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YHP",
+      "fonAdi": "YAPI KREDİ PORTFÖY KADIKÖY SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 4.553233,
+      "tedavuldekiPaySayisi": 390000000,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 1775760752.11,
+      "gunlukGetiri": 0.00229263,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YHP",
+      "fonAdi": "YAPI KREDİ PORTFÖY KADIKÖY SERBEST FON",
+      "tarih": "2026-08-18",
+      "fiyat": 4.553233,
+      "tedavuldekiPaySayisi": 390000000,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 1775760752.11,
+      "gunlukGetiri": 0.00229263,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "YHP",
       "fonAdi": "YAPI KREDİ PORTFÖY KADIKÖY SERBEST FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

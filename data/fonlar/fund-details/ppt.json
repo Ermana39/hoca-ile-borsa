@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "PPT",
     "slug": "ppt",
@@ -12,44 +12,56 @@
     "yonetici": "ATLAS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "atlas-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 3.253659,
-    "tedavuldekiPaySayisi": 853157230,
-    "kisiSayisi": 3820,
-    "fonToplamDeger": 2775882735.16,
-    "gunlukGetiri": 0.00122011,
+    "fiyat": 3.269013,
+    "tedavuldekiPaySayisi": 679464675,
+    "kisiSayisi": 3834,
+    "fonToplamDeger": 2221178613.92,
+    "gunlukGetiri": 0.00471899,
     "getiriler": {
-      "birAy": 0.038083,
-      "ucAy": 0.115156,
-      "altiAy": 0.23257899999999998,
-      "yilbasi": 0.298113,
-      "birYil": 0.529745,
+      "birAy": 0.035566,
+      "ucAy": 0.114641,
+      "altiAy": 0.23555700000000002,
+      "yilbasi": 0.304239,
+      "birYil": 0.529622,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -26412507.48,
-      "besGun": null,
+      "gunluk": -567803220.3,
+      "besGun": -337864936.72,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -10,
-      "besGun": null,
+      "gunluk": 14,
+      "besGun": 8,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PPT",
+        "fonAdi": "ATLAS PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 3.269013,
+        "tedavuldekiPaySayisi": 679464675,
+        "kisiSayisi": 3834,
+        "fonToplamDeger": 2221178613.92,
+        "gunlukGetiri": 0.00471899,
+        "paraGirisiCikisi": -567803220.3,
+        "yatirimciDegisimi": 14
+      },
       {
         "fonKodu": "PPT",
         "fonAdi": "ATLAS PORTFÖY PARA PİYASASI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00122011,
       "paraGirisiCikisi": -26412507.48,
       "yatirimciDegisimi": -10
+    },
+    {
+      "fonKodu": "PPT",
+      "fonAdi": "ATLAS PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 3.269013,
+      "tedavuldekiPaySayisi": 679464675,
+      "kisiSayisi": 3834,
+      "fonToplamDeger": 2221178613.92,
+      "gunlukGetiri": 0.00471899,
+      "paraGirisiCikisi": -567803220.3,
+      "yatirimciDegisimi": 14
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PPT",
+      "fonAdi": "ATLAS PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 3.269013,
+      "tedavuldekiPaySayisi": 679464675,
+      "kisiSayisi": 3834,
+      "fonToplamDeger": 2221178613.92,
+      "gunlukGetiri": 0.00471899,
+      "paraGirisiCikisi": -567803220.3,
+      "yatirimciDegisimi": 14
+    },
     {
       "fonKodu": "PPT",
       "fonAdi": "ATLAS PORTFÖY PARA PİYASASI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

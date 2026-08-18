@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "GPF",
     "slug": "gpf",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 9.014854,
-    "tedavuldekiPaySayisi": 70268005,
-    "kisiSayisi": 2887,
-    "fonToplamDeger": 633455810.86,
-    "gunlukGetiri": 0.00080965,
+    "fiyat": 9.103842,
+    "tedavuldekiPaySayisi": 69865355,
+    "kisiSayisi": 2900,
+    "fonToplamDeger": 636043164.23,
+    "gunlukGetiri": 0.00987126,
     "getiriler": {
-      "birAy": 0.036653,
-      "ucAy": 0.064652,
-      "altiAy": 0.155197,
-      "yilbasi": 0.21455400000000002,
-      "birYil": 0.41314999999999996,
-      "ucYil": 1.793633,
-      "besYil": 4.0270589999999995
+      "birAy": 0.036717,
+      "ucAy": 0.07308200000000001,
+      "altiAy": 0.16500900000000002,
+      "yilbasi": 0.226543,
+      "birYil": 0.42280700000000004,
+      "ucYil": 1.8069990000000002,
+      "besYil": 4.074577
     },
     "paraAkisi": {
-      "gunluk": 2134582.2,
-      "besGun": null,
+      "gunluk": -3665661.98,
+      "besGun": 15531017.01,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 10,
-      "besGun": null,
+      "gunluk": 13,
+      "besGun": 50,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GPF",
+        "fonAdi": "GARANTİ PORTFÖY ÇOKLU VARLIK KATILIM FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 9.103842,
+        "tedavuldekiPaySayisi": 69865355,
+        "kisiSayisi": 2900,
+        "fonToplamDeger": 636043164.23,
+        "gunlukGetiri": 0.00987126,
+        "paraGirisiCikisi": -3665661.98,
+        "yatirimciDegisimi": 13
+      },
       {
         "fonKodu": "GPF",
         "fonAdi": "GARANTİ PORTFÖY ÇOKLU VARLIK KATILIM FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00080965,
       "paraGirisiCikisi": 2134582.2,
       "yatirimciDegisimi": 10
+    },
+    {
+      "fonKodu": "GPF",
+      "fonAdi": "GARANTİ PORTFÖY ÇOKLU VARLIK KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 9.103842,
+      "tedavuldekiPaySayisi": 69865355,
+      "kisiSayisi": 2900,
+      "fonToplamDeger": 636043164.23,
+      "gunlukGetiri": 0.00987126,
+      "paraGirisiCikisi": -3665661.98,
+      "yatirimciDegisimi": 13
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GPF",
+      "fonAdi": "GARANTİ PORTFÖY ÇOKLU VARLIK KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 9.103842,
+      "tedavuldekiPaySayisi": 69865355,
+      "kisiSayisi": 2900,
+      "fonToplamDeger": 636043164.23,
+      "gunlukGetiri": 0.00987126,
+      "paraGirisiCikisi": -3665661.98,
+      "yatirimciDegisimi": 13
+    },
     {
       "fonKodu": "GPF",
       "fonAdi": "GARANTİ PORTFÖY ÇOKLU VARLIK KATILIM FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

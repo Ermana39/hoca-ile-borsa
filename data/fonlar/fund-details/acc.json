@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ACC",
     "slug": "acc",
@@ -12,44 +12,56 @@
     "yonetici": "İSTANBUL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "istanbul-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 44.313226,
-    "tedavuldekiPaySayisi": 4026226,
-    "kisiSayisi": 1334,
-    "fonToplamDeger": 178415061.7,
-    "gunlukGetiri": -0.0020961,
+    "fiyat": 44.56191,
+    "tedavuldekiPaySayisi": 4024957,
+    "kisiSayisi": 1332,
+    "fonToplamDeger": 179359772.1,
+    "gunlukGetiri": 0.00561196,
     "getiriler": {
-      "birAy": 0.048677,
-      "ucAy": -0.032089,
-      "altiAy": -0.014838,
-      "yilbasi": 0.284389,
-      "birYil": 0.26753699999999997,
-      "ucYil": 1.495808,
-      "besYil": 14.668344
+      "birAy": 0.033033,
+      "ucAy": -0.012447999999999999,
+      "altiAy": -0.017765,
+      "yilbasi": 0.291597,
+      "birYil": 0.280124,
+      "ucYil": 1.50512,
+      "besYil": 14.638512
     },
     "paraAkisi": {
-      "gunluk": -59424.04,
-      "besGun": null,
+      "gunluk": -56549.06,
+      "besGun": -1813867.64,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -7,
-      "besGun": null,
+      "gunluk": -2,
+      "besGun": -18,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ACC",
+        "fonAdi": "İSTANBUL PORTFÖY DÖRDÜNCÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN)",
+        "tarih": "2026-08-18",
+        "fiyat": 44.56191,
+        "tedavuldekiPaySayisi": 4024957,
+        "kisiSayisi": 1332,
+        "fonToplamDeger": 179359772.1,
+        "gunlukGetiri": 0.00561196,
+        "paraGirisiCikisi": -56549.06,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "ACC",
         "fonAdi": "İSTANBUL PORTFÖY DÖRDÜNCÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN)",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.0020961,
       "paraGirisiCikisi": -59424.04,
       "yatirimciDegisimi": -7
+    },
+    {
+      "fonKodu": "ACC",
+      "fonAdi": "İSTANBUL PORTFÖY DÖRDÜNCÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN)",
+      "tarih": "2026-08-18",
+      "fiyat": 44.56191,
+      "tedavuldekiPaySayisi": 4024957,
+      "kisiSayisi": 1332,
+      "fonToplamDeger": 179359772.1,
+      "gunlukGetiri": 0.00561196,
+      "paraGirisiCikisi": -56549.06,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ACC",
+      "fonAdi": "İSTANBUL PORTFÖY DÖRDÜNCÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN)",
+      "tarih": "2026-08-18",
+      "fiyat": 44.56191,
+      "tedavuldekiPaySayisi": 4024957,
+      "kisiSayisi": 1332,
+      "fonToplamDeger": 179359772.1,
+      "gunlukGetiri": 0.00561196,
+      "paraGirisiCikisi": -56549.06,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "ACC",
       "fonAdi": "İSTANBUL PORTFÖY DÖRDÜNCÜ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN)",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

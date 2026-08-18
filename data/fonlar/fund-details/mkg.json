@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "MKG",
     "slug": "mkg",
@@ -12,44 +12,56 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 17.493938,
-    "tedavuldekiPaySayisi": 93111423,
-    "kisiSayisi": 8305,
-    "fonToplamDeger": 1628885483.76,
-    "gunlukGetiri": -0.00620948,
+    "fiyat": 17.633475,
+    "tedavuldekiPaySayisi": 90082839,
+    "kisiSayisi": 8296,
+    "fonToplamDeger": 1588473494.69,
+    "gunlukGetiri": 0.00797631,
     "getiriler": {
-      "birAy": 0.09182399999999999,
-      "ucAy": -0.016718,
-      "altiAy": -0.061536999999999994,
-      "yilbasi": 0.094622,
-      "birYil": 0.495722,
-      "ucYil": 3.0827280000000004,
-      "besYil": 13.311878
+      "birAy": 0.112922,
+      "ucAy": 0.017657,
+      "altiAy": -0.051826,
+      "yilbasi": 0.103353,
+      "birYil": 0.511894,
+      "ucYil": 3.0892180000000002,
+      "besYil": 13.398223
     },
     "paraAkisi": {
-      "gunluk": 3451623.94,
-      "besGun": null,
+      "gunluk": -53404460.25,
+      "besGun": -56007426.42,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
-      "besGun": null,
+      "gunluk": -9,
+      "besGun": -9,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MKG",
+        "fonAdi": "AKTİF PORTFÖY ALTIN KATILIM FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 17.633475,
+        "tedavuldekiPaySayisi": 90082839,
+        "kisiSayisi": 8296,
+        "fonToplamDeger": 1588473494.69,
+        "gunlukGetiri": 0.00797631,
+        "paraGirisiCikisi": -53404460.25,
+        "yatirimciDegisimi": -9
+      },
       {
         "fonKodu": "MKG",
         "fonAdi": "AKTİF PORTFÖY ALTIN KATILIM FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00620948,
       "paraGirisiCikisi": 3451623.94,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "MKG",
+      "fonAdi": "AKTİF PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 17.633475,
+      "tedavuldekiPaySayisi": 90082839,
+      "kisiSayisi": 8296,
+      "fonToplamDeger": 1588473494.69,
+      "gunlukGetiri": 0.00797631,
+      "paraGirisiCikisi": -53404460.25,
+      "yatirimciDegisimi": -9
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MKG",
+      "fonAdi": "AKTİF PORTFÖY ALTIN KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 17.633475,
+      "tedavuldekiPaySayisi": 90082839,
+      "kisiSayisi": 8296,
+      "fonToplamDeger": 1588473494.69,
+      "gunlukGetiri": 0.00797631,
+      "paraGirisiCikisi": -53404460.25,
+      "yatirimciDegisimi": -9
+    },
     {
       "fonKodu": "MKG",
       "fonAdi": "AKTİF PORTFÖY ALTIN KATILIM FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

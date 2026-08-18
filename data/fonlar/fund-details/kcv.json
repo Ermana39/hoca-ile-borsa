@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "KCV",
     "slug": "kcv",
@@ -12,44 +12,56 @@
     "yonetici": "KUVEYT TÜRK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kuveyt-turk-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 5.16462,
-    "tedavuldekiPaySayisi": 486804530,
-    "kisiSayisi": 12773,
-    "fonToplamDeger": 2514160468.54,
-    "gunlukGetiri": 0.00182825,
+    "fiyat": 5.205826,
+    "tedavuldekiPaySayisi": 479865072,
+    "kisiSayisi": 12768,
+    "fonToplamDeger": 2498093919.34,
+    "gunlukGetiri": 0.00797852,
     "getiriler": {
-      "birAy": 0.023174,
-      "ucAy": 0.053357,
-      "altiAy": 0.206018,
-      "yilbasi": 0.32103099999999996,
-      "birYil": 0.538821,
-      "ucYil": 2.3250219999999997,
+      "birAy": 0.031121,
+      "ucAy": 0.061303,
+      "altiAy": 0.217284,
+      "yilbasi": 0.331571,
+      "birYil": 0.550072,
+      "ucYil": 2.322833,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -4593103.15,
-      "besGun": null,
+      "gunluk": -36125610.88,
+      "besGun": -71808562.8,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
-      "besGun": null,
+      "gunluk": -5,
+      "besGun": 35,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KCV",
+        "fonAdi": "KUVEYT TÜRK PORTFÖY ÇOKLU VARLIK KATILIM FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 5.205826,
+        "tedavuldekiPaySayisi": 479865072,
+        "kisiSayisi": 12768,
+        "fonToplamDeger": 2498093919.34,
+        "gunlukGetiri": 0.00797852,
+        "paraGirisiCikisi": -36125610.88,
+        "yatirimciDegisimi": -5
+      },
       {
         "fonKodu": "KCV",
         "fonAdi": "KUVEYT TÜRK PORTFÖY ÇOKLU VARLIK KATILIM FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00182825,
       "paraGirisiCikisi": -4593103.15,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "KCV",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY ÇOKLU VARLIK KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 5.205826,
+      "tedavuldekiPaySayisi": 479865072,
+      "kisiSayisi": 12768,
+      "fonToplamDeger": 2498093919.34,
+      "gunlukGetiri": 0.00797852,
+      "paraGirisiCikisi": -36125610.88,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KCV",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY ÇOKLU VARLIK KATILIM FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 5.205826,
+      "tedavuldekiPaySayisi": 479865072,
+      "kisiSayisi": 12768,
+      "fonToplamDeger": 2498093919.34,
+      "gunlukGetiri": 0.00797852,
+      "paraGirisiCikisi": -36125610.88,
+      "yatirimciDegisimi": -5
+    },
     {
       "fonKodu": "KCV",
       "fonAdi": "KUVEYT TÜRK PORTFÖY ÇOKLU VARLIK KATILIM FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

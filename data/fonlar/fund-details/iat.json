@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "IAT",
     "slug": "iat",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.195258,
-    "tedavuldekiPaySayisi": 9305913352.21,
-    "kisiSayisi": 8784,
-    "fonToplamDeger": 1817055092.42,
-    "gunlukGetiri": 0.00091758,
+    "fiyat": 0.195959,
+    "tedavuldekiPaySayisi": 9298384697.21,
+    "kisiSayisi": 8783,
+    "fonToplamDeger": 1822102260.46,
+    "gunlukGetiri": 0.00359012,
     "getiriler": {
-      "birAy": 0.029283,
-      "ucAy": 0.084429,
-      "altiAy": 0.169742,
-      "yilbasi": 0.220164,
-      "birYil": 0.409306,
-      "ucYil": 1.914473,
-      "besYil": 3.560185
+      "birAy": 0.027206,
+      "ucAy": 0.08426399999999999,
+      "altiAy": 0.171765,
+      "yilbasi": 0.224545,
+      "birYil": 0.40832799999999997,
+      "ucYil": 1.922362,
+      "besYil": 3.571859
     },
     "paraAkisi": {
-      "gunluk": -2609536.48,
-      "besGun": null,
+      "gunluk": -1475307.71,
+      "besGun": 26170812.51,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
-      "besGun": null,
+      "gunluk": -1,
+      "besGun": 64,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IAT",
+        "fonAdi": "İŞ PORTFÖY KİRA SERTİFİKALARI KATILIM (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 0.195959,
+        "tedavuldekiPaySayisi": 9298384697.21,
+        "kisiSayisi": 8783,
+        "fonToplamDeger": 1822102260.46,
+        "gunlukGetiri": 0.00359012,
+        "paraGirisiCikisi": -1475307.71,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "IAT",
         "fonAdi": "İŞ PORTFÖY KİRA SERTİFİKALARI KATILIM (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00091758,
       "paraGirisiCikisi": -2609536.48,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "IAT",
+      "fonAdi": "İŞ PORTFÖY KİRA SERTİFİKALARI KATILIM (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.195959,
+      "tedavuldekiPaySayisi": 9298384697.21,
+      "kisiSayisi": 8783,
+      "fonToplamDeger": 1822102260.46,
+      "gunlukGetiri": 0.00359012,
+      "paraGirisiCikisi": -1475307.71,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IAT",
+      "fonAdi": "İŞ PORTFÖY KİRA SERTİFİKALARI KATILIM (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.195959,
+      "tedavuldekiPaySayisi": 9298384697.21,
+      "kisiSayisi": 8783,
+      "fonToplamDeger": 1822102260.46,
+      "gunlukGetiri": 0.00359012,
+      "paraGirisiCikisi": -1475307.71,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "IAT",
       "fonAdi": "İŞ PORTFÖY KİRA SERTİFİKALARI KATILIM (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

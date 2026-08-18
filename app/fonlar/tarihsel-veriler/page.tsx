@@ -10,20 +10,14 @@ export const metadata: Metadata = {
   },
 };
 
-export default function FonTarihselVerilerLandingPage({
-  searchParams,
-}: {
-  searchParams: Promise<{ q?: string }>;
-}) {
+export default function FonTarihselVerilerLandingPage() {
   return (
     <div className="min-h-screen bg-white">
       <FonTarihselExcelPage
         title="Menkul Kıymet Yatırım Fonları Tarihsel Veriler"
         description="Menkul kıymet yatırım fonlarının tarihsel verilerini inceleyin."
-        excelRelativePath="app/fonlar/tarihsel-veriler/menkul-kiymet-yatirim-fonlari/data/menkul-kiymet-yatirim-fonlari-tarihsel.xlsx"
         pageBasePath="/fonlar/tarihsel-veriler"
         backHref="/fonlar"
-        searchParams={searchParams}
       />
 
       <div className="mx-auto max-w-7xl px-4 pb-10 md:px-6">

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "BTE",
     "slug": "bte",
@@ -12,44 +12,56 @@
     "yonetici": "BV PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "bv-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 5.170687,
-    "tedavuldekiPaySayisi": 43633982,
-    "kisiSayisi": 993,
-    "fonToplamDeger": 225617665.59,
-    "gunlukGetiri": -0.00067914,
+    "fiyat": 5.25685,
+    "tedavuldekiPaySayisi": 43348368,
+    "kisiSayisi": 1001,
+    "fonToplamDeger": 227875870.95,
+    "gunlukGetiri": 0.01666374,
     "getiriler": {
-      "birAy": 0.071753,
-      "ucAy": 0.170291,
-      "altiAy": 0.41546799999999995,
-      "yilbasi": 0.333538,
-      "birYil": 0.46768099999999996,
-      "ucYil": 2.602824,
+      "birAy": 0.09706200000000001,
+      "ucAy": 0.196198,
+      "altiAy": 0.433805,
+      "yilbasi": 0.355759,
+      "birYil": 0.497021,
+      "ucYil": 2.7284100000000002,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1411.6,
-      "besGun": null,
+      "gunluk": -1501429.96,
+      "besGun": -595460.94,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
-      "besGun": null,
+      "gunluk": 8,
+      "besGun": 32,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BTE",
+        "fonAdi": "BV PORTFÖY OYUN VE TEKNOLOJİ DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 5.25685,
+        "tedavuldekiPaySayisi": 43348368,
+        "kisiSayisi": 1001,
+        "fonToplamDeger": 227875870.95,
+        "gunlukGetiri": 0.01666374,
+        "paraGirisiCikisi": -1501429.96,
+        "yatirimciDegisimi": 8
+      },
       {
         "fonKodu": "BTE",
         "fonAdi": "BV PORTFÖY OYUN VE TEKNOLOJİ DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": -0.00067914,
       "paraGirisiCikisi": 1411.6,
       "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "BTE",
+      "fonAdi": "BV PORTFÖY OYUN VE TEKNOLOJİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 5.25685,
+      "tedavuldekiPaySayisi": 43348368,
+      "kisiSayisi": 1001,
+      "fonToplamDeger": 227875870.95,
+      "gunlukGetiri": 0.01666374,
+      "paraGirisiCikisi": -1501429.96,
+      "yatirimciDegisimi": 8
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BTE",
+      "fonAdi": "BV PORTFÖY OYUN VE TEKNOLOJİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 5.25685,
+      "tedavuldekiPaySayisi": 43348368,
+      "kisiSayisi": 1001,
+      "fonToplamDeger": 227875870.95,
+      "gunlukGetiri": 0.01666374,
+      "paraGirisiCikisi": -1501429.96,
+      "yatirimciDegisimi": 8
+    },
     {
       "fonKodu": "BTE",
       "fonAdi": "BV PORTFÖY OYUN VE TEKNOLOJİ DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

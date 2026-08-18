@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "TNK",
     "slug": "tnk",
@@ -12,13 +12,13 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 33.548806,
-    "tedavuldekiPaySayisi": 103094339,
-    "kisiSayisi": 74061,
-    "fonToplamDeger": 3458691946.85,
-    "gunlukGetiri": 0.0012466,
+    "fiyat": 33.68515,
+    "tedavuldekiPaySayisi": 106270635,
+    "kisiSayisi": 73927,
+    "fonToplamDeger": 3579742247.32,
+    "gunlukGetiri": 0.00406405,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 567209.66,
-      "besGun": null,
+      "gunluk": 106994007.2,
+      "besGun": 24789877.44,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
-      "besGun": null,
+      "gunluk": -134,
+      "besGun": -293,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TNK",
+        "fonAdi": "TEB PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 33.68515,
+        "tedavuldekiPaySayisi": 106270635,
+        "kisiSayisi": 73927,
+        "fonToplamDeger": 3579742247.32,
+        "gunlukGetiri": 0.00406405,
+        "paraGirisiCikisi": 106994007.2,
+        "yatirimciDegisimi": -134
+      },
       {
         "fonKodu": "TNK",
         "fonAdi": "TEB PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.0012466,
       "paraGirisiCikisi": 567209.66,
       "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "TNK",
+      "fonAdi": "TEB PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 33.68515,
+      "tedavuldekiPaySayisi": 106270635,
+      "kisiSayisi": 73927,
+      "fonToplamDeger": 3579742247.32,
+      "gunlukGetiri": 0.00406405,
+      "paraGirisiCikisi": 106994007.2,
+      "yatirimciDegisimi": -134
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TNK",
+      "fonAdi": "TEB PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 33.68515,
+      "tedavuldekiPaySayisi": 106270635,
+      "kisiSayisi": 73927,
+      "fonToplamDeger": 3579742247.32,
+      "gunlukGetiri": 0.00406405,
+      "paraGirisiCikisi": 106994007.2,
+      "yatirimciDegisimi": -134
+    },
     {
       "fonKodu": "TNK",
       "fonAdi": "TEB PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ARE",
     "slug": "are",
@@ -12,44 +12,56 @@
     "yonetici": "İSTANBUL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "istanbul-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 0.252647,
-    "tedavuldekiPaySayisi": 198563477,
-    "kisiSayisi": 1983,
-    "fonToplamDeger": 50166399.56,
-    "gunlukGetiri": 0.011632,
+    "fiyat": 0.250898,
+    "tedavuldekiPaySayisi": 193531271,
+    "kisiSayisi": 1980,
+    "fonToplamDeger": 48556553.46,
+    "gunlukGetiri": -0.0069227,
     "getiriler": {
-      "birAy": 0.069256,
-      "ucAy": 0.10678499999999999,
-      "altiAy": 0.248059,
-      "yilbasi": 0.28550000000000003,
-      "birYil": 0.429136,
-      "ucYil": 1.151744,
-      "besYil": 3.872276
+      "birAy": 0.055155,
+      "ucAy": 0.09715299999999999,
+      "altiAy": 0.228856,
+      "yilbasi": 0.276601,
+      "birYil": 0.43052300000000004,
+      "ucYil": 1.165976,
+      "besYil": 3.919569
     },
     "paraAkisi": {
-      "gunluk": 1485006.52,
-      "besGun": null,
+      "gunluk": -1262570.42,
+      "besGun": 1076237.45,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -7,
-      "besGun": null,
+      "gunluk": -3,
+      "besGun": 24,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ARE",
+        "fonAdi": "İSTANBUL PORTFÖY YABANCI HİSSE SENEDİ FONU",
+        "tarih": "2026-08-18",
+        "fiyat": 0.250898,
+        "tedavuldekiPaySayisi": 193531271,
+        "kisiSayisi": 1980,
+        "fonToplamDeger": 48556553.46,
+        "gunlukGetiri": -0.0069227,
+        "paraGirisiCikisi": -1262570.42,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "ARE",
         "fonAdi": "İSTANBUL PORTFÖY YABANCI HİSSE SENEDİ FONU",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.011632,
       "paraGirisiCikisi": 1485006.52,
       "yatirimciDegisimi": -7
+    },
+    {
+      "fonKodu": "ARE",
+      "fonAdi": "İSTANBUL PORTFÖY YABANCI HİSSE SENEDİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.250898,
+      "tedavuldekiPaySayisi": 193531271,
+      "kisiSayisi": 1980,
+      "fonToplamDeger": 48556553.46,
+      "gunlukGetiri": -0.0069227,
+      "paraGirisiCikisi": -1262570.42,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ARE",
+      "fonAdi": "İSTANBUL PORTFÖY YABANCI HİSSE SENEDİ FONU",
+      "tarih": "2026-08-18",
+      "fiyat": 0.250898,
+      "tedavuldekiPaySayisi": 193531271,
+      "kisiSayisi": 1980,
+      "fonToplamDeger": 48556553.46,
+      "gunlukGetiri": -0.0069227,
+      "paraGirisiCikisi": -1262570.42,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "ARE",
       "fonAdi": "İSTANBUL PORTFÖY YABANCI HİSSE SENEDİ FONU",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

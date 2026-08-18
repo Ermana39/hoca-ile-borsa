@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { createRequire } from "node:module";
 
 const root = process.cwd();
 const sourceRoots = ["app", "components"];
@@ -7,6 +8,18 @@ const allowedNextLinkFile = path.normalize(
   path.join(root, "components", "NoPrefetchLink.tsx"),
 );
 const violations = [];
+const require = createRequire(import.meta.url);
+const nextConfig = require(path.join(root, "next.config.js"));
+
+if (nextConfig.output !== "export") {
+  violations.push("next.config.js: output='export' olmali");
+}
+if (nextConfig.images?.unoptimized !== true) {
+  violations.push("next.config.js: images.unoptimized=true olmali");
+}
+if (!fs.existsSync(path.join(root, "vercel.mjs"))) {
+  violations.push("vercel.mjs: statik yayin yapilandirmasi eksik");
+}
 
 function walk(directory) {
   for (const entry of fs.readdirSync(directory, { withFileTypes: true })) {
@@ -32,9 +45,20 @@ for (const sourceRoot of sourceRoots) {
   walk(path.join(root, sourceRoot));
 }
 
+for (const sourceRoot of sourceRoots) {
+  const source = fs
+    .readdirSync(path.join(root, sourceRoot), { recursive: true })
+    .filter((entry) => typeof entry === "string" && /\.[cm]?[jt]sx?$/.test(entry))
+    .map((entry) => fs.readFileSync(path.join(root, sourceRoot, entry), "utf8"))
+    .join("\n");
+  if (/revalidate\s*:\s*[1-9]\d*/.test(source)) {
+    violations.push(`${sourceRoot}: zaman tabanli ISR yeniden acilmis`);
+  }
+}
+
 if (violations.length > 0) {
   console.error(
-    "Otomatik rota ön yüklemesi yeniden açılmış. NoPrefetchLink kullanın:\n" +
+    "Vercel kullanim korumalari ihlal edildi:\n" +
       violations.map((file) => `- ${file}`).join("\n"),
   );
   process.exit(1);
@@ -56,5 +80,5 @@ if (fs.existsSync(proxyPath)) {
 }
 
 console.log(
-  "Vercel kullanim korumalari dogrulandi: otomatik prefetch kapali, genel HTML proxy'si yok.",
+  "Vercel kullanim korumalari dogrulandi: sayfalar statik, gorsel donusumu ve otomatik prefetch kapali, genel HTML proxy'si yok.",
 );

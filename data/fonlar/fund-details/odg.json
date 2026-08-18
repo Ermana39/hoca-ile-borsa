@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-14T15:39:08.049Z",
-  "sonIslemTarihi": "2026-08-14",
+  "generatedAt": "2026-08-18T12:37:29.820Z",
+  "sonIslemTarihi": "2026-08-18",
   "fund": {
     "kod": "ODG",
     "slug": "odg",
@@ -12,16 +12,16 @@
     "yonetici": "ONE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "one-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-14",
+    "tarih": "2026-08-18",
     "aktifMi": true,
-    "fiyat": 1.161657,
-    "tedavuldekiPaySayisi": 59362564,
-    "kisiSayisi": 39,
-    "fonToplamDeger": 68958931.92,
-    "gunlukGetiri": 0.00052797,
+    "fiyat": 1.163366,
+    "tedavuldekiPaySayisi": 59363468,
+    "kisiSayisi": 40,
+    "fonToplamDeger": 69061460.99,
+    "gunlukGetiri": 0.00147117,
     "getiriler": {
-      "birAy": 0.033136,
-      "ucAy": 0.096594,
+      "birAy": 0.024862000000000002,
+      "ucAy": 0.096251,
       "altiAy": null,
       "yilbasi": null,
       "birYil": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1893.5,
-      "besGun": null,
+      "gunluk": 1051.68,
+      "besGun": -55933.24,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 1,
-      "besGun": null,
+      "besGun": 3,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 5,
+    "tarihselGunSayisi": 6,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ODG",
+        "fonAdi": "ONE PORTFÖY İKİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-18",
+        "fiyat": 1.163366,
+        "tedavuldekiPaySayisi": 59363468,
+        "kisiSayisi": 40,
+        "fonToplamDeger": 69061460.99,
+        "gunlukGetiri": 0.00147117,
+        "paraGirisiCikisi": 1051.68,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "ODG",
         "fonAdi": "ONE PORTFÖY İKİNCİ DEĞİŞKEN FON",
@@ -172,9 +184,33 @@
       "gunlukGetiri": 0.00052797,
       "paraGirisiCikisi": 1893.5,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "ODG",
+      "fonAdi": "ONE PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.163366,
+      "tedavuldekiPaySayisi": 59363468,
+      "kisiSayisi": 40,
+      "fonToplamDeger": 69061460.99,
+      "gunlukGetiri": 0.00147117,
+      "paraGirisiCikisi": 1051.68,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ODG",
+      "fonAdi": "ONE PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-18",
+      "fiyat": 1.163366,
+      "tedavuldekiPaySayisi": 59363468,
+      "kisiSayisi": 40,
+      "fonToplamDeger": 69061460.99,
+      "gunlukGetiri": 0.00147117,
+      "paraGirisiCikisi": 1051.68,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "ODG",
       "fonAdi": "ONE PORTFÖY İKİNCİ DEĞİŞKEN FON",
@@ -239,7 +275,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

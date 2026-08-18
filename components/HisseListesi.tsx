@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "@/components/NoPrefetchLink";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import HisseAvatar from "@/components/HisseAvatar";
 
 type HisseOzet = { kod: string; sirketAdi: string };
@@ -14,6 +14,11 @@ export default function HisseListesi({
   initialArama?: string;
 }) {
   const [arama, setArama] = useState(initialArama);
+
+  useEffect(() => {
+    const query = new URLSearchParams(window.location.search).get("q");
+    if (query) setArama(query);
+  }, []);
 
   const filtreli = useMemo(() => {
     const q = arama.trim().toLocaleLowerCase("tr");

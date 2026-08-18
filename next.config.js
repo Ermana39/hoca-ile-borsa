@@ -245,75 +245,17 @@ const eskiUrlRedirects = [
 ];
 
 const nextConfig = {
-  outputFileTracingIncludes: {
-    "/mevduat-kredi-faizleri/mevduat-faizi-oranlari": [
-      "./data/**/*.xlsx",
-    ],
-    "/hisse/[sembol]": [
-      "./data/hisseler/**/*.json",
-      "./data/haberler/**/*.json",
-    ],
-    "/hisseler": [
-      "./data/hisseler/**/*.json",
-    ],
-    "/fonlar/**": [
-      "./data/fonlar/**/*.json",
-      "./app/fonlar/**/*.json",
-      "./app/fonlar/**/*.xlsx",
-    ],
-    // Dinamik halka arz şablonu JSON verilerini okur.
-    "/halka-arz/taslak-izahnameler/[slug]": [
-      "./data/halka-arz/**/*.json",
-    ],
-    // Takvim sayfası tüm halka arz JSON'larını tarar.
-    "/halka-arz/takvim": [
-      "./data/halka-arz/**/*.json",
-    ],
-    // Günlük borsa özetleri haber akışına da katıldığından, getAllNews kullanan
-    // tüm route'lar bu JSON'lara ihtiyaç duyar.
-    "/": [
-      "./data/gunluk-ozet/**/*.json",
-      "./data/haberler/**/*.json",
-    ],
-    "/haber/**": ["./data/haberler/**/*.json"],
-    "/borsa/gunluk-borsa-ozeti": ["./data/gunluk-ozet/**/*.json"],
-    "/borsa/gunluk-borsa-ozeti/[tarih]": ["./data/gunluk-ozet/**/*.json"],
-    "/haberler": [
-      "./data/gunluk-ozet/**/*.json",
-      "./data/haberler/**/*.json",
-    ],
-    "/haberler/sayfa/[sayfa]": [
-      "./data/gunluk-ozet/**/*.json",
-      "./data/haberler/**/*.json",
-    ],
-    "/haberler/kategori/[kategori]": [
-      "./data/gunluk-ozet/**/*.json",
-      "./data/haberler/**/*.json",
-    ],
-    "/haberler/kategori/[kategori]/sayfa/[sayfa]": [
-      "./data/gunluk-ozet/**/*.json",
-      "./data/haberler/**/*.json",
-    ],
-    "/halka-arz/onayli-izahnameler/**": [
-      "./data/halka-arz/**/*.json",
-      "./data/haberler/**/*.json",
-      "./data/gunluk-ozet/**/*.json",
-    ],
-    "/halka-arz/tavan-serisi": ["./data/gunluk-ozet/**/*.json"],
-    "/yazar/[slug]": ["./data/haberler/**/*.json"],
-    "/news-sitemap.xml": ["./data/haberler/**/*.json"],
-    "/rss.xml": ["./data/haberler/**/*.json"],
-    "/api/revalidate": ["./data/haberler/**/*.json"],
-    "/sitemap.xml": [
-      "./data/gunluk-ozet/**/*.json",
-      "./data/halka-arz/**/*.json",
-      "./data/haberler/**/*.json",
-      "./data/fonlar/**/*.json",
-      // Temettü alt sayfası rotaları hisse JSON'larından türetilir.
-      "./data/hisseler/**/*.json",
-    ],
+  // Site verileri her deploy oncesinde dosyalardan uretiliyor. Sayfalari gercek
+  // statik dosya olarak cikarmak, Vercel'in her HTML/RSC yanitini ISR deposunda
+  // tutmasini ve 8 KB'lik ISR okuma birimleriyle ucretlendirmesini engeller.
+  output: "export",
+  images: {
+    // Tum haber gorselleri build ile birlikte yayinlaniyor. Vercel'in istek
+    // basina Image Optimization fonksiyonuna ve donusum kotasina gerek yok.
+    unoptimized: true,
   },
 
+  ...(process.env.HIB_STATIC_EXPORT_BUILD === "1" ? {} : {
   async redirects() {
     return [
       {
@@ -506,6 +448,7 @@ const nextConfig = {
 
     return [...generalImageHeaders, ...imageHeaders, ...globalSecurityHeaders];
   },
+  }),
 };
 
 module.exports = nextConfig;

@@ -1,12 +1,9 @@
 import fs from "fs/promises";
 import path from "path";
-import { unstable_cache } from "next/cache";
+import { Suspense } from "react";
 import Link from "@/components/NoPrefetchLink";
-import FonGetiriTableClient, { type FonRow } from "./FonGetiriTableClient";
-
-type SearchParams = Promise<{
-  q?: string;
-}>;
+import { type FonRow } from "./FonGetiriTableClient";
+import FonGetiriSearchClient from "./FonGetiriSearchClient";
 
 type JsonRow = Record<string, string | number | null>;
 
@@ -19,10 +16,8 @@ type JsonData = {
 type Props = {
   title: string;
   description: string;
-  excelRelativePath: string;
   pageBasePath: string;
   backHref?: string;
-  searchParams: SearchParams;
 };
 
 function normalizeText(value: unknown) {
@@ -73,13 +68,19 @@ function getValue(row: JsonRow, column: string, fallbackIndex: number) {
   return values[fallbackIndex] ?? null;
 }
 
-const getJsonData = unstable_cache(
-  async (excelRelativePath: string): Promise<{
-    rows: FonRow[];
-    guncellemeTarihi: string;
-  }> => {
-  const jsonRelativePath = excelRelativePath.replace(/\.xlsx$/i, ".json");
-  const filePath = path.join(process.cwd(), jsonRelativePath);
+async function getJsonData(): Promise<{
+  rows: FonRow[];
+  guncellemeTarihi: string;
+}> {
+  const filePath = path.join(
+    process.cwd(),
+    "app",
+    "fonlar",
+    "getiri",
+    "menkul-kiymet-yatirim-fonlari",
+    "data",
+    "menkul-kiymet-yatirim-fonlari-getiri.json"
+  );
 
   const file = await fs.readFile(filePath, "utf-8");
   const data = JSON.parse(file) as JsonData;
@@ -152,29 +153,14 @@ const getJsonData = unstable_cache(
     rows: parsedRows,
     guncellemeTarihi,
   };
-  },
-  ["fon-getiri-json-data"],
-  { revalidate: false }
-);
+}
 
 export default async function FonGetiriExcelPage({
   title,
   description,
-  excelRelativePath,
-  pageBasePath,
   backHref = "/fonlar/getiri",
-  searchParams,
 }: Props) {
-  const params = await searchParams;
-  const q = (params.q ?? "").toLocaleLowerCase("tr-TR").trim();
-
-  const { rows: data, guncellemeTarihi } = await getJsonData(excelRelativePath);
-
-  const filtered = data.filter((item) => {
-    if (!q) return true;
-    const text = `${item.kod} ${item.ad} ${item.kategori}`.toLocaleLowerCase("tr-TR");
-    return text.includes(q);
-  });
+  const { rows: data, guncellemeTarihi } = await getJsonData();
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -204,19 +190,9 @@ export default async function FonGetiriExcelPage({
           Son güncelleme: {guncellemeTarihi}
         </p>
 
-        <section className="mb-6 rounded-2xl border border-zinc-200 bg-white p-4">
-          <form action={pageBasePath} method="get">
-            <input
-              type="text"
-              name="q"
-              defaultValue={params.q ?? ""}
-              placeholder="Fon kodu, fon adı veya kategori ara"
-              className="w-full rounded-xl border border-zinc-300 px-4 py-3 text-sm text-zinc-900 outline-none placeholder:text-zinc-400 focus:border-zinc-500"
-            />
-          </form>
-        </section>
-
-        <FonGetiriTableClient rows={filtered} />
+        <Suspense fallback={<p className="text-sm text-zinc-500">Fonlar hazırlanıyor...</p>}>
+          <FonGetiriSearchClient rows={data} />
+        </Suspense>
       </div>
     </main>
   );
