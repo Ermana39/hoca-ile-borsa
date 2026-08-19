@@ -48,6 +48,15 @@ const currentPath = path.join(outputDir, "fund-current.json");
 const dashboardPath = path.join(outputDir, "fund-dashboard.json");
 const managersPath = path.join(outputDir, "fund-managers.json");
 const updateLogPath = path.join(outputDir, "fund-update-log.json");
+const effectDataPath = path.join(
+  rootDir,
+  "app",
+  "fonlar",
+  "etki-analizi",
+  "_data",
+  "fon-etki-verileri.json"
+);
+const effectAnalysisFundCodes = ["TLY", "PHE", "PBR", "DFI", "KHA", "THF"];
 
 const version = 1;
 const maxAbsoluteDailyReturn = 1;
@@ -641,6 +650,17 @@ function hasValidFinancialSnapshot(row) {
   );
 }
 
+function summarizeInvalidSnapshots(snapshots) {
+  const examples = snapshots
+    .slice(0, 20)
+    .map((row) => `${row.fonKodu}:${row.tarih}`);
+
+  return {
+    sayi: snapshots.length,
+    ornekler: examples,
+  };
+}
+
 function recoverMissingSnapshotsFromGit(existingSnapshots, currentSnapshots) {
   const existingDates = new Set(existingSnapshots.map((row) => row.tarih));
   const historyDates = Array.from(existingDates).sort();
@@ -722,7 +742,7 @@ function recoverMissingSnapshotsFromGit(existingSnapshots, currentSnapshots) {
 
   const snapshots = Array.from(candidatesByDate.entries())
     .sort(([dateA], [dateB]) => dateA.localeCompare(dateB))
-    .flatMap(([, candidate]) => candidate.rows);
+    .flatMap(([, candidate]) => candidate.rows.filter(hasValidFinancialSnapshot));
 
   const availableDates = new Set([
     ...existingDates,
@@ -883,6 +903,86 @@ function enrichHistory(rows) {
       yatirimciDegisimi,
     };
   });
+}
+
+async function syncEffectAnalysisHistory(details, generatedAt) {
+  const effectData = await readJson(effectDataPath, null);
+  if (!effectData?.fonlar || typeof effectData.fonlar !== "object") {
+    return {
+      senkronizeEdildi: false,
+      neden: "Etki analizi veri dosyası bulunamadı.",
+    };
+  }
+
+  const detailByCode = new Map(details.map((detail) => [detail.fund.kod, detail]));
+  const syncedFunds = [];
+  let latestDate = null;
+
+  for (const code of effectAnalysisFundCodes) {
+    const effectFund = effectData.fonlar[code];
+    const detail = detailByCode.get(code);
+    if (!effectFund || !detail?.history?.length) continue;
+
+    const existingRowsByDate = new Map(
+      Array.isArray(effectFund.tarihsel)
+        ? effectFund.tarihsel.map((row) => [row.tarih, row])
+        : []
+    );
+    const history = detail.history
+      .filter(
+        (row) =>
+          row.tarih &&
+          Number.isFinite(row.kisiSayisi) &&
+          Number.isFinite(row.fonToplamDeger) &&
+          row.fonToplamDeger > 0 &&
+          Number.isFinite(row.paraGirisiCikisi)
+      )
+      .map((row) => {
+        const existingRow = existingRowsByDate.get(row.tarih);
+        return {
+          tarih: row.tarih,
+          yatirimciSayisi: row.kisiSayisi,
+          fonToplamDeger: round(row.fonToplamDeger, 2),
+          paraGirisiCikisi: round(row.paraGirisiCikisi, 2),
+          marj: Number.isFinite(existingRow?.marj)
+            ? existingRow.marj
+            : round((row.gunlukGetiri ?? 0) * 100, 4),
+        };
+      });
+
+    if (history.length < 2) {
+      throw new Error(`${code} etki analizi için ana fon arşivinden yeterli geçmiş üretilemedi.`);
+    }
+
+    effectFund.tarihsel = history;
+    effectFund.tarihselKaynak = "ana-fon-arsivi";
+    syncedFunds.push({
+      fonKodu: code,
+      tarihSayisi: history.length,
+      ilkTarih: history[0].tarih,
+      sonTarih: history.at(-1).tarih,
+    });
+
+    const fundLatestDate = history.at(-1).tarih;
+    if (!latestDate || fundLatestDate > latestDate) latestDate = fundLatestDate;
+  }
+
+  if (syncedFunds.length > 0) {
+    effectData.sonGuncelleme = latestDate;
+    effectData.tarihselSenkron = {
+      generatedAt,
+      kaynak: "data/fonlar/fund-details",
+      fonlar: syncedFunds,
+    };
+    await writeJson(effectDataPath, effectData);
+  }
+
+  return {
+    senkronizeEdildi: syncedFunds.length > 0,
+    fonSayisi: syncedFunds.length,
+    sonTarih: latestDate,
+    fonlar: syncedFunds,
+  };
 }
 
 function sumValues(values) {
@@ -1493,10 +1593,12 @@ async function main() {
     ...gitRecovery.snapshots,
     ...currentSnapshots,
   ];
-  const { snapshots, stats } = mergeSnapshots(
+  const { snapshots: mergedSnapshots, stats } = mergeSnapshots(
     existingHistory.snapshots ?? [],
     incomingSnapshots
   );
+  const invalidSnapshots = mergedSnapshots.filter((row) => !hasValidFinancialSnapshot(row));
+  const snapshots = mergedSnapshots.filter(hasValidFinancialSnapshot);
   const missingTradingDates = listMissingTradingDates(
     previousLatestDate,
     sourceValidation.latestSourceDate,
@@ -1582,6 +1684,8 @@ async function main() {
     });
   }
 
+  const effectHistorySync = await syncEffectAnalysisHistory(fundData.details, generatedAt);
+
   await writeJson(updateLogPath, {
     version,
     generatedAt,
@@ -1589,6 +1693,7 @@ async function main() {
     islenenFonSayisi: getiriMap.size,
     islenenSnapshotSayisi: currentSnapshots.length,
     kaliciSnapshotSayisi: snapshots.length,
+    temizlenenGecersizSnapshotSayisi: invalidSnapshots.length,
     yoneticiyleEslesenFonSayisi: activeFunds.length - fundData.unknownManagers.length,
     bilinmeyenYoneticiSayisi: fundData.unknownManagers.length,
     bilinmeyenYoneticiFonlari: fundData.unknownManagers,
@@ -1602,7 +1707,9 @@ async function main() {
       ).sort(),
       gitGecmisindenKurtarilanKayitSayisi: gitRecovery.snapshots.length,
       manuelGecmisIceAktarimlari: manualHistoryImports.slice(-20),
+      temizlenenGecersizSnapshotlar: summarizeInvalidSnapshots(invalidSnapshots),
     },
+    etkiAnaliziTarihselSenkronu: effectHistorySync,
     veriUyarisiSayisi:
       sourceValidation.sourceWarnings.length + fundData.dataWarnings.length,
     veriUyarilari: [...sourceValidation.sourceWarnings, ...fundData.dataWarnings],

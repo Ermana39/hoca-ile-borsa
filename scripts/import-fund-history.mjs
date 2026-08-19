@@ -325,6 +325,17 @@ function buildSnapshot(values) {
       : null;
   const toplamDegerDuzeltildi =
     toplamDegerFarkOrani !== null && toplamDegerFarkOrani > maxFundValueRelativeDifference;
+  const fonToplamDeger = toplamDegerDuzeltildi
+    ? hesaplananFonToplamDeger
+    : (kaynakFonToplamDeger ?? hesaplananFonToplamDeger);
+
+  if (
+    !isPositiveFinite(fiyat) ||
+    !isPositiveFinite(tedavuldekiPaySayisi) ||
+    !isPositiveFinite(fonToplamDeger)
+  ) {
+    return null;
+  }
 
   return {
     fonKodu,
@@ -333,9 +344,7 @@ function buildSnapshot(values) {
     fiyat: round(fiyat, 8),
     tedavuldekiPaySayisi: round(tedavuldekiPaySayisi, 2),
     kisiSayisi: kisiSayisi === null ? null : Math.round(kisiSayisi),
-    fonToplamDeger: toplamDegerDuzeltildi
-      ? hesaplananFonToplamDeger
-      : round(kaynakFonToplamDeger ?? hesaplananFonToplamDeger, 2),
+    fonToplamDeger: round(fonToplamDeger, 2),
     ...(toplamDegerDuzeltildi
       ? {
           kaynakFonToplamDeger: round(kaynakFonToplamDeger, 2),
@@ -346,7 +355,8 @@ function buildSnapshot(values) {
 }
 
 async function readSourceSnapshots(sourceFile) {
-  const extension = path.extname(sourceFile).toLocaleLowerCase("tr-TR");
+  const fileName = path.basename(sourceFile).toLocaleLowerCase("tr-TR");
+  const extension = path.extname(sourceFile).toLocaleLowerCase("tr-TR") || fileName;
   if (!fsSync.existsSync(sourceFile)) throw new Error(`Kaynak dosya bulunamadi: ${sourceFile}`);
 
   if ([".xlsx", ".xls", ".xlsm"].includes(extension)) {

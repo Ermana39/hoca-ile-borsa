@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "generatedAt": "2026-08-19T10:28:39.106Z",
   "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "NMP",
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 8,
+    "tarihselGunSayisi": 9,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 7,
+      "observedDays": 8,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -142,6 +142,18 @@
         "tedavuldekiPaySayisi": 516976,
         "kisiSayisi": 32,
         "fonToplamDeger": 519203.01,
+        "gunlukGetiri": 0.00323755,
+        "paraGirisiCikisi": 307442.78,
+        "yatirimciDegisimi": 17
+      },
+      {
+        "fonKodu": "NMP",
+        "fonAdi": "AK PORTFÖY NEMA PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-07",
+        "fiyat": 1.001067,
+        "tedavuldekiPaySayisi": 210852,
+        "kisiSayisi": 15,
+        "fonToplamDeger": 211076.94,
         "gunlukGetiri": null,
         "paraGirisiCikisi": null,
         "yatirimciDegisimi": null
@@ -152,14 +164,26 @@
     {
       "fonKodu": "NMP",
       "fonAdi": "AK PORTFÖY NEMA PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-07",
+      "fiyat": 1.001067,
+      "tedavuldekiPaySayisi": 210852,
+      "kisiSayisi": 15,
+      "fonToplamDeger": 211076.94,
+      "gunlukGetiri": null,
+      "paraGirisiCikisi": null,
+      "yatirimciDegisimi": null
+    },
+    {
+      "fonKodu": "NMP",
+      "fonAdi": "AK PORTFÖY NEMA PARA PİYASASI (TL) FONU",
       "tarih": "2026-08-10",
       "fiyat": 1.004308,
       "tedavuldekiPaySayisi": 516976,
       "kisiSayisi": 32,
       "fonToplamDeger": 519203.01,
-      "gunlukGetiri": null,
-      "paraGirisiCikisi": null,
-      "yatirimciDegisimi": null
+      "gunlukGetiri": 0.00323755,
+      "paraGirisiCikisi": 307442.78,
+      "yatirimciDegisimi": 17
     },
     {
       "fonKodu": "NMP",
@@ -339,6 +363,18 @@
       "tedavuldekiPaySayisi": 516976,
       "kisiSayisi": 32,
       "fonToplamDeger": 519203.01,
+      "gunlukGetiri": 0.00323755,
+      "paraGirisiCikisi": 307442.78,
+      "yatirimciDegisimi": 17
+    },
+    {
+      "fonKodu": "NMP",
+      "fonAdi": "AK PORTFÖY NEMA PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-07",
+      "fiyat": 1.001067,
+      "tedavuldekiPaySayisi": 210852,
+      "kisiSayisi": 15,
+      "fonToplamDeger": 211076.94,
       "gunlukGetiri": null,
       "paraGirisiCikisi": null,
       "yatirimciDegisimi": null
@@ -347,7 +383,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 7,
+    "observedDays": 8,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "generatedAt": "2026-08-19T10:28:39.106Z",
   "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "DAP",
@@ -40,11 +40,11 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 8,
+    "tarihselGunSayisi": 9,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 7,
+      "observedDays": 8,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
@@ -142,6 +142,18 @@
         "tedavuldekiPaySayisi": 40090000,
         "kisiSayisi": 1,
         "fonToplamDeger": 40270813.15,
+        "gunlukGetiri": 0.00338019,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
+      {
+        "fonKodu": "DAP",
+        "fonAdi": "DESTEK PORTFÖY PARA PİYASASI FONU",
+        "tarih": "2026-08-07",
+        "fiyat": 1.001126,
+        "tedavuldekiPaySayisi": 40090000,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 40135146.79,
         "gunlukGetiri": null,
         "paraGirisiCikisi": null,
         "yatirimciDegisimi": null
@@ -152,14 +164,26 @@
     {
       "fonKodu": "DAP",
       "fonAdi": "DESTEK PORTFÖY PARA PİYASASI FONU",
+      "tarih": "2026-08-07",
+      "fiyat": 1.001126,
+      "tedavuldekiPaySayisi": 40090000,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 40135146.79,
+      "gunlukGetiri": null,
+      "paraGirisiCikisi": null,
+      "yatirimciDegisimi": null
+    },
+    {
+      "fonKodu": "DAP",
+      "fonAdi": "DESTEK PORTFÖY PARA PİYASASI FONU",
       "tarih": "2026-08-10",
       "fiyat": 1.00451,
       "tedavuldekiPaySayisi": 40090000,
       "kisiSayisi": 1,
       "fonToplamDeger": 40270813.15,
-      "gunlukGetiri": null,
-      "paraGirisiCikisi": null,
-      "yatirimciDegisimi": null
+      "gunlukGetiri": 0.00338019,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     },
     {
       "fonKodu": "DAP",
@@ -339,6 +363,18 @@
       "tedavuldekiPaySayisi": 40090000,
       "kisiSayisi": 1,
       "fonToplamDeger": 40270813.15,
+      "gunlukGetiri": 0.00338019,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DAP",
+      "fonAdi": "DESTEK PORTFÖY PARA PİYASASI FONU",
+      "tarih": "2026-08-07",
+      "fiyat": 1.001126,
+      "tedavuldekiPaySayisi": 40090000,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 40135146.79,
       "gunlukGetiri": null,
       "paraGirisiCikisi": null,
       "yatirimciDegisimi": null
@@ -347,7 +383,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 7,
+    "observedDays": 8,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

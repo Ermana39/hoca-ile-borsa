@@ -1,14 +1,15 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "generatedAt": "2026-08-19T10:28:39.106Z",
   "duplicateKontrolu": {
-    "added": 0,
+    "added": 41,
     "updated": 0,
-    "skipped": 4066
+    "skipped": 4025
   },
   "islenenFonSayisi": 1055,
   "islenenSnapshotSayisi": 2033,
-  "kaliciSnapshotSayisi": 16253,
+  "kaliciSnapshotSayisi": 52276,
+  "temizlenenGecersizSnapshotSayisi": 41,
   "yoneticiyleEslesenFonSayisi": 1989,
   "bilinmeyenYoneticiSayisi": 3,
   "bilinmeyenYoneticiFonlari": [
@@ -29,12 +30,92 @@
     "sonKaynakTarihi": "2026-08-19",
     "sonKaynakKayitSayisi": 2033,
     "sonKaynakGecerliKayitSayisi": 1992,
-    "gitGecmisindeIncelenenSurumSayisi": 12,
+    "gitGecmisindeIncelenenSurumSayisi": 30,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
-    "manuelGecmisIceAktarimlari": []
+    "manuelGecmisIceAktarimlari": [
+      {
+        "tarih": "2026-08-19T10:13:46.047Z",
+        "kaynakDosya": "../../Users/erman/Downloads/Fon_Verileri_EXCEL_Tum_Veri_2026-07-13.xlsx",
+        "ilkTarih": "2026-07-13",
+        "sonTarih": "2026-07-13",
+        "fonSayisi": 2031,
+        "snapshotSayisi": 2031,
+        "eklenenSnapshotSayisi": 2031,
+        "guncellenenSnapshotSayisi": 0,
+        "atlananSnapshotSayisi": 0
+      }
+    ],
+    "temizlenenGecersizSnapshotlar": {
+      "sayi": 41,
+      "ornekler": [
+        "AES:2026-08-19",
+        "APJ:2026-08-19",
+        "ARL:2026-08-19",
+        "ARM:2026-08-19",
+        "FNN:2026-08-19",
+        "FSU:2026-08-19",
+        "GCC:2026-08-19",
+        "GFY:2026-08-19",
+        "GKE:2026-08-19",
+        "GKO:2026-08-19",
+        "GMC:2026-08-19",
+        "GMV:2026-08-19",
+        "GNZ:2026-08-19",
+        "GSU:2026-08-19",
+        "GUM:2026-08-19",
+        "GZY:2026-08-19",
+        "IJH:2026-08-19",
+        "IRF:2026-08-19",
+        "MP2:2026-08-19",
+        "MP4:2026-08-19"
+      ]
+    }
   },
-  "veriUyarisiSayisi": 5,
+  "etkiAnaliziTarihselSenkronu": {
+    "senkronizeEdildi": true,
+    "fonSayisi": 6,
+    "sonTarih": "2026-08-19",
+    "fonlar": [
+      {
+        "fonKodu": "TLY",
+        "tarihSayisi": 25,
+        "ilkTarih": "2026-07-16",
+        "sonTarih": "2026-08-19"
+      },
+      {
+        "fonKodu": "PHE",
+        "tarihSayisi": 23,
+        "ilkTarih": "2026-07-20",
+        "sonTarih": "2026-08-19"
+      },
+      {
+        "fonKodu": "PBR",
+        "tarihSayisi": 23,
+        "ilkTarih": "2026-07-20",
+        "sonTarih": "2026-08-19"
+      },
+      {
+        "fonKodu": "DFI",
+        "tarihSayisi": 25,
+        "ilkTarih": "2026-07-16",
+        "sonTarih": "2026-08-19"
+      },
+      {
+        "fonKodu": "KHA",
+        "tarihSayisi": 25,
+        "ilkTarih": "2026-07-16",
+        "sonTarih": "2026-08-19"
+      },
+      {
+        "fonKodu": "THF",
+        "tarihSayisi": 25,
+        "ilkTarih": "2026-07-16",
+        "sonTarih": "2026-08-19"
+      }
+    ]
+  },
+  "veriUyarisiSayisi": 10,
   "veriUyarilari": [
     {
       "tur": "getiri-kaynaginda-guncel-listede-yok",
@@ -45,6 +126,12 @@
         "GLL",
         "ZTV"
       ]
+    },
+    {
+      "fonKodu": "BIA",
+      "tarih": "2026-07-16",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 23.04653763
     },
     {
       "fonKodu": "FRC",
@@ -59,6 +146,38 @@
       "kaynakFonToplamDeger": 431418208.7,
       "hesaplananFonToplamDeger": 448717383.93,
       "farkOrani": 0.04009839
+    },
+    {
+      "fonKodu": "RBP",
+      "tarih": "2026-07-21",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 2455157333.88,
+      "hesaplananFonToplamDeger": 2412421808.01,
+      "farkOrani": 0.01740643
+    },
+    {
+      "fonKodu": "RBP",
+      "tarih": "2026-07-27",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 2625832019.19,
+      "hesaplananFonToplamDeger": 2497632103.88,
+      "farkOrani": 0.04882259
+    },
+    {
+      "fonKodu": "RJG",
+      "tarih": "2026-07-13",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 94509125.06,
+      "hesaplananFonToplamDeger": 91513300.76,
+      "farkOrani": 0.03169878
+    },
+    {
+      "fonKodu": "RKV",
+      "tarih": "2026-08-06",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 476083326.46,
+      "hesaplananFonToplamDeger": 449805956.9,
+      "farkOrani": 0.0551949
     },
     {
       "fonKodu": "THT",

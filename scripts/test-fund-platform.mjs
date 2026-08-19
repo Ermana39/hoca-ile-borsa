@@ -332,11 +332,22 @@ for (const fund of activeFunds) {
 
 for (const row of sourceLatest) {
   const fund = currentByCode.get(row.fonKodu);
-  assert(fund, `${row.fonKodu} kaynakta var, güncel fon çıktısında yok.`);
+  if (!hasValidFinancialSnapshot(row)) {
+    if (fund) {
+      assert(!fund.aktifMi, `${row.fonKodu} geçersiz güncel kaynak satırına rağmen aktif.`);
+      assert(
+        fund.tarih !== current.sonIslemTarihi,
+        `${row.fonKodu} geçersiz güncel kaynak satırı yayımlanan güncel veri gibi tutuluyor.`
+      );
+    }
+    continue;
+  }
+
+  assert(fund, `${row.fonKodu} geçerli kaynakta var, güncel fon çıktısında yok.`);
   for (const key of ["fiyat", "tedavuldekiPaySayisi", "kisiSayisi", "fonToplamDeger"]) {
     assertSameNumber(fund[key], row[key], `${row.fonKodu} ${key}`);
   }
-  assert(fund.aktifMi === hasValidFinancialSnapshot(row), `${row.fonKodu} aktiflik durumu yanlış.`);
+  assert(fund.aktifMi, `${row.fonKodu} aktiflik durumu yanlış.`);
   if (typeof row.kaynakFonToplamDeger === "number") {
     assert(
       updateLog.veriUyarilari.some(
