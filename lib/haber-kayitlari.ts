@@ -176,6 +176,8 @@ export type HaberKaydi = {
     yukseklik: number;
   };
   ilgiliHisseler: string[];
+  ilgiliFonlar?: string[];
+  kaynakOzetiMetni?: string;
   kaynakOzeti: {
     giris: string[];
     ozetKartlari: HaberOzetKarti[];
@@ -194,6 +196,288 @@ export type HaberKaydi = {
   kaynaklar: HaberKaynagi[];
   yasalUyari?: string;
 };
+
+type BilinmeyenKayit = Record<string, unknown>;
+
+function objeMi(deger: unknown): deger is BilinmeyenKayit {
+  return Boolean(deger) && typeof deger === "object" && !Array.isArray(deger);
+}
+
+function metinDizisi(deger: unknown): string[] {
+  return Array.isArray(deger)
+    ? deger.filter((oge): oge is string => typeof oge === "string")
+    : [];
+}
+
+function pozitifSayi(deger: unknown): number | null {
+  return typeof deger === "number" && Number.isFinite(deger) && deger > 0
+    ? deger
+    : null;
+}
+
+function haberVurgusu(deger: unknown): HaberVurgu | undefined {
+  return deger === "normal" ||
+    deger === "analiz" ||
+    deger === "risk" ||
+    deger === "takip"
+    ? deger
+    : undefined;
+}
+
+function haberBolumuNormalizeEt(deger: unknown): HaberBolumu | null {
+  if (!objeMi(deger) || typeof deger.baslik !== "string") return null;
+
+  const bolum: HaberBolumu = { baslik: deger.baslik };
+
+  if (typeof deger.giris === "string") bolum.giris = deger.giris;
+
+  if (Array.isArray(deger.paragraflar)) {
+    bolum.paragraflar = metinDizisi(deger.paragraflar);
+  }
+
+  if (Array.isArray(deger.maddeler)) {
+    bolum.maddeler = metinDizisi(deger.maddeler);
+  }
+
+  if (objeMi(deger.degisimGrafigi)) {
+    const grafik = deger.degisimGrafigi;
+    const veriler = Array.isArray(grafik.veriler)
+      ? grafik.veriler
+          .filter(objeMi)
+          .filter(
+            (oge) =>
+              typeof oge.etiket === "string" &&
+              typeof oge.deger === "number" &&
+              Number.isFinite(oge.deger)
+          )
+          .map((oge) => ({ etiket: oge.etiket as string, deger: oge.deger as number }))
+      : [];
+
+    if (typeof grafik.baslik === "string" && veriler.length > 0) {
+      bolum.degisimGrafigi = { baslik: grafik.baslik, veriler };
+    }
+  }
+
+  if (objeMi(deger.tablo)) {
+    const tablo = deger.tablo;
+    const basliklar = metinDizisi(tablo.basliklar);
+    const satirlar = Array.isArray(tablo.satirlar)
+      ? tablo.satirlar
+          .filter((satir): satir is unknown[] => Array.isArray(satir))
+          .map((satir) => satir.filter((hucre): hucre is string => typeof hucre === "string"))
+      : [];
+
+    if (basliklar.length > 0 && satirlar.length > 0) {
+      bolum.tablo = { basliklar, satirlar };
+    }
+  }
+
+  if (Array.isArray(deger.kartlar)) {
+    const kartlar = deger.kartlar
+      .filter(objeMi)
+      .filter(
+        (kart) =>
+          typeof kart.baslik === "string" && typeof kart.aciklama === "string"
+      )
+      .map((kart) => ({
+        baslik: kart.baslik as string,
+        aciklama: kart.aciklama as string,
+      }));
+
+    if (kartlar.length > 0) bolum.kartlar = kartlar;
+  }
+
+  if (typeof deger.kapLink === "string") bolum.kapLink = deger.kapLink;
+  if (typeof deger.kapLinkMetni === "string") {
+    bolum.kapLinkMetni = deger.kapLinkMetni;
+  }
+  if (Array.isArray(deger.ekKapLinkler)) {
+    bolum.ekKapLinkler = metinDizisi(deger.ekKapLinkler);
+  }
+  if (typeof deger.haberLink === "string") bolum.haberLink = deger.haberLink;
+  if (typeof deger.haberLinkMetni === "string") {
+    bolum.haberLinkMetni = deger.haberLinkMetni;
+  }
+
+  const vurgu = haberVurgusu(deger.vurgu);
+  if (vurgu) bolum.vurgu = vurgu;
+
+  return bolum;
+}
+
+function haberBolumleriNormalizeEt(deger: unknown): HaberBolumu[] {
+  if (!Array.isArray(deger)) return [];
+  return deger
+    .map(haberBolumuNormalizeEt)
+    .filter((bolum): bolum is HaberBolumu => Boolean(bolum));
+}
+
+function ozetKartlariNormalizeEt(deger: unknown): HaberOzetKarti[] {
+  if (!Array.isArray(deger)) return [];
+
+  return deger
+    .filter(objeMi)
+    .filter(
+      (kart) =>
+        typeof kart.baslik === "string" && typeof kart.deger === "string"
+    )
+    .map((kart) => ({
+      baslik: kart.baslik as string,
+      deger: kart.deger as string,
+      aciklama: typeof kart.aciklama === "string" ? kart.aciklama : "",
+    }));
+}
+
+function temelBilgilerNormalizeEt(deger: unknown): HaberBilgiSatiri[] {
+  if (!Array.isArray(deger)) return [];
+
+  return deger
+    .filter(objeMi)
+    .filter(
+      (satir) =>
+        typeof satir.etiket === "string" && typeof satir.deger === "string"
+    )
+    .map((satir) => ({
+      etiket: satir.etiket as string,
+      deger: satir.deger as string,
+    }));
+}
+
+function kaynakTuruNormalizeEt(
+  deger: unknown
+): HaberKaynagi["tur"] {
+  return deger === "KAP" ||
+    deger === "SPK" ||
+    deger === "BIST" ||
+    deger === "TCMB" ||
+    deger === "TEFAS" ||
+    deger === "Sirket" ||
+    deger === "Diger"
+    ? deger
+    : "Diger";
+}
+
+function kaynaklariNormalizeEt(deger: unknown): HaberKaynagi[] {
+  if (!Array.isArray(deger)) return [];
+
+  return deger
+    .filter(objeMi)
+    .filter((kaynak) => typeof kaynak.ad === "string")
+    .map((kaynak) => ({
+      ad: kaynak.ad as string,
+      url: typeof kaynak.url === "string" ? kaynak.url : "",
+      tur: kaynakTuruNormalizeEt(kaynak.tur),
+      ...(typeof kaynak.yayinTarihi === "string"
+        ? { yayinTarihi: kaynak.yayinTarihi }
+        : {}),
+    }));
+}
+
+function sorulariNormalizeEt(
+  deger: unknown
+): Array<{ soru: string; cevap: string }> | undefined {
+  if (!Array.isArray(deger)) return undefined;
+
+  const sorular = deger
+    .filter(objeMi)
+    .filter(
+      (oge) => typeof oge.soru === "string" && typeof oge.cevap === "string"
+    )
+    .map((oge) => ({ soru: oge.soru as string, cevap: oge.cevap as string }));
+
+  return sorular.length > 0 ? sorular : undefined;
+}
+
+function yeniHaberKaydiniNormalizeEt(veri: unknown): HaberKaydi | null {
+  if (!objeMi(veri)) return null;
+
+  if (
+    veri.surum !== HABER_KAYIT_SURUMU ||
+    (veri.durum !== "taslak" && veri.durum !== "yayinda") ||
+    typeof veri.slug !== "string" ||
+    typeof veri.baslik !== "string" ||
+    typeof veri.aciklama !== "string" ||
+    typeof veri.kategori !== "string" ||
+    !isHaberKategori(veri.kategori) ||
+    typeof veri.etiket !== "string" ||
+    typeof veri.yayinTarihi !== "string" ||
+    typeof veri.guncellemeTarihi !== "string" ||
+    typeof veri.yazarSlug !== "string" ||
+    !objeMi(veri.gorsel) ||
+    typeof veri.gorsel.src !== "string" ||
+    typeof veri.gorsel.alt !== "string"
+  ) {
+    return null;
+  }
+
+  const genislik =
+    pozitifSayi(veri.gorsel.genislik) ?? pozitifSayi(veri.gorsel.w);
+  const yukseklik =
+    pozitifSayi(veri.gorsel.yukseklik) ?? pozitifSayi(veri.gorsel.h);
+
+  if (!genislik || !yukseklik) return null;
+
+  const icerik = objeMi(veri.icerik) ? veri.icerik : null;
+  const eskiKaynakOzeti = objeMi(veri.kaynakOzeti) ? veri.kaynakOzeti : null;
+
+  const kaynakOzeti = {
+    giris: icerik
+      ? metinDizisi(icerik.giris)
+      : metinDizisi(eskiKaynakOzeti?.giris),
+    ozetKartlari: icerik
+      ? ozetKartlariNormalizeEt(icerik.kartlar)
+      : ozetKartlariNormalizeEt(eskiKaynakOzeti?.ozetKartlari),
+    temelBilgiler: temelBilgilerNormalizeEt(eskiKaynakOzeti?.temelBilgiler),
+    bolumler: icerik
+      ? haberBolumleriNormalizeEt(icerik.altBolumler)
+      : haberBolumleriNormalizeEt(eskiKaynakOzeti?.bolumler),
+  };
+
+  const editor = objeMi(veri.editorDegerlendirmesi)
+    ? veri.editorDegerlendirmesi
+    : null;
+
+  const kayit: HaberKaydi = {
+    surum: HABER_KAYIT_SURUMU,
+    durum: veri.durum,
+    slug: veri.slug,
+    baslik: veri.baslik,
+    aciklama: veri.aciklama,
+    kategori: veri.kategori,
+    etiket: veri.etiket,
+    yayinTarihi: veri.yayinTarihi,
+    guncellemeTarihi: veri.guncellemeTarihi,
+    yazarSlug: veri.yazarSlug,
+    gorsel: {
+      src: veri.gorsel.src,
+      alt: veri.gorsel.alt,
+      genislik,
+      yukseklik,
+    },
+    ilgiliHisseler: metinDizisi(veri.ilgiliHisseler),
+    ilgiliFonlar: metinDizisi(veri.ilgiliFonlar),
+    ...(typeof veri.kaynakOzeti === "string"
+      ? { kaynakOzetiMetni: veri.kaynakOzeti }
+      : {}),
+    kaynakOzeti,
+    editorDegerlendirmesi: {
+      giris: editor && typeof editor.giris === "string" ? editor.giris : "",
+      bolumler: editor ? haberBolumleriNormalizeEt(editor.bolumler) : [],
+    },
+    ...(objeMi(veri.kapEtkiAnalizi)
+      ? { kapEtkiAnalizi: veri.kapEtkiAnalizi as KapEtkiAnalizi }
+      : {}),
+    ...(sorulariNormalizeEt(veri.sorular)
+      ? { sorular: sorulariNormalizeEt(veri.sorular) }
+      : {}),
+    kaynaklar: kaynaklariNormalizeEt(veri.kaynaklar),
+    ...(typeof veri.yasalUyari === "string"
+      ? { yasalUyari: veri.yasalUyari }
+      : {}),
+  };
+
+  return temelKayitGecerli(kayit) ? kayit : null;
+}
 
 export function haberKaydiIndexlenebilirMi(kayit: HaberKaydi): boolean {
   return kayit.durum === "yayinda";
@@ -259,8 +543,12 @@ export function haberKaydiGetir(slug: string): HaberKaydi | null {
 
   try {
     const dosya = path.join(HABER_KAYIT_DIZINI, `${slug}.json`);
-    const veri = JSON.parse(fs.readFileSync(dosya, "utf8")) as unknown;
-    if (!temelKayitGecerli(veri) || veri.slug !== slug) return null;
+    const hamVeri = JSON.parse(fs.readFileSync(dosya, "utf8")) as unknown;
+    const veri = temelKayitGecerli(hamVeri)
+      ? hamVeri
+      : yeniHaberKaydiniNormalizeEt(hamVeri);
+
+    if (!veri || veri.slug !== slug) return null;
     return veri;
   } catch {
     return null;
@@ -321,6 +609,7 @@ export function haberKaydiniListeOgesine(kayit: HaberKaydi) {
     category: kayit.kategori,
     yazarSlug: kayit.yazarSlug,
     ilgiliHisseler: kayit.ilgiliHisseler,
+    ilgiliFonlar: kayit.ilgiliFonlar ?? [],
   };
 }
 
