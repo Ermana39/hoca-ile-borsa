@@ -7,6 +7,7 @@ export type HaberKategori =
   | "kap-bildirimleri"
   | "sermaye-artirimi"
   | "piyasa-gundemi"
+  | "fon-haberleri"
   | "sirket-haberleri";
 
 export type KategoriBilgi = {
@@ -68,6 +69,16 @@ export const HABER_KATEGORILERI: KategoriBilgi[] = [
     metaTitle: "Piyasa Gündemi Haberleri | Hoca İle Borsa",
     metaDescription:
       "Faiz kararları, enflasyon verileri, küresel borsalar ve genel piyasa gündemine dair güncel haberler ve değerlendirmeler.",
+  },
+  {
+    slug: "fon-haberleri",
+    baslik: "Fon Haberleri",
+    kisaBaslik: "Fon Haberleri",
+    aciklama:
+      "Yatırım fonları, fon portföyleri, performans, para giriş çıkışları ve fon piyasasına dair güncel haber ve analizler bu sayfada yer alır.",
+    metaTitle: "Fon Haberleri | Hoca İle Borsa",
+    metaDescription:
+      "Yatırım fonları, fon performansları, portföy dağılımları, para giriş çıkışları ve fon piyasasına dair güncel haber ve analizler.",
   },
   {
     slug: "sirket-haberleri",
