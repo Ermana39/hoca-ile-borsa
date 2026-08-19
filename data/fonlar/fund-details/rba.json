@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "RBA",
     "slug": "rba",
@@ -12,44 +12,56 @@
     "yonetici": "ALBARAKA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "albaraka-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 21.536269,
-    "tedavuldekiPaySayisi": 88324190,
-    "kisiSayisi": 5412,
-    "fonToplamDeger": 1902173522.04,
-    "gunlukGetiri": 0.00848213,
+    "fiyat": 21.515746,
+    "tedavuldekiPaySayisi": 88135764,
+    "kisiSayisi": 5407,
+    "fonToplamDeger": 1896306682.73,
+    "gunlukGetiri": -0.00095295,
     "getiriler": {
-      "birAy": 0.112476,
-      "ucAy": -0.014592,
-      "altiAy": -0.08116,
-      "yilbasi": 0.07716300000000001,
-      "birYil": 0.5013219999999999,
-      "ucYil": 2.859932,
-      "besYil": 10.643044999999999
+      "birAy": 0.111416,
+      "ucAy": -0.0027900000000000004,
+      "altiAy": -0.091108,
+      "yilbasi": 0.076136,
+      "birYil": 0.49384700000000004,
+      "ucYil": 2.8604649999999996,
+      "besYil": 10.544095
     },
     "paraAkisi": {
-      "gunluk": -146769.67,
-      "besGun": 2379357.22,
+      "gunluk": -4054125.96,
+      "besGun": -972157.15,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": 20,
+      "gunluk": -5,
+      "besGun": 19,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RBA",
+        "fonAdi": "ALBARAKA PORTFÖY BEREKET VAKFI NA DESTEK ALTIN KATILIM FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 21.515746,
+        "tedavuldekiPaySayisi": 88135764,
+        "kisiSayisi": 5407,
+        "fonToplamDeger": 1896306682.73,
+        "gunlukGetiri": -0.00095295,
+        "paraGirisiCikisi": -4054125.96,
+        "yatirimciDegisimi": -5
+      },
       {
         "fonKodu": "RBA",
         "fonAdi": "ALBARAKA PORTFÖY BEREKET VAKFI NA DESTEK ALTIN KATILIM FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00848213,
       "paraGirisiCikisi": -146769.67,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "RBA",
+      "fonAdi": "ALBARAKA PORTFÖY BEREKET VAKFI NA DESTEK ALTIN KATILIM FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 21.515746,
+      "tedavuldekiPaySayisi": 88135764,
+      "kisiSayisi": 5407,
+      "fonToplamDeger": 1896306682.73,
+      "gunlukGetiri": -0.00095295,
+      "paraGirisiCikisi": -4054125.96,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RBA",
+      "fonAdi": "ALBARAKA PORTFÖY BEREKET VAKFI NA DESTEK ALTIN KATILIM FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 21.515746,
+      "tedavuldekiPaySayisi": 88135764,
+      "kisiSayisi": 5407,
+      "fonToplamDeger": 1896306682.73,
+      "gunlukGetiri": -0.00095295,
+      "paraGirisiCikisi": -4054125.96,
+      "yatirimciDegisimi": -5
+    },
     {
       "fonKodu": "RBA",
       "fonAdi": "ALBARAKA PORTFÖY BEREKET VAKFI NA DESTEK ALTIN KATILIM FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

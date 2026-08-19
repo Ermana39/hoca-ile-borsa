@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "AFV",
     "slug": "afv",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 0.614359,
-    "tedavuldekiPaySayisi": 2223772091,
-    "kisiSayisi": 14956,
-    "fonToplamDeger": 1366194775.52,
-    "gunlukGetiri": 0.00476412,
+    "fiyat": 0.610055,
+    "tedavuldekiPaySayisi": 2088726221,
+    "kisiSayisi": 14976,
+    "fonToplamDeger": 1274238290.87,
+    "gunlukGetiri": -0.00700568,
     "getiriler": {
-      "birAy": 0.061652,
-      "ucAy": 0.147558,
-      "altiAy": 0.151747,
-      "yilbasi": 0.233863,
-      "birYil": 0.392896,
-      "ucYil": 1.663587,
-      "besYil": 7.474502
+      "birAy": 0.054215,
+      "ucAy": 0.141286,
+      "altiAy": 0.12914799999999999,
+      "yilbasi": 0.22521899999999997,
+      "birYil": 0.384569,
+      "ucYil": 1.6835419999999999,
+      "besYil": 7.407246
     },
     "paraAkisi": {
-      "gunluk": 3244147.89,
-      "besGun": 5618153.52,
+      "gunluk": -82385408.22,
+      "besGun": -80354052.61,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
-      "besGun": 120,
+      "gunluk": 20,
+      "besGun": 89,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AFV",
+        "fonAdi": "AK PORTFÖY AVRUPA YABANCI HİSSE SENEDİ FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 0.610055,
+        "tedavuldekiPaySayisi": 2088726221,
+        "kisiSayisi": 14976,
+        "fonToplamDeger": 1274238290.87,
+        "gunlukGetiri": -0.00700568,
+        "paraGirisiCikisi": -82385408.22,
+        "yatirimciDegisimi": 20
+      },
       {
         "fonKodu": "AFV",
         "fonAdi": "AK PORTFÖY AVRUPA YABANCI HİSSE SENEDİ FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00476412,
       "paraGirisiCikisi": 3244147.89,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "AFV",
+      "fonAdi": "AK PORTFÖY AVRUPA YABANCI HİSSE SENEDİ FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 0.610055,
+      "tedavuldekiPaySayisi": 2088726221,
+      "kisiSayisi": 14976,
+      "fonToplamDeger": 1274238290.87,
+      "gunlukGetiri": -0.00700568,
+      "paraGirisiCikisi": -82385408.22,
+      "yatirimciDegisimi": 20
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AFV",
+      "fonAdi": "AK PORTFÖY AVRUPA YABANCI HİSSE SENEDİ FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 0.610055,
+      "tedavuldekiPaySayisi": 2088726221,
+      "kisiSayisi": 14976,
+      "fonToplamDeger": 1274238290.87,
+      "gunlukGetiri": -0.00700568,
+      "paraGirisiCikisi": -82385408.22,
+      "yatirimciDegisimi": 20
+    },
     {
       "fonKodu": "AFV",
       "fonAdi": "AK PORTFÖY AVRUPA YABANCI HİSSE SENEDİ FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "PUK",
     "slug": "puk",
@@ -12,16 +12,16 @@
     "yonetici": "PUSULA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pusula-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.192533,
-    "tedavuldekiPaySayisi": 992187675,
-    "kisiSayisi": 8817,
-    "fonToplamDeger": 1183216535,
-    "gunlukGetiri": 0.00622874,
+    "fiyat": 1.223482,
+    "tedavuldekiPaySayisi": 962062278,
+    "kisiSayisi": 8607,
+    "fonToplamDeger": 1177065867.13,
+    "gunlukGetiri": 0.02595232,
     "getiriler": {
-      "birAy": 0.022633999999999998,
-      "ucAy": 0.163902,
+      "birAy": 0.049173,
+      "ucAy": 0.204654,
       "altiAy": null,
       "yilbasi": null,
       "birYil": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -64645166.35,
-      "besGun": -166088262.31,
+      "gunluk": -36857880.97,
+      "besGun": -163504781.77,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -214,
-      "besGun": -585,
+      "gunluk": -210,
+      "besGun": -796,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PUK",
+        "fonAdi": "PUSULA PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-19",
+        "fiyat": 1.223482,
+        "tedavuldekiPaySayisi": 962062278,
+        "kisiSayisi": 8607,
+        "fonToplamDeger": 1177065867.13,
+        "gunlukGetiri": 0.02595232,
+        "paraGirisiCikisi": -36857880.97,
+        "yatirimciDegisimi": -210
+      },
       {
         "fonKodu": "PUK",
         "fonAdi": "PUSULA PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00622874,
       "paraGirisiCikisi": -64645166.35,
       "yatirimciDegisimi": -214
+    },
+    {
+      "fonKodu": "PUK",
+      "fonAdi": "PUSULA PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 1.223482,
+      "tedavuldekiPaySayisi": 962062278,
+      "kisiSayisi": 8607,
+      "fonToplamDeger": 1177065867.13,
+      "gunlukGetiri": 0.02595232,
+      "paraGirisiCikisi": -36857880.97,
+      "yatirimciDegisimi": -210
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PUK",
+      "fonAdi": "PUSULA PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 1.223482,
+      "tedavuldekiPaySayisi": 962062278,
+      "kisiSayisi": 8607,
+      "fonToplamDeger": 1177065867.13,
+      "gunlukGetiri": 0.02595232,
+      "paraGirisiCikisi": -36857880.97,
+      "yatirimciDegisimi": -210
+    },
     {
       "fonKodu": "PUK",
       "fonAdi": "PUSULA PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

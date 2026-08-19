@@ -17,6 +17,7 @@ import {
   formatNumber,
   formatSignedPercent,
   formatSignedTL,
+  valueColorClass,
 } from "@/lib/fon-format";
 import {
   getAllFundSlugs,
@@ -99,6 +100,10 @@ export default async function FonDetayPage({
     typeof fund.paraAkisi.gunluk === "number"
       ? formatSignedTL(fund.paraAkisi.gunluk)
       : "henüz hesaplanabilir bir değer yoktur";
+  const dailyReturnTone =
+    typeof fund.gunlukGetiri === "number" && Number.isFinite(fund.gunlukGetiri)
+      ? valueColorClass(fund.gunlukGetiri)
+      : "text-slate-700";
   const faqItems = [
     {
       question: `${fund.kod} fonu nedir?`,
@@ -165,8 +170,8 @@ export default async function FonDetayPage({
         <FonBreadcrumb current={fund.kod} />
 
         <section className="mb-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm md:p-6">
-          <div className="flex flex-col gap-4 xl:flex-row xl:items-start xl:justify-between">
-            <div>
+          <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
+            <div className="min-w-0">
               <p className="text-sm font-semibold text-blue-700">
                 Son işlem tarihi: {formatDate(fund.tarih)}
               </p>
@@ -190,6 +195,17 @@ export default async function FonDetayPage({
                   {fund.yonetici}
                 </Link>
               </div>
+            </div>
+            <div className="w-full rounded-2xl border border-slate-200 bg-slate-50 p-4 lg:mt-1 lg:w-auto lg:min-w-[230px] lg:text-right">
+              <p className="text-xs font-semibold uppercase tracking-wide text-slate-500">
+                Günlük Değişim
+              </p>
+              <p className={`mt-2 text-3xl font-bold leading-none md:text-4xl ${dailyReturnTone}`}>
+                {formatSignedPercent(fund.gunlukGetiri)}
+              </p>
+              <p className="mt-3 text-sm font-semibold text-slate-600">
+                Tarih: {formatDate(fund.tarih)}
+              </p>
             </div>
           </div>
         </section>

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "DUV",
     "slug": "duv",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.293,
-    "tedavuldekiPaySayisi": 43449704,
+    "fiyat": 1.291568,
+    "tedavuldekiPaySayisi": 43442093,
     "kisiSayisi": 186,
-    "fonToplamDeger": 56180473.29,
-    "gunlukGetiri": 0.00066789,
+    "fonToplamDeger": 56108404.51,
+    "gunlukGetiri": -0.0011075,
     "getiriler": {
-      "birAy": 0.023978000000000003,
-      "ucAy": 0.07545,
-      "altiAy": 0.029456000000000003,
-      "yilbasi": 0.04609,
-      "birYil": 0.22171700000000003,
+      "birAy": 0.022844000000000003,
+      "ucAy": 0.08702299999999999,
+      "altiAy": 0.027814000000000002,
+      "yilbasi": 0.044932,
+      "birYil": 0.219301,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 36.2,
-      "besGun": -41476.02,
+      "gunluk": -9830.12,
+      "besGun": -13254.6,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": -1,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DUV",
+        "fonAdi": "DENİZ PORTFÖY UZUN VADELİ BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 1.291568,
+        "tedavuldekiPaySayisi": 43442093,
+        "kisiSayisi": 186,
+        "fonToplamDeger": 56108404.51,
+        "gunlukGetiri": -0.0011075,
+        "paraGirisiCikisi": -9830.12,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "DUV",
         "fonAdi": "DENİZ PORTFÖY UZUN VADELİ BORÇLANMA ARAÇLARI FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00066789,
       "paraGirisiCikisi": 36.2,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DUV",
+      "fonAdi": "DENİZ PORTFÖY UZUN VADELİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.291568,
+      "tedavuldekiPaySayisi": 43442093,
+      "kisiSayisi": 186,
+      "fonToplamDeger": 56108404.51,
+      "gunlukGetiri": -0.0011075,
+      "paraGirisiCikisi": -9830.12,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DUV",
+      "fonAdi": "DENİZ PORTFÖY UZUN VADELİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.291568,
+      "tedavuldekiPaySayisi": 43442093,
+      "kisiSayisi": 186,
+      "fonToplamDeger": 56108404.51,
+      "gunlukGetiri": -0.0011075,
+      "paraGirisiCikisi": -9830.12,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "DUV",
       "fonAdi": "DENİZ PORTFÖY UZUN VADELİ BORÇLANMA ARAÇLARI FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

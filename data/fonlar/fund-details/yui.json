@@ -1,30 +1,30 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "YUI",
     "slug": "yui",
-    "ad": "YAPI KREDİ PORTFÖY PY BEYKOZ SERBEST ÖZEL FON",
-    "kategori": "Bilinmiyor",
-    "riskDegeri": null,
+    "ad": "YAPI KREDİ PORTFÖY BEYKOZ SERBEST FON",
+    "kategori": "Serbest Şemsiye Fonu",
+    "riskDegeri": 6,
     "kapYoneticiKodu": "KCP",
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.920585,
+    "fiyat": 1.924248,
     "tedavuldekiPaySayisi": 479200096,
     "kisiSayisi": 7,
-    "fonToplamDeger": 920344605.03,
-    "gunlukGetiri": -0.001233,
+    "fonToplamDeger": 922099638.5,
+    "gunlukGetiri": 0.00190723,
     "getiriler": {
-      "birAy": null,
-      "ucAy": null,
-      "altiAy": null,
-      "yilbasi": null,
-      "birYil": null,
+      "birAy": 0.018557,
+      "ucAy": 0.034716,
+      "altiAy": -0.041279,
+      "yilbasi": 0.20361,
+      "birYil": 0.289101,
       "ucYil": null,
       "besYil": null
     },
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YUI",
+        "fonAdi": "YAPI KREDİ PORTFÖY BEYKOZ SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 1.924248,
+        "tedavuldekiPaySayisi": 479200096,
+        "kisiSayisi": 7,
+        "fonToplamDeger": 922099638.5,
+        "gunlukGetiri": 0.00190723,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "YUI",
         "fonAdi": "YAPI KREDİ PORTFÖY PY BEYKOZ SERBEST ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": -0.001233,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YUI",
+      "fonAdi": "YAPI KREDİ PORTFÖY BEYKOZ SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.924248,
+      "tedavuldekiPaySayisi": 479200096,
+      "kisiSayisi": 7,
+      "fonToplamDeger": 922099638.5,
+      "gunlukGetiri": 0.00190723,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YUI",
+      "fonAdi": "YAPI KREDİ PORTFÖY BEYKOZ SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.924248,
+      "tedavuldekiPaySayisi": 479200096,
+      "kisiSayisi": 7,
+      "fonToplamDeger": 922099638.5,
+      "gunlukGetiri": 0.00190723,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "YUI",
       "fonAdi": "YAPI KREDİ PORTFÖY PY BEYKOZ SERBEST ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

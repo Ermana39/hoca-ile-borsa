@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "ZCK",
     "slug": "zck",
@@ -12,44 +12,56 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.821615,
-    "tedavuldekiPaySayisi": 206433400,
-    "kisiSayisi": 2182,
-    "fonToplamDeger": 376042090.11,
-    "gunlukGetiri": 0.0164281,
+    "fiyat": 1.81671,
+    "tedavuldekiPaySayisi": 206871113,
+    "kisiSayisi": 2215,
+    "fonToplamDeger": 375824897.75,
+    "gunlukGetiri": -0.00269267,
     "getiriler": {
-      "birAy": 0.049958999999999996,
-      "ucAy": 0.046867,
-      "altiAy": 0.13391999999999998,
-      "yilbasi": 0.329567,
-      "birYil": 0.376182,
+      "birAy": 0.047131,
+      "ucAy": 0.066006,
+      "altiAy": 0.133643,
+      "yilbasi": 0.325987,
+      "birYil": 0.372153,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -808886.32,
-      "besGun": -2757924.32,
+      "gunluk": 795197.58,
+      "besGun": -1343685.46,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": -9,
+      "gunluk": 33,
+      "besGun": 6,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZCK",
+        "fonAdi": "ZİRAAT PORTFÖY AGRESİF KATILIM FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 1.81671,
+        "tedavuldekiPaySayisi": 206871113,
+        "kisiSayisi": 2215,
+        "fonToplamDeger": 375824897.75,
+        "gunlukGetiri": -0.00269267,
+        "paraGirisiCikisi": 795197.58,
+        "yatirimciDegisimi": 33
+      },
       {
         "fonKodu": "ZCK",
         "fonAdi": "ZİRAAT PORTFÖY AGRESİF KATILIM FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.0164281,
       "paraGirisiCikisi": -808886.32,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "ZCK",
+      "fonAdi": "ZİRAAT PORTFÖY AGRESİF KATILIM FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.81671,
+      "tedavuldekiPaySayisi": 206871113,
+      "kisiSayisi": 2215,
+      "fonToplamDeger": 375824897.75,
+      "gunlukGetiri": -0.00269267,
+      "paraGirisiCikisi": 795197.58,
+      "yatirimciDegisimi": 33
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZCK",
+      "fonAdi": "ZİRAAT PORTFÖY AGRESİF KATILIM FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.81671,
+      "tedavuldekiPaySayisi": 206871113,
+      "kisiSayisi": 2215,
+      "fonToplamDeger": 375824897.75,
+      "gunlukGetiri": -0.00269267,
+      "paraGirisiCikisi": 795197.58,
+      "yatirimciDegisimi": 33
+    },
     {
       "fonKodu": "ZCK",
       "fonAdi": "ZİRAAT PORTFÖY AGRESİF KATILIM FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

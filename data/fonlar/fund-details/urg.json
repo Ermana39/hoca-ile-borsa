@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "URG",
     "slug": "urg",
@@ -12,13 +12,13 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 76.005227,
+    "fiyat": 75.972378,
     "tedavuldekiPaySayisi": 7502752,
     "kisiSayisi": 1,
-    "fonToplamDeger": 570248366.95,
-    "gunlukGetiri": 0.00192239,
+    "fonToplamDeger": 570001913.46,
+    "gunlukGetiri": -0.00043219,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "URG",
+        "fonAdi": "AK PORTFÖY BİRİNCİ SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-19",
+        "fiyat": 75.972378,
+        "tedavuldekiPaySayisi": 7502752,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 570001913.46,
+        "gunlukGetiri": -0.00043219,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "URG",
         "fonAdi": "AK PORTFÖY BİRİNCİ SERBEST (DÖVİZ) ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00192239,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "URG",
+      "fonAdi": "AK PORTFÖY BİRİNCİ SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 75.972378,
+      "tedavuldekiPaySayisi": 7502752,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 570001913.46,
+      "gunlukGetiri": -0.00043219,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "URG",
+      "fonAdi": "AK PORTFÖY BİRİNCİ SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 75.972378,
+      "tedavuldekiPaySayisi": 7502752,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 570001913.46,
+      "gunlukGetiri": -0.00043219,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "URG",
       "fonAdi": "AK PORTFÖY BİRİNCİ SERBEST (DÖVİZ) ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

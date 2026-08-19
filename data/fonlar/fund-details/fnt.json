@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "FNT",
     "slug": "fnt",
@@ -12,44 +12,56 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 2.306908,
-    "tedavuldekiPaySayisi": 272986779,
-    "kisiSayisi": 1808,
-    "fonToplamDeger": 629755349.82,
-    "gunlukGetiri": 0.04160725,
+    "fiyat": 2.271035,
+    "tedavuldekiPaySayisi": 276283912,
+    "kisiSayisi": 1814,
+    "fonToplamDeger": 627450315.75,
+    "gunlukGetiri": -0.01555025,
     "getiriler": {
-      "birAy": 0.07807800000000001,
-      "ucAy": 0.129581,
-      "altiAy": 0.087693,
-      "yilbasi": 0.410046,
-      "birYil": 0.355424,
+      "birAy": 0.061314,
+      "ucAy": 0.133377,
+      "altiAy": 0.09001799999999999,
+      "yilbasi": 0.388119,
+      "birYil": 0.350422,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 9514179.96,
-      "besGun": 13903788.8,
+      "gunluk": 7487904.44,
+      "besGun": 22466030.87,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": -14,
+      "gunluk": 6,
+      "besGun": -7,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FNT",
+        "fonAdi": "HEDEF PORTFÖY MODEL HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-19",
+        "fiyat": 2.271035,
+        "tedavuldekiPaySayisi": 276283912,
+        "kisiSayisi": 1814,
+        "fonToplamDeger": 627450315.75,
+        "gunlukGetiri": -0.01555025,
+        "paraGirisiCikisi": 7487904.44,
+        "yatirimciDegisimi": 6
+      },
       {
         "fonKodu": "FNT",
         "fonAdi": "HEDEF PORTFÖY MODEL HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.04160725,
       "paraGirisiCikisi": 9514179.96,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "FNT",
+      "fonAdi": "HEDEF PORTFÖY MODEL HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 2.271035,
+      "tedavuldekiPaySayisi": 276283912,
+      "kisiSayisi": 1814,
+      "fonToplamDeger": 627450315.75,
+      "gunlukGetiri": -0.01555025,
+      "paraGirisiCikisi": 7487904.44,
+      "yatirimciDegisimi": 6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FNT",
+      "fonAdi": "HEDEF PORTFÖY MODEL HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 2.271035,
+      "tedavuldekiPaySayisi": 276283912,
+      "kisiSayisi": 1814,
+      "fonToplamDeger": 627450315.75,
+      "gunlukGetiri": -0.01555025,
+      "paraGirisiCikisi": 7487904.44,
+      "yatirimciDegisimi": 6
+    },
     {
       "fonKodu": "FNT",
       "fonAdi": "HEDEF PORTFÖY MODEL HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

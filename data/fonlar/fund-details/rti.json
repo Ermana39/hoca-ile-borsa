@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "RTI",
     "slug": "rti",
@@ -12,13 +12,13 @@
     "yonetici": "ALBARAKA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "albaraka-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 3.369669,
-    "tedavuldekiPaySayisi": 15726141857,
-    "kisiSayisi": 62,
-    "fonToplamDeger": 52991887456.03,
-    "gunlukGetiri": 0.00104214,
+    "fiyat": 3.373181,
+    "tedavuldekiPaySayisi": 14367739153,
+    "kisiSayisi": 63,
+    "fonToplamDeger": 48464977941.16,
+    "gunlukGetiri": 0.00104224,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 6011372959.37,
-      "besGun": 25501601699.73,
+      "gunluk": -4582138191.48,
+      "besGun": 19270602825.31,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": 0,
+      "gunluk": 1,
+      "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RTI",
+        "fonAdi": "ALBARAKA PORTFÖY ALBARAKA TÜRK İKİNCİ KISA VADELİ KATILIM SERBEST (TL) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 3.373181,
+        "tedavuldekiPaySayisi": 14367739153,
+        "kisiSayisi": 63,
+        "fonToplamDeger": 48464977941.16,
+        "gunlukGetiri": 0.00104224,
+        "paraGirisiCikisi": -4582138191.48,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "RTI",
         "fonAdi": "ALBARAKA PORTFÖY ALBARAKA TÜRK İKİNCİ KISA VADELİ KATILIM SERBEST (TL) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00104214,
       "paraGirisiCikisi": 6011372959.37,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "RTI",
+      "fonAdi": "ALBARAKA PORTFÖY ALBARAKA TÜRK İKİNCİ KISA VADELİ KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 3.373181,
+      "tedavuldekiPaySayisi": 14367739153,
+      "kisiSayisi": 63,
+      "fonToplamDeger": 48464977941.16,
+      "gunlukGetiri": 0.00104224,
+      "paraGirisiCikisi": -4582138191.48,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RTI",
+      "fonAdi": "ALBARAKA PORTFÖY ALBARAKA TÜRK İKİNCİ KISA VADELİ KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 3.373181,
+      "tedavuldekiPaySayisi": 14367739153,
+      "kisiSayisi": 63,
+      "fonToplamDeger": 48464977941.16,
+      "gunlukGetiri": 0.00104224,
+      "paraGirisiCikisi": -4582138191.48,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "RTI",
       "fonAdi": "ALBARAKA PORTFÖY ALBARAKA TÜRK İKİNCİ KISA VADELİ KATILIM SERBEST (TL) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

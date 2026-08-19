@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "GVC",
     "slug": "gvc",
@@ -12,13 +12,13 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 64.417401,
+    "fiyat": 64.40618,
     "tedavuldekiPaySayisi": 4739268,
     "kisiSayisi": 1,
-    "fonToplamDeger": 305291329.36,
-    "gunlukGetiri": 0.00196782,
+    "fonToplamDeger": 305238147.91,
+    "gunlukGetiri": -0.00017419,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GVC",
+        "fonAdi": "GARANTİ PORTFÖY ERG SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-19",
+        "fiyat": 64.40618,
+        "tedavuldekiPaySayisi": 4739268,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 305238147.91,
+        "gunlukGetiri": -0.00017419,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "GVC",
         "fonAdi": "GARANTİ PORTFÖY ERG SERBEST (DÖVİZ) ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00196782,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GVC",
+      "fonAdi": "GARANTİ PORTFÖY ERG SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 64.40618,
+      "tedavuldekiPaySayisi": 4739268,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 305238147.91,
+      "gunlukGetiri": -0.00017419,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GVC",
+      "fonAdi": "GARANTİ PORTFÖY ERG SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 64.40618,
+      "tedavuldekiPaySayisi": 4739268,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 305238147.91,
+      "gunlukGetiri": -0.00017419,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "GVC",
       "fonAdi": "GARANTİ PORTFÖY ERG SERBEST (DÖVİZ) ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

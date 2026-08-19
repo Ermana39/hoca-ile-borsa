@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "TRU",
     "slug": "tru",
@@ -12,44 +12,56 @@
     "yonetici": "TERA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "tera-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.512912,
-    "tedavuldekiPaySayisi": 194040728,
+    "fiyat": 1.512534,
+    "tedavuldekiPaySayisi": 194045536,
     "kisiSayisi": 250,
-    "fonToplamDeger": 293566499.56,
-    "gunlukGetiri": 0.00342498,
+    "fonToplamDeger": 293500563.55,
+    "gunlukGetiri": -0.00024985,
     "getiriler": {
-      "birAy": 0.02511,
-      "ucAy": 0.064249,
-      "altiAy": 0.141461,
-      "yilbasi": 0.163175,
-      "birYil": 0.23667200000000002,
+      "birAy": 0.024853999999999998,
+      "ucAy": 0.058464999999999996,
+      "altiAy": 0.136313,
+      "yilbasi": 0.162885,
+      "birYil": 0.23395700000000003,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -7292.24,
-      "besGun": -2916819.56,
+      "gunluk": 7272.26,
+      "besGun": -2494813.16,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
+      "gunluk": 0,
       "besGun": 3,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TRU",
+        "fonAdi": "TERA PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 1.512534,
+        "tedavuldekiPaySayisi": 194045536,
+        "kisiSayisi": 250,
+        "fonToplamDeger": 293500563.55,
+        "gunlukGetiri": -0.00024985,
+        "paraGirisiCikisi": 7272.26,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "TRU",
         "fonAdi": "TERA PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00342498,
       "paraGirisiCikisi": -7292.24,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "TRU",
+      "fonAdi": "TERA PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.512534,
+      "tedavuldekiPaySayisi": 194045536,
+      "kisiSayisi": 250,
+      "fonToplamDeger": 293500563.55,
+      "gunlukGetiri": -0.00024985,
+      "paraGirisiCikisi": 7272.26,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TRU",
+      "fonAdi": "TERA PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.512534,
+      "tedavuldekiPaySayisi": 194045536,
+      "kisiSayisi": 250,
+      "fonToplamDeger": 293500563.55,
+      "gunlukGetiri": -0.00024985,
+      "paraGirisiCikisi": 7272.26,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "TRU",
       "fonAdi": "TERA PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

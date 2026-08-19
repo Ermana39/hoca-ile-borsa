@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "BVM",
     "slug": "bvm",
@@ -12,44 +12,56 @@
     "yonetici": "ALLBATROSS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "allbatross-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.297691,
+    "fiyat": 1.311921,
     "tedavuldekiPaySayisi": 10376856,
-    "kisiSayisi": 126,
-    "fonToplamDeger": 13465955.13,
-    "gunlukGetiri": 0.00690882,
+    "kisiSayisi": 125,
+    "fonToplamDeger": 13613610.71,
+    "gunlukGetiri": 0.01096563,
     "getiriler": {
-      "birAy": -0.050587999999999994,
-      "ucAy": -0.035687,
-      "altiAy": -0.017299,
-      "yilbasi": 0.04564,
-      "birYil": -0.612414,
-      "ucYil": -0.5509470000000001,
+      "birAy": -0.040177,
+      "ucAy": -0.009268,
+      "altiAy": -0.007000999999999999,
+      "yilbasi": 0.057106000000000004,
+      "birYil": -0.609435,
+      "ucYil": -0.539101,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -3338.96,
-      "besGun": -176433.45,
+      "gunluk": 0,
+      "besGun": -138773.23,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": -1,
-      "besGun": -5,
+      "besGun": -6,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BVM",
+        "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-19",
+        "fiyat": 1.311921,
+        "tedavuldekiPaySayisi": 10376856,
+        "kisiSayisi": 125,
+        "fonToplamDeger": 13613610.71,
+        "gunlukGetiri": 0.01096563,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "BVM",
         "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00690882,
       "paraGirisiCikisi": -3338.96,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "BVM",
+      "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 1.311921,
+      "tedavuldekiPaySayisi": 10376856,
+      "kisiSayisi": 125,
+      "fonToplamDeger": 13613610.71,
+      "gunlukGetiri": 0.01096563,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BVM",
+      "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 1.311921,
+      "tedavuldekiPaySayisi": 10376856,
+      "kisiSayisi": 125,
+      "fonToplamDeger": 13613610.71,
+      "gunlukGetiri": 0.01096563,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "BVM",
       "fonAdi": "ALLBATROSS PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

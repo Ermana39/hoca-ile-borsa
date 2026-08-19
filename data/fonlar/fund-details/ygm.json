@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "YGM",
     "slug": "ygm",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 3.320535,
-    "tedavuldekiPaySayisi": 161908124,
-    "kisiSayisi": 1949,
-    "fonToplamDeger": 537621627.94,
-    "gunlukGetiri": 0.01045716,
+    "fiyat": 3.321546,
+    "tedavuldekiPaySayisi": 160109280,
+    "kisiSayisi": 1942,
+    "fonToplamDeger": 531810276.2,
+    "gunlukGetiri": 0.00030447,
     "getiriler": {
-      "birAy": 0.082608,
-      "ucAy": 0.009541,
-      "altiAy": 0.144347,
-      "yilbasi": 0.18970800000000002,
-      "birYil": 0.426572,
-      "ucYil": 1.3456039999999998,
+      "birAy": 0.082938,
+      "ucAy": 0.005788,
+      "altiAy": 0.13655099999999998,
+      "yilbasi": 0.19007000000000002,
+      "birYil": 0.424535,
+      "ucYil": 1.3511920000000002,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -347590.28,
-      "besGun": -13175417.2,
+      "gunluk": -5974943.09,
+      "besGun": -16470214.9,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -6,
-      "besGun": -22,
+      "gunluk": -7,
+      "besGun": -30,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YGM",
+        "fonAdi": "YAPI KREDİ PORTFÖY EMTİA SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 3.321546,
+        "tedavuldekiPaySayisi": 160109280,
+        "kisiSayisi": 1942,
+        "fonToplamDeger": 531810276.2,
+        "gunlukGetiri": 0.00030447,
+        "paraGirisiCikisi": -5974943.09,
+        "yatirimciDegisimi": -7
+      },
       {
         "fonKodu": "YGM",
         "fonAdi": "YAPI KREDİ PORTFÖY EMTİA SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.01045716,
       "paraGirisiCikisi": -347590.28,
       "yatirimciDegisimi": -6
+    },
+    {
+      "fonKodu": "YGM",
+      "fonAdi": "YAPI KREDİ PORTFÖY EMTİA SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 3.321546,
+      "tedavuldekiPaySayisi": 160109280,
+      "kisiSayisi": 1942,
+      "fonToplamDeger": 531810276.2,
+      "gunlukGetiri": 0.00030447,
+      "paraGirisiCikisi": -5974943.09,
+      "yatirimciDegisimi": -7
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YGM",
+      "fonAdi": "YAPI KREDİ PORTFÖY EMTİA SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 3.321546,
+      "tedavuldekiPaySayisi": 160109280,
+      "kisiSayisi": 1942,
+      "fonToplamDeger": 531810276.2,
+      "gunlukGetiri": 0.00030447,
+      "paraGirisiCikisi": -5974943.09,
+      "yatirimciDegisimi": -7
+    },
     {
       "fonKodu": "YGM",
       "fonAdi": "YAPI KREDİ PORTFÖY EMTİA SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

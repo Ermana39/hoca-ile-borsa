@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "TOT",
     "slug": "tot",
@@ -12,44 +12,56 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 949.837683,
-    "tedavuldekiPaySayisi": 121374,
-    "kisiSayisi": 646,
-    "fonToplamDeger": 115285598.91,
-    "gunlukGetiri": 0.00104563,
+    "fiyat": 950.829482,
+    "tedavuldekiPaySayisi": 121645,
+    "kisiSayisi": 645,
+    "fonToplamDeger": 115663652.29,
+    "gunlukGetiri": 0.00104418,
     "getiriler": {
-      "birAy": 0.030588999999999998,
-      "ucAy": 0.099458,
-      "altiAy": 0.203841,
-      "yilbasi": 0.263467,
-      "birYil": 0.45585299999999995,
-      "ucYil": 2.312268,
-      "besYil": 3.7085660000000003
+      "birAy": 0.031665,
+      "ucAy": 0.098355,
+      "altiAy": 0.203894,
+      "yilbasi": 0.264787,
+      "birYil": 0.45576700000000003,
+      "ucYil": 2.308973,
+      "besYil": 3.7112540000000003
     },
     "paraAkisi": {
-      "gunluk": 56040.42,
-      "besGun": -2318845.6,
+      "gunluk": 257674.79,
+      "besGun": -515879.6,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
-      "besGun": -1,
+      "gunluk": -1,
+      "besGun": 3,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TOT",
+        "fonAdi": "TEB PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 950.829482,
+        "tedavuldekiPaySayisi": 121645,
+        "kisiSayisi": 645,
+        "fonToplamDeger": 115663652.29,
+        "gunlukGetiri": 0.00104418,
+        "paraGirisiCikisi": 257674.79,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "TOT",
         "fonAdi": "TEB PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00104563,
       "paraGirisiCikisi": 56040.42,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "TOT",
+      "fonAdi": "TEB PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 950.829482,
+      "tedavuldekiPaySayisi": 121645,
+      "kisiSayisi": 645,
+      "fonToplamDeger": 115663652.29,
+      "gunlukGetiri": 0.00104418,
+      "paraGirisiCikisi": 257674.79,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TOT",
+      "fonAdi": "TEB PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 950.829482,
+      "tedavuldekiPaySayisi": 121645,
+      "kisiSayisi": 645,
+      "fonToplamDeger": 115663652.29,
+      "gunlukGetiri": 0.00104418,
+      "paraGirisiCikisi": 257674.79,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "TOT",
       "fonAdi": "TEB PORTFÖY ÖZEL SEKTÖR BORÇLANMA ARAÇLARI FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "ECV",
     "slug": "ecv",
@@ -12,13 +12,13 @@
     "yonetici": "GLOBAL MD PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "global-md-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 0.486682,
-    "tedavuldekiPaySayisi": 190355130.18,
-    "kisiSayisi": 2417,
-    "fonToplamDeger": 92642469.74,
-    "gunlukGetiri": 0.00084932,
+    "fiyat": 0.487279,
+    "tedavuldekiPaySayisi": 181478096.18,
+    "kisiSayisi": 2411,
+    "fonToplamDeger": 88430404.54,
+    "gunlukGetiri": 0.00122667,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 134994.39,
-      "besGun": 10064291.55,
+      "gunluk": -4325592.25,
+      "besGun": 2176068.17,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
-      "besGun": 14,
+      "gunluk": -6,
+      "besGun": 6,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ECV",
+        "fonAdi": "GLOBAL MD PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 0.487279,
+        "tedavuldekiPaySayisi": 181478096.18,
+        "kisiSayisi": 2411,
+        "fonToplamDeger": 88430404.54,
+        "gunlukGetiri": 0.00122667,
+        "paraGirisiCikisi": -4325592.25,
+        "yatirimciDegisimi": -6
+      },
       {
         "fonKodu": "ECV",
         "fonAdi": "GLOBAL MD PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00084932,
       "paraGirisiCikisi": 134994.39,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "ECV",
+      "fonAdi": "GLOBAL MD PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 0.487279,
+      "tedavuldekiPaySayisi": 181478096.18,
+      "kisiSayisi": 2411,
+      "fonToplamDeger": 88430404.54,
+      "gunlukGetiri": 0.00122667,
+      "paraGirisiCikisi": -4325592.25,
+      "yatirimciDegisimi": -6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ECV",
+      "fonAdi": "GLOBAL MD PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 0.487279,
+      "tedavuldekiPaySayisi": 181478096.18,
+      "kisiSayisi": 2411,
+      "fonToplamDeger": 88430404.54,
+      "gunlukGetiri": 0.00122667,
+      "paraGirisiCikisi": -4325592.25,
+      "yatirimciDegisimi": -6
+    },
     {
       "fonKodu": "ECV",
       "fonAdi": "GLOBAL MD PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

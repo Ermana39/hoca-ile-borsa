@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "TTS",
     "slug": "tts",
@@ -12,13 +12,13 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 70.579718,
+    "fiyat": 70.274878,
     "tedavuldekiPaySayisi": 31086506,
     "kisiSayisi": 1,
-    "fonToplamDeger": 2194076826.07,
-    "gunlukGetiri": 0.00203544,
+    "fonToplamDeger": 2184600410.48,
+    "gunlukGetiri": -0.00431909,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TTS",
+        "fonAdi": "TEB PORTFÖY DÖRDÜNCÜ SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-19",
+        "fiyat": 70.274878,
+        "tedavuldekiPaySayisi": 31086506,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 2184600410.48,
+        "gunlukGetiri": -0.00431909,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "TTS",
         "fonAdi": "TEB PORTFÖY DÖRDÜNCÜ SERBEST (DÖVİZ) ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00203544,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TTS",
+      "fonAdi": "TEB PORTFÖY DÖRDÜNCÜ SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 70.274878,
+      "tedavuldekiPaySayisi": 31086506,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 2184600410.48,
+      "gunlukGetiri": -0.00431909,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TTS",
+      "fonAdi": "TEB PORTFÖY DÖRDÜNCÜ SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 70.274878,
+      "tedavuldekiPaySayisi": 31086506,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 2184600410.48,
+      "gunlukGetiri": -0.00431909,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "TTS",
       "fonAdi": "TEB PORTFÖY DÖRDÜNCÜ SERBEST (DÖVİZ) ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

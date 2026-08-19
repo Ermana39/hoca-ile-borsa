@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "HYV",
     "slug": "hyv",
@@ -12,44 +12,56 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 6.31495,
-    "tedavuldekiPaySayisi": 990639226,
-    "kisiSayisi": 6694,
-    "fonToplamDeger": 6255836992.11,
-    "gunlukGetiri": 0.00093929,
+    "fiyat": 6.321453,
+    "tedavuldekiPaySayisi": 986679014,
+    "kisiSayisi": 6673,
+    "fonToplamDeger": 6237244571.15,
+    "gunlukGetiri": 0.00102978,
     "getiriler": {
-      "birAy": 0.031471,
-      "ucAy": 0.10168300000000001,
-      "altiAy": 0.207604,
-      "yilbasi": 0.266808,
-      "birYil": 0.478672,
-      "ucYil": 2.6503039999999998,
-      "besYil": 4.740389
+      "birAy": 0.032533,
+      "ucAy": 0.100631,
+      "altiAy": 0.207553,
+      "yilbasi": 0.268113,
+      "birYil": 0.47844200000000003,
+      "ucYil": 2.645172,
+      "besYil": 4.743512
     },
     "paraAkisi": {
-      "gunluk": -3645102.81,
-      "besGun": -22919147.38,
+      "gunluk": -25034294.03,
+      "besGun": -59671612.63,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -18,
-      "besGun": -48,
+      "gunluk": -21,
+      "besGun": -49,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HYV",
+        "fonAdi": "HEDEF PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 6.321453,
+        "tedavuldekiPaySayisi": 986679014,
+        "kisiSayisi": 6673,
+        "fonToplamDeger": 6237244571.15,
+        "gunlukGetiri": 0.00102978,
+        "paraGirisiCikisi": -25034294.03,
+        "yatirimciDegisimi": -21
+      },
       {
         "fonKodu": "HYV",
         "fonAdi": "HEDEF PORTFÖY PARA PİYASASI (TL) FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00093929,
       "paraGirisiCikisi": -3645102.81,
       "yatirimciDegisimi": -18
+    },
+    {
+      "fonKodu": "HYV",
+      "fonAdi": "HEDEF PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 6.321453,
+      "tedavuldekiPaySayisi": 986679014,
+      "kisiSayisi": 6673,
+      "fonToplamDeger": 6237244571.15,
+      "gunlukGetiri": 0.00102978,
+      "paraGirisiCikisi": -25034294.03,
+      "yatirimciDegisimi": -21
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HYV",
+      "fonAdi": "HEDEF PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 6.321453,
+      "tedavuldekiPaySayisi": 986679014,
+      "kisiSayisi": 6673,
+      "fonToplamDeger": 6237244571.15,
+      "gunlukGetiri": 0.00102978,
+      "paraGirisiCikisi": -25034294.03,
+      "yatirimciDegisimi": -21
+    },
     {
       "fonKodu": "HYV",
       "fonAdi": "HEDEF PORTFÖY PARA PİYASASI (TL) FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

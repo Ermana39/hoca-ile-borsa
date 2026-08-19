@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "SVS",
     "slug": "svs",
@@ -12,13 +12,13 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 2.691148,
+    "fiyat": 2.673304,
     "tedavuldekiPaySayisi": 414228781,
     "kisiSayisi": 1,
-    "fonToplamDeger": 1114751064.17,
-    "gunlukGetiri": 0.00097414,
+    "fonToplamDeger": 1107359574.78,
+    "gunlukGetiri": -0.00663063,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SVS",
+        "fonAdi": "AZİMUT PORTFÖY SVS SERBEST ÖZEL FON",
+        "tarih": "2026-08-19",
+        "fiyat": 2.673304,
+        "tedavuldekiPaySayisi": 414228781,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 1107359574.78,
+        "gunlukGetiri": -0.00663063,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "SVS",
         "fonAdi": "AZİMUT PORTFÖY SVS SERBEST ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00097414,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "SVS",
+      "fonAdi": "AZİMUT PORTFÖY SVS SERBEST ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 2.673304,
+      "tedavuldekiPaySayisi": 414228781,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 1107359574.78,
+      "gunlukGetiri": -0.00663063,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SVS",
+      "fonAdi": "AZİMUT PORTFÖY SVS SERBEST ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 2.673304,
+      "tedavuldekiPaySayisi": 414228781,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 1107359574.78,
+      "gunlukGetiri": -0.00663063,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "SVS",
       "fonAdi": "AZİMUT PORTFÖY SVS SERBEST ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

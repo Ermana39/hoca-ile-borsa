@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "KIA",
     "slug": "kia",
@@ -12,44 +12,56 @@
     "yonetici": "TRIVE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "trive-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 4.308838,
-    "tedavuldekiPaySayisi": 1363593,
+    "fiyat": 4.310052,
+    "tedavuldekiPaySayisi": 1363389,
     "kisiSayisi": 366,
-    "fonToplamDeger": 5875501.8,
-    "gunlukGetiri": 0.00112593,
+    "fonToplamDeger": 5876276.93,
+    "gunlukGetiri": 0.00028175,
     "getiriler": {
-      "birAy": -0.0007109999999999999,
-      "ucAy": -0.027179000000000002,
-      "altiAy": -0.018552,
-      "yilbasi": 0.125589,
-      "birYil": 0.256955,
-      "ucYil": 1.3778720000000002,
+      "birAy": -0.000429,
+      "ucAy": -0.016191,
+      "altiAy": -0.019565,
+      "yilbasi": 0.125906,
+      "birYil": 0.25372,
+      "ucYil": 1.40862,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -13060.09,
-      "besGun": -8468.82,
+      "gunluk": -879.25,
+      "besGun": -9390.53,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": -2,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KIA",
+        "fonAdi": "TRIVE PORTFÖY MUTLAK GETİRİ HEDEFLİ DEĞİŞKEN FON",
+        "tarih": "2026-08-19",
+        "fiyat": 4.310052,
+        "tedavuldekiPaySayisi": 1363389,
+        "kisiSayisi": 366,
+        "fonToplamDeger": 5876276.93,
+        "gunlukGetiri": 0.00028175,
+        "paraGirisiCikisi": -879.25,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "KIA",
         "fonAdi": "TRIVE PORTFÖY MUTLAK GETİRİ HEDEFLİ DEĞİŞKEN FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00112593,
       "paraGirisiCikisi": -13060.09,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KIA",
+      "fonAdi": "TRIVE PORTFÖY MUTLAK GETİRİ HEDEFLİ DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 4.310052,
+      "tedavuldekiPaySayisi": 1363389,
+      "kisiSayisi": 366,
+      "fonToplamDeger": 5876276.93,
+      "gunlukGetiri": 0.00028175,
+      "paraGirisiCikisi": -879.25,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KIA",
+      "fonAdi": "TRIVE PORTFÖY MUTLAK GETİRİ HEDEFLİ DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 4.310052,
+      "tedavuldekiPaySayisi": 1363389,
+      "kisiSayisi": 366,
+      "fonToplamDeger": 5876276.93,
+      "gunlukGetiri": 0.00028175,
+      "paraGirisiCikisi": -879.25,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "KIA",
       "fonAdi": "TRIVE PORTFÖY MUTLAK GETİRİ HEDEFLİ DEĞİŞKEN FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "YVB",
     "slug": "yvb",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.351482,
-    "tedavuldekiPaySayisi": 76856649,
-    "kisiSayisi": 623,
-    "fonToplamDeger": 103870378.64,
-    "gunlukGetiri": 0.00046563,
+    "fiyat": 1.34998,
+    "tedavuldekiPaySayisi": 65702346,
+    "kisiSayisi": 624,
+    "fonToplamDeger": 88696852.01,
+    "gunlukGetiri": -0.00111137,
     "getiriler": {
-      "birAy": 0.025107,
-      "ucAy": 0.078582,
-      "altiAy": 0.027707000000000002,
-      "yilbasi": 0.052295999999999995,
-      "birYil": 0.240109,
+      "birAy": 0.023968,
+      "ucAy": 0.089162,
+      "altiAy": 0.026462,
+      "yilbasi": 0.051127000000000006,
+      "birYil": 0.23755800000000002,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 278193.11,
-      "besGun": 324632.44,
+      "gunluk": -15058085.96,
+      "besGun": -14835790.51,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
-      "besGun": -5,
+      "gunluk": 1,
+      "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YVB",
+        "fonAdi": "YAPI KREDİ PORTFÖY UZUN VADELİ BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 1.34998,
+        "tedavuldekiPaySayisi": 65702346,
+        "kisiSayisi": 624,
+        "fonToplamDeger": 88696852.01,
+        "gunlukGetiri": -0.00111137,
+        "paraGirisiCikisi": -15058085.96,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "YVB",
         "fonAdi": "YAPI KREDİ PORTFÖY UZUN VADELİ BORÇLANMA ARAÇLARI FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00046563,
       "paraGirisiCikisi": 278193.11,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "YVB",
+      "fonAdi": "YAPI KREDİ PORTFÖY UZUN VADELİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.34998,
+      "tedavuldekiPaySayisi": 65702346,
+      "kisiSayisi": 624,
+      "fonToplamDeger": 88696852.01,
+      "gunlukGetiri": -0.00111137,
+      "paraGirisiCikisi": -15058085.96,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YVB",
+      "fonAdi": "YAPI KREDİ PORTFÖY UZUN VADELİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.34998,
+      "tedavuldekiPaySayisi": 65702346,
+      "kisiSayisi": 624,
+      "fonToplamDeger": 88696852.01,
+      "gunlukGetiri": -0.00111137,
+      "paraGirisiCikisi": -15058085.96,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "YVB",
       "fonAdi": "YAPI KREDİ PORTFÖY UZUN VADELİ BORÇLANMA ARAÇLARI FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

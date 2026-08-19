@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "DAS",
     "slug": "das",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 55.085153,
-    "tedavuldekiPaySayisi": 2067884925.31,
-    "kisiSayisi": 25529,
-    "fonToplamDeger": 113909758463.83,
-    "gunlukGetiri": 0.00201822,
+    "fiyat": 55.112225,
+    "tedavuldekiPaySayisi": 2083124464.31,
+    "kisiSayisi": 25486,
+    "fonToplamDeger": 114805623152.13,
+    "gunlukGetiri": 0.00049146,
     "getiriler": {
-      "birAy": 0.020957,
-      "ucAy": 0.063696,
-      "altiAy": 0.114949,
-      "yilbasi": 0.141931,
-      "birYil": 0.218359,
-      "ucYil": 0.994247,
+      "birAy": 0.021459000000000002,
+      "ucAy": 0.062607,
+      "altiAy": 0.114771,
+      "yilbasi": 0.142492,
+      "birYil": 0.216533,
+      "ucYil": 0.9951300000000001,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 190419403.51,
-      "besGun": -81153426.12,
+      "gunluk": 839884902.26,
+      "besGun": 1030568467.77,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
-      "besGun": -66,
+      "gunluk": -43,
+      "besGun": -91,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DAS",
+        "fonAdi": "DENİZ PORTFÖY ONİKİNCİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 55.112225,
+        "tedavuldekiPaySayisi": 2083124464.31,
+        "kisiSayisi": 25486,
+        "fonToplamDeger": 114805623152.13,
+        "gunlukGetiri": 0.00049146,
+        "paraGirisiCikisi": 839884902.26,
+        "yatirimciDegisimi": -43
+      },
       {
         "fonKodu": "DAS",
         "fonAdi": "DENİZ PORTFÖY ONİKİNCİ SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00201822,
       "paraGirisiCikisi": 190419403.51,
       "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "DAS",
+      "fonAdi": "DENİZ PORTFÖY ONİKİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 55.112225,
+      "tedavuldekiPaySayisi": 2083124464.31,
+      "kisiSayisi": 25486,
+      "fonToplamDeger": 114805623152.13,
+      "gunlukGetiri": 0.00049146,
+      "paraGirisiCikisi": 839884902.26,
+      "yatirimciDegisimi": -43
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DAS",
+      "fonAdi": "DENİZ PORTFÖY ONİKİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 55.112225,
+      "tedavuldekiPaySayisi": 2083124464.31,
+      "kisiSayisi": 25486,
+      "fonToplamDeger": 114805623152.13,
+      "gunlukGetiri": 0.00049146,
+      "paraGirisiCikisi": 839884902.26,
+      "yatirimciDegisimi": -43
+    },
     {
       "fonKodu": "DAS",
       "fonAdi": "DENİZ PORTFÖY ONİKİNCİ SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

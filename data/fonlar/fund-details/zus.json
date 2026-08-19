@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "ZUS",
     "slug": "zus",
@@ -12,13 +12,13 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 50.451268,
-    "tedavuldekiPaySayisi": 1187273112,
+    "fiyat": 50.474099,
+    "tedavuldekiPaySayisi": 1187744760,
     "kisiSayisi": 3373,
-    "fonToplamDeger": 59899433598.75,
-    "gunlukGetiri": 0.00195586,
+    "fonToplamDeger": 59950346742.44,
+    "gunlukGetiri": 0.00045254,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -167618939.64,
-      "besGun": -467697497.81,
+      "gunluk": 23806007.85,
+      "besGun": -165611794.75,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
-      "besGun": -12,
+      "gunluk": 0,
+      "besGun": -9,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZUS",
+        "fonAdi": "ZİRAAT PORTFÖY BAŞAK SERBEST (DÖVİZ-AMERİKAN DOLARI) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 50.474099,
+        "tedavuldekiPaySayisi": 1187744760,
+        "kisiSayisi": 3373,
+        "fonToplamDeger": 59950346742.44,
+        "gunlukGetiri": 0.00045254,
+        "paraGirisiCikisi": 23806007.85,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "ZUS",
         "fonAdi": "ZİRAAT PORTFÖY BAŞAK SERBEST (DÖVİZ-AMERİKAN DOLARI) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00195586,
       "paraGirisiCikisi": -167618939.64,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "ZUS",
+      "fonAdi": "ZİRAAT PORTFÖY BAŞAK SERBEST (DÖVİZ-AMERİKAN DOLARI) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 50.474099,
+      "tedavuldekiPaySayisi": 1187744760,
+      "kisiSayisi": 3373,
+      "fonToplamDeger": 59950346742.44,
+      "gunlukGetiri": 0.00045254,
+      "paraGirisiCikisi": 23806007.85,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZUS",
+      "fonAdi": "ZİRAAT PORTFÖY BAŞAK SERBEST (DÖVİZ-AMERİKAN DOLARI) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 50.474099,
+      "tedavuldekiPaySayisi": 1187744760,
+      "kisiSayisi": 3373,
+      "fonToplamDeger": 59950346742.44,
+      "gunlukGetiri": 0.00045254,
+      "paraGirisiCikisi": 23806007.85,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "ZUS",
       "fonAdi": "ZİRAAT PORTFÖY BAŞAK SERBEST (DÖVİZ-AMERİKAN DOLARI) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

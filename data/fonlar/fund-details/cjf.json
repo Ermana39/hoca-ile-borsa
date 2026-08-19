@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "CJF",
     "slug": "cjf",
@@ -12,13 +12,13 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 65.05644,
+    "fiyat": 65.063552,
     "tedavuldekiPaySayisi": 25017227,
     "kisiSayisi": 3,
-    "fonToplamDeger": 1627531734.1,
-    "gunlukGetiri": 0.0015406,
+    "fonToplamDeger": 1627709649.91,
+    "gunlukGetiri": 0.00010932,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -293768209.9,
+      "gunluk": 0,
       "besGun": -293768209.9,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "CJF",
+        "fonAdi": "AK PORTFÖY ADOC SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-19",
+        "fiyat": 65.063552,
+        "tedavuldekiPaySayisi": 25017227,
+        "kisiSayisi": 3,
+        "fonToplamDeger": 1627709649.91,
+        "gunlukGetiri": 0.00010932,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "CJF",
         "fonAdi": "AK PORTFÖY ADOC SERBEST (DÖVİZ) ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.0015406,
       "paraGirisiCikisi": -293768209.9,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "CJF",
+      "fonAdi": "AK PORTFÖY ADOC SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 65.063552,
+      "tedavuldekiPaySayisi": 25017227,
+      "kisiSayisi": 3,
+      "fonToplamDeger": 1627709649.91,
+      "gunlukGetiri": 0.00010932,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "CJF",
+      "fonAdi": "AK PORTFÖY ADOC SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 65.063552,
+      "tedavuldekiPaySayisi": 25017227,
+      "kisiSayisi": 3,
+      "fonToplamDeger": 1627709649.91,
+      "gunlukGetiri": 0.00010932,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "CJF",
       "fonAdi": "AK PORTFÖY ADOC SERBEST (DÖVİZ) ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "PK1",
     "slug": "pk1",
@@ -12,15 +12,15 @@
     "yonetici": "AHLATCI PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ahlatci-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.043638,
-    "tedavuldekiPaySayisi": 9821792,
-    "kisiSayisi": 121,
-    "fonToplamDeger": 10250400.14,
-    "gunlukGetiri": 0.00102151,
+    "fiyat": 1.044709,
+    "tedavuldekiPaySayisi": 10531917,
+    "kisiSayisi": 127,
+    "fonToplamDeger": 11002789.01,
+    "gunlukGetiri": 0.00102622,
     "getiriler": {
-      "birAy": 0.029872999999999997,
+      "birAy": 0.03093,
       "ucAy": null,
       "altiAy": null,
       "yilbasi": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 358284.06,
-      "besGun": -38275195.79,
+      "gunluk": 741873.98,
+      "besGun": 1255958.6,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
-      "besGun": 13,
+      "gunluk": 6,
+      "besGun": 20,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PK1",
+        "fonAdi": "AHLATCI PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 1.044709,
+        "tedavuldekiPaySayisi": 10531917,
+        "kisiSayisi": 127,
+        "fonToplamDeger": 11002789.01,
+        "gunlukGetiri": 0.00102622,
+        "paraGirisiCikisi": 741873.98,
+        "yatirimciDegisimi": 6
+      },
       {
         "fonKodu": "PK1",
         "fonAdi": "AHLATCI PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00102151,
       "paraGirisiCikisi": 358284.06,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "PK1",
+      "fonAdi": "AHLATCI PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.044709,
+      "tedavuldekiPaySayisi": 10531917,
+      "kisiSayisi": 127,
+      "fonToplamDeger": 11002789.01,
+      "gunlukGetiri": 0.00102622,
+      "paraGirisiCikisi": 741873.98,
+      "yatirimciDegisimi": 6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PK1",
+      "fonAdi": "AHLATCI PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.044709,
+      "tedavuldekiPaySayisi": 10531917,
+      "kisiSayisi": 127,
+      "fonToplamDeger": 11002789.01,
+      "gunlukGetiri": 0.00102622,
+      "paraGirisiCikisi": 741873.98,
+      "yatirimciDegisimi": 6
+    },
     {
       "fonKodu": "PK1",
       "fonAdi": "AHLATCI PORTFÖY PARA PİYASASI KATILIM (TL) FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

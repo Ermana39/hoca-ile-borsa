@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "PP1",
     "slug": "pp1",
@@ -12,44 +12,56 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.678447,
-    "tedavuldekiPaySayisi": 20258048,
-    "kisiSayisi": 265,
-    "fonToplamDeger": 34002067.66,
-    "gunlukGetiri": 0.0084112,
+    "fiyat": 1.667907,
+    "tedavuldekiPaySayisi": 20164503,
+    "kisiSayisi": 263,
+    "fonToplamDeger": 33632506.74,
+    "gunlukGetiri": -0.00627961,
     "getiriler": {
-      "birAy": 0.007391999999999999,
-      "ucAy": -0.052772,
-      "altiAy": 0.076726,
-      "yilbasi": 0.267503,
-      "birYil": 0.29309,
+      "birAy": 0.001066,
+      "ucAy": -0.047804,
+      "altiAy": 0.07889499999999999,
+      "yilbasi": 0.259544,
+      "birYil": 0.279779,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -34535.73,
-      "besGun": -1096744.55,
+      "gunluk": -156024.36,
+      "besGun": -160289.75,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": -6,
+      "gunluk": -2,
+      "besGun": -8,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PP1",
+        "fonAdi": "PARDUS PORTFÖY BİRİNCİ KATILIM FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 1.667907,
+        "tedavuldekiPaySayisi": 20164503,
+        "kisiSayisi": 263,
+        "fonToplamDeger": 33632506.74,
+        "gunlukGetiri": -0.00627961,
+        "paraGirisiCikisi": -156024.36,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "PP1",
         "fonAdi": "PARDUS PORTFÖY BİRİNCİ KATILIM FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.0084112,
       "paraGirisiCikisi": -34535.73,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "PP1",
+      "fonAdi": "PARDUS PORTFÖY BİRİNCİ KATILIM FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.667907,
+      "tedavuldekiPaySayisi": 20164503,
+      "kisiSayisi": 263,
+      "fonToplamDeger": 33632506.74,
+      "gunlukGetiri": -0.00627961,
+      "paraGirisiCikisi": -156024.36,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PP1",
+      "fonAdi": "PARDUS PORTFÖY BİRİNCİ KATILIM FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.667907,
+      "tedavuldekiPaySayisi": 20164503,
+      "kisiSayisi": 263,
+      "fonToplamDeger": 33632506.74,
+      "gunlukGetiri": -0.00627961,
+      "paraGirisiCikisi": -156024.36,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "PP1",
       "fonAdi": "PARDUS PORTFÖY BİRİNCİ KATILIM FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "GOF",
     "slug": "gof",
@@ -12,13 +12,13 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 54.002399,
-    "tedavuldekiPaySayisi": 7119866,
-    "kisiSayisi": 305,
-    "fonToplamDeger": 384489844.42,
-    "gunlukGetiri": 0.0003623,
+    "fiyat": 53.103835,
+    "tedavuldekiPaySayisi": 7159256,
+    "kisiSayisi": 307,
+    "fonToplamDeger": 380183945.98,
+    "gunlukGetiri": -0.01663933,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -5066505.07,
-      "besGun": 5800588.13,
+      "gunluk": 2091760.06,
+      "besGun": 2744488.96,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 4,
+      "gunluk": 2,
       "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GOF",
+        "fonAdi": "GARANTİ PORTFÖY OTUZİKİNCİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 53.103835,
+        "tedavuldekiPaySayisi": 7159256,
+        "kisiSayisi": 307,
+        "fonToplamDeger": 380183945.98,
+        "gunlukGetiri": -0.01663933,
+        "paraGirisiCikisi": 2091760.06,
+        "yatirimciDegisimi": 2
+      },
       {
         "fonKodu": "GOF",
         "fonAdi": "GARANTİ PORTFÖY OTUZİKİNCİ SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.0003623,
       "paraGirisiCikisi": -5066505.07,
       "yatirimciDegisimi": 4
+    },
+    {
+      "fonKodu": "GOF",
+      "fonAdi": "GARANTİ PORTFÖY OTUZİKİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 53.103835,
+      "tedavuldekiPaySayisi": 7159256,
+      "kisiSayisi": 307,
+      "fonToplamDeger": 380183945.98,
+      "gunlukGetiri": -0.01663933,
+      "paraGirisiCikisi": 2091760.06,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GOF",
+      "fonAdi": "GARANTİ PORTFÖY OTUZİKİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 53.103835,
+      "tedavuldekiPaySayisi": 7159256,
+      "kisiSayisi": 307,
+      "fonToplamDeger": 380183945.98,
+      "gunlukGetiri": -0.01663933,
+      "paraGirisiCikisi": 2091760.06,
+      "yatirimciDegisimi": 2
+    },
     {
       "fonKodu": "GOF",
       "fonAdi": "GARANTİ PORTFÖY OTUZİKİNCİ SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

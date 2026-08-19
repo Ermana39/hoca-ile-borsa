@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "OME",
     "slug": "ome",
@@ -12,13 +12,13 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 24.732414,
+    "fiyat": 24.393162,
     "tedavuldekiPaySayisi": 3376422,
     "kisiSayisi": 68,
-    "fonToplamDeger": 83507067.41,
-    "gunlukGetiri": 0.00508296,
+    "fonToplamDeger": 82361608.58,
+    "gunlukGetiri": -0.0137169,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OME",
+        "fonAdi": "PARDUS PORTFÖY EVREN SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 24.393162,
+        "tedavuldekiPaySayisi": 3376422,
+        "kisiSayisi": 68,
+        "fonToplamDeger": 82361608.58,
+        "gunlukGetiri": -0.0137169,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "OME",
         "fonAdi": "PARDUS PORTFÖY EVREN SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00508296,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "OME",
+      "fonAdi": "PARDUS PORTFÖY EVREN SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 24.393162,
+      "tedavuldekiPaySayisi": 3376422,
+      "kisiSayisi": 68,
+      "fonToplamDeger": 82361608.58,
+      "gunlukGetiri": -0.0137169,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OME",
+      "fonAdi": "PARDUS PORTFÖY EVREN SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 24.393162,
+      "tedavuldekiPaySayisi": 3376422,
+      "kisiSayisi": 68,
+      "fonToplamDeger": 82361608.58,
+      "gunlukGetiri": -0.0137169,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "OME",
       "fonAdi": "PARDUS PORTFÖY EVREN SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

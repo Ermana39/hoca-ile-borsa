@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "TVN",
     "slug": "tvn",
@@ -12,44 +12,56 @@
     "yonetici": "TRIVE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "trive-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 2.924465,
-    "tedavuldekiPaySayisi": 3046090,
-    "kisiSayisi": 525,
-    "fonToplamDeger": 8908183.98,
-    "gunlukGetiri": 0.00549358,
+    "fiyat": 2.926955,
+    "tedavuldekiPaySayisi": 3204953,
+    "kisiSayisi": 528,
+    "fonToplamDeger": 9380752.14,
+    "gunlukGetiri": 0.00085144,
     "getiriler": {
-      "birAy": 0.057663,
-      "ucAy": 0.137219,
-      "altiAy": 0.228674,
-      "yilbasi": 0.304625,
-      "birYil": 0.547794,
-      "ucYil": 1.7828190000000002,
+      "birAy": 0.058564,
+      "ucAy": 0.142693,
+      "altiAy": 0.22531800000000002,
+      "yilbasi": 0.305736,
+      "birYil": 0.543992,
+      "ucYil": 1.831505,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 1351.1,
-      "besGun": 489404.27,
+      "gunluk": 464984.85,
+      "besGun": 1075450.71,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
-      "besGun": -1,
+      "gunluk": 3,
+      "besGun": 4,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TVN",
+        "fonAdi": "TRIVE PORTFÖY BİRİNCİ FON SEPETİ FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 2.926955,
+        "tedavuldekiPaySayisi": 3204953,
+        "kisiSayisi": 528,
+        "fonToplamDeger": 9380752.14,
+        "gunlukGetiri": 0.00085144,
+        "paraGirisiCikisi": 464984.85,
+        "yatirimciDegisimi": 3
+      },
       {
         "fonKodu": "TVN",
         "fonAdi": "TRIVE PORTFÖY BİRİNCİ FON SEPETİ FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00549358,
       "paraGirisiCikisi": 1351.1,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "TVN",
+      "fonAdi": "TRIVE PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 2.926955,
+      "tedavuldekiPaySayisi": 3204953,
+      "kisiSayisi": 528,
+      "fonToplamDeger": 9380752.14,
+      "gunlukGetiri": 0.00085144,
+      "paraGirisiCikisi": 464984.85,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TVN",
+      "fonAdi": "TRIVE PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 2.926955,
+      "tedavuldekiPaySayisi": 3204953,
+      "kisiSayisi": 528,
+      "fonToplamDeger": 9380752.14,
+      "gunlukGetiri": 0.00085144,
+      "paraGirisiCikisi": 464984.85,
+      "yatirimciDegisimi": 3
+    },
     {
       "fonKodu": "TVN",
       "fonAdi": "TRIVE PORTFÖY BİRİNCİ FON SEPETİ FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

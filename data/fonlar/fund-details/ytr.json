@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "YTR",
     "slug": "ytr",
@@ -12,13 +12,13 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 80.375482,
+    "fiyat": 80.128113,
     "tedavuldekiPaySayisi": 7745398,
     "kisiSayisi": 2,
-    "fonToplamDeger": 622540098.02,
-    "gunlukGetiri": 0.00603058,
+    "fonToplamDeger": 620624126.84,
+    "gunlukGetiri": -0.00307767,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YTR",
+        "fonAdi": "YAPI KREDİ PORTFÖY LARA SERBEST (DÖVİZ-AVRO) ÖZEL FON",
+        "tarih": "2026-08-19",
+        "fiyat": 80.128113,
+        "tedavuldekiPaySayisi": 7745398,
+        "kisiSayisi": 2,
+        "fonToplamDeger": 620624126.84,
+        "gunlukGetiri": -0.00307767,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "YTR",
         "fonAdi": "YAPI KREDİ PORTFÖY LARA SERBEST (DÖVİZ-AVRO) ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00603058,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YTR",
+      "fonAdi": "YAPI KREDİ PORTFÖY LARA SERBEST (DÖVİZ-AVRO) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 80.128113,
+      "tedavuldekiPaySayisi": 7745398,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 620624126.84,
+      "gunlukGetiri": -0.00307767,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YTR",
+      "fonAdi": "YAPI KREDİ PORTFÖY LARA SERBEST (DÖVİZ-AVRO) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 80.128113,
+      "tedavuldekiPaySayisi": 7745398,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 620624126.84,
+      "gunlukGetiri": -0.00307767,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "YTR",
       "fonAdi": "YAPI KREDİ PORTFÖY LARA SERBEST (DÖVİZ-AVRO) ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

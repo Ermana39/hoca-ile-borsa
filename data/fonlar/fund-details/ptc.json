@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "PTC",
     "slug": "ptc",
@@ -12,13 +12,13 @@
     "yonetici": "PERFORM PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "perform-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 65.805114,
+    "fiyat": 65.781543,
     "tedavuldekiPaySayisi": 15944003,
     "kisiSayisi": 16,
-    "fonToplamDeger": 1049196931.3,
-    "gunlukGetiri": 0.00187874,
+    "fonToplamDeger": 1048821119.44,
+    "gunlukGetiri": -0.00035819,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PTC",
+        "fonAdi": "PERFORM PORTFÖY İKİNCİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 65.781543,
+        "tedavuldekiPaySayisi": 15944003,
+        "kisiSayisi": 16,
+        "fonToplamDeger": 1048821119.44,
+        "gunlukGetiri": -0.00035819,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "PTC",
         "fonAdi": "PERFORM PORTFÖY İKİNCİ SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00187874,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PTC",
+      "fonAdi": "PERFORM PORTFÖY İKİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 65.781543,
+      "tedavuldekiPaySayisi": 15944003,
+      "kisiSayisi": 16,
+      "fonToplamDeger": 1048821119.44,
+      "gunlukGetiri": -0.00035819,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PTC",
+      "fonAdi": "PERFORM PORTFÖY İKİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 65.781543,
+      "tedavuldekiPaySayisi": 15944003,
+      "kisiSayisi": 16,
+      "fonToplamDeger": 1048821119.44,
+      "gunlukGetiri": -0.00035819,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "PTC",
       "fonAdi": "PERFORM PORTFÖY İKİNCİ SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

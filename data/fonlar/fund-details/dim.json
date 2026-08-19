@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "DIM",
     "slug": "dim",
@@ -12,13 +12,13 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 49.307624,
+    "fiyat": 49.309544,
     "tedavuldekiPaySayisi": 2287508,
     "kisiSayisi": 1,
-    "fonToplamDeger": 112791583.58,
-    "gunlukGetiri": -0.00732873,
+    "fonToplamDeger": 112795976.44,
+    "gunlukGetiri": 0.00003894,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DIM",
+        "fonAdi": "DENİZ PORTFÖY İMRAL SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-19",
+        "fiyat": 49.309544,
+        "tedavuldekiPaySayisi": 2287508,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 112795976.44,
+        "gunlukGetiri": 0.00003894,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "DIM",
         "fonAdi": "DENİZ PORTFÖY İMRAL SERBEST (DÖVİZ) ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": -0.00732873,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DIM",
+      "fonAdi": "DENİZ PORTFÖY İMRAL SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 49.309544,
+      "tedavuldekiPaySayisi": 2287508,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 112795976.44,
+      "gunlukGetiri": 0.00003894,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DIM",
+      "fonAdi": "DENİZ PORTFÖY İMRAL SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 49.309544,
+      "tedavuldekiPaySayisi": 2287508,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 112795976.44,
+      "gunlukGetiri": 0.00003894,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "DIM",
       "fonAdi": "DENİZ PORTFÖY İMRAL SERBEST (DÖVİZ) ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

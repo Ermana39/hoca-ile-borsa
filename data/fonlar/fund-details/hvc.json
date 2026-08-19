@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "HVC",
     "slug": "hvc",
@@ -12,13 +12,13 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 25.654179,
-    "tedavuldekiPaySayisi": 2727731,
+    "fiyat": 25.291421,
+    "tedavuldekiPaySayisi": 2727730,
     "kisiSayisi": 17,
-    "fonToplamDeger": 69977698.47,
-    "gunlukGetiri": 0.02184305,
+    "fonToplamDeger": 68988166.73,
+    "gunlukGetiri": -0.01414031,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": 0,
+      "gunluk": -25.29,
+      "besGun": -25.29,
       "birAy": null,
       "ucAy": null
     },
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HVC",
+        "fonAdi": "HEDEF PORTFÖY ROTA HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-19",
+        "fiyat": 25.291421,
+        "tedavuldekiPaySayisi": 2727730,
+        "kisiSayisi": 17,
+        "fonToplamDeger": 68988166.73,
+        "gunlukGetiri": -0.01414031,
+        "paraGirisiCikisi": -25.29,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "HVC",
         "fonAdi": "HEDEF PORTFÖY ROTA HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.02184305,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HVC",
+      "fonAdi": "HEDEF PORTFÖY ROTA HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 25.291421,
+      "tedavuldekiPaySayisi": 2727730,
+      "kisiSayisi": 17,
+      "fonToplamDeger": 68988166.73,
+      "gunlukGetiri": -0.01414031,
+      "paraGirisiCikisi": -25.29,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HVC",
+      "fonAdi": "HEDEF PORTFÖY ROTA HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 25.291421,
+      "tedavuldekiPaySayisi": 2727730,
+      "kisiSayisi": 17,
+      "fonToplamDeger": 68988166.73,
+      "gunlukGetiri": -0.01414031,
+      "paraGirisiCikisi": -25.29,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "HVC",
       "fonAdi": "HEDEF PORTFÖY ROTA HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

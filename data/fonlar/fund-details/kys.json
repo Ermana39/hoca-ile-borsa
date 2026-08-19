@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "KYS",
     "slug": "kys",
@@ -12,19 +12,19 @@
     "yonetici": "KARE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kare-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 53.886584,
+    "fiyat": 53.909882,
     "tedavuldekiPaySayisi": 207100,
     "kisiSayisi": 18,
-    "fonToplamDeger": 11159911.53,
-    "gunlukGetiri": 0.00195281,
+    "fonToplamDeger": 11164736.64,
+    "gunlukGetiri": 0.00043235,
     "getiriler": {
-      "birAy": 0.013943,
-      "ucAy": 0.08333,
-      "altiAy": 0.112553,
-      "yilbasi": 0.16532599999999997,
-      "birYil": 0.27747,
+      "birAy": 0.014381,
+      "ucAy": 0.08579200000000001,
+      "altiAy": 0.11141,
+      "yilbasi": 0.16582899999999998,
+      "birYil": 0.27592700000000003,
       "ucYil": null,
       "besYil": null
     },
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KYS",
+        "fonAdi": "KARE PORTFÖY YEDİNCİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 53.909882,
+        "tedavuldekiPaySayisi": 207100,
+        "kisiSayisi": 18,
+        "fonToplamDeger": 11164736.64,
+        "gunlukGetiri": 0.00043235,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "KYS",
         "fonAdi": "KARE PORTFÖY YEDİNCİ SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00195281,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KYS",
+      "fonAdi": "KARE PORTFÖY YEDİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 53.909882,
+      "tedavuldekiPaySayisi": 207100,
+      "kisiSayisi": 18,
+      "fonToplamDeger": 11164736.64,
+      "gunlukGetiri": 0.00043235,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KYS",
+      "fonAdi": "KARE PORTFÖY YEDİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 53.909882,
+      "tedavuldekiPaySayisi": 207100,
+      "kisiSayisi": 18,
+      "fonToplamDeger": 11164736.64,
+      "gunlukGetiri": 0.00043235,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "KYS",
       "fonAdi": "KARE PORTFÖY YEDİNCİ SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

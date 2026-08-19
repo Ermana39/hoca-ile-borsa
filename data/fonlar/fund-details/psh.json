@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "PSH",
     "slug": "psh",
@@ -12,16 +12,16 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.02741,
-    "tedavuldekiPaySayisi": 16759259,
-    "kisiSayisi": 372,
-    "fonToplamDeger": 17218633.68,
-    "gunlukGetiri": 0.00470959,
+    "fiyat": 1.032748,
+    "tedavuldekiPaySayisi": 16118224,
+    "kisiSayisi": 371,
+    "fonToplamDeger": 16646071.2,
+    "gunlukGetiri": 0.00519559,
     "getiriler": {
-      "birAy": -0.021678000000000003,
-      "ucAy": -0.009319,
+      "birAy": -0.016595,
+      "ucAy": 0.011437999999999999,
       "altiAy": null,
       "yilbasi": null,
       "birYil": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -28006.17,
-      "besGun": -144174.38,
+      "gunluk": -662027.61,
+      "besGun": -761831.73,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
-      "besGun": -17,
+      "gunluk": -1,
+      "besGun": -13,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PSH",
+        "fonAdi": "DENİZ PORTFÖY PERAKENDE SEKTÖRÜ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-19",
+        "fiyat": 1.032748,
+        "tedavuldekiPaySayisi": 16118224,
+        "kisiSayisi": 371,
+        "fonToplamDeger": 16646071.2,
+        "gunlukGetiri": 0.00519559,
+        "paraGirisiCikisi": -662027.61,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "PSH",
         "fonAdi": "DENİZ PORTFÖY PERAKENDE SEKTÖRÜ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00470959,
       "paraGirisiCikisi": -28006.17,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "PSH",
+      "fonAdi": "DENİZ PORTFÖY PERAKENDE SEKTÖRÜ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 1.032748,
+      "tedavuldekiPaySayisi": 16118224,
+      "kisiSayisi": 371,
+      "fonToplamDeger": 16646071.2,
+      "gunlukGetiri": 0.00519559,
+      "paraGirisiCikisi": -662027.61,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PSH",
+      "fonAdi": "DENİZ PORTFÖY PERAKENDE SEKTÖRÜ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 1.032748,
+      "tedavuldekiPaySayisi": 16118224,
+      "kisiSayisi": 371,
+      "fonToplamDeger": 16646071.2,
+      "gunlukGetiri": 0.00519559,
+      "paraGirisiCikisi": -662027.61,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "PSH",
       "fonAdi": "DENİZ PORTFÖY PERAKENDE SEKTÖRÜ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

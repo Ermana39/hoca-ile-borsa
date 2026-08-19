@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "NUG",
     "slug": "nug",
@@ -12,13 +12,13 @@
     "yonetici": "NUROL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "nurol-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 49.175716,
+    "fiyat": 49.202181,
     "tedavuldekiPaySayisi": 486333,
     "kisiSayisi": 22,
-    "fonToplamDeger": 23915773.42,
-    "gunlukGetiri": 0.00211553,
+    "fonToplamDeger": 23928644.4,
+    "gunlukGetiri": 0.00053817,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 2704.66,
-      "besGun": -1338968983.96,
+      "gunluk": 0,
+      "besGun": 2704.66,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 11,
-      "besGun": 11,
+      "gunluk": 0,
+      "besGun": 10,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NUG",
+        "fonAdi": "NUROL PORTFÖY ALTINCI SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 49.202181,
+        "tedavuldekiPaySayisi": 486333,
+        "kisiSayisi": 22,
+        "fonToplamDeger": 23928644.4,
+        "gunlukGetiri": 0.00053817,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "NUG",
         "fonAdi": "NUROL PORTFÖY ALTINCI SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00211553,
       "paraGirisiCikisi": 2704.66,
       "yatirimciDegisimi": 11
+    },
+    {
+      "fonKodu": "NUG",
+      "fonAdi": "NUROL PORTFÖY ALTINCI SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 49.202181,
+      "tedavuldekiPaySayisi": 486333,
+      "kisiSayisi": 22,
+      "fonToplamDeger": 23928644.4,
+      "gunlukGetiri": 0.00053817,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NUG",
+      "fonAdi": "NUROL PORTFÖY ALTINCI SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 49.202181,
+      "tedavuldekiPaySayisi": 486333,
+      "kisiSayisi": 22,
+      "fonToplamDeger": 23928644.4,
+      "gunlukGetiri": 0.00053817,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "NUG",
       "fonAdi": "NUROL PORTFÖY ALTINCI SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

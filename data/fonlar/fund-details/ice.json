@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "ICE",
     "slug": "ice",
@@ -12,44 +12,56 @@
     "yonetici": "ICBC TURKEY PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "icbc-turkey-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 127.282317,
-    "tedavuldekiPaySayisi": 12277865,
-    "kisiSayisi": 4612,
-    "fonToplamDeger": 1562755109.51,
-    "gunlukGetiri": 0.00097641,
+    "fiyat": 127.404829,
+    "tedavuldekiPaySayisi": 12446745,
+    "kisiSayisi": 4636,
+    "fonToplamDeger": 1585775420.23,
+    "gunlukGetiri": 0.00096252,
     "getiriler": {
-      "birAy": 0.031216,
-      "ucAy": 0.10049799999999999,
-      "altiAy": 0.204825,
-      "yilbasi": 0.263309,
-      "birYil": 0.463175,
-      "ucYil": 2.4723580000000003,
-      "besYil": 4.087555
+      "birAy": 0.032209,
+      "ucAy": 0.09934799999999999,
+      "altiAy": 0.204668,
+      "yilbasi": 0.264525,
+      "birYil": 0.46283700000000005,
+      "ucYil": 2.468035,
+      "besYil": 4.090033
     },
     "paraAkisi": {
-      "gunluk": 23495042.9,
-      "besGun": 292257700.28,
+      "gunluk": 21516127.52,
+      "besGun": 317570028.91,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 144,
-      "besGun": 611,
+      "gunluk": 24,
+      "besGun": 643,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ICE",
+        "fonAdi": "TEB PORTFÖY ICBC TURKEY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 127.404829,
+        "tedavuldekiPaySayisi": 12446745,
+        "kisiSayisi": 4636,
+        "fonToplamDeger": 1585775420.23,
+        "gunlukGetiri": 0.00096252,
+        "paraGirisiCikisi": 21516127.52,
+        "yatirimciDegisimi": 24
+      },
       {
         "fonKodu": "ICE",
         "fonAdi": "TEB PORTFÖY ICBC TURKEY PARA PİYASASI (TL) FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00097641,
       "paraGirisiCikisi": 23495042.9,
       "yatirimciDegisimi": 144
+    },
+    {
+      "fonKodu": "ICE",
+      "fonAdi": "TEB PORTFÖY ICBC TURKEY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 127.404829,
+      "tedavuldekiPaySayisi": 12446745,
+      "kisiSayisi": 4636,
+      "fonToplamDeger": 1585775420.23,
+      "gunlukGetiri": 0.00096252,
+      "paraGirisiCikisi": 21516127.52,
+      "yatirimciDegisimi": 24
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ICE",
+      "fonAdi": "TEB PORTFÖY ICBC TURKEY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 127.404829,
+      "tedavuldekiPaySayisi": 12446745,
+      "kisiSayisi": 4636,
+      "fonToplamDeger": 1585775420.23,
+      "gunlukGetiri": 0.00096252,
+      "paraGirisiCikisi": 21516127.52,
+      "yatirimciDegisimi": 24
+    },
     {
       "fonKodu": "ICE",
       "fonAdi": "TEB PORTFÖY ICBC TURKEY PARA PİYASASI (TL) FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

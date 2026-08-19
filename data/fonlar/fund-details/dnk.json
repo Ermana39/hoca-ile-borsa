@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "DNK",
     "slug": "dnk",
@@ -12,44 +12,56 @@
     "yonetici": "TACİRLER PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "tacirler-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.716385,
-    "tedavuldekiPaySayisi": 380070754,
-    "kisiSayisi": 133,
-    "fonToplamDeger": 652347919.5,
-    "gunlukGetiri": 0.0043089,
+    "fiyat": 1.712811,
+    "tedavuldekiPaySayisi": 380060261,
+    "kisiSayisi": 134,
+    "fonToplamDeger": 650971504.02,
+    "gunlukGetiri": -0.00208228,
     "getiriler": {
-      "birAy": 0.029028,
-      "ucAy": -0.027776000000000002,
-      "altiAy": 0.19757999999999998,
-      "yilbasi": 0.246875,
-      "birYil": 0.42066200000000004,
+      "birAy": 0.026885,
+      "ucAy": -0.020148000000000003,
+      "altiAy": 0.218149,
+      "yilbasi": 0.24427900000000002,
+      "birYil": 0.41537199999999996,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": -5485.14,
+      "gunluk": -17972.53,
+      "besGun": -23021.76,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": -3,
+      "gunluk": 1,
+      "besGun": -2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DNK",
+        "fonAdi": "TACİRLER PORTFÖY DENGE KATILIM SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 1.712811,
+        "tedavuldekiPaySayisi": 380060261,
+        "kisiSayisi": 134,
+        "fonToplamDeger": 650971504.02,
+        "gunlukGetiri": -0.00208228,
+        "paraGirisiCikisi": -17972.53,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "DNK",
         "fonAdi": "TACİRLER PORTFÖY DENGE KATILIM SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.0043089,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DNK",
+      "fonAdi": "TACİRLER PORTFÖY DENGE KATILIM SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.712811,
+      "tedavuldekiPaySayisi": 380060261,
+      "kisiSayisi": 134,
+      "fonToplamDeger": 650971504.02,
+      "gunlukGetiri": -0.00208228,
+      "paraGirisiCikisi": -17972.53,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DNK",
+      "fonAdi": "TACİRLER PORTFÖY DENGE KATILIM SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.712811,
+      "tedavuldekiPaySayisi": 380060261,
+      "kisiSayisi": 134,
+      "fonToplamDeger": 650971504.02,
+      "gunlukGetiri": -0.00208228,
+      "paraGirisiCikisi": -17972.53,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "DNK",
       "fonAdi": "TACİRLER PORTFÖY DENGE KATILIM SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

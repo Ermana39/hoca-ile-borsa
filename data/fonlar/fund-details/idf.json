@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "IDF",
     "slug": "idf",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 77.091426,
-    "tedavuldekiPaySayisi": 168624717,
-    "kisiSayisi": 4340,
-    "fonToplamDeger": 12999519810.67,
-    "gunlukGetiri": 0.00119925,
+    "fiyat": 77.096159,
+    "tedavuldekiPaySayisi": 168602240,
+    "kisiSayisi": 4344,
+    "fonToplamDeger": 12998585066.06,
+    "gunlukGetiri": 0.00006139,
     "getiriler": {
-      "birAy": 0.021676,
-      "ucAy": 0.06457099999999999,
-      "altiAy": 0.10962899999999999,
-      "yilbasi": 0.143879,
-      "birYil": 0.24433700000000003,
-      "ucYil": 1.2302089999999999,
-      "besYil": 6.704353
+      "birAy": 0.021739,
+      "ucAy": 0.064204,
+      "altiAy": 0.10875,
+      "yilbasi": 0.14395,
+      "birYil": 0.241831,
+      "ucYil": 1.231312,
+      "besYil": 6.661119
     },
     "paraAkisi": {
-      "gunluk": 18107079.96,
-      "besGun": 48466955.36,
+      "gunluk": -1732890.37,
+      "besGun": 10796170.25,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": -6,
+      "gunluk": 4,
+      "besGun": -2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IDF",
+        "fonAdi": "İŞ PORTFÖY SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 77.096159,
+        "tedavuldekiPaySayisi": 168602240,
+        "kisiSayisi": 4344,
+        "fonToplamDeger": 12998585066.06,
+        "gunlukGetiri": 0.00006139,
+        "paraGirisiCikisi": -1732890.37,
+        "yatirimciDegisimi": 4
+      },
       {
         "fonKodu": "IDF",
         "fonAdi": "İŞ PORTFÖY SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00119925,
       "paraGirisiCikisi": 18107079.96,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "IDF",
+      "fonAdi": "İŞ PORTFÖY SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 77.096159,
+      "tedavuldekiPaySayisi": 168602240,
+      "kisiSayisi": 4344,
+      "fonToplamDeger": 12998585066.06,
+      "gunlukGetiri": 0.00006139,
+      "paraGirisiCikisi": -1732890.37,
+      "yatirimciDegisimi": 4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IDF",
+      "fonAdi": "İŞ PORTFÖY SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 77.096159,
+      "tedavuldekiPaySayisi": 168602240,
+      "kisiSayisi": 4344,
+      "fonToplamDeger": 12998585066.06,
+      "gunlukGetiri": 0.00006139,
+      "paraGirisiCikisi": -1732890.37,
+      "yatirimciDegisimi": 4
+    },
     {
       "fonKodu": "IDF",
       "fonAdi": "İŞ PORTFÖY SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

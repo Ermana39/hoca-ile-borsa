@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "YP2",
     "slug": "yp2",
@@ -12,13 +12,13 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 73.634313,
+    "fiyat": 73.52391,
     "tedavuldekiPaySayisi": 18589148,
     "kisiSayisi": 1,
-    "fonToplamDeger": 1368799134.01,
-    "gunlukGetiri": 0.00120561,
+    "fonToplamDeger": 1366746844.48,
+    "gunlukGetiri": -0.00149934,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YP2",
+        "fonAdi": "YAPI KREDİ PORTFÖY PERA SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-19",
+        "fiyat": 73.52391,
+        "tedavuldekiPaySayisi": 18589148,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 1366746844.48,
+        "gunlukGetiri": -0.00149934,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "YP2",
         "fonAdi": "YAPI KREDİ PORTFÖY PERA SERBEST (DÖVİZ) ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00120561,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YP2",
+      "fonAdi": "YAPI KREDİ PORTFÖY PERA SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 73.52391,
+      "tedavuldekiPaySayisi": 18589148,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 1366746844.48,
+      "gunlukGetiri": -0.00149934,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YP2",
+      "fonAdi": "YAPI KREDİ PORTFÖY PERA SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 73.52391,
+      "tedavuldekiPaySayisi": 18589148,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 1366746844.48,
+      "gunlukGetiri": -0.00149934,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "YP2",
       "fonAdi": "YAPI KREDİ PORTFÖY PERA SERBEST (DÖVİZ) ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

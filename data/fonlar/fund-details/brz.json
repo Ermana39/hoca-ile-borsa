@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "BRZ",
     "slug": "brz",
@@ -12,13 +12,13 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 55.042053,
+    "fiyat": 54.997679,
     "tedavuldekiPaySayisi": 28212700,
     "kisiSayisi": 5,
-    "fonToplamDeger": 1552884932.02,
-    "gunlukGetiri": 0.00213457,
+    "fonToplamDeger": 1551633013.33,
+    "gunlukGetiri": -0.00080618,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BRZ",
+        "fonAdi": "TEB PORTFÖY BURGAZ SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-19",
+        "fiyat": 54.997679,
+        "tedavuldekiPaySayisi": 28212700,
+        "kisiSayisi": 5,
+        "fonToplamDeger": 1551633013.33,
+        "gunlukGetiri": -0.00080618,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "BRZ",
         "fonAdi": "TEB PORTFÖY BURGAZ SERBEST (DÖVİZ) ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00213457,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BRZ",
+      "fonAdi": "TEB PORTFÖY BURGAZ SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 54.997679,
+      "tedavuldekiPaySayisi": 28212700,
+      "kisiSayisi": 5,
+      "fonToplamDeger": 1551633013.33,
+      "gunlukGetiri": -0.00080618,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BRZ",
+      "fonAdi": "TEB PORTFÖY BURGAZ SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 54.997679,
+      "tedavuldekiPaySayisi": 28212700,
+      "kisiSayisi": 5,
+      "fonToplamDeger": 1551633013.33,
+      "gunlukGetiri": -0.00080618,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "BRZ",
       "fonAdi": "TEB PORTFÖY BURGAZ SERBEST (DÖVİZ) ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

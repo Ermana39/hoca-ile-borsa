@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "HML",
     "slug": "hml",
@@ -12,44 +12,56 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 47.006847,
-    "tedavuldekiPaySayisi": 323041,
+    "fiyat": 47.011497,
+    "tedavuldekiPaySayisi": 322943,
     "kisiSayisi": 37,
-    "fonToplamDeger": 15185138.88,
-    "gunlukGetiri": 0.00155833,
+    "fonToplamDeger": 15182033.73,
+    "gunlukGetiri": 0.00009892,
     "getiriler": {
-      "birAy": 0.011214,
-      "ucAy": 0.0255,
-      "altiAy": 0.056513999999999995,
-      "yilbasi": 0.07829900000000001,
-      "birYil": 0.14651,
+      "birAy": 0.011314,
+      "ucAy": 0.024826,
+      "altiAy": 0.056048,
+      "yilbasi": 0.078405,
+      "birYil": 0.144597,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": -31998.3,
+      "gunluk": -4607.13,
+      "besGun": -3950.36,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": -1,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HML",
+        "fonAdi": "HEDEF PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 47.011497,
+        "tedavuldekiPaySayisi": 322943,
+        "kisiSayisi": 37,
+        "fonToplamDeger": 15182033.73,
+        "gunlukGetiri": 0.00009892,
+        "paraGirisiCikisi": -4607.13,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "HML",
         "fonAdi": "HEDEF PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00155833,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HML",
+      "fonAdi": "HEDEF PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 47.011497,
+      "tedavuldekiPaySayisi": 322943,
+      "kisiSayisi": 37,
+      "fonToplamDeger": 15182033.73,
+      "gunlukGetiri": 0.00009892,
+      "paraGirisiCikisi": -4607.13,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HML",
+      "fonAdi": "HEDEF PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 47.011497,
+      "tedavuldekiPaySayisi": 322943,
+      "kisiSayisi": 37,
+      "fonToplamDeger": 15182033.73,
+      "gunlukGetiri": 0.00009892,
+      "paraGirisiCikisi": -4607.13,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "HML",
       "fonAdi": "HEDEF PORTFÖY KATILIM SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

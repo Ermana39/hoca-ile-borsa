@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "DPC",
     "slug": "dpc",
@@ -12,13 +12,13 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 99.258193,
+    "fiyat": 99.207108,
     "tedavuldekiPaySayisi": 3342303,
     "kisiSayisi": 1,
-    "fonToplamDeger": 331750956.06,
-    "gunlukGetiri": 0.00163571,
+    "fonToplamDeger": 331580213.21,
+    "gunlukGetiri": -0.00051467,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DPC",
+        "fonAdi": "DENİZ PORTFÖY FRS SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-19",
+        "fiyat": 99.207108,
+        "tedavuldekiPaySayisi": 3342303,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 331580213.21,
+        "gunlukGetiri": -0.00051467,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "DPC",
         "fonAdi": "DENİZ PORTFÖY FRS SERBEST (DÖVİZ) ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00163571,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DPC",
+      "fonAdi": "DENİZ PORTFÖY FRS SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 99.207108,
+      "tedavuldekiPaySayisi": 3342303,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 331580213.21,
+      "gunlukGetiri": -0.00051467,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DPC",
+      "fonAdi": "DENİZ PORTFÖY FRS SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 99.207108,
+      "tedavuldekiPaySayisi": 3342303,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 331580213.21,
+      "gunlukGetiri": -0.00051467,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "DPC",
       "fonAdi": "DENİZ PORTFÖY FRS SERBEST (DÖVİZ) ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

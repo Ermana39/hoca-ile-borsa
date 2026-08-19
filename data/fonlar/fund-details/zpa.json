@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "ZPA",
     "slug": "zpa",
@@ -12,44 +12,56 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 66.929227,
-    "tedavuldekiPaySayisi": 57154797,
-    "kisiSayisi": 896,
-    "fonToplamDeger": 3825326388.78,
-    "gunlukGetiri": 0.00200715,
+    "fiyat": 66.962191,
+    "tedavuldekiPaySayisi": 56638796,
+    "kisiSayisi": 897,
+    "fonToplamDeger": 3792657870.14,
+    "gunlukGetiri": 0.00049252,
     "getiriler": {
-      "birAy": 0.021034,
-      "ucAy": 0.063748,
-      "altiAy": 0.108647,
-      "yilbasi": 0.13744,
-      "birYil": 0.22348099999999999,
-      "ucYil": 1.1296410000000001,
-      "besYil": 6.961214999999999
+      "birAy": 0.021536,
+      "ucAy": 0.063155,
+      "altiAy": 0.10829499999999999,
+      "yilbasi": 0.138001,
+      "birYil": 0.22145900000000002,
+      "ucYil": 1.132905,
+      "besYil": 6.921807
     },
     "paraAkisi": {
-      "gunluk": 4637994.64,
-      "besGun": 55683668.94,
+      "gunluk": -34552557.52,
+      "besGun": 13006357.46,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 1,
-      "besGun": 19,
+      "besGun": 14,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZPA",
+        "fonAdi": "ZİRAAT PORTFÖY SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 66.962191,
+        "tedavuldekiPaySayisi": 56638796,
+        "kisiSayisi": 897,
+        "fonToplamDeger": 3792657870.14,
+        "gunlukGetiri": 0.00049252,
+        "paraGirisiCikisi": -34552557.52,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "ZPA",
         "fonAdi": "ZİRAAT PORTFÖY SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00200715,
       "paraGirisiCikisi": 4637994.64,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "ZPA",
+      "fonAdi": "ZİRAAT PORTFÖY SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 66.962191,
+      "tedavuldekiPaySayisi": 56638796,
+      "kisiSayisi": 897,
+      "fonToplamDeger": 3792657870.14,
+      "gunlukGetiri": 0.00049252,
+      "paraGirisiCikisi": -34552557.52,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZPA",
+      "fonAdi": "ZİRAAT PORTFÖY SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 66.962191,
+      "tedavuldekiPaySayisi": 56638796,
+      "kisiSayisi": 897,
+      "fonToplamDeger": 3792657870.14,
+      "gunlukGetiri": 0.00049252,
+      "paraGirisiCikisi": -34552557.52,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "ZPA",
       "fonAdi": "ZİRAAT PORTFÖY SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

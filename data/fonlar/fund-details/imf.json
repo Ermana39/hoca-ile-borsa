@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "IMF",
     "slug": "imf",
@@ -12,21 +12,21 @@
     "yonetici": "İSTANBUL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "istanbul-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 5.594135,
+    "fiyat": 5.602683,
     "tedavuldekiPaySayisi": 66550045,
     "kisiSayisi": 19,
-    "fonToplamDeger": 372289909.56,
-    "gunlukGetiri": 0.00287499,
+    "fonToplamDeger": 372858836.41,
+    "gunlukGetiri": 0.00152803,
     "getiriler": {
-      "birAy": 0.015474000000000002,
-      "ucAy": 0.053912,
-      "altiAy": 0.102926,
-      "yilbasi": 0.083772,
-      "birYil": 0.257448,
-      "ucYil": 0.974919,
-      "besYil": 3.1923790000000003
+      "birAy": 0.017026,
+      "ucAy": 0.055392000000000004,
+      "altiAy": 0.105236,
+      "yilbasi": 0.085428,
+      "birYil": 0.252976,
+      "ucYil": 0.977936,
+      "besYil": 3.1987849999999995
     },
     "paraAkisi": {
       "gunluk": 0,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IMF",
+        "fonAdi": "İSTANBUL PORTFÖY MAESTRO SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 5.602683,
+        "tedavuldekiPaySayisi": 66550045,
+        "kisiSayisi": 19,
+        "fonToplamDeger": 372858836.41,
+        "gunlukGetiri": 0.00152803,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "IMF",
         "fonAdi": "İSTANBUL PORTFÖY MAESTRO SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00287499,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "IMF",
+      "fonAdi": "İSTANBUL PORTFÖY MAESTRO SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 5.602683,
+      "tedavuldekiPaySayisi": 66550045,
+      "kisiSayisi": 19,
+      "fonToplamDeger": 372858836.41,
+      "gunlukGetiri": 0.00152803,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IMF",
+      "fonAdi": "İSTANBUL PORTFÖY MAESTRO SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 5.602683,
+      "tedavuldekiPaySayisi": 66550045,
+      "kisiSayisi": 19,
+      "fonToplamDeger": 372858836.41,
+      "gunlukGetiri": 0.00152803,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "IMF",
       "fonAdi": "İSTANBUL PORTFÖY MAESTRO SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "FSV",
     "slug": "fsv",
@@ -12,13 +12,13 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 55.518803,
+    "fiyat": 55.444178,
     "tedavuldekiPaySayisi": 184210000.01,
     "kisiSayisi": 1658,
-    "fonToplamDeger": 10227118777.47,
-    "gunlukGetiri": 0.00332209,
+    "fonToplamDeger": 10213372009.96,
+    "gunlukGetiri": -0.00134414,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FSV",
+        "fonAdi": "QNB PORTFÖY KAR PAYI ÖDEYEN SEKİZİNCİ SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 55.444178,
+        "tedavuldekiPaySayisi": 184210000.01,
+        "kisiSayisi": 1658,
+        "fonToplamDeger": 10213372009.96,
+        "gunlukGetiri": -0.00134414,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "FSV",
         "fonAdi": "QNB PORTFÖY KAR PAYI ÖDEYEN SEKİZİNCİ SERBEST (DÖVİZ-AVRO) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00332209,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "FSV",
+      "fonAdi": "QNB PORTFÖY KAR PAYI ÖDEYEN SEKİZİNCİ SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 55.444178,
+      "tedavuldekiPaySayisi": 184210000.01,
+      "kisiSayisi": 1658,
+      "fonToplamDeger": 10213372009.96,
+      "gunlukGetiri": -0.00134414,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FSV",
+      "fonAdi": "QNB PORTFÖY KAR PAYI ÖDEYEN SEKİZİNCİ SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 55.444178,
+      "tedavuldekiPaySayisi": 184210000.01,
+      "kisiSayisi": 1658,
+      "fonToplamDeger": 10213372009.96,
+      "gunlukGetiri": -0.00134414,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "FSV",
       "fonAdi": "QNB PORTFÖY KAR PAYI ÖDEYEN SEKİZİNCİ SERBEST (DÖVİZ-AVRO) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

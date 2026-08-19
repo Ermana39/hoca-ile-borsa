@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "BIP",
     "slug": "bip",
@@ -12,44 +12,56 @@
     "yonetici": "İSTANBUL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "istanbul-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.633726,
-    "tedavuldekiPaySayisi": 2352178004,
+    "fiyat": 1.635551,
+    "tedavuldekiPaySayisi": 2183734258,
     "kisiSayisi": 228,
-    "fonToplamDeger": 3842814478.26,
-    "gunlukGetiri": 0.00109072,
+    "fonToplamDeger": 3571609007.68,
+    "gunlukGetiri": 0.00111708,
     "getiriler": {
-      "birAy": 0.032808000000000004,
-      "ucAy": 0.105987,
-      "altiAy": 0.217881,
-      "yilbasi": 0.276965,
-      "birYil": 0.479831,
+      "birAy": 0.033961,
+      "ucAy": 0.104824,
+      "altiAy": 0.217993,
+      "yilbasi": 0.278391,
+      "birYil": 0.47977800000000004,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1883669703.16,
-      "besGun": -244750159.63,
+      "gunluk": -275498337.21,
+      "besGun": -1515528533.97,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": 8,
+      "gunluk": 0,
+      "besGun": 4,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BIP",
+        "fonAdi": "İSTANBUL PORTFÖY BİRİNCİ PARA PİYASASI SERBEST (TL) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 1.635551,
+        "tedavuldekiPaySayisi": 2183734258,
+        "kisiSayisi": 228,
+        "fonToplamDeger": 3571609007.68,
+        "gunlukGetiri": 0.00111708,
+        "paraGirisiCikisi": -275498337.21,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "BIP",
         "fonAdi": "İSTANBUL PORTFÖY BİRİNCİ PARA PİYASASI SERBEST (TL) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00109072,
       "paraGirisiCikisi": -1883669703.16,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "BIP",
+      "fonAdi": "İSTANBUL PORTFÖY BİRİNCİ PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.635551,
+      "tedavuldekiPaySayisi": 2183734258,
+      "kisiSayisi": 228,
+      "fonToplamDeger": 3571609007.68,
+      "gunlukGetiri": 0.00111708,
+      "paraGirisiCikisi": -275498337.21,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BIP",
+      "fonAdi": "İSTANBUL PORTFÖY BİRİNCİ PARA PİYASASI SERBEST (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.635551,
+      "tedavuldekiPaySayisi": 2183734258,
+      "kisiSayisi": 228,
+      "fonToplamDeger": 3571609007.68,
+      "gunlukGetiri": 0.00111708,
+      "paraGirisiCikisi": -275498337.21,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "BIP",
       "fonAdi": "İSTANBUL PORTFÖY BİRİNCİ PARA PİYASASI SERBEST (TL) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "HKV",
     "slug": "hkv",
@@ -12,13 +12,13 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 588.942007,
-    "tedavuldekiPaySayisi": 7243660,
-    "kisiSayisi": 38078,
-    "fonToplamDeger": 4266095655.32,
-    "gunlukGetiri": 0.0009605,
+    "fiyat": 589.522156,
+    "tedavuldekiPaySayisi": 6908861,
+    "kisiSayisi": 37649,
+    "fonToplamDeger": 4072926630.75,
+    "gunlukGetiri": 0.00098507,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 283722811.87,
-      "besGun": 305496895.78,
+      "gunluk": -197371428.31,
+      "besGun": 107739776.7,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1299,
-      "besGun": 930,
+      "gunluk": -429,
+      "besGun": 634,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HKV",
+        "fonAdi": "ZİRAAT PORTFÖY HALKBANK KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 589.522156,
+        "tedavuldekiPaySayisi": 6908861,
+        "kisiSayisi": 37649,
+        "fonToplamDeger": 4072926630.75,
+        "gunlukGetiri": 0.00098507,
+        "paraGirisiCikisi": -197371428.31,
+        "yatirimciDegisimi": -429
+      },
       {
         "fonKodu": "HKV",
         "fonAdi": "ZİRAAT PORTFÖY HALKBANK KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.0009605,
       "paraGirisiCikisi": 283722811.87,
       "yatirimciDegisimi": 1299
+    },
+    {
+      "fonKodu": "HKV",
+      "fonAdi": "ZİRAAT PORTFÖY HALKBANK KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 589.522156,
+      "tedavuldekiPaySayisi": 6908861,
+      "kisiSayisi": 37649,
+      "fonToplamDeger": 4072926630.75,
+      "gunlukGetiri": 0.00098507,
+      "paraGirisiCikisi": -197371428.31,
+      "yatirimciDegisimi": -429
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HKV",
+      "fonAdi": "ZİRAAT PORTFÖY HALKBANK KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 589.522156,
+      "tedavuldekiPaySayisi": 6908861,
+      "kisiSayisi": 37649,
+      "fonToplamDeger": 4072926630.75,
+      "gunlukGetiri": 0.00098507,
+      "paraGirisiCikisi": -197371428.31,
+      "yatirimciDegisimi": -429
+    },
     {
       "fonKodu": "HKV",
       "fonAdi": "ZİRAAT PORTFÖY HALKBANK KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

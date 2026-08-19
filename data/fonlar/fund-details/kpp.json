@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "KPP",
     "slug": "kpp",
@@ -12,44 +12,56 @@
     "yonetici": "KARE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kare-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 3.15443,
-    "tedavuldekiPaySayisi": 142257981,
-    "kisiSayisi": 700,
-    "fonToplamDeger": 448742796.69,
-    "gunlukGetiri": 0.00104089,
+    "fiyat": 3.157818,
+    "tedavuldekiPaySayisi": 139538975,
+    "kisiSayisi": 696,
+    "fonToplamDeger": 440638742.82,
+    "gunlukGetiri": 0.00107405,
     "getiriler": {
-      "birAy": 0.03195,
-      "ucAy": 0.104032,
-      "altiAy": 0.214223,
-      "yilbasi": 0.2748,
-      "birYil": 0.480792,
+      "birAy": 0.033058000000000004,
+      "ucAy": 0.103681,
+      "altiAy": 0.214301,
+      "yilbasi": 0.27617,
+      "birYil": 0.480615,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -2042925.58,
-      "besGun": -1914985.33,
+      "gunluk": -8586126.09,
+      "besGun": -10145338.06,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
-      "besGun": 8,
+      "gunluk": -4,
+      "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KPP",
+        "fonAdi": "KARE PORTFÖY PARA PİYASASI FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 3.157818,
+        "tedavuldekiPaySayisi": 139538975,
+        "kisiSayisi": 696,
+        "fonToplamDeger": 440638742.82,
+        "gunlukGetiri": 0.00107405,
+        "paraGirisiCikisi": -8586126.09,
+        "yatirimciDegisimi": -4
+      },
       {
         "fonKodu": "KPP",
         "fonAdi": "KARE PORTFÖY PARA PİYASASI FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00104089,
       "paraGirisiCikisi": -2042925.58,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "KPP",
+      "fonAdi": "KARE PORTFÖY PARA PİYASASI FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 3.157818,
+      "tedavuldekiPaySayisi": 139538975,
+      "kisiSayisi": 696,
+      "fonToplamDeger": 440638742.82,
+      "gunlukGetiri": 0.00107405,
+      "paraGirisiCikisi": -8586126.09,
+      "yatirimciDegisimi": -4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KPP",
+      "fonAdi": "KARE PORTFÖY PARA PİYASASI FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 3.157818,
+      "tedavuldekiPaySayisi": 139538975,
+      "kisiSayisi": 696,
+      "fonToplamDeger": 440638742.82,
+      "gunlukGetiri": 0.00107405,
+      "paraGirisiCikisi": -8586126.09,
+      "yatirimciDegisimi": -4
+    },
     {
       "fonKodu": "KPP",
       "fonAdi": "KARE PORTFÖY PARA PİYASASI FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

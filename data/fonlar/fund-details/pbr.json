@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "PBR",
     "slug": "pbr",
@@ -12,44 +12,56 @@
     "yonetici": "PUSULA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pusula-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 5.435111,
-    "tedavuldekiPaySayisi": 2948300215,
-    "kisiSayisi": 59679,
-    "fonToplamDeger": 16024338781.83,
-    "gunlukGetiri": 0.00379032,
+    "fiyat": 5.351326,
+    "tedavuldekiPaySayisi": 2806380831,
+    "kisiSayisi": 57050,
+    "fonToplamDeger": 15017859172.16,
+    "gunlukGetiri": -0.01541551,
     "getiriler": {
-      "birAy": -0.0059370000000000004,
-      "ucAy": 0.35566400000000004,
-      "altiAy": 0.8863110000000001,
-      "yilbasi": 1.4520920000000002,
-      "birYil": 1.994589,
+      "birAy": -0.021261000000000002,
+      "ucAy": 0.328375,
+      "altiAy": 0.842655,
+      "yilbasi": 1.414292,
+      "birYil": 1.9281290000000002,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -2212109384.68,
-      "besGun": -8339260157.47,
+      "gunluk": -759456889.5,
+      "besGun": -6064635184.98,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -633,
-      "besGun": -8673,
+      "gunluk": -2629,
+      "besGun": -10702,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PBR",
+        "fonAdi": "PUSULA PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-19",
+        "fiyat": 5.351326,
+        "tedavuldekiPaySayisi": 2806380831,
+        "kisiSayisi": 57050,
+        "fonToplamDeger": 15017859172.16,
+        "gunlukGetiri": -0.01541551,
+        "paraGirisiCikisi": -759456889.5,
+        "yatirimciDegisimi": -2629
+      },
       {
         "fonKodu": "PBR",
         "fonAdi": "PUSULA PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00379032,
       "paraGirisiCikisi": -2212109384.68,
       "yatirimciDegisimi": -633
+    },
+    {
+      "fonKodu": "PBR",
+      "fonAdi": "PUSULA PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 5.351326,
+      "tedavuldekiPaySayisi": 2806380831,
+      "kisiSayisi": 57050,
+      "fonToplamDeger": 15017859172.16,
+      "gunlukGetiri": -0.01541551,
+      "paraGirisiCikisi": -759456889.5,
+      "yatirimciDegisimi": -2629
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PBR",
+      "fonAdi": "PUSULA PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 5.351326,
+      "tedavuldekiPaySayisi": 2806380831,
+      "kisiSayisi": 57050,
+      "fonToplamDeger": 15017859172.16,
+      "gunlukGetiri": -0.01541551,
+      "paraGirisiCikisi": -759456889.5,
+      "yatirimciDegisimi": -2629
+    },
     {
       "fonKodu": "PBR",
       "fonAdi": "PUSULA PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

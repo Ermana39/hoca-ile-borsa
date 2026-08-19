@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "FCS",
     "slug": "fcs",
@@ -12,13 +12,13 @@
     "yonetici": "FİBA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "fiba-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 2.325021,
-    "tedavuldekiPaySayisi": 1155829741,
-    "kisiSayisi": 201,
-    "fonToplamDeger": 2687328021.21,
-    "gunlukGetiri": 0.00113418,
+    "fiyat": 2.327576,
+    "tedavuldekiPaySayisi": 904440353,
+    "kisiSayisi": 171,
+    "fonToplamDeger": 2105153274.98,
+    "gunlukGetiri": 0.00109891,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 22024951.83,
-      "besGun": 22175122.36,
+      "gunluk": -585127906.16,
+      "besGun": -562952783.8,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": 1,
+      "gunluk": -30,
+      "besGun": -29,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FCS",
+        "fonAdi": "FİBA PORTFÖY İKİNCİ SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 2.327576,
+        "tedavuldekiPaySayisi": 904440353,
+        "kisiSayisi": 171,
+        "fonToplamDeger": 2105153274.98,
+        "gunlukGetiri": 0.00109891,
+        "paraGirisiCikisi": -585127906.16,
+        "yatirimciDegisimi": -30
+      },
       {
         "fonKodu": "FCS",
         "fonAdi": "FİBA PORTFÖY İKİNCİ SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00113418,
       "paraGirisiCikisi": 22024951.83,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "FCS",
+      "fonAdi": "FİBA PORTFÖY İKİNCİ SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 2.327576,
+      "tedavuldekiPaySayisi": 904440353,
+      "kisiSayisi": 171,
+      "fonToplamDeger": 2105153274.98,
+      "gunlukGetiri": 0.00109891,
+      "paraGirisiCikisi": -585127906.16,
+      "yatirimciDegisimi": -30
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FCS",
+      "fonAdi": "FİBA PORTFÖY İKİNCİ SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 2.327576,
+      "tedavuldekiPaySayisi": 904440353,
+      "kisiSayisi": 171,
+      "fonToplamDeger": 2105153274.98,
+      "gunlukGetiri": 0.00109891,
+      "paraGirisiCikisi": -585127906.16,
+      "yatirimciDegisimi": -30
+    },
     {
       "fonKodu": "FCS",
       "fonAdi": "FİBA PORTFÖY İKİNCİ SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

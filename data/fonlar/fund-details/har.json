@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "HAR",
     "slug": "har",
@@ -12,44 +12,56 @@
     "yonetici": "BV PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "bv-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.094455,
-    "tedavuldekiPaySayisi": 36682987,
-    "kisiSayisi": 67,
-    "fonToplamDeger": 40147891.83,
-    "gunlukGetiri": -0.00507257,
+    "fiyat": 1.091518,
+    "tedavuldekiPaySayisi": 36777933,
+    "kisiSayisi": 70,
+    "fonToplamDeger": 40143784.82,
+    "gunlukGetiri": -0.00268353,
     "getiriler": {
-      "birAy": 0.065753,
-      "ucAy": -0.013044,
-      "altiAy": 0.035987,
-      "yilbasi": 0.20797000000000002,
+      "birAy": 0.062893,
+      "ucAy": 0.007052,
+      "altiAy": 0.049593,
+      "yilbasi": 0.204729,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": 6026.56,
+      "gunluk": 103635.27,
+      "besGun": 103635.27,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": -1,
+      "gunluk": 3,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HAR",
+        "fonAdi": "BV PORTFÖY HARMONY SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 1.091518,
+        "tedavuldekiPaySayisi": 36777933,
+        "kisiSayisi": 70,
+        "fonToplamDeger": 40143784.82,
+        "gunlukGetiri": -0.00268353,
+        "paraGirisiCikisi": 103635.27,
+        "yatirimciDegisimi": 3
+      },
       {
         "fonKodu": "HAR",
         "fonAdi": "BV PORTFÖY HARMONY SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": -0.00507257,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HAR",
+      "fonAdi": "BV PORTFÖY HARMONY SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.091518,
+      "tedavuldekiPaySayisi": 36777933,
+      "kisiSayisi": 70,
+      "fonToplamDeger": 40143784.82,
+      "gunlukGetiri": -0.00268353,
+      "paraGirisiCikisi": 103635.27,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HAR",
+      "fonAdi": "BV PORTFÖY HARMONY SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.091518,
+      "tedavuldekiPaySayisi": 36777933,
+      "kisiSayisi": 70,
+      "fonToplamDeger": 40143784.82,
+      "gunlukGetiri": -0.00268353,
+      "paraGirisiCikisi": 103635.27,
+      "yatirimciDegisimi": 3
+    },
     {
       "fonKodu": "HAR",
       "fonAdi": "BV PORTFÖY HARMONY SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

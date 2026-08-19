@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "HOA",
     "slug": "hoa",
@@ -12,44 +12,56 @@
     "yonetici": "HSBC PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hsbc-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 0.251182,
-    "tedavuldekiPaySayisi": 8574574555,
-    "kisiSayisi": 3352,
-    "fonToplamDeger": 2153782393.55,
-    "gunlukGetiri": 0.00285467,
+    "fiyat": 0.245583,
+    "tedavuldekiPaySayisi": 8580004309,
+    "kisiSayisi": 3364,
+    "fonToplamDeger": 2107105283.94,
+    "gunlukGetiri": -0.02229061,
     "getiriler": {
-      "birAy": 0.11240399999999999,
-      "ucAy": 0.082882,
-      "altiAy": 0.287545,
-      "yilbasi": 0.32826700000000003,
-      "birYil": 0.505969,
-      "ucYil": 2.8030220000000003,
-      "besYil": 8.414265
+      "birAy": 0.08760799999999999,
+      "ucAy": 0.059292,
+      "altiAy": 0.252502,
+      "yilbasi": 0.298659,
+      "birYil": 0.472921,
+      "ucYil": 2.798596,
+      "besYil": 8.223082
     },
     "paraAkisi": {
-      "gunluk": -1246755.92,
-      "besGun": 16022265.13,
+      "gunluk": 1333455.28,
+      "besGun": 18492373.44,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": -15,
+      "gunluk": 12,
+      "besGun": -6,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HOA",
+        "fonAdi": "HSBC PORTFÖY TEKNOLOJİ DEĞİŞKEN FON",
+        "tarih": "2026-08-19",
+        "fiyat": 0.245583,
+        "tedavuldekiPaySayisi": 8580004309,
+        "kisiSayisi": 3364,
+        "fonToplamDeger": 2107105283.94,
+        "gunlukGetiri": -0.02229061,
+        "paraGirisiCikisi": 1333455.28,
+        "yatirimciDegisimi": 12
+      },
       {
         "fonKodu": "HOA",
         "fonAdi": "HSBC PORTFÖY TEKNOLOJİ DEĞİŞKEN FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00285467,
       "paraGirisiCikisi": -1246755.92,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HOA",
+      "fonAdi": "HSBC PORTFÖY TEKNOLOJİ DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 0.245583,
+      "tedavuldekiPaySayisi": 8580004309,
+      "kisiSayisi": 3364,
+      "fonToplamDeger": 2107105283.94,
+      "gunlukGetiri": -0.02229061,
+      "paraGirisiCikisi": 1333455.28,
+      "yatirimciDegisimi": 12
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HOA",
+      "fonAdi": "HSBC PORTFÖY TEKNOLOJİ DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 0.245583,
+      "tedavuldekiPaySayisi": 8580004309,
+      "kisiSayisi": 3364,
+      "fonToplamDeger": 2107105283.94,
+      "gunlukGetiri": -0.02229061,
+      "paraGirisiCikisi": 1333455.28,
+      "yatirimciDegisimi": 12
+    },
     {
       "fonKodu": "HOA",
       "fonAdi": "HSBC PORTFÖY TEKNOLOJİ DEĞİŞKEN FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

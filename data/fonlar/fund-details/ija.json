@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "IJA",
     "slug": "ija",
@@ -12,44 +12,56 @@
     "yonetici": "INVEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "inveo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 13.845015,
-    "tedavuldekiPaySayisi": 13380797.47,
-    "kisiSayisi": 1235,
-    "fonToplamDeger": 185257347.82,
-    "gunlukGetiri": -0.00209412,
+    "fiyat": 13.815609,
+    "tedavuldekiPaySayisi": 13318140.47,
+    "kisiSayisi": 1234,
+    "fonToplamDeger": 183998219.38,
+    "gunlukGetiri": -0.00212394,
     "getiriler": {
-      "birAy": -0.009225,
-      "ucAy": 0.018006,
-      "altiAy": 0.037919999999999995,
-      "yilbasi": 0.231444,
-      "birYil": 0.41586799999999996,
-      "ucYil": 2.082573,
+      "birAy": -0.01133,
+      "ucAy": 0.02549,
+      "altiAy": 0.038932,
+      "yilbasi": 0.228829,
+      "birYil": 0.410498,
+      "ucYil": 2.04661,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -9276.16,
-      "besGun": -11692659.02,
+      "gunluk": -865644.61,
+      "besGun": -12377093.17,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": -1,
       "besGun": -9,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IJA",
+        "fonAdi": "INVEO PORTFÖY ATAK DEĞİŞKEN FON",
+        "tarih": "2026-08-19",
+        "fiyat": 13.815609,
+        "tedavuldekiPaySayisi": 13318140.47,
+        "kisiSayisi": 1234,
+        "fonToplamDeger": 183998219.38,
+        "gunlukGetiri": -0.00212394,
+        "paraGirisiCikisi": -865644.61,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "IJA",
         "fonAdi": "INVEO PORTFÖY ATAK DEĞİŞKEN FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": -0.00209412,
       "paraGirisiCikisi": -9276.16,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "IJA",
+      "fonAdi": "INVEO PORTFÖY ATAK DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 13.815609,
+      "tedavuldekiPaySayisi": 13318140.47,
+      "kisiSayisi": 1234,
+      "fonToplamDeger": 183998219.38,
+      "gunlukGetiri": -0.00212394,
+      "paraGirisiCikisi": -865644.61,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IJA",
+      "fonAdi": "INVEO PORTFÖY ATAK DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 13.815609,
+      "tedavuldekiPaySayisi": 13318140.47,
+      "kisiSayisi": 1234,
+      "fonToplamDeger": 183998219.38,
+      "gunlukGetiri": -0.00212394,
+      "paraGirisiCikisi": -865644.61,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "IJA",
       "fonAdi": "INVEO PORTFÖY ATAK DEĞİŞKEN FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

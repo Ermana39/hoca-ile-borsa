@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "TB9",
     "slug": "tb9",
@@ -12,13 +12,13 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 53.260984,
-    "tedavuldekiPaySayisi": 770841304,
-    "kisiSayisi": 10765,
-    "fonToplamDeger": 41055766677.2,
-    "gunlukGetiri": 0.00199685,
+    "fiyat": 53.286987,
+    "tedavuldekiPaySayisi": 771125134,
+    "kisiSayisi": 10752,
+    "fonToplamDeger": 41090934790.42,
+    "gunlukGetiri": 0.00048822,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 83041969.73,
-      "besGun": 768817261.14,
+      "gunluk": 15124445.52,
+      "besGun": 747710982.92,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": -32,
+      "gunluk": -13,
+      "besGun": -29,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TB9",
+        "fonAdi": "TEB PORTFÖY DOKUZUNCU SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 53.286987,
+        "tedavuldekiPaySayisi": 771125134,
+        "kisiSayisi": 10752,
+        "fonToplamDeger": 41090934790.42,
+        "gunlukGetiri": 0.00048822,
+        "paraGirisiCikisi": 15124445.52,
+        "yatirimciDegisimi": -13
+      },
       {
         "fonKodu": "TB9",
         "fonAdi": "TEB PORTFÖY DOKUZUNCU SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00199685,
       "paraGirisiCikisi": 83041969.73,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "TB9",
+      "fonAdi": "TEB PORTFÖY DOKUZUNCU SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 53.286987,
+      "tedavuldekiPaySayisi": 771125134,
+      "kisiSayisi": 10752,
+      "fonToplamDeger": 41090934790.42,
+      "gunlukGetiri": 0.00048822,
+      "paraGirisiCikisi": 15124445.52,
+      "yatirimciDegisimi": -13
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TB9",
+      "fonAdi": "TEB PORTFÖY DOKUZUNCU SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 53.286987,
+      "tedavuldekiPaySayisi": 771125134,
+      "kisiSayisi": 10752,
+      "fonToplamDeger": 41090934790.42,
+      "gunlukGetiri": 0.00048822,
+      "paraGirisiCikisi": 15124445.52,
+      "yatirimciDegisimi": -13
+    },
     {
       "fonKodu": "TB9",
       "fonAdi": "TEB PORTFÖY DOKUZUNCU SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

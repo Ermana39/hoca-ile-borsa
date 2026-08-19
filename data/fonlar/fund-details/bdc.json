@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "BDC",
     "slug": "bdc",
@@ -12,44 +12,56 @@
     "yonetici": "AURA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aura-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 8.987719,
+    "fiyat": 8.930336,
     "tedavuldekiPaySayisi": 39069115,
     "kisiSayisi": 31,
-    "fonToplamDeger": 351142220.47,
-    "gunlukGetiri": 0.00347845,
+    "fonToplamDeger": 348900310.66,
+    "gunlukGetiri": -0.0063846,
     "getiriler": {
-      "birAy": 0.045296,
-      "ucAy": -0.033313,
-      "altiAy": -0.015491999999999999,
-      "yilbasi": -0.071834,
-      "birYil": 0.057145,
-      "ucYil": 2.205143,
+      "birAy": 0.038622000000000004,
+      "ucAy": -0.020096,
+      "altiAy": -0.018488,
+      "yilbasi": -0.07776,
+      "birYil": 0.043493000000000004,
+      "ucYil": 2.201015,
       "besYil": null
     },
     "paraAkisi": {
       "gunluk": 0,
-      "besGun": -10575250.15,
+      "besGun": -10571734.36,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": -2,
+      "gunluk": 0,
+      "besGun": -1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BDC",
+        "fonAdi": "AURA PORTFÖY BODRUM SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 8.930336,
+        "tedavuldekiPaySayisi": 39069115,
+        "kisiSayisi": 31,
+        "fonToplamDeger": 348900310.66,
+        "gunlukGetiri": -0.0063846,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "BDC",
         "fonAdi": "AURA PORTFÖY BODRUM SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00347845,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "BDC",
+      "fonAdi": "AURA PORTFÖY BODRUM SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 8.930336,
+      "tedavuldekiPaySayisi": 39069115,
+      "kisiSayisi": 31,
+      "fonToplamDeger": 348900310.66,
+      "gunlukGetiri": -0.0063846,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BDC",
+      "fonAdi": "AURA PORTFÖY BODRUM SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 8.930336,
+      "tedavuldekiPaySayisi": 39069115,
+      "kisiSayisi": 31,
+      "fonToplamDeger": 348900310.66,
+      "gunlukGetiri": -0.0063846,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "BDC",
       "fonAdi": "AURA PORTFÖY BODRUM SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

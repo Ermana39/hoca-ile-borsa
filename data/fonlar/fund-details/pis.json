@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "PIS",
     "slug": "pis",
@@ -12,44 +12,56 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.454031,
-    "tedavuldekiPaySayisi": 749402087,
-    "kisiSayisi": 205,
-    "fonToplamDeger": 1089653933.48,
-    "gunlukGetiri": 0.00108988,
+    "fiyat": 1.455893,
+    "tedavuldekiPaySayisi": 745712047,
+    "kisiSayisi": 202,
+    "fonToplamDeger": 1085676802.33,
+    "gunlukGetiri": 0.00128058,
     "getiriler": {
-      "birAy": 0.034588,
-      "ucAy": 0.113314,
-      "altiAy": 0.23953,
-      "yilbasi": 0.313656,
+      "birAy": 0.035912,
+      "ucAy": 0.11190699999999999,
+      "altiAy": 0.239573,
+      "yilbasi": 0.315339,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -532207.33,
-      "besGun": -56268878.86,
+      "gunluk": -5372303.41,
+      "besGun": -80635858.91,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
-      "besGun": -3,
+      "gunluk": -3,
+      "besGun": -6,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PIS",
+        "fonAdi": "PARDUS PORTFÖY İKİNCİ KISA VADELİ SERBEST (TL) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 1.455893,
+        "tedavuldekiPaySayisi": 745712047,
+        "kisiSayisi": 202,
+        "fonToplamDeger": 1085676802.33,
+        "gunlukGetiri": 0.00128058,
+        "paraGirisiCikisi": -5372303.41,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "PIS",
         "fonAdi": "PARDUS PORTFÖY İKİNCİ KISA VADELİ SERBEST (TL) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00108988,
       "paraGirisiCikisi": -532207.33,
       "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "PIS",
+      "fonAdi": "PARDUS PORTFÖY İKİNCİ KISA VADELİ SERBEST (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.455893,
+      "tedavuldekiPaySayisi": 745712047,
+      "kisiSayisi": 202,
+      "fonToplamDeger": 1085676802.33,
+      "gunlukGetiri": 0.00128058,
+      "paraGirisiCikisi": -5372303.41,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PIS",
+      "fonAdi": "PARDUS PORTFÖY İKİNCİ KISA VADELİ SERBEST (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.455893,
+      "tedavuldekiPaySayisi": 745712047,
+      "kisiSayisi": 202,
+      "fonToplamDeger": 1085676802.33,
+      "gunlukGetiri": 0.00128058,
+      "paraGirisiCikisi": -5372303.41,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "PIS",
       "fonAdi": "PARDUS PORTFÖY İKİNCİ KISA VADELİ SERBEST (TL) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

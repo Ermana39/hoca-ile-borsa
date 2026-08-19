@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "KDL",
     "slug": "kdl",
@@ -12,44 +12,56 @@
     "yonetici": "KUVEYT TÜRK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kuveyt-turk-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 52.524852,
-    "tedavuldekiPaySayisi": 487915715,
-    "kisiSayisi": 7056,
-    "fonToplamDeger": 25627700709.04,
-    "gunlukGetiri": 0.00194618,
+    "fiyat": 52.547863,
+    "tedavuldekiPaySayisi": 486685606,
+    "kisiSayisi": 7054,
+    "fonToplamDeger": 25574288712.71,
+    "gunlukGetiri": 0.0004381,
     "getiriler": {
-      "birAy": 0.01916,
-      "ucAy": 0.058609999999999995,
-      "altiAy": 0.105702,
-      "yilbasi": 0.129212,
-      "birYil": 0.19615100000000002,
-      "ucYil": 0.885352,
+      "birAy": 0.019606,
+      "ucAy": 0.05756700000000001,
+      "altiAy": 0.105566,
+      "yilbasi": 0.12970700000000002,
+      "birYil": 0.19435300000000003,
+      "ucYil": 0.886328,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 4983190.28,
-      "besGun": 141475393.76,
+      "gunluk": -64639599.21,
+      "besGun": 72876209.56,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
-      "besGun": -17,
+      "gunluk": -2,
+      "besGun": -6,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KDL",
+        "fonAdi": "KUVEYT TÜRK PORTFÖY BEŞİNCİ KATILIM SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 52.547863,
+        "tedavuldekiPaySayisi": 486685606,
+        "kisiSayisi": 7054,
+        "fonToplamDeger": 25574288712.71,
+        "gunlukGetiri": 0.0004381,
+        "paraGirisiCikisi": -64639599.21,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "KDL",
         "fonAdi": "KUVEYT TÜRK PORTFÖY BEŞİNCİ KATILIM SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00194618,
       "paraGirisiCikisi": 4983190.28,
       "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "KDL",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY BEŞİNCİ KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 52.547863,
+      "tedavuldekiPaySayisi": 486685606,
+      "kisiSayisi": 7054,
+      "fonToplamDeger": 25574288712.71,
+      "gunlukGetiri": 0.0004381,
+      "paraGirisiCikisi": -64639599.21,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KDL",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY BEŞİNCİ KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 52.547863,
+      "tedavuldekiPaySayisi": 486685606,
+      "kisiSayisi": 7054,
+      "fonToplamDeger": 25574288712.71,
+      "gunlukGetiri": 0.0004381,
+      "paraGirisiCikisi": -64639599.21,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "KDL",
       "fonAdi": "KUVEYT TÜRK PORTFÖY BEŞİNCİ KATILIM SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

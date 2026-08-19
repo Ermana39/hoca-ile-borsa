@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "MJK",
     "slug": "mjk",
@@ -12,13 +12,13 @@
     "yonetici": "MEKSA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "meksa-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 35.057246,
-    "tedavuldekiPaySayisi": 52224942,
+    "fiyat": 34.60172,
+    "tedavuldekiPaySayisi": 51954617,
     "kisiSayisi": 418,
-    "fonToplamDeger": 1830862639.47,
-    "gunlukGetiri": -0.0013115,
+    "fonToplamDeger": 1797719101.93,
+    "gunlukGetiri": -0.01299378,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -3144284.39,
-      "besGun": -13738131.42,
+      "gunluk": -9353709.96,
+      "besGun": -20750840.15,
       "birAy": null,
       "ucAy": null
     },
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MJK",
+        "fonAdi": "MEKSA PORTFÖY KARDELEN SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 34.60172,
+        "tedavuldekiPaySayisi": 51954617,
+        "kisiSayisi": 418,
+        "fonToplamDeger": 1797719101.93,
+        "gunlukGetiri": -0.01299378,
+        "paraGirisiCikisi": -9353709.96,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "MJK",
         "fonAdi": "MEKSA PORTFÖY KARDELEN SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": -0.0013115,
       "paraGirisiCikisi": -3144284.39,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "MJK",
+      "fonAdi": "MEKSA PORTFÖY KARDELEN SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 34.60172,
+      "tedavuldekiPaySayisi": 51954617,
+      "kisiSayisi": 418,
+      "fonToplamDeger": 1797719101.93,
+      "gunlukGetiri": -0.01299378,
+      "paraGirisiCikisi": -9353709.96,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MJK",
+      "fonAdi": "MEKSA PORTFÖY KARDELEN SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 34.60172,
+      "tedavuldekiPaySayisi": 51954617,
+      "kisiSayisi": 418,
+      "fonToplamDeger": 1797719101.93,
+      "gunlukGetiri": -0.01299378,
+      "paraGirisiCikisi": -9353709.96,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "MJK",
       "fonAdi": "MEKSA PORTFÖY KARDELEN SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

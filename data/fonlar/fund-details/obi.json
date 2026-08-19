@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "OBI",
     "slug": "obi",
@@ -12,44 +12,56 @@
     "yonetici": "OYAK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "oyak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 3.143469,
-    "tedavuldekiPaySayisi": 99791373,
-    "kisiSayisi": 467,
-    "fonToplamDeger": 313691126.12,
-    "gunlukGetiri": 0.00147252,
+    "fiyat": 3.143305,
+    "tedavuldekiPaySayisi": 99779614,
+    "kisiSayisi": 464,
+    "fonToplamDeger": 313637769.87,
+    "gunlukGetiri": -0.00005217,
     "getiriler": {
-      "birAy": 0.030607000000000002,
-      "ucAy": 0.09339,
-      "altiAy": 0.12137700000000001,
-      "yilbasi": 0.153701,
-      "birYil": 0.347366,
-      "ucYil": 1.4893539999999998,
+      "birAy": 0.030553,
+      "ucAy": 0.09410299999999999,
+      "altiAy": 0.121114,
+      "yilbasi": 0.153641,
+      "birYil": 0.345941,
+      "ucYil": 1.484983,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 149714,
-      "besGun": -1012202.24,
+      "gunluk": -36962.12,
+      "besGun": -486222.1,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": -6,
+      "gunluk": -3,
+      "besGun": -7,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OBI",
+        "fonAdi": "OYAK PORTFÖY İKİNCİ BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 3.143305,
+        "tedavuldekiPaySayisi": 99779614,
+        "kisiSayisi": 464,
+        "fonToplamDeger": 313637769.87,
+        "gunlukGetiri": -0.00005217,
+        "paraGirisiCikisi": -36962.12,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "OBI",
         "fonAdi": "OYAK PORTFÖY İKİNCİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00147252,
       "paraGirisiCikisi": 149714,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "OBI",
+      "fonAdi": "OYAK PORTFÖY İKİNCİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 3.143305,
+      "tedavuldekiPaySayisi": 99779614,
+      "kisiSayisi": 464,
+      "fonToplamDeger": 313637769.87,
+      "gunlukGetiri": -0.00005217,
+      "paraGirisiCikisi": -36962.12,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OBI",
+      "fonAdi": "OYAK PORTFÖY İKİNCİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 3.143305,
+      "tedavuldekiPaySayisi": 99779614,
+      "kisiSayisi": 464,
+      "fonToplamDeger": 313637769.87,
+      "gunlukGetiri": -0.00005217,
+      "paraGirisiCikisi": -36962.12,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "OBI",
       "fonAdi": "OYAK PORTFÖY İKİNCİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

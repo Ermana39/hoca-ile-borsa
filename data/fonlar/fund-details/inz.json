@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "INZ",
     "slug": "inz",
@@ -12,13 +12,13 @@
     "yonetici": "INVEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "inveo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 3.453237,
+    "fiyat": 3.449849,
     "tedavuldekiPaySayisi": 34399915,
     "kisiSayisi": 16,
-    "fonToplamDeger": 118791070.48,
-    "gunlukGetiri": 0.00254437,
+    "fonToplamDeger": 118674510.54,
+    "gunlukGetiri": -0.00098111,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "INZ",
+        "fonAdi": "INVEO PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST (TL) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 3.449849,
+        "tedavuldekiPaySayisi": 34399915,
+        "kisiSayisi": 16,
+        "fonToplamDeger": 118674510.54,
+        "gunlukGetiri": -0.00098111,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "INZ",
         "fonAdi": "INVEO PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST (TL) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00254437,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "INZ",
+      "fonAdi": "INVEO PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 3.449849,
+      "tedavuldekiPaySayisi": 34399915,
+      "kisiSayisi": 16,
+      "fonToplamDeger": 118674510.54,
+      "gunlukGetiri": -0.00098111,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "INZ",
+      "fonAdi": "INVEO PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 3.449849,
+      "tedavuldekiPaySayisi": 34399915,
+      "kisiSayisi": 16,
+      "fonToplamDeger": 118674510.54,
+      "gunlukGetiri": -0.00098111,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "INZ",
       "fonAdi": "INVEO PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST (TL) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

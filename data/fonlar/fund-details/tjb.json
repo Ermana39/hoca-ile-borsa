@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "TJB",
     "slug": "tjb",
@@ -12,13 +12,13 @@
     "yonetici": "TACİRLER PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "tacirler-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 9.915901,
+    "fiyat": 9.85058,
     "tedavuldekiPaySayisi": 81702428,
     "kisiSayisi": 1,
-    "fonToplamDeger": 810153148,
-    "gunlukGetiri": -0.00433394,
+    "fonToplamDeger": 804816320.98,
+    "gunlukGetiri": -0.0065875,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TJB",
+        "fonAdi": "TACİRLER PORTFÖY BDR SERBEST ÖZEL FON",
+        "tarih": "2026-08-19",
+        "fiyat": 9.85058,
+        "tedavuldekiPaySayisi": 81702428,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 804816320.98,
+        "gunlukGetiri": -0.0065875,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "TJB",
         "fonAdi": "TACİRLER PORTFÖY BDR SERBEST ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": -0.00433394,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TJB",
+      "fonAdi": "TACİRLER PORTFÖY BDR SERBEST ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 9.85058,
+      "tedavuldekiPaySayisi": 81702428,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 804816320.98,
+      "gunlukGetiri": -0.0065875,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TJB",
+      "fonAdi": "TACİRLER PORTFÖY BDR SERBEST ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 9.85058,
+      "tedavuldekiPaySayisi": 81702428,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 804816320.98,
+      "gunlukGetiri": -0.0065875,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "TJB",
       "fonAdi": "TACİRLER PORTFÖY BDR SERBEST ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

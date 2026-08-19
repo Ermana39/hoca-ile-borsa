@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "NKP",
     "slug": "nkp",
@@ -12,44 +12,56 @@
     "yonetici": "NEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "neo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.169696,
-    "tedavuldekiPaySayisi": 161405843,
+    "fiyat": 1.147765,
+    "tedavuldekiPaySayisi": 161248264,
     "kisiSayisi": 3369,
-    "fonToplamDeger": 188795809.98,
-    "gunlukGetiri": 0.00293757,
+    "fonToplamDeger": 185075157.61,
+    "gunlukGetiri": -0.01874932,
     "getiriler": {
-      "birAy": 0.029697,
-      "ucAy": 0.012904,
-      "altiAy": 0.0038929999999999998,
-      "yilbasi": 0.110945,
-      "birYil": 0.15814899999999998,
+      "birAy": 0.010391,
+      "ucAy": -0.002632,
+      "altiAy": -0.018949,
+      "yilbasi": 0.090115,
+      "birYil": 0.139802,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -29575.76,
-      "besGun": 433266.72,
+      "gunluk": -180863.66,
+      "besGun": 322330.92,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -11,
-      "besGun": -46,
+      "gunluk": 0,
+      "besGun": -48,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NKP",
+        "fonAdi": "NEO PORTFÖY KAR PAYI ÖDEYEN DEĞİŞKEN FON",
+        "tarih": "2026-08-19",
+        "fiyat": 1.147765,
+        "tedavuldekiPaySayisi": 161248264,
+        "kisiSayisi": 3369,
+        "fonToplamDeger": 185075157.61,
+        "gunlukGetiri": -0.01874932,
+        "paraGirisiCikisi": -180863.66,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "NKP",
         "fonAdi": "NEO PORTFÖY KAR PAYI ÖDEYEN DEĞİŞKEN FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00293757,
       "paraGirisiCikisi": -29575.76,
       "yatirimciDegisimi": -11
+    },
+    {
+      "fonKodu": "NKP",
+      "fonAdi": "NEO PORTFÖY KAR PAYI ÖDEYEN DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.147765,
+      "tedavuldekiPaySayisi": 161248264,
+      "kisiSayisi": 3369,
+      "fonToplamDeger": 185075157.61,
+      "gunlukGetiri": -0.01874932,
+      "paraGirisiCikisi": -180863.66,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NKP",
+      "fonAdi": "NEO PORTFÖY KAR PAYI ÖDEYEN DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.147765,
+      "tedavuldekiPaySayisi": 161248264,
+      "kisiSayisi": 3369,
+      "fonToplamDeger": 185075157.61,
+      "gunlukGetiri": -0.01874932,
+      "paraGirisiCikisi": -180863.66,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "NKP",
       "fonAdi": "NEO PORTFÖY KAR PAYI ÖDEYEN DEĞİŞKEN FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

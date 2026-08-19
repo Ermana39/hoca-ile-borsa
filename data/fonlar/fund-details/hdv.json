@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "HDV",
     "slug": "hdv",
@@ -12,13 +12,13 @@
     "yonetici": "HSBC PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hsbc-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 66.381208,
-    "tedavuldekiPaySayisi": 74086971,
-    "kisiSayisi": 2236,
-    "fonToplamDeger": 4917982642.6,
-    "gunlukGetiri": 0.00465882,
+    "fiyat": 66.267503,
+    "tedavuldekiPaySayisi": 74044376,
+    "kisiSayisi": 2241,
+    "fonToplamDeger": 4906735890.48,
+    "gunlukGetiri": -0.00171291,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 4932654.8,
-      "besGun": -15741908.53,
+      "gunluk": -2822664.29,
+      "besGun": -25116280.16,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": -13,
+      "gunluk": 5,
+      "besGun": -5,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HDV",
+        "fonAdi": "HSBC PORTFÖY YEDİNCİ SERBEST (DÖVİZ-POUND) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 66.267503,
+        "tedavuldekiPaySayisi": 74044376,
+        "kisiSayisi": 2241,
+        "fonToplamDeger": 4906735890.48,
+        "gunlukGetiri": -0.00171291,
+        "paraGirisiCikisi": -2822664.29,
+        "yatirimciDegisimi": 5
+      },
       {
         "fonKodu": "HDV",
         "fonAdi": "HSBC PORTFÖY YEDİNCİ SERBEST (DÖVİZ-POUND) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00465882,
       "paraGirisiCikisi": 4932654.8,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "HDV",
+      "fonAdi": "HSBC PORTFÖY YEDİNCİ SERBEST (DÖVİZ-POUND) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 66.267503,
+      "tedavuldekiPaySayisi": 74044376,
+      "kisiSayisi": 2241,
+      "fonToplamDeger": 4906735890.48,
+      "gunlukGetiri": -0.00171291,
+      "paraGirisiCikisi": -2822664.29,
+      "yatirimciDegisimi": 5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HDV",
+      "fonAdi": "HSBC PORTFÖY YEDİNCİ SERBEST (DÖVİZ-POUND) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 66.267503,
+      "tedavuldekiPaySayisi": 74044376,
+      "kisiSayisi": 2241,
+      "fonToplamDeger": 4906735890.48,
+      "gunlukGetiri": -0.00171291,
+      "paraGirisiCikisi": -2822664.29,
+      "yatirimciDegisimi": 5
+    },
     {
       "fonKodu": "HDV",
       "fonAdi": "HSBC PORTFÖY YEDİNCİ SERBEST (DÖVİZ-POUND) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

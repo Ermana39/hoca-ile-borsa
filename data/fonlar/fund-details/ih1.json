@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "IH1",
     "slug": "ih1",
@@ -12,15 +12,15 @@
     "yonetici": "İNCİR PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "incir-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 0.911622,
-    "tedavuldekiPaySayisi": 188770215,
-    "kisiSayisi": 62,
-    "fonToplamDeger": 172087122.17,
-    "gunlukGetiri": 0.00100361,
+    "fiyat": 0.913721,
+    "tedavuldekiPaySayisi": 188742885,
+    "kisiSayisi": 66,
+    "fonToplamDeger": 172458288.99,
+    "gunlukGetiri": 0.00230249,
     "getiriler": {
-      "birAy": 0.015555000000000001,
+      "birAy": 0.017893,
       "ucAy": null,
       "altiAy": null,
       "yilbasi": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 5505.29,
-      "besGun": 111996.44,
+      "gunluk": -24971.99,
+      "besGun": 60028.46,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": 4,
+      "gunluk": 4,
+      "besGun": 7,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IH1",
+        "fonAdi": "İNCİR PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-19",
+        "fiyat": 0.913721,
+        "tedavuldekiPaySayisi": 188742885,
+        "kisiSayisi": 66,
+        "fonToplamDeger": 172458288.99,
+        "gunlukGetiri": 0.00230249,
+        "paraGirisiCikisi": -24971.99,
+        "yatirimciDegisimi": 4
+      },
       {
         "fonKodu": "IH1",
         "fonAdi": "İNCİR PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00100361,
       "paraGirisiCikisi": 5505.29,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "IH1",
+      "fonAdi": "İNCİR PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 0.913721,
+      "tedavuldekiPaySayisi": 188742885,
+      "kisiSayisi": 66,
+      "fonToplamDeger": 172458288.99,
+      "gunlukGetiri": 0.00230249,
+      "paraGirisiCikisi": -24971.99,
+      "yatirimciDegisimi": 4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IH1",
+      "fonAdi": "İNCİR PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 0.913721,
+      "tedavuldekiPaySayisi": 188742885,
+      "kisiSayisi": 66,
+      "fonToplamDeger": 172458288.99,
+      "gunlukGetiri": 0.00230249,
+      "paraGirisiCikisi": -24971.99,
+      "yatirimciDegisimi": 4
+    },
     {
       "fonKodu": "IH1",
       "fonAdi": "İNCİR PORTFÖY BİRİNCİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

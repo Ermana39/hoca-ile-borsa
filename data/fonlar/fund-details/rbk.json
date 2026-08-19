@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "RBK",
     "slug": "rbk",
@@ -12,44 +12,56 @@
     "yonetici": "ALBARAKA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "albaraka-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 8.774546,
-    "tedavuldekiPaySayisi": 5779171,
+    "fiyat": 8.772634,
+    "tedavuldekiPaySayisi": 5702921,
     "kisiSayisi": 1122,
-    "fonToplamDeger": 50709601.07,
-    "gunlukGetiri": 0.00129725,
+    "fonToplamDeger": 50029640.93,
+    "gunlukGetiri": -0.0002179,
     "getiriler": {
-      "birAy": 0.02505,
-      "ucAy": 0.074504,
-      "altiAy": 0.126964,
-      "yilbasi": 0.15823399999999999,
-      "birYil": 0.272944,
-      "ucYil": 1.345097,
-      "besYil": 4.92278
+      "birAy": 0.024827,
+      "ucAy": 0.073388,
+      "altiAy": 0.126138,
+      "yilbasi": 0.15798199999999998,
+      "birYil": 0.270259,
+      "ucYil": 1.3451220000000002,
+      "besYil": 4.898398
     },
     "paraAkisi": {
-      "gunluk": -681352.27,
-      "besGun": -584703.95,
+      "gunluk": -668913.34,
+      "besGun": -1046369.37,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 7,
-      "besGun": 11,
+      "gunluk": 0,
+      "besGun": 6,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RBK",
+        "fonAdi": "ALBARAKA PORTFÖY KATILIM FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 8.772634,
+        "tedavuldekiPaySayisi": 5702921,
+        "kisiSayisi": 1122,
+        "fonToplamDeger": 50029640.93,
+        "gunlukGetiri": -0.0002179,
+        "paraGirisiCikisi": -668913.34,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "RBK",
         "fonAdi": "ALBARAKA PORTFÖY KATILIM FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00129725,
       "paraGirisiCikisi": -681352.27,
       "yatirimciDegisimi": 7
+    },
+    {
+      "fonKodu": "RBK",
+      "fonAdi": "ALBARAKA PORTFÖY KATILIM FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 8.772634,
+      "tedavuldekiPaySayisi": 5702921,
+      "kisiSayisi": 1122,
+      "fonToplamDeger": 50029640.93,
+      "gunlukGetiri": -0.0002179,
+      "paraGirisiCikisi": -668913.34,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RBK",
+      "fonAdi": "ALBARAKA PORTFÖY KATILIM FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 8.772634,
+      "tedavuldekiPaySayisi": 5702921,
+      "kisiSayisi": 1122,
+      "fonToplamDeger": 50029640.93,
+      "gunlukGetiri": -0.0002179,
+      "paraGirisiCikisi": -668913.34,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "RBK",
       "fonAdi": "ALBARAKA PORTFÖY KATILIM FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

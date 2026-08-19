@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "NVB",
     "slug": "nvb",
@@ -12,44 +12,56 @@
     "yonetici": "NEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "neo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 4.809453,
-    "tedavuldekiPaySayisi": 1414260705,
-    "kisiSayisi": 4753,
-    "fonToplamDeger": 6801820182.93,
-    "gunlukGetiri": 0.00105654,
+    "fiyat": 4.814288,
+    "tedavuldekiPaySayisi": 1413130000,
+    "kisiSayisi": 4748,
+    "fonToplamDeger": 6803214399.86,
+    "gunlukGetiri": 0.00100531,
     "getiriler": {
-      "birAy": 0.031437,
-      "ucAy": 0.10229300000000001,
-      "altiAy": 0.20961200000000002,
-      "yilbasi": 0.269225,
-      "birYil": 0.47768700000000003,
-      "ucYil": 2.6243490000000005,
+      "birAy": 0.032473999999999996,
+      "ucAy": 0.101119,
+      "altiAy": 0.209568,
+      "yilbasi": 0.270501,
+      "birYil": 0.477167,
+      "ucYil": 2.6192860000000002,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -21411266.33,
-      "besGun": 11841368.28,
+      "gunluk": -5443539.51,
+      "besGun": 5646958.95,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
-      "besGun": -26,
+      "gunluk": -5,
+      "besGun": -27,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NVB",
+        "fonAdi": "NEO PORTFÖY İKİNCİ PARA PİYASASI (TL) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 4.814288,
+        "tedavuldekiPaySayisi": 1413130000,
+        "kisiSayisi": 4748,
+        "fonToplamDeger": 6803214399.86,
+        "gunlukGetiri": 0.00100531,
+        "paraGirisiCikisi": -5443539.51,
+        "yatirimciDegisimi": -5
+      },
       {
         "fonKodu": "NVB",
         "fonAdi": "NEO PORTFÖY İKİNCİ PARA PİYASASI (TL) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00105654,
       "paraGirisiCikisi": -21411266.33,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "NVB",
+      "fonAdi": "NEO PORTFÖY İKİNCİ PARA PİYASASI (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 4.814288,
+      "tedavuldekiPaySayisi": 1413130000,
+      "kisiSayisi": 4748,
+      "fonToplamDeger": 6803214399.86,
+      "gunlukGetiri": 0.00100531,
+      "paraGirisiCikisi": -5443539.51,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NVB",
+      "fonAdi": "NEO PORTFÖY İKİNCİ PARA PİYASASI (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 4.814288,
+      "tedavuldekiPaySayisi": 1413130000,
+      "kisiSayisi": 4748,
+      "fonToplamDeger": 6803214399.86,
+      "gunlukGetiri": 0.00100531,
+      "paraGirisiCikisi": -5443539.51,
+      "yatirimciDegisimi": -5
+    },
     {
       "fonKodu": "NVB",
       "fonAdi": "NEO PORTFÖY İKİNCİ PARA PİYASASI (TL) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

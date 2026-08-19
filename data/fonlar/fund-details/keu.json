@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "KEU",
     "slug": "keu",
@@ -12,13 +12,13 @@
     "yonetici": "KUVEYT TÜRK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kuveyt-turk-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 53.128392,
-    "tedavuldekiPaySayisi": 80207606,
-    "kisiSayisi": 55,
-    "fonToplamDeger": 4261301118.87,
-    "gunlukGetiri": 0.00562645,
+    "fiyat": 53.056715,
+    "tedavuldekiPaySayisi": 80224432,
+    "kisiSayisi": 54,
+    "fonToplamDeger": 4256444787.44,
+    "gunlukGetiri": -0.00134913,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1303345.71,
-      "besGun": 105778541.27,
+      "gunluk": 892732.29,
+      "besGun": 271689730.36,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -1,
       "besGun": 2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KEU",
+        "fonAdi": "KUVEYT TÜRK PORTFÖY ONUNCU KATILIM SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 53.056715,
+        "tedavuldekiPaySayisi": 80224432,
+        "kisiSayisi": 54,
+        "fonToplamDeger": 4256444787.44,
+        "gunlukGetiri": -0.00134913,
+        "paraGirisiCikisi": 892732.29,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "KEU",
         "fonAdi": "KUVEYT TÜRK PORTFÖY ONUNCU KATILIM SERBEST (DÖVİZ-AVRO) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00562645,
       "paraGirisiCikisi": -1303345.71,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KEU",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY ONUNCU KATILIM SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 53.056715,
+      "tedavuldekiPaySayisi": 80224432,
+      "kisiSayisi": 54,
+      "fonToplamDeger": 4256444787.44,
+      "gunlukGetiri": -0.00134913,
+      "paraGirisiCikisi": 892732.29,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KEU",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY ONUNCU KATILIM SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 53.056715,
+      "tedavuldekiPaySayisi": 80224432,
+      "kisiSayisi": 54,
+      "fonToplamDeger": 4256444787.44,
+      "gunlukGetiri": -0.00134913,
+      "paraGirisiCikisi": 892732.29,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "KEU",
       "fonAdi": "KUVEYT TÜRK PORTFÖY ONUNCU KATILIM SERBEST (DÖVİZ-AVRO) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

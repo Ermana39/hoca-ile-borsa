@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "HTS",
     "slug": "hts",
@@ -12,44 +12,56 @@
     "yonetici": "HSBC PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hsbc-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 60.203124,
-    "tedavuldekiPaySayisi": 75702488,
-    "kisiSayisi": 2550,
-    "fonToplamDeger": 4557526306.45,
-    "gunlukGetiri": -0.0010119,
+    "fiyat": 59.489034,
+    "tedavuldekiPaySayisi": 76027325,
+    "kisiSayisi": 2575,
+    "fonToplamDeger": 4522792144.04,
+    "gunlukGetiri": -0.01186134,
     "getiriler": {
-      "birAy": 0.059782,
-      "ucAy": 0.09429,
-      "altiAy": 0.264468,
-      "yilbasi": 0.268702,
-      "birYil": 0.40358199999999994,
+      "birAy": 0.047210999999999996,
+      "ucAy": 0.090403,
+      "altiAy": 0.24124099999999998,
+      "yilbasi": 0.253654,
+      "birYil": 0.38709699999999997,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 36943767.45,
-      "besGun": 112408973.65,
+      "gunluk": 19324239.34,
+      "besGun": 135978551.62,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 16,
-      "besGun": 40,
+      "gunluk": 25,
+      "besGun": 57,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HTS",
+        "fonAdi": "HSBC PORTFÖY ALTINCI SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 59.489034,
+        "tedavuldekiPaySayisi": 76027325,
+        "kisiSayisi": 2575,
+        "fonToplamDeger": 4522792144.04,
+        "gunlukGetiri": -0.01186134,
+        "paraGirisiCikisi": 19324239.34,
+        "yatirimciDegisimi": 25
+      },
       {
         "fonKodu": "HTS",
         "fonAdi": "HSBC PORTFÖY ALTINCI SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": -0.0010119,
       "paraGirisiCikisi": 36943767.45,
       "yatirimciDegisimi": 16
+    },
+    {
+      "fonKodu": "HTS",
+      "fonAdi": "HSBC PORTFÖY ALTINCI SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 59.489034,
+      "tedavuldekiPaySayisi": 76027325,
+      "kisiSayisi": 2575,
+      "fonToplamDeger": 4522792144.04,
+      "gunlukGetiri": -0.01186134,
+      "paraGirisiCikisi": 19324239.34,
+      "yatirimciDegisimi": 25
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HTS",
+      "fonAdi": "HSBC PORTFÖY ALTINCI SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 59.489034,
+      "tedavuldekiPaySayisi": 76027325,
+      "kisiSayisi": 2575,
+      "fonToplamDeger": 4522792144.04,
+      "gunlukGetiri": -0.01186134,
+      "paraGirisiCikisi": 19324239.34,
+      "yatirimciDegisimi": 25
+    },
     {
       "fonKodu": "HTS",
       "fonAdi": "HSBC PORTFÖY ALTINCI SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

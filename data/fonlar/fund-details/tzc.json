@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "TZC",
     "slug": "tzc",
@@ -12,13 +12,13 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 0.309792,
-    "tedavuldekiPaySayisi": 99759388,
+    "fiyat": 0.309106,
+    "tedavuldekiPaySayisi": 99840888,
     "kisiSayisi": 1138,
-    "fonToplamDeger": 30904703.01,
-    "gunlukGetiri": 0.00045212,
+    "fonToplamDeger": 30861439.27,
+    "gunlukGetiri": -0.00221439,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 2013.65,
-      "besGun": -62994.39,
+      "gunluk": 25192.14,
+      "besGun": -44862.64,
       "birAy": null,
       "ucAy": null
     },
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TZC",
+        "fonAdi": "ZİRAAT PORTFÖY BÜYÜYEN ÇOCUKLARA YÖNELİK DEĞİŞKEN ÖZEL FON",
+        "tarih": "2026-08-19",
+        "fiyat": 0.309106,
+        "tedavuldekiPaySayisi": 99840888,
+        "kisiSayisi": 1138,
+        "fonToplamDeger": 30861439.27,
+        "gunlukGetiri": -0.00221439,
+        "paraGirisiCikisi": 25192.14,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "TZC",
         "fonAdi": "ZİRAAT PORTFÖY BÜYÜYEN ÇOCUKLARA YÖNELİK DEĞİŞKEN ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00045212,
       "paraGirisiCikisi": 2013.65,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TZC",
+      "fonAdi": "ZİRAAT PORTFÖY BÜYÜYEN ÇOCUKLARA YÖNELİK DEĞİŞKEN ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 0.309106,
+      "tedavuldekiPaySayisi": 99840888,
+      "kisiSayisi": 1138,
+      "fonToplamDeger": 30861439.27,
+      "gunlukGetiri": -0.00221439,
+      "paraGirisiCikisi": 25192.14,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TZC",
+      "fonAdi": "ZİRAAT PORTFÖY BÜYÜYEN ÇOCUKLARA YÖNELİK DEĞİŞKEN ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 0.309106,
+      "tedavuldekiPaySayisi": 99840888,
+      "kisiSayisi": 1138,
+      "fonToplamDeger": 30861439.27,
+      "gunlukGetiri": -0.00221439,
+      "paraGirisiCikisi": 25192.14,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "TZC",
       "fonAdi": "ZİRAAT PORTFÖY BÜYÜYEN ÇOCUKLARA YÖNELİK DEĞİŞKEN ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

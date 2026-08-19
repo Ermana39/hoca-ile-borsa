@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "RRP",
     "slug": "rrp",
@@ -12,44 +12,56 @@
     "yonetici": "RE-PIE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "re-pie-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.64027,
-    "tedavuldekiPaySayisi": 500586520,
-    "kisiSayisi": 84,
-    "fonToplamDeger": 824107733.64,
-    "gunlukGetiri": 0.00101672,
+    "fiyat": 1.641926,
+    "tedavuldekiPaySayisi": 504734751,
+    "kisiSayisi": 85,
+    "fonToplamDeger": 828737283.73,
+    "gunlukGetiri": 0.00100959,
     "getiriler": {
-      "birAy": 0.029831,
-      "ucAy": 0.099812,
-      "altiAy": 0.202909,
-      "yilbasi": 0.25801999999999997,
-      "birYil": 0.448453,
+      "birAy": 0.030871,
+      "ucAy": 0.09861700000000001,
+      "altiAy": 0.202985,
+      "yilbasi": 0.25928999999999996,
+      "birYil": 0.448341,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -13132685.61,
-      "besGun": 10257415.34,
+      "gunluk": 6811088.33,
+      "besGun": 9609495.13,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 1,
-      "besGun": 1,
+      "besGun": 2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RRP",
+        "fonAdi": "RE-PIE PORTFÖY PARA PİYASASI KATILIM (TL) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 1.641926,
+        "tedavuldekiPaySayisi": 504734751,
+        "kisiSayisi": 85,
+        "fonToplamDeger": 828737283.73,
+        "gunlukGetiri": 0.00100959,
+        "paraGirisiCikisi": 6811088.33,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "RRP",
         "fonAdi": "RE-PIE PORTFÖY PARA PİYASASI KATILIM (TL) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00101672,
       "paraGirisiCikisi": -13132685.61,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "RRP",
+      "fonAdi": "RE-PIE PORTFÖY PARA PİYASASI KATILIM (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.641926,
+      "tedavuldekiPaySayisi": 504734751,
+      "kisiSayisi": 85,
+      "fonToplamDeger": 828737283.73,
+      "gunlukGetiri": 0.00100959,
+      "paraGirisiCikisi": 6811088.33,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RRP",
+      "fonAdi": "RE-PIE PORTFÖY PARA PİYASASI KATILIM (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.641926,
+      "tedavuldekiPaySayisi": 504734751,
+      "kisiSayisi": 85,
+      "fonToplamDeger": 828737283.73,
+      "gunlukGetiri": 0.00100959,
+      "paraGirisiCikisi": 6811088.33,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "RRP",
       "fonAdi": "RE-PIE PORTFÖY PARA PİYASASI KATILIM (TL) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

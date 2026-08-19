@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "GUK",
     "slug": "guk",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.431334,
-    "tedavuldekiPaySayisi": 803287799,
-    "kisiSayisi": 2714,
-    "fonToplamDeger": 1149773509.81,
-    "gunlukGetiri": 0.01473684,
+    "fiyat": 1.404535,
+    "tedavuldekiPaySayisi": 803153347,
+    "kisiSayisi": 2720,
+    "fonToplamDeger": 1128057216.8,
+    "gunlukGetiri": -0.01872309,
     "getiriler": {
-      "birAy": 0.194284,
-      "ucAy": -0.113808,
-      "altiAy": -0.048444,
-      "yilbasi": -0.051063,
+      "birAy": 0.171923,
+      "ucAy": -0.129501,
+      "altiAy": -0.10926399999999999,
+      "yilbasi": -0.06883,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 37057.24,
-      "besGun": 6880567.21,
+      "gunluk": -188842.54,
+      "besGun": 7521159.14,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
-      "besGun": -4,
+      "gunluk": 6,
+      "besGun": 4,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GUK",
+        "fonAdi": "GARANTİ PORTFÖY GÜMÜŞ KATILIM SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 1.404535,
+        "tedavuldekiPaySayisi": 803153347,
+        "kisiSayisi": 2720,
+        "fonToplamDeger": 1128057216.8,
+        "gunlukGetiri": -0.01872309,
+        "paraGirisiCikisi": -188842.54,
+        "yatirimciDegisimi": 6
+      },
       {
         "fonKodu": "GUK",
         "fonAdi": "GARANTİ PORTFÖY GÜMÜŞ KATILIM SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.01473684,
       "paraGirisiCikisi": 37057.24,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "GUK",
+      "fonAdi": "GARANTİ PORTFÖY GÜMÜŞ KATILIM SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.404535,
+      "tedavuldekiPaySayisi": 803153347,
+      "kisiSayisi": 2720,
+      "fonToplamDeger": 1128057216.8,
+      "gunlukGetiri": -0.01872309,
+      "paraGirisiCikisi": -188842.54,
+      "yatirimciDegisimi": 6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GUK",
+      "fonAdi": "GARANTİ PORTFÖY GÜMÜŞ KATILIM SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.404535,
+      "tedavuldekiPaySayisi": 803153347,
+      "kisiSayisi": 2720,
+      "fonToplamDeger": 1128057216.8,
+      "gunlukGetiri": -0.01872309,
+      "paraGirisiCikisi": -188842.54,
+      "yatirimciDegisimi": 6
+    },
     {
       "fonKodu": "GUK",
       "fonAdi": "GARANTİ PORTFÖY GÜMÜŞ KATILIM SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

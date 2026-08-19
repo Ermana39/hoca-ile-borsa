@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "TLT",
     "slug": "tlt",
@@ -12,13 +12,13 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 70.849973,
+    "fiyat": 70.807577,
     "tedavuldekiPaySayisi": 5663669,
     "kisiSayisi": 1,
-    "fonToplamDeger": 401270795.57,
-    "gunlukGetiri": 0.00200034,
+    "fonToplamDeger": 401030680.9,
+    "gunlukGetiri": -0.00059839,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TLT",
+        "fonAdi": "TEB PORTFÖY YAHŞİ SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-19",
+        "fiyat": 70.807577,
+        "tedavuldekiPaySayisi": 5663669,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 401030680.9,
+        "gunlukGetiri": -0.00059839,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "TLT",
         "fonAdi": "TEB PORTFÖY YAHŞİ SERBEST (DÖVİZ) ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00200034,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TLT",
+      "fonAdi": "TEB PORTFÖY YAHŞİ SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 70.807577,
+      "tedavuldekiPaySayisi": 5663669,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 401030680.9,
+      "gunlukGetiri": -0.00059839,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TLT",
+      "fonAdi": "TEB PORTFÖY YAHŞİ SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 70.807577,
+      "tedavuldekiPaySayisi": 5663669,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 401030680.9,
+      "gunlukGetiri": -0.00059839,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "TLT",
       "fonAdi": "TEB PORTFÖY YAHŞİ SERBEST (DÖVİZ) ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "ONF",
     "slug": "onf",
@@ -12,13 +12,13 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 66.199389,
-    "tedavuldekiPaySayisi": 47700984,
-    "kisiSayisi": 827,
-    "fonToplamDeger": 3157776016.1,
-    "gunlukGetiri": 0.00470874,
+    "fiyat": 66.089213,
+    "tedavuldekiPaySayisi": 47693260,
+    "kisiSayisi": 829,
+    "fonToplamDeger": 3152010019.48,
+    "gunlukGetiri": -0.00166431,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -2172994.94,
-      "besGun": -2374881.6,
+      "gunluk": -510473.08,
+      "besGun": -1128095.69,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": 2,
       "besGun": 8,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ONF",
+        "fonAdi": "AK PORTFÖY ONALTINCI SERBEST (DÖVİZ-POUND) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 66.089213,
+        "tedavuldekiPaySayisi": 47693260,
+        "kisiSayisi": 829,
+        "fonToplamDeger": 3152010019.48,
+        "gunlukGetiri": -0.00166431,
+        "paraGirisiCikisi": -510473.08,
+        "yatirimciDegisimi": 2
+      },
       {
         "fonKodu": "ONF",
         "fonAdi": "AK PORTFÖY ONALTINCI SERBEST (DÖVİZ-POUND) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00470874,
       "paraGirisiCikisi": -2172994.94,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "ONF",
+      "fonAdi": "AK PORTFÖY ONALTINCI SERBEST (DÖVİZ-POUND) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 66.089213,
+      "tedavuldekiPaySayisi": 47693260,
+      "kisiSayisi": 829,
+      "fonToplamDeger": 3152010019.48,
+      "gunlukGetiri": -0.00166431,
+      "paraGirisiCikisi": -510473.08,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ONF",
+      "fonAdi": "AK PORTFÖY ONALTINCI SERBEST (DÖVİZ-POUND) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 66.089213,
+      "tedavuldekiPaySayisi": 47693260,
+      "kisiSayisi": 829,
+      "fonToplamDeger": 3152010019.48,
+      "gunlukGetiri": -0.00166431,
+      "paraGirisiCikisi": -510473.08,
+      "yatirimciDegisimi": 2
+    },
     {
       "fonKodu": "ONF",
       "fonAdi": "AK PORTFÖY ONALTINCI SERBEST (DÖVİZ-POUND) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

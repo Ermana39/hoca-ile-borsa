@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "HGC",
     "slug": "hgc",
@@ -12,13 +12,13 @@
     "yonetici": "HSBC PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hsbc-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 52.932464,
-    "tedavuldekiPaySayisi": 8832637,
+    "fiyat": 52.908891,
+    "tedavuldekiPaySayisi": 8842301,
     "kisiSayisi": 285,
-    "fonToplamDeger": 467533241.73,
-    "gunlukGetiri": 0.00188574,
+    "fonToplamDeger": 467836341.63,
+    "gunlukGetiri": -0.00044534,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": 2003247.63,
+      "gunluk": 511311.52,
+      "besGun": 1942832.85,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": 2,
+      "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HGC",
+        "fonAdi": "HSBC PORTFÖY MART 2027 SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 52.908891,
+        "tedavuldekiPaySayisi": 8842301,
+        "kisiSayisi": 285,
+        "fonToplamDeger": 467836341.63,
+        "gunlukGetiri": -0.00044534,
+        "paraGirisiCikisi": 511311.52,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "HGC",
         "fonAdi": "HSBC PORTFÖY MART 2027 SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00188574,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HGC",
+      "fonAdi": "HSBC PORTFÖY MART 2027 SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 52.908891,
+      "tedavuldekiPaySayisi": 8842301,
+      "kisiSayisi": 285,
+      "fonToplamDeger": 467836341.63,
+      "gunlukGetiri": -0.00044534,
+      "paraGirisiCikisi": 511311.52,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HGC",
+      "fonAdi": "HSBC PORTFÖY MART 2027 SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 52.908891,
+      "tedavuldekiPaySayisi": 8842301,
+      "kisiSayisi": 285,
+      "fonToplamDeger": 467836341.63,
+      "gunlukGetiri": -0.00044534,
+      "paraGirisiCikisi": 511311.52,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "HGC",
       "fonAdi": "HSBC PORTFÖY MART 2027 SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

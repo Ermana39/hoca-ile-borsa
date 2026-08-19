@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "YBE",
     "slug": "ybe",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.84862,
-    "tedavuldekiPaySayisi": 2726070024,
-    "kisiSayisi": 13994,
-    "fonToplamDeger": 5039466821.28,
-    "gunlukGetiri": 0.00111505,
+    "fiyat": 1.845634,
+    "tedavuldekiPaySayisi": 2726554181,
+    "kisiSayisi": 14018,
+    "fonToplamDeger": 5032220864.73,
+    "gunlukGetiri": -0.00161526,
     "getiriler": {
-      "birAy": 0.025372,
-      "ucAy": 0.08137499999999999,
-      "altiAy": 0.104421,
-      "yilbasi": 0.141151,
-      "birYil": 0.266239,
-      "ucYil": 1.351973,
-      "besYil": 6.3002769999999995
+      "birAy": 0.023716,
+      "ucAy": 0.08065,
+      "altiAy": 0.10258300000000001,
+      "yilbasi": 0.139308,
+      "birYil": 0.260774,
+      "ucYil": 1.351947,
+      "besYil": 6.254708000000001
     },
     "paraAkisi": {
-      "gunluk": -347978.68,
-      "besGun": 16733461.77,
+      "gunluk": 893576.62,
+      "besGun": 18527953.97,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
-      "besGun": -20,
+      "gunluk": 24,
+      "besGun": -14,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YBE",
+        "fonAdi": "YAPI KREDİ PORTFÖY EUROBOND (DOLAR) BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 1.845634,
+        "tedavuldekiPaySayisi": 2726554181,
+        "kisiSayisi": 14018,
+        "fonToplamDeger": 5032220864.73,
+        "gunlukGetiri": -0.00161526,
+        "paraGirisiCikisi": 893576.62,
+        "yatirimciDegisimi": 24
+      },
       {
         "fonKodu": "YBE",
         "fonAdi": "YAPI KREDİ PORTFÖY EUROBOND (DOLAR) BORÇLANMA ARAÇLARI FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00111505,
       "paraGirisiCikisi": -347978.68,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "YBE",
+      "fonAdi": "YAPI KREDİ PORTFÖY EUROBOND (DOLAR) BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.845634,
+      "tedavuldekiPaySayisi": 2726554181,
+      "kisiSayisi": 14018,
+      "fonToplamDeger": 5032220864.73,
+      "gunlukGetiri": -0.00161526,
+      "paraGirisiCikisi": 893576.62,
+      "yatirimciDegisimi": 24
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YBE",
+      "fonAdi": "YAPI KREDİ PORTFÖY EUROBOND (DOLAR) BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.845634,
+      "tedavuldekiPaySayisi": 2726554181,
+      "kisiSayisi": 14018,
+      "fonToplamDeger": 5032220864.73,
+      "gunlukGetiri": -0.00161526,
+      "paraGirisiCikisi": 893576.62,
+      "yatirimciDegisimi": 24
+    },
     {
       "fonKodu": "YBE",
       "fonAdi": "YAPI KREDİ PORTFÖY EUROBOND (DOLAR) BORÇLANMA ARAÇLARI FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

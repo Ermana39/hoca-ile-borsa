@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "NAL",
     "slug": "nal",
@@ -12,13 +12,13 @@
     "yonetici": "NEO PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "neo-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 0.420847,
+    "fiyat": 0.421069,
     "tedavuldekiPaySayisi": 1199204513,
     "kisiSayisi": 12,
-    "fonToplamDeger": 504681608.02,
-    "gunlukGetiri": 0.00329946,
+    "fonToplamDeger": 504947327.3,
+    "gunlukGetiri": 0.00052751,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NAL",
+        "fonAdi": "NEO PORTFÖY ALTINCI SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 0.421069,
+        "tedavuldekiPaySayisi": 1199204513,
+        "kisiSayisi": 12,
+        "fonToplamDeger": 504947327.3,
+        "gunlukGetiri": 0.00052751,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "NAL",
         "fonAdi": "NEO PORTFÖY ALTINCI SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00329946,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "NAL",
+      "fonAdi": "NEO PORTFÖY ALTINCI SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 0.421069,
+      "tedavuldekiPaySayisi": 1199204513,
+      "kisiSayisi": 12,
+      "fonToplamDeger": 504947327.3,
+      "gunlukGetiri": 0.00052751,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NAL",
+      "fonAdi": "NEO PORTFÖY ALTINCI SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 0.421069,
+      "tedavuldekiPaySayisi": 1199204513,
+      "kisiSayisi": 12,
+      "fonToplamDeger": 504947327.3,
+      "gunlukGetiri": 0.00052751,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "NAL",
       "fonAdi": "NEO PORTFÖY ALTINCI SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

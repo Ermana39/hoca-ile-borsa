@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "ZP1",
     "slug": "zp1",
@@ -12,13 +12,13 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 63.278784,
+    "fiyat": 63.272667,
     "tedavuldekiPaySayisi": 1013938,
     "kisiSayisi": 2,
-    "fonToplamDeger": 64160763.56,
-    "gunlukGetiri": 0.00179811,
+    "fonToplamDeger": 64154561.09,
+    "gunlukGetiri": -0.00009667,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZP1",
+        "fonAdi": "ZİRAAT PORTFÖY ANTALYA SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-19",
+        "fiyat": 63.272667,
+        "tedavuldekiPaySayisi": 1013938,
+        "kisiSayisi": 2,
+        "fonToplamDeger": 64154561.09,
+        "gunlukGetiri": -0.00009667,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "ZP1",
         "fonAdi": "ZİRAAT PORTFÖY ANTALYA SERBEST (DÖVİZ) ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00179811,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "ZP1",
+      "fonAdi": "ZİRAAT PORTFÖY ANTALYA SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 63.272667,
+      "tedavuldekiPaySayisi": 1013938,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 64154561.09,
+      "gunlukGetiri": -0.00009667,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZP1",
+      "fonAdi": "ZİRAAT PORTFÖY ANTALYA SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 63.272667,
+      "tedavuldekiPaySayisi": 1013938,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 64154561.09,
+      "gunlukGetiri": -0.00009667,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "ZP1",
       "fonAdi": "ZİRAAT PORTFÖY ANTALYA SERBEST (DÖVİZ) ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

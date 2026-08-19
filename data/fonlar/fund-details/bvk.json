@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "BVK",
     "slug": "bvk",
@@ -12,25 +12,25 @@
     "yonetici": "BULLS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "bulls-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.291311,
-    "tedavuldekiPaySayisi": 133539,
+    "fiyat": 1.326219,
+    "tedavuldekiPaySayisi": 31539,
     "kisiSayisi": 23,
-    "fonToplamDeger": 172440.42,
-    "gunlukGetiri": 0.00367017,
+    "fonToplamDeger": 41827.63,
+    "gunlukGetiri": 0.02703299,
     "getiriler": {
-      "birAy": 0.124894,
-      "ucAy": 0.18549700000000002,
-      "altiAy": 0.29194,
+      "birAy": 0.155303,
+      "ucAy": 0.212613,
+      "altiAy": 0.327517,
       "yilbasi": null,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": 0,
+      "gunluk": -135274.34,
+      "besGun": -135274.34,
       "birAy": null,
       "ucAy": null
     },
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BVK",
+        "fonAdi": "BULLS PORTFÖY VOLTRAN KATILIM SERBEST (TL) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 1.326219,
+        "tedavuldekiPaySayisi": 31539,
+        "kisiSayisi": 23,
+        "fonToplamDeger": 41827.63,
+        "gunlukGetiri": 0.02703299,
+        "paraGirisiCikisi": -135274.34,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "BVK",
         "fonAdi": "BULLS PORTFÖY VOLTRAN KATILIM SERBEST (TL) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00367017,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BVK",
+      "fonAdi": "BULLS PORTFÖY VOLTRAN KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.326219,
+      "tedavuldekiPaySayisi": 31539,
+      "kisiSayisi": 23,
+      "fonToplamDeger": 41827.63,
+      "gunlukGetiri": 0.02703299,
+      "paraGirisiCikisi": -135274.34,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BVK",
+      "fonAdi": "BULLS PORTFÖY VOLTRAN KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.326219,
+      "tedavuldekiPaySayisi": 31539,
+      "kisiSayisi": 23,
+      "fonToplamDeger": 41827.63,
+      "gunlukGetiri": 0.02703299,
+      "paraGirisiCikisi": -135274.34,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "BVK",
       "fonAdi": "BULLS PORTFÖY VOLTRAN KATILIM SERBEST (TL) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

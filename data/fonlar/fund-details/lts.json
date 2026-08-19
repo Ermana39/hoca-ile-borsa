@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "LTS",
     "slug": "lts",
@@ -12,13 +12,13 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 4.786718,
-    "tedavuldekiPaySayisi": 552407334,
+    "fiyat": 4.728201,
+    "tedavuldekiPaySayisi": 552407333,
     "kisiSayisi": 14,
-    "fonToplamDeger": 2644218045.85,
-    "gunlukGetiri": 0.04643613,
+    "fonToplamDeger": 2611892873.87,
+    "gunlukGetiri": -0.01222487,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": 0,
+      "gunluk": -4.73,
+      "besGun": -4.73,
       "birAy": null,
       "ucAy": null
     },
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "LTS",
+        "fonAdi": "HEDEF PORTFÖY LOTUS SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 4.728201,
+        "tedavuldekiPaySayisi": 552407333,
+        "kisiSayisi": 14,
+        "fonToplamDeger": 2611892873.87,
+        "gunlukGetiri": -0.01222487,
+        "paraGirisiCikisi": -4.73,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "LTS",
         "fonAdi": "HEDEF PORTFÖY LOTUS SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.04643613,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "LTS",
+      "fonAdi": "HEDEF PORTFÖY LOTUS SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 4.728201,
+      "tedavuldekiPaySayisi": 552407333,
+      "kisiSayisi": 14,
+      "fonToplamDeger": 2611892873.87,
+      "gunlukGetiri": -0.01222487,
+      "paraGirisiCikisi": -4.73,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "LTS",
+      "fonAdi": "HEDEF PORTFÖY LOTUS SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 4.728201,
+      "tedavuldekiPaySayisi": 552407333,
+      "kisiSayisi": 14,
+      "fonToplamDeger": 2611892873.87,
+      "gunlukGetiri": -0.01222487,
+      "paraGirisiCikisi": -4.73,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "LTS",
       "fonAdi": "HEDEF PORTFÖY LOTUS SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

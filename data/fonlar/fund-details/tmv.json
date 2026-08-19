@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "TMV",
     "slug": "tmv",
@@ -12,13 +12,13 @@
     "yonetici": "TERA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "tera-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 9.21972,
-    "tedavuldekiPaySayisi": 4064117178,
-    "kisiSayisi": 12202,
-    "fonToplamDeger": 37470020478.36,
-    "gunlukGetiri": 0.00402406,
+    "fiyat": 9.242964,
+    "tedavuldekiPaySayisi": 3951747865,
+    "kisiSayisi": 12423,
+    "fonToplamDeger": 36525861742.97,
+    "gunlukGetiri": 0.00252112,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 283319331.1,
-      "besGun": 3101264501.11,
+      "gunluk": -1038625514.76,
+      "besGun": 1538450768.82,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 146,
-      "besGun": 1248,
+      "gunluk": 221,
+      "besGun": 1103,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TMV",
+        "fonAdi": "TERA PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 9.242964,
+        "tedavuldekiPaySayisi": 3951747865,
+        "kisiSayisi": 12423,
+        "fonToplamDeger": 36525861742.97,
+        "gunlukGetiri": 0.00252112,
+        "paraGirisiCikisi": -1038625514.76,
+        "yatirimciDegisimi": 221
+      },
       {
         "fonKodu": "TMV",
         "fonAdi": "TERA PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00402406,
       "paraGirisiCikisi": 283319331.1,
       "yatirimciDegisimi": 146
+    },
+    {
+      "fonKodu": "TMV",
+      "fonAdi": "TERA PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 9.242964,
+      "tedavuldekiPaySayisi": 3951747865,
+      "kisiSayisi": 12423,
+      "fonToplamDeger": 36525861742.97,
+      "gunlukGetiri": 0.00252112,
+      "paraGirisiCikisi": -1038625514.76,
+      "yatirimciDegisimi": 221
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TMV",
+      "fonAdi": "TERA PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 9.242964,
+      "tedavuldekiPaySayisi": 3951747865,
+      "kisiSayisi": 12423,
+      "fonToplamDeger": 36525861742.97,
+      "gunlukGetiri": 0.00252112,
+      "paraGirisiCikisi": -1038625514.76,
+      "yatirimciDegisimi": 221
+    },
     {
       "fonKodu": "TMV",
       "fonAdi": "TERA PORTFÖY ALGORİTMİK STRATEJİLER SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

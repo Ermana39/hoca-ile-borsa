@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "RLH",
     "slug": "rlh",
@@ -12,19 +12,19 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.688646,
+    "fiyat": 1.687439,
     "tedavuldekiPaySayisi": 163018146,
     "kisiSayisi": 34,
-    "fonToplamDeger": 275280000.24,
-    "gunlukGetiri": 0.00195746,
+    "fonToplamDeger": 275083236.08,
+    "gunlukGetiri": -0.00071477,
     "getiriler": {
-      "birAy": 0.035432,
-      "ucAy": 0.087712,
-      "altiAy": 0.192694,
-      "yilbasi": 0.326074,
-      "birYil": 0.48097900000000005,
+      "birAy": 0.034692,
+      "ucAy": 0.089117,
+      "altiAy": 0.195099,
+      "yilbasi": 0.32512599999999997,
+      "birYil": 0.476875,
       "ucYil": null,
       "besYil": null
     },
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RLH",
+        "fonAdi": "ROTA PORTFÖY YİRMİNCİ SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 1.687439,
+        "tedavuldekiPaySayisi": 163018146,
+        "kisiSayisi": 34,
+        "fonToplamDeger": 275083236.08,
+        "gunlukGetiri": -0.00071477,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "RLH",
         "fonAdi": "ROTA PORTFÖY YİRMİNCİ SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00195746,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "RLH",
+      "fonAdi": "ROTA PORTFÖY YİRMİNCİ SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.687439,
+      "tedavuldekiPaySayisi": 163018146,
+      "kisiSayisi": 34,
+      "fonToplamDeger": 275083236.08,
+      "gunlukGetiri": -0.00071477,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RLH",
+      "fonAdi": "ROTA PORTFÖY YİRMİNCİ SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.687439,
+      "tedavuldekiPaySayisi": 163018146,
+      "kisiSayisi": 34,
+      "fonToplamDeger": 275083236.08,
+      "gunlukGetiri": -0.00071477,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "RLH",
       "fonAdi": "ROTA PORTFÖY YİRMİNCİ SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

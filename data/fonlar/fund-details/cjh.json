@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "CJH",
     "slug": "cjh",
@@ -12,13 +12,13 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 61.850653,
-    "tedavuldekiPaySayisi": 50202258,
-    "kisiSayisi": 1721,
-    "fonToplamDeger": 3105042451.66,
-    "gunlukGetiri": 0.00561375,
+    "fiyat": 61.766161,
+    "tedavuldekiPaySayisi": 50163074,
+    "kisiSayisi": 1722,
+    "fonToplamDeger": 3098380501.49,
+    "gunlukGetiri": -0.00136606,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -15573932.57,
-      "besGun": -32800648.08,
+      "gunluk": -2420245.25,
+      "besGun": -33259298.69,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
-      "besGun": -8,
+      "gunluk": 1,
+      "besGun": -7,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "CJH",
+        "fonAdi": "AK PORTFÖY DOKUZUNCU SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 61.766161,
+        "tedavuldekiPaySayisi": 50163074,
+        "kisiSayisi": 1722,
+        "fonToplamDeger": 3098380501.49,
+        "gunlukGetiri": -0.00136606,
+        "paraGirisiCikisi": -2420245.25,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "CJH",
         "fonAdi": "AK PORTFÖY DOKUZUNCU SERBEST (DÖVİZ-AVRO) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00561375,
       "paraGirisiCikisi": -15573932.57,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "CJH",
+      "fonAdi": "AK PORTFÖY DOKUZUNCU SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 61.766161,
+      "tedavuldekiPaySayisi": 50163074,
+      "kisiSayisi": 1722,
+      "fonToplamDeger": 3098380501.49,
+      "gunlukGetiri": -0.00136606,
+      "paraGirisiCikisi": -2420245.25,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "CJH",
+      "fonAdi": "AK PORTFÖY DOKUZUNCU SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 61.766161,
+      "tedavuldekiPaySayisi": 50163074,
+      "kisiSayisi": 1722,
+      "fonToplamDeger": 3098380501.49,
+      "gunlukGetiri": -0.00136606,
+      "paraGirisiCikisi": -2420245.25,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "CJH",
       "fonAdi": "AK PORTFÖY DOKUZUNCU SERBEST (DÖVİZ-AVRO) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

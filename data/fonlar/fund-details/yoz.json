@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "YOZ",
     "slug": "yoz",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 49.535493,
-    "tedavuldekiPaySayisi": 950388642,
-    "kisiSayisi": 2053,
-    "fonToplamDeger": 47077969567.81,
-    "gunlukGetiri": 0.00201828,
+    "fiyat": 49.560768,
+    "tedavuldekiPaySayisi": 947890169,
+    "kisiSayisi": 2048,
+    "fonToplamDeger": 46978164790.62,
+    "gunlukGetiri": 0.00051024,
     "getiriler": {
-      "birAy": 0.021307999999999997,
-      "ucAy": 0.06535300000000001,
-      "altiAy": 0.120382,
-      "yilbasi": 0.148111,
+      "birAy": 0.021829,
+      "ucAy": 0.064224,
+      "altiAy": 0.12023999999999999,
+      "yilbasi": 0.148697,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 297522752.97,
-      "besGun": 826761600.51,
+      "gunluk": -123826240.71,
+      "besGun": 834520014.12,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 8,
-      "besGun": 49,
+      "gunluk": -5,
+      "besGun": 34,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YOZ",
+        "fonAdi": "DENİZ PORTFÖY YAKAMOZ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 49.560768,
+        "tedavuldekiPaySayisi": 947890169,
+        "kisiSayisi": 2048,
+        "fonToplamDeger": 46978164790.62,
+        "gunlukGetiri": 0.00051024,
+        "paraGirisiCikisi": -123826240.71,
+        "yatirimciDegisimi": -5
+      },
       {
         "fonKodu": "YOZ",
         "fonAdi": "DENİZ PORTFÖY YAKAMOZ SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00201828,
       "paraGirisiCikisi": 297522752.97,
       "yatirimciDegisimi": 8
+    },
+    {
+      "fonKodu": "YOZ",
+      "fonAdi": "DENİZ PORTFÖY YAKAMOZ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 49.560768,
+      "tedavuldekiPaySayisi": 947890169,
+      "kisiSayisi": 2048,
+      "fonToplamDeger": 46978164790.62,
+      "gunlukGetiri": 0.00051024,
+      "paraGirisiCikisi": -123826240.71,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YOZ",
+      "fonAdi": "DENİZ PORTFÖY YAKAMOZ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 49.560768,
+      "tedavuldekiPaySayisi": 947890169,
+      "kisiSayisi": 2048,
+      "fonToplamDeger": 46978164790.62,
+      "gunlukGetiri": 0.00051024,
+      "paraGirisiCikisi": -123826240.71,
+      "yatirimciDegisimi": -5
+    },
     {
       "fonKodu": "YOZ",
       "fonAdi": "DENİZ PORTFÖY YAKAMOZ SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

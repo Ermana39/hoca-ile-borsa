@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "MPN",
     "slug": "mpn",
@@ -12,44 +12,56 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 61.51931,
-    "tedavuldekiPaySayisi": 6099902,
-    "kisiSayisi": 300,
-    "fonToplamDeger": 375261760.81,
-    "gunlukGetiri": 0.00208538,
+    "fiyat": 61.446959,
+    "tedavuldekiPaySayisi": 6096330,
+    "kisiSayisi": 296,
+    "fonToplamDeger": 374600941.93,
+    "gunlukGetiri": -0.00117607,
     "getiriler": {
-      "birAy": 0.023698,
-      "ucAy": 0.061273999999999995,
-      "altiAy": 0.09193199999999999,
-      "yilbasi": 0.126777,
-      "birYil": 0.224044,
-      "ucYil": 1.2846330000000001,
+      "birAy": 0.022494,
+      "ucAy": 0.060946,
+      "altiAy": 0.088932,
+      "yilbasi": 0.125452,
+      "birYil": 0.21932200000000002,
+      "ucYil": 1.282621,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 24792.28,
-      "besGun": -2436416.06,
+      "gunluk": -219488.54,
+      "besGun": -1611061.84,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
-      "besGun": -6,
+      "gunluk": -4,
+      "besGun": -9,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MPN",
+        "fonAdi": "AKTİF PORTFÖY İKİNCİ AKTİF SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 61.446959,
+        "tedavuldekiPaySayisi": 6096330,
+        "kisiSayisi": 296,
+        "fonToplamDeger": 374600941.93,
+        "gunlukGetiri": -0.00117607,
+        "paraGirisiCikisi": -219488.54,
+        "yatirimciDegisimi": -4
+      },
       {
         "fonKodu": "MPN",
         "fonAdi": "AKTİF PORTFÖY İKİNCİ AKTİF SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00208538,
       "paraGirisiCikisi": 24792.28,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "MPN",
+      "fonAdi": "AKTİF PORTFÖY İKİNCİ AKTİF SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 61.446959,
+      "tedavuldekiPaySayisi": 6096330,
+      "kisiSayisi": 296,
+      "fonToplamDeger": 374600941.93,
+      "gunlukGetiri": -0.00117607,
+      "paraGirisiCikisi": -219488.54,
+      "yatirimciDegisimi": -4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MPN",
+      "fonAdi": "AKTİF PORTFÖY İKİNCİ AKTİF SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 61.446959,
+      "tedavuldekiPaySayisi": 6096330,
+      "kisiSayisi": 296,
+      "fonToplamDeger": 374600941.93,
+      "gunlukGetiri": -0.00117607,
+      "paraGirisiCikisi": -219488.54,
+      "yatirimciDegisimi": -4
+    },
     {
       "fonKodu": "MPN",
       "fonAdi": "AKTİF PORTFÖY İKİNCİ AKTİF SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "DDE",
     "slug": "dde",
@@ -12,13 +12,13 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 75.919459,
+    "fiyat": 75.736607,
     "tedavuldekiPaySayisi": 5515073,
     "kisiSayisi": 1,
-    "fonToplamDeger": 418701360.75,
-    "gunlukGetiri": 0.00379958,
+    "fonToplamDeger": 417692916.67,
+    "gunlukGetiri": -0.0024085,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DDE",
+        "fonAdi": "DENİZ PORTFÖY BADE SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-19",
+        "fiyat": 75.736607,
+        "tedavuldekiPaySayisi": 5515073,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 417692916.67,
+        "gunlukGetiri": -0.0024085,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "DDE",
         "fonAdi": "DENİZ PORTFÖY BADE SERBEST (DÖVİZ) ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00379958,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DDE",
+      "fonAdi": "DENİZ PORTFÖY BADE SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 75.736607,
+      "tedavuldekiPaySayisi": 5515073,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 417692916.67,
+      "gunlukGetiri": -0.0024085,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DDE",
+      "fonAdi": "DENİZ PORTFÖY BADE SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 75.736607,
+      "tedavuldekiPaySayisi": 5515073,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 417692916.67,
+      "gunlukGetiri": -0.0024085,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "DDE",
       "fonAdi": "DENİZ PORTFÖY BADE SERBEST (DÖVİZ) ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

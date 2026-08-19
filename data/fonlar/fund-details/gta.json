@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "GTA",
     "slug": "gta",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.6026,
-    "tedavuldekiPaySayisi": 15319082187,
-    "kisiSayisi": 75038,
-    "fonToplamDeger": 24550365814.15,
-    "gunlukGetiri": 0.01213923,
+    "fiyat": 1.601734,
+    "tedavuldekiPaySayisi": 15310530768,
+    "kisiSayisi": 75095,
+    "fonToplamDeger": 24523402988.09,
+    "gunlukGetiri": -0.00054037,
     "getiriler": {
-      "birAy": 0.11460699999999999,
-      "ucAy": 0.003271,
-      "altiAy": -0.064776,
-      "yilbasi": 0.090106,
-      "birYil": 0.482625,
-      "ucYil": 2.549848,
-      "besYil": 11.068044
+      "birAy": 0.114005,
+      "ucAy": 0.010094,
+      "altiAy": -0.074921,
+      "yilbasi": 0.08951700000000001,
+      "birYil": 0.476134,
+      "ucYil": 2.557757,
+      "besYil": 10.968601000000001
     },
     "paraAkisi": {
-      "gunluk": -20871789.63,
-      "besGun": 169548547.51,
+      "gunluk": -13697098.56,
+      "besGun": 218176498.44,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
-      "besGun": 266,
+      "gunluk": 57,
+      "besGun": 219,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GTA",
+        "fonAdi": "GARANTİ PORTFÖY ALTIN FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 1.601734,
+        "tedavuldekiPaySayisi": 15310530768,
+        "kisiSayisi": 75095,
+        "fonToplamDeger": 24523402988.09,
+        "gunlukGetiri": -0.00054037,
+        "paraGirisiCikisi": -13697098.56,
+        "yatirimciDegisimi": 57
+      },
       {
         "fonKodu": "GTA",
         "fonAdi": "GARANTİ PORTFÖY ALTIN FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.01213923,
       "paraGirisiCikisi": -20871789.63,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "GTA",
+      "fonAdi": "GARANTİ PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.601734,
+      "tedavuldekiPaySayisi": 15310530768,
+      "kisiSayisi": 75095,
+      "fonToplamDeger": 24523402988.09,
+      "gunlukGetiri": -0.00054037,
+      "paraGirisiCikisi": -13697098.56,
+      "yatirimciDegisimi": 57
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GTA",
+      "fonAdi": "GARANTİ PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.601734,
+      "tedavuldekiPaySayisi": 15310530768,
+      "kisiSayisi": 75095,
+      "fonToplamDeger": 24523402988.09,
+      "gunlukGetiri": -0.00054037,
+      "paraGirisiCikisi": -13697098.56,
+      "yatirimciDegisimi": 57
+    },
     {
       "fonKodu": "GTA",
       "fonAdi": "GARANTİ PORTFÖY ALTIN FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "ZCD",
     "slug": "zcd",
@@ -12,44 +12,56 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 4.557154,
-    "tedavuldekiPaySayisi": 285259169,
-    "kisiSayisi": 477,
-    "fonToplamDeger": 1299969907.73,
-    "gunlukGetiri": -0.01092074,
+    "fiyat": 4.598427,
+    "tedavuldekiPaySayisi": 285079869,
+    "kisiSayisi": 474,
+    "fonToplamDeger": 1310918894.41,
+    "gunlukGetiri": 0.00905675,
     "getiriler": {
-      "birAy": -0.006936,
-      "ucAy": 0.070115,
-      "altiAy": -0.030470999999999998,
-      "yilbasi": 0.078985,
-      "birYil": 0.16362300000000002,
-      "ucYil": 2.12745,
+      "birAy": 0.002058,
+      "ucAy": 0.088926,
+      "altiAy": -0.021803,
+      "yilbasi": 0.088757,
+      "birYil": 0.177425,
+      "ucYil": 2.164816,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -164057.54,
-      "besGun": -2483491.5,
+      "gunluk": -824497.96,
+      "besGun": -1070531.47,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 4,
-      "besGun": -13,
+      "gunluk": -3,
+      "besGun": -11,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZCD",
+        "fonAdi": "ZİRAAT PORTFÖY ALTINCI SERBEST (TL) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 4.598427,
+        "tedavuldekiPaySayisi": 285079869,
+        "kisiSayisi": 474,
+        "fonToplamDeger": 1310918894.41,
+        "gunlukGetiri": 0.00905675,
+        "paraGirisiCikisi": -824497.96,
+        "yatirimciDegisimi": -3
+      },
       {
         "fonKodu": "ZCD",
         "fonAdi": "ZİRAAT PORTFÖY ALTINCI SERBEST (TL) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": -0.01092074,
       "paraGirisiCikisi": -164057.54,
       "yatirimciDegisimi": 4
+    },
+    {
+      "fonKodu": "ZCD",
+      "fonAdi": "ZİRAAT PORTFÖY ALTINCI SERBEST (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 4.598427,
+      "tedavuldekiPaySayisi": 285079869,
+      "kisiSayisi": 474,
+      "fonToplamDeger": 1310918894.41,
+      "gunlukGetiri": 0.00905675,
+      "paraGirisiCikisi": -824497.96,
+      "yatirimciDegisimi": -3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZCD",
+      "fonAdi": "ZİRAAT PORTFÖY ALTINCI SERBEST (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 4.598427,
+      "tedavuldekiPaySayisi": 285079869,
+      "kisiSayisi": 474,
+      "fonToplamDeger": 1310918894.41,
+      "gunlukGetiri": 0.00905675,
+      "paraGirisiCikisi": -824497.96,
+      "yatirimciDegisimi": -3
+    },
     {
       "fonKodu": "ZCD",
       "fonAdi": "ZİRAAT PORTFÖY ALTINCI SERBEST (TL) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

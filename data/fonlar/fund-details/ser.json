@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "SER",
     "slug": "ser",
@@ -12,13 +12,13 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 57.683308,
-    "tedavuldekiPaySayisi": 124826785,
+    "fiyat": 57.691434,
+    "tedavuldekiPaySayisi": 124844479,
     "kisiSayisi": 825,
-    "fonToplamDeger": 7200421870.68,
-    "gunlukGetiri": 0.00210223,
+    "fonToplamDeger": 7202457076.53,
+    "gunlukGetiri": 0.00014087,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -6110738.92,
-      "besGun": -8806073.45,
+      "gunluk": 1020792.23,
+      "besGun": -7631513.54,
       "birAy": null,
       "ucAy": null
     },
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SER",
+        "fonAdi": "AK PORTFÖY 2028 SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 57.691434,
+        "tedavuldekiPaySayisi": 124844479,
+        "kisiSayisi": 825,
+        "fonToplamDeger": 7202457076.53,
+        "gunlukGetiri": 0.00014087,
+        "paraGirisiCikisi": 1020792.23,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "SER",
         "fonAdi": "AK PORTFÖY 2028 SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00210223,
       "paraGirisiCikisi": -6110738.92,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "SER",
+      "fonAdi": "AK PORTFÖY 2028 SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 57.691434,
+      "tedavuldekiPaySayisi": 124844479,
+      "kisiSayisi": 825,
+      "fonToplamDeger": 7202457076.53,
+      "gunlukGetiri": 0.00014087,
+      "paraGirisiCikisi": 1020792.23,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SER",
+      "fonAdi": "AK PORTFÖY 2028 SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 57.691434,
+      "tedavuldekiPaySayisi": 124844479,
+      "kisiSayisi": 825,
+      "fonToplamDeger": 7202457076.53,
+      "gunlukGetiri": 0.00014087,
+      "paraGirisiCikisi": 1020792.23,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "SER",
       "fonAdi": "AK PORTFÖY 2028 SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

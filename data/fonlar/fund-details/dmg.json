@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "DMG",
     "slug": "dmg",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 6.889866,
-    "tedavuldekiPaySayisi": 446326380,
-    "kisiSayisi": 15120,
-    "fonToplamDeger": 3075128840.97,
-    "gunlukGetiri": 0.01174632,
+    "fiyat": 6.804234,
+    "tedavuldekiPaySayisi": 446334527,
+    "kisiSayisi": 15179,
+    "fonToplamDeger": 3036964363.28,
+    "gunlukGetiri": -0.01242869,
     "getiriler": {
-      "birAy": 0.18919899999999998,
-      "ucAy": -0.10176600000000001,
-      "altiAy": -0.031091,
-      "yilbasi": -0.001803,
-      "birYil": 0.953559,
-      "ucYil": 3.570553,
+      "birAy": 0.174419,
+      "ucAy": -0.113847,
+      "altiAy": -0.068082,
+      "yilbasi": -0.014209000000000001,
+      "birYil": 0.918145,
+      "ucYil": 3.514927,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -5798890.17,
-      "besGun": -14818240.74,
+      "gunluk": 55434.09,
+      "besGun": 3768974.13,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 25,
-      "besGun": 154,
+      "gunluk": 59,
+      "besGun": 155,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DMG",
+        "fonAdi": "DENİZ PORTFÖY GÜMÜŞ FON SEPETİ FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 6.804234,
+        "tedavuldekiPaySayisi": 446334527,
+        "kisiSayisi": 15179,
+        "fonToplamDeger": 3036964363.28,
+        "gunlukGetiri": -0.01242869,
+        "paraGirisiCikisi": 55434.09,
+        "yatirimciDegisimi": 59
+      },
       {
         "fonKodu": "DMG",
         "fonAdi": "DENİZ PORTFÖY GÜMÜŞ FON SEPETİ FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.01174632,
       "paraGirisiCikisi": -5798890.17,
       "yatirimciDegisimi": 25
+    },
+    {
+      "fonKodu": "DMG",
+      "fonAdi": "DENİZ PORTFÖY GÜMÜŞ FON SEPETİ FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 6.804234,
+      "tedavuldekiPaySayisi": 446334527,
+      "kisiSayisi": 15179,
+      "fonToplamDeger": 3036964363.28,
+      "gunlukGetiri": -0.01242869,
+      "paraGirisiCikisi": 55434.09,
+      "yatirimciDegisimi": 59
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DMG",
+      "fonAdi": "DENİZ PORTFÖY GÜMÜŞ FON SEPETİ FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 6.804234,
+      "tedavuldekiPaySayisi": 446334527,
+      "kisiSayisi": 15179,
+      "fonToplamDeger": 3036964363.28,
+      "gunlukGetiri": -0.01242869,
+      "paraGirisiCikisi": 55434.09,
+      "yatirimciDegisimi": 59
+    },
     {
       "fonKodu": "DMG",
       "fonAdi": "DENİZ PORTFÖY GÜMÜŞ FON SEPETİ FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

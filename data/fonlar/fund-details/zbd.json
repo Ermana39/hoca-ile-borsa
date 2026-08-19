@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "ZBD",
     "slug": "zbd",
@@ -12,44 +12,56 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 669.563748,
-    "tedavuldekiPaySayisi": 1374881.39,
-    "kisiSayisi": 2059,
-    "fonToplamDeger": 920570743.08,
-    "gunlukGetiri": -0.00042303,
+    "fiyat": 668.735149,
+    "tedavuldekiPaySayisi": 1374806.39,
+    "kisiSayisi": 2072,
+    "fonToplamDeger": 919381362.29,
+    "gunlukGetiri": -0.00123752,
     "getiriler": {
-      "birAy": 0.01103,
-      "ucAy": 0.01757,
-      "altiAy": 0.028336999999999998,
-      "yilbasi": 0.139621,
-      "birYil": 0.231354,
-      "ucYil": 1.100134,
-      "besYil": 5.4224879999999995
+      "birAy": 0.009779,
+      "ucAy": 0.02733,
+      "altiAy": 0.031878000000000004,
+      "yilbasi": 0.138211,
+      "birYil": 0.23399699999999998,
+      "ucYil": 1.115985,
+      "besYil": 5.417694
     },
     "paraAkisi": {
-      "gunluk": -2008.69,
-      "besGun": -967301.38,
+      "gunluk": -50155.14,
+      "besGun": -1021441.64,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
-      "besGun": -5,
+      "gunluk": 13,
+      "besGun": 4,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZBD",
+        "fonAdi": "ZİRAAT PORTFÖY DENGELİ DEĞİŞKEN FON",
+        "tarih": "2026-08-19",
+        "fiyat": 668.735149,
+        "tedavuldekiPaySayisi": 1374806.39,
+        "kisiSayisi": 2072,
+        "fonToplamDeger": 919381362.29,
+        "gunlukGetiri": -0.00123752,
+        "paraGirisiCikisi": -50155.14,
+        "yatirimciDegisimi": 13
+      },
       {
         "fonKodu": "ZBD",
         "fonAdi": "ZİRAAT PORTFÖY DENGELİ DEĞİŞKEN FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": -0.00042303,
       "paraGirisiCikisi": -2008.69,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "ZBD",
+      "fonAdi": "ZİRAAT PORTFÖY DENGELİ DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 668.735149,
+      "tedavuldekiPaySayisi": 1374806.39,
+      "kisiSayisi": 2072,
+      "fonToplamDeger": 919381362.29,
+      "gunlukGetiri": -0.00123752,
+      "paraGirisiCikisi": -50155.14,
+      "yatirimciDegisimi": 13
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZBD",
+      "fonAdi": "ZİRAAT PORTFÖY DENGELİ DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 668.735149,
+      "tedavuldekiPaySayisi": 1374806.39,
+      "kisiSayisi": 2072,
+      "fonToplamDeger": 919381362.29,
+      "gunlukGetiri": -0.00123752,
+      "paraGirisiCikisi": -50155.14,
+      "yatirimciDegisimi": 13
+    },
     {
       "fonKodu": "ZBD",
       "fonAdi": "ZİRAAT PORTFÖY DENGELİ DEĞİŞKEN FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "YTY",
     "slug": "yty",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 59.182703,
-    "tedavuldekiPaySayisi": 1959886131,
-    "kisiSayisi": 20725,
-    "fonToplamDeger": 115991357834.93,
-    "gunlukGetiri": 0.00562819,
+    "fiyat": 59.10378,
+    "tedavuldekiPaySayisi": 1960426350,
+    "kisiSayisi": 20713,
+    "fonToplamDeger": 115868607208.82,
+    "gunlukGetiri": -0.00133355,
     "getiriler": {
-      "birAy": 0.033797,
-      "ucAy": 0.056668,
-      "altiAy": 0.086129,
-      "yilbasi": 0.119582,
-      "birYil": 0.19386299999999998,
+      "birAy": 0.032418999999999996,
+      "ucAy": 0.053711,
+      "altiAy": 0.084438,
+      "yilbasi": 0.118089,
+      "birYil": 0.18990400000000002,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 126184269.62,
-      "besGun": 3716938869.21,
+      "gunluk": 31928984.93,
+      "besGun": 3219756754.85,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 11,
-      "besGun": 18,
+      "gunluk": -12,
+      "besGun": 13,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YTY",
+        "fonAdi": "YAPI KREDİ PORTFÖY TARABYA SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 59.10378,
+        "tedavuldekiPaySayisi": 1960426350,
+        "kisiSayisi": 20713,
+        "fonToplamDeger": 115868607208.82,
+        "gunlukGetiri": -0.00133355,
+        "paraGirisiCikisi": 31928984.93,
+        "yatirimciDegisimi": -12
+      },
       {
         "fonKodu": "YTY",
         "fonAdi": "YAPI KREDİ PORTFÖY TARABYA SERBEST (DÖVİZ-AVRO) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00562819,
       "paraGirisiCikisi": 126184269.62,
       "yatirimciDegisimi": 11
+    },
+    {
+      "fonKodu": "YTY",
+      "fonAdi": "YAPI KREDİ PORTFÖY TARABYA SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 59.10378,
+      "tedavuldekiPaySayisi": 1960426350,
+      "kisiSayisi": 20713,
+      "fonToplamDeger": 115868607208.82,
+      "gunlukGetiri": -0.00133355,
+      "paraGirisiCikisi": 31928984.93,
+      "yatirimciDegisimi": -12
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YTY",
+      "fonAdi": "YAPI KREDİ PORTFÖY TARABYA SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 59.10378,
+      "tedavuldekiPaySayisi": 1960426350,
+      "kisiSayisi": 20713,
+      "fonToplamDeger": 115868607208.82,
+      "gunlukGetiri": -0.00133355,
+      "paraGirisiCikisi": 31928984.93,
+      "yatirimciDegisimi": -12
+    },
     {
       "fonKodu": "YTY",
       "fonAdi": "YAPI KREDİ PORTFÖY TARABYA SERBEST (DÖVİZ-AVRO) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "YLE",
     "slug": "yle",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 8.527507,
-    "tedavuldekiPaySayisi": 27478221,
+    "fiyat": 8.575002,
+    "tedavuldekiPaySayisi": 27463914,
     "kisiSayisi": 2285,
-    "fonToplamDeger": 234320717.75,
-    "gunlukGetiri": -0.00292324,
+    "fonToplamDeger": 235503127.24,
+    "gunlukGetiri": 0.00556962,
     "getiriler": {
-      "birAy": 0.017751,
-      "ucAy": -0.007909000000000001,
-      "altiAy": -0.0017599999999999998,
-      "yilbasi": 0.225123,
-      "birYil": 0.23392600000000002,
-      "ucYil": 1.143057,
+      "birAy": 0.02342,
+      "ucAy": 0.018908,
+      "altiAy": 0.005135999999999999,
+      "yilbasi": 0.231946,
+      "birYil": 0.234738,
+      "ucYil": 1.229497,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -23694309.24,
-      "besGun": -70908703.36,
+      "gunluk": -122682.55,
+      "besGun": -47642444.83,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": -15,
+      "besGun": -10,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YLE",
+        "fonAdi": "YAPI KREDİ PORTFÖY BIST SÜRDÜRÜLEBİLİRLİK ENDEKSİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-19",
+        "fiyat": 8.575002,
+        "tedavuldekiPaySayisi": 27463914,
+        "kisiSayisi": 2285,
+        "fonToplamDeger": 235503127.24,
+        "gunlukGetiri": 0.00556962,
+        "paraGirisiCikisi": -122682.55,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "YLE",
         "fonAdi": "YAPI KREDİ PORTFÖY BIST SÜRDÜRÜLEBİLİRLİK ENDEKSİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -220,9 +232,33 @@
       "gunlukGetiri": -0.00292324,
       "paraGirisiCikisi": -23694309.24,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YLE",
+      "fonAdi": "YAPI KREDİ PORTFÖY BIST SÜRDÜRÜLEBİLİRLİK ENDEKSİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 8.575002,
+      "tedavuldekiPaySayisi": 27463914,
+      "kisiSayisi": 2285,
+      "fonToplamDeger": 235503127.24,
+      "gunlukGetiri": 0.00556962,
+      "paraGirisiCikisi": -122682.55,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YLE",
+      "fonAdi": "YAPI KREDİ PORTFÖY BIST SÜRDÜRÜLEBİLİRLİK ENDEKSİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 8.575002,
+      "tedavuldekiPaySayisi": 27463914,
+      "kisiSayisi": 2285,
+      "fonToplamDeger": 235503127.24,
+      "gunlukGetiri": 0.00556962,
+      "paraGirisiCikisi": -122682.55,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "YLE",
       "fonAdi": "YAPI KREDİ PORTFÖY BIST SÜRDÜRÜLEBİLİRLİK ENDEKSİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

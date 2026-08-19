@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "OGF",
     "slug": "ogf",
@@ -12,13 +12,13 @@
     "yonetici": "OYAK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "oyak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 9.404632,
-    "tedavuldekiPaySayisi": 14287430,
-    "kisiSayisi": 428,
-    "fonToplamDeger": 134368016.23,
-    "gunlukGetiri": 0.00103045,
+    "fiyat": 9.414462,
+    "tedavuldekiPaySayisi": 14254592,
+    "kisiSayisi": 429,
+    "fonToplamDeger": 134199320.61,
+    "gunlukGetiri": 0.00104523,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 25129.18,
-      "besGun": -1194346.58,
+      "gunluk": -309152.1,
+      "besGun": -547072.02,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": -8,
+      "gunluk": 1,
+      "besGun": -6,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OGF",
+        "fonAdi": "OYAK PORTFÖY OYAK ÜYELERI İLE ÇALIŞANLARıNA YÖNELİK BORÇLANMA ARAÇLARI ÖZEL FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 9.414462,
+        "tedavuldekiPaySayisi": 14254592,
+        "kisiSayisi": 429,
+        "fonToplamDeger": 134199320.61,
+        "gunlukGetiri": 0.00104523,
+        "paraGirisiCikisi": -309152.1,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "OGF",
         "fonAdi": "OYAK PORTFÖY OYAK ÜYELERI İLE ÇALIŞANLARıNA YÖNELİK BORÇLANMA ARAÇLARI ÖZEL FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00103045,
       "paraGirisiCikisi": 25129.18,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "OGF",
+      "fonAdi": "OYAK PORTFÖY OYAK ÜYELERI İLE ÇALIŞANLARıNA YÖNELİK BORÇLANMA ARAÇLARI ÖZEL FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 9.414462,
+      "tedavuldekiPaySayisi": 14254592,
+      "kisiSayisi": 429,
+      "fonToplamDeger": 134199320.61,
+      "gunlukGetiri": 0.00104523,
+      "paraGirisiCikisi": -309152.1,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OGF",
+      "fonAdi": "OYAK PORTFÖY OYAK ÜYELERI İLE ÇALIŞANLARıNA YÖNELİK BORÇLANMA ARAÇLARI ÖZEL FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 9.414462,
+      "tedavuldekiPaySayisi": 14254592,
+      "kisiSayisi": 429,
+      "fonToplamDeger": 134199320.61,
+      "gunlukGetiri": 0.00104523,
+      "paraGirisiCikisi": -309152.1,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "OGF",
       "fonAdi": "OYAK PORTFÖY OYAK ÜYELERI İLE ÇALIŞANLARıNA YÖNELİK BORÇLANMA ARAÇLARI ÖZEL FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

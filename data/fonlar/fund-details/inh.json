@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "INH",
     "slug": "inh",
@@ -12,13 +12,13 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 14.835709,
-    "tedavuldekiPaySayisi": 15441990,
+    "fiyat": 14.77117,
+    "tedavuldekiPaySayisi": 15441962,
     "kisiSayisi": 373,
-    "fonToplamDeger": 229092871.78,
-    "gunlukGetiri": 0.0010358,
+    "fonToplamDeger": 228095840.55,
+    "gunlukGetiri": -0.00435025,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -170491.97,
-      "besGun": -12243037.16,
+      "gunluk": -413.59,
+      "besGun": -11215963.37,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
-      "besGun": -14,
+      "gunluk": 0,
+      "besGun": -12,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "INH",
+        "fonAdi": "GARANTİ PORTFÖY ING BANK ÖZEL BANKACILIK VE PLATİNUM DEĞİŞKEN ÖZEL FON",
+        "tarih": "2026-08-19",
+        "fiyat": 14.77117,
+        "tedavuldekiPaySayisi": 15441962,
+        "kisiSayisi": 373,
+        "fonToplamDeger": 228095840.55,
+        "gunlukGetiri": -0.00435025,
+        "paraGirisiCikisi": -413.59,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "INH",
         "fonAdi": "GARANTİ PORTFÖY ING BANK ÖZEL BANKACILIK VE PLATİNUM DEĞİŞKEN ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.0010358,
       "paraGirisiCikisi": -170491.97,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "INH",
+      "fonAdi": "GARANTİ PORTFÖY ING BANK ÖZEL BANKACILIK VE PLATİNUM DEĞİŞKEN ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 14.77117,
+      "tedavuldekiPaySayisi": 15441962,
+      "kisiSayisi": 373,
+      "fonToplamDeger": 228095840.55,
+      "gunlukGetiri": -0.00435025,
+      "paraGirisiCikisi": -413.59,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "INH",
+      "fonAdi": "GARANTİ PORTFÖY ING BANK ÖZEL BANKACILIK VE PLATİNUM DEĞİŞKEN ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 14.77117,
+      "tedavuldekiPaySayisi": 15441962,
+      "kisiSayisi": 373,
+      "fonToplamDeger": 228095840.55,
+      "gunlukGetiri": -0.00435025,
+      "paraGirisiCikisi": -413.59,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "INH",
       "fonAdi": "GARANTİ PORTFÖY ING BANK ÖZEL BANKACILIK VE PLATİNUM DEĞİŞKEN ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

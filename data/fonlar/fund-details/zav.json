@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "ZAV",
     "slug": "zav",
@@ -12,13 +12,13 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 57.369422,
-    "tedavuldekiPaySayisi": 1098038936,
-    "kisiSayisi": 4872,
-    "fonToplamDeger": 62993859444.38,
-    "gunlukGetiri": 0.00558412,
+    "fiyat": 57.289455,
+    "tedavuldekiPaySayisi": 1097721090,
+    "kisiSayisi": 4868,
+    "fonToplamDeger": 62887842996.96,
+    "gunlukGetiri": -0.0013939,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 117424249.27,
-      "besGun": -516317906.64,
+      "gunluk": -18209224.11,
+      "besGun": -36592404.97,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 10,
-      "besGun": -13,
+      "gunluk": -4,
+      "besGun": -11,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZAV",
+        "fonAdi": "ZİRAAT PORTFÖY BAŞAK SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 57.289455,
+        "tedavuldekiPaySayisi": 1097721090,
+        "kisiSayisi": 4868,
+        "fonToplamDeger": 62887842996.96,
+        "gunlukGetiri": -0.0013939,
+        "paraGirisiCikisi": -18209224.11,
+        "yatirimciDegisimi": -4
+      },
       {
         "fonKodu": "ZAV",
         "fonAdi": "ZİRAAT PORTFÖY BAŞAK SERBEST (DÖVİZ-AVRO) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00558412,
       "paraGirisiCikisi": 117424249.27,
       "yatirimciDegisimi": 10
+    },
+    {
+      "fonKodu": "ZAV",
+      "fonAdi": "ZİRAAT PORTFÖY BAŞAK SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 57.289455,
+      "tedavuldekiPaySayisi": 1097721090,
+      "kisiSayisi": 4868,
+      "fonToplamDeger": 62887842996.96,
+      "gunlukGetiri": -0.0013939,
+      "paraGirisiCikisi": -18209224.11,
+      "yatirimciDegisimi": -4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZAV",
+      "fonAdi": "ZİRAAT PORTFÖY BAŞAK SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 57.289455,
+      "tedavuldekiPaySayisi": 1097721090,
+      "kisiSayisi": 4868,
+      "fonToplamDeger": 62887842996.96,
+      "gunlukGetiri": -0.0013939,
+      "paraGirisiCikisi": -18209224.11,
+      "yatirimciDegisimi": -4
+    },
     {
       "fonKodu": "ZAV",
       "fonAdi": "ZİRAAT PORTFÖY BAŞAK SERBEST (DÖVİZ-AVRO) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

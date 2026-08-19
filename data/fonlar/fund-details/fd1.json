@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "FD1",
     "slug": "fd1",
@@ -12,44 +12,56 @@
     "yonetici": "ONE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "one-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.974076,
-    "tedavuldekiPaySayisi": 9551164,
-    "kisiSayisi": 148,
-    "fonToplamDeger": 18854722.01,
-    "gunlukGetiri": -0.00020816,
+    "fiyat": 1.975007,
+    "tedavuldekiPaySayisi": 9549713,
+    "kisiSayisi": 147,
+    "fonToplamDeger": 18860753.13,
+    "gunlukGetiri": 0.00047161,
     "getiriler": {
-      "birAy": 0.027094999999999998,
-      "ucAy": 0.078793,
-      "altiAy": 0.087341,
-      "yilbasi": 0.232259,
-      "birYil": 0.28934,
+      "birAy": 0.027579,
+      "ucAy": 0.08533400000000001,
+      "altiAy": 0.09410199999999999,
+      "yilbasi": 0.23284,
+      "birYil": 0.27733399999999997,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -404.69,
-      "besGun": -1331180.96,
+      "gunluk": -2865.74,
+      "besGun": -1313626.3,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -1,
       "besGun": -4,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FD1",
+        "fonAdi": "ONE PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-19",
+        "fiyat": 1.975007,
+        "tedavuldekiPaySayisi": 9549713,
+        "kisiSayisi": 147,
+        "fonToplamDeger": 18860753.13,
+        "gunlukGetiri": 0.00047161,
+        "paraGirisiCikisi": -2865.74,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "FD1",
         "fonAdi": "ONE PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": -0.00020816,
       "paraGirisiCikisi": -404.69,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "FD1",
+      "fonAdi": "ONE PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.975007,
+      "tedavuldekiPaySayisi": 9549713,
+      "kisiSayisi": 147,
+      "fonToplamDeger": 18860753.13,
+      "gunlukGetiri": 0.00047161,
+      "paraGirisiCikisi": -2865.74,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FD1",
+      "fonAdi": "ONE PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.975007,
+      "tedavuldekiPaySayisi": 9549713,
+      "kisiSayisi": 147,
+      "fonToplamDeger": 18860753.13,
+      "gunlukGetiri": 0.00047161,
+      "paraGirisiCikisi": -2865.74,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "FD1",
       "fonAdi": "ONE PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

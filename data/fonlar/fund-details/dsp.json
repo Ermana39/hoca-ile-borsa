@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "DSP",
     "slug": "dsp",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 14.808473,
-    "tedavuldekiPaySayisi": 9541355,
-    "kisiSayisi": 1030,
-    "fonToplamDeger": 141292900.17,
-    "gunlukGetiri": 0.00268715,
+    "fiyat": 14.808103,
+    "tedavuldekiPaySayisi": 9537022,
+    "kisiSayisi": 1035,
+    "fonToplamDeger": 141225199.69,
+    "gunlukGetiri": -0.00002499,
     "getiriler": {
-      "birAy": 0.037596,
-      "ucAy": 0.073791,
-      "altiAy": 0.127163,
-      "yilbasi": 0.20831,
-      "birYil": 0.401362,
-      "ucYil": 1.7950139999999999,
-      "besYil": 6.600742
+      "birAy": 0.03757,
+      "ucAy": 0.077971,
+      "altiAy": 0.124832,
+      "yilbasi": 0.208279,
+      "birYil": 0.39803600000000006,
+      "ucYil": 1.8131309999999998,
+      "besYil": 6.604487000000001
     },
     "paraAkisi": {
-      "gunluk": -169438.55,
-      "besGun": -1548392.28,
+      "gunluk": -64163.51,
+      "besGun": -1487846.16,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
-      "besGun": -6,
+      "gunluk": 5,
+      "besGun": -2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DSP",
+        "fonAdi": "DENİZ PORTFÖY DENGELİ FON SEPETİ FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 14.808103,
+        "tedavuldekiPaySayisi": 9537022,
+        "kisiSayisi": 1035,
+        "fonToplamDeger": 141225199.69,
+        "gunlukGetiri": -0.00002499,
+        "paraGirisiCikisi": -64163.51,
+        "yatirimciDegisimi": 5
+      },
       {
         "fonKodu": "DSP",
         "fonAdi": "DENİZ PORTFÖY DENGELİ FON SEPETİ FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00268715,
       "paraGirisiCikisi": -169438.55,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "DSP",
+      "fonAdi": "DENİZ PORTFÖY DENGELİ FON SEPETİ FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 14.808103,
+      "tedavuldekiPaySayisi": 9537022,
+      "kisiSayisi": 1035,
+      "fonToplamDeger": 141225199.69,
+      "gunlukGetiri": -0.00002499,
+      "paraGirisiCikisi": -64163.51,
+      "yatirimciDegisimi": 5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DSP",
+      "fonAdi": "DENİZ PORTFÖY DENGELİ FON SEPETİ FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 14.808103,
+      "tedavuldekiPaySayisi": 9537022,
+      "kisiSayisi": 1035,
+      "fonToplamDeger": 141225199.69,
+      "gunlukGetiri": -0.00002499,
+      "paraGirisiCikisi": -64163.51,
+      "yatirimciDegisimi": 5
+    },
     {
       "fonKodu": "DSP",
       "fonAdi": "DENİZ PORTFÖY DENGELİ FON SEPETİ FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

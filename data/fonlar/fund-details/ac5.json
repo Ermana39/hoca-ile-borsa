@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "AC5",
     "slug": "ac5",
@@ -12,44 +12,56 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 3.718638,
-    "tedavuldekiPaySayisi": 6118053,
+    "fiyat": 3.723104,
+    "tedavuldekiPaySayisi": 6117891,
     "kisiSayisi": 150,
-    "fonToplamDeger": 22750823.86,
-    "gunlukGetiri": 0.00081386,
+    "fonToplamDeger": 22777542.19,
+    "gunlukGetiri": 0.00120098,
     "getiriler": {
-      "birAy": 0.023877000000000002,
-      "ucAy": 0.063955,
-      "altiAy": 0.151675,
-      "yilbasi": 0.199877,
-      "birYil": 0.362206,
-      "ucYil": 1.72688,
+      "birAy": 0.025107,
+      "ucAy": 0.067437,
+      "altiAy": 0.152759,
+      "yilbasi": 0.201318,
+      "birYil": 0.360824,
+      "ucYil": 1.7187569999999999,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 101080.02,
-      "besGun": 478514.79,
+      "gunluk": -603.14,
+      "besGun": 223677.22,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": 1,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AC5",
+        "fonAdi": "PARDUS PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-19",
+        "fiyat": 3.723104,
+        "tedavuldekiPaySayisi": 6117891,
+        "kisiSayisi": 150,
+        "fonToplamDeger": 22777542.19,
+        "gunlukGetiri": 0.00120098,
+        "paraGirisiCikisi": -603.14,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "AC5",
         "fonAdi": "PARDUS PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00081386,
       "paraGirisiCikisi": 101080.02,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "AC5",
+      "fonAdi": "PARDUS PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 3.723104,
+      "tedavuldekiPaySayisi": 6117891,
+      "kisiSayisi": 150,
+      "fonToplamDeger": 22777542.19,
+      "gunlukGetiri": 0.00120098,
+      "paraGirisiCikisi": -603.14,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AC5",
+      "fonAdi": "PARDUS PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 3.723104,
+      "tedavuldekiPaySayisi": 6117891,
+      "kisiSayisi": 150,
+      "fonToplamDeger": 22777542.19,
+      "gunlukGetiri": 0.00120098,
+      "paraGirisiCikisi": -603.14,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "AC5",
       "fonAdi": "PARDUS PORTFÖY İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

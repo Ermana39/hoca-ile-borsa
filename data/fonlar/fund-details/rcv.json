@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "RCV",
     "slug": "rcv",
@@ -12,44 +12,56 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.794395,
-    "tedavuldekiPaySayisi": 36028586,
-    "kisiSayisi": 120,
-    "fonToplamDeger": 64649500,
-    "gunlukGetiri": 0.00233492,
+    "fiyat": 1.790933,
+    "tedavuldekiPaySayisi": 36105128,
+    "kisiSayisi": 125,
+    "fonToplamDeger": 64661859.98,
+    "gunlukGetiri": -0.00192934,
     "getiriler": {
-      "birAy": 0.074362,
-      "ucAy": 0.097721,
-      "altiAy": 0.188454,
-      "yilbasi": 0.33531700000000003,
-      "birYil": 0.472823,
+      "birAy": 0.072289,
+      "ucAy": 0.102759,
+      "altiAy": 0.184885,
+      "yilbasi": 0.33274099999999995,
+      "birYil": 0.45862200000000003,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 110405.54,
-      "besGun": 1654799.55,
+      "gunluk": 137081.59,
+      "besGun": 1563144.58,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
-      "besGun": 19,
+      "gunluk": 5,
+      "besGun": 20,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RCV",
+        "fonAdi": "AZİMUT PORTFÖY BİRİNCİ ÇOKLU VARLIK KATILIM FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 1.790933,
+        "tedavuldekiPaySayisi": 36105128,
+        "kisiSayisi": 125,
+        "fonToplamDeger": 64661859.98,
+        "gunlukGetiri": -0.00192934,
+        "paraGirisiCikisi": 137081.59,
+        "yatirimciDegisimi": 5
+      },
       {
         "fonKodu": "RCV",
         "fonAdi": "AZİMUT PORTFÖY BİRİNCİ ÇOKLU VARLIK KATILIM FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00233492,
       "paraGirisiCikisi": 110405.54,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "RCV",
+      "fonAdi": "AZİMUT PORTFÖY BİRİNCİ ÇOKLU VARLIK KATILIM FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.790933,
+      "tedavuldekiPaySayisi": 36105128,
+      "kisiSayisi": 125,
+      "fonToplamDeger": 64661859.98,
+      "gunlukGetiri": -0.00192934,
+      "paraGirisiCikisi": 137081.59,
+      "yatirimciDegisimi": 5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RCV",
+      "fonAdi": "AZİMUT PORTFÖY BİRİNCİ ÇOKLU VARLIK KATILIM FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.790933,
+      "tedavuldekiPaySayisi": 36105128,
+      "kisiSayisi": 125,
+      "fonToplamDeger": 64661859.98,
+      "gunlukGetiri": -0.00192934,
+      "paraGirisiCikisi": 137081.59,
+      "yatirimciDegisimi": 5
+    },
     {
       "fonKodu": "RCV",
       "fonAdi": "AZİMUT PORTFÖY BİRİNCİ ÇOKLU VARLIK KATILIM FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

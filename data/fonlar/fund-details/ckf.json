@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "CKF",
     "slug": "ckf",
@@ -12,44 +12,56 @@
     "yonetici": "ALBARAKA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "albaraka-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 2.133412,
-    "tedavuldekiPaySayisi": 312714027,
-    "kisiSayisi": 2553,
-    "fonToplamDeger": 667147736.37,
-    "gunlukGetiri": 0.00363695,
+    "fiyat": 2.114036,
+    "tedavuldekiPaySayisi": 314697534,
+    "kisiSayisi": 2639,
+    "fonToplamDeger": 665281851.11,
+    "gunlukGetiri": -0.00908217,
     "getiriler": {
-      "birAy": 0.075355,
-      "ucAy": 0.07897,
-      "altiAy": 0.295147,
-      "yilbasi": 0.38521700000000003,
-      "birYil": 0.619851,
+      "birAy": 0.065588,
+      "ucAy": 0.075089,
+      "altiAy": 0.27234400000000003,
+      "yilbasi": 0.372637,
+      "birYil": 0.607623,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -636330.66,
-      "besGun": 3525836.76,
+      "gunluk": 4193205.2,
+      "besGun": 7706275.31,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 51,
-      "besGun": 89,
+      "gunluk": 86,
+      "besGun": 160,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "CKF",
+        "fonAdi": "ALBARAKA PORTFÖY ÇOKLU VARLIK KATILIM FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 2.114036,
+        "tedavuldekiPaySayisi": 314697534,
+        "kisiSayisi": 2639,
+        "fonToplamDeger": 665281851.11,
+        "gunlukGetiri": -0.00908217,
+        "paraGirisiCikisi": 4193205.2,
+        "yatirimciDegisimi": 86
+      },
       {
         "fonKodu": "CKF",
         "fonAdi": "ALBARAKA PORTFÖY ÇOKLU VARLIK KATILIM FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00363695,
       "paraGirisiCikisi": -636330.66,
       "yatirimciDegisimi": 51
+    },
+    {
+      "fonKodu": "CKF",
+      "fonAdi": "ALBARAKA PORTFÖY ÇOKLU VARLIK KATILIM FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 2.114036,
+      "tedavuldekiPaySayisi": 314697534,
+      "kisiSayisi": 2639,
+      "fonToplamDeger": 665281851.11,
+      "gunlukGetiri": -0.00908217,
+      "paraGirisiCikisi": 4193205.2,
+      "yatirimciDegisimi": 86
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "CKF",
+      "fonAdi": "ALBARAKA PORTFÖY ÇOKLU VARLIK KATILIM FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 2.114036,
+      "tedavuldekiPaySayisi": 314697534,
+      "kisiSayisi": 2639,
+      "fonToplamDeger": 665281851.11,
+      "gunlukGetiri": -0.00908217,
+      "paraGirisiCikisi": 4193205.2,
+      "yatirimciDegisimi": 86
+    },
     {
       "fonKodu": "CKF",
       "fonAdi": "ALBARAKA PORTFÖY ÇOKLU VARLIK KATILIM FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "NSP",
     "slug": "nsp",
@@ -12,44 +12,56 @@
     "yonetici": "NUROL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "nurol-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.839095,
-    "tedavuldekiPaySayisi": 738010004,
-    "kisiSayisi": 2768,
-    "fonToplamDeger": 1357270568.17,
-    "gunlukGetiri": 0.00105053,
+    "fiyat": 1.841035,
+    "tedavuldekiPaySayisi": 734804304,
+    "kisiSayisi": 2763,
+    "fonToplamDeger": 1352800133.02,
+    "gunlukGetiri": 0.00105487,
     "getiriler": {
-      "birAy": 0.031145999999999997,
-      "ucAy": 0.10325,
-      "altiAy": 0.211337,
-      "yilbasi": 0.26928599999999997,
-      "birYil": 0.469128,
+      "birAy": 0.032234,
+      "ucAy": 0.10205700000000001,
+      "altiAy": 0.211428,
+      "yilbasi": 0.270625,
+      "birYil": 0.469009,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 16802626.64,
-      "besGun": -44411735.16,
+      "gunluk": -5901805.9,
+      "besGun": -45325509.8,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 11,
-      "besGun": -24,
+      "gunluk": -5,
+      "besGun": -28,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "NSP",
+        "fonAdi": "NUROL PORTFÖY PARA PİYASASI KATILIM FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 1.841035,
+        "tedavuldekiPaySayisi": 734804304,
+        "kisiSayisi": 2763,
+        "fonToplamDeger": 1352800133.02,
+        "gunlukGetiri": 0.00105487,
+        "paraGirisiCikisi": -5901805.9,
+        "yatirimciDegisimi": -5
+      },
       {
         "fonKodu": "NSP",
         "fonAdi": "NUROL PORTFÖY PARA PİYASASI KATILIM FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00105053,
       "paraGirisiCikisi": 16802626.64,
       "yatirimciDegisimi": 11
+    },
+    {
+      "fonKodu": "NSP",
+      "fonAdi": "NUROL PORTFÖY PARA PİYASASI KATILIM FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.841035,
+      "tedavuldekiPaySayisi": 734804304,
+      "kisiSayisi": 2763,
+      "fonToplamDeger": 1352800133.02,
+      "gunlukGetiri": 0.00105487,
+      "paraGirisiCikisi": -5901805.9,
+      "yatirimciDegisimi": -5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "NSP",
+      "fonAdi": "NUROL PORTFÖY PARA PİYASASI KATILIM FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.841035,
+      "tedavuldekiPaySayisi": 734804304,
+      "kisiSayisi": 2763,
+      "fonToplamDeger": 1352800133.02,
+      "gunlukGetiri": 0.00105487,
+      "paraGirisiCikisi": -5901805.9,
+      "yatirimciDegisimi": -5
+    },
     {
       "fonKodu": "NSP",
       "fonAdi": "NUROL PORTFÖY PARA PİYASASI KATILIM FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

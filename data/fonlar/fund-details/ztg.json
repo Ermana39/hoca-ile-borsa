@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "ZTG",
     "slug": "ztg",
@@ -12,44 +12,56 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.303653,
-    "tedavuldekiPaySayisi": 30260633,
-    "kisiSayisi": 1009,
-    "fonToplamDeger": 39449371.47,
-    "gunlukGetiri": 0.0029427,
+    "fiyat": 1.312269,
+    "tedavuldekiPaySayisi": 30204649,
+    "kisiSayisi": 1025,
+    "fonToplamDeger": 39636616.82,
+    "gunlukGetiri": 0.00660912,
     "getiriler": {
-      "birAy": 0.012027000000000001,
-      "ucAy": 0.076988,
-      "altiAy": 0.145479,
-      "yilbasi": 0.23350200000000002,
-      "birYil": 0.284373,
+      "birAy": 0.018716,
+      "ucAy": 0.08583600000000001,
+      "altiAy": 0.156636,
+      "yilbasi": 0.241655,
+      "birYil": 0.290962,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -615309.88,
-      "besGun": -1193105.23,
+      "gunluk": -73466.07,
+      "besGun": -1677284.96,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
-      "besGun": -4,
+      "gunluk": 16,
+      "besGun": 9,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZTG",
+        "fonAdi": "ZİRAAT PORTFÖY TARIM VE GIDA FON SEPETİ FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 1.312269,
+        "tedavuldekiPaySayisi": 30204649,
+        "kisiSayisi": 1025,
+        "fonToplamDeger": 39636616.82,
+        "gunlukGetiri": 0.00660912,
+        "paraGirisiCikisi": -73466.07,
+        "yatirimciDegisimi": 16
+      },
       {
         "fonKodu": "ZTG",
         "fonAdi": "ZİRAAT PORTFÖY TARIM VE GIDA FON SEPETİ FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.0029427,
       "paraGirisiCikisi": -615309.88,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "ZTG",
+      "fonAdi": "ZİRAAT PORTFÖY TARIM VE GIDA FON SEPETİ FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.312269,
+      "tedavuldekiPaySayisi": 30204649,
+      "kisiSayisi": 1025,
+      "fonToplamDeger": 39636616.82,
+      "gunlukGetiri": 0.00660912,
+      "paraGirisiCikisi": -73466.07,
+      "yatirimciDegisimi": 16
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZTG",
+      "fonAdi": "ZİRAAT PORTFÖY TARIM VE GIDA FON SEPETİ FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.312269,
+      "tedavuldekiPaySayisi": 30204649,
+      "kisiSayisi": 1025,
+      "fonToplamDeger": 39636616.82,
+      "gunlukGetiri": 0.00660912,
+      "paraGirisiCikisi": -73466.07,
+      "yatirimciDegisimi": 16
+    },
     {
       "fonKodu": "ZTG",
       "fonAdi": "ZİRAAT PORTFÖY TARIM VE GIDA FON SEPETİ FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

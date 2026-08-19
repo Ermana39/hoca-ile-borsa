@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "HSP",
     "slug": "hsp",
@@ -12,13 +12,13 @@
     "yonetici": "HSBC PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hsbc-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 47.210588,
+    "fiyat": 47.207966,
     "tedavuldekiPaySayisi": 2201775,
     "kisiSayisi": 61,
-    "fonToplamDeger": 103947092.86,
-    "gunlukGetiri": 0.00103094,
+    "fonToplamDeger": 103941318.5,
+    "gunlukGetiri": -0.00005554,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -30,26 +30,38 @@
     },
     "paraAkisi": {
       "gunluk": 0,
-      "besGun": 602332.73,
+      "besGun": 6871.41,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": 1,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HSP",
+        "fonAdi": "HSBC PORTFÖY KAR PAYI ÖDEYEN OCAK 2030 SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 47.207966,
+        "tedavuldekiPaySayisi": 2201775,
+        "kisiSayisi": 61,
+        "fonToplamDeger": 103941318.5,
+        "gunlukGetiri": -0.00005554,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "HSP",
         "fonAdi": "HSBC PORTFÖY KAR PAYI ÖDEYEN OCAK 2030 SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00103094,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HSP",
+      "fonAdi": "HSBC PORTFÖY KAR PAYI ÖDEYEN OCAK 2030 SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 47.207966,
+      "tedavuldekiPaySayisi": 2201775,
+      "kisiSayisi": 61,
+      "fonToplamDeger": 103941318.5,
+      "gunlukGetiri": -0.00005554,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HSP",
+      "fonAdi": "HSBC PORTFÖY KAR PAYI ÖDEYEN OCAK 2030 SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 47.207966,
+      "tedavuldekiPaySayisi": 2201775,
+      "kisiSayisi": 61,
+      "fonToplamDeger": 103941318.5,
+      "gunlukGetiri": -0.00005554,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "HSP",
       "fonAdi": "HSBC PORTFÖY KAR PAYI ÖDEYEN OCAK 2030 SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

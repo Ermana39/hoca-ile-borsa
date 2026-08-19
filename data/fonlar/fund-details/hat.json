@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "HAT",
     "slug": "hat",
@@ -12,25 +12,25 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.875371,
-    "tedavuldekiPaySayisi": 2240853,
+    "fiyat": 1.876022,
+    "tedavuldekiPaySayisi": 2050325,
     "kisiSayisi": 87,
-    "fonToplamDeger": 4202430.76,
-    "gunlukGetiri": -0.0002367,
+    "fonToplamDeger": 3846455.79,
+    "gunlukGetiri": 0.00034713,
     "getiriler": {
-      "birAy": 0.003604,
-      "ucAy": 0.031111,
-      "altiAy": 0.087309,
-      "yilbasi": 0.122727,
-      "birYil": 0.262034,
+      "birAy": 0.003952,
+      "ucAy": 0.029726,
+      "altiAy": 0.085882,
+      "yilbasi": 0.123116,
+      "birYil": 0.261274,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 348.82,
-      "besGun": -150284.27,
+      "gunluk": -357434.72,
+      "besGun": -507718.99,
       "birAy": null,
       "ucAy": null
     },
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HAT",
+        "fonAdi": "HEDEF PORTFÖY ATLAS İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-19",
+        "fiyat": 1.876022,
+        "tedavuldekiPaySayisi": 2050325,
+        "kisiSayisi": 87,
+        "fonToplamDeger": 3846455.79,
+        "gunlukGetiri": 0.00034713,
+        "paraGirisiCikisi": -357434.72,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "HAT",
         "fonAdi": "HEDEF PORTFÖY ATLAS İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -220,9 +232,33 @@
       "gunlukGetiri": -0.0002367,
       "paraGirisiCikisi": 348.82,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HAT",
+      "fonAdi": "HEDEF PORTFÖY ATLAS İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 1.876022,
+      "tedavuldekiPaySayisi": 2050325,
+      "kisiSayisi": 87,
+      "fonToplamDeger": 3846455.79,
+      "gunlukGetiri": 0.00034713,
+      "paraGirisiCikisi": -357434.72,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HAT",
+      "fonAdi": "HEDEF PORTFÖY ATLAS İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 1.876022,
+      "tedavuldekiPaySayisi": 2050325,
+      "kisiSayisi": 87,
+      "fonToplamDeger": 3846455.79,
+      "gunlukGetiri": 0.00034713,
+      "paraGirisiCikisi": -357434.72,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "HAT",
       "fonAdi": "HEDEF PORTFÖY ATLAS İSTATİSTİKSEL ARBİTRAJ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

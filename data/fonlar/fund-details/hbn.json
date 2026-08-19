@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "HBN",
     "slug": "hbn",
@@ -12,44 +12,56 @@
     "yonetici": "HSBC PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hsbc-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 4.324883,
-    "tedavuldekiPaySayisi": 127533146,
-    "kisiSayisi": 1086,
-    "fonToplamDeger": 551565978.08,
-    "gunlukGetiri": -0.00002798,
+    "fiyat": 4.313223,
+    "tedavuldekiPaySayisi": 127515493,
+    "kisiSayisi": 1091,
+    "fonToplamDeger": 550002784.6,
+    "gunlukGetiri": -0.00269603,
     "getiriler": {
-      "birAy": 0.027849,
-      "ucAy": 0.050175,
-      "altiAy": 0.08319800000000001,
-      "yilbasi": 0.21167000000000002,
-      "birYil": 0.31152599999999997,
-      "ucYil": 1.537401,
+      "birAy": 0.025078,
+      "ucAy": 0.052488,
+      "altiAy": 0.08146,
+      "yilbasi": 0.208403,
+      "birYil": 0.30550499999999997,
+      "ucYil": 1.571411,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -16010.72,
-      "besGun": -7580463.27,
+      "gunluk": -76141.33,
+      "besGun": -8317903.29,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
-      "besGun": -10,
+      "gunluk": 5,
+      "besGun": -4,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HBN",
+        "fonAdi": "HSBC PORTFÖY BİRİNCİ FON SEPETİ FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 4.313223,
+        "tedavuldekiPaySayisi": 127515493,
+        "kisiSayisi": 1091,
+        "fonToplamDeger": 550002784.6,
+        "gunlukGetiri": -0.00269603,
+        "paraGirisiCikisi": -76141.33,
+        "yatirimciDegisimi": 5
+      },
       {
         "fonKodu": "HBN",
         "fonAdi": "HSBC PORTFÖY BİRİNCİ FON SEPETİ FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": -0.00002798,
       "paraGirisiCikisi": -16010.72,
       "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "HBN",
+      "fonAdi": "HSBC PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 4.313223,
+      "tedavuldekiPaySayisi": 127515493,
+      "kisiSayisi": 1091,
+      "fonToplamDeger": 550002784.6,
+      "gunlukGetiri": -0.00269603,
+      "paraGirisiCikisi": -76141.33,
+      "yatirimciDegisimi": 5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HBN",
+      "fonAdi": "HSBC PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 4.313223,
+      "tedavuldekiPaySayisi": 127515493,
+      "kisiSayisi": 1091,
+      "fonToplamDeger": 550002784.6,
+      "gunlukGetiri": -0.00269603,
+      "paraGirisiCikisi": -76141.33,
+      "yatirimciDegisimi": 5
+    },
     {
       "fonKodu": "HBN",
       "fonAdi": "HSBC PORTFÖY BİRİNCİ FON SEPETİ FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

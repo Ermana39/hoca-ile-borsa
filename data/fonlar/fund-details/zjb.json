@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "ZJB",
     "slug": "zjb",
@@ -12,44 +12,56 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 10.44315,
-    "tedavuldekiPaySayisi": 807632256,
-    "kisiSayisi": 1756,
-    "fonToplamDeger": 8434224610.6,
-    "gunlukGetiri": 0.01032523,
+    "fiyat": 10.366147,
+    "tedavuldekiPaySayisi": 808593913,
+    "kisiSayisi": 1758,
+    "fonToplamDeger": 8382003735.97,
+    "gunlukGetiri": -0.00737354,
     "getiriler": {
-      "birAy": 0.08668,
-      "ucAy": -0.062016,
-      "altiAy": -0.157126,
-      "yilbasi": -0.171583,
-      "birYil": -0.213502,
-      "ucYil": 2.239448,
-      "besYil": 9.442711000000001
+      "birAy": 0.078667,
+      "ucAy": -0.014997,
+      "altiAy": -0.16363499999999997,
+      "yilbasi": -0.17769100000000002,
+      "birYil": -0.217943,
+      "ucYil": 2.317045,
+      "besYil": 9.365743
     },
     "paraAkisi": {
-      "gunluk": -216183.65,
-      "besGun": -3338179.04,
+      "gunluk": 9968677.83,
+      "besGun": 8388239.16,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -8,
-      "besGun": -11,
+      "gunluk": 2,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZJB",
+        "fonAdi": "ZİRAAT PORTFÖY BİRİNCİ SERBEST (TL) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 10.366147,
+        "tedavuldekiPaySayisi": 808593913,
+        "kisiSayisi": 1758,
+        "fonToplamDeger": 8382003735.97,
+        "gunlukGetiri": -0.00737354,
+        "paraGirisiCikisi": 9968677.83,
+        "yatirimciDegisimi": 2
+      },
       {
         "fonKodu": "ZJB",
         "fonAdi": "ZİRAAT PORTFÖY BİRİNCİ SERBEST (TL) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.01032523,
       "paraGirisiCikisi": -216183.65,
       "yatirimciDegisimi": -8
+    },
+    {
+      "fonKodu": "ZJB",
+      "fonAdi": "ZİRAAT PORTFÖY BİRİNCİ SERBEST (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 10.366147,
+      "tedavuldekiPaySayisi": 808593913,
+      "kisiSayisi": 1758,
+      "fonToplamDeger": 8382003735.97,
+      "gunlukGetiri": -0.00737354,
+      "paraGirisiCikisi": 9968677.83,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZJB",
+      "fonAdi": "ZİRAAT PORTFÖY BİRİNCİ SERBEST (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 10.366147,
+      "tedavuldekiPaySayisi": 808593913,
+      "kisiSayisi": 1758,
+      "fonToplamDeger": 8382003735.97,
+      "gunlukGetiri": -0.00737354,
+      "paraGirisiCikisi": 9968677.83,
+      "yatirimciDegisimi": 2
+    },
     {
       "fonKodu": "ZJB",
       "fonAdi": "ZİRAAT PORTFÖY BİRİNCİ SERBEST (TL) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

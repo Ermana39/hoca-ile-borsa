@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "KIH",
     "slug": "kih",
@@ -12,25 +12,25 @@
     "yonetici": "KARE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kare-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.534641,
-    "tedavuldekiPaySayisi": 38713106,
+    "fiyat": 1.536097,
+    "tedavuldekiPaySayisi": 38713006,
     "kisiSayisi": 28,
-    "fonToplamDeger": 59410718.38,
-    "gunlukGetiri": 0.00127293,
+    "fonToplamDeger": 59466944.8,
+    "gunlukGetiri": 0.00094876,
     "getiriler": {
-      "birAy": 0.028045,
-      "ucAy": 0.09040100000000001,
-      "altiAy": 0.17991900000000002,
-      "yilbasi": 0.222381,
-      "birYil": 0.337906,
+      "birAy": 0.02902,
+      "ucAy": 0.09018000000000001,
+      "altiAy": 0.18142,
+      "yilbasi": 0.223541,
+      "birYil": 0.338076,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": -761.62,
+      "gunluk": -153.61,
+      "besGun": 152.93,
       "birAy": null,
       "ucAy": null
     },
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KIH",
+        "fonAdi": "KARE PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 1.536097,
+        "tedavuldekiPaySayisi": 38713006,
+        "kisiSayisi": 28,
+        "fonToplamDeger": 59466944.8,
+        "gunlukGetiri": 0.00094876,
+        "paraGirisiCikisi": -153.61,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "KIH",
         "fonAdi": "KARE PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00127293,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KIH",
+      "fonAdi": "KARE PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.536097,
+      "tedavuldekiPaySayisi": 38713006,
+      "kisiSayisi": 28,
+      "fonToplamDeger": 59466944.8,
+      "gunlukGetiri": 0.00094876,
+      "paraGirisiCikisi": -153.61,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KIH",
+      "fonAdi": "KARE PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.536097,
+      "tedavuldekiPaySayisi": 38713006,
+      "kisiSayisi": 28,
+      "fonToplamDeger": 59466944.8,
+      "gunlukGetiri": 0.00094876,
+      "paraGirisiCikisi": -153.61,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "KIH",
       "fonAdi": "KARE PORTFÖY İSTATİSTİKSEL ARBİTRAJ SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

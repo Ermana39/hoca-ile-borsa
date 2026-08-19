@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "PPP",
     "slug": "ppp",
@@ -12,44 +12,56 @@
     "yonetici": "PERFORM PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "perform-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 3.114455,
-    "tedavuldekiPaySayisi": 2624402319,
-    "kisiSayisi": 368,
-    "fonToplamDeger": 8173582841.61,
-    "gunlukGetiri": 0.00105394,
+    "fiyat": 3.117681,
+    "tedavuldekiPaySayisi": 2637202046,
+    "kisiSayisi": 369,
+    "fonToplamDeger": 8221953716.52,
+    "gunlukGetiri": 0.00103582,
     "getiriler": {
-      "birAy": 0.031899000000000004,
-      "ucAy": 0.102739,
-      "altiAy": 0.21126999999999999,
-      "yilbasi": 0.269722,
-      "birYil": 0.472136,
+      "birAy": 0.032968000000000004,
+      "ucAy": 0.101567,
+      "altiAy": 0.21124199999999999,
+      "yilbasi": 0.271038,
+      "birYil": 0.471962,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -32413497.32,
-      "besGun": -247947644.33,
+      "gunluk": 39905465.67,
+      "besGun": -115129026.53,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": -2,
+      "gunluk": 1,
+      "besGun": -3,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PPP",
+        "fonAdi": "PERFORM PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 3.117681,
+        "tedavuldekiPaySayisi": 2637202046,
+        "kisiSayisi": 369,
+        "fonToplamDeger": 8221953716.52,
+        "gunlukGetiri": 0.00103582,
+        "paraGirisiCikisi": 39905465.67,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "PPP",
         "fonAdi": "PERFORM PORTFÖY PARA PİYASASI (TL) FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00105394,
       "paraGirisiCikisi": -32413497.32,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "PPP",
+      "fonAdi": "PERFORM PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 3.117681,
+      "tedavuldekiPaySayisi": 2637202046,
+      "kisiSayisi": 369,
+      "fonToplamDeger": 8221953716.52,
+      "gunlukGetiri": 0.00103582,
+      "paraGirisiCikisi": 39905465.67,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PPP",
+      "fonAdi": "PERFORM PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 3.117681,
+      "tedavuldekiPaySayisi": 2637202046,
+      "kisiSayisi": 369,
+      "fonToplamDeger": 8221953716.52,
+      "gunlukGetiri": 0.00103582,
+      "paraGirisiCikisi": 39905465.67,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "PPP",
       "fonAdi": "PERFORM PORTFÖY PARA PİYASASI (TL) FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

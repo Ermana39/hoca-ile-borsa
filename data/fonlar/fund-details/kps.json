@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "KPS",
     "slug": "kps",
@@ -12,13 +12,13 @@
     "yonetici": "Bilinmiyor",
     "yoneticiSlug": "bilinmiyor",
     "yoneticiKaynak": "",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 47.83129,
+    "fiyat": 47.855828,
     "tedavuldekiPaySayisi": 485020000,
     "kisiSayisi": 3270,
-    "fonToplamDeger": 23199132110.78,
-    "gunlukGetiri": null,
+    "fonToplamDeger": 23211033872.09,
+    "gunlukGetiri": 0.00051301,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": null,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 2,
+    "tarihselGunSayisi": 3,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 0,
+      "observedDays": 1,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KPS",
+        "fonAdi": "QNB PORTFÖY KAR PAYI ÖDEYEN ONİKİNCİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 47.855828,
+        "tedavuldekiPaySayisi": 485020000,
+        "kisiSayisi": 3270,
+        "fonToplamDeger": 23211033872.09,
+        "gunlukGetiri": 0.00051301,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "KPS",
         "fonAdi": "QNB PORTFÖY KAR PAYI ÖDEYEN ONİKİNCİ SERBEST (DÖVİZ) FON",
@@ -100,9 +112,33 @@
       "gunlukGetiri": null,
       "paraGirisiCikisi": null,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KPS",
+      "fonAdi": "QNB PORTFÖY KAR PAYI ÖDEYEN ONİKİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 47.855828,
+      "tedavuldekiPaySayisi": 485020000,
+      "kisiSayisi": 3270,
+      "fonToplamDeger": 23211033872.09,
+      "gunlukGetiri": 0.00051301,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KPS",
+      "fonAdi": "QNB PORTFÖY KAR PAYI ÖDEYEN ONİKİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 47.855828,
+      "tedavuldekiPaySayisi": 485020000,
+      "kisiSayisi": 3270,
+      "fonToplamDeger": 23211033872.09,
+      "gunlukGetiri": 0.00051301,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "KPS",
       "fonAdi": "QNB PORTFÖY KAR PAYI ÖDEYEN ONİKİNCİ SERBEST (DÖVİZ) FON",
@@ -131,7 +167,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 0,
+    "observedDays": 1,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

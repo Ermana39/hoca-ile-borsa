@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "DUH",
     "slug": "duh",
@@ -12,44 +12,56 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.088808,
-    "tedavuldekiPaySayisi": 342318432,
-    "kisiSayisi": 235,
-    "fonToplamDeger": 372719147.73,
-    "gunlukGetiri": 0.19655542,
+    "fiyat": 1.285265,
+    "tedavuldekiPaySayisi": 341964360,
+    "kisiSayisi": 241,
+    "fonToplamDeger": 439514916.25,
+    "gunlukGetiri": 0.1804331,
     "getiriler": {
-      "birAy": -0.083192,
-      "ucAy": -0.02859,
-      "altiAy": -0.19140000000000001,
-      "yilbasi": -0.18990500000000002,
-      "birYil": -0.16735499999999998,
+      "birAy": 0.08223000000000001,
+      "ucAy": 0.133324,
+      "altiAy": -0.018188,
+      "yilbasi": -0.043737000000000005,
+      "birYil": -0.018667,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -8330833.67,
-      "besGun": 8954375.93,
+      "gunluk": -455076.35,
+      "besGun": 8472791.09,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 6,
-      "besGun": 100,
+      "besGun": 101,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DUH",
+        "fonAdi": "HEDEF PORTFÖY UFUK HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-19",
+        "fiyat": 1.285265,
+        "tedavuldekiPaySayisi": 341964360,
+        "kisiSayisi": 241,
+        "fonToplamDeger": 439514916.25,
+        "gunlukGetiri": 0.1804331,
+        "paraGirisiCikisi": -455076.35,
+        "yatirimciDegisimi": 6
+      },
       {
         "fonKodu": "DUH",
         "fonAdi": "HEDEF PORTFÖY UFUK HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.19655542,
       "paraGirisiCikisi": -8330833.67,
       "yatirimciDegisimi": 6
+    },
+    {
+      "fonKodu": "DUH",
+      "fonAdi": "HEDEF PORTFÖY UFUK HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 1.285265,
+      "tedavuldekiPaySayisi": 341964360,
+      "kisiSayisi": 241,
+      "fonToplamDeger": 439514916.25,
+      "gunlukGetiri": 0.1804331,
+      "paraGirisiCikisi": -455076.35,
+      "yatirimciDegisimi": 6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DUH",
+      "fonAdi": "HEDEF PORTFÖY UFUK HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 1.285265,
+      "tedavuldekiPaySayisi": 341964360,
+      "kisiSayisi": 241,
+      "fonToplamDeger": 439514916.25,
+      "gunlukGetiri": 0.1804331,
+      "paraGirisiCikisi": -455076.35,
+      "yatirimciDegisimi": 6
+    },
     {
       "fonKodu": "DUH",
       "fonAdi": "HEDEF PORTFÖY UFUK HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

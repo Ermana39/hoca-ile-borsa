@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "YCH",
     "slug": "ych",
@@ -12,13 +12,13 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 2.691932,
+    "fiyat": 2.685776,
     "tedavuldekiPaySayisi": 39969656,
     "kisiSayisi": 115,
-    "fonToplamDeger": 107595613.49,
-    "gunlukGetiri": 0.00449872,
+    "fonToplamDeger": 107349551.27,
+    "gunlukGetiri": -0.00228683,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -942332.33,
+      "gunluk": 0,
       "besGun": -2171450.68,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 0,
       "besGun": -1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YCH",
+        "fonAdi": "YAPI KREDİ PORTFÖY ODEABANK AYRICALIKLI VE ÖZEL BANKACILIK FON SEPETİ ÖZEL FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 2.685776,
+        "tedavuldekiPaySayisi": 39969656,
+        "kisiSayisi": 115,
+        "fonToplamDeger": 107349551.27,
+        "gunlukGetiri": -0.00228683,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "YCH",
         "fonAdi": "YAPI KREDİ PORTFÖY ODEABANK AYRICALIKLI VE ÖZEL BANKACILIK FON SEPETİ ÖZEL FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00449872,
       "paraGirisiCikisi": -942332.33,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "YCH",
+      "fonAdi": "YAPI KREDİ PORTFÖY ODEABANK AYRICALIKLI VE ÖZEL BANKACILIK FON SEPETİ ÖZEL FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 2.685776,
+      "tedavuldekiPaySayisi": 39969656,
+      "kisiSayisi": 115,
+      "fonToplamDeger": 107349551.27,
+      "gunlukGetiri": -0.00228683,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YCH",
+      "fonAdi": "YAPI KREDİ PORTFÖY ODEABANK AYRICALIKLI VE ÖZEL BANKACILIK FON SEPETİ ÖZEL FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 2.685776,
+      "tedavuldekiPaySayisi": 39969656,
+      "kisiSayisi": 115,
+      "fonToplamDeger": 107349551.27,
+      "gunlukGetiri": -0.00228683,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "YCH",
       "fonAdi": "YAPI KREDİ PORTFÖY ODEABANK AYRICALIKLI VE ÖZEL BANKACILIK FON SEPETİ ÖZEL FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

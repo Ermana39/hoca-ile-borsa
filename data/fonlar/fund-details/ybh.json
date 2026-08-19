@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "YBH",
     "slug": "ybh",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 54.135932,
-    "tedavuldekiPaySayisi": 11881404,
-    "kisiSayisi": 603,
-    "fonToplamDeger": 643210883.29,
-    "gunlukGetiri": 0.00059031,
+    "fiyat": 53.980685,
+    "tedavuldekiPaySayisi": 11872433,
+    "kisiSayisi": 604,
+    "fonToplamDeger": 640882065.04,
+    "gunlukGetiri": -0.00286773,
     "getiriler": {
-      "birAy": 0.026538,
-      "ucAy": 0.084922,
-      "altiAy": 0.097468,
-      "yilbasi": 0.13089399999999998,
-      "birYil": 0.257048,
+      "birAy": 0.023594,
+      "ucAy": 0.08399699999999999,
+      "altiAy": 0.09492,
+      "yilbasi": 0.12765,
+      "birYil": 0.250147,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1479913.97,
-      "besGun": -47489536.83,
+      "gunluk": -484260.73,
+      "besGun": -46510149.69,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
-      "besGun": -6,
+      "gunluk": 1,
+      "besGun": -8,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YBH",
+        "fonAdi": "YAPI KREDİ PORTFÖY 5-15 YIL VADELİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 53.980685,
+        "tedavuldekiPaySayisi": 11872433,
+        "kisiSayisi": 604,
+        "fonToplamDeger": 640882065.04,
+        "gunlukGetiri": -0.00286773,
+        "paraGirisiCikisi": -484260.73,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "YBH",
         "fonAdi": "YAPI KREDİ PORTFÖY 5-15 YIL VADELİ SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00059031,
       "paraGirisiCikisi": -1479913.97,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "YBH",
+      "fonAdi": "YAPI KREDİ PORTFÖY 5-15 YIL VADELİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 53.980685,
+      "tedavuldekiPaySayisi": 11872433,
+      "kisiSayisi": 604,
+      "fonToplamDeger": 640882065.04,
+      "gunlukGetiri": -0.00286773,
+      "paraGirisiCikisi": -484260.73,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YBH",
+      "fonAdi": "YAPI KREDİ PORTFÖY 5-15 YIL VADELİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 53.980685,
+      "tedavuldekiPaySayisi": 11872433,
+      "kisiSayisi": 604,
+      "fonToplamDeger": 640882065.04,
+      "gunlukGetiri": -0.00286773,
+      "paraGirisiCikisi": -484260.73,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "YBH",
       "fonAdi": "YAPI KREDİ PORTFÖY 5-15 YIL VADELİ SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

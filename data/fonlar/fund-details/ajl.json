@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "AJL",
     "slug": "ajl",
@@ -12,13 +12,13 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 64.233293,
-    "tedavuldekiPaySayisi": 73541968,
-    "kisiSayisi": 1309,
-    "fonToplamDeger": 4723842808.45,
-    "gunlukGetiri": 0.00199107,
+    "fiyat": 64.264348,
+    "tedavuldekiPaySayisi": 73345617,
+    "kisiSayisi": 1305,
+    "fonToplamDeger": 4713508246.61,
+    "gunlukGetiri": 0.00048347,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -2340340.03,
-      "besGun": -33531588.42,
+      "gunluk": -12618368.99,
+      "besGun": -38317196.44,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
-      "besGun": -14,
+      "gunluk": -4,
+      "besGun": -16,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AJL",
+        "fonAdi": "AK PORTFÖY BEŞİNCİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 64.264348,
+        "tedavuldekiPaySayisi": 73345617,
+        "kisiSayisi": 1305,
+        "fonToplamDeger": 4713508246.61,
+        "gunlukGetiri": 0.00048347,
+        "paraGirisiCikisi": -12618368.99,
+        "yatirimciDegisimi": -4
+      },
       {
         "fonKodu": "AJL",
         "fonAdi": "AK PORTFÖY BEŞİNCİ SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00199107,
       "paraGirisiCikisi": -2340340.03,
       "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "AJL",
+      "fonAdi": "AK PORTFÖY BEŞİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 64.264348,
+      "tedavuldekiPaySayisi": 73345617,
+      "kisiSayisi": 1305,
+      "fonToplamDeger": 4713508246.61,
+      "gunlukGetiri": 0.00048347,
+      "paraGirisiCikisi": -12618368.99,
+      "yatirimciDegisimi": -4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AJL",
+      "fonAdi": "AK PORTFÖY BEŞİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 64.264348,
+      "tedavuldekiPaySayisi": 73345617,
+      "kisiSayisi": 1305,
+      "fonToplamDeger": 4713508246.61,
+      "gunlukGetiri": 0.00048347,
+      "paraGirisiCikisi": -12618368.99,
+      "yatirimciDegisimi": -4
+    },
     {
       "fonKodu": "AJL",
       "fonAdi": "AK PORTFÖY BEŞİNCİ SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

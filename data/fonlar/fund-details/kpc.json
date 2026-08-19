@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "KPC",
     "slug": "kpc",
@@ -12,44 +12,56 @@
     "yonetici": "KUVEYT TÜRK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kuveyt-turk-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 21.24042,
-    "tedavuldekiPaySayisi": 213018154,
-    "kisiSayisi": 22948,
-    "fonToplamDeger": 4524595007.82,
-    "gunlukGetiri": 0.00976304,
+    "fiyat": 21.226532,
+    "tedavuldekiPaySayisi": 213314489,
+    "kisiSayisi": 23076,
+    "fonToplamDeger": 4527926826.64,
+    "gunlukGetiri": -0.00065385,
     "getiriler": {
-      "birAy": 0.034692,
-      "ucAy": 0.018185,
-      "altiAy": 0.17049299999999998,
-      "yilbasi": 0.418543,
-      "birYil": 0.513425,
-      "ucYil": 1.6602690000000002,
-      "besYil": 13.814281000000001
+      "birAy": 0.034016000000000005,
+      "ucAy": 0.043483999999999995,
+      "altiAy": 0.174496,
+      "yilbasi": 0.41761499999999996,
+      "birYil": 0.513792,
+      "ucYil": 1.747088,
+      "besYil": 13.82161
     },
     "paraAkisi": {
-      "gunluk": -1805669.34,
-      "besGun": -23857742.18,
+      "gunluk": 6290164.36,
+      "besGun": -11061741.1,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -19,
-      "besGun": -20,
+      "gunluk": 128,
+      "besGun": 60,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KPC",
+        "fonAdi": "KUVEYT TÜRK PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-19",
+        "fiyat": 21.226532,
+        "tedavuldekiPaySayisi": 213314489,
+        "kisiSayisi": 23076,
+        "fonToplamDeger": 4527926826.64,
+        "gunlukGetiri": -0.00065385,
+        "paraGirisiCikisi": 6290164.36,
+        "yatirimciDegisimi": 128
+      },
       {
         "fonKodu": "KPC",
         "fonAdi": "KUVEYT TÜRK PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00976304,
       "paraGirisiCikisi": -1805669.34,
       "yatirimciDegisimi": -19
+    },
+    {
+      "fonKodu": "KPC",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 21.226532,
+      "tedavuldekiPaySayisi": 213314489,
+      "kisiSayisi": 23076,
+      "fonToplamDeger": 4527926826.64,
+      "gunlukGetiri": -0.00065385,
+      "paraGirisiCikisi": 6290164.36,
+      "yatirimciDegisimi": 128
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KPC",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 21.226532,
+      "tedavuldekiPaySayisi": 213314489,
+      "kisiSayisi": 23076,
+      "fonToplamDeger": 4527926826.64,
+      "gunlukGetiri": -0.00065385,
+      "paraGirisiCikisi": 6290164.36,
+      "yatirimciDegisimi": 128
+    },
     {
       "fonKodu": "KPC",
       "fonAdi": "KUVEYT TÜRK PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

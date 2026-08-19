@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "ZHH",
     "slug": "zhh",
@@ -12,44 +12,56 @@
     "yonetici": "ZİRAAT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ziraat-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.42945,
-    "tedavuldekiPaySayisi": 60438115,
-    "kisiSayisi": 1046,
-    "fonToplamDeger": 86393265.21,
-    "gunlukGetiri": -0.00855949,
+    "fiyat": 1.432326,
+    "tedavuldekiPaySayisi": 60404931,
+    "kisiSayisi": 1052,
+    "fonToplamDeger": 86519550.12,
+    "gunlukGetiri": 0.00201196,
     "getiriler": {
-      "birAy": 0.010995999999999999,
-      "ucAy": 0.014983,
-      "altiAy": -0.036536,
-      "yilbasi": 0.209169,
-      "birYil": 0.241823,
+      "birAy": 0.01303,
+      "ucAy": 0.037197,
+      "altiAy": -0.023812000000000003,
+      "yilbasi": 0.211601,
+      "birYil": 0.244089,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -205512.03,
-      "besGun": 3349561.76,
+      "gunluk": -47530.31,
+      "besGun": 3279492.77,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
-      "besGun": -5,
+      "gunluk": 6,
+      "besGun": -8,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZHH",
+        "fonAdi": "ZİRAAT PORTFÖY HALKBANK SÜRDÜRÜLEBİLİRLİK 30 ŞİRKETLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-19",
+        "fiyat": 1.432326,
+        "tedavuldekiPaySayisi": 60404931,
+        "kisiSayisi": 1052,
+        "fonToplamDeger": 86519550.12,
+        "gunlukGetiri": 0.00201196,
+        "paraGirisiCikisi": -47530.31,
+        "yatirimciDegisimi": 6
+      },
       {
         "fonKodu": "ZHH",
         "fonAdi": "ZİRAAT PORTFÖY HALKBANK SÜRDÜRÜLEBİLİRLİK 30 ŞİRKETLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -220,9 +232,33 @@
       "gunlukGetiri": -0.00855949,
       "paraGirisiCikisi": -205512.03,
       "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "ZHH",
+      "fonAdi": "ZİRAAT PORTFÖY HALKBANK SÜRDÜRÜLEBİLİRLİK 30 ŞİRKETLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 1.432326,
+      "tedavuldekiPaySayisi": 60404931,
+      "kisiSayisi": 1052,
+      "fonToplamDeger": 86519550.12,
+      "gunlukGetiri": 0.00201196,
+      "paraGirisiCikisi": -47530.31,
+      "yatirimciDegisimi": 6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZHH",
+      "fonAdi": "ZİRAAT PORTFÖY HALKBANK SÜRDÜRÜLEBİLİRLİK 30 ŞİRKETLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 1.432326,
+      "tedavuldekiPaySayisi": 60404931,
+      "kisiSayisi": 1052,
+      "fonToplamDeger": 86519550.12,
+      "gunlukGetiri": 0.00201196,
+      "paraGirisiCikisi": -47530.31,
+      "yatirimciDegisimi": 6
+    },
     {
       "fonKodu": "ZHH",
       "fonAdi": "ZİRAAT PORTFÖY HALKBANK SÜRDÜRÜLEBİLİRLİK 30 ŞİRKETLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

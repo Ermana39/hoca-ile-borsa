@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "DPB",
     "slug": "dpb",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 24.26383,
-    "tedavuldekiPaySayisi": 513591460,
-    "kisiSayisi": 3202,
-    "fonToplamDeger": 12461695803.16,
-    "gunlukGetiri": 0.00156489,
+    "fiyat": 24.247752,
+    "tedavuldekiPaySayisi": 510058513,
+    "kisiSayisi": 3192,
+    "fonToplamDeger": 12367772516.56,
+    "gunlukGetiri": -0.00066263,
     "getiriler": {
-      "birAy": 0.023916,
-      "ucAy": 0.06569,
-      "altiAy": 0.08544800000000001,
-      "yilbasi": 0.13188,
-      "birYil": 0.244031,
-      "ucYil": 1.699319,
-      "besYil": 7.896062
+      "birAy": 0.023237,
+      "ucAy": 0.06668199999999999,
+      "altiAy": 0.083527,
+      "yilbasi": 0.13113,
+      "birYil": 0.24006799999999998,
+      "ucYil": 1.6975299999999998,
+      "besYil": 7.890167
     },
     "paraAkisi": {
-      "gunluk": -15869927.86,
-      "besGun": -778508388.77,
+      "gunluk": -85666022.69,
+      "besGun": -511207816.32,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
-      "besGun": -29,
+      "gunluk": -10,
+      "besGun": -35,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DPB",
+        "fonAdi": "DENİZ PORTFÖY SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 24.247752,
+        "tedavuldekiPaySayisi": 510058513,
+        "kisiSayisi": 3192,
+        "fonToplamDeger": 12367772516.56,
+        "gunlukGetiri": -0.00066263,
+        "paraGirisiCikisi": -85666022.69,
+        "yatirimciDegisimi": -10
+      },
       {
         "fonKodu": "DPB",
         "fonAdi": "DENİZ PORTFÖY SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00156489,
       "paraGirisiCikisi": -15869927.86,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "DPB",
+      "fonAdi": "DENİZ PORTFÖY SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 24.247752,
+      "tedavuldekiPaySayisi": 510058513,
+      "kisiSayisi": 3192,
+      "fonToplamDeger": 12367772516.56,
+      "gunlukGetiri": -0.00066263,
+      "paraGirisiCikisi": -85666022.69,
+      "yatirimciDegisimi": -10
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DPB",
+      "fonAdi": "DENİZ PORTFÖY SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 24.247752,
+      "tedavuldekiPaySayisi": 510058513,
+      "kisiSayisi": 3192,
+      "fonToplamDeger": 12367772516.56,
+      "gunlukGetiri": -0.00066263,
+      "paraGirisiCikisi": -85666022.69,
+      "yatirimciDegisimi": -10
+    },
     {
       "fonKodu": "DPB",
       "fonAdi": "DENİZ PORTFÖY SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

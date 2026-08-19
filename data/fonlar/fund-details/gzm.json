@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "GZM",
     "slug": "gzm",
@@ -12,44 +12,56 @@
     "yonetici": "GLOBAL MD PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "global-md-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 10.09239,
-    "tedavuldekiPaySayisi": 60153587,
-    "kisiSayisi": 974,
-    "fonToplamDeger": 607093469.69,
-    "gunlukGetiri": 0.00297921,
+    "fiyat": 10.110348,
+    "tedavuldekiPaySayisi": 60362133,
+    "kisiSayisi": 999,
+    "fonToplamDeger": 610282162.59,
+    "gunlukGetiri": 0.00177936,
     "getiriler": {
-      "birAy": 0.047977,
-      "ucAy": 0.168187,
-      "altiAy": 0.473336,
-      "yilbasi": 0.6051380000000001,
-      "birYil": 0.31285599999999997,
-      "ucYil": 0.501331,
-      "besYil": 6.9833680000000005
+      "birAy": 0.049842000000000004,
+      "ucAy": 0.166136,
+      "altiAy": 0.47533099999999995,
+      "yilbasi": 0.607994,
+      "birYil": 0.482453,
+      "ucYil": 0.55767,
+      "besYil": 7.025938999999999
     },
     "paraAkisi": {
-      "gunluk": -6981975.96,
-      "besGun": 73632208.56,
+      "gunluk": 2108472.63,
+      "besGun": 65172079.56,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 6,
-      "besGun": 187,
+      "gunluk": 25,
+      "besGun": 139,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GZM",
+        "fonAdi": "GLOBAL MD PORTFÖY DURU SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 10.110348,
+        "tedavuldekiPaySayisi": 60362133,
+        "kisiSayisi": 999,
+        "fonToplamDeger": 610282162.59,
+        "gunlukGetiri": 0.00177936,
+        "paraGirisiCikisi": 2108472.63,
+        "yatirimciDegisimi": 25
+      },
       {
         "fonKodu": "GZM",
         "fonAdi": "GLOBAL MD PORTFÖY DURU SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00297921,
       "paraGirisiCikisi": -6981975.96,
       "yatirimciDegisimi": 6
+    },
+    {
+      "fonKodu": "GZM",
+      "fonAdi": "GLOBAL MD PORTFÖY DURU SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 10.110348,
+      "tedavuldekiPaySayisi": 60362133,
+      "kisiSayisi": 999,
+      "fonToplamDeger": 610282162.59,
+      "gunlukGetiri": 0.00177936,
+      "paraGirisiCikisi": 2108472.63,
+      "yatirimciDegisimi": 25
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GZM",
+      "fonAdi": "GLOBAL MD PORTFÖY DURU SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 10.110348,
+      "tedavuldekiPaySayisi": 60362133,
+      "kisiSayisi": 999,
+      "fonToplamDeger": 610282162.59,
+      "gunlukGetiri": 0.00177936,
+      "paraGirisiCikisi": 2108472.63,
+      "yatirimciDegisimi": 25
+    },
     {
       "fonKodu": "GZM",
       "fonAdi": "GLOBAL MD PORTFÖY DURU SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

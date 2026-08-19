@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "KRF",
     "slug": "krf",
@@ -12,44 +12,56 @@
     "yonetici": "KARE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kare-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 21.329507,
-    "tedavuldekiPaySayisi": 2133378,
-    "kisiSayisi": 605,
-    "fonToplamDeger": 45503900.27,
-    "gunlukGetiri": 0.00239349,
+    "fiyat": 21.399693,
+    "tedavuldekiPaySayisi": 2079208,
+    "kisiSayisi": 603,
+    "fonToplamDeger": 44494412.23,
+    "gunlukGetiri": 0.00329056,
     "getiriler": {
-      "birAy": 0.035885,
-      "ucAy": 0.08007,
-      "altiAy": 0.08635300000000001,
-      "yilbasi": 0.235556,
-      "birYil": 0.372896,
-      "ucYil": 2.109727,
-      "besYil": 10.273846
+      "birAy": 0.039293,
+      "ucAy": 0.082234,
+      "altiAy": 0.088711,
+      "yilbasi": 0.239622,
+      "birYil": 0.36987400000000004,
+      "ucYil": 2.173987,
+      "besYil": 10.30326
     },
     "paraAkisi": {
-      "gunluk": -86171.21,
-      "besGun": -4463877.01,
+      "gunluk": -1159221.37,
+      "besGun": -2143137.24,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": -2,
       "besGun": -3,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KRF",
+        "fonAdi": "KARE PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-19",
+        "fiyat": 21.399693,
+        "tedavuldekiPaySayisi": 2079208,
+        "kisiSayisi": 603,
+        "fonToplamDeger": 44494412.23,
+        "gunlukGetiri": 0.00329056,
+        "paraGirisiCikisi": -1159221.37,
+        "yatirimciDegisimi": -2
+      },
       {
         "fonKodu": "KRF",
         "fonAdi": "KARE PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00239349,
       "paraGirisiCikisi": -86171.21,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "KRF",
+      "fonAdi": "KARE PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 21.399693,
+      "tedavuldekiPaySayisi": 2079208,
+      "kisiSayisi": 603,
+      "fonToplamDeger": 44494412.23,
+      "gunlukGetiri": 0.00329056,
+      "paraGirisiCikisi": -1159221.37,
+      "yatirimciDegisimi": -2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KRF",
+      "fonAdi": "KARE PORTFÖY BİRİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 21.399693,
+      "tedavuldekiPaySayisi": 2079208,
+      "kisiSayisi": 603,
+      "fonToplamDeger": 44494412.23,
+      "gunlukGetiri": 0.00329056,
+      "paraGirisiCikisi": -1159221.37,
+      "yatirimciDegisimi": -2
+    },
     {
       "fonKodu": "KRF",
       "fonAdi": "KARE PORTFÖY BİRİNCİ DEĞİŞKEN FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

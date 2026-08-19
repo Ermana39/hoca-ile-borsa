@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "GNK",
     "slug": "gnk",
@@ -12,13 +12,13 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 69.172706,
+    "fiyat": 69.011315,
     "tedavuldekiPaySayisi": 7000683,
     "kisiSayisi": 1,
-    "fonToplamDeger": 484256189.75,
-    "gunlukGetiri": 0.00244165,
+    "fonToplamDeger": 483126341.73,
+    "gunlukGetiri": -0.00233316,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GNK",
+        "fonAdi": "AZİMUT PORTFÖY SARPAY SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-19",
+        "fiyat": 69.011315,
+        "tedavuldekiPaySayisi": 7000683,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 483126341.73,
+        "gunlukGetiri": -0.00233316,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "GNK",
         "fonAdi": "AZİMUT PORTFÖY SARPAY SERBEST (DÖVİZ) ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00244165,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GNK",
+      "fonAdi": "AZİMUT PORTFÖY SARPAY SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 69.011315,
+      "tedavuldekiPaySayisi": 7000683,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 483126341.73,
+      "gunlukGetiri": -0.00233316,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GNK",
+      "fonAdi": "AZİMUT PORTFÖY SARPAY SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 69.011315,
+      "tedavuldekiPaySayisi": 7000683,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 483126341.73,
+      "gunlukGetiri": -0.00233316,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "GNK",
       "fonAdi": "AZİMUT PORTFÖY SARPAY SERBEST (DÖVİZ) ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

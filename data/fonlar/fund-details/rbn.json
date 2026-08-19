@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "RBN",
     "slug": "rbn",
@@ -12,44 +12,56 @@
     "yonetici": "RE-PIE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "re-pie-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.508908,
-    "tedavuldekiPaySayisi": 28529480,
+    "fiyat": 1.493471,
+    "tedavuldekiPaySayisi": 27486426,
     "kisiSayisi": 146,
-    "fonToplamDeger": 43048367.31,
-    "gunlukGetiri": -0.00554005,
+    "fonToplamDeger": 41050177.35,
+    "gunlukGetiri": -0.01023058,
     "getiriler": {
-      "birAy": 0.00155,
-      "ucAy": -0.054588,
-      "altiAy": -0.045158,
-      "yilbasi": 0.197773,
-      "birYil": 0.101263,
+      "birAy": -0.008697,
+      "ucAy": -0.049505999999999994,
+      "altiAy": -0.067588,
+      "yilbasi": 0.185519,
+      "birYil": 0.076579,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 396.84,
-      "besGun": -419291.3,
+      "gunluk": -1557770.9,
+      "besGun": -2014265.32,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": -3,
+      "gunluk": 0,
+      "besGun": -2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RBN",
+        "fonAdi": "RE-PIE PORTFÖY BEŞİNCİ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-19",
+        "fiyat": 1.493471,
+        "tedavuldekiPaySayisi": 27486426,
+        "kisiSayisi": 146,
+        "fonToplamDeger": 41050177.35,
+        "gunlukGetiri": -0.01023058,
+        "paraGirisiCikisi": -1557770.9,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "RBN",
         "fonAdi": "RE-PIE PORTFÖY BEŞİNCİ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -220,9 +232,33 @@
       "gunlukGetiri": -0.00554005,
       "paraGirisiCikisi": 396.84,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "RBN",
+      "fonAdi": "RE-PIE PORTFÖY BEŞİNCİ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 1.493471,
+      "tedavuldekiPaySayisi": 27486426,
+      "kisiSayisi": 146,
+      "fonToplamDeger": 41050177.35,
+      "gunlukGetiri": -0.01023058,
+      "paraGirisiCikisi": -1557770.9,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RBN",
+      "fonAdi": "RE-PIE PORTFÖY BEŞİNCİ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 1.493471,
+      "tedavuldekiPaySayisi": 27486426,
+      "kisiSayisi": 146,
+      "fonToplamDeger": 41050177.35,
+      "gunlukGetiri": -0.01023058,
+      "paraGirisiCikisi": -1557770.9,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "RBN",
       "fonAdi": "RE-PIE PORTFÖY BEŞİNCİ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN FON)",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

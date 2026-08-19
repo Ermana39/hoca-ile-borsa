@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "ALE",
     "slug": "ale",
@@ -12,13 +12,13 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 13.468162,
-    "tedavuldekiPaySayisi": 6512004685,
-    "kisiSayisi": 149958,
-    "fonToplamDeger": 87704735860.43,
-    "gunlukGetiri": 0.00104615,
+    "fiyat": 13.481927,
+    "tedavuldekiPaySayisi": 6528728095,
+    "kisiSayisi": 147034,
+    "fonToplamDeger": 88019838428.19,
+    "gunlukGetiri": 0.00102204,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -151545846.39,
-      "besGun": -202575370.72,
+      "gunluk": 225463792.81,
+      "besGun": -362760333.7,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 5614,
-      "besGun": 4395,
+      "gunluk": -2924,
+      "besGun": 1958,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ALE",
+        "fonAdi": "AK PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 13.481927,
+        "tedavuldekiPaySayisi": 6528728095,
+        "kisiSayisi": 147034,
+        "fonToplamDeger": 88019838428.19,
+        "gunlukGetiri": 0.00102204,
+        "paraGirisiCikisi": 225463792.81,
+        "yatirimciDegisimi": -2924
+      },
       {
         "fonKodu": "ALE",
         "fonAdi": "AK PORTFÖY PARA PİYASASI (TL) FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00104615,
       "paraGirisiCikisi": -151545846.39,
       "yatirimciDegisimi": 5614
+    },
+    {
+      "fonKodu": "ALE",
+      "fonAdi": "AK PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 13.481927,
+      "tedavuldekiPaySayisi": 6528728095,
+      "kisiSayisi": 147034,
+      "fonToplamDeger": 88019838428.19,
+      "gunlukGetiri": 0.00102204,
+      "paraGirisiCikisi": 225463792.81,
+      "yatirimciDegisimi": -2924
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ALE",
+      "fonAdi": "AK PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 13.481927,
+      "tedavuldekiPaySayisi": 6528728095,
+      "kisiSayisi": 147034,
+      "fonToplamDeger": 88019838428.19,
+      "gunlukGetiri": 0.00102204,
+      "paraGirisiCikisi": 225463792.81,
+      "yatirimciDegisimi": -2924
+    },
     {
       "fonKodu": "ALE",
       "fonAdi": "AK PORTFÖY PARA PİYASASI (TL) FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

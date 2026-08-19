@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "UYH",
     "slug": "uyh",
@@ -12,13 +12,13 @@
     "yonetici": "ÜNLÜ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "unlu-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 5.03462,
-    "tedavuldekiPaySayisi": 136548376,
+    "fiyat": 5.035255,
+    "tedavuldekiPaySayisi": 134562128,
     "kisiSayisi": 12,
-    "fonToplamDeger": 687469207.29,
-    "gunlukGetiri": 0.00006019,
+    "fonToplamDeger": 677554561.31,
+    "gunlukGetiri": 0.00012613,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": 0,
+      "gunluk": -10001265.17,
+      "besGun": -10001265.17,
       "birAy": null,
       "ucAy": null
     },
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "UYH",
+        "fonAdi": "ÜNLÜ PORTFÖY DOKUZUNCU SERBEST (TL) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 5.035255,
+        "tedavuldekiPaySayisi": 134562128,
+        "kisiSayisi": 12,
+        "fonToplamDeger": 677554561.31,
+        "gunlukGetiri": 0.00012613,
+        "paraGirisiCikisi": -10001265.17,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "UYH",
         "fonAdi": "ÜNLÜ PORTFÖY DOKUZUNCU SERBEST (TL) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00006019,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "UYH",
+      "fonAdi": "ÜNLÜ PORTFÖY DOKUZUNCU SERBEST (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 5.035255,
+      "tedavuldekiPaySayisi": 134562128,
+      "kisiSayisi": 12,
+      "fonToplamDeger": 677554561.31,
+      "gunlukGetiri": 0.00012613,
+      "paraGirisiCikisi": -10001265.17,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "UYH",
+      "fonAdi": "ÜNLÜ PORTFÖY DOKUZUNCU SERBEST (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 5.035255,
+      "tedavuldekiPaySayisi": 134562128,
+      "kisiSayisi": 12,
+      "fonToplamDeger": 677554561.31,
+      "gunlukGetiri": 0.00012613,
+      "paraGirisiCikisi": -10001265.17,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "UYH",
       "fonAdi": "ÜNLÜ PORTFÖY DOKUZUNCU SERBEST (TL) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

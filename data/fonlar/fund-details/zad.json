@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "ZAD",
     "slug": "zad",
@@ -12,13 +12,13 @@
     "yonetici": "KUVEYT TÜRK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kuveyt-turk-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 46.281689,
+    "fiyat": 46.302694,
     "tedavuldekiPaySayisi": 336908,
     "kisiSayisi": 48,
-    "fonToplamDeger": 15592671.44,
-    "gunlukGetiri": 0.0021649,
+    "fonToplamDeger": 15599748.15,
+    "gunlukGetiri": 0.00045385,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 136577.26,
+      "gunluk": 0,
       "besGun": 231988.67,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": 0,
       "besGun": 2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ZAD",
+        "fonAdi": "KUVEYT TÜRK PORTFÖY SEPET HESAP KATILIM SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 46.302694,
+        "tedavuldekiPaySayisi": 336908,
+        "kisiSayisi": 48,
+        "fonToplamDeger": 15599748.15,
+        "gunlukGetiri": 0.00045385,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "ZAD",
         "fonAdi": "KUVEYT TÜRK PORTFÖY SEPET HESAP KATILIM SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.0021649,
       "paraGirisiCikisi": 136577.26,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "ZAD",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY SEPET HESAP KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 46.302694,
+      "tedavuldekiPaySayisi": 336908,
+      "kisiSayisi": 48,
+      "fonToplamDeger": 15599748.15,
+      "gunlukGetiri": 0.00045385,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ZAD",
+      "fonAdi": "KUVEYT TÜRK PORTFÖY SEPET HESAP KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 46.302694,
+      "tedavuldekiPaySayisi": 336908,
+      "kisiSayisi": 48,
+      "fonToplamDeger": 15599748.15,
+      "gunlukGetiri": 0.00045385,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "ZAD",
       "fonAdi": "KUVEYT TÜRK PORTFÖY SEPET HESAP KATILIM SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

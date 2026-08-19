@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "PEA",
     "slug": "pea",
@@ -12,44 +12,56 @@
     "yonetici": "PERFORM PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "perform-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.472274,
-    "tedavuldekiPaySayisi": 47239741,
-    "kisiSayisi": 100,
-    "fonToplamDeger": 69549843.66,
-    "gunlukGetiri": 0.01003397,
+    "fiyat": 1.47253,
+    "tedavuldekiPaySayisi": 47239882,
+    "kisiSayisi": 101,
+    "fonToplamDeger": 69562133.2,
+    "gunlukGetiri": 0.00017388,
     "getiriler": {
-      "birAy": 0.111343,
-      "ucAy": -0.002316,
-      "altiAy": -0.065373,
-      "yilbasi": 0.09713200000000001,
-      "birYil": 0.457632,
+      "birAy": 0.11153600000000001,
+      "ucAy": 0.011836,
+      "altiAy": -0.070439,
+      "yilbasi": 0.097323,
+      "birYil": 0.44278300000000004,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 100.11,
-      "besGun": 4416.45,
+      "gunluk": 207.63,
+      "besGun": 1524.59,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": 0,
+      "gunluk": 1,
+      "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PEA",
+        "fonAdi": "PERFORM PORTFÖY ALTIN FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 1.47253,
+        "tedavuldekiPaySayisi": 47239882,
+        "kisiSayisi": 101,
+        "fonToplamDeger": 69562133.2,
+        "gunlukGetiri": 0.00017388,
+        "paraGirisiCikisi": 207.63,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "PEA",
         "fonAdi": "PERFORM PORTFÖY ALTIN FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.01003397,
       "paraGirisiCikisi": 100.11,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PEA",
+      "fonAdi": "PERFORM PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.47253,
+      "tedavuldekiPaySayisi": 47239882,
+      "kisiSayisi": 101,
+      "fonToplamDeger": 69562133.2,
+      "gunlukGetiri": 0.00017388,
+      "paraGirisiCikisi": 207.63,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PEA",
+      "fonAdi": "PERFORM PORTFÖY ALTIN FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.47253,
+      "tedavuldekiPaySayisi": 47239882,
+      "kisiSayisi": 101,
+      "fonToplamDeger": 69562133.2,
+      "gunlukGetiri": 0.00017388,
+      "paraGirisiCikisi": 207.63,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "PEA",
       "fonAdi": "PERFORM PORTFÖY ALTIN FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "TMS",
     "slug": "tms",
@@ -12,13 +12,13 @@
     "yonetici": "TACİRLER PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "tacirler-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 2.120226,
-    "tedavuldekiPaySayisi": 189507317,
+    "fiyat": 2.097282,
+    "tedavuldekiPaySayisi": 188996032,
     "kisiSayisi": 86,
-    "fonToplamDeger": 401798321.05,
-    "gunlukGetiri": 0.0006683,
+    "fonToplamDeger": 396377999.26,
+    "gunlukGetiri": -0.01082149,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": 1263077.73,
+      "gunluk": -1072308.83,
+      "besGun": 190768.9,
       "birAy": null,
       "ucAy": null
     },
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TMS",
+        "fonAdi": "TACİRLER PORTFÖY MARATON SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 2.097282,
+        "tedavuldekiPaySayisi": 188996032,
+        "kisiSayisi": 86,
+        "fonToplamDeger": 396377999.26,
+        "gunlukGetiri": -0.01082149,
+        "paraGirisiCikisi": -1072308.83,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "TMS",
         "fonAdi": "TACİRLER PORTFÖY MARATON SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.0006683,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TMS",
+      "fonAdi": "TACİRLER PORTFÖY MARATON SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 2.097282,
+      "tedavuldekiPaySayisi": 188996032,
+      "kisiSayisi": 86,
+      "fonToplamDeger": 396377999.26,
+      "gunlukGetiri": -0.01082149,
+      "paraGirisiCikisi": -1072308.83,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TMS",
+      "fonAdi": "TACİRLER PORTFÖY MARATON SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 2.097282,
+      "tedavuldekiPaySayisi": 188996032,
+      "kisiSayisi": 86,
+      "fonToplamDeger": 396377999.26,
+      "gunlukGetiri": -0.01082149,
+      "paraGirisiCikisi": -1072308.83,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "TMS",
       "fonAdi": "TACİRLER PORTFÖY MARATON SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

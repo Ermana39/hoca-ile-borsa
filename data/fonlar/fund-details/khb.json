@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "KHB",
     "slug": "khb",
@@ -12,44 +12,56 @@
     "yonetici": "KARE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kare-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.66374,
-    "tedavuldekiPaySayisi": 10687834,
-    "kisiSayisi": 269,
-    "fonToplamDeger": 17781780.95,
-    "gunlukGetiri": 0.00284747,
+    "fiyat": 1.653181,
+    "tedavuldekiPaySayisi": 10687233,
+    "kisiSayisi": 270,
+    "fonToplamDeger": 17667930.75,
+    "gunlukGetiri": -0.00634654,
     "getiriler": {
-      "birAy": -0.019625,
-      "ucAy": 0.087297,
-      "altiAy": 0.084034,
-      "yilbasi": 0.35021599999999997,
-      "birYil": 0.36180300000000004,
+      "birAy": -0.025847000000000002,
+      "ucAy": 0.094169,
+      "altiAy": 0.10476,
+      "yilbasi": 0.34164700000000003,
+      "birYil": 0.345874,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -49484.62,
-      "besGun": -780738.36,
+      "gunluk": -993.56,
+      "besGun": -778264.17,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
-      "besGun": -7,
+      "gunluk": 1,
+      "besGun": -8,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KHB",
+        "fonAdi": "KARE PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-19",
+        "fiyat": 1.653181,
+        "tedavuldekiPaySayisi": 10687233,
+        "kisiSayisi": 270,
+        "fonToplamDeger": 17667930.75,
+        "gunlukGetiri": -0.00634654,
+        "paraGirisiCikisi": -993.56,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "KHB",
         "fonAdi": "KARE PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00284747,
       "paraGirisiCikisi": -49484.62,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "KHB",
+      "fonAdi": "KARE PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 1.653181,
+      "tedavuldekiPaySayisi": 10687233,
+      "kisiSayisi": 270,
+      "fonToplamDeger": 17667930.75,
+      "gunlukGetiri": -0.00634654,
+      "paraGirisiCikisi": -993.56,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KHB",
+      "fonAdi": "KARE PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 1.653181,
+      "tedavuldekiPaySayisi": 10687233,
+      "kisiSayisi": 270,
+      "fonToplamDeger": 17667930.75,
+      "gunlukGetiri": -0.00634654,
+      "paraGirisiCikisi": -993.56,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "KHB",
       "fonAdi": "KARE PORTFÖY BIST 100 DIŞI ŞİRKETLER HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

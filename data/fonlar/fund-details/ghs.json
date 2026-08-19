@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "GHS",
     "slug": "ghs",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 39.429233,
-    "tedavuldekiPaySayisi": 76833488,
-    "kisiSayisi": 14940,
-    "fonToplamDeger": 3029485474.42,
-    "gunlukGetiri": -0.00187599,
+    "fiyat": 39.31688,
+    "tedavuldekiPaySayisi": 76733851,
+    "kisiSayisi": 15042,
+    "fonToplamDeger": 3016935615.23,
+    "gunlukGetiri": -0.00284948,
     "getiriler": {
-      "birAy": 0.021729,
-      "ucAy": -0.021336,
-      "altiAy": -0.022242,
-      "yilbasi": 0.227851,
-      "birYil": 0.269438,
-      "ucYil": 1.247909,
-      "besYil": 13.463202
+      "birAy": 0.018817999999999998,
+      "ucAy": 0.0025480000000000004,
+      "altiAy": -0.025521,
+      "yilbasi": 0.224352,
+      "birYil": 0.266406,
+      "ucYil": 1.3225030000000002,
+      "besYil": 13.565897
     },
     "paraAkisi": {
-      "gunluk": -174158.92,
-      "besGun": -192757705.07,
+      "gunluk": -3917415.97,
+      "besGun": -196005536.77,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 43,
-      "besGun": 192,
+      "gunluk": 102,
+      "besGun": 242,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GHS",
+        "fonAdi": "GARANTİ PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-19",
+        "fiyat": 39.31688,
+        "tedavuldekiPaySayisi": 76733851,
+        "kisiSayisi": 15042,
+        "fonToplamDeger": 3016935615.23,
+        "gunlukGetiri": -0.00284948,
+        "paraGirisiCikisi": -3917415.97,
+        "yatirimciDegisimi": 102
+      },
       {
         "fonKodu": "GHS",
         "fonAdi": "GARANTİ PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -220,9 +232,33 @@
       "gunlukGetiri": -0.00187599,
       "paraGirisiCikisi": -174158.92,
       "yatirimciDegisimi": 43
+    },
+    {
+      "fonKodu": "GHS",
+      "fonAdi": "GARANTİ PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 39.31688,
+      "tedavuldekiPaySayisi": 76733851,
+      "kisiSayisi": 15042,
+      "fonToplamDeger": 3016935615.23,
+      "gunlukGetiri": -0.00284948,
+      "paraGirisiCikisi": -3917415.97,
+      "yatirimciDegisimi": 102
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GHS",
+      "fonAdi": "GARANTİ PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 39.31688,
+      "tedavuldekiPaySayisi": 76733851,
+      "kisiSayisi": 15042,
+      "fonToplamDeger": 3016935615.23,
+      "gunlukGetiri": -0.00284948,
+      "paraGirisiCikisi": -3917415.97,
+      "yatirimciDegisimi": 102
+    },
     {
       "fonKodu": "GHS",
       "fonAdi": "GARANTİ PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

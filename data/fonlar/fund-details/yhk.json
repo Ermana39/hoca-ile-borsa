@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "YHK",
     "slug": "yhk",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 2.07446,
-    "tedavuldekiPaySayisi": 622889653,
-    "kisiSayisi": 6864,
-    "fonToplamDeger": 1292159735.14,
-    "gunlukGetiri": 0.01634164,
+    "fiyat": 2.067168,
+    "tedavuldekiPaySayisi": 628883244,
+    "kisiSayisi": 6901,
+    "fonToplamDeger": 1300007403.49,
+    "gunlukGetiri": -0.00351513,
     "getiriler": {
-      "birAy": 0.03816,
-      "ucAy": 0.044229000000000004,
-      "altiAy": 0.21101099999999998,
-      "yilbasi": 0.549835,
-      "birYil": 0.680364,
+      "birAy": 0.03451,
+      "ucAy": 0.066067,
+      "altiAy": 0.20587,
+      "yilbasi": 0.544387,
+      "birYil": 0.674639,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 547920.9,
-      "besGun": -6334994.15,
+      "gunluk": 12389759.52,
+      "besGun": 7403751.23,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": -32,
+      "gunluk": 37,
+      "besGun": -8,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YHK",
+        "fonAdi": "YAPI KREDİ PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-19",
+        "fiyat": 2.067168,
+        "tedavuldekiPaySayisi": 628883244,
+        "kisiSayisi": 6901,
+        "fonToplamDeger": 1300007403.49,
+        "gunlukGetiri": -0.00351513,
+        "paraGirisiCikisi": 12389759.52,
+        "yatirimciDegisimi": 37
+      },
       {
         "fonKodu": "YHK",
         "fonAdi": "YAPI KREDİ PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.01634164,
       "paraGirisiCikisi": 547920.9,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YHK",
+      "fonAdi": "YAPI KREDİ PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 2.067168,
+      "tedavuldekiPaySayisi": 628883244,
+      "kisiSayisi": 6901,
+      "fonToplamDeger": 1300007403.49,
+      "gunlukGetiri": -0.00351513,
+      "paraGirisiCikisi": 12389759.52,
+      "yatirimciDegisimi": 37
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YHK",
+      "fonAdi": "YAPI KREDİ PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 2.067168,
+      "tedavuldekiPaySayisi": 628883244,
+      "kisiSayisi": 6901,
+      "fonToplamDeger": 1300007403.49,
+      "gunlukGetiri": -0.00351513,
+      "paraGirisiCikisi": 12389759.52,
+      "yatirimciDegisimi": 37
+    },
     {
       "fonKodu": "YHK",
       "fonAdi": "YAPI KREDİ PORTFÖY KATILIM HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

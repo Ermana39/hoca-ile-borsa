@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "T3B",
     "slug": "t3b",
@@ -12,13 +12,13 @@
     "yonetici": "TERA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "tera-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 0.117444,
+    "fiyat": 0.119272,
     "tedavuldekiPaySayisi": 112275362952,
     "kisiSayisi": 16,
-    "fonToplamDeger": 13186115367.96,
-    "gunlukGetiri": 0.03222971,
+    "fonToplamDeger": 13391268390.91,
+    "gunlukGetiri": 0.01556486,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 110448579.32,
+      "gunluk": 0,
       "besGun": 110448579.32,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "T3B",
+        "fonAdi": "TERA PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN)",
+        "tarih": "2026-08-19",
+        "fiyat": 0.119272,
+        "tedavuldekiPaySayisi": 112275362952,
+        "kisiSayisi": 16,
+        "fonToplamDeger": 13391268390.91,
+        "gunlukGetiri": 0.01556486,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "T3B",
         "fonAdi": "TERA PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN)",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.03222971,
       "paraGirisiCikisi": 110448579.32,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "T3B",
+      "fonAdi": "TERA PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN)",
+      "tarih": "2026-08-19",
+      "fiyat": 0.119272,
+      "tedavuldekiPaySayisi": 112275362952,
+      "kisiSayisi": 16,
+      "fonToplamDeger": 13391268390.91,
+      "gunlukGetiri": 0.01556486,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "T3B",
+      "fonAdi": "TERA PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN)",
+      "tarih": "2026-08-19",
+      "fiyat": 0.119272,
+      "tedavuldekiPaySayisi": 112275362952,
+      "kisiSayisi": 16,
+      "fonToplamDeger": 13391268390.91,
+      "gunlukGetiri": 0.01556486,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "T3B",
       "fonAdi": "TERA PORTFÖY ÜÇÜNCÜ HİSSE SENEDİ SERBEST (TL) FON (HİSSE SENEDİ YOĞUN)",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

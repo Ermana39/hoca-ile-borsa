@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "BRH",
     "slug": "brh",
@@ -12,13 +12,13 @@
     "yonetici": "İSTANBUL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "istanbul-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 6.904152,
-    "tedavuldekiPaySayisi": 804206408,
+    "fiyat": 7.12884,
+    "tedavuldekiPaySayisi": 803206408,
     "kisiSayisi": 15,
-    "fonToplamDeger": 5552363172.53,
-    "gunlukGetiri": -0.00425217,
+    "fonToplamDeger": 5725929929.54,
+    "gunlukGetiri": 0.0325439,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -6904152,
-      "besGun": -6904152,
+      "gunluk": -7128840,
+      "besGun": -14032992,
       "birAy": null,
       "ucAy": null
     },
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BRH",
+        "fonAdi": "İSTANBUL PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-19",
+        "fiyat": 7.12884,
+        "tedavuldekiPaySayisi": 803206408,
+        "kisiSayisi": 15,
+        "fonToplamDeger": 5725929929.54,
+        "gunlukGetiri": 0.0325439,
+        "paraGirisiCikisi": -7128840,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "BRH",
         "fonAdi": "İSTANBUL PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -220,9 +232,33 @@
       "gunlukGetiri": -0.00425217,
       "paraGirisiCikisi": -6904152,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BRH",
+      "fonAdi": "İSTANBUL PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 7.12884,
+      "tedavuldekiPaySayisi": 803206408,
+      "kisiSayisi": 15,
+      "fonToplamDeger": 5725929929.54,
+      "gunlukGetiri": 0.0325439,
+      "paraGirisiCikisi": -7128840,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BRH",
+      "fonAdi": "İSTANBUL PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 7.12884,
+      "tedavuldekiPaySayisi": 803206408,
+      "kisiSayisi": 15,
+      "fonToplamDeger": 5725929929.54,
+      "gunlukGetiri": 0.0325439,
+      "paraGirisiCikisi": -7128840,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "BRH",
       "fonAdi": "İSTANBUL PORTFÖY BİRİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "CTF",
     "slug": "ctf",
@@ -12,13 +12,13 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 9.304569,
+    "fiyat": 9.300181,
     "tedavuldekiPaySayisi": 37371557,
     "kisiSayisi": 1,
-    "fonToplamDeger": 347726216.98,
-    "gunlukGetiri": 0.00111392,
+    "fonToplamDeger": 347562261.4,
+    "gunlukGetiri": -0.0004716,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "CTF",
+        "fonAdi": "İŞ PORTFÖY ASSG SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-19",
+        "fiyat": 9.300181,
+        "tedavuldekiPaySayisi": 37371557,
+        "kisiSayisi": 1,
+        "fonToplamDeger": 347562261.4,
+        "gunlukGetiri": -0.0004716,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "CTF",
         "fonAdi": "İŞ PORTFÖY ASSG SERBEST (DÖVİZ) ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00111392,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "CTF",
+      "fonAdi": "İŞ PORTFÖY ASSG SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 9.300181,
+      "tedavuldekiPaySayisi": 37371557,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 347562261.4,
+      "gunlukGetiri": -0.0004716,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "CTF",
+      "fonAdi": "İŞ PORTFÖY ASSG SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 9.300181,
+      "tedavuldekiPaySayisi": 37371557,
+      "kisiSayisi": 1,
+      "fonToplamDeger": 347562261.4,
+      "gunlukGetiri": -0.0004716,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "CTF",
       "fonAdi": "İŞ PORTFÖY ASSG SERBEST (DÖVİZ) ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

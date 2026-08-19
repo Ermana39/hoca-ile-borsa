@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "YVO",
     "slug": "yvo",
@@ -12,13 +12,13 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 70.298412,
+    "fiyat": 70.259079,
     "tedavuldekiPaySayisi": 10482636,
     "kisiSayisi": 2,
-    "fonToplamDeger": 736912668.23,
-    "gunlukGetiri": 0.00178343,
+    "fonToplamDeger": 736500349.86,
+    "gunlukGetiri": -0.00055951,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YVO",
+        "fonAdi": "YAPI KREDİ PORTFÖY NİLÜFER SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-19",
+        "fiyat": 70.259079,
+        "tedavuldekiPaySayisi": 10482636,
+        "kisiSayisi": 2,
+        "fonToplamDeger": 736500349.86,
+        "gunlukGetiri": -0.00055951,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "YVO",
         "fonAdi": "YAPI KREDİ PORTFÖY NİLÜFER SERBEST (DÖVİZ) ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00178343,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "YVO",
+      "fonAdi": "YAPI KREDİ PORTFÖY NİLÜFER SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 70.259079,
+      "tedavuldekiPaySayisi": 10482636,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 736500349.86,
+      "gunlukGetiri": -0.00055951,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YVO",
+      "fonAdi": "YAPI KREDİ PORTFÖY NİLÜFER SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 70.259079,
+      "tedavuldekiPaySayisi": 10482636,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 736500349.86,
+      "gunlukGetiri": -0.00055951,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "YVO",
       "fonAdi": "YAPI KREDİ PORTFÖY NİLÜFER SERBEST (DÖVİZ) ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

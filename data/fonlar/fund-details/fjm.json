@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "FJM",
     "slug": "fjm",
@@ -12,13 +12,13 @@
     "yonetici": "FİBA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "fiba-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 57.717593,
-    "tedavuldekiPaySayisi": 145035456,
-    "kisiSayisi": 1639,
-    "fonToplamDeger": 8371097382.51,
-    "gunlukGetiri": 0.00201834,
+    "fiyat": 57.738471,
+    "tedavuldekiPaySayisi": 135257313,
+    "kisiSayisi": 1691,
+    "fonToplamDeger": 7809550403.74,
+    "gunlukGetiri": 0.00036173,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": 0,
+      "gunluk": -564575026.04,
+      "besGun": -564575026.04,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": 0,
+      "gunluk": 52,
+      "besGun": 52,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FJM",
+        "fonAdi": "FİBA PORTFÖY MELTEM SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 57.738471,
+        "tedavuldekiPaySayisi": 135257313,
+        "kisiSayisi": 1691,
+        "fonToplamDeger": 7809550403.74,
+        "gunlukGetiri": 0.00036173,
+        "paraGirisiCikisi": -564575026.04,
+        "yatirimciDegisimi": 52
+      },
       {
         "fonKodu": "FJM",
         "fonAdi": "FİBA PORTFÖY MELTEM SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00201834,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "FJM",
+      "fonAdi": "FİBA PORTFÖY MELTEM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 57.738471,
+      "tedavuldekiPaySayisi": 135257313,
+      "kisiSayisi": 1691,
+      "fonToplamDeger": 7809550403.74,
+      "gunlukGetiri": 0.00036173,
+      "paraGirisiCikisi": -564575026.04,
+      "yatirimciDegisimi": 52
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FJM",
+      "fonAdi": "FİBA PORTFÖY MELTEM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 57.738471,
+      "tedavuldekiPaySayisi": 135257313,
+      "kisiSayisi": 1691,
+      "fonToplamDeger": 7809550403.74,
+      "gunlukGetiri": 0.00036173,
+      "paraGirisiCikisi": -564575026.04,
+      "yatirimciDegisimi": 52
+    },
     {
       "fonKodu": "FJM",
       "fonAdi": "FİBA PORTFÖY MELTEM SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

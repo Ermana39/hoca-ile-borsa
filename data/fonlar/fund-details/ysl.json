@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "YSL",
     "slug": "ysl",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 43.730184,
-    "tedavuldekiPaySayisi": 15613919,
+    "fiyat": 43.709427,
+    "tedavuldekiPaySayisi": 15612685,
     "kisiSayisi": 383,
-    "fonToplamDeger": 682799544.34,
-    "gunlukGetiri": 0.00172579,
+    "fonToplamDeger": 682421519.95,
+    "gunlukGetiri": -0.00047466,
     "getiriler": {
-      "birAy": 0.021371,
-      "ucAy": 0.032194,
-      "altiAy": 0.067481,
-      "yilbasi": 0.0588,
-      "birYil": 0.13217700000000002,
-      "ucYil": 0.62755,
+      "birAy": 0.020886000000000002,
+      "ucAy": 0.031495999999999996,
+      "altiAy": 0.066529,
+      "yilbasi": 0.058297,
+      "birYil": 0.129492,
+      "ucYil": 0.628585,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 7652.78,
-      "besGun": -78393.4,
+      "gunluk": -53937.43,
+      "besGun": -136205.42,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": -1,
+      "gunluk": 0,
+      "besGun": -2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YSL",
+        "fonAdi": "YAPI KREDİ PORTFÖY KAR PAYI ÖDEYEN KİRA SERTİFİKALARI KATILIM SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 43.709427,
+        "tedavuldekiPaySayisi": 15612685,
+        "kisiSayisi": 383,
+        "fonToplamDeger": 682421519.95,
+        "gunlukGetiri": -0.00047466,
+        "paraGirisiCikisi": -53937.43,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "YSL",
         "fonAdi": "YAPI KREDİ PORTFÖY KAR PAYI ÖDEYEN KİRA SERTİFİKALARI KATILIM SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00172579,
       "paraGirisiCikisi": 7652.78,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "YSL",
+      "fonAdi": "YAPI KREDİ PORTFÖY KAR PAYI ÖDEYEN KİRA SERTİFİKALARI KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 43.709427,
+      "tedavuldekiPaySayisi": 15612685,
+      "kisiSayisi": 383,
+      "fonToplamDeger": 682421519.95,
+      "gunlukGetiri": -0.00047466,
+      "paraGirisiCikisi": -53937.43,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YSL",
+      "fonAdi": "YAPI KREDİ PORTFÖY KAR PAYI ÖDEYEN KİRA SERTİFİKALARI KATILIM SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 43.709427,
+      "tedavuldekiPaySayisi": 15612685,
+      "kisiSayisi": 383,
+      "fonToplamDeger": 682421519.95,
+      "gunlukGetiri": -0.00047466,
+      "paraGirisiCikisi": -53937.43,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "YSL",
       "fonAdi": "YAPI KREDİ PORTFÖY KAR PAYI ÖDEYEN KİRA SERTİFİKALARI KATILIM SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "KSM",
     "slug": "ksm",
@@ -12,13 +12,13 @@
     "yonetici": "ALBARAKA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "albaraka-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 51.558258,
-    "tedavuldekiPaySayisi": 298615702,
-    "kisiSayisi": 739,
-    "fonToplamDeger": 15396105302.99,
-    "gunlukGetiri": 0.00196398,
+    "fiyat": 51.580403,
+    "tedavuldekiPaySayisi": 296933770,
+    "kisiSayisi": 738,
+    "fonToplamDeger": 15315963524.02,
+    "gunlukGetiri": 0.00042951,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -31774013.89,
-      "besGun": -115520630.65,
+      "gunluk": -86754730.38,
+      "besGun": -134728906.51,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": -1,
+      "gunluk": -1,
+      "besGun": -2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KSM",
+        "fonAdi": "ALBARAKA PORTFÖY İKİNCİ KATILIM SERBEST (DÖVİZ-ABD DOLARI) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 51.580403,
+        "tedavuldekiPaySayisi": 296933770,
+        "kisiSayisi": 738,
+        "fonToplamDeger": 15315963524.02,
+        "gunlukGetiri": 0.00042951,
+        "paraGirisiCikisi": -86754730.38,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "KSM",
         "fonAdi": "ALBARAKA PORTFÖY İKİNCİ KATILIM SERBEST (DÖVİZ-ABD DOLARI) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00196398,
       "paraGirisiCikisi": -31774013.89,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "KSM",
+      "fonAdi": "ALBARAKA PORTFÖY İKİNCİ KATILIM SERBEST (DÖVİZ-ABD DOLARI) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 51.580403,
+      "tedavuldekiPaySayisi": 296933770,
+      "kisiSayisi": 738,
+      "fonToplamDeger": 15315963524.02,
+      "gunlukGetiri": 0.00042951,
+      "paraGirisiCikisi": -86754730.38,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KSM",
+      "fonAdi": "ALBARAKA PORTFÖY İKİNCİ KATILIM SERBEST (DÖVİZ-ABD DOLARI) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 51.580403,
+      "tedavuldekiPaySayisi": 296933770,
+      "kisiSayisi": 738,
+      "fonToplamDeger": 15315963524.02,
+      "gunlukGetiri": 0.00042951,
+      "paraGirisiCikisi": -86754730.38,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "KSM",
       "fonAdi": "ALBARAKA PORTFÖY İKİNCİ KATILIM SERBEST (DÖVİZ-ABD DOLARI) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

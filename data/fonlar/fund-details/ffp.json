@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "FFP",
     "slug": "ffp",
@@ -12,44 +12,56 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 7.703767,
-    "tedavuldekiPaySayisi": 258212764,
-    "kisiSayisi": 2340,
-    "fonToplamDeger": 1989210997.38,
-    "gunlukGetiri": 0.0047014,
+    "fiyat": 7.691668,
+    "tedavuldekiPaySayisi": 257884811,
+    "kisiSayisi": 2344,
+    "fonToplamDeger": 1983564391.81,
+    "gunlukGetiri": -0.00157053,
     "getiriler": {
-      "birAy": 0.047889,
-      "ucAy": 0.039053,
-      "altiAy": 0.0639,
-      "yilbasi": 0.15016,
-      "birYil": 0.39204300000000003,
-      "ucYil": 1.898118,
-      "besYil": 5.690998
+      "birAy": 0.046243,
+      "ucAy": 0.045575000000000004,
+      "altiAy": 0.05942,
+      "yilbasi": 0.148353,
+      "birYil": 0.3871,
+      "ucYil": 1.8970179999999999,
+      "besYil": 5.700351
     },
     "paraAkisi": {
-      "gunluk": 2026776.36,
-      "besGun": -310697494.15,
+      "gunluk": -2522505.6,
+      "besGun": -309472527.82,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": -8,
+      "gunluk": 4,
+      "besGun": -1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FFP",
+        "fonAdi": "QNB PORTFÖY FON SEPETİ FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 7.691668,
+        "tedavuldekiPaySayisi": 257884811,
+        "kisiSayisi": 2344,
+        "fonToplamDeger": 1983564391.81,
+        "gunlukGetiri": -0.00157053,
+        "paraGirisiCikisi": -2522505.6,
+        "yatirimciDegisimi": 4
+      },
       {
         "fonKodu": "FFP",
         "fonAdi": "QNB PORTFÖY FON SEPETİ FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.0047014,
       "paraGirisiCikisi": 2026776.36,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "FFP",
+      "fonAdi": "QNB PORTFÖY FON SEPETİ FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 7.691668,
+      "tedavuldekiPaySayisi": 257884811,
+      "kisiSayisi": 2344,
+      "fonToplamDeger": 1983564391.81,
+      "gunlukGetiri": -0.00157053,
+      "paraGirisiCikisi": -2522505.6,
+      "yatirimciDegisimi": 4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FFP",
+      "fonAdi": "QNB PORTFÖY FON SEPETİ FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 7.691668,
+      "tedavuldekiPaySayisi": 257884811,
+      "kisiSayisi": 2344,
+      "fonToplamDeger": 1983564391.81,
+      "gunlukGetiri": -0.00157053,
+      "paraGirisiCikisi": -2522505.6,
+      "yatirimciDegisimi": 4
+    },
     {
       "fonKodu": "FFP",
       "fonAdi": "QNB PORTFÖY FON SEPETİ FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

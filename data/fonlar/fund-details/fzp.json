@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "FZP",
     "slug": "fzp",
@@ -12,44 +12,56 @@
     "yonetici": "FİBA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "fiba-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 6.619837,
-    "tedavuldekiPaySayisi": 129201791,
-    "kisiSayisi": 574,
-    "fonToplamDeger": 855294842.56,
-    "gunlukGetiri": 0.00050389,
+    "fiyat": 6.619666,
+    "tedavuldekiPaySayisi": 126941079,
+    "kisiSayisi": 573,
+    "fonToplamDeger": 840307607.72,
+    "gunlukGetiri": -0.00002583,
     "getiriler": {
-      "birAy": 0.022792,
-      "ucAy": 0.075006,
-      "altiAy": 0.160125,
-      "yilbasi": 0.23006000000000001,
-      "birYil": 0.404755,
-      "ucYil": 2.3831919999999998,
-      "besYil": 4.6511309999999995
+      "birAy": 0.022766,
+      "ucAy": 0.077663,
+      "altiAy": 0.16007000000000002,
+      "yilbasi": 0.230029,
+      "birYil": 0.40252299999999996,
+      "ucYil": 2.377425,
+      "besYil": 4.648048999999999
     },
     "paraAkisi": {
-      "gunluk": -49086.09,
-      "besGun": -7815202.14,
+      "gunluk": -14965158.36,
+      "besGun": -22611311.62,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -1,
       "besGun": -2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FZP",
+        "fonAdi": "FİBA PORTFÖY SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 6.619666,
+        "tedavuldekiPaySayisi": 126941079,
+        "kisiSayisi": 573,
+        "fonToplamDeger": 840307607.72,
+        "gunlukGetiri": -0.00002583,
+        "paraGirisiCikisi": -14965158.36,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "FZP",
         "fonAdi": "FİBA PORTFÖY SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00050389,
       "paraGirisiCikisi": -49086.09,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "FZP",
+      "fonAdi": "FİBA PORTFÖY SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 6.619666,
+      "tedavuldekiPaySayisi": 126941079,
+      "kisiSayisi": 573,
+      "fonToplamDeger": 840307607.72,
+      "gunlukGetiri": -0.00002583,
+      "paraGirisiCikisi": -14965158.36,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FZP",
+      "fonAdi": "FİBA PORTFÖY SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 6.619666,
+      "tedavuldekiPaySayisi": 126941079,
+      "kisiSayisi": 573,
+      "fonToplamDeger": 840307607.72,
+      "gunlukGetiri": -0.00002583,
+      "paraGirisiCikisi": -14965158.36,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "FZP",
       "fonAdi": "FİBA PORTFÖY SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

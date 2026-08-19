@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "MT8",
     "slug": "mt8",
@@ -12,13 +12,13 @@
     "yonetici": "MT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "mt-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 0.883492,
-    "tedavuldekiPaySayisi": 2419038316,
+    "fiyat": 0.898222,
+    "tedavuldekiPaySayisi": 2340939136,
     "kisiSayisi": 16,
-    "fonToplamDeger": 2137200037.38,
-    "gunlukGetiri": -0.01206113,
+    "fonToplamDeger": 2102682660.08,
+    "gunlukGetiri": 0.01667248,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -112131062.39,
-      "besGun": -301970137.99,
+      "gunluk": -70150401.66,
+      "besGun": -401216951.46,
       "birAy": null,
       "ucAy": null
     },
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MT8",
+        "fonAdi": "MT PORTFÖY SEKİZİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-19",
+        "fiyat": 0.898222,
+        "tedavuldekiPaySayisi": 2340939136,
+        "kisiSayisi": 16,
+        "fonToplamDeger": 2102682660.08,
+        "gunlukGetiri": 0.01667248,
+        "paraGirisiCikisi": -70150401.66,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "MT8",
         "fonAdi": "MT PORTFÖY SEKİZİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -220,9 +232,33 @@
       "gunlukGetiri": -0.01206113,
       "paraGirisiCikisi": -112131062.39,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "MT8",
+      "fonAdi": "MT PORTFÖY SEKİZİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 0.898222,
+      "tedavuldekiPaySayisi": 2340939136,
+      "kisiSayisi": 16,
+      "fonToplamDeger": 2102682660.08,
+      "gunlukGetiri": 0.01667248,
+      "paraGirisiCikisi": -70150401.66,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MT8",
+      "fonAdi": "MT PORTFÖY SEKİZİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 0.898222,
+      "tedavuldekiPaySayisi": 2340939136,
+      "kisiSayisi": 16,
+      "fonToplamDeger": 2102682660.08,
+      "gunlukGetiri": 0.01667248,
+      "paraGirisiCikisi": -70150401.66,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "MT8",
       "fonAdi": "MT PORTFÖY SEKİZİNCİ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

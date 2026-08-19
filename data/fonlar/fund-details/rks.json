@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "RKS",
     "slug": "rks",
@@ -12,44 +12,56 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 2.032616,
-    "tedavuldekiPaySayisi": 44530849,
-    "kisiSayisi": 152,
-    "fonToplamDeger": 90514118.66,
-    "gunlukGetiri": 0.00092824,
+    "fiyat": 2.034565,
+    "tedavuldekiPaySayisi": 44550285,
+    "kisiSayisi": 151,
+    "fonToplamDeger": 90640472.43,
+    "gunlukGetiri": 0.00095886,
     "getiriler": {
-      "birAy": -0.010304,
-      "ucAy": 0.053864999999999996,
-      "altiAy": 0.148809,
-      "yilbasi": 0.20191900000000002,
-      "birYil": 0.38581400000000005,
+      "birAy": -0.009355,
+      "ucAy": 0.052796,
+      "altiAy": 0.148823,
+      "yilbasi": 0.20307200000000003,
+      "birYil": 0.385605,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -71643.62,
-      "besGun": 24907.9,
+      "gunluk": 39543.81,
+      "besGun": 21066.61,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
+      "gunluk": -1,
       "besGun": -4,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RKS",
+        "fonAdi": "ROTA PORTFÖY KİRA SERTİFİKALARI KATILIM FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 2.034565,
+        "tedavuldekiPaySayisi": 44550285,
+        "kisiSayisi": 151,
+        "fonToplamDeger": 90640472.43,
+        "gunlukGetiri": 0.00095886,
+        "paraGirisiCikisi": 39543.81,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "RKS",
         "fonAdi": "ROTA PORTFÖY KİRA SERTİFİKALARI KATILIM FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00092824,
       "paraGirisiCikisi": -71643.62,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "RKS",
+      "fonAdi": "ROTA PORTFÖY KİRA SERTİFİKALARI KATILIM FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 2.034565,
+      "tedavuldekiPaySayisi": 44550285,
+      "kisiSayisi": 151,
+      "fonToplamDeger": 90640472.43,
+      "gunlukGetiri": 0.00095886,
+      "paraGirisiCikisi": 39543.81,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RKS",
+      "fonAdi": "ROTA PORTFÖY KİRA SERTİFİKALARI KATILIM FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 2.034565,
+      "tedavuldekiPaySayisi": 44550285,
+      "kisiSayisi": 151,
+      "fonToplamDeger": 90640472.43,
+      "gunlukGetiri": 0.00095886,
+      "paraGirisiCikisi": 39543.81,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "RKS",
       "fonAdi": "ROTA PORTFÖY KİRA SERTİFİKALARI KATILIM FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

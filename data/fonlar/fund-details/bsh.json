@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "BSH",
     "slug": "bsh",
@@ -12,44 +12,56 @@
     "yonetici": "ATLAS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "atlas-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 0.970552,
-    "tedavuldekiPaySayisi": 7259636,
+    "fiyat": 0.96721,
+    "tedavuldekiPaySayisi": 7230355,
     "kisiSayisi": 129,
-    "fonToplamDeger": 7045854.95,
-    "gunlukGetiri": -0.0084307,
+    "fonToplamDeger": 6993272.77,
+    "gunlukGetiri": -0.0034434,
     "getiriler": {
-      "birAy": 0.008706,
-      "ucAy": -0.039942000000000005,
-      "altiAy": -0.22713999999999998,
-      "yilbasi": -0.057035999999999996,
-      "birYil": -0.029346999999999998,
+      "birAy": 0.005233,
+      "ucAy": -0.037421,
+      "altiAy": -0.2414,
+      "yilbasi": -0.060282999999999996,
+      "birYil": -0.024142,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 593.98,
-      "besGun": 121370.25,
+      "gunluk": -28320.88,
+      "besGun": 150432.36,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": -8,
+      "besGun": -7,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BSH",
+        "fonAdi": "ATLAS PORTFÖY BANKACILIK SEKTÖRÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-19",
+        "fiyat": 0.96721,
+        "tedavuldekiPaySayisi": 7230355,
+        "kisiSayisi": 129,
+        "fonToplamDeger": 6993272.77,
+        "gunlukGetiri": -0.0034434,
+        "paraGirisiCikisi": -28320.88,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "BSH",
         "fonAdi": "ATLAS PORTFÖY BANKACILIK SEKTÖRÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -220,9 +232,33 @@
       "gunlukGetiri": -0.0084307,
       "paraGirisiCikisi": 593.98,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BSH",
+      "fonAdi": "ATLAS PORTFÖY BANKACILIK SEKTÖRÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 0.96721,
+      "tedavuldekiPaySayisi": 7230355,
+      "kisiSayisi": 129,
+      "fonToplamDeger": 6993272.77,
+      "gunlukGetiri": -0.0034434,
+      "paraGirisiCikisi": -28320.88,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BSH",
+      "fonAdi": "ATLAS PORTFÖY BANKACILIK SEKTÖRÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 0.96721,
+      "tedavuldekiPaySayisi": 7230355,
+      "kisiSayisi": 129,
+      "fonToplamDeger": 6993272.77,
+      "gunlukGetiri": -0.0034434,
+      "paraGirisiCikisi": -28320.88,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "BSH",
       "fonAdi": "ATLAS PORTFÖY BANKACILIK SEKTÖRÜ HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

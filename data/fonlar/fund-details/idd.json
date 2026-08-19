@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "IDD",
     "slug": "idd",
@@ -12,21 +12,21 @@
     "yonetici": "LOGOS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "logos-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 0.153571,
+    "fiyat": 0.154053,
     "tedavuldekiPaySayisi": 208998786,
     "kisiSayisi": 24,
-    "fonToplamDeger": 32096089.81,
-    "gunlukGetiri": -0.00377547,
+    "fonToplamDeger": 32196853.47,
+    "gunlukGetiri": 0.00313861,
     "getiriler": {
-      "birAy": -0.017196,
-      "ucAy": 0.010813999999999999,
-      "altiAy": 0.0028599999999999997,
-      "yilbasi": 0.11973800000000001,
-      "birYil": 0.262712,
-      "ucYil": 1.101323,
-      "besYil": 3.515997
+      "birAy": -0.014111,
+      "ucAy": 0.031069,
+      "altiAy": 0.004375,
+      "yilbasi": 0.123253,
+      "birYil": 0.264035,
+      "ucYil": 1.107918,
+      "besYil": 3.530171
     },
     "paraAkisi": {
       "gunluk": 0,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IDD",
+        "fonAdi": "LOGOS PORTFÖY DİNAMİK DAĞIMLI SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 0.154053,
+        "tedavuldekiPaySayisi": 208998786,
+        "kisiSayisi": 24,
+        "fonToplamDeger": 32196853.47,
+        "gunlukGetiri": 0.00313861,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "IDD",
         "fonAdi": "LOGOS PORTFÖY DİNAMİK DAĞIMLI SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": -0.00377547,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "IDD",
+      "fonAdi": "LOGOS PORTFÖY DİNAMİK DAĞIMLI SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 0.154053,
+      "tedavuldekiPaySayisi": 208998786,
+      "kisiSayisi": 24,
+      "fonToplamDeger": 32196853.47,
+      "gunlukGetiri": 0.00313861,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IDD",
+      "fonAdi": "LOGOS PORTFÖY DİNAMİK DAĞIMLI SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 0.154053,
+      "tedavuldekiPaySayisi": 208998786,
+      "kisiSayisi": 24,
+      "fonToplamDeger": 32196853.47,
+      "gunlukGetiri": 0.00313861,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "IDD",
       "fonAdi": "LOGOS PORTFÖY DİNAMİK DAĞIMLI SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

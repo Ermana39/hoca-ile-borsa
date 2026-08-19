@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "GTF",
     "slug": "gtf",
@@ -12,44 +12,56 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 14.810771,
+    "fiyat": 14.801351,
     "tedavuldekiPaySayisi": 9901409.2,
-    "kisiSayisi": 516,
-    "fonToplamDeger": 146647506.09,
-    "gunlukGetiri": 0.00049225,
+    "kisiSayisi": 515,
+    "fonToplamDeger": 146554228.87,
+    "gunlukGetiri": -0.00063602,
     "getiriler": {
-      "birAy": 0.027297,
-      "ucAy": 0.07511,
-      "altiAy": 0.13071,
-      "yilbasi": 0.167172,
-      "birYil": 0.363236,
-      "ucYil": 1.7617150000000001,
-      "besYil": 3.483513
+      "birAy": 0.026643,
+      "ucAy": 0.077336,
+      "altiAy": 0.128956,
+      "yilbasi": 0.16642900000000002,
+      "birYil": 0.361149,
+      "ucYil": 1.7529,
+      "besYil": 3.478994
     },
     "paraAkisi": {
-      "gunluk": 7286.9,
-      "besGun": 11571.79,
+      "gunluk": 0,
+      "besGun": 22441.56,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": -4,
+      "gunluk": -1,
+      "besGun": -2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GTF",
+        "fonAdi": "AZİMUT PYŞ BİRİNCİ BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 14.801351,
+        "tedavuldekiPaySayisi": 9901409.2,
+        "kisiSayisi": 515,
+        "fonToplamDeger": 146554228.87,
+        "gunlukGetiri": -0.00063602,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "GTF",
         "fonAdi": "AZİMUT PYŞ BİRİNCİ BORÇLANMA ARAÇLARI FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00049225,
       "paraGirisiCikisi": 7286.9,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "GTF",
+      "fonAdi": "AZİMUT PYŞ BİRİNCİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 14.801351,
+      "tedavuldekiPaySayisi": 9901409.2,
+      "kisiSayisi": 515,
+      "fonToplamDeger": 146554228.87,
+      "gunlukGetiri": -0.00063602,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GTF",
+      "fonAdi": "AZİMUT PYŞ BİRİNCİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 14.801351,
+      "tedavuldekiPaySayisi": 9901409.2,
+      "kisiSayisi": 515,
+      "fonToplamDeger": 146554228.87,
+      "gunlukGetiri": -0.00063602,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "GTF",
       "fonAdi": "AZİMUT PYŞ BİRİNCİ BORÇLANMA ARAÇLARI FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

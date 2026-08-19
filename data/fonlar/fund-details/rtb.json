@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "RTB",
     "slug": "rtb",
@@ -12,13 +12,13 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 2.678763,
-    "tedavuldekiPaySayisi": 232216497,
+    "fiyat": 2.681277,
+    "tedavuldekiPaySayisi": 212784598,
     "kisiSayisi": 11,
-    "fonToplamDeger": 622053071.54,
-    "gunlukGetiri": 0.00102279,
+    "fonToplamDeger": 570534461.87,
+    "gunlukGetiri": 0.00093849,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -50203886.75,
-      "besGun": -30162841.53,
+      "gunluk": -52102303.86,
+      "besGun": -102306190.61,
       "birAy": null,
       "ucAy": null
     },
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RTB",
+        "fonAdi": "ROTA PORTFÖY ONÜÇÜNCÜ SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 2.681277,
+        "tedavuldekiPaySayisi": 212784598,
+        "kisiSayisi": 11,
+        "fonToplamDeger": 570534461.87,
+        "gunlukGetiri": 0.00093849,
+        "paraGirisiCikisi": -52102303.86,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "RTB",
         "fonAdi": "ROTA PORTFÖY ONÜÇÜNCÜ SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00102279,
       "paraGirisiCikisi": -50203886.75,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "RTB",
+      "fonAdi": "ROTA PORTFÖY ONÜÇÜNCÜ SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 2.681277,
+      "tedavuldekiPaySayisi": 212784598,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 570534461.87,
+      "gunlukGetiri": 0.00093849,
+      "paraGirisiCikisi": -52102303.86,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RTB",
+      "fonAdi": "ROTA PORTFÖY ONÜÇÜNCÜ SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 2.681277,
+      "tedavuldekiPaySayisi": 212784598,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 570534461.87,
+      "gunlukGetiri": 0.00093849,
+      "paraGirisiCikisi": -52102303.86,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "RTB",
       "fonAdi": "ROTA PORTFÖY ONÜÇÜNCÜ SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

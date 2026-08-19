@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "AGC",
     "slug": "agc",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 9.368533,
-    "tedavuldekiPaySayisi": 12955362,
-    "kisiSayisi": 2466,
-    "fonToplamDeger": 121372736.54,
-    "gunlukGetiri": 0.00145389,
+    "fiyat": 9.375308,
+    "tedavuldekiPaySayisi": 11184760,
+    "kisiSayisi": 2474,
+    "fonToplamDeger": 104860575.06,
+    "gunlukGetiri": 0.00072317,
     "getiriler": {
-      "birAy": 0.022771,
-      "ucAy": 0.069064,
-      "altiAy": 0.127883,
-      "yilbasi": 0.16343699999999997,
-      "birYil": 0.28162400000000004,
-      "ucYil": 1.230224,
-      "besYil": 5.277192
+      "birAy": 0.023511,
+      "ucAy": 0.068351,
+      "altiAy": 0.12835000000000002,
+      "yilbasi": 0.164278,
+      "birYil": 0.280174,
+      "ucYil": 1.231338,
+      "besYil": 5.253086
     },
     "paraAkisi": {
-      "gunluk": -179725.94,
-      "besGun": -1061840.52,
+      "gunluk": -16599939.1,
+      "besGun": -17380301.09,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
-      "besGun": -11,
+      "gunluk": 8,
+      "besGun": -4,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AGC",
+        "fonAdi": "AK PORTFÖY İKİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-19",
+        "fiyat": 9.375308,
+        "tedavuldekiPaySayisi": 11184760,
+        "kisiSayisi": 2474,
+        "fonToplamDeger": 104860575.06,
+        "gunlukGetiri": 0.00072317,
+        "paraGirisiCikisi": -16599939.1,
+        "yatirimciDegisimi": 8
+      },
       {
         "fonKodu": "AGC",
         "fonAdi": "AK PORTFÖY İKİNCİ DEĞİŞKEN FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00145389,
       "paraGirisiCikisi": -179725.94,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "AGC",
+      "fonAdi": "AK PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 9.375308,
+      "tedavuldekiPaySayisi": 11184760,
+      "kisiSayisi": 2474,
+      "fonToplamDeger": 104860575.06,
+      "gunlukGetiri": 0.00072317,
+      "paraGirisiCikisi": -16599939.1,
+      "yatirimciDegisimi": 8
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AGC",
+      "fonAdi": "AK PORTFÖY İKİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 9.375308,
+      "tedavuldekiPaySayisi": 11184760,
+      "kisiSayisi": 2474,
+      "fonToplamDeger": 104860575.06,
+      "gunlukGetiri": 0.00072317,
+      "paraGirisiCikisi": -16599939.1,
+      "yatirimciDegisimi": 8
+    },
     {
       "fonKodu": "AGC",
       "fonAdi": "AK PORTFÖY İKİNCİ DEĞİŞKEN FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

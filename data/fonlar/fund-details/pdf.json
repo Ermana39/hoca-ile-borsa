@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "PDF",
     "slug": "pdf",
@@ -12,44 +12,56 @@
     "yonetici": "ASTRA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "astra-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 60.48363,
-    "tedavuldekiPaySayisi": 7892626,
+    "fiyat": 60.490729,
+    "tedavuldekiPaySayisi": 7741040,
     "kisiSayisi": 58,
-    "fonToplamDeger": 477374668.07,
-    "gunlukGetiri": 0.00192345,
+    "fonToplamDeger": 468261151.09,
+    "gunlukGetiri": 0.00011737,
     "getiriler": {
-      "birAy": 0.022406000000000002,
-      "ucAy": 0.069533,
-      "altiAy": 0.102309,
-      "yilbasi": 0.13762,
-      "birYil": 0.23221,
-      "ucYil": 1.080838,
-      "besYil": 5.729622000000001
+      "birAy": 0.022526,
+      "ucAy": 0.069591,
+      "altiAy": 0.103993,
+      "yilbasi": 0.137753,
+      "birYil": 0.230065,
+      "ucYil": 1.081302,
+      "besYil": 5.697599
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": -3616.28,
+      "gunluk": -9169547.65,
+      "besGun": -9177375.5,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": 1,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PDF",
+        "fonAdi": "ASTRA PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 60.490729,
+        "tedavuldekiPaySayisi": 7741040,
+        "kisiSayisi": 58,
+        "fonToplamDeger": 468261151.09,
+        "gunlukGetiri": 0.00011737,
+        "paraGirisiCikisi": -9169547.65,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "PDF",
         "fonAdi": "ASTRA PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00192345,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PDF",
+      "fonAdi": "ASTRA PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 60.490729,
+      "tedavuldekiPaySayisi": 7741040,
+      "kisiSayisi": 58,
+      "fonToplamDeger": 468261151.09,
+      "gunlukGetiri": 0.00011737,
+      "paraGirisiCikisi": -9169547.65,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PDF",
+      "fonAdi": "ASTRA PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 60.490729,
+      "tedavuldekiPaySayisi": 7741040,
+      "kisiSayisi": 58,
+      "fonToplamDeger": 468261151.09,
+      "gunlukGetiri": 0.00011737,
+      "paraGirisiCikisi": -9169547.65,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "PDF",
       "fonAdi": "ASTRA PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

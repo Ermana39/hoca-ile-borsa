@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "YHT",
     "slug": "yht",
@@ -12,44 +12,56 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 0.411878,
-    "tedavuldekiPaySayisi": 4519360348.89,
-    "kisiSayisi": 85795,
-    "fonToplamDeger": 1861426556.93,
-    "gunlukGetiri": 0.00088211,
+    "fiyat": 0.41219,
+    "tedavuldekiPaySayisi": 4517607624.89,
+    "kisiSayisi": 85785,
+    "fonToplamDeger": 1862114439.19,
+    "gunlukGetiri": 0.00075751,
     "getiriler": {
-      "birAy": 0.029875,
-      "ucAy": 0.094457,
-      "altiAy": 0.184466,
-      "yilbasi": 0.243424,
-      "birYil": 0.445242,
-      "ucYil": 2.290233,
-      "besYil": 3.62566
+      "birAy": 0.030655,
+      "ucAy": 0.09340899999999999,
+      "altiAy": 0.18380400000000002,
+      "yilbasi": 0.24436599999999997,
+      "birYil": 0.444406,
+      "ucYil": 2.287473,
+      "besYil": 3.627345
     },
     "paraAkisi": {
-      "gunluk": -401166835,
-      "besGun": -445735855.23,
+      "gunluk": -722455.31,
+      "besGun": -219408232.98,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": -5,
+      "gunluk": -10,
+      "besGun": -8,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YHT",
+        "fonAdi": "YAPI KREDİ PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 0.41219,
+        "tedavuldekiPaySayisi": 4517607624.89,
+        "kisiSayisi": 85785,
+        "fonToplamDeger": 1862114439.19,
+        "gunlukGetiri": 0.00075751,
+        "paraGirisiCikisi": -722455.31,
+        "yatirimciDegisimi": -10
+      },
       {
         "fonKodu": "YHT",
         "fonAdi": "YAPI KREDİ PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00088211,
       "paraGirisiCikisi": -401166835,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "YHT",
+      "fonAdi": "YAPI KREDİ PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 0.41219,
+      "tedavuldekiPaySayisi": 4517607624.89,
+      "kisiSayisi": 85785,
+      "fonToplamDeger": 1862114439.19,
+      "gunlukGetiri": 0.00075751,
+      "paraGirisiCikisi": -722455.31,
+      "yatirimciDegisimi": -10
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YHT",
+      "fonAdi": "YAPI KREDİ PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 0.41219,
+      "tedavuldekiPaySayisi": 4517607624.89,
+      "kisiSayisi": 85785,
+      "fonToplamDeger": 1862114439.19,
+      "gunlukGetiri": 0.00075751,
+      "paraGirisiCikisi": -722455.31,
+      "yatirimciDegisimi": -10
+    },
     {
       "fonKodu": "YHT",
       "fonAdi": "YAPI KREDİ PORTFÖY KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

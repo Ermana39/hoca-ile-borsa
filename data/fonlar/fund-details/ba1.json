@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "BA1",
     "slug": "ba1",
@@ -12,13 +12,13 @@
     "yonetici": "GLOBAL MD PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "global-md-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.843666,
+    "fiyat": 1.841655,
     "tedavuldekiPaySayisi": 202297264,
     "kisiSayisi": 27,
-    "fonToplamDeger": 372968591.49,
-    "gunlukGetiri": 0.00283881,
+    "fonToplamDeger": 372561746.86,
+    "gunlukGetiri": -0.00109076,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -30,7 +30,7 @@
     },
     "paraAkisi": {
       "gunluk": 0,
-      "besGun": 137452.9,
+      "besGun": -170423.59,
       "birAy": null,
       "ucAy": null
     },
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BA1",
+        "fonAdi": "GLOBAL MD PORTFÖY BİRİNCİ SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 1.841655,
+        "tedavuldekiPaySayisi": 202297264,
+        "kisiSayisi": 27,
+        "fonToplamDeger": 372561746.86,
+        "gunlukGetiri": -0.00109076,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "BA1",
         "fonAdi": "GLOBAL MD PORTFÖY BİRİNCİ SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00283881,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "BA1",
+      "fonAdi": "GLOBAL MD PORTFÖY BİRİNCİ SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.841655,
+      "tedavuldekiPaySayisi": 202297264,
+      "kisiSayisi": 27,
+      "fonToplamDeger": 372561746.86,
+      "gunlukGetiri": -0.00109076,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BA1",
+      "fonAdi": "GLOBAL MD PORTFÖY BİRİNCİ SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.841655,
+      "tedavuldekiPaySayisi": 202297264,
+      "kisiSayisi": 27,
+      "fonToplamDeger": 372561746.86,
+      "gunlukGetiri": -0.00109076,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "BA1",
       "fonAdi": "GLOBAL MD PORTFÖY BİRİNCİ SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "YDK",
     "slug": "ydk",
@@ -12,13 +12,13 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 0.119354,
-    "tedavuldekiPaySayisi": 1236181329,
-    "kisiSayisi": 48514,
-    "fonToplamDeger": 147542948.8,
-    "gunlukGetiri": 0.0010568,
+    "fiyat": 0.119446,
+    "tedavuldekiPaySayisi": 1235710711,
+    "kisiSayisi": 48507,
+    "fonToplamDeger": 147600420.14,
+    "gunlukGetiri": 0.00077082,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -5598.54,
-      "besGun": -27027.59,
+      "gunluk": -56213.44,
+      "besGun": -74039.79,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -3,
-      "besGun": -14,
+      "gunluk": -7,
+      "besGun": -17,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "YDK",
+        "fonAdi": "YAPI KREDİ PORTFÖY ÇALIŞAN HESAP KISA VADELİ BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 0.119446,
+        "tedavuldekiPaySayisi": 1235710711,
+        "kisiSayisi": 48507,
+        "fonToplamDeger": 147600420.14,
+        "gunlukGetiri": 0.00077082,
+        "paraGirisiCikisi": -56213.44,
+        "yatirimciDegisimi": -7
+      },
       {
         "fonKodu": "YDK",
         "fonAdi": "YAPI KREDİ PORTFÖY ÇALIŞAN HESAP KISA VADELİ BORÇLANMA ARAÇLARI FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.0010568,
       "paraGirisiCikisi": -5598.54,
       "yatirimciDegisimi": -3
+    },
+    {
+      "fonKodu": "YDK",
+      "fonAdi": "YAPI KREDİ PORTFÖY ÇALIŞAN HESAP KISA VADELİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 0.119446,
+      "tedavuldekiPaySayisi": 1235710711,
+      "kisiSayisi": 48507,
+      "fonToplamDeger": 147600420.14,
+      "gunlukGetiri": 0.00077082,
+      "paraGirisiCikisi": -56213.44,
+      "yatirimciDegisimi": -7
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "YDK",
+      "fonAdi": "YAPI KREDİ PORTFÖY ÇALIŞAN HESAP KISA VADELİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 0.119446,
+      "tedavuldekiPaySayisi": 1235710711,
+      "kisiSayisi": 48507,
+      "fonToplamDeger": 147600420.14,
+      "gunlukGetiri": 0.00077082,
+      "paraGirisiCikisi": -56213.44,
+      "yatirimciDegisimi": -7
+    },
     {
       "fonKodu": "YDK",
       "fonAdi": "YAPI KREDİ PORTFÖY ÇALIŞAN HESAP KISA VADELİ BORÇLANMA ARAÇLARI FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

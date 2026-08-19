@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "PAB",
     "slug": "pab",
@@ -12,44 +12,56 @@
     "yonetici": "A1 CAPİTAL PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "a1-capital-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.405854,
-    "tedavuldekiPaySayisi": 90712266,
-    "kisiSayisi": 647,
-    "fonToplamDeger": 127528220.34,
-    "gunlukGetiri": 0.00112228,
+    "fiyat": 1.407391,
+    "tedavuldekiPaySayisi": 88097244,
+    "kisiSayisi": 657,
+    "fonToplamDeger": 123987287.65,
+    "gunlukGetiri": 0.00109329,
     "getiriler": {
-      "birAy": 0.033852,
-      "ucAy": 0.11015000000000001,
-      "altiAy": 0.22151900000000002,
-      "yilbasi": 0.28866800000000004,
+      "birAy": 0.034983,
+      "ucAy": 0.10893599999999999,
+      "altiAy": 0.221477,
+      "yilbasi": 0.290077,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 2285775.21,
-      "besGun": 4803033.25,
+      "gunluk": -3680358.43,
+      "besGun": 4241974.67,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
-      "besGun": 6,
+      "gunluk": 10,
+      "besGun": 14,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PAB",
+        "fonAdi": "A1 CAPİTAL PORTFÖY PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 1.407391,
+        "tedavuldekiPaySayisi": 88097244,
+        "kisiSayisi": 657,
+        "fonToplamDeger": 123987287.65,
+        "gunlukGetiri": 0.00109329,
+        "paraGirisiCikisi": -3680358.43,
+        "yatirimciDegisimi": 10
+      },
       {
         "fonKodu": "PAB",
         "fonAdi": "A1 CAPİTAL PORTFÖY PARA PİYASASI (TL) FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00112228,
       "paraGirisiCikisi": 2285775.21,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "PAB",
+      "fonAdi": "A1 CAPİTAL PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.407391,
+      "tedavuldekiPaySayisi": 88097244,
+      "kisiSayisi": 657,
+      "fonToplamDeger": 123987287.65,
+      "gunlukGetiri": 0.00109329,
+      "paraGirisiCikisi": -3680358.43,
+      "yatirimciDegisimi": 10
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PAB",
+      "fonAdi": "A1 CAPİTAL PORTFÖY PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.407391,
+      "tedavuldekiPaySayisi": 88097244,
+      "kisiSayisi": 657,
+      "fonToplamDeger": 123987287.65,
+      "gunlukGetiri": 0.00109329,
+      "paraGirisiCikisi": -3680358.43,
+      "yatirimciDegisimi": 10
+    },
     {
       "fonKodu": "PAB",
       "fonAdi": "A1 CAPİTAL PORTFÖY PARA PİYASASI (TL) FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

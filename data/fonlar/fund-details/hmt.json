@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "HMT",
     "slug": "hmt",
@@ -12,13 +12,13 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 7.153295,
+    "fiyat": 7.149629,
     "tedavuldekiPaySayisi": 85345075,
     "kisiSayisi": 22,
-    "fonToplamDeger": 610498534.24,
-    "gunlukGetiri": 0.00076919,
+    "fonToplamDeger": 610185643.11,
+    "gunlukGetiri": -0.00051249,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HMT",
+        "fonAdi": "AZİMUT PORTFÖY 12.0 SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 7.149629,
+        "tedavuldekiPaySayisi": 85345075,
+        "kisiSayisi": 22,
+        "fonToplamDeger": 610185643.11,
+        "gunlukGetiri": -0.00051249,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "HMT",
         "fonAdi": "AZİMUT PORTFÖY 12.0 SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00076919,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HMT",
+      "fonAdi": "AZİMUT PORTFÖY 12.0 SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 7.149629,
+      "tedavuldekiPaySayisi": 85345075,
+      "kisiSayisi": 22,
+      "fonToplamDeger": 610185643.11,
+      "gunlukGetiri": -0.00051249,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HMT",
+      "fonAdi": "AZİMUT PORTFÖY 12.0 SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 7.149629,
+      "tedavuldekiPaySayisi": 85345075,
+      "kisiSayisi": 22,
+      "fonToplamDeger": 610185643.11,
+      "gunlukGetiri": -0.00051249,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "HMT",
       "fonAdi": "AZİMUT PORTFÖY 12.0 SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

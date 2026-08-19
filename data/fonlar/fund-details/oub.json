@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "OUB",
     "slug": "oub",
@@ -12,13 +12,13 @@
     "yonetici": "OSMANLI PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "osmanli-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 7.092231,
+    "fiyat": 7.100975,
     "tedavuldekiPaySayisi": 124960731,
     "kisiSayisi": 14,
-    "fonToplamDeger": 886250367.36,
-    "gunlukGetiri": null,
+    "fonToplamDeger": 887343087.39,
+    "gunlukGetiri": 0.0012329,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": null,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "OUB",
+        "fonAdi": "OSMANLI PORTFÖY ÜÇÜNCÜ SERBEST (TL) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 7.100975,
+        "tedavuldekiPaySayisi": 124960731,
+        "kisiSayisi": 14,
+        "fonToplamDeger": 887343087.39,
+        "gunlukGetiri": 0.0012329,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "OUB",
         "fonAdi": "OSMANLI PORTFÖY ÜÇÜNCÜ SERBEST (TL) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": null,
       "paraGirisiCikisi": null,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "OUB",
+      "fonAdi": "OSMANLI PORTFÖY ÜÇÜNCÜ SERBEST (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 7.100975,
+      "tedavuldekiPaySayisi": 124960731,
+      "kisiSayisi": 14,
+      "fonToplamDeger": 887343087.39,
+      "gunlukGetiri": 0.0012329,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "OUB",
+      "fonAdi": "OSMANLI PORTFÖY ÜÇÜNCÜ SERBEST (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 7.100975,
+      "tedavuldekiPaySayisi": 124960731,
+      "kisiSayisi": 14,
+      "fonToplamDeger": 887343087.39,
+      "gunlukGetiri": 0.0012329,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "OUB",
       "fonAdi": "OSMANLI PORTFÖY ÜÇÜNCÜ SERBEST (TL) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

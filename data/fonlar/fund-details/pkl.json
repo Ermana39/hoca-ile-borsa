@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "PKL",
     "slug": "pkl",
@@ -12,13 +12,13 @@
     "yonetici": "PUSULA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pusula-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 2.487319,
+    "fiyat": 2.489776,
     "tedavuldekiPaySayisi": 1399826640,
     "kisiSayisi": 13,
-    "fonToplamDeger": 3481815606.07,
-    "gunlukGetiri": 0.00113625,
+    "fonToplamDeger": 3485255217.57,
+    "gunlukGetiri": 0.00098781,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -150170437.01,
+      "gunluk": 0,
       "besGun": -375619773.38,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PKL",
+        "fonAdi": "PUSULA PORTFÖY KATILIM SERBEST (TL) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 2.489776,
+        "tedavuldekiPaySayisi": 1399826640,
+        "kisiSayisi": 13,
+        "fonToplamDeger": 3485255217.57,
+        "gunlukGetiri": 0.00098781,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "PKL",
         "fonAdi": "PUSULA PORTFÖY KATILIM SERBEST (TL) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00113625,
       "paraGirisiCikisi": -150170437.01,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PKL",
+      "fonAdi": "PUSULA PORTFÖY KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 2.489776,
+      "tedavuldekiPaySayisi": 1399826640,
+      "kisiSayisi": 13,
+      "fonToplamDeger": 3485255217.57,
+      "gunlukGetiri": 0.00098781,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PKL",
+      "fonAdi": "PUSULA PORTFÖY KATILIM SERBEST (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 2.489776,
+      "tedavuldekiPaySayisi": 1399826640,
+      "kisiSayisi": 13,
+      "fonToplamDeger": 3485255217.57,
+      "gunlukGetiri": 0.00098781,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "PKL",
       "fonAdi": "PUSULA PORTFÖY KATILIM SERBEST (TL) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

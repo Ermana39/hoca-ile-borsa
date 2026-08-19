@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "ICC",
     "slug": "icc",
@@ -12,44 +12,56 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.340651,
-    "tedavuldekiPaySayisi": 20677179,
-    "kisiSayisi": 266,
-    "fonToplamDeger": 27720879.52,
-    "gunlukGetiri": 0.00089365,
+    "fiyat": 1.33859,
+    "tedavuldekiPaySayisi": 20719695,
+    "kisiSayisi": 268,
+    "fonToplamDeger": 27735175.08,
+    "gunlukGetiri": -0.00153731,
     "getiriler": {
-      "birAy": 0.018394999999999998,
-      "ucAy": 0.031757,
-      "altiAy": 0.084659,
-      "yilbasi": 0.215227,
-      "birYil": 0.316404,
-      "ucYil": 1.8672730000000002,
-      "besYil": 8.292910000000001
+      "birAy": 0.01683,
+      "ucAy": 0.037873000000000004,
+      "altiAy": 0.082813,
+      "yilbasi": 0.213359,
+      "birYil": 0.30703800000000003,
+      "ucYil": 1.890131,
+      "besYil": 8.312190000000001
     },
     "paraAkisi": {
-      "gunluk": 16111.94,
-      "besGun": -973836.74,
+      "gunluk": 56911.49,
+      "besGun": -916925.25,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
-      "besGun": 4,
+      "gunluk": 2,
+      "besGun": 8,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ICC",
+        "fonAdi": "TEB PORTFÖY BEŞİNCİ DEĞİŞKEN FON",
+        "tarih": "2026-08-19",
+        "fiyat": 1.33859,
+        "tedavuldekiPaySayisi": 20719695,
+        "kisiSayisi": 268,
+        "fonToplamDeger": 27735175.08,
+        "gunlukGetiri": -0.00153731,
+        "paraGirisiCikisi": 56911.49,
+        "yatirimciDegisimi": 2
+      },
       {
         "fonKodu": "ICC",
         "fonAdi": "TEB PORTFÖY BEŞİNCİ DEĞİŞKEN FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00089365,
       "paraGirisiCikisi": 16111.94,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "ICC",
+      "fonAdi": "TEB PORTFÖY BEŞİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.33859,
+      "tedavuldekiPaySayisi": 20719695,
+      "kisiSayisi": 268,
+      "fonToplamDeger": 27735175.08,
+      "gunlukGetiri": -0.00153731,
+      "paraGirisiCikisi": 56911.49,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ICC",
+      "fonAdi": "TEB PORTFÖY BEŞİNCİ DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.33859,
+      "tedavuldekiPaySayisi": 20719695,
+      "kisiSayisi": 268,
+      "fonToplamDeger": 27735175.08,
+      "gunlukGetiri": -0.00153731,
+      "paraGirisiCikisi": 56911.49,
+      "yatirimciDegisimi": 2
+    },
     {
       "fonKodu": "ICC",
       "fonAdi": "TEB PORTFÖY BEŞİNCİ DEĞİŞKEN FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

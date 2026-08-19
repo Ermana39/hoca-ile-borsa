@@ -1465,6 +1465,9 @@ function buildFundData(snapshots, getiriMap, managerMap) {
 async function main() {
   await fs.mkdir(outputDir, { recursive: true });
   const existingHistory = await readJson(historyPath, { snapshots: [] });
+  const manualHistoryImports = Array.isArray(existingHistory.gecmisIceAktarimlari)
+    ? existingHistory.gecmisIceAktarimlari
+    : [];
   const legacySnapshots = await loadLegacyTarihselSnapshots();
   const currentSnapshots = parseTarihselRows(getFirstSheetRows(sourcePaths.tarihsel));
   const getiriMap = parseGetiriRows(getFirstSheetRows(sourcePaths.getiri));
@@ -1528,6 +1531,7 @@ async function main() {
       tarihsel: path.relative(rootDir, sourcePaths.tarihsel).split(path.sep).join("/"),
       yoneticiler: path.relative(rootDir, sourcePaths.yoneticiler).split(path.sep).join("/"),
     },
+    gecmisIceAktarimlari: manualHistoryImports,
     snapshots,
   });
 
@@ -1597,6 +1601,7 @@ async function main() {
         new Set(gitRecovery.snapshots.map((row) => row.tarih))
       ).sort(),
       gitGecmisindenKurtarilanKayitSayisi: gitRecovery.snapshots.length,
+      manuelGecmisIceAktarimlari: manualHistoryImports.slice(-20),
     },
     veriUyarisiSayisi:
       sourceValidation.sourceWarnings.length + fundData.dataWarnings.length,

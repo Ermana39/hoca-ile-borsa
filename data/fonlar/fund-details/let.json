@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "LET",
     "slug": "let",
@@ -12,13 +12,13 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 54.884242,
+    "fiyat": 54.883092,
     "tedavuldekiPaySayisi": 12722311,
     "kisiSayisi": 2,
-    "fonToplamDeger": 698254392.73,
-    "gunlukGetiri": 0.00096691,
+    "fonToplamDeger": 698239764.27,
+    "gunlukGetiri": -0.00002095,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "LET",
+        "fonAdi": "QNB PORTFÖY LETO SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-19",
+        "fiyat": 54.883092,
+        "tedavuldekiPaySayisi": 12722311,
+        "kisiSayisi": 2,
+        "fonToplamDeger": 698239764.27,
+        "gunlukGetiri": -0.00002095,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "LET",
         "fonAdi": "QNB PORTFÖY LETO SERBEST (DÖVİZ) ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00096691,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "LET",
+      "fonAdi": "QNB PORTFÖY LETO SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 54.883092,
+      "tedavuldekiPaySayisi": 12722311,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 698239764.27,
+      "gunlukGetiri": -0.00002095,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "LET",
+      "fonAdi": "QNB PORTFÖY LETO SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 54.883092,
+      "tedavuldekiPaySayisi": 12722311,
+      "kisiSayisi": 2,
+      "fonToplamDeger": 698239764.27,
+      "gunlukGetiri": -0.00002095,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "LET",
       "fonAdi": "QNB PORTFÖY LETO SERBEST (DÖVİZ) ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

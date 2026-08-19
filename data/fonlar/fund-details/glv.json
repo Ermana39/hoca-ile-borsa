@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "GLV",
     "slug": "glv",
@@ -12,13 +12,13 @@
     "yonetici": "GLOBAL MD PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "global-md-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 8.197586,
+    "fiyat": 8.123841,
     "tedavuldekiPaySayisi": 13590646,
     "kisiSayisi": 23,
-    "fonToplamDeger": 111410493.14,
-    "gunlukGetiri": 0.00214706,
+    "fonToplamDeger": 110408245.98,
+    "gunlukGetiri": -0.00899594,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GLV",
+        "fonAdi": "GLOBAL MD PORTFÖY NEHİR SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 8.123841,
+        "tedavuldekiPaySayisi": 13590646,
+        "kisiSayisi": 23,
+        "fonToplamDeger": 110408245.98,
+        "gunlukGetiri": -0.00899594,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "GLV",
         "fonAdi": "GLOBAL MD PORTFÖY NEHİR SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00214706,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GLV",
+      "fonAdi": "GLOBAL MD PORTFÖY NEHİR SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 8.123841,
+      "tedavuldekiPaySayisi": 13590646,
+      "kisiSayisi": 23,
+      "fonToplamDeger": 110408245.98,
+      "gunlukGetiri": -0.00899594,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GLV",
+      "fonAdi": "GLOBAL MD PORTFÖY NEHİR SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 8.123841,
+      "tedavuldekiPaySayisi": 13590646,
+      "kisiSayisi": 23,
+      "fonToplamDeger": 110408245.98,
+      "gunlukGetiri": -0.00899594,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "GLV",
       "fonAdi": "GLOBAL MD PORTFÖY NEHİR SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

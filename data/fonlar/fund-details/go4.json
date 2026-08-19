@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "GO4",
     "slug": "go4",
@@ -12,44 +12,56 @@
     "yonetici": "ONE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "one-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 5.307216,
-    "tedavuldekiPaySayisi": 9398225,
-    "kisiSayisi": 749,
-    "fonToplamDeger": 49878408.79,
-    "gunlukGetiri": 0.0014626,
+    "fiyat": 5.284702,
+    "tedavuldekiPaySayisi": 9376807,
+    "kisiSayisi": 748,
+    "fonToplamDeger": 49553628.34,
+    "gunlukGetiri": -0.00424215,
     "getiriler": {
-      "birAy": 0.036328,
-      "ucAy": 0.020470000000000002,
-      "altiAy": 0.025916,
-      "yilbasi": 0.20345300000000002,
-      "birYil": 0.408564,
-      "ucYil": 1.933533,
+      "birAy": 0.031932,
+      "ucAy": 0.02714,
+      "altiAy": 0.019885,
+      "yilbasi": 0.19834700000000002,
+      "birYil": 0.397682,
+      "ucYil": 1.943545,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -37086.83,
-      "besGun": -1047687.22,
+      "gunluk": -113187.75,
+      "besGun": -1161317.61,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": -3,
+      "gunluk": -1,
+      "besGun": -4,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GO4",
+        "fonAdi": "ONE PORTFÖY DÖRDÜNCÜ FON SEPETİ FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 5.284702,
+        "tedavuldekiPaySayisi": 9376807,
+        "kisiSayisi": 748,
+        "fonToplamDeger": 49553628.34,
+        "gunlukGetiri": -0.00424215,
+        "paraGirisiCikisi": -113187.75,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "GO4",
         "fonAdi": "ONE PORTFÖY DÖRDÜNCÜ FON SEPETİ FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.0014626,
       "paraGirisiCikisi": -37086.83,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "GO4",
+      "fonAdi": "ONE PORTFÖY DÖRDÜNCÜ FON SEPETİ FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 5.284702,
+      "tedavuldekiPaySayisi": 9376807,
+      "kisiSayisi": 748,
+      "fonToplamDeger": 49553628.34,
+      "gunlukGetiri": -0.00424215,
+      "paraGirisiCikisi": -113187.75,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GO4",
+      "fonAdi": "ONE PORTFÖY DÖRDÜNCÜ FON SEPETİ FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 5.284702,
+      "tedavuldekiPaySayisi": 9376807,
+      "kisiSayisi": 748,
+      "fonToplamDeger": 49553628.34,
+      "gunlukGetiri": -0.00424215,
+      "paraGirisiCikisi": -113187.75,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "GO4",
       "fonAdi": "ONE PORTFÖY DÖRDÜNCÜ FON SEPETİ FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "SUC",
     "slug": "suc",
@@ -12,44 +12,56 @@
     "yonetici": "ÜNLÜ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "unlu-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 23.097645,
-    "tedavuldekiPaySayisi": 25914949,
-    "kisiSayisi": 524,
-    "fonToplamDeger": 598574288.97,
-    "gunlukGetiri": 0.00273767,
+    "fiyat": 22.699733,
+    "tedavuldekiPaySayisi": 25916378,
+    "kisiSayisi": 534,
+    "fonToplamDeger": 588294871.36,
+    "gunlukGetiri": -0.01722738,
     "getiriler": {
-      "birAy": 0.07525699999999999,
-      "ucAy": 0.08205,
-      "altiAy": 0.25699,
-      "yilbasi": 0.278897,
-      "birYil": 0.5102490000000001,
-      "ucYil": 2.28543,
-      "besYil": 7.3538049999999995
+      "birAy": 0.056733000000000006,
+      "ucAy": 0.063565,
+      "altiAy": 0.226318,
+      "yilbasi": 0.256865,
+      "birYil": 0.49210299999999996,
+      "ucYil": 2.257462,
+      "besYil": 7.202475
     },
     "paraAkisi": {
-      "gunluk": -1495133.66,
-      "besGun": 728491.77,
+      "gunluk": 32437.92,
+      "besGun": 757493.72,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 1,
-      "besGun": 0,
+      "gunluk": 10,
+      "besGun": 10,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SUC",
+        "fonAdi": "ÜNLÜ PORTFÖY ÜÇÜNCÜ DEĞIŞKEN FON",
+        "tarih": "2026-08-19",
+        "fiyat": 22.699733,
+        "tedavuldekiPaySayisi": 25916378,
+        "kisiSayisi": 534,
+        "fonToplamDeger": 588294871.36,
+        "gunlukGetiri": -0.01722738,
+        "paraGirisiCikisi": 32437.92,
+        "yatirimciDegisimi": 10
+      },
       {
         "fonKodu": "SUC",
         "fonAdi": "ÜNLÜ PORTFÖY ÜÇÜNCÜ DEĞIŞKEN FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00273767,
       "paraGirisiCikisi": -1495133.66,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "SUC",
+      "fonAdi": "ÜNLÜ PORTFÖY ÜÇÜNCÜ DEĞIŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 22.699733,
+      "tedavuldekiPaySayisi": 25916378,
+      "kisiSayisi": 534,
+      "fonToplamDeger": 588294871.36,
+      "gunlukGetiri": -0.01722738,
+      "paraGirisiCikisi": 32437.92,
+      "yatirimciDegisimi": 10
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SUC",
+      "fonAdi": "ÜNLÜ PORTFÖY ÜÇÜNCÜ DEĞIŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 22.699733,
+      "tedavuldekiPaySayisi": 25916378,
+      "kisiSayisi": 534,
+      "fonToplamDeger": 588294871.36,
+      "gunlukGetiri": -0.01722738,
+      "paraGirisiCikisi": 32437.92,
+      "yatirimciDegisimi": 10
+    },
     {
       "fonKodu": "SUC",
       "fonAdi": "ÜNLÜ PORTFÖY ÜÇÜNCÜ DEĞIŞKEN FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

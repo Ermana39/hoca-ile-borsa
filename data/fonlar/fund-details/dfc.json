@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "DFC",
     "slug": "dfc",
@@ -12,44 +12,56 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 3.133111,
-    "tedavuldekiPaySayisi": 39909654,
-    "kisiSayisi": 1535,
-    "fonToplamDeger": 125041384.1,
-    "gunlukGetiri": 0.004416,
+    "fiyat": 3.149401,
+    "tedavuldekiPaySayisi": 39911065,
+    "kisiSayisi": 1536,
+    "fonToplamDeger": 125695941.95,
+    "gunlukGetiri": 0.00519931,
     "getiriler": {
-      "birAy": -0.015916,
-      "ucAy": -0.020356,
-      "altiAy": 0.028363999999999997,
-      "yilbasi": 0.254333,
-      "birYil": 0.23629,
-      "ucYil": 0.788452,
+      "birAy": -0.0108,
+      "ucAy": -0.006483,
+      "altiAy": 0.037537,
+      "yilbasi": 0.260854,
+      "birYil": 0.237427,
+      "ucYil": 0.8368410000000001,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -107907.48,
-      "besGun": -80654193.38,
+      "gunluk": 4443.8,
+      "besGun": -80577391,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
-      "besGun": -14,
+      "gunluk": 1,
+      "besGun": -15,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DFC",
+        "fonAdi": "DENİZ PORTFÖY TARIM VE GIDA DEĞİŞKEN FON",
+        "tarih": "2026-08-19",
+        "fiyat": 3.149401,
+        "tedavuldekiPaySayisi": 39911065,
+        "kisiSayisi": 1536,
+        "fonToplamDeger": 125695941.95,
+        "gunlukGetiri": 0.00519931,
+        "paraGirisiCikisi": 4443.8,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "DFC",
         "fonAdi": "DENİZ PORTFÖY TARIM VE GIDA DEĞİŞKEN FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.004416,
       "paraGirisiCikisi": -107907.48,
       "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "DFC",
+      "fonAdi": "DENİZ PORTFÖY TARIM VE GIDA DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 3.149401,
+      "tedavuldekiPaySayisi": 39911065,
+      "kisiSayisi": 1536,
+      "fonToplamDeger": 125695941.95,
+      "gunlukGetiri": 0.00519931,
+      "paraGirisiCikisi": 4443.8,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DFC",
+      "fonAdi": "DENİZ PORTFÖY TARIM VE GIDA DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 3.149401,
+      "tedavuldekiPaySayisi": 39911065,
+      "kisiSayisi": 1536,
+      "fonToplamDeger": 125695941.95,
+      "gunlukGetiri": 0.00519931,
+      "paraGirisiCikisi": 4443.8,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "DFC",
       "fonAdi": "DENİZ PORTFÖY TARIM VE GIDA DEĞİŞKEN FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

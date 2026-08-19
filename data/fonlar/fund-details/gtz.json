@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "GTZ",
     "slug": "gtz",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 11.862348,
-    "tedavuldekiPaySayisi": 1084068060,
-    "kisiSayisi": 62346,
-    "fonToplamDeger": 12859592458.37,
-    "gunlukGetiri": 0.01279965,
+    "fiyat": 11.67774,
+    "tedavuldekiPaySayisi": 1080182557,
+    "kisiSayisi": 62430,
+    "fonToplamDeger": 12614091468.18,
+    "gunlukGetiri": -0.01556252,
     "getiriler": {
-      "birAy": 0.199316,
-      "ucAy": -0.11095100000000001,
-      "altiAy": -0.047884,
-      "yilbasi": -0.027927,
-      "birYil": 0.880458,
-      "ucYil": 3.572584,
-      "besYil": 11.012979
+      "birAy": 0.180652,
+      "ucAy": -0.1242,
+      "altiAy": -0.10362199999999999,
+      "yilbasi": -0.043055,
+      "birYil": 0.839608,
+      "ucYil": 3.506443,
+      "besYil": 10.85815
     },
     "paraAkisi": {
-      "gunluk": -20112883.87,
+      "gunluk": -45373893.8,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -21,
-      "besGun": 5,
+      "gunluk": 84,
+      "besGun": 87,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GTZ",
+        "fonAdi": "GARANTİ PORTFÖY GÜMÜŞ FON SEPETİ FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 11.67774,
+        "tedavuldekiPaySayisi": 1080182557,
+        "kisiSayisi": 62430,
+        "fonToplamDeger": 12614091468.18,
+        "gunlukGetiri": -0.01556252,
+        "paraGirisiCikisi": -45373893.8,
+        "yatirimciDegisimi": 84
+      },
       {
         "fonKodu": "GTZ",
         "fonAdi": "GARANTİ PORTFÖY GÜMÜŞ FON SEPETİ FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.01279965,
       "paraGirisiCikisi": -20112883.87,
       "yatirimciDegisimi": -21
+    },
+    {
+      "fonKodu": "GTZ",
+      "fonAdi": "GARANTİ PORTFÖY GÜMÜŞ FON SEPETİ FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 11.67774,
+      "tedavuldekiPaySayisi": 1080182557,
+      "kisiSayisi": 62430,
+      "fonToplamDeger": 12614091468.18,
+      "gunlukGetiri": -0.01556252,
+      "paraGirisiCikisi": -45373893.8,
+      "yatirimciDegisimi": 84
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GTZ",
+      "fonAdi": "GARANTİ PORTFÖY GÜMÜŞ FON SEPETİ FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 11.67774,
+      "tedavuldekiPaySayisi": 1080182557,
+      "kisiSayisi": 62430,
+      "fonToplamDeger": 12614091468.18,
+      "gunlukGetiri": -0.01556252,
+      "paraGirisiCikisi": -45373893.8,
+      "yatirimciDegisimi": 84
+    },
     {
       "fonKodu": "GTZ",
       "fonAdi": "GARANTİ PORTFÖY GÜMÜŞ FON SEPETİ FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

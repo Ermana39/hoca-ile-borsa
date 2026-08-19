@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "FSR",
     "slug": "fsr",
@@ -12,44 +12,56 @@
     "yonetici": "FİBA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "fiba-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 47.558429,
-    "tedavuldekiPaySayisi": 100676237,
-    "kisiSayisi": 2461,
-    "fonToplamDeger": 4788003672.9,
-    "gunlukGetiri": 0.00688773,
+    "fiyat": 47.494231,
+    "tedavuldekiPaySayisi": 98805553,
+    "kisiSayisi": 2460,
+    "fonToplamDeger": 4692693794.91,
+    "gunlukGetiri": -0.00134988,
     "getiriler": {
-      "birAy": 0.03361,
-      "ucAy": 0.056047,
-      "altiAy": 0.084626,
-      "yilbasi": 0.11752499999999999,
-      "birYil": 0.187659,
+      "birAy": 0.032215,
+      "ucAy": 0.053079,
+      "altiAy": 0.08292999999999999,
+      "yilbasi": 0.116017,
+      "birYil": 0.18377600000000002,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 31364022.99,
-      "besGun": -240154172.35,
+      "gunluk": -88846698.02,
+      "besGun": -347421125.44,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 4,
-      "besGun": 0,
+      "gunluk": -1,
+      "besGun": -1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FSR",
+        "fonAdi": "FİBA PORTFÖY İKİNCİ SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 47.494231,
+        "tedavuldekiPaySayisi": 98805553,
+        "kisiSayisi": 2460,
+        "fonToplamDeger": 4692693794.91,
+        "gunlukGetiri": -0.00134988,
+        "paraGirisiCikisi": -88846698.02,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "FSR",
         "fonAdi": "FİBA PORTFÖY İKİNCİ SERBEST (DÖVİZ-AVRO) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00688773,
       "paraGirisiCikisi": 31364022.99,
       "yatirimciDegisimi": 4
+    },
+    {
+      "fonKodu": "FSR",
+      "fonAdi": "FİBA PORTFÖY İKİNCİ SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 47.494231,
+      "tedavuldekiPaySayisi": 98805553,
+      "kisiSayisi": 2460,
+      "fonToplamDeger": 4692693794.91,
+      "gunlukGetiri": -0.00134988,
+      "paraGirisiCikisi": -88846698.02,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FSR",
+      "fonAdi": "FİBA PORTFÖY İKİNCİ SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 47.494231,
+      "tedavuldekiPaySayisi": 98805553,
+      "kisiSayisi": 2460,
+      "fonToplamDeger": 4692693794.91,
+      "gunlukGetiri": -0.00134988,
+      "paraGirisiCikisi": -88846698.02,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "FSR",
       "fonAdi": "FİBA PORTFÖY İKİNCİ SERBEST (DÖVİZ-AVRO) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

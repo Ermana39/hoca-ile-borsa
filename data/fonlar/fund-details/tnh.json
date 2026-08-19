@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "TNH",
     "slug": "tnh",
@@ -12,13 +12,13 @@
     "yonetici": "TACİRLER PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "tacirler-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 11.912301,
-    "tedavuldekiPaySayisi": 85000,
-    "kisiSayisi": 2,
-    "fonToplamDeger": 1012545.56,
-    "gunlukGetiri": -0.01554998,
+    "fiyat": 11.924652,
+    "tedavuldekiPaySayisi": 8479681,
+    "kisiSayisi": 5,
+    "fonToplamDeger": 101117246.75,
+    "gunlukGetiri": 0.00103683,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": 0,
+      "gunluk": 100103649.58,
+      "besGun": 100103649.58,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": 0,
+      "gunluk": 3,
+      "besGun": 3,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TNH",
+        "fonAdi": "TACİRLER PORTFÖY REAL CAPİTAL SERBEST ÖZEL FON",
+        "tarih": "2026-08-19",
+        "fiyat": 11.924652,
+        "tedavuldekiPaySayisi": 8479681,
+        "kisiSayisi": 5,
+        "fonToplamDeger": 101117246.75,
+        "gunlukGetiri": 0.00103683,
+        "paraGirisiCikisi": 100103649.58,
+        "yatirimciDegisimi": 3
+      },
       {
         "fonKodu": "TNH",
         "fonAdi": "TACİRLER PORTFÖY REAL CAPİTAL SERBEST ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": -0.01554998,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TNH",
+      "fonAdi": "TACİRLER PORTFÖY REAL CAPİTAL SERBEST ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 11.924652,
+      "tedavuldekiPaySayisi": 8479681,
+      "kisiSayisi": 5,
+      "fonToplamDeger": 101117246.75,
+      "gunlukGetiri": 0.00103683,
+      "paraGirisiCikisi": 100103649.58,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TNH",
+      "fonAdi": "TACİRLER PORTFÖY REAL CAPİTAL SERBEST ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 11.924652,
+      "tedavuldekiPaySayisi": 8479681,
+      "kisiSayisi": 5,
+      "fonToplamDeger": 101117246.75,
+      "gunlukGetiri": 0.00103683,
+      "paraGirisiCikisi": 100103649.58,
+      "yatirimciDegisimi": 3
+    },
     {
       "fonKodu": "TNH",
       "fonAdi": "TACİRLER PORTFÖY REAL CAPİTAL SERBEST ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

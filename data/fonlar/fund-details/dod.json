@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "DOD",
     "slug": "dod",
@@ -12,13 +12,13 @@
     "yonetici": "AZİMUT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "azimut-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 69.816979,
+    "fiyat": 69.779495,
     "tedavuldekiPaySayisi": 206437881,
     "kisiSayisi": 159,
-    "fonToplamDeger": 14412869157,
-    "gunlukGetiri": 0.00225143,
+    "fonToplamDeger": 14405131080.68,
+    "gunlukGetiri": -0.00053689,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -30,7 +30,7 @@
     },
     "paraAkisi": {
       "gunluk": 0,
-      "besGun": -3253338180.25,
+      "besGun": -2058457469.5,
       "birAy": null,
       "ucAy": null
     },
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DOD",
+        "fonAdi": "AZİMUT PORTFÖY 14.0 SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 69.779495,
+        "tedavuldekiPaySayisi": 206437881,
+        "kisiSayisi": 159,
+        "fonToplamDeger": 14405131080.68,
+        "gunlukGetiri": -0.00053689,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "DOD",
         "fonAdi": "AZİMUT PORTFÖY 14.0 SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00225143,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DOD",
+      "fonAdi": "AZİMUT PORTFÖY 14.0 SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 69.779495,
+      "tedavuldekiPaySayisi": 206437881,
+      "kisiSayisi": 159,
+      "fonToplamDeger": 14405131080.68,
+      "gunlukGetiri": -0.00053689,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DOD",
+      "fonAdi": "AZİMUT PORTFÖY 14.0 SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 69.779495,
+      "tedavuldekiPaySayisi": 206437881,
+      "kisiSayisi": 159,
+      "fonToplamDeger": 14405131080.68,
+      "gunlukGetiri": -0.00053689,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "DOD",
       "fonAdi": "AZİMUT PORTFÖY 14.0 SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

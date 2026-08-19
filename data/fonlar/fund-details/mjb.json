@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "MJB",
     "slug": "mjb",
@@ -12,44 +12,56 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
     "fiyat": 7.851579,
     "tedavuldekiPaySayisi": 6718193,
-    "kisiSayisi": 774,
+    "kisiSayisi": 780,
     "fonToplamDeger": 52748423.38,
-    "gunlukGetiri": 0.01131244,
+    "gunlukGetiri": 0,
     "getiriler": {
       "birAy": 0.073787,
-      "ucAy": 0.053062,
-      "altiAy": 0.160917,
+      "ucAy": 0.070041,
+      "altiAy": 0.157269,
       "yilbasi": 0.315607,
-      "birYil": 0.446813,
-      "ucYil": 1.830649,
+      "birYil": 0.443898,
+      "ucYil": 1.86829,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 300118.76,
+      "gunluk": 0,
       "besGun": null,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": 2,
+      "gunluk": 6,
+      "besGun": 7,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 4,
+      "observedDays": 5,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MJB",
+        "fonAdi": "AKTİF PORTFÖY BİRİNCİ FON SEPETİ FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 7.851579,
+        "tedavuldekiPaySayisi": 6718193,
+        "kisiSayisi": 780,
+        "fonToplamDeger": 52748423.38,
+        "gunlukGetiri": 0,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 6
+      },
       {
         "fonKodu": "MJB",
         "fonAdi": "AKTİF PORTFÖY BİRİNCİ FON SEPETİ FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.01131244,
       "paraGirisiCikisi": 300118.76,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "MJB",
+      "fonAdi": "AKTİF PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 7.851579,
+      "tedavuldekiPaySayisi": 6718193,
+      "kisiSayisi": 780,
+      "fonToplamDeger": 52748423.38,
+      "gunlukGetiri": 0,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MJB",
+      "fonAdi": "AKTİF PORTFÖY BİRİNCİ FON SEPETİ FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 7.851579,
+      "tedavuldekiPaySayisi": 6718193,
+      "kisiSayisi": 780,
+      "fonToplamDeger": 52748423.38,
+      "gunlukGetiri": 0,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 6
+    },
     {
       "fonKodu": "MJB",
       "fonAdi": "AKTİF PORTFÖY BİRİNCİ FON SEPETİ FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 4,
+    "observedDays": 5,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

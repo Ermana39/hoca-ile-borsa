@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "DSV",
     "slug": "dsv",
@@ -12,13 +12,13 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 49.22225,
-    "tedavuldekiPaySayisi": 29334336,
+    "fiyat": 49.203503,
+    "tedavuldekiPaySayisi": 28274336,
     "kisiSayisi": 44,
-    "fonToplamDeger": 1443902010.12,
-    "gunlukGetiri": 0.00149128,
+    "fonToplamDeger": 1391196376.56,
+    "gunlukGetiri": -0.00038086,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -366705762.5,
-      "besGun": -1392456250.02,
+      "gunluk": -52155713.18,
+      "besGun": -1033072407.54,
       "birAy": null,
       "ucAy": null
     },
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DSV",
+        "fonAdi": "DENİZ PORTFÖY 2028 SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 49.203503,
+        "tedavuldekiPaySayisi": 28274336,
+        "kisiSayisi": 44,
+        "fonToplamDeger": 1391196376.56,
+        "gunlukGetiri": -0.00038086,
+        "paraGirisiCikisi": -52155713.18,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "DSV",
         "fonAdi": "DENİZ PORTFÖY 2028 SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00149128,
       "paraGirisiCikisi": -366705762.5,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "DSV",
+      "fonAdi": "DENİZ PORTFÖY 2028 SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 49.203503,
+      "tedavuldekiPaySayisi": 28274336,
+      "kisiSayisi": 44,
+      "fonToplamDeger": 1391196376.56,
+      "gunlukGetiri": -0.00038086,
+      "paraGirisiCikisi": -52155713.18,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DSV",
+      "fonAdi": "DENİZ PORTFÖY 2028 SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 49.203503,
+      "tedavuldekiPaySayisi": 28274336,
+      "kisiSayisi": 44,
+      "fonToplamDeger": 1391196376.56,
+      "gunlukGetiri": -0.00038086,
+      "paraGirisiCikisi": -52155713.18,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "DSV",
       "fonAdi": "DENİZ PORTFÖY 2028 SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

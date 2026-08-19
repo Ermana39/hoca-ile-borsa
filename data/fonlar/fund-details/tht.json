@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "THT",
     "slug": "tht",
@@ -12,44 +12,56 @@
     "yonetici": "TRIVE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "trive-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 0.215644,
-    "tedavuldekiPaySayisi": 32287966,
-    "kisiSayisi": 343,
-    "fonToplamDeger": 6962699.74,
-    "gunlukGetiri": 0.05916561,
+    "fiyat": 0.209016,
+    "tedavuldekiPaySayisi": 32158713,
+    "kisiSayisi": 344,
+    "fonToplamDeger": 6721687.55,
+    "gunlukGetiri": -0.03073584,
     "getiriler": {
-      "birAy": 0.16159300000000001,
-      "ucAy": -0.04276099999999999,
-      "altiAy": -0.14677199999999999,
-      "yilbasi": 0.09246,
-      "birYil": 0.020979,
+      "birAy": 0.125891,
+      "ucAy": -0.075494,
+      "altiAy": -0.161477,
+      "yilbasi": 0.058883,
+      "birYil": -0.007988,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 4020727.02,
-      "besGun": 888.04,
+      "gunluk": -27015.95,
+      "besGun": -74078.27,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
-      "besGun": 15,
+      "gunluk": 1,
+      "besGun": 20,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "THT",
+        "fonAdi": "TRİVE PORTFÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-19",
+        "fiyat": 0.209016,
+        "tedavuldekiPaySayisi": 32158713,
+        "kisiSayisi": 344,
+        "fonToplamDeger": 6721687.55,
+        "gunlukGetiri": -0.03073584,
+        "paraGirisiCikisi": -27015.95,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "THT",
         "fonAdi": "TRİVE PORTFÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -224,9 +236,33 @@
       "gunlukGetiri": 0.05916561,
       "paraGirisiCikisi": 4020727.02,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "THT",
+      "fonAdi": "TRİVE PORTFÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 0.209016,
+      "tedavuldekiPaySayisi": 32158713,
+      "kisiSayisi": 344,
+      "fonToplamDeger": 6721687.55,
+      "gunlukGetiri": -0.03073584,
+      "paraGirisiCikisi": -27015.95,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "THT",
+      "fonAdi": "TRİVE PORTFÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 0.209016,
+      "tedavuldekiPaySayisi": 32158713,
+      "kisiSayisi": 344,
+      "fonToplamDeger": 6721687.55,
+      "gunlukGetiri": -0.03073584,
+      "paraGirisiCikisi": -27015.95,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "THT",
       "fonAdi": "TRİVE PORTFÖY HİSSE SENEDİ SERBEST FON (HİSSE SENEDİ YOĞUN FON)",
@@ -317,7 +353,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "TIP",
     "slug": "tip",
@@ -12,13 +12,13 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 49.790349,
-    "tedavuldekiPaySayisi": 945970,
-    "kisiSayisi": 5,
-    "fonToplamDeger": 47100176.21,
-    "gunlukGetiri": 0.00191253,
+    "fiyat": 49.812396,
+    "tedavuldekiPaySayisi": 1134283,
+    "kisiSayisi": 7,
+    "fonToplamDeger": 56501353.73,
+    "gunlukGetiri": 0.0004428,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": 0,
+      "gunluk": 9380321.73,
+      "besGun": 9380321.73,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": 0,
+      "gunluk": 2,
+      "besGun": 2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TIP",
+        "fonAdi": "TEB PORTFÖY ING BANK ÖZEL BANKACILIK VE PLATİNUM SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-19",
+        "fiyat": 49.812396,
+        "tedavuldekiPaySayisi": 1134283,
+        "kisiSayisi": 7,
+        "fonToplamDeger": 56501353.73,
+        "gunlukGetiri": 0.0004428,
+        "paraGirisiCikisi": 9380321.73,
+        "yatirimciDegisimi": 2
+      },
       {
         "fonKodu": "TIP",
         "fonAdi": "TEB PORTFÖY ING BANK ÖZEL BANKACILIK VE PLATİNUM SERBEST (DÖVİZ) ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00191253,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TIP",
+      "fonAdi": "TEB PORTFÖY ING BANK ÖZEL BANKACILIK VE PLATİNUM SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 49.812396,
+      "tedavuldekiPaySayisi": 1134283,
+      "kisiSayisi": 7,
+      "fonToplamDeger": 56501353.73,
+      "gunlukGetiri": 0.0004428,
+      "paraGirisiCikisi": 9380321.73,
+      "yatirimciDegisimi": 2
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TIP",
+      "fonAdi": "TEB PORTFÖY ING BANK ÖZEL BANKACILIK VE PLATİNUM SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 49.812396,
+      "tedavuldekiPaySayisi": 1134283,
+      "kisiSayisi": 7,
+      "fonToplamDeger": 56501353.73,
+      "gunlukGetiri": 0.0004428,
+      "paraGirisiCikisi": 9380321.73,
+      "yatirimciDegisimi": 2
+    },
     {
       "fonKodu": "TIP",
       "fonAdi": "TEB PORTFÖY ING BANK ÖZEL BANKACILIK VE PLATİNUM SERBEST (DÖVİZ) ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

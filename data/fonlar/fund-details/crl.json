@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "CRL",
     "slug": "crl",
@@ -12,13 +12,13 @@
     "yonetici": "YAPI KREDİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "yapi-kredi-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 49.191924,
+    "fiyat": 49.181294,
     "tedavuldekiPaySayisi": 21500000,
     "kisiSayisi": 3,
-    "fonToplamDeger": 1057626360.75,
-    "gunlukGetiri": 0.00250931,
+    "fonToplamDeger": 1057397811.43,
+    "gunlukGetiri": -0.00021609,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "CRL",
+        "fonAdi": "YAPI KREDİ PORTFÖY ACARLAR SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-19",
+        "fiyat": 49.181294,
+        "tedavuldekiPaySayisi": 21500000,
+        "kisiSayisi": 3,
+        "fonToplamDeger": 1057397811.43,
+        "gunlukGetiri": -0.00021609,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "CRL",
         "fonAdi": "YAPI KREDİ PORTFÖY ACARLAR SERBEST (DÖVİZ) ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00250931,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "CRL",
+      "fonAdi": "YAPI KREDİ PORTFÖY ACARLAR SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 49.181294,
+      "tedavuldekiPaySayisi": 21500000,
+      "kisiSayisi": 3,
+      "fonToplamDeger": 1057397811.43,
+      "gunlukGetiri": -0.00021609,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "CRL",
+      "fonAdi": "YAPI KREDİ PORTFÖY ACARLAR SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 49.181294,
+      "tedavuldekiPaySayisi": 21500000,
+      "kisiSayisi": 3,
+      "fonToplamDeger": 1057397811.43,
+      "gunlukGetiri": -0.00021609,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "CRL",
       "fonAdi": "YAPI KREDİ PORTFÖY ACARLAR SERBEST (DÖVİZ) ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "RBF",
     "slug": "rbf",
@@ -12,44 +12,56 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.762825,
-    "tedavuldekiPaySayisi": 10921812,
-    "kisiSayisi": 84,
-    "fonToplamDeger": 19253238.95,
-    "gunlukGetiri": 0.00130643,
+    "fiyat": 1.763014,
+    "tedavuldekiPaySayisi": 10921693,
+    "kisiSayisi": 83,
+    "fonToplamDeger": 19255100.47,
+    "gunlukGetiri": 0.00010721,
     "getiriler": {
-      "birAy": 0.027216999999999998,
-      "ucAy": 0.06443800000000001,
-      "altiAy": 0.070987,
-      "yilbasi": 0.10690899999999999,
-      "birYil": 0.280801,
+      "birAy": 0.027327,
+      "ucAy": 0.06985999999999999,
+      "altiAy": 0.07049,
+      "yilbasi": 0.107028,
+      "birYil": 0.2796,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 349.04,
-      "besGun": 665169.05,
+      "gunluk": -209.8,
+      "besGun": 691379.97,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
+      "gunluk": -1,
       "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RBF",
+        "fonAdi": "ROTA PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 1.763014,
+        "tedavuldekiPaySayisi": 10921693,
+        "kisiSayisi": 83,
+        "fonToplamDeger": 19255100.47,
+        "gunlukGetiri": 0.00010721,
+        "paraGirisiCikisi": -209.8,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "RBF",
         "fonAdi": "ROTA PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00130643,
       "paraGirisiCikisi": 349.04,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "RBF",
+      "fonAdi": "ROTA PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.763014,
+      "tedavuldekiPaySayisi": 10921693,
+      "kisiSayisi": 83,
+      "fonToplamDeger": 19255100.47,
+      "gunlukGetiri": 0.00010721,
+      "paraGirisiCikisi": -209.8,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RBF",
+      "fonAdi": "ROTA PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.763014,
+      "tedavuldekiPaySayisi": 10921693,
+      "kisiSayisi": 83,
+      "fonToplamDeger": 19255100.47,
+      "gunlukGetiri": 0.00010721,
+      "paraGirisiCikisi": -209.8,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "RBF",
       "fonAdi": "ROTA PORTFÖY BİRİNCİ BORÇLANMA ARAÇLARI FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

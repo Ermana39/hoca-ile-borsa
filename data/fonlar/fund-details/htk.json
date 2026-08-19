@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "HTK",
     "slug": "htk",
@@ -12,15 +12,15 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.107951,
-    "tedavuldekiPaySayisi": 125132280,
-    "kisiSayisi": 845,
-    "fonToplamDeger": 138640474.91,
-    "gunlukGetiri": 0.00311087,
+    "fiyat": 1.095453,
+    "tedavuldekiPaySayisi": 122142031,
+    "kisiSayisi": 887,
+    "fonToplamDeger": 133800796.52,
+    "gunlukGetiri": -0.01128028,
     "getiriler": {
-      "birAy": 0.110895,
+      "birAy": 0.098364,
       "ucAy": null,
       "altiAy": null,
       "yilbasi": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 2195308.51,
-      "besGun": 16811202.49,
+      "gunluk": -3275677.24,
+      "besGun": 13066588.56,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 16,
-      "besGun": 79,
+      "gunluk": 42,
+      "besGun": 110,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HTK",
+        "fonAdi": "QNB PORTFÖY HAVACILIK VE SAVUNMA TEKNOLOJİLERİ FON SEPETİ FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 1.095453,
+        "tedavuldekiPaySayisi": 122142031,
+        "kisiSayisi": 887,
+        "fonToplamDeger": 133800796.52,
+        "gunlukGetiri": -0.01128028,
+        "paraGirisiCikisi": -3275677.24,
+        "yatirimciDegisimi": 42
+      },
       {
         "fonKodu": "HTK",
         "fonAdi": "QNB PORTFÖY HAVACILIK VE SAVUNMA TEKNOLOJİLERİ FON SEPETİ FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00311087,
       "paraGirisiCikisi": 2195308.51,
       "yatirimciDegisimi": 16
+    },
+    {
+      "fonKodu": "HTK",
+      "fonAdi": "QNB PORTFÖY HAVACILIK VE SAVUNMA TEKNOLOJİLERİ FON SEPETİ FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.095453,
+      "tedavuldekiPaySayisi": 122142031,
+      "kisiSayisi": 887,
+      "fonToplamDeger": 133800796.52,
+      "gunlukGetiri": -0.01128028,
+      "paraGirisiCikisi": -3275677.24,
+      "yatirimciDegisimi": 42
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HTK",
+      "fonAdi": "QNB PORTFÖY HAVACILIK VE SAVUNMA TEKNOLOJİLERİ FON SEPETİ FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.095453,
+      "tedavuldekiPaySayisi": 122142031,
+      "kisiSayisi": 887,
+      "fonToplamDeger": 133800796.52,
+      "gunlukGetiri": -0.01128028,
+      "paraGirisiCikisi": -3275677.24,
+      "yatirimciDegisimi": 42
+    },
     {
       "fonKodu": "HTK",
       "fonAdi": "QNB PORTFÖY HAVACILIK VE SAVUNMA TEKNOLOJİLERİ FON SEPETİ FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

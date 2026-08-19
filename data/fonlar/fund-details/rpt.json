@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "RPT",
     "slug": "rpt",
@@ -12,44 +12,56 @@
     "yonetici": "ROTA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "rota-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 5.153315,
-    "tedavuldekiPaySayisi": 236472843,
-    "kisiSayisi": 179,
-    "fonToplamDeger": 1218619004.28,
-    "gunlukGetiri": 0.0012812,
+    "fiyat": 5.158951,
+    "tedavuldekiPaySayisi": 236477759,
+    "kisiSayisi": 180,
+    "fonToplamDeger": 1219977265.48,
+    "gunlukGetiri": 0.00109366,
     "getiriler": {
-      "birAy": 0.031282000000000004,
-      "ucAy": 0.102522,
-      "altiAy": 0.209814,
-      "yilbasi": 0.267422,
-      "birYil": 0.468083,
-      "ucYil": 2.641546,
+      "birAy": 0.032409,
+      "ucAy": 0.10133900000000001,
+      "altiAy": 0.20982399999999998,
+      "yilbasi": 0.268808,
+      "birYil": 0.46779899999999996,
+      "ucYil": 2.640645,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 999.74,
-      "besGun": -174107.84,
+      "gunluk": 25361.4,
+      "besGun": -153641.7,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": -2,
+      "gunluk": 1,
+      "besGun": -1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RPT",
+        "fonAdi": "ROTA PORTFÖY İKİNCİ SERBEST (TL) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 5.158951,
+        "tedavuldekiPaySayisi": 236477759,
+        "kisiSayisi": 180,
+        "fonToplamDeger": 1219977265.48,
+        "gunlukGetiri": 0.00109366,
+        "paraGirisiCikisi": 25361.4,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "RPT",
         "fonAdi": "ROTA PORTFÖY İKİNCİ SERBEST (TL) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.0012812,
       "paraGirisiCikisi": 999.74,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "RPT",
+      "fonAdi": "ROTA PORTFÖY İKİNCİ SERBEST (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 5.158951,
+      "tedavuldekiPaySayisi": 236477759,
+      "kisiSayisi": 180,
+      "fonToplamDeger": 1219977265.48,
+      "gunlukGetiri": 0.00109366,
+      "paraGirisiCikisi": 25361.4,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RPT",
+      "fonAdi": "ROTA PORTFÖY İKİNCİ SERBEST (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 5.158951,
+      "tedavuldekiPaySayisi": 236477759,
+      "kisiSayisi": 180,
+      "fonToplamDeger": 1219977265.48,
+      "gunlukGetiri": 0.00109366,
+      "paraGirisiCikisi": 25361.4,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "RPT",
       "fonAdi": "ROTA PORTFÖY İKİNCİ SERBEST (TL) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "PBE",
     "slug": "pbe",
@@ -12,13 +12,13 @@
     "yonetici": "PUSULA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pusula-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 6.088511,
+    "fiyat": 6.103247,
     "tedavuldekiPaySayisi": 12151974,
     "kisiSayisi": 11,
-    "fonToplamDeger": 73987430.07,
-    "gunlukGetiri": 0.00315784,
+    "fonToplamDeger": 74166504.43,
+    "gunlukGetiri": 0.0024203,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,7 +29,7 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 17685669.3,
+      "gunluk": 0,
       "besGun": 17685669.3,
       "birAy": null,
       "ucAy": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PBE",
+        "fonAdi": "PUSULA PORTFÖY BATI SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 6.103247,
+        "tedavuldekiPaySayisi": 12151974,
+        "kisiSayisi": 11,
+        "fonToplamDeger": 74166504.43,
+        "gunlukGetiri": 0.0024203,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "PBE",
         "fonAdi": "PUSULA PORTFÖY BATI SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00315784,
       "paraGirisiCikisi": 17685669.3,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "PBE",
+      "fonAdi": "PUSULA PORTFÖY BATI SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 6.103247,
+      "tedavuldekiPaySayisi": 12151974,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 74166504.43,
+      "gunlukGetiri": 0.0024203,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PBE",
+      "fonAdi": "PUSULA PORTFÖY BATI SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 6.103247,
+      "tedavuldekiPaySayisi": 12151974,
+      "kisiSayisi": 11,
+      "fonToplamDeger": 74166504.43,
+      "gunlukGetiri": 0.0024203,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "PBE",
       "fonAdi": "PUSULA PORTFÖY BATI SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

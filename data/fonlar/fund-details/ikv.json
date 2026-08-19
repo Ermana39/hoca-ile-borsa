@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "IKV",
     "slug": "ikv",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.513817,
-    "tedavuldekiPaySayisi": 121251595,
+    "fiyat": 1.515373,
+    "tedavuldekiPaySayisi": 121003470,
     "kisiSayisi": 1207,
-    "fonToplamDeger": 183552767.85,
-    "gunlukGetiri": 0.00096935,
+    "fonToplamDeger": 183365391.93,
+    "gunlukGetiri": 0.00102787,
     "getiriler": {
-      "birAy": 0.030581,
-      "ucAy": 0.097872,
-      "altiAy": 0.190824,
-      "yilbasi": 0.250043,
-      "birYil": 0.44473999999999997,
+      "birAy": 0.03164,
+      "ucAy": 0.096755,
+      "altiAy": 0.190756,
+      "yilbasi": 0.251328,
+      "birYil": 0.444656,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 157361.28,
-      "besGun": 7564482.69,
+      "gunluk": -376001.93,
+      "besGun": 5476202.26,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
-      "besGun": 21,
+      "gunluk": 0,
+      "besGun": 14,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "IKV",
+        "fonAdi": "İŞ PORTFÖY İKİNCİ KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 1.515373,
+        "tedavuldekiPaySayisi": 121003470,
+        "kisiSayisi": 1207,
+        "fonToplamDeger": 183365391.93,
+        "gunlukGetiri": 0.00102787,
+        "paraGirisiCikisi": -376001.93,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "IKV",
         "fonAdi": "İŞ PORTFÖY İKİNCİ KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00096935,
       "paraGirisiCikisi": 157361.28,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "IKV",
+      "fonAdi": "İŞ PORTFÖY İKİNCİ KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.515373,
+      "tedavuldekiPaySayisi": 121003470,
+      "kisiSayisi": 1207,
+      "fonToplamDeger": 183365391.93,
+      "gunlukGetiri": 0.00102787,
+      "paraGirisiCikisi": -376001.93,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "IKV",
+      "fonAdi": "İŞ PORTFÖY İKİNCİ KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.515373,
+      "tedavuldekiPaySayisi": 121003470,
+      "kisiSayisi": 1207,
+      "fonToplamDeger": 183365391.93,
+      "gunlukGetiri": 0.00102787,
+      "paraGirisiCikisi": -376001.93,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "IKV",
       "fonAdi": "İŞ PORTFÖY İKİNCİ KISA VADELİ BORÇLANMA ARAÇLARI (TL) FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

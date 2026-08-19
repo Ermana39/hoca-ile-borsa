@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "TI6",
     "slug": "ti6",
@@ -12,44 +12,56 @@
     "yonetici": "İŞ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "is-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 0.053455,
-    "tedavuldekiPaySayisi": 9925339137,
-    "kisiSayisi": 4728,
-    "fonToplamDeger": 530557512.49,
-    "gunlukGetiri": 0.00144254,
+    "fiyat": 0.053435,
+    "tedavuldekiPaySayisi": 9887149678,
+    "kisiSayisi": 4734,
+    "fonToplamDeger": 528315487.1,
+    "gunlukGetiri": -0.00037415,
     "getiriler": {
-      "birAy": 0.027329,
-      "ucAy": 0.077461,
-      "altiAy": 0.07615999999999999,
-      "yilbasi": 0.109163,
-      "birYil": 0.292557,
-      "ucYil": 1.4074440000000001,
-      "besYil": 3.168814
+      "birAy": 0.026944,
+      "ucAy": 0.08462199999999999,
+      "altiAy": 0.07569200000000001,
+      "yilbasi": 0.10874800000000001,
+      "birYil": 0.290669,
+      "ucYil": 1.402753,
+      "besYil": 3.166917
     },
     "paraAkisi": {
-      "gunluk": -78413.94,
-      "besGun": -9163518.18,
+      "gunluk": -2040653.74,
+      "besGun": -5402751.08,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 2,
-      "besGun": -41,
+      "gunluk": 6,
+      "besGun": -24,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TI6",
+        "fonAdi": "İŞ PORTFÖY BORÇLANMA ARAÇLARI (TL) FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 0.053435,
+        "tedavuldekiPaySayisi": 9887149678,
+        "kisiSayisi": 4734,
+        "fonToplamDeger": 528315487.1,
+        "gunlukGetiri": -0.00037415,
+        "paraGirisiCikisi": -2040653.74,
+        "yatirimciDegisimi": 6
+      },
       {
         "fonKodu": "TI6",
         "fonAdi": "İŞ PORTFÖY BORÇLANMA ARAÇLARI (TL) FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00144254,
       "paraGirisiCikisi": -78413.94,
       "yatirimciDegisimi": 2
+    },
+    {
+      "fonKodu": "TI6",
+      "fonAdi": "İŞ PORTFÖY BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 0.053435,
+      "tedavuldekiPaySayisi": 9887149678,
+      "kisiSayisi": 4734,
+      "fonToplamDeger": 528315487.1,
+      "gunlukGetiri": -0.00037415,
+      "paraGirisiCikisi": -2040653.74,
+      "yatirimciDegisimi": 6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TI6",
+      "fonAdi": "İŞ PORTFÖY BORÇLANMA ARAÇLARI (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 0.053435,
+      "tedavuldekiPaySayisi": 9887149678,
+      "kisiSayisi": 4734,
+      "fonToplamDeger": 528315487.1,
+      "gunlukGetiri": -0.00037415,
+      "paraGirisiCikisi": -2040653.74,
+      "yatirimciDegisimi": 6
+    },
     {
       "fonKodu": "TI6",
       "fonAdi": "İŞ PORTFÖY BORÇLANMA ARAÇLARI (TL) FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

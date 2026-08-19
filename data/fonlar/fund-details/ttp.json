@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "TTP",
     "slug": "ttp",
@@ -12,13 +12,13 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 51.401107,
+    "fiyat": 51.417772,
     "tedavuldekiPaySayisi": 17213905,
     "kisiSayisi": 105,
-    "fonToplamDeger": 884813775.15,
-    "gunlukGetiri": 0.0021606,
+    "fonToplamDeger": 885100636.77,
+    "gunlukGetiri": 0.00032421,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -36,20 +36,32 @@
     },
     "yatirimciDegisimi": {
       "gunluk": 0,
-      "besGun": -1,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TTP",
+        "fonAdi": "TEB PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 51.417772,
+        "tedavuldekiPaySayisi": 17213905,
+        "kisiSayisi": 105,
+        "fonToplamDeger": 885100636.77,
+        "gunlukGetiri": 0.00032421,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "TTP",
         "fonAdi": "TEB PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.0021606,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TTP",
+      "fonAdi": "TEB PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 51.417772,
+      "tedavuldekiPaySayisi": 17213905,
+      "kisiSayisi": 105,
+      "fonToplamDeger": 885100636.77,
+      "gunlukGetiri": 0.00032421,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TTP",
+      "fonAdi": "TEB PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 51.417772,
+      "tedavuldekiPaySayisi": 17213905,
+      "kisiSayisi": 105,
+      "fonToplamDeger": 885100636.77,
+      "gunlukGetiri": 0.00032421,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "TTP",
       "fonAdi": "TEB PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

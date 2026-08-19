@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "GBV",
     "slug": "gbv",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 13.23722,
-    "tedavuldekiPaySayisi": 180544068,
-    "kisiSayisi": 22611,
-    "fonToplamDeger": 2389901559.9,
-    "gunlukGetiri": 0.00341909,
+    "fiyat": 13.006645,
+    "tedavuldekiPaySayisi": 179667195,
+    "kisiSayisi": 22620,
+    "fonToplamDeger": 2336867403.18,
+    "gunlukGetiri": -0.01741869,
     "getiriler": {
-      "birAy": 0.0594,
-      "ucAy": 0.042346,
-      "altiAy": 0.317177,
-      "yilbasi": 0.380974,
-      "birYil": 0.6111,
-      "ucYil": 3.815519,
+      "birAy": 0.040947,
+      "ucAy": 0.03173,
+      "altiAy": 0.288438,
+      "yilbasi": 0.356919,
+      "birYil": 0.578547,
+      "ucYil": 3.858802,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -106285173.72,
-      "besGun": -133367138.92,
+      "gunluk": -11405175.82,
+      "besGun": -133026308.8,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -22,
-      "besGun": -181,
+      "gunluk": 9,
+      "besGun": -163,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GBV",
+        "fonAdi": "GARANTİ PORTFÖY BLOCKCHAİN TEKNOLOJİLERİ DEĞİŞKEN FON",
+        "tarih": "2026-08-19",
+        "fiyat": 13.006645,
+        "tedavuldekiPaySayisi": 179667195,
+        "kisiSayisi": 22620,
+        "fonToplamDeger": 2336867403.18,
+        "gunlukGetiri": -0.01741869,
+        "paraGirisiCikisi": -11405175.82,
+        "yatirimciDegisimi": 9
+      },
       {
         "fonKodu": "GBV",
         "fonAdi": "GARANTİ PORTFÖY BLOCKCHAİN TEKNOLOJİLERİ DEĞİŞKEN FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00341909,
       "paraGirisiCikisi": -106285173.72,
       "yatirimciDegisimi": -22
+    },
+    {
+      "fonKodu": "GBV",
+      "fonAdi": "GARANTİ PORTFÖY BLOCKCHAİN TEKNOLOJİLERİ DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 13.006645,
+      "tedavuldekiPaySayisi": 179667195,
+      "kisiSayisi": 22620,
+      "fonToplamDeger": 2336867403.18,
+      "gunlukGetiri": -0.01741869,
+      "paraGirisiCikisi": -11405175.82,
+      "yatirimciDegisimi": 9
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GBV",
+      "fonAdi": "GARANTİ PORTFÖY BLOCKCHAİN TEKNOLOJİLERİ DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 13.006645,
+      "tedavuldekiPaySayisi": 179667195,
+      "kisiSayisi": 22620,
+      "fonToplamDeger": 2336867403.18,
+      "gunlukGetiri": -0.01741869,
+      "paraGirisiCikisi": -11405175.82,
+      "yatirimciDegisimi": 9
+    },
     {
       "fonKodu": "GBV",
       "fonAdi": "GARANTİ PORTFÖY BLOCKCHAİN TEKNOLOJİLERİ DEĞİŞKEN FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

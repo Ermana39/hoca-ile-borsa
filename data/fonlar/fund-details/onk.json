@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "ONK",
     "slug": "onk",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 60.207487,
-    "tedavuldekiPaySayisi": 1672636692,
-    "kisiSayisi": 22140,
-    "fonToplamDeger": 100705252242.66,
-    "gunlukGetiri": 0.00562065,
+    "fiyat": 60.125724,
+    "tedavuldekiPaySayisi": 1672742288,
+    "kisiSayisi": 22092,
+    "fonToplamDeger": 100574840526.92,
+    "gunlukGetiri": -0.00135802,
     "getiriler": {
-      "birAy": 0.033666,
-      "ucAy": 0.056275000000000006,
-      "altiAy": 0.085173,
-      "yilbasi": 0.118604,
-      "birYil": 0.191707,
-      "ucYil": 1.042517,
+      "birAy": 0.032262,
+      "ucAy": 0.053303,
+      "altiAy": 0.083457,
+      "yilbasi": 0.11708500000000001,
+      "birYil": 0.187786,
+      "ucYil": 1.042584,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -377576082.43,
-      "besGun": 2042200352.24,
+      "gunluk": 6349035.95,
+      "besGun": -51362942.2,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -69,
-      "besGun": -158,
+      "gunluk": -48,
+      "besGun": -189,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ONK",
+        "fonAdi": "AK PORTFÖY ONİKİNCİ SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 60.125724,
+        "tedavuldekiPaySayisi": 1672742288,
+        "kisiSayisi": 22092,
+        "fonToplamDeger": 100574840526.92,
+        "gunlukGetiri": -0.00135802,
+        "paraGirisiCikisi": 6349035.95,
+        "yatirimciDegisimi": -48
+      },
       {
         "fonKodu": "ONK",
         "fonAdi": "AK PORTFÖY ONİKİNCİ SERBEST (DÖVİZ-AVRO) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00562065,
       "paraGirisiCikisi": -377576082.43,
       "yatirimciDegisimi": -69
+    },
+    {
+      "fonKodu": "ONK",
+      "fonAdi": "AK PORTFÖY ONİKİNCİ SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 60.125724,
+      "tedavuldekiPaySayisi": 1672742288,
+      "kisiSayisi": 22092,
+      "fonToplamDeger": 100574840526.92,
+      "gunlukGetiri": -0.00135802,
+      "paraGirisiCikisi": 6349035.95,
+      "yatirimciDegisimi": -48
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ONK",
+      "fonAdi": "AK PORTFÖY ONİKİNCİ SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 60.125724,
+      "tedavuldekiPaySayisi": 1672742288,
+      "kisiSayisi": 22092,
+      "fonToplamDeger": 100574840526.92,
+      "gunlukGetiri": -0.00135802,
+      "paraGirisiCikisi": 6349035.95,
+      "yatirimciDegisimi": -48
+    },
     {
       "fonKodu": "ONK",
       "fonAdi": "AK PORTFÖY ONİKİNCİ SERBEST (DÖVİZ-AVRO) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

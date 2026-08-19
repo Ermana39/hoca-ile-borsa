@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "TNS",
     "slug": "tns",
@@ -12,13 +12,13 @@
     "yonetici": "TACİRLER PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "tacirler-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 12.925188,
+    "fiyat": 12.883811,
     "tedavuldekiPaySayisi": 7290358,
     "kisiSayisi": 16,
-    "fonToplamDeger": 94229245.74,
-    "gunlukGetiri": 0.00516652,
+    "fonToplamDeger": 93927594.47,
+    "gunlukGetiri": -0.00320127,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TNS",
+        "fonAdi": "TACİRLER PORTFÖY NAR SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 12.883811,
+        "tedavuldekiPaySayisi": 7290358,
+        "kisiSayisi": 16,
+        "fonToplamDeger": 93927594.47,
+        "gunlukGetiri": -0.00320127,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "TNS",
         "fonAdi": "TACİRLER PORTFÖY NAR SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00516652,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TNS",
+      "fonAdi": "TACİRLER PORTFÖY NAR SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 12.883811,
+      "tedavuldekiPaySayisi": 7290358,
+      "kisiSayisi": 16,
+      "fonToplamDeger": 93927594.47,
+      "gunlukGetiri": -0.00320127,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TNS",
+      "fonAdi": "TACİRLER PORTFÖY NAR SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 12.883811,
+      "tedavuldekiPaySayisi": 7290358,
+      "kisiSayisi": 16,
+      "fonToplamDeger": 93927594.47,
+      "gunlukGetiri": -0.00320127,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "TNS",
       "fonAdi": "TACİRLER PORTFÖY NAR SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

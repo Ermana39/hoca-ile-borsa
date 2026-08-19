@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "PCE",
     "slug": "pce",
@@ -12,44 +12,56 @@
     "yonetici": "PARDUS PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "pardus-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.292644,
-    "tedavuldekiPaySayisi": 78760343,
+    "fiyat": 1.291632,
+    "tedavuldekiPaySayisi": 78756320,
     "kisiSayisi": 155,
-    "fonToplamDeger": 101809061.66,
-    "gunlukGetiri": 0.00466954,
+    "fonToplamDeger": 101724205.86,
+    "gunlukGetiri": -0.00078289,
     "getiriler": {
-      "birAy": 0.038921000000000004,
-      "ucAy": 0.09379,
-      "altiAy": 0.19710899999999998,
-      "yilbasi": 0.246585,
-      "birYil": 0.377731,
+      "birAy": 0.038107,
+      "ucAy": 0.093476,
+      "altiAy": 0.19715699999999997,
+      "yilbasi": 0.245609,
+      "birYil": 0.36857599999999996,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -360447.32,
-      "besGun": -25713526.13,
+      "gunluk": -5196.24,
+      "besGun": -25723602.88,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
+      "gunluk": 0,
       "besGun": -4,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PCE",
+        "fonAdi": "PARDUS PORTFÖY İNCİ SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 1.291632,
+        "tedavuldekiPaySayisi": 78756320,
+        "kisiSayisi": 155,
+        "fonToplamDeger": 101724205.86,
+        "gunlukGetiri": -0.00078289,
+        "paraGirisiCikisi": -5196.24,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "PCE",
         "fonAdi": "PARDUS PORTFÖY İNCİ SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00466954,
       "paraGirisiCikisi": -360447.32,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "PCE",
+      "fonAdi": "PARDUS PORTFÖY İNCİ SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.291632,
+      "tedavuldekiPaySayisi": 78756320,
+      "kisiSayisi": 155,
+      "fonToplamDeger": 101724205.86,
+      "gunlukGetiri": -0.00078289,
+      "paraGirisiCikisi": -5196.24,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PCE",
+      "fonAdi": "PARDUS PORTFÖY İNCİ SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.291632,
+      "tedavuldekiPaySayisi": 78756320,
+      "kisiSayisi": 155,
+      "fonToplamDeger": 101724205.86,
+      "gunlukGetiri": -0.00078289,
+      "paraGirisiCikisi": -5196.24,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "PCE",
       "fonAdi": "PARDUS PORTFÖY İNCİ SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

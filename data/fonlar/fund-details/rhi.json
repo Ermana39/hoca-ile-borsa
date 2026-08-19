@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "RHI",
     "slug": "rhi",
@@ -12,44 +12,56 @@
     "yonetici": "RE-PIE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "re-pie-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.659689,
-    "tedavuldekiPaySayisi": 23481773,
-    "kisiSayisi": 441,
-    "fonToplamDeger": 38972444.21,
-    "gunlukGetiri": -0.00968483,
+    "fiyat": 1.670286,
+    "tedavuldekiPaySayisi": 23198361,
+    "kisiSayisi": 442,
+    "fonToplamDeger": 38747890.21,
+    "gunlukGetiri": 0.00638493,
     "getiriler": {
-      "birAy": 0.032302,
-      "ucAy": 0.015988,
-      "altiAy": 0.088866,
-      "yilbasi": 0.421434,
-      "birYil": 0.381201,
+      "birAy": 0.038893,
+      "ucAy": 0.045879,
+      "altiAy": 0.09664199999999999,
+      "yilbasi": 0.43051,
+      "birYil": 0.375861,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -530898,
-      "besGun": -3408248.98,
+      "gunluk": -473379.1,
+      "besGun": -4250754.06,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -5,
-      "besGun": -9,
+      "gunluk": 1,
+      "besGun": -6,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "RHI",
+        "fonAdi": "RE-PIE PORTFÖY BİRİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-19",
+        "fiyat": 1.670286,
+        "tedavuldekiPaySayisi": 23198361,
+        "kisiSayisi": 442,
+        "fonToplamDeger": 38747890.21,
+        "gunlukGetiri": 0.00638493,
+        "paraGirisiCikisi": -473379.1,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "RHI",
         "fonAdi": "RE-PIE PORTFÖY BİRİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -220,9 +232,33 @@
       "gunlukGetiri": -0.00968483,
       "paraGirisiCikisi": -530898,
       "yatirimciDegisimi": -5
+    },
+    {
+      "fonKodu": "RHI",
+      "fonAdi": "RE-PIE PORTFÖY BİRİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 1.670286,
+      "tedavuldekiPaySayisi": 23198361,
+      "kisiSayisi": 442,
+      "fonToplamDeger": 38747890.21,
+      "gunlukGetiri": 0.00638493,
+      "paraGirisiCikisi": -473379.1,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "RHI",
+      "fonAdi": "RE-PIE PORTFÖY BİRİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 1.670286,
+      "tedavuldekiPaySayisi": 23198361,
+      "kisiSayisi": 442,
+      "fonToplamDeger": 38747890.21,
+      "gunlukGetiri": 0.00638493,
+      "paraGirisiCikisi": -473379.1,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "RHI",
       "fonAdi": "RE-PIE PORTFÖY BİRİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

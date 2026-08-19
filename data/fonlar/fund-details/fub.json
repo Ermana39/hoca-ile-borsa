@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "FUB",
     "slug": "fub",
@@ -12,44 +12,56 @@
     "yonetici": "QNB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "qnb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 0.75532,
-    "tedavuldekiPaySayisi": 1213218075,
-    "kisiSayisi": 2171,
-    "fonToplamDeger": 916368209.65,
-    "gunlukGetiri": 0.00088518,
+    "fiyat": 0.753515,
+    "tedavuldekiPaySayisi": 1213732927,
+    "kisiSayisi": 2177,
+    "fonToplamDeger": 914566514.04,
+    "gunlukGetiri": -0.00238972,
     "getiriler": {
-      "birAy": 0.025528,
-      "ucAy": 0.068011,
-      "altiAy": 0.081052,
-      "yilbasi": 0.12212300000000001,
-      "birYil": 0.245348,
-      "ucYil": 1.336145,
-      "besYil": 6.360072
+      "birAy": 0.023077999999999998,
+      "ucAy": 0.06699,
+      "altiAy": 0.077429,
+      "yilbasi": 0.119441,
+      "birYil": 0.23961300000000002,
+      "ucYil": 1.334606,
+      "besYil": 6.306033
     },
     "paraAkisi": {
-      "gunluk": 100621.46,
-      "besGun": -257372.65,
+      "gunluk": 387948.7,
+      "besGun": 896909.34,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
-      "besGun": -2,
+      "gunluk": 6,
+      "besGun": 3,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "FUB",
+        "fonAdi": "QNB PORTFÖY EUROBOND (DÖVİZ) BORÇLANMA ARAÇLARI FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 0.753515,
+        "tedavuldekiPaySayisi": 1213732927,
+        "kisiSayisi": 2177,
+        "fonToplamDeger": 914566514.04,
+        "gunlukGetiri": -0.00238972,
+        "paraGirisiCikisi": 387948.7,
+        "yatirimciDegisimi": 6
+      },
       {
         "fonKodu": "FUB",
         "fonAdi": "QNB PORTFÖY EUROBOND (DÖVİZ) BORÇLANMA ARAÇLARI FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00088518,
       "paraGirisiCikisi": 100621.46,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "FUB",
+      "fonAdi": "QNB PORTFÖY EUROBOND (DÖVİZ) BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 0.753515,
+      "tedavuldekiPaySayisi": 1213732927,
+      "kisiSayisi": 2177,
+      "fonToplamDeger": 914566514.04,
+      "gunlukGetiri": -0.00238972,
+      "paraGirisiCikisi": 387948.7,
+      "yatirimciDegisimi": 6
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "FUB",
+      "fonAdi": "QNB PORTFÖY EUROBOND (DÖVİZ) BORÇLANMA ARAÇLARI FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 0.753515,
+      "tedavuldekiPaySayisi": 1213732927,
+      "kisiSayisi": 2177,
+      "fonToplamDeger": 914566514.04,
+      "gunlukGetiri": -0.00238972,
+      "paraGirisiCikisi": 387948.7,
+      "yatirimciDegisimi": 6
+    },
     {
       "fonKodu": "FUB",
       "fonAdi": "QNB PORTFÖY EUROBOND (DÖVİZ) BORÇLANMA ARAÇLARI FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

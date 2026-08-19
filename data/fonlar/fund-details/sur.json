@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "SUR",
     "slug": "sur",
@@ -12,25 +12,25 @@
     "yonetici": "EMAA BLUE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "emaa-blue-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.125518,
-    "tedavuldekiPaySayisi": 187690553,
+    "fiyat": 1.130566,
+    "tedavuldekiPaySayisi": 187689826,
     "kisiSayisi": 93,
-    "fonToplamDeger": 211249092.57,
-    "gunlukGetiri": -0.00471152,
+    "fonToplamDeger": 212195701.76,
+    "gunlukGetiri": 0.00448505,
     "getiriler": {
-      "birAy": -0.004255,
-      "ucAy": -0.049962,
-      "altiAy": -0.08263999999999999,
-      "yilbasi": 0.13488899999999998,
+      "birAy": 0.000211,
+      "ucAy": -0.025546000000000003,
+      "altiAy": -0.075145,
+      "yilbasi": 0.139979,
       "birYil": null,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 40008.79,
-      "besGun": 41179.03,
+      "gunluk": -821.92,
+      "besGun": 40447.82,
       "birAy": null,
       "ucAy": null
     },
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "SUR",
+        "fonAdi": "EMAA BLUE PORTFÖY SÜRDÜRÜLEBİLİRLİK HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-19",
+        "fiyat": 1.130566,
+        "tedavuldekiPaySayisi": 187689826,
+        "kisiSayisi": 93,
+        "fonToplamDeger": 212195701.76,
+        "gunlukGetiri": 0.00448505,
+        "paraGirisiCikisi": -821.92,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "SUR",
         "fonAdi": "EMAA BLUE PORTFÖY SÜRDÜRÜLEBİLİRLİK HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -220,9 +232,33 @@
       "gunlukGetiri": -0.00471152,
       "paraGirisiCikisi": 40008.79,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "SUR",
+      "fonAdi": "EMAA BLUE PORTFÖY SÜRDÜRÜLEBİLİRLİK HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 1.130566,
+      "tedavuldekiPaySayisi": 187689826,
+      "kisiSayisi": 93,
+      "fonToplamDeger": 212195701.76,
+      "gunlukGetiri": 0.00448505,
+      "paraGirisiCikisi": -821.92,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "SUR",
+      "fonAdi": "EMAA BLUE PORTFÖY SÜRDÜRÜLEBİLİRLİK HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 1.130566,
+      "tedavuldekiPaySayisi": 187689826,
+      "kisiSayisi": 93,
+      "fonToplamDeger": 212195701.76,
+      "gunlukGetiri": 0.00448505,
+      "paraGirisiCikisi": -821.92,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "SUR",
       "fonAdi": "EMAA BLUE PORTFÖY SÜRDÜRÜLEBİLİRLİK HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

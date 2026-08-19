@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "GP3",
     "slug": "gp3",
@@ -12,13 +12,13 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 64.849998,
-    "tedavuldekiPaySayisi": 10707453,
-    "kisiSayisi": 453,
-    "fonToplamDeger": 694378309.25,
-    "gunlukGetiri": 0.00419554,
+    "fiyat": 64.308596,
+    "tedavuldekiPaySayisi": 10754245,
+    "kisiSayisi": 457,
+    "fonToplamDeger": 691590396.22,
+    "gunlukGetiri": -0.00834853,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 2352433.68,
-      "besGun": -38951421.65,
+      "gunluk": 3009127.82,
+      "besGun": -40602562.58,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": 17,
+      "gunluk": 4,
+      "besGun": 14,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GP3",
+        "fonAdi": "GARANTİ PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 64.308596,
+        "tedavuldekiPaySayisi": 10754245,
+        "kisiSayisi": 457,
+        "fonToplamDeger": 691590396.22,
+        "gunlukGetiri": -0.00834853,
+        "paraGirisiCikisi": 3009127.82,
+        "yatirimciDegisimi": 4
+      },
       {
         "fonKodu": "GP3",
         "fonAdi": "GARANTİ PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ-AVRO) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00419554,
       "paraGirisiCikisi": 2352433.68,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GP3",
+      "fonAdi": "GARANTİ PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 64.308596,
+      "tedavuldekiPaySayisi": 10754245,
+      "kisiSayisi": 457,
+      "fonToplamDeger": 691590396.22,
+      "gunlukGetiri": -0.00834853,
+      "paraGirisiCikisi": 3009127.82,
+      "yatirimciDegisimi": 4
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GP3",
+      "fonAdi": "GARANTİ PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 64.308596,
+      "tedavuldekiPaySayisi": 10754245,
+      "kisiSayisi": 457,
+      "fonToplamDeger": 691590396.22,
+      "gunlukGetiri": -0.00834853,
+      "paraGirisiCikisi": 3009127.82,
+      "yatirimciDegisimi": 4
+    },
     {
       "fonKodu": "GP3",
       "fonAdi": "GARANTİ PORTFÖY ÜÇÜNCÜ SERBEST (DÖVİZ-AVRO) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

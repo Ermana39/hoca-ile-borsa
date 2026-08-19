@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "TZP",
     "slug": "tzp",
@@ -12,13 +12,13 @@
     "yonetici": "TACİRLER PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "tacirler-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 14.158456,
-    "tedavuldekiPaySayisi": 79087453,
+    "fiyat": 14.171172,
+    "tedavuldekiPaySayisi": 78982922,
     "kisiSayisi": 14,
-    "fonToplamDeger": 1119756249.65,
-    "gunlukGetiri": 0.00165588,
+    "fonToplamDeger": 1119280602.68,
+    "gunlukGetiri": 0.00089812,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,8 +29,8 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 0,
-      "besGun": 0,
+      "gunluk": -1481326.78,
+      "besGun": -1481326.78,
       "birAy": null,
       "ucAy": null
     },
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TZP",
+        "fonAdi": "TACİRLER PORTFÖY RİGEL SERBEST ÖZEL FON",
+        "tarih": "2026-08-19",
+        "fiyat": 14.171172,
+        "tedavuldekiPaySayisi": 78982922,
+        "kisiSayisi": 14,
+        "fonToplamDeger": 1119280602.68,
+        "gunlukGetiri": 0.00089812,
+        "paraGirisiCikisi": -1481326.78,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "TZP",
         "fonAdi": "TACİRLER PORTFÖY RİGEL SERBEST ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00165588,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "TZP",
+      "fonAdi": "TACİRLER PORTFÖY RİGEL SERBEST ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 14.171172,
+      "tedavuldekiPaySayisi": 78982922,
+      "kisiSayisi": 14,
+      "fonToplamDeger": 1119280602.68,
+      "gunlukGetiri": 0.00089812,
+      "paraGirisiCikisi": -1481326.78,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TZP",
+      "fonAdi": "TACİRLER PORTFÖY RİGEL SERBEST ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 14.171172,
+      "tedavuldekiPaySayisi": 78982922,
+      "kisiSayisi": 14,
+      "fonToplamDeger": 1119280602.68,
+      "gunlukGetiri": 0.00089812,
+      "paraGirisiCikisi": -1481326.78,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "TZP",
       "fonAdi": "TACİRLER PORTFÖY RİGEL SERBEST ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

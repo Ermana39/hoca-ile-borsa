@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "BVV",
     "slug": "bvv",
@@ -12,44 +12,56 @@
     "yonetici": "BV PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "bv-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 3.621342,
-    "tedavuldekiPaySayisi": 54745402,
-    "kisiSayisi": 1079,
-    "fonToplamDeger": 198251841.88,
-    "gunlukGetiri": 0.00034612,
+    "fiyat": 3.545497,
+    "tedavuldekiPaySayisi": 55070460,
+    "kisiSayisi": 1111,
+    "fonToplamDeger": 195252160.61,
+    "gunlukGetiri": -0.02094389,
     "getiriler": {
-      "birAy": 0.064609,
-      "ucAy": 0.135236,
-      "altiAy": 0.500281,
-      "yilbasi": 0.584689,
-      "birYil": 0.884086,
+      "birAy": 0.042312,
+      "ucAy": 0.114977,
+      "altiAy": 0.45644100000000004,
+      "yilbasi": 0.5514990000000001,
+      "birYil": 0.847691,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -1792748.98,
-      "besGun": 143421.86,
+      "gunluk": 1152492.16,
+      "besGun": 951017.86,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 25,
-      "besGun": 50,
+      "gunluk": 32,
+      "besGun": 69,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BVV",
+        "fonAdi": "BV PORTFÖY TEKNOLOJİ DEĞİŞKEN FON",
+        "tarih": "2026-08-19",
+        "fiyat": 3.545497,
+        "tedavuldekiPaySayisi": 55070460,
+        "kisiSayisi": 1111,
+        "fonToplamDeger": 195252160.61,
+        "gunlukGetiri": -0.02094389,
+        "paraGirisiCikisi": 1152492.16,
+        "yatirimciDegisimi": 32
+      },
       {
         "fonKodu": "BVV",
         "fonAdi": "BV PORTFÖY TEKNOLOJİ DEĞİŞKEN FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00034612,
       "paraGirisiCikisi": -1792748.98,
       "yatirimciDegisimi": 25
+    },
+    {
+      "fonKodu": "BVV",
+      "fonAdi": "BV PORTFÖY TEKNOLOJİ DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 3.545497,
+      "tedavuldekiPaySayisi": 55070460,
+      "kisiSayisi": 1111,
+      "fonToplamDeger": 195252160.61,
+      "gunlukGetiri": -0.02094389,
+      "paraGirisiCikisi": 1152492.16,
+      "yatirimciDegisimi": 32
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BVV",
+      "fonAdi": "BV PORTFÖY TEKNOLOJİ DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 3.545497,
+      "tedavuldekiPaySayisi": 55070460,
+      "kisiSayisi": 1111,
+      "fonToplamDeger": 195252160.61,
+      "gunlukGetiri": -0.02094389,
+      "paraGirisiCikisi": 1152492.16,
+      "yatirimciDegisimi": 32
+    },
     {
       "fonKodu": "BVV",
       "fonAdi": "BV PORTFÖY TEKNOLOJİ DEĞİŞKEN FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

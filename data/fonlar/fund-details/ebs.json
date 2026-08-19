@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "EBS",
     "slug": "ebs",
@@ -12,18 +12,18 @@
     "yonetici": "EMAA BLUE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "emaa-blue-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 49.110856,
+    "fiyat": 49.102719,
     "tedavuldekiPaySayisi": 90567977,
     "kisiSayisi": 35,
-    "fonToplamDeger": 4447870898.69,
-    "gunlukGetiri": 0.00152163,
+    "fonToplamDeger": 4447133921.97,
+    "gunlukGetiri": -0.00016569,
     "getiriler": {
-      "birAy": 0.022567,
-      "ucAy": 0.06820999999999999,
-      "altiAy": 0.10969799999999999,
-      "yilbasi": 0.13997199999999999,
+      "birAy": 0.022397999999999998,
+      "ucAy": 0.067356,
+      "altiAy": 0.10847699999999999,
+      "yilbasi": 0.13978300000000002,
       "birYil": null,
       "ucYil": null,
       "besYil": null
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "EBS",
+        "fonAdi": "EMAA BLUE PORTFÖY BİRİNCİ SERBEST (DÖVİZ-ABD DOLARI) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 49.102719,
+        "tedavuldekiPaySayisi": 90567977,
+        "kisiSayisi": 35,
+        "fonToplamDeger": 4447133921.97,
+        "gunlukGetiri": -0.00016569,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "EBS",
         "fonAdi": "EMAA BLUE PORTFÖY BİRİNCİ SERBEST (DÖVİZ-ABD DOLARI) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00152163,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "EBS",
+      "fonAdi": "EMAA BLUE PORTFÖY BİRİNCİ SERBEST (DÖVİZ-ABD DOLARI) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 49.102719,
+      "tedavuldekiPaySayisi": 90567977,
+      "kisiSayisi": 35,
+      "fonToplamDeger": 4447133921.97,
+      "gunlukGetiri": -0.00016569,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "EBS",
+      "fonAdi": "EMAA BLUE PORTFÖY BİRİNCİ SERBEST (DÖVİZ-ABD DOLARI) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 49.102719,
+      "tedavuldekiPaySayisi": 90567977,
+      "kisiSayisi": 35,
+      "fonToplamDeger": 4447133921.97,
+      "gunlukGetiri": -0.00016569,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "EBS",
       "fonAdi": "EMAA BLUE PORTFÖY BİRİNCİ SERBEST (DÖVİZ-ABD DOLARI) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

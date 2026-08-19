@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "BGR",
     "slug": "bgr",
@@ -12,13 +12,13 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.014138,
-    "tedavuldekiPaySayisi": 30604024,
-    "kisiSayisi": 94,
-    "fonToplamDeger": 31036694.21,
-    "gunlukGetiri": -0.00229716,
+    "fiyat": 0.998054,
+    "tedavuldekiPaySayisi": 30958112,
+    "kisiSayisi": 114,
+    "fonToplamDeger": 30897858.05,
+    "gunlukGetiri": -0.01585977,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 62593.61,
-      "besGun": -2998978.74,
+      "gunluk": 353398.94,
+      "besGun": -3129422.05,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 3,
-      "besGun": 28,
+      "gunluk": 20,
+      "besGun": 32,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "BGR",
+        "fonAdi": "AK PORTFÖY BIST GYO ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-19",
+        "fiyat": 0.998054,
+        "tedavuldekiPaySayisi": 30958112,
+        "kisiSayisi": 114,
+        "fonToplamDeger": 30897858.05,
+        "gunlukGetiri": -0.01585977,
+        "paraGirisiCikisi": 353398.94,
+        "yatirimciDegisimi": 20
+      },
       {
         "fonKodu": "BGR",
         "fonAdi": "AK PORTFÖY BIST GYO ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -220,9 +232,33 @@
       "gunlukGetiri": -0.00229716,
       "paraGirisiCikisi": 62593.61,
       "yatirimciDegisimi": 3
+    },
+    {
+      "fonKodu": "BGR",
+      "fonAdi": "AK PORTFÖY BIST GYO ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 0.998054,
+      "tedavuldekiPaySayisi": 30958112,
+      "kisiSayisi": 114,
+      "fonToplamDeger": 30897858.05,
+      "gunlukGetiri": -0.01585977,
+      "paraGirisiCikisi": 353398.94,
+      "yatirimciDegisimi": 20
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "BGR",
+      "fonAdi": "AK PORTFÖY BIST GYO ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 0.998054,
+      "tedavuldekiPaySayisi": 30958112,
+      "kisiSayisi": 114,
+      "fonToplamDeger": 30897858.05,
+      "gunlukGetiri": -0.01585977,
+      "paraGirisiCikisi": 353398.94,
+      "yatirimciDegisimi": 20
+    },
     {
       "fonKodu": "BGR",
       "fonAdi": "AK PORTFÖY BIST GYO ENDEKSİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

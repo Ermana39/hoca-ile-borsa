@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "KVT",
     "slug": "kvt",
@@ -12,44 +12,56 @@
     "yonetici": "AK PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ak-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.446042,
-    "tedavuldekiPaySayisi": 62502721,
-    "kisiSayisi": 3008,
-    "fonToplamDeger": 90381549.48,
-    "gunlukGetiri": 0.00693764,
+    "fiyat": 1.428121,
+    "tedavuldekiPaySayisi": 61419079,
+    "kisiSayisi": 3009,
+    "fonToplamDeger": 87713848.68,
+    "gunlukGetiri": -0.01239314,
     "getiriler": {
-      "birAy": -0.028763999999999998,
-      "ucAy": -0.003353,
-      "altiAy": 0.099489,
-      "yilbasi": 0.24267,
-      "birYil": 0.23133199999999998,
+      "birAy": -0.040801,
+      "ucAy": 0.014053,
+      "altiAy": 0.100937,
+      "yilbasi": 0.22727,
+      "birYil": 0.19329999999999997,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -186581.35,
-      "besGun": -4603020.07,
+      "gunluk": -1547571.9,
+      "besGun": -5992552.08,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
-      "besGun": -18,
+      "gunluk": 1,
+      "besGun": -19,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KVT",
+        "fonAdi": "AK PORTFÖY ENERJİ ŞİRKETLERİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-19",
+        "fiyat": 1.428121,
+        "tedavuldekiPaySayisi": 61419079,
+        "kisiSayisi": 3009,
+        "fonToplamDeger": 87713848.68,
+        "gunlukGetiri": -0.01239314,
+        "paraGirisiCikisi": -1547571.9,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "KVT",
         "fonAdi": "AK PORTFÖY ENERJİ ŞİRKETLERİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00693764,
       "paraGirisiCikisi": -186581.35,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "KVT",
+      "fonAdi": "AK PORTFÖY ENERJİ ŞİRKETLERİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 1.428121,
+      "tedavuldekiPaySayisi": 61419079,
+      "kisiSayisi": 3009,
+      "fonToplamDeger": 87713848.68,
+      "gunlukGetiri": -0.01239314,
+      "paraGirisiCikisi": -1547571.9,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KVT",
+      "fonAdi": "AK PORTFÖY ENERJİ ŞİRKETLERİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 1.428121,
+      "tedavuldekiPaySayisi": 61419079,
+      "kisiSayisi": 3009,
+      "fonToplamDeger": 87713848.68,
+      "gunlukGetiri": -0.01239314,
+      "paraGirisiCikisi": -1547571.9,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "KVT",
       "fonAdi": "AK PORTFÖY ENERJİ ŞİRKETLERİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

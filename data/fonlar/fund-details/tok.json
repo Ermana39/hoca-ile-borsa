@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "TOK",
     "slug": "tok",
@@ -12,13 +12,13 @@
     "yonetici": "TEB PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "teb-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 59.033551,
-    "tedavuldekiPaySayisi": 415282329,
-    "kisiSayisi": 7005,
-    "fonToplamDeger": 24515590433.75,
-    "gunlukGetiri": 0.00559879,
+    "fiyat": 58.952936,
+    "tedavuldekiPaySayisi": 414672145,
+    "kisiSayisi": 6996,
+    "fonToplamDeger": 24446140330.32,
+    "gunlukGetiri": -0.00136558,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -48807168.96,
-      "besGun": 97920181.36,
+      "gunluk": -35972138.3,
+      "besGun": 77543617.22,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -4,
-      "besGun": -14,
+      "gunluk": -9,
+      "besGun": -11,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "TOK",
+        "fonAdi": "TEB PORTFÖY ONBİRİNCİ SERBEST (DÖVİZ - AVRO) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 58.952936,
+        "tedavuldekiPaySayisi": 414672145,
+        "kisiSayisi": 6996,
+        "fonToplamDeger": 24446140330.32,
+        "gunlukGetiri": -0.00136558,
+        "paraGirisiCikisi": -35972138.3,
+        "yatirimciDegisimi": -9
+      },
       {
         "fonKodu": "TOK",
         "fonAdi": "TEB PORTFÖY ONBİRİNCİ SERBEST (DÖVİZ - AVRO) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00559879,
       "paraGirisiCikisi": -48807168.96,
       "yatirimciDegisimi": -4
+    },
+    {
+      "fonKodu": "TOK",
+      "fonAdi": "TEB PORTFÖY ONBİRİNCİ SERBEST (DÖVİZ - AVRO) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 58.952936,
+      "tedavuldekiPaySayisi": 414672145,
+      "kisiSayisi": 6996,
+      "fonToplamDeger": 24446140330.32,
+      "gunlukGetiri": -0.00136558,
+      "paraGirisiCikisi": -35972138.3,
+      "yatirimciDegisimi": -9
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "TOK",
+      "fonAdi": "TEB PORTFÖY ONBİRİNCİ SERBEST (DÖVİZ - AVRO) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 58.952936,
+      "tedavuldekiPaySayisi": 414672145,
+      "kisiSayisi": 6996,
+      "fonToplamDeger": 24446140330.32,
+      "gunlukGetiri": -0.00136558,
+      "paraGirisiCikisi": -35972138.3,
+      "yatirimciDegisimi": -9
+    },
     {
       "fonKodu": "TOK",
       "fonAdi": "TEB PORTFÖY ONBİRİNCİ SERBEST (DÖVİZ - AVRO) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

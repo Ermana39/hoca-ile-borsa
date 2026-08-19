@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "HCV",
     "slug": "hcv",
@@ -12,16 +12,16 @@
     "yonetici": "HEDEF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hedef-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.018557,
-    "tedavuldekiPaySayisi": 158884122,
-    "kisiSayisi": 526,
-    "fonToplamDeger": 161832471.02,
-    "gunlukGetiri": 0.02155629,
+    "fiyat": 1.007163,
+    "tedavuldekiPaySayisi": 159197339,
+    "kisiSayisi": 540,
+    "fonToplamDeger": 160337711.2,
+    "gunlukGetiri": -0.01118641,
     "getiriler": {
-      "birAy": 0.189675,
-      "ucAy": -0.114939,
+      "birAy": 0.17636700000000002,
+      "ucAy": -0.073279,
       "altiAy": null,
       "yilbasi": null,
       "birYil": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 903835.91,
-      "besGun": 5275455.68,
+      "gunluk": 315460.57,
+      "besGun": 4489101.09,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 9,
-      "besGun": 103,
+      "gunluk": 14,
+      "besGun": 89,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HCV",
+        "fonAdi": "HEDEF PORTFÖY ATAK ÇOKLU VARLIK KATILIM FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 1.007163,
+        "tedavuldekiPaySayisi": 159197339,
+        "kisiSayisi": 540,
+        "fonToplamDeger": 160337711.2,
+        "gunlukGetiri": -0.01118641,
+        "paraGirisiCikisi": 315460.57,
+        "yatirimciDegisimi": 14
+      },
       {
         "fonKodu": "HCV",
         "fonAdi": "HEDEF PORTFÖY ATAK ÇOKLU VARLIK KATILIM FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.02155629,
       "paraGirisiCikisi": 903835.91,
       "yatirimciDegisimi": 9
+    },
+    {
+      "fonKodu": "HCV",
+      "fonAdi": "HEDEF PORTFÖY ATAK ÇOKLU VARLIK KATILIM FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.007163,
+      "tedavuldekiPaySayisi": 159197339,
+      "kisiSayisi": 540,
+      "fonToplamDeger": 160337711.2,
+      "gunlukGetiri": -0.01118641,
+      "paraGirisiCikisi": 315460.57,
+      "yatirimciDegisimi": 14
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HCV",
+      "fonAdi": "HEDEF PORTFÖY ATAK ÇOKLU VARLIK KATILIM FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.007163,
+      "tedavuldekiPaySayisi": 159197339,
+      "kisiSayisi": 540,
+      "fonToplamDeger": 160337711.2,
+      "gunlukGetiri": -0.01118641,
+      "paraGirisiCikisi": 315460.57,
+      "yatirimciDegisimi": 14
+    },
     {
       "fonKodu": "HCV",
       "fonAdi": "HEDEF PORTFÖY ATAK ÇOKLU VARLIK KATILIM FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "DCN",
     "slug": "dcn",
@@ -12,13 +12,13 @@
     "yonetici": "DENİZ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "deniz-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.433836,
-    "tedavuldekiPaySayisi": 384656888,
-    "kisiSayisi": 2194,
-    "fonToplamDeger": 551534907,
-    "gunlukGetiri": 0.00100321,
+    "fiyat": 1.43528,
+    "tedavuldekiPaySayisi": 464816469,
+    "kisiSayisi": 2070,
+    "fonToplamDeger": 667141997.29,
+    "gunlukGetiri": 0.00100709,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -29,27 +29,39 @@
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 7875473.28,
-      "besGun": -102620802.52,
+      "gunluk": 115051443.42,
+      "besGun": -475339790.16,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 429,
-      "besGun": 243,
+      "gunluk": -124,
+      "besGun": 237,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "DCN",
+        "fonAdi": "DENİZ PORTFÖY ÜÇÜNCÜ PARA PİYASASI (TL) FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 1.43528,
+        "tedavuldekiPaySayisi": 464816469,
+        "kisiSayisi": 2070,
+        "fonToplamDeger": 667141997.29,
+        "gunlukGetiri": 0.00100709,
+        "paraGirisiCikisi": 115051443.42,
+        "yatirimciDegisimi": -124
+      },
       {
         "fonKodu": "DCN",
         "fonAdi": "DENİZ PORTFÖY ÜÇÜNCÜ PARA PİYASASI (TL) FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00100321,
       "paraGirisiCikisi": 7875473.28,
       "yatirimciDegisimi": 429
+    },
+    {
+      "fonKodu": "DCN",
+      "fonAdi": "DENİZ PORTFÖY ÜÇÜNCÜ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.43528,
+      "tedavuldekiPaySayisi": 464816469,
+      "kisiSayisi": 2070,
+      "fonToplamDeger": 667141997.29,
+      "gunlukGetiri": 0.00100709,
+      "paraGirisiCikisi": 115051443.42,
+      "yatirimciDegisimi": -124
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "DCN",
+      "fonAdi": "DENİZ PORTFÖY ÜÇÜNCÜ PARA PİYASASI (TL) FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.43528,
+      "tedavuldekiPaySayisi": 464816469,
+      "kisiSayisi": 2070,
+      "fonToplamDeger": 667141997.29,
+      "gunlukGetiri": 0.00100709,
+      "paraGirisiCikisi": 115051443.42,
+      "yatirimciDegisimi": -124
+    },
     {
       "fonKodu": "DCN",
       "fonAdi": "DENİZ PORTFÖY ÜÇÜNCÜ PARA PİYASASI (TL) FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "CIN",
     "slug": "cin",
@@ -12,44 +12,56 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.748975,
-    "tedavuldekiPaySayisi": 12388248,
-    "kisiSayisi": 521,
-    "fonToplamDeger": 21666741.99,
-    "gunlukGetiri": 0.00455704,
+    "fiyat": 1.714568,
+    "tedavuldekiPaySayisi": 12282486,
+    "kisiSayisi": 526,
+    "fonToplamDeger": 21059155.09,
+    "gunlukGetiri": -0.01967267,
     "getiriler": {
-      "birAy": 0.06576,
-      "ucAy": 0.071633,
-      "altiAy": 0.123537,
-      "yilbasi": 0.279661,
-      "birYil": 0.377472,
+      "birAy": 0.044794,
+      "ucAy": 0.059859,
+      "altiAy": 0.106072,
+      "yilbasi": 0.254486,
+      "birYil": 0.34246099999999996,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -150154.75,
-      "besGun": -210985.55,
+      "gunluk": -181336.14,
+      "besGun": -335964.92,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
-      "besGun": -5,
+      "gunluk": 5,
+      "besGun": -1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "CIN",
+        "fonAdi": "AKTİF PORTFÖY BİRİNCİ SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 1.714568,
+        "tedavuldekiPaySayisi": 12282486,
+        "kisiSayisi": 526,
+        "fonToplamDeger": 21059155.09,
+        "gunlukGetiri": -0.01967267,
+        "paraGirisiCikisi": -181336.14,
+        "yatirimciDegisimi": 5
+      },
       {
         "fonKodu": "CIN",
         "fonAdi": "AKTİF PORTFÖY BİRİNCİ SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00455704,
       "paraGirisiCikisi": -150154.75,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "CIN",
+      "fonAdi": "AKTİF PORTFÖY BİRİNCİ SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.714568,
+      "tedavuldekiPaySayisi": 12282486,
+      "kisiSayisi": 526,
+      "fonToplamDeger": 21059155.09,
+      "gunlukGetiri": -0.01967267,
+      "paraGirisiCikisi": -181336.14,
+      "yatirimciDegisimi": 5
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "CIN",
+      "fonAdi": "AKTİF PORTFÖY BİRİNCİ SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.714568,
+      "tedavuldekiPaySayisi": 12282486,
+      "kisiSayisi": 526,
+      "fonToplamDeger": 21059155.09,
+      "gunlukGetiri": -0.01967267,
+      "paraGirisiCikisi": -181336.14,
+      "yatirimciDegisimi": 5
+    },
     {
       "fonKodu": "CIN",
       "fonAdi": "AKTİF PORTFÖY BİRİNCİ SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "AAV",
     "slug": "aav",
@@ -12,44 +12,56 @@
     "yonetici": "ATA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "ata-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 61.515331,
-    "tedavuldekiPaySayisi": 1965289,
+    "fiyat": 61.675448,
+    "tedavuldekiPaySayisi": 1955728,
     "kisiSayisi": 2006,
-    "fonToplamDeger": 120895403.55,
-    "gunlukGetiri": -0.00440502,
+    "fonToplamDeger": 120620400.23,
+    "gunlukGetiri": 0.00260288,
     "getiriler": {
-      "birAy": 0.022492,
-      "ucAy": -0.025838,
-      "altiAy": -0.036227999999999996,
-      "yilbasi": 0.182906,
-      "birYil": 0.20566199999999998,
-      "ucYil": 0.996274,
-      "besYil": 12.056785
+      "birAy": 0.025153,
+      "ucAy": -0.002866,
+      "altiAy": -0.035273,
+      "yilbasi": 0.185985,
+      "birYil": 0.211635,
+      "ucYil": 1.062607,
+      "besYil": 12.221949
     },
     "paraAkisi": {
-      "gunluk": -177041.12,
-      "besGun": -4858959.05,
+      "gunluk": -589678.96,
+      "besGun": -2007036.4,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -11,
-      "besGun": -20,
+      "gunluk": 0,
+      "besGun": -24,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "AAV",
+        "fonAdi": "ATA PORTFÖY İKİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+        "tarih": "2026-08-19",
+        "fiyat": 61.675448,
+        "tedavuldekiPaySayisi": 1955728,
+        "kisiSayisi": 2006,
+        "fonToplamDeger": 120620400.23,
+        "gunlukGetiri": 0.00260288,
+        "paraGirisiCikisi": -589678.96,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "AAV",
         "fonAdi": "ATA PORTFÖY İKİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -220,9 +232,33 @@
       "gunlukGetiri": -0.00440502,
       "paraGirisiCikisi": -177041.12,
       "yatirimciDegisimi": -11
+    },
+    {
+      "fonKodu": "AAV",
+      "fonAdi": "ATA PORTFÖY İKİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 61.675448,
+      "tedavuldekiPaySayisi": 1955728,
+      "kisiSayisi": 2006,
+      "fonToplamDeger": 120620400.23,
+      "gunlukGetiri": 0.00260288,
+      "paraGirisiCikisi": -589678.96,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "AAV",
+      "fonAdi": "ATA PORTFÖY İKİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
+      "tarih": "2026-08-19",
+      "fiyat": 61.675448,
+      "tedavuldekiPaySayisi": 1955728,
+      "kisiSayisi": 2006,
+      "fonToplamDeger": 120620400.23,
+      "gunlukGetiri": 0.00260288,
+      "paraGirisiCikisi": -589678.96,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "AAV",
       "fonAdi": "ATA PORTFÖY İKİNCİ HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "HYU",
     "slug": "hyu",
@@ -12,44 +12,56 @@
     "yonetici": "HSBC PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "hsbc-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.791638,
-    "tedavuldekiPaySayisi": 492455010,
-    "kisiSayisi": 235,
-    "fonToplamDeger": 882301172.42,
-    "gunlukGetiri": 0.00098946,
+    "fiyat": 1.79352,
+    "tedavuldekiPaySayisi": 492029747,
+    "kisiSayisi": 234,
+    "fonToplamDeger": 882465347.36,
+    "gunlukGetiri": 0.00105044,
     "getiriler": {
-      "birAy": 0.03003,
-      "ucAy": 0.10030900000000001,
-      "altiAy": 0.20225400000000002,
-      "yilbasi": 0.259652,
-      "birYil": 0.45893500000000004,
+      "birAy": 0.031112,
+      "ucAy": 0.09930199999999999,
+      "altiAy": 0.202308,
+      "yilbasi": 0.260975,
+      "birYil": 0.458825,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -2576294.82,
-      "besGun": -5848895.64,
+      "gunluk": -762717.7,
+      "besGun": -5589077.3,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": 0,
+      "gunluk": -1,
+      "besGun": 1,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "HYU",
+        "fonAdi": "HSBC PORTFÖY KISA VADELİ SERBEST (TL) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 1.79352,
+        "tedavuldekiPaySayisi": 492029747,
+        "kisiSayisi": 234,
+        "fonToplamDeger": 882465347.36,
+        "gunlukGetiri": 0.00105044,
+        "paraGirisiCikisi": -762717.7,
+        "yatirimciDegisimi": -1
+      },
       {
         "fonKodu": "HYU",
         "fonAdi": "HSBC PORTFÖY KISA VADELİ SERBEST (TL) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00098946,
       "paraGirisiCikisi": -2576294.82,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "HYU",
+      "fonAdi": "HSBC PORTFÖY KISA VADELİ SERBEST (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.79352,
+      "tedavuldekiPaySayisi": 492029747,
+      "kisiSayisi": 234,
+      "fonToplamDeger": 882465347.36,
+      "gunlukGetiri": 0.00105044,
+      "paraGirisiCikisi": -762717.7,
+      "yatirimciDegisimi": -1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "HYU",
+      "fonAdi": "HSBC PORTFÖY KISA VADELİ SERBEST (TL) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.79352,
+      "tedavuldekiPaySayisi": 492029747,
+      "kisiSayisi": 234,
+      "fonToplamDeger": 882465347.36,
+      "gunlukGetiri": 0.00105044,
+      "paraGirisiCikisi": -762717.7,
+      "yatirimciDegisimi": -1
+    },
     {
       "fonKodu": "HYU",
       "fonAdi": "HSBC PORTFÖY KISA VADELİ SERBEST (TL) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "MT1",
     "slug": "mt1",
@@ -12,44 +12,56 @@
     "yonetici": "MT PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "mt-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 45.858247,
+    "fiyat": 45.923821,
     "tedavuldekiPaySayisi": 615058,
     "kisiSayisi": 25,
-    "fonToplamDeger": 28205481.69,
-    "gunlukGetiri": 0.00207601,
+    "fonToplamDeger": 28245813.33,
+    "gunlukGetiri": 0.00142993,
     "getiriler": {
-      "birAy": 0.024605000000000002,
-      "ucAy": 0.067215,
-      "altiAy": 0.115899,
-      "yilbasi": 0.12176000000000001,
-      "birYil": 0.2145,
+      "birAy": 0.026070000000000003,
+      "ucAy": 0.06720799999999999,
+      "altiAy": 0.117134,
+      "yilbasi": 0.12336399999999999,
+      "birYil": 0.21388100000000002,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 91.72,
-      "besGun": 60459.22,
+      "gunluk": 0,
+      "besGun": 22162.73,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -1,
-      "besGun": -1,
+      "gunluk": 0,
+      "besGun": -2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MT1",
+        "fonAdi": "MT PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 45.923821,
+        "tedavuldekiPaySayisi": 615058,
+        "kisiSayisi": 25,
+        "fonToplamDeger": 28245813.33,
+        "gunlukGetiri": 0.00142993,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "MT1",
         "fonAdi": "MT PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00207601,
       "paraGirisiCikisi": 91.72,
       "yatirimciDegisimi": -1
+    },
+    {
+      "fonKodu": "MT1",
+      "fonAdi": "MT PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 45.923821,
+      "tedavuldekiPaySayisi": 615058,
+      "kisiSayisi": 25,
+      "fonToplamDeger": 28245813.33,
+      "gunlukGetiri": 0.00142993,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MT1",
+      "fonAdi": "MT PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 45.923821,
+      "tedavuldekiPaySayisi": 615058,
+      "kisiSayisi": 25,
+      "fonToplamDeger": 28245813.33,
+      "gunlukGetiri": 0.00142993,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "MT1",
       "fonAdi": "MT PORTFÖY BİRİNCİ SERBEST (DÖVİZ) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

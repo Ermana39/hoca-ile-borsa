@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "GCI",
     "slug": "gci",
@@ -12,13 +12,13 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 64.47812,
+    "fiyat": 64.42864,
     "tedavuldekiPaySayisi": 3425896,
     "kisiSayisi": 3,
-    "fonToplamDeger": 220895332.84,
-    "gunlukGetiri": 0.00183202,
+    "fonToplamDeger": 220725819.85,
+    "gunlukGetiri": -0.00076739,
     "getiriler": {
       "birAy": null,
       "ucAy": null,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GCI",
+        "fonAdi": "GARANTİ PORTFÖY KARŞIYAKA SERBEST (DÖVİZ) ÖZEL FON",
+        "tarih": "2026-08-19",
+        "fiyat": 64.42864,
+        "tedavuldekiPaySayisi": 3425896,
+        "kisiSayisi": 3,
+        "fonToplamDeger": 220725819.85,
+        "gunlukGetiri": -0.00076739,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "GCI",
         "fonAdi": "GARANTİ PORTFÖY KARŞIYAKA SERBEST (DÖVİZ) ÖZEL FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00183202,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GCI",
+      "fonAdi": "GARANTİ PORTFÖY KARŞIYAKA SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 64.42864,
+      "tedavuldekiPaySayisi": 3425896,
+      "kisiSayisi": 3,
+      "fonToplamDeger": 220725819.85,
+      "gunlukGetiri": -0.00076739,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GCI",
+      "fonAdi": "GARANTİ PORTFÖY KARŞIYAKA SERBEST (DÖVİZ) ÖZEL FON",
+      "tarih": "2026-08-19",
+      "fiyat": 64.42864,
+      "tedavuldekiPaySayisi": 3425896,
+      "kisiSayisi": 3,
+      "fonToplamDeger": 220725819.85,
+      "gunlukGetiri": -0.00076739,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "GCI",
       "fonAdi": "GARANTİ PORTFÖY KARŞIYAKA SERBEST (DÖVİZ) ÖZEL FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

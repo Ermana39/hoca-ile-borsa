@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "MJL",
     "slug": "mjl",
@@ -12,21 +12,21 @@
     "yonetici": "AKTİF PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "aktif-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 61.214494,
+    "fiyat": 61.129191,
     "tedavuldekiPaySayisi": 14729971,
     "kisiSayisi": 587,
-    "fonToplamDeger": 901687720.35,
-    "gunlukGetiri": 0.0056826,
+    "fonToplamDeger": 900431206.67,
+    "gunlukGetiri": -0.00139351,
     "getiriler": {
-      "birAy": 0.033374,
-      "ucAy": 0.056033,
-      "altiAy": 0.083536,
-      "yilbasi": 0.116169,
-      "birYil": 0.187502,
-      "ucYil": 1.0106270000000002,
-      "besYil": 5.2157029999999995
+      "birAy": 0.031934,
+      "ucAy": 0.05298,
+      "altiAy": 0.0818,
+      "yilbasi": 0.114614,
+      "birYil": 0.183555,
+      "ucYil": 1.011041,
+      "besYil": 5.197489000000001
     },
     "paraAkisi": {
       "gunluk": 0,
@@ -40,16 +40,28 @@
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "MJL",
+        "fonAdi": "AKTİF PORTFÖY AKTİF SERBEST (DÖVİZ-AVRO) FON",
+        "tarih": "2026-08-19",
+        "fiyat": 61.129191,
+        "tedavuldekiPaySayisi": 14729971,
+        "kisiSayisi": 587,
+        "fonToplamDeger": 900431206.67,
+        "gunlukGetiri": -0.00139351,
+        "paraGirisiCikisi": 0,
+        "yatirimciDegisimi": 0
+      },
       {
         "fonKodu": "MJL",
         "fonAdi": "AKTİF PORTFÖY AKTİF SERBEST (DÖVİZ-AVRO) FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.0056826,
       "paraGirisiCikisi": 0,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "MJL",
+      "fonAdi": "AKTİF PORTFÖY AKTİF SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 61.129191,
+      "tedavuldekiPaySayisi": 14729971,
+      "kisiSayisi": 587,
+      "fonToplamDeger": 900431206.67,
+      "gunlukGetiri": -0.00139351,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "MJL",
+      "fonAdi": "AKTİF PORTFÖY AKTİF SERBEST (DÖVİZ-AVRO) FON",
+      "tarih": "2026-08-19",
+      "fiyat": 61.129191,
+      "tedavuldekiPaySayisi": 14729971,
+      "kisiSayisi": 587,
+      "fonToplamDeger": 900431206.67,
+      "gunlukGetiri": -0.00139351,
+      "paraGirisiCikisi": 0,
+      "yatirimciDegisimi": 0
+    },
     {
       "fonKodu": "MJL",
       "fonAdi": "AKTİF PORTFÖY AKTİF SERBEST (DÖVİZ-AVRO) FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

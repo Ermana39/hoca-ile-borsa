@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "GPU",
     "slug": "gpu",
@@ -12,44 +12,56 @@
     "yonetici": "GARANTİ PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "garanti-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 21.158471,
-    "tedavuldekiPaySayisi": 16788133,
-    "kisiSayisi": 2453,
-    "fonToplamDeger": 355211231.59,
-    "gunlukGetiri": 0.00090821,
+    "fiyat": 21.07243,
+    "tedavuldekiPaySayisi": 16762245,
+    "kisiSayisi": 2456,
+    "fonToplamDeger": 353221227.01,
+    "gunlukGetiri": -0.0040665,
     "getiriler": {
-      "birAy": 0.036128999999999994,
-      "ucAy": 0.063759,
-      "altiAy": 0.09557600000000001,
-      "yilbasi": 0.239862,
-      "birYil": 0.416897,
-      "ucYil": 2.17388,
-      "besYil": 7.111231
+      "birAy": 0.031916,
+      "ucAy": 0.06417099999999999,
+      "altiAy": 0.08355800000000001,
+      "yilbasi": 0.23482,
+      "birYil": 0.40854100000000004,
+      "ucYil": 2.195513,
+      "besYil": 7.091318
     },
     "paraAkisi": {
-      "gunluk": 18682.93,
-      "besGun": -2592298.46,
+      "gunluk": -545523.07,
+      "besGun": -2194770.76,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": 0,
-      "besGun": -19,
+      "gunluk": 3,
+      "besGun": -20,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "GPU",
+        "fonAdi": "GARANTİ PORTFÖY ÜÇÜNCÜ DEĞİŞKEN FON",
+        "tarih": "2026-08-19",
+        "fiyat": 21.07243,
+        "tedavuldekiPaySayisi": 16762245,
+        "kisiSayisi": 2456,
+        "fonToplamDeger": 353221227.01,
+        "gunlukGetiri": -0.0040665,
+        "paraGirisiCikisi": -545523.07,
+        "yatirimciDegisimi": 3
+      },
       {
         "fonKodu": "GPU",
         "fonAdi": "GARANTİ PORTFÖY ÜÇÜNCÜ DEĞİŞKEN FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00090821,
       "paraGirisiCikisi": 18682.93,
       "yatirimciDegisimi": 0
+    },
+    {
+      "fonKodu": "GPU",
+      "fonAdi": "GARANTİ PORTFÖY ÜÇÜNCÜ DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 21.07243,
+      "tedavuldekiPaySayisi": 16762245,
+      "kisiSayisi": 2456,
+      "fonToplamDeger": 353221227.01,
+      "gunlukGetiri": -0.0040665,
+      "paraGirisiCikisi": -545523.07,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "GPU",
+      "fonAdi": "GARANTİ PORTFÖY ÜÇÜNCÜ DEĞİŞKEN FON",
+      "tarih": "2026-08-19",
+      "fiyat": 21.07243,
+      "tedavuldekiPaySayisi": 16762245,
+      "kisiSayisi": 2456,
+      "fonToplamDeger": 353221227.01,
+      "gunlukGetiri": -0.0040665,
+      "paraGirisiCikisi": -545523.07,
+      "yatirimciDegisimi": 3
+    },
     {
       "fonKodu": "GPU",
       "fonAdi": "GARANTİ PORTFÖY ÜÇÜNCÜ DEĞİŞKEN FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

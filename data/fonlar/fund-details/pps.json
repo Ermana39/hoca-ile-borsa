@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "PPS",
     "slug": "pps",
@@ -12,44 +12,56 @@
     "yonetici": "PHİLLİP PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "phillip-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 3.301003,
-    "tedavuldekiPaySayisi": 302852654,
-    "kisiSayisi": 2521,
-    "fonToplamDeger": 999717601.93,
-    "gunlukGetiri": 0.01183177,
+    "fiyat": 3.554647,
+    "tedavuldekiPaySayisi": 302186998,
+    "kisiSayisi": 2506,
+    "fonToplamDeger": 1074168049.82,
+    "gunlukGetiri": 0.07683846,
     "getiriler": {
-      "birAy": -0.012212,
-      "ucAy": -0.10106799999999999,
-      "altiAy": -0.214836,
-      "yilbasi": -0.112652,
-      "birYil": 0.217668,
-      "ucYil": 1.516083,
+      "birAy": 0.063689,
+      "ucAy": -0.056299999999999996,
+      "altiAy": -0.15735,
+      "yilbasi": -0.04447,
+      "birYil": 0.309417,
+      "ucYil": 1.7143950000000001,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": -3049625.02,
-      "besGun": -6993078.63,
+      "gunluk": -2366172.1,
+      "besGun": -7458436.59,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -13,
-      "besGun": -81,
+      "gunluk": -15,
+      "besGun": -64,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "PPS",
+        "fonAdi": "PHİLLİP PORTFÖY BİRİNCİ SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 3.554647,
+        "tedavuldekiPaySayisi": 302186998,
+        "kisiSayisi": 2506,
+        "fonToplamDeger": 1074168049.82,
+        "gunlukGetiri": 0.07683846,
+        "paraGirisiCikisi": -2366172.1,
+        "yatirimciDegisimi": -15
+      },
       {
         "fonKodu": "PPS",
         "fonAdi": "PHİLLİP PORTFÖY BİRİNCİ SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.01183177,
       "paraGirisiCikisi": -3049625.02,
       "yatirimciDegisimi": -13
+    },
+    {
+      "fonKodu": "PPS",
+      "fonAdi": "PHİLLİP PORTFÖY BİRİNCİ SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 3.554647,
+      "tedavuldekiPaySayisi": 302186998,
+      "kisiSayisi": 2506,
+      "fonToplamDeger": 1074168049.82,
+      "gunlukGetiri": 0.07683846,
+      "paraGirisiCikisi": -2366172.1,
+      "yatirimciDegisimi": -15
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "PPS",
+      "fonAdi": "PHİLLİP PORTFÖY BİRİNCİ SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 3.554647,
+      "tedavuldekiPaySayisi": 302186998,
+      "kisiSayisi": 2506,
+      "fonToplamDeger": 1074168049.82,
+      "gunlukGetiri": 0.07683846,
+      "paraGirisiCikisi": -2366172.1,
+      "yatirimciDegisimi": -15
+    },
     {
       "fonKodu": "PPS",
       "fonAdi": "PHİLLİP PORTFÖY BİRİNCİ SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

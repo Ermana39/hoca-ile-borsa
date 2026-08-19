@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "ORC",
     "slug": "orc",
@@ -12,44 +12,56 @@
     "yonetici": "ASTRA PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "astra-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.521718,
-    "tedavuldekiPaySayisi": 807855550,
-    "kisiSayisi": 51,
-    "fonToplamDeger": 1229328488,
-    "gunlukGetiri": 0.00121523,
+    "fiyat": 1.527027,
+    "tedavuldekiPaySayisi": 807856207,
+    "kisiSayisi": 52,
+    "fonToplamDeger": 1233618184.26,
+    "gunlukGetiri": 0.00348882,
     "getiriler": {
-      "birAy": 0.055515999999999996,
-      "ucAy": 0.079042,
-      "altiAy": 0.036367,
-      "yilbasi": 0.306245,
-      "birYil": 0.293061,
+      "birAy": 0.059199,
+      "ucAy": 0.102659,
+      "altiAy": 0.054086999999999996,
+      "yilbasi": 0.310802,
+      "birYil": 0.295486,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 499.12,
-      "besGun": -253.96,
+      "gunluk": 1003.26,
+      "besGun": 854.59,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
       "gunluk": 1,
-      "besGun": -1,
+      "besGun": 0,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "ORC",
+        "fonAdi": "ASTRA PORTFÖY ALFA SERBEST FON",
+        "tarih": "2026-08-19",
+        "fiyat": 1.527027,
+        "tedavuldekiPaySayisi": 807856207,
+        "kisiSayisi": 52,
+        "fonToplamDeger": 1233618184.26,
+        "gunlukGetiri": 0.00348882,
+        "paraGirisiCikisi": 1003.26,
+        "yatirimciDegisimi": 1
+      },
       {
         "fonKodu": "ORC",
         "fonAdi": "ASTRA PORTFÖY ALFA SERBEST FON",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00121523,
       "paraGirisiCikisi": 499.12,
       "yatirimciDegisimi": 1
+    },
+    {
+      "fonKodu": "ORC",
+      "fonAdi": "ASTRA PORTFÖY ALFA SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.527027,
+      "tedavuldekiPaySayisi": 807856207,
+      "kisiSayisi": 52,
+      "fonToplamDeger": 1233618184.26,
+      "gunlukGetiri": 0.00348882,
+      "paraGirisiCikisi": 1003.26,
+      "yatirimciDegisimi": 1
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "ORC",
+      "fonAdi": "ASTRA PORTFÖY ALFA SERBEST FON",
+      "tarih": "2026-08-19",
+      "fiyat": 1.527027,
+      "tedavuldekiPaySayisi": 807856207,
+      "kisiSayisi": 52,
+      "fonToplamDeger": 1233618184.26,
+      "gunlukGetiri": 0.00348882,
+      "paraGirisiCikisi": 1003.26,
+      "yatirimciDegisimi": 1
+    },
     {
       "fonKodu": "ORC",
       "fonAdi": "ASTRA PORTFÖY ALFA SERBEST FON",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."

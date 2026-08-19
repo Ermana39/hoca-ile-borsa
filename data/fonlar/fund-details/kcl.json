@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-18T17:45:12.259Z",
-  "sonIslemTarihi": "2026-08-18",
+  "generatedAt": "2026-08-19T09:01:02.031Z",
+  "sonIslemTarihi": "2026-08-19",
   "fund": {
     "kod": "KCL",
     "slug": "kcl",
@@ -12,44 +12,56 @@
     "yonetici": "KARE PORTFÖY YÖNETİMİ A.Ş.",
     "yoneticiSlug": "kare-portfoy-yonetimi-a-s",
     "yoneticiKaynak": "https://kap.org.tr/tr/YatirimFonlari/ALL",
-    "tarih": "2026-08-18",
+    "tarih": "2026-08-19",
     "aktifMi": true,
-    "fiyat": 1.815545,
-    "tedavuldekiPaySayisi": 6301391,
-    "kisiSayisi": 167,
-    "fonToplamDeger": 11440460.85,
-    "gunlukGetiri": 0.00943244,
+    "fiyat": 1.801983,
+    "tedavuldekiPaySayisi": 6560157,
+    "kisiSayisi": 170,
+    "fonToplamDeger": 11821293.01,
+    "gunlukGetiri": -0.00746993,
     "getiriler": {
-      "birAy": 0.063836,
-      "ucAy": 0.062735,
-      "altiAy": 0.121625,
-      "yilbasi": 0.29317499999999996,
-      "birYil": 0.47811,
+      "birAy": 0.055888999999999994,
+      "ucAy": 0.059851999999999995,
+      "altiAy": 0.112286,
+      "yilbasi": 0.283515,
+      "birYil": 0.463202,
       "ucYil": null,
       "besYil": null
     },
     "paraAkisi": {
-      "gunluk": 205621.36,
-      "besGun": 224001.52,
+      "gunluk": 466291.93,
+      "besGun": 653000.17,
       "birAy": null,
       "ucAy": null
     },
     "yatirimciDegisimi": {
-      "gunluk": -2,
-      "besGun": -1,
+      "gunluk": 3,
+      "besGun": 2,
       "birAy": null,
       "ucAy": null
     },
-    "tarihselGunSayisi": 7,
+    "tarihselGunSayisi": 8,
     "riskAnalizi": {
       "status": "insufficient",
       "requiredDays": 30,
-      "observedDays": 6,
+      "observedDays": 7,
       "metrics": null,
       "comparisons": [],
       "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
     },
     "sonOtuzIslemGunu": [
+      {
+        "fonKodu": "KCL",
+        "fonAdi": "KARE PORTFÖY ÇOKLU VARLIK KATILIM FONU",
+        "tarih": "2026-08-19",
+        "fiyat": 1.801983,
+        "tedavuldekiPaySayisi": 6560157,
+        "kisiSayisi": 170,
+        "fonToplamDeger": 11821293.01,
+        "gunlukGetiri": -0.00746993,
+        "paraGirisiCikisi": 466291.93,
+        "yatirimciDegisimi": 3
+      },
       {
         "fonKodu": "KCL",
         "fonAdi": "KARE PORTFÖY ÇOKLU VARLIK KATILIM FONU",
@@ -220,9 +232,33 @@
       "gunlukGetiri": 0.00943244,
       "paraGirisiCikisi": 205621.36,
       "yatirimciDegisimi": -2
+    },
+    {
+      "fonKodu": "KCL",
+      "fonAdi": "KARE PORTFÖY ÇOKLU VARLIK KATILIM FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.801983,
+      "tedavuldekiPaySayisi": 6560157,
+      "kisiSayisi": 170,
+      "fonToplamDeger": 11821293.01,
+      "gunlukGetiri": -0.00746993,
+      "paraGirisiCikisi": 466291.93,
+      "yatirimciDegisimi": 3
     }
   ],
   "sonOtuzIslemGunu": [
+    {
+      "fonKodu": "KCL",
+      "fonAdi": "KARE PORTFÖY ÇOKLU VARLIK KATILIM FONU",
+      "tarih": "2026-08-19",
+      "fiyat": 1.801983,
+      "tedavuldekiPaySayisi": 6560157,
+      "kisiSayisi": 170,
+      "fonToplamDeger": 11821293.01,
+      "gunlukGetiri": -0.00746993,
+      "paraGirisiCikisi": 466291.93,
+      "yatirimciDegisimi": 3
+    },
     {
       "fonKodu": "KCL",
       "fonAdi": "KARE PORTFÖY ÇOKLU VARLIK KATILIM FONU",
@@ -311,7 +347,7 @@
   "riskAnalizi": {
     "status": "insufficient",
     "requiredDays": 30,
-    "observedDays": 6,
+    "observedDays": 7,
     "metrics": null,
     "comparisons": [],
     "comment": "Yeterli tarihsel fiyat verisi birikmediği için risk metrikleri güvenli şekilde hesaplanmıyor."
