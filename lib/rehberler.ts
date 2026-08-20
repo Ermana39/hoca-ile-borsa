@@ -1,3 +1,5 @@
+import { ekRehberOzetleri } from "@/app/rehberler/_data/ekRehberler";
+
 export type RehberOzet = {
   title: string;
   href: string;
@@ -113,4 +115,5 @@ export const rehberler: RehberOzet[] = [
     description:
       "Pay bazında devre kesici, tek fiyat emir toplama süreci ve yatırımcıların takip etmesi gereken başlıklar.",
   },
+  ...ekRehberOzetleri,
 ];
