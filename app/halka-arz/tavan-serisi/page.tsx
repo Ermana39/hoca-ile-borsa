@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Link from "@/components/NoPrefetchLink";
 import {
   halkaArzSonuclari as baseHalkaArzVerileri,
+  type HalkaArzSonucu,
 } from "@/data/halka-arz-sonuclari";
 import {
   getHalkaArzBistKarsilastirmasi,
@@ -17,6 +18,10 @@ const description =
   "2026 halka arzlarının gerçekleşen tavan serisi ve performans tablosu: arz fiyatı, gün sonu kapanışı, getiri, marj ve BIST 100 karşılaştırması.";
 
 const tavanSerisiKapanisTarihi = "2026-08-19";
+
+type TavanSerisiKaydi = HalkaArzSonucu & {
+  kapanisTarihi?: string;
+};
 
 export const metadata: Metadata = {
   title: { absolute: title },
@@ -46,6 +51,8 @@ export const metadata: Metadata = {
 };
 
 const guncelHalkaArzKapanislari: Record<string, string> = {
+  TKNKA: "93.90",
+  VEYAS: "136.00",
   CITAS: "89.15",
   QUICK: "75.45",
   KARCL: "105.20",
@@ -76,6 +83,28 @@ const guncelHalkaArzKapanislari: Record<string, string> = {
   FRMPL: "33.52",
   MEYSU: "11.62",
   ARFYE: "21.62",
+};
+
+const tknkaHalkaArzVerisi: TavanSerisiKaydi = {
+  hisse: "TKNKA",
+  islemTarihi: "20.08.2026",
+  katilimciSayisi: "493.220",
+  dagitimSekli: "BİREYSELE %40",
+  arzFiyati: "85.40",
+  guncelFiyat: "93.90",
+  konsorsiyum: "TERA",
+  kapanisTarihi: "2026-08-20",
+};
+
+const veyasHalkaArzVerisi: TavanSerisiKaydi = {
+  hisse: "VEYAS",
+  islemTarihi: "20.08.2026",
+  katilimciSayisi: "365.280",
+  dagitimSekli: "BİREYSELE %45",
+  arzFiyati: "136.00",
+  guncelFiyat: "136.00",
+  konsorsiyum: "HALK, VAKIF, ZİRAAT",
+  kapanisTarihi: "2026-08-20",
 };
 
 const citasHalkaArzVerisi = {
@@ -138,7 +167,9 @@ const metenHalkaArzVerisi = {
   konsorsiyum: "İNFO",
 } as (typeof baseHalkaArzVerileri)[number];
 
-const halkaArzVerileri = [
+const halkaArzKayitlari: TavanSerisiKaydi[] = [
+  tknkaHalkaArzVerisi,
+  veyasHalkaArzVerisi,
   citasHalkaArzVerisi,
   quickHalkaArzVerisi,
   karclHalkaArzVerisi,
@@ -146,19 +177,24 @@ const halkaArzVerileri = [
   albtnHalkaArzVerisi,
   metenHalkaArzVerisi,
   ...baseHalkaArzVerileri,
-].map((item) => {
+];
+
+const halkaArzVerileri = halkaArzKayitlari.map((item) => {
   const guncelItem = {
     ...item,
     guncelFiyat: guncelHalkaArzKapanislari[item.hisse] ?? item.guncelFiyat,
   };
+  const kapanisTarihi =
+    guncelItem.kapanisTarihi ?? tavanSerisiKapanisTarihi;
   const hisseGetirisi = getHalkaArzGetirisi(guncelItem) ?? 0;
   return {
     ...guncelItem,
+    kapanisTarihi,
     hisseGetirisi,
     marj: yuzdeMetni(hisseGetirisi, 0),
     bistKarsilastirmasi: getHalkaArzBistKarsilastirmasi(
       guncelItem,
-      tavanSerisiKapanisTarihi
+      kapanisTarihi
     ),
     detayHedefi: getHisseIcerikHedefi(guncelItem.hisse),
   };
@@ -401,9 +437,9 @@ export default function HalkaArzTavanSerisiPage() {
           </p>
 
           <div className="mt-5 rounded-2xl border border-blue-200 bg-blue-50 p-4 text-sm font-medium leading-7 text-blue-900">
-            Halka arz kapanış fiyatları {isoTarihMetni(tavanSerisiKapanisTarihi)}
-            {" "}seansına aittir. Marj otomatik hesaplanır. BIST 100 bitiş seviyesi
-            günlük borsa özetinden; arşiv öncesi başlangıç seviyeleri kayıtlı tarihsel
+            Her halka arzın kapanış veri tarihi fiyatın altında gösterilir. Marj
+            otomatik hesaplanır. BIST 100 bitiş seviyesi aynı tarihli günlük borsa
+            özetinden; arşiv öncesi başlangıç seviyeleri kayıtlı tarihsel
             kapanışlardan alınır.
             {bistKaynak && (
               <>
@@ -611,7 +647,10 @@ export default function HalkaArzTavanSerisiPage() {
                       {item.arzFiyati}
                     </td>
                     <td className="border border-slate-200 bg-blue-50/70 px-1 py-2 text-blue-950">
-                      {item.guncelFiyat}
+                      <span className="block">{item.guncelFiyat}</span>
+                      <span className="mt-1 block text-[10px] font-semibold text-slate-500">
+                        {isoTarihMetni(item.kapanisTarihi)}
+                      </span>
                     </td>
                     <td
                       className={`border border-slate-200 px-2 py-2 ${performansRengi(

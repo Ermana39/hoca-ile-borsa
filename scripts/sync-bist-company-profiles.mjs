@@ -927,17 +927,31 @@ function getBistTumCompaniesFromSnapshot() {
 }
 
 async function main() {
-  const companies = fromRatioAnalysis
-    ? await getKapCompaniesFromRatioAnalysis()
-    : fromSnapshot
-      ? getBistTumCompaniesFromSnapshot()
-      : await getBistTumCompanies();
   const existingCodes = new Set(
     fs
       .readdirSync(PROFILES_DIR)
       .filter((file) => file.endsWith(".json"))
       .map((file) => file.replace(/\.json$/i, "").toUpperCase())
   );
+
+  if (fromRatioAnalysis && missingOnly) {
+    const missingRatioCodes = [...getRatioAnalysisCodes()].filter(
+      (code) =>
+        !existingCodes.has(code) &&
+        (requestedCodes.size === 0 || requestedCodes.has(code))
+    );
+
+    if (missingRatioCodes.length === 0) {
+      console.log("Oran analizi kapsaminda eksik sirket kunyesi yok.");
+      return;
+    }
+  }
+
+  const companies = fromRatioAnalysis
+    ? await getKapCompaniesFromRatioAnalysis()
+    : fromSnapshot
+      ? getBistTumCompaniesFromSnapshot()
+      : await getBistTumCompanies();
   const missing = companies.filter(
     (company) => !existingCodes.has(company.stockCode)
   );

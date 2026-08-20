@@ -429,6 +429,11 @@ async function main() {
   console.log(`Eszamanlilik: ${concurrency}`);
   console.log(`Asgari istek araligi: ${minRequestIntervalMs} ms`);
 
+  if (missingOnly && targets.length === 0) {
+    console.log("Eksik hak kullanimi kaydi yok.");
+    return;
+  }
+
   const results = await mapLimit(targets, concurrency, async (code, index) => {
     const result = await fetchHistory(code);
     const dividendCount = result.record.temettuler.length;

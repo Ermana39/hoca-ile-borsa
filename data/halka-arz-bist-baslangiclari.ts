@@ -10,6 +10,7 @@ export const halkaArzBistBaslangiclari: Record<
   string,
   HalkaArzBistBaslangici
 > = {
+  "2026-08-20": { oncekiIslemGunu: "2026-08-19", kapanis: 14458.98 },
   "2026-08-18": { oncekiIslemGunu: "2026-08-17", kapanis: 14132.06 },
   "2026-07-31": { oncekiIslemGunu: "2026-07-30", kapanis: 13286.64 },
   "2026-07-30": { oncekiIslemGunu: "2026-07-29", kapanis: 13501.55 },

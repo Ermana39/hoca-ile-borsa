@@ -7,7 +7,7 @@
     "dev": "next dev",
     "update-funds": "node scripts/update-funds.mjs && node scripts/test-fund-platform.mjs",
     "test-funds": "node scripts/test-fund-platform.mjs",
-    "excel-to-json": "node scripts/excel-to-json.mjs && node scripts/check-temel-oranlar.mjs",
+    "excel-to-json": "node scripts/excel-to-json.mjs && node scripts/sync-bist-company-profiles.mjs --from-ratio-analysis --missing-only --write && node scripts/sync-hisse-hak-kullanimlari.mjs --from-ratio-analysis --missing-only --write && node scripts/check-temel-oranlar.mjs",
     "fon-etki:import": "node scripts/import-fon-etki-verileri.mjs",
     "fonlar:gecmis-aktar": "node scripts/import-fund-history.mjs",
     "fonlar:tefas-gecmis": "node scripts/import-tefas-official-history.mjs",
