@@ -13,6 +13,10 @@ const recurringMarketClosedDays = new Set([
   "10-29",
 ]);
 const datedMarketClosedDays = new Set([
+  "2025-03-31",
+  "2025-04-01",
+  "2025-06-06",
+  "2025-06-09",
   "2026-03-20",
   "2026-05-27",
   "2026-05-28",
@@ -77,24 +81,45 @@ for (const snapshot of snapshots) {
   byDate.set(snapshot.tarih, byDate.get(snapshot.tarih) + 1);
 }
 
-const expectedDates = listTradingDates(start, end);
+const officialDates = Array.isArray(history.resmiKaynakTarihleri)
+  ? Array.from(new Set(history.resmiKaynakTarihleri)).sort()
+  : [];
+const officialRangeCoversRequest =
+  officialDates.length > 0 && officialDates[0] <= start && officialDates.at(-1) >= end;
+const expectedDates = officialRangeCoversRequest
+  ? officialDates.filter((date) => date >= start && date <= end)
+  : listTradingDates(start, end);
 const missingGlobalDates = expectedDates.filter((date) => !byDate.has(date));
 const codeMissingSummary = [];
 for (const [code, dates] of byCode) {
-  const missing = expectedDates.filter((date) => !dates.has(date));
+  const firstDate = Array.from(dates).sort()[0];
+  const lastDate = Array.from(dates).sort().at(-1);
+  const missing = expectedDates.filter(
+    (date) => date >= firstDate && date <= lastDate && !dates.has(date)
+  );
   if (missing.length > 0) codeMissingSummary.push({ code, missing });
 }
 
 console.log(`Fon gecmis kapsami: ${start} - ${end}`);
 console.log(`Kontrol edilen fon: ${byCode.size}`);
 console.log(`Arsivdeki islem gunu: ${byDate.size}/${expectedDates.length}`);
+console.log(
+  `Islem gunu kaynagi: ${officialRangeCoversRequest ? "Resmi TEFAS tarih listesi" : "Takvim kurallari"}`
+);
 if (missingGlobalDates.length > 0) {
   console.log(`Tum arsivde eksik gunler: ${missingGlobalDates.join(", ")}`);
 }
 if (codeMissingSummary.length > 0) {
-  console.log(`Fon bazli eksigi olan kod sayisi: ${codeMissingSummary.length}`);
+  console.log(
+    officialRangeCoversRequest
+      ? `Resmi kaynakta gecersiz veya yayimlanmamis satiri bulunan fon sayisi: ${codeMissingSummary.length}`
+      : `Fon bazli eksigi olan kod sayisi: ${codeMissingSummary.length}`
+  );
   for (const item of codeMissingSummary.slice(0, 30)) {
     console.log(`${item.code}: ${item.missing.slice(0, 20).join(", ")}`);
+  }
+  if (officialRangeCoversRequest) {
+    console.log("Bu tarihler yapay degerle doldurulmadi; yalnizca gecerli resmi kayitlar kullanildi.");
   }
 } else {
   console.log("Fon bazli eksik islem gunu bulunmadi.");

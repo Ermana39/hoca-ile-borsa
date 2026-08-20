@@ -43,6 +43,13 @@ const legacyJsonPaths = {
 
 const outputDir = path.join(rootDir, "data", "fonlar");
 const detailDir = path.join(outputDir, "fund-details");
+const publicHistoryDir = path.join(
+  rootDir,
+  "public",
+  "data",
+  "fonlar",
+  "history"
+);
 const historyPath = path.join(outputDir, "fund-history.json");
 const currentPath = path.join(outputDir, "fund-current.json");
 const dashboardPath = path.join(outputDir, "fund-dashboard.json");
@@ -56,7 +63,7 @@ const effectDataPath = path.join(
   "_data",
   "fon-etki-verileri.json"
 );
-const effectAnalysisFundCodes = ["TLY", "PHE", "PBR", "DFI", "KHA", "THF"];
+const effectAnalysisFundCodes = ["TLY", "PHE", "DFI", "KHA", "THF"];
 
 const version = 1;
 const maxAbsoluteDailyReturn = 1;
@@ -539,18 +546,71 @@ async function readJson(filePath, fallback) {
   }
 }
 
-async function writeJson(filePath, value) {
-  await fs.mkdir(path.dirname(filePath), { recursive: true });
-  const content = `${JSON.stringify(value, null, 2)}\n`;
+async function loadHistoryFromPublicFiles() {
+  if (!fsSync.existsSync(publicHistoryDir)) return null;
 
-  for (let attempt = 0; attempt < 5; attempt += 1) {
+  const files = (await fs.readdir(publicHistoryDir))
+    .filter((file) => file.endsWith(".json"))
+    .sort();
+  if (files.length === 0) return null;
+
+  const snapshots = [];
+  const officialDates = new Set();
+  let generatedAt = null;
+
+  for (const file of files) {
+    const slug = file.replace(/\.json$/i, "");
+    const [history, detail] = await Promise.all([
+      readJson(path.join(publicHistoryDir, file), null),
+      readJson(path.join(detailDir, `${slug}.json`), null),
+    ]);
+    const fund = detail?.fund;
+    if (!fund?.kod || !Array.isArray(history?.rows)) continue;
+    if (!generatedAt && history.generatedAt) generatedAt = history.generatedAt;
+
+    for (const row of history.rows) {
+      if (!Array.isArray(row) || row.length < 5 || !row[0]) continue;
+      snapshots.push({
+        fonKodu: fund.kod,
+        fonAdi: fund.ad,
+        tarih: row[0],
+        fiyat: row[1],
+        tedavuldekiPaySayisi: row[2],
+        kisiSayisi: row[3],
+        fonToplamDeger: row[4],
+      });
+      officialDates.add(row[0]);
+    }
+  }
+
+  if (snapshots.length === 0) return null;
+
+  return {
+    version,
+    generatedAt,
+    kaynak: "public-fon-gecmis-dosyalari",
+    snapshots,
+    resmiKaynak: "https://www.tefas.gov.tr/tr/fon-verileri",
+    resmiKaynakTarihleri: Array.from(officialDates).sort(),
+    resmiKaynakAktarimlari: [],
+    gecmisIceAktarimlari: [],
+  };
+}
+
+async function writeJson(filePath, value, { compact = false } = {}) {
+  await fs.mkdir(path.dirname(filePath), { recursive: true });
+  const content = `${JSON.stringify(value, null, compact ? 0 : 2)}\n`;
+
+  const maxAttempts = 10;
+  for (let attempt = 0; attempt < maxAttempts; attempt += 1) {
     try {
       await fs.writeFile(filePath, content, "utf8");
       return;
     } catch (error) {
       const retryable = ["EBUSY", "EPERM", "EACCES", "UNKNOWN"].includes(error?.code);
-      if (!retryable || attempt === 4) throw error;
-      await new Promise((resolve) => setTimeout(resolve, 100 * 2 ** attempt));
+      if (!retryable || attempt === maxAttempts - 1) throw error;
+      const retryDelay = Math.min(5000, 250 * 2 ** attempt);
+      await new Promise((resolve) => setTimeout(resolve, retryDelay));
     }
   }
 }
@@ -647,6 +707,18 @@ function hasValidFinancialSnapshot(row) {
     isPositiveFinite(row.fiyat) &&
     isPositiveFinite(row.tedavuldekiPaySayisi) &&
     isPositiveFinite(row.fonToplamDeger)
+  );
+}
+
+// TEFAS kaynağında bazı fonların finansal alanları geçici olarak 0 gelebiliyor.
+// 0 değeri "veri yok" sayılmaz; kaynakta gerçekten 0 ise çıktıda da 0 korunur.
+// Ancak bu kayıt normal/aktif finansal snapshot sayılmaz.
+function hasExplicitZeroFinancialSnapshot(row) {
+  if (!row) return false;
+  const values = [row.fiyat, row.tedavuldekiPaySayisi, row.fonToplamDeger];
+  return (
+    values.every((value) => typeof value === "number" && Number.isFinite(value)) &&
+    values.some((value) => value === 0)
   );
 }
 
@@ -879,16 +951,22 @@ function validateSourceData({ currentSnapshots, getiriMap, managerMap, existingS
 function enrichHistory(rows) {
   return rows.map((row, index) => {
     const previous = rows[index - 1] ?? null;
+    const hasSourceZero =
+      hasExplicitZeroFinancialSnapshot(row) ||
+      hasExplicitZeroFinancialSnapshot(previous);
     const canCompareFinancials =
       hasValidFinancialSnapshot(previous) && hasValidFinancialSnapshot(row);
     const rawDailyReturn = canCompareFinancials ? row.fiyat / previous.fiyat - 1 : null;
-    const dailyReturn =
-      rawDailyReturn !== null && Math.abs(rawDailyReturn) <= maxAbsoluteDailyReturn
+    const dailyReturn = hasSourceZero
+      ? 0
+      : rawDailyReturn !== null && Math.abs(rawDailyReturn) <= maxAbsoluteDailyReturn
         ? rawDailyReturn
         : null;
-    const paraGirisiCikisi = canCompareFinancials
-      ? (row.tedavuldekiPaySayisi - previous.tedavuldekiPaySayisi) * row.fiyat
-      : null;
+    const paraGirisiCikisi = hasSourceZero
+      ? 0
+      : canCompareFinancials
+        ? (row.tedavuldekiPaySayisi - previous.tedavuldekiPaySayisi) * row.fiyat
+        : null;
     const yatirimciDegisimi =
       previous?.kisiSayisi !== null &&
       previous?.kisiSayisi !== undefined &&
@@ -934,7 +1012,7 @@ async function syncEffectAnalysisHistory(details, generatedAt) {
           row.tarih &&
           Number.isFinite(row.kisiSayisi) &&
           Number.isFinite(row.fonToplamDeger) &&
-          row.fonToplamDeger > 0 &&
+          row.fonToplamDeger >= 0 &&
           Number.isFinite(row.paraGirisiCikisi)
       )
       .map((row) => {
@@ -1564,9 +1642,18 @@ function buildFundData(snapshots, getiriMap, managerMap) {
 
 async function main() {
   await fs.mkdir(outputDir, { recursive: true });
-  const existingHistory = await readJson(historyPath, { snapshots: [] });
+  const existingHistory =
+    (await readJson(historyPath, null)) ??
+    (await loadHistoryFromPublicFiles()) ??
+    { snapshots: [] };
   const manualHistoryImports = Array.isArray(existingHistory.gecmisIceAktarimlari)
     ? existingHistory.gecmisIceAktarimlari
+    : [];
+  const officialHistoryImports = Array.isArray(existingHistory.resmiKaynakAktarimlari)
+    ? existingHistory.resmiKaynakAktarimlari
+    : [];
+  const officialHistoryDates = Array.isArray(existingHistory.resmiKaynakTarihleri)
+    ? existingHistory.resmiKaynakTarihleri
     : [];
   const legacySnapshots = await loadLegacyTarihselSnapshots();
   const currentSnapshots = parseTarihselRows(getFirstSheetRows(sourcePaths.tarihsel));
@@ -1593,12 +1680,19 @@ async function main() {
     ...gitRecovery.snapshots,
     ...currentSnapshots,
   ];
-  const { snapshots: mergedSnapshots, stats } = mergeSnapshots(
-    existingHistory.snapshots ?? [],
-    incomingSnapshots
+  const validExistingSnapshots = (existingHistory.snapshots ?? []).filter(
+    hasValidFinancialSnapshot
   );
-  const invalidSnapshots = mergedSnapshots.filter((row) => !hasValidFinancialSnapshot(row));
-  const snapshots = mergedSnapshots.filter(hasValidFinancialSnapshot);
+  const validIncomingSnapshots = incomingSnapshots.filter(hasValidFinancialSnapshot);
+  const { snapshots: mergedSnapshots, stats } = mergeSnapshots(
+    validExistingSnapshots,
+    validIncomingSnapshots
+  );
+  const { snapshots: invalidSnapshots } = mergeSnapshots(
+    (existingHistory.snapshots ?? []).filter((row) => !hasValidFinancialSnapshot(row)),
+    incomingSnapshots.filter((row) => !hasValidFinancialSnapshot(row))
+  );
+  const snapshots = mergedSnapshots;
   const missingTradingDates = listMissingTradingDates(
     previousLatestDate,
     sourceValidation.latestSourceDate,
@@ -1634,8 +1728,11 @@ async function main() {
       yoneticiler: path.relative(rootDir, sourcePaths.yoneticiler).split(path.sep).join("/"),
     },
     gecmisIceAktarimlari: manualHistoryImports,
+    resmiKaynak: existingHistory.resmiKaynak ?? null,
+    resmiKaynakTarihleri: officialHistoryDates,
+    resmiKaynakAktarimlari: officialHistoryImports,
     snapshots,
-  });
+  }, { compact: true });
 
   await writeJson(currentPath, {
     version,
@@ -1676,12 +1773,31 @@ async function main() {
   });
 
   for (const detail of fundData.details) {
+    const { history: detailHistory, ...detailSummary } = detail;
     await writeJson(path.join(detailDir, `${detail.fund.slug}.json`), {
       version,
       generatedAt,
       sonIslemTarihi: fundData.latestDate,
-      ...detail,
-    });
+      ...detailSummary,
+    }, { compact: true });
+    await writeJson(
+      path.join(publicHistoryDir, `${detail.fund.slug}.json`),
+      {
+        version,
+        generatedAt,
+        rows: detailHistory.map((row) => [
+          row.tarih,
+          row.fiyat,
+          row.tedavuldekiPaySayisi,
+          row.kisiSayisi,
+          row.fonToplamDeger,
+          row.gunlukGetiri,
+          row.paraGirisiCikisi,
+          row.yatirimciDegisimi,
+        ]),
+      },
+      { compact: true }
+    );
   }
 
   const effectHistorySync = await syncEffectAnalysisHistory(fundData.details, generatedAt);
@@ -1707,6 +1823,7 @@ async function main() {
       ).sort(),
       gitGecmisindenKurtarilanKayitSayisi: gitRecovery.snapshots.length,
       manuelGecmisIceAktarimlari: manualHistoryImports.slice(-20),
+      resmiKaynakAktarimlari: officialHistoryImports.slice(-20),
       temizlenenGecersizSnapshotlar: summarizeInvalidSnapshots(invalidSnapshots),
     },
     etkiAnaliziTarihselSenkronu: effectHistorySync,

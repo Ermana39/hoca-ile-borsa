@@ -1,6 +1,10 @@
 import Link from "@/components/NoPrefetchLink";
 import { getHisseIcerikHedefi } from "@/lib/hisse-icerik-hedefi";
-import { getFundDetail, type FundHistoryRow } from "@/lib/fon-platform";
+import {
+  getFundDetail,
+  getFundHistory,
+  type FundHistoryRow,
+} from "@/lib/fon-platform";
 import FundChartsClient from "../../_components/FundChartsClient";
 import {
   fonEtkiOzetleri,
@@ -123,7 +127,6 @@ function degisimVerisiOlustur({
   const ozelYorumlar: Record<string, string> = {
     TLY: `${kod}'de ${akim} görülürken ${yatirimciYonu} ve ${fonDegerYonu}. Portföy hesabının ${etkiYonu} kalmasında ${negatifVurgu} ile ${pozitifVurgu} arasındaki denge belirleyici oldu. Yatırımcı adedi ile fondaki para hareketinin farklı yönlere gidebilmesi, hesap sayısının tek başına fon talebinin büyüklüğünü anlatmadığını gösteriyor.`,
     PHE: `${kod} tarafında ${akim}, ${yatirimciYonu} ve ${fonDegerYonu}. Tahmini etkinin ${etkiYonu} oluşmasında ${negatifVurgu} öne çıkarken ${pozitifVurgu} karşı tarafta belirleyici oldu. Fon ilgisi ve portföy etkisi aynı gün içinde birlikte zayıfladığında takip edilmesi gereken risk daha görünür hale geliyor.`,
-    PBR: `${kod}'de ${akim} ile birlikte ${yatirimciYonu}; buna karşılık ${fonDegerYonu}. ${negatifVurgu} fon fiyatını aşağı çeken tarafta öne çıkarken ${pozitifVurgu} dengeleyici tarafta belirleyici oldu. Para akışı, yatırımcı adedi ve fon büyüklüğünün aynı yönde hareket etmemesi, günlük değişimin bileşenlerini ayrı ayrı okumayı gerektiriyor.`,
     DFI: `${kod}'ye ${akim} eşlik ederken ${yatirimciYonu} ve ${fonDegerYonu}. ${pozitifVurgu} yukarı yönlü tarafın, ${negatifVurgu} ise aşağı yönlü tarafın merkezinde yer aldı. Üç ana göstergenin aynı yönde ilerlemesi güçlü bir gün sonu resmi üretse de yoğun portföy yapısı tek hisse hareketlerine duyarlılığı artırıyor.`,
   };
 
@@ -407,12 +410,13 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
     sonGuncelleme,
   } = props;
   const fonDetayi = getFundDetail(slug);
+  const fonGecmisi = getFundHistory(slug);
 
-  if (!fonDetayi) {
+  if (!fonDetayi || fonGecmisi.length === 0) {
     throw new Error(`${kod}: güncel fon detayı bulunamadı.`);
   }
 
-  const guncelTarihselVeriler = guncelTarihselVerilerOlustur(kod, fonDetayi.history);
+  const guncelTarihselVeriler = guncelTarihselVerilerOlustur(kod, fonGecmisi);
   const degisimVerisi = degisimVerisiOlustur({
     kod,
     rows,
@@ -676,7 +680,10 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
           </dl>
 
           <div className="mt-6">
-            <FundChartsClient history={fonDetayi.history} />
+            <FundChartsClient
+              initialHistory={fonDetayi.sonOtuzIslemGunu}
+              historyUrl={`/data/fonlar/history/${fonDetayi.fund.slug}.json`}
+            />
           </div>
 
           <div className="mt-5 overflow-x-auto rounded-xl border border-slate-200">

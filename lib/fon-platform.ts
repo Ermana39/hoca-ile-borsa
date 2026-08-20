@@ -3,6 +3,13 @@ import path from "path";
 
 const DATA_DIR = path.join(process.cwd(), "data", "fonlar");
 const DETAIL_DIR = path.join(DATA_DIR, "fund-details");
+const PUBLIC_HISTORY_DIR = path.join(
+  process.cwd(),
+  "public",
+  "data",
+  "fonlar",
+  "history"
+);
 
 export type PeriodKey = "gunluk" | "besGun" | "birAy" | "ucAy";
 export type ReturnKey =
@@ -153,10 +160,20 @@ export type FundDetailData = {
   generatedAt: string;
   sonIslemTarihi: string | null;
   fund: Fund;
-  history: FundHistoryRow[];
   sonOtuzIslemGunu: FundHistoryRow[];
   riskAnalizi: RiskAnalysis;
 };
+
+type FundHistoryTuple = [
+  string,
+  number | null,
+  number | null,
+  number | null,
+  number | null,
+  number | null,
+  number | null,
+  number | null,
+];
 
 function readJson<T>(fileName: string, fallback: T): T {
   const filePath = path.join(DATA_DIR, fileName);
@@ -231,6 +248,36 @@ export function getFundDetail(slug: string) {
     return JSON.parse(fs.readFileSync(filePath, "utf8")) as FundDetailData;
   } catch {
     return null;
+  }
+}
+
+export function getFundHistory(slug: string) {
+  const safeSlug = safeFundSlug(slug);
+  if (!safeSlug) return [];
+
+  const detail = getFundDetail(safeSlug);
+  const filePath = path.join(PUBLIC_HISTORY_DIR, `${safeSlug}.json`);
+
+  try {
+    const payload = JSON.parse(fs.readFileSync(filePath, "utf8")) as {
+      rows?: FundHistoryTuple[];
+    };
+    if (!Array.isArray(payload.rows)) return [];
+
+    return payload.rows.map((row) => ({
+      fonKodu: detail?.fund.kod ?? safeSlug.toUpperCase(),
+      fonAdi: detail?.fund.ad ?? "",
+      tarih: row[0],
+      fiyat: row[1],
+      tedavuldekiPaySayisi: row[2],
+      kisiSayisi: row[3],
+      fonToplamDeger: row[4],
+      gunlukGetiri: row[5],
+      paraGirisiCikisi: row[6],
+      yatirimciDegisimi: row[7],
+    }));
+  } catch {
+    return [];
   }
 }
 

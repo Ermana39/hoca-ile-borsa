@@ -11,7 +11,7 @@ const KAYNAK_DOSYA = path.join(
   "fon-etki-verileri.xlsx"
 );
 const CIKTI_DOSYA = KAYNAK_DOSYA.replace(/\.xlsx$/i, ".json");
-const BEKLENEN_FONLAR = ["TLY", "PHE", "PBR", "DFI", "KHA", "THF"];
+const BEKLENEN_FONLAR = ["TLY", "PHE", "DFI", "KHA", "THF"];
 const NORMAL_TOPLAM_TOLERANSI = 0.02;
 const ETKI_TOLERANSI = 0.0002;
 

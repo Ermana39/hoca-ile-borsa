@@ -1,197 +1,491 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-19T10:28:39.106Z",
+  "generatedAt": "2026-08-20T09:25:55.113Z",
   "duplicateKontrolu": {
-    "added": 41,
+    "added": 0,
     "updated": 0,
-    "skipped": 4025
+    "skipped": 4056
   },
-  "islenenFonSayisi": 1055,
-  "islenenSnapshotSayisi": 2033,
-  "kaliciSnapshotSayisi": 52276,
-  "temizlenenGecersizSnapshotSayisi": 41,
-  "yoneticiyleEslesenFonSayisi": 1989,
-  "bilinmeyenYoneticiSayisi": 3,
+  "islenenFonSayisi": 1058,
+  "islenenSnapshotSayisi": 2035,
+  "kaliciSnapshotSayisi": 1665371,
+  "temizlenenGecersizSnapshotSayisi": 7,
+  "yoneticiyleEslesenFonSayisi": 2022,
+  "bilinmeyenYoneticiSayisi": 6,
   "bilinmeyenYoneticiFonlari": [
     {
-      "fonKodu": "OAO",
-      "fonAdi": "TEB PORTFÖY ODEABANK AYRICALIKLI VE ÖZEL BANKACILIK DEĞİŞKEN ÖZEL FON"
+      "fonKodu": "DK8",
+      "fonAdi": "DENİZ PORTFÖY KAR PAYI ÖDEYEN SEKİZİNCİ SERBEST (DÖVİZ) FON"
     },
     {
       "fonKodu": "KPS",
       "fonAdi": "QNB PORTFÖY KAR PAYI ÖDEYEN ONİKİNCİ SERBEST (DÖVİZ) FON"
     },
     {
+      "fonKodu": "OAO",
+      "fonAdi": "TEB PORTFÖY ODEABANK AYRICALIKLI VE ÖZEL BANKACILIK DEĞİŞKEN ÖZEL FON"
+    },
+    {
       "fonKodu": "SGK",
       "fonAdi": "EMAA BLUE PORTFÖY BİYOTEKNOLOJİ VE SAĞLIK SEKTÖRÜ DEĞİŞKEN FON"
+    },
+    {
+      "fonKodu": "DMI",
+      "fonAdi": "İŞ PORTFÖY DM HİSSE SENEDİ ÖZEL FON (HİSSE SENEDİ YOĞUN FON)"
+    },
+    {
+      "fonKodu": "GLL",
+      "fonAdi": "GOLDEN GLOBAL PORTFÖY ALTIN KATILIM FONU"
     }
   ],
   "kaynakDogrulama": {
-    "sonKaynakTarihi": "2026-08-19",
-    "sonKaynakKayitSayisi": 2033,
-    "sonKaynakGecerliKayitSayisi": 1992,
-    "gitGecmisindeIncelenenSurumSayisi": 30,
+    "sonKaynakTarihi": "2026-08-20",
+    "sonKaynakKayitSayisi": 2035,
+    "sonKaynakGecerliKayitSayisi": 2028,
+    "gitGecmisindeIncelenenSurumSayisi": 86,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
-    "manuelGecmisIceAktarimlari": [
-      {
-        "tarih": "2026-08-19T10:13:46.047Z",
-        "kaynakDosya": "../../Users/erman/Downloads/Fon_Verileri_EXCEL_Tum_Veri_2026-07-13.xlsx",
-        "ilkTarih": "2026-07-13",
-        "sonTarih": "2026-07-13",
-        "fonSayisi": 2031,
-        "snapshotSayisi": 2031,
-        "eklenenSnapshotSayisi": 2031,
-        "guncellenenSnapshotSayisi": 0,
-        "atlananSnapshotSayisi": 0
-      }
-    ],
+    "manuelGecmisIceAktarimlari": [],
+    "resmiKaynakAktarimlari": [],
     "temizlenenGecersizSnapshotlar": {
-      "sayi": 41,
+      "sayi": 7,
       "ornekler": [
-        "AES:2026-08-19",
-        "APJ:2026-08-19",
-        "ARL:2026-08-19",
-        "ARM:2026-08-19",
-        "FNN:2026-08-19",
-        "FSU:2026-08-19",
-        "GCC:2026-08-19",
-        "GFY:2026-08-19",
-        "GKE:2026-08-19",
-        "GKO:2026-08-19",
-        "GMC:2026-08-19",
-        "GMV:2026-08-19",
-        "GNZ:2026-08-19",
-        "GSU:2026-08-19",
-        "GUM:2026-08-19",
-        "GZY:2026-08-19",
-        "IJH:2026-08-19",
-        "IRF:2026-08-19",
-        "MP2:2026-08-19",
-        "MP4:2026-08-19"
+        "FNN:2026-08-20",
+        "GKE:2026-08-20",
+        "GKO:2026-08-20",
+        "GMV:2026-08-20",
+        "GSU:2026-08-20",
+        "RPE:2026-08-20",
+        "TMH:2026-08-20"
       ]
     }
   },
   "etkiAnaliziTarihselSenkronu": {
     "senkronizeEdildi": true,
-    "fonSayisi": 6,
-    "sonTarih": "2026-08-19",
+    "fonSayisi": 5,
+    "sonTarih": "2026-08-20",
     "fonlar": [
       {
         "fonKodu": "TLY",
-        "tarihSayisi": 25,
-        "ilkTarih": "2026-07-16",
-        "sonTarih": "2026-08-19"
+        "tarihSayisi": 1256,
+        "ilkTarih": "2021-08-23",
+        "sonTarih": "2026-08-20"
       },
       {
         "fonKodu": "PHE",
-        "tarihSayisi": 23,
-        "ilkTarih": "2026-07-20",
-        "sonTarih": "2026-08-19"
-      },
-      {
-        "fonKodu": "PBR",
-        "tarihSayisi": 23,
-        "ilkTarih": "2026-07-20",
-        "sonTarih": "2026-08-19"
+        "tarihSayisi": 594,
+        "ilkTarih": "2024-04-01",
+        "sonTarih": "2026-08-20"
       },
       {
         "fonKodu": "DFI",
-        "tarihSayisi": 25,
-        "ilkTarih": "2026-07-16",
-        "sonTarih": "2026-08-19"
+        "tarihSayisi": 1021,
+        "ilkTarih": "2022-07-29",
+        "sonTarih": "2026-08-20"
       },
       {
         "fonKodu": "KHA",
-        "tarihSayisi": 25,
-        "ilkTarih": "2026-07-16",
-        "sonTarih": "2026-08-19"
+        "tarihSayisi": 630,
+        "ilkTarih": "2024-02-09",
+        "sonTarih": "2026-08-20"
       },
       {
         "fonKodu": "THF",
-        "tarihSayisi": 25,
-        "ilkTarih": "2026-07-16",
-        "sonTarih": "2026-08-19"
+        "tarihSayisi": 362,
+        "ilkTarih": "2025-03-07",
+        "sonTarih": "2026-08-20"
       }
     ]
   },
-  "veriUyarisiSayisi": 10,
+  "veriUyarisiSayisi": 64,
   "veriUyarilari": [
     {
       "tur": "getiri-kaynaginda-guncel-listede-yok",
-      "tarih": "2026-08-19",
+      "tarih": "2026-08-20",
       "kodSayisi": 3,
       "ornekFonKodlari": [
+        "DEH",
         "ETN",
-        "GLL",
         "ZTV"
       ]
     },
     {
-      "fonKodu": "BIA",
-      "tarih": "2026-07-16",
+      "fonKodu": "KJK",
+      "tarih": "2023-12-13",
       "tur": "gunluk-getiri-fiyat-kopmasi",
-      "hamGetiri": 23.04653763
+      "hamGetiri": 2.05975395
     },
     {
-      "fonKodu": "FRC",
-      "tarih": "2026-08-11",
+      "fonKodu": "KOP",
+      "tarih": "2024-12-10",
       "tur": "gunluk-getiri-fiyat-kopmasi",
-      "hamGetiri": 10.23534187
+      "hamGetiri": 1.08822914
     },
     {
-      "fonKodu": "PAI",
-      "tarih": "2026-08-12",
-      "tur": "fon-toplam-degeri-duzeltildi",
-      "kaynakFonToplamDeger": 431418208.7,
-      "hesaplananFonToplamDeger": 448717383.93,
-      "farkOrani": 0.04009839
+      "fonKodu": "NBH",
+      "tarih": "2022-02-18",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 619.26847291
     },
     {
-      "fonKodu": "RBP",
+      "fonKodu": "NBH",
+      "tarih": "2022-03-30",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 5.56776055
+    },
+    {
+      "fonKodu": "OSF",
+      "tarih": "2025-09-01",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 13.8543865
+    },
+    {
+      "fonKodu": "UPS",
+      "tarih": "2025-08-15",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 1.1125347
+    },
+    {
+      "fonKodu": "YCK",
+      "tarih": "2022-04-05",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 2.00545611
+    },
+    {
+      "fonKodu": "ZJR",
+      "tarih": "2026-07-01",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 8.1247619
+    },
+    {
+      "fonKodu": "NIG",
+      "tarih": "2025-02-05",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 1.38365346
+    },
+    {
+      "fonKodu": "GJH",
+      "tarih": "2023-04-26",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 99.0741
+    },
+    {
+      "fonKodu": "UZY",
+      "tarih": "2026-06-15",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 4.21579333
+    },
+    {
+      "fonKodu": "HUI",
+      "tarih": "2022-03-28",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 215.32657617
+    },
+    {
+      "fonKodu": "GCD",
+      "tarih": "2023-12-19",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 1.55478972
+    },
+    {
+      "fonKodu": "DHS",
+      "tarih": "2022-05-25",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 99.58404109
+    },
+    {
+      "fonKodu": "HMV",
+      "tarih": "2022-09-23",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 28.64978743
+    },
+    {
+      "fonKodu": "OME",
+      "tarih": "2023-06-15",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 1.03148093
+    },
+    {
+      "fonKodu": "NTO",
+      "tarih": "2024-01-10",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 16.61828083
+    },
+    {
+      "fonKodu": "IEZ",
+      "tarih": "2024-06-03",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 5.82846073
+    },
+    {
+      "fonKodu": "GLM",
+      "tarih": "2024-05-31",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 2.51253874
+    },
+    {
+      "fonKodu": "GLM",
+      "tarih": "2024-11-08",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 33.52681007
+    },
+    {
+      "fonKodu": "DP1",
+      "tarih": "2024-05-17",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 2.08610634
+    },
+    {
+      "fonKodu": "DP1",
+      "tarih": "2024-05-20",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 1.59024875
+    },
+    {
+      "fonKodu": "AC8",
+      "tarih": "2023-06-21",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 2.78373514
+    },
+    {
+      "fonKodu": "ABG",
+      "tarih": "2023-09-25",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 6.44868778
+    },
+    {
+      "fonKodu": "ABG",
+      "tarih": "2024-09-11",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 1.7015976
+    },
+    {
+      "fonKodu": "IIC",
+      "tarih": "2026-06-05",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 1.15862368
+    },
+    {
+      "fonKodu": "KMA",
+      "tarih": "2024-12-24",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 2.4485894
+    },
+    {
+      "fonKodu": "RDS",
+      "tarih": "2026-01-30",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 1.24994936
+    },
+    {
+      "fonKodu": "SYL",
+      "tarih": "2023-03-02",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 805.02323912
+    },
+    {
+      "fonKodu": "FKH",
+      "tarih": "2025-03-25",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 36.860946
+    },
+    {
+      "fonKodu": "FDY",
+      "tarih": "2025-02-14",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 35.0448
+    },
+    {
+      "fonKodu": "SRA",
+      "tarih": "2025-01-22",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 1.15368721
+    },
+    {
+      "fonKodu": "BHH",
+      "tarih": "2026-06-29",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 1.64512244
+    },
+    {
+      "fonKodu": "FDE",
+      "tarih": "2025-08-25",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 39.864147
+    },
+    {
+      "fonKodu": "HUS",
+      "tarih": "2026-01-13",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 15.38864629
+    },
+    {
+      "fonKodu": "HUS",
+      "tarih": "2026-01-29",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 8.64716007
+    },
+    {
+      "fonKodu": "AP6",
+      "tarih": "2024-02-15",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 3.45117433
+    },
+    {
+      "fonKodu": "DHI",
+      "tarih": "2024-08-08",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 8.49615279
+    },
+    {
+      "fonKodu": "DHI",
+      "tarih": "2025-12-02",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 2.30178571
+    },
+    {
+      "fonKodu": "FKV",
+      "tarih": "2025-05-26",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 18.4186305
+    },
+    {
+      "fonKodu": "OHI",
+      "tarih": "2026-03-04",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 1.40342071
+    },
+    {
+      "fonKodu": "NMG",
+      "tarih": "2025-09-08",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 96.35853395
+    },
+    {
+      "fonKodu": "PBH",
+      "tarih": "2026-03-10",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 1.41075935
+    },
+    {
+      "fonKodu": "TMH",
+      "tarih": "2025-05-05",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 1.14803505
+    },
+    {
+      "fonKodu": "TMH",
+      "tarih": "2025-12-05",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 1.97297297
+    },
+    {
+      "fonKodu": "TMH",
+      "tarih": "2025-12-08",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 7.99090909
+    },
+    {
+      "fonKodu": "DLZ",
+      "tarih": "2025-11-27",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 2.87290572
+    },
+    {
+      "fonKodu": "KPS",
+      "tarih": "2026-08-17",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 46.732367
+    },
+    {
+      "fonKodu": "PDR",
+      "tarih": "2026-04-28",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 8
+    },
+    {
+      "fonKodu": "PTE",
+      "tarih": "2025-05-12",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 99.39848216
+    },
+    {
+      "fonKodu": "KSP",
       "tarih": "2026-07-21",
-      "tur": "fon-toplam-degeri-duzeltildi",
-      "kaynakFonToplamDeger": 2455157333.88,
-      "hesaplananFonToplamDeger": 2412421808.01,
-      "farkOrani": 0.01740643
-    },
-    {
-      "fonKodu": "RBP",
-      "tarih": "2026-07-27",
-      "tur": "fon-toplam-degeri-duzeltildi",
-      "kaynakFonToplamDeger": 2625832019.19,
-      "hesaplananFonToplamDeger": 2497632103.88,
-      "farkOrani": 0.04882259
-    },
-    {
-      "fonKodu": "RJG",
-      "tarih": "2026-07-13",
-      "tur": "fon-toplam-degeri-duzeltildi",
-      "kaynakFonToplamDeger": 94509125.06,
-      "hesaplananFonToplamDeger": 91513300.76,
-      "farkOrani": 0.03169878
-    },
-    {
-      "fonKodu": "RKV",
-      "tarih": "2026-08-06",
-      "tur": "fon-toplam-degeri-duzeltildi",
-      "kaynakFonToplamDeger": 476083326.46,
-      "hesaplananFonToplamDeger": 449805956.9,
-      "farkOrani": 0.0551949
-    },
-    {
-      "fonKodu": "THT",
-      "tarih": "2026-08-17",
-      "tur": "fon-toplam-degeri-duzeltildi",
-      "kaynakFonToplamDeger": 6629311.7,
-      "hesaplananFonToplamDeger": 2777638.45,
-      "farkOrani": 0.58100651
-    },
-    {
-      "fonKodu": "URA",
-      "tarih": "2026-08-17",
       "tur": "gunluk-getiri-fiyat-kopmasi",
-      "hamGetiri": 4.20567825
+      "hamGetiri": 62.314062
+    },
+    {
+      "fonKodu": "CBO",
+      "tarih": "2025-06-26",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 169.16650532
+    },
+    {
+      "fonKodu": "SAT",
+      "tarih": "2025-06-26",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 167.44236411
+    },
+    {
+      "fonKodu": "SYF",
+      "tarih": "2025-06-26",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 168.35035286
+    },
+    {
+      "fonKodu": "GMO",
+      "tarih": "2025-07-02",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 2.42283985
+    },
+    {
+      "fonKodu": "STM",
+      "tarih": "2025-10-10",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 1.00111255
+    },
+    {
+      "fonKodu": "PHB",
+      "tarih": "2026-05-04",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 14.74315672
+    },
+    {
+      "fonKodu": "DHP",
+      "tarih": "2025-08-20",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 1.9653879
+    },
+    {
+      "fonKodu": "BLA",
+      "tarih": "2025-09-15",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 1.34444834
+    },
+    {
+      "fonKodu": "BLA",
+      "tarih": "2025-09-16",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 1.29466407
+    },
+    {
+      "fonKodu": "PDS",
+      "tarih": "2026-04-29",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 1.80682657
+    },
+    {
+      "fonKodu": "DUC",
+      "tarih": "2026-02-06",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 1.53362409
+    },
+    {
+      "fonKodu": "HBJ",
+      "tarih": "2026-02-17",
+      "tur": "gunluk-getiri-fiyat-kopmasi",
+      "hamGetiri": 1.5259641
     }
   ]
 }

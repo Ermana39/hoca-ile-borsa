@@ -10,6 +10,7 @@
     "excel-to-json": "node scripts/excel-to-json.mjs && node scripts/check-temel-oranlar.mjs",
     "fon-etki:import": "node scripts/import-fon-etki-verileri.mjs",
     "fonlar:gecmis-aktar": "node scripts/import-fund-history.mjs",
+    "fonlar:tefas-gecmis": "node scripts/import-tefas-official-history.mjs",
     "fonlar:gecmis-kontrol": "node scripts/check-fund-history-coverage.mjs",
     "oran-analizi:check": "node scripts/check-temel-oranlar.mjs",
     "page-updates": "node scripts/generate-page-updates.mjs",

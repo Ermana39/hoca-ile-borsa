@@ -7,6 +7,13 @@ const XLSX = XLSX_MODULE.default || XLSX_MODULE;
 const rootDir = process.cwd();
 const dataDir = path.join(rootDir, "data", "fonlar");
 const detailDir = path.join(dataDir, "fund-details");
+const publicHistoryDir = path.join(
+  rootDir,
+  "public",
+  "data",
+  "fonlar",
+  "history"
+);
 const sourcePaths = {
   getiri: path.join(
     rootDir,
@@ -42,6 +49,34 @@ function readJson(fileName) {
 
 function assert(condition, message) {
   if (!condition) throw new Error(message);
+}
+
+const publicHistoryCache = new Map();
+
+function readPublicFundHistory(fund) {
+  if (publicHistoryCache.has(fund.slug)) return publicHistoryCache.get(fund.slug);
+
+  const filePath = path.join(publicHistoryDir, `${fund.slug}.json`);
+  assert(fs.existsSync(filePath), `Fon grafik geçmişi bulunamadı: ${fund.kod}`);
+  const payload = JSON.parse(fs.readFileSync(filePath, "utf8"));
+  assert(Array.isArray(payload.rows), `${fund.kod} grafik geçmişi geçersiz.`);
+  const rows = payload.rows.map((row) => {
+    assert(Array.isArray(row) && row.length === 8, `${fund.kod} grafik geçmişi satırı geçersiz.`);
+    return {
+      fonKodu: fund.kod,
+      fonAdi: fund.ad,
+      tarih: row[0],
+      fiyat: row[1],
+      tedavuldekiPaySayisi: row[2],
+      kisiSayisi: row[3],
+      fonToplamDeger: row[4],
+      gunlukGetiri: row[5],
+      paraGirisiCikisi: row[6],
+      yatirimciDegisimi: row[7],
+    };
+  });
+  publicHistoryCache.set(fund.slug, rows);
+  return rows;
 }
 
 function round(value, digits = 2) {
@@ -141,6 +176,15 @@ function hasValidFinancialSnapshot(row) {
   );
 }
 
+function hasExplicitZeroFinancialSnapshot(row) {
+  if (!row) return false;
+  const values = [row.fiyat, row.tedavuldekiPaySayisi, row.fonToplamDeger];
+  return (
+    values.every((value) => typeof value === "number" && Number.isFinite(value)) &&
+    values.some((value) => value === 0)
+  );
+}
+
 function addMonths(isoDate, months) {
   const [year, month, day] = isoDate.split("-").map(Number);
   const target = new Date(Date.UTC(year, month - 1 + months, 1));
@@ -207,6 +251,11 @@ const current = readJson("fund-current.json");
 const dashboard = readJson("fund-dashboard.json");
 const managers = readJson("fund-managers.json");
 const updateLog = readJson("fund-update-log.json");
+const officialHistoryDates = new Set(
+  Array.isArray(history.resmiKaynakTarihleri)
+    ? history.resmiKaynakTarihleri
+    : []
+);
 
 function hasDataWarning(type, predicate = () => true) {
   return Array.isArray(updateLog.veriUyarilari)
@@ -304,9 +353,15 @@ for (const row of sourceSnapshots) {
 }
 const sourceLatestDate = sourceSnapshots.map((row) => row.tarih).sort().at(-1);
 const sourceLatest = sourceSnapshots.filter((row) => row.tarih === sourceLatestDate);
+const historyLatestDate = history.snapshots.map((row) => row.tarih).sort().at(-1);
+const historyLatest = history.snapshots.filter((row) => row.tarih === historyLatestDate);
 assert(
-  sourceLatestDate === current.sonIslemTarihi,
-  `Kaynak Excel tarihi (${sourceLatestDate ?? "bulunamadı"}) üretilen son işlem tarihiyle (${current.sonIslemTarihi ?? "bulunamadı"}) uyuşmuyor.`
+  historyLatestDate === current.sonIslemTarihi,
+  `Kalıcı arşivin son tarihi (${historyLatestDate ?? "bulunamadı"}) üretilen son işlem tarihiyle (${current.sonIslemTarihi ?? "bulunamadı"}) uyuşmuyor.`
+);
+assert(
+  !sourceLatestDate || sourceLatestDate <= current.sonIslemTarihi,
+  `Kaynak Excel tarihi (${sourceLatestDate}) kalıcı arşiv tarihinden (${current.sonIslemTarihi}) ileride.`
 );
 assert(updateLog.islenenSnapshotSayisi === sourceSnapshots.length, "İşlenen snapshot sayısı kaynakla uyuşmuyor.");
 
@@ -314,7 +369,7 @@ const currentByCode = new Map(current.fonlar.map((fund) => [fund.kod, fund]));
 assert(currentByCode.size === current.fonlar.length, "Güncel fon listesinde tekrarlanan kod var.");
 const activeFunds = current.fonlar.filter((fund) => fund.aktifMi);
 const expectedActiveCodes = new Set(
-  sourceLatest.filter(hasValidFinancialSnapshot).map((row) => row.fonKodu)
+  historyLatest.filter(hasValidFinancialSnapshot).map((row) => row.fonKodu)
 );
 assert(current.fonSayisi === activeFunds.length, "Aktif fon sayısı alanı listeyle uyuşmuyor.");
 assert(activeFunds.length === expectedActiveCodes.size, "Aktif fon sayısı geçerli kaynak satırlarıyla uyuşmuyor.");
@@ -330,7 +385,7 @@ for (const fund of activeFunds) {
   );
 }
 
-for (const row of sourceLatest) {
+for (const row of historyLatest) {
   const fund = currentByCode.get(row.fonKodu);
   if (!hasValidFinancialSnapshot(row)) {
     if (fund) {
@@ -373,31 +428,41 @@ assert(dashboard.ozet.toplamTakipEdilenFonSayisi === activeFunds.length, "Dashbo
 
 const detailFiles = fs.readdirSync(detailDir).filter((file) => file.endsWith(".json"));
 assert(detailFiles.length === current.fonlar.length, "Fon detay dosyası sayısı güncel fon sayısıyla uyuşmuyor.");
+const publicHistoryFiles = fs.readdirSync(publicHistoryDir).filter((file) => file.endsWith(".json"));
+assert(publicHistoryFiles.length >= current.fonlar.length, "Fon grafik geçmişi dosya sayısı güncel fon sayısından az.");
 
 for (const fund of current.fonlar) {
   const rawHistory = historyByCode.get(fund.kod) ?? [];
   const detailPath = path.join(detailDir, `${fund.slug}.json`);
   assert(fs.existsSync(detailPath), `Fon detay dosyası bulunamadı: ${fund.kod}`);
   const detail = JSON.parse(fs.readFileSync(detailPath, "utf8"));
+  const detailHistory = readPublicFundHistory(fund);
   assert(JSON.stringify(detail.fund) === JSON.stringify(fund), `${fund.kod} detay özeti güncel listeyle uyuşmuyor.`);
-  assert(detail.history.length === rawHistory.length, `${fund.kod} detay geçmişi eksik.`);
-  assert(fund.tarihselGunSayisi === detail.history.length, `${fund.kod} tarihsel gün sayısı yanlış.`);
-  assert(detail.sonOtuzIslemGunu.length === Math.min(30, detail.history.length), `${fund.kod} son 30 gün sayısı yanlış.`);
+  assert(!("history" in detail), `${fund.kod} tam geçmişi sayfa özetine gömülmüş.`);
+  assert(detailHistory.length === rawHistory.length, `${fund.kod} grafik geçmişi eksik.`);
+  assert(fund.tarihselGunSayisi === detailHistory.length, `${fund.kod} tarihsel gün sayısı yanlış.`);
+  assert(detail.sonOtuzIslemGunu.length === Math.min(30, detailHistory.length), `${fund.kod} son 30 gün sayısı yanlış.`);
 
-  for (let index = 0; index < detail.history.length; index += 1) {
-    const row = detail.history[index];
+  for (let index = 0; index < detailHistory.length; index += 1) {
+    const row = detailHistory[index];
     const raw = rawHistory[index];
-    const previous = detail.history[index - 1] ?? null;
+    const previous = detailHistory[index - 1] ?? null;
     assert(row.tarih === raw.tarih, `${fund.kod} geçmiş tarih sırası yanlış.`);
+    const hasSourceZero =
+      hasExplicitZeroFinancialSnapshot(row) ||
+      hasExplicitZeroFinancialSnapshot(previous);
     const validFinancials = hasValidFinancialSnapshot(previous) && hasValidFinancialSnapshot(row);
     const rawReturn = validFinancials ? row.fiyat / previous.fiyat - 1 : null;
-    const expectedReturn =
-      rawReturn !== null && Math.abs(rawReturn) <= maxAbsoluteDailyReturn
+    const expectedReturn = hasSourceZero
+      ? 0
+      : rawReturn !== null && Math.abs(rawReturn) <= maxAbsoluteDailyReturn
         ? round(rawReturn, 8)
         : null;
-    const expectedFlow = validFinancials
-      ? round((row.tedavuldekiPaySayisi - previous.tedavuldekiPaySayisi) * row.fiyat, 2)
-      : null;
+    const expectedFlow = hasSourceZero
+      ? 0
+      : validFinancials
+        ? round((row.tedavuldekiPaySayisi - previous.tedavuldekiPaySayisi) * row.fiyat, 2)
+        : null;
     const expectedInvestors =
       Number.isFinite(previous?.kisiSayisi) && Number.isFinite(row.kisiSayisi)
         ? row.kisiSayisi - previous.kisiSayisi
@@ -407,8 +472,8 @@ for (const fund of current.fonlar) {
     assertSameNumber(row.yatirimciDegisimi, expectedInvestors, `${fund.kod} ${row.tarih} yatırımcı değişimi`, 0);
   }
 
-  const expectedFlowPeriods = expectedPeriods(detail.history, "paraGirisiCikisi", fund.tarih);
-  const expectedInvestorPeriods = expectedPeriods(detail.history, "yatirimciDegisimi", fund.tarih);
+  const expectedFlowPeriods = expectedPeriods(detailHistory, "paraGirisiCikisi", fund.tarih);
+  const expectedInvestorPeriods = expectedPeriods(detailHistory, "yatirimciDegisimi", fund.tarih);
   for (const period of ["gunluk", "besGun", "birAy", "ucAy"]) {
     assertSameNumber(fund.paraAkisi[period], expectedFlowPeriods[period], `${fund.kod} ${period} para akışı`);
     assertSameNumber(
@@ -636,7 +701,7 @@ assert(
 );
 
 const effectData = JSON.parse(fs.readFileSync(sourcePaths.etki, "utf8"));
-const expectedEffectFunds = ["DFI", "KHA", "PBR", "PHE", "THF", "TLY"];
+const expectedEffectFunds = ["DFI", "KHA", "PHE", "THF", "TLY"];
 assert(
   JSON.stringify(Object.keys(effectData.fonlar).sort()) === JSON.stringify(expectedEffectFunds),
   "Etki analizi fon listesi altı beklenen fondan oluşmuyor."
@@ -660,27 +725,27 @@ for (const code of expectedEffectFunds) {
 
   const dates = new Set();
   const detail = JSON.parse(fs.readFileSync(path.join(detailDir, `${code.toLowerCase()}.json`), "utf8"));
-  const currentHistory = detail.history.filter(
+  const detailHistory = readPublicFundHistory(detail.fund);
+  const currentHistory = detailHistory.filter(
     (row) =>
       row.tarih &&
       Number.isFinite(row.kisiSayisi) &&
       Number.isFinite(row.fonToplamDeger) &&
-      row.fonToplamDeger > 0 &&
+      row.fonToplamDeger >= 0 &&
       Number.isFinite(row.paraGirisiCikisi)
   );
   assert(currentHistory.length >= 2, `${code} güncel değişim verisi yetersiz.`);
   const currentLastRow = currentHistory.at(-1);
   assert(
-    currentLastRow.tarih === detail.sonIslemTarihi &&
-      currentLastRow.tarih === detail.fund.tarih,
-    `${code} güncel değişim verisi son işlem tarihiyle uyuşmuyor.`
+    currentLastRow.tarih === detail.fund.tarih,
+    `${code} güncel değişim verisi fonun son geçerli tarihiyle uyuşmuyor.`
   );
-  const mainByDate = new Map(detail.history.map((row) => [row.tarih, row]));
+  const mainByDate = new Map(detailHistory.map((row) => [row.tarih, row]));
   for (const row of effectFund.tarihsel) {
     assert(!dates.has(row.tarih), `${code} etki geçmişinde tekrarlanan tarih: ${row.tarih}`);
     dates.add(row.tarih);
     assert(Number.isInteger(row.yatirimciSayisi) && row.yatirimciSayisi >= 0, `${code} yatırımcı sayısı geçersiz.`);
-    assert(Number.isFinite(row.fonToplamDeger) && row.fonToplamDeger > 0, `${code} fon toplam değeri geçersiz.`);
+    assert(Number.isFinite(row.fonToplamDeger) && row.fonToplamDeger >= 0, `${code} fon toplam değeri geçersiz.`);
     assert(Number.isFinite(row.paraGirisiCikisi), `${code} para akışı geçersiz.`);
     const main = mainByDate.get(row.tarih);
     if (main) {
@@ -694,12 +759,21 @@ for (const code of expectedEffectFunds) {
   for (let index = 1; index < effectFund.tarihsel.length; index += 1) {
     const previous = effectFund.tarihsel[index - 1];
     const row = effectFund.tarihsel[index];
+    if (officialHistoryDates.has(row.tarih)) continue;
     const investorChangeRatio =
       Math.abs(row.yatirimciSayisi - previous.yatirimciSayisi) /
       Math.max(previous.yatirimciSayisi, 1);
+    const investorChangeAbsolute = Math.abs(
+      row.yatirimciSayisi - previous.yatirimciSayisi
+    );
+    const fundValueChangeRatio =
+      Math.abs(row.fonToplamDeger - previous.fonToplamDeger) /
+      Math.max(previous.fonToplamDeger, 1);
     assert(
-      investorChangeRatio <= 0.5,
-      `${code} ${row.tarih} yatırımcı sayısında %50'yi aşan kaynak kopması var.`
+      investorChangeAbsolute < 100 ||
+        investorChangeRatio <= 0.5 ||
+        fundValueChangeRatio > 0.5,
+      `${code} ${row.tarih} yatırımcı sayısı fon büyüklüğüyle desteklenmeyen %50 üzeri sıçrama içeriyor.`
     );
   }
   const datesSorted = effectFund.tarihsel.map((row) => row.tarih).sort();

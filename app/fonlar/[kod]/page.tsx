@@ -231,7 +231,10 @@ export default async function FonDetayPage({
         </section>
 
         <section className="mb-8">
-          <FundChartsClient history={detail.history} />
+          <FundChartsClient
+            initialHistory={detail.sonOtuzIslemGunu}
+            historyUrl={`/data/fonlar/history/${fund.slug}.json`}
+          />
         </section>
 
         <section className="mb-8">

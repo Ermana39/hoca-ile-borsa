@@ -75,14 +75,6 @@ const fonProfilleri = [
       "PHE kodlu Pusula Portföy Hisse Senedi Fonu, hisse senedi yoğun fon türündedir. Bu sayfa, portföydeki payların ağırlıklarını günlük kapanış hareketleriyle eşleştirerek açıklanacak fon fiyatına yönelik tahmini etkiyi izler.",
   },
   {
-    kod: "PBR",
-    fonAdi: "Pusula Portföy Birinci Değişken Fon",
-    fonTuru: "Değişken fon",
-    slug: "pbr",
-    profilOzeti:
-      "PBR kodlu Pusula Portföy Birinci Değişken Fon, değişken fon türündedir. Bu sayfa, fonun bildirilen varlık dağılımındaki ağırlıkları ve günlük kapanış hareketlerini kullanarak açıklanacak fiyat için tahmini portföy etkisini izler.",
-  },
-  {
     kod: "DFI",
     fonAdi: "Atlas Portföy Serbest Fon",
     fonTuru: "Serbest fon",

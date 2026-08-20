@@ -12,6 +12,9 @@ const rootDir = process.cwd();
 const appDir = path.join(rootDir, "app");
 const outputDir = path.join(rootDir, "lib");
 const outputFile = path.join(outputDir, "page-updates.generated.json");
+const gitTrackedCache = new Map();
+const gitDirtyCache = new Map();
+const gitUpdatedAtCache = new Map();
 
 const pageFileNames = new Set([
   "page.tsx",
@@ -35,6 +38,7 @@ const excelUzantilari = new Set([".xlsx", ".xls", ".xlsm"]);
 const yokSayilacakDosyalar = new Set([
   "page-updates.generated.json",
   "hisse-profile-metadata.generated.json",
+  "fund-history.json",
 ]);
 
 function toPosixPath(value) {
@@ -119,6 +123,10 @@ function getRouteFromPageFile(filePath) {
 function isGitTracked(filePath) {
   if (typeof filePath !== "string") return false;
 
+  if (gitTrackedCache.has(filePath)) {
+    return gitTrackedCache.get(filePath);
+  }
+
   try {
     const relative = toPosixPath(path.relative(rootDir, filePath));
 
@@ -127,14 +135,20 @@ function isGitTracked(filePath) {
       stdio: ["ignore", "ignore", "ignore"],
     });
 
+    gitTrackedCache.set(filePath, true);
     return true;
   } catch {
+    gitTrackedCache.set(filePath, false);
     return false;
   }
 }
 
 function isGitDirty(filePath) {
   if (typeof filePath !== "string") return false;
+
+  if (gitDirtyCache.has(filePath)) {
+    return gitDirtyCache.get(filePath);
+  }
 
   try {
     const relative = toPosixPath(path.relative(rootDir, filePath));
@@ -145,8 +159,11 @@ function isGitDirty(filePath) {
       encoding: "utf8",
     }).trim();
 
-    return Boolean(result);
+    const dirty = Boolean(result);
+    gitDirtyCache.set(filePath, dirty);
+    return dirty;
   } catch {
+    gitDirtyCache.set(filePath, false);
     return false;
   }
 }
@@ -401,58 +418,33 @@ function getRouteAwareGitUpdatedAt(filePath, route) {
   if (typeof filePath !== "string") return "";
   if (!isGitTracked(filePath)) return "";
 
-  const commits = getGitLog(filePath);
-
-  for (const commit of commits) {
-    const currentPayload = getRouteAwarePayloadFromGit(
-      commit.hash,
-      filePath,
-      route
-    );
-
-    if (!currentPayload) continue;
-
-    const previousPayload = getRouteAwarePayloadFromGit(
-      `${commit.hash}^`,
-      filePath,
-      route
-    );
-
-    if (!previousPayload || currentPayload !== previousPayload) {
-      return commit.date;
-    }
+  if (gitUpdatedAtCache.has(filePath)) {
+    return gitUpdatedAtCache.get(filePath);
   }
 
-  return commits[0]?.date || "";
+  try {
+    const relative = toPosixPath(path.relative(rootDir, filePath));
+
+    const updatedAt = execFileSync("git", ["log", "-1", "--format=%cI", "--", relative], {
+      cwd: rootDir,
+      stdio: ["ignore", "pipe", "ignore"],
+      encoding: "utf8",
+      maxBuffer: 1024 * 1024,
+    }).trim();
+
+    gitUpdatedAtCache.set(filePath, updatedAt);
+    return updatedAt;
+  } catch {
+    gitUpdatedAtCache.set(filePath, "");
+    return "";
+  }
 }
 
 function getRouteAwareUpdatedAt(filePath, route) {
   if (typeof filePath !== "string") return "";
   if (!fs.existsSync(filePath)) return "";
 
-  const ext = path.extname(filePath).toLowerCase();
-  const tracked = isGitTracked(filePath);
-
-  if (!tracked && ext === ".json") {
-    return "";
-  }
-
-  if (!tracked) {
-    return getFileUpdatedAt(filePath);
-  }
-
-  if (isGitDirty(filePath)) {
-    const currentPayload = getRouteAwarePayloadFromFile(filePath, route);
-    const headPayload = getRouteAwarePayloadFromGit("HEAD", filePath, route);
-
-    if (!headPayload || currentPayload !== headPayload) {
-      return getFileUpdatedAt(filePath);
-    }
-
-    return getRouteAwareGitUpdatedAt(filePath, route);
-  }
-
-  return getRouteAwareGitUpdatedAt(filePath, route);
+  return getFileUpdatedAt(filePath);
 }
 
 function getImportedDataFiles(pageFilePath) {

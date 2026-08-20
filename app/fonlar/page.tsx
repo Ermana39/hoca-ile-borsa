@@ -146,7 +146,7 @@ export default function FonlarPage() {
           <ModuleLink
             href="/fonlar/etki-analizi"
             title="Popüler Fonların Günlük Etki Analizi"
-            desc="TLY, PHE, PBR, DFI, KHA ve THF portföy içerikleri ile ertesi gün açıklanacak fon fiyatına tahmini etki."
+            desc="TLY, PHE, DFI, KHA ve THF portföy içerikleri ile ertesi gün açıklanacak fon fiyatına tahmini etki."
           />
           <ModuleLink
             href="/fonlar/para-girisi"

@@ -1,12 +1,22 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import MarketChart, { type MarketChartPoint } from "@/components/charts/MarketChart";
 import { formatSignedTL } from "@/lib/fon-format";
 import type { FundHistoryRow } from "@/lib/fon-platform";
 
 type Period = "1H" | "1A" | "3A" | "6A" | "YBB" | "1Y" | "Maks";
 type NumericHistoryKey = "fiyat" | "fonToplamDeger" | "kisiSayisi" | "paraGirisiCikisi";
+type FundHistoryTuple = [
+  string,
+  number | null,
+  number | null,
+  number | null,
+  number | null,
+  number | null,
+  number | null,
+  number | null,
+];
 
 const periods: Period[] = ["1H", "1A", "3A", "6A", "YBB", "1Y", "Maks"];
 
@@ -51,8 +61,53 @@ function filteredSeries(series: MarketChartPoint[], period: Period) {
   return filtered.length >= 2 ? filtered : series;
 }
 
-export default function FundChartsClient({ history }: { history: FundHistoryRow[] }) {
+function decodeHistory(rows: FundHistoryTuple[]): FundHistoryRow[] {
+  return rows.map((row) => ({
+    fonKodu: "",
+    fonAdi: "",
+    tarih: row[0],
+    fiyat: row[1],
+    tedavuldekiPaySayisi: row[2],
+    kisiSayisi: row[3],
+    fonToplamDeger: row[4],
+    gunlukGetiri: row[5],
+    paraGirisiCikisi: row[6],
+    yatirimciDegisimi: row[7],
+  }));
+}
+
+export default function FundChartsClient({
+  initialHistory,
+  historyUrl,
+}: {
+  initialHistory: FundHistoryRow[];
+  historyUrl?: string;
+}) {
   const [period, setPeriod] = useState<Period>("Maks");
+  const [history, setHistory] = useState(initialHistory);
+
+  useEffect(() => {
+    setHistory(initialHistory);
+    if (!historyUrl) return;
+
+    const controller = new AbortController();
+    fetch(historyUrl, { cache: "force-cache", signal: controller.signal })
+      .then((response) => {
+        if (!response.ok) throw new Error(`Fon geçmişi yüklenemedi: ${response.status}`);
+        return response.json() as Promise<{ rows?: FundHistoryTuple[] }>;
+      })
+      .then((payload) => {
+        if (Array.isArray(payload.rows) && payload.rows.length > 0) {
+          setHistory(decodeHistory(payload.rows));
+        }
+      })
+      .catch((error: unknown) => {
+        if (error instanceof DOMException && error.name === "AbortError") return;
+      });
+
+    return () => controller.abort();
+  }, [historyUrl, initialHistory]);
+
   const charts = useMemo(() => {
     const sorted = [...history].sort((a, b) => a.tarih.localeCompare(b.tarih));
     const price = normalizeSeries(sorted, "fiyat");

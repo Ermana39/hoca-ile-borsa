@@ -9,11 +9,11 @@ import {
 const siteUrl = "https://www.hocaileborsa.com";
 const canonical = `${siteUrl}/fonlar/etki-analizi`;
 const title =
-  "Fonların Günlük Portföy Etkisi: TLY, PHE, PBR, DFI, KHA ve THF";
+  "Fonların Günlük Portföy Etkisi: TLY, PHE, DFI, KHA ve THF";
 const description =
-  "TLY, PHE, PBR, DFI, KHA ve THF fonlarının güncel portföy etkisini karşılaştırın. Tahmini fiyat değişimini, yatırımcı hareketini, para akışını ve veri kapsamını inceleyin.";
+  "TLY, PHE, DFI, KHA ve THF fonlarının güncel portföy etkisini karşılaştırın. Tahmini fiyat değişimini, yatırımcı hareketini, para akışını ve veri kapsamını inceleyin.";
 const seoDescription =
-  "TLY, PHE, PBR, DFI, KHA ve THF fonlarının güncel portföy etkisi, tahmini fiyat değişimi, yatırımcı hareketi ve para akışını tek ekranda karşılaştırın.";
+  "TLY, PHE, DFI, KHA ve THF fonlarının güncel portföy etkisi, tahmini fiyat değişimi, yatırımcı hareketi ve para akışını tek ekranda karşılaştırın.";
 const image = `${siteUrl}/2026-fon-etki-analizi-tly-phe-pbr-dfi.webp`;
 
 export const metadata: Metadata = {
@@ -27,7 +27,6 @@ export const metadata: Metadata = {
     "yarınki fon fiyatı",
     "TLY fonu",
     "PHE fonu",
-    "PBR fonu",
     "DFI fonu",
     "KHA fonu",
     "THF fonu",
@@ -73,9 +72,7 @@ const faq = [
 
 const sonDegerlendirmeler = newsItems
   .filter(
-    (item) =>
-      item.href.includes("fonlar-gunluk-kapanis-degerlendirmesi") ||
-      item.href.includes("fon-etki-analizi-tly-phe-pbr-dfi")
+    (item) => item.href.includes("fonlar-gunluk-kapanis-degerlendirmesi")
   )
   .slice(0, 4);
 
@@ -143,7 +140,7 @@ const jsonLd = {
     {
       "@type": "Dataset",
       "@id": `${canonical}#dataset`,
-      name: "TLY, PHE, PBR, DFI, KHA ve THF fon kapanış etki karşılaştırması",
+      name: "TLY, PHE, DFI, KHA ve THF fon kapanış etki karşılaştırması",
       description,
       url: canonical,
       inLanguage: "tr-TR",
@@ -242,7 +239,7 @@ export default function FonEtkiAnaliziPage() {
           <p className="mt-4 text-base leading-8 text-slate-600">
             Fonların son açıklanan portföy dağılımları ile Borsa İstanbul günlük
             kapanış değişimleri birleştirilerek, açıklanacak fon fiyatına tahmini
-            etki hesaplanır. Bu merkez sayfa TLY, PHE, PBR, DFI, KHA ve THF fonlarını
+            etki hesaplanır. Bu merkez sayfa TLY, PHE, DFI, KHA ve THF fonlarını
             aynı yöntemle karşılaştırır. Ayrıntılı sayfalarda hisse bazlı
             katkılar, tarihsel yatırımcı değişimi, fon büyüklüğü ve para akışı
             grafikleri yer alır.
