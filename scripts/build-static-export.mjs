@@ -48,7 +48,7 @@ moveDynamicRoutesOut();
 try {
   // Acik kalan yerel `next dev`, eski rota tiplerini .next/dev altinda
   // birakabiliyor. Bunlar uretim tip kontrolune ait degildir.
-  fs.rmSync(path.join(root, ".next", "dev", "types"), {
+  fs.rmSync(path.join(root, ".next", "dev"), {
     recursive: true,
     force: true,
   });

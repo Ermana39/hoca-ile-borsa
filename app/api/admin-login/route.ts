@@ -5,7 +5,7 @@ import {
   getLoginRateLimitStatus,
   makeAdminToken,
   registerFailedLogin,
-} from "@/lib/page-stats";
+} from "@/lib/admin-auth";
 import { isSameOriginRequest } from "@/lib/request-security";
 import { addSecurityLog } from "@/lib/security-log";
 

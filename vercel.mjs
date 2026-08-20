@@ -15,6 +15,11 @@ export const config = {
   outputDirectory: "out",
   cleanUrls: true,
   trailingSlash: false,
+  functions: {
+    "api/**/*.ts": {
+      excludeFiles: "{data,public/data,out,.next,.tmp,.codex-tmp}/**",
+    },
+  },
   redirects,
   headers,
 };

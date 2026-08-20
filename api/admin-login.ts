@@ -4,7 +4,7 @@ import {
   getLoginRateLimitStatus,
   makeAdminToken,
   registerFailedLogin,
-} from "../lib/page-stats";
+} from "../lib/admin-auth";
 import {
   cookieValue,
   getClientIp,

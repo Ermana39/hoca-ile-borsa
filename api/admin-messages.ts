@@ -1,5 +1,5 @@
 import { getCookie, jsonResponse } from "../lib/http-api";
-import { isValidAdminToken } from "../lib/page-stats";
+import { isValidAdminToken } from "../lib/admin-auth";
 
 export default {
   async fetch(request: Request) {
