@@ -1,13 +1,17 @@
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
+import type { ReactNode } from "react";
 import { Fragment } from "react";
 import { getYazar, varsayilanYazar } from "@/app/data/yazarlar";
 import AuthorBox from "@/components/AuthorBox";
 import HaberAltKisim from "@/components/HaberAltKisim";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import KapEtkiAnalizi from "@/components/KapEtkiAnalizi";
+import { getFundDetail } from "@/lib/fon-platform";
+import { getOnayliHalkaArzKaydiByKod } from "@/lib/halka-arz";
 import { formatHaberTarihi } from "@/lib/haber-tarih";
 import { getKategori } from "@/lib/haber-kategorileri";
+import { hisseVarMi } from "@/lib/hisseler";
 import {
   HABER_SITE_URL,
   type HaberBolumu,
@@ -37,8 +41,188 @@ const editorBaslikStilleri: Record<HaberVurgu, string> = {
   takip: "text-emerald-700",
 };
 
+const kodDeseni = /\b[A-Z0-9]{2,6}\b/g;
+const linklenmeyecekKodlar = new Set([
+  "AŞ",
+  "BIST",
+  "CEO",
+  "CFO",
+  "DOLAR",
+  "EPDK",
+  "EUR",
+  "EURO",
+  "FAVOK",
+  "GBP",
+  "GSYO",
+  "GYO",
+  "IPO",
+  "ISO",
+  "KAP",
+  "KDV",
+  "KOBI",
+  "KVKK",
+  "MKK",
+  "PD",
+  "PYS",
+  "SPK",
+  "TCMB",
+  "TEFAS",
+  "TEIAS",
+  "TL",
+  "TRY",
+  "TUIK",
+  "USD",
+  "YBB",
+]);
+
+const fonVarlikOnbellegi = new Map<string, boolean>();
+const halkaArzLinkOnbellegi = new Map<string, string | null>();
+
+type HaberLinklemeKapsami = {
+  fonKodlari: Set<string>;
+  sembolLinkleri: Map<string, string>;
+};
+
 function jsonLdGuvenli(veri: unknown) {
   return JSON.stringify(veri).replace(/</g, "\\u003c");
+}
+
+function fonVarMi(kod: string) {
+  const slug = kod.toLowerCase();
+  const kayitli = fonVarlikOnbellegi.get(slug);
+  if (typeof kayitli === "boolean") return kayitli;
+
+  const varMi = Boolean(getFundDetail(slug));
+  fonVarlikOnbellegi.set(slug, varMi);
+  return varMi;
+}
+
+function getOnayliHalkaArzLinki(kod: string) {
+  const buyukKod = kod.toUpperCase();
+  const kayitli = halkaArzLinkOnbellegi.get(buyukKod);
+  if (kayitli !== undefined) return kayitli;
+
+  const kayit = getOnayliHalkaArzKaydiByKod(buyukKod);
+  const href = kayit
+    ? `/halka-arz/onayli-izahnameler/${kayit.slug}`
+    : null;
+  halkaArzLinkOnbellegi.set(buyukKod, href);
+  return href;
+}
+
+function yerelSiteHref(href: string) {
+  return href.replace(/^https?:\/\/(?:www\.)?hocaileborsa\.com/i, "") || href;
+}
+
+function getKodLinki(kod: string, linkleme: HaberLinklemeKapsami) {
+  const buyukKod = kod.toUpperCase();
+  if (linklenmeyecekKodlar.has(buyukKod)) return null;
+
+  const ozelLink = linkleme.sembolLinkleri.get(buyukKod);
+  if (ozelLink) return ozelLink;
+
+  const fonKodu = buyukKod.toLowerCase();
+  if (linkleme.fonKodlari.has(buyukKod) || (!hisseVarMi(buyukKod) && fonVarMi(buyukKod))) {
+    return `/fonlar/${fonKodu}`;
+  }
+
+  if (hisseVarMi(buyukKod)) {
+    return `/hisse/${buyukKod.toLowerCase()}`;
+  }
+
+  return getOnayliHalkaArzLinki(buyukKod);
+}
+
+function HaberMetni({
+  metin,
+  linkleme,
+  linkClassName = "font-bold text-blue-700 underline decoration-blue-300 underline-offset-4 transition hover:text-blue-900",
+}: {
+  metin: string;
+  linkleme: HaberLinklemeKapsami;
+  linkClassName?: string;
+}) {
+  const parcalar: ReactNode[] = [];
+  let sonIndex = 0;
+  let eslesme: RegExpExecArray | null;
+  kodDeseni.lastIndex = 0;
+
+  while ((eslesme = kodDeseni.exec(metin)) !== null) {
+    const kod = eslesme[0];
+    const baslangic = eslesme.index;
+    const href = getKodLinki(kod, linkleme);
+
+    if (baslangic > sonIndex) {
+      parcalar.push(metin.slice(sonIndex, baslangic));
+    }
+
+    parcalar.push(
+      href ? (
+        <Link
+          key={`${kod}-${baslangic}`}
+          href={href}
+          prefetch={false}
+          className={linkClassName}
+        >
+          {kod}
+        </Link>
+      ) : (
+        kod
+      )
+    );
+
+    sonIndex = baslangic + kod.length;
+  }
+
+  if (sonIndex < metin.length) {
+    parcalar.push(metin.slice(sonIndex));
+  }
+
+  return parcalar.length > 0 ? <>{parcalar}</> : metin;
+}
+
+function haberLinkiniDuzelt(href: string, label?: string) {
+  const yerelHref = yerelSiteHref(href);
+  const labelKod = label?.match(kodDeseni)?.[0]?.toUpperCase();
+
+  if (labelKod && hisseVarMi(labelKod) && /^\/hisseler(?:[/?#]|$)/i.test(yerelHref)) {
+    return `/hisse/${labelKod.toLowerCase()}`;
+  }
+
+  if (labelKod && /^\/fonlar(?:[/?#]|$)/i.test(yerelHref) && fonVarMi(labelKod)) {
+    return `/fonlar/${labelKod.toLowerCase()}`;
+  }
+
+  const etkiAnaliziEslesme = yerelHref.match(
+    /^\/fonlar\/etki-analizi\/([a-z0-9-]+)(?:[/?#]|$)/i
+  );
+  if (etkiAnaliziEslesme && fonVarMi(etkiAnaliziEslesme[1])) {
+    return `/fonlar/${etkiAnaliziEslesme[1].toLowerCase()}`;
+  }
+
+  return yerelHref;
+}
+
+function bolumlerdenSembolLinkleriTopla(bolumler: HaberBolumu[]) {
+  const linkler = new Map<string, string>();
+
+  for (const bolum of bolumler) {
+    if (!bolum.haberLink || !bolum.haberLinkMetni) continue;
+
+    const kod = bolum.haberLinkMetni.match(kodDeseni)?.[0]?.toUpperCase();
+    if (!kod || linklenmeyecekKodlar.has(kod)) continue;
+    if (hisseVarMi(kod) || fonVarMi(kod) || getOnayliHalkaArzLinki(kod)) continue;
+
+    const href = haberLinkiniDuzelt(bolum.haberLink, bolum.haberLinkMetni);
+    if (
+      href.startsWith("/halka-arz/onayli-izahnameler/") ||
+      href.startsWith("/halka-arz/taslak-izahnameler/")
+    ) {
+      linkler.set(kod, href);
+    }
+  }
+
+  return linkler;
 }
 
 function kapKaynakSatiri(paragraf: string) {
@@ -50,9 +234,11 @@ function kapKaynakSatiri(paragraf: string) {
 function HaberParagrafi({
   paragraf,
   id,
+  linkleme,
 }: {
   paragraf: string;
   id: string;
+  linkleme: HaberLinklemeKapsami;
 }) {
   const kapLink = kapKaynakSatiri(paragraf);
 
@@ -73,22 +259,32 @@ function HaberParagrafi({
 
   return (
     <p id={id} className="text-sm leading-7 text-slate-700 md:text-base">
-      {paragraf}
+      <HaberMetni metin={paragraf} linkleme={linkleme} />
     </p>
   );
 }
 
-function OzetKarti({ kart }: { kart: HaberOzetKarti }) {
+function OzetKarti({
+  kart,
+  linkleme,
+}: {
+  kart: HaberOzetKarti;
+  linkleme: HaberLinklemeKapsami;
+}) {
   return (
     <div className="rounded-2xl border border-blue-200 bg-blue-50 p-4">
       <div className="text-sm font-semibold text-blue-800">
         {kart.baslik}
       </div>
       <div className="mt-1 text-2xl font-bold text-blue-950">
-        {kart.deger}
+        <HaberMetni
+          metin={kart.deger}
+          linkleme={linkleme}
+          linkClassName="text-blue-950 underline decoration-blue-400 underline-offset-4 transition hover:text-blue-700"
+        />
       </div>
       <div className="mt-1 text-sm leading-6 text-blue-800">
-        {kart.aciklama}
+        <HaberMetni metin={kart.aciklama} linkleme={linkleme} />
       </div>
     </div>
   );
@@ -192,11 +388,16 @@ function getBolumFonKodlari(baslik: string, fonKodlari: string[]) {
 function HaberIcerikBolumu({
   bolum,
   fonKodlari = [],
+  linkleme,
 }: {
   bolum: HaberBolumu;
   fonKodlari?: string[];
+  linkleme: HaberLinklemeKapsami;
 }) {
   const vurgu = bolum.vurgu ?? "normal";
+  const haberLink = bolum.haberLink
+    ? haberLinkiniDuzelt(bolum.haberLink, bolum.haberLinkMetni)
+    : null;
   const kapBaglantilari = [
     bolum.kapLink
       ? {
@@ -225,7 +426,7 @@ function HaberIcerikBolumu({
 
       {bolum.giris && (
         <p className="mt-3 text-sm leading-7 text-slate-600 md:text-base">
-          {bolum.giris}
+          <HaberMetni metin={bolum.giris} linkleme={linkleme} />
         </p>
       )}
 
@@ -236,6 +437,7 @@ function HaberIcerikBolumu({
               <HaberParagrafi
                 id={`${bolum.baslik}-paragraf-${index}`}
                 paragraf={paragraf}
+                linkleme={linkleme}
               />
               {index === 1 && bolum.degisimGrafigi && (
                 <DegisimGrafigi grafik={bolum.degisimGrafigi} />
@@ -245,9 +447,9 @@ function HaberIcerikBolumu({
         </div>
       )}
 
-      {bolum.haberLink && (
+      {haberLink && (
         <Link
-          href={bolum.haberLink}
+          href={haberLink}
           prefetch={false}
           className="mt-5 inline-flex items-center justify-center rounded-lg border border-blue-700 bg-blue-700 px-4 py-2.5 text-sm font-bold text-white shadow-sm transition hover:border-blue-800 hover:bg-blue-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700 md:text-base"
         >
@@ -299,7 +501,7 @@ function HaberIcerikBolumu({
                         hucreIndex === 0 ? "font-semibold text-slate-900" : ""
                       }`}
                     >
-                      {hucre}
+                      <HaberMetni metin={hucre} linkleme={linkleme} />
                     </td>
                   ))}
                 </tr>
@@ -319,7 +521,9 @@ function HaberIcerikBolumu({
               <h3 className="text-base font-bold text-slate-900">
                 {kart.baslik}
               </h3>
-              <p className="mt-2 text-sm leading-7">{kart.aciklama}</p>
+              <p className="mt-2 text-sm leading-7">
+                <HaberMetni metin={kart.aciklama} linkleme={linkleme} />
+              </p>
             </div>
           ))}
         </div>
@@ -332,7 +536,7 @@ function HaberIcerikBolumu({
               key={`${bolum.baslik}-madde-${index}`}
               className={`rounded-xl border p-4 text-sm font-medium leading-7 ${kartStilleri[vurgu]}`}
             >
-              {madde}
+              <HaberMetni metin={madde} linkleme={linkleme} />
             </li>
           ))}
         </ul>
@@ -359,9 +563,11 @@ function HaberIcerikBolumu({
 function HaberEditoryalAnaliz({
   kayit,
   kapanisDegerlendirmesi,
+  linkleme,
 }: {
   kayit: HaberKaydi;
   kapanisDegerlendirmesi: boolean;
+  linkleme: HaberLinklemeKapsami;
 }) {
   const { giris, bolumler } = kayit.editorDegerlendirmesi;
   const gorunurGiris = !kapanisDegerlendirmesi && giris.trim().length > 0;
@@ -384,7 +590,7 @@ function HaberEditoryalAnaliz({
 
       {gorunurGiris && (
         <p className="mt-4 text-base font-medium leading-8 text-slate-700 md:text-lg">
-          {giris}
+          <HaberMetni metin={giris} linkleme={linkleme} />
         </p>
       )}
 
@@ -395,6 +601,9 @@ function HaberEditoryalAnaliz({
             bolum.baslik,
             getFonKapanisKodlari(kayit)
           );
+          const haberLink = bolum.haberLink
+            ? haberLinkiniDuzelt(bolum.haberLink, bolum.haberLinkMetni)
+            : null;
 
           return (
             <section
@@ -409,7 +618,7 @@ function HaberEditoryalAnaliz({
 
               {bolum.giris && (
                 <p className="mt-3 text-sm leading-7 text-slate-700 md:text-base">
-                  {bolum.giris}
+                  <HaberMetni metin={bolum.giris} linkleme={linkleme} />
                 </p>
               )}
 
@@ -420,6 +629,7 @@ function HaberEditoryalAnaliz({
                       <HaberParagrafi
                         id={`${bolum.baslik}-editor-paragraf-${index}`}
                         paragraf={paragraf}
+                        linkleme={linkleme}
                       />
                       {index === 1 && bolum.degisimGrafigi && (
                         <DegisimGrafigi grafik={bolum.degisimGrafigi} />
@@ -440,7 +650,7 @@ function HaberEditoryalAnaliz({
                         {kart.baslik}
                       </h4>
                       <p className="mt-1 text-sm leading-7 text-slate-700 md:text-base">
-                        {kart.aciklama}
+                        <HaberMetni metin={kart.aciklama} linkleme={linkleme} />
                       </p>
                     </div>
                   ))}
@@ -451,7 +661,7 @@ function HaberEditoryalAnaliz({
                 <ul className="mt-4 list-disc space-y-2 pl-5 text-sm leading-7 text-slate-700 marker:text-slate-400 md:text-base">
                   {bolum.maddeler.map((madde, index) => (
                     <li key={`${bolum.baslik}-editor-madde-${index}`}>
-                      {madde}
+                      <HaberMetni metin={madde} linkleme={linkleme} />
                     </li>
                   ))}
                 </ul>
@@ -482,7 +692,7 @@ function HaberEditoryalAnaliz({
                                 hucreIndex === 0 ? "font-semibold text-slate-900" : ""
                               }`}
                             >
-                              {hucre}
+                              <HaberMetni metin={hucre} linkleme={linkleme} />
                             </td>
                           ))}
                         </tr>
@@ -492,9 +702,9 @@ function HaberEditoryalAnaliz({
                 </div>
               )}
 
-              {bolum.haberLink && (
+              {haberLink && (
                 <Link
-                  href={bolum.haberLink}
+                  href={haberLink}
                   prefetch={false}
                   className="mt-5 inline-flex items-center justify-center rounded-lg border border-blue-700 bg-blue-700 px-4 py-2.5 text-sm font-bold text-white transition hover:border-blue-800 hover:bg-blue-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-700"
                 >
@@ -661,6 +871,17 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
     .toLocaleLowerCase("tr-TR")
     .includes("kapanış değerlendirmesi");
   const fonKapanisKodlari = getFonKapanisKodlari(kayit);
+  const linkleme = {
+    fonKodlari: new Set(
+      [...(kayit.ilgiliFonlar ?? []), ...fonKapanisKodlari].map((kod) =>
+        kod.toUpperCase()
+      )
+    ),
+    sembolLinkleri: bolumlerdenSembolLinkleriTopla([
+      ...kayit.kaynakOzeti.bolumler,
+      ...kayit.editorDegerlendirmesi.bolumler,
+    ]),
+  };
 
   return (
     <main className="min-h-screen bg-[#f8fafc] px-4 py-6 md:px-6">
@@ -737,7 +958,9 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
             <div className="space-y-6">
               <div className="space-y-4 text-base leading-8 text-slate-700 md:text-lg">
                 {kayit.kaynakOzeti.giris.map((paragraf, index) => (
-                  <p key={`giris-${index}`}>{paragraf}</p>
+                  <p key={`giris-${index}`}>
+                    <HaberMetni metin={paragraf} linkleme={linkleme} />
+                  </p>
                 ))}
               </div>
 
@@ -747,6 +970,7 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
                     <OzetKarti
                       key={`${kart.baslik}-${index}`}
                       kart={kart}
+                      linkleme={linkleme}
                     />
                   ))}
                 </section>
@@ -780,7 +1004,7 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
                                 {satir.etiket}
                               </th>
                               <td className="px-4 py-3 font-medium text-slate-700">
-                                {satir.deger}
+                                <HaberMetni metin={satir.deger} linkleme={linkleme} />
                               </td>
                             </tr>
                           ))}
@@ -798,12 +1022,14 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
                     bolum.baslik,
                     fonKapanisKodlari
                   )}
+                  linkleme={linkleme}
                 />
               ))}
 
               <HaberEditoryalAnaliz
                 kayit={kayit}
                 kapanisDegerlendirmesi={kapanisDegerlendirmesi}
+                linkleme={linkleme}
               />
 
               {kayit.kapEtkiAnalizi && (
@@ -825,7 +1051,7 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
                       >
                         <h3 className="font-bold text-slate-900">{item.soru}</h3>
                         <p className="mt-2 text-sm leading-7 text-slate-700 md:text-base">
-                          {item.cevap}
+                          <HaberMetni metin={item.cevap} linkleme={linkleme} />
                         </p>
                       </div>
                     ))}
