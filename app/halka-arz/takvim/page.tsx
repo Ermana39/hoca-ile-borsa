@@ -6,11 +6,11 @@ import { bekleyenDeger, halkaArzGetir } from "@/lib/halka-arz";
 import { seoAciklamasi } from "@/lib/seo-metadata";
 
 const canonical = "https://www.hocaileborsa.com/halka-arz/takvim";
-const title = "Halka Arz Takvimi 2026: Yeni Arzlar ve İşlem Tarihleri";
+const title = "Halka Arz Takvimi 2026: İNTET, BKRGY ve İşlemdeki Arzlar";
 const description =
-  "2026 halka arz takviminde talep toplama, dağıtım sonucu, BIST işlem tarihi, fiyat, lot ve onaylı izahname bağlantılarını birlikte takip edin.";
-const sonGuncellemeIso = "2026-08-18";
-const sonGuncellemeMetni = "18 Ağustos 2026";
+  "2026 halka arz takviminde BKRGY için 24-25-26 Ağustos, İNTET için 26-27 Ağustos talep toplama tarihleri ile işlemdeki halka arzları takip edin.";
+const sonGuncellemeIso = "2026-08-22";
+const sonGuncellemeMetni = "22 Ağustos 2026";
 
 export const metadata: Metadata = {
   title: { absolute: title },
@@ -25,15 +25,19 @@ export const metadata: Metadata = {
     "yeni halka arzlar",
     "halka arz talep toplama tarihleri",
     "halka arz işlem tarihleri",
+    "BKRGY halka arz",
+    "BKRGY talep toplama",
+    "İNTET halka arz",
+    "İNTET talep toplama",
+    "24 Ağustos 2026 halka arz",
+    "26 Ağustos 2026 halka arz",
     "CITAS halka arz",
     "VEYAS halka arz",
     "KPEKS halka arz",
     "TKNKA halka arz",
     "20 Ağustos 2026 halka arz",
     "21 Ağustos 2026 halka arz",
-    "CITAS işlem tarihi",
-    "Çitlekçi işlem tarihi",
-    "dağıtım sonucu beklenen halka arzlar",
+    "işlemdeki halka arzlar",
   ],
   openGraph: {
     title,
@@ -72,31 +76,41 @@ type IzahnameBekleyenSirket = {
   durum: string;
 };
 
-const dagitimSonucuBeklenenTakvimi: TakvimSirketi[] = [
-];
+const dagitimSonucuBeklenenTakvimi: TakvimSirketi[] = [];
 
-const talepToplamaTakvimi: TakvimSirketi[] = [];
+const talepToplamaTakvimi: TakvimSirketi[] = [
+  {
+    slug: "bakirci-gayrimenkul-yatirim-ortakligi",
+    tarih: "24-25-26 Ağustos 2026",
+    durum: "Talep toplayacak",
+  },
+  {
+    slug: "intetra-teknoloji-ve-bilisim-hizmetleri",
+    tarih: "26-27 Ağustos 2026",
+    durum: "Talep toplayacak",
+  },
+];
 
 const islemBaslangiciTakvimi: TakvimSirketi[] = [
   {
     slug: "citlekci-magazacilik",
     tarih: "18 Ağustos 2026 Salı",
-    durum: "İşleme başladı",
+    durum: "İşlemde",
   },
   {
     slug: "turker-vangolu-enerji-yatirim",
     tarih: "20 Ağustos 2026 Perşembe",
-    durum: "İşleme başlayacak",
+    durum: "İşlemde",
   },
   {
     slug: "kapeks-kimya",
     tarih: "21 Ağustos 2026 Cuma",
-    durum: "İşleme başlayacak",
+    durum: "İşlemde",
   },
   {
     slug: "teknika-plast-teknik-kalip-plastik-san-ve-tic",
     tarih: "20 Ağustos 2026 Perşembe",
-    durum: "İşleme başlayacak",
+    durum: "İşlemde",
   },
 ];
 
@@ -176,17 +190,17 @@ export default function HalkaArzTakvimPage() {
     {
       soru: "Talep toplayacak halka arzlar hangileri?",
       cevap:
-        "Aktif takvimde talep toplaması süren halka arz bulunmuyor. TKNKA ve VEYAS 20 Ağustos 2026 Perşembe, KPEKS ise 21 Ağustos 2026 Cuma günü işlem görmeye başlayacak.",
+        "Bakırcı GYO BKRGY 24-25-26 Ağustos 2026 tarihlerinde, İntetra Teknoloji İNTET ise 26-27 Ağustos 2026 tarihlerinde talep toplayacak.",
     },
     {
       soru: "Dağıtım sonuçları açıklanacak halka arzlar hangileri?",
       cevap:
-        "Aktif takvimde dağıtım sonucu beklenen halka arz bulunmuyor. TKNKA ve VEYAS için 20 Ağustos, KPEKS için 21 Ağustos 2026 işlem başlangıç tarihi açıklandı.",
+        "Aktif takvimde dağıtım sonucu beklenen halka arz bulunmuyor. BKRGY ve İNTET için talep toplama süreci tamamlandıktan sonra dağıtım sonucu süreci takip edilecek.",
     },
     {
       soru: "Bu hafta hangi halka arzlar işlemde?",
       cevap:
-        "Çitlekçi Mağazacılık Gıda CITAS 18 Ağustos 2026 Salı günü işlem görmeye başladı. Teknika Plast TKNKA ve Türker Vangölü Enerji VEYAS 20 Ağustos Perşembe, Kapeks Kimya KPEKS ise 21 Ağustos Cuma günü işlem görmeye başlayacak.",
+        "Çitlekçi Mağazacılık Gıda CITAS, Teknika Plast TKNKA, Türker Vangölü Enerji VEYAS ve Kapeks Kimya KPEKS işlemde olan halka arzlar arasında yer alıyor.",
     },
     {
       soru: "Onaylı izahnamesi beklenen halka arzlar hangileri?",
@@ -302,29 +316,29 @@ export default function HalkaArzTakvimPage() {
             {title}
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 md:text-base">
-            18 Ağustos 2026 tarihli güncel halka arz takviminde Çitlekçi
-            Mağazacılık Gıda CITAS işlem görmeye başladı. Teknika Plast TKNKA
-            ve Türker Vangölü Enerji VEYAS 20 Ağustos Perşembe, Kapeks Kimya
-            KPEKS ise 21 Ağustos Cuma günü Borsa İstanbul&apos;da işlem görmeye
-            başlayacak.
+            22 Ağustos 2026 tarihli güncel halka arz takviminde Bakırcı GYO
+            BKRGY 24-25-26 Ağustos, İntetra Teknoloji İNTET ise 26-27 Ağustos
+            tarihlerinde talep toplayacak. Çitlekçi Mağazacılık Gıda CITAS,
+            Teknika Plast TKNKA, Türker Vangölü Enerji VEYAS ve Kapeks Kimya
+            KPEKS işlemdeki halka arzlar arasında yer alıyor.
           </p>
 
           <div className="mt-5 rounded-2xl border border-blue-200 bg-blue-50 p-4 md:p-5">
             <h2 className="text-base font-bold text-blue-950 md:text-lg">
-              Bu haftanın kısa özeti
+              Takvimin kısa özeti
             </h2>
             <p className="mt-2 text-sm leading-7 text-blue-950/80 md:text-base">
-              CITAS 18 Ağustos Salı günü işlem görmeye başladı. TKNKA ve VEYAS
-              20 Ağustos Perşembe, KPEKS ise 21 Ağustos Cuma günü ilk kez işlem
-              görecek. Aktif bir talep toplama veya dağıtım sonucu bekleme
-              süreci bulunmuyor.
+              BKRGY için talep toplama 24-25-26 Ağustos tarihlerinde, İNTET
+              için 26-27 Ağustos tarihlerinde yapılacak. CITAS, TKNKA, VEYAS
+              ve KPEKS işlemde; aktif dağıtım sonucu bekleyen halka arz
+              bulunmuyor.
             </p>
             <Link
-              href="/haber/tknka-veyas-kpeks-isleme-baslama-tarihleri-agustos-2026"
+              href="/halka-arz/onayli-izahnameler"
               prefetch={false}
               className="mt-3 inline-flex text-sm font-bold text-blue-800 underline decoration-blue-300 underline-offset-4 hover:decoration-blue-700"
             >
-              TKNKA, VEYAS ve KPEKS işlem tarihi haberini oku →
+              Onaylı izahname sayfalarını incele →
             </Link>
             <nav
               aria-label="Halka arz takvimi bölüm bağlantıları"
@@ -371,7 +385,7 @@ export default function HalkaArzTakvimPage() {
               deger: String(dagitimSonucuBeklenenler.length),
             },
             {
-              etiket: "İşlem Tarihi",
+              etiket: "İşlemde",
               deger: String(islemeBaslayacaklar.length),
             },
             { etiket: "Aktif Hisse", deger: String(aktifHisseSayisi) },
@@ -548,7 +562,7 @@ export default function HalkaArzTakvimPage() {
         >
           <div className="border-b border-slate-200 bg-cyan-50 px-5 py-4">
             <h2 className="text-lg font-bold text-cyan-900 md:text-xl">
-              İşlem Tarihi Açıklanan Halka Arzlar
+              İşlemde Olan Halka Arzlar
             </h2>
           </div>
 
@@ -594,7 +608,7 @@ export default function HalkaArzTakvimPage() {
                     </td>
                     <td
                       className={`px-4 py-3 font-semibold ${
-                        item.durum === "İşleme başladı"
+                        item.durum === "İşlemde"
                           ? "text-emerald-700"
                           : "text-cyan-800"
                       }`}
@@ -752,7 +766,7 @@ export default function HalkaArzTakvimPage() {
                 Aktif Takvimdeki SPK Onaylı İzahnameler
               </h2>
               <p className="mt-1 text-sm leading-6 text-blue-900/80">
-                Bu bölüm işlem tarihi açıklanan veya dağıtım sonucu beklenen
+                Bu bölüm talep toplama takvimine alınan veya işlemde olan
                 halka arzların onaylı izahname sayfalarını gösterir.
               </p>
             </div>
