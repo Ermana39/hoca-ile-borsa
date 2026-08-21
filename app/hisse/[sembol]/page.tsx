@@ -174,9 +174,48 @@ function sektorEtiketi(hisse: Hisse): string {
   return hisse.kurumsalBilgiler?.faaliyetAlani || "Borsa İstanbul şirketi";
 }
 
+function seoSektorEtiketi(hisse: Hisse): string {
+  const sektor = hisse.kurumsalBilgiler?.sektorler?.[0];
+  if (doluMetin(sektor)) {
+    return `${sektor.toLocaleLowerCase("tr-TR")} sektöründe`;
+  }
+
+  return "Borsa İstanbul şirketi olarak";
+}
+
 function pazarEtiketi(hisse: Hisse): string {
   const pazarlar = hisse.kurumsalBilgiler?.islemGorduguPazar ?? [];
   return pazarlar[0] || "Borsa İstanbul";
+}
+
+function katilimDurumuMetni(hisse: Hisse): string {
+  return hisse.borsaBilgileri.katilimEndeksiUygun
+    ? "Katılım Endeksi'ne uygun"
+    : "Katılım Endeksi'ne uygun değil";
+}
+
+function hisseProfilKisaOzeti(hisse: Hisse): string {
+  const profilParagrafi =
+    hisse.hakkinda.find(ozgunProfilParagrafi) ||
+    hisse.hakkinda.find(doluMetin);
+
+  if (profilParagrafi) return profilParagrafi;
+
+  return `${hisse.sirketAdi}, ${hisse.borsaBilgileri.bistKodu} koduyla Borsa İstanbul'da işlem gören bir şirkettir.`;
+}
+
+function hisseKunyeKisaOzeti(hisse: Hisse): string {
+  const ortakAdi = enBuyukOrtakAdi(hisse);
+  const ortaklikCumlesi =
+    ortakAdi !== "Açıklanan ortaklık yapısı"
+      ? ` Açıklanan ortaklık yapısında öne çıkan ortak ${ortakAdi}.`
+      : "";
+
+  return `KAP sektör sınıflaması: ${sektorEtiketi(hisse)}. ${pazarEtiketi(
+    hisse
+  )} kapsamında işlem görür. ${hisse.kod} ${katilimDurumuMetni(
+    hisse
+  )}. ${ortaklikCumlesi}`.replace(/\s+/g, " ").trim();
 }
 
 function oneCikanEndeksler(hisse: Hisse): string[] {
@@ -422,8 +461,10 @@ export async function generateMetadata({
     kod: hisse.kod,
     sirketAdi: hisse.sirketAdi,
     katilimEndeksiUygun: hisse.borsaBilgileri.katilimEndeksiUygun,
+    sektor: seoSektorEtiketi(hisse),
     temelOranlar,
     temettuVarMi,
+    kapKaydiVarMi: getKapBySembol(hisse.kod).length > 0,
   });
 
   const canonicalCode =
@@ -710,8 +751,10 @@ export default async function HisseKunyePage({
     kod: hisse.kod,
     sirketAdi: hisse.sirketAdi,
     katilimEndeksiUygun: borsaBilgileri.katilimEndeksiUygun,
+    sektor: seoSektorEtiketi(hisse),
     temelOranlar,
     temettuVarMi,
+    kapKaydiVarMi: kapKayitlari.length > 0,
   });
 
   const istiraklerdeSermayeVar = (istirakler ?? []).some((i) => i.sermaye);
@@ -719,6 +762,8 @@ export default async function HisseKunyePage({
     (i) => i.faaliyetKonusu || i.iliski
   );
   const profilParagraflari = hisse.hakkinda.filter(ozgunProfilParagrafi);
+  const sirketProfilOzeti = hisseProfilKisaOzeti(hisse);
+  const hisseKunyeOzeti = hisseKunyeKisaOzeti(hisse);
   const isModeli =
     doluMetin(ozgunAnaliz?.isModeli) &&
     !profilParagraflari.some(
@@ -743,6 +788,8 @@ export default async function HisseKunyePage({
   const seoSorular = benzersizSorular(veriSeoSorular)
     .filter((item) => !sayfadaYanitiBulunanSoru(item))
     .slice(0, 4);
+  const sirketProfilBolumuVar =
+    profilParagraflari.length > 0 || Boolean(isModeli || sektorelKonum);
 
   const hizliBakisKartlari = [
     {
@@ -902,6 +949,16 @@ export default async function HisseKunyePage({
               </div>
             </div>
 
+            <section className="mt-6 rounded-xl border border-blue-100 bg-blue-50 p-4">
+              <h2 className="text-base font-bold tracking-tight text-blue-950">
+                {hisse.kod} Şirket Özeti
+              </h2>
+              <div className="mt-3 space-y-3 text-sm leading-7 text-blue-950 md:text-base md:leading-8">
+                <p>{sirketProfilOzeti}</p>
+                <p>{hisseKunyeOzeti}</p>
+              </div>
+            </section>
+
             <nav
               className="mt-6 rounded-xl border border-slate-200 bg-slate-50 p-4"
               aria-label={`${hisse.kod} künye bölümleri`}
@@ -910,6 +967,14 @@ export default async function HisseKunyePage({
                 Künye bölümleri
               </div>
               <div className="mt-3 flex flex-wrap gap-2">
+                {sirketProfilBolumuVar && (
+                  <a
+                    href="#sirket-profili"
+                    className="rounded-full bg-white px-3 py-1.5 text-sm font-semibold text-blue-700 ring-1 ring-inset ring-blue-200 transition hover:bg-blue-50"
+                  >
+                    Ne iş yapar?
+                  </a>
+                )}
                 {temelOranlar && (
                   <a
                     href="#temel-oranlar"
@@ -938,6 +1003,14 @@ export default async function HisseKunyePage({
                     className="rounded-full bg-white px-3 py-1.5 text-sm font-semibold text-blue-700 ring-1 ring-inset ring-blue-200 transition hover:bg-blue-50"
                   >
                     Ortaklık yapısı
+                  </a>
+                )}
+                {kapKayitlari.length > 0 && (
+                  <a
+                    href="#haberler-kap"
+                    className="rounded-full bg-white px-3 py-1.5 text-sm font-semibold text-blue-700 ring-1 ring-inset ring-blue-200 transition hover:bg-blue-50"
+                  >
+                    Haberler ve KAP
                   </a>
                 )}
               </div>
@@ -1002,9 +1075,11 @@ export default async function HisseKunyePage({
               </div>
             </section>
 
-            {(profilParagraflari.length > 0 || isModeli || sektorelKonum) && (
-              <section className="mt-8">
-                <SectionBaslik>Şirket Profili ve İş Modeli</SectionBaslik>
+            {sirketProfilBolumuVar && (
+              <section id="sirket-profili" className="mt-8 scroll-mt-24">
+                <SectionBaslik>
+                  {hisse.kod} Ne İş Yapar? Şirket Profili ve İş Modeli
+                </SectionBaslik>
                 <div className="space-y-5 text-base leading-8 text-slate-700">
                   {profilParagraflari.map((paragraf, i) => (
                     <p key={`${hisse.kod}-profil-${i}`}>{paragraf}</p>
@@ -1155,8 +1230,10 @@ export default async function HisseKunyePage({
             )}
 
             {kurumsalBilgiVar && (
-                <section className="mt-8">
-                  <SectionBaslik>Kurumsal Bilgiler</SectionBaslik>
+                <section id="kurumsal-bilgiler" className="mt-8 scroll-mt-24">
+                  <SectionBaslik>
+                    {hisse.kod} Kurumsal Bilgiler ve Sektör
+                  </SectionBaslik>
                   <dl className="grid grid-cols-1 gap-3 sm:grid-cols-2">
                     {kurumsalBilgiler?.merkez && (
                       <div className="rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 sm:col-span-2">
@@ -1725,8 +1802,10 @@ export default async function HisseKunyePage({
             )}
 
             {kapKayitlari.length > 0 && (
-            <section className="mt-8">
-              <SectionBaslik>Şirket Haberleri ve KAP Gelişmeleri</SectionBaslik>
+            <section id="haberler-kap" className="mt-8 scroll-mt-24">
+              <SectionBaslik>
+                {hisse.kod} Şirket Haberleri ve KAP Gelişmeleri
+              </SectionBaslik>
               <p className="mb-4 text-sm leading-6 text-slate-600">
                 {hisse.kod} ile ilişkilendirilen şirket haberleri ve seçili KAP
                 gelişmeleri en yeniden eskiye sıralanır.

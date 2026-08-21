@@ -40,6 +40,79 @@ export type RehberMakaleData = {
 
 const siteUrl = "https://www.hocaileborsa.com";
 
+type RehberIlgiliBaglanti = {
+  href: string;
+  label: string;
+  text: string;
+};
+
+const rehberIlgiliBaglantilari: Record<string, RehberIlgiliBaglanti[]> = {
+  "/rehberler/halka-arz-kac-lot-verir": [
+    {
+      href: "/halka-arz/talep-hesapla",
+      label: "Lot tahmini yap",
+      text: "Halka arz talep ve kişi başı lot senaryosu hesaplama aracı.",
+    },
+    {
+      href: "/halka-arz/takvim",
+      label: "Güncel takvimi aç",
+      text: "Talep, dağıtım ve işlem başlangıcı açıklanan halka arzlar.",
+    },
+  ],
+  "/rehberler/esit-dagitim-nedir": [
+    {
+      href: "/rehberler/halka-arz-kac-lot-verir",
+      label: "Lot hesabını oku",
+      text: "Eşit dağıtımda kişi başı lot tahmini nasıl yapılır?",
+    },
+    {
+      href: "/halka-arz/talep-hesapla",
+      label: "Talep hesapla",
+      text: "Katılımcı sayısına göre örnek dağıtım senaryosu oluştur.",
+    },
+  ],
+  "/rehberler/t1-t2-bakiye-nedir": [
+    {
+      href: "/haber/5-halka-arz-talep-bilgileri-t1-t2-saat-araci-kurum",
+      label: "Talep bilgilerini oku",
+      text: "Halka arzlarda T1-T2, saat ve aracı kurum kontrol başlıkları.",
+    },
+  ],
+  "/rehberler/halka-arz-tavan-bozarsa-ne-olur": [
+    {
+      href: "/halka-arz/tavan-serisi",
+      label: "Tavan serilerini incele",
+      text: "Son halka arzlarda tavan serisi ve işlem sonrası performans.",
+    },
+  ],
+  "/rehberler/halka-arzdan-sonra-hisse-ne-zaman-satilir": [
+    {
+      href: "/halka-arz/tavan-serisi",
+      label: "Tavan performansına bak",
+      text: "Halka arz sonrası tavan serisi ve kapanış verileri.",
+    },
+  ],
+  "/rehberler/bist-islem-kodu-nedir": [
+    {
+      href: "/halka-arz/takvim",
+      label: "İşlem kodlarını gör",
+      text: "Güncel halka arzların BIST kodu ve işlem başlangıç bilgileri.",
+    },
+  ],
+  "/rehberler/izahname-nedir": [
+    {
+      href: "/halka-arz/onayli-izahnameler",
+      label: "Onaylı izahnameler",
+      text: "SPK onayı sonrası yayımlanan halka arz izahname özetleri.",
+    },
+    {
+      href: "/halka-arz/taslak-izahnameler",
+      label: "Taslak izahnameler",
+      text: "Başvuru aşamasındaki şirketlerin taslak izahname sayfaları.",
+    },
+  ],
+};
+
 function Section({ section }: { section: RehberBolum }) {
   return (
     <section
@@ -96,6 +169,7 @@ export default function RehberMakale({
 }: {
   guide: RehberMakaleData;
 }) {
+  const ilgiliBaglantilar = rehberIlgiliBaglantilari[guide.href] ?? [];
   const tableOfContents = [
     ...guide.sections.map((section) => ({
       href: `#${section.id}`,
@@ -200,6 +274,28 @@ export default function RehberMakale({
               <p className="mt-5 max-w-4xl text-base leading-8 text-slate-600 md:text-lg">
                 {guide.intro}
               </p>
+              {ilgiliBaglantilar.length > 0 ? (
+                <nav
+                  aria-label="İlgili rehber ve araç bağlantıları"
+                  className="mt-5 grid gap-3 sm:grid-cols-2"
+                >
+                  {ilgiliBaglantilar.map((item) => (
+                    <Link
+                      key={item.href}
+                      href={item.href}
+                      prefetch={false}
+                      className="rounded-xl border border-blue-100 bg-blue-50 p-4 transition hover:border-blue-200 hover:bg-blue-100"
+                    >
+                      <span className="text-sm font-bold text-blue-800">
+                        {item.label}
+                      </span>
+                      <span className="mt-1 block text-sm leading-6 text-blue-950">
+                        {item.text}
+                      </span>
+                    </Link>
+                  ))}
+                </nav>
+              ) : null}
             </header>
 
             <div className="mt-8 space-y-10">

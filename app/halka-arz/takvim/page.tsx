@@ -6,9 +6,9 @@ import { bekleyenDeger, halkaArzGetir } from "@/lib/halka-arz";
 import { seoAciklamasi } from "@/lib/seo-metadata";
 
 const canonical = "https://www.hocaileborsa.com/halka-arz/takvim";
-const title = "Halka Arz Takvimi 2026: Bu Haftaki Tarihler ve Sonuçlar";
+const title = "Halka Arz Takvimi 2026: Yeni Arzlar ve İşlem Tarihleri";
 const description =
-  "18 Ağustos 2026 halka arz takvimi: TKNKA ve VEYAS 20 Ağustos, KPEKS 21 Ağustos'ta işlem görecek. CITAS ve sonuçlanan halka arzları inceleyin.";
+  "2026 halka arz takviminde talep toplama, dağıtım sonucu, BIST işlem tarihi, fiyat, lot ve onaylı izahname bağlantılarını birlikte takip edin.";
 const sonGuncellemeIso = "2026-08-18";
 const sonGuncellemeMetni = "18 Ağustos 2026";
 
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
     "dağıtım sonucu beklenen halka arzlar",
   ],
   openGraph: {
-    title: "Bu Haftaki Halka Arzlar: 20-21 Ağustos 2026",
+    title,
     description,
     url: canonical,
     type: "website",
@@ -44,7 +44,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Bu Haftaki Halka Arzlar: 20-21 Ağustos 2026",
+    title,
     description,
   },
 };

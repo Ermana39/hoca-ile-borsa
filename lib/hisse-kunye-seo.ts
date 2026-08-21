@@ -5,8 +5,10 @@ type HisseKunyeSeoGirdisi = {
   kod: string;
   sirketAdi: string;
   katilimEndeksiUygun: boolean;
+  sektor?: string;
   temelOranlar?: TemelOranlar;
   temettuVarMi: boolean;
+  kapKaydiVarMi?: boolean;
 };
 
 const oranFormatlayici = new Intl.NumberFormat("tr-TR", {
@@ -43,28 +45,31 @@ export function hisseKunyeSeoMetinleri({
   kod,
   sirketAdi,
   katilimEndeksiUygun,
+  sektor,
   temelOranlar,
   temettuVarMi,
+  kapKaydiVarMi = false,
 }: HisseKunyeSeoGirdisi) {
-  const konular = [
-    ...(temelOranlar ? ["Temel Oranlar"] : []),
-    "Katılım",
-    ...(temettuVarMi ? ["Temettü"] : []),
-    "Ortaklık",
-  ];
-  const baslik = `${kod} Hisse: ${konulariBirlestir(konular)}`;
+  const temelVeriBasligi = temelOranlar ? "Temel Veriler" : "Şirket Profili";
+  const baslik = `${kod} Hisse: Ne İş Yapar, Katılım Endeksi ve ${temelVeriBasligi}`;
   const katilimMetni = katilimEndeksiUygun
-    ? "Katılım Endeksi'ne uygundur"
-    : "Katılım Endeksi'ne uygun değildir";
-  const sonCumle = temettuVarMi
-    ? `${sirketAdi} ortaklık yapısı ve temettü geçmişi.`
-    : `${sirketAdi} ortaklık yapısı ve şirket bilgileri.`;
+    ? "Katılım Endeksi durumu: uygun"
+    : "Katılım Endeksi durumu: uygun değil";
+  const sektorMetni = sektor?.trim()
+    ? `${sirketAdi}, ${sektor.trim()} izlenir.`
+    : `${sirketAdi} şirket profili ve faaliyet bilgileri.`;
+  const ekBasliklar = [
+    oranOzeti(temelOranlar),
+    "ortaklık yapısı",
+    ...(temettuVarMi ? ["temettü geçmişi"] : []),
+    ...(kapKaydiVarMi ? ["son haber ve KAP gelişmeleri"] : []),
+  ];
 
   return {
     baslik,
     aciklama: seoAciklamasi(
-      `${kod} ${oranOzeti(temelOranlar)}; ${katilimMetni}. ${sonCumle}`,
-      "Faaliyet alanı, güncel künye bilgileri ve yatırımcıların takip edebileceği temel başlıklar birlikte sunulur."
+      `${kod} ne iş yapar? ${sektorMetni} ${katilimMetni}.`,
+      `${konulariBirlestir(ekBasliklar)} birlikte sunulur.`
     ),
   };
 }

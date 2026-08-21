@@ -9,7 +9,7 @@ import {
 const siteUrl = "https://www.hocaileborsa.com";
 const canonical = `${siteUrl}/fonlar/etki-analizi`;
 const title =
-  "Fonların Günlük Portföy Etkisi: TLY, PHE, DFI, KHA ve THF";
+  "Fon Etki Analizi: TLY, PHE, DFI, KHA ve THF Portföy Etkisi";
 const description =
   "TLY, PHE, DFI, KHA ve THF fonlarının güncel portföy etkisini karşılaştırın. Tahmini fiyat değişimini, yatırımcı hareketini, para akışını ve veri kapsamını inceleyin.";
 const seoDescription =
