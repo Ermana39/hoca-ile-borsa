@@ -85,6 +85,17 @@ function round(value, digits = 2) {
   return Math.round((value + Number.EPSILON) * factor) / factor;
 }
 
+function fundValueMatchesRoundedProduct(fund) {
+  const roundedProduct = round(fund.fiyat * fund.tedavuldekiPaySayisi, 2);
+  if (!Number.isFinite(roundedProduct) || !Number.isFinite(fund.fonToplamDeger)) {
+    return false;
+  }
+
+  const relativeDifference =
+    Math.abs(roundedProduct - fund.fonToplamDeger) / fund.fonToplamDeger;
+  return relativeDifference <= maxFundValueRelativeDifference;
+}
+
 function normalize(value) {
   return String(value ?? "")
     .replace(/\s+/g, " ")
@@ -376,9 +387,10 @@ assert(activeFunds.length === expectedActiveCodes.size, "Aktif fon sayısı geç
 for (const fund of activeFunds) {
   assert(expectedActiveCodes.has(fund.kod), `${fund.kod} geçerli güncel kaynak kaydı olmadan aktif.`);
   assert(fund.tarih === current.sonIslemTarihi, `${fund.kod} aktif ama son işlem tarihinde değil.`);
-  const product = fund.fiyat * fund.tedavuldekiPaySayisi;
-  const relativeDifference = Math.abs(product - fund.fonToplamDeger) / fund.fonToplamDeger;
-  assert(relativeDifference <= 0.005, `${fund.kod} fiyat × pay ile fon toplam değeri uyuşmuyor.`);
+  assert(
+    fundValueMatchesRoundedProduct(fund),
+    `${fund.kod} fiyat × pay ile fon toplam değeri uyuşmuyor.`
+  );
   assert(
     fund.gunlukGetiri === null || Math.abs(fund.gunlukGetiri) <= maxAbsoluteDailyReturn,
     `${fund.kod} güvenilir sınırı aşan günlük getiri yayımlıyor.`
