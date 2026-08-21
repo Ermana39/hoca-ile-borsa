@@ -22,11 +22,52 @@ import {
 import {
   getAllFundSlugs,
   getFundDetail,
+  type Fund,
 } from "@/lib/fon-platform";
 import { seoAciklamasi } from "@/lib/seo-metadata";
 
 export function generateStaticParams() {
   return getAllFundSlugs().map((kod) => ({ kod }));
+}
+
+function gecerliMetrik(value: string) {
+  return value !== "-";
+}
+
+function metrikleriBagla(items: string[]) {
+  if (items.length <= 1) return items.join("");
+  if (items.length === 2) return items.join(" ve ");
+
+  return `${items.slice(0, -1).join(", ")} ve ${items[items.length - 1]}`;
+}
+
+function fonSeoAciklamasi(fund: Fund) {
+  const kisaMetrikler = [
+    gecerliMetrik(formatDecimal(fund.fiyat, 6))
+      ? `güncel fiyat ${formatDecimal(fund.fiyat, 6)} TL`
+      : "",
+    gecerliMetrik(formatSignedPercent(fund.gunlukGetiri))
+      ? `günlük getiri ${formatSignedPercent(fund.gunlukGetiri)}`
+      : "",
+    gecerliMetrik(formatCompactTL(fund.fonToplamDeger))
+      ? `fon büyüklüğü ${formatCompactTL(fund.fonToplamDeger)}`
+      : "",
+    gecerliMetrik(formatNumber(fund.kisiSayisi))
+      ? `${formatNumber(fund.kisiSayisi)} yatırımcı`
+      : "",
+  ]
+    .filter(Boolean)
+    .slice(0, 3);
+
+  const anaMetin =
+    kisaMetrikler.length > 0
+      ? `${fund.kod} fonunda ${metrikleriBagla(kisaMetrikler)}.`
+      : `${fund.kod} fonunun güncel fiyat, getiri ve para akışı verileri.`;
+
+  return seoAciklamasi(
+    anaMetin,
+    "Para akışı ve 30 günlük tabloyu inceleyin."
+  );
 }
 
 export async function generateMetadata({
@@ -46,11 +87,8 @@ export async function generateMetadata({
 
   const fund = detail.fund;
   const canonical = `https://www.hocaileborsa.com/fonlar/${fund.slug}`;
-  const seoTitle = `${fund.kod} Fonu: Getiri, Fiyat ve Güncel TEFAS Bilgileri`;
-  const seoDescription = seoAciklamasi(
-    `${fund.kod} fonunun güncel fiyatı, dönemsel getirileri, fon büyüklüğü, yatırımcı sayısı ve para akışı verileri.`,
-    `${fund.ad}, ${fund.kategori} kategorisinde ${fund.yonetici} tarafından yönetilir.`
-  );
+  const seoTitle = `${fund.kod} Fonu: Getiri, Para Akışı ve Güncel Analiz`;
+  const seoDescription = fonSeoAciklamasi(fund);
 
   return {
     title: { absolute: seoTitle },
@@ -62,7 +100,7 @@ export async function generateMetadata({
       type: "website",
       url: canonical,
       title: `${fund.kod} Fonu | ${fund.ad}`,
-      description: `${fund.ad} güncel fiyat, getiri, yatırımcı ve para akışı verileri.`,
+      description: seoDescription,
     },
   };
 }
@@ -79,11 +117,8 @@ export default async function FonDetayPage({
 
   const fund = detail.fund;
   const canonical = `https://www.hocaileborsa.com/fonlar/${fund.slug}`;
-  const seoTitle = `${fund.kod} Fonu: Getiri, Fiyat ve Güncel TEFAS Bilgileri`;
-  const seoDescription = seoAciklamasi(
-    `${fund.kod} fonunun güncel fiyatı, dönemsel getirileri, fon büyüklüğü, yatırımcı sayısı ve para akışı verileri.`,
-    `${fund.ad}, ${fund.kategori} kategorisinde ${fund.yonetici} tarafından yönetilir.`
-  );
+  const seoTitle = `${fund.kod} Fonu: Getiri, Para Akışı ve Güncel Analiz`;
+  const seoDescription = fonSeoAciklamasi(fund);
   const riskText =
     typeof fund.riskDegeri === "number"
       ? formatNumber(fund.riskDegeri)
@@ -125,7 +160,7 @@ export default async function FonDetayPage({
     },
     {
       question: `${fund.kod} fonunu kim yönetiyor?`,
-      answer: `${fund.kod} fonu ${fund.yonetici} tarafından yönetilmektedir.`,
+      answer: `${fund.kod} fonu ${fund.yonetici} tarafından yönetilmektedir; bu sayfada güncel fiyat, dönemsel getiri, para akışı ve yatırımcı değişimi birlikte izlenebilir.`,
     },
   ];
   const structuredData = [
@@ -295,8 +330,9 @@ export default async function FonDetayPage({
           </div>
 
           <p className="mt-8 border-t border-slate-200 pt-6 text-sm leading-7 text-slate-500">
-            Geçmiş getiri gelecekteki performansı garanti etmez. Fonun yatırım stratejisi,
-            risk seviyesi ve yatırım süresi kişisel hedeflerle birlikte değerlendirilmelidir.
+            Not: Fon verilerini karar sürecinde getiri, risk seviyesi, vade ve portföy
+            tercihiyle birlikte okuyun; geçmiş performans tek başına gelecek dönem için
+            kesin gösterge değildir.
           </p>
         </section>
       </div>
