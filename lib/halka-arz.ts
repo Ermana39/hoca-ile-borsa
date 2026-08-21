@@ -189,6 +189,10 @@ export type HalkaArzVeri = {
   tahsisat: TahsisatGirdi[];
   // Tahsisat altında gösterilen sabit notlar (örn. "Bireysele Eşit Dağıtım.").
   tahsisatNotlari?: string[];
+  katilimKurumlari?: string[];
+  katilimNotu?: string;
+  katilimKaynakHref?: string;
+  bireyselTahsisatLotu?: number;
   dagitimSonuclari?: HalkaArzDagitimSonuclari;
   muhtemelTavanSerisi?: HalkaArzTavanSenaryosu;
   videolar?: HalkaArzVideo[];

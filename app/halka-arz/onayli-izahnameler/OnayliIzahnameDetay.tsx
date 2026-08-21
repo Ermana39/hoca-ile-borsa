@@ -818,6 +818,10 @@ export default async function OnayliIzahnameDetayPage({
           toplamPay={veri.ozet.pay || veri.toplamPay}
           araciKurum={veri.ozet.araciKurum}
           tahsisat={veri.tahsisat}
+          katilimKurumlari={veri.katilimKurumlari}
+          katilimNotu={veri.katilimNotu}
+          katilimKaynakHref={veri.katilimKaynakHref}
+          bireyselTahsisatLotu={veri.bireyselTahsisatLotu}
         />
 
         <section className="grid gap-8 xl:grid-cols-3">
