@@ -1,21 +1,25 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-20T09:25:55.113Z",
+  "generatedAt": "2026-08-22T14:42:02.072Z",
   "duplicateKontrolu": {
-    "added": 0,
+    "added": 2030,
     "updated": 0,
-    "skipped": 4056
+    "skipped": 4060
   },
   "islenenFonSayisi": 1058,
-  "islenenSnapshotSayisi": 2035,
-  "kaliciSnapshotSayisi": 1665371,
+  "islenenSnapshotSayisi": 2037,
+  "kaliciSnapshotSayisi": 1667401,
   "temizlenenGecersizSnapshotSayisi": 7,
-  "yoneticiyleEslesenFonSayisi": 2022,
-  "bilinmeyenYoneticiSayisi": 6,
+  "yoneticiyleEslesenFonSayisi": 2021,
+  "bilinmeyenYoneticiSayisi": 9,
   "bilinmeyenYoneticiFonlari": [
     {
       "fonKodu": "DK8",
       "fonAdi": "DENİZ PORTFÖY KAR PAYI ÖDEYEN SEKİZİNCİ SERBEST (DÖVİZ) FON"
+    },
+    {
+      "fonKodu": "FDY",
+      "fonAdi": "QNB PORTFÖY KAR PAYI ÖDEYEN DÖRDÜNCÜ SERBEST (DÖVİZ) FON"
     },
     {
       "fonKodu": "KPS",
@@ -36,77 +40,85 @@
     {
       "fonKodu": "GLL",
       "fonAdi": "GOLDEN GLOBAL PORTFÖY ALTIN KATILIM FONU"
+    },
+    {
+      "fonKodu": "ETN",
+      "fonAdi": "EMAA BLUE PORTFÖY TEMKİNLİ DEĞİŞKEN FON"
+    },
+    {
+      "fonKodu": "ZTV",
+      "fonAdi": "ZİRAAT PORTFÖY TÜRKİYE VARLIK FONU İŞTİRAKLERİ HİSSE SENEDİ FONU (HİSSE SENEDİ YOĞUN FON)"
     }
   ],
   "kaynakDogrulama": {
-    "sonKaynakTarihi": "2026-08-20",
-    "sonKaynakKayitSayisi": 2035,
-    "sonKaynakGecerliKayitSayisi": 2028,
-    "gitGecmisindeIncelenenSurumSayisi": 86,
-    "gitGecmisindenKurtarilanTarihler": [],
-    "gitGecmisindenKurtarilanKayitSayisi": 0,
+    "sonKaynakTarihi": "2026-08-21",
+    "sonKaynakKayitSayisi": 2037,
+    "sonKaynakGecerliKayitSayisi": 2030,
+    "gitGecmisindeIncelenenSurumSayisi": 89,
+    "gitGecmisindenKurtarilanTarihler": [
+      "2026-08-21"
+    ],
+    "gitGecmisindenKurtarilanKayitSayisi": 2030,
     "manuelGecmisIceAktarimlari": [],
     "resmiKaynakAktarimlari": [],
     "temizlenenGecersizSnapshotlar": {
       "sayi": 7,
       "ornekler": [
-        "FNN:2026-08-20",
-        "GKE:2026-08-20",
-        "GKO:2026-08-20",
-        "GMV:2026-08-20",
-        "GSU:2026-08-20",
-        "RPE:2026-08-20",
-        "TMH:2026-08-20"
+        "FNN:2026-08-21",
+        "GKE:2026-08-21",
+        "GKO:2026-08-21",
+        "GMV:2026-08-21",
+        "GSU:2026-08-21",
+        "RPE:2026-08-21",
+        "TMH:2026-08-21"
       ]
     }
   },
   "etkiAnaliziTarihselSenkronu": {
     "senkronizeEdildi": true,
     "fonSayisi": 5,
-    "sonTarih": "2026-08-20",
+    "sonTarih": "2026-08-21",
     "fonlar": [
       {
         "fonKodu": "TLY",
-        "tarihSayisi": 1256,
+        "tarihSayisi": 1257,
         "ilkTarih": "2021-08-23",
-        "sonTarih": "2026-08-20"
+        "sonTarih": "2026-08-21"
       },
       {
         "fonKodu": "PHE",
-        "tarihSayisi": 594,
+        "tarihSayisi": 595,
         "ilkTarih": "2024-04-01",
-        "sonTarih": "2026-08-20"
+        "sonTarih": "2026-08-21"
       },
       {
         "fonKodu": "DFI",
-        "tarihSayisi": 1021,
+        "tarihSayisi": 1022,
         "ilkTarih": "2022-07-29",
-        "sonTarih": "2026-08-20"
+        "sonTarih": "2026-08-21"
       },
       {
         "fonKodu": "KHA",
-        "tarihSayisi": 630,
+        "tarihSayisi": 631,
         "ilkTarih": "2024-02-09",
-        "sonTarih": "2026-08-20"
+        "sonTarih": "2026-08-21"
       },
       {
         "fonKodu": "THF",
-        "tarihSayisi": 362,
+        "tarihSayisi": 363,
         "ilkTarih": "2025-03-07",
-        "sonTarih": "2026-08-20"
+        "sonTarih": "2026-08-21"
       }
     ]
   },
-  "veriUyarisiSayisi": 64,
+  "veriUyarisiSayisi": 65,
   "veriUyarilari": [
     {
       "tur": "getiri-kaynaginda-guncel-listede-yok",
-      "tarih": "2026-08-20",
-      "kodSayisi": 3,
+      "tarih": "2026-08-21",
+      "kodSayisi": 1,
       "ornekFonKodlari": [
-        "DEH",
-        "ETN",
-        "ZTV"
+        "DEH"
       ]
     },
     {
@@ -384,6 +396,14 @@
       "tarih": "2025-12-08",
       "tur": "gunluk-getiri-fiyat-kopmasi",
       "hamGetiri": 7.99090909
+    },
+    {
+      "fonKodu": "RBP",
+      "tarih": "2026-08-21",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 2499342883.57,
+      "hesaplananFonToplamDeger": 2420323199.56,
+      "farkOrani": 0.03161618
     },
     {
       "fonKodu": "DLZ",

@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-20",
+  "generatedAt": "2026-08-22",
   "source": {
     "name": "Yahoo Finance Chart API",
     "url": "https://finance.yahoo.com/",
     "note": "Temettu ve guncel bolunme olaylari piyasa veri saglayicisindan alinir; eski kunye bolunme arsivi korunur. Kesin hak kullanimi bilgisi KAP bildirimleriyle kontrol edilmelidir."
   },
   "summary": {
-    "shareCodes": 625,
-    "available": 625,
+    "shareCodes": 627,
+    "available": 627,
     "unavailable": 0,
     "errors": 0,
     "dividendRecords": 3225,
@@ -28881,6 +28881,13 @@
         }
       ]
     },
+    "TKNKA": {
+      "durum": "ok",
+      "kaynakSembol": "TKNKA.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/TKNKA.IS/history/",
+      "temettuler": [],
+      "bolunmeler": []
+    },
     "TKNSA": {
       "durum": "ok",
       "kaynakSembol": "TKNSA.IS",
@@ -31510,6 +31517,13 @@
           "kaynak": "kunye-arsivi"
         }
       ]
+    },
+    "VEYAS": {
+      "durum": "ok",
+      "kaynakSembol": "VEYAS.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/VEYAS.IS/history/",
+      "temettuler": [],
+      "bolunmeler": []
     },
     "VKFYO": {
       "durum": "ok",

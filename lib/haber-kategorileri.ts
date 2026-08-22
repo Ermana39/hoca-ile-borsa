@@ -101,12 +101,220 @@ export const KATEGORI_HARITASI: Record<HaberKategori, KategoriBilgi> =
     {} as Record<HaberKategori, KategoriBilgi>
   );
 
+const KATEGORI_ALIAS_KAYNAKLARI = {
+  "halka-arz": [
+    "halka arz",
+    "halka arz haberleri",
+    "halka-arz-haberleri",
+    "ipo",
+    "spk halka arz",
+    "spk onayi",
+    "onayli izahname",
+    "izahname",
+    "talep toplama",
+  ],
+  temettu: [
+    "temettu",
+    "temettü",
+    "temettu haberleri",
+    "temettü haberleri",
+    "kar payi",
+    "kar payı",
+    "kar dagitimi",
+    "kar dağıtımı",
+    "temettu odemesi",
+    "temettü ödemesi",
+  ],
+  "kap-bildirimleri": [
+    "kap",
+    "kap bildirimi",
+    "kap bildirimleri",
+    "kap haberleri",
+    "kap ozeti",
+    "kap özeti",
+    "kap ozetleri",
+    "kap özetleri",
+    "kap-bildirimi",
+  ],
+  "sermaye-artirimi": [
+    "sermaye artırımı",
+    "sermaye artirimi",
+    "sermaye artirimi haberleri",
+    "sermaye artırımı haberleri",
+    "bedelli",
+    "bedelli sermaye artırımı",
+    "bedelli sermaye artirimi",
+    "bedelsiz",
+    "bedelsiz sermaye artırımı",
+    "bedelsiz sermaye artirimi",
+    "ruchan",
+    "rüçhan",
+  ],
+  "piyasa-gundemi": [
+    "piyasa gündemi",
+    "piyasa gundemi",
+    "piyasa haberleri",
+    "piyasa-haberleri",
+    "borsa gündemi",
+    "borsa gundemi",
+    "borsa haberleri",
+    "ekonomi",
+    "ekonomi haberleri",
+    "gundem",
+    "gündem",
+    "piyasa",
+    "para akisi",
+    "para akışı",
+    "para girisi",
+    "para girişi",
+    "para cikisi",
+    "para çıkışı",
+    "para girisi cikisi",
+    "para girişi çıkışı",
+  ],
+  "fon-haberleri": [
+    "fon",
+    "fonlar",
+    "fon haberleri",
+    "fon haberi",
+    "yatirim fonlari",
+    "yatırım fonları",
+    "yatirim fonu",
+    "yatırım fonu",
+    "fon analizi",
+    "fon analizleri",
+    "fon piyasasi",
+    "fon piyasası",
+    "tefas",
+    "tefas haberleri",
+    "portfoy",
+    "portföy",
+  ],
+  "sirket-haberleri": [
+    "sirket",
+    "şirket",
+    "sirket haberleri",
+    "şirket haberleri",
+    "sirket haberi",
+    "şirket haberi",
+    "hisse haberleri",
+    "hisse haberi",
+    "hisse",
+    "bist sirketleri",
+    "bist şirketleri",
+    "firma haberleri",
+    "sirket gelismeleri",
+    "şirket gelişmeleri",
+  ],
+} satisfies Record<HaberKategori, readonly string[]>;
+
+const KATEGORI_ALIAS_HARITASI = (
+  Object.entries(KATEGORI_ALIAS_KAYNAKLARI) as Array<
+    [HaberKategori, readonly string[]]
+  >
+).reduce<Record<string, HaberKategori>>((acc, [kategori, aliaslar]) => {
+  acc[haberKategoriAnahtari(kategori)] = kategori;
+
+  for (const alias of aliaslar) {
+    acc[haberKategoriAnahtari(alias)] = kategori;
+  }
+
+  return acc;
+}, {});
+
+const KATEGORI_IPUCLARI = [
+  {
+    kategori: "halka-arz",
+    kelimeler: [
+      "halka arz",
+      "izahname",
+      "talep toplama",
+      "spk onayi",
+      "borsa kodu",
+    ],
+  },
+  {
+    kategori: "temettu",
+    kelimeler: ["temettu", "kar payi", "kar dagitimi"],
+  },
+  {
+    kategori: "sermaye-artirimi",
+    kelimeler: ["sermaye artirimi", "bedelli", "bedelsiz", "ruchan"],
+  },
+  {
+    kategori: "fon-haberleri",
+    kelimeler: ["fon", "tefas", "portfoy", "yatirim fonu"],
+  },
+  {
+    kategori: "kap-bildirimleri",
+    kelimeler: ["kap", "bilanco", "sozlesme", "ihale", "siparis"],
+  },
+  {
+    kategori: "piyasa-gundemi",
+    kelimeler: [
+      "piyasa",
+      "borsa",
+      "endeks",
+      "para akisi",
+      "para girisi",
+      "para cikisi",
+    ],
+  },
+  {
+    kategori: "sirket-haberleri",
+    kelimeler: ["sirket", "hisse", "yatirim", "finansal sonuc"],
+  },
+] satisfies Array<{ kategori: HaberKategori; kelimeler: readonly string[] }>;
+
+function haberKategoriAnahtari(deger: string): string {
+  return deger
+    .trim()
+    .toLocaleLowerCase("tr-TR")
+    .replace(/ı/g, "i")
+    .replace(/ğ/g, "g")
+    .replace(/ü/g, "u")
+    .replace(/ş/g, "s")
+    .replace(/ö/g, "o")
+    .replace(/ç/g, "c")
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "")
+    .replace(/-{2,}/g, "-");
+}
+
 export function getKategori(slug: string): KategoriBilgi | undefined {
   return KATEGORI_HARITASI[slug as HaberKategori];
 }
 
 export function isHaberKategori(slug: string): slug is HaberKategori {
   return Object.prototype.hasOwnProperty.call(KATEGORI_HARITASI, slug);
+}
+
+export function haberKategorisiniNormalizeEt(
+  deger: unknown
+): HaberKategori | null {
+  if (typeof deger !== "string") return null;
+
+  return KATEGORI_ALIAS_HARITASI[haberKategoriAnahtari(deger)] ?? null;
+}
+
+export function haberKategorisiniMetindenTahminEt(
+  metinler: unknown[]
+): HaberKategori | null {
+  const metin = haberKategoriAnahtari(
+    metinler.filter((metin): metin is string => typeof metin === "string").join(" ")
+  );
+
+  if (!metin) return null;
+
+  for (const { kategori, kelimeler } of KATEGORI_IPUCLARI) {
+    if (kelimeler.some((kelime) => metin.includes(haberKategoriAnahtari(kelime)))) {
+      return kategori;
+    }
+  }
+
+  return null;
 }
 
 // Sayfa başına haber sayısı (arşiv + kategori sayfalamaları için ortak).

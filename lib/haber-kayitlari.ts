@@ -7,6 +7,8 @@ import { cache } from "react";
 import { getYazar, varsayilanYazar } from "@/app/data/yazarlar";
 import {
   getKategori,
+  haberKategorisiniMetindenTahminEt,
+  haberKategorisiniNormalizeEt,
   isHaberKategori,
   type HaberKategori,
 } from "@/lib/haber-kategorileri";
@@ -388,8 +390,33 @@ function sorulariNormalizeEt(
   return sorular.length > 0 ? sorular : undefined;
 }
 
+function haberKategoriDegeriniNormalizeEt(veri: BilinmeyenKayit): HaberKategori {
+  const dogrudan =
+    haberKategorisiniNormalizeEt(veri.kategori) ??
+    haberKategorisiniNormalizeEt(veri.category);
+
+  if (dogrudan) return dogrudan;
+
+  const ilgiliFonlar = metinDizisi(veri.ilgiliFonlar);
+  const ilgiliHisseler = metinDizisi(veri.ilgiliHisseler);
+  const tahmini = haberKategorisiniMetindenTahminEt([
+    veri.slug,
+    veri.baslik,
+    veri.aciklama,
+    veri.etiket,
+    ...ilgiliFonlar,
+    ...ilgiliHisseler,
+    ilgiliFonlar.length > 0 ? "fon haberleri" : "",
+    ilgiliHisseler.length > 0 ? "sirket haberleri" : "",
+  ]);
+
+  return tahmini ?? "piyasa-gundemi";
+}
+
 function yeniHaberKaydiniNormalizeEt(veri: unknown): HaberKaydi | null {
   if (!objeMi(veri)) return null;
+
+  const kategori = haberKategoriDegeriniNormalizeEt(veri);
 
   if (
     veri.surum !== HABER_KAYIT_SURUMU ||
@@ -397,8 +424,6 @@ function yeniHaberKaydiniNormalizeEt(veri: unknown): HaberKaydi | null {
     typeof veri.slug !== "string" ||
     typeof veri.baslik !== "string" ||
     typeof veri.aciklama !== "string" ||
-    typeof veri.kategori !== "string" ||
-    !isHaberKategori(veri.kategori) ||
     typeof veri.etiket !== "string" ||
     typeof veri.yayinTarihi !== "string" ||
     typeof veri.guncellemeTarihi !== "string" ||
@@ -443,7 +468,7 @@ function yeniHaberKaydiniNormalizeEt(veri: unknown): HaberKaydi | null {
     slug: veri.slug,
     baslik: veri.baslik,
     aciklama: veri.aciklama,
-    kategori: veri.kategori,
+    kategori,
     etiket: veri.etiket,
     yayinTarihi: veri.yayinTarihi,
     guncellemeTarihi: veri.guncellemeTarihi,
