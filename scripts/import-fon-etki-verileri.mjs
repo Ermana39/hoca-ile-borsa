@@ -11,7 +11,14 @@ const KAYNAK_DOSYA = path.join(
   "fon-etki-verileri.xlsx"
 );
 const CIKTI_DOSYA = KAYNAK_DOSYA.replace(/\.xlsx$/i, ".json");
-const BEKLENEN_FONLAR = ["TLY", "PHE", "DFI", "KHA", "THF"];
+const GENEL_FON_GECMIS_DIZINI = path.join(
+  process.cwd(),
+  "public",
+  "data",
+  "fonlar",
+  "history"
+);
+const BEKLENEN_FONLAR = ["TLY", "PHE", "DFI", "KHA", "THF", "TMV"];
 const NORMAL_TOPLAM_TOLERANSI = 0.02;
 const ETKI_TOLERANSI = 0.0002;
 
@@ -63,6 +70,57 @@ function excelTarihiniIsoYap(value, konum) {
 
 function yuvarla(value, digits = 10) {
   return Number(value.toFixed(digits));
+}
+
+async function genelFonGecmisiniOku(kod) {
+  const dosya = path.join(
+    GENEL_FON_GECMIS_DIZINI,
+    `${kod.toLocaleLowerCase("tr-TR")}.json`
+  );
+
+  try {
+    const payload = JSON.parse(await fs.readFile(dosya, "utf8"));
+    const rows = Array.isArray(payload.rows) ? payload.rows : [];
+    const tarihsel = rows
+      .map((row) => {
+        if (!Array.isArray(row)) return null;
+
+        const tarih = metin(row[0]);
+        const yatirimciSayisi = row[3];
+        const fonToplamDeger = row[4];
+        const paraGirisiCikisi = Number.isFinite(row[6]) ? row[6] : 0;
+        const marj = Number.isFinite(row[5]) ? yuvarla(row[5] * 100, 4) : null;
+
+        if (
+          !/^\d{4}-\d{2}-\d{2}$/.test(tarih) ||
+          !Number.isInteger(yatirimciSayisi) ||
+          yatirimciSayisi < 0 ||
+          !Number.isFinite(fonToplamDeger) ||
+          fonToplamDeger <= 0
+        ) {
+          return null;
+        }
+
+        return {
+          tarih,
+          yatirimciSayisi,
+          fonToplamDeger: yuvarla(fonToplamDeger, 2),
+          paraGirisiCikisi: yuvarla(paraGirisiCikisi, 2),
+          marj,
+        };
+      })
+      .filter(Boolean)
+      .sort((a, b) => a.tarih.localeCompare(b.tarih));
+
+    if (tarihsel.length < 2) return null;
+
+    return {
+      tarihsel,
+      tarihselKaynak: "ana-fon-arsivi",
+    };
+  } catch {
+    return null;
+  }
 }
 
 function fonSayfasiniDonustur(sheet, kod, oncekiFon) {
@@ -184,7 +242,7 @@ function fonSayfasiniDonustur(sheet, kod, oncekiFon) {
       );
     }
     tarihsel = oncekiFon.tarihsel;
-    tarihselKaynak = "onceki-json";
+    tarihselKaynak = oncekiFon.tarihselKaynak ?? "onceki-json";
   } else {
     const basliklar = rows[tarihBasligi].map(anahtar);
     const tarihKolonu = basliklar.indexOf("tarih");
@@ -318,16 +376,16 @@ async function main() {
     throw new Error(`Eksik fon sekmeleri: ${eksikFonlar.join(", ")}`);
   }
 
-  const fonlar = Object.fromEntries(
-    BEKLENEN_FONLAR.map((kod) => [
-      kod,
-      fonSayfasiniDonustur(
-        workbook.Sheets[kod],
-        kod,
-        oncekiCikti?.fonlar?.[kod] ?? null
-      ),
-    ])
-  );
+  const fonlar = {};
+  for (const kod of BEKLENEN_FONLAR) {
+    const oncekiFon = oncekiCikti?.fonlar?.[kod] ?? null;
+    const yedekFon =
+      Array.isArray(oncekiFon?.tarihsel) && oncekiFon.tarihsel.length >= 2
+        ? oncekiFon
+        : await genelFonGecmisiniOku(kod);
+
+    fonlar[kod] = fonSayfasiniDonustur(workbook.Sheets[kod], kod, yedekFon);
+  }
 
   const sonTarihler = Object.values(fonlar).map(
     (fon) => fon.tarihsel.at(-1).tarih

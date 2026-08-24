@@ -98,6 +98,14 @@ const fonProfilleri = [
     profilOzeti:
       "THF kodlu Tera Portföy Hisse Senedi (TL) Fonu, hisse senedi yoğun fon türündedir. Bu sayfa, son açıklanan portföy ağırlıklarını günlük kapanış hareketleriyle birleştirerek ertesi gün açıklanacak fon fiyatına yönelik tahmini etkiyi izler.",
   },
+  {
+    kod: "TMV",
+    fonAdi: "Tera Portföy Algoritmik Stratejiler Serbest Fon",
+    fonTuru: "Serbest fon",
+    slug: "tmv",
+    profilOzeti:
+      "TMV kodlu Tera Portföy Algoritmik Stratejiler Serbest Fon, serbest fon türündedir. Bu sayfa, son açıklanan portföy ağırlıkları ile günlük kapanış hareketlerini birleştirerek açıklanacak fon fiyatına yönelik tahmini etkiyi; yatırımcı sayısı, fon büyüklüğü ve para akışıyla birlikte izler.",
+  },
 ] as const;
 
 function tarihEtiketi(iso: string) {

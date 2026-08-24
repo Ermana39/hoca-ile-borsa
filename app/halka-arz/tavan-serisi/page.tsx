@@ -17,7 +17,7 @@ const title = "2026 Halka Arz Tavan Serisi: Güncel Performans Takibi";
 const description =
   "2026 halka arzlarının gerçekleşen tavan serisi ve performans tablosu: arz fiyatı, gün sonu kapanışı, getiri, marj ve BIST 100 karşılaştırması.";
 
-const tavanSerisiKapanisTarihi = "2026-08-21";
+const tavanSerisiKapanisTarihi = "2026-08-24";
 
 type TavanSerisiKaydi = HalkaArzSonucu & {
   kapanisTarihi?: string;
@@ -51,36 +51,36 @@ export const metadata: Metadata = {
 };
 
 const guncelHalkaArzKapanislari: Record<string, string> = {
-  KPEKS: "103.40",
-  TKNKA: "103.20",
-  VEYAS: "135.90",
-  CITAS: "107.80",
-  QUICK: "70.90",
-  KARCL: "114.20",
-  MASFN: "43.64",
-  ALBTN: "32.00",
-  METEN: "26.00",
-  SARAE: "91.35",
-  SSAAT: "38.26",
-  ISVEA: "77.00",
-  EKIM: "19.00",
-  GOLDA: "13.03",
-  ORZAX: "99.70",
-  SOHOE: "10.69",
-  BETAE: "106.70",
-  EKDMR: "46.30",
-  AAGYO: "13.11",
-  MCARD: "168.40",
-  LXGYO: "11.08",
-  GENKM: "10.44",
-  SVGYO: "16.60",
-  EMPAE: "75.00",
-  ATATR: "15.24",
-  BESTE: "33.20",
-  AKHAN: "42.16",
-  NETCD: "130.00",
-  UCAYM: "25.88",
-  ZGYO: "29.98",
+  KPEKS: "113.70",
+  TKNKA: "113.50",
+  VEYAS: "149.40",
+  CITAS: "118.50",
+  QUICK: "71.15",
+  KARCL: "102.80",
+  MASFN: "43.78",
+  ALBTN: "35.20",
+  METEN: "24.20",
+  SARAE: "88.10",
+  SSAAT: "38.06",
+  ISVEA: "69.60",
+  EKIM: "19.47",
+  GOLDA: "13.44",
+  ORZAX: "104.20",
+  SOHOE: "11.09",
+  BETAE: "101.00",
+  EKDMR: "48.10",
+  AAGYO: "13.12",
+  MCARD: "161.70",
+  LXGYO: "11.36",
+  GENKM: "10.52",
+  SVGYO: "17.29",
+  EMPAE: "70.80",
+  ATATR: "15.04",
+  BESTE: "33.74",
+  AKHAN: "41.00",
+  NETCD: "127.60",
+  UCAYM: "25.28",
+  ZGYO: "31.60",
   FRMPL: "35.20",
   MEYSU: "11.89",
   ARFYE: "21.46",
@@ -92,9 +92,9 @@ const kpeksHalkaArzVerisi: TavanSerisiKaydi = {
   katilimciSayisi: "518.750",
   dagitimSekli: "BİREYSELE %50",
   arzFiyati: "94.00",
-  guncelFiyat: "103.40",
+  guncelFiyat: "113.70",
   konsorsiyum: "TSKB, YATIRIM FİNANSMAN, ZİRAAT",
-  kapanisTarihi: "2026-08-21",
+  kapanisTarihi: "2026-08-24",
 };
 
 const tknkaHalkaArzVerisi: TavanSerisiKaydi = {
@@ -103,9 +103,9 @@ const tknkaHalkaArzVerisi: TavanSerisiKaydi = {
   katilimciSayisi: "493.220",
   dagitimSekli: "BİREYSELE %40",
   arzFiyati: "85.40",
-  guncelFiyat: "103.20",
+  guncelFiyat: "113.50",
   konsorsiyum: "TERA",
-  kapanisTarihi: "2026-08-21",
+  kapanisTarihi: "2026-08-24",
 };
 
 const veyasHalkaArzVerisi: TavanSerisiKaydi = {
@@ -114,9 +114,9 @@ const veyasHalkaArzVerisi: TavanSerisiKaydi = {
   katilimciSayisi: "365.280",
   dagitimSekli: "BİREYSELE %45",
   arzFiyati: "136.00",
-  guncelFiyat: "135.90",
+  guncelFiyat: "149.40",
   konsorsiyum: "HALK, VAKIF, ZİRAAT",
-  kapanisTarihi: "2026-08-21",
+  kapanisTarihi: "2026-08-24",
 };
 
 const citasHalkaArzVerisi = {
@@ -125,7 +125,7 @@ const citasHalkaArzVerisi = {
   katilimciSayisi: "556.728",
   dagitimSekli: "BİREYSELE %40",
   arzFiyati: "73.70",
-  guncelFiyat: "107.80",
+  guncelFiyat: "118.50",
   konsorsiyum: "TERA",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -135,7 +135,7 @@ const quickHalkaArzVerisi = {
   katilimciSayisi: "961.387",
   dagitimSekli: "BİREYSELE %60",
   arzFiyati: "76.60",
-  guncelFiyat: "70.90",
+  guncelFiyat: "71.15",
   konsorsiyum: "GARANTİ",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -145,7 +145,7 @@ const karclHalkaArzVerisi = {
   katilimciSayisi: "814.853",
   dagitimSekli: "BİREYSELE %40",
   arzFiyati: "35.00",
-  guncelFiyat: "114.20",
+  guncelFiyat: "102.80",
   konsorsiyum: "A1 CAPİTAL, VAKIF, ZİRAAT",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -155,7 +155,7 @@ const masfnHalkaArzVerisi = {
   katilimciSayisi: "1.093.898",
   dagitimSekli: "BİREYSELE %80",
   arzFiyati: "45.68",
-  guncelFiyat: "43.64",
+  guncelFiyat: "43.78",
   konsorsiyum: "DENİZ",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -165,7 +165,7 @@ const albtnHalkaArzVerisi = {
   katilimciSayisi: "549.211",
   dagitimSekli: "TAMAMEN EŞİT",
   arzFiyati: "38.60",
-  guncelFiyat: "32.00",
+  guncelFiyat: "35.20",
   konsorsiyum: "TACİRLER",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -175,7 +175,7 @@ const metenHalkaArzVerisi = {
   katilimciSayisi: "961.387",
   dagitimSekli: "BİREYSELE %38",
   arzFiyati: "20.00",
-  guncelFiyat: "26.00",
+  guncelFiyat: "24.20",
   konsorsiyum: "İNFO",
 } as (typeof baseHalkaArzVerileri)[number];
 

@@ -1,21 +1,25 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-24T06:36:18.427Z",
+  "generatedAt": "2026-08-24T15:35:00.125Z",
   "duplicateKontrolu": {
     "added": 0,
     "updated": 0,
-    "skipped": 3394
+    "skipped": 4058
   },
   "islenenFonSayisi": 1058,
   "islenenSnapshotSayisi": 2037,
-  "kaliciSnapshotSayisi": 1669098,
-  "temizlenenGecersizSnapshotSayisi": 340,
-  "yoneticiyleEslesenFonSayisi": 1690,
-  "bilinmeyenYoneticiSayisi": 7,
+  "kaliciSnapshotSayisi": 1669430,
+  "temizlenenGecersizSnapshotSayisi": 8,
+  "yoneticiyleEslesenFonSayisi": 2020,
+  "bilinmeyenYoneticiSayisi": 9,
   "bilinmeyenYoneticiFonlari": [
     {
       "fonKodu": "DK8",
       "fonAdi": "DENİZ PORTFÖY KAR PAYI ÖDEYEN SEKİZİNCİ SERBEST (DÖVİZ) FON"
+    },
+    {
+      "fonKodu": "KPS",
+      "fonAdi": "QNB PORTFÖY KAR PAYI ÖDEYEN ONİKİNCİ SERBEST (DÖVİZ) FON"
     },
     {
       "fonKodu": "OAO",
@@ -28,6 +32,10 @@
     {
       "fonKodu": "DMI",
       "fonAdi": "İŞ PORTFÖY DM HİSSE SENEDİ ÖZEL FON (HİSSE SENEDİ YOĞUN FON)"
+    },
+    {
+      "fonKodu": "GLL",
+      "fonAdi": "GOLDEN GLOBAL PORTFÖY ALTIN KATILIM FONU"
     },
     {
       "fonKodu": "ETN",
@@ -45,41 +53,29 @@
   "kaynakDogrulama": {
     "sonKaynakTarihi": "2026-08-24",
     "sonKaynakKayitSayisi": 2037,
-    "sonKaynakGecerliKayitSayisi": 1697,
-    "gitGecmisindeIncelenenSurumSayisi": 90,
+    "sonKaynakGecerliKayitSayisi": 2029,
+    "gitGecmisindeIncelenenSurumSayisi": 91,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
     "manuelGecmisIceAktarimlari": [],
     "resmiKaynakAktarimlari": [],
     "temizlenenGecersizSnapshotlar": {
-      "sayi": 340,
+      "sayi": 8,
       "ornekler": [
-        "AES:2026-08-24",
-        "AFO:2026-08-24",
-        "APJ:2026-08-24",
-        "ARL:2026-08-24",
-        "ARM:2026-08-24",
-        "AVC:2026-08-24",
-        "BRZ:2026-08-24",
-        "BSC:2026-08-24",
-        "BUB:2026-08-24",
-        "CAH:2026-08-24",
-        "DK1:2026-08-24",
-        "DKL:2026-08-24",
-        "DUH:2026-08-24",
-        "EKL:2026-08-24",
-        "ENR:2026-08-24",
-        "EZM:2026-08-24",
         "FNN:2026-08-24",
-        "FNT:2026-08-24",
-        "FSU:2026-08-24",
-        "GAC:2026-08-24"
+        "GKE:2026-08-24",
+        "GKO:2026-08-24",
+        "GMV:2026-08-24",
+        "GSU:2026-08-24",
+        "ICN:2026-08-24",
+        "RPE:2026-08-24",
+        "TMH:2026-08-24"
       ]
     }
   },
   "etkiAnaliziTarihselSenkronu": {
     "senkronizeEdildi": true,
-    "fonSayisi": 5,
+    "fonSayisi": 6,
     "sonTarih": "2026-08-24",
     "fonlar": [
       {
@@ -90,9 +86,9 @@
       },
       {
         "fonKodu": "PHE",
-        "tarihSayisi": 595,
+        "tarihSayisi": 596,
         "ilkTarih": "2024-04-01",
-        "sonTarih": "2026-08-21"
+        "sonTarih": "2026-08-24"
       },
       {
         "fonKodu": "DFI",
@@ -111,41 +107,17 @@
         "tarihSayisi": 364,
         "ilkTarih": "2025-03-07",
         "sonTarih": "2026-08-24"
+      },
+      {
+        "fonKodu": "TMV",
+        "tarihSayisi": 1041,
+        "ilkTarih": "2022-06-30",
+        "sonTarih": "2026-08-24"
       }
     ]
   },
-  "veriUyarisiSayisi": 66,
+  "veriUyarisiSayisi": 64,
   "veriUyarilari": [
-    {
-      "tur": "gunluk-kaynakta-eksik-finansal-veri",
-      "tarih": "2026-08-24",
-      "toplamKayitSayisi": 2037,
-      "gecerliKayitSayisi": 1697,
-      "gecersizKayitSayisi": 340,
-      "gecerliOran": 0.83308787,
-      "ornekFonKodlari": [
-        "AES",
-        "AFO",
-        "APJ",
-        "ARL",
-        "ARM",
-        "AVC",
-        "BRZ",
-        "BSC",
-        "BUB",
-        "CAH",
-        "DK1",
-        "DKL",
-        "DUH",
-        "EKL",
-        "ENR",
-        "EZM",
-        "FNN",
-        "FNT",
-        "FSU",
-        "GAC"
-      ]
-    },
     {
       "fonKodu": "KJK",
       "tarih": "2023-12-13",
@@ -193,12 +165,6 @@
       "tarih": "2026-07-01",
       "tur": "gunluk-getiri-fiyat-kopmasi",
       "hamGetiri": 8.1247619
-    },
-    {
-      "fonKodu": "NRM",
-      "tarih": "2026-08-24",
-      "tur": "gunluk-getiri-fiyat-kopmasi",
-      "hamGetiri": 59.09655438
     },
     {
       "fonKodu": "NIG",

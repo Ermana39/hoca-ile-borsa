@@ -9,11 +9,11 @@ import {
 const siteUrl = "https://www.hocaileborsa.com";
 const canonical = `${siteUrl}/fonlar/etki-analizi`;
 const title =
-  "Fon Etki Analizi: TLY, PHE, DFI, KHA ve THF Portföy Etkisi";
+  "Fon Etki Analizi: TLY, PHE, DFI, KHA, THF ve TMV Portföy Etkisi";
 const description =
-  "TLY, PHE, DFI, KHA ve THF fonlarının güncel portföy etkisini karşılaştırın. Tahmini fiyat değişimini, yatırımcı hareketini, para akışını ve veri kapsamını inceleyin.";
+  "TLY, PHE, DFI, KHA, THF ve TMV fonlarının güncel portföy etkisini karşılaştırın. Tahmini fiyat değişimini, yatırımcı hareketini, para akışını ve veri kapsamını inceleyin.";
 const seoDescription =
-  "TLY, PHE, DFI, KHA ve THF fonlarının güncel portföy etkisi, tahmini fiyat değişimi, yatırımcı hareketi ve para akışını tek ekranda karşılaştırın.";
+  "TLY, PHE, DFI, KHA, THF ve TMV fonlarının güncel portföy etkisi, tahmini fiyat değişimi, yatırımcı hareketi ve para akışını tek ekranda karşılaştırın.";
 const image = `${siteUrl}/2026-fon-etki-analizi-tly-phe-pbr-dfi.webp`;
 
 export const metadata: Metadata = {
@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     "DFI fonu",
     "KHA fonu",
     "THF fonu",
+    "TMV fonu",
     "TEFAS fon fiyatı",
   ],
   openGraph: {
@@ -140,7 +141,7 @@ const jsonLd = {
     {
       "@type": "Dataset",
       "@id": `${canonical}#dataset`,
-      name: "TLY, PHE, DFI, KHA ve THF fon kapanış etki karşılaştırması",
+      name: "TLY, PHE, DFI, KHA, THF ve TMV fon kapanış etki karşılaştırması",
       description,
       url: canonical,
       inLanguage: "tr-TR",
@@ -239,7 +240,7 @@ export default function FonEtkiAnaliziPage() {
           <p className="mt-4 text-base leading-8 text-slate-600">
             Fonların son açıklanan portföy dağılımları ile Borsa İstanbul günlük
             kapanış değişimleri birleştirilerek, açıklanacak fon fiyatına tahmini
-            etki hesaplanır. Bu merkez sayfa TLY, PHE, DFI, KHA ve THF fonlarını
+            etki hesaplanır. Bu merkez sayfa TLY, PHE, DFI, KHA, THF ve TMV fonlarını
             aynı yöntemle karşılaştırır. Ayrıntılı sayfalarda hisse bazlı
             katkılar, tarihsel yatırımcı değişimi, fon büyüklüğü ve para akışı
             grafikleri yer alır.

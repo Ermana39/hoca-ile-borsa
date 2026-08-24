@@ -717,10 +717,10 @@ assert(
 );
 
 const effectData = JSON.parse(fs.readFileSync(sourcePaths.etki, "utf8"));
-const expectedEffectFunds = ["DFI", "KHA", "PHE", "THF", "TLY"];
+const expectedEffectFunds = ["DFI", "KHA", "PHE", "THF", "TLY", "TMV"];
 assert(
   JSON.stringify(Object.keys(effectData.fonlar).sort()) === JSON.stringify(expectedEffectFunds),
-  "Etki analizi fon listesi altı beklenen fondan oluşmuyor."
+  "Etki analizi fon listesi beklenen fonlardan oluşmuyor."
 );
 let latestEffectDate = null;
 for (const code of expectedEffectFunds) {

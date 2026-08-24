@@ -63,7 +63,7 @@ const effectDataPath = path.join(
   "_data",
   "fon-etki-verileri.json"
 );
-const effectAnalysisFundCodes = ["TLY", "PHE", "DFI", "KHA", "THF"];
+const effectAnalysisFundCodes = ["TLY", "PHE", "DFI", "KHA", "THF", "TMV"];
 
 const version = 1;
 const maxAbsoluteDailyReturn = 1;
