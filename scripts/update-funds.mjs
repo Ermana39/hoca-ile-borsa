@@ -1391,7 +1391,11 @@ function topFunds(funds, selector, direction = "desc", limit = 10, predicate = n
     .filter((fund) => (predicate ? predicate(fund) : true))
     .map((fund) => ({ fund, value: selector(fund) }))
     .filter(({ value }) => typeof value === "number" && Number.isFinite(value))
-    .sort((a, b) => (direction === "asc" ? a.value - b.value : b.value - a.value))
+    .sort((a, b) => {
+      const valueOrder = direction === "asc" ? a.value - b.value : b.value - a.value;
+      if (valueOrder !== 0) return valueOrder;
+      return a.fund.kod.localeCompare(b.fund.kod, "tr");
+    })
     .slice(0, limit)
     .map(({ fund, value }) => compactFund(fund, round(value, 8)));
 }

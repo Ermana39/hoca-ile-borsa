@@ -245,7 +245,11 @@ function compactRanking(funds, selector, direction, predicate = () => true) {
     .filter(predicate)
     .map((fund) => ({ kod: fund.kod, value: selector(fund) }))
     .filter((item) => typeof item.value === "number" && Number.isFinite(item.value))
-    .sort((a, b) => (direction === "asc" ? a.value - b.value : b.value - a.value))
+    .sort((a, b) => {
+      const valueOrder = direction === "asc" ? a.value - b.value : b.value - a.value;
+      if (valueOrder !== 0) return valueOrder;
+      return a.kod.localeCompare(b.kod, "tr");
+    })
     .slice(0, 10);
 }
 
