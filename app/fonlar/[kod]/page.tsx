@@ -12,7 +12,6 @@ import FundChartsClient from "../_components/FundChartsClient";
 import RiskReturnAnalysis from "../_components/RiskReturnAnalysis";
 import {
   formatCompactTL,
-  formatDate,
   formatDecimal,
   formatNumber,
   formatSignedPercent,
@@ -34,39 +33,16 @@ function gecerliMetrik(value: string) {
   return value !== "-";
 }
 
-function metrikleriBagla(items: string[]) {
-  if (items.length <= 1) return items.join("");
-  if (items.length === 2) return items.join(" ve ");
-
-  return `${items.slice(0, -1).join(", ")} ve ${items[items.length - 1]}`;
-}
-
-function fonSeoAciklamasi(fund: Fund) {
-  const kisaMetrikler = [
-    gecerliMetrik(formatDecimal(fund.fiyat, 6))
-      ? `güncel fiyat ${formatDecimal(fund.fiyat, 6)} TL`
-      : "",
-    gecerliMetrik(formatSignedPercent(fund.gunlukGetiri))
-      ? `günlük getiri ${formatSignedPercent(fund.gunlukGetiri)}`
-      : "",
-    gecerliMetrik(formatCompactTL(fund.fonToplamDeger))
-      ? `fon büyüklüğü ${formatCompactTL(fund.fonToplamDeger)}`
-      : "",
-    gecerliMetrik(formatNumber(fund.kisiSayisi))
-      ? `${formatNumber(fund.kisiSayisi)} yatırımcı`
-      : "",
-  ]
-    .filter(Boolean)
-    .slice(0, 3);
-
-  const anaMetin =
-    kisaMetrikler.length > 0
-      ? `${fund.kod} fonunda ${metrikleriBagla(kisaMetrikler)}.`
-      : `${fund.kod} fonunun güncel fiyat, getiri ve para akışı verileri.`;
+function fonAramaAciklamasi(fund: Fund) {
+  const fonBuyuklugu = formatCompactTL(fund.fonToplamDeger);
+  const ikinciCumle = gecerliMetrik(fonBuyuklugu)
+    ? `Fon büyüklüğü ${fonBuyuklugu}; risk ve benzer fonları karşılaştırın.`
+    : "Risk seviyesi, dönemsel getiri ve benzer fonları karşılaştırın.";
 
   return seoAciklamasi(
-    anaMetin,
-    "Para akışı ve 30 günlük tabloyu inceleyin."
+    `${fund.kod} fonu için fiyat, getiri, para akışı ve yatırımcı değişimini tek ekranda inceleyin. ${ikinciCumle}`,
+    "",
+    158
   );
 }
 
@@ -87,8 +63,8 @@ export async function generateMetadata({
 
   const fund = detail.fund;
   const canonical = `https://www.hocaileborsa.com/fonlar/${fund.slug}`;
-  const seoTitle = `${fund.kod} Fonu: Getiri, Para Akışı ve Güncel Analiz`;
-  const seoDescription = fonSeoAciklamasi(fund);
+  const seoTitle = `${fund.kod} Fonu: Getiri, Para Akışı ve Risk Analizi`;
+  const seoDescription = fonAramaAciklamasi(fund);
 
   return {
     title: { absolute: seoTitle },
@@ -100,6 +76,11 @@ export async function generateMetadata({
       type: "website",
       url: canonical,
       title: `${fund.kod} Fonu | ${fund.ad}`,
+      description: seoDescription,
+    },
+    twitter: {
+      card: "summary",
+      title: seoTitle,
       description: seoDescription,
     },
   };
@@ -117,8 +98,8 @@ export default async function FonDetayPage({
 
   const fund = detail.fund;
   const canonical = `https://www.hocaileborsa.com/fonlar/${fund.slug}`;
-  const seoTitle = `${fund.kod} Fonu: Getiri, Para Akışı ve Güncel Analiz`;
-  const seoDescription = fonSeoAciklamasi(fund);
+  const seoTitle = `${fund.kod} Fonu: Getiri, Para Akışı ve Risk Analizi`;
+  const seoDescription = fonAramaAciklamasi(fund);
   const riskText =
     typeof fund.riskDegeri === "number"
       ? formatNumber(fund.riskDegeri)
@@ -208,13 +189,16 @@ export default async function FonDetayPage({
           <div className="flex flex-col gap-5 lg:flex-row lg:items-start lg:justify-between">
             <div className="min-w-0">
               <p className="text-sm font-semibold text-blue-700">
-                Son işlem tarihi: {formatDate(fund.tarih)}
+                Fon verileri, getiri ve para akışı
               </p>
               <h1 className="mt-2 text-2xl font-bold text-slate-950 md:text-4xl">
                 {fund.kod} Fonu
               </h1>
               <p className="mt-2 max-w-4xl text-sm leading-7 text-slate-600 md:text-base">
                 {fund.ad}
+              </p>
+              <p className="mt-3 max-w-4xl text-sm leading-7 text-slate-700 md:text-base">
+                {seoDescription}
               </p>
               <div className="mt-4 flex flex-wrap gap-2 text-sm">
                 <span className="rounded-full bg-slate-100 px-3 py-1 font-semibold text-slate-700">
@@ -239,7 +223,7 @@ export default async function FonDetayPage({
                 {formatSignedPercent(fund.gunlukGetiri)}
               </p>
               <p className="mt-3 text-sm font-semibold text-slate-600">
-                Tarih: {formatDate(fund.tarih)}
+                Getiri, akış ve yatırımcı ilgisiyle birlikte izlenir
               </p>
             </div>
           </div>
@@ -273,7 +257,7 @@ export default async function FonDetayPage({
         </section>
 
         <section className="mb-8">
-          <RiskReturnAnalysis analysis={detail.riskAnalizi} />
+          <RiskReturnAnalysis analysis={detail.riskAnalizi} fund={fund} />
         </section>
 
         <section>
@@ -305,7 +289,7 @@ export default async function FonDetayPage({
               <p>
                 Fonun günlük net para akışı {dailyFlowText} seviyesindedir. Para akışı ve
                 yatırımcı sayısındaki değişim, fona yönelik güncel ilginin yönünü gösterir;
-                ancak tek başına gelecekteki getiri için kesin bir işaret değildir.
+                fiyat hareketi ve dönemsel getirilerle birlikte daha anlamlı okunur.
               </p>
               <p>
                 Benzer fonları bulmak için <Link href={`/fonlar/fon-tarayici?kategori=${encodeURIComponent(fund.kategori)}`} className="font-semibold text-blue-700 hover:underline">fon tarayıcıyı</Link>,
@@ -330,9 +314,9 @@ export default async function FonDetayPage({
           </div>
 
           <p className="mt-8 border-t border-slate-200 pt-6 text-sm leading-7 text-slate-500">
-            Not: Fon verilerini karar sürecinde getiri, risk seviyesi, vade ve portföy
-            tercihiyle birlikte okuyun; geçmiş performans tek başına gelecek dönem için
-            kesin gösterge değildir.
+            Not: Fon verilerini fiyat, getiri, risk seviyesi, vade ve portföy
+            tercihiyle birlikte okuyarak farklı dönemlerdeki görünümü daha dengeli
+            değerlendirebilirsiniz.
           </p>
         </section>
       </div>

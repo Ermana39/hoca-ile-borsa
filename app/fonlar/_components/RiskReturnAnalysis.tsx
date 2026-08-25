@@ -5,7 +5,12 @@ import {
   valueBgClass,
   valueColorClass,
 } from "@/lib/fon-format";
-import type { RiskAnalysis } from "@/lib/fon-platform";
+import {
+  createRiskCategorySlug,
+  getRiskMetricConfigByKey,
+} from "@/lib/fon-risk-ranking";
+import type { Fund, RiskAnalysis } from "@/lib/fon-platform";
+import Link from "@/components/NoPrefetchLink";
 
 function ProgressBar({
   value,
@@ -52,7 +57,13 @@ function MetricBox({
   );
 }
 
-export default function RiskReturnAnalysis({ analysis }: { analysis: RiskAnalysis }) {
+export default function RiskReturnAnalysis({
+  analysis,
+  fund,
+}: {
+  analysis: RiskAnalysis;
+  fund: Pick<Fund, "kategori" | "kod" | "slug">;
+}) {
   if (analysis.status !== "ok" || !analysis.metrics) {
     return (
       <section className="rounded-2xl border border-amber-200 bg-amber-50 p-5">
@@ -132,32 +143,49 @@ export default function RiskReturnAnalysis({ analysis }: { analysis: RiskAnalysi
             Şemsiye Türü İçinde Karşılaştırma
           </h3>
           <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2">
-            {analysis.comparisons.map((item) => (
-              <div key={item.key} className="rounded-xl border border-slate-100 bg-slate-50 p-4">
-                <div className="flex items-start justify-between gap-3">
-                  <div>
-                    <p className="text-sm font-bold text-slate-900">{item.label}</p>
-                    <p className="mt-1 text-xs text-slate-500">
-                      Fon:{" "}
-                      <span className={valueColorClass(item.value)}>
-                        {item.key === "recoveryDays"
-                          ? formatNumber(item.value)
-                          : formatPercent(item.value)}
-                      </span>{" "}
-                      · Medyan: {formatPercent(item.median)}
-                    </p>
+            {analysis.comparisons.map((item) => {
+              const metric = getRiskMetricConfigByKey(item.key);
+              const rankingHref = metric
+                ? `/fonlar/risk-siralamalari/${metric.slug}/${createRiskCategorySlug(fund.kategori)}#${fund.slug}`
+                : null;
+
+              return (
+                <div key={item.key} className="rounded-xl border border-slate-100 bg-slate-50 p-4">
+                  <div className="flex items-start justify-between gap-3">
+                    <div>
+                      <p className="text-sm font-bold text-slate-900">{item.label}</p>
+                      <p className="mt-1 text-xs text-slate-500">
+                        Fon:{" "}
+                        <span className={valueColorClass(item.value)}>
+                          {item.key === "recoveryDays"
+                            ? formatNumber(item.value)
+                            : formatPercent(item.value)}
+                        </span>{" "}
+                        · Medyan: {formatPercent(item.median)}
+                      </p>
+                    </div>
+                    <span className={`rounded-full px-3 py-1 text-xs font-bold ${valueBgClass((item.percentile ?? 0) / 100)}`}>
+                      {item.assessment}
+                    </span>
                   </div>
-                  <span className={`rounded-full px-3 py-1 text-xs font-bold ${valueBgClass((item.percentile ?? 0) / 100)}`}>
-                    {item.assessment}
-                  </span>
+                  <ProgressBar value={(item.percentile ?? 0) / 100} tone="blue" />
+                  {rankingHref ? (
+                    <Link
+                      href={rankingHref}
+                      className="mt-2 inline-flex max-w-full rounded-full bg-white px-3 py-1 text-xs font-semibold text-blue-700 ring-1 ring-blue-100 hover:bg-blue-50"
+                    >
+                      Sıra: {formatNumber(item.rank)} / {formatNumber(item.peerCount)} ·{" "}
+                      Yüzdelik: {formatNumber(item.percentile, 0)} · Listeyi gör
+                    </Link>
+                  ) : (
+                    <p className="mt-2 text-xs text-slate-500">
+                      Sıra: {formatNumber(item.rank)} / {formatNumber(item.peerCount)} ·{" "}
+                      Yüzdelik: {formatNumber(item.percentile, 0)}
+                    </p>
+                  )}
                 </div>
-                <ProgressBar value={(item.percentile ?? 0) / 100} tone="blue" />
-                <p className="mt-2 text-xs text-slate-500">
-                  Sıra: {formatNumber(item.rank)} / {formatNumber(item.peerCount)} ·{" "}
-                  Yüzdelik: {formatNumber(item.percentile, 0)}
-                </p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       ) : null}

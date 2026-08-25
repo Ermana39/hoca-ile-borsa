@@ -1,21 +1,25 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-24T15:35:00.125Z",
+  "generatedAt": "2026-08-25T08:56:10.163Z",
   "duplicateKontrolu": {
-    "added": 0,
+    "added": 1891,
     "updated": 0,
-    "skipped": 4058
+    "skipped": 1891
   },
-  "islenenFonSayisi": 1058,
-  "islenenSnapshotSayisi": 2037,
-  "kaliciSnapshotSayisi": 1669430,
-  "temizlenenGecersizSnapshotSayisi": 8,
-  "yoneticiyleEslesenFonSayisi": 2020,
-  "bilinmeyenYoneticiSayisi": 9,
+  "islenenFonSayisi": 1059,
+  "islenenSnapshotSayisi": 2038,
+  "kaliciSnapshotSayisi": 1671321,
+  "temizlenenGecersizSnapshotSayisi": 147,
+  "yoneticiyleEslesenFonSayisi": 1881,
+  "bilinmeyenYoneticiSayisi": 10,
   "bilinmeyenYoneticiFonlari": [
     {
       "fonKodu": "DK8",
       "fonAdi": "DENİZ PORTFÖY KAR PAYI ÖDEYEN SEKİZİNCİ SERBEST (DÖVİZ) FON"
+    },
+    {
+      "fonKodu": "TNA",
+      "fonAdi": "TEB PORTFÖY ONBEŞİNCİ SERBEST ÖZEL FON"
     },
     {
       "fonKodu": "KPS",
@@ -51,73 +55,123 @@
     }
   ],
   "kaynakDogrulama": {
-    "sonKaynakTarihi": "2026-08-24",
-    "sonKaynakKayitSayisi": 2037,
-    "sonKaynakGecerliKayitSayisi": 2029,
-    "gitGecmisindeIncelenenSurumSayisi": 91,
+    "sonKaynakTarihi": "2026-08-25",
+    "sonKaynakKayitSayisi": 2038,
+    "sonKaynakGecerliKayitSayisi": 1891,
+    "gitGecmisindeIncelenenSurumSayisi": 92,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
     "manuelGecmisIceAktarimlari": [],
     "resmiKaynakAktarimlari": [],
     "temizlenenGecersizSnapshotlar": {
-      "sayi": 8,
+      "sayi": 147,
       "ornekler": [
-        "FNN:2026-08-24",
-        "GKE:2026-08-24",
-        "GKO:2026-08-24",
-        "GMV:2026-08-24",
-        "GSU:2026-08-24",
-        "ICN:2026-08-24",
-        "RPE:2026-08-24",
-        "TMH:2026-08-24"
+        "AES:2026-08-25",
+        "APJ:2026-08-25",
+        "ARL:2026-08-25",
+        "ARM:2026-08-25",
+        "FNN:2026-08-25",
+        "FSU:2026-08-25",
+        "GAC:2026-08-25",
+        "GAH:2026-08-25",
+        "GAJ:2026-08-25",
+        "GAU:2026-08-25",
+        "GAV:2026-08-25",
+        "GBP:2026-08-25",
+        "GBV:2026-08-25",
+        "GCA:2026-08-25",
+        "GCC:2026-08-25",
+        "GCI:2026-08-25",
+        "GCZ:2026-08-25",
+        "GDJ:2026-08-25",
+        "GDP:2026-08-25",
+        "GEZ:2026-08-25"
       ]
     }
   },
   "etkiAnaliziTarihselSenkronu": {
     "senkronizeEdildi": true,
     "fonSayisi": 6,
-    "sonTarih": "2026-08-24",
+    "sonTarih": "2026-08-25",
     "fonlar": [
       {
         "fonKodu": "TLY",
-        "tarihSayisi": 1258,
+        "tarihSayisi": 1259,
         "ilkTarih": "2021-08-23",
-        "sonTarih": "2026-08-24"
+        "sonTarih": "2026-08-25"
       },
       {
         "fonKodu": "PHE",
-        "tarihSayisi": 596,
+        "tarihSayisi": 597,
         "ilkTarih": "2024-04-01",
-        "sonTarih": "2026-08-24"
+        "sonTarih": "2026-08-25"
       },
       {
         "fonKodu": "DFI",
-        "tarihSayisi": 1023,
+        "tarihSayisi": 1024,
         "ilkTarih": "2022-07-29",
-        "sonTarih": "2026-08-24"
+        "sonTarih": "2026-08-25"
       },
       {
         "fonKodu": "KHA",
-        "tarihSayisi": 632,
+        "tarihSayisi": 633,
         "ilkTarih": "2024-02-09",
-        "sonTarih": "2026-08-24"
+        "sonTarih": "2026-08-25"
       },
       {
         "fonKodu": "THF",
-        "tarihSayisi": 364,
+        "tarihSayisi": 365,
         "ilkTarih": "2025-03-07",
-        "sonTarih": "2026-08-24"
+        "sonTarih": "2026-08-25"
       },
       {
         "fonKodu": "TMV",
-        "tarihSayisi": 1041,
+        "tarihSayisi": 1042,
         "ilkTarih": "2022-06-30",
-        "sonTarih": "2026-08-24"
+        "sonTarih": "2026-08-25"
       }
     ]
   },
-  "veriUyarisiSayisi": 64,
+  "veriUyarisiSayisi": 66,
   "veriUyarilari": [
+    {
+      "tur": "gunluk-kaynakta-eksik-finansal-veri",
+      "tarih": "2026-08-25",
+      "toplamKayitSayisi": 2038,
+      "gecerliKayitSayisi": 1891,
+      "gecersizKayitSayisi": 147,
+      "gecerliOran": 0.92787046,
+      "ornekFonKodlari": [
+        "AES",
+        "APJ",
+        "ARL",
+        "ARM",
+        "FNN",
+        "FSU",
+        "GAC",
+        "GAH",
+        "GAJ",
+        "GAU",
+        "GAV",
+        "GBP",
+        "GBV",
+        "GCA",
+        "GCC",
+        "GCI",
+        "GCZ",
+        "GDJ",
+        "GDP",
+        "GEZ"
+      ]
+    },
+    {
+      "tur": "getiri-kaynaginda-guncel-listede-yok",
+      "tarih": "2026-08-25",
+      "kodSayisi": 1,
+      "ornekFonKodlari": [
+        "OMT"
+      ]
+    },
     {
       "fonKodu": "KJK",
       "tarih": "2023-12-13",

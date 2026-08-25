@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-22",
+  "generatedAt": "2026-08-25",
   "source": {
     "name": "Yahoo Finance Chart API",
     "url": "https://finance.yahoo.com/",
     "note": "Temettu ve guncel bolunme olaylari piyasa veri saglayicisindan alinir; eski kunye bolunme arsivi korunur. Kesin hak kullanimi bilgisi KAP bildirimleriyle kontrol edilmelidir."
   },
   "summary": {
-    "shareCodes": 627,
-    "available": 627,
+    "shareCodes": 628,
+    "available": 628,
     "unavailable": 0,
     "errors": 0,
     "dividendRecords": 3225,
@@ -20092,6 +20092,13 @@
       "durum": "ok",
       "kaynakSembol": "KOTON.IS",
       "kaynakUrl": "https://finance.yahoo.com/quote/KOTON.IS/history/",
+      "temettuler": [],
+      "bolunmeler": []
+    },
+    "KPEKS": {
+      "durum": "ok",
+      "kaynakSembol": "KPEKS.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/KPEKS.IS/history/",
       "temettuler": [],
       "bolunmeler": []
     },

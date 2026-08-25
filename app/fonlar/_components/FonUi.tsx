@@ -413,7 +413,7 @@ export function DetailHistoryTable({ rows }: { rows: Fund["sonOtuzIslemGunu"] })
       <table className="w-full min-w-[1080px] text-sm">
         <thead className="bg-slate-100 text-left text-slate-700">
           <tr>
-            <th className="px-4 py-3 font-semibold">Tarih</th>
+            <th data-nosnippet="true" className="px-4 py-3 font-semibold">Tarih</th>
             <th className="px-4 py-3 text-right font-semibold">Fiyat</th>
             <th className="px-4 py-3 text-right font-semibold">Günlük Getiri</th>
             <th className="px-4 py-3 text-right font-semibold">Tedavüldeki Pay</th>
@@ -426,7 +426,7 @@ export function DetailHistoryTable({ rows }: { rows: Fund["sonOtuzIslemGunu"] })
         <tbody className="divide-y divide-slate-100">
           {rows.map((row) => (
             <tr key={`${row.fonKodu}-${row.tarih}`} className="hover:bg-slate-50">
-              <td className="px-4 py-3 font-semibold text-slate-900">
+              <td data-nosnippet="true" className="px-4 py-3 font-semibold text-slate-900">
                 {formatDate(row.tarih)}
               </td>
               <td className="px-4 py-3 text-right text-slate-700">
