@@ -409,7 +409,7 @@ export function ManagerTable({ managers }: { managers: ManagerTableItem[] }) {
 
 export function DetailHistoryTable({ rows }: { rows: Fund["sonOtuzIslemGunu"] }) {
   return (
-    <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
+    <div data-nosnippet="true" className="overflow-x-auto rounded-2xl border border-slate-200 bg-white shadow-sm">
       <table className="w-full min-w-[1080px] text-sm">
         <thead className="bg-slate-100 text-left text-slate-700">
           <tr>

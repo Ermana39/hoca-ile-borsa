@@ -24,6 +24,9 @@ import {
 import { sitemapteIndexlenebilirStatikYolMu } from "@/lib/indexleme-politikasi";
 
 const siteUrl = "https://www.hocaileborsa.com";
+const LASTMOD_YOK: unique symbol = Symbol("LASTMOD_YOK");
+
+type RouteLastModified = string | typeof LASTMOD_YOK | undefined;
 
 type PageUpdate = {
   route: string;
@@ -97,16 +100,21 @@ function getRouteSettings(route: string): {
 
 function createEntry(
   route: string,
-  lastModified = getLastModified(route)
+  lastModified: RouteLastModified = getLastModified(route)
 ): MetadataRoute.Sitemap[number] {
   const settings = getRouteSettings(route);
 
-  return {
+  const entry: MetadataRoute.Sitemap[number] = {
     url: `${siteUrl}${route === "/" ? "" : route}`,
-    lastModified,
     changeFrequency: settings.changeFrequency,
     priority: settings.priority,
   };
+
+  if (lastModified !== LASTMOD_YOK) {
+    entry.lastModified = lastModified ?? getLastModified(route);
+  }
+
+  return entry;
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -152,12 +160,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     route,
     lastModified: fonData.sonIslemTarihi ?? pageUpdates.generatedAt,
   }));
-  const fonDetailEntries = fonData.fonlar
+  const fonDetailRoutes = fonData.fonlar
     .filter((fon) => fon.aktifMi)
-    .map((fon) => ({
-      route: `/fonlar/${fon.slug}`,
-      lastModified: fon.tarih,
-    }));
+    .map((fon) => `/fonlar/${fon.slug}`);
   const yoneticiEntries = managerData.yoneticiler.map((yonetici) => ({
     route: `/fonlar/yoneticiler/${yonetici.slug}`,
     lastModified: managerData.sonIslemTarihi ?? fonData.sonIslemTarihi ?? pageUpdates.generatedAt,
@@ -181,7 +186,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     (kategori) => `/haberler/kategori/${kategori.slug}`
   );
 
-  const routeEntries = new Map<string, string | undefined>();
+  const routeEntries = new Map<string, RouteLastModified>();
 
   for (const route of [
     "/rehberler",
@@ -234,12 +239,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     routeEntries.set(entry.route, entry.lastModified);
   }
 
-  for (const entry of [
-    ...fonPlatformRoutes,
-    ...fonDetailEntries,
-    ...yoneticiEntries,
-  ]) {
+  for (const entry of [...fonPlatformRoutes, ...yoneticiEntries]) {
     routeEntries.set(entry.route, entry.lastModified);
+  }
+
+  for (const route of fonDetailRoutes) {
+    routeEntries.set(route, LASTMOD_YOK);
   }
 
   return Array.from(routeEntries.entries())

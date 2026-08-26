@@ -160,18 +160,6 @@ export default async function FonDetayPage({
         category: fund.kategori,
       },
     },
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: faqItems.map((item) => ({
-        "@type": "Question",
-        name: item.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: item.answer,
-        },
-      })),
-    },
   ];
 
   return (
@@ -260,7 +248,7 @@ export default async function FonDetayPage({
           <RiskReturnAnalysis analysis={detail.riskAnalizi} fund={fund} />
         </section>
 
-        <section>
+        <section data-nosnippet="true">
           <h2 className="mb-3 text-xl font-bold text-slate-950">
             Son 30 İşlem Günü
           </h2>
@@ -299,7 +287,7 @@ export default async function FonDetayPage({
             </div>
           </div>
 
-          <div className="mt-10 border-t border-slate-200 pt-8">
+          <div className="mt-10 border-t border-slate-200 pt-8" data-nosnippet="true">
             <h2 className="text-xl font-bold text-slate-950">
               {fund.kod} Fonu Hakkında Sık Sorulan Sorular
             </h2>
