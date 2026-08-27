@@ -556,13 +556,7 @@ export default function HalkaArzTavanSerisiPage() {
             </div>
           </div>
 
-          <div className="mb-4 rounded-2xl border border-sky-200 bg-sky-50 px-4 py-3 text-xs font-semibold leading-6 text-sky-900 md:text-sm">
-            Tablodaki “Güncel Fiyat” alanı, gün içi anlık fiyatı değil; gün sonunda
-            güncellenen kapanış fiyatını ifade eder. BIST karşılaştırmasının başlangıcı
-            günlük özet arşivinden veya kayıtlı tarihsel kapanıştan alınır.
-          </div>
-
-          <div className="max-h-[calc(100vh-11rem)] overflow-x-auto overflow-y-auto rounded-2xl border border-slate-200 bg-white [scrollbar-width:thin]">
+          <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white [scrollbar-width:thin] xl:overflow-x-visible">
             <table className="min-w-[1080px] w-full table-fixed border-collapse text-center text-xs font-bold text-slate-700">
               <colgroup>
                 <col className="w-[8%]" />
@@ -578,36 +572,36 @@ export default function HalkaArzTavanSerisiPage() {
               </colgroup>
               <thead>
                 <tr>
-                  <th className="sticky top-0 z-20 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-[52px] z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     HİSSE
                   </th>
-                  <th className="sticky top-0 z-20 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-[52px] z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     İŞLEM TARİHİ
                   </th>
-                  <th className="sticky top-0 z-20 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-[52px] z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     KATILIMCI SAYISI
                   </th>
-                  <th className="sticky top-0 z-20 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-[52px] z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     DAĞITIM ŞEKLİ
                   </th>
-                  <th className="sticky top-0 z-20 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-[52px] z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     ARZ FİYATI
                   </th>
-                  <th className="sticky top-0 z-20 border border-slate-700 bg-slate-900 px-1 py-2.5 leading-tight text-white">
+                  <th className="sticky top-[52px] z-30 border border-slate-700 bg-slate-900 px-1 py-2.5 leading-tight text-white">
                     <span className="block">GÜN SONU</span>
                     <span className="block">KAPANIŞ</span>
                     <span className="block">FİYATI</span>
                   </th>
-                  <th className="sticky top-0 z-20 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-[52px] z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     MARJ
                   </th>
-                  <th className="sticky top-0 z-20 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-[52px] z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     BIST 100 GETİRİSİ
                   </th>
-                  <th className="sticky top-0 z-20 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-[52px] z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     BIST 100&apos;E GÖRE FARK
                   </th>
-                  <th className="sticky top-0 z-20 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-[52px] z-30 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     KONSORSİYUM
                   </th>
                 </tr>
