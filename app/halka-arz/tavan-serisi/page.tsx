@@ -17,7 +17,7 @@ const title = "2026 Halka Arz Tavan Serisi: Güncel Performans Takibi";
 const description =
   "2026 halka arzlarının gerçekleşen tavan serisi ve performans tablosu: arz fiyatı, gün sonu kapanışı, getiri, marj ve BIST 100 karşılaştırması.";
 
-const tavanSerisiKapanisTarihi = "2026-08-26";
+const tavanSerisiKapanisTarihi = "2026-08-27";
 
 type TavanSerisiKaydi = HalkaArzSonucu & {
   kapanisTarihi?: string;
@@ -51,37 +51,37 @@ export const metadata: Metadata = {
 };
 
 const guncelHalkaArzKapanislari: Record<string, string> = {
-  KPEKS: "137.50",
-  TKNKA: "137.20",
-  VEYAS: "138.00",
-  CITAS: "117.60",
-  QUICK: "69.45",
-  KARCL: "119.30",
-  MASFN: "42.36",
-  ALBTN: "33.28",
-  METEN: "22.78",
-  SARAE: "88.50",
-  SSAAT: "37.50",
-  ISVEA: "84.20",
+  KPEKS: "151.20",
+  TKNKA: "150.90",
+  VEYAS: "141.70",
+  CITAS: "129.30",
+  QUICK: "70.05",
+  KARCL: "131.20",
+  MASFN: "42.46",
+  ALBTN: "34.02",
+  METEN: "23.28",
+  SARAE: "93.85",
+  SSAAT: "37.48",
+  ISVEA: "87.70",
   EKIM: "19.58",
-  GOLDA: "13.02",
-  ORZAX: "99.50",
-  SOHOE: "10.96",
-  BETAE: "96.90",
-  EKDMR: "48.80",
-  AAGYO: "13.10",
-  MCARD: "156.90",
-  LXGYO: "10.99",
-  GENKM: "10.38",
-  SVGYO: "17.30",
-  EMPAE: "70.15",
-  ATATR: "15.74",
-  BESTE: "33.20",
-  AKHAN: "40.26",
-  NETCD: "127.80",
-  UCAYM: "25.82",
-  ZGYO: "30.02",
-  FRMPL: "35.20",
+  GOLDA: "12.95",
+  ORZAX: "96.45",
+  SOHOE: "10.97",
+  BETAE: "98.05",
+  EKDMR: "47.02",
+  AAGYO: "13.13",
+  MCARD: "172.50",
+  LXGYO: "10.80",
+  GENKM: "10.43",
+  SVGYO: "17.80",
+  EMPAE: "73.40",
+  ATATR: "16.10",
+  BESTE: "33.24",
+  AKHAN: "40.40",
+  NETCD: "133.30",
+  UCAYM: "26.24",
+  ZGYO: "30.18",
+  FRMPL: "33.98",
   MEYSU: "11.89",
   ARFYE: "21.46",
 };
@@ -92,9 +92,9 @@ const kpeksHalkaArzVerisi: TavanSerisiKaydi = {
   katilimciSayisi: "518.750",
   dagitimSekli: "BİREYSELE %50",
   arzFiyati: "94.00",
-  guncelFiyat: "137.50",
+  guncelFiyat: "151.20",
   konsorsiyum: "TSKB, YATIRIM FİNANSMAN, ZİRAAT",
-  kapanisTarihi: "2026-08-26",
+  kapanisTarihi: "2026-08-27",
 };
 
 const tknkaHalkaArzVerisi: TavanSerisiKaydi = {
@@ -103,9 +103,9 @@ const tknkaHalkaArzVerisi: TavanSerisiKaydi = {
   katilimciSayisi: "493.220",
   dagitimSekli: "BİREYSELE %40",
   arzFiyati: "85.40",
-  guncelFiyat: "137.20",
+  guncelFiyat: "150.90",
   konsorsiyum: "TERA",
-  kapanisTarihi: "2026-08-26",
+  kapanisTarihi: "2026-08-27",
 };
 
 const veyasHalkaArzVerisi: TavanSerisiKaydi = {
@@ -114,9 +114,9 @@ const veyasHalkaArzVerisi: TavanSerisiKaydi = {
   katilimciSayisi: "365.280",
   dagitimSekli: "BİREYSELE %45",
   arzFiyati: "136.00",
-  guncelFiyat: "138.00",
+  guncelFiyat: "141.70",
   konsorsiyum: "HALK, VAKIF, ZİRAAT",
-  kapanisTarihi: "2026-08-26",
+  kapanisTarihi: "2026-08-27",
 };
 
 const citasHalkaArzVerisi = {
@@ -125,7 +125,7 @@ const citasHalkaArzVerisi = {
   katilimciSayisi: "556.728",
   dagitimSekli: "BİREYSELE %40",
   arzFiyati: "73.70",
-  guncelFiyat: "117.60",
+  guncelFiyat: "129.30",
   konsorsiyum: "TERA",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -135,7 +135,7 @@ const quickHalkaArzVerisi = {
   katilimciSayisi: "961.387",
   dagitimSekli: "BİREYSELE %60",
   arzFiyati: "76.60",
-  guncelFiyat: "69.45",
+  guncelFiyat: "70.05",
   konsorsiyum: "GARANTİ",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -145,7 +145,7 @@ const karclHalkaArzVerisi = {
   katilimciSayisi: "814.853",
   dagitimSekli: "BİREYSELE %40",
   arzFiyati: "35.00",
-  guncelFiyat: "119.30",
+  guncelFiyat: "131.20",
   konsorsiyum: "A1 CAPİTAL, VAKIF, ZİRAAT",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -155,7 +155,7 @@ const masfnHalkaArzVerisi = {
   katilimciSayisi: "1.093.898",
   dagitimSekli: "BİREYSELE %80",
   arzFiyati: "45.68",
-  guncelFiyat: "42.36",
+  guncelFiyat: "42.46",
   konsorsiyum: "DENİZ",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -165,7 +165,7 @@ const albtnHalkaArzVerisi = {
   katilimciSayisi: "549.211",
   dagitimSekli: "TAMAMEN EŞİT",
   arzFiyati: "38.60",
-  guncelFiyat: "33.28",
+  guncelFiyat: "34.02",
   konsorsiyum: "TACİRLER",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -175,7 +175,7 @@ const metenHalkaArzVerisi = {
   katilimciSayisi: "961.387",
   dagitimSekli: "BİREYSELE %38",
   arzFiyati: "20.00",
-  guncelFiyat: "22.78",
+  guncelFiyat: "23.28",
   konsorsiyum: "İNFO",
 } as (typeof baseHalkaArzVerileri)[number];
 
@@ -562,7 +562,7 @@ export default function HalkaArzTavanSerisiPage() {
             günlük özet arşivinden veya kayıtlı tarihsel kapanıştan alınır.
           </div>
 
-          <div className="overflow-x-auto rounded-2xl border border-slate-200 bg-white">
+          <div className="max-h-[calc(100vh-11rem)] overflow-x-auto overflow-y-auto rounded-2xl border border-slate-200 bg-white [scrollbar-width:thin]">
             <table className="min-w-[1080px] w-full table-fixed border-collapse text-center text-xs font-bold text-slate-700">
               <colgroup>
                 <col className="w-[8%]" />
@@ -578,36 +578,36 @@ export default function HalkaArzTavanSerisiPage() {
               </colgroup>
               <thead>
                 <tr>
-                  <th className="border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-0 z-20 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     HİSSE
                   </th>
-                  <th className="border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-0 z-20 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     İŞLEM TARİHİ
                   </th>
-                  <th className="border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-0 z-20 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     KATILIMCI SAYISI
                   </th>
-                  <th className="border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-0 z-20 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     DAĞITIM ŞEKLİ
                   </th>
-                  <th className="border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-0 z-20 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     ARZ FİYATI
                   </th>
-                  <th className="border border-slate-700 bg-slate-900 px-1 py-2.5 leading-tight text-white">
+                  <th className="sticky top-0 z-20 border border-slate-700 bg-slate-900 px-1 py-2.5 leading-tight text-white">
                     <span className="block">GÜN SONU</span>
                     <span className="block">KAPANIŞ</span>
                     <span className="block">FİYATI</span>
                   </th>
-                  <th className="border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-0 z-20 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     MARJ
                   </th>
-                  <th className="border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-0 z-20 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     BIST 100 GETİRİSİ
                   </th>
-                  <th className="border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-0 z-20 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     BIST 100&apos;E GÖRE FARK
                   </th>
-                  <th className="border border-slate-700 bg-slate-900 px-2 py-3 text-white">
+                  <th className="sticky top-0 z-20 border border-slate-700 bg-slate-900 px-2 py-3 text-white">
                     KONSORSİYUM
                   </th>
                 </tr>

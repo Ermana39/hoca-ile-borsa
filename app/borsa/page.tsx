@@ -32,13 +32,6 @@ const analizKutulari = [
       "Borsa, halka arz, teknik analiz ve finans başlıklarında hazırlanan eğitim içeriklerine ulaşabilirsiniz.",
   },
   {
-    title: "Formasyonlar",
-    href: "/borsa/formasyonlar",
-    icon: "formasyonlar" as CategoryIconName,
-    description:
-      "Grafik formasyonlarına göre öne çıkan hisseleri liste halinde inceleyerek teknik görünümü takip edebilirsiniz.",
-  },
-  {
     title: "Geri Alım Programları",
     href: "/borsa/geri-alim-programlari",
     icon: "geri-alim-programlari" as CategoryIconName,
