@@ -11,6 +11,21 @@ const kaynaklar = {
     href: "https://borsaistanbul.com/piyasalar/pay-piyasasi",
     text: "Pay piyasası işleyişi, pazar yapısı, fiyat oluşumu ve işlem yöntemleri için resmi Borsa İstanbul sayfası.",
   },
+  bistTakas: {
+    title: "Borsa İstanbul Takas Esasları",
+    href: "https://www.borsaistanbul.com/piyasalar/pay-piyasasi/takas-esaslari",
+    text: "Pay piyasasında nakit ve kıymet takasının T+2 esasına göre yürütüldüğünü açıklayan resmi kaynak.",
+  },
+  bistPaySss: {
+    title: "Borsa İstanbul Pay Piyasası SSS",
+    href: "https://www.borsaistanbul.com/sss/pay-piyasasi",
+    text: "Fiyat-zaman önceliği, sürekli işlem, tek fiyat, brüt takas ve emir sınırlamaları gibi temel işlem kuralları.",
+  },
+  bistSatisYontemleri: {
+    title: "Borsa İstanbul Satış Yöntemleri",
+    href: "https://www.borsaistanbul.com/sirketler/halka-arz-ve-borsada-islem-gorme/satis-yontemleri",
+    text: "Halka arzlarda talep toplama, borsada satış, dağıtım ve satış süresi gibi başlıklar için resmi Borsa İstanbul kaynağı.",
+  },
   bistEndeks: {
     title: "Borsa İstanbul Endeksler",
     href: "https://borsaistanbul.com/endeksler/bist-pay",
@@ -35,6 +50,26 @@ const kaynaklar = {
     title: "Merkezi Kayıt Kuruluşu",
     href: "https://www.mkk.com.tr/",
     text: "Kaydi saklama, yatırımcı bilgileri, hak kullanımları ve sermaye piyasası kayıt süreçleri için resmi kaynak.",
+  },
+  isbankHisse: {
+    title: "İş Bankası Hisse Senedi Bilgilendirmesi",
+    href: "https://www.isbank.com.tr/hisse-senedi",
+    text: "Hisse senedi alış ve satış bedellerinin işlemden sonraki ikinci iş günü yatırım hesabına geçtiğini anlatan banka bilgilendirmesi.",
+  },
+  yapiKrediHalkaArz: {
+    title: "Yapı Kredi Halka Arz Bilgilendirmesi",
+    href: "https://www.yapikredi.com.tr/bireysel-bankacilik/yatirim-urunleri/hisse-senetleri/hisse-senedi-halka-arz",
+    text: "Halka arz sonuçları, karşılanmayan talep tutarının iadesi ve borsadan satış yöntemiyle katılım konularını açıklayan kaynak.",
+  },
+  garantiYatirimHalkaArz: {
+    title: "Garanti BBVA Yatırım Sıkça Sorulan Sorular",
+    href: "https://www.garantibbvayatirim.com.tr/iletisim/sikca-sorulan-sorular",
+    text: "Halka arz sonrası kalan bakiye iadesi ve borsadan satış yönteminde T+2 uygulaması hakkında yatırımcı bilgilendirmesi.",
+  },
+  spkUsulsuzHalkaArz: {
+    title: "SPK Usulsüz Halka Arzlar",
+    href: "https://spk.gov.tr/yatirimcilar/usulsuz-halka-arzlar",
+    text: "İzahname onayı, yetkili süreçler ve usulsüz halka arzların yatırımcı açısından sonuçları hakkında resmi SPK açıklaması.",
   },
 } as const;
 
@@ -124,6 +159,340 @@ function buildRehber(spec: EkRehberSpec): RehberMakaleData {
 
 const specs: EkRehberSpec[] = [
   {
+    slug: "hisse-sattim-para-ne-zaman-hesabima-gecer",
+    title: "Hisse Sattım, Para Ne Zaman Hesabıma Geçer?",
+    breadcrumb: "Hisse Satışı Para Ne Zaman Geçer",
+    description:
+      "Hisse sattıktan sonra para ne zaman hesaba geçer, T+1 ve T+2 ne demek, para ne zaman çekilebilir ve bankaya aktarılabilir?",
+    category: "Borsa İşlemleri",
+    intro:
+      "Hisse satan yatırımcıların en çok karıştırdığı nokta, satış tutarının ekranda görünmesi ile paranın çekilebilir hale gelmesinin aynı şey olmamasıdır.",
+    definition:
+      "Borsa İstanbul pay piyasasında hisse satışının nakit takası T+2 esasına göre işler. Yani satıştan doğan tutar, işlem gününü izleyen ikinci iş gününde takas tamamlanınca çekilebilir hale gelir.",
+    whyMatters:
+      "Bu ayrımı bilmek nakit planı için önemlidir. Satıştan gelen para aracı kurum ekranında T+1 veya bekleyen takas olarak görünebilir; fakat banka hesabına aktarma genellikle T+2 takas tamamlandıktan sonra yapılabilir.",
+    howToRead: [
+      "T günü, satış emrinin borsada gerçekleştiği gündür. Para aynı gün kesinleşmiş nakit gibi bankaya çekilemez.",
+      "T+1, işlemden sonraki ilk iş günüdür. Birçok aracı kurum bu bakiyeyi yeni hisse alımında kullandırabilir; çekilebilir bakiye olmayabilir.",
+      "T+2, işlemden sonraki ikinci iş günüdür. Takas tamamlanınca satış tutarı çekilebilir hale gelir; hafta sonu ve resmi tatiller iş günü sayılmaz.",
+    ],
+    watch: [
+      "Cuma günü yapılan satışta T+2 çoğu durumda salı gününe denk gelir; araya resmi tatil girerse tarih uzar.",
+      "Aynı gün başka alış-satış yaptıysanız aracı kurum netleştirme yapabilir.",
+      "Brüt takas veya özel işlem kuralları varsa bakiye kullanımı normalden farklı olabilir.",
+      "Banka transfer saati, EFT/FAST limiti ve aracı kurum operasyon saati ayrıca kontrol edilmelidir.",
+    ],
+    example:
+      "Pazartesi günü hisse sattıysanız salı T+1, çarşamba T+2 olur. Resmi tatil yoksa para çarşamba günü çekilebilir bakiye tarafına geçer.",
+    checkSource:
+      "Takas tarihi için Borsa İstanbul takas esasları, aracı kurum ekranındaki çekilebilir bakiye ve yatırım hesabı hareketleri birlikte kontrol edilmelidir.",
+    commonMistake:
+      "En sık hata, satış tutarı portföy ekranında görünür görünmez paranın bankaya aktarılabileceğini düşünmektir. Görünen bakiye ile çekilebilir bakiye farklı olabilir.",
+    sourceKeys: ["bistTakas", "isbankHisse", "mkk"],
+  },
+  {
+    slug: "halka-arz-hissesi-ilk-gun-satilir-mi",
+    title: "Halka Arz Hissesi İlk Gün Satılır mı?",
+    breadcrumb: "Halka Arz İlk Gün Satılır mı",
+    description:
+      "Halka arz hissesi ilk işlem gününde satılır mı, tavan açarsa satış gerçekleşir mi, ilk gün satmanın avantajları ve riskleri nelerdir?",
+    category: "Halka Arz",
+    intro:
+      "Halka arz hissesi ilk işlem gününde satılabilir; asıl soru bunun yatırımcının planına, hissenin işlem durumuna ve piyasa koşullarına uyup uymadığıdır.",
+    definition:
+      "Halka arz payları yatırım hesabına geçip Borsa İstanbul'da işlem görmeye başladıktan sonra teknik olarak satılabilir. Ancak hissenin tavanda, tabanda veya dalgalı işlem görmesi satışın fiyatını ve gerçekleşme hızını etkiler.",
+    whyMatters:
+      "İlk gün fiyat hareketi çoğu halka arzda sert olabilir. Erken satış hızlı kar alma sağlayabilir; fakat güçlü talep devam ederse yatırımcı daha sonraki yükselişi kaçırabilir.",
+    howToRead: [
+      "Hisse tavandaysa satış emri genellikle alıcı beklediği için daha kolay gerçekleşebilir; fakat sattıktan sonra yeniden almak zorlaşabilir.",
+      "Hisse tavan açmaz veya hızla tavan bozarsa ilk gün satış kararı daha çok hacim, emir dengesi ve zarar kes planıyla ilgilidir.",
+      "İlk gün kararında halka arz fiyatına göre getiri, portföy büyüklüğü ve şirketin temel görünümü birlikte okunmalıdır.",
+    ],
+    watch: [
+      "Sadece ilk gün tavan beklentisiyle plansız işlem yapılmamalıdır.",
+      "Satış sonrası T+2 takas süreci nakdin bankaya geçişini etkiler.",
+      "İlk gün yüksek hacim her zaman kalıcı alım iştahı anlamına gelmez.",
+      "Az lot geldiği için riskin önemsiz olduğu düşünülmemelidir.",
+      "Şirketin izahnamesi ve fiyat tespit raporu satış kararından bağımsız olarak okunmalıdır.",
+    ],
+    example:
+      "10 TL halka arz fiyatıyla gelen hisse ilk gün 11 TL tavana oturursa yatırımcı karla satabilir. Ancak ertesi gün tavan devam ederse satılan pozisyonu aynı fiyattan yerine koymak mümkün olmayabilir.",
+    checkSource:
+      "İlk işlem günü, işlem kodu ve pazar bilgisi KAP ve Borsa İstanbul duyurularından; anlık emir dengesi ise aracı kurum ekranından kontrol edilmelidir.",
+    commonMistake:
+      "En sık hata, ilk gün satmayı herkese uygun tek doğru strateji gibi görmektir. Kısa vadeli kar alma ile uzun vadeli yatırım aynı plan değildir.",
+    sourceKeys: ["bistPay", "bistPaySss", "kap"],
+  },
+  {
+    slug: "halka-arz-tavan-bozunca-satilir-mi",
+    title: "Halka Arz Tavan Bozunca Satılır mı?",
+    breadcrumb: "Halka Arz Tavan Bozunca Satılır mı",
+    description:
+      "Halka arz tavan bozunca satmak gerekir mi, tavan bozma ne anlama gelir, satış kararı verirken hangi verilere bakılmalıdır?",
+    category: "Halka Arz",
+    intro:
+      "Tavan bozma, halka arz yatırımcılarının en çok izlediği kısa vadeli sinyallerden biridir. Fakat tek başına otomatik satış kuralı değildir.",
+    definition:
+      "Halka arz hissesi tavan bozunca, tavan fiyatta bekleyen alış emirlerinin satışları tamamen karşılayamadığı veya alış emirlerinin geri çekildiği anlaşılır. Bu durum talebin zayıfladığını gösterebilir.",
+    whyMatters:
+      "Tavan bozulması kar satışlarının başladığına, alıcı iştahının azaldığına veya sadece gün içi geçici dalgalanmaya işaret edebilir. Doğru yorum için işlem hacmi ve kapanış davranışı birlikte izlenmelidir.",
+    howToRead: [
+      "Tavan kısa süre bozulup tekrar güçlü alışla tavana dönüyorsa talep tamamen bitmiş sayılmaz.",
+      "Tavan bozulduktan sonra hacim artıyor ve fiyat tavanın altında kalıyorsa satış baskısı güçleniyor olabilir.",
+      "Halka arz fiyatına göre oluşan getiri çok yükseldiyse tavan bozma sonrası risk-getiri dengesi değişmiş olabilir.",
+    ],
+    watch: [
+      "Panikle piyasa emri göndermek beklenenden düşük fiyattan satışa yol açabilir.",
+      "Tavan bozma her zaman seri bitti demek değildir; kapanış ve sonraki seans önemlidir.",
+      "Bekleyen alış lotu, işlem hacmi ve fiyatın gün içi toparlanması birlikte izlenmelidir.",
+      "Kısa vadeli işlem planı yoksa karar duygusal hale gelebilir.",
+      "Genel endeks düşüşü halka arz tavanını da bozabilir.",
+    ],
+    example:
+      "Hisse üç gün tavan gittikten sonra dördüncü gün tavanı bozup yüksek hacimle tavan altında kapanıyorsa kısa vadeli yatırımcı için risk artar. Aynı gün tekrar tavana dönmesi ise farklı okunabilir.",
+    checkSource:
+      "Tavan hareketi aracı kurum derinlik ve işlem hacmi ekranından; önemli şirket haberleri ise KAP açıklamalarından kontrol edilmelidir.",
+    commonMistake:
+      "En sık hata, tavan bozulduğu an bunun kesin düşüş başlangıcı olduğunu sanmaktır. Bazen geçici kar satışı olur, bazen de seri gerçekten zayıflar.",
+    sourceKeys: ["bistPay", "bistPaySss", "kap"],
+  },
+  {
+    slug: "tavanda-bekleyen-lot-azalirsa-ne-olur",
+    title: "Tavanda Bekleyen Lot Azalırsa Ne Olur?",
+    breadcrumb: "Tavanda Bekleyen Lot Azalırsa",
+    description:
+      "Tavanda bekleyen lot azalırsa ne anlama gelir, tavan bozma riski nasıl okunur, bekleyen alış lotu yatırımcıya ne söyler?",
+    category: "Borsa İşlemleri",
+    intro:
+      "Tavanda bekleyen lot, yatırımcıların yoğun baktığı bir göstergedir. Ancak bu sayı canlı emir dengesini gösterir; kalıcı talep garantisi değildir.",
+    definition:
+      "Tavanda bekleyen lot azalırsa, tavan fiyattaki alış emirlerinin bir kısmı iptal edilmiş veya gelen satışlarla karşılanmış olabilir. Bu da tavanın zayıflama ihtimalini artırabilir.",
+    whyMatters:
+      "Bekleyen lotun azalması özellikle halka arz ve sert yükselen hisselerde önemlidir. Çünkü tavanın korunması, tavan fiyatında yeterli alıcının kalmasına bağlıdır.",
+    howToRead: [
+      "Azalma satış gelmesinden kaynaklanıyorsa işlem hacmi yükselir; emir iptalinden kaynaklanıyorsa hacim aynı ölçüde artmayabilir.",
+      "Bekleyen lot azalırken fiyat hâlâ tavandaysa tavan korunuyor olabilir; ancak tampon güç zayıflamıştır.",
+      "Azalma hızlanıyor, işlem hacmi artıyor ve alış tarafı yenilenmiyorsa tavan bozma riski yükselir.",
+    ],
+    watch: [
+      "Bekleyen lot tek başına alım veya satım kararı değildir.",
+      "Emirler gün içinde iptal edilebilir; sabah görünen yüksek sıra kapanışa kadar kalmayabilir.",
+      "Hacim, fiyatın tavan altında kalma süresi ve kapanış birlikte izlenmelidir.",
+      "Düşük fiili dolaşımlı hisselerde lot görüntüsü daha hızlı değişebilir.",
+      "Sosyal medyada paylaşılan eski ekran görüntüleriyle karar verilmemelidir.",
+    ],
+    example:
+      "Tavanda 20 milyon lot beklerken bu sayı kısa sürede 3 milyona düşüyor ve aynı anda yüksek hacim oluşuyorsa satışların alışları tükettiği düşünülebilir. Fakat emir iptali de aynı görüntüyü yaratabilir.",
+    checkSource:
+      "Bekleyen lot ve derinlik bilgisi aracı kurum ekranından; tavan-taban fiyat limitleri ve emir önceliği Borsa İstanbul kaynaklarından kontrol edilmelidir.",
+    commonMistake:
+      "En sık hata, bekleyen lot azaldığı anda kesin satış yapılması gerektiğini düşünmektir. Önemli olan azalmanın nedeni, hızı ve fiyat davranışıdır.",
+    sourceKeys: ["bistPay", "bistPaySss"],
+  },
+  {
+    slug: "halka-arzda-dagitilacak-lot-nasil-hesaplanir",
+    title: "Halka Arzda Dağıtılacak Lot Nasıl Hesaplanır?",
+    breadcrumb: "Halka Arz Dağıtılacak Lot Hesabı",
+    description:
+      "Halka arzda dağıtılacak lot nasıl hesaplanır, bireysel tahsisat, katılımcı sayısı, eşit dağıtım ve oransal dağıtım formülleri nelerdir?",
+    category: "Halka Arz",
+    intro:
+      "Halka arzda dağıtılacak lot hesabı, yatırımcının yaklaşık kaç lot alabileceğini görmek için yapılan pratik bir tahmindir. Kesin sonuç ise dağıtım açıklanınca belli olur.",
+    definition:
+      "Dağıtılacak lot hesabında önce yatırımcı grubuna ayrılan pay miktarı bulunur. Eşit dağıtımda bu miktar geçerli talep giren yatırımcı sayısına bölünür; oransal dağıtımda ise talep tutarı ve karşılanma oranı belirleyici olur.",
+    whyMatters:
+      "Bu hesap, halka arza ne kadar nakit ayıracağını ve dağıtım sonrası portföyde ne büyüklükte pozisyon oluşacağını planlamak isteyen yatırımcı için faydalıdır.",
+    howToRead: [
+      "Eşit dağıtım tahmini: bireysel yatırımcıya ayrılan lot / beklenen katılımcı sayısı.",
+      "Oransal dağıtım tahmini: talep edilen tutar x ilgili yatırımcı grubunun karşılanma oranı.",
+      "Karma dağıtımda her yatırımcı grubu ayrı hesaplanır; bireysel, yüksek başvuru ve kurumsal tahsisatlar karıştırılmamalıdır.",
+    ],
+    watch: [
+      "Toplam lot yerine yalnızca bireysel yatırımcıya ayrılan lot kullanılmalıdır.",
+      "Katılımcı sayısı talep toplama bitmeden kesin bilinmez.",
+      "Birden fazla yatırımcı grubu varsa her grubun dağıtım kuralı farklı olabilir.",
+      "Ek satış ve tahsisat kaydırması nihai sonucu değiştirebilir.",
+      "Arz fiyatı düşük diye daha çok değer oluşacağı varsayılmamalıdır.",
+    ],
+    example:
+      "100 milyon lotluk halka arzın yüzde 70'i bireysel yatırımcıya ayrılmışsa bireysel havuz 70 milyon lot olur. 1 milyon geçerli yatırımcı varsa kabaca kişi başı 70 lot tahmin edilir.",
+    checkSource:
+      "Toplam lot, tahsisat oranı ve dağıtım yöntemi izahname, satış duyurusu, KAP açıklaması ve aracı kurum halka arz ekranından kontrol edilmelidir.",
+    commonMistake:
+      "En sık hata, halka arz edilen toplam lotu doğrudan tüm yatırımcı sayısına bölmektir. Bireysel yatırımcıya ayrılan tahsisat ayrı hesaplanmalıdır.",
+    sourceKeys: ["bistSatisYontemleri", "kap", "spk", "yapiKrediHalkaArz"],
+  },
+  {
+    slug: "halka-arzda-fazla-para-yatirmak-fazla-lot-verir-mi",
+    title: "Halka Arzda Fazla Para Yatırmak Fazla Lot Verir mi?",
+    breadcrumb: "Halka Arzda Fazla Para",
+    description:
+      "Halka arzda fazla para yatırmak fazla lot getirir mi, eşit dağıtım ve oransal dağıtımda fazla talep nasıl sonuçlanır?",
+    category: "Halka Arz",
+    intro:
+      "Halka arzda fazla para yatırmanın etkisi dağıtım yöntemine göre değişir. Eşit dağıtım, oransal dağıtım ve borsadan satış aynı mantıkla çalışmaz.",
+    definition:
+      "Eşit dağıtımda fazla para yatırmak çoğu zaman belirli bir noktadan sonra daha fazla lot getirmez; çünkü dağıtım kişi bazlı dengelenir. Oransal dağıtımda ise daha yüksek talep daha fazla lot alma ihtimalini artırabilir.",
+    whyMatters:
+      "Yatırımcı dağıtım yöntemini bilmeden fazla nakit bloke ederse, gereksiz para bağlayabilir veya beklediği lotu alamayınca yanlış sonuç çıkarabilir.",
+    howToRead: [
+      "Eşit dağıtımda asıl belirleyici geçerli yatırımcı sayısı ve bireysel havuzdur; çok yüksek talep girmenin etkisi sınırlı olabilir.",
+      "Oransal dağıtımda talep büyüklüğü önemlidir; fakat talep çarpanı yüksekse karşılanma oranı düşük kalabilir.",
+      "Borsadan satış yönteminde fiyat-zaman önceliği ve emir kuralları ayrıca önem kazanır.",
+    ],
+    watch: [
+      "Dağıtım yöntemi satış duyurusundan okunmadan talep tutarı belirlenmemelidir.",
+      "Karşılanmayan tutar iade edilir; ancak iade zamanı yönteme ve aracı kuruma göre değişebilir.",
+      "Aynı halka arza birden fazla kurumdan talep girmenin sonucu mükerrer talep kurallarına bağlıdır.",
+      "Fazla para yatırmak halka arz sonrası getiri garantisi sağlamaz.",
+      "Nakit ihtiyacı olan para gereksiz yere bloke edilmemelidir.",
+    ],
+    example:
+      "Eşit dağıtımda kişi başı 30 lot düşmesi beklenen bir halka arzda 300 lotluk talep girmek, her zaman 300 lot alma anlamına gelmez. Oransal dağıtımda ise 300 lot talep daha yüksek pay alma ihtimali yaratabilir.",
+    checkSource:
+      "Dağıtım yöntemi, mükerrer talep kuralı, bloke ve iade esasları KAP duyurusu, izahname ve aracı kurum halka arz bilgilendirmesinden kontrol edilmelidir.",
+    commonMistake:
+      "En sık hata, her halka arzda fazla para yatırmanın otomatik olarak fazla lot getireceğini sanmaktır. Cevap dağıtım yöntemine göre değişir.",
+    sourceKeys: ["bistSatisYontemleri", "yapiKrediHalkaArz", "garantiYatirimHalkaArz"],
+  },
+  {
+    slug: "t1-bakiye-ile-hisse-alinir-mi",
+    title: "T+1 Bakiye ile Hisse Alınır mı?",
+    breadcrumb: "T+1 Bakiye ile Hisse Alınır mı",
+    description:
+      "T+1 bakiye ile hisse alınır mı, T+1 bakiye çekilebilir mi, T+2 takas ve aracı kurum kuralları yatırımcıyı nasıl etkiler?",
+    category: "Borsa İşlemleri",
+    intro:
+      "T+1 bakiye, hisse satışından sonra ekranda görülen ama henüz T+2 takası tamamlanmamış bakiyeyi ifade eder. Kullanımı yatırımcıların en çok sorduğu konulardan biridir.",
+    definition:
+      "Birçok aracı kurumda T+1 bakiye ile yeniden hisse alımı yapılabilir; ancak bu bakiye genellikle bankaya çekilebilir nakit değildir. Çekilebilir hale gelmesi için T+2 takasının tamamlanması beklenir.",
+    whyMatters:
+      "T+1 bakiyenin nerede kullanılabileceğini bilmek, aynı hafta içinde yeni işlem yapmak isteyen yatırımcı için önemlidir. Yanlış bakiye yorumu, nakit planında aksama yaratabilir.",
+    howToRead: [
+      "T+1, satıştan sonraki ilk iş gününü gösterir; para henüz nihai takasta olmayabilir.",
+      "Hisse alımında kullanılabilir görünen tutar ile bankaya aktarılabilir tutar ayrı satırlarda izlenmelidir.",
+      "Brüt takas, kredili işlem kısıtı, halka arz talebi veya kurum politikası T+1 kullanımını sınırlayabilir.",
+    ],
+    watch: [
+      "T+1 bakiye çekilebilir bakiye sanılmamalıdır.",
+      "T+1 ile alınan hissenin takası yeni işlem takvimiyle ayrıca netleşir.",
+      "Her aracı kurumun ekran adı ve kullanım kuralı farklı olabilir.",
+      "Resmi tatiller T+1 ve T+2 günlerini ileri atar.",
+      "Brüt takastaki hisselerde bakiye kullanımı normal hisselerden farklılaşabilir.",
+    ],
+    example:
+      "Pazartesi hisse sattıysanız salı T+1 bakiyeniz bazı kurumlarda yeni hisse alımı için kullanılabilir; fakat parayı bankaya çekmek için çarşamba T+2 beklenir.",
+    checkSource:
+      "Bakiye türleri aracı kurum hesap ekranından; takas günü Borsa İstanbul takas esaslarından; işlem kısıtları ise Borsa İstanbul ve KAP duyurularından kontrol edilmelidir.",
+    commonMistake:
+      "En sık hata, T+1 bakiyeyi tamamen serbest nakit gibi düşünmektir. Hisse alımında kullanılabilir görünmesi, bankaya çekilebilir olduğu anlamına gelmez.",
+    sourceKeys: ["bistTakas", "isbankHisse", "bistPaySss"],
+  },
+  {
+    slug: "t2-bakiye-bankaya-ne-zaman-gecer",
+    title: "T+2 Bakiye Bankaya Ne Zaman Geçer?",
+    breadcrumb: "T+2 Bakiye Bankaya Ne Zaman Geçer",
+    description:
+      "T+2 bakiye bankaya ne zaman geçer, satıştan gelen para ne zaman çekilir, hafta sonu ve resmi tatil takası nasıl etkiler?",
+    category: "Borsa İşlemleri",
+    intro:
+      "T+2 bakiye, hisse satışından doğan paranın takas tamamlandıktan sonra çekilebilir hale gelmesini anlatır. Bankaya geçiş saati aracı kurum ve transfer kanalına göre değişebilir.",
+    definition:
+      "Hisse satışından gelen para, işlem gününü izleyen ikinci iş gününde T+2 takası tamamlanınca çekilebilir bakiyeye dönüşür. Bu aşamadan sonra yatırım hesabından banka hesabına aktarım yapılabilir.",
+    whyMatters:
+      "Ödeme, kredi, virman veya yeni nakit ihtiyacı planlayan yatırımcı için T+2 tarihini doğru hesaplamak gerekir. Hafta sonu ve resmi tatiller iki takvim günü değil, iki iş günü kuralını önemli hale getirir.",
+    howToRead: [
+      "Pazartesi satışta T+2 çoğu durumda çarşamba; cuma satışta T+2 çoğu durumda salıdır.",
+      "T+2 geldiğinde para yatırım hesabında çekilebilir olabilir; banka hesabına geçiş EFT/FAST ve kurum saatlerine göre değişebilir.",
+      "Aynı hesapta başka alış-satışlar varsa kurum netleştirme yapabilir ve çekilebilir tutar beklenenden farklı görünebilir.",
+    ],
+    watch: [
+      "Resmi tatil ve yarım günlerde takas takvimi değişebilir.",
+      "Banka hesabına aktarım için aracı kurumun para çekme saatleri kontrol edilmelidir.",
+      "T+2 bakiyesi yatırım hesabına geçer; bankaya otomatik geçmeyebilir.",
+      "Halka arz iadesi ile hisse satış takası aynı süreç değildir.",
+      "Borç, komisyon veya mahsuplaşma çekilebilir tutarı azaltabilir.",
+    ],
+    example:
+      "Perşembe hisse sattıysanız cuma T+1, pazartesi T+2 olur. Pazartesi resmi tatilse T+2 salıya kayabilir.",
+    checkSource:
+      "Takas tarihi Borsa İstanbul takas esaslarından, para çekme ve banka aktarım zamanı ise yatırım hesabınızın bağlı olduğu aracı kurumdan kontrol edilmelidir.",
+    commonMistake:
+      "En sık hata, T+2 bakiyenin bankaya otomatik geçtiğini sanmaktır. Çoğu durumda para önce yatırım hesabında çekilebilir olur, sonra yatırımcı transfer talimatı verir.",
+    sourceKeys: ["bistTakas", "isbankHisse", "garantiYatirimHalkaArz"],
+  },
+  {
+    slug: "halka-arz-iptal-edilirse-para-ne-zaman-geri-gelir",
+    title: "Halka Arz İptal Edilirse Para Ne Zaman Geri Gelir?",
+    breadcrumb: "Halka Arz İptalinde Para İadesi",
+    description:
+      "Halka arz iptal edilirse para ne zaman geri gelir, bloke ne zaman kalkar, karşılanmayan talep ve iptal iadesi nasıl takip edilir?",
+    category: "Halka Arz",
+    intro:
+      "Halka arzda para iadesi, iptal nedeni ve satış yöntemine göre değişebilir. Normal halka arz iptali ile usulsüz para toplama süreçleri aynı şey değildir.",
+    definition:
+      "Yetkili kurumlar üzerinden yapılan bir halka arz iptal edilirse veya talebin bir kısmı karşılanmazsa, bloke edilen ya da tahsil edilen tutarın ilgili aracı kurum hesabına iade edilmesi beklenir. Süre halka arzın yöntemi ve duyurudaki operasyona göre değişir.",
+    whyMatters:
+      "Yatırımcı açısından önemli olan paranın nerede beklediği, ne zaman serbest kalacağı ve bu sürede başka işlem için kullanılıp kullanılamayacağıdır.",
+    howToRead: [
+      "Talep toplama yöntemiyle yapılan halka arzlarda karşılanmayan tutar dağıtım sonuçları ve operasyon tamamlandıkça hesaba iade edilir.",
+      "Borsadan satış yönteminde para çoğu zaman bloke edilir; dağıtım kadar tutar kullanılır, kalan blokenin kaldırılması beklenir.",
+      "Halka arz tamamen iptal edilirse aracı kurum, KAP veya şirket duyurusunda belirtilen takvime göre iade sürecini işletir.",
+    ],
+    watch: [
+      "KAP açıklaması ve aracı kurum duyurusu okunmadan kesin iade günü varsayılmamalıdır.",
+      "Nakit iadesi ile varlık blokajının kaldırılması farklı ekranlarda görünebilir.",
+      "Banka hesabına aktarım için ayrıca para çekme talimatı gerekebilir.",
+      "Usulsüz halka arz iddialarında iade süreci normal halka arz operasyonundan çok daha farklı ve hukuki olabilir.",
+      "Birden fazla kurumdan talep girildiyse mükerrer talep kuralları iade tutarını etkileyebilir.",
+    ],
+    example:
+      "Talep toplama sonrası size 20 lot düştüyse, 100 lot için yatırdığınız paranın kullanılmayan kısmı dağıtım operasyonu tamamlandıktan sonra yatırım hesabınıza iade edilir. İptalde ise duyuruda belirtilen iade takvimi takip edilir.",
+    checkSource:
+      "İptal, dağıtım ve iade duyuruları KAP, aracı kurum halka arz sayfası ve şirket duyurularından kontrol edilmelidir. Usulsüz halka arzlarda SPK duyuruları ayrıca izlenmelidir.",
+    commonMistake:
+      "En sık hata, her iadenin aynı gün ve aynı yöntemle geleceğini düşünmektir. Halka arzın talep toplama mı borsadan satış mı olduğu iade sürecini değiştirir.",
+    sourceKeys: [
+      "bistSatisYontemleri",
+      "yapiKrediHalkaArz",
+      "garantiYatirimHalkaArz",
+      "spkUsulsuzHalkaArz",
+    ],
+  },
+  {
+    slug: "halka-arzda-esit-dagitim-nasil-hesaplanir",
+    title: "Halka Arzda Eşit Dağıtım Nasıl Hesaplanır?",
+    breadcrumb: "Halka Arz Eşit Dağıtım Hesabı",
+    description:
+      "Halka arzda eşit dağıtım nasıl hesaplanır, kişi başı lot hesabı nasıl yapılır, bireysel tahsisat ve katılımcı sayısı ne işe yarar?",
+    category: "Halka Arz",
+    intro:
+      "Eşit dağıtım hesabı, halka arzlarda kişi başına yaklaşık kaç lot düşebileceğini görmek için kullanılan en pratik hesaplardan biridir.",
+    definition:
+      "Eşit dağıtımda önce ilgili yatırımcı grubuna ayrılan lot miktarı bulunur. Bu lot, geçerli talep giren yatırımcı sayısına bölünerek kişi başı yaklaşık lot tahmini yapılır.",
+    whyMatters:
+      "Bu hesap yatırımcıya ne kadar para ayırması gerektiği, tahmini pozisyon büyüklüğü ve fazla talep girmenin anlamı hakkında fikir verir.",
+    howToRead: [
+      "Formül: kişi başı yaklaşık lot = bireysel yatırımcıya ayrılan lot / geçerli yatırımcı sayısı.",
+      "Talep ettiğiniz lot bu tahmini miktarın altındaysa, dağıtımda talebiniz kadar almanız mümkün olabilir.",
+      "Küsurat, minimum talep, mükerrer talep ve özel dağıtım kuralları nedeniyle kesin sonuç formülden farklılaşabilir.",
+    ],
+    watch: [
+      "Toplam halka arz lotu ile bireysel yatırımcıya ayrılan lot aynı değildir.",
+      "Katılımcı sayısı arttıkça kişi başı lot düşer.",
+      "Yüksek başvuru, kurumsal ve çalışan tahsisatı ayrı hesaplanmalıdır.",
+      "Eşit dağıtım her yatırımcıya kesin aynı lot gelir demek değildir.",
+      "Dağıtım sonucu açıklanmadan kesin lot söylenemez.",
+    ],
+    example:
+      "80 milyon lotluk halka arzın yüzde 60'ı bireysel yatırımcıya ayrılmışsa bireysel havuz 48 milyon lot olur. 800 bin yatırımcı talep girerse kişi başı yaklaşık 60 lot tahmin edilir.",
+    checkSource:
+      "Bireysel tahsisat, toplam lot, dağıtım yöntemi ve satış esasları izahname, KAP satış duyurusu ve aracı kurum halka arz ekranından kontrol edilmelidir.",
+    commonMistake:
+      "En sık hata, eşit dağıtımda çok para yatıran herkesin daha çok lot alacağını düşünmektir. Eşit dağıtımda kişi bazlı dengeleme öne çıkar.",
+    sourceKeys: ["bistSatisYontemleri", "kap", "yapiKrediHalkaArz"],
+  },
+  {
     slug: "borsa-istanbul-islem-saatleri",
     title: "Borsa İstanbul İşlem Saatleri Rehberi",
     breadcrumb: "Borsa İstanbul İşlem Saatleri",
@@ -189,13 +558,13 @@ const specs: EkRehberSpec[] = [
   },
   {
     slug: "taban-hisse-nasil-satilir",
-    title: "Taban Hisse Nasıl Satılır?",
-    breadcrumb: "Taban Hisse Nasıl Satılır",
+    title: "Taban Olan Hisse Nasıl Satılır?",
+    breadcrumb: "Taban Olan Hisse Nasıl Satılır",
     description:
-      "Taban olan hissede satış emri, sıra bekleme, gerçekleşme ihtimali ve panik kararları azaltmak için izlenecek temel adımlar.",
+      "Taban olan hisse nasıl satılır, taban fiyattan satış emri nasıl verilir, sıra bekleme ve gerçekleşme ihtimali nasıl yorumlanır?",
     category: "Borsa İşlemleri",
     intro:
-      "Taban hisse satışı, yatırımcıların en stresli işlem senaryolarından biridir. Satış emri verilebilir; fakat alıcı gelmediği sürece emrin gerçekleşmesi garanti değildir.",
+      "Taban olan hisseyi satmak teknik olarak satış emri vermekle başlar; fakat alıcı gelmediği sürece emrin hemen gerçekleşmesi beklenmemelidir.",
     definition:
       "Taban hisse, günlük fiyat sınırının altına kadar gerilemiş ve satış tarafında yoğun emir birikmiş hissedir. Satmak isteyen yatırımcı taban fiyattan satış emri verebilir; gerçekleşme, alıcıların gelip gelmemesine bağlıdır.",
     whyMatters:
@@ -217,7 +586,7 @@ const specs: EkRehberSpec[] = [
       "Taban hareketinin nedeni için KAP açıklamaları, Borsa İstanbul duyuruları, tedbir kararları ve şirket haber akışı kontrol edilmelidir.",
     commonMistake:
       "En sık hata, taban fiyatı görüldüğünde satış emrinin kesin gerçekleşeceğini sanmaktır. Taban fiyatta alıcı yoksa emir sırada bekler.",
-    sourceKeys: ["bistPay", "kap"],
+    sourceKeys: ["bistPaySss", "bistPay", "kap"],
   },
   {
     slug: "tek-fiyat-islem-yontemi-nedir",

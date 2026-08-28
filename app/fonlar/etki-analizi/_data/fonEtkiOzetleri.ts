@@ -27,12 +27,14 @@ export type FonEtkiOzeti = {
   kaldiracli: boolean;
   profilOzeti: string;
   sonGuncellemeIso: string;
+  sonGuncellemeZamaniIso: string;
 };
 
 export type FonEtkiSayfaVerisi = FonEtkiOzeti & {
   rows: FonEtkiSatiri[];
   tarihselVeriler: FonTarihselVeri[];
   sonGuncelleme: string;
+  sonGuncellemeZamani: string;
 };
 
 type FonHamVerisi = {
@@ -48,6 +50,9 @@ type FonEtkiDosyasi = {
   kaynakDosya: string;
   sonGuncelleme: string;
   fonlar: Record<string, FonHamVerisi>;
+  tarihselSenkron?: {
+    generatedAt?: string;
+  };
 };
 
 const veri = fonEtkiHamVeri as FonEtkiDosyasi;
@@ -117,6 +122,18 @@ function tarihEtiketi(iso: string) {
   }).format(new Date(`${iso}T00:00:00Z`));
 }
 
+function tarihSaatEtiketi(iso: string) {
+  return new Intl.DateTimeFormat("tr-TR", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    hour: "2-digit",
+    minute: "2-digit",
+    timeZone: "Europe/Istanbul",
+    timeZoneName: "short",
+  }).format(new Date(iso));
+}
+
 export const fonEtkiSonGuncelleme = {
   label: tarihEtiketi(veri.sonGuncelleme),
   iso: veri.sonGuncelleme,
@@ -131,6 +148,8 @@ export const fonEtkiOzetleri: FonEtkiOzeti[] = fonProfilleri.map((profil) => {
   if (!sonGuncellemeIso) {
     throw new Error(`Fon etki tarihsel verisi bulunamadı: ${profil.kod}`);
   }
+  const sonGuncellemeZamaniIso =
+    veri.tarihselSenkron?.generatedAt ?? `${sonGuncellemeIso}T00:00:00Z`;
 
   return {
     ...profil,
@@ -138,6 +157,7 @@ export const fonEtkiOzetleri: FonEtkiOzeti[] = fonProfilleri.map((profil) => {
     toplamEtki: hamVeri.toplamEtki,
     kaldiracli: hamVeri.kaldiracli,
     sonGuncellemeIso,
+    sonGuncellemeZamaniIso,
   };
 });
 
@@ -156,6 +176,7 @@ export function fonEtkiSayfaVerisiGetir(slug: string): FonEtkiSayfaVerisi {
     rows: hamVeri.portfoy,
     tarihselVeriler: hamVeri.tarihsel,
     sonGuncelleme: tarihEtiketi(ozet.sonGuncellemeIso),
+    sonGuncellemeZamani: tarihSaatEtiketi(ozet.sonGuncellemeZamaniIso),
   };
 }
 
@@ -167,9 +188,9 @@ export function fonEtkiYuzdeMetni(value: number): string {
 export function fonEtkiMetadataOlustur(slug: string): Metadata {
   const fon = fonEtkiOzetiGetir(slug);
   const canonical = `${siteUrl}/fonlar/etki-analizi/${fon.slug}`;
-  const title = `${fon.kod} Fonu Etki Analizi: Yarınki Fon Fiyatı Tahmini`;
+  const title = `${fon.kod} Fon Etki Analizi ve Günlük Tahmin`;
   const description = seoAciklamasi(
-    `${tarihEtiketi(fon.sonGuncellemeIso)} kapanışına göre ${fon.kod} fonunun tahmini etkisi ${fonEtkiYuzdeMetni(fon.toplamEtki)}. Portföy dağılımı, hisse katkıları, para girişi ve yatırımcı değişimini inceleyin.`
+    `${tarihEtiketi(fon.sonGuncellemeIso)} ${fon.kod} günlük tahmini ${fonEtkiYuzdeMetni(fon.toplamEtki)}. Bir sonraki fon fiyatına yönelik portföy etkisini inceleyin; kesin getiri değildir.`
   );
 
   return {
@@ -177,18 +198,17 @@ export function fonEtkiMetadataOlustur(slug: string): Metadata {
     description,
     alternates: { canonical },
     keywords: [
-      `${fon.kod} fon`,
-      `${fon.kod} fon tahmini`,
-      `${fon.kod} fon yorum`,
-      `${fon.kod} TEFAS`,
-      "fon etki analizi",
+      `${fon.kod} tahmin`,
+      `${fon.kod} günlük tahmin`,
+      `${fon.kod} gün sonu tahmini`,
+      `${fon.kod} yarın ne olur`,
     ],
     openGraph: {
       title,
       description,
       url: canonical,
       type: "article",
-      modifiedTime: fon.sonGuncellemeIso,
+      modifiedTime: fon.sonGuncellemeZamaniIso,
     },
     twitter: {
       card: "summary_large_image",

@@ -27,6 +27,8 @@ export type FonEtkiSeoPageProps = {
   toplamEtki: number;
   kaldiracli: boolean;
   sonGuncelleme: string;
+  sonGuncellemeZamani: string;
+  sonGuncellemeZamaniIso: string;
   tarihselVeriler: FonTarihselVeri[];
 };
 
@@ -228,42 +230,71 @@ function jsonLdScript(data: unknown) {
   return JSON.stringify(data).replace(/</g, "\\u003c");
 }
 
-const TR_AYLAR: Record<string, string> = {
-  ocak: "01",
-  şubat: "02",
-  mart: "03",
-  nisan: "04",
-  mayıs: "05",
-  haziran: "06",
-  temmuz: "07",
-  ağustos: "08",
-  eylül: "09",
-  ekim: "10",
-  kasım: "11",
-  aralık: "12",
+type EtkiFaqItem = {
+  question: string;
+  answer: string;
 };
 
-// "18 Haziran 2026" -> "2026-06-18" (ISO 8601). Schema.org tarih alanları ISO
-// 8601 bekler; çözümlenemeyen girdi aynen döndürülür.
-function toIsoDate(tarih: string): string {
-  const parts = tarih.trim().split(/\s+/);
-  if (parts.length !== 3) return tarih;
-  const [gun, ay, yil] = parts;
-  const ayNo = TR_AYLAR[ay.toLocaleLowerCase("tr")];
-  if (!ayNo || !/^\d{4}$/.test(yil)) return tarih;
-  return `${yil}-${ayNo}-${gun.padStart(2, "0")}`;
+function etkiFaqItemsOlustur({
+  kod,
+  toplamEtki,
+  sonGuncelleme,
+}: Pick<
+  FonEtkiSeoPageProps,
+  "kod" | "toplamEtki" | "sonGuncelleme"
+>): EtkiFaqItem[] {
+  const etki = signedPercent(toplamEtki);
+  const yon =
+    toplamEtki > 0
+      ? "yukarı yönlü"
+      : toplamEtki < 0
+        ? "aşağı yönlü"
+        : "nötr";
+  const tahminAciklamasi = `${sonGuncelleme} tarihli portföy verileri ve varlıkların gün içi fiyat değişimleriyle hesaplanan ${kod} tahmini ${etki} seviyesindedir. Bu değer kesin fon getirisi değildir.`;
+
+  return [
+    {
+      question: `${kod} tahmini bugün ne kadar?`,
+      answer: tahminAciklamasi,
+    },
+    {
+      question: `${kod} günlük tahmin nedir?`,
+      answer: `${kod} günlük tahmini, açıklanacak bir sonraki fon fiyatına yönelik hesaplanan ${etki} portföy etkisidir. Hesap ${sonGuncelleme} verisine aittir ve kesinleşmiş fon fiyatı değildir.`,
+    },
+    {
+      question: `${kod} gün sonu tahmini kaç?`,
+      answer: `${sonGuncelleme} kapanış verilerine göre ${kod} gün sonu tahmini ${etki} seviyesindedir. Fon giderleri, nakit ve türev pozisyonlar nedeniyle açıklanan gerçek getiri farklı olabilir.`,
+    },
+    {
+      question: `${kod} yarın ne olur?`,
+      answer: `Kesin olarak bilinemez. Mevcut hesaplamada ${kod} için bir sonraki açıklanacak fon fiyatına yönelik etki ${etki} ve yön ${yon} görünmektedir; bu bir getiri garantisi değildir.`,
+    },
+    {
+      question: `${kod} fonu bugün yükselir mi?`,
+      answer: `Kesin olarak söylenemez. İzlenen portföy bölümünün hesaplanan etkisi ${etki} ile ${yon} olsa da ${kod} fonunun kesin fiyatı TEFAS'ta ilan edildiğinde belli olur.`,
+    },
+    {
+      question: `${kod} tahmini nasıl hesaplanıyor?`,
+      answer: `${kod} tahmini, her varlığın fon içindeki ağırlığının günlük kapanış değişimiyle çarpılması ve bulunan etkilerin toplanmasıyla hesaplanır. Nakit, gider ve bildirilmeyen pozisyonlar tahmin ile gerçek getiri arasında fark oluşturabilir.`,
+    },
+  ];
 }
 
 function buildJsonLd({
   kod,
   fonAdi,
-  profilOzeti,
   slug,
   rows,
   toplamEtki,
   sonGuncelleme,
+  sonGuncellemeZamaniIso,
 }: FonEtkiSeoPageProps) {
   const pageUrl = `${siteUrl}/fonlar/etki-analizi/${slug}`;
+  const faqItems = etkiFaqItemsOlustur({
+    kod,
+    toplamEtki,
+    sonGuncelleme,
+  });
 
   return {
     "@context": "https://schema.org",
@@ -305,7 +336,7 @@ function buildJsonLd({
         description: `${fonAdi} portföyündeki hisselerin günlük kapanış marjlarına göre fonun ertesi gün açıklanacak fiyatına tahmini etkisi.`,
         url: pageUrl,
         inLanguage: "tr-TR",
-        dateModified: toIsoDate(sonGuncelleme),
+        dateModified: sonGuncellemeZamaniIso,
         license: `${siteUrl}/kullanim-sartlari`,
         creator: {
           "@id": `${siteUrl}/#organization`,
@@ -357,40 +388,14 @@ function buildJsonLd({
       {
         "@type": "FAQPage",
         "@id": `${pageUrl}#faq`,
-        mainEntity: [
-          {
-            "@type": "Question",
-            name: `${kod} fonu nedir?`,
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: profilOzeti,
-            },
+        mainEntity: faqItems.map((item) => ({
+          "@type": "Question",
+          name: item.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: item.answer,
           },
-          {
-            "@type": "Question",
-            name: `${kod} fonu için tahmini kapanış etkisi nedir?`,
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: `${kod} fonu için bu sayfada hesaplanan toplam tahmini kapanış etkisi ${signedPercent(toplamEtki)} seviyesindedir.`,
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Fon kapanış etki analizi nasıl hesaplanır?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Her hissenin fon içindeki ağırlığı, aynı hissenin günlük kapanış marjı ile çarpılır. Hisse bazlı etkiler toplanarak fonun ertesi gün açıklanacak fiyatına tahmini etki bulunur.",
-            },
-          },
-          {
-            "@type": "Question",
-            name: "Bu hesaplama kesin fon getirisi midir?",
-            acceptedAnswer: {
-              "@type": "Answer",
-              text: "Hayır. Hesaplama tahmini bir göstergedir. Nakit pozisyon, vadeli işlem pozisyonları, fon giderleri ve portföy ağırlıklarındaki değişimler nedeniyle gerçek fon getirisi farklı olabilir.",
-            },
-          },
-        ],
+        })),
       },
     ],
   };
@@ -408,6 +413,7 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
     toplamEtki,
     kaldiracli,
     sonGuncelleme,
+    sonGuncellemeZamani,
   } = props;
   const fonDetayi = getFundDetail(slug);
   const fonGecmisi = getFundHistory(slug);
@@ -439,6 +445,7 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
   const yatirimciPozitif = degisimVerisi.yatirimciSayisi.degisim >= 0;
   const fonDegerPozitif = degisimVerisi.fonToplamDeger.degisim >= 0;
   const paraAkisiPozitif = degisimVerisi.paraGirisiCikisi >= 0;
+  const faqItems = etkiFaqItemsOlustur({ kod, toplamEtki, sonGuncelleme });
 
   return (
     <main className="min-h-screen bg-[#f8fafc] px-4 py-6 md:px-6">
@@ -467,16 +474,27 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
           <span className="font-medium text-slate-700">{kod}</span>
         </nav>
 
+        <p className="mb-2 text-sm font-semibold text-blue-700">
+          {sonGuncelleme} {kod} Günlük Tahmini
+        </p>
         <h1 className="mb-2 text-2xl font-bold text-slate-900 md:text-3xl">
-          {kod} Fonu Etki Analizi: Yarınki Fon Fiyatı Tahmini
+          {kod} Fon Etki Analizi ve Günlük Tahmin
         </h1>
 
         <p className="mb-5 max-w-3xl text-base leading-7 text-slate-600">
-          {kod} ({fonAdi}) portföyünde yer alan hisselerin son açıklanan fon
-          dağılımındaki ağırlıkları ile günlük kapanış marjları kullanılarak,
-          fonun ertesi gün TEFAS&apos;ta ilan edilecek fiyatına olan tahmini
-          katkısı hesaplanmıştır.
+          {kod} için mevcut portföy verileri ve varlıkların gün içi fiyat
+          değişimleri üzerinden hesaplanan tahmini etki {signedPercent(toplamEtki)}
+          {" "}seviyesindedir. Bu hesap, TEFAS&apos;ta açıklanacak bir sonraki fon
+          fiyatına yönelik göstergedir; kesinleşmiş fon getirisi değildir.
         </p>
+
+        <Link
+          href={`/fonlar/${slug}`}
+          prefetch={false}
+          className="mb-6 inline-flex text-sm font-semibold text-blue-700 hover:underline"
+        >
+          {kod} Fonunun Getiri, Risk, Portföy ve Fon Bilgileri
+        </Link>
 
         <section className="mb-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm md:p-6">
           <h2 className="text-xl font-bold text-slate-900">
@@ -513,7 +531,9 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
 
         <section className="mb-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm">
           <div className="mb-4 flex flex-col gap-1 border-b border-slate-100 pb-4">
-            <p className="text-sm font-medium text-slate-500">Güncel özet</p>
+            <h2 className="text-lg font-bold text-slate-900">
+              {sonGuncelleme} {kod} Günlük Tahmini
+            </h2>
             <p className="text-3xl font-bold text-slate-950">
               {signedPercent(toplamEtki)}
             </p>
@@ -564,9 +584,9 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
           ) : null}
 
           <p className="mt-4 text-sm leading-6 text-slate-500">
-            Son güncelleme: {sonGuncelleme}. Veri yorumu; fon portföy ağırlıkları,
-            BIST kapanış marjları ve TEFAS&apos;ta açıklanacak fon fiyatı
-            ilişkisi dikkate alınarak hazırlanır.
+            Veri tarihi: {sonGuncelleme}. Son yenileme: {sonGuncellemeZamani}.
+            Veri yorumu; fon portföy ağırlıkları, BIST kapanış marjları ve
+            TEFAS&apos;ta açıklanacak fon fiyatı ilişkisi dikkate alınarak hazırlanır.
           </p>
         </section>
 
@@ -801,57 +821,16 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
 
         <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-5 md:p-7">
           <h2 className="text-xl font-bold text-zinc-900 md:text-2xl">
-            {kod} Fonu Hakkında Sık Sorulan Sorular
+            {kod} Günlük Tahmin Hakkında Sık Sorulan Sorular
           </h2>
 
           <div className="mt-5 space-y-5 text-sm leading-7 text-slate-600 md:text-base">
-            <div>
-              <h3 className="font-bold text-slate-900">
-                {kod} fonu için tahmini kapanış etkisi nedir?
-              </h3>
-              <p>
-                Bu sayfadaki güncel hesaplamaya göre {kod} fonunun ertesi gün
-                açıklanacak fiyatına tahmini toplam etki {signedPercent(toplamEtki)}{" "}
-                seviyesindedir.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-bold text-slate-900">
-                {kod} fonunu en çok hangi hisse etkiledi?
-              </h3>
-              <p>
-                {mostPositive && mostNegative
-                  ? `Pozitif tarafta ${mostPositive.sembol} hissesi ${signedPercent(mostPositive.etki, 4)} etkiyle öne çıkarken, negatif tarafta ${mostNegative.sembol} hissesi ${signedPercent(mostNegative.etki, 4)} etkiyle fon performansını aşağı çeken ana kalem olmuştur.`
-                  : mostNegative
-                    ? `Pozitif katkı oluşmazken, ${mostNegative.sembol} hissesi ${signedPercent(mostNegative.etki, 4)} ile aşağı yönlü etkinin ana kalemi olmuştur.`
-                    : mostPositive
-                      ? `Negatif katkı oluşmazken, ${mostPositive.sembol} hissesi ${signedPercent(mostPositive.etki, 4)} ile yukarı yönlü etkinin ana kalemi olmuştur.`
-                      : "İzlenen pozisyonlarda pozitif veya negatif katkı oluşmamıştır."}
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-bold text-slate-900">
-                Bu hesaplama kesin fon getirisi midir?
-              </h3>
-              <p>
-                Hayır. Bu çalışma portföydeki hisselerin kapanış marjlarına göre
-                tahmini etkiyi gösterir. Fonun gerçek günlük getirisi, portföydeki
-                güncel ağırlıklar ve hisse dışı varlıklar nedeniyle farklılaşabilir.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-bold text-slate-900">
-                {kod} fonu etki analizi ne zaman kullanılmalı?
-              </h3>
-              <p>
-                BIST kapanışı sonrası ve TEFAS fon fiyatı ilan edilmeden önce,
-                fonun ertesi günkü fiyat hareketi hakkında ön fikir almak için
-                kullanılabilir.
-              </p>
-            </div>
+            {faqItems.map((item) => (
+              <div key={item.question}>
+                <h3 className="font-bold text-slate-900">{item.question}</h3>
+                <p>{item.answer}</p>
+              </div>
+            ))}
           </div>
         </section>
 

@@ -23,27 +23,104 @@ import {
   getFundDetail,
   type Fund,
 } from "@/lib/fon-platform";
+import {
+  etkiAnaliziFonKodlari,
+  getFundInvestorInfo,
+  katilimUygunluguEtiketi,
+  nitelikliYatirimciEtiketi,
+  type FundInvestorInfo,
+} from "@/lib/fon-investor-info";
 import { seoAciklamasi } from "@/lib/seo-metadata";
 
 export function generateStaticParams() {
   return getAllFundSlugs().map((kod) => ({ kod }));
 }
 
-function gecerliMetrik(value: string) {
-  return value !== "-";
-}
-
-function fonAramaAciklamasi(fund: Fund) {
-  const fonBuyuklugu = formatCompactTL(fund.fonToplamDeger);
-  const ikinciCumle = gecerliMetrik(fonBuyuklugu)
-    ? `Fon büyüklüğü ${fonBuyuklugu}; risk ve benzer fonları karşılaştırın.`
-    : "Risk seviyesi, dönemsel getiri ve benzer fonları karşılaştırın.";
+function fonAramaAciklamasi(fund: Fund, info: FundInvestorInfo) {
+  const nitelikliBilgisi =
+    info.nitelikliYatirimci === true
+      ? "Yalnız nitelikli yatırımcılara açıktır."
+      : info.nitelikliYatirimci === false
+        ? "Nitelikli yatırımcı şartı yoktur."
+        : "Yatırımcı koşulu için resmi sınıflandırma bekleniyor.";
+  const stopajBilgisi = info.vergilendirme.stopajOrani
+    ? `Stopaj: ${info.vergilendirme.stopajOrani}.`
+    : "Stopaj oranı alış tarihi ve fon sınıfına göre kontrol edilmelidir.";
 
   return seoAciklamasi(
-    `${fund.kod} fonu için fiyat, getiri, para akışı ve yatırımcı değişimini tek ekranda inceleyin. ${ikinciCumle}`,
+    `${fund.kod} fonunun getirisi, risk değeri, büyüklüğü ve yöneticisini inceleyin. ${nitelikliBilgisi} ${stopajBilgisi}`,
     "",
     158
   );
+}
+
+type FundFaqItem = {
+  question: string;
+  answer: string;
+};
+
+function yatirimciFaqItemsOlustur(
+  fund: Fund,
+  info: FundInvestorInfo
+): FundFaqItem[] {
+  const items: FundFaqItem[] = [];
+
+  if (info.nitelikliYatirimci !== null) {
+    const nitelikliCevabi =
+      info.nitelikliYatirimci === true
+        ? `Evet, ${fund.kod} fonunda nitelikli yatırımcı şartı vardır. Serbest şemsiye fonların katılma payları yalnızca nitelikli yatırımcılara satılabilir.`
+        : `Hayır, ${fund.kod} fonunda nitelikli yatırımcı şartı yoktur. Fonun satın alınabilmesi dağıtım kuruluşunun işlem kanallarına ve alım satım esaslarına bağlıdır.`;
+
+    items.push(
+      {
+        question: `${fund.kod} Fonu Nitelikli Yatırımcı Fonu mu?`,
+        answer: nitelikliCevabi,
+      },
+      {
+        question: `${fund.kod} fonunu herkes alabilir mi?`,
+        answer:
+          info.nitelikliYatirimci === true
+            ? `Hayır, ${fund.kod} fonunu herkes alamaz. Fon yalnızca nitelikli yatırımcı olarak tanımlanan yatırımcılara satılabilir.`
+            : info.satisKisitlamasi === "ozel-fon"
+              ? `Hayır, ${fund.kod} için nitelikli yatırımcı şartı olmasa da özel fon niteliği nedeniyle paylar önceden belirlenmiş yatırımcılara tahsis edilebilir.`
+              : `Evet, ${fund.kod} için nitelikli yatırımcı olma şartı yoktur. Bununla birlikte fonun bankanızda veya yatırım kuruluşunuzda işleme açık olması gerekir.`,
+      },
+      {
+        question: `${fund.kod} fonu nitelikli yatırımcı şartı var mı?`,
+        answer: nitelikliCevabi,
+      }
+    );
+  }
+
+  if (info.vergilendirme.durum !== "bilinmiyor") {
+    const oran = info.vergilendirme.stopajOrani;
+    items.push(
+      {
+        question: `${fund.kod} fonu vergili mi?`,
+        answer: `${fund.kod} fonundan elde edilen kazanç vergi düzenlemesine tabidir. ${info.vergilendirme.aciklama}`,
+      },
+      {
+        question: `${fund.kod} fonunda stopaj var mı?`,
+        answer:
+          oran === "%0"
+            ? `Hayır, Türkiye'de yerleşik gerçek kişiler için ${fund.kod} fon kazancındaki stopaj kesintisi %0 oranındadır.`
+            : `Evet, ${fund.kod} fon kazancında koşullara göre stopaj uygulanır. ${info.vergilendirme.aciklama}`,
+      },
+      {
+        question: `${fund.kod} fonu stopaj oranı nedir?`,
+        answer: `${fund.kod} fonu için gösterilebilen güncel oran ${oran}. ${info.vergilendirme.aciklama}`,
+      }
+    );
+  }
+
+  if (info.katilimUygunlugu !== "bilinmiyor") {
+    items.push({
+      question: `${fund.kod} fonu Katılım Endeksi'ne uygun mu?`,
+      answer: `Hayır, fonlar hisse senetleri gibi BIST Katılım Endeksi'ne dahil edilmez. ${info.katilimAciklamasi}`,
+    });
+  }
+
+  return items;
 }
 
 export async function generateMetadata({
@@ -62,9 +139,10 @@ export async function generateMetadata({
   }
 
   const fund = detail.fund;
+  const investorInfo = getFundInvestorInfo(fund);
   const canonical = `https://www.hocaileborsa.com/fonlar/${fund.slug}`;
   const seoTitle = `${fund.kod} Fonu: Getiri, Para Akışı ve Risk Analizi`;
-  const seoDescription = fonAramaAciklamasi(fund);
+  const seoDescription = fonAramaAciklamasi(fund, investorInfo);
 
   return {
     title: { absolute: seoTitle },
@@ -73,10 +151,11 @@ export async function generateMetadata({
       canonical,
     },
     openGraph: {
-      type: "website",
+      type: "article",
       url: canonical,
       title: `${fund.kod} Fonu | ${fund.ad}`,
       description: seoDescription,
+      modifiedTime: fund.tarih,
     },
     twitter: {
       card: "summary",
@@ -97,9 +176,10 @@ export default async function FonDetayPage({
   if (!detail) notFound();
 
   const fund = detail.fund;
+  const investorInfo = getFundInvestorInfo(fund);
   const canonical = `https://www.hocaileborsa.com/fonlar/${fund.slug}`;
   const seoTitle = `${fund.kod} Fonu: Getiri, Para Akışı ve Risk Analizi`;
-  const seoDescription = fonAramaAciklamasi(fund);
+  const seoDescription = fonAramaAciklamasi(fund, investorInfo);
   const riskText =
     typeof fund.riskDegeri === "number"
       ? formatNumber(fund.riskDegeri)
@@ -120,7 +200,7 @@ export default async function FonDetayPage({
     typeof fund.gunlukGetiri === "number" && Number.isFinite(fund.gunlukGetiri)
       ? valueColorClass(fund.gunlukGetiri)
       : "text-slate-700";
-  const faqItems = [
+  const faqItems: FundFaqItem[] = [
     {
       question: `${fund.kod} fonu nedir?`,
       answer: `${fund.ad}, ${fund.kategori} kategorisinde yer alan ve ${fund.yonetici} tarafından yönetilen bir yatırım fonudur.`,
@@ -143,7 +223,9 @@ export default async function FonDetayPage({
       question: `${fund.kod} fonunu kim yönetiyor?`,
       answer: `${fund.kod} fonu ${fund.yonetici} tarafından yönetilmektedir; bu sayfada güncel fiyat, dönemsel getiri, para akışı ve yatırımcı değişimi birlikte izlenebilir.`,
     },
+    ...yatirimciFaqItemsOlustur(fund, investorInfo),
   ];
+  const etkiAnaliziVar = etkiAnaliziFonKodlari.has(fund.kod);
   const structuredData = [
     {
       "@context": "https://schema.org",
@@ -159,6 +241,19 @@ export default async function FonDetayPage({
         identifier: fund.kod,
         category: fund.kategori,
       },
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "@id": `${canonical}#faq`,
+      mainEntity: faqItems.map((item) => ({
+        "@type": "Question",
+        name: item.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: item.answer,
+        },
+      })),
     },
   ];
 
@@ -201,6 +296,14 @@ export default async function FonDetayPage({
                 >
                   {fund.yonetici}
                 </Link>
+                {etkiAnaliziVar ? (
+                  <Link
+                    href={`/fonlar/etki-analizi/${fund.slug}`}
+                    className="rounded-full bg-cyan-50 px-3 py-1 font-semibold text-cyan-800 hover:bg-cyan-100"
+                  >
+                    {fund.kod} Günlük Tahmini ve Etki Analizi
+                  </Link>
+                ) : null}
               </div>
             </div>
             <div className="w-full rounded-2xl border border-slate-200 bg-slate-50 p-4 lg:mt-1 lg:w-auto lg:min-w-[230px] lg:text-right">
@@ -222,6 +325,92 @@ export default async function FonDetayPage({
           <MetricCard label="Fon Toplam Değeri" value={formatCompactTL(fund.fonToplamDeger)} />
           <MetricCard label="Yatırımcı Sayısı" value={formatNumber(fund.kisiSayisi)} />
           <MetricCard label="Tarihsel Gün" value={formatNumber(fund.tarihselGunSayisi)} />
+        </section>
+
+        <section className="mb-8 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
+          <div className="border-b border-slate-200 px-5 py-4 md:px-6">
+            <p className="text-sm font-semibold text-blue-700">Yatırımcı bilgileri</p>
+            <h2 className="mt-1 text-xl font-bold text-slate-950">
+              {fund.kod} Alım Koşulları, Katılım Uygunluğu ve Stopaj
+            </h2>
+          </div>
+          <dl className="grid md:grid-cols-3 md:divide-x md:divide-slate-200">
+            <div className="border-b border-slate-200 p-5 md:border-b-0 md:p-6">
+              <dt className="text-xs font-semibold uppercase text-slate-500">
+                Nitelikli yatırımcı şartı
+              </dt>
+              <dd className="mt-2 text-lg font-bold text-slate-950">
+                {nitelikliYatirimciEtiketi(investorInfo.nitelikliYatirimci)}
+              </dd>
+              <dd className="mt-2 text-sm leading-6 text-slate-600">
+                {investorInfo.nitelikliYatirimciAciklamasi}
+              </dd>
+              <dd className="mt-3 text-xs">
+                <a
+                  href={investorInfo.siniflandirmaKaynagi.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-semibold text-blue-700 hover:underline"
+                >
+                  Kaynak: {investorInfo.siniflandirmaKaynagi.etiket}
+                </a>
+                <span className="text-slate-300"> · </span>
+                <a
+                  href="https://spk.gov.tr/kurumlar/fonlar/yatirim-fonlari/menkul-kiymet-yatirim-fonlari/tanitim-rehberi"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-semibold text-blue-700 hover:underline"
+                >
+                  SPK satış kuralı
+                </a>
+              </dd>
+            </div>
+            <div className="border-b border-slate-200 p-5 md:border-b-0 md:p-6">
+              <dt className="text-xs font-semibold uppercase text-slate-500">
+                Katılım esaslarına uygunluk
+              </dt>
+              <dd className="mt-2 text-lg font-bold text-slate-950">
+                {katilimUygunluguEtiketi(investorInfo.katilimUygunlugu)}
+              </dd>
+              <dd className="mt-2 text-sm leading-6 text-slate-600">
+                {investorInfo.katilimAciklamasi}
+              </dd>
+              <dd className="mt-3 text-xs">
+                <a
+                  href="https://spk.gov.tr/kurumlar/fonlar/yatirim-fonlari/menkul-kiymet-yatirim-fonlari/tanitim-rehberi"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-semibold text-blue-700 hover:underline"
+                >
+                  Kaynak: SPK şemsiye fon tanımları
+                </a>
+              </dd>
+            </div>
+            <div className="p-5 md:p-6">
+              <dt className="text-xs font-semibold uppercase text-slate-500">
+                Vergilendirme / stopaj
+              </dt>
+              <dd className="mt-2 text-lg font-bold text-slate-950">
+                {investorInfo.vergilendirme.stopajOrani ?? "Veri bulunamadı"}
+              </dd>
+              <dd className="mt-2 text-sm leading-6 text-slate-600">
+                {investorInfo.vergilendirme.aciklama}
+              </dd>
+              <dd className="mt-3 text-xs">
+                <a
+                  href={investorInfo.vergilendirme.kaynak.url}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-semibold text-blue-700 hover:underline"
+                >
+                  Kaynak: {investorInfo.vergilendirme.kaynak.etiket}
+                </a>
+                <span className="mt-1 block text-slate-500">
+                  Bilgi tarihi: {investorInfo.vergilendirme.guncellemeTarihi.split("-").reverse().join(".")}
+                </span>
+              </dd>
+            </div>
+          </dl>
         </section>
 
         <section className="mb-8 space-y-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm md:p-6">
@@ -287,7 +476,7 @@ export default async function FonDetayPage({
             </div>
           </div>
 
-          <div className="mt-10 border-t border-slate-200 pt-8" data-nosnippet="true">
+          <div className="mt-10 border-t border-slate-200 pt-8">
             <h2 className="text-xl font-bold text-slate-950">
               {fund.kod} Fonu Hakkında Sık Sorulan Sorular
             </h2>
