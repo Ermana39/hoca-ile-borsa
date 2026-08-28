@@ -7,7 +7,7 @@ import { seoAciklamasi } from "@/lib/seo-metadata";
 
 const canonical = "https://www.hocaileborsa.com/halka-arz/takvim";
 const title =
-  "Halka Arz Takvimi 2026: İNTET 1 Eylül, BKRGY 2 Eylül'de İşlemde";
+  "Halka Arz Takvimi 2026: İNTET 1 Eylül, BKRGY 2 Eylül'de İşleme Başlıyor";
 const description =
   "2026 halka arz takviminde İNTET için 1 Eylül, BKRGY için 2 Eylül işlem başlangıcı ile işlemdeki halka arzları takip edin.";
 const sonGuncellemeIso = "2026-08-28";
@@ -85,7 +85,7 @@ const dagitimSonucuBeklenenTakvimi: TakvimSirketi[] = [];
 
 const talepToplamaTakvimi: TakvimSirketi[] = [];
 
-const islemBaslangiciTakvimi: TakvimSirketi[] = [
+const islemeBaslayacakTakvimi: TakvimSirketi[] = [
   {
     slug: "intetra-teknoloji-ve-bilisim-hizmetleri",
     tarih: "1 Eylül 2026 Salı",
@@ -96,6 +96,9 @@ const islemBaslangiciTakvimi: TakvimSirketi[] = [
     tarih: "2 Eylül 2026 Çarşamba",
     durum: "İşleme başlayacak",
   },
+];
+
+const islemdekiHalkaArzTakvimi: TakvimSirketi[] = [
   {
     slug: "citlekci-magazacilik",
     tarih: "18 Ağustos 2026 Salı",
@@ -118,13 +121,13 @@ const islemBaslangiciTakvimi: TakvimSirketi[] = [
   },
 ];
 
-const izahnameYayiniBeklenenler: IzahnameBekleyenSirket[] = [
-];
+const izahnameYayiniBeklenenler: IzahnameBekleyenSirket[] = [];
 
 const aktifIzahnameSluglari = [
   ...talepToplamaTakvimi.map((item) => item.slug),
   ...dagitimSonucuBeklenenTakvimi.map((item) => item.slug),
-  ...islemBaslangiciTakvimi.map((item) => item.slug),
+  ...islemeBaslayacakTakvimi.map((item) => item.slug),
+  ...islemdekiHalkaArzTakvimi.map((item) => item.slug),
 ];
 
 function takvimSatiri(item: TakvimSirketi): TakvimSatiri | null {
@@ -161,7 +164,13 @@ function talepToplayacakArzlar(): TakvimSatiri[] {
 }
 
 function islemeBaslayacakArzlar(): TakvimSatiri[] {
-  return islemBaslangiciTakvimi
+  return islemeBaslayacakTakvimi
+    .map(takvimSatiri)
+    .filter((x): x is TakvimSatiri => x !== null);
+}
+
+function islemdekiHalkaArzlar(): TakvimSatiri[] {
+  return islemdekiHalkaArzTakvimi
     .map(takvimSatiri)
     .filter((x): x is TakvimSatiri => x !== null);
 }
@@ -176,8 +185,8 @@ export default function HalkaArzTakvimPage() {
   const talepToplayacaklar = talepToplayacakArzlar();
   const dagitimSonucuBeklenenler = dagitimSonucuBeklenenArzlar();
   const islemeBaslayacaklar = islemeBaslayacakArzlar();
+  const islemdekiOlanlar = islemdekiHalkaArzlar();
   const aktifIzahnameler = aktifOnayliIzahnameler();
-  const aktifHisseSayisi = new Set(aktifIzahnameSluglari).size;
   const sonuclananArzlar = halkaArzSonuclari
     .map((item) => ({
       ...item,
@@ -188,6 +197,7 @@ export default function HalkaArzTakvimPage() {
     ...talepToplayacaklar,
     ...dagitimSonucuBeklenenler,
     ...islemeBaslayacaklar,
+    ...islemdekiOlanlar,
   ];
 
   const faqItems = [
@@ -360,7 +370,8 @@ export default function HalkaArzTakvimPage() {
                       },
                     ]
                   : []),
-                { label: "İşlem durumu", href: "#islem-tarihleri" },
+                { label: "İşlem başlangıcı", href: "#islem-tarihleri" },
+                { label: "İşlemde olanlar", href: "#islemde-olanlar" },
                 {
                   label: "Sonuçlanan halka arzlar",
                   href: "#sonuclanan-halka-arzlar",
@@ -389,10 +400,13 @@ export default function HalkaArzTakvimPage() {
               deger: String(dagitimSonucuBeklenenler.length),
             },
             {
-              etiket: "İşlem Takvimi",
+              etiket: "İşleme Başlayacak",
               deger: String(islemeBaslayacaklar.length),
             },
-            { etiket: "Aktif Hisse", deger: String(aktifHisseSayisi) },
+            {
+              etiket: "İşlemde",
+              deger: String(islemdekiOlanlar.length),
+            },
           ].map((k) => (
             <div
               key={k.etiket}
@@ -566,22 +580,17 @@ export default function HalkaArzTakvimPage() {
         >
           <div className="border-b border-slate-200 bg-cyan-50 px-5 py-4">
             <h2 className="text-lg font-bold text-cyan-900 md:text-xl">
-              İşlem Başlangıcı ve İşlemde Olan Halka Arzlar
+              İşleme Başlayacak Halka Arzlar
             </h2>
           </div>
 
-          <div className="overflow-x-auto">
-            <table className="min-w-[900px] w-full border-collapse text-left text-xs md:text-sm">
+          <div>
+            <table className="w-full border-collapse text-left text-xs md:text-sm">
               <thead>
                 <tr className="bg-slate-100 text-slate-600">
                   <th className="px-4 py-3 font-semibold">Hisse</th>
                   <th className="px-4 py-3 font-semibold">Şirket</th>
-                  <th className="px-4 py-3 font-semibold">İşlem Durumu</th>
-                  <th className="px-4 py-3 font-semibold">Arz Fiyatı</th>
-                  <th className="px-4 py-3 font-semibold">Pazar</th>
-                  <th className="px-4 py-3 text-right font-semibold">
-                    İzahname
-                  </th>
+                  <th className="px-4 py-3 font-semibold">İlk İşlem Tarihi</th>
                 </tr>
               </thead>
               <tbody>
@@ -610,26 +619,8 @@ export default function HalkaArzTakvimPage() {
                         {item.sirketAdi}
                       </Link>
                     </td>
-                    <td
-                      className={`px-4 py-3 font-semibold ${
-                        item.durum === "İşlemde"
-                          ? "text-emerald-700"
-                          : "text-cyan-800"
-                      }`}
-                    >
-                      {item.durum} · {item.tarih}
-                    </td>
-                    <td className="px-4 py-3 text-slate-700">{item.fiyat}</td>
-                    <td className="px-4 py-3 text-slate-700">{item.pazar}</td>
-                    <td className="px-4 py-3 text-right">
-                      <Link
-                        href={item.izahnameHref}
-                        prefetch={false}
-                        className="inline-flex items-center gap-1 whitespace-nowrap rounded-md border border-slate-300 bg-white px-3 py-2 font-semibold text-slate-700 transition hover:border-blue-400 hover:text-blue-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-                      >
-                        Onaylı izahname
-                        <span aria-hidden="true">→</span>
-                      </Link>
+                    <td className="px-4 py-3 font-semibold text-cyan-800">
+                      {item.tarih}
                     </td>
                   </tr>
                 ))}
@@ -637,6 +628,37 @@ export default function HalkaArzTakvimPage() {
             </table>
           </div>
         </section>
+
+        {islemdekiOlanlar.length > 0 && (
+          <section
+            id="islemde-olanlar"
+            className="mb-8 scroll-mt-24 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm"
+          >
+            <h2 className="text-lg font-bold text-slate-900 md:text-xl">
+              İşlemde Olanlar
+            </h2>
+            <ul className="mt-4 divide-y divide-slate-200 text-sm">
+              {islemdekiOlanlar.map((item) => (
+                <li
+                  key={item.slug}
+                  className="grid gap-2 py-3 sm:grid-cols-[110px_1fr_auto] sm:items-center"
+                >
+                  <Link
+                    href={item.izahnameHref}
+                    prefetch={false}
+                    className="font-bold text-blue-700 hover:underline"
+                  >
+                    {item.bistKodu}
+                  </Link>
+                  <span className="font-semibold text-slate-800">
+                    {item.sirketAdi}
+                  </span>
+                  <span className="text-slate-500">{item.tarih}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )}
 
         {izahnameYayiniBeklenenler.length > 0 && (
           <section className="mb-8 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm">
@@ -770,8 +792,8 @@ export default function HalkaArzTakvimPage() {
                 Aktif Takvimdeki SPK Onaylı İzahnameler
               </h2>
               <p className="mt-1 text-sm leading-6 text-blue-900/80">
-                Bu bölüm talep toplama takvimine alınan veya işlemde olan
-                halka arzların onaylı izahname sayfalarını gösterir.
+                Bu bölüm işleme başlayacak veya işlemde olan halka arzların
+                onaylı izahname sayfalarını gösterir.
               </p>
             </div>
             <Link
