@@ -6,11 +6,12 @@ import { bekleyenDeger, halkaArzGetir } from "@/lib/halka-arz";
 import { seoAciklamasi } from "@/lib/seo-metadata";
 
 const canonical = "https://www.hocaileborsa.com/halka-arz/takvim";
-const title = "Halka Arz Takvimi 2026: İNTET, BKRGY ve İşlemdeki Arzlar";
+const title =
+  "Halka Arz Takvimi 2026: İNTET 1 Eylül, BKRGY 2 Eylül'de İşlemde";
 const description =
-  "2026 halka arz takviminde BKRGY için 24-25-26 Ağustos, İNTET için 26-27 Ağustos talep toplama tarihleri ile işlemdeki halka arzları takip edin.";
-const sonGuncellemeIso = "2026-08-22";
-const sonGuncellemeMetni = "22 Ağustos 2026";
+  "2026 halka arz takviminde İNTET için 1 Eylül, BKRGY için 2 Eylül işlem başlangıcı ile işlemdeki halka arzları takip edin.";
+const sonGuncellemeIso = "2026-08-28";
+const sonGuncellemeMetni = "28 Ağustos 2026";
 
 export const metadata: Metadata = {
   title: { absolute: title },
@@ -29,6 +30,10 @@ export const metadata: Metadata = {
     "BKRGY talep toplama",
     "İNTET halka arz",
     "İNTET talep toplama",
+    "İNTET işlem tarihi",
+    "BKRGY işlem tarihi",
+    "1 Eylül 2026 halka arz",
+    "2 Eylül 2026 halka arz",
     "24 Ağustos 2026 halka arz",
     "26 Ağustos 2026 halka arz",
     "CITAS halka arz",
@@ -78,20 +83,19 @@ type IzahnameBekleyenSirket = {
 
 const dagitimSonucuBeklenenTakvimi: TakvimSirketi[] = [];
 
-const talepToplamaTakvimi: TakvimSirketi[] = [
-  {
-    slug: "bakirci-gayrimenkul-yatirim-ortakligi",
-    tarih: "24-25-26 Ağustos 2026",
-    durum: "Talep toplayacak",
-  },
-  {
-    slug: "intetra-teknoloji-ve-bilisim-hizmetleri",
-    tarih: "26-27 Ağustos 2026",
-    durum: "Talep toplayacak",
-  },
-];
+const talepToplamaTakvimi: TakvimSirketi[] = [];
 
 const islemBaslangiciTakvimi: TakvimSirketi[] = [
+  {
+    slug: "intetra-teknoloji-ve-bilisim-hizmetleri",
+    tarih: "1 Eylül 2026 Salı",
+    durum: "İşleme başlayacak",
+  },
+  {
+    slug: "bakirci-gayrimenkul-yatirim-ortakligi",
+    tarih: "2 Eylül 2026 Çarşamba",
+    durum: "İşleme başlayacak",
+  },
   {
     slug: "citlekci-magazacilik",
     tarih: "18 Ağustos 2026 Salı",
@@ -190,17 +194,17 @@ export default function HalkaArzTakvimPage() {
     {
       soru: "Talep toplayacak halka arzlar hangileri?",
       cevap:
-        "Bakırcı GYO BKRGY 24-25-26 Ağustos 2026 tarihlerinde, İntetra Teknoloji İNTET ise 26-27 Ağustos 2026 tarihlerinde talep toplayacak.",
+        "28 Ağustos 2026 itibarıyla aktif takvimde talep toplama aşamasında halka arz bulunmuyor. İntetra Teknoloji İNTET 1 Eylül 2026 Salı, Bakırcı GYO BKRGY ise 2 Eylül 2026 Çarşamba günü işlem görmeye başlayacak.",
     },
     {
       soru: "Dağıtım sonuçları açıklanacak halka arzlar hangileri?",
       cevap:
-        "Aktif takvimde dağıtım sonucu beklenen halka arz bulunmuyor. BKRGY ve İNTET için talep toplama süreci tamamlandıktan sonra dağıtım sonucu süreci takip edilecek.",
+        "Aktif takvimde dağıtım sonucu beklenen halka arz bulunmuyor. Güncel akışta İNTET ve BKRGY için işlem başlangıç tarihleri öne çıkıyor.",
     },
     {
-      soru: "Bu hafta hangi halka arzlar işlemde?",
+      soru: "Bu hafta hangi halka arzlar işlemde veya işleme başlayacak?",
       cevap:
-        "Çitlekçi Mağazacılık Gıda CITAS, Teknika Plast TKNKA, Türker Vangölü Enerji VEYAS ve Kapeks Kimya KPEKS işlemde olan halka arzlar arasında yer alıyor.",
+        "İntetra Teknoloji İNTET 1 Eylül 2026 Salı, Bakırcı GYO BKRGY 2 Eylül 2026 Çarşamba günü işlem görmeye başlayacak. Çitlekçi Mağazacılık Gıda CITAS, Teknika Plast TKNKA, Türker Vangölü Enerji VEYAS ve Kapeks Kimya KPEKS işlemde olan halka arzlar arasında yer alıyor.",
     },
     {
       soru: "Onaylı izahnamesi beklenen halka arzlar hangileri?",
@@ -316,11 +320,11 @@ export default function HalkaArzTakvimPage() {
             {title}
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 md:text-base">
-            22 Ağustos 2026 tarihli güncel halka arz takviminde Bakırcı GYO
-            BKRGY 24-25-26 Ağustos, İntetra Teknoloji İNTET ise 26-27 Ağustos
-            tarihlerinde talep toplayacak. Çitlekçi Mağazacılık Gıda CITAS,
-            Teknika Plast TKNKA, Türker Vangölü Enerji VEYAS ve Kapeks Kimya
-            KPEKS işlemdeki halka arzlar arasında yer alıyor.
+            28 Ağustos 2026 tarihli güncel halka arz takviminde İntetra
+            Teknoloji İNTET 1 Eylül 2026 Salı, Bakırcı GYO BKRGY ise 2 Eylül
+            2026 Çarşamba günü işlem görmeye başlayacak. Çitlekçi Mağazacılık
+            Gıda CITAS, Teknika Plast TKNKA, Türker Vangölü Enerji VEYAS ve
+            Kapeks Kimya KPEKS işlemdeki halka arzlar arasında yer alıyor.
           </p>
 
           <div className="mt-5 rounded-2xl border border-blue-200 bg-blue-50 p-4 md:p-5">
@@ -328,9 +332,9 @@ export default function HalkaArzTakvimPage() {
               Takvimin kısa özeti
             </h2>
             <p className="mt-2 text-sm leading-7 text-blue-950/80 md:text-base">
-              BKRGY için talep toplama 24-25-26 Ağustos tarihlerinde, İNTET
-              için 26-27 Ağustos tarihlerinde yapılacak. CITAS, TKNKA, VEYAS
-              ve KPEKS işlemde; aktif dağıtım sonucu bekleyen halka arz
+              İNTET 1 Eylül 2026 Salı, BKRGY 2 Eylül 2026 Çarşamba günü
+              işlem görmeye başlayacak. CITAS, TKNKA, VEYAS ve KPEKS işlemde;
+              aktif talep toplama veya dağıtım sonucu bekleyen halka arz
               bulunmuyor.
             </p>
             <Link
@@ -385,7 +389,7 @@ export default function HalkaArzTakvimPage() {
               deger: String(dagitimSonucuBeklenenler.length),
             },
             {
-              etiket: "İşlemde",
+              etiket: "İşlem Takvimi",
               deger: String(islemeBaslayacaklar.length),
             },
             { etiket: "Aktif Hisse", deger: String(aktifHisseSayisi) },
@@ -562,7 +566,7 @@ export default function HalkaArzTakvimPage() {
         >
           <div className="border-b border-slate-200 bg-cyan-50 px-5 py-4">
             <h2 className="text-lg font-bold text-cyan-900 md:text-xl">
-              İşlemde Olan Halka Arzlar
+              İşlem Başlangıcı ve İşlemde Olan Halka Arzlar
             </h2>
           </div>
 
