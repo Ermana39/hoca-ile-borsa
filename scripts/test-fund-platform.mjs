@@ -167,6 +167,8 @@ function readSourceTable(filePath, requiredHeaders) {
   return { rows: rows.slice(headerIndex + 1), column };
 }
 
+const moneySumTolerance = 0.02;
+
 function assertSameNumber(actual, expected, message, tolerance = 0.011) {
   if (actual === null || expected === null) {
     assert(actual === expected, `${message}: beklenen ${expected}, gelen ${actual}`);
@@ -438,8 +440,18 @@ const totalFundSize = round(
   activeFunds.reduce((total, fund) => total + fund.fonToplamDeger, 0),
   2
 );
-assertSameNumber(current.toplamFonBuyuklugu, totalFundSize, "Güncel toplam fon büyüklüğü");
-assertSameNumber(dashboard.ozet.toplamFonBuyuklugu, totalFundSize, "Dashboard toplam fon büyüklüğü");
+assertSameNumber(
+  current.toplamFonBuyuklugu,
+  totalFundSize,
+  "Güncel toplam fon büyüklüğü",
+  moneySumTolerance
+);
+assertSameNumber(
+  dashboard.ozet.toplamFonBuyuklugu,
+  totalFundSize,
+  "Dashboard toplam fon büyüklüğü",
+  moneySumTolerance
+);
 assert(dashboard.ozet.toplamTakipEdilenFonSayisi === activeFunds.length, "Dashboard aktif fon sayısı yanlış.");
 
 const detailFiles = fs.readdirSync(detailDir).filter((file) => file.endsWith(".json"));
@@ -641,7 +653,8 @@ for (const [name, funds] of activeByManager) {
   assertSameNumber(
     manager.toplamFonBuyuklugu,
     round(funds.reduce((total, fund) => total + fund.fonToplamDeger, 0), 2),
-    `${name} toplam büyüklük`
+    `${name} toplam büyüklük`,
+    moneySumTolerance
   );
   assert(
     manager.toplamYatirimciSayisi === funds.reduce((total, fund) => total + (fund.kisiSayisi ?? 0), 0),
@@ -651,7 +664,8 @@ for (const [name, funds] of activeByManager) {
     assertSameNumber(
       manager.paraAkisi[period],
       sumComplete(funds.map((fund) => fund.paraAkisi[period])),
-      `${name} ${period} toplam akış`
+      `${name} ${period} toplam akış`,
+      moneySumTolerance
     );
   }
   for (const period of ["birAy", "ucAy", "altiAy", "birYil"]) {

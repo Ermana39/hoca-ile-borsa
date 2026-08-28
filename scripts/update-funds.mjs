@@ -736,12 +736,13 @@ function summarizeInvalidSnapshots(snapshots) {
 function recoverMissingSnapshotsFromGit(existingSnapshots, currentSnapshots) {
   const existingDates = new Set(existingSnapshots.map((row) => row.tarih));
   const historyDates = Array.from(existingDates).sort();
-  const currentDates = Array.from(new Set(currentSnapshots.map((row) => row.tarih))).sort();
+  const currentDateSet = new Set(currentSnapshots.map((row) => row.tarih));
+  const currentDates = Array.from(currentDateSet).sort();
   const earliestHistoryDate = historyDates[0] ?? currentDates[0] ?? null;
   const latestCurrentDate = currentDates.at(-1) ?? null;
 
   if (!earliestHistoryDate || !latestCurrentDate || !fsSync.existsSync(path.join(rootDir, ".git"))) {
-    return { snapshots: [], sourceDates: [], inspectedCommitCount: 0 };
+    return { snapshots: [], sourceDates: [], inspectedCommitCount: 0, sourceWarnings: [] };
   }
 
   const sourceRelativePath = path.relative(rootDir, sourcePaths.tarihsel).split(path.sep).join("/");
@@ -763,7 +764,7 @@ function recoverMissingSnapshotsFromGit(existingSnapshots, currentSnapshots) {
       .filter((value) => /^[0-9a-f]{40}$/i.test(value));
   } catch (error) {
     console.warn(`Fon kaynak geçmişi Git üzerinden okunamadı: ${error.message}`);
-    return { snapshots: [], sourceDates: [], inspectedCommitCount: 0 };
+    return { snapshots: [], sourceDates: [], inspectedCommitCount: 0, sourceWarnings: [] };
   }
 
   const candidatesByDate = new Map();
@@ -792,15 +793,22 @@ function recoverMissingSnapshotsFromGit(existingSnapshots, currentSnapshots) {
       for (const [date, dateRows] of rowsByDate) {
         if (date < earliestHistoryDate || date > latestCurrentDate) continue;
         sourceDates.add(date);
-        if (existingDates.has(date)) continue;
+        if (existingDates.has(date) || currentDateSet.has(date)) continue;
 
-        const validCount = dateRows.filter(hasValidFinancialSnapshot).length;
+        const invalidRows = dateRows.filter((row) => !hasValidFinancialSnapshot(row));
+        const validCount = dateRows.length - invalidRows.length;
         const validRatio = dateRows.length > 0 ? validCount / dateRows.length : 0;
-        if (dateRows.length < 100 || validRatio < 0.95) continue;
+        if (dateRows.length < 100 || validCount < 100) continue;
 
         const previous = candidatesByDate.get(date);
         if (!previous || validCount > previous.validCount) {
-          candidatesByDate.set(date, { rows: dateRows, validCount });
+          candidatesByDate.set(date, {
+            rows: dateRows,
+            validCount,
+            totalCount: dateRows.length,
+            invalidRows,
+            validRatio,
+          });
         }
       }
 
@@ -815,6 +823,18 @@ function recoverMissingSnapshotsFromGit(existingSnapshots, currentSnapshots) {
   const snapshots = Array.from(candidatesByDate.entries())
     .sort(([dateA], [dateB]) => dateA.localeCompare(dateB))
     .flatMap(([, candidate]) => candidate.rows.filter(hasValidFinancialSnapshot));
+  const sourceWarnings = Array.from(candidatesByDate.entries())
+    .filter(([, candidate]) => candidate.validRatio < 0.95)
+    .sort(([dateA], [dateB]) => dateA.localeCompare(dateB))
+    .map(([date, candidate]) => ({
+      tur: "git-gecmisinden-eksik-finansal-veri",
+      tarih: date,
+      toplamKayitSayisi: candidate.totalCount,
+      gecerliKayitSayisi: candidate.validCount,
+      gecersizKayitSayisi: candidate.totalCount - candidate.validCount,
+      gecerliOran: round(candidate.validRatio, 8),
+      ornekFonKodlari: candidate.invalidRows.slice(0, 20).map((row) => row.fonKodu),
+    }));
 
   const availableDates = new Set([
     ...existingDates,
@@ -835,6 +855,7 @@ function recoverMissingSnapshotsFromGit(existingSnapshots, currentSnapshots) {
     snapshots,
     sourceDates: Array.from(sourceDates).sort(),
     inspectedCommitCount,
+    sourceWarnings,
   };
 }
 
@@ -1679,6 +1700,10 @@ async function main() {
     existingHistory.snapshots ?? [],
     currentSnapshots
   );
+  const sourceWarnings = [
+    ...sourceValidation.sourceWarnings,
+    ...gitRecovery.sourceWarnings,
+  ];
   const incomingSnapshots = [
     ...legacySnapshots,
     ...gitRecovery.snapshots,
@@ -1831,9 +1856,8 @@ async function main() {
       temizlenenGecersizSnapshotlar: summarizeInvalidSnapshots(invalidSnapshots),
     },
     etkiAnaliziTarihselSenkronu: effectHistorySync,
-    veriUyarisiSayisi:
-      sourceValidation.sourceWarnings.length + fundData.dataWarnings.length,
-    veriUyarilari: [...sourceValidation.sourceWarnings, ...fundData.dataWarnings],
+    veriUyarisiSayisi: sourceWarnings.length + fundData.dataWarnings.length,
+    veriUyarilari: [...sourceWarnings, ...fundData.dataWarnings],
   });
 
   await writeLegacyExcelJson(sourcePaths.getiri);
@@ -1854,11 +1878,12 @@ async function main() {
   }
   console.log(`${activeFunds.length - fundData.unknownManagers.length} fon yöneticiyle eşleşti`);
   console.log(`${fundData.unknownManagers.length} fon Bilinmiyor olarak işaretlendi`);
-  console.log(
-    `${sourceValidation.sourceWarnings.length + fundData.dataWarnings.length} veri uyarısı kaydedildi`
-  );
-  for (const warning of sourceValidation.sourceWarnings) {
-    if (warning.tur === "gunluk-kaynakta-eksik-finansal-veri") {
+  console.log(`${sourceWarnings.length + fundData.dataWarnings.length} veri uyarısı kaydedildi`);
+  for (const warning of sourceWarnings) {
+    if (
+      warning.tur === "gunluk-kaynakta-eksik-finansal-veri" ||
+      warning.tur === "git-gecmisinden-eksik-finansal-veri"
+    ) {
       console.warn(
         `${warning.tarih} kaynak uyarısı: ${warning.gecersizKayitSayisi}/${warning.toplamKayitSayisi} fon eksik finansal veriyle geldi; geçerli fonlarla güncelleme sürdürüldü.`
       );
