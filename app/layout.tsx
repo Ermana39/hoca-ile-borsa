@@ -4,7 +4,6 @@ import "./globals.css";
 import { Analytics } from "@vercel/analytics/next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import AdSenseScript from "@/components/adsense-script";
 import { THEME_INITIALIZATION_SCRIPT } from "@/lib/theme";
 
 export const metadata: Metadata = {
@@ -101,6 +100,11 @@ export default function RootLayout({
       <head>
         <script dangerouslySetInnerHTML={{ __html: THEME_INITIALIZATION_SCRIPT }} />
         <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9613627671991162"
+          crossOrigin="anonymous"
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
         />
@@ -116,7 +120,6 @@ export default function RootLayout({
         <Navbar />
         {children}
         <Footer />
-        <AdSenseScript />
         <Analytics />
       </body>
     </html>
