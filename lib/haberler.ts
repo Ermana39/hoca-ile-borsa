@@ -24,6 +24,7 @@ export type NewsItem = {
   category?: HaberKategori;
   yazarSlug?: string;
   ilgiliHisseler?: string[];
+  ilgiliFonlar?: string[];
 };
 
 function getIdFromHref(href: string) {
@@ -72,6 +73,9 @@ export function normalizeNewsItems(data: unknown): NewsItem[] {
         yazarSlug: typeof item.yazarSlug === "string" ? item.yazarSlug : undefined,
         ilgiliHisseler: Array.isArray(item.ilgiliHisseler)
           ? item.ilgiliHisseler.filter((kod): kod is string => typeof kod === "string")
+          : undefined,
+        ilgiliFonlar: Array.isArray(item.ilgiliFonlar)
+          ? item.ilgiliFonlar.filter((kod): kod is string => typeof kod === "string")
           : undefined,
       };
     })
@@ -164,6 +168,25 @@ export function getIlgiliHaberler(
 // Bir haberin etiketli ilgili hisse kodlarını href üzerinden bulur.
 export function getHaberIlgiliHisseler(href: string): string[] {
   return getAllNews().find((item) => item.href === href)?.ilgiliHisseler ?? [];
+}
+
+// Bir haberin etiketli ilgili fon kodlarını href üzerinden bulur.
+export function getHaberIlgiliFonlar(href: string): string[] {
+  return getAllNews().find((item) => item.href === href)?.ilgiliFonlar ?? [];
+}
+
+// Bir fon detay sayfasında gösterilecek en güncel ilgili haberler.
+export function getNewsByFundCode(kod: string, limit = 6): NewsItem[] {
+  const hedef = kod.trim().toLocaleUpperCase("tr-TR");
+  if (!hedef) return [];
+
+  return getAllNews()
+    .filter((item) =>
+      (item.ilgiliFonlar ?? []).some(
+        (fonKodu) => fonKodu.toLocaleUpperCase("tr-TR") === hedef
+      )
+    )
+    .slice(0, limit);
 }
 
 // Bir haberin kategorisini href üzerinden bulur.

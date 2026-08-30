@@ -621,6 +621,26 @@ export function haberKaydiId(slug: string): number {
   return 10_000_000 + ((hash >>> 0) % 900_000_000);
 }
 
+function haberKaydiIlgiliFonlari(kayit: HaberKaydi) {
+  const kodlar = new Map<string, string>();
+  for (const kod of kayit.ilgiliFonlar ?? []) {
+    const temizKod = kod.trim().toLocaleUpperCase("tr-TR");
+    if (temizKod) kodlar.set(temizKod, temizKod);
+  }
+
+  for (const kaynak of kayit.kaynaklar) {
+    const eslesmeler = kaynak.url.matchAll(
+      /\/fonlar\/(?:etki-analizi\/)?([a-z0-9]{2,6})(?:[/?#]|$)/gi
+    );
+    for (const eslesme of eslesmeler) {
+      const temizKod = eslesme[1].trim().toLocaleUpperCase("tr-TR");
+      if (temizKod) kodlar.set(temizKod, temizKod);
+    }
+  }
+
+  return Array.from(kodlar.values());
+}
+
 export function haberKaydiniListeOgesine(kayit: HaberKaydi) {
   return {
     id: haberKaydiId(kayit.slug),
@@ -634,7 +654,7 @@ export function haberKaydiniListeOgesine(kayit: HaberKaydi) {
     category: kayit.kategori,
     yazarSlug: kayit.yazarSlug,
     ilgiliHisseler: kayit.ilgiliHisseler,
-    ilgiliFonlar: kayit.ilgiliFonlar ?? [],
+    ilgiliFonlar: haberKaydiIlgiliFonlari(kayit),
   };
 }
 

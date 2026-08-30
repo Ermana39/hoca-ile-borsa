@@ -2,6 +2,7 @@ import {
   getAllNews,
   getHaberKategorisi,
   getIlgiliHaberler,
+  getHaberIlgiliFonlar,
   getHaberIlgiliHisseler,
 } from "@/lib/haberler";
 import { getEnGuncelGunlukOzet } from "@/lib/gunluk-ozet";
@@ -101,6 +102,7 @@ function halkaArzOzelLinkleri(href: string, title: string) {
 function relatedItems(href: string, kategori?: string): RelatedContentItem[] {
   const title = haberBasligi(href);
   const hisseler = getHaberIlgiliHisseler(href);
+  const fonlar = getHaberIlgiliFonlar(href);
   const items = new Map<string, RelatedContentItem>();
 
   for (const kod of hisseler.slice(0, 3)) {
@@ -124,6 +126,16 @@ function relatedItems(href: string, kategori?: string): RelatedContentItem[] {
     items.set(item.href, item);
   }
 
+  for (const kod of fonlar.slice(0, 3)) {
+    const temizKod = kod.toLocaleUpperCase("tr-TR");
+    items.set(`/fonlar/${temizKod.toLocaleLowerCase("tr-TR")}`, {
+      title: `${temizKod} fon detayları`,
+      href: `/fonlar/${temizKod.toLocaleLowerCase("tr-TR")}`,
+      description: `${temizKod} fiyat, getiri, para akışı ve yatırımcı değişimi.`,
+      type: "İlgili fon",
+    });
+  }
+
   if (kategori === "halka-arz" || href.includes("halka-arz")) {
     items.set("/halka-arz", {
       title: "Halka arz merkezi",
@@ -142,6 +154,27 @@ function relatedItems(href: string, kategori?: string): RelatedContentItem[] {
       href: "/rehberler/halka-arz-nedir",
       description: "İzahname, fiyat tespit raporu ve dağıtım yöntemleri rehberi.",
       type: "Rehber",
+    });
+  }
+
+  if (kategori === "fon-haberleri" || fonlar.length > 0) {
+    items.set("/fonlar", {
+      title: "Fonlar merkezi",
+      href: "/fonlar",
+      description: "Yatırım fonlarında getiri, risk, büyüklük ve para akışı verileri.",
+      type: "Fonlar",
+    });
+    items.set("/fonlar/fon-tarayici", {
+      title: "Fon tarayıcı",
+      href: "/fonlar/fon-tarayici",
+      description: "Fonları kategori, getiri, risk ve para akışıyla filtreleyin.",
+      type: "Araç",
+    });
+    items.set("/haberler/kategori/fon-haberleri", {
+      title: "Fon haberleri",
+      href: "/haberler/kategori/fon-haberleri",
+      description: "Yatırım fonları ve TEFAS gündemindeki son gelişmeler.",
+      type: "Haberler",
     });
   }
 
@@ -191,6 +224,36 @@ function hisseBazliHaberler(href: string, limit = 6): RelatedContentItem[] {
     }));
 }
 
+function fonBazliHaberler(href: string, limit = 6): RelatedContentItem[] {
+  const ilgiliFonlar = getHaberIlgiliFonlar(href).map((kod) =>
+    kod.toLocaleUpperCase("tr-TR")
+  );
+  if (ilgiliFonlar.length === 0) return [];
+
+  const fonSeti = new Set(ilgiliFonlar);
+
+  return getAllNews()
+    .filter((item) => item.href !== href)
+    .filter((item) =>
+      (item.ilgiliFonlar ?? []).some((kod) =>
+        fonSeti.has(kod.toLocaleUpperCase("tr-TR"))
+      )
+    )
+    .slice(0, limit)
+    .map((item) => ({
+      title: item.title,
+      href: item.href,
+      description: item.description,
+      type: item.publishedAt
+        ? new Date(item.publishedAt).toLocaleDateString("tr-TR", {
+            day: "numeric",
+            month: "long",
+            year: "numeric",
+          })
+        : "Fon haberi",
+    }));
+}
+
 function ctaMetni(kategori?: string, href?: string) {
   if (kategori === "kap-bildirimleri" || href?.includes("kap")) {
     return {
@@ -219,8 +282,10 @@ function ctaMetni(kategori?: string, href?: string) {
 export default function HaberAltBilgi({ href }: { href: string }) {
   const slug = getHaberKategorisi(href);
   const ilgiliHisseler = getHaberIlgiliHisseler(href);
+  const ilgiliFonlar = getHaberIlgiliFonlar(href);
   const ilgiliVar = getIlgiliHaberler(href, 4).length > 0;
   const hisseHaberleri = hisseBazliHaberler(href);
+  const fonHaberleri = fonBazliHaberler(href);
   const cta = ctaMetni(slug, href);
 
   return (
@@ -266,6 +331,29 @@ export default function HaberAltBilgi({ href }: { href: string }) {
         </div>
       )}
 
+      {ilgiliFonlar.length > 0 && (
+        <div className="flex flex-wrap items-center gap-2 text-sm text-slate-500">
+          <span className="font-medium">İlgili Fonlar:</span>
+          {ilgiliFonlar.map((kod) => {
+            const temizKod = kod.toLocaleUpperCase("tr-TR");
+
+            return (
+              <Link
+                key={temizKod}
+                href={`/fonlar/${temizKod.toLocaleLowerCase("tr-TR")}`}
+                prefetch={false}
+                aria-label={`${temizKod} fon detay sayfasını aç`}
+                title="Fon detay sayfasını aç"
+                className="inline-flex items-center gap-1.5 rounded-md border border-emerald-200 bg-emerald-50 px-2.5 py-1 text-xs font-bold text-emerald-700 shadow-sm transition hover:border-emerald-300 hover:bg-emerald-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500"
+              >
+                <span>{temizKod}</span>
+                <span aria-hidden="true">→</span>
+              </Link>
+            );
+          })}
+        </div>
+      )}
+
       <RelatedContent
         title="Bu haberle ilgili diğer içerikler"
         items={relatedItems(href, slug)}
@@ -279,6 +367,17 @@ export default function HaberAltBilgi({ href }: { href: string }) {
               : "İlgili hisselerin geçmiş haberleri"
           }
           items={hisseHaberleri}
+        />
+      )}
+
+      {fonHaberleri.length > 0 && (
+        <RelatedContent
+          title={
+            ilgiliFonlar.length === 1
+              ? `${ilgiliFonlar[0]} ile ilgili geçmiş haberler`
+              : "İlgili fonların geçmiş haberleri"
+          }
+          items={fonHaberleri}
         />
       )}
 

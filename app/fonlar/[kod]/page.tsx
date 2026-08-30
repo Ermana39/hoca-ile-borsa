@@ -24,6 +24,7 @@ import {
   getFundDetail,
   type Fund,
 } from "@/lib/fon-platform";
+import { getNewsByFundCode } from "@/lib/haberler";
 import {
   etkiAnaliziFonKodlari,
   getFundInvestorInfo,
@@ -59,6 +60,18 @@ type FundFaqItem = {
   question: string;
   answer: string;
 };
+
+function tarihEtiketi(value: string): string {
+  const date = new Date(value);
+  if (Number.isNaN(date.getTime())) return value;
+
+  return date.toLocaleDateString("tr-TR", {
+    day: "numeric",
+    month: "long",
+    year: "numeric",
+    timeZone: "Europe/Istanbul",
+  });
+}
 
 function yatirimciFaqItemsOlustur(
   fund: Fund,
@@ -207,6 +220,7 @@ export default async function FonDetayPage({
     typeof fund.gunlukGetiri === "number" && Number.isFinite(fund.gunlukGetiri)
       ? valueColorClass(fund.gunlukGetiri)
       : "text-slate-700";
+  const fonHaberleri = getNewsByFundCode(fund.kod, 5);
   const faqItems: FundFaqItem[] = [
     {
       question: `${fund.kod} fonu nedir?`,
@@ -437,6 +451,54 @@ export default async function FonDetayPage({
             format="number"
           />
         </section>
+
+        {fonHaberleri.length > 0 && (
+          <section className="mb-8 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm md:p-6">
+            <div className="mb-4 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+              <div>
+                <p className="text-sm font-semibold text-blue-700">Fon haberleri</p>
+                <h2 className="mt-1 text-xl font-bold text-slate-950">
+                  {fund.kod} ile İlgili Son Haberler
+                </h2>
+              </div>
+              <Link
+                href="/haberler/kategori/fon-haberleri"
+                prefetch={false}
+                className="w-fit text-sm font-semibold text-blue-700 hover:underline"
+              >
+                Tüm fon haberleri →
+              </Link>
+            </div>
+
+            <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
+              {fonHaberleri.map((haber) => (
+                <Link
+                  key={haber.href}
+                  href={haber.href}
+                  prefetch={false}
+                  className="group rounded-xl border border-slate-200 bg-slate-50 p-4 transition hover:border-blue-300 hover:bg-blue-50"
+                >
+                  {haber.publishedAt && (
+                    <time
+                      dateTime={haber.publishedAt}
+                      className="text-xs font-medium text-slate-500"
+                    >
+                      {tarihEtiketi(haber.publishedAt)}
+                    </time>
+                  )}
+                  <h3 className="mt-1 line-clamp-2 text-sm font-bold leading-5 text-slate-900 group-hover:text-blue-700">
+                    {haber.title}
+                  </h3>
+                  {haber.description && (
+                    <p className="mt-2 line-clamp-3 text-sm leading-6 text-slate-600">
+                      {haber.description}
+                    </p>
+                  )}
+                </Link>
+              ))}
+            </div>
+          </section>
+        )}
 
         <section className="mb-8">
           <FundChartsClient
