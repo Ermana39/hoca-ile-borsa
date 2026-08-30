@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import AdsenseResponsiveUnit from "@/components/AdsenseResponsiveUnit";
 import Link from "@/components/NoPrefetchLink";
 import {
   DetailHistoryTable,
@@ -97,7 +98,10 @@ function yatirimciFaqItemsOlustur(
     items.push(
       {
         question: `${fund.kod} fonu vergili mi?`,
-        answer: `${fund.kod} fonundan elde edilen kazanç vergi düzenlemesine tabidir. ${info.vergilendirme.aciklama}`,
+        answer:
+          oran === "%0"
+            ? `Türkiye'de yerleşik gerçek kişiler için ${fund.kod} fon kazancındaki güncel stopaj oranı %0'dır. ${info.vergilendirme.aciklama}`
+            : `Evet, ${fund.kod} fon kazancı stopaj düzenlemesine tabidir. ${info.vergilendirme.aciklama}`,
       },
       {
         question: `${fund.kod} fonunda stopaj var mı?`,
@@ -116,7 +120,10 @@ function yatirimciFaqItemsOlustur(
   if (info.katilimUygunlugu !== "bilinmiyor") {
     items.push({
       question: `${fund.kod} fonu Katılım Endeksi'ne uygun mu?`,
-      answer: `Hayır, fonlar hisse senetleri gibi BIST Katılım Endeksi'ne dahil edilmez. ${info.katilimAciklamasi}`,
+      answer:
+        info.katilimUygunlugu === "uygun"
+          ? `${fund.kod} BIST Katılım Endeksi'ne dahil olmaz; ancak katılım finans esaslarına uygundur. Fonlar hisse senetleri gibi endekse dahil edilmez. ${info.katilimAciklamasi}`
+          : `${fund.kod} BIST Katılım Endeksi'ne dahil olmaz ve katılım finans esaslarına uygun fon olarak sınıflandırılmamıştır. Fonlar hisse senetleri gibi endekse dahil edilmez. ${info.katilimAciklamasi}`,
     });
   }
 
@@ -412,6 +419,11 @@ export default async function FonDetayPage({
             </div>
           </dl>
         </section>
+
+        <AdsenseResponsiveUnit
+          className="mb-8"
+          slot={process.env.NEXT_PUBLIC_ADSENSE_FUND_SLOT}
+        />
 
         <section className="mb-8 space-y-6 rounded-2xl border border-slate-200 bg-white p-5 shadow-sm md:p-6">
           <div>

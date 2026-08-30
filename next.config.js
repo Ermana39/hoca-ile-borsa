@@ -204,7 +204,9 @@ const hataliHisseRedirects = [
     destination: "/hisse/binbn",
   },
   {
-    source: "/hisse/:slug(.*\\..*)",
+    // Static export istemci gezintisi /hisse/<kod>.txt RSC dosyasini ister.
+    // Bu gecerli dosyayi nokta iceren hatali hisse URL'leriyle karistirma.
+    source: "/hisse/:slug((?!.*\\.txt$).*\\..*)",
     destination: "/hisseler",
   },
   {

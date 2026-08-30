@@ -54,8 +54,8 @@ export const fonBilgiKaynaklari = {
     url: "https://www.tefas.gov.tr/tr/fon-verileri",
   },
   gib: {
-    etiket: "GİB Geçici 67 Kesinti Oranları",
-    url: "https://cdn.gib.gov.tr/api/gibportal-file/file/getFileResources?objectKey=arsiv%2Fyardim-kaynaklar%2Fyararli-bilgiler%2FGVK_Gecici_67_Madde_Kapsaminda_Kesinti_Oranlari.pdf",
+    etiket: "26 Mart 2026 tarihli ve 11107 sayılı Cumhurbaşkanı Kararı",
+    url: "https://cdn.gib.gov.tr/api/gibportal-file/file/getFile?objectKey=MEVZUAT_CBK%2FUNIVERSAL%2F2026%2FCBK11107.pdf",
   },
 } satisfies Record<string, BilgiKaynagi>;
 
@@ -156,10 +156,8 @@ export function getFundInvestorInfo(fund: Fund): FundInvestorInfo {
       : null;
   const katilimUygunlugu: KatilimUygunlugu = kontrollu
     ? kontrollu.katilimUygunlugu
-    : kategoriBiliniyor
-      ? kategoriMi(semsiyeTuru, "Katılım")
-        ? "uygun"
-        : "uygun-degil"
+    : kategoriBiliniyor && kategoriMi(semsiyeTuru, "Katılım")
+      ? "uygun"
       : "bilinmiyor";
   const satisKisitlamasi =
     nitelikliYatirimci === true

@@ -4,6 +4,7 @@ import type { ReactNode } from "react";
 import { Fragment } from "react";
 import { getYazar, varsayilanYazar } from "@/app/data/yazarlar";
 import AuthorBox from "@/components/AuthorBox";
+import AdsenseResponsiveUnit from "@/components/AdsenseResponsiveUnit";
 import HaberAltKisim from "@/components/HaberAltKisim";
 import HaberIlgiliBolumler from "@/components/HaberIlgiliBolumler";
 import KapEtkiAnalizi from "@/components/KapEtkiAnalizi";
@@ -963,6 +964,10 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
                   </p>
                 ))}
               </div>
+
+              <AdsenseResponsiveUnit
+                slot={process.env.NEXT_PUBLIC_ADSENSE_NEWS_SLOT}
+              />
 
               {kayit.kaynakOzeti.ozetKartlari.length > 0 && (
                 <section aria-label="Haber özeti" className="grid gap-4 sm:grid-cols-2">
