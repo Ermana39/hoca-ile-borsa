@@ -1,6 +1,7 @@
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import AdsenseResponsiveUnit from "@/components/AdsenseResponsiveUnit";
 import {
   getHisse,
   getTumHisseler,
@@ -1230,6 +1231,15 @@ export default async function HisseKunyePage({
             )}
 
             {kurumsalBilgiVar && (
+              <>
+                <AdsenseResponsiveUnit
+                  className="mt-8"
+                  slot={
+                    process.env.NEXT_PUBLIC_ADSENSE_COMPANY_CORPORATE_SLOT ??
+                    "7820910538"
+                  }
+                />
+
                 <section id="kurumsal-bilgiler" className="mt-8 scroll-mt-24">
                   <SectionBaslik>
                     {hisse.kod} Kurumsal Bilgiler ve Sektör
@@ -1466,7 +1476,8 @@ export default async function HisseKunyePage({
                     )}
                   </dl>
                 </section>
-              )}
+              </>
+            )}
 
             <section id="katilim-endeksi" className="mt-8 scroll-mt-24">
               <SectionBaslik>

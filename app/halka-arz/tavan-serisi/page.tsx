@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "@/components/NoPrefetchLink";
+import Script from "next/script";
 import {
   halkaArzSonuclari as baseHalkaArzVerileri,
   type HalkaArzSonucu,
@@ -693,6 +694,26 @@ export default function HalkaArzTavanSerisiPage() {
             </table>
           </div>
 
+          <div className="mt-4 w-full" aria-label="Reklam">
+            <Script
+              id="adsense-loader-tavan-serisi"
+              src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9613627671991162"
+              strategy="afterInteractive"
+              crossOrigin="anonymous"
+            />
+            <ins
+              className="adsbygoogle"
+              style={{ display: "block" }}
+              data-ad-client="ca-pub-9613627671991162"
+              data-ad-slot="1666943021"
+              data-ad-format="auto"
+              data-full-width-responsive="true"
+            />
+            <Script id="adsense-tavan-serisi-tablo-alti" strategy="afterInteractive">
+              {`(adsbygoogle = window.adsbygoogle || []).push({});`}
+            </Script>
+          </div>
+
           <p className="mt-4 text-xs leading-6 text-slate-500">
             Gün sonu kapanış fiyatları piyasa hareketlerine göre değişebilir. Marj,
             BIST 100 getirisi ve getiri farkı sayfa oluşturulurken otomatik hesaplanır.
@@ -763,32 +784,6 @@ export default function HalkaArzTavanSerisiPage() {
               ))}
             </ul>
           </div>
-        </section>
-
-        <section className="mt-6 rounded-3xl border border-blue-200 bg-blue-50/50 p-6 shadow-sm">
-          <h2 className="text-xl font-bold text-slate-950">
-            BIST 100 Karşılaştırması Nasıl Hesaplanır?
-          </h2>
-          <p className="mt-3 text-sm leading-7 text-slate-600">
-            Halka arz getirisi arz fiyatından güncel kapanışa kadar olan dönemi
-            kapsadığı için BIST 100 başlangıcı olarak hissenin ilk işlem gününden
-            önceki son seans kapanışı kullanılır. Bitiş seviyesi, halka arz kapanış
-            fiyatlarıyla aynı tarihli günlük borsa özetinden alınır. Günlük özet
-            arşivinden eski başlangıçlar kayıtlı tarihsel kapanışlarla tamamlanır.
-          </p>
-          <div className="mt-4 grid gap-4 md:grid-cols-2">
-            <div className="rounded-2xl border border-blue-200 bg-white p-4 text-sm leading-7 text-blue-950">
-              BIST 100 getirisi = ((Bitiş endeks değeri / Başlangıç endeks değeri) - 1) x 100
-            </div>
-            <div className="rounded-2xl border border-blue-200 bg-white p-4 text-sm leading-7 text-blue-950">
-              Getiri farkı = Halka arz getirisi - Aynı dönem BIST 100 getirisi
-            </div>
-          </div>
-          <p className="mt-4 text-xs leading-6 text-slate-500">
-            Bu yöntem fiyat performansını genel piyasa hareketinden ayırmayı
-            kolaylaştırır. Başlangıç seviyesi bulunmayan bir halka arzda karşılaştırma
-            gösterilmez; tahmini veri üretilmez.
-          </p>
         </section>
 
         <section className="mt-6 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm">

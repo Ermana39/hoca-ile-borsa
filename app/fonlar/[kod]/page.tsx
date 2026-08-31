@@ -511,6 +511,13 @@ export default async function FonDetayPage({
           <RiskReturnAnalysis analysis={detail.riskAnalizi} fund={fund} />
         </section>
 
+        <AdsenseResponsiveUnit
+          className="mb-8"
+          slot={
+            process.env.NEXT_PUBLIC_ADSENSE_FUND_HISTORY_SLOT ?? "4549196585"
+          }
+        />
+
         <section data-nosnippet="true">
           <h2 className="mb-3 text-xl font-bold text-slate-950">
             Son 30 İşlem Günü

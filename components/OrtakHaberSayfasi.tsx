@@ -146,9 +146,9 @@ function HaberMetni({
   const parcalar: ReactNode[] = [];
   let sonIndex = 0;
   let eslesme: RegExpExecArray | null;
-  kodDeseni.lastIndex = 0;
+  const metinKodDeseni = new RegExp(kodDeseni.source, kodDeseni.flags);
 
-  while ((eslesme = kodDeseni.exec(metin)) !== null) {
+  while ((eslesme = metinKodDeseni.exec(metin)) !== null) {
     const kod = eslesme[0];
     const baslangic = eslesme.index;
     const href = getKodLinki(kod, linkleme);
@@ -1044,24 +1044,33 @@ export default function OrtakHaberSayfasi({ kayit }: { kayit: HaberKaydi }) {
               <FonKapanisYonlendirmeleri kayit={kayit} />
 
               {kayit.sorular && kayit.sorular.length > 0 && (
-                <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm md:p-6">
-                  <h2 className="text-xl font-bold tracking-tight text-slate-900">
-                    Haber hakkında kısa cevaplar
-                  </h2>
-                  <div className="mt-4 space-y-4">
-                    {kayit.sorular.map((item, index) => (
-                      <div
-                        key={`${item.soru}-${index}`}
-                        className="rounded-xl border border-slate-200 bg-slate-50 p-4"
-                      >
-                        <h3 className="font-bold text-slate-900">{item.soru}</h3>
-                        <p className="mt-2 text-sm leading-7 text-slate-700 md:text-base">
-                          <HaberMetni metin={item.cevap} linkleme={linkleme} />
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </section>
+                <>
+                  <AdsenseResponsiveUnit
+                    slot={
+                      process.env.NEXT_PUBLIC_ADSENSE_NEWS_FAQ_SLOT ??
+                      "4549196585"
+                    }
+                  />
+
+                  <section className="rounded-2xl border border-slate-200 bg-white p-5 shadow-sm md:p-6">
+                    <h2 className="text-xl font-bold tracking-tight text-slate-900">
+                      Haber hakkında kısa cevaplar
+                    </h2>
+                    <div className="mt-4 space-y-4">
+                      {kayit.sorular.map((item, index) => (
+                        <div
+                          key={`${item.soru}-${index}`}
+                          className="rounded-xl border border-slate-200 bg-slate-50 p-4"
+                        >
+                          <h3 className="font-bold text-slate-900">{item.soru}</h3>
+                          <p className="mt-2 text-sm leading-7 text-slate-700 md:text-base">
+                            <HaberMetni metin={item.cevap} linkleme={linkleme} />
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </section>
+                </>
               )}
 
               <HaberIlgiliBolumler slug={kayit.slug} baslik={kayit.baslik} />

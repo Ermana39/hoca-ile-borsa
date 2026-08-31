@@ -1,3 +1,4 @@
+import AdsenseResponsiveUnit from "@/components/AdsenseResponsiveUnit";
 import Link from "@/components/NoPrefetchLink";
 import { getHisseIcerikHedefi } from "@/lib/hisse-icerik-hedefi";
 import {
@@ -593,6 +594,14 @@ export default function FonEtkiSeoPage(props: FonEtkiSeoPageProps) {
         <FonEtkiKatkiGrafigi kod={kod} rows={rows} />
 
         <FonEtkiTable rows={rows} toplamFonOrani={toplamFonOrani} toplamEtki={toplamEtki} />
+
+        <AdsenseResponsiveUnit
+          className="mt-8"
+          slot={
+            process.env.NEXT_PUBLIC_ADSENSE_FUND_EFFECT_DETAIL_TABLE_SLOT ??
+            "2098187867"
+          }
+        />
 
         <section className="mt-8 rounded-2xl border border-slate-200 bg-white p-5 md:p-7">
           <h2 className="text-xl font-bold text-zinc-900 md:text-2xl">

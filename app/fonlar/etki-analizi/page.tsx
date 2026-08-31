@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import AdsenseResponsiveUnit from "@/components/AdsenseResponsiveUnit";
 import Link from "@/components/NoPrefetchLink";
 import { newsItems } from "@/app/data/news";
 import {
@@ -370,6 +371,14 @@ export default function FonEtkiAnaliziPage() {
             Karşılaştırma {fonEtkiSonGuncelleme.label}{" "}kapanış verilerini temel alır.
             Sonuçlar kesin fon getirisi değildir.
           </p>
+
+          <AdsenseResponsiveUnit
+            className="mt-6"
+            slot={
+              process.env.NEXT_PUBLIC_ADSENSE_FUND_EFFECT_TABLE_SLOT ??
+              "6755240879"
+            }
+          />
         </section>
 
         <section className="mt-12 grid gap-8 border-t border-slate-200 pt-10 lg:grid-cols-2">
