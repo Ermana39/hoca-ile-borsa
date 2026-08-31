@@ -54,8 +54,8 @@ export default function AdsenseResponsiveUnit({
             style={{ display: "block" }}
             data-ad-client={ADSENSE_CLIENT}
             data-ad-slot={temizSlot}
-            data-ad-format="horizontal"
-            data-full-width-responsive="false"
+            data-ad-format="auto"
+            data-full-width-responsive="true"
           />
         </div>
       </div>
