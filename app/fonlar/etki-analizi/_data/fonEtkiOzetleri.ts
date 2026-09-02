@@ -111,6 +111,15 @@ const fonProfilleri = [
     profilOzeti:
       "TMV kodlu Tera Portföy Algoritmik Stratejiler Serbest Fon, serbest fon türündedir. Bu sayfa, son açıklanan portföy ağırlıkları ile günlük kapanış hareketlerini birleştirerek açıklanacak fon fiyatına yönelik tahmini etkiyi; yatırımcı sayısı, fon büyüklüğü ve para akışıyla birlikte izler.",
   },
+  {
+    kod: "DOH",
+    fonAdi:
+      "Tera Portföy Dördüncü Hisse Senedi Serbest (TL) Fon (Hisse Senedi Yoğun Fon)",
+    fonTuru: "Hisse senedi yoğun serbest fon",
+    slug: "doh",
+    profilOzeti:
+      "DOH kodlu Tera Portföy Dördüncü Hisse Senedi Serbest (TL) Fon, hisse senedi yoğun serbest fon türündedir. Bu sayfa, son açıklanan portföy ağırlıklarını günlük kapanış hareketleriyle birleştirerek açıklanacak fon fiyatına yönelik tahmini etkiyi; yatırımcı sayısı, fon büyüklüğü ve para akışıyla birlikte izler.",
+  },
 ] as const;
 
 function tarihEtiketi(iso: string) {

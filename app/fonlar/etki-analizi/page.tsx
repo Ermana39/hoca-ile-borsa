@@ -9,12 +9,13 @@ import {
 
 const siteUrl = "https://www.hocaileborsa.com";
 const canonical = `${siteUrl}/fonlar/etki-analizi`;
+const izlenenFonlarMetni = "TLY, PHE, DFI, KHA, THF, TMV ve DOH";
 const title =
-  "Fon Etki Analizi: TLY, PHE, DFI, KHA, THF ve TMV Portföy Etkisi";
+  `Fon Etki Analizi: ${izlenenFonlarMetni} Portföy Etkisi`;
 const description =
-  "TLY, PHE, DFI, KHA, THF ve TMV fonlarının güncel portföy etkisini karşılaştırın. Tahmini fiyat değişimini, yatırımcı hareketini, para akışını ve veri kapsamını inceleyin.";
+  `${izlenenFonlarMetni} fonlarının güncel portföy etkisini karşılaştırın. Tahmini fiyat değişimini, yatırımcı hareketini, para akışını ve veri kapsamını inceleyin.`;
 const seoDescription =
-  "TLY, PHE, DFI, KHA, THF ve TMV fonlarının güncel portföy etkisi, tahmini fiyat değişimi, yatırımcı hareketi ve para akışını tek ekranda karşılaştırın.";
+  `${izlenenFonlarMetni} fonlarının güncel portföy etkisi, tahmini fiyat değişimi, yatırımcı hareketi ve para akışını tek ekranda karşılaştırın.`;
 const image = `${siteUrl}/2026-fon-etki-analizi-tly-phe-pbr-dfi.webp`;
 
 export const metadata: Metadata = {
@@ -32,6 +33,7 @@ export const metadata: Metadata = {
     "KHA fonu",
     "THF fonu",
     "TMV fonu",
+    "DOH fonu",
     "TEFAS fon fiyatı",
   ],
   openGraph: {
@@ -142,7 +144,7 @@ const jsonLd = {
     {
       "@type": "Dataset",
       "@id": `${canonical}#dataset`,
-      name: "TLY, PHE, DFI, KHA, THF ve TMV fon kapanış etki karşılaştırması",
+      name: `${izlenenFonlarMetni} fon kapanış etki karşılaştırması`,
       description,
       url: canonical,
       inLanguage: "tr-TR",
@@ -241,7 +243,7 @@ export default function FonEtkiAnaliziPage() {
           <p className="mt-4 text-base leading-8 text-slate-600">
             Fonların son açıklanan portföy dağılımları ile Borsa İstanbul günlük
             kapanış değişimleri birleştirilerek, açıklanacak fon fiyatına tahmini
-            etki hesaplanır. Bu merkez sayfa TLY, PHE, DFI, KHA, THF ve TMV fonlarını
+            etki hesaplanır. Bu merkez sayfa {izlenenFonlarMetni} fonlarını
             aynı yöntemle karşılaştırır. Ayrıntılı sayfalarda hisse bazlı
             katkılar, tarihsel yatırımcı değişimi, fon büyüklüğü ve para akışı
             grafikleri yer alır.

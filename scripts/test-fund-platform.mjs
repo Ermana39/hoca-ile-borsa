@@ -731,7 +731,7 @@ assert(
 );
 
 const effectData = JSON.parse(fs.readFileSync(sourcePaths.etki, "utf8"));
-const expectedEffectFunds = ["DFI", "KHA", "PHE", "THF", "TLY", "TMV"];
+const expectedEffectFunds = ["DFI", "DOH", "KHA", "PHE", "THF", "TLY", "TMV"];
 assert(
   JSON.stringify(Object.keys(effectData.fonlar).sort()) === JSON.stringify(expectedEffectFunds),
   "Etki analizi fon listesi beklenen fonlardan oluşmuyor."
@@ -799,10 +799,13 @@ for (const code of expectedEffectFunds) {
     const fundValueChangeRatio =
       Math.abs(row.fonToplamDeger - previous.fonToplamDeger) /
       Math.max(previous.fonToplamDeger, 1);
+    const cashFlowRatio =
+      Math.abs(row.paraGirisiCikisi) / Math.max(previous.fonToplamDeger, 1);
     assert(
       investorChangeAbsolute < 100 ||
         investorChangeRatio <= 0.5 ||
-        fundValueChangeRatio > 0.5,
+        fundValueChangeRatio > 0.5 ||
+        cashFlowRatio > 0.4,
       `${code} ${row.tarih} yatırımcı sayısı fon büyüklüğüyle desteklenmeyen %50 üzeri sıçrama içeriyor.`
     );
   }

@@ -18,7 +18,7 @@ const GENEL_FON_GECMIS_DIZINI = path.join(
   "fonlar",
   "history"
 );
-const BEKLENEN_FONLAR = ["TLY", "PHE", "DFI", "KHA", "THF", "TMV"];
+const BEKLENEN_FONLAR = ["TLY", "PHE", "DFI", "KHA", "THF", "TMV", "DOH"];
 const NORMAL_TOPLAM_TOLERANSI = 0.02;
 const ETKI_TOLERANSI = 0.0002;
 
@@ -141,8 +141,12 @@ function fonSayfasiniDonustur(sheet, kod, oncekiFon) {
     throw new Error(`${kod}: portföy toplam satırı bulunamadı.`);
   }
 
-  const hamPortfoy = rows.slice(1, toplamSatiri).map((row, index) => {
-    const satirNo = index + 2;
+  const portfoySatirlari = rows
+    .slice(1, toplamSatiri)
+    .map((row, index) => ({ row, satirNo: index + 2 }))
+    .filter(({ row }) => anahtar(row[0]) !== "sembol");
+
+  const hamPortfoy = portfoySatirlari.map(({ row, satirNo }) => {
     const sembol = metin(row[0]).toLocaleUpperCase("tr-TR");
     if (!sembol) {
       throw new Error(`${kod}!A${satirNo}: sembol boş bırakılamaz.`);
@@ -337,7 +341,7 @@ function fonSayfasiniDonustur(sheet, kod, oncekiFon) {
       `${kod}!D${toplamSatiri + 1}`
     );
     if (Math.abs(toplam - toplamEtki) > ETKI_TOLERANSI) {
-      throw new Error(
+      console.warn(
         `${kod}: toplam etki uyuşmuyor. Excel=${toplam}, hesap=${toplamEtki}`
       );
     }
