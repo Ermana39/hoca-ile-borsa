@@ -1,25 +1,21 @@
 {
   "version": 1,
-  "generatedAt": "2026-08-30T19:54:52.964Z",
+  "generatedAt": "2026-09-02T13:15:29.433Z",
   "duplicateKontrolu": {
     "added": 0,
     "updated": 0,
-    "skipped": 4062
+    "skipped": 4018
   },
-  "islenenFonSayisi": 1059,
-  "islenenSnapshotSayisi": 2038,
-  "kaliciSnapshotSayisi": 1677180,
-  "temizlenenGecersizSnapshotSayisi": 7,
-  "yoneticiyleEslesenFonSayisi": 2021,
-  "bilinmeyenYoneticiSayisi": 10,
+  "islenenFonSayisi": 1061,
+  "islenenSnapshotSayisi": 2041,
+  "kaliciSnapshotSayisi": 1683232,
+  "temizlenenGecersizSnapshotSayisi": 32,
+  "yoneticiyleEslesenFonSayisi": 1996,
+  "bilinmeyenYoneticiSayisi": 13,
   "bilinmeyenYoneticiFonlari": [
     {
       "fonKodu": "DK8",
       "fonAdi": "DENİZ PORTFÖY KAR PAYI ÖDEYEN SEKİZİNCİ SERBEST (DÖVİZ) FON"
-    },
-    {
-      "fonKodu": "KPS",
-      "fonAdi": "QNB PORTFÖY KAR PAYI ÖDEYEN ONİKİNCİ SERBEST (DÖVİZ) FON"
     },
     {
       "fonKodu": "OAO",
@@ -52,74 +48,118 @@
     {
       "fonKodu": "OMT",
       "fonAdi": "OSMANLI PORTFÖY PARA PİYASASI KATILIM (TL) FONU"
+    },
+    {
+      "fonKodu": "VKR",
+      "fonAdi": "ALBARAKA PORTFÖY İKİNCİ PARA PİYASASI KATILIM FONU"
+    },
+    {
+      "fonKodu": "GOK",
+      "fonAdi": "GOLDEN GLOBAL PORTFÖY KISA VADELİ KİRA SERTİFİKALARI KATILIM FONU"
+    },
+    {
+      "fonKodu": "VHK",
+      "fonAdi": "V PORTFÖY KATILIM HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)"
+    },
+    {
+      "fonKodu": "VPH",
+      "fonAdi": "V PORTFÖY HİSSE SENEDİ (TL) FONU (HİSSE SENEDİ YOĞUN FON)"
     }
   ],
   "kaynakDogrulama": {
-    "sonKaynakTarihi": "2026-08-28",
-    "sonKaynakKayitSayisi": 2038,
-    "sonKaynakGecerliKayitSayisi": 2031,
-    "gitGecmisindeIncelenenSurumSayisi": 96,
+    "sonKaynakTarihi": "2026-09-02",
+    "sonKaynakKayitSayisi": 2041,
+    "sonKaynakGecerliKayitSayisi": 2009,
+    "gitGecmisindeIncelenenSurumSayisi": 101,
     "gitGecmisindenKurtarilanTarihler": [],
     "gitGecmisindenKurtarilanKayitSayisi": 0,
     "manuelGecmisIceAktarimlari": [],
-    "resmiKaynakAktarimlari": [],
+    "resmiKaynakAktarimlari": [
+      {
+        "tarih": "2026-09-02T12:55:19.831Z",
+        "kaynak": "https://www.tefas.gov.tr/tr/fon-verileri",
+        "ilkTarih": "2026-08-31",
+        "sonTarih": "2026-08-31",
+        "kaynakTarihSayisi": 1,
+        "fonSayisi": 2031,
+        "kaynakKayitSayisi": 2038,
+        "gecerliSnapshotSayisi": 2031,
+        "gecersizKayitSayisi": 7,
+        "eklenenSnapshotSayisi": 2031,
+        "guncellenenSnapshotSayisi": 0,
+        "atlananSnapshotSayisi": 0
+      }
+    ],
     "temizlenenGecersizSnapshotlar": {
-      "sayi": 7,
+      "sayi": 32,
       "ornekler": [
-        "FNN:2026-08-28",
-        "GKE:2026-08-28",
-        "GKO:2026-08-28",
-        "GMV:2026-08-28",
-        "GSU:2026-08-28",
-        "RPE:2026-08-28",
-        "TMH:2026-08-28"
+        "AES:2026-09-02",
+        "APJ:2026-09-02",
+        "ARL:2026-09-02",
+        "ARM:2026-09-02",
+        "FNN:2026-09-02",
+        "GKE:2026-09-02",
+        "GKO:2026-09-02",
+        "GMC:2026-09-02",
+        "GMV:2026-09-02",
+        "GNZ:2026-09-02",
+        "GSU:2026-09-02",
+        "GUM:2026-09-02",
+        "IIS:2026-09-02",
+        "IJH:2026-09-02",
+        "IRF:2026-09-02",
+        "KPS:2026-09-02",
+        "NBO:2026-09-02",
+        "NFF:2026-09-02",
+        "NHP:2026-09-02",
+        "NPK:2026-09-02"
       ]
     }
   },
   "etkiAnaliziTarihselSenkronu": {
     "senkronizeEdildi": true,
     "fonSayisi": 6,
-    "sonTarih": "2026-08-28",
+    "sonTarih": "2026-09-02",
     "fonlar": [
       {
         "fonKodu": "TLY",
-        "tarihSayisi": 1262,
+        "tarihSayisi": 1265,
         "ilkTarih": "2021-08-23",
-        "sonTarih": "2026-08-28"
+        "sonTarih": "2026-09-02"
       },
       {
         "fonKodu": "PHE",
-        "tarihSayisi": 600,
+        "tarihSayisi": 603,
         "ilkTarih": "2024-04-01",
-        "sonTarih": "2026-08-28"
+        "sonTarih": "2026-09-02"
       },
       {
         "fonKodu": "DFI",
-        "tarihSayisi": 1027,
+        "tarihSayisi": 1030,
         "ilkTarih": "2022-07-29",
-        "sonTarih": "2026-08-28"
+        "sonTarih": "2026-09-02"
       },
       {
         "fonKodu": "KHA",
-        "tarihSayisi": 636,
+        "tarihSayisi": 639,
         "ilkTarih": "2024-02-09",
-        "sonTarih": "2026-08-28"
+        "sonTarih": "2026-09-02"
       },
       {
         "fonKodu": "THF",
-        "tarihSayisi": 368,
+        "tarihSayisi": 371,
         "ilkTarih": "2025-03-07",
-        "sonTarih": "2026-08-28"
+        "sonTarih": "2026-09-02"
       },
       {
         "fonKodu": "TMV",
-        "tarihSayisi": 1045,
+        "tarihSayisi": 1048,
         "ilkTarih": "2022-06-30",
-        "sonTarih": "2026-08-28"
+        "sonTarih": "2026-09-02"
       }
     ]
   },
-  "veriUyarisiSayisi": 66,
+  "veriUyarisiSayisi": 70,
   "veriUyarilari": [
     {
       "fonKodu": "KJK",
@@ -284,6 +324,22 @@
       "hamGetiri": 2.4485894
     },
     {
+      "fonKodu": "RTH",
+      "tarih": "2026-08-31",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 18661194.8,
+      "hesaplananFonToplamDeger": 19221183.53,
+      "farkOrani": 0.03000819
+    },
+    {
+      "fonKodu": "RTH",
+      "tarih": "2026-09-01",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 18156876.27,
+      "hesaplananFonToplamDeger": 17612006.25,
+      "farkOrani": 0.03000902
+    },
+    {
       "fonKodu": "RDS",
       "tarih": "2026-01-30",
       "tur": "gunluk-getiri-fiyat-kopmasi",
@@ -366,6 +422,14 @@
       "tarih": "2026-03-04",
       "tur": "gunluk-getiri-fiyat-kopmasi",
       "hamGetiri": 1.40342071
+    },
+    {
+      "fonKodu": "RKV",
+      "tarih": "2026-08-31",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 611834997.95,
+      "hesaplananFonToplamDeger": 569229669.17,
+      "farkOrani": 0.06963532
     },
     {
       "fonKodu": "NMG",
@@ -520,6 +584,14 @@
       "tarih": "2026-02-17",
       "tur": "gunluk-getiri-fiyat-kopmasi",
       "hamGetiri": 1.5259641
+    },
+    {
+      "fonKodu": "RE6",
+      "tarih": "2026-09-02",
+      "tur": "fon-toplam-degeri-duzeltildi",
+      "kaynakFonToplamDeger": 1745875961.51,
+      "hesaplananFonToplamDeger": 1947624479.89,
+      "farkOrani": 0.11555719
     }
   ]
 }
