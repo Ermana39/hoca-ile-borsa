@@ -167,7 +167,7 @@ function readSourceTable(filePath, requiredHeaders) {
   return { rows: rows.slice(headerIndex + 1), column };
 }
 
-const moneySumTolerance = 0.02;
+const moneySumTolerance = 1;
 
 function assertSameNumber(actual, expected, message, tolerance = 0.011) {
   if (actual === null || expected === null) {

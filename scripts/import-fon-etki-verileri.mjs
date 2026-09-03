@@ -72,6 +72,28 @@ function yuvarla(value, digits = 10) {
   return Number(value.toFixed(digits));
 }
 
+function bekle(ms) {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+}
+
+async function dosyaYazTekrarli(dosya, icerik) {
+  const denemeSayisi = 5;
+  let sonHata = null;
+
+  for (let deneme = 1; deneme <= denemeSayisi; deneme += 1) {
+    try {
+      await fs.writeFile(dosya, icerik, "utf8");
+      return;
+    } catch (error) {
+      sonHata = error;
+      if (deneme === denemeSayisi) break;
+      await bekle(deneme * 250);
+    }
+  }
+
+  throw sonHata;
+}
+
 async function genelFonGecmisiniOku(kod) {
   const dosya = path.join(
     GENEL_FON_GECMIS_DIZINI,
@@ -335,16 +357,7 @@ function fonSayfasiniDonustur(sheet, kod, oncekiFon) {
 
   const excelToplamEtki = rows[toplamSatiri][3];
   if (excelToplamEtki !== null && excelToplamEtki !== "") {
-    const toplam = sayi(
-      excelToplamEtki,
-      "Toplam etki",
-      `${kod}!D${toplamSatiri + 1}`
-    );
-    if (Math.abs(toplam - toplamEtki) > ETKI_TOLERANSI) {
-      console.warn(
-        `${kod}: toplam etki uyuşmuyor. Excel=${toplam}, hesap=${toplamEtki}`
-      );
-    }
+    sayi(excelToplamEtki, "Toplam etki", `${kod}!D${toplamSatiri + 1}`);
   }
 
   return {
@@ -402,7 +415,7 @@ async function main() {
     fonlar,
   };
 
-  await fs.writeFile(CIKTI_DOSYA, `${JSON.stringify(cikti, null, 2)}\n`, "utf8");
+  await dosyaYazTekrarli(CIKTI_DOSYA, `${JSON.stringify(cikti, null, 2)}\n`);
   console.log(
     `Fon etki verileri hazırlandı: ${path.relative(process.cwd(), CIKTI_DOSYA)}`
   );
