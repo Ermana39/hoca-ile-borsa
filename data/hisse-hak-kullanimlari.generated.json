@@ -1,14 +1,14 @@
 {
   "version": 1,
-  "generatedAt": "2026-09-02",
+  "generatedAt": "2026-09-03",
   "source": {
     "name": "Yahoo Finance Chart API",
     "url": "https://finance.yahoo.com/",
     "note": "Temettu ve guncel bolunme olaylari piyasa veri saglayicisindan alinir; eski kunye bolunme arsivi korunur. Kesin hak kullanimi bilgisi KAP bildirimleriyle kontrol edilmelidir."
   },
   "summary": {
-    "shareCodes": 630,
-    "available": 630,
+    "shareCodes": 631,
+    "available": 631,
     "unavailable": 0,
     "errors": 0,
     "dividendRecords": 3225,
@@ -6956,6 +6956,13 @@
           "kaynak": "kunye-arsivi"
         }
       ]
+    },
+    "BKRGY": {
+      "durum": "ok",
+      "kaynakSembol": "BKRGY.IS",
+      "kaynakUrl": "https://finance.yahoo.com/quote/BKRGY.IS/history/",
+      "temettuler": [],
+      "bolunmeler": []
     },
     "BLCYT": {
       "durum": "ok",
