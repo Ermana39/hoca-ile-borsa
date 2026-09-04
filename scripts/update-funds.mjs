@@ -1407,16 +1407,22 @@ function compactFund(fund, value = null) {
   };
 }
 
+function compareFundsByCode(a, b) {
+  return a.kod.localeCompare(b.kod, "tr");
+}
+
+function compareFundValues(a, b, direction = "desc") {
+  const valueOrder = direction === "asc" ? a.value - b.value : b.value - a.value;
+  if (valueOrder !== 0) return valueOrder;
+  return compareFundsByCode(a.fund, b.fund);
+}
+
 function topFunds(funds, selector, direction = "desc", limit = 10, predicate = null) {
   return funds
     .filter((fund) => (predicate ? predicate(fund) : true))
     .map((fund) => ({ fund, value: selector(fund) }))
     .filter(({ value }) => typeof value === "number" && Number.isFinite(value))
-    .sort((a, b) => {
-      const valueOrder = direction === "asc" ? a.value - b.value : b.value - a.value;
-      if (valueOrder !== 0) return valueOrder;
-      return a.fund.kod.localeCompare(b.fund.kod, "tr");
-    })
+    .sort((a, b) => compareFundValues(a, b, direction))
     .slice(0, limit)
     .map(({ fund, value }) => compactFund(fund, round(value, 8)));
 }
@@ -1462,16 +1468,24 @@ function buildManagers(funds) {
         ? [...fundsOfManager]
             .map((fund) => ({ fund, value: bestReturnPeriod.value(fund) }))
             .filter(({ value }) => typeof value === "number" && Number.isFinite(value))
-            .sort((a, b) => b.value - a.value)[0] ?? null
+            .sort((a, b) => compareFundValues(a, b, "desc"))[0] ?? null
         : null;
 
       const topFlowFund = [...fundsOfManager]
         .filter((fund) => Number.isFinite(fund.paraAkisi.gunluk) && fund.paraAkisi.gunluk > 0)
-        .sort((a, b) => b.paraAkisi.gunluk - a.paraAkisi.gunluk)[0];
+        .sort((a, b) => {
+          const valueOrder = b.paraAkisi.gunluk - a.paraAkisi.gunluk;
+          if (valueOrder !== 0) return valueOrder;
+          return compareFundsByCode(a, b);
+        })[0];
 
       const largestFund = [...fundsOfManager]
         .filter((fund) => typeof fund.fonToplamDeger === "number")
-        .sort((a, b) => b.fonToplamDeger - a.fonToplamDeger)[0];
+        .sort((a, b) => {
+          const valueOrder = b.fonToplamDeger - a.fonToplamDeger;
+          if (valueOrder !== 0) return valueOrder;
+          return compareFundsByCode(a, b);
+        })[0];
 
       return {
         slug: manager.slug,
@@ -1507,7 +1521,11 @@ function buildManagers(funds) {
           : null,
         enBuyukFon: largestFund ? compactFund(largestFund, largestFund.fonToplamDeger) : null,
         fonlar: fundsOfManager
-          .sort((a, b) => (b.fonToplamDeger ?? 0) - (a.fonToplamDeger ?? 0))
+          .sort((a, b) => {
+            const valueOrder = (b.fonToplamDeger ?? 0) - (a.fonToplamDeger ?? 0);
+            if (valueOrder !== 0) return valueOrder;
+            return compareFundsByCode(a, b);
+          })
           .map((fund) => compactFund(fund, fund.paraAkisi.gunluk)),
       };
     })

@@ -255,6 +255,10 @@ function compactRanking(funds, selector, direction, predicate = () => true) {
     .slice(0, 10);
 }
 
+function compareFundsByCode(a, b) {
+  return a.kod.localeCompare(b.kod, "tr");
+}
+
 function assertRanking(actual, expected, label) {
   assert(actual.length === expected.length, `${label} satır sayısı uyuşmuyor.`);
   for (let index = 0; index < expected.length; index += 1) {
@@ -679,7 +683,11 @@ for (const [name, funds] of activeByManager) {
 
   const expectedTopFlow = funds
     .filter((fund) => Number.isFinite(fund.paraAkisi.gunluk) && fund.paraAkisi.gunluk > 0)
-    .sort((a, b) => b.paraAkisi.gunluk - a.paraAkisi.gunluk)[0] ?? null;
+    .sort((a, b) => {
+      const valueOrder = b.paraAkisi.gunluk - a.paraAkisi.gunluk;
+      if (valueOrder !== 0) return valueOrder;
+      return compareFundsByCode(a, b);
+    })[0] ?? null;
   if (expectedTopFlow) {
     assert(manager.enYuksekParaGirisiAlanFon, `${name} pozitif para girişi lideri eksik.`);
     assert(manager.enYuksekParaGirisiAlanFon.value > 0, `${name} para girişi lideri pozitif değil.`);
@@ -701,7 +709,11 @@ for (const [name, funds] of activeByManager) {
     ? funds
         .map((fund) => ({ fund, value: expectedBestPeriod.value(fund) }))
         .filter((item) => Number.isFinite(item.value))
-        .sort((a, b) => b.value - a.value)[0]
+        .sort((a, b) => {
+          const valueOrder = b.value - a.value;
+          if (valueOrder !== 0) return valueOrder;
+          return compareFundsByCode(a.fund, b.fund);
+        })[0]
     : null;
   assert(
     manager.enIyiPerformansDonemi === (expectedBestPeriod?.label ?? null),
