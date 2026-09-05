@@ -46,8 +46,13 @@ export async function consumeRateLimit(
     }
   }
 
-  // Compatibility fallback for installations without Redis. This only covers
-  // one process; serverless-wide protection requires the KV REST configuration.
+  // Serverless instances do not share memory. A local fallback in Vercel would
+  // reset limits on cold starts and let parallel instances bypass the limit.
+  if (process.env.VERCEL === "1") {
+    throw new RateLimitUnavailableError("Paylaşılan istek sınırı yapılandırılmamış.");
+  }
+
+  // Local development / a single long-lived Node process only.
   const now = Date.now();
   if (now - lastCleanup >= 60_000 || localEntries.size >= MAX_LOCAL_ENTRIES) {
     for (const [entryKey, entry] of localEntries) {

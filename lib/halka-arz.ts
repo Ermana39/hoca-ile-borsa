@@ -387,6 +387,7 @@ export function halkaArzGetir(slug: string): HalkaArzVeri | null {
 export type TaslakListeOgesi = {
   klasor: string;
   label: string;
+  sektorler: string[];
   basvuruTarihi?: string;
   araciKurum?: string;
   pazar?: string;
@@ -398,6 +399,36 @@ export type TaslakListeOgesi = {
   ortakSatisVar: boolean;
   sermayeArtirimiVar: boolean;
 };
+
+function taslakSektorleriniBelirle(veri: HalkaArzVeri): string[] {
+  const metin = `${veri.sirketAdi} ${veri.sirketHakkinda ?? ""}`
+    .toLocaleLowerCase("tr")
+    .replace(/\s+/g, " ");
+  const sektorler: string[] = [];
+  const sektorKurallari: Array<[string, RegExp]> = [
+    ["Enerji", /enerji|elektrik|güneş enerji|rüzgâr|rüzgar|\bges\b|\bres\b|\bhes\b/],
+    ["Teknoloji ve Bilişim", /teknoloji|bilişim|yazılım|dijital|siber|telekom|elektronik|oyun geliştirme/],
+    ["Gıda ve Tarım", /gıda|tarım|hayvancılık|kuruyemiş|makarna|un üret|süt ürün|içecek/],
+    ["Gayrimenkul ve İnşaat", /gayrimenkul|\bgyo\b|inşaat|hazır beton|çimento|konut projes/],
+    ["Finans ve Sigorta", /sigorta|finans|faktoring|portföy yönet|ödeme hizmet/],
+    ["Sağlık ve İlaç", /ilaç|sağlık|tıbbi|medikal|vitamin|takviye edici/],
+    ["Metal ve Madencilik", /madenc|çelik|demir|metal|bakır|alüminyum|patlatma ürün/],
+    ["Kimya, Plastik ve Ambalaj", /kimya|plastik|polimer|kauçuk|ambalaj|petrokimya/],
+    ["Perakende, Tekstil ve Tüketim", /perakende|mağaza|giyim|tekstil|ayakkabı|saat ve aksesuar|mobilya/],
+    ["Ulaştırma, Otomotiv ve Lojistik", /ulaşım|lojistik|otomotiv|araç kiralama|filo kiralama|vagon|taşımacılık/],
+    ["Turizm", /turizm|otel|konaklama|tatil köy/],
+    ["Savunma Sanayii", /savunma sanayi|silah|mühimmat|havacılık/],
+  ];
+
+  for (const [sektor, kural] of sektorKurallari) {
+    if (kural.test(metin)) sektorler.push(sektor);
+  }
+
+  if (sektorler.length > 0) return sektorler;
+  if (/sanayi|üretim|imalat/.test(metin)) return ["Sanayi ve Üretim"];
+  if (/hizmet/.test(metin)) return ["Hizmetler"];
+  return ["Sektör bilgisi bekleniyor"];
+}
 export type OnayliListeOgesi = {
   klasor: string;
   label: string;
@@ -445,6 +476,7 @@ export function getTaslakIzahnameListesi(): TaslakListeOgesi[] {
     liste.push({
       klasor: slug,
       label: veri.sirketAdi || slug,
+      sektorler: taslakSektorleriniBelirle(veri),
       basvuruTarihi: veri.ozet.basvuruTarihi,
       araciKurum: veri.ozet.araciKurum,
       pazar: veri.ozet.pazar,

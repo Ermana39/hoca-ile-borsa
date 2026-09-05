@@ -1,3 +1,5 @@
+import { isIP } from "node:net";
+
 export function jsonResponse(
   body: unknown,
   init: ResponseInit = {},
@@ -66,4 +68,3 @@ export function cookieValue(
   if (options.secure) parts.push("Secure");
   return parts.join("; ");
 }
-import { isIP } from "node:net";
