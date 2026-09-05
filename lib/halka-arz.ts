@@ -384,7 +384,20 @@ export function halkaArzGetir(slug: string): HalkaArzVeri | null {
   }
 }
 
-export type TaslakListeOgesi = { klasor: string; label: string };
+export type TaslakListeOgesi = {
+  klasor: string;
+  label: string;
+  basvuruTarihi?: string;
+  araciKurum?: string;
+  pazar?: string;
+  dagitimYontemi?: string;
+  pay?: string;
+  halkaAciklikOrani?: string;
+  katilimEndeksi?: string;
+  fiyatIstikrari?: string;
+  ortakSatisVar: boolean;
+  sermayeArtirimiVar: boolean;
+};
 export type OnayliListeOgesi = {
   klasor: string;
   label: string;
@@ -416,21 +429,40 @@ const statikOnayliIzahnameler: OnayliListeOgesi[] = [
 // listelenir; bozuk/eksik-şemalı dosyalar otomatik dışarıda kalır. Böylece JSON
 // eklemek tek başına yeterlidir; ayrı bir metin listesi tutmaya gerek yoktur.
 export function getTaslakIzahnameListesi(): TaslakListeOgesi[] {
-  return tumJsonSluglar()
-    .map((slug) => {
-      const veri = halkaArzGetir(slug);
-      if (!veri) return null;
-      if (veri.seo?.contentStatus === "onayli") return null;
-      if (
-        taslakCanonicalYolu(veri, slug) !==
-        `/halka-arz/taslak-izahnameler/${slug}`
-      ) {
-        return null;
-      }
-      return { klasor: slug, label: veri.sirketAdi || slug };
-    })
-    .filter((x): x is TaslakListeOgesi => x !== null)
-    .sort((a, b) => a.label.localeCompare(b.label, "tr"));
+  const liste: TaslakListeOgesi[] = [];
+
+  for (const slug of tumJsonSluglar()) {
+    const veri = halkaArzGetir(slug);
+    if (!veri) continue;
+    if (veri.seo?.contentStatus === "onayli") continue;
+    if (
+      taslakCanonicalYolu(veri, slug) !==
+      `/halka-arz/taslak-izahnameler/${slug}`
+    ) {
+      continue;
+    }
+
+    liste.push({
+      klasor: slug,
+      label: veri.sirketAdi || slug,
+      basvuruTarihi: veri.ozet.basvuruTarihi,
+      araciKurum: veri.ozet.araciKurum,
+      pazar: veri.ozet.pazar,
+      dagitimYontemi: veri.ozet.dagitimYontemi,
+      pay: veri.ozet.pay || veri.toplamPay,
+      halkaAciklikOrani: veri.halkaAciklikOrani,
+      katilimEndeksi: veri.ozet.katilimEndeksi,
+      fiyatIstikrari: veri.taahhutOzeti?.fiyatIstikrari,
+      ortakSatisVar: (veri.halkaArzSekli ?? []).some((satir) =>
+        satir.toLocaleLowerCase("tr").includes("ortak sat")
+      ),
+      sermayeArtirimiVar: (veri.halkaArzSekli ?? []).some((satir) =>
+        satir.toLocaleLowerCase("tr").includes("sermaye art")
+      ),
+    });
+  }
+
+  return liste.sort((a, b) => a.label.localeCompare(b.label, "tr"));
 }
 
 export function getOnayliIzahnameListesi(): OnayliListeOgesi[] {

@@ -16,8 +16,9 @@ export const metadata: Metadata = {
 };
 
 export default function TaslakIzahnamelerPage() {
-  const izahnameler: TaslakOgesi[] = getTaslakIzahnameListesi().map(
-    (item) => [item.klasor, item.label, getIzahnameLogo(item.klasor)]
-  );
+  const izahnameler: TaslakOgesi[] = getTaslakIzahnameListesi().map((item) => ({
+    ...item,
+    logo: getIzahnameLogo(item.klasor),
+  }));
   return <TaslakIzahnamelerClient izahnameler={izahnameler} />;
 }

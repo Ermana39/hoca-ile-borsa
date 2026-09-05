@@ -1,10 +1,12 @@
 "use client";
 
 import Link from "@/components/NoPrefetchLink";
-import { useMemo, useState } from "react";
+import { type ReactNode, useMemo, useState } from "react";
 import SirketLogo from "@/components/SirketLogo";
 
 const ILK_GOSTERIM_ADEDI = 30;
+const TABLO_LIMITI = 6;
+
 function aramaIcinTemizle(text: string) {
   return text
     .toLocaleLowerCase("tr")
@@ -24,8 +26,174 @@ function aramaIcinTemizle(text: string) {
     .trim();
 }
 
+export type TaslakOgesi = {
+  klasor: string;
+  label: string;
+  logo?: string;
+  basvuruTarihi?: string;
+  araciKurum?: string;
+  pazar?: string;
+  dagitimYontemi?: string;
+  pay?: string;
+  halkaAciklikOrani?: string;
+  katilimEndeksi?: string;
+  fiyatIstikrari?: string;
+  ortakSatisVar: boolean;
+  sermayeArtirimiVar: boolean;
+};
 
-export type TaslakOgesi = [klasor: string, label: string, logo?: string];
+type KategoriGrubu = {
+  ad: string;
+  adet: number;
+  ornekler: TaslakOgesi[];
+};
+
+function tarihDegeri(tarih?: string) {
+  if (!tarih) return 0;
+  const eslesme = tarih.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})$/);
+  if (!eslesme) return 0;
+  const [, gun, ay, yil] = eslesme;
+  return Number(`${yil}${ay.padStart(2, "0")}${gun.padStart(2, "0")}`);
+}
+
+function sayiDegeri(text?: string) {
+  if (!text) return 0;
+  const temiz = text.replace(/\./g, "").replace(",", ".");
+  const eslesme = temiz.match(/\d+(?:\.\d+)?/);
+  return eslesme ? Number(eslesme[0]) : 0;
+}
+
+function halkaAciklikDegeri(text?: string) {
+  if (!text) return 0;
+  const eslesme = text.replace(",", ".").match(/\d+(?:\.\d+)?/);
+  return eslesme ? Number(eslesme[0]) : 0;
+}
+
+function bilgi(text?: string) {
+  return text && text.trim() ? text : "Açıklanmadı";
+}
+
+function kisaSirketAdi(ad: string) {
+  return ad
+    .replace(/\s+A\.Ş\.$/i, "")
+    .replace(/\s+Anonim Şirketi$/i, "")
+    .trim();
+}
+
+function kisaKurumAdi(ad: string) {
+  return ad
+    .replace(/\s+Menkul Değerler A\.Ş\./gi, "")
+    .replace(/\s+Menkul Kıymetler A\.Ş\./gi, "")
+    .replace(/\s+Yatırım A\.Ş\./gi, " Yatırım")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+function kurumlariAyir(araciKurum?: string) {
+  if (!araciKurum) return [];
+  return Array.from(
+    new Set(
+      araciKurum
+        .split(/\s*(?:\/|\n)\s*/)
+        .map(kisaKurumAdi)
+        .filter(Boolean)
+    )
+  );
+}
+
+function grupOlustur(
+  izahnameler: TaslakOgesi[],
+  degerAl: (item: TaslakOgesi) => string[]
+) {
+  const gruplar = new Map<string, TaslakOgesi[]>();
+
+  for (const item of izahnameler) {
+    for (const deger of degerAl(item)) {
+      const ad = bilgi(deger);
+      gruplar.set(ad, [...(gruplar.get(ad) ?? []), item]);
+    }
+  }
+
+  return Array.from(gruplar.entries())
+    .map(([ad, ornekler]) => ({ ad, adet: ornekler.length, ornekler }))
+    .sort((a, b) => b.adet - a.adet || a.ad.localeCompare(b.ad, "tr"));
+}
+
+function SirketBaglantisi({ item }: { item: TaslakOgesi }) {
+  return (
+    <Link
+      href={`/halka-arz/taslak-izahnameler/${item.klasor}`}
+      prefetch={false}
+      className="font-semibold text-blue-700 hover:text-blue-900"
+    >
+      {kisaSirketAdi(item.label)}
+    </Link>
+  );
+}
+
+function MiniTablo({
+  baslik,
+  aciklama,
+  children,
+}: {
+  baslik: string;
+  aciklama: string;
+  children: ReactNode;
+}) {
+  return (
+    <section className="rounded-2xl border border-zinc-200 bg-white p-4 shadow-sm md:p-5">
+      <div className="mb-4">
+        <h2 className="text-lg font-bold text-zinc-900">{baslik}</h2>
+        <p className="mt-1 text-sm leading-6 text-zinc-600">{aciklama}</p>
+      </div>
+      {children}
+    </section>
+  );
+}
+
+function OrnekSirketler({ items }: { items: TaslakOgesi[] }) {
+  return (
+    <div className="flex flex-wrap gap-2">
+      {items.slice(0, 3).map((item) => (
+        <Link
+          key={item.klasor}
+          href={`/halka-arz/taslak-izahnameler/${item.klasor}`}
+          prefetch={false}
+          className="rounded-full border border-zinc-200 bg-zinc-50 px-2.5 py-1 text-xs font-semibold text-zinc-700 hover:bg-zinc-100"
+        >
+          {kisaSirketAdi(item.label)}
+        </Link>
+      ))}
+    </div>
+  );
+}
+
+function KategoriTablosu({ gruplar }: { gruplar: KategoriGrubu[] }) {
+  return (
+    <div className="overflow-x-auto">
+      <table className="w-full min-w-[520px] text-left text-sm">
+        <thead className="border-b border-zinc-200 text-xs uppercase text-zinc-500">
+          <tr>
+            <th className="pb-3 font-semibold">Kategori</th>
+            <th className="pb-3 font-semibold">Adet</th>
+            <th className="pb-3 font-semibold">Örnek şirketler</th>
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-zinc-100">
+          {gruplar.slice(0, TABLO_LIMITI).map((grup) => (
+            <tr key={grup.ad}>
+              <td className="py-3 font-semibold text-zinc-900">{grup.ad}</td>
+              <td className="py-3 text-zinc-700">{grup.adet}</td>
+              <td className="py-3">
+                <OrnekSirketler items={grup.ornekler} />
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  );
+}
 
 export default function TaslakIzahnamelerClient({
   izahnameler,
@@ -41,12 +209,90 @@ export default function TaslakIzahnamelerClient({
 
     if (!temizArama) return taslakIzahnameler;
 
-    return taslakIzahnameler.filter(([, label]) =>
-      aramaIcinTemizle(label).includes(temizArama)
+    return taslakIzahnameler.filter((item) =>
+      aramaIcinTemizle(item.label).includes(temizArama)
     );
   }, [arama, taslakIzahnameler]);
 
   const gorunenIzahnameler = filtrelenmisIzahnameler.slice(0, gorunenAdet);
+
+  const yeniBasvurular = useMemo(
+    () =>
+      taslakIzahnameler
+        .filter((item) => tarihDegeri(item.basvuruTarihi) > 0)
+        .sort(
+          (a, b) =>
+            tarihDegeri(b.basvuruTarihi) - tarihDegeri(a.basvuruTarihi) ||
+            a.label.localeCompare(b.label, "tr")
+        )
+        .slice(0, TABLO_LIMITI),
+    [taslakIzahnameler]
+  );
+
+  const buyukPaylar = useMemo(
+    () =>
+      taslakIzahnameler
+        .filter((item) => sayiDegeri(item.pay) > 0)
+        .sort(
+          (a, b) =>
+            sayiDegeri(b.pay) - sayiDegeri(a.pay) ||
+            a.label.localeCompare(b.label, "tr")
+        )
+        .slice(0, TABLO_LIMITI),
+    [taslakIzahnameler]
+  );
+
+  const yuksekHalkaAciklik = useMemo(
+    () =>
+      taslakIzahnameler
+        .filter((item) => halkaAciklikDegeri(item.halkaAciklikOrani) > 0)
+        .sort(
+          (a, b) =>
+            halkaAciklikDegeri(b.halkaAciklikOrani) -
+              halkaAciklikDegeri(a.halkaAciklikOrani) ||
+            a.label.localeCompare(b.label, "tr")
+        )
+        .slice(0, TABLO_LIMITI),
+    [taslakIzahnameler]
+  );
+
+  const konsorsiyumGruplari = useMemo(
+    () =>
+      grupOlustur(taslakIzahnameler, (item) => {
+        const kurumlar = kurumlariAyir(item.araciKurum);
+        return kurumlar.length > 0 ? kurumlar : ["Aracı kurum bekleniyor"];
+      }),
+    [taslakIzahnameler]
+  );
+
+  const pazarGruplari = useMemo(
+    () =>
+      grupOlustur(taslakIzahnameler, (item) => [
+        item.pazar || "Pazar bilgisi bekleniyor",
+      ]),
+    [taslakIzahnameler]
+  );
+
+  const dagitimGruplari = useMemo(
+    () =>
+      grupOlustur(taslakIzahnameler, (item) => [
+        item.dagitimYontemi || "Dağıtım yöntemi bekleniyor",
+      ]),
+    [taslakIzahnameler]
+  );
+
+  const arzYapisiGruplari = useMemo(
+    () =>
+      grupOlustur(taslakIzahnameler, (item) => {
+        if (item.sermayeArtirimiVar && item.ortakSatisVar) {
+          return ["Sermaye artırımı + ortak satışı"];
+        }
+        if (item.sermayeArtirimiVar) return ["Sadece sermaye artırımı"];
+        if (item.ortakSatisVar) return ["Sadece ortak satışı"];
+        return ["Arz şekli detayı bekleniyor"];
+      }),
+    [taslakIzahnameler]
+  );
 
   const aramayiGuncelle = (value: string) => {
     setArama(value);
@@ -55,7 +301,7 @@ export default function TaslakIzahnamelerClient({
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
-      <div className="mx-auto max-w-5xl">
+      <div className="mx-auto max-w-7xl">
         <div className="mb-6 flex flex-wrap gap-3">
           <Link
             href="/"
@@ -95,17 +341,183 @@ export default function TaslakIzahnamelerClient({
           />
         </section>
 
+        <section className="mb-8 space-y-4">
+          <div>
+            <h2 className="text-2xl font-bold text-zinc-900">
+              Taslakları Hızlı Karşılaştır
+            </h2>
+            <p className="mt-2 text-sm leading-6 text-zinc-600">
+              Başvuru sürecindeki şirketleri tarih, konsorsiyum, pazar,
+              dağıtım yöntemi ve arz büyüklüğü kırılımlarında inceleyin.
+            </p>
+          </div>
+
+          <div className="grid gap-4 lg:grid-cols-2">
+            <MiniTablo
+              baslik="Başvuru Tarihine Göre"
+              aciklama="Başvuru tarihi girilmiş taslaklar içinde en yeni kayıtlar."
+            >
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[520px] text-left text-sm">
+                  <thead className="border-b border-zinc-200 text-xs uppercase text-zinc-500">
+                    <tr>
+                      <th className="pb-3 font-semibold">Şirket</th>
+                      <th className="pb-3 font-semibold">Başvuru</th>
+                      <th className="pb-3 font-semibold">Aracı kurum</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-zinc-100">
+                    {yeniBasvurular.map((item) => (
+                      <tr key={item.klasor}>
+                        <td className="py-3">
+                          <SirketBaglantisi item={item} />
+                        </td>
+                        <td className="py-3 text-zinc-700">
+                          {bilgi(item.basvuruTarihi)}
+                        </td>
+                        <td className="py-3 text-zinc-700">
+                          {bilgi(item.araciKurum)}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </MiniTablo>
+
+            <MiniTablo
+              baslik="Konsorsiyum Liderine Göre"
+              aciklama="Taslaklarda adı geçen aracı kurumlara göre yoğunlaşma."
+            >
+              <KategoriTablosu gruplar={konsorsiyumGruplari} />
+            </MiniTablo>
+
+            <MiniTablo
+              baslik="Pazar Bilgisine Göre"
+              aciklama="Yıldız Pazar, Ana Pazar veya henüz açıklanmayan pazar kırılımı."
+            >
+              <KategoriTablosu gruplar={pazarGruplari} />
+            </MiniTablo>
+
+            <MiniTablo
+              baslik="Dağıtım Yöntemine Göre"
+              aciklama="Eşit dağıtım, oransal dağıtım ve açıklanmayan dağıtım yöntemi."
+            >
+              <KategoriTablosu gruplar={dagitimGruplari} />
+            </MiniTablo>
+
+            <MiniTablo
+              baslik="Planlanan Pay Büyüklüğüne Göre"
+              aciklama="Lot bilgisi girilmiş taslaklarda en büyük planlanan pay satışları."
+            >
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[520px] text-left text-sm">
+                  <thead className="border-b border-zinc-200 text-xs uppercase text-zinc-500">
+                    <tr>
+                      <th className="pb-3 font-semibold">Şirket</th>
+                      <th className="pb-3 font-semibold">Pay</th>
+                      <th className="pb-3 font-semibold">Halka açıklık</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-zinc-100">
+                    {buyukPaylar.map((item) => (
+                      <tr key={item.klasor}>
+                        <td className="py-3">
+                          <SirketBaglantisi item={item} />
+                        </td>
+                        <td className="py-3 text-zinc-700">{bilgi(item.pay)}</td>
+                        <td className="py-3 text-zinc-700">
+                          {bilgi(item.halkaAciklikOrani)}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </MiniTablo>
+
+            <MiniTablo
+              baslik="Halka Açıklık Oranına Göre"
+              aciklama="Halka açıklık oranı girilmiş taslaklarda en yüksek oranlar."
+            >
+              <div className="overflow-x-auto">
+                <table className="w-full min-w-[520px] text-left text-sm">
+                  <thead className="border-b border-zinc-200 text-xs uppercase text-zinc-500">
+                    <tr>
+                      <th className="pb-3 font-semibold">Şirket</th>
+                      <th className="pb-3 font-semibold">Halka açıklık</th>
+                      <th className="pb-3 font-semibold">Arz yapısı</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-zinc-100">
+                    {yuksekHalkaAciklik.map((item) => (
+                      <tr key={item.klasor}>
+                        <td className="py-3">
+                          <SirketBaglantisi item={item} />
+                        </td>
+                        <td className="py-3 text-zinc-700">
+                          {bilgi(item.halkaAciklikOrani)}
+                        </td>
+                        <td className="py-3 text-zinc-700">
+                          {item.sermayeArtirimiVar && item.ortakSatisVar
+                            ? "Sermaye artırımı + ortak satışı"
+                            : item.sermayeArtirimiVar
+                              ? "Sermaye artırımı"
+                              : item.ortakSatisVar
+                                ? "Ortak satışı"
+                                : "Açıklanmadı"}
+                        </td>
+                      </tr>
+                    ))}
+                  </tbody>
+                </table>
+              </div>
+            </MiniTablo>
+
+            <MiniTablo
+              baslik="Arz Yapısına Göre"
+              aciklama="Sermaye artırımı ve ortak satışı içeren taslakları ayırır."
+            >
+              <KategoriTablosu gruplar={arzYapisiGruplari} />
+            </MiniTablo>
+
+            <MiniTablo
+              baslik="Eklenebilecek Faydalı Alanlar"
+              aciklama="Veri girişi düzenli yapılırsa bu kırılımlar da ayrı takip alanına çevrilebilir."
+            >
+              <ul className="space-y-3 text-sm leading-6 text-zinc-700">
+                <li>
+                  <strong>Katılım uygunluğu:</strong> uygun, uygun değil veya
+                  açıklanmadı olarak ayrı liste.
+                </li>
+                <li>
+                  <strong>Fiyat istikrarı:</strong> planlanan süre ve kaynak
+                  oranına göre takip.
+                </li>
+                <li>
+                  <strong>Fon kullanım amacı:</strong> yatırım, borç kapama,
+                  işletme sermayesi ve satın alma kırılımları.
+                </li>
+                <li>
+                  <strong>Sektör kırılımı:</strong> sanayi, enerji, gıda,
+                  teknoloji ve finans gibi alanlara göre gruplama.
+                </li>
+              </ul>
+            </MiniTablo>
+          </div>
+        </section>
+
         <div className="space-y-3">
           {filtrelenmisIzahnameler.length > 0 ? (
-            gorunenIzahnameler.map(([klasor, label, logo]) => (
-              <div key={klasor} className="space-y-3">
+            gorunenIzahnameler.map((item) => (
+              <div key={item.klasor} className="space-y-3">
                 <Link
-                  href={`/halka-arz/taslak-izahnameler/${klasor}`}
+                  href={`/halka-arz/taslak-izahnameler/${item.klasor}`}
                   prefetch={false}
                   className="flex items-center gap-4 rounded-xl border border-red-200 bg-red-50 px-4 py-4 text-base font-medium text-zinc-900 transition hover:bg-red-100"
                 >
-                  <SirketLogo logo={logo} ad={label} />
-                  <span>{label}</span>
+                  <SirketLogo logo={item.logo} ad={item.label} />
+                  <span>{item.label}</span>
                 </Link>
               </div>
             ))
