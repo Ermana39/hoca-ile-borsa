@@ -1,3 +1,4 @@
+import { serializeJsonLd } from "@/lib/json-ld";
 import { seoAciklamasi } from "@/lib/seo-metadata";
 import type { Metadata } from "next";
 import HaberAltKisim from "@/components/HaberAltKisim";
@@ -154,7 +155,7 @@ export default function EnCokParaGirisiCikisiPage() {
     <main className="min-h-screen bg-[#f8fafc] px-4 py-6 md:px-6">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
       />
 
       <div className="mx-auto max-w-7xl">

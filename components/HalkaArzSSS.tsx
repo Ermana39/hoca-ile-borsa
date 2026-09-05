@@ -1,3 +1,4 @@
+import { serializeJsonLd } from "@/lib/json-ld";
 export type SSSItem = {
   soru: string;
   cevap: string;
@@ -38,7 +39,7 @@ export default function HalkaArzSSS({
       {schema && (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
         />
       )}
       <h2 className="mb-5 text-lg font-bold text-slate-900 sm:text-xl">{title}</h2>

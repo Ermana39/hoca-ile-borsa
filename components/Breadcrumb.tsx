@@ -1,5 +1,6 @@
 "use client";
 
+import { serializeJsonLd } from "@/lib/json-ld";
 import Link from "@/components/NoPrefetchLink";
 import { usePathname } from "next/navigation";
 
@@ -79,7 +80,7 @@ export default function Breadcrumb({
   const schema = (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
     />
   );
 

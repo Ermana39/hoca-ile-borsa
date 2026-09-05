@@ -1,3 +1,4 @@
+import { serializeJsonLd } from "@/lib/json-ld";
 import { seoAciklamasi } from "@/lib/seo-metadata";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
@@ -51,7 +52,7 @@ export default function GunlukBorsaOzetiIndex() {
     <main className="min-h-screen bg-slate-50">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(collectionSchema) }}
       />
 
       <div className="mx-auto max-w-6xl px-4 py-6 md:px-6">

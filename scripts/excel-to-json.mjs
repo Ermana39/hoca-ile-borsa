@@ -1,6 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import * as XLSX from "xlsx";
+import XLSX from "./lib/xlsx.mjs";
 
 const PROJE_KOKU = process.cwd();
 const OLASI_APP_DIZINLERI = [

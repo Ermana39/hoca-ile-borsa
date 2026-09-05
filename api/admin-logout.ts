@@ -18,6 +18,13 @@ export default {
         secure: process.env.NODE_ENV === "production",
       }),
     );
+    headers.append(
+      "Set-Cookie",
+      cookieValue("hib_admin_seen", "", {
+        maxAge: 0,
+        secure: process.env.NODE_ENV === "production",
+      }),
+    );
     return jsonResponse({ ok: true }, { headers });
   },
 };

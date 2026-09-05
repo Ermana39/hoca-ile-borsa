@@ -3,7 +3,7 @@ import path from "path";
 import crypto from "crypto";
 import { execFileSync } from "child_process";
 
-const XLSX_MODULE = await import("xlsx").catch(() => null);
+const XLSX_MODULE = await import("./lib/xlsx.mjs").catch(() => null);
 const XLSX = XLSX_MODULE?.default || XLSX_MODULE;
 
 const VERSION = 10;

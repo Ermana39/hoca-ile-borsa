@@ -1,3 +1,4 @@
+import { serializeJsonLd } from "@/lib/json-ld";
 export const revalidate = false;
 import type { Metadata } from "next";
 import "./globals.css";
@@ -106,7 +107,7 @@ export default function RootLayout({
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(organizationJsonLd) }}
         />
         <link
           rel="alternate"

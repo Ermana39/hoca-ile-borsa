@@ -1,3 +1,4 @@
+import { serializeJsonLd } from "@/lib/json-ld";
 import Link from "@/components/NoPrefetchLink";
 import FonTercihTableClient, {
   type FonSatiri,
@@ -99,7 +100,7 @@ export default function HaftalikYatirimFonlarininEnCokTercihEttigiHisselerPage()
     <main className="min-h-screen bg-white px-4 py-6 pb-24 md:px-6">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
       />
       <div className="mx-auto max-w-[1600px]">
         <div className="mb-6 flex gap-3">

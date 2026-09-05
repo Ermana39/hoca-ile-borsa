@@ -1,3 +1,4 @@
+import { serializeJsonLd } from "@/lib/json-ld";
 import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
@@ -121,7 +122,7 @@ export default function Page() {
     <main className="min-h-screen bg-slate-50">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
       />
 
       <article className="mx-auto max-w-5xl px-4 py-8 sm:px-6 lg:px-8">

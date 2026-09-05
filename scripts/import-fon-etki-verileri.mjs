@@ -1,6 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
-import * as XLSX from "xlsx";
+import XLSX from "./lib/xlsx.mjs";
 
 const KAYNAK_DOSYA = path.join(
   process.cwd(),

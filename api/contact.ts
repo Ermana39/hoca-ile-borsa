@@ -1,13 +1,13 @@
 import nodemailer from "nodemailer";
 import {
-  checkContactRateLimit,
   isValidEmail,
-  registerContactRequest,
   sanitizeText,
 } from "../lib/contact-security";
 import { getClientIp, jsonResponse } from "../lib/http-api";
 import { isSameOriginRequest } from "../lib/request-security";
 import { addSecurityLog } from "../lib/security-log";
+import { consumeRateLimit, RateLimitUnavailableError } from "../lib/rate-limit";
+import { readJsonObject, RequestBodyError } from "../lib/request-body";
 
 function escapeHtml(value: string) {
   return value
@@ -35,20 +35,26 @@ export default {
         );
       }
 
-      const rateLimit = checkContactRateLimit(ip);
+      const rateLimit = await consumeRateLimit("contact", ip, 5, 60 * 60 * 1000);
       if (!rateLimit.allowed) {
         return jsonResponse(
           {
             ok: false,
             message: `Çok fazla mesaj denediniz. ${rateLimit.retryAfterSeconds} saniye sonra tekrar deneyin.`,
           },
-          { status: 429 },
+          { status: 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
         );
       }
 
-      const body = await request.json();
-      if (String(body?.website || "").trim()) {
+      const body = await readJsonObject(request, 32 * 1024);
+      if (typeof body.website === "string" && body.website.trim()) {
         return jsonResponse({ ok: true, message: "Mesajınız alındı." });
+      }
+
+      for (const [field, limit] of Object.entries({ name: 120, email: 160, subject: 160, message: 3000 })) {
+        if (typeof body[field] !== "string" || body[field].length > limit || body[field].includes("\0")) {
+          throw new RequestBodyError("Form alanları geçersiz.");
+        }
       }
 
       const name = sanitizeText(String(body?.name || ""), 120);
@@ -98,13 +104,19 @@ export default {
         host: smtpHost,
         port: smtpPort,
         secure: smtpPort === 465,
+        requireTLS: smtpPort !== 465,
+        connectionTimeout: 10_000,
+        greetingTimeout: 10_000,
+        socketTimeout: 20_000,
         auth: { user: smtpUser, pass: smtpPass },
       });
 
       await transporter.sendMail({
         from: `"Hoca İle Borsa Site Formu" <${smtpUser}>`,
         to: contactToEmail,
-        replyTo: email,
+        replyTo: { address: email, name },
+        disableFileAccess: true,
+        disableUrlAccess: true,
         subject: `İletişim Formu: ${subject}`,
         text: [
           `Ad Soyad: ${name}`,
@@ -118,14 +130,13 @@ export default {
         html: `<div style="font-family:Arial,sans-serif;color:#111;line-height:1.6"><h2>Yeni İletişim Formu Mesajı</h2><p><strong>Ad Soyad:</strong> ${escapeHtml(name)}</p><p><strong>E-posta:</strong> ${escapeHtml(email)}</p><p><strong>Konu:</strong> ${escapeHtml(subject)}</p><p><strong>IP:</strong> ${escapeHtml(ip)}</p><div style="margin-top:20px;padding:16px;border:1px solid #ddd">${escapeHtml(message).replace(/\n/g, "<br />")}</div></div>`,
       });
 
-      registerContactRequest(ip);
-      addSecurityLog("contact_sent", ip, `Mesaj gonderildi: ${subject}`);
+      addSecurityLog("contact_sent", ip, "Mesaj gonderildi");
       return jsonResponse({ ok: true, message: "Mesajınız gönderildi." });
     } catch (error) {
-      console.error("CONTACT_FORM_ERROR:", error);
+      addSecurityLog("contact_error", ip, "Istek tamamlanamadi");
       return jsonResponse(
-        { ok: false, message: "Mesaj gönderilemedi." },
-        { status: 500 },
+        { ok: false, message: error instanceof RequestBodyError ? error.message : "Mesaj gönderilemedi." },
+        { status: error instanceof RequestBodyError ? error.status : error instanceof RateLimitUnavailableError ? 503 : 500 },
       );
     }
   },

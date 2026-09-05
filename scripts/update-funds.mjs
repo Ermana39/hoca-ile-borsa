@@ -3,8 +3,7 @@ import fsSync from "node:fs";
 import path from "node:path";
 import { execFileSync } from "node:child_process";
 
-const XLSX_MODULE = await import("xlsx");
-const XLSX = XLSX_MODULE?.default || XLSX_MODULE;
+import XLSX from "./lib/xlsx.mjs";
 
 const rootDir = process.cwd();
 

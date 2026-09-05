@@ -19,7 +19,7 @@
 
 import fs from "node:fs";
 import path from "node:path";
-import * as XLSX from "xlsx";
+import XLSX from "./lib/xlsx.mjs";
 
 const EXCEL_YOLU = path.join(
   process.cwd(),

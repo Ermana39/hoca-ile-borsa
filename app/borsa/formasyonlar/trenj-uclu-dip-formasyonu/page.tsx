@@ -1,3 +1,4 @@
+import { serializeJsonLd } from "@/lib/json-ld";
 import { seoAciklamasi } from "@/lib/seo-metadata";
 import Image from "next/image";
 import type { Metadata } from "next";
@@ -94,7 +95,7 @@ export default function TrenjUcluDipFormasyonuPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([articleSchema, faqSchema]),
+          __html: serializeJsonLd([articleSchema, faqSchema]),
         }}
       />
 

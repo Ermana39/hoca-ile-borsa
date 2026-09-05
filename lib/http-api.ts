@@ -4,6 +4,10 @@ export function jsonResponse(
 ): Response {
   const headers = new Headers(init.headers);
   headers.set("Content-Type", "application/json; charset=utf-8");
+  if (!headers.has("Cache-Control")) {
+    headers.set("Cache-Control", "private, no-store");
+  }
+  headers.set("X-Content-Type-Options", "nosniff");
 
   return new Response(JSON.stringify(body), {
     ...init,
@@ -12,10 +16,20 @@ export function jsonResponse(
 }
 
 export function getClientIp(request: Request): string {
-  const forwardedFor = request.headers.get("x-forwarded-for");
-  if (forwardedFor) return forwardedFor.split(",")[0].trim();
+  // Vercel overwrites these headers at its edge. On a direct/local server,
+  // arbitrary forwarded headers must not create a fresh rate-limit identity.
+  // https://vercel.com/docs/headers/request-headers
+  if (process.env.VERCEL !== "1") return "unknown";
 
-  return request.headers.get("x-real-ip")?.trim() || "unknown";
+  const ip = (
+    request.headers.get("x-vercel-forwarded-for") ??
+    request.headers.get("x-forwarded-for") ??
+    ""
+  ).trim();
+  const version = isIP(ip);
+  if (version === 4) return ip;
+  if (version === 6) return new URL(`http://[${ip}]/`).hostname.slice(1, -1);
+  return "unknown";
 }
 
 export function getCookie(request: Request, name: string): string | undefined {
@@ -52,3 +66,4 @@ export function cookieValue(
   if (options.secure) parts.push("Secure");
   return parts.join("; ");
 }
+import { isIP } from "node:net";

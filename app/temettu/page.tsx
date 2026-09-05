@@ -1,3 +1,4 @@
+import { serializeJsonLd } from "@/lib/json-ld";
 export const metadata = {
   title: "Temettü | Hoca İle Borsa",
   description: "Temettü takvimi, aylara göre temettü veren şirketler, temettü hesaplama aracı ve temettü verimi hesaplama.",
@@ -120,7 +121,7 @@ export default function TemettuPage() {
     <main className="min-h-screen bg-[#f8fafc]">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
       />
       <div className="mx-auto max-w-7xl px-4 py-6 md:px-6">
         <nav className="mb-5 flex items-center gap-2 text-sm text-slate-500" aria-label="Breadcrumb">

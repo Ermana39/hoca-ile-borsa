@@ -1,3 +1,4 @@
+import { serializeJsonLd } from "@/lib/json-ld";
 import { seoAciklamasi } from "@/lib/seo-metadata";
 import type { Metadata } from "next";
 
@@ -161,7 +162,7 @@ export default function DevaTersOmuzBasOmuzFormasyonuPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify([articleSchema, faqSchema]),
+          __html: serializeJsonLd([articleSchema, faqSchema]),
         }}
       />
 

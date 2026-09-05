@@ -1,8 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
-import * as XLSX_MODULE from "xlsx";
-
-const XLSX = XLSX_MODULE.default || XLSX_MODULE;
+import XLSX from "./lib/xlsx.mjs";
 
 const rootDir = process.cwd();
 const dataDir = path.join(rootDir, "data", "fonlar");

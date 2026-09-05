@@ -1,3 +1,4 @@
+import { serializeJsonLd } from "@/lib/json-ld";
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "@/components/NoPrefetchLink";
@@ -298,7 +299,7 @@ function GunlukOzetIcerik({ ozet }: { ozet: GunlukOzet }) {
     <main className="min-h-screen bg-white px-4 pb-6 pt-0 md:px-6">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
       />
 
       <div className="mx-auto max-w-7xl">

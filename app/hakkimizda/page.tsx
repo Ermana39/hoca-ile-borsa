@@ -1,3 +1,4 @@
+import { serializeJsonLd } from "@/lib/json-ld";
 import Link from "@/components/NoPrefetchLink";
 import type { Metadata } from "next";
 import { getYazar } from "@/app/data/yazarlar";
@@ -51,7 +52,7 @@ export default function HakkimizdaPage() {
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
       />
 
       <div className="mx-auto max-w-4xl">

@@ -1,16 +1,13 @@
 import crypto from "node:crypto";
-import {
-  clearLoginAttempts,
-  getLoginRateLimitStatus,
-  makeAdminToken,
-  registerFailedLogin,
-} from "../lib/admin-auth";
+import { makeAdminToken } from "../lib/admin-auth";
 import {
   cookieValue,
   getClientIp,
   jsonResponse,
 } from "../lib/http-api";
 import { isSameOriginRequest } from "../lib/request-security";
+import { consumeRateLimit, RateLimitUnavailableError } from "../lib/rate-limit";
+import { readJsonObject, RequestBodyError } from "../lib/request-body";
 
 function passwordsMatch(input: string, expected: string) {
   const a = crypto.createHash("sha256").update(input).digest();
@@ -30,25 +27,27 @@ export default {
       );
     }
 
-    const ip = getClientIp(request);
-    const rateLimit = getLoginRateLimitStatus(ip, 10);
-    if (!rateLimit.allowed) {
-      return jsonResponse(
-        {
-          ok: false,
-          message: `Çok fazla deneme yaptınız. ${rateLimit.retryAfterSeconds} saniye sonra tekrar deneyin.`,
-        },
-        { status: 429 },
-      );
-    }
-
     try {
-      const body = await request.json();
-      const password = String(body?.password || "");
+      const ip = getClientIp(request);
+      const rateLimit = await consumeRateLimit("admin-login", ip, 10, 5 * 60 * 1000);
+      if (!rateLimit.allowed) {
+        return jsonResponse(
+          {
+            ok: false,
+            message: `Çok fazla deneme yaptınız. ${rateLimit.retryAfterSeconds} saniye sonra tekrar deneyin.`,
+          },
+          { status: 429, headers: { "Retry-After": String(rateLimit.retryAfterSeconds) } },
+        );
+      }
+
+      const body = await readJsonObject(request, 4096);
+      if (typeof body.password !== "string" || !body.password || body.password.length > 1024) {
+        throw new RequestBodyError("Şifre alanı geçersiz.");
+      }
+      const password = body.password;
       const expected = process.env.STATS_ADMIN_PASSWORD || "";
 
       if (!expected || !passwordsMatch(password, expected)) {
-        registerFailedLogin(ip);
         return jsonResponse(
           { ok: false, message: "Şifre hatalı." },
           { status: 401 },
@@ -63,7 +62,6 @@ export default {
         );
       }
 
-      clearLoginAttempts(ip);
       const headers = new Headers();
       const secure = process.env.NODE_ENV === "production";
       headers.append(
@@ -79,10 +77,10 @@ export default {
       );
 
       return jsonResponse({ ok: true }, { headers });
-    } catch {
+    } catch (error) {
       return jsonResponse(
-        { ok: false, message: "Giriş sırasında hata oluştu." },
-        { status: 400 },
+        { ok: false, message: error instanceof RequestBodyError ? error.message : "Giriş sırasında hata oluştu." },
+        { status: error instanceof RequestBodyError ? error.status : error instanceof RateLimitUnavailableError ? 503 : 500 },
       );
     }
   },

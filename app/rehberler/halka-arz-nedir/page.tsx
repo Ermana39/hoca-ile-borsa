@@ -1,3 +1,4 @@
+import { serializeJsonLd } from "@/lib/json-ld";
 import Link from "@/components/NoPrefetchLink";
 import RehberAltBolumler from "@/components/RehberAltBolumler";
 import type { Metadata } from "next";
@@ -241,7 +242,7 @@ export default function HalkaArzNedirPage() {
     <main className="min-h-screen bg-[#f8fafc]">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(jsonLd) }}
       />
 
       <div className="mx-auto max-w-7xl px-4 py-6 md:px-6">

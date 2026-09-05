@@ -1,4 +1,5 @@
 const ONE_YEAR_CACHE = "public, max-age=31536000, immutable";
+const isDevelopment = process.env.NODE_ENV === "development";
 
 const stableImageCacheFiles = [
   "/favicon.ico",
@@ -42,8 +43,10 @@ const youtubeFrame = [
 
 const contentSecurityPolicy = [
   "default-src 'self'",
-  // Next.js hydration ve AdSense satır içi/eval gerektirir.
-  `script-src 'self' 'unsafe-inline' 'unsafe-eval' ${adsenseScript.join(" ")} ${vercelAnalytics.join(" ")}`,
+  // Statik Next.js hydration satır içi script kullanır; eval yalnızca geliştirmede gerekir.
+  `script-src 'self' 'unsafe-inline'${isDevelopment ? " 'unsafe-eval'" : ""} ${adsenseScript.join(" ")} ${vercelAnalytics.join(" ")}`,
+  // React olayları addEventListener ile bağlar; HTML olay özniteliklerini engelle.
+  "script-src-attr 'none'",
   // Tailwind/Next satır içi stil enjekte eder.
   "style-src 'self' 'unsafe-inline'",
   // Reklam görselleri çok sayıda alan adından gelir.
@@ -53,7 +56,7 @@ const contentSecurityPolicy = [
   `frame-src 'self' ${adsenseFrame.join(" ")} ${youtubeFrame.join(" ")}`,
   // Aşağıdakiler reklamları etkilemez, saldırı yüzeyini daraltır.
   "object-src 'none'",
-  "base-uri 'self'",
+  "base-uri 'none'",
   "form-action 'self'",
   "frame-ancestors 'self'",
   "upgrade-insecure-requests",
@@ -247,6 +250,7 @@ const eskiUrlRedirects = [
 ];
 
 const nextConfig = {
+  poweredByHeader: false,
   // Site verileri her deploy oncesinde dosyalardan uretiliyor. Sayfalari gercek
   // statik dosya olarak cikarmak, Vercel'in her HTML/RSC yanitini ISR deposunda
   // tutmasini ve 8 KB'lik ISR okuma birimleriyle ucretlendirmesini engeller.
@@ -448,7 +452,16 @@ const nextConfig = {
       },
     ];
 
-    return [...generalImageHeaders, ...imageHeaders, ...globalSecurityHeaders];
+    const privateApiHeaders = [{
+      source: "/api/:endpoint(admin-login|admin-logout|admin-messages|contact|health|revalidate)",
+      headers: [
+        { key: "Cache-Control", value: "private, no-store" },
+        { key: "CDN-Cache-Control", value: "no-store" },
+        { key: "Vercel-CDN-Cache-Control", value: "no-store" },
+      ],
+    }];
+
+    return [...generalImageHeaders, ...imageHeaders, ...globalSecurityHeaders, ...privateApiHeaders];
   },
   }),
 };

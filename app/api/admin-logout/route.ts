@@ -1,20 +1,5 @@
-import { NextRequest, NextResponse } from "next/server";
-import { isSameOriginRequest } from "@/lib/request-security";
+import handler from "../../../api/admin-logout";
 
-export async function POST(request: NextRequest) {
-  if (!isSameOriginRequest(request)) {
-    return NextResponse.json({ ok: false }, { status: 403 });
-  }
-
-  const response = NextResponse.json({ ok: true });
-
-  response.cookies.set("hib_admin_token", "", {
-    httpOnly: true,
-    sameSite: "strict",
-    secure: process.env.NODE_ENV === "production",
-    path: "/",
-    maxAge: 0,
-  });
-
-  return response;
+export async function POST(request: Request) {
+  return handler.fetch(request);
 }
