@@ -27,6 +27,8 @@ type KategoriGrubu = {
   izahnameler: TaslakOgesi[];
 };
 
+type KategoriGrubuSirala = (a: KategoriGrubu, b: KategoriGrubu) => number;
+
 function tarihDegeri(tarih?: string) {
   if (!tarih) return 0;
   const eslesme = tarih.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})$/);
@@ -48,10 +50,6 @@ function oranDegeri(text?: string) {
   if (!text) return 0;
   const eslesme = text.replace(",", ".").match(/\d+(?:\.\d+)?/);
   return eslesme ? Number(eslesme[0]) : 0;
-}
-
-function bilgi(text?: string) {
-  return text && text.trim() ? text : "Açıklanmadı";
 }
 
 function kisaSirketAdi(ad: string) {
@@ -84,7 +82,8 @@ function kurumlariAyir(araciKurum?: string) {
 
 function grupOlustur(
   izahnameler: TaslakOgesi[],
-  degerAl: (item: TaslakOgesi) => string[]
+  degerAl: (item: TaslakOgesi) => string[],
+  sirala?: KategoriGrubuSirala
 ) {
   const gruplar = new Map<string, TaslakOgesi[]>();
 
@@ -101,11 +100,34 @@ function grupOlustur(
         a.label.localeCompare(b.label, "tr")
       ),
     }))
-    .sort(
-      (a, b) =>
-        b.izahnameler.length - a.izahnameler.length ||
-        a.ad.localeCompare(b.ad, "tr")
-    );
+    .sort(sirala ?? ((a, b) => a.ad.localeCompare(b.ad, "tr")));
+}
+
+function payBuyukluguGrubu(item: TaslakOgesi) {
+  const deger = sayiDegeri(item.pay);
+  if (!deger) return "Pay bilgisi bekleniyor";
+  if (deger >= 100_000_000) return "100 milyon lot ve üzeri";
+  if (deger >= 50_000_000) return "50 - 100 milyon lot";
+  if (deger >= 10_000_000) return "10 - 50 milyon lot";
+  return "10 milyon lot altı";
+}
+
+function halkaAciklikGrubu(item: TaslakOgesi) {
+  const deger = oranDegeri(item.halkaAciklikOrani);
+  if (!deger) return "Halka açıklık oranı bekleniyor";
+  if (deger >= 30) return "%30 ve üzeri";
+  if (deger >= 20) return "%20 - %30 arası";
+  if (deger >= 10) return "%10 - %20 arası";
+  return "%10 altı";
+}
+
+function sirayaGoreSirala(sira: string[]): KategoriGrubuSirala {
+  const indeksler = new Map(sira.map((ad, index) => [ad, index]));
+  return (a, b) => {
+    const aSira = indeksler.get(a.ad) ?? Number.MAX_SAFE_INTEGER;
+    const bSira = indeksler.get(b.ad) ?? Number.MAX_SAFE_INTEGER;
+    return aSira - bSira || a.ad.localeCompare(b.ad, "tr");
+  };
 }
 
 function SirketSatiri({
@@ -158,15 +180,20 @@ function GrupluListe({ gruplar }: { gruplar: KategoriGrubu[] }) {
   return (
     <div className="divide-y divide-zinc-200">
       {gruplar.map((grup) => (
-        <section key={grup.ad} className="py-4 first:pt-0 last:pb-0">
-          <div className="mb-2 flex items-center justify-between gap-3 px-3 md:px-4">
-            <h3 className="font-bold text-zinc-900">{grup.ad}</h3>
-            <span className="shrink-0 text-xs font-semibold text-zinc-500">
-              {grup.izahnameler.length} şirket
-            </span>
+        <details key={grup.ad} className="group/alt">
+          <summary className="flex cursor-pointer list-none items-center gap-3 px-3 py-4 hover:bg-zinc-50 md:px-4 [&::-webkit-details-marker]:hidden">
+            <h3 className="min-w-0 flex-1 font-bold text-zinc-900">
+              {grup.ad}
+            </h3>
+            <ChevronDown
+              aria-hidden="true"
+              className="h-5 w-5 shrink-0 text-zinc-500 transition-transform group-open/alt:rotate-180"
+            />
+          </summary>
+          <div className="border-t border-zinc-200 bg-zinc-50">
+            <SirketListesi izahnameler={grup.izahnameler} />
           </div>
-          <SirketListesi izahnameler={grup.izahnameler} />
-        </section>
+        </details>
       ))}
     </div>
   );
@@ -175,12 +202,10 @@ function GrupluListe({ gruplar }: { gruplar: KategoriGrubu[] }) {
 function KategoriBolumu({
   baslik,
   aciklama,
-  adet,
   children,
 }: {
   baslik: string;
   aciklama: string;
-  adet: number;
   children: ReactNode;
 }) {
   return (
@@ -193,9 +218,6 @@ function KategoriBolumu({
           <span className="mt-1 block text-sm leading-5 text-zinc-600">
             {aciklama}
           </span>
-        </span>
-        <span className="shrink-0 text-xs font-semibold text-zinc-500">
-          {adet} şirket
         </span>
         <ChevronDown
           aria-hidden="true"
@@ -214,20 +236,11 @@ export default function TaslakIzahnamelerClient({
 }: {
   izahnameler: TaslakOgesi[];
 }) {
-  const basvuruTarihineGore = [...izahnameler].sort(
+  const basvuruTarihiGruplari = grupOlustur(
+    izahnameler,
+    (item) => [item.basvuruTarihi || "Başvuru tarihi bekleniyor"],
     (a, b) =>
-      tarihDegeri(b.basvuruTarihi) - tarihDegeri(a.basvuruTarihi) ||
-      a.label.localeCompare(b.label, "tr")
-  );
-  const payBuyukluguneGore = [...izahnameler].sort(
-    (a, b) =>
-      sayiDegeri(b.pay) - sayiDegeri(a.pay) ||
-      a.label.localeCompare(b.label, "tr")
-  );
-  const halkaAcikligaGore = [...izahnameler].sort(
-    (a, b) =>
-      oranDegeri(b.halkaAciklikOrani) - oranDegeri(a.halkaAciklikOrani) ||
-      a.label.localeCompare(b.label, "tr")
+      tarihDegeri(b.ad) - tarihDegeri(a.ad) || a.ad.localeCompare(b.ad, "tr")
   );
   const konsorsiyumGruplari = grupOlustur(izahnameler, (item) => {
     const kurumlar = kurumlariAyir(item.araciKurum);
@@ -248,6 +261,28 @@ export default function TaslakIzahnamelerClient({
     if (item.ortakSatisVar) return ["Sadece ortak satışı"];
     return ["Arz şekli bilgisi bekleniyor"];
   });
+  const payBuyukluguGruplari = grupOlustur(
+    izahnameler,
+    (item) => [payBuyukluguGrubu(item)],
+    sirayaGoreSirala([
+      "100 milyon lot ve üzeri",
+      "50 - 100 milyon lot",
+      "10 - 50 milyon lot",
+      "10 milyon lot altı",
+      "Pay bilgisi bekleniyor",
+    ])
+  );
+  const halkaAciklikGruplari = grupOlustur(
+    izahnameler,
+    (item) => [halkaAciklikGrubu(item)],
+    sirayaGoreSirala([
+      "%30 ve üzeri",
+      "%20 - %30 arası",
+      "%10 - %20 arası",
+      "%10 altı",
+      "Halka açıklık oranı bekleniyor",
+    ])
+  );
 
   return (
     <main className="min-h-screen bg-white px-4 py-6 md:px-6">
@@ -279,18 +314,13 @@ export default function TaslakIzahnamelerClient({
           <KategoriBolumu
             baslik="Başvuru Tarihine Göre"
             aciklama="En yeni başvurudan eski başvurulara doğru sıralanır."
-            adet={izahnameler.length}
           >
-            <SirketListesi
-              izahnameler={basvuruTarihineGore}
-              detayAl={(item) => bilgi(item.basvuruTarihi)}
-            />
+            <GrupluListe gruplar={basvuruTarihiGruplari} />
           </KategoriBolumu>
 
           <KategoriBolumu
             baslik="Konsorsiyum Liderine Göre"
             aciklama="Taslaklarda belirtilen aracı kurumlara göre listelenir."
-            adet={izahnameler.length}
           >
             <GrupluListe gruplar={konsorsiyumGruplari} />
           </KategoriBolumu>
@@ -298,7 +328,6 @@ export default function TaslakIzahnamelerClient({
           <KategoriBolumu
             baslik="Sektöre Göre"
             aciklama="Şirketlerin ana faaliyet alanlarına göre listelenir."
-            adet={izahnameler.length}
           >
             <GrupluListe gruplar={sektorGruplari} />
           </KategoriBolumu>
@@ -306,7 +335,6 @@ export default function TaslakIzahnamelerClient({
           <KategoriBolumu
             baslik="Pazar Bilgisine Göre"
             aciklama="Planlanan pazar bilgisine göre listelenir."
-            adet={izahnameler.length}
           >
             <GrupluListe gruplar={pazarGruplari} />
           </KategoriBolumu>
@@ -314,7 +342,6 @@ export default function TaslakIzahnamelerClient({
           <KategoriBolumu
             baslik="Dağıtım Yöntemine Göre"
             aciklama="Eşit, oransal veya henüz açıklanmayan dağıtım yöntemine göre listelenir."
-            adet={izahnameler.length}
           >
             <GrupluListe gruplar={dagitimGruplari} />
           </KategoriBolumu>
@@ -322,29 +349,20 @@ export default function TaslakIzahnamelerClient({
           <KategoriBolumu
             baslik="Planlanan Pay Büyüklüğüne Göre"
             aciklama="Planlanan lot miktarı büyükten küçüğe sıralanır."
-            adet={izahnameler.length}
           >
-            <SirketListesi
-              izahnameler={payBuyukluguneGore}
-              detayAl={(item) => bilgi(item.pay)}
-            />
+            <GrupluListe gruplar={payBuyukluguGruplari} />
           </KategoriBolumu>
 
           <KategoriBolumu
             baslik="Halka Açıklık Oranına Göre"
             aciklama="Açıklanan halka açıklık oranı yüksekten düşüğe sıralanır."
-            adet={izahnameler.length}
           >
-            <SirketListesi
-              izahnameler={halkaAcikligaGore}
-              detayAl={(item) => bilgi(item.halkaAciklikOrani)}
-            />
+            <GrupluListe gruplar={halkaAciklikGruplari} />
           </KategoriBolumu>
 
           <KategoriBolumu
             baslik="Arz Yapısına Göre"
             aciklama="Sermaye artırımı ve ortak satışı yapısına göre listelenir."
-            adet={izahnameler.length}
           >
             <GrupluListe gruplar={arzYapisiGruplari} />
           </KategoriBolumu>
