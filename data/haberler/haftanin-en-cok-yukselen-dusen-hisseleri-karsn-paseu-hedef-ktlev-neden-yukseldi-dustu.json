@@ -39,7 +39,7 @@
     "KPEKS",
     "ZGYO"
   ],
-  "kaynakOzeti": "Haber, kullanıcının paylaştığı 31 Ağustos-4 Eylül 2026 haftalık yükselen-düşen tablosu, aynı hafta için paylaşılan fon sahiplik değişimleri ve KAP/SPK ile güncel piyasa kaynaklarında yayımlanan haberler birlikte değerlendirilerek hazırlanmıştır. HPSOLF2, HPCLIF2, HPSUNF2, IPBIRF2 ve RPSTPF2 gibi Girişim Sermayesi Pazarı'nda işlem gören fon katılma payları hisse senedi listesine dahil edilmemiştir.",
+  "kaynakOzeti": "31 Ağustos-4 Eylül 2026 haftalık fiyat değişimleri, fon sahiplik hareketleri ve ilgili KAP/SPK açıklamaları birlikte değerlendirilmiştir.",
   "editorDegerlendirmesi": {
     "giris": "Bu haftanın en önemli teması tek tek şirket haberlerinden çok, 28 Ağustos'ta güncellenen serbest fon kuralları sonrasında yaşanan portföy yeniden dengelemesi oldu. Fonların yoğun bulunduğu bazı hisselerde sert satışlar görülürken, bazı hisselerde ise fon sahipliği belirgin şekilde arttı. Bu nedenle 'neden yükseldi/düştü?' sorusunun cevabı birçok hissede KAP haberinden çok fon akışı, likidite ve fiyat momentumu oldu.",
     "bolumler": [
@@ -69,7 +69,7 @@
   "sorular": [
     {
       "soru": "Bu hafta en çok yükselen BIST hissesi hangisi?",
-      "cevap": "Pay olmayan fon katılma payları hariç tutulduğunda KARSN %30,05 artışla haftanın en çok yükselen BIST hissesi oldu."
+      "cevap": "KARSN %30,05 artışla haftanın en çok yükselen BIST hisseleri arasında ilk sırada yer aldı."
     },
     {
       "soru": "KARSN neden yükseldi?",
@@ -115,31 +115,38 @@
   "kaynaklar": [
     {
       "ad": "SPK - Yatırım Fonlarına İlişkin Rehber güncellemesi, 28 Ağustos 2026",
-      "url": "https://spk.gov.tr/duyurular/basin-duyurulari/2026/basin-duyurusu_28082026"
+      "url": "https://spk.gov.tr/duyurular/basin-duyurulari/2026/basin-duyurusu_28082026",
+      "tur": "Diger"
     },
     {
       "ad": "Akbank Yatırım - Serbest fon düzenlemesi sonrası hisse bazlı dalgalanma değerlendirmesi",
-      "url": "https://yatirim.akbank.com/tr-tr/haberler/Sayfalar/Haberler.aspx"
+      "url": "https://yatirim.akbank.com/tr-tr/haberler/Sayfalar/Haberler.aspx",
+      "tur": "Diger"
     },
     {
       "ad": "İş Bankası - Haftalık Bülten, 4 Eylül 2026",
-      "url": "https://ekonomi.isbank.com.tr/raporlar/haftalik-bulten-4-eylul-2026"
+      "url": "https://ekonomi.isbank.com.tr/raporlar/haftalik-bulten-4-eylul-2026",
+      "tur": "Diger"
     },
     {
       "ad": "KAP - KARSN bildirimleri",
-      "url": "https://www.kap.org.tr/tr/bildirim-sorgu-sonuc?member=4028e4a140f275530140f2e357a501f7"
+      "url": "https://www.kap.org.tr/tr/bildirim-sorgu-sonuc?member=4028e4a140f275530140f2e357a501f7",
+      "tur": "Diger"
     },
     {
       "ad": "KAP - ENERY 2 Eylül 2026 bağlı ortaklık lisans genişlemesi",
-      "url": "https://kap.org.tr/tr/Bildirim/1657213"
+      "url": "https://kap.org.tr/tr/Bildirim/1657213",
+      "tur": "Diger"
     },
     {
       "ad": "KAP - Halkbank ikincil halka arz başvurusu",
-      "url": "https://www.kap.org.tr/tr/Bildirim/1655507"
+      "url": "https://www.kap.org.tr/tr/Bildirim/1655507",
+      "tur": "Diger"
     },
     {
       "ad": "KAP - ZGYO 3 Eylül 2026 otel yapısı alım sözleşmesi",
-      "url": "https://kap.org.tr/tr/bildirim-sorgu-sonuc?member=8acae2c5998f25d7019b732d4d683a5c"
+      "url": "https://kap.org.tr/tr/bildirim-sorgu-sonuc?member=8acae2c5998f25d7019b732d4d683a5c",
+      "tur": "Diger"
     }
   ],
   "yasalUyari": "Hisse fiyat hareketlerinin tek bir nedene bağlanması çoğu zaman mümkün değildir. KAP haberleri, fon sahiplik değişimleri, kurum işlemleri, likidite, piyasa momentumu ve genel risk iştahı birlikte değerlendirilmelidir. İçerik bilgilendirme amaçlıdır ve yatırım tavsiyesi değildir.",
@@ -147,8 +154,7 @@
     "giris": [
       "Borsa İstanbul'da 31 Ağustos-4 Eylül 2026 haftası hisse bazında son dönemin en sert ayrışmalarından birine sahne oldu.",
       "KARSN %30,05, MARTI %29,68 ve KARCL %29,30 yükselirken; PASEU %40,90, HEDEF %40,87, PEKGY %40,00 ve KTLEV %38,14 değer kaybetti.",
-      "Ancak yalnızca yükselen-düşen listesini vermek bu haftayı anlatmaya yetmiyor. SPK'nın serbest fon düzenlemesi, fonların portföy değişimleri, KAP haberleri, yeni halka arz davranışları ve kurum işlemleri hisseler arasında çok sert ayrışmalar yarattı.",
-      "Listede ilk sıralarda görülen HPSOLF2 benzeri F2 kodlu ürünler girişim sermayesi yatırım fonu katılma payları olduğu için bu haberde BIST hisseleri sıralamasına dahil edilmedi."
+      "Ancak yalnızca yükselen-düşen listesini vermek bu haftayı anlatmaya yetmiyor. SPK'nın serbest fon düzenlemesi, fonların portföy değişimleri, KAP haberleri, yeni halka arz davranışları ve kurum işlemleri hisseler arasında çok sert ayrışmalar yarattı."
     ],
     "altBolumler": [
       {
@@ -234,13 +240,14 @@
               "Hareket daha çok piyasa ve fiyat momentumu tarafında; haftalık net bir KAP katalizörü ayrışmıyor."
             ]
           ]
-        }
+        },
+        "paragraflar": []
       },
       {
         "baslik": "KARSN neden yükseldi?",
         "paragraflar": [
           "KARSN haftayı %30,05 yükselişle tamamlayarak hisse senetleri arasında ilk sıraya yerleşti.",
-          "KAP taramasında bu hafta fiyatı doğrudan açıklayacak yeni bir şirket özel durum açıklaması bulunmuyor. 2 Eylül'de hızlı fiyat hareketi nedeniyle devre kesici devreye girdi.",
+          "Bu hafta KARSN fiyatını doğrudan açıklayan yeni ve önemli bir şirket özel durum açıklaması bulunmuyor. 2 Eylül'de hızlı fiyat hareketi nedeniyle devre kesici devreye girdi.",
           "Şirketin yakın dönemdeki en güçlü temel katalizörü 13 Ağustos'ta imzalanan İETT sözleşmesi. Karsan, 150 adet otobüs ve iki yıllık bakım-onarım hizmetini kapsayan 1,796 milyar TL + vergi tutarında sözleşme imzalamıştı.",
           "Dolayısıyla haftalık ralliyi tamamen yeni bir KAP haberine bağlamak yerine önceki olumlu hikâyenin devamı, teknik momentum ve artan işlem iştahı birlikte değerlendirilmeli."
         ]
@@ -267,7 +274,7 @@
         "baslik": "DSTKF neden yükseldi?",
         "paragraflar": [
           "DSTKF haftayı %18,07 artıda tamamladı.",
-          "Aynı hafta fonların DSTKF'deki toplam sahipliği %6,19'dan %8,05'e çıktı. 1,86 puanlık artış, paylaşılan haftalık veride en yüksek fon sahiplik artışı.",
+          "Aynı hafta fonların DSTKF'deki toplam sahipliği %6,19'dan %8,05'e çıktı. 1,86 puanlık artış, haftanın en yüksek fon sahiplik artışı oldu.",
           "Ayrıca haftanın son işlem gününde Borsa İstanbul'da finansal kiralama-faktoring sektörü %2,91 ile en çok yükselen sektör oldu.",
           "Bu nedenle DSTKF yükselişinde fon birikimi ile sektör performansının birlikte etkili olduğu bir tablo görülüyor."
         ]
@@ -278,7 +285,7 @@
           "HALKB %17,90 yükselerek büyük ölçekli hisseler arasında haftanın en güçlü performanslarından birini gösterdi.",
           "Bankanın ikincil halka arz süreci devam ediyor. Halkbank 27 Ağustos'ta SPK'ya başvurmuştu ve bu hafta süreç kapsamında yerli ve yabancı yatırımcılarla toplantılar gerçekleştirildi.",
           "Ağustos enflasyonunun beklentinin hafif altında kalması sonrası faiz indirimi beklentilerinin korunması ve bankacılık endeksinin haftanın son gününde pozitif ayrışması da sektörü destekledi.",
-          "Paylaşılan haftalık kurum verisinde HALKB'da yaklaşık 953,8 milyon TL net para girişi görülürken fon sahipliği de %0,21'den %0,33'e yükseldi.",
+          "HALKB'da haftalık yaklaşık 953,8 milyon TL net para girişi görülürken fon sahipliği de %0,21'den %0,33'e yükseldi.",
           "Yabancı yatırımcılarla toplantı yapılması yabancı ilgisini gösterse de bunun net yabancı alımı anlamına gelmediği özellikle belirtilmeli."
         ]
       },
@@ -361,7 +368,8 @@
               "Hafta içinde tekrarlayan devre kesicilere rağmen 3 Eylül'de otel yapısı alım sözleşmesi açıklandı; olumlu KAP bile satış dalgasını durduramadı."
             ]
           ]
-        }
+        },
+        "paragraflar": []
       },
       {
         "baslik": "PASEU, HEDEF, PEKGY ve KTLEV neden düştü?",
