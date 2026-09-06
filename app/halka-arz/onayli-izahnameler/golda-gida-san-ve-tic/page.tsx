@@ -29,7 +29,7 @@ const veri: HalkaArzVeri = {
   "ozet": {
     "halkaArzTarihi": "1-2 Temmuz 2026 (Çarşamba-Perşembe / 10.30-13.00)",
     "fiyatAralik": "9,20 TL",
-    "dagitimYontemi": "Tamamı Eşit Dağıtım",
+    "dagitimYontemi": "Tamamen eşit dağıtım",
     "pay": "87.499.998 Lot",
     "araciKurum": "Gedik Yatırım Menkul Değerler A.Ş.",
     "pazar": "Yıldız Pazar",
@@ -48,7 +48,7 @@ const veri: HalkaArzVeri = {
   ],
   "satisYontemi": [
     "Sabit fiyatla talep toplama",
-    "Tamamı eşit dağıtım"
+    "Tamamen eşit dağıtım"
   ],
   "fonKullanimYorumu": "Golda Gıda halka arzında fon kullanım planı iki ana başlıkta toplanmaktadır. Kaynağın %50-60 aralığındaki bölümü kapasite artışı ve modernizasyon yatırımlarında değerlendirilecektir. Bu başlık; üretim hatlarının yenilenmesi, verimlilik artışı, kapasite kullanımı, ürün kalitesi, depolama ve paketleme süreçleri açısından önem taşır. Kaynağın %40-50 aralığındaki bölümü ise işletme sermayesinin güçlendirilmesine ayrılmıştır. Gıda üretiminde hammadde alımı, stok yönetimi, ambalaj giderleri, ihracat-tahsilat döngüsü ve dönemsel nakit ihtiyacı işletme sermayesi tarafını kritik hale getirir. Halka arzda sermaye artırımıyla birlikte ortak satışı da bulunduğu için, şirket kasasına girecek kaynak ile ortak satışından doğacak tutar ayrı değerlendirilmelidir.",
   "finansalDonemler": [
@@ -275,7 +275,7 @@ const talepDagitimSonuclari: TalepDagitimSatiri[] = [
   {
     kategori: "Yurt İçi Bireysel Yatırımcılar",
     yatirimciSayisi: "748.056",
-    planlananTahsisat: "Tamamı eşit dağıtım",
+    planlananTahsisat: "Tamamen eşit dağıtım",
     gerceklesenTalep: "Toplam talebe dahil",
     dagitilanPay: "87.313.096 Lot",
     dagitimOrani: "%99,78",
@@ -284,7 +284,7 @@ const talepDagitimSonuclari: TalepDagitimSatiri[] = [
   {
     kategori: "Yurt İçi Kurumsal Yatırımcılar",
     yatirimciSayisi: "25",
-    planlananTahsisat: "Tamamı eşit dağıtım",
+    planlananTahsisat: "Tamamen eşit dağıtım",
     gerceklesenTalep: "Toplam talebe dahil",
     dagitilanPay: "2.745 Lot",
     dagitimOrani: "%0,00",
@@ -293,7 +293,7 @@ const talepDagitimSonuclari: TalepDagitimSatiri[] = [
   {
     kategori: "Yurt Dışı Bireysel Yatırımcılar",
     yatirimciSayisi: "1.593",
-    planlananTahsisat: "Tamamı eşit dağıtım",
+    planlananTahsisat: "Tamamen eşit dağıtım",
     gerceklesenTalep: "Toplam talebe dahil",
     dagitilanPay: "184.157 Lot",
     dagitimOrani: "%0,21",

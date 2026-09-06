@@ -29,7 +29,7 @@ const veri: HalkaArzVeri = {
   "ozet": {
     "halkaArzTarihi": "30 Haziran / 1 Temmuz 2026 (10.30-13.00)",
     "fiyatAralik": "15,00 TL - %37 iskonto",
-    "dagitimYontemi": "Tamamı Eşit Dağıtım",
+    "dagitimYontemi": "Tamamen eşit dağıtım",
     "pay": "100.000.000 Lot",
     "araciKurum": "İntegral Yatırım Menkul Değerler A.Ş.",
     "pazar": "Ana Pazar",
@@ -141,8 +141,8 @@ const veri: HalkaArzVeri = {
     },
     {
       "title": "Dağıtım Şekli",
-      "value": "Tamamı Eşit",
-      "desc": "Dağıtım şekli tamamı eşit dağıtım olarak açıklanmıştır."
+      "value": "Tamamen eşit dağıtım",
+      "desc": "Dağıtım şekli tamamen eşit dağıtım olarak açıklanmıştır."
     },
     {
       "title": "Katılım Endeksi",
@@ -152,7 +152,7 @@ const veri: HalkaArzVeri = {
   ],
   "tahsisat": [],
   "tahsisatNotlari": [
-    "Dağıtım şekli tamamı eşit dağıtım olarak açıklanmıştır.",
+    "Dağıtım şekli tamamen eşit dağıtım olarak açıklanmıştır.",
     "Talep toplama 30 Haziran / 1 Temmuz 2026 tarihlerinde, salı-çarşamba günleri 10.30-13.00 saatleri arasında yapılacaktır.",
     "BIST Katılım Endeksine uygundur.",
     "Toplam dağıtılacak pay 100.000.000 lot olarak açıklanmıştır.",
@@ -207,7 +207,7 @@ const veri: HalkaArzVeri = {
   ],
   "satisYontemi": [
     "Sabit fiyatla talep toplama",
-    "Tamamı eşit dağıtım"
+    "Tamamen eşit dağıtım"
   ]
 };
 
@@ -579,7 +579,7 @@ export default function SohoGiyimVeEnerjiPage() {
             Halka Arz Talep ve Dağıtım Sonuçları
           </h2>
           <p className="mt-2 text-sm leading-7 text-slate-600">
-            Soho Giyim halka arzında tamamı eşit dağıtım uygulanmış, halka arza
+            Soho Giyim halka arzında tamamen eşit dağıtım uygulanmış, halka arza
             660.121 yatırımcı katılmış ve toplam talep halka arz büyüklüğünün
             1,23 katına ulaşmıştır.
           </p>
@@ -617,7 +617,7 @@ export default function SohoGiyimVeEnerjiPage() {
                   {
                     kategori: "Yurt İçi Gerçek Kişi Yatırımcılar",
                     yatirimciSayisi: "658.589",
-                    planlananTahsisat: "Tamamı eşit dağıtım",
+                    planlananTahsisat: "Tamamen eşit dağıtım",
                     talep: "Toplam talebe dahil",
                     dagitim: "97.065.314 Lot",
                     dagitimOrani: "%97,07",
@@ -626,7 +626,7 @@ export default function SohoGiyimVeEnerjiPage() {
                   {
                     kategori: "Yurt İçi Kurumsal Yatırımcılar",
                     yatirimciSayisi: "86",
-                    planlananTahsisat: "Tamamı eşit dağıtım",
+                    planlananTahsisat: "Tamamen eşit dağıtım",
                     talep: "Toplam talebe dahil",
                     dagitim: "2.703.552 Lot",
                     dagitimOrani: "%2,70",
@@ -635,7 +635,7 @@ export default function SohoGiyimVeEnerjiPage() {
                   {
                     kategori: "Yurt Dışı Gerçek Kişi Yatırımcılar",
                     yatirimciSayisi: "1.446",
-                    planlananTahsisat: "Tamamı eşit dağıtım",
+                    planlananTahsisat: "Tamamen eşit dağıtım",
                     talep: "Toplam talebe dahil",
                     dagitim: "231.134 Lot",
                     dagitimOrani: "%0,23",

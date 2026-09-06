@@ -13,6 +13,7 @@ import {
   yuzdeMetni,
 } from "@/lib/halka-arz-performans";
 import {
+  halkaArzDagitimEtiketi,
   getOnayliHalkaArzKaydiByKod,
   tahsisatMetni,
   type TahsisatGirdi,
@@ -280,8 +281,11 @@ export default function HalkaArzKarnesi({
     talepTarihi || veri?.ozet.halkaArzTarihi || ekBilgi?.talepTarihi;
   const halkaArzFiyatiMetni =
     halkaArzFiyati || veri?.ozet.fiyatAralik || sonuc?.arzFiyati;
-  const dagitimYontemiMetni =
+  const dagitimYontemiHam =
     dagitimYontemi || veri?.ozet.dagitimYontemi || sonuc?.dagitimSekli;
+  const dagitimYontemiMetni =
+    halkaArzDagitimEtiketi(dagitimYontemiHam, veri ?? undefined) ||
+    dagitimYontemiHam;
   const toplamPayMetni = toplamPay || veri?.ozet.pay || veri?.toplamPay;
   const araciKurumMetni = araciKurum || veri?.ozet.araciKurum || sonuc?.konsorsiyum;
   const tahsisatKayitlari = tahsisat || veri?.tahsisat || [];
@@ -348,7 +352,7 @@ export default function HalkaArzKarnesi({
   const bireyselHavuz = bireyselTahsisatHavuzu({
     tahsisat: tahsisatKayitlari,
     toplamPay: toplamPayMetni,
-    dagitimYontemi: dagitimYontemiMetni,
+    dagitimYontemi: dagitimYontemiHam,
     sonuc,
     elleGirilenLot: bireyselTahsisatLotu,
   });
@@ -428,8 +432,8 @@ export default function HalkaArzKarnesi({
           ? `${veriDagitimYatirimci} yatırımcı`
           : "Sonuç bekleniyor",
       aciklama: sonuc
-        ? sonuc.dagitimSonucu?.aciklama || sonuc.dagitimSekli
-        : veri?.dagitimSonuclari?.aciklama || veri?.ozet.dagitimYontemi ||
+        ? sonuc.dagitimSonucu?.aciklama || dagitimYontemiMetni || sonuc.dagitimSekli
+        : veri?.dagitimSonuclari?.aciklama || dagitimYontemiMetni ||
           "Dağıtım sonucu açıklandığında otomatik tamamlanacak.",
       href:
         sonuc?.dagitimSonucu?.kaynakHref ||

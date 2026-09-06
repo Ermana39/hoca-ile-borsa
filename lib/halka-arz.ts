@@ -187,7 +187,7 @@ export type HalkaArzVeri = {
   oneCikanlar: OneCikan[];
 
   tahsisat: TahsisatGirdi[];
-  // Tahsisat altında gösterilen sabit notlar (örn. "Bireysele Eşit Dağıtım.").
+  // Tahsisat altında gösterilen sabit notlar (örn. "Bireysele eşit dağıtım.").
   tahsisatNotlari?: string[];
   katilimKurumlari?: string[];
   katilimNotu?: string;
@@ -208,6 +208,102 @@ export type HalkaArzVeri = {
 };
 
 const SITE_URL = "https://www.hocaileborsa.com";
+export const TAMAMEN_ESIT_DAGITIM_ETIKETI = "Tamamen eşit dağıtım";
+export const BIREYSELE_ESIT_DAGITIM_ETIKETI = "Bireysele eşit dağıtım";
+
+type DagitimEtiketiKaynak = Partial<
+  Pick<
+    HalkaArzVeri,
+    | "ozet"
+    | "oneCikanlar"
+    | "tahsisat"
+    | "tahsisatNotlari"
+    | "satisYontemi"
+    | "halkaArzSekli"
+    | "dagitimSonuclari"
+  >
+>;
+
+function dagitimAramaMetni(value?: unknown): string {
+  if (value == null) return "";
+  if (typeof value === "string") {
+    return value
+      .toLocaleLowerCase("tr")
+      .replace(/ı/g, "i")
+      .replace(/ğ/g, "g")
+      .replace(/ü/g, "u")
+      .replace(/ş/g, "s")
+      .replace(/ö/g, "o")
+      .replace(/ç/g, "c")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+  if (Array.isArray(value)) {
+    return value.map(dagitimAramaMetni).filter(Boolean).join(" ");
+  }
+  if (typeof value === "object") {
+    return Object.values(value as Record<string, unknown>)
+      .map(dagitimAramaMetni)
+      .filter(Boolean)
+      .join(" ");
+  }
+  return dagitimAramaMetni(String(value));
+}
+
+function dagitimKaynakMetni(veri?: DagitimEtiketiKaynak): string {
+  if (!veri) return "";
+
+  return dagitimAramaMetni([
+    veri.ozet?.dagitimYontemi,
+    veri.oneCikanlar?.filter((item) =>
+      dagitimAramaMetni(item.title).includes("dagitim")
+    ),
+    veri.tahsisat?.map(tahsisatMetni),
+    veri.tahsisatNotlari,
+    veri.satisYontemi,
+    veri.halkaArzSekli,
+    veri.dagitimSonuclari?.aciklama,
+    veri.dagitimSonuclari?.ozetKartlari,
+  ]);
+}
+
+export function halkaArzDagitimEtiketi(
+  value?: string | null,
+  veri?: DagitimEtiketiKaynak
+): string | undefined {
+  const metin = dagitimAramaMetni([value, dagitimKaynakMetni(veri)]);
+  if (!metin) return undefined;
+
+  const tamamenEsitKaliplari = [
+    "tamamen esit",
+    "tamami esit",
+    "tum yatirimcilara esit",
+    "tum yatirimci gruplarina esit",
+    "tahsisat grubu bulunmadan",
+    "tahsisat grubu olmadan",
+    "ayri tahsisat bulunmadan",
+  ];
+
+  if (tamamenEsitKaliplari.some((kalip) => metin.includes(kalip))) {
+    return TAMAMEN_ESIT_DAGITIM_ETIKETI;
+  }
+
+  const dagitimBelirtisi = [
+    "dagitim",
+    "esit",
+    "oransal",
+    "bireysel",
+    "yatirimci",
+    "tahsisat",
+    "yuksek basvuru",
+  ];
+
+  if (!dagitimBelirtisi.some((kalip) => metin.includes(kalip))) {
+    return undefined;
+  }
+
+  return BIREYSELE_ESIT_DAGITIM_ETIKETI;
+}
 
 export function taslakCanonicalYolu(
   veri: HalkaArzVeri,
@@ -480,7 +576,9 @@ export function getTaslakIzahnameListesi(): TaslakListeOgesi[] {
       basvuruTarihi: veri.ozet.basvuruTarihi,
       araciKurum: veri.ozet.araciKurum,
       pazar: veri.ozet.pazar,
-      dagitimYontemi: veri.ozet.dagitimYontemi,
+      dagitimYontemi:
+        halkaArzDagitimEtiketi(veri.ozet.dagitimYontemi, veri) ??
+        BIREYSELE_ESIT_DAGITIM_ETIKETI,
       pay: veri.ozet.pay || veri.toplamPay,
       halkaAciklikOrani: veri.halkaAciklikOrani,
       katilimEndeksi: veri.ozet.katilimEndeksi,

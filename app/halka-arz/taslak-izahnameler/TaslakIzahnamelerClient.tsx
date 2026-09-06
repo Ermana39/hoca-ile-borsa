@@ -29,6 +29,9 @@ type KategoriGrubu = {
 
 type KategoriGrubuSirala = (a: KategoriGrubu, b: KategoriGrubu) => number;
 
+const TAMAMEN_ESIT_DAGITIM_ETIKETI = "Tamamen eşit dağıtım";
+const BIREYSELE_ESIT_DAGITIM_ETIKETI = "Bireysele eşit dağıtım";
+
 function tarihDegeri(tarih?: string) {
   if (!tarih) return 0;
   const eslesme = tarih.match(/^(\d{1,2})\.(\d{1,2})\.(\d{4})$/);
@@ -121,6 +124,12 @@ function halkaAciklikGrubu(item: TaslakOgesi) {
   return "%10 altı";
 }
 
+function dagitimGrubu(item: TaslakOgesi) {
+  return item.dagitimYontemi === TAMAMEN_ESIT_DAGITIM_ETIKETI
+    ? TAMAMEN_ESIT_DAGITIM_ETIKETI
+    : BIREYSELE_ESIT_DAGITIM_ETIKETI;
+}
+
 function sirayaGoreSirala(sira: string[]): KategoriGrubuSirala {
   const indeksler = new Map(sira.map((ad, index) => [ad, index]));
   return (a, b) => {
@@ -141,7 +150,7 @@ function SirketSatiri({
     <Link
       href={`/halka-arz/taslak-izahnameler/${item.klasor}`}
       prefetch={false}
-      className="flex min-h-16 items-center gap-3 px-3 py-3 transition hover:bg-zinc-50 md:px-4"
+      className="flex min-h-16 items-center gap-3 rounded-lg border border-zinc-200 bg-white px-3 py-3 shadow-sm transition hover:border-blue-300 hover:bg-blue-50/60 md:px-4"
     >
       <SirketLogo logo={item.logo} ad={item.label} />
       <span className="min-w-0 flex-1 font-semibold text-zinc-900">
@@ -164,7 +173,7 @@ function SirketListesi({
   detayAl?: (item: TaslakOgesi) => string;
 }) {
   return (
-    <div className="divide-y divide-zinc-200">
+    <div className="grid gap-2 p-2 sm:grid-cols-2">
       {izahnameler.map((item) => (
         <SirketSatiri
           key={item.klasor}
@@ -178,19 +187,22 @@ function SirketListesi({
 
 function GrupluListe({ gruplar }: { gruplar: KategoriGrubu[] }) {
   return (
-    <div className="divide-y divide-zinc-200">
+    <div className="grid gap-3">
       {gruplar.map((grup) => (
-        <details key={grup.ad} className="group/alt">
-          <summary className="flex cursor-pointer list-none items-center gap-3 px-3 py-4 hover:bg-zinc-50 md:px-4 [&::-webkit-details-marker]:hidden">
-            <h3 className="min-w-0 flex-1 font-bold text-zinc-900">
+        <details
+          key={grup.ad}
+          className="group/alt overflow-hidden rounded-lg border border-slate-200 bg-slate-50 shadow-sm transition hover:border-blue-300 hover:bg-blue-50/40"
+        >
+          <summary className="flex cursor-pointer list-none items-center gap-3 px-4 py-4 [&::-webkit-details-marker]:hidden">
+            <h3 className="min-w-0 flex-1 text-sm font-bold text-slate-900 md:text-base">
               {grup.ad}
             </h3>
             <ChevronDown
               aria-hidden="true"
-              className="h-5 w-5 shrink-0 text-zinc-500 transition-transform group-open/alt:rotate-180"
+              className="h-5 w-5 shrink-0 text-slate-500 transition-transform group-open/alt:rotate-180"
             />
           </summary>
-          <div className="border-t border-zinc-200 bg-zinc-50">
+          <div className="border-t border-slate-200 bg-white">
             <SirketListesi izahnameler={grup.izahnameler} />
           </div>
         </details>
@@ -209,22 +221,22 @@ function KategoriBolumu({
   children: ReactNode;
 }) {
   return (
-    <details className="group border-b border-zinc-200 last:border-b-0">
-      <summary className="flex cursor-pointer list-none items-center gap-4 px-4 py-5 hover:bg-zinc-50 md:px-5 [&::-webkit-details-marker]:hidden">
+    <details className="group overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm transition hover:border-blue-300">
+      <summary className="flex cursor-pointer list-none items-center gap-4 px-4 py-5 hover:bg-blue-50/50 md:px-5 [&::-webkit-details-marker]:hidden">
         <span className="min-w-0 flex-1">
-          <span className="block text-base font-bold text-zinc-900 md:text-lg">
+          <span className="block text-base font-bold text-slate-950 md:text-lg">
             {baslik}
           </span>
-          <span className="mt-1 block text-sm leading-5 text-zinc-600">
+          <span className="mt-1 block text-sm leading-5 text-slate-600">
             {aciklama}
           </span>
         </span>
         <ChevronDown
           aria-hidden="true"
-          className="h-5 w-5 shrink-0 text-zinc-500 transition-transform group-open:rotate-180"
+          className="h-5 w-5 shrink-0 text-slate-500 transition-transform group-open:rotate-180"
         />
       </summary>
-      <div className="border-t border-zinc-200 bg-white px-1 py-4 md:px-3">
+      <div className="border-t border-slate-200 bg-slate-50/70 p-3 md:p-4">
         {children}
       </div>
     </details>
@@ -247,12 +259,14 @@ export default function TaslakIzahnamelerClient({
     return kurumlar.length > 0 ? kurumlar : ["Konsorsiyum lideri bekleniyor"];
   });
   const sektorGruplari = grupOlustur(izahnameler, (item) => item.sektorler);
-  const pazarGruplari = grupOlustur(izahnameler, (item) => [
-    item.pazar || "Pazar bilgisi bekleniyor",
-  ]);
-  const dagitimGruplari = grupOlustur(izahnameler, (item) => [
-    item.dagitimYontemi || "Dağıtım yöntemi bekleniyor",
-  ]);
+  const dagitimGruplari = grupOlustur(
+    izahnameler,
+    (item) => [dagitimGrubu(item)],
+    sirayaGoreSirala([
+      TAMAMEN_ESIT_DAGITIM_ETIKETI,
+      BIREYSELE_ESIT_DAGITIM_ETIKETI,
+    ])
+  );
   const arzYapisiGruplari = grupOlustur(izahnameler, (item) => {
     if (item.sermayeArtirimiVar && item.ortakSatisVar) {
       return ["Sermaye artırımı ve ortak satışı"];
@@ -310,7 +324,7 @@ export default function TaslakIzahnamelerClient({
           izahnamelere ulaşabilirsiniz.
         </p>
 
-        <section className="mt-6 overflow-hidden rounded-lg border border-zinc-200 bg-white">
+        <section className="mt-6 grid gap-3">
           <KategoriBolumu
             baslik="Başvuru Tarihine Göre"
             aciklama="En yeni başvurudan eski başvurulara doğru sıralanır."
@@ -333,15 +347,8 @@ export default function TaslakIzahnamelerClient({
           </KategoriBolumu>
 
           <KategoriBolumu
-            baslik="Pazar Bilgisine Göre"
-            aciklama="Planlanan pazar bilgisine göre listelenir."
-          >
-            <GrupluListe gruplar={pazarGruplari} />
-          </KategoriBolumu>
-
-          <KategoriBolumu
             baslik="Dağıtım Yöntemine Göre"
-            aciklama="Eşit, oransal veya henüz açıklanmayan dağıtım yöntemine göre listelenir."
+            aciklama="Tamamen eşit ve bireysele eşit dağıtım başlıklarıyla listelenir."
           >
             <GrupluListe gruplar={dagitimGruplari} />
           </KategoriBolumu>

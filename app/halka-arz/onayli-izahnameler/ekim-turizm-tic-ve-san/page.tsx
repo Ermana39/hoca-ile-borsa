@@ -30,7 +30,7 @@ const veri: HalkaArzVeri = {
   "ozet": {
     "halkaArzTarihi": "1-2-3 Temmuz 2026 (Çarşamba-Perşembe-Cuma) / 09.00-17.00",
     "fiyatAralik": "30,26 TL (%20 iskonto)",
-    "dagitimYontemi": "Bireysele Eşit - Yüksek Başvurulu Yatırımcıya Oransal",
+    "dagitimYontemi": "Bireysele eşit dağıtım",
     "pay": "162.000.000 Lot",
     "araciKurum": "Ak Yatırım Menkul Değerler A.Ş. / Vakıf Yatırım Menkul Değerler A.Ş.",
     "bistKodu": "EKIM",
@@ -155,13 +155,13 @@ const veri: HalkaArzVeri = {
       "grup": "Yurt İçi Bireysel",
       "oran": "%70",
       "lot": "113.400.000 Lot",
-      "dagitim": "Eşit Dağıtım",
+      "dagitim": "Bireysele eşit dağıtım",
     },
     {
       "grup": "Yüksek Başvurulu",
       "oran": "%10",
       "lot": "16.200.000 Lot",
-      "dagitim": "Oransal Dağıtım",
+      "dagitim": "Talebe göre paylaşım",
     },
     {
       "grup": "Yurt İçi Kurumsal",
@@ -174,7 +174,7 @@ const veri: HalkaArzVeri = {
     "Talep toplama çarşamba, perşembe ve cuma günleri 09.00-17.00 saatleri arasında yapılacaktır.",
     "Ekim Turizm halka arzı katılım endeksine uygun değildir.",
     "Yurt içi bireysel yatırımcı grubunda 25.000 lot ve altı başvurular için eşit dağıtım uygulanacaktır.",
-    "Yüksek başvurulu yatırımcı grubunda 25.001 lot ve üzeri başvurular için oransal dağıtım uygulanacaktır.",
+    "Yüksek başvurulu yatırımcı grubunda 25.001 lot ve üzeri başvurular için talebe göre paylaşım uygulanacaktır.",
     "T1-T2 bakiye kullanımına uygun değildir."
   ],
   "taahhutOzeti": {

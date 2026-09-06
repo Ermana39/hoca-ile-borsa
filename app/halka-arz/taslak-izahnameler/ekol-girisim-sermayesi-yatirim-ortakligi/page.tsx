@@ -28,7 +28,7 @@ export default function EkolGirisimSermayesiYatirimOrtakligiASPage() {
   const summaryItems = [
     { label: "Halka Arz Tarihi", value: "Hazırlanıyor" },
     { label: "Halka Arz Fiyatı / Aralığı", value: "Hazırlanıyor" },
-    { label: "Dağıtım Yöntemi", value: "Eşit Dağıtım" },
+    { label: "Dağıtım Yöntemi", value: "Bireysele eşit dağıtım" },
     { label: "Pay", value: "125.000.000 Lot" },
     { label: "Ek Pay", value: "25.000.000 Lot" },
     { label: "Aracı Kurum", value: "Bulls Yatırım Menkul Değerler A.Ş." },
@@ -298,7 +298,7 @@ export default function EkolGirisimSermayesiYatirimOrtakligiASPage() {
               </div>
 
               <div className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 px-4 py-3 text-sm font-medium text-amber-900">
-                Tamamen Eşit Dağıtım.
+                Tamamen eşit dağıtım.
               </div>
             </section>
 
@@ -317,7 +317,7 @@ export default function EkolGirisimSermayesiYatirimOrtakligiASPage() {
 
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">
                   <div className="text-sm font-semibold text-slate-800">Bireysel Dağıtım</div>
-                  <p className="mt-2 text-sm text-slate-700">Tamamı eşit dağıtım.</p>
+                  <p className="mt-2 text-sm text-slate-700">Tamamen eşit dağıtım.</p>
                 </div>
 
                 <div className="rounded-2xl border border-slate-200 bg-slate-50 p-4">

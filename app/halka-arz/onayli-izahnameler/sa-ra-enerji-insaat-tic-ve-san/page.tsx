@@ -171,7 +171,7 @@ const veri: HalkaArzVeri = {
   "tahsisatNotlari": [
     "Halka arz fiyatı 70,00 TL sabit fiyat olarak açıklanmıştır.",
     "Bireysel yatırımcı tarafında eşit dağıtım bilgisi yer almaktadır.",
-    "Yüksek başvurulu yatırımcı için oransal dağıtım bilgisi yer almaktadır.",
+    "Yüksek başvurulu yatırımcı için talebe göre paylaşım bilgisi yer almaktadır.",
     "Talep toplama 8-9-10 Temmuz 2026 tarihlerinde 09.00-17.00 saatleri arasında yapılacaktır.",
     "BIST Katılım Endeksi’ne uygun değildir.",
     "T1 ve T2 bakiye kullanılamaz.",

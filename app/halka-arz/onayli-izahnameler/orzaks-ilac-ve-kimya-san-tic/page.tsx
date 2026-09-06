@@ -29,7 +29,7 @@ const veri: HalkaArzVeri = {
   "ozet": {
     "halkaArzTarihi": "29-30 Haziran / 1 Temmuz 2026 (09.00-17.00)",
     "fiyatAralik": "69,00 TL - %20 İskonto",
-    "dagitimYontemi": "Bireysele Eşit (T1 ve T2 bakiye kullanılamaz)",
+    "dagitimYontemi": "Bireysele eşit dağıtım (T1 ve T2 bakiye kullanılamaz)",
     "pay": "52.500.000 Lot",
     "araciKurum": "İnfo Yatırım Menkul Değerler A.Ş.",
     "pazar": "Yıldız Pazar",

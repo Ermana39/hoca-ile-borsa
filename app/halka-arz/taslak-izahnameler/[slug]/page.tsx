@@ -5,6 +5,7 @@ import ContinueReading from "@/components/ContinueReading";
 import HalkaArzOrtaklikYapisi from "@/components/HalkaArzOrtaklikYapisi";
 import {
   bekleyenDeger,
+  halkaArzDagitimEtiketi,
   halkaArzGetir,
   statikSlugVar,
   taslakCanonicalYolu,
@@ -164,6 +165,7 @@ export async function generateMetadata({
 // (bekleyen olmayan) değerlerden üretilir; boş cevaplar elenir.
 function sssUret(veri: HalkaArzVeri): { soru: string; cevap: string }[] {
   const o = veri.ozet;
+  const dagitimYontemi = halkaArzDagitimEtiketi(o.dagitimYontemi, veri);
   const adaylar: { soru: string; cevap: string }[] = [
     {
       soru: `${veri.sirketAdi} halka arzı ne zaman?`,
@@ -179,9 +181,9 @@ function sssUret(veri: HalkaArzVeri): { soru: string; cevap: string }[] {
     },
     {
       soru: `${veri.sirketAdi} halka arzında dağıtım yöntemi nedir?`,
-      cevap: bekleyenDeger(o.dagitimYontemi)
+      cevap: bekleyenDeger(dagitimYontemi)
         ? ""
-        : `Taslak izahnameye göre dağıtım yöntemi: ${o.dagitimYontemi}.`,
+        : `Taslak izahnameye göre dağıtım yöntemi: ${dagitimYontemi}.`,
     },
     {
       soru: `${veri.sirketAdi} halka arzında kaç lot satışa sunulacak?`,
@@ -270,11 +272,12 @@ function BilgiNotu() {
 
 function ozetSatirlari(veri: HalkaArzVeri) {
   const o = veri.ozet;
+  const dagitimYontemi = halkaArzDagitimEtiketi(o.dagitimYontemi, veri);
   return [
     { label: "Başvuru Tarihi", value: o.basvuruTarihi },
     { label: "Halka Arz Tarihi", value: o.halkaArzTarihi },
     { label: "Halka Arz Fiyatı / Aralığı", value: o.fiyatAralik },
-    { label: "Dağıtım Yöntemi", value: o.dagitimYontemi },
+    { label: "Dağıtım Yöntemi", value: dagitimYontemi },
     { label: "Pay", value: o.pay },
     { label: "Aracı Kurum", value: o.araciKurum },
     { label: "Pazar", value: o.pazar },

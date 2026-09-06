@@ -13,7 +13,7 @@ export type YuksekBasvuruTahsisati = {
   tahsisatLotu: number;
   tahsisatOrani: number;
   altSinirLot: number;
-  dagitimYontemi: "Oransal Dağıtım";
+  dagitimYontemi: "Talebe göre paylaşım";
 };
 
 export type HalkaArzLotSecenegi = {

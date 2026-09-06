@@ -69,7 +69,7 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
       grup: "Yüksek Başvurulu Yatırımcı",
       oran: "%10",
       lot: "5.200.000 Lot",
-      detay: "10.001 lot ve üzeri başvurular için oransal dağıtım",
+      detay: "10.001 lot ve üzeri başvurular için talebe göre paylaşım",
     },
     {
       grup: "Yurt İçi Kurumsal Yatırımcılar",
@@ -231,9 +231,9 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
         "Halka arz gelirinin %40'ı hammadde tedariki ve işletme sermayesinde, %25'i yenilenebilir enerji yatırımlarında, %25'i Yeşil Çelik Haddehane modernizasyonu ve kapasite artışında, %10'u ise kütük kaynatma sistemi yatırımında kullanılacaktır.",
     },
     {
-      soru: "Ekinciler halka arzı eşit dağıtım mı, oransal dağıtım mı?",
+      soru: "Ekinciler halka arzı eşit dağıtım mı, talebe göre paylaşım mı?",
       cevap:
-        "İkisi birlikte uygulanır: Yurt içi bireysel yatırımcı grubunda (10.000 lot ve altı) bireysele eşit dağıtım, yüksek başvurulu yatırımcı grubunda (10.001 lot ve üzeri) oransal dağıtım yapılacaktır.",
+        "İkisi birlikte uygulanır: Yurt içi bireysel yatırımcı grubunda (10.000 lot ve altı) bireysele eşit dağıtım, yüksek başvurulu yatırımcı grubunda (10.001 lot ve üzeri) talebe göre paylaşım yapılacaktır.",
     },
   ];
 
@@ -321,7 +321,7 @@ export default function EkincilerDemirVeCelikSanayiASPage() {
             <p className="mt-4 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-sm leading-7 text-amber-900">
               Bireysel yatırımcı tarafında 10.000 lot ve altı başvurular için eşit
               dağıtım uygulanacaktır. Yüksek başvurulu yatırımcı grubunda 10.001 lot ve
-              üzeri başvurular için oransal dağıtım yapılacaktır. T1 ve T2 bakiye
+              üzeri başvurular için talebe göre paylaşım yapılacaktır. T1 ve T2 bakiye
               kullanılamaz.
             </p>
           </Section>

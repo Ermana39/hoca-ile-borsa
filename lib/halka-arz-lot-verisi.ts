@@ -29,25 +29,25 @@ const yuksekBasvuruTahsisatDuzenlemeleri: Record<
     tahsisatLotu: 6_075_000,
     tahsisatOrani: 10,
     altSinirLot: 3_001,
-    dagitimYontemi: "Oransal Dağıtım",
+    dagitimYontemi: "Talebe göre paylaşım",
   },
   EKDMR: {
     tahsisatLotu: 5_200_000,
     tahsisatOrani: 10,
     altSinirLot: 10_001,
-    dagitimYontemi: "Oransal Dağıtım",
+    dagitimYontemi: "Talebe göre paylaşım",
   },
   EKIM: {
     tahsisatLotu: 16_200_000,
     tahsisatOrani: 10,
     altSinirLot: 25_001,
-    dagitimYontemi: "Oransal Dağıtım",
+    dagitimYontemi: "Talebe göre paylaşım",
   },
   SARAE: {
     tahsisatLotu: 8_900_000,
     tahsisatOrani: 10,
     altSinirLot: 115_001,
-    dagitimYontemi: "Oransal Dağıtım",
+    dagitimYontemi: "Talebe göre paylaşım",
   },
 };
 
@@ -133,7 +133,7 @@ function yuksekBasvuruTahsisatiBul({
     const normalize = normalizeMetin(metin);
     if (
       !normalize.includes("yuksek basvurulu") ||
-      !normalize.includes("oransal")
+      (!normalize.includes("oransal") && !normalize.includes("talebe gore"))
     ) {
       continue;
     }
@@ -157,7 +157,7 @@ function yuksekBasvuruTahsisatiBul({
       tahsisatLotu,
       tahsisatOrani,
       altSinirLot,
-      dagitimYontemi: "Oransal Dağıtım",
+      dagitimYontemi: "Talebe göre paylaşım",
     };
   }
 

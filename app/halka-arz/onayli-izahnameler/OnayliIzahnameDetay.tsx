@@ -5,6 +5,7 @@ import HalkaArzKarnesi from "@/components/HalkaArzKarnesi";
 import HalkaArzSSS from "@/components/HalkaArzSSS";
 import {
   bekleyenDeger,
+  halkaArzDagitimEtiketi,
   halkaArzGetir,
   tahsisatMetni,
   type BilgiKarti,
@@ -651,11 +652,12 @@ function HalkaArzTalepSonuclari({
 
 function ozetSatirlari(veri: HalkaArzVeri): BilgiKarti[] {
   const o = veri.ozet;
+  const dagitimYontemi = halkaArzDagitimEtiketi(o.dagitimYontemi, veri);
   return [
     { label: "İşlem Kodu", value: veri.bistKodu || o.bistKodu || "" },
     { label: "Talep Toplama Tarihi", value: o.halkaArzTarihi || "" },
     { label: "İşlem Başlama Tarihi", value: o.islemBaslangicTarihi || "" },
-    { label: "Dağıtım Yöntemi", value: o.dagitimYontemi || "" },
+    { label: "Dağıtım Yöntemi", value: dagitimYontemi || "" },
     { label: "Katılım Endeksi", value: o.katilimEndeksi || "" },
     { label: "Pazar", value: o.pazar || "" },
     { label: "Aracı Kurum", value: o.araciKurum || "" },

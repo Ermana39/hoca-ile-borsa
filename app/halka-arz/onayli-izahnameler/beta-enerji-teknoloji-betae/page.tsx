@@ -73,7 +73,7 @@ export default function BetaEnerjiVeTeknolojiASPage() {
       grup: "Yurt İçi Bireysel Yatırımcı",
       oran: "%50",
       lot: "30.375.000 Lot",
-      dagitim: "Bireysele Eşit Dağıtım",
+      dagitim: "Bireysele eşit dağıtım",
       notlar: [
         "3.000 lot ve altı",
         "120.000 TL ve altı",
@@ -84,7 +84,7 @@ export default function BetaEnerjiVeTeknolojiASPage() {
       grup: "Yüksek Başvurulu Yatırımcı",
       oran: "%10",
       lot: "6.075.000 Lot",
-      dagitim: "Oransal Dağıtım",
+      dagitim: "Talebe göre paylaşım",
       notlar: [
         "3.001 lot ve üstü",
         "120.040 TL ve üstü",
@@ -250,9 +250,9 @@ export default function BetaEnerjiVeTeknolojiASPage() {
         "Halka arz gelirinin %45'i büyüme yatırımlarının finansmanında, %55'i ise işletme sermayesi ihtiyacının karşılanmasında kullanılacaktır.",
     },
     {
-      soru: "Beta Enerji halka arzı eşit dağıtım mı, oransal dağıtım mı?",
+      soru: "Beta Enerji halka arzı eşit dağıtım mı, talebe göre paylaşım mı?",
       cevap:
-        "İkisi birlikte uygulanır: Yurt içi bireysel yatırımcı grubunda (3.000 lot ve altı) bireysele eşit dağıtım, yüksek başvurulu yatırımcı grubunda (3.001 lot ve üstü) oransal dağıtım yapılacaktır.",
+        "İkisi birlikte uygulanır: Yurt içi bireysel yatırımcı grubunda (3.000 lot ve altı) bireysele eşit dağıtım, yüksek başvurulu yatırımcı grubunda (3.001 lot ve üstü) talebe göre paylaşım yapılacaktır.",
     },
   ];
 
@@ -473,7 +473,7 @@ export default function BetaEnerjiVeTeknolojiASPage() {
                     Dağıtım Şekli
                   </div>
                   <p className="mt-2 text-lg font-bold text-blue-950">
-                    Bireysele Eşit / Yüksek Başvurulu Oransal
+                    Bireysele eşit dağıtım / yüksek başvuru
                   </p>
                   <p className="mt-1 text-sm text-blue-900">
                     T1 ve T2 bakiye kullanılamaz.

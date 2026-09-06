@@ -82,7 +82,9 @@ function oranGirdisi(value: number) {
 }
 
 function dagitimTuruMetni(value: HalkaArzDagitimTuru) {
-  return value === "tamamen-esit" ? "Tamamı eşit dağıtım" : "Bireysele eşit dağıtım";
+  return value === "tamamen-esit"
+    ? "Tamamen eşit dağıtım"
+    : "Bireysele eşit dağıtım";
 }
 
 function yuzdeFarki(gerceklesen: number, tahmin: number) {
@@ -273,7 +275,7 @@ export default function TalepHesaplaClient({
                 benzer dağıtım türündeki 2026 halka arzlarından düşük, normal ve
                 yüksek katılım senaryoları üretir; tahmini lotu ve gerekli yaklaşık
                 parayı birlikte gösterir. Yüksek başvurulu yatırımcı grubu bulunan
-                halka arzlarda oransal dağıtım hesabını ayrıca yapar.
+                halka arzlarda yüksek başvuru hesabını ayrıca yapar.
               </p>
             </div>
             <div className="flex flex-wrap gap-2 text-xs font-bold">
@@ -435,7 +437,7 @@ export default function TalepHesaplaClient({
                 className="w-full rounded-xl border border-blue-200 bg-white px-3 py-2.5 text-sm font-semibold text-slate-800 outline-none focus:border-blue-500"
               >
                 <option value="bireysel-esit">Bireysele eşit dağıtım</option>
-                <option value="tamamen-esit">Tamamı eşit dağıtım</option>
+                <option value="tamamen-esit">Tamamen eşit dağıtım</option>
               </select>
             </div>
           </div>
@@ -453,7 +455,7 @@ export default function TalepHesaplaClient({
             <div className="flex flex-col gap-3 md:flex-row md:items-start md:justify-between">
               <div className="max-w-3xl">
                 <p className="text-xs font-bold uppercase tracking-[0.14em] text-indigo-700">
-                  Oransal dağıtım hesabı
+                  Yüksek başvuru hesabı
                 </p>
                 <h2 className="mt-2 text-xl font-bold text-slate-950 md:text-2xl">
                   Yüksek Başvurulu Yatırımcıya Kaç Lot Düşer?
@@ -918,7 +920,7 @@ export default function TalepHesaplaClient({
             <div className="rounded-2xl bg-slate-50 p-4">
               <p className="text-sm font-bold text-slate-900">4. Yüksek Başvuru</p>
               <p className="mt-2 text-sm leading-6 text-slate-600">
-                Oransal dağıtımda kullanıcının talebi, yüksek başvuru havuzuna
+                Yüksek başvuruda kullanıcının talebi, yüksek başvuru havuzuna
                 gelen tahmini toplam talep çarpanına bölünür.
               </p>
             </div>
@@ -966,8 +968,8 @@ export default function TalepHesaplaClient({
                   Yüksek başvurulu yatırımcıya kaç lot düşer?
                 </summary>
                 <p className="mt-3 text-sm leading-6 text-slate-600">
-                  Yüksek başvurulu yatırımcı grubunda dağıtım oransalsa, düşecek
-                  lot yalnızca yatırımcı sayısıyla bulunamaz. Talep edilen lot,
+                  Yüksek başvurulu yatırımcı grubunda talebe göre paylaşım varsa,
+                  düşecek lot yalnızca yatırımcı sayısıyla bulunamaz. Talep edilen lot,
                   bu gruba ayrılan havuzun kaç katı toplam talep geldiği
                   varsayımına bölünür. Örneğin toplam talep havuzun 5 katıysa,
                   başvurunun yaklaşık %20&apos;si karşılanır.

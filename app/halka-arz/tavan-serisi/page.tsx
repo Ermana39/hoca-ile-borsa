@@ -11,6 +11,7 @@ import {
   puanMetni,
   yuzdeMetni,
 } from "@/lib/halka-arz-performans";
+import { halkaArzDagitimEtiketi } from "@/lib/halka-arz";
 import { getHisseIcerikHedefi } from "@/lib/hisse-icerik-hedefi";
 
 const canonical = "https://www.hocaileborsa.com/halka-arz/tavan-serisi";
@@ -675,7 +676,8 @@ export default function HalkaArzTavanSerisiPage() {
                       {item.katilimciSayisi}
                     </td>
                     <td className="border border-slate-200 px-2 py-2">
-                      {item.dagitimSekli}
+                      {halkaArzDagitimEtiketi(item.dagitimSekli) ||
+                        item.dagitimSekli}
                     </td>
                     <td className="border border-slate-200 bg-blue-50/70 px-2 py-2 text-blue-950">
                       {item.arzFiyati}

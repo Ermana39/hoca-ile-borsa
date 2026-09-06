@@ -3,7 +3,11 @@ import type { Metadata } from "next";
 import Link from "@/components/NoPrefetchLink";
 import { halkaArzSonuclari } from "@/data/halka-arz-sonuclari";
 import { getHisseIcerikHedefi } from "@/lib/hisse-icerik-hedefi";
-import { bekleyenDeger, halkaArzGetir } from "@/lib/halka-arz";
+import {
+  bekleyenDeger,
+  halkaArzDagitimEtiketi,
+  halkaArzGetir,
+} from "@/lib/halka-arz";
 import { seoAciklamasi } from "@/lib/seo-metadata";
 
 const canonical = "https://www.hocaileborsa.com/halka-arz/takvim";
@@ -144,9 +148,8 @@ function takvimSatiri(item: TakvimSirketi): TakvimSatiri | null {
     fiyat: bekleyenDeger(veri.ozet.fiyatAralik)
       ? "—"
       : veri.ozet.fiyatAralik ?? "—",
-    dagitim: bekleyenDeger(veri.ozet.dagitimYontemi)
-      ? "—"
-      : veri.ozet.dagitimYontemi ?? "—",
+    dagitim:
+      halkaArzDagitimEtiketi(veri.ozet.dagitimYontemi, veri) ?? "—",
     pazar: bekleyenDeger(veri.ozet.pazar) ? "—" : veri.ozet.pazar ?? "—",
     durum: item.durum,
   };
@@ -192,6 +195,8 @@ export default function HalkaArzTakvimPage() {
     .map((item) => ({
       ...item,
       hedef: getHisseIcerikHedefi(item.hisse),
+      dagitimSekliEtiketi:
+        halkaArzDagitimEtiketi(item.dagitimSekli) || item.dagitimSekli,
     }))
     .filter((item) => item.hedef?.tur === "onayli-izahname");
   const aktifTakvimOlaylari = [
@@ -761,7 +766,7 @@ export default function HalkaArzTakvimPage() {
                       {item.arzFiyati.replace(".", ",")} TL
                     </td>
                     <td className="px-4 py-3 text-slate-700">
-                      {item.dagitimSekli}
+                      {item.dagitimSekliEtiketi}
                     </td>
                     <td className="px-4 py-3 text-slate-700">
                       {item.katilimciSayisi}

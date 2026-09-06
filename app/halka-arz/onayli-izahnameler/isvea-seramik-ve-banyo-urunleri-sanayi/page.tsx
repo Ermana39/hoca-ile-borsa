@@ -29,7 +29,7 @@ const veri: HalkaArzVeri = {
   "ozet": {
     "halkaArzTarihi": "1-2-3 Temmuz 2026",
     "fiyatAralik": "20,90 TL - %27,03 İskonto",
-    "dagitimYontemi": "Bireysele Eşit Dağıtım",
+    "dagitimYontemi": "Bireysele eşit dağıtım",
     "pay": "67.000.000 Lot",
     "araciKurum": "Halk Yatırım & Ahlatcı Yatırım",
     "pazar": "Yıldız Pazar",
@@ -157,7 +157,7 @@ const veri: HalkaArzVeri = {
       "grup": "Yurt İçi Bireysel",
       "oran": "%60",
       "lot": "40.200.000 Lot",
-      "dagitim": "Eşit Dağıtım"
+      "dagitim": "Bireysele eşit dağıtım"
     },
     {
       "grup": "Yurt İçi Kurumsal",
