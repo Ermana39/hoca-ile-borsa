@@ -1,29 +1,5 @@
 import Link from "@/components/NoPrefetchLink";
-import type { ReactNode } from "react";
-
-function XIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden="true">
-      <path d="M18.244 2H21l-6.46 7.383L22.136 22H16.19l-4.657-6.104L6.19 22H3.43l6.908-7.894L2 2h6.097l4.21 5.564L18.244 2Zm-1.043 18h1.527L7.268 3.895H5.63L17.2 20Z" />
-    </svg>
-  );
-}
-
-function InstagramIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden="true">
-      <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.75A4 4 0 0 0 3.75 7.75v8.5a4 4 0 0 0 4 4h8.5a4 4 0 0 0 4-4v-8.5a4 4 0 0 0-4-4h-8.5Zm8.875 1.5a1.125 1.125 0 1 1 0 2.25 1.125 1.125 0 0 1 0-2.25ZM12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10Zm0 1.75A3.25 3.25 0 1 0 12 15.25 3.25 3.25 0 0 0 12 8.75Z" />
-    </svg>
-  );
-}
-
-function TelegramIcon() {
-  return (
-    <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden="true">
-      <path d="M21.944 4.507a1.5 1.5 0 0 0-1.746-.184L3.68 12.35a1.5 1.5 0 0 0 .176 2.764l3.63 1.34 1.34 3.63a1.5 1.5 0 0 0 2.764.176l8.026-16.52a1.5 1.5 0 0 0-.672-2.033ZM9.24 15.94l-.924 2.505-.924-2.505 7.622-6.28L9.24 15.94Z" />
-    </svg>
-  );
-}
+import { SocialIconLinks } from "@/components/SocialLinks";
 
 function MailIcon() {
   return (
@@ -68,28 +44,6 @@ function LocationIcon() {
   );
 }
 
-function SosyalIkon({
-  href,
-  label,
-  children,
-}: {
-  href: string;
-  label: string;
-  children: ReactNode;
-}) {
-  return (
-    <a
-      href={href}
-      aria-label={label}
-      target="_blank"
-      rel="noopener noreferrer"
-      className="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-700 bg-slate-800 text-slate-200 transition hover:bg-slate-700"
-    >
-      {children}
-    </a>
-  );
-}
-
 function FooterLinkColumn({
   title,
   links,
@@ -131,20 +85,10 @@ export default function Footer() {
               yerde takip edebileceğiniz güncel bilgi platformu.
             </p>
 
-            <div className="flex gap-3">
-              <SosyalIkon href="https://x.com/HocaileBorsa" label="X">
-                <XIcon />
-              </SosyalIkon>
-              <SosyalIkon
-                href="https://www.instagram.com/hocaileborsa/"
-                label="Instagram"
-              >
-                <InstagramIcon />
-              </SosyalIkon>
-              <SosyalIkon href="https://t.me/halkaarz_0" label="Telegram">
-                <TelegramIcon />
-              </SosyalIkon>
-            </div>
+            <SocialIconLinks
+              linkClassName="flex h-10 w-10 items-center justify-center rounded-lg border border-slate-700 bg-slate-800 text-slate-200 transition hover:bg-slate-700 hover:text-white"
+              iconClassName="h-4 w-4"
+            />
           </div>
 
           <FooterLinkColumn
@@ -195,7 +139,7 @@ export default function Footer() {
               { label: "Kullanım Şartları", href: "/kullanim-sartlari" },
               { label: "Yasal Uyarı", href: "/yasal-uyari" },
               { label: "İletişim", href: "/iletisim" },
-              { label: "Reklam", href: "/reklam" },
+              { label: "Reklam ve İş Birliği", href: "/reklam-isbirligi" },
             ]}
           />
 

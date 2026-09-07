@@ -80,6 +80,7 @@ const organizationJsonLd = {
     "https://t.me/halkaarz_0",
     "https://www.youtube.com/@hocaileborsa",
     "https://www.youtube.com/@HocaileGlobalPiyasalar",
+    "https://www.tiktok.com/@hocaileborsa",
   ],
   contactPoint: {
     "@type": "ContactPoint",

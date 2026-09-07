@@ -189,6 +189,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const routeEntries = new Map<string, RouteLastModified>();
 
   for (const route of [
+    "/reklam-isbirligi",
     "/rehberler",
     ...rehberler.map((rehber) => rehber.href),
     ...staticRoutes,

@@ -2,6 +2,7 @@ import Link from "@/components/NoPrefetchLink";
 import HaberAltBilgi from "@/components/HaberAltBilgi";
 import HaberNavigasyon from "@/components/HaberNavigasyon";
 import IlgiliTerimler from "@/components/IlgiliTerimler";
+import { SocialFollowMini } from "@/components/SocialLinks";
 import { getOnayliIzahnameListesi } from "@/lib/halka-arz";
 import { getAllNews, getHaberKategorisi } from "@/lib/haberler";
 import type { HaberKategori } from "@/lib/haber-kategorileri";
@@ -139,6 +140,7 @@ export default function HaberAltKisim({
       </section>
       <HaberAltBilgi href={href} />
       <HaberNavigasyon href={href} className="mt-8" />
+      <SocialFollowMini className="mt-6" />
     </>
   );
 }

@@ -12,11 +12,11 @@ import { seoAciklamasi } from "@/lib/seo-metadata";
 
 const canonical = "https://www.hocaileborsa.com/halka-arz/takvim";
 const title =
-  "Halka Arz Takvimi 2026: İNTET 1 Eylül, BKRGY 2 Eylül'de İşleme Başlıyor";
+  "Halka Arz Takvimi 2026: NETGL 9-10-11 Eylül'de Talep Toplayacak";
 const description =
-  "2026 halka arz takviminde İNTET için 1 Eylül, BKRGY için 2 Eylül işlem başlangıcı ile işlemdeki halka arzları takip edin.";
-const sonGuncellemeIso = "2026-08-28";
-const sonGuncellemeMetni = "28 Ağustos 2026";
+  "2026 halka arz takviminde NETGL 9-10-11 Eylül'de talep toplayacak. BKRGY ve İNTET işlemde olan halka arzlar arasında.";
+const sonGuncellemeIso = "2026-09-07";
+const sonGuncellemeMetni = "7 Eylül 2026";
 
 export const metadata: Metadata = {
   title: { absolute: title },
@@ -31,16 +31,14 @@ export const metadata: Metadata = {
     "yeni halka arzlar",
     "halka arz talep toplama tarihleri",
     "halka arz işlem tarihleri",
+    "NETGL halka arz",
+    "NETGL talep toplama",
+    "Net Global halka arz",
+    "9 Eylül 2026 halka arz",
+    "10 Eylül 2026 halka arz",
+    "11 Eylül 2026 halka arz",
     "BKRGY halka arz",
-    "BKRGY talep toplama",
     "İNTET halka arz",
-    "İNTET talep toplama",
-    "İNTET işlem tarihi",
-    "BKRGY işlem tarihi",
-    "1 Eylül 2026 halka arz",
-    "2 Eylül 2026 halka arz",
-    "24 Ağustos 2026 halka arz",
-    "26 Ağustos 2026 halka arz",
     "CITAS halka arz",
     "VEYAS halka arz",
     "KPEKS halka arz",
@@ -88,22 +86,27 @@ type IzahnameBekleyenSirket = {
 
 const dagitimSonucuBeklenenTakvimi: TakvimSirketi[] = [];
 
-const talepToplamaTakvimi: TakvimSirketi[] = [];
+const talepToplamaTakvimi: TakvimSirketi[] = [
+  {
+    slug: "net-global-endustriyel-yatirimlar",
+    tarih: "9-10-11 Eylül 2026",
+    durum: "Talep toplayacak",
+  },
+];
 
-const islemeBaslayacakTakvimi: TakvimSirketi[] = [
+const islemeBaslayacakTakvimi: TakvimSirketi[] = [];
+
+const islemdekiHalkaArzTakvimi: TakvimSirketi[] = [
   {
     slug: "intetra-teknoloji-ve-bilisim-hizmetleri",
     tarih: "1 Eylül 2026 Salı",
-    durum: "İşleme başlayacak",
+    durum: "İşlemde",
   },
   {
     slug: "bakirci-gayrimenkul-yatirim-ortakligi",
     tarih: "2 Eylül 2026 Çarşamba",
-    durum: "İşleme başlayacak",
+    durum: "İşlemde",
   },
-];
-
-const islemdekiHalkaArzTakvimi: TakvimSirketi[] = [
   {
     slug: "citlekci-magazacilik",
     tarih: "18 Ağustos 2026 Salı",
@@ -210,17 +213,17 @@ export default function HalkaArzTakvimPage() {
     {
       soru: "Talep toplayacak halka arzlar hangileri?",
       cevap:
-        "28 Ağustos 2026 itibarıyla aktif takvimde talep toplama aşamasında halka arz bulunmuyor. İntetra Teknoloji İNTET 1 Eylül 2026 Salı, Bakırcı GYO BKRGY ise 2 Eylül 2026 Çarşamba günü işlem görmeye başlayacak.",
+        "7 Eylül 2026 itibarıyla Net Global Endüstriyel Yatırımlar NETGL 9-10-11 Eylül 2026 tarihlerinde talep toplayacak.",
     },
     {
       soru: "Dağıtım sonuçları açıklanacak halka arzlar hangileri?",
       cevap:
-        "Aktif takvimde dağıtım sonucu beklenen halka arz bulunmuyor. Güncel akışta İNTET ve BKRGY için işlem başlangıç tarihleri öne çıkıyor.",
+        "Aktif takvimde dağıtım sonucu beklenen halka arz bulunmuyor. NETGL talep toplama süreci tamamlandıktan sonra dağıtım sonuçları ayrıca takip edilecek.",
     },
     {
       soru: "Bu hafta hangi halka arzlar işlemde veya işleme başlayacak?",
       cevap:
-        "İntetra Teknoloji İNTET 1 Eylül 2026 Salı, Bakırcı GYO BKRGY 2 Eylül 2026 Çarşamba günü işlem görmeye başlayacak. Çitlekçi Mağazacılık Gıda CITAS, Teknika Plast TKNKA, Türker Vangölü Enerji VEYAS ve Kapeks Kimya KPEKS işlemde olan halka arzlar arasında yer alıyor.",
+        "NETGL 9-10-11 Eylül 2026 tarihlerinde talep toplayacak. İntetra Teknoloji İNTET ve Bakırcı GYO BKRGY artık işlemde olan halka arzlar arasında yer alıyor.",
     },
     {
       soru: "Onaylı izahnamesi beklenen halka arzlar hangileri?",
@@ -336,11 +339,10 @@ export default function HalkaArzTakvimPage() {
             {title}
           </h1>
           <p className="mt-3 max-w-3xl text-sm leading-7 text-slate-600 md:text-base">
-            28 Ağustos 2026 tarihli güncel halka arz takviminde İntetra
-            Teknoloji İNTET 1 Eylül 2026 Salı, Bakırcı GYO BKRGY ise 2 Eylül
-            2026 Çarşamba günü işlem görmeye başlayacak. Çitlekçi Mağazacılık
-            Gıda CITAS, Teknika Plast TKNKA, Türker Vangölü Enerji VEYAS ve
-            Kapeks Kimya KPEKS işlemdeki halka arzlar arasında yer alıyor.
+            7 Eylül 2026 tarihli güncel halka arz takviminde Net Global
+            Endüstriyel Yatırımlar NETGL 9-10-11 Eylül 2026 tarihlerinde
+            talep toplayacak. İntetra Teknoloji İNTET ve Bakırcı GYO BKRGY
+            artık işlemde olan halka arzlar arasında yer alıyor.
           </p>
 
           <div className="mt-5 rounded-2xl border border-blue-200 bg-blue-50 p-4 md:p-5">
@@ -348,9 +350,8 @@ export default function HalkaArzTakvimPage() {
               Takvimin kısa özeti
             </h2>
             <p className="mt-2 text-sm leading-7 text-blue-950/80 md:text-base">
-              İNTET 1 Eylül 2026 Salı, BKRGY 2 Eylül 2026 Çarşamba günü
-              işlem görmeye başlayacak. CITAS, TKNKA, VEYAS ve KPEKS işlemde;
-              aktif talep toplama veya dağıtım sonucu bekleyen halka arz
+              NETGL 9-10-11 Eylül 2026 tarihlerinde talep toplayacak. İNTET
+              ve BKRGY işlemde; aktif dağıtım sonucu bekleyen halka arz
               bulunmuyor.
             </p>
             <Link
@@ -376,7 +377,9 @@ export default function HalkaArzTakvimPage() {
                       },
                     ]
                   : []),
-                { label: "İşlem başlangıcı", href: "#islem-tarihleri" },
+                ...(islemeBaslayacaklar.length > 0
+                  ? [{ label: "İşlem başlangıcı", href: "#islem-tarihleri" }]
+                  : []),
                 { label: "İşlemde olanlar", href: "#islemde-olanlar" },
                 {
                   label: "Sonuçlanan halka arzlar",
@@ -580,60 +583,64 @@ export default function HalkaArzTakvimPage() {
           </section>
         )}
 
-        <section
-          id="islem-tarihleri"
-          className="mb-8 scroll-mt-24 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
-        >
-          <div className="border-b border-slate-200 bg-cyan-50 px-5 py-4">
-            <h2 className="text-lg font-bold text-cyan-900 md:text-xl">
-              İşleme Başlayacak Halka Arzlar
-            </h2>
-          </div>
+        {islemeBaslayacaklar.length > 0 && (
+          <section
+            id="islem-tarihleri"
+            className="mb-8 scroll-mt-24 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm"
+          >
+            <div className="border-b border-slate-200 bg-cyan-50 px-5 py-4">
+              <h2 className="text-lg font-bold text-cyan-900 md:text-xl">
+                İşleme Başlayacak Halka Arzlar
+              </h2>
+            </div>
 
-          <div>
-            <table className="w-full border-collapse text-left text-xs md:text-sm">
-              <thead>
-                <tr className="bg-slate-100 text-slate-600">
-                  <th className="px-4 py-3 font-semibold">Hisse</th>
-                  <th className="px-4 py-3 font-semibold">Şirket</th>
-                  <th className="px-4 py-3 font-semibold">İlk İşlem Tarihi</th>
-                </tr>
-              </thead>
-              <tbody>
-                {islemeBaslayacaklar.map((item, i) => (
-                  <tr
-                    key={item.slug}
-                    className={i % 2 ? "bg-slate-50" : "bg-white"}
-                  >
-                    <td className="px-4 py-3">
-                      <Link
-                        href={item.izahnameHref}
-                        prefetch={false}
-                        aria-label={`${item.bistKodu} halka arz detayına git`}
-                        className="inline-flex min-w-20 items-center justify-center gap-1 rounded-md border border-blue-200 bg-blue-50 px-3 py-2 font-bold text-blue-800 transition hover:border-blue-400 hover:bg-blue-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
-                      >
-                        {item.bistKodu}
-                        <span aria-hidden="true">→</span>
-                      </Link>
-                    </td>
-                    <td className="px-4 py-3 font-semibold text-slate-900">
-                      <Link
-                        href={item.izahnameHref}
-                        prefetch={false}
-                        className="underline decoration-slate-300 underline-offset-4 transition hover:text-blue-700 hover:decoration-blue-500"
-                      >
-                        {item.sirketAdi}
-                      </Link>
-                    </td>
-                    <td className="px-4 py-3 font-semibold text-cyan-800">
-                      {item.tarih}
-                    </td>
+            <div>
+              <table className="w-full border-collapse text-left text-xs md:text-sm">
+                <thead>
+                  <tr className="bg-slate-100 text-slate-600">
+                    <th className="px-4 py-3 font-semibold">Hisse</th>
+                    <th className="px-4 py-3 font-semibold">Şirket</th>
+                    <th className="px-4 py-3 font-semibold">
+                      İlk İşlem Tarihi
+                    </th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </section>
+                </thead>
+                <tbody>
+                  {islemeBaslayacaklar.map((item, i) => (
+                    <tr
+                      key={item.slug}
+                      className={i % 2 ? "bg-slate-50" : "bg-white"}
+                    >
+                      <td className="px-4 py-3">
+                        <Link
+                          href={item.izahnameHref}
+                          prefetch={false}
+                          aria-label={`${item.bistKodu} halka arz detayına git`}
+                          className="inline-flex min-w-20 items-center justify-center gap-1 rounded-md border border-blue-200 bg-blue-50 px-3 py-2 font-bold text-blue-800 transition hover:border-blue-400 hover:bg-blue-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                        >
+                          {item.bistKodu}
+                          <span aria-hidden="true">→</span>
+                        </Link>
+                      </td>
+                      <td className="px-4 py-3 font-semibold text-slate-900">
+                        <Link
+                          href={item.izahnameHref}
+                          prefetch={false}
+                          className="underline decoration-slate-300 underline-offset-4 transition hover:text-blue-700 hover:decoration-blue-500"
+                        >
+                          {item.sirketAdi}
+                        </Link>
+                      </td>
+                      <td className="px-4 py-3 font-semibold text-cyan-800">
+                        {item.tarih}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          </section>
+        )}
 
         {islemdekiOlanlar.length > 0 && (
           <section
@@ -798,7 +805,7 @@ export default function HalkaArzTakvimPage() {
                 Aktif Takvimdeki SPK Onaylı İzahnameler
               </h2>
               <p className="mt-1 text-sm leading-6 text-blue-900/80">
-                Bu bölüm işleme başlayacak veya işlemde olan halka arzların
+                Bu bölüm talep toplayacak veya işlemde olan halka arzların
                 onaylı izahname sayfalarını gösterir.
               </p>
             </div>

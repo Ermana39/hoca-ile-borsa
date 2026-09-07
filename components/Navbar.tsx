@@ -18,6 +18,11 @@ const navLinks = [
   { label: "Haberler", href: "/haberler" },
 ];
 
+const mobileNavLinks = [
+  ...navLinks,
+  { label: "Reklam ve İş Birliği", href: "/reklam-isbirligi" },
+];
+
 export default function Navbar() {
   const [open, setOpen] = useState(false);
 
@@ -72,7 +77,7 @@ export default function Navbar() {
 
       {open && (
         <nav className="border-t border-slate-800 bg-slate-900 px-4 pb-4 pt-2 xl:hidden" aria-label="Mobil navigasyon">
-          {navLinks.map((link) => (
+          {mobileNavLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
